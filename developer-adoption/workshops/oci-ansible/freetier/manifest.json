@@ -1,0 +1,23 @@
+{
+    "workshoptitle": "Ansible on OCI",
+    "help": "livelabs-help-oci_us@oracle.com",
+	"tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../../labs/oci-ansible/intro/intro.md"
+        },
+        {
+            "title": "Get Started",
+            "filename": "https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/labs/cloud-login/pre-register-free-tier-account.md"
+        },
+        {
+            "title": "Lab 1: Use Ansible on OCI",
+            "filename": "../../../labs/oci-ansible/create-ansible/create-ansible.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

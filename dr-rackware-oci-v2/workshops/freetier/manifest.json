@@ -1,0 +1,36 @@
+{
+    "workshoptitle": "Disaster Recovery RackWare Deployment on OCI",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../introduction/introduction-v2.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable).",
+            "filename": "https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/labs/cloud-login/pre-register-free-tier-account.md"
+        },
+        {
+            "title": "Lab 1: Disaster Recovery Network and Connectivity Setup",
+            "filename": "../../dr-network-setup/dr-network-setup-v2.md"
+        },
+        {
+            "title": "Lab 2: Configure APEX instance for DR",
+            "filename": "../../apex-configure/apex-configure.md"
+        },
+        {
+            "title": "Lab 3: Setting Up RackWare DR components",
+            "filename": "../../rackware-setup/rackware-setup.md"
+        },
+        {
+            "title": "Lab 4: Complete DR Configuration & Perform Failover",
+            "filename": "../../dr-failover/dr-failover-v2.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/need-help/need-help-livelabs.md"
+        }
+    ]
+}
