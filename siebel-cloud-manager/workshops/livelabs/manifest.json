@@ -10,12 +10,12 @@
         {
             "title": "Get Started",
             "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable).",
-            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/cloud-login.md"
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
             "title": "Lab 1: Create SSH Keys Using Oracle Cloud Shell",
             "description": "Create SSH keys for use with this lab",
-            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/generate-ssh-key-cloud-shell/generate-ssh-keys-cloud-shell.md"
+            "filename": "https://oracle-livelabs.github.io/common/labs/generate-ssh-key-cloud-shell/generate-ssh-keys-cloud-shell.md"
         },
         {
             "title": "Lab 2: Provision the Siebel Cloud Manager Instance",
@@ -46,7 +46,7 @@
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename":"https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-freetier.md"
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
         }
     ]
   }

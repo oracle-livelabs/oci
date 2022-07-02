@@ -30,7 +30,7 @@ Estimated time: 20 minutes
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Compartments**.
 
- ![Compartment](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/id-compartment.png " ")
+ ![Compartment](https://oracle-livelabs.github.io/common/images/console/id-compartment.png " ")
 
 1. From this screen, you will see a list of compartments, click **Create Compartment**.
 
@@ -57,7 +57,7 @@ Now you are ready to move on to Step 3.
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Developer Services**, and select **Kubernetes Clusters (OKE)**.
 
- ![OKE](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/developer-OKE.png " ")
+ ![OKE](https://oracle-livelabs.github.io/common/images/console/developer-OKE.png " ")
 
 1. Verify you are in the **AppDev** Compartment and click **Create Cluster**.
 
