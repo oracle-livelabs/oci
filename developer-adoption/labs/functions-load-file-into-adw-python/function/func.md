@@ -25,7 +25,7 @@ In this step, you will create an application and set up Fn CLI in the OCI Cloud 
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Developer Services** and select **Applications** under the **Functions** section.
 
-    ![Functions](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/developer-functions-applications.png " ")
+    ![Functions](https://oracle-livelabs.github.io/common/images/console/developer-functions-applications.png " ")
 
 1. Select your development compartment (AppDev) from the **Compartment** list.
 1. Click **Create Application**.
@@ -183,7 +183,7 @@ To see the data in the database, follow these steps:
 
 1. Navigate to **Autonomous Data Warehouse**. Click the **Navigation Menu** in the upper left, navigate to **Oracle Database** and select **Autonomous Data Warehouse**.
 
- ![Compartment](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/database-adw.png " ")
+ ![Compartment](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
 
 1. Select your development compartment (AppDev) from the **Compartment** list.
 1. Click on the database name (`funcdb`).
