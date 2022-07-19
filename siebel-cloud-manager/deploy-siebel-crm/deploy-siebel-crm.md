@@ -64,7 +64,7 @@ Manager.
    "industry": "Sales"
    },
    "infrastructure": {
-      "gitlab_url": "https://{Public IP of Gitlab Instance}",
+   "gitlab_url": "https://{Public IP of Gitlab Instance}",
    "gitlab_accesstoken": "{Gitlab_Access_Token}",
    "gitlab_user": "root",
    "gitlab_selfsigned_cacert": "/home/opc/certs/rootCA.crt"
@@ -93,7 +93,7 @@ Manager.
    }</copy>
    ```
 
-   The below table describes certain important payload parameters. For the full list of parameters and their description, please follow the Siebel Cloud Manager documentation attached to this Oracle Support article - **Using Siebel Cloud Manager to Deploy Siebel CRM on OCI (Doc ID 2828904.1).**   
+   The below table describes certain important payload parameters. For the latest list of parameters, their description, and an example payload, please follow the Siebel Cloud Manager documentation attached to this Oracle Support article - **Using Siebel Cloud Manager to Deploy Siebel CRM on OCI (Doc ID 2828904.1).**   
 
 | Payload Parameter | Description |
 |---|---|
