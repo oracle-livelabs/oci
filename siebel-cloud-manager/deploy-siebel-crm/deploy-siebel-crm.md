@@ -97,8 +97,8 @@ Manager.
 
 | Payload Parameter | Description |
 |---|---|
-| registry_url | Specifies the URL of the Docker container registry. If you are using the OCI registry in your tenancy, then use the container registry from the same region as the Siebel Cloud Manager instance. For example, for the Ashburn region, you might use iad.ocir.io. For other regions, see [https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm). |
-| registry_user | Specifies the OCI user ID in this format - OCITenancyName/UserName. |
+| registry_url | Specify the URL of the Docker container registry. If you are using the OCI registry in your tenancy, then use the container registry from the same region as the Siebel Cloud Manager instance. For example, for the Ashburn region, you might use iad.ocir.io. For other regions, see [https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm) |
+| registry_user | Specify the OCI user ID in either of the following formats,<br>Federated tenancies: {tenancy-namespace}/oracleidentitycloudservice/{username}<br>Non-Federated tenancies: {tenancy-namespace}/{username}<br>Refer to [https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionslogintoocir.htm](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionslogintoocir.htm) |
 
 ## Task 3: Install and set up Postman
 
