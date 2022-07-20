@@ -176,13 +176,16 @@ After sending a post request with our payload, the Siebel Cloud Manager will pre
 
    **Request URL**
 
-        <copy>http://{Public IP of the Siebel Cloud Manager Instance}:16690/api/v1/environments/{env_id}/logs</copy>
+        <copy>http://{Public IP of the Siebel Cloud Manager Instance}:16690/api/v1/environments/{env_id}</copy>
 
     The log file will be returned as a response.
 
     ![Deployment status log](./images/deploy-status-log.png) 
 
     The response body will have a section named **stages** that indicates the particular stage of deployment. The **status** parameter in each stage can have values such as **passed, in-progress, failed**, etc.
+    To view any of the log files, login to the Siebel Cloud Manager instance and then open that log file mentioned against the respective stage's **log location** parameter.
+
+    For example - /home/opc/siebel/{env_id}/logs/validation.log
 
     We can also monitor the **Oracle Resource Manager (ORM)** stack logs from the Oracle Cloud console to see the progress of the stack deployment.
 
