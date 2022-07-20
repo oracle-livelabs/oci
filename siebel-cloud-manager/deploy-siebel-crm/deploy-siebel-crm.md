@@ -183,9 +183,6 @@ After sending a post request with our payload, the Siebel Cloud Manager will pre
     ![Deployment status log](./images/deploy-status-log.png) 
 
     The response body will have a section named **stages** that indicates the particular stage of deployment. The **status** parameter in each stage can have values such as **passed, in-progress, failed**, etc.
-    To view any of the log files, login to the Siebel Cloud Manager instance and then open that log file mentioned against the respective stage's **log location** parameter.
-
-    For example - /home/opc/siebel/{env_id}/logs/validation.log
 
     We can also monitor the **Oracle Resource Manager (ORM)** stack logs from the Oracle Cloud console to see the progress of the stack deployment.
 
