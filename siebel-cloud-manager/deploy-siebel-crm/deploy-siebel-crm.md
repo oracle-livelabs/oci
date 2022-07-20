@@ -70,24 +70,31 @@ Manager.
    "gitlab_selfsigned_cacert": "/home/opc/certs/rootCA.crt"
    },
    "database": {
-   "atp_admin_password": "WElcome123###",
-   "atp_storage_in_tbs": 1,
-   "atp_cpu_cores": 2
+   "db_type": "ATP",
+   "atp": {
+   "admin_password": "WElcome123###",
+   "storage_in_tbs": 1,
+   "cpu_cores": 2
+   }
    },
    "size": {
-   "kubernetes_node_shape": "VM.Standard2.4",
+   "kubernetes_node_shape": "VM.Standard.E4.Flex",
    "kubernetes_node_count": 3,
+   "node_shape_config": {
+   "memory_in_gbs": 20,
+   "ocpus": 2
+   },
    "ses_resource_limits": {
    "cpu": 2,
-   "memory": "4Gi"
+   "memory": "15Gi"
    },
    "cgw_resource_limits": {
    "cpu": 2,
-   "memory": "4Gi"
+   "memory": "15Gi"
    },
    "sai_resource_limits": {
    "cpu": 1,
-   "memory": "4Gi"
+   "memory": "15Gi"
    }
    }
    }</copy>
@@ -99,6 +106,7 @@ Manager.
 |---|---|
 | registry_url | Specify the URL of the Docker container registry. If you are using the OCI registry in your tenancy, then use the container registry from the same region as the Siebel Cloud Manager instance. For example, for the Ashburn region, you might use iad.ocir.io. For other regions, see [https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm) |
 | registry_user | Specify the OCI user ID in either of the following formats,<br>Federated tenancies: {tenancy-namespace}/oracleidentitycloudservice/{username}<br>Non-Federated tenancies: {tenancy-namespace}/{username}<br>Refer to [https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionslogintoocir.htm](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionslogintoocir.htm) |
+| db_type | Specifies the database type |
 
 ## Task 3: Install and set up Postman
 
@@ -154,7 +162,7 @@ Postman is an API platform for building and using APIs. Postman can be either do
 
    **Request URL**
 
-        <copy>http://{Public IP of the Siebel Cloud Manager Instance}:16690/api/v1/environments/</copy>
+        <copy>http://{Public IP of the Siebel Cloud Manager Instance}:16690/scm/api/v1.0/environment</copy>
 
 6. Click ***Send***
 
@@ -176,7 +184,7 @@ After sending a post request with our payload, the Siebel Cloud Manager will pre
 
    **Request URL**
 
-        <copy>http://{Public IP of the Siebel Cloud Manager Instance}:16690/api/v1/environments/{env_id}</copy>
+        <copy>http://{Public IP of the Siebel Cloud Manager Instance}:16690/scm/api/v1.0/environment/{env_id}</copy>
 
     The log file will be returned as a response.
 
