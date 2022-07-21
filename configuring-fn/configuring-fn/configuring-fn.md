@@ -20,7 +20,7 @@ Estimated Time: 75 minutes
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Networking**, and select **Virtual Cloud Networks**. 
 
-	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/networking-vcn.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/networking-vcn.png " ")
 
     Click on the **Create VNC** button
     
@@ -65,7 +65,7 @@ Estimated Time: 75 minutes
 ## Task 2: Create and Connect to a Compute Instances
 1. Click the **Navigation Menu** in the upper left, navigate to **Compute**, and select **Instances**.
 
-	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/compute-instances.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/compute-instances.png " ")
 
 2. Click **Create Instance**. Enter a name for your instance and select the compartment you used earlier to create your VCN. Select **Show Shape, Network and Storage Options**.
 
@@ -339,7 +339,7 @@ Estimated Time: 75 minutes
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Policies**.
 
-	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/id-audit.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/id-audit.png " ")
 
 2. Make sure that the compartment you created your VCN in is selected and then click **Create Policy**.
 
@@ -377,7 +377,7 @@ Estimated Time: 75 minutes
 
 5. Click the **Navigation Menu** in the upper left, navigate to **Developer Services**, and select **Applications**.
 
-	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/developer-functions-applications.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/developer-functions-applications.png " ")
 
 6. Click **Create Application** and fill out the dialog box.
 
@@ -558,7 +558,7 @@ Congratulations! You've just created, deployed, and invoked your first function 
 ## Task 7: Delete the Resources
 1. Click the **Navigation Menu** in the upper left, navigate to **Compute**, and select **Instances**.
 
-	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/compute-instances.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/compute-instances.png " ")
 
 2. Locate the compute instance you created, click the action icon and then click **Terminate**.
 
@@ -570,7 +570,7 @@ Congratulations! You've just created, deployed, and invoked your first function 
 
 4. Click the **Navigation Menu** in the upper left, navigate to **Developer Services**, and select **Applications**.
 
-	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/developer-functions-applications.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/developer-functions-applications.png " ")
 
 5. Locate your function application and then click **Delete**.
 
@@ -582,7 +582,7 @@ Congratulations! You've just created, deployed, and invoked your first function 
 
 7. Click the **Navigation Menu** in the upper left, navigate to **Networking**, and select **Virtual Cloud Networks**.
 
-	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/networking-vcn.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/networking-vcn.png " ")
 
 8. Locate your VCN, click action icon and then click **Terminate**. Click **Terminate All** in the confirmation window. Click **Close** once the VCN is deleted.
 
