@@ -16,7 +16,7 @@ If your messages are larger than the 1 MB limit, you can either use chunking or 
 
 ```sh
 <copy>
-oci streaming stream message put --stream-id $STREAM_OCID --messages '[{"key":"string","value":"string"},{"key":"string","value":"string"}]' --endpoint https://cell-1.streaming.us-phoenix-1.oci.oraclecloud.com
+oci streaming stream message put --stream-id $STREAM_OCID --messages '[{"key":"a2V5XzE","value":"dmFsdWVfMQ"},{"key":"a2V5XzI","value":"dmFsdWVfMg"}]' --endpoint https://cell-1.streaming.us-phoenix-1.oci.oraclecloud.com
 </copy>
 ```
 

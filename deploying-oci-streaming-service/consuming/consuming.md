@@ -41,7 +41,7 @@ Create the cursor for partition 0
 Get the message using the cursor returned from create-cursor call or get message call
 ```sh
 <copy>
-    oci streaming stream message get --cursor <Cursor value> --stream-id $STREAM_OCID --endpoint https://cell-1.streaming.us-phoenix-1.oci.oraclecloud.com
+    oci streaming stream message get --cursor $CURSOR --stream-id $STREAM_OCID --endpoint https://cell-1.streaming.us-phoenix-1.oci.oraclecloud.com
 </copy>
 ```
 
@@ -64,15 +64,14 @@ A consumer group is created on the first CreateGroupCursor request. Group cursor
 
 ```sh
 <copy>
-    oci streaming stream cursor create-group-cursor --group-name G1 --instance-name i1 --type TRIM_HORIZON --stream-id $STREAM_OCID --endpoint  https://cell-1.streaming.us-phoenix-1.oci.oraclecloud.com
-
+oci streaming stream cursor create-group-cursor --group-name G1 --instance-name i1 --type TRIM_HORIZON --stream-id $STREAM_OCID --endpoint  https://cell-1.streaming.us-phoenix-1.oci.oraclecloud.com
 </copy>
 ```
 
 Get the message using the cursor returned from create-cursor call or get message call
 ```sh
 <copy>
-    oci streaming stream message get --cursor <Cursor value> --stream-id $STREAM_OCID --endpoint https://cell-1.streaming.us-phoenix-1.oci.oraclecloud.com
+oci streaming stream message get --cursor $CURSOR --stream-id $STREAM_OCID --endpoint https://cell-1.streaming.us-phoenix-1.oci.oraclecloud.com
 </copy>
 ```
 
