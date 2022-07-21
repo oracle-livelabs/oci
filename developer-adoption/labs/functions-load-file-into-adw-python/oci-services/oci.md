@@ -27,7 +27,7 @@ Let's create the `input-bucket` first:
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Storage** and select **Buckets** under **Object Storage and Archive Storage**.
 
-    ![Storage Buckets](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/storage-buckets.png " ")
+    ![Storage Buckets](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png " ")
 
 1. Select your development compartment (AppDev) from the **Compartment** list.
 1. Click the **Create Bucket**.
@@ -46,7 +46,7 @@ Let's create the `processed-bucket`:
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Storage** and select **Buckets** under **Object Storage and Archive Storage**.
 
-    ![Storage Buckets](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/storage-buckets.png " ")
+    ![Storage Buckets](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png " ")
 
 1. Select your development compartment (AppDev) from the **Compartment** list.
 1. Click the **Create Bucket**.
@@ -62,7 +62,7 @@ Create a new policy that allows the dynamic group (`functions-dynamic-group`) to
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Policies** under the **Identity** section.
 
-    ![Policies](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/id-policies.png " ")
+    ![Policies](https://oracle-livelabs.github.io/common/images/console/id-policies.png " ")
 
 1. Click **Create Policy**.
 1. For name, enter `functions-buckets-policy`.
@@ -103,7 +103,7 @@ Create a new policy that allows the service Object Storage manage objects. (you 
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Policies** under the **Identity** section.
 
-    ![Policies](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/id-policies.png " ")
+    ![Policies](https://oracle-livelabs.github.io/common/images/console/id-policies.png " ")
 
 1. Click **Create Policy**.
 1. For name, enter `object-storage-service-policy`.
@@ -134,7 +134,7 @@ The function accesses the Autonomous Database using SODA (Simple Oracle Document
 
 1. Navigate to **Autonomous Data Warehouse**. Click the **Navigation Menu** in the upper left, navigate to **Oracle Database** and select **Autonomous Data Warehouse**.
 
-    ![Compartment](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/database-adw.png " ")
+    ![Compartment](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
 
 1. Click **Create Autonomous Database**.
 1. From the list, select your development compartment (AppDev).
