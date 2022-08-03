@@ -71,37 +71,21 @@ Antes de começarmos a criar o serviço Load Balancer, observe que há algumas t
 ```
 <copy>
 cat <<EOF > /var/www/html/index.html
-
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>OCI FAST TRACK: Webserver 1</title>
-
 </head>
-
 <body>
-
 <center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/ocifasttracklogo.jpg"
-
 alt="LOGO OCI">
-
 <h1>Load Balancer Webservers</h1>
-
 <center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/Webserver1.jpg"
-
 </center>
-
 </body>
-
 </html>
-
 EOF
 </copy>
 ```
@@ -114,35 +98,20 @@ EOF
 <copy>
 cat <<EOF > /var/www/html/index.html  
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>OCI FAST TRACK: Webserver 2</title>
-
 </head>
-
 <body>
-
 <center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/ocifasttracklogo.jpg"
-
 alt="LOGO OCI">
-
 <h1>Load Balancer Webservers</h1>
-
 <center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/Webserver2.jpg"
-
 </center>
-
 </body>
-
 </html>
-
 EOF
 </copy>
 ```
