@@ -54,6 +54,7 @@ Neste Lab você vai aprender a trabalhar com Object Storage dentro da Oracle Clo
 > **Note:** Lembre-se de salvar o arquivo com a extensão ".html"
 
 ``` shell
+<copy>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -69,6 +70,7 @@ Neste Lab você vai aprender a trabalhar com Object Storage dentro da Oracle Clo
     </center>   
 </body>
 </html>
+</copy>
 ```
 
 4. Feito isto, arraste e solte para o campo indicado do bucket e clique em **Upload**.

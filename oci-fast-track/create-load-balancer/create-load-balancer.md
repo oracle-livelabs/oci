@@ -69,39 +69,25 @@ Antes de começarmos a criar o serviço Load Balancer, observe que há algumas t
 > **Note:** Primeiro copie a 1ª linha do código e cole. Depois copie o corpo do código até < / html> e cole. Por último copie a última linha e cole.
 
 ```
-"cat <<EOF > /var/www/html/index.html
-
+<copy>
+cat <<EOF > /var/www/html/index.html
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>OCI FAST TRACK: Webserver 1</title>
-
 </head>
-
 <body>
-
 <center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/ocifasttracklogo.jpg"
-
 alt="LOGO OCI">
-
 <h1>Load Balancer Webservers</h1>
-
 <center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/Webserver1.jpg"
-
 </center>
-
 </body>
-
 </html>
-
-EOF"
+EOF
+</copy>
 ```
 
 2. Na **segunda instância** você repetirá as etapas acima, de **1** a **5**, para identificarmos a segunda instância de computação (Linux – AD3) personalize o arquivo **“index.html”** usando o seguinte comando com usuário **ROOT**:
@@ -109,38 +95,25 @@ EOF"
 > **Note:** Primeiro copie a 1ª linha do código e cole. Depois copie o corpo do código até < / html> e cole. Por último copie a última linha e cole.	
 
 ```
-"cat <<EOF > /var/www/html/index.html  
+<copy>
+cat <<EOF > /var/www/html/index.html  
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>OCI FAST TRACK: Webserver 2</title>
-
 </head>
-
 <body>
-
 <center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/ocifasttracklogo.jpg"
-
 alt="LOGO OCI">
-
 <h1>Load Balancer Webservers</h1>
-
 <center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/Webserver2.jpg"
-
 </center>
-
 </body>
-
 </html>
-
-EOF"
+EOF
+</copy>
 ```
 
 3. Teste o comportamento do Apache, tudo que você precisa fazer, é usar o **IP público da instância** do Compute no seu navegador web para verificar se a página principal do Apache aparecerá.
