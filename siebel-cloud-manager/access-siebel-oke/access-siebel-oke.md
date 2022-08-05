@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, we shall access the Oracle Kubernetes Cluster that hosts the newly deployed Siebel CRM. In this way, we can see the various pods, services, and other Kubernetes resources running in the cluster and manage them as required.
+In this lab, we shall access the Siebel Kubernetes Cluster that hosts the newly deployed Siebel CRM. In this way, we can see the various pods, services, and other Kubernetes resources running in the cluster and manage them as required.
 
 Estimated Time: 20 minutes
 
