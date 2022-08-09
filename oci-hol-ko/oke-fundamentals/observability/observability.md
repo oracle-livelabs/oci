@@ -42,7 +42,7 @@ Observability는 로그와 매트릭, 트레이스(추적)를 조합하여 현�
 
     ![OKE Node Pool Metric](images/node-pool-metric.png)
 
-5. *OKE Worker Node Metrics:* **Resources &lt; Nodes &lt; <노드 이름>** 로 이동
+5. *OKE Worker Node Metrics:* **Resources &gt; Nodes &gt; <노드 이름>** 로 이동
 
     Compute 인스턴스에 대한 메트릭으로 다음의 노드 매트릭스 정보 확인:
 

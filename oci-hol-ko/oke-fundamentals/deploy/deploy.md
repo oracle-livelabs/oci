@@ -22,7 +22,7 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
 ### 전제 조건
 
 * Oracle Free Trial, Paid or LiveLabs Cloud Account
-* Always Free는 현재 2022년 2월기준 OKE 제공하지 않습니다. Free Trial 이상이 필요합니다.
+* Always Free는 현재 2022년 2월기준 OKE 서비스를 제공하지 않습니다. Free Trial 이상이 필요합니다.
 * **Setup Cloud Environment** 실습 완료
 
 ### 실습 비디오
@@ -44,12 +44,12 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
 
     ````shell
     Cloning into 'mushop'...
-    remote: Enumerating objects: 23147, done.
-    remote: Counting objects: 100% (5715/5715), done.
-    remote: Compressing objects: 100% (1061/1061), done.
-    remote: Total 23147 (delta 4948), reused 5129 (delta 4617), pack-reused 17432
-    Receiving objects: 100% (23147/23147), 27.15 MiB | 10.08 MiB/s, done.
-    Resolving deltas: 100% (14140/14140), done.
+    remote: Enumerating objects: 23293, done.
+    remote: Counting objects: 100% (93/93), done.
+    remote: Compressing objects: 100% (61/61), done.
+    remote: Total 23293 (delta 43), reused 59 (delta 31), pack-reused 23200
+    Receiving objects: 100% (23293/23293), 28.07 MiB | 31.75 MiB/s, done.
+    Resolving deltas: 100% (14244/14244), done.
     ````
 
 1. mushop 폴더로 이동합니다.
@@ -74,7 +74,7 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
     ````
 
     Sample response:
-
+    
     ````shell
     CURRENT   NAME                  CLUSTER               AUTHINFO           NAMESPACE
     *         context-c2bted2y77a   cluster-c2bted2y77a   user-c2bted2y77a
@@ -94,7 +94,7 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
     namespace/mushop created
     ````
 
-1. kubectl 명령어는 따로 설정하지 않으면 default namespace에 적용됩니다. 매 명령시 **--namespace=mushop**을 추가하는 번거러움을 없애기 위해 아래와 같이 현재 context에 미리 **--namespace=mushop**을 설정합니다. 이후 실행되는 kubectl 명령어는 따로 지정하지 않으면, mushop namespace에 실행됩니다.
+1. kubectl 명령어는 따로 설정하지 않으면 default namespace를 대상으로 합니다. 이후 실습에서 매 명령시 **--namespace=mushop**을 추가하는 번거러움을 없애기 위해 아래와 같이 현재 context에 미리 **--namespace=mushop**을 설정합니다. 이후 실행되는 kubectl 명령어는 따로 지정하지 않으면, mushop namespace에 실행됩니다.
 
     ````shell
     <copy>
@@ -103,7 +103,7 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
     ````
 
 
-1. **kubectl** context를 다시 확인합니다. 기본 NAMESPACE 항목이 mushop으로 변경되었습니다. 
+1. kubectl context를 다시 확인합니다. 기본 NAMESPACE 항목이 mushop으로 변경되었습니다. 
 
     ````shell
     <copy>
@@ -125,12 +125,11 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
 
 | Chart | Purpose | Option | Default |
 | --- | --- | --- | --- |
-| [Prometheus](https://github.com/helm/charts/blob/master/stable/prometheus/README.md) | Service metrics aggregation | prometheus.enabled | true |
-| [Grafana](https://github.com/helm/charts/blob/master/stable/grafana/README.md) | Infrastructure/service visualization dashboards | grafana.enabled | true |
-| [Metrics Server](https://github.com/helm/charts/blob/master/stable/metrics-server/README.md) | Support for Horizontal Pod Autoscaling | metrics-server.enabled | true |
-| [Ingress Nginx](https://kubernetes.github.io/ingress-nginx/) | Ingress controller and public Load Balancer | ingress-nginx.enabled | true |
-| [Cert Manager](https://github.com/jetstack/cert-manager/blob/master/README.md) | x509 certificate management for Kubernetes | cert-manager.enabled | true |
-| [Service Catalog](https://github.com/kubernetes-sigs/service-catalog/blob/master/charts/catalog/README.md) | Service Catalog chart utilized by Oracle Service Broker | catalog.enabled | false |
+| [Prometheus](https://github.com/helm/charts/blob/master/stable/prometheus/README.md) | 서비스 메트릭 수집 | prometheus.enabled | true |
+| [Grafana](https://github.com/helm/charts/blob/master/stable/grafana/README.md) | 인프라/서비스에 대한 비주얼 대쉬보드 | grafana.enabled | true |
+| [Metrics Server](https://github.com/helm/charts/blob/master/stable/metrics-server/README.md) | Horizontal Pod Autoscaling을 위한 메트릭 수집 | metrics-server.enabled | true |
+| [Ingress Nginx](https://kubernetes.github.io/ingress-nginx/) | 인그레스 컨트롤러 | ingress-nginx.enabled | true |
+| [Cert Manager](https://github.com/jetstack/cert-manager/blob/master/README.md) | 쿠버네티스에서 사용하는 인증서 관리 | cert-manager.enabled | true |
 
 
 1. MuShop 유틸리티를 Namespace 생성
@@ -162,16 +161,14 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     ...Successfully got an update from the "https://kubernetes-sigs.github.io/metrics-server" chart repository
     ...Successfully got an update from the "https://kubernetes.github.io/ingress-nginx" chart repository
     ...Successfully got an update from the "https://charts.jetstack.io" chart repository
-    ...Successfully got an update from the "https://kubernetes-sigs.github.io/service-catalog" chart repository
     ...Successfully got an update from the "https://grafana.github.io/helm-charts" chart repository
     ...Successfully got an update from the "https://prometheus-community.github.io/helm-charts" chart repository
     ...Successfully got an update from the "https://charts.helm.sh/stable" chart repository
-    Saving 7 charts
+    Saving 6 charts
     Downloading prometheus from repo https://prometheus-community.github.io/helm-charts
     Downloading grafana from repo https://grafana.github.io/helm-charts
     Downloading metrics-server from repo https://kubernetes-sigs.github.io/metrics-server
     Downloading ingress-nginx from repo https://kubernetes.github.io/ingress-nginx
-    Downloading catalog from repo https://kubernetes-sigs.github.io/service-catalog
     Downloading cert-manager from repo https://charts.jetstack.io
     Downloading jenkins from repo https://charts.helm.sh/stable
     Deleting outdated charts
@@ -200,16 +197,16 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
 
     ````shell
     NAME                                    READY   UP-TO-DATE   AVAILABLE   AGE
-    mushop-utils-cert-manager               1/1     1            1           9m26s
-    mushop-utils-cert-manager-cainjector    1/1     1            1           9m26s
-    mushop-utils-cert-manager-webhook       1/1     1            1           9m26s
-    mushop-utils-grafana                    1/1     1            1           9m26s
-    mushop-utils-ingress-nginx-controller   1/1     1            1           9m26s
-    mushop-utils-kube-state-metrics         1/1     1            1           9m26s
-    mushop-utils-metrics-server             1/1     1            1           9m26s
-    mushop-utils-prometheus-alertmanager    1/1     1            1           9m26s
-    mushop-utils-prometheus-pushgateway     1/1     1            1           9m26s
-    mushop-utils-prometheus-server          1/1     1            1           9m26s
+    mushop-utils-cert-manager               1/1     1            1           3m23s
+    mushop-utils-cert-manager-cainjector    1/1     1            1           3m23s
+    mushop-utils-cert-manager-webhook       1/1     1            1           3m23s
+    mushop-utils-grafana                    1/1     1            1           3m23s
+    mushop-utils-ingress-nginx-controller   1/1     1            1           3m23s
+    mushop-utils-kube-state-metrics         1/1     1            1           3m23s
+    mushop-utils-metrics-server             1/1     1            1           3m23s
+    mushop-utils-prometheus-alertmanager    1/1     1            1           3m23s
+    mushop-utils-prometheus-pushgateway     1/1     1            1           3m23s
+    mushop-utils-prometheus-server          1/1     1            1           3m23s
     ````
 
 2. Ingress Controller의 EXTERNAL-IP 확인:
@@ -224,8 +221,8 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     Sample response:
 
     ````shell
-    NAME                                    TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)                      AGE
-    mushop-utils-ingress-nginx-controller   LoadBalancer   10.96.194.130   129.xxx.xxx.xxx   80:30056/TCP,443:31381/TCP   2m18s
+    NAME                                    TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)                      AGE
+    mushop-utils-ingress-nginx-controller   LoadBalancer   10.96.127.88   146.xx.xxx.xxx   80:31000/TCP,443:31125/TCP   4m15s
     ````
 
 ## Task 4: Helm을 사용하여 MuShop 애플리케이션 배포
@@ -386,4 +383,4 @@ helm이 구성 가능한 차트를 패키징하고 배포하는 방법을 제공
 * **Author** - Adao Junior
 * **Contributors** -  Kay Malcolm (DB Product Management), Adao Junior
 * **Last Updated By/Date** - Adao Junior, October 2020
-* **Korean Translator & Contributors** - DongHee Lee, February 2022
+* **Korean Translator & Contributors** - DongHee Lee, August 2022
