@@ -2,18 +2,18 @@
 
 ## Introduction
 
-OCI Search Service with OpenSearch is an insight engine offered as an Oracle-managed service. With OCI’s capabilities for OpenSearch and OpenSearch Dashboards, you can store, search, and analyze large volumes of data quickly and see results in near real-time. Oracle automates, without any downtime, activities that include patching, updating, upgrading, backing-up, and resizing of the service.
+In this session, you will focus on understanding the pre-requisites and setting up your tenancy for the subsequent creation of an OCI OpenSearch cluster.
 
 Estimated Time: 15 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Understand the prerequisites for the creation of a search cluster
-- Create an OpenSearch cluster, connect to the cluster and ingest data
-- Run sample search commands
-- Visualize data in OpenSearch Dashboards
-
+- Create a Compartment
+- Create a (user) Group
+- Create a Policy
+- Create a VCN with internet connectivity and add a Security List rule
+- Create an OCI Compute instance in order to later access the OCI OpenSearch cluster Search API and Dashboards
 
 ## Task 1: Compartment creation
 
@@ -84,7 +84,3 @@ In this task, you will create an OCI Compute instance in the public subnet of th
 6. In the **Networking** area, select *Public Subnet-opensearch-vcn*
 7. In the **Add SSH keys area**, decide whether you want to use an existing SSH key, or generate a new SSH key. If you choose to generate a new SSH key, remember to download the private key.
 
-## Acknowledgements
-
-* **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, August 2022

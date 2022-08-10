@@ -3,6 +3,10 @@
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
+            "title": "Introduction: OCI Search Service with OpenSearch",
+            "filename": "../../intro/intro.md"
+        },
+        {
             "title": "Lab 1: Pre-requisites",
             "filename": "../../setup-prerequisites/setup-prerequisites.md"
         },
