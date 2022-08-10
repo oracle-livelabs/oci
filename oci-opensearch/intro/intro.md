@@ -6,6 +6,8 @@ OCI Search Service with OpenSearch is an insight engine offered as an Oracle-man
 
 Estimated Time: 60 minutes
 
+## Objectives
+
 In this workshop, you will:
 - Understand the prerequisites and prepare your tenancy for the creation of an OCI OpenSearch cluster
 - Create an OpenSearch cluster, connect to the cluster and ingest data
