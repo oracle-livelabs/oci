@@ -10,7 +10,7 @@ In this workshop, you will provision the APM Java agent in a file system mounted
 
 ![](images/apm_microservices_setup.png " ")
 
-Estimated Workshop Time: 60 minutes
+Estimated Workshop Time: 80 minutes
 
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 

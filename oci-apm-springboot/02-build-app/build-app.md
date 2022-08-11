@@ -92,8 +92,8 @@ Estimated time: 20 minutes
     ```
   ![Oracle Cloud console, Navigation Menu](images/4-1-cloudshell.png " ")
 
-  >NOTE: Verify there are three files in the folder.
-  apmlab-fss.yaml  wstore-after.yaml  wstore-before.yaml
+  >NOTE: Verify there are four  files in the folder.
+  apmlab-fss.yaml, wstore-before.yaml, wstore-add-storage.yaml and wstore-deploy-agent.yaml
 
 3. Execute the command below to deploy the application to the cluster.
     ``` bash
@@ -106,7 +106,7 @@ Estimated time: 20 minutes
 
   ![Oracle Cloud console, Navigation Menu](images/4-2-cloudshell.png " ")
 
-5. Run the kubectl command below to display the deployed services
+5. Run the kubectl command below to display the deployed services. It may take a few minutes to show the IP.
 
     ``` bash
     <copy>

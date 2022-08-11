@@ -50,7 +50,7 @@ Estimated time: 30 minutes
 
    ![Oracle Cloud console, file systems](images/3-1-5-filesystem.png " ")
 
-8. In the Mount Target Information section, ensure that the **Create New Mount Target** is selected. Then locate the **Create in Compartment** field, ensure the ***apmworkshop*** compartment is selected.
+8. In the Mount Target Information section, ensure that the **Create New Mount Target** is selected. Then locate the **Create in Compartment** field, ensure the **apmworkshop** compartment is selected.
    ![Oracle Cloud console, file systems](images/3-1-5-1-filesystem.png " ")
 9. Leave the other fields by default and click **Create**.
 
@@ -95,7 +95,9 @@ Estimated time: 30 minutes
 
    ![Oracle Cloud console, Security Rules](images/3-2-6-securityrules.png " ")
 
-6.	Click **+ Another Ingress Rule** button and create additional rule for **UDP**, with the destination port range **111,2048**. Use the same values with the rule created above for the rest of the fields.<br><br> Click **Add Ingress Rules** button which creates 4 ingress rules in the security list.
+6.	Click **+ Another Ingress Rule** button and create additional rule for **UDP**, with the destination port range **111,2048**. Use the same values with the rule created above for the rest of the fields.  
+
+    Click **Add Ingress Rules** button which creates 4 ingress rules in the security list.
 
    ![Oracle Cloud console, Security Rules](images/3-2-7-securityrules.png " ")
 

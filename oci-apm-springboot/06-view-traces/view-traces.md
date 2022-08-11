@@ -4,7 +4,7 @@
 
 In this lab, you will learn how to use the APM Trace Explorer to trace the workload generated with the WineCellar demo application.
 
-Estimated time: 15 minutes
+Estimated time: 10 minutes
 
 ### Objectives
 
