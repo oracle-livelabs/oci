@@ -63,9 +63,11 @@ Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Clou
 6. No Cloud Shell, inicialmente, se conecte à instância de computação e execute o comando copiado.
 
 ``` shell
+<copy>
 ssh opc@<ip-da-máquina>
 sudo su -
 <comando-connect>
+</copy>
 ```
 
 *Neste ponto, estamos acessando a máquina, utilizando o usuário root e executando o comando de 'attach'.*
