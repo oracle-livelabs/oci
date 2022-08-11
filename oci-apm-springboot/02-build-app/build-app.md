@@ -76,7 +76,10 @@ Estimated time: 20 minutes
 
 ## **Task 3**: Download configuration files
 
-1. TBD: ***Download the zip file from Object library location and unzip.*** TBD
+1. Create a work folder in your Cloud Shell.
+
+2. TBD: ***Download the zip file from Object library location to the sb-hol directory, and unzip.*** TBD
+
 
 ## **Task 4**: Deploy the application
 
