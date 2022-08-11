@@ -437,7 +437,7 @@ Agent Configuration는 로그를 수집하는 agent를 설정하는 부분입니
 
     ![Kibana Logging Search](images/efk-logging-search.png)
 
-11. EFK를 통해 OKE 상의 로그를 수집하는 예시였습니다. EKF에 대한 상세 내용은 제품 관련 홈페이지와 커뮤니티 사이트를 참고하기 바랍니다.
+11. EFK를 통해 OKE 상의 로그를 수집하는 예시였습니다. EFK에 대한 상세 내용은 제품 관련 홈페이지와 커뮤니티 사이트를 참고하기 바랍니다.
 
 
 이제 **다음 실습을 진행**하시면 됩니다.

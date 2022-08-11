@@ -382,9 +382,11 @@ CI/CD 중에 코드를 빌드하여 배포 산출물을 만드는 CI 과정에 �
 
    ![OCIR Stage](images/ocir-stage-1.png)
 
-3. Delivery Artifact Stage를 선택합니다.
+3. Delivery Artifacts Stage를 선택합니다.
 
 4. stage 이름을 입력하고 Create Artifact를 선택합니다.
+
+    - Name: 예, `deliver-generated-image`
 
    ![OCIR Stage](images/ocir-stage-2.png)
 
@@ -477,8 +479,8 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
     - Value
 
-        앞 서와 같이 build-stage에서 export한 변수값들을 사용할 수 있습니다. 아래 값은 `kubectl get deploy mushop-storefront -o yaml'한 값에서 managed-field만 제외한 값입니다.
-        추가로 OCIR 접속을 위한 image secret과 image url에 build-stage에서의 결과값을 사용하게만 변경합니다.
+        앞 서와 같이 build-stage에서 export한 변수값들을 사용할 수 있습니다. 아래 값은 `kubectl get deploy mushop-storefront -o yaml' 명령을 실행하여 가져온 값에서 일부 항목(managed-field)만 제외한 값입니다.
+        추가로 OCIR 접속을 위한 사전에 약속된 image secret과, image url에 build-stage에서의 결과값을 사용하도록 수정된 내용으로 아래 내용을 복사해 그대로 사용하면 됩니다.
 
         ```
         <copy>
@@ -648,6 +650,8 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 4. 설정한 Deployment Pipeline을 지정합니다.
 
+    - Name: 예, trigger-deployment-stage
+
    ![Deployment Pipeline](images/trigger-deployment-pipeline.png)
 
 5. 전체 흐름이 완료되었습니다.
@@ -673,15 +677,20 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 4. 설정이 완료되었습니다.
 
-### 테스트
+
+## Task 6: 작성한 전체 CI/CD 테스트하기
+
+### 방법 #1. Cloud Shell에서 코드변경하기
 
 1. Trigger에서 지정한 소스 코드에 임의의 변경사항을 발생시키고 Code Repository에 반영합니다.
 
-2. MuShop 웹 화면에서 다음 오픈 시간을 변경하기 위해 Cloud Shell에서 다음 파일을 수정하고 반영합니다.
+2. MuShop 웹 화면에서 다음 오픈 시간을 변경할 예정입니다.
 
     ![Storefront UI](images/opening-hours.png =50%x*)
 
-    src/templates/data/_data.pug 에서 openingHours 시간의 값을 원하시는 시간으로 변경합니다.
+3. Cloud Shell에서 src/templates/data/_data.pug 에서 openingHours 시간의 값을 원하시는 시간으로 변경합니다.
+
+    예, 마감시간을 22:00에서 18:00로 변경
     ````
     -
       var shopInfo = {
@@ -697,7 +706,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
       ...    
     ````
 
-3. 코드를 Code Repository에 Push 합니다.
+4. 코드를 Code Repository에 Push 합니다.
 
     ````
     <copy>    
@@ -707,8 +716,39 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
     </copy>
     ````
 
+### 방법 #2. Cloud Editor에서 코드변경하기
 
-4. 빌드 실행 내역을 보면, 그림과 같이 Trigger 된것은 Commit ID가 함께 보이며, Code Repository와 링크되어 있습니다.
+1. Trigger에서 지정한 소스 코드에 임의의 변경사항을 발생시키고 Code Repository에 반영합니다.
+
+2. MuShop 웹 화면에서 다음 오픈 시간을 변경할 예정입니다.
+
+    ![Storefront UI](images/opening-hours.png =50%x*)
+
+3. 코드 작성은 Cloud Shell에 있는 VI 에디터를 사용할 수도 있으며, 여기서는 새로 나온 OCI Code Editor 사용하겠습니다. 콘솔 오른쪽 상단에서 Code Editor를 실행합니다.
+
+    ![Code Editor](images/code-editor-start.png)
+
+4. 메뉴에서 **File** &gt; **Open** 을 통해 mushop-store-code-repo 폴더를 엽니다. 열린 폴더안의 src/templates/data/_data.pug 에서 openingHours 시간의 값을 원하시는 시간으로 변경합니다. 
+
+    예, 마감시간을 22:00에서 18:00로 변경
+    ![Code Editor - OpeningHours](images/code-editor-opening-hours.png)
+
+5. 왼쪽 메뉴에서 Source Control로 이동하여, 변경사항을 스테이지합니다.
+    ![Code Editor - OpeningHours](images/code-editor-stage-all-changes.png)
+
+6. 코멘트(예, update opening-hours) 추가하고, 스테이지된 변경사항을 커밋합니다.     
+    ![Code Editor - OpeningHours](images/code-editor-commit.png)
+
+7. DevOps Code Repository로 반영하기 위해 왼쪽 아래의 Push 아이콘을 클릭합니다.    
+    ![Code Editor - OpeningHours](images/code-editor-push-commit.png)
+
+8. 확인 창이 뜨면 OK를 클릭합니다.    
+    ![Code Editor - OpeningHours](images/code-editor-push-ok.png)
+
+
+### DevOps 파이프라인 실행결과 확인
+
+1. 빌드 실행 내역을 보면, 그림과 같이 Trigger 된것은 Commit ID가 함께 보이며, Code Repository와 링크되어 있습니다.
 
     ![Pipeline Test Result](images/pipeline-test-1.png)
 
@@ -716,15 +756,15 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
     ![Pipeline Test Result](images/pipeline-test-2.png)
 
-5. 빌드 파이프라인이 정상적으로 코드 빌드 부터 컨테이너 이미지 생성, 배포 파이프라인 호출까지 실행되었습니다.
+2. 빌드 파이프라인이 정상적으로 코드 빌드 부터 컨테이너 이미지 생성, 배포 파이프라인 호출까지 실행되었습니다.
 
     ![Pipeline Test Result](images/pipeline-test-3.png)
 
-6. 배포 파이프라인도 정상 실행되었습니다.
+3. 배포 파이프라인도 정상 실행되었습니다.
 
     ![Pipeline Test Result](images/pipeline-test-4.png)
 
-7. OKE 클러스터를 조회해 보면 정상 배포 되었습니다.
+4. OKE 클러스터를 조회해 보면 정상 배포 되었습니다.
 
 
     Pod가 새롭게 배포되었고, 이미지 주소가 새로 생성된 것으로 태그가 Commit ID와 동일함을 알수있습니다.
@@ -749,7 +789,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
       Normal  Pulled     9m4s  kubelet            Successfully pulled image "ap-chuncheon-1.ocir.io/axjowrxaetht/mushop-storefront:4039165" in 838.067082ms
     ```
 
-8. 서비스 주소로 접속시 정상 동작을 확인할 수 있습니다.
+5. 서비스 주소로 접속시 정상 동작을 확인할 수 있습니다.
  
     ![Updated Storefront UI](images/pipeline-test-5.png =50%x*)
 
@@ -762,4 +802,4 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 ## Acknowledgements
 
-* **Author** - DongHee Lee, February 2022
+* **Author** - DongHee Lee, August 2022
