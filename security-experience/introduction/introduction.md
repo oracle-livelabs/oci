@@ -23,7 +23,7 @@ These are the main components you will receive as part of this workshop:
 Estimated Workshop Time: -- hours -- minutes (This estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
 
 
-### Objectives
+## Objectives
 
   * Set up the environment
   * Execute security assessment
