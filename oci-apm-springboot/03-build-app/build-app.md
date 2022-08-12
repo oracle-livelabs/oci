@@ -2,9 +2,10 @@
 
 ## Introduction
 
-This workshop uses a Spring Boot based Java microservices as a target application to trace against. In this lab, you will first build the application, create an Oracle container engine for Kubernetes (OKE) cluster in your tenancy, then deploy the application to the OKE.
+This workshop uses a Spring Boot based Java microservices as a target application to trace against. In this lab, you will deploy the application to the Kubernetes cluster you created in the Lab 1.
 
-Estimated time: 20 minutes
+
+Estimated time: 25 minutes
 
 ### Objectives
 
@@ -14,38 +15,17 @@ Estimated time: 20 minutes
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: Create an OKE
+## **Task 1**: Verify OKE
 
-1. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, select **Developer Services** > **Kubernetes Clusters (OKE)**.
+1. Go back to the Kubernetes cluster page where you left at the Lab 1, and check the status of the cluster. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, select **Developer Services** > **Kubernetes Clusters (OKE)**.
 
    ![Oracle Cloud console, Navigation Menu](images/1-1-menu.png " ")
 
-2. Make sure the **apmworkshop** is selected in the Compartment field, then click **Create cluster**
+2. Click **apmlab-cluser1** link from the table.
 
-   ![Oracle Cloud console, Navigation Menu](images/1-2-OKE.png " ")
+   ![Oracle Cloud console, Navigation Menu](images/1-2-menu.png " ")
 
-3. Quick Create pane is pre-selected. Keep the default selection and click **Submit**.
-
-   ![Oracle Cloud console, Navigation Menu](images/1-3-OKE.png " ")
-
-4. Name the cluster as **apmlab-cluser1**. Accept the default setting for other fields and click **Next**.
-
-   ![Oracle Cloud console, Navigation Menu](images/1-4-OKE.png " ")
-   ![Oracle Cloud console, Navigation Menu](images/1-5-OKE.png " ")
-
-5. Review the configuration, and click **Create cluster**.
-
-   ![Oracle Cloud console, Navigation Menu](images/1-6-OKE.png " ")
-
-6. Make sure all verification steps are cleared. Click **Close**.
-
-   ![Oracle Cloud console, Navigation Menu](images/1-7-OKE.png " ")
-
-7.  This will start to create a cluster. It may take 7 to 10 minutes to complete.
-
-   ![Oracle Cloud console, Navigation Menu](images/1-8-OKE.png " ")
-
-8. Once the creation is completed, the status becomes **Active**.
+3. If the status of the cluster is **Active**, creation was successful. If it is still in a **Creating** status, it may take a few more minutes to complete. (Usually it takes 7 to 10 minutes to finish the jobs to create a cluster).
 
    ![Oracle Cloud console, Navigation Menu](images/1-9-OKE.png " ")
 
