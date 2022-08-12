@@ -2,13 +2,12 @@
 
 ## Introduction
 
-In this lab, you will use Oracle Cloud console to set up an OCI compartment and create an APM Domain. You will acquire a Data Upload Endpoint and a Private Data Key, which are needed to configure the APM Tracer on the application.
+In this lab, you will create an APM Domain. You will acquire a Data Upload Endpoint and a Private Data Key, which are needed to configure the APM Tracer on the application.
 
 Estimated time: 10 minutes
 
 ### Objectives
 
-* Create an OCI Compartment
 *	Create an APM Domain
 *	Obtain a Data Upload Endpoint and a Private Data Key
 
@@ -18,20 +17,7 @@ Estimated time: 10 minutes
 * This lab requires an [Oracle Cloud account](https://www.oracle.com/cloud/free/). You may use your own cloud account, or a Free tier account, a cloud account that you obtained through a trial.
 * To create APM domain, you will need an Oracle Cloud Account Administrator role or manage apm-domains permission in the target compartment. For more details, refer to the OCI Documentation, [Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html).
 
-## **Task 1**: Create an OCI compartment
-
-1. Open the navigation menu from the top-left corner (aka. hamburger menu) of the Oracle Cloud console and select **Identity & Security** > **Compartments**.
-	![Oracle Cloud console Menu](images/1-1-compartments.png " ")
-2. Click **Create Compartments**
-	![Oracle Cloud console, Create Compartment](images/1-2-compartments.png " ")
-3. Enter the following parameters:
-*	Compartment name: **apmworkshop**
-*	Description: **APM workshop compartment**
-*	Accept the default values for the other fields, and click, **Create Compartment**
-	![Oracle Cloud console, Create Compartment](images/1-3-compartments.png " ")
-*	Verify that your apmworkshop compartment is created in the table
-		![Oracle Cloud console, Create Compartment](images/1-4-compartments.png " ")
-## **Task 2**: Create an APM domain
+## **Task 1**: Create an APM domain
 
 1.	From the OCI menu, select **Observability & Management**, then **Administration**.
 	![Oracle Cloud console Menu](images/2-1-domain.png " ")
@@ -49,7 +35,7 @@ Estimated time: 10 minutes
   ![Oracle Cloud console, Create APM Domain](images/2-5-domain.png " ")
   For more details how to create an APM Domain, refer to the OCI documentation, [Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html).
 
-## **Task 3**: Obtain Data Upload Endpoint and Private and Public Data Keys
+## **Task 2**: Obtain Data Upload Endpoint and Private and Public Data Keys
 
 To upload tracing data to an APM domain, Data Upload Endpoint and both Private and Public Data Keys must be configured in the application’s configuration files. Next you are going to obtain the values for them and then enter them into the Oracle Cloud console.
 

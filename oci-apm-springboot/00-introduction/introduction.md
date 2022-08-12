@@ -10,7 +10,7 @@ In this workshop, you will provision the APM Java agent in a file system mounted
 
 ![](images/apm_microservices_setup.png " ")
 
-Estimated Workshop Time: 80 minutes
+Estimated Workshop Time: 65 minutes
 
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 
@@ -50,6 +50,8 @@ If you are running the workshop in a Paid Cloud Account, ensure you have the per
 
 -	**[Use OpenTracing for Microservices with Helidon Utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=917)**  Workshop
 -	**[Trace a Native Cloud App Utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=916)** Workshop
+-	**[TMonitor Traces for WebLogic on Kubernetes utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=932)** Workshop
+
 
 ## Acknowledgements
 

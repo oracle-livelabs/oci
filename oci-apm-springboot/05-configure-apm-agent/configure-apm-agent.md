@@ -66,7 +66,7 @@ Estimated time: 10 minutes
 
 ## **Task 3**: Copy the Java Agent installer to the file system
 
-1.	Run the command below to copy the Java Agent installer file to the file system. Ensure to replace the **apm-agent-version** with that of the APM Java Agent you have, before the command execution.
+1.	Run the command below to copy the Java Agent installer file to the file system. Ensure to ***replace*** the **apm-agent-version** with that of the APM Java Agent you have, before the command execution.
 
     ``` bash
     <copy>
@@ -94,7 +94,7 @@ Estimated time: 10 minutes
 ## **Task 4**: Provision the APM Java Agent
 
 
-1.	Execute the command below to provision the APM Java agent. Replace the **APM Domain Private key** and **APM Domain Endpoint**, with the values saved in the Lab2, Task2. Please also change the **apm-agent-version** in the file name to the version of the agent you have.
+1.	Execute the command below to provision the APM Java agent. ***Replace*** the **APM Domain Private key** and **APM Domain Endpoint**, with the values saved in the Lab2, Task2. Please also ***change*** the **apm-agent-version** in the file name to the version of the agent you have.
 
     ``` bash
     <copy>
@@ -107,7 +107,7 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Cloud Shell ](images/4-1-10-cloudshell.png " ")
 
-4.	Execute the below command to verify ***oracle-apm-agent*** directory is created under the apmlab-fss directory.
+2.	Execute the below command to verify ***oracle-apm-agent*** directory is created under the apmlab-fss directory.
 
     ``` bash
     <copy>
@@ -119,43 +119,49 @@ Estimated time: 10 minutes
 
 ## **Task 5**: Deploy the Java Agent
 
-Next, deploy the Java Agent by applying the wstore-deploy-agent.yaml file.
+Next step is to deploy the Java Agent. First update the **wstore.yaml** file by adding the java runtime argument that points to the APM Agent jar file bootstrap location, then apply to the Kubernetes pods. Notice that the service names, **wstore-front** and **wstore-back**, that are used to display in the APM Trace Explorer, are also added to the command for the statefulsets.
 
-
-1.  Now you will need to update the configuration file and add java runtime argument that points to the APM Agent jar file bootstrap location. To save time, in this lab, we have preconfigured the changes in the **wstore-deploy-agent.yaml** file. Run the following diff command to verify the difference from the original **wstore-before.yaml** file.  
-
-    ``` bash
-    <copy>
-    diff ~/sb-hol/wstore-before.yaml ~/sb-hol/wstore-deploy-agent.yaml
-    </copy>
-    ```
-    Verify that the following changes are made to the statefulsets in the **wstore-deploy-agent.yaml** file respectively. Notice that the service names, **wstore-front** and **wstore-back**, are also added.
-
-
-        command: ["java", "-javaagent:/apmlab-fss/oracle-apm-agent/bootstrap/ApmAgent.jar**", "-Dcom.oracle.apm.agent.service.name=wstore-front"**, "-jar", "./wineStore.jar", "--spring.config.location=file:/spring/wstore.properties"]
-
-        command: ["java", "-javaagent:/apmlab-fss/oracle-apm-agent/bootstrap/ApmAgent.jar","-Dcom.oracle.apm.agent.service.name=wstore-back" ,"-jar", "./wineStore.jar", "--spring.config.location=file:/spring/wstore.properties"]
-
-
-    ![Oracle Cloud console, Cloud Shell ](images/4-6-1-cloudshell.png " ")    
-
-2.	Optionally, run the following tail command to display the last 31 lines of the **wstore-deploy-agent.yaml** file and observe how the configurations are added.
+1.  Use any editor to open wstore.yaml file.
 
     ``` bash
     <copy>
-    tail -31 ~/sb-hol/wstore-deploy-agent.yaml
+    vi ~/sb-hol/wstore.yaml
     </copy>
     ```
-    ![Oracle Cloud console, Cloud Shell ](images/4-6-1-1-cloudshell.png " ")
+2. Find the following line in each statefulset, where Java runtime arguments are set. (Look for the lines 45 and 80, assuming the volumes were added as expected in the previous steps).
 
-    >***Note:*** the trail command only shows one of the two statefulset as an example. You can use cat or vi commands to see the entire file to fully examine the configurations.
+    >command: ["java", "-jar", "./wineStore.jar", "--spring.config.location=file:/spring/wstore.properties"]
 
 
-3.	Recreate the Kubernetes pods by applying the **wstore-deploy-agent.yaml** file.
+3. Hit **i**. Locate the line 45, then insert the following arguments after **command: ["java",** .
+
+    ``` bash
+    <copy>
+     "-javaagent:/apmlab-fss/oracle-apm-agent/bootstrap/ApmAgent.jar", "-Dcom.oracle.apm.agent.service.name=wstore-front",
+    </copy>
+    ```
+
+4. Next, locate the line 80, and insert the following arguments after **command: ["java",** .
+
+    ``` bash
+    <copy>
+     "-javaagent:/apmlab-fss/oracle-apm-agent/bootstrap/ApmAgent.jar", "-Dcom.oracle.apm.agent.service.name=wstore-back",
+    </copy>
+    ```
+    The image below shows the **wstore-back** statefulset after the successful editing, for example. Please note that you will need to add the arguments to both statefulsets, **wstore-front** and **wstore-back**, and the service names have to be configured differently.
+
+  ![Oracle Cloud console, Cloud Shell ](images/4-6-1-cloudshell.png " ")    
+
+
+    > ***Troubleshooting***: For learning purpose, we have preconfigured the java argument editing in the **wstore-deploy-agent.yaml** file. If you encounter any issues run the following command to review how the changes expected to be done.
+    - vi ~/sb-hol/wstore-deploy-agent.yaml
+
+
+5.	Recreate the Kubernetes pods by applying the **wstore-deploy-agent.yaml** file.
 
     ```bash
     <copy>
-    kubectl apply -f ~/sb-hol/wstore-deploy-agent.yaml --validate=false
+    kubectl apply -f ~/sb-hol/wstore.yaml --validate=false
     </copy>
     ```
 
@@ -163,7 +169,7 @@ Next, deploy the Java Agent by applying the wstore-deploy-agent.yaml file.
 
     ![Oracle Cloud console, Cloud Shell ](images/4-6-2-cloudshell.png " ")    
 
-5.	Wait for a few minutes, then run the following command to check the status of the pods. Make sure they are in the Running state and Ready.
+6.	Run the following command to check the status of the pods. Make sure they are in the Running state and Ready. If the status is pending, re-run the command. If they do not come back after a few minutes, review the file to ensure the editing was done correctly.  
 
     ```bash
     <copy>

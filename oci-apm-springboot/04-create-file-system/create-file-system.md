@@ -4,7 +4,7 @@
 
 In this lab, you will create a file system in the Oracle Cloud Infrastructure. You will also create security rules to allow network traffic and mount the file system to the Kubernetes pods.  
 
-Estimated time: 30 minutes
+Estimated time: 15 minutes
 
 ### Objectives
 
@@ -20,47 +20,52 @@ Estimated time: 30 minutes
 
 ## **Task 1**: Create a file system in the Oracle Cloud
 
-1.	From the OCI menu, select **Storage** > **File Systems**.
+1.  Minimize the Cloud Shell window by clicking the Minimize button.
+
+   ![Oracle Cloud console, Cloud Shell](images/3-1-0-cloushell.png " ")
+
+2.	From the OCI menu, select **Storage** > **File Systems**.
 
    ![Oracle Cloud console, Navigation Menu](images/3-1-1-menu.png " ")
 
-2.	Make sure you are in the comppartment **apmworkshop**. If not, select it from the pulldown menu.
+3.	Make sure you are in the comppartment **apmworkshop**. If not, select it from the pulldown menu.
 
    ![Oracle Cloud console, file systems](images/3-1-1-2-filesystem.png " ")
 
-3.  Click **Create File System**
+4.  Click **Create File System**
 
    ![Oracle Cloud console, file systems](images/3-1-2-filesystem.png " ")
 
-4. On the Create File System page, in the **File System Information** section, click **Edit Details**.
+5. On the **Create File System** page, in the **File System Information** section, click **Edit Details**.
 
    ![Oracle Cloud console, file systems](images/3-1-3-filesystem.png " ")
 
-5.	On the Create File System page, enter ***apmlab-fss*** into the **Name** field.
+6.	On the Create File System page, enter **apmlab-fss** into the **Name** field.
 
-    Make sure the ***apmworkshop*** is selected in the **Compartment**. Leave the other fields with default values.
+    Make sure the **apmworkshop** is selected in the **Compartment**. Leave the other fields with default values.   
+    ***Do NOT click the Create button yet.***
 
    ![Oracle Cloud console, file systems](images/3-1-4-filesystem.png " ")
 
-6. Scrolling down the Create File System page, in the **Export Information** section, verify that the **Export Path** is set to /apmlab-fss. This is where the file system will be mounted. You will provision APM Java agent at this location. In the Mount Target Information section, click **Edit Details** to expand the section.
+7. Scrolling down the **Create File System** page, and find the **Export Information** section. Verify that the **Export Path** is set to **/apmlab-fss**. This is where the file system will be mounted. You will provision APM Java agent at this location. In the **Mount Target Information** section, click **Edit Details** to expand the section.
 
    ![Oracle Cloud console, file systems](images/3-1-4-1-filesystem.png " ")
 
-7. In the **Mount Target Information** section, click the link **Click here to enable compartment selections**.
+8. In the **Mount Target Information** section, click the link **Click here to enable compartment selections**.
 
    ![Oracle Cloud console, file systems](images/3-1-5-filesystem.png " ")
 
-8. In the Mount Target Information section, ensure that the **Create New Mount Target** is selected. Then locate the **Create in Compartment** field, ensure the **apmworkshop** compartment is selected.
+9. In the Mount Target Information section, ensure that the **Create New Mount Target** is selected. Then locate the **Create in Compartment** field, ensure the **apmworkshop** compartment is selected.
    ![Oracle Cloud console, file systems](images/3-1-5-1-filesystem.png " ")
-9. Leave the other fields by default and click **Create**.
+10. Leave the other fields by default and click **Create**.
 
    ![Oracle Cloud console, file systems](images/3-1-6-filesystem.png " ")
 
-10.	A new File System is created.  Scroll down to find **Exports** section. Click the link to the **Mount Target** just created.
+11.	A new File System is created.  Scroll down to find **Exports** section. Click the link to the **Mount Target** just created.
 
    ![Oracle Cloud console, file systems](images/3-1-8-filesystem.png " ")
 
-11.	Click **Copy** next to the **OCID**. Save the value in a text file on your computer. Also, take a note of the **IP Address** as you will need these values in the next steps.
+12.	Click **Copy** next to the **OCID**. Save the value in a text file on your computer. Also, take a note of the **IP Address** as you will need these values in the next steps.
 
    ![Oracle Cloud console, file systems](images/3-1-9-filesystem.png " ")
 
@@ -141,7 +146,7 @@ Estimated time: 30 minutes
     >	***NOTE***: If the Cloud Shell is already running but the window is minimized, you can restore the window by clicking the **Restore** icon at the toolbar.
       ![Oracle Cloud console, Menu](images/3-3-2-menu.png " ")
 
-2.  Run the oci ce (Container Engine) command that you saved in the Lab 2, Task 2, step 5.
+2.  If the previous Cloud Shell session is expired, run the oci ce (Container Engine) command that you saved in the Lab 3, Task 1, step 5.
 
    ![Oracle Cloud console, Cloud Shell](images/3-3-2-cloudshell.png " ")
 
@@ -155,7 +160,7 @@ Estimated time: 30 minutes
 
     >***NOTE***: If you are using the vi editor, type ***i*** to enter Insert mode, and make the text editable. Use allow keys to navigate the text and make changes to where you set the cursor. To save a file, press Esc key, then type ***:wq*** to write and quit the file. If you do not wish a change, press Esc then type ***:q!*** to discard your changes. Please refer to the editor references for more usages.
 
-5. Review the file contents that create Kubernetes objects (StorageClass, PersistentVolume, PersistentVolumeClaim) in your OKE. Replace the **mntTargetID** and **server IP** with the values copied in the Lab 3, Task 1, step 11 in this Workshop. Save the change and close the file.
+4. Review the file contents that create Kubernetes objects (StorageClass, PersistentVolume, PersistentVolumeClaim) in your OKE. Replace the **mntTargetID** and **server IP** with the values copied in the Lab 3, Task 1, step 11 in this Workshop. Save the change and close the file.
 
         apiVersion: storage.k8s.io/v1
         kind: StorageClass
@@ -198,7 +203,7 @@ Estimated time: 30 minutes
      >***Notes:*** Refer to the screenshot image below to see how it should look like after the file is modified. Verify that the Kubernetes objects, such as StorageClass, PersistentVolume and PersistentVolumeClass are configured in the YAML file.
        	![yaml](images/3-3-2-yaml.png " ")
 
-## **Task 4**: Recreate Kubernetes pods
+## **Task 4**: Apply changes to the container
 
 1.	Execute the following command to add the storage objects to the Kubernetes cluster.
 
@@ -214,50 +219,91 @@ Estimated time: 30 minutes
      >***NOTE***: If you need to modify the YAML file after once applied, first run the command below to remove the objects, modify the file, then rerun the above command to re-apply the YAML.  
      kubectl delete -f ~/sb-hol/apmlab-fss.yaml
 
-3.	Next, you will need to map the PV to the pods. To save time, in this lab, we have preconfigured the mapping in the **wstore-add-storage.yaml** file. Run the following diff command to verify the difference from the original **wstore-before.yaml** file.  
+## **Task 5**: Add volumes to Kubernetes pods
+
+1.	Next, you will need to map the PV to the pods. Open **wstore.yaml** file with an editor.
 
     ``` bash
     <copy>
-    diff ~/sb-hol/wstore-before.yaml ~/sb-hol/wstore-add-storage.yaml
+    vi ~/sb-hol/wstore.yaml
     </copy>
     ```
-    Verify that the following configurations are added to each of the two statefulsets in the **wstore-add-storage.yaml** file.
 
-          volumeMounts:
-          - mountPath: "/apmlab-fss"
-            name: apmlab-nfs
-        volumes:
-        - name: apmlab-nfs
-          persistentVolumeClaim:
-            claimName: apmlab-fsspv
+2. Scroll down the file. You will see there are two statefulsets, **wstore-front** and **wstore-back**, defined in the YAML file.
+
+3. Within each statefulset, find a line where defines the container port: "**- containerPort: 8080**" (line 51 and line 75).
 
    ![Oracle Cloud console, Cloud Shell](images/3-3-3-1-cloudshell.png " ")
 
-4.	Optionally, run the following tail command to display the last 31 lines of the ***wstore-add-storage.yaml*** file and observe how the configurations are added.
+4. Hit **i** to enter the edit mode. Carefully insert the following code below the **containerPort**. Note that the same changes have to be made in both statefulsets, **wstore-back** and **wstore-front**.
 
-    ``` bash
-    <copy>
-    tail -31 ~/sb-hol/wstore-add-storage.yaml
-    </copy>
-    ```
 
-   ![Oracle Cloud console, Cloud Shell](images/3-3-3-2-cloudshell.png " ")
+            volumeMounts:
+            - mountPath: "/apmlab-fss"
+              name: apmlab-nfs
+          volumes:
+          - name: apmlab-nfs
+            persistentVolumeClaim:
+              claimName: apmlab-fsspv
 
-   >***Note:*** the trail command only shows one of the two statefulset as an example. You can use cat or vi commands to see the entire file to fully examine the configurations.
+
+
+    > ***Suggested Editing Tips:***
+     - Use your mouse to select the text above, and manually copy and paste it into a text file.
+     - Auto copy is not provided as it may break the indentation.
+     - Make sure to keep the same space indentation when pasting the code into the file.
+     - "VolumeMounts:" aligns with "ports:"
+     - "Volumes:" aligns with "imagePullSecrets:"
+     - Refer to the screenshot image below to see how it should look like after the file is modified.
+     ![Oracle Cloud console, Cloud Shell](images/3-3-3-2-cloudshell.png " ")
+     - Also refer to the below code change made to one of the statefulsets, **wstore-back**.
+
+         apiVersion: apps/v1
+         kind: StatefulSet
+         metadata:
+           name: wstore-back
+         spec:
+           serviceName: "wstore-backend"
+           replicas: 2
+           selector:
+             matchLabels:
+               app: wstore-back
+           template:
+             metadata:
+               labels:
+                 app: wstore-back
+             spec:
+               containers:
+               - name: wstore
+                 image: iad.ocir.io/axfo51x8x2ap/p-winestore:latest
+                 command: ["java", "-jar", "./wineStore.jar", "--spring.config.location=file:/spring/wstore.properties"]
+                 ports:
+                 - containerPort: 8080
+                 volumeMounts:
+                 - mountPath: "/apmlab-fss"
+                   name: apmlab-nfs
+               volumes:
+               - name: apmlab-nfs
+                 persistentVolumeClaim:
+                   claimName: apmlab-fsspv
+               imagePullSecrets:
+                   - name: ocirsecret
+
 
 
 5.	Run the following command. This will recreate the pods, with the new object configurations.
 
     ``` bash
     <copy>
-    kubectl apply -f ~/sb-hol/wstore-add-storage.yaml --validate=false
+    kubectl apply -f ~/sb-hol/wstore.yaml --validate=false
     </copy>
     ```
     Verify that the service for wstore-frontend and both statefulsets are configured.
 
    ![Oracle Cloud console, Cloud Shell](images/3-3-6-cloudshell.png " ")
 
-7.	Run the following command to ensure the pods are in the running state. You may need to wait for a few minutes to see all the pods are restarted and their status updated.
+
+6.	Run the following command to ensure the pods are in the running state. Verify the **AGE** column to ensure the pods are restarted.
 
     ``` bash
     <copy>
@@ -267,7 +313,22 @@ Estimated time: 30 minutes
 
     ![Oracle Cloud console, Cloud Shell](images/3-3-7-cloudshell.png " ")
 
-    >***NOTE***: Verify the **AGE** column to ensure the pods are restarted.
+
+7. ***Troubleshooting:*** If the pods do not come back with the running state in a minute or two, review the configuration in the file to make sure they have the right indentation. For learning purpose, we have preconfigured the volume mapping in the **wstore-add-storage.yaml** file. Run the following command to view how it looks like after the successful file editing.
+
+    ``` bash
+    <copy>
+    vi ~/sb-hol/wstore-add-storage.yaml
+    </copy>
+    ```
+
+    > If the problem persists, optionally, you can run the preconfigured YAML file to regenerate the file with the volume mapping.
+     - First run the following command to delete the failing configurations:  
+        kubectl delete -f ~/sb-hol/wstore.yaml  
+     - Then run the following to apply the preconfigured settings:    
+        kubectl apply -f ~/sb-hol/wstore-add-storage.yaml --validate=false
+
+
 
 8.	Execute the following command to access the Kubernetes pods.
 

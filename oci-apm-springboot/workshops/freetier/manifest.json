@@ -49,11 +49,17 @@
             "description": "View traces and spans in APM Trace Explorer",
             "filename": "../../07-view-traces/view-traces.md"
         },
-
+        {
+            "title": "Lab 8: Clean up the workshop environment",
+            "description": "Clean up the workshop environment",
+            "filename": "../../08-cleanup/cleanup.md"
+        },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-freetier.md"
+
         }
     ]
 }
