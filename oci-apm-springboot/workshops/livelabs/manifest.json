@@ -24,7 +24,7 @@
             "filename": "../../02-create-domain/create-domain.md"
          },
         {
-            "title": "Lab 3: Deplpy a microservices application",
+            "title": "Lab 3: Deploy a microservices application",
             "description": "Deploy a microservices application",
             "filename": "../../03-build-app/build-app.md"
         },

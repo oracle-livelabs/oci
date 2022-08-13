@@ -24,7 +24,7 @@
             "filename": "../../02-create-domain/create-domain.md"
          },
         {
-            "title": "Lab 3: Deplpy a microservices application",
+            "title": "Lab 3: Deploy a microservices application",
             "description": "Deploy a microservices application",
             "filename": "../../03-build-app/build-app.md"
         },
@@ -58,7 +58,7 @@
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
 
-            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-freetier.md"
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
 
         }
     ]
