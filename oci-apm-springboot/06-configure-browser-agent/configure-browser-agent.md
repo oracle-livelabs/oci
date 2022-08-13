@@ -1,4 +1,4 @@
-# Instrumentation for browser monitoring
+# Instrument the browser monitoring
 
 ## Introduction
 

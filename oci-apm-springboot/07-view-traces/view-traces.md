@@ -32,7 +32,7 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Cloud Shell](images/6-1-1-cloudshell.png " ")
 
-   > ***NOTE:*** The IP may be different from the last time when you accessed the WinCellar app, because the pods are regenerated.
+   > **Note:** The IP may be different from the last time when you accessed the WinCellar app, because the pods are regenerated.
 
 3.	On your laptop, start a browser and access the application with the URL pattern:
 
@@ -54,7 +54,7 @@ Estimated time: 10 minutes
 
 5. Then click around the buttons in the pages, as in the example flow shown below.
 
-    > ***Note:*** Do not worry if you see the "Failed" messages, or takes long time for the pages to respond. Those are expected, because the app is designed to fail every once and often for the demo purpose.
+    > **Note:** Do not worry if you see the "Failed" messages, or takes long time for the pages to respond. Those are expected, because the app is designed to fail every once and often for the demo purpose.
 
     Click **Add** on a couple of products, then hit **Shopping Cart**. Then Click **Checkout**.
     ![WineCellar Demo App](images/6-1-5-demoapp.png " ")
@@ -84,7 +84,7 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud, Trace Explorer](images/6-2-5-traceexplorer.png " ")
 
-   >***Note:*** If you do not see a slow trace with the duration 10 seconds or more, you can navigate the WineStore demo app a few times until you see the programmed slowness in the checkout service.
+   >**Note:** If you do not see a slow trace with the duration 10 seconds or more, you can navigate the WineStore demo app a few times until you see the programmed slowness in the checkout service.
 
 6. **Trace Details** page opens. Review the trace information at the upper screen. E.g., Status, Trace ID, Whether it has an error or not, how many spans and service are involved, or the duration of the trace.
    ![Oracle Cloud, Trace Explorer](images/6-2-6-traceexplorer.png " ")
@@ -94,7 +94,7 @@ Estimated time: 10 minutes
 
   In this example, it seems that the checkout service is where the most time was spent in the trace.
 
-  >***Note:*** The operations may look differently in the trace you selected.
+  >**Note:** The operations may look differently in the trace you selected.
 
 8. Scroll down the page to show the **Spans** view. Spans in the trace are displayed in a Gantt chart. A span at the top of the list is the root span, and the child spans are nested below the root span.
 

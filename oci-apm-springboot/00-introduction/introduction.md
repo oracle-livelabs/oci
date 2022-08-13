@@ -6,7 +6,7 @@ This workshop walks you through how to configure Spring Boot microservices deplo
 
 In this workshop, you will provision the APM Java agent in a file system mounted in the Oracle Cloud, deploy the agent to the Kubernetes cluster, instrument APM Browser agent by inserting JavaScript code to a webpage, and view traces and spans in APM Trace Explorer.
 
-> ***NOTE***: The same approach demonstrated for Spring Boot Java microservices on Kubernetes can be used to configure other types of java application servers, such as WebLogic, deployed on Kubernetes.
+> **Note:** The same approach demonstrated for Spring Boot Java microservices on Kubernetes can be used to configure other types of java application servers, such as WebLogic, deployed on Kubernetes.
 
 ![](images/apm_microservices_setup.png " ")
 

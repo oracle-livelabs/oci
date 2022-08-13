@@ -52,7 +52,7 @@ Estimated time: 10 minutes
 
   ![Oracle Cloud console, Cluster details](images/2-4-OKE.png " ")
 
-  >***NOTE***: Save the command to a text file on your laptop, and execute it every time when you start a new Cloud Shell session, while working the labs in this workshop.
+  >**Note:** Save the command to a text file on your laptop, and execute it every time when you start a new Cloud Shell session, while working the labs in this workshop.
 
 ## **Task 3**: Download configuration files
 
@@ -86,7 +86,7 @@ Estimated time: 10 minutes
     ```
   ![Oracle Cloud console, Cloud Shell](images/4-1-cloudshell.png " ")
 
-    >NOTE: Verify there are following files in the folder.
+    >**Note:** Verify there are following files in the folder.
     - apmlab-fss.yaml
     - wstore.yaml
     - wstore-add-storage.yaml
@@ -123,7 +123,7 @@ Estimated time: 10 minutes
     ```
   ![WineCellar Demo app](images/4-4-winestore.png " ")
 
-    >***Note :*** It may take a few minutes to complete the deployment and start loading the page content in the screen the first time.  
+    >**Note:** It may take a few minutes to complete the deployment and start loading the page content in the screen the first time.  
 
 You may now **proceed to the next tutorial**.
 

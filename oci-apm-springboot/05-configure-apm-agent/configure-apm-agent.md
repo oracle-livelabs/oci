@@ -89,7 +89,7 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Cloud Shell ](images/4-1-8-cloudshell.png " ")
 
-    >***NOTE***: The APM version may be different from what is showing in the example.
+    >**Note:** The APM version may be different from what is showing in the example.
 
 ## **Task 4**: Provision the APM Java Agent
 

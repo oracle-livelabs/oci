@@ -143,7 +143,7 @@ Estimated time: 15 minutes
 1. Click the **>..**  icon from the top right corner in the Oracle Cloud console menu bar, to start a Cloud Shell environment which will appear at the bottom of your page.
    ![Oracle Cloud console, Menu](images/3-3-1-menu.png " ")
 
-    >	***NOTE***: If the Cloud Shell is already running but the window is minimized, you can restore the window by clicking the **Restore** icon at the toolbar.
+    >	**Note:** If the Cloud Shell is already running but the window is minimized, you can restore the window by clicking the **Restore** icon at the toolbar.
       ![Oracle Cloud console, Menu](images/3-3-2-menu.png " ")
 
 2.  If the previous Cloud Shell session is expired, run the oci ce (Container Engine) command that you saved in the Lab 3, Task 1, step 5.
@@ -158,7 +158,7 @@ Estimated time: 15 minutes
     </copy>
     ```
 
-    >***NOTE***: If you are using the vi editor, type ***i*** to enter Insert mode, and make the text editable. Use allow keys to navigate the text and make changes to where you set the cursor. To save a file, press Esc key, then type ***:wq*** to write and quit the file. If you do not wish a change, press Esc then type ***:q!*** to discard your changes. Please refer to the editor references for more usages.
+    >**Note:** If you are using the vi editor, type ***i*** to enter Insert mode, and make the text editable. Use allow keys to navigate the text and make changes to where you set the cursor. To save a file, press Esc key, then type ***:wq*** to write and quit the file. If you do not wish a change, press Esc then type ***:q!*** to discard your changes. Please refer to the editor references for more usages.
 
 4. Review the file contents that create Kubernetes objects (StorageClass, PersistentVolume, PersistentVolumeClaim) in your OKE. Replace the **mntTargetID** and **server IP** with the values copied in the Lab 3, Task 1, step 11 in this Workshop. Save the change and close the file.
 
@@ -200,7 +200,7 @@ Estimated time: 15 minutes
               storage: 10Gi
           volumeName: apmlab-fsspv
 
-     >***Notes:*** Refer to the screenshot image below to see how it should look like after the file is modified. Verify that the Kubernetes objects, such as StorageClass, PersistentVolume and PersistentVolumeClass are configured in the YAML file.
+     >**Note:** Refer to the screenshot image below to see how it should look like after the file is modified. Verify that the Kubernetes objects, such as StorageClass, PersistentVolume and PersistentVolumeClass are configured in the YAML file.
        	![yaml](images/3-3-2-yaml.png " ")
 
 ## **Task 4**: Apply changes to the container
@@ -216,7 +216,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, Cloud Shell](images/3-3-3-cloudshell.png " ")
 
-     >***NOTE***: If you need to modify the YAML file after once applied, first run the command below to remove the objects, modify the file, then rerun the above command to re-apply the YAML.  
+     >**Note:** If you need to modify the YAML file after once applied, first run the command below to remove the objects, modify the file, then rerun the above command to re-apply the YAML.  
      kubectl delete -f ~/sb-hol/apmlab-fss.yaml
 
 ## **Task 5**: Add volumes to Kubernetes pods
