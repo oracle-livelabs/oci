@@ -1,4 +1,4 @@
-# Instrumentation for server monitoring
+# Instrument the server monitoring
 
 ## Introduction
 

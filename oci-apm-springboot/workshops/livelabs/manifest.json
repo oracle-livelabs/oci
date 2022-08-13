@@ -35,12 +35,12 @@
             "filename": "../../04-create-file-system/create-file-system.md"
         },
         {
-            "title": "Lab 5: Instrumentation for server monitoring",
+            "title": "Lab 5: Instrument the server monitoring",
             "description": "Instrumentation for server monitoring",
             "filename": "../../05-configure-apm-agent/configure-apm-agent.md"
         },
         {
-            "title": "Lab 6: Instrumentation for browser monitoring",
+            "title": "Lab 6: Instrument the browser monitoring",
             "description": "Instrumentation for browser monitoring",
             "filename": "../../06-configure-browser-agent/configure-browser-agent.md"
         },
@@ -49,11 +49,17 @@
             "description": "View traces and spans in APM Trace Explorer",
             "filename": "../../07-view-traces/view-traces.md"
         },
-
+        {
+            "title": "Lab 8: Clean up the workshop environment",
+            "description": "Clean up the workshop environment",
+            "filename": "../../08-cleanup/cleanup.md"
+        },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/need-help/need-help-livelabs.md"
+
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+
         }
     ]
 }
