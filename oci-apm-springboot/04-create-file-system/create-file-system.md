@@ -28,7 +28,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, Navigation Menu](images/3-1-1-menu.png " ")
 
-3.	Make sure you are in the comppartment **apmworkshop**. If not, select it from the pulldown menu.
+3.	Make sure you are in the compartment **apmworkshop**. If not, select it from the pulldown menu.
 
    ![Oracle Cloud console, file systems](images/3-1-1-2-filesystem.png " ")
 
@@ -42,7 +42,7 @@ Estimated time: 15 minutes
 
 6.	On the Create File System page, enter **apmlab-fss** into the **Name** field.
 
-    Make sure the **apmworkshop** is selected in the **Compartment**. Leave the other fields with default values.   
+    Make sure the **apmworkshop** is selected in the **Compartment**. Leave the other fields in the section with default values.   
     ***Do NOT click the Create button yet.***
 
    ![Oracle Cloud console, file systems](images/3-1-4-filesystem.png " ")
