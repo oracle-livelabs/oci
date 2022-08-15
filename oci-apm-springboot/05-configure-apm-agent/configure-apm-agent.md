@@ -180,7 +180,7 @@ Next step is to deploy the Java Agent. First update the **wstore.yaml** file by 
 
     Once the pods are in the Running state, the APM Java Agent is active and listening to the WineCellar application. It captures backend traces and spans which you can view in the APM Trace Explorer.
 
-You may now **proceed to the next tutorial**.
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

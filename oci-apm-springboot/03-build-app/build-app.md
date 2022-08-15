@@ -103,7 +103,17 @@ Estimated time: 10 minutes
 
   ![Oracle Cloud console, Cloud Shell](images/4-2-cloudshell.png " ")
 
-5. Run the kubectl command below to display the deployed services. It may take a minute or two to show the IP. Rerun the command if shown as 'pending'.
+
+5. Run the kubectl command below to display the status of the pods creation. Wait until the statuses become 'Running'. This may take a few minutes.
+
+    ``` bash
+    <copy>
+    kubectl get pods
+    </copy>
+    ```
+  ![Oracle Cloud console, Cloud Shell](images/4-2-1-cloudshell.png " ")
+
+5. Run the kubectl command below to display the deployed services.
 
     ``` bash
     <copy>
@@ -125,7 +135,7 @@ Estimated time: 10 minutes
 
     >**Note:** It may take a few minutes to complete the deployment and start loading the page content in the screen the first time.  
 
-You may now **proceed to the next tutorial**.
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

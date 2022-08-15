@@ -346,7 +346,7 @@ Estimated time: 15 minutes
     >***Debugging TIPS***: If you cannot find the apmlab-fss directory, or the pods do not start running, execute the following command from the Cloud Shell to troubleshoot.   
     kubectl get events --sort-by=.metadata.creationTimestamp
 
-You may now **proceed to the next tutorial**.
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

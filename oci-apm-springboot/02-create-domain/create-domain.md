@@ -51,7 +51,7 @@ To upload tracing data to an APM domain, Data Upload Endpoint and both Private a
 
 For more details on Data Upload Endpoint and Data keys, refer to the OCI documentation, [Obtaining Data Upload Endpoint and Data keys](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/obtain-data-upload-endpoint-and-data-keys.html).
 
-You may now **proceed to the next tutorial**.
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

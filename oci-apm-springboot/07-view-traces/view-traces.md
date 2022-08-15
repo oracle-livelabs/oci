@@ -17,7 +17,9 @@ Estimated time: 10 minutes
 
 * Completion of preceding labs in this workshop.
 
-## **Task 1**: Generate workload by navigating to the WineCellar app
+
+## **Task 1**: Verify the Browser Agent instrumentation in the WineCellar app
+
 
 1. If you are starting a new Oracle Cloud Shell session, run the oci ce (Container Engine) command that you saved in the Lab 3, Task 1, step 5.
 2. From the Oracle Cloud shell, enter the following command.
@@ -41,18 +43,37 @@ Estimated time: 10 minutes
     http://<External IP of the Load Balancer>/winestore/
     </copy>
     ```
+4.  WinCellar application launches.
 
-    Wine Celler application launches as in the image below. Click **Login**.
+   ![Oracle Cloud console, Cloud Shell](images/7-1-1-wstore.png " ")
+
+5.  Right mouse click on the browser, select a menu item to view page source.
+
+   ![Oracle Cloud console, Cloud Shell](images/7-1-2-wstore.png " ")
+
+6.  Verify the Browser Agent JavaScript is in the page source.
+
+   ![Oracle Cloud console, Cloud Shell](images/7-1-3-wstore.png " ")
+
+7.  Close the page source.  
+
+   ![Oracle Cloud console, Cloud Shell](images/7-1-4-wstore.png " ")
+
+
+## **Task 2**: Generate workload by navigating to the app
+
+
+1.  Click **Login**.
 
     ![WineCellar Demo App](images/6-1-2-wstore.png " ")
 
 
-4.  Enter your name (or john) as username, leave the password blank, click **Login**.
+2.  Enter your name (or john) as username, leave the password blank, click **Login**.
 
     ![WineCellar Demo App](images/6-1-4-demoapp.png " ")
 
 
-5. Then click around the buttons in the pages, as in the example flow shown below.
+3. Then click around the buttons in the pages, as in the example flow shown below.
 
     > **Note:** Do not worry if you see the "Failed" messages, or takes long time for the pages to respond. Those are expected, because the app is designed to fail every once and often for the demo purpose.
 
@@ -62,7 +83,7 @@ Estimated time: 10 minutes
     ![WineCellar Demo App](images/6-1-6-demoapp.png " ")
 
 
-## **Task 2**: Examine traces in APM Trace Explorer
+## **Task 3**: Examine traces in APM Trace Explorer
 
 1. From the OCI menu, select **Observability & Management** > **Trace Explorer**
 
@@ -122,7 +143,7 @@ Estimated time: 10 minutes
 
   ![Oracle Cloud, Trace Explorer](images/6-2-12-traceexplorer.png " ")
 
-## **Task 3**: Filter traces with dimensions
+## **Task 4**: Filter traces with dimensions
 
 1. Type '**apdex**' into the search field in the **Fields** section. Then click **ApdexLevel** from the list.
 

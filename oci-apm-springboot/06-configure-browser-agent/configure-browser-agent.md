@@ -72,26 +72,29 @@ Estimated time: 5 minutes
 
 1. Execute the following command to copy the ***index.html*** file back to the container.
 
-   ``` bash
-   <copy>
-   cd ~/;kubectl cp ./index.html wstore-front-0:static/index.html
-   </copy>
-   ```
+     ``` bash
+     <copy>
+     cd ~/;kubectl cp ./index.html wstore-front-0:static/index.html
+     </copy>
+     ```
   ![Oracle Cloud console, Cloud Shell](images/5-1-4-cloudshell.png " ")
 
 2. Verify the successful file transfer, by running the following command.
 
 
-  ``` bash
-  <copy>
-  kubectl exec -it wstore-front-0 -- bash -c "cd static && cat index.html "
-  </copy>
-  ```
-  Ensure you see the changes made in the previous step.
+    ``` bash
+    <copy>
+    kubectl exec -it wstore-front-0 -- bash -c "cd static && cat index.html "
+    </copy>
+    ```
+    Ensure you see the changes made in the previous step.
 
-  ![Oracle Cloud console, Cloud Shell](images/5-1-3-cloudshell.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/5-1-3-cloudshell.png " ")
 
-You may now **proceed to the next tutorial**.
+    In the next lab, you will verify the JavaScript from the source page in the browser.   
+
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
