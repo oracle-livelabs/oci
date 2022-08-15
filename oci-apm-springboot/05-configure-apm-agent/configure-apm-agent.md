@@ -18,7 +18,7 @@ Estimated time: 10 minutes
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: Download APM Java Agent
+## **Task 1**: Obtain APM Java Agent download link
 
 1.	Open navigation menu from the Oracle Cloud console, select **Observability & Management** > **Administration**.
 
@@ -28,41 +28,40 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, APM Domains](images/4-1-2-apmdomain.png " ")
 
-3.	Click **Java Agent** link. If you are using a Chrome browser, this will save the file to your laptop. If you are using a FireFox browser, it may ask you to save the file to local. Click OK, if asked.  
+3.	Mouse click **Java Agent** link. Select **Copy Link Address**. This will save the download link to the memory in your computer. Paste the copied link to a text file.
 
    ![Oracle Cloud console, APM Domains](images/4-1-3-apmdomain.png " ")
 
-## **Task 2**: Upload the APM Java Agent to the Cloud shell
+4. 	Open the Cloud Shell by clicking the **>..** icon from the top right corner in the Oracle Cloud console. Restore the Cloud Shell if minimized.
 
-1.	Open the Cloud Shell by clicking the **>..** icon from the top right corner in the Oracle Cloud console. Restore the Cloud Shell if minimized.
+   ![Oracle Cloud console, APM Domains](images/4-1-4-cloudshell.png " ")
 
-   ![Oracle Cloud console, Cloud Shell](images/4-1-4-cloudshell.png " ")
 
-2.	Click the Gear icon at the right upper corner of the Cloud Shell title bar to open the menu. Then select **Upload**.
+## **Task 2**: Download the APM Java Agent to the Cloud shell
 
-   ![Oracle Cloud console, Cloud Shell](images/4-1-5-cloudshell.png " ")
-
-3.	Click **select from your computer** link and select the Java agent installer file from your computer. This is the file that you downloaded in the earlier steps.
-
-   ![Oracle Cloud console, Browse dialog ](images/4-1-5-browse.png " ")
-
-4.	Click **Upload**.
-
-   ![Oracle Cloud console, Upload ](images/4-1-6-upload.png " ")
-
-5.	Wait for the File Transfer to complete. Click **Hide** to dismiss the File Transfers window.
-
-   ![Oracle Cloud console, Cloud Shell ](images/4-1-7-cloudshell.png " ")
-
-6. Then type "ls" command in the Cloud shell to confirm the file exists in the home directory.  
+1.  Type the following command to the Cloud Shell.
 
     ``` bash
     <copy>
-    cd ~/; ls
+    cd ~/; wget <copied APM Java Agent link>
     </copy>
     ```
+    If the link is still in the clipboard of your computer, simply type **wget** in the Cloud Shell, then paste the APM Java Agent download link.
 
-   ![Oracle Cloud console, Cloud Shell ](images/4-1-7-2-cloudshell.png " ")
+   ![Oracle Cloud console, Cloud Shell](images/4-1-5-cloudshell.png " ")
+
+2.	Hit the enter key and verify the message to ensure the successful file transfer.
+
+   ![Oracle Cloud console, Cloud Shell](images/4-1-6-cloudshell.png " ")
+
+3.  Type ls command. Confirm that the java agent file installer is in the home directory.
+
+    ``` bash
+    <copy>
+    ls ~
+    </copy>
+    ```
+   ![Oracle Cloud console, Cloud Shell](images/4-1-7-cloudshell.png " ")
 
 ## **Task 3**: Copy the Java Agent installer to the file system
 
@@ -74,7 +73,8 @@ Estimated time: 10 minutes
     </copy>
     ```
 
-    > e.g., kubectl cp apm-java-agent-installer-1.6.2363.jar wstore-front-0:/apmlab-fss/
+    > - e.g., kubectl cp apm-java-agent-installer-1.6.2363.jar wstore-front-0:/apmlab-fss/  
+    - The command copies the Agent installer to the **wstore-front**, but it can be copied to any pod as the way we set up, all pods share the same file system.
 
 
 2.	Use the kubectl command below to remotely run the ls command in the container in the Kubernetes pod.
