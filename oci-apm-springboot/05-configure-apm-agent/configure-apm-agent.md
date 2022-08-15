@@ -46,7 +46,7 @@ Estimated time: 10 minutes
     cd ~/; wget <copied APM Java Agent link>
     </copy>
     ```
-    If the link is still in the clipboard of your computer, simply type **wget** in the Cloud Shell, then paste the APM Java Agent download link.
+    If the link is still in the clipboard of your computer, simply type **wget** in the Cloud Shell home directory, then paste the APM Java Agent download link.
 
    ![Oracle Cloud console, Cloud Shell](images/4-1-5-cloudshell.png " ")
 
@@ -128,12 +128,12 @@ Next step is to deploy the Java Agent. First update the **wstore.yaml** file by 
     vi ~/sb-hol/wstore.yaml
     </copy>
     ```
-2. Find the following line in each statefulset, where Java runtime arguments are set. (Look for the lines 45 and 80, assuming the volumes were added as expected in the previous steps).
+2. Find the following line in each statefulset, where Java runtime arguments are set. (Look for the lines 49 and 80, assuming the volumes were added as expected in the previous steps).
 
     >command: ["java", "-jar", "./wineStore.jar", "--spring.config.location=file:/spring/wstore.properties"]
 
 
-3. Hit **i**. Locate the line 45, then insert the following arguments after **command: ["java",** .
+3. Hit **i**. Locate the line 49, then insert the following arguments after **command: ["java",** .
 
     ``` bash
     <copy>

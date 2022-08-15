@@ -238,19 +238,21 @@ Estimated time: 15 minutes
 4. Hit **i** to enter the edit mode. Carefully insert the following code below the **containerPort**. Note that the same changes have to be made in both statefulsets, **wstore-back** and **wstore-front**.
 
 
-            volumeMounts:
-            - mountPath: "/apmlab-fss"
-              name: apmlab-nfs
-          volumes:
-          - name: apmlab-nfs
-            persistentVolumeClaim:
-              claimName: apmlab-fsspv
+                volumeMounts:
+                - mountPath: "/apmlab-fss"
+                  name: apmlab-nfs
+              volumes:
+              - name: apmlab-nfs
+                persistentVolumeClaim:
+                  claimName: apmlab-fsspv
 
 
 
     > ***Suggested Editing Tips:***
      - Use your mouse to select the text above, and manually copy and paste it into a text file.
      - Auto copy is not provided as it may break the indentation.
+     - Copy the entire area from the text box, including the space preceding the text.
+     - In the yaml file, place your mouse cursor at the beginning of the line, then paste the code.
      - Make sure to keep the same space indentation when pasting the code into the file.
      - "VolumeMounts:" aligns with "ports:"
      - "Volumes:" aligns with "imagePullSecrets:"
