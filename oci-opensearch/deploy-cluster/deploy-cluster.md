@@ -39,11 +39,10 @@ curl -O https://docs.oracle.com/en/learn/oci-opensearch/files/cert.pem
 
 The certificate is downloaded and saved as `cert.pem`, in your current directory. This certificate is suitable for region `us-ashburn-1`.  
 
-3. Run the following command:
+3. Run the following command, after replacing mycluster.opensearch.us.example.com with your search API endpoint:
 
 ```
 curl https://mycluster.opensearch.us.example.com:9200 --cacert cert.pem
-# replace https://mycluster.opensearch.us.example.com with your previously captured API Endpoint 
 ```
 
 If all the steps were performed correctly you should see a response as follows:  

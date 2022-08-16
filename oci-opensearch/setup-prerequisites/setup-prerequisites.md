@@ -72,6 +72,9 @@ This action will automatically take you to the VCN details page.
 8. Click **Add Ingress rules**
 9. In **Source CIDR**, add *10.0.0.0/16*, in **Destination Port Range**, type *9200,5601* and click **Add**.
 
+You should see the following as result.
+   <img src="../images/image0.png" alt="Default Security List for opensearch-vcn - table view" />
+
 ## Task 5: Compute instance setup
 
 In this task, you will create an OCI Compute instance in the public subnet of the previously created VCN, in order to access the OpenSearch Search API and Dashboards, which are to be created in the private subnet of the same VCN.
