@@ -32,17 +32,22 @@ The Security Admin is the user role responsible for encryption related resources
 1. Logging
    1. Open up the Logging service by going to the Navigation Menu (aka "Hamburger" menu on the top left side of the page ) -> Observability and Management -> Logging -> Log Groups 
    2. Select the `landing_zone_parent/common-infra/security` compartment to see the created log groups within it.
+    ![logging](.//images/log-groups.png)
    3. Clicking on the `_Audit` group allows you to explore audit logs while clicking on the `central_logging_group` allows you to explore flow logs.
    4. Navigate to the Logging Analytics service by going to the Navigation Menu (aka "Hamburger" menu on the top left side of the page ) -> Observability and Management -> Logging Analytics -> Dashboards -> VCN Flow Logs
       * Here network logs can be analyzed and visualized. The dashboards and the queries can customized to suite your needs. As you add more instances and resources that generate traffic to the monitored subnets, the logs will populate the dashboard.
-    5. Open up the Object Storage service by going to the Navigation Menu (aka "Hamburger" menu on the top left side of the page ) -> Storage -> Object Storage and Archive Buckets -> Buckets.
-    6. Select the `landing_zone_parent/common-infra/security` compartment to see the archive bucket with audit logs.
+        ![flow logs](.//images/vcn-flow-logs.png)
+    1. Open up the Object Storage service by going to the Navigation Menu (aka "Hamburger" menu on the top left side of the page ) -> Storage -> Object Storage and Archive Buckets -> Buckets.
+    2. Select the `landing_zone_parent/common-infra/security` compartment to see the archive bucket with audit logs.
         * The bucket can be used for compliance purposes and is protected with a retention rule and set to archive.
+        ![log bucket](.//images/audit-log-bucket.png)
+
 
 2. Monitoring
     1. View the Cloud Guard resources by navigating to Identity & Security -> Cloud Guard -> Overview
         * The Cloud Guard service allows you to view and create detector recipes besides the 3 Oracle Managed lists. You can also set and create responder recipes by cloning an existing recipe from the root compartment
         * The Landing Zone sets the parent compartment as the target for scanning. You can view the detected problems for the selected target on the problems page.
+        ![log bucket](.//images/cloud-guard-dashboard.png)
 
 
 ## Task 2: Workload Resources
