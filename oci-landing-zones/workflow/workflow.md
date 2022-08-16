@@ -74,10 +74,10 @@ The Workload Admin is the user role responsible for deployment of workload compu
 * The policy in Let users launch compute instances includes the ability to enable and disable individual plugins, as well as start and stop all plugins on an instance
 * Ability to use virtual network family resources.
 
-1. Networking
-   1. Open up the Networking service by going to the Navigation Menu (aka "Hamburger" menu on the top left side of the page Networking -> Virtual Cloud Networks -> Logging 
-   2. Select the `landing_zone_parent/common-infra/network` compartment to see the created VCN.
-   3. Clicking on the `Primary-VCN`, you can modify the provisioned networking resources.
+### Networking
+1. Open up the Networking service by going to the Navigation Menu (aka "Hamburger" menu on the top left side of the page Networking -> Virtual Cloud Networks -> Logging 
+2. Select the `landing_zone_parent/common-infra/network` compartment to see the created VCN.
+3. Clicking on the `Primary-VCN`, you can modify the provisioned networking resources.
 
 
 ## Task 3: Clean Up 
