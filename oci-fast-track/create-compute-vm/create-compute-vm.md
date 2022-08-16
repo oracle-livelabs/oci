@@ -125,7 +125,9 @@ Você provavelmente terá a nova instância devidamente criada em alguns minutos
 2. No OCI Cloud Shell, faça conexão com a máquina criada com o comando:
 
 ````
+<copy>
 ssh opc@<ip publico da VM>
+</copy>
 ````
 
 * O usuário default nas instâncias Oracle Linux é opc
