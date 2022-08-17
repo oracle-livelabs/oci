@@ -1,8 +1,16 @@
 ## Introduction
 
+In this session, you will focus on creating an index by ingesting sample data to the OCI OpenSearch cluster, and on running a sample search query to the Search API endpoint.
+
+Estimated Time: 15 minutes
+
 ### Objectives
 
-## Task 1: 
+In this lab, you will:
+- Ingesting sample data to the OCI OpenSearch cluster, creating an index
+- Run a sample search query to the Search API 
+
+## Task 1: Ingest sample data
 
 Run the following commands from within your VM instance.  
 > **Note:** Replace `mycluster.opensearch.us.example.com` with your previously captured API endpoint.

@@ -24,7 +24,7 @@ In this task, you will create a dedicated compartment for this live lab, if you 
 3. Provide *opensearch-livelab* as **Name**, a **Description** of your choice, and leave the root level as Parent.
 4. Click **Create**.
 
-(image)
+   <img src="../images/image20.png" alt="Creation of opensearch-livelab compartment" />
 
 ## Task 2: User group creation
 
@@ -37,7 +37,7 @@ In this task, you will create a dedicated user group.
 5. Open the group you've created and click **Add User to Group**.
 6. Select your current user and click **Add**.
 
-(image)
+   <img src="../images/image21.png" alt="Creation of opensearch-group user group" />
 
 ## Task 3: Policy setup
 
@@ -57,6 +57,8 @@ In this task, you will create the required OCI IAM policy.
    Allow service opensearch to use network-security-groups in compartment opensearch-livelab
    ```
 
+   <img src="../images/image22.png" alt="Creation of opensearch-policy policy" />
+
 ## Task 4: Networking setup
 
 In this task, you will create a VCN with a public subnet and a private subnet.
@@ -67,6 +69,9 @@ In this task, you will create a VCN with a public subnet and a private subnet.
 4. Provide *opensearch-vcn* as VCN Name and select *opensearch-livelab* as compartment.
 5. Leave the default values in the remaining fields, click **Next**, and then click **Create** 
 This action will automatically take you to the VCN details page.
+
+<img src="../images/image23.png" alt="VCN details page" />
+
 6. While on the VCN details page, click **Security Lists** on the left side of the screen.
 7. Click **Security List for Private Subnet-opensearch-vcn**
 8. Click **Add Ingress rules**
@@ -84,6 +89,12 @@ In this task, you will create an OCI Compute instance in the public subnet of th
 3. Click **Create instance**.
 4. Provide *opensearch-instance* as **Name**, and select *opensearch-livelab* as compartment.
 5. In the **Image and shape** area, use the default values (Oracle Linux 8, VM.Standard.E4.Flex).
-6. In the **Networking** area, select *Public Subnet-opensearch-vcn*
-7. In the **Add SSH keys area**, decide whether you want to use an existing SSH key, or generate a new SSH key. If you choose to generate a new SSH key, remember to download the private key.
+6. In the **Networking** area, select *opensearch-vcn* and *Public Subnet-opensearch-vcn*, for VCN and Subnet, respectively.
+7. In the **Add SSH keys area**, decide whether you want to use an existing SSH key, or generate a new SSH key. If you choose to generate a new SSH key, remember to download the private key. 
+8. Leave the remaining options with the default values and click **Create**.
+
+ > **Note:** Remember to run the following command or an equivalent one, to give proper permissions to your key.
+```
+chmod 400 <your_key>
+```
 

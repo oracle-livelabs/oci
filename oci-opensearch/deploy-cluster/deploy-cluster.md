@@ -1,6 +1,14 @@
 ## Introduction
 
+In this session, you will focus on creating of an OCI OpenSearch cluster and testing the connection from an OCI Compute instance.
+
+Estimated Time: 15 minutes
+
 ### Objectives
+
+In this lab, you will:
+- Create an OCI OpenSearch cluster
+- Test the connectivity to the cluster from the OCI Compute instance created in Lab 1.
 
 ## Task 1: Create an OCI Search Service cluster
 

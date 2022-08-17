@@ -1,6 +1,15 @@
 ## Introduction
 
+In this session, you will focus on data visualization via OpenSearch Dashboards.
+
+Estimated Time: 15 minutes
+
 ### Objectives
+
+In this lab, you will:
+- Establish port forwarding to ensure connectivity to the OpenSearch Dashboards from your local machine
+- Search data using the Discover interface
+- Create a simple pie chart for the sample data
 
 ## Task 1: Connect to OpenSearch Dashboards
 
