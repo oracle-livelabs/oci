@@ -2,15 +2,15 @@
 
 ## About this Workshop
 
-This workshop walks you through how to configure Spring Boot microservices deployed on Kubernetes for monitoring with the Oracle Application Performance Monitoring (APM) service. This enables automatic OpenTracing instrumentation, and metrics collection that are used to provide full, end-to-end monitoring and diagnostics for the application.  
+This workshop walks you through how to configure a WebLogic-on-Kubernetes for monitoring with the Oracle Application Performance Monitoring (APM) service. This enables automatic OpenTracing instrumentation, and metrics collection that are used to provide full, end-to-end monitoring and diagnostics for the application.   
 
 In this workshop, you will provision the APM Java agent in a file system mounted in the Oracle Cloud, deploy the agent to the Kubernetes cluster, instrument APM Browser agent by inserting JavaScript code to a webpage, and view traces and spans in APM Trace Explorer.
 
-> **Note:** The same approach demonstrated for Spring Boot Java microservices on Kubernetes can be used to configure other types of java application servers, such as WebLogic, deployed on Kubernetes.
+> **Note:** The same approach demonstrated for WLS on Kubernetes can be used to configure other types of java application servers, such as Spring Boot, deployed on Kubernetes.
 
-![](images/apm_microservices_setup.png " ")
+  ![](images/apm_wls_setup.png " ")
 
-Estimated Workshop Time: 65 minutes
+Estimated Workshop Time: xx minutes
 
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 
@@ -20,7 +20,7 @@ The diagram below provides an overview of the OCI APM Service, its features, com
 
 Among other capabilities, OCI APM includes an implementation of a Distributed Tracing system. It collects and processes transaction trace data (spans) from the monitored application and make it available for viewing, dashboarding, exploration, alerts, etc. For more information on APM and Trace Explorer please refer to Application Performance Monitoring > **[Use Trace Explorer](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)** section in the OCI Documentation.
 
-In the workshop, you will learn how to instrument Java microservices application deployed on a Kubernetes cluster with APM agents. You will also learn how to create an APM domain in the Oracle Cloud and use Trace Explorer to search and view traces/spans in the APM User Interface.
+In the workshop, you will learn how to instrument WebLogic application deployed on a Kubernetes cluster with APM agents. You will also learn how to create an APM domain in the Oracle Cloud and use Trace Explorer to search and view traces/spans in the APM User Interface.
 
 ### Objectives
 
@@ -29,7 +29,8 @@ In this workshop, you will:
 *	Create a file system in the Oracle Cloud Infrastructure, and mount it in the Kubernetes pods
 *	Download, provision and deploy the APM Java agent
 * Apply custom storage configuration to the Kubernetes pods
-*	Instrument APM Browser agent
+*	Change the display name format of the spans by editing the agent configuration file
+*	Instrument APM Browser agent by automatic injection
 *	Use APM Trace Explorer to view traces, spans, and span dimensions
 
 ### Prerequisites
@@ -50,7 +51,7 @@ If you are running the workshop in a Paid Cloud Account, ensure you have the per
 
 -	**[Use OpenTracing for Microservices with Helidon Utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=917)**  Workshop
 -	**[Trace a Native Cloud App Utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=916)** Workshop
--	**[Monitor Traces for WebLogic on Kubernetes utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=932)** Workshop
+
 
 
 ## Acknowledgements

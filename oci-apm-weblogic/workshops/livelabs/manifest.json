@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Automatically instrument Java microservices on Kubernetes using Oracle Application Performance Monitoring",
+  "workshoptitle": "Monitor Traces for Oracle WebLogic Server on Kubernetes Using Oracle Application Performance Monitoring",
 	"help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {
@@ -24,8 +24,8 @@
             "filename": "../../02-create-domain/create-domain.md"
          },
         {
-            "title": "Lab 3: Build a microservices application",
-            "description": "Build a microservices application",
+            "title": "Lab 3: Deploy a WebLogic application",
+            "description": "Deploy a WebLogic application",
             "filename": "../../03-build-app/build-app.md"
         },
 
@@ -40,19 +40,24 @@
             "filename": "../../05-configure-apm-agent/configure-apm-agent.md"
         },
         {
-            "title": "Lab 6: Instrument browser monitoring",
+            "title": "Lab 6: Change the display name format of spans",
+            "description": "Change the display name of spans",
+            "filename": "../../06-change-displayname/change-displayname.md"
+          },
+        {
+            "title": "Lab 7: Instrument browser monitoring",
             "description": "Instrumentation for browser monitoring",
-            "filename": "../../06-configure-browser-agent/configure-browser-agent.md"
+            "filename": "../../07-configure-browser-agent/configure-browser-agent.md"
         },
         {
-            "title": "Lab 7: View traces and spans in APM Trace Explorer",
+            "title": "Lab 8: View traces and spans in APM Trace Explorer",
             "description": "View traces and spans in APM Trace Explorer",
-            "filename": "../../07-view-traces/view-traces.md"
+            "filename": "../../08-view-traces/view-traces.md"
         },
         {
-            "title": "Lab 8: Clean up the workshop environment",
+            "title": "Lab 9: Clean up the workshop environment",
             "description": "Clean up the workshop environment",
-            "filename": "../../08-cleanup/cleanup.md"
+            "filename": "../../09-cleanup/cleanup.md"
         },
         {
             "title": "Need Help?",
