@@ -159,7 +159,7 @@ Postman is an API platform for building and using APIs. Postman can be either do
 
    **Method**
 
-        <copy>PUT</copy>
+        <copy>POST</copy>
 
    **Request URL**
 
