@@ -9,7 +9,7 @@
     "tutorials": [
         {
             "title": "Introduction",
-            "description": "The Introduction is always first. The title and contents menu title match for the Introduction.",
+            "description": "This lab provides an overview of the workshop.",
             "filename": "../../introduction/introduction.md"
         },
         {
@@ -19,12 +19,18 @@
         },
         {
             "title": "Lab 1: Prepare OCI tenant",
-            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+            "description": "This lab will show you how to set up your OCI tenant in order to have your Unique Security Experience.",
             "filename": "../../prepare-oci-tenant/prepare-oci-tenant.md"
         },
         {
-            "title": "Lab 2: Setup the Environment",
-            "filename": "../../setup/setup.md"
+            "title": "Lab 2: Get delighted with your first Unique Security Experience",
+            "description": "This lab will show you how to automate the journey to security by using the OCI Security application that will make you have that Unique Security Experience.",
+            "filename": "../../first-experience/first-experience.md"
+        },
+        {
+            "title": "Lab 3: Automatic activation of Cloud Guard",
+            "description": "This lab will show you how to use your Security Dashboard to activate Cloud Guard.",
+            "filename": "../../activation-cloud-guard/activation-cloud-guard.md"
         },
         {
             "title": "Need Help?",
