@@ -15,6 +15,7 @@ This lab assumes you have completed previous lab.
 
 1.	Go to the Oracle Cloud Shell and run the following commands:
 
+
         <copy>
         wget <TODO>
         </copy>

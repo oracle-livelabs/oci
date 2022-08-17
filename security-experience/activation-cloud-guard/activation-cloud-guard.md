@@ -5,7 +5,7 @@ This lab will show you how to use your Security Dashboard to activate Cloud Guar
 
 ### Objectives
 * Go to your Security Dashboard
-* Click to implement Cloud Guard from your Unique Security Experience tool
+* Enable Cloud Guard
 
 ### What Do You Need?
 This lab assumes that you have successfully completed the previous labs in the **Contents** menu on the right.
@@ -23,13 +23,34 @@ In the APEX UI you can see which service is not used. In this case, you have a c
   * **Go To OCI Cloud Guard Documentation**. If you click this button, you will be redirected to the Oracle public documentation for all information related to Cloud Guard, in case you want to know more details about the service.
   * **Turn on OCI Cloud Guard**. If you click this button, you will be able to activate Cloud Guard automatically in case the service is not activated. A Terraform script will load automatically, and you will be prompted to a console where you have to enter the mandatory parameters.
 
-TODO images
+Click the button Turn on OCI Cloud Guard.
 
 
 ## Task 2: Enter required parameters
 
-  ![](./images/CloudGuard2.png " ")
+Once you clicked the button, you will be redirected to the Terraform stack that was loaded automatically. 
 
+1. Select the box "I have reviewed and accept the Oracle Terms of Use" to load the package.
+
+  After selecting the box, the package will be loaded successfully if you can see the Name of the package in the corresponding field:
+
+  ![](./images/cloudGuard3.png " ")
+
+2. Click Next. Now you have to enter the required parameters to activate Cloud Guard. These parameters are the following:
+
+* cloud\_guard\_configuration\_reporting\_region: eu-frankfurt-1
+* cloud\_guard\_configuration\_status: ENABLED
+* compartment\_id: OCID of your compartment
+* region: eu-frankfurt-1
+* tenancy\_ocid: already populated with your tenancy id
+
+  ![](./images/CloudGuard4.png " ")
+
+3. Click Next to review your configuration and click Create. 
+
+  ![](./images/CloudGuard5.png " ")
+
+The Cloud Guard Cloud service is already enabled. You will have to wait just some minutes to see some findings on it.
 
 **This concludes this lab.**
 
@@ -39,6 +60,6 @@ TODO images
 
 
 ## Acknowledgements
-* **Author** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, February 2021
+* **Author** - Sonia Yuste
 * **Contributors** - - -
-* **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, March 2021
+* **Last Updated By/Date** - Sonia Yuste, August 2022
