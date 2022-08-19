@@ -2,9 +2,11 @@
 
 ## Introduction
 
-OCI Search Service with OpenSearch is an insight engine offered as an Oracle-managed service. With OCI’s capabilities for OpenSearch and OpenSearch Dashboards, you can store, search, and analyze large volumes of data quickly and see results in near real-time. Oracle automates, without any downtime, activities that include patching, updating, upgrading, backing-up, and resizing of the service.
+Manual inventory management can be a time consuming and labour intensive process. Manufacturers often struggle with keeping an updated stock of inventory and track of their location leading to lost revenue and under-utilised capital. The inventory counting process on-site for large remote factories or warehouse facilities involves time and resource intensive steps, constraints and is prone to errors.
+OCI Vision can be used to supplement manual inventory management efforts by using drones (or other robots) to observe, count and report information reliably and faster.
+This workshop features elements of the recently developed proof-of-concept for Oracle Industry Lab, where the goal was to use stacked pipes as an example of an automated inventory counting scenario, using a programmable drone and a trained, custom OCI Vision model.
 
-Estimated Time: 60 minutes
+Estimated Time: 90 minutes
 
 ## Objectives
 
