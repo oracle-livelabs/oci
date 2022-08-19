@@ -104,7 +104,7 @@ We shall now verify if the Siebel Cloud Manager application is running.
 
 1. Connect to this instance through an ssh client such as PuTTY using the ssh private key that we had used to create this instance. Enter the username as **opc**
 
-2. Run the following commands one by one.
+2. Run the following command.
 
    ```
    $ <copy>docker ps</copy>
