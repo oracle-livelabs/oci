@@ -1,4 +1,4 @@
-# Search and visualize data using OCI Search Service with OpenSearch
+# Automate inventory management with OCI Vision
 
 ## Introduction
 
@@ -9,12 +9,12 @@ Estimated Time: 60 minutes
 ## Objectives
 
 In this workshop, you will:
-- Understand the prerequisites and prepare your tenancy for the creation of an OCI OpenSearch cluster
-- Create an OpenSearch cluster, connect to the cluster and ingest data
-- Run sample search commands
-- Visualize data in OpenSearch Dashboards
+- Understand the prerequisites and prepare your tenancy for the creation of an OCI Vision model
+- Label a picture with OCI Data Labeling
+- Trigger the creation and training of a Vision model
+- Test the model using Python
 
 ## Acknowledgements
 
-* **Author** - Nuno Gonçalves
+* **Author** - Nuno Gonçalves, Jason Monden
 * **Last Updated By/Date** - Nuno Gonçalves, August 2022
