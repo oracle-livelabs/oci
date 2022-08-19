@@ -47,3 +47,8 @@ In this lab, you will:
       3. In **Buckets**, click **Add**, and then click **Split slices**. Provide the parameters as shown in the following image and click **Update**.
 
       ![OpenSearch Dashboards - Sample pie chart](../images/image12.png)
+
+## Acknowledgements
+
+* **Author** - Nuno Gonçalves
+* **Last Updated By/Date** - Nuno Gonçalves, August 2022

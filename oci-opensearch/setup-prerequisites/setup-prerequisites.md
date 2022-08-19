@@ -99,3 +99,7 @@ In this task, you will create an OCI Compute instance in the public subnet of th
 <copy>chmod 400 <your_key></copy>
 ```
 
+## Acknowledgements
+
+* **Author** - Nuno Gonçalves
+* **Last Updated By/Date** - Nuno Gonçalves, August 2022

@@ -74,3 +74,8 @@ In this lab, you will:
       "tagline" : "The OpenSearch Project: https://opensearch.org/"
       }
       ```
+
+## Acknowledgements
+
+* **Author** - Nuno Gonçalves
+* **Last Updated By/Date** - Nuno Gonçalves, August 2022

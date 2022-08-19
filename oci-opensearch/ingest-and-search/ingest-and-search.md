@@ -62,3 +62,8 @@ Run the following command:
    ```
 
 For more information about query syntax, see the OpenSearch or ElasticSearch tutorials.  
+
+## Acknowledgements
+
+* **Author** - Nuno Gonçalves
+* **Last Updated By/Date** - Nuno Gonçalves, August 2022
