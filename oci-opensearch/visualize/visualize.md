@@ -15,7 +15,7 @@ In this lab, you will:
 
 1. From your local machine, establish port forwarding.
 
-      ```
+      ```bash
       <copy>ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 opc@<your_instance_public_ip> -i <path_to_your_private_key></copy>
       ```
 

@@ -35,13 +35,13 @@ In this lab, you will:
 
 1. Connect to the instance via SSH:  
 
-      ```
+      ```bash
       <copy>ssh -i ~/.ssh/<your_ssh_key> opc@<your_VM_instance_public_IP></copy>
       ```
 
 2. Download the required certificate:
 
-      ```
+      ```bash
       <copy>curl -O https://docs.oracle.com/en/learn/oci-opensearch/files/cert.pem</copy>
       ```  
 
@@ -49,13 +49,13 @@ In this lab, you will:
 
 3. Run the following command, after replacing mycluster.opensearch.us.example.com with your search API endpoint:
 
-      ```
+      ```bash
       <copy>curl https://mycluster.opensearch.us.example.com:9200 --cacert cert.pem</copy>
       ```
 
    If all the steps were performed correctly you should see a response as follows:  
 
-      ```
+      ```json
       {
       "name" : "opensearch-master-0",
       "cluster_name" : "opensearch-cluster",
