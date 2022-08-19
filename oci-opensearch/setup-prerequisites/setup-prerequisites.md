@@ -48,7 +48,7 @@ In this task, you will create the required OCI IAM policy.
 3. Provide *opensearch-policy* as **Name**, a **Description** of your choice, and choose *opensearch-livelab* as compartment.
 4. Click **Show manual editor** and paste the content below in the editor.
 
-   ```
+   ```html
    <copy>Allow group opensearch-group to manage opensearch-family in compartment opensearch-livelab
    Allow service opensearch to manage vcns in compartment opensearch-livelab
    Allow service opensearch to manage vnics in compartment opensearch-livelab
@@ -95,7 +95,7 @@ In this task, you will create an OCI Compute instance in the public subnet of th
 8. Leave the remaining options with the default values and click **Create**.
 
 > **Note:** Remember to run the following command or an equivalent one, to give proper permissions to your key.
-```
+```bash
 <copy>chmod 400 <your_key></copy>
 ```
 
