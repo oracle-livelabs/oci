@@ -3,6 +3,8 @@
 
 Estimated time: 40 minutes
 
+## Oracle Streaming Service (OSS)
+
 The Oracle Cloud Infrastructure Streaming service provides a fully managed, scalable, and durable solution for ingesting and consuming high-volume data streams in real-time. Use Streaming for any use case in which data is produced and processed continually and sequentially in a publish-subscribe messaging model.
 
 You can use Streaming for:
@@ -15,19 +17,15 @@ You can use Streaming for:
 
 - **Infrastructure and apps event processing** - Use Streaming as a unified entry point for cloud components to report their lifecycle events for audit, accounting, and related activities.
 
-## Workshop agenda
+### Objectives
 
-The workshop makes use of OCI CLI but same can be done by making direct calls to the API or via using the Resource Manager. For making use of OCI CLI we can either configure this in our local environment or make use of already configured OCI CLI in the OCI cloud console, this will give us the pre configured environment and we can straight away jump to the Streaming stuff .
+- How to create, update and delete stream pools and streams.
 
-In this workshop we will look at
-
-- How we can create, update and delete stream pools and streams. The configurations available for Stream Pools and Streams.
-
-- Publishing of messages to the streams using OCI CLI
+- Publishing of messages to the streams using OCI CLI.
 
 - Consuming messages as an individual consumer.
 
-- Consuming in a group.
+- Consuming messages in a group.
 
 ## Oracle Cloud Shell
 
@@ -35,17 +33,12 @@ Oracle Cloud Infrastructure Cloud (OCI) Shell is a web browser-based terminal ac
 
 [](youtube:J51BXxlCbOY)
 
-
 ## Additional Recommended Resources
 
 1. [OCI Training](https://cloud.oracle.com/en_US/iaas/training)
 2. [Familiarity with OCI console](https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm)
 3. [Overview of Networking](https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm)
 4. [Familiarity with Compartments](https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm)
-
-### Let's get Started
-
-Click on the next lab in this workshop to get started.
 
 ## Acknowledgements
 
