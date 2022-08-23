@@ -7,7 +7,7 @@ Estimated time: 10 min
 
 **Stream pool** is a grouping mechanism that you can use to organize and manage streams, including any shared Kafka or security settings. Every stream needs to be a member of a stream pool. If you don't create a stream pool, the Streaming service uses a default pool to contain your streams.
 
-You can use stream pools to:
+Stream pools can be used for:
 
 - Organize streams into groups matching your organizational structure or a specific solution
 - Restrict access to a specified virtual cloud network (VCN) inside your tenancy so that streams in the pool are not accessible through the internet
@@ -17,17 +17,17 @@ When you create a stream, you need to specify whether it should become a member 
 
 ### Objectives
 
-- Provision a stream pool
-- Provision a stream.
+- Provision of stream pool
+- Provision of stream
 
 ### Prerequisites
 
-- This lab assumes you are logged in your account.
+- This lab assumes you are logged in to your account.
 - You have the access to the cloud shell.
 
 ## Task 1: Working with Stream Pools
 
-1. check for the existing set of stream-pools you have in your compartment
+1. check for the existing set of stream pools you have in your compartment
 
     ```sh
     <copy>
@@ -41,7 +41,7 @@ When you create a stream, you need to specify whether it should become a member 
     </copy>
     ```
 
-2. Create a Stream pool with public endpoint
+2. Create a Stream pool with a public endpoint
 
     ```sh
     <copy>
@@ -49,7 +49,7 @@ When you create a stream, you need to specify whether it should become a member 
     </copy>
     ```
 
-    For more complex configurations use this CLI command to get the example JSON strcture 
+    For more complex configurations use this CLI command to get the example JSON structure
 
     ```sh
     <copy>
@@ -103,8 +103,8 @@ When you create a stream, you need to specify whether it should become a member 
     </copy>
     ```
 
-## Acknowledgements
+## Acknowledgments
 
 - **Author** - Nitin Soni
 - **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager Intern, DB Product Management)
-- **Last Updated By/Date** - Madhusudhan Rao, Apr 2022
+- **Last Updated By/Date** - Nitin Soni, 23 Aug 2022
