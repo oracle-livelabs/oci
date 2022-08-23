@@ -28,7 +28,7 @@
 
     ```
     <copy>
-    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.13.2 TARGET_ARCH=x86_64 sh -
+    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.14.3 TARGET_ARCH=x86_64 sh -
     </copy>
     ```
 
@@ -36,7 +36,7 @@
 
     ```
     <copy>
-    cd istio-1.13.2
+    cd istio-1.14.3
     </copy>
     ```
 
@@ -67,7 +67,7 @@
     ```
 
     ````
-    This will install the Istio 1.13.2 demo profile with ["Istio core" "Istiod" "Ingress gateways" "Egress gateways"] components into the cluster. Proceed? (y/N) y
+    This will install the Istio 1.14.3 demo profile with ["Istio core" "Istiod" "Ingress gateways" "Egress gateways"] components into the cluster. Proceed? (y/N) y
     ✔ Istio core installed 
     ✔ Istiod installed
     ✔ Ingress gateways installed
@@ -112,7 +112,7 @@
     </copy>
     ````
 
-    mushop 모든 Pod를 삭제하면 Self-Healing으로 재생성되면서 모든 Pod가 istio-proxy 컨이너가 추가 되어 컨터이너 수가 하나씩 증가한 걸 볼 수 있습니다.
+    mushop 모든 Pod를 삭제하면 Self-Healing으로 재생성되면서 모든 Pod가 istio-proxy 컨테이너가 추가 되어 컨터이너 수가 하나씩 증가한 걸 볼 수 있습니다.
     ````
     <copy>
     kubectl get pod -n mushop
@@ -244,8 +244,8 @@
     kiali를 위해 prometheus addon도 함께 설치합니다.
     ```
     <copy>
-    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.13/samples/addons/prometheus.yaml
-    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.13/samples/addons/kiali.yaml
+    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.14/samples/addons/prometheus.yaml
+    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.14/samples/addons/kiali.yaml
     </copy>
     ```
 
@@ -255,7 +255,7 @@
 
 3. 외부 접속 설정 예시
 
-    - 설정을 위한 도메인이 없는 경우 아래와 같기 nip.io를 테스트용도로 사용합니다. nio.io는 /etc/hosts 파일 등록 대신 https://nip.io/ 에 설명된 것 처럼 별도 설정하지 않아도 10.0.0.1.nip.io을 10.0.0.1와 같은 주소형식 자동으로 매핑해줍니다.
+    - 설정을 위한 도메인이 없는 경우 아래와 같이 nip.io를 테스트용도로 사용합니다. nio.io는 /etc/hosts 파일 등록 대신 https://nip.io/ 에 설명된 것과 같이 별도 설정하지 않아도 10.0.0.1.nip.io을 10.0.0.1와 같은 주소형식 자동으로 매핑해줍니다.
 
         ```
         <copy>
@@ -480,4 +480,4 @@
 
 ## Acknowledgements
 
-* **Author** - DongHee Lee, February 2022
+* **Author** - DongHee Lee, August 2022

@@ -6,7 +6,7 @@ Kubernetes 버전은 x.y.z로 표현되며, 각각 x는 메이저, y는 마이�
 
 - 메일공지 예시
 
-    ![Notify Mail for Upgrade](images/notify-upgrade.png =50%x*)
+    ![Notify Mail for Upgrade](images/notify-upgrade.png =60%x*)
 
 - 현재 지원 버전은 다음 링크를 참조합니다.
 
@@ -50,15 +50,15 @@ OKE 새 버전이 출시되면 버전 업그레이드는 다음 절차를 따릅
 
 ## Task 1: OKE 클러스터 버전 업그레이드(Control Plane 업그레이드)
 
-> 위와 같이 1.20.8 버전을 사용 중에 새로운 버전이 출시되었다고 가정합니다. 그러면 앞서 설명한 것과 같이 기술지원 정책에 따라 기존 버전은 30일간 지원하기 때문에, 그동안 버전 검증후 업그레이드가 필요합니다. OCI가 강제적으로 업그레이드를 하지는 않습니다.
+> 새로운 버전이 출시되면, 기술지원 정책에 따라, 지원이 만료되는 버전은 30일내에 업그레이드가 필요합니다. 그동안 버전 검증후 업그레이드하면 됩니다. 그렇다고 OCI가 강제적으로 업그레이드를 하지는 않습니다. 예를 들어 2022년 8월 기준, 1.21.5 사용 중에, 1.24.1 버전이 출시되는 경우, 지원 버전이, 1.24, 1.23, 1.22의 세 버전으로 변경되기 때문에, 1.21버전은 지원이 종료되며, 일반적으로 30일간의 유예기간을 둡니다. 자세한 사항은 아래 링크를 참조하세요. 
 - [Supported Versions of Kubernetes](https://docs.oracle.com/en-us/iaas/Content/ContEng/Concepts/contengaboutk8sversions.htm)
 
 1. 업그레이드가 가능하면, OKE 클러스터 상세 화면에서 **Upgrade Available** 버튼이 활성화 됩니다.
 
-    ![Updage Available](images/upgrade-available.png =50%x*)
+    ![Updage Available](images/upgrade-available.png =70%x*)
 
 2. Upgrade Available 버튼을 클릭하면 다음과 같이 안내 문구와 함께 업그레이드를 시작할 수 있습니다.
-   최신 버전인 v1.21.5을 선택하도록 하겠습니다.
+   최신 버전인 v1.24.1을 선택하도록 하겠습니다.
 
     ![Upgrade Control Plane](images/upgrade-control-plane.png =50%x*)
 
@@ -85,20 +85,39 @@ OKE 클러스터가 업그레이드로 인해 Control Plane 만 업그레이드 
 
     ![Add Node Pool](images/add-node-pool-1.png =70%x*)
 
-4. 신규 Node Pool 정보를 입력하여 생성합니다. 여기서는 예시로 같은 1.20.x 대의 최신 버전으로 업그레이드 합니다.
+4. 신규 Node Pool 정보를 입력하여 생성합니다. 여기서는 예시로 최신 버전으로 업그레이드 합니다.
 
     - Name: 예, pool2
     - Version: 새 버전 선택
     - Kubernetes Labels: 기본적으로 name으로 라벨이 추가됩니다. 예, name=pool2
     - 나머지 항목: 새롭게 생성할 Worker Node 정보를 입력합니다.
         - Shape: Node VM 유형
+        - Image: Worker Node를 위한 이미지를 선택, Platform Image에서 선택합니다. 또는 OKE Worker Node Image에서 선택시 버전을 확인합니다.
         - Number of nodes: 노드 수
         - Placement Configuration: Node가 위치할 AD, Subnet 선택(예, **oke-nodesubnet-~~**)
         - Add an SSH key: Node VM에 SSH 접속시 사용할 키의 Private Key    
 
         ![Add Node Pool](images/add-node-pool-2.png =40%x*)
+        ![Add Node Pool Image](images/add-node-pool-image.png =40%x*)
 
-5. 추가 된 Node Pool을 OCI 서비스 콘솔 확인할 수 있습니다. Node Pool이 추가되고 Worker Node가 Ready 될때까지 완료되어야 합니다. 테스트 환경에서 3대 기준 6분 정도 소요되었습니다.
+5. 추가 된 Node Pool을 OCI 서비스 콘솔 확인할 수 있습니다. Node Pool이 추가되고 Worker Node가 Ready 될때까지 완료되어야 합니다. 테스트 환경에서 3대 기준 8분 정도 소요되었습니다.
+
+     ````
+     <copy>
+     # Worker Node 조회
+     kubectl get nodes -L name --sort-by=.metadata.labels.name
+     </copy>
+     ````
+     ````
+     winter@cloudshell:~ (ap-chuncheon-1)$ kubectl get nodes -L name --sort-by=.metadata.labels.name
+     NAME          STATUS   ROLES   AGE    VERSION   NAME
+     10.0.10.184   Ready    node    5h1m   v1.23.4   oke-cluster-1
+     10.0.10.247   Ready    node    5h     v1.23.4   oke-cluster-1
+     10.0.10.28    Ready    node    5h1m   v1.23.4   oke-cluster-1
+     10.0.10.130   Ready    node    48s    v1.24.1   pool2
+     10.0.10.193   Ready    node    48s    v1.24.1   pool2
+     10.0.10.31    Ready    node    46s    v1.24.1   pool2
+     ````
 
 ### 기존 Node Pool의 모든 노드 Drain
 
@@ -107,42 +126,31 @@ OKE 클러스터가 업그레이드로 인해 Control Plane 만 업그레이드 
 1. 구동 중인 앱들이 기존 Node Pool에서 동작하고 있습니다. 아래는 mushop 네임스페이스 기준이며, 전체를 보면 기존 노드인 유저가 배포한 앱은 기존 노드들에 분산되어 있는 걸 볼 수 있습니다.
 
      ````
-     <copy>
-     # Worker Node 조회
-     kubectl get nodes -L name --sort-by=.metadata.labels.name
-     
+     <copy> 
      # Pod가 배포된 Worker Node 함께 확인하기
      kubectl get pod -o wide
      </copy>
      ````
      ````
-     winter@cloudshell:~ (ap-chuncheon-1)$ kubectl get nodes -L name --sort-by=.metadata.labels.name
-     NAME          STATUS   ROLES   AGE     VERSION    NAME
-     10.0.10.43    Ready    node    4d      v1.20.8    oke-cluster-1
-     10.0.10.68    Ready    node    4d      v1.20.8    oke-cluster-1
-     10.0.10.84    Ready    node    4d      v1.20.8    oke-cluster-1
-     10.0.10.166   Ready    node    5m50s   v1.20.11   pool2
-     10.0.10.24    Ready    node    6m13s   v1.20.11   pool2
-     10.0.10.252   Ready    node    5m55s   v1.20.11   pool2
      winter@cloudshell:~ (ap-chuncheon-1)$ kubectl get pod -o wide
-     NAME                                   READY   STATUS    RESTARTS   AGE   IP             NODE         NOMINATED NODE   READINESS GATES
-     mushop-api-67df55b466-n7cng            2/2     Running   0          24h   10.244.0.160   10.0.10.68   <none>           <none>
-     mushop-assets-5d6f44b88f-956fs         2/2     Running   0          24h   10.244.0.159   10.0.10.68   <none>           <none>
-     mushop-carts-5c97d8bf9c-lwqv4          2/2     Running   0          24h   10.244.0.161   10.0.10.68   <none>           <none>
-     mushop-catalogue-c79d9464c-pfqnr       2/2     Running   1          24h   10.244.1.26    10.0.10.43   <none>           <none>
-     mushop-edge-8649c9b5dd-llgv7           2/2     Running   0          24h   10.244.1.27    10.0.10.43   <none>           <none>
-     mushop-events-6f69d5cc79-vj8fc         2/2     Running   0          24h   10.244.1.28    10.0.10.43   <none>           <none>
-     mushop-fulfillment-b59cc849-mnmcs      2/2     Running   0          24h   10.244.0.162   10.0.10.68   <none>           <none>
-     mushop-nats-977d9d7df-qcg8r            3/3     Running   0          24h   10.244.1.29    10.0.10.43   <none>           <none>
-     mushop-orders-5f65f59497-nvkgw         2/2     Running   0          24h   10.244.0.163   10.0.10.68   <none>           <none>
-     mushop-payment-6456f6df7-xn85n         2/2     Running   0          24h   10.244.0.164   10.0.10.68   <none>           <none>
-     mushop-session-678f95f767-fhv2k        2/2     Running   0          24h   10.244.1.30    10.0.10.43   <none>           <none>
-     mushop-storefront-5bb5cb4bc8-22h7l     2/2     Running   0          23h   10.244.1.32    10.0.10.43   <none>           <none>
-     mushop-storefrontv2-689f9ffbff-g8z76   2/2     Running   0          22h   10.244.1.33    10.0.10.43   <none>           <none>
-     mushop-user-6b8b559cc6-4rwx5           2/2     Running   0          24h   10.244.1.31    10.0.10.43   <none>           <none>
+     NAME                                  READY   STATUS    RESTARTS   AGE    IP             NODE          NOMINATED NODE   READINESS GATES
+     mushop-api-79694cd94d-d6knj           2/2     Running   0          123m   10.244.2.138   10.0.10.247   <none>           <none>
+     mushop-assets-5566b89b4c-d6wlk        2/2     Running   0          123m   10.244.2.11    10.0.10.184   <none>           <none>
+     mushop-carts-dfcb748d7-z4mzp          2/2     Running   0          123m   10.244.2.139   10.0.10.247   <none>           <none>
+     mushop-catalogue-6895d99cd7-qm2lp     2/2     Running   0          123m   10.244.2.12    10.0.10.184   <none>           <none>
+     mushop-edge-558b4f47f4-h7k2n          2/2     Running   0          123m   10.244.2.140   10.0.10.247   <none>           <none>
+     mushop-events-5c8f9dbb99-vktg8        2/2     Running   0          123m   10.244.2.13    10.0.10.184   <none>           <none>
+     mushop-fulfillment-bc685d9f9-tv78j    2/2     Running   0          123m   10.244.2.141   10.0.10.247   <none>           <none>
+     mushop-nats-5859d6887-s92h8           3/3     Running   0          123m   10.244.2.142   10.0.10.247   <none>           <none>
+     mushop-orders-5dcf96567f-9sk8k        2/2     Running   0          123m   10.244.2.14    10.0.10.184   <none>           <none>
+     mushop-payment-6c5bf78877-n96h6       2/2     Running   0          123m   10.244.2.15    10.0.10.184   <none>           <none>
+     mushop-session-5cc96bcdb5-ghpf2       2/2     Running   0          123m   10.244.2.143   10.0.10.247   <none>           <none>
+     mushop-storefront-7c9fb779d7-qx82c    2/2     Running   0          123m   10.244.2.16    10.0.10.184   <none>           <none>
+     mushop-storefrontv2-db797fcc7-w7x4z   2/2     Running   0          96m    10.244.2.146   10.0.10.247   <none>           <none>
+     mushop-user-6876487df6-496ds          2/2     Running   0          123m   10.244.2.144   10.0.10.247   <none>           <none>
      ````
 
-2. 아래와 같이 하나의 노드를 스케줄에서 제외시킵니다.
+2. 아래와 같이 기존 버전의 pool1에 있는 노드 하나를 스케줄에서 제외시킵니다.
 
     ````
     <copy>
@@ -153,66 +161,68 @@ OKE 클러스터가 업그레이드로 인해 Control Plane 만 업그레이드 
 
     실행결과
     ````
-    winter@cloudshell:~ (ap-chuncheon-1)$ kubectl drain 10.0.10.43 --ignore-daemonsets --delete-emptydir-data
-    node/10.0.10.43 already cordoned
-    WARNING: ignoring DaemonSet-managed Pods: kube-system/csi-oci-node-9p7jk, kube-system/fluentd-nvd6q, kube-system/kube-flannel-ds-s8cww, kube-system/kube-proxy-2r4m2, kube-system/proxymux-client-gxgbz, mushop-utilities/mushop-utils-prometheus-node-exporter-rj447
-    evicting pod mushop/mushop-user-6b8b559cc6-4rwx5
-    evicting pod mushop/mushop-catalogue-c79d9464c-pfqnr
+    winter@cloudshell:~ (ap-chuncheon-1)$ kubectl drain 10.0.10.184 --ignore-daemonsets --delete-emptydir-data
+    node/10.0.10.184 cordoned
+    WARNING: ignoring DaemonSet-managed Pods: kube-system/csi-oci-node-tgsff, kube-system/fluentd-qj9ns, kube-system/kube-flannel-ds-mktz8, kube-system/kube-proxy-8sldn, kube-system/proxymux-client-d5xbs, mushop-utilities/mushop-utils-prometheus-node-exporter-46f9d
+    evicting pod mushop/mushop-storefront-7c9fb779d7-qx82c
+    evicting pod logging/elasticsearch-data-0
+    evicting pod logging/elasticsearch-master-0
     ...
-    evicting pod logging/elasticsearch-master-2
-    I0311 08:23:18.234938    1758 request.go:655] Throttling request took 1.13616577s, request: GET:https://138.xxx.xxx.xxx:6443/api/v1/namespaces/mushop/pods/mushop-storefront-5bb5cb4bc8-22h7l
-    pod/elasticsearch-coordinating-only-1 evicted
-    ...
-    I0311 08:23:28.434935    1758 request.go:655] Throttling request took 1.992929428s, request: GET:https://138.xxx.xxx.xxx:6443/api/v1/namespaces/mushop/pods/mushop-nats-977d9d7df-qcg8r
-    pod/mushop-nats-977d9d7df-qcg8r evicted
-    ...
-    node/10.0.10.43 evicted
+    pod/mushop-assets-5566b89b4c-d6wlk evicted
+    node/10.0.10.184 evicted
     ````
 
     > Pod가 emptyDir을 사용하는 경우 OKE 문서 가이드에 따라 --ignore-daemonsets 옵션만 사용하는 경우 삭제시 다음과 같은 오류가 발생합니다. 여기서는 elasticsearch가 사용하여 에러가 발생하였습니다. emptyDir은 임시데이터를 저장하기 위해 사용해야 하며 저장이 필요한 공간은 Persistent Volume을 사용해야 합니다.
         ````
-        $ kubectl drain 10.0.10.43 --ignore-daemonsets
-        node/10.0.10.43 cordoned
-        error: unable to drain node "10.0.10.43", aborting command...
+        $ kubectl drain 10.0.10.184 --ignore-daemonsets
+        node/10.0.10.184 cordoned
+        error: unable to drain node "10.0.10.184", aborting command...
         
         There are pending nodes to be drained:
-         10.0.10.43
+         10.0.10.184
         error: cannot delete Pods with local storage (use --delete-emptydir-data to override): logging/elasticsearch-coordinating-only-1, mushop/mushop-catalogue-c79d9464c-pfqnr, mushop/mushop-edge-8649c9b5dd-llgv7, mushop/mushop-events-6f69d5cc79-vj8fc, mushop/mushop-nats-977d9d7df-qcg8r, mushop/mushop-session-678f95f767-fhv2k, mushop/mushop-storefront-5bb5cb4bc8-22h7l, mushop/mushop-storefrontv2-689f9ffbff-g8z76, mushop/mushop-user-6b8b559cc6-4rwx5
         ````
 
-3. 아래와 같이 43번 노드가 컨테이너 스케줄링에서 제외된 것을 볼 수 있습니다. POD가 다른 Node로 다 이동한 걸 확인후 다음 작업으로 진행합니다. 여기서는 catalogue, edge 등등의 Pod가 43에서 각각 166, 252 노드로 이동했습니다.
+3. 아래와 같이 184번 노드가 컨테이너 스케줄링에서 제외(SchedulingDisabled)된 것을 볼 수 있습니다. POD가 다른 Node로 다 이동한 걸 확인후 다음 작업으로 진행합니다. 여기서는 assets, catalogue 등등의 Pod가 184에서 각각 193, 31 노드로 이동했습니다.
 
     ````
     winter@cloudshell:~ (ap-chuncheon-1)$ kubectl get nodes -L name --sort-by=.metadata.labels.name
-    NAME          STATUS                     ROLES   AGE    VERSION    NAME
-    10.0.10.43    Ready,SchedulingDisabled   node    4d1h   v1.20.8    oke-cluster-1
-    10.0.10.68    Ready                      node    4d1h   v1.20.8    oke-cluster-1
-    10.0.10.84    Ready                      node    4d1h   v1.20.8    oke-cluster-1
-    10.0.10.166   Ready                      node    48m    v1.20.11   pool2
-    10.0.10.24    Ready                      node    48m    v1.20.11   pool2
-    10.0.10.252   Ready                      node    48m    v1.20.11   pool2
+    NAME          STATUS                     ROLES   AGE     VERSION   NAME
+    10.0.10.184   Ready,SchedulingDisabled   node    5h18m   v1.23.4   oke-cluster-1
+    10.0.10.247   Ready                      node    5h18m   v1.23.4   oke-cluster-1
+    10.0.10.28    Ready                      node    5h18m   v1.23.4   oke-cluster-1
+    10.0.10.130   Ready                      node    18m     v1.24.1   pool2
+    10.0.10.193   Ready                      node    18m     v1.24.1   pool2
+    10.0.10.31    Ready                      node    18m     v1.24.1   pool2
     winter@cloudshell:~ (ap-chuncheon-1)$ kubectl get pod -o wide
-    NAME                                   READY   STATUS    RESTARTS   AGE     IP             NODE          NOMINATED NODE   READINESS GATES
-    mushop-api-67df55b466-n7cng            2/2     Running   0          24h     10.244.0.160   10.0.10.68    <none>           <none>
-    mushop-assets-5d6f44b88f-956fs         2/2     Running   0          24h     10.244.0.159   10.0.10.68    <none>           <none>
-    mushop-carts-5c97d8bf9c-lwqv4          2/2     Running   0          24h     10.244.0.161   10.0.10.68    <none>           <none>
-    mushop-catalogue-c79d9464c-vz56f       2/2     Running   0          3m52s   10.244.2.131   10.0.10.166   <none>           <none>
-    mushop-edge-8649c9b5dd-xnb5k           2/2     Running   0          3m52s   10.244.2.5     10.0.10.252   <none>           <none>
-    mushop-events-6f69d5cc79-c5lxj         2/2     Running   0          3m52s   10.244.2.132   10.0.10.166   <none>           <none>
-    ...
+    NAME                                  READY   STATUS    RESTARTS   AGE     IP             NODE          NOMINATED NODE   READINESS GATES
+    mushop-api-79694cd94d-d6knj           2/2     Running   0          133m    10.244.2.138   10.0.10.247   <none>           <none>
+    mushop-assets-5566b89b4c-m7l72        2/2     Running   0          4m29s   10.244.0.134   10.0.10.193   <none>           <none>
+    mushop-carts-dfcb748d7-z4mzp          2/2     Running   0          133m    10.244.2.139   10.0.10.247   <none>           <none>
+    mushop-catalogue-6895d99cd7-f6btm     2/2     Running   0          4m29s   10.244.1.4     10.0.10.31    <none>           <none>
+    mushop-edge-558b4f47f4-h7k2n          2/2     Running   0          133m    10.244.2.140   10.0.10.247   <none>           <none>
+    mushop-events-5c8f9dbb99-gg6f2        2/2     Running   0          4m28s   10.244.0.135   10.0.10.193   <none>           <none>
+    mushop-fulfillment-bc685d9f9-tv78j    2/2     Running   0          133m    10.244.2.141   10.0.10.247   <none>           <none>
+    mushop-nats-5859d6887-s92h8           3/3     Running   0          133m    10.244.2.142   10.0.10.247   <none>           <none>
+    mushop-orders-5dcf96567f-gdx6c        2/2     Running   0          4m29s   10.244.1.3     10.0.10.31    <none>           <none>
+    mushop-payment-6c5bf78877-ks4nq       2/2     Running   0          4m28s   10.244.0.3     10.0.10.130   <none>           <none>
+    mushop-session-5cc96bcdb5-ghpf2       2/2     Running   0          133m    10.244.2.143   10.0.10.247   <none>           <none>
+    mushop-storefront-7c9fb779d7-6jzzr    2/2     Running   0          4m28s   10.244.1.5     10.0.10.31    <none>           <none>
+    mushop-storefrontv2-db797fcc7-w7x4z   2/2     Running   0          106m    10.244.2.146   10.0.10.247   <none>           <none>
+    mushop-user-6876487df6-496ds          2/2     Running   0          133m    10.244.2.144   10.0.10.247   <none>           <none>
     ````
 
-4. 이동한 Pod 들이 모두 Running 상태임을 확인하고 나머지 기존 Node Pool에 있는 Node들도 drain합니다.
+4. 이동한 Pod 들이 모두 Running 상태임을 확인(kubectl get pod -A)하고 나머지 기존 Node Pool에 있는 Node(예, 247, 28)들도 같은 방식으로 drain합니다.
 
     ````
     winter@cloudshell:~ (ap-chuncheon-1)$ kubectl get nodes -L name --sort-by=.metadata.labels.name
-    NAME          STATUS                     ROLES   AGE    VERSION    NAME
-    10.0.10.43    Ready,SchedulingDisabled   node    4d1h   v1.20.8    oke-cluster-1
-    10.0.10.68    Ready,SchedulingDisabled   node    4d1h   v1.20.8    oke-cluster-1
-    10.0.10.84    Ready,SchedulingDisabled   node    4d1h   v1.20.8    oke-cluster-1
-    10.0.10.166   Ready                      node    77m    v1.20.11   pool2
-    10.0.10.24    Ready                      node    78m    v1.20.11   pool2
-    10.0.10.252   Ready                      node    77m    v1.20.11   pool2
+    NAME          STATUS                     ROLES   AGE     VERSION   NAME
+    10.0.10.184   Ready,SchedulingDisabled   node    5h25m   v1.23.4   oke-cluster-1
+    10.0.10.247   Ready,SchedulingDisabled   node    5h25m   v1.23.4   oke-cluster-1
+    10.0.10.28    Ready,SchedulingDisabled   node    5h25m   v1.23.4   oke-cluster-1
+    10.0.10.130   Ready                      node    25m     v1.24.1   pool2
+    10.0.10.193   Ready                      node    25m     v1.24.1   pool2
+    10.0.10.31    Ready                      node    25m     v1.24.1   pool2
     ````
 
 
@@ -222,14 +232,16 @@ OKE 클러스터가 업그레이드로 인해 Control Plane 만 업그레이드 
 
     ![Delete Node Pool](images/delete-node-pool.png)
 
-2. 업그레이드가 완료되었습니다.
+2. 확인창이 뜨면 확인후 Delete를 클릭합니다.
+
+3. 업그레이드가 완료되었습니다.
 
     ````
     winter@cloudshell:~ (ap-chuncheon-1)$ kubectl get nodes -L name --sort-by=.metadata.labels.name
-    NAME          STATUS                     ROLES   AGE    VERSION    NAME
-    10.0.10.166   Ready                      node    77m    v1.20.11   pool2
-    10.0.10.24    Ready                      node    78m    v1.20.11   pool2
-    10.0.10.252   Ready                      node    77m    v1.20.11   pool2
+    NAME          STATUS                     ROLES   AGE     VERSION   NAME
+    10.0.10.130   Ready                      node    30m     v1.24.1   pool2
+    10.0.10.193   Ready                      node    30m     v1.24.1   pool2
+    10.0.10.31    Ready                      node    30m     v1.24.1   pool2
     ````
 
 이제 **다음 실습을 진행**하시면 됩니다.
@@ -238,4 +250,4 @@ OKE 클러스터가 업그레이드로 인해 Control Plane 만 업그레이드 
 
 ## Acknowledgements
 
-* **Author** - DongHee Lee, February 2022
+* **Author** - DongHee Lee, August 2022
