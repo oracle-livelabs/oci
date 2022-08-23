@@ -1,7 +1,9 @@
 
-# Consuming messages
+# Consuming Messages
 
-## Cursors
+## Introduction
+
+Estimated time: 20 min
 
 Consuming messages from a stream requires you to:
 
@@ -24,6 +26,16 @@ There are five supported cursor types:
 Once you've created a cursor, you can start to consume messages using GetMessages.
 
 As long as you keep consuming messages, there is no need to re-create a cursor, so cursors should be created outside of your loops to get messages.
+
+### Objectives
+
+- Consume messages as a individual consumer.
+- Consume messages in a group.
+
+### Prerequisites
+
+- Stream Pool and stream is created.
+- Sample messages are published to the stream.
 
 ## Individual Consumers
 

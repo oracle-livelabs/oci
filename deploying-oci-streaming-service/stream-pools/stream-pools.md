@@ -3,6 +3,8 @@
 
 ## Introduction
 
+Estimated time: 10 min
+
 **Stream pool** is a grouping mechanism that you can use to organize and manage streams, including any shared Kafka or security settings. Every stream needs to be a member of a stream pool. If you don't create a stream pool, the Streaming service uses a default pool to contain your streams.
 
 You can use stream pools to:
@@ -13,7 +15,17 @@ You can use stream pools to:
 
 When you create a stream, you need to specify whether it should become a member of an existing stream pool, or a member of a new, automatically created stream pool. There is no limit to the number of stream pools you can create.
 
-## Task 1 :Working with Stream Pools
+### Objectives
+
+- Provision a stream pool
+- Provision a stream.
+
+### Prerequisites
+
+- This lab assumes you are logged in your account.
+- You have the access to the cloud shell.
+
+## Task 1: Working with Stream Pools
 
 1. check for the existing set of stream-pools you have in your compartment
 
@@ -59,7 +71,7 @@ When you create a stream, you need to specify whether it should become a member 
     </copy>
     ```
 
-## Task 2 :Working with Streams
+## Task 2: Working with Streams
 
 1. check for the existing set of streams you have in your compartment
 
