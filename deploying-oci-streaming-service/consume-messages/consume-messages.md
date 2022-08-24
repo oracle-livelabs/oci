@@ -29,12 +29,12 @@ As long as you keep consuming messages, there is no need to re-create a cursor, 
 
 ### Objectives
 
-- Consume messages as a individual consumer.
+- Consume messages as an individual consumer.
 - Consume messages in a group.
 
 ### Prerequisites
 
-- Stream Pool and stream is created.
+- Stream Pool and stream are created.
 - Sample messages are published to the stream.
 
 ## Individual Consumers
@@ -44,6 +44,7 @@ If you choose to use individual consumers to consume messages from your streams 
 When you create a cursor for an individual consumer, you need to specify the partition in the stream that the cursor should use. If your stream has more than one partition with messages, you need to create multiple cursors to read them.
 
 Create the cursor for partition 0
+
 ```sh
 <copy>
     oci streaming stream cursor create-cursor --partition 0 --stream-id $STREAM_OCID --type TRIM_HORIZON --endpoint https://cell-1.streaming.us-phoenix-1.oci.oraclecloud.com
@@ -51,6 +52,7 @@ Create the cursor for partition 0
 ```
 
 Get the message using the cursor returned from create-cursor call or get message call
+
 ```sh
 <copy>
     oci streaming stream message get --cursor $CURSOR --stream-id $STREAM_OCID --endpoint https://cell-1.streaming.us-phoenix-1.oci.oraclecloud.com
@@ -72,7 +74,7 @@ Each consumer group receives all of the messages in the stream at least once.
 
 Consumer groups are ephemeral. They disappear when they're not used for the retention period of the stream.
 
-A consumer group is created on the first CreateGroupCursor request. Group cursors define a group name/instance name pair. When you create your group cursor, you should provide the ID of the stream, a group name, an instance name, and one of the following supported cursor types TRIM_HORIZON, AT_TIME or LATEST
+A consumer group is created on the first CreateGroupCursor request. Group cursors define a group name/instance name pair. When you create your group cursor, you should provide the ID of the stream, a group name, an instance name, and one of the following supported cursor types TRIM\_HORIZON, AT\_TIME or LATEST.
 
 ```sh
 <copy>
@@ -81,21 +83,23 @@ oci streaming stream cursor create-group-cursor --group-name G1 --instance-name 
 ```
 
 Get the message using the cursor returned from create-cursor call or get message call
+
 ```sh
 <copy>
 oci streaming stream message get --cursor $CURSOR --stream-id $STREAM_OCID --endpoint https://cell-1.streaming.us-phoenix-1.oci.oraclecloud.com
 </copy>
 ```
 
-Check status of the group
+Check the status of the group
+
 ```sh
 <copy>
     oci streaming stream group get --group-name G1 --stream-id $STREAM_OCID --endpoint https://cell-1.streaming.us-phoenix-1.oci.oraclecloud.com
 </copy>
 ```
 
-## Acknowledgements
+## Acknowledgments
 
 - **Author** - Nitin Soni
 - **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager Intern, DB Product Management)
-- **Last Updated By/Date** - Madhusudhan Rao, Apr 2022
+- **Last Updated By/Date** - Nitin Soni, 23 Aug 2022

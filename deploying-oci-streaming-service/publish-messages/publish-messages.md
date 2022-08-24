@@ -15,7 +15,7 @@ The partition where a message is published is calculated using the message's key
 
 ### Prerequisites
 
-- Stream Pool and stream is created.
+- Stream Pool and stream are created.
 
 ## Handling Large Messages
 
@@ -40,8 +40,8 @@ oci streaming stream message put --stream-id $STREAM_OCID --messages file://msg.
 </copy>
 ```
 
-## Acknowledgements
+## Acknowledgments
 
 - **Author** - Nitin Soni
 - **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager Intern, DB Product Management)
-- **Last Updated By/Date** - Madhusudhan Rao, Apr 2022
+- **Last Updated By/Date** - Nitin Soni, 24 Aug 2022
