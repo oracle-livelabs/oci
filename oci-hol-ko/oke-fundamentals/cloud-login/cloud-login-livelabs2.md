@@ -22,7 +22,7 @@ Oracle Account를 만드는 것은 다음 두 단계로 요약할 수 있습니�
 
 ## Task 2: 워크샵 예약 요청하기
 
-1. [LiveLabs](http://developer.oracle.com/livelabs)에서, 원하는 워크샵 찾아 선택합니다. *Run On LiveLabs Sandbox*를 클릭합니다. *I consent to receive the reservation emails*을 체크하고 *Submit Reservation*을 클릭하여 워크샵을 예약합니다.
+1. [LiveLabs](http://bit.ly/golivelabs)에서, 원하는 워크샵 찾아 선택합니다. *Run On LiveLabs Sandbox*를 클릭합니다. *I consent to receive the reservation emails*을 체크하고 *Submit Reservation*을 클릭하여 워크샵을 예약합니다.
 
   ![Reserve LiveLab](images/reserve_livelab.png)
 
