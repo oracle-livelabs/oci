@@ -7,7 +7,7 @@ In this workshop, you will learn how to use Oracle Cloud APM to detect a perform
 You will examine performance alarms in the APM Home dashboard, observe activities in the out-of-the-box performance widgets in the Synthetic Monitors dashboard, inspect client details in the HTTP Archive (HAR) file, and finally explore the server side details using the APM Trace Explorer.
 
 
-Estimated Workshop Time: TBD minutes
+Estimated Time: 35 minutes
 
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 

@@ -10,7 +10,7 @@ APM Trace Explorer lets you run queries and visualizations of APM data, includin
  - 	Spans (individual units of work which form a trace)
 
 
-Estimated time: 5 minutes
+Estimated time: 15 minutes
 
 ### Objectives
 
