@@ -133,7 +133,7 @@ Estimated time: 10 minutes
     ```
   ![WineCellar Demo app](images/4-4-winestore.png " ")
 
-    >**Note:** It may take a few minutes to complete the deployment and start loading the page content in the screen the first time.  
+    >**Note:** It may take a few minutes to complete the deployment and start loading the page content on the screen for the first time.  
 
 You may now **proceed to the next lab**.
 

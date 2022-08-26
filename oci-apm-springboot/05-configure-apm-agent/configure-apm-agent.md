@@ -89,7 +89,7 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Cloud Shell ](images/4-1-8-cloudshell.png " ")
 
-    >**Note:** The APM version may be different from what is showing in the example.
+    >**Note:** The APM version may be different from what is shown in the example.
 
 ## **Task 4**: Provision the APM Java Agent
 
@@ -121,7 +121,7 @@ Estimated time: 10 minutes
 
 Next step is to deploy the Java Agent. First update the **wstore.yaml** file by adding the java runtime argument that points to the APM Agent jar file bootstrap location, then apply to the Kubernetes pods. Notice that the service names, **wstore-front** and **wstore-back**, that are used to display in the APM Trace Explorer, are also added to the command for the statefulsets.
 
-1.  Use any editor to open wstore.yaml file.
+1.  Use any editor to open the wstore.yaml file.
 
     ``` bash
     <copy>
@@ -153,7 +153,7 @@ Next step is to deploy the Java Agent. First update the **wstore.yaml** file by 
   ![Oracle Cloud console, Cloud Shell ](images/4-6-1-cloudshell.png " ")    
 
 
-    > ***Troubleshooting***: For learning purpose, we have preconfigured the java argument editing in the **wstore-deploy-agent.yaml** file. If you encounter any issues run the following command to review how the changes expected to be done.
+    > ***Troubleshooting***: For learning purposes, we have preconfigured the java argument editing in the **wstore-deploy-agent.yaml** file. If you encounter any issues run the following command to review how the changes are expected to be done.
     - vi ~/sb-hol/wstore-deploy-agent.yaml
 
 

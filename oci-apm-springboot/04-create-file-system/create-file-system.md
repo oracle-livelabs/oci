@@ -47,7 +47,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, file systems](images/3-1-4-filesystem.png " ")
 
-7. Scrolling down the **Create File System** page, and find the **Export Information** section. Verify that the **Export Path** is set to **/apmlab-fss**. This is where the file system will be mounted. You will provision APM Java agent at this location. In the **Mount Target Information** section, click **Edit Details** to expand the section.
+7. Scrolling down the **Create File System** page, and find the **Export Information** section. Verify that the **Export Path** is set to **/apmlab-fss**. This is where the file system will be mounted. You will provision the APM Java agent at this location. In the **Mount Target Information** section, click **Edit Details** to expand the section.
 
    ![Oracle Cloud console, file systems](images/3-1-4-1-filesystem.png " ")
 
@@ -61,7 +61,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, file systems](images/3-1-6-filesystem.png " ")
 
-11.	A new File System is created.  Scroll down to find **Exports** section. Click the link to the **Mount Target** just created.
+11.	A new File System is created.  Scroll down to find the **Exports** section. Click the link to the **Mount Target** just created.
 
    ![Oracle Cloud console, file systems](images/3-1-8-filesystem.png " ")
 
@@ -100,7 +100,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, Security Rules](images/3-2-6-securityrules.png " ")
 
-6.	Click **+ Another Ingress Rule** button and create additional rule for **UDP**, with the destination port range **111,2048**. Use the same values with the rule created above for the rest of the fields.  
+6.	Click **+ Another Ingress Rule** button and create an additional rule for **UDP**, with the destination port range **111,2048**. Use the same values with the rule created above for the rest of the fields.  
 
     Click **Add Ingress Rules** button which creates 4 ingress rules in the security list.
 
@@ -130,7 +130,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, Security Rules](images/3-2-11-securityrules.png " ")
 
-11.	Click **+ Another Egress Rule** button and create additional rule for **UDP**, with the destination port **111**. Use the same values with the rule created above for the rest of the fields.<br><br> Click **Add Egress Rules** button which creates 3 egress rules in the security list.
+11.	Click **+ Another Egress Rule** button and create an additional rule for **UDP**, with the destination port **111**. Use the same values with the rule created above for the rest of the fields.<br><br> Click **Add Egress Rules** button which creates 3 egress rules in the security list.
 
    ![Oracle Cloud console, Security Rules](images/3-2-11-2-securityrules.png " ")
 
@@ -231,7 +231,7 @@ Estimated time: 15 minutes
 
 2. Scroll down the file. You will see there are two statefulsets, **wstore-front** and **wstore-back**, defined in the YAML file.
 
-3. Within each statefulset, find a line where defines the container port: "**- containerPort: 8080**" (line 51 and line 75).
+3. Within each statefulset, find a line which defines the container port: "**- containerPort: 8080**" (line 51 and line 75).
 
    ![Oracle Cloud console, Cloud Shell](images/3-3-3-1-cloudshell.png " ")
 
@@ -256,7 +256,7 @@ Estimated time: 15 minutes
      - Make sure to keep the same space indentation when pasting the code into the file.
      - "VolumeMounts:" aligns with "ports:"
      - "Volumes:" aligns with "imagePullSecrets:"
-     - Refer to the screenshot image below to see how it should look like after the file is modified.
+     - Refer to the screenshot image below to see how it should look, after the file is modified.
      ![Oracle Cloud console, Cloud Shell](images/3-3-3-2-cloudshell.png " ")
      - Also refer to the below code change made to one of the statefulsets, **wstore-back**.
 
