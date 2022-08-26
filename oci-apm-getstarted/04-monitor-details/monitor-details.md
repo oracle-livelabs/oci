@@ -52,7 +52,7 @@ Estimated time: 5 minutes
 
     ![Oracle Cloud console, View HAR](images/1-5-monitor.png " ")
 
-2. On the top left side of the screen, there are pie-charts showing load time breakdown information. Looking at the **Time Spent on state** chart, you can see that most of the time was spent on a wait state.
+2. On the upper side of the screen, there are pie-charts showing load time breakdown information. Looking at the **Time Spent on state** chart, you can see that most of the time was spent on a wait state.
 
     ![Oracle Cloud console, View HAR](images/1-6-monitor.png " ")
 

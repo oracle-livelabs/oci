@@ -38,7 +38,7 @@ Estimated time: 5 minutes
 
 	![Oracle Cloud, Alarm Definitions page](images/1-2-alarmdef.png " ")
 
-  Examine the chart. The values run over the red dotted line when the thresholds are crossed. You can see that the alarm has been periodically triggered.
+  Examine the chart. The values run over the red dotted line when the threshold is crossed. You can see that the alarm has been periodically triggered.
 
 3. Hover the mouse over one of the spikes in the chart. A floating window opens showing details of the selected sample.
 

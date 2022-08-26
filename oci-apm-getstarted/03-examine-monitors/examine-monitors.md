@@ -21,11 +21,11 @@ Estimated time: 10 minutes
 
 	![Oracle Cloud console Menu](images/1-0-menu.png " ")
 
-2. APM Home page opens. Locate **Monitors** widget at the right side of the page.
+2. APM Home page opens. Locate **Monitors** widget at the right side of the page. You can see the status of the synthetic monitors running for the last 24 hours, in this compartment. 
 
 	![Oracle Cloud console, APM Home](images/1-1-home.png " ")
 
-	Find the **WineStore-E2E** monitor in the Monitors table. You can see the status of the synthetic monitors running for the last 24 hours, in this compartment.  Since the alarm was produced by this monitor, let’s examine it in greater detail. Click on the **WineStore-E2E** monitor.
+	Find the **WineStore-E2E** monitor in the Monitors table.  Since the alarm was produced by this monitor, let’s examine it in greater detail. Click on the **WineStore-E2E** monitor.
 
 	![Oracle Cloud console, APM Home](images/1-2-monitor.png " ")
 

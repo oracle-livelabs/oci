@@ -67,7 +67,7 @@ Estimated time: 5 minutes
 
 	![Oracle Cloud, Trace Explorer](images/1-8-tx.png " ")
 
-7. Click ** X ** to close the pane.
+7. Click **X** to close the pane.
 
 	![Oracle Cloud, Trace Explorer](images/1-9-tx.png " ")
 
@@ -75,7 +75,7 @@ Estimated time: 5 minutes
 
 	![Oracle Cloud, Trace Explorer](images/1-10-tx.png " ")
 
-9. Hover the mouse over the arrow between the last operation and database. A popup window shows information of the slow SQL executed.
+9. Hover the mouse over the arrow between the last operation and database. A floating window shows information of the slow SQL executed.
 
 	![Oracle Cloud, Trace Explorer](images/1-11-tx.png " ")
 
@@ -102,7 +102,7 @@ Estimated time: 5 minutes
 	![Oracle Cloud, Trace Explorer](images/1-15-tx.png " ")
 
 
-4. Click the triangle icon next to the **Topology** label, to minimize the topology region
+4. Click the triangle icon next to the **Topology** label, to minimize the topology region.
 
 	![Oracle Cloud, Trace Explorer](images/1-16-tx.png " ")
 
@@ -125,22 +125,22 @@ Estimated time: 5 minutes
 
 	![Oracle Cloud, Trace Explorer](images/1-18-tx.png " ")
 
-	Click the bar of the span.
+	Click the link, or the bar of the span.
 
-7. **Span details** page opens. In this page, span details are provided in the list of dimensions. Scroll down the list, and review the information of the span. E.g., Appserver name, type or port, Kubernetes node or pod names, or performance related information. Because this span is a JDBC span, it also includes information from the database. These dimensions are provided out-of-the-box and can help you investigate a problem. You can also create custom dimensions.
+7. **Span details** page opens. In this page, span details are provided in the list of dimensions. Scroll down the list, and review the information of the span. E.g., App server name, type and the port it uses, Kubernetes node and pod names, and the information related to the host and Oracle Cloud. Because this span is a JDBC span, it also includes information from the database. These dimensions are provided out-of-the-box and can help you investigate a problem. You can also create custom dimensions.
 
 	![Oracle Cloud, Trace Explorer](images/1-19-tx.png " ")
 
-8. As scrolling down, locate the dimensions related to the database. In this case, we can see that the problem is a slow SQL. The dimensions provide the actual SQL, the time it took to execute, the DB Connection string and the SQLID.
+8. As scrolling down, locate the dimensions related to the database. In this case, you identified that the problem is a slow SQL. The dimensions provide the actual SQL, the time it took to execute, the DB Connection string and the SQLID.
 
 	![Oracle Cloud, Trace Explorer](images/1-20-tx.png " ")
 
-	Using the DB Connection string and the SQLID, you can drilldown to perfhub and/or Operation Insights service in Oracle Cloud, to investigate the issue with the database.
+	Using the DB Connection string and the SQLID, you can drilldown to perfhub and/or Operations Insights service in Oracle Cloud, to investigate the issue with the database.
 
 	>***Note :*** In context drill down to the database service is on the roadmap
 
 
-9. Click the **Close**, then click **Trace Explorer** link from the breadcrumb to go back to the Trace Explorer main page.
+9. Click **Close**, then click **Trace Explorer** link from the breadcrumb to go back to the Trace Explorer main page.
 
 	![Oracle Cloud, Trace Explorer](images/1-21-tx.png " ")
 	![Oracle Cloud, Trace Explorer](images/1-22-tx.png " ")
@@ -156,18 +156,18 @@ Estimated time: 5 minutes
 2. Verify that the SQL comes at the top of the list, is the same SQL, which you found as a bottleneck in the previous steps. The view is sorted by the slowest average duration. Next, let's check whether the SQL is always slow or not. Click the **Count** column of the SQL on the top row.
 	![Oracle Cloud, Trace Explorer](images/1-24-tx.png " ")
 
-3. 	You can see each of the individual executions of the SQL. Confirm that the SQL is not always slow when executed.
+3. 	You can see each of the individual executions of the SQL. Confirm that the SQL is not always slow when executed. Scroll down the list as needed.
 
 	![Oracle Cloud, Trace Explorer](images/1-25-tx.png " ")
 
 
 ## **Task 5**: Analyze the SQL spans with the histogram query
 
-1. Another way to analyze the distribution is to use the histogram view. Click the three-dot icon under the **Run** button.
+1. Another way to analyze the distribution is to use the histogram view. Click the three-dot icon under the **Run** button, then click **Open**.
 
 	![Oracle Cloud, Trace Explorer](images/1-27-tx.png " ")
 
-2. Enter **histogram** in the search field. Select the query **SQL-Histogram**, then click **Open**.
+2. Type **histogram** in the search field. Select the query **SQL-Histogram**, then click **Open**.
 
 	![Oracle Cloud, Trace Explorer](images/1-28-tx.png " ")
 
@@ -180,16 +180,39 @@ Estimated time: 5 minutes
 	</copy>
 	```
 
-3. This SQL executes in about 2ms almost always. However, in some cases it runs much slower. You can further diagnose in the PerfHub or Operation Insights service to solve this problem in the database.
+3. Inspect the histogram view opened in the screen.
 
 	![Oracle Cloud, Trace Explorer](images/1-29-tx.png " ")
 
+  In the above screenshot, you can see the following.
+
+  -  In 90% of the total executions (sum of the first 3 rows), the SQL runs under 3ms on average. in. So it is usually very fast.
+    ![Oracle Cloud, Trace Explorer](images/1-30-tx.png " ")
+
+
+  - However, in some cases it runs much slower. The 6% of the total executions shows the average duration of more than 17 seconds.
+    ![Oracle Cloud, Trace Explorer](images/1-31-tx.png " ")
+
+
+    > ***Note :*** The root cause of the issue is the lock contention in the database that the update statement is being blocked by another sql that is doing a select on the same table. That uses a lot of CPU and takes a long time to execute, and is causing the update statement that usually runs in ms while slows down intermittently.       
+
+    You can further diagnose the issue in the PerfHub and use Operations Insights service to solve this problem in the database. For more details on the solution at the database, please watch the following video that demonstrates how the contention can be identified and how it can be resolved. In the demo, the issue was resolved by enabling the auto index feature to the autonomous database using the Operations Insights service in Oracle Cloud.
+
+    [Demonstration, A New Platform for Multicloud Observability and Management](https://youtu.be/EnsQMOEhWjQ?t=1058)
+
+    [![YouTube](images/1-32-tx.png)](https://youtu.be/EnsQMOEhWjQ?t=1058 "Redirect to YouTube")
+
+
+## Conclusion
+
+  In this workshop, you have learned how to use various APM features to detect a performance problem, analyze the data, and drill down to the cause of the problem.
+
+  You can use the APM Home page and Alarm details page to understand the potential issue in your application, use Monitors dashboard page to examine the collected data, and use Monitor history page and the APM Trace Explorer to drill down to the cause of the problem.
+
+  For more information on APM, refer to the OCI documentation, **[Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)**.
 
 
 
-
-
-You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
