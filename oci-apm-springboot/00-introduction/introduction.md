@@ -8,7 +8,7 @@ In this workshop, you will provision the APM Java agent in a file system mounted
 
 > **Note:** The same approach demonstrated for Spring Boot Java microservices on Kubernetes can be used to configure other types of java application servers, such as WebLogic, deployed on Kubernetes.
 
-![](images/apm_microservices_setup.png " ")
+![Workshop app architecture](images/apm_microservices_setup.png " ")
 
 Estimated Workshop Time: 65 minutes
 
@@ -16,7 +16,7 @@ Estimated Workshop Time: 65 minutes
 
 The diagram below provides an overview of the OCI APM Service, its features, components, and some of the other OCI services it integrates with.
 
-  ![](images/apm_diagram.png " ")
+  ![APM architecture](images/apm_diagram.png " ")
 
 Among other capabilities, OCI APM includes an implementation of a Distributed Tracing system. It collects and processes transaction trace data (spans) from the monitored application and make it available for viewing, dashboarding, exploration, alerts, etc. For more information on APM and Trace Explorer please refer to Application Performance Monitoring > **[Use Trace Explorer](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)** section in the OCI Documentation.
 

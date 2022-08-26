@@ -202,7 +202,6 @@ Estimated time: 5 minutes
 
     [![YouTube](images/1-32-tx.png)](https://youtu.be/EnsQMOEhWjQ?t=1058 "Redirect to YouTube")
 
-
 ## Conclusion
 
   In this workshop, you have learned how to use various APM features to detect a performance problem, analyze the data, and drill down to the cause of the problem.

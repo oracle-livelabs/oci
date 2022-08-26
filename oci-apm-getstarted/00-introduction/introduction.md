@@ -7,15 +7,13 @@ In this workshop, you will learn how to use Oracle Cloud APM to detect a perform
 You will examine performance alarms in the APM Home dashboard, observe activities in the out-of-the-box performance widgets in the Synthetic Monitors dashboard, inspect client details in the HTTP Archive (HAR) file, and finally explore the server side details using the APM Trace Explorer.
 
 
-![](images/apm_microservices_setup.png " ")
-
 Estimated Workshop Time: TBD minutes
 
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 
 The diagram below provides an overview of the OCI APM Service, its features, components, and some of the other OCI services it integrates with.
 
-  ![](images/apm_diagram.png " ")
+  ![APM architecture](images/apm_diagram.png " ")
 
 Among other capabilities, OCI APM includes an implementation of a Distributed Tracing system. It collects and processes transaction trace data (spans) from the monitored application and makes it available for viewing, dashboarding, exploration, alerts, etc. For more information on APM and Trace Explorer please refer to Application Performance Monitoring > **[Use Trace Explorer](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)** section in the OCI Documentation.
 
