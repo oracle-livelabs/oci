@@ -35,12 +35,13 @@ In this task, you will create a dedicated compartment for this live lab, if you 
 
    After creating the user, you will be redirected to the user details page. Click **Create/Reset password** to create a password for the user.
 
-4. While in the user details page, click **API Keys** in the in the **Resources** section, and then click **Add API Key**. Download the private key.  
+4. While in the user details page, click **API Keys** in the in the **Resources** section, and then click **Add API Key**. Download the private key, saving it as *oci_api_key.pem*.  
 5. After the creation, when back to the API Keys screen, look for additional options in the table row that displays your recently created key fingerprint. Click **View configuration file**.
 
    ![View config option](../images/view_config_option.png)
 
-   You will then see a screen such as the below. Copy the content and take note of it. It will be necessary later.
+   You will then see a screen such as the below. Copy the content, create a new file named *config*, paste the content inside it. Add *~/.oci/oci_api_key.pem* as key path.  
+   Save the file. It will be necessary later.
 
    ![View config file](../images/view_config_file.png)
 
@@ -101,7 +102,7 @@ In this task, you will create an OCI Compute instance in the public subnet of th
 
 > **Note:** Remember to run the following command or an equivalent one, to give proper permissions to your key.
 ```bash
-<copy>chmod 400 <your_key></copy>
+<copy>chmod 600 <your_key></copy>
 ```
 
 ## Acknowledgements
