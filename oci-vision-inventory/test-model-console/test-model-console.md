@@ -14,3 +14,7 @@
 
    ![Test the OCI Vision model - 2](../images/test_model2.png)
 
+## Acknowledgements
+
+* **Author** - Nuno Gonçalves
+* **Last Updated By/Date** - Nuno Gonçalves, August 2022

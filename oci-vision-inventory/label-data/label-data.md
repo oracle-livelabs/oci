@@ -51,3 +51,8 @@ Estimated Time: 20 minutes
 2. In the single image view, zoom in if necessary. Using the cursor, draw square bounding boxes around the circles. Do the same for the ones that only appear partially.
 
    ![Labeling an image](../images/labeling_an_image.png)
+
+## Acknowledgements
+
+* **Author** - Nuno Gonçalves
+* **Last Updated By/Date** - Nuno Gonçalves, August 2022
