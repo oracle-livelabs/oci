@@ -25,7 +25,7 @@
         },             
         {
             "title": "Lab 4: Test the model via Oracle Cloud Console",
-            "filename": "../../test-mode-console/test-model-console.md"
+            "filename": "../../test-model-console/test-model-console.md"
         },
         {
             "title": "Lab 5: Test the model using the Python SDK",
