@@ -20,13 +20,12 @@ The Oracle Cloud Infrastructure Anomaly Detection will create customized Machine
 ** assumption - set up policy is taken care of in lab1: set-up-environment
 
 ** assumption - training data csv is stored in object storage bucket
+
 ###Task 1 Create Anomaly Detection Project
 
 
 
-
-
-
+![](./images/image1.png " ")
 
 
 ###Task 2
