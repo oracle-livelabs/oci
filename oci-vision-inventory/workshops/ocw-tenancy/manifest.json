@@ -24,8 +24,12 @@
             "filename": "../../create-model/create-model.md"
         },             
         {
-            "title": "Lab 4: Test the model",
-            "filename": "../../test-model/test-model.md"
+            "title": "Lab 4: Test the model via Oracle Cloud Console",
+            "filename": "../../test-mode-console/test-model-console.md"
+        },
+        {
+            "title": "Lab 5: Test the model using the Python SDK",
+            "filename": "../../test-model-python-sdk/test-model-python-sdk.md"
         },
         {
             "title": "Need Help?",
