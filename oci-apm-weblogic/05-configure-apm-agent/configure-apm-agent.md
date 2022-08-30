@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will download the APM Java Agent installer file from the Oracle Cloud console, upload it to the Oracle Cloud shell, transfer to the Kubernetes container, provision the Java Agent to the file system, and finally deploy the Agent to the Kubernetes pods.
+In this lab, you will download the APM Java Agent installer file from the Oracle Cloud console, upload it to the Oracle Cloud shell, transfer it to the Kubernetes container, provision the Java Agent to the file system, and finally, deploy the Agent to the Kubernetes pods.
 
 Estimated time: 10 minutes
 
@@ -28,11 +28,11 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, APM Domains](images/4-1-2-apmdomain.png " ")
 
-3.	Mouse click **Java Agent** link. Select **Copy Link Address**. This will save the download link to the memory in your computer. Paste the copied link to a text file.
+3.	Mouse-click the **Java Agent** link. Select **Copy Link Address** (or Copy Link, depends on the browser you use). This will save the download link to the memory on your computer. Paste the copied link to a text file.
 
    ![Oracle Cloud console, APM Domains](images/4-1-3-apmdomain.png " ")
 
-4. 	Open the Cloud Shell by clicking the **>..** icon from the top right corner in the Oracle Cloud console. Restore the Cloud Shell if minimized.
+4. 	Open the Cloud Shell by clicking the **>..** icon from the top right corner of the Oracle Cloud console. Restore the Cloud Shell if minimized.
 
    ![Oracle Cloud console, APM Domains](images/4-1-4-cloudshell.png " ")
 
@@ -54,7 +54,7 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Cloud Shell](images/4-1-6-cloudshell.png " ")
 
-3.  Type ls command. Confirm that the java agent file installer is in the home directory.
+3.  Type the ls command. Confirm that the java agent file installer is in the home directory.
 
     ``` bash
     <copy>
@@ -87,12 +87,12 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Cloud Shell ](images/4-1-8-cloudshell.png " ")
 
-    >**Note:** The APM version may be different from what is showing in the example.
+    >**Note:** The APM version may be different from what is shown in the example.
 
-## **Task 4**: Provision the APM Java Agent
+## **Task 4**: Provision of the APM Java Agent
 
 
-1.	Execute the command below to provision the APM Java agent. ***Replace*** the **APM Domain Private key** and **APM Domain Endpoint**, with the values saved in the Lab2, Task2. Please also ***change*** the **apm-agent-version** in the file name to the version of the agent you have.
+1.	Execute the command below to provision the APM Java agent. ***Replace*** the **APM Domain Private key** and **APM Domain Endpoint**, with the values saved in Lab2, Task2. Please also ***change*** the **apm-agent-version** in the file name to the version of the agent you have.
 
     ``` bash
     <copy>
@@ -121,9 +121,9 @@ Estimated time: 10 minutes
 
 In this task, you will add exclusions to the data capture in the APM Agent, for the JAXRS server probe that generates static spans in this particular WebLogic setup. This is an optional task if you are monitoring the real-life environment, but for the lab purpose, we would like to suppress the spans generated from the server maintenance, so that you can focus on the spans related to the browser navigations.
 
-Because there is no editing tool inside the container, you will copy an APM agent configuration file from the container to the Cloud Shell, edit the file, then copy back to the container. We plan to add the exclusion by default, to the product in the future.
+Because there is no editing tool inside the container, you will copy an APM agent configuration file from the container to the Cloud Shell, edit the file, then copy it back to the container. We plan to add the exclusion by default, to the product in the future.
 
-1.	Copy **ProbeConfig.acml** from the container.
+1.	Copy **ProbeConfig.acml** from the container. ***Replace*** the apm-agent-version before running the command.
 
     ``` bash
     <copy>
@@ -134,7 +134,7 @@ Because there is no editing tool inside the container, you will copy an APM agen
     >***NOTE***: The file path includes the APM Java Agent version. Change the directory name to the Agent version you have.  
     E.g., kubectl cp sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.6.2363**/ProbeConfig.acml ~/ProbeConfig.acml
 
-    run "ls" command from the Home directory and confirm the file was transferred.  
+    run the "ls" command from the Home directory and confirm the file was transferred.  
     ```bash
     <copy>
     ls ~
@@ -160,7 +160,7 @@ Because there is no editing tool inside the container, you will copy an APM agen
 
    ![Oracle Cloud console, Cloud Shell ](images/4-5-2-cloudshell.png " ")
 
-4.	Copy **ProbeConfig.acml** back to the container. Change the directory name to the Agent apm-agent-version you have.
+4.	Copy **ProbeConfig.acml** back to the container. Ensure to ***change*** the directory name to the Agent apm-agent-version you have before running the command.
 
     ```bash
     <copy>
@@ -174,7 +174,7 @@ Because there is no editing tool inside the container, you will copy an APM agen
 
 ## **Task 6**: Deploy the Java Agent
 
-Next you will deploy the Java Agent by modifying the domain.yaml file to point the APM Agent jar file bootstrap location.
+Next, you will deploy the Java Agent by modifying the domain.yaml file to point to the APM Agent jar file bootstrap location.
 
 1.	Open the Cloud shell, if not opened. Open the ***domain.yaml*** from the home directory with any editor.
 
@@ -210,7 +210,7 @@ Next you will deploy the Java Agent by modifying the domain.yaml file to point t
 
     ![Oracle Cloud console, Cloud Shell ](images/4-6-2-cloudshell.png " ")    
 
-5.	Wait for a few minutes, then run the following command to check the status of the pods. Make sure they are in the Running state and Ready.
+5.	Run the following command to check the status of the pods. Carefully look at the **AGE** column, and make sure they are restarted, and in the Running state and Ready.
 
     ```bash
     <copy>

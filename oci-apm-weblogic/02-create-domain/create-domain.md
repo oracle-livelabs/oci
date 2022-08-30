@@ -15,7 +15,7 @@ Estimated time: 10 minutes
 ### Prerequisites
 
 * This lab requires an [Oracle Cloud account](https://www.oracle.com/cloud/free/). You may use your own cloud account, or a Free tier account, a cloud account that you obtained through a trial.
-* To create APM domain, you will need an Oracle Cloud Account Administrator role or manage apm-domains permission in the target compartment. For more details, refer to the OCI Documentation, [Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html).
+* To create an APM domain, you will need an Oracle Cloud Account Administrator role or manage apm-domains permission in the target compartment. For more details, refer to the OCI Documentation, [Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html).
 
 ## **Task 1**: Create an APM domain
 
@@ -33,11 +33,11 @@ Estimated time: 10 minutes
   ![Oracle Cloud console, Create APM Domain](images/2-4-domain.png " ")
 6.	Once the job is completed, the status turns to Active with a green icon.
   ![Oracle Cloud console, Create APM Domain](images/2-5-domain.png " ")
-  For more details how to create an APM Domain, refer to the OCI documentation, [Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html).
+  For more details on how to create an APM Domain, refer to the OCI documentation, [Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html).
 
 ## **Task 2**: Obtain Data Upload Endpoint and Private and Public Data Keys
 
-To upload tracing data to an APM domain, Data Upload Endpoint and both Private and Public Data Keys must be configured in the application’s configuration files. Next you are going to obtain the values for them and then enter them into the Oracle Cloud console.
+To upload tracing data to an APM domain, Data Upload Endpoint and both Private and Public Data Keys must be configured in the application’s configuration files. Next, you are going to obtain the values for them and then enter them into the Oracle Cloud console.
 
 1.	Click the link to the APM domain.
   ![Oracle Cloud console, APM Domain](images/3-1-domain.png " ")

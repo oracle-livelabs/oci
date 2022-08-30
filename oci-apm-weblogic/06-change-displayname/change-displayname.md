@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab you will change the display format of the span names that show up in the APM Trace Explorer. By default, the display name format is **Domain Name-Host Name-Port-Managed Server Name**. You will change the format to is **Domain Name-Managed Server Name** to leave out the host name and the port.
+In this lab, you will change the display format of the span names that show up in the APM Trace Explorer. By default, the display name format is **Domain Name-Host Name-Port-Managed Server Name**. You will change the format to **Domain Name-Managed Server Name** to leave out the hostname and the port.
 
-You will modify the **AgentConfig.properties** file, located in the APM Agent directory, which resides in the file system associated with the container.  However, because there is no editing tool inside the container, you will copy the file from the container to the Cloud Shell, edit the file, then copy back to the container.
+You will modify the **AgentConfig.properties** file, located in the APM Agent directory, which resides in the file system associated with the container.  However, because there is no editing tool inside the container, you will copy the file from the container to the Cloud Shell, edit the file, then copy it back to the container.
 
 Estimated time: 10 minutes
 
@@ -16,13 +16,13 @@ Estimated time: 10 minutes
 
 ### Prerequisites
 
-* Completion of the Tasks 1 to 4 in this workshop.
+* Completion of Tasks 1 to 4 in this workshop.
 
 
-## **Task 1**: Configure Java Agent configuration file to enable the injection
+## **Task 1**: Configure the Java Agent configuration file to enable the injection
 
-1. Run the oci ce (Container Engine) command that you saved in the Lab 3, Task 1, step 5.
-2. Execute the following command to copy **AgentConfig.properties**  from the container to the home directory.
+1. Run the oci ce (Container Engine) command that you saved in Lab 3, Task 1, step 5.
+2. Execute the following command to copy **AgentConfig.properties**  from the container to the home directory. Make sure to ***change*** the directory name to the Agent apm-agent-version you have before running the command.
 
 
     ``` bash
@@ -34,7 +34,7 @@ Estimated time: 10 minutes
     >***NOTE***: The file path includes the APM Java Agent version. Change the directory name to the Agent version you have.  
     E.g., kubectl cp sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.6.2363**/AgentConfig.properties ~/AgentConfig.properties
 
-    run "ls" command from the Home directory and confirm the file was transferred.  
+    run the "ls" command from the Home directory and confirm the file was transferred.  
     ```bash
     <copy>
     ls ~
@@ -61,7 +61,7 @@ Estimated time: 10 minutes
 
     ![Oracle Cloud console, Cloud Shell ](images/6-1a-cloudshell.png " ")
 
-5.	Copy **AgentConfig.properties** back to the container. ***Change*** to the apm-agent-version you have (E.g., 1.6.2363).
+5.	Copy **AgentConfig.properties** back to the container. ***Change*** to the apm-agent-version you have.
 
     ```bash
     <copy>
@@ -73,7 +73,7 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Cloud Shell ](images/6-4-cloudshell.png " ")
 
-6. Verify the successful file transfer, by running the following command. ***Change*** the apm-agent-version (E.g., 1.6.2363).
+6. Verify the successful file transfer, by running the following command. ***Change*** the apm-agent-version.
 
     ``` bash
     <copy>
