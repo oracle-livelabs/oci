@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This workshop uses a Spring Boot based Java microservices as a target application to trace against. In this lab, you will deploy the application to the Kubernetes cluster you created in the Lab 1.
+This workshop uses Spring Boot-based Java microservices as a target application to trace against. In this lab, you will deploy the application to the Kubernetes cluster you created in Lab 1.
 
 
 Estimated time: 10 minutes
@@ -17,26 +17,26 @@ Estimated time: 10 minutes
 
 ## **Task 1**: Verify OKE
 
-1. Go back to the Kubernetes cluster page where you left at the Lab 1, and check the status of the cluster. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, select **Developer Services** > **Kubernetes Clusters (OKE)**.
+1. Go back to the Kubernetes cluster page where you left Lab 1, and check the status of the cluster. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, and select **Developer Services** > **Kubernetes Clusters (OKE)**.
 
    ![Oracle Cloud console, Cluster details](images/1-1-menu.png " ")
 
-2. Click **apmlab-cluser1** link from the table.
+2. Click the **apmlab-cluser1** link from the table.
 
    ![Oracle Cloud console, Navigation Menu](images/1-2-menu.png " ")
 
-3. If the status of the cluster is **Active**, creation was successful. If it is still in a **Creating** status, it may take a few more minutes to complete. (Usually it takes 7 to 10 minutes to finish the jobs to create a cluster).
+3. If the status of the cluster is **Active**, creation was successful. If it is still in a **Creating** status, it may take a few more minutes to complete. (Usually, it takes 7 to 10 minutes to finish the jobs to create a cluster).
 
    ![Oracle Cloud console, Cluster details](images/1-9-OKE.png " ")
 
 ## **Task 2**: Access the OKE in the Oracle Cloud shell
 
 
-1. Click **Access Cluster** in the cluster details page.
+1. Click **Access Cluster** on the cluster details page.
 
   ![Oracle Cloud console, Cluster details](images/2-1-OKE.png " ")
 
-2. Make sure the **Cloud Shell Access** is selected. Click **Copy** link from the command to access kubeconfig for the cluster.
+2. Make sure the **Cloud Shell Access** is selected. Click the **Copy** link from the command to access kubeconfig for the cluster.
 
   ![Oracle Cloud console, Cluster details](images/2-2-OKE.png " ")
 
@@ -52,7 +52,7 @@ Estimated time: 10 minutes
 
   ![Oracle Cloud console, Cluster details](images/2-4-OKE.png " ")
 
-  >**Note:** Save the command to a text file on your laptop, and execute it every time when you start a new Cloud Shell session, while working the labs in this workshop.
+  >**Note:** Save the command to a text file on your laptop, and execute it whenever you start a new Cloud Shell session while working in the labs in this workshop.
 
 ## **Task 3**: Download configuration files
 
@@ -86,7 +86,7 @@ Estimated time: 10 minutes
     ```
   ![Oracle Cloud console, Cloud Shell](images/4-1-cloudshell.png " ")
 
-    >**Note:** Verify there are following files in the folder.
+    >**Note:** Verify there are the following files in the folder.
     - apmlab-fss.yaml
     - wstore.yaml
     - wstore-add-storage.yaml
@@ -104,7 +104,7 @@ Estimated time: 10 minutes
   ![Oracle Cloud console, Cloud Shell](images/4-2-cloudshell.png " ")
 
 
-5. Run the kubectl command below to display the status of the pods creation. Wait until the statuses become 'Running'. This may take a few minutes.
+5. Run the kubectl command below to display the status of the pod creation. Wait until the statuses become 'Running'. This may take a few minutes.
 
     ``` bash
     <copy>

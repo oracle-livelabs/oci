@@ -2,26 +2,26 @@
 
 ## Introduction
 
-In this lab, you will view the status of the monitors in the APM home page, drill down to the Monitor dashboard and analyze the details from the performance charts.  
+In this lab, you will view the status of the monitors on the APM home page, drill down to the Monitor dashboard and analyze the details from the performance charts.  
 
-Estimated time: 10 minutes
+Estimated time: 5 minutes
 
 ### Objectives
 
-* View monitor statuses in APM Home page
+* View monitor statuses on the APM Home page
 * Inspect the performance charts in the Monitor dashboard
 
 ### Prerequisites
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: View monitor statuses in APM Home page
+## **Task 1**: View monitor statuses on the APM Home page
 
 1. Open the navigation menu in the Oracle Cloud console, select **Observability & Management** > **Home** under **Application Performance Management**.
 
 	![Oracle Cloud console Menu](images/1-0-menu.png " ")
 
-2. APM Home page opens. Locate **Monitors** widget at the right side of the page. You can see the status of the synthetic monitors running for the last 24 hours, in this compartment. 
+2. APM Home page opens. Locate the **Monitors** widget on the right side of the page. You can see the status of the synthetic monitors running for the last 24 hours, in this compartment.
 
 	![Oracle Cloud console, APM Home](images/1-1-home.png " ")
 
@@ -31,7 +31,7 @@ Estimated time: 10 minutes
 
 ## **Task 2**: Inspect the performance charts in the Monitor dashboard
 
-1. **Monitors** dashboard opens. Notice that the **WineStore-E2E** is pre-selected in the **Monitor** field. The Monitors dashboard shows performance and error summary information of multiple, or a specific Monitor.
+1. **Monitors** dashboard opens. Notice that the **WineStore-E2E** is pre-selected in the **Monitor** field. The Monitors dashboard shows performance and error summary information of multiple, or specific Monitors.
 
  	![Oracle Cloud console, APM Home](images/1-3-monitor.png " ")
 
@@ -45,15 +45,15 @@ Estimated time: 10 minutes
 	 	![Oracle Cloud console, APM Home](images/1-4-2-monitor.png " ")
 
 
-3. Right to the Vantage point chart, you will see **Load and Execution Time** chart. Spot a few spikes indicating slow executions in the chart. It is likely that these caused an Alarm we saw earlier. Hover mouse over the data points to see details.
+3. Right to the Vantage point chart, you will see the **Load and Execution Time** chart. Spot a few spikes indicating slow executions in the chart. These likely caused an Alarm we saw earlier. Hover the mouse over the data points to see details.
 
  	![Oracle Cloud console, APM Home](images/1-5-monitor.png " ")
 
 
-4. Scroll down to locate **Load Time Breakdown** chart. You can see that the Ajax wait time is taking a large portion of the load time, which is typically waiting for a backend response.
+4. Scroll down to locate the **Load Time Breakdown** chart. You can see that the Ajax wait time is taking a large portion of the load time, which is typically waiting for a backend response.
  	![Oracle Cloud console, APM Home](images/1-6-monitor.png " ")
 
-5. Find **Connect Time Breakdown** chart on the right side. In the screenshot example, there is no connection related slow down you can see in the chart. However, in cases there are failures in monitor runs, the chart helps you to analyze the root cause. For example, the failed runs can be caused by the SSL not being resolved or an issue in DNS. Also, a longer execution time may be caused by the delay in connection.
+5. Find the **Connect Time Breakdown** chart on the right side. In the screenshot example, there is no connection related slow down you can see in the chart. However, in cases there are failures in monitor runs, the chart helps you to analyze the root cause. For example, the failed runs can be caused by the SSL not being resolved or an issue in DNS. Also, a longer execution time may be caused by the delay in connection.
 
  	![Oracle Cloud console, APM Home](images/1-7-monitor.png " ")
 

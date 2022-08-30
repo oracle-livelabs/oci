@@ -82,7 +82,7 @@ To delete the workshop setup from your tenancy, follow the steps below.
 
     ![Oracle Cloud, Cloud console](images/4-11-cleanup.png " ")       
 
-2. In the **Virtual Cloud Network Details** page, scroll down to locate the **Subnets** section. Select one of the subnets and click the three-dot-icon at the right hand side of the row.
+2. In the **Virtual Cloud Network Details** page, scroll down to locate the **Subnets** section. Select one of the subnets and click the three-dot icon on the right-hand side of the row.
 
     ![Oracle Cloud, Cloud console](images/4-12-cleanup.png " ")    
 
@@ -94,12 +94,12 @@ To delete the workshop setup from your tenancy, follow the steps below.
 
     ![Oracle Cloud, Cloud console](images/4-14-cleanup.png " ")    
 
-3. Click the **Terminate All** button, when activated. Termination of the resources begins. Once the message **Virtual Cloud Network termination complete** shows, click **Close**.
+3. Click the **Terminate All** button when activated. Termination of the resources begins. Once the message **Virtual Cloud Network termination complete** shows, click **Close**.
     ![Oracle Cloud, Cloud console](images/4-15-cleanup.png " ")    
 
 ## **Task 5**: Remove the workshop directory
 
-1. Open Oracle Cloud shell, run the following commands to remove the files and the workshop directory.
+1. Open the Oracle Cloud shell, and run the following commands to remove the files and the workshop directory.
 
     ``` bash
     <copy>

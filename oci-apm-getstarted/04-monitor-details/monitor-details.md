@@ -18,7 +18,7 @@ Estimated time: 5 minutes
 
 ## **Task 1**: Inspect the monitor details and execution history
 
-1.  The Monitor page provides details about an APM monitor, for example, when and where the monitor is run, a link to the monitor script, or a history of the monitor runs.  Examine the **Monitor Information** tab, **General Information** section.
+1.  The Monitor page provides details about an APM monitor, for example, when and where the monitor is run, a link to the monitor script, or a history of the monitor running.  Examine the **Monitor Information** tab, **General Information** section.
 
 	  ![Oracle Cloud console, Monitor details](images/1-0-monitor.png " ")
 
@@ -39,7 +39,7 @@ Estimated time: 5 minutes
 
     You will see a menu opened. This opens a menu that provides you options to analyze the monitor execution. For example, you can see an Error message in case of a failed script run, or Trace details in case of a network issue. You can also see screenshots of the HTML pages navigated in the monitor, or download browser console logs.
 
-    >***Note :*** In the example screenshot, **View Error Message** menu is disabled, because the selected run did not have a failure. In case of a failed script run, you can select to see an error message.
+    >***Note :*** In the example screenshot, the **View Error Message** menu is disabled, because the selected run did not have a failure. In case of a failed script run, you can select to see an error message.
     	  ![Oracle Cloud console, Monitor details](images/1-3-monitor.png " ")
 
 ## **Task 2**: Examine the HAR file
@@ -48,15 +48,15 @@ Estimated time: 5 minutes
 
 	  ![Oracle Cloud console, Monitor details](images/1-4-monitor.png " ")
 
-    The **View HAR** page opens. The HTTP Archive file (HAR file) holds details of a specific monitor call. APM collects HAR files at the monitor executions and visualizes in this page.
+    The **View HAR** page opens. The HTTP Archive file (HAR file) holds details of a specific monitor call. APM collects HAR files at the monitor executions and visualizes them on this page.
 
     ![Oracle Cloud console, View HAR](images/1-5-monitor.png " ")
 
-2. On the upper side of the screen, there are pie-charts showing load time breakdown information. Looking at the **Time Spent on state** chart, you can see that most of the time was spent on a wait state.
+2. On the upper side of the screen, there are pie charts showing load time breakdown information. Looking at the **Time Spent on state** chart, you can see that most of the time was spent in a wait state.
 
     ![Oracle Cloud console, View HAR](images/1-6-monitor.png " ")
 
-3. Scroll down to **Steps** section, and find the row that has the long execution time. In this example, that is Step 9.
+3. Scroll down to the **Steps** section, and find the row that has the long execution time. In this example, that is Step 9.
 
     ![Oracle Cloud console, View HAR](images/1-7-monitor.png " ")
 
@@ -74,7 +74,7 @@ Estimated time: 5 minutes
 
 ## **Task 3**: Drill down to the Trace Explorer
 
-1. You are back at the **History** section of the **Monitor details** page. On the same monitor run, click three-dot icon to open the menu, then select **View Trace Details**.
+1. You are back at the **History** section of the **Monitor details** page. On the same monitor run, click the three-dot icon to open the menu, then select **View Trace Details**.
 
     ![Oracle Cloud console, Monitor details](images/1-11-monitor.png " ")
 

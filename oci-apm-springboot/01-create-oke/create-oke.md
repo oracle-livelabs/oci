@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This workshop uses a Spring Boot based Java microservices as a target application to trace against. In this lab, first, you will use Oracle Cloud console to set up an OCI compartment, second, create an Oracle container engine for Kubernetes (OKE) cluster in your tenancy. In the Lab 3, you will deploy the application to the OKE.
+This workshop uses Spring Boot-based Java microservices as a target application to trace against. In this lab, first, you will use the Oracle Cloud console to set up an OCI compartment, second, create an Oracle container engine for Kubernetes (OKE) cluster in your tenancy. In Lab 3, you will deploy the application to the OKE.
 
 Estimated time: 5 minutes
 
@@ -13,7 +13,7 @@ Estimated time: 5 minutes
 
 ### Prerequisites
 
-* This lab requires an [Oracle Cloud account](https://www.oracle.com/cloud/free/). You may use your own cloud account, or a Free tier account, a cloud account that you obtained through a trial.
+* This lab requires an [Oracle Cloud account](https://www.oracle.com/cloud/free/). You may use your cloud account, or a Free tier account, a cloud account that you obtained through a trial.
 
 
 ## **Task 1**: Create an OCI compartment
@@ -32,7 +32,7 @@ Estimated time: 5 minutes
 
 ## **Task 2**: Create an OKE
 
-1. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, select **Developer Services** > **Kubernetes Clusters (OKE)**.
+1. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, and select **Developer Services** > **Kubernetes Clusters (OKE)**.
 
    ![Oracle Cloud console, Navigation Menu](images/1-1-menu.png " ")
 
@@ -57,7 +57,7 @@ Estimated time: 5 minutes
 
    ![Oracle Cloud console, Create cluster](images/1-7-OKE.png " ")
 
-7.  This will start to create a cluster, and takes 7 to 10 minutes to complete. While waiting for the creation of the cluster, you can proceed to the next lab to create an APM domain. In the Lab 3, we will resume the steps to build the application.
+7.  This will start to create a cluster, and takes 7 to 10 minutes to complete. While waiting for the creation of the cluster, you can proceed to the next lab to create an APM domain. In Lab 3, we will resume the steps to build the application.
 
    ![Oracle Cloud console, Create cluster](images/1-8-OKE.png " ")
 

@@ -10,7 +10,7 @@ Estimated time: 15 minutes
 
 * Create a file system in the Oracle Cloud
 *	Create security rules in the network
-*	Create a YAML file, which defines Storage Class, Persistent Volume and Persistent Volume Claim
+*	Create a YAML file, which defines Storage Class, Persistent Volume, and Persistent Volume Claim
 *	Mount the volume to the Kubernetes cluster by applying the YAML, which recreates the Kubernetes pods with the new storage configuration
 
 ### Prerequisites
@@ -47,7 +47,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, file systems](images/3-1-4-filesystem.png " ")
 
-7. Scrolling down the **Create File System** page, and find the **Export Information** section. Verify that the **Export Path** is set to **/apmlab-fss**. This is where the file system will be mounted. You will provision the APM Java agent at this location. In the **Mount Target Information** section, click **Edit Details** to expand the section.
+7. Scroll down the **Create File System** page and find the **Export Information** section. Verify that the **Export Path** is set to **/apmlab-fss**. This is where the file system will be mounted. You will provision the APM Java agent at this location. In the **Mount Target Information** section, click **Edit Details** to expand the section.
 
    ![Oracle Cloud console, file systems](images/3-1-4-1-filesystem.png " ")
 
@@ -55,7 +55,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, file systems](images/3-1-5-filesystem.png " ")
 
-9. In the Mount Target Information section, ensure that the **Create New Mount Target** is selected. Then locate the **Create in Compartment** field, ensure the **apmworkshop** compartment is selected.
+9. In the Mount Target Information section, ensure that the **Create New Mount Target** is selected. Then locate the **Create in Compartment** field, and ensure the **apmworkshop** compartment is selected.
    ![Oracle Cloud console, file systems](images/3-1-5-1-filesystem.png " ")
 10. Leave the other fields by default and click **Create**.
 
@@ -65,7 +65,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, file systems](images/3-1-8-filesystem.png " ")
 
-12.	Click **Copy** next to the **OCID**. Save the value in a text file on your computer. Also, take a note of the **IP Address** as you will need these values in the next steps.
+12.	Click **Copy** next to the **OCID**. Save the value in a text file on your computer. Also, take note of the **IP Address** as you will need these values in the next steps.
 
    ![Oracle Cloud console, file systems](images/3-1-9-filesystem.png " ")
 
@@ -80,11 +80,11 @@ Estimated time: 15 minutes
    ![Oracle Cloud console, Security Rules](images/3-2-2-securityrules.png " ")
 
 
-3.	In the **Subnet Details page**, scroll down and find **Security Lists** section, then click the link to the security list.
+3.	In the **Subnet Details page**, scroll down and find the **Security Lists** section, then click the link to the security list.
 
    ![Oracle Cloud console, Security Rules](images/3-2-4-securityrules.png " ")
 
-4.	Click **Add Ingress Rules** button
+4.	Click the **Add Ingress Rules** button
 
    ![Oracle Cloud console, Security Rules](images/3-2-5-securityrules.png " ")
 
@@ -100,9 +100,9 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, Security Rules](images/3-2-6-securityrules.png " ")
 
-6.	Click **+ Another Ingress Rule** button and create an additional rule for **UDP**, with the destination port range **111,2048**. Use the same values with the rule created above for the rest of the fields.  
+6.	Click the **+ Another Ingress Rule** button and create an additional rule for **UDP**, with the destination port range **111,2048**. Use the same values with the rule created above for the rest of the fields.  
 
-    Click **Add Ingress Rules** button which creates 4 ingress rules in the security list.
+    Click the **Add Ingress Rules** button which creates 4 ingress rules in the security list.
 
    ![Oracle Cloud console, Security Rules](images/3-2-7-securityrules.png " ")
 
@@ -110,11 +110,11 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, Security Rules](images/3-2-8-securityrules.png " ")
 
-8.	Click **Egress Rules**, which is located at the left side of the screen.
+8.	Click **Egress Rules**, which is located on the left side of the screen.
 
    ![Oracle Cloud console, Security Rules](images/3-2-9-securityrules.png " ")
 
-9.	Click **Add Egress Rules** button.
+9.	Click the **Add Egress Rules** button.
 
    ![Oracle Cloud console, Security Rules](images/3-2-10-securityrules.png " ")
 
@@ -130,11 +130,11 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, Security Rules](images/3-2-11-securityrules.png " ")
 
-11.	Click **+ Another Egress Rule** button and create an additional rule for **UDP**, with the destination port **111**. Use the same values with the rule created above for the rest of the fields.<br><br> Click **Add Egress Rules** button which creates 3 egress rules in the security list.
+11.	Click the **+ Another Egress Rule** button and create an additional rule for **UDP**, with the destination port **111**. Use the same values with the rule created above for the rest of the fields.<br><br> Click **Add Egress Rules** button which creates 3 egress rules in the security list.
 
    ![Oracle Cloud console, Security Rules](images/3-2-11-2-securityrules.png " ")
 
-12.	After the configuration, your **Egress Rules** has 3 additional security rules as in the image below.
+12.	After the configuration, your **Egress Rules** have 3 additional security rules as in the image below.
 
    ![Oracle Cloud console, Security Rules](images/3-2-12-securityrules.png " ")
 
@@ -143,14 +143,14 @@ Estimated time: 15 minutes
 1. Click the **>..**  icon from the top right corner in the Oracle Cloud console menu bar, to start a Cloud Shell environment which will appear at the bottom of your page.
    ![Oracle Cloud console, Menu](images/3-3-1-menu.png " ")
 
-    >	**Note:** If the Cloud Shell is already running but the window is minimized, you can restore the window by clicking the **Restore** icon at the toolbar.
+    >	**Note:** If the Cloud Shell is already running but the window is minimized, you can restore the window by clicking the **Restore** icon on the toolbar.
       ![Oracle Cloud console, Menu](images/3-3-2-menu.png " ")
 
-2.  If the previous Cloud Shell session is expired, run the oci ce (Container Engine) command that you saved in the Lab 3, Task 1, step 5.
+2.  If the previous Cloud Shell session is expired, run the oci ce (Container Engine) command that you saved in Lab 3, Task 1, step 5.
 
    ![Oracle Cloud console, Cloud Shell](images/3-3-2-cloudshell.png " ")
 
-3.	Use any text editor (such as vi editor tool) to open the **apmlab-fss.yaml** file for editing.
+3.	Use any text editor (such as the vi editor tool) to open the **apmlab-fss.yaml** file for editing.
 
     ``` bash
     <copy>
@@ -158,9 +158,9 @@ Estimated time: 15 minutes
     </copy>
     ```
 
-    >**Note:** If you are using the vi editor, type ***i*** to enter Insert mode, and make the text editable. Use allow keys to navigate the text and make changes to where you set the cursor. To save a file, press Esc key, then type ***:wq*** to write and quit the file. If you do not wish a change, press Esc then type ***:q!*** to discard your changes. Please refer to the editor references for more usages.
+    >**Note:** If you are using the vi editor, type ***i*** to enter Insert mode, and make the text editable. Use allow keys to navigate the text and make changes to where you set the cursor. To save a file, press the Esc key, then type ***:wq*** to write and quit the file. If you do not wish a change, press Esc then type ***:q!*** to discard your changes. Please refer to the editor's references for more usage.
 
-4. Review the file contents that create Kubernetes objects (StorageClass, PersistentVolume, PersistentVolumeClaim) in your OKE. Replace the **mntTargetID** and **server IP** with the values copied in the Lab 3, Task 1, step 11 in this Workshop. Save the change and close the file.
+4. Review the file contents that create Kubernetes objects (StorageClass, PersistentVolume, PersistentVolumeClaim) in your OKE. Replace the **mntTargetID** and **server IP** with the values copied in Lab 3, Task 1, step 11 in this Workshop. Save the change and close the file.
 
         apiVersion: storage.k8s.io/v1
         kind: StorageClass
@@ -200,7 +200,7 @@ Estimated time: 15 minutes
               storage: 10Gi
           volumeName: apmlab-fsspv
 
-     >**Note:** Refer to the screenshot image below to see how it should look like after the file is modified. Verify that the Kubernetes objects, such as StorageClass, PersistentVolume and PersistentVolumeClass are configured in the YAML file.
+     >**Note:** Refer to the screenshot image below to see what it should look like after the file is modified. Verify that the Kubernetes objects, such as StorageClass, PersistentVolume, and PersistentVolumeClass are configured in the YAML file.
        	![yaml](images/3-3-2-yaml.png " ")
 
 ## **Task 4**: Apply changes to the container
@@ -231,7 +231,7 @@ Estimated time: 15 minutes
 
 2. Scroll down the file. You will see there are two statefulsets, **wstore-front** and **wstore-back**, defined in the YAML file.
 
-3. Within each statefulset, find a line which defines the container port: "**- containerPort: 8080**" (line 51 and line 75).
+3. Within each statefulset, find a line that defines the container port: "**- containerPort: 8080**" (line 51 and line 75).
 
    ![Oracle Cloud console, Cloud Shell](images/3-3-3-1-cloudshell.png " ")
 
@@ -316,7 +316,7 @@ Estimated time: 15 minutes
     ![Oracle Cloud console, Cloud Shell](images/3-3-7-cloudshell.png " ")
 
 
-7. ***Troubleshooting:*** If the pods do not come back with the running state in a minute or two, review the configuration in the file to make sure they have the right indentation. For learning purpose, we have preconfigured the volume mapping in the **wstore-add-storage.yaml** file. Run the following command to view how it looks like after the successful file editing.
+7. ***Troubleshooting:*** If the pods do not come back with the running state in a minute or two, review the configuration in the file to make sure they have the right indentation. For learning purposes, we have preconfigured the volume mapping in the **wstore-add-storage.yaml** file. Run the following command to view what it looks like after the successful file editing.
 
     ``` bash
     <copy>
@@ -325,7 +325,7 @@ Estimated time: 15 minutes
     ```
 
     > If the problem persists, optionally, you can run the preconfigured YAML file to regenerate the file with the volume mapping.
-     - First run the following command to delete the failing configurations:  
+     - First, run the following command to delete the failing configurations:  
         kubectl delete -f ~/sb-hol/wstore.yaml  
      - Then run the following to apply the preconfigured settings:    
         kubectl apply -f ~/sb-hol/wstore-add-storage.yaml --validate=false
@@ -340,7 +340,7 @@ Estimated time: 15 minutes
     </copy>
     ```
 
-    Make sure that you see ***apmlab-fss*** directory that is the file system mounted to this location.
+    Make sure that you see the ***apmlab-fss*** directory that is the file system mounted to this location.
 
     ![Oracle Cloud console, Cloud Shell](images/3-3-8-cloudshell.png " ")
 

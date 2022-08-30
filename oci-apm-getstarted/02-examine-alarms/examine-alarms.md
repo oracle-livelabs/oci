@@ -2,34 +2,34 @@
 
 ## Introduction
 
-In this lab, you will use the APM Home page to identify a critical APM alert, narrow down to the Alert Details page to examine the alert details.
+In this lab, you will use the APM Home page to identify a critical APM alert and narrow it down to the Alert Details page to examine the alert details.
 
 Estimated time: 5 minutes
 
 ### Objectives
 
-* View critical alarms in APM Home page
-* Examine alarm details in the Alarm Details page
+* View critical alarms on the APM Home page
+* Examine alarm details on the Alarm Details page
 
 ### Prerequisites
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: View critical alarms in APM Home page
+## **Task 1**: View critical alarms on the APM Home page
 
-1. At the top left side of the screen, locate **Alarms** widget. You may see 2 or 3 alarms currently being fired. Click the link to the alarm **WineStore-E2E-ExecTime**.
+1. At the top left side of the screen, locate the **Alarms** widget. You may see 2 or 3 alarms currently being fired. Click the link to the alarm **WineStore-E2E-ExecTime**.
 
 	![Oracle Cloud, APM Home](images/1-0-home.png " ")
 
     > ***Note:*** It is possible that this alarm will not be active at the time you are looking at this, you can see the **WineStore-ExecTime-warning** alarm instead.
 
-## **Task 2**: Examine alarm details in the Alarm Details page
+## **Task 2**: Examine alarm details on the Alarm Details page
 
 1. **Alarm Definitions** page opens. This page shows details of the selected alarm. For example, if you select the **WineStore-E2E-ExecTime**, you can view the following information.
 
-     - The alarm is triggered for the WineStore-E2E monitor when execution time is longer than 12 seconds.
+     - The alarm is triggered for the WineStore-E2E monitor when the execution time is longer than 12 seconds.
      - Severity is critical.
-     - Alarm details, e.g., The metric is  **MonitorExecutionTime**, and from the namespace, you can see this is a **synthetic** metric. The statistics used is **percentile(.75)**.  Interval between the monitor run is 5 minutes, one notification is processed, which you can click to see the details.
+     - Alarm details, e.g., The metric is  **MonitorExecutionTime**, and from the namespace, you can see this is a **synthetic** metric. The statistics used are **percentile(.75)**.  Interval between the monitor run is 5 minutes, and one notification is processed, which you can click to see the details.
 
 	![Oracle Cloud, Alarm Definitions page](images/1-1-alarmdef.png " ")
 2. Next, let’s examine the metric data associated with this alarm.

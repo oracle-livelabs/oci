@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will use a username provided and login to the workshop, then access an APM page in the Oracle Cloud console.
+In this lab, you will use a username provided and log in to the workshop, then access an APM page in the Oracle Cloud console.
 
 Estimated time: 5 minutes
 
@@ -17,7 +17,7 @@ Estimated time: 5 minutes
 
 ## **Task 1**: Login to the workshop tenancy
 
-1. TBD: ***Update once we know how user can login to EMDEMO tenancy using the green button.***
+1. ***Update once we know how a user can log in to EMDEMO tenancy using the green button.***
 
 ## **Task 2**: Access APM home dashboard
 
@@ -29,10 +29,11 @@ Estimated time: 5 minutes
 
    ![Oracle Cloud console, Navigation Menu](images/2-1-console.png " ")
 
-2. 1. In the APM Home page, select the followings from the pulldown menus:
+2. 1. On the APM Home page, select the following from the pulldown menus:
  	- Compartment : **root/eStore/WineStore**
 	- APM Domain : **Prod**
 	- Time : Last **24 Hours**
+  - Region: **Ashburn**
 
    ![Oracle Cloud console, APM Home page](images/2-2-home.png " ")
 Make sure the data is loaded onto the charts in the Home dashboard.
