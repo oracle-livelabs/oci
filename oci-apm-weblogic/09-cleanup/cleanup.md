@@ -14,7 +14,7 @@ Estimated time: 10 minutes
 
 * Completion of preceding labs in this workshop.
 
-## **Task 1**: Clean Up the application setup
+## Task1: Clean Up the application setup
 
 To delete the workshop setup from your tenancy, follow the steps below.
 
@@ -47,7 +47,7 @@ To delete the workshop setup from your tenancy, follow the steps below.
 
 
 
-## **Task 2**: Remove the Target Mount and the File System
+## Task2: Remove the Target Mount and the File System
 
 1. From the navigation menu in the Oracle Cloud console, select **Storage** > **Mount Target**.
    Then click the link to the MountTarget configured in the workshop.
@@ -74,7 +74,7 @@ To delete the workshop setup from your tenancy, follow the steps below.
 
     ![Oracle Cloud, Cloud console](images/4-7-cleanup.png " ")    
 
-## **Task 3**: Remove the container
+## Task3: Remove the container
 
 1. From the navigation menu in the Oracle Cloud console, select **Developer Services** > **Kubernetes Container(OKE)**. Then click the link to the Cluster configured in the workshop.
 
@@ -88,7 +88,7 @@ To delete the workshop setup from your tenancy, follow the steps below.
 
     ![Oracle Cloud, Cloud console](images/4-10-cleanup.png " ")  
 
-## **Task 4**: Remove the VCN
+## Task4: Remove the VCN
 
 1. From the navigation menu in the Oracle Cloud console, select **Networking** > **Virtual Cloud Networks**. Then click the link to the VCN configured in the workshop.
 
@@ -109,7 +109,7 @@ To delete the workshop setup from your tenancy, follow the steps below.
 3. Click the **Terminate All** button when activated. Termination of the resources begins. Once the message **Virtual Cloud Network termination complete** shows, click **Close**.
     ![Oracle Cloud, Cloud console](images/4-15-cleanup.png " ")    
 
-## **Task 5**: Remove the workshop directory
+## Task5: Remove the workshop directory
 
 1. Open the Oracle Cloud shell, and run the following commands to remove the files and the workshop directory.
 

@@ -15,7 +15,7 @@ Estimated time: 10 minutes
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: Verify OKE
+## Task1: Verify OKE
 
 1. Go back to the Kubernetes cluster page where you left Lab 1, and check the status of the cluster. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, and select **Developer Services** > **Kubernetes Clusters (OKE)**.
 
@@ -29,7 +29,7 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Cluster details](images/1-9-OKE.png " ")
 
-## **Task 2**: Access the OKE in the Oracle Cloud shell
+## Task2: Access the OKE in the Oracle Cloud shell
 
 
 1. Click **Access Cluster** on the cluster details page.
@@ -54,7 +54,7 @@ Estimated time: 10 minutes
 
   >**Note:** Save the command to a text file on your laptop, and execute it whenever you start a new Cloud Shell session, while working in the labs in this workshop.
 
-## **Task 3**: Download configuration files
+## Task3: Download configuration files
 
 1. Download the zip file to the home directory in the Cloud Shell.
 
@@ -75,7 +75,7 @@ Estimated time: 10 minutes
 
   ![Oracle Cloud console, Cloud Shell](images/3-2-cloudshell.png " ")
 
-## **Task 4**: Set up the WebLogic Domain and a demo application on the OKE
+## Task4: Set up the WebLogic Domain and a demo application on the OKE
 
 1. Execute the following command from the Cloud Shell.
 
@@ -137,7 +137,7 @@ Estimated time: 10 minutes
     ```
 
     ![Oracle Cloud console, Cloud Shell](images/4-2-3-cloudshell.png " ")
-    
+
 
 5. Within the same command output, locate the LoadBalancer service. Note down the External-IP.
 

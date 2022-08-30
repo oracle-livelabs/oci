@@ -18,7 +18,7 @@ Estimated time: 10 minutes
 * Completion of preceding labs in this workshop.
 
 
-## **Task 1**:  Open APM Trace Explorer in the Oracle Cloud console
+## Task1:  Open APM Trace Explorer in the Oracle Cloud console
 
 
 1. If the Oracle Cloud shell session is expired, run the oci ce (Container Engine) command that you saved in Lab 3, Task 1, step 5.
@@ -50,15 +50,15 @@ Estimated time: 10 minutes
 
     ![Oracle Cloud, Trace Explorer](images/8-1-4-menu.png " ")
 
-    > ***Note :*** Browser traces does not have values as the configuration was applied to the server traces.
+    > ***Note :*** Browser traces do not have values as the configuration was applied to the server traces.
 
-## **Task 2**:  Verify spans and dimensions on the Trace Details page
+## Task2:  Verify spans and dimensions on the Trace Details page
 
 1.	In the Traces pane, click the link to the trace with the Operation name **opdemo/index.html** from the table.
 
     ![Oracle Cloud, Trace Explorer](images/8-2-1-menu.png " ")
 
-2.	In the **Trace Details** page, click the triangle icon next to **Topology**.
+2.	On the **Trace Details** page, click the triangle icon next to **Topology**.
 
     ![Oracle Cloud, Trace Explorer](images/8-2-2-menu.png " ")
 

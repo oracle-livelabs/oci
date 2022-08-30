@@ -1,8 +1,8 @@
-# Create an APM Domain and obtain Data Upload Endpoint and Private Data Key
+# Create an APM domain and obtain data upload endpoint and private data key
 
 ## Introduction
 
-In this lab, you will use Oracle Cloud console to set up an OCI compartment and create an APM Domain. You will acquire a Data Upload Endpoint and a Private Data Key, which are needed to configure the APM Tracer on the application.
+In this lab, you will use the Oracle Cloud console to set up an OCI compartment and create an APM Domain. You will acquire a Data Upload Endpoint and a Private Data Key, which are needed to configure the APM Tracer on the application.
 
 Estimated time: 10 minutes
 
@@ -15,8 +15,8 @@ Estimated time: 10 minutes
 
 ### Prerequisites
 
-* This lab requires an [Oracle Cloud account](https://www.oracle.com/cloud/free/). You may use your own cloud account, or a Free Tier account, a cloud account that you obtained through a trial.
-* To create APM domain, you will need an Oracle Cloud Account Administrator role or manage apm-domains permission in the target compartment. For more details, refer to the OCI Documentation, [Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html).
+* This lab requires an [Oracle Cloud account](https://www.oracle.com/cloud/free/). You may use your cloud account, or a Free Tier account, a cloud account that you obtained through a trial.
+* To create an APM domain, you will need an Oracle Cloud Account Administrator role or manage apm-domains permission in the target compartment. For more details, refer to the OCI Documentation, [Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html).
 
 ## Task 1: Create an OCI compartment
 
@@ -37,18 +37,18 @@ Estimated time: 10 minutes
 	![Oracle Cloud console Menu](images/2-1-domain.png " ")
 2.	Click **Create APM Domain**.
   ![Oracle Cloud console, Create APM Domain](images/2-2-domain.png " ")
-3.	Name your APM domain and select the compartment you created. Add a check to the **“Create as Always Free Domain”**, then click **Create**.
+3.	Name your APM domain and select the compartment you created. Add a check to the **Create as Always Free Domain**, then click **Create**.
   ![Oracle Cloud console, Create APM Domain](images/2-3-domain.png " ")
 
-4.	This may take few minutes. Press the refresh button periodically to check the status.
+4.	This may take a few minutes. Press the refresh button periodically to check the status.
   ![Oracle Cloud console, Create APM Domain](images/2-4-domain.png " ")
 5.	Once the job is completed, the status turns to Active with a green icon.
   ![Oracle Cloud console, Create APM Domain](images/2-5-domain.png " ")
-  For more details how to create an APM Domain, refer to the OCI documentation, [Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html).
+  For more details on how to create an APM Domain, refer to the OCI documentation, [Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html).
 
-## Task 3: Obtain Data Upload Endpoint and Private Data Key
+## Task 3: Obtain data upload endpoint and private data key
 
-To upload tracing data to an APM domain, Data Upload Endpoint and Private Data Key must be configured in the application’s configuration files. Next you are going to obtain the values for them and then enter them into the Oracle Cloud console.
+To upload tracing data to an APM domain, Data Upload Endpoint and Private Data Key must be configured in the application’s configuration files. Next, you are going to obtain the values for them and then enter them into the Oracle Cloud console.
 
 1.	Click the link to the APM domain.
   ![Oracle Cloud console, APM Domain](images/3-1-domain.png " ")
@@ -61,12 +61,11 @@ To upload tracing data to an APM domain, Data Upload Endpoint and Private Data K
 For more details on Data Upload Endpoint and Data keys, refer to the OCI documentation, [Obtaining Data Upload Endpoint and Data keys](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/obtain-data-upload-endpoint-and-data-keys.html).
 
 
-You may now [proceed to the next lab](#next).
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Steven Lemme, Senior Principal Product Manager,<br>
-David Le Roy, Director, Product Management,<br>
+- **Contributors** - Steven Lemme, Senior Principal Product Manager,	
 Avi Huber, Senior Director, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, December 2021
+* **Last Updated By/Date** - Yutaka Takatsu, August 2022

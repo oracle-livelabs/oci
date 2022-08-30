@@ -17,13 +17,13 @@ Estimated time: 10 minutes
 * This lab requires an [Oracle Cloud account](https://www.oracle.com/cloud/free/). You may use your own cloud account, or a Free tier account, a cloud account that you obtained through a trial.
 * To create an APM domain, you will need an Oracle Cloud Account Administrator role or manage apm-domains permission in the target compartment. For more details, refer to the OCI Documentation, [Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html).
 
-## **Task 1**: Create an APM domain
+## Task1: Create an APM domain
 
 1.	From the OCI menu, select **Observability & Management**, then **Administration**.
 	![Oracle Cloud console Menu](images/2-1-domain.png " ")
 2.	Click **Create APM Domain**.
   ![Oracle Cloud console, Create APM Domain](images/2-2-domain.png " ")
-3.	Name your APM domain and select the compartment you created. Add a check to the **“Create as Always Free Domain”**, then click **Create**.
+3.	Name your APM domain and select the compartment you created. Add a check to the **Create as Always Free Domain**, then click **Create**.
   ![Oracle Cloud console, Create APM Domain](images/2-3-domain.png " ")
 
 4. Select the **apmworkshop** compartment from the pulldown menu.
@@ -35,7 +35,7 @@ Estimated time: 10 minutes
   ![Oracle Cloud console, Create APM Domain](images/2-5-domain.png " ")
   For more details on how to create an APM Domain, refer to the OCI documentation, [Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html).
 
-## **Task 2**: Obtain Data Upload Endpoint and Private and Public Data Keys
+## Task2: Obtain Data Upload Endpoint and Private and Public Data Keys
 
 To upload tracing data to an APM domain, Data Upload Endpoint and both Private and Public Data Keys must be configured in the application’s configuration files. Next, you are going to obtain the values for them and then enter them into the Oracle Cloud console.
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will modify the original service to call the second service, which you created in the Lab 4. Then verify the trace that is distributed among the services, in the APM Trace Explorer.
+In this lab, you will modify the original service to call the second service, which you created in Lab 4. Then verify the trace that is distributed among the services, in the APM Trace Explorer.
 
 Estimated time: 15 minutes
 
@@ -11,14 +11,14 @@ Estimated time: 15 minutes
 * Implement Jersey client in the Maven project
 *	Create and start a span that invokes the second service
 *	Rebuild the application
-*	Use APM Trace Explorer to verify the trace having multiple services
+*	Use APM Trace Explorer to verify the trace has multiple services
 
 
 ### Prerequisites
 
-* This tutorial requires the completion of the Lab 1,2,3 and 4.
+* This tutorial requires the completion of Labs 1,2,3 and 4.
 
-## Task 1: Modify pom.xml file in the Helidon application
+## Task 1: Modify the pom.xml file in the Helidon application
 
 1. Launch OCI Cloud Shell if not opened already.
 
@@ -29,7 +29,7 @@ Estimated time: 15 minutes
 	</copy>
 	```
 
-	if you completed the Lab1 in this workshop, but the Java version returned from the command is not 11.0.7, you may need to reset the JAVA_HOME environment variable. Run the following commands.
+	if you completed Lab1 in this workshop, but the Java version returned from the command is not 11.0.7, you may need to reset the JAVA_HOME environment variable. Run the following commands.
 
 	``` bash
 	<copy>
@@ -38,18 +38,18 @@ Estimated time: 15 minutes
 	</copy>
 	```
 
-## Task 2: Modify pom.xml
+## Task 2:Modify pom.xml
 
-1.	Change to ***helidon-quickstart-se*** directory, open ***pom.xml*** in an editor.
+1.	Change to **helidon-quickstart-se** directory, open **pom.xml** in an editor.
 
 	``` bash
 	<copy>
 	vi ~/helidon-quickstart-se/pom.xml
 	</copy>
 	```
-   	>NOTE: For how to use the vi editor, refer to the Lab3, Task1, step 3
+   	>**Note:** For how to use the vi editor, refer to the Lab3, Task1, step 3
 
-2.	At the end of the dependencies section, find a line ***&lt;/dependencies&gt;*** and add the followings before that line:
+2.	At the end of the dependencies section, find a line **&lt;/dependencies&gt;** and add the following before that line:
 
 		<dependency>
 		    <groupId>io.helidon.security.integration</groupId>
@@ -71,14 +71,14 @@ Estimated time: 15 minutes
 
 ## Task 3: Replace GreetService Class
 
-1.	Change to ***quickstart/se*** directory where the ***GreetService.java*** file resides.
+1.	Change to **quickstart/se** directory where the **GreetService.java** file resides.
 
 	``` bash
 	<copy>
 	cd ~/helidon-quickstart-se/src/main/java/io/helidon/examples/quickstart/se
 	</copy>
 	```
-2.	Rename the ***GreetService.java*** to ***GreetService.javaorg***.
+2.	Rename the **GreetService.java** to **GreetService.javaorg**.
 
 	``` bash
    <copy>
@@ -86,19 +86,19 @@ Estimated time: 15 minutes
    </copy>
    ```
 
-3.  Create a new file and name it ***GreetService.java***.
+3.  Create a new file and name it **GreetService.java**.
 	``` bash
   <copy>
   touch GreetService.java
   </copy>
   ```
-4. Open the ***GreetService.java*** file you just created.
+4. Open the **GreetService.java** file you just created.
 	``` bash
   <copy>
   vi GreetService.java
   </copy>
   ```
-5. Copy the code below and and paste it to the file.
+5. Copy the code below and paste it into the file.
 	``` bash
 	<copy>
 
@@ -217,7 +217,7 @@ Estimated time: 15 minutes
 	export PATH="$JAVA_HOME/bin:$PATH"
 	</copy>
 	```
-2.	Kill the existing session using the port 8080.
+2.	Kill the existing session using port 8080.
 
 	``` bash
 	<copy>
@@ -225,7 +225,7 @@ Estimated time: 15 minutes
 	</copy>
 	```
 
-2.	From the ***helidon-quickstart-se*** directory, run mvn package, skipping unit tests.
+2.	From the **helidon-quickstart-se** directory, run the mvn package, skipping unit tests.
 
 	``` bash
 	<copy>
@@ -250,25 +250,24 @@ Estimated time: 15 minutes
 
 ## Task 5: View the trace in the APM Trace Explorer
 
-1.	From the OCI menu, select **Observability & Management**, then **Trace Explorer**.  Click a link of helidon-http service.
+1.	From the OCI menu, select **Observability & Management**, then **Trace Explorer**.  Click a link to the helidon-http service.
 
 
 	![Cloud Shell](images/4-1-trace_explorer.png " ")
 
-2. In the **Trace Details** page, verify that the trace includes 7 spans from two services. Examine the topology to understand how the two services are connected. Review the flow in the **Spans** view and notice how the spans are distributed.
+2. On the **Trace Details** page, verify that the trace includes 7 spans from two services. Examine the topology to understand how the two services are connected. Review the flow in the **Spans** view and notice how the spans are distributed.
 
 	![Cloud Shell](images/4-2-trace_explorer.png " ")
 
 
-This is the end of the workshop. You have learnt how to add the APM tracers to Helidon based microservices by editing the configuring files such as pom.xml and application.yaml, and how to use APM Trace Explorer to trace the workflow within a service and across multiple services. For more information on APM, refer to the OCI documentation, **[Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)**.
+This is the end of the workshop. You have learned how to add the APM tracers to Helidon-based microservices by editing the configuring files such as pom.xml and application.yaml, and how to use APM Trace Explorer to trace the workflow within a service and across multiple services. For more information on APM, refer to the OCI documentation, **[Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)**.
 <br>
 
-You have completed the tutorials in this Workshop. You may now [proceed to the Need Help section ](#next) to review the common problems users face in the LiveLab, or exit the Workshop.
+You have completed the tutorials in this Workshop. You may now [proceed to the Need Help section ](#next) to review the common problems users face in the LiveLab or exit the Workshop.
 
 ## Acknowledgements
 
 - **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Steven Lemme, Senior Principal Product Manager,<br>
-David Le Roy, Director, Product Management,<br>
+- **Contributors** - Steven Lemme, Senior Principal Product Manager,	
 Avi Huber, Senior Director, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, December 2021
+- **Last Updated By/Date** - Yutaka Takatsu, August 2022

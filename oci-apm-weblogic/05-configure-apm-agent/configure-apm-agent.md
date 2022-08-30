@@ -18,7 +18,7 @@ Estimated time: 10 minutes
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: Obtain APM Java Agent download link
+## Task1: Obtain APM Java Agent download link
 
 1.	Open navigation menu from the Oracle Cloud console, select **Observability & Management** > **Administration**.
 
@@ -37,7 +37,7 @@ Estimated time: 10 minutes
    ![Oracle Cloud console, APM Domains](images/4-1-4-cloudshell.png " ")
 
 
-## **Task 2**: Download the APM Java Agent to the Cloud shell
+## Task2: Download the APM Java Agent to the Cloud shell
 
 1.  Type the following command to the Cloud Shell.
 
@@ -63,7 +63,7 @@ Estimated time: 10 minutes
     ```
    ![Oracle Cloud console, Cloud Shell](images/4-1-7-cloudshell.png " ")
 
-## **Task 3**: Copy the Java Agent installer to the file system
+## Task3: Copy the Java Agent installer to the file system
 
 1.	Run the command below to copy the Java Agent installer file to the file system. Ensure to ***replace*** the **apm-agent-version** with that of the APM Java Agent you have, before the command execution.
 
@@ -89,7 +89,7 @@ Estimated time: 10 minutes
 
     >**Note:** The APM version may be different from what is shown in the example.
 
-## **Task 4**: Provision of the APM Java Agent
+## Task4: Provision of the APM Java Agent
 
 
 1.	Execute the command below to provision the APM Java agent. ***Replace*** the **APM Domain Private key** and **APM Domain Endpoint**, with the values saved in Lab2, Task2. Please also ***change*** the **apm-agent-version** in the file name to the version of the agent you have.
@@ -117,7 +117,7 @@ Estimated time: 10 minutes
 
 
 
-## **Task 5**: Disable the maintenance spans
+## Task5: Disable the maintenance spans
 
 In this task, you will add exclusions to the data capture in the APM Agent, for the JAXRS server probe that generates static spans in this particular WebLogic setup. This is an optional task if you are monitoring the real-life environment, but for the lab purpose, we would like to suppress the spans generated from the server maintenance, so that you can focus on the spans related to the browser navigations.
 
@@ -131,7 +131,7 @@ Because there is no editing tool inside the container, you will copy an APM agen
     </copy>
     ```   
 
-    >***NOTE***: The file path includes the APM Java Agent version. Change the directory name to the Agent version you have.  
+    >**Note:** The file path includes the APM Java Agent version. Change the directory name to the Agent version you have.  
     E.g., kubectl cp sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.6.2363**/ProbeConfig.acml ~/ProbeConfig.acml
 
     run the "ls" command from the Home directory and confirm the file was transferred.  
@@ -168,11 +168,11 @@ Because there is no editing tool inside the container, you will copy an APM agen
     </copy>
     ```
 
-    > ***NOTE***: kubectl cp  ~/ProbeConfig.acml sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.6.2363**/ProbeConfig.acml
+    >**Note:** kubectl cp  ~/ProbeConfig.acml sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.6.2363**/ProbeConfig.acml
 
    ![Oracle Cloud console, Cloud Shell ](images/4-5-3-cloudshell.png " ")
 
-## **Task 6**: Deploy the Java Agent
+## Task6: Deploy the Java Agent
 
 Next, you will deploy the Java Agent by modifying the domain.yaml file to point to the APM Agent jar file bootstrap location.
 

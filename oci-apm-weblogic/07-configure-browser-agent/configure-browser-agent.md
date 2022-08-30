@@ -18,7 +18,7 @@ Estimated time: 5 minutes
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: Configure the Java Agent configuration file to enable the injection
+## Task1: Configure the Java Agent configuration file to enable the injection
 
 1. If the Oracle Cloud shell session is expired, run the oci ce (Container Engine) command that you saved in Lab 3, Task 1, step 5.
 
@@ -31,7 +31,7 @@ Estimated time: 5 minutes
     </copy>
     ```   
 
-    >***NOTE***: The file path includes the APM Java Agent version. Change the directory name to the Agent version you have.  
+    >**Note:** The file path includes the APM Java Agent version. Change the directory name to the Agent version you have.  
     E.g., kubectl cp sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.6.2363**/AgentConfig.properties ~/AgentConfig.properties
 
     run the "ls" command from the Home directory and confirm the file was transferred.  
@@ -74,7 +74,7 @@ Estimated time: 5 minutes
     </copy>
     ```
 
-    > ***NOTE***: kubectl cp  ~/AgentConfig.properties sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.6.2363**/AgentConfig.properties
+    >**Note:** kubectl cp  ~/AgentConfig.properties sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.6.2363**/AgentConfig.properties
 
    ![Oracle Cloud console, Cloud Shell ](images/6-4-cloudshell.png " ")
 
@@ -93,7 +93,7 @@ Estimated time: 5 minutes
 
     ![Oracle Cloud console, Cloud Shell](images/6-6-cloudshell.png " ")
 
-## **Task 2**: Verify the JavaScript in the browser source page
+## Task2: Verify the JavaScript in the browser source page
 
 1.  Type the following command and note down the external IP of the **traefik operator** service.
 

@@ -2,17 +2,17 @@
 
 ## Introduction
 
-In this lab, you will create a second Maven project, where the server listens on port 8081. You will configure APM tracer on this service, with similar steps to the Lab 2 and 3.
+In this lab, you will create a second Maven project, where the server listens on port 8081. You will configure APM tracer on this service, with similar steps to Lab 2 and 3.
 
 Estimated time: 10 minutes
 
 ### Objectives
 
-* Create another Maven project to demonstrate a tracking of the requests that go from one service to another using APM Explorer.
+* Create another Maven project to demonstrate tracking of the requests that go from one service to another using APM Explorer.
 
 ### Prerequisites
 
-* This Lab requires the completion of Lab 1, 2 and 3
+* This Lab requires the completion of Labs 1, 2 and 3
 
 ## Task 1: Build another Maven project
 
@@ -26,7 +26,7 @@ Estimated time: 10 minutes
 	```
 	![Cloud Shell](images/1-1-java.png " ")
 
-	If you completed the Lab1 in a different Cloud Shell session, you will need to reset the JAVA_HOME environment variable, by running run the followings.
+	If you completed Lab1 in a different Cloud Shell session, you will need to reset the JAVA_HOME environment variable, by running run the followings.
 
 	``` bash
 	<copy>
@@ -49,19 +49,19 @@ Estimated time: 10 minutes
 	    -Dpackage=io.helidon.examples.quickstart.se
 	</copy>
 	```
-  The project will be built and create a directory; ***helidon-quickstart-se-2***
+  The project will be built and created in a directory; **helidon-quickstart-se-2**
 
-## Task 2: Modify pom.xml file in the Helidon application
+## Task 2: Modify the pom.xml file in the Helidon application
 
-1.	From the ***helidon-quickstart-se-2*** directory,	open ***pom.xml*** file with an editor tool (e.g., vi tool)
+1.	From the **helidon-quickstart-se-2** directory,	open **pom.xml** file with an editor tool (e.g., vi tool)
 	``` bash
 	<copy>
 	vi ~/helidon-quickstart-se-2/pom.xml
 	</copy>
 	```
-   	>NOTE: For how to use the vi editor, refer to the Lab3, Task1, step 3
+   	>**Note:** For how to use the vi editor, refer to the Lab3, Task1, step 3
 
-3.	Add the following repositories blocks between the ***properties*** and ***dependencies*** sections:
+3.	Add the following repositories blocks between the **properties** and **dependencies** sections:
 
 		<repositories>
 		  <repository>
@@ -71,7 +71,7 @@ Estimated time: 10 minutes
 		  </repository>
 		</repositories>
 	![pom.xml](images/1-2-pomxml.png " ")
-4.	At the end of the dependencies section, find a line ***&lt;/dependencies&gt;*** and add the followings before that line:
+4.	At the end of the dependencies section, find a line **&lt;/dependencies&gt;** and add the following before that line:
 
 		<dependency>
 		    <groupId>io.helidon.tracing</groupId>
@@ -92,13 +92,13 @@ Estimated time: 10 minutes
 
 ## Task 3: Modify application.yaml file
 
-1.	Open application.yaml file with an editor.
+1.	Open the application.yaml file with an editor.
 	``` bash
 	<copy>
 	vi ~/helidon-quickstart-se-2/src/main/resources/application.yaml
 	</copy>
 	```
-2.	Update the application.yaml file as in the below example. Note the port number is ***8081***. Ensure to replace ***&lt;data upload endpoint&gt;*** and ***&lt;private data key&gt;*** with the values collected from the Oracle Cloud console in the earlier steps.
+2.	Update the application.yaml file as in the below example. Note the port number is **8081**. Ensure to replace **&lt;data upload endpoint&gt;** and **&lt;private data key&gt;** with the values collected from the Oracle Cloud console in the earlier steps.
 
 		app:
 		  greeting: "Hello from SE-2"
@@ -124,7 +124,7 @@ Estimated time: 10 minutes
 
 ## Task 4: Modify Main.java file
 
-1.	Open ***Main.java*** file with an editor on your choice.
+1.	Open **Main.java** file with an editor of your choice.
 	``` bash
 	<copy>
 	vi ~/helidon-quickstart-se-2/src/main/java/io/helidon/examples/quickstart/se/Main.java
@@ -139,7 +139,7 @@ Estimated time: 10 minutes
 		 </copy>
 		 ```
 
- b.	In the startServer method, find a line ***.addMediaSupport(JsonpSupport.create())***. Add the following above that line:
+ b.	In the startServer method, find a line **.addMediaSupport(JsonpSupport.create())**. Add the following above that line:
 		 ``` bash
 		 <copy>
 		 .tracer(TracerBuilder.create(config.get("tracing")).build())
@@ -153,7 +153,7 @@ Refer to the sample image below:
 
 ## Task 5: Add custom span to GreetService class
 
-1.	Open ***GreetService.java*** file with an editor
+1.	Open **GreetService.java** file with an editor
 	``` bash
 	<copy>
 	vi ~/helidon-quickstart-se-2/src/main/java/io/helidon/examples/quickstart/se/GreetService.java
@@ -170,7 +170,7 @@ Refer to the sample image below:
 		 ```
 
 	![GreetService.java](images/5-1-greetservice.png " ")
- b. Replace the ***getDefaultMessageHandler*** method with the following:
+ b. Replace the **getDefaultMessageHandler** method with the following:
 		 ``` bash
 		 <copy>
 
@@ -196,7 +196,7 @@ Refer to the sample image below:
 
 ## Task 6: Build and start the application
 
-1.	From the ***helidon-quickstart-se-2*** directory, run MVN package, skipping unit tests.
+1.	From the **helidon-quickstart-se-2** directory, run the MVN package, skipping unit tests.
 
 	``` bash
 	<copy>
@@ -206,7 +206,7 @@ Refer to the sample image below:
 
  	 ![Cloud Shell](images/6-1-mvn.png " ")
 
-	>NOTE: If your build fails with an error, run java -version and make sure it points to the JDK 11. If it does not return openjdk version"11.0.7", go back to the task 1 in this Lab and re-run the export commands to set the environment variable. This can happen when a session is interrupted during the lab exercise. Confirm the java version returns 11.0.7 and re-execute the mvn package command.  
+	>**Note:** If your build fails with an error, run the java -version and make sure it points to JDK 11. If it does not return OpenJDK version"11.0.7", go back to task 1 in this Lab and re-run the export commands to set the environment variable. This can happen when a session is interrupted during the lab exercise. Confirm the java version returns 11.0.7 and re-execute the mvn package command.  
 
   ![Cloud Shell](images/4-1-error-mvn.png " ")
 
@@ -229,17 +229,16 @@ Refer to the sample image below:
 
 ## Task 7: Verify the traces of the second service in APM Trace Explorer
 
-1.	From the OCI menu, select **Observability & Management**, then **Trace Explorer**.  Verify that there is a trace with the service name ***helidon-http2***.
+1.	From the OCI menu, select **Observability & Management**, then **Trace Explorer**.  Verify that there is a trace with the service name **helidon-http2**.
 	![Oracle Cloud console](images/7-1-trace_explorer.png " ")
 
  In the next Lab, you will modify the first service to call the second service.
 
-You may now [proceed to the next lab](#next).
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Steven Lemme, Senior Principal Product Manager,<br>
-David Le Roy, Director, Product Management,<br>
+- **Contributors** - Steven Lemme, Senior Principal Product Manager,	
 Avi Huber, Senior Director, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, December 2021
+* **Last Updated By/Date** - Yutaka Takatsu, August 2022

@@ -1,10 +1,10 @@
-﻿# Introduction
+# Introduction
 
 ## About this Workshop
 
 This workshop walks you through how to:
 
-* Enable OpenTracing for a Java microservice based Helidon SE application using  Oracle Application Performance Monitoring (APM)
+* Enable OpenTracing for a Java microservice-based Helidon SE application using  Oracle Application Performance Monitoring (APM)
 * Trace the workflow within a service and across multiple services
 * Use the Helidon SE application and its build instructions, described in the **[Helidon SE Tracing Guide](https://helidon.io/docs/latest/#/se/guides/06_tracing)**.
 
@@ -14,11 +14,11 @@ Estimated Workshop Time: 60 minutes
 
 The diagram below provides an overview of the OCI APM Service, its features, components, and some of the other OCI services it integrates with.
 
-  ![](images/apm_diagram.png " ")
+  ![APM Architectuure](images/apm_diagram.png " ")
 
-Among other capabilities, OCI APM includes an implementation of a Distributed Tracing system. It collects and processes transaction trace data (spans) from the monitored application and make it available for viewing, dashboarding, exploration, alerts, etc. For more information on APM and Trace Explorer please refer to Application Performance Monitoring > **[Use Trace Explorer](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)** section in the OCI Documentation.
+Among other capabilities, OCI APM includes an implementation of a Distributed Tracing system. It collects and processes transaction trace data (spans) from the monitored application and makes it available for viewing, dashboarding, exploration, alerts, etc. For more information on APM and Trace Explorer please refer to Application Performance Monitoring > **[Use Trace Explorer](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)** section in the OCI Documentation.
 
-In the workshop, you will learn how to add APM tracer to a Maven project, and the specific required configuration for Helidon. You will also learn how to create an APM domain and use Trace Explorer to search and view traces/spans in the APM User Interface.
+In the workshop, you will learn how to add an APM tracer to a Maven project, and the specific required configuration for Helidon. You will also learn how to create an APM domain and use Trace Explorer to search and view traces/spans in the APM User Interface.
 
 
 
@@ -26,7 +26,7 @@ In the workshop, you will learn how to add APM tracer to a Maven project, and th
 
 In this workshop, you will:
 * Create OCI compartment and APM domain
-*	Build and deploy a Java microservice based application using Maven project and Helidon framework
+*	Build and deploy a Java microservice-based application using the Maven project and Helidon framework
 *	Configure APM tracer on the application
 *	Use APM Trace Explorer to view traces, spans, and verify span dimensions
 
@@ -50,12 +50,11 @@ In this workshop, you will:
 
 
 
-You may now [proceed to the next lab](#next).
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
 - **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Steven Lemme, Senior Principal Product Manager,<br>
-David Le Roy, Director, Product Management,<br>
+- **Contributors** - Steven Lemme, Senior Principal Product Manager,    
 Avi Huber, Senior Director, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, December 2021
+- **Last Updated By/Date** - Yutaka Takatsu, August 2022

@@ -1,8 +1,8 @@
-# Setup a Helidon SE Application
+# Set up a Helidon SE application
 
 ## Introduction
 
-In this lab, you will setup a simple Helidon SE application. You will use APM Trace Explorer to monitor the application later in this workshop.
+In this lab, you will set up a simple Helidon SE application. You will use APM Trace Explorer to monitor the application later in this workshop.
 
 Estimated time: 10 minutes
 
@@ -20,7 +20,7 @@ Estimated time: 10 minutes
 * An Oracle Free Tier, Always Free, or a Paid Cloud Account
 
 
-## Task 1: Launch the Cloud Shell and verify Helidon Prerequisites
+## Task 1: Launch the Cloud Shell and verify Helidon prerequisites
 
 1. Launch the Oracle Cloud Shell from the Oracle Cloud Console by selecting the **>..** icon.  <br/>
 
@@ -39,9 +39,9 @@ Estimated time: 10 minutes
 	mvn -version
 	</copy>
 	```
-	If you do not have required version of Java, you can install GraalVM in the Cloud Shell to run Java 11, in the next Task.
+	If you do not have the required version of Java, you can install GraalVM in the Cloud Shell to run Java 11, in the next Task.
 
-  >NOTE: By default, OCI Free comes with Maven 3.5.0, which can be used to complete this lab. If you wish to install a different version of Maven, you can download it from the following URL: [http://maven.apache.org/](http://maven.apache.org/)
+  >**Note:** By default, OCI Free comes with Maven 3.5.0, which can be used to complete this lab. If you wish to install a different version of Maven, you can download it from the following URL: [http://maven.apache.org/](http://maven.apache.org/)
 
 
 ## Task 2: Install Java
@@ -75,7 +75,7 @@ Estimated time: 10 minutes
 	mv graalvm-ce-java11-20.1.0 ~/
 	</copy>
 	```
-3. Set JAVA_HOME environment variable.
+3. Set the JAVA_HOME environment variable.
 	``` bash
 	<copy>
 	export JAVA_HOME=~/graalvm-ce-java11-20.1.0
@@ -158,16 +158,15 @@ Estimated time: 10 minutes
 
 	![Cloud Shell](images/4-1-helidon.png " ")
 
->NOTE: For more information on Helidon prerequisites, application setup details, and test command examples, please see the Helidon Documentation, [Helidon QuickStart guide](https://helidon.io/docs/latest/#/se/guides/02_quickstart).
+>**Note:** For more information on Helidon prerequisites, application setup details, and test command examples, please see the Helidon Documentation, [Helidon QuickStart guide](https://helidon.io/docs/latest/#/se/guides/02_quickstart).
 
 
 
-You may now [proceed to the next lab](#next).
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
 - **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Steven Lemme, Senior Principal Product Manager,<br>
-David Le Roy, Director, Product Management,<br>
+- **Contributors** - Steven Lemme, Senior Principal Product Manager,    
 Avi Huber, Senior Director, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, December 2021
+- **Last Updated By/Date** - Yutaka Takatsu, August 2022
