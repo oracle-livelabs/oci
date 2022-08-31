@@ -1,6 +1,10 @@
 # Train Anomaly Detection Model
 
 ## Introduction
+
+
+***How does anomaly detection work? 
+
 In this session, we will show you how to train an anomaly detection model using the synthetic signal data.
 
 Anomaly Detection is the identification of rare items, events, or observations in data that differ significantly from the expectation. This can be used for several scenarios like asset monitoring, maintenance and prognostic surveillance in industries such as utility, aviation, transportation, and manufacturing.
@@ -50,7 +54,33 @@ In this form,
 
 
 ###Task 2
-Create a DataSet
+Create a Data Asset
 
+The Data Asset is the data utilized for training your Anomaly Detection Model. In a real use-case, the Data Asset should be data that has NO anomalies so that the Anomaly Detection model will be trained on the 'normal' state. 
+
+There are two ways to create a data asset
+
+1. Directly create a new data asset
+
+Under your project, click the *Data Assets* menu on the left. Then click *Create Data Asset*
+
+imageDA1
+
+in the _Create Data Asset_ menu, 
+- Specify the Object Storage Compartment  *********
+- Use *some name* as the Data Asset _Name_
+- Select *Oracle Object Storage* for _Type_
+- Select *Bucket Name* for _Choose a bucket_ 
+- Select *training data name* for _Training Data_
+- Press *Create*
+
+The data asset should now show in the data asset main panel.
+
+This demo only covers data from Object Storage. However, data can be imported other sources such as Oracle Autonomous Transaction Processing (ATP), InfluxDB, and more. 
+
+
+2. Use the Train Model button to craete a new data asset (optional)
+
+Under your _project_, 
 
 ###Task 3
