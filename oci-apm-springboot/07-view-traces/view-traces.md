@@ -18,7 +18,7 @@ Estimated time: 10 minutes
 * Completion of preceding labs in this workshop.
 
 
-## **Task 1**: Verify the Browser Agent instrumentation in the WineCellar app
+## Task 1: Verify the Browser Agent instrumentation in the WineCellar app
 
 
 1. If you are starting a new Oracle Cloud Shell session, run the oci ce (Container Engine) command that you saved in Lab 3, Task 1, step 5.
@@ -34,7 +34,7 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Cloud Shell](images/6-1-1-cloudshell.png " ")
 
-   > **Note:**
+   >**Note:** 
    - The IP may be different from the last time when you accessed the WinCellar app because the pods are regenerated.
    - If the application is not starting up, run the **kubectl get pods** command and check the status. It may take a few minutes to see the pods in the running state.
 
@@ -62,7 +62,7 @@ Estimated time: 10 minutes
    ![Oracle Cloud console, Cloud Shell](images/7-1-4-wstore.png " ")
 
 
-## **Task 2**: Generate workload by navigating to the app
+## Task 2: Generate workload by navigating to the app
 
 
 1.  Click **Login**.
@@ -77,7 +77,7 @@ Estimated time: 10 minutes
 
 3. Then click around the buttons in the pages, as in the example flow shown below.
 
-    > **Note:** Do not worry if you see the "Failed" messages, or if it takes a long time for the pages to respond. Those are expected because the app is designed to fail every once and often for demo purposes.
+    >**Note:** Do not worry if you see the "Failed" messages, or if it takes a long time for the pages to respond. Those are expected because the app is designed to fail every once and often for demo purposes.
 
     Click **Add** on a couple of products then hit **Shopping Cart**. Then Click **Checkout**.
     ![WineCellar Demo App](images/6-1-5-demoapp.png " ")
@@ -85,7 +85,7 @@ Estimated time: 10 minutes
     ![WineCellar Demo App](images/6-1-6-demoapp.png " ")
 
 
-## **Task 3**: Examine traces in APM Trace Explorer
+## Task 3: Examine traces in APM Trace Explorer
 
 1. From the OCI menu, select **Observability & Management** > **Trace Explorer**
 
@@ -145,7 +145,7 @@ Estimated time: 10 minutes
 
   ![Oracle Cloud, Trace Explorer](images/6-2-12-traceexplorer.png " ")
 
-## **Task 4**: Filter traces with dimensions
+## Task 4: Filter traces with dimensions
 
 1. Type '**apdex**' into the search field in the **Fields** section. Then click **ApdexLevel** from the list.
 

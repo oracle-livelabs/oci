@@ -18,7 +18,7 @@ Estimated time: 5 minutes
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: Copy a webpage from the container
+## Task 1: Copy a webpage from the container
 
 1. Run the oci ce (Container Engine) command that you saved in Lab 3, Task 1, step 5.
 2. Execute the following command to copy ***index.html*** from the container to the home directory.
@@ -39,7 +39,7 @@ Estimated time: 5 minutes
 
    ![Oracle Cloud console, Cloud Shell](images/5-1-1-cloudshell.png " ")
 
-## **Task 2**: Update the webpage with APM browser agent injection
+## Task 2: Update the webpage with APM browser agent injection
 1.	Open the index.html with an editor.
 
     ```bash
@@ -68,7 +68,7 @@ Estimated time: 5 minutes
 
     ![Oracle Cloud console, Cloud Shell](images/5-1-2-cloudshell.png " ")
 
-## **Task 3**: Copy the webpage back to the container
+## Task 3: Copy the webpage back to the container
 
 1. Execute the following command to copy the ***index.html*** file back to the container.
 

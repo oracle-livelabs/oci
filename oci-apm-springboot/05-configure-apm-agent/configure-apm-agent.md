@@ -18,7 +18,7 @@ Estimated time: 10 minutes
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: Obtain APM Java Agent download link
+## Task 1: Obtain APM Java Agent download link
 
 1.	Open navigation menu from the Oracle Cloud console, select **Observability & Management** > **Administration**.
 
@@ -37,7 +37,7 @@ Estimated time: 10 minutes
    ![Oracle Cloud console, APM Domains](images/4-1-4-cloudshell.png " ")
 
 
-## **Task 2**: Download the APM Java Agent to the Cloud shell
+## Task 2: Download the APM Java Agent to the Cloud shell
 
 1.  Type the following command to the Cloud Shell.
 
@@ -63,7 +63,7 @@ Estimated time: 10 minutes
     ```
    ![Oracle Cloud console, Cloud Shell](images/4-1-7-cloudshell.png " ")
 
-## **Task 3**: Copy the Java Agent installer to the file system
+## Task 3: Copy the Java Agent installer to the file system
 
 1.	Run the command below to copy the Java Agent installer file to the file system. Ensure to ***replace*** the **apm-agent-version** with that of the APM Java Agent you have, before the command execution.
 
@@ -91,7 +91,7 @@ Estimated time: 10 minutes
 
     >**Note:** The APM version may be different from what is shown in the example.
 
-## **Task 4**: Provision of the APM Java Agent
+## Task 4: Provision of the APM Java Agent
 
 
 1.	Execute the command below to provision the APM Java agent. ***Replace*** the **APM Domain Private key** and **APM Domain Endpoint**, with the values saved in Lab2, Task2. Please also ***change*** the **apm-agent-version** in the file name to the version of the agent you have.
@@ -117,7 +117,7 @@ Estimated time: 10 minutes
 
     ![Oracle Cloud console, Cloud Shell ](images/4-1-11-cloudshell.png " ")
 
-## **Task 5**: Deploy the Java Agent
+## Task 5: Deploy the Java Agent
 
 The next step is to deploy the Java Agent. First, update the **wstore.yaml** file by adding the java runtime argument that points to the APM Agent jar file bootstrap location, then apply to the Kubernetes pods. Notice that the service names, **wstore-front** and **wstore-back**, that are used to display in the APM Trace Explorer, are also added to the command for the statefulsets.
 

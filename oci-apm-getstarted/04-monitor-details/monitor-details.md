@@ -16,7 +16,7 @@ Estimated time: 5 minutes
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: Inspect the monitor details and execution history
+## Task 1: Inspect the monitor details and execution history
 
 1.  The Monitor page provides details about an APM monitor, for example, when and where the monitor is run, a link to the monitor script, or a history of the monitor running.  Examine the **Monitor Information** tab, **General Information** section.
 
@@ -39,10 +39,10 @@ Estimated time: 5 minutes
 
     You will see a menu opened. This opens a menu that provides you options to analyze the monitor execution. For example, you can see an Error message in case of a failed script run, or Trace details in case of a network issue. You can also see screenshots of the HTML pages navigated in the monitor, or download browser console logs.
 
-    >***Note :*** In the example screenshot, the **View Error Message** menu is disabled, because the selected run did not have a failure. In case of a failed script run, you can select to see an error message.
+    >**Note:** In the example screenshot, the **View Error Message** menu is disabled, because the selected run did not have a failure. In case of a failed script run, you can select to see an error message.
     	  ![Oracle Cloud console, Monitor details](images/1-3-monitor.png " ")
 
-## **Task 2**: Examine the HAR file
+## Task 2: Examine the HAR file
 
 1. Select **View HAR** from the menu.
 
@@ -72,7 +72,7 @@ Estimated time: 5 minutes
 
     ![Oracle Cloud console, View HAR](images/1-10-monitor.png " ")
 
-## **Task 3**: Drill down to the Trace Explorer
+## Task 3: Drill down to the Trace Explorer
 
 1. You are back at the **History** section of the **Monitor details** page. On the same monitor run, click the three-dot icon to open the menu, then select **View Trace Details**.
 

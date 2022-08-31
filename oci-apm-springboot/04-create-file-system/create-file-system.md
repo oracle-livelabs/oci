@@ -18,7 +18,7 @@ Estimated time: 15 minutes
 * OCI quota and permissions to create a file system and associated resources. See **[Creating File Systems](https://docs.oracle.com/en-us/iaas/Content/File/Tasks/creatingfilesystems.htm)** and **[Service Limits](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm#top)** in the Oracle Cloud documentation.
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: Create a file system in the Oracle Cloud
+## Task 1: Create a file system in the Oracle Cloud
 
 1.  Minimize the Cloud Shell window by clicking the Minimize button.
 
@@ -69,7 +69,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, file systems](images/3-1-9-filesystem.png " ")
 
-## **Task 2**: Create security rules in the network
+## Task 2: Create security rules in the network
 
 1. In the Mount Target Information section point your mouse cursor over the **“i”**  icon next to **Subnet** and review the message. As the message indicates, security rules must be configured before mounting the file system, and that is what you will be doing next.
 
@@ -138,7 +138,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, Security Rules](images/3-2-12-securityrules.png " ")
 
-## **Task 3**: Mount the file system to Kubernetes pods
+## Task 3: Mount the file system to Kubernetes pods
 
 1. Click the **>..**  icon from the top right corner in the Oracle Cloud console menu bar, to start a Cloud Shell environment which will appear at the bottom of your page.
    ![Oracle Cloud console, Menu](images/3-3-1-menu.png " ")
@@ -203,7 +203,7 @@ Estimated time: 15 minutes
      >**Note:** Refer to the screenshot image below to see what it should look like after the file is modified. Verify that the Kubernetes objects, such as StorageClass, PersistentVolume, and PersistentVolumeClass are configured in the YAML file.
        	![yaml](images/3-3-2-yaml.png " ")
 
-## **Task 4**: Apply changes to the container
+## Task 4: Apply changes to the container
 
 1.	Execute the following command to add the storage objects to the Kubernetes cluster.
 
@@ -219,7 +219,7 @@ Estimated time: 15 minutes
      >**Note:** If you need to modify the YAML file after once applied, first run the command below to remove the objects, modify the file, then rerun the above command to re-apply the YAML.  
      kubectl delete -f ~/sb-hol/apmlab-fss.yaml
 
-## **Task 5**: Add volumes to Kubernetes pods
+## Task 5: Add volumes to Kubernetes pods
 
 1.	Next, you will need to map the PV to the pods. Open **wstore.yaml** file with an editor.
 

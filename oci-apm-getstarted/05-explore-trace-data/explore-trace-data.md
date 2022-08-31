@@ -24,7 +24,7 @@ Estimated time: 15 minutes
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: Examine the pre-configured query in Trace Explorer
+## Task 1: Examine the pre-configured query in Trace Explorer
 
 1. At the end of the previous lab, you selected to launch the **Trace Explorer** from the **Monitor History** page. Traces that are listed in the **Traces** section are captured from the monitor run.
 
@@ -34,7 +34,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud, Trace Explorer](images/1-1-tx.png " ")
 
-## **Task 2**: Understand relations of services and operations in the Topology view
+## Task 2: Understand relations of services and operations in the Topology view
 
 1. Click the **Topology** Icon on the right-hand side of the screen.
 
@@ -80,7 +80,7 @@ Estimated time: 15 minutes
 	![Oracle Cloud, Trace Explorer](images/1-11-tx.png " ")
 
 
-## **Task 3**: Drill down to the trace Details
+## Task 3: Drill down to the trace Details
 
 1. Click the black triangle icon on the right side of the Query view. A list of queries used in the session will show in a pulldown. Select the previous query executed.
 
@@ -95,7 +95,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud, Trace Explorer](images/1-14-tx.png " ")
 
-	>***Note :*** The operations in the topology are the spans that are seen in the waterfall view.
+	>**Note:** The operations in the topology are the spans that are seen in the waterfall view.
 
 	In the **Topology** view, hover the mouse over the icons. As you have already verified in the previous steps, slowness is seen in the monitor when a checkout button is clicked by the synthetic user.
 
@@ -119,7 +119,7 @@ Estimated time: 15 minutes
 
 	 ![Oracle Cloud, Trace Explorer](images/1-17-tx.png " ")
 
-	 	>***Note :*** The waterfall view is visualized in the form of a Gantt chart.
+	 	>**Note:** The waterfall view is visualized in the form of a Gantt chart.
 
 6. Look at the waterfall view, and try to identify the slow span. For example, in the screenshot below, **wsk-checkou:update** is the bottleneck, blocking the payment service from the process.
 
@@ -137,7 +137,7 @@ Estimated time: 15 minutes
 
 	Using the DB Connection string and the SQLID, you can drill down to perfhub and/or Operations Insights service in Oracle Cloud, to investigate the issue with the database.
 
-	>***Note :*** In context drill down to the database service is on the roadmap
+	>**Note:** In context drill down to the database service is on the roadmap
 
 
 9. Click **Close**, then click the **Trace Explorer** link from the breadcrumb to go back to the Trace Explorer main page.
@@ -146,7 +146,7 @@ Estimated time: 15 minutes
 	![Oracle Cloud, Trace Explorer](images/1-22-tx.png " ")
 
 
-## **Task 4**: Inspect the SQL spans by executions
+## Task 4: Inspect the SQL spans by executions
 
 
 1. Now you are back at the Trace Explore the main page. From the Quick Pick tab, click **SQLs**.
@@ -161,7 +161,7 @@ Estimated time: 15 minutes
 	![Oracle Cloud, Trace Explorer](images/1-25-tx.png " ")
 
 
-## **Task 5**: Analyze the SQL spans with the histogram query
+## Task 5: Analyze the SQL spans with the histogram query
 
 1. Another way to analyze the distribution is to use the histogram view. Click the three-dot icon under the **Run** button, then click **Open**.
 
@@ -172,7 +172,7 @@ Estimated time: 15 minutes
 	![Oracle Cloud, Trace Explorer](images/1-28-tx.png " ")
 
 
-	>***Note :*** Alternatively, copy the text below, paste it into the **Query** view, then hit enter, or press the **Run** button.
+	>**Note:** Alternatively, copy the text below, paste it into the **Query** view, then hit enter, or press the **Run** button.
 
 	``` bash
 	<copy>
@@ -194,7 +194,7 @@ Estimated time: 15 minutes
     ![Oracle Cloud, Trace Explorer](images/1-31-tx.png " ")
 
 
-    > ***Note :*** The root cause of the issue is the lock contention in the database that the update statement is being blocked by another SQL that is doing a select on the same table. That uses a lot of CPU and takes a long time to execute, and is causing the update statement that usually runs in ms while slows down intermittently.       
+    >**Note:** The root cause of the issue is the lock contention in the database that the update statement is being blocked by another SQL that is doing a select on the same table. That uses a lot of CPU and takes a long time to execute, and is causing the update statement that usually runs in ms while slows down intermittently.       
 
     You can further diagnose the issue in the PerfHub and use the Operations Insights service to solve this problem in the database. For more details on the solution at the database, please watch the following video that demonstrates how the contention can be identified and how it can be resolved. In the demo, the issue was resolved by enabling the auto index feature to the autonomous database using the Operations Insights service in Oracle Cloud.
 

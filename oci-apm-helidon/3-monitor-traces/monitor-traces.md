@@ -70,20 +70,20 @@ Estimated time: 15 minutes
 
 5.	At the end of the dependencies section, find a line **&lt;/dependencies&gt;** and add the following before that line:
 
-			<dependency>
-			     <groupId>io.helidon.tracing</groupId>
-			         <artifactId>helidon-tracing</artifactId>
-			 </dependency>
-			<dependency>
-			    <groupId>com.oracle.apm.agent.java</groupId>
-			    <artifactId>apm-java-agent-tracer</artifactId>
-			    <version>[1.0.1389,)</version>
-			</dependency>
-			<dependency>
-			    <groupId>com.oracle.apm.agent.java</groupId>
-			    <artifactId>apm-java-agent-helidon</artifactId>
-			    <version>[1.0.1389,)</version>
-			</dependency>
+			    <dependency>
+			         <groupId>io.helidon.tracing</groupId>
+			             <artifactId>helidon-tracing</artifactId>
+			    </dependency>
+			    <dependency>
+			        <groupId>com.oracle.apm.agent.java</groupId>
+			        <artifactId>apm-java-agent-tracer</artifactId>
+			        <version>[1.5.2118,)</version>
+			    </dependency>
+			    <dependency>
+			        <groupId>com.oracle.apm.agent.java</groupId>
+			        <artifactId>apm-java-agent-helidon</artifactId>
+			        <version>[1.0.1389,)</version>
+			    </dependency>
 
 	![pom.xml](images/1-1-pomxml.png " ")
 
@@ -175,8 +175,7 @@ Refer to the sample image below:
 
 
 	  >**Note:** If your build fails with an error, run the java -version and make sure it points to JDK 11. If the command does not return OpenJDK version"11.0.7", go back to task 1 in this Lab and re-run the export commands to set the environment variable. This can happen when a session is interrupted during the lab exercise. Confirm the java version returns 11.0.7 and re-execute the mvn package command.
-
-    ![Cloud Shell](images/4-1-error-mvn.png " ")
+		![Cloud Shell](images/4-1-error-mvn.png " ")
 
 3.	Start the application by running the application jar file.
 	``` bash
@@ -212,7 +211,7 @@ Refer to the sample image below:
 4.	Click the service name: **helidon-http: HTTP Request**.
 	![APM Trace Explorer](images/5-2-trace_explorer.png " ")
 5.	In the **Trace Details** page, review the trace in the **Topology** view, and each span duration in the **Spans** view.
-6.	Click the span: **helidon-http: content-write**.
+6.	Click the span: **helidon-http: HTTP Request**.
 	![APM Trace Explorer](images/5-3-trace_explorer.png " ")
 7.	Examine the span parameters in the **Span Details** view.
 	![APM Trace Explorer](images/5-4-trace_explorer.png " ")

@@ -50,7 +50,7 @@ Estimated time: 10 minutes
 
     ![Oracle Cloud, Trace Explorer](images/8-1-4-menu.png " ")
 
-    > ***Note :*** Browser traces do not have values as the configuration was applied to the server traces.
+    >**Note:** Browser traces do not have values as the configuration was applied to the server traces.
 
 ## Task2:  Verify spans and dimensions on the Trace Details page
 

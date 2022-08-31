@@ -63,30 +63,30 @@ Estimated time: 10 minutes
 
 3.	Add the following repositories blocks between the **properties** and **dependencies** sections:
 
-		<repositories>
-		  <repository>
-		    <id>oci</id>
-		    <name>OCI Object Store</name>
-		    <url>https://objectstorage.us-ashburn-1.oraclecloud.com/n/idhph4hmky92/b/prod-agent-binaries/o</url>
-		  </repository>
-		</repositories>
-	![pom.xml](images/1-2-pomxml.png " ")
+		        <repositories>
+		          <repository>
+		            <id>oci</id>
+		            <name>OCI Object Store</name>
+		            <url>https://objectstorage.us-ashburn-1.oraclecloud.com/n/idhph4hmky92/b/prod-agent-binaries/o</url>
+		          </repository>
+		        </repositories>
+	  ![pom.xml](images/1-2-pomxml.png " ")
 4.	At the end of the dependencies section, find a line **&lt;/dependencies&gt;** and add the following before that line:
 
-		<dependency>
-		    <groupId>io.helidon.tracing</groupId>
-		    <artifactId>helidon-tracing</artifactId>
-		 </dependency>
-		<dependency>
-		    <groupId>com.oracle.apm.agent.java</groupId>
-		    <artifactId>apm-java-agent-tracer</artifactId>
-		    <version>[1.0.1389,)</version>
-		</dependency>
-		<dependency>
-		    <groupId>com.oracle.apm.agent.java</groupId>
-		    <artifactId>apm-java-agent-helidon</artifactId>
-		    <version>[1.0.1389,)</version>
-		</dependency>
+		        <dependency>
+		            <groupId>io.helidon.tracing</groupId>
+		            <artifactId>helidon-tracing</artifactId>
+		        </dependency>
+		        <dependency>
+		            <groupId>com.oracle.apm.agent.java</groupId>
+		            <artifactId>apm-java-agent-tracer</artifactId>
+		            <version>[1.5.2118,)</version>
+		        </dependency>
+		        <dependency>
+		            <groupId>com.oracle.apm.agent.java</groupId>
+		            <artifactId>apm-java-agent-helidon</artifactId>
+		            <version>[1.0.1389,)</version>
+		        </dependency>
 	![pom.xml](images/1-1-pomxml.png " ")
 5.	Save and close the file.
 
@@ -207,7 +207,6 @@ Refer to the sample image below:
  	 ![Cloud Shell](images/6-1-mvn.png " ")
 
 	>**Note:** If your build fails with an error, run the java -version and make sure it points to JDK 11. If it does not return OpenJDK version"11.0.7", go back to task 1 in this Lab and re-run the export commands to set the environment variable. This can happen when a session is interrupted during the lab exercise. Confirm the java version returns 11.0.7 and re-execute the mvn package command.  
-
   ![Cloud Shell](images/4-1-error-mvn.png " ")
 
 2.	Start the application by running the application jar file
@@ -239,6 +238,6 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Steven Lemme, Senior Principal Product Manager,	
+- **Contributors** - Steven Lemme, Senior Principal Product Manager,
 Avi Huber, Senior Director, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, August 2022

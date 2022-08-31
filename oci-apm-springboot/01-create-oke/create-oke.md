@@ -16,7 +16,7 @@ Estimated time: 5 minutes
 * This lab requires an [Oracle Cloud account](https://www.oracle.com/cloud/free/). You may use your cloud account, or a Free tier account, a cloud account that you obtained through a trial.
 
 
-## **Task 1**: Create an OCI compartment
+## Task 1: Create an OCI compartment
 
 1. Open the navigation menu from the top-left corner (aka. hamburger menu) of the Oracle Cloud console and select **Identity & Security** > **Compartments**.
 	![Oracle Cloud console Menu](images/1-1-compartments.png " ")
@@ -30,7 +30,7 @@ Estimated time: 5 minutes
 *	Verify that your apmworkshop compartment is created in the table
 	![Oracle Cloud console, Create Compartment](images/1-4-compartments.png " ")
 
-## **Task 2**: Create an OKE
+## Task 2: Create an OKE
 
 1. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, and select **Developer Services** > **Kubernetes Clusters (OKE)**.
 

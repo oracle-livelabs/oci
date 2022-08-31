@@ -15,7 +15,7 @@ Estimated time: 5 minutes
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: View monitor statuses on the APM Home page
+## Task 1: View monitor statuses on the APM Home page
 
 1. Open the navigation menu in the Oracle Cloud console, select **Observability & Management** > **Home** under **Application Performance Management**.
 
@@ -29,7 +29,7 @@ Estimated time: 5 minutes
 
 	![Oracle Cloud console, APM Home](images/1-2-monitor.png " ")
 
-## **Task 2**: Inspect the performance charts in the Monitor dashboard
+## Task 2: Inspect the performance charts in the Monitor dashboard
 
 1. **Monitors** dashboard opens. Notice that the **WineStore-E2E** is pre-selected in the **Monitor** field. The Monitors dashboard shows performance and error summary information of multiple, or specific Monitors.
 
@@ -41,7 +41,7 @@ Estimated time: 5 minutes
 
  	![Oracle Cloud console, APM Home](images/1-4-monitor.png " ")
 
-	>***NOTE:*** The example screenshot above does not have errors, but the chart also shows errors for any failure runs.
+	>**Note:** The example screenshot above does not have errors, but the chart also shows errors for any failure runs.
 	 	![Oracle Cloud console, APM Home](images/1-4-2-monitor.png " ")
 
 

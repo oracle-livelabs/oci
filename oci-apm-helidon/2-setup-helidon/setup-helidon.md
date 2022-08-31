@@ -27,7 +27,7 @@ Estimated time: 10 minutes
   The Oracle Cloud Shell is a small virtual machine running a Bash shell that you access through the Oracle Cloud Console. It comes with a pre-authenticate Command Line Interface (CLI) pre-installed and configured so you can immediately start working in your tenancy without spending time on its installation and configuration.
 
 	![Cloud Shell](images/1-1-cloudshell.png " ")
-3. Helidon requires Java 11 (or newer) and Maven. Verify the versions by running the following commands.
+3. Helidon requires Java 11 (or newer) and Maven 3.6.1. Verify the versions by running the following commands.
 
 	``` bash
 	<copy>
@@ -39,9 +39,12 @@ Estimated time: 10 minutes
 	mvn -version
 	</copy>
 	```
+
+  	![Cloud Shell](images/01-01-cloudshell.png " ")
+
 	If you do not have the required version of Java, you can install GraalVM in the Cloud Shell to run Java 11, in the next Task.
 
-  >**Note:** By default, OCI Free comes with Maven 3.5.0, which can be used to complete this lab. If you wish to install a different version of Maven, you can download it from the following URL: [http://maven.apache.org/](http://maven.apache.org/)
+    >**Note:** By default, OCI Free comes with Maven 3.6.1 (August, 2022), which can be used to complete this lab. If you wish to re-install or install a different version of Maven, you can download it from the following URL: http://maven.apache.org/
 
 
 ## Task 2: Install Java
@@ -114,7 +117,7 @@ Estimated time: 10 minutes
 2.	The archetype generates a Maven project (helidon-quickstart-se) in your current directory. Change to this directory.
 	``` bash
 	<copy>
-	cd helidon-quickstart-se
+	cd ~/helidon-quickstart-se
 	</copy>
 	```
 3.	Build the application by running the command below:

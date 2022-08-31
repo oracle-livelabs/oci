@@ -15,15 +15,15 @@ Estimated time: 5 minutes
 
 * Completion of the preceding labs in this workshop
 
-## **Task 1**: View critical alarms on the APM Home page
+## Task 1: View critical alarms on the APM Home page
 
 1. At the top left side of the screen, locate the **Alarms** widget. You may see 2 or 3 alarms currently being fired. Click the link to the alarm **WineStore-E2E-ExecTime**.
 
 	![Oracle Cloud, APM Home](images/1-0-home.png " ")
 
-    > ***Note:*** It is possible that this alarm will not be active at the time you are looking at this, you can see the **WineStore-ExecTime-warning** alarm instead.
+    >**Note:** It is possible that this alarm will not be active at the time you are looking at this, you can see the **WineStore-ExecTime-warning** alarm instead.
 
-## **Task 2**: Examine alarm details on the Alarm Details page
+## Task 2: Examine alarm details on the Alarm Details page
 
 1. **Alarm Definitions** page opens. This page shows details of the selected alarm. For example, if you select the **WineStore-E2E-ExecTime**, you can view the following information.
 

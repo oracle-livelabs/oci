@@ -51,22 +51,22 @@ Estimated time: 15 minutes
 
 2.	At the end of the dependencies section, find a line **&lt;/dependencies&gt;** and add the following before that line:
 
-		<dependency>
-		    <groupId>io.helidon.security.integration</groupId>
-		    <artifactId>helidon-security-integration-jersey</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>io.helidon.tracing</groupId>
-		    <artifactId>helidon-tracing-jersey-client</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.glassfish.jersey.core</groupId>
-		    <artifactId>jersey-client</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.glassfish.jersey.inject</groupId>
-		    <artifactId>jersey-hk2</artifactId>
-		</dependency>
+		        <dependency>
+		            <groupId>io.helidon.security.integration</groupId>
+		            <artifactId>helidon-security-integration-jersey</artifactId>
+		        </dependency>
+		        <dependency>
+		            <groupId>io.helidon.tracing</groupId>
+		            <artifactId>helidon-tracing-jersey-client</artifactId>
+		        </dependency>
+		        <dependency>
+		            <groupId>org.glassfish.jersey.core</groupId>
+		            <artifactId>jersey-client</artifactId>
+		        </dependency>
+	        	<dependency>
+		            <groupId>org.glassfish.jersey.inject</groupId>
+		            <artifactId>jersey-hk2</artifactId>
+		        </dependency>
 	![Cloud Shell](images/1-1-pomxml.png " ")
 
 ## Task 3: Replace GreetService Class
@@ -250,24 +250,24 @@ Estimated time: 15 minutes
 
 ## Task 5: View the trace in the APM Trace Explorer
 
-1.	From the OCI menu, select **Observability & Management**, then **Trace Explorer**.  Click a link to the helidon-http service.
+1.	From the OCI menu, select **Observability & Management**, then **Trace Explorer**.  Click a link to the trace that ran most recently. It should have 7 spans.
 
 
 	![Cloud Shell](images/4-1-trace_explorer.png " ")
 
-2. On the **Trace Details** page, verify that the trace includes 7 spans from two services. Examine the topology to understand how the two services are connected. Review the flow in the **Spans** view and notice how the spans are distributed.
+2. On the **Trace Details** page, verify that the trace includes 7 spans from two services. Examine the topology to understand how the two services are connected. Services are displayed in different colors. Review the flow in the **Spans** view and notice how the spans are distributed.
 
 	![Cloud Shell](images/4-2-trace_explorer.png " ")
 
 
 This is the end of the workshop. You have learned how to add the APM tracers to Helidon-based microservices by editing the configuring files such as pom.xml and application.yaml, and how to use APM Trace Explorer to trace the workflow within a service and across multiple services. For more information on APM, refer to the OCI documentation, **[Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)**.
-<br>
 
-You have completed the tutorials in this Workshop. You may now [proceed to the Need Help section ](#next) to review the common problems users face in the LiveLab or exit the Workshop.
+
+
 
 ## Acknowledgements
 
 - **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Steven Lemme, Senior Principal Product Manager,	
+- **Contributors** - Steven Lemme, Senior Principal Product Manager,
 Avi Huber, Senior Director, Product Management
 - **Last Updated By/Date** - Yutaka Takatsu, August 2022

@@ -6,7 +6,7 @@ In this lab, you will change the display format of the span names that show up i
 
 You will modify the **AgentConfig.properties** file, located in the APM Agent directory, which resides in the file system associated with the container.  However, because there is no editing tool inside the container, you will copy the file from the container to the Cloud Shell, edit the file, then copy it back to the container.
 
-Estimated time: 10 minutes
+Estimated time: 5 minutes
 
 ### Objectives
 
