@@ -17,7 +17,6 @@ Estimated time: 5 minutes
 
 ## Task 1: Login to the workshop tenancy
 
-1. ***Update once we know how a user can log in to EMDEMO tenancy using the green button.***
 
 ## Task 2: Access APM home dashboard
 
