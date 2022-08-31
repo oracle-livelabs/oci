@@ -126,7 +126,7 @@ While the notebook session is being created, you can view the resource status on
 
 >screenshot - notebooksession ACTIVE
 
-Generally it will take few minutes for notebook session turning into ACTIVE. While waiting, please download this [Python notebook](./files/AD_DigitalTwin_Demo.ipynb).
+Generally it will take few minutes for notebook session turning into ACTIVE. While waiting, please download this [Python notebook](./files/DigitalTwin_notebook.ipynb).
 
 Once the notebook is in an ACTIVE state, click **Open**. 
 
@@ -150,9 +150,25 @@ You will receive a prompt related to what version number you want. Press Enter t
 
 
 
-4. Execute Python SDK 
+4. Upload Python notebook
+
+If you haven't done so, download this [python notebook](./files/DigitalTwin_notebook.ipynb) which contains all the code snippet for this lab. Upload the downloaded notebook to JupyterLab by drag and drop to the file browser on the left side of the screen. 
+
+>screenshot - JupyterLab
 
 
 
+### Task 3 Python SDK Code Snippets
 
-### Task 3
+1. Click the _DigitalTwin_notebook.ipynb_ to open in a new tab. Choose kernel by clicking the Python kernel, then select generalml_p37_cpu_v1 kernel from the drop-down list.
+
+>screenshot - select kernel
+
+
+2. Read through the document. When you encounter a chunk of code, click in the cell and press _shift + enter_ to execute it. When the cell is running a [*] will appear in the top left corner of the cell. When it is finished, a number will appear in [ ], for example [1]. 
+
+>screenshot - code block
+
+
+Execute the cells in order. If you run into problems and want to start over again, click the **restart** button then click **Restart**. 
+
