@@ -49,26 +49,8 @@ Estimated time: 15 minutes
 
 	  >**Note:** If you are using the vi editor, type **i** to enter Insert mode, and make the text editable. Use allow keys to navigate the text and make changes to where you set the cursor. To save a file, press the Esc key, then type **:wq** to write and quit the file. If you do not wish a change, press Esc then type **:q!** to discard your changes. Please refer to the editor references for more usage or how to use other editors.
 
-4. Add the following repositories blocks between the **properties** and **dependencies** sections:
 
-			<repositories>
-				<repository>
-			    <id>oci</id>
-			    <name>OCI Object Store</name>
-			    <url>https://objectstorage.us-ashburn-1.oraclecloud.com/n/idhph4hmky92/b/prod-agent-binaries/o</url>
-			  </repository>
-			</repositories>
-
-
-	>Suggested Tips:
-	- Use your mouse to select the text above, and manually copy and insert it into the pom file.
-	- Auto copy is not provided as it may not select the entire text properly.
-	- Refer to the screenshot image below to see how it should look after the file is modified.
-
-
-	![pom.xml](images/1-2-pomxml.png " ")
-
-5.	At the end of the dependencies section, find a line **&lt;/dependencies&gt;** and add the following before that line:
+4.	At the end of the dependencies section, find a line **&lt;/dependencies&gt;** and add the following before that line:
 
 			    <dependency>
 			         <groupId>io.helidon.tracing</groupId>
@@ -138,7 +120,7 @@ Estimated time: 15 minutes
 		import io.helidon.tracing.TracerBuilder;
 		</copy>
 		```
- b.	In the startServer method, find a line **.addMediaSupport(JsonpSupport.create())**. Add the following above that line:
+ b.	In the startServer method, find a line **.addMediaSupport(JsonpSupport.create())** (Line 47). Add the following above that line:
 		 ``` bash
 		 <copy>
 		  .tracer(TracerBuilder.create(config.get("tracing")).build())
@@ -222,6 +204,6 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Steven Lemme, Senior Principal Product Manager,	
+- **Contributors** - Steven Lemme, Senior Principal Product Manager,
 Avi Huber, Senior Director, Product Management
 - **Last Updated By/Date** - Yutaka Takatsu, August 2022

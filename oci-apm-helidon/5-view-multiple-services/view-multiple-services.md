@@ -49,7 +49,7 @@ Estimated time: 15 minutes
 	```
    	>**Note:** For how to use the vi editor, refer to the Lab3, Task1, step 3
 
-2.	At the end of the dependencies section, find a line **&lt;/dependencies&gt;** and add the following before that line:
+2.	At the end of the dependencies section, find a line **&lt;/dependencies&gt;** (Line 70) and add the following before that line:
 
 		        <dependency>
 		            <groupId>io.helidon.security.integration</groupId>
@@ -271,6 +271,8 @@ Estimated time: 15 minutes
 	</copy>
 	```
 
+	![Cloud Shell](images/6-1-cloudshell.png " ")
+
 2. Remove the workshop files from the Cloud Shell.
 
 	``` bash
@@ -278,6 +280,9 @@ Estimated time: 15 minutes
 	cd ~/; rm -rf helidon* graalvm*
 	</copy>
 	```
+
+	![Cloud Shell](images/6-2-cloudshell.png " ")
+
 
 ## Conclusions
 This is the end of the workshop. You have learned how to add the APM tracers to Helidon-based microservices by editing the configuring files such as pom.xml and application.yaml, and how to use APM Trace Explorer to trace the workflow within a service and across multiple services. For more information on APM, refer to the OCI documentation, **[Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)**.

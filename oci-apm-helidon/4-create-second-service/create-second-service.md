@@ -61,17 +61,7 @@ Estimated time: 10 minutes
 	```
    	>**Note:** For how to use the vi editor, refer to the Lab3, Task1, step 3
 
-3.	Add the following repositories blocks between the **properties** and **dependencies** sections:
-
-		        <repositories>
-		          <repository>
-		            <id>oci</id>
-		            <name>OCI Object Store</name>
-		            <url>https://objectstorage.us-ashburn-1.oraclecloud.com/n/idhph4hmky92/b/prod-agent-binaries/o</url>
-		          </repository>
-		        </repositories>
-	  ![pom.xml](images/1-2-pomxml.png " ")
-4.	At the end of the dependencies section, find a line **&lt;/dependencies&gt;** and add the following before that line:
+3.	At the end of the dependencies section, find a line **&lt;/dependencies&gt;** (Line 56) and add the following before that line:
 
 		        <dependency>
 		            <groupId>io.helidon.tracing</groupId>
@@ -88,7 +78,7 @@ Estimated time: 10 minutes
 		            <version>[1.0.1389,)</version>
 		        </dependency>
 	![pom.xml](images/1-1-pomxml.png " ")
-5.	Save and close the file.
+4.	Save and close the file.
 
 ## Task 3: Modify application.yaml file
 
@@ -139,7 +129,7 @@ Estimated time: 10 minutes
 		 </copy>
 		 ```
 
- b.	In the startServer method, find a line **.addMediaSupport(JsonpSupport.create())**. Add the following above that line:
+ b.	In the startServer method, find a line **.addMediaSupport(JsonpSupport.create())** (Line 47). Add the following above that line:
 		 ``` bash
 		 <copy>
 		 .tracer(TracerBuilder.create(config.get("tracing")).build())
@@ -170,23 +160,23 @@ Refer to the sample image below:
 		 ```
 
 	![GreetService.java](images/5-1-greetservice.png " ")
- b. Replace the **getDefaultMessageHandler** method with the following:
+ b. Replace the **getDefaultMessageHandler** method (Line 68) with the following:
 		 ``` bash
 		 <copy>
 
 
-		 private void getDefaultMessageHandler(ServerRequest request,
-		                                    ServerResponse response) {
-		     var spanBuilder = request.tracer()
-		         .buildSpan("getDefaultMessageHandler");
-		     request.spanContext().ifPresent(spanBuilder::asChildOf);
-		     Span span = spanBuilder.start();
-		     try {
-		         sendResponse(response, "World");
-		     } finally {
-		         span.finish();
-		     }
-	   }
+		     private void getDefaultMessageHandler(ServerRequest request,
+		                                        ServerResponse response) {
+		         var spanBuilder = request.tracer()
+		             .buildSpan("getDefaultMessageHandler");
+		         request.spanContext().ifPresent(spanBuilder::asChildOf);
+		         Span span = spanBuilder.start();
+		         try {
+		             sendResponse(response, "World");
+		         } finally {
+		             span.finish();
+		         }
+	       }
 
 		</copy>
 		```
@@ -238,6 +228,6 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Steven Lemme, Senior Principal Product Manager,	
+- **Contributors** - Steven Lemme, Senior Principal Product Manager,
 Avi Huber, Senior Director, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, August 2022
