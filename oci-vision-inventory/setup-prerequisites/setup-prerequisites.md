@@ -11,14 +11,14 @@ In this lab, you will:
 - Create a user and its respective OCI config file
 - Create a user group
 - Create a Policy
-- Create a VCN with internet connectivity and add Security List rules
+- Create a VCN with internet connectivity 
 - Create an OCI Compute instance in order to later access the OCI Vision model API
 
 ## Task 1: Compartment creation
 
 In this task, you will create a dedicated compartment for this live lab, if you haven't done so beforehand.
 
-1. Click the main menu icon to open the side menu.
+1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity** and select **Compartments**.
 3. Provide *vision-livelab* as **Name**, a **Description** of your choice, and leave the root level as Parent.
 4. Click **Create Compartment**.
@@ -27,7 +27,7 @@ In this task, you will create a dedicated compartment for this live lab, if you 
 
 ## Task 2: User creation
 
-1. Click the main menu icon to open the side menu.
+1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity** and select **Users**. Click **Create User**.
 3. Select **IAM User**. Provide *vision-user* as **Name**, a **Description** of your choice, and click **Create**.
 
@@ -49,7 +49,7 @@ In this task, you will create a dedicated compartment for this live lab, if you 
 
 In this task, you will create a dedicated user group.
 
-1. Click the main menu icon to open the side menu.
+1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity** and select **Groups**.
 3. Provide *vision-group* as **Name**, a **Description** of your choice.
 4. Click **Create**.
@@ -62,7 +62,7 @@ In this task, you will create a dedicated user group.
 
 In this task, you will create the required OCI IAM policy.
 
-1. Click the main menu icon to open the side menu.
+1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity** and select **Policies**.
 3. Provide *vision-policy* as **Name**, a **Description** of your choice, and choose *vision-livelab* as compartment.
 4. Click **Show manual editor** and paste the content below in the editor.
@@ -108,4 +108,4 @@ In this task, you will create an OCI Compute instance in the public subnet of th
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, August 2022
+* **Last Updated By/Date** - Nuno Gonçalves, September 2022

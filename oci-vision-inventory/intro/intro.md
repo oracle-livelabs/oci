@@ -20,4 +20,4 @@ In this workshop, you will:
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves, Jason Monden
-* **Last Updated By/Date** - Nuno Gonçalves, August 2022
+* **Last Updated By/Date** - Nuno Gonçalves, September 2022

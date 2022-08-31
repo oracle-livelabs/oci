@@ -1,10 +1,16 @@
 ## Introduction
 
+In this lab, you will test the recently created OCI Vision model to recognize stacked pipes in a test picture. You will do so by configuring the OCI Python SDK, and executing a Python program from the previously created OCI Compute instance.
+
 ### Objectives
+
+- Install the required dependencies in the OCI Compute instance
+- Successfully complete the necessary OCI CLI/SDK setup in the instance
+- Test the OCI Vision model using the Python SDK
 
 ## Task 1: Object storage bucket setup
 
-1. Click the main menu icon to open the side menu.
+1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Storage** and then click **Buckets**. Click **Create Buckets**.
 3. Create two buckets, one called *input*, and another called *output*. In each case, leave the remaining values as they are and click **Create**.
 4. Click [here](https://github.com/oracle-livelabs/oci/raw/main/oci-vision-inventory/images/model/test.jpg) to download the sample test image. 
@@ -78,5 +84,5 @@
 
 ## Acknowledgements
 
-* **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, August 2022
+* **Author** - Nuno Gonçalves, Jason Monden
+* **Last Updated By/Date** - Nuno Gonçalves, September 2022
