@@ -260,6 +260,26 @@ Estimated time: 15 minutes
 	![Cloud Shell](images/4-2-trace_explorer.png " ")
 
 
+## Task 6: Clean up the workshop environment
+
+1. Close any running sessions.
+
+
+	``` bash
+	<copy>
+	fuser -k 8080/tcp;fuser -k 8081/tcp;
+	</copy>
+	```
+
+2. Remove the workshop files from the Cloud Shell.
+
+	``` bash
+	<copy>
+	cd ~/; rm -rf helidon* graalvm*
+	</copy>
+	```
+
+## Conclusions
 This is the end of the workshop. You have learned how to add the APM tracers to Helidon-based microservices by editing the configuring files such as pom.xml and application.yaml, and how to use APM Trace Explorer to trace the workflow within a service and across multiple services. For more information on APM, refer to the OCI documentation, **[Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)**.
 
 
