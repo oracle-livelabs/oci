@@ -172,7 +172,7 @@ If you haven't done so, download this [python notebook](./files/AD_DigitalTwin_n
 Execute the cells in order. If you run into problems and want to start over again, click the **restart** button then click **Restart**. 
 
 <details>
-<summary><font size="2">Training Data</font></summary>
+<summary><font size="2">Training Data requirements</font></summary>
     
 - Can only contain timestamps and other numeric attributes that typically represent sensor or signal readings.
 - Must be anomaly free (without outliers) and contain observations that have normal business conditions only.
