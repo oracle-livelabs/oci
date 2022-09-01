@@ -126,7 +126,7 @@ While the notebook session is being created, you can view the resource status on
 
 >screenshot - notebooksession ACTIVE
 
-Generally it will take few minutes for notebook session turning into ACTIVE. While waiting, please download this [Python notebook](./files/DigitalTwin_notebook.ipynb).
+Generally it will take few minutes for notebook session turning into ACTIVE. While waiting, please download this [Python notebook](./files/AD_DigitalTwin_notebook.ipynb).
 
 Once the notebook is in an ACTIVE state, click **Open**. 
 
@@ -152,7 +152,7 @@ You will receive a prompt related to what version number you want. Press Enter t
 
 4. Upload Python notebook
 
-If you haven't done so, download this [python notebook](./files/DigitalTwin_notebook.ipynb) which contains all the code snippet for this lab. Upload the downloaded notebook to JupyterLab by drag and drop to the file browser on the left side of the screen. 
+If you haven't done so, download this [python notebook](./files/AD_DigitalTwin_notebook.ipynb) which contains all the code snippet for this lab. Upload the downloaded notebook to JupyterLab by drag and drop to the file browser on the left side of the screen. 
 
 >screenshot - JupyterLab
 
@@ -169,6 +169,13 @@ If you haven't done so, download this [python notebook](./files/DigitalTwin_note
 
 >screenshot - code block
 
-
 Execute the cells in order. If you run into problems and want to start over again, click the **restart** button then click **Restart**. 
 
+<details>
+<summary><font size="2">Training Data</font></summary>
+    
+- Can only contain timestamps and other numeric attributes that typically represent sensor or signal readings.
+- Must be anomaly free (without outliers) and contain observations that have normal business conditions only.
+- Covers all the normal business scenarios that contain the full value ranges on all attributes.
+- Can be well related, belong to the same system or asset, or not. This is because the Anomaly Detection service uses both univariate and multivariate analysis methods.
+</details>
