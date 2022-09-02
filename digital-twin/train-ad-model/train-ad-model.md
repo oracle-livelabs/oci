@@ -25,7 +25,7 @@ The Oracle Cloud Infrastructure Anomaly Detection will create customized Machine
 
 ** assumption - training data csv is stored in object storage bucket
 
-###Task 1 Create Anomaly Detection Project
+### Task 1 Create Anomaly Detection Project
 
 A project is a way to organize multiple data assets, models, deployments to the same workspace
 
@@ -40,47 +40,147 @@ In the Anomaly Detection Console,
 ![Create Project](./images/imageCP2.png " ")
 
 In this form,
-    - Specify the compartment in which to create an Anomaly Detection Project
-       (In this case, use the same compartment that you created earlier in the demo)
-    - Give a name to the Anomaly Detection Project
-    - Once the details are entered, click the *Create Button*.
+    - Select *AD_Workshop* as the compartment
+    - Type *AD_Project* as the Name of the project
+
+Once the details are entered, click the *Create* Button.
 
 ![Create Project](./images/imageCP3.png " ")
 
- If the project is successfully created, it will show up in projects pane.
+ If the project is successfully created, it will show up in projects pane. (You may need to reload the page)
     - select your *Project*
 
 ![Create Project](./images/imageCP4.png " ")
 
 
-###Task 2
-Create a Data Asset
+### Task 2 Create a Data Asset
 
-The Data Asset is the data utilized for training your Anomaly Detection Model. In a real use-case, the Data Asset should be data that has NO anomalies so that the Anomaly Detection model will be trained on the 'normal' state. 
-
-There are two ways to create a data asset
-
-1. Directly create a new data asset
+The Data Asset is the data utilized for training your Anomaly Detection Model. The Data Asset should be data that has NO anomalies so that the Anomaly Detection model will be trained on the 'normal' state. 
 
 Under your project, click the *Data Assets* menu on the left. Then click *Create Data Asset*
 
-imageDA1
+![Create Data Asset](./images/imageCDA1.png " ")
 
 in the _Create Data Asset_ menu, 
-- Specify the Object Storage Compartment  *********
-- Use *some name* as the Data Asset _Name_
+- Select *AD_Workshop* for _Compartment_
+- Type *AD_data_asset* as the Data Asset _Name_
 - Select *Oracle Object Storage* for _Type_
-- Select *Bucket Name* for _Choose a bucket_ 
-- Select *training data name* for _Training Data_
+- Select *AD_bucket* for _Choose a bucket_ 
+- Select *AD_Training.csv* for _Training Data_
 - Press *Create*
+
+![Create Data Asset](./images/imageCDA2.png " ")
 
 The data asset should now show in the data asset main panel.
 
 This demo only covers data from Object Storage. However, data can be imported other sources such as Oracle Autonomous Transaction Processing (ATP), InfluxDB, and more. 
 
 
-2. Use the Train Model button to craete a new data asset (optional)
+### Task 3 Create a model
 
-Under your _project_, 
+Now it's time to train the anomaly detection model and make predictions
 
-###Task 3
+Creating a model requires 3 actions
+- Select the proper compartment and data asset that we just created.
+- Set training parameters
+- Train a model
+
+From here, 
+- Go to _Models_ on the left menu
+- Click _Create and Train Model_
+
+![Create Model](./images/imageCM1.png " ")
+
+Make sure _Choose an existing data asset_ is toggled
+Under _Choose data asset in compartment_, select *AD_data_asset*. The click _Next_. 
+
+![Create Model](./images/imageCM2.png " ")
+
+_________________________________________________________________
+
+Parameter Selections
+
+FAP (False Alarm Probability)
+FAP stands for False Alarm Probability, which is the likelihood (percentage) that a timestamp is flagged as an anomaly in the anomaly-free training data (data asset). It is calculated at every signal level and then averaged across all signals as the final achieved FAP by our model.
+
+A high FAP means the likelihood of an anomaly flagged by Anomaly Detection (AD) service to be a _false alarm_ is high. If this is not desired, depending on the sensitivity requirements of a user, user can specify it to be low.
+
+Typically, FAP can be set to be around the same level of percentage of anomalies in real business scenarios, and a value 0.01 or 1% is relatively appropriate for many scenarios. Also, be aware that if specifying a lower target FAP, the model needs more time to train, and may not achieve to the target FAP.
+
+![Create Model](./images/FAP_Formula.png " ")
+
+FAP = sum(number of anomalies in each signal) / (number of signals * number of timestamps)
+
+Train Fraction Ratio
+Train Fraction Ratio specifies the division ratio of the whole training data to be used training and validation. The default value 0.7 or 70% specifies the model to use 70% of the data for training, and the rest 30% is used to produce model performance (validation).
+
+_________________________________________________________________
+
+
+In this demo, set...
+- 
+- FAP value as 0.5
+- Train Fraction Ratio as *0.7* (default value)
+
+Click _Next_ 
+
+![Create Model](./images/imageCM3.png " ")
+
+Review the model information
+Click _Create_
+
+![Create Model](./images/imageCM4.png " ")
+
+When the model It will take 10-15 minutes to finish training the model. 
+
+![Create Model](./images/imageCM5.png " ")
+
+When _Status_ changes from _Creating_ to _Active_, your model is ready to use.
+
+![Create Model](./images/imageCM6.png " ")
+![Create Model](./images/imageCM7.png " ")
+
+[image]
+
+### Task 4 Detect Anomalies with Anomaly Detection (AD) GUI
+
+The results of Anomaly Detection can be viewed in a number of ways including the AD SDK. Using the AD UI is a visual method.
+
+To start the process of anomaly detection, click on your model and select _Detect Anomalies_ on the model listing page
+
+![UI](./images/imageUI1.png " ")
+
+Select *AD_testing.csv* from local filesystem or drag-and-drop the desired file.
+You can leave _Sensitivity_ BLANK for this demo
+
+![UI](./images/imageUI2.png " ")
+
+Once the test file is uploaded, click _Detect_. 
+
+_____________________________________
+
+Now you can observe the results. 
+
+We select each column to see related anomalies
+
+![UI](./images/imageUI3.png " ")
+
+Graph Explanation
+
+Each signal in your detection data can be selected to show a separate graph.
+
+In the graph, horizontal axis represents the timestamp (or indexes if no timestamp was provied), and the vertical axis represents sensor values.
+
+In each subgraph, 
+- orange line indicates the actual input value of a signal
+- purple line indicates the predicted value by the machine learning model
+- red line indicates anomaly being detected at that timestamp.
+
+There are two additional subgraphs after sensor subgraphs:
+
+The Anomaly Score Per Signal shows the significance of anomaly at individual signal level for a given timestamp. Not all the signals flag anomalies at the same time.
+The Aggregated Anomaly Score indicates the significance of anomaly for a given timestamp by considering the anomaly from all signals together.
+You can move your mouse over the graph, the actual value & estimated value at a certain timestamp will show at the upper right corner of the graph.
+
+
+
