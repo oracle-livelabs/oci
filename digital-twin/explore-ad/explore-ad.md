@@ -40,9 +40,9 @@ Review the following concepts and terms to help you get started with the Data Sc
 We need to generate proper authentication configuration (API Signing Key pair) in order to use OCI CLI to communicate properly to the services on your behalf.
 1. Open User Settings
 
-Open the Profile menu (User menu icon) on the top right corner and click User Settings. 
+Open the Profile menu (User menu icon) on the top right corner and click User Settings.
 
->screenshot - console/profile
+![OCI console](./images/console.png)
 
 
 2. Open API Key
@@ -50,26 +50,27 @@ Open the Profile menu (User menu icon) on the top right corner and click User Se
 Navigate to API Key and then Click Add API Key.
 The content is described above.
 
->screenshot - user profile console
+![user profile](./images/user_profile_console.png)
 
 
 3. Generate API Key
 
 In the dialog, select Generate API Key Pair. Click Download Private Key and save the key to your local computer, and we will upload it later to the Cloud Shell.
 
-You can rename this pem file as oci-api-key.pem .
+You can rename this pem file as _oci-api-key.pem_
 
 Then click the Add button.
 The content is described above.
 
->screenshot - add api key
+![add api key](./images/add_api_key.png)
 
 
 4.Generate Config File
 
 After click the Add button, a configuration file window pop up. Copy the values shown on the console, and save in your local computer, again later it will be used in the Cloud Shell.
 
->screenshot - configuration file preview window
+![configuration preview](./images/configuration_file_preview.png)
+
 
 The configuration content will be like the following:
 
@@ -82,49 +83,66 @@ To know more about API key and config file, please visit [Generating API KEY](ht
 ### Task 2: Activate Data Science Platform and Configuration
 1. Create a Project
 
-Open the navigation menu, and select Data Sciences under Data and AI. This will open the Projects page.
+Open the navigation menu, and select Data Science under Data and AI. This will open the Projects page.
 
->screenshot - menu 
+![OCI menu](./images/oci_menu.png)
+
+![menu navigator](./images/menu_navigator.png)
+
 
 Select the compartment where the project is to be created. Click Create Project 
->screenshot - project console
+
+![project console](./images/project_console.png)
+
 
 Enter a unique name (255 character limit) for the project. If you do not provide a name, a name is automatically generated for you.
 
-screenshot - creating project
+![create project](./images/creating_project.png)
+
 
 Then click **Create**. This creates the project and opens the project page.
 
-screenshot - project page
+![project page](./images/project_page.png)
 
-2. Create a Notebook Session
+
+2. Create a Notebook Session  ---- **TODO: update compute shape and screenshot using current generation**
 
 >Notebook sessions provide access to a JupyterLab serverless environment that is managed by the Data Science service. 
 Data Scientist and developer can use notebook sessions for building data science workloads, developing and running python code.
 
 Click **Create Notebook Session**. 
 
+![create nb session](./images/create_notebook_button.png)
+
 Select the compartment that you want to contain the notebook session.
 
 (Optional, but recommended) Enter a unique name for the notebook session (limit of 255 characters). If you do not provide a name, a name is automatically generated for you.
 
-Select a VM shape. The [Compute Shapes](https://docs.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm) page has details on the specifications. For this lab, it is recommended that you use an Intel VM.Standard2.4. Click the Select button in the compute shape. This will open the select shape window. To choose the shape, click Intel, then check the box beside VM.Standard2.4, and finally click Select.
+![create nb page1](./images/create_nb_page1.png)
 
-Enter the block volume in GB. The suggested size is 100 Gb or larger.
+
+Select a VM shape. For this lab, it is recommended that you use an Intel VM.Standard3.Flex. Click the **Select** button in the compute shape. This will open the select shape window. To choose the shape, click **Intel**, then check the box beside **VM.Standard3.Flex**. 
+Put 2 for Number of OCPUs, the amount of memory will automatically update proportionately. Then click Select shape. 
+
+![select compute](./images/select_compute_shape.png)
+
+
+Enter the block storage in GB. The suggested size is 100 Gb or larger.
 
 In the networking resources section, select the default networking option.
 
-Click **Create**. 
+Click **Create**.
 
->screenshot - create notebook session page
+![create nb page2](./images/create_nb_page2.png)
 
 >A notebook session is associated with a compute instance, VCN, subnet, and block storage. There are two block storage drives that are associated with a notebook session. There is a boot volume that is initialized each time the notebook session is activated. Any data on the boot volume is lost when the notebook session is deactivated or terminated. There is an additional block storage that is persisted when a notebook session is deactivated, but it is not persisted when a notebook session is terminated. This block volume is mounted in the /home/datascience directory and it is where the JupyterLab notebooks, data files, installed custom software, and other files should be stored.
 
-While the notebook session is being created, you can view the resource status on the console. When the notebook session is up and running, you'll see the status turning into ACTIVE in green. 
+While the notebook session is being created, you can view the resource status on the console. When the notebook session is up and running, you'll see the status turn to ACTIVE. 
 
->screenshot - notebooksession CREATNG 
+![nb session creating](./images/nb_session_CREATING.png)
 
->screenshot - notebooksession ACTIVE
+![nb session ACTIVE](./images/nb_session_ACTIVE.png)
+
 
 Generally it will take few minutes for notebook session turning into ACTIVE. While waiting, please download this [Python notebook](./files/AD_DigitalTwin_notebook.ipynb).
 
