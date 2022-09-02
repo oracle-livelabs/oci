@@ -138,6 +138,7 @@ When the model It will take 10-15 minutes to finish training the model.
 When _Status_ changes from _Creating_ to _Active_, your model is ready to use.
 
 ![Create Model](./images/imageCM6.png " ")
+
 ![Create Model](./images/imageCM7.png " ")
 
 [image]
@@ -151,17 +152,16 @@ To start the process of anomaly detection, click on your model and select _Detec
 ![UI](./images/imageUI1.png " ")
 
 Select *AD_testing.csv* from local filesystem or drag-and-drop the desired file.
-You can leave _Sensitivity_ BLANK for this demo
+You can leave _Sensitivity_ BLANK for this demo. 
+Once the test file is uploaded, click _Detect_.  
 
 ![UI](./images/imageUI2.png " ")
 
-Once the test file is uploaded, click _Detect_. 
+
 
 _____________________________________
 
 Now you can observe the results. 
-
-We select each column to see related anomalies
 
 ![UI](./images/imageUI3.png " ")
 
