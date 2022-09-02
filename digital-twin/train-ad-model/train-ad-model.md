@@ -141,7 +141,7 @@ When _Status_ changes from _Creating_ ...
 
  ... to _Active_,
 
-![Create Model](./images/imageCM7.png " ")
+![Create Model](./images/imageCM7.PNG " ")
 
 your model is ready.
 
