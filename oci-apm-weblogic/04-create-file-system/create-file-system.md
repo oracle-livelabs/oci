@@ -146,7 +146,9 @@ Estimated time: 15 minutes
     >**Note:** If the Cloud Shell is already running but the window is minimized, you can restore the window by clicking the **Restore** icon on the toolbar.
       ![Oracle Cloud console, Menu](images/3-3-2-menu.png " ")
 
+
 2.  If the previous Cloud Shell session is expired, run the oci ce (Container Engine) command that you saved in Lab 3, Task 2, step 5.
+
 
    ![Oracle Cloud console, Cloud Shell](images/3-3-2-cloudshell.png " ")
 

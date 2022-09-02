@@ -6,7 +6,9 @@ In the previous lab, you instrumented the application with an APM java agent, wh
 
 To simplify the application setup process in this workshop, the webpage to instrument (index.html) is located in a Kubernetes pod. You will copy the file from the container, edit the file by injecting the JavaScript, then copy it back into the container.  
 
+
 Please note that these changes will be lost when the pods are recreated. This setup is only to keep the lab steps simple. In the real use cases, you will need the changes preconfigured in the image, or deploy the static content to the shared location so that the changes will be kept when Kubernetes pods are recreated.
+
 
 Estimated time: 5 minutes
 
@@ -20,7 +22,9 @@ Estimated time: 5 minutes
 
 ## Task 1: Copy a webpage from the container
 
+
 1. Run the oci ce (Container Engine) command that you saved in Lab 3, Task 2, step 5.
+
 2. Execute the following command to copy ***index.html*** from the container to the home directory.
 
     ``` bash

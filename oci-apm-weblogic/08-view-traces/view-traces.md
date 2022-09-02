@@ -21,7 +21,9 @@ Estimated time: 10 minutes
 ## Task1:  Open APM Trace Explorer in the Oracle Cloud console
 
 
+
 1. If the Oracle Cloud shell session is expired, run the oci ce (Container Engine) command that you saved in Lab 3, Task 2, step 5.
+
 
 2. From the navigation menu in the Oracle Cloud console, select **Observability & Management** > **Trace Explorer**.
 
