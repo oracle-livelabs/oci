@@ -135,11 +135,15 @@ When the model It will take 10-15 minutes to finish training the model.
 
 ![Create Model](./images/imageCM5.png " ")
 
-When _Status_ changes from _Creating_ to _Active_, your model is ready to use.
+When _Status_ changes from _Creating_ ...
 
 ![Create Model](./images/imageCM6.png " ")
 
+ ... to _Active_,
+
 ![Create Model](./images/imageCM7.png " ")
+
+your model is ready.
 
 ### Task 4 Detect Anomalies with Anomaly Detection (AD) GUI
 
