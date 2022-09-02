@@ -26,6 +26,9 @@ In this workshop, you will:
 * Inspect Monitor Details and History
 * Explore APM Trace Data
 
+  [Oracle Cloud APM tutorial: Synthetic monitoring](https://www.youtube.com/watch?v=31lJYvmT6b0)
+    [](youtube:31lJYvmT6b0)
+
 ### Prerequisites
 
 

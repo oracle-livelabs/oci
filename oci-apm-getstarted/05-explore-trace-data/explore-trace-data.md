@@ -40,7 +40,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud, Trace Explorer](images/1-2-tx.png " ")
 
-2. The **Topology** diagram opens. This is the **Service topology** constructed from the flow of the 17 transactions executed by the Monitor.
+2. The **Topology** diagram opens. This is the **Service topology** constructed from the flow of the 15 traces, or transactions, executed by the Monitor.
 
 	![Oracle Cloud, Trace Explorer](images/1-3-tx.png " ")
 
@@ -54,7 +54,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud, Trace Explorer](images/1-4-tx.png " ")
 
-4. Click the **Operations** button to see the operation level topology.
+4. Click the **Operations** button to see the operation level topology. The operations view shows the flow of individual spans within the services.
 
 	![Oracle Cloud, Trace Explorer](images/1-6-tx.png " ")
 
@@ -194,9 +194,11 @@ Estimated time: 15 minutes
     ![Oracle Cloud, Trace Explorer](images/1-31-tx.png " ")
 
 
-    >**Note:** The root cause of the issue is the lock contention in the database that the update statement is being blocked by another SQL that is doing a select on the same table. That uses a lot of CPU and takes a long time to execute, and is causing the update statement that usually runs in ms while slows down intermittently.       
+    > **Note:** You can further diagnose the issue in the PerfHub and use the Operations Insights service to solve this problem in the database.
 
-    You can further diagnose the issue in the PerfHub and use the Operations Insights service to solve this problem in the database. For more details on the solution at the database, please watch the following video that demonstrates how the contention can be identified and how it can be resolved. In the demo, the issue was resolved by enabling the auto index feature to the autonomous database using the Operations Insights service in Oracle Cloud.
+    Although we do not cover the database side diagnostics in this workshop, the root cause of the issue is the lock contention in the database that the update statement is being blocked by another SQL that is doing a select on the same table. That uses a lot of CPU and takes a long time to execute, and is causing the update statement that usually runs in ms while slows down intermittently. Using Perfhub and/or the Operations Insights service, you can find and resolve this problem.
+
+    For more details on the solution at the database, please watch the following video that demonstrates how the contention can be identified and how it can be resolved. In the video, you can see the issue is resolved by enabling the auto index feature to the autonomous database using the Operations Insights service in Oracle Cloud.
 
     [Demonstration, A New Platform for Multicloud Observability and Management](https://youtu.be/EnsQMOEhWjQ?t=1058)
 
