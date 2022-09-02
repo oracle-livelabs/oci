@@ -141,8 +141,6 @@ When _Status_ changes from _Creating_ to _Active_, your model is ready to use.
 
 ![Create Model](./images/imageCM7.png " ")
 
-[image]
-
 ### Task 4 Detect Anomalies with Anomaly Detection (AD) GUI
 
 The results of Anomaly Detection can be viewed in a number of ways including the AD SDK. Using the AD UI is a visual method.
