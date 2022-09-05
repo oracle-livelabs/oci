@@ -1,11 +1,11 @@
 # (Advanced) Explore Anomaly Detection - Access Anomaly Detection service with REST API 
 
 ## Introduction
-Our anomaly detection services also support to use Command Line Interface (CLI) tool oci and Software Development Kits (SDKs) with different programming languages to make REST API calls to perform model and data operations.
+   Our anomaly detection services also support to use Command Line Interface (CLI) tool oci and Software Development Kits (SDKs) with different programming languages to make REST API calls to perform model and data operations.
 
-In this lab session, we will show you how to set up authentication method in order to use the Python SDK to integrate with our service endpoints;
+   In this lab session, we will show you how to set up authentication method in order to use the Python SDK to integrate with our service endpoints;
 
-You can set up those configurations and execute those codes in the [Oracle Cloud Infrastructure (OCI) Data Science Platform](https://www.oracle.com/artificial-intelligence/data-science/).
+   You can set up those configurations and execute those codes in the [Oracle Cloud Infrastructure (OCI) Data Science Platform](https://www.oracle.com/artificial-intelligence/data-science/).
 
 ### Data Science Service Concepts
 Review the following concepts and terms to help you get started with the Data Science service.
@@ -79,9 +79,8 @@ To know more about API key and config file, please visit [Generating API KEY](ht
 ### Task 2: Activate Data Science Platform and Configuration
 1. Create a Project
 
-Open the navigation menu, and select Data Science under Machine Learning. This will open the Projects page.
+Click navigation icon ![Image alt text](./images/navigation_icon.png) at the top left of page, select **Analytics & AI**, then select **Data Science**. This will open the Projects page.
 
-![OCI menu](./images/oci_menu.png)
 
 ![menu navigator](./images/menu_navigator.png)
 
