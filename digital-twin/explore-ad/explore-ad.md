@@ -57,7 +57,7 @@ Then click the **Add** button.
 ![add api key](./images/add_api_key.png)
 
 
-4.Generate Config File ------ *****TODO: edit screenshot blur the ocid
+4. Generate Config File ------ *****TODO: edit screenshot blur the ocid
 
 After click the Add button, a configuration file window pop up. 
 Copy the values shown on the console, and save in notepad in your local computer, again later it will be used in the OCI Data Science.
