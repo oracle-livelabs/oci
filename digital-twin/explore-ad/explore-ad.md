@@ -147,7 +147,6 @@ When the notebook session is up and running, you'll see the status turn to ACTIV
 
 ![nb session ACTIVE](./images/nb_session_ACTIVE.png)
 
-
 Generally it will take few minutes for notebook session turning into ACTIVE. 
 While waiting, please download this [Python notebook](./files/AD_DigitalTwin_notebook.ipynb).
 
@@ -165,9 +164,9 @@ The right side of the screen contains the workspace. It will have a notebook, te
 A conda environment is a collection of libraries, programs, components and metadata. 
 It defines a reproducible set of libraries that are used in the data science environment. 
 
-Click on "Environment Explorer"
+Click on **Environment Explorer**
 
-![environment explorer button](./images/EnvironmentExplorer button.png)
+![environment explorer button](./images/EnvironmentExplorer_button.png)
 
 
 Search for the "General Machine Learning for CPUs on Python 3.7" Conda environment. 
