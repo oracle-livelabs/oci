@@ -158,7 +158,7 @@ By default, the left side has the file browser open but it can change based on w
 The right side of the screen contains the workspace. It will have a notebook, terminal, console, launcher, Notebook Examples, etc.
 
 >screenshot - JupyterLab
-> ![jupyterlab](./images/jupyterLab.png)
+![jupyterlab](./images/jupyterLab.png)
 
 
 
@@ -169,21 +169,21 @@ It defines a reproducible set of libraries that are used in the data science env
 
 Click on "Environment Explorer"
 
-> ![environment explorer button](./images/EnvironmentExplorer button.png)
+![environment explorer button](./images/EnvironmentExplorer button.png)
 
 
 Search for the "General Machine Learning for CPUs on Python 3.7" Conda environment. 
 Open the details by clicking on the down arrow at the right. 
 Copy the installation command to the clipboard by clicking on the Copy button.
 
->![ds conda](./images/DS conda.png)
+![ds conda](./images/DS conda.png)
 
 
 
 
 Open a terminal window by clicking on **File**, **New** and then **Terminal**.
 
-> ![open terminal](./images/open terminal.png)
+![open terminal](./images/open terminal.png)
 
 
 Paste the command from the clipboard: 
@@ -193,7 +193,7 @@ You will receive a prompt related to what version number you want.
 Press Enter to select the default. 
 Wait for the conda environment to be installed.
 
-> ![conda install terminal](./images/conda install terminal.png)
+![conda install terminal](./images/conda install terminal.png)
 
 This will take about 5 minutes. You can proceed to the next step while the conda pack is installing.
 
