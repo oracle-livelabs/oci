@@ -173,14 +173,14 @@ Search for the "General Machine Learning for CPUs on Python 3.7" Conda environme
 Open the details by clicking on the down arrow at the right. 
 Copy the installation command to the clipboard by clicking on the Copy button.
 
-![ds conda](./images/DS conda.png)
+![ds conda](./images/DS_conda.png)
 
 
 
 
 Open a terminal window by clicking on **File**, **New** and then **Terminal**.
 
-![open terminal](./images/open terminal.png)
+![open terminal](./images/open_terminal.png)
 
 
 Paste the command from the clipboard: 
@@ -190,7 +190,7 @@ You will receive a prompt related to what version number you want.
 Press Enter to select the default. 
 Wait for the conda environment to be installed.
 
-![conda install terminal](./images/conda install terminal.png)
+![conda install terminal](./images/conda_install_terminal.png)
 
 This will take about 5 minutes. You can proceed to the next step while the conda pack is installing.
 
@@ -208,9 +208,9 @@ Run
 
 This will create a new file ~/.oci/config and open up vi editor.
 
-![vi config](./images/vi config.png)
+![vi config](./images/vi_config.png)
 
-![vi empty](./images/empty vi.png)
+![vi empty](./images/empty_vi.png)
 
 Type **i** to enter insert mode.
 
@@ -219,18 +219,18 @@ Copy and paste the content of configuration file created from Task 1: Setup API 
 Update the last TODO line as 
 >_key_file=~/.oci/oci_api_key.pem_
 
-![config insert](./images/config insert.png)
+![config insert](./images/config_insert.png)
 
 Press **Esc** key to exit the insert mode. 
 
 Type **:wq** to save the updates and quit out of vi.
 
-![config save](./images/config save.png)
+![config save](./images/config_save.png)
 
 You can review the ~/.oci/config file by run the command:
 >$ cat ~/.oci/config
 
-![config cat](./images/cat config.png)
+![config cat](./images/cat_config.png)
 
 
 5. Upload Python notebook
@@ -238,7 +238,7 @@ You can review the ~/.oci/config file by run the command:
 If you haven't done so, download this [python notebook](./files/AD_DigitalTwin_notebook.ipynb) which contains the python code snippet for this lab. 
 Upload the notebook to JupyterLab by dragging it to the left panel. 
 
-> ![drag file](./images/drag file.png)
+> ![drag file](./images/drag_file.png)
 
 
 
@@ -248,28 +248,28 @@ Upload the notebook to JupyterLab by dragging it to the left panel.
 
 Click the _AD_DigitalTwin_notebook.ipynb_ to open in a new tab. Choose kernel by clicking the Python kernel, then select generalml_p37_cpu_v1 kernel from the drop-down list.
 
-![select kernel](./images/select kernel_1.png)
+![select kernel](./images/select_kernel_1.png)
  
-![select kernel](./images/select kernel_2.png)
+![select kernel](./images/select_kernel_2.png)
 
 Read through the notebook. When you encounter a chunk of code, click in the cell and press _shift + enter_ to execute it. 
 Or click the run button.
 
-![run button](./images/run button.png)
+![run button](./images/run_button.png)
 
 When the cell is running a [*] will appear in the top left corner of the cell. When it is finished, a number will appear in [ ], for example [1]. 
 
-![code run](./images/code run 1.png)
+![code run](./images/code_run1.png)
 
-![code run](./images/code run 2.png)
+![code run](./images/code_run2.png)
 
 Always make sure that the last command has finished running before running another cell.
 
 Execute the cells in order. If you run into problems and want to start over again, click the **restart** button then click **Restart**. 
 
-![restart kernel](./images/restart kernel 1.png)
+![restart kernel](./images/restart_kernel1.png)
 
-![restart kernel](./images/restart kernel 2.png)
+![restart kernel](./images/restart_kernel2.png)
 
 
 <details>
