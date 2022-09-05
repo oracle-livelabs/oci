@@ -235,9 +235,10 @@ You can review the ~/.oci/config file by run the command:
 5. Add API private key
 
 Run the following command in terminal.
-```
-$ <copy>vi ~/.oci/oci_api_key.pem</copy>
-```
+
+
+<copy>`vi ~/.oci/oci_api_key.pem`</copy>
+
 
 
 Press **i** to enter insert mode.
