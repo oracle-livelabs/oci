@@ -157,9 +157,7 @@ Now that JupyterLab is open.
 By default, the left side has the file browser open but it can change based on what navigation icons are selected on the far left side of the screen. 
 The right side of the screen contains the workspace. It will have a notebook, terminal, console, launcher, Notebook Examples, etc.
 
->screenshot - JupyterLab
 ![jupyterlab](./images/jupyterLab.png)
-
 
 
 3. Install Data Science conda
@@ -234,21 +232,6 @@ You can review the ~/.oci/config file by run the command:
 >$ cat ~/.oci/config
 
 ![config cat](./images/cat config.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 5. Upload Python notebook
