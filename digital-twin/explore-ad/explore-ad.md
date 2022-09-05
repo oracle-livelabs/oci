@@ -237,7 +237,9 @@ You can review the ~/.oci/config file by run the command:
 Run the following command in terminal.
 
 
-<copy>`vi ~/.oci/oci_api_key.pem`</copy>
+```
+<copy>vi ~/.oci/oci_api_key.pem</copy>
+```
 
 
 
