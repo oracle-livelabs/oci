@@ -57,7 +57,7 @@ Then click the **Add** button.
 ![add api key](./images/add_api_key.png)
 
 
-4. Generate Config File ------ *****TODO: edit screenshot blur the ocid
+4. Generate Config File
 
 After click the Add button, a configuration file window pop up. 
 Copy the values shown on the console, and save in notepad in your local computer, again later it will be used in the OCI Data Science.
@@ -206,13 +206,13 @@ Run the following command. This will create a hidden folder _.oci_ in the home d
 Run
 >$ vi ~/.oci/config
 
-This will create a new file ~/.oci/config and open up vi editor.
+This will create a new file ~/.oci/config and open vi editor.
 
 ![vi config](./images/vi_config.png)
 
 ![vi empty](./images/empty_vi.png)
 
-Type **i** to enter insert mode.
+Press **i** to enter insert mode.
 
 Copy and paste the content of configuration file created from Task 1: Setup API Signing Key. 
 
@@ -223,7 +223,7 @@ Update the last TODO line as
 
 Press **Esc** key to exit the insert mode. 
 
-Type **:wq** to save the updates and quit out of vi.
+Type **:wq** to save the updates and quit out of vi editor.
 
 ![config save](./images/config_save.png)
 
@@ -233,12 +233,30 @@ You can review the ~/.oci/config file by run the command:
 ![config cat](./images/cat_config.png)
 
 
-5. Upload Python notebook
+5. Add API private key
+
+Run the following command in terminal.
+>$ vi ~/.oci/oci_api_key.pem
+
+Press **i** to enter insert mode.
+
+Open the _oci_api_key.pem_ that you downloaded from Task 1: Setup API Signing Key in notepad. 
+Copy and Paste the whole content to vi editor. 
+
+![api key](./images/api_private_key.png)
+
+Press **Esc** key to exit the insert mode. 
+
+Type **:wq** to save the updates and quit out of vi editor.
+
+
+
+6. Upload Python notebook
 
 If you haven't done so, download this [python notebook](./files/AD_DigitalTwin_notebook.ipynb) which contains the python code snippet for this lab. 
 Upload the notebook to JupyterLab by dragging it to the left panel. 
 
-> ![drag file](./images/drag_file.png)
+![drag file](./images/drag_file.png)
 
 
 
@@ -257,7 +275,7 @@ Or click the run button.
 
 ![run button](./images/run_button.png)
 
-When the cell is running a [*] will appear in the top left corner of the cell. When it is finished, a number will appear in [ ], for example [1]. 
+When the cell is running, a [*] will appear in the top left corner of the cell. When it is finished, a number will appear in [ ], for example [1]. 
 
 ![code run](./images/code_run1.png)
 
