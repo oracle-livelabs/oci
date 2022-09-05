@@ -21,7 +21,9 @@ Estimated time: 10 minutes
 ## Task 1: Verify the Browser Agent instrumentation in the WineCellar app
 
 
-1. If you are starting a new Oracle Cloud Shell session, run the oci ce (Container Engine) command that you saved in Lab 3, Task 1, step 5.
+
+1. If you are starting a new Oracle Cloud Shell session, run the oci ce (Container Engine) command that you saved in Lab 3, Task 2, step 5.
+
 2. From the Oracle Cloud shell, enter the following command.
 
     ``` bash
@@ -34,7 +36,9 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Cloud Shell](images/6-1-1-cloudshell.png " ")
 
+
    >**Note:** 
+
    - The IP may be different from the last time when you accessed the WinCellar app because the pods are regenerated.
    - If the application is not starting up, run the **kubectl get pods** command and check the status. It may take a few minutes to see the pods in the running state.
 
@@ -56,6 +60,9 @@ Estimated time: 10 minutes
 6.  Verify the Browser Agent JavaScript is in the page source.
 
    ![Oracle Cloud console, Cloud Shell](images/7-1-3-wstore.png " ")
+
+
+    >**Note:** If you do not see the Browser Agent JavaScript in the source, remove the browser cache, or try with a different browser.
 
 7.  Close the page source.  
 

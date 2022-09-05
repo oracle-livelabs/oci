@@ -20,7 +20,9 @@ Estimated time: 5 minutes
 
 ## Task1: Configure the Java Agent configuration file to enable the injection
 
-1. If the Oracle Cloud shell session is expired, run the oci ce (Container Engine) command that you saved in Lab 3, Task 1, step 5.
+
+1. If the Oracle Cloud shell session is expired, run the oci ce (Container Engine) command that you saved in Lab 3, Task 2, step 5.
+
 
 2. Execute the following command to copy **AgentConfig.properties**  from the container to the home directory. Ensure to ***change*** the directory name to the Agent apm-agent-version you have before running the command.
 
