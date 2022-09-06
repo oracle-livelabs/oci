@@ -32,14 +32,14 @@ Log into OCI Cloud Console. Using the Burger Menu on the top left corner, click 
 ![Create Project](./images/imageCP1.png " ")
 
 In the Anomaly Detection Console,
-   - Under  **Comparment**, select the name of the compartment you created 
-   - Select  **Create Project**
+- Under  **Comparment**, select the name of the compartment you created 
+- Select  **Create Project**
 
 ![Create Project](./images/imageCP2.png " ")
 
 In this form,
-    - Select  **AD_Workshop** as the compartment
-    - Type  **AD_Project** as the Name of the project
+- Select  **AD_Workshop** as the compartment
+- Type  **AD_Project** as the Name of the project
 
 Once the details are entered, click the  **Create** Button.
 
@@ -95,7 +95,7 @@ Under _Choose data asset in compartment_, select  **AD_data_asset**. The click *
 ![Create Model](./images/imageCM2.png " ")
 ##
 
-> Parameter Selections
+### Parameter Selections
 
 >**FAP (False Alarm Probability)**
 >FAP stands for False Alarm Probability, which is the likelihood (percentage) that a timestamp is flagged as an anomaly in the anomaly-free training data (data asset). It is calculated at every signal level and then averaged across all signals as the final achieved FAP by our model.
@@ -110,6 +110,7 @@ Under _Choose data asset in compartment_, select  **AD_data_asset**. The click *
 >
 >**Train Fraction Ratio**
 >Train Fraction Ratio specifies the division ratio of the whole training data to be used training and validation. The default value 0.7 or 70% specifies the model to use 70% of the data for training, and the rest 30% is used to produce model performance (validation).
+##
 
 In this demo, set...
 - _FAP_ value as **0.5**
@@ -157,7 +158,7 @@ Once the test file is uploaded, click **Detect**.
 
 ### Results Observation
 
-Let's take a look at the 
+Let's take a look what anomalies Anomaly Detection discovered in the data
 
 ![UI](./images/imageUI3.png " ")
 
