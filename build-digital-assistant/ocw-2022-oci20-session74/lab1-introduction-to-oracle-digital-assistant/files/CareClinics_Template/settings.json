@@ -1,0 +1,19 @@
+{
+  "conversationHistoryEnabled" : false,
+  "insightsEnabled" : true,
+  "intentResultHistoryEnabled" : false,
+  "qnAResultHistoryEnabled" : false,
+  "settings" : {
+    "Multistage_Pipeline" : true,
+    "Verbose_Output" : false,
+    "Result_Size" : 10,
+    "Pipeline_Output_Size" : 100,
+    "botConfig" : [ {
+      "displayName" : "ordsUrl",
+      "name" : "ordsUrl",
+      "description" : "APEX ORDS URL",
+      "type" : "string",
+      "value" : "<ordsUrl>"
+    } ]
+  }
+}

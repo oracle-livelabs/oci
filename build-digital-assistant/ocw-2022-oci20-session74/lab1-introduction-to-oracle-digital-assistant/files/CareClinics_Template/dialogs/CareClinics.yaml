@@ -1,0 +1,119 @@
+main: true
+name: CareClinics
+context:
+  variables:
+    iResult: "nlpresult"
+    theraphy: "string"
+    Doctor: "string"
+    DoctorName: "string"
+    practitionerid: "string"
+    
+states:
+
+########### Define Variables ###############
+
+  setDoctor:
+    component: "System.SetVariable"
+    properties:
+      variable: "Doctor"
+      value:
+      - name: "Becky Campelli"
+        description: "Obstetrician-Gynecologist | St. David's South Austin Medical Center | 901 W Ben White Blvd, Austin, TX 78704"
+        image: "https://blogs.uml.edu/san-sebastian-spain-summer2018/wp-content/uploads/sites/130/2018/07/campelliselfie2-225x300.jpg"
+        practitionerid: "201"
+        action: "Book Appointment"
+      - name: "Saipriya Thirvakadu"
+        description: "Obstetrician-Gynecologist | Austin Oaks Hospital | 1407 W Stassney Ln, Austin, TX 78745"
+        image: "https://avatars0.githubusercontent.com/u/7407822?s=460&u=599793be1a5321930efc55ba6e8af514c8bda201&v=4"
+        practitionerid: "569"
+        action: "Book Appointment"
+      - name: "Chip Baber"
+        description: "Obstetrician-Gynecologist | St. David's South Austin Medical Center | 901 W Ben White Blvd, Austin, TX 78704"
+        image: "https://avatars0.githubusercontent.com/u/32364785?s=400&u=fec66dcd4f9bb39407746f58dfd89d15a29f627e&v=4"
+        practitionerid: "930"        
+        action: "Book Appointment"
+      - name: "Derrick Cameron"
+        description: "Obstetrician-Gynecologist | Austin Oaks Hospital | 1407 W Stassney Ln, Austin, TX 78745"
+        image: "https://avatars0.githubusercontent.com/u/25514773?s=400&u=e93f70360e6bc374eb97985d316293f4916564f9&v=4"
+        practitionerid: "239" 
+        action: "Book Appointment"
+      - name: "Leah Braken"
+        description: "Obstetrician-Gynecologist | Austin Oaks Hospital | 1407 W Stassney Ln, Austin, TX 78745"
+        image: "https://avatars.githubusercontent.com/u/55594402?v=4"
+        practitionerid: "865" 
+        action: "Book Appointment"             
+    transitions: {} 
+
+  setTheraphy:
+    component: "System.SetVariable"
+    properties:
+      variable: "theraphy"
+      value:
+      - name: "Focusing on a single task"
+        description: "Mindfulness allows us to cultivate awareness of the present moment. In this excercise you will focus your attention on an everyday task where your mind usually wanders."
+        image: "https://thesgem.com/wp-content/uploads/2019/11/Screen-Shot-2019-11-20-at-10.16.01-PM-1120x640.png"
+        action: "https://www.youtube.com/watch?v=9rIW4sJPABI"
+      - name: "Sensory awareness"
+        description: "By paying closer attention to physical sensations, we become fully attentive to our direct experiences in the present moment. In this excercise, you will focus on cultivating each of your five senses."
+        image: "https://zero-to-three.s3.amazonaws.com/images/3525/74f357e4-8d6f-4f9c-9c37-90979d07bc0b-original.jpg?1566441293"
+        action: "https://youtu.be/ULJSacYFzzQ"
+      - name: "Deep breathing"
+        description: "Deep breathing helps calm the body and quite the mind. These tools will help ground your energy and anchor you to the present moment even in the face of stress. Best of all, the breath is portable - available whenever and wherever you need to slow down."
+        image: "https://lambourn.org/wp-content/uploads/2019/05/Yoga.jpg"
+        action: "https://www.youtube.com/watch?v=acUZdGd_3Dg"
+      - name: "Overcoming worry"
+        description: "In this excercise you will rationally analyze a fear or worry. As you consider its likelihood the amount of control you might have over the situation, the possible outcomes of the feared scenario and means of coping the fear will dissipate and your coping abilities will improve."
+        image: "https://images.ctfassets.net/awpxl2koull4/4pjfb0ONZeeO8GgG2gMqEM/435a062e09fd774d0f0a026777df49f2/woman-worried-illustrated-main.jpg?fit=fill&w=1920&h=1440"
+        action: "https://www.youtube.com/watch?v=7vpwfTXet-o"
+    transitions: {}
+
+########### System intent ###############
+  intent:
+    component: "System.Intent"
+    properties:
+      variable: "iResult"
+    transitions:
+      actions:
+        unresolvedIntent: "greetings"
+
+ ########### Greetings from Care Clinic ###############
+  greetings:
+    component: "System.CommonResponse"
+    properties:
+      processUserMessage: true
+      metadata:
+        responseItems:        
+        - type: "cards"
+          cardLayout: "vertical"
+          headerText: "Greetings, I am Frank! I am a Digital Assistant for Care Clinics. I can help you connect with the best in-class Doctors and answer your questions..."
+          footerText:
+          cards:
+          - title: "Welcome to Care Clinics"
+            imageUrl: "https://raw.githubusercontent.com/Cloud-Code-Innovate/CodeInnovate-UniversityPlanning-Team-1/main/CARE.png?token=GHSAT0AAAAAABUMJDAC7DWP76IKAAO3UA66YVDSHRA"
+            actions:
+            - label: "Find a Doctor"
+              type: "postback"
+              keyword: "Find Doc"
+              payload:
+                action: "findPatientDetails"   
+            - label: "Tips for Positive Health"
+              type: "postback"
+              keyword: "Mental Health"
+              payload:
+                action: "startTheraphy"                     
+    transitions:
+      actions:
+        textReceived: "intent"
+        
+      
+######## Exit Flow ############ 
+
+  exitFlow:
+    component: "System.CommonResponse"
+    properties:
+      metadata:
+        responseItems:
+          - type: "text"
+            text: "Is there anything else I can help you with?"
+    transitions:
+      return: "done"

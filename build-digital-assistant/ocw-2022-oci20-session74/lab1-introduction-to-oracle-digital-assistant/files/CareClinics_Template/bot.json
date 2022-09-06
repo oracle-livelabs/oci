@@ -1,0 +1,15 @@
+{
+  "type" : "USER",
+  "autoCompleteTrainingStatus" : "NO_DATA",
+  "description" : "Template for Care Clinics",
+  "dialogVersion" : "1.0",
+  "displayName" : "CareClinics_Template",
+  "intentTrainer" : "Sakura",
+  "multilingualMode" : "NATIVE",
+  "name" : "CareClinics_Template",
+  "platformVersion" : "22.04",
+  "primaryLanguageTag" : "en",
+  "requiresAutoCompleteTraining" : false,
+  "trackingId" : "DDE935D3-349F-4B80-8D27-54C81271D0C1",
+  "version" : "1.0"
+}

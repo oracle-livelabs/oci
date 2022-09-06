@@ -1,0 +1,17 @@
+{
+  "botPrompts" : [ ],
+  "customSettings" : {
+    "time" : {
+      "version" : "1.0",
+      "ambiguousDateTimeResolution" : "DEFAULT"
+    }
+  },
+  "entityGazetteers" : [ ],
+  "fuzzyMatch" : false,
+  "multiValue" : false,
+  "name" : "TIME",
+  "promptForDisambiguation" : true,
+  "trackingId" : "5DD0C24F-F487-41EE-ADEB-8B425AD907BB",
+  "type" : "SYSTEM",
+  "validationRules" : [ ]
+}

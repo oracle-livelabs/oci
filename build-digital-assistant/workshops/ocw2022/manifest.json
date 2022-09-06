@@ -1,0 +1,41 @@
+{
+    "workshoptitle": "Modernize and Enhance Legacy Applications with Digital Assistants",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Getting Started",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+        },
+        {
+            "title": "Introduction to Oracle Digital Assistant",
+            "description": "Introduction to Oracle Digital Assistant",
+            "filename": "../../ocw-2022-oci20-session74/lab1-introduction-to-oracle-digital-assistant/introduction.md"
+        },
+        {
+            "title": "Configure Database",
+            "description": "Configure Database",
+            "filename": "../../ocw-2022-oci20-session74/lab2-configure-database/configure-database.md"
+        },
+        {
+            "title": "Design the Skill",
+            "description": "Build intents and entities",
+            "filename": "../../ocw-2022-oci20-session74/lab3-design-the-skill/design-the-skill.md"
+        },
+        {
+            "title": "Personalize the Skill",
+            "description": "Build dialog flow",
+            "filename": "../../ocw-2022-oci20-session74/lab4-personalize-the-skill/personalize-the-skill.md"
+        },
+        {
+            "title": "Expose the Skill",
+            "description": "Test the skill",
+            "filename": "../../ocw-2022-oci20-session74/lab5-expose-the-skill/expose-the-skill.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}
+
