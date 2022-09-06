@@ -200,10 +200,15 @@ This will take about 5 minutes. You can proceed to the next step while the conda
 Open a new terminal window by clicking on **File**, **New** and then **Terminal**.
 
 Run the following command. This will create a hidden folder _.oci_ in the home directory.
->$ mkdir -p ~/.oci<br>
+
+```
+<copy>mkdir -p ~/.oci</copy>
+```
 
 Run
->$ vi ~/.oci/config
+```
+<copy>vi ~/.oci/config</copy>
+```
 
 This will create a new file ~/.oci/config and open vi editor.
 
@@ -227,7 +232,10 @@ Type **:wq** to save the updates and quit out of vi editor.
 ![config save](./images/config_save.png)
 
 You can review the ~/.oci/config file by run the command:
->$ cat ~/.oci/config
+
+```
+<copy>cat ~/.oci/config</copy>
+```
 
 ![config cat](./images/cat_config.png)
 
@@ -241,9 +249,6 @@ Run the following command in terminal.
 <copy>vi ~/.oci/oci_api_key.pem</copy>
 ```
 
-<copy>
-    vi ~/.oci/oci_api_key.pem
-</copy>
 
 Press **i** to enter insert mode.
 
