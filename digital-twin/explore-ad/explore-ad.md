@@ -29,7 +29,7 @@ Review the following concepts and terms to help you get started with the Data Sc
 * A tenancy that is configured to work with the Data Science service.
 
 
-### Task 1: Setup API Signing Key
+## Task 1: Setup API Signing Key
 We need to generate proper authentication configuration (API Signing Key pair) in order to use Python SDK to communicate properly to the services on your behalf.
 
 1. Open User Settings
@@ -76,7 +76,7 @@ key_file=< path to your private keyfile> # TODO
 To know more about API key and config file, please visit [Generating API KEY](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm) and [SDK and CLI Configuration File](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm#SDK_and_CLI_Configuration_File)
 
 
-### Task 2: Activate Data Science Platform and Configuration
+## Task 2: Activate Data Science Platform and Configuration
 1. Create a Project
 
 Click navigation icon ![Image alt text](./images/navigation_icon.png) at the top left of page, select **Analytics & AI**, then select **Data Science**. This will open the Projects page.
@@ -272,7 +272,7 @@ Upload the notebook to JupyterLab by dragging it to the left panel.
 
 
 
-### Task 3 Python SDK Code Snippets -- TODO: update notebook
+## Task 3 Python SDK Code Snippets
 
 1. Start the notebook
 
@@ -318,7 +318,7 @@ Execute the cells in order. If you run into problems and want to start over agai
 
 * **Author** - Jiayuan Yang, - Senior Cloud Engineer
 * **Contributors** -  
-* **Last Updated By/Date** - Jiayuan, August 2022
+* **Last Updated By/Date** - Jiayuan, Sep 2022
 
 
 
