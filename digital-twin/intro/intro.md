@@ -1,4 +1,16 @@
-# Digital Twin 
+# Get Started Digital Twin 
+
+Companies define digital twin based on their business models. In this livelab, we define digital twin is used to detect anomaly of a machinery in the running process. To detect anomaly requires some form of a mathematical model that mimic the physical behavor of the system. The simulation models have been used to identify possible root causes of anomalies on standalone PCs for long time. Cloud technologies have enabled massive amounts of simulations to run on the server. Combing with other cloud techonogiies and MapleSim models, this hands-on lab introduce the refrence architecture to massibly deploy simulation models into OCI as digital twin to generate the training data and identity the root causes of assets
+
+In this workshop, we use the a telehandler simulation model to mimic the real telehandler. We generate training data from the simulation model. Then, we run the simmulation models as the data source and change its parameter to mimic the condition change. The OCI anomaly detection service will detect the anamly events happend in the digital twin and send notification to operator for diagnosis. Further, we can use the dignostic result to modify the control parameter to compensate the behavior of the asset.
+
+Reference Architecture:
+
+![Digital Twin Architecture](./images/achitecture.png)
+
+## MSET-2 
+
+To Do, add to explain the algorithm
 
 ## Introduction
 
@@ -9,7 +21,10 @@ Estimated time: 120 minutes
 
 ## Objectives
 
-TODO: add objectives bullet points here
+1. Understand the refrence architecture to detect anomaly and OCI at high level
+2. Understand the digital twin application at high level
+3. Hands-on experience with OCI services to implement digit twin solution with OCI services and MapleSim
+4. Understand the anomaly detection principle at high level 
 
 
 ## Prerequisites
@@ -18,6 +33,10 @@ TODO: add objectives bullet points here
 2. Additional prerequisites (cloud services) are mentioned per lab
 3. Familiar with Python programming for SDK usage is recommended.
 4. Familiar with Terraform script is recommended.
+5. Familiar machine learning, simulation 
+6. Familiar with asset management and conditioning monitoring
+
+### Log
 
 
 ## Additional Recommended Resources
