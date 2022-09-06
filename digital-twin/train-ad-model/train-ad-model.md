@@ -113,6 +113,8 @@ Under _Choose data asset in compartment_, select  **AD_data_asset**. The click *
 ##
 
 In this demo, set...
+- **AD_Workshop** as the Model _Compartment_
+- **AD_Project** as the _Name_
 - _FAP_ value as **0.5**
 - _Train Fraction Ratio_ as  **0.7** (_default value_)
 
