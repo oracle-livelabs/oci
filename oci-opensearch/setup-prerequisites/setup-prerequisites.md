@@ -96,7 +96,7 @@ In this task, you will create an OCI Compute instance in the public subnet of th
 
 > **Note:** Remember to run the following command or an equivalent one, to give proper permissions to your key.
 ```bash
-<copy>chmod 400 <your_key></copy>
+<copy>chmod 600 <your_key></copy>
 ```
 
 ## Acknowledgements
