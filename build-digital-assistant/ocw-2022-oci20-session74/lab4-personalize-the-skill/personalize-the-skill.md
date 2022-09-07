@@ -603,7 +603,7 @@ You may now **proceed to the next lab**.
 
 * **Author** - Saipriya Thirvakadu, Sr. Cloud Engineer
 * **Contributors**:
-    * Chip Baber, Director, Cloud Engineering
+    * Chip Baber, Director, Cloud Engineering 
 
 * **Last Updated By/Date** - Saipriya Thirvakadu, September 2022
 
