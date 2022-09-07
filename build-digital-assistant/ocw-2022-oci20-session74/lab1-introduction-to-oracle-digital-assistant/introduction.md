@@ -42,10 +42,6 @@ You may now **proceed to the next lab**.
 * **Contributors**:
     * Chip Baber, Director, Cloud Engineering
 
-<<<<<<< HEAD
-* **Last Updated By/Date** - Saipriya Thirvakadu, Aug 2022
-=======
 * **Last Updated By/Date** - Saipriya Thirvakadu, September 2022
->>>>>>> parent of 8b4b62b (Delete build-digital-assistant/ocw-2022-oci20-session74 directory)
 
 
