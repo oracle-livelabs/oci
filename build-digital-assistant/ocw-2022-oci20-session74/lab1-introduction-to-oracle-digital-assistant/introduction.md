@@ -22,11 +22,7 @@ In this lab, you will:
 
 Before we get started:
 
-<<<<<<< HEAD
 - Download the Skill template - <a href="files/CareClinics_Template.zip">download (provide this link to live labs team)</a> 
-=======
-- Download the Skill template - [Download](files/CareClinics_Template.zip)
->>>>>>> parent of 8b4b62b (Delete build-digital-assistant/ocw-2022-oci20-session74 directory)
 
 - Install <a href="https://nodejs.org/en/download/"> NodeJS </a> in your local machine.
 
