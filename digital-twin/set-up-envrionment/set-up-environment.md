@@ -13,7 +13,6 @@ In this session, we will configure OCI tenancy with required IAM resources (comp
 3. 
 
 
-### Task 1 OCI Resource Manager
 
 Resource Manager automates deployment and operations for all Oracle Cloud Infrastructure resources. Using the infrastructure-as-code (IaC) model, the service is based on Terraform, an open source industry standard that lets DevOps engineers develop and deploy their infrastructure anywhere
 
