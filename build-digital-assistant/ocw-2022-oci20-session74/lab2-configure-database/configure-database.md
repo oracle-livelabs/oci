@@ -12,40 +12,40 @@ Estimated lab time: 15 mins
 
 1.  Login to your Oracle Cloud Tenancy and open the side menu.
     
-    ![Welcome to the OCI Dashboard](images/oci-dashboard.png  " ")
+    ![Welcome to the OCI Dashboard](images/oci-login.png  " ")
 
 2.  Navigate Autonomous Transaction Processing.
 
     
-    ![Autonomous Transaction Processing](images/autonomous-database.png  " ")
+    ![Autonomous Transaction Processing](images/navigate-to-autonomous-database.png  " ")
 
 3.  Select the your compartment/root compartment and click **Create an Autonomous Database**.
     
-    ![Create ATP Database](images/initial-create-database.png  " ")
+    ![Create ATP Database](images/select-compartment.png  " ")
 
 4.  Give a prefered Display Name (Ex: CareClinicsDB) and click **Transaction Processing** for the workload type.
     
-    ![Give new Database a preferred Display Name](images/input-display-name.png " ")
+    ![Give new Database a preferred Display Name](images/provide-display-name.png " ")
 
 5.  Create the ADMIN password (Ex:Oracle_12345) for the DB, following the database password requirements. Leave everything else as default.
 
     > *Note:* Make sure to save this password, you will need it later in this lab.
     
-    ![Set Admin Password](images/set-password.png  " ")
+    ![Set Admin Password](images/set-admin-password.png  " ")
 
 6.  Click **Create Autonomous Database**
     
-    ![Create Autonomous Database](images/create-database.png  " ")
+    ![Create Autonomous Database](images/create-autonomous-database.png  " ")
 
 7.  Database provisioning will take about 5 minutes. Once the Lifecycle State is ***Available***, you can continue to the next task.
     
-    ![Database Provisioning](images/database-provisioning.png " ")
+    ![Database Provisioning](images/provision-database.png " ")
 
 ## Task 2: Create a User for Application Development
 
 1. After the instance is provisioned, click on *Database Actions*. 
 
-    ![Database Actions](images/database-actions.png " ")
+    ![Database Actions](images/database-action.png " ")
 
     This will open another browser tab/window. If you have popup blockers on, you may need to allow cloud.oracle.com access to open popup windows or open the popup window manually. The popup window will take you directly to the Database Actions start page logged in as the Admin user.
 
@@ -115,7 +115,7 @@ alter user careclinics quota unlimited on data;
 
 1. Right click on the table name and select REST in the pop up menu then Enable.
 
-![Enable REST](images/enable-rest.png " ")
+![Enable REST](images/enable-rest-endpoint.png " ")
 
 2. The REST Enable Object slider will appear from the right side of the page. We are going to use the defaults for this page but take note and **copy the Preview URL**. This is the URL we will use to access the REST enabled table. When ready, click the Enable button in the lower right of the slider.
 
