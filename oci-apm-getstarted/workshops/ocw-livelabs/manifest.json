@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Get started with Oracle Application Performance Monitoring",
+  "workshoptitle": "Automatic instrument Java microservices on Kubernetes using APM",
 	"help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {

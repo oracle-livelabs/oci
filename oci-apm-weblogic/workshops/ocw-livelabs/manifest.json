@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Monitor Traces for Oracle WebLogic Server on Kubernetes with Oracle Application Performance Monitoring",
+  "workshoptitle": "Monitoring Traces for WebLogic Server Deployed on Kubernetes",
 	"help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {
