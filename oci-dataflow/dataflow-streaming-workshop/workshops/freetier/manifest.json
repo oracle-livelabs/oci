@@ -35,9 +35,9 @@
             "filename": "../../04-execute-predictor/execute-predictor.md"
         },
         {
-            "title": "Lab 5: Miscellaneous",
-            "description": "Miscellaneous",
-            "filename": "../../05-miscellaneous/miscellaneous.md"
+            "title": "Lab 5: Delta Table Operations",
+            "description": "Delta Table Operations",
+            "filename": "../../05-delta-table-operations/delta-table-operations.md"
         },
         {
             "title": "Lab 6: Clean up the workshop environment",
