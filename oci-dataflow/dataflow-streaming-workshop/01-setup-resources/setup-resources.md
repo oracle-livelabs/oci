@@ -8,7 +8,7 @@ Estimated time: 10 minutes
 
 ### Objectives
 
-* Plan and Apply terraform scripts in OCI Resource Manager to provision required resources.
+* Plan and Apply automated terraform scripts in OCI Resource Manager to provision required resources.
 * Verify required resources are created.
 
 ### Prerequisites
@@ -24,53 +24,32 @@ Estimated time: 10 minutes
     * OCI Streampool & Streams
     * OCI Dataflow Application & Runs
 
-## Task1: Create an OCI compartment
-
-1. Open the navigation menu from the top-left corner (aka. hamburger menu) of the Oracle Cloud console and select **Identity & Security** > **Compartments**.
-	![Oracle Cloud console Menu](images/1-1-compartments.png " ")
-2. Click **Create Compartments**
-	![Oracle Cloud console, Create Compartment](images/1-2-compartments.png " ")
-3. Enter the following parameters:
-*	Compartment name: **apmworkshop**
-*	Description: **APM workshop compartment**
-*	Accept the default values for the other fields, and click, **Create Compartment**
-	![Oracle Cloud console, Create Compartment](images/1-3-compartments.png " ")
-*	Verify that your apmworkshop compartment is created in the table
-	![Oracle Cloud console, Create Compartment](images/1-4-compartments.png " ")
-
-## Task2: Create an OKE
-
-1. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, and select **Developer Services** > **Kubernetes Clusters (OKE)**.
-
-   ![Oracle Cloud console, Navigation Menu](images/1-1-menu.png " ")
-
-2. Make sure the **apmworkshop** is selected in the Compartment field, then click **Create cluster**
-
-   ![Oracle Cloud console, Clusters in Compartment](images/1-2-OKE.png " ")
-
-3. Quick Create pane is pre-selected. Keep the default selection and click **Submit**.
-
-   ![Oracle Cloud console, Create cluster](images/1-3-OKE.png " ")
-
-4. Name the cluster as **apmlab-cluser1**. Accept the default setting for other fields and click **Next**.
-
-   ![Oracle Cloud console, Create cluster](images/1-4-OKE.png " ")
-   ![Oracle Cloud console, Create cluster](images/1-5-OKE.png " ")
-
-5. Review the configuration, and click **Create cluster**.
-
-   ![Oracle Cloud console, Create cluster](images/1-6-OKE.png " ")
-
-6. Make sure all verification steps are cleared. Click **Close**.
-
-   ![Oracle Cloud console, Create cluster](images/1-7-OKE.png " ")
-
-7.  This will start to create a cluster, and takes 7 to 10 minutes to complete. While waiting for the creation of the cluster, you can proceed to the next lab to create an APM domain. In Lab 3, we will resume the steps to build the application.
-
-   ![Oracle Cloud console, Create cluster](images/1-8-OKE.png " ")
-
-
-
+## Task1: Create manufacturing stack in Resource Manager Stack Root compartment
+1. Open profile on top right corner and click on username.
+	![Oracle Cloud console Menu](images/user-info.png " ")
+2. Click the link to create stack to provision all necessary resources [![Deploy to Manufacturing Application to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-samples/oracle-dataflow-samples/raw/main/scala/manufacturing/src/resources/manufacturing.zip)
+3. Stack information will show you name of the stack and it is getting created from oracle dataflow samples github.
+   ![Oracle Cloud console, Resource Manager Stack](images/rm-stack.png " ")
+4. Update user ocid variable with value from step 1. ,other variables doesn't need any change
+   ![Oracle Cloud console, Resource Manager Stack](images/update-variables.png " ")
+   ![Oracle Cloud console, Resource Manager Stack](images/update-variables-1.png " ")
+5. Review the information provided and ensure Run apply checkbox is selected and click create.
+   ![Oracle Cloud console, Resource Manager Stack](images/review.png " ")
+6. Creating stack will auto create Apply job which start provisioning resources.
+   ![Oracle Cloud console, Resource Manager Stack](images/rmj.png " ") 
+   
+## Task2: Verify resources are created
+1. Wait for Resource Manager apply job completes, you can watch the logs.
+   ![Oracle Cloud console, Resource Manager Stack](images/rmj-log.png " ")
+   ![Oracle Cloud console, Resource Manager Stack](images/end-of-log.png " ")
+2. Verify apply job status is succeeded.
+   ![Oracle Cloud console, Resource Manager Stack](images/rmj_success.png " ")
+3. Click on succeeded job to see job details and resources.
+   ![Oracle Cloud console, Resource Manager Stack](images/job-details.png " ")
+4. Click on the breadcrums in top left corner , select Governance & Administration and then select Tenancy Explorer.
+   ![Oracle Cloud console, Resource Manager Stack](images/tenancy-explorer.png " ")
+5. Select dataflow-labs compartment and verify resources in the screenshot are available.
+   ![Oracle Cloud console, Resource Manager Stack](images/resources.png " ")
 
 You may now **proceed to the next lab**.
 
