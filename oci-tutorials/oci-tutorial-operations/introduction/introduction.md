@@ -4,7 +4,7 @@
 
 This session on OCI Tutorial - Oracle Cloud Operations covers the fundamentals of operating application workloads in Oracle Cloud and explore some of the basic concepts of Cloud Operations.  We will dive into an automation overview followed by an introduction to Resource Manager, Monitoring, Notifications, Observability & Management (O&M), and Audit. 
 
-### **Duration: XX Hours**
+### **Duration: 2 Hours**
 
 ### Objectives
 
