@@ -275,7 +275,7 @@ bots-node-sdk -v
 bots-node-sdk init carecliniccs --component-name registerpatient 
 </copy>
 ```
- ![](images/4-install.png " ")
+ ![Create component package](images/create-component-package.png " ")
 
 - Now, open the registerpatient.js file under components and replace the contents with the following code: 
 
@@ -373,11 +373,11 @@ npm pack
 </copy>
 ```
 - Go back to the ODA console and create a custom component and add the service as given in the following picture.
-  ![](images/4-createservice.png)
+  ![Create Service](images/create-service.png)
 
 - Go to settings icon in the navigation pane on the left and select the configuration tab. 
 
-  ![](images/4-settings.png)
+  ![Configuration Settings](images/configuration-settings.png)
 
 - Go ahead and update the ordsUrl which you saved in your *Notepad*.
 
@@ -387,7 +387,7 @@ npm pack
   </copy>
   ```
 
-  ![](images/4-ordsurl.png)
+  ![Edit Parameter](images/edit-parameters.png)
 
 - Declare a variable to store the output (Patient ID) from the Custom Component:
 
@@ -428,7 +428,7 @@ npm pack
 - Select *+ Add component* and pick *Display Action Button Message* (under Hot Picks -> Resolve Entities).
 - Pick "registerUserDB" from the drop down under *insert after state*, Uncheck include template comments and select *Insert Component*.
 
-  ![](images/4-resolve.png " ")
+  ![Insert Resolve Entity Ccomponent](images/insert-resolve-entity.png " ")
 
 - Let us declare the variable for *RegisterPatientBag* composite bag entity we created. 
 
