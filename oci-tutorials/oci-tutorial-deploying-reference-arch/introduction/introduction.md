@@ -1,8 +1,8 @@
 # Workshop Overview
 
-## About this Workshop - Deploying Reference Architecture
+## About this Workshop - Deploying Reference Architectures
 
-This session on OCI Tutorial - Deploying Reference Architecture will showcase how to start a 3-Tier application on the OCI console, touching on products such as load balancers, instances, and how these should be set up in the compartment. Join us for a demo-filled step by step. Join us for a technical walkthrough of multiple examples from the reference architecture center, within the Day One and Beyond context. We'll showcase a reference architecture build from start to finish, observing OCI Best Practices and Cloud Adoption Framework along the way, for a practical look at how to apply the information we've discussed so far to RAs and buildout. 
+This session on OCI Tutorial - Deploying Reference Architectures will showcase how to start a 3-Tier application on the OCI console, touching on products such as load balancers, instances, and how these should be set up in the compartment. Join us for a demo-filled step by step. Join us for a technical walkthrough of multiple examples from the reference architecture center, within the Day One and Beyond context. We'll showcase a reference architecture build from start to finish, observing OCI Best Practices and Cloud Adoption Framework along the way, for a practical look at how to apply the information we've discussed so far to RAs and buildout. 
 
 ### **Duration: 2 Hours**
 
