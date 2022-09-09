@@ -34,7 +34,7 @@ Cloud Shell provides:
 * A persistent frame of the Console which stays active as you navigate to different pages of the console
 To get started with Cloud Shell, you’ll need to grant user access to Cloud Shell via an IAM policy. Each service in Oracle Cloud Infrastructure integrates with IAM for authentication and authorization, for all interfaces (the Console, SDK or CLI, and REST API). The following is an example policy to grant access to Cloud Shell:
 
-allow group <GROUP-NAME> to use cloud-shell in tenancy
+allow group <GROUP-NAME> to use cloud-shell in CHANGE BY DAMIEN tenancy
 
 After that, you have to install python in Cloud Shell and download the python scripts that will execute the security and compliance assessments. In order to do that, follow the next steps:
 
