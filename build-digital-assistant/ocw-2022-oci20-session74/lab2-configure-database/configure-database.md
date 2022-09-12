@@ -6,7 +6,7 @@ Estimated lab time: 15 mins
 
 ## Prerequisites
 
-- Download the Patients Data - [Download](files/PATIENT_DATA_TABLE.csv).
+- Download the Patients Data - <a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/PATIENT_DATA_TABLE.csv">download</a>.
 
 ## Task 1: Create Autonomous Transaction Processing Database
 

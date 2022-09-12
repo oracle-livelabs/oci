@@ -32,15 +32,9 @@
             "filename": "../../ocw-2022-oci20-session74/lab5-expose-the-skill/expose-the-skill.md"
         },
         {
-            "title": "Prepare the Skill to send an SMS",
-            "description": "Test the skill",
-            "filename": "../../ocw-2022-oci20-session74/lab6-prepare-skill-to-send-sms/prepare-skill-to-send-sms.md"
-        },
-        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
         }
     ]
 }
-
