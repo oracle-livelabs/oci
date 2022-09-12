@@ -8,9 +8,11 @@ Reference Architecture:
 
 ![Digital Twin Architecture](./images/achitecture.png)
 
-## MSET-2 
+## MSET-2 --- TODO: remove the MSET2 section, only talking about high level ADS using multivairate kernel
 
 To Do, add to explain the algorithm
+
+
 
 ## Introduction
 
@@ -19,12 +21,14 @@ Get hands-on learning with training labs about Oracle cloud solutions. The works
 Estimated time: 120 minutes
 
 
+
 ## Objectives
 
 1. Understand the refrence architecture to detect anomaly and OCI at high level
 2. Understand the digital twin application at high level
 3. Hands-on experience with OCI services to implement digit twin solution with OCI services and MapleSim
 4. Understand the anomaly detection principle at high level 
+
 
 
 ## Prerequisites

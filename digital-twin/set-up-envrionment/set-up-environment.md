@@ -38,6 +38,6 @@ With Object Storage, you can safely and securely store or retrieve data directly
 Object Storage is a regional service and is not tied to any specific compute instances. You can access data from anywhere inside or outside the context of Oracle Cloud Infrastructure.
 
 1. Click the Navigation Menu in the upper left, navigate to **Storage**, and select **Buckets**.
-![Buckets]()
+![Buckets](./images/bucket_navigation.png)
 2. Select the compartments
 3. Open the bucket **ad_bucket**
