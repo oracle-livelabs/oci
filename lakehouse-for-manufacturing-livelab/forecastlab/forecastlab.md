@@ -1,4 +1,4 @@
-# Operational Metrics Monitoring for Manufacturing: Evaluating Yield Forecast using OCI Forecasting Service
+# Evaluate yield forecast using OCI forecasting service
 
 ## Introduction
 
@@ -18,7 +18,7 @@ In this lab, you will Learn:
 ### Prerequisites
 
 This lab assumes you have:
-* An Oracle Free Tier, or Paid Cloud Account
+* An Oracle Cloud Account
 * Additional prerequisites (cloud services) are mentioned per lab
 * Familiar with OCI Policy.
 * The service is now available in OC1- Phoenix region.
@@ -32,9 +32,10 @@ This lab assumes you have:
 
 Download the data sets below from given link.
 
-* Prim\_Load_Yield.csv         \-This contain around 1 year primary data for forecasting.
-* Additional\_DatasetYield.csv \-This is additional data set with 1 more dimension (down time) for forecasting
-[ https://oradocs.oracle.com/documents/folder/FD35DD20C89BC55458C78C4E4F0491AFF2EA62BFF6EA/_Yield_Forecasting](https://oradocs.oracle.com/documents/folder/FD35DD20C89BC55458C78C4E4F0491AFF2EA62BFF6EA/_Yield_Forecasting)
+* prim-load-yield.csv         \-This contain around 1 year primary data for forecasting.
+* additional-datasetyield.csv \-This is additional data set with 1 more dimension (down time) for forecasting
+* Download the [prim-load-yield](files/prim-load-yield.csv).
+* Download the [additional-datasetyield](files/additional-datasetyield.csv).
 
 
 ## Task 2: Upload Forecasting Datasets to Object Store
@@ -143,14 +144,12 @@ From the multiple time series choose A05 from the drop down and you can the resp
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
+* [Oracle Docs](http://docs.oracle.com)
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - Biswanath Nanda, Principal Cloud Architect, Cloud Engineering |
-							 Jyothish Busipalle, Principal Cloud Architect, Cloud Engineering |
-							 Pavan Upadhyay, Principal Cloud Engineer, Cloud Engineering
-
+* **Author**
+    * Biswanath Nanda, Principal Cloud Architect, Cloud Engineering
+    * Jyothish Busipalle, Principal Cloud Architect, Cloud Engineering
+    * Pavan Upadhyay, Principal Cloud Engineer, Cloud Engineering
 * **Last Updated** - September 2022

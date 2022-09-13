@@ -1,4 +1,4 @@
-# Operational Metrics Monitoring for Manufacturing : Evaluating Quality Defects using OCI Vision Service
+# Evaluate quality defects using OCI vision service
 
 ## Introduction
 
@@ -40,9 +40,18 @@ Oracle Cloud Infrastructure (OCI) Vision is an AI service for performing deep-le
 * Build a model to detect the location of custom objects in an image. The output includes the bounding box coordinates for each object found.
 * Custom image classification: Build a model to identify objects and scene-based features in an image.
 
-### **Prerequisites**
+Estimated Time: 30 minutes
 
-* An Oracle Free Tier, or Paid Cloud Account
+### Objectives
+In this workshop, you will:
+
+* Learn how to use OCI Vision service for quality detection using the product output images.
+* Learn how to train an image classification or object detection model through the OCI console
+
+
+### Prerequisites
+
+* An Oracle Cloud Account
 * Additional prerequisites (cloud services) are mentioned per lab
 * Familiar with OCI Policy.
 * Familiar with Python programming for SDK usage is recommended.
@@ -96,7 +105,7 @@ In Choose Model type to train Select **Object detection**.
 **Select Training Data**
  Training datasets can be chosen either from existing Object Storage bucket or create a new data set from the OCI Data Labelling Service. (which we will cover in other Live Labs)
 
- For the purposes of this Live Lab please download the training dataset from the Repo and upload to Object storage.
+ For the purposes of this Live Lab please download the [training dataset](files/ManufacturingLakehouse.jsonl) and upload to Object storage.
 
  For training dataset **Choose existing dataset** and select the **object storage** location of the training dataset and click **Next**.
 
@@ -127,6 +136,8 @@ Once the model completes training, lets test the model.
 
 To test the model, you can choose an image from the local machine or from an object Storage bucket.
 
+For this lab you can download [Images](files/OCE-20220913.zip) and use any of these images for testing Vision model.
+
 ![Image alt text](images/task3-1.png)
 
 As per the model, the results are obtained as seen in the image depending on the training labels as per the requirements using OCI Data Labelling Service.
@@ -142,15 +153,11 @@ As seen from the analysis the AI vision service was successfully able to identif
 
 ## Learn More
 
-
-*(optional - include links to docs, white papers, blogs, etc)*
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [Oracle Docs](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - Biswanath Nanda, Principal Cloud Architect, Cloud Engineering |
-							 Jyothish Busipalle, Principal Cloud Architect, Cloud Engineering |
-							 Pavan Upadhyay, Principal Cloud Engineer, Cloud Engineering
-
+* **Author**
+    * Biswanath Nanda, Principal Cloud Architect, Cloud Engineering
+    * Jyothish Busipalle, Principal Cloud Architect, Cloud Engineering
+    * Pavan Upadhyay, Principal Cloud Engineer, Cloud Engineering
 * **Last Updated** - September 2022

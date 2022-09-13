@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Operational Metrics Monitoring for Manufacturing: Evaluating Yield Forecast using OCI Forecasting Service",
+    "workshoptitle": "Monitore Operational Metrics  for Manufacturing",
     "tutorials": [
         {
             "title": "Introduction",
@@ -12,19 +12,19 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Operational Metrics Monitoring for Manufacturing: Evaluating Yield Forecast using OCI Forecasting Service",
+            "title": "Lab 1: Evaluate yield forecast using OCI forecasting service",
             "description": "Labs that follow the introduction are numbered, starting with Lab 1",
             "filename": "../../forecastlab/forecastlab.md"
         },
         {
-            "title": "Lab 2: Operational Metrics Monitoring for Manufacturing: Evaluating Yield, Equipment OEE using OCI Anomaly Detection",
+            "title": "Lab 2: Evaluate yield, equipment OEE using OCI anomaly detection",
             "description": "Labs that follow the introduction are numbered, starting with Lab 1",
             "filename": "../../anomalydetection/anomalydetection.md"
         },
         {
-            "title": "Lab 3: Operational Metrics Monitoring for Manufacturing : Evaluating Quality Defects using OCI Vision Service",
+            "title": "Lab 3: Evaluate quality defects using OCI vision service",
             "description": "Labs that follow the introduction are numbered, starting with Lab 1",
-            "filename": "../../anomalydetection/anomalydetection.md"
+            "filename": "../../qualitydefects/qualitydefects.md"
         },
         {
             "title": "Need Help?",
