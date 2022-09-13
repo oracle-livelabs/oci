@@ -27,17 +27,21 @@ Estimated lab time: 15 mins
     
     ![Give new Database a preferred Display Name](images/provide-display-name.png " ")
 
-5.  Create the ADMIN password (Ex:Oracle_12345) for the DB, following the database password requirements. Leave everything else as default.
+5. Configure the database as an **Always Free** instance so that you are never charged for these resources.
+
+    ![Configure the database](images/always-free-instance.png " ")
+
+6.  Create the ADMIN password (Ex:Oracle_12345) for the DB, following the database password requirements. Leave everything else as default.
 
     > *Note:* Make sure to save this password, you will need it later in this lab.
     
     ![Set Admin Password](images/set-admin-password.png  " ")
 
-6.  Click **Create Autonomous Database**
+7.  Click **Create Autonomous Database**
     
     ![Create Autonomous Database](images/create-autonomous-database.png  " ")
 
-7.  Database provisioning will take about 5 minutes. Once the Lifecycle State is ***Available***, you can continue to the next task.
+8.  Database provisioning will take about 5 minutes. Once the Lifecycle State is ***Available***, you can continue to the next task.
     
     ![Database Provisioning](images/provision-database.png " ")
 
@@ -45,7 +49,7 @@ Estimated lab time: 15 mins
 
 1. After the instance is provisioned, click on *Database Actions*. 
 
-    ![Database Actions](images/database-action.png " ")
+    ![Database Actions](images/database-actions.png " ")
 
     This will open another browser tab/window. If you have popup blockers on, you may need to allow cloud.oracle.com access to open popup windows or open the popup window manually. The popup window will take you directly to the Database Actions start page logged in as the Admin user.
 
@@ -70,22 +74,11 @@ Estimated lab time: 15 mins
 
     Disable *Authorization Required* toggle.
 
+    Set the **Quota** as *Unlimited*.
+
     Once you are ready, click *Create User* on the bottom of the panel to create the database user.
 
 > **Note:** If you see Error while creating user, revise your password so that it only contains letters and numbers, no characters.
-
-6. From the Database Action menu, select the SQL tile.
-
-    ![Select SQL Tile](images/select-sql-tile.png " ")
-
-7. On the SQL Canvas, copy and paste the following statement and run the script:
-
-```
-<copy>
-alter user careclinics quota unlimited on data;
-</copy>
-```
-![Set quota for the user](images/set-quota-for-user.png " ")
 
 8. After the quota is successfully modified, *sign out* of the page. 
 

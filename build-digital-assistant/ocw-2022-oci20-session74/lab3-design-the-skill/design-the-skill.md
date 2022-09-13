@@ -36,6 +36,16 @@ In this lab you will perform the following tasks:
 
   ![Upload the template](images/upload-the-template.png " ")
 
+6. Open the Skill to update the bot from the console.
+
+  ![Open the Skill](images/open-skill.png " ")
+
+7. Navigate the page to get familar with the Terminology.
+
+  ![Page Navigation](images/page-navigation.png " ")
+
+8. Click on the Intent(leaf icon) within the Skill to get started with your next task. 
+
 ## Task 2: Create and Test an Intent
 Oracle Digital Assistant's underlying natural language processing (NLP) engine doesn't inherently know about the business or task that a skill is supposed to assist with. For the skill to understand what it should react to, you need to define intents and examples (utterances) for how a user would request a specific intent.
 
@@ -185,7 +195,7 @@ In this step, you're going to simplify your development efforts using a composit
   ![Add bag item](images/add-bag-item.png " ")
 9. Enter the Name as *FirstName*, select the type as *Entity* and Entity name as *FirstName* from the drop down.
   ![Add first name to bag](images/add-first-name-to-bag.png " ")
-10. Set the *Prompt for Disambiguation* as *Never* and add the following *prompts*:
+10. Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
 
     ```
     <copy>
@@ -205,7 +215,7 @@ In this step, you're going to simplify your development efforts using a composit
     Name: LastName
     Type: Entity
     Entity Name: LastName
-    Set the *Prompt for Disambiguation* as *Never* and add the following *prompts*:
+    Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
 
     Prompts: 
 
@@ -223,7 +233,7 @@ In this step, you're going to simplify your development efforts using a composit
     Name: PhoneNumber
     Type: Entity
     Entity Name: PhoneNumber
-    Set the *Prompt for Disambiguation* as *Never* and add the following *prompts*:
+    Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
 
     Prompts: 
 
@@ -247,7 +257,7 @@ In this step, you're going to simplify your development efforts using a composit
     Name: StreetAddress
     Type: Entity
     Entity Name: Address
-    Set the *Prompt for Disambiguation* as *Never* and add the following *prompts*:
+    Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
     Prompts: 
 
     ```
@@ -268,7 +278,7 @@ In this step, you're going to simplify your development efforts using a composit
     Name: City
     Type: Entity
     Entity Name: City
-    Set the *Prompt for Disambiguation* as *Never* and add the following *prompts*:
+    Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
     Prompts: 
 
     ```
@@ -285,7 +295,7 @@ In this step, you're going to simplify your development efforts using a composit
     Name: State
     Type: Entity
     Entity Name: State
-    Set the *Prompt for Disambiguation* as *Never* and add the following *prompts*:
+    Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
     Prompts: 
 
     ```
@@ -302,7 +312,7 @@ In this step, you're going to simplify your development efforts using a composit
     Name: Zipcode
     Type: Entity
     Entity Name: Number
-    Set the *Prompt for Disambiguation* as *Never* and add the following *prompts*:
+    Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
     Prompts: 
 
     ```
@@ -318,7 +328,7 @@ In this step, you're going to simplify your development efforts using a composit
 18. Add *+ Bag Item* for Location.<br/>
     Name: Location
     Type: Location
-    Set the *Prompt for Disambiguation* as *Never* and add the following *prompts*:
+    Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
     Prompts: 
 
     ```
@@ -339,7 +349,7 @@ In this step, you're going to simplify your development efforts using a composit
     Type: Entity
     Entity Name: DATE
 
-      ![Composite bag for Time Picker](images/time-picker-composite-bag.png " ")
+      ![Composite bag for Date Picker](images/date-picker-bag.png " ")
 
     Ambiguity Resolution Rule: 
   <br/>
@@ -382,7 +392,7 @@ In this step, you're going to simplify your development efforts using a composit
     </copy>
     ```
 
-> **Note:** Ensure that all the entities are trained.
+> **Note:** On the right side of the page, locate and click the Train. Select *Trainer Ht* and then click *Submit*. Ensure that all the entities are trained.
 
 
 ## Summary

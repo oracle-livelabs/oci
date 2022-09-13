@@ -19,11 +19,28 @@ In this lab you will create a dialog flow by performing the following tasks:
 
 ## Task 1: Test the current dialog flow
 
-1. Go ahead and click the preview button to test the current flow.
+1. Open the dialog flow tab. 
+
+  ![Open Dialog Flow Tab](images/open-dialog-flow.png " ")
+
+2. Navigate the dialog flow tab.
+
+  ![Navigate Dialog Flow](images/navigate-dialog-flow.png " ")
+
+    | Legend | Description |
+    | ----------- | ----------- |
+    | 1 | Validate - Click Validate as you write your dialog flow to check for syntax errors and to apply best practices.|
+    | 2 | Findings - Review all the errors and warnings raised| 
+    | 3 | Train - Allow the skill to recognize user input |
+    | 4 | Preview - Test the bot | 
+    | 5 | Variables - Declare variables with in the dialog flow |
+    | 6 | States - Each state executes a function: rendering a skill response message, authenticating a user, branching the conversation when certain conditions are met, etc| 
+  
+3. Go ahead and click the preview button to test the current flow.
 
   ![Test the current dialog flow](images/test-current-dialog-flow.png " ")
 
-2. Start the conversation by typing *Hi* and observe the states and intents in the conversation tester  window.
+4. Start the conversation by typing *Hi* and observe the states and intents in the conversation tester  window.
 
   ![Initial conversation flow](images/initial-conversation-flow.png " ")
 
@@ -39,7 +56,10 @@ component which
 – Returns bot responses
 – Determines navigation
 
-1. Go ahead and replace *System.intent* component. This will allow you to conditionally direct a conversation to a logical next dialog flow state for each user utterance.  
+1. Scroll through the Dialog flow and find the *intent* component. Go ahead and replace *System.intent* component. This will allow you to conditionally direct a conversation to a logical next dialog flow state for each user utterance.  
+
+![Select System Intent](images/select-system-intent.png " ")
+
 ```
   <copy>
 ########### System intent ###############
@@ -243,8 +263,9 @@ RegisterPatientBag: "RegisterPatientBag"
 
 Custom components are reusable units of custom code that you can call from your skill's dialog flow. In order to register the patients details in the database, we will call the REST API using the NodeJS. 
 
-Follow these steps to install the Oracle Node.js Bots SDK to your local machine.
-  - Open a terminal window.
+1. Follow these steps to install the Oracle Node.js Bots SDK to your local machine.
+  - Open a terminal window in Visual Studio Code or your preferred IDE and run the commands. 
+  ![Visual Studio Code](images/visual-studio-code.png " ")
   - To install Oracle Bots Node.js SDK for global access on your laptop, enter this command:
 
 ```
@@ -277,7 +298,7 @@ bots-node-sdk init carecliniccs --component-name registerpatient
 ```
  ![Create component package](images/create-component-package.png " ")
 
-- Now, open the registerpatient.js file under components and replace the contents with the following code: 
+2. Now, open the registerpatient.js file under components and replace the contents with the following code: 
 
 
 ```
@@ -363,7 +384,7 @@ module.exports = {
     };
 </copy>
 ```
-- Paste the following commands in your terminal
+3. Paste the following commands in your terminal
 
 ```
 <copy>
@@ -372,10 +393,10 @@ npm install
 npm pack
 </copy>
 ```
-- Go back to the ODA console and create a custom component and add the service as given in the following picture.
+4. Go back to the ODA console and create a custom component and add the service as given in the following picture.
   ![Create Service](images/create-service.png)
 
-- Go to settings icon in the navigation pane on the left and select the configuration tab. 
+5. Go to settings icon in the navigation pane on the left and select the configuration tab. 
 
   ![Configuration Settings](images/configuration-settings.png)
 
@@ -387,9 +408,10 @@ npm pack
   </copy>
   ```
 
-  ![Edit Parameter](images/edit-parameters.png)
+  ![Edit Parameter](images/edit-parameters.png " ")
 
-- Declare a variable to store the output (Patient ID) from the Custom Component:
+
+7. Go back to the dialog flow editor in the Skill. Declare a variable to store the output (Patient ID) from the Custom Component:
 
 ```
 <copy>
@@ -397,7 +419,10 @@ npm pack
 </copy>
 ```
 
-- Paste the following YAML code in the dialog flow below *registerPatient*.
+8. Paste the following YAML code in the dialog flow below *registerPatient*.
+
+  ![Register Patient in Database](images/register-patient-in-database.png " ")
+
 
 ```
 <copy>
@@ -423,12 +448,12 @@ npm pack
         textReceived: "intent"
 </copy>
 ```
-7. After registration, the next step for the patient is to select the specialization for which we will use the System.ResolveEntities component.
+9. After registration, the next step for the patient is to select the specialization for which we will use the System.ResolveEntities component.
 
 - Select *+ Add component* and pick *Display Action Button Message* (under Hot Picks -> Resolve Entities).
 - Pick "registerUserDB" from the drop down under *insert after state*, Uncheck include template comments and select *Insert Component*.
 
-  ![Insert Resolve Entity Ccomponent](images/insert-resolve-entity.png " ")
+  ![Insert Resolve Entity Component](images/insert-resolve-entity.png " ")
 
 - Let us declare the variable for *RegisterPatientBag* composite bag entity we created. 
 
@@ -455,7 +480,7 @@ npm pack
         textReceived: intent
 </copy>
 ```
-8. After we select the specialization, we should now select a scheduled date. 
+10. After we select the specialization, we should now select a scheduled date. 
 
 *Note:* ODA cannot display the calendar widget, so we will create custom properties specific to the web channel and add the javascript code to display the calendar widget to the bot deployed on a web page.
 
@@ -502,7 +527,7 @@ npm pack
       next: "selectTime"
 </copy>
 ```
-9. After which Patient needs to select the preferred time slot.
+11. After which Patient needs to select the preferred time slot.
 
 - Declare the variable for *RegisterPatientBag* composite bag entity we created. 
 
@@ -529,7 +554,11 @@ npm pack
 </copy>
 ```
 
-10. Display the list of Doctors to the patients and show an appointment summary report. Here, we will use free marker expressions to show the summary of the appointment.
+12. Display the list of Doctors to the patients and show an appointment summary report. Here, we will use free marker expressions to show the summary of the appointment.
+
+Add the *findDoctor* dialog after the *selectTime* component. 
+
+![Find Doctor Component](images/find-doctor-flow.png " ")
 
 ```
 <copy>
