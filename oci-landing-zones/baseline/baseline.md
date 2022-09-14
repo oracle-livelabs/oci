@@ -56,8 +56,8 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 * Sample Variable Values   
     |Variable|Value|
     |--|--|
-    |Tag cost center|Example_tag_cost_center|
-    |Tag geo location|Example_tag_geo_location|
+    |Tag cost center|`Example_tag_cost_center`|
+    |Tag geo location|`Example_tag_geo_location`|
     |Parent compartment name|LZ_Parent_Demo|
     |Global Resources Control|Check the Box|
     |Break glass user email list|example@test.com|
