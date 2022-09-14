@@ -468,6 +468,20 @@ npm pack
 
 - Update the component as follows:
 
+|Replace| Value|
+|-----|--------|
+| resolveCompositeBagEntity | chooseProvider | 
+| variable: | variable: "Provider" | 
+| nlpResultVariable: | nlpResultVariable: "iResult"  |
+| useFullEntityMatches: true  | *Delete value* |
+| cancelPolicy:|  cancelPolicy: "immediate" |
+| headerText: | *Delete value* |
+| footerText: |  *Delete value* |
+|next: |next: scheduleDate|
+| textReceived: | textReceived: intent|
+
+The code should look like:
+
 ```
 <copy>
 ########### Let the Patient choose the provider ###############
