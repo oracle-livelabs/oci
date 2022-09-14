@@ -30,7 +30,7 @@ Landing Zone Topology Details
     `Hamburger > Developer Services > Resource Manager > Stacks > Create Stack`
 4) Upload the mushop-basic-stack-latest.zip file that was downloaded earlier, and provide a name and description for the stack
 5)	Configure the stack
-  i.	Database Name - You can choose to provide a database name (optional)
+   i.	Database Name - You can choose to provide a database name (optional
   ii.	SSH Public Key - (Optional) Provide a public SSH key if you wish to establish SSH access to the compute node(s).
 6) 
 
