@@ -52,13 +52,14 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 5. Click on Next in the bottom of the page to go to the `2. Configure variables` page.
 
 ## Task 2: Configure Variables
-    
+
+* Variable    
     |Variable|Value|
     |--|--|
     |Tag cost center|Example_tag_cost_center|
     |Tag geo location|Example_tag_geo_location|
 
-* Variable 
+
     * Tag cost center                							example_tag_cost_center
     * Tag geo location               							example_tag_geo_location
     * Parent compartment name        							LZ_Parent_Demo
