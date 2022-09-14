@@ -22,7 +22,7 @@ Prerequisites
 
 Landing Zone Topology Details
 
-![Topology](.//images/Mushop_Topology.png)
+![Topology](.//images/Mushop_Topo.png)
 
 1)	Download the application files from the location https://github.com/oracle-quickstart/oci-cloudnative/releases/latest/download/mushop-basic-stack-latest.zip. 
 2)	Login to Oracle Cloud Infrastructure.
