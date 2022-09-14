@@ -43,9 +43,9 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
 4. In the Stack Information section, enter:
 
-    |Property|Value|
+    |Varibale Name|Value|
     |--|--|
-    |Name|esblz-landing-zone|
+    |Parent compartment name|LZ_Parent_Demo|
     |Description|Enterprise scale baseline landing zone developed by OCI|
     |Create in Compartment| tenancy (root)|
     |Terraform Version| leave the default option if you have the option to select it|
