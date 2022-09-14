@@ -44,11 +44,11 @@ Landing Zone Topology Details
 
 * Verify the Mushop Application Deployment.
 
-![Mushop Dashboard](.//images/Mushop_Application.png)
+![Mushop Application Info](.//images/Mushop_Application.png)
 
 * Verify the Mushop Application Dashboard.
 
-![Mushop Dashboard](.//images/Mushop_Application_URL.png)
+![Mushop DashBoard](.//images/MuShop_Application_URL.png)
 
 ## Task 2: Deployment Resource Management
 
