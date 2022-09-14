@@ -75,11 +75,11 @@ With the use of Terraform, the Resource Manager stack is also responsible for te
 
 Follow these steps to completely remove all provisioned resources:
 
-1) Return to the Oracle Cloud Infrastructure Console
+* Return to the Oracle Cloud Infrastructure Console
     Home > Developer Services > Resource Manager > Stacks
-2) Select the stack created previously to open the Stack Details view
-3) From the Stack Details, select Terraform Actions > Destroy
-4) Confirm the Destroy job when prompted
+* Select the stack created previously to open the Stack Details view
+* From the Stack Details, select Terraform Actions > Destroy
+* Confirm the Destroy job when prompted
 
 The job status will be In Progress while resources are terminated
 Once the destroy job has succeeded, return to the Stack Details page
