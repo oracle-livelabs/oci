@@ -1,8 +1,7 @@
 
 # Intergration of Landing Zone with Mushop Service
 
-In this lab exercise, you will walk through the with the intergation of Landing Zone with the third party microservice.  MuShop represents a showcase of many OCI Cloud Native services as a unified reference application. Mushop is set of micro services which implement e-commerce platforms on the OCI cloud solution and its resources will be used to integrate with the OCI Landing Zone.
-
+In this lab exercise, you will walk through the process of integration of Landing Zone with the third party microservices. MuShop represents a showcase of many OCI Cloud Native services as a unified reference application. Mushop is a set of micro services which implement e-commerce platforms on the OCI solution, and its resources will be used to integrate with the OCI Landing Zone.
 
 Estimated time: 20 minutes
 
@@ -11,7 +10,7 @@ Objectives
 In this lab, you will:
 
     Inspect the resources created by the Landing Zone.
-    Learn the simple intergration of thrid party app with the Landing Zone.
+    Learn the process of intergration of thrid party app with the Landing Zone.
 
 Prerequisites
 
