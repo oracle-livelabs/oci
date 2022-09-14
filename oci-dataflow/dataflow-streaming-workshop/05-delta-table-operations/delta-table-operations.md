@@ -57,6 +57,6 @@ Estimated time: 10 minutes
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
-- **Author** - Sujoy Chowdhury, Senior Principal Product Manager, OCI Data Flow
-- **Contributors** - OCI Data Flow Sivanesh Selvanataraj, Senior Software Engineer, OCI Data Flow
+- **Author** -  Sivanesh Selvanataraj, Senior Software Engineer, OCI Data Flow
+- **Contributors** - Sujoy Chowdhury, Senior Principal Product Manager, OCI Data Flow
 - **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022
