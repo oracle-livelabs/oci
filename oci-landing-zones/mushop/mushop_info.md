@@ -64,8 +64,9 @@ Hamburger > Networking > Virtual Cloud Networks
 Hamburger > Networking > Load Balancers
 ![Load Balancer Info](.//images/MuShop_LB.png)
 
-MuShop_LB
+* Compute Node
 
+![Load Balancer BackEnd](.//images/Mushop_LB_BackEnd.png)
 
 
 ## Task 3: Cleanup
