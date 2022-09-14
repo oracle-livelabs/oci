@@ -16,23 +16,23 @@ In this lab you will be performing the following tasks:
 - Configure the custom component to send out an SMS.
 
 
-## Task 1: Set Up Twilio
-
+## Task 1: Set Up Twilio Account
 
 1. To create a Twilio trial account with your email ID, go to https://www.twilio.com/try-twilio. 
-2.  Enter the required information, and then click Get Started.
+2. Enter the required information, and then click Get Started.
   
   When prompted, enter your mobile phone number (You need to have a verified phone number to get a Twilio number).
 
-  A verification code is sent to your mobile phone. Enter this verification code to add your number as a verified phone number
+  A verification code is sent to your mobile phone. Enter this verification code to add your number as a verified phone number.
 
   ![Secure your Account](images/secure-your-account.png " ")
 
-3. After verification, save the *recovery code* in *Nodepad* and hit the *Finish button*.
+3. After verification, save the *recovery code* in *Notepad* and hit the *Finish button*.
 
   ![Recovery Code](images/recovery-code.png " ")
 
 4. Personalize your experience and hit the *Get Started with Twilio* button.
+  
   ![Personalize your Experience](images/personalize-your-experience.png " ")
 
 5. In the home page, click the *Get a Twilio Phone number* button to obtain a phone number for your twilio account. 
@@ -41,19 +41,21 @@ In this lab you will be performing the following tasks:
 
 6. Now, you will be able to see your Account Info. 
 
-> **Note:** Copy your *Account SID*, *Auth Token* and *Twilio phone number* in your Notepad.
+> **Note:** Copy your *Account SID*, *Auth Token* and *Twilio phone number* in your *Notepad*.
 
  ![Account info](images/account-info.png " ")
 
 ## Task 2: Add a custom component
 
-In this task, we will create a custom component and call the Twilio REST API using NodeJS to send out the appointment details to the patient to their registered mobile number. 
+In this task, we will create a custom component and call the **Twilio REST API** using NodeJS to send out the appointment details to the patient's registered mobile number. 
 
 1. Open the Custom component which you built in Visual Studio Code or any IDE of your choice.
 
 2. Create a new file under the *components* folder and name it as "sms.js". 
 
 3. Paste the following code in the "sms.js" file: 
+
+The component captures appointment details from the bot and passes the summary in the *messagebody* via SMS to the patient's registered mobile number. 
 
   !["Create custom component for sending as sms using Twilio"](images/create-custom-component-for-sending-sms.png " ")
 
@@ -138,7 +140,7 @@ Here is the package which will be created:
 
 ## Task 3: Upload the package in the embedded container
 
-1. Go back to the ODA console and open the Skill you have been working on.
+1. Go back to the *ODA console* and open the *Skill* you have been working on.
 
 2. Navigate to the Custom component section within the Skill and reupload your npm package. 
 
@@ -152,13 +154,13 @@ Here is the package which will be created:
 
   ![Components are now uploaded](images/components-uploaded.png " ")
 
-## Task 4: Add the custom parameters to the Configuration in the settings page
+## Task 4: Add the custom parameters to the Configuration Settings page
 
-1. Navigate to the configuration settings within the Skill. 
+1. Navigate to the *configuration* settings within the Skill. 
 
   ![Configuration settings](images/configuration-settings.png " ")
 
-2. Scroll down to add the custom parameters, add a variable and its value. 
+2. Scroll down to add the *custom parameters*, add a parameters and its value. 
 
   ![Create custom parameter](images/create-custom-parameter.png " ")    
 
@@ -174,7 +176,7 @@ Here is the package which will be created:
 
 ## Task 5: Update the Dialog Flow
 
-1. Go back to dialog flow and add two context variables.
+1. Go back to *dialog flow* and add two context variables.
 
 ```
 <copy>
@@ -211,7 +213,9 @@ Here is the package which will be created:
 
 ![Dialog flow for sending an SMS](images/sms-dialog-flow.png " ")
 
-3. However, the dialog flow is not executed as we did not add a transition step. Now, we will go ahead and update the transition for *apptSummary* component. Updated the transition as follows: 
+3. However, the dialog flow is not executed as we did not add a transition after *apptSummary*. 
+
+Now, we will go ahead and update the transition for *apptSummary* component as follows: 
 
 ```
 <copy>
@@ -222,7 +226,7 @@ Here is the package which will be created:
 
 ![Update transitions](images/update-transitions.png " ")
 
->**Note:** You can verify your dialog flow <a href="files/complete_dialogflow.txt"> here.</a>
+>**Note:** You can verify your completed dialog flow <a href="files/complete_dialogflow.txt"> here</a>.
 
 **Go ahead and test your bot.**    
 
