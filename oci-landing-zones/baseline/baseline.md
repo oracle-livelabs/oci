@@ -46,7 +46,6 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     |Varibale Name|Value|
     |--|--|
     |Parent compartment name|LZ_Parent_Demo|
-    |Description|Enterprise scale baseline landing zone developed by OCI|
     |Create in Compartment| tenancy (root)|
     |Terraform Version| leave the default option if you have the option to select it|
 
