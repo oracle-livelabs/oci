@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This workshop uses OCI Data Flow to run applications with the resources provisioned in Lab 1,Lab2 and Lab3.
+This workshop uses OCI Data Flow to predicts realtime RUL using Apache Spark streaming application with the resources provisioned in Lab 1, Lab 2, Lab 3.
 
-Estimated time: 10 minutes
+Estimated time: 15 minutes
 
 ### Objectives
 
-* Run realtime Machine Learning Prediction in OCI Data Flow
+* Run realtime Machine Learning prediction in OCI Data Flow
 
 ### Prerequisites
 
@@ -18,17 +18,17 @@ Estimated time: 10 minutes
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
-   ![Oracle Cloud console, a](images/object storage menu.png " ")
+   ![Oracle Cloud console, a](images/object%20storage%20menu.png " ")
 
-2. Select dataflow-labs compartment in left side and select dataflow-labs bucket
+2. Select ```dataflow-labs``` compartment in left side and select ```dataflow-labs``` bucket
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
-3. Select object demo.
-   ![Oracle Cloud console, Dataflow](images/demo object.png " ")
+3. Select object ```demo```.
+   ![Oracle Cloud console, Dataflow](images/demo%20object.png " ")
 
-4. Select artifacts object and verify application.conf object is available
-   ![Oracle Cloud console, Dataflow](images/artifacts object.png " ")
+4. Select ```artifacts``` object and verify ```application.conf``` object is available
+   ![Oracle Cloud console, Dataflow](images/artifacts%20object.png" ")
 
 ## Task2: Run Realtime Predictor
 
@@ -36,38 +36,33 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Dataflow](images/dataflow-menu.png " ")
 
-2. Click RealtimeRULPredictor Application.
+2. Click ```RealtimeRULPredictor``` Application.
    ![Oracle Cloud console, Dataflow](images/predictor.png " ")
 
-3. Click Run button on top and click Run again
+3. Click ``Run`` button on top and confirm by clicking ```Run``` again
    ![Oracle Cloud console, Dataflow](images/predictor-run.png " ")
 
 4. Run will be created with ACCEPTED state
 
    ![Oracle Cloud console, Dataflow](images/predictor-run.png " ")
 
-5. After one or two minutes it will be in progress
+5. In 2-3 minutes state of OCI Data Flow run will be moved to IN PROGRESS
 
    ![Oracle Cloud console, Dataflow](images/predictor-progress.png " ")
 
-6. Click Spark UI, Job and Structured Streaming query
-
-   ![Oracle Cloud console, Dataflow](images/simulator-streaming-job.png " ")
-   ![Oracle Cloud console, Dataflow](images/simulator-streaming-query.png " ")
-   ![Oracle Cloud console, Dataflow](images/simulator-streaming-query-detailed.png " ")
 
 ## Task3: Verify delta table and parquet table.
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
-   ![Oracle Cloud console, Object Storage](images/object storage menu.png " ")
+   ![Oracle Cloud console, Object Storage](images/object%20storage%20menu.png " ")
 
 2. Select dataflow-labs compartment in left side and select dataflow-labs bucket
 
    ![Oracle Cloud console, Object Storage](images/object-storage-bucket.png " ")
 
 3. Select object demo.
-   ![Oracle Cloud console, Object Storage](images/demo object.png " ")
+   ![Oracle Cloud console, Object Storage](images/demo%20object.png " ")
 
 4. Predicted RUL DeltaTable and ParquetTable
    ![Oracle Cloud console, Object Storage](images/sinks.png " ")
@@ -102,6 +97,6 @@ Estimated time: 10 minutes
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
-- **Author** - Sujoy Chowdhury, Senior Principal Product Manager,
+- **Author** - Sujoy Chowdhury, Senior Principal Product Manager, OCI Data Flow
 - **Contributors** - OCI Data Flow Sivanesh Selvanataraj, Senior Software Engineer, OCI Data Flow
 - **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022

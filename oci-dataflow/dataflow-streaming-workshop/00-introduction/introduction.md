@@ -6,16 +6,16 @@ One of the most common uses cases of predictive manitenance in manufacturing ind
 Remaining Useful Life (RUL) of equipment.This sample application demonstrates running streaming application with doing 
 machine learning on top of it to predict RUL of equipment.
 
-This budle has set of four spark applications,
-1. RULSurvivalModelTrainer - Offline model trainer for predicting RUL.(Spark Batch)
-2. SensorDataSimulator     - Random sensor data simulator for equipment.(Spark Streaming)
-3. RealtimeRULPredictor    - Realtime RUL Predictor (Spark Streaming)
-4. DeltaTable              - DeltaTable operations on predicted RUL (Spark Batch)
+To demonstrate ,
+1. RULSurvivalModelTrainer - Offline model trainer for predicting Remaining Useful Life using Apache Spark MLlib.
+2. SensorDataSimulator     - Random sensor data simulator for equipment using Apache Spark Structured Streaming.
+3. RealtimeRULPredictor    - Realtime RUL Predictor using Apache Spark Structured Streaming.
+4. DeltaTable              - DeltaTable operations on predicted RUL Apache Spark and DeltaLake.
 
 ### Workshop Architecture
   ![Workshop Architecture](images/manufacturing_app_architecture.png " ")
 
-Estimated Workshop Time: 65 minutes
+Estimated Workshop Time: 120 minutes
 
 ### About Oracle Cloud Infrastructure Data Flow
 Data Flow is a cloud-based serverless platform with a rich user interface. It allows data engineers and data scientists
@@ -41,10 +41,10 @@ In the workshop, you will learn how to create spark batch and streaming applicat
 In this workshop, you will:
 * Create Apache Spark Machine Learning application and execute in OCI Data Flow.
 * Create Apache Spark Structured Streaming applications and execute in OCI Data Flow.
-* Create Apache Spark Batch application with Delta Table operations.  
-* Explore Spark UI for batch and streaming applications.
-* Access Spark driver, executor and application logs in realtime.
-* Integrate with other OCI services such as OCI Streaming, OCI Object Storage, OCI Autonomous Databases, OCI Vault
+* Create Apache Spark Batch application with Delta Table operations in OCI Data Flow. 
+* Explore Spark UI for Apache Spark batch and structued streaming applications in OCI Data Flow.
+* Access Spark driver,executor and application logs in realtime in OCI Data Flow.
+* Integrate with other OCI services such as OCI Streaming, OCI Object Storage, OCI Autonomous Databases, OCI Vault.
 
 ### Prerequisites
 * An Oracle Free Tier with a 30-day free trial or Paid Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported. 
@@ -53,6 +53,6 @@ If you are running the workshop in a Paid Cloud Account, ensure you have the per
 * Oracle Cloud Account Administrator role to manage polices, compartment, usergroup, resource manager.
 
 ## Acknowledgements
-- **Author** - Sujoy Chowdhury, Senior Principal Product Manager,
+- **Author** - Sujoy Chowdhury, Senior Principal Product Manager, OCI Data Flow
 - **Contributors** - OCI Data Flow Sivanesh Selvanataraj, Senior Software Engineer, OCI Data Flow
 - **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022

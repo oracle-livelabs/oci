@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This workshop uses OCI Data Flow to run applications with the resources provisioned in Lab 1.
+This workshop uses OCI Data Flow to run AFT Machine Learning Model to predict Remaining Useful Life (RUL) using Apache Spark applications with the resources provisioned in Lab 1.
 
-Estimated time: 10 minutes
+Estimated time: 20 minutes
 
 ### Objectives
 
-* Run machine learning modelin OCI Data Flow
+* Run machine learning model in OCI Data Flow
 
 ### Prerequisites
 
@@ -18,17 +18,17 @@ Estimated time: 10 minutes
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
-   ![Oracle Cloud console, Dataflow](images/object storage menu.png " ")
+   ![Oracle Cloud console, Dataflow](images/object%20storage%20menu.png " ")
 
-2. Select dataflow-labs compartment in left side and select dataflow-labs bucket
+2. Select ```dataflow-labs``` compartment in left side and select ```dataflow-labs``` object storage bucket
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
-3. Select object demo.
-   ![Oracle Cloud console, Dataflow](images/demo object.png " ")
+3. Click on the object ```demo```.
+   ![Oracle Cloud console, Dataflow](images/demo%20object.png " ")
 
-4. Select artifacts object and verify application.conf object is available
-   ![Oracle Cloud console, Dataflow](images/artifacts object.png " ")
+4. Click ```artifacts``` object and verify ```application.conf``` object is available.
+   ![Oracle Cloud console, Dataflow](images/artifacts%20object.png " ")
 
 ## Task2: Run Machine Learning Model 
 
@@ -36,25 +36,27 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Dataflow](images/dataflow-menu.png " ")
 
-2. Click RULSurvivalModelTrainer Application. 
+2. Click ```RULSurvivalModelTrainer``` OCI Data Flow Application. 
    ![Oracle Cloud console, Dataflow](images/RULSurvivalModelTrainer.png " ")
 
-3. Click Run button on top and click Run again
+3. Click ```Run``` button on top and confirm by clicking ```Run``` again.
    ![Oracle Cloud console, Dataflow](images/RunSurvivalModelTrainer-1.png " ")
    
-4. Run will be created with ACCEPTED state.
+4. OCI Data Flow Run will be created with ACCEPTED state under ```RUNS``` resources.
 
   ![Oracle Cloud console, Dataflow](images/model-accepted.png " ")
 
-5. Click on the run with IN PROGRESS state.
+5. Wait for approximately 2-3 minutes for OCI Data Flow RUN to move from ACCEPTED TO IN PROGRESS state.
+
+6. Click on the run with IN PROGRESS state.
    
   ![Oracle Cloud console, Dataflow](images/model-progress.png " ")
 
-6. Click Spark UI and explore
+6. Click Spark UI to explore Spark UI Options.
 
   ![Oracle Cloud console, Dataflow](images/model-sparkui.png " ")
 
-7. Wait for run to complete
+7. Wait for run to complete, it will take approximately 4-6 minutes.
 
    ![Oracle Cloud console, Dataflow](images/model-succeeded.png " ")
 
@@ -62,24 +64,24 @@ Estimated time: 10 minutes
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
-   ![Oracle Cloud console, Dataflow](images/object storage menu.png " ")
+   ![Oracle Cloud console, Dataflow](images/object%20storage%20menu.png " ")
 
-2. Select dataflow-labs compartment in left side and select dataflow-labs bucket
+2. Select ```dataflow-labs``` compartment in left side and select ```dataflow-labs``` bucket
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
-3. Select object demo.
-   ![Oracle Cloud console, Dataflow](images/demo object.png " ")
+3. Select object ```demo```.
+   ![Oracle Cloud console, Dataflow](images/demo%20object.png " ")
 
-4. Select models object and verify three folder as shown below
+4. Select ```models``` object and verify three folder as shown below
    ![Oracle Cloud console, Dataflow](images/models.png " ")
 
 5. Expand and verify models in parquet file format with associated metadata.
-   ![Oracle Cloud console, Dataflow](images/models.png " ")
+   ![Oracle Cloud console, Dataflow](images/models-expanded.png " ")
    
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
-- **Author** - Sujoy Chowdhury, Senior Principal Product Manager,
+- **Author** - Sujoy Chowdhury, Senior Principal Product Manager,  OCI Data Flow
 - **Contributors** - OCI Data Flow Sivanesh Selvanataraj, Senior Software Engineer, OCI Data Flow
 - **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022

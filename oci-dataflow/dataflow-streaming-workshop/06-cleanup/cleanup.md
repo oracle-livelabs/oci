@@ -21,7 +21,7 @@ Estimated time: 20 minutes
    ![Oracle Cloud console, Dataflow](images/dataflow-menu.png " ")
 
 2. Select dataflow-labs compartment and select Runs.
-   ![Oracle Cloud console, Dataflow](images/runs-compartment.png " ")
+   ![Oracle Cloud console, Dataflow](images/runs_compartment.png " ")
 
 3. Click on RealtimeRULPredictor and click on STOP.
    ![Oracle Cloud console, Dataflow](images/predictor_stopping.png " ")
@@ -44,7 +44,7 @@ Estimated time: 20 minutes
 
 1. From the navigation menu in the Oracle Cloud console, select **Storage** > **Bucket**.
 
-    ![Oracle Cloud, Object Storage](images/object storage menu.png " ")
+    ![Oracle Cloud, Object Storage](images/object%20storage%20menu.png " ")
 
 2. In the **Object Storage Details** page, click **Delete** on dataflow-labs-logs. In the confirmation window, click **Delete**.
 
@@ -83,6 +83,6 @@ Estimated time: 20 minutes
    ![Oracle Cloud, Cloud console](images/destroy_succeeded.png " ")
 
 ## Acknowledgements
-- **Author** - Sujoy Chowdhury, Senior Principal Product Manager,
+- **Author** - Sujoy Chowdhury, Senior Principal Product Manager, OCI Data Flow
 - **Contributors** - OCI Data Flow Sivanesh Selvanataraj, Senior Software Engineer, OCI Data Flow
 - **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022

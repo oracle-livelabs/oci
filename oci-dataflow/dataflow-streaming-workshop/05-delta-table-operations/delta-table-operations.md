@@ -18,14 +18,14 @@ Estimated time: 10 minutes
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
-   ![Oracle Cloud console, a](images/object storage menu.png " ")
+   ![Oracle Cloud console, a](images/object%20storage%20menu.png  " ")
 
 2. Select dataflow-labs compartment in left side and select dataflow-labs bucket
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
 3. Select object demo.
-   ![Oracle Cloud console, Dataflow](images/demo object.png " ")
+   ![Oracle Cloud console, Dataflow](images/demo%20object.png " ")
 
 4. Verify if delta table located in below location
     ![Oracle Cloud console, Object Storage](images/sinks.png " ")
@@ -45,7 +45,7 @@ Estimated time: 10 minutes
 4. Run will be created with ACCEPTED state
    ![Oracle Cloud console, Dataflow](images/RUL_DeltaTable_Accepted.png " ")
    
-5. After one or two minutes it will be in progress
+5. In 2-3 minutes OCI Data Flow run will be moved to IN PROGRESS
 
    ![Oracle Cloud console, Dataflow](images/delta-table-progress.png " ")
 
@@ -57,6 +57,6 @@ Estimated time: 10 minutes
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
-- **Author** - Sujoy Chowdhury, Senior Principal Product Manager,
+- **Author** - Sujoy Chowdhury, Senior Principal Product Manager, OCI Data Flow
 - **Contributors** - OCI Data Flow Sivanesh Selvanataraj, Senior Software Engineer, OCI Data Flow
 - **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022
