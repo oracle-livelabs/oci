@@ -19,5 +19,7 @@ Prerequisites
     User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc).
 
 ## Task 1: Deployment
+
+![Topology](.//images/Mushop_Topology)
 ## Task 2: Verifying
 ## Task 3: Cleanup
