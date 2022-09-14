@@ -54,33 +54,31 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
 ## Task 2: Configure Variables
 
-* Varible 
-        * Tag cost center                		example_tag_cost_center
-        * Tag geo location               		example_tag_geo_location
-        * Parent compartment name        		LZ_Parent_Demo
-        * Global Resources Control
-        * Break glass user email list    		vinay.at.kumar@oracle.com
-        * VCN CIDR block                 		10.0.0.0/16
-        * VCN DNS label                  		vcn
-        * Shared service subnet CIDR block        10.0.6.0/24
-        * Shared service subnet DNS label         shared
-    * Bastion client CIDR block allow list    10.0.0.0/16, 10.0.0.0/24
-    * Bastion subnet CIDR block               10.0.7.0/24
-    * Use FastConnect?                        Check the Box
-    * FastConnect provider  			Microsoft Azure
+* Variable 
+    * Tag cost center                							example_tag_cost_center
+    * Tag geo location               							example_tag_geo_location
+    * Parent compartment name        							LZ_Parent_Demo
+    * Global Resources Control								Check the Box
+    * Break glass user email list    							example@test.com
+    * VCN CIDR block                 							10.0.0.0/16
+    * VCN DNS label                  							vcn
+    * Shared service subnet CIDR block        						10.0.6.0/24
+    * Shared service subnet DNS label         						shared
+    * Bastion client CIDR block allow list    						10.0.0.0/16, 10.0.0.0/24
+    * Bastion subnet CIDR block               						10.0.7.0/24
+    * Use FastConnect?                        						Check the Box
+    * FastConnect provider  								Microsoft Azure
     * FastConnect routing policy		Global
     * Virtual circuit cross connect mappings - customer BGP peering IP           	10.0.0.22/30
     * Virtual circuit cross connect mappings - Oracle BPG peering IP 			10.0.0.21/30
     * Virtual circuit cross connect mappings - customer secondary BGP peering IP	10.0.0.26/30
-    * Virtual circuit cross connect mappings - Oracle secondary BGP peering IP	10.0.0.25/30
-    * Provider service key name							12345
-		
+    * Virtual circuit cross connect mappings - Oracle secondary BGP peering IP		10.0.0.25/30
+    * Provider service key name								12345
+    * Security Admin Email Endpoints    						example@test.com
+    * Budget Admin Email Endpoints    							example@test.com
+    * Network Admin Email Endpoints    							example@test.com
 
-Security Admin Email Endpoints    		vinay.at.kumar@oracle.com
-Budget Admin Email Endpoints    		vinay.at.kumar@oracle.com
-Network Admin Email Endpoints    		vinay.at.kumar@oracle.com
-
-1. Enter Tagging and Compartment Variables
+* Enter Tagging and Compartment Variables
 
     * The tag fields correspond to freeform tags that are applied to resources created within the template. These can be used to identify the cost center and location of the resources. Each resource created is also given a default assigned value for the Description tag.
     * The parent compartment and other compartment name variables are used to rename the compartment structure. This includes the parent level compartment, security, network, and workload-specific compartments.
