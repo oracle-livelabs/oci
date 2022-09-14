@@ -21,5 +21,21 @@ Prerequisites
 ## Task 1: Deployment
 
 ![Topology](.//images/Mushop_Topology.pdf)
+
 ## Task 2: Verifying
+
 ## Task 3: Cleanup
+
+With the use of Terraform, the Resource Manager stack is also responsible for terminating the application.
+
+Follow these steps to completely remove all provisioned resources:
+
+1) Return to the Oracle Cloud Infrastructure Console
+    Home > Developer Services > Resource Manager > Stacks
+2) Select the stack created previously to open the Stack Details view
+3) From the Stack Details, select Terraform Actions > Destroy
+4) Confirm the Destroy job when prompted
+
+The job status will be In Progress while resources are terminated
+Once the destroy job has succeeded, return to the Stack Details page
+Click Delete Stack and confirm when prompted
