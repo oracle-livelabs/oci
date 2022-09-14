@@ -393,6 +393,9 @@ npm install
 npm pack
 </copy>
 ```
+  ![Run commands in the terminal window](images/run-commands-in-terminal-window.png " ")
+
+
 4. Go back to the ODA console and create a custom component and add the service as given in the following picture.
   ![Create Service](images/create-service.png)
 
