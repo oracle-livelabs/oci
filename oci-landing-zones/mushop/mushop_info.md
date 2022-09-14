@@ -56,6 +56,17 @@ Landing Zone Topology Details
 
 ## Task 2: Deployment Resource Management
 
+* VCN Details
+Hamburger > Networking > Virtual Cloud Networks
+![VCN Info](.//images/mushop_vcn_info.png)
+
+* Load Balancer Details
+Hamburger > Networking > Load Balancers
+![Load Balancer Info](.//images/MuShop_LB.png)
+
+MuShop_LB
+
+
 
 ## Task 3: Cleanup
 
