@@ -20,7 +20,7 @@ Prerequisites
 
 ## Task 1: Deployment
 
-![Topology](.//images/Mushop_Topology.pdf)
+![Topology](.//images/Mushop_Topology.png)
 
 ## Task 2: Verifying
 
