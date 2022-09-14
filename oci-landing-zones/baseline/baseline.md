@@ -60,6 +60,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     |Tag geo location|Example_tag_geo_location|
     |Parent compartment name|LZ_Parent_Demo|
     |Global Resources Control|Check the Box|
+    |Break glass user email list|example@test.com|
     |VCN CIDR block|10.0.0.0/16|
     |VCN DNS label|vcn|
     |Shared service subnet CIDR block|10.0.6.0/24|
