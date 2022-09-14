@@ -18,4 +18,6 @@ Prerequisites
     An Oracle Free Tier(Trial), Paid or LiveLabs Cloud Account
     User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc).
 
-## Task 1: Security Resources
+## Task 1: Deployment
+## Task 2: Verifying
+## Task 3: Cleanup
