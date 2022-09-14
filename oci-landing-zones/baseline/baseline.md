@@ -45,7 +45,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
     |Varibale Name|Value|
     |--|--|
-    |Parent compartment name|LZ_Parent_Demo|
+    |Parent compartment name|`LZ_Parent_Demo`|
     |Create in Compartment| tenancy (root)|
     |Terraform Version| leave the default option if you have the option to select it|
 
@@ -58,7 +58,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     |--|--|
     |Tag cost center|`Example_tag_cost_center`|
     |Tag geo location|`Example_tag_geo_location`|
-    |Parent compartment name|LZ_Parent_Demo|
+    |Parent compartment name|`LZ_Parent_Demo`|
     |Global Resources Control|Check the Box|
     |Break glass user email list|example@test.com|
     |VCN CIDR block|10.0.0.0/16|
