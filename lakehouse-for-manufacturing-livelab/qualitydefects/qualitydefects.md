@@ -87,9 +87,9 @@ Follow these steps to create a Project in Vision.
    7. (Optional) Enter a **Description** for the Project. It should help other identify it.
    8. Click **Create Project**.
 
-    ![Image alt text](images/task1-1.png)
-	![Image alt text](images/task1-2.png)
-	![Image alt text](images/task1-3.png)
+    ![OCI Vision Service](images/oci-vision-service.png)
+	![Select project](images/select-project.png)
+	![Create vision project](images/create-vision-project.png)
 
 ## Task 2: Create Custom Model
 
@@ -100,12 +100,12 @@ In Choose Model type to train Select **Object detection**.
 |Object detection | Locates and identifies objects within an image | Select "Object Detection." Objects, confidence score, and highlighted bounding box will all appear under the Results pane. Clicking on one of the labels on the results pane will also highlight where on the image that object was detected. [Reference](https://oracle.github.io/learning-library/oci-library/oci-hol/oci-artificial-intelligence/ai-vision/analyze-vision/images/object-detection.png) |
 
 
-![Image alt text](images/task2-1.png)
+![Create vision model](images/create-vision-model.png)
 
 **Select Training Data**
  Training datasets can be chosen either from existing Object Storage bucket or create a new data set from the OCI Data Labelling Service. (which we will cover in other Live Labs)
 
- For the purposes of this Live Lab please download the [training dataset](files/ManufacturingLakehouse.jsonl) and upload to Object storage.
+ For the purposes of this Live Lab please download the [training dataset](files/ManufacturingLakehouse.json) and upload to Object storage.
 
  For training dataset **Choose existing dataset** and select the **object storage** location of the training dataset and click **Next**.
 
@@ -113,7 +113,7 @@ In Choose Model type to train Select **Object detection**.
 
  Give the model a description (Optional)  to help you find it.
 
- ![Image alt text](images/task2-2.png)
+ ![Select training type](images/select-training-type.png)
 
  **Train Custom Vision Model**
 
@@ -130,19 +130,25 @@ Review the information you provided in the previous steps. You can make any chan
 
 When you want to start training the custom model, click **Create and train**.
 
+![Train vision model](images/train-vision-model.png)
+
+Once the model is trained you can see the different metrics of the model to understand how the model is performing.
+
+![Train model output](images/train-model-output.png)
+
 ## Task 3: Test Vision Model
 
 Once the model completes training, lets test the model.
 
 To test the model, you can choose an image from the local machine or from an object Storage bucket.
 
-For this lab you can download [Images](files/OCE-20220913.zip) and use any of these images for testing Vision model.
+For this lab you can download [Images](https://objectstorage.us-ashburn-1.oraclecloud.com/p/pIfMcMCar5YueWGr8U4k6E62syqJtCfz60x7P1AHjMerjIuSbH_FPsC3CTlwIv18/n/c4u04/b/livelabsfiles/o/labfiles/OCE-20220913.zip) and use any of these images for testing Vision model.
 
-![Image alt text](images/task3-1.png)
+![Select image](images/select-image.png)
 
 As per the model, the results are obtained as seen in the image depending on the training labels as per the requirements using OCI Data Labelling Service.
 
-![Image alt text](images/task3-2.png)
+![Vision model output](images/vision-model-output.png)
 
 **Congrats on completing this Lab**
 

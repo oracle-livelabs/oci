@@ -45,27 +45,27 @@ Follow these steps to upload datasets to object store.
 
 2. Under **Object Storage & Archive Storage**, click **Buckets**.
 
-  ![Image alt text](images/task2-1.png)
+  ![Object Storage](images/object-storage.png)
 
 3. Click **Create Bucket** button. The **Create Bucket** page is displayed.
 
 4. Provide the appropriate bucket name and leave rest as defaults and click **Create**.
 
-  ![Image alt text](images/task2-2.png)
+  ![Bucket Create](images/bucket-create.png)
 
 5. Click on created bucket.
 
 6. Click on **Edit Visibility** button and choose option **Public** and **Save Changes**.
 
-	![Image alt text](images/task2-3.png)
+	![Edit Visibility](images/edit-visibility.png)
 
-	![Image alt text](images/task2-4.png)
+	![Save Changes](images/save-edit-visibility.png)
 
 7. Click on **Upload button** in the bottom of page and choose option **select files**.
 
 8. Browse the forecasting datasets and after selecting click on **Upload** button.
 
-	![Image alt text](images/task2-5.png)
+	![Upload Files](images/file-upload.png)
 
 
 ## Task 3: Create Forecasting Project
@@ -74,7 +74,7 @@ Follow these steps to create Forecasting model.
 1. Select region as **US West (Phoenix)**.
 2. In the console navigation menu, click **Analytics & AI** .
 3. Under **AI services**, click **Forecasting**.
-	![Image alt text](images/task3-1.png)
+	![Forecast Service](images/forecasting-service.png)
 4. From the Forecasting Console page, under **Forecasting**, click **Projects**.
    The **Project List** page is displayed.
 5. Click **Create Project**.
@@ -83,7 +83,7 @@ Follow these steps to create Forecasting model.
 7. Give appropriate Project **Name**.  
 8. (Optional) Enter a **Description** for the Project. It should help other identify it.
 9. Click **Create Project**.
-	 	![Image alt text](images/task3-2.png)
+	 	![Create Project](images/project-create.png)
 
 ## Task 4: Create Data Assets
 Before we can create any forecast we need to create a data asset which is ideally telling the AI Service to use that as the training dataset to create the forecast.
@@ -92,16 +92,16 @@ Follow these steps to upload datasets to object store.
 
 1. From the Forecasting Console page, under **Forecasting**, click **Projects**.
    The **Project List** page is displayed.
-	 	![Image alt text](images/task4-1.png)
+	 	![Project List](images/project-list.png)
 2. Select the project created in previous task.
 3. Choose **Data Assets** from the left and click on **Create data asset** button.
-    ![Image alt text](images/task4-2.png)
+    ![Data Asset](images/create-data-asset.png)
 4. Give appropriate **Data asset Name** , **Bucket name** and select the dataset from the bucket.  
 5. (Optional) Enter a **Description** for the data asset. It should help other identify it.
 6. Click **Create**.
-   ![Image alt text](images/task4-3.png)
+   ![Create Data Asset](images/create-dataasset.png)
 7. Create dataset should appear in the list
-   ![Image alt text](images/task4-4.png)
+   ![Data Asset List](images/data-asset-list.png)
 8. Repeat above process for additional data set as well.
 
 ## Task 5: Create Forecast for data asset created
@@ -111,20 +111,20 @@ In this task we will learn how to create a forecast using the AI Forecasting ser
 Follow these steps to upload datasets to object store.
 
 1. From the project Console page, choose **Forecasts** and click on **Create Forecast** button.
-  ![Image alt text](images/task5-1.png)
+  ![Create Forecast](images/forecast-create.png)
 2. Choose option **Choose existing data asset** and select **Data asset** & **Additional training data asset**which were created  in previous task. Click Next.
-  ![Image alt text](images/task5-2.png)
-	![Image alt text](images/task5-3.png)
+  ![Existing Data Asset](images/existing-data-asset.png)
+	![Additional Data Asset](images/additional-data-asset.png)
 3. Fill **Column Name** & **Data type** for both data assets along with Time **stamp column format**, **Data frequency** & **Time stamp  column name**. Click **Next**.
-  ![Image alt text](images/task5-4.png)
-	![Image alt text](images/task5-5.png)
+  ![Name and Data Type](images/column-data-type1.png)
+	![Name and Data Type](images/column-data-type2.png)
 4. Give appropriate **Forecast name** and choose a **Target variables** (should not be string) from the data asset for forecasting. Fill up the **Forecast horizon** (i.e. Number of time steps into the future for which we want the forecasts) and choose **Is data grouped**? field as Data is grouped for this lab and click **Next**.
-  ![Image alt text](images/task5-6.png)
-	![Image alt text](images/task5-7.png)
+  ![Forecast Details](images/forecasting-details1.png)
+	![Forecast Details](images/forecasting-details2.png)
 5. Review the form and click on **Submit**.
-  ![Image alt text](images/task5-8.png)
+  ![Review and Submit](images/review-submit.png)
 6. Within few minutes the Forecast should appear with status as **Active**.
-  ![Image alt text](images/task5-9.png)
+  ![Forecast Status](images/forecasting-status.png)
 
 ## Task 6: Review Forecasting Model.
 
@@ -133,13 +133,13 @@ Lets look at the forecasting results in this part of the Lab.
 Once training and selecting the best model based on Hyperparameter tuning and ROCV error is done i.e. AUTOML has done its magic you can view the results for each time series.
 
 From the multiple time series choose A05 from the drop down and you can the respective visualizations including the details for the type of algorithm, Preprocessing etc.
-![Image alt text](images/task6-1.png)
-![Image alt text](images/task6-2.png)
-![Image alt text](images/task6-3.png)
-![Image alt text](images/task6-4.png)
-![Image alt text](images/task6-5.png)
-![Image alt text](images/task6-6.png)
-![Image alt text](images/task6-7.png)
+![Forecast Result](images/forecasting-result1.png)
+![Forecast Result](images/forecasting-result2.png)
+![Forecast Result](images/forecasting-result3.png)
+![Forecast Result](images/forecasting-result4.png)
+![Forecast Result](images/forecasting-result5.png)
+![Forecast Result](images/forecasting-result6.png)
+![Forecast Result](images/forecasting-result7.png)
 
 
 ## Learn More
