@@ -234,7 +234,7 @@ Now, we will go ahead and update the transition for *apptSummary* component as f
 
 In this lab, you have learned how to send out an SMS using the Oracle Digital Assistant. 
 
-**Congratulations! You have successfully configured the chatbot which sends on an SMS on behalf of Care Clinics.**
+**Congratulations! You have successfully configured the chatbot which sends out an SMS on behalf of Care Clinics.**
 
 ## Acknowledgements
 
