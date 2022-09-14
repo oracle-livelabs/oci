@@ -54,6 +54,11 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
 ## Task 2: Configure Variables
 
+    |Variable|Value|
+    |--|--|
+    |Tag cost center|example_tag_cost_center|
+    |Tag geo location|example_tag_geo_location|
+    
 * Variable 
     * Tag cost center                							example_tag_cost_center
     * Tag geo location               							example_tag_geo_location
