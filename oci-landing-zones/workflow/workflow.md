@@ -81,8 +81,14 @@ The Workload Admin is the user role responsible for deployment of workload compu
 
 ## Task 3: Deployment
 
+* Before the Start of the Section . Please Gather the  WorkLoad Compartment Name, Application Compartment OCID, Network Compartment Name and Network Compartment OCID from the Lab 2 Deployment. 
 
-Open up Resource Manager service. You can click directly on Resource Manager in the navigation path menu, otherwise, Go back to the main Navigation Menu -> Developer Services -> Resource Manager.
+WorkLoad Compartment Name
+Application Compartment OCID
+Network Compartment Name
+Network Compartment OCID
+
+* Open up Resource Manager service. You can click directly on Resource Manager in the navigation path menu, otherwise, Go back to the main Navigation Menu -> Developer Services -> Resource Manager.
 
 In the stack section, click create stack and choose template as the origin of the Terraform configuration. 
 
