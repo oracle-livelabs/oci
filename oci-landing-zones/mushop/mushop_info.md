@@ -15,7 +15,7 @@ In this lab, you will:
 Prerequisites
 
     An Oracle Free Tier(Trial), Paid or LiveLabs Cloud Account
-    User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc) and Database        Service.
+    User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc) and Database Service.
 
 ## Task 1: Installation
 
