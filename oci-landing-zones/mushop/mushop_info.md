@@ -1,7 +1,7 @@
 
 # Intergration of Landing Zone with Mushop Service
 
-In this lab exercise, you will walk through the with the intergation of Landing Zone with the third party microservice. Mushop is set of micro services which implement e-commerce platforms on the OCI cloud solution and its resources will be used to integrate with the OCI Landing Zone.
+In this lab exercise, you will walk through the with the intergation of Landing Zone with the third party microservice.  MuShop represents a showcase of many OCI Cloud Native services as a unified reference application. Mushop is set of micro services which implement e-commerce platforms on the OCI cloud solution and its resources will be used to integrate with the OCI Landing Zone.
 
 
 Estimated time: 20 minutes
@@ -29,15 +29,26 @@ Landing Zone Topology Details
 * Create a New Stack under the Resource Manager. 
     Hamburger > Developer Services > Resource Manager > Stacks > Create Stack
 * Upload the mushop-basic-stack-latest.zip file that was downloaded earlier, and provide a name and description for the stack
+
 ![Stack Definition](.//images/Mushop_install_1.png)
-*	Configure the stack
+
+* Configure the Varibles for the Stack.
     *	Database Name - You can choose to provide a database name (optional
     *	SSH Public Key - (Optional) Provide a public SSH key if you wish to establish SSH access to the compute node(s).
-* Configure the Varibles for the Stack.
+
 ![Stack Varible Definition](.//images/Mushop_install_2.png)
+
 * Deploy the Stack.
+
 ![Stack Deployment](.//images/Mushop_install_3.png)
 
+* Verify the Mushop Application Deployment.
+
+![Mushop Dashboard](.//images/Mushop_Application.png)
+
+* Verify the Mushop Application Dashboard.
+
+![Mushop Dashboard](.//images/Mushop_Application_URL.png)
 
 ## Task 2: Deployment Resource Management
 
