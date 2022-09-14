@@ -65,21 +65,19 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     |Shared service subnet CIDR block|10.0.6.0/24|
     |Shared service subnet DNS label|shared|
     |Bastion client CIDR block allow list|10.0.0.0/16, 10.0.0.0/24|
+    |Bastion subnet CIDR block|10.0.7.0/24|
+    |Use FastConnect?|Check the Box|
+    |FastConnect provider|Microsoft Azure|
+    |FastConnect routing policy|GLOBAL|
+    |Virtual circuit cross connect mappings - customer BGP peering IP|10.0.0.22/30|
+    |Virtual circuit cross connect mappings - Oracle BPG peering IP|10.0.0.21/30|
+    |Virtual circuit cross connect mappings - customer secondary BGP peering IP|10.0.0.26/30|
+    |Virtual circuit cross connect mappings - Oracle secondary BGP peering IP|10.0.0.25/30|
+    |Provider service key name|12345|
+    |Security Admin Email Endpoints|example@test.com|
+    |Budget Admin Email Endpoints|example@test.com|
+    |Network Admin Email Endpoints|example@test.com|
     
-    
-    * Bastion subnet CIDR block               						10.0.7.0/24
-    * Use FastConnect?                        						Check the Box
-    * FastConnect provider  								Microsoft Azure
-    * FastConnect routing policy		Global
-    * Virtual circuit cross connect mappings - customer BGP peering IP           	10.0.0.22/30
-    * Virtual circuit cross connect mappings - Oracle BPG peering IP 			10.0.0.21/30
-    * Virtual circuit cross connect mappings - customer secondary BGP peering IP	10.0.0.26/30
-    * Virtual circuit cross connect mappings - Oracle secondary BGP peering IP		10.0.0.25/30
-    * Provider service key name								12345
-    * Security Admin Email Endpoints    						example@test.com
-    * Budget Admin Email Endpoints    							example@test.com
-    * Network Admin Email Endpoints    							example@test.com
-
 * Enter Tagging and Compartment Variables
 
     * The tag fields correspond to freeform tags that are applied to resources created within the template. These can be used to identify the cost center and location of the resources. Each resource created is also given a default assigned value for the Description tag.
