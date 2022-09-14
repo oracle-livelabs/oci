@@ -79,11 +79,10 @@ The Workload Admin is the user role responsible for deployment of workload compu
 2. Select the `landing_zone_parent/common-infra/network` compartment to see the created VCN.
 3. Clicking on the `Primary-VCN`, you can modify the provisioned networking resources.
 
-### Load Balancer
+## Task 3: Deployment
 
 
-
-## Task 3: Clean Up 
+## Task 4: Clean Up 
 
 Congratulations, you completed the workshop. You may want to release the cloud resources created through this workshop. We will we use ORM to delete resources managed through Infrastructure As Code/Terraform.
 
