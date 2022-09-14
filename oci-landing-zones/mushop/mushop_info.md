@@ -27,7 +27,7 @@ Landing Zone Topology Details
 *	Download the application files from the location https://github.com/oracle-quickstart/oci-cloudnative/releases/latest/download/mushop-basic-stack-latest.zip. 
 *  Login to Oracle Cloud Infrastructure.
 * Create a New Stack under the Resource Manager. 
-    `Hamburger > Developer Services > Resource Manager > Stacks > Create Stack`
+    Hamburger > Developer Services > Resource Manager > Stacks > Create Stack
 * Upload the mushop-basic-stack-latest.zip file that was downloaded earlier, and provide a name and description for the stack
 *	Configure the stack
    *	Database Name - You can choose to provide a database name (optional
