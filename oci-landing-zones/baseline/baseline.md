@@ -108,8 +108,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
     ![VCN Vars 3](./images/LZ_Stack_Variable_3.png)
 
-5. Enter Monitoring variables to control the alarms and notifications.
-    * The alarms service allows you to recieve email alerts based on event conditions. The Landing Zone enables these notifications for networking, security, and budget related alerts. 
+5. Enter the sample variables for creation of Bastions, Dynamic Routing Gateway(DRG) and Monitoring. 
 
     ![VCN Vars 4](./images/LZ_Stack_Variable_4.png)
     ![VCN Vars 5](./images/LZ_Stack_Variable_5.png)
