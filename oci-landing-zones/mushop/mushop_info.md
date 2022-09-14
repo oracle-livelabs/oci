@@ -42,6 +42,10 @@ Landing Zone Topology Details
 
 ![Stack Deployment](.//images/Mushop_install_3.png)
 
+* Deployment Logs.
+
+![Stack Deployment](.//images/MuShop_Log.png)
+
 * Verify the Mushop Application Deployment.
 
 ![Mushop Application Info](.//images/Mushop_Application.png)
