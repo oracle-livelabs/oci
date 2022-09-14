@@ -57,9 +57,10 @@ In the Stack Information section, enter:
     
     |Variable|Value|
     |--|--|
+    |Name|esblz-landing-zone|
     |Tag cost center| Example_tag_cost_center|
     |Tag geo location| Example_tag_geo_location|
-    
+
 * Variable 
     * Tag cost center                							example_tag_cost_center
     * Tag geo location               							example_tag_geo_location
