@@ -105,7 +105,7 @@ In Choose Model type to train Select **Object detection**.
 **Select Training Data**
  Training datasets can be chosen either from existing Object Storage bucket or create a new data set from the OCI Data Labelling Service. (which we will cover in other Live Labs)
 
- For the purposes of this Live Lab please download the [training dataset](files/ManufacturingLakehouse.json) and upload to Object storage.
+ For the purposes of this Live Lab please download the [training dataset](files/manufacturinglakehouse.json) and upload to Object storage.
 
  For training dataset **Choose existing dataset** and select the **object storage** location of the training dataset and click **Next**.
 
