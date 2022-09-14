@@ -86,6 +86,8 @@ Open up Resource Manager service. You can click directly on Resource Manager in 
 
 In the stack section, click create stack and choose template as the origin of the Terraform configuration. 
 
+![WorkLoad Deployment](.//images/WorkLoad_Template_1.png)
+
 ## Task 4: Clean Up 
 
 Congratulations, you completed the workshop. You may want to release the cloud resources created through this workshop. We will we use ORM to delete resources managed through Infrastructure As Code/Terraform.
