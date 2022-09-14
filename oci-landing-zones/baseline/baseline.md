@@ -98,7 +98,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     * The landing zone provisions a VCN, nat gateway, internet gateway, and shared services subnets. You will need to input cidr blocks and dns labels.
     * The landing zone also provides options for connectivity using an Ipsec tunnel or a Fastconnect connection. In this lab however, it can remain disabled.
 
-    ![VCN Vars](./images/variables-vcn.png)
+    ![VCN Vars 2](./images/LZ_Stack_Variable_2.png)
 
 4. Enter Security variables for Cloud Guard, Vulnerability Scanning Service, VCN Flow Logging, and Audit Logs.
 
@@ -106,15 +106,19 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     * VCN Flow Logs for the provisioned VCN subnets can be viewed in the Logging Analytics Dashboard. You can also enter subnet ocids to log traffic for externally created subnets. Audit Logging can also be enabled using the same variable which enables logging and stores them in an archive bucket.
     * The bastion provides restricted and time-limited access to cloud resources without public-facing endpoints. There are two types of bastion sessions, managed SSH and port forwarding, which depends on the type of target resource. Input the cidr of the bastion subnet as well as the cidr blocks the bastion can connect to.
 
-    ![Security Vars](./images/variables-security.png)
+    ![VCN Vars 3](./images/LZ_Stack_Variable_3.png)
 
 5. Enter Monitoring variables to control the alarms and notifications.
     * The alarms service allows you to recieve email alerts based on event conditions. The Landing Zone enables these notifications for networking, security, and budget related alerts. 
 
-    ![Monitoring Vars](./images/variables-connectivity-monitoring.png)
+    ![VCN Vars 4](./images/LZ_Stack_Variable_4.png)
+    ![VCN Vars 5](./images/LZ_Stack_Variable_5.png)
+    ![VCN Vars 6](./images/LZ_Stack_Variable_6.png)
+    
 
-6. Click on Next in the bottom of the page to proceed to the Review page. After Reviewing the variable values that were modified, click on Create button to create the Stack.
-
+6. Create the Stack.
+    ![VCN Vars 7](./images/LZ_Stack_Variable_7.png)
+    
 
 ## Task 3: Provisioning the Infrastructure
 
