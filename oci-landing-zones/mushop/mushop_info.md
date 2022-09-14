@@ -33,6 +33,7 @@ Landing Zone Topology Details
 *	Configure the stack
     *	Database Name - You can choose to provide a database name (optional
     *	SSH Public Key - (Optional) Provide a public SSH key if you wish to establish SSH access to the compute node(s).
+![Stack Deployment](.//images/Mushop_install_2.png)
 
 ## Task 2: Deployment Resource Management
 
