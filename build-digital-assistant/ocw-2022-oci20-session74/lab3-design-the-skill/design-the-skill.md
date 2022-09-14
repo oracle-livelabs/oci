@@ -171,7 +171,7 @@ Click Create.
  
 5. Repeat the above steps to create another value list for the *Provider*. <br/>
 
-    Name: Provider <br/>
+    Name: **Provider** <br/>
     Configuration: Value List <br/>
     Values: <br/>
     Dermatology	- Dermatology, derma <br/>
@@ -193,7 +193,7 @@ In this step, you're going to simplify your development efforts using a composit
 
 8. Select the *RegisterPatientBag* and add a *+ Bag Item*.
   ![Add bag item](images/add-bag-item.png " ")
-9. Enter the Name as *FirstName*, select the type as *Entity* and Entity name as *FirstName* from the drop down.
+9. Enter the Name as **FirstName**, select the type as *Entity* and Entity name as *FirstName* from the drop down.
   ![Add first name to bag](images/add-first-name-to-bag.png " ")
 10. Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
 
@@ -212,7 +212,7 @@ In this step, you're going to simplify your development efforts using a composit
 
 11. Click the close button.
 12. Add *+ Bag Item* for Last Name.<br/>
-    Name: LastName
+    Name: **LastName**
     Type: Entity
     Entity Name: LastName
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
@@ -230,7 +230,7 @@ In this step, you're going to simplify your development efforts using a composit
     </copy>
     ```
 13. Add *+ Bag Item* for Phone Number.<br/>
-    Name: PhoneNumber
+    Name: **PhoneNumber**
     Type: Entity
     Entity Name: PhoneNumber
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
@@ -254,7 +254,7 @@ In this step, you're going to simplify your development efforts using a composit
     ```
 
 14. Add *+ Bag Item* for Street Address.<br/>
-    Name: StreetAddress
+    Name: **StreetAddress**
     Type: Entity
     Entity Name: Address
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
@@ -275,7 +275,7 @@ In this step, you're going to simplify your development efforts using a composit
       ![Edit Prompt](images/edit-prompt.png " ")
       
 15. Add *+ Bag Item* for City.<br/>
-    Name: City
+    Name: **City**
     Type: Entity
     Entity Name: City
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
@@ -292,7 +292,7 @@ In this step, you're going to simplify your development efforts using a composit
     </copy>
     ```
 16. Add *+ Bag Item* for State.<br/>
-    Name: State
+    Name: **State**
     Type: Entity
     Entity Name: State
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
@@ -309,7 +309,7 @@ In this step, you're going to simplify your development efforts using a composit
     </copy>
     ```
 17. Add *+ Bag Item* for Zipcode.<br/>
-    Name: Zipcode
+    Name: **Zipcode**
     Type: Entity
     Entity Name: Number
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
@@ -326,7 +326,7 @@ In this step, you're going to simplify your development efforts using a composit
     </copy>
     ```
 18. Add *+ Bag Item* for Location.<br/>
-    Name: Location
+    Name: **Location**
     Type: Location
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
     Prompts: 
@@ -345,7 +345,7 @@ In this step, you're going to simplify your development efforts using a composit
 
 - Add *+ Bag Item* for *dateEntry*.
 <br/>
-    Name: dateEntry
+    Name: **dateEntry**
     Type: Entity
     Entity Name: DATE
 
@@ -378,7 +378,7 @@ In this step, you're going to simplify your development efforts using a composit
 
 - Add *+ Bag Item* for *TimePicker*.
 <br/>
-    Name: TimePicker
+    Name: **TimePicker**
     Type: Entity
     Entity Name: TimePicker
 
