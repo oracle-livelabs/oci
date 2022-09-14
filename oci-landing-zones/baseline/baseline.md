@@ -54,7 +54,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
 ## Task 2: Configure Variables
 In the Stack Information section, enter:
-    
+
     |Variable|Value|
     |--|--|
     |Name|esblz-landing-zone|
