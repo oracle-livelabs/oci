@@ -53,23 +53,20 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
 ## Task 2: Configure Variables
 
-* Variable    
+* Sample Variable Values   
     |Variable|Value|
     |--|--|
     |Tag cost center|Example_tag_cost_center|
     |Tag geo location|Example_tag_geo_location|
-
-
-    * Tag cost center                							example_tag_cost_center
-    * Tag geo location               							example_tag_geo_location
-    * Parent compartment name        							LZ_Parent_Demo
-    * Global Resources Control								Check the Box
-    * Break glass user email list    							example@test.com
-    * VCN CIDR block                 							10.0.0.0/16
-    * VCN DNS label                  							vcn
-    * Shared service subnet CIDR block        						10.0.6.0/24
-    * Shared service subnet DNS label         						shared
-    * Bastion client CIDR block allow list    						10.0.0.0/16, 10.0.0.0/24
+    |Parent compartment name|LZ_Parent_Demo|
+    |Global Resources Control|Check the Box|
+    |VCN CIDR block|10.0.0.0/16|
+    |VCN DNS label|vcn|
+    |Shared service subnet CIDR block|10.0.6.0/24|
+    |Shared service subnet DNS label|shared|
+    |Bastion client CIDR block allow list|10.0.0.0/16, 10.0.0.0/24|
+    
+    
     * Bastion subnet CIDR block               						10.0.7.0/24
     * Use FastConnect?                        						Check the Box
     * FastConnect provider  								Microsoft Azure
