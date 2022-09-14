@@ -11,18 +11,31 @@ Objectives
 In this lab, you will:
 
     Inspect the resources created by the Landing Zone.
-    Learn the capabilities and functions of the roles created by the Landing Zone.
+    Learn the simple intergration of thrid party app with the Landing Zone.
 
 Prerequisites
 
     An Oracle Free Tier(Trial), Paid or LiveLabs Cloud Account
-    User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc).
+    User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc) and Database        Service.
 
-## Task 1: Deployment
+## Task 1: Installation
+
+Landing Zone Topology Details
 
 ![Topology](.//images/Mushop_Topology.png)
 
-## Task 2: Verifying
+1)	Download the application files from the location https://github.com/oracle-quickstart/oci-cloudnative/releases/latest/download/mushop-basic-stack-latest.zip. 
+2)	Login to Oracle Cloud Infrastructure.
+3) Create a New Stack under the Resource Manager. 
+    `Hamburger > Developer Services > Resource Manager > Stacks > Create Stack`
+4) Upload the mushop-basic-stack-latest.zip file that was downloaded earlier, and provide a name and description for the stack
+5)	Configure the stack
+  i.	Database Name - You can choose to provide a database name (optional)
+  ii.	SSH Public Key - (Optional) Provide a public SSH key if you wish to establish SSH access to the compute node(s).
+6) 
+
+## Task 2: Deployment Resource Management
+
 
 ## Task 3: Cleanup
 
