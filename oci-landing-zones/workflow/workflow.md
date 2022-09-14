@@ -82,6 +82,10 @@ The Workload Admin is the user role responsible for deployment of workload compu
 ## Task 3: Deployment
 
 
+Open up Resource Manager service. You can click directly on Resource Manager in the navigation path menu, otherwise, Go back to the main Navigation Menu -> Developer Services -> Resource Manager.
+
+In the stack section, click create stack and choose template as the origin of the Terraform configuration. 
+
 ## Task 4: Clean Up 
 
 Congratulations, you completed the workshop. You may want to release the cloud resources created through this workshop. We will we use ORM to delete resources managed through Infrastructure As Code/Terraform.
