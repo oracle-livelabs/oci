@@ -79,6 +79,9 @@ Follow these steps to completely remove all provisioned resources:
     Home > Developer Services > Resource Manager > Stacks
 * Select the stack created previously to open the Stack Details view
 * From the Stack Details, select Terraform Actions > Destroy
+
+![MuShop Delete](.//images/MuShop_Delete.png)
+
 * Confirm the Destroy job when prompted
 
 The job status will be In Progress while resources are terminated
