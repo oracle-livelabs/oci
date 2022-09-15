@@ -112,6 +112,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 6. Create the Stack.
     ![VCN Vars 7](./images/LB_Stack_Info.png)
     
+7. Wait for the atleast ten minutes and then the Stack Jobs Status. 
 
 ## Task 3: Provisioning the Infrastructure
 
