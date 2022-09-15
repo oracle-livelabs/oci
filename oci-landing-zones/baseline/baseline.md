@@ -74,7 +74,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     |Virtual circuit cross connect mappings - Oracle BPG peering IP|10.0.0.21/30|
     |Virtual circuit cross connect mappings - customer secondary BGP peering IP|10.0.0.26/30|
     |Virtual circuit cross connect mappings - Oracle secondary BGP peering IP|10.0.0.25/30|
-    |The BGP ASN of the network at the other end of the BGP session from Oracle. Enter placeholder value for Non-ASN virtual circuits|12345|
+    |Provider service key name|aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee|
     |Security Admin Email Endpoints|example@test.com|
     |Budget Admin Email Endpoints|example@test.com|
     |Network Admin Email Endpoints|example@test.com|
