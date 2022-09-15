@@ -69,7 +69,7 @@ component which
       variable: "iResult"
     transitions:
       actions:
-        unresolvedIntent: "greetings"
+        unresolvedIntent: "unresolvedIntent"
         greetings: "greetings"
         findDoctor: "findPatientDetails"
         positiveHealth: "startTheraphy"
@@ -79,9 +79,9 @@ component which
 
   ![Add component](images/add-component.png " ")
 
-- Now, select *Display text message* from the *Hot Picks*, pick *Greetings* from the drop-down under *insert after state*, uncheck include template comments, and select *Insert Component*.
+- Now, select *Display text message* from the *Hot Picks*, pick *exitFlow* from the drop-down under *insert after state*, uncheck include template comments, and select *Insert Component*.
 
-  ![Display Text](images/display-text.png " ")
+  ![Display Text](images/display-text-after-exitflow.png " ")
 
 - Update the component as follows:
 
@@ -89,18 +89,22 @@ component which
 <copy>
 ########### Unresolved State ###############
   unresolvedIntent:
-    component: "System.Output"
+    component: "System.CommonResponse"
     properties:
-      text: "I don't understand. What do you want to do?"
+      keepTurn: true
+      metadata:
+        responseItems:        
+        - type: "text" 
+          text: "I don't understand. What do you want to do?"
     transitions:
-      return: "intent" 
+      return: "intent"
 
 </copy>
 ```
 3. We will add the dialog flow for *Positive Health* intent. Here we are going to display a card carousel with images, text, and links to redirect to different videos.
 
 - Select *+Add component* and pick *Display Action Button Message* (under User messaging -> Display Multimedia Messages).
-- Pick "unresolved" from the drop-down under *insert after state*, Uncheck include template comments, and select *Insert Component*.
+- Pick "unresolvedIntent" from the drop-down under *insert after state*, Uncheck include template comments, and select *Insert Component*.
 
   ![Add display action button component](images/add-display-action-button-component.png " ")
 

@@ -394,6 +394,7 @@ In this step, you're going to simplify your development efforts using a composit
 
 > **Note:** On the right side of the page, locate and click the Train. Select *Trainer Ht* and then click *Submit*. Ensure that all the entities are trained.
 
+ ![Train the entities](images/train-the-entities.png " ")
 
 ## Summary
 

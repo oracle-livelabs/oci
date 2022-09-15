@@ -84,9 +84,14 @@ Estimated lab time: 15 mins
 
 ## Task 3: Load the data into the Database
 
-1. Login with *CareClinics* and your password and navigate to the SQL tile. 
+1. Login with *CareClinics* and your password and navigate to the SQL tile.
+
+![Sign in with careclinics](images/sign_in_with_careclinics.png " ")
+
+![Select SQL tile](images/select-sql-tile.png " ")
 
 2. We are now ready to load data into the database. For this task, we will use the Data Loading tab in the SQL Worksheet.
+
 
 3. Start by clicking the Data Loading area; the center of the gray dotted-line box. The Upload Data into New Table model will appear.
 
