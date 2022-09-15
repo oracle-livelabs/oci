@@ -87,19 +87,19 @@ The Workload Admin is the user role responsible for deployment of workload compu
    * Network Compartment OCID
 
 * Get the Application Compartment OCID. 
-
+   * Hamburger-->Networking-->Virtual Cloud Networks-->Select the LZ_Parent_Demo Compartent--> Select the Application
 ![cloud guard](.//images/WBLZ_Application_OCID.png)
 
 * Get the Network Compartment OCID.
-
+   * Hamburger-->Networking-->Virtual Cloud Networks-->Select the LZ_Parent_Demo Compartent--> Select the Network 
 ![cloud guard](.//images/WBLZ_Network_Compartment_OCID.png)
 
 * Get the VCN Compartment OCID.
-
+   * Hamburger-->Networking-->Virtual Cloud Networks-->Virtual Cloud Network Details
 ![cloud guard](.//images/WBLZ_VCN_OCID.png)
 
 * Get the NAT Gateway OCID.
-
+   * Hamburger-->Networking-->Virtual Cloud Networks-->Select the LZ_Parent_Demo Compartent--> Select the NAT Gateway 
 ![cloud guard](.//images/WBLZ_Nat_GW_OCID.png)
 
 
