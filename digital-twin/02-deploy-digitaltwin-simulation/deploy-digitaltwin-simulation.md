@@ -29,10 +29,11 @@ OCI cloud shell is a web browser-based terminal accessible from the Oracle Cloud
 The deployment file is under [file folder](https://github.com/tonyora/oci/blob/main/digital-twin/02-deploy-digitaltwin-simulation/file/digitaltwin.yaml)
 
 open the file and copy the content
+![Deployment Content](./images/deployment-file.png " ")
 
 2. Create the deployment file. 
 Use command "touch deployment.yaml" to create the deploymnet.yaml file
-![Create Deployment](./images/create-deployment.png)
+![Create Deployment](./images/create-deployment.png" ")
 
 
 3. Use vi to save deployment file
@@ -42,6 +43,7 @@ Use command "vi deployment.yaml" open the newly created deploymnet file, copy th
 4. deploy the application to OKE. 
 On the cloud shell console, run the following command to deploy the application.
 kubectl apply -f deployment.yaml 
+![!Kube Apply](./images/kube-apply.png " ")
 
 5. Get the public IP address
 The deploymnet may take a few minutes to finish. We can run the kubectl command to get the result.
