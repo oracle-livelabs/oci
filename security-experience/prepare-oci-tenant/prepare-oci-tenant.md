@@ -138,19 +138,19 @@ The authenticated database user is only permitted access if the schema is REST e
 
 4.	Once the Autonomous Database status is set to green and ACTIVE, click on Database Actions.
 
-![](./images/ADB4.png " ")
+![](./images/ADB4.png "Database Actions")
 
 
 
 5.	Click on SQL box, under Development section.
 
-![](./images/ADB5.png " ")
+![](./images/ADB5.png "Development-SQL")
 
 
 
 6.	Web SQL Developer will launch, and you will be able to run SQL queries to create users and tables.
 
-  ![](./images/ADB6.png " ")
+  ![](./images/ADB6.png "SQL Developer")
 
 
 
@@ -171,19 +171,19 @@ The authenticated database user is only permitted access if the schema is REST e
 
 8. Enable REST for the new created schema SECASSESSMENT. To do that, go to the Autonomous Database dashboard, click Database Actions and click DATABASE USERS under the section Administration.
 
-![](./images/ADB7.png " ")
+![](./images/ADB7.png "Database Users")
 
 
 
 9. You will be able to see all users in the Autonomous Database. Click in the menu the recently created user SECASSESSMENT and select Enable REST:
 
-![](./images/ADB8.png " ")
+![](./images/ADB8.png "Enable REST")
 
 
 
 10. A window will prompt, you can leave default values and click REST Enable User:
 
-![](./images/ADB9.png " ")
+![](./images/ADB9.png "REST Enable user ")
 
 
 
@@ -233,40 +233,40 @@ Click in Open in new tab, you will have to enter the credentials for SECASSESSME
 Proceed to OCI console to perform the next steps:
 
 1. On the Autonomous Database dashboard, click on SecAssessments under Instance Name on APEX Instance section:
-    ![](./images/apex1.png " ")
+    ![](./images/apex1.png "APEX")
 
 
 2. Click launch APEX
 
-    ![](./images/apex2.png " ")
+    ![](./images/apex2.png "Launch APEX")
 
 3.	The log in page for APEX will be prompted and you need to enter the ADMIN password of your Autonomous Database to log in:
 
-    ![](./images/apex3.png " ")
+    ![](./images/apex3.png "ADMIN Password")
 
 4. Create your workspace by clicking Create Workspace, with Database User SECASSESSMENT and corresponding password, Workspace Name OCISECURITYCENTER.
 
-    ![](./images/apex4.png " ")
+    ![](./images/apex4.png "Create Workspace")
 
 5. Sign out of Administration Services and sign in to OCISECURITYCENTER to begin building applications. Click Sign Out:
 
-    ![](./images/apex5.png " ")
+    ![](./images/apex5.png "Sign Out")
 
 6. Sign in with the following credentials:
 
-    ![](./images/apex6.png " ")
+    ![](./images/apex6.png "Sign In")
 
 7. Before you get started, you have to set your APEX account password. Click Set APEX Account Password, write your Email Address, a new password and click Apply Changes:
 
-    ![](./images/apex7.png " ")
+    ![](./images/apex7.png "Apply changes")
 
 8. Download the packaged APEX application from the Github repository: TODO  
 
 9. Click App Builder and Import.
 
-    ![](./images/apex8.png " ")
+    ![](./images/apex8.png "App Builder")
 
-    ![](./images/apex9.png " ")
+    ![](./images/apex9.png "Import")
 
 10. Select Database Application, Page or Component Export and drag and drop the provided zip file: OCISecurityCenter.zip. Click Next.
 
