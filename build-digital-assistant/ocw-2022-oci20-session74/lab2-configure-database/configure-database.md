@@ -57,7 +57,7 @@ Estimated lab time: 15 mins
     
     ![Launch pad for database actions](images/database-actions-launchpad.png " ")
 
-    If it does not, you will be directed to a login page. Sign in with the database instance's default administrator account, Username - ADMIN with the admin password you specified (Ex: Oracle_12345) when creating the database. Click Sign in.
+    If it does not, you will be directed to a login page. Sign in with the database instance's default administrator account, Username - ADMIN with the admin password you specified when creating the database. Click Sign in.
 
 3. First, we want to create a database schema for our tables and data. We do this by creating a database user. To create a database user, we start by clicking the Database Actions Menu in the upper left of the page, then clicking Database Users in the Administration List. It is not good practice to use SYS or SYSTEM users to create an application's tables, and neither is it good practice to use the ADMIN account to create applications.
 
