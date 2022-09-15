@@ -128,14 +128,14 @@ After the script is completely executed, and you loaded the CSV file in your Aut
 
   *Note:* If you want to re-run the scripts and reload the tables, before running the curl command again, you need to empty the tables first in the SQL tool. For this run the following command then the “select” to verify it’s empty:
 
-    ````
-    truncate table OCISECURITYCENTER;
-    select * from OCISECURITYCENTER;
-    ````
-    ````
-    truncate table OCICISCOMPLIANCECHECK;
-    select * from OCICISCOMPLIANCECHECK;
-    ````
+````
+truncate table OCISECURITYCENTER;
+select * from OCISECURITYCENTER;
+````
+````
+truncate table OCICISCOMPLIANCECHECK;
+select * from OCICISCOMPLIANCECHECK;
+````
 
 
 
