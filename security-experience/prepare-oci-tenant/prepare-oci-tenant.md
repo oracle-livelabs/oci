@@ -57,6 +57,7 @@ This displays the Cloud Shell in a "drawer" at the bottom of the console:
     pip3 install oci
 </copy>
     ```
+    
 4. If error message appears with new version available, you can upgrade with
 
     ```
