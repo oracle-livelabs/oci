@@ -51,15 +51,15 @@ This displays the Cloud Shell in a "drawer" at the bottom of the console:
 3. Install setup venv and install OCI
 
     ```
-<copy>python3 -m venv python-venv   source python-venv/bin/activate    pip3 install oci</copy>
+<copy>python3 -m venv python-venv   
+source python-venv/bin/activate    
+pip3 install oci</copy>
     ```
 
 4. If error message appears with new version available, you can upgrade with
 
     ```
-    <copy>
-    pip install –upgrade pip
-    </copy>
+<copy>pip install –upgrade pip</copy>
     ```
 
 ## Task 2: Create your compartment
