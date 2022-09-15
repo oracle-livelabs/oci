@@ -106,7 +106,6 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 5. Enter the sample variables for creation of Bastions, Dynamic Routing Gateway(DRG) and Monitoring. 
 
     ![VCN Vars 4](./images/LZ_Stack_Variable_4.png)
-    ![VCN Vars 5](./images/LZ_Stack_Variable_5.png)
     ![VCN Vars 6](./images/LZ_Stack_Variable_6.png)
     
 
