@@ -81,7 +81,7 @@ The Workload Admin is the user role responsible for deployment of workload compu
 
 ## Task 3: Deployment
 
-* Before the Start of the Section . Please Gather the Application Compartment OCID and Network Compartment OCID from the Lab 2 Deployment Step 8. 
+* Before the Start of the Section . Please Gather the Application Compartment OCID and Network Compartment OCID from the Lab 2 Task 3 Step 7 (Note : Some Resources OCID will be used to configure the Lab3 Example Deployment). 
 
    * Application Compartment OCID
    * Network Compartment OCID
