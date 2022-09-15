@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn how to use the custom component to send text messages from the Skill. In the previous lab, we have configured the Skill to show the detailed summary of the appointment details. However, you may also want to notify the user via Twilio SMS which is a short messaging service that sends user messages to their registered mobile number. 
+In this lab, you will learn how to use the custom component to send text messages from Skill. In the previous lab, we configured the Skill to show a detailed summary of the appointment details. However, you may also want to notify the user via Twilio SMS which is a short messaging service that sends user messages to their registered mobile number. 
 
 Estimated Time: 20 minutes
 
@@ -35,13 +35,13 @@ In this lab you will be performing the following tasks:
   
   ![Personalize your Experience](images/personalize-your-experience.png " ")
 
-5. In the home page, click the *Get a Twilio Phone number* button to obtain a phone number for your twilio account. 
+5. On the home page, click the *Get a Twilio Phone number* button to obtain a phone number for your Twilio account.  
 
   ![Get a Twilio phone number](images/get-a-twilio-phone-number.png " ")
 
 6. Now, you will be able to see your Account Info. 
 
-> **Note:** Copy your *Account SID*, *Auth Token* and *Twilio phone number* in your *Notepad*.
+> **Note:** Copy your *Account SID*, *Auth Token*, and *Twilio phone number* in your *Notepad*.
 
  ![Account info](images/account-info.png " ")
 
@@ -57,7 +57,7 @@ In this task, we will create a custom component and call the **Twilio REST API**
 
 The component captures appointment details from the bot and passes the summary in the *messagebody* via SMS to the patient's registered mobile number. 
 
-  !["Create custom component for sending as sms using Twilio"](images/create-custom-component-for-sending-sms.png " ")
+  !["Create custom component for sending as SMS using Twilio"](images/create-custom-component-for-sending-sms.png " ")
 
 ```
 <copy>
@@ -138,11 +138,11 @@ Here is the package which will be created:
 
   ![Npm package created](images/npm-package-created.png " ")
 
-## Task 3: Upload the package in the embedded container
+## Task 3: Upload the package to the embedded container
 
 1. Go back to the *ODA console* and open the *Skill* you have been working on.
 
-2. Navigate to the Custom component section within the Skill and reupload your npm package. 
+2. Navigate to the custom component section within the Skill and re-upload your npm package.  
 
   ![Reload the custom component](images/reload-the-custom-component.png " ")
 
@@ -160,7 +160,7 @@ Here is the package which will be created:
 
   ![Configuration settings](images/configuration-settings.png " ")
 
-2. Scroll down to add the *custom parameters*, add a parameters and its value. 
+2. Scroll down to add the *custom parameters*, and add parameters and their value. 
 
   ![Create custom parameter](images/create-custom-parameter.png " ")    
 
@@ -191,7 +191,7 @@ Here is the package which will be created:
 
 ```
 <copy>
-### set the message body and send out the sms with the appointment summary
+### set the message body and send out the SMS with the appointment summary
   setMessageBody:
     component: "System.SetVariable"
     properties:
