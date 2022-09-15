@@ -48,6 +48,6 @@ Resource Links for Reference
 ## Acknowledgements
 * **Authors** - Brandon Alarie, Staff Cloud Engineer; 
 Joey Hall, Staff Cloud Engineer
-* **Speakers** -  Joey Hall, Staff Cloud Engineer
+* **Speakers** -  Joey Hall, Staff Cloud Engineer; Larry Beausoleil, Sr. Manager, Technical Program Management
 * **Last Updated By/Date** - Taylor Zheng, September 2022
 

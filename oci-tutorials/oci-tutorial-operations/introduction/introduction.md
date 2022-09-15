@@ -38,6 +38,6 @@ Resource Links for Reference
 ## Acknowledgements
 * **Authors** - Olivia Ferda, Associate Cloud Engineer; 
 Uma Ferda, Staff Cloud Engineer
-* **Presenter** -  Umar Kumar, Staff Cloud Engineer
+* **Speakers** -  Uma Kumar, Staff Cloud Engineer; Larry Beausoleil, Sr. Manager, Technical Program Management
 * **Last Updated By/Date** - Taylor Zheng, September 2022
 

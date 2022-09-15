@@ -39,5 +39,5 @@ Resource Links for Reference
 
 ## Acknowledgements
 * **Authors** - Brandon Alarie, Staff Cloud Engineer; Anand Prasad, Master Principal Cloud Architect
-* **Presenter** -  Larry Beausoleil, Sr. Manager, Technical Program Management
+* **Speakers** -  Larry Beausoleil, Sr. Manager, Technical Program Management; Anand Prasad, Master Principal Cloud Architect
 * **Last Updated By/Date** - Taylor Zheng, September 2022

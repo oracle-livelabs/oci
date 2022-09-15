@@ -35,5 +35,5 @@ Resource Links for Reference
 
 ## Acknowledgements
 * **Authors** - Joey Hall, Staff Cloud Engineer; Sunil Jain, Associate Cloud Engineer; Anand Prasad, Master Principal Cloud Architect
-* **Presenter** -  Anand Prasad, Master Principal Cloud Architect
+* **Speakers** -  Larry Beausoleil, Sr. Manager, Technical Program Management; Anand Prasad, Master Principal Cloud Architect
 * **Last Updated By/Date** - Taylor Zheng, September 2022

@@ -35,5 +35,5 @@ Resource Links for Reference
 ## Acknowledgements
 * **Authors** - Joey Hall, Staff Cloud Engineer; 
 Wynne Yang, Staff Cloud Engineer
-* **Presenter** -  Joey Hall, Staff Cloud Engineer
+* **Speakers** -  Joey Hall, Staff Cloud Engineer; Uma Kumar, Staff Cloud Engineer
 * **Last Updated By/Date** - Taylor Zheng, September 2022

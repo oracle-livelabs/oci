@@ -28,5 +28,5 @@ Video Recording
 
 ## Acknowledgements
 * **Authors** - Olivia Ferda, Associate Cloud Engineer; Anand Prasad, Master Principal Cloud Architect
-* **Presenters** - Larry Beausoleil, Sr. Manager, Technical Program Management; Joey Hall, Staff Cloud Engineer; Uma Kumar, Staff Cloud Engineer
+* **Speakers** - Larry Beausoleil, Sr. Manager, Technical Program Management; Anand Prasad, Master Principal Cloud Architect
 * **Last Updated By/Date** - Taylor Zheng, September 2022

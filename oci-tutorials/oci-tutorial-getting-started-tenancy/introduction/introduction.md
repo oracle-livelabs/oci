@@ -27,6 +27,6 @@ Resource Links for Reference
 
 
 ## Acknowledgements
-* **Authors** - Anand Prasad, Staff Cloud Architect; Wynne Yang, Master Principal Cloud Engineer
-* **Presenter** -  Larry Beausoleil, Sr. Manager, Technical Program Management
+* **Authors** - Wynne Yang, Staff Cloud Engineer; Anand Prasad, Master Principal Cloud Architect
+* **Speakers** - Anand Prasad, Master Principal Cloud Architect; Uma Kumar, Staff Cloud Engineer
 * **Last Updated By/Date** - Taylor Zheng, September 2022

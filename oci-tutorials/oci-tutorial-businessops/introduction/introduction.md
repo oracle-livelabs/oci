@@ -40,5 +40,5 @@ Resource Links for Reference
 ## Acknowledgements
 * **Authors** - Olivia Ferda, Associate Cloud Engineer;
 Uma Kumar, Staff Cloud Engineer
-* **Presenter** -  Uma Kumar, Staff Cloud Engineer
+* **Speakers** -  Uma Kumar, Staff Cloud Engineer; Joey Hall, Staff Cloud Engineer
 * **Last Updated By/Date** - Taylor Zheng, September 2022
