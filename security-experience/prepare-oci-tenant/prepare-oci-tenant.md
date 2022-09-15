@@ -101,23 +101,22 @@ You will create an Autonomous Database that will provide you the following funct
 * Repository for your security assessment reports
 * Front-end user interface by using the hosted APEX
 
-1. To provision an Autonomous Database, navigate through the main hamburger menu to: *Oracle Database > Autonomous Database*
+1. To provision an Autonomous Database, navigate through the main hamburger menu to: *Oracle Database > Autonomous Database*.
 ![](./images/autonomous-database.png "Autonomous Database")
-
 
 2.	Click Create Autonomous Database:
 ![](./images/ADB2.png "Create Autonomous Database ")
 
 3.	Fill the parameters as follows:
-*   Compartment: USE_Workshop
-*	Display Name: SecAssessments
-*	Database Name: SecAssessments
-*	Workload type: ATP
-*	Deployment type: Shared Infrastructure
-*	Configure the database: <Leave it as default>
-*	Administrator password: <your password>
-*	Network access: Secure access from everywhere
-*	License type: Bring Your Own License (BYOL)
+    *   Compartment: USE_Workshop
+    *	Display Name: SecAssessments
+    *	Database Name: SecAssessments
+    *	Workload type: ATP
+    *	Deployment type: Shared Infrastructure
+    *	Configure the database: <Leave it as default>
+    *	Administrator password: <your password>
+    *	Network access: Secure access from everywhere
+    *	License type: Bring Your Own License (BYOL)
 
 and click Create Autonomous Database. Then wait until the database status is set to green and ACTIVE.
 ![](./images/ADB3.png " ")
