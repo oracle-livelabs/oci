@@ -90,7 +90,21 @@ The Workload Admin is the user role responsible for deployment of workload compu
 * Get the Network Compartment OCID.
 
 * Sample Variable Value
- 
+    |Variable|Value|
+    |--|--|
+    |Tag cost center|`WBLZ_Demo`|
+    |Tag geo location|`WBLZ_Demo_Geo`|
+    |Applications compartment OCID |Enter the Application OCID|
+    |Workload compartment name|`WBLZ_Demo_Username`|
+    |Network compartment name|`WBLZ_Network_Compartment_Demo`|
+    |Network compartment OCID|Enter the Network Compartment OCID|
+    |VCN OCID|Enter the VCN OCID|
+    |NAT gateway OCID|Enter the NAT Gateway OCID|
+    |Private subnet CIDR blocks|10.0.2.0/24|
+    |Private subnet DNS labels|private0|
+    |Database subnet CIDR blocks|10.0.4.0/24|
+    |Database subnet DNS labels|`database0|
+    
 * Open up Resource Manager service. You can click directly on Resource Manager in the navigation path menu, otherwise, Go back to the main Navigation Menu -> Developer Services -> Resource Manager.
 
 In the stack section, click create stack and choose template as the origin of the Terraform configuration. 
