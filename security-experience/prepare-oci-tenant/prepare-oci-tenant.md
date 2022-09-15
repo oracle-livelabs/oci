@@ -105,7 +105,7 @@ You will create an Autonomous Database that will provide you the following funct
 ![](./images/autonomous-database.png "Autonomous Database")
 
 2.	Click Create Autonomous Database:
-![](./images/ADB2.png "Create Autonomous Database ")
+![](./images/create-autonomous-database.png "Create Autonomous Database ")
 
 3.	Fill the parameters as follows:
     *   Compartment: USE_Workshop
@@ -119,7 +119,7 @@ You will create an Autonomous Database that will provide you the following funct
     *	License type: Bring Your Own License (BYOL)
 
 and click Create Autonomous Database. Then wait until the database status is set to green and ACTIVE.
-![](./images/ADB3.png " ")
+![](./images/ADB3.png "Create Autonomous Database")
 
 Now, you will create the database user to manage APEX applications.
 
