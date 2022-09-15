@@ -18,7 +18,9 @@ Estimated time: 10 minutes
 
 To delete the workshop setup from your tenancy, follow the steps below.
 
-1. Remove the application deployment.
+1. Run the oci ce (Container Engine) command that you saved in Lab 3, Task 2, step 5.
+
+2. Remove the application deployment.
 
     ``` bash
     <copy>
@@ -26,7 +28,7 @@ To delete the workshop setup from your tenancy, follow the steps below.
     </copy>
     ```
 
-2. Remove the storage configuration from the cluster.
+3. Remove the storage configuration from the cluster.
 
     ``` bash
     <copy>
@@ -103,7 +105,7 @@ To delete the workshop setup from your tenancy, follow the steps below.
 
     ``` bash
     <copy>
-    rm apm-java-agent-installer-1.6.2363.jar; rm index.html; rm -r sb-hol;rm sb-hol.zip
+    cd ~; rm apm-java-agent-installer-1.6.2363.jar; rm index.html; rm -r sb-hol;rm sb-hol.zip
     </copy>
     ```
    ![Oracle Cloud, Cloud console](images/4-16-cleanup.png " ")   

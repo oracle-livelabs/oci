@@ -64,7 +64,7 @@ Estimated time: 5 minutes
         - com.oracle.apm.agent.rum.web.application=**WLS WebApp** (line 188)
         - com.oracle.apm.agent.rum.service.name=**WLS-web** (line 191)
 
-    - Save and close the file with **esc + wg:**.
+    - Save and close the file with **esc + :wq**.
 
     ![Oracle Cloud console, Cloud Shell ](images/6-3-cloudshell.png " ")
 
