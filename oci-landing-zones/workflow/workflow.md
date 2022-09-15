@@ -103,7 +103,7 @@ The Workload Admin is the user role responsible for deployment of workload compu
     |Private subnet CIDR blocks|10.0.2.0/24|
     |Private subnet DNS labels|private0|
     |Database subnet CIDR blocks|10.0.4.0/24|
-    |Database subnet DNS labels|`database0|
+    |Database subnet DNS labels|database0|
     
 * Open up Resource Manager service. You can click directly on Resource Manager in the navigation path menu, otherwise, Go back to the main Navigation Menu -> Developer Services -> Resource Manager.
 
