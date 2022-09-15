@@ -110,7 +110,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     
 
 6. Create the Stack.
-    ![VCN Vars 7](./images/LZ_Stack_Variable_7.png)
+    ![VCN Vars 7](./images/LB_Stack_Info.png)
     
 
 ## Task 3: Provisioning the Infrastructure
