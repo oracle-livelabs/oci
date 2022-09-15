@@ -146,4 +146,5 @@ select * from OCICISCOMPLIANCECHECK;
 
 ## Acknowledgements
 * **Author** - Sonia Yuste
+* **Contributor** - Damien Rilliard 
 * **Last Updated By/Date** - Sonia Yuste, September 15 2022
