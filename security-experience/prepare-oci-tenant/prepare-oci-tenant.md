@@ -105,6 +105,7 @@ You will create an Autonomous Database that will provide you the following funct
 
 ![](./images/autonomous-database.png "Autonomous Database")
 
+
 2.	Click Create Autonomous Database:
 ![](./images/ADB2.png "Create Autonomous Database ")
 
