@@ -53,6 +53,10 @@ Once the details are entered, click the  **Create** Button.
 
 ### Task 2: Create a Data Asset
 
+**If you have NOT completed the previous Labs (01 and 02),**
+- Download the **Training Dataset** https://objectstorage.us-ashburn-1.oraclecloud.com/p/-z6yMfwSuQJ4RfpMFPu4rShFG8O8IZGzdUz_PgR_tgbNmDH9-Pjpu-vlpqBW5aKG/n/orasenatdpltintegration03/b/AD_bucket/o/AD_train_6cycle.csv
+- Then **skip to Task 3: Create a Model**
+
 The Data Asset is the data utilized for training your Anomaly Detection Model. The Data Asset should be data that has NO anomalies so that the Anomaly Detection model will be trained on the 'normal' state. 
 
 Under your project, click the   **Data Assets** menu on the left. Then click  **Create Data Asset**
@@ -141,45 +145,3 @@ When _Status_ changes from **Creating** ...
 
 your model is ready and you may proceed to the next task.
 ##
-
-
-### Task 4: Detect Anomalies with Anomaly Detection (AD) GUI
-
-The results of Anomaly Detection can be viewed in a number of ways including the AD SDK. Using the AD UI is a visual method.
-
-To start the process of anomaly detection, click on your model and select **Detect Anomalies** on the model listing page
-
-![UI](./images/imageUI1.png " ")
-
-Select  **AD_testing.csv** from local filesystem or drag-and-drop the desired file.
-You can leave _Sensitivity_ **BLANK** for this demo. 
-Once the test file is uploaded, click **Detect**.  
-
-![UI](./images/imageUI2.png " ")
-##
-
-### Results Observation
-
-Let's take a look what anomalies Anomaly Detection discovered in the data
-
-![UI](./images/imageUI3.png " ")
-
->**Graph Explanation**
->
->Each signal in your detection data can be selected to show a separate graph.
->>
->In the graph, horizontal axis represents the timestamp (or indexes if no timestamp was provied), and the vertical axis represents sensor values.
->
->In each subgraph, 
->- orange line indicates the actual input value of a signal
->- purple line indicates the predicted value by the machine learning model
->- red line indicates anomaly being detected at that timestamp.
->
-There are two additional subgraphs after sensor subgraphs:
->
->_The Anomaly Score Per Signal_ shows the significance of anomaly at individual signal level for a given timestamp. Not all the signals flag anomalies at the same time.
->_The Aggregated Anomaly Score_ indicates the significance of anomaly for a given timestamp by considering the anomaly from all signals together.
->You can move your mouse over the graph, the actual value & estimated value at a certain timestamp will show at the upper right corner of the graph.
-
-
-
