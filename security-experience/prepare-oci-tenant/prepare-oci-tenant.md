@@ -102,7 +102,6 @@ You will create an Autonomous Database that will provide you the following funct
 * Front-end user interface by using the hosted APEX
 
 1. To provision an Autonomous Database, navigate through the main hamburger menu to: *Oracle Database > Autonomous Database*
-
 ![](./images/autonomous-database.png "Autonomous Database")
 
 
