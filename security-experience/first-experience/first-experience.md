@@ -16,13 +16,13 @@ This lab assumes you have completed previous lab.
 1.	Go to the Oracle Cloud Shell and run the following commands:
 
 
-        ```
-        wget <TODO>
-        ```
+    ```
+    wget <TODO>
+    ```
 
-        ```
-        python3 security_assessment.py -dt –-output-to-bucket ‘security_assessment’
-        ```
+    ```
+    python3 security_assessment.py -dt –-output-to-bucket ‘security_assessment’
+    ```
 
     After running the python script, you will see a similar output in Cloud Shell:
 
