@@ -80,16 +80,16 @@ To create the buckets, please follow the next steps:
 
 1. Log in to OCI console and navigate through the main hamburger menu to *"Storage > Object Storage > Buckets"*.
 
-![](./images/storage1.png " ")
+![](./images/storage1.PNG " ")
 
 3. Create a bucket in the previously created compartment USE_Workshop by selecting the compartment and click Create Bucket.
 
-![](./images/storage2.png " ")
+![](./images/storage2.PNG " ")
 
 
 4. Name it security_assessment and click Create.
 
-![](./images/storage3.png " ")
+![](./images/storage3.PNG " ")
 
 
 4.	(Optional) Create a second bucket to store the CIS Compliance Assessment, and name it cis_report by following previous steps.
