@@ -125,9 +125,11 @@ In the stack section, click create stack and choose template as the origin of th
 
 ![WorkLoad Deployment](.//images/WorkLoad_Template_1.png)
 
-* Use the Sample Variable Value and captured OCID to fill the Tagging , Compartment, Workload compartment name and VCN information.
+* Use the Sample Variable Value and captured OCID to fill the Tagging , Compartment, Workload compartment and VCN information.
  
 ![WorkLoad Deployment](.//images/WBLZ_Stack_info.png)
+
+* Wait for atleast ten minutes and check the stack status.
 
 ## Task 4: Clean Up 
 
