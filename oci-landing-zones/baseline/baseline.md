@@ -67,6 +67,9 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     |Shared service subnet DNS label|shared|
     |Bastion client CIDR block allow list|10.0.0.0/16, 10.0.0.0/24|
     |Bastion subnet CIDR block|10.0.7.0/24|
+    |Use IPsec DRG?|Check the Box|
+    |CPE IP address|10.0.0.0|
+    |IPsec connection static routes|10.0.1.0/24|
     |Use FastConnect?|Check the Box|
     |FastConnect provider|Microsoft Azure|
     |FastConnect routing policy|GLOBAL|
