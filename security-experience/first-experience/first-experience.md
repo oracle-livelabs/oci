@@ -66,9 +66,9 @@ This lab assumes you have completed previous lab.
 
 and enter the following command (logged in as SECASSESSMENT user):
 
-    ```
-    SELECT * from OCISECURITYCENTER;
-    ```
+```
+SELECT * from OCISECURITYCENTER;
+```
 
 
   ![](images/execute5.png)
