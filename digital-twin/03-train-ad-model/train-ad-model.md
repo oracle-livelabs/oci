@@ -53,6 +53,8 @@ Once the details are entered, click the  **Create** Button.
 
 ### Task 2: Create a Data Asset
 
+*** TODO: add link for downloading [data](https://objectstorage.us-ashburn-1.oraclecloud.com/p/acYNc4cXnHYGEA4r-oZZD0gMicUNspuHgSGORi96Wop10Yqwjr_xXi23XLheIXsK/n/orasenatdpltintegration03/b/AD_bucket/o/AD_train_6cycle.csv) 
+
 The Data Asset is the data utilized for training your Anomaly Detection Model. The Data Asset should be data that has NO anomalies so that the Anomaly Detection model will be trained on the 'normal' state. 
 
 Under your project, click the   **Data Assets** menu on the left. Then click  **Create Data Asset**

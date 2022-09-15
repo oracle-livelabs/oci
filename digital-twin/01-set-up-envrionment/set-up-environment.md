@@ -14,17 +14,41 @@ In this session, we will configure OCI tenancy with required IAM resources (comp
 2. Understand the OCI services
 
 ### Prerequisites
-1. Fully-privileged access to an OCI Tenancy (account). 
+1. Fully-privileged access to an OCI Tenancy (account).
 2. Sufficient availability of resources in your OCI Tenancy. You can check resource availability [here](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm#Viewing).
 
 
 
-## Task 1 Create OCI Resource Manager
+## Task 1 Config OCI Resource Manager
 
 Resource Manager automates deployment and operations for all Oracle Cloud Infrastructure resources. Using the infrastructure-as-code (IaC) model, the service is based on Terraform, an open source industry standard that lets DevOps engineers develop and deploy their infrastructure anywhere
 
-1. 
-2. 
+1. Log into your Oracle Cloud Infrastructure (OCI) tenancy. 
+2. Click the `Deploy to Oracle Cloud` button below, this will open the link into a new browser tab.
+
+[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/scacela/oci-anomaly-detection-pipeline/archive/refs/tags/v1.0.0.zip)
+
+3. In the `Stack Information` section, select the checkbox to confirm that you accept the [Oracle Terms of Use](https://cloudmarketplace.oracle.com/marketplace/content?contentId=50511634&render=inline).
+>screenshot
+
+The **OCI Digital Twin Pipeline** will pop up under `Stack Information`. Click **Next** to proceed to the `Configure Variables` section.
+>screenshot
+
+
+4. In `Configuration variables` section, choose `Region` and `Parent Compartment` to select where you want the infrastructure stack to be deployed. 
+>screenshot
+
+For each resource that you wish to deploy, verify that the corresponding checkbox is selected in the `Select Resources` tile. Optionally, you can customize the attributes of each selected resource once an additional tile that presents configuration options for its respective resource appears below.
+>screenshot
+
+
+8. When you are finished editing your variables in the `Configure Variables` section, click **Next** to proceed to the `Review` section.
+
+9. Select the checkbox for `Run Apply`, and click `Create`.
+>screenshot
+
+10. You can monitor the deployment by monitoring the `Logs` window. Once the resources in the stack have been provisioned, you can access your resources by following this sub-steps series:
+\
 
 ## Task 2 OCI Streaming Service
 
