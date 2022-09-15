@@ -106,7 +106,7 @@ You will create an Autonomous Database that will provide you the following funct
 
 1. To provision an Autonomous Database, navigate through the main hamburger menu to: *"Oracle Database > Autonomous Database"*
 
-![](./images/ADB1.png " ")
+![](./images/autonomous-database.png "autonomous database")
 
 2.	Click Create Autonomous Database:
 ![](./images/ADB2.png " ")
@@ -303,4 +303,4 @@ security_assessment.py  	[-h][-t CONFIG_PROFILE][-p PROXY]
 ## Acknowledgements
 * **Author** - <Name, Title, Group>
 * **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - Sonia, August 10 2022
+* **Last Updated By/Date** - Sonia, September 1 2022
