@@ -42,24 +42,24 @@ After that, you have to install python in Cloud Shell and download the python sc
 
 2. Click the Cloud Shell icon in the Console header. Note that the OCI CLI running in the Cloud Shell will execute commands against the region selected in the Console's Region selection menu when the Cloud Shell was started.
 
-  ![](./images/cloudshell-1.png " ")
+  ![](./images/cloudshell-1.png "Cloud Shell Icon")
 
 This displays the Cloud Shell in a "drawer" at the bottom of the console:
 
-![](./images/cloudshell-2.png " ")
+![](./images/cloudshell-2.png "Cloud Shell running")
 
 3. Install setup venv and install OCI
 
     ```
-<copy>python3 -m venv python-venv   
-source python-venv/bin/activate    
-pip3 install oci</copy>
+    python3 -m venv python-venv   
+    source python-venv/bin/activate    
+    pip3 install oci
     ```
 
 4. If error message appears with new version available, you can upgrade with
 
     ```
-<copy>pip install –upgrade pip</copy>
+    pip install –upgrade pip
     ```
 
 ## Task 2: Create your compartment
@@ -67,10 +67,10 @@ pip3 install oci</copy>
 First you need to create a new compartment for your deployment. To do that, follow the next steps:
 
 1. Log in to the OCI console and navigate through the main hamburger menu to *"Identity & Security > Compartments"*
-![](./images/compartments1.png " ")
+![](./images/compartments1.png "Compartments")
 
 2.	Create a new compartment by clicking Create Compartment and name it “USE_Workshop”
-![](./images/compartments2.png " ")
+![](./images/compartments2.png "Create Compartment")
 
 ## Task 3: Create your buckets
 
@@ -80,16 +80,16 @@ To create the buckets, please follow the next steps:
 
 1. Log in to OCI console and navigate through the main hamburger menu to *"Storage > Object Storage > Buckets"*.
 
-![](./images/storage1.PNG " ")
+![](./images/storage1.PNG "Buckets")
 
 2. Create a bucket in the previously created compartment USE_Workshop by selecting the compartment and click Create Bucket.
 
-![](./images/storage2.PNG " ")
+![](./images/storage2.PNG "Create bucket")
 
 
 3. Name it security_assessment and click Create.
 
-![](./images/storage3.PNG " ")
+![](./images/storage3.PNG "Create")
 
 
 4.	(Optional) Create a second bucket to store the CIS Compliance Assessment, and name it cis_report by following previous steps.
@@ -158,12 +158,10 @@ The authenticated database user is only permitted access if the schema is REST e
 
 
     ```
-    <copy>
     CREATE USER SECASSESSMENT IDENTIFIED BY <your password>;
     GRANT “CONNECT” TO SECASSESSMENT;
     GRANT “RESOURCE” TO SECASSESSMENT;
     GRANT UNLIMITED TABLESPACE TO SECASSESSMENT;
-    </copy>
     ```
     *Note:* A new user is granted CONNECT and RESOURCE roles when Web Access is selected.
     Granting UNLIMITED TABLESPACE privilege allows a user to use all the allocated storage space. You cannot selectively revoke tablespace access from a user with the UNLIMITED TABLESPACE privilege. You can grant selective or restricted access only after revoking the privilege.
@@ -189,13 +187,11 @@ The authenticated database user is only permitted access if the schema is REST e
 
 11. After you created the user and granted all required permissions to manage APEX, you will create now a table to store security assessments by running the following script:
     ```
-    <copy>
     CREATE TABLE "SECASSESSMENT"."OCISECURITYCENTER"
     (   "STATUS" VARCHAR2(50 BYTE) COLLATE "USING_NLS_COMP",
         "SERVICE" VARCHAR2(255 BYTE) not null,
         "EXTRACT_DATE" DATE not null
     )   DEFAULT COLLATION "USING_NLS_COMP";
-    </copy>
     ```
   ![](./images/ADB10.png " ")  
 
@@ -213,7 +209,6 @@ Click in Open in new tab, you will have to enter the credentials for SECASSESSME
 15. (Optional) If you decided to run the OCI Compliance assessment as well, you need to create the tables to store the outcome data of OCI CIS Compliance Benchmark:
 
     ```
-    <copy>
     CREATE TABLE "SECASSESSMENT"."OCICISCOMPLIANCECHECK"
         (   "Recommendation #" NUMBER,
             "Section" VARCHAR2(50 BYTE) COLLATE "USING_NLS_COMP",
@@ -223,7 +218,6 @@ Click in Open in new tab, you will have to enter the credentials for SECASSESSME
             "Title" VARCHAR2(255 BYTE) not null,
             "extract_date" DATE not null
         )   DEFAULT COLLATION "USING_NLS_COMP"  ;
-    </copy>
     ```
     You will need to enable for REST this table in same way as you did for the OCISECURITYCENTER table.
 
@@ -270,27 +264,27 @@ Proceed to OCI console to perform the next steps:
 
 10. Select Database Application, Page or Component Export and drag and drop the provided zip file: OCISecurityCenter.zip. Click Next.
 
-    ![](./images/apex10.png " ")
+    ![](./images/apex10.png "Drag and drop")
 
 11. Click Next.
 
-    ![](./images/apex11.png " ")
+    ![](./images/apex11.png "Next")
 
 12.	Review the details and click Install Application.
 
-    ![](./images/apex12.png " ")
+    ![](./images/apex12.png "Install Application")
 
 13.	Once you see the message for Application Installed, click Run Application.
 
-    ![](./images/apex13.png " ")
+    ![](./images/apex13.png "Run Application")
 
 14.	You will be redirected to the APEX application log in page, and you will be asked to enter the credentials for SECASSESSMENT user.
 
-    ![](./images/apex14.png " ")
+    ![](./images/apex14.png "SECASSESSMENT credentials")
 
 15.	You are now able to see the OCI Security Center Dashboard. Click on the OCI SECURITY ASSESSMENT card:
 
-    ![](./images/apex15.png " ")
+    ![](./images/apex15.png "OCI Security Assessment Dashboard ")
 
 16.	As you still did not run the Security and Compliance Assessment scripts, you do not have any data on it. Let’s continue and start with the Unique Security Experience in the next lab.
 
