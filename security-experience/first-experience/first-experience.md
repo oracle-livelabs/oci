@@ -16,13 +16,13 @@ This lab assumes you have completed previous lab.
 1.	Go to the Oracle Cloud Shell and run the following commands:
 
 
-        <copy>
+        ```
         wget <TODO>
-        </copy>
+        ```
 
-        <copy>
+        ```
         python3 security_assessment.py -dt –-output-to-bucket ‘security_assessment’
-        </copy>
+        ```
 
     After running the python script, you will see a similar output in Cloud Shell:
 
@@ -36,9 +36,7 @@ This lab assumes you have completed previous lab.
 2. (Optional) Run the CIS Benchmark Compliance Assessment by running the following command:
 
     ````
-    <copy>
     python3 cis_reports.py -dt –-report-directory './Security_Assessment_Reports /'
-    </copy>
     ````  
 
 ## Task 2: Store reports in Autonomous Database
@@ -46,9 +44,7 @@ This lab assumes you have completed previous lab.
 1. Now you need to upload the CSV files generated in your bucket to your recently created Autonomous Database. To do that, you have to call the table API that you have exposed. In the Cloud Shell terminal, run the following:
 
     ````
-    <copy>
     curl -X POST '<your curl command location URL>/batchload?batchRows=500' ' -H 'Content-type: text/plain'  -H 'cache-control: no-cache' --data-binary @security_assessment_report.csv
-    </copy>
     ````
 
     Where <your curl command location URL> is the URL you noted down for your table, once you enabled it for REST.
@@ -59,9 +55,7 @@ This lab assumes you have completed previous lab.
 2. (Optional) Same for CIS Summary report:
 
     ````
-    <copy>
     curl -X POST '<your curl command location URL>/batchload?batchRows=500' -H 'Content-type: text/plain'  -H 'cache-control: no-cache' --data-binary @cis_summary_report.csv
-    </copy>
     ````
 
 3. (Optional) As a verification step, you can go back in the SQL tools:  
@@ -72,9 +66,9 @@ This lab assumes you have completed previous lab.
 
 and enter the following command (logged in as SECASSESSMENT user):
 
-    <copy>
+    ```
      SELECT * from OCISECURITYCENTER;
-    </copy>
+    ```
 
 
   ![](images/execute5.png)
@@ -135,16 +129,12 @@ After the script is completely executed, and you loaded the CSV file in your Aut
   *Note:* If you want to re-run the scripts and reload the tables, before running the curl command again, you need to empty the tables first in the SQL tool. For this run the following command then the “select” to verify it’s empty:
 
       ````
-      <copy>
       truncate table OCISECURITYCENTER;
       select * from OCISECURITYCENTER;
-      </copy>
       ````
       ````
-      <copy>
       truncate table OCICISCOMPLIANCECHECK;
       select * from OCICISCOMPLIANCECHECK;
-      </copy>
       ````
 
 
@@ -155,5 +145,5 @@ After the script is completely executed, and you loaded the CSV file in your Aut
 
 
 ## Acknowledgements
-* **Author** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, February 2021
-* **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, December 2021
+* **Author** - Sonia Yuste
+* **Last Updated By/Date** - Sonia Yuste, September 15 2022

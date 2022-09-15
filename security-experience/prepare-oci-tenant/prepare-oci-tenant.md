@@ -320,4 +320,4 @@ security_assessment.py  	[-h][-t CONFIG_PROFILE][-p PROXY]
 ## Acknowledgements
 * **Author** - <Name, Title, Group>
 * **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - Sonia, September 1 2022
+* **Last Updated By/Date** - Sonia, September 15 2022
