@@ -87,7 +87,21 @@ The Workload Admin is the user role responsible for deployment of workload compu
    * Network Compartment OCID
 
 * Get the Application Compartment OCID. 
+
+![cloud guard](.//images/WBLZ_Application_OCID.png)
+
 * Get the Network Compartment OCID.
+
+![cloud guard](.//images/WBLZ_Network_Compartment_OCID.png)
+
+* Get the VCN Compartment OCID.
+
+![cloud guard](.//images/WBLZ_VCN_OCID.png)
+
+* Get the NAT Gateway OCID.
+
+![cloud guard](.//images/WBLZ_Nat_GW_OCID.png)
+
 
 * Sample Variable Value
     |Variable|Value|
