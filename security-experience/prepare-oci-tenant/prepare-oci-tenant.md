@@ -124,7 +124,10 @@ You will create an Autonomous Database that will provide you the following funct
     *	License type: Bring Your Own License (BYOL)
 
 and click Create Autonomous Database. Then wait until the database status is set to green and ACTIVE.
+
 ![](./images/ADB3.png "Create Autonomous Database")
+
+
 
 Now, you will create the database user to manage APEX applications.
 
@@ -134,14 +137,22 @@ The authenticated database user is only permitted access if the schema is REST e
 
 
 4.	Once the Autonomous Database status is set to green and ACTIVE, click on Database Actions.
+
 ![](./images/ADB4.png " ")
 
+
+
 5.	Click on SQL box, under Development section.
+
 ![](./images/ADB5.png " ")
+
+
 
 6.	Web SQL Developer will launch, and you will be able to run SQL queries to create users and tables.
 
   ![](./images/ADB6.png " ")
+
+
 
 7. Create a database schema named SECASSESSMENT and grant required permissions, as we will use it in trying out RESTful services:
 
@@ -159,13 +170,22 @@ The authenticated database user is only permitted access if the schema is REST e
     For sake of simplicity, you can use same password you used for ADMIN user.
 
 8. Enable REST for the new created schema SECASSESSMENT. To do that, go to the Autonomous Database dashboard, click Database Actions and click DATABASE USERS under the section Administration.
+
 ![](./images/ADB7.png " ")
 
+
+
 9. You will be able to see all users in the Autonomous Database. Click in the menu the recently created user SECASSESSMENT and select Enable REST:
+
 ![](./images/ADB8.png " ")
 
+
+
 10. A window will prompt, you can leave default values and click REST Enable User:
+
 ![](./images/ADB9.png " ")
+
+
 
 11. After you created the user and granted all required permissions to manage APEX, you will create now a table to store security assessments by running the following script:
     ```
