@@ -127,6 +127,8 @@ In the stack section, click create stack and choose template as the origin of th
 
 * Use the Sample Variable Value and captured OCID to fill the Tagging , Compartment, Workload compartment name and VCN information.
  
+![WorkLoad Deployment](.//images/WBLZ_Stack_info.png)
+
 ## Task 4: Clean Up 
 
 Congratulations, you completed the workshop. You may want to release the cloud resources created through this workshop. We will we use ORM to delete resources managed through Infrastructure As Code/Terraform.
