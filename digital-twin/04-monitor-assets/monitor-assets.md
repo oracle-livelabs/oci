@@ -22,10 +22,15 @@ In this session, we will show you how to and make predictions with new data usin
 ### Task 3 Verify the anomaly
 
 
-### Task 4: Detect Anomalies with Anomaly Detection (AD) GUI
-
+##
 **If you have NOT completed the Labs (01 and 02),**
 - Download the **AD_testing.csv Dataset** https://objectstorage.us-ashburn-1.oraclecloud.com/p/L5-dC68rtjqN_oY1rqMqJs5vRa5Y0Rph12suyFhqaYN_2lvOlOp_vdCBZPh3OcOI/n/orasenatdpltintegration03/b/AD_bucket/o/AD_Testing.csv
+##
+
+
+### Task 4: Detect Anomalies with Anomaly Detection (AD) GUI
+
+
 
 The results of Anomaly Detection can be viewed in a number of ways including the AD SDK. Using the AD UI is a visual method.
 
