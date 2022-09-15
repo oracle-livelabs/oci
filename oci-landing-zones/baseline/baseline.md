@@ -70,14 +70,6 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     |Use IPsec DRG?|Check the Box|
     |CPE IP address|10.0.0.0|
     |IPsec connection static routes|10.0.1.0/24|
-    |Use FastConnect?|Check the Box|
-    |FastConnect provider|Microsoft Azure|
-    |FastConnect routing policy|GLOBAL|
-    |Virtual circuit cross connect mappings - customer BGP peering IP|10.0.0.22/30|
-    |Virtual circuit cross connect mappings - Oracle BPG peering IP|10.0.0.21/30|
-    |Virtual circuit cross connect mappings - customer secondary BGP peering IP|10.0.0.26/30|
-    |Virtual circuit cross connect mappings - Oracle secondary BGP peering IP|10.0.0.25/30|
-    |Provider service key name|aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee|
     |Security Admin Email Endpoints|example@test.com|
     |Budget Admin Email Endpoints|example@test.com|
     |Network Admin Email Endpoints|example@test.com|
