@@ -82,12 +82,12 @@ To create the buckets, please follow the next steps:
 
 ![](./images/storage1.PNG " ")
 
-3. Create a bucket in the previously created compartment USE_Workshop by selecting the compartment and click Create Bucket.
+2. Create a bucket in the previously created compartment USE_Workshop by selecting the compartment and click Create Bucket.
 
 ![](./images/storage2.PNG " ")
 
 
-4. Name it security_assessment and click Create.
+3. Name it security_assessment and click Create.
 
 ![](./images/storage3.PNG " ")
 
@@ -101,15 +101,15 @@ You will create an Autonomous Database that will provide you the following funct
 * Repository for your security assessment reports
 * Front-end user interface by using the hosted APEX
 
-1. To provision an Autonomous Database, navigate through the main hamburger menu to: *"Oracle Database > Autonomous Database"*
+1. To provision an Autonomous Database, navigate through the main hamburger menu to: *Oracle Database > Autonomous Database*
 
-![](./images/autonomous-database.png "autonomous database")
+![](./images/autonomous-database.png "Autonomous Database")
 
 2.	Click Create Autonomous Database:
-![](./images/ADB2.png " ")
+![](./images/ADB2.png "Create Autonomous Database ")
 
 3.	Fill the parameters as follows:
-* Compartment: USE_Workshop
+*   Compartment: USE_Workshop
 *	Display Name: SecAssessments
 *	Database Name: SecAssessments
 *	Workload type: ATP
