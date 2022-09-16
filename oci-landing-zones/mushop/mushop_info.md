@@ -67,6 +67,7 @@ Hamburger > Networking > Load Balancers
 
 ![Load Balancer BackEnd](.//images/mushop-lb-backend.png)
 
+* Note: in case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources.
 
 ## Task 3: Cleanup
 
@@ -86,3 +87,8 @@ Follow these steps to completely remove all provisioned resources:
 The job status will be In Progress while resources are terminated
 Once the destroy job has succeeded, return to the Stack Details page
 Click Delete Stack and confirm when prompted
+
+## Task 4: Known Issue 
+
+* In case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources.
+* Sometimes DB provisioning is not allowed in the tenanacy , in this case Job will fail. Click on Destroy button will trigger the job to remove provisioned resources.
