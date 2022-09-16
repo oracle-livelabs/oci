@@ -57,16 +57,6 @@ Note – For In-depth knowledge of AI Vision service, please refer to the below 
 
 [https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=931&clear=180&session=953867760403](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=931&clear=180&session=953867760403)
 
-Data Sets identification
-
-**Create a custom model through the console**
-
-Go through the below lab to understand the basic steps to create a custom model for OCI Vision Services:
-
-[https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=931&p210_type=3&session=953867760403](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=931&p210_type=3&session=953867760403)
-
-From the above lab you will learn:
-
 
 ## Task 1: Create a project
 
