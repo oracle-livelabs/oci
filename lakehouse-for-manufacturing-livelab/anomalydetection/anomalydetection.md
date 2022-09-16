@@ -45,7 +45,7 @@ This lab assumes you have:
 
 Download the data sets below from given link.
 
-* The data set - uci-secom.csv contains around 5 functional test parameters which we need to Analyse to perform a multivariate analysis using provided data sets.
+* The data set - uci-secom.csv contains around 5 functional test parameters which we need to Analyze to perform a multivariate analysis using provided data sets.
 * Train-secom.csv – Train a Custom ADS model.
 * Tests- ogsub.csv – Test the ADS model.
 * Download the [uci-secom](files/uci-secom.csv).
