@@ -6,17 +6,31 @@
             "title": "Get Started",
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
-        {
+       {
             "title": "Introduction",
-            "filename": "./../../intro/intro.md"
+            "filename": "./../../00-intro/intro.md"
         },
         {
-            "title": "Lab 1: Generate SSH Keys",
-            "filename": "https://oracle-livelabs.github.io/common/labs/generate-ssh-key-cloud-shell/generate-ssh-keys-cloud-shell.md"
+            "title": "Lab 1: Set Up Environment",
+            "filename": "./../../01-set-up-environment/set-up-environment.md"
         },
         {
-            "title": "Lab 2: Deploying OCI Streaming Service",
-            "filename": "./../../deploying-oci-streaming-service/deploying-oci-streaming-service.md"
+            "title": "Lab 2: Deploy Digital Twin Simulation Model",
+            "filename": "./../../02-deploy-digitaltwin-simulation/deploy-digitaltwin-simulation.md"
+        },
+        {
+            "title": "Lab 3: Train Anomaly Detection Model",
+            "filename": "./../../03-train-ad-model/train-ad-model.md"
+        },
+        {
+            "title": "Lab 4: Monitor Asset",
+            "filename": "./../../04-monitor-assets/monitor-assets.md"
+        },{
+            "title": "Lab 5: (Advanced) Explore Anomaly Detection - Access Anomaly Detection service with REST API",
+            "filename": "./../../05-explore-ad/explore-ad.md"
+        },{
+            "title": "Lab 6: Anomaly Diagnosis",
+            "filename": "./../../06-diagnostic/diagnostic.md"
         },
         {
             "title": "Need Help?",
