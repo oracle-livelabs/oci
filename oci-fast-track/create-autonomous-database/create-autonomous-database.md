@@ -87,32 +87,27 @@ A maioria das operações do banco de dados autônomo podem ser feitas nos botõ
 
 Esta nova versão do Autonomous, traz uma versão já carregada do SQL Developer que pode ser acessada a partir de:
 
-1.	Clique no botão **“Service Console”**. Você será redirecionado para uma nova aba
+1.	Clique no botão **“Database Actions”**. Você será redirecionado para uma nova aba
 
-![Clque em Service Console](./images/autonomous-database-console-9.png)
+![Clque em Database Actions](./images/autonomous-database-console-9.png)
 
-2.	No lado esquerdo da tela, clique em **“Development”**, e você será redirecionado para a tela onde poderá escolher várias opções administrativas, desde client download até Serviços API Rest e SQL Console
-3. Clique no botão **“Database Actions”**
-
-![Clique em Development e em seguida em Database Actions](./images/autonomous-database-dev-10.png)
-
-4. Faça login no banco com o usuário ADMIN e a senha que você criou na Task 1
+2. Faça login no banco com o usuário ADMIN e a senha que você criou na Task 1
 
 ![Clique em Development e em seguida em Database Actions](./images/autonomous-database-login-11.png)
 
-5. Selecione a opção "Catalog"
+3. Selecione a opção "Catalog"
    
 ![Clique em Development e em seguida em Database Actions](./images/autonomous-database-catalog-12.png)
 
 Use a página Catalog para obter informações sobre as entidades disponíveis no Oracle Autonomous Database. Você pode ver os dados em uma entidade, as fontes desses dados, os objetos derivados da entidade e o impacto nos objetos derivados das alterações nas fontes.
 
-6. Selecione o schema SH digitando: **owner=SH AND type=TABLE** e selecione a tabela **SALES**
+4. Selecione o schema SH digitando: **owner=SH AND type=TABLE** e selecione a tabela **SALES**
 
 *Atenação: Verifique se a opção **All Local Objects** está selecionada*
 
 ![Clique em Development e em seguida em Database Actions](./images/autonomous-database-sales-13.png)
 
-7. Explore os campos de visualização, linhagem, impacto e estatísticas. Quando finalizar a exploração clique no botão **Close**
+5. Explore os campos de visualização, linhagem, impacto e estatísticas. Quando finalizar a exploração clique no botão **Close**
 
 ![ADW - Catalog](./images/autonomous-database-explore-14.png)
 
@@ -151,37 +146,41 @@ select a.cust_first_name, count(a.country_id), sum(b.amount_sold) from sh.sales 
 select count(*) from (select * from dba_source, v$sqltext);
 ```
 
-13. Volte para a tela principal clicando no logo Oracle no topo da página e em seguida selecione **PERFORMANCE HUB**
+5. Volte para a tela principal clicando no logo Oracle no topo da página e em seguida selecione **PERFORMANCE HUB**
 
 ![clique em "Performance Hub"](./images/autonomous-database-performance-20.png)
 
 Use a ferramenta Performance Hub para analisar e ajustar o desempenho de um Autonomous Database selecionado.
 Com esta ferramenta, você pode visualizar dados de desempenho históricos e em tempo real. Ao visualizar dados históricos no Performance Hub, você está visualizando estatísticas coletadas como parte dos instantâneos de hora em hora de seu banco de dados.
 
-14.  Selecione **SQL Monitoring** e você verá a lista dos SQl Statements
+6.  Selecione **SQL Monitoring** e você verá a lista dos SQl Statements
 
 ![clique em "SQL Monitoring"](./images/autonomous-database-monitoring-21.png)
 
 
-15. Clique no **SQL ID** da Query que você quer explorar:
+7. Clique no **SQL ID** da Query que você quer explorar:
 
 ![clique no SQL ID](./images/autonomous-database-id-22.png)
 
-16. Explore as outras abas como SQL Text, Atividades e Métricas. Podemos obter informações muito importantes como CPU utilizada ou quanto de memória estamos utilizando para determinada execução.
+8. Explore as outras abas como SQL Text, Atividades e Métricas. Podemos obter informações muito importantes como CPU utilizada ou quanto de memória estamos utilizando para determinada execução.
 
 ![explore as outras abas](./images/autonomous-database-explore-23.png)
 ![explore as outras abas](./images/autonomous-database-explore-24.png)
 
 
-Outra maneira de consultar as atividades do banco de dados é durante a execução de comandos, você pode mudar para a visualização de atividades “Activity” na página Autonomous Database dentro do console do OCI e acompanhar a atividade do banco de dados.
+Outra maneira de consultar as atividades do banco de dados é durante a execução de comandos, você pode mudar para a visualização de atividades em Database Dashboard dentro de Database Actions na console do OCI e acompanhar a atividade do banco de dados.
 
-17.  Volte para a tela de 'Autonomous Database Details' e clique no botão **Service Console**
+9.  Volte para a tela de 'Autonomous Database Details' e clique no botão **Database Actions**
 
-![clique em "Service Console"](./images/autonomous-database-service-25.png)
+![clique em "Database Actions"](./images/autonomous-database-console-9.png)
 
-18.  Selecione **Activity**
+10.  Selecione **Database Dashboard**
 
-![selecione "Activity"](./images/autonomous-database-activity-26.png) 
+![selecione "Database Dashboard"](./images/autonomous-database-service-25.png) 
+
+11.  Selecione **Monitor**
+
+![selecione "Monitor"](./images/autonomous-database-activity-26.png) 
 
 
 ## Conclusão
