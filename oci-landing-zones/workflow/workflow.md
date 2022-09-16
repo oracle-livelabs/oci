@@ -131,6 +131,8 @@ In the stack section, click create stack and choose template as the origin of th
 
 * Wait for atleast ten minutes and check the stack status.
 
+* Note: in case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources.
+
 ## Task 4: Clean Up 
 
 Congratulations, you completed the workshop. You may want to release the cloud resources created through this workshop. We will we use ORM to delete resources managed through Infrastructure As Code/Terraform.
