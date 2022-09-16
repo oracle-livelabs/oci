@@ -6,11 +6,7 @@ In this section of the demonstration we will be showcasing how AI Vision Service
 
 **“The global image recognition market size was USD 23.82 billion in 2019 and is projected to reach USD 86.32 billion by 2027, exhibiting a CAGR of 17.6% during the forecast period.”**
 
-Reference -
 
-[ https://www.alliedmarketresearch.com/image-recognition-market](https://www.alliedmarketresearch.com/image-recognition-market)
-
-[ https://www.fortunebusinessinsights.com/industry-reports/image-recognition-market-101855](https://www.fortunebusinessinsights.com/industry-reports/image-recognition-market-101855)
 
 ### **OCI Vision Introduction**
 
@@ -160,6 +156,12 @@ As seen from the analysis the AI vision service was successfully able to identif
 ## Learn More
 
 * [Oracle Docs](http://docs.oracle.com)
+
+Reference -
+
+[ https://www.alliedmarketresearch.com/image-recognition-market](https://www.alliedmarketresearch.com/image-recognition-market)
+
+[ https://www.fortunebusinessinsights.com/industry-reports/image-recognition-market-101855](https://www.fortunebusinessinsights.com/industry-reports/image-recognition-market-101855)
 
 ## Acknowledgements
 * **Author**

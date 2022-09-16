@@ -6,7 +6,7 @@ Accessing the product yield and quality is one of the essential task for manufac
 
 OCI Forecasting is a fully managed AI service that uses machine learning and statistical algorithms to deliver highly accurate time-series forecasts. It is capable of handling univariate or multivariate use-cases and can forecast variety of business metrics including product demands, sales, service requests etc. The service builds multiple models and ensembles to create the best one to maximize forecast accuracy using AutoML. It delivers forecasts with confidence interval and explain ability to bring transparency and aid in appropriate business decisions.
 
-Estimated Lab Time: 30 minutes
+Estimated Time: 30 minutes
 
 ### Objectives
 

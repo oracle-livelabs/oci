@@ -7,7 +7,7 @@ The workshop focuses on demonstrating how Oracle Manufacturing Lakehouse help th
 
 A data Lakehouse is a modern, open architecture that enables you to store, understand, and analyze all your data. It combines the power and richness of data warehouses with the breadth and flexibility of the most popular open-source data technologies you use today. A data Lakehouse can be built from the ground up on Oracle Cloud Infrastructure (OCI) to work with the latest AI frameworks and prebuilt AI services like Oracle’s language service.
 
-Estimated Lab Time: 90 minutes
+Estimated Time: 90 minutes
 
 [](youtube:ThpcC4K1tq4)
 

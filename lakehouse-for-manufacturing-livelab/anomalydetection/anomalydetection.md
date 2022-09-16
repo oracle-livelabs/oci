@@ -20,7 +20,7 @@ At a high level, here are the process of completing a full cycle of using anomal
 
 Note that one project can have multiple data assets and multiple models.
 
-Estimated Lab Time: 30 minutes
+Estimated Time: 30 minutes
 
 ### Objectives
 
@@ -93,7 +93,7 @@ Set training parameters
 
 Train a model
 
-Select the proper compartment (e.g, the compartment matching your name or company name), and then the project you have created.
+Select the proper compartment (e.g. the compartment matching your name or company name), and then the project you have created.
 ![compartment](images/compartment.png)
 
 Once the project ad_demo is selected, it will navigate the User to Created Anomaly Detection Project, then click "Create and Train Model".
@@ -150,7 +150,7 @@ The results return an array of anomalies grouped by timestamp. Each timestamp co
 
 ## Learn More
 
-* [https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=819&p210_type=3&session=953867760403](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=819&p210_type=3&session=953867760403)
+* [Oracle Docs](http://docs.oracle.com)
 
 
 ## Acknowledgements
