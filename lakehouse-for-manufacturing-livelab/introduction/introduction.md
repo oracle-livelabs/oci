@@ -3,11 +3,11 @@
 ## Introduction
 
 ### About the Workshop
-The workshop focuses on demonstrating how Oracle Manufacturing Lakehouse help the business in monitoring the Operational matrices and optimizing the supply chain using the Out of the box AI and ML capabilities of OCI. The Workshop has been designed to get a hands-on experience on Manufacturing Lakehouse and learn to leverage the next age OCI AI/ML services for customer demonstrations, designing POC and as an implementation accelerator for Lakehouse.
+The workshop focuses on demonstrating how Oracle Manufacturing Lakehouse helps the business in monitoring the Operational matrices and optimizing the supply chain using the Out of the box AI and ML capabilities of OCI. The Workshop has been designed to get a hands-on experience in Manufacturing Lakehouse and learn to leverage the next-age OCI AI/ML services for customer demonstrations, designing POC and as an implementation accelerator for Lakehouse.
 
 A data Lakehouse is a modern, open architecture that enables you to store, understand, and analyze all your data. It combines the power and richness of data warehouses with the breadth and flexibility of the most popular open-source data technologies you use today. A data Lakehouse can be built from the ground up on Oracle Cloud Infrastructure (OCI) to work with the latest AI frameworks and prebuilt AI services like Oracle’s language service.
 
-Estimated Lab Time: 90 minutes
+Estimated Time: 90 minutes
 
 [](youtube:ThpcC4K1tq4)
 
@@ -28,7 +28,7 @@ This lab assumes you have:
 * Familiar with Python programming for SDK usage is recommended.
 * Request access to OCI Forecasting + review policy requirements.
 
-## Task 1:  Login to Oracle Cloud
+## Task 1:  Log in to Oracle Cloud
 If you've signed out of the Oracle Cloud, use these steps to sign back in.
 
 1. Follow the Get Started section of this lab.
