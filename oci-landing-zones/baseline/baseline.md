@@ -140,8 +140,8 @@ Note: in case of quota/service limit/permission issues, Apply job will fail and 
 
 You may now proceed to the next lab.
 
-<!-- ## Acknowledgements -->
 
-<!-- * **Author**  -  Arjun Patel
-* **Contributors** -  Vinay Kumar
-* **Last Updated By/Date** - Vinay Kumar, Sept 2022-->
+## Acknowledgements
+
+* **Author** - Arjun Patel, Vinay Kumar
+* **Last Updated By/Date** - Vinay Kumar, September 2022
