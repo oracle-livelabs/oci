@@ -57,7 +57,7 @@ Landing Zone Topology Details
 
 * VCN Details
 Hamburger > Networking > Virtual Cloud Networks
-![VCN Info](.//images/mushop_vcn_info.png)
+![VCN Info](.//images/mushop-vcn-info.png)
 
 * Load Balancer Details
 Hamburger > Networking > Load Balancers
