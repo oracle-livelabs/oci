@@ -21,7 +21,7 @@ Prerequisites
 
 Landing Zone Topology Details
 
-![Topology](.//images/Mushop_Topo.png)
+![Topology](.//images/mushop-topology.png)
 
 *	Download the application files from the location https://github.com/oracle-quickstart/oci-cloudnative/releases/latest/download/mushop-basic-stack-latest.zip. 
 *  Login to Oracle Cloud Infrastructure.
@@ -43,15 +43,15 @@ Landing Zone Topology Details
 
 * Deployment Logs.
 
-![Stack Deployment](.//images/MuShop_Log.png)
+![Stack Deployment](.//images/mushop-log.png)
 
 * Verify the Mushop Application Deployment.
 
-![Mushop Application Info](.//images/Mushop_Application.png)
+![Mushop Application Info](.//images/mushop-application.png)
 
 * Verify the Mushop Application Dashboard.
 
-![Mushop DashBoard](.//images/MuShop_Application_URL.png)
+![Mushop DashBoard](.//images/mushop-application-url.png)
 
 ## Task 2: Deployment Resource Management
 
@@ -61,11 +61,11 @@ Hamburger > Networking > Virtual Cloud Networks
 
 * Load Balancer Details
 Hamburger > Networking > Load Balancers
-![Load Balancer Info](.//images/MuShop_LB.png)
+![Load Balancer Info](.//images/mushop-lb.png)
 
 * Compute Node
 
-![Load Balancer BackEnd](.//images/Mushop_LB_BackEnd.png)
+![Load Balancer BackEnd](.//images/mushop-lb-backend.png)
 
 
 ## Task 3: Cleanup
@@ -79,7 +79,7 @@ Follow these steps to completely remove all provisioned resources:
 * Select the stack created previously to open the Stack Details view
 * From the Stack Details, select Terraform Actions > Destroy
 
-![MuShop Delete](.//images/MuShop_Delete.png)
+![MuShop Delete](.//images/mushop-delete.png)
 
 * Confirm the Destroy job when prompted
 
