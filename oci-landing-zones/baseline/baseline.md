@@ -143,5 +143,7 @@ You may now proceed to the next lab.
 
 ## Acknowledgements
 
-* **Author** - Arjun Patel, Vinay Kumar
-* **Last Updated By/Date** - Vinay Kumar, September 2022
+* **Author** - LiveLabs Team
+* **Contributors** - LiveLabs Team, Arabella Yao
+* **Last Updated By/Date** - Arabella Yao, September 2022
+
