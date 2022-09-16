@@ -165,3 +165,8 @@ All resources provisioned during this workshop that were managed exclusively via
 
 8. You can go back to the Stack Details page, and delete the Stack by clicking on `More Actions -> Delete Stack` and click again to confirm your action. 
     ![Delete Stack](./images/oci-orm-delete-stack.png)  
+
+## Acknowledgements
+
+* **Author** - Arjun Patel, Vinay Kumar
+* **Last Updated By/Date** - Vinay Kumar, September 2022
