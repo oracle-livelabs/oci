@@ -29,17 +29,17 @@ Landing Zone Topology Details
     Hamburger > Developer Services > Resource Manager > Stacks > Create Stack
 * Upload the mushop-basic-stack-latest.zip file that was downloaded earlier, and provide a name and description for the stack
 
-![Stack Definition](.//images/Mushop_install_1.png)
+![Stack Definition](.//images/mushop-install-1.png)
 
 * Configure the Varibles for the Stack.
     *	Database Name - You can choose to provide a database name (optional
     *	SSH Public Key - (Optional) Provide a public SSH key if you wish to establish SSH access to the compute node(s).
 
-![Stack Varible Definition](.//images/Mushop_install_2.png)
+![Stack Varible Definition](.//images/mushop-install-2.png)
 
 * Deploy the Stack.
 
-![Stack Deployment](.//images/Mushop_install_3.png)
+![Stack Deployment](.//images/mushop-install-3.png)
 
 * Deployment Logs.
 
