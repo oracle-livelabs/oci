@@ -1,5 +1,7 @@
 # Get Started with Digital Twin 
 
+## Introduction
+
 Companies define digital twin based on their business models. In this livelab, we define digital twin is used to detect anomaly of a machinery in the running process. 
 To detect anomaly requires some form of a mathematical model that simulates the physical behavior of the system. 
 The simulation models have been used to identify possible root causes of anomalies on standalone PCs for long time. Cloud technologies have enabled massive amounts of simulations to run on the server. 
@@ -16,7 +18,7 @@ Further, we can use the diagnostic result to modify the control parameter to com
 
 
 
-## Introduction
+
 
 Get hands-on learning with training labs about Oracle cloud solutions. The workshops featured cover various solutions, skill levels, and categories based on Oracle Cloud Infrastructure (OCI).
 
