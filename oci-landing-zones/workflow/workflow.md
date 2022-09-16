@@ -88,19 +88,19 @@ The Workload Admin is the user role responsible for deployment of workload compu
 
 * Get the Application Compartment OCID (Alternative Way). 
    * Hamburger-->Networking-->Virtual Cloud Networks-->Select the LZ_Parent_Demo Compartent--> Select the Application
-![cloud guard](.//images/WBLZ_Application_OCID.png)
+![cloud guard](.//images/wblz-application-ocid.png)
 
 * Get the Network Compartment OCID(Alternative Way).
    * Hamburger-->Networking-->Virtual Cloud Networks-->Select the LZ_Parent_Demo Compartent--> Select the Network 
-![cloud guard](.//images/WBLZ_Network_Compartment_OCID.png)
+![cloud guard](.//images/wblz-network-compartent-ocid.png)
 
 * Get the VCN Compartment OCID(Alternative Way).
    * Hamburger-->Networking-->Virtual Cloud Networks-->Virtual Cloud Network Details
-![cloud guard](.//images/WBLZ_VCN_OCID.png)
+![cloud guard](.//images/wblz-vcn-ocid.png)
 
 * Get the NAT Gateway OCID(Alternative Way).
    * Hamburger-->Networking-->Virtual Cloud Networks-->Select the LZ_Parent_Demo Compartent--> Select the NAT Gateway 
-![cloud guard](.//images/WBLZ_Nat_GW_OCID.png)
+![cloud guard](.//images/wblz-nat-gw-ocid.png)
 
 
 * Sample Variable Value
@@ -123,11 +123,11 @@ The Workload Admin is the user role responsible for deployment of workload compu
 
 In the stack section, click create stack and choose template as the origin of the Terraform configuration. 
 
-![WorkLoad Deployment](.//images/WorkLoad_Template_1.png)
+![WorkLoad Deployment](.//images/workload-template-1.png)
 
 * Use the Sample Variable Value and captured OCID to fill the Tagging , Compartment, Workload compartment and VCN information.
  
-![WorkLoad Deployment](.//images/WBLZ_Stack_info.png)
+![WorkLoad Deployment](.//images/wblz-stack-info.png)
 
 * Wait for atleast ten minutes and check the stack status.
 
