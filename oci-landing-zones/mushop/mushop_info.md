@@ -9,7 +9,6 @@ Objectives
 
 In this lab, you will:
 
-    Inspect the resources created by the Landing Zone.
     Learn the process of intergration of thrid party app with the Landing Zone.
 
 Prerequisites
@@ -92,3 +91,8 @@ Click Delete Stack and confirm when prompted
 
 * In case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources.
 * Sometimes DB provisioning is not allowed in the tenanacy , in this case Job will fail. Click on Destroy button will trigger the job to remove provisioned resources.
+
+## Acknowledgements
+
+* **Author** - Vinay Kumar
+* **Last Updated By/Date** - Vinay Kumar, September 2022
