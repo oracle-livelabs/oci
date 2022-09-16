@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this section of the demonstration we will be showcasing how AI Vision Services can be used to identify visual quality defects of a chip wafer . OCI Vision Services provides you the liberty to bring your own pictures or video images to Oracle cloud and design Object Detection , Image Classification and Documentation AI. In the manufacturing industry we can perfectly use Vision service to automate the activities involving visual inspection and identification of Product quality and defects.
+In this section of the demonstration, we will be showcasing how AI Vision Services can be used to identify visual quality defects of a chip wafer. OCI Vision Services provides you the liberty to bring your pictures or video images to the Oracle cloud and design Object Detection, Image Classification, and Documentation AI. In the manufacturing industry, we can perfectly use Vision service to automate the activities involving visual inspection and identification of Product quality and defects.
 
 **“The global image recognition market size was USD 23.82 billion in 2019 and is projected to reach USD 86.32 billion by 2027, exhibiting a CAGR of 17.6% during the forecast period.”**
 
@@ -22,7 +22,7 @@ Oracle Cloud Infrastructure (OCI) Vision is an AI service for performing deep-le
 
 ### **Image Analysis**
 
-* Object Detection is a fundamental image analysis feature. You can detect and locate the objects in an image. For example, the image is of a product, Manufacturing arms, Vision locates the objects therein such as different product components/defects. It then draws bounding boxes around the objects and identifies them. You can also use it for visual anomaly detection.
+* Object Detection is a fundamental image analysis feature. You can detect and locate the objects in an image. For example, the image is of a product, Manufacturing arms, and Vision locates the objects therein such as different product components/defects. It then draws bounding boxes around the objects and identifies them. You can also use it for visual anomaly detection.
 * Image Classification is a fundamental image analysis feature. Upload an image to Object Storage and you can put it in pre-determined classes, based on the objects within it.
 
 ### **Pretrained Models**
@@ -53,7 +53,7 @@ In this workshop, you will:
 * Familiar with Python programming for SDK usage is recommended.
 * Request access to OCI Vision + review policy requirements
 
-Note – For In-depth knowledge on AI Vision service, please refer to the below Livelabs
+Note – For In-depth knowledge of AI Vision service, please refer to the below Livelabs
 
 [https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=931&clear=180&session=953867760403](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=931&clear=180&session=953867760403)
 
@@ -79,8 +79,8 @@ Follow these steps to create a Project in Vision.
    4. Click **Create Project**.
       The **Create Project** panel is displayed.
    5. Select a **Compartment** to create the Project.
-   6. Give the Project a **Name**. For example Visiondemo. Avoid entering confidential information.
-   7. (Optional) Enter a **Description** for the Project. It should help other identify it.
+   6. Give the Project a **Name**. For example Vision demo. Avoid entering confidential information.
+   7. (Optional) Enter a **Description** for the Project. It should help others identify it.
    8. Click **Create Project**.
 
     ![OCI Vision Service](images/oci-vision-service.png)
@@ -99,9 +99,9 @@ In Choose Model type to train Select **Object detection**.
 ![Create vision model](images/create-vision-model.png)
 
 **Select Training Data**
- Training datasets can be chosen either from existing Object Storage bucket or create a new data set from the OCI Data Labelling Service. (which we will cover in other Live Labs)
+ Training datasets can be chosen either from an existing Object Storage bucket or create a new data set from the OCI Data Labelling Service. (which we will cover in other Live Labs)
 
- For the purposes of this Live Lab please download the [training dataset](files/manufacturing-lakehouse.json) and upload to Object storage.
+ For this Live Lab please download the [training dataset](files/manufacturing-lakehouse.json) and upload it to Object storage.
 
  For training dataset **Choose existing dataset** and select the **object storage** location of the training dataset and click **Next**.
 
@@ -119,7 +119,7 @@ In Choose Model type to train Select **Object detection**.
 
   * **Quick training** - This option produces a model that is not fully optimized but is available in about an hour.
 
-  * **Custom** - This option allows you to set your own maximum training duration (in hours).
+  * **Custom** - This option allows you to set your maximum training duration (in hours).
 
 
 Review the information you provided in the previous steps. You can make any changes, by clicking **Previous**.
@@ -134,11 +134,11 @@ Once the model is trained you can see the different metrics of the model to unde
 
 ## Task 3: Test Vision Model
 
-Once the model completes training, lets test the model.
+Once the model completes training, let's test the model.
 
-To test the model, you can choose an image from the local machine or from an object Storage bucket.
+To test the model, you can choose an image from the local machine or an object Storage bucket.
 
-For this lab you can download [Images](https://objectstorage.us-ashburn-1.oraclecloud.com/p/pIfMcMCar5YueWGr8U4k6E62syqJtCfz60x7P1AHjMerjIuSbH_FPsC3CTlwIv18/n/c4u04/b/livelabsfiles/o/labfiles/OCE-20220913.zip) and use any of these images for testing Vision model.
+For this lab, you can download [Images](https://objectstorage.us-ashburn-1.oraclecloud.com/p/pIfMcMCar5YueWGr8U4k6E62syqJtCfz60x7P1AHjMerjIuSbH_FPsC3CTlwIv18/n/c4u04/b/livelabsfiles/o/labfiles/OCE-20220913.zip) and use any of these images for testing Vision model.
 
 ![Select image](images/select-image.png)
 
@@ -149,7 +149,7 @@ As per the model, the results are obtained as seen in the image depending on the
 **Congrats on completing this Lab**
 
 Conclusion
-From the case study we learn the Manufacturing defects identified were false positive. The real issue was with the presence of dust particles in the Camera sensor lens which was taking images.
+From the case study, we learn the Manufacturing defects identified were false positives. The real issue was with the presence of dust particles in the Camera sensor lens which was taking images.
 
 As seen from the analysis the AI vision service was successfully able to identify the dust particles and solve a quality issue.
 
