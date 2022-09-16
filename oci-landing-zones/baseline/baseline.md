@@ -142,6 +142,6 @@ You may now proceed to the next lab.
 
 <!-- ## Acknowledgements -->
 
-<!-- * **Author** - Lucas Gomes
-* **Contributors** -  Jonathan Schreiber, Rishi Johari, Tim Graves
-* **Last Updated By/Date** - Lucas Gomes, July 2021 -->
+<!-- * **Author**  -  Arjun Patel
+* **Contributors** -  Vinay Kumar
+* **Last Updated By/Date** - Vinay Kumar, Sept 2022 -->
