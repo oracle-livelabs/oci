@@ -168,5 +168,6 @@ All resources provisioned during this workshop that were managed exclusively via
 
 ## Acknowledgements
 
-* **Author** - Arjun Patel, Vinay Kumar
-* **Last Updated By/Date** - Vinay Kumar, September 2022
+* **Author** - LiveLabs Team
+* **Contributors** - LiveLabs Team, Arabella Yao
+* **Last Updated By/Date** - Arabella Yao, September 2022
