@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Deploying OCI Streaming Service",
+    "workshoptitle": "Deploy Digital Twin on Oracle Cloud Infrastructure",
     "help": "livelabs-help-oci_us@oracle.com",
 	"tutorials": [
         {
@@ -8,19 +8,29 @@
         },
         {
             "title": "Introduction",
-            "filename": "./../../intro/intro.md"
+            "filename": "./../../00-intro/intro.md"
         },
         {
-            "title": "Lab 1: Stream pools and Streams",
-            "filename": "./../../administration/administration.md"
+            "title": "Lab 1: Set Up Environment",
+            "filename": "./../../01-set-up-environment/set-up-environment.md"
         },
         {
-            "title": "Lab 2: Publishing messages",
-            "filename": "./../../publishing/publishing.md"
+            "title": "Lab 2: Deploy Digital Twin Simulation Model",
+            "filename": "./../../02-deploy-digitaltwin-simulation/deploy-digitaltwin-simulation.md"
         },
         {
-            "title": "Lab 3: Consuming messages",
-            "filename": "./../../consuming/consuming.md"
+            "title": "Lab 3: Train Anomaly Detection Model",
+            "filename": "./../../03-train-ad-model/train-ad-model.md"
+        },
+        {
+            "title": "Lab 4: Monitor Asset",
+            "filename": "./../../04-monitor-assets/monitor-assets.md"
+        },{
+            "title": "Lab 5: (Advanced) Explore Anomaly Detection - Access Anomaly Detection service with REST API",
+            "filename": "./../../05-explore-ad/explore-ad.md"
+        },{
+            "title": "Lab 6: Anomaly Diagnosis",
+            "filename": "./../../06-diagnostic/diagnostic.md"
         },
         {
             "title": "Need Help?",

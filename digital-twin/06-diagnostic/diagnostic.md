@@ -8,13 +8,13 @@ In this lab session, we will show you how to leverage the OCI Anomaly Detection 
 ### Objectives
 TODO: update objectives here
 
-###Task 1
+## Task 1
 
 
 
-###Task 2
+## Task 2
 
 
 
 
-###Task 3
+## Task 3

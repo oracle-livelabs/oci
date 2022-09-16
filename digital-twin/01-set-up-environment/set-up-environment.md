@@ -83,6 +83,9 @@ The job will take approximately 25 minutes to run.
 Oracle Cloud Infrastructure Object Storage service is an Internet-scale, high-performance storage platform that offers reliable and cost-efficient data durability. You can check and verify the Object Storage Bucket that created by the Resource Manager job.
 
 1. Click the Navigation Menu in the upper left, navigate to **Storage**, and select **Buckets**.
-![Buckets](./images/bucket_navigation.png)
+![os navigation](./images/bucket_navigation.png)
+
 2. Select the compartments
+![os console](./images/os_console.png)
+
 3. Open the bucket **ad_bucket**

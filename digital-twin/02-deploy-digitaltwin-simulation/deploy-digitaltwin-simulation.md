@@ -10,7 +10,7 @@ In this session, we will deploy MapleSim Digital Twin simulation model on OCI OK
 ### Objectives
 Deploly the model to OKE
 
-###Task 1 Configure OKE access in cloud shell
+## Task 1 Configure OKE access in cloud shell
 OCI cloud shell is a web browser-based terminal accessible from the Oracle Cloud Console. It provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI, kubenets ctl etc.
 1. Click the "Cloud Shell" icon to open the cloud shell. 
 ![Cloud Shell](./images/cloud-shell.png " ")
@@ -23,7 +23,7 @@ OCI cloud shell is a web browser-based terminal accessible from the Oracle Cloud
 
 ![Kubernetes Config](./images/cloud-console-kube.png)
 
-###Task 2 Deploy the service to OKE
+## Task 2 Deploy the service to OKE
 
 1. Copy the deployment file from github.
 The deployment file is under [file folder](https://github.com/tonyora/oci/blob/main/digital-twin/02-deploy-digitaltwin-simulation/file/digitaltwin.yaml)
