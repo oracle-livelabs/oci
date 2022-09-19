@@ -2,7 +2,11 @@
 
 ## Introduction
 
+<<<<<<< HEAD
 You now want to expose the Skill you created through multiple channels. In this lab, you'll configure and publish your DA through a web channel, download and install the sample client application, and run and test it against your DA. Since this allows users to access your Skill through a web page, it’s within easy reach of a multitude of users. 
+=======
+You now want to expose the Skill you created through multiple channels. In this lab you'll configure and publish your DA through a web channel, download and install the sample client application, and run and test it against your DA. Since this allows users to access your Skill through a web page, it’s within easy reach of a multitude of users. 
+>>>>>>> upstream/main
 
 Estimated Time: 10 minutes
 

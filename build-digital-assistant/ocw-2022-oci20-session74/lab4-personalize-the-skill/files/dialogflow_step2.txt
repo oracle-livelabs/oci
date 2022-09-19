@@ -111,6 +111,7 @@ states:
 
 ########### Unresolved State ###############
   unresolvedIntent:
+<<<<<<< HEAD
     component: "System.CommonResponse"
     properties:
       keepTurn: true
@@ -118,6 +119,11 @@ states:
         responseItems:        
         - type: "text" 
           text: "I don't understand. What do you want to do?"
+=======
+    component: "System.Output"
+    properties:
+      text: "I don't understand. What do you want to do?"
+>>>>>>> upstream/main
     transitions:
       return: "intent"
 
