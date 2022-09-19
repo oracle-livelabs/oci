@@ -10,7 +10,7 @@ Estimated lab time: 15 mins
 
 ## Task 1: Create Autonomous Transaction Processing Database
 
-1.  Login to your Oracle Cloud Tenancy and open the side menu.
+1.  Log in to your Oracle Cloud Tenancy and open the side menu.
     
     ![Welcome to the OCI Dashboard](images/oci-login.png  " ")
 
@@ -19,11 +19,11 @@ Estimated lab time: 15 mins
     
     ![Autonomous Transaction Processing](images/navigate-to-autonomous-database.png  " ")
 
-3.  Select the your compartment/root compartment and click **Create an Autonomous Database**.
+3.  Select your compartment/root compartment and click **Create an Autonomous Database**.
     
     ![Create ATP Database](images/select-compartment.png  " ")
 
-4.  Give a prefered Display Name (Ex: CareClinicsDB) and click **Transaction Processing** for the workload type.
+4.  Give a preferred Display Name (Ex: CareClinicsDB) and click **Transaction Processing** for the workload type.
     
     ![Give new Database a preferred Display Name](images/provide-display-name.png " ")
 
@@ -31,7 +31,7 @@ Estimated lab time: 15 mins
 
     ![Configure the database](images/always-free-instance.png " ")
 
-6.  Create the ADMIN password (Ex:Oracle_12345) for the DB, following the database password requirements. Leave everything else as default.
+6.  Create the ADMIN password for the DB, following the database password requirements. Leave everything else as default.
 
     > *Note:* Make sure to save this password, you will need it later in this lab.
     
@@ -57,36 +57,41 @@ Estimated lab time: 15 mins
     
     ![Launch pad for database actions](images/database-actions-launchpad.png " ")
 
-    If it does not, you will be directed to a login page. Sign in with the database instance's default administrator account, Username - ADMIN with the admin password you specified (Ex: Oracle_12345) when creating the database. Click Sign in.
+    If it does not, you will be directed to a login page. Sign in with the database instance's default administrator account, Username - ADMIN with the admin password you specified when creating the database. Click Sign in.
 
-3. First, we want to create a database schema for our tables and data. We do this by creating a database user. To create a database user, we start by clicking the Database Actions Menu in the upper left of the page, then clicking Database Users in the Administration List. It is not good practice to use a SYS or SYSTEM user to create an application's tables, and neither is it good practice to use the ADMIN account to create applications.
+3. First, we want to create a database schema for our tables and data. We do this by creating a database user. To create a database user, we start by clicking the Database Actions Menu in the upper left of the page, then clicking Database Users in the Administration List. It is not good practice to use SYS or SYSTEM users to create an application's tables, and neither is it good practice to use the ADMIN account to create applications.
 
     ![Select Database Users](images/select-database-users.png " ")
 
 4. Now, click the + Create User button on the right side of the page. This will slide out the Create User panel.
 
-5. Start by entering a user name. Let's use *CareClinics* as the username. Next we need to enter a password. The password must be complex enough to pass the password profile set by the database. The rules are as follows:
+5. Start by entering a user name. Let's use *CareClinics* as the username. Next, we need to enter a password. The password must be complex enough to pass the password profile set by the database. The rules are as follows:
 
     Password must be 12 to 30 characters and contain at least one uppercase letter, one lowercase letter, and one number. The password cannot contain the double quote (") character or the username "admin".
 
     Once we enter the password twice, ensure the Web Access button is on. This will allow us to use REST services with this database schema from the start. Your panel should look similar to the following image:
     ![Create Database User](images/create-user.png " ")
 
-    Disable *Authorization Required* toggle.
+    Disable the *Authorization Required* toggle.
 
     Set the **Quota** as *Unlimited*.
 
     Once you are ready, click *Create User* on the bottom of the panel to create the database user.
 
-> **Note:** If you see Error while creating user, revise your password so that it only contains letters and numbers, no characters.
+> **Note:** If you see an Error while creating a user, revise your password so that it only contains letters and numbers, no characters.
 
 8. After the quota is successfully modified, *sign out* of the page. 
 
 ## Task 3: Load the data into the Database
 
-1. Login with *CareClinics* and your password (Ex: Oracle_12345) and navigate to SQL tile. 
+1. Login with *CareClinics* and your password and navigate to the SQL tile.
+
+![Sign in with careclinics](images/sign_in_with_careclinics.png " ")
+
+![Select SQL tile](images/select-sql-tile.png " ")
 
 2. We are now ready to load data into the database. For this task, we will use the Data Loading tab in the SQL Worksheet.
+
 
 3. Start by clicking the Data Loading area; the center of the gray dotted-line box. The Upload Data into New Table model will appear.
 
@@ -106,11 +111,11 @@ Estimated lab time: 15 mins
 
 ## Task 4: Enable REST API 
 
-1. Right click on the table name and select REST in the pop up menu then Enable.
+1. Right-click on the table name and select REST in the popup menu then Enable.
 
 ![Enable REST](images/enable-rest-endpoint.png " ")
 
-2. The REST Enable Object slider will appear from the right side of the page. We are going to use the defaults for this page but take note and **copy the Preview URL**. This is the URL we will use to access the REST enabled table. When ready, click the Enable button in the lower right of the slider.
+2. The REST Enable Object slider will appear from the right side of the page. We are going to use the defaults for this page but take note and **copy the Preview URL**. This is the URL we will use to access the REST-enabled table. When ready, click the Enable button in the lower right of the slider.
 
 ![Enable REST](images/copy-rest-url.png " ")
 
@@ -118,7 +123,7 @@ Estimated lab time: 15 mins
 
 ## Summary
 
-In this lab, you have learnt how to configure REST API for the Database tables. We will be using this API to register the Patients and store thier details in the Autonomus Transaction Processing Database.
+In this lab, you have learned how to configure REST API for the Database tables. We will be using this API to register the Patients and store their details in the Autonomous Transaction Processing Database.
 
 You may now **proceed to the next lab**.
 

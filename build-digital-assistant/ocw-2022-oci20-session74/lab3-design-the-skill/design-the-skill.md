@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Once you have the instance created, you can begin development of your Oracle Digital Assistant instance. Here’s a bird’s-eye view of the Skill development process.
+Once you have the instance created, you can begin the development of your Oracle Digital Assistant instance. Here’s a bird’s-eye view of the Skill development process.
 
   ![Bots overall process](images/bots-overall-process.png " ")
 
@@ -19,7 +19,7 @@ In this lab you will perform the following tasks:
 - Create and test the intents and entities.
 
 ## Task 1: Create a Digital Assistant Instance and Import the Skill
-1. Once you are logged into Oracle Cloud, you are taken to the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top level navigation choices.
+1. Once you are logged into Oracle Cloud, you are taken to the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top-level navigation choices.
 2. Click **Digital Assistant**
 
   ![Select ODA from the navigation menu.png](images/select-oda-from-navigation-menu.png " ")
@@ -40,23 +40,23 @@ In this lab you will perform the following tasks:
 
   ![Open the Skill](images/open-skill.png " ")
 
-7. Navigate the page to get familar with the Terminology.
+7. Navigate the page to get familiar with the Terminology.
 
   ![Page Navigation](images/page-navigation.png " ")
 
 8. Click on the Intent(leaf icon) within the Skill to get started with your next task. 
 
 ## Task 2: Create and Test an Intent
-Oracle Digital Assistant's underlying natural language processing (NLP) engine doesn't inherently know about the business or task that a skill is supposed to assist with. For the skill to understand what it should react to, you need to define intents and examples (utterances) for how a user would request a specific intent.
+Oracle Digital Assistant's underlying natural language processing (NLP) engine doesn't inherently know about the business or task that skill is supposed to assist with. For the skill to understand what it should react to, you need to define intents and examples (utterances) for how a user would request a specific intent.
 
 You will create intents for finding a doctor and positive health therapy tips. 
 
 Create the Find a Doctor intent: 
 
 1. Click the + Intent button.
-2. Next to the Conversation Name field, click the Edit button, and enter *Find Doctor*.
+2. Next to the Conversation Name field, click the Edit button and enter *Find Doctor*.
 3. In the Name field, type *findDoctor*.
-4. Select and copy all of the example sentences below to your clipboard and paste in the *Advance Input Mode* section under Examples
+4. Select and copy all of the example sentences below to your clipboard and paste them   into the *Advance Input Mode* section under Examples
 
     ```
     <copy>
@@ -77,9 +77,9 @@ Create the Find a Doctor intent:
 ### Create the Positive Health intent:
 
 1. Click the + Intent button.
-2. Next to the Conversation Name field, click the Edit button, and enter *Positive Health*.
+2. Next to the Conversation Name field, click the Edit button and enter *Positive Health*.
 3. In the Name field, type *positiveHealth*.
-4. Select and copy all of the example sentences below to your clipboard and paste in the *Advance Input Mode* section under Examples
+4. Select and copy all of the example sentences below to your clipboard and paste them into the *Advance Input Mode* section under Examples
 
     ```
     <copy>
@@ -93,12 +93,12 @@ Create the Find a Doctor intent:
 5. Click the +Create button.
 
 ### Create the Unresolved intent:
-The unresolved intent in a skill handles messages outside of the domain that a skill is designed to process. For this you usually map a dialog flow state to the *unresolvedIntent* action transition to inform the user that the skill could not handle the request.
+The unresolved intent in a skill handles messages outside of the domain that the skill is designed to process. For this, you usually map a dialog flow state to the *unresolvedIntent* action transition to inform the user that the skill could not handle the request.
 
 1. Click the + Intent button.
 2. Next to the Conversation Name field, click the Edit button, and enter *Unresolved Intent*.
 3. In the Name field, type *unresolvedIntent*.
-4. Select and copy all of the example sentences below to your clipboard and paste in the *Advance Input Mode* section under Examples
+4. Select and copy all of the example sentences below to your clipboard and paste them into the *Advance Input Mode* section under Examples
 
     ```
     <copy>
@@ -113,7 +113,7 @@ The unresolved intent in a skill handles messages outside of the domain that a s
 
 ### Train and test the intents:
 
-You've now provided the basic ingredients that allow the skill to recognize user input for both the intents. Currently, the skill can't understand any user input.
+You've now provided the basic ingredients that allow the skill to recognize user input for both intents. Currently, the skill can't understand any user input.
 
 To enable the skill to interpret user input based on the utterances that you just added, you need to train to build the intent model.
 
@@ -133,7 +133,7 @@ To enable the skill to interpret user input based on the utterances that you jus
 
 ## Task 3: Create Entities
 
-Now it's time to add entities, which detect information in the user input that can help the intent fulfill a user request. We will be creating entities with regular expression, value lists and add them to a composite bag. 
+Now it's time to add entities, which detect information in the user input that can help the intent to fulfill a user request. We will be creating entities with regular expressions, and value lists and adding them to a composite bag. 
 
 1. In the left navigation for the designer, select the *Entities* icon.
  ![Click entities](images/click-entities.png " ")
@@ -156,7 +156,7 @@ Create a Value List Entity
 4. Click + Value.
 For Value, type *10:00 AM*.
 For Synonyms, type *10am*, then click Enter. Type 10:00am, and then click Enter again.<br/> <br/>
-Here are the list of values and synonyms:<br/>
+Here is the list of values and synonyms:<br/>
   ![Create value list](images/create-value-list.png " ")
 8:30 AM	- 8:30, 8:30am, 8:30 am <br/>
 > **Note:** Hit the enter button after typing each synonym.
@@ -171,7 +171,7 @@ Click Create.
  
 5. Repeat the above steps to create another value list for the *Provider*. <br/>
 
-    Name: Provider <br/>
+    Name: **Provider** <br/>
     Configuration: Value List <br/>
     Values: <br/>
     Dermatology	- Dermatology, derma <br/>
@@ -193,13 +193,13 @@ In this step, you're going to simplify your development efforts using a composit
 
 8. Select the *RegisterPatientBag* and add a *+ Bag Item*.
   ![Add bag item](images/add-bag-item.png " ")
-9. Enter the Name as *FirstName*, select the type as *Entity* and Entity name as *FirstName* from the drop down.
+9. Enter the Name as **FirstName**, select the type as *Entity* and Entity name as *FirstName* from the drop-down.
   ![Add first name to bag](images/add-first-name-to-bag.png " ")
 10. Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
 
     ```
     <copy>
-    Enter first name
+    Enter the first name
     </copy>
     ```
     ```
@@ -212,7 +212,7 @@ In this step, you're going to simplify your development efforts using a composit
 
 11. Click the close button.
 12. Add *+ Bag Item* for Last Name.<br/>
-    Name: LastName
+    Name: **LastName**
     Type: Entity
     Entity Name: LastName
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
@@ -230,7 +230,7 @@ In this step, you're going to simplify your development efforts using a composit
     </copy>
     ```
 13. Add *+ Bag Item* for Phone Number.<br/>
-    Name: PhoneNumber
+    Name: **PhoneNumber**
     Type: Entity
     Entity Name: PhoneNumber
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
@@ -254,7 +254,7 @@ In this step, you're going to simplify your development efforts using a composit
     ```
 
 14. Add *+ Bag Item* for Street Address.<br/>
-    Name: StreetAddress
+    Name: **StreetAddress**
     Type: Entity
     Entity Name: Address
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
@@ -275,7 +275,7 @@ In this step, you're going to simplify your development efforts using a composit
       ![Edit Prompt](images/edit-prompt.png " ")
       
 15. Add *+ Bag Item* for City.<br/>
-    Name: City
+    Name: **City**
     Type: Entity
     Entity Name: City
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
@@ -292,7 +292,7 @@ In this step, you're going to simplify your development efforts using a composit
     </copy>
     ```
 16. Add *+ Bag Item* for State.<br/>
-    Name: State
+    Name: **State**
     Type: Entity
     Entity Name: State
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
@@ -309,7 +309,7 @@ In this step, you're going to simplify your development efforts using a composit
     </copy>
     ```
 17. Add *+ Bag Item* for Zipcode.<br/>
-    Name: Zipcode
+    Name: **Zipcode**
     Type: Entity
     Entity Name: Number
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
@@ -326,7 +326,7 @@ In this step, you're going to simplify your development efforts using a composit
     </copy>
     ```
 18. Add *+ Bag Item* for Location.<br/>
-    Name: Location
+    Name: **Location**
     Type: Location
     Set the *Out of Order Extraction* as *Never* and add the following *prompts*:
     Prompts: 
@@ -345,7 +345,7 @@ In this step, you're going to simplify your development efforts using a composit
 
 - Add *+ Bag Item* for *dateEntry*.
 <br/>
-    Name: dateEntry
+    Name: **dateEntry**
     Type: Entity
     Entity Name: DATE
 
@@ -355,7 +355,7 @@ In this step, you're going to simplify your development efforts using a composit
   <br/>
     Switch on toggle - Consider End User Locale
     Default Date Format - MM/DD/YY
-    Resolve Date as *Default* in intents
+    Resolve Date as *Default* in intent
 
     ![Configure Ambiguity Resolution Rule](images/ambiguity-resolution-rule.png " ")
   
@@ -378,7 +378,7 @@ In this step, you're going to simplify your development efforts using a composit
 
 - Add *+ Bag Item* for *TimePicker*.
 <br/>
-    Name: TimePicker
+    Name: **TimePicker**
     Type: Entity
     Entity Name: TimePicker
 
@@ -394,6 +394,7 @@ In this step, you're going to simplify your development efforts using a composit
 
 > **Note:** On the right side of the page, locate and click the Train. Select *Trainer Ht* and then click *Submit*. Ensure that all the entities are trained.
 
+ ![Train the entities](images/train-the-entities.png " ")
 
 ## Summary
 

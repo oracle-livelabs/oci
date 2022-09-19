@@ -13,6 +13,8 @@ context:
     Provider: "Provider"
     selectedDate: "DatePickerBag"
     TimePickerBag: "TimePickerBag"
+    messageBody: "string"
+    messageto: "string"
     
 states:
 
@@ -336,7 +338,7 @@ states:
           - type: "text"
             text: "You have successfully scheduled your appointment with the doctor ${DoctorName.value} (ID - ${practitionerid.value}) for on ${selectedDate.value.dateEntry.date?number_to_date?string['yyyy-MM-dd']} at ${TimePickerBag.value.TimePicker}"
     transitions:
-      next: "confirmationResponse"
+      next: "setMessageBody"
 
   confirmationResponse: 
     component: "System.CommonResponse"
@@ -347,6 +349,24 @@ states:
             text: "We will send you an SMS with the appointment details to your registered mobile number."
     transitions:
       next: "exitFlow"
+
+  setMessageBody:
+    component: "System.SetVariable"
+    properties:
+      variable: messageBody
+      value: "You have successfully scheduled your appointment with the doctor ${DoctorName.value} (ID - ${practitionerid.value}) for on ${selectedDate.value.dateEntry.date?number_to_date?string['yyyy-MM-dd']} at ${TimePickerBag.value.TimePicker}"
+      
+  sendSMS:
+    component: "sms"
+    properties: 
+      messageto: ${RegisterPatientBag.value.PhoneNumber}
+      messagebody: ${messageBody.value}
+      accid: ${system.config.accid}
+      tokenid: ${system.config.tokenid}
+      messagefrom: ${system.config.twilionumber}
+    transitions: 
+      next: "exitFlow" 
+
 
 ######## Exit Flow ############ 
 

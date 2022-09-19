@@ -74,7 +74,7 @@ states:
       variable: "iResult"
     transitions:
       actions:
-        unresolvedIntent: "greetings"
+        unresolvedIntent: "unresolvedIntent"
         greetings: "greetings"
         findDoctor: "findPatientDetails"
         positiveHealth: "startTheraphy"
@@ -111,9 +111,13 @@ states:
 
 ########### Unresolved State ###############
   unresolvedIntent:
-    component: "System.Output"
+    component: "System.CommonResponse"
     properties:
-      text: "I don't understand. What do you want to do?"
+      keepTurn: true
+      metadata:
+        responseItems:        
+        - type: "text" 
+          text: "I don't understand. What do you want to do?"
     transitions:
       return: "intent"
 
