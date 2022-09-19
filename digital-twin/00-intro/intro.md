@@ -1,4 +1,4 @@
-# Get Started with Digital Twin 
+# Get Started with Digital Twin on Oracle Cloud Infrastructure (OCI)
 
 ## Introduction
 
@@ -17,21 +17,17 @@ Further, we can use the diagnostic result to modify the control parameter to com
 ![Digital Twin Architecture](./images/achitecture.png)
 
 
-
-
-
-Get hands-on learning with training labs about Oracle cloud solutions. The workshops featured cover various solutions, skill levels, and categories based on Oracle Cloud Infrastructure (OCI).
-
 Estimated time: 120 minutes
 
 
 
 ### Objectives
 
-1. Understand the refrence architecture to detect anomaly and OCI at high level
-2. Understand the digital twin application at high level
-3. Hands-on experience with OCI services to implement digit twin solution with OCI services and MapleSim
-4. Understand the anomaly detection principle at high level 
+1. Understand the digital twin application at high level
+2. Understand the anomaly detection principle at high level 
+3. Get hands-on experience of deploying digit twin with OCI services and MapleSim
+4. Get hands-on experience of using digital twin to generate simulation data
+5. Learn how to use Oracle Anomaly Detection to monitor asset data
 
 
 
@@ -40,9 +36,9 @@ Estimated time: 120 minutes
 1. An Oracle Free Tier, or Paid Cloud Account 
 2. Administrator privilege of OCI tenancy required 
 3. Additional prerequisites (cloud services) are mentioned per lab
-4. Familiar with Python programming for SDK usage is recommended.
-5. Familiar with Terraform script is recommended.
-6. Familiar with asset management and conditioning monitoring
+4. Familiar with asset management and conditioning monitoring
+5. Familiar with Python programming for SDK usage is recommended.
+6. Familiar with Terraform script is recommended.
 
 
 
@@ -56,10 +52,13 @@ Estimated time: 120 minutes
 
 *Please proceed to the next lab.*
 
-### Acknowledgements  --- TODO: update
+## Acknowledgements
 
-- **Author** - Tony Zhang, Jiayuan Yang
+- **Authors**
+      - Tony Zhang - Master Principal Cloud Architect
+      - Jiayuan Yang - Senior Cloud Engineer
+      - Adrian Alba - Staff Cloud Engineer
 - **Adapted by** -  
-- **Contributors** - 
-- **Last Updated By/Date** - 
+- **Contributors** - Samuel Cacela, Staff Cloud Engineer 
+- **Last Updated By/Date** - 2022 September
 
