@@ -1,19 +1,20 @@
 # Set Up Digital Twin Running Environment
 
 
-
 ## Introduction
 In this session, we will configure OCI tenancy with required IAM resources (compartment, user/group, compartment), create OCI services like OKE, OCI Streaming, Object Storage, and OCI Notification service.
 
+
+
 ### Services will be provisioned in this Lab:
-- Identity and Access Management (IAM):
+- **Identity and Access Management (IAM)**:
     - **Compartment**: Logical container for resources, used to manage access to resources as a function of Identity and Access Management (IAM). 
     - **Policy**: An arrangement of statements used to manage access to resources as a function of Identity and Access Management (IAM). 
-    - **Dynamic** Group: An arrangement of matching rules used to manage permissions to enable specific resources to access other specified resources.
-- Oracle Data Science Platform: Serverless platform that lets developers create, run, and scale applications without managing any infrastructure. 
-- Oracle Kubernetes Engine (OKE): Oracle-managed container orchestration service that can reduce the time and cost to build modern cloud native applications. 
-- Oracle Object Storage: Securely store any type of data in its native format, with built-in redundancy. 
-- Virtual Cloud Network (VCN): Customizable and private cloud network.
+    - **Dynamic Group**: An arrangement of matching rules used to manage permissions to enable specific resources to access other specified resources.
+- **Oracle Data Science Platform**: Serverless platform that lets developers create, run, and scale applications without managing any infrastructure. 
+- **Oracle Kubernetes Engine (OKE)**: Oracle-managed container orchestration service that can reduce the time and cost to build modern cloud native applications. 
+- **Oracle Object Storage**: Securely store any type of data in its native format, with built-in redundancy. 
+- **Virtual Cloud Network (VCN)**: Customizable and private cloud network.
 
 
 *Estimated Time*: 30 minutes
