@@ -38,19 +38,19 @@ Landing Zone Topology Details
 
 * Deploy the Stack.
 
-![Stack Deployment](.//images/mushop-install-3.png)
+![Stack Deployment Snapshot](.//images/mushop-install-3.png)
 
 * Deployment Logs.
 
-![Stack Deployment](.//images/mushop-log.png)
+![Stack Deployment Logs Snapshot](.//images/mushop-log.png)
 
 * Verify the Mushop Application Deployment.
 
-![Mushop Application Info](.//images/mushop-application.png)
+![Mushop Application Details](.//images/mushop-application.png)
 
 * Verify the Mushop Application Dashboard.
 
-![Mushop DashBoard](.//images/mushop-application-url.png)
+![Mushop Application DashBoard](.//images/mushop-application-url.png)
 
 ## Task 2: Deployment Resource Management
 
