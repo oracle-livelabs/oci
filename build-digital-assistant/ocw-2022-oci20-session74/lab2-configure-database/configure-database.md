@@ -10,11 +10,7 @@ Estimated lab time: 15 mins
 
 ## Task 1: Create Autonomous Transaction Processing Database
 
-<<<<<<< HEAD
 1.  Log in to your Oracle Cloud Tenancy and open the side menu.
-=======
-1.  Login to your Oracle Cloud Tenancy and open the side menu.
->>>>>>> upstream/main
     
     ![Welcome to the OCI Dashboard](images/oci-login.png  " ")
 
@@ -23,19 +19,11 @@ Estimated lab time: 15 mins
     
     ![Autonomous Transaction Processing](images/navigate-to-autonomous-database.png  " ")
 
-<<<<<<< HEAD
 3.  Select your compartment/root compartment and click **Create an Autonomous Database**.
     
     ![Create ATP Database](images/select-compartment.png  " ")
 
 4.  Give a preferred Display Name (Ex: CareClinicsDB) and click **Transaction Processing** for the workload type.
-=======
-3.  Select the your compartment/root compartment and click **Create an Autonomous Database**.
-    
-    ![Create ATP Database](images/select-compartment.png  " ")
-
-4.  Give a prefered Display Name (Ex: CareClinicsDB) and click **Transaction Processing** for the workload type.
->>>>>>> upstream/main
     
     ![Give new Database a preferred Display Name](images/provide-display-name.png " ")
 
@@ -43,11 +31,7 @@ Estimated lab time: 15 mins
 
     ![Configure the database](images/always-free-instance.png " ")
 
-<<<<<<< HEAD
 6.  Create the ADMIN password for the DB, following the database password requirements. Leave everything else as default.
-=======
-6.  Create the ADMIN password (Ex:Oracle_12345) for the DB, following the database password requirements. Leave everything else as default.
->>>>>>> upstream/main
 
     > *Note:* Make sure to save this password, you will need it later in this lab.
     
