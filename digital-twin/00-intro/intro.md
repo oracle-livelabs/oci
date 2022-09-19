@@ -1,5 +1,7 @@
 # Get Started with Digital Twin 
 
+## Introduction
+
 Companies define digital twin based on their business models. In this livelab, we define digital twin is used to detect anomaly of a machinery in the running process. 
 To detect anomaly requires some form of a mathematical model that simulates the physical behavior of the system. 
 The simulation models have been used to identify possible root causes of anomalies on standalone PCs for long time. Cloud technologies have enabled massive amounts of simulations to run on the server. 
@@ -16,7 +18,7 @@ Further, we can use the diagnostic result to modify the control parameter to com
 
 
 
-## Introduction
+
 
 Get hands-on learning with training labs about Oracle cloud solutions. The workshops featured cover various solutions, skill levels, and categories based on Oracle Cloud Infrastructure (OCI).
 
@@ -24,7 +26,7 @@ Estimated time: 120 minutes
 
 
 
-## Objectives
+### Objectives
 
 1. Understand the refrence architecture to detect anomaly and OCI at high level
 2. Understand the digital twin application at high level
@@ -33,7 +35,7 @@ Estimated time: 120 minutes
 
 
 
-## Prerequisites
+### Prerequisites
 
 1. An Oracle Free Tier, or Paid Cloud Account 
 2. Administrator privilege of OCI tenancy required 
@@ -44,7 +46,7 @@ Estimated time: 120 minutes
 
 
 
-## Additional Recommended Resources
+### Additional Recommended Resources
 
 1. [OCI Training](https://cloud.oracle.com/en_US/iaas/training)
 2. [Familiarity with OCI console](https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm)
@@ -54,7 +56,7 @@ Estimated time: 120 minutes
 
 *Please proceed to the next lab.*
 
-## Acknowledgements  --- TODO: update
+### Acknowledgements  --- TODO: update
 
 - **Author** - Tony Zhang, Jiayuan Yang
 - **Adapted by** -  

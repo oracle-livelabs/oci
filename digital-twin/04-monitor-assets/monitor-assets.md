@@ -8,27 +8,28 @@ In this session, we will show you how to and make predictions with new data usin
 *Estimated Time*: 20 minutes
 
 ### Objectives
-1. Use digital twin to 
+1.
 
-### Task 1 Generate 
-
-
-
-### Task 2 Generate anomaly
+## Task 1 Generate 
 
 
 
+## Task 2 Generate anomaly
 
-### Task 3 Verify the anomaly
 
 
-##
+## Task 3 Verify the anomaly
+
+## Task 3 Verify the anomaly
+
+
+
 **If you have NOT completed the Labs (01 and 02),**
 - Download the **AD_testing.csv Dataset** https://objectstorage.us-ashburn-1.oraclecloud.com/p/L5-dC68rtjqN_oY1rqMqJs5vRa5Y0Rph12suyFhqaYN_2lvOlOp_vdCBZPh3OcOI/n/orasenatdpltintegration03/b/AD_bucket/o/AD_Testing.csv
-##
 
 
-### Task 4: Detect Anomalies with Anomaly Detection (AD) GUI
+
+## Task 4: Detect Anomalies with Anomaly Detection (AD) GUI
 
 
 
@@ -43,7 +44,7 @@ You can leave _Sensitivity_ **BLANK** for this demo.
 Once the test file is uploaded, click **Detect**.  
 
 ![UI](./images/imageUI2.png " ")
-##
+
 
 ### Results Observation
 

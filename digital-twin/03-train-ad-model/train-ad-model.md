@@ -16,14 +16,14 @@ The Oracle Cloud Infrastructure Anomaly Detection will create customized Machine
 1. Understand a high level overview of the OCI Anomaly Detection Service
 2. Understand the full cycle/workflow of services provided in the OCI Anomaly Detection
 3. Hand-on activities to experience the whole pipeline of machine learning model development from training to detecting
-##
+
 
 ### Assumptions
 - set up policy is taken care of in lab1: set-up-environment
 - training data csv is stored in object storage bucket
-##
 
-### Task 1: Create Anomaly Detection Project
+
+## Task 1: Create Anomaly Detection Project
 
 A project is a way to organize multiple data assets, models, deployments to the same workspace
 
@@ -49,14 +49,16 @@ Once the details are entered, click the  **Create** Button.
     - select your   **Project**
 
 ![Create Project](./images/imageCP4.png " ")
-##
+
 
 **If you have NOT completed the previous Labs (01 and 02),**
 - Download the **Training Dataset** https://objectstorage.us-ashburn-1.oraclecloud.com/p/-z6yMfwSuQJ4RfpMFPu4rShFG8O8IZGzdUz_PgR_tgbNmDH9-Pjpu-vlpqBW5aKG/n/orasenatdpltintegration03/b/AD_bucket/o/AD_train_6cycle.csv
 - Then **skip to Task 3: Create a Model**
-##
 
-### Task 2: Create a Data Asset
+
+## Task 2: Create a Data Asset
+
+*** TODO: add link for downloading [data](https://objectstorage.us-ashburn-1.oraclecloud.com/p/acYNc4cXnHYGEA4r-oZZD0gMicUNspuHgSGORi96Wop10Yqwjr_xXi23XLheIXsK/n/orasenatdpltintegration03/b/AD_bucket/o/AD_train_6cycle.csv) 
 
 The Data Asset is the data utilized for training your Anomaly Detection Model. The Data Asset should be data that has NO anomalies so that the Anomaly Detection model will be trained on the 'normal' state. 
 
@@ -77,9 +79,9 @@ in the _Create Data Asset_ menu,
 The data asset should now show in the data asset main panel.
 
 This demo only covers data from Object Storage. However, data can be imported other sources such as Oracle Autonomous Transaction Processing (ATP), InfluxDB, and more. 
-##
 
-### Task 3: Create a model
+
+## Task 3: Create a model
 
 Now it's time to train the anomaly detection model and make predictions
 
@@ -98,7 +100,7 @@ Make sure _Choose an existing data asset_ is toggled
 Under _Choose data asset in compartment_, select  **AD_data_asset**. The click **Next**. 
 
 ![Create Model](./images/imageCM2.png " ")
-##
+
 
 ### Parameter Selections
 
@@ -115,7 +117,7 @@ Under _Choose data asset in compartment_, select  **AD_data_asset**. The click *
 >
 >**Train Fraction Ratio**
 >Train Fraction Ratio specifies the division ratio of the whole training data to be used training and validation. The default value 0.7 or 70% specifies the model to use 70% of the data for training, and the rest 30% is used to produce model performance (validation).
-##
+
 
 In this demo, set...
 - **AD_Workshop** as the Model _Compartment_
@@ -145,4 +147,3 @@ When _Status_ changes from **Creating** ...
 ![Create Model](./images/imageCM7.PNG " ")
 
 your model is ready and you may proceed to the next task.
-##
