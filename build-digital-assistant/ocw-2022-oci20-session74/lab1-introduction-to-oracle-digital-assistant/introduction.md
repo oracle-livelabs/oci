@@ -1,6 +1,6 @@
 ﻿﻿# Introduction
 
-# About this Workshop
+## About this Workshop
 
 Digital assistants are virtual devices that help users accomplish tasks through natural language conversations, without having to seek out and wade through various apps and websites. Each digital assistant contains a collection of specialized skills. When a user engages with the digital assistant, the digital assistant evaluates the user input and routes the conversation to and from the appropriate skills.
 
