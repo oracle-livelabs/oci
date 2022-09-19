@@ -93,7 +93,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     * The landing zone provisions a VCN, nat gateway, internet gateway, and shared services subnets. You will need to input cidr blocks and dns labels.
     * The landing zone also provides options for connectivity using an Ipsec tunnel or a Fastconnect connection. In this lab however, it can remain disabled.
 
-    ![VCN Vars 2](./images/landing-zone-baseline-variable-2.png)
+    ![VCN Variables](./images/landing-zone-baseline-variable-2.png)
 
 4. Enter Security variables for Cloud Guard, Vulnerability Scanning Service, VCN Flow Logging, and Audit Logs.
 
@@ -101,23 +101,23 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     * VCN Flow Logs for the provisioned VCN subnets can be viewed in the Logging Analytics Dashboard. You can also enter subnet ocids to log traffic for externally created subnets. Audit Logging can also be enabled using the same variable which enables logging and stores them in an archive bucket.
     * The bastion provides restricted and time-limited access to cloud resources without public-facing endpoints. There are two types of bastion sessions, managed SSH and port forwarding, which depends on the type of target resource. Input the cidr of the bastion subnet as well as the cidr blocks the bastion can connect to.
 
-    ![VCN Vars 3](./images/landing-zone-baseline-variable-3.png)
+    ![Security Variables](./images/landing-zone-baseline-variable-3.png)
 
 5. Enter the sample variables for creation of Bastions, Dynamic Routing Gateway(DRG) and Monitoring. 
 
-    ![VCN Vars 4](./images/landing-zone-baseline-variable-4.png)
-    ![VCN Vars 6](./images/landing-zone-baseline-variable-6.png)
+    ![Bastion Service Variables](./images/landing-zone-baseline-variable-4.png)
+    ![All Stack Variables Snapshot](./images/landing-zone-baseline-variable-6.png)
     
 
 6. Create the Stack.
-    ![VCN Vars 7](./images/landing-zone-stack-info.png)
+    ![Stack Creation Step](./images/landing-zone-stack-info.png)
     
 7. Wait for the atleast ten minutes and then the Stack Jobs Status. 
 
 8. Gather the Provisioned Resources OCID Value. 
     * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output 
 
-![VCN Vars 8](./images/landing-zone-stack-output.png)
+![Stack Created Resources OCID Snapshot](./images/landing-zone-stack-output.png)
 
 
 
