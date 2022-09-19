@@ -219,6 +219,7 @@ Now, we will go ahead and update the transition for *apptSummary* component as f
 
 ```
 <copy>
+### Update transition for apptSummary
     transitions:
       next: "setMessageBody"
 </copy>
