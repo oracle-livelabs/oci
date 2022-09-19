@@ -26,7 +26,7 @@ Estimated time: 10 minutes
 	![Oracle Cloud console Menu](images/2-1-2-domain.png " ")
 3.	Click **Create APM Domain**.
   ![Oracle Cloud console, Create APM Domain](images/2-2-domain.png " ")
-4.	Name your APM domain and select the compartment you created. Add a check to the **“Create as Always Free Domain”**, then click **Create**.
+4.	Name your APM domain as **apmworkshop** and select the compartment you created. Add a check to the **“Create as Always Free Domain”**, then click **Create**.
   ![Oracle Cloud console, Create APM Domain](images/2-3-domain.png " ")
 
 

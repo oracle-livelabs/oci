@@ -105,7 +105,7 @@ To delete the workshop setup from your tenancy, follow the steps below.
 
     ``` bash
     <copy>
-    cd ~; rm apm-java-agent-installer-1.6.2363.jar; rm index.html; rm -r sb-hol;rm sb-hol.zip
+    cd ~; rm apm-java-agent-installer-*.jar; rm index.html; rm -r sb-hol;rm sb-hol.zip
     </copy>
     ```
    ![Oracle Cloud, Cloud console](images/4-16-cleanup.png " ")   
