@@ -10,7 +10,7 @@ In this workshop, you will provision the APM Java agent in a file system mounted
 
   ![Workshop Architecture](images/apm_wls_setup.png " ")
 
-Estimated Workshop Time: 65 minutes
+Estimated Workshop Time: 80 minutes
 
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 
