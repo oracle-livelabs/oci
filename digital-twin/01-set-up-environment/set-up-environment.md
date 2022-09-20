@@ -2,7 +2,7 @@
 
 
 ## Introduction
-In this session, we will configure OCI tenancy with required IAM resources (compartment, user/group, compartment), create OCI services like OKE, OCI Streaming, Object Storage, and OCI Notification service.
+In this session, we will configure OCI tenancy with required IAM resources (Compartment, Policy, and Dynamic Group), create OCI services like OKE, OCI Streaming, Object Storage, and OCI Notification service.
 
 
 
@@ -39,7 +39,9 @@ Resource Manager automates deployment and operations for all Oracle Cloud Infras
 
 1. Log into your Oracle Cloud Infrastructure (OCI) tenancy. 
 
-2. Click the `Deploy to Oracle Cloud` button below, this will open the Create stack page into a new browser tab.
+2. Click the `Deploy to Oracle Cloud` button below, opening the link into a new browser tab.
+
+In Chrome, Firefox and Safari, you can do this with `CTRL`+`Click` > Select `Open Link in New Tab`.
 
 [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://objectstorage.us-ashburn-1.oraclecloud.com/p/op-o9z8k0z6u7bKmrkNmUW0Jo7IHatSRBaos0jUgFntsDgTA6C5TAqTG96MgmZ-t/n/orasenatdpltintegration03/b/digitaltwin/o/oci-digital-twin-pipeline-main.zip)
 
@@ -51,7 +53,7 @@ The **OCI Digital Twin Pipeline** will pop up under `Stack Information`. Click *
 
 ![create stack 2](./images/create_stack2.png)
 
-4. In the `Configuration variables` section, select `Region` and `Parent Compartment` to choose where you wish to deploy the infrastructure stack, and enter an email address in the `ONS Subscription Endpoint` field where you wish to receive a notification upon detection of anomalous data.
+4. In the `Configuration variables` section, select `Parent Compartment` and `Region` to choose where you wish to deploy the infrastructure stack, and enter an email address in the `ONS Subscription Endpoint` field where you wish to receive a notification upon detection of anomalous data.
 
 ![create stack config variable](./images/create_stack3.png)
 
@@ -61,7 +63,7 @@ For each resource that you wish to deploy, verify that the corresponding checkbo
 
 When you are finished editing your variables in the `Configure Variables` section, click **Next** to proceed to the `Review` section.
 
-5. Select the checkbox for **Run Apply**, and click **Create**. OCI Resource Manager then will start run the job.
+5. Select the checkbox for **Run Apply**, and click **Create**. OCI Resource Manager then will start running the Job.
 
 ![create stack review](./images/create_stack_review.png)
 
@@ -69,7 +71,7 @@ You can monitor the deployment by monitoring the `Logs` window.
 
 ![create stack log](./images/resource_manager_log.png)
 
-The job will take approximately 25 minutes to run.
+The Job will take approximately 25 minutes to run.
 
 ## Task 2 Review Stack Job Resources
 
@@ -83,7 +85,7 @@ The job will take approximately 25 minutes to run.
 
 ## Task 3 Verify OCI Object Storage
 
-Oracle Cloud Infrastructure Object Storage service is an Internet-scale, high-performance storage platform that offers reliable and cost-efficient data durability. You can check and verify the Object Storage Bucket that created by the Resource Manager job.
+Oracle Cloud Infrastructure Object Storage service is an Internet-scale, high-performance storage platform that offers reliable and cost-efficient data durability. You can check and verify the Object Storage Bucket that created by the Resource Manager Job.
 
 1. Click the Navigation Menu in the upper left, navigate to **Storage**, and select **Buckets**.
 ![os navigation](./images/bucket_navigation.png)
