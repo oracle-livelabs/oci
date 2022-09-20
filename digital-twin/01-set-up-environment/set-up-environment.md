@@ -51,7 +51,7 @@ The **OCI Digital Twin Pipeline** will pop up under `Stack Information`. Click *
 
 ![create stack 2](./images/create_stack2.png)
 
-4. In `Configuration variables` section, select `Region` and `Parent Compartment` to choose where you wish to deploy the infrastructure stack.
+4. In the `Configuration variables` section, select `Region` and `Parent Compartment` to choose where you wish to deploy the infrastructure stack, and enter an email address in the `ONS Subscription Endpoint` field where you wish to receive a notification upon detection of anomalous data.
 
 ![create stack config variable](./images/create_stack3.png)
 
