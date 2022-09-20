@@ -24,7 +24,7 @@ Run the following commands from within your VM instance.
 2. Create mapping (optional). If you don't run this command or any variation of it, a default mapping will be automatically created.
 
    ```bash
-   <copy>curl -XPUT "https://mycluster.opensearch.us.example.com:9200/oci" -H 'Content-Type: application/json' --cacert cert.pem -d'
+   <copy>curl -XPUT "https://mycluster.opensearch.us.example.com:9200/oci" -H 'Content-Type: application/json' -d'
    {
      "mappings": {
        "properties": {
@@ -42,13 +42,13 @@ Run the following commands from within your VM instance.
 3. Push the data set.
 
    ```bash
-   <copy>curl -H 'Content-Type: application/x-ndjson' -XPOST "https://mycluster.opensearch.us.example.com:9200/oci/_bulk?pretty" --data-binary @OCI_services.json --cacert cert.pem</copy>
+   <copy>curl -H 'Content-Type: application/x-ndjson' -XPOST "https://mycluster.opensearch.us.example.com:9200/oci/_bulk?pretty" --data-binary @OCI_services.json</copy>
    ```
 
 4. Check your indices.
 
    ```bash
-   <copy>curl "https://mycluster.opensearch.us.example.com:9200/_cat/indices" --cacert cert.pem</copy>
+   <copy>curl "https://mycluster.opensearch.us.example.com:9200/_cat/indices"</copy>
    ```
 
 The response should show you the index you created, named `oci`.
@@ -58,7 +58,7 @@ The response should show you the index you created, named `oci`.
 Run the following command:
 
    ```bash
-   <copy>curl -X GET "https://mycluster.opensearch.us.example.com:9200/oci/_search?q=title:Kubernetes&pretty" --cacert cert.pem</copy>
+   <copy>curl -X GET "https://mycluster.opensearch.us.example.com:9200/oci/_search?q=title:Kubernetes&pretty"</copy>
    ```
 
 For more information about query syntax, see the OpenSearch or ElasticSearch tutorials.  
