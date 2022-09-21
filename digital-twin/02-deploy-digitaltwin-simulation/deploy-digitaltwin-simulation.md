@@ -10,9 +10,9 @@ In this session, we will deploy MapleSim Digital Twin simulation model on OKE us
 ### Objectives
 Deploly the model to OKE.
 
-## Task 1 Configure OKE access in cloud shell
-OCI cloud shell is a web browser-based terminal accessible from the Oracle Cloud Console. It provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI (OCI-CLI), `kubectl`, docker, and other useful command-line tools.
-1. Click the `Cloud Shell` icon to open the cloud shell.
+## Task 1 Configure OKE access in Cloud Shell
+OCI Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console. It provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI (OCI-CLI), `kubectl`, docker, and other useful command-line tools.
+1. Click the `Cloud Shell` icon to open the Cloud Shell.
 
 ![Cloud Shell](./images/cloud-shell.png " ")
 
@@ -20,7 +20,7 @@ OCI cloud shell is a web browser-based terminal accessible from the Oracle Cloud
 
 ![Access Cluster](./images/access-cluster.png)
 
-3. Run the following OCI-CLI command in cloud shell:
+3. Run the following OCI-CLI command in Cloud Shell:
 
 ![Kubernetes Config](./images/cloud-console-kube.png)
 
@@ -32,7 +32,7 @@ Open the file and copy the content:
 
 ![Deployment Content](./images/deployment-file.png)
 
-2. Open a deployment file with `vi deployment.yaml`, then enter insert-mode by pressing `i`, and paste the content from your clipboard into the `vi` editor. Then press `ESC` to escape from insert-mode, followed by `:wq` to save (write) and quit from the `vi` editor.
+2. Open a deployment file with `vi deployment.yaml`, then enter insert-mode by pressing `i`, and paste the content from your clipboard into the `vi` editor. Then press `ESC` to escape from insert-mode, followed by `:wq` to write, i.e. save, and quit from the `vi` editor.
 
 ![Edit Deployment](./images/edit-deployment.png)
 
