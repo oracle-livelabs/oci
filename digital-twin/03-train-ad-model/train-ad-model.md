@@ -139,7 +139,7 @@ The model may take 10-15 minutes to finish training.
 
 ![Create Model](./images/imageCM5.png " ")
 
-When _Status_ changes from **Creating** ...
+When `Status` changes from **Creating** ...
 
 ![Create Model](./images/imageCM6.png " ")
 
