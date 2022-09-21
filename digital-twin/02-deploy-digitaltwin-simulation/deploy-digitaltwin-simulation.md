@@ -12,7 +12,8 @@ Deploly the model to OKE.
 
 ## Task 1 Configure OKE access in cloud shell
 OCI cloud shell is a web browser-based terminal accessible from the Oracle Cloud Console. It provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI (OCI-CLI), `kubectl`, docker, and other useful command-line tools.
-1. Click the `Cloud Shell` icon to open the cloud shell. 
+1. Click the `Cloud Shell` icon to open the cloud shell.
+
 ![Cloud Shell](./images/cloud-shell.png " ")
 
 2. Click `Access Cluster` to pop up the `Access Your cluster` window. Click `Cloud Shell Access` and click copy in the menu bar.
@@ -27,22 +28,26 @@ OCI cloud shell is a web browser-based terminal accessible from the Oracle Cloud
 
 1. Copy the deployment file for your Kubernetes cluster configuration, which can be accessed [here](https://github.com/tonyora/oci/blob/main/digital-twin/02-deploy-digitaltwin-simulation/file/digitaltwin.yaml).
 
-Open the file and copy the content
+Open the file and copy the content:
+
 ![Deployment Content](./images/deployment-file.png)
 
 2. Open a deployment file with `vi deployment.yaml`, then enter insert-mode by pressing `i`, and paste the content from your clipboard into the `vi` editor. Then press `ESC` to escape from insert-mode, followed by `:wq` to save (write) and quit from the `vi` editor.
+
 ![Edit Deployment](./images/edit-deployment.png)
 
 3. Deploy the application to OKE. 
 On the Cloud Shell console, run the following command to deploy the application.
 
 `kubectl apply -f deployment.yaml`
+
 ![!Kube Apply](./images/kube-apply.png)
 
 4. Get the public IP address
 The deployment may take a few minutes to finish. We can run the following `kubectl` command to monitor the progress of the deployment of your Kubernetes cluster configuration:
 
 `kubectl get all`
+
 ![View IP Address](./images/view-kubenetes.png)
 
-Make a note of the public IP address that corresponds to the Kubernetes service of type `LoadBalancer`, under `EXTERNAL-IP`. In this case, the public IP address is `144.24.42.157` for reference. We will use it to access it in other labs.
+Make a note of the public IP address that corresponds to the Kubernetes service of type `LoadBalancer`, under `EXTERNAL-IP`. In this case, the public IP address is `144.24.42.157` for reference. You will use the public IP address of the Load Balancer to access your application later on in this workshop.
