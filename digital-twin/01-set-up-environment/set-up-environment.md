@@ -35,7 +35,7 @@ In this session, we will configure OCI tenancy with required IAM resources (Comp
 
 ## Task 1 Create Resource Manager Stack
 
-Resource Manager automates deployment and operations for all Oracle Cloud Infrastructure resources. Using the infrastructure-as-code (IaC) model, the service is based on Terraform, an open source industry standard that lets DevOps engineers develop and deploy their infrastructure anywhere
+Resource Manager automates deployment and operations for all Oracle Cloud Infrastructure resources. Using the infrastructure-as-code (IaC) model, the service is based on Terraform, an open source industry standard software tool that enables DevOps engineers to develop and deploy their infrastructure anywhere
 
 1. Log into your Oracle Cloud Infrastructure (OCI) tenancy. 
 
@@ -53,13 +53,17 @@ The **OCI Digital Twin Pipeline** will pop up under `Stack Information`. Click *
 
 ![create stack 2](./images/create_stack2.png)
 
-4. In the `Configuration variables` section, select `Parent Compartment` and `Region` to choose where you wish to deploy the infrastructure stack, and enter an email address in the `ONS Subscription Endpoint` field where you wish to receive a notification upon detection of anomalous data.
+4. In the `Configuration variables` section, select `Parent Compartment` and `Region` to choose where you wish to deploy the infrastructure stack.
 
 ![create stack config variable](./images/create_stack3.png)
 
 For each resource that you wish to deploy, verify that the corresponding checkbox is selected in the `Select Resources` tile. Optionally, you can customize the attributes of each selected resource once an additional tile that presents configuration options for its respective resource appears below.
 
+In this workshop, we will leave all of the resources checked, so that they will all deploy as part of our stack.
+
 ![create stack config var](./images/create_stack4.png)
+
+To ensure that you receive a notification upon detection of anomalous data, enter an email address in the `ONS Subscription Endpoint` where you wish to receive these notifications from ONS (Oracle Notifications Service).
 
 When you are finished editing your variables in the `Configure Variables` section, click **Next** to proceed to the `Review` section.
 
@@ -90,7 +94,7 @@ Oracle Cloud Infrastructure Object Storage service is an Internet-scale, high-pe
 1. Click the Navigation Menu in the upper left, navigate to **Storage**, and select **Buckets**.
 ![os navigation](./images/bucket_navigation.png)
 
-2. Select the compartments
+2. Select the new Compartment where your resources provisioned, **AD_workshop**.
 ![os console](./images/os_console.png)
 
-3. Open the bucket **Ad_bucket**
+3. Open the bucket **Ad_bucket**, which was deployed as part of your stack.
