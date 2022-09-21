@@ -147,4 +147,4 @@ When _Status_ changes from **Creating** ...
 
 ![Create Model](./images/imageCM7.PNG " ")
 
-Your Anomaly Detection model is ready and you may proceed to the next task.
+Your Anomaly Detection model is ready, and you may proceed to the next task.
