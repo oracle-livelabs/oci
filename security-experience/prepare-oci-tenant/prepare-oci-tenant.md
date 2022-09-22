@@ -124,6 +124,7 @@ You will create an Autonomous Database that will provide you the following funct
     *	Administrator credentials: \<your ADMIN password>
     *	Network access: Secure access from everywhere
     *	License type: Bring Your Own License (BYOL)
+    *   Oracle Database Edition: Oracle Database Standard Edition (SE)
 
 and click Create Autonomous Database. Then wait until the database status is set to green and ACTIVE.
 
