@@ -177,44 +177,47 @@ The authenticated database user is only permitted access if the schema is REST e
 
 9. Enable REST for the new created schema SECASSESSMENT. To do that, go to the Autonomous Database dashboard, click Database Actions and click DATABASE USERS under the section Administration.
 
-![](./images/ADB7.png "Database Users")
+![](./images/dbusers.png "Database Users")
 
 
 
-9. You will be able to see all users in the Autonomous Database. Click in the menu the recently created user SECASSESSMENT and select Enable REST:
+10. You will be able to see all users in the Autonomous Database. Click in the menu the recently created user SECASSESSMENT and select Enable REST:
 
 ![](./images/ADB8.png "Enable REST")
 
 
 
-10. A window will prompt, you can leave default values and click REST Enable User:
+11. A window will prompt, you can leave default values and click REST Enable User:
 
-![](./images/ADB9.png "REST Enable user ")
+![](./images/ADB9.png "REST Enable user")
 
 
 
-11. After you created the user and granted all required permissions to manage APEX, you will create now a table to store security assessments by running the following script:
+12. After you created the user and granted all required permissions to manage APEX, you will create now a table to store security assessments by running the following script:
     ```
-    CREATE TABLE "SECASSESSMENT"."OCISECURITYCENTER"
-    (   "STATUS" VARCHAR2(50 BYTE) COLLATE "USING_NLS_COMP",
-        "SERVICE" VARCHAR2(255 BYTE) not null,
-        "EXTRACT_DATE" DATE not null
+    CREATE TABLE SECASSESSMENT.OCISECURITYCENTER
+    (   STATUS VARCHAR2(50 BYTE) COLLATE "USING_NLS_COMP",
+        SERVICE VARCHAR2(255 BYTE) not null,
+        EXTRACT_DATE DATE not null
     )   DEFAULT COLLATION "USING_NLS_COMP";
     ```
-  ![](./images/ADB10.png " ")  
+  ![](./images/create-table.png "Create new table")  
 
-12. In same way that you enabled your schema SECASSESSMENT for REST, you need to enable the OCISECURITYCENTER table for REST as well. To do that, log in in Web SQL Developer as SECASSESSMENT:
-![](./images/ADB11.png " ")  
+13. In same way that you enabled your schema SECASSESSMENT for REST, you need to enable the OCISECURITYCENTER table for REST as well. To do that, you have to log in in Web SQL Developer as SECASSESSMENT. You can do it in a quick way by going again to the Database Users view:
+
+    ![](./images/ADB11.png "SECASSESSMENT user")  
+
 Click in Open in new tab, you will have to enter the credentials for SECASSESSMENT schema and click Sign in:
-![](./images/ADB12.png " ")
 
-13. Go to SQL under Development again, and now you are signed as SECASSESSMENT in Web SQL Developer. Right click on the OCISECURITYCENTER table and select REST --> Enable…
+    ![](./images/ADB12.png "Sign in as SECASSESSMENT user")
+
+14. Go to SQL under Development again, and now you are signed as SECASSESSMENT in Web SQL Developer. Right click on the OCISECURITYCENTER table and select REST --> Enable…
 ![](./images/ADB13.png " ")
 
-14.	Note the curl command location URL (Preview URL) from the new window, and click Enable:
+15.	Note the curl command location URL (Preview URL) from the new window, and click Enable:
 ![](./images/ADB14.png " ")
 
-15. (Optional) If you decided to run the OCI Compliance assessment as well, you need to create the tables to store the outcome data of OCI CIS Compliance Benchmark:
+16. (Optional) If you decided to run the OCI Compliance assessment as well, you need to create the tables to store the outcome data of OCI CIS Compliance Benchmark:
 
     ```
     CREATE TABLE "SECASSESSMENT"."OCICISCOMPLIANCECHECK"
@@ -246,55 +249,66 @@ Proceed to OCI console to perform the next steps:
 
     ![](./images/apex3.png "ADMIN Password")
 
-4. Create your workspace by clicking Create Workspace, with Database User SECASSESSMENT and corresponding password, Workspace Name OCISECURITYCENTER.
+4. Create your workspace by clicking Create Workspace:
 
-    ![](./images/apex4.png "Create Workspace")
+    ![](./images/create-workspace.png "Create Workspace")
 
-5. Sign out of Administration Services and sign in to OCISECURITYCENTER to begin building applications. Click Sign Out:
+5. You will be prompted with a windows asking you how you would like to create your workspace. For this lab, you will select Existing Schema, as you will associate the new workspace with the database schema that you just created:
+
+    ![](./images/existing-schema.png "Create Workspace with existing schema")
+
+6. Create your workspace with following information:
+
+    * Database User: SECASSESSMENT 
+    * Workspace Name: OCISECURITYCENTER
+    * Workspace Username: SECASSESSMENT
+    * Workspace Password: \<your password for SECASSESSMENT>
+
+    ![](./images/secassess-workspace.png "Create Workspace for SECASSESSMENT user")
+
+
+7. Sign out of Administration Services and sign in to OCISECURITYCENTER to begin building applications. Click Sign Out:
 
     ![](./images/apex5.png "Sign Out")
 
-6. Sign in with the following credentials:
+9. Sign in with the following credentials:
 
     ![](./images/apex6.png "Sign In")
 
-7. Before you get started, you have to set your APEX account password. Click Set APEX Account Password, write your Email Address, a new password and click Apply Changes:
 
-    ![](./images/apex7.png "Apply changes")
+10. Now download the packaged APEX application: TODO  
 
-8. Download the packaged APEX application from the Github repository: TODO  
-
-9. Click App Builder and Import.
+11. Click App Builder and Import.
 
     ![](./images/apex8.png "App Builder")
 
     ![](./images/apex9.png "Import")
 
-10. Select Database Application, Page or Component Export and drag and drop the provided zip file: OCISecurityCenter.zip. Click Next.
+12. Select Database Application, Page or Component Export and drag and drop the provided zip file: OCISecurityCenter.zip. Click Next.
 
     ![](./images/apex10.png "Drag and drop")
 
-11. Click Next.
+13. Click Next.
 
     ![](./images/apex11.png "Next")
 
-12.	Review the details and click Install Application.
+14.	Review the details and click Install Application.
 
     ![](./images/apex12.png "Install Application")
 
-13.	Once you see the message for Application Installed, click Run Application.
+15.	Once you see the message for Application Installed, click Run Application.
 
     ![](./images/apex13.png "Run Application")
 
-14.	You will be redirected to the APEX application log in page, and you will be asked to enter the credentials for SECASSESSMENT user.
+16.	You will be redirected to the APEX application log in page, and you will be asked to enter the credentials for SECASSESSMENT user.
 
-    ![](./images/apex14.png "SECASSESSMENT credentials")
+    ![](./images/login-apex.png "SECASSESSMENT credentials")
 
-15.	You are now able to see the OCI Security Center Dashboard. Click on the OCI SECURITY ASSESSMENT card:
+17.	You are now able to see the OCI Security Center Dashboard. Click on the OCI SECURITY ASSESSMENT card:
 
-    ![](./images/apex15.png "OCI Security Assessment Dashboard ")
+    ![](./images/sec-dashboard.png "OCI Security Assessment Dashboard ")
 
-16.	As you still did not run the Security and Compliance Assessment scripts, you do not have any data on it. Let’s continue and start with the Unique Security Experience in the next lab.
+18.	As you still did not run the Security and Compliance Assessment scripts, you do not have any data on it. Let’s continue and start with the Unique Security Experience in the next lab.
 
 
 **This concludes this lab.**
@@ -326,4 +340,4 @@ security_assessment.py  	[-h][-t CONFIG_PROFILE][-p PROXY]
 ## Acknowledgements
 * **Author** - <Name, Title, Group>
 * **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - Sonia, September 15 2022
+* **Last Updated By/Date** - Sonia, September 22 2022
