@@ -143,34 +143,39 @@ The authenticated database user is only permitted access if the schema is REST e
 
 ![](./images/ADB4.png "Database Actions")
 
+5. Log in with ADMIN user and the password you provided during database creation.
+
+![](./images/admin-login.png "Log in as ADMIN")
+
+6.	Click on SQL box, under Development section.
+
+![](./images/sql.png "Development-SQL")
 
 
-5.	Click on SQL box, under Development section.
 
-![](./images/ADB5.png "Development-SQL")
-
-
-
-6.	Web SQL Developer will launch, and you will be able to run SQL queries to create users and tables.
+7.	Web SQL Developer will launch, and you will be able to run SQL queries to create users and tables.
 
   ![](./images/ADB6.png "SQL Developer")
 
 
 
-7. Create a database schema named SECASSESSMENT and grant required permissions, as we will use it in trying out RESTful services:
+8. Create a database schema named SECASSESSMENT and grant required permissions, as we will use it in trying out RESTful services. To do that, copy the following SQL code and paste it on the SQL developer. Then click the button "Run Script" and you will be able to see the Script Output showing the actions were successfully performed:
 
 
     ```
     CREATE USER SECASSESSMENT IDENTIFIED BY <your password>;
-    GRANT “CONNECT” TO SECASSESSMENT;
-    GRANT “RESOURCE” TO SECASSESSMENT;
+    GRANT CONNECT TO SECASSESSMENT;
+    GRANT RESOURCE TO SECASSESSMENT;
     GRANT UNLIMITED TABLESPACE TO SECASSESSMENT;
     ```
+    ![](./images/create-user.png "Create user SECASSESSMENT")
+
+
     *Note:* A new user is granted CONNECT and RESOURCE roles when Web Access is selected.
     Granting UNLIMITED TABLESPACE privilege allows a user to use all the allocated storage space. You cannot selectively revoke tablespace access from a user with the UNLIMITED TABLESPACE privilege. You can grant selective or restricted access only after revoking the privilege.
     For sake of simplicity, you can use same password you used for ADMIN user.
 
-8. Enable REST for the new created schema SECASSESSMENT. To do that, go to the Autonomous Database dashboard, click Database Actions and click DATABASE USERS under the section Administration.
+9. Enable REST for the new created schema SECASSESSMENT. To do that, go to the Autonomous Database dashboard, click Database Actions and click DATABASE USERS under the section Administration.
 
 ![](./images/ADB7.png "Database Users")
 
