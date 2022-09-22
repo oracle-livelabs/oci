@@ -207,7 +207,7 @@ The authenticated database user is only permitted access if the schema is REST e
 
     ![](./images/ADB11.png "SECASSESSMENT user")  
 
-Click in Open in new tab, you will have to enter the credentials for SECASSESSMENT schema and click Sign in:
+    Click in Open in new tab, you will have to enter the credentials for SECASSESSMENT schema and click Sign in:
 
     ![](./images/ADB12.png "Sign in as SECASSESSMENT user")
 
