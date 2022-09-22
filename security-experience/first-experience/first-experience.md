@@ -21,7 +21,7 @@ This lab assumes you have completed previous lab.
     ```
 
     ```
-    python3 security_assessment.py -dt –-output-to-bucket ‘security_assessment’
+    python3 security_assessment.py -dt --output-to-bucket security_assessment
     ```
 
     After running the python script, you will see a similar output in Cloud Shell:
@@ -44,7 +44,7 @@ This lab assumes you have completed previous lab.
 1. Now you need to upload the CSV files generated in your bucket to your recently created Autonomous Database. To do that, you have to call the table API that you have exposed. In the Cloud Shell terminal, run the following:
 
     ````
-    curl -X POST '<your curl command location URL>/batchload?batchRows=500' ' -H 'Content-type: text/plain'  -H 'cache-control: no-cache' --data-binary @security_assessment_report.csv
+    curl -X POST '<your curl command location URL>/batchload?batchRows=500' -H 'Content-type: text/plain'  -H 'cache-control: no-cache' --data-binary @security_assessment_report.csv
     ````
 
     Where <your curl command location URL> is the URL you noted down for your table, once you enabled it for REST.
