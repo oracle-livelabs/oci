@@ -118,10 +118,10 @@ You will create an Autonomous Database that will provide you the following funct
     *   Compartment: USE_Workshop
     *	Display Name: SecAssessments
     *	Database Name: SecAssessments
-    *	Workload type: ATP
+    *	Workload type: Transaction Processing
     *	Deployment type: Shared Infrastructure
-    *	Configure the database: <Leave it as default>
-    *	Administrator password: <your password>
+    *	Configure the database: \<Leave it as default>
+    *	Administrator credentials: \<your ADMIN password>
     *	Network access: Secure access from everywhere
     *	License type: Bring Your Own License (BYOL)
 
