@@ -25,7 +25,7 @@ In this session, we will show you how to and make predictions with new data usin
 
 
 **If you have NOT completed the Labs (01 and 02),**
-- Download the **AD_testing.csv Dataset** https://objectstorage.us-ashburn-1.oraclecloud.com/p/L5-dC68rtjqN_oY1rqMqJs5vRa5Y0Rph12suyFhqaYN_2lvOlOp_vdCBZPh3OcOI/n/orasenatdpltintegration03/b/AD_bucket/o/AD_Testing.csv
+- Download the [AD_testing.csv](https://objectstorage.us-ashburn-1.oraclecloud.com/p/L5-dC68rtjqN_oY1rqMqJs5vRa5Y0Rph12suyFhqaYN_2lvOlOp_vdCBZPh3OcOI/n/orasenatdpltintegration03/b/AD_bucket/o/AD_Testing.csv) 
 
 
 

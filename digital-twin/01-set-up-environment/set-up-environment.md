@@ -53,7 +53,7 @@ The **OCI Digital Twin Pipeline** will pop up under `Stack Information`. Click *
 
 ![create stack 2](./images/create_stack2.png)
 
-4. In the `Configuration variables` section, select `Parent Compartment` and `Region` to choose where you wish to deploy the infrastructure stack.
+4. In the `Configuration variables` section, select `Region` and `Parent Compartment` to choose where you wish to deploy the infrastructure stack.
 
 ![create stack config variable](./images/create_stack3.png)
 
@@ -100,3 +100,14 @@ Oracle Cloud Infrastructure Object Storage service is an Internet-scale, high-pe
 ![os console](./images/os_console.png)
 
 3. Open the bucket, **AD_bucket**, which was deployed as part of your stack.
+
+
+## Acknowledgements
+
+- **Authors**
+      - Samuel Cacela, Staff Cloud Engineer 
+      - Jiayuan Yang - Senior Cloud Engineer 
+- **Contributors** 
+      - Tony Zhang - Master Principal Cloud Architect
+      - Adrian Alba - Staff Cloud Engineer
+- **Last Updated By/Date** - 2022 September

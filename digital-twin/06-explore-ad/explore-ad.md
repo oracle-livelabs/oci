@@ -50,7 +50,7 @@ Navigate to **API Keys** and then click **Add API Key**.
 
 In the dialog, select **Generate API Key Pair**. Click **Download Private Key** and save the key to your local computer, and we will upload it later to the OCI Data Science.
 
-You can rename this pem file as _oci_api_key.pem_
+You can rename this pem file as `oci_api_key.pem`
 
 Then click the **Add** button.
 
@@ -77,18 +77,15 @@ To know more about API key and config file, please visit [Generating API KEY](ht
 
 
 ## Task 2: Activate Data Science Platform and Configuration
-1. Create a Project
 
+1. Create a Project
 Click navigation icon ![Image alt text](./images/navigation_icon.png) at the top left of page, select **Analytics & AI**, then select **Data Science**. This will open the Projects page.
 
-
 ![menu navigator](./images/menu_navigator.png)
-
 
 Select the compartment where the project is to be created. Click **Create Project**.
 
 ![project console](./images/project_console.png)
-
 
 Enter a unique name (255-character limit) for the project. If you do not provide a name, a name is automatically generated for you.
 Then click **Create**. 
@@ -99,9 +96,7 @@ This creates Data Science project and opens the project page.
 
 ![project page](./images/project_page.png)
 
-
-2. Create a Notebook Session  
-
+2. Create a Notebook Session
 >Notebook sessions provide access to a JupyterLab serverless environment that is managed by the Data Science service. 
 Data Scientist and developer can use notebook sessions for building data science workloads, developing and running python code.
 
@@ -132,7 +127,7 @@ Click **Create**.
 
 ![create nb page2](./images/create_nb_page2.png)
 
->A notebook session is associated with compute instance, VCN, subnet, and block storage. 
+> A notebook session is associated with compute instance, VCN, subnet, and block storage. 
 > There are two block storage drives that are associated with a notebook session. 
 > There is a boot volume that is initialized each time the notebook session is activated. 
 > Any data on the boot volume is lost when the notebook session is deactivated or terminated. 
@@ -276,7 +271,7 @@ Upload the notebook to JupyterLab by dragging it to the left panel.
 
 1. Start the notebook
 
-Click the _AD_DigitalTwin_notebook.ipynb_ to open in a new tab. Choose kernel by clicking the Python kernel, then select generalml_p37_cpu_v1 kernel from the drop-down list.
+Click the `AD_DigitalTwin_notebook.ipynb` to open in a new tab. Choose kernel by clicking the Python kernel, then select `generalml_p37_cpu_v1` kernel from the drop-down list.
 
 ![select kernel](./images/select_kernel_1.png)
  
