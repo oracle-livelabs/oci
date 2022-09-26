@@ -51,3 +51,9 @@ The deployment may take a few minutes to finish. We can run the following `kubec
 ![View IP Address](./images/view-kubenetes.png)
 
 Make a note of the public IP address that corresponds to the Kubernetes service of type `LoadBalancer`, under `EXTERNAL-IP`. In this case, the public IP address is `144.24.42.157` for reference. You will use the public IP address of the Load Balancer to access your application later on in this workshop.
+
+## Task 3 Generate the training data
+1. Create the fleet
+2. Validate the fleet created 
+3. Generate and upload the training set to object storage
+4. Validate the generated training set
