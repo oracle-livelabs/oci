@@ -12,17 +12,107 @@ In this session, we will show you how to and make predictions with new data usin
 2. Generate anomaly with an intance in the fleet
 
 
-
 ## Task 1 Simulate anomaly by adjusting the running condition
+After using the normal data trained the model. We change specific parameters for a specific digital twin. The digital twin send the result to a stream. The instance id, to be simple , is an integer from 0 to mumber of instance and stream OCID is the OCI streaming service that will receive the generated signals.
+
+1. Click streaming service to visit the availabe stream(s).
+
+![!streaming](./images/streaming.png)
+
+2. Click the stream name to open the detail of the strea. click copy beside the OCID
+
+![!streaming detail](./images/streaming-ocid.png)
+
+3. Trigger anomaly with a digital twin. In the sw
+
+Input an instance ID, e.g. 1
+Paste the copied OCID to stream_id field.
+Input the steps that we like to try and debug. A sample of the payload is given.
+
+~~~
+{
+  "inp_name": "BOOM_POS_IN",
+  "inp_value": 0.8,
+  "out_name": "BOOM_CYL_POS_OUT",
+  "out_value": 0.8,
+"params": {
+"payload": 681,
+"pumpEfficiency": 0.91
+},
+"steps": {
+"2.2": {"cBoomCyl":8788,"TcBoom":1001},
+"3.8": {"cBoomCyl":18788,"TcBoom":101}
+}
+}
+
+~~~
+![!Training Dataset](./images/trigger-anomaly.png)
+
+once the execution finished, it returns the message are published to the stream.
+
+![!Training Dataset Result](./images/trigger-anomaly-res.png)
 
 
+4. validate generated signals. In the streaming windown, click "Load messages" to view the signals generated.
 
-## Task 2 Detect the anomly by consuming streaming
-
-cursor
+![!Training Dataset](./images/streaming-validation.png)
 
 
-## Task 3 Verify the anomaly received by notification service
+## Task 2 Detect the anomly by consuming the stream.
+
+Now the singals are in the stream. We are using another API to restrieve the signals and send the signals to detect batch by batch. Once an anomaly is detected, a notification will be sent to the operator. Here we use email for notification. The notification support pageduty, slack, SMS etc. In the real world, all these step can be combined to run automatically.
+
+1. Get the anomaly detection model id. Input anamly in the search bar and click anamaly detection to open project
+
+![!anomaly project](./images/anomaly-model.png)
+
+Click the project to open model
+![!anomaly view](./images/model-project.png)
+
+Click the model to view the detail of model
+
+![!anomaly models](./images/model-view.png)
+
+Copy the OCID of the model
+
+![!model OCID](./images/model-ocid.png)
+
+2. Get the notification topic id. Input notification in the search bar and click notifications
+
+![!notification](./images/notification.png)
+
+click the topic in the notification view to open the topic
+
+![!topic](./images/notification-view.png)
+
+Copy the OCID of the topic
+
+![!notification OCID](./images/notification-ocid.png)
+
+
+3. Click /streamdectc in the swagger-ui and expand it. Click "Try it out"
+
+The API requires stream_id, model_id and topic_id. The next_cursor provides a machanicm to run the detection in steps. It starts as empty. After each run, it returns the current cursor can be used for next run. The stream_id is same as the stream_id in the task 1. model_id and topic_id are the OCIDs we just copied.
+
+~~~
+{
+  "stream_id": "ocid1.stream.oc1.phx.amaaaaaa7hdcdhiau6jpcylc5ox7ywxmrao2c4gojuft2zpg6sprkuj6rpuq",
+  "model_id": "ocid1.aianomalydetectionmodel.oc1.phx.amaaaaaa7hdcdhia3ryuiyr3p66kjv3h6hye4fm7e3tbqbpuna6ztba6wjlq",
+  "topic_id": "ocid1.onstopic.oc1.phx.aaaaaaaacgnodk725ge7yzqgtmcfepif3shqf3axxnnzvy77iyftmcv6p6kq",
+  "next_cursor":""
+}
+~~~
+![!Detect Anomaly](./images/detect-anomaly.png)
+
+Click the Execute to detect whether there are anomalies.
+
+![!Detect Anomaly Result](./images/detect-anomaly-res.png)
+
+The retuned next_cursor will be used in the next run to retrieve signals from the stream.
+
+4. Once a anomaly detected. An email will send to the designated email configured by the operation. The notification will show exactactly why the anomaly service reported the warning. Then, the operation can further diagnose the root cause.
+
+![!Anomaly Detected](./images/anomaly-detected-notification.png)
 
 
 
