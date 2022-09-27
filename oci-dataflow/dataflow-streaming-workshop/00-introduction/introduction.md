@@ -2,6 +2,9 @@
 
 ## About this Workshop
 
+OCI data flow is a fully managed server less spark as a service. OCI data flow can now run spark applications that processes stream data, or continuously produced data. In today's workshop, we will cover a common streaming related usecase from the manufacturing industry.
+
+
 One of the most common uses cases of predictive manitenance in manufacturing industry is predicting 
 Remaining Useful Life (RUL) of equipment.This sample application demonstrates running streaming application with doing 
 machine learning on top of it to predict RUL of equipment.
