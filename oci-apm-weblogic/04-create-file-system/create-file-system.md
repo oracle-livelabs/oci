@@ -120,7 +120,7 @@ Estimated time: 15 minutes
 
 10.	In the **Add Egress Rules** dialog, enter the following information:
 
-    *	Stressless: **No**
+    *	Stateless: **No**
     *	Source Type: **CIDR**
     *	Source CIDR: **0.0.0.0/0**
     *	IP Protocol: **TCP**

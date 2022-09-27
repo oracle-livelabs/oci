@@ -19,6 +19,10 @@
             "filename": "../../workflow/workflow.md"
         },
         {
+	    "title": "Lab 4: Landing Zone Intergration with Mushop",
+            "filename": "../../mushop/mushop_info.md"
+        },	
+        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"

@@ -33,14 +33,14 @@ In this lab you will create a dialog flow by performing the following tasks:
     | 2 | Findings - Review all the errors and warnings raised| 
     | 3 | Train - Allow the skill to recognize user input |
     | 4 | Preview - Test the bot | 
-    | 5 | Variables - Declare variables with in the dialog flow |
+    | 5 | Variables - Declare variables within the dialog flow |
     | 6 | States - Each state executes a function: rendering a skill response message, authenticating a user, branching the conversation when certain conditions are met, etc| 
   
 3. Go ahead and click the preview button to test the current flow.
 
   ![Test the current dialog flow](images/test-current-dialog-flow.png " ")
 
-4. Start the conversation by typing *Hi* and observe the states and intents in the conversation tester  window.
+4. Start the conversation by typing *Hi* and observe the states and intents in the conversation tester window.
 
   ![Initial conversation flow](images/initial-conversation-flow.png " ")
 
@@ -69,7 +69,7 @@ component which
       variable: "iResult"
     transitions:
       actions:
-        unresolvedIntent: "greetings"
+        unresolvedIntent: "unresolvedIntent"
         greetings: "greetings"
         findDoctor: "findPatientDetails"
         positiveHealth: "startTheraphy"
@@ -79,9 +79,9 @@ component which
 
   ![Add component](images/add-component.png " ")
 
-- Now, select *Display text message* from the *Hot Picks*, pick *Greetings* from the drop down under *insert after state*, uncheck include template comments and select *Insert Component*.
+- Now, select *Display text message* from the *Hot Picks*, pick *exitFlow* from the drop-down under *insert after state*, uncheck include template comments, and select *Insert Component*.
 
-  ![Display Text](images/display-text.png " ")
+  ![Display Text](images/display-text-after-exitflow.png " ")
 
 - Update the component as follows:
 
@@ -89,25 +89,29 @@ component which
 <copy>
 ########### Unresolved State ###############
   unresolvedIntent:
-    component: "System.Output"
+    component: "System.CommonResponse"
     properties:
-      text: "I don't understand. What do you want to do?"
+      keepTurn: true
+      metadata:
+        responseItems:        
+        - type: "text" 
+          text: "I don't understand. What do you want to do?"
     transitions:
-      return: "intent" 
+      return: "intent"
 
 </copy>
 ```
-3. We will add the dialog flow for *Positive Health* intent. Here we are going to display a card carousal with images, text and links to redirect to different videos.
+3. We will add the dialog flow for *Positive Health* intent. Here we are going to display a card carousel with images, text, and links to redirect to different videos.
 
 - Select *+Add component* and pick *Display Action Button Message* (under User messaging -> Display Multimedia Messages).
-- Pick "unresolved" from the drop down under *insert after state*, Uncheck include template comments and select *Insert Component*.
+- Pick "unresolvedIntent" from the drop-down under *insert after state*, Uncheck include template comments, and select *Insert Component*.
 
   ![Add display action button component](images/add-display-action-button-component.png " ")
 
 - Update the component as follows:
 ```
 <copy>
-######## Begin Theraphy ############ 
+######## Begin Therapy ############ 
 
   startTheraphy:    
     component: "System.CommonResponse"
@@ -137,7 +141,7 @@ component which
 </copy>
 ```
 
-- Also, update the transition for the *greetings* component as we need to transition from Greetings to Start Theraphy:      
+- Also, update the transition for the *greetings* component as we need to transition from Greetings to Start Therapy:      
 ```
 <copy>
   ##### update the transitions for greetings component
@@ -151,7 +155,7 @@ component which
 
 - Go ahead and test the flow. 
 
-  ![Test start theraphy component](images/test-start-theraphy.png " ")
+  ![Test start therapy component](images/test-start-theraphy.png " ")
 
 4. Now we will request the user if they already have a provider or if they wish to register. 
 
@@ -211,7 +215,7 @@ PatientType: "string"
 ```
 5. Now, we will go ahead and ask for patient details by leveraging the composite bag entity we created in the previous section.
 
-- Let us declare the variable for *RegisterPatientBag* composite bag entity we created under context variables section. 
+- Let us declare the variable for the *RegisterPatientBag* composite bag entity we created under the context variables section. 
 
 ```
 <copy>
@@ -261,7 +265,7 @@ RegisterPatientBag: "RegisterPatientBag"
 
 ## Task 3:  Create a custom component
 
-Custom components are reusable units of custom code that you can call from your skill's dialog flow. In order to register the patients details in the database, we will call the REST API using the NodeJS. 
+Custom components are reusable units of custom code that you can call from your skill's dialog flow. In order to register the patient's details in the database, we will call the REST API using NodeJS. 
 
 1. Follow these steps to install the Oracle Node.js Bots SDK to your local machine.
   - Open a terminal window in Visual Studio Code or your preferred IDE and run the commands. 
@@ -290,7 +294,8 @@ bots-node-sdk -v
 </copy>
 ```
 
-- Open the directory where you wish to create a custom component and paste the following command in your terminal.
+- Open the directory where you wish to create a custom component and paste the following command into your terminal.
+
 ```
 <copy>
 bots-node-sdk init carecliniccs --component-name registerpatient 
@@ -393,10 +398,13 @@ npm install
 npm pack
 </copy>
 ```
+  ![Run commands in the terminal window](images/run-commands-in-terminal-window.png " ")
+
+
 4. Go back to the ODA console and create a custom component and add the service as given in the following picture.
   ![Create Service](images/create-service.png)
 
-5. Go to settings icon in the navigation pane on the left and select the configuration tab. 
+5. Go to the settings icon in the navigation pane on the left and select the configuration tab. 
 
   ![Configuration Settings](images/configuration-settings.png)
 
@@ -411,7 +419,7 @@ npm pack
   ![Edit Parameter](images/edit-parameters.png " ")
 
 
-7. Go back to the dialog flow editor in the Skill. Declare a variable to store the output (Patient ID) from the Custom Component:
+7. Go back to the dialog flow editor in Skill. Declare a variable to store the output (Patient ID) from the Custom Component:
 
 ```
 <copy>
@@ -451,11 +459,11 @@ npm pack
 9. After registration, the next step for the patient is to select the specialization for which we will use the System.ResolveEntities component.
 
 - Select *+ Add component* and pick *Display Action Button Message* (under Hot Picks -> Resolve Entities).
-- Pick "registerUserDB" from the drop down under *insert after state*, Uncheck include template comments and select *Insert Component*.
+- Pick "registerUserDB" from the drop-down under *insert after state*, Uncheck include template comments, and select *Insert Component*.
 
   ![Insert Resolve Entity Component](images/insert-resolve-entity.png " ")
 
-- Let us declare the variable for *RegisterPatientBag* composite bag entity we created. 
+- Let us declare the variable for the *RegisterPatientBag* composite bag entity we created. 
 
 ```
 <copy>
@@ -464,6 +472,20 @@ npm pack
 ```
 
 - Update the component as follows:
+
+|Replace| Value|
+|-----|--------|
+| resolveCompositeBagEntity | chooseProvider | 
+| variable: | variable: "Provider" | 
+| nlpResultVariable: | nlpResultVariable: "iResult"  |
+| useFullEntityMatches: true  | *Delete value* |
+| cancelPolicy:|  cancelPolicy: "immediate" |
+| headerText: | *Delete value* |
+| footerText: |  *Delete value* |
+|next: |next: scheduleDate|
+| textReceived: | textReceived: intent|
+
+The code should look like:
 
 ```
 <copy>
@@ -484,7 +506,7 @@ npm pack
 
 *Note:* ODA cannot display the calendar widget, so we will create custom properties specific to the web channel and add the javascript code to display the calendar widget to the bot deployed on a web page.
 
-- Declare the variable for *RegisterPatientBag* composite bag entity we created. 
+- Declare the variable for the *RegisterPatientBag* composite bag entity we created.  
 
 ```
 <copy>
@@ -529,7 +551,7 @@ npm pack
 ```
 11. After which Patient needs to select the preferred time slot.
 
-- Declare the variable for *RegisterPatientBag* composite bag entity we created. 
+- Declare the variable for the *RegisterPatientBag* composite bag entity we created. 
 
 ```
 <copy>
@@ -619,12 +641,12 @@ Add the *findDoctor* dialog after the *selectTime* component.
 
 </copy>
 ```
-> **Note**: Verify your end to end dialog flow ([Link](files/dialogflow_lab4.txt)) and ignore the warnings.
+> **Note**: Verify your end-to-end dialog flow ([Link](files/dialogflow_lab4.txt)) and ignore the warnings.
 
 
 ## Summary
 
-In this lab, we were able to create an end to end dialog flow between the bot and the user. You have also learnt how to use the custom component to call the REST service in order to perform a POST operation.  
+In this lab, we were able to create an end-to-end dialog flow between the bot and the user. You have also learned how to use the custom component to call the REST service in order to perform a POST operation.  
 
 You may now **proceed to the next lab**.
 
