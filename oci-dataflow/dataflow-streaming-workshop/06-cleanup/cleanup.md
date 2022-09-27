@@ -83,6 +83,6 @@ Estimated time: 20 minutes
    ![Oracle Cloud, Cloud console](images/destroy_succeeded.png " ")
 
 ## Acknowledgements
-- **Author** -  Sivanesh Selvanataraj, Senior Software Engineer, OCI Data Flow
-- **Contributors** - Sujoy Chowdhury, Senior Principal Product Manager, OCI Data Flow
+- **Author** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
+- **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
 - **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022
