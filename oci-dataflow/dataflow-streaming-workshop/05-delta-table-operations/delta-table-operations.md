@@ -1,4 +1,4 @@
-# Run Sensor Data Simulator
+# Run Delta Table operations
 
 ## Introduction
 
@@ -57,6 +57,6 @@ Estimated time: 10 minutes
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
-- **Author** -  Sivanesh Selvanataraj, Senior Software Engineer, OCI Data Flow
-- **Contributors** - Sujoy Chowdhury, Senior Principal Product Manager, OCI Data Flow
+- **Author** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
+- **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
 - **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022
