@@ -20,7 +20,7 @@ Run the following commands from within your VM instance.
 1. Download the sample data set - `oci` index
 
    ```bash
-   <copy>curl -O "https://docs.oracle.com/en/learn/oci-opensearch/files/OCI_services.json"</copy>
+   <copy>curl -O "https://raw.githubusercontent.com/oracle-livelabs/oci/main/oci-opensearch/files/OCI_services.json"</copy>
    ```
 
 2. Create mapping (optional). If you don't run this command or any variation of it, a default mapping will be automatically created.
