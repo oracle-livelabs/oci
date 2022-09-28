@@ -1,3 +1,5 @@
+# Deploy an OCI OpenSearch cluster
+
 ## Introduction
 
 In this lab, you will create an OCI OpenSearch cluster using the Oracle Cloud Console. 
@@ -70,4 +72,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, August 2022
+* **Last Updated By/Date** - Nuno Gonçalves, September 2022
