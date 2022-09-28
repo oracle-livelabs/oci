@@ -13,7 +13,7 @@ In this session, we will configure OCI tenancy with required IAM resources (Comp
     - **Dynamic Group**: An arrangement of matching rules used to manage permissions to enable specific resources to access other specified resources.
 - **Oracle Data Science Platform**: Serverless platform that lets developers create, run, and scale applications without managing any infrastructure. 
 - **Oracle Kubernetes Engine (OKE)**: Oracle-managed container orchestration service that can reduce the time and cost to build modern cloud native applications.
-- **Anomaly Detection Service Project**: Project resource for Anomaly Detection Service (ADS). ADS is an AI service that enables developers to more easily build business-specific anomaly detection models that flag critical incidents, resulting in faster time to detection and resolution. Specialized APIs and automated model selection simplify training and deploying anomaly detection models to applications and operations—all without data science expertise.
+- **Oracle Anomaly Detection Service**: AI service that enables developers to more easily build business-specific anomaly detection models that flag critical incidents, resulting in faster time to detection and resolution. Specialized APIs and automated model selection simplify training and deploying anomaly detection models to applications and operations - all without data science expertise.
 - **Oracle Object Storage**: Securely store any type of data in its native format, with built-in redundancy.
 - **Streaming**: Real-time, serverless, Apache Kafka-compatible event streaming platform for developers and data scientists.
 - **Virtual Cloud Network (VCN)**: Customizable and private cloud network.
@@ -35,7 +35,7 @@ In this session, we will configure OCI tenancy with required IAM resources (Comp
 
 ## Task 1 Create Resource Manager Stack
 
-Resource Manager automates deployment and operations for all Oracle Cloud Infrastructure resources. Using the infrastructure-as-code (IaC) model, the service is based on Terraform, an open source industry standard software tool that enables DevOps engineers to develop and deploy their infrastructure anywhere
+Resource Manager automates deployment and operations for all Oracle Cloud Infrastructure resources. Using the infrastructure-as-code (IaC) model, the service is based on Terraform, an open source industry standard software tool that enables DevOps engineers to develop and deploy their infrastructure anywhere.
 
 1. Log into your Oracle Cloud Infrastructure (OCI) tenancy. 
 
@@ -49,7 +49,7 @@ In Chrome, Firefox and Safari, you can do this with `CTRL`+`Click` > Select `Ope
 
 ![create stack 1](./images/create_stack1.png)
 
-The **OCI Digital Twin Pipeline** will pop up under `Stack Information`. Click **Next** to proceed to the `Configure Variables` section.
+The `OCI Digital Twin Pipeline` will pop up under `Stack Information`. Click **Next** to proceed to the `Configure Variables` section.
 
 ![create stack 2](./images/create_stack2.png)
 
@@ -63,7 +63,9 @@ In this workshop, we will leave all of the resources checked, so that they will 
 
 ![create stack config var](./images/create_stack4.png)
 
-To ensure that you receive a notification upon detection of anomalous data, enter an email address in the `ONS Subscription Endpoint` where you wish to receive these notifications from ONS (Oracle Notifications Service).
+On `Configure Variables` page, scroll to **Oracle Notifications Service (ONS)** section and fill in `ONS Subscription Endpoint` with your email address. This is to ensure that you receive a notification upon detection of anomalous data, enter an email address in the `ONS Subscription Endpoint` where you wish to receive these notifications from ONS (Oracle Notifications Service).
+
+![create stack ons endpoint](./images/ons_endpoint.png)
 
 When you are finished editing your variables in the `Configure Variables` section, click **Next** to proceed to the `Review` section.
 

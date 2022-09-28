@@ -58,7 +58,7 @@ Estimated time: 120 minutes
       - Tony Zhang - Master Principal Cloud Architect
       - Jiayuan Yang - Senior Cloud Engineer
       - Adrian Alba - Staff Cloud Engineer
-- **Adapted by** -  
-- **Contributors** - Samuel Cacela, Staff Cloud Engineer 
+      - Samuel Cacela - Staff Cloud Engineer   
+
 - **Last Updated By/Date** - 2022 September
 
