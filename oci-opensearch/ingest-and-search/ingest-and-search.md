@@ -1,3 +1,5 @@
+# Ingest data and search
+
 ## Introduction
 
 In this lab, you will focus on creating an index by ingesting sample data to the OCI OpenSearch cluster, as well as running a search query. We have prepared a JSON file with sample data, which will be downloaded and used to create an index named `oci`.
@@ -66,4 +68,4 @@ For more information about query syntax, see the OpenSearch or ElasticSearch tut
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, August 2022
+* **Last Updated By/Date** - Nuno Gonçalves, September 2022
