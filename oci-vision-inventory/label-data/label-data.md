@@ -1,3 +1,5 @@
+# OCI Data Labeling
+
 ## Introduction
 
 In this lab, you will focus on labeling pictures of stacked pipes using OCI Data Labeling, so that your own custom OCI Vision model can be later created and trained.
@@ -57,5 +59,5 @@ Estimated Time: 20 minutes
 
 ## Acknowledgements
 
-* **Author** - Nuno Gonçalves
+* **Authors** - Nuno Gonçalves, Jason Monden
 * **Last Updated By/Date** - Nuno Gonçalves, September 2022
