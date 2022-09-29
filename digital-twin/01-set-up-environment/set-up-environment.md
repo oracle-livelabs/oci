@@ -55,7 +55,7 @@ The `OCI Digital Twin Pipeline` will pop up under `Stack Information`. Click **N
 
 4. In the `Configuration variables` section, supply the following input:
 
-    In the `Unique Identifier Embedded String` field, enter your name or initials, which will be used to provide uniqueness to resource names where required.
+    In the `Name Your Resources` field, enter your name or initials, which will be used to provide uniqueness to resource names where required.
 
     For example, if you enter `JohnDoe`, the resulting Compartment name will appear similar to: `Ad_workshop_JohnDoe_logical_pheasant`. The `logical_pheasant` suffix is a pseudorandomly-generated petname, which contributes additional uniqueness to the resource name.
 
