@@ -53,9 +53,11 @@ The `OCI Digital Twin Pipeline` will pop up under `Stack Information`. Click **N
 
 ![create stack 2](./images/create_stack2.png)
 
-4. In the `Configuration variables` section, enter your name or initials, which will be used to provide uniqueness to resource names where required.
+4. In the `Configuration variables` section, supply the following input:
 
-    For example, if you enter "JohnDoe", the resulting Compartment name will appear similar to: `Ad_workshop_JohnDoe_logical_pheasant`. The `logical_pheasant` suffix is a pseudorandomly-generated petname, which contributes additional uniqueness to the resource name.
+    In the `Unique Identifier Embedded String` field, enter your name or initials, which will be used to provide uniqueness to resource names where required.
+
+    For example, if you enter *JohnDoe*, the resulting Compartment name will appear similar to: `Ad_workshop_JohnDoe_logical_pheasant`. The `logical_pheasant` suffix is a pseudorandomly-generated petname, which contributes additional uniqueness to the resource name.
 
     Additionally, select your `Parent Compartment` and `Region` to choose where you wish to deploy the infrastructure stack.
 
