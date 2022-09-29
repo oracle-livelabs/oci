@@ -57,7 +57,7 @@ APIGW_HOSTNAME = (SAMPLE) amaaaaaaaa.apigateway.eu-frankfurt-1.oci.customer-oci.
 `````
 
 
-## Task 1: Create a compartment
+## Task 1: Create a Compartment
 
 The compartment will be used to contains all the components used in the demo.
 
@@ -337,7 +337,9 @@ Go the the menu
 When the machine is created, 
 - Take note of *##COMPUTE_PUBLIC-IP##*, the public IP address. 
 
-## Task 11: Create a API GW to access the OpenSearch private URL
+## Task 11: Create a API Gateway
+
+The API Gateway will be used API to access the OpenSearch private URL from the website.
 
 Go the the menu
 - Developer & Services
