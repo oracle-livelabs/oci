@@ -2,43 +2,63 @@
 
 ## About this Workshop
 
-This introduction covers the complete "parent" workshop. Use this text to set up the story for the workshop. Be engaging - what will the learner get from spending their time on this workshop?
+In this lab, we are going to offer a detailed hands-on onboarding guide for users who are interested in our automated end to end **Anomaly Detection** data preprocessing and training/inference for workflow.
 
-Estimated Workshop Time: -- hours -- minutes (This estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
+## Objectives
+This solution will allow you to configure a training pipeline and an inference pipeline in your tenancy, along with ingestion and preprocessing of your data. Input sizes could range from a few rows to several tens of millions of rows, and 1 column to several thousands of columns.
 
-*You may add an option video, using this format: [](youtube:YouTube video id)*
 
-  [](youtube:zNKxJjkq0Pw)
+## Workflow introduction
 
-### Objectives
+![workflow](../attachments/workflow.png)
 
-*List objectives for the workshop*
+A brief description of the whole picture:
 
-In this workshop, you will learn how to:
-* Pre-requisites
-* Setup OCI Anomaly Detection
-* Preparation
-* Setup OCI Data Flow
-* Setup OCI Function and OCI Events
-* Running the solution end to end
+1.  Prepare the driver config and upload it to the config bucket. Also create an anomaly detection (AD) application for later usage.
+2.  Upload a training/inferencing dataset to the input source bucket.
+3.  The upload event will trigger an event to the OCI event listening to this bucket.
+4.  OCI event will trigger the downstream Orchestrator deployed on OCI Function, which will load the driver config and start the workflow.
+5.  The workflow will run based on the driver config.
+6.  Once the process is successful, the processed data with other informations (for example, model\_info) will be written to the staging bucket.
+7.  Post processing, i.e. AD training/inferencing in our example, will begin to run. 
+8.  Once post processing is done, the result will be written to the result bucket.
 
-### Prerequisites (Optional)
+Notice:
 
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. **Do NOT list** each previous lab as a prerequisite.*
+*   Pipelines are triggered by changes to the input data source. For example, uploading a new training dataset into the assigned object storage bucket.
+*   Our prepackaged application will execute the pipeline based on your configuration file.
+    *   Once the raw data is preprocessed, the transformed data will be saved in the configured staging bucket.
+    *   AD service will be triggered afterward to perform training or detection, and the results will be available in the configured results bucket
+*   If you want to utilize more computational power to run the pipelines faster, this is easy to configure as well. 
+
+### Supported Input Sources and Formats
+
+*   We support tables stored in ATP/ADW databases
+*   We support CSV/Parquet file formats in Object Storage
+
+Note: while the pipelines are triggered by updates, they work on point-in-time snapshots of the data. We advise updating database sources in a single transaction to avoid processing data in a partial state.
+
+### Supported Output Source and Formats
+
+Output is always saved to Object Storage as a CSV file.
+
+
+## Prerequisites
+
 
 This lab assumes you have:
-* An Oracle account
-* All previous labs successfully completed
-
-*This is the "fold" - below items are collapsed by default*
-
-In general, the Introduction does not have Steps.
+* An Oracle Free Tier, or Paid Cloud Account.
+* Understand the fundamental knowledge about cloud computing.
+* Familiar with services on Oracle Cloud Infrastructure (OCI), such as Object Storage, Identity, Virtual Cloud Network, etc. 
+* Familiar with data engineering, machine learning and statistics is preferred. 
+* Familiar with Python (or other programming language) is strongly recommended.
+* Additional prerequisites (cloud services) are mentioned per sub lab.
 
 ## Learn More
 
 *(optional - include links to docs, white papers, blogs, etc)*
 
-* [URL text 1](http://docs.oracle.com)
+* [URL text 1](../optional/Introduction-to-Transformers-for-Data-Preprocessing.md)
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
