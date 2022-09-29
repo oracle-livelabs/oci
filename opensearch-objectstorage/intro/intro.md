@@ -5,7 +5,7 @@ Estimated time: 120 minutes
 
 ### Goal: Search Documents uploaded to Object Storage in a Google like search engine
 
-![streaming-architecture](images/opensearch-intro.png)
+![Introduction Usecase](images/opensearch-intro.png)
 
 Using LowCode tools, we will develop a program to search Documents uploaded to Object Storage in a Google like search engine.
 
@@ -17,7 +17,7 @@ Documents like:
 
 ### Architecture
 
-![streaming-architecture](images/opensearch-architecture.png)
+![Architecture](images/opensearch-architecture.png)
 
 ### How
 

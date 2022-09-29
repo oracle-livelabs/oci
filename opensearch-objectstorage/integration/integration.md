@@ -35,7 +35,7 @@ Go the the menu
 - In the screen: click Visual Builder *Enable*
 - Click *Enable* again
 
-![oic-enable-vbcs](images/opensearch-oic-enable-vbcs.png)
+![Enable Visual Builder](images/opensearch-oic-enable-vbcs.png)
 
 ## Task 2: Create an Agent Group
 
@@ -54,7 +54,7 @@ Create the Agent Group
 - Identifier: *OPENSEARCH\_AGENT\_GROUP*
 - Then *Create*
 
-![oic-agent-group](images/opensearch-oic-agent-group.png)
+![Create Agent Group](images/opensearch-oic-agent-group.png)
 
 ## Task 3: Install the OIC Agent on the compute
 
@@ -139,7 +139,7 @@ We will upload the integration.
 - Browse: choose *OPENSEARCH_OIC.par*
 - Click: *Import and Configure*
 
-![oic-enable-vbcs](images/opensearch-oic-package-import.png)
+![Import Package](images/opensearch-oic-package-import.png)
 
 ## Task 5: Configure the connections
 
@@ -159,7 +159,7 @@ keytool -keystore oss_store.jks -alias OSSStream -import -file ociStreaming.cert
 
 Click to edit the connection *StreamInputBucket*
 
-![oic-enable-vbcs](images/opensearch-oic-package-import.png)
+![Package details](images/opensearch-oic-package-import2.png)
 
 Use this info:
   - Bootstrap servers = *##STREAM_BOOSTRAPSERVER##*
@@ -170,7 +170,7 @@ Use this info:
   - Configure agent = *OPENSEARCH_AGENT*
   - *Save / Test / Save* until 100%
 
-![restopensearch](images/opensearch-connection-streaminputbucket.png)
+![Connection StreamInputBucket](images/opensearch-connection-streaminputbucket.png)
 
 ### B. RestFunction
 
@@ -178,7 +178,7 @@ First, we need data about your tenancy and user.
 - On the top, right, click *Tenancy: name*
 - Copy the tenancy OCID *##TENANCY_OCID##*
 
-![tenancy](images/opensearch-tenancy.png)
+![Tenancy](images/opensearch-tenancy.png)
 
 Then, we need data about the user
 - On the top, right, click *Your username*
@@ -186,14 +186,14 @@ Then, we need data about the user
 - Copy the user OCID *##USER OCID##*
 - Click on *API Keys*
 
-![user](images/opensearch-user.png)
+![User](images/opensearch-user.png)
 
 - Click *Add API Key*
 - Generate one
 - Download it *##PRIVATE_KEY##*
 - Copy the *##FINGERPRINT##*
 
-![user2](images/opensearch-user2.png)
+![User API Keys](images/opensearch-user2.png)
 
 
 Then fill the Connection details:
@@ -205,7 +205,7 @@ Then fill the Connection details:
 - Finger Print = *##FINGERPRINT##*
 - *Save / Test / Save* until 100%
 
-![restfunction](images/opensearch-connection-restfunction.png)
+![Connection RestFunction](images/opensearch-connection-restfunction.png)
 
 ### C. RestOpenSearch
 
@@ -215,7 +215,7 @@ Fill the Connection details:
 - Agent Group: *OPENSEARCH\_AGENT\_GROUP*
 - *Save / Test / Save* until 100%
 
-![restopensearch](images/opensearch-connection-restopensearch.png)
+![Connect RestOpenSearch](images/opensearch-connection-restopensearch.png)
 
 ### D. Resttrigger
 
@@ -241,7 +241,7 @@ Then fill the Connection details:
 
 All connections should be valid. Let's activate the integrations:
 
-![oic-checkup1](images/opensearch-oic-checkup1.png)
+![Checkup](images/opensearch-oic-checkup1.png)
 
 Click on the activation buttons for each integration and active them.
 All integrations should be up and running.
@@ -251,14 +251,14 @@ All integrations should be up and running.
 Go back to the bucket.
 Upload some file in the Object Storage Bucket (You got them in the Function git repository)
 
-![oic-test](images/opensearch-oic-test.png)
+![Test OIC](images/opensearch-oic-test.png)
 
 Check the result in OIC. 
 - Go to Integration
 - Then Monitoring 
 - Then Integration
 
-![oic-test2](images/opensearch-oic-test2.png)
+![Monitor OIC](images/opensearch-oic-test2.png)
 
 ## Acknowledgements
 

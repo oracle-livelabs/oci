@@ -15,7 +15,7 @@ Estimated time: 20 min
 
 First, lets go in Visual Builder. Go back to the homepage of Oracle Integration Cloud and choose Visual Builder
 
-![vb-link-oic](images/opensearch-vb-link-oic.png)
+![Visual Builder link](images/opensearch-vb-link-oic.png)
 
 Then let's import the project from the file that you downloaded before in the "Function" lab.
 - Click *Import*
@@ -24,7 +24,7 @@ Then let's import the project from the file that you downloaded before in the "F
 - Description: *opensearch*
 - Click *Import*
 
-![vb-import](images/opensearch-vb-import.png)
+![Visual Builder Import](images/opensearch-vb-import.png)
 
 ##Task 2: Edit the connections
 
@@ -38,7 +38,7 @@ Go to the imported application.
 - Click on *Servers* tab 
 - Then *Edit icon*
 
-![vb-connection-preauth](images/opensearch-vb-connection-preauth.png)
+![Connection PreAuth](images/opensearch-vb-connection-preauth.png)
 
 Search first your Object Storage API based on your region, [here](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/)
 
@@ -53,7 +53,7 @@ You have the other values from the previous labs.
   - Click *Save*
 - Click *Save* again
 
-![vb-connection-preauth](images/opensearch-vb-connection-preauth2.png)
+![Create KEY ID](images/opensearch-vb-connection-preauth2.png)
 
 You can also test the connection:
 - Tab *Endpoints*
@@ -61,7 +61,7 @@ You can also test the connection:
 - Tab *Test*
 - Click *Send Request*
 
-![vb-connection-preauth](images/opensearch-vb-connection-preauth3.png)
+![Test Connection Preauth](images/opensearch-vb-connection-preauth3.png)
 
 ### B. Connection opensearch
 
@@ -71,13 +71,13 @@ Redo this for the second connection:
 - Click on *Servers* tab 
 - Then *Edit icon*
 
-![vb-connection-opensearch](images/opensearch-vb-connection-opensearch.png)
+![Connection OpenSearch](images/opensearch-vb-connection-opensearch.png)
 
 - Instance URL: *https://##APIGW_HOSTNAME##*
   Ex: https://xxxxxxxx.apigateway.eu-frankfurt-1.oci.customer-oci.com
 - Click *Save*
 
-![vb-connection-opensearch](images/opensearch-vb-connection-opensearch2.png)
+![Edit Connection OpenSearch](images/opensearch-vb-connection-opensearch2.png)
 
 You can also test the connection:
 - Tab *Endpoints*
@@ -85,20 +85,20 @@ You can also test the connection:
 - Tab *Test*
 - Click *Send Request*
 
-![vb-connection-opensearch](images/opensearch-vb-connection-opensearch3.png)
+![Test Connection OpenSearch](images/opensearch-vb-connection-opensearch3.png)
 
 ## Test the application
 
 Click on the run button on the top
 
-![vb-connection-test](images/opensearch-vb-test.png)
+![Run the application](images/opensearch-vb-test.png)
 
 - Type *test* : This will return the PDF, word, excel uploaded 
 - Type *penguin* : This will return the image of a penguin recognized via Artificial Intelligence
 - Type *shakespeare* : This will return the image of a text scanned by the Text Recognition
 - Type *specimen* : This will return the belgian ID card with the name Specimen
  
-![vb-connection-test](images/opensearch-intro.png)
+![Test Result](images/opensearch-intro.png)
 
 ## Acknowledgements
 

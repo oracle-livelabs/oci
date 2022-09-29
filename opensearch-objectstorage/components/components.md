@@ -67,18 +67,18 @@ Go the the menu
 - Identity & Security
 - Choose Compartment
 
-![compartment1](images/opensearch-compartment1.png =40%x*)
+![Menu Compartment](images/opensearch-compartment1.png =40%x*)
 
 Go to the right place in the hierarchy
 - Click ***Create Compartment***
 - Give a name: ex: ***livelab***
 - Then again: ***Create Compartment***
 
-![compartment2](images/opensearch-compartment2.png)
+![Create Compartment](images/opensearch-compartment2.png)
 
 After creating the compartment, copy the OCID in your text editor. ***##COMPARTMENT_OCID##***. We will need it later.
 
-![compartment2](images/opensearch-compartment3.png)
+![Details Compartment](images/opensearch-compartment3.png)
 
 ## Task 2: Create an Object Storage Bucket
 
@@ -88,7 +88,7 @@ Go the the menu
 - Storage
 - Object Storage / Bucket
 
-![objectstorage1](images/opensearch-objectstorage1.png)
+![Menu Object Storage](images/opensearch-objectstorage1.png)
 
 - Choose the right compartment (livelab in this case)
 - Click *Create Bucket*
@@ -96,7 +96,7 @@ Go the the menu
 - Check: *Emit Object Events*
 - Click *Create*
 
-![objectstorage2](images/opensearch-objectstorage2.png)
+![Create Object Storage](images/opensearch-objectstorage2.png)
 
 ## Task 3: Create a Stream
 
@@ -106,7 +106,7 @@ Go the the menu
 - Analytics / AI
 - Messaging / Streaming
 
-![streaming1](images/opensearch-streaming1.png =50%x*)
+![Menu Streaming](images/opensearch-streaming1.png =50%x*)
 
 - Check that you are in the right compartment (livelab in this case)
 - Click ***Create Stream***
@@ -115,14 +115,14 @@ Go the the menu
 - Stream Pool Name: *opensearch-streampool*
 - Then, *Create Stream*
 
-![streaming2](images/opensearch-streaming2.png)
+![Create Streaming](images/opensearch-streaming2.png)
 
 Collect some info about the stream:
 - Go to the Stream Pool that you have created
 - Note *##STREAM_BOOSTRAPSERVER##*: the Bootstrap Servers: ex: "cell-1.streaming.eu-frankfurt-1.oci.oraclecloud.com:9092" 
 - Note *##STREAM_USERNAME##*: user name in the SASL Connection Strings ex: "tenancyname/oracleidentitycloudservice/name@domain.com/ocid1.streampool.oc1.eu-frankfurt-1.amaccccccccfsdfsdxfa"
 
-![streaming3](images/opensearch-streaming3.png)
+![Details Streaming](images/opensearch-streaming3.png)
 
 ## Task 4: Create an Event Rule
 
@@ -132,7 +132,7 @@ Go the the menu
 - Observability & Management
 - Event Rules
 
-![rule1](images/opensearch-rule1.png =40%x*)
+![Menu Rule](images/opensearch-rule1.png =40%x*)
 
 - Check that you are in the right compartment (livelab in this case)
 - Click *Create Rule*
@@ -151,7 +151,7 @@ Go the the menu
     - Stream: *opensearch-stream*
 - Click *Create Rule*
 
-![rule2](images/opensearch-rule2.png)
+![Create Rule](images/opensearch-rule2.png)
 
 ## Task 5: Create a Virtual Cloud Network
 
@@ -161,33 +161,33 @@ Go the the menu
 - Networking
 - Virtual Cloud Network
 
-![vcn1](images/opensearch-vcn1.png =50%x*)
+![Menu VNC](images/opensearch-vcn1.png =50%x*)
 
 - Check that you are in the right compartment (livelab in this case)
 - Click *Start VCN Wizard*
 - Choose the default: *Create VCN with Internet Connectivity*
 - Click *Start VCN Wizard* again
 
-![vcn2](images/opensearch-vcn2.png)
+![Create VCN](images/opensearch-vcn2.png)
 - VCN Name: *opensearch-vcn*
 - Keep the rest default
 - Click *Next*
 - Click *Create*
 
-![vcn3](images/opensearch-vcn3.png)
+![Create VNC Tab 2](images/opensearch-vcn3.png)
 
 - Click *View Virtual Cloud Network*
 - Choose *Security List*
 - Then click on *Default Security List for opensearch-vcn*
 
-![vcn4](images/opensearch-vcn4.png)
+![Create VNC Tab 3](images/opensearch-vcn4.png)
 
 - Click *Add Ingress Rules*
 - Source CIDR: *0.0.0.0/0*
 - Destination Port: *443*
 - Click *Add Ingress Rule*
 
-![vcn5](images/opensearch-vcn5.png)
+![Ingress Rule 1](images/opensearch-vcn5.png)
 
 - Choose *Security List* again
 - Go to the other entry *Security List for Private Subnet-opensearch-vcn*
@@ -196,7 +196,7 @@ Go the the menu
 - Destination Port: *5601,9200*
 - Click *Add Ingress Rule*
 
-![vcn4](images/opensearch-vcn6.png)
+![Ingress Rule 2](images/opensearch-vcn6.png)
 
 ## Task 6: Create Dynamic group
 
@@ -206,7 +206,7 @@ Go the the menu
 - Identity & Security 
 - Policies
 
-![dyngroup](images/opensearch-dyngroup.png =50%x*)
+![Menu Dynamic Group](images/opensearch-dyngroup.png =50%x*)
 
 - Click *Create Dynamic Group*
 - Name: *opensearch-fn-dyngroup*
@@ -219,7 +219,7 @@ ALL {resource.type = 'fnfunc', resource.compartment.id = '##COMPARTMENT_OCID##'}
 </copy>
 Ex: ALL {resource.type = 'fnfunc', resource.compartment.id = 'ocid1.compartment.oc1..aaaaaaaanmnkccccc'}
 ```
-![dyngroup](images/opensearch-dyngroup2.png)
+![Create Dynamic Group](images/opensearch-dyngroup2.png)
 
 ## Task 7: Create Policies
 
@@ -229,7 +229,7 @@ Go the the menu
 - Identity & Security 
 - Policies
 
-![policy1](images/opensearch-policy1.png)
+![Menu Policy](images/opensearch-policy1.png)
 
 - Check that you are in the right compartment (livelab in this case)
 - Click *Create Policy*
@@ -250,7 +250,7 @@ Allow dynamic-group opensearch-fn-dyngroup to manage objects in compartment live
 
 - Click *Create*
 
-![policy2](images/opensearch-policy2.png)
+![Create Policy](images/opensearch-policy2.png)
 
 ## Task 8: Create an OpenSearch Cluster
 
@@ -260,14 +260,14 @@ Go the the menu
 - Database
 - OpenSearch - Clusters
 
-![cluster1](images/opensearch-cluster1.png)
+![Menu Cluster](images/opensearch-cluster1.png)
 
 - Check that you are in the right compartment (livelab in this case)
 - Click *Create Cluster*
 - Name: *opensearch-cluster*
 - Click *Next*
 
-![cluster2](images/opensearch-cluster2.png)
+![Create Cluster](images/opensearch-cluster2.png)
 
 On the second screen (configure nodes), 
 - Keep the default: *Development*
@@ -279,7 +279,7 @@ On the Configure Networking screen,
 - Click *Next*
 - Then *Create*
 
-![cluster3](images/opensearch-cluster3.png)
+![Create Cluster Tab Networking](images/opensearch-cluster3.png)
 
 While OCI creates the instance, you can run the next step. 
 
@@ -287,7 +287,7 @@ When it is finished. You will need to get the name of OpenSearch hostname. *##OP
 
 It is here:
 
-![cluster3](images/opensearch-cluster4.png)
+![Cluster Details](images/opensearch-cluster4.png)
 
 ## Task 9: Create an Oracle Integration instance
 
@@ -297,7 +297,7 @@ Go the the menu
 - Developer Services
 - Application Integration
 
-![oic1](images/opensearch-oic1.png =50%x*)
+![Menu Integration](images/opensearch-oic1.png =50%x*)
 
 - Check that you are in the right compartment (livelab in this case)
 - Click *Create*
@@ -306,7 +306,7 @@ Go the the menu
 - Choose the licence type 
 - Click *Create*
 
-![oic2](images/opensearch-oic2.png)
+![Create Integration](images/opensearch-oic2.png)
 
 While OCI creates the instance, go to the next step.
 
@@ -318,7 +318,7 @@ Go the the menu
 - Compute
 - OpenSearch - Clusters
 
-![compute1](images/opensearch-compute1.png =50%x*)
+![Menu Compute](images/opensearch-compute1.png =50%x*)
 
 - Check that you are in the right compartment (livelab in this case)
 - Click *Create instance*
@@ -332,7 +332,7 @@ Go the the menu
     - Keep the private key file for later *##COMPUTE_PRIVATE-KEY##*
 - Click *Create*
 
-![compute2](images/opensearch-compute2.png)
+![Create Compute](images/opensearch-compute2.png)
 
 When the machine is created, 
 - Take note of *##COMPUTE_PUBLIC-IP##*, the public IP address. 
@@ -345,7 +345,7 @@ Go the the menu
 - Developer & Services
 - API Management / Gateway
 
-![apigw](images/opensearch-apigw.png =50%x*)
+![Menu API Gateway](images/opensearch-apigw.png =50%x*)
 
 - Check that you are in the right compartment (livelab in this case)
 - Click *Create Gateway*
@@ -355,7 +355,7 @@ Go the the menu
     - Subnet: *Public Subnet-opensearch-vcn*
 - Click *Create Gateway*
 
-![apigw2](images/opensearch-apigw2.png)
+![Create APU Gateway](images/opensearch-apigw2.png)
 
 When the Gateway is created, 
 - Copy the Gateway hostname *##APIGW_HOSTNAME##*. Ex: xxxxxx.apigateway.eu-frankfurt-1.oci.customer-oci.com
@@ -368,7 +368,7 @@ Then,
     - Path-Prefix: */oic*
     - Click *Next*
 
-![apigw3](images/opensearch-apigw3.png)
+![Create Deployment](images/opensearch-apigw3.png)
 
 - Authentication
     - To make the lab easier. Choose *No Authentication*. Ideally, we would need to setup OAUTH.
@@ -382,7 +382,7 @@ Then,
     - Click *Next*
 - Then *Create*
 
-![apigw4](images/opensearch-apigw3.png)
+![Create Route](images/opensearch-apigw3.png)
 
 ## Acknowledgements
 

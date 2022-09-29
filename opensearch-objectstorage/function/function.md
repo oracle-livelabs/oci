@@ -19,7 +19,7 @@ Go the the menu
 - Developer Services
 - Functions / Application
 
-![oic1](images/opensearch-fn-menu.png)
+![Menu Application](images/opensearch-fn-menu.png)
 
 - Check that you are in the right compartment (livelab in this case)
 - Click *Create Application*
@@ -28,7 +28,7 @@ Go the the menu
 - Subnet : *Private Subnet-opensearch-vcn*
 - Click Create
 
-![oic1](images/opensearch-fn-app.png)
+![Create Application](images/opensearch-fn-app.png)
 
 You will see a getting Started. This is what we will follow.
 
@@ -56,21 +56,21 @@ fn -v deploy --app opensearch-application
 </copy>
 ```
 
-![oic1](images/opensearch-fn-deploy-end.png)
+![Deploy Function](images/opensearch-fn-deploy-end.png)
 
 After building the code, it will create a function tikaparser in the opensearch-application
 - Go back to the *opensearch-application*
 - Click *Functions*
 - Click the name of the function *tikaparser*
 
-![oic1](images/opensearch-fn-function.png)
+![Details Function](images/opensearch-fn-function.png)
 
 - In this screen, check that 
   - the memory is well *2048 MB* 
   - the timeout is *300 sec*
   - Take note of the value of Endpoint *##FUNCTION_ENDPOINT##*.
 
-![oic1](images/opensearch-fn-function2.png)
+![Details Function 2](images/opensearch-fn-function2.png)
 
 ## Acknowledgements
 
