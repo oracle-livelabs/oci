@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="pipes_samples">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/oci-vision-inventory/images/model/pipes_samples.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
