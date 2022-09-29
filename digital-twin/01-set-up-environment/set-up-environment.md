@@ -2,7 +2,7 @@
 
 
 ## Introduction
-In this session, we will configure OCI tenancy with required IAM resources (Compartment, Policy, and Dynamic Group), create OCI services like OKE, OCI Streaming, Object Storage, and OCI Notification service.
+In this session, we will configure an Oracle Cloud Infrastructure (OCI) Tenancy with required IAM resources (Compartment, Policy, and Dynamic Group), create OCI services like OKE, OCI Streaming, Object Storage, and OCI Notification service.
 
 
 
@@ -37,7 +37,7 @@ In this session, we will configure OCI tenancy with required IAM resources (Comp
 
 Resource Manager automates deployment and operations for all Oracle Cloud Infrastructure resources. Using the infrastructure-as-code (IaC) model, the service is based on Terraform, an open source industry standard software tool that enables DevOps engineers to develop and deploy their infrastructure anywhere.
 
-1. Log into your Oracle Cloud Infrastructure (OCI) tenancy. 
+1. Log into your Oracle Cloud Tenancy. You can access the log-in page [here](https://www.oracle.com/cloud/sign-in.html). 
 
 2. Click the `Deploy to Oracle Cloud` button below, opening the link into a new browser tab.
 
