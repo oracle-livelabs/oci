@@ -1,48 +1,40 @@
 {
-  "workshoptitle": "The Title of the Workshop is defined in the manifest",
-  "help": "livelabs-help-**enterarea**_us@oracle.com",
-  "variables": ["../../variables/variables.json",
-    "../../variables/variables-in-another-file.json"],
+  "workshoptitle": "OCI Anomaly Detection Pipeline with Data Preprocessing Engine",
+  "help": "livelabs-help-anomaly-detection_us@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
-      "description": "The Introduction is always second for LiveLabs. The title and contents menu title match for the Introduction.",
+      "description": "Introduction to OCI Anomaly Detection Pipeline with Data Preprocessing Engine",
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Get Started with noVNC Remote Desktop",
-      "description": "Using noVNC Remote Desktop",
-      "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
+      "title": "Lab 1: Get Started wih Anomaly Detection",
+      "description": "Using Anomaly detection",
+      "filename": "../../anomaly-detection/anomaly-detection.md"
     },
     {
-      "title": "Lab 1: Provision an Instance",
-      "description": "Labs that follow the introduction are numbered, starting with Lab 1",
-      "filename": "../../provision/provision.md"
+      "title": "Lab 2: Setup Policies",
+      "filename": "../../setup-policies/setup-policies.md"
     },
     {
-      "title": "Lab 2: Setup the Environment",
-      "filename": "../../setup/setup.md"
+      "title": "Lab 3: Save Config, Data and Application",
+      "filename": "../../prepare-config-data-and-app/save.md"
     },
     {
-      "title": "Lab 3: Load Data into an Instance",
-      "filename": "../../data-load/data-load.md"
+      "title": "Lab 4: Load Config, Data and Application to Object Store",
+      "filename": "../../load-config-data-and-app/load.md"
     },
     {
-      "title": "Lab 4: Query Data",
-      "filename": "../../query/query.md"
+      "title": "Lab 5: Setup DataFlow",
+      "filename": "../../setup-dataflow/data-flow.md"
     },
     {
-        "title": "Lab 5: Tables in LiveLabs",
-        "filename": "../../tables/tables.md"
+      "title": "Lab 6: Setup Functions and Events",
+      "filename": "../../setup-events-and-functions/setup-events-and-functions.md"
     },
     {
-            "title": "Lab 6: Variables in LiveLabs",
-            "filename": "../../variables/variables.md"
-    },
-    {
-      "title": "Need Help?",
-      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      "title": "Lab 7: Run tests",
+      "filename": "../../run-tests/run-tests.md"
     }
   ]
 }
