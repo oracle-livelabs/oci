@@ -1,3 +1,5 @@
+# Trigger the OCI Vision model creation and training
+
 ## Introduction
 
 In this lab, you will create an OCI Vision project and an OCI Vision custom model. A custom model can be created with a minimum of 10 images, which we have provided.   
@@ -31,5 +33,5 @@ An OCI Vision custom model can be created in quick mode (up to 1 hour), regular 
 
 ## Acknowledgements
 
-* **Author** - Nuno Gonçalves
+* **Authors** - Nuno Gonçalves, Jason Monden
 * **Last Updated By/Date** - Nuno Gonçalves, September 2022
