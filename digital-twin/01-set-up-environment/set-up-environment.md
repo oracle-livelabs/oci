@@ -57,7 +57,7 @@ The `OCI Digital Twin Pipeline` will pop up under `Stack Information`. Click **N
 
     In the `Name Your Resources` field, enter your name or initials, which will be used to provide uniqueness to resource names where required.
 
-    For example, if you enter `JohnDoe`, the resulting Compartment name will appear similar to: `Ad_workshop_JohnDoe_logical_pheasant`. The `logical_pheasant` suffix is a pseudorandomly-generated petname, which contributes additional uniqueness to the resource name.
+    For example, if you enter `JohnDoe`, the resulting Compartment name will appear similar to: `AD_workshop_JohnDoe_wise_duck`. The `wise_duck` suffix is a pseudorandomly-generated petname, which contributes additional uniqueness to the resource name.
 
     Additionally, select your `Parent Compartment` and `Region` to choose where you wish to deploy the infrastructure stack.
 
@@ -103,11 +103,11 @@ Oracle Cloud Infrastructure Object Storage service is an Internet-scale, high-pe
 
 ![os navigation](./images/bucket_navigation.png)
 
-2. Select the new Compartment where your resources provisioned, **AD_workshop**.
+2. Select the new Compartment where your resources provisioned, whose name will start with **AD_workshop**. You can identify your compartment by the unique suffix that has been added to its name.
 
 ![os console](./images/os_console.png)
 
-3. Open the bucket, **AD_bucket**, which was deployed as part of your stack.
+3. Open the bucket, whose name will start with **AD_bucket**, which was deployed as part of your stack.
 
 
 ## Acknowledgements
