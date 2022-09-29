@@ -29,7 +29,7 @@ In this session, we will configure OCI tenancy with required IAM resources (Comp
 
 ### Prerequisites
 1. Fully-privileged access to an OCI Tenancy (account).
-2. Sufficient availability of resources in your OCI Tenancy. You can check resource availability [here](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm#Viewing).
+2. Sufficient availability of resources in your OCI Tenancy. You can check resource availability [here](https://cloud.oracle.com/limits?region=home), and learn more about resource availability [here](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm#Viewing).
 
 
 
