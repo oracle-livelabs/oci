@@ -2,7 +2,7 @@
 
 
 ## Introduction
-In this section, we will cover the steps necessary to add any additional users to your Oracle Tenancy for those who wish to share an account.
+In this section, we will cover the steps necessary to add any additional users to your Oracle Tenancy, if you wish to share an account.
 
 For the purposes of this workshop, all users may be added to the `Administrators` group, which has permissions to manage all resources in the Tenancy.
 
