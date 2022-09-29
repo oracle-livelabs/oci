@@ -2,13 +2,13 @@
 
 ## About this Workshop
 
-This workshop walks you through how to configure a WebLogic-on-Kubernetes for monitoring with the Oracle Application Performance Monitoring (APM) service. This enables automatic OpenTracing instrumentation and metrics collection that is used to provide full, end-to-end monitoring and diagnostics for the application.
+This workshop walks you through how to configure a WebLogic-on-Kubernetes for monitoring with the Oracle Application Performance Monitoring (APM) service. This enables automatic OpenTracing instrumentation and metrics collection that is used to provide full, end-to-end monitoring and diagnostics for the application.   
 
 In this workshop, you will provision the APM Java agent in a file system mounted in the Oracle Cloud, deploy the agent to the Kubernetes cluster, instrument the APM Browser agent by inserting JavaScript code to a webpage and view traces and spans in APM Trace Explorer.
 
 > **Note:** The same approach demonstrated for WLS on Kubernetes can be used to configure other types of java application servers, such as Spring Boot, deployed on Kubernetes.
 
-![Workshop Architecture](images/apm_wls_setup.png " ")
+  ![Workshop Architecture](images/apm_wls_setup.png " ")
 
 Estimated Workshop Time: 80 minutes
 
@@ -16,7 +16,7 @@ Estimated Workshop Time: 80 minutes
 
 The diagram below provides an overview of the OCI APM Service, its features, components, and some of the other OCI services it integrates with.
 
-![APM Architecture](images/apm_diagram.png " ")
+  ![APM Architecture](images/apm_diagram.png " ")
 
 Among other capabilities, OCI APM includes an implementation of a Distributed Tracing system. It collects and processes transaction trace data (spans) from the monitored application and makes it available for viewing, dashboarding, exploration, alerts, etc. For more information on APM and Trace Explorer please refer to Application Performance Monitoring > **[Use Trace Explorer](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)** section in the OCI Documentation.
 
@@ -36,7 +36,7 @@ In this workshop, you will:
 ### Prerequisites
 
 
-* An Oracle Free Tier with a 30-day free trial or Paid Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported.
+* An Oracle Free Tier with a 30-day free trial or Paid Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported. 
 
 
 If you are running the workshop in a Paid Cloud Account, ensure you have the permissions below:
@@ -55,5 +55,5 @@ If you are running the workshop in a Paid Cloud Account, ensure you have the per
 
 - **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
-  Avi Huber, Senior Director, Product Management
+Avi Huber, Senior Director, Product Management
 - **Last Updated By/Date** - Yutaka Takatsu, August 2022
