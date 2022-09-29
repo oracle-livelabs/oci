@@ -21,13 +21,14 @@ Estimated time: 10 minutes
 
 1.	From the OCI menu, select **Observability & Management**, then **Administration**.
 	![Oracle Cloud console Menu](images/2-1-domain.png " ")
-2.	Click **Create APM Domain**.
+
+2. Select the **apmworkshop** compartment from the pulldown menu.
+	![Oracle Cloud console Menu](images/2-1-2-domain.png " ")
+3.	Click **Create APM Domain**.
   ![Oracle Cloud console, Create APM Domain](images/2-2-domain.png " ")
-3.	Name your APM domain and select the compartment you created. Add a check to the **“Create as Always Free Domain”**, then click **Create**.
+4.	Name your APM domain as **apmworkshop** and select the compartment you created. Add a check to the **“Create as Always Free Domain”**, then click **Create**.
   ![Oracle Cloud console, Create APM Domain](images/2-3-domain.png " ")
 
-4. Select the **apmworkshop** compartment from the pulldown menu.
-	![Oracle Cloud console Menu](images/2-1-2-domain.png " ")
 
 5. Press the refresh button periodically to check the status. This may take a few minutes.
   ![Oracle Cloud console, Create APM Domain](images/2-4-domain.png " ")
