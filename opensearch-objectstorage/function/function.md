@@ -50,7 +50,7 @@ fn list contextfn use context eu-frankfurt-1
 fn update context oracle.compartment-id ocid1.compartment.oc1..aaaaaaaanmnbbbbbbbb
 fn update context registry fra.ocir.io/xxxxxx/opensearch
 docker login -u 'xxxxx/oracleidentitycloudservice/name@domain.com' fra.ocir.io
-git clone https://github.com/mgueury/oci-opensearch-devops
+git clone https://github.com/mgueury/oci-opensearch-livelab.git
 cd oci-opensearch-devops/tika_parser
 fn -v deploy --app opensearch-application
 </copy>

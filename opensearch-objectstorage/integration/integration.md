@@ -11,6 +11,17 @@ Estimated time: 20 min
 
 ### Prerequisites
 
+- To make your life easier, you should store the sample files on your laptop. If not possible, you can get them from the cloud console. It is the same directory that we used for the function.
+- Please run this:
+
+````
+<copy>
+git clone https://github.com/mgueury/oci-opensearch-livelab.git
+</copy>
+````
+
+It will mostly give the files to upload later in OIC, Visual Builder and samples files to parse.
+
 ## Task 1: Enable Visual Builder
 
 Let's enable Visual Builder.
