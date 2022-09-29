@@ -1,0 +1,43 @@
+{
+    "workshoptitle": "Using Palo Alto Networks's VM Series Firewall Solution on Oracle Cloud Infrastructure",
+    "help": "livelabs-help-oci_us@oracle.com",
+	"tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../intro/intro.md"
+        },
+        {
+            "title": "Getting Started",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+        },
+        {
+            "title": "Lab 0: Deploy Lab using Oracle Resource Manager",
+            "filename": "../../common/orm-deploy.md"
+        },
+        {
+            "title": "Lab 1: Configure Oracle Cloud Infrastructure Components",
+            "filename": "../../common/oci-config.md"
+        },
+        {
+            "title": "Lab 2: Deploy VM Series Firewalls",
+            "filename": "../../ha-active-passive/deploy-vm-series.md"
+        },
+        {
+            "title": "Lab 3: Configure VM Series Firewalls",
+            "filename": "../../ha-active-passive/config-vm-series.md"
+        },
+        {
+            "title": "Lab 4: Traffic Validation",
+            "filename": "../../ha-active-passive/traffic-validation.md"
+        },
+        {
+            "title": "Lab 5: Tear Down Environment",
+            "filename": "../../common/tear-down.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}
