@@ -1,3 +1,5 @@
+# Visualize data with OpenSearch Dashboards
+
 ## Introduction
 
 In this lab, you will explore OpenSearch Dashboards, the OpenSearch visualization platform.
@@ -51,4 +53,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, August 2022
+* **Last Updated By/Date** - Nuno Gonçalves, September 2022

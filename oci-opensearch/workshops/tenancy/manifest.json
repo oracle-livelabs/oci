@@ -3,7 +3,7 @@
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
-            "title": "Introduction: OCI Search Service with OpenSearch",
+            "title": "Introduction",
             "filename": "../../intro/intro.md"
         },
         {
