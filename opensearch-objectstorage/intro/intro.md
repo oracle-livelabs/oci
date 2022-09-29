@@ -34,7 +34,7 @@ The internal processing is designed with a LowCode tool.
 
 ![Integration](images/opensearch-oic.png)
 
-## Objectives
+### Objectives
 
 - Create the Components
     - Compartment, Object Storage Bucket, Stream, Event, OpenSearch, ...
@@ -45,7 +45,7 @@ The internal processing is designed with a LowCode tool.
 ## Acknowledgements 
 
 - **Author**
-  - Marc Gueury
-  - Badr Aissaoui
-  - Marek Krátký 
+    - Marc Gueury
+    - Badr Aissaoui
+    - Marek Krátký 
 - **History** - Creation - 27 Sep 2022

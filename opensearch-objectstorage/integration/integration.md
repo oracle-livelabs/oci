@@ -33,9 +33,7 @@ To communicate with OpenSearch in the private network, we have to install the OI
 First, 
 - Go to the Oracle integration Cloud console that you opened just above
 - Take note of the hostnale in the browser URL,  *##OIC_HOSTNAME##*
-```
-Ex: opensearch-oic-xxxxxx-fr.integration.ocp.oraclecloud.com 
-```
+    - Ex: opensearch-oic-xxxxxx-fr.integration.ocp.oraclecloud.com 
 
 Create the Agent Group
 - On the left menu, choose *Integration*
@@ -58,6 +56,7 @@ If you do not have SSH installed on your laptop, please use the Cloud Shell inst
 Please follow this. Practically, you need to set the env variables at the top of the script and run the rest of the commands.
 
 ```
+<copy>
 ssh opc##COMPUTE_PUBLIC-IP## -i ##COMPUTE_PRIVATE-KEY##
 
 # Env
@@ -115,7 +114,8 @@ chmod +x start.sh
 # Check that it works
 cat agent.log
 exit
-````
+</copy>
+```
 
 ## Task 4: Import the integration
 
@@ -139,10 +139,12 @@ Lets configure the connections. You will need to get back value from your notes:
 
 First, you will need to create a truststore file, *oss_store.jks*.
 
-````
+```
+<copy>
 echo -n | openssl s_client -connect ##STREAM_BOOSTRAPSERVER## | sed -ne  '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > ociStreaming.cert
 keytool -keystore oss_store.jks -alias OSSStream -import -file ociStreaming.cert -storepass changeit -noprompt
-````
+</copy>
+```
 
 Click to edit the connection *StreamInputBucket*
 
@@ -250,7 +252,7 @@ Check the result in OIC.
 ## Acknowledgements
 
 - **Author**
-  - Marc Gueury
-  - Badr Aissaoui
-  - Marek Krátký 
+    - Marc Gueury
+    - Badr Aissaoui
+    - Marek Krátký 
 - **History** - Creation - 27 Sep 2022

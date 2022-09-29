@@ -44,6 +44,7 @@ Remark:
   Keep note of it *##AUTH_TOKEN##*
 
 ``` 
+<copy>
 fn list context
 fn list contextfn use context eu-frankfurt-1
 fn update context oracle.compartment-id ocid1.compartment.oc1..aaaaaaaanmnbbbbbbbb
@@ -52,6 +53,7 @@ docker login -u 'xxxxx/oracleidentitycloudservice/name@domain.com' fra.ocir.io
 git clone https://github.com/mgueury/oci-opensearch-devops
 cd oci-opensearch-devops/tika_parser
 fn -v deploy --app opensearch-application
+</copy>
 ```
 
 ![oic1](images/opensearch-fn-deploy-end.png)
@@ -72,6 +74,9 @@ After building the code, it will create a function tikaparser in the opensearch-
 
 ## Acknowledgements
 
-- **Author** - Marc Gueury
-- **History** - Creation - 25 Aug 2022
+- **Author**
+    - Marc Gueury
+    - Badr Aissaoui
+    - Marek Krátký 
+- **History** - Creation - 27 Sep 2022
 

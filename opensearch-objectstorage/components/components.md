@@ -16,6 +16,7 @@ In this section, we will install all the components needed for this setup using 
 - Open a text editor and copy this text. This will be the variables that we will use during the lab.
 
 ````
+<copy>
 List of ##VARIABLES##
 ---------------------
 
@@ -52,7 +53,7 @@ AI_VISION_URL = (SAMPLE) https://vision.aiservice.eu-frankfurt-1.oci.oraclecloud
 FUNCTION_ENDPOINT = (SAMPLE) https://amaaaaaaaa.eu-frankfurt-1.functions.oci.oraclecloud.com/20181201/functions/ocid1.fnfunc.oc1.eu-frankfurt-1.amaaaaaaaa
 
 APIGW_HOSTNAME = (SAMPLE) amaaaaaaaa.apigateway.eu-frankfurt-1.oci.customer-oci.com
-
+</copy>
 `````
 
 
@@ -213,7 +214,9 @@ Go the the menu
 - Rule: 
 
 ```
+<copy>
 ALL {resource.type = 'fnfunc', resource.compartment.id = '##COMPARTMENT_OCID##'}
+</copy>
 Ex: ALL {resource.type = 'fnfunc', resource.compartment.id = 'ocid1.compartment.oc1..aaaaaaaanmnkccccc'}
 ```
 ![dyngroup](images/opensearch-dyngroup2.png)
@@ -236,11 +239,13 @@ Go the the menu
 - Copy paste the below policies
 
 ```
+<copy>
 Allow service opensearch to manage vnics in compartment livelab
 Allow service opensearch to use subnets in compartment livelab
 Allow service opensearch to use network-security-groups in compartment livelab
 Allow service opensearch to manage vcns in compartment livelab
 Allow dynamic-group opensearch-fn-dyngroup to manage objects in compartment livelab
+</copy>
 ```
 
 - Click *Create*
@@ -380,7 +385,7 @@ Then,
 ## Acknowledgements
 
 - **Author**
-  - Marc Gueury
-  - Badr Aissaoui
-  - Marek Krátký 
+    - Marc Gueury
+    - Badr Aissaoui
+    - Marek Krátký 
 - **History** - Creation - 27 Sep 2022
