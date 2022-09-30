@@ -10,8 +10,8 @@ Estimated time: 120 minutes
 Using LowCode tools, we will develop a program to search Documents uploaded to Object Storage in a Google like search engine.
 
 Documents like: 
-- Word, Excel, PDF, ... 
-- Images with text. Using AI and Text Recognition
+- Word, Excel, PDF, ... , 
+- Images with text. Using AI and Text Recognition.
 - Images without text. Using AI Vision and Labelling
 - Custom document: Images of Belgian ID cards
 
@@ -22,15 +22,15 @@ Documents like:
 ### How
 
 It works like this:
-- A document is uploaded in the Object Storage
-- An event is raised and queued in Streaming (Kafka)
-- The events are processed by Oracle Integration Cloud (OIC)
-- Based on the file type, OIC will process them in the right way
-- The result is uploaded to OpenSearch
+- A document is uploaded to the Object Storage.
+- An event is raised and queue in Streaming (Kafka)
+- The events are processed in Oracle Integration Cloud 
+- Based on the file type, it will process it in the right way
+- Then the result is uploaded to OpenSearch
 
-An end-user can look for these documents in Google like search page created with Visual Builder.
+Then, a end-user can look for these documents in Google like search page designed with Visual Builder.
 
-The internal processing is designed with OIC, a LowCode tool.
+The internal processing is designed with a LowCode tool.
 
 ![Integration](images/opensearch-oic.png)
 
