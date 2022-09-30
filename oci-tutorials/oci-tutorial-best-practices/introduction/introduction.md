@@ -2,7 +2,7 @@
 
 ## About this Workshop - Putting OCI Best Practices into Practice
 
-This session on OCI Tutorial - Putting OCI Best Practices into Practice provides infrastructure and platform services for a wide range of enterprise workloads. In each service, you can choose from a rich array of features based on your goals, and Oracle recommends a set of best practices to dsign and operate cloud topologies that deliver the maximum business value. In this session, we will showcase how to use those best practices when working on OCI.
+This session on OCI Tutorial - Putting OCI Best Practices into Practice provides infrastructure and platform services for a wide range of enterprise workloads. In each service, you can choose from a rich array of features based on your goals, and Oracle recommends a set of best practices to design and operate cloud topologies that deliver the maximum business value. In this session, we will showcase how to use those best practices when working on OCI.
 
 ### **Duration: 2 Hours**
 
@@ -23,8 +23,6 @@ In this workshop, you will:
 ### **Assets**
 
 Powerpoint:
-
-Demo Recording:
 
 Video Recording
 * 

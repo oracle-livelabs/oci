@@ -21,8 +21,6 @@ In this workshop, you will learn how to:
 
 Powerpoint:
 
-Demo Recording:
-
 Video Recording
 * [Day One and Beyond: OCI Business Governance](https://www.youtube.com/watch?v=l6KsMSS8Khk&ab_channel=OracleLearning)
 

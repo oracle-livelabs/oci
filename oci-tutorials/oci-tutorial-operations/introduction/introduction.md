@@ -2,7 +2,7 @@
 
 ## About this Workshop - Oracle Cloud Operations
 
-This session on OCI Tutorial - Oracle Cloud Operations covers the fundamentals of operating application workloads in Oracle Cloud and explore some of the basic concepts of Cloud Operations.  We will dive into an automation overview followed by an introduction to Resource Manager, Monitoring, Notifications, Observability & Management (O&M), and Audit. 
+This session on OCI Tutorial - Oracle Cloud Operations will cover the fundamentals of operating application workloads in Oracle Cloud and explore some of the basic concepts of Cloud Operations.  We will dive into an automation overview followed by an introduction to Resource Manager, Monitoring, Notifications, Observability & Management (O&M), and Audit. 
 
 ### **Duration: 2 Hours**
 
@@ -20,8 +20,6 @@ In this workshop, you will understand the following concepts:
 
 Powerpoint:
 
-Demo Recording:
-
 Video Recording
 * [Day One and Beyond: OCI Operations Quick Start](https://www.youtube.com/watch?v=3kxrPj48D4U&ab_channel=OracleLearning)
 
@@ -32,7 +30,7 @@ Video Recording
 * [Creating a Resource Manager Stack](https://apexapps.oracle.com/pls/apex/f?p=133:180:17001920275258::::wid:611)
 
 Resource Links for Reference
-* [Terraform on OCI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraform.htm)
+* [Terraform on OCI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraform.htm): An open-source tool that allows you to programatically manage, version, and persist infrastructure through the "infrastructure-as-code" model.
 * [Deploying Custom OS Images](https://docs.oracle.com/en-us/iaas/Content/Resources/Assets/whitepapers/deploying-custom-os-images.pdf)
 
 ## Acknowledgements

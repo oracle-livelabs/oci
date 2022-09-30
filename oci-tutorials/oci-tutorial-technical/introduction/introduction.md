@@ -11,14 +11,12 @@ This session on OCI Tutorial - OCI Technical Quick Start covers the fundamentals
 
 In this workshop, you will learn how to:
 * Understand the basic structure of OCI
-* Be aware of all the major OCI services
-* Have foundational knowledge to begin building out an OCI tenancy
+* Outline all the major core infrastructure services
+* Employ the foundational knowledge necessary to begin building in an OCI tenancy
 
 ### **Assets**
 
 Powerpoint:
-
-Demo Recording:
 
 Video Recording
 * [Day One and Beyond: Oracle Cloud Technical Quick Start](https://www.youtube.com/watch?v=BU2VsBoXhdo&ab_channel=OracleLearning)

@@ -9,18 +9,15 @@ This session on OCI Tutorial - OCI Networking and Security Quick Start will disc
 ### Objectives
 
 In this workshop, you will:
-* Know OCI's security pincipals
-* Be aware of the Core-the-Edge security model
-* Be aware of the different tools you have at your disposal within OCI to improve your security posture
-* Understand when and why to use important networking components
-* Understand how networking can be leveraged to secure OCI workloads
+* Communicate OCI's security pincipals
+* Explain Identity & Access Management concepts
+* Describe the core-the-edge security model
+* Compare the security services available in OCI and their use cases
+* Explain when and why to use important netwroking components
 
 ### **Assets**
 
 Powerpoint Slide:
-
-Demo Recording: 
-
 
 Video Recording
 * [Day One and Beyond: OCI Security Quick Start](https://www.youtube.com/watch?v=wFBDBNsxP7U&ab_channel=OracleLearning)
@@ -46,8 +43,7 @@ Resource Links for Reference
 
 
 ## Acknowledgements
-* **Authors** - Brandon Alarie, Staff Cloud Engineer; 
-Joey Hall, Staff Cloud Engineer
+* **Authors** - Brandon Alarie, Staff Cloud Engineer; Joey Hall, Staff Cloud Engineer
 * **Speakers** -  Joey Hall, Staff Cloud Engineer; Larry Beausoleil, Sr. Manager, Technical Program Management
 * **Last Updated By/Date** - Taylor Zheng, September 2022
 

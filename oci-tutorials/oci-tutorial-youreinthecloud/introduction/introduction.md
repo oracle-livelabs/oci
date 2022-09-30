@@ -11,15 +11,13 @@ You have a successful migration to cloud and are thinking about how you can take
 In this workshop, you will:
 * Understand the next steps in your cloud journey
 * Know the key compartments of a 3-tier web application deployed in OCI
-* Gaini an insight into the tools integrated within OCI that can help relieve the pain points of traditional application management
+* Gain an insight into the tools integrated within OCI that can help relieve the pain points of traditional application management
 * Learn how to enable a strong security posture that follows OCI best practices on your existing applications
 * Provide you with a high-level overview of different tools that will help you enhance your current deployments
 
 ### **Assets**
 
 Powerpoint:
-
-Demo Recording:
 
 Video Recording
 * 
@@ -29,9 +27,9 @@ Video Recording
 ## Learn More
 
 ### Labs
-* [How do I enable Oracle Cloud Guard](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3264&session=112989464471480)
+* [How do I enable Oracle Cloud Guard?](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3264&session=112989464471480)
 * [Low Code Development Oracle APEX on Autonomous Database](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=554&clear=RR,180&session=15189513665305)
-* [Creating a Resource Manager](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=611&clear=RR,180&session=102259980745948)
+* [Creating a Resource Manager Stack](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=611&clear=RR,180&session=102259980745948)
 
 Resource Links for Reference 
 * [OCI Cloud Advisor](https://www.oracle.com/manageability/cloud-advisor/): Cloud Advisor finds potential inefficiencies in your tenancy and offers guided solutions that explain how to address them. The recommendation help you maximize cost savings and improve that security of your tenancy. 
