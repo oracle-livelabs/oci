@@ -207,7 +207,7 @@ This is an executable provided by us. Here is our latest driver code that can co
 
  Here we attached a usable set of training and testing data in csv and parquet. 
 
-[TestData.csv](../attachments/TestData.csv) [TrainData.csv](../attachments/TrainData.csv) [TrainData.parquet](../attachments/TrainData.parquet)
+[TestData.csv](./files/TestData.csv) [TrainData.csv](./files/TrainData.csv) [TrainData.parquet](./files/TrainData.parquet)
 
 ## Library
 

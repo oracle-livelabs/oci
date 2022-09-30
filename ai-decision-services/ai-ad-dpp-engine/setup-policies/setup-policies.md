@@ -9,9 +9,9 @@ Lab 2: Setup policies
     ```
     ALL {resource.type = 'fnfunc', resource.compartment.id = '<compartment-ocid>'}
     ```
-    ![](../attachments/Set-Policy1.png)
+    ![](./images/Set-Policy1.png)
     
-    ![](../attachments/Set-Policy2.png)
+    ![](./images/Set-Policy2.png)
     
 3.  Go to **Policies** and prepare all the necessary policies. For convenience, I allow any-user to access the resources. You can refine the scope by creating user groups.
         
@@ -48,4 +48,4 @@ Lab 2: Setup policies
     Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='training-config-bucket'
     Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='output-bucket'
     ```
-    ![](../attachments/Set-Policy3.png)
+    ![](./images/Set-Policy3.png)

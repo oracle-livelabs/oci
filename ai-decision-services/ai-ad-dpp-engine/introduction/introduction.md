@@ -10,7 +10,7 @@ This solution will allow you to configure a training pipeline and an inference p
 
 ## Workflow introduction
 
-![workflow](../attachments/workflow.png)
+![workflow](./images/workflow.png)
 
 A brief description of the whole picture:
 

@@ -15,7 +15,7 @@ This guide uses the following buckets (any change to the names will have to be r
 
 To enabling object event emit, you can edit the bucket by going to the bucket's page:
 
-![](../attachments/Prepare-OS1.png)
+![](./images/Prepare-OS1.png)
 
 Now you should place what you've prepared to the right buckets:
 

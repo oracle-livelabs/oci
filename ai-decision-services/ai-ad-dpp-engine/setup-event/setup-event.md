@@ -4,7 +4,7 @@ Lab 7: Set up Events
 OCI event is a service listening to desired change happening in the target service. Here is a list of [DB](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventsproducers.htm#dbaasevents__AutoDB) and [Object Storage](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventsproducers.htm#ObjectStor__bucket) related events that Event can monitor.
 
 For us, go to Events Service → Rules → Create Rule, and create a rule as following:  
-![](../attchments/Set-Ev2.png)
+![](./images/Set-Ev2.png)
 
 *   At event type, choose **Object Storage**, choosing **Object - Create** and **Object - Update**.
 *   At attribute, choose **bucketName** as **Attribute**. Attribute Values should be **training-data-bucket** and **inferencing-data-bucket**, which we generated above.
@@ -66,4 +66,4 @@ A sample event will look like this:
 
 Finally, enable the logs for troubleshooting purpose.
 
-![](../attachments/Set-Ev1.png)
+![](./images/Set-Ev1.png)

@@ -1,4 +1,3 @@
-
 Lab 8: A simple data processing, training and inferencing example
 ===
 
@@ -8,9 +7,9 @@ To make sure you have everything setup well in training, you can upload the trai
 
 Fundamentally, you should see processed data in csv under your **staging-bucket**:
 
-![](../attachments/Exp1.png)
+![](./images/Exp1.png)
 
-And under your **results-bucket**, your model information will be written to a file named **model\_info.** It should look like this:
+And under your **results-bucket**, your model information will be written to a file named **model_info.** It should look like this:
 
 ```java
 {
@@ -40,7 +39,7 @@ And under your **results-bucket**, your model information will be written to a f
 
 Lastly, you should also see your model trained under **Anomaly Detection**. You can check the FAP and other details here:
 
-![](../attachments/Exp2.png)
+![](./images/Exp2.png)
 
 ## Inferencing
 
@@ -48,7 +47,7 @@ Similarly, to make sure you have everything setup correctly in inferencing, you 
 
 After a successful run, you should see something like the following in your **results-bucket**:
 
-![](../attachments/Exp3.png)
+![](./images/Exp3.png)
 
 You can download the CSV file to view the detection results. The result for the TestData.csv linked in this page will give you something like the following:
 
