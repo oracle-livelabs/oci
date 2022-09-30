@@ -12,7 +12,7 @@ This solution will allow you to configure a training pipeline and an inference p
 
 ![workflow](./images/workflow.png)
 
-A brief description of the whole picture:
+A brief description of the workflow:
 
 1.  Prepare the driver config and upload it to the config bucket. Also create an anomaly detection (AD) application for later usage.
 2.  Upload a training/inferencing dataset to the input source bucket.
