@@ -21,19 +21,19 @@ Estimated time: 20 minutes
    ![Oracle Cloud console, Dataflow](images/dataflow-menu.png " ")
 
 2. Select dataflow-labs compartment and select Runs.
-   ![Oracle Cloud console, Dataflow](images/runs_compartment.png " ")
+   ![Oracle Cloud console, Dataflow](images/runs-compartment.png " ")
 
 3. Click on RealtimeRULPredictor and click on STOP.
-   ![Oracle Cloud console, Dataflow](images/predictor_stopping.png " ")
+   ![Oracle Cloud console, Dataflow](images/predictor-stopping.png " ")
 
 4. Confirm stopping RealtimeRULPredictor.
-   ![Oracle Cloud console, Dataflow](images/confirm_predictor_stop.png " ")
+   ![Oracle Cloud console, Dataflow](images/confirm-predictor-stop.png " ")
 
 5. Click on SensorDataSimulator and click on STOP.
-   ![Oracle Cloud console, Dataflow](images/simulator_stopping.png " ")
+   ![Oracle Cloud console, Dataflow](images/simulator-stopping.png " ")
 
 6. Confirm stopping SensorDataSimulator.
-   ![Oracle Cloud console, Dataflow](images/confirm_simulator_stop.png " ")
+   ![Oracle Cloud console, Dataflow](images/confirm-simulator-stop.png " ")
 
 7. Confirm all the running apps are stopped.
    ![Oracle Cloud console, Dataflow](images/stop-runs.png " ")
@@ -44,23 +44,23 @@ Estimated time: 20 minutes
 
 1. From the navigation menu in the Oracle Cloud console, select **Storage** > **Bucket**.
 
-    ![Oracle Cloud, Object Storage](images/object%20storage%20menu.png " ")
+    ![Oracle Cloud, Object Storage](images/object-storage-menu.png " ")
 
 2. In the **Object Storage Details** page, click **Delete** on dataflow-labs-logs. In the confirmation window, click **Delete**.
 
-   ![Oracle Cloud, Object Storage](images/delete_logs_bucket.png " ")   
+   ![Oracle Cloud, Object Storage](images/delete-logs-bucket.png " ")   
 
 3. Deletion of the delete dataflow_labs_logs buckets starts and completes.
 
-    ![Oracle Cloud, Cloud console](images/delete_logs_success.png " ")    
+    ![Oracle Cloud, Cloud console](images/delete-logs-success.png " ")    
 
 4. In the **Object Storage Details** page, click **Delete** on dataflow-labs. In the confirmation window, click **Delete**.
 
-   ![Oracle Cloud, Object Storage](images/delete_dataflow_labs.png " ")
+   ![Oracle Cloud, Object Storage](images/delete-dataflow-labs.png " ")
 
 5. Deletion of the delete dataflow_labs_logs buckets starts and completes.
 
-   ![Oracle Cloud, Cloud console](images/delete_dataflow_labs_success.png " ")
+   ![Oracle Cloud, Cloud console](images/delete-dataflow-labs-success.png " ")
 
 
 
@@ -72,15 +72,15 @@ Estimated time: 20 minutes
 
 2. Click destroy on the manufacturing stack and confirm the destruction of stack.
 
-    ![Oracle Cloud, Cloud console](images/destroy_click.png " ")    
+    ![Oracle Cloud, Cloud console](images/destroy-click.png " ")    
 
 3. Wait for successful destruction of manufacturing stack
 
-   ![Oracle Cloud, Cloud console](images/destroy_progress.png " ")
+   ![Oracle Cloud, Cloud console](images/destroy-progress.png " ")
 
 4. Wait for successful destruction of manufacturing stack
 
-   ![Oracle Cloud, Cloud console](images/destroy_succeeded.png " ")
+   ![Oracle Cloud, Cloud console](images/destroy-succeeded.png " ")
 
 ## Acknowledgements
 - **Author** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow

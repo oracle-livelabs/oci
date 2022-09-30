@@ -18,17 +18,17 @@ Estimated time: 15 minutes
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
-   ![Oracle Cloud console, a](images/object%20storage%20menu.png " ")
+   ![Oracle Cloud console, a](images/object-storage-menu.png " ")
 
 2. Select ```dataflow-labs``` compartment in left side and select ```dataflow-labs``` bucket.
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
 3. Select object demo from object storage.
-   ![Oracle Cloud console, Dataflow](images/demo%20object.png " ")
+   ![Oracle Cloud console, Dataflow](images/demo-object.png " ")
 
 4. Select ```artifacts``` object and verify ```application.conf``` object is available.
-   ![Oracle Cloud console, Dataflow](images/artifacts%20object.png " ")
+   ![Oracle Cloud console, Dataflow](images/artifacts-object.png " ")
 
 ## Task2: Run Streaming Simulator
 
@@ -48,9 +48,9 @@ Estimated time: 15 minutes
 
 6. Click Spark UI, Job and ```Structured Streaming query```
 
-   ![Oracle Cloud console, Dataflow](images/streaming_jobs.png " ")
-   ![Oracle Cloud console, Dataflow](images/streaming_ui_streaming_query.png " ")
-   ![Oracle Cloud console, Dataflow](images/streaming_ui.png " ")
+   ![Oracle Cloud console, Dataflow](images/streaming-jobs.png " ")
+   ![Oracle Cloud console, Dataflow](images/spark-ui-streaming-query.png " ")
+   ![Oracle Cloud console, Dataflow](images/streaming-ui.png " ")
 
 ## Task3: Verify Simulator is streaming sensor data.
 

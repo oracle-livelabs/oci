@@ -18,17 +18,17 @@ Estimated time: 20 minutes
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
-   ![Oracle Cloud console, Dataflow](images/object%20storage%20menu.png " ")
+   ![Oracle Cloud console, Dataflow](images/object-storage-menu.png " ")
 
 2. Select ```dataflow-labs``` compartment in left side and select ```dataflow-labs``` object storage bucket
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
 3. Click on the object ```demo```.
-   ![Oracle Cloud console, Dataflow](images/demo%20object.png " ")
+   ![Oracle Cloud console, Dataflow](images/demo-object.png " ")
 
 4. Click ```artifacts``` object and verify ```application.conf``` object is available.
-   ![Oracle Cloud console, Dataflow](images/artifacts%20object.png " ")
+   ![Oracle Cloud console, Dataflow](images/artifacts-object.png " ")
 
 ## Task2: Run Machine Learning Model 
 
@@ -37,10 +37,10 @@ Estimated time: 20 minutes
    ![Oracle Cloud console, Dataflow](images/dataflow-menu.png " ")
 
 2. Click ```RULSurvivalModelTrainer``` OCI Data Flow Application. 
-   ![Oracle Cloud console, Dataflow](images/RULSurvivalModelTrainer.png " ")
+   ![Oracle Cloud console, Dataflow](images/rul-survival-model-trainer.png " ")
 
 3. Click ```Run``` button on top and confirm by clicking ```Run``` again.
-   ![Oracle Cloud console, Dataflow](images/RunSurvivalModelTrainer-1.png " ")
+   ![Oracle Cloud console, Dataflow](images/rul-survival-model-trainer-1.png " ")
    
 4. OCI Data Flow Run will be created with ACCEPTED state under ```RUNS``` resources.
 
@@ -64,14 +64,14 @@ Estimated time: 20 minutes
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
-   ![Oracle Cloud console, Dataflow](images/object%20storage%20menu.png " ")
+   ![Oracle Cloud console, Dataflow](images/object-storage-menu.png " ")
 
 2. Select ```dataflow-labs``` compartment in left side and select ```dataflow-labs``` bucket
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
 3. Select object ```demo```.
-   ![Oracle Cloud console, Dataflow](images/demo%20object.png " ")
+   ![Oracle Cloud console, Dataflow](images/demo-object.png " ")
 
 4. Select ```models``` object and verify three folder as shown below
    ![Oracle Cloud console, Dataflow](images/models.png " ")

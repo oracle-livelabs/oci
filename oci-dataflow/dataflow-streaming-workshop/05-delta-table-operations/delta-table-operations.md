@@ -18,14 +18,14 @@ Estimated time: 10 minutes
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
-   ![Oracle Cloud console, a](images/object%20storage%20menu.png  " ")
+   ![Oracle Cloud console, a](images/object-storage-menu.png  " ")
 
 2. Select dataflow-labs compartment in left side and select dataflow-labs bucket
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
 3. Select object demo.
-   ![Oracle Cloud console, Dataflow](images/demo%20object.png " ")
+   ![Oracle Cloud console, Dataflow](images/demo-object.png " ")
 
 4. Verify if delta table located in below location
     ![Oracle Cloud console, Object Storage](images/sinks.png " ")
@@ -37,13 +37,13 @@ Estimated time: 10 minutes
    ![Oracle Cloud console, Dataflow](images/dataflow-menu.png " ")
 
 2. Click RULDeltaTable Application.
-   ![Oracle Cloud console, Dataflow](images/RULDeltaTable.png " ")
+   ![Oracle Cloud console, Dataflow](images/rul-delta-table.png " ")
 
 3. Click Run button on top and click Run again
-   ![Oracle Cloud console, Dataflow](images/RULDeltaTable-run.png " ")
+   ![Oracle Cloud console, Dataflow](images/rul-delta-table-run.png " ")
 
 4. Run will be created with ACCEPTED state
-   ![Oracle Cloud console, Dataflow](images/RUL_DeltaTable_Accepted.png " ")
+   ![Oracle Cloud console, Dataflow](images/rul-delta-table-accepted.png " ")
    
 5. In 2-3 minutes OCI Data Flow run will be moved to IN PROGRESS
 
@@ -51,7 +51,7 @@ Estimated time: 10 minutes
 
 6. Click Spark UI, Job and DeltaTable operations
 
-   ![Oracle Cloud console, Dataflow](images/DeltaTableSparkUI.png " ")
+   ![Oracle Cloud console, Dataflow](images/delta-table-spark-ui.png " ")
 
 
 You may now **proceed to the next lab**.
