@@ -24,26 +24,26 @@ Estimated time: 15 minutes
     * OCI Streampool & Streams
     * OCI Dataflow Application & Runs
 
-## Task1: Create Manufacturing Application Stack 
+## Task 1: Create manufacturing application stack 
 1. Open profile on top right corner and click on username.
 	![Oracle Cloud console Menu](images/user-info.png " ")
-2. Click the link to create stack to provision all necessary resources [![Deploy to Manufacturing Application to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-samples/oracle-dataflow-samples/raw/main/scala/manufacturing/src/resources/manufacturing.zip)
+2. Click the link to create stack to provision all necessary resources [![Deploy to Manufacturing Application to Oracle Cloud](images/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-samples/oracle-dataflow-samples/raw/main/scala/manufacturing/src/resources/manufacturing.zip)
 3. Review and accept ```Oracle terms to Use``` and click Next.
-   ![Oracle Cloud console, Resource Manager Stack](images/rm-stack.png " ")
+   ![Oracle Cloud console, Resource Manager Stack](images/resource-manager-stack.png " ")
 4. Update ```user_ocid``` variable with value from step 1. other variables doesn't need any change and click Next.
    ![Oracle Cloud console, Resource Manager Stack](images/update-variables.png " ")
    ![Oracle Cloud console, Resource Manager Stack](images/update-variables-1.png " ")
 5. Review the information provided and ensure ```Run apply``` checkbox is selected and click create.
    ![Oracle Cloud console, Resource Manager Stack](images/review.png " ")
 6. Creating stack will auto create Apply job which start provisioning resources.
-   ![Oracle Cloud console, Resource Manager Stack](images/rmj.png " ") 
+   ![Oracle Cloud console, Resource Manager Stack](images/resource-manager-job.png " ") 
    
-## Task2: Verify Required Resources Provisioned
+## Task 2: Verify required resources provisioned
 1. Wait for Resource Manager Apply job completes, you can watch the logs.
-   ![Oracle Cloud console, Resource Manager Stack](images/rmj-log.png " ")
+   ![Oracle Cloud console, Resource Manager Stack](images/resource-manager-job-log.png " ")
    ![Oracle Cloud console, Resource Manager Stack](images/end-of-log.png " ")
 2. Verify Apply job status is SUCCEEDED.
-   ![Oracle Cloud console, Resource Manager Stack](images/rmj_success.png " ")
+   ![Oracle Cloud console, Resource Manager Stack](images/resource-manager-job-success.png " ")
 3. Click on SUCCEEDED job to see job details and resources.
    ![Oracle Cloud console, Resource Manager Stack](images/job-details.png " ")
 4. Click on the hamburger menu in top left corner , select Governance & Administration and then select Tenancy Explorer.
