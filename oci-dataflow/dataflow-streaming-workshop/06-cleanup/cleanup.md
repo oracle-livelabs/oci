@@ -14,7 +14,7 @@ Estimated time: 20 minutes
 
 * Completion of preceding labs in this workshop.
 
-## Task1: Stop Data Flow runs
+## Task 1: Stop Data Flow runs
 
 1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** > **Data Flow**.
 
@@ -40,7 +40,7 @@ Estimated time: 20 minutes
 
 
 
-## Task2: Delete Object Storage buckets
+## Task 2: Delete Object Storage buckets
 
 1. From the navigation menu in the Oracle Cloud console, select **Storage** > **Bucket**.
 
@@ -64,7 +64,7 @@ Estimated time: 20 minutes
 
 
 
-## Task3: Destroy Manufacturing Stack to clean up other resources
+## Task 3: Destroy Manufacturing Stack to clean up other resources
 
 1. From the navigation menu in the Oracle Cloud console, select **Developer Services** > **Stacks**. 
 

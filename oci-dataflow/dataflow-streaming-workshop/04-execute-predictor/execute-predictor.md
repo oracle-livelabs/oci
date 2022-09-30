@@ -14,7 +14,7 @@ Estimated time: 15 minutes
 
 * Completion of the preceding labs in this workshop
 
-## Task1: Verify artifacts.
+## Task 1: Verify artifacts.
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
@@ -30,7 +30,7 @@ Estimated time: 15 minutes
 4. Select ```artifacts``` object and verify ```application.conf``` object is available
    ![Oracle Cloud console, Dataflow](images/artifacts-object.png" ")
 
-## Task2: Run real-time predictor
+## Task 2: Run real-time predictor
 
 1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** > **Data Flow**.
 
@@ -51,7 +51,7 @@ Estimated time: 15 minutes
    ![Oracle Cloud console, Dataflow](images/predictor-progress.png " ")
 
 
-## Task3: Verify delta table and parquet table.
+## Task 3: Verify delta table and parquet table.
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
@@ -68,7 +68,7 @@ Estimated time: 15 minutes
    ![Oracle Cloud console, Object Storage](images/sinks.png " ")
 
 
-## Task4: Verify Autonomous Database.
+## Task 4: Verify Autonomous Database.
 
 1. Go to OCI Oracle Database Console (aka. hamburger menu) in the Oracle Cloud console, and select **Oracle Database ** > **Autonomous Data Warehouse**.
 

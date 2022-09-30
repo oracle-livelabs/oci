@@ -14,7 +14,7 @@ Estimated time: 20 minutes
 
 * Completion of the preceding labs in this workshop
 
-## Task1: Verify artifacts.
+## Task 1: Verify artifacts.
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
@@ -30,7 +30,7 @@ Estimated time: 20 minutes
 4. Click ```artifacts``` object and verify ```application.conf``` object is available.
    ![Oracle Cloud console, Dataflow](images/artifacts-object.png " ")
 
-## Task2: Run machine learning model 
+## Task 2: Run machine learning model 
 
 1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** > **Data Flow**.
 
@@ -60,7 +60,7 @@ Estimated time: 20 minutes
 
    ![Oracle Cloud console, Dataflow](images/model-succeeded.png " ")
 
-## Task3: Verify RUL survival model is created.
+## Task 3: Verify RUL survival model is created.
 
 1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
 
