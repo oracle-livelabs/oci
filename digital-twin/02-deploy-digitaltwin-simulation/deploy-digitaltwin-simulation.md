@@ -73,7 +73,7 @@ Then click Execute to initiate the fleet. The success of excution will reuturn t
 ![!initiate fleet result](./images/initiate-fleet-res.png)
 
 2. Generate and upload the training set to object storage
-In this step, we set up a process let the model to generate the normal data in parallel and the training data will be updated to the OCI object storage we created early. Click /uploadtraining and expand it. Click "Try it out". We put the parameters for the operation. Earch digital twin will run in the proper value in the range. At the end, all the results from each digital twin are combined into many cycles. We provide the bucket that will be used for the train dataset will be uploaded.
+In this step, we set up a process let the model to generate the normal data in parallel and the training data will be updated to the OCI object storage we created early. Click /uploadtraining to expand the API. Click "Try it out". We put the parameters for the operation. Earch digital twin will run in the proper value in the range. At the end, all the results from each digital twin are combined into many cycles. We provide the bucket that will be used for the train dataset will be uploaded.
 
 ![!Generate Training Dataset](./images/generate-training.png)
 
