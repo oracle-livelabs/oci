@@ -55,7 +55,7 @@ The `OCI Digital Twin Pipeline` will pop up under `Stack Information`. Click **N
 
 4. In the `Configuration variables` section, supply the following input:
 
-    In the `Name Your Resources` field, enter your name or initials, which will be used to provide uniqueness to resource names where required.
+    In the `Name Your Resources` field, enter your name or initials, which will be used to provide uniqueness to resource names where required, in order to avoid naming collisions with other users' resources within the Tenancy.
 
     For example, if you enter `JohnDoe`, the resulting Compartment name will appear similar to: `AD_workshop_JohnDoe_wise_duck`. The `wise_duck` suffix is a pseudorandomly-generated petname, which contributes additional uniqueness to the resource name.
 
