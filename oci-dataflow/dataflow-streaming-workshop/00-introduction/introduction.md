@@ -1,6 +1,6 @@
 # Introduction
 
-## About this Workshop
+## About this workshop
 
 OCI Data Flow is a fully managed serverless Spark as a service. OCI data flow can now run spark applications that processes stream data, or continuously produced data. In today's workshop, we will cover a common streaming related use-case from the manufacturing industry.
 

@@ -1,4 +1,4 @@
-# Run Remaining Useful Life (RUL) Predictor
+# Run Remaining Useful Life (RUL) predictor
 
 ## Introduction
 
@@ -30,7 +30,7 @@ Estimated time: 15 minutes
 4. Select ```artifacts``` object and verify ```application.conf``` object is available
    ![Oracle Cloud console, Dataflow](images/artifacts-object.png" ")
 
-## Task2: Run Realtime Predictor
+## Task2: Run real-time predictor
 
 1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** > **Data Flow**.
 

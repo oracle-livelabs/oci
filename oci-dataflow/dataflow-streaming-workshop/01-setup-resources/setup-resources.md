@@ -24,7 +24,7 @@ Estimated time: 15 minutes
     * OCI Streampool & Streams
     * OCI Dataflow Application & Runs
 
-## Task1: Create Manufacturing Application Stack 
+## Task1: Create manufacturing application stack 
 1. Open profile on top right corner and click on username.
 	![Oracle Cloud console Menu](images/user-info.png " ")
 2. Click the link to create stack to provision all necessary resources [![Deploy to Manufacturing Application to Oracle Cloud](images/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-samples/oracle-dataflow-samples/raw/main/scala/manufacturing/src/resources/manufacturing.zip)
@@ -38,7 +38,7 @@ Estimated time: 15 minutes
 6. Creating stack will auto create Apply job which start provisioning resources.
    ![Oracle Cloud console, Resource Manager Stack](images/resource-manager-job.png " ") 
    
-## Task2: Verify Required Resources Provisioned
+## Task2: Verify required resources provisioned
 1. Wait for Resource Manager Apply job completes, you can watch the logs.
    ![Oracle Cloud console, Resource Manager Stack](images/resource-manager-job-log.png " ")
    ![Oracle Cloud console, Resource Manager Stack](images/end-of-log.png " ")
