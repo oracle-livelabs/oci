@@ -16,7 +16,7 @@ Estimated time: 20 minutes
 
 ## Task 1: Stop Data Flow runs
 
-1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** > **Data Flow**.
+1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** &gt; **Data Flow**.
 
    ![Oracle Cloud console, Dataflow](images/dataflow-menu.png " ")
 
@@ -42,7 +42,7 @@ Estimated time: 20 minutes
 
 ## Task 2: Delete Object Storage buckets
 
-1. From the navigation menu in the Oracle Cloud console, select **Storage** > **Bucket**.
+1. From the navigation menu in the Oracle Cloud console, select **Storage** &gt; **Bucket**.
 
     ![Oracle Cloud, Object Storage](images/object-storage-menu.png " ")
 
@@ -66,7 +66,7 @@ Estimated time: 20 minutes
 
 ## Task 3: Destroy Manufacturing Stack to clean up other resources
 
-1. From the navigation menu in the Oracle Cloud console, select **Developer Services** > **Stacks**. 
+1. From the navigation menu in the Oracle Cloud console, select **Developer Services** &gt; **Stacks**. 
 
     ![Oracle Cloud, Cloud console](images/stack-menu.png " ")       
 

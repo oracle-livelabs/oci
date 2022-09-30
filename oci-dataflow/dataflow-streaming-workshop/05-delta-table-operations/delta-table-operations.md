@@ -16,7 +16,7 @@ Estimated time: 10 minutes
 
 ## Task 1: Verify delta table location.
 
-1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
+1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** &gt; **Buckets**.
 
    ![Oracle Cloud console, a](images/object-storage-menu.png  " ")
 
@@ -32,7 +32,7 @@ Estimated time: 10 minutes
 
 ## Task 2: Run delta table operations
 
-1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** > **Data Flow**.
+1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** &gt; **Data Flow**.
 
    ![Oracle Cloud console, Dataflow](images/dataflow-menu.png " ")
 
