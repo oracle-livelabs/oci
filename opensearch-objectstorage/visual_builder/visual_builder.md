@@ -40,7 +40,7 @@ Go to the imported application.
 
 ![Connection PreAuth](images/opensearch-vb-connection-preauth.png)
 
-Search first your Object Storage API based on your region, [here](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/)
+Search first your Object Storage URL based on your region: [https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/)
 
 You have the other values from the previous labs.
 
@@ -57,7 +57,7 @@ You have the other values from the previous labs.
 
 You can also test the connection:
 - Tab *Endpoints*
-- Then *Post Get one*
+- Then *Post - Get one*
 - Tab *Test*
 - Click *Send Request*
 
@@ -81,7 +81,7 @@ Redo this for the second connection:
 
 You can also test the connection:
 - Tab *Endpoints*
-- Then *Get Get Many*
+- Then *Get - Get Many*
 - Tab *Test*
 - Click *Send Request*
 
@@ -94,7 +94,7 @@ Click on the run button on the top
 ![Run the application](images/opensearch-vb-test.png)
 
 - Type *test* : This will return the PDF, word, excel uploaded 
-- Type *penguin* : This will return the image of a penguin recognized via Artificial Intelligence
+- Type *penguin* : This will return the image of a penguin recognized by Artificial Intelligence
 - Type *shakespeare* : This will return the image of a text scanned by the Text Recognition
 - Type *specimen* : This will return the belgian ID card with the name Specimen
  

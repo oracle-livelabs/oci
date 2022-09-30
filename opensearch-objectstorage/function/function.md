@@ -13,9 +13,9 @@ Estimated time: 10 min
 
 ## Task 1: Create the Application
 
-The function will take a binary file as input, parse it and give his content in text back.
+The function will take a binary file as input (Word, PDF, ...), parse it and give his content in text back.
 
-Go the the menu
+Go the menu
 - Developer Services
 - Functions / Application
 
@@ -36,12 +36,15 @@ You will see a getting Started. This is what we will follow.
 
 Look at the getting started. This is what we will use.
 
-In my case. I will start the console and it will look like this. Please use the instruction given in *your Getting started for you*.
+I will you my instruction. Please adapt the steps based on the instructions given in *your Getting started for you*.
 
 Remark:
 - Use *opensearch* as the "repo-name-prefix". 
 - You will also need to generate a token to log to the container registry. 
   Keep note of it *##AUTH_TOKEN##*
+- Start the cloud Shell (notice that you can upload and download files from it)
+
+![Cloud Shell](images/opensearch-fn-shell.png)
 
 ``` 
 <copy>
@@ -51,7 +54,7 @@ fn update context oracle.compartment-id ocid1.compartment.oc1..aaaaaaaanmnbbbbbb
 fn update context registry fra.ocir.io/xxxxxx/opensearch
 docker login -u 'xxxxx/oracleidentitycloudservice/name@domain.com' fra.ocir.io
 git clone https://github.com/mgueury/oci-opensearch-livelab.git
-cd oci-opensearch-devops/tika_parser
+cd oci-opensearch-livelab/tika_parser
 fn -v deploy --app opensearch-application
 </copy>
 ```
@@ -66,9 +69,9 @@ After building the code, it will create a function tikaparser in the opensearch-
 ![Details Function](images/opensearch-fn-function.png)
 
 - In this screen, check that 
-  - the memory is well *2048 MB* 
-  - the timeout is *300 sec*
-  - Take note of the value of Endpoint *##FUNCTION_ENDPOINT##*.
+    - the memory is well *2048 MB* 
+    - the timeout is *300 sec*
+    - Take note of the value of *Invoke Endpoint* *##FUNCTION_ENDPOINT##*.
 
 ![Details Function 2](images/opensearch-fn-function2.png)
 

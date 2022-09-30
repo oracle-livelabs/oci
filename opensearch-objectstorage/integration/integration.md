@@ -11,8 +11,9 @@ Estimated time: 20 min
 
 ### Prerequisites
 
-- To make your life easier, you should store the sample files on your laptop. If not possible, you can get them from the cloud console. It is the same directory that we used for the function.
-- Please run this:
+- It is easier to store the sample files on a laptop. If it is impossible, for ex that you do not have the git command, you can get them from the cloud console. We have downloaded them in the previous lab (Function) in the Cloud Shell. There is an option Download in the Cloud Shell.
+
+- To download the sample files, please run this:
 
 ````
 <copy>
@@ -20,13 +21,13 @@ git clone https://github.com/mgueury/oci-opensearch-livelab.git
 </copy>
 ````
 
-It will mostly give the files to upload later in OIC, Visual Builder and samples files to parse.
+The directory contains the Oracle integration Cloud (OIC) package, the Visual Builder application and samples files to parse.
 
 ## Task 1: Enable Visual Builder
 
 Let's enable Visual Builder.
 
-Go the the menu
+Go the menu
 - Developer Services
 - Application Integration
 - Choose *opensearch-oic*
@@ -37,13 +38,36 @@ Go the the menu
 
 ![Enable Visual Builder](images/opensearch-oic-enable-vbcs.png)
 
-## Task 2: Create an Agent Group
+## Task 2: User and Tenancy details
+
+First, we need data about your tenancy and user.
+- On the top, right, click *Tenancy: name*
+- Copy the tenancy OCID *##TENANCY_OCID##*
+
+![Tenancy](images/opensearch-tenancy.png)
+
+Then, we need data about the user
+- On the top, right, click *Your username*
+- Copy the username *##USERNAME##* (without oracleidentitycloudservice )
+- Copy the user OCID *##USER OCID##*
+- Click on *API Keys*
+
+![User](images/opensearch-user.png)
+
+- Click *Add API Key*
+- Generate one
+- Download it *##PRIVATE_KEY##*
+- Copy the *##FINGERPRINT##*
+
+![User API Keys](images/opensearch-user2.png)
+
+## Task 3: Create an Agent Group
 
 To communicate with OpenSearch in the private network, we have to install the OIC agent on the compute.
 
 First, 
-- Go to the Oracle integration Cloud console that you opened just above
-- Take note of the hostnale in the browser URL,  *##OIC_HOSTNAME##*
+- Go to the OIC console that you opened just above
+- Take note of the hostname of OIC in the browser URL,  *##OIC_HOST##*
     - Ex: opensearch-oic-xxxxxx-fr.integration.ocp.oraclecloud.com 
 
 Create the Agent Group
@@ -56,25 +80,40 @@ Create the Agent Group
 
 ![Create Agent Group](images/opensearch-oic-agent-group.png)
 
-## Task 3: Install the OIC Agent on the compute
+## Task 4: Install the OIC Agent on the compute
 
-Take data collected in lab1. 
-- *##COMPUTE_PRIVATE-KEY##* 
-- and *##COMPUTE_PUBLIC-IP##*
+Take data collected before 
+- Lab 1 :
+    - *##COMPUTE_PRIVATE-KEY##*  
+    - *##COMPUTE_PUBLIC-IP##*
+    - *##OPENSEARCH_HOST##*
+- Above
+    - *##USERNAME##*
+    - *##OIC_HOST##*
 
 If you do not have SSH installed on your laptop, please use the Cloud Shell instead.
 
-Please follow this. Practically, you need to set the env variables at the top of the script and run the rest of the commands.
+You need to set the env variables at the top of the script below. Then run the rest of the commands.
+
+
+```
+Here is a example :
+
+export OCI_USER=your_user@domain.com
+export OCI_PASSWORD=The password you use to log to OCI Web Console
+export OIC_HOST=opensearch-oic-xxxxxx-fr.integration.ocp.oraclecloud.com 
+export OPENSEARCH_HOST=amaaaaxxx.opensearch.eu-frankfurt-1.oci.oraclecloud.com
+```
 
 ```
 <copy>
 ssh opc##COMPUTE_PUBLIC-IP## -i ##COMPUTE_PRIVATE-KEY##
 
 # Env
-export OCI_USER=your_user@domain.com
-export OCI_PASSWORD=<The password you use to log to the OCI Web Console>
-export OIC_HOST=opensearch-oic-xxxxxx-fr.integration.ocp.oraclecloud.com 
-export OPENSEARCH_HOST=amaaaaaauevftmqa74stxxxxxx.opensearch.eu-frankfurt-1.oci.oraclecloud.com
+export OCI_USER=##USERNAME##
+export OCI_PASSWORD=The password you use to log to OCI Web Console
+export OIC_HOST=##OIC_HOST##
+export OPENSEARCH_HOST=##OPENSEARCH_HOST##
 
 # Download the OIC_agent
 curl -X GET  $OIC_HOST/ic/api/integration/v1/agents/binaries/connectivity -u $OCI_USER:$OCI_PASSWORD -o $HOME/oic_connectivity_agent.zip
@@ -128,11 +167,14 @@ exit
 </copy>
 ```
 
-## Task 4: Import the integration
+## Task 5: Import the integration
 
 We will upload the integration.
 
-- Go to the Oracle integration Cloud console that you opened just above
+- Go to the directory that you downloaded from GITHUB
+- In the directory "oic", you will find *OPENSEARCH_OIC.par*
+
+- Go to the Oracle Integration home page that you opened just above
 - On the left menu, choose *Integration*
 - Then *Package*
 - Click *Import*
@@ -141,14 +183,18 @@ We will upload the integration.
 
 ![Import Package](images/opensearch-oic-package-import.png)
 
-## Task 5: Configure the connections
+## Task 6: Configure the connections
 
 Lets configure the connections. You will need to get back value from your notes:
 
 
 ### A. StreamInputBucket
 
-First, you will need to create a truststore file, *oss_store.jks*.
+First, you will need to create a truststore file, *oss_store.jks*. 
+
+For this you need:
+- ##STREAM_BOOSTRAPSERVER## from the previous lab
+- Run this command on your laptop or in the Cloud Shell
 
 ```
 <copy>
@@ -167,36 +213,14 @@ Use this info:
   - SASL Password = *##AUTH_TOKEN##*
   - Truststore = *oss_store.jks created above*
   - TrustStore password = *changeit* 
-  - Configure agent = *OPENSEARCH_AGENT*
+  - Configure agent = *OPENSEARCH\_AGENT\_GROUP*
   - *Save / Test / Save* until 100%
 
 ![Connection StreamInputBucket](images/opensearch-connection-streaminputbucket.png)
 
 ### B. RestFunction
 
-First, we need data about your tenancy and user.
-- On the top, right, click *Tenancy: name*
-- Copy the tenancy OCID *##TENANCY_OCID##*
-
-![Tenancy](images/opensearch-tenancy.png)
-
-Then, we need data about the user
-- On the top, right, click *Your username*
-- Copy the username *##USERNAME##* (without oracleidentitycloudservice )
-- Copy the user OCID *##USER OCID##*
-- Click on *API Keys*
-
-![User](images/opensearch-user.png)
-
-- Click *Add API Key*
-- Generate one
-- Download it *##PRIVATE_KEY##*
-- Copy the *##FINGERPRINT##*
-
-![User API Keys](images/opensearch-user2.png)
-
-
-Then fill the Connection details:
+Fill the Connection details:
 - Connection URL = *##FUNCTION_ENDPOINT##* without /action/invoke at the end.
     - ex: https://xxxx.eu-frankfurt-1.functions.oci.oraclecloud.com/20181201/functions/ocid1.fnfunc.oc1.eu-frankfurt-1.aaaaaaabbbbb
 - Tenancy OCID = *##TENANCY_OCID##*
@@ -209,8 +233,9 @@ Then fill the Connection details:
 
 ### C. RestOpenSearch
 
+    
 Fill the Connection details:
-- Connection URL = *##FUNCTION_ENDPOINT##* without /action/invoke at the end.
+- Connection URL = *##OPENSEARCH\_API\_ENDPOINT##*
     - ex: https://xxxx.eu-frankfurt-1.functions.oci.oraclecloud.com/20181201/functions/ocid1.fnfunc.oc1.eu-frankfurt-1.aaaaaaabbbbb
 - Agent Group: *OPENSEARCH\_AGENT\_GROUP*
 - *Save / Test / Save* until 100%
@@ -224,12 +249,13 @@ There is no connection details to enter
 
 ### E. RestVisionAI
 
-First, we need to get the AI Vision rest API. ##AI_VISION_URL##
+First, we need to get the AI Vision rest API. *##AI\_VISION\_URL##*
+
 You can find it here [https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125/](https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125/)
 
 Fill the Connection details:
 Then fill the Connection details:
-- Connection URL = *##AI_VISION_URL##*
+- Connection URL = *##AI\_VISION\_URL##*
     - ex: https://vision.aiservice.eu-frankfurt-1.oci.oraclecloud.com
 - Tenancy OCID = *##TENANCY_OCID##*
 - User OCID = *##USER_OCID##*
@@ -248,15 +274,17 @@ All integrations should be up and running.
 
 ## Test OIC
 
-Go back to the bucket.
-Upload some file in the Object Storage Bucket (You got them in the Function git repository)
+- Go back to the bucket.
+- Go to the directory that you downloaded from GITHUB
+- Upload the files from the sample_files subdirectory
 
 ![Test OIC](images/opensearch-oic-test.png)
 
 Check the result in OIC. 
-- Go to Integration
-- Then Monitoring 
-- Then Integration
+- Go to OIC Home page
+- Menu *Monitoring* 
+- Menu *Integrations*
+- Again Menu *Integrations*
 
 ![Monitor OIC](images/opensearch-oic-test2.png)
 
