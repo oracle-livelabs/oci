@@ -4,7 +4,7 @@
 
 Estimated time: 60 min
 
-In this section, we will install all the components needed for this setup using the OCI Wizards.
+In this section, we will install all the components needed using the OCI Wizards.
 
 ### Objectives
 
@@ -29,7 +29,7 @@ AUTH_TOKEN = (SAMPLE)  X1232324_TGH
 PRIVATE_KEY = (SAMPLE)
 
 -----BEGIN RSA PRIVATE KEY-----
-MIIEpAIBAAKCAQEAy7EX+cqbmjmocVGcMdgCusZj7V8IxRfmchJos9pJxHd8N2P4
+AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9sdfhkjdhf
 ...
 -----END RSA PRIVATE KEY-----
 
@@ -59,11 +59,13 @@ APIGW_HOSTNAME = (SAMPLE) amaaaaaaaa.apigateway.eu-frankfurt-1.oci.customer-oci.
 
 ## Task 1: Create a Compartment
 
-The compartment will be used to contains all the components used in the demo.
+The compartment will be used to contains all the components of the lab.
 
-Use an existing compartment to run the demo. Or create a new one.
+You can
+- Use an existing compartment to run the lab. 
+- Or create a new one.
 
-Go the the menu
+Go the menu
 - Identity & Security
 - Choose Compartment
 
@@ -82,9 +84,9 @@ After creating the compartment, copy the OCID in your text editor. ***##COMPARTM
 
 ## Task 2: Create an Object Storage Bucket
 
-Object storage will be used to contains the documents that we want to index.
+Object storage will be used to contain the documents to index.
 
-Go the the menu
+Go the menu
 - Storage
 - Object Storage / Bucket
 
@@ -100,9 +102,9 @@ Go the the menu
 
 ## Task 3: Create a Stream
 
-The stream will queue the list of object storage file uploaded before processing.
+The stream will queue the list of files uploaded to Object Storage before processing.
 
-Go the the menu
+Go the menu
 - Analytics / AI
 - Messaging / Streaming
 
@@ -117,8 +119,9 @@ Go the the menu
 
 ![Create Streaming](images/opensearch-streaming2.png)
 
-Collect some info about the stream:
-- Go to the Stream Pool that you have created
+Collect some infos about the stream:
+- Go to the *Stream Pool* that you have created
+- Go the *Kafka Connection Settings*
 - Note *##STREAM_BOOSTRAPSERVER##*: the Bootstrap Servers: ex: "cell-1.streaming.eu-frankfurt-1.oci.oraclecloud.com:9092" 
 - Note *##STREAM_USERNAME##*: user name in the SASL Connection Strings ex: "tenancyname/oracleidentitycloudservice/name@domain.com/ocid1.streampool.oc1.eu-frankfurt-1.amaccccccccfsdfsdxfa"
 
@@ -126,9 +129,9 @@ Collect some info about the stream:
 
 ## Task 4: Create an Event Rule
 
-The "Event rule" will send object storage change to the Stream created above.
+The "Event rule" will send Object Storage events (file upload, ...) to the Stream created above.
 
-Go the the menu
+Go the menu
 - Observability & Management
 - Event Rules
 
@@ -155,9 +158,9 @@ Go the the menu
 
 ## Task 5: Create a Virtual Cloud Network
 
-The Virtual Cloud Network will allow you to mange the network of some services.
+The Virtual Cloud Network will allow you to manage the network of the components.
 
-Go the the menu
+Go the menu
 - Networking
 - Virtual Cloud Network
 
@@ -198,11 +201,11 @@ Go the the menu
 
 ![Ingress Rule 2](images/opensearch-vcn6.png)
 
-## Task 6: Create Dynamic group
+## Task 6: Create a Dynamic group
 
-The dynamic group will allow to give rights to the function to read the Object Storage.
+The "Dynamic Group" will allow to give rights to the function (created later) to read the Object Storage.
 
-Go the the menu
+Go the menu
 - Identity & Security 
 - Policies
 
@@ -211,7 +214,7 @@ Go the the menu
 - Click *Create Dynamic Group*
 - Name: *opensearch-fn-dyngroup*
 - Description: *opensearch-fn-dyngroup*
-- Rule: 
+- Rule (Replace the value ##COMPARTMENT_OCID## with your note above) 
 
 ```
 <copy>
@@ -223,9 +226,9 @@ Ex: ALL {resource.type = 'fnfunc', resource.compartment.id = 'ocid1.compartment.
 
 ## Task 7: Create Policies
 
-The policies will give the rights to the services to access other services.
+The policies will give the rights to the components to access other components.
 
-Go the the menu
+Go the menu
 - Identity & Security 
 - Policies
 
@@ -254,9 +257,9 @@ Allow dynamic-group opensearch-fn-dyngroup to manage objects in compartment live
 
 ## Task 8: Create an OpenSearch Cluster
 
-The OpenSearch cluster will allow to search in the text format representation of the documents
+The OpenSearch cluster will allow to search in the text format representation of the documents.
 
-Go the the menu
+Go the menu
 - Database
 - OpenSearch - Clusters
 
@@ -283,7 +286,7 @@ On the Configure Networking screen,
 
 While OCI creates the instance, you can run the next step. 
 
-When it is finished. You will need to get the name of OpenSearch hostname. *##OPENSEARCH_HOSTNAME##*. It looks like this: amaaaaxxx.opensearch.eu-frankfurt-1.oci.oraclecloud.com 
+When it is finished. You will need to get the name of OpenSearch hostname. *##OPENSEARCH_HOST##*. It looks like this: amaaaaxxx.opensearch.eu-frankfurt-1.oci.oraclecloud.com 
 
 It is here:
 
@@ -293,7 +296,7 @@ It is here:
 
 Oracle Integration will allow to glue all of this together.
 
-Go the the menu
+Go the menu
 - Developer Services
 - Application Integration
 
@@ -314,7 +317,7 @@ While OCI creates the instance, go to the next step.
 
 The compute will be used by Oracle Integration Agent to contact the OpenSearch Cluster in the private network. 
 
-Go the the menu
+Go the menu
 - Compute
 - OpenSearch - Clusters
 
@@ -323,7 +326,7 @@ Go the the menu
 - Check that you are in the right compartment (livelab in this case)
 - Click *Create instance*
 - Name: *opensearch-instance*
-- I chose the image *Oracle Linux 7.9* but other image will work too.
+- I chose the image *Oracle Linux 7.9* but other images will work too.
 - Networking
     - Select Existing VCN: *opensearch-vnc*
     - Select Existing Subnet: *Public Subnet-opensearch-vnc*
@@ -337,11 +340,11 @@ Go the the menu
 When the machine is created, 
 - Take note of *##COMPUTE_PUBLIC-IP##*, the public IP address. 
 
-## Task 11: Create a API Gateway
+## Task 11: Create an API Gateway
 
 The API Gateway will be used API to access the OpenSearch private URL from the website.
 
-Go the the menu
+Go the menu
 - Developer & Services
 - API Management / Gateway
 
