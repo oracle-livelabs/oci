@@ -13,7 +13,7 @@ Estimated time: 20 min
 
 ## Task 1: Import the project
 
-First, lets go in Visual Builder. Go back to the homepage of Oracle Integration Cloud and choose Visual Builder
+First, lets go in Visual Builder. Go back to the homepage of Oracle Integration Cloud and choose Visual Builder.
 
 ![Visual Builder link](images/opensearch-vb-link-oic.png)
 
@@ -40,7 +40,7 @@ Go to the imported application.
 
 ![Connection PreAuth](images/opensearch-vb-connection-preauth.png)
 
-Search first your Object Storage URL based on your region: [https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/)
+-  Search your Object Storage URL based on your region: [https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/)
 
 You have the other values from the previous labs.
 
@@ -95,8 +95,8 @@ Click on the run button on the top
 
 - Type *test* : This will return the PDF, word, excel uploaded 
 - Type *penguin* : This will return the image of a penguin recognized by Artificial Intelligence
-- Type *shakespeare* : This will return the image of a text scanned by the Text Recognition
-- Type *specimen* : This will return the belgian ID card with the name Specimen
+- Type *shakespeare* : This will return the image of a text scanned by Text Recognition
+- Type *specimen* : This will return the Belgian ID card with the name "Specimen"
  
 ![Test Result](images/opensearch-intro.png)
 
