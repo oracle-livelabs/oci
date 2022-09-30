@@ -1,6 +1,6 @@
 # Introduction
 
-## About this Workshop
+## About this workshop
 
 OCI Data Flow is a fully managed serverless Spark as a service. OCI data flow can now run spark applications that processes stream data, or continuously produced data. In today's workshop, we will cover a common streaming related use-case from the manufacturing industry.
 
@@ -15,7 +15,7 @@ To demonstrate ,
 4. DeltaTable              - DeltaTable operations on predicted RUL Apache Spark and DeltaLake.
 
 ### Workshop Architecture
-  ![Workshop Architecture](images/manufacturing_app_architecture.png " ")
+  ![Workshop Architecture](images/manufacturing-app-architecture.png " ")
 
 Estimated Workshop Time: 120 minutes
 
@@ -35,7 +35,7 @@ It is entirely driven by REST APIs, giving you easy integration with application
 
 The diagram below provides an overview of the OCI Data Flow Service, its features, components, and some of the other OCI services it integrates with.
 
-![Data Flow Architecture](images/df_overview.png " ")
+![Data Flow Architecture](images/df-overview.png " ")
 
 In the workshop, you will learn how to create spark batch and streaming application with manufacturing usecase example
 
