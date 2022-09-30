@@ -30,7 +30,7 @@ Estimated time: 20 minutes
 4. Click ```artifacts``` object and verify ```application.conf``` object is available.
    ![Oracle Cloud console, Dataflow](images/artifacts%20object.png " ")
 
-## Task2: Run Machine Learning Model 
+## Task2: Run machine learning model 
 
 1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** > **Data Flow**.
 
