@@ -78,7 +78,7 @@ This configuration is for post processing steps, so in theory you can put anythi
 
 ## Example
 
-A basic example to get you started:
+A basic template to get you started:
 
 **Training config**
 
@@ -211,7 +211,7 @@ This is an executable provided by us. Here is our latest driver code that can co
 
 ## Library
 
-Library is an archive.zip incorporating transformers we offer and user defined functions. Here is the link to our [offered transformers](https://github.com/bug-catcher/oci-data-science-ai-samples/tree/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code) in this bucket. And here is a [doc](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/prepackaged_dataflow_applications.md) describing how to generate an archive.zip.
+Library is an archive.zip incorporating transformers we offer and user defined functions. Here is the link of an introduction to our [offered transformers](../optional/Introduction-to-Transformers-for-Data-Preprocessing.md) in this bucket. And here is a [doc](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/prepackaged_dataflow_applications.md) describing how to generate an archive.zip.
 
 For this lab, we've prepared the archive for you:
 [Archive link](https://objectstorage.us-phoenix-1.oraclecloud.com/p/kUGPXE9HB_BtgpCqe7jyOUUD_rorNiHD0HWsIR52r4KN4axrHpidLnBo4y1Nsnb-/n/ax3dvjxgkemg/b/archive-bucket/o/archive.zip)

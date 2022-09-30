@@ -1,4 +1,4 @@
-Lab 6: Setting up OCI Function
+Lab 6: Set up OCI Function
 === 
 
 ## 6.1 Setting Virtual Cloud Network

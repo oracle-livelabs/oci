@@ -1,4 +1,4 @@
-Lab 7: Setting up Events
+Lab 7: Set up Events
 ===
 
 OCI event is a service listening to desired change happening in the target service. Here is a list of [DB](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventsproducers.htm#dbaasevents__AutoDB) and [Object Storage](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventsproducers.htm#ObjectStor__bucket) related events that Event can monitor.

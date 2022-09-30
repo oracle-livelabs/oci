@@ -1,5 +1,5 @@
 
-Lab 4: Prepare Object Storage Buckets
+Lab 4: Set up Object Storage Buckets
 ===
 
 This guide uses the following buckets (any change to the names will have to be reflected in the subsequent setup steps):

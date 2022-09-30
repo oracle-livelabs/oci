@@ -48,4 +48,4 @@ Lab 2: Setup policies
     Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='training-config-bucket'
     Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='output-bucket'
     ```
-    ![](Set-Policy3.png)
+    ![](../attachments/Set-Policy3.png)

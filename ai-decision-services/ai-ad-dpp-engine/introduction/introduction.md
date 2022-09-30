@@ -42,6 +42,16 @@ Note: while the pipelines are triggered by updates, they work on point-in-time s
 
 Output is always saved to Object Storage as a CSV file.
 
+## All Tasks
+* Pre-requisites
+* Set up OCI Anomaly Detection
+* Set up Policies
+* Preparation code, config, library and datasets
+* Set up OCI Data Flow
+* Set up OCI Function 
+* Set up OCI Events
+* Running the solution end to end
+
 
 ## Prerequisites
 
@@ -56,12 +66,14 @@ This lab assumes you have:
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
 
-* [URL text 1](../optional/Introduction-to-Transformers-for-Data-Preprocessing.md)
-* [URL text 2](http://docs.oracle.com)
+* [Introduction to all transformers](../optional/Introduction-to-Transformers-for-Data-Preprocessing.md)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author**
+    * Shreyas Vinayakumar - Principal Member of Technical Staff - Oracle AI Services
+    * Shujie Chen - Principal Member of Technical Staff - Oracle AI Services
+    * Sudha Ravi Kumar Javvadi - Member of Technical Staff - Oracle AI Services
+
+* **Last Updated By/Date**
+    * Shujie Chen - Principal Member of Technical Staff - Oracle AI Services
