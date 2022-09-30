@@ -67,7 +67,7 @@ You can also test the connection:
 
 Redo this for the second connection:
 - Click on the *Service icon*
-- Choose the *objectStoragePreAuthRequest* connection 
+- Choose the *opensearch* connection 
 - Click on *Servers* tab 
 - Then *Edit icon*
 

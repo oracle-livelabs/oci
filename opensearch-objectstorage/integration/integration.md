@@ -116,7 +116,7 @@ export OIC_HOST=##OIC_HOST##
 export OPENSEARCH_HOST=##OPENSEARCH_HOST##
 
 # Download the OIC_agent
-curl -X GET  $OIC_HOST/ic/api/integration/v1/agents/binaries/connectivity -u $OCI_USER:$OCI_PASSWORD -o $HOME/oic_connectivity_agent.zip
+curl -X GET  https://$OIC_HOST/ic/api/integration/v1/agents/binaries/connectivity -u $OCI_USER:$OCI_PASSWORD -o $HOME/oic_connectivity_agent.zip
 
 # Unzip it
 mkdir oic_agent
@@ -128,7 +128,7 @@ mv InstallerProfile.cfg InstallerProfile.orig
 cat > ./InstallerProfile.cfg << EOT
 # Required Parameters
 # oic_URL format should be https://hostname:sslPort
-oic_URL=$OIC_HOST
+oic_URL=https://$OIC_HOST
 agent_GROUP_IDENTIFIER=OPENSEARCH_AGENT_GROUP
 
 #Optional Parameters
