@@ -2,22 +2,22 @@
 Lab 3: Preparation code, config, library and datasets
 ===
 
-Fundamentally, you will need the following things ready for setting up the whole infrastructure:
+Ensure the following resources are setup properly before proceeding to configure infrastructure resources:
 
 *   Orchestration configuration
-*   Driver code (Orchestrator) - from our repo
+*   Driver code (Orchestrator)
 *   Training/Inferencing datasets
 *   Library (Archive.zip)
 
 ## Orchestration Configuration
 
-This is a JSON file that defines the DPP workflow. The configuration is composed of the following 5 parts:
+This is a JSON file that defines the Data Pre-Processing (DPP) workflow. The configuration is composed of the following 5 parts.
 
 <table class="wrapped confluenceTable"><colgroup><col><col></colgroup><tbody><tr><th class="confluenceTh">Section Name</th><th class="confluenceTh">Explanation</th></tr><tr><td class="confluenceTd">inputSources</td><td class="confluenceTd">Connector for input data sources. Currently we support reading data from Object Storage, ATP and ADW.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">phaseInfo<td class="highlight-blue confluenceTd" data-highlight-colour="blue">A flag specifies whether it's training or inferencing, and connector to metadata source.</td></tr><tr><td class="confluenceTd">processingSteps</td><td class="confluenceTd">Data preprocessing transformers and related input arguments.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">stagingDestination</td><td class="highlight-blue confluenceTd" data-highlight-colour="blue">Connector for intermediate processed data storage, which will be used in post-processing steps.</td></tr><tr><td class="confluenceTd">outputDestination</td><td class="confluenceTd">Connector for final output.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">serviceApiConfiguration (Optional)</td><td class="highlight-blue confluenceTd" data-highlight-colour="blue">Configuration required for post-processing steps. For example, arguments for anomaly detection client.</td></tr></tbody></table>
 
 ## inputSources
 
-Dataset(s) input source(s), with **inputSources** as key and an array of dataset(s) information as value.
+The input data source configuration.
 
 *   **dataframeName** - the variable name of this data frame will be used in the whole context.
 *   **type** - can either be **object-storage** or **oracle**.
@@ -33,9 +33,9 @@ Dataset(s) input source(s), with **inputSources** as key and an array of dat
     *   **user** \- the owner of the table. In most cases it will be **admin**. 
     *   **password** \- the password you setup when you download the Wallet. 
 
-## phaseInfo
+## phaseInfo (optional)
 
-The flag indicating whether it is a training or inferencing phase, plus other required input parameters. Here we will include an object storage connector, the workflow will use it to store or read metadata, which is useful for data dependent steps (for example, one-hot encoding).
+This will define the location where we store the metadata we gained from training phase for data dependent processes, like **one_hot_encoding**.
 
 *   **connector** - the connector to object storage. It will be composed of
     *   **namespace** - the namespace of the target object storage bucket. Required if it is for object storage.
@@ -44,7 +44,9 @@ The flag indicating whether it is a training or inferencing phase, plus other re
 
 ## processingSteps
 
-This will be a list of all the transformations you want to apply. This is the core of the data processing. Every item in the list is a step, and all the steps will be executed in sequence, one after another. Users should make sure the sequence makes sense, or exceptions will be thrown. DPP doesn't responsible for process validation before execution. For each step, you need to specify the following.
+This section lists transformations that need to be applied to the input data sets. This is the core of the data processing. Every item in the list is a step, and all the steps will be executed in sequence, one after another. 
+
+Users should ensure the data processing steps are configured properly in the right sequence otherwise the workflow might fail and throw exceptions. DPP does not validate the individual data processing steps prior to executing the workflow.
 
 *   **stepType** \- can be either **singleDataFrameProcessing** (for transforming on top of single dataframe) or **combineDataFrames** (for merging or joining two dataframes).
 *   **configurations** - the configuration related to the step you take, which will include:
@@ -55,26 +57,31 @@ This will be a list of all the transformations you want to apply. This is the c
 
 ## stagingDestination
 
-This is where we store intermediate processed data for post processing. Basically these will be dataframes stored in csv format at an assigned object storage bucket. 
+This is the location where intermediate results will be stored before post processing steps begin. Basically these will be dataframes stored in csv format at an assigned object storage bucket. 
 
-*   **combinedResult (optional)** - the final dataframe you want to output. You need to specify this parameter if you only have **one** single dataframe as the output. But if you do sharding, the sharded dataset will be the output automatically, and you don't need this parameter any more.
-*   **type** \- can only be **object-storage** for now.
+*   **combinedResult (optional)** - The name of the data frame to output. Specify this parameter only when a single data frame needs to be output. However, if sharding is desired/configured, the sharded dataset will be output automatically. In this case, there is no need to specify this parameter.
+*   **type** \- only **object storage** is supported at present.
 *   **namespace** - the namespace of the target object storage bucket. 
 *   **bucket** \- the bucket name. 
 *   **objectName** \- the full path and name of the object. 
 
 ## outputDestination
 
-This is where the final output comes to, including model\_info, finalized output after inferencing, etc.
+This is where the final output (AD results) and model information (model_info) is stored after inferencing.
 
-*   **type** \- can only be **object-storage** for now.
+*   **type** \- only **object storage** is supported at present.
 *   **namespace** - the namespace of the target object storage bucket. 
 *   **bucket** \- the bucket name. 
 *   **objectName** \- the full path and name of the object. 
 
-## serviceApiConfiguration (optional)
+## serviceApiConfiguration
 
-This configuration is for post processing steps, so in theory you can put anything into that. You can check the following configuration example for anomaly detection training.
+This configuration is used after data preprocessing steps. Here we will use it for AD related configuration:
+
+* **serviceEndpoint** - this is the region specific endpoint for AD service. Use **null** for now.
+* **profileName** - use **"DEFAULT"** for now. This is used for local runs to specify the OCI SDK profile to use from ~/.oci
+* **projectId** - ocid of AD project from Lab 2.
+* **compartmentId** - user's compartment Id.
 
 ## Example
 
@@ -123,7 +130,7 @@ A basic template to get you started:
     },
     "outputDestination": {
         "type": "object-storage",
-        "namespace":"ax3dvjxgkemg",
+        "namespace":"<your-namespace>",
         "bucket": "output-bucket",
         "objectName": "model_info.json",
     },
@@ -201,17 +208,17 @@ A basic template to get you started:
 
 ## Driver code
 
-This is an executable provided by us. Here is our latest driver code that can conduct data preprocessing, training and inferencing: [link](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/df_driver.py).
+This is an executable built by OCI AI Services team and provided to users. The latest driver code can be downloaded from here: [link](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/df_driver.py).
 
 ## Training/Inferencing datasets
 
- Here we attached a usable set of training and testing data in csv and parquet. 
+Attached are a set of training and testing (/inference) data files in CSV and Parquet formats.
 
 [TestData.csv](./files/TestData.csv) [TrainData.csv](./files/TrainData.csv) [TrainData.parquet](./files/TrainData.parquet)
 
 ## Library
 
-Library is an archive.zip incorporating transformers we offer and user defined functions. Here is the link of an introduction to our [offered transformers](../optional/Introduction-to-Transformers-for-Data-Preprocessing.md) in this bucket. And here is a [doc](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/prepackaged_dataflow_applications.md) describing how to generate an archive.zip.
+Library is an archive.zip incorporating transformers and user defined functions. Here is the link of an introduction to the [transformers](../optional/Introduction-to-Transformers-for-Data-Preprocessing.md) in this bucket. And here is a [doc](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/prepackaged_dataflow_applications.md) describing how to generate an archive.
 
-For this lab, we've prepared the archive for you:
+For this lab, use the archive below.
 [Archive link](https://objectstorage.us-phoenix-1.oraclecloud.com/p/kUGPXE9HB_BtgpCqe7jyOUUD_rorNiHD0HWsIR52r4KN4axrHpidLnBo4y1Nsnb-/n/ax3dvjxgkemg/b/archive-bucket/o/archive.zip)
