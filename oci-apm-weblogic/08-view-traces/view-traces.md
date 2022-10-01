@@ -56,7 +56,7 @@ Estimated time: 10 minutes
 
 ## Task2:  Verify spans and dimensions on the Trace Details page
 
-1.	In the Traces pane, click the link to the trace with the Operation name **opdemo/index.html** from the table.
+1.	In the Traces pane, click the link to the trace with the Operation name **opdemo/index.jsp** from the table.
 
     ![Oracle Cloud, Trace Explorer](images/8-2-1-menu.png " ")
 
