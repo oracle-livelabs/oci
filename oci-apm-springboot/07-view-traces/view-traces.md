@@ -37,7 +37,7 @@ Estimated time: 10 minutes
    ![Oracle Cloud console, Cloud Shell](images/6-1-1-cloudshell.png " ")
 
 
-   >**Note:** 
+   >**Note:**
 
    - The IP may be different from the last time when you accessed the WinCellar app because the pods are regenerated.
    - If the application is not starting up, run the **kubectl get pods** command and check the status. It may take a few minutes to see the pods in the running state.
@@ -185,5 +185,6 @@ In this workshop, you’ve learned how to use a file system by adding the APM Ja
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
-Avi Huber, Senior Director, Product Management
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, August 2022
