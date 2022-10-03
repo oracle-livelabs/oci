@@ -1,3 +1,5 @@
+# Ingest data and search
+
 ## Introduction
 
 In this lab, you will focus on creating an index by ingesting sample data to the OCI OpenSearch cluster, as well as running a search query. We have prepared a JSON file with sample data, which will be downloaded and used to create an index named `oci`.
@@ -18,7 +20,7 @@ Run the following commands from within your VM instance.
 1. Download the sample data set - `oci` index
 
    ```bash
-   <copy>curl -O "https://docs.oracle.com/en/learn/oci-opensearch/files/OCI_services.json"</copy>
+   <copy>curl -O "https://raw.githubusercontent.com/oracle-livelabs/oci/main/oci-opensearch/files/OCI_services.json"</copy>
    ```
 
 2. Create mapping (optional). If you don't run this command or any variation of it, a default mapping will be automatically created.
@@ -66,4 +68,4 @@ For more information about query syntax, see the OpenSearch or ElasticSearch tut
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, August 2022
+* **Last Updated By/Date** - Nuno Gonçalves, September 2022
