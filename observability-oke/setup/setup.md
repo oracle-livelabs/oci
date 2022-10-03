@@ -147,7 +147,7 @@ The final step of this section is to launch Cloud Shell, download sample code fi
       Within the Cloud Shell session , download the **sample code** files by executing the following wget command:
 
       ```
-      wget https://objectstorage.us-phoenix-1.oraclecloud.com/p/-GEEGkMqE-MW-EmQxeFUrAuNdzAnfIxB_G4Vqd8kNMSi-OFLnMRQsvUrWCjVu_q8/n/intrandallbarnes/b/devlive-hol-082022/o/devlive-hol.zip
+      wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/devlive-hol.zip
 
       ```
 

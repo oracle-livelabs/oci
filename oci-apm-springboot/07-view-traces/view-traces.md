@@ -37,7 +37,8 @@ Estimated time: 10 minutes
    ![Oracle Cloud console, Cloud Shell](images/6-1-1-cloudshell.png " ")
 
 
-   >**Note:**
+
+   >**Note:** 
 
    - The IP may be different from the last time when you accessed the WinCellar app because the pods are regenerated.
    - If the application is not starting up, run the **kubectl get pods** command and check the status. It may take a few minutes to see the pods in the running state.
