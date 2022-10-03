@@ -128,7 +128,7 @@ To delete the workshop setup from your tenancy, follow the steps below.
    4. From the navigation menu in the Oracle Cloud console, select **Identity & Security** > **Compartment**. Then click the link to the compartment which you created in the workshop.  
       ![Oracle Cloud, Cloud console](images/6-4-cleanup.png " ")   
 
-   5. In the **Compartment details** page, click **Delete**. In the confirmation window, enter the name of the compartment, then click **Delete**.  
+   5. In the **Compartment details** page, click **Delete**. In the confirmation window, click **Delete**.  
       ![Oracle Cloud, Cloud console](images/6-5-cleanup.png " ")
 
    6. Deletion of the compartment starts and completes. This may take a few minutes.   
