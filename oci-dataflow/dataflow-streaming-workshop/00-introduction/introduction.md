@@ -2,13 +2,12 @@
 
 ## About this workshop
 
-OCI Data Flow is a fully managed serverless Spark as a service. OCI data flow can now run spark applications that processes stream data, or continuously produced data. In today's workshop, we will cover a common streaming related use-case from the manufacturing industry.
+OCI Data Flow service is a fully managed serverless Spark as a service. OCI data flow can now run spark applications that process stream data, or continuously produced data. In today's workshop, we will cover a typical streaming-related use case from the manufacturing industry.
 
-One of the most common uses cases of predictive manitenance in manufacturing industry is predicting 
-Remaining Useful Life (RUL) of equipment. This sample application demonstrates running streaming application with doing 
-machine learning on top of it to predict RUL of equipment.
+In the manufacturing industry, predictive maintenance is always better than reactive maintenance. One of the most common use cases of predictive maintenance in the manufacturing industry is predicting the Remaining Useful Life (RUL) of equipment. This sample application demonstrates running a streaming application with machine learning on top of it to predict the RUL of equipment.
 
-To demonstrate ,
+Today we will use four apps in the OCI Data Flow service to demonstrate the prediction of RUL.
+
 1. RULSurvivalModelTrainer - Offline model trainer for predicting Remaining Useful Life using Apache Spark MLlib.
 2. SensorDataSimulator     - Random sensor data simulator for equipment using Apache Spark Structured Streaming.
 3. RealtimeRULPredictor    - Realtime RUL Predictor using Apache Spark Structured Streaming.
