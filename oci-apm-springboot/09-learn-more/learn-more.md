@@ -7,6 +7,7 @@ Congratulations! You have completed the workshop.
 To learn more about APM, please visit **Get started with Oracle Cloud Application Performance Monitoring** workshop.
 
   ![Oracle LiveLabs, Get started with Oracle Cloud APM workshop](images/1-1-get-started.png " ")
+  ![Oracle LiveLabs, Get started with Oracle Cloud APM workshop](images/1-1-2-get-started.png " ")
 
 In this workshop, you will learn how to use Oracle Cloud APM to examine critical performance alarms, view synthetic monitors in a dashboard to analyze the trend and identify spikes, observe the monitor's client-side details in HTTP Archive (HAR) file, and explore the server-side details by tracing data in APM Trace Explorer.
 
