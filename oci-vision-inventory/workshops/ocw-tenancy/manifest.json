@@ -1,9 +1,9 @@
 {
-    "workshoptitle": "Automate inventory management with OCI Vision",
+    "workshoptitle": "Automate and accelerate inventory analytics with OCI Vision",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
-            "title": "Introduction: Automate inventory management with OCI Vision",
+            "title": "Introduction",
             "filename": "../../intro/intro.md"
         },
         {
@@ -32,9 +32,8 @@
             "filename": "../../test-model-python-sdk/test-model-python-sdk.md"
         },
         {
-            "title": "Need Help?",
-            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+            "title": "Oracle CloudWorld 2022 - Get Help",
+            "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
         }
     ]
 }

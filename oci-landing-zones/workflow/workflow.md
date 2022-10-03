@@ -79,8 +79,61 @@ The Workload Admin is the user role responsible for deployment of workload compu
 2. Select the `landing_zone_parent/common-infra/network` compartment to see the created VCN.
 3. Clicking on the `Primary-VCN`, you can modify the provisioned networking resources.
 
+## Task 3: Deployment
 
-## Task 3: Clean Up 
+* Before the Start of the Section . Please Gather the Application Compartment OCID and Network Compartment OCID from the Lab 2 Task 3 Step 7 (Note : Some Resources OCID will be used to configure the Lab3 Example Deployment). 
+
+   * Application Compartment OCID
+   * Network Compartment OCID
+
+* Get the Application Compartment OCID (Alternative Way). 
+   * Hamburger-->Networking-->Virtual Cloud Networks-->Select the LZ_Parent_Demo Compartent--> Select the Application
+![Application Compartment OCID](.//images/wblz-application-ocid.png)
+
+* Get the Network Compartment OCID(Alternative Way).
+   * Hamburger-->Networking-->Virtual Cloud Networks-->Select the LZ_Parent_Demo Compartent--> Select the Network 
+![Network Compartment OCID](.//images/wblz-network-compartent-ocid.png)
+
+* Get the VCN Compartment OCID(Alternative Way).
+   * Hamburger-->Networking-->Virtual Cloud Networks-->Virtual Cloud Network Details
+![VCN Compartment OCID](.//images/wblz-vcn-ocid.png)
+
+* Get the NAT Gateway OCID(Alternative Way).
+   * Hamburger-->Networking-->Virtual Cloud Networks-->Select the LZ_Parent_Demo Compartent--> Select the NAT Gateway 
+![NAT Compartment OCID](.//images/wblz-nat-gw-ocid.png)
+
+
+* Sample Variable Value
+    |Variable|Value|
+    |--|--|
+    |Tag cost center|`WBLZ_Demo`|
+    |Tag geo location|`WBLZ_Demo_Geo`|
+    |Applications compartment OCID |Enter the Application OCID|
+    |Workload compartment name|`WBLZ_Demo_Username`|
+    |Network compartment name|`WBLZ_Network_Compartment_Demo`|
+    |Network compartment OCID|Enter the Network Compartment OCID|
+    |VCN OCID|Enter the VCN OCID|
+    |NAT gateway OCID|Enter the NAT Gateway OCID|
+    |Private subnet CIDR blocks|10.0.2.0/24|
+    |Private subnet DNS labels|private0|
+    |Database subnet CIDR blocks|10.0.4.0/24|
+    |Database subnet DNS labels|database0|
+    
+* Open up Resource Manager service. You can click directly on Resource Manager in the navigation path menu, otherwise, Go back to the main Navigation Menu -> Developer Services -> Resource Manager.
+
+In the stack section, click create stack and choose template as the origin of the Terraform configuration. 
+
+![WorkLoad Template Snapshot](.//images/workload-template-1.png)
+
+* Use the Sample Variable Value and captured OCID to fill the Tagging , Compartment, Workload compartment and VCN information.
+ 
+![WorkLoad Stack Variables Info](.//images/wblz-stack-info.png)
+
+* Wait for atleast ten minutes and check the stack status.
+
+* Note: in case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources.
+
+## Task 4: Clean Up 
 
 Congratulations, you completed the workshop. You may want to release the cloud resources created through this workshop. We will we use ORM to delete resources managed through Infrastructure As Code/Terraform.
 
@@ -112,3 +165,9 @@ All resources provisioned during this workshop that were managed exclusively via
 
 8. You can go back to the Stack Details page, and delete the Stack by clicking on `More Actions -> Delete Stack` and click again to confirm your action. 
     ![Delete Stack](./images/oci-orm-delete-stack.png)  
+
+## Acknowledgements
+
+* **Author** - LiveLabs Team
+* **Contributors** - LiveLabs Team, Arabella Yao
+* **Last Updated By/Date** - Arabella Yao, September 2022

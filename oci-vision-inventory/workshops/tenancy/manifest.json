@@ -1,9 +1,9 @@
 {
-    "workshoptitle": "Automate inventory management with OCI Vision",
+    "workshoptitle": "Automate and accelerate inventory analytics with OCI Vision",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
-            "title": "Introduction: Automate inventory management with OCI Vision",
+            "title": "Introduction",
             "filename": "../../intro/intro.md"
         },
         {
