@@ -17,6 +17,12 @@ Further, we can use the diagnostic result to modify the control parameter to com
 ![Digital Twin Architecture](./images/achitecture.png)
 
 
+**Livelab Architecture**:
+
+As we don't have the real devices in the livelab, we use the same simulation model to generate the training signals and also generate anomaly by adjusting the simuluation parameters.
+
+![Livelab Architecture](./images/livelab-arch.png)
+
 Estimated time: 120 minutes
 
 
