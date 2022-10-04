@@ -1,4 +1,4 @@
-Lab 8: Configure OCI Events
+Lab 7: Configure OCI Events
 ===
 
 OCI Events tracks resource changes with events which comply with CNCF CloudEvents Standard. 
