@@ -1,3 +1,5 @@
+# Pre-requisites
+
 ## Introduction
 
 In this lab, you will focus on understanding the pre-requisites and setting up your tenancy for the subsequent creation and operation of the OCI Vision model.
@@ -35,12 +37,12 @@ In this task, you will create a dedicated compartment for this live lab, if you 
 
    After creating the user, you will be redirected to the user details page. Click **Create/Reset password** to create a password for the user.
 
-4. While in the user details page, click **API Keys** in the in the **Resources** section, and then click **Add API Key**. Download the private key, saving it as *oci_api_key.pem*.  
+4. While in the user details page, click **API Keys** in the in the **Resources** section, and then click **Add API Key**. Download the private key, saving it as *oci\_api\_key.pem*.  
 5. After the creation, when back to the API Keys screen, look for additional options in the table row that displays your recently created key fingerprint. Click **View configuration file**.
 
    ![View config option](../images/view_config_option.png)
 
-   You will then see a screen such as the below. Copy the content, create a new file named *config*, paste the content inside it. Add *~/.oci/oci_api_key.pem* as key path.  
+   You will then see a screen such as the below. Copy the content, create a new file named *config*, paste the content inside it. Add *~/.oci/oci\_api\_key.pem* as key path.  
    Save the file. It will be necessary later.
 
    ![View config file](../images/view_config_file.png)
@@ -107,5 +109,5 @@ In this task, you will create an OCI Compute instance in the public subnet of th
 
 ## Acknowledgements
 
-* **Author** - Nuno Gonçalves
+* **Authors** - Nuno Gonçalves, Jason Monden
 * **Last Updated By/Date** - Nuno Gonçalves, September 2022

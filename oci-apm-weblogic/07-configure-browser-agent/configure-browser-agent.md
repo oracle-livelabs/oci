@@ -53,18 +53,18 @@ Estimated time: 5 minutes
     </copy>
     ```
 
-4.	Find a section **Start of Browser Agent (RUM) Injection Properties** (line 175)
+4.	Find a section **Start of Browser Agent (RUM) Injection Properties**
 
    ![Oracle Cloud console, Cloud Shell ](images/6-2-cloudshell.png " ")
 
     - Hit **i** to enter the edit mode, uncomment the following properties, and make changes as suggested below.
-        - com.oracle.apm.agent.rum.enable.injection=**true** (line 181)
-        - com.oracle.apm.agent.public.data.key= **&lt;Public data key of your APM domain&gt;** (line 185)
+        - com.oracle.apm.agent.rum.enable.injection=**true**
+        - com.oracle.apm.agent.public.data.key= **&lt;Public data key of your APM domain&gt;**
             -  Ensure to enter the ***Public key***, not the Private key of your domain.
-        - com.oracle.apm.agent.rum.web.application=**WLS WebApp** (line 188)
-        - com.oracle.apm.agent.rum.service.name=**WLS-web** (line 191)
+        - com.oracle.apm.agent.rum.web.application=**WLS WebApp**
+        - com.oracle.apm.agent.rum.service.name=**WLS-web**
 
-    - Save and close the file with **esc + wg:**.
+    - Save and close the file with **esc + :wq**.
 
     ![Oracle Cloud console, Cloud Shell ](images/6-3-cloudshell.png " ")
 
@@ -133,5 +133,6 @@ You may now **proceed to the next lab**.
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
-Avi Huber, Senior Director, Product Management
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, January 2022
