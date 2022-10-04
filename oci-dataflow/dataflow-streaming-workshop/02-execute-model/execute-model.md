@@ -73,7 +73,7 @@ Estimated time: 20 minutes
 3. Select object ```demo```.
    ![Oracle Cloud console, Dataflow](images/demo-object.png " ")
 
-4. Select the ```models``` object and verify three folder as shown below
+4. Select the ```models``` object and verify three folders as shown below
    ![Oracle Cloud console, Dataflow](images/models.png " ")
 
 5. Expand and verify that the models are in a parquet file format with associated metadata.
