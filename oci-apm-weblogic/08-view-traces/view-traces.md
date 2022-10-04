@@ -56,7 +56,7 @@ Estimated time: 10 minutes
 
 ## Task2:  Verify spans and dimensions on the Trace Details page
 
-1.	In the Traces pane, click the link to the trace with the Operation name **opdemo/index.html** from the table.
+1.	In the Traces pane, click the link to the trace with the Operation name **opdemo/index.jsp** from the table.
 
     ![Oracle Cloud, Trace Explorer](images/8-2-1-menu.png " ")
 
@@ -85,5 +85,6 @@ In this workshop, you’ve learned how to use a file system by adding the APM Ja
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
-Avi Huber, Senior Director, Product Management
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, August 2022
