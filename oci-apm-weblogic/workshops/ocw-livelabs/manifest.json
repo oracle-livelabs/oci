@@ -60,10 +60,10 @@
             "filename": "../../09-cleanup/cleanup.md"
         },
         {
-            "title": "Lab 10: Learn more about APM",
+            "title": "Lab 10: Learn more about APM (optional)",
             "description": "Learn more about APM",
             "filename": "../../09-learn-more/learn-more.md"
-        },           
+        },
         {
             "title": "Oracle CloudWorld 2022 - Get Help",
             "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
