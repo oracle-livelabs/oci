@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This workshop uses OCI Data Flow to run applications with the resources provisioned in Lab 1, Lab2, Lab3 and Lab4.
+This workshop uses OCI Data Flow to run spark applications with the resources provisioned in Lab 1, Lab 2, Lab 3, and Lab 4.
 
 Estimated time: 10 minutes
 
 ### Objectives
 
-* Delta Table operations using OCI Data Flow on Predicted RUL delta table created in Lab 3
+* Delta Table operations using the OCI Data Flow on Predicted RUL delta table created in Lab 3
 
 ### Prerequisites
 
@@ -16,18 +16,18 @@ Estimated time: 10 minutes
 
 ## Task 1: Verify delta table location.
 
-1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** &gt; **Buckets**.
+1. Go to OCI Object Storage Console (aka. hamburger menu) on the Oracle Cloud console, and select **Storage ** &gt; **Buckets**.
 
    ![Oracle Cloud console, a](images/object-storage-menu.png  " ")
 
-2. Select dataflow-labs compartment in left side and select dataflow-labs bucket
+2. Select the dataflow-labs compartment on left side and select the dataflow-labs bucket
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
 3. Select object demo.
    ![Oracle Cloud console, Dataflow](images/demo-object.png " ")
 
-4. Verify if delta table located in below location
+4. Verify if the delta table located in the below location
     ![Oracle Cloud console, Object Storage](images/sinks.png " ")
 
 ## Task 2: Run delta table operations
@@ -39,7 +39,7 @@ Estimated time: 10 minutes
 2. Click RULDeltaTable Application.
    ![Oracle Cloud console, Dataflow](images/rul-delta-table.png " ")
 
-3. Click Run button on top and click Run again
+3. Click the Run button on top and click Run again
    ![Oracle Cloud console, Dataflow](images/rul-delta-table-run.png " ")
 
 4. Run will be created with ACCEPTED state
@@ -49,14 +49,14 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, Dataflow](images/delta-table-progress.png " ")
 
-6. Click Spark UI, Job and DeltaTable operations
+6. Click Spark UI, Job, and DeltaTable operations
 
    ![Oracle Cloud console, Dataflow](images/delta-table-spark-ui.png " ")
 
 
 You may now **proceed to the next lab**.
 
-## Acknowledgements
-- **Author** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
+## Acknowledgments
+- **Created By** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
 - **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
-- **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022
+- **Last Updated By/Date** - Sivanesh Selvanataraj, October 2022
