@@ -13,8 +13,8 @@ This solution will allow users to configure a training pipeline and an inference
 ## Prerequisites
 
 * An Oracle Free Tier, or Paid Cloud Account.
-* Familiar with services on Oracle Cloud Infrastructure (OCI), such as Object Storage, Identity, Virtual Cloud Network, etc. 
-* Familiar with Python (or other programming language) is strongly recommended.
+* Familiarity with services on Oracle Cloud Infrastructure (OCI), such as Object Storage, Identity, Virtual Cloud Network, etc. 
+* Familiarity with Python (or other programming language) is strongly recommended.
 * Experience with data engineering, machine learning and statistics is preferred but not required. 
 * Additional prerequisites (if any) are described in each lab.
 
@@ -29,39 +29,41 @@ This solution will allow users to configure a training pipeline and an inference
 * Configure OCI Events
 * Running the solution end to end
 
-## Workflow Introduction
+## Solution Workflow
 
 ![Functional Architecture](./images/workflow.png)
 
 A brief description of the workflow
 
-1.  User prepares the driver config and upload it to the config bucket. Also, user creates an **anomaly detection** project and Data Flow application to be used later.
-2.  User uploads a training/inferencing dataset to the input source bucket.
-3.  User configures OCI Events Service as a listener on the source bucket. Uploading a data file into this bucket will trigger an OCI Event.
-4.  OCI event will trigger the downstream OCI Function, which will load the driver config and start the workflow.
-5.  The workflow will run based on the driver config.
-6.  As soon as the data processing workflow completes successfully, the processed data with other information (for example, model\_info) will be written to the staging bucket.
+1.  User prepares the driver config and uploads it to the config OCI Storage Bucket. Also, user creates an **OCI Anomaly Detection** Project and Data Flow Application to be used later.
+2.  User uploads a training/inferencing dataset to the *Input/Source* OCI Storage Bucket.
+3.  User configures OCI Events Service as a listener on the source OCI Storage Bucket. Uploading a data file into this storage bucket will trigger an OCI Events *event*.
+4.  OCI event will trigger the downstream OCI Function, which will load the driver configuration file and start the workflow.
+5.  The workflow will run data transforms configured in the driver configuration file.
+6.  As soon as the data processing workflow completes successfully, the processed data with other information (for example, model\_info) will be written to the *Staging* OCI Storage Bucket.
 7.  AD training/inferencing will begin to run. 
-8.  Once training/inferencing is complete the result will be written to the result bucket.
+8.  Once training/inferencing is complete the result will be written to the *Result* OCI Storage Bucket.
 
 **NOTE**:
 
-*   Pipelines are triggered whenever new files are added to the corresponding data source. For example, uploading a new training dataset into the assigned object storage bucket will trigger the training pipeline.
-*   The workflow engine will execute the pipeline based on the configuration file.
-    *   Once the raw data is preprocessed, the transformed data will be saved in the configured staging bucket.
-    *   AD service will be triggered afterward to perform training or detection, and the results will be available in the configured results bucket.
+*   Pipelines are triggered whenever new files are added to the corresponding *Source* Storage Bucket. For example, uploading a new training dataset into the respective Source storage bucket will trigger the training pipeline.
+*   The workflow engine will execute the pipeline based on the driver configuration file.
+    *   Once the raw data is preprocessed, the transformed data will be saved in the configured *Staging* bucket.
+    *   AD service will be triggered afterward to perform training or detection, and the results will be available in the configured *Result* bucket.
 *   Users can utilize more computational power in order to run the pipelines faster. This is very easy to configure as well.
 
 ### Supported Input Sources and Formats
 
-*   Tables stored in ATP/ADW databases
+*   Tables stored in OCI ATP/ADW databases
 *   CSV/Parquet file formats in Object Storage
 
-**Note**: while the pipelines are triggered by updates, they work on point-in-time snapshots of the data. Users are advised to update database sources (tables) in a single transaction to avoid processing data in a partial state.
+**NOTE**:
+
+While the pipelines are triggered by updates, they work on point-in-time snapshots of the data. Users are advised to update database sources (tables) in a single transaction to avoid processing data in a partial state.
 
 ### Supported Output Source and Formats
 
-Output is always saved to Object Storage as a CSV file.
+Output is always saved to OCI Object Storage Bucket as a CSV file.
 
 ## Learn More
 
@@ -73,6 +75,9 @@ Output is always saved to Object Storage as a CSV file.
     * Shreyas Vinayakumar - Principal Member of Technical Staff - Oracle AI Services
     * Shujie Chen - Principal Member of Technical Staff - Oracle AI Services
     * Sudha Ravi Kumar Javvadi - Member of Technical Staff - Oracle AI Services
+
+* **Reviewer**
+    * Ganesh Radhakrishnan - Principal Product Manager - Oracle AI Services
 
 * **Last Updated By/Date**
     * Shujie Chen - Principal Member of Technical Staff - Oracle AI Services
