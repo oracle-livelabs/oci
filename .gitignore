@@ -6,4 +6,4 @@
 env.sh
 .vscode
 .idea
-.github
+**/.github
