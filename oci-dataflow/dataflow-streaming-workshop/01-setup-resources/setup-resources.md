@@ -53,7 +53,7 @@ Estimated time: 15 minutes
 
 You may now **proceed to the next lab**.
 
-## Acknowledgements
+## Acknowledgments
 - **Created By** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
 - **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
 - **Last Updated By/Date** - Sivanesh Selvanataraj, October 2022
