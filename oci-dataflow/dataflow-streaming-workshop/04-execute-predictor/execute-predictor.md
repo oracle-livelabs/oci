@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This workshop uses OCI Data Flow to predict in realtime the Remaining Useful Life (RUL) of an equipment using Apache Spark streaming application with the resources provisioned in Lab 1, Lab 2, Lab 3.
+This workshop uses OCI Data Flow to predict in real time the Remaining Useful Life (RUL) of equipment using Apache Spark streaming application with the resources provisioned in Lab 1, Lab 2, and Lab 3.
 
 Estimated time: 15 minutes
 
 ### Objectives
 
-* Run realtime Machine Learning prediction in OCI Data Flow
+* Run the real time machine Learning predictor application in OCI Data Flow
 
 ### Prerequisites
 
@@ -27,7 +27,7 @@ Estimated time: 15 minutes
 3. Select object ```demo```.
    ![Oracle Cloud console, Dataflow](images/demo-object.png " ")
 
-4. Select ```artifacts``` object and verify the ```application.conf``` object is available
+4. Select ```artifacts``` object and verify the ```application.conf``` object is available.
    ![Oracle Cloud console, Dataflow](images/artifacts-object.png" ")
 
 ## Task 2: Run real-time predictor
@@ -46,7 +46,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, Dataflow](images/predictor-run.png " ")
 
-5. In 2-3 minutes state of OCI Data Flow run will be moved to IN PROGRESS
+5. In 2-3 minutes state of the OCI Data Flow run will be moved to IN PROGRESS
 
    ![Oracle Cloud console, Dataflow](images/predictor-progress.png " ")
 
