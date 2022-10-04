@@ -1,4 +1,4 @@
-# Run Remaining Useful Life (RUL) Predictor
+# Run Remaining Useful Life (RUL) predictor
 
 ## Introduction
 
@@ -14,25 +14,25 @@ Estimated time: 15 minutes
 
 * Completion of the preceding labs in this workshop
 
-## Task1: Verify artifacts.
+## Task 1: Verify artifacts.
 
-1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
+1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** &gt; **Buckets**.
 
-   ![Oracle Cloud console, a](images/object%20storage%20menu.png " ")
+   ![Oracle Cloud console, a](images/object-storage-menu.png " ")
 
 2. Select ```dataflow-labs``` compartment in left side and select ```dataflow-labs``` bucket
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
 3. Select object ```demo```.
-   ![Oracle Cloud console, Dataflow](images/demo%20object.png " ")
+   ![Oracle Cloud console, Dataflow](images/demo-object.png " ")
 
 4. Select ```artifacts``` object and verify ```application.conf``` object is available
-   ![Oracle Cloud console, Dataflow](images/artifacts%20object.png" ")
+   ![Oracle Cloud console, Dataflow](images/artifacts-object.png" ")
 
-## Task2: Run Realtime Predictor
+## Task 2: Run real-time predictor
 
-1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** > **Data Flow**.
+1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** &gt; **Data Flow**.
 
    ![Oracle Cloud console, Dataflow](images/dataflow-menu.png " ")
 
@@ -51,47 +51,47 @@ Estimated time: 15 minutes
    ![Oracle Cloud console, Dataflow](images/predictor-progress.png " ")
 
 
-## Task3: Verify delta table and parquet table.
+## Task 3: Verify delta table and parquet table.
 
-1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
+1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** &gt; **Buckets**.
 
-   ![Oracle Cloud console, Object Storage](images/object%20storage%20menu.png " ")
+   ![Oracle Cloud console, Object Storage](images/object-storage-menu.png " ")
 
 2. Select dataflow-labs compartment in left side and select dataflow-labs bucket
 
    ![Oracle Cloud console, Object Storage](images/object-storage-bucket.png " ")
 
 3. Select object demo.
-   ![Oracle Cloud console, Object Storage](images/demo%20object.png " ")
+   ![Oracle Cloud console, Object Storage](images/demo-object.png " ")
 
 4. Predicted RUL DeltaTable and ParquetTable
    ![Oracle Cloud console, Object Storage](images/sinks.png " ")
 
 
-## Task4: Verify Autonomous Database.
+## Task 4: Verify Autonomous Database.
 
-1. Go to OCI Oracle Database Console (aka. hamburger menu) in the Oracle Cloud console, and select **Oracle Database ** > **Autonomous Data Warehouse**.
+1. Go to OCI Oracle Database Console (aka. hamburger menu) in the Oracle Cloud console, and select **Oracle Database ** &gt; **Autonomous Data Warehouse**.
 
-   ![Oracle Cloud console, Autonomous Database](images/adb_menu.png " ")
+   ![Oracle Cloud console, Autonomous Database](images/adb-menu.png " ")
 
 2. Select dataflow-labs compartment in left side and select manufacturing autonomous database instance
 
-   ![Oracle Cloud console, Autonomous Database](images/adb_manufacturing.png " ")
+   ![Oracle Cloud console, Autonomous Database](images/adb-manufacturing.png " ")
 
 3. Click on manufacturing autonomous database and click on Database Actions button.
-   ![Oracle Cloud console, Autonomous Database](images/abd_details.png " ")
+   ![Oracle Cloud console, Autonomous Database](images/abd-details.png " ")
 
 4. Select SQL developer tool
-   ![Oracle Cloud console, Autonomous Database](images/adb_sql_tool.png " ")
+   ![Oracle Cloud console, Autonomous Database](images/adb-sql-tool.png " ")
 
 5. Select PREDICTED_RUL_ALERTS table
-   ![Oracle Cloud console, Autonomous Database](images/adb_fields.png " ")
+   ![Oracle Cloud console, Autonomous Database](images/adb-fields.png " ")
    
 6. Click on Data to see predicted RUL data.
-   ![Oracle Cloud console, Autonomous Database](images/adb_data.png " ")
+   ![Oracle Cloud console, Autonomous Database](images/adb-data.png " ")
 
 7. Alternate to step 5. you can write SQL queries to fetch data from PREDICTED_RUL_ALERTS table.
-   ![Oracle Cloud console, Autonomous Database](images/adb_alternate_sql.png " ")
+   ![Oracle Cloud console, Autonomous Database](images/adb-alternate-sql.png " ")
 
 
 You may now **proceed to the next lab**.
