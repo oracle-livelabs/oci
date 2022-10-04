@@ -50,6 +50,6 @@ If you are running the workshop in a Paid Cloud Account, ensure you are an Oracl
 * Permission to manage policies, compartments, user groups, and resource managers.
 
 ## Acknowledgments
-- **Author** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
-- **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
-- **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022
+- **Created By/Date** - Sivanesh Selvanataraj, OCI Data Flow
+- **Contributors** - Sujoy Chowdhury, OCI Data Flow
+- **Last Updated By/Date** - Sivanesh Selvanataraj, October 2022
