@@ -47,7 +47,7 @@ In this workshop, you will:
 
 ### Prerequisites
 If you are running the workshop in a Paid Cloud Account, ensure you have the permissions below:
-* Oracle Cloud Account Administrator's role in order to manage policies, compartments, user groups, and resource managers.
+* Oracle Cloud Account Administrator's role to manage policies, compartments, user groups, and resource managers.
 
 ## Acknowledgments
 - **Author** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
