@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will clean up the workshop environment resources used for manufacturing application.
+In this lab, you will clean up the workshop environment resources used for the manufacturing applications in OCI Data Flow.
 
 Estimated time: 20 minutes
 
@@ -20,7 +20,7 @@ Estimated time: 20 minutes
 
    ![Oracle Cloud console, Dataflow](images/dataflow-menu.png " ")
 
-2. Select dataflow-labs compartment and select Runs.
+2. Select the dataflow-labs compartment and select Runs.
    ![Oracle Cloud console, Dataflow](images/runs-compartment.png " ")
 
 3. Click on RealtimeRULPredictor and click on STOP.
@@ -46,7 +46,7 @@ Estimated time: 20 minutes
 
     ![Oracle Cloud, Object Storage](images/object-storage-menu.png " ")
 
-2. In the **Object Storage Details** page, click **Delete** on dataflow-labs-logs. In the confirmation window, click **Delete**.
+2. On the **Object Storage Details** page, click **Delete** on dataflow-labs-logs. In the confirmation window, click **Delete**.
 
    ![Oracle Cloud, Object Storage](images/delete-logs-bucket.png " ")   
 
@@ -54,7 +54,7 @@ Estimated time: 20 minutes
 
     ![Oracle Cloud, Cloud console](images/delete-logs-success.png " ")    
 
-4. In the **Object Storage Details** page, click **Delete** on dataflow-labs. In the confirmation window, click **Delete**.
+4. On the **Object Storage Details** page, click **Delete** on dataflow-labs. In the confirmation window, click **Delete**.
 
    ![Oracle Cloud, Object Storage](images/delete-dataflow-labs.png " ")
 
@@ -70,7 +70,7 @@ Estimated time: 20 minutes
 
     ![Oracle Cloud, Cloud console](images/stack-menu.png " ")       
 
-2. Click destroy on the manufacturing stack and confirm the destruction of stack.
+2. Click destroy on the manufacturing stack and confirm the destruction of the stack.
 
     ![Oracle Cloud, Cloud console](images/destroy-click.png " ")    
 
@@ -82,7 +82,7 @@ Estimated time: 20 minutes
 
    ![Oracle Cloud, Cloud console](images/destroy-succeeded.png " ")
 
-## Acknowledgements
-- **Author** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
+## Acknowledgments
+- **Created By** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
 - **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
 - **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022
