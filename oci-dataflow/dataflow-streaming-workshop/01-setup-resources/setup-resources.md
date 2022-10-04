@@ -33,7 +33,7 @@ Estimated time: 15 minutes
 4. Update the ```user_ocid``` variable with the value from step 1. Other variables don't need any change and click Next.
    ![Oracle Cloud console, Resource Manager Stack](images/update-variables.png " ")
    ![Oracle Cloud console, Resource Manager Stack](images/update-variables-1.png " ")
-5. Review the information provided, Ensure that the ```Run apply``` checkbox is selected and click create.
+5. Review the information provided, Ensure that the ```Run apply``` checkbox is selected. and click ```Create```.
    ![Oracle Cloud console, Resource Manager Stack](images/review.png " ")
 6. Creating stack will auto create Apply job which starts provisioning resources.
    ![Oracle Cloud console, Resource Manager Stack](images/resource-manager-job.png " ") 
@@ -46,9 +46,9 @@ Estimated time: 15 minutes
    ![Oracle Cloud console, Resource Manager Stack](images/resource-manager-job-success.png " ")
 3. Click on the SUCCEEDED job to see job details and resources.
    ![Oracle Cloud console, Resource Manager Stack](images/job-details.png " ")
-4. Click on the hamburger menu in top left corner , select Governance & Administration and then select Tenancy Explorer.
+4. Click on the hamburger menu in the top left corner, select Governance & Administration and then select Tenancy Explorer.
    ![Oracle Cloud console, Resource Manager Stack](images/tenancy-explorer.png " ")
-5. Select dataflow-labs compartment and verify resources in the screenshot are available.
+5. Select the dataflow-labs compartment and verify resources in the screenshot are available.
    ![Oracle Cloud console, Resource Manager Stack](images/resources.png " ")
 
 You may now **proceed to the next lab**.
