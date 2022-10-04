@@ -294,5 +294,6 @@ This is the end of the workshop. You have learned how to add the APM tracers to 
 
 - **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,
-Avi Huber, Senior Director, Product Management
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 - **Last Updated By/Date** - Yutaka Takatsu, August 2022
