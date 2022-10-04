@@ -8,7 +8,7 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Lab 1: Get Started wih Anomaly Detection",
+      "title": "Lab 1: Get Started with Anomaly Detection",
       "description": "Using Anomaly detection",
       "filename": "../../setup-ad/setup-anomaly-detection.md"
     },
@@ -17,11 +17,11 @@
       "filename": "../../setup-policies/setup-policies.md"
     },
     {
-      "title": "Lab 3: Create Object Storage buckets and upload code",
+      "title": "Lab 3: Create Object Storage Buckets and Upload Code",
       "filename": "../../prepare-data-and-app/prepare-data-and-app.md"
     },
     {
-      "title": "Lab 4: Prepare driver configuration",
+      "title": "Lab 4: Prepare Driver Configuration",
       "filename": "../../prepare-config-data-and-app/prepare-config-data-and-app.md"
     },
     {
@@ -37,7 +37,7 @@
       "filename": "../../setup-event/setup-event.md"
     },
     {
-      "title": "Lab 8: Run tests",
+      "title": "Lab 8: Run Anomaly Detection Solution",
       "filename": "../../run-tests/run-tests.md"
     }
   ]

@@ -1,10 +1,9 @@
-
-Lab 4: Prepare driver configuration
+Lab 4: Prepare Driver Configuration
 ===
 
-This lab will help users create a configuration for preprocessing data before training/inference. The Data Pre-Processing(DPP) application provided by the Oracle AI Services team will read this configuration and use it to ingest data sources, execute the processing steps and perform training/inference.
+This lab will help users create a configuration for preprocessing data before training/inference. The Data Pre-Processing(DPP) application provided by the Oracle AI Services team will read this configuration and use it to ingest data sources, execute the processing steps (data transformers) and perform OCI Anomaly Detection Model Training or run Inference.
 
-A brief description of the configuration file sections and their syntax is included here for better understanding. 
+A brief description of the configuration file sections and their syntax is provided below.
 
 ## Driver Configuration
 
@@ -85,11 +84,11 @@ This configuration is used for Anomaly Detection(AD) specific options:
 
 </details>
 
-## Step 1 - Populate config template
+## 1. Populate Driver Configuration Files
 
-A basic template to get started:
+Driver configuration files used in this workshop are provided below.
 
-**Training config**
+**Training Configuration**
 
 ```
 {
@@ -147,12 +146,12 @@ A basic template to get started:
     }
 }
 ```
-1. Copy the above template and paste into a file named training-config.json.
+1. Copy the contents of the configuration snippet above and paste it into a file named training-config.json.
 2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called namespace. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
-3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 1.
-4. Populate compartmentId with compartment OCID from Lab 2.
+3. Populate **projectId** under **serviceApiConfiguration** with the OCI AD Project OCID from Lab 1.
+4. Populate compartmentId with compartment OCID from **Lab 2**.
 
-**Inferencing config** 
+**Inferencing Configuration** 
 
 ```
 {
@@ -211,11 +210,11 @@ A basic template to get started:
 }
 ```
 
-1. Copy the above template and paste into a file named inference-config.json.
+1. Copy the contents of the configuration snippet above and paste it into a file named inference-config.json.
 2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called namespace. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
 3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 1.
-4. Populate compartmentId with compartment OCID from Lab 2.
+4. Populate compartmentId with compartment OCID from **Lab 2**.
 
-## Step 3 - Upload configuration
-*   Put training configuration into **training-config-bucket** in Object Storage, created in Lab 4
-*   Put inferencing configuration into **inferencing-config-bucket**
+## 2. Upload Driver Configuration Files
+*   Upload OCI AD model training configuration file into **training-config-bucket** in OCI Object Storage Bucket, created in **Lab 4**
+*   Upload OCI AD inferencing configuration file into **inferencing-config-bucket**

@@ -23,11 +23,11 @@ This solution will allow users to configure a training pipeline and an inference
 * Pre-requisites
 * Configure OCI Anomaly Detection (AD) Service
 * Configure Policies
-* Prepare code, config, library and datasets
+* Prepare Code, Configuration, Library and Datasets
 * Configure OCI Data Flow
 * Configure OCI Function 
 * Configure OCI Events
-* Running the solution end to end
+* Running the Solution end to end
 
 ## Solution Workflow
 

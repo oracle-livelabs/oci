@@ -1,65 +1,69 @@
-Lab 8: A simple data processing, training and inferencing example
+Lab 8: Run the Anomaly Detection Solution
 ===
 
-## Step 1 - Download Training/Inferencing datasets
+## 1. Download Training/Inferencing Datasets
 
-Download the training and testing (/inference) data files in CSV formats. A sample training data set in Parquet format is also included for interested users, although this workshop will use CSV only.
+      Download the training and testing (/inference) data files in CSV formats. A sample training data set in Parquet format is also included for interested users, although this workshop will use CSV only.
 
-[TestData.csv](./files/TestData.csv) | [TrainData.csv](./files/TrainData.csv) | [TrainData.parquet](./files/TrainData.parquet)
+      [TestData.csv](./files/TestData.csv) | [TrainData.csv](./files/TrainData.csv) | [TrainData.parquet](./files/TrainData.parquet)
 
-## Step 2 - Training
+## 2. Run Model Training Pipeline
 
-Upload the training data to **training-data-bucket**. If a Data Flow run is triggered successfully, and an Anomaly Detection model is trained successfully, then the training path is working.
+      Upload the training data to **training-data-bucket**. If a Data Flow run is triggered successfully, and an Anomaly Detection model is trained successfully, then the training path is working.
 
-The following sequence of steps can be used to verify the workflow or troubleshoot issues if any:
-1. Look for a new Data Flow Run created under the application under **Analytics & AI** -> **Runs**.
-2. Wait for the Run status to change from *Accepted* to *In Progress* and then *Successful*. Note: The transition may sometimes happen before you navigate and check.
-3. If the Run moves to Failed, check the stdout and stderr logs under the Logs tab. Notice: the log may need a couple minutes to show up after the Run fails. Logs can also be downloaded from the log bucket in zip format.
-4. During the Run, Processed data will be saved in CSV format in **staging-bucket** under the folder specified in the config, in a subdirectory named **training_processed_data_\<current datetime\>**
+      The following steps can be used to verify the workflow or troubleshoot issues (if any)
+      - Look for a new Data Flow Run created under the application under **Analytics & AI** -> **Runs**.
+      - Wait for the Run status to change from *Accepted* to *In Progress* and then *Successful*. **NOTE**: The transition may sometimes happen before you navigate and check.
+      - If the Run moves to Failed status, check the stdout and stderr logs under the Logs tab. **NOTE**: the log may need a couple minutes to show up after the Run fails. Logs can also be downloaded from the log bucket in zip format.
+      - During the Run, Processed data will be saved in CSV format in **staging-bucket** under the folder specified in the driver configuration file, in a subdirectory named **training_processed_data_\<current datetime\>**. See sample screenshot below.
 
-![](./images/Exp1.png)
-5. Once the Run succeeds, a new AD model should get trained successfully. 
+      ![](./images/Exp1.png)
+
+      - Once the Run succeeds, a new AD model should get trained successfully. 
   
-    * If the logs contain an error indicating that training has failed, search for the model OCID from the search box or by navigating to the Anomaly Detection project, and check the reason for failure.
+      * If the logs contain an error indicating that model training has failed, search for the model OCID from the search box or by navigating to the Anomaly Detection project, and check the reason for failure.
 
-6. Model information will be written to a file named **model_info.** in **results-bucket**. A sample is shown below for your reference:
+      - Model information will be written to a file named **model_info.** in **results-bucket**. A sample is shown below for your reference:
 
-```
-{
-    "model_ids": [
-        {
-            "model_id": "ocid1.aianomalydetectionmodel.oc1.phx.amaaaaaaor7l3jiavbwqxnwiqvikmrdjyeaq7e2bvrpbh3y5apq4iv4xmfga",
-            "columns": [
-                "timestamp",
-                "sensor_01",
-                "sensor_02",
-                "sensor_03",
-                "sensor_04",
-                "sensor_05",
-                "sensor_06",
-                "sensor_07",
-                "sensor_08",
-                "sensor_09",
-                "sensor_10",
-                "sensor_11",
-                "sensor_12",
-                "sensor_13"
-            ]
-        }
-    ]
-}
-```
+      ```
+      {
+          "model_ids": [
+              {
+                  "model_id": "ocid1.aianomalydetectionmodel.oc1.phx.amaaaaaaor7l3jiavbwqxnwiqvikmrdjyeaq7e2bvrpbh3y5apq4iv4xmfga",
+                  "columns": [
+                      "timestamp",
+                      "sensor_01",
+                      "sensor_02",
+                      "sensor_03",
+                      "sensor_04",
+                      "sensor_05",
+                      "sensor_06",
+                      "sensor_07",
+                      "sensor_08",
+                      "sensor_09",
+                      "sensor_10",
+                      "sensor_11",
+                      "sensor_12",
+                      "sensor_13"
+                  ]
+              }
+          ]
+      }
+      ```
 
-Details of the trained model such as FAP(False Alarm Probability) can be checked under **Anomaly Detection** or from the search panel.
+      Details of the trained model such as FAP(False Alarm Probability) can be checked under **Anomaly Detection** or from the search panel.
 
-![](./images/Exp2.png)
+      ![](./images/Exp2.png)
 
-## Step 3 - Inferencing
+## 3. Run Inferencing Pipeline
 
-The application assumes the user has succesfully performed training using the pipeline prior to inference.
+The application assumes the user has succesfully performed model training using the pipeline prior to inference.
+
 Similar to the previous section, upload the inferencing data file in the bucket specified by **inferencing-data-bucket**. If the Data Flow run is triggered and is successful, and the result of Anomaly Detection shows up in the results bucket, then the inferencing path is working. 
 
-Follow steps 1 through 5 above to monitor the pipeline and/or troubleshoot. Instead of Step 6, check the results folder for the inference results. After a successful run, the results should be populated as shown in the screenshot below in the **results-bucket**:
+Follow the instructions described in Step [2] (above) to monitor the pipeline and/or troubleshoot problems. In the last step, check the results folder for the inference results.
+
+After a successful run, the results should be populated as shown in the screenshot below in the **results-bucket**:
 
 ![](./images/Exp3.png)
 
@@ -293,4 +297,5 @@ Download the CSV file to view and verify the anomaly detection results. When the
 ]
 ```
 
-In case users want to run inference on a model trained outside the pipeline, the model\_info file mentioned previously needs to be created in **results-bucket** in the same format. This is outside the scope of this workshop.
+**Congratulations!**.  You have successfully completed all labs in this workshop.
+

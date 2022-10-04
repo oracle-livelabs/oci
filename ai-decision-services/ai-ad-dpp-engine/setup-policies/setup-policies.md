@@ -1,7 +1,7 @@
-Lab 2: Configure policies
+Lab 2: Configure Policies
 ===
 
-1.  A valid compartment is required for all the resource mentioned below to work. Note down the compartment OCID and compartment name from the Compartments page in Console.
+1.  An OCI *Compartment* is required which will contain all the resources mentioned. Note down the compartment OCID and compartment name from the **Compartments** page in OCI Console.
 
     
 2.  Go to **Governance** and **Administration** >> **Dynamic Groups** and create the following matching rule:
@@ -13,7 +13,7 @@ Lab 2: Configure policies
     
     ![](./images/Set-Policy2.png)
     
-3.  Go to **Policies** and prepare all the necessary policies. For convenience, I allow any-user to access the resources. You can refine the scope by creating user groups.
+3.  Go to **Policies** and configure all the necessary policies. For convenience, allow `any-user` to access the resources (see below). You can refine the scope by creating user groups.
         
     ```
     Allow any-user to manage objects in COMPARTMENT <compartment-name>
