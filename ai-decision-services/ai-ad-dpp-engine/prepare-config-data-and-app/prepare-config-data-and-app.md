@@ -84,7 +84,7 @@ This configuration is used for Anomaly Detection(AD) specific options:
 
 </details>
 
-## 1. Populate Driver Configuration Files
+## 1. Update Driver Configuration Files
 
 Driver configuration files used in this workshop are provided below.
 

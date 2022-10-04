@@ -6,11 +6,11 @@ In this lab, configure the following resources before proceeding to configure in
 *   Driver code
 *   Library (Archive.zip)
 
- ## Step 1: Download driver code
+## 1. Download driver code
 
 This is an executable built by OCI AI Services team and provided to users. The latest driver code can be downloaded from [here](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/df_driver.py).
 
-## Step 2: Library
+## 2. Library
 
 A Library which includes multiple data transformers and user defined functions is provided to users as an [archive file](https://objectstorage.us-phoenix-1.oraclecloud.com/p/kUGPXE9HB_BtgpCqe7jyOUUD_rorNiHD0HWsIR52r4KN4axrHpidLnBo4y1Nsnb-/n/ax3dvjxgkemg/b/archive-bucket/o/archive.zip) (archive.zip).  Download this zip file as it will be used later in this lab.
 
@@ -18,7 +18,7 @@ Refer to the **Transformers** [documentation](../optional/Introduction-to-Transf
 
 For users interested in building their own data transformers (preprocessors) and building the archive from sources, this [document](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/prepackaged_dataflow_applications.md) describes how to generate an archive in the required format.
 
-## Step 3: Set up OCI Object Storage Buckets
+## 3. Set up OCI Object Storage Buckets
 
 This guide uses the following OCI Object Storage Buckets (any change to the names will have to be reflected in the subsequent setup steps):
 
@@ -35,7 +35,7 @@ To enabling object event emit, you can edit the bucket by going to the bucket's 
 
 ![](./images/Prepare-OS1.png)
 
-## Step 4: Upload Driver and Library
+## 4. Upload Driver and Library
 
 Upload the Driver and Library (archive file) which you downloaded in Steps [1] and [2] into the respective OCI Object Storage Buckets. See below.
 

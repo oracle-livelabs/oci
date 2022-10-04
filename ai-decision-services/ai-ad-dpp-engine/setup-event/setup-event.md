@@ -68,4 +68,4 @@ OCI Events tracks resource changes with events which comply with CNCF CloudEvent
 Refer to the OCI documentation (links below) to learn more about how OCI Events Service can be used to monitor events emitted by OCI Autonomous Database and OCI Object Storage.
 
 - [OCI Autonomous Database](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventsproducers.htm#dbaasevents__AutoDB)
-- [OCI Object Storage](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventsproducers.htm#ObjectStor__bucket).
+- [OCI Object Storage](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventsproducers.htm#ObjectStor__bucket)
