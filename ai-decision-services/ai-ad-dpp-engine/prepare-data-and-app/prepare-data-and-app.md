@@ -1,4 +1,4 @@
-Lab 4: Prepare code and create Object Storage buckets
+Lab 3: Create Object Storage buckets and upload code
 ===
 
 This lab will help users set up the following resources before proceeding to configure infrastructure resources
@@ -10,7 +10,7 @@ This lab will help users set up the following resources before proceeding to con
 
 This is an executable built by OCI AI Services team and provided to users. The latest driver code can be downloaded from here: [link](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/df_driver.py).
 
-## Step 3: Library
+## Step 2: Library
 
 Library is an archive.zip incorporating transformers and user defined functions. Here is the link of an introduction to the [transformers](../optional/Introduction-to-Transformers-for-Data-Preprocessing.md) included currently. 
 For this lab, use the archive below.
@@ -20,7 +20,7 @@ For users interested in building their own preprocessing steps and building the 
 
 
 
-## Step 4: Set up Object Storage Buckets
+## Step 3: Set up Object Storage Buckets
 
 This guide uses the following buckets (any change to the names will have to be reflected in the subsequent setup steps):
 
@@ -37,7 +37,7 @@ To enabling object event emit, you can edit the bucket by going to the bucket's 
 
 ![](./images/Prepare-OS1.png)
 
-## Step 5: Upload driver and library
+## Step 4: Upload driver and library
 
 Now you should place what you've prepared to the right buckets:
 

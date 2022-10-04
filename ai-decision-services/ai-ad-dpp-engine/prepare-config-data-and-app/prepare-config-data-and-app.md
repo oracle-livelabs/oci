@@ -56,11 +56,13 @@ Users should ensure the data processing steps are configured properly in the rig
 
 This is the location where intermediate results will be stored before training/inference begins. Basically these will be dataframes stored in csv format at an assigned object storage bucket. 
 
-*   **combinedResult (optional)** - The name of the data frame to output. Specify this parameter only when a single data frame needs to be output. However, if sharding is desired/configured, the sharded dataset will be output automatically. In this case, there is no need to specify this parameter.
+*   **combinedResult** - The name of the data frame to output. 
+    * Specify this parameter only when a single data frame needs to be output. 
+    * If sharding is desired/configured, the sharded dataset will be output automatically. In this case, there is **no need** to specify this parameter.
 *   **type** \- only **object storage** is supported at present.
 *   **namespace** - the namespace of the target object storage bucket. 
 *   **bucket** \- the bucket name. 
-*   **objectName** \- the full path and name of the object. 
+*   **folder** \- folder name prefix where you want to store your intermediate processed data.
 
 ### outputDestination
 
@@ -69,7 +71,8 @@ This is where the final output (AD results) and model information (model_info) i
 *   **type** \- only **object storage** is supported at present.
 *   **namespace** - the namespace of the target object storage bucket. 
 *   **bucket** \- the bucket name. 
-*   **objectName** \- the full path and name of the object. 
+*   **objectName** \- the full path and name of the object. This will be used for training phase for storing the model information. 
+*   **folder** \- the name of the folder where you want to store the inferencing result.
 
 ### serviceApiConfiguration
 
@@ -88,7 +91,7 @@ A basic template to get started:
 
 **Training config**
 
-```java
+```
 {
     "inputSources": [
         {
@@ -132,6 +135,7 @@ A basic template to get started:
         "namespace":"<your-namespace>",
         "bucket": "output-bucket",
         "objectName": "model_info.json",
+        "folder":"processing_folder"
     },
     "serviceApiConfiguration": {
         "anomalyDetection": {
@@ -145,12 +149,12 @@ A basic template to get started:
 ```
 1. Copy the above template and paste into a file named training-config.json.
 2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called namespace. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
-3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 3.
+3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 1.
 4. Populate compartmentId with compartment OCID from Lab 2.
 
 **Inferencing config** 
 
-```java
+```
 {
     "inputSources": [
         {
@@ -194,6 +198,7 @@ A basic template to get started:
         "namespace":"<your-namespace>",
         "bucket": "output-bucket",
         "objectName": "model_info.json",
+        "folder":"processing_folder"
     },
     "serviceApiConfiguration": {
         "anomalyDetection": {
@@ -208,7 +213,7 @@ A basic template to get started:
 
 1. Copy the above template and paste into a file named inference-config.json.
 2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called namespace. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
-3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 3.
+3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 1.
 4. Populate compartmentId with compartment OCID from Lab 2.
 
 ## Step 3 - Upload configuration

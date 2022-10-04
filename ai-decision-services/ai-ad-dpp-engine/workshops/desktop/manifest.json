@@ -10,38 +10,34 @@
     {
       "title": "Lab 1: Get Started wih Anomaly Detection",
       "description": "Using Anomaly detection",
-      "filename": "../../anomaly-detection/anomaly-detection.md"
+      "filename": "../../setup-ad/setup-anomaly-detection.md"
     },
     {
       "title": "Lab 2: Configure Policies",
       "filename": "../../setup-policies/setup-policies.md"
     },
     {
-      "title": "Lab 3: Configure AD",
-      "filename": "../../setup-policies/setup-policies.md"
-    },
-    {
-      "title": "Lab 4: Create Object Storage buckets and upload code",
+      "title": "Lab 3: Create Object Storage buckets and upload code",
       "filename": "../../prepare-data-and-app/prepare-data-and-app.md"
     },
     {
-      "title": "Lab 5: Prepare driver configuration",
+      "title": "Lab 4: Prepare driver configuration",
       "filename": "../../prepare-config-data-and-app/prepare-config-data-and-app.md"
     },
     {
-      "title": "Lab 6: Configure OCI DataFlow",
+      "title": "Lab 5: Configure OCI DataFlow",
       "filename": "../../setup-dataflow/data-flow.md"
+    },
+    {
+      "title": "Lab 6: Configure OCI Functions",
+      "filename": "../../setup-function/setup-function.md"    
     },
     {
       "title": "Lab 7: Configure OCI Events",
       "filename": "../../setup-event/setup-event.md"
     },
     {
-      "title": "Lab 8: Configure OCI Functions",
-      "filename": "../../setup-function/setup-function.md"    
-    },
-    {
-      "title": "Lab 9: Run tests",
+      "title": "Lab 8: Run tests",
       "filename": "../../run-tests/run-tests.md"
     }
   ]

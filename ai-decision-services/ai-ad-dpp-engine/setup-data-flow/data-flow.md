@@ -1,4 +1,4 @@
-Lab 5: Configure OCI Data Flow service
+Lab 5: Configure OCI DataFlow
 ===
 
 Data Flow is OCI's cloud based serverless Spark service. This workshop will mainly rely on Data Flow to process data and conduct post processing steps. Users can choose the appropriate shape for the driver and executor nodes based on data size. Increasing the number of Executors will speed up the processing for large data sets. For small data sets such as the ones used in this workshop, most of the options can be left at their default values. The following options need to be updated:

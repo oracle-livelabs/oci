@@ -1,4 +1,4 @@
-Lab 9: A simple data processing, training and inferencing example
+Lab 8: A simple data processing, training and inferencing example
 ===
 
 ## Step 1 - Download Training/Inferencing datasets
