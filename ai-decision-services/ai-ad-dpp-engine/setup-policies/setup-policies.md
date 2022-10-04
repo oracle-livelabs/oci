@@ -1,7 +1,7 @@
-Lab 2: Setup policies
+Lab 2: Configure policies
 ===
 
-1.  First of all, you should have a valid compartment for all the resource mentioned below working. Get your compartment OCID.
+1.  A valid compartment is required for all the resource mentioned below to work. Note down the compartment OCID and compartment name from the Compartments page in Console.
 
     
 2.  Go to **Governance** and **Administration** >> **Dynamic Groups** and create the following matching rule:

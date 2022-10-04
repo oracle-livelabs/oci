@@ -1,10 +1,10 @@
-Lab 1: Setup Anomaly Detection
+Lab 1: Configure Anomaly Detection
 =================
 
-Here we will use AD as the example of post processing. Go to AI Services → Anomaly Detection, 
+Go to AI Services → Anomaly Detection, 
 
 ![](./images/Set-AD1.png)
-and create a project there.
+and create a project there. Use the recommended default values for FAP and training fraction.
 ![](./images/Set-AD2.png)
 
-Take down the OCID of your project, which will be used below.
+Note the OCID of the project, which will be used in subsequent Labs.
