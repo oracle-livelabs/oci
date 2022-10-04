@@ -5,3 +5,5 @@
 *.patch
 env.sh
 .vscode
+.idea
+.github
