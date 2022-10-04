@@ -1,7 +1,7 @@
 Lab 8: Run the Anomaly Detection Solution
 ===
 
-## 1. Download Training/Inferencing Datasets
+## 1. Download Model Training and Inferencing Datasets
 
 Download the training and testing (/inference) data files in CSV formats. A sample training data set in Parquet format is also included for interested users, although this workshop will use CSV only.
 

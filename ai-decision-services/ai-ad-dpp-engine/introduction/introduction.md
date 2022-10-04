@@ -4,7 +4,7 @@
 
 In this workshop, users will learn how to implement an end to end **Anomaly Detection** solution using a data pre-processing workflow engine.
 
-Estimated Time: 1-2 hours
+**Estimated Time:** 1-2 hours
 
 ## Objectives
 This solution will allow users to configure a training pipeline and an inference pipeline in their tenancy, along with ingestion and preprocessing of their data. Input sizes could range from a few rows to several tens of millions of rows, and 1 column to several thousands of columns.

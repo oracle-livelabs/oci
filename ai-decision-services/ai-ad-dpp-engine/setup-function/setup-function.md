@@ -19,7 +19,7 @@ Lab 6: Configure OCI Functions
   ![](./images/Set-Fn4.png)
     
 
-## 2. Creating an OCI Function
+## 2. Create an OCI Function
 
 Go to **Functions** → **Applications**, and Create an *Application*. See screenshots below. Then go to **Getting Started** and use **Cloud Shell setup**. Follow the instructions on the pad and deploy the demo function. Verify that it can be invoked successfully.
 
@@ -34,7 +34,7 @@ $ fn invoke <func-name> <app-name>
 Hello, World!
 ```
 
-## 3. Configuring OCI Function to invoke the Data Flow
+## 3. Configure OCI Function to invoke the Data Flow
 
 - Update the Function body (func.py)
 

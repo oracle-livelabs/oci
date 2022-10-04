@@ -6,7 +6,7 @@ In this lab, configure the following resources before proceeding to configure in
 *   Driver code
 *   Library (Archive.zip)
 
-## 1. Download driver code
+## 1. Download Driver Code
 
 This is an executable built by OCI AI Services team and provided to users. The latest driver code can be downloaded from [here](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/df_driver.py).
 
@@ -22,14 +22,14 @@ For users interested in building their own data transformers (preprocessors) and
 
 This guide uses the following OCI Object Storage Buckets (any change to the names will have to be reflected in the subsequent setup steps):
 
-*   **driver-code-archive-bucket**: the bucket to store driver code and archive.zip consuming by Data Flow.
-*   **training-config-bucket**: the bucket to store training process configuration.
-*   **training-data\-bucket**: the bucket to store training data. Need to enable **Emit Object Events**.
-*   **inferencing-config-bucket**: the bucket to store inferencing process configuration.
-*   **inferencing-data-bucket**: the bucket to store training data. Need to enable **Emit Object Events**.
-*   **staging-bucket**: the bucket to store processed interim data, i.e. the data passed through processing, waiting for being fed to training or inferencing. 
-*   **output-bucket**: the bucket to store the finalized output from inferencing, the list of trained models and data dependent information
-*   **logs-bucket**: the bucket to store data flow logs.
+*   **driver-code-archive-bucket**: The bucket to store driver code and archive.zip consuming by Data Flow.
+*   **training-config-bucket**: The bucket to store training process configuration.
+*   **training-data\-bucket**: The bucket to store training data. Need to enable **Emit Object Events**.
+*   **inferencing-config-bucket**: The bucket to store inferencing process configuration.
+*   **inferencing-data-bucket**: The bucket to store training data. Need to enable **Emit Object Events**.
+*   **staging-bucket**: The bucket to store processed interim data, i.e. the data passed through processing, waiting for being fed to training or inferencing. 
+*   **output-bucket**: The bucket to store the finalized output from inferencing, the list of trained models and data dependent information
+*   **logs-bucket**: The bucket to store data flow logs.
 
 To enabling object event emit, you can edit the bucket by going to the bucket's page:
 
