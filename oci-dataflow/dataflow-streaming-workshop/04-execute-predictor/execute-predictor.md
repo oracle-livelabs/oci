@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This workshop uses OCI Data Flow to predict in real time the Remaining Useful Life (RUL) of equipment using Apache Spark streaming application with the resources provisioned in Lab 1, Lab 2, and Lab 3.
+This workshop uses OCI Data Flow to predict in real time the Remaining Useful Life (RUL) of equipment using the Apache Spark streaming application with the resources provisioned in Lab 1, Lab 2, and Lab 3.
 
 Estimated time: 15 minutes
 
