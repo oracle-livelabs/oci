@@ -24,18 +24,18 @@ Estimated time: 15 minutes
     * OCI Streampool & Streams
     * OCI Dataflow Application & Runs
 
-## Task 1: Create manufacturing application stack 
-1. Open profile on top right corner and click on username.
+## Task 1: Create a manufacturing application stack 
+1. Open the profile in the top right corner and click on the username.
 	![Oracle Cloud console Menu](images/user-info.png " ")
-2. Click the link to create stack to provision all necessary resources [![Deploy to Manufacturing Application to Oracle Cloud](images/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-samples/oracle-dataflow-samples/raw/main/scala/manufacturing/src/resources/manufacturing.zip)
+2. Click the link to create a stack to deploy all necessary resources [![Deploy to Manufacturing Application to Oracle Cloud](images/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-samples/oracle-dataflow-samples/raw/main/scala/manufacturing/src/resources/manufacturing.zip)
 3. Review and accept ```Oracle terms to Use``` and click Next.
    ![Oracle Cloud console, Resource Manager Stack](images/resource-manager-stack.png " ")
-4. Update ```user_ocid``` variable with value from step 1. other variables doesn't need any change and click Next.
+4. Update the ```user_ocid``` variable with the value from step 1. Other variables don't need any change and click Next.
    ![Oracle Cloud console, Resource Manager Stack](images/update-variables.png " ")
    ![Oracle Cloud console, Resource Manager Stack](images/update-variables-1.png " ")
-5. Review the information provided and ensure ```Run apply``` checkbox is selected and click create.
+5. Review the information provided, Ensure that the ```Run apply``` checkbox is selected and click create.
    ![Oracle Cloud console, Resource Manager Stack](images/review.png " ")
-6. Creating stack will auto create Apply job which start provisioning resources.
+6. Creating stack will auto create Apply job which starts provisioning resources.
    ![Oracle Cloud console, Resource Manager Stack](images/resource-manager-job.png " ") 
    
 ## Task 2: Verify required resources provisioned
@@ -44,7 +44,7 @@ Estimated time: 15 minutes
    ![Oracle Cloud console, Resource Manager Stack](images/end-of-log.png " ")
 2. Verify Apply job status is SUCCEEDED.
    ![Oracle Cloud console, Resource Manager Stack](images/resource-manager-job-success.png " ")
-3. Click on SUCCEEDED job to see job details and resources.
+3. Click on the SUCCEEDED job to see job details and resources.
    ![Oracle Cloud console, Resource Manager Stack](images/job-details.png " ")
 4. Click on the hamburger menu in top left corner , select Governance & Administration and then select Tenancy Explorer.
    ![Oracle Cloud console, Resource Manager Stack](images/tenancy-explorer.png " ")
@@ -54,6 +54,6 @@ Estimated time: 15 minutes
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
-- **Author** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
+- **Created By** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
 - **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
-- **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022
+- **Last Updated By/Date** - Sivanesh Selvanataraj, October 2022
