@@ -1,63 +1,60 @@
 
-Lab 3: Preparation code, config, library and datasets
+Lab 4: Prepare driver configuration
 ===
 
-Ensure the following resources are setup properly before proceeding to configure infrastructure resources:
+This lab will help users create a configuration for preprocessing data before training/inference. The Data Pre-Processing(DPP) application provided by the Oracle AI Services team will read this configuration and use it to ingest data sources, execute the processing steps and perform training/inference.
 
-*   Orchestration configuration
-*   Driver code (Orchestrator)
-*   Training/Inferencing datasets
-*   Library (Archive.zip)
+A brief description of the configuration file sections and their syntax is included here for better understanding. 
 
-## Orchestration Configuration
+## Driver Configuration
 
-This is a JSON file that defines the Data Pre-Processing (DPP) workflow. The configuration is composed of the following 5 parts.
+This is a JSON file that defines the DPP workflow. The configuration is composed of the following 5 parts.
 
-<table class="wrapped confluenceTable"><colgroup><col><col></colgroup><tbody><tr><th class="confluenceTh">Section Name</th><th class="confluenceTh">Explanation</th></tr><tr><td class="confluenceTd">inputSources</td><td class="confluenceTd">Connector for input data sources. Currently we support reading data from Object Storage, ATP and ADW.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">phaseInfo<td class="highlight-blue confluenceTd" data-highlight-colour="blue">A flag specifies whether it's training or inferencing, and connector to metadata source.</td></tr><tr><td class="confluenceTd">processingSteps</td><td class="confluenceTd">Data preprocessing transformers and related input arguments.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">stagingDestination</td><td class="highlight-blue confluenceTd" data-highlight-colour="blue">Connector for intermediate processed data storage, which will be used in post-processing steps.</td></tr><tr><td class="confluenceTd">outputDestination</td><td class="confluenceTd">Connector for final output.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">serviceApiConfiguration (Optional)</td><td class="highlight-blue confluenceTd" data-highlight-colour="blue">Configuration required for post-processing steps. For example, arguments for anomaly detection client.</td></tr></tbody></table>
+<table class="wrapped confluenceTable"><colgroup><col><col></colgroup><tbody><tr><th class="confluenceTh">Section Name</th><th class="confluenceTh">Explanation</th></tr><tr><td class="confluenceTd">inputSources</td><td class="confluenceTd">Connector for input data sources. Currently we support reading data from Object Storage, ATP and ADW.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">phaseInfo<td class="highlight-blue confluenceTd" data-highlight-colour="blue">A flag specifies whether it's training or inferencing, and connector to metadata source.</td></tr><tr><td class="confluenceTd">processingSteps</td><td class="confluenceTd">Data preprocessing transformers and related input arguments.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">stagingDestination</td><td class="highlight-blue confluenceTd" data-highlight-colour="blue">Connector for intermediate processed data storage, which will be used in post-processing steps.</td></tr><tr><td class="confluenceTd">outputDestination</td><td class="confluenceTd">Connector for final output.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">serviceApiConfiguration</td><td class="highlight-blue confluenceTd" data-highlight-colour="blue">Configuration required for post-processing steps. For example, arguments for anomaly detection client.</td></tr></tbody></table>
 
-## inputSources
+### inputSources
 
 The input data source configuration.
 
 *   **dataframeName** - the variable name of this data frame will be used in the whole context.
 *   **type** - can either be **object-storage** or **oracle**.
-*   **isEventDriven** - (optional) This is an optional parameter whose default value is _false_. It takes a boolean value of _true_ is provided if the input source needs to be taken from a configured event. Note that currently, it is only supported for Object Storage emitted events.
-*   For object storage, you will require:
+*   **isEventDriven** - (optional) This is an optional parameter whose default value is _false_. It takes a boolean value of _true_ is provided if the input source needs to be taken from a configured event. Note that this option is currently only supported for Object Storage emitted events.
+*   For object storage, the following are required:
     *  **namespace** \- the namespace of the target object storage bucket. 
     *   **bucket** - the bucket name. 
     *   **objectName** \- the full path and name of the object. This can also be a prefix with star (\*) when _isEventDriven_ is provided with _true_ value, where the object generating the event is considered and attempted to read if the name matches the provided expression. For example, updating object with name _anomalies/test.csv_ can generate an event and can be captured by using _anomalies/\*_ as the objectName, provided isEventDriven is set to true. Also, note that anything after \* is ignored in our current version and we will add more functionality in upcoming sprints.
-*   For oracle, you will require:
+*   For Oracle ADW/ATP sources, the following are required:
     *   **adbId** \- the OCID of your ADW application. 
     *   **tableName** \- name of the table. 
     *   **connectionId** \- the format is **<DBName>\_high**, which can be found under tnsnames.ora of [Wallet](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/connect-download-wallet.html#GUID-B06202D2-0597-41AA-9481-3B174F75D4B1). 
     *   **user** \- the owner of the table. In most cases it will be **admin**. 
     *   **password** \- the password you setup when you download the Wallet. 
 
-## phaseInfo (optional)
+### phaseInfo
 
-This will define the location where we store the metadata we gained from training phase for data dependent processes, like **one_hot_encoding**.
+This defines the location where the application will store the metadata from training phase for data dependent processes, like **one_hot_encoding**.
 
 *   **connector** - the connector to object storage. It will be composed of
     *   **namespace** - the namespace of the target object storage bucket. Required if it is for object storage.
     *   **bucket** - the bucket name. Required if it is for object storage.
     *   **objectName** \- the full path and name of the object. Required if it is for object storage.
 
-## processingSteps
+### processingSteps
 
 This section lists transformations that need to be applied to the input data sets. This is the core of the data processing. Every item in the list is a step, and all the steps will be executed in sequence, one after another. 
 
 Users should ensure the data processing steps are configured properly in the right sequence otherwise the workflow might fail and throw exceptions. DPP does not validate the individual data processing steps prior to executing the workflow.
 
 *   **stepType** \- can be either **singleDataFrameProcessing** (for transforming on top of single dataframe) or **combineDataFrames** (for merging or joining two dataframes).
-*   **configurations** - the configuration related to the step you take, which will include:
-    *   **dataframeName** - a name you given to the output of the transformation.
+*   **configurations** - the configuration related to the step to be taken, which will include:
+    *   **dataframeName** - a name to be given to the output of the transformation.
     *   **steps** - a list of all transformers you want to apply to your target dataframe at this time. For each step, there will be:
-        *   **stepName** - the name of the transformer you want to apply. It must exactly matches the one you defined in archive. For the full list of offered transformers, please check **Appendix II: List of Transformers**.
-        *   **args** \- all the arguments required for the transformer you choose to use. For details about it, check **Appendix II: List of Transformers**.
+        *   **stepName** - the name of the transformer to be applied. It must exactly matches the ones defined in the library(archive). For the full list of offered transformers, please check **Appendix II: List of Transformers**.
+        *   **args** \- all the arguments required for the transformer you choose to use. For details about it, refer to **Appendix II: List of Transformers**.
 
-## stagingDestination
+### stagingDestination
 
-This is the location where intermediate results will be stored before post processing steps begin. Basically these will be dataframes stored in csv format at an assigned object storage bucket. 
+This is the location where intermediate results will be stored before training/inference begins. Basically these will be dataframes stored in csv format at an assigned object storage bucket. 
 
 *   **combinedResult (optional)** - The name of the data frame to output. Specify this parameter only when a single data frame needs to be output. However, if sharding is desired/configured, the sharded dataset will be output automatically. In this case, there is no need to specify this parameter.
 *   **type** \- only **object storage** is supported at present.
@@ -65,7 +62,7 @@ This is the location where intermediate results will be stored before post proce
 *   **bucket** \- the bucket name. 
 *   **objectName** \- the full path and name of the object. 
 
-## outputDestination
+### outputDestination
 
 This is where the final output (AD results) and model information (model_info) is stored after inferencing.
 
@@ -74,18 +71,20 @@ This is where the final output (AD results) and model information (model_info) i
 *   **bucket** \- the bucket name. 
 *   **objectName** \- the full path and name of the object. 
 
-## serviceApiConfiguration
+### serviceApiConfiguration
 
-This configuration is used after data preprocessing steps. Here we will use it for AD related configuration:
+This configuration is used for Anomaly Detection(AD) specific options:
 
 * **serviceEndpoint** - this is the region specific endpoint for AD service. Use **null** for now.
 * **profileName** - use **"DEFAULT"** for now. This is used for local runs to specify the OCI SDK profile to use from ~/.oci
-* **projectId** - ocid of AD project from Lab 2.
+* **projectId** - OCID of AD project from Lab 2.
 * **compartmentId** - user's compartment Id.
 
-## Example
+</details>
 
-A basic template to get you started:
+## Step 1 - Populate config template
+
+A basic template to get started:
 
 **Training config**
 
@@ -144,6 +143,10 @@ A basic template to get you started:
     }
 }
 ```
+1. Copy the above template and paste into a file named training-config.json.
+2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called namespace. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
+3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 3.
+4. Populate compartmentId with compartment OCID from Lab 2.
 
 **Inferencing config** 
 
@@ -198,27 +201,16 @@ A basic template to get you started:
             "profileName": "DEFAULT",
             "projectId": "<ad-project-id>",
             "compartmentId": "<your-compartment-ocid>",
-            "modelId": "<>"
         }
     }
 }
 ```
 
-  
+1. Copy the above template and paste into a file named inference-config.json.
+2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called namespace. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
+3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 3.
+4. Populate compartmentId with compartment OCID from Lab 2.
 
-## Driver code
-
-This is an executable built by OCI AI Services team and provided to users. The latest driver code can be downloaded from here: [link](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/df_driver.py).
-
-## Training/Inferencing datasets
-
-Attached are a set of training and testing (/inference) data files in CSV and Parquet formats.
-
-[TestData.csv](./files/TestData.csv) [TrainData.csv](./files/TrainData.csv) [TrainData.parquet](./files/TrainData.parquet)
-
-## Library
-
-Library is an archive.zip incorporating transformers and user defined functions. Here is the link of an introduction to the [transformers](../optional/Introduction-to-Transformers-for-Data-Preprocessing.md) in this bucket. And here is a [doc](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/prepackaged_dataflow_applications.md) describing how to generate an archive.
-
-For this lab, use the archive below.
-[Archive link](https://objectstorage.us-phoenix-1.oraclecloud.com/p/kUGPXE9HB_BtgpCqe7jyOUUD_rorNiHD0HWsIR52r4KN4axrHpidLnBo4y1Nsnb-/n/ax3dvjxgkemg/b/archive-bucket/o/archive.zip)
+## Step 3 - Upload configuration
+*   Put training configuration into **training-config-bucket** in Object Storage, created in Lab 4
+*   Put inferencing configuration into **inferencing-config-bucket**

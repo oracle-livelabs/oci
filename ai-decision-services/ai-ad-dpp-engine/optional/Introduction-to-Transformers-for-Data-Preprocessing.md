@@ -1,7 +1,7 @@
 Introduction to Transformers for Data Preprocessing
 ===
 
-This document is a deeper dive and demonstrate with an example, showing how the input data will look like after processed by the transformers. The following is our sample input dataset for most examples. If there is no specified input, this will be the input.
+This document is a deeper dive and demonstrate with an example, showing how the input data will look like after processed by the transformers. The following is used as the sample input dataset for most examples, unless mentioned otherwise.
 
 **Sample Dataset**
 
