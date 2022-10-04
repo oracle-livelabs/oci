@@ -38,16 +38,14 @@ The diagram below provides an overview of the OCI Data Flow Service, its feature
 
 ### Objectives
 In this workshop, you will:
-* Create Apache Spark Machine Learning application and execute it in OCI Data Flow.
-* Create Apache Spark Structured Streaming applications and execute them in OCI Data Flow.
-* Create Apache Spark Batch application with Delta Table operations in OCI Data Flow.
+* Create Apache Spark machine learning applications in OCI Data Flow.
+* Create Apache Spark structured streaming applications in OCI Data Flow.
+* Create Apache Spark batch application that can do Delta Table operations in OCI Data Flow.
 * Explore Spark UI for Apache Spark batch and structured streaming applications in OCI Data Flow.
 * Access Spark driver, executor, and application logs in real-time in OCI Data Flow.
 * Integrate with other OCI services such as OCI Streaming, OCI Object Storage, OCI Autonomous Databases, and OCI Vault.
 
 ### Prerequisites
-* An Oracle Free Tier with a 30-day free trial or Paid Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported. 
-
 If you are running the workshop in a Paid Cloud Account, ensure you have the permissions below:
 * Oracle Cloud Account Administrator role to manage polices, compartment, usergroup, resource manager.
 
