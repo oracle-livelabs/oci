@@ -2,13 +2,12 @@
 
 ## About this workshop
 
-OCI Data Flow is a fully managed serverless Spark as a service. OCI data flow can now run spark applications that processes stream data, or continuously produced data. In today's workshop, we will cover a common streaming related use-case from the manufacturing industry.
+OCI Data Flow service is a fully managed serverless Spark as a service. OCI Data Flow makes it easy to run Spark applications to process stream data and perform heavy-weight stream operations including machine learning. In today's workshop, we will cover a typical streaming-related use case from the manufacturing industry.
 
-One of the most common uses cases of predictive manitenance in manufacturing industry is predicting 
-Remaining Useful Life (RUL) of equipment. This sample application demonstrates running streaming application with doing 
-machine learning on top of it to predict RUL of equipment.
+In the manufacturing industry, predictive maintenance is always better than reactive maintenance. One of the most common use cases of predictive maintenance in the manufacturing industry is predicting the Remaining Useful Life (RUL) of equipment. Today's workshop demonstrates running a streaming application with machine learning on top of it to predict the RUL of equipment.
 
-To demonstrate ,
+Today we will build four apps using the OCI Data Flow service to demonstrate the prediction of RUL.
+
 1. RULSurvivalModelTrainer - Offline model trainer for predicting Remaining Useful Life using Apache Spark MLlib.
 2. SensorDataSimulator     - Random sensor data simulator for equipment using Apache Spark Structured Streaming.
 3. RealtimeRULPredictor    - Realtime RUL Predictor using Apache Spark Structured Streaming.
@@ -37,24 +36,20 @@ The diagram below provides an overview of the OCI Data Flow Service, its feature
 
 ![Data Flow Architecture](images/df-overview.png " ")
 
-In the workshop, you will learn how to create spark batch and streaming application with manufacturing usecase example
-
 ### Objectives
 In this workshop, you will:
-* Create Apache Spark Machine Learning application and execute in OCI Data Flow.
-* Create Apache Spark Structured Streaming applications and execute in OCI Data Flow.
-* Create Apache Spark Batch application with Delta Table operations in OCI Data Flow. 
-* Explore Spark UI for Apache Spark batch and structued streaming applications in OCI Data Flow.
-* Access Spark driver,executor and application logs in realtime in OCI Data Flow.
-* Integrate with other OCI services such as OCI Streaming, OCI Object Storage, OCI Autonomous Databases, OCI Vault.
+* Create Apache Spark machine learning applications in OCI Data Flow.
+* Create Apache Spark structured streaming applications in OCI Data Flow.
+* Create Apache Spark batch application that can do Delta Table operations in OCI Data Flow.
+* Explore Spark UI for Apache Spark batch and structured streaming applications in OCI Data Flow.
+* Access Spark driver, executor, and application logs in real-time in OCI Data Flow.
+* Integrate with other OCI services such as OCI Streaming, OCI Object Storage, OCI Autonomous Databases, and OCI Vault.
 
 ### Prerequisites
-* An Oracle Free Tier with a 30-day free trial or Paid Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported. 
+If you are running the workshop in a Paid Cloud Account, ensure you are an Oracle Cloud Account Administrator with the permissions below:
+* Permission to manage policies, compartments, user groups, and resource managers.
 
-If you are running the workshop in a Paid Cloud Account, ensure you have the permissions below:
-* Oracle Cloud Account Administrator role to manage polices, compartment, usergroup, resource manager.
-
-## Acknowledgements
-- **Author** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
-- **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
-- **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022
+## Acknowledgments
+- **Created By/Date** - Sivanesh Selvanataraj, OCI Data Flow
+- **Contributors** - Sujoy Chowdhury, OCI Data Flow
+- **Last Updated By/Date** - Sivanesh Selvanataraj, October 2022
