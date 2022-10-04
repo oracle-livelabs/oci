@@ -11,6 +11,18 @@
             "filename": "../../01-manage-journal/manage-journal.md"
         },
         {
+            "title": "Lab 2: Manage Monitor",
+            "filename": "../../02-manage-monitor/account-monitor.md"
+        },
+        {
+            "title": "Lab 3: Risk Management",
+            "filename": "../../03-risk-mgmt/risk-management.md"
+        },
+        {
+            "title": "Lab 4: Predictive Capabilities",
+            "filename": "../../04-predictive/predictive.md"
+        },
+        {
             "title": "Oracle CloudWorld 2022 - Get Help",
             "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
         }
