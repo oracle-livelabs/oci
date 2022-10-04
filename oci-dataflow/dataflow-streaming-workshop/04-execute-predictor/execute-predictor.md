@@ -8,7 +8,7 @@ Estimated time: 15 minutes
 
 ### Objectives
 
-* Run the real time machine Learning predictor application in OCI Data Flow
+* Run the real-time machine Learning predictor application in OCI Data Flow
 
 ### Prerequisites
 
