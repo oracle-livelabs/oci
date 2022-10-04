@@ -20,7 +20,7 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, a](images/object-storage-menu.png  " ")
 
-2. Select the dataflow-labs compartment on left side and select the dataflow-labs bucket
+2. Select the dataflow-labs compartment on the left side and select the dataflow-labs bucket
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
