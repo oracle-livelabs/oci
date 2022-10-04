@@ -6,4 +6,5 @@
 env.sh
 .vscode
 .idea
-**/.github
+.github
+.gitignore
