@@ -1,0 +1,18 @@
+{
+  "workshoptitle": "OCI Media Services",
+  "include": {},
+    "help": "livelabs-help-db_us@oracle.com",
+    "tutorials": [
+      {
+          "title": "Transcode and Stream your video",
+          "description": "Media Services",
+          "type": "livelabs",
+          "filename": "../../introduction/Lab01-Stream-your-video-using-OCI.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Template to link to Need Help lab at the end of workshop. Change 'CHANGE-ME' in link below to need-help-livelabs.md or need-help-freetier.md",
+        "filename":"https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-freetier.md"
+      }
+  ]
+}
