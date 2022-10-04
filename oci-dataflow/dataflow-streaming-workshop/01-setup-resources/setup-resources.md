@@ -1,20 +1,20 @@
-# Setup required resources for manufacturing application
+# Set up required resources for manufacturing applications
 
 ## Introduction
 
-This workshop helps setup resources required for running manufacturing Apache Spark applications in OCI Data Flow.
+This workshop helps set up the resources required for running the Apache Spark applications in OCI Data Flow for the Remaining Useful Life (RUL) prediction.
 
 Estimated time: 15 minutes
 
 ### Objectives
 
-* Plan and Apply automated terraform scripts in OCI Resource Manager to provision required resources.
+* Plan and Apply automated terraform scripts in OCI Resource Manager to deploy the required cloud resources for the lab.
 * Verify required resources are created.
 
 ### Prerequisites
 
 * This lab requires an [Oracle Cloud account](https://www.oracle.com/cloud/free/). You may use your own cloud account, or a Free tier account, a cloud account that you obtained through a trial.
-* This lab requires user with necessary access to CREATE,MODIFY,DELETE below OCI resources at tenancy level.
+* This lab requires a user with the necessary Identity and Access Management permissions to CREATE, MODIFY, and DELETE below OCI resources at the tenancy level.
     * OCI Compartments
     * OCI UserGroup
     * OCI Policies
