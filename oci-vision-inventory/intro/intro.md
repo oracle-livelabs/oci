@@ -1,6 +1,6 @@
-# Automate inventory management with OCI Vision
+# Introduction
 
-## Introduction
+## About this Workshop
 
 Manual inventory management can be a time consuming and labour intensive process. Manufacturers often struggle with keeping an updated stock of inventory and track of their location leading to lost revenue and under-utilised capital. The inventory counting process on-site for large remote factories or warehouse facilities involves time and resource intensive steps, constraints and is prone to errors.
 OCI Vision can be used to supplement manual inventory management efforts by using drones (or other robots) to observe, count and report information reliably and faster.  
@@ -19,5 +19,5 @@ In this workshop, you will:
 
 ## Acknowledgements
 
-* **Author** - Nuno Gonçalves, Jason Monden
+* **Authors** - Nuno Gonçalves, Jason Monden
 * **Last Updated By/Date** - Nuno Gonçalves, September 2022

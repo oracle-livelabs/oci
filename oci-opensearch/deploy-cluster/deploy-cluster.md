@@ -1,3 +1,5 @@
+# Deploy an OCI OpenSearch cluster
+
 ## Introduction
 
 In this lab, you will create an OCI OpenSearch cluster using the Oracle Cloud Console. 
@@ -37,20 +39,12 @@ In this lab, you will:
 
       ```bash
       <copy>ssh -i ~/.ssh/<your_ssh_key> opc@<your_VM_instance_public_IP></copy>
-      ```
+      ``` 
 
-2. Download the required certificate:
-
-      ```bash
-      <copy>curl -O https://docs.oracle.com/en/learn/oci-opensearch/files/cert.pem</copy>
-      ```  
-
-   The certificate is downloaded and saved as `cert.pem`, in your current directory. This certificate is suitable for region `us-ashburn-1`.  
-
-3. Run the following command, after replacing mycluster.opensearch.us.example.com with your search API endpoint:
+2. Run the following command, after replacing mycluster.opensearch.us.example.com with your search API endpoint:
 
       ```bash
-      <copy>curl https://mycluster.opensearch.us.example.com:9200 --cacert cert.pem</copy>
+      <copy>curl https://mycluster.opensearch.us.example.com:9200</copy>
       ```
 
    If all the steps were performed correctly you should see a response as follows:  
@@ -78,4 +72,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, August 2022
+* **Last Updated By/Date** - Nuno Gonçalves, September 2022

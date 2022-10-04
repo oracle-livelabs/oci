@@ -1,3 +1,5 @@
+# Test the model using the Python SDK
+
 ## Introduction
 
 In this lab, you will test the recently created OCI Vision model to recognize stacked pipes in a test picture. You will do so by configuring the OCI Python SDK, and executing a Python program from the previously created OCI Compute instance.
@@ -31,7 +33,7 @@ In this lab, you will test the recently created OCI Vision model to recognize st
       sudo dnf install python36-oci-cli</copy>
       ``` 
 
-3. Upload *config* and *oci_api_key.pem* to the instance
+3. Upload *config* and *oci\_api\_key.pem* to the instance
 
       ```bash
       <copy>scp -i ~/.ssh/<your_ssh_key> config oci_api_key.pem opc@<your_VM_instance_public_IP>:/home/opc</copy>
