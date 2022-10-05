@@ -28,5 +28,5 @@ Estimated Time: 10 minutes
 
 ## Acknowledgements
 
-* **Author** - Nuno Gonçalves
+* **Author** - Nuno Gonçalves, Jason Monden, Mark Heffernan
 * **Last Updated By/Date** - Nuno Gonçalves, September 2022
