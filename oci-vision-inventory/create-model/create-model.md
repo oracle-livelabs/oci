@@ -28,8 +28,11 @@ An OCI Vision custom model can be created in quick mode (up to 1 hour), regular 
 2. Select *Object Detection* in model type.
 3. Select *Choose existing dataset*, *Data Labeling Service*, and select the *vision-livelab-dataset* bucket.
    ![Creation of OCI Vision model - 1](../images/create_model1.png)
-3. Choose *Quick training* and click **Create**.
+4. Click **Next**.
+5. Name the model *vision-model*.
+6. Choose *Quick training* and click **Next**.
    ![Creation of OCI Vision model - 2](../images/create_model2.png)
+7. Click **Create and train**.
 
 ## Acknowledgements
 
