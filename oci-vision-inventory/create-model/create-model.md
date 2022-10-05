@@ -36,5 +36,5 @@ An OCI Vision custom model can be created in quick mode (up to 1 hour), regular 
 
 ## Acknowledgements
 
-* **Authors** - Nuno Gonçalves, Jason Monden
+* **Authors** - Nuno Gonçalves, Jason Monden, Mark Heffernan
 * **Last Updated By/Date** - Nuno Gonçalves, September 2022
