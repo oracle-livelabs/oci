@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: phx.ocir.io/axvpeemzqcaf/twinrepo:0.1
+        image: phx.ocir.io/axvpeemzqcaf/twinrepo:latest
         imagePullPolicy: Always
         ports:
         - name: app
