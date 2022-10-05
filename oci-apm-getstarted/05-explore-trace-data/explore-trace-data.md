@@ -141,8 +141,8 @@ Estimated time: 15 minutes
 
 	Using the DB Connection string and the SQLID, you can drill down to perfhub and/or Operations Insights service in Oracle Cloud, to investigate the issue with the database.
 
-	>**Note:** In context drill down to the database service is on the roadmap
-
+	 >**Note:** You can use in context drill down to the database services, by clicking the **OPSCI** or **PerfHub** buttons in the **Available Drill downs** section.
+	![Oracle Cloud, Trace Explorer](images/1-20-1-tx.png " ")
 
 9. Click **Close**, then click the **Trace Explorer** link from the breadcrumb to go back to the Trace Explorer main page.
 
