@@ -68,5 +68,5 @@ In this task, you will create the required OCI IAM policy.
 
 ## Acknowledgements
 
-* **Authors** - Nuno Gonçalves, Jason Monden
+* **Authors** - Nuno Gonçalves, Jason Monden, Mark Heffernan
 * **Last Updated By/Date** - Nuno Gonçalves, September 2022
