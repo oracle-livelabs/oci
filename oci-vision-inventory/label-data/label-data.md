@@ -37,7 +37,7 @@ Estimated Time: 20 minutes
 
    ![Creation of Data Labeling dataset - 1](../images/create_dataset1.png)
 
-6. Select *Upload local files* at the top. Drag your images to the respective place in the screen. 
+6. Select *Upload local files* at the top. Select bucket *vision-livelab-dataset*. Drag your images to the respective place in the screen. 
 
    ![Creation of Data Labeling dataset - 2](../images/create_dataset2.png)
 
