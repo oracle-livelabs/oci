@@ -13,21 +13,21 @@ This solution will allow users to configure a training pipeline and an inference
 ## Prerequisites
 
 * An Oracle Free Tier, or Paid Cloud Account.
-* Familiarity with services on Oracle Cloud Infrastructure (OCI) IaaS and PaaS Services such as Object Storage, Identity, Virtual Cloud Network, Functions etc. 
+* Familiarity with Oracle Cloud Infrastructure (OCI) IaaS and PaaS Services such as Object Storage, Identity and Access Management, Virtual Cloud Network, Functions, Data Flow etc. 
 * Familiarity with Python (or other programming language) is strongly recommended.
 * Experience with data engineering, machine learning and statistics is preferred but not required. 
 * Additional prerequisites (if any) are described in each lab.
 
 
 ## All Tasks
-* Pre-requisites
 * Configure OCI Anomaly Detection (AD) Service
 * Configure Policies
-* Prepare Code, Configuration, Library and Datasets
+* Download Driver Code and Library
+* Examine Driver configuration file and configure it with correct values
 * Configure OCI Data Flow
 * Configure OCI Function 
 * Configure OCI Events
-* Running the Solution end to end
+* Run the Anomaly Detection Solution
 
 ## Solution Workflow
 
