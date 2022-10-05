@@ -28,10 +28,6 @@
             "filename": "../../test-model-console/test-model-console.md"
         },
         {
-            "title": "Lab 5: Test the model using the Python SDK",
-            "filename": "../../test-model-python-sdk/test-model-python-sdk.md"
-        },
-        {
             "title": "Oracle CloudWorld 2022 - Get Help",
             "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
         }
