@@ -1,7 +1,7 @@
 Lab 4: Prepare Driver Configuration
 ===
 
-This lab will help users create a configuration for preprocessing data before training/inference. The Data Pre-Processing(DPP) application provided by the Oracle AI Services team will read this configuration and use it to ingest data sources, execute the processing steps (data transformers) and perform OCI Anomaly Detection Model Training or run Inference.
+In this Lab, users will create a *Driver* configuration which will be used for preprocessing data and then running AD model Training or Inference. The Data Pre-Processing(DPP) application provided by the Oracle AI Services team will read this configuration and use it to ingest data from configured data sources, execute the processing steps (run data transformers) and perform OCI Anomaly Detection Model Training or run Inference.
 
 A brief description of the configuration file sections and their syntax is provided below.
 

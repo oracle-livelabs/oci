@@ -1,7 +1,7 @@
 Lab 2: Configure Policies
 ===
 
-1.  An OCI *Compartment* is required which will contain all the resources mentioned. Note down the compartment OCID and compartment name from the **Compartments** page in OCI Console.
+1.  All OCI resources used to build the AD Solution in this workshop will be provisioned within the same OCI *Compartment*. Create an OCI Compartment (if needed).  Note down the compartment OCID and compartment name from the **Compartments** page in OCI Console.
 
     
 2.  Go to **Governance** and **Administration** >> **Dynamic Groups** and create the following matching rule:

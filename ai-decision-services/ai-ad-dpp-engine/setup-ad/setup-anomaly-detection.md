@@ -1,10 +1,10 @@
 Lab 1: Configure Anomaly Detection
 =================
 
-On [OCI Conosole](https://cloud.oracle.com), go to AI Services → Anomaly Detection, 
+Login to [OCI Console](https://cloud.oracle.com). Then go to AI Services → Anomaly Detection. 
 
 ![](./images/Set-AD1.png)
-and create a project there. Use the recommended default values for *FAP* and *Training fraction*.
+Next, create a *Project*. Use the recommended default values for *FAP* and *Training fraction*.
 ![](./images/Set-AD2.png)
 
-Note the OCID of the project, which will be used in subsequent Labs.
+Note the **OCID** of the Project. This value will be used in a subsequent Lab.

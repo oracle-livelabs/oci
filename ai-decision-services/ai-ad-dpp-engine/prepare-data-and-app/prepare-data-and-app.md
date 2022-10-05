@@ -1,11 +1,6 @@
 Lab 3: Create Object Storage Buckets and Upload Code
 ===
 
-In this lab, configure the following resources before proceeding to configure infrastructure resources
-
-*   Driver code
-*   Library (Archive.zip)
-
 ## 1. Download Driver Code
 
 This is an executable built by OCI AI Services team and provided to users. The latest driver code can be downloaded from [here](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/df_driver.py).
@@ -20,7 +15,9 @@ For users interested in building their own data transformers (preprocessors) and
 
 ## 3. Set up OCI Object Storage Buckets
 
-This guide uses the following OCI Object Storage Buckets (any change to the names will have to be reflected in the subsequent setup steps):
+Labs in this workshop use the following OCI Object Storage Buckets. Any change to the names will have to be reflected in subsequent setup steps.
+
+Create the following OCI Object Storage Buckets using OCI Console or OCI CLI.
 
 *   **driver-code-archive-bucket**: The bucket to store driver code and archive.zip consuming by Data Flow.
 *   **training-config-bucket**: The bucket to store training process configuration.
