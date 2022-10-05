@@ -1,11 +1,15 @@
 {
-  "workshoptitle": "Learn how to pre-process time series data and productionize an Anomaly Detection Solution on OCI"
+  "workshoptitle": "Learn how to use pre-process (Transform) Time Series data and Productionize an Anomaly Detection Solution on OCI",
   "help": "livelabs-help-oci_us@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
       "description": "Introduction to OCI Anomaly Detection Pipeline with Data Preprocessing Engine",
       "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
     },
     {
       "title": "Lab 1: Get Started with OCI Anomaly Detection",
