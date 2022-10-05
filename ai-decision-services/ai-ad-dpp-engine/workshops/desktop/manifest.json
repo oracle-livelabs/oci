@@ -1,0 +1,44 @@
+{
+  "workshoptitle": "Learn how to pre-process time series data and productionize an Anomaly Detection Solution on OCI"
+  "help": "livelabs-help-oci_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to OCI Anomaly Detection Pipeline with Data Preprocessing Engine",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Lab 1: Get Started with OCI Anomaly Detection",
+      "description": "Using Anomaly detection",
+      "filename": "../../setup-ad/setup-anomaly-detection.md"
+    },
+    {
+      "title": "Lab 2: Configure OCI IAM Policies",
+      "filename": "../../setup-policies/setup-policies.md"
+    },
+    {
+      "title": "Lab 3: Create OCI Object Storage Buckets and Upload Code",
+      "filename": "../../prepare-data-and-app/prepare-data-and-app.md"
+    },
+    {
+      "title": "Lab 4: Prepare Driver Configuration",
+      "filename": "../../prepare-config-data-and-app/prepare-config-data-and-app.md"
+    },
+    {
+      "title": "Lab 5: Configure OCI DataFlow",
+      "filename": "../../setup-dataflow/data-flow.md"
+    },
+    {
+      "title": "Lab 6: Configure OCI Functions",
+      "filename": "../../setup-function/setup-function.md"    
+    },
+    {
+      "title": "Lab 7: Configure OCI Events",
+      "filename": "../../setup-event/setup-event.md"
+    },
+    {
+      "title": "Lab 8: Run Anomaly Detection Solution",
+      "filename": "../../run-tests/run-tests.md"
+    }
+  ]
+}
