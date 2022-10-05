@@ -41,11 +41,11 @@ Estimated Time: 20 minutes
 
    ![Creation of Data Labeling dataset - 2](../images/create_dataset2.png)
 
-7. Add a new label called 'pipes' by typing it in the label box, and click **Next**.
+7. Add a new label called 'pipe' by typing it in the label box, and click **Next**.
 
    ![Creation of Data Labeling dataset - 3](../images/create_dataset3.png)
 
-8. Click **Create**. 
+8. Click **Create**. It will take a few minutes to generate the records.
 
 ## Task 4: Labeling data
 
