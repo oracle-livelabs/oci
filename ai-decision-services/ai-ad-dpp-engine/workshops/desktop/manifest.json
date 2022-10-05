@@ -1,6 +1,6 @@
 {
-  "workshoptitle": "OCI Anomaly Detection Pipeline with Data Preprocessing Engine",
-  "help": "livelabs-help-anomaly-detection_us@oracle.com",
+  "workshoptitle": "Learn how to pre-process time series data and productionize an Anomaly Detection Solution on OCI"
+  "help": "livelabs-help-oci_us@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
@@ -8,16 +8,16 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Lab 1: Get Started with Anomaly Detection",
+      "title": "Lab 1: Get Started with OCI Anomaly Detection",
       "description": "Using Anomaly detection",
       "filename": "../../setup-ad/setup-anomaly-detection.md"
     },
     {
-      "title": "Lab 2: Configure Policies",
+      "title": "Lab 2: Configure OCI IAM Policies",
       "filename": "../../setup-policies/setup-policies.md"
     },
     {
-      "title": "Lab 3: Create Object Storage Buckets and Upload Code",
+      "title": "Lab 3: Create OCI Object Storage Buckets and Upload Code",
       "filename": "../../prepare-data-and-app/prepare-data-and-app.md"
     },
     {

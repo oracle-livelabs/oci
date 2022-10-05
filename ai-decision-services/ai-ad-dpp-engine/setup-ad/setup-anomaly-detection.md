@@ -1,4 +1,4 @@
-Lab 1: Configure Anomaly Detection
+Lab 1: Configure OCI Anomaly Detection
 =================
 
 Login to [OCI Console](https://cloud.oracle.com). Then go to AI Services → Anomaly Detection. 

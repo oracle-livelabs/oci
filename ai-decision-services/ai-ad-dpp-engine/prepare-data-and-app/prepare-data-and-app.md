@@ -1,11 +1,11 @@
-Lab 3: Create Object Storage Buckets and Upload Code
+Lab 3: Create OCI Object Storage Buckets and Upload Code
 ===
 
-## 1. Download Driver Code
+## 1. Download DPP Engine Driver Code
 
 This is an executable built by OCI AI Services team and provided to users. The latest driver code can be downloaded from [here](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/df_driver.py).
 
-## 2. Library
+## 2. Download DPP Transforms Library
 
 A Library which includes multiple data transformers and user defined functions is provided to users as an [archive file](https://objectstorage.us-phoenix-1.oraclecloud.com/p/kUGPXE9HB_BtgpCqe7jyOUUD_rorNiHD0HWsIR52r4KN4axrHpidLnBo4y1Nsnb-/n/ax3dvjxgkemg/b/archive-bucket/o/archive.zip) (archive.zip).  Download this zip file as it will be used later in this lab.
 

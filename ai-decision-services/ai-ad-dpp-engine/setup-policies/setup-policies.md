@@ -1,4 +1,4 @@
-Lab 2: Configure Policies
+Lab 2: Configure OCI IAM Policies
 ===
 
 1.  All OCI resources used to build the AD Solution in this workshop will be provisioned within the same OCI *Compartment*. Create an OCI Compartment (if needed).  Note down the compartment OCID and compartment name from the **Compartments** page in OCI Console.
