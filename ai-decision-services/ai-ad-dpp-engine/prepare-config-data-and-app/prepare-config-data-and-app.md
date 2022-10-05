@@ -1,13 +1,13 @@
-Lab 4: Prepare Driver Configuration
+Lab 4: Configure DPF Driver
 ===
 
-In this Lab, users will create a *Driver* configuration which will be used for preprocessing data and then running AD model Training or Inference. The Data Pre-Processing(DPP) application provided by the Oracle AI Services team will read this configuration and use it to ingest data from configured data sources, execute the processing steps (run data transformers) and perform OCI Anomaly Detection Model Training or run Inference.
+In this Lab, users will create a *Driver* configuration which will be used for preprocessing data and then running AD model Training or Inference. The Data Pre-Processing Framework (DPF) driver provided by the Oracle AI Services team will read this configuration and use it to ingest data from configured data sources, execute the processing steps (run data transformers) and perform OCI Anomaly Detection Model Training or run Inference.
 
 A brief description of the configuration file sections and their syntax is provided below.
 
 ## Driver Configuration
 
-This is a JSON file that defines the DPP workflow. The configuration is composed of the following 5 parts.
+This is a JSON file that defines the DPF workflow. The configuration is composed of the following 5 parts.
 
 <table class="wrapped confluenceTable"><colgroup><col><col></colgroup><tbody><tr><th class="confluenceTh">Section Name</th><th class="confluenceTh">Explanation</th></tr><tr><td class="confluenceTd">inputSources</td><td class="confluenceTd">Connector for input data sources. Currently we support reading data from Object Storage, ATP and ADW.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">phaseInfo<td class="highlight-blue confluenceTd" data-highlight-colour="blue">A flag specifies whether it's training or inferencing, and connector to metadata source.</td></tr><tr><td class="confluenceTd">processingSteps</td><td class="confluenceTd">Data preprocessing transformers and related input arguments.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">stagingDestination</td><td class="highlight-blue confluenceTd" data-highlight-colour="blue">Connector for intermediate processed data storage, which will be used in post-processing steps.</td></tr><tr><td class="confluenceTd">outputDestination</td><td class="confluenceTd">Connector for final output.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">serviceApiConfiguration</td><td class="highlight-blue confluenceTd" data-highlight-colour="blue">Configuration required for post-processing steps. For example, arguments for anomaly detection client.</td></tr></tbody></table>
 
@@ -42,7 +42,7 @@ This defines the location where the application will store the metadata from tra
 
 This section lists transformations that need to be applied to the input data sets. This is the core of the data processing. Every item in the list is a step, and all the steps will be executed in sequence, one after another. 
 
-Users should ensure the data processing steps are configured properly in the right sequence otherwise the workflow might fail and throw exceptions. DPP does not validate the individual data processing steps prior to executing the workflow.
+Users should ensure the data processing steps are configured properly in the right sequence otherwise the workflow might fail and throw exceptions. DPF does not validate the individual data processing steps prior to executing the workflow.
 
 *   **stepType** \- can be either **singleDataFrameProcessing** (for transforming on top of single dataframe) or **combineDataFrames** (for merging or joining two dataframes).
 *   **configurations** - the configuration related to the step to be taken, which will include:

@@ -19,7 +19,7 @@ Lab 6: Configure OCI Functions
   ![](./images/Set-Fn4.png)
     
 
-## 2. Create an OCI Function
+## 2. Create an OCI Functions Application
 
 Go to **Functions** → **Applications**, and Create an *Application*. See screenshots below. Then go to **Getting Started** and use **Cloud Shell setup**. Follow the instructions on the pad and deploy the demo function. Verify that it can be invoked successfully.
 
@@ -80,10 +80,15 @@ Hello, World!
   oci>=2.2.18
   ```
 
-- Invoke the Function
+- Invoke the OCI Functions Application
 
   Run the Function to make sure the options were configured correctly, publish it to an Application. A run should succesfully get created for the Data Flow if everything was set up correctly.
 
   Enable logs under the function for troubleshooting purposes. See screenshot below.
 
   ![](./images/Set-Fn8.png)
+
+## Useful Resources
+Refer to the OCI documentation (link below) to learn more about OCI Functions.
+
+- [OCI Functions](https://docs.oracle.com/en-us/iaas/Content/Functions/Concepts/functionsoverview.htm)
