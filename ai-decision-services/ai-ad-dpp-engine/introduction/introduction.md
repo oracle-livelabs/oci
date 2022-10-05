@@ -21,8 +21,8 @@ This solution will allow users to configure a training pipeline and an inference
 
 ## All Tasks
 * Configure OCI Anomaly Detection (AD) Service
-* Configure Policies
-* Download Driver Code and Library
+* Configure OCI IAM Policies
+* Download DPP Engine Driver Code and Library
 * Examine Driver configuration file and configure it with correct values
 * Configure OCI Data Flow
 * Configure OCI Function 
