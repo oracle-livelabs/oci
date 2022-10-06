@@ -1,15 +1,19 @@
 # Monitor Asset
 
-Monitoring asset uptime is key to any business that involves connected assets. Whether we monitor the asset on the board or off the board, we need a solution that can flexibly adapt to the business conditions. OCI anamaly detection service uses Oracle MSET-2 algorithm can detect the anomal signals at early stage.
+Monitoring asset uptime is key to any business that involves connected assets. Whether we monitor the asset on the board or off the board, we need a solution that can flexibly adapt to the business conditions. OCI Anomaly Detection service uses multivariate algorithm can detect the abnormal signals at early stage.
+
 
 ## Introduction
-In this session, we will show you how to and make predictions with new data using Anomaly Detection model, and how to generate notification message when there is anomaly detected by the model.
+In this session, we will show you how to monitor abnormal signals using Anomaly Detection model, and generate notification message when there is anomaly detected by the service.
 
 *Estimated Time*: 20 minutes
 
+
 ### Objectives
-1. Learn the monitoring reference architecture streaming, anomaly detection serive and notification
-2. Generate anomaly with an intance in the fleet
+1. Generate test data with anomaly in the fleet use Digital Twin
+2. Send test data to Oracle Anomaly Detection service via OCI Streaming
+3. Detect anomaly and generate notification message 
+4. Learn the asset monitoring reference architecture use streaming, anomaly detection service and notification
 
 
 ## Task 1 Simulate anomaly by adjusting the running condition

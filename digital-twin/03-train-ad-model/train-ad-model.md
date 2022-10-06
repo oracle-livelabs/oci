@@ -52,13 +52,12 @@ Once the details are entered, click the  **Create** Button.
 
 
 **If you have NOT completed the previous Labs (01 and 02),**
-- Download the **Training Dataset** https://objectstorage.us-ashburn-1.oraclecloud.com/p/-z6yMfwSuQJ4RfpMFPu4rShFG8O8IZGzdUz_PgR_tgbNmDH9-Pjpu-vlpqBW5aKG/n/orasenatdpltintegration03/b/AD_bucket/o/AD_train_6cycle.csv
-- Then **skip to Task 3: Create a Model**
+- Click to download the [Training Dataset](https://objectstorage.us-ashburn-1.oraclecloud.com/p/acYNc4cXnHYGEA4r-oZZD0gMicUNspuHgSGORi96Wop10Yqwjr_xXi23XLheIXsK/n/orasenatdpltintegration03/b/AD_bucket/o/AD_train_6cycle.csv).
+- TODO: add step upload training data to object storage
 
 
 ## Task 2: Create a Data Asset
 
-*** TODO: add link for downloading [data](https://objectstorage.us-ashburn-1.oraclecloud.com/p/acYNc4cXnHYGEA4r-oZZD0gMicUNspuHgSGORi96Wop10Yqwjr_xXi23XLheIXsK/n/orasenatdpltintegration03/b/AD_bucket/o/AD_train_6cycle.csv).
 
 The Data Asset is the data utilized for training your Anomaly Detection Model. The Data Asset should be data that has NO anomalies, so that the Anomaly Detection model will be trained on data that represents the 'normal' state.
 
@@ -66,19 +65,20 @@ Under your project, click the   **Data Assets** menu on the left. Then click  **
 
 ![Create Data Asset](./images/imageCDA1.png " ")
 
-in the _Create Data Asset_ menu, 
-- Select  **AD_Workshop** for _Compartment_
-- Type  **AD_data_asset** as the Data Asset _Name_
-- Select  **Oracle Object Storage** for _Type_
-- Select  **AD_bucket** for _Choose a bucket_ 
-- Select  **AD_Training.csv** for _Training Data_
+In the Create Data Asset menu, 
+- Select `AD_Workshop` for Compartment
+- Type  `AD_data_asset` as the Data Asset Name
+- Select  Oracle Object Storage for Type
+- Select  AD_bucket for Choose a bucket 
+- Select  AD_Training.csv for Training Data
 - Press  **Create**
 
 ![Create Data Asset](./images/imageCDA2.png " ")
 
 The data asset should now show in the data asset main panel.
 
-This demo only covers data from Object Storage. However, data can be imported other sources such as Oracle Autonomous Transaction Processing (ATP), InfluxDB, and more. 
+>This demo only covers data from Object Storage. However, data can be imported other sources such as Oracle Autonomous Transaction Processing (ATP), InfluxDB, and more. 
+
 
 
 ## Task 3: Create a model
@@ -96,8 +96,8 @@ From here,
 
 ![Create Model](./images/imageCM1.png " ")
 
-Make sure _Choose an existing data asset_ is toggled
-Under _Choose data asset in compartment_, select  **AD_data_asset**. The click **Next**. 
+Make sure **Choose an existing data asset** is toggled
+Under Choose data asset in compartment, select  `AD_data_asset`. The click **Next**. 
 
 ![Create Model](./images/imageCM2.png " ")
 

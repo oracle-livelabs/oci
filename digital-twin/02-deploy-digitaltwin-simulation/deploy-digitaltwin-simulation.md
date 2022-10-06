@@ -1,16 +1,21 @@
 # Deploy Digital Twin Simulation Model
-The digital twin model is a `docker` image including all necessary components. It runs on the OKE (Oracle Kubernetes Engine) platform. By leveraging OKE, the digital twin environment can be easily scaled to meet workload demands cost-effectively, with high availability that comes with a load balancing implementation that we will use. We can run tens, hundreds of them to analyse root causes and simulate the a specific peformance.
 
 
 ## Introduction
-In this session, we will deploy MapleSim Digital Twin simulation model on OKE using `kubectl`.
+The digital twin model is a docker image including all necessary components. It runs on the OKE (Oracle Kubernetes Engine) platform. By leveraging OKE, the digital twin environment can be easily scaled to meet workload demands cost-effectively, with high availability that comes with a load balancing implementation that we will use. We can run tens, hundreds of them to analyze root causes and simulate specific performances.
+
+In this session, we will deploy MapleSoft MapleSim Digital Twin simulation model on OKE using Kubernetes command line tool (`kubectl`).
 
 *Estimated Time*: 20 minutes
 
-### Objectives
-Deploly the model to OKE.
 
-## Task 1 Configure OKE access in Cloud Shell
+
+### Objectives
+1. Deploy MapleSim Digital Twin model on OKE.
+2. Generate anomaly detection training dataset use Digital Twin model.
+
+
+## Task 1 Configure OKE access using Cloud Shell
 OCI Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console. It provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI (OCI-CLI), `kubectl`, docker, and other useful command-line tools.
 1. Click the `Cloud Shell` icon to open the Cloud Shell.
 
