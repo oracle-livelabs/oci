@@ -19,8 +19,10 @@ Estimated Time: 20 minutes
 ## Task 2: Object Storage bucket creation 
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
-2. Click **Storage** and then click **Buckets**. Click **Create Buckets**.
-3. Provide *vision-livelab-dataset* as bucket name. Leave the remaining values as they are and click **Create**.
+2. Click **Storage** and then click **Buckets**. 
+3. Set the **Compartment** to *vision-livelab*.
+4. Click **Create Bucket**.
+5. Provide *vision-livelab-dataset* as bucket name. Leave the remaining values as they are and click **Create**.
 
    ![Creation of Object Storage bucket for Data Labeling](../images/create_bucket.png)
 
