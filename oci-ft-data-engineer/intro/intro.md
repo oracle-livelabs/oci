@@ -1,11 +1,10 @@
-# Oracle Cloud Infrastructure Fast Track
+# Oracle OCI Data & AI Fast Track
 
 ## Sobre esse Workshop
 
-Oracle Cloud Infrastructure (OCI) Fast Track é um Workshop prático para quem deseja aprender do zero a trabalhar com a nuvem Oracle. Neste Workshop cobrimos todos os conceitos básicos de Infraestrutura em nuvem, e o resultado final é ter conhecimentos sobre balanceador de carga, máquinas virtuais, armazenamento e Bancos de dados Oracle Autonomous Database.
-Exploraremos cada um dos recursos disponíveis em Infraestrutura como Código (IaaS), indo de rede, armazenamento, máquinas virtuais e Balanceador de Carga. Para começar, é importante verificar se o usuário tem uma compreensão clara dos componentes básicos do OCI, como: Regiões, Compartimentos e Domínios de Disponibilidade.
+Oracle OCI Data & AI Fast Track é um Workshop prático para quem deseja conhecer do zero a trabalhar com Engenharia de dados utilizando os serviços da nuvem Oracle. Neste Workshop cobrimos todos os conceitos básicos de arquitetura lakehouse em nuvem, e o resultado final é obter conhecimento sobre armazenamento de objetos na nuvem, carregar dados de API para o ambiente em nuvem, ETL utilizando ferramentas em OCI, armazenamento e Banco de Dados Oracle Autonomous Data Warehouse, Criação de um Catalogo de Dados e visualização dos dados para montar uma camada analítica.
 
-Nosso objetivo é que, ao final deste workshop, os participantes possam implantar seus próprios segmentos de infraestrutura seguindo as melhores práticas da OCI.
+Nosso objetivo é que, ao final deste workshop, os participantes possam implantar seus próprios segmentos de um pipeline de dados completo seguindo as melhores práticas da OCI.
 
 Ao final deste workshop, a arquitetura criada será esta:
 
@@ -17,13 +16,17 @@ Ao final deste workshop, a arquitetura criada será esta:
 
 Por meio deste guia, iremos fornecer laboratórios práticos de:
 
-- Compartimentos
-- Rede (VCN e subnets)
-- Instâncias de computação (Linux e Windows)
-- Armazenamento em bloco (Block Storage)
-- Armazenamento de objetos (Object Storage)
-- Balanceador de carga (Load Balancer)
-- Banco de dados Oracle Autonomous Database
+- Evolução da Arquitetura de Dados
+- Lakehouse em OCI
+- OCI Object Storage
+- OCI Functions
+- OCI Data Flow
+- OCI Data Integration
+- OCI Data Catalog
+- Oracle Autonomous Data Warehouse
+- OCI Lake Accelerator
+- OCI Query Service
+- Oracle Analytics Cloud
 
 ## Saiba Mais
 
@@ -31,5 +34,5 @@ Por meio deste guia, iremos fornecer laboratórios práticos de:
 
 ## Autoria
 
-- **Autores**- Raphael Campelo, Luiz de Oliveira, Arthur Vianna e Thais Henrique
+- **Autores**- Heloísa Escobar, Nathaly Azevedo, Thais Henrique e Thiago Stenico
 - **Último Updated Por/Data** - Thais Henrique, Jun/2022
