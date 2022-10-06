@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you will focus on understanding the pre-requisites and setting up your tenancy for the subsequent creation and operation of the OCI Vision model.
+In this lab, you will set up your tenancy for the subsequent creation and operation of the OCI Vision model.
 
-Estimated Time: 15 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
