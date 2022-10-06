@@ -49,3 +49,8 @@ Lab 2: Configure OCI IAM Policies
     Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='output-bucket'
     ```
     ![](./images/Set-Policy3.png)
+
+## Useful Resources
+Refer to OCI documentation (link below) to learn more about OCI IAM Policies.
+
+- [OCI Policies](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
