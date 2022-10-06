@@ -33,27 +33,31 @@ In this task, you will create a dedicated compartment for this live lab.
 ## Task 2: Create group
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
-2. Click **Identity & Security** and select **Domains**. 
+2. Click **Identity & Security** and select **Domains**.
+   
+   > Note that if you do not see **Domains** it means that your region has not been updated to support identity domains. If that's the case, select **Groups** and move to step 5 below.
 
    ![Select Domains](../images/oci_menu_domains.png)
-
-4. Select the domain listed as *Current domain*.
-5. On the left menu, select **Groups**.
-6. Select **Create group**.
-7. Provide *vision-group* as **Name**, add a **Description** of your choice, and select your User to add your account to the Group.
-8. Click **Create**.
+   
+3. Select the domain listed as *Current domain*.
+4. On the left menu, select **Groups**.
+5. Select **Create group**.
+6. Provide *vision-group* as **Name**, add a **Description** of your choice, and select your User to add your account to the Group.
+7. Click **Create**.
 
 ## Task 3: Create dynamic group
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity & Security** and select **Domains**. 
 
+   > Note that if you do not see **Domains** it means that your region has not been updated to support identity domains. If that's the case, select **Dynamic groups** and move to step 5 below.
+
    ![Select Domains](../images/oci_menu_domains.png)
 
-4. Select the domain listed as *Current domain*.
-5. On the left menu, select **Dynamic groups**.
-6. Select **Create dynamic group**.
-7. Provide *dls-dynamic-group* as **Name**, add a **Description** of your choice, and add the following matching rule:
+3. Select the domain listed as *Current domain*.
+4. On the left menu, select **Dynamic groups**.
+5. Select **Create dynamic group**.
+6. Provide *dls-dynamic-group* as **Name**, add a **Description** of your choice, and add the following matching rule:
 
    ```html
    <copy>ALL { resource.type = 'datalabelingdataset' }
@@ -61,7 +65,7 @@ In this task, you will create a dedicated compartment for this live lab.
    
    ![Create dynamic group](../images/create_dynamic_group.PNG)
    
-9. Click **Create**.
+7. Click **Create**.
 
 ## Task 4: Policy setup
 
