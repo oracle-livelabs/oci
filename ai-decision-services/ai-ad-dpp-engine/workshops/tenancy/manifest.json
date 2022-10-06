@@ -5,7 +5,7 @@
     {
       "title": "Introduction",
       "description": "Introduction to OCI Anomaly Detection Pipeline with Data Preprocessing Engine",
-      "filename": "../../introduction/introduction.md"
+      "filename": "../../00-introduction/introduction.md"
     },
     {
       "title": "Get Started",
@@ -14,35 +14,35 @@
     {
       "title": "Lab 1: Get Started with OCI Anomaly Detection",
       "description": "Using Anomaly detection",
-      "filename": "../../setup-ad/setup-anomaly-detection.md"
+      "filename": "../../01-setup-ad/setup-anomaly-detection.md"
     },
     {
       "title": "Lab 2: Configure OCI IAM Policies",
-      "filename": "../../setup-policies/setup-policies.md"
+      "filename": "../../02-setup-policies/setup-policies.md"
     },
     {
       "title": "Lab 3: Configure OCI Object Storage Buckets and Upload Driver",
-      "filename": "../../prepare-data-and-app/prepare-data-and-app.md"
+      "filename": "../../03-prepare-data-and-app/prepare-data-and-app.md"
     },
     {
       "title": "Lab 4: Configure the DPF Driver",
-      "filename": "../../prepare-config-data-and-app/prepare-config-data-and-app.md"
+      "filename": "../../04-prepare-config-data-and-app/prepare-config-data-and-app.md"
     },
     {
       "title": "Lab 5: Configure OCI DataFlow",
-      "filename": "../../setup-dataflow/data-flow.md"
+      "filename": "../../05-setup-dataflow/data-flow.md"
     },
     {
       "title": "Lab 6: Configure OCI Functions",
-      "filename": "../../setup-function/setup-function.md"    
+      "filename": "../../06-setup-function/setup-function.md"    
     },
     {
       "title": "Lab 7: Configure OCI Events",
-      "filename": "../../setup-event/setup-event.md"
+      "filename": "../../07-setup-event/setup-event.md"
     },
     {
       "title": "Lab 8: Run the Anomaly Detection Solution",
-      "filename": "../../run-tests/run-tests.md"
+      "filename": "../../08-run-tests/run-tests.md"
     }
   ]
 }
