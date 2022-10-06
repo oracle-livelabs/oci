@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Learn how to pre-process time series data and productionize an Anomaly Detection Solution on OCI"
+  "workshoptitle": "Learn how to pre-process (Transform) Time Series data and Productionize an Anomaly Detection Solution on OCI",
   "help": "livelabs-help-oci_us@oracle.com",
   "tutorials": [
     {
@@ -17,11 +17,11 @@
       "filename": "../../setup-policies/setup-policies.md"
     },
     {
-      "title": "Lab 3: Create OCI Object Storage Buckets and Upload Code",
+      "title": "Lab 3: Configure OCI Object Storage Buckets and Upload Driver",
       "filename": "../../prepare-data-and-app/prepare-data-and-app.md"
     },
     {
-      "title": "Lab 4: Prepare Driver Configuration",
+      "title": "Lab 4: Configure the DPF Driver",
       "filename": "../../prepare-config-data-and-app/prepare-config-data-and-app.md"
     },
     {
