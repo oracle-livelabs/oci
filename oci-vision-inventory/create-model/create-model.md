@@ -24,7 +24,8 @@ An OCI Vision custom model can be created in quick mode (up to 1 hour), regular 
 
 ## Task 2: Create the OCI Vision pipe detection model
 
-1. While on the OCI Vision project details page, click **Create Model**.
+1. Once the project status is *Active*, select *vision-project*.
+2. While on the OCI Vision project details page, click **Create Model**.
    ![OCI Vision project details](../images/vision_project.png)
 2. Select *Object Detection* in model type.
 3. Select *Choose existing dataset*, *Data Labeling Service*, and select the *vision-livelab-dataset* bucket.
