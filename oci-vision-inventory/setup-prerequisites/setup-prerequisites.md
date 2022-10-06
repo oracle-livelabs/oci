@@ -82,7 +82,7 @@ In this task, you will create the required OCI IAM policy.
 6. Click **Show manual editor** and paste the content below in the editor.
 
    ```html
-   <copy>allow group vision-group to use ai-service-vision-family in compartment vision-livelab
+   <copy>allow group vision-group to manage ai-service-vision-family in compartment vision-livelab
    allow group vision-group to manage object-family in compartment vision-livelab
    allow group vision-group to manage data-labeling-family in compartment vision-livelab
    allow dynamic-group dls-dynamic-group to read buckets in compartment vision-livelab
