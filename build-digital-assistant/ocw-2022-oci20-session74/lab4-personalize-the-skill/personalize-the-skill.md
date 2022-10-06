@@ -101,6 +101,8 @@ component which
 
 </copy>
 ```
+> **Note**: Verify your dialog flow here - [Link](files/dialogflow_task2.txt).
+
 3. We will add the dialog flow for *Positive Health* intent. Here we are going to display a card carousel with images, text, and links to redirect to different videos.
 
 - Select *+Add component* and pick *Display Action Button Message* (under User messaging -> Display Multimedia Messages).
@@ -458,7 +460,7 @@ npm pack
 ```
 9. After registration, the next step for the patient is to select the specialization for which we will use the System.ResolveEntities component.
 
-- Select *+ Add component* and pick *Display Action Button Message* (under Hot Picks -> Resolve Entities).
+- Select *+ Add component* and pick *Resolve Entities* (under Hot Picks).
 - Pick "registerUserDB" from the drop-down under *insert after state*, Uncheck include template comments, and select *Insert Component*.
 
   ![Insert Resolve Entity Component](images/insert-resolve-entity.png " ")
