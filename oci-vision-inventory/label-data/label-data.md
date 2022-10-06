@@ -38,6 +38,7 @@ Estimated Time: 20 minutes
 6. Select *Upload local files* at the top. Select bucket *vision-livelab-dataset*. Drag your images to **Selected files** on the screen. 
 
    ![Creation of Data Labeling dataset - 2](../images/create_dataset2.png)
+   
    ![Creation of Data Labeling dataset - 3](../images/create_dataset3.png)
 
 7. Add a new label called 'pipe' by typing it in the label box, and click **Next**.
