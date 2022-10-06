@@ -19,8 +19,10 @@ Estimated Time: 20 minutes
 ## Task 2: Object Storage bucket creation 
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
-2. Click **Storage** and then click **Buckets**. Click **Create Buckets**.
-3. Provide *vision-livelab-dataset* as bucket name. Leave the remaining values as they are and click **Create**.
+2. Click **Storage** and then click **Buckets**. 
+3. Set the **Compartment** to *vision-livelab*.
+4. Click **Create Bucket**.
+5. Provide *vision-livelab-dataset* as bucket name. Leave the remaining values as they are and click **Create**.
 
    ![Creation of Object Storage bucket for Data Labeling](../images/create_bucket.png)
 
@@ -28,24 +30,22 @@ Estimated Time: 20 minutes
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Analytics & AI** and then click **Data Labeling**. Click **Datasets**.
-3. Click **show more information**. Note that additional policies are required if you are not logged in as an Administrator.
-
-   ![Data Labeling dataset screen](../images/data_labeling_dataset.png)
-
 4. Click **Create dataset**.
-5. Provide *vision-livelab-dataset* as Name. Select *Object Detection* in the Annotation mode section. Click **Next**.
+5. Provide *vision-livelab-dataset* as **Name**. Set **Dataset format** to *Images*. Select *Object Detection* in the Annotation mode section. Click **Next**.
 
    ![Creation of Data Labeling dataset - 1](../images/create_dataset1.png)
 
-6. Select *Upload local files* at the top. Drag your images to the respective place in the screen. 
+6. Select *Upload local files* at the top. Select bucket *vision-livelab-dataset*. Drag your images to **Selected files** on the screen. 
 
    ![Creation of Data Labeling dataset - 2](../images/create_dataset2.png)
-
-7. Add a new label called 'pipes' by typing it in the label box, and click **Next**.
-
+   
    ![Creation of Data Labeling dataset - 3](../images/create_dataset3.png)
 
-8. Click **Create**. 
+7. Add a new label called 'pipe' by typing it in the label box, and click **Next**.
+
+   ![Creation of Data Labeling dataset - 4](../images/create_dataset4.png)
+
+8. Click **Create**. It will take a few minutes to generate the records.
 
 ## Task 4: Labeling data
 
@@ -56,8 +56,10 @@ Estimated Time: 20 minutes
 2. In the single image view, zoom in if necessary. Using the cursor, draw square bounding boxes around the circles. Do the same for the ones that only appear partially.
 
    ![Labeling an image](../images/labeling_an_image.png)
+   
+3. This task will be complete once all the images are labeled.
 
 ## Acknowledgements
 
-* **Authors** - Nuno Gonçalves, Jason Monden
+* **Authors** - Nuno Gonçalves, Jason Monden, Mark Heffernan
 * **Last Updated By/Date** - Nuno Gonçalves, September 2022
