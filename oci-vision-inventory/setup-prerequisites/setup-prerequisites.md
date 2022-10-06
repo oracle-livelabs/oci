@@ -58,7 +58,7 @@ In this task, you will create a dedicated compartment for this live lab.
    <copy>ALL { resource.type = 'datalabelingdataset' }
    ```
    
-   ![Create dynamic group](../images/create_dynamic_group.png)
+   ![Create dynamic group](../images/create_dynamic_group.PNG)
    
 9. Click **Create**.
 
