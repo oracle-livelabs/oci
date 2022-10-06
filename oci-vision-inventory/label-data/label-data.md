@@ -30,22 +30,19 @@ Estimated Time: 20 minutes
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Analytics & AI** and then click **Data Labeling**. Click **Datasets**.
-3. Click **show more information**. Note that additional policies are required if you are not logged in as an Administrator.
-
-   ![Data Labeling dataset screen](../images/data_labeling_dataset.png)
-
 4. Click **Create dataset**.
-5. Provide *vision-livelab-dataset* as Name. Select *Object Detection* in the Annotation mode section. Click **Next**.
+5. Provide *vision-livelab-dataset* as **Name**. Set **Dataset format** to *Images*. Select *Object Detection* in the Annotation mode section. Click **Next**.
 
    ![Creation of Data Labeling dataset - 1](../images/create_dataset1.png)
 
-6. Select *Upload local files* at the top. Select bucket *vision-livelab-dataset*. Drag your images to the respective place in the screen. 
+6. Select *Upload local files* at the top. Select bucket *vision-livelab-dataset*. Drag your images to **Selected files** on the screen. 
 
    ![Creation of Data Labeling dataset - 2](../images/create_dataset2.png)
+   ![Creation of Data Labeling dataset - 3](../images/create_dataset3.png)
 
 7. Add a new label called 'pipe' by typing it in the label box, and click **Next**.
 
-   ![Creation of Data Labeling dataset - 3](../images/create_dataset3.png)
+   ![Creation of Data Labeling dataset - 4](../images/create_dataset4.png)
 
 8. Click **Create**. It will take a few minutes to generate the records.
 
