@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you will focus on understanding the pre-requisites and setting up your tenancy for the subsequent creation and operation of the OCI Vision model.
+In this lab, you will set up your tenancy for the subsequent creation and operation of the OCI Vision model.
 
-Estimated Time: 15 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
@@ -13,8 +13,9 @@ In this lab, you will:
 - Create a Group
 - Create Dynamic Group
 - Create a Policy
+- Confirm access to the Vision service
 
-## Task 1: Create Compartment
+## Task 1: Create compartment
 
 In this task, you will create a dedicated compartment for this live lab.
 
@@ -29,7 +30,7 @@ In this task, you will create a dedicated compartment for this live lab.
 
    ![Creation of vision-livelab compartment](../images/create_compartment.png)
 
-## Task 2: Create Group
+## Task 2: Create group
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity & Security** and select **Domains**. 
@@ -42,7 +43,7 @@ In this task, you will create a dedicated compartment for this live lab.
 7. Provide *vision-group* as **Name**, add a **Description** of your choice, and select your User to add your account to the Group.
 8. Click **Create**.
 
-## Task 3: Create Dynamic Group
+## Task 3: Create dynamic group
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity & Security** and select **Domains**. 
@@ -58,7 +59,7 @@ In this task, you will create a dedicated compartment for this live lab.
    <copy>ALL { resource.type = 'datalabelingdataset' }
    ```
    
-   ![Create dynamic group](../images/create_dynamic_group.png)
+   ![Create dynamic group](../images/create_dynamic_group.PNG)
    
 9. Click **Create**.
 
@@ -91,6 +92,18 @@ In this task, you will create the required OCI IAM policy.
 
 6. Click **Create**.
    ![Creation of vision-policy policy](../images/create_policy.png)
+
+## Task 5: Confirm access to the Vision service
+
+1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
+2. Click **Analytics & AI** and select **Vision**. 
+
+   ![Select Vision](../images/oci_menu_vision.png)
+   
+3. Select **Object detection**.
+4. Select **Compartment** *vision-livelab*. You should now see labels on the right side of the screen for the sample image.
+
+   ![OCI Vision object detection pretrained model](../images/oci_vision_pretrained_object_detection.png)
 
 ## Acknowledgements
 
