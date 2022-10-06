@@ -16,16 +16,22 @@ In this session, we will deploy MapleSoft MapleSim Digital Twin simulation model
 
 
 ## Task 1 Configure OKE access using Cloud Shell
+
 OCI Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console. It provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI (OCI-CLI), `kubectl`, docker, and other useful command-line tools.
-1. Click the `Cloud Shell` icon to open the Cloud Shell.
+1. Open OCI Navigate menu, select **Developer Services**, then **Kubernetes Clusters (OKE)**. 
 
-![Cloud Shell](./images/cloud-shell.png " ")
+![navigation](./images/navigation_menu.png " ")
 
-2. Click `Access Cluster` to pop up the `Access Your cluster` window. Click `Cloud Shell Access` and click copy in the menu bar.
+2. Select your OKE Cluster from console. Click `Access Cluster` to pop up the `Access Your cluster` window. Click `Cloud Shell Access`.
 
 ![Access Cluster](./images/access-cluster.png)
 
-3. Run the following OCI-CLI command in Cloud Shell:
+Click Launch Cloud Shell, this will start Cloud Shell on your screen at the bottom. Copy the command from Access Your Cluster window.
+
+![Access Cloud Shell](./images/launch_cloud_shell.png)
+
+
+3. Paste the OCI-CLI command to Cloud Shell and run:
 
 ![Kubernetes Config](./images/cloud-console-kube.png)
 

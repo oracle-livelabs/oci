@@ -127,7 +127,7 @@ The retuned next_cursor will be used in the next run to retrieve signals from th
 
 
 
-## Task 4: Detect Anomalies with Anomaly Detection (AD) GUI
+## Task 3: Detect Anomalies with Anomaly Detection (AD) GUI
 
 
 
@@ -153,7 +153,7 @@ Let's take a look what anomalies Anomaly Detection discovered in the data
 >**Graph Explanation**
 >
 >Each signal in your detection data can be selected to show a separate graph.
->>
+>
 >In the graph, horizontal axis represents the timestamp (or indexes if no timestamp was provied), and the vertical axis represents sensor values.
 >
 >In each subgraph, 
@@ -161,8 +161,9 @@ Let's take a look what anomalies Anomaly Detection discovered in the data
 >- purple line indicates the predicted value by the machine learning model
 >- red line indicates anomaly being detected at that timestamp.
 >
-There are two additional subgraphs after sensor subgraphs:
+>There are two additional subgraphs after sensor subgraphs:
+> 
+>- The Anomaly Score Per Signal shows the significance of anomaly at individual signal level for a given timestamp. Not all the signals flag anomalies at the same time.
+>- The Aggregated Anomaly Score indicates the significance of anomaly for a given timestamp by considering the anomaly from all signals together.
 >
->_The Anomaly Score Per Signal_ shows the significance of anomaly at individual signal level for a given timestamp. Not all the signals flag anomalies at the same time.
->_The Aggregated Anomaly Score_ indicates the significance of anomaly for a given timestamp by considering the anomaly from all signals together.
 >You can move your mouse over the graph, the actual value & estimated value at a certain timestamp will show at the upper right corner of the graph.

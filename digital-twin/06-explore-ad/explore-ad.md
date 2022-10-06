@@ -215,8 +215,9 @@ Press **i** to enter insert mode.
 
 Copy and paste the content of configuration file created from Task 1: Setup API Signing Key. 
 
-Update the last TODO line as 
->_key_file=~/.oci/oci_api_key.pem_
+Update the last line:
+
+```key_file=~/.oci/oci_api_key.pem```
 
 ![config insert](./images/config_insert.png)
 
@@ -247,7 +248,7 @@ Run the following command in terminal.
 
 Press **i** to enter insert mode.
 
-Open the _oci_api_key.pem_ that you downloaded from Task 1: Setup API Signing Key in notepad. 
+Open the `oci_api_key.pem` that you downloaded from Task 1: Setup API Signing Key in notepad. 
 Copy and Paste the whole content to vi editor. 
 
 ![api key](./images/api_private_key.png)
