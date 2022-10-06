@@ -2,8 +2,9 @@
 
 ## Introduction
 
-In this lab, you will create an OCI Vision project and an OCI Vision custom model. A custom model can be created with a minimum of 10 images, which we have provided.   
-An OCI Vision custom model can be created in quick mode (up to 1 hour), regular mode (up to 24 hours), or custom mode. In the lab steps, we propose the quick mode, with a fast completion of the workshop in mind. Whenever suitable, we recommend the regular mode.
+In this lab, you will create an OCI Vision project and an OCI Vision custom model. A custom model can be created with a minimum of 10 images, which we have provided. For production models though, we recommend using many more images for training.
+
+An OCI Vision custom model can be created in quick mode (up to 1 hour), regular mode (up to 24 hours), or custom mode. In the lab steps, we will use quick mode training since we're limited on time.
 
 ### Objectives
 
@@ -19,7 +20,7 @@ An OCI Vision custom model can be created in quick mode (up to 1 hour), regular 
 
    ![Creation of OCI Vision project](../images/create_project.png)
 
-4. Click **Create project**. Provide *vision-project* as name, select *vision-livelab* as compartment, and click **Create project**
+4. Click **Create project**. Provide *vision-project* as name, select *vision-livelab* as compartment, and click **Create project**.
 
 ## Task 2: Create the OCI Vision pipe detection model
 
