@@ -3,7 +3,7 @@ Lab 8: Run the Anomaly Detection Solution
 
 ## 1. Download Model Training and Inferencing Datasets
 
-Download the training and testing (/inference) data files in CSV formats. A sample training data set in Parquet format is also included for interested users, although this workshop will use CSV only.
+Download the training and testing (/inference) data files. A sample training data set in Parquet format is also included for interested users, although this workshop will use data files provided in CSV format only.
 
 [TestData.csv](./files/TestData.csv) | [TrainData.csv](./files/TrainData.csv) | [TrainData.parquet](./files/TrainData.parquet)
 
@@ -23,7 +23,7 @@ The following steps can be used to verify the workflow or troubleshoot issues (i
   
   * If the logs contain an error indicating that model training has failed, search for the model OCID from the search box or by navigating to the Anomaly Detection project, and check the reason for failure.
 
-- Model information will be written to a file named **model_info.** in **results-bucket**. A sample is shown below for your reference:
+- Model information will be written to a file named **model_info.** in **output-bucket**. A sample is shown below for your reference:
 
 ```
 {
@@ -63,7 +63,7 @@ Similar to the previous section, upload the inferencing data file in the bucket 
 
 Follow the instructions described in Step [2] (above) to monitor the pipeline and/or troubleshoot problems. In the last step, check the results folder for the inference results.
 
-After a successful run, the results should be populated as shown in the screenshot below in the **results-bucket**:
+After a successful run, the results should be populated as shown in the screenshot below in the **output-bucket** under **infernce_results**:
 
 ![](./images/Exp3.png)
 

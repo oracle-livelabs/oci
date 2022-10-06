@@ -9,7 +9,7 @@ OCI Events tracks resource changes with events which comply with CNCF CloudEvent
    *   For Event Type, choose **Object Storage**, choosing **Object - Create** and **Object - Update**.
    *   For Attribute, choose **bucketName**. Attribute Values should be **training-data-bucket** and **inferencing-data-bucket**, which were the values set up in **Lab 4** earlier.
     
-2. For Actions, choose **Functions** as action type, and select the right compartment, application and Function OCID provisioned in Lab 7.
+2. For Actions, choose **Functions** as action type, and select the right compartment, application and Function OCID provisioned in **Lab 6**.
 
    The finalized Rule Logic is shown below:
 
@@ -67,5 +67,6 @@ OCI Events tracks resource changes with events which comply with CNCF CloudEvent
 ## Useful Resources
 Refer to the OCI documentation (links below) to learn more about how OCI Events Service can be used to monitor events emitted by OCI Autonomous Database and OCI Object Storage.
 
+- [OCI Events](https://docs.oracle.com/en-us/iaas/Content/Events/Concepts/eventsoverview.htm)
 - [OCI Autonomous Database](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventsproducers.htm#dbaasevents__AutoDB)
 - [OCI Object Storage](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventsproducers.htm#ObjectStor__bucket)
