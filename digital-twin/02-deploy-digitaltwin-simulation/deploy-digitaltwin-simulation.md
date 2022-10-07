@@ -41,7 +41,7 @@ Click Launch Cloud Shell, this will start Cloud Shell on your screen at the bott
 
 Open the file and copy the content:
 
-![Deployment Content](./images/deployment-file.png)
+![Deployment Content](https://objectstorage.us-phoenix-1.oraclecloud.com/p/y6hR92uVv6ejfNClhLM4wm0rftcHOasu_u9twwSl0T-XxQpS8zfB62XJyhMQAXRE/n/axvpeemzqcaf/b/cw-file/o/deployment.yaml)
 
 2. Open a deployment file with `vi deployment.yaml`, then enter insert-mode by pressing `i`, and paste the content from your clipboard into the `vi` editor. Then press `ESC` to escape from insert-mode, followed by `:wq` to write, i.e. save, and quit from the `vi` editor.
 
@@ -78,7 +78,7 @@ Copy the following code and paste into Request body. The `number_instance` instr
 
 ~~~
 {
-"number_instance": 10,
+"number_instance": 20,
 "fleet_model": "linux_fmus/Telehandler.fmu"
 }
 ~~~
