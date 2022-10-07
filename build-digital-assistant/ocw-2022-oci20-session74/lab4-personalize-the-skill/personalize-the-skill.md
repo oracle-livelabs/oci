@@ -261,7 +261,7 @@ RegisterPatientBag: "RegisterPatientBag"
       next: "registerUserDB"
 </copy>
 ```
-> **Note**: Verify your dialog flow (<a href = "https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_step3.txt">Link</a>) and You should still be able to test even though you see there are errors in your validation
+> **Note**: Verify your dialog flow (<a href = "https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_task3.txt">Link</a>) and You should still be able to test even though you see there are errors in your validation
 
   ![Conversation Tester](images/conversation-tester.png)
 
