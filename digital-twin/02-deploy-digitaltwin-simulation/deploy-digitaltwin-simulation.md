@@ -37,11 +37,11 @@ Click Launch Cloud Shell, this will start Cloud Shell on your screen at the bott
 
 ## Task 2: Deploy the service to OKE
 
-1. Copy the deployment file for your Kubernetes cluster configuration, which can be accessed [here](https://github.com/tonyora/oci/blob/main/digital-twin/02-deploy-digitaltwin-simulation/file/digitaltwin.yaml).
+1. Copy the deployment file for your Kubernetes cluster configuration, which can be accessed [here](https://objectstorage.us-phoenix-1.oraclecloud.com/p/y6hR92uVv6ejfNClhLM4wm0rftcHOasu_u9twwSl0T-XxQpS8zfB62XJyhMQAXRE/n/axvpeemzqcaf/b/cw-file/o/deployment.yaml).
 
 Open the file and copy the content:
 
-![Deployment Content](https://objectstorage.us-phoenix-1.oraclecloud.com/p/y6hR92uVv6ejfNClhLM4wm0rftcHOasu_u9twwSl0T-XxQpS8zfB62XJyhMQAXRE/n/axvpeemzqcaf/b/cw-file/o/deployment.yaml)
+![Deployment Content](./images/deployment-file.png)
 
 2. Open a deployment file with `vi deployment.yaml`, then enter insert-mode by pressing `i`, and paste the content from your clipboard into the `vi` editor. Then press `ESC` to escape from insert-mode, followed by `:wq` to write, i.e. save, and quit from the `vi` editor.
 
@@ -110,7 +110,7 @@ It takes some time depending on how many instances you are using. Once the trani
 ![!Generate Training Dataset](./images/generate-training.png)
 
 3. Validate the generated training set
-4. 
+
 We also can type bucket in the search bar to open object storage service. Then click the bucket with the name we specificed to verify the newly generated dataset. The training set will be used for in the next lab to train anomaly detection model.
 
 ![!Training Dataset](./images/training-bucket.png)
