@@ -21,23 +21,33 @@ Lab 3: Configure OCI Object Storage Buckets and Upload Driver
 
    *   **driver-code-archive-bucket**: The bucket to store driver code and archive.zip consuming by Data Flow.
    *   **training-config-bucket**: The bucket to store training process configuration.
-   *   **training-data\-bucket**: The bucket to store training data. Need to enable **Emit Object Events**.
+   *   **training-data-bucket**: The bucket to store training data. Need to enable **Emit Object Events**.
    *   **inferencing-config-bucket**: The bucket to store inferencing process configuration.
    *   **inferencing-data-bucket**: The bucket to store training data. Need to enable **Emit Object Events**.
    *   **staging-bucket**: The bucket to store processed interim data, i.e. the data passed through processing, waiting for being fed to training or inferencing. 
    *   **output-bucket**: The bucket to store the finalized output from inferencing, the list of trained models and data dependent information
    *   **logs-bucket**: The bucket to store data flow logs.
 
-   To enable OCI Object Store events to be emitted, update the respective Storage Bucket by going to the bucket's page:
+
+## 4. Enable OCI Object Store Events
+
+   Update the following OCI Object Store Buckets to emit events whenever new files are saved/uploaded to these buckets.
+
+   Object Store Bucket Name |
+   ------------------------ |
+   **training-data-bucket**
+   **inferencing-data-bucket**
+
+   Enable OCI Object Store events to be emitted by going to the respective Bucket's detail page as shown in the screenshot below.
 
    ![](./images/Prepare-OS1.png)
 
-## 4. Upload Driver and Library
+## 5. Upload Driver and Library
 
    Upload the DPF Driver and Transforms Library (archive.zip) which you downloaded in Steps [1] and [2] into the respective OCI Object Storage Buckets. See below.
 
-   *   Put driver code into **driver-code-archive-bucket**
-   *   Put archive.zip into **driver-code-archive-bucket**
+   *   Upload driver code (**df_driver.py**) into **driver-code-archive-bucket**
+   *   Upload archive.zip into **driver-code-archive-bucket**
 
 ## Useful Resources
 Refer to OCI documentation (link below) to learn more about OCI Object Storage.
