@@ -32,32 +32,32 @@ Lab 2: Configure OCI IAM Policies
    Configure all the necessary policies. For convenience, allow `any-user` to access the resources (see below). You can refine the scope by creating user groups.
 
    ```
-   Allow any-user to manage objects in COMPARTMENT <compartment-name>
-   Allow service faas to manage objects in COMPARTMENT <compartment-name>
-   Allow any-user to use cloud-shell IN COMPARTMENT <compartment-name>
-   Allow any-user to manage repos IN COMPARTMENT <compartment-name>
-   Allow any-user to read objectstorage-namespaces IN COMPARTMENT <compartment-name>
-   Allow any-user to manage logging-family IN COMPARTMENT <compartment-name>
-   Allow any-user to read metrics IN COMPARTMENT <compartment-name>
-   Allow any-user to manage functions-family IN COMPARTMENT <compartment-name>
-   Allow any-user to use virtual-network-family IN COMPARTMENT <compartment-name>
-   Allow any-user to use apm-domains IN COMPARTMENT <compartment-name>
-   Allow any-user to read vaults IN COMPARTMENT <compartment-name>
-   Allow any-user to use keys IN COMPARTMENT <compartment-name>
-   Allow service faas to use dataflow-family in COMPARTMENT <compartment-name>
-   Allow service faas to use apm-domains IN COMPARTMENT <compartment-name>
-   Allow service faas to read repos IN COMPARTMENT <compartment-name> where request.operation='ListContainerImageSignatures'
-   Allow service faas to {KEY_READ} IN COMPARTMENT <compartment-name> where request.operation='GetKeyVersion'
-   Allow service faas to {KEY_VERIFY} IN COMPARTMENT <compartment-name> where request.operation='Verify'
+   Allow any-user to manage objects in compartment <compartment-name>
+   Allow service faas to manage objects in compartment <compartment-name>
+   Allow any-user to use cloud-shell IN compartment <compartment-name>
+   Allow any-user to manage repos IN compartment <compartment-name>
+   Allow any-user to read objectstorage-namespaces IN compartment <compartment-name>
+   Allow any-user to manage logging-family IN compartment <compartment-name>
+   Allow any-user to read metrics IN compartment <compartment-name>
+   Allow any-user to manage functions-family IN compartment <compartment-name>
+   Allow any-user to use virtual-network-family IN compartment <compartment-name>
+   Allow any-user to use apm-domains IN compartment <compartment-name>
+   Allow any-user to read vaults IN compartment <compartment-name>
+   Allow any-user to use keys IN compartment <compartment-name>
+   Allow service faas to use dataflow-family in compartment <compartment-name>
+   Allow service faas to use apm-domains IN compartment <compartment-name>
+   Allow service faas to read repos IN compartment <compartment-name> where request.operation='ListContainerImageSignatures'
+   Allow service faas to {KEY_READ} IN compartment <compartment-name> where request.operation='GetKeyVersion'
+   Allow service faas to {KEY_VERIFY} IN compartment <compartment-name> where request.operation='Verify'
    Allow dynamic-group <dynamic-name> to manage all-resources in compartment <compartment-name>
-   Allow any-user to inspect compartments in COMPARTMENT <compartment-name>
-   Allow any-user to inspect streams in COMPARTMENT <compartment-name>
-   Allow any-user to use stream-push in COMPARTMENT <compartment-name>
-   Allow any-user to use stream-pull in COMPARTMENT <compartment-name>
-   Allow  any-user to use virtual-network-family in COMPARTMENT <compartment-name>
-   Allow  any-user to manage function-family in COMPARTMENT <compartment-name>
-   Allow any-user to use ons-topic in COMPARTMENT <compartment-name>
-   Allow any-user to manage cloudevents-rules in COMPARTMENT <compartment-name>
+   Allow any-user to inspect compartments in compartment <compartment-name>
+   Allow any-user to inspect streams in compartment <compartment-name>
+   Allow any-user to use stream-push in compartment <compartment-name>
+   Allow any-user to use stream-pull in compartment <compartment-name>
+   Allow  any-user to use virtual-network-family in compartment <compartment-name>
+   Allow  any-user to manage function-family in compartment <compartment-name>
+   Allow any-user to use ons-topic in compartment <compartment-name>
+   Allow any-user to manage cloudevents-rules in compartment <compartment-name>
    Allow any-user to use cloud-shell in compartment <compartment-name>
    Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='staging-bucket'
    Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='inferencing-config-bucket'
