@@ -113,7 +113,7 @@ Now the signals are in the stream. We are using another API to retrieve the sign
 
 	![!Detect Anomaly Result](./images/detect-anomaly-res.png)
 
-	The returned next_cursor will be used in the next run to retrieve signals from the stream. The retuned next_cursor will be used in the next run to retrieve signals from the stream. The batch_size is used to show how many messages you like to retrieve from streaming service. As we move the curson along the stream, we always use next_cursor returned back after a successful execuction. In the lab, we purposly designed it run this way to understand how all the system service runing behined scene. In real use case, this is an automatic process and the operator get notified once an anomaly is detected.
+	The returned next\_cursor will be used in the next run to retrieve signals from the stream. The batch\_size is used to show how many messages you like to retrieve from streaming service. As we move the curson along the stream, we always use next_cursor returned back after a successful execuction. In the lab, we purposly designed it run this way to understand how all the system service runing behined scene. In real use case, this is an automatic process and the operator get notified once an anomaly is detected.
 
 11. Once anomaly detected. An email will send to the designated email configured by the operation. The notification will show exactly why the anomaly service reported the warning. Then, the operation can further diagnose the root cause.
 
