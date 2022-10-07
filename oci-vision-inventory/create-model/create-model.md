@@ -34,7 +34,7 @@ An OCI Vision custom model can be created in quick mode (up to 1 hour), regular 
 5. Name the model *vision-model*.
 6. Choose *Quick training* and click **Next**.
    ![Creation of OCI Vision model - 2](../images/create_model2.png)
-7. Click **Create and train**.
+7. Click **Create and train**. For this model, training will take about 20 minutes.
 
 ## Acknowledgements
 
