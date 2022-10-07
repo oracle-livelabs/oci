@@ -18,7 +18,7 @@ In this workshop, you will:
 ### **Assets**
 
 Powerpoint
-*[You're in the Cloud, Now What?](https://objectstorage.us-ashburn-1.oraclecloud.com/p/kz0dQyYAT3SS1ASmuex_rA6tsCn2obyC3Ztk3eQFU5ZrOzEt2gEpKp7GGcq-hFU7/n/ociobtnas/b/OCW2022/o/TUT4116_%20Youre_in_the_Cloud_Now_What_Final.pdf)
+* [You're in the Cloud, Now What?](https://objectstorage.us-ashburn-1.oraclecloud.com/p/kz0dQyYAT3SS1ASmuex_rA6tsCn2obyC3Ztk3eQFU5ZrOzEt2gEpKp7GGcq-hFU7/n/ociobtnas/b/OCW2022/o/TUT4116_%20Youre_in_the_Cloud_Now_What_Final.pdf)
 
 
 ## Learn More
