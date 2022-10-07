@@ -10,7 +10,7 @@ This session on OCI Tutorial - Introduction to OCI Business Operations covers th
 
 In this workshop, you will learn how to:
 * Understand what the compartments and why are they useful for organizing your cloud resources.
-* Know the difference betwren freeform and defined tags. How to create tag namespace, defined tags, and using tag defaults
+* Know the difference between freeform and defined tags. How to create tag namespace, defined tags, and using tag defaults.
 * Create compartment and cost tracking budgets in tenancy. Setting up budget alert rules. 
 * Use the cost analysis dashboard to analyze costs and usage. Create and save different cost analysis reports. 
 * Utilize cloud advisor to assess different recommendations and apply them to your cloud resources. Creating overrides for recommendations and targeting them at different resources using tags and compartments. 
