@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "OCI Tutorial - You're in the Cloud, Now What?",
+    "workshoptitle": "OCI Tutorial - You're in the cloud, now what?",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
