@@ -19,7 +19,8 @@ In this workshop, you will learn how to:
 
 ### **Assets**
 
-Powerpoint:
+Powerpoint
+* [Business Operations PPT](https://objectstorage.us-ashburn-1.oraclecloud.com/p/c9NZXbFVhmoftAfo-OCHWJcavv9uZD2T8TgeBW-8pLo86uLzS-hR98fptIDTKjMe/n/ociobtnas/b/OCW2022/o/TUT4109_Business_Operations_Final.pptx)
 
 Video Recording
 * [Day One and Beyond: OCI Business Governance](https://www.youtube.com/watch?v=l6KsMSS8Khk&ab_channel=OracleLearning)
