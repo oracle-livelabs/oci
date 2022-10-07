@@ -18,6 +18,10 @@ In this lab you will perform the following tasks:
 - Import a sample Skill within your instance.
 - Create and test the intents and entities.
 
+## Prerequisites
+
+- Download the Skill template - <a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/CareClinics_Template.zip">download</a> 
+
 ## Task 1: Create a Digital Assistant Instance and Import the Skill
 1. Once you are logged into Oracle Cloud, you are taken to the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top-level navigation choices.
 2. Click **Digital Assistant**
@@ -143,7 +147,7 @@ Now it's time to add entities, which detect information in the user input that c
   ![Create entity](images/create-entity.png " ")
 5. Click the Create button
 6. Follow the same steps for entities:  
-    - *Last Name* (Name - LastName, type - Regular Expression, Value - [a-zA-Z]+)
+    - *LastName* (Name - LastName, type - Regular Expression, Value - [a-zA-Z]+)
     - *PhoneNumber* (Name - PhoneNumber, type - Regular Expression, Value - ^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$)
     - *State* (Name - State, type - Regular Expression, Value - [a-zA-Z]+)
     - *City* (Name - City, type - Regular Expression, Value - [a-zA-Z]+)
