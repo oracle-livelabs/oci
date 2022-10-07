@@ -20,7 +20,7 @@ In this session, we will deploy MapleSoft MapleSim Digital Twin simulation model
 OCI Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console. It provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI (OCI-CLI), `kubectl`, docker, and other useful command-line tools.
 1. Open OCI Navigate menu, select **Developer Services**, then **Kubernetes Clusters (OKE)**. 
 
-![navigation](./images/navigation_menu.png " ")
+![navigation](./images/navigation_menu.png)
 
 2. Select your OKE Cluster from console. Click `Access Cluster` to pop up the `Access Your cluster` window. Click `Cloud Shell Access`.
 
