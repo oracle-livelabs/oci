@@ -12,7 +12,7 @@ In this workshop, you will understand the following concepts:
 * What is cloud operations and what tools does Oracle provide to maintain day to day operations?
 * Options for accessing OCI, how they differ from one another, and when is it best to use each method of access
 * Utilize Terraform on OCI
-* High level of overview of observability and management platform and associated tools that will assist in cloud operation tools that will help ....
+* High level of overview of observability and management platform and associated tools that will assist in cloud operation tools
 
 
 
