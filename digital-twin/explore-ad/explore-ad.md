@@ -79,6 +79,8 @@ We need to generate proper authentication configuration (API Signing Key pair) i
 
 ## Task 2: Activate Data Science Platform and Configuration
 
+If you have an active running Data Science Project and Notebook Session, please proceed to step 11.
+
 1. Create a Project
 Click navigation icon ![Image alt text](./images/navigation_icon.png) at the top left of page, select **Analytics & AI**, then select **Data Science**. This will open the Projects page.
 
@@ -146,7 +148,7 @@ Then click **Create**.
 	![nb session ACTIVE](./images/nb_session_ACTIVE.png)
 
 10. Generally it will take few minutes for notebook session turning into ACTIVE.
-While waiting, please download this [Python notebook](./files/AD_DigitalTwin_notebook.ipynb).
+While waiting, please download this [Python notebook](https://objectstorage.us-ashburn-1.oraclecloud.com/p/7XyFjpUQGtG35-PwpZEOp8LLXktUnkDnivSGOZayqtyRPZsW3LwpzVe3JO488xel/n/orasenatdpltintegration03/b/digitaltwin/o/AD_DigitalTwin_notebook.ipynb).
 
 11. Once the notebook is in an ACTIVE state, click **Open**. 
 
@@ -256,7 +258,7 @@ Wait for the conda environment to be installed.
 
 25. Upload Python notebook
 
-	If you haven't done so, download this [python notebook](./files/AD_DigitalTwin_notebook.ipynb) which contains the python code snippet for this lab. 
+	If you haven't done so, download this [python notebook](https://objectstorage.us-ashburn-1.oraclecloud.com/p/7XyFjpUQGtG35-PwpZEOp8LLXktUnkDnivSGOZayqtyRPZsW3LwpzVe3JO488xel/n/orasenatdpltintegration03/b/digitaltwin/o/AD_DigitalTwin_notebook.ipynb) which contains the python code snippet for this lab. 
 	Upload the notebook to JupyterLab by dragging it to the left panel. 
 
 	![drag file](./images/drag_file.png)

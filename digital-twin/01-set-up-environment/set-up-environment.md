@@ -107,7 +107,7 @@ Oracle Cloud Infrastructure Object Storage service is an Internet-scale, high-pe
 
 ![os console](./images/os_console.png)
 
-3. Open the bucket, whose name will start with **AD_bucket**, which was deployed as part of your stack.
+3. Open the bucket, whose name will start with **AD_bucket**, which was deployed as part of your stack. Keep a copy of your bucket name, which will be needed in next lab. 
 
 
 ## Acknowledgements

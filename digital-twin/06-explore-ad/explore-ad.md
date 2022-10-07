@@ -78,6 +78,8 @@ To know more about API key and config file, please visit [Generating API KEY](ht
 
 ## Task 2: Activate Data Science Platform and Configuration
 
+If you already have active running Data Science project and Notebook Session, please directly proceed to Task 3.
+
 1. Create a Project
 Click navigation icon ![Image alt text](./images/navigation_icon.png) at the top left of page, select **Analytics & AI**, then select **Data Science**. This will open the Projects page.
 
@@ -142,7 +144,7 @@ When the notebook session is up and running, you'll see the status turn to ACTIV
 ![nb session ACTIVE](./images/nb_session_ACTIVE.png)
 
 Generally it will take few minutes for notebook session turning into ACTIVE. 
-While waiting, please download this [Python notebook](./files/AD_DigitalTwin_notebook.ipynb).
+While waiting, please download this [Python notebook](https://objectstorage.us-ashburn-1.oraclecloud.com/p/7XyFjpUQGtG35-PwpZEOp8LLXktUnkDnivSGOZayqtyRPZsW3LwpzVe3JO488xel/n/orasenatdpltintegration03/b/digitaltwin/o/AD_DigitalTwin_notebook.ipynb).
 
 Once the notebook is in an ACTIVE state, click **Open**. 
 
@@ -261,7 +263,7 @@ Type **:wq** to save the updates and quit out of vi editor.
 
 6. Upload Python notebook
 
-If you haven't done so, download this [python notebook](./files/AD_DigitalTwin_notebook.ipynb) which contains the python code snippet for this lab. 
+If you haven't done so, download this [python notebook](https://objectstorage.us-ashburn-1.oraclecloud.com/p/7XyFjpUQGtG35-PwpZEOp8LLXktUnkDnivSGOZayqtyRPZsW3LwpzVe3JO488xel/n/orasenatdpltintegration03/b/digitaltwin/o/AD_DigitalTwin_notebook.ipynb) which contains the python code snippet for this lab. 
 Upload the notebook to JupyterLab by dragging it to the left panel. 
 
 ![drag file](./images/drag_file.png)

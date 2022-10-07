@@ -15,7 +15,7 @@ In this session, we will deploy MapleSoft MapleSim Digital Twin simulation model
 2. Generate anomaly detection training dataset use Digital Twin model.
 
 
-## Task 1 Configure OKE access using Cloud Shell
+## Task 1: Configure OKE access using Cloud Shell
 
 OCI Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console. It provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI (OCI-CLI), `kubectl`, docker, and other useful command-line tools.
 1. Open OCI Navigate menu, select **Developer Services**, then **Kubernetes Clusters (OKE)**. 
@@ -35,7 +35,7 @@ Click Launch Cloud Shell, this will start Cloud Shell on your screen at the bott
 
 ![Kubernetes Config](./images/cloud-console-kube.png)
 
-## Task 2 Deploy the service to OKE
+## Task 2: Deploy the service to OKE
 
 1. Copy the deployment file for your Kubernetes cluster configuration, which can be accessed [here](https://github.com/tonyora/oci/blob/main/digital-twin/02-deploy-digitaltwin-simulation/file/digitaltwin.yaml).
 
@@ -48,6 +48,7 @@ Open the file and copy the content:
 ![Edit Deployment](./images/edit-deployment.png)
 
 3. Deploy the application to OKE. 
+
 On the Cloud Shell console, run the following command to deploy the application.
 
 `kubectl apply -f deployment.yaml`
@@ -63,14 +64,17 @@ The deployment may take a few minutes to finish. We can run the following `kubec
 
 Make a note of the public IP address that corresponds to the Kubernetes service of type `LoadBalancer`, under `EXTERNAL-IP`. In this case, the public IP address is `144.24.42.157` for reference. You will use the public IP address of the Load Balancer to access your API using swagger-ui  later on in this workshop.
 
-## Task 3 Generate the training data
+## Task 3: Generate the training data
+
 We will create a fleet of digital twins in this task to generate training data to train our anomaly detection model in the next workshop. All the actions are implemented by REST API. To access the API, open a Chrome window with address http://ip-address/docs#/, e.g. 144.24.42.157:5000.
+
 1. Create the fleet
-After the pods is deployed, we will initiate the fleet with the number of digital twins in the fleet. And the fmu file that we are used for the digital twin. In the swagger-ui windown, click "Try it out"/initiate API 
 
-![!initiate fleet](./images/initiate-fleet.png)
+After the pods is deployed, we will initiate the fleet with the number of digital twins in the fleet. And the fmu file that we are used for the digital twin. In the swagger-ui window, expand /initiate panel, then click "Try it out" 
 
-The number_instance instructs the number of digtital twins to create. The fleet_model is the mudel to be used. In the workshop we use a model that sumulate a telehandler model which created by Maplesoft. 
+![!Swagger_UI](./images/swagger-ui-panel.png)
+
+Copy the following code and paste into Request body. The `number_instance` instructs the number of digital twins to create. The `fleet_model` is the model to be used. In this workshop we use a model that simulate a telehandler model which created by MapleSoft. 
 
 ~~~
 {
@@ -79,11 +83,14 @@ The number_instance instructs the number of digtital twins to create. The fleet_
 }
 ~~~
 
+![!initiate fleet](./images/initiate-fleet.png)
+
 Then click Execute to initiate the fleet. The success of excution will reuturn the parameters that the model.
 
 ![!initiate fleet result](./images/initiate-fleet-res.png)
 
 2. Generate and upload the training set to object storage
+
 In this step, we set up a process let the model to generate the normal data in parallel and the training data will be updated to the OCI object storage we created early. Click /uploadtraining to expand the API. Click "Try it out". We put the parameters for the operation. Earch digital twin will run in the proper value in the range. At the end, all the results from each digital twin are combined into many cycles. We provide the bucket that will be used for the train dataset will be uploaded.
 
 ![!Generate Training Dataset](./images/generate-training.png)
@@ -103,6 +110,7 @@ It takes some time depending on how many instances you are using. Once the trani
 ![!Generate Training Dataset](./images/generate-training.png)
 
 3. Validate the generated training set
+4. 
 We also can type bucket in the search bar to open object storage service. Then click the bucket with the name we specificed to verify the newly generated dataset. The training set will be used for in the next lab to train anomaly detection model.
 
 ![!Training Dataset](./images/training-bucket.png)
