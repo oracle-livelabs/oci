@@ -224,15 +224,8 @@ In this activity, you will:
     
     ![Home Page](images/image030.png)
 
+
 28. 
-
-  Review the journal lines that made up the account balance. You are now reviewing the Journal batch/journal details in this drilldown. This batch has been posted from Payables. 
-    
-    > Click on **“372.88”**
-    
-    ![Home Page](images/image030.png)
-
-29. 
 
   You can review the actual transaction and are looking at the subledger drilldown which holds the rich AP data in this case, while the GL Journal is summarized in GL. This provides you all the data you need to analyze while keeping the GL Thin. 
     
@@ -240,13 +233,13 @@ In this activity, you will:
     
     ![Home Page](images/image031.png)
 
-30. 
+29. 
 
   You can now review the AP Invoice, the lines that made up this AP Invoice even though we only drilled down on the Airfare which is line #6. 
         
     ![Home Page](images/image032.png)
 
-31. 
+30. 
 
   You are able to review and audit any attachments available in the transaction without having to call the AP department in a self service way. 
     
@@ -254,7 +247,7 @@ In this activity, you will:
     
     ![Home Page](images/image033.png)
 
-32. 
+31. 
 
   You can review the attachment and validate that the receipt is right for the air travel and reasonable cost charged by the employee. 
         
