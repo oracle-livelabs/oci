@@ -37,7 +37,7 @@ Click Launch Cloud Shell, this will start Cloud Shell on your screen at the bott
 
 ## Task 2: Deploy the service to OKE
 
-1. Copy the deployment file for your Kubernetes cluster configuration, which can be accessed [here](https://github.com/tonyora/oci/blob/main/digital-twin/02-deploy-digitaltwin-simulation/file/digitaltwin.yaml).
+1. Copy the deployment file for your Kubernetes cluster configuration, which can be accessed [here](https://objectstorage.us-phoenix-1.oraclecloud.com/p/y6hR92uVv6ejfNClhLM4wm0rftcHOasu_u9twwSl0T-XxQpS8zfB62XJyhMQAXRE/n/axvpeemzqcaf/b/cw-file/o/deployment.yaml).
 
 Open the file and copy the content:
 
@@ -78,7 +78,7 @@ Copy the following code and paste into Request body. The `number_instance` instr
 
 ~~~
 {
-"number_instance": 10,
+"number_instance": 20,
 "fleet_model": "linux_fmus/Telehandler.fmu"
 }
 ~~~
@@ -110,7 +110,7 @@ It takes some time depending on how many instances you are using. Once the trani
 ![!Generate Training Dataset](./images/generate-training.png)
 
 3. Validate the generated training set
-4. 
+
 We also can type bucket in the search bar to open object storage service. Then click the bucket with the name we specificed to verify the newly generated dataset. The training set will be used for in the next lab to train anomaly detection model.
 
 ![!Training Dataset](./images/training-bucket.png)
