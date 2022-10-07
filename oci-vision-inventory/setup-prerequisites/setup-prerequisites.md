@@ -1,4 +1,4 @@
-# Pre-requisites
+# Prerequisites
 
 ## Introduction
 
@@ -35,7 +35,7 @@ In this task, you will create a dedicated compartment for this live lab.
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity & Security** and select **Domains**.
    
-   > Note that if you do not see **Domains** it means that your region has not been updated to support identity domains. If that's the case, select **Groups** and move to step 5 below.
+   > **Note:** If you do not see **Domains** it means that your region has not been updated to support identity domains. If that's the case, select **Groups** and move to step 5 below.
 
    ![Select Domains](../images/oci_menu_domains.png)
    
@@ -50,7 +50,7 @@ In this task, you will create a dedicated compartment for this live lab.
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity & Security** and select **Domains**. 
 
-   > Note that if you do not see **Domains** it means that your region has not been updated to support identity domains. If that's the case, select **Dynamic Groups** and move to step 5 below.
+   > **Note:** If you do not see **Domains** it means that your region has not been updated to support identity domains. If that's the case, select **Dynamic Groups** and move to step 5 below.
 
    ![Select Domains](../images/oci_menu_domains.png)
 
