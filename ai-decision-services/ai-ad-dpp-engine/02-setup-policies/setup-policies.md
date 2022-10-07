@@ -50,14 +50,14 @@ Lab 2: Configure OCI IAM Policies
    Allow service faas to {KEY_READ} IN COMPARTMENT <compartment-name> where request.operation='GetKeyVersion'
    Allow service faas to {KEY_VERIFY} IN COMPARTMENT <compartment-name> where request.operation='Verify'
    Allow dynamic-group <dynamic-name> to manage all-resources in compartment <compartment-name>
-   allow any-user to inspect compartments in COMPARTMENT <compartment-name>
-   allow any-user to inspect streams in COMPARTMENT <compartment-name>
-   allow any-user to use stream-push in COMPARTMENT <compartment-name>
-   allow any-user to use stream-pull in COMPARTMENT <compartment-name>
-   allow  any-user to use virtual-network-family in COMPARTMENT <compartment-name>
-   allow  any-user to manage function-family in COMPARTMENT <compartment-name>
-   allow any-user to use ons-topic in COMPARTMENT <compartment-name>
-   allow any-user to manage cloudevents-rules in COMPARTMENT <compartment-name>
+   Allow any-user to inspect compartments in COMPARTMENT <compartment-name>
+   Allow any-user to inspect streams in COMPARTMENT <compartment-name>
+   Allow any-user to use stream-push in COMPARTMENT <compartment-name>
+   Allow any-user to use stream-pull in COMPARTMENT <compartment-name>
+   Allow  any-user to use virtual-network-family in COMPARTMENT <compartment-name>
+   Allow  any-user to manage function-family in COMPARTMENT <compartment-name>
+   Allow any-user to use ons-topic in COMPARTMENT <compartment-name>
+   Allow any-user to manage cloudevents-rules in COMPARTMENT <compartment-name>
    Allow any-user to use cloud-shell in compartment <compartment-name>
    Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='staging-bucket'
    Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='inferencing-config-bucket'
