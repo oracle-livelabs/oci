@@ -1,0 +1,34 @@
+{
+    "workshoptitle": "Cloud Adventure – for the Office of the CFO",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Manage Journals",
+            "filename": "../../01-manage-journal/manage-journal.md"
+        },
+        {
+            "title": "Lab 2: Account Monitor",
+            "filename": "../../02-manage-monitor/account-monitor.md"
+        },
+        {
+            "title": "Lab 3: Risk Management",
+            "filename": "../../03-risk-mgmt/risk-management.md"
+        },
+        {
+            "title": "Lab 4: Predictive Capabilities",
+            "filename": "../../04-predictive/predictive.md"
+        },
+        {
+            "title": "Lab 5: Procurement",
+            "filename": "../../05-procurement/procurement.md"
+        },
+        {
+            "title": "Oracle CloudWorld 2022 - Get Help",
+            "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
+        }
+    ]
+}
