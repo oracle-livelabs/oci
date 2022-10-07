@@ -18,7 +18,8 @@ In this workshop, you will understand the following concepts:
 
 ### **Assets**
 
-Powerpoint:
+Powerpoint
+* [Oracle Cloud Operations](https://objectstorage.us-ashburn-1.oraclecloud.com/p/6ggDqLgvHI43izvPEPYmRQp8SeXY6jaCxoaew9G4OgevgONFrHtp7fmam2aW3-SV/n/ociobtnas/b/OCW2022/o/TUT4111%20Cloud_Operations.pdf)
 
 Video Recording
 * [Day One and Beyond: OCI Operations Quick Start](https://www.youtube.com/watch?v=3kxrPj48D4U&ab_channel=OracleLearning)

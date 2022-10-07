@@ -22,10 +22,9 @@ In this workshop, you will:
 
 ### **Assets**
 
-Powerpoint:
+Powerpoint
+*[Putting OCI Best Practices into Practice](https://objectstorage.us-ashburn-1.oraclecloud.com/p/aOIhOCZHyb4lJKySHQk36uO2tMBfxJKQkXR5h71of74O5DIQtOwHTA8svN2CFGms/n/ociobtnas/b/OCW2022/o/TUT4115_OCI%20Best%20Practices_Final.pdf)
 
-Video Recording
-* 
 
 
 ## Learn More

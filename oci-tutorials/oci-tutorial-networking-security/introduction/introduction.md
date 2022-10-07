@@ -17,7 +17,8 @@ In this workshop, you will:
 
 ### **Assets**
 
-Powerpoint Slide:
+Powerpoint
+* [OCI Networking and Security QuickStart](https://objectstorage.us-ashburn-1.oraclecloud.com/p/p8TOzzsDldO8pVCmW4HSsS9LlrxFTs-A9tw64NHMRvsHudbB9Jiy8253kkmw9JU8/n/ociobtnas/b/OCW2022/o/TUT4112_OCI_Networking_and_Security_Quick_Start_Final.pdf)
 
 Video Recording
 * [Day One and Beyond: OCI Security Quick Start](https://www.youtube.com/watch?v=wFBDBNsxP7U&ab_channel=OracleLearning)

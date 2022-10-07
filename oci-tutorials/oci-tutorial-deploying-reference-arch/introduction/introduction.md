@@ -15,8 +15,8 @@ In this workshop, you will learn how to:
 
 ### **Assets**
 
-Powerpoint:
-* 
+Powerpoint
+* [Starting a 3-Tier Application and Deploying Reference Architectures](https://objectstorage.us-ashburn-1.oraclecloud.com/p/0LogyghrCJUQLVCjDzk06Gkmm-5QVTy6eJBovdmAq_qyI7iXYDhSTOFSnSfx4-Yq/n/ociobtnas/b/OCW2022/o/TUT4114-TUT4859%20-%20Reference%20Architectures_final.pdf)
 
 ## Learn More
 

@@ -16,7 +16,8 @@ In this workshop, you will learn how to:
 
 ### **Assets**
 
-Powerpoint:
+Powerpoint
+* [OCI Technical QuickStart](https://objectstorage.us-ashburn-1.oraclecloud.com/p/y_GPBmbZKraBhV2kPCpVyTSXnEz53f89UAq34GjXCKi34xwSr1cninFNCQO_jpJ6/n/ociobtnas/b/OCW2022/o/TUT4110_OCI_Technical_Quick_Start_Final.pdf)
 
 Video Recording
 * [Day One and Beyond: Oracle Cloud Technical Quick Start](https://www.youtube.com/watch?v=BU2VsBoXhdo&ab_channel=OracleLearning)
