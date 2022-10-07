@@ -297,4 +297,3 @@ Download the CSV file to view and verify the anomaly detection results. When the
 ```
 
 **Congratulations!**  You have successfully completed all labs in this workshop.
-

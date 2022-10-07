@@ -3,13 +3,17 @@ Lab 7: Configure OCI Events
 
 OCI Events tracks resource changes with events which comply with CNCF CloudEvents Standard. 
 
-1. Go to Events Service → Rules → Create Rule, and create a rule as follows:  
+## 1. Create an *Event* Rule
+
+   Go to Events Service → Rules → Create Rule, and create a rule as follows:  
 ![](./images/Set-Ev2.png)
 
    *   For Event Type, choose **Object Storage**, choosing **Object - Create** and **Object - Update**.
    *   For Attribute, choose **bucketName**. Attribute Values should be **training-data-bucket** and **inferencing-data-bucket**, which were the values set up in **Lab 4** earlier.
     
-2. For Actions, choose **Functions** as action type, and select the right compartment, application and Function OCID provisioned in **Lab 6**.
+## 2. Configure the *Action* type for the Rule
+
+   For Actions, choose **Functions** as action type, and select the right compartment, application and Function OCID provisioned in **Lab 6**.
 
    The finalized Rule Logic is shown below:
 
@@ -60,7 +64,9 @@ OCI Events tracks resource changes with events which comply with CNCF CloudEvent
    }
    ```
 
-3. Enable logs for troubleshooting purpose.
+## 3. Enable logs
+
+   Enable logs for troubleshooting purposes as shown in the screenshot below.
 
    ![](./images/Set-Ev1.png)
 
