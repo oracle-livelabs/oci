@@ -43,8 +43,13 @@ After using the normal data trained the model. We change specific parameters for
 	"pumpEfficiency": 0.91
 	},
 	"steps": {
+<<<<<<< HEAD
 	"1.2": {"cBoomCyl":87880,"TcBoom":101},
 	"3.8": {"cBoomCyl":18788,"TcBoom":1001}
+=======
+	"1.2": {"cBoomCyl":87880,"TcBoom":1001},
+	"3.8": {"cBoomCyl":18788,"TcBoom":101}
+>>>>>>> 70673113591ea941adeae4fb5a50be90bb9477c1
 	}
 	}
 
@@ -104,7 +109,11 @@ Now the signals are in the stream. We are using another API to retrieve the sign
 	"model_id": "ocid1.aianomalydetectionmodel.oc1.phx.amaaaaaa7hdcdhia3ryuiyr3p66kjv3h6hye4fm7e3tbqbpuna6ztba6wjlq",
 	"topic_id": "ocid1.onstopic.oc1.phx.aaaaaaaacgnodk725ge7yzqgtmcfepif3shqf3axxnnzvy77iyftmcv6p6kq",
 	"next_cursor":"",
+<<<<<<< HEAD
     "batch_size" : 100
+=======
+	"batch_size" : 100
+>>>>>>> 70673113591ea941adeae4fb5a50be90bb9477c1
 	}
 	```
 	![!Detect Anomaly](./images/detect-anomaly.png)
@@ -113,7 +122,7 @@ Now the signals are in the stream. We are using another API to retrieve the sign
 
 	![!Detect Anomaly Result](./images/detect-anomaly-res.png)
 
-	The returned next_cursor will be used in the next run to retrieve signals from the stream.
+	The returned next_cursor will be used in the next run to retrieve signals from the stream. The retuned next_cursor will be used in the next run to retrieve signals from the stream. The batch_size is used to show how many messages you like to retrieve from streaming service. As we move the curson along the stream, we always use next_cursor returned back after a successful execuction. In the lab, we purposly designed it run this way to understand how all the system service runing behined scene. In real use case, this is an automatic process and the operator get notified once an anomaly is detected.
 
 11. Once anomaly detected. An email will send to the designated email configured by the operation. The notification will show exactly why the anomaly service reported the warning. Then, the operation can further diagnose the root cause.
 
@@ -165,8 +174,8 @@ You many now **proceed to the next lab.**
 
 - **Authors**
       - Tony Zhang - Master Principal Cloud Architect
-      - Adrian Alba - Staff Cloud Engineer
 - **Contributors** 
       - Jiayuan Yang - Senior Cloud Engineer 
       - Samuel Cacela, Staff Cloud Engineer
-- **Last Updated By/Date** - September, 2022
+      - Adrian Alba - Staff Cloud Engineer
+- **Last Updated By/Date** - 2022 October
