@@ -9,7 +9,7 @@ Lab 1: Configure OCI Anomaly Detection
 
 ## 2. Create an Anomaly Detection *Project*
 
-   A **Project** serves as a container for organizing and/or grouping Anomaly Detection Service resources such as data assets and models.
+   A **Project** serves as a container for organizing and/or grouping Anomaly Detection Service resources such as *Data Assets* and *Models*.
 
    Create an Anomaly Detection *Project* by clicking on **Create Project**.  See Screenshot below.
 
