@@ -5,7 +5,7 @@ Lab 2: Configure OCI IAM Policies
 
    All OCI resources used to build the Anomaly Detection Solution in this workshop will be provisioned within the same OCI *Compartment*. Create an OCI Compartment (if needed).
 
-   **IMPORTANT**: Note down the compartment OCID and compartment name from the **Compartments** page in OCI Console. Substitute the value of compartment OCID in the *Policies* in Step [3] below (**compartment-name**).
+   **IMPORTANT**: Note down the compartment OCID and compartment name from the **Compartments** page in OCI Console. Substitute the value of compartment OCID in the *Policies* in Steps [2] & [3] below (**compartment-name**).
     
 ## 2. Create a *Dynamic Group*
 
