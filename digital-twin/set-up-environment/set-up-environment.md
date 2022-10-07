@@ -24,16 +24,16 @@ In this session, we will configure an Oracle Cloud Infrastructure (OCI) Tenancy 
 
 
 ### Objectives
-1. Create the OCI services needed to run digital twin model and anomaly detection solution
-2. Understand the OCI services
+* Create the OCI services needed to run digital twin model and anomaly detection solution
+* Understand the OCI services
 
 ### Prerequisites
-1. Fully-privileged access to an OCI Tenancy (account).
-2. Sufficient availability of resources in your OCI Tenancy. You can check resource availability [here](https://cloud.oracle.com/limits?region=home), and learn more about resource availability [here](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm#Viewing).
+* Fully-privileged access to an OCI Tenancy (account).
+* Sufficient availability of resources in your OCI Tenancy. You can check resource availability [here](https://cloud.oracle.com/limits?region=home), and learn more about resource availability [here](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm#Viewing).
 
 
 
-## Task 1 Create Resource Manager Stack
+## Task 1: Create Resource Manager Stack
 
 Resource Manager automates deployment and operations for all Oracle Cloud Infrastructure resources. Using the infrastructure-as-code (IaC) model, the service is based on Terraform, an open source industry standard software tool that enables DevOps engineers to develop and deploy their infrastructure anywhere.
 
@@ -41,17 +41,17 @@ Resource Manager automates deployment and operations for all Oracle Cloud Infras
 
 2. Click the `Deploy to Oracle Cloud` button below, opening the link into a new browser tab.
 
-In Chrome, Firefox and Safari, you can do this with `CTRL`+`Click` > Select `Open Link in New Tab`.
+    In Chrome, Firefox and Safari, you can do this with `CTRL`+`Click` > Select `Open Link in New Tab`.
 
-[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://objectstorage.us-ashburn-1.oraclecloud.com/p/op-o9z8k0z6u7bKmrkNmUW0Jo7IHatSRBaos0jUgFntsDgTA6C5TAqTG96MgmZ-t/n/orasenatdpltintegration03/b/digitaltwin/o/oci-digital-twin-pipeline-main.zip)
+    [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://objectstorage.us-ashburn-1.oraclecloud.com/p/op-o9z8k0z6u7bKmrkNmUW0Jo7IHatSRBaos0jUgFntsDgTA6C5TAqTG96MgmZ-t/n/orasenatdpltintegration03/b/digitaltwin/o/oci-digital-twin-pipeline-main.zip)
 
 3. In the `Stack Information` section, select the checkbox to confirm that you accept the [Oracle Terms of Use](https://cloudmarketplace.oracle.com/marketplace/content?contentId=50511634&render=inline).
 
-![create stack 1](./images/create_stack1.png)
+    ![create stack 1](./images/create_stack1.png)
 
-The `OCI Digital Twin Pipeline` will pop up under `Stack Information`. Click **Next** to proceed to the `Configure Variables` section.
+    The `OCI Digital Twin Pipeline` will pop up under `Stack Information`. Click **Next** to proceed to the `Configure Variables` section.
 
-![create stack 2](./images/create_stack2.png)
+    ![create stack 2](./images/create_stack2.png)
 
 4. In the `Configuration variables` section, supply the following input:
 
@@ -61,54 +61,55 @@ The `OCI Digital Twin Pipeline` will pop up under `Stack Information`. Click **N
 
     Additionally, select your `Parent Compartment` and `Region` to choose where you wish to deploy the infrastructure stack.
 
-![create stack config variable](./images/create_stack3.png)
+    ![create stack config variable](./images/create_stack3.png)
 
-For each resource that you wish to deploy, verify that the corresponding checkbox is selected in the `Select Resources` tile. Optionally, you can customize the attributes of each selected resource once an additional tile that presents configuration options for its respective resource appears below.
+    For each resource that you wish to deploy, verify that the corresponding checkbox is selected in the `Select Resources` tile. Optionally, you can customize the attributes of each selected resource once an additional tile that presents configuration options for its respective resource appears below.
 
-In this workshop, we will leave all of the resources checked, so that they will all deploy as part of our stack.
+    In this workshop, we will leave all of the resources checked, so that they will all deploy as part of our stack.
 
-![create stack config var](./images/create_stack4.png)
+    ![create stack config var](./images/create_stack4.png)
 
-On `Configure Variables` page, scroll to **Oracle Notifications Service (ONS)** section and fill in `ONS Subscription Endpoint` with your email address. This is to ensure that you receive a notification upon detection of anomalous data, enter an email address in the `ONS Subscription Endpoint` where you wish to receive these notifications from ONS (Oracle Notifications Service).
+    On `Configure Variables` page, scroll to **Oracle Notifications Service (ONS)** section and fill in `ONS Subscription Endpoint` with your email address. This is to ensure that you receive a notification upon detection of anomalous data, enter an email address in the `ONS Subscription Endpoint` where you wish to receive these notifications from ONS (Oracle Notifications Service).
 
-![create stack ons endpoint](./images/ons_endpoint.png)
+    ![create stack ons endpoint](./images/ons_endpoint.png)
 
-When you are finished editing your variables in the `Configure Variables` section, click **Next** to proceed to the `Review` section.
+    When you are finished editing your variables in the `Configure Variables` section, click **Next** to proceed to the `Review` section.
 
 5. Select the checkbox for **Run Apply**, and click **Create**. OCI Resource Manager then will start running the Job.
 
-![create stack review](./images/create_stack_review.png)
+    ![create stack review](./images/create_stack_review.png)
 
-You can monitor the deployment by monitoring the `Logs` window.
+    You can monitor the deployment by monitoring the `Logs` window.
 
-![create stack log](./images/resource_manager_log.png)
+    ![create stack log](./images/resource_manager_log.png)
 
-The Job will take approximately 25 minutes to run.
+    The Job will take approximately 25 minutes to run.
 
-## Task 2 Review Stack Job Resources
+## Task 2: Review Stack Job Resources
 
 1. Once the Job state turns to `SUCCEEDED`, you can view all the resources provisioned by the stack by click **Job resources**. 
 
-![job succeed](./images/job_succeed.png)
+    ![job succeed](./images/job_succeed.png)
 
-![job resource view](./images/job_resource_show.png)
+    ![job resource view](./images/job_resource_show.png)
 
 
 
-## Task 3 Verify OCI Object Storage
+## Task 3: Verify OCI Object Storage
 
 Oracle Cloud Infrastructure Object Storage service is an Internet-scale, high-performance storage platform that offers reliable and cost-efficient data durability. You can check and verify the Object Storage Bucket that created by the Resource Manager Job.
 
 1. Click the Navigation Menu in the upper left, navigate to **Storage**, and select **Buckets**.
 
-![os navigation](./images/bucket_navigation.png)
+    ![os navigation](./images/bucket_navigation.png)
 
 2. Select the new Compartment where your resources provisioned, whose name will start with **AD_workshop**. You can identify your compartment by the unique suffix that has been added to its name.
 
-![os console](./images/os_console.png)
+    ![os console](./images/os_console.png)
 
 3. Open the bucket, whose name will start with **AD_bucket**, which was deployed as part of your stack.
 
+You many now **proceed to the next lab.**
 
 ## Acknowledgements
 
@@ -118,4 +119,4 @@ Oracle Cloud Infrastructure Object Storage service is an Internet-scale, high-pe
 - **Contributors** 
       - Tony Zhang - Master Principal Cloud Architect
       - Adrian Alba - Staff Cloud Engineer
-- **Last Updated By/Date** - 2022 September
+- **Last Updated By/Date** - September, 2022
