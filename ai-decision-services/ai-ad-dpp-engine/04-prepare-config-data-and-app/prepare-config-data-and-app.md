@@ -5,7 +5,7 @@ In this Lab, users will create a *Driver* configuration which will be used for p
 
 A brief description of the configuration file sections and their syntax is provided below.
 
-## Driver Configuration
+## 1. Examine Driver Configuration File
 
 This is a JSON file that defines the DPF workflow. The configuration is composed of the following 5 parts.
 
@@ -85,7 +85,7 @@ This configuration is used for Anomaly Detection(AD) specific options:
 
 </details>
 
-## 1. Update Driver Configuration Files
+## 2. Update Driver Configuration Files
 
 Driver configuration files used in this workshop are provided below.
 
@@ -216,6 +216,6 @@ Driver configuration files used in this workshop are provided below.
 3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 1.
 4. Populate compartmentId with compartment OCID from **Lab 2**.
 
-## 2. Upload Driver Configuration Files
+## 3. Upload Driver Configuration Files
 *   Upload OCI AD model training configuration file into **training-config-bucket** in OCI Object Storage Bucket, created in **Lab 4**
 *   Upload OCI AD inferencing configuration file into **inferencing-config-bucket**
