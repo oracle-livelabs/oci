@@ -31,7 +31,7 @@ After using the normal data trained the model. We change specific parameters for
 
 Input an instance ID, e.g. 1
 Paste the copied OCID to stream_id field.
-Input the steps that we like to try and debug. A sample of the payload is given.
+Input the steps that we like to try and debug. A sample of the payload is given. The steps parameter directs the digital twin when to generate an anamly and put the rusults in the streaming service.
 
 ~~~
 {
@@ -39,13 +39,13 @@ Input the steps that we like to try and debug. A sample of the payload is given.
   "inp_value": 0.8,
   "out_name": "BOOM_CYL_POS_OUT",
   "out_value": 0.8,
-"params": {
-"payload": 681,
-"pumpEfficiency": 0.91
-},
-"steps": {
-"2.2": {"cBoomCyl":8788,"TcBoom":1001},
-"3.8": {"cBoomCyl":18788,"TcBoom":101}
+  "params": {
+    "payload": 681,
+    "pumpEfficiency": 0.91
+  },
+  "steps": {
+    "1.2": {"cBoomCyl":87880,"TcBoom":101},
+    "3.8": {"cBoomCyl":18788,"TcBoom":1001}
 }
 }
 
@@ -103,7 +103,8 @@ The API requires stream_id, model_id and topic_id. The next_cursor provides a ma
   "stream_id": "ocid1.stream.oc1.phx.amaaaaaa7hdcdhiau6jpcylc5ox7ywxmrao2c4gojuft2zpg6sprkuj6rpuq",
   "model_id": "ocid1.aianomalydetectionmodel.oc1.phx.amaaaaaa7hdcdhia3ryuiyr3p66kjv3h6hye4fm7e3tbqbpuna6ztba6wjlq",
   "topic_id": "ocid1.onstopic.oc1.phx.aaaaaaaacgnodk725ge7yzqgtmcfepif3shqf3axxnnzvy77iyftmcv6p6kq",
-  "next_cursor":""
+  "next_cursor":"",
+  "batch_size" : 100
 }
 ~~~
 ![!Detect Anomaly](./images/detect-anomaly.png)
@@ -112,7 +113,7 @@ Click the Execute to detect whether there are anomalies.
 
 ![!Detect Anomaly Result](./images/detect-anomaly-res.png)
 
-The retuned next_cursor will be used in the next run to retrieve signals from the stream.
+The retuned next_cursor will be used in the next run to retrieve signals from the stream. The batch_size is used to show how many messages you like to retrieve from streaming service. As we move the curson along the stream, we always use next_cursor returned back after a successful execuction. In the lab, we purposly designed it run this way to understand how all the system service runing behined scene. In real use case, this is an automatic process and the operator get notified once an anomaly is detected.
 
 4. Once a anomaly detected. An email will send to the designated email configured by the operation. The notification will show exactactly why the anomaly service reported the warning. Then, the operation can further diagnose the root cause.
 
@@ -167,3 +168,14 @@ Let's take a look what anomalies Anomaly Detection discovered in the data
 >- The Aggregated Anomaly Score indicates the significance of anomaly for a given timestamp by considering the anomaly from all signals together.
 >
 >You can move your mouse over the graph, the actual value & estimated value at a certain timestamp will show at the upper right corner of the graph.
+
+## Acknowledgements
+
+- **Authors**
+      - Tony Zhang - Master Principal Cloud Architect 
+      
+- **Contributors** 
+      - Jiayuan Yang - Senior Cloud Engineer 
+      - Samuel Cacela, Staff Cloud Engineer
+      - Adrian Alba - Staff Cloud Engineer
+- **Last Updated By/Date** - 2022 October

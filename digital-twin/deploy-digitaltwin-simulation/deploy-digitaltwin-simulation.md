@@ -33,7 +33,7 @@ OCI Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud
 
 ## Task 2: Deploy the service to OKE
 
-1. Copy the deployment file for your Kubernetes cluster configuration, which can be accessed [here](https://github.com/tonyora/oci/blob/main/digital-twin/02-deploy-digitaltwin-simulation/file/digitaltwin.yaml).
+1. Copy the deployment file for your Kubernetes cluster configuration, which can be accessed [here](https://objectstorage.us-phoenix-1.oraclecloud.com/p/y6hR92uVv6ejfNClhLM4wm0rftcHOasu_u9twwSl0T-XxQpS8zfB62XJyhMQAXRE/n/axvpeemzqcaf/b/cw-file/o/deployment.yaml). By click the link, the file will be downloaded to your local drive.
 
 	Open the file and copy the content:
 
@@ -83,7 +83,7 @@ We will create a fleet of digital twins in this task to generate training data t
 
 	```
 	{
-	"number_instance": 10,
+	"number_instance": 20,
 	"fleet_model": "linux_fmus/Telehandler.fmu"
 	}
 	```
@@ -130,4 +130,4 @@ You many now **proceed to the next lab.**
       - Tony Zhang - Master Principal Cloud Architect  
 - **Contributors** 
       - Jiayuan Yang - Senior Cloud Engineer
-- **Last Updated By/Date** - September, 2022
+- **Last Updated By/Date** - October, 2022
