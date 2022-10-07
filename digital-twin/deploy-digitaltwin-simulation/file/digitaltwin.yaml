@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  selector:
+    matchLabels:
+      app: app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - name: app
+        image: phx.ocir.io/axvpeemzqcaf/twinrepo:0.1
+        imagePullPolicy: Always
+        ports:
+        - name: app
+          containerPort: 5000
+          protocol: TCP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-lb
+  labels:
+    app: app
+  annotations:
+    service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: "10"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: "100"
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 5000
+  selector:
+    app: app
