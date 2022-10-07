@@ -293,7 +293,9 @@ You many now **proceed to the next lab.**
 ## Acknowledgements
 
 - **Authors**
-      - Jiayuan Yang - Senior Cloud Engineer 
-- **Contributors**
-     
+      - Jiayuan Yang - Senior Cloud Engineer
+- **Contributors** 
+      - Tony Zhang - Master Principal Cloud Architect 
+      - Adrian Alba - Staff Cloud Engineer
+      - Samuel Cacela, Staff Cloud Engineer
 - **Last Updated By/Date** - September, 2022

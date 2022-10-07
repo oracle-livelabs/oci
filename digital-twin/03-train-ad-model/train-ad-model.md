@@ -52,12 +52,11 @@ Once the details are entered, click the  **Create** Button.
 
 
 **If you have NOT completed the previous Labs (01 and 02) or do not have training dataset csv created**
-- Click to download the [Training Dataset](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Pykqyw1ubDfUu0Q224IfmJmCYgiKEpJsSyg9oQGDLwhJk86XGchw8yPD4k_LSF9o/n/orasenatdpltintegration03/b/digitaltwin/o/test_data.csv).
+- Click to download the [Training Dataset](https://objectstorage.us-ashburn-1.oraclecloud.com/p/eUdCwwaXR3NM8GD7CmVEEBvePoYqTtobdpnVubPxrqroKxcN5-gyoFixU2VMlVBD/n/orasenatdpltintegration03/b/digitaltwin/o/train_10cycle.csv).
 - Upload the training dataset csv you just downloaded to Object Storage Bucket. Follow Lab 1 Task 3 to navigate to Bucket. 
 
 
 ## Task 2: Create a Data Asset
-
 
 The Data Asset is the data utilized for training your Anomaly Detection Model. The Data Asset should be data that has NO anomalies, so that the Anomaly Detection model will be trained on data that represents the 'normal' state.
 

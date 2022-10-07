@@ -62,12 +62,14 @@ Under your project, click the   **Data Assets** menu on the left. Then click  **
 ![Create Data Asset](./images/imageCDA1.png " ")
 
 in the _Create Data Asset_ menu, 
-- Select  **AD_Workshop** for _Compartment_
+- Select  your compartment for _Compartment_
 - Type  **AD_data_asset** as the Data Asset _Name_
 - Select  **Oracle Object Storage** for _Type_
-- Select  **AD_bucket** for _Choose a bucket_ 
-- Select  **AD_Training.csv** for _Training Data_
+- Select  your bucket for _Choose a bucket_ 
+- Select  your csv file created from Lab 2 for _Training Data_
 - Press  **Create**
+
+(Optional) you can also download this [Training Dataset](https://objectstorage.us-ashburn-1.oraclecloud.com/p/eUdCwwaXR3NM8GD7CmVEEBvePoYqTtobdpnVubPxrqroKxcN5-gyoFixU2VMlVBD/n/orasenatdpltintegration03/b/digitaltwin/o/train_10cycle.csv) if you don't have training data csv in the bucket. Upload the downloaded csv file to Object Storage Bucket. Follow Lab 1 Task 3 to navigate to Bucket. 
 
 ![Create Data Asset](./images/imageCDA2.png " ")
 
@@ -142,7 +144,16 @@ When _Status_ changes from **Creating** ...
 ![Create Model](./images/imageCM7.PNG " ")
 
 your model is ready and you may proceed to the next task.
-##
+
+## Acknowledgements
+
+- **Authors**
+      - Adrian Alba - Staff Cloud Engineer
+- **Contributors** 
+      - Tony Zhang - Master Principal Cloud Architect
+      - Jiayuan Yang - Senior Cloud Engineer 
+      - Samuel Cacela, Staff Cloud Engineer
+- **Last Updated By/Date** - September, 2022
 
 
 

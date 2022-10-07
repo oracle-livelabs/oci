@@ -43,8 +43,8 @@ After using the normal data trained the model. We change specific parameters for
 	"pumpEfficiency": 0.91
 	},
 	"steps": {
-	"2.2": {"cBoomCyl":8788,"TcBoom":1001},
-	"3.8": {"cBoomCyl":18788,"TcBoom":101}
+	"1.2": {"cBoomCyl":87880,"TcBoom":101},
+	"3.8": {"cBoomCyl":18788,"TcBoom":1001}
 	}
 	}
 
@@ -56,7 +56,7 @@ After using the normal data trained the model. We change specific parameters for
 	![!Training Dataset Result](./images/trigger-anomaly-res.png)
 
 
-4. validate generated signals. In the streaming windown, click "Load messages" to view the signals generated.
+4. validate generated signals. In the streaming window, click "Load messages" to view the signals generated.
 
 	![!Training Dataset](./images/streaming-validation.png)
 
@@ -103,7 +103,8 @@ Now the signals are in the stream. We are using another API to retrieve the sign
 	"stream_id": "ocid1.stream.oc1.phx.amaaaaaa7hdcdhiau6jpcylc5ox7ywxmrao2c4gojuft2zpg6sprkuj6rpuq",
 	"model_id": "ocid1.aianomalydetectionmodel.oc1.phx.amaaaaaa7hdcdhia3ryuiyr3p66kjv3h6hye4fm7e3tbqbpuna6ztba6wjlq",
 	"topic_id": "ocid1.onstopic.oc1.phx.aaaaaaaacgnodk725ge7yzqgtmcfepif3shqf3axxnnzvy77iyftmcv6p6kq",
-	"next_cursor":""
+	"next_cursor":"",
+    "batch_size" : 100
 	}
 	```
 	![!Detect Anomaly](./images/detect-anomaly.png)
@@ -114,23 +115,23 @@ Now the signals are in the stream. We are using another API to retrieve the sign
 
 	The returned next_cursor will be used in the next run to retrieve signals from the stream.
 
-11. Once a anomaly detected. An email will send to the designated email configured by the operation. The notification will show exactly why the anomaly service reported the warning. Then, the operation can further diagnose the root cause.
+11. Once anomaly detected. An email will send to the designated email configured by the operation. The notification will show exactly why the anomaly service reported the warning. Then, the operation can further diagnose the root cause.
 
 	![!Anomaly Detected](./images/anomaly-detected-notification.png)
 
-**If you have NOT completed the Labs (01 and 02),**
-- Download the [AD_testing.csv](https://objectstorage.us-ashburn-1.oraclecloud.com/p/L5-dC68rtjqN_oY1rqMqJs5vRa5Y0Rph12suyFhqaYN_2lvOlOp_vdCBZPh3OcOI/n/orasenatdpltintegration03/b/AD_bucket/o/AD_Testing.csv) 
 
-## Task 3: Detect Anomalies with Anomaly Detection (AD) GUI
+## Task 3: Detect Anomalies from Anomaly Detection Service Console
 
-The results of Anomaly Detection can be viewed in a number of ways including the AD SDK. Using the AD UI is a visual method.
+The results of Anomaly Detection can also be viewed directly from service console.  
 
-1. To start the process of anomaly detection, click on your model and select **Detect Anomalies** on the model listing page
+1. Navigate to Anomaly Detection service and select the model you trained from Lab 3. Then download testing data [test_data.csv](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Pykqyw1ubDfUu0Q224IfmJmCYgiKEpJsSyg9oQGDLwhJk86XGchw8yPD4k_LSF9o/n/orasenatdpltintegration03/b/digitaltwin/o/test_data.csv).
+
+2. To start the process of anomaly detection, click on your model and select **Detect Anomalies** on the model listing page
 
 	![UI](./images/imageUI1.png " ")
 
-2. Select  **AD_testing.csv** from local filesystem or drag-and-drop the desired file.
-	You can leave _Sensitivity_ **BLANK** for this demo. 
+3. Select  **AD_testing.csv** from local filesystem or drag-and-drop the desired file.
+	You can leave Sensitivity blank for this demo. 
 	Once the test file is uploaded, click **Detect**.  
 
 	![UI](./images/imageUI2.png " ")
@@ -163,9 +164,9 @@ You many now **proceed to the next lab.**
 ## Acknowledgements
 
 - **Authors**
-      - Samuel Cacela, Staff Cloud Engineer 
-      - Jiayuan Yang - Senior Cloud Engineer 
-- **Contributors** 
       - Tony Zhang - Master Principal Cloud Architect
       - Adrian Alba - Staff Cloud Engineer
+- **Contributors** 
+      - Jiayuan Yang - Senior Cloud Engineer 
+      - Samuel Cacela, Staff Cloud Engineer
 - **Last Updated By/Date** - September, 2022
