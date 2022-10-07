@@ -144,7 +144,7 @@ In this activity, you will:
 
 14. 
 
-  As you can see Self Service Procurement has empowered you to catalog shop and punch out to another vendor seamlessly. The items from both activities have been added to the same requisition. To submit this order so it can go through the correct approval workflows all you have to do is select submit.
+  As you can see Self Service Procurement has empowered you to catalog shop and punch out to another vendor seamlessly. The items from both activities have been added to the *same requisition*. To submit this order so it can go through the correct approval workflows all you have to do is select submit.
 
     > Review the requisition document
 
@@ -178,7 +178,7 @@ In this activity, you will:
 
 2. 
 
-  This is the negotiations dashboard has Infolets with insights into sourcing programs and activity. This information is drillable to give the user and intuitive experience. You need to drill into Award Completed to analyze the recent sourcing negotiation.
+  This is the negotiations dashboard that has Infolets with insights into sourcing programs and activity. This information is drillable to give the user an intuitive experience. You need to drill into Award Completed to analyze the recent sourcing negotiation.
 
     > In the **‘My Negotiations’** Infolet select the **‘Award Completed’** piece of the pie chart (Purple)
 

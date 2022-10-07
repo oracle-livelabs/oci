@@ -19,7 +19,7 @@ In this activity, you will:
 
 1. 
 
-  To further the discussion on how impactful/empowering this functionality is for business users, let’s drill into how the rules engine to tailor a control for our own purposes...
+  To further the discussion on how impactful/empowering this functionality is for business users, let’s drill into how the rules engine tailor a control for our own purposes...
 
 
     > Go to **Risk Management Cloud tab**, then click **‘Advanced Controls’**
@@ -87,7 +87,7 @@ In this activity, you will:
 
 11. 
   
-    > **Rename/append** the name of the model with **CAxx** (the user you’re logged in as)
+    > **Rename/append** the name of the model with **CAOxx** (the user you’re logged in as)
 
     ![Home Page](images/image011.png)
 
@@ -103,7 +103,7 @@ In this activity, you will:
     > **•	Change condition to ‘Greater than’ or ‘Greater than or equal to’**
     > **•	Enter a material limit in Value field** (NOTE – Value should be less than 350,000) **
 
-    ![Change condition](images/image0013.png)
+    ![Change condition](images/image013.png)
 
 14. 
   
