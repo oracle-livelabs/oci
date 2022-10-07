@@ -49,28 +49,25 @@ Once the details are entered, click the  **Create** Button.
     - select your   **Project**
 
 ![Create Project](./images/imageCP4.png " ")
+##
 
+### Task 2: Create a Data Asset
 
-**If you have NOT completed the previous Labs (01 and 02) or do not have training dataset csv created**
-- Click to download the [Training Dataset](https://objectstorage.us-ashburn-1.oraclecloud.com/p/eUdCwwaXR3NM8GD7CmVEEBvePoYqTtobdpnVubPxrqroKxcN5-gyoFixU2VMlVBD/n/orasenatdpltintegration03/b/digitaltwin/o/train_10cycle.csv).
-- Upload the training dataset csv you just downloaded to Object Storage Bucket. Follow Lab 1 Task 3 to navigate to Bucket. 
-
-
-## Task 2: Create a Data Asset
-
-The Data Asset is the data utilized for training your Anomaly Detection Model. The Data Asset should be data that has NO anomalies, so that the Anomaly Detection model will be trained on data that represents the 'normal' state.
+The Data Asset is the data utilized for training your Anomaly Detection Model. The Data Asset should be data that has NO anomalies so that the Anomaly Detection model will be trained on the 'normal' state. 
 
 Under your project, click the   **Data Assets** menu on the left. Then click  **Create Data Asset**
 
 ![Create Data Asset](./images/imageCDA1.png " ")
 
-In the Create Data Asset menu, 
-- Select `AD_Workshop` for Compartment
-- Type  `AD_data_asset` as the Data Asset Name
-- Select  Oracle Object Storage for Type
-- Select  AD_bucket for Choose a bucket 
-- Select  AD_Training.csv for Training Data
+in the _Create Data Asset_ menu, 
+- Select  your compartment for _Compartment_
+- Type  **AD_data_asset** as the Data Asset _Name_
+- Select  **Oracle Object Storage** for _Type_
+- Select  your bucket for _Choose a bucket_ 
+- Select  your csv file created from Lab 2 for _Training Data_
 - Press  **Create**
+
+(Optional) you can also download this [Training Dataset](https://objectstorage.us-ashburn-1.oraclecloud.com/p/eUdCwwaXR3NM8GD7CmVEEBvePoYqTtobdpnVubPxrqroKxcN5-gyoFixU2VMlVBD/n/orasenatdpltintegration03/b/digitaltwin/o/train_10cycle.csv) if you don't have training data csv in the bucket. Upload the downloaded csv file to Object Storage Bucket. Follow Lab 1 Task 3 to navigate to Bucket.
 
 ![Create Data Asset](./images/imageCDA2.png " ")
 
