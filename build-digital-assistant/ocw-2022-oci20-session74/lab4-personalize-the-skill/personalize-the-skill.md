@@ -101,7 +101,7 @@ component which
 
 </copy>
 ```
-> **Note**: Verify your dialog flow here - [Link](files/dialogflow_task2.txt).
+> **Note**: Verify your dialog flow here (<a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/cI_mPijn2drXYV6ETvC-erJ4RPuhe2aEzhTd5IiKp1-UvPEcJ-SwKDKhpinXkHp4/n/c4u04/b/livelabsfiles/o/labfiles/dialogflow_task2.txt">Link</a>).
 
 3. We will add the dialog flow for *Positive Health* intent. Here we are going to display a card carousel with images, text, and links to redirect to different videos.
 
@@ -153,7 +153,7 @@ component which
         startTheraphy: "startTheraphy"
 </copy>
 ```
-> **Note**: Verify your dialog flow ([Link](files/dialogflow_step2.txt)) and ignore the "The state with the name 'findPatientDetails' was not found." error.
+> **Note**: Verify your dialog flow (<a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_step2.txt">Link</a>) and ignore the "The state with the name 'findPatientDetails' was not found." error.
 
 - Go ahead and test the flow. 
 
@@ -261,7 +261,7 @@ RegisterPatientBag: "RegisterPatientBag"
       next: "registerUserDB"
 </copy>
 ```
-> **Note**: Verify your dialog flow - [Link](files/dialogflow_step3.txt) and You should still be able to test even though you see there are errors in your validation
+> **Note**: Verify your dialog flow (<a href = "https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_step3.txt">Link</a>) and You should still be able to test even though you see there are errors in your validation
 
   ![Conversation Tester](images/conversation-tester.png)
 
@@ -643,7 +643,7 @@ Add the *findDoctor* dialog after the *selectTime* component.
 
 </copy>
 ```
-> **Note**: Verify your end-to-end dialog flow ([Link](files/dialogflow_lab4.txt)) and ignore the warnings.
+> **Note**: Verify your end-to-end dialog flow (<a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_lab4.txt">Link</a>) and ignore the warnings.
 
 
 ## Summary
