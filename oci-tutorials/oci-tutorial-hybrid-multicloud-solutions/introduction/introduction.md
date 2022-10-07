@@ -16,11 +16,8 @@ In this workshop, you will:
 
 ### **Assets**
 
-Powerpoint:
-
-Video Recording
-* 
-
+Powerpoint
+* [Multicloud, Hybrid Cloud Deployment](https://objectstorage.us-ashburn-1.oraclecloud.com/p/PeWalDE9n0tXCfLFajwEdwzBndarIyelPBCDIDEI_PevBgQq8pxefvGWO5Y3PVXF/n/ociobtnas/b/OCW2022/o/TUT4117_Multicloud_Hybrid_Cloud%20Deployment_Final.pdf)
 
 
 ## Learn More
