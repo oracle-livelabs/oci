@@ -42,7 +42,7 @@ Hello, World!
 
 - Configure Function parameters with correct values
 
-  In the code snippet below, specify values for **training-data-bucket**, **training-config-bucket** and **training-config.json**. These are the values used in **Lab 4** and **Lab 5**.
+  In the code snippet below, specify values for *bucketName* (**training-data-bucket**), *config_bucket_name* (**training-config-bucket**) and *object_name* (**training-config.json**). These values were used in **Lab 3** and **Lab 4**.
 
   ```
   if bucketName == "<training_bucket_name>":
@@ -51,7 +51,7 @@ Hello, World!
         resp = get_object(namespace, config_bucket_name, object_name)
   ```
 
-  In the code snippet below, specify values for **inferencing-data-bucket**,  **inferencing-config-bucket** and **inference-config.json**. These are the values used in **Lab 4** and **Lab 5**.
+  In the code snippet below, specify values for *bucketName* (**inferencing-data-bucket**),  *config_bucket_name* (**inferencing-config-bucket**) and *object_name* (**inference-config.json**). These values were used in **Lab 3** and **Lab 4**.
 
   ```
   elif bucketName == "<inferencing_bucket_name>":
@@ -60,7 +60,7 @@ Hello, World!
         resp = get_object(namespace, config_bucket_name, object_name)
   ```
 
-  In the code snippet below, specify values for **compartment_id** (*OCI Compartment OCID*), **application_id** (*OCI Data Flow Application OCID*) and the logging Storage Bucket URI containing the *Bucket* name and *Namespace*.
+  In the code snippet below, specify values for *compartment_id* (**OCI Compartment OCID**), *application_id* (**OCI Data Flow Application OCID**) and the logging Storage Bucket URI containing the *Bucket* name and *Namespace*.
 
   ```
   create_run_details=oci.data_flow.models.CreateRunDetails(
@@ -80,11 +80,9 @@ Hello, World!
   oci>=2.2.18
   ```
 
-- Invoke the OCI Functions Application
+- Enable Function Logs
 
-  Run the Function to make sure the options were configured correctly, publish it to an Application. A run should succesfully get created for the Data Flow if everything was set up correctly.
-
-  Enable logs under the function for troubleshooting purposes. See screenshot below.
+  In the Function Application, under the **Resources** panel click on **Logs** and enable *Function Invocation Logs*.  This will be helpful for troubleshooting the Function if needed. See screenshot below.
 
   ![](./images/Set-Fn8.png)
 
