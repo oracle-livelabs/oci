@@ -3,6 +3,8 @@ Lab 6: Configure OCI Functions
 
 ## 1. Configure Virtual Cloud Network
 
+A Virtual Cloud Network (VCN) and a Subnet is required to provision an OCI Function resource.
+
 - Go to Virtual Cloud Network and create a **VCN**. For IPv4 CIDR Blocks, the recommended one **10.0.0.0/16** can be used:  
 
   ![](./images/Set-Fn1.png)
@@ -60,7 +62,7 @@ Hello, World!
         resp = get_object(namespace, config_bucket_name, object_name)
   ```
 
-  In the code snippet below, specify values for *compartment_id* (**OCI Compartment OCID**), *application_id* (**OCI Data Flow Application OCID**) and the logging Storage Bucket URI containing the *Bucket* name and *Namespace*.
+  In the code snippet below, specify values for *compartment_id* (**OCI Compartment OCID**), *application_id* (**OCI Data Flow Application OCID**) and *logs_bucket_uri* (**Storage Bucket URI** for Logs) containing the *Bucket* name and *Namespace*.
 
   ```
   create_run_details=oci.data_flow.models.CreateRunDetails(
@@ -71,20 +73,18 @@ Hello, World!
             logs_bucket_uri="oci://bucket-name@namespace/")
   ```
 
-- Update `requirements.txt` file
-
-  Expand source
+- Edit `requirements.txt` file and add the following lines.
 
   ```
   fdk>=0.1.46
   oci>=2.2.18
   ```
 
-- Enable Function Logs
+## 4. Enable OCI Function Logs
 
-  In the Function Application, under the **Resources** panel click on **Logs** and enable *Function Invocation Logs*.  This will be helpful for troubleshooting the Function if needed. See screenshot below.
+   In the Function Application, under the **Resources** panel click on **Logs** and enable *Function Invocation Logs*.  This will be helpful for troubleshooting the Function if needed. See screenshot below.
 
-  ![](./images/Set-Fn8.png)
+   ![](./images/Set-Fn8.png)
 
 ## Useful Resources
 Refer to the OCI documentation (link below) to learn more about OCI Functions.
