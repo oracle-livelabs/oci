@@ -16,6 +16,8 @@ Create an OCI Data Flow Application. Refer to the screenshot below and update va
 *   For **Archive URI**, enter the fully qualified path to archive.zip in Object Storage. The structure of path is `oci://<bucket-name>@<namespace>/<path-to-archive.zip>`. Same below.
 *   For **Application log location**, enter the path to logs-bucket. This is very useful for debugging failed application runs.
 
+**IMPORTANT**: Note down the Data Flow *Application* OCID as it will be required in **Lab 6**
+
 ## Useful Resources
 Refer to the documentation (links below) to learn more about OCI Data Flow and Apache Spark
 
