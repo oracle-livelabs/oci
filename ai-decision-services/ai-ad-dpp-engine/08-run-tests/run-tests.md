@@ -9,7 +9,7 @@ Download the training and testing (/inference) data files. A sample training dat
 
 ## 2. Run Model Training Pipeline
 
-Upload the training data to **training-data-bucket**. If a Data Flow run is triggered successfully, and an Anomaly Detection model is trained successfully, then the training path is working.
+Upload the **TrainData.csv** to **training-data-bucket**. If a Data Flow run is triggered successfully, and an Anomaly Detection model is trained successfully, then the training path is working.
 
 The following steps can be used to verify the workflow or troubleshoot issues (if any)
 - Look for a new Data Flow Run created under the application under **Analytics & AI** -> **Runs**.
@@ -59,7 +59,7 @@ Details of the trained model such as FAP(False Alarm Probability) can be checked
 
 The application assumes the user has succesfully performed model training using the pipeline prior to inference.
 
-Similar to the previous section, upload the inferencing data file in the bucket specified by **inferencing-data-bucket**. If the Data Flow run is triggered and is successful, and the result of Anomaly Detection shows up in the results bucket, then the inferencing path is working. 
+Similar to the previous section, upload the **TestData.csv** file in the bucket specified by **inferencing-data-bucket**. If the Data Flow run is triggered and is successful, and the result of Anomaly Detection shows up in the results bucket, then the inferencing path is working. 
 
 Follow the instructions described in Step [2] (above) to monitor the pipeline and/or troubleshoot problems. In the last step, check the results folder for the inference results.
 
