@@ -60,7 +60,7 @@ Hello, World!
         resp = get_object(namespace, config_bucket_name, object_name)
   ```
 
-  In the code snippet below, specify values for **compartment_id** (*OCI Compartment OCID*), **application_id** (*OCI Function Application OCID*) and the logging *Bucket* name and *Namespace*.
+  In the code snippet below, specify values for **compartment_id** (*OCI Compartment OCID*), **application_id** (*OCI Data Flow Application OCID*) and the logging Storage Bucket URI containing the *Bucket* name and *Namespace*.
 
   ```
   create_run_details=oci.data_flow.models.CreateRunDetails(

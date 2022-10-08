@@ -5,7 +5,7 @@ OCI Data Flow is a cloud based serverless Apache Spark Service (PaaS). This work
 
 The DPF Driver is essentially an Apache Spark *Application* which runs the data transformations on individual OCI Data Flow *Executor* nodes. Users can choose the appropriate shape (VM) for the driver and executor nodes based on data size. Increasing the number of *Executors* will speed up the processing for large data sets. For small data sets such as the ones used in this workshop, most of the options can be left at their default values.
 
-Refer to the screenshot below and update values accordingly.
+Create an OCI Data Flow Application. Refer to the screenshot below and update values accordingly.
 
 ![](./images/Set-DF1.png)
 ![](./images/Set-DF2.png)
