@@ -16,74 +16,73 @@ This is a JSON file that defines the DPF workflow. The configuration is composed
 
 The input data source configuration.
 
-*   **dataframeName** - the variable name of this data frame will be used in the whole context.
-*   **type** - can either be **object-storage** or **oracle**.
-*   **isEventDriven** - (optional) This is an optional parameter whose default value is _false_. It takes a boolean value of _true_ is provided if the input source needs to be taken from a configured event. Note that this option is currently only supported for Object Storage emitted events.
-*   For object storage, the following are required:
-    *  **namespace** \- the namespace of the target object storage bucket. 
-    *   **bucket** - the bucket name. 
-    *   **objectName** \- the full path and name of the object. This can also be a prefix with star (\*) when _isEventDriven_ is provided with _true_ value, where the object generating the event is considered and attempted to read if the name matches the provided expression. For example, updating object with name _anomalies/test.csv_ can generate an event and can be captured by using _anomalies/\*_ as the objectName, provided isEventDriven is set to true. Also, note that anything after \* is ignored in our current version and we will add more functionality in upcoming sprints.
+*   **dataframeName** - The variable name of a data frame which will be used in the execution context.
+*   **type** - Input Source Type.  Supported types are **object-storage** (OCI Object Storage) and **oracle** (Oracle Database - ADB, ATP, ADW).
+*   **isEventDriven** - (optional) Is the DPF Driver *Event* driven. This is an optional parameter whose default value is _false_. If set to _true_, the Driver will be triggered by a pre-configured OCI Event. Note that this option is currently only supported for Object Storage emitted events.
+*   For object storage, the following are required
+    *  **namespace** \- The *Namespace* of the Object Storage Bucket. 
+    *   **bucket** - The Bucket *Name*. 
+    *   **objectName** \- Full path including name of the file object. The name can also be a wildcard *star* (\*) when _isEventDriven_ is set to _true_. In this case, when a file is uploaded into the bucket folder matching the configured path and the wildcard expression, the file will be picked up by the Driver for processing. For example, assume *isEventDriven* is set to _true_ and this value is set to _anomalies/\*.  When a file is uploaded into folder _anomalies/\_, the Driver will receive a file creation event and will pick up the file for processing. Also, note that anything after \* is ignored.
+
 *   For Oracle ADW/ATP sources, the following are required:
-    *   **adbId** \- the OCID of your ADW application. 
-    *   **tableName** \- name of the table. 
-    *   **connectionId** \- the format is **<DBName>\_high**, which can be found under tnsnames.ora of [Wallet](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/connect-download-wallet.html#GUID-B06202D2-0597-41AA-9481-3B174F75D4B1). 
-    *   **user** \- the owner of the table. In most cases it will be **admin**. 
-    *   **password** \- the password you setup when you download the Wallet. 
+    *   **adbId** \- The OCID of ADW/ATP instance. 
+    *   **tableName** \- Name of the database table. 
+    *   **connectionId** \- Connection ID string.  This value can be found in file tnsnames.ora of [Wallet](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/connect-download-wallet.html#GUID-B06202D2-0597-41AA-9481-3B174F75D4B1) file.
+    *   **user** \- ATP/ADW user name. 
+    *   **password** \- ATP/ADW user password.
 
 ### phaseInfo
 
 This defines the location where the application will store the metadata from training phase for data dependent processes, like **one_hot_encoding**.
 
-*   **connector** - the connector to object storage. It will be composed of
-    *   **namespace** - the namespace of the target object storage bucket. Required if it is for object storage.
-    *   **bucket** - the bucket name. Required if it is for object storage.
-    *   **objectName** \- the full path and name of the object. Required if it is for object storage.
+*   **connector** - The connector to object storage. It's composed of
+    *   **namespace** - The namespace of Object Storage Bucket. Required if it is for object storage.
+    *   **bucket** - The Bucket *Name*. Required if it is for object storage.
+    *   **objectName** \- The full path and name of the file object. Required if it is for object storage.
 
 ### processingSteps
 
 This section lists transformations that need to be applied to the input data sets. This is the core of the data processing. Every item in the list is a step, and all the steps will be executed in sequence, one after another. 
 
-Users should ensure the data processing steps are configured properly in the right sequence otherwise the workflow might fail and throw exceptions. DPF does not validate the individual data processing steps prior to executing the workflow.
+Users should ensure the data processing steps are configured properly in the right sequence otherwise the workflow might fail and throw exceptions. DPF does not validate the individual data processing steps prior to executing the data flow.
 
-*   **stepType** \- can be either **singleDataFrameProcessing** (for transforming on top of single dataframe) or **combineDataFrames** (for merging or joining two dataframes).
-*   **configurations** - the configuration related to the step to be taken, which will include:
-    *   **dataframeName** - a name to be given to the output of the transformation.
-    *   **steps** - a list of all transformers you want to apply to your target dataframe at this time. For each step, there will be:
-        *   **stepName** - the name of the transformer to be applied. It must exactly matches the ones defined in the library(archive). For the full list of offered transformers, please check **Appendix II: List of Transformers**.
-        *   **args** \- all the arguments required for the transformer you choose to use. For details about it, refer to **Appendix II: List of Transformers**.
+*   **stepType** \- Can be either **singleDataFrameProcessing** (for transforming on top of single dataframe) or **combineDataFrames** (for merging or joining two dataframes).
+*   **configurations** - The configuration for transformations, which will include
+    *   **dataframeName** - A name to be given to the output of the transformation.
+    *   **steps** - a list of all transformers you want to apply to your target dataframe. For each step, there should be
+        *   **stepName** - The name of the transformer to be applied. It must exactly match a **Transformer** name as defined in the library(archive). For the full list of transformers, please refer to the document included within the **Useful Resources** section below.
+        *   **args** \- All required arguments for the transformer.
 
 ### stagingDestination
 
-This is the location where intermediate results will be stored before training/inference begins. Basically these will be dataframes stored in csv format at an assigned object storage bucket. 
+This is the location where intermediate results will be stored before training/inference begins. Basically, these will be dataframes stored in csv format at the configured Object Storage Bucket. 
 
 *   **combinedResult** - The name of the data frame to output. 
     * Specify this parameter only when a single data frame needs to be output. 
     * If sharding is desired/configured, the sharded dataset will be output automatically. In this case, there is **no need** to specify this parameter.
-*   **type** \- only **object storage** is supported at present.
-*   **namespace** - the namespace of the target object storage bucket. 
-*   **bucket** \- the bucket name. 
-*   **folder** \- folder name prefix where you want to store your intermediate processed data.
+*   **type** \- Only **object storage** is supported at present.
+*   **namespace** - The namespace of the Object Storage Bucket. 
+*   **bucket** \- Bucket name. 
+*   **folder** \- Folder name prefix where the intermediate results will be stored.
 
 ### outputDestination
 
-This is where the final output (AD results) and model information (model_info) is stored after inferencing.
+This is where the final output (Anomaly Detection results) and model information (model_info) is stored after inferencing or model training.
 
-*   **type** \- only **object storage** is supported at present.
-*   **namespace** - the namespace of the target object storage bucket. 
-*   **bucket** \- the bucket name. 
-*   **objectName** \- the full path and name of the object. This will be used for training phase for storing the model information. 
-*   **folder** \- the name of the folder where you want to store the inferencing result.
+*   **type** \- Only **object storage** is supported at present.
+*   **namespace** - The namespace of the Object Storage Bucket. 
+*   **bucket** \- The Bucket name. 
+*   **objectName** \- The full path and name of the object. This will be used for training phase for storing the model information. 
+*   **folder** \- The name of the folder where the inferencing result will be stored.
 
 ### serviceApiConfiguration
 
-This configuration is used for Anomaly Detection(AD) specific options:
+This is used for configuring OCI Anomaly Detection(AD) Service
 
-* **serviceEndpoint** - this is the region specific endpoint for AD service. Use **null** for now.
-* **profileName** - use **"DEFAULT"** for now. This is used for local runs to specify the OCI SDK profile to use from ~/.oci
-* **projectId** - OCID of AD project from Lab 2.
-* **compartmentId** - user's compartment Id.
-
-</details>
+* **serviceEndpoint** - This is the region specific endpoint for AD service. Use **null** for now.
+* **profileName** - Use **"DEFAULT"** for now. This is used for local runs to specify the OCI SDK profile to use from ~/.oci
+* **projectId** - OCID of Anomaly Detection Project from **Lab 1**.
+* **compartmentId** - OCID of OCI Compartment from **Lab 2**.
 
 ## 2. Update Driver Configuration Files
 
@@ -219,3 +218,7 @@ Driver configuration files used in this workshop are provided below.
 ## 3. Upload Driver Configuration Files
 *   Upload OCI AD model training configuration file into **training-config-bucket** in OCI Object Storage Bucket, created in **Lab 4**
 *   Upload OCI AD inferencing configuration file into **inferencing-config-bucket**
+
+## Useful Resources
+
+- [List of available Data Flow Transformers](https://github.com/ganrad/oci/blob/main/ai-decision-services/ai-ad-dpp-engine/optional/Introduction-to-Transformers-for-Data-Preprocessing.md)
