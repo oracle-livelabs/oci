@@ -77,10 +77,11 @@ We need to generate proper authentication configuration (API Signing Key pair) i
 	To know more about API key and config file, please visit [Generating API KEY](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm) and [SDK and CLI Configuration File](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm#SDK_and_CLI_Configuration_File)
 
 
-## Task 2: Activate Data Science Platform and Configuration
+## Task 2: Create Data Science Project and Notebook Session
 
-1. Create a Project
-Click navigation icon ![Image alt text](./images/navigation_icon.png) at the top left of page, select **Analytics & AI**, then select **Data Science**. This will open the Projects page.
+If you have an active running Data Science Project and Notebook Session, please proceed to Task 3 Configure Data Science Environment.
+
+1. Click navigation icon ![Image alt text](./images/navigation_icon.png) at the top left of page, select **Analytics & AI**, then select **Data Science**. This will open the Projects page.
 
 	![menu navigator](./images/menu_navigator.png)
 
@@ -110,7 +111,7 @@ Then click **Create**.
 
 	(Optional, but recommended) Enter a unique name for the notebook session (limit of 255 characters). If you do not provide a name, a name is automatically generated for you.
 
-	![create nb page1](./images/create_nb_page1.png)
+	![create nb page1](./images/create_nb_page1.png =50%x*)
 
 
 7. Select a VM shape. For this lab, it is recommended that you use an Intel VM.Standard3.Flex. 
@@ -118,7 +119,7 @@ Then click **Create**.
 	To choose the shape, click **Intel**, then check the box beside **VM.Standard3.Flex**. 
 	Put 2 for Number of OCPUs, the amount of memory will automatically update proportionately. Then click Select shape. 
 
-	![select compute](./images/select_compute_shape.png)
+	![select compute](./images/select_compute_shape.png =50%x*)
 
 
 8. Enter the block storage in GB. The suggested size is 100 Gb or larger.
@@ -127,7 +128,7 @@ Then click **Create**.
 
 	Click **Create**.
 
-	![create nb page2](./images/create_nb_page2.png)
+	![create nb page2](./images/create_nb_page2.png =50%x*)
 
 9. **Notebook Session**
 
@@ -141,58 +142,56 @@ Then click **Create**.
 	While the notebook session is being created, you can view the resource status on the console. 
 	When the notebook session is up and running, you'll see the status turn to ACTIVE. 
 
-	![nb session creating](./images/nb_session_CREATING.png)
+	![nb session creating](./images/nb_session_CREATING.png =50%x*)
 
-	![nb session ACTIVE](./images/nb_session_ACTIVE.png)
+	![nb session ACTIVE](./images/nb_session_ACTIVE.png =50%x*)
 
 10. Generally it will take few minutes for notebook session turning into ACTIVE.
-While waiting, please download this [Python notebook](./files/AD_DigitalTwin_notebook.ipynb).
+While waiting, please download this [Python notebook](https://objectstorage.us-ashburn-1.oraclecloud.com/p/7XyFjpUQGtG35-PwpZEOp8LLXktUnkDnivSGOZayqtyRPZsW3LwpzVe3JO488xel/n/orasenatdpltintegration03/b/digitaltwin/o/AD_DigitalTwin_notebook.ipynb).
 
-11. Once the notebook is in an ACTIVE state, click **Open**. 
 
-12. Now that JupyterLab is open. 
-By default, the left side has the file browser open but it can change based on what navigation icons are selected on the far left side of the screen. 
+## Task 3: Configure Data Science Environment
+
+1. Once the notebook is in ACTIVE state, click **Open**. 
+
+2. Now that JupyterLab is open. By default, the left side has the file browser open but it can change based on what navigation icons are selected on the far left side of the screen. 
 The right side of the screen contains the workspace. It will have a notebook, terminal, console, launcher, Notebook Examples, etc.
 
 	![jupyterlab](./images/jupyterLab.png)
 
-
-13. Install Data Science conda
+3. Install Data Science conda
 
 	A conda environment is a collection of libraries, programs, components and metadata. 
 	It defines a reproducible set of libraries that are used in the data science environment. 
 
 	Click on **Environment Explorer**
 
-	![environment explorer button](./images/EnvironmentExplorer_button.png)
+	![environment explorer button](./images/EnvironmentExplorer_button.png =50%x*)
 
-
-14. Search for the "General Machine Learning for CPUs on Python 3.7" Conda environment. 
+4. Search for the "General Machine Learning for CPUs on Python 3.7" Conda environment. 
 	Open the details by clicking on the down arrow at the right. 
 	Copy the installation command to the clipboard by clicking on the Copy button.
 
 	![ds conda](./images/DS_conda.png)
 
-15. Open a terminal window by clicking on **File**, **New** and then **Terminal**.
+5. Open a terminal window by clicking on **File**, **New** and then **Terminal**.
 
 	![open terminal](./images/open_terminal.png)
 
-16. Paste the command from the clipboard: 
+6. Paste the command from the clipboard: 
 	`odsc conda install -s generalml_p37_cpu_v1` 
 
-17. You will receive a prompt related to what version number you want. 
-Press Enter to select the default. 
-Wait for the conda environment to be installed.
+7. You will receive a prompt related to what version number you want. Press Enter to select the default. Wait for the conda environment to be installed.
 
 	![conda install terminal](./images/conda_install_terminal.png)
 
 	This will take about 5 minutes. You can proceed to the next step while the conda pack is installing.
 
-18. Add OCI Config file 
+8. Add OCI Config file 
 
 	Open a new terminal window by clicking on **File**, **New** and then **Terminal**.
 
-19. Run the following command. This will create a hidden folder _.oci_ in the home directory.
+9. Run the following command. This will create a hidden folder _.oci_ in the home directory.
 
 	```
 	<copy>mkdir -p ~/.oci</copy>
@@ -205,11 +204,9 @@ Wait for the conda environment to be installed.
 
 	This will create a new file ~/.oci/config and open vi editor.
 
-	![vi config](./images/vi_config.png)
+	![vi config](./images/vi_config.png =50%x*)
 
-	![vi empty](./images/empty_vi.png)
-
-20. Press **i** to enter insert mode.
+10. Press **i** to enter insert mode.
 
 	Copy and paste the content of configuration file created from Task 1: Setup API Signing Key. 
 
@@ -218,79 +215,74 @@ Wait for the conda environment to be installed.
 
 	![config insert](./images/config_insert.png)
 
-21. Press **Esc** key to exit the insert mode. 
+11. Press **Esc** key to exit the insert mode. 
 
 	Type **:wq** to save the updates and quit out of vi editor.
 
 	![config save](./images/config_save.png)
 
-22. You can review the ~/.oci/config file by run the command:
+12. You can review the `~/.oci/config` file by run the command:
 
 	```
 	<copy>cat ~/.oci/config</copy>
 	```
 
-	![config cat](./images/cat_config.png)
+	![config cat](./images/cat_config.png =50%x*)
 
-
-23. Add API private key
+13. Add API private key
 
 	Run the following command in terminal.
-
 
 	```
 	<copy>vi ~/.oci/oci_api_key.pem</copy>
 	```
-
-
-24. Press **i** to enter insert mode.
+ 
+14. Press **i** to enter insert mode.
 
 	Open the \_oci\_api\_key.pem\_ that you downloaded from Task 1: Setup API Signing Key in notepad. 
 	Copy and Paste the whole content to vi editor. 
 
-	![api key](./images/api_private_key.png)
+	![api key](./images/api_private_key.png =50%x*)
 
 	Press **Esc** key to exit the insert mode. 
 
 	Type **:wq** to save the updates and quit out of vi editor.
 
-25. Upload Python notebook
+15. Upload Python notebook
 
-	If you haven't done so, download this [python notebook](./files/AD_DigitalTwin_notebook.ipynb) which contains the python code snippet for this lab. 
+	If you haven't done so, download this [python notebook](https://objectstorage.us-ashburn-1.oraclecloud.com/p/7XyFjpUQGtG35-PwpZEOp8LLXktUnkDnivSGOZayqtyRPZsW3LwpzVe3JO488xel/n/orasenatdpltintegration03/b/digitaltwin/o/AD_DigitalTwin_notebook.ipynb) which contains the python code snippet for this lab. 
 	Upload the notebook to JupyterLab by dragging it to the left panel. 
 
 	![drag file](./images/drag_file.png)
 
-## Task 3: Python SDK Code Snippets
+## Task 4: Python SDK Code Snippets
 
-1. Start the notebook
-
-2. Click the `AD_DigitalTwin_notebook.ipynb` to open in a new tab. Choose kernel by clicking the Python kernel, then select `generalml_p37_cpu_v1` kernel from the drop-down list.
+1. Click the `AD_DigitalTwin_notebook.ipynb` to open in a new tab. Choose kernel by clicking the Python kernel, then select `generalml_p37_cpu_v1` kernel from the drop-down list.
 
 	![select kernel](./images/select_kernel_1.png)
 	
-	![select kernel](./images/select_kernel_2.png)
+	![select kernel](./images/select_kernel_2.png =50%x*)
 
-3. Read through the notebook. When you encounter a chunk of code, click in the cell and press _shift + enter_ to execute it. 
+2. Read through the notebook. When you encounter a chunk of code, click in the cell and press _shift + enter_ to execute it. 
 Or click the run button.
 
-	![run button](./images/run_button.png)
+	![run button](./images/run_button.png =50%x*)
 
-4.	When the cell is running, a [*] will appear in the top left corner of the cell. When it is finished, a number will appear in [ ], for example [1]. 
+3. When the cell is running, [*] will appear in the top left corner of the cell. When it is finished, a number will appear, for example [1]. 
 
-	![code run](./images/code_run1.png)
+	![code run](./images/code_run1.png =50%x*)
 
-	![code run](./images/code_run2.png)
+	![code run](./images/code_run2.png =50%x*)
 
 	Always make sure that the last command has finished running before running another cell.
 
-5. Execute the cells in order. If you run into problems and want to start over again, click the **restart** button then click **Restart**. 
+4. Execute the cells in order. If you run into problems and want to start over again, click the **restart** button then click **Restart**. 
 
-	![restart kernel](./images/restart_kernel1.png)
+	![restart kernel](./images/restart_kernel1.png =50%x*)
 
-	![restart kernel](./images/restart_kernel2.png)
+	![restart kernel](./images/restart_kernel2.png =50%x*)
 
-6. Training Data requirements
+5. Training Data requirements
 
 	- Can only contain timestamps and other numeric attributes that typically represent sensor or signal readings.
 	- Must be anomaly free (without outliers) and contain observations that have normal business conditions only.
@@ -301,9 +293,9 @@ You many now **proceed to the next lab.**
 ## Acknowledgements
 
 - **Authors**
-      - Samuel Cacela, Staff Cloud Engineer 
-      - Jiayuan Yang - Senior Cloud Engineer 
+      - Jiayuan Yang - Senior Cloud Engineer
 - **Contributors** 
-      - Tony Zhang - Master Principal Cloud Architect
+      - Tony Zhang - Master Principal Cloud Architect 
       - Adrian Alba - Staff Cloud Engineer
+      - Samuel Cacela, Staff Cloud Engineer
 - **Last Updated By/Date** - September, 2022
