@@ -42,7 +42,7 @@ Hello, World!
 
 - Configure Function parameters with correct values
 
-  In the code snippet below, replace <training_bucket_name> with **training-data-bucket**, <training_config_bucket_name> with **training-config-bucket**,<driver_config>.json with **training-config.json**. These are the values used in **Lab 4** and **Lab 5**.
+  In the code snippet below, specify values for **training-data-bucket**, **training-config-bucket** and **training-config.json**. These are the values used in **Lab 4** and **Lab 5**.
 
   ```
   if bucketName == "<training_bucket_name>":
@@ -51,7 +51,7 @@ Hello, World!
         resp = get_object(namespace, config_bucket_name, object_name)
   ```
 
-  In the code snippet below, replace <inferencing_bucket_name> with **inferencinging-data-bucket**, <inferencing_config_bucket_name> with **inferencinging-config-bucket**,<driver_config>.json with **inferencing-config.json**. These are the values used in **Lab 4** and **Lab 5**.
+  In the code snippet below, specify values for **inferencing-data-bucket**,  **inferencing-config-bucket** and **inference-config.json**. These are the values used in **Lab 4** and **Lab 5**.
 
   ```
   elif bucketName == "<inferencing_bucket_name>":
@@ -60,7 +60,7 @@ Hello, World!
         resp = get_object(namespace, config_bucket_name, object_name)
   ```
 
-  In the code snippet below, replace <compartment-ocid> with the compartment of the DataFlow Application, <application-ocid> with the Application OCID and the logging bucket and namespace configured in **Lab 4**.
+  In the code snippet below, specify values for **compartment_id** (*OCI Compartment OCID*), **application_id** (*OCI Function Application OCID*) and the logging *Bucket* name and *Namespace*.
 
   ```
   create_run_details=oci.data_flow.models.CreateRunDetails(
@@ -68,7 +68,7 @@ Hello, World!
             application_id="<application-ocid>",
             arguments=[ "--response", response, "--phase", phase],
             display_name="complete-dpp-test",
-            logs_bucket_uri="oci://<bucket-name>@<namespace>/")
+            logs_bucket_uri="oci://bucket-name@namespace/")
   ```
 
 - Update `requirements.txt` file
