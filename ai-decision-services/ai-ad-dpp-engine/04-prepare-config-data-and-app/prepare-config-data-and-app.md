@@ -19,12 +19,12 @@ The input data source configuration.
 *   **dataframeName** - The variable name of a data frame which will be used in the execution context.
 *   **type** - Input Source Type.  Supported types are **object-storage** (OCI Object Storage) and **oracle** (Oracle Database - ADB, ATP, ADW).
 *   **isEventDriven** - (optional) Is the DPF Driver *Event* driven. This is an optional parameter whose default value is _false_. If set to _true_, the Driver will be triggered by a pre-configured OCI Event. Note that this option is currently only supported for Object Storage emitted events.
-*   For object storage, the following are required
+*   For OCI Object Storage, the following fields/elements are required.
     *  **namespace** \- The *Namespace* of the Object Storage Bucket. 
     *   **bucket** - The Bucket *Name*. 
     *   **objectName** \- Full path including name of the file object. The name can also be a wildcard *star* (\*) when _isEventDriven_ is set to _true_. In this case, when a file is uploaded into the bucket folder matching the configured path and the wildcard expression, the file will be picked up by the Driver for processing. For example, assume *isEventDriven* is set to _true_ and this value is set to _anomalies/\*.  When a file is uploaded into folder _anomalies/\_, the Driver will receive a file creation event and will pick up the file for processing. Also, note that anything after \* is ignored.
 
-*   For Oracle ADW/ATP sources, the following are required:
+*   For Oracle ADW/ATP sources, the following fields/elements are required.
     *   **adbId** \- The OCID of ADW/ATP instance. 
     *   **tableName** \- Name of the database table. 
     *   **connectionId** \- Connection ID string.  This value can be found in file tnsnames.ora of [Wallet](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/connect-download-wallet.html#GUID-B06202D2-0597-41AA-9481-3B174F75D4B1) file.
@@ -35,7 +35,7 @@ The input data source configuration.
 
 This defines the location where the application will store the metadata from training phase for data dependent processes, like **one_hot_encoding**.
 
-*   **connector** - The connector to object storage. It's composed of
+*   **connector** - The connector to OCI Object Storage. The fields/elements below are required.
     *   **namespace** - The namespace of Object Storage Bucket. Required if it is for object storage.
     *   **bucket** - The Bucket *Name*. Required if it is for object storage.
     *   **objectName** \- The full path and name of the file object. Required if it is for object storage.
