@@ -9,6 +9,7 @@ The DPF Driver is essentially an Apache Spark *Application* which runs the data 
 
 Update/Specify field values as described below.
 
+*   For the **Spark Version** section, choose **Spark 3.0.2**.
 *   For the **Language** section, choose **Python**.
 *   Select df_driver.py from the driver bucket.
 *   For **Arguments**, simply input `--response ${response} --phase ${phase}`, and enter **placeholder** as the default value. This will be overriden later
@@ -16,6 +17,7 @@ Update/Specify field values as described below.
 *   For **Application log location**, enter the path to logs-bucket. This is very useful for debugging failed application runs.
 
 Refer to the screenshots below.
+![](./images/Set-DF3.png)
 
 ![](./images/Set-DF1.png)
 
