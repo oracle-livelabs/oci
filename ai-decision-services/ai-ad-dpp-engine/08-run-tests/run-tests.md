@@ -59,8 +59,6 @@ Details of the trained model such as FAP(False Alarm Probability) can be checked
 
 The application assumes the user has succesfully performed model training using the pipeline prior to inference.
 
-Since your training is done, you should see your trained model under **Analytics & AI** -> **AI Service** -> **Anomaly Detection** -> \<generated-project\> -> **aianomalydetectionmodel_\<timestamp\>** -> OCID. Copy the OCID and put that under `modelId` inside your `inference-config.json`.
-
 Similar to the previous section, upload the **TestData.csv** file in the bucket specified by **inferencing-data-bucket**. If the Data Flow run is triggered and is successful, and the result of Anomaly Detection shows up in the results bucket, then the inferencing path is working. 
 
 Follow the instructions described in Step [2] (above) to monitor the pipeline and/or troubleshoot problems. In the last step, check the results folder for the inference results.
