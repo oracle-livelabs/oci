@@ -205,6 +205,7 @@ Driver configuration files used in this workshop are provided below.
             "profileName": "DEFAULT",
             "projectId": "<ad-project-id>",
             "compartmentId": "<your-compartment-ocid>",
+            "modelId": "<>"
         }
     }
 }
@@ -216,8 +217,9 @@ Driver configuration files used in this workshop are provided below.
 4. Populate compartmentId with compartment OCID from **Lab 2**.
 
 ## 3. Upload Driver Configuration Files
-*   Upload OCI AD model training configuration file into **training-config-bucket** in OCI Object Storage Bucket, created in **Lab 4**
-*   Upload OCI AD inferencing configuration file into **inferencing-config-bucket**
+*   Upload OCI AD model training configuration file into **training-config-bucket** in OCI Object Storage Bucket, created in **Lab 4**.
+*   Upload OCI AD inferencing configuration file into **inferencing-config-bucket**.
+    - **DON'T FORGET** to update your `modelId` once the training is done! Detail will come in Lab 8.
 
 ## Useful Resources
 
