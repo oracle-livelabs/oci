@@ -6,7 +6,8 @@ Companies define digital twin based on their business models. In this livelab, w
 The simulation models have been used to identify possible root causes of anomalies on standalone PCs for long time. Cloud technologies have enabled massive amounts of simulations to run on the server. Combing with other cloud technologies and MapleSim models, this hands-on lab introduce the reference architecture to massibly deploy simulation models into OCI as digital twin to generate the training data and identity the root causes of assets.
 
 In this workshop, we use a telehandler simulation model to mimic the real telehandler. We generate training data from the simulation model. 
-Then, we run the simulation models as the data source and change its parameter to mimic the condition change. The OCI anomaly detection service will detect the anomaly events happened in the digital twin and send notification to operator for diagnosis. Further, we can use the diagnostic result to modify the control parameter to compensate the behavior of the asset.
+
+Then, we run the simulation models as the data source and change its parameter to mimic the running condition change. The OCI anomaly detection service will detect the anomaly events happened in the digital twin and send notification to operator for diagnosis. Further, we can use the diagnostic result to modify the control parameter to compensate the behavior of the asset.
 
 **Reference Architecture**:
 
@@ -49,10 +50,11 @@ You many now **proceed to the next lab.**
 ## Acknowledgements
 
 - **Authors**
-      - Tony Zhang - Master Principal Cloud Architect
-      - Jiayuan Yang - Senior Cloud Engineer
+      - Tony Zhang - Master Principal Cloud Architect 
+      
+- **Contributors** 
+      - Jiayuan Yang - Senior Cloud Engineer 
+      - Samuel Cacela, Staff Cloud Engineer
       - Adrian Alba - Staff Cloud Engineer
-      - Samuel Cacela - Staff Cloud Engineer   
-
-- **Last Updated By/Date** - September, 2022
+- **Last Updated By/Date** - 2022 October
 

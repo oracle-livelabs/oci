@@ -3,15 +3,15 @@
     "help": "livelabs-help-oci_us@oracle.com",
 	"tutorials": [
         {
+            "title": "Get Started",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+        },
+       {
             "title": "Introduction",
             "filename": "./../../intro/intro.md"
         },
         {
-            "title": "Get Started",
-            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
-        },
-        {
-            "title": "Lab 1: Set Up Digital Twin Running Environment",
+            "title": "Lab 1: Set Up Environment",
             "filename": "./../../set-up-environment/set-up-environment.md"
         },
         {
@@ -27,11 +27,7 @@
             "filename": "./../../monitor-assets/monitor-assets.md"
         },
         {
-            "title": "Lab 5: Anomaly Diagnosis",
-            "filename": "./../../diagnostic/diagnostic.md"
-        },
-        {
-            "title": "Lab 6: (Advanced) Explore Anomaly Detection - Access Anomaly Detection service with REST API",
+            "title": "Lab 5: (Advanced) Explore Anomaly Detection - Access Anomaly Detection service with REST API",
             "filename": "./../../explore-ad/explore-ad.md"
         },
         {
