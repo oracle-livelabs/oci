@@ -15,28 +15,29 @@ Lab 3: Configure OCI Object Storage Buckets and Upload Driver
 
 ## 3. Set up OCI Object Storage Buckets
 
-   Labs in this workshop use the following OCI Object Storage Buckets. Any change to the names will have to be reflected in subsequent setup steps.
-
    Create the following OCI Object Storage Buckets using OCI Console or OCI CLI.
 
-   *   **driver-code-archive-bucket**: The bucket to store driver code and archive.zip consuming by Data Flow.
-   *   **training-config-bucket**: The bucket to store training process configuration.
-   *   **training-data-bucket**: The bucket to store training data. Need to enable **Emit Object Events**.
-   *   **inferencing-config-bucket**: The bucket to store inferencing process configuration.
-   *   **inferencing-data-bucket**: The bucket to store training data. Need to enable **Emit Object Events**.
-   *   **staging-bucket**: The bucket to store processed interim data, i.e. the data passed through processing, waiting for being fed to training or inferencing. 
-   *   **output-bucket**: The bucket to store the finalized output from inferencing, the list of trained models and data dependent information
-   *   **logs-bucket**: The bucket to store data flow logs.
+   **IMPORTANT:** Labs in this workshop use the following names for OCI Object Storage Buckets. Users wanting to use different names for the buckets, can choose to do so.  However, the correct names will need to be specified in subsequent Labs. Users going thru this workshop for the first time are strongly advised to use the suggested bucket names.
 
+   | OCI Storage Bucket Name | Description |
+   | ----------------------- | ----------- |
+   | driver-code-archive-bucket | The bucket to store driver code and archive.zip consuming by Data Flow. |
+   | training-config-bucket | The bucket to store training process configuration. |
+   | training-data-bucket | The bucket to store training data. Need to enable **Emit Object Events**. |
+   inferencing-config-bucket | The bucket to store inferencing process configuration.
+   | inferencing-data-bucket | The bucket to store training data. Need to enable **Emit Object Events**. |
+   | staging-bucket | The bucket to store processed interim data, i.e. the data passed through processing, waiting for being fed to training or inferencing. |
+   | output-bucket | The bucket to store the finalized output from inferencing, the list of trained models and data dependent information |
+   | logs-bucket | The bucket to store data flow logs. |
 
 ## 4. Enable OCI Object Store Events
 
    Update the following OCI Object Store Buckets to emit events whenever new files are saved/uploaded to these buckets.
 
-   Object Store Bucket Name |
-   ------------------------ |
-   **training-data-bucket**
-   **inferencing-data-bucket**
+   | Object Store Bucket Name |
+   | ------------------------ |
+   | training-data-bucket |
+   | inferencing-data-bucket |
 
    Enable OCI Object Store events to be emitted by going to the respective Bucket's detail page as shown in the screenshot below.
 
@@ -53,3 +54,5 @@ Lab 3: Configure OCI Object Storage Buckets and Upload Driver
 Refer to OCI documentation (link below) to learn more about OCI Object Storage.
 
 - [OCI Object Storage](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm)
+
+[Go to *Lab 2*](#prev) | [Go to *Lab 4*](#next)

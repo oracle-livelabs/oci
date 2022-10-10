@@ -5,7 +5,10 @@ Lab 8: Run the Anomaly Detection Solution
 
 Download the training and testing (/inference) data files. A sample training data set in Parquet format is also included for interested users, although this workshop will use data files provided in CSV format only.
 
-[TestData.csv](./files/TestData.csv) | [TrainData.csv](./files/TrainData.csv) | [TrainData.parquet](./files/TrainData.parquet)
+| AD Dataset Type | Download Link | Use Case Description |
+| ------------ | ------------- | ----------- |
+| Multivariate | [TestData.csv](./files/TestData.csv),[TrainData.csv](./files/TrainData.csv),[TrainData.parquet](./files/TrainData.parquet) | A sample multivaraite dataset which contains tire pressure and temperature values. The training data set will be used to train a model and inference data set will be used to detect anomalous values in tire pressure and temperature values. |
+| Univariate | | |
 
 ## 2. Run Model Training Pipeline
 

@@ -18,11 +18,11 @@ The input data source configuration.
 
 *   **dataframeName** - The variable name of a data frame which will be used in the execution context.
 *   **type** - Input Source Type.  Supported types are **object-storage** (OCI Object Storage) and **oracle** (Oracle Database - ADB, ATP, ADW).
-*   **isEventDriven** - (optional) Is the DPF Driver *Event* driven. This is an optional parameter whose default value is _false_. If set to _true_, the Driver will be triggered by a pre-configured OCI Event. Note that this option is currently only supported for Object Storage emitted events.
+*   **isEventDriven** - (optional) Is the DPF Driver *Event* driven. This is an optional parameter whose default value is *false*. If set to *true*, the Driver will be triggered by a pre-configured OCI Event. Note that this option is currently only supported for Object Storage emitted events.
 *   For OCI Object Storage, the following fields/elements are required.
     *  **namespace** \- The *Namespace* of the Object Storage Bucket. 
     *   **bucket** - The Bucket *Name*. 
-    *   **objectName** \- Full path including name of the file object. The name can also be a wildcard *star* (\*) when _isEventDriven_ is set to _true_. In this case, when a file is uploaded into the bucket folder matching the configured path and the wildcard expression, the file will be picked up by the Driver for processing. For example, assume *isEventDriven* is set to _true_ and this value is set to _anomalies/\*.  When a file is uploaded into folder _anomalies/\_, the Driver will receive a file creation event and will pick up the file for processing. Also, note that anything after \* is ignored.
+    *   **objectName** \- Full path including name of the file object. The name can also be a wildcard *star* (\*) when *isEventDriven* is set to *true*. In this case, when a file is uploaded into the bucket folder matching the configured path and the wildcard expression, the file will be picked up by the Driver for processing. For example, assume *isEventDriven* is set to *true* and this value is set to *anomalies/\*.  When a file is uploaded into folder *anomalies/\*, the Driver will receive a file creation event and will pick up the file for processing. Also, note that anything after \* is ignored.
 
 *   For Oracle ADW/ATP sources, the following fields/elements are required.
     *   **adbId** \- The OCID of ADW/ATP instance. 
@@ -33,7 +33,7 @@ The input data source configuration.
 
 ### phaseInfo
 
-This defines the location where the application will store the metadata from training phase for data dependent processes, like **one_hot_encoding**.
+This defines the location where the application will store the metadata from training phase for data dependent processes, like *one_hot_encoding*.
 
 *   **connector** - The connector to OCI Object Storage. The fields/elements below are required.
     *   **namespace** - The namespace of Object Storage Bucket. Required if it is for object storage.
@@ -86,11 +86,12 @@ This is used for configuring OCI Anomaly Detection(AD) Service
 
 ## 2. Update Driver Configuration Files
 
-Driver configuration files used in this workshop are provided below.
+Driver configuration files (Json) used in this workshop are provided below.
 
 **Training Configuration**
 
-```
+```json
+<copy>
 {
     "inputSources": [
         {
@@ -145,15 +146,17 @@ Driver configuration files used in this workshop are provided below.
         }
     }
 }
+</copy>
 ```
-1. Copy the contents of the configuration snippet above and paste it into a file named training-config.json.
-2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called namespace. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
+1. Copy the contents of the configuration snippet above and paste it into a file named *training-config.json*.
+2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called *Namespace*. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
 3. Populate **projectId** under **serviceApiConfiguration** with the OCI AD Project OCID from Lab 1.
 4. Populate compartmentId with compartment OCID from **Lab 2**.
 
 **Inferencing Configuration** 
 
-```
+```json
+<copy>
 {
     "inputSources": [
         {
@@ -208,9 +211,10 @@ Driver configuration files used in this workshop are provided below.
         }
     }
 }
+</copy>
 ```
 
-1. Copy the contents of the configuration snippet above and paste it into a file named inference-config.json.
+1. Copy the contents of the configuration snippet above and paste it into a file named *inference-config.json*.
 2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called namespace. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
 3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 1.
 4. Populate compartmentId with compartment OCID from **Lab 2**.
@@ -222,3 +226,5 @@ Driver configuration files used in this workshop are provided below.
 ## Useful Resources
 
 - [List of available Data Flow Transformers](https://github.com/ganrad/oci/blob/main/ai-decision-services/ai-ad-dpp-engine/optional/Introduction-to-Transformers-for-Data-Preprocessing.md)
+
+[Go to *Lab 3*](#prev) | [Go to *Lab 5*](#next)
