@@ -7,7 +7,7 @@ Download the training and testing (/inference) data files. A sample training dat
 
 | AD Dataset Type | Download Link | Use Case Description |
 | ------------ | ------------- | ----------- |
-| Multivariate | [TestData.csv](./files/TestData.csv),[TrainData.csv](./files/TrainData.csv),[TrainData.parquet](./files/TrainData.parquet) | A sample multivaraite dataset which contains tire pressure and temperature values. The training data set will be used to train a model and inference data set will be used to detect anomalous values in tire pressure and temperature values. |
+| Multivariate | [TestData.csv](./files/TestData.csv),[TrainData.csv](./files/TrainData.csv),[TrainData.parquet](./files/TrainData.parquet) | A sample multivariate dataset which contains tire pressure and temperature values. The training data set will be used to train a model and inference data set will be used to detect anomalous values in tire pressure and temperature values. |
 | Univariate | | |
 
 ## 2. Run Model Training Pipeline
