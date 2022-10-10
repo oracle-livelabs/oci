@@ -15,11 +15,6 @@
         {
             "title": "Oracle CloudWorld 2022 - Get Help",
             "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
-        },
-        {
-            "title": "Other LiveLabs you might like",
-            "description": "Other LiveLabs you might like",
-            "filename": "../../other-livelabs/other-livelabs.md"
         }
     ]
 }
