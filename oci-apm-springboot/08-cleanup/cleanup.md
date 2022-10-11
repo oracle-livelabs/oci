@@ -6,6 +6,9 @@ In this lab, you will clean up the workshop environment by running commands from
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Clean up the workshop environment](videohub:1_lnwo2eyw)
+
 ### Objectives
 
 * Remove the lab configurations and setups

@@ -12,6 +12,9 @@ Please note that these changes will be lost when the pods are recreated. This se
 
 Estimated time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Instrument the browser monitoring](videohub:1_qrehxy3o)
+
 ### Objectives
 
 * Instrument browser by injecting JavaScript code to the webpage
