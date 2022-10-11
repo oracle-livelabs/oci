@@ -6,6 +6,9 @@ This workshop uses Spring Boot-based Java microservices as a target application 
 
 Estimated time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create a Kubernetes cluster](videohub:1_4f64eivu)
+
 ### Objectives
 
 * Create a compartment

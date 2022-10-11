@@ -15,7 +15,92 @@ In this activity, you will:
 * Purchase business related supplies through self-service and negotiate contracts with key suppliers 
 
 
-## Task 1: Strategic Procurement – Self-Service Procurement
+
+## Task 1: Strategic Procurement – Negotiations (Sourcing)
+
+
+1. 
+
+  You need to figure out why the Automatic Award Recommendation has elected not to award EIP Inc. this negotiation. You will need to go to the negotiations page.
+
+    > Navigate to the **Procurement** tab and select **Negotiations**
+
+    ![Award](images/image018.png)
+
+2. 
+
+  This is the negotiations dashboard that has Infolets with insights into sourcing programs and activity. This information is drillable to give the user an intuitive experience. You need to drill into Award Completed to analyze the recent sourcing negotiation.
+
+    > In the **‘My Negotiations’** Infolet select the **‘Award Completed’** piece of the pie chart (Purple)
+
+    ![negotiations](images/image019.png)
+
+3. 
+
+  You could drill into the negotiation details by clicking the hyperlink. However, you need to analyze the individual supplier responses, so you need to click the monitor icon.
+
+    > Click the **‘Monitor’** icon for Negotiation **31792**
+
+    ![drill](images/image020.png)
+
+4. 
+
+  Here is the initial monitor page. There is some analytical information available at the top of the page. This includes the current value, potential savings, and supplier response amounts.
+
+  At the bottom of the page are the suppliers. Four were invited, and three responded. You can see the details to the right. Once again you will notice EIP was ranked first but still wasn’t awarded so you have to dive deeper.
+
+    > Select **Actions** drop down in the top ribbon
+
+    ![monitor](images/image021.png)
+    ![monitor](images/image022.png)
+
+5. 
+
+   In order to see more information about this negotiation you need to utilize the analytical tools available through Cloud Procurement. To do this, select analyze negotiation from the menu options.
+
+    > First, click **Analyze**
+
+    > Then, select **Analyze Negotiation** from the drop-down menu
+
+    ![change](images/image023.png)
+
+6. 
+
+  Here are more analytics built into the sourcing process. The analysis breaks down the awards by supplier, total savings, and savings by line item.
+
+  At the bottom of the page are supplier response details. These details still don’t tell the full story. You need to analyze the response details further to see why EIP Inc wasn’t awarded this negotiation despite the highest savings potential.
+
+    ![analytics](images/image024.png)
+    ![analytics](images/image025.png)
+
+7. 
+
+     > To highlight all the supplier responses, click the **white space next to ‘Supplier’** as indicated.
+
+     > Once they are all highlighted in blue, click **Analyze**
+   
+    ![highlight](images/image026.png)
+    ![highlight](images/image027.png)
+
+8. 
+
+  Once, the analysis has been run there will be more analytics provided at the top of the page. As you scroll down you will see comprehensive response details for each supplier including the requirement scoring. You will notice that EIP is missing a required certification and therefore they have not been awarded part of this negotiation. In order to ensure this doesn’t happen again or if you wish to let them re-bid this sourcing negotiation your team must communicate the need for this certification.
+    
+    ![analysis](images/image028.png)
+    ![analysis](images/image029.png)
+
+9. 
+
+    > Select the **‘Home’** icon in the top ribbon to navigate back to the Procurement springboard
+     
+    ![Procurement](images/image030.png)
+    ![Procurement](images/image017.png)
+
+
+
+
+
+## Task 2: Strategic Procurement – Self-Service Procurement
 
 
 1. 
@@ -162,89 +247,6 @@ In this activity, you will:
 
     ![springboard](images/image016.png)
     ![springboard](images/image017.png)
-
-
-
-## Task 2: Strategic Procurement – Negotiations (Sourcing)
-
-
-1. 
-
-  You need to figure out why the Automatic Award Recommendation has elected not to award EIP Inc. this negotiation. You will need to go to the negotiations page.
-
-    > Navigate to the **Procurement** tab and select **Negotiations**
-
-    ![Award](images/image018.png)
-
-2. 
-
-  This is the negotiations dashboard that has Infolets with insights into sourcing programs and activity. This information is drillable to give the user an intuitive experience. You need to drill into Award Completed to analyze the recent sourcing negotiation.
-
-    > In the **‘My Negotiations’** Infolet select the **‘Award Completed’** piece of the pie chart (Purple)
-
-    ![negotiations](images/image019.png)
-
-3. 
-
-  You could drill into the negotiation details by clicking the hyperlink. However, you need to analyze the individual supplier responses, so you need to click the monitor icon.
-
-    > Click the **‘Monitor’** icon for Negotiation **31792**
-
-    ![drill](images/image020.png)
-
-4. 
-
-  Here is the initial monitor page. There is some analytical information available at the top of the page. This includes the current value, potential savings, and supplier response amounts.
-
-  At the bottom of the page are the suppliers. Four were invited, and three responded. You can see the details to the right. Once again you will notice EIP was ranked first but still wasn’t awarded so you have to dive deeper.
-
-    > Select **Actions** drop down in the top ribbon
-
-    ![monitor](images/image021.png)
-    ![monitor](images/image022.png)
-
-5. 
-
-   In order to see more information about this negotiation you need to utilize the analytical tools available through Cloud Procurement. To do this, select analyze negotiation from the menu options.
-
-    > First, click **Analyze**
-
-    > Then, select **Analyze Negotiation** from the drop-down menu
-
-    ![change](images/image023.png)
-
-6. 
-
-  Here are more analytics built into the sourcing process. The analysis breaks down the awards by supplier, total savings, and savings by line item.
-
-  At the bottom of the page are supplier response details. These details still don’t tell the full story. You need to analyze the response details further to see why EIP Inc wasn’t awarded this negotiation despite the highest savings potential.
-
-    ![analytics](images/image024.png)
-    ![analytics](images/image025.png)
-
-7. 
-
-     > To highlight all the supplier responses, click the **white space next to ‘Supplier’** as indicated.
-
-     > Once they are all highlighted in blue, click **Analyze**
-   
-    ![highlight](images/image026.png)
-    ![highlight](images/image027.png)
-
-8. 
-
-  Once, the analysis has been run there will be more analytics provided at the top of the page. As you scroll down you will see comprehensive response details for each supplier including the requirement scoring. You will notice that EIP is missing a required certification and therefore they have not been awarded part of this negotiation. In order to ensure this doesn’t happen again or if you wish to let them re-bid this sourcing negotiation your team must communicate the need for this certification.
-    
-    ![analysis](images/image028.png)
-    ![analysis](images/image029.png)
-
-9. 
-
-    > Select the **‘Home’** icon in the top ribbon to navigate back to the Procurement springboard
-     
-    ![Procurement](images/image030.png)
-    ![Procurement](images/image017.png)
-
 
 
 # Acknowledgements
