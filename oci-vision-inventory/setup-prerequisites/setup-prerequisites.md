@@ -1,113 +1,111 @@
-# Pre-requisites
+# Prerequisites
 
 ## Introduction
 
-In this lab, you will focus on understanding the pre-requisites and setting up your tenancy for the subsequent creation and operation of the OCI Vision model.
+In this lab, you will set up your tenancy for the subsequent creation and operation of the OCI Vision model.
 
-Estimated Time: 30 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
 In this lab, you will:
 - Create a Compartment
-- Create a user and its respective OCI config file
-- Create a user group
+- Create a Group
+- Create Dynamic Group
 - Create a Policy
-- Create a VCN with internet connectivity 
-- Create an OCI Compute instance in order to later access the OCI Vision model API
+- Confirm access to the Vision service
 
-## Task 1: Compartment creation
+## Task 1: Create compartment
 
-In this task, you will create a dedicated compartment for this live lab, if you haven't done so beforehand.
+In this task, you will create a dedicated compartment for this live lab.
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
-2. Click **Identity** and select **Compartments**.
-3. Provide *vision-livelab* as **Name**, a **Description** of your choice, and leave the root level as Parent.
+2. Click **Identity & Security** and select **Compartments**.
+
+   ![Select Compartments](../images/oci_menu_compartments.png)
+
 4. Click **Create Compartment**.
+5. Provide *vision-livelab* as **Name**, a **Description** of your choice, and leave the root level as Parent.
+6. Click **Create Compartment**.
 
    ![Creation of vision-livelab compartment](../images/create_compartment.png)
 
-## Task 2: User creation
+## Task 2: Create group
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
-2. Click **Identity** and select **Users**. Click **Create User**.
-3. Select **IAM User**. Provide *vision-user* as **Name**, a **Description** of your choice, and click **Create**.
+2. Click **Identity & Security** and select **Domains**.
+   
+   > **Note:** If you do not see **Domains** it means that your region has not been updated to support identity domains. If that's the case, select **Groups** and move to step 5 below.
 
-   ![Creation of vision-user user](../images/create_user.png)
+   ![Select Domains](../images/oci_menu_domains.png)
+   
+3. Select the domain listed as *Current domain*.
+4. On the left menu, select **Groups**.
+5. Select **Create group**.
+6. Provide *vision-group* as **Name**, add a **Description** of your choice, and select your User to add your account to the Group.
+7. Click **Create**.
 
-   After creating the user, you will be redirected to the user details page. Click **Create/Reset password** to create a password for the user.
-
-4. While in the user details page, click **API Keys** in the in the **Resources** section, and then click **Add API Key**. Download the private key, saving it as *oci\_api\_key.pem*.  
-5. After the creation, when back to the API Keys screen, look for additional options in the table row that displays your recently created key fingerprint. Click **View configuration file**.
-
-   ![View config option](../images/view_config_option.png)
-
-   You will then see a screen such as the below. Copy the content, create a new file named *config*, paste the content inside it. Add *~/.oci/oci\_api\_key.pem* as key path.  
-   Save the file. It will be necessary later.
-
-   ![View config file](../images/view_config_file.png)
-
-## Task 3: User group creation
-
-In this task, you will create a dedicated user group.
+## Task 3: Create dynamic group
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
-2. Click **Identity** and select **Groups**.
-3. Provide *vision-group* as **Name**, a **Description** of your choice.
-4. Click **Create**.
-5. Open the group you've created and click **Add User to Group**.
-6. Select *vision-user* and click **Add**.
+2. Click **Identity & Security** and select **Domains**. 
 
-   ![Creation of vision-group user group](../images/create_group.png)
+   > **Note:** If you do not see **Domains** it means that your region has not been updated to support identity domains. If that's the case, select **Dynamic Groups** and move to step 5 below.
+
+   ![Select Domains](../images/oci_menu_domains.png)
+
+3. Select the domain listed as *Current domain*.
+4. On the left menu, select **Dynamic groups**.
+5. Select **Create dynamic group**.
+6. Provide *dls-dynamic-group* as **Name**, add a **Description** of your choice, and add the following matching rule:
+
+   ```html
+   <copy>ALL { resource.type = 'datalabelingdataset' }
+   ```
+   
+   ![Create dynamic group](../images/create_dls_dynamic_group.png)
+   
+7. Click **Create**.
 
 ## Task 4: Policy setup
 
 In this task, you will create the required OCI IAM policy.
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
-2. Click **Identity** and select **Policies**.
-3. Provide *vision-policy* as **Name**, a **Description** of your choice, and choose *vision-livelab* as compartment.
-4. Click **Show manual editor** and paste the content below in the editor.
+2. Click **Identity & Security** and select **Policies**. 
+
+   ![Select Policies](../images/oci_menu_policies.png)
+   
+3. Click **Create Policy**.
+4. Provide *vision-policy* as **Name** and add a **Description** of your choice.
+5. Set the **Compartment** to the root compartment.
+6. Click **Show manual editor** and paste the content below in the editor.
 
    ```html
-   <copy>Allow group vision-group to manage vision-family in compartment vision-livelab
-   Allow service vision to manage vcns in compartment vision-livelab
-   Allow service vision to manage vnics in compartment vision-livelab
-   Allow service vision to use subnets in compartment vision-livelab
-   Allow service vision to use network-security-groups in compartment vision-livelab</copy>
+   <copy>allow group vision-group to manage ai-service-vision-family in compartment vision-livelab
+   allow group vision-group to manage object-family in compartment vision-livelab
+   allow group vision-group to manage data-labeling-family in compartment vision-livelab
+   allow dynamic-group dls-dynamic-group to read buckets in compartment vision-livelab
+   allow dynamic-group dls-dynamic-group to read objects in compartment vision-livelab
+   allow dynamic-group dls-dynamic-group to manage objects in compartment vision-livelab where any {request.permission='OBJECT_CREATE'}
    ```
 
+6. Click **Create**.
    ![Creation of vision-policy policy](../images/create_policy.png)
 
-## Task 5: Networking setup
+## Task 5: Confirm access to the Vision service
 
-In this task, you will create a VCN with a public subnet and a private subnet.
+1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
+2. Click **Analytics & AI** and select **Vision**. 
 
-1. Open the Oracle Cloud Console navigation menu.
-2. Click **Networking**. and then click **Virtual Cloud Networks**.
-3. Click **Start VCN Wizard**, and then click **Create VCN with Internet Connectivity**.  
-4. Provide *vision-vcn* as VCN Name and select *vision-livelab* as compartment.
-5. Leave the default values in the remaining fields, click **Next**, and then click **Create** 
+   ![Select Vision](../images/oci_menu_vision.png)
+   
+3. Select **Object detection**.
+4. Select **Compartment** *vision-livelab*. You should now see labels on the right side of the screen for the sample image.
 
-## Task 6: Compute instance setup
-
-In this task, you will create an OCI Compute instance in the public subnet of the previously created VCN, in order to access the Vision API.
-
-1. Open the Oracle Cloud Console navigation menu.
-2. Click **Compute**, and then click **Instances**.
-3. Click **Create instance**.
-4. Provide *vision-instance* as **Name**, and select *vision-livelab* as compartment.
-5. In the **Image and shape** area, use the default values.
-6. In the **Networking** area, select *vision-vcn* and *Public Subnet-vision-vcn*, for VCN and Subnet, respectively.
-7. In the **Add SSH keys area**, decide whether you want to use an existing SSH key, or generate a new SSH key. If you choose to generate a new SSH key, remember to download the private key. 
-8. Leave the remaining options with the default values and click **Create**.
-
-> **Note:** Remember to run the following command or an equivalent one, to give proper permissions to your key.
-```bash
-<copy>chmod 600 <your_key></copy>
-```
+   ![OCI Vision object detection pretrained model](../images/oci_vision_pretrained_object_detection.png)
 
 ## Acknowledgements
 
-* **Authors** - Nuno Gonçalves, Jason Monden
+* **Authors** - Nuno Gonçalves, Jason Monden, Mark Heffernan
 * **Last Updated By/Date** - Nuno Gonçalves, September 2022

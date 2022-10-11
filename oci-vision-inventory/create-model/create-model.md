@@ -2,8 +2,9 @@
 
 ## Introduction
 
-In this lab, you will create an OCI Vision project and an OCI Vision custom model. A custom model can be created with a minimum of 10 images, which we have provided.   
-An OCI Vision custom model can be created in quick mode (up to 1 hour), regular mode (up to 24 hours), or custom mode. In the lab steps, we propose the quick mode, with a fast completion of the workshop in mind. Whenever suitable, we recommend the regular mode.
+In this lab, you will create an OCI Vision project and an OCI Vision custom model. A custom model can be created with a minimum of 10 images, which we have provided. For production models though, we recommend using many more images for training.
+
+An OCI Vision custom model can be created in quick mode (up to 1 hour), regular mode (up to 24 hours), or custom mode. In the lab steps, we will use quick mode training since we're limited on time.
 
 ### Objectives
 
@@ -19,19 +20,23 @@ An OCI Vision custom model can be created in quick mode (up to 1 hour), regular 
 
    ![Creation of OCI Vision project](../images/create_project.png)
 
-4. Click **Create project**. Provide *vision-project* as name, select *vision-livelab* as compartment, and click **Create project**
+4. Click **Create project**. Provide *vision-project* as name, select *vision-livelab* as compartment, and click **Create project**.
 
 ## Task 2: Create the OCI Vision pipe detection model
 
-1. While on the OCI Vision project details page, click **Create Model**.
+1. Once the project status is *Active*, select *vision-project*.
+2. While on the OCI Vision project details page, click **Create Model**.
    ![OCI Vision project details](../images/vision_project.png)
 2. Select *Object Detection* in model type.
 3. Select *Choose existing dataset*, *Data Labeling Service*, and select the *vision-livelab-dataset* bucket.
    ![Creation of OCI Vision model - 1](../images/create_model1.png)
-3. Choose *Quick training* and click **Create**.
+4. Click **Next**.
+5. Name the model *vision-model*.
+6. Choose *Quick training* and click **Next**.
    ![Creation of OCI Vision model - 2](../images/create_model2.png)
+7. Click **Create and train**. For this model, training will take about 20 minutes.
 
 ## Acknowledgements
 
-* **Authors** - Nuno Gonçalves, Jason Monden
+* **Authors** - Nuno Gonçalves, Jason Monden, Mark Heffernan
 * **Last Updated By/Date** - Nuno Gonçalves, September 2022

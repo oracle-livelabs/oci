@@ -14,35 +14,35 @@ Estimated time: 20 minutes
 
 * Completion of the preceding labs in this workshop
 
-## Task1: Verify artifacts.
+## Task 1: Verify artifacts.
 
-1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
+1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** &gt; **Buckets**.
 
-   ![Oracle Cloud console, Dataflow](images/object%20storage%20menu.png " ")
+   ![Oracle Cloud console, Dataflow](images/object-storage-menu.png " ")
 
-2. Select ```dataflow-labs``` compartment in left side and select ```dataflow-labs``` object storage bucket
+2. Select the ```dataflow-labs``` compartment on the left side and select the ```dataflow-labs``` object storage bucket
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
 3. Click on the object ```demo```.
-   ![Oracle Cloud console, Dataflow](images/demo%20object.png " ")
+   ![Oracle Cloud console, Dataflow](images/demo-object.png " ")
 
-4. Click ```artifacts``` object and verify ```application.conf``` object is available.
-   ![Oracle Cloud console, Dataflow](images/artifacts%20object.png " ")
+4. Click the ```artifacts``` object and verify the ```application.conf``` object is available.
+   ![Oracle Cloud console, Dataflow](images/artifacts-object.png " ")
 
-## Task2: Run Machine Learning Model 
+## Task 2: Run machine learning model 
 
-1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** > **Data Flow**.
+1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** &gt; **Data Flow**.
 
    ![Oracle Cloud console, Dataflow](images/dataflow-menu.png " ")
 
 2. Click ```RULSurvivalModelTrainer``` OCI Data Flow Application. 
-   ![Oracle Cloud console, Dataflow](images/RULSurvivalModelTrainer.png " ")
+   ![Oracle Cloud console, Dataflow](images/rul-survival-model-trainer.png " ")
 
-3. Click ```Run``` button on top and confirm by clicking ```Run``` again.
-   ![Oracle Cloud console, Dataflow](images/RunSurvivalModelTrainer-1.png " ")
+3. Click the ```Run``` button on top and confirm by clicking ```Run``` again.
+   ![Oracle Cloud console, Dataflow](images/rul-survival-model-trainer-1.png " ")
    
-4. OCI Data Flow Run will be created with ACCEPTED state under ```RUNS``` resources.
+4. OCI Data Flow Run will be created with the ACCEPTED state under ```RUNS``` resources.
 
   ![Oracle Cloud console, Dataflow](images/model-accepted.png " ")
 
@@ -56,32 +56,32 @@ Estimated time: 20 minutes
 
   ![Oracle Cloud console, Dataflow](images/model-sparkui.png " ")
 
-7. Wait for run to complete, it will take approximately 4-6 minutes.
+7. Wait for the run to complete, it will take approximately 4-6 minutes.
 
    ![Oracle Cloud console, Dataflow](images/model-succeeded.png " ")
 
-## Task3: Verify RUL survival model is created.
+## Task 3: Verify RUL survival model is created.
 
-1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** > **Buckets**.
+1. Go to OCI Object Storage Console (aka. hamburger menu) in the Oracle Cloud console, and select **Storage ** &gt; **Buckets**.
 
-   ![Oracle Cloud console, Dataflow](images/object%20storage%20menu.png " ")
+   ![Oracle Cloud console, Dataflow](images/object-storage-menu.png " ")
 
-2. Select ```dataflow-labs``` compartment in left side and select ```dataflow-labs``` bucket
+2. Select the ```dataflow-labs``` compartment on the left side and select the ```dataflow-labs``` bucket
 
    ![Oracle Cloud console, Dataflow](images/object-storage-bucket.png " ")
 
 3. Select object ```demo```.
-   ![Oracle Cloud console, Dataflow](images/demo%20object.png " ")
+   ![Oracle Cloud console, Dataflow](images/demo-object.png " ")
 
-4. Select ```models``` object and verify three folder as shown below
+4. Select the ```models``` object and verify three folders as shown below
    ![Oracle Cloud console, Dataflow](images/models.png " ")
 
-5. Expand and verify models in parquet file format with associated metadata.
+5. Expand and verify that the models are in a parquet file format with associated metadata.
    ![Oracle Cloud console, Dataflow](images/models-expanded.png " ")
    
 You may now **proceed to the next lab**.
 
-## Acknowledgements
-- **Author** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
+## Acknowledgments
+- **Created By** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
 - **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
-- **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022
+- **Last Updated By/Date** - Sivanesh Selvanataraj, October 2022

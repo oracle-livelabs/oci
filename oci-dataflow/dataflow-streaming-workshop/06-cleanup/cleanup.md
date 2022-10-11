@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will clean up the workshop environment resources used for manufacturing application.
+In this lab, you will clean up the workshop environment resources used for the manufacturing applications in OCI Data Flow.
 
 Estimated time: 20 minutes
 
@@ -14,75 +14,75 @@ Estimated time: 20 minutes
 
 * Completion of preceding labs in this workshop.
 
-## Task1: Stop Data Flow Runs
+## Task 1: Stop Data Flow runs
 
-1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** > **Data Flow**.
+1. Go to OCI Data Flow Console (aka. hamburger menu) in the Oracle Cloud console, and select **Analytics & AI ** &gt; **Data Flow**.
 
    ![Oracle Cloud console, Dataflow](images/dataflow-menu.png " ")
 
-2. Select dataflow-labs compartment and select Runs.
-   ![Oracle Cloud console, Dataflow](images/runs_compartment.png " ")
+2. Select the dataflow-labs compartment and select Runs.
+   ![Oracle Cloud console, Dataflow](images/runs-compartment.png " ")
 
 3. Click on RealtimeRULPredictor and click on STOP.
-   ![Oracle Cloud console, Dataflow](images/predictor_stopping.png " ")
+   ![Oracle Cloud console, Dataflow](images/predictor-stopping.png " ")
 
 4. Confirm stopping RealtimeRULPredictor.
-   ![Oracle Cloud console, Dataflow](images/confirm_predictor_stop.png " ")
+   ![Oracle Cloud console, Dataflow](images/confirm-predictor-stop.png " ")
 
 5. Click on SensorDataSimulator and click on STOP.
-   ![Oracle Cloud console, Dataflow](images/simulator_stopping.png " ")
+   ![Oracle Cloud console, Dataflow](images/simulator-stopping.png " ")
 
 6. Confirm stopping SensorDataSimulator.
-   ![Oracle Cloud console, Dataflow](images/confirm_simulator_stop.png " ")
+   ![Oracle Cloud console, Dataflow](images/confirm-simulator-stop.png " ")
 
 7. Confirm all the running apps are stopped.
    ![Oracle Cloud console, Dataflow](images/stop-runs.png " ")
 
 
 
-## Task2: Delete Object Storage Buckets
+## Task 2: Delete Object Storage buckets
 
-1. From the navigation menu in the Oracle Cloud console, select **Storage** > **Bucket**.
+1. From the navigation menu in the Oracle Cloud console, select **Storage** &gt; **Bucket**.
 
-    ![Oracle Cloud, Object Storage](images/object%20storage%20menu.png " ")
+    ![Oracle Cloud, Object Storage](images/object-storage-menu.png " ")
 
-2. In the **Object Storage Details** page, click **Delete** on dataflow-labs-logs. In the confirmation window, click **Delete**.
+2. On the **Object Storage Details** page, click **Delete** on dataflow-labs-logs. In the confirmation window, click **Delete**.
 
-   ![Oracle Cloud, Object Storage](images/delete_logs_bucket.png " ")   
+   ![Oracle Cloud, Object Storage](images/delete-logs-bucket.png " ")   
 
 3. Deletion of the delete dataflow_labs_logs buckets starts and completes.
 
-    ![Oracle Cloud, Cloud console](images/delete_logs_success.png " ")    
+    ![Oracle Cloud, Cloud console](images/delete-logs-success.png " ")    
 
-4. In the **Object Storage Details** page, click **Delete** on dataflow-labs. In the confirmation window, click **Delete**.
+4. On the **Object Storage Details** page, click **Delete** on dataflow-labs. In the confirmation window, click **Delete**.
 
-   ![Oracle Cloud, Object Storage](images/delete_dataflow_labs.png " ")
+   ![Oracle Cloud, Object Storage](images/delete-dataflow-labs.png " ")
 
 5. Deletion of the delete dataflow_labs_logs buckets starts and completes.
 
-   ![Oracle Cloud, Cloud console](images/delete_dataflow_labs_success.png " ")
+   ![Oracle Cloud, Cloud console](images/delete-dataflow-labs-success.png " ")
 
 
 
-## Task3: Destroy Manufacturing Stack to clean up other resources
+## Task 3: Destroy Manufacturing Stack to clean up other resources
 
-1. From the navigation menu in the Oracle Cloud console, select **Developer Services** > **Stacks**. 
+1. From the navigation menu in the Oracle Cloud console, select **Developer Services** &gt; **Stacks**. 
 
     ![Oracle Cloud, Cloud console](images/stack-menu.png " ")       
 
-2. Click destroy on the manufacturing stack and confirm the destruction of stack.
+2. Click destroy on the manufacturing stack and confirm the destruction of the stack.
 
-    ![Oracle Cloud, Cloud console](images/destroy_click.png " ")    
+    ![Oracle Cloud, Cloud console](images/destroy-click.png " ")    
 
 3. Wait for successful destruction of manufacturing stack
 
-   ![Oracle Cloud, Cloud console](images/destroy_progress.png " ")
+   ![Oracle Cloud, Cloud console](images/destroy-progress.png " ")
 
 4. Wait for successful destruction of manufacturing stack
 
-   ![Oracle Cloud, Cloud console](images/destroy_succeeded.png " ")
+   ![Oracle Cloud, Cloud console](images/destroy-succeeded.png " ")
 
-## Acknowledgements
-- **Author** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
+## Acknowledgments
+- **Created By** -  Sivanesh Selvanataraj, Software Engineer, OCI Data Flow
 - **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
 - **Last Updated By/Date** - Sivanesh Selvanataraj, September 2022
