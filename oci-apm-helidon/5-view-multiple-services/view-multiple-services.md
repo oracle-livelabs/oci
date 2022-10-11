@@ -6,6 +6,9 @@ In this lab, you will modify the original service to call the second service, wh
 
 Estimated time: 15 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[View the trace having multiple services](videohub:1_wl7efqpu)
+
 ### Objectives
 
 * Implement Jersey client in the Maven project
