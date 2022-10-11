@@ -3,9 +3,12 @@ Lab 4: Configure DPF Driver
 
 In this Lab, users will create a *Driver* configuration which will be used for preprocessing data and then running AD model Training or Inference. The Data Pre-Processing Framework (DPF) driver provided by the Oracle AI Services team will read this configuration and use it to ingest data from configured data sources, execute the processing steps (run data transformers) and perform OCI Anomaly Detection Model Training or run Inference.
 
-## 1. Examine Driver Configuration File
+A brief description of the configuration file sections and their syntax is provided below.
 
-This is a JSON file that defines the DPF workflow. The configuration is composed of 5 main sections/elements which are described in the table below.
+## 1. Understand Driver Configuration File Syntax
+
+Driver Configuration File is a JSON file that defines the DPF workflow. Users may skip this section and proceed to the next task directly if they wish.
+The configuration is composed of the following 5 parts.
 
 | Section Name | Description |
 | ------------ | ----------- |
@@ -107,7 +110,7 @@ Driver configuration files (Json) used in this workshop are provided below.
             "type": "object-storage",
             "namespace":"<your-namespace>",
             "bucket":"training-data-bucket",
-            "objectName": "TrainData.csv"
+            "objectName": "ad-diabetes-train.csv"
         }
     ],
     "phaseInfo": {
@@ -124,10 +127,19 @@ Driver configuration files (Json) used in this workshop are provided below.
                 "dataframeName": "S1",
                 "steps": [
                     {
+                        "stepName": "string_transformation",
+                        "args": {
+                            "find_string": "mg/dL",
+                            "replace_string": "",
+                            "column": "ReadingAM"
+                        }
+                    }, 
+                    {
                         "stepName": "format_timestamp",
                         "args": {}
                     }
                 ]
+
             }
         }
     ],
@@ -142,8 +154,7 @@ Driver configuration files (Json) used in this workshop are provided below.
         "type": "object-storage",
         "namespace":"<your-namespace>",
         "bucket": "output-bucket",
-        "objectName": "model_info.json",
-        "folder":"processing_folder"
+        "folder":"model_info.json"
     },
     "serviceApiConfiguration": {
         "anomalyDetection": {
@@ -172,7 +183,7 @@ Driver configuration files (Json) used in this workshop are provided below.
             "type": "object-storage",
             "namespace":"<your-namespace>",
             "bucket":"inferencing-data-bucket",
-            "objectName": "TestData.csv"
+            "objectName": "ad-diabetes-test.csv"
         }
     ],
     "phaseInfo": {
@@ -189,6 +200,14 @@ Driver configuration files (Json) used in this workshop are provided below.
                 "dataframeName": "S1",
                 "steps": [
                     {
+                        "stepName": "string_transformation",
+                        "args": {
+                            "find_string": "mg/dL",
+                            "replace_string": "",
+                            "column": "ReadingAM"
+                        }
+                    },
+                                        {
                         "stepName": "format_timestamp",
                         "args": {}
                     }
@@ -207,8 +226,7 @@ Driver configuration files (Json) used in this workshop are provided below.
         "type": "object-storage",
         "namespace":"<your-namespace>",
         "bucket": "output-bucket",
-        "objectName": "model_info.json",
-        "folder":"processing_folder"
+        "folder":"model_info.json"
     },
     "serviceApiConfiguration": {
         "anomalyDetection": {
@@ -226,6 +244,11 @@ Driver configuration files (Json) used in this workshop are provided below.
 2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called namespace. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
 3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 1.
 4. Populate compartmentId with compartment OCID from **Lab 2**.
+
+The diagram below shows a visualization of the processing workflow specified by this configuration
+
+![Visualization of training-config and inference-config](./images/processing.jpg)
+
 
 ## 3. Upload Driver Configuration Files
 *   Upload OCI AD model training configuration file into **training-config-bucket** in OCI Object Storage Bucket, created in **Lab 4**.
