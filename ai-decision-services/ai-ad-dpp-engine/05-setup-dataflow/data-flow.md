@@ -15,7 +15,7 @@ Update/Specify field values as described below.
 *   For the **Language** section, choose **Python**.
 *   Select df_driver.py from the driver bucket.
 *   For **Arguments**, simply input `--response ${response} --phase ${phase}`.
-*   For **Parameters**, enter **placeholder** as the default value for both input parametersi (*response* & *phase*). This values will be overriden by the DPF driver.
+*   For **Parameters**, enter **placeholder** as the default value for both input parameters (*response* & *phase*). These values will be overriden by the DPF driver.
 *   For **Archive URI**, enter the fully qualified path to archive.zip in Object Storage. The structure of path is `oci://<bucket-name>@<namespace>/<path-to-archive.zip>`. Same below.
 *   For **Application log location**, enter the path to logs-bucket. This is very useful for debugging failed application runs.
 

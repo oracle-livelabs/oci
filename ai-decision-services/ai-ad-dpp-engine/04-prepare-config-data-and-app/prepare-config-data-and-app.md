@@ -7,10 +7,16 @@ A brief description of the configuration file sections and their syntax is provi
 
 ## 1. Examine Driver Configuration File
 
-This is a JSON file that defines the DPF workflow. The configuration is composed of the following 5 parts.
+This is a JSON file that defines the DPF workflow. The configuration is composed of 5 main sections/elements which are described in the table below.
 
-
-<table class="wrapped confluenceTable"><colgroup><col><col></colgroup><tbody><tr><th class="confluenceTh">Section Name</th><th class="confluenceTh">Explanation</th></tr><tr><td class="confluenceTd">inputSources</td><td class="confluenceTd">Connector for input data sources. Currently we support reading data from Object Storage, ATP and ADW.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">phaseInfo<td class="highlight-blue confluenceTd" data-highlight-colour="blue">A flag specifies whether it's training or inferencing, and connector to metadata source.</td></tr><tr><td class="confluenceTd">processingSteps</td><td class="confluenceTd">Data preprocessing transformers and related input arguments.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">stagingDestination</td><td class="highlight-blue confluenceTd" data-highlight-colour="blue">Connector for intermediate processed data storage, which will be used in post-processing steps.</td></tr><tr><td class="confluenceTd">outputDestination</td><td class="confluenceTd">Connector for final output.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">serviceApiConfiguration</td><td class="highlight-blue confluenceTd" data-highlight-colour="blue">Configuration required for post-processing steps. For example, arguments for anomaly detection client.</td></tr></tbody></table>
+| Section Name | Description |
+| ------------ | ----------- |
+| inputSources | This section is used to specify the connector for input data sources.  Currently, DPF supports reading data from OCI Object Storage, OCI ATP and ADW (Autonomous Database Servers on OCI) |
+| phaseInfo | This section is used to specify AD Service Model Training or Inference and connector to metadata source |
+| processingSteps | This section lists the data transformers and associated input arguments |
+| stagingDestination | This section specifies the connector used for storing intermediate results, which will be used in post-processing steps |
+| outputDestination | This section specifies the connector for storing final output (Anomaly Detection Results) |
+| serviceApiConfiguration | This section specifies the configuration required for post-processing steps. For instance, the arguments required for invoking OCI Anomaly Detection Service API's |
 
 ### inputSources
 
@@ -85,6 +91,8 @@ This is used for configuring OCI Anomaly Detection(AD) Service
 * **compartmentId** - OCID of OCI Compartment from **Lab 2**.
 
 ## 2. Update Driver Configuration Files
+
+In this workshop, a simple data transform is used to demonstrate the use of Data Processing Framework. The Driver Configuration files listed below contain one processing step which will transform *Timestamp* values contained within a 'timestamp' column into ISO8601 timestamp values. [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) format is an international standard for exchange of date and time related data.  This Timestamp format is also a key requirement for data sets used in OCI Anomaly Detection Service, for both model training and inference data.
 
 Driver configuration files (Json) used in this workshop are provided below.
 
