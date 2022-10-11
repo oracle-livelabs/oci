@@ -5,9 +5,10 @@ In this Lab, users will create a *Driver* configuration which will be used for p
 
 A brief description of the configuration file sections and their syntax is provided below.
 
-## 1. Examine Driver Configuration File
+## 1. Understand Driver Configuration File Syntax
 
-This is a JSON file that defines the DPF workflow. The configuration is composed of the following 5 parts.
+Driver Configuration File is a JSON file that defines the DPF workflow. Users may skip this section and proceed to the next task directly if they wish.
+The configuration is composed of the following 5 parts.
 
 
 <table class="wrapped confluenceTable"><colgroup><col><col></colgroup><tbody><tr><th class="confluenceTh">Section Name</th><th class="confluenceTh">Explanation</th></tr><tr><td class="confluenceTd">inputSources</td><td class="confluenceTd">Connector for input data sources. Currently we support reading data from Object Storage, ATP and ADW.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">phaseInfo<td class="highlight-blue confluenceTd" data-highlight-colour="blue">A flag specifies whether it's training or inferencing, and connector to metadata source.</td></tr><tr><td class="confluenceTd">processingSteps</td><td class="confluenceTd">Data preprocessing transformers and related input arguments.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">stagingDestination</td><td class="highlight-blue confluenceTd" data-highlight-colour="blue">Connector for intermediate processed data storage, which will be used in post-processing steps.</td></tr><tr><td class="confluenceTd">outputDestination</td><td class="confluenceTd">Connector for final output.</td></tr><tr><td class="highlight-blue confluenceTd" data-highlight-colour="blue">serviceApiConfiguration</td><td class="highlight-blue confluenceTd" data-highlight-colour="blue">Configuration required for post-processing steps. For example, arguments for anomaly detection client.</td></tr></tbody></table>
@@ -99,7 +100,7 @@ Driver configuration files (Json) used in this workshop are provided below.
             "type": "object-storage",
             "namespace":"<your-namespace>",
             "bucket":"training-data-bucket",
-            "objectName": "TrainData.csv"
+            "objectName": "ad-diabetes-train.csv"
         }
     ],
     "phaseInfo": {
@@ -116,10 +117,19 @@ Driver configuration files (Json) used in this workshop are provided below.
                 "dataframeName": "S1",
                 "steps": [
                     {
+                        "stepName": "string_transformation",
+                        "args": {
+                            "find_string": "mg/dL",
+                            "replace_string": "",
+                            "column": "ReadingAM"
+                        }
+                    }, 
+                    {
                         "stepName": "format_timestamp",
                         "args": {}
                     }
                 ]
+
             }
         }
     ],
@@ -134,8 +144,7 @@ Driver configuration files (Json) used in this workshop are provided below.
         "type": "object-storage",
         "namespace":"<your-namespace>",
         "bucket": "output-bucket",
-        "objectName": "model_info.json",
-        "folder":"processing_folder"
+        "folder":"model_info.json"
     },
     "serviceApiConfiguration": {
         "anomalyDetection": {
@@ -164,7 +173,7 @@ Driver configuration files (Json) used in this workshop are provided below.
             "type": "object-storage",
             "namespace":"<your-namespace>",
             "bucket":"inferencing-data-bucket",
-            "objectName": "TestData.csv"
+            "objectName": "ad-diabetes-test.csv"
         }
     ],
     "phaseInfo": {
@@ -181,6 +190,14 @@ Driver configuration files (Json) used in this workshop are provided below.
                 "dataframeName": "S1",
                 "steps": [
                     {
+                        "stepName": "string_transformation",
+                        "args": {
+                            "find_string": "mg/dL",
+                            "replace_string": "",
+                            "column": "ReadingAM"
+                        }
+                    },
+                                        {
                         "stepName": "format_timestamp",
                         "args": {}
                     }
@@ -199,8 +216,7 @@ Driver configuration files (Json) used in this workshop are provided below.
         "type": "object-storage",
         "namespace":"<your-namespace>",
         "bucket": "output-bucket",
-        "objectName": "model_info.json",
-        "folder":"processing_folder"
+        "folder":"model_info.json"
     },
     "serviceApiConfiguration": {
         "anomalyDetection": {
@@ -218,6 +234,11 @@ Driver configuration files (Json) used in this workshop are provided below.
 2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called namespace. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
 3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 1.
 4. Populate compartmentId with compartment OCID from **Lab 2**.
+
+The diagram below shows a visualization of the processing workflow specified by this configuration
+
+![Visualization of training-config and inference-config](./images/processing.jpg)
+
 
 ## 3. Upload Driver Configuration Files
 *   Upload OCI AD model training configuration file into **training-config-bucket** in OCI Object Storage Bucket, created in **Lab 4**.
