@@ -90,7 +90,9 @@ This is used for configuring OCI Anomaly Detection(AD) Service
 
 ## 2. Update Driver Configuration Files
 
-In this workshop, a simple data transform is used to demonstrate the use of Data Processing Framework. The Driver Configuration files listed below contain one processing step which will transform *Timestamp* values contained within a 'timestamp' column into ISO8601 timestamp values. [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) format is an international standard for exchange of date and time related data.  This Timestamp format is also a key requirement for data sets used in OCI Anomaly Detection Service, for both model training and inference data.
+In this workshop, simple data transforms will be used to demonstrate the use of Data Processing Framework. 
+
+The Driver Configuration files listed below contain one processing step which will transform *Timestamp* values contained within a 'timestamp' column into ISO8601 timestamp values. [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) format is an international standard for exchange of date and time related data.  This Timestamp format is also a key requirement for data sets used in OCI Anomaly Detection Service, for both model training and inference data.
 
 Driver configuration files (Json) used in this workshop are provided below.
 
