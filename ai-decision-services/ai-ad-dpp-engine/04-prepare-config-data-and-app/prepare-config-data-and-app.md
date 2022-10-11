@@ -3,8 +3,6 @@ Lab 4: Configure DPF Driver
 
 In this Lab, users will create a *Driver* configuration which will be used for preprocessing data and then running AD model Training or Inference. The Data Pre-Processing Framework (DPF) driver provided by the Oracle AI Services team will read this configuration and use it to ingest data from configured data sources, execute the processing steps (run data transformers) and perform OCI Anomaly Detection Model Training or run Inference.
 
-A brief description of the configuration file sections and their syntax is provided below.
-
 ## 1. Examine Driver Configuration File
 
 This is a JSON file that defines the DPF workflow. The configuration is composed of 5 main sections/elements which are described in the table below.
