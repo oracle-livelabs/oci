@@ -6,6 +6,9 @@ In this lab exercise, you will walk through the next steps in the Landing Zone l
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab. 
+[Extend the Landing Zone](videohub:1_ichhog0u)
+
 ### Objectives
 
 In this lab, you will:
