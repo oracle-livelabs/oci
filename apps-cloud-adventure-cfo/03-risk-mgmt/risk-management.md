@@ -2,7 +2,7 @@
 
 ## Introduction
 
-*In this activity you'll discover how easy it is to detect anomalies and provide details to mitigate concerns.
+In this activity you'll discover how easy it is to detect anomalies and provide details to mitigate concerns.
 
 Estimated Time: 5 minutes
 
@@ -147,7 +147,7 @@ In this activity, you will:
     > **Select > Save and Close**
 
     ![Home Page](images/image020.png)
-    ![Home Page](images/image021.png) 
+
 
 ## Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services

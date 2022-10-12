@@ -2,14 +2,13 @@
 
 ## Introduction
 
-*In this activity you'll discover how easy it is to buy indirect items through an easy to use shopping cart experience and how to effectively negotiate contracts.
+In this activity you'll discover how easy it is to buy indirect items through an easy to use shopping cart experience and how to effectively negotiate contracts.
 
 Estimated Time: 5 minutes
 
 
 ### Objectives
 
-*List objectives for this lab using the format below*
 
 In this activity, you will:
 * Purchase business related supplies through self-service and negotiate contracts with key suppliers 
@@ -246,7 +245,6 @@ In this activity, you will:
     > Select the **‘Home’** icon in the top ribbon to navigate back to the Procurement springboard
 
     ![springboard](images/image016.png)
-    ![springboard](images/image017.png)
 
 
 # Acknowledgements
