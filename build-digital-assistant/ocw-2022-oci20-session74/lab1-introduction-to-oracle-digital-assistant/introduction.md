@@ -24,8 +24,6 @@ In this lab, you will:
 
 Before we get started:
 
-- Download the Skill template - <a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/CareClinics_Template.zip">download</a> 
-
 - Install <a href="https://nodejs.org/en/download/"> NodeJS </a> in your local machine.
 
 ## Summary

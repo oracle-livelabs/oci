@@ -14,7 +14,7 @@ Users will learn
 
 ## Prerequisites
 
-* An Oracle Free Tier, or Paid Cloud Account.
+* An Oracle Cloud Account.
 * Familiarity with Oracle Cloud Infrastructure (OCI) IaaS and PaaS Services such as Object Storage, Identity and Access Management, Virtual Cloud Network, Functions, Data Flow etc. 
 * Familiarity with Python (or other programming language) is strongly recommended.
 * Experience with data engineering, machine learning and statistics is preferred but not required. 
@@ -70,17 +70,17 @@ Output is always saved to OCI Object Storage Bucket as a CSV file.
 
 ## Learn More
 
-* [Introduction to all transformers](../optional/Introduction-to-Transformers-for-Data-Preprocessing.md)
+* [Introduction to all transformers](https://github.com/ganrad/oci/blob/main/ai-decision-services/ai-ad-dpp-engine/optional/Introduction-to-Transformers-for-Data-Preprocessing.md)
 
-Users are advised to refer to the respective OCI PaaS Service documentation as needed.
+Users are advised to refer to the respective OCI PaaS Service documentation as needed. Links to OCI Service documentation is included within the **Useful Resources** section within each *Lab*.
 
 ## Acknowledgements
-* **Author**
+* **Authors**
     * Shreyas Vinayakumar - Principal Member of Technical Staff - Oracle AI Services
     * Shujie Chen - Principal Member of Technical Staff - Oracle AI Services
     * Sudha Ravi Kumar Javvadi - Member of Technical Staff - Oracle AI Services
 
-* **Reviewer**
+* **Reviewers/Contributors**
     * Ganesh Radhakrishnan - Principal Product Manager - Oracle AI Services
 
 * **Last Updated By/Date**
