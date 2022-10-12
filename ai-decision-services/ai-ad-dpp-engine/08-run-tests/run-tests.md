@@ -88,7 +88,7 @@ Download the CSV file to view and verify the anomaly detection results. When the
   ]
 }
 ```
-The above result contains the estimated value of each data point along with its anomaly score. This can be visualized as shown below
+The above result contains the estimated value of each data point along with its anomaly score. OCI Anomaly Detection results can also be visualized using OCI Console as shown below.
 
 ![Visualization of Anomaly Detection result](./images/Exp4.jpg)
 
