@@ -6,6 +6,9 @@ In this lab, you will focus on labeling pictures of stacked pipes using OCI Data
 
 Estimated Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[OCI Data Labeling](videohub:1_z2fhbhgk)
+
 ### Objectives
 
 - Get acquainted with the OCI Data Labeling service
