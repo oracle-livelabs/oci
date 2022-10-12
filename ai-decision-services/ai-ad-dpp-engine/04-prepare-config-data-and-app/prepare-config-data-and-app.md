@@ -7,7 +7,7 @@ A brief description of the configuration file sections and their syntax is provi
 
 ## 1. Understand Driver Configuration File Syntax
 
-Driver Configuration File is a JSON file that defines the DPF workflow. Users may skip this section and proceed to the next task directly if they wish.
+Driver Configuration File is a JSON file that defines the DPF workflow. Users may proceed to the next task directly and revisit this section later if they wish.
 The configuration is composed of the following 5 parts.
 
 | Section Name | Description |
@@ -40,7 +40,7 @@ The input data source configuration.
 
 ### phaseInfo
 
-This defines the location where the application will store the metadata from training phase for data dependent processes, like *one_hot_encoding*.
+This specifies the location where the application will store the metadata from training phase for certain transformations that are sensitive to the values present in the data set, like *one\_hot\_encoding*.
 
 *   **connector** - The connector to OCI Object Storage. The fields/elements below are required.
     *   **namespace** - The namespace of Object Storage Bucket. Required if it is for object storage.
@@ -62,7 +62,7 @@ Users should ensure the data processing steps are configured properly in the rig
 
 ### stagingDestination
 
-This is the location where intermediate results will be stored before training/inference begins. Basically, these will be dataframes stored in csv format at the configured Object Storage Bucket. 
+This is the location where intermediate results will be stored before training/inference begins. These will be stored in csv format at the configured Object Storage Bucket. 
 
 *   **combinedResult** - The name of the data frame to output. 
     * Specify this parameter only when a single data frame needs to be output. 
@@ -95,9 +95,15 @@ This is used for configuring OCI Anomaly Detection(AD) Service
 
 In this workshop, simple data transforms will be used to demonstrate the use of Data Processing Framework. 
 
-The Driver Configuration files listed below contain one processing step which will transform *Timestamp* values contained within a 'timestamp' column into ISO8601 timestamp values. [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) format is an international standard for exchange of date and time related data.  This Timestamp format is also a key requirement for data sets used in OCI Anomaly Detection Service, for both model training and inference data.
+The Driver Configuration files listed below instruct the driver to execute two processing steps prior to training or detection:
+* Strip the units("Kb") from each network reading. OCI Anomaly Detection service works on numerical values.
+* Transform *Timestamp* values contained within a 'timestamp' column into ISO8601 timestamp values. [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) format is an international standard for exchange of date and time related data.  This Timestamp format is also a key requirement for data sets used in OCI Anomaly Detection Service, for both model training and inference data.
 
-Driver configuration files (Json) used in this workshop are provided below.
+The diagram below shows a visualization of the processing workflow expressed by this configuration
+
+![Visualization of training-config and inference-config](./images/processing.png)
+
+Driver configuration files (JSON) used in this workshop are provided below. 
 
 **Training Configuration**
 
@@ -110,7 +116,7 @@ Driver configuration files (Json) used in this workshop are provided below.
             "type": "object-storage",
             "namespace":"<your-namespace>",
             "bucket":"training-data-bucket",
-            "objectName": "ad-diabetes-train.csv"
+            "objectName": "network_svc_usage_train.csv"
         }
     ],
     "phaseInfo": {
@@ -129,9 +135,9 @@ Driver configuration files (Json) used in this workshop are provided below.
                     {
                         "stepName": "string_transformation",
                         "args": {
-                            "find_string": "mg/dL",
+                            "find_string": "Kb",
                             "replace_string": "",
-                            "column": "ReadingAM"
+                            "column": "value"
                         }
                     }, 
                     {
@@ -183,7 +189,7 @@ Driver configuration files (Json) used in this workshop are provided below.
             "type": "object-storage",
             "namespace":"<your-namespace>",
             "bucket":"inferencing-data-bucket",
-            "objectName": "ad-diabetes-test.csv"
+            "objectName": "network_svc_usage_test.csv"
         }
     ],
     "phaseInfo": {
@@ -202,9 +208,9 @@ Driver configuration files (Json) used in this workshop are provided below.
                     {
                         "stepName": "string_transformation",
                         "args": {
-                            "find_string": "mg/dL",
+                            "find_string": "Kb",
                             "replace_string": "",
-                            "column": "ReadingAM"
+                            "column": "value"
                         }
                     },
                                         {
@@ -220,7 +226,7 @@ Driver configuration files (Json) used in this workshop are provided below.
         "type": "object-storage",
         "namespace":"<your-namespace>",
         "bucket": "staging-bucket",
-        "folder": "training_processed_data"
+        "folder": "inference_processed_data"
     },
     "outputDestination": {
         "type": "object-storage",
@@ -241,13 +247,11 @@ Driver configuration files (Json) used in this workshop are provided below.
 ```
 
 1. Copy the contents of the configuration snippet above and paste it into a file named *inference-config.json*.
-2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called namespace. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
+2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called **Namespace**. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
 3. Populate **projectId** under **serviceApiConfiguration** with the AD project OCID from Lab 1.
 4. Populate compartmentId with compartment OCID from **Lab 2**.
 
-The diagram below shows a visualization of the processing workflow specified by this configuration
-
-![Visualization of training-config and inference-config](./images/processing.jpg)
+The examples above demonstrate a Univariate Anomaly Detection use case. Users interested in Multivariate Anomaly detection may refer to [multivariate-training-config](./files/multivariate-training-config.json) and [multivariate-inference-config](./files/multivariate-inference-config.json).
 
 
 ## 3. Upload Driver Configuration Files

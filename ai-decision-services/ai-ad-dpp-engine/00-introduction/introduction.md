@@ -4,12 +4,12 @@
 
 In this workshop, users will learn how to implement an end to end **Anomaly Detection** solution using a data pre-processing workflow engine.
 
-**Estimated Time:** 1-2 hours
+**Estimated Time:** 1.5 hours
 
 ## Objectives
 Users will learn
 - How to use the **Data Processing Framework** (DPF) developed by the OCI AI Services team to pre-process data
-- How to configure a training and inferencing pipeline to ingest and pre-process data, execute Anomaly Detection model training and run inferencing using trained models. Input data sizes could range from a few rows to several tens of millions of rows, and 1 column (~ metric/measure/variable) to several thousands of columns. 
+- How to configure a training and inferencing pipeline to ingest and pre-process data, execute Anomaly Detection model training and run inferencing using trained models. Input data sizes could range from a few rows to several tens of millions of rows, and 1 column (metric/measure/variable) to several thousands of columns. 
 - How to leverage OCI PaaS services to build the end to end Anomaly Detection Solution.
 
 ## Prerequisites
@@ -19,17 +19,6 @@ Users will learn
 * Familiarity with Python (or other programming language) is strongly recommended.
 * Experience with data engineering, machine learning and statistics is preferred but not required. 
 * Additional prerequisites (if any) are described in each lab.
-
-
-## All Tasks
-* Configure OCI Anomaly Detection (AD) Service
-* Configure OCI IAM Policies
-* Configure OCI Object Store Buckets and upload DPF Driver and Transforms Library
-* Examine DPF Driver configuration file and configure it with correct values
-* Configure OCI Data Flow
-* Configure OCI Functions
-* Configure OCI Events
-* Run the Anomaly Detection Solution
 
 ## Functional Architecture
 
