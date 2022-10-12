@@ -2,7 +2,7 @@
 
 ## Introduction
 
-*In this activity you'll discover how easy it is to monitor any account code combination and alert you of anomalies and provide you a path to the details to do root cause analysis.
+In this activity you'll discover how easy it is to monitor any account code combination and alert you of anomalies and provide you a path to the details to do root cause analysis.
 
 Estimated Time: 6 minutes
 
