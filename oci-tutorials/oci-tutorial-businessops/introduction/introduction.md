@@ -23,7 +23,7 @@ Powerpoint
 * [Business Operations](https://objectstorage.us-ashburn-1.oraclecloud.com/p/9pFdAyuoEol0-pBYGE-pKgkvz3wH27OH67F3gdWCEPfxW_QSc4DpQ0DEUxxLrgQT/n/ociobtnas/b/OCW2022/o/TUT4109_Introduction_to_%20OCI_Business_Operations_Final.pdf)
 
 Video Recording
-* [Day One and Beyond: OCI Business Governance](https://www.youtube.com/watch?v=l6KsMSS8Khk&ab_channel=OracleLearning)
+* [Day One and Beyond: OCI Business Governance](https://www.youtube.com/watch?v=clgQvV1txoA&ab_channel=OracleLearning)
 
 
 
