@@ -2,7 +2,7 @@
 
 ## About this Workshop - You're in the Cloud, Now What?
 
-You have a successful migration to cloud and are thinking about how you can take advantage of key services. In this session - You're in the Cloud, Now What? we discuss how you can use OCI platform to modernize your existing applications in the cloud. This session will provide you with an understanding of key tools and services that help you meet your business requirements. We will talk through some different use cases for (for OCI) including usage of tools in the area of management, security, disaster recovery, application development, etc.
+You have a successful migration to cloud and are thinking about how you can take advantage of key services. In this session, "You're in the Cloud, Now What?", we discuss how you can use OCI platform to modernize your existing applications in the cloud. This session will provide you with an understanding of key tools and services that help you meet your business requirements. We will talk through some different use cases for OCI including usage of tools in the area of management, security, disaster recovery, application development, etc.
 
 ### **Duration: 2 Hours**
 
