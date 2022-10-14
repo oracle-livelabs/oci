@@ -20,15 +20,15 @@ Powerpoint
 * [OCI Technical QuickStart](https://objectstorage.us-ashburn-1.oraclecloud.com/p/zuCFBgQ0_LeSDzWRpbhiti_E566UCAD4CLar6TIcji_7ASOfEvMbI5Osd7s50GUZ/n/ociobtnas/b/OCW2022/o/TUT4110_OCI_Technical_Quick_Start_Final.pdf)
 
 Video Recording
-* [Day One and Beyond: Oracle Cloud Technical Quick Start](https://www.youtube.com/watch?v=BU2VsBoXhdo&ab_channel=OracleLearning)
+* [Day One and Beyond: Oracle Cloud Technical Quick Start](https://www.youtube.com/watch?v=2c3YmUSy_E4&list=PLKCk3OyNwIzvbLEYL08MKJkR84NQLIIdg&index=2&ab_channel=OracleLearning)
 
 
 ## Learn More
 
 
 Resource Links for Reference
-* [Getting Started with OCI](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/baremetalintro.htm) (Labs 2-4 only)
-* [Getting Started with Oracle Cloud Infrastructure Core Services Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648)
+* [Getting Started with OCI](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/baremetalintro.htm) 
+* [Getting Started with Oracle Cloud Infrastructure Core Services Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648) (Labs 2-4 only)
 
 
 ## Acknowledgements
