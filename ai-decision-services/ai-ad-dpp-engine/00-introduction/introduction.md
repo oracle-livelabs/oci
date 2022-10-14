@@ -4,32 +4,21 @@
 
 In this workshop, users will learn how to implement an end to end **Anomaly Detection** solution using a data pre-processing workflow engine.
 
-**Estimated Time:** 1-2 hours
+**Estimated Time:** 1.5 hours
 
 ## Objectives
 Users will learn
 - How to use the **Data Processing Framework** (DPF) developed by the OCI AI Services team to pre-process data
-- How to configure a training and inferencing pipeline to ingest and pre-process data, execute Anomaly Detection model training and run inferencing using trained models. Input data sizes could range from a few rows to several tens of millions of rows, and 1 column (~ metric/measure/variable) to several thousands of columns. 
+- How to configure a training and inferencing pipeline to ingest and pre-process data, execute Anomaly Detection model training and run inferencing using trained models. Input data sizes could range from a few rows to several tens of millions of rows, and 1 column (metric/measure/variable) to several thousands of columns. 
 - How to leverage OCI PaaS services to build the end to end Anomaly Detection Solution.
 
 ## Prerequisites
 
-* An Oracle Free Tier, or Paid Cloud Account.
+* An Oracle Cloud Account.
 * Familiarity with Oracle Cloud Infrastructure (OCI) IaaS and PaaS Services such as Object Storage, Identity and Access Management, Virtual Cloud Network, Functions, Data Flow etc. 
 * Familiarity with Python (or other programming language) is strongly recommended.
 * Experience with data engineering, machine learning and statistics is preferred but not required. 
 * Additional prerequisites (if any) are described in each lab.
-
-
-## All Tasks
-* Configure OCI Anomaly Detection (AD) Service
-* Configure OCI IAM Policies
-* Configure OCI Object Store Buckets and upload DPF Driver and Transforms Library
-* Examine DPF Driver configuration file and configure it with correct values
-* Configure OCI Data Flow
-* Configure OCI Functions
-* Configure OCI Events
-* Run the Anomaly Detection Solution
 
 ## Functional Architecture
 
@@ -70,17 +59,17 @@ Output is always saved to OCI Object Storage Bucket as a CSV file.
 
 ## Learn More
 
-* [Introduction to all transformers](../optional/Introduction-to-Transformers-for-Data-Preprocessing.md)
+* [Introduction to all transformers](https://github.com/ganrad/oci/blob/main/ai-decision-services/ai-ad-dpp-engine/optional/Introduction-to-Transformers-for-Data-Preprocessing.md)
 
-Users are advised to refer to the respective OCI PaaS Service documentation as needed.
+Users are advised to refer to the respective OCI PaaS Service documentation as needed. Links to OCI Service documentation is included within the **Useful Resources** section within each *Lab*.
 
 ## Acknowledgements
-* **Author**
+* **Authors**
     * Shreyas Vinayakumar - Principal Member of Technical Staff - Oracle AI Services
     * Shujie Chen - Principal Member of Technical Staff - Oracle AI Services
     * Sudha Ravi Kumar Javvadi - Member of Technical Staff - Oracle AI Services
 
-* **Reviewer**
+* **Reviewers/Contributors**
     * Ganesh Radhakrishnan - Principal Product Manager - Oracle AI Services
 
 * **Last Updated By/Date**

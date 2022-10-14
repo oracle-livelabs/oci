@@ -58,21 +58,22 @@ A project is a way to organize multiple data assets, models, deployments to the 
 
 ## Task 2: Create a Data Asset
 
-*** TODO: add link for downloading [data](https://objectstorage.us-ashburn-1.oraclecloud.com/p/acYNc4cXnHYGEA4r-oZZD0gMicUNspuHgSGORi96Wop10Yqwjr_xXi23XLheIXsK/n/orasenatdpltintegration03/b/AD_bucket/o/AD_train_6cycle.csv).
 
 The Data Asset is the data utilized for training your Anomaly Detection Model. The Data Asset should be data that has NO anomalies, so that the Anomaly Detection model will be trained on data that represents the 'normal' state.
 
 1.  Under your project, click the   **Data Assets** menu on the left. Then click  **Create Data Asset**
 
-![Create Data Asset](./images/imageCDA1.png " ")
+    ![Create Data Asset](./images/imageCDA1.png " ")
 
 2.  In the \_Create Data Asset\_ menu, 
-    - Select  **AD_Workshop** for _Compartment_
+    - Select  your compartment for _Compartment_
     - Type  **AD\_data\_asset** as the Data Asset \_Name\_
     - Select  **Oracle Object Storage** for \_Type\_
-    - Select  **AD_bucket** for \_Choose a bucket\_ 
-    - Select  **AD\_Training.csv** for \_Training Data\_
+    - Select  your bucket for _Choose a bucket_ 
+    - Select  your csv file created from Lab 2 for _Training Data_
     - Press  **Create**
+
+    (Optional) you can also download this [Training Dataset](https://objectstorage.us-ashburn-1.oraclecloud.com/p/eUdCwwaXR3NM8GD7CmVEEBvePoYqTtobdpnVubPxrqroKxcN5-gyoFixU2VMlVBD/n/orasenatdpltintegration03/b/digitaltwin/o/train_10cycle.csv) if you don't have training data csv in the bucket. Upload the downloaded csv file to Object Storage Bucket. Follow Lab 1 Task 3 to navigate to Bucket. 
 
     ![Create Data Asset](./images/imageCDA2.png " ")
 
@@ -106,20 +107,15 @@ Creating a model requires 3 actions:
 
 **FAP (False Alarm Probability)**
 >FAP stands for False Alarm Probability, which is the likelihood (percentage) that a timestamp is flagged as an anomaly in the anomaly-free training data (data asset). It is calculated at every signal level and then averaged across all signals as the final achieved FAP by our model.
-
 >A high FAP means the likelihood of an anomaly flagged by Anomaly Detection service to be a _false alarm_ is high. If this is not desired, depending on the sensitivity requirements of a user, user can specify it to be low.
-
 >Typically, FAP can be set to be around the same level of percentage of anomalies in real business scenarios, and a value 0.01 or 1% is relatively appropriate for many scenarios. Also, be aware that if specifying a lower target FAP, the model needs more time to train, and may not achieve to the target FAP.
-
 ![Create Model](./images/FAP_Formula.png " ")
 
 >FAP = sum(number of anomalies in each signal) / (number of signals  * number of timestamps)
-
 **Train Fraction Ratio**
 >Train Fraction Ratio specifies the division ratio of the whole training data to be used training and validation. The default value 0.7 or 70% specifies the model to use 70% of the data for training, and the rest 30% is used to produce model performance (validation).
-
 1. In this demo, set...
-    - **AD_Workshop** as the Model _Compartment_
+    - select your compartment as the Model \_Compartment\_
     - **AD_Model** as the _Name_
     - _FAP_ value as **0.5**
     - _Train Fraction Ratio_ as  **0.7** (_default value_)
@@ -150,12 +146,19 @@ Creating a model requires 3 actions:
 
 You many now **proceed to the next lab.**
 
+
 ## Acknowledgements
 
 - **Authors**
-      - Samuel Cacela, Staff Cloud Engineer 
-      - Jiayuan Yang - Senior Cloud Engineer 
+      - Adrian Alba - Staff Cloud Engineer
 - **Contributors** 
       - Tony Zhang - Master Principal Cloud Architect
-      - Adrian Alba - Staff Cloud Engineer
+      - Jiayuan Yang - Senior Cloud Engineer 
+      - Samuel Cacela, Staff Cloud Engineer
 - **Last Updated By/Date** - September, 2022
+
+
+
+
+
+

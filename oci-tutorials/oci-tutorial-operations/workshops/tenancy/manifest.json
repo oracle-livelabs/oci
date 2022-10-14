@@ -5,7 +5,7 @@
                 "step2.md":"../../data-load/files/step2.md"},
     "variables": ["../../variables/variables.json",
                  "../../variables/variables-in-another-file.json"],
-    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
@@ -15,11 +15,6 @@
         {
             "title": "Oracle CloudWorld 2022 - Get Help",
             "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
-        },
-        {
-            "title": "Other LiveLabs you might like",
-            "description": "Other LiveLabs you might like",
-            "filename": "../../other-livelabs/other-livelabs.md"
         }
     ]
 }

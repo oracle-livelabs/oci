@@ -26,7 +26,6 @@ Video Recording
 * [Day One and Beyond: OCI Business Governance](https://www.youtube.com/watch?v=clgQvV1txoA&ab_channel=OracleLearning)
 
 
-
 ## Learn More
 
 Labs

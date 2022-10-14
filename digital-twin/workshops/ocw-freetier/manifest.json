@@ -27,11 +27,7 @@
             "filename": "./../../monitor-assets/monitor-assets.md"
         },
         {
-            "title": "Lab 5: Anomaly Diagnosis",
-            "filename": "./../../diagnostic/diagnostic.md"
-        },
-        {
-            "title": "Lab 6: (Advanced) Explore Anomaly Detection - Access Anomaly Detection service with REST API",
+            "title": "Lab 5: (Advanced) Explore Anomaly Detection - Access Anomaly Detection service with REST API",
             "filename": "./../../explore-ad/explore-ad.md"
         },
         {

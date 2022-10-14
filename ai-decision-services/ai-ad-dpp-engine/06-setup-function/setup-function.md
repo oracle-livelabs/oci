@@ -3,14 +3,16 @@ Lab 6: Configure OCI Functions
 
 ## 1. Configure Virtual Cloud Network
 
-- Go to Virtual Cloud Network and create a **VCN**. For IPv4 CIDR Blocks, the recommended one **10.0.0.0/16** can be used:  
+A *Virtual Cloud Network (VCN)* and a *Subnet* are required to provision an *OCI Functions* resource. Follow the instructions below to provision a VCN and a Subnet.
+
+- Go to Virtual Cloud Network and create a **VCN**. For IPv4 CIDR Blocks, the recommended one **10.0.0.0/16** can be used. 
 
   ![](./images/Set-Fn1.png)
 
 - Inside the generated VCN, create a **subnet**. For IPv4 CIDR Block, the recommended one **10.0.0.0/24** can be used. For Subnet Access, choose Private Subnet.  
   ![](./images/Set-Fn2.png)
 
-- Under the VCN, create a **Service Gateway**. Remember to choose **ALL <Region> Services In Oracle Service Network** under Services:  
+- Under the VCN, create a **Service Gateway**. Remember to choose **ALL <Region> Services In Oracle Service Network** under Services.  
 
   ![](./images/Set-Fn3.png)
 
@@ -19,76 +21,143 @@ Lab 6: Configure OCI Functions
   ![](./images/Set-Fn4.png)
     
 
-## 2. Create an OCI Functions Application
+## 2. Create a OCI Functions Application
 
-Go to **Functions** → **Applications**, and Create an *Application*. See screenshots below. Then go to **Getting Started** and use **Cloud Shell setup**. Follow the instructions on the pad and deploy the demo function. Verify that it can be invoked successfully.
+Go to **Functions** → **Applications**, and Create an *Application*. See screenshots below.
 
 ![](./images/Set-Fn5.png)
 
 ![](./images/Set-Fn6.png)
 
+Next, go to **Getting Started** (under *Resources* panel on the left) and click **Cloud Shell setup**. Follow steps 1 thru 10 and deploy the demo function (*hello-java*).
+
 ![](./images/Set-Fn7.png)
+
+Lastly, run the demo function and verify that it can be invoked successfully. The function should print/output a message *Hello, World!* on the console as below.
 
 ```
 $ fn invoke <func-name> <app-name>
 Hello, World!
 ```
 
-## 3. Configure OCI Function to invoke the Data Flow
+## 3. Configure OCI Function to invoke the Data Flow Application
 
-- Update the Function body (func.py)
+An OCI Function serves as a *Driver* for invoking the Data Flow Application.
 
-  Replace the Function body (func.py) with the content from [here](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/415e072962940f51dd811875386ddb2c728a3af8/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/end_to_end_example/func.py).
+Download the Driver Function (`func.py`) from [here](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/415e072962940f51dd811875386ddb2c728a3af8/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/end_to_end_example/func.py). Save the Function (Python program - `func.py`) to a local directory on your pc.
 
-- Configure Function parameters with correct values
+- Update the Function code
 
-  In the code snippet below, replace <training_bucket_name> with **training-data-bucket**, <training_config_bucket_name> with **training-config-bucket**,<driver_config>.json with **training-config.json**. These are the values used in **Lab 4** and **Lab 5**.
+  Open `func.py` in a text editor and make the following updates.
 
-  ```
-  if bucketName == "<training_bucket_name>":
-        config_bucket_name = "<training_config_bucket_name>"
-        object_name = "<driver_config>.json"
+  Search for the code snippet below. 
+
+  ```python
+  if bucketName == "training_bucket_name":
+        config_bucket_name = "training_config_bucket_name"
+        object_name = "driver_config.json"
         resp = get_object(namespace, config_bucket_name, object_name)
   ```
 
-  In the code snippet below, replace <inferencing_bucket_name> with **inferencinging-data-bucket**, <inferencing_config_bucket_name> with **inferencinging-config-bucket**,<driver_config>.json with **inferencing-config.json**. These are the values used in **Lab 4** and **Lab 5**.
+  Substitute, correct values for *place-holders* (Variable values) as per the table below.  These values were configured in Labs 3 and 4.
 
-  ```
-  elif bucketName == "<inferencing_bucket_name>":
-        config_bucket_name = "<inferencing_config_bucket_name>"
-        object_name = "<driver_config>.json"
+  | Place-Holder Name | Value |
+  | ------------- | ----- |
+  | training_bucket_name | *training-data-bucket* |
+  | training_config_bucket_name | *training-config-bucket* |
+  | driver_config.json | *training-config.json* |
+
+  Search for the code snippet below.
+
+  ```python
+  elif bucketName == "inferencing_bucket_name":
+        config_bucket_name = "inferencing_config_bucket_name"
+        object_name = "driver_config.json"
         resp = get_object(namespace, config_bucket_name, object_name)
   ```
 
-  In the code snippet below, replace <compartment-ocid> with the compartment of the DataFlow Application, <application-ocid> with the Application OCID and the logging bucket and namespace configured in **Lab 4**.
+  Substitute, correct values for *place-holders* (Variable values) as per the table below.  These values were configured in Labs 3 and 4.
 
-  ```
+  | Place-Holder Name | Value |
+  | ------------- | ----- |
+  | inferencing_bucket_name | *inferencing-data-bucket* |
+  | inferencing_config_bucket_name | *inferencing-config-bucket* |
+  | driver_config.json | *inference-config.json* |
+
+  Search for the code snippet below.
+
+  ```python
   create_run_details=oci.data_flow.models.CreateRunDetails(
-            compartment_id="<compartment-ocid>",
-            application_id="<application-ocid>",
+            compartment_id="compartment-ocid",
+            application_id="application-ocid",
             arguments=[ "--response", response, "--phase", phase],
             display_name="complete-dpp-test",
-            logs_bucket_uri="oci://<bucket-name>@<namespace>/")
+            logs_bucket_uri="storage-bucket-uri")
   ```
 
-- Update `requirements.txt` file
+  Substitute, correct values for *place-holders* (Variable values) as per the table below.  These values were configured in Labs 3 and 5.
 
-  Expand source
+  | Place-Holder Name | Description |
+  | ------------- | ----- |
+  | compartment-ocid | The Compartment OCID |
+  | application-ocid | The Data Flow Application OCID |
+  | storage-bucket-uri | The URI should be off the form - **oci://bucket-name@namespace/** where *bucket-name* is **logs-bucket** and *namespace* is the bucket's namespace |
+
+  Save the updates to the Function (func.py) and close the editor.
+
+- Create a new OCI Function (*DPF Driver*)
+
+  Most of these steps can also be completed using **OCI Code Editor** accessible via the OCI Console.  CLI instructions are provided here for convenience.
+
+  Open a OCI Cloud Shell or alternatively go to the **Getting started** page within the **Function Application** and click on the *Launch Cloud Shell* (Step 1).
+
+  Run the commands in the snippet below.
+
+  ```bash
+  # Create the Function
+  # Params:
+  #   Function-Name: Use any name for the Function
+  #
+  $ fn init --runtime python3.9 <Function-Name>
+  #
+  # Switch into the Function directory. 'Function-Name' is used as the name of the function here (example).
+  #
+  $ cd Function-Name
+  #
+  ```
+
+  Replace the contents of Function (`func.py`) with the updated program which was modified in the previous step. Save the Function.
+
+- Edit `requirements.txt` file and update the following lines.
 
   ```
   fdk>=0.1.46
   oci>=2.2.18
   ```
 
-- Invoke the OCI Functions Application
+- Deploy the Driver Function
 
-  Run the Function to make sure the options were configured correctly, publish it to an Application. A run should succesfully get created for the Data Flow if everything was set up correctly.
+  In the OCI Cloud Shell, execute the commands in the snippet shown below.
 
-  Enable logs under the function for troubleshooting purposes. See screenshot below.
+  ```bash
+  # Deploy the Function.  Make sure you are in the Function directory!
+  # Params:
+  #   Function-Application-Name: Name of the Function Application from Step [2]
+  #
+  $ fn -v deploy --app <Function Application>
+  #
+  # Function should be deployed and ready to run.
+  ```
 
-  ![](./images/Set-Fn8.png)
+## 4. Enable OCI Function Logs
+
+   In the Function Application, under the **Resources** panel click on **Logs** and enable *Function Invocation Logs*.  This will be helpful for troubleshooting the Function if needed. See screenshot below.
+
+   ![](./images/Set-Fn8.png)
 
 ## Useful Resources
 Refer to the OCI documentation (link below) to learn more about OCI Functions.
 
 - [OCI Functions](https://docs.oracle.com/en-us/iaas/Content/Functions/Concepts/functionsoverview.htm)
+
+[Go to *Lab 5*](#prev) | [Go to *Lab 7*](#next)

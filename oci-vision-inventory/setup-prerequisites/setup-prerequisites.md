@@ -6,6 +6,9 @@ In this lab, you will set up your tenancy for the subsequent creation and operat
 
 Estimated Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Prerequisites](videohub:1_slj4drbo)
+
 ### Objectives
 
 In this lab, you will:

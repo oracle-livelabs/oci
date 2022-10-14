@@ -6,6 +6,9 @@ In this lab, you will download the APM Java Agent installer file from the Oracle
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Instrument the server monitoring](videohub:1_2mpynh0j)
+
 ### Objectives
 
 * Download the APM Java Agent from the Oracle Cloud console

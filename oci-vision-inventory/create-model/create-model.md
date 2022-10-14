@@ -6,6 +6,9 @@ In this lab, you will create an OCI Vision project and an OCI Vision custom mode
 
 An OCI Vision custom model can be created in quick mode (up to 1 hour), regular mode (up to 24 hours), or custom mode. In the lab steps, we will use quick mode training since we're limited on time.
 
+Watch the video below for a quick walk-through of the lab.
+[Trigger the OCI Vision model creation and training](videohub:1_jcsjr351)
+
 ### Objectives
 
 - Become familiar with OCI Vision
