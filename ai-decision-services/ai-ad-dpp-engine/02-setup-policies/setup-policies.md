@@ -69,3 +69,5 @@ Lab 2: Configure OCI IAM Policies
 Refer to OCI documentation (link below) to learn more about OCI IAM Policies.
 
 - [OCI Policies](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
+
+[Go to *Lab 1*](#prev) | [Go to *Lab 3*](#next)
