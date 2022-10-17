@@ -6,6 +6,9 @@ In this lab, you will test the recently created OCI Vision model to recognize st
 
 Estimated Time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Test the model via Oracle Cloud Console](videohub:1_csn26fmf)
+
 ### Objectives
 
 - Test the model by uploading a test image in the Oracle Cloud Console UI

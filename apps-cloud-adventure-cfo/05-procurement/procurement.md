@@ -2,14 +2,13 @@
 
 ## Introduction
 
-*In this activity you'll discover how easy it is to buy indirect items through an easy to use shopping cart experience and how to effectively negotiate contracts.
+In this activity you'll discover how easy it is to buy indirect items through an easy to use shopping cart experience and how to effectively negotiate contracts.
 
 Estimated Time: 5 minutes
 
 
 ### Objectives
 
-*List objectives for this lab using the format below*
 
 In this activity, you will:
 * Purchase business related supplies through self-service and negotiate contracts with key suppliers 
@@ -84,9 +83,17 @@ In this activity, you will:
 
 8. 
 
-  Once, the analysis has been run there will be more analytics provided at the top of the page. As you scroll down you will see comprehensive response details for each supplier including the requirement scoring. You will notice that EIP is missing a required certification and therefore they have not been awarded part of this negotiation. In order to ensure this doesn’t happen again or if you wish to let them re-bid this sourcing negotiation your team must communicate the need for this certification.
-    
-    ![analysis](images/image028.png)
+  Once, the analysis has been run there will be more analytics provided at the top of the page. As you scroll down you will see comprehensive response details for each supplier but it does not reveal the precise reason for EIP being excluded from the award. You will need to drill deeper to find out why EIP was not awarded this negotiation. You will have to evaluate the requirement scoring. To do this:
+
+    - Select the actions dropdown and click “Add or Remove Response Elements”
+    - Next, highlight “Requirements: All Levels” and click the single right arrow icon
+    - Click OK
+
+  Now that you have expanded the detailed comparison, you can see that the system AI has automatically disqualified EIP because they are missing a required certification. In order to ensure this does not happen again or to re-bid this negotiation you will need to communicate to EIP that they have to update this certification. 
+
+    ![analysis](images/image001-step8.png)
+    ![analysis](images/image002-step8.png)
+    ![analysis](images/image003-step8.png)
     ![analysis](images/image029.png)
 
 9. 
@@ -246,7 +253,6 @@ In this activity, you will:
     > Select the **‘Home’** icon in the top ribbon to navigate back to the Procurement springboard
 
     ![springboard](images/image016.png)
-    ![springboard](images/image017.png)
 
 
 # Acknowledgements

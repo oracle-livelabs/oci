@@ -16,6 +16,9 @@ You will use it in this lab to deploy terraform stacks without needing to instal
 
 Estimated time: 30 minutes
 
+Watch the video below for a quick walk-through of the lab. 
+[Deploy Baseline Landing Zone](videohub:1_mf98gcul)
+
 ### Objectives
 
 In this lab, you will:
