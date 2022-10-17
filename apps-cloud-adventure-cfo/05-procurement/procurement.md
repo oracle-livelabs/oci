@@ -88,13 +88,13 @@ In this activity, you will:
     - Select the actions dropdown and click “Add or Remove Response Elements”
     - Next, highlight “Requirements: All Levels” and click the single right arrow icon
     - Click OK
-  
-  Now that you have expanded the detailed comparison, you can see that the system AI has automatically disqualified EIP because they are missing a required certification. In order to ensure this does not happen again or to re-bid this negotiation you will need to communicate to EIP that they have to update this certification.
 
-    
+  Now that you have expanded the detailed comparison, you can see that the system AI has automatically disqualified EIP because they are missing a required certification. In order to ensure this does not happen again or to re-bid this negotiation you will need to communicate to EIP that they have to update this certification. 
+
     ![analysis](images/image001-step8.png)
     ![analysis](images/image002-step8.png)
     ![analysis](images/image003-step8.png)
+    ![analysis](images/image029.png)
 
 9. 
 
