@@ -23,14 +23,14 @@
           "filename": "../../2configure-psft/configure-psft.md"
       },
       {
-          "title": "Lab 3: Provision the PeopleSoft Application",
+          "title": "Lab 3: Updating Skill Configuration in Oracle Digital Assistant",
           "description": "In this exercise, you will provision your PeopleSoft application by leveraging OCI Marketplace PeopleSoft image.",
-          "filename": "../../2provision/provision.md"
+          "filename": "../../3skill-update-oda/skill-update-oda.md"
       },
       {
-          "title": "Lab 4: Teardown Your Oracle PeopleSoft Environment",
+          "title": "Lab 4: Test the PeopleSoft PICASO chatbot",
           "description": "Teardown Your PeopleSoft Environment",
-          "filename": "../../3teardown/teardown.md"
+          "filename": "../../4test-picaso/test-picaso.md"
       },
       {
           "title": "Need Help?",

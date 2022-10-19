@@ -1,4 +1,4 @@
-# Teardown your Oracle PeopleSoft Environment
+# Updating Skill Configuration in Oracle Digital Assistant
 
 ## Introduction
 In this lab, we will decommission the PeopleSoft environment by deleting all the resources we created in OCI.
