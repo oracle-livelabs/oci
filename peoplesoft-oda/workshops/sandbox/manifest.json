@@ -13,9 +13,9 @@
           "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
       },
       {
-          "title": "Lab 1: Create SSH Keys Using Oracle Cloud Shell",
-          "description": "Create SSH keys for use with this lab",
-          "filename": "https://oracle-livelabs.github.io/common/labs/generate-ssh-key-cloud-shell/generate-ssh-keys-cloud-shell.md"
+        "title": "Lab 1: Setup Oracle Digital Assistant from OCI services",
+        "description": "In this lab, the recently provisioned OCI Trial tenancy will used for provision of Oracle Digital Assistant",
+        "filename": "../../1setup/setup.md"
       },
       {
           "title": "Lab 2: Set Up OCI for PeopleSoft Deployment",
