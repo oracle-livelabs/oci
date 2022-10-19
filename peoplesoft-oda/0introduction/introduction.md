@@ -2,9 +2,9 @@
 
 ## About this Workshop
 
-This workshop covers the basics needed to create and provision a PeopleSoft Environment using OCI.
+This workshop guides through the steps to setup the PeopleSoft PICASO configuration with Oracle Digital Assistant.
 
-After completing this workshop you should have a better understanding of OCI, the ability to create and access a PeopleSoft environment that you created as well as view all of the components that were created during the lab to make that possible. After the completion of the lab, you will tear down, or destroy, all created components.
+After completing this workshop you will have a better understanding of OCI Digital Assistant and the ability to configure and integrate a PeopleSoft environment whether it exists on OCI or on-premises.
 
 Watch the video below for an Introduction To PeopleSoft PICASO Digital Assistant.
 [Lab overview](youtube:HCF482DDcrM)
@@ -64,7 +64,7 @@ The following terms are commonly employed in PeopleSoft cloud operations and are
 
 **Region** – Oracle Cloud Infrastructure is hosted in regions, which are located in different metropolitan areas. Regions are completely independent of other regions and can be separated by vast distances – across countries or even continents. Generally, you would deploy an application in the region where it is most heavily used since using nearby resources is faster than using distant resources.
 
-**Subnet, Private** - Instances created in private subnets do not have direct access to the Internet. In this lab, we will be provisioning the Cloud Manager stack in Resource Manager, and creating private subnets. We will then choose to create a "jump host", or bastion host, as part of the installation. The IP address for a private subnet cannot be accessed directly from the Internet. To access our CM instance in a private subnet, we will set up a jump host to enable SSH tunneling and Socket Secure (SOCKS) proxy connection to the Cloud Manager web server (PIA). The jump host is created using an Oracle Linux platform image and will be created inside the VCN.
+**Subnet, Private** - Instances created in private subnets do not have direct access to the Internet. 
 
 **Subnet, Public** - Instances that you create in a public subnet have public IP addresses, and can be accessed from the Internet.
 
