@@ -4,7 +4,7 @@
 
 In this lab, using the recently provisioned OCI Trial tenancy, we will provision the Oracle Digital Assistant from Oracle Cloud Infrastructure services.
 
-Estimated Time: 20 minutes
+Estimated Time: 30 minutes
 
 
 ### Objectives
@@ -93,34 +93,38 @@ In this part of the lab, we begin with cloning the PeopleSoft PICASO digital ass
   ![Cloning processes started](./images/oda-assistant-clone-start.png " ")
 
     PeopleSoft PICASO clone is created
-  ![Cloning processes started](./images/oda-assistant-clone-start.png " ")
-2.  In the Security Lists section, click the Default ***Security List*** for ***testvcn*** link  
-  ![Select the Default Security list for testvcn from the options under the Security Lists in testvcn Compartment](./images/default-security-list.png " ")
+  ![Cloning processes started](./images/oda-assistant-clone-complete.png " ")
 
-3.  On Default Security List, under Resources, click the Add Ingress Rules button.
-  ![Add the ingress rules for the PeopleSoft application](./images/security-list-details.png " ")
-  ![Click on the add ingress rules button under the ingress rules section of the screen](./images/add-ingress-rules.png " ")
+## Task 4:  Create the channel for the skills
 
-4.   Within the interface, click the + ***Additional Ingress Rules*** button and add a rule with the following criteria
+In this part of the lab, we begin with creating a Web channel for the Skills and routing this to the cloned PeopleSoft PICASO digital assistant
 
-        | Stateless | Source Type |	Source CIDR | IP Protocol | Source Port Range |	Destination Port |
-        | --- | --- | --- | --- | --- | --- |
-        
-        | Unchecked | CIDR|	0.0.0.0/0 |	TCP | All |	8000 |
+1.  On the Oracle Digital Assistants Service Console Home page, click the Navigation Menu in the upper-left corner, select development, and then select the Channels option and create a new channel
 
-     Click the ***Add Ingress Rules***  blue button when complete
+  ![Select Channel from the Menu options](./images/oda-channels-page.png " ")
 
-     ![Add ingress rules and click on the button to complete the setup](./images/add-ingress-confirm.png " ")
+    From the channel create dialog box, enter the data as shown below and begin with the create process
 
-    After you have created the  new rule, your security list should look like this
+  ![channel create process](./images/oda-channel-create.png " ")
 
-     ![After creating the new security Ingress Rules, you should see them under the Ingress rules section of the screen](./images/add-ingress-complete.png " ")
+  ![channel create process continued](./images/oda-channel-create-continue.png " ")
 
-These Ingress Rules will be sufficient to allow the network traffic required for the PeopleSoft environment.
+    From the route to option drop down, select the cloned PeopleSoft PICASO and continue
+  ![channel is created ](./images/oda-channel-created.png " ")
+
+  ![Channel complete information ](./images/oda-channel-important.png " ")
+    Client authentication is disabled in the above screen
+
+  **Important:** Make a note of the channel ID as this would be used for configuration at PeopleSoft side, make a note of the ODA URL from the above page as this would be used for configuration at PeopleSoft side.
+    
+     
+
+
+
 
 ## Summary
 
-In this lab, OCI has been set up for the networking required to be able to access the PeopleSoft environment that will be created in the next lab
+In this lab, Oracle Digital assistant was provisioned, cloned the existing PeopleSoft PICASO assistant and created a Web channel for interaction with PeopleSoft.
 
 You may now **proceed to the next lab.**
 
