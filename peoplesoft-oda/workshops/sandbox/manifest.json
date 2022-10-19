@@ -15,7 +15,7 @@
       {
         "title": "Lab 1: Setup Oracle Digital Assistant from OCI services",
         "description": "In this lab, the recently provisioned OCI Trial tenancy will used for provision of Oracle Digital Assistant",
-        "filename": "../../1setup/setup.md"
+        "filename": "../../1setup-oda/setup-oda.md"
       },
       {
           "title": "Lab 2: Set Up OCI for PeopleSoft Deployment",

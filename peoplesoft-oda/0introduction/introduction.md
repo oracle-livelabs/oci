@@ -28,7 +28,7 @@ Notes:
 In this lab, you will:
 
 * Setup Oracle Digital Assistant from OCI services
-* Import PICASO from Oracle Digital Store
+* Deploy PeopleSoft PICASO from Oracle Digital Store
 * Clone and create a new digital assistant
 * Configure skills for PeopleSoft
 * Create the channel for the skills
@@ -73,5 +73,5 @@ The following terms are commonly employed in PeopleSoft cloud operations and are
 ## Acknowledgements
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
 * **Contributors** - Deepak Kumar M, Principal Cloud Architect
-* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, April 2022
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, October 2022
 
