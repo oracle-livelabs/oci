@@ -6,6 +6,11 @@ This workshop covers the basics needed to create and provision a PeopleSoft Envi
 
 After completing this workshop you should have a better understanding of OCI, the ability to create and access a PeopleSoft environment that you created as well as view all of the components that were created during the lab to make that possible. After the completion of the lab, you will tear down, or destroy, all created components.
 
+Watch the video below for an Introduction To PeopleSoft PICASO Digital Assistant.
+[Lab overview](youtube:HCF482DDcrM)
+
+
+
 Estimated Time: 2 hours
 
 Notes:
