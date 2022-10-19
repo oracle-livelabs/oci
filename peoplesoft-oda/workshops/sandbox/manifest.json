@@ -18,9 +18,9 @@
         "filename": "../../1setup-oda/setup-oda.md"
       },
       {
-          "title": "Lab 2: Set Up OCI for PeopleSoft Deployment",
+          "title": "Lab 2: Configure PeopleSoft for Oracle Digital Assistant",
           "description": "In this lab, the recently provisioned OCI Trial tenancy will be set up for the PeopleSoft Application",
-          "filename": "../../1setup/setup.md"
+          "filename": "../../2configure-psft/configure-psft.md"
       },
       {
           "title": "Lab 3: Provision the PeopleSoft Application",
