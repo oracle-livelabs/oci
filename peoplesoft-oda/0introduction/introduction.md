@@ -26,25 +26,25 @@ Notes:
 ### Objectives
 
 In this lab, you will:
-* Create a Sub-Compartment
-* Create a Virtual Cloud Network (VCN)
-* Provision a PeopleSoft Marketplace image
-* Establish Security List Rules for PeopleSoft Instance
-* Access the PeopleSoft application
-* Terminate and tear down all of the resources that you have created
+
+* Setup Oracle Digital Assistant from OCI services
+* Import PICASO from Oracle Digital Store
+* Clone and create a new digital assistant
+* Configure skills for PeopleSoft
+* Create the channel for the skills
+* Configure PeopleSoft for Oracle Digital Assistant
+* Test the PeopleSoft PICASO chatbot
+
 
 ### Prerequisites
 
 You will need the following to complete this workshop:
 
 * A modern browser
-* A secure remote login (Secure Shell, or SSH) utility
-        - Such as PuTTY - downloaded from [here](https://www.ssh.com/ssh/putty/download)
-* Knowledge of basic UNIX commands and the ability to copy and use them
-* You must have subscribed to resources in OCI to install and run PeopleSoft.
-* Access to OCI Marketplace to deploy PeopleSoft
-* Minimum Shape: VMStandard2.1 (1 OCPUs and 15 GB memory).
-* Boot Volume Storage of 300 GB.
+* You must have subscribed to resources in OCI to install and run Oracle Digital Assistant 
+* Access to OCI Marketplace to deploy PeopleSoft if using OCI
+* PeopleSoft HCM 9.2 Update Image 43 or PeopleSoft FSCM 9.2 Update Image 45 already available on-premise or on Oracle Cloud Infrastructure.
+* In case of new PeopleSoft deployment on OCI using marketplace image, follow the PeopleSoft Rapid Provisioning Livelabs for instructions.Refer to link [here](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3208) 
 
 ## Appendix
 
