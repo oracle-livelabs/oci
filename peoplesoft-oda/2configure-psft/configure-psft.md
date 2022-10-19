@@ -1,142 +1,76 @@
-# Provision the PeopleSoft Application
+# Configure PeopleSoft for Oracle Digital Assistant
 
 ## Introduction
 
-In this lab, you will create your PeopleSoft application by provisioning the application from the OCI  Marketplace image for PeopleSoft.
+In this lab, you will configure PeopleSoft for integration with Oracle Digital Assistant to run PICASO chatbot.
 
-Estimated Time: 1 hour 30 minutes
+Estimated Time: 1 hour
 
 ### Objectives
 
-To deploy the PeopleSoft Instance, in this lab, you will:
-*   Launch & deploy an instance of PeopleSoft from Marketplace
-*   Access PeopleSoft instance
+To configure PeopleSoft with Oracle Digital Assistant, you will:
+*  Create a PROXY User
+*  Uncheck Restricted Services
+*  Disable SSL Check for Service Operation
+*  Update Application Services Security
+*  Global Chatbot Configuration
+
+
 
 ### Prerequisites
-* A user with 'manage' access to Networking and Compute, compartment, and marketplace access
-* SSH key
-* VCN setup from the previous lab
+*  A PeopleSoft PIA Admin user to create and configure chatbot on PeopleSoft side
+.
 
-## Task 1:  Launch PeopleSoft instance from OCI marketplace
+### Assumptions:
+*  PeopleSoft Application Service is accessible on the open internet for the ODA Cloud instance to consume.
+*  PeopleSoft holds a certificate signed by a valid CA and not a self-signed certificate
+*  Integration Broker is configured, up and running
+*  For the ease of documentation, we have taken “HCM” as the PeopleSoft application. However it can be extended for other pillars as well.
+*  A user to authenticate PeopleSoft web services “PSFTPROXY” is created. Administrator may use appropriate user id and password based on your preference.
 
-1. Make sure you are on the Oracle Cloud Infrastructure console
 
-2. Navigate to ***Oracle Cloud Infrastructure Marketplace*** by using the dropdown menu on the left side of your screen and clicking the ***Marketplace*** and then all applications.
+## Task 1:  Create a Proxy User
 
-  ![From the menu bar in the OCI console, click on Marketplace](./images/oci-marketplace.png " ")
+1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Security >> User Profiles
 
-3. In the search bar type in PeopleSoft and hit search. There are 6 PeopleSoft DEMO environments that can be installed
+  ![Click the navbar at the top right corner ](./images/psft-web-login.png " ")
+
+   Add a new user profile - PSFTPROXY, click on the Add button
+
+  ![Type in the user name - PSFTPROXY and click add ](./images/user-add.png " ")
+
+   Select the Symbolic ID as SYSADM1, type your new password and confirm the password.
+
+  ![Type in the user name - PSFTPROXY and click add ](./images/user-config.png " ")
    
-    * PeopleSoft HCM
-    * PeopleSoft FSCM
-    * PeopleSoft ELM
-    * PeopleSoft CRM
-    * PeopleSoft Campus Solutions
-    * PeopleSoft Interaction Hub
+   On the ID tab, Update the ID type as "None"
+  ![Update ID type as None ](./images/id-type.png " ")
 
-  ![Select any of the PeopleSoft images to install](./images/select-psft-image.png " ")
+   On the Roles tab, Update it with below roles and click save
+  ![Add the roles as per the screen ](./images/update-roles.png " ")
 
 
-4. On the instance page, select the PeopleSoft HCM Update Image Demo version and then select the compartment you made earlier. Then click ***Launch Instance***
+## Task 2: Uncheck Restricted Services
 
-  ![Select the desired compartment, then select Launch Instance](./images/config-psft-image.png " ")
+1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Service Configuration. 
 
-5. On the Create Compute Instance page you will need to fill in additional info for your Instance
+  ![Click the navbar at the top right corner ](./images/service-configuration.png " ")
 
-    a.  **Name:** You can name it whatever you like, such as "psfthcm"
-
-    b.  **Select compartment:** Select the compartment that you created earlier
-
-    c.  **Placement:** You can leave this as it is by default for this Lab
-
-    d.   For the next **Configure networking** section you will choose the ***SELECT EXISTING VIRTUAL CLOUD NETWORK*** option and choose the ***SELECT EXISTING SUBNET*** option before selecting the Network and Subnet you created in the previous lab
-
-    Make sure that ***ASSIGN A PUBLIC IP ADDRESS*** is also selected since we will use this to deploy our PeopleSoft application
-
-    e. **Add SSH keys:** Here you will need to select the ssh key you created earlier. You can either use the
-
-    *   ***CHOOSE PUBLIC KEY FILES*** and open the public key file you made if you know its location
-
-        or you can use the
-
-    *   ***PASTE PUBLIC KEYS*** and paste the data within the key file if you have the file open
-
-    
-
-    
-
-    ![Fill in desired name, compartment, AD, and leave everything else as is](./images/create-compute-psft-image.png " ")
-    ![Select the existing compute shape e.g. VM Standard 2.1](./images/compute-shape.png " ")
-    ![Select existing virtual cloud network; select existing subnet, select assign a public IP address](./images/compute-network-config.png " ")
-   
-    f.  **Configure boot volume:** change the size from default to 300GB
-
-    ![Provide the ssh key created earlier and set boot volume size as 300GB](./images/config-ssh-boot-volume.png " ")
-
-    g. Click Show advanced options, on the management tab, select the option Paste cloud-init script, and enter the configuration information using the JSON format in these examples.
-
-             
-          <copy>{
-          "connect_pwd":  "password",
-          "access_pwd":  "password",
-          "admin_pwd":  "password",
-          "weblogic_admin_pwd":  "password",
-          "webprofile_user_pwd":  "password",
-          "gw_user_pwd":  "password",
-          "domain_conn_pwd":  "password",
-          "opr_pwd": "password"
-          }</copy
-          
-    
-    ![Provide the custom cloud-init script in the management tab](./images/cloud-init-script.png " ")
-    h. Now review your settings and click ***Create*** at the bottom of the page when you are ready
-6. Now you will be taken to the Instance Page, and will see that your newly created instance is provisioning
-
-     Once you see the small orange box change to green, your instance will have provisioned successfully and now you can move onto the next step in the Lab
-
-     ![Once the orange box changes to a green box, your instance will have been successfully provisioned](./images/compute-provisioning.png " ")
-     ![Compute instance successfully provisioned](./images/compute-provisioned.png " ")
-
-
-## Task 2: Access the PeopleSoft Application 
-
-
-
-1. The PeopleSoft OCI marketplace image can be accessed by logging in with the below URL and port number. 
-
-       ```
-       http://<fully-qualified-hostname>:8000/
-       ```
-
-
-
-  **NOTE:** Before you access the fully qualified hostname or fully qualified domain name (FQDN), it is necessary to add the FQDN or fully qualified hostname of the compute VM in the etc hosts file
+  Click on the Restricted services tab and search with "PTCB"
   
-  For example, if you are a Windows user or MAC user, you can navigate to the below path on the system as an administrator and modify the hosts file with the below entries.
-   
-    * Windows hosts file path - C:\Windows\System32\drivers\etc\hosts
-    * Mac hosts file path - /private/etc/hosts
+  ![Click the navbar at the top right corner ](./images/restricted-service.png " ")
+
+  Uncheck Restricted services  and save
+  ![Click the navbar at the top right corner ](./images/unrestricted-service.png " ")
 
 
-         ```
-        IP address    fully-qualified-hostname
-         ```
-        ![Hosts file entry, sample from windows](./images/hosts-file.png " ")
-  
-  The URL you will need to type into your browser's search bar should look like this:
+## Task 3: Disable SSL Check for Service Operation
+
+## Task 4: Update Application Services Security
+
+## Task 5: Global Chatbot Configuration
 
 
-
-      http://psfthcm.sub05021003250.testvcn.oraclevcn.com:8000/
-
-    
-
-    ![Type the appropriate URL into the Firefox search bar or Chrome](./images/psft-web.png " ")
-
-    The login user-id for PeopleSoft HCM application is PS; the password was supplied during the cloud-init script for opr_pwd
-
-    ![Look and feel of PeopleSoft HCM after login](./images/psft-web-login.png " ")
-    
 
 ## Summary
 
@@ -148,6 +82,6 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
 * **Contributors** - Deepak Kumar M, Principal Cloud Architect
-* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, April 2022
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, October 2022
 
 
