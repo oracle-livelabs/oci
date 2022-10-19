@@ -1,0 +1,132 @@
+# Set Up OCI for Oracle Digital Assistant
+
+## Introduction
+
+In this lab, using the recently provisioned OCI Trial tenancy, we will provision the Oracle Digital Assistant from Oracle Cloud Infrastructure services.
+
+Estimated Time: 20 minutes
+
+
+### Objectives
+
+To set up the Oracle Digital Assistant on the OCI tenancy, you will:
+*   Provision Oracle Digital Assistant from OCI services
+*   Deploy PeopleSoft PICASO from Oracle Digital Store
+*   Clone and create a new digital assistant
+*   Create the channel for the skills
+
+### Prerequisites
+
+* A user with access to provision & manage Core OCI services like Oracle Digital Assistant
+
+
+
+## Task 1: Provision Oracle Digital Assistant from OCI services
+
+In this part of the lab, we begin with provision of Oracle Digital Assistant or ODA on OCI.
+
+When your tenancy is provisioned, a root compartment is created for you. Your root compartment holds ***all*** of your cloud resources
+
+1.  Please log in to your OCI tenancy, if you are not already signed in. Example for Ashburn location - https://console.us-ashburn-1.oraclecloud.com/
+
+2.  On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select Analytics & AI, and then select Digital Assistant.
+
+  ![In the OCI console, select Analytics & AI, and then Digital Assistant, from right-hand side of the screen](./images/oci-services.png" ")
+
+3.  On the OCI Digital Assistants page,  click on the create digital assistant instance button
+
+    If you have a development compartment click on its name to open it. Inside there we will click on the create compartment button and create a child as shown
+
+    ![Click click on the create digital assistant instance button near the center of the screen](./images/oci-digital-assistant.png " ")
+
+
+4.	Select the  compartment where you want to create the digital assistant, provide a name,description for the digital assistant and select development as the shape and click create.
+
+  
+  ![Fill in the desired name, description, compartment and shape for ODA](./images/fill-oda-details.png " ")
+
+
+5.  The Oracle Digital Assistant is being provisioned and below screen shows the current status and the final status of the ODA provision.
+
+  ![ODA provisioning status](./images/oda-provisioning.png " ")
+     The Oracle Digital Assistant is provisioned
+  ![ODA provisioned status](./images/oda-provisioned.png " ")
+
+
+
+
+## Task 2:  Deploy PeopleSoft PICASO from Oracle Digital Store
+
+In this part of the lab, we begin with deploying PeopleSoft PICASO from the Oracle Digital Assistant Store. 
+
+1.  From the previous task, once the digital assistant is provisioned, click on the service console and launch the Oracle Digital Assistant service homepage.
+
+  ![Select the service console from the ODA page](./images/oda-service-console.png " ")
+
+    On the Oracle Digital Assistants Service Console Home page, click the Navigation Menu in the upper-left corner, select development, and then select the skill store option
+
+  ![Select the Skill Store option from the ODA Service console Menu](./images/oda-homepage.png " ")
+
+2.  On the Digital Skill Store page, search with PICASO
+
+  ![Search with PICASO](./images/oda-storepage.png " ")
+
+    Click the three dots at the bottom of the PICASO skill and perform the pull
+  
+  ![Pull the PICASO skill](./images/oda-skill-pull.png " ")
+    
+    Once the pull request is completed, the PICASO digital assistant will be added to your list of digital assistants.
+  ![Pull the PICASO skill](./images/oda-pulled-request.png " ")
+
+
+
+## Task 3:  Clone and create a new digital assistant
+
+In this part of the lab, we begin with cloning the PeopleSoft PICASO digital assistant and creating a new digital assistant for the purpose of this task.
+
+1.  From the previous task, once the PICASO digital assistant pull request is completed, navigate to the digital assistants tab under development and click on clone to begin the cloning process.
+
+  ![Select the three dots and begin the cloning process](./images/oda-assistant-clone.png " ")
+
+    From the dialog box, click clone to begin the process
+
+  ![Cloning processes started](./images/oda-assistant-clone-start.png " ")
+
+    PeopleSoft PICASO clone is created
+  ![Cloning processes started](./images/oda-assistant-clone-start.png " ")
+2.  In the Security Lists section, click the Default ***Security List*** for ***testvcn*** link  
+  ![Select the Default Security list for testvcn from the options under the Security Lists in testvcn Compartment](./images/default-security-list.png " ")
+
+3.  On Default Security List, under Resources, click the Add Ingress Rules button.
+  ![Add the ingress rules for the PeopleSoft application](./images/security-list-details.png " ")
+  ![Click on the add ingress rules button under the ingress rules section of the screen](./images/add-ingress-rules.png " ")
+
+4.   Within the interface, click the + ***Additional Ingress Rules*** button and add a rule with the following criteria
+
+        | Stateless | Source Type |	Source CIDR | IP Protocol | Source Port Range |	Destination Port |
+        | --- | --- | --- | --- | --- | --- |
+        
+        | Unchecked | CIDR|	0.0.0.0/0 |	TCP | All |	8000 |
+
+     Click the ***Add Ingress Rules***  blue button when complete
+
+     ![Add ingress rules and click on the button to complete the setup](./images/add-ingress-confirm.png " ")
+
+    After you have created the  new rule, your security list should look like this
+
+     ![After creating the new security Ingress Rules, you should see them under the Ingress rules section of the screen](./images/add-ingress-complete.png " ")
+
+These Ingress Rules will be sufficient to allow the network traffic required for the PeopleSoft environment.
+
+## Summary
+
+In this lab, OCI has been set up for the networking required to be able to access the PeopleSoft environment that will be created in the next lab
+
+You may now **proceed to the next lab.**
+
+## Acknowledgements
+* **Authors** - Deepak Kumar M, Principal Cloud Architect
+* **Contributors** - Deepak Kumar M, Principal Cloud Architect
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, April 2022
+
+
