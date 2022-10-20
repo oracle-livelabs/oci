@@ -12,30 +12,51 @@ Estimated Time: 15 minutes
 ### Prerequisites
 *  A PeopleSoft PIA Admin user to create and configure chatbot on PeopleSoft side
 
-## Task 1: Delete the PeopleSoft virtual machine
+## Task 1: Test the PeopleSoft PICASO chatbot
 
-1. Navigate to the OCI home page.
+1. On the PeopleSoft Homepage, click on the PICASO chatbot
 
-2. Use the dropdown menu located in the upper left-hand corner of the screen and select **Compute** then **Instances**.
+    ![click on chatbot at the bottom right of the screen](./images/psft-bot-homepage.png " ")
 
-    ![Use the dropdown menu located in the upper left-hand corner to select instances](./images/dropdown-compute.png " ")
+    PeopleSoft PICASO screen pops up with a welcome note for the user
 
-3. You are now on the **Instances** page. Make sure that you have the compartment you created in the "Setup" lab selected.
-
-    ![List scope compartment portion](./images/compute-page.png " ")
-
-4.   You should now be able to see the PeopleSoft instance you created previously.
-
-    Now click on the three dots to the right of your PeopleSoft instance and then select **Terminate**.
-
-    ![Use the small dropdown menu and click terminate](./images/terminate-instance.png " ")
-
-    Once the image has finished terminating, you will see its state change to terminated.
-
-    ![Status should be terminated as shown](./images/terminated-instance.png " ")
+    ![PICASO welcome greet](./images/picaso-example.png " ") 
 
 
+    Let's check Absence Assistant
+    Either select the options shown for Absence or type in any absence related query
 
+    ![PICASO screen dialog](./images/picaso-example1.png " ") 
+    
+    How many leaves will I accrue
+    ![PICASO screen dialog](./images/picaso-example2.png " ") 
+
+    Show me the absence balance
+    ![PICASO screen dialog](./images/picaso-example3.png " ") 
+ 
+    Now moving to Benefits Assistant
+
+    Click on any of the benefits options to check the status
+    ![PICASO screen dialog](./images/picaso-example4.png " ") 
+
+    Show my Dependents/Beneficiaries
+    ![PICASO screen dialog](./images/picaso-example5.png " ") 
+
+    Moving on to Employee Directory
+
+    Either select the options shown for Employee or type in, in this case we search with " who is my boss"
+
+    ![PICASO screen dialog](./images/picaso-example6.png " ") 
+
+    Moving on to Payroll Asisstant
+    
+    Either select the options shown for Payroll or type in
+
+
+
+
+
+    
 ## Summary
 
 In this lab, you tested the PeopleSoft PICASO chatbot configured using Oracle Digital Assistant
