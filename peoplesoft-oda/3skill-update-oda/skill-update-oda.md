@@ -1,88 +1,65 @@
-# Updating Skill Configuration in Oracle Digital Assistant
+# Update Skill Configuration in Oracle Digital Assistant
 
 ## Introduction
-In this lab, we will decommission the PeopleSoft environment by deleting all the resources we created in OCI.
+In this lab, you will update the skill configuration in Oracle Digital Assistant using the PeopleSoft application web service url
 
 Estimated Time: 15 minutes
 
 
 ### Objectives
-* Delete your PeopleSoft virtual machine
-* Destroy OCI Resources
+
+*  Update the skill configuration for all the deployed PeopleSoft skills in Oracle Digital Assistant using the PeopleSoft application web service url
+
+
+
 
 ### Prerequisites
-* Tenancy Admin User
-* Tenancy Admin Password
 
-## Task 1: Delete the PeopleSoft virtual machine
+*  A user with access to provision & manage Core OCI services like Oracle Digital Assistant
+*  A PeopleSoft PIA Admin user to create and configure chatbot on PeopleSoft side
 
-1. Navigate to the OCI home page.
+## Task 1: Update the skill configuration in ODA
 
-2. Use the dropdown menu located in the upper left-hand corner of the screen and select **Compute** then **Instances**.
+1.  On the Oracle Digital Assistants Service Console Home page, click the Navigation Menu in the upper-left corner, select development, and then select the Digital Assistant option and open the PeopleSoft PICASO cloned digital assistant
 
-    ![Use the dropdown menu located in the upper left-hand corner to select instances](./images/dropdown-compute.png " ")
+  ![Select Digital Assistant from the Menu options](./images/oda-config.png " ")
 
-3. You are now on the **Instances** page. Make sure that you have the compartment you created in the "Setup" lab selected.
+   Click on Go to Skill and navigate to the PeopleSoft Absence Assistant Skill
+  ![click on go to skill](./images/oda-skill-check.png " ")
 
-    ![List scope compartment portion](./images/compute-page.png " ")
+   Click settings on the Absence skills page and click on the configurations tab
 
-4.   You should now be able to see the PeopleSoft instance you created previously.
+  ![click on go to skill](./images/absence-skill.png " ") 
+   
+   Scroll to the bottom of the screen, click on edit and set the following values for:
 
-    Now click on the three dots to the right of your PeopleSoft instance and then select **Terminate**.
+  ![click on go to skill](./images/skill-update.png " ")
 
-    ![Use the small dropdown menu and click terminate](./images/terminate-instance.png " ")
+   PSHCMbaseurl: It denotes the base url of application service. Replace with actual server, port and nodename.
 
-    Once the image has finished terminating, you will see its state change to terminated.
+      ```
+    http://servername:port/PSIGW/RESTListeningConnector/HCM_EMHBVUSZIWE/PTCB_APPL_SVC.v1 
+      
+      ```
+   PSHCMuserid: Set the peoplesoft proxy user who has access to invoke application services. To start with, Let us leave it, as it is (PSFTPROXY).
 
-    ![Status should be terminated as shown](./images/terminated-instance.png " ")
+   PSHCMpassword: It denotes the password for Proxy user. To start with, Let us leave it, as it is (PSFTPROXY).If you have created PSFTPROXY user with a different password, enter the new password in PSHCMpassword field
 
-## Task 2: Terminate the VCN
+   Now go back and repeat the above steps for configuration of all the other skills.
 
-1. Use the dropdown menu located in the upper left-hand corner of the screen and select **Networking** then **Virtual Cloud Networks**.
-    ![Navigate to compartments using the dropdown menu](./images/dropdown-network.png " ")
 
-2. You will now see you are on the **Virtual Cloud Networks** page. Make sure that you have the compartment you created in the "Setup" lab selected.
-    ![](./images/vcn-compartment.png " ")
 
-3. You should now be able to see the VCN that you created in the "Setup" lab.
-
-    Now click on the three dots to the right of your VCN and then select **Terminate**.
-
-    ![List scope compartment portion](./images/vcn-delete.png " ")
-
-4. On the next screen you will see a list of all of the Associated Resources.
-
-    After the window has finished loading all of the resources, you can click the terminate all button.
-
-    **Note:** It may take a moment for all of the resources to load.
-
-    ![Terminate vcn menu](./images/terminate-vcn-confirm.png " ")
-
-    After all the resources have terminated, the VCN itself will terminate and you may then click the close button.
-
-## Task 3: Delete the test compartment
-
-1.  Use the dropdown menu located in the upper left-hand corner of the screen and select **Identity & Security** then **Compartments**.
-
-    ![Navigate to compartments using the dropdown menu](./images/dropdown-compartment.png " ")
-
-    From this screen, navigate to the compartment you created in the "Setup" lab.
-
-    ![Click the delete button to delete the compartment](./images/delete-compartment.png " ")
-
-    Click the delete button to delete the compartment, after some time the status will be shown as deleted.
 
     
 ## Summary
 
-In this lab, you have removed all the resources you created for the PeopleSoft Marketplace environment.
-
+In this lab, you have updated the skill configuration in Oracle Digital Assistant using the PeopleSoft application web service url
 
 
 
 ## Acknowledgements
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
 * **Contributors** - Deepak Kumar M, Principal Cloud Architect
-* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, April 2022
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, October 2022
 
 

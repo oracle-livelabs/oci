@@ -66,6 +66,8 @@ To configure PeopleSoft with Oracle Digital Assistant, you will:
 
 ## Task 3: Disable SSL Check for Service Operation
 
+   **Important:** This setting is for configuring a Non-SSL url for a DEMO environment, for acutual production it is not recommended to disable the SSL but to use SSL certificates for configuration.
+
 1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Integration Setup >> Service Operation Definitions. 
 
   ![Click the navbar at the top right corner ](./images/psft-service-operation.png " ")
@@ -80,22 +82,53 @@ To configure PeopleSoft with Oracle Digital Assistant, you will:
 
 ## Task 4: Update Application Services Security
 
-1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Application Services >> Application Service Security
+1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Application Services >> Application Services Security
 
   ![Click the navbar at the top right corner ](./images/psft-application-service.png " ")
 
   Click on the Token required tab, expand chatbot token type and change from oAuth2 to PSFT and click save
 
     ![Search with Service Operation  ](./images/psft-application-token-update.png " ")
-    
+
 
 ## Task 5: Global Chatbot Configuration
+
+1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to Menu >> Enterprise Components >> Global Chatbot Configuration
+
+  ![Click on the menu for global chatbot configuration ](./images/psft-global-chatbot.png " ")
+
+  Copy the ODA server URI from the lab1 and paste it under general configurations and save it
+
+    ![ODA server URI comes from earlier lab ](./images/psft-global-chatbot-config.png " ")
+  
+  Click Add under Global Configurations for Skills and Digital Assistants
+
+    ![Click Add and follow the screen ](./images/psft-bot-add.png " ")
+  
+  Click add from Bot Definitions and fill it with below details (the bot channel id comes from ODA page which was noted earlier), click done
+
+    ![Click add and enter bot channel id from ODA channel ](./images/psft-bot-config.png " ")
+
+    click next
+    ![Follow the configuration screen ](./images/psft-bot-config1.png " ")
+
+    Fill the information as per the screen and click next
+    ![Follow the configuration screen ](./images/psft-bot-config2.png " ")
+
+    click submit
+    ![Once the details are filled, click submit ](./images/psft-bot-config-complete.png " ")
+
+    Enable the PSFT-ODA bot from this screen and save it
+    ![Enable the bot and save it ](./images/psft-bot-enable.png " ")
+
+    The chatbot should now appear on the home screen
+    ![Home screen shows chatbot icon ](./images/psft-bot-homepage.png " ")
 
 
 
 ## Summary
 
-In this lab, you launched an instance of PeopleSoft from the OCI marketplace, deployed the PeopleSoft application, and then accessed the PeopleSoft Application.
+In this lab, you configured PeopleSoft for integration with Oracle Digital Assistant to run PICASO chatbot.
 
 You may now **proceed to the next lab.**
 
