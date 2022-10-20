@@ -82,7 +82,12 @@ To configure PeopleSoft with Oracle Digital Assistant, you will:
 
 1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Application Services >> Application Service Security
 
-  ![Click the navbar at the top right corner ](./images/psft-service-operation.png " ")
+  ![Click the navbar at the top right corner ](./images/psft-application-service.png " ")
+
+  Click on the Token required tab, expand chatbot token type and change from oAuth2 to PSFT and click save
+
+    ![Search with Service Operation  ](./images/psft-application-token-update.png " ")
+    
 
 ## Task 5: Global Chatbot Configuration
 
