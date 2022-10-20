@@ -19,17 +19,17 @@
       },
       {
           "title": "Lab 2: Configure PeopleSoft for Oracle Digital Assistant",
-          "description": "In this lab, the recently provisioned OCI Trial tenancy will be set up for the PeopleSoft Application",
+          "description": "In this lab, you will configure PeopleSoft for Oracle Digital Assistant",
           "filename": "../../2configure-psft/configure-psft.md"
       },
       {
-          "title": "Lab 3: Updating Skill Configuration in Oracle Digital Assistant",
-          "description": "In this exercise, you will provision your PeopleSoft application by leveraging OCI Marketplace PeopleSoft image.",
+          "title": "Lab 3: Update Skill Configuration in Oracle Digital Assistant",
+          "description": "In this lab, you will update Skill Configuration in Oracle Digital Assistant",
           "filename": "../../3skill-update-oda/skill-update-oda.md"
       },
       {
           "title": "Lab 4: Test the PeopleSoft PICASO chatbot",
-          "description": "Teardown Your PeopleSoft Environment",
+          "description": "Test the PeopleSoft PICASO chatbot",
           "filename": "../../4test-picaso/test-picaso.md"
       },
       {
