@@ -55,7 +55,7 @@ Estimated Time: 15 minutes
 
 In this lab, you have updated the skill configuration in Oracle Digital Assistant using the PeopleSoft application web service url
 
-
+You may now **proceed to the next lab.**
 
 ## Acknowledgements
 * **Authors** - Deepak Kumar M, Principal Cloud Architect

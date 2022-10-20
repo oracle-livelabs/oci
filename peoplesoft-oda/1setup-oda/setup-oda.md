@@ -35,12 +35,12 @@ When your tenancy is provisioned, a root compartment is created for you. Your ro
 
 3.  On the OCI Digital Assistants page,  click on the create digital assistant instance button
 
-    If you have a development compartment click on its name to open it. Inside there we will click on the create compartment button and create a child as shown
+    
 
     ![Click click on the create digital assistant instance button near the center of the screen](./images/oci-digital-assistant.png " ")
 
 
-4.	Select the  compartment where you want to create the digital assistant, provide a name,description for the digital assistant and select development as the shape and click create.
+4.	Select the  compartment where you want to create the digital assistant, provide a name,  description for the digital assistant and select development as the shape and click create.
 
   
   ![Fill in the desired name, description, compartment and shape for ODA](./images/fill-oda-details.png " ")

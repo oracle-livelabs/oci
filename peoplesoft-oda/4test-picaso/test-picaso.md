@@ -50,9 +50,10 @@ Estimated Time: 15 minutes
 
     Moving on to Payroll Asisstant
     
-    Either select the options shown for Payroll or type in
+    Either select the options shown for Payroll or type in show me my payslip
 
-
+    ![PICASO screen dialog](./images/picaso-example7.png " ") 
+    ![PICASO screen dialog](./images/picaso-example8.png " ") 
 
 
 
