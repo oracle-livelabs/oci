@@ -58,15 +58,31 @@ To configure PeopleSoft with Oracle Digital Assistant, you will:
 
   Click on the Restricted services tab and search with "PTCB"
   
-  ![Click the navbar at the top right corner ](./images/restricted-service.png " ")
+  ![Click on the Restricted services tab ](./images/restricted-service.png " ")
 
   Uncheck Restricted services  and save
-  ![Click the navbar at the top right corner ](./images/unrestricted-service.png " ")
+  ![Uncheck Restricted services ](./images/unrestricted-service.png " ")
 
 
 ## Task 3: Disable SSL Check for Service Operation
 
+1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Integration Setup >> Service Operation Definitions. 
+
+  ![Click the navbar at the top right corner ](./images/psft-service-operation.png " ")
+
+  Search with Service Operation "PTCB\_APP\_SVC"
+
+    ![Search with Service Operation  ](./images/psft-service-operation-page.png " ")
+  
+  Update the req. verification field as "Basic Authentication" instead of "SSL" for both Service Operations "PTCB\_APPL\_SVC_GET" and "PTCB\_APPL\_SVC\_POST"
+
+    ![Search with Service Operation  ](./images/psft-service-operation-update.png " ")
+
 ## Task 4: Update Application Services Security
+
+1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Application Services >> Application Service Security
+
+  ![Click the navbar at the top right corner ](./images/psft-service-operation.png " ")
 
 ## Task 5: Global Chatbot Configuration
 
