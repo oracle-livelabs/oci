@@ -38,8 +38,9 @@ Estimated Time: 15 minutes
    PSHCMbaseurl: It denotes the base url of application service. Replace with actual server, port and nodename.
 
       ```
+      <copy>
     http://servername:port/PSIGW/RESTListeningConnector/HCM_EMHBVUSZIWE/PTCB_APPL_SVC.v1 
-      
+      </copy>
       ```
    PSHCMuserid: Set the peoplesoft proxy user who has access to invoke application services. To start with, Let us leave it, as it is (PSFTPROXY).
 
