@@ -1,6 +1,7 @@
 # Test the PeopleSoft PICASO chatbot
 
 ## Introduction
+
 In this lab, you will test the PeopleSoft PICASO chatbot configured using Oracle Digital Assistant
 
 Estimated Time: 15 minutes

@@ -1,14 +1,14 @@
 # Update Skill Configuration in Oracle Digital Assistant
 
 ## Introduction
-In this lab, you will update the skill configuration in Oracle Digital Assistant using the PeopleSoft application web service url
 
+In this lab, you will update the skill configuration in Oracle Digital Assistant using the PeopleSoft application web service URL
 Estimated Time: 15 minutes
 
 
 ### Objectives
 
-*  Update the skill configuration for all the deployed PeopleSoft skills in Oracle Digital Assistant using the PeopleSoft application web service url
+*  Update the skill configuration for all the deployed PeopleSoft skills in Oracle Digital Assistant using the PeopleSoft application web service URL
 
 
 
@@ -54,7 +54,7 @@ Estimated Time: 15 minutes
     
 ## Summary
 
-In this lab, you have updated the skill configuration in Oracle Digital Assistant using the PeopleSoft application web service url
+In this lab, you have updated the skill configuration in Oracle Digital Assistant using the PeopleSoft application web service URL
 
 You may now **proceed to the next lab.**
 
