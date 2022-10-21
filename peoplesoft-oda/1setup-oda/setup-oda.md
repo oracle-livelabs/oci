@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, using the recently provisioned OCI Trial tenancy, we will provision the Oracle Digital Assistant from Oracle Cloud Infrastructure services.
+In this lab, we'll provision the Oracle Digital Assistant from Oracle Cloud Infrastructure services utilizing the freshly created OCI Trial tenancy.
 
 Estimated Time: 30 minutes
 
@@ -27,7 +27,7 @@ In this part of the lab, we begin with provision of Oracle Digital Assistant or 
 
 When your tenancy is provisioned, a root compartment is created for you. Your root compartment holds ***all*** of your cloud resources
 
-1.  Please log in to your OCI tenancy, if you are not already signed in. Example for Ashburn location - https://console.us-ashburn-1.oraclecloud.com/
+1.  If you haven't already, log into your OCI tenancy by clicking the button below. Using Ashburn as an example, go to https://console.us-ashburn-1.oraclecloud.com/.
 
 2.  On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select Analytics & AI, and then select Digital Assistant.
 
@@ -36,7 +36,6 @@ When your tenancy is provisioned, a root compartment is created for you. Your ro
 3.  On the OCI Digital Assistants page,  click on the create digital assistant instance button
 
     
-
     ![Click click on the create digital assistant instance button near the center of the screen](./images/oci-digital-assistant.png " ")
 
 
@@ -49,6 +48,7 @@ When your tenancy is provisioned, a root compartment is created for you. Your ro
 5.  The Oracle Digital Assistant is being provisioned and below screen shows the current status and the final status of the ODA provision.
 
   ![ODA provisioning status](./images/oda-provisioning.png " ")
+
      The Oracle Digital Assistant is provisioned
   ![ODA provisioned status](./images/oda-provisioned.png " ")
 
@@ -57,7 +57,7 @@ When your tenancy is provisioned, a root compartment is created for you. Your ro
 
 ## Task 2:  Deploy PeopleSoft PICASO from Oracle Digital Store
 
-In this part of the lab, we begin with deploying PeopleSoft PICASO from the Oracle Digital Assistant Store. 
+In this part of the lab, we begin by deploying PeopleSoft PICASO from the Oracle Digital Assistant Store. 
 
 1.  From the previous task, once the digital assistant is provisioned, click on the service console and launch the Oracle Digital Assistant service homepage.
 
@@ -82,9 +82,9 @@ In this part of the lab, we begin with deploying PeopleSoft PICASO from the Orac
 
 ## Task 3:  Clone and create a new digital assistant
 
-In this part of the lab, we begin with cloning the PeopleSoft PICASO digital assistant and creating a new digital assistant for the purpose of this task.
+In this lab, we start by cloning the PICASO digital assistant from PeopleSoft and building a new digital assistant specifically for this task.
 
-1.  From the previous task, once the PICASO digital assistant pull request is completed, navigate to the digital assistants tab under development and click on clone to begin the cloning process.
+1.  From the previous task, once the PICASO digital assistant pull request is completed, navigate to the digital assistants' tab under development and click on the clone to begin the cloning process.
 
   ![Select the three dots and begin the cloning process](./images/oda-assistant-clone.png " ")
 
@@ -97,7 +97,7 @@ In this part of the lab, we begin with cloning the PeopleSoft PICASO digital ass
 
 ## Task 4:  Create the channel for the skills
 
-In this part of the lab, we begin with creating a Web channel for the Skills and routing this to the cloned PeopleSoft PICASO digital assistant
+In this part of the lab, we begin with creating a Web channel for the Skills and routing this to the cloned PeopleSoft PICASO digital assistants'
 
 1.  On the Oracle Digital Assistants Service Console Home page, click the Navigation Menu in the upper-left corner, select development, and then select the Channels option and create a new channel
 
@@ -115,7 +115,7 @@ In this part of the lab, we begin with creating a Web channel for the Skills and
   ![Channel complete information ](./images/oda-channel-important.png " ")
     Client authentication is disabled in the above screen
 
-  **Important:** Make a note of the channel ID as this would be used for configuration at PeopleSoft side, make a note of the ODA URL from the above page as this would be used for configuration at PeopleSoft side.
+  **Important:** To configure PeopleSoft, take note of the channel ID and ODA URL from the above page.
     
      
 
@@ -124,7 +124,7 @@ In this part of the lab, we begin with creating a Web channel for the Skills and
 
 ## Summary
 
-In this lab, Oracle Digital assistant was provisioned, cloned the existing PeopleSoft PICASO assistant and created a Web channel for interaction with PeopleSoft.
+In this lab, Oracle Digital assistant was provisioned, cloned the existing PeopleSoft PICASO assistant, and created a Web channel for interaction with PeopleSoft.
 
 You may now **proceed to the next lab.**
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will configure PeopleSoft for integration with Oracle Digital Assistant to run PICASO chatbot.
+You will set up PeopleSoft for Oracle Digital Assistant integration in this lab to operate the PICASO chatbot.
 
 Estimated Time: 1 hour
 
@@ -66,7 +66,7 @@ To configure PeopleSoft with Oracle Digital Assistant, you will:
 
 ## Task 3: Disable SSL Check for Service Operation
 
-   **Important:** This setting is for configuring a Non-SSL url for a DEMO environment, for acutual production it is not recommended to disable the SSL but to use SSL certificates for configuration.
+   **Important:** This setting is for configuring a non-SSL URL for a DEMO environment; in actual production environments, it is advised to use SSL certificates for configuration as opposed to disabling SSL.
 
 1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Integration Setup >> Service Operation Definitions. 
 
@@ -128,7 +128,7 @@ To configure PeopleSoft with Oracle Digital Assistant, you will:
 
 ## Summary
 
-In this lab, you configured PeopleSoft for integration with Oracle Digital Assistant to run PICASO chatbot.
+In this lab, you have configured PeopleSoft for Oracle Digital Assistant integration to run the PICASO chatbot.
 
 You may now **proceed to the next lab.**
 

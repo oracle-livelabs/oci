@@ -2,23 +2,36 @@
 
 ## About this Workshop
 
-This workshop guides through the steps to setup the PeopleSoft PICASO Chatbot configuration with Oracle Digital Assistant.
+This workshop guides you through the steps to set up the PeopleSoft PICASO Chatbot configuration with Oracle Digital Assistant.
 
-After completing this workshop you will have a better understanding of OCI Digital Assistant and the ability to configure and integrate a PeopleSoft environment whether it exists on OCI or on-premises.
+After completing this workshop, you will have a better insight and understanding of OCI Digital Assistant and the ability to configure and integrate a PeopleSoft environment, whether it exists on OCI or on-premises.
 
 Watch the video below for an Introduction To PeopleSoft PICASO Digital Assistant.
 [Lab overview](youtube:HCF482DDcrM)
 
-A high-level overview of PeopleSoft Chatbot Integration with Oracle Digital Assistant is depicted in the below figure.
+The below image provides a high-level overview of PeopleSoft Chatbot Integration with Oracle Digital Assistant.
 
    ![High-level overview of PeopleSoft Chatbot Integration with Oracle Digital Assistant](./images/architecture.png" ")
+
+PeopleSoft Chatbot Integration Framework Architecture overview
+
+**Chat Client**: The Chatbot Integration Framework supports Web Channel and Twilio Channel as a part of Integration with ODA. Chat client, rendered within the PeopleSoft PIA page, establishes a connection with Skills through the Web channel. ODA provides a set of Javascript files named WebSDK, which takes care of  construction of the Chat Client within PeopleSoft PIA and the WebSocket connection with the chatbot Server. The web SDK file is delivered as PeopleSoft Object, However For older versions of ODA (on or before 19.4) the WebSDK files have to be deployed manually in the webserver under sitename "external" (please refer PeopleBooks for additional documents on-site creation.)
+
+The pages/components where the chat client is rendered are configurable through setup pages available under Enterprise Components.
+When it comes to Twilio channel, the users send a text message directly to the Skill’s designated Twilio number configured in the Twilio channel and the skill responds.
+
+**Skill**: This refers to the actual bot deployed on ODA instance. This contains the different Intents, Utterances, and Dialogflow for the bot. The conversion between the user and the bot is designed and defined in the skill. Please refer to the ODA documentation for more details.
+
+**PSFT Custom Components**: This is the Node JS code to be deployed in the embedded Node JS container in ODA. The custom components are local to a skill within ODA. Two different skills in ODA with the same code deployed in them will run as two separate instances. The PeopleSoft delivered Skills and Skill Template comes with a packaged custom component code. The instructions on how to add/generate custom components for a newly added service are provided later in this document. The delivered custom component library and the package contain security logic and additional methods to facilitate ODA to PeopleSoft Application Service communication.
+
+**Application Services**: Application Service framework is delivered as part of Integration Broker in PeopleTools 8.57. TheChatbot Integration Framework requires the application logic to be developed in application classes and deployed using this framework.
 
 Estimated Time: 2 hours
 
 Notes:
 
-* The workshop is quite detailed and technical. PLEASE take your time and DO NOT skip any steps.
-* IP addresses and URLs in the screenshots in this workbook may differ from what you use in the labs as these are dynamically generated.
+* The workshop is quite technical and in-depth. Please go slowly and without skipping any steps.
+*  The IP addresses and URLs in this workbook's screenshots are dynamically generated, so they might not match what you use in the labs
 * For security purposes, some sensitive text (such as IP addresses) may be redacted in the screenshots in this workbook.
 * The user interface for the Oracle Cloud Infrastructure is constantly evolving. As a result, the screens depicted in this tutorial may not exactly coincide with the current release. This tutorial is routinely updated for functional changes to Oracle Cloud Infrastructure, at which time any differences in the user interface will be reconciled.
 
