@@ -3,8 +3,8 @@
     "help": "livelabs-help-db_us@oracle.com",
     "tutorials": [
         {
-            "title": "Introduction",
-            "description": "Expand Oracle REST Data Services into Oracle Cloud Infrastructure",
+            "title": "Introdução",
+            "description": "Bem-vindo ao OCI Data & AI Fast Track - for Analytics",
             "filename": "../../intro/intro.md"
         },
         {
@@ -12,19 +12,34 @@
             "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/cloud-login-livelabs.md"
         },
         {
-            "title": "Lab 1: Setups",
-            "description": "Setup your OCI Account and Create an Oracle Autonomous Database",
-            "filename": "../../setups/setups.md"
+            "title": "Lab 1: Tour pelo Oracle Analytics Cloud",
+            "description": "Navega pelo Oracle Analytics Cloud",
+            "filename": "../../ft-tour-oac/ft-tour-oac.md"
         },
         {
-            "title": "Lab 2: Create a Function to Batch Load Data into the Database Using ORDS",
-            "description": "Create a Function to Batch Load Data into the Database Using ORDS",
-            "filename": "../../csv-function/csv-function.md"
+            "title": "Lab 2: Criar um conexão com Banco de Dados",
+            "description": "Verifique a conexão com o Autonomous Data Warehouse",
+            "filename": "../../ft-create-connection/ft-create-connection.md"
         },
         {
-            "title": "Lab 3: Create a Function and Service Connector to Load Logs from the Logging Service into the Database Using ORDS",
-            "description": "Create a Function and Service Connector to Load Logs from the Logging Service into the Database Using ORDS",
-            "filename": "../../json-logging/json-logging.md"
+            "title": "Lab 3: Criar um Conjunto de Dados",
+            "description": "Aprenda a criar um conjunto de dados a partir de 2 tabelas em um Banco de Dados",
+            "filename": "../../ft-create-dataset/ft-create-dataset.md"
+        },
+        {
+            "title": "Lab 4: Crie Visualizações - Primeiros Passos",
+            "description": "Explore os recursos do Oracle Analytics Cloud para criar visualizações",
+            "filename": "../../ft-create-visualizations/ft-create-visualizations.md"
+        },
+        {
+            "title": "Lab 5: Crie Visualizações - Avançado",
+            "description": "Explora mais os tipos de gráficos oferecidos pelo Oracle Analytics Cloud",
+            "filename": "../../ft-advanced-visualizations/ft-advanced-visualizations.md"
+        },
+        {
+            "title": "Lab 6: Atividades Administrativas",
+            "description": "Aprenda a executar atividades de administração da instância",
+            "filename": "../../ft-oac-management/ft-oac-management.md"
         },
         {
             "title": "Need Help?",
