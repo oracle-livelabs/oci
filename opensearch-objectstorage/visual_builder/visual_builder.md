@@ -49,7 +49,7 @@ You have the other values from the previous labs.
 - Edit the *Key ID*
   - In the *Key ID*, type
     *##TENANCY\_OCID##/##USER\_OCID/##FINGERPRINT##*
-  - In the Private Key, paste your OCI Private Key *##PRIVATE_KEY##*
+  - In the Private Key, paste your OCI Private Key *##PRIVATE_KEY_RSA_FORMAT##*
   - Click *Save*
 - Click *Save* again
 
