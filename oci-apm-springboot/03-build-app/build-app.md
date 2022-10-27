@@ -4,8 +4,10 @@
 
 This workshop uses Spring Boot-based Java microservices as a target application to trace against. In this lab, you will deploy the application to the Kubernetes cluster you created in Lab 1.
 
-
 Estimated time: 10 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Build a microservices application](videohub:1_94bv1d35)
 
 ### Objectives
 

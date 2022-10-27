@@ -6,6 +6,9 @@ In this lab, you will clean up the workshop environment by running commands from
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Clean up the workshop environment](videohub:1_lnwo2eyw)
+
 ### Objectives
 
 * Remove the lab configurations and setups
@@ -98,7 +101,10 @@ To delete the workshop setup from your tenancy, follow the steps below.
 
 5. **Delete Virtual Cloud Network** dialog opens. Click **Scan**.
 
-         ![Oracle Cloud, Cloud console](images/4-14-2-cleanup.png " ")    
+
+    ![Oracle Cloud, Cloud console](images/4-14-2-cleanup.png " ")    
+
+
 
 6. Click the **Terminate All** button when activated. Termination of the resources begins. Once the message **Virtual Cloud Network termination complete** shows, click **Close**.
     ![Oracle Cloud, Cloud console](images/4-15-cleanup.png " ")    
