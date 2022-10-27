@@ -1,47 +1,37 @@
-# Criar um Autonomous Database
+# Tour pelo OAC
 
 ## Introdução
 
-Neste Lab você vai aprender a provisionar um Autonomous Database na Oracle Cloud Infrastructure
+Neste Lab você vai aprender a navegar pela interface do Oracle Analytics Cloud
 
 ***Overview***
 
-Oracle Cloud Infrastructure Autonomous Database é um ambiente de banco de dados totalmente gerenciado e pré-configurado com três tipos de carga de trabalho disponíveis, Autonomous Transaction Processing, Autonomous Data Warehouse e Autonomous JSON. Você não precisa configurar ou gerenciar nenhum hardware ou instalar nenhum software. Após o provisionamento, você pode dimensionar o número de núcleos de CPU ou a capacidade de armazenamento do banco de dados a qualquer momento, sem afetar a disponibilidade ou o desempenho. O Banco de Dados Autônomo cuida da criação do banco de dados, bem como das seguintes tarefas de manutenção:
-* Backup do Banco de dados
-* Patching do Banco de dados
-* Upgrading do Banco de dados
-* Tuning do Banco de dados
+O Oracle Analytics Cloud é um serviço de nuvem pública escalável e seguro que fornece um conjunto completo de recursos para explorar e executar análises colaborativas para você, seu grupo de trabalho e sua empresa. Com o Oracle Analytics Cloud, você também tem recursos flexíveis de gerenciamento de serviços, incluindo configuração rápida, dimensionamento e patches fáceis.
 
-
-***Tipos de cargas de trabalho disponíveis***
-
-Autonomous Database oferece três tipos de workloads:
-* Autonomous Transaction Processing - configura o banco de dados para uma carga de trabalho transacional, com uma tendência para altos volumes de acesso a dados aleatórios.
-* Autonomous Data Warehouse - configura o banco de dados para um suporte de decisão ou carga de trabalho de data warehouse, com uma tendência para grandes operações de digitalização de dados.
-* Oracle Autonomous JSON - é um serviço de banco de dados de documentos em nuvem que simplifica o desenvolvimento de aplicativos centrados em JSON.
-
-*Tempo estimado para o Lab:* 25 Minutos
+*Tempo estimado para o Lab:* NN Minutos
 
 ### Objetivos
 
 Neste Laboratório você vai:
-* Provisionar um Autonomous Database (Oracle Autonomous Data Warehouse)
-* Explorar os recursos disponíveis de forma nativa dentro do Banco de Dados (Data Tools)
-* Conhecer OCPU scaling
-* Explorar o Performance Hub
+* Explorar os recursos disponíveis de forma nativa dentro do OAC (Oracle Analytics Cloud)
 
 
-## Task 1: Processo de criação do Autonomous Database
 
-Para iniciar o processo de criação do Autonomous Database:
+## Task 1: Página Inicial
 
-1.	Clique no menu no lado esquerdo da tela principal, escolha Oracle Database, e depois “Autonomous Database"
+Assim que logar com seu ID de Usuário e Senha, você será direcionado para a página inicial da ferramenta. Esta tela inicial é a **HOME**, sempre que quiser retornar à ela:
 
-![menu do Autonomous Database](./images/autonomous-database-menu-1.png)
+1.	Clique no Menu Hamburguer no lado superior esquerdo da tela principal, 
 
-2.	Clique em "Create Autonomous Database" e você será redirecionado para a criação do Autonomous Database.
+![menu do OAC "Hamburguer"](.\images\Menu_Hamburguer.png)   
 
-![clique em "Create Autonomous Database"](./images/autonomous-database-create-2.png)
+Assim que a barra lateral se expandir, você verá o ícone correspondente a **HOME**, selecione-o.
+
+![menu do OAC "Hamburguer"](.\images\Home_Analytics.png) 
+
+2.	Para explorar os projetos acessíveis, escolha Catálogo.
+
+![menu do OAC "Catálogo"](.\images\Catalogo_Analytics.png)  
 
 3.	Preencha os campo necessários para a criação do seu Autonomous Database conforme mostrado abaixo:
 
