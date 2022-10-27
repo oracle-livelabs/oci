@@ -87,6 +87,16 @@ You can also test the connection:
 
 ![Test Connection OpenSearch](images/opensearch-vb-connection-opensearch3.png)
 
+### C. Variable region
+
+We need also to give the region to Visual Builder that will use it to call the preAuthRequest.
+- Click on the Application name: *opensearch*
+- Go to the *Variables* tab
+- Click on the variable *region*
+- Edit it and replace with your region name. Ex: eu-frankfurt1
+
+![Edit variable region](images/opensearch-vb-variable-region.png)
+
 ## Test the application
 
 Click on the run button on the top
