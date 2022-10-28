@@ -1,47 +1,48 @@
-# Criar um Bucket
+# Criar um Conjunto de Dados
 
 ## Introdução
 
-O serviço Oracle Cloud Infrastructure Object Storage é uma plataforma de armazenamento de alto desempenho em escala de internet que oferece durabilidade de dados confiável e econômica. O serviço Object Storage pode armazenar uma quantidade ilimitada de dados não estruturados de qualquer tipo de conteúdo, incluindo dados analíticos e conteúdo avançado, como imagens e vídeos..
+Neste Lab você vai aprender a criar um conjunto de Dados (Dataset) no Oracle Analytics Cloud
 
-Neste Lab você vai aprender a trabalhar com Object Storage dentro da Oracle Cloud Infrastructure
-
-*Tempo estimado para o Lab:* 10 Minutos
+*Tempo estimado para o Lab:* 20 Minutos
 
 ### Objetivos
 
-* Criar um bucket na OCI.
-* Criar um site estático utilizando um bucket.
+* Selecionar as tabelas
+* Fazer o Join entre as tabelas
+* Salvar o Conjunto de Dados
 
-## Task 1: Criar um bucket
+## Task 1: Selecionar as tabelas
 
-1.	No menu principal, clique em **Storage** e em **Buckets**.
+1.	Clique no botão **Criar** na parte superior direita e em seguida selecione **Conjunto de Dados**.
 
-![menu do object storage](./images/bucket-menu-1.png)
+![Botão Criar e depois em Conexão](./images/click-create-1.png)
 
-2. Então, clique em **Create Bucket**.
+2.	Selecione a Conexão com o Autonomous Data Warehouse: **ADW_FAST_TRACK**.
 
-![clique em "Create"](./images/bucket-create-2.png)
+![Selecione a conexão com ADW ](./images/create-dataset-2.png)
 
-3. Preencha o formulário como abaixo e clique em **Create**.
+3. Expanda a lista de Esquemas do Autonomous Data Warehouse, localiza o Esquema MIAU_CORP e Localize as duas tabelas que utilizaremos nesse Workshop: **Vendas** e **Pedidos** .
 
-- **Bucket Name**: bucket-site
-- **Default Storage Tier**: Standard
-- **Enable Object Versioning**: Checado
+![Localiza as tabelas](./images/select-tables-3.png)
 
-![configure os parametros do bucket](./images/bucket-config-3.png)
+## Task 2: Join entre as tabelas
 
-## Task 2: Configurar o bucket
+1.	Seleciona a tabela **Pedidos** e arraste até o centro da tela do Diagramas de Junção (Join).
 
-1.	Para o seu bucket, clique no ícone dos três pontos e em **Edit**.
+![Seleciona a tabelas Pedidos](./images/select-pedidos.png)
 
-![editar visibilidade do bucket](./images/bucket-edit-4.png)
+2. Em seguida arrate a tabela **Vendas** e solte ao Lado da tabela de pedidos.
 
-2. Altere a visibilidade para 'Public', desmarque a opção 'Allow users to list objects from this bucket' e clique em **Save Changes**.
+![Seleciona a tabelas Vendas](./images/select-vendas.png)
 
-![clique em "Public" e "Save Changes"](./images/bucket-public-5.png)
+O Oracle Analytics Cloud (OAC) vai criar o Join de forma automática para você, desde as duas tabelas tenham o mesmo nome na coluna usada para o Join em si.
 
-## Task 3: Disponibilizar o site estático a partir do bucket criado
+![Seleciona a tabelas Vendas](./images/join-auto-5.png)
+
+Note: É importante que as colunas tenham o mesmo "Tipo": Atributo ou Medida para que vocÊ possa fazer o Join manual
+
+## Task 3: Criar Join Manualmete
 
 1. Acesse o seu bucket.
 
