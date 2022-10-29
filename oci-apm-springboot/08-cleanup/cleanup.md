@@ -98,7 +98,10 @@ To delete the workshop setup from your tenancy, follow the steps below.
 
 5. **Delete Virtual Cloud Network** dialog opens. Click **Scan**.
 
+
     ![Oracle Cloud, Cloud console](images/4-14-2-cleanup.png " ")    
+
+
 
 6. Click the **Terminate All** button when activated. Termination of the resources begins. Once the message **Virtual Cloud Network termination complete** shows, click **Close**.
     ![Oracle Cloud, Cloud console](images/4-15-cleanup.png " ")    
