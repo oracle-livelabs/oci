@@ -4,7 +4,7 @@ Oracle Cloud Infrastructure is responsible for securing the infrastructure that 
 
 This workshop will cover step-by-step(manual) and automated approach which you can follow to deploy required components on Oracle Cloud Infrastructure with VM Series Firewall solution.
 
-Since you will be using OCI Marketplace's product (VM Series Firewall) so make sure you have access to **Paid Listings** available on Oracle Cloud Infrastructure Marketplace which allows you to have an active license. 
+Since you will be using OCI Marketplace's product (VM Series Firewall) so make sure you have access to **Paid Listings** available on Oracle Cloud Infrastructure Marketplace which allows you to have an active license.
 
 ## VM Series Solution
 
@@ -33,7 +33,17 @@ Estimated time: 120 minutes
 
    - Access to Oracle Cloud Marketplace listings **BYOL** and/or **PAID** listings.
 
-   **PLEASE READ**: If you don't have access to paid listings, you can still follow manual steps outlined in this workshop using **BYOL** listing on marketplace. You will have to procure license on your own.
+**PLEASE READ**: If you don't have access to paid listings, you can still follow manual steps outlined in this workshop using **BYOL** listing on marketplace. You will have to procure license on your own.
+
+### Comments
+
+Oracle Cloud Infrastructure now supports **Intra VCN routing capabilities** which gives us the simplicity of configuring routing to support OCI workload traffic within VCNs and you can also use a Firewall to inspect/secure your traffic. 
+
+- **Intra-VCN Routing**: Allows you to control routing for intra-VCN traffic and you are able to define subnet level routes.
+- **IGW/NATGW Ingress Routing**: Allows definition of routes for inbound public traffic to the VCN towards a user-selected next-hop.
+- **SGW Ingress Routing enhancement**: Allows you to define your own routes for SGW to route traffic from OCI services to destinations inside your VCN
+
+You can learn more about **Intra VCN Routing** [here](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingroutetables.htm#:~:text=Intra%2DVCN%20routing%20allows%20you,route%20for%20the%20VCN%20CIDR.), this workshop can be referred and implment your use-case as needed. 
 
 #### Let's get Started!
 
@@ -49,7 +59,7 @@ You may now [proceed to the labs](#next).
 
 ## Acknowledgements
 
-- **Author** - Arun Poonia, Senior Solutions Architect
+- **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Palo Alto Networks
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, July 2021
+- **Last Updated By/Date** - Arun Poonia, Oct 2022
