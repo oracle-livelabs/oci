@@ -2,14 +2,7 @@
 
 ## Introdução
 
-***Regiões (Regions)***
 
-O Oracle Cloud Infrastructure é hospedado em regiões e domínios de disponibilidade. Uma região é uma área geográfica localizada. Uma região é composta por um ou mais domínios de disponibilidade. A maioria dos recursos do Oracle Cloud Infrastructure são específicos da região, como uma rede de nuvem virtual (VCN), ou específicos do domínio de disponibilidade, como uma instância de computação.
-
-As regiões são completamente independentes de outras regiões e podem ser separadas por grandes distâncias - entre países ou mesmo continentes. Geralmente, você implantaria um aplicativo na região onde ele é mais usado, uma vez que usar recursos próximos é mais rápido do que usar recursos distantes. No entanto, você também pode implantar aplicativos em diferentes regiões para:
-
-* Mitigar o risco de eventos em toda a região, como grandes sistemas climáticos ou terremotos
-* Atender a diversos requisitos para jurisdições legais, domínios fiscais e outros critérios comerciais ou sociais
 
 ***Domínios de disponibilidade (Availability Domains - AD)***
 
