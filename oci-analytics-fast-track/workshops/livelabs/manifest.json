@@ -27,17 +27,22 @@
             "filename": "../../ft-create-dataset/ft-create-dataset.md"
         },
         {
-            "title": "Lab 4: Crie Visualizações - Primeiros Passos",
+            "title": "Lab 4: Preparar um Conjunto de Dados",
+            "description": "Enriqueça seus dados através de transformações no Analytics Cloud",
+            "filename": "../../ft-prepare-dataset/ft-prepare-dataset.md"
+        },
+        {
+            "title": "Lab 5: Crie Visualizações - Primeiros Passos",
             "description": "Explore os recursos do Oracle Analytics Cloud para criar visualizações",
             "filename": "../../ft-create-visualizations/ft-create-visualizations.md"
         },
         {
-            "title": "Lab 5: Crie Visualizações - Avançado",
+            "title": "Lab 6: Crie Visualizações - Avançado",
             "description": "Explora mais os tipos de gráficos oferecidos pelo Oracle Analytics Cloud",
             "filename": "../../ft-advanced-visualizations/ft-advanced-visualizations.md"
         },
         {
-            "title": "Lab 6: Atividades Administrativas",
+            "title": "Lab 7: Atividades Administrativas",
             "description": "Aprenda a executar atividades de administração da instância",
             "filename": "../../ft-oac-management/ft-oac-management.md"
         },
