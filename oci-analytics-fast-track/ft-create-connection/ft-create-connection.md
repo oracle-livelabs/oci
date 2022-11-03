@@ -1,121 +1,58 @@
-# Criar um Block Volume
+# Criar uma Conexão
 
 ## Introdução
+Como usuário do Oracle Analytics com acesso de Autor de Conteúdo do DV, você pode estabelecer conexão com as origens de dados usadas por sua organização. Por exemplo, você pode criar um conjunto de dados que inclua tabelas de uma conexão do Autonomous Data Warehouse , tabelas de uma conexão Spark e tabelas de uma área de assunto local.
 
-O serviço Oracle Cloud Infrastructure Block Volume permite provisionar e gerenciar dinamicamente os volumes de armazenamento em blocos . Você pode criar, anexar, conectar e mover volumes, bem como alterar o desempenho do volume, conforme necessário, para atender aos requisitos de armazenamento, de desempenho e do aplicativo. Depois de anexar e conectar um volume a uma instância, você pode usar o volume como disco rígido comum. Também é possível desconectar um volume e anexá-lo a outra instância sem perda de dados.
+Neste Lab você vai aprender a conectar o Oracle Ananlytics Cloud a dados.
 
-Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Cloud Infrastructure
-
-*Tempo estimado para o Lab:* 20 Minutos
+*Tempo estimado para o Lab:* NN Minutos
 
 ### Objetivos
 
-* Criar um volume de Block Storage de 500 GB.
-* Anexar o Block Storage a uma instância de computação.
+* Estabelecer uma conexão.
+* Testar sua conexão. 
 
-## Task 1: Criar volume de Block Storage
+## Tarefa 1: Criar uma Conexão
 
-1.	No menu principal, clique em **Storage** e em **Block Volumes**.
+Você pode se conectar a vários tipos de fonte de dados, como bancos de dados em nuvem (públicas e privadas), bancos de dados locais (incluindo JDBC - Conectividade de Banco de Dados Java) e muitos aplicativos comumente usados, como Dropbox, Google Drive e Amazon Hive.
 
-![menu de block storage](./images/block-volume-menu-1.png)
+1.  Na página inicial, no canto superior esquerdo, clique em **Criar** e, em seguida, clique em **Conexão**.
 
-2. Então, clique em **Create Block Volume**, preencha o formulário como abaixo e clique em **Create Block Volume**.
+![Create](./images/Conexão.png)
 
-- **Name**: block_vol500GB
-- **Create in Compartment**: `<seu-compartment>`
-- **Virtual Cloud Network**: `<sua-vcn>`
-- **Availability Domain**: AD 1
-- **Size**: 500 GB
-- **Backup Policy**: Bronze
-- **Volume Performance**: Balanced
+2. Será exibido uma nova janela, na qual mostrará os ícones dos conectores disponíveis.
+Você pode pesquisar pelo nome ou rolar a barra para encontrar mais opções. Bastar clicar no ícone correspondente à conexão desejada para começar a configurá-la.
 
-*Selecione o Availability Domain (AD) do block volume como sendo o mesmo da instância.*
+![Conectores](./images/Conectores.png)
 
-![preencha os parametros](./images/block-volume-config-2.png)
+Você cria uma conexão para cada fonte de dados que deseja acessar no Oracle Analytics. Uma vez conectado, você pode visualizar seus dados para criar insights.
 
-![clique em "Criar"](./images/block-volume-create-3.png)
+## Tarefa 2: Teste Sua Conexão 
+**OPCIONAL**
 
-## Task 2: Conectar o block volume a uma instância de computação
+Para ter certeza que sua conexão está ativa e funcionando, visualize-a através da lista de conexões.
+Tal lista contém as conexões que você criou e as conexões que você tem permissão para acessar e usar para criar conjuntos de dados.
+Existem algumas formas de fazer essa verificação:
 
-1.	No menu principal, clique em **Compute** e em **Instances** para acessar sua instância previamente provisionada.
+1.	No Menu Hamburguer da página inicial, clique em **Dados** e, em seguida, na guia **Conexões** para acessar a lista. Se a conexão foi feita de maneira correta, você será capaz de visualizá-la, bem como os detalhes da mesma.
 
-![menu de compute](./images/block-volume-compute-4.png)
+![Conexão com banco](./images/Conexaofeita.png)
 
-2. Uma vez clicando na instância correspondente, desça a página e, no menu 'Resources', clique em **Attached block volumes** e **Attach block volume**.
+2. Ao clicar em **Criar** e posteriormente em **Conjunto de Dados** para dar início à criação do seu conjunto, você será direcionado para uma guia onde imediatamente, conseguirá visualizar sua conexão. 
 
-![clique em attach block volumes](./images/block-volume-attach-5.png)
+![Criando o conjunto](./images/conjuntodedados.png)
 
-3. Preencha o formulário como abaixo e clique em **Attach**.
+![Acessando o conjunto](./images/ConjuntodedadosADW.png)
 
-- **Device path**: /dev/oracleoci/oraclevdb
-- **Attachment type**: ISCSI
-
-![clique em attach](./images/block-volume-attach-config-6.png)
-
-4. No lado direito, clique no ícone de três pontos e em **iSCSI Commands & Information**.
-
-![clique em iSCSI Commands & Information](./images/block-volume-iscsi-7.png)
-
-5. Copie o comando para 'Connect' e clique em **Close**.
-
-![clique em copy](./images/block-volume-iscsi-copy-8.png)
-
-6. No Cloud Shell, inicialmente, se conecte à instância de computação e execute o comando copiado.
-
-``` shell
-<copy>
-ssh opc@<ip-da-máquina>
-sudo su -
-<comando-connect>
-</copy>
-```
-
-*Neste ponto, estamos acessando a máquina, utilizando o usuário root e executando o comando de 'attach'.*
-
-![cole o comando](./images/block-volume-iscsi-paste-9.png)
-
-7. Execute o comando abaixo para detectar o novo dispositivo:
-
-``` shell
-fdisk -l
-```
-
-![detecte o disco](./images/block-volume-detect-10.png)
-
-## Task 3: Formatar block volume e montar na instância
-
-1. Formate o disco com o comando abaixo:
-
-``` shell
-mkfs /dev/sdb
-```
-
-![formate o disco](./images/block-volume-format-11.png)
-
-2. Crie um diretório a ser utilizado como um ponto de montagem para o novo volume de disco com o comando abaixo:
-
-``` shell
-mkdir /vol500g
-```
-
-![crie um diretório](./images/block-volume-folder-12.png)
-
-3. Monte o novo volume de disco e cheque se o disco está disponível com os comandos abaixo:
-
-``` shell
-mount /dev/sdb /vol500g
-df -h
-```
-
-![monte o disco](./images/block-volume-mount-13.png)
+Pronto!
 
 Você pode **seguir para o próximo Lab**.
 
 ## Conclusão
 
-Nesta sessão você aprendeu sobre Block Volumes na prática.
+Nesta sessão você aprendeu quais fontes de dados você pode usar em conjuntos de dados, como acessá-los e averiguar se a conexão está apta a ser usada.
 
 ## Autoria
 
-- **Autores** - Arthur Vianna, Lucas de Almeida, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Date** - Arthur Vianna, Jun/2022
+- **Autores** - Isabelle Vieira
+- **Último Update Por/Date** - Isabelle Vieira, Novembro/2022
