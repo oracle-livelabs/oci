@@ -1,64 +1,65 @@
-# Criar uma Virtual Cloud Network (VCN)
+# Atividades Administrativas
 
 ## Introdução
 
-**Networking, Virtual Cloud Network e Recursos de Rede**
+Neste Lab você vai aprender a gerenciar a solução Oracle Analytics Cloud.
 
-Uma VCN é uma rede definida por software que você configura nos data centers do Oracle Cloud Infrastructure em determinada região. Uma sub-rede é uma subdivisão de uma VCN. Para obter uma visão geral de VCNs, tamanho permitido, componentes padrão da VCN e cenários para uso de uma VCN, consulte [Visão Geral do Serviço Networking.](https://docs.oracle.com/pt-br/iaas/Content/Network/Concepts/overview.htm#network_landing)
-
-Neste Lab você vai aprender a provisiona uma Virtual Cloud Network (VCN) com acesso a internet.
-
-*Tempo estimado para o Lab:* 15 Minutos
+*Tempo estimado para o Lab:* xx Minutos
 
 ### Objetivos
 
-* Criar uma Virtual Cloud Network (VCN)
+* Criar Backups do ambiente
+* Definir o tipo de acesso de usuários
+* Gerenciar a utilização de performance da solução
+* Criar uma url de acesso a solução
 
-## Task 1: Criar uma VCN (Virtual Cloud Network)
+## Task 1: Backup do Ambiente com Snapshots
+
+1.	Na página inicial, clique no hambúrguer na lateral direita e, em seguida, clique em **Console**.
+
+![acesse o menu de administração da solução](./images/1-Acesso_Snapshot.png)
+
+2.	Buscar o botão **Snapshots** e clicar nele.
+
+![acesse o menu de criação de Snapshots](./images/2-Botao_Snapshot.png)
+
+3.  Clicar em **Create Snapshot**, adicionar o nome do arquivo de Backup a sua escolha, nesse tutorial estamos utilizando **Backup Geral**, em content escolher a opção **Everything** e clicar em **Create**
+
+![criar o snapshot](./images/3-Criação_Snapshot.png)
+
+4.  Aguardar alguns segundos para que o processamento finalize, em seguida, clicar nos 3 pontos e clicar em **Export**
+
+![criar o snapshot](./images/4-Menu_Export_Snapshot.png)
+
+5.  Escolher a opção **Local File System**, adicionar uma senha e confirmar essa senha, clicar em **Export**
+
+![criar o snapshot](./images/5-Salvar_Snapshot.png)
+
+O arquivo será baixado para a máquina local, mas caso fosse necessário, poderia ser baixado para um ambiente de Data Lake (Object Storage).
+
+## Task 2: Adminstração de usuários através de Application Roles
+
+1.	No menu principal, clique em "Networking" e escolha "Virtual Cloud Networks"
+
+## Task 3: Mudança de url de acesso ao Oracle Analytics Cloud (Opcional)
 
 1.	No menu principal, clique em "Networking" e escolha "Virtual Cloud Networks"
 
 ![acesse o menu principal](./images/vcn-access-1.png)
 
-2.	Escolha o compartimento criado no Lab 1: "Compartimento-Trial"
+![acesse o menu principal](./images/vcn-access-1.png)
 
-![selecione seu compartimento](./images/vcn-select-compartment-2.png)
+## Task 4: Gerenciamento de utilização com Usage Tracking (Opcional)
 
-3. Clique em "Start VCN Wizard"
+1.	No menu principal, clique em "Networking" e escolha "Virtual Cloud Networks"
 
-![inicie o wizard de criação](./images/vcn-start-wizard-3.png)
+![acesse o menu principal](./images/vcn-access-1.png)
 
-> **Note:** Usando a opção "Start VCN Wizard" você deixa toda a estrutura de rede pronta em menos de 5 minutos.
-
-4. Escolha a primeira opção: "VCN with Internet Connectivity"
-
-![VCN com conectividade com a internet](./images/vcn-wizard-4.png)
-
-5. Configure os parâmetros básicos da VCN e depois clique em "Next"
-
-* Nome: VCN-TRIAL
-* Compartimento: Compartimento-Trial
-* VCN CIDR Block: 10.0.0.0/16 
-* Sub-rede Pública (Public Subnet): 10.0.0.0/24 
-* Sub-rede Privada (Private Subnet): 10.0.1.0/24
-
-![preencha os campos](./images/vcn-fields-5.png)
-
-6. Revise os componentes de rede que serão criados e clique em "Create"
-
-![revise os recursos que serão criados](./images/vcn-review-6.png)
-
-7. Acompanhe o status dos recursos sendo criados e depois clique em "View Virtual Cloud Network":
-
-![confira os recursos criados](./images/vcn-view-resources-7.png)
-
-8. Veja que sua VCN foi criada muito rapidamente. Aproveite agora para explorar sua VCN e conferir os recursos que foram criados.
-
-![vcn listada na tela](./images/vcn-listed-8.png)
-
-Ao final você deve ter: 1 VCN, 2 sub-redes regionais (pública e privada), 1 Internet Gateway, 1 NAT Gateway e 1 Service Gateway, todos prontos para uso.
-
-![página de detalhes da vcn](./images/vcn-details-page-9.png)
+//Fazer até 4/5 tasks
+//* simples cria italico
+//**duplo cria negrito
+//***triplo cria negrito + italico
+// se o usuário tiver que clicar em algo, colocar em negrito entre ""
 
 Você pode **seguir para o próximo Lab**.
 
@@ -68,5 +69,5 @@ Nesta sessão você aprendeu a criar uma Virtual Cloud Network (VCN) na prática
 
 ## Autoria
 
-- **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Updated Por/Data** - Arthur Vianna, Jun/2022
+- **Autores** - Breno Comin, Guilherme Galhardo, Isabella Alvarez, Isabelle Dias, Thais Henrique
+- **Último Updated Por/Data** - Isabella Alvarez, Nov/2022
