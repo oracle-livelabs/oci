@@ -182,12 +182,14 @@ Nossas colunas já estão com a classificação correta (Atributo/Métrica), mas
 
 O Oracle Analytics também permite a criação de campos calculados dentro do próprio projeto de visualização para trazer informações complementares àquelas já presentes.
 
-1. Navegue para a aba de **Dados** e cliquem com o botão direito em **Meus Cálculos**. Crie um Cálculo com o nome **Quantidade de Pedidos** e inclua o código **COUNT(ID LINHA DO PEDIDO)**.
-   Clique em **Validar** e logo após em **Salvar**.
+1. Navegue para a aba de **Dados** e cliquem com o botão direito em **Meus Cálculos**. Crie um Cálculo com o nome **Quantidade de Pedidos** e inclua o código abaixo. Logo após, clique em **Validar** e logo após em **Salvar**.
+```
+COUNT(ID LINHA DO PEDIDO)
+```
 
 ![](./images/2022-10-26-17-02-27.png)
 
-2. Esse campo poderá ser usado posteriormente para a contagem de quantos pedidos existem na nossa base. A visualização abaixo mostra o uso de dois campos criados nessa atividade para trazer um insight: No centro do Donut vemos o valor total de pedidos (~9000), dos quais 52.67% trouxeram Lucro e 47.33% trouxeram prejuízo para a companhia. Trabalharemos em como criar essas visualizações no próximo laboratório.
+1. Esse campo poderá ser usado posteriormente para a contagem de quantos pedidos existem na nossa base. A visualização abaixo mostra o uso de dois campos criados nessa atividade para trazer um insight: No centro do Donut vemos o valor total de pedidos (~9000), dos quais 52.67% trouxeram Lucro e 47.33% trouxeram prejuízo para a companhia. Trabalharemos em como criar essas visualizações no próximo laboratório.
 
 ![](./images/2022-10-26-17-04-03.png)
 
@@ -195,11 +197,15 @@ O Oracle Analytics também permite a criação de campos calculados dentro do pr
 
 ![](./images/2022-10-26-17-11-47.png)
 
-4. Ao arrastar a quantidade, o sistema trará o código que origina aquele campo calculado. O resultado final deverá ficar assim: **LUCRO / COUNT(ID LINHA DO PEDIDO)**. Valide o cálculo e **salve-o**.
+4. Ao arrastar a quantidade, o sistema trará o código que origina aquele campo calculado. O resultado final deverá conforme abaixo. Após isso, **valide** o cálculo e **salve-o**.
+
+```
+LUCRO / COUNT(ID LINHA DO PEDIDO)
+```
 
 ![](./images/2022-10-26-17-12-15.png)
 
-5. Ao arrastar esse valor para a tela, será trazido o lucro médio calculado conforme nossa regra definiu.
+1. Ao arrastar esse valor para a tela, será trazido o lucro médio calculado conforme nossa regra definiu.
 
 ![](./images/2022-10-26-17-13-01.png)
 
