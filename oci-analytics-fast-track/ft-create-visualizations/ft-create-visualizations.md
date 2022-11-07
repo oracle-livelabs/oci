@@ -1,232 +1,160 @@
-# Criar Máquinas Virtuais (VM)
+# Criar Visualizações
 
 ## Introdução
 
-O Oracle Cloud Infrastructure permite provisionar e gerenciar hosts de computação, conhecidos como instâncias. Você pode criar instâncias conforme necessário para atender aos seus requisitos de computação e aplicativo. Depois de criar uma instância, você pode acessá-la de forma segura pelo seu computador, reiniciá-la, anexar e desanexar volumes e encerrá-la quando terminar de usá-la.
+Nesse Lab você vai aprender a criar visualizações no Oracle Analytics Cloud.
 
-Nesse Lab você vai aprender a criar 2 máquinas virtuais Linux e uma máquina virtual com Windows.
-
-*Tempo estimado para o Lab:* 35 Minutos
+*Tempo estimado para o Lab:* 30 Minutos
 
 ### Objetivos
 
-* Criar um par de chaves SSH no OCI Cloud Shell
-* Criar 2 máquinas virtuais (VM) Linux
-* Criar 1 máquina virtuais (VM) Windows
-* Acessar as instâncias
+* Conhecer a interface de criação de visualizações do OAC
+* Construir um dashboard com gráficos de diferentes tipos
+* Alterar propriedades dos gráficos e fazer uso de funcionalidades complementares para personalizar o dashboard
 
+## Task 1: Explorar a Interface
 
-## Task 1: Criar um par de chaves SSH
+O Oracle Analytics Cloud (OAC) possuí uma interface simples, o que permite navegar rapidamente por suas diversas opções e funcionalidades. Em nossa primeira tarefa exploraremos a interface do Oracle Analytics Cloud dentro de uma pasta de trabalho.
 
-1.	Acesse o OCI Cloud Shell clicando no botão do menu superior direito. A OCI irá provisionar um terminal Linux no web browser
+Sempre que você abrir ou criar uma pasta de trabalho, por padrão, você terá a seguinte tela no modo de visualização:
 
-![abra o cloud shell](./images/vm-open-shell-1.png)
+![Tela Inicial.](./images/tela_inicial.png)
 
-2.	Crie um par de chaves RSA com o comando:
+Para explorar as demais opções de navegação na interface:
 
-```
-ssh-keygen -t rsa
-```
+1.  Clique no icone correspondente a **Editar** no menu superior direito da tela.
 
-* Mantenha o nome original (id_rsa) apertando enter
-* O campo “Key Passphrase” é opcional
+![Habilitar Edição.](./images/habilitar_edicao.png)
 
-![criar chave ssh](./images/vm-ssh-key-2.png)
+Após habilitar o modo de edição, a interface da tela devera ter a seguinte configuração:
 
-3. Exiba o conteúdo da chave pública que você criou utilizando o comando:
+![Habilitar Edição.](./images/tela_edicao.png)
 
-```
-cat ~/.ssh/id_rsa.pub
-```
+2.  No menu superior direto da tela encontre a opção correspondente aos comandos de **Desfazer/Refazer a Última Edição**.
 
-* Selecione e Copie o conteúdo dessa chave, pois a usaremos para a criação das máquinas virtuais Linux
+![Desfazer/Refazer Última Edição.](./images/voltar_avancar.png)
 
-![copiar texto da chave](./images/vm-copy-key-3.png)
+3.  No menu superior direto da tela encontre a opção correspondente ao comando de **Visualização**.
 
-Para a criação da VM, usaremos a chave pública. A chave privada será usada apenas para conexão.
+![Modo de Visualização.](./images/visualizacao.png)
 
-4. Baixe as duas chaves também no seu computador. Salve as chaves privadas e públicas em um local seguro.
+4.  No menu superior direto da tela encontre a opção correspondente ao comando de **Atualizar Dados**.
 
-Para isso, basta clicar no menu do Cloud Shell e solicitar o Download:
+![Atualizar Dados.](./images/refresh.png)
 
-![baixar chaves](./images/vm-download-keys-4.png)
+5.  No menu superior direto da tela encontre a opção correspondente ao comando de **Adicionar Observação**.
 
-* Para baixar a chave pública, o caminho é: “.ssh/id_rsa.pub”
+![Adicionar Observação.](./images/observacao.png)
 
-![caminho para a chave privada](./images/vm-private-key-5.png)
+6.  No menu superior direto da tela encontre a opção correspondente ao comando de **Auto Insights**.
 
-* Para baixar a chave privada, o caminho é: “.ssh/id_rsa”
+![Auto Insights.](./images/autoinsights.png)
 
-![caminho para a chave publica](./images/vm-public-key-6.png)
+7.  No menu superior direto da tela encontre a opção correspondente ao comando de **Exportar**.
 
-## Task 2: Criar 2 máquinas virtuais Oracle Linux
+![Exportar.](./images/exportar.png)
 
-1.	No Menu Principal, clique em : Compute > Instances, então “Create Instance” (Botão Azul) :
+8.  No menu superior direto da tela encontre a opção correspondente ao comando de **Salvar**.
 
-![acesse compute no menu principal](./images/vm-access-compute-7.png)
+![Salvar.](./images/salvar.png)
 
-![botão "Create Instance"](./images/vm-create-instance-8.png)
+Na região central do menu superior da tela é possível alternar entre páginas que fornecem acesso a diferentes funcionalidades.
 
-* Name of your instance: VM-OracleLinux-AD1
-* Availability Domain: AD 1
-* Operating System: Oracle Linux 7.9
-* Instance Type: Virtual Machine
-* Instance Shape: AMD VM.Standard.E3.Flex
-* Choose SSH Key File: Insira a chave SSH pública (.pub)
-* Virtual Cloud Network Compartment: "Compartimento-Trial"
-* Virtual Cloud Network: "VCN-TRIAL"
-* Subnet Compartment: "Compartimento-Trial"
-* Subnet: Public Subnet
-* Assign Public IP Address
-* Lembre-se de escolher o AD certo e seu Compartimento
+9.  Na região central do menu superior da tela encontre a opção de **Visualizar**, que é referente a página atual.
 
-![preencha os campos iniciais](./images/vm-fields-create-9.png)
+![Tela Visualizar.](./images/tela_visualizar.png)
 
-2. Depois de expandir as opções de Shapes e Network, insira os dados necessários para concluir o processo de criação:
+10. Na região central do menu superior da tela encontre e selecione a opção **Dados** para acessar a página que permite adicionar novos conjuntos de dados a pasta de trabalho e editar as condições de junção entre eles.
 
-![selecione a imagem e o shape](./images/vm-image-shape-10.png)
+![Tela Dados.](./images/tela_dados.png)
 
-![selecione virtual machine e o shape](./images/vm-type-11.png)
+11. Na região central do menu superior da tela encontre e selecione a opção **Apresentar** para acessar a página que permite adicionar telas a uma apresentação.
 
-![selecione o tamanho da virtual machine](./images/vm-size-12.png)
+![Tela Apresentar.](./images/tela_apresentar.png)
 
-3. Ao inserir as informações de rede, lembre-se de escolher a opção “Assign a Public IP address” para Atribuir um endereço IP público à instância de computação.
+Outras opções de navegação são encontradas na região inferior da página.
 
-![Configurações de rede para VM](./images/vm-network-config-13.png)
+12. Na região inferior direita da página encontre as opções de **Brushing**, **Aplicar Dados Automaticamente**, **Alternar Painel de Dados** e **Alternar Painel de Gramática**.
 
-4. Cole a chave pública SSH criada por você no exercício 3A e clique no botão “Create”.
+![](./images/opcoes_tela.png)
 
-![cole a chave publica](./images/vm-paste-priv-key-14.png)
+13. Na região inferior esquerda da página encontre a opção de **Adicionar Tela**, representada pelo simbolo **+**.
 
-Você provavelmente terá a nova instância devidamente criada em alguns minutos. Depois de terminar o processo de criação, a tela principal ficará assim:
+## Task 2: Criar um Dashboard com Visualizações Básicas
 
-![confira a maquina virtual criada](./images/vm-created-15.png)
+Em nossa segunda tarefa criaremos algumas visualizações básicas para compor nosso dashboard.
 
-5. Repita os passos acima para criar a Máquina Virtual (VM) Linux 2, porém desta vez com os dados abaixo:
+1.  Iniciaremos a construção do nosso dashboard adicionando uma visualização do tipo Tile (Métrica) a tela. Para isso selecione o campo de **Quantidade Pedida** dentro da tabela "Pedidos", arraste e solte no meio da tela.
 
-* Name of your instance: VM-OracleLinux-AD2
-* Availability Domain: AD 2
-* Operating System: Oracle Linux 7.9
-* Instance Type: Virtual Machine
-* Instance Shape: AMD VM.Standard.E3.Flex
-* Choose SSH Key File: Insira a chave SSH pública (.pub)
-* Virtual Cloud Network Compartment: "Compartimento-Trial"
-* Virtual Cloud Network: "VCN-TRIAL"
-* Subnet Compartment: "Compartimento-Trial"
-* Subnet: Public Subnet
-* Assign Public IP Address
+![Criar visualização do tipo Tile.](./images/tile.png)
 
-## Task 3: Acessar a VM Linux pelo OCI Cloud Shell
+2.  Agora iremos adicionar um gráfico do tipo Barras Empilhadas. Para isso navegue para a aba de visualizações, localize e arraste a opção de Barras Empilhadas para o lado direito da visualização de Tile.
 
-1. Pegue o IP público da instância
+![Criar gráfico do tipo Barras Empilhadas.](./images/barra_empilhada1.png)
 
-![localize o IP publico da vm](./images/vm-public-ip-16.png)
+3.  Você irá notar que o espaço para este gráfico está vazio. Para popular o gráfico com dados, selecione o campo de **Prioridade do Pedido** dentro da tabela "Pedidos", arraste e solte no espaço de **Categoria**. Faça o mesmo com o campo de **Quantidade de Pedidos** dentro da tabela "Meus Cálculos", porém o solte no espaço de **Valores**.
 
-2. No OCI Cloud Shell, faça conexão com a máquina criada com o comando:
+![Popular gráfico do tipo Barras Empilhadas.](./images/barra_empilhada2.png)
 
-````
-<copy>
-ssh opc@<ip publico da VM>
-</copy>
-````
+4.  Para ordenar as barras do gráfico criado, localize e selecione a opção de **Classificar**, que é representada por um par de setas.
 
-* O usuário default nas instâncias Oracle Linux é opc
+![Ordenar gráfico de Barras Empilhadas.](./images/barras_ordenar1.png)
 
-![cole o comando no cloud shell com IP publico](./images/vm-ssh-command-17.png)
+5.  Na janela que irá abrir, selecione a métrica pela qual você deseja ordenar o gráfico, o modo de ordenação e clique em OK.
 
-## Task 4: Criar uma Máquina Virtual Windows
+![Ordenar gráfico de Barras Empilhadas.](./images/barras_ordenar2.png)
 
-1. Para criar vá no Menu Principal e clique em Menu > Compute > Instances. Clique em "Create Instance".
+6.  A seguir criaremos um gráfico de Donut. Para isso navegue para a aba de visualizações, localize e arraste a opção de Donut para a região abaixo da visualização de Tile.
 
-![acesse compute no menu principal](./images/vm-access-compute-7.png)
+![Criar gráfico de Donut.](./images/donut1.png)
 
-![clique em "Create Instance"](./images/vm-create-instance-8.png)
+7.  Para popular o gráfico com dados, selecione o campo de **Estado** dentro da tabela "Clientes", arraste e solte no espaço de **Categoria**. Faça o mesmo com o campo de **Quantidade de Pedidos** dentro da tabela "Meus Cálculos", porém o solte no espaço de **Valores**.
 
-Dados para criação da VM Windows:
+![Popular gráfico de Donut.](./images/donut2.png)
 
-* Name of your instance: VM-Windows-AD3
-* Availability Domain: AD 3
-* Operating System: Windows Server 2016 Standard
-* Instance Type: Virtual Machine
-* Instance Shape: AMD VM.Standard.E3.Flex
-* Choose SSH Key File: Insira a chave SSH pública (.pub)
-* Virtual Cloud Network Compartment: "Compartimento-Trial"
-* Virtual Cloud Network: "VCN-TRIAL"
-* Subnet Compartment: "Compartimento-Trial"
-* Subnet: Public Subnet
-* Assign Public IP Address
+8.  Iremos adicionar uma tabela com valores e atributos ao nosso dashboard. Para isso navegue para a aba de visualizações, localize e arraste a opção de Tabela para a região inferior da página.
 
-![selecione AD, shape e imagem windows](./images/vm-shape-windows-18.png)
+![Criar Tabela.](./images/tabela1.png)
 
-2. Ao inserir as informações de rede, lembre-se de escolher a opção “Assign a Public IP address” para Atribuir um endereço IP público à instância de computação.
+9.  Para popular a Tabela com dados, segure a tecla Control (CTRL) e selecione os campos **ID do Pedido**, **Prioridade do Pedido**, **Quantidade Pedida**, **Frete** e **Modo de Envio** dentro da tabela "Pedidos", arraste e solte no espaço de **Linhas**.
 
-![selecione a rede](./images/vm-network-config-13.png)
+![Popular Tabela.](./images/pivot2.png)
 
-*A criação leva geralmente 5 minutos.*
+10. Para finalizar o primeiro conjunto de visualizações, iremos criar uma Tabela Dinâmica. Para isso navegue para a aba de visualizações, localize e arraste a opção de Tabela Dinâmica para a região ao lado direito da Tabela.
 
-Uma vez criada, siga os passos anteriores para encontar o IP público da VM Windows e abra o "Remote Desktop Connection" no Menu Principal do seu computador. Para acessar o Windows VM, no Menu Principal do seu computador escolha “run”, digite “mstsc”, depois clique em “OK”.
+![Criar Tabela Dinâmica.](./images/pivot1.png)
 
-![acesse "run" no seu computador e digite "mstsc"](./images/vm-win-run-19.png)
+11. Para popular a Tabela Dinâmica com dados, selecione o campo de **Categoria do Produto** dentro da tabela "Vendas", arraste e solte no espaço de **Colunas**. Selecione o campo de **Estados** dentro da tabela "Clientes", arraste e solte no espaço de **Linhas**. Faça o mesmo para o campo **Quantidade de Pedidos** dentro da tabela "Meus Cálculos", porém o solte no campo de **Valores**.
 
-3. Use o IP público da instância e clique em "Connect"
+![Popular Tabela Dinâmica.](./images/pivot.png)
 
-![janela remote desktop connection](./images/vm-win-access-20.png)
+12. Para melhor identificar esta primeira página do dashboard, vamos renomear esta tela. Clique no triangulo ao lado do nome da tela e clique em renomear.
 
-> **Note:** Você receberá um ERRO ao tentar se conectar, o que é normal, uma vez que precisamos configurar as "Regras de Acesso" do firewall.
+![Clique em renomear](./images/rename-canva-2.png)
 
-Você provavelmente notou que a VM Linux pode ser acessada pela chave SSH logo após sua criação, mas a instância do Windows não pode ser acessada por RDP.
-Para acessar o Windows Compute, precisamos configurar algumas regras de firewall.
-As regras de firewall são definidas dentro de um objeto chamado “Security List”, que pode ser acessado dentro de uma sub-rede.
-As regras de segurança estão dentro da lista de segurança, a partir dela podemos configurar quais portas e protocolos têm permissão para tráfego dentro de uma sub-rede.
+13. Digite o nome **Pedidos** e clique no sinal de check para confirmar.
 
+![Clique em renomear](./images/renomear2.png)
 
-4. Clique no menu lateral em: Networking -> Virtual Cloud Networks -> VCN-Trial
+14. Em seguida vamos criar uma nova tela. Para isso clique no sinal de **+** na parte inferior da tela.
 
-![acesse a VCN criado anteriormente](./images/vm-vcn-access-21.png)
+15. Digite o nome **Lucro** e clique no sinal de check para confirmar.
 
-5. Clique em: Security List -> Default Security List for VCN-Trial
+16. Começaremos a construção dessa nova tela com um gráfico de Dispersão. Para isso, seguiremos o mesmo processo realizado para os demais gráficos, porém selecionando a opção de Dispersão e arrastando para o centro da página. Para popular o gráfico com dados, selecione o campo de **Vendas** dentro da tabela "Vendas", arraste e solte no espaço de **Valores (Eixo Y)**. Faça o mesmo para o campo **Lucro** dentro da tabela "Vendas" e para o campo **Subcategoria do Produto** da tabela "Vendas", porém os soltando nos campos de **Valores (Eixo X)** e **Categoria** respectivamente.
 
-![acesse a default security list ](./images/vm-security-list-22.png)
+![Criar gráfico de Dispersão](./images/disperssao.png)
 
-Para acessar as regras de firewall do VCN, escolha a Security List que deseja configurar. Em nosso exemplo, você encontrará a “Default Security List” já criada em nosso VCN. Clique na lista de segurança “Default Security List” e então o console de regras de acesso aparecerá.
+...
 
-6. Dentro de Security List, clique em “Add Ingress Rules”.
+## Task 3: Alterar Propriedades dos Gráficos
 
-![clique em "Add Ingress Rules"](./images/vm-ingress-rules-23.png)
-
-* Source Type: CIDR 
-* Source CIDR: 0.0.0.0/0 
-* IP Protocol: RDP (TCP/3389) 
-* Source Port Range: All 
-* Destination Port Range: 3389
-
-![janela de Ingress Rules preenchida](./images/vm-ingress-rule-config-24.png)
-
-7. Para acessar o Windows VM, no Menu Principal do seu computador escolha “run”, digite “mstsc”, depois clique em “OK”.
-
-![acesse "run" no seu computador e digite "mstsc"](./images/vm-win-run-19.png)
-
-8. Use o IP Público da instância e clique em “Connect”.
-
-![Localize o IP publico](./images/vm-win-access-20.png)
-
-9. Se tudo estiver configurado corretamente, você será transportado para a página de login do Windows, onde precisará alterar a senha OPC no primeiro acesso.
-
-Veja onde encontrar a senha do Windows:
-
-![Localize "Initial Password"](./images/vm-initial-passwd-25.png)
-
-10. Concluindo esta tarefa, você verá que agora temos 3 instâncias de computação, cada uma em seu próprio Domínio de Disponibilidade (AD).
-
-![lista de instancias criadas](./images/vm-listed-26.png)
-
-Você pode **seguir para o próximo Lab**.
+## Task 4: Adicionar Texto, Cores e Imagens ao Dashboard
 
 ## Conclusão
 
-Nesta sessão você aprendeu a criar Máquina Virtuais Linux e Windows e aprendeu como acessá-las.
+Nesta sessão você aprendeu a criar um dashboard com visualizações básicas de diversos tipos.
 
 ## Autoria
 
-- **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Updated Por/Data** - Arthur Vianna, Jun/2022
+- **Autores** - Guilherme Galhardo, Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias
+- **Último Updated Por/Data** - Guilherme Galhardo, Nov/2022
