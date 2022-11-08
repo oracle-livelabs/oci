@@ -1,11 +1,11 @@
 {
-  "workshoptitle": "The Title of the Workshop is defined in the manifest",
-  "help": "livelabs-help-**enterarea**_us@oracle.com",
+  "workshoptitle": "OCI Fast Track",
+  "help": "livelabs-help-db_us@oracle.com",
   "tutorials": [
     {
-      "title": "Introduction",
-      "description": "The Introduction is always second for LiveLabs. The title and contents menu title match for the Introduction.",
-      "filename": "../../introduction/introduction.md"
+      "title": "Introdução",
+      "description": "Oracle Cloud Infrastructure Fast Track - Workshop ao vivo!",
+      "filename": "../../intro/intro.md"
     },
     {
       "title": "Get Started",
@@ -13,34 +13,44 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
     },
     {
-      "title": "Lab 1: Initialize Environment",
-      "description": "Initialize Environment",
-      "filename": "../../initialize-environment/initialize-environment.md"
+      "title": "Lab 1: Criar um Compartimento",
+      "description": "Acessar e explorar a console da Oracle Cloud e aprenda a criar um compartimento ",
+      "filename": "../../create-compartments/create-compartments.md"
     },
     {
-      "title": "Lab 2: Provision an Instance",
-      "description": "Provisioning the Lab Environment",
-      "filename": "../../provision/provision.md"
+      "title": "Lab 2: Criar uma Virtual Cloud Network (VCN)",
+      "description": "Conheça e crie uma Virtual Cloud Network (VCN)",
+      "filename": "../../create-vcn/create-vcn.md"
     },
     {
-      "title": "Lab 3: Load Data into an Instance",
-      "description": "Loading the data",
-      "filename": "../../data-load/data-load.md"
+      "title": "Lab 3: Criar Máquinas Virtuais (VM)",
+      "description": "Conheça e crie suas máquinas virtuais",
+      "filename": "../../create-compute-vm/create-compute-vm.md"
     },
     {
-      "title": "Lab 4: Query Data",
-      "description": "Queyring the data",
-      "filename": "../../query/query.md"
+      "title": "Lab 4: Criar um Block Volume",
+      "description": "Conheça o Block Volume e como utilizá-lo",
+      "filename": "../../create-block-volume/create-block-volume.md"
+    },
+    {
+      "title": "Lab 5: Criar um Bucket",
+      "description": "Aprenda a criar e utilizar um object storage",
+      "filename": "../../create-bucket/create-bucket.md"
+    },
+    {
+      "title": "Lab 6: Criar um Load Balancer",
+      "description": "Aprenda a criar e utilizar Load Balancers e WebServers",
+      "filename": "../../create-load-balancer/create-load-balancer.md"
+    },
+    {
+      "title": "Lab 7: Criar um Autonomous Database",
+      "description": "Aprenda a criar e trabalhar com o Autonomous Database",
+      "filename": "../../create-autonomous-database/create-autonomous-database.md"
     },
     {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
       "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
-    },
-    {
-      "title": "Other LiveLabs you might like",
-      "description": "Other LiveLabs you might like",
-      "filename": "../../other-livelabs/other-livelabs.md"
     }
   ]
 }
