@@ -6,7 +6,7 @@ Neste Lab você vai aprender a trabalhar com Load Balancer dentro da Oracle Clou
 
 *Tempo estimado para o Lab:* 25 Minutos
 
-### Objetivos 
+### Objetivos
 	b."Capacidades mais avançadas" (Thais) (04/11)
 		- Forecast / Linha de tendência / Linha de Referência;
 		- Filtros;
@@ -109,7 +109,7 @@ Você vai notar que cada valor de venda possui uma cor associada e dessa forma v
 ![Resultado das regras da Formatação Condicional](./images/cond-form-22.png)
 
 
-## Task 3: Usar Inteligência Artificial Nativa - Auto Insights e Explain
+## Task 3: Usar Inteligência Artificial Nativa - Auto Insights e Explain (vai para Lab 5 última task)
 
 O Oracle Analytics Cloud possui diversos mecanismos de Machine Learning nativo da ferramenta, esses recursos nos ajudam de várias formas diferentes durante o processo de criação dos nossos dashboards. Vamos ver duas funcionalidades muito úteis para entendimento dos dados e sugestões de gráficos: *Auto Insights e Explain (Explicar)*.
 
@@ -148,20 +148,39 @@ Esse gráfico será adicionado em uma nova tela no seu Arquivo de trabalho, como
 
 ![Clique em explicar categoria do produto](./images/check-explain-12.png)
 
+## Task 4: Adicionar Filtros
 
-## Task 4: Apresentar & Exportar Dashboards
+Temos algumas formas de adicionar filtros no Oracle Analytics Cloud. Vamos adicionar filtros através da barra de filtros e vamos criar filtros usando os próprios gráficos no Arquivo de Trabalho.
 
-Aba present e depois o Play
+Primeiro vamos utilizar barra de filtro que fica na parte superior da tela, todos os filtros criados ficaram disponíveis nesse local
 
-Exportar Arquivo ou Imprimir
 
-## Task 5: Data Actions (OPCIONAL)
+![Barra de Filtro](./images/filter-bar-23.png)
 
-usar Data Actions para ir para outro canva ou ir para uma URL
+1. Clique no sinal de + na barra de filtro e seleciona o campo "Data do Pedido" na tabela de Vendas.
 
-## Task 6: Criar um gráfico através de uma Imagem (OPCIONAL)
+![Barra de Filtro](./images/filter-date-24.png)
 
-Importar e Mapear uma imagem no OAC e usá-la como gráfico
+2. Clique novamente no sinal de + e agora selecione o campo "Embalagem do Produto" na tabela de Vendas.
+
+![Barra de Filtro](./images/filter-package-25.png)
+
+Existe um outra maneira de se criar filtros no Oracle Analytics Cloud (OAC): ***Criar Filtros através de Imagens***
+
+1. Faça download desse imagem: [Imagem para criar o Filtro](https://ADICIONARLINK.com.br).
+
+2. Clique no Menu do lateral superior esquerda e acesse **"Console"**
+
+Modos de Envio
+Imagem representando os modos de Envio disponíveis
+
+
+Vôo Regular
+
+## Task 5: Data Actions
+
+usar Data Actions para ir para outro canva, Tabela que o Gui vai criar
+
 
 
 ## Conclusão

@@ -9,7 +9,8 @@
         },
         {
             "title": "Get Started",
-            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/cloud-login-livelabs.md"
+            "description": "Prerequisites for LiveLabs (Oracle-owned tenancies). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
             "title": "Lab 1: Tour pelo Oracle Analytics Cloud",
@@ -42,14 +43,19 @@
             "filename": "../../ft-advanced-visualizations/ft-advanced-visualizations.md"
         },
         {
-            "title": "Lab 7: Atividades Administrativas",
+            "title": "Lab 7: Apresentar e Exportar os Dashboards",
+            "description": "Conheça as opções de apresentação e exportação disponíveis no Oracle Analytics Cloud (OAC)",
+            "filename": "../../ft-presentation/ft-presentation.md"
+        },
+        {
+            "title": "Lab 8: Atividades Administrativas",
             "description": "Aprenda a executar atividades de administração da instância",
             "filename": "../../ft-oac-management/ft-oac-management.md"
         },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename":"https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-livelabs.md"
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
         }
     ]
 }
