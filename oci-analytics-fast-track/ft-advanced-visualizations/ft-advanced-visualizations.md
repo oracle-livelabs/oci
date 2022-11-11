@@ -2,26 +2,19 @@
 
 ## Introdução
 
-Neste Lab você vai aprender a trabalhar com Load Balancer dentro da Oracle Cloud Infrastructure
+Neste Lab você vai dar um passo a mais no desenvolvimento de suas analises utilizando funcionalidades avançadas que o Oracle Analytics Cloud (OAC) oferece para você para enriquecer ainda mais seus insights.
 
-*Tempo estimado para o Lab:* 25 Minutos
+*Tempo estimado para o Lab:* 45 Minutos
 
 ### Objetivos
-	b."Capacidades mais avançadas" (Thais) (04/11)
-		- Forecast / Linha de tendência / Linha de Referência;
-		- Filtros;
-			- Colocar uma imagem e mapear para utilizar como filtro;
-		- Condicional por cor;
-		- Data Actions - navegabilidade entre abas;
-		- Formas de disponibilização do dashboard:
-			- Dar acesso a pasta/relatório/dataset;
-			- Presentation;
-			- Export / e-mail;
-			- Embedded (comentar que existe).
-	- Explain;
-	- AutoInsight;
+* Aprender a adicionar estatísticas em seu gráficos
+* Aprender a criar regras de formatação condicional
+* Aprender a adicionar filtros no seu dashboard
+* Aprender a criar "Ações de dados"
+* Aprender a utilizar imagens como filtros para seu dados
 
-## Task 1: Adicionar Estatísticas no Dashboard
+
+## Tarefa 1: Adicionar Estatísticas no Dashboard
 
 O Oracle Analytics Cloud (OAC) te oferece uma forma muito simples de adicionar estatísticas em seus gráficos. Os tipos disponíveis são: *Clusters, Outliers, Linha de Referência, Linha de Tendência, Previsão (Forecast)*
 
@@ -69,7 +62,7 @@ Esse deve ser seu resultado final:
 
 ![Ver Linha de Referência](./images/outliers-9.png)
 
-## Task 2: Formatação Condicional
+## Tarefa 2: Formatação Condicional
 
 Use a Formatação Condicional para destacar dados importantes em suas visualizações para que você possa tomar melhores decisões.
 
@@ -109,79 +102,148 @@ Você vai notar que cada valor de venda possui uma cor associada e dessa forma v
 ![Resultado das regras da Formatação Condicional](./images/cond-form-22.png)
 
 
-## Task 3: Usar Inteligência Artificial Nativa - Auto Insights e Explain (vai para Lab 5 última task)
+## Tarefa 3: Adicionar Filtros
 
-O Oracle Analytics Cloud possui diversos mecanismos de Machine Learning nativo da ferramenta, esses recursos nos ajudam de várias formas diferentes durante o processo de criação dos nossos dashboards. Vamos ver duas funcionalidades muito úteis para entendimento dos dados e sugestões de gráficos: *Auto Insights e Explain (Explicar)*.
+Temos algumas formas de adicionar filtros no Oracle Analytics Cloud. Nessa tarefa vamos adicionar filtros através da barra de filtros e vamos aprender a tornar esse filtro disponível em todas as telas do nosso Dashboard.
 
-Vamos usar o Auto Insights para encontrar recomendações de gráficos para enriquecer nosso dashboard.
-
-O ***Auto Insights*** é uma ótima maneira de criar visualizações poderosas usando sugestões geradas pelo Oracle Analytics Cloud (OAC).
-
-1. Clique no ícone de uma lâmpada amarela na parte superior direita da tela e verifique se a tabela "Clientes" está selecionada.
-
-![Clique em auto insights](./images/auto-insights-13.png)
-
-2. Role a barra lateral até você encontrar um gráfico chamando: **"Top 10 Cidade by População da Cidade"**. Clique sobre ele e arraste o gráfico até a lateral esquerda da tela até uma barra verde aparecer e solte o gráfico nessa posição. (veja na gif abaixo)
-
-3. Em seguida role a barra lateral e localiza o gráfico chamado: **"Count of Records"**. Clique sobre ele e arraste o gráfico até a parte superior da tela até uma barra verde aparecer e solte o gráfico nessa posição. (veja na gif abaixo)
-
-![Selecione 2 tabelas no Auto insights](./images/autoinsights.gif)
-*(Clique no gif para ver em tela cheia)*
-
-> **Nota:** Fique à vontade para explorar mais gráfico usando o Auto Insights.
-
-Agora vamos usar o **Explain (Explicar)** para entender um pouco mais sobre nossos dados.
-
-O ***Explain*** usa Machine Learning para encontrar informações úteis sobre seus dados.
-
-4. Clique com o botão direito do mouse sobre o campo **"Categoria do Produto"** na tabela Vendas e em seguida selecione a opção **"Explicar CATEGORIA DO PRODUTO"**
-
-![Clique em explicar categoria do produto](./images/explain-10.png)
-
-Uma nova janela será aberta com todas as explicações sobre o campo que você selecionou, incluindo: Fatos Básicos, Drivers Chave, Segmentos que Explicam, Anomalias. Em cada aba dessas você vai encontrar gráficos e descrições em forma de texto sobre o campo que você está analisando. Uma vez que você olhou todas as abas você pode escolher os gráficos que você acha relevantes para seu dashboard.
-
-1. Na aba "Fatos Básicos sobre CATEGORIA DE PRODUTOS" role a página até você encontrar um gráfico que explica o Lucro por Categoria de Produto, descanse o mouse sobre o gráfico até aparecer um sinal de check no canto superior direito do gráfico e clique nesse sinal de check, em seguida clique em **"Adicionar Selecionado"**.
-
-![Adicionar Gráfico do explain](./images/add-explain-11.png)
-
-Esse gráfico será adicionado em uma nova tela no seu Arquivo de trabalho, como indicado na imagem abaixo.
-
-![Clique em explicar categoria do produto](./images/check-explain-12.png)
-
-## Task 4: Adicionar Filtros
-
-Temos algumas formas de adicionar filtros no Oracle Analytics Cloud. Vamos adicionar filtros através da barra de filtros e vamos criar filtros usando os próprios gráficos no Arquivo de Trabalho.
-
-Primeiro vamos utilizar barra de filtro que fica na parte superior da tela, todos os filtros criados ficaram disponíveis nesse local
-
+A barra de filtro fica na parte superior da tela, todos os filtros criados ficaram disponíveis nesse local.
 
 ![Barra de Filtro](./images/filter-bar-23.png)
 
-1. Clique no sinal de + na barra de filtro e seleciona o campo "Data do Pedido" na tabela de Vendas.
+1. Clique no sinal de + na barra de filtro e selecione o campo "DATA DO PEDIDO" na tabela de Vendas.
 
 ![Barra de Filtro](./images/filter-date-24.png)
 
-2. Clique novamente no sinal de + e agora selecione o campo "Embalagem do Produto" na tabela de Vendas.
+2. Clique novamente no sinal de + e agora selecione o campo "EMBALAGEM DO PRODUTO" na tabela de Vendas.
 
 ![Barra de Filtro](./images/filter-package-25.png)
 
+Você pode adicionar os filtros de acordo com suas necessidade de analisar as informações nessa tela.
+
+![Barra de Filtro](./images/check-filter-37.png)
+
+Agora vamos tornar o filtro visível e aplicado em todas as Telas do seu Arquivo de Trabalho.
+
+3. Descanse o cursor do mouse sobre o filtro "DATA DO PEDIDO" até que você veja o ícone de "fixar" ser destacado e clique sobre ele.
+
+![Fixar Filtro](./images/pin-filter-36.png)
+
+Você pode navegar para qualquer aba do seu Dashboard e o filtro "DATA DO PEDIDO" estará fixado.
+
+![Fixar Filtro](./images/pin-filter-37.png)
+
+
+## Tarefa 4: Ações de Dados (Data Actions)
+
+Você pode usar Ações de Dados (Data Actions) para se conectar a outras telas no OAC e aplicar o dado selecionado como filtro, URLs externas, relatórios do Oracle Analytics Publisher e usar em contêineres externos.
+
+Vamos utilizar as Ações de Dados para analisar mais profundamente os dados de vendas onde a localização é "Bahia".
+
+1. Clique nos 3 pontinho na parte superior direita da tela e selecione "Ações de Dados"
+
+![Selecione Data Actions](./images/data-actions-31.png)
+
+2. Em seguida clique no sinal de + para criar uma nova Ações de Dados
+
+![Crie uma Data Actions](./images/data-actions-32.png)
+
+3. Preencha os campos com as informações abaixo e depois clique em **OK**:
+
+**Nome:** *Detalhes*  
+**Tipo:** *Link de Análise*  
+**Destino:** *Esta Pasta de Trabalho*  
+**Link para Tela:** *Detalhe*  
+**Informar valores:** *Tudo*  
+**Suportar Várias Seleções:** *Ativado*  
+
+![Preencha os campos - Data Actions](./images/data-actions-33.png)
+
+Agora toda vez que você clicar com o botão direito do mouse sobre algum dado que você queria explorar mais (em seu Dashboard atual) você verá a Ações de Dados que acabamos de criar pronta para ser usada.
+
+5. Clique com o botão direito sobre a barra **"Bahia"** no gráfico "Count of Records", localize a Ações de Dados "Detalhes" que acabamos de criar e clique nela.
+
+![Use a Data Actions](./images/data-actions-34.png)
+
+Você será direcionado para a Tela **Detalhe** onde você poderá facilmente explorar outras informações associadas a localização "Bahia" que havíamos selecionado anteriormente.Tudo isso porque a "Ações de Dados" além de ter te redirecionado para essa nova tela também criou um filtro com o parâmetro "Bahia" já selecionado
+
+![ENtendendo Data Actions](./images/data-actions-35.png)
+
+Esse deve ser o seu resultado final:
+
+![Mudando de tela - Data Actions](./images/data-actions-36.png)
+
+## Tarefa 5: Utilizar Imagens como Filtro (Opcional)
+
 Existe um outra maneira de se criar filtros no Oracle Analytics Cloud (OAC): ***Criar Filtros através de Imagens***
+
+> **Nota:** É necessário ter a permissão: BI Service Administrator para executar essa tarefa.
 
 1. Faça download desse imagem: [Imagem para criar o Filtro](https://ADICIONARLINK.com.br).
 
-2. Clique no Menu do lateral superior esquerda e acesse **"Console"**
+2. Clique no Menu do lateral superior esquerda e acesse **"Console"**.
 
-Modos de Envio
-Imagem representando os modos de Envio disponíveis
+![Navegue até console](./images/image-filter-26.png)
 
+3. Acesse a opção "Mapas".
 
-Vôo Regular
+![Navegue até console](./images/image-filter-27.png)
 
-## Task 5: Data Actions
+4. Clique na aba "Planos de Fundo", expanda a opção "Planos de Fundo de Imagem" e clique em **"Adicionar Imagem"**.
 
-usar Data Actions para ir para outro canva, Tabela que o Gui vai criar
+![Navegue até console](./images/image-filter-28.png)
 
+5. Localize a imagem que você acabou de fazer o upload, clique nos 3 pontinhos do lado esquerdo da linha e clique em **"Inspecionar"**
 
+![Navegue até console](./images/image-filter-42.png)
+
+6. Preencha os campos com as informações abaixo e clique em **Salvar**:
+
+**Nome:** *Modos de Envio*  
+**Descrição:** *Imagem representando os modos de envio disponíveis*  
+
+![Navegue até console](./images/image-filter-29.png)
+
+6. Localize a imagem que você acabou de fazer o upload, clique nos 3 pontinhos do lado esquerdo da linha e clique em **"Criar Camada de Mapas"**
+
+![Navegue até console](./images/image-filter-30.png)
+
+Agora será necessário mapear as áreas de imagem e vincular cada mapeamento a cada termos usado para os modos de envio disponíveis em nossos dados.
+
+7. Selecione o tipo de desenho para "Retângulo". Faça 1 quadrado em volta da imagem do Avião (Voô Regular) e escreva o termo "Vôo Regular"
+
+![Navegue até console](./images/image-filter-38.png)
+
+8. Faça 1 quadrado em volta da imagem do caminhão (Caminhão de Entrega) e escreva o termo "Caminhão de Entrega"
+
+![Navegue até console](./images/image-filter-39.png)
+
+9. Faça 1 quadrado em volta da imagem do Avião (Voô Regular) e escreva o termo "Vôo Expresso"
+
+![Navegue até console](./images/image-filter-40.png)
+
+10.  Quando toda imagem estiver mapeada clique em salvar (Ícone de disquete no canto superior direito da tela). 
+
+![Navegue até console](./images/image-filter-41.png)
+
+Volte para seu "Arquivo de Trabalho" para adicionar o imagem mapeada para ela atuar como filtro. No nosso exemplo vamos adicionar a imagem a uma das tela do projeto atual da Miau Corp.
+
+11. Navegue até a aba de Tipos de Gráficos, localize o gráfico de Mapa e arraste ele até a parte superior do seu canvas. (Abaixo do Campo de Texto)
+
+![Navegue até console](./images/image-filter-43.png)
+
+12. Em seguida adicione o campo "MODO DE ENVIO" que está na tabela "Pedidos".
+
+![Navegue até console](./images/image-filter-44.png)
+
+Você verá a imagem que mapeamos anteriormente. Agora vamos utilizar a imagem com um filtro dentro dessa tela do nosso dashboard.
+
+13. Descanse o cursor do mouse sobre o nome do gráfica até um ícone de funil aparecer na tela e clique sobre ele.
+
+![Navegue até console](./images/image-filter-45.png)
+
+Pronto! Toda vez que você quiser ver seus dados de vendas com base no método de envio basta clicar sobre a área correspondente na imagem.
+
+![Navegue até console](./images/image-filter-46.gif)
 
 ## Conclusão
 
