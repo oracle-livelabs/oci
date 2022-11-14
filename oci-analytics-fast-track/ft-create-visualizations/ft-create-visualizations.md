@@ -144,11 +144,154 @@ Em nossa segunda tarefa criaremos algumas visualizações básicas para compor n
 
 ![Criar gráfico de Dispersão](./images/disperssao.png)
 
-...
+17. A seguir iremos criar uma visualização do tipo Nuvem de Tags. Para isso, seguiremos o mesmo processo realizado para os demais gráficos, porém selecionando a opção de Nuvem de Tags e arrastando para a direita do gráfico de dispersão. Para popular a nuvem, selecione o campo de **Subcategoria do Produto** dentro da tabela "Vendas", arraste e solte no espaço de **Categoria**. Faça o mesmo para o campo **Quantidade de Vendas** dentro da tabela "Vendas", porém o soltando no campo de **Valores (Tamanho)**.
 
-## Task 3: Alterar Propriedades dos Gráficos
+![Criar nuvem de tags](./images/nuvem.png)
 
-## Task 4: Adicionar Texto, Cores e Imagens ao Dashboard
+18. Uma das possibilidade mais interessantes para visualizar dados geográficos no OAC é a visualização do tipo Mapa. Para criar uma visualização do tipo Mapa, selecione a opção de Mapa e arraste para a região superior das visualizações já existentes na página. Para popular o gráfico com os dados de interesse, selecione os campos de **Pais** e **Estado** dentro da tabela "Clientes", arraste e solte no campo **Categoria**. Arraste o campo de **Lucro**, da tabela "Vendas", para o campo **Cor** da visualização de Mapa.
+
+![Criar mapa](./images/mapa.png)
+
+19. Por fim, para finalizar esse segundo conjunto de visualizações do seu dashboard, crie uma visualização do tipo Narrativa do Idioma. Essa funcionalidade explica, de forma textual, os dados selecionados. Para criar essa visualização, selecione a opção de Narrativa do Idioma e arraste para a região superior esquerda da tela. Para a narrativa dos dados, selecione o campo de **Subcategoria do Produto** da tabela "Vendas" e arraste para o campo de **Atributos**. Faça o mesmo com o campo de **Quantidade de Vendas** da tabela "Vendas", porém o arraste para o campo de **Valores**.
+
+![Criar mapa](./images/NLG.png)
+
+20. Para nos preparar para a utilização de opções mais avançadas que serão apresentados nos laboratórios a seguir, iremos criar uma nova página, da mesma forma como criamos as demais página, com o nome **Detalhe**.
+
+21. Retorne a página **Pedidos** e clique com o botão direto do mouse na região da tabela existente nessa página e selecione a opção **Editar** e posteriormente a opção **Copiar Visualização**.
+
+![Copia tabela](./images/copia_tabela.png)
+
+22. Na página **Detalhe**, clique com o botão direito e selecione a opção **Colar Visualização**.
+
+![Colar tabela](./images/colar_tabela.png)
+
+23. Adicione os seguintes dados a tabela para aumentar o seu nível de detalhe:
+
+* **ID Linha do Pedido**
+* **ID do Pedido**
+* **ID do Cliente**
+* **Categoria do Produto**
+* **Subcategoria do Produto**
+* **Nome do Produto**
+* **Desconto**
+* **Preço Bruto por Unidade**
+* **Data do Envio**
+* **Data do Pedido**
+
+![Completar tabela](./images/completa_tabela.png)
+
+## Task 3: Explorando as Funcionalidades de Auto Insight e Explicar
+
+O Oracle Analytics Cloud possui diversos mecanismos de Machine Learning nativo da ferramenta, esses recursos nos ajudam de várias formas diferentes durante o processo de criação dos nossos dashboards. Vamos ver duas funcionalidades muito úteis para entendimento dos dados e sugestões de gráficos: *Auto Insights e Explain (Explicar)*.
+
+O ***Explain*** usa Machine Learning para encontrar informações úteis sobre seus dados.
+
+1.  Para começar a explorar a funcionalidade de Explicar, clique com o botão direito do mouse sobre o campo **"Categoria do Produto"** na tabela Vendas e em seguida selecione a opção **"Explicar CATEGORIA DO PRODUTO"**
+
+![Explain](./images/explicar1.png)
+
+Uma nova janela será aberta com todas as explicações sobre o campo que você selecionou, incluindo: Fatos Básicos, Drivers Chave, Segmentos que Explicam, Anomalias. Em cada aba dessas você vai encontrar gráficos e descrições em forma de texto sobre o campo que você está analisando. Uma vez que você olhou todas as abas você pode escolher os gráficos que você acha relevantes para seu dashboard.
+
+2. Na aba "Fatos Básicos sobre CATEGORIA DE PRODUTOS" role a página até você encontrar um gráfico que explica o Lucro por Categoria de Produto, descanse o mouse sobre o gráfico até aparecer um sinal de check no canto superior direito do gráfico e clique nesse sinal de check, em seguida clique em **"Adicionar Selecionado"**.
+
+![Explain](./images/explicar2.png)
+
+Esse gráfico será adicionado em uma nova tela no seu Arquivo de trabalho, como indicado na imagem abaixo.
+
+![Explain](./images/explicar3.png)
+
+Agora vamos usar o ***Auto Insights*** para criar visualizações poderosas usando sugestões geradas pelo Oracle Analytics Cloud (OAC).
+
+1.  Vamos começar criando uma nova página chamada ***Auto Insights***.
+
+2.  Clique no ícone de uma lâmpada amarela na parte superior direita da tela e verifique se a tabela "Clientes" está selecionada. Role até encontrar o gráfico chamado ***Cidade Scatter Plot Chart*** e arraste para o centro da página.
+
+![Auto Insights](./images/autoinsight1.png)
+
+3.  Encontre os gráficos chamados ***Top 10 Cidade by População da Cidade*** e ***Count of Records*** e os arraste para a tela de modo a ter o resultado disposto na imagem a seguir.
+
+![Auto Insights](./images/autoinsight2.png)
+
+## Task 4: Alterar Propriedades dos Gráficos
+
+O Oracle Analytics Cloud permite que você altere propriedades dos gráficos do seu dashboard. Essa é uma funcionalidade essencial para garantir que suas visualizações estejam claras e possam ser fácilmente entendidas pelos usuários finais do dashboard.
+
+Vamos começar alterando os títulos das visualizações da página **Pedidos**.
+
+1.  Selecione a visualização **Quantidade de Pedidos por PRIORIDADE DO PEDIDO** e na barra de opções gerais, na opção de Título, clique na opção **Automático** e mude para **Personalizado**.
+
+![Auto Insights](./images/titulo1.png)
+
+2.  Defina o título da visualização como **# Pedidos por Prioridade**.
+
+![Auto Insights](./images/titulo2.png)
+
+3.  Repita o processo para os demais gráficos com títulos da sua escolha.
+
+Agora iremos mudar o Plano de Fundo dos gráficos.
+
+1.  Nas opções gerais da visualização **# Pedidos por Prioridade**, role até encontrar a opção Plano de Fundo. Clique na opção **Automático** e mude para **Personalizado**. No campo de Cor de Preenchimento utilize a cor ***#e0e0e0***.
+
+![Cor de Fundo](./images/cor_fundo.png)
+
+2.  Repita o processo com as visualizações da página **Pedidos** até obter o resultado a seguir.
+
+![Cor de Fundo](./images/cor_fundo2.png)
+
+Uma das propriedades mais importantes de uma boa visualização é a sua legenda. A seguir iremos explorar a opção de legenda do Oracle Analytics Cloud.
+
+1.  No gráfico de Donut criado anteriormente, mude o dado **Estado** do campo **Categoria** para o campo **Cor**. Isso irá habilitar as legendas na visualização. No painel de opções gerais da visualização, encontre a opção chamada **Posição da Legenda** e mude de **Automático** para **Direita**.
+
+![Legenda](./images/posicao_legenda.png)
+
+## Task 5: Adicionar Texto, Cores e Imagens ao Dashboard
+
+O Oracle Analytics Cloud permite a adição de texto e imagens de modo fácil ao seu dashboard, dando um maior nível de customização. Também é possível facilmente alterar a paleta de cores do dsahboard para que todos os gráficos sigam o mesmo padrão de cores.
+
+Vamos começar adicionando um título a página **Pedidos**.
+
+1.  Nas opções de tipos de gráficos, selecione a opção Caixa de Texto, arraste e solte na região superior da página.
+
+![Texto](./images/texto.png)
+
+2.  Clique na opção Editar Texto e selecione o tamanho de fonte 22 e ative o negrito e o italico para inserir o texto **Dashboard Pedidos Miau Corp**.
+
+![Texto](./images/texto2.png)
+
+3.  Faça o mesmo para a página **Lucro** com o texto **Análise de Lucro Miau Corp**.
+
+Agora iremos adicionar o logo da empresa no dashboard.
+
+1.  Nas opções de tipos de gráficos, selecione a opção Imagem, arraste e solte na região superior da página indicada na imagem a seguir.
+
+![Imagem](./images/imagem1.png)
+
+2.  Ao clicar na opção Selecionar Imagem a seguinte janela irá abrir. Nela clique em Fazer Upload e selecione o logo da empresa e clique em Ok.
+
+![Imagem](./images/imagem2.png)
+
+3.  Na aba de opções da visualização, mude a Largura e Altura de **Original** para **Ajuste Automático**.
+
+![Imagem](./images/imagem3.png)
+
+Após essas instruções a imagem deverá estar no formato indicado na imagem a seguir.
+
+![Imagem](./images/imagem4.png)
+
+Para finalizar essa etapa de personalização do dashboard, iremos modificar a paleta de cores de modo a padronizar todas as visualizações.
+
+1.  Na região superior direita da página, clique no icone indicado pelos **três pontos** e selecione a opção **Propriedades do Arquivo de Trabalho**.
+
+![Paleta](./images/paleta1.png)
+
+2.  Na janela que irá abrir, na opção **Sequência de Cores**, clique na opção **Padrão (Redwood)** e mude para a opção **Lilac** e clique em Ok.
+
+![Paleta](./images/paleta2.png)
+
+Case tenha mudado a paleta com sucesso, a sua página **Pedidos** deve estar igual a imagem a seguir.
+
+![Paleta](./images/paleta3.png)
 
 ## Conclusão
 
