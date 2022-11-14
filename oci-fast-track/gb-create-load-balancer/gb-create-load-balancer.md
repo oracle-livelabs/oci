@@ -177,7 +177,7 @@ Para obter saídas diferentes nas chamadas do Load Balancer, adicione conteúdos
 
 ![teste o Load Balancer](images/load-balancer-test-16.png)
 
-6. Utilize o IP Privado do Load Balancer no navegador do no VNC para visualizar sua aplicação sendo direcionada para os 2 servidores com respostas diferentes no arquivo Index.html
+6. Utilize o IP Privado do Load Balancer no navegador do noVNC para visualizar sua aplicação sendo direcionada para os 2 servidores com respostas diferentes no arquivo Index.html
 
 ## Conclusão
 
