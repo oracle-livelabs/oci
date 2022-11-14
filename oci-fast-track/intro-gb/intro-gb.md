@@ -19,7 +19,7 @@ Por meio deste guia, iremos fornecer laboratórios práticos de:
 
 - Compartimentos
 - Rede (VCN e subnets)
-- Instâncias de computação (Linux e Windows)
+- Instâncias de computação (Linux)
 - Armazenamento em bloco (Block Storage)
 - Armazenamento de objetos (Object Storage)
 - Balanceador de carga (Load Balancer)

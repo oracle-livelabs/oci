@@ -45,7 +45,7 @@ Neste Lab você vai aprender a trabalhar com Load Balancer dentro da Oracle Clou
 
 ### Objetivos 
 
- * Criar um serviço de Load Balancer público, com 2 back-end servers executando o aplicativos Apache.
+ * Criar um serviço de Load Balancer privado, com 2 back-end servers executando o aplicativos Apache.
 
 Antes de começarmos a criar o serviço Load Balancer, observe que há algumas tarefas importantes a serem concluídas. Para que algum “serviço” seja testado pelo Load Balancer, é necessário instalar um aplicativo (Apache) nos servidores Linux.
 
@@ -53,7 +53,7 @@ Antes de começarmos a criar o serviço Load Balancer, observe que há algumas t
 
 
 1. Instalar Apache Application Server em cada servidor
-	1.  Conecte-se no host Linux usando o usuário opc  
+	1. Conecte-se no host Linux usando o usuário opc  
 	2. Uma vez conectado, mude seu usuário para **ROOT** com o comando: ***`"sudo su – "`***
 	3. Instale o pacote Apache no sistema operacional: ***`"sudo yum install httpd -y"`***
 	4. Inicie o aplicativo Apache : ***`"sudo apachectl start"`***
@@ -64,7 +64,7 @@ Antes de começarmos a criar o serviço Load Balancer, observe que há algumas t
 		- ***`sudo firewall-cmd --reload`***
 
 
-	6. Para identificar **a primeira instância** de computação usada na interface web (Linux -  AD2), personalize o arquivo ***“index.html”*** Use o seguinte comando como usuário **ROOT**:
+	6. Para identificar **a primeira instância** de computação usada na interface web (Linux -  AD1), personalize o arquivo ***“index.html”*** Use o seguinte comando como usuário **ROOT**:
 
 > **Note:** Primeiro copie a 1ª linha do código e cole. Depois copie o corpo do código até < / html> e cole. Por último copie a última linha e cole.
 
@@ -90,7 +90,7 @@ EOF
 </copy>
 ```
 
-2. Na **segunda instância** você repetirá as etapas acima, de **1** a **5**, para identificarmos a segunda instância de computação (Linux – AD3) personalize o arquivo **“index.html”** usando o seguinte comando com usuário **ROOT**:
+2. Na **segunda instância** você repetirá as etapas acima, de **1** a **5**, para identificarmos a segunda instância de computação (Linux – AD2) personalize o arquivo **“index.html”** usando o seguinte comando com usuário **ROOT**:
 
 > **Note:** Primeiro copie a 1ª linha do código e cole. Depois copie o corpo do código até < / html> e cole. Por último copie a última linha e cole.	
 
@@ -116,19 +116,12 @@ EOF
 </copy>
 ```
 
-3. Teste o comportamento do Apache, tudo que você precisa fazer, é usar o **IP público da instância** do Compute no seu navegador web para verificar se a página principal do Apache aparecerá.
+3. Teste o comportamento do Apache, tudo que você precisa fazer, é usar o **IP privado da instância** (VM-OracleLinux-AD1) do Compute no navegador web do noVNC para verificar se a página principal do Apache aparecerá.
 
-![copie o IP público](images/load-balancer-ip-2.png)
-![cole no navegador](images/load-balancer-navegador-3.png)
+![copie o IP privado](images/load-balancer-private-ip.png)
+![cole no navegador](images/load-balancer-novnc.png)
 
-**ATENÇÃO**: Antes de testar o Apache em seu navegador web, certifique-se de já ter criado uma regra de entrada (ingress) na **Security List do VCN**, para que a porta **80** seja liberada para tráfego.
-
-![entre na security list](images/load-balancer-sl-4.png)
-![escreva a regra para abrir a porta 80](images/load-balancer-port-5.png)
-
-Se tudo estiver OK, você pode testar a instalação do Apache. Tudo o que você precisa fazer é usar o endereço IP da instância pública em seu navegador preferido e provavelmente obterá esta saída:
-
-![teste do servidor web](images/load-balancer-test-6.png)
+Se tudo estiver OK, você pode testar a instalação do Apache na segunda VM (VM-OracleLinux-AD2). Tudo o que você precisa fazer é usar o endereço IP privado da segunda instância no navegador do noVNC e provavelmente obterá uma saída semelhante a da imagem anterior.
 
 **IMPORTANTE:** Certifique-se de iniciar a criação do Load Balancer somente depois que ambas as chamadas no apache estiverem funcionando.
 
@@ -150,14 +143,14 @@ Clique no botão “Create Load Balancer”:
 
 2. A tela de criação do Load Balancer é um modelo baseado em assistente, onde você será guiado no processo pela interface. Na tela principal, você fornecerá as informações abaixo:
 - Name: **lb-apache**
-- Visibility Type: **Public** 
+- Visibility Type: **Private** 
 - Bandwidth: **10 Mbps**
 - VCN: **< Selecione sua VCN >**
-- Subnet: **< Selecione sua sub-rede pública >**
-- (escolha 2 sub-redes, mesmas sub-redes onde suas instâncias de computação foram criadas)
+- Subnet: **< Selecione sua sub-rede privada >**
+- (escolha a sub-rede, mesma sub-rede onde suas instâncias de computação foram criadas)
 
-![configure o Load Balancer](images/load-balancer-config-10.png)
-![selecione o shape do Load Balancer](images/load-balancer-shape-11.png)
+![configure o Load Balancer](images/load-balancer-private.png)
+![selecione o shape do Load Balancer](images/load-balancer-vcn.png)
 
 3. Defina a política do Load Balancer e adicione os servidores de back-end. 
 Para adicionar servidores de back-end, clique no botão azul “Add Backends”
@@ -174,7 +167,7 @@ Para adicionar servidores de back-end, clique no botão azul “Add Backends”
 
 Assim que o processo de criação for concluído, você terá as seguintes informações:
 
-![visualize o Load Balancer](images/load-balancer-done-15.png)
+![visualize o Load Balancer](images/load-balancer-ip-private.png)
 
 **Testando o Load Balancer**
 
@@ -184,7 +177,7 @@ Para obter saídas diferentes nas chamadas do Load Balancer, adicione conteúdos
 
 ![teste o Load Balancer](images/load-balancer-test-16.png)
 
-6. Utilize o IP Público do Load Balancer para visualizar sua aplicação sendo direcionada para os 2 servidores com respostas diferentes no arquivo Index.html
+6. Utilize o IP Privado do Load Balancer no navegador do no VNC para visualizar sua aplicação sendo direcionada para os 2 servidores com respostas diferentes no arquivo Index.html
 
 ## Conclusão
 

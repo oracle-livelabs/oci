@@ -1,4 +1,4 @@
-# Criar um Compartimento
+# Explorar um Compartimento
 
 ## Introdução
 
@@ -34,7 +34,7 @@ Essa lista é filtrada para mostrar apenas os compartimentos na locação que vo
 
 Os compartimentos são globais, em todas as regiões, quando você cria um compartimento, ele está disponível em todas as regiões em que o seu aluguel está inscrito.
 
-Neste Lab você vai aprender a criar um Compartimento dentro da Oracle Cloud Infrastructure
+Neste Lab você vai explorar o recurso Compartimento dentro da Oracle Cloud Infrastructure
 
 
 *Tempo estimado para o Lab:* 10 Minutos
@@ -43,7 +43,7 @@ Neste Lab você vai aprender a criar um Compartimento dentro da Oracle Cloud Inf
 
 * Acesse a Oracle Cloud Console
 * Familiarize-se com a interface OCI
-* Criar um Compartimento
+* Explore o Compartimento
 
 
 ## Task 1: Acesse a Console da Oracle Cloud
@@ -66,28 +66,29 @@ Neste Lab você vai aprender a criar um Compartimento dentro da Oracle Cloud Inf
 
 ![menu principal](./images/compartment-menu-5.png)
 
-## Task 2: Criando Compartimentos
+## Task 2: Explorando Compartimentos
 
 1.	No menu principal, clique em "Identity & Security" e escolha "Compartments"
 
 ![navegue até "compartiments"](./images/compartment-access-6.png)
 
-2.	Clique em "Create Compartment" e preencha com as informações:
+2.	Visualize os Compartments disponíveis:
 
-* Name: Compartimento-Trial
-* Description: Compartimento para recursos de testes
-* Parent Compartment: root
+![navegue até "compartiments"](./images/compartment-explore.png)
 
-Em seguida clique no botão "Create Compartment"
+3.	No menu principal, clique em "Compute" e escolha "Instances"
 
-![botão "Create Compartment"](./images/compartment-creation-7.png)
-![campos preenchido para criar compartimento](./images/compartment-fields-8.png)
+![navegue até "compute"](./images/compartment-compute.png)
+
+4.	Veja em um menu de um serviço como identificar e alterar o compartimento se necessário:
+
+![navegue até "compartiments"](./images/compartment-list.png)
 
 Você pode **seguir para o próximo Lab**.
 
 ## Conclusão
 
-Nesta sessão você aprendeu a acessar a console da Oracle Cloud, explorar a tela inicial e o "Action Menu", além de criar seu próprio compartimento.
+Nesta sessão você aprendeu a acessar a console da Oracle Cloud, explorar a tela inicial e o "Action Menu", além de explorar um compartimento.
 
 ## Autoria
 

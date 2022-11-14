@@ -60,7 +60,7 @@ Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Clou
 
 ![clique em copy](./images/block-volume-iscsi-copy-8.png)
 
-6. No Cloud Shell, inicialmente, se conecte à instância de computação e execute o comando copiado.
+6. No Terminal, inicialmente, se conecte à instância de computação e execute o comando copiado.
 
 ``` shell
 <copy>

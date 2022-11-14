@@ -4,7 +4,7 @@
 
 O Oracle Cloud Infrastructure permite provisionar e gerenciar hosts de computação, conhecidos como instâncias. Você pode criar instâncias conforme necessário para atender aos seus requisitos de computação e aplicativo. Depois de criar uma instância, você pode acessá-la de forma segura pelo seu computador, reiniciá-la, anexar e desanexar volumes e encerrá-la quando terminar de usá-la.
 
-Nesse Lab você vai aprender a criar 2 máquinas virtuais Linux e uma máquina virtual com Windows.
+Nesse Lab você vai aprender a criar 2 máquinas virtuais Linux.
 
 *Tempo estimado para o Lab:* 35 Minutos
 
@@ -12,15 +12,14 @@ Nesse Lab você vai aprender a criar 2 máquinas virtuais Linux e uma máquina v
 
 * Criar um par de chaves SSH no OCI Cloud Shell
 * Criar 2 máquinas virtuais (VM) Linux
-* Criar 1 máquina virtuais (VM) Windows
 * Acessar as instâncias
 
 
 ## Task 1: Criar um par de chaves SSH
 
-1.	Acesse o OCI Cloud Shell clicando no botão do menu superior direito. A OCI irá provisionar um terminal Linux no web browser
+1.	Acesse o Terminal
 
-![abra o cloud shell](./images/vm-open-shell-1.png)
+![abra o cloud shell](./images/vm-terminal.png)
 
 2.	Crie um par de chaves RSA com o comando:
 
@@ -31,7 +30,7 @@ ssh-keygen -t rsa
 * Mantenha o nome original (id_rsa) apertando enter
 * O campo “Key Passphrase” é opcional
 
-![criar chave ssh](./images/vm-ssh-key-2.png)
+![criar chave ssh](./images/vm-keys.png)
 
 3. Exiba o conteúdo da chave pública que você criou utilizando o comando:
 
@@ -41,23 +40,9 @@ cat ~/.ssh/id_rsa.pub
 
 * Selecione e Copie o conteúdo dessa chave, pois a usaremos para a criação das máquinas virtuais Linux
 
-![copiar texto da chave](./images/vm-copy-key-3.png)
+![copiar texto da chave](./images/vm-cat.png)
 
 Para a criação da VM, usaremos a chave pública. A chave privada será usada apenas para conexão.
-
-4. Baixe as duas chaves também no seu computador. Salve as chaves privadas e públicas em um local seguro.
-
-Para isso, basta clicar no menu do Cloud Shell e solicitar o Download:
-
-![baixar chaves](./images/vm-download-keys-4.png)
-
-* Para baixar a chave pública, o caminho é: “.ssh/id_rsa.pub”
-
-![caminho para a chave privada](./images/vm-private-key-5.png)
-
-* Para baixar a chave privada, o caminho é: “.ssh/id_rsa”
-
-![caminho para a chave publica](./images/vm-public-key-6.png)
 
 ## Task 2: Criar 2 máquinas virtuais Oracle Linux
 
@@ -76,8 +61,7 @@ Para isso, basta clicar no menu do Cloud Shell e solicitar o Download:
 * Virtual Cloud Network Compartment: "Compartimento-Trial"
 * Virtual Cloud Network: "VCN-TRIAL"
 * Subnet Compartment: "Compartimento-Trial"
-* Subnet: Public Subnet
-* Assign Public IP Address
+* Subnet: Private Subnet
 * Lembre-se de escolher o AD certo e seu Compartimento
 
 ![preencha os campos iniciais](./images/vm-fields-create-9.png)
@@ -90,9 +74,9 @@ Para isso, basta clicar no menu do Cloud Shell e solicitar o Download:
 
 ![selecione o tamanho da virtual machine](./images/vm-size-12.png)
 
-3. Ao inserir as informações de rede, lembre-se de escolher a opção “Assign a Public IP address” para Atribuir um endereço IP público à instância de computação.
+3. Ao inserir as informações de rede, lembre-se de escolher a Subnet Privada e a opção "Do not assign a public IPv4 address"
 
-![Configurações de rede para VM](./images/vm-network-config-13.png)
+![Configurações de rede para VM](./images/vm-private.png)
 
 4. Cole a chave pública SSH criada por você no exercício 3A e clique no botão “Create”.
 
@@ -100,7 +84,7 @@ Para isso, basta clicar no menu do Cloud Shell e solicitar o Download:
 
 Você provavelmente terá a nova instância devidamente criada em alguns minutos. Depois de terminar o processo de criação, a tela principal ficará assim:
 
-![confira a maquina virtual criada](./images/vm-created-15.png)
+![confira a maquina virtual criada](./images/vm-private-console.png)
 
 5. Repita os passos acima para criar a Máquina Virtual (VM) Linux 2, porém desta vez com os dados abaixo:
 
@@ -113,110 +97,28 @@ Você provavelmente terá a nova instância devidamente criada em alguns minutos
 * Virtual Cloud Network Compartment: "Compartimento-Trial"
 * Virtual Cloud Network: "VCN-TRIAL"
 * Subnet Compartment: "Compartimento-Trial"
-* Subnet: Public Subnet
-* Assign Public IP Address
+* Subnet: Private Subnet
 
-## Task 3: Acessar a VM Linux pelo OCI Cloud Shell
+## Task 3: Acessar a VM Linux pelo Terminal
 
-1. Pegue o IP público da instância
+1. Pegue o IP privado da instância
 
-![localize o IP publico da vm](./images/vm-public-ip-16.png)
+![localize o IP privado da vm](./images/vm-private-ip.png)
 
-2. No OCI Cloud Shell, faça conexão com a máquina criada com o comando:
+2. No Terminal, faça conexão com a máquina criada com o comando:
 
 ````
 <copy>
-ssh opc@<ip publico da VM>
+ssh opc@<ip privado da VM>
 </copy>
 ````
 
 * O usuário default nas instâncias Oracle Linux é opc
 
-![cole o comando no cloud shell com IP publico](./images/vm-ssh-command-17.png)
-
-## Task 4: Criar uma Máquina Virtual Windows
-
-1. Para criar vá no Menu Principal e clique em Menu > Compute > Instances. Clique em "Create Instance".
-
-![acesse compute no menu principal](./images/vm-access-compute-7.png)
-
-![clique em "Create Instance"](./images/vm-create-instance-8.png)
-
-Dados para criação da VM Windows:
-
-* Name of your instance: VM-Windows-AD3
-* Availability Domain: AD 3
-* Operating System: Windows Server 2016 Standard
-* Instance Type: Virtual Machine
-* Instance Shape: AMD VM.Standard.E3.Flex
-* Choose SSH Key File: Insira a chave SSH pública (.pub)
-* Virtual Cloud Network Compartment: "Compartimento-Trial"
-* Virtual Cloud Network: "VCN-TRIAL"
-* Subnet Compartment: "Compartimento-Trial"
-* Subnet: Public Subnet
-* Assign Public IP Address
-
-![selecione AD, shape e imagem windows](./images/vm-shape-windows-18.png)
-
-2. Ao inserir as informações de rede, lembre-se de escolher a opção “Assign a Public IP address” para Atribuir um endereço IP público à instância de computação.
-
-![selecione a rede](./images/vm-network-config-13.png)
-
-*A criação leva geralmente 5 minutos.*
-
-Uma vez criada, siga os passos anteriores para encontar o IP público da VM Windows e abra o "Remote Desktop Connection" no Menu Principal do seu computador. Para acessar o Windows VM, no Menu Principal do seu computador escolha “run”, digite “mstsc”, depois clique em “OK”.
-
-![acesse "run" no seu computador e digite "mstsc"](./images/vm-win-run-19.png)
-
-3. Use o IP público da instância e clique em "Connect"
-
-![janela remote desktop connection](./images/vm-win-access-20.png)
-
-> **Note:** Você receberá um ERRO ao tentar se conectar, o que é normal, uma vez que precisamos configurar as "Regras de Acesso" do firewall.
-
-Você provavelmente notou que a VM Linux pode ser acessada pela chave SSH logo após sua criação, mas a instância do Windows não pode ser acessada por RDP.
-Para acessar o Windows Compute, precisamos configurar algumas regras de firewall.
-As regras de firewall são definidas dentro de um objeto chamado “Security List”, que pode ser acessado dentro de uma sub-rede.
-As regras de segurança estão dentro da lista de segurança, a partir dela podemos configurar quais portas e protocolos têm permissão para tráfego dentro de uma sub-rede.
+![cole o comando no cloud shell com IP publico](./images/vm-opc.png)
 
 
-4. Clique no menu lateral em: Networking -> Virtual Cloud Networks -> VCN-Trial
-
-![acesse a VCN criado anteriormente](./images/vm-vcn-access-21.png)
-
-5. Clique em: Security List -> Default Security List for VCN-Trial
-
-![acesse a default security list ](./images/vm-security-list-22.png)
-
-Para acessar as regras de firewall do VCN, escolha a Security List que deseja configurar. Em nosso exemplo, você encontrará a “Default Security List” já criada em nosso VCN. Clique na lista de segurança “Default Security List” e então o console de regras de acesso aparecerá.
-
-6. Dentro de Security List, clique em “Add Ingress Rules”.
-
-![clique em "Add Ingress Rules"](./images/vm-ingress-rules-23.png)
-
-* Source Type: CIDR 
-* Source CIDR: 0.0.0.0/0 
-* IP Protocol: RDP (TCP/3389) 
-* Source Port Range: All 
-* Destination Port Range: 3389
-
-![janela de Ingress Rules preenchida](./images/vm-ingress-rule-config-24.png)
-
-7. Para acessar o Windows VM, no Menu Principal do seu computador escolha “run”, digite “mstsc”, depois clique em “OK”.
-
-![acesse "run" no seu computador e digite "mstsc"](./images/vm-win-run-19.png)
-
-8. Use o IP Público da instância e clique em “Connect”.
-
-![Localize o IP publico](./images/vm-win-access-20.png)
-
-9. Se tudo estiver configurado corretamente, você será transportado para a página de login do Windows, onde precisará alterar a senha OPC no primeiro acesso.
-
-Veja onde encontrar a senha do Windows:
-
-![Localize "Initial Password"](./images/vm-initial-passwd-25.png)
-
-10. Concluindo esta tarefa, você verá que agora temos 3 instâncias de computação, cada uma em seu próprio Domínio de Disponibilidade (AD).
+3. Concluindo esta tarefa, você verá que agora temos 2 instâncias de computação, cada uma em seu próprio Domínio de Disponibilidade (AD).
 
 ![lista de instancias criadas](./images/vm-listed-26.png)
 
