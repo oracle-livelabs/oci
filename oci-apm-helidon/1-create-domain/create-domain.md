@@ -6,6 +6,9 @@ In this lab, you will use the Oracle Cloud console to set up an OCI compartment 
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APM domain and obtain data upload endpoint and private data key](videohub:1_sa1lntd2)
+
 ### Objectives
 
 * Create an OCI Compartment
@@ -67,5 +70,6 @@ You may now **proceed to the next lab**.
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,	
-Avi Huber, Senior Director, Product Management
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, August 2022

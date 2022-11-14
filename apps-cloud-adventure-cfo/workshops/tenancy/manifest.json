@@ -7,8 +7,20 @@
             "filename": "../../00-introduction/introduction.md"
         },
         {
-            "title": "Lab 1: Manage Journals",
-            "filename": "../../01-manage-journal/manage-journal.md"
+            "title": "Lab 1: Account Monitor",
+            "filename": "../../02-manage-monitor/account-monitor.md"
+        },
+        {
+            "title": "Lab 2: Predictive Capabilities",
+            "filename": "../../04-predictive/predictive.md"
+        },
+        {
+            "title": "Lab 3: Procurement",
+            "filename": "../../05-procurement/procurement.md"
+        },
+        {
+            "title": "Lab 4: Risk Management",
+            "filename": "../../03-risk-mgmt/risk-management.md"
         },
         {
             "title": "Need Help?",

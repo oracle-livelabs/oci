@@ -105,11 +105,16 @@ To delete the workshop setup from your tenancy, follow the steps below.
 
     ![Oracle Cloud, Cloud console](images/4-13-cleanup.png " ")      
 
-3. Repeat to terminate other subnets. Once all the subnets are deleted, from the upper side of the VCN details page, click **Terminate** to remove the VCN.
+4. Repeat to terminate other subnets. Once all the subnets are deleted, from the upper side of the VCN details page, click **Terminate** to remove the VCN.
 
     ![Oracle Cloud, Cloud console](images/4-14-cleanup.png " ")    
 
-3. Click the **Terminate All** button when activated. Termination of the resources begins. Once the message **Virtual Cloud Network termination complete** shows, click **Close**.
+
+5. **Delete Virtual Cloud Network** dialog opens. Click **Scan**.
+
+     ![Oracle Cloud, Cloud console](images/4-14-2-cleanup.png " ")    
+
+6. Click the **Terminate All** button when activated. Termination of the resources begins. Once the message **Virtual Cloud Network termination complete** shows, click **Close**.
     ![Oracle Cloud, Cloud console](images/4-15-cleanup.png " ")    
 
 ## Task5: Remove the workshop directory
@@ -123,9 +128,30 @@ To delete the workshop setup from your tenancy, follow the steps below.
     ```
    ![Oracle Cloud, Cloud console](images/4-16-cleanup.png " ")   
 
+## Task 6: Remove the APM domain and compartment
+
+1. From the navigation menu in the Oracle Cloud console, select **Observability & Management** > **Administration**. Then click the link to the APM domain which you created in the workshop.
+   ![Oracle Cloud, Cloud console](images/6-1-cleanup.png " ")
+
+2. In the **Domain details** page, click **Delete**. In the confirmation window, enter the name of the APM domain, then click **Delete**.   
+   ![Oracle Cloud, Cloud console](images/6-2-cleanup.png " ")
+
+3. Deletion of the APM domain starts and completes. This may take a few minutes. Refresh the screen periodically and check the status.
+   ![Oracle Cloud, Cloud console](images/6-3-cleanup.png " ")
+
+4. From the navigation menu in the Oracle Cloud console, select **Identity & Security** > **Compartment**. Then click the link to the compartment which you created in the workshop.  
+   ![Oracle Cloud, Cloud console](images/6-4-cleanup.png " ")   
+
+5. In the **Compartment details** page, click **Delete**. In the confirmation window, click **Delete**.  
+   ![Oracle Cloud, Cloud console](images/6-5-cleanup.png " ")
+
+6. Deletion of the compartment starts and completes. This may take a few minutes.   
+   ![Oracle Cloud, Cloud console](images/6-6-cleanup.png " ")   
+
 ## Acknowledgements
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
-Avi Huber, Senior Director, Product Management
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, August 2022

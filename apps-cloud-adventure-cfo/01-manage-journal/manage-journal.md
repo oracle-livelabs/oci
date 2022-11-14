@@ -9,8 +9,6 @@ Estimated Time: 30 minutes
 
 ### Objectives
 
-*List objectives for this lab using the format below*
-
 In this lab, you will:
 * Manage Journals
 

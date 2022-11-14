@@ -6,6 +6,9 @@ In this lab, you will create a second Maven project, where the server listens on
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create a Second Service](videohub:1_sxwdhhww)
+
 ### Objectives
 
 * Create another Maven project to demonstrate tracking of the requests that go from one service to another using APM Explorer.
@@ -228,6 +231,7 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Steven Lemme, Senior Principal Product Manager,
-Avi Huber, Senior Director, Product Management
+- **Contributors** - Steven Lemme, Senior Principal Product Manager,	
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, August 2022

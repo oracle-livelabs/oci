@@ -5,6 +5,9 @@ In this lab exercise, you will walk through the process of integration of Landin
 
 Estimated time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab. 
+[DLanding Zone Integration with Mushop](videohub:1_5wzjars7)
+
 Objectives
 
 In this lab, you will:

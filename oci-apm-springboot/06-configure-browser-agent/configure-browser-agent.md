@@ -12,6 +12,9 @@ Please note that these changes will be lost when the pods are recreated. This se
 
 Estimated time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Instrument the browser monitoring](videohub:1_qrehxy3o)
+
 ### Objectives
 
 * Instrument browser by injecting JavaScript code to the webpage
@@ -104,5 +107,6 @@ You may now **proceed to the next lab**.
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
-Avi Huber, Senior Director, Product Management
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, January 2022

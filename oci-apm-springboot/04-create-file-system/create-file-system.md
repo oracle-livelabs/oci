@@ -6,6 +6,9 @@ In this lab, you will create a file system in the Oracle Cloud Infrastructure. Y
 
 Estimated time: 15 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create and configure a file system](videohub:1_nuemqknc)
+
 ### Objectives
 
 * Create a file system in the Oracle Cloud
@@ -357,5 +360,6 @@ You may now **proceed to the next lab**.
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,   
-Avi Huber, Senior Director, Product Management
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, August 2022

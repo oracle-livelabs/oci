@@ -6,6 +6,9 @@ This workshop uses Spring Boot-based Java microservices as a target application 
 
 Estimated time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create a Kubernetes cluster](videohub:1_4f64eivu)
+
 ### Objectives
 
 * Create a compartment
@@ -70,5 +73,6 @@ You may now **proceed to the next lab**.
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
-Avi Huber, Senior Director, Product Management
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, August 2022

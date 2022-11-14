@@ -6,6 +6,9 @@ In this lab, you will learn how to use the APM Trace Explorer to trace the workl
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[View traces and spans in APM Trace Explorer](videohub:1_ax6iqqu1)
+
 ### Objectives
 
 * Open APM Trace Explorer from the Oracle Cloud console
@@ -35,6 +38,7 @@ Estimated time: 10 minutes
     From the output, find the wstore-frontend service. Note down the External-IP.
 
    ![Oracle Cloud console, Cloud Shell](images/6-1-1-cloudshell.png " ")
+
 
 
    >**Note:** 
@@ -185,5 +189,6 @@ In this workshop, you’ve learned how to use a file system by adding the APM Ja
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
-Avi Huber, Senior Director, Product Management
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, August 2022
