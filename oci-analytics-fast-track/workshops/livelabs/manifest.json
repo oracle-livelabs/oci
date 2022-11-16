@@ -13,9 +13,9 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Tour pelo Oracle Analytics Cloud",
+            "title": "Lab 1: Primeiros passos no Oracle Analytics Cloud",
             "description": "Navega pelo Oracle Analytics Cloud",
-            "filename": "../../ft-tour-oac/ft-tour-oac.md"
+            "filename": "../../ft-first-steps/ft-first-steps.md"
         },
         {
             "title": "Lab 2: Criar um conexão com Banco de Dados",
