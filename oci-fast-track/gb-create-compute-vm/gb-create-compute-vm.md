@@ -126,7 +126,7 @@ Você pode **seguir para o próximo Lab**.
 
 ## Conclusão
 
-Nesta sessão você aprendeu a criar Máquina Virtuais Linux e Windows e aprendeu como acessá-las.
+Nesta sessão você aprendeu a criar Máquinas Virtuais Linux e como acessá-las.
 
 ## Autoria
 
