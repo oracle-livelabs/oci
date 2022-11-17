@@ -144,7 +144,7 @@ Em nossa segunda tarefa criaremos algumas visualizações básicas para compor n
 
 ![Criar gráfico de Dispersão](./images/disperssao.png)
 
-17. A seguir iremos criar uma visualização do tipo Nuvem de Tags. Para isso, seguiremos o mesmo processo realizado para os demais gráficos, porém selecionando a opção de Nuvem de Tags e arrastando para a direita do gráfico de dispersão. Para popular a nuvem, selecione o campo de **Subcategoria do Produto** dentro da tabela "Vendas", arraste e solte no espaço de **Categoria**. Faça o mesmo para o campo **Quantidade de Vendas** dentro da tabela "Vendas", porém o soltando no campo de **Valores (Tamanho)**.
+17. A seguir iremos criar uma visualização do tipo Nuvem de Tags. Para isso, seguiremos o mesmo processo realizado para os demais gráficos, porém selecionando a opção de Nuvem de Tags e arrastando para a direita do gráfico de dispersão. Para popular a nuvem, selecione o campo de **Subcategoria do Produto** dentro da tabela "Vendas", arraste e solte no espaço de **Categoria**. Faça o mesmo para o campo **Quantidade de Pedidos** dentro da tabela "Vendas", porém o soltando no campo de **Valores (Tamanho)**.
 
 ![Criar nuvem de tags](./images/nuvem.png)
 
@@ -152,7 +152,7 @@ Em nossa segunda tarefa criaremos algumas visualizações básicas para compor n
 
 ![Criar mapa](./images/mapa.png)
 
-19. Por fim, para finalizar esse segundo conjunto de visualizações do seu dashboard, crie uma visualização do tipo Narrativa do Idioma. Essa funcionalidade explica, de forma textual, os dados selecionados. Para criar essa visualização, selecione a opção de Narrativa do Idioma e arraste para a região superior esquerda da tela. Para a narrativa dos dados, selecione o campo de **Subcategoria do Produto** da tabela "Vendas" e arraste para o campo de **Atributos**. Faça o mesmo com o campo de **Quantidade de Vendas** da tabela "Vendas", porém o arraste para o campo de **Valores**.
+19. Por fim, para finalizar esse segundo conjunto de visualizações do seu dashboard, crie uma visualização do tipo Narrativa do Idioma. Essa funcionalidade explica, de forma textual, os dados selecionados. Para criar essa visualização, selecione a opção de Narrativa do Idioma e arraste para a região superior esquerda da tela. Para a narrativa dos dados, selecione o campo de **Subcategoria do Produto** da tabela "Vendas" e arraste para o campo de **Atributos**. Faça o mesmo com o campo de **Quantidade de Pedidos** da tabela "Vendas", porém o arraste para o campo de **Valores**.
 
 ![Criar mapa](./images/NLG.png)
 
