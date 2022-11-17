@@ -71,60 +71,10 @@ Media Streams work by ingesting HLS (m3u8 files) representing transcoded content
 The complete integration will look like the below from the user's perspective. The User or business flow automation (OCI Functions) will initiate the Media Flow Job using the video content as a parameter to the job. The Media Flow Job will use pre-defined Media Workflow to create thumbnails, transcription, and multiple videos with different bit rates & sizes. If the Media Streams distribution channel is preset, it will also ingest the resultant content to Media Streams. 
 ![BigPicture](images/big-picture.png " ")
 
-
+## Learn More
+- [Media Flow Overview](https://docs.oracle.com/en-us/iaas/Content/dms-mediaflow/media-flow-overview.htm)
+- [Media Streams Overview](https://docs.oracle.com/en-us/iaas/Content/dms-mediastream/media-streams-overview.htm)
   
-## IAM Policy
-
-The OCI Media Service requires some of the other OCI services to operate.
-In OCI, Identity Policies define access and access to services. 
-The syntax for a policy will be :
-
-```
-<copy>Allow "subject" to "verb" "resource-type/entity" in "location" where "conditions"</copy>
-```
-The supported verbs include *inspect, read, use* & *manage* in the order of hierarchy access.
-For OCI Media Services, the below resource types/Entities are supported.
-- media-family
-    - media-workflow
-    - media-asset
-    - media-workflow-configuration
-    - media-workflow-job
-    - media-stream-distribution-channel
-    - media-stream-packaging-config
-    - media-stream-CDN-config
-
-Two types of policies are needed to work on the labs for media services.
-
-- Granting access to Media Services to OCI Services
-Create a create group to streamline the level of access based on the type of individual job role definition.
-For simplicity, we create the below with an any-user clause.
-
-create a new policy with the below statement
-![IAM 01](images/iam-policy.png " ")
-
-Allow any-user to *verb* *entity* in tenancy
-
-  ```
-  <copy>allow any-user to use media-family in tenancy</copy>
-  ```
-  ![IAM 02](images/iam-add-policy.png " ")
-
-A dynamic group is needed to provide access to resources like OCI Compute or OCI Functions to run Media Flow Jobs. 
-Working with the security or identity team is strongly advised for production OCI Tenancies. 
-
-- Allow Media Services to integrate and work with other OCI services. 
-Object Storage is mandatory as the files are managed from object storage.
-
-The below policies are required for the Media Flows tasks to perform its duties. 
-    ```
-      <copy>Allow service media services to use object-family in compartment {videoCompartment}
-      Allow service media services to use keys in compartment {videoCompartment}
-      Allow service media services to read media-family in compartment {videoCompartment}
-      Allow service media services to manage ai-service-speech-family in compartment {videoCompartment}</copy>
-    ```
-  
-  ![IAM 03](images/iam-add-policy-all.png " ")
-
 ## Acknowledgements
 - **Author** - Sathya Velir - OCI Media Services
 - **Last Updated By/Date** - Sathya Velir, November 2022
