@@ -1,16 +1,29 @@
 # Python & JAVA SDK
 
-In this lab we will explore some of the common API that can be provisioned using Python & Java SDK.
+## Introduction
 
-## Prerequisites
+This lab will use the Java and Python based Media Services APIs to transcode, stream the video.
+
+Estimated Time: 60 minutes
+
+### Objective 
+
+In this lab, you will
+
+* learning the OCI Media Services API calls with parameters samples
+* Transcode & Stream your video either using Python or Java programming language. 
+
+
+### Prerequisites
 
 - Familiarity with Media Flow and Media Streams using OCI Console.
-- Download the required json files in your development environment.
+- Download the required JSON files in your development environment.
 - Understand in setting up SDK for [Java](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/javasdk.htm#SDK_for_Java) or [Python](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/pythonsdk.htm#SDK_for_Python)
+
 
 ## Python
 
-Make sure you have installed the latest OCI SDK for python and setup a virtual env as best practise. 
+Make sure you have installed the latest OCI SDK for python and set up a virtual env as best practice. 
 
 
 ### Media Flow
@@ -20,8 +33,7 @@ Sample Code Walk-through
 1. Instantiate the Media Services Client
 
 ```
-<copy># Media Client for all operations instatiated
-# endpoint defines which client launched region 
+<copy># Media Client for all operations instantiated
 def ConnectMediaService():
   try:
     signer = oci.auth.signers.InstancePrincipalsSecurityTokenSigner()
@@ -35,7 +47,7 @@ def ConnectMediaService():
   return media_client</copy>
 ````
 
-The code shows how to use instance principal , however supported like other OCI services to have user principal or resource principal
+The code shows how to use instance principal, however supported, like other OCI services, to have user principal or resource principal
 
 1. Create Tasks
 
@@ -171,7 +183,7 @@ def CreateTasks():
   return media_workflow_getobject,media_workflow_transcode1,media_workflow_finaltask1,transcribe_task,media_workflow_thumbnail,vision_task</copy>
 ```
 
-The tasks are the essential part of the program which determines how a video needs to be processed
+The tasks are the essential part of the program, which determines how a video needs to be processed.
 
 3. Create Media Workflow
 
@@ -199,7 +211,7 @@ The tasks are the essential part of the program which determines how a video nee
   return response_create_media_workflow.data.id</copy>
 ```
 
-This creates a Media Workflow in the Media Flow product and ready for jobs to be submitted against this Workflow.
+The above creates a Media Workflow in the Media Flow product and is ready for jobs to be submitted against this workflow.
 
 4. Create Media Workflow Job
 
@@ -224,8 +236,8 @@ Submit jobs at this stage to run the video processing through the defined workfl
   return job_id,status</copy>
 ```
 
-Update the variables corresponding value { }
-Lets pull this code together with main function and imports
+Update the variables' corresponding value { }
+Let's pull this code together with the main function and imports.
 
 ```
 <copy>import oci
@@ -290,7 +302,6 @@ Sample Code Walk-through
 
 ```
 <copy># Media Client for all operations instantiated
-# endpoint defines which client launched region 
 def ConnectMediaService():
   try:
     signer = oci.auth.signers.InstancePrincipalsSecurityTokenSigner()
@@ -303,7 +314,7 @@ def ConnectMediaService():
   
   return media_client
 
-# Instantiate the mediastreams client 
+# Instantiate the media streams client 
 def ConnectMediaStreamsService(distribution_channel_domain_name):
   try:
     signer = oci.auth.signers.InstancePrincipalsSecurityTokenSigner()
@@ -327,17 +338,17 @@ def ConnectMediaStreamsService(distribution_channel_domain_name):
   return response_create_distribution_channel.data.id</copy>
 ```
 
-3. Configure the CDN , shown is the OCI Edge
+3. Configure the CDN, shown is the OCI Edge
 
 ```
-<copy># Create the CDN configuration , for now this will be using OCI Edge
+<copy># Create the CDN configuration, for now, this will be using OCI Edge
 def CreateStreamCDN(media_client,distribution_channel_id):
   response_create_stream_cdn = media_client.create_stream_cdn_config(oci.media_services.models.CreateStreamCdnConfigDetails(display_name="test_sdk",distribution_channel_id=distribution_channel_id,is_enabled=True,config=oci.media_services.models.StreamCdnConfigSection(type ="EDGE")))
   print("Step: Created Stream CDN")
   return response_create_stream_cdn.data.id</copy>
 ```
 
-4. Setup Packaging , configure HLS packaging with no encryption
+4. Setup Packaging, configure HLS packaging with no encryption
 
 ```
 <copy># Create the configuration for packaging the stream data.
@@ -350,7 +361,7 @@ def CreateStreamPackage(media_client,distribution_channel_id):
 
 ```
 
-5. Create Asset ID for the master playlist that needs to be streamed
+5. Create an Asset ID for the master playlist that needs to be streamed
 
 ```
 <copy># Create asset OCID from the provided master playlist
@@ -370,7 +381,7 @@ def IngestAssetStream(media_client,distribution_channel_id,media_asset_id):
   return response_ingest_asset_stream.data.media_workflow_job_id</copy>
 ```
 
-Wait for Ingest job to complete and can be checked for the ingest status
+Wait for Ingest job to complete and can be checked for the ingest status.
 
 ```
 <copy># Status on the Ingest Job
@@ -389,7 +400,7 @@ def GenerateSessionToken(media_streams_client,stream_package_id,media_asset_id):
 ```
 
 Update the variable ubx_compartment_id and namespace
-Lets pull the code together with main function and imports
+Let's pull the code together with the main function and imports
 
 ```
 <copy>import oci
@@ -471,7 +482,7 @@ if __name__ == "__main__":
 
 ## Java code
 
-Ensure you have the latest Java OCI SDK and setup the required Classpath to perform the below test program.
+Ensure you have the latest Java OCI SDK and set up the required Classpath to perform the below test program.
 
 ### Media Flow
 
@@ -483,7 +494,7 @@ Ensure you have the latest Java OCI SDK and setup the required Classpath to perf
         InstancePrincipalsAuthenticationDetailsProvider provider = InstancePrincipalsAuthenticationDetailsProvider.builder().build();
         MediaServicesClient mediaClient =  new MediaServicesClient(provider);
         // User Principal
-        // Read config from the profile DEFAULT in the file "~/.oci/config". You can switch to different profile.
+        // Read config from the profile DEFAULT in the file "~/.oci/config". You can switch to a different profile.
         // AuthenticationDetailsProvider authenticationDetailsProvider = new ConfigFileAuthenticationDetailsProvider(PROFILE_DEFAULT);
         // MediaServicesClient mediaClient = MediaServicesClient.builder().build(authenticationDetailsProvider);
         MediaflowDemoApp.printString("Media Client Instantiated");
@@ -600,7 +611,7 @@ import java.util.Scanner;</copy>
 
 ```
 
-7. Update the variables and main function.
+7. Update the variables and the main function.
 
 ```
     <copy>public static void main(String[] args) {
@@ -682,7 +693,7 @@ Code is also available at OCI Media Flow [landing page.](https://www.oracle.com/
         MediastreamsDemoApp.printString("\n", "Media Clients are Closed");
     }
     // Create Media Streams Client 
-    // Default this program creates using Instance Principal
+    //default this program creates using Instance Principal
     public static MediaStreamClient connectMediaStreams(StreamDistributionChannel dc){
         String endpoint = dc.getDomainName();
         InstancePrincipalsAuthenticationDetailsProvider provider = InstancePrincipalsAuthenticationDetailsProvider.builder().build();
@@ -722,7 +733,7 @@ Code is also available at OCI Media Flow [landing page.](https://www.oracle.com/
     }</copy>
 ```
 
-4. Create Stream Packaging configuration to specify if the streams need encryption, length of the stream segment.
+4. Create Stream Packaging configuration to specify if the streams need encryption & length of the stream segment.
 
 ```
 <copy>// Create Streaming Package Configuration 
@@ -739,8 +750,8 @@ Code is also available at OCI Media Flow [landing page.](https://www.oracle.com/
     }</copy>
 ```
 
-5. Create Asset ID for the master playlist that is to be ingested.
-This is needed only if the master playlist was not registered to asset db as part of the media flow.
+5. Create an Asset ID for the master playlist to be ingested.
+This is needed only if the master playlist was not registered to asset database as part of the media flow.
 
 ```
 <copy>// Create Media Asset ID for given master playlist 
@@ -766,7 +777,7 @@ This is needed only if the master playlist was not registered to asset db as par
     }</copy>
 ```
 
-7. we can monitor the ingest with help of ingest media flow job id.
+7. we can monitor the ingest with the help of ingest media flow job id.
 
 ```
 <copy>// Get the Media WorkflowJob ID for the Ingest Job
@@ -786,7 +797,7 @@ This is needed only if the master playlist was not registered to asset db as par
     }</copy>
 ```
 
-8. Create session token for playback.
+8. Create a session token for playback.
 
 ```
 <copy>// Create Session Token 
@@ -807,7 +818,7 @@ This is needed only if the master playlist was not registered to asset db as par
     }</copy>
 ```
 
-9. Other required  accessr=ory functions for the program to run.
+9. Other essential accessory functions for the program to run.
 
 ```
 <copy>// User Input 

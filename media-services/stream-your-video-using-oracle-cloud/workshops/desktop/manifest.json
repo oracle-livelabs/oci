@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Transcode and Stream your video",
+    "workshoptitle": "Stream your Video with Oracle Cloud",
     "help": "livelabs-help-oci_us@oracle.com",
     "variables": ["../../variables/variables.json",
       "../../variables/variables-in-another-file.json"],
@@ -28,23 +28,23 @@
         "filename": "../../03-stream-video/stream-video.md"
       },
       {
-        "title": "Lab 4: Using Postman",
+        "title": "Lab 4: Using Postman (Optional)",
         "filename": "../../04-postman-api/postman-api.md"
       },
       {
-          "title": "Lab 5: Using Python & Java  SDK",
+          "title": "Lab 5: Using Python & Java SDK (Optional)",
           "filename": "../../05-python-java/python-java.md"
       },
       {
-              "title": "Lab 6: Using OCI CLI",
+              "title": "Lab 6: Using OCI CLI (Optional)",
               "filename": "../../06-cli/oci-cli.md"
       },
       {
-              "title": "Lab 7: Using Terraform",
+              "title": "Lab 7: Using Terraform (Optional)",
               "filename": "../../07-terraform/terraform.md"
       },
       {
-        "title": "Appendix: Akamai CDN Configuration",
+        "title": "Appendix: Akamai CDN Configuration (Optional)",
         "filename": "../../appendix-akamai-cdn/akamai-cdn-config.md"
       },
       {
