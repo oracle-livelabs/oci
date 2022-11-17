@@ -12,7 +12,7 @@ Neste Lab você vai aprender a criar um Conjunto de Dados (Dataset) no Oracle An
 * Fazer o Join entre as tabelas
 * Salvar o Conjunto de Dados
 
-## Task 1: Selecionar as tabelas
+## Task 1: Localize as tabelas
 
 1.	Clique no botão **Criar** na parte superior direita e em seguida selecione **Conjunto de Dados**.
 
@@ -32,7 +32,7 @@ Neste Lab você vai aprender a criar um Conjunto de Dados (Dataset) no Oracle An
 
 ![Seleciona a tabelas Pedidos](./images/select-pedidos.png)
 
-2. Em seguida arrate a tabela **Vendas** e solte ao Lado da tabela de pedidos.
+2. Em seguida arraste a tabela **Vendas** e solte ao lado da tabela de pedidos.
 
 ![Seleciona a tabelas Vendas](./images/select-vendas.png)
 
