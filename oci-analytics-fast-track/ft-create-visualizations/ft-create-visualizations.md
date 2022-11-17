@@ -12,7 +12,7 @@ Nesse Lab você vai aprender a criar visualizações no Oracle Analytics Cloud.
 * Construir um dashboard com gráficos de diferentes tipos
 * Alterar propriedades dos gráficos e fazer uso de funcionalidades complementares para personalizar o dashboard
 
-## Task 1: Explorar a Interface
+## Tarefa 1: Explorar a Interface
 
 O Oracle Analytics Cloud (OAC) possuí uma interface simples, o que permite navegar rapidamente por suas diversas opções e funcionalidades. Em nossa primeira tarefa exploraremos a interface do Oracle Analytics Cloud dentro de uma pasta de trabalho.
 
@@ -80,7 +80,7 @@ Outras opções de navegação são encontradas na região inferior da página.
 
 13. Na região inferior esquerda da página encontre a opção de **Adicionar Tela**, representada pelo simbolo **+**.
 
-## Task 2: Criar um Dashboard com Visualizações Básicas
+## Tarefa 2: Criar um Dashboard com Visualizações Básicas
 
 Em nossa segunda tarefa criaremos algumas visualizações básicas para compor nosso dashboard.
 
@@ -181,7 +181,7 @@ Em nossa segunda tarefa criaremos algumas visualizações básicas para compor n
 
 ![Completar tabela](./images/completa_tabela.png)
 
-## Task 3: Explorando as Funcionalidades de Auto Insight e Explicar
+## Tarefa 3: Explorando as Funcionalidades de Auto Insight e Explicar
 
 O Oracle Analytics Cloud possui diversos mecanismos de Machine Learning nativo da ferramenta, esses recursos nos ajudam de várias formas diferentes durante o processo de criação dos nossos dashboards. Vamos ver duas funcionalidades muito úteis para entendimento dos dados e sugestões de gráficos: *Auto Insights e Explain (Explicar)*.
 
@@ -213,7 +213,7 @@ Agora vamos usar o ***Auto Insights*** para criar visualizações poderosas usan
 
 ![Auto Insights](./images/autoinsight2.png)
 
-## Task 4: Alterar Propriedades dos Gráficos
+## Tarefa 4: Alterar Propriedades dos Gráficos
 
 O Oracle Analytics Cloud permite que você altere propriedades dos gráficos do seu dashboard. Essa é uma funcionalidade essencial para garantir que suas visualizações estejam claras e possam ser fácilmente entendidas pelos usuários finais do dashboard.
 
@@ -245,7 +245,7 @@ Uma das propriedades mais importantes de uma boa visualização é a sua legenda
 
 ![Legenda](./images/posicao_legenda.png)
 
-## Task 5: Adicionar Texto, Cores e Imagens ao Dashboard
+## Tarefa 5: Adicionar Texto, Cores e Imagens ao Dashboard
 
 O Oracle Analytics Cloud permite a adição de texto e imagens de modo fácil ao seu dashboard, dando um maior nível de customização. Também é possível facilmente alterar a paleta de cores do dsahboard para que todos os gráficos sigam o mesmo padrão de cores.
 
