@@ -40,13 +40,13 @@ Assim que a barra lateral se expandir, você verá o ícone correspondente a **H
 
 ![menu do OAC "Catálogo"](.\images\Catalogo_Analytics.png)  
 
-3.	Seguindo o mesmo passo de clicar no Menu Haburguer, ao clicar em **Dados**, será exibidos em **Conjunto de Dados**, dados disponíveis para serem usados, quando você upar uma tabela, planilha ou arquivo, eles ficarão salvos para serem consumidos imediatamente ou reaproveitados em outras ocasiões.
+3.	Seguindo o mesmo passo de clicar no **Menu Hamburguer**, ao clicar em **Dados**, será exibidos em **Conjunto de Dados**, dados disponíveis para serem usados, quando você upar uma tabela, planilha ou arquivo, eles ficarão salvos para serem consumidos imediatamente ou reaproveitados em outras ocasiões.
 
 ![Dados](./images/Dados_Analytics.png)
 
 Ainda nesta aba, você poderá verificar **Conexões**:
 
-![Dados](./images/conexoes.png)
+![Conexões](./images/conexoes.png)
 
 À direita de **Conexões**, você pode acessar **Fluxos de Dados** clicando em cima dele.
 Os fluxos de dados permitem que você organize e integre seus dados para produzir conjuntos de dados que seus usuários podem visualizar.
@@ -89,7 +89,7 @@ O modelo de dados semânticos é uma abordagem que se baseia em princípios sem�
 
 ## Task 2: Opções de ID
 
-1. Para ter acesso ao Help Center, editar seu perfil, mudar a senha ou efetuar, verficar a versão atual do OAC ou fazer logout da sua conta, basta clicar em cima do círculo com as iniciais da sua credencial.
+1. Para ter acesso ao Help Center, editar seu perfil, mudar a senha ou efetuar, verificar a versão atual do OAC ou fazer logout da sua conta, basta clicar em cima do círculo com as iniciais da sua credencial.
 
 ![ID](./images/ID.png)
 
