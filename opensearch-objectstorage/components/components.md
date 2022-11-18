@@ -26,10 +26,17 @@ TENANCY_OCID = (SAMPLE) ocid1.tenancy.oc1..amaaaaaaaa
 COMPARTMENT_OCID = (SAMPLE) ocid1.compartment.oc1..amaaaaaaaa
 USER_OCID = (SAMPLE) ocid1.user.oc1..amaaaaaaaa
 AUTH_TOKEN = (SAMPLE)  X1232324_TGH
-PRIVATE_KEY = (SAMPLE)
+PRIVATE_KEY = (SAMPLE) file private_key.pem
+
+-----BEGIN PRIVATE KEY-----
+AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9sdfhkjdhf
+...
+-----END PRIVATE KEY-----
+
+PRIVATE_KEY_RSA_FORMAT = (SAMPLE) file private_key_rsa_format.pem
 
 -----BEGIN RSA PRIVATE KEY-----
-AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9sdfhkjdhf
+ABCDEpAIBAAKCAQEAxHbqmTFASn48FY8mVtVZoUUE5iixGFpcN6JSdHHaxtkqTbx2
 ...
 -----END RSA PRIVATE KEY-----
 
@@ -380,7 +387,7 @@ Then,
     - Path: */search*
     - Method: *ANY*
     - Backend-Type: *HTTP*
-    - URL: *https://##OPENSEARCH_HOST##:9200/oic/_search*
+    - URL: *https://##OPENSEARCH_HOST##:9200/oic/\_search*
         - ex: https://amaaaaaabbbbbbb.opensearch.eu-frankfurt-1.oci.oraclecloud.com:9200/oic/_search
     - Click *Next*
 - Then *Create*

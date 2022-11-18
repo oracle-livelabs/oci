@@ -20,7 +20,7 @@ Estimated Lab Time: 30 minutes.
 - Oracle Cloud Infrastructure paid account credentials (User, Password, Tenant, and Compartment)
 - Oracle Marketplace Listings Access
     - **VM Series Firewall** paid listing or BOYL access required for this **Lab**
-        - You would need a valid license from Palo Alto Networks if you want to monitor traffic using BOYL image.
+        - You would need a valid license from Palo Alto Networks if you want to monitor traffic using BOYL image and utilize advanced features.
 
 ## **Task 1: Launch VM Series Firewall Instances**
 
@@ -46,10 +46,12 @@ Estimated Lab Time: 30 minutes.
     | ---------- | --------- | ---------------------------------------------------- | ------------- | -------------- | ------------ | ----------- | --------------------------- |
     | vm-series-firewall-1| AD1       | Partner Image: Palo Alto Networks VM-Series Bundle2 - 4 OCPUs | 10.1.0        | VMStandard2.4  | firewall-vcn | mgmt-subnet | Yours/CloudShell Public Key |
     | vm-series-firewall-2| AD2       | Partner Image: Palo Alto Networks VM-Series Bundle2 - 4 OCPUs | 10.1.0        | VM Standard2.4 | firewall-vcn | mgmt-subnet | Yours/CloudShell Public Key |
+
+    **Please Read**: Partner now supports flexible shapes and you can use that deploy your instances. For example **VM.Standard.E4.Flex** shape. 
     
 5. Enter a **Name** for your Instance and the **Compartment** in which you placed your **Firewall VCN**. Fill out the dialog box. Select appropriate values based on table shared in previous **#4**. Click on **Partner Image Agreement** check box and save image selection by clicking on **Select Image** button.
 
-6. Select Shape **VM Standard2.4** as default value.
+6. Select Shape **VM Standard2.4** as default value or appropriate shape which you want.
 
 7. Scroll Down to **Networking** and verify the following.
       - Your Compartment is selected
@@ -403,7 +405,7 @@ You may now [proceed to the next lab](#next).
 
 ## Acknowledgements
 
-- **Author** - Arun Poonia, Senior Solutions Architect
+- **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Palo Alto Networks
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, July 2021
+- **Last Updated By/Date** - Arun Poonia, Oct 2022
