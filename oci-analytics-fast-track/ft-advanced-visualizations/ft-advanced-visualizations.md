@@ -28,7 +28,7 @@ O Oracle Analytics Cloud (OAC) te oferece uma forma muito simples de adicionar e
 
 3. Digite o nome **"Avançado"** e clique no sinal de check para confirmar.
 
-![Criar nova tela](./images/rename-advanced-3.png)
+![Renomear Tela para Avançado](./images/rename-advanced-3.png)
 
 4. Segure a tecla Control (CTRL) e selecione os campos **Vendas** e **Data do pedido (Mês)** dentro da tabela "Vendas", arraste e solte no centro da tela.
 
@@ -60,7 +60,7 @@ Após alguns segundo você verá a Linha de Referência em seu gráfico
 
 Esse deve ser seu resultado final:
 
-![Ver Linha de Referência](./images/outliers-9.png)
+![Resultado da Linha de Referência](./images/outliers-9.png)
 
 ## Tarefa 2: Formatação Condicional
 
@@ -112,25 +112,25 @@ A barra de filtro fica na parte superior da tela, todos os filtros criados ficar
 
 1. Clique no sinal de + na barra de filtro e selecione o campo "DATA DO PEDIDO" na tabela de Vendas.
 
-![Barra de Filtro](./images/filter-date-24.png)
+![Cline sinal de 'Mais' adicione DATA DO PEDIDO](./images/filter-date-24.png)
 
 2. Clique novamente no sinal de + e agora selecione o campo "EMBALAGEM DO PRODUTO" na tabela de Vendas.
 
-![Barra de Filtro](./images/filter-package-25.png)
+![Cline sinal de 'Mais' adicione EMBALAGEM DO PRODUTO](./images/filter-package-25.png)
 
 Você pode adicionar os filtros de acordo com suas necessidade de analisar as informações nessa tela.
 
-![Barra de Filtro](./images/check-filter-37.png)
+![Verifique os filtros](./images/check-filter-37.png)
 
 Agora vamos tornar o filtro visível e aplicado em todas as Telas do seu Arquivo de Trabalho.
 
 3. Descanse o cursor do mouse sobre o filtro "DATA DO PEDIDO" até que você veja o ícone de "fixar" ser destacado e clique sobre ele.
 
-![Fixar Filtro](./images/pin-filter-36.png)
+![Localize o ícone de fixar](./images/pin-filter-36.png)
 
 Você pode navegar para qualquer aba do seu Dashboard e o filtro "DATA DO PEDIDO" estará fixado.
 
-![Fixar Filtro](./images/pin-filter-37.png)
+![Verifique o filtro fixado em todos as telas](./images/pin-filter-37.png)
 
 
 ## Tarefa 4: Ações de Dados (Data Actions)
@@ -166,7 +166,7 @@ Agora toda vez que você clicar com o botão direito do mouse sobre algum dado q
 
 Você será direcionado para a Tela **Detalhe** onde você poderá facilmente explorar outras informações associadas a localização "Bahia" que havíamos selecionado anteriormente.Tudo isso porque a "Ações de Dados" além de ter te redirecionado para essa nova tela também criou um filtro com o parâmetro "Bahia" já selecionado
 
-![ENtendendo Data Actions](./images/data-actions-35.png)
+![Entendendo Data Actions](./images/data-actions-35.png)
 
 Esse deve ser o seu resultado final:
 
@@ -186,64 +186,64 @@ Existe um outra maneira de se criar filtros no Oracle Analytics Cloud (OAC): ***
 
 3. Acesse a opção "Mapas".
 
-![Navegue até console](./images/image-filter-27.png)
+![Clique em Mapas](./images/image-filter-27.png)
 
 4. Clique na aba "Planos de Fundo", expanda a opção "Planos de Fundo de Imagem" e clique em **"Adicionar Imagem"**.
 
-![Navegue até console](./images/image-filter-28.png)
+![Clique em Adicionar imagem](./images/image-filter-28.png)
 
 5. Localize a imagem que você acabou de fazer o upload, clique nos 3 pontinhos do lado esquerdo da linha e clique em **"Inspecionar"**
 
-![Navegue até console](./images/image-filter-42.png)
+![Clique nos 3 pontinho e selecione Inspecionar](./images/image-filter-42.png)
 
 6. Preencha os campos com as informações abaixo e clique em **Salvar**:
 
 **Nome:** *Modos de Envio*  
 **Descrição:** *Imagem representando os modos de envio disponíveis*  
 
-![Navegue até console](./images/image-filter-29.png)
+![Preencha as informações](./images/image-filter-29.png)
 
 6. Localize a imagem que você acabou de fazer o upload, clique nos 3 pontinhos do lado esquerdo da linha e clique em **"Criar Camada de Mapas"**
 
-![Navegue até console](./images/image-filter-30.png)
+![Clique em criar camada de mapa](./images/image-filter-30.png)
 
 Agora será necessário mapear as áreas de imagem e vincular cada mapeamento a cada termos usado para os modos de envio disponíveis em nossos dados.
 
 7. Selecione o tipo de desenho para "Retângulo". Faça 1 quadrado em volta da imagem do Avião (Voô Regular) e escreva o termo "Vôo Regular"
 
-![Navegue até console](./images/image-filter-38.png)
+![Desenhe um retângulo em volta da imagem do primeiro Avião](./images/image-filter-38.png)
 
 8. Faça 1 quadrado em volta da imagem do caminhão (Caminhão de Entrega) e escreva o termo "Caminhão de Entrega"
 
-![Navegue até console](./images/image-filter-39.png)
+![Desenhe um retângulo em volta da imagem do caminhão](./images/image-filter-39.png)
 
 9. Faça 1 quadrado em volta da imagem do Avião (Voô Regular) e escreva o termo "Vôo Expresso"
 
-![Navegue até console](./images/image-filter-40.png)
+![Desenhe um retângulo em volta da imagem do segundo Avião](./images/image-filter-40.png)
 
 10.  Quando toda imagem estiver mapeada clique em salvar (Ícone de disquete no canto superior direito da tela). 
 
-![Navegue até console](./images/image-filter-41.png)
+![Salve o mapeamento](./images/image-filter-41.png)
 
 Volte para seu "Arquivo de Trabalho" para adicionar o imagem mapeada para ela atuar como filtro. No nosso exemplo vamos adicionar a imagem a uma das tela do projeto atual da Miau Corp.
 
 11. Navegue até a aba de Tipos de Gráficos, localize o gráfico de Mapa e arraste ele até a parte superior do seu canvas. (Abaixo do Campo de Texto)
 
-![Navegue até console](./images/image-filter-43.png)
+![Selecione o tipo de gráfico de Mapa](./images/image-filter-43.png)
 
 12. Em seguida adicione o campo "MODO DE ENVIO" que está na tabela "Pedidos".
 
-![Navegue até console](./images/image-filter-44.png)
+![Adicione a coluna Modo de Envio](./images/image-filter-44.png)
 
 Você verá a imagem que mapeamos anteriormente. Agora vamos utilizar a imagem com um filtro dentro dessa tela do nosso dashboard.
 
 13. Descanse o cursor do mouse sobre o nome do gráfica até um ícone de funil aparecer na tela e clique sobre ele.
 
-![Navegue até console](./images/image-filter-45.png)
+![Clique no ícone de funil](./images/image-filter-45.png)
 
 Pronto! Toda vez que você quiser ver seus dados de vendas com base no método de envio basta clicar sobre a área correspondente na imagem.
 
-![Navegue até console](./images/image-filter-46.gif)
+![Clique na imagem e veja o filtro aplicado](./images/image-filter-46.gif)
 
 ## Conclusão
 

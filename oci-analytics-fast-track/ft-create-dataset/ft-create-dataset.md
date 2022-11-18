@@ -56,22 +56,22 @@ As colunas do tipo ***Atributo*** aceitam qualquer tipo de dados descritivo, que
 
 1. Verifique se você está na aba do Diagrama de Junção e clique no botão de salvar no topo direito da tela (ícone de um disquete).
 
-![Tipos de Dados](./images/salve-data-10.png)
+![Clique no s disquete para salvar o conjunto de dados](./images/salve-data-10.png)
 
 2. Dê um nome e uma descrição para o Conjunto de dados:
 
 *Nome:* DADOS\_MIAU\_CORP  
 *Descrição:* Conjunto de Dados para Análise de Dados de vendas da MIAU CORP
 
-![Tipos de Dados](./images/salve-data-11.png)
+![Preencha os campos](./images/salve-data-11.png)
 
 3. Verifique se você recebeu a mensagem **O Conjunto de Dados foi salvo com sucesso** e em seguida clique em voltar.
 
-![Tipos de Dados](./images/salve-data-12.png)
+![Mensagem de salvo com sucesso](./images/salve-data-12.png)
 
 4. Você verá seu novo Conjunto de Dados listado como indicado na imagem abaixo.
 
-![Tipos de Dados](./images/check-dataset-13.png)
+![Verifique seu conjunto de dados na lista](./images/check-dataset-13.png)
 
 Você pode **seguir para o próximo Lab**.
 
