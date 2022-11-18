@@ -36,16 +36,24 @@
           "filename": "../../05-python-java/python-java.md"
       },
       {
-              "title": "Lab 6: Using OCI CLI (Optional)",
-              "filename": "../../06-cli/oci-cli.md"
+          "title": "Lab 5: Using Python SDK (Optional)",
+          "filename": "../../05-python-api/python-api.md"
       },
       {
-              "title": "Lab 7: Using Terraform (Optional)",
-              "filename": "../../07-terraform/terraform.md"
+        "title": "Lab 6: Using Java SDK (Optional)",
+        "filename": "../../06-java-api/java-api.md"
       },
       {
-        "title": "Appendix: Akamai CDN Configuration (Optional)",
-        "filename": "../../appendix-akamai-cdn/akamai-cdn-config.md"
+              "title": "Lab 7: Using OCI CLI (Optional)",
+              "filename": "../../07-cli/oci-cli.md"
+      },
+      {
+              "title": "Lab 8: Using Terraform (Optional)",
+              "filename": "../../08-terraform/terraform.md"
+      },
+      {
+          "title": "Appendix: Akamai CDN Configuration (Optional)",
+          "filename": "../../appendix-akamai-cdn/akamai-cdn-config.md"
       },
       {
         "title": "Need Help?",
