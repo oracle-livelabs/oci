@@ -9,6 +9,7 @@ Nesse Lab você vai aprender a criar visualizações no Oracle Analytics Cloud.
 ### Objetivos
 
 * Conhecer a interface de criação de visualizações do OAC
+* Criar campos calculados
 * Construir um dashboard com gráficos de diferentes tipos
 * Alterar propriedades dos gráficos e fazer uso de funcionalidades complementares para personalizar o dashboard
 
@@ -80,7 +81,29 @@ Outras opções de navegação são encontradas na região inferior da página.
 
 13. Na região inferior esquerda da página encontre a opção de **Adicionar Tela**, representada pelo simbolo **+**.
 
-## Tarefa 2: Criar um Dashboard com Visualizações Básicas
+## Tarefa 2: Criar um Campo Calculado
+
+O Oracle Analytics Cloud também permite a criação de campos calculados dentro do próprio projeto de visualização para trazer informações complementares àquelas já presentes.
+
+Para explorar essa funcionalidade iremos criar um campo calculado que será utilizado ao longo deste laboratório.
+
+1.  Na barra lateral de opções, clique no simbolo indicado por um **+** e em seguida clique na opção **Adicionar Cálculo...**.
+
+![Menu Campo Calculado](./images/campocalc1.png)
+
+2.  Na janela que se abrir, coloque o nome do campo como **Quantidade de Pedidos**, digite o código a seguir e clique em **Validar** e posteriormente em **Salvar**.
+
+```
+COUNT(ID LINHA DO PEDIDO)
+```
+
+![Escrita Campo Calculado](./images/campocalc2.gif)
+
+3.  O campo calculado criado ficará disponível dentro da aba **Dados** dentro da pasta **Meus Cálculos**.
+
+![Localizar Campo Calculado](./images/campocalc3.png)
+
+## Tarefa 3: Criar um Dashboard com Visualizações Básicas
 
 Em nossa segunda tarefa criaremos algumas visualizações básicas para compor nosso dashboard.
 
@@ -181,7 +204,7 @@ Em nossa segunda tarefa criaremos algumas visualizações básicas para compor n
 
 ![Completar tabela](./images/completa_tabela.png)
 
-## Tarefa 3: Explorando as Funcionalidades de Auto Insight e Explicar
+## Tarefa 4: Explorando as Funcionalidades de Auto Insight e Explicar
 
 O Oracle Analytics Cloud possui diversos mecanismos de Machine Learning nativo da ferramenta, esses recursos nos ajudam de várias formas diferentes durante o processo de criação dos nossos dashboards. Vamos ver duas funcionalidades muito úteis para entendimento dos dados e sugestões de gráficos: *Auto Insights e Explain (Explicar)*.
 
@@ -213,7 +236,7 @@ Agora vamos usar o ***Auto Insights*** para criar visualizações poderosas usan
 
 ![Auto Insights](./images/autoinsight2.png)
 
-## Tarefa 4: Alterar Propriedades dos Gráficos
+## Tarefa 5: Alterar Propriedades dos Gráficos
 
 O Oracle Analytics Cloud permite que você altere propriedades dos gráficos do seu dashboard. Essa é uma funcionalidade essencial para garantir que suas visualizações estejam claras e possam ser fácilmente entendidas pelos usuários finais do dashboard.
 
@@ -245,9 +268,9 @@ Uma das propriedades mais importantes de uma boa visualização é a sua legenda
 
 ![Legenda](./images/posicao_legenda.png)
 
-## Tarefa 5: Adicionar Texto, Cores e Imagens ao Dashboard
+## Tarefa 6: Adicionar Texto, Cores e Imagens ao Dashboard
 
-O Oracle Analytics Cloud permite a adição de texto e imagens de modo fácil ao seu dashboard, dando um maior nível de customização. Também é possível facilmente alterar a paleta de cores do dsahboard para que todos os gráficos sigam o mesmo padrão de cores.
+O Oracle Analytics Cloud permite a adição de texto e imagens de modo fácil ao seu dashboard, dando um maior nível de customização. Também é possível facilmente alterar a paleta de cores do dashboard para que todos os gráficos sigam o mesmo padrão de cores.
 
 Vamos começar adicionando um título a página **Pedidos**.
 
