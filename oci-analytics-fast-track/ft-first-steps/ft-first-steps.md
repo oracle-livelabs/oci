@@ -9,7 +9,7 @@ Neste Lab você vai aprender a navegar pela interface do Oracle Analytics Cloud 
 O Oracle Analytics Cloud é um serviço de nuvem pública escalável e seguro que fornece um conjunto completo de recursos para explorar e executar análises colaborativas para você, seu grupo de trabalho e sua empresa. Com o Oracle Analytics Cloud, você também tem recursos flexíveis de gerenciamento de serviços, incluindo configuração rápida, dimensionamento e patches fáceis.
 Como usuário do Oracle Analytics com acesso de Autor de Conteúdo do DV, você poderá estabelecer conexão com as origens de dados usadas por sua organização. Por exemplo, você pode criar um conjunto de dados que inclua tabelas de uma conexão do Autonomous Data Warehouse , tabelas de uma conexão Spark e tabelas de uma área de assunto local.
 
-*Tempo estimado para o Lab:* 25 Minutos
+*Tempo estimado para o Lab:* 10 Minutos
 
 ### Objetivos
 
@@ -21,12 +21,16 @@ Neste Laboratório você vai:
 
 ## Task 1: Página Inicial
 
-Assim que logar com seu ID de Usuário e Senha, você será direcionado para a página inicial da ferramenta. 
-Quando você acessar pela primeira vez, o Oracle Analytics Cloud exibe um tour pelo produto. 
-Esta tela inicial é a **Home page**.
-![Home page"](.\images\homepage.png)  
+Para executar os passos a seguir, você deve estar com seu navegador configurado em português. Use seu ID de Usuário e Senha para entrar no ambiente do analytics. Preencha os campos indicados e clique em **Acessar**.
 
-Sempre que quiser retornar à ela:
+![Login](.\images\tela_login.png)
+
+Assim que logar, você será direcionado para a página inicial da ferramenta. 
+Quando acessar pela primeira vez, o Oracle Analytics Cloud exibe um tour pelo produto. 
+Esta tela inicial é a **Home page**.
+![Home page](.\images\homepage.png)  
+
+Toda navegação é feita pelo **Menu Hamburguer**. Sempre que quiser retornar à Home page:
 
 1.	Clique no Menu Hamburguer no lado superior esquerdo da tela principal, 
 
@@ -36,9 +40,9 @@ Assim que a barra lateral se expandir, você verá o ícone correspondente a **H
 
 ![menu do OAC "Hamburguer"](.\images\Home_Analytics.png) 
 
-2.	Para explorar os projetos acessíveis, clique no Menu Hamburguer e escolha **Catálogo**. Você será direcionado para a seguinte tela:
+2.	Você e todos os outros usuários têm suas próprias pastas pessoais. As pastas pessoais só podem ser acessadas ​​pelo usuário que criou e salvou o conteúdo na pasta. Você também pode salvar projetos em pastas compartilhadas onde outros usuários ou grupos podem acessá-los. Para explorar, clique no **Menu Hamburguer** e escolha **Catálogo**. Você será direcionado para a seguinte tela:
 
-![menu do OAC "Catálogo"](.\images\Catalogo_Analytics.png)  
+![Catálogo](.\images\minhas_pastas.png) 
 
 3.	Seguindo o mesmo passo de clicar no **Menu Hamburguer**, ao clicar em **Dados**, será exibidos em **Conjunto de Dados**, dados disponíveis para serem usados, quando você upar uma tabela, planilha ou arquivo, eles ficarão salvos para serem consumidos imediatamente ou reaproveitados em outras ocasiões.
 
@@ -69,20 +73,21 @@ Use-o para copiar dados de uma origem para análise no Oracle Analytics Cloud.
 
 ![Replicações](./images/Replicacaodedados.png)
 
-4.	O Oracle Analytics permite que você registre e use modelos de machine leaning Oracle do Oracle Database ou Oracle Autonomous Data Warehouse, volte mais uma vez no Menu Hamburguer e clique em **Aprendizagem Por Máquina** para acessar uma lista de modelos e scripts registrados:
+4.	O Oracle Analytics permite que você registre e use modelos de machine leaning Oracle do Oracle Database ou Oracle Autonomous Data Warehouse, volte mais uma vez no **Menu Hamburguer** e clique em **Aprendizagem Por Máquina** para acessar uma lista de modelos e scripts registrados:
 
 ![Machine Learning](./images/Aprendizadopormaquina_Analytics.png)
 
-5.	Abaixo de Aprendizagem Por Máquina, clique em **Modelos Semânticos** para acessar uma lista de modelos e scripts registrados:
+5.	Novamente, clique no **Menu Hambuguer**, abaixo de **Aprendizagem Por Máquina**, clique em **Modelos Semânticos** para acessar uma lista de modelos e scripts registrados:
 
 ![Modelos Semanticos](./images/Semantica.png)
 
 O modelo de dados semânticos é uma abordagem que se baseia em princípios semânticos que resultam em um conjunto de dados com estruturas de dados especificadas inerentemente. 
 
-6.	Para rastrear o status de seus jobs e gerenciá-los, continue navegando no Menu Hamburguer e clique em **Jobs**. Você pode monitorar o número de jobs filtrando por **Tipo de Objeto** e o **Status** do mesmo.
+6.	Para rastrear o status de seus jobs e gerenciá-los, continue navegando no **Menu Hamburguer** e clique em **Jobs**. Você pode monitorar o número de jobs filtrando por **Tipo de Objeto** e o **Status** do mesmo.
+
 ![Jobs](./images/jobs.png)
 
-7.	Ao clicar em **Console** você encontrará opções para gerenciar permissões de usuário, configurar vários aspectos do Oracle Analytics Cloud e executar outras tarefas administrativas.
+7.	Ao clicar em **Console**, através do **Menu Hamburguer**, você encontrará opções para gerenciar permissões de usuário, configurar vários aspectos do Oracle Analytics Cloud e executar outras tarefas administrativas.
 
 ![Visualizações_console](./images/Console.png)
 ![Visualizações_console](./images/Console_config.png)
@@ -109,11 +114,13 @@ Existem algumas formas de fazer essa verificação:
 
 ![Conexão com banco](./images/Conexaofeita.png)
 
-2. Ao clicar em **Criar** e posteriormente em **Conjunto de Dados** para dar início à criação do seu conjunto, você será direcionado para uma guia onde imediatamente, conseguirá visualizar sua conexão. 
+Ao descansar o mouse sobre a conexão, no final desta linha, você verá três pontinhos à sua direita. Clique em cima do mesmo e em seguida, **Inspecionar**.
 
-![Criando o conjunto](./images/conjuntodedados.png)
+![Inspecionar sua conexão](./images/Inspecionar_conexao.png)
 
-![Acessando o conjunto](./images/ConjuntodedadosADW.png)
+Você verá todos os detalhes da sua conexão.
+
+![Informações da conexão](./images/detalhes_conexao.png)
 
 ## Task 5: Criar uma Conexão (OPCIONAL)
 
@@ -121,9 +128,18 @@ Você pode se conectar a vários tipos de fonte de dados, como bancos de dados e
 
 Como administrador, você cria uma conexão com o Oracle Autonomous Data Warehouse que permite que outros usuários acessem fontes de dados e criem conjuntos de dados para seus projetos do Oracle Analytics. 
 
-1.  Abra seu navegador da Web e acesse https://cloud.oracle.com . 
+1.  Abra seu navegador da Web e acesse [a Oracle Cloud](https://cloud.oracle.com).
+Insira o nome da sua conta na nuvem se estiver entrando em uma conta com o Identity Cloud Service. 
 
-2.  Na página de login de **Cloud Infrastructure**, insira suas credenciais de login e, em seguida, clique em **Sign In**.
+![Acessando a cloud](./images/Acesso_a_cloud.png) 
+
+Quando a nova página carregar, apenas clique em **Continue**.
+
+![Logando na console do OCI](./images/login_oci.png) 
+
+2.  Na página de login de **Cloud Infrastructure**, insira suas credenciais de login e, em seguida, clique em **Acessar**.
+
+![Acessando a cloud](./images/tela_login.png) 
 
 3.  Clique no ícone de menu no canto superior esquerdo para exibir o menu de navegação.
 
@@ -133,62 +149,31 @@ Como administrador, você cria uma conexão com o Oracle Autonomous Data Warehou
 
 ![Acessando o Autonomous](./images/Oracle_Database.png)  
 
-5. Escolha o seu Compartimento no canto inferior esquerdo. O mesmo irá aparecer na parte superior da tela. Posteriormente, clique em **Create  Autonomous Database**.
+5. Escolha o seu Compartimento no canto inferior esquerdo. O mesmo irá aparecer na parte superior da tela. Seu banco aparecerá na página de bancos de dados autônomos, selecione-o no link localizado em **Display Name**. 
+Caso não tenha um banco Autonomous configurado, [clique aqui e saiba como provisionar.](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/autonomous-provision.html#GUID-0B230036-0A05-4CA3-AF9D-97A255AE0C08)
 
-![Criando o Autonomous](./images/Create_ADW.png) 
+![Localizando o banco Autonomous](./images/ADW.png) 
 
-6. Insira um nome de exibição em **Display name** e especifique o nome do banco de dados em **Database name**.
-
-![Informações](./images/displayname.png) 
-
-7. Escolha um tipo de carga de trabalho e um tipo de implantação.
-
-![Workload](./images/Workload.png) 
-
-8. Selecione a versão do banco de dados. 
-
-A versão do banco de dados disponível é 19c. Em **OCPU count** especifique o número de núcleos de CPU. 
-
-Abaixo, você encontrará **Storage (TB)**, neste caso, especifique o armazenamento que deseja fazer disponível para seu banco de dados, em terabytes. 
-
-Por padrão, o dimensionamento automático de OCPU (**OCPU auto scaling**) é ativado para permitir que o sistema use automaticamente até três vezes mais recursos de CPU para atender à demanda de carga de trabalho. Se você não quiser usá-lo, desmarque essa opção.
-
-![Configurações](./images/Configuredatabase.png) 
-
-9. Crie credenciais de administrador. 
-
-Defina a senha para o usuário Autonomous Database Admin. Em seguida, digite a mesma senha novamente no campo abaixo para confirmar sua nova senha. 
-
-![Senha](./images/Credentials.png)    
-
-10. Escolha o acesso à rede.
-
-![Rede](./images/Network.png) 
-
-11. Escolha a licença, jutntamente com o Oracle Database Edition. Para finalizar a criação, no campo **Contact Email**, insira um endereço de e-mail válido. Para inserir vários endereços de e-mail de contato, repita o processo para adicionar até 10 e-mails de contato do cliente e então, **Create Autonmous Database**.
-
-![Rede](./images/Licensetype.png) 
-
-12. Seu banco aparecerá na página de bancos de dados autônomos, finalizando o provisionamento, com seu Automous Databse disponível, clique nos três pontinhos ao final da linha, selecione **Start**. Agora,selecione-o no link localizado em **Display Name**. Você será direcionado para outra página na qual deverá clicar em **DB Connection**.
+Você será direcionado para outra página na qual deverá clicar em **DB Connection**.
 
 ![DB Connection](./images/DBconnection.png) 
 
-13. A guia **Database Connection** se abrirá, em **Download client credentials (Wallet)**, clique em **Download Wallet**.
+6. A guia **Database Connection** se abrirá, em **Download client credentials (Wallet)**, clique em **Download Wallet**.
 
 ![Wallet](./images/Wallet.png) 
 
- 14. Para criar uma conexão com o Oracle Autonomous Data Warehouse dentro do OAC, você deve entrar no Oracle Analytics. Na página inicial, no canto superior esquerdo, clique em **Criar** e, em seguida, clique em **Conexão**.
+ 7. Para criar uma conexão com o Oracle Autonomous Data Warehouse dentro do OAC, você deve entrar no Oracle Analytics. Na página inicial, no canto superior esquerdo, clique em **Criar** e, em seguida, clique em **Conexão**.
 
 ![Create](./images/Conexão.png)
 
-15. Será exibido uma nova janela, na qual mostrará os ícones dos conectores disponíveis.
+8. Será exibido uma nova janela, na qual mostrará os ícones dos conectores disponíveis.
 
 Você pode pesquisar pelo nome ou rolar a barra para encontrar mais opções. Bastar clicar no ícone correspondente à conexão desejada para começar a configurá-la. 
 Clique em **Oracle Autonomous Data Warehouse Cloud**.
 
 ![Conectores](./images/Conectores.png)
 
-16. Preencha todos os campos indicados.
+9. Preencha todos os campos indicados.
 
 Insira um **Nome da Conexão**, por exemplo, Corp_Connection.
 

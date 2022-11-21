@@ -36,7 +36,7 @@ Neste Lab você vai aprender a criar um Conjunto de Dados (Dataset) no Oracle An
 
 ![Seleciona a tabelas Vendas](./images/select-vendas.png)
 
-O Oracle Analytics Cloud (OAC) vai criar o Join de forma automática para você, desde as duas tabelas tenham o mesmo nome na coluna e que as duas colunas sejam do mesmo **"Tipo"**.
+O Oracle Analytics Cloud (OAC) vai criar o Join de forma automática para você, desde que as duas tabelas tenham o mesmo nome na coluna e que as duas colunas sejam do mesmo **"Tipo"**.
 
 ![Seleciona a tabelas Vendas](./images/join-auto-5.png)
 
