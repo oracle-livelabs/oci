@@ -182,38 +182,7 @@ Nossas colunas já estão com a classificação correta (Atributo/Métrica), mas
 
 ![](./images/salve-novamente.png)
 
-## Task 4: Criação de Campos Calculados
-
-O Oracle Analytics também permite a criação de campos calculados dentro do próprio projeto de visualização para trazer informações complementares àquelas já presentes.
-
-1. Navegue para a aba de **Dados** e cliquem com o botão direito em **Meus Cálculos**. Crie um Cálculo com o nome **Quantidade de Pedidos** e inclua o código abaixo. Logo após, clique em **Validar** e logo após em **Salvar**.
-```
-COUNT(ID LINHA DO PEDIDO)
-```
-
-![](./images/count-id-linha.png)
-
-2. Esse campo poderá ser usado posteriormente para a contagem de quantos pedidos existem na nossa base. A visualização abaixo mostra o uso de dois campos criados nessa atividade para trazer um insight: No centro do Donut vemos o valor total de pedidos (~9000), dos quais 52.67% trouxeram Lucro e 47.33% trouxeram prejuízo para a companhia. Trabalharemos em como criar essas visualizações no próximo laboratório.
-
-![](./images/52-vs-47.png)
-
-3. Clique com o botão direito mais uma vez em **Meus Cálculos** e crie um novo cálculo com o nome **LUCRO MÉDIO**. Nele, coloque o **Lucro**, uma **barra de divisão** e traga o campo calculada **Quantidade de Pedidos**.
-
-![](./images/qntdd-pedidos.png)
-
-4. Ao arrastar a quantidade, o sistema trará o código que origina aquele campo calculado. O resultado final deverá conforme abaixo. Após isso, **valide** o cálculo e **salve-o**.
-
-```
-LUCRO / COUNT(ID LINHA DO PEDIDO)
-```
-
-![](./images/lucro-count.png)
-
-5. Ao arrastar esse valor para a tela, será trazido o lucro médio calculado conforme nossa regra definiu.
-
-![](./images/lucro-medio.png)
-
-Parabéns, você concluiu o laboratório!
+Parabéns, você concluiu o laboratório de Preparação de Conjunto de Dados!
 
 ## Conclusão
 
