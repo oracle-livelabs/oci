@@ -42,7 +42,7 @@ Assim que a barra lateral se expandir, você verá o ícone correspondente a **H
 
 2.	Você e todos os outros usuários têm suas próprias pastas pessoais. As pastas pessoais só podem ser acessadas ​​pelo usuário que criou e salvou o conteúdo na pasta. Você também pode salvar projetos em pastas compartilhadas onde outros usuários ou grupos podem acessá-los. Para explorar, clique no **Menu Hamburguer** e escolha **Catálogo**. Você será direcionado para a seguinte tela:
 
-![Catálogo](.\images\minhas_pastas.png) 
+![Catalog](.\images\minhas_pastas.png) 
 
 3.	Seguindo o mesmo passo de clicar no **Menu Hamburguer**, ao clicar em **Dados**, será exibidos em **Conjunto de Dados**, dados disponíveis para serem usados, quando você upar uma tabela, planilha ou arquivo, eles ficarão salvos para serem consumidos imediatamente ou reaproveitados em outras ocasiões.
 
@@ -50,7 +50,7 @@ Assim que a barra lateral se expandir, você verá o ícone correspondente a **H
 
 Ainda nesta aba, você poderá verificar **Conexões**:
 
-![Conexões](./images/conexoes.png)
+![Conectividade](./images/conexoes.png)
 
 À direita de **Conexões**, você pode acessar **Fluxos de Dados** clicando em cima dele.
 Os fluxos de dados permitem que você organize e integre seus dados para produzir conjuntos de dados que seus usuários podem visualizar.
