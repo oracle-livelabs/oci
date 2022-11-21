@@ -16,11 +16,15 @@ Após a conexão com o banco e seleção das tabelas, neste lab você vai aprend
 
 1. Faça o download do arquivo excel necessário para esse laboratório através [deste link](https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/ArquivosPublicos/o/Tabela%20Clientes%20-%20v2.xlsx)
 
-2. Abra o seu projeto, clique no **botão '+'** (que está localizado no lado direito da tela, próximo às fontes de dados), e selecione **Adicionar Dados...**
+2. Abra o conjunto de dados DADOS_MIAU_CORP, que acabou de ser criado. Ele pode ser encontrado na página inicial do Analytics, conforme na imagem abaixo.
+
+![](./images/homepage.png)
+
+3. Uma vez no canvas de criação de visualizações, clique no **botão '+'** (que está localizado no lado direito da tela, próximo às fontes de dados), e selecione **Adicionar Dados...**
 
 ![](./images/adicionar-dados.png)
 
-3. Clique em **Criar Conjunto de Dados**
+3. Clique em **Criar Conjunto de Dados**. Perceba que ao fazer isso será criada uma nova aba no seu navegador. Realizaremos os passos 4 a 7 nela e depois voltaremos para a aba original em que estávamos trabalhando.
 
 ![](./images/criar-conjunto.png)
 
@@ -32,11 +36,11 @@ Após a conexão com o banco e seleção das tabelas, neste lab você vai aprend
 
 ![](./images/preview-arquivo.png)
 
-6. **Dê um nome** para seu novo conjunto de dados e **salve-o** através do ícone do disquete.
+6. **Salve** seu progresso através do ícone do disquete e **dê um nome** para seu novo conjunto de dados.
 ![](./images/renomear-arquivo.png)
 ![](./images/salvar-arquivo.png)
 
-7. Note que durante o processo uma nova aba foi aberta no seu navegador. Garanta que o novo conjunto do dados está salvo e **feche essa aba**. Volte para a aba anterior e você verá que o conjunto de dados recém-criado já está em evidência. Selecione-o e clique em **Adicionar à Pasta de Trabalho**
+7. Garanta que o novo conjunto do dados está salvo e **feche a aba em que estamos trabalhando** (que foi criada no passo 3). Volte para a aba anterior e você verá que o conjunto de dados recém-criado já está em evidência. Selecione-o e clique em **Adicionar à Pasta de Trabalho**
 
 ![](./images/adicionar-pasta.png)
 
@@ -120,7 +124,7 @@ Agora realizaremos mais algumas adequações que simplificarão a maneira como v
 
 ![](./images/aba-dados-2.png)
 
-2. Navegue até **PEDIDOS** na aba inferior. No campo MODO DE ENVIO podemos notar que está faltando um acento nas modalidade 'Voo Regular' e 'Voo Expresso'. Vamos atualizar esses valores. Clique nos três pontos, e logo depois em **Substituir...**
+2. Navegue até **PEDIDOS** na aba inferior. No campo MODO DE ENVIO podemos notar que está faltando um acento nas modalidades 'Voo Regular' e 'Voo Expresso'. Vamos atualizar esses valores. Clique nos três pontos, e logo depois em **Substituir...**
 
 ![](./images/substituir.png)
 
@@ -152,9 +156,9 @@ Agora realizaremos mais algumas adequações que simplificarão a maneira como v
 CASE WHEN LUCRO >= 0 THEN 'Lucro' ELSE 'Prejuízo' END
 ```
 Não se esqueça de mapear a coluna Lucro (apenas o texto não irá se referenciar a ela).
-Clique em **Adicionar Etapa** para salvar esse passo.
+Clique em **Adicionar Etapa** para salvar esse passo. Reproduza o processo no GIF abaixo para garantir que o processo será um sucesso.
 
-![](./images/adicionar-etapa-lucro.png)
+![](./images/GifFT.gif)
 
 Nossas colunas já estão com a classificação correta (Atributo/Métrica), mas as métricas podem ter diferentes formas de agregação (Soma, Média, Contagem...). Também é possível criar uma formatação para indicar que uma coluna é um valor de moeda em reais (R$), por exemplo. 
 
@@ -189,7 +193,7 @@ COUNT(ID LINHA DO PEDIDO)
 
 ![](./images/count-id-linha.png)
 
-1. Esse campo poderá ser usado posteriormente para a contagem de quantos pedidos existem na nossa base. A visualização abaixo mostra o uso de dois campos criados nessa atividade para trazer um insight: No centro do Donut vemos o valor total de pedidos (~9000), dos quais 52.67% trouxeram Lucro e 47.33% trouxeram prejuízo para a companhia. Trabalharemos em como criar essas visualizações no próximo laboratório.
+2. Esse campo poderá ser usado posteriormente para a contagem de quantos pedidos existem na nossa base. A visualização abaixo mostra o uso de dois campos criados nessa atividade para trazer um insight: No centro do Donut vemos o valor total de pedidos (~9000), dos quais 52.67% trouxeram Lucro e 47.33% trouxeram prejuízo para a companhia. Trabalharemos em como criar essas visualizações no próximo laboratório.
 
 ![](./images/52-vs-47.png)
 
@@ -205,7 +209,7 @@ LUCRO / COUNT(ID LINHA DO PEDIDO)
 
 ![](./images/lucro-count.png)
 
-1. Ao arrastar esse valor para a tela, será trazido o lucro médio calculado conforme nossa regra definiu.
+5. Ao arrastar esse valor para a tela, será trazido o lucro médio calculado conforme nossa regra definiu.
 
 ![](./images/lucro-medio.png)
 
