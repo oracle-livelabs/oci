@@ -4,6 +4,8 @@
 
 Neste Lab você vai aprender a gerenciar a solução Oracle Analytics Cloud.
 
+*Este Lab só pode ser realizado por usuários que possuam o perfil de Administrador dentro do Oracle Analytics Cloud. Não é o caso dos usuários do Fast Track, portanto, está como Lab opcional para usuários que possuam a solução.*
+
 *Tempo estimado para o Lab:* xx Minutos
 
 ### Objetivos
@@ -11,7 +13,7 @@ Neste Lab você vai aprender a gerenciar a solução Oracle Analytics Cloud.
 * Criar Backups do ambiente
 * Definir o tipo de acesso de usuários
 * Gerenciar a utilização de performance da solução
-* Criar uma url de acesso a solução
+* Criar uma url customizada de acesso a solução
 
 ## Task 1: Backup do Ambiente com Snapshots
 
@@ -35,7 +37,7 @@ Neste Lab você vai aprender a gerenciar a solução Oracle Analytics Cloud.
 
 ![criar o snapshot](./images/5-Salvar_Snapshot.png)
 
-O arquivo será baixado para a máquina local, mas caso fosse necessário, poderia ser baixado para um ambiente de Data Lake (Object Storage).
+O arquivo será baixado para a máquina local, mas caso fosse necessário, poderia ser baixado para um ambiente de Data Lake (Object Storage), para isso, no passo 5, basta escolher a opção **Oracle Cloud Storage** ao invés de **Local File System** e adicionar os detalhes de acesso ao Object Storage.
 
 ## Task 2: Adminstração de usuários através de Application Roles
 
