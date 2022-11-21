@@ -74,7 +74,7 @@ Em nossa segunda tarefa realizaremos a configuração das colunas que referencia
 
 1. Navegue até a aba **Dados** e selecione o botão para **Editar** o arquivo **Clientes**, que acabamos de carregar.
 
-![](./images/2022-11-03-09-43-27.png)
+![](./images/dados-editar-cliente.png)
 
 2. Todas as colunas estão corretamente identificadas como Atributos, portanto não será necessária qualquer alteração nesse aspecto. Selecione e coluna **Cidade** e note que do lado direito há uma série de sugestões de melhorias para ela. Clique na opção **Enriquecer Cidade com Province**.
 
