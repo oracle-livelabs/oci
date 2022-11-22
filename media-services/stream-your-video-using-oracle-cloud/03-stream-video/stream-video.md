@@ -1,7 +1,23 @@
-# Lab 3 : Stream your video
+# Stream your video
 
-At this point, we have transcoded the source video into multiple bitrates and sizes.
-Also, enabled distribution channel configurations are required to stream the video content.
+## Introduction
+
+This lab will guide you in generating an authenticated time-bound URL for HLS playback.
+
+Estimated Time: 10 minutes
+
+### Objective 
+
+In this lab, you will
+* Generate a preview URL using OCI Console.
+* Playback your video in Safari browser or VLC or other HLS players.
+
+
+### Prerequisites
+
+* Ingest of the master playlist initiated in the previous lab completed.
+
+## Task 1: Playback URL Generation 
 
 1. Navigate to the ingested master playlist in the distribution channel.
    ![mediastreams 11](images/navigate-ingested-master-playlist.png " ")
