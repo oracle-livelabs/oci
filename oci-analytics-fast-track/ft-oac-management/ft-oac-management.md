@@ -41,13 +41,31 @@ O arquivo será baixado para a máquina local, mas caso fosse necessário, poder
 
 ## Task 2: Adminstração de usuários através de Application Roles
 
-1.	No menu principal, clique em "Networking" e escolha "Virtual Cloud Networks"
+1.	Na página inicial, clique no hambúrguer na lateral direita e, em seguida, clique em **Console**.
+
+![acesse o menu de administração da solução](./images/6-Acesso_Console_Admin.png)
+
+2.	Buscar o botão **Users and Roles** e clicar nele.
+
+![acesse o menu de gerenciamento de usuários](./images/7-Acesso_UsersRoles.png)
+
+3.  Clicar em **Application Roles**, escolher em qual role irá adicionar usuários, nesse exemplo, adicionaremos na opção **DVConsumer**, então basta clicar na opção.
+
+![acessando a opção de role de usuário escolhida](./images/8-Escolha_Role.png)
+
+4.  Para adicionar usuários no grupo desejado, basta clicar na opção **Users** e em seguida em **Add Users**.
+
+![adicionando usuários a role desejada](./images/9-Adicionar_Usuario.png)
+
+5.  No campo de busca, digitar o nome do usuário desejado seguido por um asterisco (*), clicar em Enter no teclado, selecionar o usuário escolhido e clicar em **Add**.
+
+![incluir usuários na role desejada](./images/10-Selecionar_Usuario.png)
+
+Para entender em mais detalhes quais são as roles e suas permissões, basta verificar na documentação: https://docs.oracle.com/en/cloud/paas/analytics-cloud/acabi/application-roles.html
 
 ## Task 3: Mudança de url de acesso ao Oracle Analytics Cloud (Opcional)
 
 1.	No menu principal, clique em "Networking" e escolha "Virtual Cloud Networks"
-
-![acesse o menu principal](./images/vcn-access-1.png)
 
 ![acesse o menu principal](./images/vcn-access-1.png)
 
