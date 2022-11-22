@@ -77,7 +77,7 @@ Outras opções de navegação são encontradas na região inferior da página.
 
 12. Na região inferior direita da página encontre as opções de **Brushing**, **Aplicar Dados Automaticamente**, **Alternar Painel de Dados** e **Alternar Painel de Gramática**.
 
-![](./images/opcoes_tela.png)
+![Opções Tela.](./images/opcoes_tela.png)
 
 13. Na região inferior esquerda da página encontre a opção de **Adicionar Tela**, representada pelo simbolo **+**.
 
