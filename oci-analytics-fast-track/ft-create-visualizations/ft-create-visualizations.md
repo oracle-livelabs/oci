@@ -286,15 +286,17 @@ Vamos começar adicionando um título a página **Pedidos**.
 
 Agora iremos adicionar o logo da empresa no dashboard.
 
-1.  Nas opções de tipos de gráficos, selecione a opção Imagem, arraste e solte na região superior da página indicada na imagem a seguir.
+1.  Baixe o logo da MIAU CORP [aqui](https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/ArquivosPublicos/o/MiauCorpLogo.jpg).
+
+2.  Nas opções de tipos de gráficos, selecione a opção Imagem, arraste e solte na região superior da página indicada na imagem a seguir.
 
 ![Imagem](./images/imagem1.png)
 
-2.  Ao clicar na opção Selecionar Imagem a seguinte janela irá abrir. Nela clique em Fazer Upload e selecione o logo da empresa e clique em Ok.
+3.  Ao clicar na opção Selecionar Imagem a seguinte janela irá abrir. Nela clique em Fazer Upload e selecione o logo da empresa e clique em Ok.
 
 ![Imagem](./images/imagem2.png)
 
-3.  Na aba de opções da visualização, mude a Largura e Altura de **Original** para **Ajuste Automático**.
+4.  Na aba de opções da visualização, mude a Largura e Altura de **Original** para **Ajuste Automático**.
 
 ![Imagem](./images/imagem3.png)
 
