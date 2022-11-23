@@ -6,14 +6,13 @@ Neste Lab você vai aprender a gerenciar a solução Oracle Analytics Cloud.
 
 *Este Lab só pode ser realizado por usuários que possuam o perfil de Administrador dentro do Oracle Analytics Cloud. Não é o caso dos usuários do Fast Track, portanto, está como Lab opcional para usuários que possuam a solução.*
 
-*Tempo estimado para o Lab:* xx Minutos
+*Tempo estimado para o Lab:* 30 Minutos
 
 ### Objetivos
 
 * Criar Backups do ambiente
 * Definir o tipo de acesso de usuários
-* Gerenciar a utilização de performance da solução
-* Criar uma url customizada de acesso a solução
+* Customizar uma url customizada de acesso a solução
 
 ## Task 1: Backup do Ambiente com Snapshots
 
@@ -65,31 +64,25 @@ Nessa Task iremos realizar o gerenciamento do tipo de acesso dos usuários dentr
 
 Para entender em mais detalhes quais são as roles e suas permissões, basta verificar na documentação: https://docs.oracle.com/en/cloud/paas/analytics-cloud/acabi/application-roles.html
 
-## Task 3: Mudança de url de acesso ao Oracle Analytics Cloud (Opcional)
+## Task 3: Customização de url de acesso ao Oracle Analytics Cloud (Opcional)
 
-Nessa Task iremos personalizar a url de acesso ao Oracle Analytics Cloud. Porém, para esse caso, é necessário possuir um certificado X.509 com extensão .pem, .cer ou .crt.
+Nessa Task iremos personalizar a url de acesso ao Oracle Analytics Cloud. Porém, para esse caso, é necessário possuir um certificado X.509 com extensão .pem, .cer ou .crt para que seja possível utilizar o domínio desejado na url.
 
-1.	Na console inicial
+1.	Na console inicial do Oracle Cloud Infrastructure, dentro da tela do Oracle Analytics Cloud, após URL Personalizado, clicar em **"Criar"**.
 
-![acesse o menu principal](./images/vcn-access-1.png)
+![dentro da console do OCI, acesse o botão criar](./images/11-Criar_URLPersonalizado.png)
 
-## Task 4: Gerenciamento de utilização com Usage Tracking (Opcional)
+2.	Na nova tela, digitar o nome do host desejado para a url, incluir o certificado X.509 com o domínio a ser utilizado, incluir uma chave privada no formato .pem ou .key e clicar em **"Criar"**.
 
-1.	No menu principal, clique em "Networking" e escolha "Virtual Cloud Networks"
+![preencher as informações necessárias e clicar em criar](./images/12-Inclusao_InformacoesCertificado.png)
 
-![acesse o menu principal](./images/vcn-access-1.png)
+3. A instância será atualizada, portanto, ficará indisponível por alguns minutos, em seguida voltará a ficar disponível quando o símbolo do OAC voltar a ficar na cor verde.
 
-//Fazer até 4/5 tasks
-//* simples cria italico
-//**duplo cria negrito
-//***triplo cria negrito + italico
-// se o usuário tiver que clicar em algo, colocar em negrito entre ""
-
-Você pode **seguir para o próximo Lab**.
+![atualização OAC](./images/13-Disponibilidade_OAC.png)
 
 ## Conclusão
 
-Nesta sessão você aprendeu a criar uma Virtual Cloud Network (VCN) na prática.
+Nesta sessão você aprendeu a realizar tarefas de gerenciamento do Oracle Analytics Cloud, desde definir a permissão de usuários, realizar backups, customizar a url de acesso a solução e verificar a performance de utilização da solução.
 
 ## Autoria
 
