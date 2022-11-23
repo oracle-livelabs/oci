@@ -19,23 +19,23 @@ Neste Lab você vai aprender a gerenciar a solução Oracle Analytics Cloud.
 
 1.	Na página inicial, clique no hambúrguer na lateral direita e, em seguida, clique em **"Console"**.
 
-![acesse o menu de administração da solução](./images/1-Acesso_Snapshot.png)
+![acesse o menu de administração da solução](./images/1-acesso_snapshot.png)
 
 2.	Buscar o botão **"Snapshots"** e clicar nele.
 
-![acesse o menu de criação de Snapshots](./images/2-Botao_Snapshot.png)
+![acesse o menu de criação de Snapshots](./images/2-botao_snapshot.png)
 
 3.  Clicar em **"Create Snapshot"**, adicionar o nome do arquivo de Backup a sua escolha, nesse tutorial estamos utilizando **"Backup Geral"**, em content escolher a opção **"Everything"** e clicar em **"Create"**.
 
-![criar o snapshot](./images/3-Criação_Snapshot.png)
+![criar o snapshot](./images/3-criacao_snapshot.png)
 
 4.  Aguardar alguns segundos para que o processamento finalize, em seguida, clicar nos 3 pontos e clicar em **"Export"**.
 
-![criar o snapshot](./images/4-Menu_Export_Snapshot.png)
+![criar o snapshot](./images/4-menu_export_snapshot.png)
 
 5.  Escolher a opção **"Local File System"**, adicionar uma senha e confirmar essa senha, clicar em **"Export"**.
 
-![criar o snapshot](./images/5-Salvar_Snapshot.png)
+![criar o snapshot](./images/5-salvar_snapshot.png)
 
 O arquivo será baixado para a máquina local, mas caso fosse necessário, poderia ser baixado para um ambiente de Data Lake (Object Storage), para isso, no passo 5, basta escolher a opção **"Oracle Cloud Storage"** ao invés de **"Local File System"** e adicionar os detalhes de acesso ao Object Storage.
 
@@ -45,23 +45,23 @@ Nessa Task iremos realizar o gerenciamento do tipo de acesso dos usuários dentr
 
 1.	Na página inicial, clique no hambúrguer na lateral direita e, em seguida, clique em **"Console"**.
 
-![acesse o menu de administração da solução](./images/6-Acesso_Console_Admin.png)
+![acesse o menu de administração da solução](./images/6-acesso_console_admin.png)
 
 2.	Buscar o botão **"Users and Roles"** e clicar nele.
 
-![acesse o menu de gerenciamento de usuários](./images/7-Acesso_UsersRoles.png)
+![acesse o menu de gerenciamento de usuários](./images/7-acesso_usersroles.png)
 
 3.  Clicar em **"Application Roles"**, escolher em qual role irá adicionar usuários, nesse exemplo, adicionaremos na opção **"DVConsumer"**, então basta clicar na opção.
 
-![acessando a opção de role de usuário escolhida](./images/8-Escolha_Role.png)
+![acessando a opção de role de usuário escolhida](./images/8-escolha_role.png)
 
 4.  Para adicionar usuários no grupo desejado, basta clicar na opção **"Users"** e em seguida em **"Add Users"**.
 
-![adicionando usuários a role desejada](./images/9-Adicionar_Usuario.png)
+![adicionando usuários a role desejada](./images/9-adicionar_usuario.png)
 
 5.  No campo de busca, digitar o nome do usuário desejado seguido por um asterisco (*), clicar em Enter no teclado, selecionar o usuário escolhido e clicar em **"Add"**.
 
-![incluir usuários na role desejada](./images/10-Selecionar_Usuario.png)
+![incluir usuários na role desejada](./images/10-selecionar_usuario.png)
 
 Para entender em mais detalhes quais são as roles e suas permissões, basta verificar na documentação: https://docs.oracle.com/en/cloud/paas/analytics-cloud/acabi/application-roles.html
 

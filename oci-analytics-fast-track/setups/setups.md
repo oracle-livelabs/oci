@@ -325,7 +325,7 @@ Our functions will need a Virtual Cloud Network (VCN) to live in. We can quickly
 
     Your **Basic Information** section should look like the following image.
 
-    ![Basic Information section](./images/vcn-7.png)   
+    ![Basic Information section](./images/vcn-7.png)
 
 6. In the **Configure VCN and Subnets** section, we can leave the default values.
 
@@ -333,7 +333,7 @@ Our functions will need a Virtual Cloud Network (VCN) to live in. We can quickly
 
     Once you have reviewed the default values in the **Configure VCN and Subnets** section, click the **Next** button on the bottom left of the **Create a VCN with Internet Connectivity** page.
 
-   ![click the Next button](./images/vcn-9.png)    
+   ![click the Next button](./images/vcn-9.png)
 
 7. On the **Review and Create** page of the **Create a VCN with Internet Connectivity** flow, review the values and when ready, click the **Create** button on the bottom left of the page.
 
@@ -529,7 +529,7 @@ To ensure we are not using passwords in plain text in any configurations or part
 
 16. Using the **Create Secret** slider, ensure that **livelabs** is selected for the **Create in Compartment** dropdown.
 
-    ![livelabs** is selected for the Create in Compartment dropdown](./images/vault-4.png) 
+    ![livelabs** is selected for the Create in Compartment dropdown](./images/vault-4.png)
 
 17. For the **Name** field, enter **dbpwd**.
 

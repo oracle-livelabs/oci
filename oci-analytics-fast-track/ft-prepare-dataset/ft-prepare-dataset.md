@@ -158,7 +158,7 @@ CASE WHEN LUCRO >= 0 THEN 'Lucro' ELSE 'Prejuízo' END
 Não se esqueça de mapear a coluna Lucro (apenas o texto não irá se referenciar a ela).
 Clique em **Adicionar Etapa** para salvar esse passo. Reproduza o processo no GIF abaixo para garantir que o processo será um sucesso.
 
-![Criando Cálculo OAC](./images/GifFT.gif)
+![Criando Cálculo OAC](./images/gifft.gif)
 
 Nossas colunas já estão com a classificação correta (Atributo/Métrica), mas as métricas podem ter diferentes formas de agregação (Soma, Média, Contagem...). Também é possível criar uma formatação para indicar que uma coluna é um valor de moeda em reais (R$), por exemplo. 
 
