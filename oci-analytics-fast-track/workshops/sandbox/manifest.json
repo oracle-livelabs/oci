@@ -1,6 +1,6 @@
 {
     "workshoptitle": "OCI Data & AI Fast Track - For Data Analysts",
-    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "help": "isabella.alvarez@oracle.com, breno.comin@oracle.com, thais.henrique@oracle.com",
     "variables": ["../../variables/variables.json",
         "../../variables/variables-in-another-file.json"],
     "tutorials": [
