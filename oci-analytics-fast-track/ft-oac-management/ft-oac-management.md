@@ -70,15 +70,15 @@ Nessa Task iremos personalizar a url de acesso ao Oracle Analytics Cloud. Porém
 
 1.	Na console inicial do Oracle Cloud Infrastructure, dentro da tela do Oracle Analytics Cloud, após URL Personalizado, clicar em **"Criar"**.
 
-![dentro da console do OCI, acesse o botão criar](./images/11-Criar_URLPersonalizado.png)
+![dentro da console do OCI, acesse o botão criar](./images/11-criar_urlpersonalizado.png)
 
 2.	Na nova tela, digitar o nome do host desejado para a url, incluir o certificado X.509 com o domínio a ser utilizado, incluir uma chave privada no formato .pem ou .key e clicar em **"Criar"**.
 
-![preencher as informações necessárias e clicar em criar](./images/12-Inclusao_InformacoesCertificado.png)
+![preencher as informações necessárias e clicar em criar](./images/12-inclusao_informacoescertificado.png)
 
 3. A instância será atualizada, portanto, ficará indisponível por alguns minutos, em seguida voltará a ficar disponível quando o símbolo do OAC voltar a ficar na cor verde.
 
-![atualização OAC](./images/13-Disponibilidade_OAC.png)
+![atualização OAC](./images/13-disponibilidade_oac.png)
 
 ## Conclusão
 
