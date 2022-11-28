@@ -4,7 +4,7 @@
 
 Neste Lab você vai aprender a criar apresentações
 
-*Tempo estimado para o Lab:* 25 Minutos
+*Tempo estimado para o Lab:* 15 Minutos
 
 ## Task 1: Apresentar Dashboards
 

@@ -4,7 +4,7 @@
 
 Neste Lab você vai dar um passo a mais no desenvolvimento de suas analises utilizando funcionalidades avançadas que o Oracle Analytics Cloud (OAC) oferece para você para enriquecer ainda mais seus insights.
 
-*Tempo estimado para o Lab:* 45 Minutos
+*Tempo estimado para o Lab:* 25 Minutos
 
 ### Objetivos
 * Aprender a adicionar estatísticas em seu gráficos
