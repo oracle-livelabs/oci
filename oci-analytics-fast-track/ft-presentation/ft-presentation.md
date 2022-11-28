@@ -2,11 +2,17 @@
 
 ## Introdução
 
-Neste Lab você vai aprender a criar apresentações
+Neste Lab você vai aprender a utilizar o modo de apresentação do Oracle Analytics Cloud e vai aprender a exportar seus dashboards podendo escolher entre os formatos oferecidos pela ferramenta.
 
 *Tempo estimado para o Lab:* 15 Minutos
 
-## Task 1: Apresentar Dashboards
+### Objetivos
+* Configurar o modo de apresentação
+* Ocultar gráfico no modo de apresentação
+* Exportar o dashboard em PDF e em DVA (formato nativo do OAC)
+
+
+## Tarefa 1: Apresentar Dashboards
 
 A última etapa na construção das nossas visualizações é a configuração do modo de apresentação, a definição de como cada Tela será disponibilizada para o usuário que vai apenas consumir os dashboards e não fará nenhum tipo de alteração.
 
@@ -38,7 +44,7 @@ Agora que você está familiarizado com as opções de configuração de apresen
 
 3. Adicione as telas: **Lucro, Auto Insights, Avançado e Detalhe**
 
-![Explore as abas](./images/present-6.png)
+![Adicione as telas](./images/present-6.png)
 
 Uma das opções que temos ao editar a apresentação é a possibilidade de escolher quais do gráfico presentes em uma tela permanecerão visíveis. No nossa tela "Lucro" temos um gráfico de Linguagem Natural que não fará sentido na nossa apresentação pois o formato texto não é o mais indicado durante uma apresentação pois o próprio apresentador poderá falar sobre esses detalhes mais descritivos.
 
@@ -46,9 +52,9 @@ Vamos remover o gráfico "Descrição # Pedidos por Subcategoria do Produto"  da
 
 > **Nota:** Ocultar um gráfico na aba de "Apresentar" não afeta o gráfico original. Você poderá visualizá-lo normalmente na aba "Visualizar".
 
-4. Selecione a tela de "Lucro" e clique na aba de Ajustes. Localize a seção "Visuais", em seguida clique no grafico que queremos ocultar da nossa apresentação: **"Descrição # Pedidos por Subcategoria do Produto"**.
+4. Selecione a tela de "Lucro" e clique na aba de Ajustes. Localize a seção "Visuais", em seguida clique no gráfico que queremos ocultar da nossa apresentação: **"Descrição # Pedidos por Subcategoria do Produto"**.
 
-![Explore as abas](./images/present-7.png)
+![ocultar gráfico na tela 'Lucro'](./images/present-7.png)
 
 Pronto, o gráfico não estará mais visível na nossa apresentação.
 
@@ -56,7 +62,7 @@ Agora vamos alterar a forma como as telas serão exibidas durante nossa apresent
 
 5. Na lateral inferior direta vamos acessar a aba "Apresentação". Localize a opção "Navegador de Histórias", clique na opção atual "Guia Inferiores" e troque por "Barra de Navegação".
 
-![Explore as abas](./images/present-8.png)
+![Alterar Estilo no 'Navegador de Histórias'](./images/present-8.png)
 
 A opção "Barra de Navegação" adiciona pontinhos representando cada uma das suas telas. Ela é bem discreta e muito útil para manter o foco da apresentação na tela atual.
 
@@ -64,17 +70,17 @@ Vamos salvar nossas modificações e visualizar como ficou nossa apresentação.
 
 6. Clique no ícone de disquete no canto superior direito para salvar e após a mensagem de confirmação clique no ícone de **Play**.
 
-![Explore as abas](./images/present-9.png)
+![Salve as edições e clique em Play](./images/present-9.png)
 
 Observe:
 * A Barra de Navegação indicada abaixo na imagem
 * O gráfico de Linguagem Natural permaneceu oculto
 
-![Explore as abas](./images/present-10.png)
+![Observe a Barra de navegação](./images/present-10.png)
 
 Agora explore as outras telas através da Barra de Navegação.
 
-## Task 2: Exportar Dashboards
+## Tarefa 2: Exportar Dashboards
 
 O Oracle Analytics Cloud (OAC) oferece algumas opções para exportação dos nossos Dashboards ou de um gráfico específico. Temos a possibilidade de exportar o arquivo, de imprimir e até [enviar por e-mail*](https://docs.oracle.com/en/cloud/paas/analytics-cloud/acabi/send-email-reports-and-track-deliveries.html#GUID-C5815E71-9348-4C13-BAB6-B5B0C887B3D6).
 
@@ -124,7 +130,7 @@ Agora vamos exportar o nosso dashboard no formato .DVA que é o formato nativo d
 
 Uma janela vai aparecer mostrando o processo de exportação
 
-![Exportar Arquivo DVA](./images/present-16.png)
+![Janela de Exportação](./images/present-16.png)
 
 Quando o processamento terminar o download automático do arquivo vai iniciar, basta verifica nas opções de download do seu navegador e buscar um arquivo com a extensão **.dva**.
 
