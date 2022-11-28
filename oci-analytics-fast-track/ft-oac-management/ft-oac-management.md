@@ -16,7 +16,7 @@ Neste Lab você vai aprender a gerenciar a solução Oracle Analytics Cloud.
 
 ## Task 1: Backup do Ambiente com Snapshots
 
-1.	Na página inicial, clique no hambúrguer na lateral direita e, em seguida, clique em **"Console"**.
+1.	Na página inicial, clique no hambúrguer na lateral esquerda e, em seguida, clique em **"Console"**.
 
 ![acesse o menu de administração da solução](./images/1-acesso_snapshot.png)
 
@@ -42,7 +42,7 @@ O arquivo será baixado para a máquina local, mas caso fosse necessário, poder
 
 Nessa Task iremos realizar o gerenciamento do tipo de acesso dos usuários dentro do Oracle Analytics Cloud.
 
-1.	Na página inicial, clique no hambúrguer na lateral direita e, em seguida, clique em **"Console"**.
+1.	Na página inicial, clique no hambúrguer na lateral esquerda e, em seguida, clique em **"Console"**.
 
 ![acesse o menu de administração da solução](./images/6-acesso_console_admin.png)
 
