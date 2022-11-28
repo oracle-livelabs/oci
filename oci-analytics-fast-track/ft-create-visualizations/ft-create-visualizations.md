@@ -320,6 +320,10 @@ Case tenha mudado a paleta com sucesso, a sua página **Pedidos** deve estar igu
 
 ![Paleta](./images/paleta3.png)
 
+Parabéns, você terminou esse laboratório!
+
+Você pode **seguir para o próximo Lab**.
+
 ## Conclusão
 
 Nesta sessão você aprendeu a criar um dashboard com visualizações básicas de diversos tipos.
