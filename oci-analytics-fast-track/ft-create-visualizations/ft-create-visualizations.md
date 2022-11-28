@@ -81,6 +81,8 @@ Outras opções de navegação são encontradas na região inferior da página.
 
 13. Na região inferior esquerda da página encontre a opção de **Adicionar Tela**, representada pelo simbolo **+**.
 
+![Adicionar Nova Tela.](./images/novo_canva.png)
+
 ## Tarefa 2: Criar um Campo Calculado
 
 O Oracle Analytics Cloud também permite a criação de campos calculados dentro do próprio projeto de visualização para trazer informações complementares àquelas já presentes.
