@@ -14,9 +14,9 @@ Neste Lab você vai aprender a gerenciar a solução Oracle Analytics Cloud.
 * Definir o tipo de acesso de usuários
 * Customizar uma url customizada de acesso a solução
 
-## Tarefa 1: Backup do Ambiente com Snapshots
+## Task 1: Backup do Ambiente com Snapshots
 
-1.	Na página inicial, clique no hambúrguer na lateral esquerda e, em seguida, clique em **"Console"**.
+1.	Na página inicial, clique no hambúrguer na lateral direita e, em seguida, clique em **"Console"**.
 
 ![acesse o menu de administração da solução](./images/1-acesso_snapshot.png)
 
@@ -30,19 +30,19 @@ Neste Lab você vai aprender a gerenciar a solução Oracle Analytics Cloud.
 
 4.  Aguardar alguns segundos para que o processamento finalize, em seguida, clicar nos 3 pontos e clicar em **"Export"**.
 
-![entrar no menu para exportar o snapshot](./images/4-menu_export_snapshot.png)
+![criar o snapshot](./images/4-menu_export_snapshot.png)
 
 5.  Escolher a opção **"Local File System"**, adicionar uma senha e confirmar essa senha, clicar em **"Export"**.
 
-![exportar o arquivo do snapshot](./images/5-salvar_snapshot.png)
+![criar o snapshot](./images/5-salvar_snapshot.png)
 
 O arquivo será baixado para a máquina local, mas caso fosse necessário, poderia ser baixado para um ambiente de Data Lake (Object Storage), para isso, no passo 5, basta escolher a opção **"Oracle Cloud Storage"** ao invés de **"Local File System"** e adicionar os detalhes de acesso ao Object Storage.
 
-## Tarefa 2: Administração de usuários através de Application Roles
+## Task 2: Administração de usuários através de Application Roles
 
 Nessa Task iremos realizar o gerenciamento do tipo de acesso dos usuários dentro do Oracle Analytics Cloud.
 
-1.	Na página inicial, clique no hambúrguer na lateral esquerda e, em seguida, clique em **"Console"**.
+1.	Na página inicial, clique no hambúrguer na lateral direita e, em seguida, clique em **"Console"**.
 
 ![acesse o menu de administração da solução](./images/6-acesso_console_admin.png)
 
@@ -64,7 +64,7 @@ Nessa Task iremos realizar o gerenciamento do tipo de acesso dos usuários dentr
 
 Para entender em mais detalhes quais são as roles e suas permissões, basta verificar na documentação: https://docs.oracle.com/en/cloud/paas/analytics-cloud/acabi/application-roles.html
 
-## Tarefa 3: Customização de url de acesso ao Oracle Analytics Cloud (Opcional)
+## Task 3: Customização de url de acesso ao Oracle Analytics Cloud (Opcional)
 
 Nessa Task iremos personalizar a url de acesso ao Oracle Analytics Cloud. Porém, para esse caso, é necessário possuir um certificado X.509 com extensão .pem, .cer ou .crt para que seja possível utilizar o domínio desejado na url.
 

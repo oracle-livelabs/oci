@@ -2,19 +2,17 @@
 
 ## Introdução
 
-Neste Lab você vai aprender a criar um Conjunto de Dados (Dataset) no Oracle Analytics Cloud.
-
-**Conjuntos de Dados** podem ser criados usando uma ou mais tabelas, que podem ser de uma mesma conexão ou de conexões diferentes (inclusive podemos usar arquivos CSV ou XLSX). Você pode unir todas essa tabelas dentro do "Diagrama de Junções" (Join).
+Neste Lab você vai aprender a criar um Conjunto de Dados (Dataset) no Oracle Analytics Cloud
 
 *Tempo estimado para o Lab:* 15 Minutos
 
 ### Objetivos
 
-* Selecionar as tabelas que serão utilizadas
+* Selecionar as tabelas
 * Fazer o Join entre as tabelas
 * Salvar o Conjunto de Dados
 
-## Tarefa 1: Localize as tabelas
+## Task 1: Localize as tabelas
 
 1.	Clique no botão **Criar** na parte superior direita e em seguida selecione **Conjunto de Dados**.
 
@@ -28,15 +26,15 @@ Neste Lab você vai aprender a criar um Conjunto de Dados (Dataset) no Oracle An
 
 ![Localiza as tabelas](./images/select-tables-3.png)
 
-## Tarefa 2: Join entre as tabelas
+## Task 2: Join entre as tabelas
 
-1.	Selecione a tabela **Pedidos** e arraste até o centro da tela do Diagramas de Junção (Join).
+1.	Seleciona a tabela **Pedidos** e arraste até o centro da tela do Diagramas de Junção (Join).
 
-![Selecione a tabelas Pedidos](./images/select-pedidos.png)
+![Seleciona a tabelas Pedidos](./images/select-pedidos.png)
 
 2. Em seguida arraste a tabela **Vendas** e solte ao lado da tabela de pedidos.
 
-![Selecione a tabelas Vendas](./images/select-vendas.png)
+![Seleciona a tabelas Vendas](./images/select-vendas.png)
 
 O Oracle Analytics Cloud (OAC) vai criar o Join de forma automática para você, desde que as duas tabelas tenham o mesmo nome na coluna e que as duas colunas sejam do mesmo **"Tipo"**.
 
@@ -54,7 +52,7 @@ As colunas do tipo ***Atributo*** aceitam qualquer tipo de dados descritivo, que
 
 ![Tipos de Dados](./images/data-type-6.png)
 
-## Tarefa 3: Salvar o Conjunto de Dados
+## Task 3: Salvar o Conjunto de Dados
 
 1. Verifique se você está na aba do Diagrama de Junção e clique no botão de salvar no topo direito da tela (ícone de um disquete).
 
@@ -77,7 +75,7 @@ As colunas do tipo ***Atributo*** aceitam qualquer tipo de dados descritivo, que
 
 Você pode **seguir para o próximo Lab**.
 
-## Tarefa 4: Criar Join Manualmente (Opcional)
+## Task 4: Criar Join Manualmente (Opcional)
 
 O Oracle Analytics Cloud (OAC) permite a criação de conjuntos de dados usando diversas tabelas e ainda oferece uma área especial chamada "Diagrama de Junção" para criarmos os Joins dessas tabelas. Geralmente o OAC cria o Join de forma automática entre as tabelas, mas em cenários onde ele não identifica colunas para esse Join nós podemos fazê-lo de forma manual.
 

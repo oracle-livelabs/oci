@@ -2,9 +2,9 @@
 
 ## Introdução
 
-Neste Lab você vai dar um passo a mais no desenvolvimento de suas análises utilizando funcionalidades avançadas que o Oracle Analytics Cloud (OAC) oferece para você para enriquecer ainda mais seus insights.
+Neste Lab você vai dar um passo a mais no desenvolvimento de suas analises utilizando funcionalidades avançadas que o Oracle Analytics Cloud (OAC) oferece para você para enriquecer ainda mais seus insights.
 
-*Tempo estimado para o Lab:* 25 Minutos
+*Tempo estimado para o Lab:* 45 Minutos
 
 ### Objetivos
 * Aprender a adicionar estatísticas em seu gráficos
@@ -178,7 +178,7 @@ Existe um outra maneira de se criar filtros no Oracle Analytics Cloud (OAC): ***
 
 > **Nota:** É necessário ter a permissão: BI Service Administrator para executar essa tarefa.
 
-1. Faça download desse imagem: [Imagem para criar o Filtro](https://objectstorage.us-ashburn-1.oraclecloud.com/p/k4myBTiFdp22kJ_7rJw6kbZa7YLfqrh8nKVzPnrnn-dOAZuxKIB8RKDWTYAmt8eU/n/id3kyspkytmr/b/bucket-fast-track/o/ModoEnviocomTexto.png).
+1. Faça download desse imagem: [Imagem para criar o Filtro](https://ADICIONARLINK.com.br).
 
 2. Clique no Menu do lateral superior esquerda e acesse **"Console"**.
 

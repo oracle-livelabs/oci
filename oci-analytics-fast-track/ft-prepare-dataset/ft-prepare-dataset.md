@@ -16,7 +16,7 @@ Após a conexão com o banco e seleção das tabelas, neste lab você vai aprend
 
 1. Faça o download do arquivo excel necessário para esse laboratório através [deste link](https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/ArquivosPublicos/o/Tabela%20Clientes%20-%20v2.xlsx)
 
-2. Abra o conjunto de dados **DADOS\_MIAU\_CORP**, que acabou de ser criado. Ele pode ser encontrado na página inicial do Analytics, conforme na imagem abaixo.
+2. Abra o conjunto de dados DADOS_MIAU_CORP, que acabou de ser criado. Ele pode ser encontrado na página inicial do Analytics, conforme na imagem abaixo.
 
 ![Homepage Analytics](./images/homepage.png)
 
