@@ -81,6 +81,8 @@ Outras opções de navegação são encontradas na região inferior da página.
 
 13. Na região inferior esquerda da página encontre a opção de **Adicionar Tela**, representada pelo simbolo **+**.
 
+![Adicionar Nova Tela.](./images/novo_canva.png)
+
 ## Tarefa 2: Criar um Campo Calculado
 
 O Oracle Analytics Cloud também permite a criação de campos calculados dentro do próprio projeto de visualização para trazer informações complementares àquelas já presentes.
@@ -177,7 +179,7 @@ Em nossa segunda tarefa criaremos algumas visualizações básicas para compor n
 
 19. Por fim, para finalizar esse segundo conjunto de visualizações do seu dashboard, crie uma visualização do tipo Narrativa do Idioma. Essa funcionalidade explica, de forma textual, os dados selecionados. Para criar essa visualização, selecione a opção de Narrativa do Idioma e arraste para a região superior esquerda da tela. Para a narrativa dos dados, selecione o campo de **Subcategoria do Produto** da tabela "Vendas" e arraste para o campo de **Atributos**. Faça o mesmo com o campo de **Quantidade de Pedidos** da tabela "Vendas", porém o arraste para o campo de **Valores**.
 
-![Criar mapa](./images/nlg.png)
+![Criar NLG](./images/nlg.png)
 
 20. Para nos preparar para a utilização de opções mais avançadas que serão apresentados nos laboratórios a seguir, iremos criar uma nova página, da mesma forma como criamos as demais página, com o nome **Detalhe**.
 
@@ -317,6 +319,10 @@ Para finalizar essa etapa de personalização do dashboard, iremos modificar a p
 Case tenha mudado a paleta com sucesso, a sua página **Pedidos** deve estar igual a imagem a seguir.
 
 ![Paleta](./images/paleta3.png)
+
+Parabéns, você terminou esse laboratório!
+
+Você pode **seguir para o próximo Lab**.
 
 ## Conclusão
 

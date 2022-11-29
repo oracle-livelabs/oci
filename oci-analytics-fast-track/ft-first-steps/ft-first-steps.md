@@ -19,20 +19,20 @@ Neste Laboratório você vai:
 * Estabelecer uma conexão com o Autonomous Data Warehouse (OPCIONAL)
 
 
-## Task 1: Página Inicial
+## Tarefa 1: Página Inicial
 
-Para executar os passos a seguir, você deve estar com seu navegador configurado em português. Use seu ID de Usuário e Senha para entrar no ambiente do analytics. Preencha os campos indicados e clique em **Acessar**.
+Para executar os passos a seguir, você deve estar com seu navegador configurado em português. Quando você cria uma instância do Oracle Analytics Cloud, o Oracle Cloud fornece uma URL padrão, você verá como usar uma URL personalizada no Lab 7, tarefa 3. Use seu ID de Usuário e Senha para entrar no ambiente do analytics. Preencha os campos indicados e clique em **Acessar**.
 
 ![Login](.\images\tela_login.png)
 
-Assim que logar, você será direcionado para a página inicial da ferramenta. 
-Quando acessar pela primeira vez, o Oracle Analytics Cloud exibe um tour pelo produto. 
+Assim que logar, você será direcionado para a página inicial da ferramenta, com links para todas as funcionalidades disponíveis para você. 
 Esta tela inicial é a **Home page**.
+
 ![Home page](.\images\homepage.png)  
 
-Toda navegação é feita pelo **Menu Hamburguer**. Sempre que quiser retornar à Home page:
+Toda navegação é feita pelo **Menu Hamburguer**. Sempre que quiser retornar à Home page, você deve:
 
-1.	Clique no Menu Hamburguer no lado superior esquerdo da tela principal, 
+1.	Clicar no Menu Hamburguer no lado superior esquerdo da tela principal, 
 
 ![menu do OAC "Hamburguer"](.\images\menu_hamburguer.png)   
 
@@ -40,19 +40,22 @@ Assim que a barra lateral se expandir, você verá o ícone correspondente a **H
 
 ![menu do OAC "Hamburguer"](.\images\home_analytics.png) 
 
-2.	Você e todos os outros usuários têm suas próprias pastas pessoais. As pastas pessoais só podem ser acessadas ​​pelo usuário que criou e salvou o conteúdo na pasta. Você também pode salvar projetos em pastas compartilhadas onde outros usuários ou grupos podem acessá-los. Para explorar, clique no **Menu Hamburguer** e escolha **Catálogo**. Você será direcionado para a seguinte tela:
+O analytics permite o trabalho colaborativo, você e todos os outros usuários têm suas próprias pastas pessoais. As pastas pessoais (minhas pastas) só podem ser acessadas ​​pelo usuário que criou e salvou o conteúdo na pasta. Você também pode salvar projetos em pastas compartilhadas onde outros usuários ou grupos podem acessá-los.
+
+2.	Para explorar, clique no **Menu Hamburguer** e escolha **Catálogo**. Você será direcionado para a seguinte tela:
 
 ![catálogo](.\images\pastas.png)
+
+Conjuntos de dados são modelos de dados self-service que você cria especificamente para sua visualização de dados e requisitos de análise.
 
 3.	Seguindo o mesmo passo de clicar no **Menu Hamburguer**, ao clicar em **Dados**, será exibidos em **Conjunto de Dados**, dados disponíveis para serem usados, quando você upar uma tabela, planilha ou arquivo, eles ficarão salvos para serem consumidos imediatamente ou reaproveitados em outras ocasiões.
 
 ![Dados](./images/dados_analytics.png) 
 
-Ainda nesta aba, você poderá verificar **Conexões**:
+Ainda nesta aba, você poderá verificar **Conexões**, como usuário do Oracle Analytics com acesso de Autor de Conteúdo do DV, você pode estabelecer conexão com as origens de dados usadas por sua organização:
 
 ![connection](.\images\conexoes.png)
 
-À direita de **Conexões**, você pode acessar **Fluxos de Dados** clicando em cima dele.
 Os fluxos de dados permitem que você organize e integre seus dados para produzir conjuntos de dados que seus usuários podem visualizar.
 
 Por exemplo, você pode usar um fluxo de dados para:
@@ -60,6 +63,7 @@ Por exemplo, você pode usar um fluxo de dados para:
 * Criar um conjunto de dados.
 * Combinar dados de diferentes fontes.
 * Treinar modelos de aprendizado de máquina ou aplicar um modelo de aprendizado de máquina aos seus dados.
+À direita de **Conexões**, você pode acessar **Fluxos de Dados** clicando em cima dele.
 
 ![Fluxo de Dados](./images/fluxodedados.png)
 
@@ -77,11 +81,11 @@ Use-o para copiar dados de uma origem para análise no Oracle Analytics Cloud.
 
 ![Machine Learning](./images/aprendizadopormaquina_analytics.png)
 
+O  modelo de dados semânticos é uma abordagem que se baseia em princípios semânticos que resultam em um conjunto de dados com estruturas de dados especificadas inerentemente. 
+
 5.	Novamente, clique no **Menu Hambuguer**, abaixo de **Aprendizagem Por Máquina**, clique em **Modelos Semânticos** para acessar uma lista de modelos e scripts registrados:
 
 ![Modelos Semanticos](./images/semantica.png)
-
-O modelo de dados semânticos é uma abordagem que se baseia em princípios semânticos que resultam em um conjunto de dados com estruturas de dados especificadas inerentemente. 
 
 6.	Para rastrear o status de seus jobs e gerenciá-los, continue navegando no **Menu Hamburguer** e clique em **Jobs**. Você pode monitorar o número de jobs filtrando por **Tipo de Objeto** e o **Status** do mesmo.
 
@@ -92,19 +96,19 @@ O modelo de dados semânticos é uma abordagem que se baseia em princípios sem�
 ![Visualizações_console](./images/console.png)
 ![Visualizações_console](./images/console_config.png)
 
-## Task 2: Opções de ID
+## Tarefa 2: Opções de ID
 
 1. Para ter acesso ao Help Center, editar seu perfil, mudar a senha ou efetuar, verificar a versão atual do OAC ou fazer logout da sua conta, basta clicar em cima do círculo com as iniciais da sua credencial.
 
 ![ID](./images/id.png)
 
-## Task 3: Barra de Pesquisa
+## Tarefa 3: Barra de Pesquisa
 
 1. Através da **Barra de pesquisa** em sua Home Page, você pode pesquisar todos os tópicos apresentados aqui e todas as funcionalidades que existem dentro do OAC, desde as opções dentro do **Menu Hamburguer** até funções do **Criar**.
 
 ![pesquisar_tudo](./images/pesquisa_homepage.png)
 
-## Task 4: Teste Sua Conexão 
+## Tarefa 4: Teste Sua Conexão 
 
 Para ter certeza que sua conexão está ativa e funcionando, visualize-a através da lista de conexões.
 Tal lista contém as conexões que você criou e as conexões que você tem permissão para acessar e usar para criar conjuntos de dados.
@@ -122,7 +126,7 @@ Você verá todos os detalhes da sua conexão.
 
 ![Informações da conexão](./images/detalhes_conexao.png)
 
-## Task 5: Criar uma Conexão (OPCIONAL)
+## Tarefa 5: Criar uma Conexão (OPCIONAL)
 
 Você pode se conectar a vários tipos de fonte de dados, como bancos de dados em nuvem (públicas e privadas), bancos de dados locais (incluindo JDBC - Conectividade de Banco de Dados Java) e muitos aplicativos comumente usados, como Dropbox, Google Drive e Amazon Hive.
 
