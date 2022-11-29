@@ -52,7 +52,7 @@ Conjuntos de dados são modelos de dados self-service que você cria especificam
 
 ![Dados](./images/dados_analytics.png) 
 
-Ainda nesta aba, você poderá verificar **Conexões**, como usuário do Oracle Analytics com acesso de Autor de Conteúdo do DV, você pode estabelecer conexão com as origens de dados usadas por sua organização:
+Ainda nesta aba, você poderá verificar **Conexões**, como usuário do Oracle Analytics com permissão de DV Content Author, você pode estabelecer conexão com as origens de dados usadas por sua organização:
 
 ![connection](.\images\conexoes.png)
 
@@ -109,7 +109,7 @@ O  modelo de dados semânticos é uma abordagem que se baseia em princípios sem
 ![pesquisar_tudo](./images/pesquisa_homepage.png)
 
 ## Tarefa 4: Teste Sua Conexão 
-
+Para esse Workshop nós disponibilizamos uma conxão com uma fonte de dados para facilitar para todos os participantes, sendo assim, não será necessário criar nenhuma conexão (Tarefa 5).
 Para ter certeza que sua conexão está ativa e funcionando, visualize-a através da lista de conexões.
 Tal lista contém as conexões que você criou e as conexões que você tem permissão para acessar e usar para criar conjuntos de dados.
 Existem algumas formas de fazer essa verificação:
@@ -125,6 +125,10 @@ Ao descansar o mouse sobre a conexão, no final desta linha, você verá três p
 Você verá todos os detalhes da sua conexão.
 
 ![Informações da conexão](./images/detalhes_conexao.png)
+
+Pronto!
+
+Você pode **seguir para o próximo Lab**.
 
 ## Tarefa 5: Criar uma Conexão (OPCIONAL)
 
@@ -193,9 +197,6 @@ Finalmente, na lista **Nome do Serviço** selecione o serviço para seus dados, 
 
 Você cria uma conexão para cada fonte de dados que deseja acessar no Oracle Analytics. Uma vez conectado, você pode visualizar seus dados para criar insights.
 
-Pronto!
-
-Você pode **seguir para o próximo Lab**.
 
 ## Conclusão
 
