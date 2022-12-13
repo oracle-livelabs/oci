@@ -7,7 +7,7 @@ Neste Lab você vai aprender a navegar pela interface do Oracle Analytics Cloud 
 ***Overview***
 
 O Oracle Analytics Cloud é um serviço de nuvem pública escalável e seguro que fornece um conjunto completo de recursos para explorar e executar análises colaborativas para você, seu grupo de trabalho e sua empresa. Com o Oracle Analytics Cloud, você também tem recursos flexíveis de gerenciamento de serviços, incluindo configuração rápida, dimensionamento e patches fáceis.
-Como usuário do Oracle Analytics com acesso de Autor de Conteúdo do DV, você poderá estabelecer conexão com as origens de dados usadas por sua organização. Por exemplo, você pode criar um conjunto de dados que inclua tabelas de uma conexão do Autonomous Data Warehouse , tabelas de uma conexão Spark e tabelas de uma área de assunto local.
+Como usuário do Oracle Analytics com acesso de Autor de Conteúdo do DV, você poderá estabelecer conexão com as origens de dados usadas por sua organização. Por exemplo, você pode criar um conjunto de dados que inclua tabelas de uma conexão do Autonomous Data Warehouse, tabelas de uma conexão Spark e tabelas de uma área de assunto local.
 
 *Tempo estimado para o Lab:* 10 Minutos
 
@@ -15,20 +15,37 @@ Como usuário do Oracle Analytics com acesso de Autor de Conteúdo do DV, você 
 
 Neste Laboratório você vai:
 * Explorar os recursos disponíveis de forma nativa dentro do OAC (Oracle Analytics Cloud)
-* Testar sua conexão. 
+* Testar sua conexão.
 * Estabelecer uma conexão com o Autonomous Data Warehouse (OPCIONAL)
 
 
-## Tarefa 1: Página Inicial
+## Tarefa 1: Acessar a instância do Oracle Analytics Cloud
 
-Para executar os passos a seguir, você deve estar com seu navegador configurado em português. Quando você cria uma instância do Oracle Analytics Cloud, o Oracle Cloud fornece uma URL padrão, você verá como usar uma URL personalizada no Lab 7, tarefa 3. Use seu ID de Usuário e Senha para entrar no ambiente do analytics. Preencha os campos indicados e clique em **Acessar**.
+O Oracle Analytics Cloud é um dos serviços disponível dentro de OCI (Oracle Cloud Infrastructure). Você poderia acessá-lo diretamente através da sua URL. Porém nessa tarefa você vai aprender como acessar o OAC usando a console em OCI e navegando pelo menu de serviços até a instância do Oracle Analytics Cloud que vamos usar nesse Workshop.
 
-![Login](.\images\tela_login.png)
+Após fazer o login no ambiente fornecido para você com suas credenciais exclusivas (Ver Lab "Pré-requisitos")
 
-Assim que logar, você será direcionado para a página inicial da ferramenta, com links para todas as funcionalidades disponíveis para você. 
-Esta tela inicial é a **Home page**.
+1. Você verá a console OCI. Verifique se você está na Região correta *US East (Ashburn)*, em seguida clique no menu de hamburger na lateral superior esquerda.
 
-![Home page](.\images\homepage.png)  
+![verifique a região e clique no menu](.\images\check-region-menu.png) 
+
+2. Selecione **Analytics & AI** e clique em **Analytics Cloud**.
+
+![Navegue até Analytics Cloud](.\images\click-analytics-cloud.png) 
+
+3. Verifique se você está no Compartimento **ANALYTICS** (como indicado na imagem) e clique na instância **ANALYTICSLAB**.
+
+![Verifique o compartimento e clique na instância](.\images\check-comp-click-analytics.png) 
+
+4. Agora basta clicar no botão **ANALYTICS HOME PAGE** .
+
+![Clique em Home Page](.\images\click-home-page.png)
+
+Uma nova aba será aberta e você será direcionado para a Página Inicial do OAC.
+
+![Home Page](.\images\analytics-home-page.png)
+
+## Tarefa 2: Página Inicial
 
 Toda navegação é feita pelo **Menu Hamburguer**. Sempre que quiser retornar à Home page, você deve:
 
@@ -96,19 +113,19 @@ O  modelo de dados semânticos é uma abordagem que se baseia em princípios sem
 ![Visualizações_console](./images/console.png)
 ![Visualizações_console](./images/console_config.png)
 
-## Tarefa 2: Opções de ID
+## Tarefa 3: Opções de ID
 
 1. Para ter acesso ao Help Center, editar seu perfil, mudar a senha ou efetuar, verificar a versão atual do OAC ou fazer logout da sua conta, basta clicar em cima do círculo com as iniciais da sua credencial.
 
 ![ID](./images/id.png)
 
-## Tarefa 3: Barra de Pesquisa
+## Tarefa 4: Barra de Pesquisa
 
 1. Através da **Barra de pesquisa** em sua Home Page, você pode pesquisar todos os tópicos apresentados aqui e todas as funcionalidades que existem dentro do OAC, desde as opções dentro do **Menu Hamburguer** até funções do **Criar**.
 
 ![pesquisar_tudo](./images/pesquisa_homepage.png)
 
-## Tarefa 4: Teste Sua Conexão 
+## Tarefa 5: Teste Sua Conexão 
 Para esse Workshop nós disponibilizamos uma conxão com uma fonte de dados para facilitar para todos os participantes, sendo assim, não será necessário criar nenhuma conexão (Tarefa 5).
 Para ter certeza que sua conexão está ativa e funcionando, visualize-a através da lista de conexões.
 Tal lista contém as conexões que você criou e as conexões que você tem permissão para acessar e usar para criar conjuntos de dados.
@@ -130,7 +147,7 @@ Pronto!
 
 Você pode **seguir para o próximo Lab**.
 
-## Tarefa 5: Criar uma Conexão (OPCIONAL)
+## Tarefa 6: Criar uma Conexão (OPCIONAL)
 
 Você pode se conectar a vários tipos de fonte de dados, como bancos de dados em nuvem (públicas e privadas), bancos de dados locais (incluindo JDBC - Conectividade de Banco de Dados Java) e muitos aplicativos comumente usados, como Dropbox, Google Drive e Amazon Hive.
 
@@ -207,4 +224,4 @@ Além disso, você aprendeu quais fontes de dados você pode usar em conjuntos d
 ## Autoria
 
 - **Autores** - Isabelle Dias
-- **Último Update Por/Data** - Isabelle Dias, Novembro/2022
+- **Último Update Por/Data** - Thais Henrique, Dezembro/2022
