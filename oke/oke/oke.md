@@ -211,9 +211,4 @@ Follow the steps under the **Quick Start** Section.
 - **Author** - Flavio Pereira, Larry Beausoleil
 - **Adapted by** -  Yaisah Granillo, Cloud Solution Engineer
 - **Contributors** - LiveLabs QA Team (Arabella Yao, Product Manager Intern | Isa Kessinger, QA Intern), Kamryn Vinson, DongHee Lee
-<<<<<<< HEAD
-- **Last Updated By/Date** - DongHee Lee, May 2022
-=======
 - **Last Updated By/Date** - DongHee Lee, December 2022
->>>>>>> 8741b2b (Fix the broken images)
-
