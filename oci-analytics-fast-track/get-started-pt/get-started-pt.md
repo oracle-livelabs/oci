@@ -51,7 +51,7 @@ Após criar uma reserva para um Workshop LiveLab, você receberá um e-mail info
 
 7. Você deverá criar uma nova senha de acesso para seu usuário. (Você usará essa senha a partir de agora)
 
-![faça o reset da sua senha](.\images\reset-password.png).
+![faça o reset da sua senha](.\images\password-reset.png).
 
 Pronto! Você acabou de acessar o ambiente que usaremos para os próximos Labs práticos
 
