@@ -588,8 +588,29 @@ Part 2:
 
 ## move_column
 
-You want to reorder a column to bring it to the specified index
+You want to reorder a column to bring it to the specified index.
+
+| Input parameter | Value  |
+|-----------------|--------|
+| column_name     | string |
+| new_position    | int    |
 
 ## rename_column
 
 You want to rename a column to a specified string value
+
+| Input parameter | Value  |
+|-----------------|--------|
+| original_column | string |
+| renamed_column  | string |
+
+## dtype_casting
+
+You want to cast a column to a different type. This is usually useful in conjunction with other operations, when the
+original type inferred by Spark during file read is then transformed. eg. do a string replacement on a , then treat a
+column as numeric in order to take an average.
+
+| Input parameter | Value      |
+|-----------------|------------|
+| column_name     |            |
+| type            | int/string |
