@@ -614,3 +614,36 @@ column as numeric in order to take an average.
 |-----------------|------------|
 | column_name     |            |
 | type            | int/string |
+
+## aggregation
+
+You want to conduct aggregation computation over a batch of data with sliding window. This is useful for downsampling.
+
+Supported aggregation functions are "first", "max", "min" and "avg". avg works only with numerical data. first will just
+select the first element and discard the rest.
+
+Note that you can use a fixed window by setting the step_size equal to the window_size.
+
+| Input parameter      | Value |
+|----------------------|-------|
+| step_size            | "3"   |
+| aggregation_function | "min" |
+| window_size          | "3"   |
+
+#### Input Dataset
+
+| timestamp   | meter-ID  | value      | feat1 | feat2 | feat3 |
+|-------------|-----------|------------|-------|-------|-------|
+| 1/1/18 1:37 | meter-748 | 0.30471232 | 1     | 0     | 0     |
+| 1/1/18 0:20 | meter-530 | 0.9355691  | 0     | 0     | 1     |
+| 1/1/18 1:14 | meter-30  | 0.82245962 | 1     | 0     | 1     |
+| 1/1/18 1:10 | meter-668 | 0.59732631 | 0     | 1     | 1     |
+| 1/1/18 0:26 | meter-644 | 0.80846892 | 0     | 0     | 0     |
+| 1/1/18 1:17 | meter-862 | 0.20760427 | 0     | 1     | 1     |
+
+#### Output Dataset
+
+| timestamp   | min(meter-ID) OVER (ORDER BY timestamp ASC NULLS FIRST ROWS BETWEEN CURRENT ROW AND 3 FOLLOWING) | min(value) OVER (ORDER BY timestamp ASC NULLS FIRST ROWS BETWEEN CURRENT ROW AND 3 FOLLOWING) | min(feat1) OVER (ORDER BY timestamp ASC NULLS FIRST ROWS BETWEEN CURRENT ROW AND 3 FOLLOWING) | min(feat2) OVER (ORDER BY timestamp ASC NULLS FIRST ROWS BETWEEN CURRENT ROW AND 3 FOLLOWING) | min(feat3) OVER (ORDER BY timestamp ASC NULLS FIRST ROWS BETWEEN CURRENT ROW AND 3 FOLLOWING) |
+|-------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| 1/1/18 1:10 | meter-30                                                                                         | 0.20760427                                                                                    | 0                                                                                             | 0                                                                                             | 0                                                                                             |
+| 1/1/18 1:37 | meter-748                                                                                        | 0.30471232                                                                                    | 1                                                                                             | 0                                                                                             | 0                                                                                             |
