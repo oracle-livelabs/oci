@@ -34,7 +34,7 @@ Estimated time: 5 minutes
     ```   
 
     >**Note:** The file path includes the APM Java Agent version. Change the directory name to the Agent version you have.  
-    E.g., kubectl cp sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.6.2363**/AgentConfig.properties ~/AgentConfig.properties
+    E.g., kubectl cp sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.8.3326**/AgentConfig.properties ~/AgentConfig.properties
 
     run the "ls" command from the Home directory and confirm the file was transferred.  
     ```bash
@@ -76,7 +76,7 @@ Estimated time: 5 minutes
     </copy>
     ```
 
-    >**Note:** kubectl cp  ~/AgentConfig.properties sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.6.2363**/AgentConfig.properties
+    >**Note:** kubectl cp  ~/AgentConfig.properties sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.8.3326**/AgentConfig.properties
 
    ![Oracle Cloud console, Cloud Shell ](images/6-4-cloudshell.png " ")
 
@@ -135,4 +135,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, January 2022
+* **Last Updated By/Date** - Yutaka Takatsu, December 2022
