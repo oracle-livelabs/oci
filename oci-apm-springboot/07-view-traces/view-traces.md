@@ -38,7 +38,7 @@ Estimated time: 10 minutes
 
 
 
-   >**Note:** 
+   >**Note:**
 
    - The IP may be different from the last time when you accessed the WinCellar app because the pods are regenerated.
    - If the application is not starting up, run the **kubectl get pods** command and check the status. It may take a few minutes to see the pods in the running state.
@@ -103,7 +103,7 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud, Trace Explorer](images/6-2-2-traceexplorer.png " ")
 
-3.	By default, traces are displayed in the order by the start time. Click the **Duration** column twice to show the traces by duration in descending order. This will bring the slowest trace to the top of the list.
+3.	By default, traces are displayed in the order by the start time. Right mouse click on the **Duration** column, select **Sort Descending** to show the traces by duration in descending order. This will bring the slowest trace to the top of the list.
 
    ![Oracle Cloud, Trace Explorer](images/6-2-3-traceexplorer.png " ")
 
@@ -188,4 +188,4 @@ In this workshop, you’ve learned how to use a file system by adding the APM Ja
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, August 2022
+* **Last Updated By/Date** - Yutaka Takatsu, December 2022
