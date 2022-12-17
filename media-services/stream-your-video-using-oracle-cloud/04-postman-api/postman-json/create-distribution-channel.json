@@ -1,0 +1,4 @@
+{
+    "displayName": "Distribution Channel via Postman",
+    "compartmentId": "{{compartment_ocid}}"
+  }

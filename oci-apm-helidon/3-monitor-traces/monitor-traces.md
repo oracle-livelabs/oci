@@ -6,6 +6,9 @@ In this lab, you will configure APM Tracer to monitor the Helidon SE application
 
 Estimated time: 15 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Monitor traces and spans of the application with APM Trace Explorer](videohub:1_5ffnikzh)
+
 ### Objectives
 
 * Modify the pom.xml file in the Helidon application

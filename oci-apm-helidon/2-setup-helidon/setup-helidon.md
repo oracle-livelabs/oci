@@ -6,6 +6,9 @@ In this lab, you will set up a simple Helidon SE application. You will use APM T
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Set up a Helidon SE application](videohub:1_y2og8t4n)
+
 ### Objectives
 
 * Launch Cloud Shell

@@ -97,7 +97,6 @@ In this activity, you will:
     > Click the **‘Home’** Icon
     
     ![walk through](images/image018.png)
-    ![walk through](images/image019.png)
 
 
 ## Acknowledgements

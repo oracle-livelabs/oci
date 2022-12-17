@@ -2,7 +2,7 @@
 
 ## Introduction
 
-*In this activity you'll discover how easy it is to detect anomalies and provide details to mitigate concerns.
+In this activity you'll discover how easy it is to detect anomalies and provide details to mitigate concerns.
 
 Estimated Time: 5 minutes
 
@@ -19,7 +19,7 @@ In this activity, you will:
 
 1. 
 
-  To further the discussion on how impactful/empowering this functionality is for business users, let’s drill into how the rules engine to tailor a control for our own purposes...
+  To further the discussion on how impactful/empowering this functionality is for business users, let’s drill into how the rules engine tailor a control for our own purposes...
 
 
     > Go to **Risk Management Cloud tab**, then click **‘Advanced Controls’**
@@ -41,7 +41,7 @@ In this activity, you will:
 
 4. 
 
-      > **Select** Results Count **‘43’** – to see results. Take note the number of results.
+      > **Select** Results Count **‘51’** – to see results. Take note the number of results.
 
     ![Results Count](images/image004.png)
 
@@ -87,7 +87,7 @@ In this activity, you will:
 
 11. 
   
-    > **Rename/append** the name of the model with **CAxx** (the user you’re logged in as)
+    > **Rename/append** the name of the model with **CAOxx** (the user you’re logged in as)
 
     ![Home Page](images/image011.png)
 
@@ -101,9 +101,9 @@ In this activity, you will:
 
     > **•	Enter the name as ‘Amount’**
     > **•	Change condition to ‘Greater than’ or ‘Greater than or equal to’**
-    > **•	Enter a material limit in Value field** (NOTE – Value should be less than 350,000) **
+    > **•	Enter a material limit in Value field** (NOTE – Value should be less than 9,000) **
 
-    ![Change condition](images/image0013.png)
+    ![Change condition](images/image013.png)
 
 14. 
   
@@ -147,7 +147,7 @@ In this activity, you will:
     > **Select > Save and Close**
 
     ![Home Page](images/image020.png)
-    ![Home Page](images/image021.png) 
+
 
 ## Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services

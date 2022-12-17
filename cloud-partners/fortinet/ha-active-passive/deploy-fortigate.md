@@ -47,6 +47,8 @@ Estimated Lab Time: 30 minutes.
     | fortigate1| AD1       | Partner Image: FortiGate Next Gen Firewall (4 cores) | 7.0.0         | VMStandard2.4  | firewall-vcn | mgmt-subnet | Yours/CloudShell Public Key |
     | fortigate2| AD2       | Partner Image: FortiGate Next Gen Firewall (4 cores) | 7.0.0         | VM Standard2.4 | firewall-vcn | mgmt-subnet | Yours/CloudShell Public Key |
     
+    **Please Read**: Partner now supports flexible shapes and you can use that deploy your instances. For example **VM.Standard.E3.Flex** shape. 
+
 5. Enter a **Name** for your Instance and the **Compartment** in which you placed your **Firewall VCN**. Fill out the dialog box. Select appropriate values based on table shared in previous **#4**. Click on **Partner Image Agreement** check box and save image selection by clicking on **Select Image** button.
 
 6. Select Shape **VM Standard2.4** as default value.
@@ -401,7 +403,7 @@ You may now [proceed to the next lab](#next).
 
 ## Acknowledgements
 
-- **Author** - Arun Poonia, Senior Solutions Architect
-- **Adapted by** - Fortinet
+- **Author** - Arun Poonia, Principal Solutions Architect
+- **Adapted by** -  Fortinet
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, July 2021
+- **Last Updated By/Date** - Arun Poonia, Oct 2022
