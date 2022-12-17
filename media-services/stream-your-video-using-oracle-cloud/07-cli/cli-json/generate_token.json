@@ -1,0 +1,5 @@
+{
+    "scopes": ["PLAYLIST", "EDGE"], 
+    "packagingConfigId": "ocid1.streampackagingconfig.oc1.phx.yourstreamingpackgingid", 
+    "assetIds": ["ocid1.mediaasset.oc1.phx.yourassetid"]
+}

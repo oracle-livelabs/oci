@@ -61,6 +61,15 @@ Then, we need data about the user
 
 ![User API Keys](images/opensearch-user2.png)
 
+In your computer or in cloud shell, you need to convert the PEM key to RSA format:
+- Run the below command 
+- And keep the ##PRIVATE_KEY_RSA_FORMAT##
+
+```
+openssl rsa -in ##PRIVATE_KEY## -out ##PRIVATE_KEY_RSA_FORMAT##
+ex: openssl rsa -in private_key.pem -out private_key_rsa_format.pem
+````
+
 ## Task 3: Create an Agent Group
 
 To communicate with OpenSearch in the private network, we have to install the OIC agent on the compute.
@@ -225,7 +234,7 @@ Fill the Connection details:
     - ex: https://xxxx.eu-frankfurt-1.functions.oci.oraclecloud.com/20181201/functions/ocid1.fnfunc.oc1.eu-frankfurt-1.aaaaaaabbbbb
 - Tenancy OCID = *##TENANCY_OCID##*
 - User OCID = *##USER_OCID##*
-- Private KEY =  *##PRIVATE_KEY##*
+- Private KEY =  *##PRIVATE_KEY_RSA_FORMAT##*
 - Finger Print = *##FINGERPRINT##*
 - *Save / Test / Save* until 100%
 
@@ -259,7 +268,7 @@ Then fill the Connection details:
     - ex: https://vision.aiservice.eu-frankfurt-1.oci.oraclecloud.com
 - Tenancy OCID = *##TENANCY_OCID##*
 - User OCID = *##USER_OCID##*
-- Private KEY =  *##PRIVATE_KEY##*
+- Private KEY =  *##PRIVATE_KEY_RSA_FORMAT##*
 - Finger Print = *##FINGERPRINT##*
 - *Save / Test / Save* until 100%
 

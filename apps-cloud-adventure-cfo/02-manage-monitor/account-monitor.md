@@ -2,7 +2,7 @@
 
 ## Introduction
 
-*In this activity you'll discover how easy it is to monitor any account code combination and alert you of anomalies and provide you a path to the details to do root cause analysis.
+In this activity you'll discover how easy it is to monitor any account code combination and alert you of anomalies and provide you a path to the details to do root cause analysis.
 
 Estimated Time: 6 minutes
 
@@ -10,11 +10,11 @@ Estimated Time: 6 minutes
 ### Objectives
 
 In this activity, you will:
-* Monitor any account code combination
+* Easily manage monitoring Key Accounts, Account Balance KPIs and drilldown seamlessly from a Summary account to any Subledger Transaction details
 
 
 
-## Task 1: Manage Journals
+## Task 1: Account Monitor
 
 
 1. 
@@ -30,7 +30,7 @@ In this activity, you will:
 
   Here’s where you can visualize all the key accounts along with the KPIs that are most important to you. This screen also provides you a single place to visualize Intercompany Journals, Standard Journals and Period Statuses for all the Subledgers.	
 
-    > **Scroll from top of the screen** to visualize Account Monitor, Intercompany Journals, Standard Journals and Period Statuses. Change the Period to “11-21” if it is not “11-21”
+    > **Scroll from top of the screen** to visualize Account Monitor, Intercompany Journals, Standard Journals and Period Statuses. **Change the Period** to **‘11-21’** if it is not ‘**11-21’**. **Change the Ledger** to ‘**US Primary Ledger**’ if it is not already set.”
 
     ![Home Page](images/image002.png)
 
@@ -224,15 +224,8 @@ In this activity, you will:
     
     ![Home Page](images/image030.png)
 
+
 28. 
-
-  Review the journal lines that made up the account balance. You are now reviewing the Journal batch/journal details in this drilldown. This batch has been posted from Payables. 
-    
-    > Click on **“372.88”**
-    
-    ![Home Page](images/image030.png)
-
-29. 
 
   You can review the actual transaction and are looking at the subledger drilldown which holds the rich AP data in this case, while the GL Journal is summarized in GL. This provides you all the data you need to analyze while keeping the GL Thin. 
     
@@ -240,13 +233,13 @@ In this activity, you will:
     
     ![Home Page](images/image031.png)
 
-30. 
+29. 
 
   You can now review the AP Invoice, the lines that made up this AP Invoice even though we only drilled down on the Airfare which is line #6. 
         
     ![Home Page](images/image032.png)
 
-31. 
+30. 
 
   You are able to review and audit any attachments available in the transaction without having to call the AP department in a self service way. 
     
@@ -254,7 +247,7 @@ In this activity, you will:
     
     ![Home Page](images/image033.png)
 
-32. 
+31. 
 
   You can review the attachment and validate that the receipt is right for the air travel and reasonable cost charged by the employee. 
         

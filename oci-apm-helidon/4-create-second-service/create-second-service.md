@@ -6,6 +6,9 @@ In this lab, you will create a second Maven project, where the server listens on
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create a Second Service](videohub:1_sxwdhhww)
+
 ### Objectives
 
 * Create another Maven project to demonstrate tracking of the requests that go from one service to another using APM Explorer.

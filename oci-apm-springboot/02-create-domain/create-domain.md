@@ -6,6 +6,9 @@ In this lab, you will create an APM Domain. You will acquire a Data Upload Endpo
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APM Domain and obtain Data Upload Endpoint and Private Data Key](videohub:1_jxkk5vpb)
+
 ### Objectives
 
 *	Create an APM Domain

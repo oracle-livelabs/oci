@@ -6,6 +6,9 @@ In this lab, you will learn how to use the APM Trace Explorer to trace the workl
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[View traces and spans in APM Trace Explorer](videohub:1_ax6iqqu1)
+
 ### Objectives
 
 * Open APM Trace Explorer from the Oracle Cloud console

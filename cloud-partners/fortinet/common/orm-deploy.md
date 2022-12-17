@@ -26,8 +26,11 @@ You will be using Terraform to create your lab environment.
 
 1.  Click on the link below to download the zip file which you need to build your environment.  
 
-    - Click here: [fortigate-live-labs.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/8uWLQjPtDi87VQ5fnkeGmL29Z8S3kj6ZstHND40dbYrSxthYrND0ctiZb7nOupQp/n/partners/b/files/o/fortigate-live-labs.zip) 
+    - Click here: [fortigate-live-labs.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/i4Rchb3xOybkcRclsdJgpzKGqA5YgM_12owPKYAmE9XoSYfQENY4C-5NviXuiwvy/n/partners/b/files/o/fortigate-live-labs.zip) 
         - Packaged terraform **FortiGate High Availability** use-case.
+        - **PAR URL** is valid until **Dec, 2025**.
+
+    **Please Read**: You can also download this zip folder locally and update required variables to support your required version/listing of Firewall. 
 
 2.  Save in your local machine's downloads folder.
 
@@ -39,7 +42,7 @@ You will be using Terraform to create your lab environment.
 
     ![](./images/93-Create-Stack-Page.png " ")
 
-4.  Select **My Configuration**, choose the **.ZIP FILE** button, click the **Browse** link and select the zip file (fortigate-live-labs.zip) that you downloaded. Click **Select**.
+5.  Select **My Configuration**, choose the **.ZIP FILE** button, click the **Browse** link and select the zip file (fortigate-live-labs.zip) that you downloaded. Click **Select**.
 
     ![](./images/94-MyConfiguration-Step1.png " ")
 
@@ -49,9 +52,11 @@ You will be using Terraform to create your lab environment.
 
     - **Compartment**: Select the Compartment where you want to create your stack. 
 
-    - **Terraform Version**: Validated version for this stack is **0.14.x**
+    - **Terraform Version**: Validated version for this stack is **1.0.x**
 
-5.  Click **Next**.
+6.  Click **Next**.
+
+    **Please Read**: Partner now supports flex shapes so Update shapes as **VM.Standard.E3.Flex** for firewall Compute Shape and **VM.Standard.E4.Flex** for Spoke Compute Shape. 
 
     ![](./images/96-MyConfiguration-Step3.png " ")
 
@@ -67,9 +72,9 @@ You will be using Terraform to create your lab environment.
 
     **Network Compartment**: Select Network Compartment from drop-down where you would like to create networking components i.e. VCN, subnets, route tables, DRG etc. 
 
-    **Note:**: Keep the Network Strategy as **Create New VCN and Subnet** as default value, if you chose to modify the code you can do so to support existing VCN/Subnet values. 
+    **Note:** Keep the Network Strategy as **Create New VCN and Subnet** as default value, if you chose to modify the code you can do so to support existing VCN/Subnet values. 
 
-6. Click **Create** to create your stack. Now you can move next steps to create your environment.
+7. Click **Create** to create your stack. Now you can move next steps to create your environment.
 
     ![](./images/97-Final-Create-Stack.png " ")
 
@@ -115,7 +120,7 @@ You may now [proceed to the next lab](#next).
 
 ## Acknowledgements
 
-- **Author** - Arun Poonia, Senior Solutions Architect
-- **Adapted by** - Fortinet
+- **Author** - Arun Poonia, Principal Solutions Architect
+- **Adapted by** -  Fortinet
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, July 2021
+- **Last Updated By/Date** - Arun Poonia, Oct 2022

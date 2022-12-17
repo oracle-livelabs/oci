@@ -55,7 +55,7 @@ When using Resource Manager to destroy the environment, you need to execute a **
 
 ## Acknowledgements
 
-- **Author** - Arun Poonia, Senior Solutions Architect
+- **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Check Point
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, August 2021
+- **Last Updated By/Date** - Arun Poonia, Oct 2022
