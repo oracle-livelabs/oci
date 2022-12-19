@@ -29,7 +29,7 @@ Watch the video below for a quick walk-through of the lab.
 
   The Oracle Cloud Shell is a small virtual machine running a Bash shell that you access through the Oracle Cloud Console. It comes with a pre-authenticate Command Line Interface (CLI) pre-installed and configured so you can immediately start working in your tenancy without spending time on its installation and configuration.
 
-	![Cloud Shell](images/1-1-cloudshell.png " ")
+	![Cloud Shell](images/1-1-menu-cloudshell.png " ")
 3. Helidon requires Java 11 (or newer) and Maven 3.6.1. Verify the versions by running the following commands.
 
 	``` bash
@@ -43,7 +43,7 @@ Watch the video below for a quick walk-through of the lab.
 	</copy>
 	```
 
-  	![Cloud Shell](images/01-01-cloudshell.png " ")
+  	![Cloud Shell](images/1-2-cloudshell-check-versions.png " ")
 
 	If you do not have the required version of Java, you can install GraalVM in the Cloud Shell to run Java 11, in the next Task.
 
