@@ -17,9 +17,9 @@ In more details:
 
     * Security services implementation. The Security Center dashboard will offer you as well the option to direct links to Terraform script to activate a security service with a click.
 
-  Below you can see the high level diagram:
 
-  ![](./images/intro-diagram.png " ")
+Below you can see the high level diagram:
+![](./images/intro-diagram.png " ")
 
 Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
 
@@ -77,3 +77,6 @@ In that case, then have a view of the following figure, where you can see the co
 * **Author** - Sonia Yuste, OCI Security Specialist
 * **Contributors** -  Damien Rilliard, OCI Specialist Senior Director
 * **Last Updated By/Date** - Sonia Yuste, Dec 2022
+
+
+[def]: ./images/intro-diagram.png " "
