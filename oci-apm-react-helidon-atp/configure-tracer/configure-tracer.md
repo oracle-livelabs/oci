@@ -40,8 +40,19 @@ Estimated time: 20 minutes
 
 	  >NOTE: If you are using the vi editor, type ***i*** to enter Insert mode, and make the text editable. Use allow keys to navigate the text and make changes to where you set the cursor. To save a file, press Esc key, then type ***:wq*** to write and quit the file. If you do not wish a change, press Esc then type ***:q!*** to discard your changes. Please refer to the editor references for more usages or how to use other editors.
 
+4. Add the following repositories blocks between the ***properties*** and ***build*** sections:
 
-3.	At the end of the dependencies section, find a line ***&lt;/dependencies&gt;*** and add the followings before that line:
+			<repositories>
+				<repository>
+				  <id>oci</id>
+					<name>OCI Object Store</name>
+					<url>https://objectstorage.us-ashburn-1.oraclecloud.com/n/idhph4hmky92/b/prod-agent-binaries/o</url>
+					</repository>
+			</repositories>
+
+	![pom.xml](images/2-1-0-pomxml.png " ")
+
+5.	At the end of the dependencies section, find a line ***&lt;/dependencies&gt;*** and add the followings before that line:
 
 			<dependency>
 			     <groupId>io.helidon.tracing</groupId>
@@ -50,7 +61,7 @@ Estimated time: 20 minutes
 			<dependency>
 			    <groupId>com.oracle.apm.agent.java</groupId>
 			    <artifactId>apm-java-agent-tracer</artifactId>
-			    <version>[1.5.2118,)</version>
+			    <version>[1.0.1389,)</version>
 			</dependency>
 			<dependency>
 			    <groupId>com.oracle.apm.agent.java</groupId>
