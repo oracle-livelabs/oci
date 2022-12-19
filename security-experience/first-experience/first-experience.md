@@ -7,6 +7,7 @@ This lab will show you how to automate the journey to security by using the prov
 - Download and run security assessment script
 - Store reports in Autonomous Database
 - Check your Security Dashboard
+test
 
 ### Prerequisites
 This lab assumes you have completed previous lab.
