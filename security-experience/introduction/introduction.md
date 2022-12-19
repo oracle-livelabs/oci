@@ -76,4 +76,4 @@ In that case, then have a view of the following figure, where you can see the co
 ## Acknowledgements
 * **Author** - Sonia Yuste, OCI Security Specialist
 * **Contributors** -  Damien Rilliard, OCI Specialist Senior Director
-* **Last Updated By/Date** - Sonia Yuste, December 2022
+* **Last Updated By/Date** - Sonia Yuste, Dec 2022
