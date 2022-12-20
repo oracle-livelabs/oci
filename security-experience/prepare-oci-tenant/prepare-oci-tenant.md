@@ -57,7 +57,6 @@ Once you have access to Oracle Cloud Shell follow the next steps:
 
     ![](./images/cloudshellicon1.png "Cloud Shell Icon")
 
-    
     This displays the Cloud Shell in a "drawer" at the bottom of the console:
 
     ![](./images/cloudshellpanel.png "Cloud Shell running")
@@ -78,6 +77,7 @@ Now that you have a compartment for the workshop, you will create a bucket in Ob
 To create the buckets, please follow the next steps:
 
 1. Log in to OCI console and navigate through the main hamburger menu to *"Storage > Object Storage > Buckets"*.
+
 ![](./images/storage1.PNG "Buckets")
 
 2. Create a bucket in the previously created compartment USE_Workshop by selecting the compartment and click Create Bucket.
