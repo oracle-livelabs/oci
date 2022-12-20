@@ -15,7 +15,6 @@ In this lab, you will:
 *  Install and deploy the Security Center dashboard application
 
 Please see picture below with the components you will create in this lab:
-
 ![](./images/firstlabdiagram.png "Diagram of components created in this lab")
 
 ### Prerequisites
@@ -66,7 +65,7 @@ Once you have access to Oracle Cloud Shell follow the next steps:
 
 ## Task 2: Create Object Storage buckets
 
-First you need to create a new compartment for your deployment. To do that, follow the next steps:
+First you need to create a new compartment for your buckets. To do that, follow the next steps:
 
 1. Log in to the OCI console and navigate through the main hamburger menu to *"Identity & Security > Compartments"*
 ![](./images/compartments1.png "Compartments")
