@@ -16,7 +16,7 @@ In this lab, you will:
 
 Please see picture below with the components you will create in this lab:
 
-![](./images/lab1diagram.png "Diagram of components created in this lab")
+![](./images/firstlabdiagram.png "Diagram of components created in this lab")
 
 ### Prerequisites
 
@@ -56,8 +56,9 @@ Once you have access to Oracle Cloud Shell follow the next steps:
     
     Note that the OCI CLI running in the Cloud Shell will execute commands against the region selected in the Console's Region selection menu when the Cloud Shell was started.
 
-  ![](./images/cloudshellicon1.png "Cloud Shell Icon")
+    ![](./images/cloudshellicon1.png "Cloud Shell Icon")
 
+    
     This displays the Cloud Shell in a "drawer" at the bottom of the console:
 
     ![](./images/cloudshellpanel.png "Cloud Shell running")
@@ -116,7 +117,7 @@ To do that, follow the next steps:
     *	Database Name: SecAssessments
     *	Workload type: Transaction Processing
     *	Deployment type: Shared Infrastructure
-    *	Configure the database: <Leave it as default>
+    *	Configure the database: \<Leave it as default>
     *	Administrator credentials: \<your ADMIN password>
     *	Network access: Secure access from everywhere
     *	License type: Bring Your Own License (BYOL)
