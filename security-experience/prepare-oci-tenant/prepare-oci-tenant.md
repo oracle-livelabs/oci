@@ -4,18 +4,21 @@
 
 This lab will show you how to set up your OCI tenant in order to have your Unique Security Experience.
 
-Estimated Time: -- minutes
+Estimated Time: 60 minutes
 
 ### Objectives
 
 In this lab, you will:
 *  Set up Oracle Cloud Shell
-*  Create your compartment
-*  Create your buckets
-*  Provision and configure your Autonomous Database
-*  Install the Security Dashboard application
+*  Create Object Storage buckets
+*  Provision and configure Autonomous Database
+*  Install and deploy the Security Center dashboard application
 
-### Prerequisites (Optional)
+Please see picture below with the components you will create in this lab:
+
+![](./images/lab1diagram.png "Diagram of components created in this lab")
+
+### Prerequisites
 
 This lab assumes you have:
 * An Oracle Cloud account
@@ -25,46 +28,42 @@ This lab assumes you have:
 
 ## Task 1: Set up Oracle Cloud Shell
 
-To be able to execute the security assessments, you will run a Python script in Oracle Cloud Infrastructure (OCI) Cloud Shell. The SDK Python is pre-configured with your credentials and ready to use immediately from within Cloud Shell. For more information on using the SDK for Python from within Cloud Shell, see [SDK for Python Cloud Shell Quick Start](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellquickstart_python.htm#Cloud_Shell_Quick_Start_SDK_for_Python).
+You will use the Oracle Cloud Shell to launch the provided Python script that executes the security assessment in your tenant. This Python script leverages the OCI Python SDK. The SDK Python is pre-configured with your credentials and ready to use immediately from within Cloud Shell. For more information on using the SDK for Python from within Cloud Shell, see [SDK for Python Cloud Shell Quick Start](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellquickstart_python.htm#Cloud_Shell_Quick_Start_SDK_for_Python).
 
-OCI Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console. Cloud Shell is free to use (within monthly tenancy limits), and provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI, a pre-authenticated Ansible installation, and other useful tools for following Oracle Cloud Infrastructure service tutorials and labs. Cloud Shell is a feature available to all OCI users, accessible from the Console. Your Cloud Shell will appear in the Oracle Cloud Console as a persistent frame of the Console and will stay active as you navigate to different pages of the Console.
+OCI Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud console. Cloud Shell is free to use (within monthly tenancy limits), and provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI, a pre-authenticated Ansible installation, and other useful tools for following Oracle Cloud Infrastructure service tutorials and labs. Cloud Shell is a feature available to all OCI users. Your Cloud Shell will appear in the Oracle Cloud console as a persistent frame of the console and will stay active as you navigate to different pages of the console.
 Cloud Shell provides:
 * An ephemeral machine to use as a host for a Linux shell, pre-configured with the latest version of the OCI Command Line Interface (CLI) and a number of useful tools
 * 5GB of storage for your home directory
-* A persistent frame of the Console which stays active as you navigate to different pages of the console
-To get started with Cloud Shell, you’ll need to grant user access to Cloud Shell via an IAM policy. Each service in Oracle Cloud Infrastructure integrates with IAM for authentication and authorization, for all interfaces (the Console, SDK or CLI, and REST API). The following is an example policy to grant access to Cloud Shell:
+* A persistent frame of the console which stays active as you navigate to different pages of the console
+
+To get started with Cloud Shell, in case your are not OCI Admin, you’ll need to grant user access to Cloud Shell via an IAM policy. Each service in Oracle Cloud Infrastructure integrates with IAM for authentication and authorization, for all interfaces (the console, SDK or CLI, and REST API). The following is an example policy to grant access to Cloud Shell:
 
 ```
-allow group <GROUP-NAME> to use cloud-shell in tenancy
+allow group <GROUP_NAME> to use cloud-shell in tenancy
 ```
 
-After that, you have to install python in Cloud Shell and download the python scripts that will execute the security and compliance assessments. In order to do that, follow the next steps:
+This example policy shows how to allow a group within a domain to use Cloud Shell:
+
+```
+allow group <DOMAIN_NAME>/<GROUP_NAME> to use cloud-shell in tenancy
+```
+
+Once you have access to Oracle Cloud Shell follow the next steps:
 
 1. Log in to the OCI console.
 
-2. Click the Cloud Shell icon in the Console header. Note that the OCI CLI running in the Cloud Shell will execute commands against the region selected in the Console's Region selection menu when the Cloud Shell was started.
+2. Click the Cloud Shell icon in the Console header. A display menu will prompt, then click Cloud Shell. 
+    
+    Note that the OCI CLI running in the Cloud Shell will execute commands against the region selected in the Console's Region selection menu when the Cloud Shell was started.
 
-  ![](./images/cloudshell-1.png "Cloud Shell Icon")
+  ![](./images/cloudshellicon1.png "Cloud Shell Icon")
 
-This displays the Cloud Shell in a "drawer" at the bottom of the console:
+    This displays the Cloud Shell in a "drawer" at the bottom of the console:
 
-![](./images/cloudshell-2.png "Cloud Shell running")
+    ![](./images/cloudshellpanel.png "Cloud Shell running")
 
-3. Install setup venv and install OCI
 
-    ```
-    python3 -m venv python-venv   
-    source python-venv/bin/activate    
-    pip3 install oci
-    ```
-
-4. If error message appears with new version available, you can upgrade with
-
-    ```
-    pip install –upgrade pip
-    ```
-
-## Task 2: Create your compartment
+## Task 2: Create Object Storage buckets
 
 First you need to create a new compartment for your deployment. To do that, follow the next steps:
 
@@ -74,36 +73,33 @@ First you need to create a new compartment for your deployment. To do that, foll
 2.	Create a new compartment by clicking Create Compartment and name it “USE_Workshop”
 ![](./images/compartments2.png "Create Compartment")
 
-## Task 3: Create your buckets
-
-You will create a bucket in Object Storage to store your security assessment reports. Optionally, you can create a second bucket if you want to run as well the CIS compliance assessment.
+Now that you have a compartment for the workshop, you will create a bucket in Object Storage to store your security assessment report. Optionally, you can create a second bucket if you want to run as well the CIS compliance assessment.
 
 To create the buckets, please follow the next steps:
 
 1. Log in to OCI console and navigate through the main hamburger menu to *"Storage > Object Storage > Buckets"*.
-
 ![](./images/storage1.PNG "Buckets")
 
 2. Create a bucket in the previously created compartment USE_Workshop by selecting the compartment and click Create Bucket.
-
 ![](./images/storage2.PNG "Create bucket")
 
 
 3. Name it security_assessment and click Create.
-
 ![](./images/storage3.PNG "Create")
 
 
 4.	(Optional) Create a second bucket to store the CIS Compliance Assessment, and name it cis_report by following previous steps.
 
-## Task 4: Provision and configure your Autonomous Database
+## Task 3: Provision and configure Autonomous Database
 
-You will create an Autonomous Database that will provide you the following functionalities in this workshop:
+Now you need to create an Autonomous Database that will provide you the following functionalities in this workshop:
 
 * Repository for your security assessment reports
 * Front-end user interface by using the hosted APEX
 
-1. To provision an Autonomous Database, navigate through the main hamburger menu to: *Oracle Database > Autonomous Database*.
+To do that, follow the next steps:
+
+1. Navigate through the main hamburger menu to: *Oracle Database > Autonomous Database*.
 
 ![](./images/autonomous-database.png "Autonomous Database")
 
@@ -120,7 +116,7 @@ You will create an Autonomous Database that will provide you the following funct
     *	Database Name: SecAssessments
     *	Workload type: Transaction Processing
     *	Deployment type: Shared Infrastructure
-    *	Configure the database: \<Leave it as default>
+    *	Configure the database: <Leave it as default>
     *	Administrator credentials: \<your ADMIN password>
     *	Network access: Secure access from everywhere
     *	License type: Bring Your Own License (BYOL)
@@ -233,7 +229,7 @@ The authenticated database user is only permitted access if the schema is REST e
     You will need to enable for REST this table in same way as you did for the OCISECURITYCENTER table.
 
 
-## Task 5: Install the Security Dashboard application
+## Task 4: Install and deploy the Security Center dashboard application
 
 Proceed to OCI console to perform the next steps:
 
@@ -325,8 +321,8 @@ security_assessment.py  	[-h][-t CONFIG_PROFILE][-p PROXY]
 
 ```
 ## Acknowledgements
-* **Author** - Sonia Yuste, OCI Security Specialist, August 2022
-* **Contributors** - 
+* **Author** - Sonia Yuste, OCI Security Specialist, December 2022
+* **Contributors** - Damien Rilliard, OCI Security Senior Director
 * **Last Updated By/Date** - Sonia Yuste, OCI Security Specialist, August 2022
 
 
