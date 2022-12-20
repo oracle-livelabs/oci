@@ -20,7 +20,7 @@ In more details:
 
 Below you can see the high level diagram:
 
-![](./images/architecture.png "High level diagram")
+![](./images/introdiagram.png "High level diagram")
 
 Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
 
