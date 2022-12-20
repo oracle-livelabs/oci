@@ -1,6 +1,6 @@
 # Introduction
 
-The purpose of this workshop is to help you and make more simple for you to do your first security assessment in your Oracle Cloud Infrastructure (OCI) tenancy, going at the same time through a guided selection of available security services according to the results of your security assessment. By doing this workshop, you will enjoy the Oracle Unique Security Experience.
+The purpose of this workshop is to help you and make more simple for you to do your first security assessment in your Oracle Cloud Infrastructure (OCI) tenancy, going at the same time through a guided selection of available security services according to the results of your security assessment. Optionally, you will be able to run a provided compliance script to check the CIS (Center Internet Security) compliance for your tenant. By doing this workshop, you will enjoy the Oracle Unique Security Experience.
 
 ## About this Workshop
 
@@ -27,9 +27,8 @@ Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire wor
 
 ## Objectives
 
-* Execute your first security assessment by launching the provided Python script in Oracle Cloud Shell (Oracle Cloud Shell is a Linux terminal provided by Oracle Cloud to run scripts on your OCI tenant).
-* Security assessment reports excel files will be stored automatically in an Object Storage bucket in CSV format.
-* Send the security assessment reports to an Autonomous Database table via REST API calls.
+* Execute your first security assessment by launching the provided Python script in Oracle Cloud Shell (Oracle Cloud Shell is a Linux terminal provided by Oracle Cloud to run scripts on your OCI tenant). The script generates your security assessment reports in excel format, and stores the excel files in an Object Storage bucket.
+* Send the security assessment reports from the bucket to an Autonomous Database table via REST API calls.
 * Deploy the provided APEX application (Security Center dashboard) in the APEX instance hosted in the Autonomous Database.
 * Check all results of your security assessments in the Security Center dashboard, and navigate through the different pages to check available security services that you could deploy in OCI.
 * Optionally, enable one security service automatically (Cloud Guard) via the Security Center dashboard by using Terraform.
@@ -56,7 +55,11 @@ In general, you could extend the use of the provided Security Center dashboard a
 
 In that case, then have a view of the following figure, where you can see the complete diagram of all possible OCI services that this Unique Security Experience could apply:
 
-![](./images/architecture.png "Complete architecture")
+![](./images/architecturecomplete.png "Complete architecture")
+
+By following the above architecture, red connections and components are referring to the different parts that are part of this workshop. 
+
+Numbers indicate the order of each task. In this way, it is clear to see the procedure that will be followed in this workshop.
 
 ## Lab Breakdown
 - **Lab 1:** Prepare your OCI tenant
