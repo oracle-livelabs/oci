@@ -19,7 +19,8 @@ In more details:
 
 
 Below you can see the high level diagram:
-![](./images/intro-diagram.png " ")
+
+![](./images/architecture.png "High level diagram")
 
 Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
 
@@ -32,7 +33,6 @@ Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire wor
 * Deploy the provided APEX application (Security Center dashboard) in the APEX instance hosted in the Autonomous Database.
 * Check all results of your security assessments in the Security Center dashboard, and navigate through the different pages to check available security services that you could deploy in OCI.
 * Optionally, enable one security service automatically (Cloud Guard) via the Security Center dashboard by using Terraform.
-
 
 Below you can see the architecture components for this Unique Security Experience:
 
