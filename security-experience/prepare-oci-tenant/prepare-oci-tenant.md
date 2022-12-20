@@ -64,7 +64,7 @@ Once you have access to Oracle Cloud Shell follow the next steps:
 
 ## Task 2: Create Object Storage buckets
 
-First you need to create a new compartment for your buckets. To do that, follow the next steps:
+First you need to create a new compartment for the buckets and the Autonomous Database. To do that, follow the next steps:
 
 1. Log in to the OCI console and navigate through the main hamburger menu to *"Identity & Security > Compartments"*
 ![](./images/compartments1.png "Compartments")
