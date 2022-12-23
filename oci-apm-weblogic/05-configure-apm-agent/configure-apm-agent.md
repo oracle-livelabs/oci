@@ -28,27 +28,27 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, APM Domains](images/4-1-2-apmdomain.png " ")
 
-3.	Mouse-click the **Java Agent** link. Select **Copy Link Address** (or Copy Link, depends on the browser you use). This will save the download link to the memory on your computer. Paste the copied link to a text file.
+   3.	Manually copy the **Agent Version** and paste it to a text file.
 
-   ![Oracle Cloud console, APM Domains](images/4-1-3-apmdomain.png " ")
+      ![Oracle Cloud console, APM Domains](images/4-1-3-apmdomain.png " ")
 
-4. 	Open the Cloud Shell by clicking the **>..** icon from the top right corner of the Oracle Cloud console. Restore the Cloud Shell if minimized.
+   4. 	Open the Cloud Shell by clicking the **Developer tools** icon > select **Cloud shell** from the top right corner of the Oracle Cloud console. Restore the Cloud Shell if minimized.
 
-   ![Oracle Cloud console, APM Domains](images/4-1-4-cloudshell.png " ")
+      ![Oracle Cloud console, APM Domains](images/4-1-4-cloudshell.png " ")
+
 
 
 ## Task2: Download the APM Java Agent to the Cloud shell
 
-1.  Type the following command to the Cloud Shell.
+1.  Type the following command into the Cloud Shell. Make sure to ***replace*** the **Agent version** with the copied text from the previous steps.
 
     ``` bash
     <copy>
-    cd ~/; wget <copied APM Java Agent link>
+    cd ~/; wget https://repo1.maven.org/maven2/com/oracle/apm/agent/java/apm-java-agent-installer/<Agent version>/apm-java-agent-installer-<Agent version>.jar
     </copy>
     ```
-    If the link is still in the clipboard of your computer, simply type **wget** in the Cloud Shell home directory, then paste the APM Java Agent download link.
 
-   ![Oracle Cloud console, Cloud Shell](images/4-1-5-cloudshell.png " ")
+    E.g., cd ~/; wget https://repo1.maven.org/maven2/com/oracle/apm/agent/java/apm-java-agent-installer/1.8.3326/apm-java-agent-installer-1.8.3326.jar
 
 2.	Hit the enter key and verify the message to ensure the successful file transfer.
 
@@ -73,7 +73,7 @@ Estimated time: 10 minutes
     </copy>
     ```
 
-    > - e.g., kubectl cp apm-java-agent-installer-1.6.2363.jar sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/
+    > - e.g., kubectl cp apm-java-agent-installer-1.8.3326.jar sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/
 
 2.	Use the kubectl command below to remotely run the ls command in the container in the Kubernetes pod.
 
@@ -99,7 +99,7 @@ Estimated time: 10 minutes
     kubectl exec -it sample-domain1-admin-server -n sample-domain1-ns -- bash -c "cd /apmlab-fss && java -jar ./apm-java-agent-installer-<apm-agent-version>.jar provision-agent -service-name=WLS-server -destination=.  -private-data-key=<APM Domain Private Key> -data-upload-endpoint=<APM Domain Endpoint>"
     </copy>
     ```
-    E.g., kubectl exec -it sample-domain1-admin-server -n sample-domain1-ns -- bash -c "cd /apmlab-fss && java -jar apm-java-agent-installer-1.6.2363.jar provision-agent -service-name=WLS-server -destination=. -private-data-key=ABCDEFG12345ABCDEF123456ABCDE -data-upload-endpoint=https://abcdefgt12345aaaaaaaaabcdef.apm-agt.us-phoenix-1.oci.oraclecloud.com"
+    E.g., kubectl exec -it sample-domain1-admin-server -n sample-domain1-ns -- bash -c "cd /apmlab-fss && java -jar apm-java-agent-installer-1.8.3326.jar provision-agent -service-name=WLS-server -destination=. -private-data-key=ABCDEFG12345ABCDEF123456ABCDE -data-upload-endpoint=https://abcdefgt12345aaaaaaaaabcdef.apm-agt.us-phoenix-1.oci.oraclecloud.com"
 
     With a successful installation, you should see the output similar to below.
 
@@ -132,7 +132,7 @@ Because there is no editing tool inside the container, you will copy an APM agen
     ```   
 
     >**Note:** The file path includes the APM Java Agent version. Change the directory name to the Agent version you have.  
-    E.g., kubectl cp sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.6.2363**/ProbeConfig.acml ~/ProbeConfig.acml
+    E.g., kubectl cp sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.8.3326**/ProbeConfig.acml ~/ProbeConfig.acml
 
     run the "ls" command from the Home directory and confirm the file was transferred.  
     ```bash
@@ -168,7 +168,7 @@ Because there is no editing tool inside the container, you will copy an APM agen
     </copy>
     ```
 
-    >**Note:** kubectl cp  ~/ProbeConfig.acml sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.6.2363**/ProbeConfig.acml
+    >**Note:** kubectl cp  ~/ProbeConfig.acml sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.8.3326**/ProbeConfig.acml
 
    ![Oracle Cloud console, Cloud Shell ](images/4-5-3-cloudshell.png " ")
 
@@ -232,4 +232,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, August, 2022
+* **Last Updated By/Date** - Yutaka Takatsu, December, 2022

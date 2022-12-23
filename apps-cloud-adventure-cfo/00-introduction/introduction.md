@@ -11,13 +11,10 @@ Estimated Workshop Time: 1 hours 30 minutes
 ### Objectives
 
 In this workshop, you will learn how to:
-* Work with Journals
-
-## Learn More
-
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* Monitor Key Accounts
+* Perform Predictive Capabilities
+* Buy indirect items and negotiate contracts
+* Detect anomalies and mitigate risks
 
 ## Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services

@@ -47,7 +47,8 @@ Estimated Lab Time: 20 minutes.
 
 6. Click on the link below to open the **xml** configuration file which you need to setup initial configuration on Firewall.  
 
-    - Click here: [vm-series-firewall-1.xml](https://objectstorage.us-ashburn-1.oraclecloud.com/p/FzpSwvA6XI8YMgVjjrThOF1R-zDhDa9yHaEYJY0qUsUY1s4TmLJVcByUpNqHQgt2/n/partners/b/files/o/vm-series-firewall-1.xml) 
+    - Click here: [vm-series-firewall-1.xml](https://objectstorage.us-ashburn-1.oraclecloud.com/p/iPLJ5NPlwhpWx2UlZVCz0xoArKZFRsert5k1LYY7Snxpb1K-e1hTvKJws3xnXlnJ/n/partners/b/files/o/vm-series-firewall-1.xml) 
+    - **PAR URL** is valid until **Dec, 2025**.
 
 7. Save in your local machine's downloads folder and open the file.
 
@@ -169,7 +170,8 @@ Estimated Lab Time: 20 minutes.
 
 6. Click on the link below to open the **xml** configuration file which you need to setup initial configuration on Firewall.  
 
-    - Click here: [vm-series-firewall-2.xml](https://objectstorage.us-ashburn-1.oraclecloud.com/p/npWr_G2Tno8LRr0JjHwzS0WtS8EYbG1UBAU2kPw4KVNbkf5tDM22iha6peBA59Z2/n/partners/b/files/o/vm-series-firewall-2.xml) 
+    - Click here: [vm-series-firewall-2.xml](https://objectstorage.us-ashburn-1.oraclecloud.com/p/JRG_oc_JjiPblTGk3PhuiqhWLJ9D7kot7IOLOCgWCyHreT4POSk0AcI9hC35-f4y/n/partners/b/files/o/vm-series-firewall-2.xml) 
+    - **PAR URL** is valid until **Dec, 2025**.
 
 7. Save in your local machine's downloads folder and open the file.
 
@@ -286,7 +288,7 @@ You may now [proceed to the next lab](#next).
 
 ## Acknowledgements
 
-- **Author** - Arun Poonia, Senior Solutions Architect
+- **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Palo Alto Networks
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, July 2021
+- **Last Updated By/Date** - Arun Poonia, Oct 2022

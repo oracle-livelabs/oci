@@ -33,6 +33,6 @@ Resource Links for Reference
 * [Best Practices Framework](https://docs.oracle.com/en/solutions/oci-best-practices/#GUID-5F2D2745-934E-409A-A7BA-D0976F727845)
 
 ## Acknowledgements
-* **Authors** - Sunil Jain, Associate Cloud Engineer; Uma Kumar, Staff Cloud Engineer; Anand Prasad, Master Principal Cloud Architect
+* **Authors** - Uma Kumar, Staff Cloud Engineer; Anand Prasad, Master Principal Cloud Architect
 * **Speakers** -  Larry Beausoleil, Sr. Manager, Technical Program Management; Joay Hall, Staff Cloud Engineer
 * **Last Updated By/Date** - Taylor Zheng, September 2022
