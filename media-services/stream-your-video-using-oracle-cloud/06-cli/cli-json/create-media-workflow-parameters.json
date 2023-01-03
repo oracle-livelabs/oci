@@ -1,0 +1,13 @@
+{
+  "input": {},
+  "output": {
+    "basePrefix": "${/output/objectNamePath}",
+    "objectName": "output/",
+    "objectNamePath": "output/",
+    "objectNameFilename": ""
+  },
+  "taskOutput": {
+    "transcode": "",
+    "thumbnail": ""
+  }
+}

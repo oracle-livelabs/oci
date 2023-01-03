@@ -6,6 +6,9 @@ In this lab, you will set up a simple Helidon SE application. You will use APM T
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Set up a Helidon SE application](videohub:1_y2og8t4n)
+
 ### Objectives
 
 * Launch Cloud Shell
@@ -22,11 +25,12 @@ Estimated time: 10 minutes
 
 ## Task 1: Launch the Cloud Shell and verify Helidon prerequisites
 
-1. Launch the Oracle Cloud Shell from the Oracle Cloud Console by selecting the **>..** icon.  <br/>
+1. Launch the Oracle Cloud Shell from the Oracle Cloud Console by selecting the **Developer tools** icon, then select **Cloud Shell**.
 
   The Oracle Cloud Shell is a small virtual machine running a Bash shell that you access through the Oracle Cloud Console. It comes with a pre-authenticate Command Line Interface (CLI) pre-installed and configured so you can immediately start working in your tenancy without spending time on its installation and configuration.
 
-	![Cloud Shell](images/1-1-cloudshell.png " ")
+ ![Cloud Shell menu](https://oracle-livelabs.github.io/common/images/console/cloud-shell.png " ")
+
 3. Helidon requires Java 11 (or newer) and Maven 3.6.1. Verify the versions by running the following commands.
 
 	``` bash
@@ -40,7 +44,7 @@ Estimated time: 10 minutes
 	</copy>
 	```
 
-  	![Cloud Shell](images/01-01-cloudshell.png " ")
+  	![Cloud Shell](images/1-2-cloudshell-check-versions.png " ")
 
 	If you do not have the required version of Java, you can install GraalVM in the Cloud Shell to run Java 11, in the next Task.
 
@@ -171,5 +175,6 @@ You may now **proceed to the next lab**.
 
 - **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,    
-Avi Huber, Senior Director, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, August 2022
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
+- **Last Updated By/Date** - Yutaka Takatsu, December 2022

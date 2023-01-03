@@ -1,0 +1,12 @@
+{
+    "inputVideo": "${/getFiles/taskParameters/0/target}",
+    "outputAudio": "${/output/basePrefix}transcribe/${/input/objectNameFilename}.wav",
+    "outputTranscriptionPrefix": "${/output/basePrefix}transcribe/",
+    "outputNamespaceName": "${/output/namespaceName}",
+    "outputBucketName": "${/output/bucketName}",
+    "transcriptionJobCompartment": "${/output/assetCompartmentId}",
+    "waitForCompletion": false,
+    "language": "en",
+    "_outputTranscriptionPrefix": "transcribe/",
+    "analyzeText": true
+  }

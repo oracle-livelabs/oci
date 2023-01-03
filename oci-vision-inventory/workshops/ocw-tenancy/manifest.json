@@ -1,9 +1,9 @@
 {
-    "workshoptitle": "Automate inventory management with OCI Vision",
+    "workshoptitle": "Automate and accelerate inventory analytics with OCI Vision",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
-            "title": "Introduction: Automate inventory management with OCI Vision",
+            "title": "Introduction",
             "filename": "../../intro/intro.md"
         },
         {
@@ -12,7 +12,7 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Pre-requisites",
+            "title": "Lab 1: Prerequisites",
             "filename": "../../setup-prerequisites/setup-prerequisites.md"
         },
         {
@@ -26,10 +26,6 @@
         {
             "title": "Lab 4: Test the model via Oracle Cloud Console",
             "filename": "../../test-model-console/test-model-console.md"
-        },
-        {
-            "title": "Lab 5: Test the model using the Python SDK",
-            "filename": "../../test-model-python-sdk/test-model-python-sdk.md"
         },
         {
             "title": "Oracle CloudWorld 2022 - Get Help",

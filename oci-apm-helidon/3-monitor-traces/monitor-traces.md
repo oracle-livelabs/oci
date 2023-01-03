@@ -6,6 +6,9 @@ In this lab, you will configure APM Tracer to monitor the Helidon SE application
 
 Estimated time: 15 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Monitor traces and spans of the application with APM Trace Explorer](videohub:1_5ffnikzh)
+
 ### Objectives
 
 * Modify the pom.xml file in the Helidon application
@@ -53,8 +56,8 @@ Estimated time: 15 minutes
 4.	At the end of the dependencies section, find a line **&lt;/dependencies&gt;** and add the following before that line:
 
 			    <dependency>
-			         <groupId>io.helidon.tracing</groupId>
-			             <artifactId>helidon-tracing</artifactId>
+			        <groupId>io.helidon.tracing</groupId>
+			        <artifactId>helidon-tracing</artifactId>
 			    </dependency>
 			    <dependency>
 			        <groupId>com.oracle.apm.agent.java</groupId>
@@ -68,6 +71,9 @@ Estimated time: 15 minutes
 			    </dependency>
 
 	![pom.xml](images/1-1-pomxml.png " ")
+
+	  >**Note:** Alternatively, you can use a built-in code editor to edit files. To use the code editor, select the **Developer tools** icon from the toolbar>  select **Code Editor**.
+			![pom.xml](images/1-1-2-pomxml.png " ")
 
 ## Task 2: Modify application.yaml file
 
@@ -205,5 +211,6 @@ You may now **proceed to the next lab**.
 
 - **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,
-Avi Huber, Senior Director, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, August 2022
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
+- **Last Updated By/Date** - Yutaka Takatsu, December 2022

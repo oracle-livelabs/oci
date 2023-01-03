@@ -1,0 +1,8 @@
+{
+    "displayName": "OCI Edge",
+    "distributionChannelId": "<< Update the Distribution Channel ID>>",
+    "config": {
+      "type": "EDGE"
+    },
+    "isEnabled": true
+  }

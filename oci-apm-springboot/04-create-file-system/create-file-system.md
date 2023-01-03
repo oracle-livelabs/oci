@@ -6,6 +6,9 @@ In this lab, you will create a file system in the Oracle Cloud Infrastructure. Y
 
 Estimated time: 15 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create and configure a file system](videohub:1_nuemqknc)
+
 ### Objectives
 
 * Create a file system in the Oracle Cloud
@@ -141,7 +144,7 @@ Estimated time: 15 minutes
 
 ## Task 3: Mount the file system to Kubernetes pods
 
-1. Click the **>..**  icon from the top right corner in the Oracle Cloud console menu bar, to start a Cloud Shell environment which will appear at the bottom of your page.
+1. Click the **Developer tools** icon from the top right corner in the Oracle Cloud console menu bar, then select **Cloud shell** to start a Cloud Shell environment which will appear at the bottom of your page.
    ![Oracle Cloud console, Menu](images/3-3-1-menu.png " ")
 
     >	**Note:** If the Cloud Shell is already running but the window is minimized, you can restore the window by clicking the **Restore** icon on the toolbar.
@@ -162,6 +165,8 @@ Estimated time: 15 minutes
     ```
 
     >**Note:** If you are using the vi editor, type ***i*** to enter Insert mode, and make the text editable. Use allow keys to navigate the text and make changes to where you set the cursor. To save a file, press the Esc key, then type ***:wq*** to write and quit the file. If you do not wish a change, press Esc then type ***:q!*** to discard your changes. Please refer to the editor's references for more usage.
+    Alternatively, you can use a built-in code editor to edit files. To use the code editor, select the **Developer tools** icon from the toolbar>  select **Code Editor**.
+      ![yaml](images/3-3-2-1-yaml.png " ")
 
 4. Review the file contents that create Kubernetes objects (StorageClass, PersistentVolume, PersistentVolumeClaim) in your OKE. Replace the **mntTargetID** and **server IP** with the values copied in Lab 3, Task 1, step 11 in this Workshop. Save the change and close the file.
 
@@ -205,6 +210,7 @@ Estimated time: 15 minutes
 
      >**Note:** Refer to the screenshot image below to see what it should look like after the file is modified. Verify that the Kubernetes objects, such as StorageClass, PersistentVolume, and PersistentVolumeClass are configured in the YAML file.
        	![yaml](images/3-3-2-yaml.png " ")
+
 
 ## Task 4: Apply changes to the container
 
@@ -357,5 +363,6 @@ You may now **proceed to the next lab**.
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,   
-Avi Huber, Senior Director, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, August 2022
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
+* **Last Updated By/Date** - Yutaka Takatsu, December 2022

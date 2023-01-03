@@ -21,13 +21,15 @@ Estimated time: 10 minutes
 
 1.	From the OCI menu, select **Observability & Management**, then **Administration**.
 	![Oracle Cloud console Menu](images/2-1-domain.png " ")
-2.	Click **Create APM Domain**.
+
+2. Select the **apmworkshop** compartment from the pulldown menu.
+		![Oracle Cloud console Menu](images/2-1-2-domain.png " ")
+
+3.	Click **Create APM Domain**.
   ![Oracle Cloud console, Create APM Domain](images/2-2-domain.png " ")
-3.	Name your APM domain and select the compartment you created. Add a check to the **Create as Always Free Domain**, then click **Create**.
+4.	Name your APM domain as **apmworkshop** and select the compartment you created. Add a check to the **Create as Always Free Domain**, then click **Create**.
   ![Oracle Cloud console, Create APM Domain](images/2-3-domain.png " ")
 
-4. Select the **apmworkshop** compartment from the pulldown menu.
-	![Oracle Cloud console Menu](images/2-1-2-domain.png " ")
 
 5. Press the refresh button periodically to check the status. This may take a few minutes.
   ![Oracle Cloud console, Create APM Domain](images/2-4-domain.png " ")
@@ -42,11 +44,15 @@ To upload tracing data to an APM domain, Data Upload Endpoint and both Private a
 1.	Click the link to the APM domain.
   ![Oracle Cloud console, APM Domain](images/3-1-domain.png " ")
 
-2.	In the **APM Domain Information** tab, find **Data Upload Endpoint**, then click **Copy**. Paste the copied value to a text file and save. You will need this value in the later steps in the workshop.
+2. Under **Resources**, click **Data Keys**.
 
-3.	Under **Data Keys**, find **auto\_generated\_private_data\_key**. Click **Copy** and save the value to the text file.
+	  ![Oracle Cloud console, APM Domain](images/3-1-2-domain.png " ")
 
-4.  In the same section, find **auto\_generated\_public_data\_key**. Click **Copy** and save the value to the text file.
+3.	In the **APM Domain Information** tab, find **Data Upload Endpoint**, then click **Copy**. Paste the copied value to a text file and save. You will need this value in the later steps in the workshop.
+
+4.	Under **Data Keys**, find **auto\_generated\_private_data\_key**. Click **Copy** and save the value to the text file.
+
+5.  In the same section, find **auto\_generated\_public_data\_key**. Click **Copy** and save the value to the text file.
   ![Oracle Cloud console, APM Domain](images/3-2-domain.png " ")
 
 For more details on Data Upload Endpoint and Data keys, refer to the OCI documentation, [Obtaining Data Upload Endpoint and Data keys](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/obtain-data-upload-endpoint-and-data-keys.html).
@@ -58,5 +64,6 @@ You may now **proceed to the next lab**.
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** -
 Steven Lemme, Senior Principal Product Manager,  
-Avi Huber, Senior Director, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, August 2022
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
+* **Last Updated By/Date** - Yutaka Takatsu, December 2022

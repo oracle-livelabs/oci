@@ -139,7 +139,7 @@ Estimated time: 10 minutes
     ![Oracle Cloud console, Cloud Shell](images/4-2-3-cloudshell.png " ")
 
 
-5. Within the same command output, locate the LoadBalancer service. Note down the External-IP.
+5. From the command output from the step 4 above, locate the LoadBalancer service. Note down the External-IP.
 
     ![Oracle Cloud console, Cloud Shell](images/4-2-1-cloudshell.png " ")
 
@@ -162,5 +162,6 @@ You may now **proceed to the next lab**.
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
-Avi Huber, Senior Director, Product Management
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 * **Last Updated By/Date** - Yutaka Takatsu, August 2022

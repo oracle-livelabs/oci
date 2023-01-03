@@ -6,6 +6,9 @@ In this lab, you will modify the original service to call the second service, wh
 
 Estimated time: 15 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[View the trace having multiple services](videohub:1_wl7efqpu)
+
 ### Objectives
 
 * Implement Jersey client in the Maven project
@@ -294,5 +297,6 @@ This is the end of the workshop. You have learned how to add the APM tracers to 
 
 - **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,
-Avi Huber, Senior Director, Product Management
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
 - **Last Updated By/Date** - Yutaka Takatsu, August 2022

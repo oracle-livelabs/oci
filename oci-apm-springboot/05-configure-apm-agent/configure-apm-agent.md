@@ -6,6 +6,9 @@ In this lab, you will download the APM Java Agent installer file from the Oracle
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Instrument the server monitoring](videohub:1_2mpynh0j)
+
 ### Objectives
 
 * Download the APM Java Agent from the Oracle Cloud console
@@ -28,31 +31,29 @@ Estimated time: 10 minutes
 
    ![Oracle Cloud console, APM Domains](images/4-1-2-apmdomain.png " ")
 
-3.	Mouse-click the **Java Agent** link. Select **Copy Link Address**. This will save the download link to the memory on your computer. Paste the copied link to a text file.
+3.	Manually copy the **Agent Version** and paste it to a text file.
 
    ![Oracle Cloud console, APM Domains](images/4-1-3-apmdomain.png " ")
 
-4. 	Open the Cloud Shell by clicking the **>..** icon from the top right corner of the Oracle Cloud console. Restore the Cloud Shell if minimized.
+4. 	Open the Cloud Shell by clicking the **Developer tools** icon > select **Cloud shell** from the top right corner of the Oracle Cloud console. Restore the Cloud Shell if minimized.
 
    ![Oracle Cloud console, APM Domains](images/4-1-4-cloudshell.png " ")
 
 
 ## Task 2: Download the APM Java Agent to the Cloud shell
 
-1.  Type the following command to the Cloud Shell.
+1.  Type the following command into the Cloud Shell. Make sure to ***replace*** the **Agent version** with the copied text from the previous steps.
 
     ``` bash
     <copy>
-    cd ~/; wget <copied APM Java Agent link>
+    cd ~/; wget https://repo1.maven.org/maven2/com/oracle/apm/agent/java/apm-java-agent-installer/<Agent version>/apm-java-agent-installer-<Agent version>.jar
     </copy>
     ```
-    If the link is still in the clipboard of your computer, simply type **wget** in the Cloud Shell home directory, then paste the APM Java Agent download link.
 
-   ![Oracle Cloud console, Cloud Shell](images/4-1-5-cloudshell.png " ")
+    E.g., cd ~/; wget https://repo1.maven.org/maven2/com/oracle/apm/agent/java/apm-java-agent-installer/1.8.3326/apm-java-agent-installer-1.8.3326.jar
+
 
 2.	Hit the enter key and verify the message to ensure the successful file transfer.
-
-   ![Oracle Cloud console, Cloud Shell](images/4-1-6-cloudshell.png " ")
 
 3.  Type the ls command. Confirm that the java agent file installer is in the home directory.
 
@@ -61,7 +62,7 @@ Estimated time: 10 minutes
     ls ~
     </copy>
     ```
-   ![Oracle Cloud console, Cloud Shell](images/4-1-7-cloudshell.png " ")
+   ![Oracle Cloud console, Cloud Shell](images/4-1-6-cloudshell.png " ")
 
 ## Task 3: Copy the Java Agent installer to the file system
 
@@ -73,7 +74,7 @@ Estimated time: 10 minutes
     </copy>
     ```
 
-    > - e.g., kubectl cp apm-java-agent-installer-1.6.2363.jar wstore-front-0:/apmlab-fss/  
+    > - e.g., kubectl cp apm-java-agent-installer-1.8.3326.jar wstore-front-0:/apmlab-fss/  
     - The command copies the Agent installer to the **wstore-front**, but it can be copied to any pod as the way we set up, all pods share the same file system.
 
 
@@ -101,7 +102,7 @@ Estimated time: 10 minutes
     kubectl exec -it wstore-front-0 -- bash -c "cd /apmlab-fss && java -jar ./apm-java-agent-installer-<apm-agent-version>.jar provision-agent -service-name=WS-svc -destination=.  -private-data-key=<APM Domain Private Key> -data-upload-endpoint=<APM Domain Endpoint>"
     </copy>
     ```
-    E.g., kubectl exec -it wstore-front-0 -- bash -c "cd /apmlab-fss && java -jar apm-java-agent-installer-1.6.2363.jar provision-agent -service-name=WS-svc -destination=. -private-data-key=ABCDEFG12345ABCDEF123456ABCDE -data-upload-endpoint=https://abcdefgt12345aaaaaaaaabcdef.apm-agt.us-phoenix-1.oci.oraclecloud.com"
+    E.g., kubectl exec -it wstore-front-0 -- bash -c "cd /apmlab-fss && java -jar apm-java-agent-installer-1.8.3326.jar provision-agent -service-name=WS-svc -destination=. -private-data-key=ABCDEFG12345ABCDEF123456ABCDE -data-upload-endpoint=https://abcdefgt12345aaaaaaaaabcdef.apm-agt.us-phoenix-1.oci.oraclecloud.com"
 
     With a successful installation, you should see the output similar to below.
 
@@ -186,5 +187,6 @@ You may now **proceed to the next lab**.
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
-Avi Huber, Senior Director, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, August 2022
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
+* **Last Updated By/Date** - Yutaka Takatsu, December 2022
