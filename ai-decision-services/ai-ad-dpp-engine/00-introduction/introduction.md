@@ -59,7 +59,7 @@ Output is always saved to OCI Object Storage Bucket as a CSV file.
 
 ## Learn More
 
-* [Introduction to all transformers](https://github.com/ganrad/oci/blob/main/ai-decision-services/ai-ad-dpp-engine/optional/Introduction-to-Transformers-for-Data-Preprocessing.md)
+* [Introduction to all transformers](https://github.com/ganrad/oci/blob/main/ai-decision-services/ai-ad-dpp-engine/optional/introduction-to-transformers-for-data-preprocessing.md)
 
 Users are advised to refer to the respective OCI PaaS Service documentation as needed. Links to OCI Service documentation is included within the **Useful Resources** section within each *Lab*.
 
