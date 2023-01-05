@@ -23,12 +23,18 @@ Por meio deste guia, iremos fornecer laboratórios práticos de:
 ## Saiba Mais
 
 [Documentação do Oracle Cloud Infrastructure](https://docs.oracle.com/pt-br/iaas/Content/home.htm).
-[Documentação do OCI Object Storage](https://docs.oracle.com/en-us/iaas/Content/Object/home.htm)
-[Documentação do OCI Data Flow](https://www.oracle.com/br/big-data/data-flow/)
-[Documentação do OCI Data Integration](https://www.oracle.com/br/integration/data-integration/)
-[Documentação do OCI Data Catalog](https://www.oracle.com/br/big-data/data-catalog/)
-[Documentação do OCI Autonomous Data Warehouse](https://docs.oracle.com/pt-br/iaas/Content/Database/Concepts/adboverview.htm)
-[Documentação do OCI Analytics Cloud](https://docs.oracle.com/en/cloud/paas/analytics-cloud/index.html)
+
+[Documentação do OCI Object Storage](https://docs.oracle.com/en-us/iaas/Content/Object/home.htm).
+
+[Documentação do OCI Data Flow](https://www.oracle.com/br/big-data/data-flow/).
+
+[Documentação do OCI Data Integration](https://www.oracle.com/br/integration/data-integration/).
+
+[Documentação do OCI Data Catalog](https://www.oracle.com/br/big-data/data-catalog/).
+
+[Documentação do OCI Autonomous Data Warehouse](https://docs.oracle.com/pt-br/iaas/Content/Database/Concepts/adboverview.htm).
+
+[Documentação do OCI Analytics Cloud](https://docs.oracle.com/en/cloud/paas/analytics-cloud/index.html).
 
 
 ## Autoria

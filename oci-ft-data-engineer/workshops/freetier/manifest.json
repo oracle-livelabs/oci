@@ -8,38 +8,13 @@
             "filename": "../../intro/intro.md"
         },
         {
-            "title": "Get Started",
-            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/cloud-login.md"
+            "title": "Primeiros Passos - Pré Requisitos",
+            "filename": "../../get-started-pt/get-started-pt.md"
         },
         {
-            "title": "Lab 1: Data Ingestion",
-            "description": "Coletar Dados utilizando o OCI Functions de uma API e Armazenar no OCI Object Storage ",
+            "title": "Lab 1: Ingestão de Dados - Object Storage",
+            "description": "Neste Laboratório vamos aprender a carregar os dados para a nossa camada inicial - Object Storage",
             "filename": "../../data-ingestion/data-ingestion.md"
-        },
-        {
-            "title": "Lab 2: Data Transformation",
-            "description": "Conheça como transformar e carregar seus dados para um Data Warehouse utilizando o OCI Data Flow e OCI Data Integration",
-            "filename": "../../data-transformation/data-transformation.md"
-        },
-        {
-            "title": "Lab 3: Metadata Management",
-            "description": "Conheça como criar uma governança de seus metados em OCI utilizando o OCI Data Catalog ",
-            "filename": "../../metadata-management/metadata-management.md"
-        },
-        {
-            "title": "Lab 4: Data Warehouse",
-            "description": "Conheça como Criar, Administrar e Manipular seus Dados utilizando o OCI Autonomous Data Warehouse",
-            "filename": "../../data-warehouse/data-warehouse.md"
-        },
-        {
-            "title": "Lab 5: Data Visualization",
-            "description": "Aprenda a criar relatórios analíticos utilizando o Oracle Analytics Cloud ",
-            "filename": "../../data-visualization/data-visualization.md"
-        },
-        {
-            "title": "Lab 6: Bônus - Query Service",
-            "description": "Aprenda a explorar seus objetos armazenados no Object Storage utilizando queries SQL",
-            "filename": "../../query-service/query-service.md"
         },
         {
             "title": "Need Help?",
