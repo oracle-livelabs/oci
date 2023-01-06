@@ -32,6 +32,10 @@ ssh-keygen -t rsa
 
 ![criar chave ssh](./images/vm-keys.png)
 
+> **Note:** No NoVNC ative a função "Mostrar Teclado" para que seja possível digitar o caracter "~" no próximo passo
+
+![ativar teclado](./images/novnc-teclado.png)
+
 3. Exiba o conteúdo da chave pública que você criou utilizando o comando:
 
 ```
@@ -43,6 +47,10 @@ cat ~/.ssh/id_rsa.pub
 ![copiar texto da chave](./images/vm-cat.png)
 
 Para a criação da VM, usaremos a chave pública. A chave privada será usada apenas para conexão.
+
+> **Note:** Cole esse conteúdo na Área de Transferencia do NoVNC para facilitar o processo de colar dentro do Terminal. A partir de agora sempre que precisar copiar/colar algo no Terminal utilize a Área de Transferência
+
+![area de transferencia](./images/area-de-transferencia.png)
 
 ## Task 2: Criar 2 máquinas virtuais Oracle Linux
 
@@ -56,12 +64,12 @@ Para a criação da VM, usaremos a chave pública. A chave privada será usada a
 * Availability Domain: AD 1
 * Operating System: Oracle Linux 7.9
 * Instance Type: Virtual Machine
-* Instance Shape: AMD VM.Standard.E3.Flex
+* Instance Shape: AMD VM.Standard.E4.Flex
 * Choose SSH Key File: Insira a chave SSH pública (.pub)
 * Virtual Cloud Network Compartment: "Compartimento-Trial"
 * Virtual Cloud Network: "VCN-TRIAL"
 * Subnet Compartment: "Compartimento-Trial"
-* Subnet: Private Subnet
+* Subnet: Public Subnet
 * Lembre-se de escolher o AD certo e seu Compartimento
 
 ![preencha os campos iniciais](./images/vm-fields-create-9.png)
@@ -74,7 +82,7 @@ Para a criação da VM, usaremos a chave pública. A chave privada será usada a
 
 ![selecione o tamanho da virtual machine](./images/vm-size-12.png)
 
-3. Ao inserir as informações de rede, lembre-se de escolher a Subnet Privada e a opção "Do not assign a public IPv4 address"
+3. Ao inserir as informações de rede, lembre-se de escolher a Subnet Publica e a opção "Assign a public IPv4 address"
 
 ![Configurações de rede para VM](./images/vm-private.png)
 
@@ -92,12 +100,12 @@ Você provavelmente terá a nova instância devidamente criada em alguns minutos
 * Availability Domain: AD 2
 * Operating System: Oracle Linux 7.9
 * Instance Type: Virtual Machine
-* Instance Shape: AMD VM.Standard.E3.Flex
+* Instance Shape: AMD VM.Standard.E4.Flex
 * Choose SSH Key File: Insira a chave SSH pública (.pub)
 * Virtual Cloud Network Compartment: "Compartimento-Trial"
 * Virtual Cloud Network: "VCN-TRIAL"
 * Subnet Compartment: "Compartimento-Trial"
-* Subnet: Private Subnet
+* Subnet: Public Subnet
 
 ## Task 3: Acessar a VM Linux pelo Terminal
 
