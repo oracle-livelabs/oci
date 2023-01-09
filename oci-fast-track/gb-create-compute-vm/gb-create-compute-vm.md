@@ -42,7 +42,7 @@ ssh-keygen -t rsa
 cat ~/.ssh/id_rsa.pub
 ```
 
-* Selecione e Copie o conteúdo dessa chave, pois a usaremos para a criação das máquinas virtuais Linux
+* Selecione e Copie o conteúdo dessa chave, pois a usaremos para a criação das máquinas virtuais Linux.
 
 ![copiar texto da chave](./images/vm-cat.png)
 
