@@ -1,0 +1,48 @@
+{
+  "workshoptitle": "Get started with Oracle Application Performance Monitoring",
+	"help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+        },
+        {
+            "title": "Lab 1: Access the APM workshop environment",
+            "description": "Access the APM workshop environment",
+            "filename": "../../01-access-env/access-env.md"
+        },
+
+        {
+            "title": "Lab 2: Examine APM Alarms",
+            "description": "Examine APM Alarms",
+            "filename": "../../02-examine-alarms/examine-alarms.md"
+         },
+        {
+            "title": "Lab 3: Examine APM Monitors",
+            "description": "Examine APM Monitors",
+            "filename": "../../03-examine-monitors/examine-monitors.md"
+        },
+
+        {
+            "title": "Lab 4: Explore Monitor Details and History",
+            "description": "Explore Monitor Details and History",
+            "filename": "../../04-monitor-details/monitor-details.md"
+        },
+        {
+            "title": "Lab 5: Explore APM Trace Data",
+            "description": "Explore APM Trace Data",
+            "filename": "../../05-explore-trace-data/explore-trace-data.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

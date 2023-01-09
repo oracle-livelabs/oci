@@ -1,0 +1,10 @@
+{
+  "taskParameters": [
+    {
+      "target": "${/input/objectName}",
+      "namespaceName": "${/input/namespaceName}",
+      "bucketName": "${/input/bucketName}",
+      "objectName": "${/input/objectName}"
+    }
+  ]
+}
