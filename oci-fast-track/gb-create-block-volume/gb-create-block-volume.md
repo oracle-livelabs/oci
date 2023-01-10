@@ -26,7 +26,6 @@ Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Clou
 - **Virtual Cloud Network**: `<sua-vcn>`
 - **Availability Domain**: AD 1
 - **Size**: 500 GB
-- **Backup Policy**: Bronze
 - **Volume Performance**: Balanced
 
 *Selecione o Availability Domain (AD) do block volume como sendo o mesmo da instância.*
