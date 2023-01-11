@@ -60,6 +60,8 @@ Once you have access to Oracle Cloud Shell follow the next steps:
 
     ![](./images/cloudshellicon1.png "Cloud Shell Icon")
 
+    ![Cloud Shell Icon](./images/cloudshellicon1.png)
+
     This displays the Cloud Shell in a "drawer" at the bottom of the console:
 
     ![](./images/cloudshellpanel.png "Cloud Shell running")
