@@ -58,11 +58,11 @@ Once you have access to Oracle Cloud Shell follow the next steps:
     
     Note that the OCI CLI running in the Cloud Shell will execute commands against the region selected in the Console's Region selection menu when the Cloud Shell was started.
 
-    ![](./images/cloudshellicon1.png "Cloud Shell Icon")
+    ![](./images/cloud-shell-icon.png "Cloud Shell Icon")
 
     This displays the Cloud Shell in a "drawer" at the bottom of the console:
 
-    ![](./images/cloudshellpanel.png "Cloud Shell running")
+    ![](./images/cloud-shell-panel.png "Cloud Shell running")
 
 
 ## Task 2: Create Object Storage buckets
@@ -70,25 +70,23 @@ Once you have access to Oracle Cloud Shell follow the next steps:
 First you need to create a new compartment for the buckets and the Autonomous Database. To do that, follow the next steps:
 
 1. Log in to the OCI console and navigate through the main hamburger menu to *"Identity & Security > Compartments"*
-![](./images/compartments1.png "Compartments")
+    ![](./images/compartments.png "Compartments")
 
 2.	Create a new compartment by clicking Create Compartment and name it “USE_Workshop”
-![](./images/compartments2.png "Create Compartment")
+    ![](./images/create-compartment.png "Create Compartment")
 
 Now that you have a compartment for the workshop, you will create a bucket in Object Storage to store your security assessment report. Optionally, you can create a second bucket if you want to run as well the CIS compliance assessment.
 
 To create the buckets, please follow the next steps:
 
 1. Log in to OCI console and navigate through the main hamburger menu to *"Storage > Object Storage > Buckets"*.
-![](./images/storage1.png "Buckets")
+    ![](./images/buckets.png "Buckets")
 
 2. Create a bucket in the previously created compartment USE_Workshop by selecting the compartment and click Create Bucket.
-![](./images/storage2.png "Create bucket")
-
+    ![](./images/create-bucket.png "Create bucket")
 
 3. Name it security_assessment and click Create.
-![](./images/storage3.png "Create")
-
+    ![](./images/click-create.png "Create")
 
 4.	(Optional) Create a second bucket to store the CIS Compliance Assessment, and name it cis_report by following previous steps.
 
@@ -103,12 +101,12 @@ To do that, follow the next steps:
 
 1. Navigate through the main hamburger menu to: *Oracle Database > Autonomous Database*.
 
-![](./images/autonomous-database.png "Autonomous Database")
+    ![](./images/autonomous-database.png "Autonomous Database")
 
 
 2.	Click Create Autonomous Database:
 
-![](./images/create-autonomous-database.png "Create Autonomous Database ")
+    ![](./images/create-autonomous-database.png "Create Autonomous Database ")
 
 
 
@@ -126,7 +124,7 @@ To do that, follow the next steps:
 
 and click Create Autonomous Database. Then wait until the database status is set to green and ACTIVE.
 
-![](./images/ADB3.png "Create Autonomous Database")
+    ![](./images/click-create-autonomous-db.png "Click Create Autonomous Database")
 
 
 
@@ -139,23 +137,19 @@ The authenticated database user is only permitted access if the schema is REST e
 
 4.	Once the Autonomous Database status is set to green and ACTIVE, click on Database Actions.
 
-![](./images/ADB4.png "Database Actions")
+    ![](./images/database-actions.png "Database Actions")
 
 5. Log in with ADMIN user and the password you provided during database creation.
 
-![](./images/admin-login.png "Log in as ADMIN")
+    ![](./images/admin-login.png "Log in as ADMIN")
 
 6.	Click on SQL box, under Development section.
 
-![](./images/sql.png "Development-SQL")
-
-
+    ![](./images/sql.png "Development-SQL")
 
 7.	Web SQL Developer will launch, and you will be able to run SQL queries to create users and tables.
 
-  ![](./images/ADB6.png "SQL Developer")
-
-
+    ![](./images/sql-developer.png "SQL Developer")
 
 8. Create a database schema named SECASSESSMENT and grant required permissions, as we will use it in trying out RESTful services. To do that, copy the following SQL code and paste it on the SQL developer. Then click the button "Run Script" and you will be able to see the Script Output showing the actions were successfully performed:
 
@@ -175,19 +169,19 @@ The authenticated database user is only permitted access if the schema is REST e
 
 9. Enable REST for the new created schema SECASSESSMENT. To do that, go to the Autonomous Database dashboard, click Database Actions and click DATABASE USERS under the section Administration.
 
-![](./images/dbusers.png "Database Users")
+    ![](./images/dbusers.png "Database Users")
 
 
 
 10. You will be able to see all users in the Autonomous Database. Click in the menu the recently created user SECASSESSMENT and select Enable REST:
 
-![](./images/ADB8.png "Enable REST")
+    ![](./images/enable-rest.png "Enable REST")
 
 
 
 11. A window will prompt, you can leave default values and click REST Enable User:
 
-![](./images/ADB9.png "REST Enable user")
+    ![](./images/rest-enable-user.png "REST Enable user")
 
 
 
@@ -203,17 +197,19 @@ The authenticated database user is only permitted access if the schema is REST e
 
 13. In same way that you enabled your schema SECASSESSMENT for REST, you need to enable the OCISECURITYCENTER table for REST as well. To do that, you have to log in in Web SQL Developer as SECASSESSMENT. You can do it in a quick way by going again to the Database Users view:
 
-    ![](./images/ADB11.png "SECASSESSMENT user")  
+    ![](./images/secassessment-user.png "SECASSESSMENT user")  
 
     Click in Open in new tab, you will have to enter the credentials for SECASSESSMENT schema and click Sign in:
 
-    ![](./images/ADB12.png "Sign in as SECASSESSMENT user")
+    ![](./images/sign-in.png "Sign in as SECASSESSMENT user")
 
 14. Go to SQL under Development again, and now you are signed as SECASSESSMENT in Web SQL Developer. Right click on the OCISECURITYCENTER table and select REST --> Enable…
-![](./images/ADB13.png " ")
+
+    ![](./images/enable.png "Enable...")
 
 15.	Note the curl command location URL (Preview URL) from the new window, and click Enable:
-![](./images/ADB14.png " ")
+
+    ![](./images/click-enable.png "Click Enable")
 
 16. (Optional) If you decided to run the OCI Compliance assessment as well, you need to create the tables to store the outcome data of OCI CIS Compliance Benchmark:
 
@@ -236,16 +232,17 @@ The authenticated database user is only permitted access if the schema is REST e
 Proceed to OCI console to perform the next steps:
 
 1. On the Autonomous Database dashboard, click on SecAssessments under Instance Name on APEX Instance section:
-    ![](./images/apex1.png "APEX")
+
+    ![](./images/apex.png "APEX")
 
 
 2. Click launch APEX
 
-    ![](./images/apex2.png "Launch APEX")
+    ![](./images/launch-apex.png "Launch APEX")
 
 3.	The log in page for APEX will be prompted and you need to enter the ADMIN password of your Autonomous Database to log in:
 
-    ![](./images/apex3.png "ADMIN Password")
+    ![](./images/admin-password.png "ADMIN Password")
 
 4. Create your workspace by clicking Create Workspace:
 
@@ -267,36 +264,36 @@ Proceed to OCI console to perform the next steps:
 
 7. Sign out of Administration Services and sign in to OCISECURITYCENTER to begin building applications. Click Sign Out:
 
-    ![](./images/apex5.png "Sign Out")
+    ![](./images/sign-out.png "Sign Out")
 
 9. Sign in with the following credentials:
 
-    ![](./images/apex6.png "Sign In")
+    ![](./images/sign-in-apex.png "Sign In")
 
 
-10. Now download the packaged APEX application: TODO  
+10. Now download the packaged APEX application in the following link: TODO  
 
 11. Click App Builder and Import.
 
-    ![](./images/apex8.png "App Builder")
+    ![](./images/app-builder.png "App Builder")
 
-    ![](./images/apex9.png "Import")
+    ![](./images/import.png "Import")
 
 12. Select Database Application, Page or Component Export and drag and drop the provided zip file: OCISecurityCenter.zip. Click Next.
 
-    ![](./images/apex10.png "Drag and drop")
+    ![](./images/drag-and-drop.png "Drag and drop")
 
 13. Click Next.
 
-    ![](./images/apex11.png "Next")
+    ![](./images/click-next.png "Next")
 
 14.	Review the details and click Install Application.
 
-    ![](./images/apex12.png "Install Application")
+    ![](./images/install-application.png "Install Application")
 
 15.	Once you see the message for Application Installed, click Run Application.
 
-    ![](./images/apex13.png "Run Application")
+    ![](./images/run-application.png "Run Application")
 
 16.	You will be redirected to the APEX application log in page, and you will be asked to enter the credentials for SECASSESSMENT user.
 
@@ -323,9 +320,9 @@ security_assessment.py  	[-h][-t CONFIG_PROFILE][-p PROXY]
 
 ```
 ## Acknowledgements
-* **Author** - Sonia Yuste, OCI Security Specialist, December 2022
+* **Author** - Sonia Yuste, OCI Security Specialist, January 2023
 * **Contributors** - Damien Rilliard, OCI Security Senior Director
-* **Last Updated By/Date** - Sonia Yuste, OCI Security Specialist, August 2022
+* **Last Updated By/Date** - Sonia Yuste, OCI Security Specialist, January 2023
 
 
 ## Learn More
@@ -338,4 +335,4 @@ security_assessment.py  	[-h][-t CONFIG_PROFILE][-p PROXY]
 ## Acknowledgements
 * **Author** - <Name, Title, Group>
 * **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - Sonia, September 22 2022
+* **Last Updated By/Date** - Sonia, January 2023
