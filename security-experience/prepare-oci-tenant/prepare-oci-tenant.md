@@ -17,7 +17,7 @@ In this lab, you will:
 
 Please see picture below with the components you will create in this lab:
 
-   ![Test](./images/firstlabdiagram.png)
+   ![Test](prepare-oci-tenant/images/firstlabdiagram.png)
 
 
 ### Prerequisites
@@ -59,8 +59,6 @@ Once you have access to Oracle Cloud Shell follow the next steps:
     Note that the OCI CLI running in the Cloud Shell will execute commands against the region selected in the Console's Region selection menu when the Cloud Shell was started.
 
     ![](./images/cloudshellicon1.png "Cloud Shell Icon")
-
-    ![Cloud Shell Icon](./images/cloudshellicon1.png)
 
     This displays the Cloud Shell in a "drawer" at the bottom of the console:
 
