@@ -16,8 +16,7 @@ In this lab, you will:
 
 Please see picture below with the components you will create in this lab:
 
-   ![Diagram of components created in this lab](./images/firstlabdiagram.png " ")
-
+   ![](./images/firstlabdiagram.png "Diagram of components created in this lab")
 
 
 ### Prerequisites
