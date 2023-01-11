@@ -3,10 +3,18 @@
 ## Introduction
 This lab will show you how to automate the journey to security by using the provided key components that will make you have that Unique Security Experience.
 
+Estimated time: 45 minutes
+
 ### Objectives
+In this lab, you will:
+
 - Download and run security assessment script
-- Store reports in Autonomous Database
+- Store assessments reports in Autonomous Database
 - Check your Security Dashboard
+
+Please see picture below with the components and actions involved in this lab:
+
+   ![](./images/second-lab-diagram.png "Diagram lab components")
 
 
 ### Prerequisites
