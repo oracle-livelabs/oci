@@ -15,7 +15,9 @@ In this lab, you will:
 *  Install and deploy the Security Center dashboard application
 
 Please see picture below with the components you will create in this lab:
+
 ![](./images/firstlabdiagram.png "Diagram of components created in this lab")
+
 
 ### Prerequisites
 
