@@ -59,7 +59,7 @@ This lab assumes you have completed previous lab.
     curl -X POST '<your curl command location URL>/batchload?batchRows=500' -H 'Content-type: text/plain'  -H 'cache-control: no-cache' --data-binary @security_assessment_report.csv
     ````
 
-    Where <your curl command location URL> is the URL you noted down for your table, once you enabled it for REST.
+    Where \<your curl command location URL> is the URL you noted down for your table, once you enabled it for REST.
     To verify that everything went well, you should have an output as following:
 
     ![](images/output-csv-adb.png "Successful API call")
