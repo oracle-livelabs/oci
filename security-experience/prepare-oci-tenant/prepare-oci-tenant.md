@@ -17,7 +17,7 @@ In this lab, you will:
 
 Please see picture below with the components you will create in this lab:
 
-   ![Test](prepare-oci-tenant/images/firstlabdiagram.png)
+   ![Test](./images/firstlabdiagram.png " ")
 
 
 ### Prerequisites
