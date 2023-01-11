@@ -14,7 +14,7 @@ In this lab, you will:
 *  Provision and configure Autonomous Database
 *  Install and deploy the Security Center dashboard application
 
-Please see picture below with the components you will create in this lab:
+    Please see picture below with the components you will create in this lab:
 
    ![](./images/firstlabdiagram.png "Diagram of components created in this lab")
 
