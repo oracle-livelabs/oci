@@ -70,23 +70,32 @@ Once you have access to Oracle Cloud Shell follow the next steps:
 First you need to create a new compartment for the buckets and the Autonomous Database. To do that, follow the next steps:
 
 1. Log in to the OCI console and navigate through the main hamburger menu to *"Identity & Security > Compartments"*
+
     ![](./images/compartments.png "Compartments")
 
 2.	Create a new compartment by clicking Create Compartment and name it “USE_Workshop”
+
     ![](./images/create-compartment.png "Create Compartment")
+
 
 Now that you have a compartment for the workshop, you will create a bucket in Object Storage to store your security assessment report. Optionally, you can create a second bucket if you want to run as well the CIS compliance assessment.
 
 To create the buckets, please follow the next steps:
 
 1. Log in to OCI console and navigate through the main hamburger menu to *"Storage > Object Storage > Buckets"*.
+    
     ![](./images/buckets.png "Buckets")
 
+
 2. Create a bucket in the previously created compartment USE_Workshop by selecting the compartment and click Create Bucket.
+    
     ![](./images/create-bucket.png "Create bucket")
 
+
 3. Name it security_assessment and click Create.
+    
     ![](./images/click-create.png "Create")
+
 
 4.	(Optional) Create a second bucket to store the CIS Compliance Assessment, and name it cis_report by following previous steps.
 
@@ -124,7 +133,7 @@ To do that, follow the next steps:
 
 and click Create Autonomous Database. Then wait until the database status is set to green and ACTIVE.
 
-    ![](./images/click-create-autonomous-db.png "Click Create Autonomous Database")
+![](./images/click-create-autonomous-db.png "Click Create Autonomous Database")
 
 
 
