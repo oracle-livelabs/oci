@@ -19,6 +19,7 @@ Please see picture below with the components you will create in this lab:
 ![](./images/firstlabdiagram.png "Diagram of components created in this lab")
 
 
+
 ### Prerequisites
 
 This lab assumes you have:
@@ -62,7 +63,7 @@ Once you have access to Oracle Cloud Shell follow the next steps:
     This displays the Cloud Shell in a "drawer" at the bottom of the console:
 
     ![](./images/cloudshellpanel.png "Cloud Shell running")
-
+    
 
 ## Task 2: Create Object Storage buckets
 
