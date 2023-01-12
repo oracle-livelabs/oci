@@ -54,7 +54,7 @@ This lab assumes you have completed previous lab.
     ````  
 
     ````
-    python3 cis_reports.py -dt –-output-to-bucket cis_report
+    python3 cis_reports.py -dt --output-to-bucket cis_report
     ````  
 
     To know more about this script, please refer to: <https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/compliance-script.md>
@@ -168,7 +168,7 @@ After the script is completely executed, and you loaded the CSV file in your Aut
     ![](images/scanning-page.png "Vulnerability Scanning Service") 
 
      Even you can see the compliance reports in section Tenant CIS Compliance:
-     
+
 
   *Note:* If you want to re-run the scripts and reload the tables, before running the curl command again, you need to empty the tables first in the SQL tool. For this run the following command then the “select” to verify it’s empty:
 
