@@ -144,18 +144,20 @@ After the script is completely executed, and you loaded the CSV file in your Aut
   
     ![](images/results-table.png "Security assessment results")
 
+    As well, at the bottom of the page you can see a button to be redirected to Oracle contacts page, in case you want to request an Oracle Security Workshop.
+    
     After a review of the status of your security services enabled in your tenant, you may want to know more about them. In order to do that, you can click on the hamburger menu in the top left corner and a menu with different options showing the different security services will appear:
 
     ![](images/menu.png "Security services in OCI")
     
     Each section contains a description about each security service and three buttons with the following options:
 
-*	**Go to OCI Security Service Console**. Click here to implement the service manually in the OCI console.
-*	**Go to OCISecurity Service Documentation**. Click here to see more detailed information about the service.
+    *	**Go to OCI Security Service Console**. Click here to implement the service manually in the OCI console.
+    *	**Go to OCISecurity Service Documentation**. Click here to see more detailed information about the service.
 
     And in the Cloud Guard section, you also have the following button:
 
-*	**Turn on OCI Cloud Guard**. Click here to directly be redirected to Resource Manager service with the corresponding Terraform stack loaded to implement Cloud Guard.
+    *	**Turn on OCI Cloud Guard**. Click here to directly be redirected to Resource Manager service with the corresponding Terraform stack loaded to implement Cloud Guard.
 
     Pressing this button and see results will be the action performed in the next lab.
 
@@ -167,25 +169,25 @@ After the script is completely executed, and you loaded the CSV file in your Aut
 
     ![](images/scanning-page.png "Vulnerability Scanning Service") 
 
-     Even you can see the compliance reports in section Tenant CIS Compliance:
+     Even you can see the compliance reports in section Tenant CIS Compliance section, in case you performed the optional actions in the previous labs. You will see something similar to:
 
 
   *Note:* If you want to re-run the scripts and reload the tables, before running the curl command again, you need to empty the tables first in the SQL tool. For this run the following command then the “select” to verify it’s empty:
 
-````
-truncate table OCISECURITYCENTER;
-select * from OCISECURITYCENTER;
-````
-````
-truncate table OCICISCOMPLIANCECHECK;
-select * from OCICISCOMPLIANCECHECK;
-````
+    ````
+    truncate table OCISECURITYCENTER;
+    select * from OCISECURITYCENTER;
+    ````
+    ````
+    truncate table OCICISCOMPLIANCECHECK;
+    select * from OCICISCOMPLIANCECHECK;
+    ````
 
 
 
 ## Learn More
 * [Oracle Cloud Marketplace Partner Portal Documentation](https://docs.oracle.com/en/cloud/marketplace/partner-portal/index.html)
-* [Oracle Cloud Marketplace Partner Portal Videos](https://docs.oracle.com/en/cloud/marketplace/partner-portal/videos.html)
+
 
 
 ## Acknowledgements

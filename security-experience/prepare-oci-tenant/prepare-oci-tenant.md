@@ -228,8 +228,10 @@ To be able to access the web SQL Developer provided in your Autonomous Database,
             "Compliant" VARCHAR2(50 BYTE) COLLATE "USING_NLS_COMP",
             "Findings" NUMBER,
             "Title" VARCHAR2(255 BYTE) not null,
+            "CIS v8" VARCHAR2(255 BYTE) not null,
+            "CCCS Guard Rail" NUMBER,
             "extract_date" DATE not null
-        )   DEFAULT COLLATION "USING_NLS_COMP"  ;
+        )   DEFAULT COLLATION "USING_NLS_COMP";
     ```
     You will need to enable for REST this table in same way as you did for the OCISECURITYCENTER table.
 
