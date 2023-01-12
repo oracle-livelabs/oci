@@ -67,7 +67,7 @@ Once you have access to Oracle Cloud Shell follow the next steps:
 
 ## Task 2: Create Object Storage buckets
 
-First you need to create a new compartment for the buckets and the Autonomous Database. To do that, follow the next steps:
+First you need to create a new compartment for the purpose of this workshop. To do that, follow the next steps:
 
 1. Log in to the OCI console and navigate through the main hamburger menu to *"Identity & Security > Compartments"*
 
@@ -82,22 +82,22 @@ Now that you have a compartment for the workshop, you will create a bucket in Ob
 
 To create the buckets, please follow the next steps:
 
-1. Log in to OCI console and navigate through the main hamburger menu to *"Storage > Object Storage > Buckets"*.
+3. Log in to OCI console and navigate through the main hamburger menu to *"Storage > Object Storage > Buckets"*.
     
     ![](./images/buckets.png "Buckets")
 
 
-2. Create a bucket in the previously created compartment USE_Workshop by selecting the compartment and click Create Bucket.
+4. Create a bucket in the previously created compartment USE_Workshop by selecting the compartment and click Create Bucket.
     
     ![](./images/create-bucket.png "Create bucket")
 
 
-3. Name it security_assessment and click Create.
+5. Name it security_assessment and click Create.
     
     ![](./images/click-create.png "Create")
 
 
-4.	(Optional) Create a second bucket to store the CIS Compliance Assessment, and name it cis_report by following previous steps.
+6.	(Optional) Create a second bucket to store the CIS Compliance Assessment, and name it cis_report by following previous steps.
 
 ## Task 3: Provision and configure Autonomous Database
 
@@ -108,7 +108,7 @@ Now you need to create an Autonomous Database that will provide you the followin
 
 To do that, follow the next steps:
 
-1. Navigate through the main hamburger menu to: *Oracle Database > Autonomous Database*.
+1. Navigate through the main hamburger menu to: *"Oracle Database > Autonomous Database"*.
 
     ![](./images/autonomous-database.png "Autonomous Database")
 
@@ -135,13 +135,11 @@ and click Create Autonomous Database. Then wait until the database status is set
 
 ![](./images/click-create-autonomous-db.png "Click Create Autonomous Database")
 
+Once you have created the Autonomous Database, you need to create a new user. This user will manage the APEX application that will act as the OCI Security Center Dashboard. In order to do that, the user needs to be REST enabled, as this will allow that user to store the security and compliance assessment reports in the Autonomous Database by using REST calls.
 
+Since the Autonomous Database ADMIN user is REST Enabled, this allows for REST Services to be published in the ADMIN schemas and allows you to access Database Actions using the ADMIN database user account. Therefore, you can use the web SQL Developer provided in your Autonomous Database to create the new user and to enable it for REST services.
 
-Now, you will create the database user to manage APEX applications.
-
-The Autonomous Database ADMIN account is REST Enabled. This allows for REST Services to be published in the ADMIN schemas and allows you to access Database Actions using the ADMIN database user account. Oracle recommends you create an application schema account for your RESTful Services and REST enabled objects.
-
-The authenticated database user is only permitted access if the schema is REST enabled and the URL mapping for the request points to their own schema. A user is not authenticated when a request points to any other database schema.
+To be able to access the web SQL Developer provided in your Autonomous Database, follow the next steps:
 
 
 4.	Once the Autonomous Database status is set to green and ACTIVE, click on Database Actions.
@@ -160,7 +158,7 @@ The authenticated database user is only permitted access if the schema is REST e
 
     ![](./images/sql-developer.png "SQL Developer")
 
-8. Create a database schema named SECASSESSMENT and grant required permissions, as we will use it in trying out RESTful services. To do that, copy the following SQL code and paste it on the SQL developer. Then click the button "Run Script" and you will be able to see the Script Output showing the actions were successfully performed:
+8. Create a database user named SECASSESSMENT and grant required permissions, as we will use it in trying out RESTful services. To do that, copy the following SQL code and paste it on the SQL developer. Replace the value between brackets with the password you want to give to that user. Then click the button "Run Script" and you will be able to see the Script Output showing the actions were successfully performed:
 
 
     ```
@@ -182,7 +180,7 @@ The authenticated database user is only permitted access if the schema is REST e
 
 
 
-10. You will be able to see all users in the Autonomous Database. Click in the menu the recently created user SECASSESSMENT and select Enable REST:
+10. You will be able to see all users in the Autonomous Database. Click in the menu of the recently created user SECASSESSMENT and select Enable REST like in the picture below:
 
     ![](./images/enable-rest.png "Enable REST")
 
@@ -194,7 +192,7 @@ The authenticated database user is only permitted access if the schema is REST e
 
 
 
-12. After you created the user and granted all required permissions to manage APEX, you will create now a table to store security assessments by running the following script:
+12. After you created the user and granted all required permissions to manage APEX, you will create now a table to store security assessments by running the following script in web SQL Developer:
     ```
     CREATE TABLE SECASSESSMENT.OCISECURITYCENTER
     (   STATUS VARCHAR2(50 BYTE) COLLATE "USING_NLS_COMP",
@@ -208,7 +206,7 @@ The authenticated database user is only permitted access if the schema is REST e
 
     ![](./images/secassessment-user.png "SECASSESSMENT user")  
 
-    Click in Open in new tab, you will have to enter the credentials for SECASSESSMENT schema and click Sign in:
+    Click Open in new tab, as in the picture above. Then you will have to enter the credentials for SECASSESSMENT schema and click Sign in:
 
     ![](./images/sign-in.png "Sign in as SECASSESSMENT user")
 
@@ -264,7 +262,7 @@ Proceed to OCI console to perform the next steps:
 6. Create your workspace with following information:
 
     * Database User: SECASSESSMENT 
-    * Workspace Name: OCISECURITYCENTER
+    * Workspace Name: SECASSESSMENT
     * Workspace Username: SECASSESSMENT
     * Workspace Password: \<your password for SECASSESSMENT>
 
@@ -288,7 +286,7 @@ Proceed to OCI console to perform the next steps:
 
     ![](./images/import.png "Import")
 
-12. Select Database Application, Page or Component Export and drag and drop the provided zip file: OCISecurityCenter.zip. Click Next.
+12. Select the first option: Application, Page or Component Export and drag and drop the provided file: . Click Next.
 
     ![](./images/drag-and-drop.png "Drag and drop")
 
