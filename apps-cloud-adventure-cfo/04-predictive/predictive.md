@@ -1,8 +1,8 @@
-# Predictive Capabilities
+# Procurement
 
 ## Introduction
 
-In this activity you'll discover the power in predictive capabilities powered by Machine Learning and Artificial Intelligenece.
+In this activity you'll discover the power in predictive capabilities powered by Machine Learning and Artificial Intelligence.
 
 Estimated Time: 5 minutes
 

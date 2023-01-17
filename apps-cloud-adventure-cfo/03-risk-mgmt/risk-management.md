@@ -41,7 +41,7 @@ In this activity, you will:
 
 4. 
 
-      > **Select** Results Count **‘51’** – to see results. Take note the number of results.
+      > **Select** Results Count **‘52’** (or whatever # is displayed) – to see results. Take note the number of results.
 
     ![Results Count](images/image004.png)
 
