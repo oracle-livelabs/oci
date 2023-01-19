@@ -32,7 +32,7 @@ This lab assumes you have completed previous lab.
 
     ![](images/drag-cloud-shell.png "Drag and drop into Cloud Shell")
 
-Before running the script, create a dedicated folder for the security assessment reports. Run the following command in Cloud Shell for that purpose:
+    Before running the script, create a dedicated folder for the security assessment reports. Run the following command in Cloud Shell for that purpose:
 
     ```
     mkdir security_assessments
