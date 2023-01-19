@@ -70,13 +70,14 @@ In the Cloud Shell terminal, run the following within the created directory wher
     cd <tenancy_name>-<date>
     ````  
 
-    Where /<tenancy\_name\>\-<date\> must correspond to the directory that the script created (you can check script output to verify).
+    where /<tenancy\_name\>\-<date\> must correspond to the directory that the script created (you can check script output to verify).
     
     ````
     curl -X POST '<your curl command location URL>/batchload?batchRows=500' -H 'Content-type: text/plain'  -H 'cache-control: no-cache' --data-binary @security_assessment_report.csv
     ````
 
-    Where \<your curl command location URL> is the URL you noted down for your table, once you enabled it for REST.
+    where \<your curl command location URL> is the URL you noted down for your table, once you enabled it for REST.
+    
     To verify that everything went well, you should have an output as following:
 
     ![](images/output-csv-adb.png "Successful API call")

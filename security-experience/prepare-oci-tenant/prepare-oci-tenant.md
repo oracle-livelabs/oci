@@ -222,11 +222,11 @@ To be able to access the web SQL Developer provided in your Autonomous Database,
 
     ```
     CREATE TABLE "SECASSESSMENT"."OCICISCOMPLIANCECHECK"
-        (   "Recommendation #" NUMBER,
+        (   "Recommendation #" VARCHAR2(50 BYTE),
             "Section" VARCHAR2(50 BYTE) COLLATE "USING_NLS_COMP",
             "Level" NUMBER,
             "Compliant" VARCHAR2(50 BYTE) COLLATE "USING_NLS_COMP",
-            "Findings" NUMBER,
+            "Findings" VARCHAR2(50 BYTE),
             "Title" VARCHAR2(255 BYTE) not null,
             "CIS v8" VARCHAR2(255 BYTE) not null,
             "CCCS Guard Rail" VARCHAR2(255 BYTE),
