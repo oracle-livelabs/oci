@@ -185,6 +185,21 @@ After the script is completely executed, and you loaded the CSV file in your Aut
 
      Even you can see the compliance reports in section Tenant CIS Compliance section, in case you performed the optional actions in the previous labs. You will see something similar to:
 
+     ![](images/cis-table.png "CIS report table") 
+
+    You may need to add hidden columns or reorder. As you can see, it is an interactive report where you have the possibility to do that by clicking in the button "Actions".
+
+    For example, you can add hidden columns by doing the following:
+
+     Click "Actions" menu and click Columns:
+
+     ![](images/display-columns.png "Click Columns")
+
+     In case there are hidden columns, you can select the columns you want to display:
+
+     ![](images/display-in-report.png "Click Columns")
+
+
 
   *Note:* If you want to re-run the scripts and reload the tables, before running the curl command again, you need to empty the tables first in the SQL tool. For this run the following command then the “select” to verify it’s empty:
 
