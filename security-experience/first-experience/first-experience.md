@@ -79,7 +79,7 @@ This lab assumes you have completed previous lab.
     Run the script within the created directory:
 
     ```
-    cd security_assessments
+    cd cis_reports
     ```
 
     ````
@@ -234,7 +234,7 @@ After the script is completely executed, and you loaded the CSV file in your Aut
 
 
 
-  *Note:* If you want to re-run the scripts and reload the tables, before running the curl command again, you need to empty the tables first in the SQL tool. For this run the following command then the “select” to verify it’s empty:
+    *Note:* If you want to re-run the scripts and reload the tables, before running the curl command again, you need to empty the tables first in the SQL tool. For this run the following command then the “select” to verify it’s empty:
 
     ````
     truncate table OCISECURITYCENTER;
