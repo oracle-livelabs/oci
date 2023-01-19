@@ -30,7 +30,7 @@ This lab assumes you have completed previous lab.
 
 2.  Upload the script in the Cloud Shell terminal by doing drag and drop. You will see a similar message:
 
-    ![](images/script-to-cloud-shell.png "Drag and drop into Cloud Shell")
+    ![](images/drag-cloud-shell.png "Drag and drop into Cloud Shell")
 
 3. Run the script in Cloud Shell with the following command:
 
