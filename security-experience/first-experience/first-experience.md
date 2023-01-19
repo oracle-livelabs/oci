@@ -240,6 +240,11 @@ After the script is completely executed, and you loaded the CSV file in your Aut
     truncate table OCISECURITYCENTER;
     select * from OCISECURITYCENTER;
     ````
+
+    ![](images/truncate-table.png "Truncate table")
+
+    Do the same with the Compliance table in case you loaded with data:
+
     ````
     truncate table OCICISCOMPLIANCECHECK;
     select * from OCICISCOMPLIANCECHECK;
