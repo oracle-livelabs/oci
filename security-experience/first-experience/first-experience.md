@@ -61,8 +61,17 @@ This lab assumes you have completed previous lab.
 
 ## Task 2: Store reports in Autonomous Database
 
-1. Now you need to upload the CSV files generated in your bucket to your recently created Autonomous Database. To do that, you have to call the table API that you have exposed. In the Cloud Shell terminal, run the following:
+1. Now you need to upload the CSV file generated in your bucket to your recently created Autonomous Database. To do that, you have to perform a REST call to the table where you want to store these results (the table that you created and enabled previously for REST in previous lab). 
 
+In the Cloud Shell terminal, run the following within the created directory where your CSV report was stored (remember that you can find this directory in the cloud shell with the following format name: /<tenancy\_name\>\-<date\> )
+    
+    
+    ````
+    cd <tenancy_name>-<date>
+    ````  
+
+    Where /<tenancy\_name\>\-<date\> must correspond to the directory that the script created (you can check script output to verify).
+    
     ````
     curl -X POST '<your curl command location URL>/batchload?batchRows=500' -H 'Content-type: text/plain'  -H 'cache-control: no-cache' --data-binary @security_assessment_report.csv
     ````
@@ -74,6 +83,10 @@ This lab assumes you have completed previous lab.
 
 2. (Optional) Same for CIS Summary report:
 
+    ````
+    cd <tenancy_name>-<date>
+    ````  
+    
     ````
     curl -X POST '<your curl command location URL>/batchload?batchRows=500' -H 'Content-type: text/plain'  -H 'cache-control: no-cache' --data-binary @cis_summary_report.csv
     ````

@@ -229,7 +229,7 @@ To be able to access the web SQL Developer provided in your Autonomous Database,
             "Findings" NUMBER,
             "Title" VARCHAR2(255 BYTE) not null,
             "CIS v8" VARCHAR2(255 BYTE) not null,
-            "CCCS Guard Rail" NUMBER,
+            "CCCS Guard Rail" VARCHAR2(255 BYTE),
             "extract_date" DATE not null
         )   DEFAULT COLLATION "USING_NLS_COMP";
     ```
