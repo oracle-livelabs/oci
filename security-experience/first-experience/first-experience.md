@@ -63,7 +63,7 @@ This lab assumes you have completed previous lab.
 
 1. Now you need to upload the CSV file generated in your bucket to your recently created Autonomous Database. To do that, you have to perform a REST call to the table where you want to store these results (the table that you created and enabled previously for REST in previous lab). 
 
-In the Cloud Shell terminal, run the following within the created directory where your CSV report was stored (remember that you can find this directory in the cloud shell with the following format name: /<tenancy\_name\>\-<date\> )
+    In the Cloud Shell terminal, run the following within the created directory where your CSV report was stored (remember that you can find this directory in the cloud shell with the following format name: /<tenancy\_name\>\-<date\> )
     
     
     ````
