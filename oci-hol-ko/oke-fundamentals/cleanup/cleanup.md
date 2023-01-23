@@ -104,14 +104,13 @@ Quick Create 모드로 VCN을 함께 만든 경우에 클러스터 삭제후에�
 
 1. **Developer Services** &gt; **DevOps**로 이동합니다.
 
-2. 만든 프로젝트로 이동합니다.
+2. 삭제할 DevOps 프로젝트 오른쪽 액션메뉴에서 **Delete**를 클릭합니다.
 
-3. 프로젝트를 삭제하기 전에 하위 자원들을 모두 삭제합니다.
+    ![Delete Project](images/delete-devops-project-1.png)
 
-    - Build Pipeline의 모든 Stage를 아래 부터 삭제후 마지막으로 Pipeline을 삭제합니다.
-    - Deployment Pipeline의 모든 Stage를 아래 부터 삭제후 마지막으로 Pipeline을 삭제합니다.
-    - Enviroment, Artifact, Trigger, Code Repository를 모두 삭제합니다.
-    - DevOps 프로젝트를 삭제합니다.
+3. 하위 자원 삭제를 위해 **Delete cascade**를 체크하고 삭제합니다.
+
+    ![Delete Project](images/delete-devops-project-2.png)
 
 ## Task 8: Log 자원 삭제
 
@@ -141,7 +140,5 @@ Quick Create 모드로 VCN을 함께 만든 경우에 클러스터 삭제후에�
 
 ## Acknowledgements
 
-- **Author** - Adao Junior
-- **Contributors** -  Adao Junior
-- **Last Updated By/Date** - Adao Junior, April 2021
-- **Author** - DongHee Lee, February 2022
+- **Author** - DongHee Lee
+- **Last Updated By/Date** - DongHee Lee, January 2023

@@ -22,7 +22,7 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
 ### 전제 조건
 
 * Oracle Free Trial, Paid or LiveLabs Cloud Account
-* Always Free는 현재 2022년 2월기준 OKE 서비스를 제공하지 않습니다. Free Trial 이상이 필요합니다.
+* Always Free는 현재 2023년 1월기준 OKE 서비스를 제공하지 않습니다. Free Trial 이상이 필요합니다.
 * **Setup Cloud Environment** 실습 완료
 
 ### 실습 비디오
