@@ -23,7 +23,7 @@ This lab assumes you have completed previous lab.
 
 ## Task 1: Download and run security assessment script
 
-1.	Download the security assessment script in following link:
+1.	Download the [security assessment script.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/security_assessment.py)
     Now you can run that security assessment script in the Oracle Cloud Shell. In order to do that, open the Oracle Cloud Shell by clicking in the Cloud Shell icon in the Console header:
 
     ![](images/cloud-shell-icon.png "Open Cloud Shell")
@@ -61,7 +61,7 @@ This lab assumes you have completed previous lab.
 
 4. (Optional) Do the same for the CIS Benchmark Compliance Assessment script:
 
-    Download the script in the following link: 
+    Download the [CIS reports script.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/cis_reports.py) 
 
     Upload the script in the Cloud Shell terminal by doing drag and drop as you did before.
 
@@ -86,7 +86,6 @@ This lab assumes you have completed previous lab.
     python3 cis_reports.py -dt --output-to-bucket cis_report
     ````  
 
-    To know more about this script, please refer to: <https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/compliance-script.md>
 
 ## Task 2: Store reports in Autonomous Database
 
@@ -250,14 +249,24 @@ After the script is completely executed, and you loaded the CSV file in your Aut
     select * from OCICISCOMPLIANCECHECK;
     ````
 
+## Appendix: How to use the Python script security_assessment.py
+Information provided in this Appendix is rather intended as guidance for workshop users using security_assessment.py script to execute an OCI security assessment.
 
+## Script usage
+```
+security_assessment.py  	[-h][-t CONFIG_PROFILE][-p PROXY]
+                                              	[--output-to-bucket OUTPUT_BUCKET]
+                                              	[--report-directory REPORT_DIRECTORY]
+                                              	[print-to-screen PRINT_TO_SCREEN][-ip][-dt]
+
+```
 
 ## Learn More
-* [Oracle Cloud Marketplace Partner Portal Documentation](https://docs.oracle.com/en/cloud/marketplace/partner-portal/index.html)
-
-
+* [CIS compliance script](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/compliance-script.md)
+* [Using cURL with REST-Enabled SQL Service](https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/22.3/orddg/rest-enabled-sql-service.html#GUID-E44BF01E-7F11-44B4-B9AF-2755267D9D62)
+* [SQL Developer Web for Oracle Autonomous Database](https://blogs.oracle.com/developers/post/sql-developer-web-now-available-for-oracle-autonomous-database)
+* [CIS](https://www.cisecurity.org/ )
 
 ## Acknowledgements
-* **Author** - Sonia Yuste
-* **Contributor** - Damien Rilliard 
+* **Authors** - Sonia Yuste (OCI Security Specialist), Damien Rilliard (OCI Security Senior Director) 
 * **Last Updated By/Date** - Sonia Yuste, January 2023

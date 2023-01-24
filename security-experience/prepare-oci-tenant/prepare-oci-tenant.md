@@ -317,31 +317,18 @@ Proceed to OCI console to perform the next steps:
 
 **This concludes this lab.**
 
-## Appendix 1: USE Tool Python script security_assessment.py
-Information provided in this Appendix is rather intended as guidance for workshop users using security_assessment.py script to execute an OCI security assessment as prescribed in this guide.
 
-## Script usage
-```
-security_assessment.py  	[-h][-t CONFIG_PROFILE][-p PROXY]
-                                              	[--output-to-bucket OUTPUT_BUCKET]
-                                              	[--report-directory REPORT_DIRECTORY]
-                                              	[print-to-screen PRINT_TO_SCREEN][-ip][-dt]
-
-```
 ## Acknowledgements
-* **Author** - Sonia Yuste, OCI Security Specialist, January 2023
-* **Contributors** - Damien Rilliard, OCI Security Senior Director
-* **Last Updated By/Date** - Sonia Yuste, OCI Security Specialist, January 2023
+* **Author** - Sonia Yuste (OCI Security Specialist), Damien Rilliard (OCI Security Senior Director)
+* **Last Updated By/Date** - Sonia Yuste, January 2023
 
 
 ## Learn More
 
 *(optional - include links to docs, white papers, blogs, etc)*
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [Introduction to Oracle Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)
+* [Object Storage Overview](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm)
+* [Oracle Autonomous Database Documentation](https://docs.oracle.com/en-us/iaas/autonomous-database-shared/doc/part-using.html)
+* [Developing RESTful Services in Autonomous Database](https://docs.oracle.com/en-us/iaas/autonomous-database-shared/doc/ords-autonomous-database.html)
 
-## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - Sonia, January 2023
