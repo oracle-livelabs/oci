@@ -325,8 +325,6 @@ Proceed to OCI console to perform the next steps:
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
-
 * [Introduction to Oracle Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)
 * [Object Storage Overview](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm)
 * [Oracle Autonomous Database Documentation](https://docs.oracle.com/en-us/iaas/autonomous-database-shared/doc/part-using.html)
