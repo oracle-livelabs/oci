@@ -19,7 +19,7 @@ In case Oracle Cloud Guard is not enabled, follow the next steps:
 
 1. Go to your security dashboard and click to the section Cloud Guard in the left menu:
 
-  ![](./images/CloudGuard1.png " ")
+  ![](./images/select-cloud-guard.png "Click Cloud Guard section")
 
   You will be able to view a dedicated page for Cloud Guard service, where you can see some descriptions about the functionality, features, benefits and overview of the service. At the same time, you have 3 buttons on the top of the page for different purposes:
 
