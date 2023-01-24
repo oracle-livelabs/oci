@@ -20,7 +20,7 @@ In more details:
 
 Below you can see the high level diagram:
 
-![](./images/introdiagram.png "High level diagram")
+![](./images/intro-diagram.png "High level diagram")
 
 Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
 
@@ -35,7 +35,7 @@ Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire wor
 
 Below you can see the architecture components for this Unique Security Experience:
 
-![](./images/simplediagram.png "Architecture components")
+![](./images/simple-diagram.png "Architecture components")
 
 
 ## Architecture
@@ -55,7 +55,7 @@ In general, you could extend the use of the provided Security Center dashboard a
 
 In that case, then have a view of the following figure, where you can see the complete diagram of all possible OCI services that this Unique Security Experience could apply:
 
-![](./images/architecturecomplete.png "Complete architecture")
+![](./images/architecture-complete.png "Complete architecture")
 
 By following the above architecture, red connections and components are referring to the different parts that are part of this workshop. 
 
@@ -77,9 +77,7 @@ Numbers indicate the order of each task. In this way, it is clear to see the pro
 * [Oracle Cloud Infrastructure Security](https://www.oracle.com/security/)
 
 ## Acknowledgements
-* **Author** - Sonia Yuste, OCI Security Specialist
-* **Contributors** -  Damien Rilliard, OCI Specialist Senior Director
-* **Last Updated By/Date** - Sonia Yuste, Dec 2022
+* **Authors** - Sonia Yuste (OCI Security Specialist), Damien Rilliard (OCI Specialist Senior Director)
+* **Last Updated By/Date** - Sonia Yuste, January 2023
 
 
-[def]: ./images/intro-diagram.png " "
