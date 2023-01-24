@@ -62,11 +62,9 @@ The Cloud Guard Cloud service is already enabled. You will have to wait just som
 **This concludes this lab.**
 
 ## Learn More
-* [Oracle Cloud Marketplace Partner Portal Documentation](https://docs.oracle.com/en/cloud/marketplace/partner-portal/index.html)
-* [Oracle Cloud Marketplace Partner Portal Videos](https://docs.oracle.com/en/cloud/marketplace/partner-portal/videos.html)
+* [Terraform for Cloud Guard Documentation](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/cloud_guard_cloud_guard_configuration)
 
 
 ## Acknowledgements
-* **Author** - Sonia Yuste
-* **Contributors** Damien Rilliard
-* **Last Updated By/Date** - Sonia Yuste, September 15 2022
+* **Authors** - Sonia Yuste, Damien Rilliard
+* **Last Updated By/Date** - Sonia Yuste, January 2023
