@@ -280,7 +280,7 @@ Proceed to OCI console to perform the next steps:
     ![](./images/sign-in-apex.png "Sign In")
 
 
-10. Now download the packaged APEX application in the following link: TODO  
+10. Now download the [packaged APEX application OCI Security Center Dashboard.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/OCISecurityDashboard.sql)
 
 11. Click App Builder and Import.
 
