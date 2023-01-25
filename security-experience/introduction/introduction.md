@@ -27,11 +27,11 @@ Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire wor
 
 ## Objectives
 
-* Execute your first security assessment by launching the provided Python script in Oracle Cloud Shell (Oracle Cloud Shell is a Linux terminal provided by Oracle Cloud to run scripts on your OCI tenant). The script generates your security assessment reports in excel format, and stores the excel files in an Object Storage bucket.
-* Send the security assessment reports from the bucket to an Autonomous Database table via REST API calls.
+* Execute your first security assessment by launching a script (provided in this workshop) in Oracle Cloud Shell (Oracle Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console, and provides an ephemeral machine to use as a host for a Linux shell). The script generates your security assessment reports in excel format, and stores the excel files in the Linux host and in an Object Storage bucket.
+* Send the security assessment reports from the Cloud Shell Linux machine to an Autonomous Database table via REST API calls.
 * Deploy the provided APEX application (Security Center dashboard) in the APEX instance hosted in the Autonomous Database.
 * Check all results of your security assessments in the Security Center dashboard, and navigate through the different pages to check available security services that you could deploy in OCI.
-* Optionally, enable one security service automatically (Cloud Guard) via the Security Center dashboard by using Terraform.
+* Optionally, enable one security service automatically (Cloud Guard) via a Security Center dashboard by using Terraform.
 
 Below you can see the architecture components for this Unique Security Experience:
 
