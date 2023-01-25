@@ -20,7 +20,7 @@ In more details:
 
 Below you can see the high level diagram:
 
-![](./images/intro-diagram.png "High level diagram")
+![High level diagram](./images/intro-diagram.png "High level diagram")
 
 Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
 
@@ -35,7 +35,7 @@ Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire wor
 
 Below you can see the architecture components for this Unique Security Experience:
 
-![](./images/simple-diagram.png "Architecture components")
+![Architecture components](./images/simple-diagram.png "Architecture components")
 
 
 ### Architecture
@@ -54,8 +54,8 @@ In this workshop, you will use the following OCI services and components:
 In general, you could extend the use of the provided Security Center dashboard and assessment script. As security should be always a lifecycle, you can always go back to first step after you finish with some security services implementations, and start from the beginning, completing the security lifecycle.
 
 In that case, then have a view of the following figure, where you can see the complete diagram of all possible OCI services that this Unique Security Experience could apply:
-
-![](./images/architecture-complete.png "Complete architecture")
+Complete architecture
+![Complete architecture](./images/architecture-complete.png "")
 
 By following the above architecture, red connections and components are referring to the different parts that are part of this workshop. 
 
