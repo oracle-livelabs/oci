@@ -7,7 +7,7 @@ This lab will show you how to use your Security Dashboard to activate Cloud Guar
 * Go to your Security Dashboard
 * Enable Cloud Guard
 
- ![](./images/diagram.png "Diagram")
+ ![Diagram](./images/diagram.png "Diagram")
 
 ### What Do You Need?
 This lab assumes that you have successfully completed the previous labs in the **Contents** menu on the right.
@@ -21,7 +21,7 @@ In case Oracle Cloud Guard is not enabled, follow the next steps:
 
 1. Go to your security dashboard and click to the section Cloud Guard in the left menu:
 
-  ![](./images/select-cloud-guard.png "Click Cloud Guard section")
+  ![Click Cloud Guard section](./images/select-cloud-guard.png "Click Cloud Guard section")
 
   You will be able to view a dedicated page for Cloud Guard service, where you can see some descriptions about the functionality, features, benefits and overview of the service. At the same time, you have 3 buttons on the top of the page for different purposes:
 
@@ -31,7 +31,7 @@ In case Oracle Cloud Guard is not enabled, follow the next steps:
 
 Click the button Turn on OCI Cloud Guard.
 
-![](./images/turn-on.png "Turn on Cloud Guard")
+![Turn on Cloud Guard](./images/turn-on.png "Turn on Cloud Guard")
 
 ## Task 2: Enter required parameters
 
@@ -41,7 +41,7 @@ Once you clicked the button, you will be redirected to the Terraform stack that 
 
   After selecting the box, the package will be loaded successfully if you can see the Name of the package in the corresponding field:
 
-  ![](./images/terraform-script.png "Terraform stack loaded")
+  ![Terraform stack loaded](./images/terraform-script.png "Terraform stack loaded")
 
 2. Click Next. Now you have to enter the required parameters to activate Cloud Guard. These parameters are the following:
 
@@ -53,11 +53,11 @@ Once you clicked the button, you will be redirected to the Terraform stack that 
 
 **Note:** in this configuration, Frankfurt region was selected as reporting region and also region for the Cloud Guard enablement by using the corresponding region identifier for Frankfurt. To select a different region, please have a look to the [supported region identifiers.](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm)
 
-  ![](./images/cloud-guard-config.png "Cloud Guard configuration")
+  ![Cloud Guard configuration](./images/cloud-guard-config.png "Cloud Guard configuration")
 
 3. Click Next to review your configuration and click Create. 
 
-  ![](./images/create.png "Create")
+  ![Create](./images/create.png "Create")
 
 The Cloud Guard Cloud service is already enabled. You will have to wait just some minutes to see some findings on it.
 
