@@ -127,8 +127,8 @@ To do that, follow the next steps:
     *	Database Name: SecAssessments
     *	Workload type: Transaction Processing
     *	Deployment type: Shared Infrastructure
-    *	Configure the database: \<Leave it as default>
-    *	Administrator credentials: \<your ADMIN password>
+    *	Configure the database: &lt;Leave it as default&gt; 
+    *	Administrator credentials: &lt;your ADMIN password&gt; 
     *	Network access: Secure access from everywhere
     *	License type: Bring Your Own License (BYOL)
     *   Oracle Database Edition: Oracle Database Standard Edition (SE)
@@ -268,7 +268,7 @@ Proceed to OCI console to perform the next steps:
     * Database User: SECASSESSMENT 
     * Workspace Name: SECASSESSMENT
     * Workspace Username: SECASSESSMENT
-    * Workspace Password: \<your password for SECASSESSMENT>
+    * Workspace Password: &lt;your password for SECASSESSMENT&gt; 
 
     ![Create Workspace for SECASSESSMENT user](./images/secassess-workspace.png "Create Workspace for SECASSESSMENT user")
 
