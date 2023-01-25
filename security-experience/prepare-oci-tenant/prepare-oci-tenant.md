@@ -170,7 +170,7 @@ To be able to access the web SQL Developer provided in your Autonomous Database,
     ![](./images/create-user.png "Create user SECASSESSMENT")
 
 
-    *Note:* A new user is granted CONNECT and RESOURCE roles when Web Access is selected.
+    **Note:** A new user is granted CONNECT and RESOURCE roles when Web Access is selected.
     Granting UNLIMITED TABLESPACE privilege allows a user to use all the allocated storage space. You cannot selectively revoke tablespace access from a user with the UNLIMITED TABLESPACE privilege. You can grant selective or restricted access only after revoking the privilege.
     For sake of simplicity, you can use same password you used for ADMIN user.
 
@@ -316,6 +316,7 @@ Proceed to OCI console to perform the next steps:
 
 
 **This concludes this lab.**
+You may now **proceed to the next lab**.
 
 
 ## Acknowledgements

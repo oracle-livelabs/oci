@@ -7,6 +7,8 @@ This lab will show you how to use your Security Dashboard to activate Cloud Guar
 * Go to your Security Dashboard
 * Enable Cloud Guard
 
+ ![](./images/diagram.png "Diagram")
+
 ### What Do You Need?
 This lab assumes that you have successfully completed the previous labs in the **Contents** menu on the right.
 
@@ -49,7 +51,7 @@ Once you clicked the button, you will be redirected to the Terraform stack that 
 * region: eu-frankfurt-1
 * tenancy\_ocid: already populated with your tenancy id
 
-NOTE: in this configuration, Frankfurt region was selected as reporting region and also region for the Cloud Guard enablement by using the corresponding region identifier for Frankfurt. To select a different region, please have a look to the [supported region identifiers.](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm)
+**Note:** in this configuration, Frankfurt region was selected as reporting region and also region for the Cloud Guard enablement by using the corresponding region identifier for Frankfurt. To select a different region, please have a look to the [supported region identifiers.](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm)
 
   ![](./images/cloud-guard-config.png "Cloud Guard configuration")
 

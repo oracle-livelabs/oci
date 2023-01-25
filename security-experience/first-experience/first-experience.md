@@ -128,7 +128,7 @@ This lab assumes you have completed previous lab.
 
     ![](images/database-actions.png "Database Actions")
 
-NOTE: You may need to log in first as ADMIN, then Click Sign Out, and log in as SECASSESSMENT user.
+**Note:** You may need to log in first as ADMIN, then Click Sign Out, and log in as SECASSESSMENT user.
 
 Once you are logged in as SECASSESSMENT user, click SQL under Development:
 
@@ -233,7 +233,7 @@ After the script is completely executed, and you loaded the CSV file in your Aut
 
 
 
-    *Note:* If you want to re-run the scripts and reload the tables, before running the curl command again, you need to empty the tables first in the SQL tool. For this run the following command then the “select” to verify it’s empty:
+    **Note:** If you want to re-run the scripts and reload the tables, before running the curl command again, you need to empty the tables first in the SQL tool. For this run the following command then the “select” to verify it’s empty:
 
     ````
     truncate table OCISECURITYCENTER;
@@ -248,6 +248,9 @@ After the script is completely executed, and you loaded the CSV file in your Aut
     truncate table OCICISCOMPLIANCECHECK;
     select * from OCICISCOMPLIANCECHECK;
     ````
+
+**This concludes this lab.**
+You may now **proceed to the next lab**.
 
 ## Appendix: How to use the Python script security_assessment.py
 Information provided in this Appendix is rather intended as guidance for workshop users using security_assessment.py script to execute an OCI security assessment.

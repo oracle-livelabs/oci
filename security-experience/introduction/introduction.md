@@ -2,7 +2,7 @@
 
 The purpose of this workshop is to help you and make more simple for you to do your first security assessment in your Oracle Cloud Infrastructure (OCI) tenancy, going at the same time through a guided selection of available security services according to the results of your security assessment. Optionally, you will be able to run a provided compliance script to check the CIS (Center Internet Security) compliance for your tenant. By doing this workshop, you will enjoy the Oracle Unique Security Experience.
 
-## About this Workshop
+### About this Workshop
 
 As a summary, during this workshop, you will be provided with a Python script to execute your security asssessment, and a user interface (APEX application) that will show you your Security Center dashboard. In this dashboard, you will be able to find the results of your assessment, together with a guided selection of the proper security services. 
 
@@ -25,7 +25,7 @@ Below you can see the high level diagram:
 Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
 
 
-## Objectives
+### Objectives
 
 * Execute your first security assessment by launching a script (provided in this workshop) in Oracle Cloud Shell (Oracle Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console, and provides an ephemeral machine to use as a host for a Linux shell). The script generates your security assessment reports in excel format, and stores the excel files in the Linux host and in an Object Storage bucket.
 * Send the security assessment reports from the Cloud Shell Linux machine to an Autonomous Database table via REST API calls.
@@ -38,7 +38,7 @@ Below you can see the architecture components for this Unique Security Experienc
 ![](./images/simple-diagram.png "Architecture components")
 
 
-## Architecture
+### Architecture
 
 In this workshop, you will use the following OCI services and components:
 
@@ -69,7 +69,7 @@ Numbers indicate the order of each task. In this way, it is clear to see the pro
 
 ## What's Next?
 
-  You are all set to begin the labs! Click Lab 1: Prepare your OCI tenant in the Contents menu.
+  You are all set to begin the labs! You may now **proceed to the next lab**.
 
 
 ## Learn More
