@@ -1,6 +1,6 @@
 {
     "workshoptitle": "Unique Security Experience",
-    "help": "livelabs-help-oci_us@oracle.com",
+    "help": "livelabs-help-emea_us@oracle.com",
     "variables": ["../../variables/variables.json",
         "../../variables/variables-in-another-file.json"],
     "tutorials": [
