@@ -15,10 +15,7 @@ In this lab, you will:
 
 Please see picture below with the components and actions involved in this lab:
 
-   ![](./images/second-lab-diagram.png "Diagram")
-
-   (Diagram):![Diagram](./images/second-lab-diagram.png "Diagram”)
-
+   ![Diagram](./images/second-lab-diagram.png "Diagram")
 
 
 ### Prerequisites
