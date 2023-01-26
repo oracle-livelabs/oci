@@ -110,7 +110,7 @@ Quick Create 모드로 VCN을 함께 만든 경우에 클러스터 삭제후에�
 
 3. 하위 자원 삭제를 위해 **Delete cascade**를 체크하고 삭제합니다.
 
-    ![Delete Project](images/delete-devops-project-2.png)
+    ![Delete Project](images/delete-devops-project-2.png =50%x*)
 
 ## Task 8: Log 자원 삭제
 
