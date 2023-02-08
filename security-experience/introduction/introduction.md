@@ -35,7 +35,7 @@ Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire wor
 
 Below you can see the architecture components for this Unique Security Experience:
 
-![Architecture components](./images/simple-diagram.png "Architecture components")
+![Architecture components](./images/diagram.png "Architecture components")
 
 
 ### Architecture
