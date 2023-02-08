@@ -18,20 +18,23 @@ In more details:
     * Security services implementation. The Security Center dashboard will offer you as well the option to direct links to Terraform script to activate a security service with a click.
 
 
-Below you can see the high level diagram:
+Below you can see the Security Center dashboard you will see at the end of the workshop, with your security assessment results:
 
-![High level diagram](./images/intro-diagram.png "High level diagram")
+![High level diagram](./images/results-table.png "Security Center dashboard")
 
 Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
 
 
 ### Objectives
 
-* Execute your first security assessment by launching a script (provided in this workshop) in Oracle Cloud Shell (Oracle Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console, and provides an ephemeral machine to use as a host for a Linux shell). The script generates your security assessment reports in excel format, and stores the excel files in the Linux host and in an Object Storage bucket.
-* Send the security assessment reports from the Cloud Shell Linux machine to an Autonomous Database table via REST API calls.
-* Deploy the provided APEX application (Security Center dashboard) in the APEX instance hosted in the Autonomous Database.
+* Execute your first security assessment by launching a Python script (provided in this workshop) in Oracle Cloud Shell. Oracle Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console, and provides an ephemeral machine to use as a host for a Linux shell. 
+The script generates your security assessment reports in CSV files, and stores these files in two locations simulataneously:
+** The Cloud Shell Linux machine
+** An Object Storage bucket
+* Transfer the security assessment reports from the Cloud Shell Linux machine to an Autonomous Database table via REST API calls.
+* Deploy an APEX application (provided in this workshop) in the Autonomous Database. This application will act as your Security Center dashboard.
 * Check all results of your security assessments in the Security Center dashboard, and navigate through the different pages to check available security services that you could deploy in OCI.
-* Optionally, enable one security service automatically (Cloud Guard) via a Security Center dashboard by using Terraform.
+* Optionally, enable one security service automatically (Cloud Guard) by using the Security Center dashboard (it will use Terraform in the background).
 
 Below you can see the architecture components for this Unique Security Experience:
 
