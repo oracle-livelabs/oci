@@ -20,7 +20,11 @@ In more details:
 
 Below you can see the Security Center dashboard you will see at the end of the workshop, with your security assessment results:
 
-![High level diagram](./images/results-table.png "Security Center dashboard")
+![Security Center dashboard](./images/results-table.png "Security Center dashboard")
+
+Optionally, you will have as well a view of the CIS compliance in your OCI tenant:
+
+![Security Center dashboard and CIS](./images/cis-table.png "Security Center dashboard and CIS")
 
 Estimated Workshop Time: 2 hours 30 minutes (this estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
 
