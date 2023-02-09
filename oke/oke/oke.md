@@ -29,6 +29,7 @@ Estimated time: 45 minutes
 1. From the OCI Services menu, click **Developer Services** > **Kubernetes Clusters (OKE)**.
 
     **No need to create any policies for OKE, all the policies are pre-configured**
+
         ![Click Kubernetes Clusters (OKE)](images/oke_s1p1.png " ")
 
 2. Under **List Scope**, select the compartment in which you would like to create a cluster. Click **Create Cluster**.
@@ -101,6 +102,7 @@ In this section we will install kubectl. You can use the Kubernetes command line
 
     ![Enter the following commands](images/oke_004.png " ")
 
+
 2.  Wait for the download to complete. Enter the following command to verify kubectl.exe file exists.
 
     ```
@@ -119,6 +121,7 @@ Follow the steps under the **Quick Start** Section.
 2. The **Quick Start** directions will direct you to copy and execute the following commands depicted below in your local terminal.
 
     ![Quick Start Directions](images/oke_006.png " ")
+
 
 ## Task 5: Deploying a Sample Nginx App on Cluster Using kubectl
 
@@ -147,6 +150,7 @@ Follow the steps under the **Quick Start** Section.
 
     ![Kubernetes Dashboard](images/oke_010.png " ")
 
+
 4.  Create a service to expose the application. The cluster is integrated with the OCI Cloud Controller Manager (CCM). As a result, creating a service of type --type=LoadBalancer will expose the pods to the Internet using an OCI Load Balancer.In git-bash window Enter command:
     ```
     <copy>
@@ -165,7 +169,6 @@ Follow the steps under the **Quick Start** Section.
 7. open a new browser tab and enter URL  http://`<Load-Balancer-Public-IP>` (http://129.213.76.26 in this example). The Nginx welcome screen should be displayed.
 
     ![Nginx welcome screen](images/oke_013.png " ")
-
 
 ##  Step 6: Delete the resources
 
