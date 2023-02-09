@@ -52,9 +52,10 @@ In this activity, you will:
     ![Home Page](images/image006.png)
 
 5. 
-   > Click on the ‘Actual Vs Budget’ row 
+  
+    > Click on the ‘Actual Vs Budget’ row 
 
-    ![Home Page](images/image007.png)
+      ![Home Page](images/image007.png)
 
 6. 
 
