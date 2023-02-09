@@ -24,7 +24,7 @@ In this activity, you will:
 
     > Go to **Risk Management Cloud tab**, then click **‘Advanced Controls’**
 
-    ![isk Management Cloud](images/image001.png)
+    ![Risk Management Cloud](images/image001.png)
 
 
 2. 
