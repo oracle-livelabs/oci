@@ -30,7 +30,7 @@ Estimated time: 45 minutes
 
     **No need to create any policies for OKE, all the policies are pre-configured**
 
-        ![Click Kubernetes Clusters (OKE)](images/oke_s1p1.png " ")
+    ![Click Kubernetes Clusters (OKE)](images/oke_s1p1.png " ")
 
 2. Under **List Scope**, select the compartment in which you would like to create a cluster. Click **Create Cluster**.
 
