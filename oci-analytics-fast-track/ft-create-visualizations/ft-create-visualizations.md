@@ -75,7 +75,7 @@ Na região central do menu superior da tela é possível alternar entre páginas
 
 Outras opções de navegação são encontradas na região inferior da página.
 
-12. Na região inferior direita da página encontre as opções de **Brushing**, **Aplicar Dados Automaticamente**, **Alternar Painel de Dados** e **Alternar Painel de Gramática**.
+12. Na região inferior direita da página encontre as opções de **Diretrizes de Grade**, **Brushing**, **Aplicar Dados Automaticamente**, **Alternar Painel de Dados** e **Alternar Painel de Gramática**.
 
 ![Opções Tela.](./images/opcoes_tela.png)
 
@@ -230,13 +230,13 @@ Agora vamos usar o ***Auto Insights*** para criar visualizações poderosas usan
 
 1.  Vamos começar criando uma nova página chamada ***Auto Insights***.
 
-2.  Clique no ícone de uma lâmpada amarela na parte superior direita da tela e verifique se a tabela "Clientes" está selecionada. Role até encontrar o gráfico chamado ***Cidade Scatter Plot Chart*** e arraste para o centro da página.
+2.  Clique no ícone de uma lâmpada amarela na parte superior direita da tela e verifique se a tabela "FT_EXTRA" está selecionada. Role até encontrar o gráfico chamado ***Subcategoria do Produto Scatter Plot Chart*** e arraste para o centro da página.
 
 ![Auto Insights](./images/autoinsight1.png)
 
-3.  Encontre os gráficos chamados ***Top 10 Cidade by População da Cidade*** e ***Count of Records*** e os arraste para a tela de modo a ter o resultado disposto na imagem a seguir.
+3.  Encontre os gráficos chamados ***Top 10 Subcategoria do Produto by Desconto*** e ***Growth Contribution Bridge*** e os arraste para a tela de modo a ter o resultado disposto na imagem a seguir.
 
-![Auto Insights](./images/autoinsight2.png)
+![Auto Insights](./images/autoinsights2.png)
 
 ## Tarefa 5: Alterar Propriedades dos Gráficos
 
@@ -244,7 +244,7 @@ O Oracle Analytics Cloud permite que você altere propriedades dos gráficos do 
 
 Vamos começar alterando os títulos das visualizações da página **Pedidos**.
 
-1.  Selecione a visualização **Quantidade de Pedidos por PRIORIDADE DO PEDIDO** e na barra de opções gerais, na opção de Título, clique na opção **Automático** e mude para **Personalizado**.
+1.  Selecione a visualização **Quantidade de Pedidos por PRIORIDADE DO PEDIDO** e na barra de propriedades, na opção de Título, clique na opção **Automático** e mude para **Personalizado**.
 
 ![Auto Insights](./images/titulo1.png)
 
@@ -256,7 +256,7 @@ Vamos começar alterando os títulos das visualizações da página **Pedidos**.
 
 Agora iremos mudar o Plano de Fundo dos gráficos.
 
-1.  Nas opções gerais da visualização **# Pedidos por Prioridade**, role até encontrar a opção Plano de Fundo. Clique na opção **Automático** e mude para **Personalizado**. No campo de Cor de Preenchimento utilize a cor ***#e0e0e0***.
+1.  Nas opções gerais da visualização **# Pedidos por Prioridade**, busque a opção Plano de Fundo. Clique na opção **Automático** e mude para **Personalizado**. No campo de Cor de Preenchimento utilize a cor ***#e0e0e0***.
 
 ![Cor de Fundo](./images/cor_fundo.png)
 
@@ -266,9 +266,13 @@ Agora iremos mudar o Plano de Fundo dos gráficos.
 
 Uma das propriedades mais importantes de uma boa visualização é a sua legenda. A seguir iremos explorar a opção de legenda do Oracle Analytics Cloud.
 
-1.  No gráfico de Donut criado anteriormente, mude o dado **Estado** do campo **Categoria** para o campo **Cor**. Isso irá habilitar as legendas na visualização. No painel de opções gerais da visualização, encontre a opção chamada **Posição da Legenda** e mude de **Automático** para **Direita**.
+1.  No gráfico de Donut criado anteriormente, mude o dado **Estado** do campo **Categoria** para o campo **Cor**. Isso irá habilitar as legendas na visualização. 
 
-![Legenda](./images/posicao_legenda.png)
+![Legenda](./images/posicao_legenda1.png)
+
+2. No painel de propriedades da visualização, encontre a opção chamada **Posição da Legenda** e mude de **Automático** para **Direita**.
+
+![Legenda](./images/posicao_legenda2.png)
 
 ## Tarefa 6: Adicionar Texto, Cores e Imagens ao Dashboard
 
@@ -331,4 +335,4 @@ Nesta sessão você aprendeu a criar um dashboard com visualizações básicas d
 ## Autoria
 
 - **Autores** - Guilherme Galhardo, Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias
-- **Último Updated Por/Data** - Guilherme Galhardo, Nov/2022
+- **Último Updated Por/Data** - Guilherme Galhardo, Fev/2023
