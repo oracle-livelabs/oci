@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Get started with Oracle Application Performance Monitoring",
+  "workshoptitle": "Get started with Oracle Stack Monitoring",
 	"help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {
@@ -13,31 +13,20 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Access the APM workshop environment",
-            "description": "Access the APM workshop environment",
+            "title": "Lab 1: Access the Stack Monitoring workshop environment",
+            "description": "Access the Stack Monitoring workshop environment",
             "filename": "../../01-access-env/access-env.md"
         },
 
         {
-            "title": "Lab 2: Examine APM Alarms",
-            "description": "Examine APM Alarms",
-            "filename": "../../02-examine-alarms/examine-alarms.md"
+            "title": "Lab 2: Enterprise Summary",
+            "description": "Get to know Stack Monitoring's Enterprise Summary",
+            "filename": "../../02-enterprise-summary/enterprise-summary.md"
          },
         {
-            "title": "Lab 3: Examine APM Monitors",
-            "description": "Examine APM Monitors",
-            "filename": "../../03-examine-monitors/examine-monitors.md"
-        },
-
-        {
-            "title": "Lab 4: Explore Monitor Details and History",
-            "description": "Explore Monitor Details and History",
-            "filename": "../../04-monitor-details/monitor-details.md"
-        },
-        {
-            "title": "Lab 5: Explore APM Trace Data",
-            "description": "Explore APM Trace Data",
-            "filename": "../../05-explore-trace-data/explore-trace-data.md"
+            "title": "Lab 3: Resource Homepages",
+            "description": "Get to know Stack Monitoring's Resource Homepages",
+            "filename": "../../03-homepages/homepages.md"
         },
         {
             "title": "Need Help?",

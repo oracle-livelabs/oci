@@ -1,4 +1,4 @@
-# Access APM Workshop environment
+# Access Stack Monitoring Workshop environment
 
 ## Introduction
 
@@ -45,7 +45,7 @@ Estimated time: 5 minutes
 ## Task 2: Access Enterprise Summary page
 
 
-1. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, select **Observability & Management** > **Application Performance Monitoring** under **Stack Monitoring**.
+1. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, select **Observability & Management** > **Stack Monitoring** under **Application Performance Monitoring**.
 
    ![Oracle Cloud console, Home page](images/2-0-console.png " ")
 
