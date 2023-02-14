@@ -42,7 +42,7 @@ O Oracle Analytics Cloud (OAC) vai criar o Join de forma automática para você,
 
 ![Seleciona a tabelas Vendas](./images/join-auto-5.png)
 
-> **Note:** Existem dois tipos de colunas no Oracle Analytics Cloud: Atributo ou Medida
+> **Nota:** Existem dois tipos de colunas no Oracle Analytics Cloud: Atributo ou Medida
 
 As colunas do tipo ***Medida*** aceitam valores numéricos e poderemos executar operações matemáticas e agregações com os dados dessa coluna.
 
@@ -53,6 +53,14 @@ As colunas do tipo ***Atributo*** aceitam qualquer tipo de dados descritivo, que
 **Exemplo: ID de produto, ID do cliente, Número da Nota Fiscal, Nome do Cliente, Idade, Endereço, Data de Venda, Cidade, País etc**
 
 ![Tipos de Dados](./images/data-type-6.png)
+
+3. Clique com o botão direto do mouse na tabela **"Vendas"** dentro do Diagrama de Junção e selecione a opção **Preservar Granularidade**.
+
+![Preservar Granularidade da tabela](./images/grain.png)
+
+4. Após isso você verá uma barra verde na parte superior da caixa que representa a tabela **"Vendas"** indicando que a granularidade da tabela está preservada.
+
+![Barra verde na tabela vendas](./images/grain-bar.png)
 
 ## Tarefa 3: Salvar o Conjunto de Dados
 
@@ -102,4 +110,4 @@ Nesta sessão você aprendeu criar um Conjunto de Dados no Oracle Analytics Clou
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Thais Henrique, Nov/2022
+- **Último Update Por/Date** - Thais Henrique, Fev/2023
