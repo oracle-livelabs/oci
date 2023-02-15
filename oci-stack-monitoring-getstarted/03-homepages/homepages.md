@@ -118,15 +118,17 @@ Estimated time: 15 minutes
 
 	Locate the tab **Stack View** from the available menu items. **Stack View** combines resource specific charts all in one place and is provided to you out-of-the-box. Let's begin by expanding the time frame from **Last 60 Minutes** to **Last 14 Days**. With the time frame expanded, let's expand each tier. I have found if you expand **Host** first and work your way up the page, this will remove the need to scroll. With each tier expanded, you can now get a holistic view of the performance of your EBS application.  
 
-	![Oracle Cloud console, Stack Monitoring Homepages](images/5-7-home.png " ")
-	
+	![Oracle Cloud console, Stack Monitoring Homepages](images/5-8-home.png " ")
+
 	Beginning with the **EBS Instance**, we can review and identify the amount of time various programs took to complete. Looking back we can identify if a particular program or several programs took longer to complete. Reviewing the **Concurrent Manager** tier, we again see same chart we reviewed within the concurrent manager's homepage, **Completed Concurrent Requests**. Since EBS is a java application, Stack Monitoring provides details into the performance of the WebLogic (WLS)cluster, specifically OACORE, the heart of EBS. Using our alarm example of **Concurrent Manager Completed Request Count Low**, we can use the WebLogic tier to determine if WLS is contributing the errored program runs. From within this tier we can see that JVM Memory, both heap and non-heap, utilization is not at 100%. The number of active thread pool threads that are hogging are low. And finally, there does not seem to be any waiting JDBC Connections. Based on this information WLS does not appear to have contributed to the errored programs.
+
+	![Oracle Cloud console, Stack Monitoring Homepages](images/5-9-home.png " ")
 
 	Reviewing the **EBS Database** tier, we can review the number of transactions committed and rolled back. The count of rolled back sessions is quite low. Additionally, transaction wait times across dimensions remains low as well. As a result, the database does not appear to be spending much time waiting.
 
 	Finally, we can review the health of the EBS hosts. Both the hosts CPU and memory are well below their maximum, thus ruling out host as a contributing factor. Based on the review of the EBS application stack using Stack View, we can rule out the application and infrastructure components as the cause of the errored programs.
 
-	![Oracle Cloud console, Stack Monitoring Homepages](images/4-5-home.png " ")
+	![Oracle Cloud console, Stack Monitoring Homepages](images/5-10-home.png " ")
 
 In this lab we learned about a resource's homepage. While homepages have a consistent look and feel, an application homepage has a couple unique features. To learn about these unique traits **proceed to the next lab on Stack View**.
 
