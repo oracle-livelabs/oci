@@ -47,13 +47,15 @@ Estimated time: 10 minutes
 
  	![Oracle Cloud console, Enterprise Summary](images/2-1-ent-sum.png " ")
 
-	The **Status by resource type** chart provides a quick view of the status of your resources by type across an enterprise. Each bar represents a total count of resources by type regardless of state. The behavior of an application stack, such as E-Business Suite and PeopleSoft, is unique. Each bar represents an application and it's components, this allows you to identify if any individual components of an application is down or not reporting. Lets hover over the **Red** portion of the **EBS_PROD_01**. We can see a list of resources associated to this EBS application that are currently down.
-
- 	![Oracle Cloud console, Enterprise Summary](images/2-2-ent-sum.png " ")
+	The **Status by resource type** chart provides a quick view of the status of your resources by type across an enterprise. Each bar represents a total count of resources by type regardless of state. The reporting of an application stack, such as E-Business Suite and PeopleSoft, is unique. Each bar represents an application and it's components, this allows you to identify if any individual components of an application is down or not reporting. Should you identify an area of concern with an application, clicking the bar will navigate you to that resource's homepage. We'll review homepages in the next lesson.
 
 2. Identify resources by resource type that are **Not Reporting**
 
- 	Identifying which resources are down or not reporting by type across an enterprise is easy. Simply locate the chart legend at the top right of the **Status by resource type** chart, select **Not Reporting**. This will filter the chart to only show the count of resources by type in a **Not Reporting** state. If we wish to see a more detailed list of hosts that are not reporting, click the host bar on the left side of the chart. This will invoke a slide-out and display a list of host names, status, and type. From this slide out it is simple to update the filter to see other states, resource types, or simply search for a resource by name. Clicking any resource name within the slide-out will navigate you to that resource's homepage for further troubleshooting. To return to the Enterprise Summary click the **Close** button in the lower left corner of the fly-out.
+ 	Identifying which resources are down or not reporting by type across an enterprise is easy. Simply locate the chart legend at the top right of the **Status by resource type** chart, select **Not Reporting**. This will filter the chart to only show the count of resources by type in a **Not Reporting** state. 
+
+ 	![Oracle Cloud console, Enterprise Summary](images/2-2-ent-sum.png " ")
+
+ 	If we wish to see a more detailed list of hosts that are not reporting, click the host bar on the left side of the chart. This will invoke a slide-out and display a list of host names, status, and type. From this slide out it is simple to update the filter to see other states, resource types, or simply search for a resource by name. Clicking any resource name within the slide-out will navigate you to that resource's homepage for further troubleshooting. To return to the Enterprise Summary click the **Close** button in the lower left corner of the fly-out.
 
  	![Oracle Cloud console, Enterprise Summary](images/2-3-ent-sum.png " ")
 
@@ -61,11 +63,15 @@ Estimated time: 10 minutes
 	
 	With the slide-out closed, locate the **Show all** filter located within the **Status by resource type** chart's legend. Clicking **Show all** will reset the chart to the default state of showing all resources and states.
 
+ 	![Oracle Cloud console, Enterprise Summary](images/2-4-ent-sum.png " ")
+
 ## Task 3: Review open alarms by severity
 
 1. Locate the **Alarms** chart at the top right of the Enterprise Summary. 
 
 	Stack Monitoring makes it simple to identify any open alarms within your enterprise. The **Alarms** chart provides a total count of open alarms, as well as a count of alarms by severity. Clicking on a count of alarms invokes a slide-out. The slide-out provides greater details of the open alarms and is filtered by the severity count selected. 
+
+ 	![Oracle Cloud console, Enterprise Summary](images/3-0-ent-sum.png " ")
 
 	Let's review all of the open alarms within this enterprise. Begin by clicking the **Total** count of open alarms identified by the **blue** number in large font located under the chart title, Alarms.  The alarm slide-out provides details of open alarms. These details include Alarm name, Severity, and Triggered time. The results can be ordered by selecting the column title.
 
@@ -73,9 +79,13 @@ Estimated time: 10 minutes
 
 2. Refine the list of open alarms
 
- 	Lets filter the list to focus on only the **Critical** alerts. Using the **Severity filter**, located above the column **Triggered time** change the severity from **All** to **Critical**. The table now displays only the open alarms with a severity of **Critical**. Clicking an alarm name will open a new tab in your browser to investigate and work the alarm within Oracle Cloud Infrastructure's monitoring service.
+ 	Lets filter the list to focus on only the **Critical** alerts. Using the **Severity filter**, located above the column **Triggered time** change the severity from **All** to **Critical**. The table now displays only the open alarms with a severity of **Critical**. 
 
  	![Oracle Cloud console, Enterprise Summary](images/3-2-ent-sum.png " ")
+
+ 	Clicking an alarm name will open a new tab in your browser to investigate and work the alarm within Oracle Cloud Infrastructure's monitoring service.
+
+ 	![Oracle Cloud console, Enterprise Summary](images/3-3-ent-sum.png " ")
 
 ## Task 4: Review the performance of resources by tier (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host)
 
@@ -97,9 +107,11 @@ Estimated time: 10 minutes
 
  	Tables on the right hand side of the page allow you to quickly identify which resource has the most heavily used filesystems or tablespaces across your enterprise. By default Tables provide up to the four highest utilized or consumed resources of a given metric. The number of rows displayed can be updated from 4 to 10, 20, or all. Let's review the top 20 most heavily utilized tablespaces within the enterprise. Locate **Tablespace Utilization** chart on the right side under the **Oracle Database** tier. Click the pencil icon in the top right of chart. After clicking the pencil, enable the **Advanced** menu items by updating the **Advanced** flag. Enabling the Advanced menu, provides access to optional features of a table or chart. Click **Display records** to change the value of rows displayed from 4 to **20**. With the value updated to 20, click **Apply** in the lower left of the slide-out to return to the Enterprise Summary. 
 
+ 	![Oracle Cloud console, Enterprise Summary](images/4-3-ent-sum.png " ")
+
  	We can now see a list of the top 20 most heavily utilized tablespaces within the enterprise. Clicking any of the resource names will navigate you to that resource's homepage for further investigation. From the Oracle Database homepage additional you can then leverage the Tablespace Utilization chart to see the growth of the the tablespace over time. We'll review this navigation in the next lesson.
 
- 	![Oracle Cloud console, Enterprise Summary](images/4-3-ent-sum.png " ")
+ 	![Oracle Cloud console, Enterprise Summary](images/4-4-ent-sum.png " ")
 
 ## Task 5: Dynamic troubleshooting with the Enterprise Summary
 

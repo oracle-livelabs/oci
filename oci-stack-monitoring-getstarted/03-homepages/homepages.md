@@ -92,7 +92,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-2-home.png " ")
 
-	Let's review the chart associated to this alarm by clicking the **Charts** tab. Once the page loads, find the chart **Completed Concurrent Requests**. Now let's expand the charts to show the **Last 14 Days**. We can see the percentage of requests that **Errored** has remained relatively stable. Now let's continue the investigation by reviewing the overall health and performance of the entire EBS application stack.
+	Let's review the chart associated to this alarm by clicking the **Charts** tab. Once the page loads, find the chart **Completed Concurrent Requests**. Now let's expand the charts to show the **Last 14 Days**. We can see the percentage of requests that **Errored** has remained relatively stable, and the issue does not appear to be a sudden change. Now let's continue the investigation by reviewing the overall health and performance of the entire EBS application stack.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-3-home.png " ")
 
