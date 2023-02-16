@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will review the status and performance of an entire enterprise. You will leverage the Stack Monitoring Enterprise Summary page to identify the number of resources in a down state, and the number of open alarms by severity. Additionally you will identify the list of Oracle Databases in a Not Reporting state. Learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, you will replace the Tablespace Utilization table, under the Oracle Database tier. 
+In this lab, you will review the status and performance of an entire enterprise. You will leverage the Stack Monitoring Enterprise Summary page to identify the number of resources in a down state, and the number of open alarms by severity. Additionally, you will identify the list of Oracle Databases in a Not Reporting state. Learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, you will replace the Tablespace Utilization table, under the Oracle Database tier. 
 
 Estimated time: 10 minutes
 
@@ -71,9 +71,11 @@ Estimated time: 10 minutes
 
 	Stack Monitoring makes it simple to identify any open alarms within your enterprise. The **Alarms** chart provides a total count of open alarms, as well as a count of alarms by severity. Clicking on a count of alarms invokes a slide-out. The slide-out provides greater details of the open alarms and is filtered by the severity count selected. 
 
+	Let's review all of the open alarms within this enterprise. Begin by clicking the **Total** count of open alarms identified by the **blue** number in large font located under the chart title, Alarms.  
+
  	![Oracle Cloud console, Enterprise Summary](images/3-0-ent-sum.png " ")
 
-	Let's review all of the open alarms within this enterprise. Begin by clicking the **Total** count of open alarms identified by the **blue** number in large font located under the chart title, Alarms.  The alarm slide-out provides details of open alarms. These details include Alarm name, Severity, and Triggered time. The results can be ordered by selecting the column title.
+	The alarm slide-out provides details of open alarms. These details include Alarm name, Severity, and Triggered time. The results can be ordered by selecting the column title.
 
  	![Oracle Cloud console, Enterprise Summary](images/3-1-ent-sum.png " ")
 
@@ -87,13 +89,19 @@ Estimated time: 10 minutes
 
  	![Oracle Cloud console, Enterprise Summary](images/3-3-ent-sum.png " ")
 
+ 	Once you have reviewed the alarm, close the browser tab to return to Stack Monitoring. Once again click **Close** at the bottom left of the slide out to return to the Enterprise Summary
+
 ## Task 4: Review the performance of resources by tier (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host)
 
 1. Enterprise Summary tiers
 
-	The **Enterprise Summary** makes it easy to see the performance of nearly every resource within your enterprise. Stack Monitoring performance charts are organized by tier. The tiers are ordered in the same way troubleshooting is typically performed, with the Application specific tier at the top, web servers next, followed by database, and finally the hosts. Each chart provides the most recent value of the metrics collected. Scatter-plot charts display a value for every resource type that matches the tier, i.e. if you have twenty hosts, you will see twenty plots. Out-of-the-box, Tables provide the four highest consumed/utilized resources of a given metric. All performance charts and tables can be modified or replaced to help identify problems or troubleshooting a specific performance problem. Each chart and table can be restored to its' default once the investigation is complete. Alternatively any scatter-plot or table change can be saved as your default view when viewing the Enterprise Summary.
+	The **Enterprise Summary** makes it easy to see the performance of nearly every resource within your enterprise. Stack Monitoring performance charts are organized by tier. The tiers are ordered in the same way troubleshooting is typically performed, with the Application specific tier at the top, web servers next, followed by database, and finally the hosts. Each chart provides the most recent value of the metrics collected. Scatter-plot charts display a value for every resource type that matches the tier, i.e. if you have 20 hosts, you will see 20 plots. Out-of-the-box, Tables provide the four highest consumed/utilized resources of a given metric. All performance charts and tables can be modified or replaced to help identify problems or troubleshooting a specific performance problem. Once you are have completed your investigation a saved chart or table can be reset to the default configuration with just a click. 
 
  	![Oracle Cloud console, Enterprise Summary](images/4-1-ent-sum.png " ")
+
+	Alternatively any scatter-plot or table change can be saved as your default view when viewing the Enterprise Summary.
+
+ 	![Oracle Cloud console, Enterprise Summary](images/4-2-ent-sum.png " ")
 
 2. Scatter-plots charts
 
@@ -101,17 +109,17 @@ Estimated time: 10 minutes
 
 	Let's review memory and swap utilization of all hosts within this enterprise. Navigate to the **Memory and Swap** chart located under the **Host** tier at the bottom center of the Enterprise Summary. Every monitored host within Stack Monitoring is represented in this chart. The scatter-plot allows you to identify if a host(s) is performing differently than others. Here we can identify which host is utilizing the most memory and swap. We can also see the majority of hosts are using very little to no swap ruling out memory load as a contributing factor to any performance problems that may be occurring.
 
- 	![Oracle Cloud console, Enterprise Summary](images/4-2-ent-sum.png " ")
+ 	![Oracle Cloud console, Enterprise Summary](images/4-3-ent-sum.png " ")
 
 2. Tables
 
  	Tables on the right hand side of the page allow you to quickly identify which resource has the most heavily used filesystems or tablespaces across your enterprise. By default Tables provide up to the four highest utilized or consumed resources of a given metric. The number of rows displayed can be updated from 4 to 10, 20, or all. Let's review the top 20 most heavily utilized tablespaces within the enterprise. Locate **Tablespace Utilization** chart on the right side under the **Oracle Database** tier. Click the pencil icon in the top right of chart. After clicking the pencil, enable the **Advanced** menu items by updating the **Advanced** flag. Enabling the Advanced menu, provides access to optional features of a table or chart. Click **Display records** to change the value of rows displayed from 4 to **20**. With the value updated to 20, click **Apply** in the lower left of the slide-out to return to the Enterprise Summary. 
 
- 	![Oracle Cloud console, Enterprise Summary](images/4-3-ent-sum.png " ")
+ 	![Oracle Cloud console, Enterprise Summary](images/4-4-ent-sum.png " ")
 
  	We can now see a list of the top 20 most heavily utilized tablespaces within the enterprise. Clicking any of the resource names will navigate you to that resource's homepage for further investigation. From the Oracle Database homepage additional you can then leverage the Tablespace Utilization chart to see the growth of the the tablespace over time. We'll review this navigation in the next lesson.
 
- 	![Oracle Cloud console, Enterprise Summary](images/4-4-ent-sum.png " ")
+ 	![Oracle Cloud console, Enterprise Summary](images/4-5-ent-sum.png " ")
 
 ## Task 5: Dynamic troubleshooting with the Enterprise Summary
 
