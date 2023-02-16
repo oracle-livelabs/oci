@@ -2,12 +2,11 @@
 
 ## About this Workshop
 
-In this workshop, you will become familiar with Oracle's Stack Monitoring. Stack Monitoring is cloud-native application to monitor and view the health and performance of your enterprise. This includes resources running both within Oracle Cloud Infrastructure (OCI) or on-premises.
+In this workshop, you will become familiar with Oracle's Stack Monitoring. Stack Monitoring is cloud-native application to monitor and view the health and performance of your enterprise. Stack Monitoring is capable of monitoring resources running both within Oracle Cloud Infrastructure (OCI) or on-premises.
 
-Using Stack Monitoring's Enterprise Summary, you will learn to identify performance problems across your enterprise at a glance. Identify and triage all open alarms. Learn to work down the tiers to identify performance outliers. And finally learn to dynamically configure the Enterprise Summary to meet your needs in the moment, or adjust permanently to meet the needs of your role.
+Using Stack Monitoring's Enterprise Summary, you will learn to identify performance problems across your enterprise at a glance. Identify and triage all open alarms. Leverage Stack Monitoring's Key Performance Metrics (KPI's) organized into tiers to identify performance outliers. And finally learn to dynamically configure the Enterprise Summary to meet your needs in the moment, or adjust permanently to meet the needs of a specialized role.
 
-You will also become familiar with Stack Monitoring's homepages. Learn how to triage alarms, review the out-of-the-box charts to identify performance problems and see the results over time. You will also become familiar relationships between resources, and how to use these relationship to quickly navigate up and down the application stack. And finally, leverage Stack Monitoring's **Stack View** to get a holistic performance perspective of an entire E-Business Suite application.
-
+You will also become familiar with Stack Monitoring's homepages. Learn how to triage alarms open alarms, and review the out-of-the-box charts to identify performance problems and trend the performance over time. You will also become familiar relationships between resources, and how to use these relationships to quickly navigate up and down the application stack. And finally, leverage Stack Monitoring's **Stack View** to get a holistic performance perspective of an entire E-Business Suite application.
 
 Estimated Time: 30 minutes
 
@@ -34,9 +33,7 @@ In this workshop, you will:
 
 ### Prerequisites
 
-
 * An Oracle event account, which you can use to sign in to the workshop tenancy.
-
 
 ## Acknowledgements
 

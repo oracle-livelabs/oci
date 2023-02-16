@@ -45,24 +45,30 @@ Estimated time: 5 minutes
 ## Task 2: Access Enterprise Summary page
 
 
-1. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, select **Observability & Management** > **Stack Monitoring** under **Application Performance Monitoring**.
+1. Navigate to Stack Monitoring
+   
+   Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console.
 
-   ![Oracle Cloud console, Home page](images/2-0-console.png " ")
+   ![Oracle Cloud console, Home page](images/2-1-access.png " ")
 
+   Now, select **Observability & Management** > **Stack Monitoring** under **Application Performance Monitoring**.
 
-   ![Oracle Cloud console, Navigation Menu](images/2-1-console.png " ")
+   ![Oracle Cloud console, Navigation Menu](images/2-2-access.png " ")
 
    	 Stack Monitoring Enterprise Summary page opens.
 
-2. On the Stack Monitoring Enterprise Summary page, select the following from the pulldown menus:
+2. Connect to the correct **Region** and **Compartment**
+
+   On the Stack Monitoring Enterprise Summary page, select the following from the pulldown menus:
     - Region: **US East (Ashburn)**
     - Compartment : **root/eStore/OracleApps**
     - Performance metric period : Last **Last 60 minutes**
 
-   ![Oracle Cloud console, Stack Monitoring Enterprise Summary page](images/2-2-home.png " ")
-Make sure the data is loaded onto the charts in the Enterprise Summary page.
+   ![Oracle Cloud console, Stack Monitoring Enterprise Summary page](images/2-3-access.png " ")
 
+When the correct region and compartment is chosen, the Enterprise Summary page will be populated. If you find the Enterprise Summary is empty double check the region and compartment.
 
+   ![Oracle Cloud console, Stack Monitoring Enterprise Summary page](images/2-4-access.png " ")
 
 You may now **proceed to the next lab**.
 
