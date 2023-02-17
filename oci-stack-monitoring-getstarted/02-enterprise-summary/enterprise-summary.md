@@ -55,9 +55,11 @@ Estimated time: 10 minutes
 
  	![Oracle Cloud console, Enterprise Summary](images/2-2-ent-sum.png " ")
 
- 	If we wish to see a more detailed list of hosts that are not reporting, click the host bar on the left side of the chart. This will invoke a slide-out and display a list of host names, status, and type. From this slide out it is simple to update the filter to see other states, resource types, or simply search for a resource by name. Clicking any resource name within the slide-out will navigate you to that resource's homepage for further troubleshooting. To return to the Enterprise Summary click the **Close** button in the lower left corner of the fly-out.
+ 	If we wish to see a more detailed list of hosts that are not reporting, click the host bar on the left side of the chart. This will invoke a slide-out and display a list of host names, status, and type. From this slide out it is simple to update the filter to see other states, resource types, or simply search for a resource by name. Clicking any resource name within the slide-out will navigate you to that resource's homepage for further troubleshooting. 
 
  	![Oracle Cloud console, Enterprise Summary](images/2-3-ent-sum.png " ")
+
+	To return to the Enterprise Summary click the **Close** button in the lower left corner of the fly-out.
 
 3. Reset Status by resource type chart
 	
@@ -89,19 +91,21 @@ Estimated time: 10 minutes
 
  	![Oracle Cloud console, Enterprise Summary](images/3-3-ent-sum.png " ")
 
- 	Once you have reviewed the alarm, close the browser tab to return to Stack Monitoring. Once again click **Close** at the bottom left of the slide out to return to the Enterprise Summary
+ 	Once you have reviewed the alarm, close the browser tab to return to Stack Monitoring. Once again click **Close** at the bottom left of the slide out to return to the Enterprise Summary.
 
 ## Task 4: Review the performance of resources by tier (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host)
 
 1. Enterprise Summary tiers
 
-	The **Enterprise Summary** makes it easy to see the performance of nearly every resource within your enterprise. Stack Monitoring performance charts are organized by tier. The tiers are ordered in the same way troubleshooting is typically performed, with the Application specific tier at the top, web servers next, followed by database, and finally the hosts. Each chart provides the most recent value of the metrics collected. Scatter-plot charts display a value for every resource type that matches the tier, i.e. if you have 20 hosts, you will see 20 plots. Out-of-the-box, Tables provide the four highest consumed/utilized resources of a given metric. All performance charts and tables can be modified or replaced to help identify problems or troubleshooting a specific performance problem. Once you are have completed your investigation a saved chart or table can be reset to the default configuration with just a click. 
+	The **Enterprise Summary** makes it easy to see the performance of nearly every resource within your enterprise. Stack Monitoring performance charts are organized by tier. The tiers are ordered in the same way troubleshooting is typically performed, with the Application specific tier at the top, web servers next, followed by database, and finally the hosts. Each chart provides the most recent value of the metrics collected. Scatter-plot charts display a value for every resource type that matches the tier, i.e. if you have 20 hosts, you will see 20 plots. Out-of-the-box, Tables provide the four highest consumed/utilized resources of a given metric. 
 
  	![Oracle Cloud console, Enterprise Summary](images/4-1-ent-sum.png " ")
 
-	Alternatively any scatter-plot or table change can be saved as your default view when viewing the Enterprise Summary.
+	All performance charts and tables can be modified or replaced to help identify problems or troubleshooting a specific performance problem. Once you are have completed your investigation a saved chart or table can be reset to the default configuration with just a click. 
 
  	![Oracle Cloud console, Enterprise Summary](images/4-2-ent-sum.png " ")
+
+	Alternatively any scatter-plot or table change can be saved as your default when viewing the Enterprise Summary, by clicking **Save as default**. 
 
 2. Scatter-plots charts
 
