@@ -11,10 +11,8 @@ Estimated time: 15 minutes
 * Become familiar with the layout of a resource homepage
 * Review Performance menu including, alarms, charts, tables, and Stack View
 * Review configuration details of the resource
-* Identifying relationships between resources.
+* Identifying relationships between resources
 * Putting it all together
-* Review E-Business Suite homepage
-* Review Stack View
 
 ### Prerequisites
 
@@ -40,7 +38,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/1-2-home.png " ")
 
-## Task 2: Performance Menu
+## Task 2: Review Performance menu including, alarms, charts, tables, and Stack View
 
 1. Review performance charts
 
@@ -60,7 +58,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/2-3-home.png " ")
 
-## Task 3: Easily review a resource's details using **Configuration**
+## Task 3: Review configuration details of the resource
 
 1. Locate **Configuration** in the left menu of the homepage.
 
@@ -68,7 +66,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/3-1-home.png " ")
 
-## Task 4: Identifying a resource's relationships
+## Task 4: Identifying relationships between resources
 
 1. Locate **Members** under the Resources menu on the left side of the homepage.
 
@@ -92,49 +90,49 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-2-home.png " ")
 
-	Let's review the chart associated to this alarm by clicking the **Charts** tab. Once the page loads, find the chart **Completed Concurrent Requests**. Now let's expand the charts to show the **Last 14 Days**. We can see the percentage of requests that **Errored** has remained relatively stable, and the issue does not appear to be a sudden change. Now let's continue the investigation by reviewing the overall health and performance of the entire EBS application stack.
+	Let's review the chart associated to this alarm by clicking the **Charts** tab. Find the chart **Completed Concurrent Requests**. Now let's expand the charts to show the **Last 14 Days**. We can see the percentage of requests that **Errored** has remained relatively stable over the last two weeks, and does not appear to be a sudden change. Reviewing the other metrics all recent activity appears stable. Now let's continue the investigation by reviewing the overall health and performance of the entire EBS application stack.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-3-home.png " ")
 
-	To navigate to the EBS application, click **Related Resources**. Once the page loads, locate the resource **EBS_PROD_01** with the type **EBS**. Click the name of the resource **EBS_PROD_01** to navigate to the application's homepage.
+	Identifying and navigating to the EBS application associated with this Concurrent Manager is easy by clicking **Related Resources** on the left side of the page. Locate the resource **EBS_PROD_01** with the type **EBS**. Click the name of the resource **EBS_PROD_01** to navigate to the application's homepage.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-4-home.png " ")
 
-3. Reviewing an EBS composite homepage
+3. Reviewing an EBS application homepage
 
-	We can see that an EBS homepage is very similar to a standard resource homepage with a few exceptions. Properties again show the type of resource and the OCID. Here we see an overall availability of resources related to this EBS application. Stack Monitoring again provides a summary of alarms by severity. 
+	We can see that an EBS homepage is very similar to a standard resource homepage with a few exceptions. Properties show the type of resource and the OCID. Additionally, we see an overall availability of resources related to this EBS application, this includes resources such as the concurrent manager, notification mailer, and workflow manager, etc. Stack Monitoring  provides a summary of alarms for the EBS application and its members by severity. 
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-5-home.png " ")
 
-	In the previous task we reviewed the **Alarms** tab. The alarms shown in the EBS homepage includes both the open alarms for the EBS application itself, but also includes open alarms for its members. The EBS homepage you can see a roll-up of all alarms for EBS and it's members, without navigating to multiple homepages. Here we can see the same alarm we  investigated within the Concurrent Manager homepage. 
+	In the previous task we reviewed the **Alarms** tab. The alarms shown in the EBS homepage includes both the open alarms for the EBS application itself, as well as open alarms for its members. The EBS homepage you can see a roll-up of all alarms for EBS and it's members, without navigating to multiple homepages. Here we can see the same alarm we investigated within the Concurrent Manager homepage, as this alarm is rolled up to the application level. 
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-6-home.png " ")
 
-	Clicking **Charts** provides quick visiblity into the health of the EBS application. We can continue our previous investigation by expanding the chart time displayed by again expanding from **Last 60 Minutes** to **Last 14 Days**. From this page nothing appears to standout as a cause for high number of jobs that have errored. Since we have already covered tables, let's move on to Stack View.
+	Clicking **Charts** provides quick visibility into the health of the EBS application. We can continue our previous investigation by expanding the chart time displayed from **Last 60 Minutes** to **Last 14 Days**. From this page nothing appears to standout as a cause for high number of jobs that have errored. The **Completed Requests by Application** and the number of **Active User Sessions** remain consistent. The remaining charts show periods of activity but no drastic changes are apparent. Since we have already covered tables, let's move on to Stack View.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-7-home.png " ")
 
 4.	Selecting the **Stack View** tab loads a unique feature to Stack Monitoring, the **Stack View**.
 
-	Locate the tab **Stack View** from the available menu items. **Stack View** provides a holistic view of the health and performance of the entire EBS application by combining resource specific charts all in one place. Let's begin by expanding the time frame from **Last 60 Minutes** to **Last 14 Days**. With the time frame expanded, let's expand each tier. With each tier expanded, you can now get a holistic view of the performance of your EBS application.  
+	Locate the tab **Stack View** from the available menu items. **Stack View** provides a holistic view of the health and performance of the entire EBS application by combining resource specific charts all in one place. Let's begin by again adjusting the time frame from **Last 60 Minutes** to **Last 14 Days**. Now let's expand each tier. With each tier expanded, you can now get a complete view of the performance of your EBS application.  
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-8-home.png " ")
 
-	Beginning with the **EBS Instance**, EBS admins are typically aware of the typical time it takes for a job to complete, and which jobs run long. Looking back we can identify if a particular program or several programs took longer to complete than is typical. Since EBS is a java application, Stack Monitoring provides details into the performance of the WebLogic (WLS)cluster, specifically OACORE, the heart of EBS. Using our alarm example of **Concurrent Manager Completed Request Count Low**, we can use the WebLogic tier to determine if WLS is contributing the errored program runs. From within this tier we can see that JVM Memory, both heap and non-heap, utilization is not at 100%. The number of active thread pool threads that are hogging are low. And finally, there does not seem to be any waiting JDBC Connections. Based on this information WLS does not appear to have contributed to the errored programs.
+	Beginning with the **EBS Instance**, EBS admins are typically aware of the typical time it takes for a job to complete, and which jobs run long. Looking back we can identify if a particular program or several programs took longer to complete than is typical. The chart shows some variability in running time, but no area of concern. 
+
+	Since EBS is a java application, Stack Monitoring provides details into the performance of the WebLogic (WLS)cluster, specifically OACORE, the heart of EBS. Using our alarm example of **Concurrent Manager Completed Request Count Low**, we can use the WebLogic tier to determine if WLS is contributing the errored program runs by investigating for memory exhaustion. From within this tier we can see that JVM Memory, both heap and non-heap, utilization is well below 100%. The number of active thread pool threads that are hogging are low. And finally, there does not seem to be any waiting JDBC Connections. From this review WLS appears to be stable and healthy.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-9-home.png " ")
 
-	Reviewing the **EBS Database** tier, we can review the number of transactions committed and rolled back. The count of rolled back sessions is quite low. Additionally, transaction wait times across dimensions remains low as well. As a result, the database does not appear to be spending much time waiting.
+	Reviewing the **EBS Database** tier, we can review the number of transactions committed and rolled back. The count of rolled back sessions is quite low. Additionally, transaction wait times across dimensions remains low as well. As a result, the database does not appear to be spending much time waiting, and the committed transaction count indicates the database is not busier than normal.
 
-	Finally, we can review the health of the EBS hosts. Both the hosts CPU and memory are well below their maximum, thus ruling out host as a contributing factor. Based on the review of the EBS application stack using Stack View, we can rule out the application and infrastructure components as the cause of the errored programs.
+	Finally, we can review the health of the EBS hosts. Both the hosts CPU and memory are well below their maximum. Upon first look the host appears to be healthy and does not appear to be strapped for resources. 
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-10-home.png " ")
 
 ## Conclusion
 
-In this workshop, you have become familiar with Stack Monitoring and learned how to identify resources that are down and troubleshoot performance issues across an enterprise.
-
-You can use the Enterprise Summary to identify resources that are down, and quickly review all open alarms. You have learned to navigate a resource homepage, to help you review performance problems and navigate up and down the application stack. Finally, you leveraged the Stack View to review performance across an EBS application.
+In this workshop, we learned that **Stack Monitoring** begins collecting metrics **immediately** upon discovery. Using these metrics allows for meaningful and actionable alarming of critical application components. Investigating performance issues are easy with Stack Monitoring's resource associations. These associations allow you to easily triage performance issues across the application stack. And finally, we learned the **Stack View** provides the ability to research the health and performance of the entire EBS application stack from a single page reducing incident times. 
 
 For more information on Stack Monitoring, refer to the OCI documentation, **[Stack Monitoring](https://docs.oracle.com/en-us/iaas/stack-monitoring/index.html)**.
 
