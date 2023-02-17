@@ -2,21 +2,21 @@
 
 ## Introduction
 
-In this lab, you will review the status and performance of an entire enterprise. You will leverage the Stack Monitoring Enterprise Summary page to identify the number of resources in a down state, and the number of open alarms by severity. Additionally, you will identify the list of Oracle Databases in a Not Reporting state. Learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, you will replace the Tablespace Utilization table, under the Oracle Database tier. 
+In this lab, you will review the status and performance of an entire enterprise. You will leverage the Stack Monitoring Enterprise Summary page to identify the number of resources that are down, and review the number of open alarms. Additionally, you will identify the list of Oracle Databases in a Not Reporting state. Learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, you will replace the Tablespace Utilization table, under the Oracle Database tier. 
 
 Estimated time: 10 minutes
 
 ### Objectives
 
-* Identify a list of resources in a down state across the enterprise
-* Review resources by type and state
+* Identify a resources that are down across the enterprise
+* Identify and review resources by type that are not up
 * Review open alarms by severity
-* Reviewing the performance of resources across an enterprise
-* Dynamic troubleshooting using the Enterprise Summary
+* Review the performance of resources across an enterprise
+* Replace a metric table to Dynamic troubleshoot a storage issue using the Enterprise Summary
 
 ### Prerequisites
 
-* Completion of the preceding labs in this workshop
+* Obtain access to the environment covered in preceding lab in this workshop.
 
 ## Task 1: Identify a list of resources in a down state across the enterprise
 
@@ -27,17 +27,19 @@ Estimated time: 10 minutes
 2. Identify resources in a **Down** state
 
 
-	Stack Monitoring Enterprise Summary page opens. The Enterprise Summary pages is an out-of-the-box troubleshooting and summary page of resources across your enterprise. The troubleshooting begins with the **Status Summary**. Locate the **Status Summary** doughnut chart on the upper left side of the page. You can see a count of resources by status across the enterprise. This chart provides a quick visualization of how many resources are in a **Down** or **Not Reporting** state across your enterprise. Let's investigate which resources are **Down**. 
+	Stack Monitoring Enterprise Summary page opens. The Enterprise Summary page provides an overall health and performance of your entire enterprise. The upper tier provides insight to quickly identify any resources that are **Down** and **Not Reporting**. Locate the **Status Summary** doughnut chart on the upper left side of the page. This chart provides a quick visualization of how many resources are in a **Down** or **Not Reporting** state across your enterprise. You can see a count of resources by status across the enterprise. Let's investigate which resources are **Down**. 
 
 	![Oracle Cloud console, Enterprise Summary](images/1-1-ent-sum.png " ")
 
-	Find the **Down** label in the Status summary chart.  Clicking **Down**, invokes a slide out reporting all of the resources in a down state. The slide out filter can be changed to quickly view all resources in any given state. This list can be sorted by name, status, and type. You can also search by name to quickly view the status of any given resource you may be concerned about.  Clicking a resource name, will navigate you to that resource's homepage to continue an investigation. We will cover resource homepages later in this lab.
+	Find the **Down** label in the Status summary chart.  Clicking **Down**, opens a slide out reporting all of the resources in a down state. The slide out filter can be changed to quickly view all resources in any given state. This list can be sorted by name, status, and type. You can also search by name to quickly view the status of any given resource you may be concerned about.  Clicking a resource name, will navigate you to that resource's homepage to continue an investigation. We will cover resource homepages later in this lab.
 
 	![Oracle Cloud console, Enterprise Summary](images/1-2-ent-sum.png " ")
 
 3. Review all resources that are **Not Reporting**
 
-	Now that we have identified resources in a down state, let's identify those that are **Not Reporting**. Using the Status filter located in the center of the fly-out, update the **Status** filter from **Down** to **Not reporting**. The table now displays all of the resources in a **Not Reporting** state. To return to the Enterprise Summary click the **Close** button in the lower left corner of the fly-out.
+	Now that we have identified resources in a down state, let's identify those that are **Not Reporting**. Not Reporting generally indicates the agent is no longer uploading data, Stack Monitoring realizes the data is stale, and updates the status to inform you there is an issue obtaining the resource's status. Alerts can be configured to alarm when the resource is Down and Not Reporting. 
+
+	Using the Status filter located in the center of the fly-out, update the **Status** filter from **Down** to **Not reporting**. The table now displays all of the resources in a **Not Reporting** state. Clicking a resource name will navigate you that resource's homepage, where you can leverage the **Related Resources** to identify the agent monitoring the resource, and navigate to the agent's homepage to troubleshoot. We'll cover navigating a resources relationships in a later lesson. For now, let's return to the Enterprise Summary. Click the **Close** button in the lower left corner of the fly-out.
 
  	![Oracle Cloud console, Enterprise Summary](images/1-3-ent-sum.png " ")
 
@@ -83,11 +85,11 @@ Estimated time: 10 minutes
 
 2. Refine the list of open alarms
 
- 	Lets filter the list to focus on only the **Critical** alerts. Using the **Severity filter**, located above the column **Triggered time** change the severity from **All** to **Critical**. The table now displays only the open alarms with a severity of **Critical**. 
+ 	Lets filter the list to focus on only the **Critical** alarms. Using the **Severity filter**, located above the column **Triggered time** change the severity from **All** to **Critical**. The table now displays only the open alarms with a severity of **Critical**. 
 
  	![Oracle Cloud console, Enterprise Summary](images/3-2-ent-sum.png " ")
 
- 	Clicking an alarm name will open a new tab in your browser to investigate and work the alarm within Oracle Cloud Infrastructure's monitoring service.
+ 	Clicking an alarm name will open a new tab in your browser to investigate and work the alarm within Oracle Cloud Infrastructure's Monitoring Service.
 
  	![Oracle Cloud console, Enterprise Summary](images/3-3-ent-sum.png " ")
 
@@ -97,7 +99,7 @@ Estimated time: 10 minutes
 
 1. Enterprise Summary tiers
 
-	The **Enterprise Summary** makes it easy to see the performance of nearly every resource within your enterprise. Stack Monitoring performance charts are organized by tier. The tiers are ordered in the same way troubleshooting is typically performed, with the Application specific tier at the top, web servers next, followed by database, and finally the hosts. Each chart provides the most recent value of the metrics collected. Scatter-plot charts display a value for every resource type that matches the tier, i.e. if you have 20 hosts, you will see 20 plots. Out-of-the-box, Tables provide the four highest consumed/utilized resources of a given metric. 
+	The **Enterprise Summary** makes it easy to see the performance of every resource within your enterprise. Stack Monitoring performance charts are organized by tier. The tiers are ordered in the same way troubleshooting is typically performed, with the Application specific tier at the top, web servers next, followed by database, and finally the hosts. Scatter-plot charts display a value for every resource type that matches the tier, i.e. if you have 20 hosts, you will see 20 data points. This allows you to visually identify if a single resource is being over utilized across the entire enterprise at a glance. Out-of-the-box, Tables provide the four highest consumed/utilized resources of a given metric. 
 
  	![Oracle Cloud console, Enterprise Summary](images/4-1-ent-sum.png " ")
 
@@ -129,9 +131,9 @@ Estimated time: 10 minutes
 
 1. Dynamic troubleshooting using the Enterprise Summary
 
-	The Enterprise Summary provides an overall perspective of the health and performance of your enterprise. Knowing that each organization and user is unique, the Enterprise Summary charts, tables, and tier names are customizable to meet the individual needs of the user at any given time. If you choose to update or replace what is displayed on the Enterprise Summary, you can save your changes permanently as your default. This can be especially helpful if you make several changes to the charts and tables while investigating an incident. Saving the configuration allows you to leave the Enterprise Summary and return later to the page with your updated view in tact. Once you complete your investigation, simply click **Restore default** to return the Enterprise Summary to out-of-the-box configuration. Let's see how this is done.
+	The Enterprise Summary provides an overall perspective of the health and performance of your enterprise. Knowing that each organization and user is unique, the Enterprise Summary charts, tables, and tier names are customizable to meet the individual needs of the user at any given time. If you choose to update or replace what is displayed on the Enterprise Summary, you can save your changes permanently as your default. This can be especially helpful if you make several changes to the charts and tables while investigating an incident. Saving the configuration allows you to leave the Enterprise Summary and return later to the page with your updated view intact. Once you complete your investigation, simply click **Restore default** to return the Enterprise Summary to out-of-the-box configuration. Let's see how this is done.
 
-	Updating a chart or table is easy, allowing you to investigate health and performance issues quickly. Let's imagine we have heard an EBS application is no longer processing. Using the upper tier of the Enterprise Summary we see the concurrent manager is no longer processing. Moving down the tier, we also see that the WebLogic tier is not longer processing. We identify that DB time is way up. Reviewing tablespace utilization, we see no tablespaces are full. Further down the stack, we identify a filesystem is full on the db host. These application performance symptoms could be explained if the Flash Recovery Area (FRA) has run out of space. Let's review the FRA across the enterprise using Stack Monitoring dynamic troubleshooting charts. To review the FRA utilization find the **Storage Utilization by Tablespace** under the Oracle Database tier. Begin by clicking the pencil icon in the top right of the table to invoke the slide-out. With the slide-out loaded, simply update the metric reported by selecting **FRA Utilization** (Fast Recovery Area) from the **Metric name** drop-down menu. With the metric updated to  FRA Utilization, select **Apply** in the lower left of the slide-out. 
+	Investigating health and performance issues are easy using dynamic troubleshooting. The Enterprise Summary allows you to easily swap out a metric table or chart with another. This allows you the ability to see the necessary metrics when troubleshooting issue quickly and easily. Let's imagine we have heard an EBS application is no longer processing requests. Using the upper tier of the Enterprise Summary we see the concurrent manager is no longer processing requests. Moving down the tier, we also see that the WebLogic tier is idle. We identify that DB time is way up. Reviewing tablespace utilization, we see no tablespaces are full. Further down the stack, we identify a filesystem is full on the db host. These application performance symptoms could be explained if the Flash Recovery Area (FRA) has run out of space. Let's review the FRA across the enterprise using Stack Monitoring dynamic troubleshooting charts. To review the FRA utilization find the **Storage Utilization by Tablespace** under the Oracle Database tier. Begin by clicking the pencil icon in the top right of the table to invoke the slide-out. With the slide-out loaded, simply update the metric reported by selecting **FRA Utilization** (Fast Recovery Area) from the **Metric name** drop-down menu. With the metric updated to  FRA Utilization, select **Apply** in the lower left of the slide-out. 
 
  	![Oracle Cloud console, Enterprise Summary](images/5-1-ent-sum.png " ")
 
