@@ -100,7 +100,7 @@ Estimated time: 15 minutes
 
 3. Reviewing an EBS application homepage
 
-	We can see that an EBS homepage is very similar to a standard resource homepage with a few exceptions. Properties show the type of resource and the OCID. Additionally, we see an overall availability of resources related to this EBS application, this includes resources such as the concurrent manager, notification mailer, and workflow manager, etc. Stack Monitoring  provides a summary of alarms for the EBS application and its members by severity. 
+	We can see that an EBS homepage is very similar to a standard resource homepage with a few exceptions. Properties show the type of resource and the OCID. Additionally, we see an overall availability of resources related to this EBS application, this includes resources such as the concurrent manager, notification mailer, and workflow manager, etc. Stack Monitoring provides a summary of alarms for the EBS application and its members by severity. 
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-5-home.png " ")
 
@@ -114,7 +114,7 @@ Estimated time: 15 minutes
 
 4.	Selecting the **Stack View** tab loads a unique feature to Stack Monitoring, the **Stack View**.
 
-	Locate the tab **Stack View** from the available menu items. **Stack View** provides a holistic view of the health and performance of the entire EBS application by combining resource specific charts all in one place. Let's begin by again adjusting the time frame from **Last 60 Minutes** to **Last 14 Days**. Now let's expand each tier. With each tier expanded, you can now get a complete view of the performance of your EBS application.  
+	Locate the tab **Stack View** from the available menu items. **Stack View** provides a holistic view of the health and performance of the entire EBS application by combining resource specific charts all in one place. Let's begin by again adjusting the time frame from **Last 60 Minutes** to **Last 14 Days**. Now let's expand each tier. With each tier expanded, you can now get a complete view of the performance of your EBS application. 
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-8-home.png " ")
 
