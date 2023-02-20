@@ -1,0 +1,5 @@
+{
+    "scopes": ["PLAYLIST", "EDGE"], 
+    "packagingConfigId": "<< Packaging Configuration ID>>", 
+    "assetIds": ["<<Master Playlist Ingested Asset ID >>"]
+}

@@ -16,6 +16,9 @@ You will use it in this lab to deploy terraform stacks without needing to instal
 
 Estimated time: 30 minutes
 
+Watch the video below for a quick walk-through of the lab. 
+[Deploy Baseline Landing Zone](videohub:1_mf98gcul)
+
 ### Objectives
 
 In this lab, you will:
@@ -43,10 +46,9 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
 4. In the Stack Information section, enter:
 
-    |Property|Value|
+    |Varibale Name|Value|
     |--|--|
-    |Name|esblz-landing-zone|
-    |Description|Enterprise scale baseline landing zone developed by OCI|
+    |Parent compartment name|`LZ_Parent_Demo`|
     |Create in Compartment| tenancy (root)|
     |Terraform Version| leave the default option if you have the option to select it|
 
@@ -54,7 +56,28 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
 ## Task 2: Configure Variables
 
-1. Enter Tagging and Compartment Variables
+* Sample Variable Values   
+    |Variable|Value|
+    |--|--|
+    |Tag cost center|`Example_tag_cost_center`|
+    |Tag geo location|`Example_tag_geo_location`|
+    |Parent compartment name|`LZ_Parent_Demo`|
+    |Global Resources Control|Check the Box|
+    |Break glass user email list|example@test.com|
+    |VCN CIDR block|10.0.0.0/16|
+    |VCN DNS label|vcn|
+    |Shared service subnet CIDR block|10.0.6.0/24|
+    |Shared service subnet DNS label|shared|
+    |Bastion client CIDR block allow list|10.0.0.0/16, 10.0.0.0/24|
+    |Bastion subnet CIDR block|10.0.7.0/24|
+    |Use IPsec DRG?|Check the Box|
+    |CPE IP address|10.0.0.0|
+    |IPsec connection static routes|10.0.1.0/24|
+    |Security Admin Email Endpoints|example@test.com|
+    |Budget Admin Email Endpoints|example@test.com|
+    |Network Admin Email Endpoints|example@test.com|
+    
+* Enter Tagging and Compartment Variables
 
     * The tag fields correspond to freeform tags that are applied to resources created within the template. These can be used to identify the cost center and location of the resources. Each resource created is also given a default assigned value for the Description tag.
     * The parent compartment and other compartment name variables are used to rename the compartment structure. This includes the parent level compartment, security, network, and workload-specific compartments.
@@ -73,7 +96,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     * The landing zone provisions a VCN, nat gateway, internet gateway, and shared services subnets. You will need to input cidr blocks and dns labels.
     * The landing zone also provides options for connectivity using an Ipsec tunnel or a Fastconnect connection. In this lab however, it can remain disabled.
 
-    ![VCN Vars](./images/variables-vcn.png)
+    ![VCN Variables](./images/landing-zone-baseline-variable-2.png)
 
 4. Enter Security variables for Cloud Guard, Vulnerability Scanning Service, VCN Flow Logging, and Audit Logs.
 
@@ -81,14 +104,24 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     * VCN Flow Logs for the provisioned VCN subnets can be viewed in the Logging Analytics Dashboard. You can also enter subnet ocids to log traffic for externally created subnets. Audit Logging can also be enabled using the same variable which enables logging and stores them in an archive bucket.
     * The bastion provides restricted and time-limited access to cloud resources without public-facing endpoints. There are two types of bastion sessions, managed SSH and port forwarding, which depends on the type of target resource. Input the cidr of the bastion subnet as well as the cidr blocks the bastion can connect to.
 
-    ![Security Vars](./images/variables-security.png)
+    ![Security Variables](./images/landing-zone-baseline-variable-3.png)
 
-5. Enter Monitoring variables to control the alarms and notifications.
-    * The alarms service allows you to recieve email alerts based on event conditions. The Landing Zone enables these notifications for networking, security, and budget related alerts. 
+5. Enter the sample variables for creation of Bastions, Dynamic Routing Gateway(DRG) and Monitoring. 
 
-    ![Monitoring Vars](./images/variables-connectivity-monitoring.png)
+    ![Bastion Service Variables](./images/landing-zone-baseline-variable-4.png)
+    ![All Stack Variables Snapshot](./images/landing-zone-baseline-variable-6.png)
+    
 
-6. Click on Next in the bottom of the page to proceed to the Review page. After Reviewing the variable values that were modified, click on Create button to create the Stack.
+6. Create the Stack.
+    ![Stack Creation Step](./images/landing-zone-stack-info.png)
+    
+7. Wait for the atleast ten minutes and then the Stack Jobs Status. 
+
+8. Gather the Provisioned Resources OCID Value. 
+    * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output 
+
+![Stack Created Resources OCID Snapshot](./images/landing-zone-stack-output.png)
+
 
 
 ## Task 3: Provisioning the Infrastructure
@@ -110,8 +143,10 @@ Note: in case of quota/service limit/permission issues, Apply job will fail and 
 
 You may now proceed to the next lab.
 
-<!-- ## Acknowledgements -->
 
-<!-- * **Author** - Lucas Gomes
-* **Contributors** -  Jonathan Schreiber, Rishi Johari, Tim Graves
-* **Last Updated By/Date** - Lucas Gomes, July 2021 -->
+## Acknowledgements
+
+* **Author** - LiveLabs Team
+* **Contributors** - LiveLabs Team, Arabella Yao
+* **Last Updated By/Date** - Arabella Yao, September 2022
+
