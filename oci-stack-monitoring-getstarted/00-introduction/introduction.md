@@ -22,7 +22,7 @@ In this workshop, the following topics will be covered:
   - Identify a list of resources in a down state across the enterprise
   - Review open alarms across an enterprise
   - Review the performance of resources across an enterprise
-  - Replace a metric table to troubleshoot a database flash recovery area
+  - Review available Flash Recovery Area of an Oracle Database by replacing a table
 * Homepages
   - Review a resource homepage
   - Review Performance menu including, alarms, charts, tables, and Stack View

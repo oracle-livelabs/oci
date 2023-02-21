@@ -111,7 +111,7 @@ Estimated time: 10 minutes
 
 2. Scatter-plots charts
 
-	Scatter-plot charts provide a visual representation of the performance every resource in your enterprise. Using the scatter-plot charts we can see the IOPS and CPU of an Oracle Database to understand how heavily utilized the database is. This makes it easy to identify if one or more resources are performing differently than the others. For instance, an Oracle Database with a plot point at the top right corner represents a busy database, while a plot point at the bottom left is idle. If you identify a performance anomaly, clicking on the plot point opens that resource's homepage to begin your investigation. We'll review this workflow in the next lesson.
+	Scatter-plot charts provide a visual representation of the performance every resource in your enterprise. Using the scatter-plot charts we can correlate any two metrics at the same time. For example we can correlate IOPS and CPU of an Oracle Database to understand how heavily utilized the database is. This makes it easy to identify if one or more resources are performing differently than the others. For instance, an Oracle Database with a plot point at the top right corner represents a busy database, while a plot point at the bottom left is idle. If you identify a performance anomaly, clicking on the plot point opens that resource's homepage to begin your investigation. We'll review this workflow in the next lesson.
 
  	![Oracle Cloud console, Enterprise Summary](images/4-3-ent-sum.png " ")
 
@@ -131,15 +131,15 @@ Estimated time: 10 minutes
 
 ## Task 5: Replace a metric table to Dynamic troubleshoot a storage issue using the Enterprise Summary
 
-1. Replace a metric table to dynamically troubleshoot FRA utilization
+1. Review WebLogic JVM utilization by replacing a chart
 
 	The Enterprise Summary provides an overall perspective of the health and performance of your enterprise. Knowing that each organization and user is unique, the Enterprise Summary charts, tables, and tier names are customizable to meet the individual needs of the user at any given time. If you choose to update or replace what is displayed on the Enterprise Summary, you can save your changes permanently as your default. This can be especially helpful if you need to troubleshoot several different resource types and metrics while investigating an incident. Saving the configuration allows you to leave the Enterprise Summary and return later to the page with your updated view intact. Once you complete your investigation, simply click **Restore default** to return the Enterprise Summary to out-of-the-box configuration. Let's see how this is done.
 
-	Investigating health and performance issues are easy using dynamic troubleshooting. The Enterprise Summary allows you to easily swap out a metric table or chart with another. This allows you the ability to see the necessary metrics when troubleshooting issue quickly and easily. Let's imagine we have heard a database appears to be in a hung state. Using the Enterprise Summary we can review the load on all the databases across the enterprise. From within the database tier, we can identify how busy all databases are using **DB Time** and **IOPS**. We can also review tablespace utilization. It may then be necessary to review the Flash Recovery Area (FRA). Let's review the FRA across all monitored databases. To review the FRA utilization find the **Storage Utilization by Tablespace** under the Oracle Database tier. Begin by clicking the pencil icon in the top right of the table to invoke the slide-out. With the slide-out loaded, simply change the metric to **FRA Utilization** (Fast Recovery Area) from the **Metric name** drop-down menu. With the metric updated to FRA Utilization, select **Apply** in the lower left of the slide-out. 
+	Investigating health and performance issues are easy using dynamic troubleshooting. The Enterprise Summary allows you to easily swap out any performance charts or tables with another. This allows you the ability to see the necessary metrics when troubleshooting issue quickly and easily. Let's imagine we have heard a a JVM is performing poorly. Using the Enterprise Summary we can review and correlate the performance of any two WebLogic metrics. From within the WebLogic tier, find the chart **CPU and Memory Utilization**. Let's review JVM heap utilization. Begin by clicking the pencil icon in the top right of the chart to invoke the slide-out. With the slide-out loaded, enable the **Advanced** features. Under the **X-Axis** replace Memory Utilization with **JVM Memory Utilization** and add a dimension name of **Type**, and dimension value of **Heap**. Finally, select **Apply** in the lower left of the slide-out. 
 
  	![Oracle Cloud console, Enterprise Summary](images/5-1-ent-sum.png " ")
 
-	We can now see the percent of FRA space used on databases with FRA enabled. Using the results of the table we can now determine whether FRA utilization played a role in causing the database to be hung.
+	We can now see the JVM Heap Memory utilization as well as the CPU performance of the WebLogic Servers. Using the results of the chart we can now correlation the performance of WebLogic servers with high JVM heap utilization with the same WebLogic server CPU performance.
 
  	![Oracle Cloud console, Enterprise Summary](images/5-2-ent-sum.png " ")
 
