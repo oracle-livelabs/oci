@@ -68,15 +68,9 @@ Estimated time: 15 minutes
 
 ## Task 4: Review application topology
 
-1. Locate **Members** under the Resources menu on the left side of the homepage.
+1. Locate **Related Resources** under the Resources menu on the left side of the homepage.
 
-	**Members** show associations that are part of another resource. For instance, a Concurrent Processor **contains** a concurrent processing node. We can see that relationship here. When reviewing the performance charts, should a performance issue be identified, using a relationship link, such as Concurrent Processing Node, allows easy access up and down the application stack. We'll cover this a more detail later. Now lets review all relationships with this concurrent manager.
-
-	![Oracle Cloud console, Stack Monitoring Homepages](images/4-1-home.png " ")
-
-2. Locate **Related Resources** under the Resources menu on the left side of the homepage.
-
-	Locate **Related Resources** in the left menu. Clicking **Related Resource** provides quick access to all resources associated with this resource. Using Related Resources we can easily identify which management agent monitors this concurrent manager. This is useful if the status of the EBS Concurrent Processing instance is Not Reporting, which is usually caused by problems with the agent uploading data. We can also identify the EBS Application this concurrent manager belongs to. Now let's put it all together.
+	Locate **Related Resources** in the left menu. Clicking **Related Resource** provides quick access to all resources associated with this resource. Using Related Resources we can also identify the EBS Application this concurrent manager belongs to. Additionally, we can identify which management agent monitors this concurrent manager. This is useful if the status of the EBS Concurrent Processing instance is Not Reporting, which is usually caused by problems with the agent uploading data. Now let's put it all together.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/4-2-home.png " ")
 
@@ -84,9 +78,15 @@ Estimated time: 15 minutes
 
 1. Identify an alarm
 
+	Let's begin by clicking the count of open alarms in a **Warning** state at the top of the homepage. 
+
+	![Oracle Cloud console, Stack Monitoring Homepages](images/5-0-home.png " ")
+
+	With the alarms tab opened, we can see an open alarm **EBS Concurrent Request with Errors**. Clicking the alarm name opens a new tab in the OCI Monitoring Service.
+
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-1-home.png " ")
 
-	Let's begin by clicking the count of open alarms in a **Warning** state at the top of the homepage. With the alarms tab opened, we can see an open alarm **EBS Concurrent Request with Errors**. Clicking the alarm name opens a new tab in the OCI Monitoring Service. From this page we see a chart with rate of requests over time, with an overlay of the alarm status noted in red within the chart. Using the color we can easily identify if this alarm is flapping. Let's close the tab and return to Stack Monitoring.
+	From this page we see a chart with rate of requests over time, with an overlay of the alarm status noted in red within the chart. Using the color we can easily identify if this alarm is flapping. Let's close the tab and return to Stack Monitoring.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-2-home.png " ")
 

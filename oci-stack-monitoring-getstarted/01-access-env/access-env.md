@@ -59,10 +59,9 @@ Estimated time: 5 minutes
 
 2. Connect to the correct **Region** and **Compartment**
 
-   On the Stack Monitoring Enterprise Summary page, select the following from the pulldown menus:
+   On the Stack Monitoring Enterprise Summary page, select the following from the drop-down menus:
     - Region: **US East (Ashburn)**
     - Compartment : **root/eStore/OracleApps**
-    - Performance metric period : Last **Last 60 minutes**
 
    ![Oracle Cloud console, Stack Monitoring Enterprise Summary page](images/2-3-access.png " ")
 

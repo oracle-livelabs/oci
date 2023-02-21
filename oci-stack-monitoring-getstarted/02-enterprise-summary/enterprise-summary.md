@@ -12,7 +12,7 @@ Estimated time: 10 minutes
 * Identify application outages and resources that are down
 * Review open alarms by severity
 * Review the performance of resources across an enterprise
-* Replace a metric table to dynamically troubleshoot FRA utilization
+* Replace a metric table to Dynamic troubleshoot a storage issue using the Enterprise Summary
 
 ### Prerequisites
 
@@ -135,11 +135,11 @@ Estimated time: 10 minutes
 
 	The Enterprise Summary provides an overall perspective of the health and performance of your enterprise. Knowing that each organization and user is unique, the Enterprise Summary charts, tables, and tier names are customizable to meet the individual needs of the user at any given time. If you choose to update or replace what is displayed on the Enterprise Summary, you can save your changes permanently as your default. This can be especially helpful if you need to troubleshoot several different resource types and metrics while investigating an incident. Saving the configuration allows you to leave the Enterprise Summary and return later to the page with your updated view intact. Once you complete your investigation, simply click **Restore default** to return the Enterprise Summary to out-of-the-box configuration. Let's see how this is done.
 
-	Investigating health and performance issues are easy using dynamic troubleshooting. The Enterprise Summary allows you to easily swap out any performance charts or tables with another. This allows you the ability to see the necessary metrics when troubleshooting issue quickly and easily. Let's imagine we have heard a a JVM is performing poorly. Using the Enterprise Summary we can review and correlate the performance of any two WebLogic metrics. From within the WebLogic tier, find the chart **CPU and Memory Utilization**. Let's review JVM heap utilization. Begin by clicking the pencil icon in the top right of the chart to invoke the slide-out. With the slide-out loaded, enable the **Advanced** features. Under the **X-Axis** replace Memory Utilization with **JVM Memory Utilization** and add a dimension name of **Type**, and dimension value of **Heap**. Finally, select **Apply** in the lower left of the slide-out. 
+	Investigating health and performance issues are easy using dynamic troubleshooting. The Enterprise Summary allows you to easily swap out any performance charts or tables with another. This allows you the ability to see the necessary metrics when troubleshooting issue quickly and easily. Let's imagine we have received an alert for high JVM heap utilization. Using the Enterprise Summary we can review and correlate the performance of the JVM's heap utilization with any other WebLogic metric. From within the WebLogic tier, find the chart **CPU and Memory Utilization**. Begin by clicking the pencil icon in the top right of the chart to invoke the slide-out. With the slide-out loaded, enable the **Advanced** features. Under the **X-Axis** replace Memory Utilization with **JVM Memory Utilization** and add a dimension name of **Type**, and dimension value of **Heap**. Finally, select **Apply** in the lower left of the slide-out. 
 
  	![Oracle Cloud console, Enterprise Summary](images/5-1-ent-sum.png " ")
 
-	We can now see the JVM Heap Memory utilization as well as the CPU performance of the WebLogic Servers. Using the results of the chart we can now correlation the performance of WebLogic servers with high JVM heap utilization with the same WebLogic server CPU performance.
+	We can now see the all JVM Heap Memory utilization value across all monitored resources. Using the data provided in the chart we can now correlate the performance of WebLogic servers heap utilization with the sWebLogic server CPU performance.
 
  	![Oracle Cloud console, Enterprise Summary](images/5-2-ent-sum.png " ")
 
