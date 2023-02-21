@@ -86,11 +86,11 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-1-home.png " ")
 
-	From this page we see a chart with rate of requests over time, with an overlay of the alarm status noted in red within the chart. Using the color we can easily identify if this alarm is flapping. Let's close the tab and return to Stack Monitoring.
+	From this page we see a chart with rate of requests over time, with an overlay of the alarm status noted in red within the chart. Using the color we can easily identify if this alarm is flapping. 
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-2-home.png " ")
 
-	Let's review the charts associated with this Concurrent Manager by clicking the **Performance** menu on the left side of the page. Next select the **Charts** tab. Now let's expand the charts to show the **Last 7 Days**. Reviewing the chart, **Completed Concurrent Requests**, we do not see a spike in jobs resulting in errors. The chart **Capacity Utilization of Concurrent Managers** does not show any concurrent managers nearing 100% capacity. Reviewing the other metrics, all recent activity appears stable. Now let's review the overall health and performance of the entire EBS application stack.
+	Close the tab and return to Stack Monitoring. Let's review the charts associated with this Concurrent Manager by clicking the **Performance** menu on the left side of the page. Next select the **Charts** tab. Now let's expand the charts to show the **Last 7 Days**. Reviewing the chart, **Completed Concurrent Requests**, we do not see a spike in jobs resulting in errors. The chart **Capacity Utilization of Concurrent Managers** does not show any concurrent managers nearing 100% capacity. Reviewing the other metrics, all recent activity appears stable. Now let's review the overall health and performance of the entire EBS application stack.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-3-home.png " ")
 
