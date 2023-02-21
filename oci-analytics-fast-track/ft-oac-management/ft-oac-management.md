@@ -87,4 +87,4 @@ Nesta sessão você aprendeu a realizar tarefas de gerenciamento do Oracle Analy
 ## Autoria
 
 - **Autores** - Breno Comin, Guilherme Galhardo, Isabella Alvarez, Isabelle Dias, Thais Henrique
-- **Último Updated Por/Data** - Isabella Alvarez, Nov/2022
+- **Último Updated Por/Data** - Gabriela Miyazima, Fev/2023

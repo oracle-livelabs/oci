@@ -228,4 +228,4 @@ Congratulations on completing this lab!
     * Vaishnavi Kotturu - Oracle OCI Vision Services
 
 * **Last Updated By/Date**
-    * Vaishnavi Kotturu - Oracle OCI Vision Services, February 2022
+    * Vaishnavi Kotturu - Oracle OCI Vision Services, February 2023
