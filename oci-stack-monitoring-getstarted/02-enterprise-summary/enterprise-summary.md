@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will review the status and performance of an application and its underlying tech stack. You will leverage the Stack Monitoring Enterprise Summary page to identify the resources that are down, and review the open alarms. Additionally, you will identify the list of Oracle Databases in a Not Reporting state. Learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, you will review Flash Recovery Area (FRA) utilization by replacing the Tablespace Utilization table. 
+In this lab, you will understand how you can the Enterprise Summary to monitor the status and performance of an application and its underlying tech stack. You will review the overall availability status of all resources, identify the resources that are down, and review the open alarms. Additionally, you will identify the list of Oracle Databases in a Not Reporting state. Learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, as you are monitoring each tier, you will learn how to interact with the Enterprise Summary UI to dynamically view other metrics. 
 
 Estimated time: 10 minutes
 
@@ -12,7 +12,7 @@ Estimated time: 10 minutes
 * Identify application outages and resources that are down
 * Review open alarms by severity
 * Review the performance of resources across an enterprise
-* Replace a metric table to Dynamic troubleshoot a storage issue using the Enterprise Summary
+* Dynamically investigating other performance metrics
 
 ### Prerequisites
 
@@ -39,7 +39,7 @@ Estimated time: 10 minutes
 
 	Now that we have identified resources in a down state, let's identify those that are **Not Reporting**. Not Reporting generally indicates the agent is no longer uploading data. Stack Monitoring updates the status of monitored resources to **Not Reporting** to inform you there is an issue obtaining the resource's status. Alarms can be configured to notify you when the resource is Down or Not Reporting. 
 
-	Using the Status filter located in the center of the fly-out, update the **Status** filter from **Down** to **Not reporting**. The table now displays all of the resources in a **Not Reporting** state. Clicking a resource name will navigate you that resource's homepage, where you can leverage the Stack Monitoring resource associations to identify the agent monitoring the resource and navigate to the agent's homepage to troubleshoot. We'll cover navigating a resources relationships in a later lesson. For now, let's return to the Enterprise Summary. Click the **Close** button in the lower left corner of the fly-out.
+	Using the Status filter located in the center of the slide-out, update the **Status** filter from **Down** to **Not reporting**. The table now displays all of the resources in a **Not Reporting** state. Clicking a resource name will navigate you that resource's homepage, where you can leverage the Stack Monitoring resource associations to identify the agent monitoring the resource and navigate to the agent's homepage to troubleshoot. We'll cover navigating to related resources in a later lesson. For now, let's return to the Enterprise Summary. Click the **Close** button in the lower left corner of the slide-out.
 
  	![Oracle Cloud console, Enterprise Summary](images/1-3-ent-sum.png " ")
 
@@ -49,7 +49,7 @@ Estimated time: 10 minutes
 
  	![Oracle Cloud console, Enterprise Summary](images/2-1-ent-sum.png " ")
 
-	The **Status by resource type** chart allows you to easily identify which tiers of your application has availability issues. Each bar represents each tier of the application stack, (e.g. host, database, application server). Using the status colors you can quickly assess if all resources within that tier are up, or identify the tier that has resources outages. The reporting of an application stack, such as E-Business Suite and PeopleSoft, is unique. Each bar represents an application and its components, this allows you to identify if any individual components of an application is down or not reporting. Should you identify an area of concern with an application, clicking the bar will navigate you to that resource's homepage. We'll review homepages in the next lesson.
+	The **Status by resource type** chart allows you to easily identify which tiers of your application has availability issues. Each bar represents each tier of the application stack, (e.g., host, database, application server). Using the status colors, you can quickly assess if all resources within that tier are up, or identify the tier that has resources outages. The reporting of an application stack, such as E-Business Suite and PeopleSoft, is unique. Each bar represents an application and its components, this allows you to identify if any individual component of an application is down or not reporting. Should you identify an area of concern with an application, clicking the bar will navigate you to that resource's homepage. We'll review homepages in the next lesson.
 
 2. Identify resources by resource type that are **Not Reporting**
 
@@ -61,7 +61,7 @@ Estimated time: 10 minutes
 
  	![Oracle Cloud console, Enterprise Summary](images/2-3-ent-sum.png " ")
 
-	To return to the Enterprise Summary click the **Close** button in the lower left corner of the fly-out.
+	To return to the Enterprise Summary click the **Close** button in the lower left corner of the slide-out.
 
 3. Reset Status by resource type chart
 	
@@ -103,7 +103,7 @@ Estimated time: 10 minutes
 
  	![Oracle Cloud console, Enterprise Summary](images/4-1-ent-sum.png " ")
 
-	Stack Monitoring makes it easy to troubleshoot any resource type and any metric at any time. All performance charts and tables can be modified or replaced to help identify problems or troubleshooting a specific performance problem. For example host metrics such as Disk Activity and Network Activity to correlate performance of network read and writes. 
+	Stack Monitoring makes it easy to troubleshoot any resource type and any metric at any time. All performance charts and tables can be modified or replaced to help identify problems or troubleshooting a specific performance problem. The Enterprise Summary allows you to update a chart to display any two host metrics. If you have concerns regarding network storage latency you can update a scatter-plot to Disk Activity and Network Activity to correlate the performance of network read and writes. 
 
  	![Oracle Cloud console, Enterprise Summary](images/4-2-ent-sum.png " ")
 
@@ -111,7 +111,7 @@ Estimated time: 10 minutes
 
 2. Scatter-plots charts
 
-	Scatter-plot charts provide a visual representation of the performance every resource in your enterprise. Using the scatter-plot charts we can correlate any two metrics at the same time. For example we can correlate IOPS and CPU of an Oracle Database to understand how heavily utilized the database is. This makes it easy to identify if one or more resources are performing differently than the others. For instance, an Oracle Database with a plot point at the top right corner represents a busy database, while a plot point at the bottom left is idle. If you identify a performance anomaly, clicking on the plot point opens that resource's homepage to begin your investigation. We'll review this workflow in the next lesson.
+	Scatter-plot charts provide a visual representation of the performance of every resource in your enterprise. Using the scatter-plot charts we can correlate any two metrics at the same time. For example we can correlate IOPS and CPU of an Oracle Database to understand how heavily utilized the database is. This makes it easy to identify if one or more resources are performing differently than the others. For instance, an Oracle Database with a data point at the top right corner represents a busy database, while a data point at the bottom left is idle. If you identify a performance anomaly, clicking on the data point will allow you to review the trend of that metric.
 
  	![Oracle Cloud console, Enterprise Summary](images/4-3-ent-sum.png " ")
 
@@ -125,25 +125,25 @@ Estimated time: 10 minutes
 
  	![Oracle Cloud console, Enterprise Summary](images/4-5-ent-sum.png " ")
 
- 	We can now see a list of the top 20 most heavily utilized filesystems within the enterprise. Should one of the filesystems cause concern, clicking any of the resource names will navigate you to that resource's homepage for further investigation. For example, when investigating filesystem utilization it is good to review the growth over time to understand if more space should be added, and if so how much. From a Stack Monitoring host homepage you can chart the growth of the filesystem over time using the **Filesystem Utilization** chart. We'll review resource homepages in a later lesson.
+ 	We can now see a list of the top 20 hosts with the most heavily utilized filesystems. Should one of the hosts' filesystems cause concern, clicking any of the resource names will navigate you to that resource's homepage for further investigation. For example, when investigating filesystem utilization it is good to review the growth over time to understand if more space should be added, and if so how much. From a Stack Monitoring host homepage you can chart the growth of the filesystem over time using the **Filesystem Utilization** chart. We'll review resource homepages in a later lesson.
 
  	![Oracle Cloud console, Enterprise Summary](images/4-6-ent-sum.png " ")
 
-## Task 5: Replace a metric table to Dynamic troubleshoot a storage issue using the Enterprise Summary
+## Task 5: Dynamically investigating other performance metrics
 
-1. Review WebLogic JVM utilization by replacing a chart
+1. Review WebLogic JVM Memory Utilization
 
-	The Enterprise Summary provides an overall perspective of the health and performance of your enterprise. Knowing that each organization and user is unique, the Enterprise Summary charts, tables, and tier names are customizable to meet the individual needs of the user at any given time. If you choose to update or replace what is displayed on the Enterprise Summary, you can save your changes permanently as your default. This can be especially helpful if you need to troubleshoot several different resource types and metrics while investigating an incident. Saving the configuration allows you to leave the Enterprise Summary and return later to the page with your updated view intact. Once you complete your investigation, simply click **Restore default** to return the Enterprise Summary to out-of-the-box configuration. Let's see how this is done.
+	The Enterprise Summary provides an overall perspective of the health and performance of your enterprise. The out-of-the-box metric charts have been curated to highlight load, response, utilization, and errors within each tier of the application stack. Knowing that each organization and user is unique and monitoring is a dynamic activity, Enterprise Summary charts, tables, and tier names are customizable to meet the individual needs of the user at any given time. If you choose to update or replace what is displayed on the Enterprise Summary, you can save your changes permanently as your default. This can be especially helpful if you need to troubleshoot several different resource types and metrics while investigating an incident. Saving the configuration allows you to leave the Enterprise Summary and return later to the page with your updated view intact. Once you complete your investigation, simply click **Restore default** to return the Enterprise Summary to out-of-the-box configuration. Let's see how this is done.
 
-	Investigating health and performance issues are easy using dynamic troubleshooting. The Enterprise Summary allows you to easily swap out any performance charts or tables with another. This allows you the ability to see the necessary metrics when troubleshooting issue quickly and easily. Let's imagine we have received an alert for high JVM heap utilization. Using the Enterprise Summary we can review and correlate the performance of the JVM's heap utilization with any other WebLogic metric. From within the WebLogic tier, find the chart **CPU and Memory Utilization**. Begin by clicking the pencil icon in the top right of the chart to invoke the slide-out. With the slide-out loaded, enable the **Advanced** features. Under the **X-Axis** replace Memory Utilization with **JVM Memory Utilization** and add a dimension name of **Type**, and dimension value of **Heap**. Finally, select **Apply** in the lower left of the slide-out. 
+	Investigating health and performance issues are easy using the interactive features of the Enterprise Summary. You can easily swap out any performance charts or tables with another. This allows you the ability to see the necessary metrics when troubleshooting issues quickly and easily. Using the Enterprise Summary we can review and correlate the performance of the JVM's heap utilization with any other WebLogic metric. From within the WebLogic tier, find the chart **CPU and Memory Utilization**. Begin by clicking the pencil icon in the top right of the chart to invoke the slide-out. With the slide-out loaded, enable the **Advanced** features. Under the **X-Axis** replace Memory Utilization with **JVM Memory Utilization** and add a dimension name of **Type**, and dimension value of **Heap**. Finally, select **Apply** in the lower left of the slide-out. 
 
  	![Oracle Cloud console, Enterprise Summary](images/5-1-ent-sum.png " ")
 
-	We can now see the all JVM Heap Memory utilization value across all monitored resources. Using the data provided in the chart we can now correlate the performance of WebLogic servers heap utilization with the sWebLogic server CPU performance.
+	We can now see the all JVM Heap Memory utilization value across all monitored resources. Using the data provided in the chart we can now correlate the performance of WebLogic server's heap utilization with the WebLogic server CPU performance.
 
  	![Oracle Cloud console, Enterprise Summary](images/5-2-ent-sum.png " ")
 
-	With our troubleshooting over, let's reset the Enterprise Summary to the default configuration. To reset the page locate the **Restore default** link in the left menu bar under **View**. Once clicked, the page will reset to the out-of-the-box configuration. 
+	We are done reviewing JVM heap utilization, let's reset the Enterprise Summary to the default configuration. To reset the page locate the **Restore default** link in the left menu bar under **View**. Once clicked, the page will reset to the out-of-the-box configuration. 
 
  	![Oracle Cloud console, Enterprise Summary](images/5-3-ent-sum.png " ")
 
