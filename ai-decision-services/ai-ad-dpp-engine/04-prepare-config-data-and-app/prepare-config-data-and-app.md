@@ -260,6 +260,6 @@ The examples above demonstrate a Univariate Anomaly Detection use case. Users in
 
 ## Useful Resources
 
-- [List of available Data Flow Transformers](https://github.com/ganrad/oci/blob/main/ai-decision-services/ai-ad-dpp-engine/optional/Introduction-to-Transformers-for-Data-Preprocessing.md)
+- [List of available Data Flow Transformers](https://github.com/ganrad/oci/blob/main/ai-decision-services/ai-ad-dpp-engine/optional/introduction-to-transformers-for-data-preprocessing.md)
 
 [Go to *Lab 3*](#prev) | [Go to *Lab 5*](#next)

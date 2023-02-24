@@ -46,8 +46,7 @@ If you are running the workshop in a Paid Cloud Account, ensure you have the per
 
 ### More APM Workshops
 
--	**[Use OpenTracing for Microservices with Helidon Utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=917)**  Workshop
--	**[Trace a Native Cloud App Utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=916)** Workshop
+* Please visit: **[APM LiveLabs workshops](https://apexapps.oracle.com/pls/apex/f?p=133:100:111996377805307::::SEARCH:application+Performance+monitoring)**.
 
 
 
@@ -57,4 +56,4 @@ If you are running the workshop in a Paid Cloud Account, ensure you have the per
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, August 2022
+- **Last Updated By/Date** - Yutaka Takatsu, December, 2022

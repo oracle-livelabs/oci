@@ -767,7 +767,8 @@ Estimated Lab Time: 30 minutes.
 
 8. Ensure **PASTE PUBLIC KEYS** is selected under **Add SSH Keys**. Paste the public key copied earlier.
  
-   **NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1 OR choose a different AD.
+   **NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard.E4.Flex, VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1 OR choose a different AD.
+
    **NOTE:** If you already have your ssh-key available you can skip copying from cloud-shell and paste your own public key and use private key associated to that for accessing instance.
 
 9. Click **Create** and wait for Instance to be in **Running** state. 
@@ -791,7 +792,7 @@ You may now [proceed to the next lab](#next).
 
 ## Acknowledgements
 
-- **Author** - Arun Poonia, Senior Solutions Architect
+- **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Palo Alto Networks
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, July 2021
+- **Last Updated By/Date** - Arun Poonia, Oct 2022
