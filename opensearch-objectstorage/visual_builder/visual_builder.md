@@ -69,7 +69,7 @@ Redo this for the second connection:
 - Click on the *Service icon*
 - Choose the *opensearch* connection 
 - Click on *Servers* tab 
-- Then *Edit icon*
+- Then *Edit icon* 
 
 ![Connection OpenSearch](images/opensearch-vb-connection-opensearch.png)
 
