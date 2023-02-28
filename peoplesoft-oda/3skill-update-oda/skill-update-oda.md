@@ -35,11 +35,11 @@ Estimated Time: 15 minutes
 
   ![click on go to skill](./images/skill-update.png " ")
 
-   PSHCMbaseurl: It denotes the base url of application service. Replace with actual server, port and nodename.
+   PSHCMbaseurl: It denotes the base url of application service, this need to be replaced with the Masked REST Base URL from Lab 2, Task3. Also, ODA cannot resolve the hostname, so IP address to be used in place of servername. Below is an example.
 
       ```
       <copy>
-    http://servername:port/PSIGW/RESTListeningConnector/HCM_EMHBVUSZIWE/PTCB_APPL_SVC.v1 
+    http://IP address:port/PSIGW/RESTListeningConnector/HCM_EMHBVUSZIWE/PTCB_APPL_SVC.v1 
       </copy>
       ```
    PSHCMuserid: Set the peoplesoft proxy user who has access to invoke application services. To start with, Let us leave it, as it is (PSFTPROXY).
@@ -61,6 +61,6 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
 * **Contributors** - Deepak Kumar M, Principal Cloud Architect
-* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, October 2022
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, Feb 2023
 
 

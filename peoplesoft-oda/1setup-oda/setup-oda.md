@@ -80,20 +80,20 @@ In this part of the lab, we begin by deploying PeopleSoft PICASO from the Oracle
 
 
 
-## Task 3:  Clone and create a new digital assistant
+## Task 3:  Extend and create a new digital assistant
 
-In this lab, we start by cloning the PICASO digital assistant from PeopleSoft and building a new digital assistant specifically for this task.
+In this lab, we start by extending the existing PICASO digital assistant and building a new digital assistant specifically for this task.
 
-1.  From the previous task, once the PICASO digital assistant pull request is completed, navigate to the digital assistants' tab under development and click on the clone to begin the cloning process.
+1.  From the previous task, once the PICASO digital assistant pull request is completed, navigate to the digital assistants' tab under development and click on the extend to begin the cloning process.
 
-  ![Select the three dots and begin the cloning process](./images/oda-assistant-clone.png " ")
+  ![Select the three dots and begin the extend process](./images/oda-assistant-extend.png " ")
 
-    From the dialog box, click clone to begin the process
+    From the dialog box, click extend to begin the process
 
-  ![Cloning processes started](./images/oda-assistant-clone-start.png " ")
+  ![Extend processes started](./images/oda-assistant-extend-start.png " ")
 
-    PeopleSoft PICASO clone is created
-  ![Cloning processes started](./images/oda-assistant-clone-complete.png " ")
+    PeopleSoft PICASO digital assistant is created
+  ![Extend processes started](./images/oda-assistant-extend-complete.png " ")
 
 ## Task 4:  Create the channel for the skills
 
@@ -131,6 +131,6 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
 * **Contributors** - Deepak Kumar M, Principal Cloud Architect
-* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, October 2022
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, Feb 2023
 
 
