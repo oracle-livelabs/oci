@@ -87,22 +87,7 @@ To deploy the PeopleSoft Instance, in this lab, you will:
           "opr_pwd": "password"
           }</copy
           
-     connect_pwd - Ensure the password is between 6 and 30 characters in length. It must not contain any space, percent sign (%), slash (/), single quotation mark ( '), or double quotation mark (") characters.
-
-     access_pwd  - Ensure the password is no more than 8 characters in length. The first character must be a letter, and the remaining 7 characters may be a mixture of letters and numbers.
-
-     admin_pwd  - Ensure the password is between 8 and 30 characters in length. It must contain at least one lowercase letter, one uppercase letter, one number, and one special character, either underscore ( _ ), dash (-), or number sign (#).
-
-     weblogic\_admin\_pwd - Ensure that the password is between 8 and 30 characters in length with at least one lowercase letter and one uppercase letter. It must also contain one number or one special character (!@#$%^&).
-
-     webprofile\_user\_pwd - Ensure the password contains only alphanumeric characters and is between 8 and 30 characters in length.
-
-     gw\_user\_pwd - The password is not validated, but Oracle recommends that passwords include 8 or more characters
-
-     domain\_conn\_pwd - Ensure the password contains only alphanumeric characters and is between 8 and 30 characters in length.
-
-     opr_pwd - Ensure the password contains only alphanumeric characters and is no more than 8 characters in length.
-
+     
 
     ![Provide the custom cloud-init script in the management tab](./images/cloud-init-script.png " ")
     h. Now review your settings and click ***Create*** at the bottom of the page when you are ready
@@ -113,7 +98,7 @@ To deploy the PeopleSoft Instance, in this lab, you will:
      ![Once the orange box changes to a green box, your instance will have been successfully provisioned](./images/compute-provisioning.png " ")
      ![Compute instance successfully provisioned](./images/compute-provisioned.png " ")
 
- *Important:* The compute VM might take around 2 hours to completely install and configure the PeopleSoft environment.
+
 ## Task 2: Access the PeopleSoft Application 
 
 
