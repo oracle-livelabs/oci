@@ -92,7 +92,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-2-home.png " ")
 
-	Close the tab and return to Stack Monitoring. Let's review the charts associated with this Concurrent Manager by clicking the **Performance** menu on the left side of the page. Next select the **Charts** tab. Now let's expand the chart timeframe to show the **Last 7 Days**. Reviewing the chart, **Completed Concurrent Requests**, there does not appear to be a spike in completed concurrent requests with errors. Hovering over the legend within the chart **Capacity Utilization of Concurrent Managers**, we can see each of the concurrent managers appear to be at 100% capacity. This may indicate an issue with concurrent manager capacity that may need to be investigated. Now let's review the overall health and performance of the entire EBS application stack.
+	Close the tab and return to Stack Monitoring. Let's review the charts associated with this Concurrent Manager by clicking the **Performance** menu on the left side of the page. Next select the **Charts** tab. Now let's expand the chart time frame to show the **Last 7 Days**. Reviewing the chart, **Completed Concurrent Requests**, there does not appear to be a spike in completed concurrent requests with errors. Hovering over the legend within the chart **Capacity Utilization of Concurrent Managers**, we can see each of the concurrent managers appear to be at 100% capacity. This may indicate an issue with concurrent manager capacity that may need to be investigated. Now let's review the overall health and performance of the entire EBS application stack.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-3-home.png " ")
 
@@ -122,7 +122,7 @@ Estimated time: 15 minutes
 
 	Beginning with the **EBS Instance**, EBS admins are typically aware of the typical time it takes for a request to complete, and which requests run long. We can again hover over a data point and look for any correlation across all charts on the page. Reviewing the EBS tier we can review the five worst programs by average running time and max running time. Within the Concurrent Manager tier we can again review the percentage of requests that have errored, as well as review long active concurrent requests.
 
-	Since EBS is a java application, Stack Monitoring provides details into the performance of the WebLogic (WLS)cluster, specifically OACORE, the heart of EBS. Using the chart **JVM Memory Utilization** we can identify if WLS is starved for memory. Or quickly identify if there are a large number of hogging threads using **Thread Pool Threads**. Or maybe you need to review the number of threads waiting using **JDBC Connections** chart.
+	Since EBS is a java application, Stack Monitoring provides details into the performance of the WebLogic (WLS) cluster, specifically OACORE, the heart of EBS. Using the chart **JVM Memory Utilization** we can identify if WLS is starved for memory. Or quickly identify if there are a large number of hogging threads using **Thread Pool Threads**, or review the number of threads waiting using **JDBC Connections** chart.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-9-home.png " ")
 
@@ -132,9 +132,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-10-home.png " ")
 	
-	In this lesson we used a previously created alarm to alert the user if any concurrent manager jobs complete with errors. During the exercise we reviewed various performance metrics across the application stack. We leveraged Stack Monitoring's topology to navigate between resources to help triage the alert. We were not able to identify any apparent cause for the failures. At this time the next step would be to connect to the concurrent manager server and review the error messages written to the logs. 
-
-
+	In this lesson we used a previously created alarm to alert the user if any concurrent manager jobs complete with errors. During the exercise we reviewed various performance metrics across the application stack. We leveraged Stack Monitoring's topology to navigate between resources to help triage the alert. Finally, we leveraged Stack View to review the performance of the entire EBS application stack.
 
 ## Conclusion
 
