@@ -49,6 +49,8 @@ STREAM_USERNAME = (SAMPLE) tenancy/oracleidentitycloudservice/name@domain.com/oc
 
 OPENSEARCH_API_ENDPOINT = (SAMPLE) https://amaaaaaaaa.opensearch.eu-frankfurt-1.oci.oraclecloud.com:9200
 OPENSEARCH_HOST = (SAMPLE) amaaaaaaaa.opensearch.eu-frankfurt-1.oci.oraclecloud.com
+OPENSEARCH_USER = opensearch-user
+OPENSEARCH_PWD = (SAMPLE) LiveLab--123
 
 OIC_HOST = (SAMPLE) opensearch-oic-namespace-fr.integration.ocp.oraclecloud.com
 
@@ -277,9 +279,18 @@ Go the menu
 - Name: *opensearch-cluster*
 - Click *Next*
 
+![Menu Cluster](images/opensearch-cluster-security.png)
+
+On the second screen (Configure security), 
+- Username: *opensearch-user*
+- Password (for ex): *LiveLab--123*
+- Confirm Password: *LiveLab--123*
+
+After creating the compartment, copy the user/password in your text editor. *##OPENSEARCH\_USER##* and *##OPENSEARCH\_PWD##*. We will need them later.
+
 ![Create Cluster](images/opensearch-cluster2.png)
 
-On the second screen (configure nodes), 
+On the third screen (configure nodes), 
 - Keep the default: *Development*
 - Click *Next*
 
