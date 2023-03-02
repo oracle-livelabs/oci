@@ -51,4 +51,4 @@ In order to view in the console and complete the following labs, you can check t
     * Vaishnavi Kotturu - Oracle OCI Vision Services
 
 * **Last Updated By/Date**
-    * Vaishnavi Kotturu - Oracle OCI Vision Services, February 2023
+    * Vaishnavi Kotturu - Oracle OCI Vision Services, February 2022

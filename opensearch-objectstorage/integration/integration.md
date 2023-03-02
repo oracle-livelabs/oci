@@ -246,9 +246,6 @@ Fill the Connection details:
 Fill the Connection details:
 - Connection URL = *##OPENSEARCH\_API\_ENDPOINT##*
     - ex: https://xxxx.eu-frankfurt-1.functions.oci.oraclecloud.com/20181201/functions/ocid1.fnfunc.oc1.eu-frankfurt-1.aaaaaaabbbbb
-- Security Policy: *Basic Authentication*
-- Username:  *##OPENSEARCH\_USER##* (ex: opensearch-user)
-- Password:  *##OPENSEARCH\_PWD##* (ex: LiveLab--123)
 - Agent Group: *OPENSEARCH\_AGENT\_GROUP*
 - *Save / Test / Save* until 100%
 

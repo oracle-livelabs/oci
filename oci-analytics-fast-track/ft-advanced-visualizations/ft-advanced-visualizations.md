@@ -160,11 +160,11 @@ Vamos utilizar as Ações de Dados para analisar mais profundamente os dados de 
 
 Agora toda vez que você clicar com o botão direito do mouse sobre algum dado que você queria explorar mais (em seu Dashboard atual) você verá a Ações de Dados que acabamos de criar pronta para ser usada.
 
-5. Clique com o botão direito sobre o ponto referente a **Novembro de 2014** no gráfico "Vendas por Data do Pedido (Mês), Outliers", localize a Ações de Dados "Detalhes" que acabamos de criar e clique nela.
+5. Clique com o botão direito sobre a barra **"Bahia"** no gráfico "Count of Records", localize a Ações de Dados "Detalhes" que acabamos de criar e clique nela.
 
 ![Use a Data Actions](./images/data-actions-34.png)
 
-Você será direcionado para a Tela **Detalhe** onde você poderá facilmente explorar outras informações associadas ao ponto "Novembro de 2014" que havíamos selecionado anteriormente. Tudo isso porque a "Ações de Dados" além de ter te redirecionado para essa nova tela também criou um filtro com o parâmetro "Novembro 2014" já selecionado
+Você será direcionado para a Tela **Detalhe** onde você poderá facilmente explorar outras informações associadas a localização "Bahia" que havíamos selecionado anteriormente.Tudo isso porque a "Ações de Dados" além de ter te redirecionado para essa nova tela também criou um filtro com o parâmetro "Bahia" já selecionado
 
 ![Entendendo Data Actions](./images/data-actions-35.png)
 
@@ -252,4 +252,4 @@ Nesta sessão você aprendeu a utilizar recursos avançados para criação de Da
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Guilherme Galhardo, Fev/2023
+- **Último Update Por/Date** - Thais Henrique, Nov/2022

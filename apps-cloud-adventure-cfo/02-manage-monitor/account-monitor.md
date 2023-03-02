@@ -35,13 +35,30 @@ In this activity, you will:
     ![Home Page](images/image002.png)
 
 3. 
-   Here you can view the different account groups and manage/edit the account groups.	
+
+  Here you can see the complete status of various activities that need attention.	
+
+    > **Scroll down** to **‘Close Monitor’** to view period statuses.
+
+    ![Home Page](images/image003.png)
+
+4. 
+
+  Scroll back to the Account Monitor Screen.	
+
+    > Scroll back up to the top of the screen. 
+
+    ![Home Page](images/image004.png)
+
+5. 
+
+  Here you can view the different account groups and manage/edit the account groups.	
 
     > Select “Account Group” and “Manage” 
 
     ![Home Page](images/image005.png)
 
-4. 
+6. 
 
   Here you can manage all the account groups. 
 
@@ -51,13 +68,14 @@ In this activity, you will:
 
     ![Home Page](images/image006.png)
 
-5. 
+7. 
+
   
     > Click on the ‘Actual Vs Budget’ row 
 
-      ![Home Page](images/image007.png)
+    ![Home Page](images/image007.png)
 
-6. 
+8. 
 
   Here you are presented with a list of values for configuring the comparison options for the account balances
 
@@ -65,7 +83,7 @@ In this activity, you will:
 
     ![Home Page](images/image008.png)
 
-7. 
+9. 
 
   Here you can choose either comparing budget or prior period PTD, QTD and YTD
 
@@ -73,7 +91,7 @@ In this activity, you will:
 
     ![Home Page](images/image009.png)
 
-8. 
+10. 
 
   Now you have reviewed the options available to configure Account Group by reviewing the “Budget Vs Actual” Account Group.
 
@@ -81,7 +99,7 @@ In this activity, you will:
 
     ![Home Page](images/image010.png)
 
-9. 
+11. 
 
   We have now reviewed the Manage Account Group option and how a user can easily configure account balances without any need of Technical Help.
 
@@ -89,13 +107,13 @@ In this activity, you will:
 
     ![Home Page](images/image011.png)
 
-10. 
+12. 
 
   You can see all of the account balances configured for the “Key Accounts Budget Vs Actual” Account Group. You can quickly notice that the 60500 Acc has the largest variance from the budget.
     
     ![Home Page](images/image012.png)
 
-11. 
+13. 
 
   You can now review the detailed balances of the 60500 summary account.
 
@@ -103,13 +121,13 @@ In this activity, you will:
 
     ![Home Page](images/image013.png)
 
-12. 
+14. 
 
   This brings up the child account balances for the account.
     
     ![Home Page](images/image014.png)
 
-13. 
+15. 
 
   Here you can view a graphical representation of the balances. A picture is worth 1000 words !!
 
@@ -117,7 +135,7 @@ In this activity, you will:
 
     ![Home Page](images/image015.png)
 
-14. 
+16. 
 
   Notice the account with the largest balance and variance.
 
@@ -125,7 +143,7 @@ In this activity, you will:
 
     ![Home Page](images/image016.png)
 
-15. 
+17. 
 
   You can review what caused the increase in spending for Airfare 60512 account. Scroll the screen up to change the view from Account Monitor to Account Inspector.
 
@@ -133,13 +151,13 @@ In this activity, you will:
 
     ![Home Page](images/image017.png)
 
-16. 
+18. 
 
   Here you can review account balances in an excel pivot fashion. This gives you a grid view making the detailed analysis of two sets of values across the rows and columns. Review the page level dimensions on the left.
 
     ![Home Page](images/image018.png)
 
-17. 
+19. 
 
   You would like review the account balances. Expand the parent account of 60500.
 
@@ -147,13 +165,13 @@ In this activity, you will:
 
     ![Home Page](images/image020.png)
 
-18. 
+20. 
 
   This view shows the all the detail account balances of the Account 60500.
 
     ![Home Page](images/image021.png)
 
-19. 
+21. 
 
   You would like to further analyze what cost center caused the variance for 60512.
 
@@ -162,7 +180,7 @@ In this activity, you will:
     ![Home Page](images/image022.png)
     ![Home Page](images/image023.png)
 
-20. 
+22. 
 
   This breaks out the account balances in a grid view between the child account values and the child cost center values. 
 
@@ -171,26 +189,26 @@ In this activity, you will:
     ![Home Page](images/image022.png)
     ![Home Page](images/image024.png)
 
-21. 
+23. 
 
     > Click on “>” before the 400 cost center value 
 
     ![Home Page](images/image026.png)
     
-22. 
+24. 
 
   Now you can review the balances in an excel pivot view that the Finance team loves to see and analyze data. 
 
     ![Home Page](images/image027.png)
     
-23. 
+25. 
   Review the data to see which account/cost center intersection has the largest account balance
   
     > Click on **“15,491.88”** to drilldown to the details 
 
     ![Home Page](images/image028.png)
 
-24. 
+26. 
 
   Review the Detail Balance drill down, showing the beginning balance, period activity and ending balance. 
     
@@ -198,7 +216,7 @@ In this activity, you will:
     
     ![Home Page](images/image029.png)
 
-25. 
+27. 
 
   Review the journal lines that made up the account balance. You are now reviewing the Journal batch/journal details in this drilldown. This batch has been posted from Payables. 
     
@@ -207,7 +225,7 @@ In this activity, you will:
     ![Home Page](images/image030.png)
 
 
-26. 
+28. 
 
   You can review the actual transaction and are looking at the subledger drilldown which holds the rich AP data in this case, while the GL Journal is summarized in GL. This provides you all the data you need to analyze while keeping the GL Thin. 
     
@@ -215,13 +233,13 @@ In this activity, you will:
     
     ![Home Page](images/image031.png)
 
-27. 
+29. 
 
   You can now review the AP Invoice, the lines that made up this AP Invoice even though we only drilled down on the Airfare which is line #6. 
         
     ![Home Page](images/image032.png)
 
-28. 
+30. 
 
   You are able to review and audit any attachments available in the transaction without having to call the AP department in a self service way. 
     
@@ -229,7 +247,7 @@ In this activity, you will:
     
     ![Home Page](images/image033.png)
 
-29. 
+31. 
 
   You can review the attachment and validate that the receipt is right for the air travel and reasonable cost charged by the employee. 
         
