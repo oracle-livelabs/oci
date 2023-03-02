@@ -66,9 +66,9 @@ Para a criação da VM, usaremos a chave pública. A chave privada será usada a
 * Instance Type: Virtual Machine
 * Instance Shape: AMD VM.Standard.E4.Flex
 * Choose SSH Key File: Insira a chave SSH pública (.pub)
-* Virtual Cloud Network Compartment: "Compartimento-Trial"
-* Virtual Cloud Network: "VCN-TRIAL"
-* Subnet Compartment: "Compartimento-Trial"
+* Virtual Cloud Network Compartment: "Seu Compartimento"
+* Virtual Cloud Network: "Sua VCN"
+* Subnet Compartment: "Seu Compartimento"
 * Subnet: Public Subnet
 * Lembre-se de escolher o AD certo e seu Compartimento
 
@@ -102,9 +102,9 @@ Você provavelmente terá a nova instância devidamente criada em alguns minutos
 * Instance Type: Virtual Machine
 * Instance Shape: AMD VM.Standard.E4.Flex
 * Choose SSH Key File: Insira a chave SSH pública (.pub)
-* Virtual Cloud Network Compartment: "Compartimento-Trial"
-* Virtual Cloud Network: "VCN-TRIAL"
-* Subnet Compartment: "Compartimento-Trial"
+* Virtual Cloud Network Compartment: "Seu Compartimento"
+* Virtual Cloud Network: "Sua VCN"
+* Subnet Compartment: "Seu Compartimento"
 * Subnet: Public Subnet
 
 ## Task 3: Acessar a VM Linux pelo Terminal
