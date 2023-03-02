@@ -4,7 +4,7 @@
     "tutorials": [
         {
             "title": "Introduction to OCI and Resource Manager",
-            "description": "The Introduction is always first. The title and contents menu title match for the Introduction.",
+            "description": "Intro to OCI, Resource Manager, and Terraform Concepts",
             "filename": "../../01-introduction/introduction.md"
         },
         {
@@ -14,32 +14,37 @@
         },
         {
             "title": "Lab 1: Upload Landing Zone Terraform files to Resource Manager",
-            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+            "description": "Loading Terraform From Public Repo into Resource Manager",
             "filename": "../../02-upload/upload.md"
         },
         {
             "title": "Lab 2: Configure Variables for Basic Deployment",
+            "description": "Enter Configurations for Simple 3-Tier Virtual Cloud Network (VCN) Deployment",
             "filename": "../../03-configure-variables/configure.md"
         },
         {
             "title": "Lab 3: Apply and Inspect Resources",
+            "description": "Apply in Resource Manager and Inspect Created Resources",
             "filename": "../../04-apply-inspect/apply.md"
         },
         {
             "title": "Lab 4: Create Compartment for Exadata",
+            "description": "Modify Configuration to Create Optional Exadata Compartment and IAM Resources",
             "filename": "../../05-exadata-compartment/exadata.md"
         },
         {
             "title": "Lab 5: Create Hub & Spoke Network",
+            "description": "Modify Configuration to Create Optional Hub & Spoke Network Model",
             "filename": "../../06-hub-spoke/hub.md"
         },
         {
             "title": "Lab 6: Run CIS Compliance Checker Script",
+            "description": "Run Provided CIS Compliance Checker Script in Cloud Shell",
             "filename": "../../07-compliance/compliance.md"
         },
         {
-            "title": "Lab 7: Run Destroy Job",
-            "filename": "../../08-destroy/destroy.md"
+            "title": "Lab 7: Clean Up",
+            "filename": "https://github.com/oracle-livelabs/common/blob/main/labs/cleanup-stack/cleanup-stack.md"
         },
         {
             "title": "Need Help?",
