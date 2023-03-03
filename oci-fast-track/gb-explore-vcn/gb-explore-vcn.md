@@ -20,7 +20,9 @@ Neste Lab você vai aprender a explorar uma Virtual Cloud Network (VCN) e seus r
 
 ![acesse o menu principal](./images/vcn-access-1.png)
 
-2.	Escolha o seu compartimento:
+2.	Escolha o seu compartimento (que fica na parte de View Login Info):
+
+![selecione seu compartimento](./images/vcn-compartment.png)
 
 ![selecione seu compartimento](./images/vcn-select-compartment-2.png)
 
