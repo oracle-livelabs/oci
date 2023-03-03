@@ -48,15 +48,15 @@ Neste Lab você vai explorar o recurso Compartimento dentro da Oracle Cloud Infr
 
 ## Task 1: Acesse a Console da Oracle Cloud
 
-1.	No navegador de sua preferência, digite: [https://cloud.oracle.com ](https://cloud.oracle.com )
-
-2.	Digite o nome da sua conta (Tenancy) e em seguida clique em "Next":
+1.	Caso ainda não esteja logado, pode-se fazer como mostrado anteriormente. Clique no botão "Launch OCI" na parte de "View Login Info" para a abrir a console da OCI.
 
 ![acesse a pagina de login da oci](./images/compartment-cloud-access-1.png)
 
-3.	Clique em "Continue" e depois insira seu usuário e senha.
+2.	Clique em "Next":
 
 ![clique em "Continue"](./images/compartment-idcs-2.png)
+
+3.	Insira seu usuário e senha (que fica na parte de View Login Info) e clique em "Acessar".
 
 ![faça login](./images/compartment-user-login-3.png)
 
