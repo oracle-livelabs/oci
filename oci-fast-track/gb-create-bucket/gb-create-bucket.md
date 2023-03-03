@@ -25,7 +25,7 @@ Neste Lab você vai aprender a trabalhar com Object Storage dentro da Oracle Clo
 
 3. Preencha o formulário como abaixo e clique em **Create**.
 
-- **Bucket Name**: bucket-site
+- **Bucket Name**: "Dê um nome para seu bucket"
 - **Default Storage Tier**: Standard
 - **Enable Object Versioning**: Checado
 
