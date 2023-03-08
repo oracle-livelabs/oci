@@ -32,7 +32,7 @@ Estimated time: 15 minutes
 
 3. Resource homepages
 
-	In the Concurrent Manager homepage, we can easily review the health and performance of this resource. Each resource in Stack Monitoring has a homepage that provides a central place to review status, performance, and alarms. At the top of the page, Stack Monitoring reports the current status, (Up, Down, Not Reporting). The color and shape of the status indicator will update depending on the resource status and type. Should you find a resource in a down state, the homepage will display a large **red** box with the status of **Down**. Stack Monitoring also provides a **Current Status** date and time. For example, if a database goes down, Stack Monitoring will provide a timestamp of when the database status switched from **Up** to **Down**.
+	In the Concurrent Manager homepage, we can easily review the health and performance of this resource. Each resource in Stack Monitoring has a homepage that provides a central place to review status, performance, and alarms. At the top of the page, Stack Monitoring reports the current status, (Up, Down, Not Reporting). The color and shape of the status indicator will update depending on the resource status and type. Should you find a resource in a down state, the homepage will display a large **red** box with the status of **Down**. Stack Monitoring also provides a **Current Status** date and time. For example, if this Concurrent Manager goes down, Stack Monitoring will provide a timestamp of when the status switched from **Up** to **Down**.
 
 	We can see a count of open alarms by severity. Clicking an alarm count will open the Alarms tab below. We'll cover alarms when we discuss the **Alarms** tab in more detail later.
 
@@ -100,7 +100,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-4-home.png " ")
 
-3. Reviewing an EBS application homepage
+2. Reviewing an EBS application homepage
 
 	We can see that an EBS homepage is very similar to a standard resource homepage with a few additions. We see an overall availability of resources related to this EBS application, this includes resources such as the concurrent manager, notification mailer, and workflow manager, etc. Stack Monitoring also provides a summary of alarms for the EBS application and its members by severity. 
 
@@ -114,7 +114,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-7-home.png " ")
 
-4.	Selecting the **Stack View** tab loads a unique feature to Stack Monitoring, the **Stack View**.
+3.	Selecting the **Stack View** tab loads a unique feature to Stack Monitoring, the **Stack View**.
 
 	Locate the tab **Stack View** from the available menu items. **Stack View** provides a holistic view specially curated key performance metrics for the health and performance of the entire EBS application. From within the Stack View we can see the EBS application including its key underlying components and technology stack all in one place. Let's begin by again adjusting the time frame from **Last 60 Minutes** to **Last 7 Days**. Now let's expand each tier. With each tier expanded, you can now get a complete view of the performance of your EBS application. 
 
