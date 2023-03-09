@@ -176,8 +176,8 @@ Driver configuration files (JSON) used in this workshop are provided below.
 ```
 1. Copy the contents of the configuration snippet above and paste it into a file named *training-config.json*.
 2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called *Namespace*. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
-3. Populate **projectId** under **serviceApiConfiguration** with the OCI AD Project OCID from Lab 1.
-4. Populate compartmentId with compartment OCID from **Lab 2**.
+3. Populate **projectId** under **serviceApiConfiguration** with the OCI AD Project OCID from **Lab 1**.
+4. Populate **compartmentId** with compartment OCID from **Lab 2**.
 
 **Inferencing Configuration** 
 

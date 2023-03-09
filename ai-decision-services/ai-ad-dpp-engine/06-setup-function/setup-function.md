@@ -16,7 +16,7 @@ A *Virtual Cloud Network (VCN)* and a *Subnet* are required to provision an *OCI
 
   ![](./images/Set-Fn3.png)
 
-- Under the VCN, go to **Route Tables** and click on **Default Route Table for <vcn-name>**. Choose **Add Route Rules**. Choose **Service Gateway** as the Target Type, **ALL <Region> Services In Oracle Service Network** as Destination Service, and choose the Service Gateway created in the previous step as Target Service Gateway.  
+- Under the VCN, go to **Route Tables** and click on **Default Route Table for \<vcn-name>**. Choose **Add Route Rules**. Choose **Service Gateway** as the Target Type, **ALL <Region> Services In Oracle Service Network** as Destination Service, and choose the Service Gateway created in the previous step as Target Service Gateway.  
 
   ![](./images/Set-Fn4.png)
     
@@ -29,7 +29,7 @@ Go to **Functions** → **Applications**, and Create an *Application*. See scre
 
 ![](./images/Set-Fn6.png)
 
-Next, go to **Getting Started** (under *Resources* panel on the left) and click **Cloud Shell setup**. Follow steps 1 thru 10 and deploy the demo function (*hello-java*).
+Next, go to **Getting Started** (under *Resources* panel on the left) and click **Cloud Shell setup**. Follow steps 1 through 10 and deploy the demo function (*hello-java*).
 
 ![](./images/Set-Fn7.png)
 
@@ -44,7 +44,7 @@ Hello, World!
 
 An OCI Function serves as a *Driver* for invoking the Data Flow Application.
 
-Download the Driver Function (`func.py`) from [here](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/415e072962940f51dd811875386ddb2c728a3af8/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/end_to_end_example/func.py). Save the Function (Python program - `func.py`) to a local directory on your pc.
+Download the Driver Function (`func.py`) from [here](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/end_to_end_example/func.py). Save the Function (Python program - `func.py`) to a local directory on your pc.
 
 - Update the Function code
 
@@ -53,9 +53,9 @@ Download the Driver Function (`func.py`) from [here](https://github.com/bug-catc
   Search for the code snippet below. 
 
   ```python
-  if bucketName == "training_bucket_name":
-        config_bucket_name = "training_config_bucket_name"
-        object_name = "driver_config.json"
+  if bucketName == "<training_bucket_name>":
+        config_bucket_name = "<training_config_bucket_name>"
+        object_name = "<driver_config.json>"
         resp = get_object(namespace, config_bucket_name, object_name)
   ```
 
@@ -63,16 +63,16 @@ Download the Driver Function (`func.py`) from [here](https://github.com/bug-catc
 
   | Place-Holder Name | Value |
   | ------------- | ----- |
-  | training_bucket_name | *training-data-bucket* |
-  | training_config_bucket_name | *training-config-bucket* |
-  | driver_config.json | *training-config.json* |
+  | <training_bucket_name> | *training-data-bucket* |
+  | <training_config_bucket_name> | *training-config-bucket* |
+  | <driver_config>.json | *training-config.json* |
 
   Search for the code snippet below.
 
   ```python
-  elif bucketName == "inferencing_bucket_name":
-        config_bucket_name = "inferencing_config_bucket_name"
-        object_name = "driver_config.json"
+  elif bucketName == "<inferencing-data-bucket>":
+        config_bucket_name = "<inferencing_config_bucket_name>"
+        object_name = "<driver_config>.json"
         resp = get_object(namespace, config_bucket_name, object_name)
   ```
 
@@ -80,9 +80,9 @@ Download the Driver Function (`func.py`) from [here](https://github.com/bug-catc
 
   | Place-Holder Name | Value |
   | ------------- | ----- |
-  | inferencing_bucket_name | *inferencing-data-bucket* |
-  | inferencing_config_bucket_name | *inferencing-config-bucket* |
-  | driver_config.json | *inference-config.json* |
+  | <inferencing_bucket_name> | *inferencing-data-bucket* |
+  | <inferencing_config_bucket_name> | *inferencing-config-bucket* |
+  | <driver_config>.json | *inference-config.json* |
 
   Search for the code snippet below.
 

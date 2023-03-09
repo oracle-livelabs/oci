@@ -13,6 +13,10 @@ Lab 2: Configure OCI IAM Policies
     
    ```
    ALL {resource.type = 'fnfunc', resource.compartment.id = '<compartment-ocid>'}
+   ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}	
+   ALL {resource.type='datasciencenotebooksession', resource.compartment.id='<compartment-ocid>'}	
+   ALL {resource.type='datasciencemodeldeployment', resource.compartment.id='<compartment-ocid>'}
+   ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}
    ```
 
    See screenshots below.
@@ -22,6 +26,21 @@ Lab 2: Configure OCI IAM Policies
    ![](./images/Set-Policy2.png)
 
    **IMPORTANT**: Substitute the value of dynamic group *Name* in the respective policy in Step [3] below (**dynamic-name**).
+
+   *If your **Identity and Security** portal looks like the following:
+
+   ![](./images/Set-Policy4.png)
+
+   Then you can click **Identity** >> **Domains** under the **root tenancy** and use the **Default** domain. Then create the following dynamic group:
+   ```
+   ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}	
+   ALL {resource.type='datasciencenotebooksession', resource.compartment.id='<compartment-ocid>'}	
+   ALL {resource.type='datasciencemodeldeployment', resource.compartment.id='<compartment-ocid>'}
+   ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}
+   ```
+
+   ![](./images/Set-Policy5.png)
+
 
 ## 3. Create required *Policies*
     
@@ -49,7 +68,7 @@ Lab 2: Configure OCI IAM Policies
    Allow service faas to read repos IN compartment <compartment-name> where request.operation='ListContainerImageSignatures'
    Allow service faas to {KEY_READ} IN compartment <compartment-name> where request.operation='GetKeyVersion'
    Allow service faas to {KEY_VERIFY} IN compartment <compartment-name> where request.operation='Verify'
-   Allow dynamic-group <dynamic-name> to manage all-resources in compartment <compartment-name>
+   Allow dynamic-group <dynamic-group-name> to manage all-resources in compartment <compartment-name>
    Allow any-user to inspect compartments in compartment <compartment-name>
    Allow any-user to inspect streams in compartment <compartment-name>
    Allow any-user to use stream-push in compartment <compartment-name>
@@ -63,6 +82,10 @@ Lab 2: Configure OCI IAM Policies
    Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='inferencing-config-bucket'
    Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='training-config-bucket'
    Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='output-bucket'
+   ```
+   If you see Identity Domain, then you need to add an extra policy:
+   ```
+   Allow any-user to manage dataflow-family in compartment <compartment-name> where ALL {request.principal.type='fnfunc', request.compartment.id = '<compartment-ocid>' }
    ```
 
 ## Useful Resources

@@ -9,15 +9,17 @@ The DPF Driver is essentially an Apache Spark *Application* which runs the data 
 
 In OCI Console, click on the hamburger menu (top left), select **Analytics & AI**, then select *Data Flow* under **Data Lake**. Next, click on *Create application* to create a new Data Flow Application.
 
+![](./images/Set-DF4.png)
+
 Update/Specify field values as described below.
 
 *   For the **Spark Version** section, choose **Spark 3.0.2**.
 *   For the **Language** section, choose **Python**.
-*   Select df_driver.py from the driver bucket.
+*   Select df_driver.py from the **driver-code-archive-bucket**.
 *   For **Arguments**, simply input `--response ${response} --phase ${phase}`.
 *   For **Parameters**, enter **placeholder** as the default value for both input parameters (*response* & *phase*). These values will be overriden by the DPF driver.
 *   For **Archive URI**, enter the fully qualified path to archive.zip in Object Storage. The structure of path is `oci://<bucket-name>@<namespace>/<path-to-archive.zip>`. Same below.
-*   For **Application log location**, enter the path to logs-bucket. This is very useful for debugging failed application runs.
+*   For **Application log location**, enter the path to **logs-bucket**. This is very useful for debugging failed application runs.
 
 Refer to the screenshots below.
 ![](./images/Set-DF3.png)

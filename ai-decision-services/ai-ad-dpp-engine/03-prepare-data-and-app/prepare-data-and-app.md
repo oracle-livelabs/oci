@@ -3,11 +3,11 @@ Lab 3: Configure OCI Object Storage Buckets and Upload Driver
 
 ## 1. Download DPF Engine Driver Code
 
-   The Data Processing Framework (DPF) is an executable (~Driver) built by OCI AI Services team and provided to users. The latest driver code can be downloaded from [here](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/df_driver.py).
+   The Data Processing Framework (DPF) is an executable (~Driver) built by OCI AI Services team and provided to users. The latest driver code can be downloaded from [here](https://objectstorage.us-phoenix-1.oraclecloud.com/p/dgqPltNm4ldkw-6YJF2aa4Aj4UsKZZBaJ39aV-exMlDbhTwnNKZx7m9XPNB45AQI/n/axaspnesarzr/b/driver-code-archive-bucket/o/df_driver.py).
 
 ## 2. Download DPF Transforms Library
 
-   A Library which includes multiple data transformers and user defined functions is provided to users as an [archive file](https://objectstorage.us-phoenix-1.oraclecloud.com/p/sPNi_DmcCTKZjtKFe8hHczY5p74ofWy9jCYqiuTRBxWzMePyWxxsZWlN4HyGqixY/n/ax3dvjxgkemg/b/archive-bucket/o/archive.zip) (archive.zip).  Download this zip file as it will be used later in this lab.
+   A Library which includes multiple data transformers and user defined functions is provided to users as an [archive file](https://objectstorage.us-phoenix-1.oraclecloud.com/p/cvXUlN_fy9_D5yu4tzmvB0LgSYyrI1-UgY3qJuMlDxw1u-nxwFYv8KlULiqdf33U/n/axaspnesarzr/b/driver-code-archive-bucket/o/archive.zip) (archive.zip).  Download this zip file as it will be used later in this lab.
 
    Refer to the **Transformers** [documentation](../optional/introduction-to-transformers-for-data-preprocessing.md) for a description of all available transformers.
 

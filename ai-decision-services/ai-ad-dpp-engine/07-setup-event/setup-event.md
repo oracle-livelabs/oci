@@ -13,6 +13,8 @@ Go to Events Service → Rules → Create Rule, and create a rule as shown in th
    * For Attribute, select **bucketName**. Attribute Values should be **training-data-bucket** and **inferencing-data-bucket**, which were the values set up in **Lab 3** earlier.
    * Under Actions, select **Functions** for Action Type, and select the right *Function Compartment*, *Function Application* and *Function Name* provisioned in **Lab 6**.
 
+![](./images/Set-Ev3.png)
+
    The finalized Rule Logic is shown below:
 
    ```java
