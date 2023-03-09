@@ -37,6 +37,7 @@ Lab 2: Configure OCI IAM Policies
    ALL {resource.type='datasciencenotebooksession', resource.compartment.id='<compartment-ocid>'}	
    ALL {resource.type='datasciencemodeldeployment', resource.compartment.id='<compartment-ocid>'}
    ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}
+   ALL {resource.type = 'fnfunc', resource.compartment.id = '<compartment-ocid>'}
    ```
 
    ![](./images/Set-Policy5.png)
@@ -82,10 +83,6 @@ Lab 2: Configure OCI IAM Policies
    Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='inferencing-config-bucket'
    Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='training-config-bucket'
    Allow service dataflow to read objects in compartment <compartment-name> where target.bucket.name='output-bucket'
-   ```
-   If you see Identity Domain, then you need to add an extra policy:
-   ```
-   Allow any-user to manage dataflow-family in compartment <compartment-name> where ALL {request.principal.type='fnfunc', request.compartment.id = '<compartment-ocid>' }
    ```
 
 ## Useful Resources

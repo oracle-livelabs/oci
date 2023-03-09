@@ -44,7 +44,7 @@ Hello, World!
 
 An OCI Function serves as a *Driver* for invoking the Data Flow Application.
 
-Download the Driver Function (`func.py`) from [here](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/master/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/end_to_end_example/func.py). Save the Function (Python program - `func.py`) to a local directory on your pc.
+Download the Driver Function (`func.py`) from [here](https://objectstorage.us-phoenix-1.oraclecloud.com/p/l1H-kfulXPk6pPgLkQTqOgPXKtoW9Uvkhhufd108yYST9vwrwVUDoU1VWXh_z_bB/n/axaspnesarzr/b/driver-code-archive-bucket/o/func.py). Save the Function (Python program - `func.py`) to a local directory on your pc.
 
 - Update the Function code
 
