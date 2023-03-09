@@ -28,7 +28,7 @@ The Landing Zone will deploy a full set of resources for a production cloud, inc
 - Object Storage
 - Budget Controls
 
-The resulting architecture will look similar to this diagram: ![Single VCN Architecture](images/Architecture_Single_VCN.png " ")
+The resulting architecture will look similar to this diagram: ![Single VCN Architecture](images/Architecture_Single_VCN.png "Single VCN Architecture")
 
 ### IAM Components
 
