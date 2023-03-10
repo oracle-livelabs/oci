@@ -7,7 +7,7 @@ Lab 3: Configure OCI Object Storage Buckets and Upload Driver
 
 ## 2. Download DPF Transforms Library
 
-   A Library which includes multiple data transformers and user defined functions is provided to users as an [archive file](https://objectstorage.us-phoenix-1.oraclecloud.com/p/cvXUlN_fy9_D5yu4tzmvB0LgSYyrI1-UgY3qJuMlDxw1u-nxwFYv8KlULiqdf33U/n/axaspnesarzr/b/driver-code-archive-bucket/o/archive.zip) (archive.zip).  Download this zip file as it will be used later in this lab.
+   A Library which includes multiple data transformers functions is provided to users as an [archive file](https://objectstorage.us-phoenix-1.oraclecloud.com/p/cvXUlN_fy9_D5yu4tzmvB0LgSYyrI1-UgY3qJuMlDxw1u-nxwFYv8KlULiqdf33U/n/axaspnesarzr/b/driver-code-archive-bucket/o/archive.zip) (archive.zip).  Download this zip file as it will be used later in this lab.
 
    Refer to the **Transformers** [documentation](../optional/introduction-to-transformers-for-data-preprocessing.md) for a description of all available transformers.
 
