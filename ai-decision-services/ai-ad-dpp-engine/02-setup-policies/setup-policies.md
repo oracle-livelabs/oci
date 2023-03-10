@@ -8,39 +8,42 @@ Lab 2: Configure OCI IAM Policies
    **IMPORTANT**: Note down the compartment *OCID* and compartment *Name* from the **Compartments** page in OCI Console. Substitute the value of compartment *Name* in the *Policies* in Steps [2] & [3] below (**compartment-name**).
     
 ## 2. Create a *Dynamic Group*
+   * If you can find **Dynamic Groups** under **Identity and Security**:
 
-   Go to **Identity and Security** >> **Dynamic Groups** and create the following matching rule.
-    
-   ```
-   ALL {resource.type = 'fnfunc', resource.compartment.id = '<compartment-ocid>'}
-   ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}	
-   ALL {resource.type='datasciencenotebooksession', resource.compartment.id='<compartment-ocid>'}	
-   ALL {resource.type='datasciencemodeldeployment', resource.compartment.id='<compartment-ocid>'}
-   ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}
-   ```
+      ![](./images/Set-Policy1.png)
 
-   See screenshots below.
+      Go to **Identity and Security** >> **Dynamic Groups** and create the following matching rule.
+      
+      ```
+      ALL {resource.type = 'fnfunc', resource.compartment.id = '<compartment-ocid>'}
+      ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}	
+      ALL {resource.type='datasciencenotebooksession', resource.compartment.id='<compartment-ocid>'}	
+      ALL {resource.type='datasciencemodeldeployment', resource.compartment.id='<compartment-ocid>'}
+      ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}
+      ```
 
-   ![](./images/Set-Policy1.png)
-    
-   ![](./images/Set-Policy2.png)
+      See screenshots below.
 
-   **IMPORTANT**: Substitute the value of dynamic group *Name* in the respective policy in Step [3] below (**dynamic-name**).
+      
+      
+      ![](./images/Set-Policy2.png)
 
-   *If your **Identity and Security** portal looks like the following:
+      **IMPORTANT**: Substitute the value of dynamic group *Name* in the respective policy in Step [3] below (**dynamic-name**).
 
-   ![](./images/Set-Policy4.png)
+   * Or, if your **Identity and Security** portal looks like the following:
 
-   Then you can click **Identity** >> **Domains** under the **root tenancy** and use the **Default** domain. Then create the following dynamic group:
-   ```
-   ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}	
-   ALL {resource.type='datasciencenotebooksession', resource.compartment.id='<compartment-ocid>'}	
-   ALL {resource.type='datasciencemodeldeployment', resource.compartment.id='<compartment-ocid>'}
-   ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}
-   ALL {resource.type = 'fnfunc', resource.compartment.id = '<compartment-ocid>'}
-   ```
+      ![](./images/Set-Policy4.png)
 
-   ![](./images/Set-Policy5.png)
+      Then you can click **Identity** >> **Domains** under the **root tenancy** and use the **Default** domain. Then create the following dynamic group:
+      ```
+      ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}	
+      ALL {resource.type='datasciencenotebooksession', resource.compartment.id='<compartment-ocid>'}	
+      ALL {resource.type='datasciencemodeldeployment', resource.compartment.id='<compartment-ocid>'}
+      ALL {resource.type='datasciencejobrun', resource.compartment.id='<compartment-ocid>'}
+      ALL {resource.type = 'fnfunc', resource.compartment.id = '<compartment-ocid>'}
+      ```
+
+      ![](./images/Set-Policy5.png)
 
 
 ## 3. Create required *Policies*
