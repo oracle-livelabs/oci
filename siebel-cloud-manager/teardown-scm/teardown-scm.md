@@ -56,8 +56,9 @@ Estimated Time: 20 minutes
 ## Summary
 
 In this lab, we have destroyed all the resources that were created for this workshop.
+
 ## Acknowledgements
 
-* **Author:** Shyam Mohandas, Principal Cloud Architect, Cloud Engineering
+* **Author:** Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
-* **Last Updated By/Date** - Shyam Mohandas, Principal Cloud Architect, Cloud Engineering
+* **Last Updated By/Date** - Sampath Nandha, Principal Cloud Architect, March 2023
