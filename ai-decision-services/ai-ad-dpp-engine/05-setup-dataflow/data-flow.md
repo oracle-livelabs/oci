@@ -9,7 +9,7 @@ The DPF Driver is essentially an Apache Spark *Application* which runs the data 
 
 In OCI Console, click on the hamburger menu (top left), select **Analytics & AI**, then select *Data Flow* under **Data Lake**. Next, click on *Create application* to create a new Data Flow Application.
 
-![](./images/Set-DF4.png)
+![](./images/set-df4.png)
 
 Update/Specify field values as described below.
 
@@ -22,11 +22,11 @@ Update/Specify field values as described below.
 *   For **Application log location**, enter the path to **logs-bucket**. This is very useful for debugging failed application runs.
 
 Refer to the screenshots below.
-![](./images/Set-DF3.png)
+![](./images/set-df3.png)
 
-![](./images/Set-DF1.png)
+![](./images/set-df1.png)
 
-![](./images/Set-DF2.png)
+![](./images/set-df2.png)
 
 **IMPORTANT**: Note down the Data Flow *Application* OCID as it will be required in **Lab 6**
 

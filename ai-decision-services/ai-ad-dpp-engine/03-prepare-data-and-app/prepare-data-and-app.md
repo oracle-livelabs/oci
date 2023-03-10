@@ -41,7 +41,7 @@ Lab 3: Configure OCI Object Storage Buckets and Upload Driver
 
    Enable OCI Object Store events to be emitted by going to the respective Bucket's detail page as shown in the screenshot below.
 
-   ![](./images/Prepare-OS1.png)
+   ![](./images/prepare-os1.png)
 
 ## 5. Upload Driver and Library
 

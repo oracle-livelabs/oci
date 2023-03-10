@@ -10,7 +10,7 @@ Lab 2: Configure OCI IAM Policies
 ## 2. Create a *Dynamic Group*
    * If you can find **Dynamic Groups** under **Identity and Security**:
 
-      ![](./images/Set-Policy1.png)
+      ![](./images/set-policy1.png)
 
       Go to **Identity and Security** >> **Dynamic Groups** and create the following matching rule.
       
@@ -26,13 +26,13 @@ Lab 2: Configure OCI IAM Policies
 
       
       
-      ![](./images/Set-Policy2.png)
+      ![](./images/set-policy2.png)
 
       **IMPORTANT**: Substitute the value of dynamic group *Name* in the respective policy in Step [3] below (**dynamic-name**).
 
    * Or, if your **Identity and Security** portal looks like the following:
 
-      ![](./images/Set-Policy4.png)
+      ![](./images/set-policy4.png)
 
       Then you can click **Identity** >> **Domains** under the **root tenancy** and use the **Default** domain. Then create the following dynamic group:
       ```
@@ -43,14 +43,14 @@ Lab 2: Configure OCI IAM Policies
       ALL {resource.type = 'fnfunc', resource.compartment.id = '<compartment-ocid>'}
       ```
 
-      ![](./images/Set-Policy5.png)
+      ![](./images/set-policy5.png)
 
 
 ## 3. Create required *Policies*
     
    Within **Identity and Security**, click on **Policies**. Then click on **Create Policy**. See screenshot below.
 
-   ![](./images/Set-Policy3.png)
+   ![](./images/set-policy3.png)
 
    Configure all the necessary policies. For convenience, allow `any-user` to access the resources (see below). You can refine the scope by creating user groups.
 
