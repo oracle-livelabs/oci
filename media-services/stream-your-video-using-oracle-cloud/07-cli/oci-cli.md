@@ -31,6 +31,8 @@ In this lab, you will
    ```
 
 2. Create Media Workflow with parameters and tasks from a pre-created JSON file.
+   Media Workflow tasks file [create-media-workflow-tasks.json](cli-json/create-media-workflow-tasks.json)
+   Media Workflow parameters file [create-media-workflow-parameters.json](cli-json/create-media-workflow-parameters.json)
    If you need total command output, please remove the filter "| jq '.data.id'" from below command.
 
    ```
