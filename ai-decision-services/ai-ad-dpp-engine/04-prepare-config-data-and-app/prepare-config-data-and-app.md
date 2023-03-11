@@ -176,8 +176,8 @@ Driver configuration files (JSON) used in this workshop are provided below.
 ```
 1. Copy the contents of the configuration snippet above and paste it into a file named *training-config.json*.
 2. Look up the namespace string by navigating to **Object Storage** and clicking on any bucket. The display panel will have a field called *Namespace*. Under the **inputSources**,**phaseInfo**, **stagingDestination** and **outputDestination** sections, populate the **namespace** field with this value. 
-3. Populate **projectId** under **serviceApiConfiguration** with the OCI AD Project OCID from Lab 1.
-4. Populate compartmentId with compartment OCID from **Lab 2**.
+3. Populate **projectId** under **serviceApiConfiguration** with the OCI AD Project OCID from **Lab 1**.
+4. Populate **compartmentId** with compartment OCID from **Lab 2**.
 
 **Inferencing Configuration** 
 
@@ -260,6 +260,6 @@ The examples above demonstrate a Univariate Anomaly Detection use case. Users in
 
 ## Useful Resources
 
-- [List of available Data Flow Transformers](https://github.com/ganrad/oci/blob/main/ai-decision-services/ai-ad-dpp-engine/optional/Introduction-to-Transformers-for-Data-Preprocessing.md)
+- [List of available Data Flow Transformers](https://github.com/ganrad/oci/blob/main/ai-decision-services/ai-ad-dpp-engine/optional/introduction-to-transformers-for-data-preprocessing.md)
 
 [Go to *Lab 3*](#prev) | [Go to *Lab 5*](#next)

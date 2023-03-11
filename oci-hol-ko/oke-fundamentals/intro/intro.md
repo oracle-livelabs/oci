@@ -2,7 +2,7 @@
 
 Oracle Cloud Native 솔루션을 활용하여 클라우드 네이티브 마이크로서비스 애플리케이션을 배포하여 사용하는 방법을 MuShop 이라는 데모 애플리케이션을 통해 알아봅니다. Oracle Container Engine for Kubernetes(OKE)와 Oracle Cloud Infrastructure 구성 요소를 활용하는 확장성이 뛰어난 아키텍처를 지닌 각 구성 요소를 활용하여 다중 언어, 즉 polyglot 형태로 개발된 마이크로서비스 기반의 전자 상거래 애플리케이션을 배포합니다.
 
-예상 시간: 4시간
+예상 시간: 6시간
 
 ### 목표
 

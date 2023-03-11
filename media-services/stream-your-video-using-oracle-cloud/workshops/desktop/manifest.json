@@ -1,8 +1,11 @@
 {
     "workshoptitle": "Stream your Video with Oracle Cloud",
     "help": "livelabs-help-oci_us@oracle.com",
+<<<<<<< HEAD
     "variables": ["../../variables/variables.json",
       "../../variables/variables-in-another-file.json"],
+=======
+>>>>>>> f06c17e4b0b6287fecf7ec5361ee3494e2fbe700
     "tutorials": [
       {
         "title": "Introduction",

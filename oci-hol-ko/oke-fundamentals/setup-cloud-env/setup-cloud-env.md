@@ -28,7 +28,7 @@
 
 1. 로그인을 하시면 아래와 같은 페이지를 보실 수 있습니다.
 
-  ![Landing Screen](images/landing-screen-2.png " ")
+  ![Landing Screen](images/landing-screen.png " ")
 
 
 ## Task 2: 기본 OCI 인프라 설정
@@ -42,8 +42,8 @@
    ![Compartment Screen](images/compartment-screen.png " ")
 
 1. 다음을 입력:
-      - Name: **"oci-hol".** 입력합니다.
-      - Description: 설명을 입력합니다(예: "oci-hol").
+      - Name: **oci-hol***-xx* 입력합니다.
+      - Description: 설명을 입력합니다(예: oci-hol for user *xx*)
       - Parent Compartment: 이 Compartment가 속할 상위 Compartment를 선택합니다. 기본값은 루트 Compartment(즉 테넌시).
       - **Create Compartment** 클릭 합니다.
 
@@ -51,7 +51,7 @@
 
 1. 콘솔 상단에서 Cloud Shell 아이콘을 클릭합니다. Cloud Shell에서 실행되는 OCI CLI는 Cloud Shell이 ​​시작될 때 콘솔의 Region 선택 메뉴에서 선택한 Region에 대해 명령을 실행합니다.
 
-  ![CloudShell](images/cloudshell-1.png " ")
+  ![CloudShell](images/cloudshell-1.png =30%x*)
 
   ![CloudShell](images/cloudshell-2.png " ")
 
@@ -70,23 +70,26 @@
 
    ![Quick Create Cluster](images/oke-create-cluster.png =50%x*)
 
-1. 원하는 이름(예, **oke-cluster-1**)을 입력하고 다른 값들은 기본값으로 유지합니다.
-
-      - Kubernetes version: 작성일 기준, 최상위 버전 v1.24.1 말고 하나 밑인 v1.23.4를 선택
+1. 생성 정보를 아래와 같이 입력합니다.
+    - Name: 예, **oke-cluster-1**
+    - Kubernetes version: 예, v1.24.1을 선택
         * *뒷부분에 있는 업그레이드 실습을 위해, 여기서는 최신 버전 하나 아래 버전을 선택합니다.*
-      - Kubernetes API Endpoint: Public Endpoint 선택
-        * Public / Private 선택에 따라 생성되는 서브넷 유형의 정해지고, Public IP로 접근 가능한지, Private IP로만 접근할 지를 선택하게 됩니다. Private Endpoint를 선택하는 경우 kubectl 명령을 사용하기 위해서 Private IP로 접근이 가능한 bastion 서버가 필요하게 됩니다. 또는 Cloud Shell의 Private Endpoint를 통해 접근합니다.
-      - Kubernetes worker nodes: Private workers 선택
-        * Public / Private 선택에 따라 생성되는 서브넷 유형의 정해지고, Worker Node에 Public IP를 부여할지, Private IP만 부여할 지가 정해집니다.
+        * 2023년 1월 기준, v1.25.4, *v1.24.1*, v1.23.4 중 v1.24.1 선택
 
-   ![Cluster Details](images/oke-create-cluster-details.png " ")
+    - Image: *동일한 버전 선택*, 예, 1.24.1
+    - 다른 값들은 기본값으로 유지합니다.
+    - Show advanced options: 필요시, Worker Node의 Boot Volume 사이즈, Node 접속용 SSH Key 등록 등을 할 수 있습니다.
+    
+    ![Cluster Details](images/oke-create-cluster-details.png " ")
+
 
 1. 생성될 클러스터 정보를 검토하고 **Create Cluster**를 클릭합니다.
 
    ![Cluster Info](images/oke-create-cluster-details-review.png " ")
 
-1. 일단 시작되면 클러스터가 완전히 프로비저닝되고 Active 상태로 표시하는 데 일반적으로 3개 노드기준, 약 5-10분이 걸립니다.
+1. 일단 시작되면 클러스터가 *완전히 프로비저닝되고 Active 상태로 표시하는 데 일반적으로 3개 노드기준, 약 10-15분이 걸립니다.*
 
+    ![Cluster Created](images/oke-cluster-created.png )
 
 ## Task 4: OKE Kubernetes 클러스터 접근을 위한 Cloud Shell 설정
 
@@ -117,17 +120,15 @@
     ````
 
     ````shell
-    NAME          STATUS   ROLES   AGE   VERSION
-    10.0.10.175   Ready    node    19m   v1.23.4
-    10.0.10.206   Ready    node    20m   v1.23.4
-    10.0.10.5     Ready    node    19m   v1.23.4
+    NAME          STATUS   ROLES   AGE     VERSION
+    10.0.10.160   Ready    node    3m50s   v1.24.1
+    10.0.10.20    Ready    node    3m27s   v1.24.1
+    10.0.10.222   Ready    node    3m22s   v1.24.1
     ````
 
 이제 **다음 실습을 진행**하시면 됩니다.
 
 ## Acknowledgements
 
-- **Author** - Satyajeet Joshi
-- **Contributors** -  Kamryn Vinson, Adao Junior
-- **Last Updated By/Date** - Adao Junior, April 2021
-- **Korean Translator & Contributors** - DongHee Lee, August 2022
+- **Author** - DongHee Lee
+- **Last Updated By/Date** - DongHee Lee, January 2023

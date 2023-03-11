@@ -1,11 +1,15 @@
 {
     "workshoptitle": "Stream your Video with Oracle Cloud",
+<<<<<<< HEAD
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
     "variables": ["../../variables/variables.json",
                  "../../variables/variables-in-another-file.json"],
     "help": "livelabs-help-**enterarea**_us@oracle.com",
+=======
+    "help": "livelabs-help-oci_us@oracle.com",
+>>>>>>> f06c17e4b0b6287fecf7ec5361ee3494e2fbe700
     "tutorials": [
         {
             "title": "Introduction",

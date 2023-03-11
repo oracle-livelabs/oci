@@ -6,7 +6,7 @@ Helm은 복잡한 쿠버네티스 애플리케이션을 배포하기 위한 쿠�
 
 - [Helm: The package manager for Kubernetes](https://helm.sh/)
 
-예상 시간: 10분
+예상 시간: 20분
 
 ### 목표
 
@@ -38,7 +38,9 @@ Helm은 복잡한 쿠버네티스 애플리케이션을 배포하기 위한 쿠�
     </copy>    
     ````
 
-3. 아래와 같이 Helm Chart를 기본 구성 파일이 만들어 집니다. 생성된 차트는 기본적으로 nginx를 배포하게 구성되어 있습니다.
+3. mychart 폴더가 만들어지고 차트관련 파일이 생성됩니다.
+
+4. 아래와 같이 Helm Chart를 기본 구성 파일이 만들어 집니다. 생성된 차트는 기본적으로 nginx를 배포하게 구성되어 있습니다.
 
     - Chart.yaml: 차트 이름, 버전 등 기본 정보가 포함되어 있습니다.
     - values.yaml: templates 폴더 하위의 쿠버네티스 배포 템플릿의 배포 속성 중에서 변수값으로 사용자가 설정할 수 있는 값들이 정의되어 있습니다.
@@ -59,10 +61,10 @@ Helm은 복잡한 쿠버네티스 애플리케이션을 배포하기 위한 쿠�
     └── values.yaml
     ````
 
-4. 개발한 Spring Boot 앱을 위한 차트를 만들기 위해 일부 내용을 수정합니다.
+5. 개발한 Spring Boot 앱을 위한 차트를 만들기 위해 일부 내용을 수정합니다.
 
     - mychart/templates/service.yaml 파일을 수정합니다.
-        * spec.ports.targetPort을 http 포트가 아닌, 변수에서 가져올 수 있도록 변경합니다.
+        * spec.ports.targetPort 항목을 http(80) 포트가 아닌, 변수에서 가져올 수 있도록 *{{ .Values.service.targetPort }}*로 변경합니다.
     ````
     ...
     spec:
@@ -78,57 +80,57 @@ Helm은 복잡한 쿠버네티스 애플리케이션을 배포하기 위한 쿠�
     ````
 
     - mychart/templates/deployment.yaml 파일을 수정합니다.
-        * ports.containerPort: 기본 http 포트인 80 이 아닌, 변수에서 가져올 수 있도록 변경합니다.
+        * ports.containerPort: 기본 http 포트인 80 이 아닌, 변수 *{{ .Values.service.targetPort }}* 에서 가져올 수 있도록 변경합니다.
         * livenessProbe: httpGet.path를 /가 아닌, Spring Boot Actuator가 제공하는 경로로 변경합니다.
         * readreadinessProbe: httpGet.path를 /가 아닌, Spring Boot Actuator가 제공하는 경로로 변경합니다.
     ````
-          ...
-          ports:
-            - name: http
-              containerPort: {{ .Values.service.targetPort }}
-              protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /actuator/health/liveness
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /actuator/health/readiness
-              port: http
-          ...    
+    ...
+    36           ports:
+    37             - name: http
+    38               containerPort: {{ .Values.service.targetPort }}
+    39               protocol: TCP
+    40           livenessProbe:
+    41             httpGet:
+    42               path: /actuator/health/liveness
+    43               port: http
+    44           readinessProbe:
+    45             httpGet:
+    46               path: /actuator/health/readiness
+    47               port: http
+    ...
     ````
 
-    - mychart/values.yaml 파일을 수정합니다. 차트 내의 여러 파일들에서 사용하는 변수의 기본값을 정의하는 파일입니다.
-        * image.repository: *각자에 맞게 수정 필요*, 이전 실습에서 OCIR로 Push한 이미지 주소로 변경, 예시에서는 ap-chuncheon-1.ocir.io/axjowrxaexxx/spring-boot-greeting
+    - mychart/values.yaml 파일을 수정합니다. values.yaml 파일은 차트 내의 여러 파일들에서 사용하는 변수의 기본값을 정의하는 파일입니다.
+        * image.repository: *각자에 맞게 수정 필요*, 이전 실습에서 OCIR로 Push한 이미지 주소로 변경, 예시에서는 ap-chuncheon-1.ocir.io/axjowrxaexxx/oci-hol-xx/spring-boot-greeting
         * image.tag: *각자에 맞게 수정 필요*, 예시에서는 "1.0"
         * imagePullSecrets.name: *각자에 맞게 수정 필요*, 예시에서는 ocir-secret
     ````
-    image:
-      repository: $IMAGE_REGISTRY_REPO
-      pullPolicy: IfNotPresent
-      # Overrides the image tag whose default is the chart appVersion.
-      tag: "1.0"
-
-    imagePullSecrets:
-      - name: ocir-secret
-    nameOverride: ""      
+    ...
+     7 image:
+     8   repository: ap-chuncheon-1.ocir.io/cn8wdnkejjgq/oci-hol-xx/spring-boot-greeting
+     9   pullPolicy: IfNotPresent
+    10   # Overrides the image tag whose default is the chart appVersion.
+    11   tag: "1.0"
+    12 
+    13 imagePullSecrets:
+    14   - name: ocir-secret
+    15 nameOverride: ""   
+    ...   
     ````
         * service.targetPort로 8080을 추가합니다. 이 값이 {{ .Values.service.targetPort }}에 해당하게 됩니다. 이전 실습에서 개발한 Spring Boot 앱의 포트가 8080이라 그에 맞게 입력한 사항입니다.
     ````
     ...
-    <copy>    
-    service:
-      type: ClusterIP
-      port: 80
-      targetPort: 8080
-    
-    ingress:
+    38   # runAsUser: 1000
+    39 
+    40 service:
+    41   type: ClusterIP
+    42   port: 80
+         targetPort: 8080
+    43 
+    44 ingress:    
     ...
     </copy>      
     ````
-
-5. OCIR는 Open Container Initiative 호환 Registry로 Helm Chart 저장소로 사용할 수 있지만, Open Container Initiative(OCI) 호환 Registry 에서는 아직 실험 버전 기능이라, 여기서 OCIR에 등록하는 것을 생략합니다.
-
 
 ## Task 2: Helm Chart로 OKE 클러스터에 배포하기
 
@@ -151,22 +153,18 @@ Helm은 복잡한 쿠버네티스 애플리케이션을 배포하기 위한 쿠�
 
     실행 예시
     ````
-    winter@cloudshell:~ (ap-chuncheon-1)$ helm list
-    NAME    NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
-    mychart default         1               2022-03-07 01:40:49.27980558 +0000 UTC  deployed        mychart-0.1.0   1.16.0     
-    winter@cloudshell:~ (ap-chuncheon-1)$ kubectl get all
     NAME                                                   READY   STATUS    RESTARTS   AGE
-    pod/mychart-67958c5467-xrtlc                           1/1     Running   0          33s
+    pod/mychart-b8764659c-9nrhh                            1/1     Running   0          83s
     
-    NAME                                   TYPE           CLUSTER-IP     EXTERNAL-IP       PORT(S)        AGE
-    service/kubernetes                     ClusterIP      10.96.0.1      <none>            443/TCP        11h
-    service/mychart                        LoadBalancer   10.96.240.58   150.xxx.xxx.xxx   80:32651/TCP   79s
+    NAME                                   TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)             AGE
+    service/kubernetes                     ClusterIP      10.96.0.1       <none>           443/TCP,12250/TCP   5h17m
+    service/mychart                        LoadBalancer   10.96.135.110   150.xx.xxx.xxx   80:32155/TCP        83s
     
     NAME                                              READY   UP-TO-DATE   AVAILABLE   AGE
-    deployment.apps/mychart                           1/1     1            1           33s
+    deployment.apps/mychart                           1/1     1            1           83s
     
     NAME                                                         DESIRED   CURRENT   READY   AGE
-    replicaset.apps/mychart-67958c5467                           1         1         1       33s
+    replicaset.apps/mychart-b8764659c                            1         1         1       83s
     ````
 3. Pod가 정상적으로 기동하였습니다. service/mychart의 LoadBalancer의 EXTERNAL-IP를 통해 서비스를 요청합니다.
 
@@ -194,4 +192,5 @@ Helm은 복잡한 쿠버네티스 애플리케이션을 배포하기 위한 쿠�
 
 ## Acknowledgements
 
-* **Author** - DongHee Lee, February 2022
+- **Author** - DongHee Lee
+- **Last Updated By/Date** - DongHee Lee, January 2023
