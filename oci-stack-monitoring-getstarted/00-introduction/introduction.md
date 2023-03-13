@@ -2,17 +2,17 @@
 
 ## About this Workshop
 
-In this workshop, you will become familiar with Oracle's Stack Monitoring. Stack Monitoring is cloud-native service to monitor and view the health and performance of applications and the underlying tech stack. Stack Monitoring can discover and monitor resources running both within Oracle Cloud Infrastructure (OCI) or on-premises.
+In this workshop, you will become familiar with Oracle's Stack Monitoring solution. Stack Monitoring is an Oracle Cloud Infrastructure (OCI) cloud-native service to monitor and view the health, performance, and its underlying tech stack. Stack Monitoring can discover and monitor application running on the cloud, on-premises, hybrid, or multi-cloud environments.
 
-Using Stack Monitoring's Enterprise Summary, you will learn to identify application outages across your enterprise at a glance. Identify and triage all open alarms. Leverage Stack Monitoring's Key Performance Metrics (KPI's) organized into tiers to review performance outliers. And finally learn to dynamically configure the Enterprise Summary to meet your needs in the moment. This is helpful if you need to swap a metric chart or table with another to troubleshoot an alarm that is not displayed out of the box.
+In this workshop learn how to identify application outages across your enterprise at a glance utilizing Stack Monitoring's Enterprise Summary. Understand how to identify and triage any open alarms. See how you can leverage Stack Monitoring's tier-organized Key Performance Metrics (KPI's) to review performance outliers. Learn how to dynamically configure the Enterprise Summary to help identify performance problems. It is very useful when you need to swap a metric chart or table with another to troubleshoot an alarm that is not displayed by default.
 
-You will also become familiar with Stack Monitoring's homepages. Learn how to triage open alarms and view metric performance over time. Become familiar with using Stack Monitoring's application topology and troubleshoot issues across an application stack. And finally, leverage Stack Monitoring's **Stack View** to get a holistic perspective of key performance metrics across an entire E-Business Suite application.
+Finally, get familiar with Stack Monitoring's home pages and how to triage open alarms and view metric performance over time. Utilize Stack Monitoring's application topology to identify and troubleshoot issues across an application stack. Leverage Stack Monitoring's **Stack View** to get a holistic perspective of key performance metrics across an entire application, for this workshop we will use an E-Business Suite application.
 
-Estimated Time: 30 minutes
+Estimated time for this workshop: 30 minutes
 
 ### About Oracle Cloud Infrastructure Stack Monitoring
 
-Stack Monitoring provides discovery and monitoring of applications and application stack technologies running on OCI or on-premises. Get full-stack visibility into the health of applications such as Oracle E-Business Suite (EBS), and their underlying application servers, databases, and hosts – all viewable together using a single solution. Use one-click discovery to discover all components of applications such as Oracle E-Business Suite, PeopleSoft or application stack technologies such as Oracle WebLogic Domain and Oracle Database. For more information on Stack Monitoring please refer to Stack Monitoring > **[Getting Started](https://docs.oracle.com/en-us/iaas/stack-monitoring/index.html)** section in the OCI Documentation.
+Stack Monitoring provides easy to use UI driven discovery and monitoring of applications (e.g. E-Business Suite and PeopleSoft) and application stack technologies (e.g. WebLogic, Tomcat, Oracle Database, SQL Server) running on OCI or on-premises. Obtain full-stack visibility into the health of applications such as Oracle E-Business Suite (EBS), and their underlying application servers, databases, and hosts – all viewable together using a single solution. Use one-click discovery to discover all components of applications such as Oracle E-Business Suite, PeopleSoft or application stack technologies such as Oracle WebLogic Domain and Oracle Database. For more information on Stack Monitoring please refer to Stack Monitoring > **[Getting Started](https://docs.oracle.com/en-us/iaas/stack-monitoring/index.html)** section in the OCI Documentation.
 
 
 ### Objectives
@@ -32,7 +32,7 @@ In this workshop, the following topics will be covered:
 
 ### Prerequisites
 
-* An Oracle event account, which you can use to sign in to the workshop tenancy.
+* An Oracle event account, which you can use to sign into the workshop tenancy.
 
 ## Acknowledgements
 
