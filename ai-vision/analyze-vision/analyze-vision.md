@@ -48,7 +48,7 @@ Before you start using OCI Vision, your tenancy administrator should set up the 
     ```
     ![](./images/policy4.png " ")
 
-## **Task 1:** Understand Data Requirements
+## Task 1: Understand Data Requirements
 
 The vision service works with multiple formats of image data in order to detect objects, assign labels to images, extract text, and more. The service accepts data through Object Storage and locally stored images (if using via OCI console).
 
@@ -59,7 +59,7 @@ The service offers sync and async APIs to analyze images, with data requirements
 | sync API (analyzeImage, analyzeDocument) | Analyzes individual images | * JPG, PNG, (PDF and Tiff for analyzeDocument)<br>* Up to 8 MB<br>* Single image input |
 | async API  <br>/jobs/startImageAnalysisjob  <br>/jobs/start | Analyze multiple images or multi-page PDFs | * JPG, PNG (PDF and Tiff for analyzeDocument)<br>* Up to 2000 images input<br>* Supports multi-page PDF |
 
-## **Task 2:** Upload Data to Object Storage
+## Task 2: Upload Data to Object Storage
 
 This is an optional set of steps if you want to test OCI Vision with your own sample images.
 
@@ -94,7 +94,7 @@ This is an optional set of steps if you want to test OCI Vision with your own sa
 
   More details on Object storage can be found on this page. [Object Storage Upload Page](https://oracle-livelabs.github.io/oci-core/object-storage/workshops/freetier/index.html?lab=object-storage) to see how to upload.
 
-## **Task 3:** Demo Vision Service using the OCI Console
+## Task 3: Demo Vision Service using the OCI Console
 
 1. Navigate to the Vision Page of OCI Console 
 

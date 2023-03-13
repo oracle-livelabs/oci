@@ -1,4 +1,4 @@
-# Create a custom model through the console
+# Create a custom model through the OCI console
 
 ## Introduction
 In this session, we will show you how to create a vision project, select your training data, and train a custom model.
@@ -47,7 +47,7 @@ Before you start using OCI Vision, your tenancy administrator should set up the 
     ```
     ![](./images/policy4.png " ")
 
-## **Task 1:** Create a Project
+## Task 1: Create a Project
 
 A Project is a way to organize multiple models in the same workspace. It is the first step to start.
 
@@ -61,11 +61,11 @@ A Project is a way to organize multiple models in the same workspace. It is the 
 
 3. Once the details are entered click the Create Button. If the project is successfully created it will show up in projects pane.  
 
-## **Task 2:** Select Model Type
+## Task 2: Select Model Type
 
 AI Vision Service supports training of an on-demand custom model for Object Detection, Image Classification, and Document Image Classification features. You can select one of these three options in the drop down.
 
-## **Task 3:** Select Training Data
+## Task 3: Select Training Data
 
 1. To train a custom model, you will need training data. There are two main options depending on if you already have an annotated dataset, or only have raw (unlabeled) images.
 
@@ -83,13 +83,13 @@ AI Vision Service supports training of an on-demand custom model for Object Dete
 
     ![](./images/select-training-data4.png " ")
 
-## **Task 4:** Train your Custom Model
+## Task 4: Train your Custom Model
 
 In the "train model" step, you will name your model, add a description of it, and optionally, specify a training duration. 
 
 ![](./images/train-model1.png " ")
 
-## **Task 5:** Review and Submit
+## Task 5: Review and Submit
 
 In the "review" step, you can verify that all of your information is correct and go back if you want to make adjustments (on training time, for example). When you want to start training, click "submit" and this will kick of the process. You can then check on the status of your model in the project where you created it.
 

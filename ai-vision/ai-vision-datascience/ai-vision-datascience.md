@@ -56,7 +56,7 @@ Before you can start using Data Science, your tenancy administrator should set u
         where dynamic-group represents the name of your dynamic group.
 
 
-## **Task 1:** Navigate to the Data Science Notebook Session
+## Task 1: Navigate to the Data Science Notebook Session
 
 Follow the below steps to open Notebook in DataScience:
 1. Navigate to Data Science Service
@@ -101,7 +101,7 @@ Follow the below steps to open Notebook in DataScience:
     Open the notebook session that was provisioned.
         ![](./images/open-notebook.png " ")
 
-## **Task 2:** Setup API Signing Key and Config File
+## Task 2: Setup API Signing Key and Config File
 
 Generate an API signing key pair
 
@@ -155,7 +155,7 @@ Generate an API signing key pair
 
     ![](./images/oci-folder.png " ")
 
-## **Task 3:** Invoke the analyze image API
+## Task 3: Invoke the analyze image API
 
 Each notebook contains certain feature demos as mentioned below.
 
@@ -176,7 +176,7 @@ Each notebook contains certain feature demos as mentioned below.
 
     These notebooks demonstrate how you can be more productive by using the Image features of Vision service.
 
-## **Task 4:** Invoke the analyze document API
+## Task 4: Invoke the analyze document API
 
 Each notebook contains certain feature demos as mentioned below.
 
@@ -197,7 +197,7 @@ Each notebook contains certain feature demos as mentioned below.
 
     These notebooks demonstrate how you can be more productive by using the Document AI features of Vision service.
 
-## **Task 5:** Invoke the batch (Async) APIs 
+## Task 5: Invoke the batch (Async) APIs 
 
 Each notebook contains certain feature demos as mentioned below.
 
