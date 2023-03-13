@@ -23,6 +23,8 @@ In this lab, you will
    ![mediastreams 11](images/navigate-ingested-master-playlist.png " ")
 2. Look for the ingest job status (succeeded) and select the packaging configuration in the preview URL section.
    ![mediastreams 12](images/generate-preview-url.png " ")
+   ![mediastreams 14](images/session-token-validity.png " ")
+   Set the session token validity between 10 minutes to 24 hours and click "Generate"
    Copy the URL containing authenticated session key information for the streaming content.
 3. Paste the URL in Safari or any HLS Player. 
    ![mediastreams 13](images/hls-playback.png " ")

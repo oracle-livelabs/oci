@@ -7,11 +7,13 @@ OCI Events tracks resource changes with events which comply with CNCF CloudEvent
 
 Go to Events Service → Rules → Create Rule, and create a rule as shown in the screenshot below. 
 
-![](./images/Set-Ev1.png)
+![](./images/set-ev1.png)
 
    * For Event Type, select **Object Storage**, then select  **Object - Create** and **Object - Update**.
    * For Attribute, select **bucketName**. Attribute Values should be **training-data-bucket** and **inferencing-data-bucket**, which were the values set up in **Lab 3** earlier.
    * Under Actions, select **Functions** for Action Type, and select the right *Function Compartment*, *Function Application* and *Function Name* provisioned in **Lab 6**.
+
+![](./images/set-ev3.png)
 
    The finalized Rule Logic is shown below:
 
@@ -66,7 +68,7 @@ Go to Events Service → Rules → Create Rule, and create a rule as shown in th
 
 Enable Event Logs for troubleshooting purposes as shown in the screenshot below.
 
-![](./images/Set-Ev2.png)
+![](./images/set-ev2.png)
 
 ## Useful Resources
 Refer to the OCI documentation (links below) to learn more about how OCI Events Service can be used to monitor events emitted by OCI Autonomous Database and OCI Object Storage.
