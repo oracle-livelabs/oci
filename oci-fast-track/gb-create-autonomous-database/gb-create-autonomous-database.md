@@ -47,8 +47,8 @@ Para iniciar o processo de criação do Autonomous Database:
 
 ![preencha os campos do Autonomous Database](./images/autonomous-database-type-3.png)
 
-* Display Name: **ADW_FT**
-* Database name: **DBADWFT**
+* Display Name: **Dê um nome para seu banco**
+* Database name: **Dê um nome para seu banco**
 * Choose a workload type : Para este Workshop, por favor selecione **Data Warehouse**
 * Choose a deployment type: **Shared Infrastructure**
 
