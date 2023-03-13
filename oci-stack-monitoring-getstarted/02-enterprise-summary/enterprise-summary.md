@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will understand how you can the Enterprise Summary to monitor the status and performance of an application and its underlying tech stack. You will review the overall availability status of all resources, identify the resources that are down, and review the open alarms. Additionally, you will identify the list of Oracle Databases in a Not Reporting state. Learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, as you are monitoring each tier, you will learn how to interact with the Enterprise Summary UI to dynamically view other metrics. 
+In this workshop, you will understand how you can the Enterprise Summary to monitor the status and performance of an application and its underlying tech stack. You will review the overall availability status of all resources, identify the resources that are down, and review the open alarms. Additionally, you will identify the list of Oracle Databases in a Not Reporting state. Learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, as you are monitoring each tier, you will learn how to interact with the Enterprise Summary UI to dynamically view other metrics. 
 
 Estimated time: 10 minutes
 
@@ -16,7 +16,7 @@ Estimated time: 10 minutes
 
 ### Prerequisites
 
-* Obtain access to the environment covered in preceding lab in this workshop.
+* Obtain access to the environment covered in preceding workshop.
 
 ## Task 1: Identify resources that are down across the enterprise
 
@@ -31,7 +31,7 @@ Estimated time: 10 minutes
 
 	![Oracle Cloud console, Enterprise Summary](images/1-1-ent-sum.png " ")
 
-	Find the **Down** label in the Status summary chart. Clicking **Down**, opens a slide-out reporting all of the resources in a down state. The slide-out filter can be changed to quickly view all resources in any given state. This list can be sorted by name, status, and type. You can also search by name to quickly view the status of any given resource you may be concerned about. Clicking a resource name, will navigate you to that resource's homepage to continue an investigation. We will cover resource homepages and navigation later in this lab.
+	Find the **Down** label in the Status summary chart. Clicking **Down**, opens a slide-out reporting all of the resources in a down state. The slide-out filter can be changed to quickly view all resources in any given state. This list can be sorted by name, status, and type. You can also search by name to quickly view the status of any given resource you may be concerned about. Clicking a resource name, will navigate you to that resource's homepage to continue an investigation. We will cover resource homepages and navigation later in this workshop.
 
 	![Oracle Cloud console, Enterprise Summary](images/1-2-ent-sum.png " ")
 
@@ -147,7 +147,7 @@ Estimated time: 10 minutes
 
  	![Oracle Cloud console, Enterprise Summary](images/5-3-ent-sum.png " ")
 
-Congratulations! Let's **proceed to the next lab**.
+Congratulations! Let's **proceed to the next workshop**.
 
 ## Acknowledgements
 

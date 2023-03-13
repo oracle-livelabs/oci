@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will become familiar with a resource's homepage. 
+In this workshop, you will become familiar with a resource's homepage. 
 
 Estimated time: 15 minutes
 
@@ -16,7 +16,7 @@ Estimated time: 15 minutes
 
 ### Prerequisites
 
-* Completion of the first lab
+* Completion of the first workshop
 
 ## Task 1: Become familiar with the layout of a resource homepage
 

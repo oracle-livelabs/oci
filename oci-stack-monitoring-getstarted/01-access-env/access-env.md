@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will use a username provided and log in to the workshop, then access the Stack Monitoring Enterprise Summary page in the Oracle Cloud console, under Application Performance Monitoring.
+In this workshop, you use a username and login provided by the LiveLabs workshop system. 
 
 Estimated time: 5 minutes
 
@@ -12,10 +12,12 @@ Estimated time: 5 minutes
 
 ### Prerequisites
 
-* An Oracle event account, which you can use to sign in to the workshop tenancy.
+* Internet access from a laptop/device with a chrome browser (preferred) and Oracle Single Sign On account to use a LiveLabs workshop. An Oracle LiveLabs Event code or Green Button assigned account and tenancy
 
 
 ## Task 1: Log in to the workshop tenancy
+
+After you successfully log into the workshop tenancy using the View Login Info link located in the upper left of your LiveLabs workshop landing page, you will find the Stack Monitoring Enterprise Summary page using the Oracle Cloud console navigation icon (looks like a hamburger). It is located in the Observability and Management area, and in the Application Performance Monitoring section.
 
 1. Click **View Login info** on **Get Started with Oracle Cloud Stack Monitoring** landing page to log in to the workshop tenancy in the Oracle Cloud.
 
@@ -42,7 +44,7 @@ Estimated time: 5 minutes
 
    ![Oracle LiveLabs, Workshop page](images/1-5-liveLabs.png " ")
 
-## Task 2: Access Enterprise Summary page
+## Task 2: Access the Enterprise Summary page
 
 
 1. Navigate to Stack Monitoring
@@ -57,19 +59,19 @@ Estimated time: 5 minutes
 
    	 Stack Monitoring Enterprise Summary page opens.
 
-2. Connect to the correct **Region** and **Compartment**
+2. Connect to the appropriate **Region** and **Compartment**
 
-   On the Stack Monitoring Enterprise Summary page, select the following from the drop-down menus:
+   For this workfshp, from the Stack Monitoring Enterprise Summary page, select these following from the drop-down menus:
     - Region: **US East (Ashburn)**
     - Compartment : **root/eStore/OracleApps**
 
    ![Oracle Cloud console, Stack Monitoring Enterprise Summary page](images/2-3-access.png " ")
 
-When the correct region and compartment is chosen, the Enterprise Summary page will be populated. If you find the Enterprise Summary is empty double check the region and compartment.
+When the correct region and compartment is chosen, the Enterprise Summary page will be populated. If you find the Enterprise Summary is empty or you see an error message, double-check to confirm you have selected the correct region and compartment.
 
    ![Oracle Cloud console, Stack Monitoring Enterprise Summary page](images/2-4-access.png " ")
 
-You may now **proceed to the next lab**.
+You may now **proceed to the next activity**.
 
 ## Acknowledgements
 
