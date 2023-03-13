@@ -76,6 +76,12 @@ This policy uses __tenancy__ as the location as it encompasses all compartments 
 
 These are a few simple examples. A more detailed explanation of policies in OCI can be found in [the OCI Documentation for IAM Policies](https://docs.oracle.com/en-us/iaas/Content/Identity/policieshow/how-policies-work.htm).
 
+## Separation of Duties
+
+A quick note on the principal of separation of duties as it pertains to the Landing Zone. Administrators with full access to all resources should be kept to the bare minimum to maintain security. Responsibility should be spread across multiple people and roles to prevent misuse. Admins should be granted the barest set of permissions as required to perform their duties. The Landing Zone is designed around this concept, which is the driving idea behind the design of compartments and IAM objects (users, policies).
+
+An effort has been made to provide a default set of useful groups to carry out common roles across organizations. However, it is unlikely that this or any application will fit all organizations without any customization. The policies dictating permissions for these groups should be modified to suit organizational needs. What should _not_ be done is assigning all roles to any individuals, granting them elevated access.
+
 ## A Note on Terraform
 
 The CIS OCI Landing Zone uses [Terraform](https://developer.hashicorp.com/terraform/intro) to deploy all resources into a tenancy. Terraform is an Infrastructure as Code tool used for provisioning cloud objects in an automated manner. This simplifies the setup of the Landing Zone and shortens the time to production in OCI.

@@ -14,3 +14,7 @@ Set the _Name_ parameter to an appropriate name for the _Stack_. This will be wh
 Make sure that an appropriate Compartment is chosen for the _Create in Compartment_ field as well before moving on.
 
 Once satisfied with the current settings for the stack, click the __Next__ button on the bottom-left corner of the UI and move onto _Lab 2: Configure Variables for Basic Deployment_.
+
+## Next Step
+
+Continue to go over the configurations for a basic, 3-tier network deployment.

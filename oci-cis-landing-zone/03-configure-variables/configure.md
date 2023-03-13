@@ -68,3 +68,7 @@ __Leave the _Run apply_ button unchecked__.
 ![Apply Button](images/apply_button.png "Leave it unchecked")
 
 Click the __Save Changes__ button when finished.
+
+## Next Step
+
+Create, review, and apply a deployment plan.
