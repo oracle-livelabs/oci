@@ -22,9 +22,9 @@ In this workshop, the following topics will be covered:
   - Identify a list of resources in a down state across the enterprise
   - Review open alarms across an enterprise
   - Review the performance of resources across each application tier
-  - DDynamically investigating other performance metrics
+  - Dynamically investigating other performance metrics
 * Homepages
-  - Review a resource homepage
+  - Review a resource home page
   - Review Performance menu including, alarms, charts, tables, and Stack View
   - Review application topology
   - Navigate across an application stack
