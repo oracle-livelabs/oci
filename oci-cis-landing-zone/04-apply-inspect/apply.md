@@ -1,6 +1,6 @@
 # Lab 3: Apply and Inspect Resources
 
-Terraform should be used in two stages, plan and apply.
+Terraform should be used in two stages, plan and apply. In this lab, we will produce and check a plan before applying. Once the plan is verified, it will be used to apply and create the Landing Zone.
 
 ## Concepts
 

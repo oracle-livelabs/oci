@@ -25,11 +25,13 @@ This section controls the creation of generic Virtual Cloud Network (VCN) resour
 
 __The default value of 10.0.0.0/20 will work__, and is large enough to fit most use cases. For this lab, only change this value if you know what you are doing.
 
+Check the __Advanced Options__ checkbox to view further configurations. Give your VCN a custom name under __VCNs Custom Names__.
+
 ![Generic VCN Configurations](images/generic_vcn.png "Generic VCN")
 
 ### Networking - Exadata Cloud Service VCNs to Networking - Connectivity to On-Premises
 
-We will not be covering these sections yet. Please leave them as-is.
+We will not be covering these sections yet. Leave them as-is.
 
 ### Events and Notifications
 
