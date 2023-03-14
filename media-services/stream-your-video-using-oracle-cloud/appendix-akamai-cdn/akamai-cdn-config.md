@@ -61,7 +61,8 @@ In this lab, you will
    ![Add Certificates](images/origin-server-ca-cert-add.png " ")
 
 
-2. Enable the Token authentication on the Akamai AMD Property and generate the tokenkey and salt. 
+2. Enable the Token authentication on the Akamai AMD Property and generate the tokenkey and salt.
+   Edge authentication is optional. You can skip this step if you are keeping the playback of the videos public.
    Map the values into the Media Streams distribution channel AKAMAI CDN configuration.
 
    ![Akamai Edge Token](images/akami-edge-token-auth-enable.png " ")
