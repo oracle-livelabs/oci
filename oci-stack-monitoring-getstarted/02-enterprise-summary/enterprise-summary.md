@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this workshop, you will learn how you can the Enterprise Summary can be capitalized to monitor the status and performance of an application and its underlying tech stack. You will understand how to review the overall availability status of all resources, identify the resources that are down, and review the open alarms. Additionally, you will identify the list of Oracle Databases in a Not Reporting state. You will further learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, because you are monitoring each tier, you will see how to interact with the Enterprise Summary UI to dynamically view other metrics. 
+In this workshop, you will learn how the Enterprise Summary can be capitalized to monitor the status and performance of an application and its underlying tech stack. You will understand how to review the overall availability status of all resources, identify the resources that are down, and review the open alarms. Additionally, you will identify the list of Oracle Databases in a Not Reporting state. You will further learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, because you are monitoring each tier, you will see how to interact with the Enterprise Summary UI to dynamically view other metrics. 
 
 Estimated time: 10 minutes
 
@@ -93,7 +93,12 @@ Estimated time: 10 minutes
 
  	![Oracle Cloud console, Enterprise Summary](images/3-3-ent-sum.png " ")
 
- 	Once you have reviewed the alarm, close the browser tab to return to Stack Monitoring. Once again click **Close** at the bottom left of the slide-out to return to the Enterprise Summary.
+ 	Once you have reviewed the alarm, close the browser tab to return to Stack Monitoring. 
+
+
+ 	Once again click **Close** at the bottom left of the slide-out to return to the Enterprise Summary.
+
+ 	![Oracle Cloud console, Enterprise Summary](images/3-4-ent-sum.png " ")
 
 ## Task 4: Review the performance of resources across an enterprise
 
