@@ -26,8 +26,7 @@ Estimated time: 10 minutes
 
 2. Identify resources in a **Down** state
 
-
-	When the Stack Monitoring Enterprise Summary page opens it provides the overall health and performance of the applications it’s been configured for across an entire enterprise – cloud, on-premises, hybrid, or multicloud. The top tier of the display enables you to quickly see, identify, and triage resources that are **Down** to help remediate outages. Locate the **Status Summary** doughnut chart on the upper left side of the page. You can see a count of resources by each status across the enterprise. This chart provides a quick visualization of how many resources are in a **Down** or **Not Reporting** state across your enterprise. Let's investigate any resources that are **Down**. 
+	The Stack Monitoring Enterprise Summary page provides an overall health and performance of your entire enterprise. The top tier enables you to quickly see, identify, and triage resources that are **Down** to help remediate outages. Locate the **Status Summary** doughnut chart on the upper left side of the page. You can see a count of resources by each status across the enterprise. This chart provides a quick visualization of how many resources are in a **Down** or **Not Reporting** state across your enterprise. Let's investigate any resources that are **Down**. 
 
 	![Oracle Cloud console, Enterprise Summary](images/1-1-ent-sum.png " ")
 
@@ -146,7 +145,7 @@ Estimated time: 10 minutes
 
 	Saving the configuration allows you to leave the Enterprise Summary and return later to the page with your updated view intact. Once you complete your investigation, simply click **Restore default** to return the Enterprise Summary to out-of-the-box configuration. Let's see how this is done.
 
-	Investigating health and performance issues are easy using the interactive features of the Enterprise Summary. You can easily swap out any performance charts or tables with another. This enables you the capability to quickly and easily view  necessary metrics when troubleshooting issues. Using the Enterprise Summary, you can review and correlate the performance of the JVM's heap utilization with any other WebLogic metric. From within the WebLogic tier, locate the chart **CPU and Memory Utilization**. Begin by clicking the pencil icon in the top right of the chart to invoke the slide-out. With the slide-out loaded, enable the **Advanced** features. Under the **X-Axis** replace Memory Utilization with **JVM Memory Utilization** and add a dimension name of **Type**, and dimension value of **Heap**. Finally, select **Apply** in the lower left of the slide-out. 
+	Investigating health and performance issues are easy using the interactive features of the Enterprise Summary. You can easily swap out any performance charts or tables with another. This enables you the capability to quickly and easily view necessary metrics when troubleshooting issues. Using the Enterprise Summary, you can review and correlate the performance of the JVM's heap utilization with any other WebLogic metric. From within the WebLogic tier, locate the chart **CPU and Memory Utilization**. Begin by clicking the pencil icon in the top right of the chart to invoke the slide-out. With the slide-out loaded, enable the **Advanced** features. Under the **X-Axis** replace Memory Utilization with **JVM Memory Utilization** and add a dimension name of **Type**, and dimension value of **Heap**. Finally, select **Apply** in the lower left of the slide-out. 
 
  	![Oracle Cloud console, Enterprise Summary](images/5-1-ent-sum.png " ")
 

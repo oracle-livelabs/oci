@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-In this workshop, you will become familiar with Oracle's Stack Monitoring solution. Stack Monitoring is an Oracle Cloud Infrastructure (OCI) cloud-native service to monitor and view the health, performance, and its underlying tech stack. Stack Monitoring can discover and monitor application running on the cloud, on-premises, hybrid, or multi-cloud environments.
+In this workshop, you will become familiar with Oracle's Stack Monitoring solution. Stack Monitoring is an Oracle Cloud Infrastructure (OCI) cloud-native service to monitor and view the health, performance of an application and its underlying tech stack. Stack Monitoring can discover and monitor applications running on the cloud, on-premises, or hybrid environments.
 
 In this workshop learn how to identify application outages across your enterprise at a glance utilizing Stack Monitoring's Enterprise Summary. Understand how to identify and triage any open alarms. See how you can leverage Stack Monitoring's tier-organized Key Performance Metrics (KPI's) to review performance outliers. Learn how to dynamically configure the Enterprise Summary to help identify performance problems. It is very useful when you need to swap a metric chart or table with another to troubleshoot an alarm that is not displayed by default.
 
