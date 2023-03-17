@@ -26,11 +26,11 @@ Estimated time: 15 minutes
 
 2. Navigate to a **Concurrent Manager** resource.
 
-	The Enterprise Summary page opens. The concurrent manager is one of those key resources you want to monitor to help maintain the service level of EBS. In the last lab we discussed that when you are troubleshooting, the Enterprise Summary provides quick insight into the performance of your resources at a glance. Located on the E-Business Suite (EBS) tier, the **Concurrent Manager requests** chart is displayed and provides visibility into all concurrent managers across your enterprise. Should a concurrent manager need to be investigated further, such as viewing if the percentage of completed concurrent requests is low, click the dot within the **Concurrent Manager requests** chart to activate the slide-out.
+	The Enterprise Summary page opens. The concurrent manager is one of those key resources you want to monitor to help maintain the service level of EBS. In the last lab we discussed that when you are troubleshooting, the Enterprise Summary provides quick insight into the performance of your resources at a glance. Located on the E-Business Suite (EBS) tier, the **Concurrent Manager requests** chart is displayed and provides visibility into all concurrent managers across your enterprise. Should a concurrent manager need to be investigated further, such as viewing if the percentage of successfully completed concurrent requests is low, click the dot within the **Concurrent Manager requests** chart to activate the slide-out.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/1-1-home.png " ")
 
-	With the slide-out open, click the name of the resource at the top of the page. This will navigate you to the concurrent manager's homepage.
+	With the slide-out open, you can again review the percentage of successful completed requests over time. Now lets take a closer look at this concurrent manager by clicking the name of the concurrent manager at the top of the page. This will navigate you to the concurrent manager's homepage.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/1-1-1-home.png " ")
 
@@ -38,7 +38,7 @@ Estimated time: 15 minutes
 
 	On the Concurrent Manager homepage, you can easily review the health and performance of this resource. Each resource in Stack Monitoring has a homepage that provides a central place to review status, performance, and alarms. At the top of the page, Stack Monitoring reports the current status, (Up, Down, Not Reporting). The color and shape of the status indicator will update depending on the resource status and type. Should you find a resource in a down state, the homepage will display a large **red** box with the status of **Down**. Stack Monitoring also provides a **Current Status** date and time. For example, if this Concurrent Manager goes down, Stack Monitoring will provide a timestamp of when the status switched from **Up** to **Down**.
 
-	We can see a count of open alarms by severity. Clicking an alarm count will open the Alarms tab below. We'll cover alarms when we discuss the **Alarms** tab in more detail later.
+	We can see a count of open alarms by severity. Clicking an alarm count will open the Alarms tab below. We'll cover the **Alarms** tab in more detail later.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/1-2-home.png " ")
 
@@ -62,7 +62,7 @@ Estimated time: 15 minutes
 
 3. Review open alarms
 
-	Select the **Alarms** tab. Using the **Alarms** view we can see a detailed list of open alarms that includes the alarm Name, Severity, and Last Triggered date/time. Clicking an alarm **Name** will open a new tab in your browser to investigate and work the alarm within OCI's Monitoring Service. We'll review this workflow later in this lab. For now, let's review the configuration details of a resource.
+	Select the **Alarms** tab. Using the **Alarms** view we can see a detailed list of open alarms that includes the alarm Name, Severity, and Last Triggered date/time. In the previous lab you learned that clicking an alarm **Name** will open a new tab in your browser to investigate and work the alarm within OCI's Monitoring Service. Now let's review the configuration details of a resource.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/2-3-home.png " ")
 
@@ -80,7 +80,7 @@ Estimated time: 15 minutes
 
 1. Locate **Related Resources** under the Resources menu on the left side of the homepage.
 
-	This capability is useful if the status of the EBS Concurrent Processing instance is Not Reporting, which can be caused  by problems in an agent's upload of data.
+	This capability is useful if the status of the EBS Concurrent Processing instance is Not Reporting, which can be caused by problems in an agent's upload of data.
 
 	When discovering an application its resources and the application topology, i.e., the associations between components of its technology stack, are also discovered. You can use this application topology to navigate, view, and to troubleshoot different components of an application.
 
@@ -106,7 +106,7 @@ Estimated time: 15 minutes
 
 	Close the tab and return to Stack Monitoring. 
 
-	Next review the charts associated with this Concurrent Manager by clicking the **Performance** menu on the left side of the page. Then select the **Charts** tab. Now let's expand the chart time frame to show the **Last 24 Hours**. When you review the chart, **Completed Concurrent Requests**, there doesn’t appear to be a spike in completed concurrent requests with errors. Hovering over the legend within the chart **Capacity Utilization of Concurrent Managers**, you can see each of the concurrent managers appear to be at 100% capacity. That indicates a possible issue with concurrent manager capacity needs to be further investigated. Now review the overall health and performance of the entire EBS application stack.
+	Next review the charts associated with this Concurrent Manager by clicking the **Performance** menu on the left side of the page. Then select the **Charts** tab. Now let's expand the chart time frame to show the **Last 24 Hours**. When you review the chart, **Completed Concurrent Requests**, there does not appear to be a spike in completed concurrent requests with errors. Hovering over the legend within the chart **Capacity Utilization of Concurrent Managers**, you can see each of the concurrent managers appear to be at 100% capacity. That indicates a possible issue with concurrent manager capacity needs to be further investigated. Now review the overall health and performance of the entire EBS application stack.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-3-home.png " ")
 
@@ -126,7 +126,7 @@ Estimated time: 15 minutes
 
 	Clicking **Charts** provides quick visibility into the health of the EBS application. Let's begin by expanding the chart time displayed from the **Last 60 Minutes** to **Last 24 Hours**.
 
-	Assuming you are the EBS Admin, by using the chart **Executed Programs by Running Time**Time you can easily gain insight into the five longest-running programs by running time. Then using your domain knowledge, you pinpoint a job that is running longer than expected. Reviewing **Completed Requests by Application** you can see more than ten percent of requests are erroring out. An EBS admin familiar with the environment can confirm if it’s erroring more than typical for this EBS application being the count of active users has remained constant.
+	Assuming you are the EBS Admin, by using the chart **Executed Programs by Running Time**Time you can easily gain insight into the five longest-running programs by running time. Then using your domain knowledge, you pinpoint a job that is running longer than expected. Reviewing **Completed Requests by Application** you can see more than ten percent of requests are erroring out. An EBS admin familiar with the environment can confirm if it is erroring more than typical for this EBS application being the count of active users has remained constant.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-7-home.png " ")
 
@@ -148,7 +148,7 @@ Estimated time: 15 minutes
 
 	Reviewing the **EBS Database tier**, you can review the number of transactions committed and rolled back. You can see the count of rolled back sessions is quite low and that transaction wait times across dimensions remains low as well.
 	
-	Finally, you can review the health of the EBS hosts. Using the **CPU Utilization** you can see utilization is well below 100% and that memory utilization is also well below its maximum.
+	Finally, you can review the health of the EBS hosts. In this screenshot you can see the **CPU Utilization** spiked around 9am.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-10-home.png " ")
 	
@@ -156,7 +156,7 @@ Estimated time: 15 minutes
 
 ## Conclusion
 
-Overall, you’ve learned how Stack Monitoring enables you to monitor the overall health of your applications and their underlying stack including servers, databases, and hosts. How the Enterprise Summary can be used to immediately assess status and performance across each application stack tier, and its interactive design enables dynamic changes to any performance charts. Resource homepages provide you with a curated view of the health and performance of resources through charts, tables, and Stack View. You learned how Stack Monitoring can automatically provide an application topology automatically when discovering applications. The associations between resources further enables easy navigation up and down the application stack to ease and speed up the triaging and remediation of application performance issues. And finally, you learned how the Stack View provides the ability to research the health and performance of the entire application stack from a single page to reduced incident times. 
+Overall, you have learned how Stack Monitoring enables you to monitor the overall health of your applications and their underlying stack including servers, databases, and hosts. How the Enterprise Summary can be used to immediately assess status and performance across each application stack tier, and its interactive design enables dynamic changes to any performance charts. Resource homepages provide you with a curated view of the health and performance of resources through charts, tables, and Stack View. You learned how Stack Monitoring can automatically provide an application topology automatically when discovering applications. The associations between resources further enables easy navigation up and down the application stack to ease and speed up the triaging and remediation of application performance issues. And finally, you learned how the Stack View provides the ability to research the health and performance of the entire application stack from a single page to reduced incident times. 
 
 For more information and full range of capabilities of the APM Stack Monitoring solution, view the OCI **[Stack Monitoring](https://docs.oracle.com/en-us/iaas/stack-monitoring/index.html)** Documentation.
 

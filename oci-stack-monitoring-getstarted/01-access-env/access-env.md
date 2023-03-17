@@ -61,7 +61,7 @@ After you successfully log into the workshop tenancy using the View Login Info l
 
 2. Connect to the appropriate **Region** and **Compartment**
 
-   For this workfshp, from the Stack Monitoring Enterprise Summary page, select these following from the drop-down menus:
+   For this workshop, from the Stack Monitoring Enterprise Summary page, select these following from the drop-down menus:
     - Region: **US East (Ashburn)**
     - Compartment : **root/eStore/OracleApps**
 
