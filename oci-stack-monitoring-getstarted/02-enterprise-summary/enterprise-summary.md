@@ -127,11 +127,11 @@ Estimated time: 10 minutes
 
  	Located on the right-hand side of the page, Tables enable you to quickly identify which hosts or databases have the highest filesystem usage or tablespace usage. By default, **Tables** provide up to the four highest utilized or consumed resources of a given metric. The number of rows displayed can be updated from 4 to 10, 20, or all. Let's review the top 20 most heavily utilized filesystems within the enterprise. Locate the **Filesystem Utilization** chart on the right side under the **Hosts** tier. Click the pencil icon in the top right of the chart. After clicking the pencil, enable the **Advanced** menu items by updating the **Advanced** flag. Enabling the Advanced menu provides access to optional features of a table or chart. Click **Display records** to change the value of rows displayed from 4 to **20**. With the value updated to 20, click **Apply** in the lower left of the slide-out to return to the Enterprise Summary. 
 
- 	![Oracle Cloud console, Enterprise Summary](images/4-5-ent-sum.png " ")
+ 	![Host filesystem table edit screen, highlighting the count of records to display in the table](images/4-5-ent-sum.png " ")
 
  	You can now view a list of the top 20 hosts with the most heavily utilized filesystems. Should one of the hosts' filesystems cause concern, clicking any of the resource names will navigate you to that resource's homepage for further investigation. For example, when investigating filesystem utilization, it is good to review the growth over time to understand if more space should be added, and if so how much. From a Stack Monitoring host homepage, you can chart the growth of the filesystem over time using the **Filesystem Utilization** chart. We'll review resource homepages in a later lab activity.
 
- 	![Oracle Cloud console, Enterprise Summary](images/4-6-ent-sum.png " ")
+ 	![Host tier, highlighting the chart filesystem utilization with more than four records displayed](images/4-6-ent-sum.png " ")
 
 ## Task 5: Dynamically investigate other key performance metrics
 
@@ -147,15 +147,15 @@ Estimated time: 10 minutes
 
 	Investigating health and performance issues are easy using the interactive features of the Enterprise Summary. You can easily swap out any performance charts or tables with another. This enables you the capability to quickly and easily view necessary metrics when troubleshooting issues. Using the Enterprise Summary, you can review and correlate the performance of the JVM's heap utilization with any other WebLogic metric. From within the WebLogic tier, locate the chart **CPU and Memory Utilization**. Begin by clicking the pencil icon in the top right of the chart to invoke the slide-out. With the slide-out loaded, enable the **Advanced** features. Under the **X-Axis** replace Memory Utilization with **JVM Memory Utilization** and add a dimension name of **Type**, and dimension value of **Heap**. Finally, select **Apply** in the lower left of the slide-out. 
 
- 	![Oracle Cloud console, Enterprise Summary](images/5-1-ent-sum.png " ")
+ 	![WebLogic server tier, updating the X-axis of the scatter-plot to show JVM heap utilization](images/5-1-ent-sum.png " ")
 
 	You can now see all the JVM Heap Memory utilization values across all monitored resources. Using the data provided in the chart we can now correlate the performance of the WebLogic server's heap utilization with the WebLogic server's CPU performance.
 
- 	![Oracle Cloud console, Enterprise Summary](images/5-2-ent-sum.png " ")
+ 	![WebLogic server tier, CPU and Memory Utilization chart highlighting the dimension of heap](images/5-2-ent-sum.png " ")
 
 	You are done reviewing JVM heap utilization, let's reset the Enterprise Summary to the default configuration. To reset the page, locate the **Restore default** link in the left menu bar under **View**. Once clicked, the page will reset to the out-of-the-box configuration. 
 
- 	![Oracle Cloud console, Enterprise Summary](images/5-3-ent-sum.png " ")
+ 	![Enterprise Summary, highlighting the restore default button](images/5-3-ent-sum.png " ")
 
 You may now **proceed to the next lab**.
 
