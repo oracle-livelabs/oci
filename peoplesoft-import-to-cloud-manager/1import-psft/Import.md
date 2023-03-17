@@ -41,21 +41,22 @@
 
   ![Click on Instance Type dropdown and select DB Systems](./images/db-system.png " ")
 
- | ## Field or Control          | ## Description                                                                                         |
- | Exadata                      | Select Yes if the DB System is Exadata. An additional field for Container Database Name will be added. |
- | Database System OCID         | Database System OCID for the target database                                                          |
- | Database OCID                | Database OCID for the target database                                                                 |
- | Private IP Address           | Private IP address for the target the Database environment                                            |
- | ssh User                     | ssh user on the database system being imported                                                         |
- | PeopleSoft Operator ID       | PeopleSoft Operator  ID                                                                                 |
- | PeopleSoft Operator Password | PeopleSoft Operator Password                                                                           |
- | PeopleSoft Connect ID        | PeopleSoft Connect ID                                                                                  |
- | PeopleSoft Connect Password  | PeopleSoft Connect Password                                                                            |
- | PeopleSoft Access ID         | PeopleSoft Access ID                                                                                   |
- | PeopleSoft Access Password   | PeopleSoft Access Password                                                                             |
- | DB Administrator Password    | DB Administrator Password                                                                              |
- | PDB Name                     | Pluggable Database Name                                                                                |
- | Container Database Name      | For Exadata DB systems enter the container database name                                                                                     
+  Field or Control | Description
+  ---------------- | ----------- 
+  Exadata | Select Yes if the DB System is Exadata. An additional field for Container Database Name will be added.
+  Database System OCID | Database System OCID for the target database
+  Database OCID | Database OCID for the target database
+  Private IP Address | Private IP address for the target the Database environment
+  ssh User | ssh user on the database system being imported
+  PeopleSoft Operator ID | PeopleSoft Operator  ID
+  PeopleSoft Operator Password | PeopleSoft Operator Password
+  PeopleSoft Connect ID | PeopleSoft Connect ID
+  PeopleSoft Connect Password | PeopleSoft Connect Password
+  PeopleSoft Access ID | PeopleSoft Access ID
+  PeopleSoft Access Password | PeopleSoft Access Password
+  DB Administrator Password | DB Administrator Password
+  PDB Name | Pluggable Database Name
+  Container Database Name | For Exadata DB systems enter the container database name
 
  ![DB-System-Update](./images/db-system-update.png " ")
 
