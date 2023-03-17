@@ -1,8 +1,8 @@
-# Predictive Capabilities
+# Predictive
 
 ## Introduction
 
-In this activity you'll discover the power in predictive capabilities powered by Machine Learning and Artificial Intelligenece.
+In this activity you'll discover the power in predictive capabilities powered by Machine Learning and Artificial Intelligence.
 
 Estimated Time: 5 minutes
 
@@ -43,7 +43,7 @@ In this activity, you will:
 
     ![HPredictive Planning](images/image005.png)
 
-6. Here you are shown your predictive volume for Smart Phone 4 in. Note: how we can see past actuals in the chart on the left and future prediction in the chart on the right. Lets expand this view so you can see more details.
+6. Here you are shown your predictive volume for Smart Phone 4 in. Note: how we can see past actuals in the chart on the left and future prediction in the chart on the right. Let's expand this view so you can see more details.
 
     > Click on the [] **‘expand’** Icon
 
@@ -102,4 +102,4 @@ In this activity, you will:
 ## Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services
 * **Contributors** -  Harold Dickerman, Business Architect
-* **Last Updated By/Date** - Kevin Lazarz, September 2022
+* **Last Updated By/Date** - Kevin Lazarz, January 2023
