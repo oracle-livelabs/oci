@@ -107,19 +107,19 @@ Estimated time: 10 minutes
 
  	![Oracle Cloud console, Enterprise Summary](images/4-1-ent-sum.png " ")
 
-	Stack Monitoring makes it easy to troubleshoot any resource type and any metric at any time. All performance charts and tables can be modified or replaced to help identify problems or troubleshoot a specific performance problem. The Enterprise Summary allows you to update a chart to display any two host metrics. If you have concerns regarding network storage latency you can update a scatter plot to Disk Activity and Network Activity to correlate the performance of network read and writes. 
-
- 	![Oracle Cloud console, Enterprise Summary](images/4-2-ent-sum.png " ")
-
-	Alternatively, any scatter-plot or table change can be saved as your default when viewing the Enterprise Summary, by clicking **Save as default**. 
+	Stack Monitoring makes it easy to troubleshoot any resource type and any metric at any time. All performance charts and tables can be modified or replaced to help identify problems or troubleshoot a specific performance problem. The Enterprise Summary allows you to update a chart to display any two host metrics. If you have concerns regarding network storage latency you can update a scatter plot to Disk Activity and Network Activity to correlate the performance of network read and writes. Alternatively, any scatter-plot or table change can be saved as your default when viewing the Enterprise Summary, by clicking **Save as default**. 
 
 2. Scatter plots charts
 
 	Provide a visual representation of the performance of every resource in your enterprise. Using the scatter plot charts you can correlate any two metrics at the same time. For example, you can correlate the IOPS and CPU of an Oracle Database to understand how heavily utilized the database is. This makes it easy to identify if one or more resources are performing differently than the others. For instance, an Oracle Database with a data point at the top right corner represents a busy database, while a data point at the bottom left is idle. If you identify a performance anomaly, clicking on the data point will allow you to review the trend of that metric.
 
+ 	![Oracle Cloud console, Enterprise Summary](images/4-2-ent-sum.png " ")
+
+	Let's review memory the swap utilization of all hosts within this enterprise. Navigate to the **Memory and Swap** chart located under the **Host** tier at the bottom center of the Enterprise Summary. Every monitored host within Stack Monitoring is represented in this chart. You can assess the overall usage of memory and swap across all hosts. You can identify which host is utilizing the most memory and swap and see the majority of hosts are using very little to no swap. If troubleshooting an issue, you can hover over a plot point and see the value of the metrics.
+
  	![Oracle Cloud console, Enterprise Summary](images/4-3-ent-sum.png " ")
 
-	Let's review memory the swap utilization of all hosts within this enterprise. Navigate to the **Memory and Swap** chart located under the **Host** tier at the bottom center of the Enterprise Summary. Every monitored host within Stack Monitoring is represented in this chart. You can assess the overall usage of memory and swap across all hosts. You can identify which host is utilizing the most memory and swap and see the majority of hosts are using very little to no swap. If troubleshooting an issue, this would enable you to easily rule out memory load as a contributing factor to any performance problems that may be occurring.
+	Clicking a plot point will activate a slide-out allowing you to see the performance over time. Using the drop-down update the time selector from **Last 60 minutes** to **Last 90 Days**. Extending the time period allows you to easily identify if the increase in memory load is recent and a contributing factor to a new performance problem that may be occurring. Having reviewed the memory over the last 90 days, lets return to the Enterprise Summary by clicking **Close** in the bottom left.
 
  	![Oracle Cloud console, Enterprise Summary](images/4-4-ent-sum.png " ")
 
