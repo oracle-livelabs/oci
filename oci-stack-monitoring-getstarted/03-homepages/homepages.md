@@ -106,11 +106,11 @@ Estimated time: 15 minutes
 
 	Close the tab and return to Stack Monitoring. 
 
-	Next review the charts associated with this Concurrent Manager by clicking the **Performance** menu on the left side of the page. Then select the **Charts** tab. Now let's expand the chart time frame to show the **Last 7 Days**. When you review the chart, **Completed Concurrent Requests**, there doesn’t appear to be a spike in completed concurrent requests with errors. Hovering over the legend within the chart **Capacity Utilization of Concurrent Managers**, you can see each of the concurrent managers appear to be at 100% capacity. That indicates a possible issue with concurrent manager capacity needs to be further investigated. Now review the overall health and performance of the entire EBS application stack.
+	Next review the charts associated with this Concurrent Manager by clicking the **Performance** menu on the left side of the page. Then select the **Charts** tab. Now let's expand the chart time frame to show the **Last 24 Hours**. When you review the chart, **Completed Concurrent Requests**, there doesn’t appear to be a spike in completed concurrent requests with errors. Hovering over the legend within the chart **Capacity Utilization of Concurrent Managers**, you can see each of the concurrent managers appear to be at 100% capacity. That indicates a possible issue with concurrent manager capacity needs to be further investigated. Now review the overall health and performance of the entire EBS application stack.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-3-home.png " ")
 
-	It's easy to identify and navigate to the EBS application associated with this Concurrent Manager is easy by clicking **Related Resources** on the left side of the page. Locate the resource **EBS_PROD_01** with the type **EBS**. Click the name of the resource **EBS_PROD_01** to navigate to the application's homepage.
+	It's easy to identify and navigate to the EBS application associated with this Concurrent Manager is easy by clicking **Related Resources** on the left side of the page. Locate the resource **PROD_EBS_O4** with the type **EBS**. Click the name of the resource **PROD_EBS_O4** to navigate to the application's homepage.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-4-home.png " ")
 
@@ -124,7 +124,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-6-home.png " ")
 
-	Clicking **Charts** provides quick visibility into the health of the EBS application. Let's begin by expanding the chart time displayed from the **Last 60 Minutes** to **Last 7 Days**.
+	Clicking **Charts** provides quick visibility into the health of the EBS application. Let's begin by expanding the chart time displayed from the **Last 60 Minutes** to **Last 24 Hours**.
 
 	Assuming you are the EBS Admin, by using the chart **Executed Programs by Running Time**Time you can easily gain insight into the five longest-running programs by running time. Then using your domain knowledge, you pinpoint a job that is running longer than expected. Reviewing **Completed Requests by Application** you can see more than ten percent of requests are erroring out. An EBS admin familiar with the environment can confirm if it’s erroring more than typical for this EBS application being the count of active users has remained constant.
 
@@ -136,7 +136,7 @@ Estimated time: 15 minutes
 
 	The Stack View provides a holistic perspective of key performance metrics across an entire application and application stack technologies, a differentiated capability of Stack Monitoring. Within Stack View, you can observe an application including its key underlying components and technology stack all together in one place.
 
-	Stack View provides specially curated key performance metrics for the health and performance of the entire application - in this example EBS. Locate the tab **Stack View** from the menu. Begin by again adjusting the time frame from the **Last 60 Minutes** to **Last 7 Days**. Now expand each tier. With each tier expanded, you get a complete view of the performance of your EBS application.
+	Stack View provides specially curated key performance metrics for the health and performance of the entire application - in this example EBS. Locate the tab **Stack View** from the menu. Begin by again adjusting the time frame from the **Last 60 Minutes** to **Last 24 Hours**. Now expand each tier. With each tier expanded, you get a complete view of the performance of your EBS application.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/5-8-home.png " ")
 
