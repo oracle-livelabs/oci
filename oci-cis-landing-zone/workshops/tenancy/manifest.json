@@ -33,7 +33,7 @@
             "filename": "../../05-exadata-compartment/exadata.md"
         },
         {
-            "title": "Lab 5: Create Hub & Spoke Network",
+            "title": "Lab 5: Create a DMZ Network",
             "description": "Modify Configuration to Create Optional Hub & Spoke Network Model",
             "filename": "../../06-hub-spoke/hub.md"
         },

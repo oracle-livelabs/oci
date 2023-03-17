@@ -2,6 +2,8 @@
 
 In this Lab we will upload the files for the OCI CIS Landing Zone from the public GitHub repository into Resource Manager. The process for this is simple.
 
+## Upload Landing Zone to Resource Manager
+
 1. Navigate to the Landing Zone Repository on GitHub [https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart)
 2. Find the __Deploy to Oracle Cloud__ button and click it ![Deploy to Oracle Cloud Button](images/button.png " ")
 3. If you are not already logged into your OCI tenancy, you will be taken to the login screen for authentication. Once authenticated, you will be presented with the __Create Stack__ menu for creating Resource Manager Stacks

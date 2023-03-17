@@ -61,7 +61,7 @@ We recommend using Cloud Guard if eligible. For the purposes of this lab, we are
 
 All are useful tools, but for the sake of starting simple will not be a part of the labs.
 
-## Next Steps
+### Finishing Up
 
 Click __Next__ to continue to the review page. Quickly double check the variables entered.
 
