@@ -26,9 +26,13 @@ Estimated time: 15 minutes
 
 2. Navigate to a **Concurrent Manager** resource.
 
-	The Enterprise Summary page opens. The concurrent manager is one of those key resources you want to monitor to help maintain the service level of EBS. In the last lab we discussed that when you are troubleshooting, the Enterprise Summary provides quick insight into the performance of your resources at a glance. Located on the E-Business Suite (EBS) tier, the **Concurrent Manager requests** chart is displayed and provides visibility into all concurrent managers across your enterprise. Should a concurrent manager need to be investigated further, such as viewing if the percentage of completed concurrent requests is low, you just click the dot within the **Concurrent Manager requests** chart to investigate. 
+	The Enterprise Summary page opens. The concurrent manager is one of those key resources you want to monitor to help maintain the service level of EBS. In the last lab we discussed that when you are troubleshooting, the Enterprise Summary provides quick insight into the performance of your resources at a glance. Located on the E-Business Suite (EBS) tier, the **Concurrent Manager requests** chart is displayed and provides visibility into all concurrent managers across your enterprise. Should a concurrent manager need to be investigated further, such as viewing if the percentage of completed concurrent requests is low, click the dot within the **Concurrent Manager requests** chart to activate the slide-out.
 
 	![Oracle Cloud console, Stack Monitoring Homepages](images/1-1-home.png " ")
+
+	With the slide-out open, click the name of the resource at the top of the page. This will navigate you to the concurrent manager's homepage.
+
+	![Oracle Cloud console, Stack Monitoring Homepages](images/1-1-1-home.png " ")
 
 3. Application specific key resource homepages
 
