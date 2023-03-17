@@ -41,7 +41,7 @@
 
   ![Click on Instance Type dropdown and select DB Systems](./images/db-system.png " ")
 
-  Field or Control | Description
+  **Field or Control** | **Description**
   ---------------- | ----------- 
   Exadata | Select Yes if the DB System is Exadata. An additional field for Container Database Name will be added.
   Database System OCID | Database System OCID for the target database
