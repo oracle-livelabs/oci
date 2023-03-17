@@ -56,36 +56,36 @@ Before you can start using Data Science, your tenancy administrator should set u
         where dynamic-group represents the name of your dynamic group.
 
 
-## **Task 1:** Navigate to the Data Science Notebook Session
+## Task 1: Navigate to the Data Science Notebook Session
 
 Follow the below steps to open Notebook in DataScience:
 1. Navigate to Data Science Service
 
     Log into OCI Cloud Console. Using the Burger Menu on the top left corner, navigate to Analytics and AI menu and click it, and then select Data Science item under Machine Learning.
-        ![](./images/cloud-menu.png " ")
+        ![Navigate to Data Science Service](./images/cloud-menu.png " ")
 
 2. Select Compartment
 
     Select the Compartment in which want to create your project.
-        ![](./images/select-comp.png " ")
+        ![Select Compartment](./images/select-comp.png " ")
     
 
 3. Create Project
 
     Click Create Project to create a new project.
-        ![](./images/create-project1.png " ")
+        ![Create Project](./images/create-project1.png " ")
     
 
 4. Enter Project Details
 
     Enter name and click Create Button.
-        ![](./images/create-project2.png " ")
+        ![Enter Project Details](./images/create-project2.png " ")
     
 
 5. Create Notebook Session
 
     Click Create Notebook Session to create a new Notebook session.
-        ![](./images/create-notebook-session.png " ")
+        ![Create Notebook Session](./images/create-notebook-session.png " ")
 
 6. Enter Notebook Details
 
@@ -93,42 +93,42 @@ Follow the below steps to open Notebook in DataScience:
     Choose Intel Skylake VM.Standard2.2 as the shape. 
     Set block storage to 50 GB.
     Select the subnet with Internet connectivity. (Select private subnet if you have use VCN Wizard to create VCN)
-        ![](./images/create-notebook-session2.png " ")
+        ![Enter Notebook Details](./images/create-notebook-session2.png " ")
 
 7. Open the OCI Data Science notebook
 
     The Notebook Session VM will be created. This might take a few minutes. When created you will see a screen like the following.
     Open the notebook session that was provisioned.
-        ![](./images/open-notebook.png " ")
+        ![Open the OCI Data Science notebook](./images/open-notebook.png " ")
 
-## **Task 2:** Setup API Signing Key and Config File
+## Task 2: Setup API Signing Key and Config File
 
 Generate an API signing key pair
 
 1. Open User Settings
 
     Open the Profile menu (User menu icon) and click User Settings.
-        ![](./images/user-profile-icon.png " ")
+        ![Open User Settings](./images/user-profile-icon.png " ")
 
 2. Open API Key
 
     Navigate to API Key and then Click Add API Key.
-        ![](./images/add-api-button.png " ")
+        ![Open API Key](./images/add-api-button.png " ")
 
 3. Generate API Key
 
     In the dialog, select Generate API Key Pair. Click Download Private Key, save the key file and then click Add.
-        ![](./images/gen-api.png " ")
+        ![Generate API Key](./images/gen-api.png " ")
 
 
 4. Generate Config File
 
     Copy the values shown on the console.
-        ![](./images/conf.png " ")
+        ![Generate Config File](./images/conf.png " ")
 
     Create a config file and paste the values copied.
     Replace the key_file value with the path of your generated API Key.
-        ![](./images/config2.png " ")
+        ![Create a config file and paste the values copied.](./images/config2.png " ")
 
     The private key and config files will be utilized in the next tasks.
 
@@ -153,9 +153,9 @@ Generate an API signing key pair
         <copy>mv <path of the private key> ~/.oci/</copy>
         ```
 
-    ![](./images/oci-folder.png " ")
+    ![Upload the Config file and the Private Key to the Notebook Session](./images/oci-folder.png " ")
 
-## **Task 3:** Invoke the analyze image API
+## Task 3: Invoke the analyze image API
 
 Each notebook contains certain feature demos as mentioned below.
 
@@ -168,7 +168,7 @@ Each notebook contains certain feature demos as mentioned below.
 
     Download [Image Demo 1](./files/image-demo1.ipynb) and [Image Demo 2](./files/image-demo2.ipynb) files and upload them in the Notebook. 
 
-    ![](./images/upload-files1.png " ")
+    ![Download and Upload the Files](./images/upload-files1.png " ")
 
 2. Execute the Notebooks
 
@@ -176,7 +176,7 @@ Each notebook contains certain feature demos as mentioned below.
 
     These notebooks demonstrate how you can be more productive by using the Image features of Vision service.
 
-## **Task 4:** Invoke the analyze document API
+## Task 4: Invoke the analyze document API
 
 Each notebook contains certain feature demos as mentioned below.
 
@@ -188,7 +188,7 @@ Each notebook contains certain feature demos as mentioned below.
 1. Download and Upload the Files
 
     Download [Document AI Demo 1](./files/document-demo1.ipynb) and [Document AI Demo 2](./files/document-demo2.ipynb) files and upload them in the Notebook. 
-        ![](./images/upload-files2.png " ")
+        ![Download and Upload the Files](./images/upload-files2.png " ")
 
 
 2. Execute the Notebooks
@@ -197,7 +197,7 @@ Each notebook contains certain feature demos as mentioned below.
 
     These notebooks demonstrate how you can be more productive by using the Document AI features of Vision service.
 
-## **Task 5:** Invoke the batch (Async) APIs 
+## Task 5: Invoke the batch (Async) APIs 
 
 Each notebook contains certain feature demos as mentioned below.
 
@@ -209,7 +209,7 @@ Each notebook contains certain feature demos as mentioned below.
 1. Download and Upload the Files
 
     Download [Image Batch Demo](./files/image-batch-demo.ipynb) and [Document Batch Demo](./files/document-batch-demo.ipynb) files and upload them in the Notebook. 
-        ![](./images/upload-files3.png " ")
+        ![Download and Upload the Files](./images/upload-files3.png " ")
 
 
 2. Execute the Notebooks
