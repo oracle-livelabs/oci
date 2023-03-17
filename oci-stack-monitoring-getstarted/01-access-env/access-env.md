@@ -71,10 +71,13 @@ When the correct region and compartment is chosen, the Enterprise Summary page w
 
    ![Oracle Cloud console, Stack Monitoring Enterprise Summary page](images/2-4-access.png " ")
 
-You may now **proceed to the next activity**.
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
 * **Author** - Aaron Rimel, Principal Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability
+- **Contributors** - Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,
+- Steven Lemme, Senior Principal Product Manager,
+Anand Prabhu, Sr. Member of Technical Staff
+
 * **Last Updated By/Date** - Aaron Rimel, February 2023

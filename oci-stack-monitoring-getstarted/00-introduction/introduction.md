@@ -37,5 +37,7 @@ In this workshop, the following topics will be covered:
 ## Acknowledgements
 
 - **Author** - Aaron Rimel, Principal Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Ana McCollum Senior Director of Product Management, Management Cloud
+- **Contributors** - Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,
+- Steven Lemme, Senior Principal Product Manager,
+Anand Prabhu, Sr. Member of Technical Staff
 - **Last Updated By/Date** - Aaron Rimel, February 2023
