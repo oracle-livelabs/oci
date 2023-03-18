@@ -1,13 +1,15 @@
 
-# Create a Function to parse the documents
+# Lab 2: Add APIs and Test
 
 ## Introduction
 
-Estimated time: 10 min
+Estimated time: 20 min
 
 ### Objectives
 
-- Deploy a Java Serverless function to parse documents like Excel, Word, PDF and extract their content in a text format.
+- Configure the security
+- Add existing APIs from Oracle Integration
+- Add new APIs written with Cloud Native (Java/Node/Dotnet/Python/...)
 
 ### Prerequisites
 
@@ -91,7 +93,7 @@ DBMS_CLOUD.CREATE_CREDENTIAL (
 END;
 ``` 
 
-## Task 3: Add a Oracle Integration source
+## Task 3: Add existing APIs from Oracle Integration
 
 Let's add an OIC source to harvest. 
 - Go in the Apex Application, start it.
@@ -103,7 +105,7 @@ Let's add an OIC source to harvest.
 
 Go back to the Portal page. The OIC integration should be there.
 
-## Task 4: Add some Cloud Native APIs 
+## Task 4: Add new Cloud Native APIs 
 
 .....
 
