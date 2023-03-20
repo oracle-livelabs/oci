@@ -11,7 +11,7 @@ Watch the video below for an Introduction To PeopleSoft Cloud Manager.
 
 The below image provides a high-level overview of PeopleSoft Cloud Manager benefits
 
-   ![High-level overview of PeopleSoft Cloud Manager benefits](/images/peoplesoft-cloud-manager.png " ")
+   ![High-level overview of PeopleSoft Cloud Manager benefits](/images/peoplesoft-cloud-manager.png" ")
 
 PeopleSoft Cloud Manager overview
 
