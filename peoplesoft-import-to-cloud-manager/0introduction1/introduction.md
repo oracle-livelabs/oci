@@ -1,6 +1,6 @@
 # Introduction
 
-## About this Workshop
+## About this Workshop ##
 
 This workshop guides you through the steps to import PeopleSoft environments running on Oracle Cloud Infrastructure to PeopleSoft Cloud Manager.
 
@@ -8,7 +8,7 @@ After completing this workshop, you will have a better insight and understanding
 
 Watch the video below for an Introduction To PeopleSoft Cloud Manager.
 
- [PeopleSoft Cloud Manager](youtube:msMcUr3fny4&t:medium)
+ [PeopleSoft Cloud Manager](youtube:msMcUr3fny4&t=4s:medium)
 
 The below image provides a high-level overview of PeopleSoft Cloud Manager benefits
 
