@@ -171,6 +171,14 @@
 
  ![import-status](./images/import-status.png " ")
 
+ 5. Import of PeopleSoft environment completed with no errors.
+
+ ![import-complete](./images/import-completed.png " ")
+
+ 6. You can now see the status of the imported environment as Running.
+
+ ![running-status](./images/env-running.png " ")
+
 
  ## Summary
 
