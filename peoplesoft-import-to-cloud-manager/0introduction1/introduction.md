@@ -7,7 +7,8 @@ This workshop guides you through the steps to import PeopleSoft environments run
 After completing this workshop, you will have a better insight and understanding of importing PeopleSoft environments into PeopleSoft Cloud Manager for better lifecycle management of PeopleSoft environments.
 
 Watch the video below for an Introduction To PeopleSoft Cloud Manager.
-[PeopleSoft Cloud Manager](youtube:msMcUr3fny4&t=4s:medium)
+
+[PeopleSoft Cloud Manager](youtube:msMcUr3fny4&t=4s)
 
 The below image provides a high-level overview of PeopleSoft Cloud Manager benefits
 
