@@ -7,62 +7,46 @@ This workshop guides you through the steps to import PeopleSoft environments run
 After completing this workshop, you will have a better insight and understanding of importing PeopleSoft environments into PeopleSoft Cloud Manager for better lifecycle management of PeopleSoft environments.
 
 Watch the video below for an Introduction To PeopleSoft Cloud Manager.
-[PeopleSoft Cloud Manager](youtube:msMcUr3fny4&t=4s:medium)
-
-The below image provides a high-level overview of PeopleSoft Cloud Manager benefits
-
-   ![High-level overview of PeopleSoft Cloud Manager benefits](./images/peoplesoft-cloud-manager.png" ")
-
-PeopleSoft Cloud Manager overview
-
-PeopleSoft Cloud Manager is a PeopleSoft application that runs on Oracle Cloud Infrastructure (OCI) to help accelerate adoption as well as to optimize the benefits of running PeopleSoft on Cloud. PeopleSoft Cloud Manager brings an unprecedented extent of automation to migrate your existing environment from on-premises and to rapidly clone and create new environments on the cloud tailored for specific functional use — such as development, customization, user acceptance testing, performance testing or production. PeopleSoft Cloud Manager comes with a built-in automated download manager and provides automated lifecycle operations such as PeopleTools only upgrade, PeopleTools update, setting up of selective adoption environments and automated self-update to the latest Cloud Manager Image. 
+[PeopleSoft Cloud Manager](https://www.youtube.com/watch?v=msMcUr3fny4&t=4s)(youtube:msMcUr3fny4&t=4s:medium)
 
 Estimated Time: 2 hours
 
-Notes:
+### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 
-* The workshop is quite technical and in-depth. Please go slowly and without skipping any steps.
-*  The IP addresses and URLs in this workbook's screenshots are dynamically generated, so they might not match what you use in the labs
-* For security purposes, some sensitive text (such as IP addresses) may be redacted in the screenshots in this workbook.
-* The user interface for the Oracle Cloud Infrastructure is constantly evolving. As a result, the screens depicted in this tutorial may not exactly coincide with the current release. This tutorial is routinely updated for functional changes to Oracle Cloud Infrastructure, at which time any differences in the user interface will be reconciled.
+The diagram below provides an overview of the OCI APM Service, its features, components, and some of the other OCI services it integrates with.
+
+  ![APM architecture](images/apm_diagram.png " ")
+
+Among other capabilities, OCI APM includes an implementation of a Distributed Tracing system. It collects and processes transaction trace data (spans) from the monitored application and makes it available for viewing, dashboarding, exploration, alerts, etc. For more information on APM and Trace Explorer please refer to Application Performance Monitoring > **[Use Trace Explorer](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)** section in the OCI Documentation.
 
 
 ### Objectives
 
-In this lab, you will:
+In this workshop, you will:
+* Examine APM Alarms
+* Analyze APM Monitors
+* Inspect Monitor Details and History
+* Explore APM Trace Data
 
-* Import PeopleSoft Environments to PeopleSoft Cloud Manager
-* Check PeopleSoft lifecycle management in PeopleSoft Cloud Manager
+
+  [Oracle Cloud APM tutorial: Synthetic monitoring](https://www.youtube.com/watch?v=31lJYvmT6b0)
+    [](youtube:31lJYvmT6b0)
 
 
 ### Prerequisites
 
-You will need the following to complete this workshop:
 
-* A modern browser
-* Running PeopleSoft Cloud Manager
-* PeopleSoft Database Running on Database as a Service Platform
-* PeopleSoft Application Server Domain Running on Linux 
-* PeopleSoft Process Scheduler Server Domain Running on Linux 
-* PeopleSoft Web Server Domain Running on Linux 
-* PeopleSoft Process Scheduler Server Domain Running on Windows 
-* PeopleSoft Elastic Search and Kibana Running on Linux 
+* An Oracle event account, which you can use to sign in to the workshop tenancy.
 
-## Appendix
+### More APM Workshops
 
-*Terminology*
+* Please visit: **[APM LiveLabs workshops](https://apexapps.oracle.com/pls/apex/f?p=133:100:111996377805307::::SEARCH:application+Performance+monitoring)**.
 
-The following terms are commonly employed in PeopleSoft cloud operations and are used throughout our documentation:
-
-* **PS_HOME** - PeopleSoft PeopleTools Home
-* **PS_APP_HOME** - PeopleSoft Application Home
-* **PS_CFG_HOME** - PeopleSoft Configuration Home
-* **OCID** - Oracle Cloud ID
-* **PDB** - Pluggable Database
-* **ELK** - Elasticsearch, Logstash, Kibana
-* **DbaaS** - Database as a service
 
 ## Acknowledgements
-* **Author** - Vinay Shivanna, Principal Cloud Architect
-* **Contributor** - Vinay Shivanna, Principal Cloud Architect
-* **Last Updated By/Date** - Vinay Shivanna, Principal Cloud Architect, March 2023
+
+- **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
+- **Contributors** - Steven Lemme, Senior Principal Product Manager,  
+Anand Prabhu, Sr. Member of Technical Staff,  
+Avi Huber, Vice President, Product Management
+- **Last Updated By/Date** - Yutaka Takatsu, December 2022
