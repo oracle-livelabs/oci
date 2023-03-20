@@ -9,12 +9,12 @@ Below is the architecture of PeopleSoft environment running on Oracle Cloud Infr
 
 ## PeopleSoft environment details are below.
 
-PeopleSoft Application -HCM 9.2.45
-PeopleTools - 8.60.03
-Database - 19.17.0.0.0
-Oracle WebLogic - 14.1.1
-Tuxedo - 12.2.2.0.0
-Elastic Search - 7.10.0
+* PeopleSoft Application -HCM 9.2.45
+* PeopleTools - 8.60.03
+* Database - 19.17.0.0.0
+* Oracle WebLogic - 14.1.1
+* Tuxedo - 12.2.2.0.0
+* Elastic Search - 7.10.0
 
 ## PeopleSoft Environment Infrastructure details are below.
 
