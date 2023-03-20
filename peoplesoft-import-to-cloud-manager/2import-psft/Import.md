@@ -165,7 +165,7 @@
 
  3. Click on dropdown action button and click on Details to monitor the progress of the import operation.
 
- ![import-details](./images/import-details.png " ")
+ ![import-details](./images/import-status2.png " ")
 
  4. Click on Import to view the status of the PeopleSoft environment import process.
 
