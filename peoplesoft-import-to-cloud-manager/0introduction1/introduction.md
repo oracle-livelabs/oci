@@ -8,7 +8,7 @@ After completing this workshop, you will have a better insight and understanding
 
 Watch the video below for an Introduction To PeopleSoft Cloud Manager.
 
- [](youtube:msMcUr3fny4&t=4s:medium)
+ [PeopleSoft Cloud Manager](youtube:msMcUr3fny4&t:medium)
 
 The below image provides a high-level overview of PeopleSoft Cloud Manager benefits
 
