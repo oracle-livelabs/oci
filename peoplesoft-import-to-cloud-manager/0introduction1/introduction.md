@@ -8,19 +8,19 @@ After completing this workshop, you will have a better insight and understanding
 
 Watch the video below for an Introduction To PeopleSoft Cloud Manager.
 
- [PeopleSoft Cloud Manager](youtube:msMcUr3fny4&t=4s:medium)
+ [PeopleSoft Cloud Manager](youtube:msMcUr3fny4&t=4s:large)
 
-The below image provides a high-level overview of PeopleSoft Cloud Manager benefits
+The below image provides a high-level overview of PeopleSoft Cloud Manager benefits.
 
  ![High-level overview of PeopleSoft Cloud Manager benefits](images/peoplesoft-cloud-manager.png " ")
 
-PeopleSoft Cloud Manager overview
+## PeopleSoft Cloud Manager overview ##
 
 PeopleSoft Cloud Manager is a PeopleSoft application that runs on Oracle Cloud Infrastructure (OCI) to help accelerate adoption as well as to optimize the benefits of running PeopleSoft on Cloud. PeopleSoft Cloud Manager brings an unprecedented extent of automation to migrate your existing environment from on-premises and to rapidly clone and create new environments on the cloud tailored for specific functional use — such as development, customization, user acceptance testing, performance testing or production. PeopleSoft Cloud Manager comes with a built-in automated download manager and provides automated lifecycle operations such as PeopleTools only upgrade, PeopleTools update, setting up of selective adoption environments and automated self-update to the latest Cloud Manager Image. 
 
-Estimated Time: 2 hours
+**Estimated Time**: 2 hours
 
-Notes:
+**Notes:**
 
 * The workshop is quite technical and in-depth. Please go slowly and without skipping any steps.
 *  The IP addresses and URLs in this workbook's screenshots are dynamically generated, so they might not match what you use in the labs
@@ -51,7 +51,7 @@ You will need the following to complete this workshop:
 
 ## Appendix
 
-*Terminology*
+**Terminology**
 
 The following terms are commonly employed in PeopleSoft cloud operations and are used throughout our documentation:
 

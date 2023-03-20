@@ -16,6 +16,8 @@ Below is the architecture of PeopleSoft environment running on Oracle Cloud Infr
 * **Tuxedo** - 12.2.2.0.0
 * **Elastic Search** - 7.10.0
 
+[PeopleSoft Cloud Manager](youtube:msMcUr3fny4&t=4s:large)
+
 ## PeopleSoft Environment Infrastructure details are below.
 
 **PeopleSoft Component** | **Operating System**
