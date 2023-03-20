@@ -38,7 +38,7 @@
 
   ![Click on Instance Type dropdown and select DB Systems](./images/db-system.png " ")
 
-  Please find the definitions of each fields below. 
+   Definition of each fields is below. 
 
   **Field or Control** | **Description**
   ---------------- | ----------- 
@@ -157,7 +157,7 @@
 
  1. Click on Done to start the import of PeopleSoft Environment.
 
- ![Click on Done to start the import of PeopleSoft Environment.](./images/import-done.png " ")
+ ![Click on Done to start the import of PeopleSoft Environment.](./images/start-import.png " ")
 
  2. The import process is started and its in running status.
 
