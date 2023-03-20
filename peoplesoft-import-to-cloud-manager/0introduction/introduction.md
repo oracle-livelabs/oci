@@ -54,13 +54,13 @@ You will need the following to complete this workshop:
 
 The following terms are commonly employed in PeopleSoft cloud operations and are used throughout our documentation:
 
-**PS_HOME** - PeopleSoft PeopleTools Home
-**PS_APP_HOME** - PeopleSoft Application Home
-**PS_CFG_HOME** - PeopleSoft Configuration Home
-**OCID** - Oracle Cloud ID
-**PDB** - Pluggable Database
-**ELK** - Elasticsearch, Logstash, Kibana
-**DbaaS** - Database as a service
+* **PS_HOME** - PeopleSoft PeopleTools Home
+* **PS_APP_HOME** - PeopleSoft Application Home
+* **PS_CFG_HOME** - PeopleSoft Configuration Home
+* **OCID** - Oracle Cloud ID
+* **PDB** - Pluggable Database
+* **ELK** - Elasticsearch, Logstash, Kibana
+* **DbaaS** - Database as a service
 
 ## Acknowledgements
 * **Author** - Vinay Shivanna, Principal Cloud Architect
