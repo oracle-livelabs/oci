@@ -7,7 +7,7 @@ Below is the architecture of PeopleSoft environment running on Oracle Cloud Infr
 ![ps-env-architecture](./images/ps-workshop-arch.png " ")
 
 
-## PeopleSoft environment details are below.
+## PeopleSoft Environment details are below.
 
 * **PeopleSoft Application** - HCM 9.2.45
 * **PeopleTools** - 8.60.03
@@ -15,8 +15,6 @@ Below is the architecture of PeopleSoft environment running on Oracle Cloud Infr
 * **Oracle WebLogic** - 14.1.1
 * **Tuxedo** - 12.2.2.0.0
 * **Elastic Search** - 7.10.0
-
-[PeopleSoft Cloud Manager](youtube:msMcUr3fny4&t=4s:large)
 
 ## PeopleSoft Environment Infrastructure details are below.
 
