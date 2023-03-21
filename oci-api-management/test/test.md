@@ -32,6 +32,9 @@ vi group_common/env.sh
 </copy>
 ```
 
+![Introduction Usecase](images/apim-test-edit-env.png)
+
+
 Wait that it builds. This will take quite a long time. 
 It will first:
 - Create a APIGW
@@ -45,11 +48,7 @@ curl -k "https://${APIM_HOST}/ords/apim/rest/add_api?git_repo_url=${TF_VAR_git_u
 ...
 ```
 
-
 - Go back to the portal and check the result.
-
-
-
 
 ## Task 2: Add existing API from Oracle Integration
 
@@ -86,28 +85,7 @@ qHKJFDkjdhj==
 -----END RSA PRIVATE KEY-----
 ```
 
-``` 
-GRANT execute ON dbms_cloud_oci_ag_deployment_list_deployments_response_t TO WKSP_API;
-GRANT execute ON dbms_cloud_oci_apigateway_deployment_collection_t TO WKSP_API;
-GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_tbl TO WKSP_API;
-GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_t TO WKSP_API;
-GRANT execute ON DBMS_CLOUD_OCI_AG_DEPLOYMENT TO WKSP_API;
-GRANT execute ON DBMS_CLOUD TO WKSP_API;
-/
--- 
-BEGIN
-  ORDS.enable_schema(
-    p_enabled             => TRUE,
-    p_schema              => 'WKSP_API',
-    p_url_mapping_type    => 'BASE_PATH',
-    p_url_mapping_pattern => 'apim',
-    p_auto_rest_auth      => FALSE
-  );
-  COMMIT;
-end;
-/
-```
-
+With the ADMIN user, 
 
 ```
 BEGIN
@@ -164,6 +142,5 @@ Go back to the Portal page. The OIC integration should be there.
 
 - **Author**
     - Marc Gueury
-
-
-Parsing Schema : WKSP_API
+    - Tom Bailiu
+    - Valeria Chiran

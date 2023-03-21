@@ -70,7 +70,42 @@ In the page of the Autonomous Database,
 
 ![APEX Create Workspace](images/apim-apex4.png)
 
+This will create also a DB user WKSP_API
+
 - Click on your user name (top right). Then *Sign-out*
+
+Leave this browser tab opened. Before to run the import, we need to grant right to the API user.
+
+Go back to the page of the Autonomous Database,
+- Click again on *Database Actions*
+- This time, click *SQL*
+- Run the following SQL to give right to the user WKSP_API:
+
+```
+GRANT execute ON dbms_cloud_oci_ag_deployment_list_deployments_response_t TO WKSP_API;
+GRANT execute ON dbms_cloud_oci_apigateway_deployment_collection_t TO WKSP_API;
+GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_tbl TO WKSP_API;
+GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_t TO WKSP_API;
+GRANT execute ON DBMS_CLOUD_OCI_AG_DEPLOYMENT TO WKSP_API;
+GRANT execute ON DBMS_CLOUD TO WKSP_API;
+/
+-- 
+BEGIN
+  ORDS.enable_schema(
+    p_enabled             => TRUE,
+    p_schema              => 'WKSP_API',
+    p_url_mapping_type    => 'BASE_PATH',
+    p_url_mapping_pattern => 'apim',
+    p_auto_rest_auth      => FALSE
+  );
+  COMMIT;
+end;
+/
+```
+
+![APEX Installation](images/apim-sql1.png)
+
+Go back to APEX,
 - In the APEX login page
     - Workspace: *API*
     - Database User: *API*
@@ -79,6 +114,8 @@ In the page of the Autonomous Database,
 - In Apex, 
     - Click Menu *App Builder*
     - *Import*
+
+
 
   ![APEX Installation](images/apim-apex5.png)
 
@@ -106,3 +143,5 @@ In the next Lab, we will populate the Portal with APIs.
 
 - **Author**
     - Marc Gueury
+    - Tom Bailiu
+    - Valeria Chiran

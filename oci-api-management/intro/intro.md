@@ -43,3 +43,5 @@ The APIs database can be populated in 2 ways:
 
 - **Author**
     - Marc Gueury
+    - Tom Bailiu
+    - Valeria Chiran
