@@ -146,7 +146,7 @@ Let's add an OIC source to harvest.
 
 Go back to the Portal page. The OIC integration should be there.
 
-## Task 4: Add new Cloud Native APIs 
+## Task 4: Add existing API from API Gateway
 
 .....
 
