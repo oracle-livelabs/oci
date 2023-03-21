@@ -14,7 +14,7 @@ Estimated time: 20 min
 Open the Oracle Cloud Shell and clone this repository on your laptop first.
 
 ```
-<copy>git clone https://github.com/marc.gueury/oci-apigw-portal.git</copy>
+<copy>git clone https://github.com/mgueury/oci-api-portal.git</copy>
 ```
 
 ## Task 1: Create an Autonomous database
@@ -41,22 +41,13 @@ Click *Create Autonomous Database*
 ![ATP2](images/apim-atp2.png)
 
 
-## Task 2: Download the Wallet
+## Task 2: Install the APEX program
 
-When the database is created. First, let's get the Wallet.
-- Click on the database name
-- Click *Database Connection*
-- Click *Download Wallet*
-- Password: *welcome1*
-- Click *Download*
-- Click *Close*
-- Click *Database Actions*
+In the page of the Autonomous Database,
+- Click on *Database Actions*
 
-![Wallet](images/apim-wallet.png)
+![APEX Installation](images/apim-apex0.png)
 
-## Task 3: Install the APEX program
-
-You should be in Database Actions
 - If you get a prompt asking for an user/password, enter ADMIN/database password see ##1##
 - Click *APEX*
 - In Administration Service, enter the DB password (##1##)
@@ -99,7 +90,7 @@ You should be in Database Actions
 - In Install Application, Click *Next*
 - Click *Install*
 
-## Task 4: Test the empty installation
+## Task 3: Test the empty installation
 
 We have now a running API Management Portal but it is empty.
 - Click *Run Application*

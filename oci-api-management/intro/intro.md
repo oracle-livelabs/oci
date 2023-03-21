@@ -1,12 +1,12 @@
 
 # Introduction
 
-Estimated time: 120 minutes
+Estimated time: 60 minutes
 
-### Goal: Create an API Portal with APIs from OCI API Gateway, Oracle Integration or Cloud Native 
+### Goal: Create an API Management Portal 
 
-With the following features:
-- API Origin. The Portal will shows APIs from:
+In this lab, we will install (import) an existing APEX application. It is a API Management Portal with the following capabilities:
+- API Origin: The Portal will shows APIs from:
     - OCI API Gateway
     - Oracle Integration 
     - Cloud Native applications using Virtual Machines, Kubernetes, ...
@@ -24,10 +24,10 @@ With the following features:
 
 ### How it works
 
-The APIs definitions are stored in a database. The user interface is developed with Oracle APEX. 
+The APIs definitions are stored in a database. The user interface is developed with Oracle APEX running in the same database.  
 
 The APIs database can be populated in 2 ways:
-- For existing APIS, by collecting (harvesting) all APIs definition 
+- For existing APIS, by discovering / collecting / harvesting APIs definition 
 - For new APIs, during a CI/CD DevOps pipeline, via a command line tool to add the new API in the Portal
 
 ### Objectives
@@ -35,9 +35,9 @@ The APIs database can be populated in 2 ways:
 - Create an Autonomous to install the APEX Application
 - Install the APEX program
 - Test the solution with 
-  - Oracle Integraton
   - API Gateway
   - Cloud Native program 
+  - Oracle Integration
 
 ## Acknowledgements 
 
