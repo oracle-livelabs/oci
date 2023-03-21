@@ -35,18 +35,31 @@ vi group_common/env.sh
 ![Introduction Usecase](images/apim-test-edit-env.png)
 
 
-Wait that it builds. This will take quite a long time. 
-It will first:
-- Create a APIGW
+Wait that it builds. This will take about 15 mins. 
+It will build this with Terraform:
+- An API Gateway
 - Then 5 different VMs with Java/Node/Dotnet/Go/Python with APIs
 - And register them in the API Management Portal
-- You can check for ex in api-java/bin/add_api.sh, the command used to add the entry in the Portal
+
+You can check the curl used commmand to add to the Portal in api-java/bin/add_api.sh.
 
 ```
 ...
 curl -k "https://${APIM_HOST}/ords/apim/rest/add_api?git_repo_url=${TF_VAR_git_url}&impl_name=${FIRST_LETTER_UPPERCASE}&a_icon_url=${TF_VAR_language}&runtime_console=https://cloud.oracle.com/api-gateway/gateways/$TF_VAR_apigw_ocid/deployments/$APIGW_DEPLOYMENT_OCID&version=${GIT_BRANCH}&endpoint_url=${APIGW_URL}/app/dept&endpoint_git_path=src/terraform/apigw_existing.tf&spec_git_path=src/app/openapi_spec.yaml&a_spec_type=OpenAPI"
 ...
 ```
+
+Where:
+- git_repo_url: is the base url of the git repository
+- impl_name: name of the API
+- icon_url: icon used to show the API
+- runtime_console:  xxxxx
+- version:
+- endpoint_url:
+- endpoint_git_path:
+- spec_git_path:
+- spec_type:
+
 
 - Go back to the portal and check the result.
 
