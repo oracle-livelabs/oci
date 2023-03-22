@@ -34,26 +34,22 @@ vi group_common/env.sh
 In the file group_common/env.sh, you have to set: 
 - TF_VAR_compartment_ocid in a compartment where the APIGW and VM with the APIs will be created
 - APIM_HOST to the APEX Host Name. See your notes ##2##
+- Then run the build. This will take about 15 mins. 
 
 ```
 <copy>
-vi group_common/env.sh
--> Change the compartment_OCID
--> Set the APIM_HOST to ##1##
 ./build_group.sh
 </copy>
 ```
 
 ![Introduction Usecase](images/apim-test-edit-env.png)
 
-
-Wait that it builds. This will take about 15 mins. 
-It will build this with Terraform:
+It will build with Terraform:
 - An API Gateway
-- Then 5 different VMs with Java/Node/Dotnet/Go/Python with APIs
-- And register them in the API Management Portal
+- 5 VMs with Java/Node/Dotnet/Go/Python with APIs
+- And register the APIs in the API Management Portal with curl.
 
-You can check the curl used commmand to add to the Portal in api-java/bin/add_api.sh.
+You can check the curl command used in api-java/bin/add_api.sh.
 
 ```
 ...
@@ -62,14 +58,17 @@ curl -k "https://${APIM_HOST}/ords/apim/rest/add_api?git_repo_url=${TF_VAR_git_u
 ```
 
 Where:
-- git_repo_url: is the base url of the git repository
 - impl_name: name of the API
 - icon_url: icon used to show the API
+- version: version of the API
+
+- git_repo_url: is the base url of the git repository
+- endpoint_git_path:
+- spec_git_path:
+
 - runtime_console:  xxxxx
 - version:
 - endpoint_url:
-- endpoint_git_path:
-- spec_git_path:
 - spec_type:
 
 
