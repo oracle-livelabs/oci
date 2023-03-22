@@ -3,14 +3,17 @@
 
 Estimated time: 60 minutes
 
-### Goal: Create an API Management Portal 
+### Objective
 
-In this lab, we will install (import) an existing APEX application. It is a API Management Portal with the following capabilities:
+Create an API Management Portal 
+
+### Features
+
+In this lab, we will create an API Management Portal with the following features:
 - API Origin: The Portal will shows APIs from:
     - OCI API Gateway
     - Oracle Integration 
     - Cloud Native applications using Virtual Machines, Kubernetes, ...
-    - ...
 - API type:
     -  Any API specification type is allowed: REST (OpenAPI) or SOAP (WSDL), ...
 - Git Integration:
@@ -27,8 +30,8 @@ In this lab, we will install (import) an existing APEX application. It is a API 
 The APIs definitions are stored in a database. The user interface is developed with Oracle APEX running in the same database.  
 
 The APIs database can be populated in 2 ways:
+- For new APIs, during a CI/CD DevOps pipeline, with "curl" to add the new API in the Portal
 - For existing APIS, by discovering / collecting / harvesting APIs definition 
-- For new APIs, during a CI/CD DevOps pipeline, via a command line tool to add the new API in the Portal
 
 ### Objectives
 
@@ -42,6 +45,4 @@ The APIs database can be populated in 2 ways:
 ## Acknowledgements 
 
 - **Author**
-    - Marc Gueury
-    - Tom Bailiu
-    - Valeria Chiran
+    - Marc Gueury / Tom Bailiu / Valeria Chiran

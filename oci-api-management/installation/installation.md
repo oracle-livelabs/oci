@@ -127,10 +127,12 @@ Go back to APEX,
 - In Install Application, Click *Next*
 - Click *Install*
 
+We have now a running API Management Portal but it is empty.
+- Click *Run Application*
+
 ## Task 3: Test the empty installation
 
 We have now a running API Management Portal but it is empty.
-- Click *Run Application*
 - Login *API* / Password - See ##2##
 
 ![Login](images/apim-apex-login.png)
@@ -142,6 +144,4 @@ In the next Lab, we will populate the Portal with APIs.
 ## Acknowledgements
 
 - **Author**
-    - Marc Gueury
-    - Tom Bailiu
-    - Valeria Chiran
+    - Marc Gueury / Tom Bailiu / Valeria Chiran

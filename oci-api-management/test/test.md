@@ -154,6 +154,4 @@ Go back to the Portal page. The OIC integration should be there.
 ## Acknowledgements
 
 - **Author**
-    - Marc Gueury
-    - Tom Bailiu
-    - Valeria Chiran
+    - Marc Gueury / Tom Bailiu / Valeria Chiran
