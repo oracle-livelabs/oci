@@ -17,6 +17,13 @@ Open the Oracle Cloud Shell and clone this repository on your laptop first.
 <copy>git clone https://github.com/mgueury/oci-api-portal.git</copy>
 ```
 
+Create a file to take your notes
+
+````
+##1##: DB Password    : (ex LiveLab__123)
+##2##: APEX Host Name : (ex: abcdefghijk-db123.adb.eu-frankfurt-1.oraclecloudapps.com)
+````
+
 ## Task 1: Create an Autonomous database
 
 First, let's create an Autonomous database.
@@ -50,6 +57,7 @@ In the page of the Autonomous Database,
 
 - If you get a prompt asking for an user/password, enter ADMIN/database password see ##1##
 - Click *APEX*
+- First note the URL of APEX, we need the Apex Host Name (##2##) later in the lab (Ex: abcdefghijk-db123.adb.eu-frankfurt-1.oraclecloudapps.com) 
 - In Administration Service, enter the DB password (##1##)
 - Click *Sign In to Administration*
 

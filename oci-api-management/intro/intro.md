@@ -37,10 +37,10 @@ The APIs database can be populated in 2 ways:
 
 - Create an Autonomous to install the APEX Application
 - Install the APEX program
-- Test the solution with 
-  - API Gateway
-  - Cloud Native program 
-  - Oracle Integration
+- Test the solution with:
+    - API Gateway
+    - Cloud Native program 
+    - Oracle Integration
 
 ## Acknowledgements 
 

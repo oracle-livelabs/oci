@@ -21,10 +21,22 @@ Estimated time: 20 min
 - Go to Cloud Shell.
 - When the shell is started, clone the git repository in the shell:
   
+
+
 ```
 <copy>
 git clone https://github.com/mgueury/oci-api-portal.git
 cd oci-api-portal/cloud-native-sample
+vi group_common/env.sh
+</copy>
+```
+
+In the file group_common/env.sh, you have to set: 
+- TF_VAR_compartment_ocid in a compartment where the APIGW and VM with the APIs will be created
+- APIM_HOST to the APEX Host Name. See your notes ##2##
+
+```
+<copy>
 vi group_common/env.sh
 -> Change the compartment_OCID
 -> Set the APIM_HOST to ##1##
