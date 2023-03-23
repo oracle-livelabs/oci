@@ -15,8 +15,12 @@
             "filename": "./../../installation/installation.md"
         },
         {
-            "title": "Lab 2: Add APIs and Test",
-            "filename": "./../../test/test.md"
+            "title": "Lab 2: Add New Cloud Native APIs",
+            "filename": "./../../new-apis/new-apis.md"
+        },
+        {
+            "title": "Lab 3: Add Existing APIs",
+            "filename": "./../../existing-apis/existing-apis.md"
         },
         {
             "title": "Need Help?",
