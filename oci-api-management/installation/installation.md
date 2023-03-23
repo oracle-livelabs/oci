@@ -47,15 +47,62 @@ Click *Create Autonomous Database*
 
 ![ATP2](images/apim-atp2.png)
 
-
-## Task 2: Install the APEX program
+## Task 2: Create the API Schema
 
 In the page of the Autonomous Database,
 - Click on *Database Actions*
+- If you get a prompt asking for an user/password, enter ADMIN/database password see ##1##
+- Then *SQL*
+
+- Run the following SQL to give right to the user API:
+- Replace the password in the schema creation to your own and take note of it ##1b##
+
+```
+grant connect, resource, unlimited tablespace, create view to API identified by LiveLab__123
+/
+GRANT execute ON dbms_cloud_oci_ag_deployment_list_deployments_response_t TO API;
+GRANT execute ON dbms_cloud_oci_apigateway_deployment_collection_t TO API;
+GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_tbl TO API;
+GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_t TO API;
+GRANT execute ON DBMS_CLOUD_OCI_AG_DEPLOYMENT TO API;
+GRANT execute ON DBMS_CLOUD TO API;
+/
+-- 
+BEGIN
+  ORDS.enable_schema(
+    p_enabled             => TRUE,
+    p_schema              => 'API',
+    p_url_mapping_type    => 'BASE_PATH',
+    p_url_mapping_pattern => 'apim',
+    p_auto_rest_auth      => FALSE
+  );
+  COMMIT;
+end;
+/
+
+BEGIN
+  ORDS.enable_schema(
+    p_enabled             => FALSE,
+    p_schema              => 'WKSP_API',
+    p_url_mapping_type    => 'BASE_PATH',
+    p_url_mapping_pattern => 'del',
+    p_auto_rest_auth      => FALSE
+  );
+  COMMIT;
+end;
+/
+```
+
+![APEX Installation](images/apim-sql1.png)
+
+
+## Task 3: Install the APEX program
+
+Back to page of the Autonomous Database,
+- Click again on *Database Actions*
 
 ![APEX Installation](images/apim-apex0.png)
 
-- If you get a prompt asking for an user/password, enter ADMIN/database password see ##1##
 - Click *APEX*
 - First note the URL of APEX, we need the Apex Host Name (##2##) later in the lab (Ex: abcdefghijk-db123.adb.eu-frankfurt-1.oraclecloudapps.com) 
 - In Administration Service, enter the DB password (##1##)
@@ -67,10 +114,11 @@ In the page of the Autonomous Database,
 
 ![APEX Installation](images/apim-apex2.png)
 
-- Click *Create New Schema*
+- Click *Existing Schema*
 
 ![APEX Create Workspace](images/apim-apex3.png)
 
+- Database User *API*
 - Workspace Name *API*
 - Workspace Username *API*
 - Workspace Password ex: *LiveLab__123* (##2##)
@@ -81,39 +129,6 @@ In the page of the Autonomous Database,
 This will create also a DB user WKSP_API
 
 - Click on your user name (top right). Then *Sign-out*
-
-Leave this browser tab opened. Before to run the import, we need to grant right to the API user.
-
-Go back to the page of the Autonomous Database,
-- Click again on *Database Actions*
-- This time, click *SQL*
-- Run the following SQL to give right to the user WKSP_API:
-
-```
-GRANT execute ON dbms_cloud_oci_ag_deployment_list_deployments_response_t TO WKSP_API;
-GRANT execute ON dbms_cloud_oci_apigateway_deployment_collection_t TO WKSP_API;
-GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_tbl TO WKSP_API;
-GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_t TO WKSP_API;
-GRANT execute ON DBMS_CLOUD_OCI_AG_DEPLOYMENT TO WKSP_API;
-GRANT execute ON DBMS_CLOUD TO WKSP_API;
-/
--- 
-BEGIN
-  ORDS.enable_schema(
-    p_enabled             => TRUE,
-    p_schema              => 'WKSP_API',
-    p_url_mapping_type    => 'BASE_PATH',
-    p_url_mapping_pattern => 'apim',
-    p_auto_rest_auth      => FALSE
-  );
-  COMMIT;
-end;
-/
-```
-
-![APEX Installation](images/apim-sql1.png)
-
-Go back to APEX,
 - In the APEX login page
     - Workspace: *API*
     - Database User: *API*

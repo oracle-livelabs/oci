@@ -32,7 +32,7 @@ vi group_common/env.sh
 ```
 
 In the file group_common/env.sh, you have to set: 
-- TF_VAR_compartment_ocid in a compartment where the APIGW and VM with the APIs will be created
+- TF\_VAR\_compartment_ocid in a compartment where the APIGW and VM with the APIs will be created
 - APIM_HOST to the APEX Host Name. See your notes ##2##
 - Then run the build. This will take about 15 mins. 
 
@@ -52,24 +52,19 @@ It will build with Terraform:
 You can check the curl command used in api-java/bin/add_api.sh.
 
 ```
-...
 curl -k "https://${APIM_HOST}/ords/apim/rest/add_api?git_repo_url=${TF_VAR_git_url}&impl_name=${FIRST_LETTER_UPPERCASE}&a_icon_url=${TF_VAR_language}&runtime_console=https://cloud.oracle.com/api-gateway/gateways/$TF_VAR_apigw_ocid/deployments/$APIGW_DEPLOYMENT_OCID&version=${GIT_BRANCH}&endpoint_url=${APIGW_URL}/app/dept&endpoint_git_path=src/terraform/apigw_existing.tf&spec_git_path=src/app/openapi_spec.yaml&a_spec_type=OpenAPI"
-...
 ```
 
 Where:
-- impl_name: name of the API
-- icon_url: icon used to show the API
+- impl\_name: name of the API
+- icon\_url: icon used to show the API
 - version: version of the API
-
-- git_repo_url: is the base url of the git repository
-- endpoint_git_path:
-- spec_git_path:
-
-- runtime_console:  xxxxx
-- version:
-- endpoint_url:
-- spec_type:
+- spec\_type: OpenAPI, WSDL, ...
+- endpoint\_url: URL of the api that is deployed
+- git\_repo\_url: base url of the git repository (when you go to this URL, you should see the base of your GIT project)
+- spec\_git\_path: file containing the endpoint definition (OpenApi yaml file or WSDL Xml file, ...)
+- endpoint\_git_path: The file creating the endpoind (Ex: Terraform, Ansible)
+- runtime\_console:  url that allow to see the state of the API Runtime that is deployed
 
 
 - Go back to the portal and check the result.
