@@ -28,22 +28,17 @@
             "filename": "../../04-apply-inspect/apply.md"
         },
         {
-            "title": "Lab 4: Create Compartment for Exadata",
-            "description": "Modify Configuration to Create Optional Exadata Compartment and IAM Resources",
-            "filename": "../../05-exadata-compartment/exadata.md"
-        },
-        {
-            "title": "Lab 5: Create a DMZ Network",
+            "title": "Lab 4: Create a DMZ Network",
             "description": "Modify Configuration to Create Optional Hub & Spoke Network Model",
             "filename": "../../06-hub-spoke/hub.md"
         },
         {
-            "title": "Lab 6: Run CIS Compliance Checker Script",
+            "title": "Lab 5: Run CIS Compliance Checker Script",
             "description": "Run Provided CIS Compliance Checker Script in Cloud Shell",
             "filename": "../../07-compliance/compliance.md"
         },
         {
-            "title": "Lab 7: Clean Up",
+            "title": "Lab 6: Clean Up",
             "filename": "https://github.com/oracle-livelabs/common/blob/main/labs/cleanup-stack/cleanup-stack.md"
         },
         {
