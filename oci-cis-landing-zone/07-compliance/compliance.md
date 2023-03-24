@@ -1,4 +1,4 @@
-# Lab 5: Run CIS Compliance Checker Script
+# Lab 6: Run CIS Compliance Checker Script
 
 In this lab the Landing Zone should be successfully deployed. As time goes on and development or maintenance has been done to the Landing Zone environment, how do you ensure that compliance to CIS controls is maintained? One way is to run the [CIS Compliance Script](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/compliance-script.md) included in the Landing Zone.
 
