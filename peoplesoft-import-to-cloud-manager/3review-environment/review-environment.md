@@ -32,6 +32,8 @@ Diagrammatic View of the PeopleSoft Environment will look like below.
 
 In this lab, you have reviewed imported PeopleSoft Environment in PeopleSoft Cloud Manager.
 
+You may now **proceed to the next lab.**
+
 ## Acknowledgements
 * **Author** - Vinay Shivanna, Principal Cloud Architect
 * **Contributor** - Vinay Shivanna, Principal Cloud Architect

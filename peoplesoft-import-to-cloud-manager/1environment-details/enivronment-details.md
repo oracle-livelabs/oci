@@ -26,6 +26,8 @@ Web Server | Oracle Enterprise Linux 7
 Database | Oracle Enterprise Linux 7
 Elastic Search | Oracle Enterprise Linux 7
 
+You may now **proceed to the next lab.**
+
 ## Acknowledgements
 * **Author** - Vinay Shivanna, Principal Cloud Architect
 * **Contributor** - Vinay Shivanna, Principal Cloud Architect

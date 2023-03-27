@@ -34,6 +34,8 @@ https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=716&clear
 
 In this lab, you have taken a full backup of the imported PeopleSoft Environment in PeopleSoft Cloud Manager.
 
+You may now **proceed to the next lab.**
+
 ## Acknowledgements
 * **Author** - Vinay Shivanna, Principal Cloud Architect
 * **Contributor** - Vinay Shivanna, Principal Cloud Architect
