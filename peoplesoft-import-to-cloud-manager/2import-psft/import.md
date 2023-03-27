@@ -4,8 +4,6 @@
 
 In this lab, we'll import all components(Application Server, Process Scheduler Server, Web Server and ELK) of PeopleSoft Environment into PeopleSoft Cloud Manager.
 
-In this lab, we'll import all components(Application Server, Process Scheduler Server, Web Server and ELK) of PeopleSoft Environment into PeopleSoft Cloud Manager.
-
 ## Task 1: Import PeopleSoft Database System to PeopleSoft Cloud Manager
 
 In this part of the lab, we begin with the import of PeopleSoft DB system running on Database as a Service (DbaaS) platform to PeopleSoft Cloud Manager.
