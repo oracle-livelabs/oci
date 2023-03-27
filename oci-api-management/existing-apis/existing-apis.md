@@ -195,5 +195,5 @@ api_endpoint_url: path to add the endpoint url (sometimes a API Gateway URL is c
 
 ## Acknowledgements
 
-- **Author**
+- **Authors**
     - Marc Gueury / Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran

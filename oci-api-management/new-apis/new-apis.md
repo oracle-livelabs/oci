@@ -78,5 +78,5 @@ When the Task 1 build is done.
 
 ## Acknowledgements
 
-- **Author**
+- **Authors**
     - Marc Gueury / Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran

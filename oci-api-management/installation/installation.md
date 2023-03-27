@@ -179,5 +179,5 @@ In the next Lab, we will populate the Portal with APIs.
 
 ## Acknowledgements
 
-- **Author**
+- **Authors**
     - Marc Gueury / Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran

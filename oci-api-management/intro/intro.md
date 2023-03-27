@@ -44,5 +44,5 @@ The APIs database can be populated in 2 ways:
 
 ## Acknowledgements 
 
-- **Author**
+- **Authors**
     - Marc Gueury / Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
