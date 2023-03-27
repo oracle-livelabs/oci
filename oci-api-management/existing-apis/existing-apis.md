@@ -17,10 +17,50 @@ Estimated time: 20 min
 
 Follow previous labs.
 
-## Task 1: Add existing APIs from Oracle Integration
+## Task 1: User and Tenancy details
+
+First, we need data about your tenancy and user.
+- On the top, right, click *Tenancy: name*
+- Copy the tenancy OCID *##TENANCY\_OCID##*
+
+![Tenancy](images/opensearch-tenancy.png)
+
+Then, we need data about the user
+- On the top, right, click *Your username*
+- Copy the username *##USERNAME##* (without oracleidentitycloudservice )
+- Copy the user OCID *##USER\_OCID##*
+- Click on *API Keys*
+
+![User](images/opensearch-user.png)
+
+- Click *Add API Key*
+- Generate one
+- Download it *##PRIVATE_KEY##*
+- Copy the *##FINGERPRINT##*
+
+![User API Keys](images/opensearch-user2.png)
+
+In your computer (NOT in cloud shell), you need to convert the PEM key to RSA format:
+- Run the below command 
+- And keep the ##PRIVATE\_KEY\_RSA\_FORMAT##
+
+```
+openssl rsa -in ##PRIVATE_KEY## -out ##PRIVATE_KEY_RSA_FORMAT##
+ex: openssl rsa -in private_key.pem -out private_key_rsa_format.pem
+````
+
+Double-check that the private\_key\_rsa_format.pem is really in RSA format like this:
+
+```
+-----BEGIN RSA PRIVATE KEY-----
+...
+-----END RSA PRIVATE KEY-----
+```
+
+## Task 2: Add existing APIs from Oracle Integration
 ### A. Create an Oracle Integration installation
 
-Let's create a Oracle Integration Installation with some samples:
+Let's create an Oracle Integration Installation with some samples:
 - Menu Developer Services / Application Integration 
 
 ![Oracle Integration](images/apim-oic1.png)
@@ -45,110 +85,76 @@ Let's create a Oracle Integration Installation with some samples:
 
 - Note the host name of OIC from the URL (##OIC\_HOST##): ex: oic-apim-xxxxx-fr.integration.ocp.oraclecloud.com
 
-### B. ADMIN right
-- Go back your Database Actions
-- Click *SQL* 
-- Run the following command (replace the ##OIC_HOST##)
+### B. Credentials
+- Go back the APEX API Portal (##PORTAL\_URL##)
+- Click on the menu 
+- Then *Source*
+- Click *Oracle Integration Credentials* 
+- For OCI Username, enter ##USERNAME##
+- For Password, enter ##PASSWORD##
 
-```
-BEGIN
-   DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
-       host => '##OIC_HOST##',
-       ace => XS$ACE_TYPE( 
-           privilege_list => XS$NAME_LIST('http'),
-           principal_name => 'API',
-           principal_type => XS_ACL.ptype_db));
-END;
-```
-
-![Oracle Integration - Samples](images/apim-oic-right1.png)
+![Oracle Integration - Samples](images/apim-oic-cred.png)
 
 It will allow the database to call the OIC URLs
 
-### C. APEX right
+### C. Create OIC Source
 
-- Go to APEX, 
-- Click on SQL Workshops
-- Then SQL Commands.
-- Run this (replace the ##OIC_USER## / ##OIC_USER## ) with a OCI user name and password that has access to the OIC instance. 
-
-```
-BEGIN
-    DBMS_CLOUD.CREATE_CREDENTIAL (
-    credential_name => 'OIC_CRED',
-    username        => '##OCI_USER##',
-    password        => '##OCI_PASSWORD##');
-END;
-```
-![Oracle Integration - Samples](images/apim-oic-right2.png)
-
-This will store the password to call the OIC Rest API with DBMS_CLOUD.
-
-### D. Test
-
-- Go in the APEX Portal (##PORTAL_URL##)
-- In the menu, choose *Source*
+- Still in the Source screen.
 - Click *Create*
-- Source Type *OIC*
-- OIC Host: ##OIC_HOST##
+- Source Type *Oracle Integration*
+- Oracle Integration Host: ##OIC\_HOST##
 - Click *Create*
 
-![OIC - Source Add](images/apim-oic-source-add.png)
+![Oracle Integration - Credentials](images/apim-source-oic.png)
 
-- Click *Harvest All*
-- Go and check the result in the Portal
-
-![Oracle Integration - Samples](images/apim-oic-test.png)
-
-## Task 2: Add existing API from API Gateway
+## Task 3: Add existing API from API Gateway
 
 ### A. Get APIW OCID
 
-Please find back the Compartment OCID that was used to create the API Gateway in Lab 2 (Cloud Native). (##COMPARTMENT_OCID##)
+Please find back the Compartment OCID that was used to create the API Gateway in Lab 2 (Cloud Native). (##COMPARTMENT\_OCID##)
 
-### B. APEX right
-
-- Go to APEX, 
-- Click on SQL Workshops
-- Then SQL Commands.
-- Run this (replace the ##USER_OCID## / ##TENANCY_OCID## / ##PRIVATE_KEY## /##FINGERPRINT##' ) with the settings from a user that has access to the OCI API Gateway APIs
-
-```
-BEGIN
-DBMS_CLOUD.CREATE_CREDENTIAL (
-  credential_name => 'OCI_CRED',
-  user_ocid => '##USER_OCID##',
-  tenancy_ocid => '##TENANCY_OCID##',
-  private_key => '##PRIVATE_KEY##',
-  fingerprint => '##FINGERPRINT##');
-END;
-```
-
-![APIGW - Right ](images/apim-apigw-right.png)
-
-### C. Test
-
-- Go in the APEX Portal (##PORTAL_URL##)
-- In the menu, choose *Source*
-- Click *Create*
-- Source Type *Oracle API Gateway*
-- Compartment OCID: ##COMPARTMENT_OCID##
+### B. Credentials
+- Go back the APEX API Portal (##PORTAL\_URL##)
+- Click on the menu 
+- Then *Source*
+- Click *API Gateway Credentials* 
+- For User OCID, enter ##USER\_OCID##
+- For Tenancy OCID, enter ##TENANT\_OCID##
+- For Private Key, enter ##PRIVATE\_KEY##
+- For Fingerprint, enter ##FINGERPRINT##
 - Click *Create*
 
-![APIGW - Source Add](images/apim-apigw-source-add.png)
+![Oracle Integration - Credentials](images/apim-apigw-cred.png)
 
-- Click *Harvest All*
-- Go and check the result in the Portal
+It will allow the database to call the APIGW URLs
+
+### C. Create APIGW Source
+
+- Still in the Source screen.
+- Click *Create*
+- Source Type *OCI API Gateway*
+- Oracle Integration Host: ##COMPARTMENT\_OCID##
+- Click *Create*
+
+![Oracle Integration - Credentials](images/apim-source-apigw.png)
+
+## Task 4: Discover and Test
+
+- Still in the Source screen.
+- Click *Discover All*
+- Go and check the result in the Portal 
+
+![Oracle Integration - Credentials](images/apim-oic-test.png)
 
 ## Troubleshooting
 
-- If there are issue with the harvesting, run this query in SQL
+- If there are issue with the discovering, run this query in SQL
 
 ```
-select * from api.harvest_log
+select * from api.discover_log
 ```
 
-- To clean up the repository and harvest all again
+- To clean up the repository and discover all again
 
 ```
 truncate table api.TAG_IMPL
@@ -161,19 +167,30 @@ truncate table api.SPECIFICATION
 /
 truncate table api.IMPLEMENTATION
 /
-truncate table api.harvest_log
+truncate table api.discover_log
 /
 begin
-  api.api_harvest.harvest_all;
+  api.api_discover.discover_all;
 end;
 /
-select * from api.harvest_log
+select * from api.discover_log
 /
 ```
 
 - The sample has the following limitation:
     - It does not contain a logic to remove the duplicate entries in the API Portal
-    - The APIGW harvest requires Tags to be set up on the API Deployment to allow the harvesting
+    - The APIGW discovery requires Tags to be set up on the API Deployment 
+
+```
+api_icon: icon name (java/rest/soap/dotnet/go/python/...)
+api_git_url: base URL to see the git project source 
+api_git_spec_path: relative url for the specification (openapi file for ex)
+api_git_spec_type: OpenAPI/WSDL/...
+api_git_endpoint_path: relative url for the specification (Terraform file for ex)
+api_endpoint_url: path to add the endpoint url (sometimes a API Gateway URL is containing variable path)
+```
+
+- The right to call OCI API could probably be improved with OCI policies instead of encoding the user ocid, ...
 
 
 ## Acknowledgements

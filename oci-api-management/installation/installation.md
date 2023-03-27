@@ -20,15 +20,15 @@ Open the Oracle Cloud Shell and clone this repository on your laptop first.
 Create a file on your Laptop to take your notes
 
 ````
-##PORTAL_URL##      : Portal URL ex: https://xxxxx-apidb.adb.eu-frankfurt-1.oraclecloudapps.com/ords/r/api/apimgt/portal
+##PORTAL_URL##    : Portal URL ex: https://xxxxx-apidb.adb.eu-frankfurt-1.oraclecloudapps.com/ords/r/api/apimgt/portal
 
 // Autonomous Database / APEX 
 ##DB_PASSWORD##   : DB Password    : (ex LiveLab__123)
 ##APEX_HOST##     : APEX Host Name : (ex: abcdefghijk-db123.adb.eu-frankfurt-1.oraclecloudapps.com)
 
 // OIC Discovery
-##OCI_USER##      : Federated user (IDCS user) that you use to log in OIC. Often an email ex: john.doe@domain.com
-##OCI_PASSWORD##  : is the password of that user
+##USERNAME##      : Federated user (IDCS user) that you use to log in OIC. Often an email ex: john.doe@domain.com
+##PASSWORD##      : is the password of that user
 ##OIC_HOST##      : ex: myoic-abcdefgh-fr.integration.ocp.oraclecloud.com
 
 // APIGW Discovery
@@ -64,7 +64,7 @@ Click *Create Autonomous Database*
 - Database Name: *APIDB* 
 - Workload: *Transaction Processing*
 - Deployment: *Shared Infrastructure*
-- Password: ex: *LiveLab__123* (Take note of it: ##DB_PASSWORD##)
+- Password: ex: *LiveLab\_\_123* (Take note of it: ##DB\_PASSWORD##)
 - Network: Keep *Secure Access from Everywhere*
 - Licence: *BYOL or Licence Included*
 - Then *Create Autonomous Database*
@@ -75,11 +75,11 @@ Click *Create Autonomous Database*
 
 In the page of the Autonomous Database,
 - Click on *Database Actions*
-- If you get a prompt asking for an user/password, enter ADMIN/database password see ##DB_PASSWORD##
+- If you get a prompt asking for an user/password, enter ADMIN/##DB\_PASSWORD##
 - Then *SQL*
 
-- Run the following SQL to give right to the user API:
-- Replace the password in the schema creation to your own (to make it easy, the same than the ADMIN one ##DB_PASSWORD##) 
+- Run the following SQL to create the user API.
+- Replace the password in the schema creation to your own (to make it easy, let's use the same than ADMIN ##DB_PASSWORD##) 
 
 ```
 grant connect, resource, unlimited tablespace, create view to API identified by ##DB_PASSWORD##
@@ -90,6 +90,7 @@ GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_tbl TO API;
 GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_t TO API;
 GRANT execute ON DBMS_CLOUD_OCI_AG_DEPLOYMENT TO API;
 GRANT execute ON DBMS_CLOUD TO API;
+GRANT execute on DBMS_NETWORK_ACL_ADMIN to API;
 /
 BEGIN
   ORDS.enable_schema(
@@ -132,18 +133,16 @@ Back to page of the Autonomous Database,
 - Database User *API*
 - Workspace Name *API*
 - Workspace Username *API*
-- Workspace Password ex: *LiveLab__123* (##DB_PASSWORD##)
+- Workspace Password ex: *LiveLab\_\_123* (##DB\_PASSWORD##)
 - Click *Create Workspace*
 
 ![APEX Create Workspace](images/apim-apex4.png)
 
-This will create also a DB user WKSP_API
-
-- Click on your user name (top right). Then *Sign-out*
+- Click on your top right icon. Then *Sign-out*
 - In the APEX login page
     - Workspace: *API*
     - Database User: *API*
-    - Password: See ##DB_PASSWORD##
+    - Password: See ##DB\_PASSWORD##
     - Click *Sign In*
 - In Apex, 
     - Click Menu *App Builder*
@@ -153,7 +152,7 @@ This will create also a DB user WKSP_API
 
   ![APEX Installation](images/apim-apex5.png)
 
-- Go in the files that you have downloaded from GIT 
+- Go in the files that you have downloaded from Git
 - Choose *apex/apex_apim.sql*
 - Click *Next*
 - Click *Next*

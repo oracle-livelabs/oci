@@ -59,14 +59,14 @@ curl -k "https://${APIM_HOST}/ords/apim/rest/add_api?git_repo_url=${TF_VAR_git_u
 
 Where:
 - impl\_name: name of the API
-- icon\_url: icon used to show the API
-- version: version of the API
-- spec\_type: OpenAPI, WSDL, ...
+- icon\_url: icon name (java/rest/soap/dotnet/go/python/...)
+- version: version
+- spec\_type: OpenAPI/WSDL/...
 - endpoint\_url: URL of the api that is deployed
-- git\_repo\_url: base url of the git repository (when you go to this URL, you should see the base of your GIT project)
-- spec\_git\_path: file containing the endpoint definition (OpenApi yaml file or WSDL Xml file, ...)
-- endpoint\_git_path: The file creating the endpoind (Ex: Terraform, Ansible)
-- runtime\_console:  url that allow to see the state of the API Runtime that is deployed
+- git\_repo\_url: base URL to see the git project source 
+- spec\_git\_path: relative url for the specification (openapi file for ex)
+- endpoint\_git_path: relative url for the specification (Terraform file for ex)
+- runtime\_console: url to the console that allow to see the state of the API
 
 ## Task 3: Test
 

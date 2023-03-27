@@ -15,9 +15,9 @@ In this lab, we will create an API Management Portal with the following features
     - Oracle Integration 
     - Cloud Native applications using Virtual Machines, Kubernetes, ...
 - API type:
-    -  Any API specification type is allowed: REST (OpenAPI) or SOAP (WSDL), ...
+    -  Any API specification type: REST (OpenAPI/Swagger/...), SOAP (WSDL), ...
 - Git Integration:
-    - The APIs are linked to GIT where the API source code is stored.
+    - APIs are linked to Git where the source code is stored.
 
 ![Introduction Usecase](images/apim-intro.png)
 
@@ -31,13 +31,13 @@ The APIs definitions are stored in a database. The user interface is developed w
 
 The APIs database can be populated in 2 ways:
 - For new APIs, during a CI/CD DevOps pipeline, with "curl" to add the new API in the Portal
-- For existing APIS, by discovering / collecting / harvesting APIs definition 
+- For existing APIS by discovering APIs definition 
 
 ### Objectives
 
-- Create an Autonomous to install the APEX Application
-- Install the APEX program
-- Test the solution with:
+- Create an Autonomous Database to install the APEX application
+- Install the APEX application
+- Test the application with:
     - API Gateway
     - Cloud Native program 
     - Oracle Integration
