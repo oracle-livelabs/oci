@@ -18,14 +18,14 @@
         "filename": "../../1environment-details/enivronment-details.md"
       },
       {
-          "title": "Lab 2: Import PeopleSoft Environment Into PeopleSoft Cloud Manager",
-          "description": "In this lab, you will import PeopleSoft Environment into PeopleSoft Cloud Manager",
-          "filename": "../../2import-psft/import.md"
+        "title": "Lab 2: Import PeopleSoft Environment Into PeopleSoft Cloud Manager",
+        "description": "In this lab, you will import PeopleSoft Environment into PeopleSoft Cloud Manager",
+        "filename": "../../2import-psft/import.md"
       },
       {
-          "title": "Lab 3: Review Imported PeopleSoft Environment",
-          "description": "In this lab, you will review the imported PeopleSoft Environment and refresh OCI metadata",
-          "filename": "../../3review-environment/review-environment.md"
+        "title": "Lab 3: Review Imported PeopleSoft Environment",
+        "description": "In this lab, you will review the imported PeopleSoft Environment and refresh OCI metadata",
+        "filename": "../../3review-environment/review-environment.md"
       },
       {
           "title": "Lab 4: Backup Imported PeopleSoft Environment",
