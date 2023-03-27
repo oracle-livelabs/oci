@@ -40,7 +40,7 @@ In this workshop, you will:
 * Oracle Cloud resources and permissions to create a file system. See **[Creating File Systems](https://docs.oracle.com/en-us/iaas/Content/File/Tasks/creatingfilesystems.htm)** and **[Service Limits](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm#top)** in the Oracle Cloud documentation.
 *	Oracle Cloud Account Administrator role or manage apm-domains permission in the target compartment. See **[Perform Oracle Cloud Infrastructure Prerequisites (APM)](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/perform-oracle-cloud-infrastructure-prerequisite-tasks.html)** in the Oracle Cloud documentation.
 
-> **Note:** ***This workshop cannot run with a Free Trial account.***
+> **Note:** ***This workshop cannot be completed with a Free Trial account. You will need a paid cloud account with permission to create a file system.***
 
 ### More APM Workshops
 
