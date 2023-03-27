@@ -9,7 +9,7 @@ Create an API Management Portal
 
 ### Features
 
-In this lab, we will create an API Management Portal with the following features:
+In this lab, we show how to create an API Management Portal with the following features:
 - API Origin: The Portal will shows APIs from:
     - OCI API Gateway
     - Oracle Integration 
