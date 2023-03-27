@@ -1,4 +1,4 @@
-# Import PeopleSoft Environment into Peoplesoft Cloud Manager
+# Import PeopleSoft Environment Into Peoplesoft Cloud Manager
 
 ## **Introduction**
 
@@ -51,7 +51,7 @@ Container Database Name | For Exadata DB systems enter the container database na
 
 6. Click on OK.
 
-## Task 2: Import PeopleSoft Application Server Tier
+## Task 2: Import PeopleSoft Application Server Tier Running On Linux
 
 1. You will now comeback to below page. Click on + icon to import Application Server component of Peoplesoft.
 
@@ -63,11 +63,11 @@ Container Database Name | For Exadata DB systems enter the container database na
 
 3. Enter the OCID of Application Server VM and click on Discover.
 
-![Enter OCID of Application Server VM and click on Discover.](./images/app-tier-discovery2.png " ")
+![Enter OCID of Application Server VM and click on Discover.](./images/app-tier-discovery-click.png " ")
 
 4. The discovery operation has discovered the deployment type as Application Tier. Please fill the required blank fields with correct values of Integration Broker Gateway Admin User ID and Admin Password.
 
-![Enter values of Integration Broker Gateway Admin ID and Admin Password.](./images/app-tier-discovery3.png " ")
+![Enter values of Integration Broker Gateway Admin ID and Admin Password.](./images/app-tier-discovered.png " ")
 
 Example screenshot is below.
 
@@ -75,7 +75,7 @@ Example screenshot is below.
 
 5. Click on OK.You will come back to Import page.
 
-## Task 3: Import PeopleSoft Process Scheduler Server Tier Running on Linux
+## Task 3: Import PeopleSoft Process Scheduler Server Tier Running On Linux
 
 1. Click on + icon to import Linux hosted Process Scheduler component of Peoplesoft.
 
@@ -95,7 +95,7 @@ Example screenshot is below.
 
 5. You will come back to Import page.
 
-## Task 4: Import PeopleSoft Web Server Tier
+## Task 4: Import PeopleSoft Web Server Tier Running On Linux
 
 1. Click on + icon to import Web Server component of Peoplesoft.
 
@@ -119,7 +119,7 @@ Example screenshot is below.
 
 6. You will come back to Import page.
 
-## Task 5: Import PeopleSoft ELK Tier
+## Task 5: Import PeopleSoft ELK Tier Running On Linux
 
 1. Click on + icon to import ELK component of Peoplesoft.
 
@@ -145,7 +145,7 @@ Example screenshot is below.
 
 6. You will come back to Import page.
 
-## Task 6: Start the PeopleSoft Environment Import Process
+## Task 6: Start PeopleSoft Environment Import Process
 
 1. Click on Done to start the import of PeopleSoft Environment.
 

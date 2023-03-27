@@ -28,7 +28,7 @@ PeopleSoft Cloud Manager is a PeopleSoft application that runs on Oracle Cloud I
 * The user interface for the Oracle Cloud Infrastructure is constantly evolving. As a result, the screens depicted in this tutorial may not exactly coincide with the current release. This tutorial is routinely updated for functional changes to Oracle Cloud Infrastructure, at which time any differences in the user interface will be reconciled.
 
 
-### **Objectives**
+### Objectives
 
 In this lab, you will:
 
@@ -37,7 +37,7 @@ In this lab, you will:
 * Backup imported PeopleSoft Environment
 
 
-### **Prerequisites**
+### Prerequisites
 
 You will need the following to complete this workshop:
 
@@ -60,7 +60,7 @@ You will need the following to complete this workshop:
 
 ## Appendix
 
-**Terminology**
+Terminology
 
 The following terms are commonly employed in PeopleSoft cloud operations and are used throughout our documentation:
 
