@@ -17,7 +17,7 @@ In this lab, you will:
 - A Free tier or paid tenancy account in OCI (Oracle Cloud Infrastructure)
 - Familiar with OCI object storage to upload data.
 
-## **Policy Setup**
+### **Policy Setup**
 
 Before you start using OCI Vision, your tenancy administrator should set up the following policies by following below steps:
 

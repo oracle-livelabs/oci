@@ -33,6 +33,7 @@ To delete the workshop setup from your tenancy, follow the steps below.
 
 3. Remove the storage configuration from the cluster.
 
+    a) If you created a file system, run the command below.
     ``` bash
     <copy>
     kubectl delete -f ~/sb-hol/apmlab-fss.yaml
@@ -40,7 +41,18 @@ To delete the workshop setup from your tenancy, follow the steps below.
     ```
     ![Oracle Cloud, Cloud Shell](images/4-1-cleanup.png " ")
 
+    b) If you created block volumes, run the command below.
+
+    ``` bash
+    <copy>
+    kubectl delete -f ~/sb-hol/apmlab-pvc.yaml
+    </copy>
+    ```
+
+
 ## Task 2: Remove the Target Mount and the File System
+
+If you created a file system, complete steps 1 - 6 below. If you created block volumes instead, please proceed to the next Task.
 
 1. From the navigation menu in the Oracle Cloud console, select **Storage** > **Mount Target**.
    Then click the link to the MountTarget configured in the workshop.
@@ -66,6 +78,9 @@ To delete the workshop setup from your tenancy, follow the steps below.
 6. Deletion of the File System starts and completes.
 
     ![Oracle Cloud, Cloud console](images/4-7-cleanup.png " ")    
+
+
+
 
 ## Task 3: Remove the container
 
@@ -148,4 +163,4 @@ To delete the workshop setup from your tenancy, follow the steps below.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, August 2022
+* **Last Updated By/Date** - Yutaka Takatsu, March 2023

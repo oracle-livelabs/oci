@@ -325,7 +325,6 @@ Case tenha mudado a paleta com sucesso, a sua página **Pedidos** deve estar igu
 ![Paleta](./images/paleta3.png)
 
 Parabéns, você terminou esse laboratório!
-
 Você pode **seguir para o próximo Lab**.
 
 ## Conclusão
@@ -335,4 +334,4 @@ Nesta sessão você aprendeu a criar um dashboard com visualizações básicas d
 ## Autoria
 
 - **Autores** - Guilherme Galhardo, Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias
-- **Último Updated Por/Data** - Guilherme Galhardo, Fev/2023
+- **Último Updated Por/Data** - Guilherme Galhardo, Mar/2023
