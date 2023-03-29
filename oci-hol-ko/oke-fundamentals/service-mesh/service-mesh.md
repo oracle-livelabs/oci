@@ -6,7 +6,7 @@
 
 - [Istio service mesh](https://istio.io/)
 
-예상 시간: 20 분
+예상 시간: 30 분
 
 ### 목표
 
@@ -28,7 +28,7 @@
 
     ```
     <copy>
-    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.14.3 TARGET_ARCH=x86_64 sh -
+    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.16.1 TARGET_ARCH=x86_64 sh -
     </copy>
     ```
 
@@ -36,7 +36,7 @@
 
     ```
     <copy>
-    cd istio-1.14.3
+    cd istio-1.16.1
     </copy>
     ```
 
@@ -62,18 +62,21 @@
 
     ```
     <copy>
-    istioctl install --set profile=demo
+    istioctl install --set profile=demo --set components.cni.enabled=true -y
     </copy>
     ```
 
     ````
-    This will install the Istio 1.14.3 demo profile with ["Istio core" "Istiod" "Ingress gateways" "Egress gateways"] components into the cluster. Proceed? (y/N) y
+    $ istioctl install --set profile=demo --set components.cni.enabled=true -y
     ✔ Istio core installed 
     ✔ Istiod installed
-    ✔ Ingress gateways installed
+    ✔ CNI installed
     ✔ Egress gateways installed
+    ✔ Ingress gateways installed
     ✔ Installation complete
-    ...
+    Making this installation the default for injection and validation.
+    
+    Thank you for installing Istio 1.16.  Please take a few minutes to tell us about your install/upgrade experience!  https://forms.gle/99uiMML96AmsXY5d6    
     ````    
 
 7. istio-system 네임스페이스에 설치가 된 것을 알 수 있습니다.
@@ -120,20 +123,20 @@
     ````
     
     ````
-    NAME                                READY   STATUS    RESTARTS   AGE
-    mushop-api-67df55b466-n7cng         2/2     Running   0          3m21s
-    mushop-assets-5d6f44b88f-956fs      2/2     Running   0          3m21s
-    mushop-carts-5c97d8bf9c-lwqv4       2/2     Running   0          3m20s
-    mushop-catalogue-c79d9464c-pfqnr    2/2     Running   0          3m20s
-    mushop-edge-8649c9b5dd-llgv7        2/2     Running   0          3m20s
-    mushop-events-6f69d5cc79-vj8fc      2/2     Running   0          3m20s
-    mushop-fulfillment-b59cc849-mnmcs   2/2     Running   0          3m20s
-    mushop-nats-977d9d7df-qcg8r         3/3     Running   0          3m20s
-    mushop-orders-5f65f59497-nvkgw      2/2     Running   0          3m20s
-    mushop-payment-6456f6df7-xn85n      2/2     Running   0          3m20s
-    mushop-session-678f95f767-fhv2k     2/2     Running   0          3m20s
-    mushop-storefront-c9b9d5695-5pkbf   2/2     Running   0          3m20s
-    mushop-user-6b8b559cc6-4rwx5        2/2     Running   0          3m20s
+    NAME                                  READY   STATUS    RESTARTS   AGE
+    mushop-api-99f4cd58b-7gdl6            2/2     Running   0          69s
+    mushop-assets-7dddf887d5-jgx5c        2/2     Running   0          69s
+    mushop-carts-7f764bfcc-2p5hs          2/2     Running   0          69s
+    mushop-catalogue-57df57fc4f-cj8j6     2/2     Running   0          69s
+    mushop-edge-7674d5484d-skmp9          2/2     Running   0          69s
+    mushop-events-765696cbf7-6srhr        2/2     Running   0          68s
+    mushop-fulfillment-6d568c7fb5-nxt9g   2/2     Running   0          68s
+    mushop-nats-8678987b7c-mxmbn          3/3     Running   0          68s
+    mushop-orders-c9bdbdbfc-8d6cp         2/2     Running   0          68s
+    mushop-payment-65f68f8dff-t2l9t       2/2     Running   0          68s
+    mushop-session-6484c5d995-mbg9c       2/2     Running   0          68s
+    mushop-storefront-5fc76d68f-bmdw4     2/2     Running   0          68s
+    mushop-user-5d58f6694b-pzzsn          2/2     Running   0          68s
     ````
 
 3. Gateway 자원 만들기
@@ -211,8 +214,8 @@
     ````
 
     ````
-    NAME                   TYPE           CLUSTER-IP    EXTERNAL-IP     PORT(S)                                                                      AGE
-    istio-ingressgateway   LoadBalancer   10.96.38.45   138.xxx.xxx.xxx 15021:31918/TCP,80:31451/TCP,443:32368/TCP,31400:32514/TCP,15443:31424/TCP   27m    
+    NAME                   TYPE           CLUSTER-IP      EXTERNAL-IP       PORT(S)                                                                      AGE
+    istio-ingressgateway   LoadBalancer   10.96.100.111   150.xxx.xxx.xxx   15021:30958/TCP,80:30070/TCP,443:30722/TCP,31400:30445/TCP,15443:32466/TCP   7m54s 
     ````    
 
 6. 브라우저로 확인된 EXTERNAL-IP로 접속합니다.
@@ -226,10 +229,10 @@
     ````
 
     ````
-    2022-03-10T07:58:52.847225Z     info    Readiness succeeded in 1.353523447s
-    2022-03-10T07:58:52.847748Z     info    Envoy proxy is ready
-    [2022-03-10T08:01:06.859Z] "GET / HTTP/1.1" 200 - via_upstream - "-" 0 4780 1 1 "10.179.86.8,10.244.1.0" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" "137068b0-3a6d-9e4b-91c4-9787a5af72e0" "138.xxx.xxx.xxx" "10.244.1.32:8080" inbound|8080|| 127.0.0.6:59333 10.244.1.32:8080 10.244.1.0:0 outbound_.80_._.mushop-storefront.mushop.svc.cluster.local default
-    [2022-03-10T08:01:07.070Z] "GET /styles/shop-583cb7afd2.css HTTP/1.1" 200 - via_upstream - "-" 0 4963 1 0 "10.179.86.8,10.244.1.0" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" "75bd63de-4266-907d-b18f-1edbc754a437" "138.xxx.xxx.xxx" "10.244.1.32:8080" inbound|8080|| 127.0.0.6:59333 10.244.1.32:8080 10.244.1.0:0 outbound_.80_._.mushop-storefront.mushop.svc.cluster.local default
+    2023-01-22T06:56:31.597920Z     info    Readiness succeeded in 976.999595ms
+    2023-01-22T06:56:31.598603Z     info    Envoy proxy is ready
+    [2023-01-22T07:00:40.031Z] "GET / HTTP/1.1" 200 - via_upstream - "-" 0 4781 1 0 "10.244.1.0" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "06ccb914-3fa7-9d86-be7b-42f2e19961bb" "150.230.251.133" "10.244.0.23:8080" inbound|8080|| 127.0.0.6:51119 10.244.0.23:8080 10.244.1.0:0 outbound_.80_._.mushop-storefront.mushop.svc.cluster.local default
+    [2023-01-22T07:00:40.119Z] "GET /styles/uikit-436da10510.css HTTP/1.1" 200 - via_upstream - "-" 0 18653 3 2 "10.244.1.0" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "4c30c8b4-e2e1-98ec-8067-0c72c91aaf1b" "150.230.251.133" "10.244.0.23:8080" inbound|8080|| 127.0.0.6:51119 10.244.0.23:8080 10.244.1.0:0 outbound_.80_._.mushop-storefront.mushop.svc.cluster.local default
     ...
     ````
 
@@ -244,8 +247,8 @@
     kiali를 위해 prometheus addon도 함께 설치합니다.
     ```
     <copy>
-    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.14/samples/addons/prometheus.yaml
-    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.14/samples/addons/kiali.yaml
+    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.16/samples/addons/prometheus.yaml
+    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.16/samples/addons/kiali.yaml
     </copy>
     ```
 
@@ -326,7 +329,7 @@
     ````
 
     ````
-    kiali.138.xxx.xxx.xxx.nip.io
+    kiali.150.xxx.xxx.xxx.nip.io
     ````
 
 6. 테스트를 위해 MuShop 웹페이지에 접속하여 메뉴들을 클릭합니다. 앞서와 동일하게 istio-ingress gateway의 EXTERNAL-IP로 접속하면 됩니다.
@@ -400,7 +403,7 @@
     ````
 
 
-2. 앞서 만든 Virtual Service에 Destination Rule을 변경합니다. 기존 앱과 베타 앱간 9:1로 분배하는 예시입니다.
+2. 앞서 만든 Virtual Service에 Destination Rule을 변경합니다. 기존 앱과 베타 앱간 7:3로 분배하는 예시입니다.
 
     Ingress Gateway를 통해 Istio로 들어온 요청에 대해 어떤 서비스로 라우팅할 지를 Virtual Service를 통해 정의합니다.
 
@@ -438,13 +441,13 @@
             port:
               number: 80            
             subset: original
-          weight: 90
+          weight: 70
         - destination:
             host: mushop-storefront.mushop.svc.cluster.local
             port:
               number: 80            
             subset: beta
-          weight: 10              
+          weight: 30              
     EOF
     </copy>
     ````
@@ -458,18 +461,18 @@
     </copy>
     ````
 
-    한번만 pod/mushop-storefrontv2-689f9ffbff-g8z76이고 나머지는 다른 pod/mushop-storefront-5bb5cb4bc8-22h7l 요청이 간 것을 알 수 있습니다.
+    세번은 pod/mushop-storefrontv2-7564d44775-ljc2t/storefront이고 나머지는 다른 pod/mushop-storefront-5fc76d68f-bmdw4/storefront 요청이 간 것을 알 수 있습니다.
     ````    
-    [pod/mushop-storefrontv2-689f9ffbff-g8z76/storefront] 127.0.0.6 - - [10/Mar/2022:09:39:54 +0000] "GET /index.html HTTP/1.1" 200 4593 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" "10.179.86.8,10.244.0.129"
-    [pod/mushop-storefront-5bb5cb4bc8-22h7l/storefront] 127.0.0.6 - - [10/Mar/2022:09:39:54 +0000] "GET /index.html HTTP/1.1" 200 4793 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" "10.179.86.8,10.244.1.0"
-    [pod/mushop-storefront-5bb5cb4bc8-22h7l/storefront] 127.0.0.6 - - [10/Mar/2022:09:39:55 +0000] "GET /index.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" "10.179.86.8,10.244.0.129"
-    [pod/mushop-storefront-5bb5cb4bc8-22h7l/storefront] 127.0.0.6 - - [10/Mar/2022:09:39:56 +0000] "GET /index.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" "10.179.86.8,10.244.1.0"
-    [pod/mushop-storefront-5bb5cb4bc8-22h7l/storefront] 127.0.0.6 - - [10/Mar/2022:09:39:57 +0000] "GET /index.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" "10.179.86.8,10.244.0.129"
-    [pod/mushop-storefront-5bb5cb4bc8-22h7l/storefront] 127.0.0.6 - - [10/Mar/2022:09:39:58 +0000] "GET /index.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" "10.179.86.8,10.244.1.0"
-    [pod/mushop-storefront-5bb5cb4bc8-22h7l/storefront] 127.0.0.6 - - [10/Mar/2022:09:39:59 +0000] "GET /index.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" "10.179.86.8,10.244.1.0"
-    [pod/mushop-storefront-5bb5cb4bc8-22h7l/storefront] 127.0.0.6 - - [10/Mar/2022:09:40:00 +0000] "GET /index.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" "10.179.86.8,10.244.1.0"
-    [pod/mushop-storefront-5bb5cb4bc8-22h7l/storefront] 127.0.0.6 - - [10/Mar/2022:09:40:00 +0000] "GET /index.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" "10.179.86.8,10.244.1.0"
-    [pod/mushop-storefront-5bb5cb4bc8-22h7l/storefront] 127.0.0.6 - - [10/Mar/2022:09:40:01 +0000] "GET /index.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" "10.179.86.8,10.244.0.129"   
+    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:33 +0000] "GET / HTTP/1.1" 200 4794 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.1.0"
+    [pod/mushop-storefrontv2-7564d44775-ljc2t/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:34 +0000] "GET / HTTP/1.1" 200 4593 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.1.0"
+    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:35 +0000] "GET / HTTP/1.1" 200 4794 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.0.1"
+    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:36 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.1.0"
+    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:38 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.0.1"
+    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:39 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.1.0"
+    [pod/mushop-storefrontv2-7564d44775-ljc2t/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:40 +0000] "GET / HTTP/1.1" 200 4593 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.0.1"
+    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:41 +0000] "GET / HTTP/1.1" 200 4794 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.0.1"
+    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:42 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.0.1"
+    [pod/mushop-storefrontv2-7564d44775-ljc2t/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:43 +0000] "GET / HTTP/1.1" 200 4593 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.1.0"  
     ```` 
 
 4. Service Mesh의 가중치 기반 라우팅 규칙을 통해 신규 서비스 전에 일부 부하만을 전달하여 테스트 할 수 있습니다.
@@ -480,4 +483,5 @@
 
 ## Acknowledgements
 
-* **Author** - DongHee Lee, August 2022
+- **Author** - DongHee Lee
+- **Last Updated By/Date** - DongHee Lee, January 2023

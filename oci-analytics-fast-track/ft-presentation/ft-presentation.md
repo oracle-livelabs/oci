@@ -94,11 +94,11 @@ Vamos exportar nosso dashboard em PDF para ser compartilhado de forma mais simpl
 
 2. Preencha preencha os campos com as informação abaixo e em seguida clique em **Salvar**.
 
-*Nome:* Análise Miau Corp  
-*Formato:* Acrobat (pdf)  
-*Incluir:* Todas as Telas  
-*Tamanho:* A4 (210 mm x 297 mm)  
-*Orientação:* Paisagem	
+*Nome:* Análise Miau Corp
+*Formato:* Acrobat (pdf)
+*Incluir:* Todas as Telas
+*Tamanho:* A4 (210 mm x 297 mm)
+*Orientação:* Paisagem
 
 ![Informações para exportação](./images/present-12.png)
 
@@ -120,11 +120,11 @@ Agora vamos exportar o nosso dashboard no formato .DVA que é o formato nativo d
 
 4. Dessa vez vamos mudar o formato de exportação para Pacote (dva) e será necessário adicionar uma senha para a exportação. (Essa senha  será necessária caso você for importar o arquivo)
 
-*Nome:* Fast Track OAC  
-*Formato:* Pacote (dva)  
-*Incluir Dados* - MANTER HABILITADO  
-*Incluir Credenciais de Conexão* - DESABILITAR  
-*Proteger Senha:* Colocar uma senha	
+*Nome:* Fast Track OAC
+*Formato:* Pacote (dva)
+*Incluir Dados* - MANTER HABILITADO
+*Incluir Credenciais de Conexão* - DESABILITAR
+*Proteger Senha:* Colocar uma senha
 
 ![Exportar Arquivo DVA](./images/present-15.png)
 
@@ -136,18 +136,20 @@ Quando o processamento terminar o download automático do arquivo vai iniciar, b
 
 Você pode utilizar o arquivo que acabou de baixar com todos os gráfico e configurações que você fez nos dados para importar em qualquer instancia do OAC sem a necessidade de ter que refazer todo o processo.
 
+Parabéns, você terminou esse laboratório!
+Você pode **seguir para o próximo Lab**.
 
 ## Saiba Mais
 
-[Configurar envio de dashboards por e-mail](https://docs.oracle.com/en/cloud/paas/analytics-cloud/acabi/set-email-server-deliver-reports.html).  
-[Agendar o envio automático de dashboards por e-mail](https://docs.oracle.com/en/cloud/paas/analytics-cloud/acabi/send-email-reports-and-track-deliveries.html#GUID-49732584-010B-444F-84C6-37FABF533642).  
-[Importar um arquivo DVA](https://docs.oracle.com/en/middleware/bi/analytics-desktop/bidvd/import-workbook-file.html).  
+[Configurar envio de dashboards por e-mail](https://docs.oracle.com/en/cloud/paas/analytics-cloud/acabi/set-email-server-deliver-reports.html).
+[Agendar o envio automático de dashboards por e-mail](https://docs.oracle.com/en/cloud/paas/analytics-cloud/acabi/send-email-reports-and-track-deliveries.html#GUID-49732584-010B-444F-84C6-37FABF533642).
+[Importar um arquivo DVA](https://docs.oracle.com/en/middleware/bi/analytics-desktop/bidvd/import-workbook-file.html).
 
 ## Conclusão
 
-Nesta sessão você aprendeu a configurar o modo de apresentação  e aprendeu a exportar seus dashboards em dois formatos de arquivos diferentes PDF e DVA.
+Nesta sessão você aprendeu a configurar o modo de apresentação e aprendeu a exportar seus dashboards em dois formatos de arquivos diferentes PDF e DVA.
 
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Thais Henrique, Nov/2022
+- **Último Update Por/Date** - Thais Henrique, Mar/2023
