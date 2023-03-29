@@ -116,7 +116,7 @@ Estimated time: 15 minutes
 4. Hit **i** to enter the edit mode. Carefully insert the following code below the **containerPort**. Note that the changes have to be made in both statefulsets, **wstore-back** and **wstore-front**.
 
 
-  a)	Insert below under “- containerPort: 8080” (line 51)
+  * Insert below under “- containerPort: 8080” (line 51)
 
 
                 volumeMounts:
@@ -127,7 +127,7 @@ Estimated time: 15 minutes
                 persistentVolumeClaim:
                   claimName: apmlab-fsspv
 
-  b)	Insert below under “- containerPort: 8080” (line 75).
+  * Insert below under “- containerPort: 8080” (line 75).
 NOTE the contents are different from the above (a).
 
 
@@ -140,7 +140,7 @@ NOTE the contents are different from the above (a).
                   claimName: apmlab-fsspv2
 
 
-  c)	 Change the replicas of backend from 2 to 1.
+  * Change the replicas of backend from 2 to 1.
 
             serviceName: "wstore-backend"
             replicas: 1
