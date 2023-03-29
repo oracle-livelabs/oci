@@ -55,6 +55,7 @@ Estimated time: 10 minutes
     E.g., cd ~/; wget https://repo1.maven.org/maven2/com/oracle/apm/agent/java/apm-java-agent-installer/1.8.3326/apm-java-agent-installer-1.8.3326.jar
 
 
+
     >**Note:** If you received **No such file or directory** error, it may be a new version of the agent is being updated. Please run the following URL on a browser and find the Agent version available at the Maven central.
       ``` bash
       <copy>
@@ -62,6 +63,7 @@ Estimated time: 10 minutes
       </copy>
       ```
        ![Oracle Cloud console, Cloud Shell](images/2-1-mavencentral.png " ")
+
 
 2.	Hit the enter key and verify the message to ensure the successful file transfer.
 

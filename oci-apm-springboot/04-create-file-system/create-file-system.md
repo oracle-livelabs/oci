@@ -247,7 +247,7 @@ Watch the video below for a quick walk-through of the lab.
    ![Oracle Cloud console, Cloud Shell](images/3-3-3-1-cloudshell.png " ")
 
 4. Hit **i** to enter the edit mode. Carefully insert the following code below the **containerPort**. Note that the same changes have to be made in both statefulsets, **wstore-back** and **wstore-front**.
-
+xxxxxxxxxxxxxxxx
 
                 volumeMounts:
                 - mountPath: "/apmlab-fss"
