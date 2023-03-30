@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this workshop, you use a username and login provided by the LiveLabs workshop system. 
+In this workshop, you will use credentials provided by the LiveLabs workshop system to access the OCI tenancy. 
 
 Estimated time: 5 minutes
 
@@ -12,8 +12,9 @@ Estimated time: 5 minutes
 
 ### Prerequisites
 
-* Internet access from a laptop/device with a chrome browser (preferred) and Oracle Single Sign On account to use a LiveLabs workshop. An Oracle LiveLabs Event code or Green Button assigned account and tenancy
-
+* Internet access from a laptop/device with a chrome browser (preferred) 
+* An Oracle Single Sign On account to use a LiveLabs workshop. 
+* An Oracle LiveLabs Event code or Green Button assigned account and tenancy
 
 ## Task 1: Log in to the workshop tenancy
 
@@ -80,4 +81,4 @@ You may now **proceed to the next lab**.
 - Steven Lemme, Senior Principal Product Manager,
 Anand Prabhu, Sr. Member of Technical Staff
 
-* **Last Updated By/Date** - Aaron Rimel, February 2023
+* **Last Updated By/Date** - Aaron Rimel, March 2023

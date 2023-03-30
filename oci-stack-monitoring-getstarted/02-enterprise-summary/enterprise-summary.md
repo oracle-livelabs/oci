@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this workshop, you will learn how the Enterprise Summary can be capitalized to monitor the status and performance of an application and its underlying tech stack. You will understand how to review the overall availability status of all resources, identify the resources that are down, and review the open alarms. Additionally, you will identify the list of Oracle Databases in a Not Reporting state. You will further learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, because you are monitoring each tier, you will see how to interact with the Enterprise Summary UI to dynamically view other metrics. 
+In this workshop, you will learn how the Enterprise Summary can monitor the status and performance of an application and its underlying tech stack. You will understand how to review the overall availability status of all resources, identify the resources that are down, and review the open alarms. Additionally, you will identify the list of hosts in a Not Reporting state. You will further learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, because you are monitoring each tier, you will see how to interact with the Enterprise Summary UI to dynamically view other metrics. 
 
 Estimated time: 10 minutes
 
@@ -72,7 +72,7 @@ Estimated time: 10 minutes
 
 1. Locate the **Alarms** region at the top right of the Enterprise Summary. 
 
-	Stack Monitoring provides quick access to all open alarms on your monitored resources. The **Alarms** region provides a total count of open alarms, as well as a count of alarms by severity. Clicking on a count of alarms invokes a slide-out. The slide-out provides greater details of the open alarms and is filtered by the severity count selected. 
+	Stack Monitoring provides quick access to all open alarms, allowing you to quickly identify if any problems exist within your monitored resources. The **Alarms** region provides a total count of open alarms, as well as a count of alarms by severity. Clicking on a count of alarms invokes a slide-out. The slide-out provides greater details of the open alarms and is filtered by the severity count selected. 
 
 	Let's review the open alarms. Begin by clicking the **Total** count of open alarms, in the **Alarms** region. 
 
@@ -107,15 +107,15 @@ Estimated time: 10 minutes
 
  	![Enterprise Summary tiers including E-Business Suite, WebLogic Cluster, and Oracle Database](images/4-1-ent-sum.png " ")
 
-	Stack Monitoring makes it easy to troubleshoot any resource type and any metric at any time. All performance charts and tables can be modified or replaced to help identify problems or troubleshoot a specific performance problem. The Enterprise Summary allows you to update a chart to display any two host metrics. If you have concerns regarding network storage latency you can update a scatter plot to Disk Activity and Network Activity to correlate the performance of network read and writes. Alternatively, any scatter-plot or table change can be saved as your default when viewing the Enterprise Summary, by clicking **Save as default**. 
+	Stack Monitoring makes it easy to troubleshoot any resource type and any metric at any time. All performance charts and tables can be modified or replaced to help identify problems or troubleshoot a specific performance problem. For example, the Enterprise Summary allows you to update any chart to display any WebLogic Server metrics. If you have concerns regarding response times, you can update a scatter plot to Web Request Rate and Thread Pool Threads to correlate the performance of your WebLogic Server. Alternatively, any scatter-plot or table change can be saved as your default when viewing the Enterprise Summary, by clicking **Save as default**. 
+
+	![Enterprise Summary, highlighting the button to save as default](images/4-2-ent-sum.png " ")
 
 2. Scatter plots charts
 
 	Provide a visual representation of the performance of every resource in your enterprise. Using the scatter plot charts you can correlate any two metrics at the same time. For example, you can correlate the IOPS and CPU of an Oracle Database to understand how heavily utilized the database is. This makes it easy to identify if one or more resources are performing differently than the others. For instance, an Oracle Database with a data point at the top right corner represents a busy database, while a data point at the bottom left is idle. If you identify a performance anomaly, clicking on the data point will allow you to review the trend of that metric.
 
- 	![Enterprise Summary, highlighting the button to save as default](images/4-2-ent-sum.png " ")
-
-	Let's review memory the swap utilization of all hosts within this enterprise. Navigate to the **Memory and Swap** chart located under the **Host** tier at the bottom center of the Enterprise Summary. Every monitored host within Stack Monitoring is represented in this chart. You can assess the overall usage of memory and swap across all hosts. You can identify which host is utilizing the most memory and swap and see the majority of hosts are using very little to no swap. If troubleshooting an issue, you can hover over a plot point and see the value of the metrics.
+	Let's review memory and swap utilization of all hosts within this enterprise. Navigate to the **Memory and Swap** chart located under the **Host** tier at the bottom center of the Enterprise Summary. Every monitored host within Stack Monitoring is represented in this chart. You can assess the overall usage of memory and swap across all hosts. You can identify which host is utilizing the most memory and swap and see the majority of hosts are using very little to no swap. If troubleshooting an issue, you can hover over a plot point and see the value of the metrics.
 
  	![Host tier, highlighting the metric values of a PeopleSoft host memory utilization and swap utilization](images/4-3-ent-sum.png " ")
 
@@ -125,19 +125,23 @@ Estimated time: 10 minutes
 
 2. Tables
 
- 	Located on the right-hand side of the page, Tables enable you to quickly identify which hosts or databases have the highest filesystem usage or tablespace usage. By default, **Tables** provide up to the four highest utilized or consumed resources of a given metric. The number of rows displayed can be updated from 4 to 10, 20, or all. Let's review the top 20 most heavily utilized filesystems within the enterprise. Locate the **Filesystem Utilization** chart on the right side under the **Hosts** tier. Click the pencil icon in the top right of the chart. After clicking the pencil, enable the **Advanced** menu items by updating the **Advanced** flag. Enabling the Advanced menu provides access to optional features of a table or chart. Click **Display records** to change the value of rows displayed from 4 to **20**. With the value updated to 20, click **Apply** in the lower left of the slide-out to return to the Enterprise Summary. 
+ 	Located on the right-hand side of the page, Tables enable you to quickly identify which hosts or databases have the highest filesystem usage or tablespace usage. By default, **Tables** provide up to the four highest utilized or consumed resources of a given metric. 
 
- 	![Host filesystem table edit screen, highlighting the count of records to display in the table](images/4-5-ent-sum.png " ")
+ 	![Host filesystem table edit screen](images/4-5-ent-sum.png " ")
+
+ 	The number of rows displayed can be updated from 4 to 10, 20, or all. Let's review the top 20 most heavily utilized filesystems within the enterprise. Locate the **Filesystem Utilization** chart on the right side under the **Hosts** tier. Click the pencil icon in the top right of the chart. After clicking the pencil, enable the **Advanced** menu items by updating the **Advanced** flag. Enabling the Advanced menu provides access to optional features of a table or chart. Click **Display records** to change the value of rows displayed from 4 to **20**. With the value updated to 20, click **Apply** in the lower left of the slide-out to return to the Enterprise Summary. 
+
+ 	![Host filesystem table edit screen, highlighting the count of records to display in the table](images/4-6-ent-sum.png " ")
 
  	You can now view a list of the top 20 hosts with the most heavily utilized filesystems. Should one of the hosts' filesystems cause concern, clicking any of the resource names will navigate you to that resource's homepage for further investigation. For example, when investigating filesystem utilization, it is good to review the growth over time to understand if more space should be added, and if so how much. From a Stack Monitoring host homepage, you can chart the growth of the filesystem over time using the **Filesystem Utilization** chart. We'll review resource homepages in a later lab activity.
 
- 	![Host tier, highlighting the chart filesystem utilization with more than four records displayed](images/4-6-ent-sum.png " ")
+ 	![Host tier, highlighting the chart filesystem utilization with more than four records displayed](images/4-7-ent-sum.png " ")
 
 ## Task 5: Dynamically investigate other key performance metrics
 
 1. Review WebLogic JVM Memory Utilization
 
-	From years of experience in the management of customer applications as well as our own, the out-of-the-box metric charts have been curated to highlight specific load, response, utilization, and errors within each respective tier an application stack. 
+	From years of experience in the management of customer applications as well as our own, the out-of-the-box metric charts have been curated to highlight specific load, response, utilization, and errors within each respective tier in an application stack. 
 
 	Understanding that each organization and user is unique, and monitoring is a dynamic activity, Enterprise Summary charts, tables, and tier names are customizable to meet the individual needs of the user at any given time. 
 
@@ -165,4 +169,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,
 - Steven Lemme, Senior Principal Product Manager,
 Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, February 2023
+* **Last Updated By/Date** - Aaron Rimel, March 2023
