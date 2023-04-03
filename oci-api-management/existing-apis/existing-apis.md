@@ -45,16 +45,20 @@ In your computer (NOT in cloud shell), you need to convert the PEM key to RSA fo
 - And keep the ##PRIVATE\_KEY\_RSA\_FORMAT##
 
 ```
+<copy>
 openssl rsa -in ##PRIVATE_KEY## -out ##PRIVATE_KEY_RSA_FORMAT##
+</copy>
 ex: openssl rsa -in private_key.pem -out private_key_rsa_format.pem
 ````
 
 Double-check that the private\_key\_rsa_format.pem is really in RSA format like this:
 
 ```
+<copy>
 -----BEGIN RSA PRIVATE KEY-----
 ...
 -----END RSA PRIVATE KEY-----
+</copy>
 ```
 
 ## Task 2: Add existing APIs from Oracle Integration
@@ -148,15 +152,21 @@ It will allow the database to call the APIGW URLs
 
 ## Troubleshooting
 
-- If there are issue with the discovering, run this query in SQL
+- If there are issue with the discovering, 
+    - Go on the Discover page 
+    - Click the Discover Log button. 
+    - You may also run this query in SQL
 
 ```
+<copy>
 select * from api.discover_log
+</copy>
 ```
 
 - To clean up the repository and discover all again
 
 ```
+<copy>
 truncate table api.TAG_IMPL
 /
 truncate table api.TAG
@@ -175,20 +185,18 @@ end;
 /
 select * from api.discover_log
 /
+</copy>
 ```
 
 - The sample has the following limitation:
     - It does not contain a logic to remove the duplicate entries in the API Portal
-    - The APIGW discovery requires Tags to be set up on the API Deployment 
-
-```
-api_icon: icon name (java/rest/soap/dotnet/go/python/...)
-api_git_url: base URL to see the git project source 
-api_git_spec_path: relative url for the specification (openapi file for ex)
-api_git_spec_type: OpenAPI/WSDL/...
-api_git_endpoint_path: relative url for the specification (Terraform file for ex)
-api_endpoint_url: path to add the endpoint url (sometimes a API Gateway URL is containing variable path)
-```
+    - The APIGW discovery requires Tags to be set up on the API Deployment:
+        - api\_icon: icon name (java/rest/soap/dotnet/go/python/...)
+        - api\_git\_url: base URL to see the git project source 
+        - api\_git\_spec_path: relative url for the specification (openapi file for ex)
+        - api\_git\_spec_type: OpenAPI/WSDL/...
+        - api\_git\_endpoint_path: relative url for the specification (Terraform file for ex)
+        - api\_endpoint\_url: path to add the endpoint url (sometimes a API Gateway URL is containing variable path)
 
 - The right to call OCI API could probably be improved with OCI policies instead of encoding the user ocid, ...
 

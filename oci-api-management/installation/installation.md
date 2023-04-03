@@ -20,6 +20,7 @@ Open the Oracle Cloud Shell and clone this repository on your laptop first.
 Create a file on your Laptop to take your notes
 
 ````
+<copy>
 ##PORTAL_URL##    : Portal URL ex: https://xxxxx-apidb.adb.eu-frankfurt-1.oraclecloudapps.com/ords/r/api/apimgt/portal
 
 // Autonomous Database / APEX 
@@ -43,9 +44,7 @@ qsdqksjdkjsqlkjmLKQJMJLKSFlqkjmfkljdslk
 ...
 qHKJFDkjdhj==
 -----END RSA PRIVATE KEY-----
-
-------------------------------------------------------------------------------
-
+</copy>
 ````
 
 ## Task 1: Create an Autonomous database
@@ -78,10 +77,13 @@ In the page of the Autonomous Database,
 - If you get a prompt asking for an user/password, enter ADMIN/##DB\_PASSWORD##
 - Then *SQL*
 
+![Database Actions](images/apim-sql0.png)
+
 - Run the following SQL to create the user API.
 - Replace the password in the schema creation to your own (to make it easy, let's use the same than ADMIN ##DB_PASSWORD##) 
 
 ```
+<copy>
 grant connect, resource, unlimited tablespace, create view to API identified by ##DB_PASSWORD##
 /
 GRANT execute ON dbms_cloud_oci_ag_deployment_list_deployments_response_t TO API;
@@ -103,6 +105,7 @@ BEGIN
   COMMIT;
 end;
 /
+</copy>
 ```
 
 ![APEX Installation](images/apim-sql1.png)
