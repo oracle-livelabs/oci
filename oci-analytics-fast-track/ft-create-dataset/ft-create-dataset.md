@@ -70,7 +70,7 @@ As colunas do tipo ***Atributo*** aceitam qualquer tipo de dados descritivo, que
 
 2. Dê um nome e uma descrição para o Conjunto de dados:
 
-*Nome:* DADOS\_MIAU\_CORP  
+*Nome:* DADOS\_MIAU\_CORP
 *Descrição:* Conjunto de Dados para Análise de Dados de vendas da MIAU CORP
 
 ![Preencha os campos](./images/salve-data-11.png)
@@ -103,6 +103,9 @@ Imagine que o Oracle Analytics Cloud não criou o Join entre a tabela "Pedidos" 
 
 ![Seleciona a coluna ID DO PEDIDO](./images/select-join-column-9.png)
 
+Parabéns, você terminou esse laboratório!
+Você pode **seguir para o próximo Lab**.
+
 ## Conclusão
 
 Nesta sessão você aprendeu criar um Conjunto de Dados no Oracle Analytics Cloud usando mais de uma tabela e aprendeu a utilizar o "Diagrama de Junção".
@@ -110,4 +113,4 @@ Nesta sessão você aprendeu criar um Conjunto de Dados no Oracle Analytics Clou
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Thais Henrique, Fev/2023
+- **Último Update Por/Date** - Thais Henrique, Mar/2023

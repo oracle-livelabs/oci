@@ -2,9 +2,9 @@
 
 ## About this Workshop
 
-This workshop walks you through how to configure Spring Boot microservices deployed on Kubernetes for monitoring with the Oracle Application Performance Monitoring (APM) service. This enables automatic OpenTracing instrumentation and metrics collection that is used to provide full, end-to-end monitoring and diagnostics for the application.  
+This workshop walks you through how to configure Spring Boot microservices deployed on Kubernetes for monitoring with the Oracle Application Performance Monitoring (APM) service. This enables automatic OpenTracing instrumentation and metrics collection that is used to provide full, end-to-end monitoring and diagnostics for the application.
 
-In this workshop, you will provision the APM Java agent in a file system mounted in the Oracle Cloud, deploy the agent to the Kubernetes cluster, instrument the APM Browser agent by inserting JavaScript code to a webpage and view traces and spans in APM Trace Explorer.
+In this workshop, you will provision the APM Java agent in either a file system (Paid Oracle account) or block volumes (Paid or Free tier account) mounted in the Oracle Cloud, deploy the agent to the Kubernetes cluster, instrument the APM Browser agent by inserting JavaScript code to a webpage and view traces and spans in APM Trace Explorer.
 
 >**Note:** The same approach demonstrated for Spring Boot Java microservices on Kubernetes can be used to configure other types of java application servers, such as WebLogic, deployed on Kubernetes.
 
@@ -22,11 +22,13 @@ Among other capabilities, OCI APM includes an implementation of a Distributed Tr
 
 In the workshop, you will learn how to instrument a Java microservices application deployed on a Kubernetes cluster with APM agents. You will also learn how to create an APM domain in the Oracle Cloud and use Trace Explorer to search and view traces/spans in the APM User Interface.
 
+>**Note:** Creating a file system requires OCI quota and permissions. If you are running the workshop in a free tier with 30 day free trial, please select to create block volumes. After completion of Lab 3, select **Lab 4 (Free Trial) "Create and configure block volumes"**, then proceed to **Lab 5 (Free Trial) "Instrument server monitoring on the block volumes"**.
+
 ### Objectives
 
 In this workshop, you will:
 * Create an APM domain, obtain Data Upload Endpoint and Data Keys
-*	Create a file system in the Oracle Cloud Infrastructure, and mount it in the Kubernetes pods
+*	Create a file system or block volumes in the Oracle Cloud Infrastructure, and mount it in the Kubernetes pods
 *	Download, provision and deploy the APM Java agent
 * Apply custom storage configuration to the Kubernetes pods
 *	Instrument APM Browser agent
@@ -57,4 +59,4 @@ If you are running the workshop in a Paid Cloud Account, ensure you have the per
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, December, 2022
+- **Last Updated By/Date** - Yutaka Takatsu, March 2023
