@@ -1,6 +1,6 @@
 {
     "workshoptitle": "Oracle Analytics Racing Challenge",
-    "help": "isabella.alvarez@oracle.com, breno.comin@oracle.com, thais.henrique@oracle.com",
+    "help": "livelabs-help-analytics_us@oracle.com",
     "variables": ["../../variables/variables.json",
         "../../variables/variables-in-another-file.json"],
     "tutorials": [
