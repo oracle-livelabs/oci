@@ -36,15 +36,15 @@ Após fazer o login no ambiente fornecido para você com suas credenciais exclus
 
 3. Verifique se você está no Compartimento **ANALYTICS** (como indicado na imagem) e clique na instância **ANALYTICSLAB**.
 
-    ![Verifique o compartimento e clique na instância](.\images\check-comp-click-analytics.png) 
+    ![Verifique o compartimento e clique na instância](.\images\check-comp-click-analytics.png)
 
 4. Agora basta clicar no botão **ANALYTICS HOME PAGE** .
 
     ![Clique em Home Page](.\images\click-home-page.png)
 
-Uma nova aba será aberta e você será direcionado para a Página Inicial do OAC.
+    Uma nova aba será aberta e você será direcionado para a Página Inicial do OAC.
 
-   ![Home Page](.\images\analytics-home-page.png)
+    ![Home Page](.\images\analytics-home-page.png)
 
 ## Tarefa 2: Criando um Conjunto de Dados
 
@@ -54,9 +54,9 @@ Dentro do Oracle Analytics, grande parte da navegação é feita pelo **Menu Ham
 
     ![menu do OAC "Hambúrger"](.\images\menu_hamburguer.png)
 
-Assim que a barra lateral se expandir, você verá o ícone correspondente a **Home**, selecione-o.
+    Assim que a barra lateral se expandir, você verá o ícone correspondente a **Home**, selecione-o.
 
-   ![menu do OAC "Hambúrger"](.\images\home_analytics.png)
+    ![menu do OAC "Hambúrger"](.\images\home_analytics.png)
 
 2.	Seguindo o mesmo passo de clicar no **Menu Hambúrguer**, ao clicar em **Dados**, você será direcionado para a área em que são gerenciadas as conexões e os conjuntos de dados. É aqui que os dados mapeados ficam disponíveis para serem usados, sejam eles um banco de dados, uma aplicação, uma planilha ou uma API.
 
@@ -76,7 +76,7 @@ Assim que a barra lateral se expandir, você verá o ícone correspondente a **H
 
 6. Verifique se alguma coluna está tratada inadequadamente como **Atributo** ou **Métrica**. Nesse caso as 3 primeiras são IDs e deverão ser atualizadas para **Atributo**. Faça isso clicando em cima do **#** e substituindo pelo **A**. Perceba que isso já foi feito para as 2 primeiras colunas no print abaixo.
 
-    ![Medida Atri"](.\images\medida_atri.png)
+    ![Medida e Atributo"](.\images\medida_atri.png)
 
 7. Realize o mesmo processo para a coluna **YEAR**
 
