@@ -4,6 +4,8 @@
 
 In this lab, you will create a file system in the Oracle Cloud Infrastructure. You will also create security rules to allow network traffic and mount the file system to the Kubernetes pods.  
 
+***This lab requires OCI quota and permissions to create a file system in your tenancy. If you are using a FREE TRIAL, please go to the next Lab 4 (Free Trial): "Create and configure block volumes", which does not require a paid OCI quota.***
+
 Estimated time: 15 minutes
 
 Watch the video below for a quick walk-through of the lab.
@@ -245,7 +247,7 @@ Watch the video below for a quick walk-through of the lab.
    ![Oracle Cloud console, Cloud Shell](images/3-3-3-1-cloudshell.png " ")
 
 4. Hit **i** to enter the edit mode. Carefully insert the following code below the **containerPort**. Note that the same changes have to be made in both statefulsets, **wstore-back** and **wstore-front**.
-
+xxxxxxxxxxxxxxxx
 
                 volumeMounts:
                 - mountPath: "/apmlab-fss"
@@ -357,7 +359,7 @@ Watch the video below for a quick walk-through of the lab.
     >***Debugging TIPS***: If you cannot find the apmlab-fss directory, or the pods do not start running, execute the following command from the Cloud Shell to troubleshoot.   
     kubectl get events --sort-by=.metadata.creationTimestamp
 
-You may now **proceed to the next lab**.
+You may now **proceed to Lab 5 (Paid Tenancy): Instrument server monitoring on the file system**.
 
 ## Acknowledgements
 
@@ -365,4 +367,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,   
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, December 2022
+* **Last Updated By/Date** - Yutaka Takatsu, March 2023

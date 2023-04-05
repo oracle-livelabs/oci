@@ -1,8 +1,15 @@
-# Instrument the server monitoring
+# Instrument the server monitoring on the file system
 
 ## Introduction
 
 In this lab, you will download the APM Java Agent installer file from the Oracle Cloud console, upload it to the Oracle Cloud shell, transfer it to the Kubernetes container, provision the Java Agent to the file system, and finally, deploy the Agent to the Kubernetes pods.
+
+***Please run this lab only if you completed Lab 4 (Paid Tenancy): "Create and configure a file system".***
+
+***For users who completed  Lab 4 (Free Trial): "Create and configure block volumes", please go to the next lab, Lab 5 (Free Trial): "Instrument server monitoring for block volumes".***
+
+This lab requires OCI quota and permissions to create a file system in your tenancy. If you are using a FREE TRIAL, please go to the next Lab 4 (Free Trial): Create and configure block volumes, which does not require a paid OCI quota.***
+
 
 Estimated time: 10 minutes
 
@@ -189,4 +196,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, December 2022
+* **Last Updated By/Date** - Yutaka Takatsu, March 2023

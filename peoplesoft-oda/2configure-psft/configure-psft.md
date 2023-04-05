@@ -49,7 +49,17 @@ To configure PeopleSoft with Oracle Digital Assistant, you will:
    On the Roles tab, Update it with below roles and click save
   ![Add the roles as per the screen ](./images/update-roles.png " ")
 
+   For PeopleSoft Financial environment, add the below roles to the VP1 user or user working on the chatbot setup.
 
+   EOCB Client User
+
+   EXCB\_EXPENSE\_INQ
+
+   PTCB\_USER
+
+   PeopleSoft User  
+   
+   ePro Requester Inquiry Bot
 ## Task 2: Uncheck Restricted Services
 
 1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Service Configuration. 
@@ -72,13 +82,15 @@ To configure PeopleSoft with Oracle Digital Assistant, you will:
 
   ![Click the navbar at the top right corner ](./images/psft-service-operation.png " ")
 
-  Search with Service Operation "PTCB\_APP\_SVC"
+  Search with Service Operation "PTCB\_APPL\_SVC"
 
     ![Search with Service Operation  ](./images/psft-service-operation-page.png " ")
   
   Update the req. verification field as "Basic Authentication" instead of "SSL" for both Service Operations "PTCB\_APPL\_SVC_GET" and "PTCB\_APPL\_SVC\_POST"
 
     ![Search with Service Operation  ](./images/psft-service-operation-update.png " ")
+
+    *Note:* Make a note of the masked REST Base URL as this would be required to update the ODA skill configuration page
 
 ## Task 4: Update Application Services Security
 
@@ -136,6 +148,5 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
 * **Contributors** - Deepak Kumar M, Principal Cloud Architect
-* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, October 2022
-
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, March 2023
 

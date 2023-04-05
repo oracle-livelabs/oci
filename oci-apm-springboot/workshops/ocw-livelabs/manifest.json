@@ -30,14 +30,24 @@
         },
 
         {
-            "title": "Lab 4: Create and configure a file system",
-            "description": "Create and configure a file system",
+            "title": "Lab 4 (Paid Tenancy): Create and configure a file system",
+            "description": "Create and configure a file system (Paid Tenancy)",
             "filename": "../../04-create-file-system/create-file-system.md"
         },
         {
-            "title": "Lab 5: Instrument server monitoring",
+            "title": "Lab 4 (Free Trial): Create and configure block volumes",
+            "description": "Create and configure block volumes (Free Trial)",
+            "filename": "../../04b-create-block-volume/create-block-volume.md"
+        },
+        {
+            "title": "Lab 5 (Paid Tenancy): Instrument server monitoring on the file system",
             "description": "Instrumentation for server monitoring",
             "filename": "../../05-configure-apm-agent/configure-apm-agent.md"
+        },
+        {
+            "title": "Lab 5 (Free Trial): Instrument server monitoring on the block volumes",
+            "description": "Instrumentation for server monitoring",
+            "filename": "../../05b-configure-apm-agent/b-configure-apm-agent.md"
         },
         {
             "title": "Lab 6: Instrument browser monitoring",

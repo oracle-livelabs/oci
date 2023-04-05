@@ -7,31 +7,31 @@ A *Virtual Cloud Network (VCN)* and a *Subnet* are required to provision an *OCI
 
 - Go to Virtual Cloud Network and create a **VCN**. For IPv4 CIDR Blocks, the recommended one **10.0.0.0/16** can be used. 
 
-  ![](./images/Set-Fn1.png)
+  ![](./images/set-fn1.png)
 
 - Inside the generated VCN, create a **subnet**. For IPv4 CIDR Block, the recommended one **10.0.0.0/24** can be used. For Subnet Access, choose Private Subnet.  
-  ![](./images/Set-Fn2.png)
+  ![](./images/set-fn2.png)
 
 - Under the VCN, create a **Service Gateway**. Remember to choose **ALL <Region> Services In Oracle Service Network** under Services.  
 
-  ![](./images/Set-Fn3.png)
+  ![](./images/set-fn3.png)
 
-- Under the VCN, go to **Route Tables** and click on **Default Route Table for <vcn-name>**. Choose **Add Route Rules**. Choose **Service Gateway** as the Target Type, **ALL <Region> Services In Oracle Service Network** as Destination Service, and choose the Service Gateway created in the previous step as Target Service Gateway.  
+- Under the VCN, go to **Route Tables** and click on **Default Route Table for \<vcn-name>**. Choose **Add Route Rules**. Choose **Service Gateway** as the Target Type, **ALL <Region> Services In Oracle Service Network** as Destination Service, and choose the Service Gateway created in the previous step as Target Service Gateway.  
 
-  ![](./images/Set-Fn4.png)
+  ![](./images/set-fn4.png)
     
 
 ## 2. Create a OCI Functions Application
 
 Go to **Functions** → **Applications**, and Create an *Application*. See screenshots below.
 
-![](./images/Set-Fn5.png)
+![](./images/set-fn5.png)
 
-![](./images/Set-Fn6.png)
+![](./images/set-fn6.png)
 
-Next, go to **Getting Started** (under *Resources* panel on the left) and click **Cloud Shell setup**. Follow steps 1 thru 10 and deploy the demo function (*hello-java*).
+Next, go to **Getting Started** (under *Resources* panel on the left) and click **Cloud Shell setup**. Follow steps 1 through 10 and deploy the demo function (*hello-java*).
 
-![](./images/Set-Fn7.png)
+![](./images/set-fn7.png)
 
 Lastly, run the demo function and verify that it can be invoked successfully. The function should print/output a message *Hello, World!* on the console as below.
 
@@ -44,45 +44,9 @@ Hello, World!
 
 An OCI Function serves as a *Driver* for invoking the Data Flow Application.
 
-Download the Driver Function (`func.py`) from [here](https://github.com/bug-catcher/oci-data-science-ai-samples/blob/415e072962940f51dd811875386ddb2c728a3af8/ai_services/anomaly_detection/data_preprocessing_examples/oci_data_flow_based_examples/example_code/end_to_end_example/func.py). Save the Function (Python program - `func.py`) to a local directory on your pc.
+Download the Driver Function (`func.py`) from [here](https://objectstorage.us-phoenix-1.oraclecloud.com/p/l1H-kfulXPk6pPgLkQTqOgPXKtoW9Uvkhhufd108yYST9vwrwVUDoU1VWXh_z_bB/n/axaspnesarzr/b/driver-code-archive-bucket/o/func.py). Save the Function (Python program - `func.py`) to a local directory on your pc.
 
 - Update the Function code
-
-  Open `func.py` in a text editor and make the following updates.
-
-  Search for the code snippet below. 
-
-  ```python
-  if bucketName == "training_bucket_name":
-        config_bucket_name = "training_config_bucket_name"
-        object_name = "driver_config.json"
-        resp = get_object(namespace, config_bucket_name, object_name)
-  ```
-
-  Substitute, correct values for *place-holders* (Variable values) as per the table below.  These values were configured in Labs 3 and 4.
-
-  | Place-Holder Name | Value |
-  | ------------- | ----- |
-  | training_bucket_name | *training-data-bucket* |
-  | training_config_bucket_name | *training-config-bucket* |
-  | driver_config.json | *training-config.json* |
-
-  Search for the code snippet below.
-
-  ```python
-  elif bucketName == "inferencing_bucket_name":
-        config_bucket_name = "inferencing_config_bucket_name"
-        object_name = "driver_config.json"
-        resp = get_object(namespace, config_bucket_name, object_name)
-  ```
-
-  Substitute, correct values for *place-holders* (Variable values) as per the table below.  These values were configured in Labs 3 and 4.
-
-  | Place-Holder Name | Value |
-  | ------------- | ----- |
-  | inferencing_bucket_name | *inferencing-data-bucket* |
-  | inferencing_config_bucket_name | *inferencing-config-bucket* |
-  | driver_config.json | *inference-config.json* |
 
   Search for the code snippet below.
 
@@ -153,7 +117,7 @@ Download the Driver Function (`func.py`) from [here](https://github.com/bug-catc
 
    In the Function Application, under the **Resources** panel click on **Logs** and enable *Function Invocation Logs*.  This will be helpful for troubleshooting the Function if needed. See screenshot below.
 
-   ![](./images/Set-Fn8.png)
+   ![](./images/set-fn8.png)
 
 ## Useful Resources
 Refer to the OCI documentation (link below) to learn more about OCI Functions.
