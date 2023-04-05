@@ -14,7 +14,7 @@ This section sets general environmental configurations for the Landing Zone. Inp
 
 ![The Environment Menu Options](images/environment_menu.png "Environment Menu")_Note that the invalid service label is triggering an error message_
 
-One optional setting that we recommend in enterprise tenancies is the _Enclosing Compartment_ selection. Selecting a compartment from the drop down menu will create the Landing Zone inside the selected compartment. This allows for multiple Landing Zones to be used in a tenancy. This is useful for creating separate Dev/Test/Production environments in a single OCI tenant. Each Landing Zone will be able to support independent group memberships and permission structures via this mechanism.
+One optional setting that we recommend in enterprise tenancies is the _Enclosing Compartment_ selection. Selecting a compartment from the drop down menu will create the Landing Zone inside the selected compartment. This allows for multiple Landing Zones to be used in a tenancy. This is useful for creating separate Dev/Test/Production environments in a single OCI tenant. Each Landing Zone will be able to support independent group memberships and permission structures via this mechanism. Note that _the compartment must be created prior to configuring the Landing Zone_.
 
 _Using an Enclosing Compartment is optional in this lab, but useful for following best practices._
 ![An Enclosing Compartment is Selected](images/enclosing_compartment.png "Enclosing Compartment")
@@ -23,7 +23,7 @@ _Using an Enclosing Compartment is optional in this lab, but useful for followin
 
 This section controls the creation of generic Virtual Cloud Network (VCN) resources. The Landing Zone by default will deploy a 3-tier network containing Web, App, and Database subnets. VCNs support IP CIDR ranges of /16 to /30.
 
-__The default value of 10.0.0.0/20 will work__, and is large enough to fit most use cases. For this lab, only change this value if you know what you are doing.
+__The default value of 10.0.0.0/20 will be used for this lab__, and is large enough to fit most use cases. Only change this value if you know what you are doing.
 
 Check the __Advanced Options__ checkbox to view further configurations. Give your VCN a custom name under __VCNs Custom Names__.
 
@@ -35,9 +35,9 @@ We will not be covering these sections yet. Leave them as-is.
 
 ### Events and Notifications
 
-There are two required notification contacts as required by CIS Controls. An email address for a network admin and a security admin. Once created, these addresses will receive a confirmation email letting the person on the other end know that they are signed up for these notifications. Upon validating that they want to continue receiving the notifications, they will be sent messages when a network or security (IAM) object is created, modified, or destroyed. There can be multiple endpoints for each service to allow for redundancy if specifying the addresses of individuals. More often than not, these notifications go to shared inboxes for their respective teams.
+There are two required notification contacts as required by CIS controls. An email address for a network admin and a security admin. Once created, these addresses will receive a confirmation email letting the person on the other end know that they are signed up for these notifications. Upon validating that they want to continue receiving the notifications, they will be sent messages when a network or security (IAM) object is created, modified, or destroyed. There can be multiple endpoints for each service to allow for redundancy if specifying the addresses of individuals. More often than not, these notifications go to shared inboxes for their respective teams.
 
-There are further endpoints defined for admins of other services, but these are not mandatory under the CIS benchmark. For this lab, we will not need them.
+There are further endpoints defined for admins of other services, but these are not mandatory under the CIS benchmark. For this lab, we will not use them.
 
 __Enter your email in the _Network Admin Email Endpoints_ and _Security Admin Email Endpoints_.__
 
@@ -45,9 +45,9 @@ __Enter your email in the _Network Admin Email Endpoints_ and _Security Admin Em
 
 ### Object Storage
 
-Leaving the _Enable Object Storage bucket_ checkbox selected will create an Object Storage Bucket in the AppDev compartment of the Landing Zone. This is largely as a demonstration of where generic application data should reside in the Landing Zone compartment structure.
+Leaving the _Enable Object Storage bucket_ checkbox selected will create an Object Storage Bucket in the AppDev compartment of the Landing Zone. This is largely as a demonstration of where application data should reside in the Landing Zone compartment structure.
 
-Leave the box checked for this lab.
+Leave the box checked. In the future, uncheck it to prevent a bucket from being created with the Landing Zone.
 
 ![Object Storage Option](images/object_storage.png "Object Storage Bucket Checkbox")
 

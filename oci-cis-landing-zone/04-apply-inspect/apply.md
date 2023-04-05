@@ -1,6 +1,6 @@
 # Lab 3: Apply and Inspect Resources
 
-Terraform should be used in two stages, plan and apply. In this lab, we will produce and check a plan before applying. Once the plan is verified, it will be used to apply and create the Landing Zone.
+Terraform should be used in two stages, plan and apply. In this lab, we will produce and check a plan before applying. Once the plan is reviewed, it will be used during the apply process to create the Landing Zone.
 
 ## Concepts
 
@@ -10,11 +10,11 @@ Plan will tell us what the Terraform is intending to do. It will generate as muc
 
 ### Apply
 
-Apply will do the work of putting the plan into practice. The apply can, and normally should, take a plan file as input. On running the plan, a full log of what has been done will be generated. The plan has to infer some information, or defer to the apply since it can't control things like what ID resources will be given. The apply log will have all information related to the deployment.
+The apply step will do the work of putting the plan into practice. The apply can, and normally should, take a plan file as input. On running the plan, a full log of what has been done will be generated. The plan has to infer some information, or defer to the apply since it can't control things like what [Oracle Cloud ID (OCID)](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/identifiers.htm#Oracle) resources will be given. The apply log will have all information related to the deployment.
 
 ## Practice
 
-1. From the _Stack Details_ page, we will click the __Plan__ button, followed by the __Plan__ button. ![Plan Buttons](images/plan_job.png "Click the plan buttons!")
+1. From the _Stack Details_ page, we will click the first __Plan__ button, followed by the second __Plan__ button in the side menu. ![Plan Buttons](images/plan_job.png "Click the plan buttons!")
 2. Wait for a bit until the plan succeeds and plan logs are available under _Logs_. Take a look to familiarize yourself with the log format. Scroll down until you see the line `Plan: X to add, 0 to change, 0 to destroy`. The exact number to add may vary, but should be in the ballpark of the screenshot below: ![Plan Log Output](images/plan_output.png "The plan logs content")
 3. Once satisfied by the plan logs, we put it into motion by starting the Apply process. Start by navigating back to the _Stack details_ page. Click __Apply__ and a side menu will populate. Select your plan job from the _Apply job plan resolution_ drop down and click __Apply__ again. The apply process can take up to 20 minutes, so some patience is required. ![Apply Job Buttons](images/apply_job.png "Run the apply job")
 4. Once the apply is complete, check to make sure the resources created match with your plan output. ![Apply Job Output](images/apply_output.png "Apply logs")

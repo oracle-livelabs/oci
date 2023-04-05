@@ -24,6 +24,6 @@ The report directory will contain a variable number of files depending on the st
 
 Failed checks will have links to files included with the report on the specific resources that failed the check. The last several pages of the report will have observations, recommendations, and remediation for failed checks.
 
-## Next Step
+## Conclusion
 
-Finally, the last lab will walk through how to destroy the Landing Zone for quick and easy clean up. If you want to preserve the Landing Zone as a development environment or reference, simply end the lab here. Either way, we hope this content has been helpful.
+Finally, the last lab will walk through how to destroy the Landing Zone for quick and easy clean up. If you want to preserve the Landing Zone as a development environment or reference, simply end the lab here. Either way, we hope this content has been helpful and thank you for taking the time to learn about the [OCI CIS Landing Zone](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart).

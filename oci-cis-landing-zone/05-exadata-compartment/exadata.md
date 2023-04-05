@@ -2,6 +2,8 @@
 
 Oracle Exadata is an extreme performance database that supports the most critical workloads for enterprise organizations. Often organizations will want special controls around who can interact with the Exadata(s).
 
+There are configurations that can be applied in the Landing Zone to accommodate Exadata workloads. These configurations mainly do two things. The first is to grant permissions to Exadata infrastructure to a select group of administrators via an additional group and compartment. The second is to create a new network with security rules in place for Exadata.
+
 In this lab, we will modify our previous Landing Zone to create a compartment and role specifically for housing and controlling Exadata.
 
 ## Configuration
@@ -26,4 +28,4 @@ Third, we now have a Dynamic Routing Gateway (DRG) to route traffic between the 
 
 ## Next Step
 
-In the next session, we will expand on the Hub & Spoke architecture by creating a DMZ VCN.
+In the next session, we will see how to use the compliance checker script included in the Landing Zone to monitor CIS compliance in OCI.
