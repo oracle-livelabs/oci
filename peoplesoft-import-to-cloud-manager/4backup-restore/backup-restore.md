@@ -14,11 +14,11 @@ The purpose of this lab is to take full backup of the imported PeopleSoft enviro
 
 1. Login to PeopleSoft Cloud Manager and click on Environments tile.
 
-    ![click on Environments tile.](./images/environment-tile.png " ")
+    ![Click on Environments tile.](./images/environment-tile.png " ")
 
 2. Click on Action drop down and click on Backup and Restore.
 
-    ![click on Backup and Restore.](./images/backup-restore.png " ")
+    ![Click on Backup and Restore.](./images/backup-restore.png " ")
 
 3. Enter Backup Name and make sure Create DB Backup is enabled. Click on Backup to start the backup process.
 
