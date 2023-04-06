@@ -35,11 +35,11 @@
         {
             "title": "Lab 5: Run CIS Compliance Checker Script",
             "description": "Run Provided CIS Compliance Checker Script in Cloud Shell",
-            "filename": "../../07-compliance/compliance.md"
+            "filename": "../../06-compliance/compliance.md"
         },
         {
-            "title": "Lab 6: Clean Up",
-            "filename": "https://github.com/oracle-livelabs/common/blob/main/labs/cleanup-stack/cleanup-stack.md"
+            "title": "Lab 6: Clean Up Stack",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cleanup-stack/cleanup-stack.md"
         },
         {
             "title": "Need Help?",
