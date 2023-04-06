@@ -5,6 +5,8 @@
 
 Estimated time: 20 min
 
+In this lab, we will add existing APIs in the Portal. We will first create samples of APIs. Then import all of them in one shoot in the API Portal.
+
 ### Objectives
 
 - Add existing API from Oracle Integration:
@@ -15,51 +17,51 @@ Estimated time: 20 min
 
 ### Prerequisites
 
-Follow previous labs.
+- Follow previous labs.
 
 ## Task 1: User and Tenancy details
 
-First, we need data about your tenancy and user.
-- On the top, right, click *Tenancy: name*
-- Copy the tenancy OCID *##TENANCY\_OCID##*
+1. First, we need data about your tenancy.
+    - On the top, right, click *Tenancy: name*
+    - Copy the tenancy OCID *##TENANCY\_OCID##*
 
-![Tenancy](images/opensearch-tenancy.png)
+    ![Tenancy](images/opensearch-tenancy.png)
 
-Then, we need data about the user
-- On the top, right, click *Your username*
-- Copy the username *##USERNAME##* (without oracleidentitycloudservice )
-- Copy the user OCID *##USER\_OCID##*
-- Click on *API Keys*
+2. Then, we need data about the user
+    - On the top, right, click *Your username*
+    - Copy the username *##USERNAME##* (without oracleidentitycloudservice )
+    - Copy the user OCID *##USER\_OCID##*
+    - Click on *API Keys*
 
-![User](images/opensearch-user.png)
+    ![User](images/opensearch-user.png)
 
-- Click *Add API Key*
-- Generate one
-- Download it *##PRIVATE_KEY##*
-- Copy the *##FINGERPRINT##*
+    - Click *Add API Key*
+    - Generate one
+    - Download it *##PRIVATE_KEY##*
+    - Copy the *##FINGERPRINT##*
 
-![User API Keys](images/opensearch-user2.png)
+    ![User API Keys](images/opensearch-user2.png)
 
-In your computer (NOT in cloud shell), you need to convert the PEM key to RSA format:
-- Run the below command 
-- And keep the ##PRIVATE\_KEY\_RSA\_FORMAT##
+    In your computer (NOT in cloud shell), you need to convert the PEM key to RSA format:
+    - Run the below command 
+    - And keep the ##PRIVATE\_KEY\_RSA\_FORMAT##
 
-```
-<copy>
-openssl rsa -in ##PRIVATE_KEY## -out ##PRIVATE_KEY_RSA_FORMAT##
-</copy>
-ex: openssl rsa -in private_key.pem -out private_key_rsa_format.pem
-````
+    ```
+    <copy>
+    openssl rsa -in ##PRIVATE_KEY## -out ##PRIVATE_KEY_RSA_FORMAT##
+    </copy>
+    ex: openssl rsa -in private_key.pem -out private_key_rsa_format.pem
+    ````
 
-Double-check that the private\_key\_rsa_format.pem is really in RSA format like this:
+    Double-check that the private\_key\_rsa_format.pem is really in RSA format like this:
 
-```
-<copy>
------BEGIN RSA PRIVATE KEY-----
-...
------END RSA PRIVATE KEY-----
-</copy>
-```
+    ```
+    <copy>
+    -----BEGIN RSA PRIVATE KEY-----
+    ...
+    -----END RSA PRIVATE KEY-----
+    </copy>
+    ```
 
 ## Task 2: Add existing APIs from Oracle Integration
 ### A. Create an Oracle Integration installation
