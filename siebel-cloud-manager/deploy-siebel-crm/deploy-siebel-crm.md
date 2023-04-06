@@ -173,6 +173,43 @@ Postman is an API platform for building and using APIs. Postman can be either do
 
    ![Env ID from the log](./images/env-id.png)
 
+   **Note:**
+   
+   If you have selected "Advanced Network Configuration" in the Lab 2 - Task 2, then will encounter below error while submitting the Payload.
+
+   Schema validation error : 
+   {'infrastructure': {'_schema': [' Provide siebel environment subnet cidr ranges for advanced network configuration.']}
+
+   To Resolve this issue, you will need to correct the cidr blocks in the payload file.  The detailed update can be refered in Doc ID 2862505.1.
+
+       1. Modify your payload under the "infrastructure" section so that the subnet/CIDR range is added along with gitlab information.
+       
+          ```     
+       "infrastructure":
+         {
+         ...
+         "siebel_public_subnet_cidr" : "xx.x.x.x/xx",
+         "siebel_private_subnet_cidr" : "xx.x.x.x/xx",
+         "siebel_atp_subnet_cidr" : "xx.x.x.x/xx",
+         "siebel_cluster_subnet_cidr" : "xx.x.x.x/xx"
+         }
+          ```  
+      2. Once the above lines have been incorporated for subnet_cidr is added for public/private/atp/cluster, save the payload in Postman or the tool used for running payload.
+
+      3. Re-execute the payload now for the POST request.
+
+      4. Check to see if the payload creates the self-link and executes the stages for the OCI deployment of Siebel application for Lift & Shift or Greenfield.
+
+   **Important**
+   Starting from SCM Version 22.8, the parameter name changed from "siebel\_public\_subnet\_cidr" to "siebel\_lb\_subnet\_cidr"
+
+
+
+
+
+
+
+
 ## Task 5: Monitor the deployment
 
 After sending a post request with our payload, the Siebel Cloud Manager will prepare and deploy the Siebel CRM environment stack.
@@ -264,6 +301,6 @@ In the next lab, you can view and manage the Siebel's Kubernetes Cluster to conn
 
 ## Acknowledgements
 
-* **Author:** Shyam Mohandas, Principal Cloud Architect, Cloud Engineering
+* **Author:** Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
-* **Last Updated By/Date** - Shyam Mohandas, Principal Cloud Architect, Cloud Engineering
+* **Last Updated By/Date** - Sampath Nandha, Principal Cloud Architect, March 2023

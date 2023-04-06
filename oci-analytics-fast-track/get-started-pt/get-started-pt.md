@@ -43,11 +43,11 @@ Após criar uma reserva para um Workshop LiveLab, você receberá um e-mail info
 
 5. Em seguida mantenha a opção **Default** e clique em **Next**.
 
-![Mantenha Default](.\images\access-tenancy-livelabs.png) 
+![Mantenha Default](.\images\access-tenancy-livelabs.png)
 
 6. Preencha os campos com seu usuário com a senha fornecidos em **View Login Info**, em seguida clique em **Sign-in**
 
-![Preencha as informações](.\images\put-credentials.png) 
+![Preencha as informações](.\images\put-credentials.png)
 
 7. Você deverá criar uma nova senha de acesso para seu usuário. (Você usará essa senha a partir de agora)
 
@@ -62,4 +62,4 @@ Você pode **seguir para o próximo Lab**.
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Thais Henrique, Fev/2023
+- **Último Update Por/Date** - Thais Henrique, Mar/2023
