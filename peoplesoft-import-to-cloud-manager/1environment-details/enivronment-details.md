@@ -1,20 +1,10 @@
 # PeopleSoft Environment Details
 
-## Introduction
-
-This lab will explain the Infrastructure of PeopleSoft application used in this workshop and its architecture. 
-
-**Estimated Time**: 10 minutes
-
-### Objectives
-
-The purpose of this lab is to describe the architecture of the PeopleSoft application used in this workshop and its infrastructure details.
-
 ## PeopleSoft Environment Architecture
 
 Below is the architecture of PeopleSoft environment running on Oracle Cloud Infrastructure(OCI) which will be imported into PeopleSoft Cloud Manager in this workshop.
 
-   ![ps-env-architecture](./images/ps-workshop-arch.png " ")
+![ps-env-architecture](./images/ps-workshop-arch.png " ")
 
 
 ## PeopleSoft Environment details are below.

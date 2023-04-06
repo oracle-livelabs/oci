@@ -6,19 +6,19 @@ This workshop guides you through the steps to import PeopleSoft Environments run
 
 After completing this workshop, you will have a better insight and understanding of importing PeopleSoft Environments running on Oracle Cloud Infrastructure into PeopleSoft Cloud Manager for better lifecycle management of PeopleSoft Environments.
 
-**Estimated Time**: 2 hours
-
 Watch the video below for an Introduction To PeopleSoft Cloud Manager.
 
-   [PeopleSoft Cloud Manager](youtube:msMcUr3fny4:large)
+ [PeopleSoft Cloud Manager](youtube:msMcUr3fny4:large)
 
 The below image provides a high-level overview of PeopleSoft Cloud Manager benefits.
 
-   ![High-level overview of PeopleSoft Cloud Manager benefits](images/peoplesoft-cloud-manager.png " ")
+![High-level overview of PeopleSoft Cloud Manager benefits](images/peoplesoft-cloud-manager.png " ")
 
 ## PeopleSoft Cloud Manager overview ##
 
 PeopleSoft Cloud Manager is a PeopleSoft application that runs on Oracle Cloud Infrastructure (OCI) to help accelerate adoption as well as to optimize the benefits of running PeopleSoft on Cloud. PeopleSoft Cloud Manager brings an unprecedented extent of automation to migrate your existing environment from on-premises and to rapidly clone and create new environments on the cloud tailored for specific functional use — such as development, customization, user acceptance testing, performance testing or production. PeopleSoft Cloud Manager comes with a built-in automated download manager and provides automated lifecycle operations such as PeopleTools only upgrade, PeopleTools update, setting up of selective adoption environments and automated self-update to the latest Cloud Manager Image. 
+
+**Estimated Time**: 2 hours
 
 **Notes:**
 
