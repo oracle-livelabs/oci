@@ -1,10 +1,23 @@
 # Lab 2: Configure Variables for Basic Deployment
 
+## Introduction
+
 You should be on the __Configure Variables__ page as defined by the left side-menu. What this page does is allow us to define variables that would otherwise be defined in the [quickstart-input.tfvars](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/config/quickstart-input.tfvars) file in the main project. Resource Manager is translating the fields from the config file into a more friendly GUI for usability.
 
-## Sections
+Estimated Lab Time: 10 minutes
 
-### Environment
+### Objectives
+
+In this lab you will:
+
+- Use the Resource Manager GUI to enter variable values
+- Inspect available configuration options for the Landing Zone
+
+### Prerequisites
+
+Previous Labs
+
+## Task 1: Enter Environment Variables
 
 This section sets general environmental configurations for the Landing Zone. Inputs from this section will control fundamental parts of the Landing Zone. For this lab, we will only work with a few of these options, which will be explained below.
 
@@ -19,13 +32,15 @@ One optional setting that we recommend in enterprise tenancies is the _Enclosing
 _Using an Enclosing Compartment is optional in this lab, but useful for following best practices._
 ![An Enclosing Compartment is Selected](images/enclosing_compartment.png "Enclosing Compartment")
 
+## Task 2: Enter Networking Variables
+
 ### Networking - Generic VCNs
 
 This section controls the creation of generic Virtual Cloud Network (VCN) resources. The Landing Zone by default will deploy a 3-tier network containing Web, App, and Database subnets. VCNs support IP CIDR ranges of /16 to /30.
 
-__The default value of 10.0.0.0/20 will be used for this lab__, and is large enough to fit most use cases. Only change this value if you know what you are doing.
+1. __The default value of 10.0.0.0/20 will be used for this lab__, and is large enough to fit most use cases. Only change this value if you know what you are doing.
 
-Check the __Advanced Options__ checkbox to view further configurations. Give your VCN a custom name under __VCNs Custom Names__.
+2. Check the __Advanced Options__ checkbox to view further configurations. Give your VCN a custom name under __VCNs Custom Names__.
 
 ![Generic VCN Configurations](images/generic_vcn.png "Generic VCN")
 
@@ -33,23 +48,27 @@ Check the __Advanced Options__ checkbox to view further configurations. Give you
 
 We will not be covering these sections yet. Leave them as-is.
 
-### Events and Notifications
+## Task 3: Configure Events and Notifications
 
 There are two required notification contacts as required by CIS controls. An email address for a network admin and a security admin. Once created, these addresses will receive a confirmation email letting the person on the other end know that they are signed up for these notifications. Upon validating that they want to continue receiving the notifications, they will be sent messages when a network or security (IAM) object is created, modified, or destroyed. There can be multiple endpoints for each service to allow for redundancy if specifying the addresses of individuals. More often than not, these notifications go to shared inboxes for their respective teams.
 
 There are further endpoints defined for admins of other services, but these are not mandatory under the CIS benchmark. For this lab, we will not use them.
 
-__Enter your email in the _Network Admin Email Endpoints_ and _Security Admin Email Endpoints_.__
+1. Enter your email in _Network Admin Email Endpoints_
+
+2. Enter your email in _Security Admin Email Endpoints_.
 
 ![Events and Notifications Options](images/events_notifications.png "Admin Endpoints")
 
-### Object Storage
+## Task 4: Configure Object Storage
 
 Leaving the _Enable Object Storage bucket_ checkbox selected will create an Object Storage Bucket in the AppDev compartment of the Landing Zone. This is largely as a demonstration of where application data should reside in the Landing Zone compartment structure.
 
-Leave the box checked. In the future, uncheck it to prevent a bucket from being created with the Landing Zone.
+1. Leave the box checked. In the future, uncheck it to prevent a bucket from being created with the Landing Zone.
 
 ![Object Storage Option](images/object_storage.png "Object Storage Bucket Checkbox")
+
+## Task 5: Inspect Options
 
 ### Cloud Guard
 
@@ -63,14 +82,17 @@ All are useful tools, but for the sake of starting simple will not be a part of 
 
 ### Finishing Up
 
-Click __Next__ to continue to the review page. Quickly double check the variables entered.
+1. Click __Next__ to continue to the review page. Quickly double check the variables entered.
 
-__Leave the _Run apply_ button unchecked__.
-
+2. __Leave the _Run apply_ button unchecked__.
 ![Apply Button](images/apply_button.png "Leave it unchecked")
 
-Click the __Save Changes__ button when finished.
+3. Click the __Save Changes__ button when finished.
 
-## Next Step
+Once the Stack configuration is saved, move on to the next lab to continue.
 
-Create, review, and apply a deployment plan.
+## Acknowledgements
+
+- __Author__ - KC Flynn
+- __Contributors__ - Andre Correa, Ben Woltz, Chad Russell, Cosmin Tudor, Jake Bloom, Johannes Murmann, Josh Hammer, Marcus D Andrea, Olaf Heimburger
+- __Last Updated By/Date__ - KC Flynn April 2023

@@ -35,7 +35,7 @@
         {
             "title": "Lab 5: Run CIS Compliance Checker Script",
             "description": "Run Provided CIS Compliance Checker Script in Cloud Shell",
-            "filename": "../../07-compliance/compliance.md"
+            "filename": "../../06-compliance/compliance.md"
         },
         {
             "title": "Lab 6: Clean Up",

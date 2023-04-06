@@ -1,14 +1,27 @@
 # Introduction
 
+## About this Workshop
+
 ![CIS OCI Landing Zone Logo](images/landing%20zone%20icon.png " ")
 
 This set of labs will walk you through deploying a secure cloud architecture, compliant with the [CIS OCI Foundations Benchmark v1.2](https://www.cisecurity.org/benchmark/oracle_cloud/). Upon completion of the labs, a full set of OCI resources will be created as a base to build a secure enterprise workload.
 
-## Prerequisites
+Estimated Workshop Time: 1 Hour
+
+### Objectives
+
+- Upload Terraform files to OCI Resource Manager
+- Configure variables to customize Landing Zone
+- Produce and Inspect Terraform Plan
+- Apply Plan to OCI tenancy
+- Modify Landing Zone via Terraform
+- Terraform Destroy to reset
+
+### Prerequisites
 
 This lab has the following pre-requisites:
 
-- A [free tier](https://www.oracle.com/cloud/free/) _or_ paid OCI tenancy
+- A [free tier](https://www.oracle.com/cloud/free/) or paid OCI tenancy
 - An account in the Administrators group in OCI
 
 ## The CIS OCI Landing Zone Architecture
@@ -77,9 +90,9 @@ The connector between groups, compartments, and permissions in OCI are called [_
 
 ```Allow Administrators to manage all-resources in tenancy```
 
-This policy uses __tenancy__ as the location as it encompasses all compartments in the tenant. If we want to give the group _Sample_Admins_ full control of all resources in the Sample compartment, it would look like this:
+This policy uses __tenancy__ as the location as it encompasses all compartments in the tenant. If we want to give the group _SampleAdmins_ full control of all resources in the Sample compartment, it would look like this:
 
-```Allow Sample_Admins to manage all-resources in compartment Sample```
+```Allow SampleAdmins to manage all-resources in compartment Sample```
 
 These are a few simple examples. A more detailed explanation of policies in OCI can be found in [the OCI Documentation for IAM Policies](https://docs.oracle.com/en-us/iaas/Content/Identity/policieshow/how-policies-work.htm).
 
@@ -97,6 +110,8 @@ Terraform can be used with a variety of clients to fit different deployment meth
 
 Most things in OCI can be provisioned with Terraform. While beyond the scope of this lab, more information on using Terraform in OCI can be found [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraform.htm).
 
-## Next Step
+## Acknowledgements
 
-Continue to sign in or create a _Free tier_ tenancy to begin the hands-on portion of the lab.
+- __Author__ - KC Flynn
+- __Contributors__ - Andre Correa, Ben Woltz, Chad Russell, Cosmin Tudor, Jake Bloom, Johannes Murmann, Josh Hammer, Marcus D Andrea, Olaf Heimburger
+- __Last Updated By/Date__ - KC Flynn April 2023
