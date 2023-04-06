@@ -56,7 +56,7 @@ The apply step will do the work of putting the plan into practice. The apply can
     - Event rules and notifications for IAM and Network changes
     - Object Storage Logs
 
-    A diagram of what has been created would look something like this: ![Single VCN Landing Zone](images/lab3_Architecture_Single_VCN.png "Lab 3 Current State Diagram")
+    A diagram of what has been created would look something like this: ![Single VCN Landing Zone](images/lab3_architecture_single_vcn.png "Lab 3 Current State Diagram")
 
 2. Take a few moments to explore the resources created. Ask yourself how these resources will make your environment more secure. Think about how a generic workload would be deployed on top of this architecture. Where would your workload components go, and what roles would manage them?
 

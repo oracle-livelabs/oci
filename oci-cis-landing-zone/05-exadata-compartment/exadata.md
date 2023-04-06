@@ -40,7 +40,7 @@ Previous Labs
 
 ## Task 2: Review Exadata Resources
 
-Your Landing Zone should now look like this diagram: ![Exadata VCN](images/Exadata_VCN.png "Landing Zone with Exadata")
+Your Landing Zone should now look like this diagram: ![Exadata VCN](images/exadata_vcn.png "Landing Zone with Exadata")
 
 There are a few notable changes that have been made:
 
