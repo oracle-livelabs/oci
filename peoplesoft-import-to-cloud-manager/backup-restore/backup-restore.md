@@ -4,27 +4,33 @@
 
 In this lab, you will backup the imported PeopleSoft Environment.
 
+**Estimated Time**: 30 minutes
+
+### Objectives
+
+* The purpose of this lab is to take full backup of the imported PeopleSoft environment in PeopleSoft Cloud Manager.
+
 ## Task 1: Backup PeopleSoft Environment
 
 1. Login to PeopleSoft Cloud Manager and click on Environments tile.
 
-![click on Environments tile.](./images/environment-tile.png " ")
+    ![Click on Environments tile.](./images/environment-tile.png " ")
 
 2. Click on Action drop down and click on Backup and Restore.
 
-![click on Backup and Restore.](./images/backup-restore.png " ")
+    ![Click on Backup and Restore.](./images/backup-restore.png " ")
 
 3. Enter Backup Name and make sure Create DB Backup is enabled. Click on Backup to start the backup process.
 
-![Full Backup.](./images/full-backup.png " ")
+    ![Full Backup.](./images/full-backup.png " ")
 
-Backup of environment will be in progress.
+    Backup of environment will be in progress.
 
-![Full Backup in progress.](./images/backup-in-progress.png " ")
+   ![Full Backup in progress.](./images/backup-in-progress.png " ")
 
 4. Backup of the imported PeopleSoft Environment is completed.
 
-![Full Backup completed.](./images/backup-completed.png " ")
+    ![Full Backup completed.](./images/backup-completed.png " ")
 
 Please refer to below **PeopleSoft Cloud Manager On OCI** workshop to learn more on lifecycle managment such as Patching an environment, Upgrading an environment, cloning an environment, refreshing an environment and selective adoption of PUM patching.
 
