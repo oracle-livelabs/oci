@@ -8,7 +8,7 @@ You will now review the status of imported PeopleSoft environment in PeopleSoft 
 
 ### Objectives
 
-In this lab, you will review the imported PeopleSoft environment in PeopleSoft Cloud Manager.
+* In this lab, you will review the imported PeopleSoft environment in PeopleSoft Cloud Manager.
 
 ## Task 1:  Review Environment Details
 
