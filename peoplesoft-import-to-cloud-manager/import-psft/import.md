@@ -85,7 +85,7 @@ Container Database Name | For Exadata DB systems enter the container database na
 
     ![Enter values of Integration Broker Gateway Admin ID and Admin Password.](./images/app-tier-discovered.png " ")
 
-Example screenshot is below.
+    Example screenshot is below.
 
    ![Example screenshot is below.](./images/app-tier-gateway.png " ")
 

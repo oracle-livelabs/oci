@@ -8,7 +8,7 @@ This lab will explain the Infrastructure of PeopleSoft application used in this 
 
 ### Objectives
 
-The purpose of this lab is to describe the architecture of the PeopleSoft application used in this workshop and its infrastructure details.
+* The purpose of this lab is to describe the architecture of the PeopleSoft application used in this workshop and its infrastructure details.
 
 ## PeopleSoft Environment Architecture
 

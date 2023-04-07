@@ -8,7 +8,7 @@ In this lab, you will backup the imported PeopleSoft Environment.
 
 ### Objectives
 
-The purpose of this lab is to take full backup of the imported PeopleSoft environment in PeopleSoft Cloud Manager.
+* The purpose of this lab is to take full backup of the imported PeopleSoft environment in PeopleSoft Cloud Manager.
 
 ## Task 1: Backup PeopleSoft Environment
 
@@ -24,7 +24,7 @@ The purpose of this lab is to take full backup of the imported PeopleSoft enviro
 
     ![Full Backup.](./images/full-backup.png " ")
 
-Backup of environment will be in progress.
+    Backup of environment will be in progress.
 
    ![Full Backup in progress.](./images/backup-in-progress.png " ")
 
