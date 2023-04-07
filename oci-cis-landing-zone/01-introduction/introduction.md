@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-![CIS OCI Landing Zone Logo](images/landing%20zone%20icon.png " ")
+![OCI CIS Landing Zone Logo](images/landing%20zone%20icon.png "OCI CIS Landing Zone Logo of helicopter approaching Oracle shaped landing pad")
 
 This set of labs will walk you through deploying a secure cloud architecture, compliant with the [CIS OCI Foundations Benchmark v1.2](https://www.cisecurity.org/benchmark/oracle_cloud/). Upon completion of the labs, a full set of OCI resources will be created as a base to build a secure enterprise workload.
 
@@ -28,7 +28,7 @@ This lab has the following pre-requisites:
 
 ### Overview
 
-The CIS OCI Landing Zone is an architecture and related Terraform files [publicly hosted on GitHub](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart). The output of the files can be modified by changing configurations in the [quickstart-input.tfvars](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/config/quickstart-input.tfvars) file, or as we will do, entering the files into Resource Manager and entering configurations in the provided GUI. This will provision a full set of resources as a secure baseline for development or production workloads in OCI.
+The CIS OCI Landing Zone is an architecture and related Terraform files [publicly hosted on GitHub](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart). The output of the files can be modified by changing configurations in the [quickstart-input.tfvars](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/config/quickstart-input.tfvars) file, or as we will do, entering the files into the [OCI Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) and entering configurations in the provided GUI. This will provision a full set of resources as a secure baseline for development or production workloads in OCI.
 
 ### Cost
 
@@ -48,11 +48,11 @@ The Landing Zone will deploy a full set of resources suitable for a production c
 - OCI Object Storage
 - Budget Controls
 
-The resulting architecture will look similar to this diagram: ![Single VCN Architecture](images/architecture_single_vcn.png "Single VCN Architecture")
+The resulting architecture will look similar to this diagram: ![Single VCN Architecture](images/single_vcn_architecture.png "Single VCN Architecture")
 
 ### IAM Components
 
-One of the best features of the Landing Zone is a pre-defined set of groups, policies, and compartments are created for you. These resources have been created to fit most use cases and provide a solid base for enacting [separation of duties](#on-separation-of-duties).
+One of the best features of the Landing Zone is a pre-defined set of groups, policies, and compartments are created for you. These resources have been created to fit most use cases and provide a solid base for enacting [separation of duties](#OnSeparationofDuties).
 
 #### Compartments
 
@@ -106,12 +106,12 @@ An effort has been made to provide a default set of useful groups to carry out c
 
 The CIS OCI Landing Zone uses [Terraform](https://developer.hashicorp.com/terraform/intro) to deploy all resources into a tenancy. Terraform is an Infrastructure as Code tool used for provisioning cloud objects in an automated manner. This simplifies the setup of the Landing Zone and shortens the time to production in OCI.
 
-Terraform can be used with a variety of clients to fit different deployment methods. For this lab, we will leverage __OCI Resource Manager__ to simplify the use of Terraform in OCI. The OCI Resource Manager is an Oracle-managed Terraform service that uses configuration files to automate deployment and operations for resources using Terraform. It reduces the complexity of using Terraform in OCI as well as storing state in the cloud instead of on a developer laptop.
+Terraform can be used with a variety of clients to fit different deployment methods. For this lab, we will leverage [OCI Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) to simplify the use of Terraform in OCI. The OCI Resource Manager is an Oracle-managed Terraform service that uses configuration files to automate deployment and operations for resources using Terraform. It reduces the complexity of using Terraform in OCI as well as storing state in the cloud instead of on a developer laptop.
 
 Most things in OCI can be provisioned with Terraform. While beyond the scope of this lab, more information on using Terraform in OCI can be found [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraform.htm).
 
 ## Acknowledgements
 
 - __Author__ - KC Flynn
-- __Contributors__ - Andre Correa, Ben Woltz, Chad Russell, Cosmin Tudor, Jake Bloom, Johannes Murmann, Josh Hammer, Marcus D Andrea, Olaf Heimburger
+- __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
 - __Last Updated By/Date__ - KC Flynn April 2023

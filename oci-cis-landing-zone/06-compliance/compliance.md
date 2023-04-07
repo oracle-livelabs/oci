@@ -22,11 +22,26 @@ None
 
 The compliance script can be run anywhere with the correct permissions and options. For this lab, we will keep it simple by running the script in [Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/devcloudshellintro.htm#Cloud_Shell).
 
-1. Open the Cloud Shell from the OCI console. If this is the first time using the Cloud Shell, there may be a short wait while resources are provisioned ![Cloud Shell Icon](images/cloud_shell.png "Cloud Shell Location")
+1. Open the Cloud Shell from the OCI console. If this is the first time using the Cloud Shell, there may be a short wait while resources are provisioned
+    ![Cloud Shell Icon](https://oracle-livelabs.github.io/common/images/console/cloud-shell.png "Cloud Shell Location")
+    ![Cloud Shell Setup](https://oracle-livelabs.github.io/common/images/console/cloud-shell-setup.png "Cloud Shell setup stage")
+    ![Cloud Shell Open](https://oracle-livelabs.github.io/common/images/console/cloud-shell-open.png "Cloud Shell open and ready")
 
-2. Copy and run the following command in the Cloud Shell to download the script: `wget https://raw.githubusercontent.com/oracle-quickstart/oci-cis-landingzone-quickstart/main/scripts/cis_reports.py`
+2. Copy and run the following command in the Cloud Shell to download the script:
 
-3. Run the script by entering `python cis_reports.py --level 1 --report-directory compliance_report -dt` and wait for a few moments while the script collects data
+    ```text
+    <copy>
+    wget https://raw.githubusercontent.com/oracle-quickstart/oci-cis-landingzone-quickstart/main/scripts/cis_reports.py
+    </copy>
+    ```
+
+3. Run the script by entering the following command, then wait a moment while the script collects data.
+
+    ```text
+    <copy>
+    python cis_reports.py --level 1 --report-directory compliance_report -dt
+    </copy>
+    ```
 
 ## Task 2: Download Findings
 
@@ -53,5 +68,5 @@ Finally, the last lab will walk through how to destroy the Landing Zone for quic
 ## Acknowledgements
 
 - __Author__ - KC Flynn
-- __Contributors__ - Andre Correa, Ben Woltz, Chad Russell, Cosmin Tudor, Jake Bloom, Johannes Murmann, Josh Hammer, Marcus D Andrea, Olaf Heimburger
+- __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
 - __Last Updated By/Date__ - KC Flynn April 2023

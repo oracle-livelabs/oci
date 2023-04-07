@@ -25,12 +25,12 @@ This section sets general environmental configurations for the Landing Zone. Inp
 2. The second field is __Service Label__. This service label will be prepended to everything created by the Landing Zone. As such, we need to choose a succinct value to enter. The requirements for service labels are 2-8 characters, the first being a letter, and last 2-8 characters being either a letter or number. If you violate these rules, the field will let you know.
 3. The third field is __CIS Level__. There are two levels of CIS compliance to choose from. These levels correspond to requirements found in the [CIS OCI Foundations Benchmark v1.2](https://www.cisecurity.org/benchmark/oracle_cloud/). To see a full list of changes between CIS Levels 1 & 2, please refer to the benchmark. The high level summary is that CIS Level 2 requires more strict encryption necessitating the creation of an [OCI Vault](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm) and encryption keys. __We will use CIS Level 1 for this lab__.
 
-![The Environment Menu Options](images/environment_menu.png "Environment Menu")_Note that the invalid service label is triggering an error message_
+![The Environment Menu Options](images/environment_menu.png "Environment Menu Options")_Note that the invalid service label is triggering an error message_
 
 One optional setting that we recommend in enterprise tenancies is the _Enclosing Compartment_ selection. Selecting a compartment from the drop down menu will create the Landing Zone inside the selected compartment. This allows for multiple Landing Zones to be used in a tenancy. This is useful for creating separate Dev/Test/Production environments in a single OCI tenant. Each Landing Zone will be able to support independent group memberships and permission structures via this mechanism. Note that _the compartment must be created prior to configuring the Landing Zone_.
 
 _Using an Enclosing Compartment is optional in this lab, but useful for following best practices._
-![An Enclosing Compartment is Selected](images/enclosing_compartment.png "Enclosing Compartment")
+![An Enclosing Compartment is Selected](images/enclosing_compartment.png "Enclosing Compartment Dropdown")
 
 ## Task 2: Enter Networking Variables
 
@@ -42,7 +42,7 @@ This section controls the creation of generic Virtual Cloud Network (VCN) resour
 
 2. Check the __Advanced Options__ checkbox to view further configurations. Give your VCN a custom name under __VCNs Custom Names__.
 
-![Generic VCN Configurations](images/generic_vcn.png "Generic VCN")
+![Generic VCN Configurations](images/generic_vcn.png "Generic VCN Options")
 
 ### Networking - Exadata Cloud Service VCNs to Networking - Connectivity to On-Premises
 
@@ -58,7 +58,7 @@ There are further endpoints defined for admins of other services, but these are 
 
 2. Enter your email in _Security Admin Email Endpoints_.
 
-![Events and Notifications Options](images/events_notifications.png "Admin Endpoints")
+![Events and Notifications Options](images/events_notifications.png "Admin Endpoints Menu")
 
 ## Task 4: Configure Object Storage
 
@@ -85,7 +85,7 @@ All are useful tools, but for the sake of starting simple will not be a part of 
 1. Click __Next__ to continue to the review page. Quickly double check the variables entered.
 
 2. __Leave the _Run apply_ button unchecked__.
-![Apply Button](images/apply_button.png "Leave it unchecked")
+![Apply Button](images/apply_button.png "Leave the apply button unchecked")
 
 3. Click the __Save Changes__ button when finished.
 
@@ -94,5 +94,5 @@ Once the Stack configuration is saved, move on to the next lab to continue.
 ## Acknowledgements
 
 - __Author__ - KC Flynn
-- __Contributors__ - Andre Correa, Ben Woltz, Chad Russell, Cosmin Tudor, Jake Bloom, Johannes Murmann, Josh Hammer, Marcus D Andrea, Olaf Heimburger
+- __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
 - __Last Updated By/Date__ - KC Flynn April 2023

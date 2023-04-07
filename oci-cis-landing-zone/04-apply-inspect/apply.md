@@ -65,5 +65,5 @@ In the next lab, we will introduce another compartment, group, and supporting re
 ## Acknowledgements
 
 - __Author__ - KC Flynn
-- __Contributors__ - Andre Correa, Ben Woltz, Chad Russell, Cosmin Tudor, Jake Bloom, Johannes Murmann, Josh Hammer, Marcus D Andrea, Olaf Heimburger
+- __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
 - __Last Updated By/Date__ - KC Flynn April 2023

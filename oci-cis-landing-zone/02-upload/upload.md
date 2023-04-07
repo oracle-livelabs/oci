@@ -21,11 +21,11 @@ In this lab you will:
 
 1. Navigate to the Oracle Quickstart OCI CIS Landing Zone Repository on GitHub [https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart)
 
-2. Find the __Deploy to Oracle Cloud__ button and click it ![Deploy to Oracle Cloud Button](images/button.png " ")
+2. Find the __Deploy to Oracle Cloud__ button and click it ![Deploy to Oracle Cloud Button](images/button.png "The Deploy to Oracle Cloud button in the repository README.md")
 
 3. If you are not already logged into your OCI tenancy, you will be taken to the login screen for authentication. Once authenticated, you will be presented with the __Create Stack__ menu for creating Resource Manager Stacks
 
-4. Check the _I have reviewed and accept the Oracle Terms of Use_ checkbox, and after a few seconds your screen should look something like this: ![Create Stack Screen](images/create-stack.png " ")
+4. Check the _I have reviewed and accept the Oracle Terms of Use_ checkbox, and after a few seconds your screen should look something like this: ![Create Stack Screen](images/create-stack.png "The Resource Manager Stack configurations screen")
 
     - _Working directory_ should be set to __oci-cis-landingzone-quickstart-main/config__.
 
@@ -38,5 +38,5 @@ In this lab you will:
 ## Acknowledgements
 
 - __Author__ - KC Flynn
-- __Contributors__ - Andre Correa, Ben Woltz, Chad Russell, Cosmin Tudor, Jake Bloom, Johannes Murmann, Josh Hammer, Marcus D Andrea, Olaf Heimburger
+- __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
 - __Last Updated By/Date__ - KC Flynn April 2023
