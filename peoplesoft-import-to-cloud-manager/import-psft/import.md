@@ -181,7 +181,7 @@ Container Database Name | For Exadata DB systems enter the container database na
 
 5. Import of PeopleSoft environment completed with no errors.
 
-    ![import-complete](./images/import-completed.png " ")
+    ![import-completed](./images/import-completed.png " ")
 
 6. You can now see the status of the imported environment as Running.
 
