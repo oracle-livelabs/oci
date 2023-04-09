@@ -38,7 +38,7 @@ You will need the following to complete this workshop:
 * A user called psadm3 in all PeopleSoft Linux servers who owns PS\_APP\_HOME folder
 * Document reference is https://support.oracle.com/epmos/faces/DocumentDisplay?id=2763578.1&displayIndex=22 
 
-Watch the video below for an Introduction To PeopleSoft Cloud Manager.
+Watch the video below for an introduction to PeopleSoft Cloud Manager.
 
    [PeopleSoft Cloud Manager](youtube:msMcUr3fny4:large)
 
