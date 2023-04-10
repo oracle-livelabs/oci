@@ -32,8 +32,6 @@ You will now review the status of imported PeopleSoft environment in PeopleSoft 
 
    ![Diagrammatic View Example](./images/diagram-view2.png " ")
 
-## Summary
-
 In this lab, you have reviewed imported PeopleSoft Environment in PeopleSoft Cloud Manager.
 
 You may now **proceed to the next lab.**
