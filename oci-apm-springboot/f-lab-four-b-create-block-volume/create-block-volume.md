@@ -132,7 +132,7 @@ Estimated time: 15 minutes
 
   * Insert below under “- containerPort: 8080” (line 75).
 
-NOTE the contents are different from the above (a).
+  NOTE the contents are different from the above.
 
 
                 volumeMounts:
