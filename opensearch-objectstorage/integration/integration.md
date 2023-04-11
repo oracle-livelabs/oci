@@ -42,14 +42,14 @@ Go the menu
 
 First, we need data about your tenancy and user.
 - On the top, right, click *Tenancy: name*
-- Copy the tenancy OCID *##TENANCY_OCID##*
+- Copy the tenancy OCID *##TENANCY\_OCID##*
 
 ![Tenancy](images/opensearch-tenancy.png)
 
 Then, we need data about the user
 - On the top, right, click *Your username*
 - Copy the username *##USERNAME##* (without oracleidentitycloudservice )
-- Copy the user OCID *##USER OCID##*
+- Copy the user OCID *##USER\_OCID##*
 - Click on *API Keys*
 
 ![User](images/opensearch-user.png)
@@ -61,14 +61,22 @@ Then, we need data about the user
 
 ![User API Keys](images/opensearch-user2.png)
 
-In your computer or in cloud shell, you need to convert the PEM key to RSA format:
+In your computer (NOT in cloud shell), you need to convert the PEM key to RSA format:
 - Run the below command 
-- And keep the ##PRIVATE_KEY_RSA_FORMAT##
+- And keep the ##PRIVATE\_KEY\_RSA\_FORMAT##
 
 ```
 openssl rsa -in ##PRIVATE_KEY## -out ##PRIVATE_KEY_RSA_FORMAT##
 ex: openssl rsa -in private_key.pem -out private_key_rsa_format.pem
 ````
+
+Double-check that the private\_key\_rsa_format.pem is really in RSA format like this:
+
+```
+-----BEGIN RSA PRIVATE KEY-----
+...
+-----END RSA PRIVATE KEY-----
+```
 
 ## Task 3: Create an Agent Group
 
