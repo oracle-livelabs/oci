@@ -22,7 +22,7 @@ None
 
 The compliance script can be run anywhere with the correct permissions and options. For this lab, we will keep it simple by running the script in [Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/devcloudshellintro.htm#Cloud_Shell).
 
-1. Open the Cloud Shell from the OCI console. If this is the first time using the Cloud Shell, there may be a short wait while resources are provisioned
+1. Open the Cloud Shell from the OCI console. If this is the first time using the Cloud Shell, there may be a short wait while resources are provisioned.
     ![Cloud Shell Icon](https://oracle-livelabs.github.io/common/images/console/cloud-shell.png "Cloud Shell Location")
     ![Cloud Shell Setup](https://oracle-livelabs.github.io/common/images/console/cloud-shell-setup.png "Cloud Shell setup stage")
     ![Cloud Shell Open](https://oracle-livelabs.github.io/common/images/console/cloud-shell-open.png "Cloud Shell open and ready")
@@ -45,13 +45,19 @@ The compliance script can be run anywhere with the correct permissions and optio
 
 ## Task 2: Download Findings
 
-1. Once complete, there will be a directory named *compliance_report* in your home directory. Compress this directory by running `zip compliance_report.zip -r compliance_report` in the Cloud Shell
+1. Once complete, there will be a directory named *compliance_report* in your home directory. Compress this directory by running the following command in the Cloud Shell.
 
-2. Download the file by opening the Cloud Shell menu in the top-right corner and selecting *Download* ![Cloud Shell Menu](images/compliance_download-1.png "Cloud Shell Menu")
+    ```text
+    <copy>
+    zip compliance_report.zip -r compliance_report
+    </copy>
+    ```
 
-3. Enter `compliance_report.zip` into the input box and click *Download*
+2. Download the file by opening the Cloud Shell menu in the top-right corner and selecting *Download*. ![Cloud Shell Menu](images/compliance_download-1.png "Cloud Shell Menu")
 
-4. Unzip and peruse the report at your leisure
+3. Enter `compliance_report.zip` into the input box and click *Download*.
+
+4. Unzip and peruse the report at your leisure.
 
 ## Task 3: Inspect Report Contents
 

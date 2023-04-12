@@ -27,7 +27,7 @@ This section sets general environmental configurations for the Landing Zone. Inp
 
 ![The Environment Menu Options](images/environment_menu.png "Environment Menu Options")_Note that the invalid service label is triggering an error message_
 
-One optional setting that we recommend in enterprise tenancies is the _Enclosing Compartment_ selection. Selecting a compartment from the drop down menu will create the Landing Zone inside the selected compartment. This allows for multiple Landing Zones to be used in a tenancy. This is useful for creating separate Dev/Test/Production environments in a single OCI tenant. Each Landing Zone will be able to support independent group memberships and permission structures via this mechanism. Note that _the compartment must be created prior to configuring the Landing Zone_.
+One optional setting that we recommend in enterprise tenancies is the _Enclosing Compartment_ selection. Selecting a compartment from the drop down menu will create the Landing Zone inside the selected compartment. This allows for multiple Landing Zones to be used in a tenancy. This is useful for creating separate Dev/Test/Production environments in a single OCI tenant. Each Landing Zone will be able to support independent group memberships and permission structures via this mechanism. Note that __the enclosing compartment must be created prior to configuring the Landing Zone__.
 
 _Using an Enclosing Compartment is optional in this lab, but useful for following best practices._
 ![An Enclosing Compartment is Selected](images/enclosing_compartment.png "Enclosing Compartment Dropdown")
@@ -54,7 +54,7 @@ There are two required notification contacts as required by CIS controls. An ema
 
 There are further endpoints defined for admins of other services, but these are not mandatory under the CIS benchmark. For this lab, we will not use them.
 
-1. Enter your email in _Network Admin Email Endpoints_
+1. Enter your email in _Network Admin Email Endpoints_.
 
 2. Enter your email in _Security Admin Email Endpoints_.
 
