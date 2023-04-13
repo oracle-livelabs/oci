@@ -97,7 +97,7 @@ In this lab, we start by extending the existing PICASO digital assistant and bui
 
 ## Task 4:  Create the channel for the skills
 
-In this part of the lab, we begin with creating a Web channel for the Skills and routing this to the cloned PeopleSoft PICASO digital assistants'
+In this part of the lab, we begin with creating a Web channel for the Skills and routing this to the extended PeopleSoft PICASO digital assistants'
 
 1.  On the Oracle Digital Assistants Service Console Home page, click the Navigation Menu in the upper-left corner, select development, and then select the Channels option and create a new channel
 
