@@ -5,7 +5,7 @@
         {
             "title": "Introduction",
             "description": "Introduction",
-            "filename": "../../00-introduction/introduction.md"
+            "filename": "../../introduction/introduction.md"
         },
         {
             "title": "Get Started",
@@ -15,18 +15,18 @@
         {
             "title": "Lab 1: Access the Stack Monitoring workshop environment",
             "description": "Access the Stack Monitoring workshop environment",
-            "filename": "../../01-access-env/access-env.md"
+            "filename": "../../access-env/access-env.md"
         },
 
         {
             "title": "Lab 2: Enterprise Summary",
             "description": "Get to know Stack Monitoring's Enterprise Summary",
-            "filename": "../../02-enterprise-summary/enterprise-summary.md"
+            "filename": "../../enterprise-summary/enterprise-summary.md"
          },
         {
             "title": "Lab 3: Resource Homepages",
             "description": "Get to know Stack Monitoring's Resource Homepages",
-            "filename": "../../03-homepages/homepages.md"
+            "filename": "../../homepages/homepages.md"
         },
         {
             "title": "Need Help?",
