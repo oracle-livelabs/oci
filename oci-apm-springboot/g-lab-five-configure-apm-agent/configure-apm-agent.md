@@ -1,22 +1,27 @@
-# Instrument the server monitoring on the block volumes
+# Instrument the server monitoring on the file system
 
 ## Introduction
 
-In this lab, you will download the APM Java Agent installer file from the Oracle Cloud console, upload it to the Oracle Cloud shell, transfer it to the Kubernetes container, provision the Java Agent to the block volumes, and finally, deploy the Agent to the Kubernetes pods.
+In this lab, you will download the APM Java Agent installer file from the Oracle Cloud console, upload it to the Oracle Cloud shell, transfer it to the Kubernetes container, provision the Java Agent to the file system, and finally, deploy the Agent to the Kubernetes pods.
 
-***Please proceed to this lab only if you completed Lab 4 (Free Trial): "Create and configure block volumes".***
+***Please run this lab only if you completed Lab 4 (Paid Tenancy): "Create and configure a file system".***
 
-***For users who completed Lab 4 (Free Trial): "Create and configure a file system", please complete the previous lab, Lab 5 (Paid Tenancy): "Instrument server monitoring for the file system".***
+***For users who completed  Lab 4 (Free Trial): "Create and configure block volumes", please go to the next lab, Lab 5 (Free Trial): "Instrument server monitoring for block volumes".***
+
+This lab requires OCI quota and permissions to create a file system in your tenancy. If you are using a FREE TRIAL, please go to the next Lab 4 (Free Trial): Create and configure block volumes, which does not require a paid OCI quota.***
+
 
 Estimated time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Instrument the server monitoring](videohub:1_2mpynh0j)
 
 ### Objectives
 
 * Download the APM Java Agent from the Oracle Cloud console
 *	Upload the APM Java Agent to the Cloud shell
-*	Copy the Java Agent installer from the Cloud shell to the block volumes
-*	Provision the APM Java Agent in the block volumes
+*	Copy the Java Agent installer from the Cloud shell to the file system
+*	Provision the APM Java Agent in the shared file system directory
 *	Deploy the Java Agent to the Kubernetes pods
 
 ### Prerequisites
@@ -25,7 +30,7 @@ Estimated time: 10 minutes
 
 ## Task 1: Obtain APM Java Agent download link
 
-1.	Open the navigation menu from the Oracle Cloud console, and select **Observability & Management** > **Administration**.
+1.	Open navigation menu from the Oracle Cloud console, select **Observability & Management** > **Administration**.
 
    ![Oracle Cloud console, Navigation Menu](images/4-1-1-menu.png " ")
 
@@ -54,6 +59,13 @@ Estimated time: 10 minutes
 
     E.g., cd ~/; wget https://repo1.maven.org/maven2/com/oracle/apm/agent/java/apm-java-agent-installer/1.8.3326/apm-java-agent-installer-1.8.3326.jar
 
+    >**Note:** If you received **No such file or directory** error, it may be a new version of the agent is being updated. Please run the following URL on a browser and find the Agent version available at the Maven central.
+    ``` bash
+    <copy>
+    https://repo1.maven.org/maven2/com/oracle/apm/agent/java/apm-java-agent-installer
+    </copy>
+    ```
+       ![Oracle Cloud console, Cloud Shell](images/2-1-mavencentral.png " ")
 
 2.	Hit the enter key and verify the message to ensure the successful file transfer.
 
@@ -68,39 +80,23 @@ Estimated time: 10 minutes
 
 ## Task 3: Copy the Java Agent installer to the file system
 
-1.	Run the commands below to copy the Java Agent installer file to the block volumes. Ensure to ***replace*** the **apm-agent-version** with that of the APM Java Agent you have, before the command execution. Note that you created PVCs in two different Block Volumes, so you will need to copy the agent installer file to both volumes.  
-
-    a) Copy the installer file to the volume **apmlab-fss**
+1.	Run the command below to copy the Java Agent installer file to the file system. Ensure to ***replace*** the **apm-agent-version** with that of the APM Java Agent you have, before the command execution.
 
     ``` bash
     <copy>
     kubectl cp apm-java-agent-installer-<apm-agent-version>.jar wstore-front-0:/apmlab-fss/
     </copy>
     ```
-    b) Repeat to Copy the installer file to the volume **apmlab-fss2**
-
-    ``` bash
-    <copy>
-    kubectl cp apm-java-agent-installer-<apm-agent-version>.jar wstore-back-0:/apmlab-fss2/
-    </copy>
-    ```
-
 
     > - e.g., kubectl cp apm-java-agent-installer-1.8.3326.jar wstore-front-0:/apmlab-fss/  
     - The command copies the Agent installer to the **wstore-front**, but it can be copied to any pod as the way we set up, all pods share the same file system.
 
 
-2.	Use the kubectl commands below to remotely run the ls command in the containers in the Kubernetes pods.
+2.	Use the kubectl command below to remotely run the ls command in the container in the Kubernetes pod.
 
     ``` bash
     <copy>
     kubectl exec -it wstore-front-0 -- bash -c "cd /apmlab-fss && ls "
-    </copy>
-    ```
-
-    ``` bash
-    <copy>
-    kubectl exec -it wstore-back-0 -- bash -c "cd /apmlab-fss2 && ls "
     </copy>
     ```
 
@@ -113,42 +109,27 @@ Estimated time: 10 minutes
 ## Task 4: Provision of the APM Java Agent
 
 
-1.	Execute the command below to provision the APM Java agent. ***Replace*** the **APM Domain Private key** and **APM Domain Endpoint**, with the values saved in Lab2, Task2. Please also ***change*** the **apm-agent-version** in the file name to the version of the agent you have. Note that you will need to provision the agent in both volumes, **apmlab-fss** and **apmlab-fss2**.
+1.	Execute the command below to provision the APM Java agent. ***Replace*** the **APM Domain Private key** and **APM Domain Endpoint**, with the values saved in Lab2, Task2. Please also ***change*** the **apm-agent-version** in the file name to the version of the agent you have.
 
-    a) Provision the Java agent to the frontend volume **apmlab-fss**
     ``` bash
     <copy>
     kubectl exec -it wstore-front-0 -- bash -c "cd /apmlab-fss && java -jar ./apm-java-agent-installer-<apm-agent-version>.jar provision-agent -service-name=WS-svc -destination=.  -private-data-key=<APM Domain Private Key> -data-upload-endpoint=<APM Domain Endpoint>"
     </copy>
     ```
-    b) Provision the Java agent to the backend volume **apmlab-fss2**
-    ``` bash
-    <copy>
-    kubectl exec -it wstore-back-0 -- bash -c "cd /apmlab-fss2 && java -jar ./apm-java-agent-installer-<apm-agent-version>.jar provision-agent -service-name=WS-svc -destination=.  -private-data-key=<APM Domain Private Key> -data-upload-endpoint=<APM Domain Endpoint>"
-    </copy>
-    ```
-
-
     E.g., kubectl exec -it wstore-front-0 -- bash -c "cd /apmlab-fss && java -jar apm-java-agent-installer-1.8.3326.jar provision-agent -service-name=WS-svc -destination=. -private-data-key=ABCDEFG12345ABCDEF123456ABCDE -data-upload-endpoint=https://abcdefgt12345aaaaaaaaabcdef.apm-agt.us-phoenix-1.oci.oraclecloud.com"
 
     With a successful installation, you should see the output similar to below.
 
    ![Oracle Cloud console, Cloud Shell ](images/4-1-10-cloudshell.png " ")
 
-
-
-2.	Execute the below command to verify ***oracle-apm-agent*** directory is created under the **apmlab-fss** and **apmlab-fss2** directories.
+2.	Execute the below command to verify ***oracle-apm-agent*** directory is created under the apmlab-fss directory.
 
     ``` bash
     <copy>
     kubectl exec -it wstore-front-0 -- bash -c "cd /apmlab-fss && ls "
     </copy>
     ```
-    ``` bash
-    <copy>
-    kubectl exec -it wstore-back-0 -- bash -c "cd /apmlab-fss2 && ls "
-    </copy>
-    ```
+
     ![Oracle Cloud console, Cloud Shell ](images/4-1-11-cloudshell.png " ")
 
 ## Task 5: Deploy the Java Agent
@@ -179,13 +160,16 @@ The next step is to deploy the Java Agent. First, update the **wstore.yaml** fil
 
     ``` bash
     <copy>
-     "-javaagent:/apmlab-fss2/oracle-apm-agent/bootstrap/ApmAgent.jar", "-Dcom.oracle.apm.agent.service.name=wstore-back",
+     "-javaagent:/apmlab-fss/oracle-apm-agent/bootstrap/ApmAgent.jar", "-Dcom.oracle.apm.agent.service.name=wstore-back",
     </copy>
     ```
     The image below shows the **wstore-back** statefulset after the successful editing, for example. Please note that you will need to add the arguments to both statefulsets, **wstore-front** and **wstore-back**, and the service names have to be configured differently.
 
-  ![Oracle Cloud console, Cloud Shell ](images/5b-deployagent.png " ")    
+  ![Oracle Cloud console, Cloud Shell ](images/4-6-1-cloudshell.png " ")    
 
+
+    > ***Troubleshooting***: For learning purposes, we have preconfigured the java argument editing in the **wstore-deploy-agent.yaml** file. If you encounter any issues run the following command to review how the changes are expected to be done.
+    - vi ~/sb-hol/wstore-deploy-agent.yaml
 
 
 5.	Recreate the Kubernetes pods by applying the **wstore-deploy-agent.yaml** file.
