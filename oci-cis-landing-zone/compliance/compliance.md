@@ -14,10 +14,6 @@ In this lab, you will:
 - Download the script output to your local machine
 - Inspect the report findings
 
-### Prerequisites
-
-None
-
 ## Task 1: Run the Script
 
 The compliance script can be run anywhere with the correct permissions and options. For this lab, we will keep it simple by running the script in [Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/devcloudshellintro.htm#Cloud_Shell).
@@ -53,9 +49,9 @@ The compliance script can be run anywhere with the correct permissions and optio
     </copy>
     ```
 
-2. Download the file by opening the Cloud Shell menu in the top-right corner and selecting *Download*. ![Cloud Shell Menu](images/compliance_download-1.png "Cloud Shell Menu")
+2. Download the file by opening the Cloud Shell menu in the top-right corner and selecting *Download*. ![Cloud Shell Menu](images/compliance-download-1.png "Cloud Shell Menu with Download & Upload Options")
 
-3. Enter `compliance_report.zip` into the input box and click *Download*.
+3. Enter `compliance_report.zip` into the input box and click *Download*. ![Cloud Shell Download File](images/compliance-download-2.png "Download compliance.zip in Cloud Shell")
 
 4. Unzip and peruse the report at your leisure.
 
@@ -63,9 +59,9 @@ The compliance script can be run anywhere with the correct permissions and optio
 
 The report directory will contain a variable number of files depending on the state of your OCI tenancy. The summary file contains the list of checks and if they passed or failed. Open the *cis_html_summary_report.html* file to view the contents in your web browser. Take a few moments to browse the contents.
 
-![Report Directory](images/report_contents.png "Report directory content")
+![Report Directory](images/report-contents.png "Report directory content")
 
-![Summary Report](images/summary_report.png "Summary report")
+![Summary Report](images/summary-report.png "Summary report")
 
 Failed checks will have links to files included with the report on the specific resources that failed the check. The last several pages of the report will have observations, recommendations, and remediation for failed checks.
 
