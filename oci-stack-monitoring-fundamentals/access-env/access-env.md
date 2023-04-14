@@ -21,28 +21,28 @@ After you successfully log into the workshop tenancy using the View Login Info l
 
 1. Click **View Login info** on **Get Started with Oracle Cloud Stack Monitoring** landing page to log in to the workshop tenancy in the Oracle Cloud.
 
-   ![Oracle LiveLabs, Workshop page](images/1-0-liveLabs.png " ")
+   ![Oracle LiveLabs, Workshop introduction page](images/1-0-liveLabs.png " ")
 
 2. Reservation Information pane opens. Click the **Launch OCI** button.
 
-   ![Oracle LiveLabs, Workshop page](images/1-1-liveLabs.png " ")
+   ![Oracle LiveLabs, Workshop reservation information highlighting launch OCI button](images/1-1-liveLabs.png " ")
 
 3. A new browser tab opens and loads the Oracle Cloud Infrastructure Sign-In page. Copy the Password from the Reservation Information pane on the LiveLab screen.
 
-  ![Oracle LiveLabs, Workshop page](images/1-2-liveLabs.png " ")
+  ![Oracle LiveLabs, Side-by-side of reservation information page highlighting copy password and direct login page](images/1-2-liveLabs.png " ")
   >***Note:*** In the example image, two browser screens are opened side by side.
 
 4. Paste the copied password onto the OCI Sign-In screen. Note that your user name is already pre-set in the **Direct Sign-In** section.
 
-   ![Oracle LiveLabs, Workshop page](images/1-3-liveLabs.png " ")
+   ![Oracle LiveLabs, Direct Sign-in page highlighting password and sign in button](images/1-3-liveLabs.png " ")
 
 5. **Change Password** screen opens. Enter the new password that you can use to re-sign-in to the workshop tenancy, in case you closed your browser during the workshop reservation time.
 
-   ![Oracle LiveLabs, Workshop page](images/1-4-liveLabs.png " ")
+   ![Direct sign in page change password, showing an obscured old and new passwords](images/1-4-liveLabs.png " ")
 
 6. **Oracle Cloud Get started** page opens. You can proceed to the next task to begin the workshop.
 
-   ![Oracle LiveLabs, Workshop page](images/1-5-liveLabs.png " ")
+   ![Oracle LiveLabs, Workshop introduction page, highlighting view login info link](images/1-5-liveLabs.png " ")
 
 ## Task 2: Access the Enterprise Summary page
 
