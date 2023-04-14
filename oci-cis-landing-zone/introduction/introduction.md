@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-![OCI CIS Landing Zone Logo](images/landing%20zone%20icon.png "OCI CIS Landing Zone Logo of helicopter approaching Oracle shaped landing pad")
+![OCI CIS Landing Zone Logo](images/landing-zone-icon.png "OCI CIS Landing Zone Logo of helicopter approaching Oracle shaped landing pad")
 
 This set of labs will walk you through deploying a secure cloud architecture, compliant with the [CIS OCI Foundations Benchmark v1.2](https://www.cisecurity.org/benchmark/oracle_cloud/). Upon completion of the labs, a full set of OCI resources will be created as a base to build a secure enterprise workload.
 
@@ -48,7 +48,7 @@ The Landing Zone will deploy a full set of resources suitable for a production c
 - OCI Object Storage
 - Budget Controls
 
-The resulting architecture will look similar to this diagram: ![Single VCN Architecture](images/single_vcn_architecture.png "Single VCN Architecture")
+The resulting architecture will look similar to this diagram: ![Single VCN Architecture](images/single-vcn-architecture.png "Single VCN Architecture")
 
 ### IAM Components
 

@@ -5,7 +5,7 @@
         {
             "title": "Introduction to OCI and Resource Manager",
             "description": "Intro to OCI, Resource Manager, and Terraform Concepts",
-            "filename": "../../01-introduction/introduction.md"
+            "filename": "../../introduction/introduction.md"
         },
         {
             "title": "Get Started",
@@ -15,27 +15,27 @@
         {
             "title": "Lab 1: Upload Landing Zone Terraform files to Resource Manager",
             "description": "Loading Terraform From Public Repo into Resource Manager",
-            "filename": "../../02-upload/upload.md"
+            "filename": "../../upload/upload.md"
         },
         {
             "title": "Lab 2: Configure Variables for Basic Deployment",
             "description": "Enter Configurations for Simple 3-Tier Virtual Cloud Network (VCN) Deployment",
-            "filename": "../../03-configure-variables/configure.md"
+            "filename": "../../configure-variables/configure-variables.md"
         },
         {
             "title": "Lab 3: Apply and Inspect Resources",
             "description": "Apply in Resource Manager and Inspect Created Resources",
-            "filename": "../../04-apply-inspect/apply.md"
+            "filename": "../../apply-inspect/apply-inspect.md"
         },
         {
             "title": "Lab 4: Create Compartment for Exadata",
             "description": "Modify Configuration to Create Optional Exadata Compartment and IAM Resources",
-            "filename": "../../05-exadata-compartment/exadata.md"
+            "filename": "../../exadata-compartment/exadata-compartment.md"
         },
         {
             "title": "Lab 5: Run CIS Compliance Checker Script",
             "description": "Run Provided CIS Compliance Checker Script in Cloud Shell",
-            "filename": "../../06-compliance/compliance.md"
+            "filename": "../../compliance/compliance.md"
         },
         {
             "title": "Lab 6: Clean Up Stack",
