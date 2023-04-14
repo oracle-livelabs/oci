@@ -57,7 +57,7 @@ After you successfully log into the workshop tenancy using the View Login Info l
 
    ![Oracle Cloud console, Navigation Menu](images/2-2-access.png " ")
 
-   	 Stack Monitoring Enterprise Summary page opens.
+   Stack Monitoring Enterprise Summary page opens.
 
 2. Connect to the appropriate **Region** and **Compartment**
 
