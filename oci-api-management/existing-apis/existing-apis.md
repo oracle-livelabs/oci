@@ -3,9 +3,9 @@
 
 ## Introduction
 
-Estimated time: 20 min
-
 In this lab, we will add existing APIs in the Portal. We will first create samples of APIs. Then import all of them in one shoot in the API Portal.
+
+Estimated time: 20 min
 
 ### Objectives
 
@@ -25,7 +25,7 @@ In this lab, we will add existing APIs in the Portal. We will first create sampl
     - On the top, right, click *Tenancy: name*
     - Copy the tenancy OCID *##TENANCY\_OCID##*
 
-    ![Tenancy](images/opensearch-tenancy.png)
+        ![Tenancy](images/opensearch-tenancy.png)
 
 2. Then, we need data about the user
     - On the top, right, click *Your username*
@@ -33,14 +33,14 @@ In this lab, we will add existing APIs in the Portal. We will first create sampl
     - Copy the user OCID *##USER\_OCID##*
     - Click on *API Keys*
 
-    ![User](images/opensearch-user.png)
+        ![User](images/opensearch-user.png)
 
     - Click *Add API Key*
     - Generate one
     - Download it *##PRIVATE_KEY##*
     - Copy the *##FINGERPRINT##*
 
-    ![User API Keys](images/opensearch-user2.png)
+        ![User API Keys](images/opensearch-user2.png)
 
     In your computer (NOT in cloud shell), you need to convert the PEM key to RSA format:
     - Run the below command 
@@ -64,12 +64,12 @@ In this lab, we will add existing APIs in the Portal. We will first create sampl
     ```
 
 ## Task 2: Add existing APIs from Oracle Integration
-### A. Create an Oracle Integration installation
+### 1. Create an Oracle Integration installation
 
 Let's create an Oracle Integration Installation with some samples:
 - Menu Developer Services / Application Integration 
 
-![Oracle Integration](images/apim-oic1.png)
+    ![Oracle Integration](images/apim-oic1.png)
 
 - Click *Create Instance*
 - Name *oic\_apim*
@@ -81,17 +81,17 @@ Let's create an Oracle Integration Installation with some samples:
 - Remove the filter with your username
 - You will see some preinstalled sample. 
  
-![Oracle Integration - Samples](images/apim-oic2.png)
+    ![Oracle Integration - Samples](images/apim-oic2.png)
 
 - Hover your mouse on the first line (Echo) and activate the integration
 - In the dialog, click *Activate* again
 - Do the same for several other integrations
 
-![Oracle Integration - Samples](images/apim-oic3.png)
+    ![Oracle Integration - Samples](images/apim-oic3.png)
 
 - Note the host name of OIC from the URL (##OIC\_HOST##): ex: oic-apim-xxxxx-fr.integration.ocp.oraclecloud.com
 
-### B. Credentials
+### 2. Credentials
 - Go back the APEX API Portal (##PORTAL\_URL##)
 - Click on the menu 
 - Then *Source*
@@ -99,11 +99,11 @@ Let's create an Oracle Integration Installation with some samples:
 - For OCI Username, enter ##USERNAME##
 - For Password, enter ##PASSWORD##
 
-![Oracle Integration - Samples](images/apim-oic-cred.png)
+    ![Oracle Integration - Samples](images/apim-oic-cred.png)
 
 It will allow the database to call the OIC URLs
 
-### C. Create OIC Source
+### 3. Create OIC Source
 
 - Still in the Source screen.
 - Click *Create*
@@ -111,15 +111,15 @@ It will allow the database to call the OIC URLs
 - Oracle Integration Host: ##OIC\_HOST##
 - Click *Create*
 
-![Oracle Integration - Credentials](images/apim-source-oic.png)
+    ![Oracle Integration - Credentials](images/apim-source-oic.png)
 
 ## Task 3: Add existing API from API Gateway
 
-### A. Get APIW OCID
+### 1. Get APIW OCID
 
 Please find back the Compartment OCID that was used to create the API Gateway in Lab 2 (Cloud Native). (##COMPARTMENT\_OCID##)
 
-### B. Credentials
+### 2. Credentials
 - Go back the APEX API Portal (##PORTAL\_URL##)
 - Click on the menu 
 - Then *Source*
@@ -130,11 +130,11 @@ Please find back the Compartment OCID that was used to create the API Gateway in
 - For Fingerprint, enter ##FINGERPRINT##
 - Click *Create*
 
-![Oracle Integration - Credentials](images/apim-apigw-cred.png)
+    ![Oracle Integration - Credentials](images/apim-apigw-cred.png)
 
 It will allow the database to call the APIGW URLs
 
-### C. Create APIGW Source
+### 3. Create APIGW Source
 
 - Still in the Source screen.
 - Click *Create*
@@ -142,7 +142,7 @@ It will allow the database to call the APIGW URLs
 - Oracle Integration Host: ##COMPARTMENT\_OCID##
 - Click *Create*
 
-![Oracle Integration - Credentials](images/apim-source-apigw.png)
+    ![Oracle Integration - Credentials](images/apim-source-apigw.png)
 
 ## Task 4: Discover and Test
 
@@ -150,7 +150,7 @@ It will allow the database to call the APIGW URLs
 - Click *Discover All*
 - Go and check the result in the Portal 
 
-![Oracle Integration - Credentials](images/apim-oic-test.png)
+    ![Oracle Integration - Credentials](images/apim-oic-test.png)
 
 ## Troubleshooting
 
@@ -159,36 +159,36 @@ It will allow the database to call the APIGW URLs
     - Click the Discover Log button. 
     - You may also run this query in SQL
 
-```
-<copy>
-select * from api.discover_log
-</copy>
-```
+    ```
+    <copy>
+    select * from api.discover_log
+    </copy>
+    ```
 
 - To clean up the repository and discover all again
 
-```
-<copy>
-truncate table api.TAG_IMPL
-/
-truncate table api.TAG
-/
-truncate table api.ENDPOINT
-/
-truncate table api.SPECIFICATION
-/
-truncate table api.IMPLEMENTATION
-/
-truncate table api.discover_log
-/
-begin
-  api.api_discover.discover_all;
-end;
-/
-select * from api.discover_log
-/
-</copy>
-```
+    ```
+    <copy>
+    truncate table api.TAG_IMPL
+    /
+    truncate table api.TAG
+    /
+    truncate table api.ENDPOINT
+    /
+    truncate table api.SPECIFICATION
+    /
+    truncate table api.IMPLEMENTATION
+    /
+    truncate table api.discover_log
+    /
+    begin
+    api.api_discover.discover_all;
+    end;
+    /
+    select * from api.discover_log
+    /
+    </copy>
+    ```
 
 - The sample has the following limitation:
     - It does not contain a logic to remove the duplicate entries in the API Portal
