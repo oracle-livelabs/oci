@@ -12,7 +12,7 @@ In this lab, we show how to create an API Management Portal with the following f
     -  Any API specification type: REST (OpenAPI/Swagger/...), SOAP (WSDL), ...
 - Git Integration:
     - APIs are linked to Git where the source code is stored.
-
+ 
 ![Introduction Usecase](images/apim-intro.png)
 
 ### Architecture
@@ -29,7 +29,7 @@ The APIs database can be populated in 2 ways:
 
 Estimated Workshop Time: 60 minutes
 
-### Objective
+### Objectives
 
 Create an API Management Portal:
 - Create an Autonomous Database to install the APEX application

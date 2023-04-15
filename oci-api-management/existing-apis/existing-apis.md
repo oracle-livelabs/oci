@@ -6,7 +6,7 @@
 In this lab, we will add existing APIs in the Portal. We will first create samples of APIs. Then import all of them in one shoot in the API Portal.
 
 Estimated time: 20 min
-
+ 
 ### Objectives
 
 - Add existing API from Oracle Integration:

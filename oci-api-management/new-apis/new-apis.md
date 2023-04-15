@@ -6,8 +6,8 @@
 Estimated time: 20 min
 
 ### Objectives
-
-- Create several Cloiud Native (Java/Node/Dotnet/Python/...) APIs with the help of Terraform
+ 
+- Create several Cloud Native (Java/Node/Dotnet/Python/...) APIs with the help of Terraform
 - Add the APIs in the Portal 
 
 ### Prerequisites

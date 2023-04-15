@@ -151,7 +151,7 @@ Back to page of the Autonomous Database,
 - In Apex, 
     - Click Menu *App Builder*
     - *Import*
-
+ 
     ![APEX Installation](images/apim-apex5.png)
 
 - Go in the files that you have downloaded from Git
