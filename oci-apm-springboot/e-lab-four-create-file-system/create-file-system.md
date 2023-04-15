@@ -41,7 +41,7 @@ Watch the video below for a quick walk-through of the lab.
 
    ![Oracle Cloud console, file systems](images/3-1-2-filesystem.png " ")
 
-5. On the **Create File System** page, in the **File System Information** section, click **Edit Details**.
+5. On the **Create File System** page, ensure the **File System for NFS** is selected. In the **File System Information** section, click **Edit Details**.
 
    ![Oracle Cloud console, file systems](images/3-1-3-filesystem.png " ")
 
@@ -247,7 +247,7 @@ Watch the video below for a quick walk-through of the lab.
    ![Oracle Cloud console, Cloud Shell](images/3-3-3-1-cloudshell.png " ")
 
 4. Hit **i** to enter the edit mode. Carefully insert the following code below the **containerPort**. Note that the same changes have to be made in both statefulsets, **wstore-back** and **wstore-front**.
-xxxxxxxxxxxxxxxx
+
 
                 volumeMounts:
                 - mountPath: "/apmlab-fss"

@@ -120,6 +120,7 @@ It will allow the database to call the OIC URLs
 Please find back the Compartment OCID that was used to create the API Gateway in Lab 2 (Cloud Native). (##COMPARTMENT\_OCID##)
 
 ### 2. Credentials
+
 - Go back the APEX API Portal (##PORTAL\_URL##)
 - Click on the menu 
 - Then *Source*

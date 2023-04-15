@@ -36,7 +36,7 @@ Estimated time: 15 minutes
 
    ![Oracle Cloud console, file systems](images/3-1-2-filesystem.png " ")
 
-5. On the **Create File System** page, in the **File System Information** section, click **Edit Details**.
+5. On the **Create File System** page, ensure the **File System for NFS** is selected. In the **File System Information** section, click **Edit Details**.
 
    ![Oracle Cloud console, file systems](images/3-1-3-filesystem.png " ")
 
@@ -312,4 +312,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,   
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, December 2022
+* **Last Updated By/Date** - Yutaka Takatsu, March 2023

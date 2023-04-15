@@ -181,14 +181,11 @@ Container Database Name | For Exadata DB systems enter the container database na
 
 5. Import of PeopleSoft environment completed with no errors.
 
-    ![import-complete](./images/import-completed.png " ")
+    ![import-completed](./images/import-completed.png " ")
 
 6. You can now see the status of the imported environment as Running.
 
     ![running-status](./images/env-running.png " ")
-
-
-## Summary
 
 In this lab, PeopleSoft Environments components such as DB System, Application Server, Linux Process Scheduler Server, Web Server, Windows Process Scheduler Server, ELK are imported into PeopleSoft Cloud Manager.
 

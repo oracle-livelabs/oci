@@ -36,8 +36,6 @@ Please refer to below **PeopleSoft Cloud Manager On OCI** workshop to learn more
 
 https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=716&clear=RR,180&session=108710964343427
     
-## Summary
-
 In this lab, you have taken a full backup of the imported PeopleSoft Environment in PeopleSoft Cloud Manager.
 
 You may now **proceed to the next lab.**
