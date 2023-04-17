@@ -27,6 +27,7 @@ The ESBLZv2 creates an architectural framework that's ready for you to launch ne
 
 The following diagram illustrates the ESBLZv2.0 reference architecture.
 
+![architecture](./../intro/images/caf-lz-compartments.svg " ")
 
 The CAF landing zone creates an architectural framework that's ready for you to launch new projects and workloads on OCI.
 
