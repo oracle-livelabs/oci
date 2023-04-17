@@ -23,8 +23,8 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-* Create an ORM Stack and configuration from the baseline landing zone template
-* Provision Infrastructure: Network, IAM, Security
+* Create an ORM Stack and configuration from the template.
+* Create via CLI.
 
 ### Prerequisites
 
