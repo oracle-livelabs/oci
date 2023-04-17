@@ -1,4 +1,4 @@
-# Provision the Infrastructure using Resource Manager
+# Provision Oracle Enterprise Landing Zone Infrastructure.
 
 ## Introduction
 
