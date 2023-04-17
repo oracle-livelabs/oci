@@ -50,12 +50,12 @@ The compartments module only creates the compartment structure for a single envi
 The identity module creates and configures an identity domain in an environment in the landing zone.
 In order to isolate access between resources, groups are created together with policies in order to restrict access to certain resources.
 
-- **Network Admin: ** User group that have access to the network resources inside your environment
-- **SecOps Admin: ** User group that have access to the security related resources inside your environment
-- **Identity Admin: ** User group that can manage the identity related resources
-- **Platform Admin: ** User group that have access to usage reports and can manage budgets
-- **Ops Admin: ** User group that have access to the metrics, events and alerts in your environment
-- **Log Admin: ** User group that have access to the logs of your environment
+- Network Admin : User group that have access to the network resources inside your environment
+- SecOps Admin  : User group that have access to the security related resources inside your environment
+- Identity Admin: User group that can manage the identity related resources
+- Platform Admin: User group that have access to usage reports and can manage budgets
+- Ops Admin     : User group that have access to the metrics, events and alerts in your environment
+- Log Admin     : User group that have access to the logs of your environment
 
 ## Network Overview
 
