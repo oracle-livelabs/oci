@@ -33,7 +33,7 @@ The following diagram illustrates the ESBLZv2.0 reference architecture.
 
 You use compartments to organize and isolate your resources to make it easier to manage and secure access to them.
 The ESBLZv2 creates a compartment structure for your organization. You control access to compartment by creating policies that specify what actions groups of users can take on the resources in those compartments. The following diagram shows the compartment structure that is created by the landing zone:
-![architecture](./../intro/images/enterprise-landing-zone-v2.svg " ")
+![architecture](./../intro/images/esblz2-compartments.png " ")
 
 The compartments module only creates the compartment structure for a single environment which include the following compartments:
 
@@ -102,5 +102,5 @@ The ESBLZv2 further supports Oracle's Security-First Cloud strategy tenets:
 - **Author** - Kay Malcolm, Director, Product Management
 - **Adapted by** -  Yaisah Granillo, Cloud Solution Engineer, NA Cloud
 - **Contributors** - LiveLabs QA Team (Arabella Yao, Product Manager Intern | Isa Kessinger, QA Intern)
-- **Last Updated By/Date** - Kay Malcolm, October 2020 -->
+- **Last Updated By/Date** - Kay Malcolm, April 2022 -->
 
