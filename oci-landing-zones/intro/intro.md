@@ -4,14 +4,17 @@ Get hands-on learning with training labs about Oracle cloud solutions. The works
 
 Estimated time: 60 minutes
 
-## Enterprise Scale Baseline Landing Zone
+## Oracle Enterprise Scale Baseline Landing Zone v2.0 (ESBLZ v2.0)
 
-The enterprise scale landing zone provides the baseline architectural framework for your organization to deploy new projects and workloads on OCI. The landing zone consists of Terraform modules, the architectural documentation, and an implementation guide. The landing zone helps you quickly and securely create a foundation for your cloud deployment based on Oracle recommendations, customer experience, and industry-standard best practices.
+The ESBLZ v2.0 landing zone provides the baseline architectural framework for your organization to deploy new projects and workloads on OCI. The landing zone consists of Terraform modules, the architectural documentation, and an implementation guide. The landing zone helps you quickly and securely create a foundation for your cloud deployment based on Oracle recommendations, customer experience, and industry-standard best practices.
 
-The landing zone creates infrastructure that consists of compartments, networking resources, and security at the infrastructure layer. Migrating or developing workloads is not in scope for the CAF landing zone. However, setting up the right infrastructure is often the first step to migrating workloads to the cloud or developing cloud-native workloads successfully.
+ESBLZ v2.0 is a set of Terraform modules that are designed to make it easy to set up a secure and compliant multi-account infrastructure on OCI. Some common use cases for OCI Enterprise Scale Baseline Landing Zone include:
+
+Governance and compliance: The ESBLZv2 provides a set of pre-built policies and guardrails that help ensure that your OCI environment is compliant with industry standards, such as ISO27001 and PCI DSS (these and other compliance standards will be part of ongoing releases).
+Automation and scalability: The Landing Zone can be used to automate the creation of new accounts, users, and resources on OCI, making it easy to scale your infrastructure as your organization grows.
 
 
-## Architecture
+## Architecture Overview
 
 The CAF landing zone creates an architectural framework that's ready for you to launch new projects and workloads on OCI.
 
