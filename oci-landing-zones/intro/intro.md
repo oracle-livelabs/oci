@@ -27,24 +27,8 @@ The ESBLZv2 creates an architectural framework that's ready for you to launch ne
 
 The following diagram illustrates the ESBLZv2.0 reference architecture.
 
-![architecture](./../intro/images/caf-lz-compartments.svg " ")
+![architecture](./../intro/images/enterprise-landing-zone-v2.svg " ")
 
-The CAF landing zone creates an architectural framework that's ready for you to launch new projects and workloads on OCI.
-
-- Compartments: Use compartments to organize and isolate your resources to make it easier to manage and secure access to them.
-    ![compartments](./../intro/images/caf-lz-compartments.svg " ")
-
-- Tags: Use tags to organize and list resources based on your business needs.
-
-- Budgets and alerts: Use budgets to set soft limits on your OCI spending, and use alerts to let you know when you might exceed your budget.
-
-- Oracle Cloud Infrastructure Identity and Access Management (IAM): Use IAM to control access to your cloud resources on OCI.
-
-- Networking and connectivity: Create a virtual cloud network (VCN), subnets, and other networking and connectivity resources that are required to run your workloads and connect to the internet or your on-premises network.
-    ![vcn](./../intro/images/caf-lz-vcn.svg " ")
-
-- Security: Enable a strong security posture by enabling OCI security services such as Oracle Cloud Guard, Oracle Vulnerability Scanning Service, and Oracle Cloud Infrastructure Bastion.
-    ![security](./../intro/images/caf-lz-security-compartment.svg " ")
 
 
 
