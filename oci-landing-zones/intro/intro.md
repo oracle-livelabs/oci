@@ -4,19 +4,19 @@ Get hands-on learning with training labs about Oracle cloud solutions. The works
 
 Estimated time: 60 minutes
 
-## Oracle Enterprise Scale Baseline Landing Zone v2.0 (ESBLZ v2.0)
+## Oracle Enterprise Landing Zone (OELZ)
 
-The ESBLZ v2.0 landing zone provides the baseline architectural framework for your organization to deploy new projects and workloads on OCI. The landing zone consists of Terraform modules, the architectural documentation, and an implementation guide. The landing zone helps you quickly and securely create a foundation for your cloud deployment based on Oracle recommendations, customer experience, and industry-standard best practices.
+The OELZ provides the baseline architectural framework for your organization to deploy new projects and workloads on OCI. The landing zone consists of Terraform modules, the architectural documentation, and an implementation guide. The landing zone helps you quickly and securely create a foundation for your cloud deployment based on Oracle recommendations, customer experience, and industry-standard best practices.
 
-ESBLZ v2.0 is a set of Terraform modules that are designed to make it easy to set up a secure and compliant multi-account infrastructure on OCI. Some common use cases for OCI Enterprise Scale Baseline Landing Zone include:
+OELZ is a set of Terraform modules that are designed to make it easy to set up a secure and compliant multi-account infrastructure on OCI. Some common use cases for OCI Enterprise Scale Baseline Landing Zone include:
 
-- Governance and compliance: The ESBLZv2 provides a set of pre-built policies and guardrails that help ensure that your OCI environment is compliant with industry standards, such as ISO27001 and PCI DSS (these and other compliance standards will be part of ongoing releases).
+- Governance and compliance: The OELZ provides a set of pre-built policies and guardrails that help ensure that your OCI environment is compliant with industry standards, such as ISO27001 and PCI DSS (these and other compliance standards will be part of ongoing releases).
 - Automation and scalability: The Landing Zone can be used to automate the creation of new accounts, users, and resources on OCI, making it easy to scale your infrastructure as your organization grows.
 
 
 ## Architecture Overview
 
-The ESBLZv2 creates an architectural framework that's ready for you to launch new projects and workloads on OCI.
+The OELZ creates an architectural framework that's ready for you to launch new projects and workloads on OCI.
 
 - Compartments: Use compartments to organize and isolate your resources to make it easier to manage and secure access to them.
 - Tags: Use tags to organize and list resources based on your business needs.
@@ -25,14 +25,14 @@ The ESBLZv2 creates an architectural framework that's ready for you to launch ne
 - Networking and connectivity: Create a virtual cloud network (VCN), subnets, and other networking and connectivity resources that are required to run your  workloads.
 - Security: Enable a strong security posture by enabling OCI security services such as Oracle Vulnerability Scanning Service, and Oracle Cloud Infrastructure Bastion.
 
-The following diagram illustrates the ESBLZv2.0 reference architecture.
+The following diagram illustrates the OELZ reference architecture.
 
 ![architecture](./../intro/images/enterprise-landing-zone-v2.svg " ")
 
 ## Compartments Overview
 
 You use compartments to organize and isolate your resources to make it easier to manage and secure access to them.
-The ESBLZv2 creates a compartment structure for your organization. You control access to compartment by creating policies that specify what actions groups of users can take on the resources in those compartments. The following diagram shows the compartment structure that is created by the landing zone:
+The OELZ creates a compartment structure for your organization. You control access to compartment by creating policies that specify what actions groups of users can take on the resources in those compartments. The following diagram shows the compartment structure that is created by the landing zone:
 ![architecture](./../intro/images/esblz2-compartments.png " ")
 
 The compartments module only creates the compartment structure for a single environment which include the following compartments:
@@ -60,7 +60,7 @@ In order to isolate access between resources, groups are created together with p
 ## Network Overview
 
 The network module includes two main Functional Modules, the first will deploy a type of network called "Hub & Spoke" (H&P) that will allow the various workloads to interconnect with each other. The second one called "Network Extension Module" will extend connectivity with the on-premises network as well using the H&P created previously.
-By default, the ESBLZ v2.0 will deploy the H&P module within the " L2 - OCI-ELZ-<Environment Name>". Also, the Network Extension Module will be an optional module and it will only be allowed to be deployed in the production environment. As a result, it will be shared between the two environments prod and non-prod.
+By default, the OELZ will deploy the H&P module within the " L2 - OCI-ELZ-<Environment Name>". Also, the Network Extension Module will be an optional module and it will only be allowed to be deployed in the production environment. As a result, it will be shared between the two environments prod and non-prod.
 The main components that the Hub module will have been as follows:
 
 - A VCN which will host the different subnets of the HUB deployed in the L4 - Network compartment
@@ -83,7 +83,7 @@ The main components that the Spoke module will have are as follows:
 
 Oracle Cloud Infrastructure (OCI) is a Security-first Cloud Service that helps organizations reduce the risk of security threats for cloud workloads by putting our customers' Data Security and Privacy first.  This is achieved via the automation of security operations with simple, prescriptive, and integrated cloud-native security capabilities built into the OCI platform.  Oracle helps customers easily adopt OIC services and secure their cloud infrastructure, data, and applications.
 
-The ESBLZv2 further supports Oracle's Security-First Cloud strategy tenets:
+The OELZ further supports Oracle's Security-First Cloud strategy tenets:
 
 - Security should be simple—easy to use, deploy, and operate
 - Security tools should offer guidance to help customers achieve strong security more easily
@@ -102,5 +102,5 @@ The ESBLZv2 further supports Oracle's Security-First Cloud strategy tenets:
 - **Author** - Kay Malcolm, Director, Product Management
 - **Adapted by** -  Yaisah Granillo, Cloud Solution Engineer, NA Cloud
 - **Contributors** - LiveLabs QA Team (Arabella Yao, Product Manager Intern | Isa Kessinger, QA Intern)
-- **Last Updated By/Date** - Kay Malcolm, April 2022 -->
+- **Last Updated By/Date** - Kay Malcolm, April 2023 -->
 
