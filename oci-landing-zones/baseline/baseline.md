@@ -99,9 +99,11 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 8. Gather the Provisioned Resources OCID Value. 
     * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output 
 
+### Verfication
 
 
-## Task 3: Provisioning the Infrastructure
+
+## Task 2: Create OELZ stack via CLI
 
 1. After creating the Stack, you can perform some Terraform operations that are also known as `Jobs` in OCI. By clicking on `Plan` button and defining a name for your plan, e.g. `deploy1` Resource Manager will parse your Terraform configuration and creates an execution plan for the associated stack. The execution plan lists the sequence of specific actions planned to provision your Oracle Cloud Infrastructure resources. The execution plan is handed off to the apply job, which then executes the instructions.
     ![ORM Stack - jobs menu](./images/oci-orm-jobs-menu.png)
