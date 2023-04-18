@@ -92,14 +92,12 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     
 
 6. Create the Stack.
-    ![Stack Creation Step](./images/landing-zone-stack-info.png)
+    ![Stack Creation Step](./images/baseline_stack_deployment.png)
     
 7. Wait for the atleast ten minutes and then the Stack Jobs Status. 
 
 8. Gather the Provisioned Resources OCID Value. 
     * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output 
-
-![Stack Created Resources OCID Snapshot](./images/landing-zone-stack-output.png)
 
 
 
