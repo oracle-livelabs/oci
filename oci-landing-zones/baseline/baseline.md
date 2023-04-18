@@ -113,6 +113,11 @@ The tenancy you intend to deploy the OELZ to.
 * Variables Values Used. 
     |Variable|Value|
     |--|--|
+    |current_user_ocid|`ocid1.xxxxxx.xxxxxx.xxxxxx.....`|
+    |region|`us-phoenix-1 #or desired region`|
+    |tenancy_ocid|`ocid1.xxxxxx.xxxxxx.xxxxxx.....`|
+    |api_fingerprint|`xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx`|
+    |api_private_key_path|`<path to your private keyfile>`|
     |resource_label|`LIVELAB_ALERT`|
     |enable_compartment_delete|`false`|
     |prod_domain_admin_email|`example@domain.com`|
