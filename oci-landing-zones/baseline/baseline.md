@@ -89,14 +89,14 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     * The break glass user is an IAM user created with full administrator permissions. Entering a valid email here will create the user and send an email allowing access.
     * IAM lets you control who has access to specific cloud resources and what type of access a group of users can have. The Baseline Landing Zone provisions IAM groups with established roles and access levels. The group names listed are the default names but can be overridden by updating using the Terraform variables. 
 
-    ![IAM Vars](./images/variables-iam.png)
+    ![IAM Vars](./images/baseline_iam_variables.png)
 
 3. Enter Networking variables for the VCN and subnet configuration
 
     * The landing zone provisions a VCN, nat gateway, internet gateway, and shared services subnets. You will need to input cidr blocks and dns labels.
     * The landing zone also provides options for connectivity using an Ipsec tunnel or a Fastconnect connection. In this lab however, it can remain disabled.
 
-    ![VCN Variables](./images/landing-zone-baseline-variable-2.png)
+    ![VCN Variables](./images/baseline_network_variables.png)
 
 4. Enter Security variables for Cloud Guard, Vulnerability Scanning Service, VCN Flow Logging, and Audit Logs.
 
@@ -104,7 +104,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     * VCN Flow Logs for the provisioned VCN subnets can be viewed in the Logging Analytics Dashboard. You can also enter subnet ocids to log traffic for externally created subnets. Audit Logging can also be enabled using the same variable which enables logging and stores them in an archive bucket.
     * The bastion provides restricted and time-limited access to cloud resources without public-facing endpoints. There are two types of bastion sessions, managed SSH and port forwarding, which depends on the type of target resource. Input the cidr of the bastion subnet as well as the cidr blocks the bastion can connect to.
 
-    ![Security Variables](./images/landing-zone-baseline-variable-3.png)
+    ![Security Variables](./images/baseline_security_variables.png)
 
 5. Enter the sample variables for creation of Bastions, Dynamic Routing Gateway(DRG) and Monitoring. 
 
