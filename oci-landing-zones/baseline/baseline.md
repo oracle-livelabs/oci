@@ -159,6 +159,7 @@ The tenancy you intend to deploy the OELZ to.
  10) Executes the changes defined by your Terraform configuration to create or update resources via "terraform apply -var-file=\"livelab.tfvars\"" and wait for atleast 10 min to finish provisioning.
     ![terraform_apply_1](./images/terraform_apply_1.png)
     ![terraform_apply_2](./images/terraform_apply_2.png)
+    ![terraform_apply_3](./images/terraform_apply_3.png)
  12) Destroy the terraform configuration resources via "terraform destory".
 
 ## Acknowledgements
