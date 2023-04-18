@@ -21,6 +21,24 @@ Prerequisites
 
 ## Task 1: Installation
 
+This is a Terraform configuration that deploys the MuShop basic sample application on [Oracle Cloud Infrastructure][oci] and is designed to run using only the Always Free tier resources.
+
+The repository contains the application code as well as the [Terraform][tf] code to create a [Resource Manager][orm] stack, that creates all the required resources and configures the application on the created resources. To simplify getting started, the Resource Manager Stack is created as part of each [release](https://github.com/oracle-quickstart/oci-cloudnative/releases)
+
+The steps below guide you through deploying the application on your tenancy using the OCI Resource Manager.
+
+1. Download the latest [`mushop-basic-stack-latest.zip`](../../releases/latest/download/mushop-basic-stack-latest.zip) file.
+2. [Login](https://cloud.oracle.com/resourcemanager/stacks/create) to Oracle Cloud Infrastructure to import the stack
+    > `Home > Developer Services > Resource Manager > Stacks > Create Stack`
+3. Upload the `mushop-basic-stack-latest.zip` file that was downloaded earlier, and provide a name and description for the stack
+4. Configure the stack
+   1. **Database Name** - You can choose to provide a database name (optional)
+   2. **Node Count** - Select if you want to deploy one or two application instances.
+   3. **SSH Public Key** - (Optional) Provide a public SSH key if you wish to establish SSH access to the compute node(s).
+5. Review the information and click Create button.
+   > The upload can take a few seconds, after which you will be taken to the newly created stack
+6. On Stack details page, click on `Terraform Actions > Apply`
+
 Landing Zone Topology Details
 
 ![Topology](.//images/mushop-topology.png)
