@@ -1,0 +1,56 @@
+{
+  "workshoptitle": "Protect your business using OCI Full Stack Disaster Recovery",
+  "help": "livelabs-help-db-us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Get Started",
+      "description": "Login to Oracle Cloud",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+    },
+    {
+      "title": "Introduction",
+      "description": "Introduction to OCI Full Stack Disaster Recovery and workshop",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Lab 1: Prepare environments",
+      "description": "Prepare environments",
+      "filename": "../../pre-switchover/pre-switchover.md"
+    },
+    {
+      "title": "Lab 2: Create and Associate DRPG",
+      "description": "Create and Associate DRPG",
+      "filename": "../../drpg-setup/drpg-setup.md"
+    },
+    {
+      "title": "Lab 3: Add members to DRPG",
+      "description": "Add members to DRPG",
+      "filename": "../../drpg-members/drpg-members.md"
+    },
+    {
+      "title": "Lab 4: Create DR Switchover plan",
+      "description": "Create DR Switchover plan",
+      "filename": "../../switchover-plan/switchover-plan.md"
+    },
+    {
+      "title": "Lab 5: Perform prechecks and break MuShop app" ,
+      "description": "Perform prechecks and break MuShop app",
+      "filename": "../../switchover-prechecks/switchover-prechecks.md"
+    },
+    {
+      "title": "Lab 6: Perform Switchover",
+      "description": "Perform Switchover",
+      "filename": "../../switchover-execute/switchover-execute.md"
+    },
+    {
+      "title": "Lab 7: Post Switchover tasks",
+      "description": "Post Switchover tasks",
+      "filename": "../../post-switchover/post-switchover.md"
+    },
+    {
+      "title": "Oracle CloudWorld 2022 - Get Help",
+      "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
+    }
+  ]
+}
+
