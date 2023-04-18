@@ -27,7 +27,7 @@ The repository contains the application code as well as the [Terraform][tf] code
 
 The steps below guide you through deploying the application on your tenancy using the OCI Resource Manager.
 
-1. Download the latest [`mushop-basic-stack-latest.zip`](../../releases/latest/download/mushop-basic-stack-latest.zip) file.
+1. Download the latest [`mushop-basic-stack-latest.zip`](https://github.com/oracle-quickstart/oci-cloudnative/releases/latest/download/mushop-basic-stack-latest.zip) file.
 2. [Login](https://cloud.oracle.com/resourcemanager/stacks/create) to Oracle Cloud Infrastructure to import the stack
     > `Home > Developer Services > Resource Manager > Stacks > Create Stack`
 3. Upload the `mushop-basic-stack-latest.zip` file that was downloaded earlier, and provide a name and description for the stack
