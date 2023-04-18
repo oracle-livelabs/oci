@@ -153,11 +153,12 @@ The tenancy you intend to deploy the OELZ to.
     ![terraform_validate](./images/terraform_validate.png)
  6) Initializes Terraform Configuration files via "terraform init".
     ![terraform_init](./images/terraform_init.png)
- 8) Preview the changes that Terraform will to make to your infrastructure via "terraform plan".
+ 8) Preview the changes that Terraform will to make to your infrastructure via "terraform plan -var-file=\"livelab.tfvars\"".
     ![terraform_plan_1](./images/terraform_plan_1.png)
     ![terraform_plan_2](./images/terraform_plan_2.png)
- 10) Executes the changes defined by your Terraform configuration to create, update, or destroy resources via "terraform apply".
- 11) Destroy the terraform configuration resources via "terraform destory".
+ 10) Executes the changes defined by your Terraform configuration to create or update resources via "terraform apply -var-file=\"livelab.tfvars\"" and wait for atleast 10 min to finish provisioning.
+     
+ 12) Destroy the terraform configuration resources via "terraform destory".
 
 ## Acknowledgements
 ---
