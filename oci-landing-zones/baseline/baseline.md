@@ -161,7 +161,8 @@ The tenancy you intend to deploy the OELZ to.
     ![terraform_apply_2](./images/terraform_apply_2.png)
     ![terraform_apply_3](./images/terraform_apply_3.png)
  8) Destroy the terraform configuration resources via "terraform destroy -var-file=\"livelab.tfvars\"".
-
+    ![terraform_destroy_1](./images/terraform_destroy_1.png)
+    ![terraform_destroy_2](./images/terraform_destroy_2.png)
 ## Acknowledgements
 ---
 * **Author** - LiveLabs Team
