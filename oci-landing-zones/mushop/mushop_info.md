@@ -55,7 +55,6 @@ The steps below guide you through deploying the application on your tenancy usin
    ![mushop_stack_state_get_info](.//images/mushop-stack-get-information.png)
    ![mushop_stack_app_info](.//images/mushop-app-information.png)
 
-## Task 2: Deployment Resource Management
 
 * VCN Details
 Hamburger > Networking > Virtual Cloud Networks
@@ -71,24 +70,27 @@ Hamburger > Networking > Load Balancers
 
 * Note: in case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources.
 
-## Task 3: Cleanup
+## Task 3: Delete Mushop Application 
 
 With the use of Terraform, the Resource Manager stack is also responsible for terminating the application.
 
 Follow these steps to completely remove all provisioned resources:
 
-* Return to the Oracle Cloud Infrastructure Console
-    Home > Developer Services > Resource Manager > Stacks
-* Select the stack created previously to open the Stack Details view
+* Return to the Oracle Cloud Infrastructure Console and go to `Home > Developer Services > Resource Manager > Stacks`. Select the Mushop Stack.
 * From the Stack Details, select Terraform Actions > Destroy
-
-![MuShop Delete](.//images/mushop-delete.png)
-
+    ![mushop_delete_stack](.//images/mushop-delete-stack.png)
 * Confirm the Destroy job when prompted
+    ![mushop_destroy_confirm](.//images/mushop-destroy-confirm)
+* The job status will be In Progress while resources are terminated. 
+    ![mushop_destroy_in_progress](.//images/mushop-destroy-in-progress)
+    ![mushop_destroy_in_progress_check](.//images/mushop-destroy-in-progress-check)
+* Once the destroy job has succeeded, return to the Stack Details page and Click Delete Stack and confirm when prompted
+    ![mushop_destroy_complete](.//images/mushop-destroy-complete)
+    ![mushop_stack_delete](.//images/mushop-stack-delete)
+    ![mushop_stack_delete_confirm](.//images/mushop-stack-delete-confrim)
 
-The job status will be In Progress while resources are terminated
-Once the destroy job has succeeded, return to the Stack Details page
-Click Delete Stack and confirm when prompted
+
+
 
 ## Task 4: Known Issue 
 
