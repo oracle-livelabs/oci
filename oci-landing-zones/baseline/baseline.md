@@ -88,7 +88,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 5.5  Enter Network Variables
     ![Network Vars](./images/baseline_network_variables.png)
 5.6  Enter Tagging Variables
-    ![Tagging Vars](./images/baseline_tagging_variables.png)
+    ![Tagging Vars](./images/baseline_tagging_varibales.png)
 
     * The tag fields correspond to freeform tags that are applied to resources created within the template. These can be used to identify the cost center and location of the resources. Each resource created is also given a default assigned value for the Description tag.
     * The parent compartment and other compartment name variables are used to rename the compartment structure. This includes the parent level compartment, security, network, and workload-specific compartments.
