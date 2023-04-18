@@ -39,7 +39,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 1. Open up Resource Manager service. You can click directly on Resource Manager in the navigation path menu, otherwise, Go back to the main Navigation Menu -> Developer Services -> Resource Manager.
 
 2. In the stack section, click create stack and choose template as the origin of the Terraform configuration.
-    ![Create Stack](./images/create-stack.png)
+    ![Create Stack](./images/baseline_create_stack_1.png)
 
 3. Click select template and click on the Enterprise scale baseline landing zone under the architecture tab.
     ![Select Orm Template](./images/browse-orm-templates.png)
