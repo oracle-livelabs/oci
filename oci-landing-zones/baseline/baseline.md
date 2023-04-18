@@ -36,9 +36,11 @@ In this lab, you can deploy OLEZ stack via 2 method(use one)
 ---
 The first step is to create a OCI Resource Manager Stack. The Stack is a collection of Oracle Cloud Infrastructure resources corresponding to a given Terraform configuration. Each stack resides in the compartment you specify, in a single region; however, resources on a given stack can be deployed across multiple regions. An OCID (unique identifier) is assigned to each stack.
 
-1. Open up Resource Manager service. You can click directly on Resource Manager in the navigation path menu, otherwise, Go back to the main Navigation Menu -> Developer Services -> Resource Manager.
+1. Download the latest [`oelz`](https://github.com/oracle-quickstart/oci-landing-zones/tree/master) file.
+2. [Login](https://cloud.oracle.com/resourcemanager/stacks/create) to Oracle Cloud Infrastructure.
+3. Import the stack `Home > Developer Services > Resource Manager > Stacks > Create Stack`
 
-2. In the stack section, click create stack and choose template as the origin of the Terraform configuration.
+4. In the stack section, click create stack and choose template as the origin of the Terraform configuration.
     |Varibale Name|Value|
     |--|--|
     |Parent compartment name|`OELZ_Demo`|
@@ -47,34 +49,34 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     
     ![Create Stack](./images/baseline_create_stack_1.png)
 
-3. Click on the zip file and select the saved zip file.
+4. Click on the zip file and select the saved zip file.
     ![Select Orm Template](./images/baseline_selectfile.png)
     
-4. Click on next button.
+5. Click on next button.
     
     
-5. Configure Variables. Most of the default value are pre-defined , only the default domain email need to updated. 
+6. Configure Variables. Most of the default value are pre-defined , only the default domain email need to updated. 
     
-5.1  Enter IAM Variables : IAM lets you control who has access to specific cloud resources and what type of access a group of users can have. The OELZ provisions IAM groups with established roles and access levels. The group names listed are the default names but can be overridden by updating using the Terraform variables. 
+6.1  Enter IAM Variables : IAM lets you control who has access to specific cloud resources and what type of access a group of users can have. The OELZ provisions IAM groups with established roles and access levels. The group names listed are the default names but can be overridden by updating using the Terraform variables. 
     ![IAM Vars](./images/baseline_iam_variables.png)
-5.2  Enter Identity Variables : The identity module is responsible for creating the identity domain "free", federation and the resources related to the domain.The identity module will create the identity domain,users, groups and policies.
+6.2  Enter Identity Variables : The identity module is responsible for creating the identity domain "free", federation and the resources related to the domain.The identity module will create the identity domain,users, groups and policies.
     ![Identity Vars](./images/baseline_identity_variables.png)
-5.3  Enter Security Variables : Enter Security variables for Bastion.
+6.3  Enter Security Variables : Enter Security variables for Bastion.
     ![Security Vars](./images/baseline_security_variables.png)
-5.4  Enter Budget Variables : The budgets module is responsible for deploying the budget component in an environment.
+6.4  Enter Budget Variables : The budgets module is responsible for deploying the budget component in an environment.
     ![Budget Vars](./images/baseline_budget_variables.png)
-5.5  Enter Network Variables : Network module  will deploy a type of network called "hub & spoke" that will allow the various workloads to interconnect with each other. 
+6.5  Enter Network Variables : Network module  will deploy a type of network called "hub & spoke" that will allow the various workloads to interconnect with each other. 
     ![Network Vars](./images/baseline_network_variables.png)
-5.6  Enter Tagging Variables : Tagging allows you to add metadata to resources, which enables you to define keys and values and associate them with resources.
+6.6  Enter Tagging Variables : Tagging allows you to add metadata to resources, which enables you to define keys and values and associate them with resources.
     ![Tagging Vars](./images/baseline_tagging_variables.png)
     
 
-6. Create the Stack.
+7. Create the Stack.
     ![Stack Creation Step](./images/baseline_stack_deployment.png)
     
-7. Wait for the atleast ten minutes and then the Stack Jobs Status. 
+8. Wait for the atleast ten minutes and then the Stack Jobs Status. 
 
-8. Gather the Provisioned Resources OCID Value. 
+9. Gather the Provisioned Resources OCID Value. 
     * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output 
 
 
