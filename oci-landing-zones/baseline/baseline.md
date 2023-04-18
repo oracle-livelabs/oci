@@ -99,14 +99,17 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 8. Gather the Provisioned Resources OCID Value. 
     * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output 
 
-### Verfication
+### Verification
 ---
 
 
 ## Task 2: Create OELZ stack via CLI
 ---
 ### Prerequisites
-
+To deploy the OELZ from the terraform cli you will need the following prerequisites.
+- [Latest Version of Terrafom](https://developer.hashicorp.com/terraform/downloads)
+- [OCI Terraform provider](https://registry.terraform.io/providers/oracle/oci/latest/docs) v4.109.0 or later
+- [oci - cli](https://github.com/oracle/oci-cli)
 
 ## Acknowledgements
 ---
