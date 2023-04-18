@@ -122,7 +122,7 @@ tenancy=ocid1.xxxxxx.xxxxxx.xxxxxx..... #tenancy ocid
 region=us-phoenix-1 #or desired region
 key_file=<path to your private keyfile> # TODO
 ```
-
+1) Download the application files from the [oelz_github](https://github.com/oracle-quickstart/oci-landing-zones/tree/master).
 ## Region
 The OELZ should be deployed to the tenancy's Home Region.
 
