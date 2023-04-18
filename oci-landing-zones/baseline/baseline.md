@@ -63,12 +63,15 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     |home_compartment_name|`LIVELAB-OCI-CMP-HOME`|
     |prod_cost_center_tagging|`LIVELAB_COST_TAG`|
     |prod_geo_location_tagging|`LIVELAB_GEO_TAG`|
-    |prod_enable_tagging|10.0.0.0/16|
-    |VCN DNS label|vcn|
-    |Shared service subnet CIDR block|10.0.6.0/24|
-    |Shared service subnet DNS label|shared|
+    |prod_enable_internet_gateway_hub|`true`|
+    |prod_enable_nat_gateway_hub|`true`|
+    |prod_enable_service_gateway_hub|`true`|
+    |prod_enable_nat_gateway_spoke|`true`|
+    |prod_enable_service_gateway_spoke|`true`|
+    |prod_hub_vcn_cidr_block|10.1.0.0/16|
+    |prod_hub_public_subnet_cidr_block|10.1.1.0/24|
+    |prod_hub_private_subnet_cidr_block|10.1.2.0/24|
     |Bastion client CIDR block allow list|10.0.0.0/16, 10.0.0.0/24|
-    |Bastion subnet CIDR block|10.0.7.0/24|
     |Use IPsec DRG?|Check the Box|
     |CPE IP address|10.0.0.0|
     |IPsec connection static routes|10.0.1.0/24|
