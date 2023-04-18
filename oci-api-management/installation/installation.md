@@ -52,105 +52,107 @@ Estimated time: 20 min
 
 First, let's create an Autonomous database.
 
-Go the menu
-- Oracle Database
-- Autonomous Database
+1. Go the menu
+    - Oracle Database
+    - Autonomous Database
 
-    ![ATP1](images/apim-atp.png)
+        ![ATP1](images/apim-atp.png)
 
-Click *Create Autonomous Database*
-- Compartment : *Your Favorite Compartment*
-- Display Name: *APIDB*
-- Database Name: *APIDB* 
-- Workload: *Transaction Processing*
-- Deployment: *Shared Infrastructure*
-- Password: ex: *LiveLab\_\_123* (Take note of it: ##DB\_PASSWORD##)
-- Network: Keep *Secure Access from Everywhere*
-- Licence: *BYOL or Licence Included*
-- Then *Create Autonomous Database*
+2. Click *Create Autonomous Database*
+    - Compartment : *Your Favorite Compartment*
+    - Display Name: *APIDB*
+    - Database Name: *APIDB* 
+    - Workload: *Transaction Processing*
+    - Deployment: *Shared Infrastructure*
+    - Password: ex: *LiveLab\_\_123* (Take note of it: ##DB\_PASSWORD##)
+    - Network: Keep *Secure Access from Everywhere*
+    - Licence: *BYOL or Licence Included*
+    - Then *Create Autonomous Database*
 
-    ![ATP2](images/apim-atp2.png)
+        ![ATP2](images/apim-atp2.png)
 
 ## Task 2: Create the Database User
 
-In the page of the Autonomous Database,
-- Click on *Database Actions*
-- If you get a prompt asking for an user/password, enter ADMIN/##DB\_PASSWORD##
-- Then *SQL*
+1. Go to the SQL interface
+    In the page of the Autonomous Database,
+    - Click on *Database Actions*
+    - If you get a prompt asking for an user/password, enter ADMIN/##DB\_PASSWORD##
+    - Then *SQL*
 
-    ![Database Actions](images/apim-sql0.png)
+        ![Database Actions](images/apim-sql0.png)
 
-- Run the following SQL to create the user API.
-- Replace the password in the schema creation to your own (to make it easy, let's use the same than ADMIN ##DB_PASSWORD##) 
+2. Run the following SQL to create the user API.
+    - Replace the password in the schema creation to your own (to make it easy, let's use the same than ADMIN ##DB_PASSWORD##) 
 
-    ```
-    <copy>
-    grant connect, resource, unlimited tablespace, create view to API identified by ##DB_PASSWORD##
-    /
-    GRANT execute ON dbms_cloud_oci_ag_deployment_list_deployments_response_t TO API;
-    GRANT execute ON dbms_cloud_oci_apigateway_deployment_collection_t TO API;
-    GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_tbl TO API;
-    GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_t TO API;
-    GRANT execute ON DBMS_CLOUD_OCI_AG_DEPLOYMENT TO API;
-    GRANT execute ON DBMS_CLOUD TO API;
-    GRANT execute on DBMS_NETWORK_ACL_ADMIN to API;
-    /
-    BEGIN
-    ORDS.enable_schema(
-        p_enabled             => TRUE,
-        p_schema              => 'API',
-        p_url_mapping_type    => 'BASE_PATH',
-        p_url_mapping_pattern => 'apim',
-        p_auto_rest_auth      => FALSE
-    );
-    COMMIT;
-    end;
-    /
-    </copy>
-    ```
+        ```
+        <copy>
+        grant connect, resource, unlimited tablespace, create view to API identified by ##DB_PASSWORD##
+        /
+        GRANT execute ON dbms_cloud_oci_ag_deployment_list_deployments_response_t TO API;
+        GRANT execute ON dbms_cloud_oci_apigateway_deployment_collection_t TO API;
+        GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_tbl TO API;
+        GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_t TO API;
+        GRANT execute ON DBMS_CLOUD_OCI_AG_DEPLOYMENT TO API;
+        GRANT execute ON DBMS_CLOUD TO API;
+        GRANT execute on DBMS_NETWORK_ACL_ADMIN to API;
+        /
+        BEGIN
+        ORDS.enable_schema(
+            p_enabled             => TRUE,
+            p_schema              => 'API',
+            p_url_mapping_type    => 'BASE_PATH',
+            p_url_mapping_pattern => 'apim',
+            p_auto_rest_auth      => FALSE
+        );
+        COMMIT;
+        end;
+        /
+        </copy>
+        ```
 
-    ![APEX Installation](images/apim-sql1.png)
+        ![APEX Installation](images/apim-sql1.png)
 
 
 ## Task 3: Install the APEX program
 
 Back to page of the Autonomous Database,
-- Click again on *Database Actions*
+1. Go to APEX. Click again on *Database Actions*
 
     ![APEX Installation](images/apim-apex0.png)
 
-- Click *APEX*
-- First note the URL of APEX, we need the Apex Host Name (##APEX_HOST##) later in the lab (Ex: abcdefghijk-db123.adb.eu-frankfurt-1.oraclecloudapps.com) 
-- In Administration Service, enter the DB password (##DB_PASSWORD##)
-- Click *Sign In to Administration*
+    - Click *APEX*
+2. Note the URL of APEX, we need the Apex Host Name (##APEX_HOST##) later in the lab (Ex: abcdefghijk-db123.adb.eu-frankfurt-1.oraclecloudapps.com) 
+3. In Administration Service, enter the DB password (##DB_PASSWORD##)
+    - Click *Sign In to Administration*
 
-    ![APEX Installation](images/apim-apex1.png)
+        ![APEX Installation](images/apim-apex1.png)
 
-- Click *Create Workspace*
+    - Click *Create Workspace*
 
-    ![APEX Installation](images/apim-apex2.png)
+        ![APEX Installation](images/apim-apex2.png)
 
-- Click *Existing Schema*
+    - Click *Existing Schema*
 
-    ![APEX Create Workspace](images/apim-apex3.png)
+        ![APEX Create Workspace](images/apim-apex3.png)
 
-- Database User *API*
-- Workspace Name *API*
-- Workspace Username *API*
-- Workspace Password ex: *LiveLab\_\_123* (##DB\_PASSWORD##)
-- Click *Create Workspace*
+    - Database User *API*
+    - Workspace Name *API*
+    - Workspace Username *API*
+    - Workspace Password ex: *LiveLab\_\_123* (##DB\_PASSWORD##)
+    - Click *Create Workspace*
 
-    ![APEX Create Workspace](images/apim-apex4.png)
+        ![APEX Create Workspace](images/apim-apex4.png)
 
-- Click on your top right icon. Then *Sign-out*
-- In the APEX login page
-    - Workspace: *API*
-    - Database User: *API*
-    - Password: See ##DB\_PASSWORD##
-    - Click *Sign In*
-- In Apex, 
-    - Click Menu *App Builder*
-    - *Import*
+    - Click on your top right icon. Then *Sign-out*
+
+4. In the APEX login page
+        - Workspace: *API*
+        - Database User: *API*
+        - Password: See ##DB\_PASSWORD##
+        - Click *Sign In*
+    - In Apex, 
+        - Click Menu *App Builder*
+        - *Import*
  
     ![APEX Installation](images/apim-apex5.png)
 
@@ -168,13 +170,13 @@ We have now a running API Management Portal but it is empty.
 ## Task 4: Test the empty installation
 
 We have now a running API Management Portal but it is empty.
-- Login *API* / Password - See ##DB_PASSWORD##
+1. Login *API* / Password - See ##DB_PASSWORD##
 
     ![Login](images/apim-apex-login.png)
 
     Note the URL ##PORTAL_URL##. Ex: https://xxxxx-apidb.adb.eu-frankfurt-1.oraclecloudapps.com/ords/r/api/apimgt/portal
 
-- In the next Lab, we will populate the Portal with APIs.
+2. In the next Lab, we will populate the Portal with APIs.
 
     ![Empty](images/apim-apex-empty.png)
 

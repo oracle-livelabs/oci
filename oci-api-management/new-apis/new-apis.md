@@ -17,9 +17,10 @@ Estimated time: 20 min
 ## Task 1: Add new APIs written with Cloud Native
 
 ### 1. Download Source
-- Go to Oracle Cloud Home page
-- Go to Cloud Shell.
-- When the shell is started, clone the git repository in the shell:
+
+1. Go to Oracle Cloud Home page
+2. Go to Cloud Shell.
+3. When the shell is started, clone the git repository in the shell:
   
     ```
     <copy>
