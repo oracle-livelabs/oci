@@ -54,28 +54,6 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     
     
 5. Configure Variables. Most of the default value are pre-defined , only the default domain email need to updated. 
-
-* Sample Variable Values Used  
-    |Defination|Variable|Value|
-    |--|--|--|
-    ||resource_label|`Example_tag_cost_center`|
-    ||prod_domain_admin_email|`example@domain.com`|
-    ||home_compartment_name|`LIVELAB-OCI-CMP-HOME`|
-    ||prod_cost_center_tagging|`LIVELAB_COST_TAG`|
-    ||prod_geo_location_tagging|`LIVELAB_GEO_TAG`|
-    ||prod_enable_internet_gateway_hub|`true`|
-    ||prod_enable_nat_gateway_hub|`true`|
-    ||prod_enable_service_gateway_hub|`true`|
-    ||prod_enable_nat_gateway_spoke|`true`|
-    ||prod_enable_service_gateway_spoke|`true`|
-    ||prod_hub_vcn_cidr_block|10.1.0.0/16|
-    ||prod_hub_public_subnet_cidr_block|10.1.1.0/24|
-    ||prod_hub_private_subnet_cidr_block|10.1.2.0/24|
-    ||prod_spoke_vcn_cidr|10.1.2.0/24|
-    ||prod_spoke_subnet_web_cidr_block|10.1.2.0/24|
-    ||prod_spoke_subnet_app_cidr_block|10.1.2.0/24|
-    ||prod_spoke_subnet_db_cidr_block|10.1.2.0/24|
-    ||Bastion client CIDR block allow list|10.0.0.0/16, 10.0.0.0/24|
     
 5.1  Enter IAM Variables : IAM lets you control who has access to specific cloud resources and what type of access a group of users can have. The OELZ provisions IAM groups with established roles and access levels. The group names listed are the default names but can be overridden by updating using the Terraform variables. 
     ![IAM Vars](./images/baseline_iam_variables.png)
@@ -122,12 +100,50 @@ tenancy=ocid1.xxxxxx.xxxxxx.xxxxxx..... #tenancy ocid
 region=us-phoenix-1 #or desired region
 key_file=<path to your private keyfile> # TODO
 ```
-1) Download the application files from the [oelz_github](https://github.com/oracle-quickstart/oci-landing-zones/tree/master).
 ## Region
 The OELZ should be deployed to the tenancy's Home Region.
 
 ## Tenancy
 The tenancy you intend to deploy the OELZ to.
+
+1) Clone the OELZ Terraform templates from the [oelz_github](https://github.com/oracle-quickstart/oci-landing-zones/tree/master).
+2) Go to Directory landing-zones/templates/freetrial-landing-zone.
+3) Configure Variables on the file landing-zones/templates/freetrial-landing-zone/livelab.tfvars and save the file.
+
+* Variables Values Used. 
+    |Variable|Value|
+    |--|--|
+    |resource_label|`LIVELAB_ALERT`|
+    |enable_compartment_delete|`false`|
+    |prod_domain_admin_email|`example@domain.com`|
+    |home_compartment_name|`LIVELAB-OCI-CMP-HOME`|
+    |enable_cloud_guard|`false`|
+    |cloud_guard_target_tenancy|`false`|
+    |prod_enable_bastion|`true`|
+    |prod_bastion_client_cidr_block_allow_list|10.0.0.0/16, 10.0.0.0/24|
+    |prod_budget_alert_rule_message|`LIVELAB_ALERT`|
+    |prod_budget_alert_rule_threshold|`1000000`|
+    |prod_budget_amount|`10000000`|
+    |prod_enable_budget|`true`|
+    |is_create_alarms|`false`|
+    |domain_license_type|`free`|
+    |onboard_log_analytics|`false`|
+    |prod_enable_vpn|`false`|
+    |prod_cost_center_tagging|`LIVELAB_COST_TAG`|
+    |prod_geo_location_tagging|`LIVELAB_GEO_TAG`|
+    |prod_enable_internet_gateway_hub|`true`|
+    |prod_enable_nat_gateway_hub|`true`|
+    |prod_enable_service_gateway_hub|`true`|
+    |prod_enable_nat_gateway_spoke|`true`|
+    |prod_enable_service_gateway_spoke|`true`|
+    |prod_hub_vcn_cidr_block|10.1.0.0/16|
+    |prod_hub_public_subnet_cidr_block|10.1.1.0/24|
+    |prod_hub_private_subnet_cidr_block|10.1.2.0/24|
+    |prod_spoke_vcn_cidr|10.1.2.0/24|
+    |prod_spoke_subnet_web_cidr_block|10.1.2.0/24|
+    |prod_spoke_subnet_app_cidr_block|10.1.2.0/24|
+    |prod_spoke_subnet_db_cidr_block|10.1.2.0/24|
+    
 
 ## Acknowledgements
 ---
