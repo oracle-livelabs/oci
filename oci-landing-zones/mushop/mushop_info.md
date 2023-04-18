@@ -48,8 +48,8 @@ The steps below guide you through deploying the application on your tenancy usin
    ![mushop_stack_info](.//images/mushop-stack-info.png)
 
 
-## Task 1: Verify Mushop Application Deployment.
-1) Go to > `Home > Developer Services > Resource Manager > Stacks` and click on the newly created stack and make sure its state is Active.
+## Task 2: Verify Mushop Application Resources Deployment.
+1) Go to `Home > Developer Services > Resource Manager > Stacks` and click on the newly created stack and make sure its state is Active.
    ![mushop_stack_state_info](.//images/mushop-stack-state-info.png)
 2) Click on the newly created mushop stack
    ![mushop_stack_state_get_info](.//images/mushop-stack-get-information.png)
