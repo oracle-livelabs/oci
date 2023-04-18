@@ -87,7 +87,7 @@ Follow these steps to completely remove all provisioned resources:
 * Once the destroy job has succeeded, return to the Stack Details page and Click Delete Stack and confirm when prompted
     ![mushop_destroy_complete](.//images/mushop-destroy-complete.png)
     ![mushop_stack_delete](.//images/mushop-stack-delete.png)
-    ![mushop_stack_delete_confirm](.//images/mushop-stack-delete-confrim.png)
+    ![mushop_stack_delete_confirm](.//images/mushop-stack-delete-confirm.png)
 
 
 
