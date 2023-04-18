@@ -43,7 +43,7 @@ Create an API Management Portal:
 
 This lab assumes you have:
 - An Oracle account
-- Or that you will create one in *Getting Started*
+- Or that you will create one in *Get Started*
 
 ## Acknowledgements 
 
