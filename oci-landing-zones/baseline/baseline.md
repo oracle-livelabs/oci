@@ -36,9 +36,10 @@ In this lab, you can deploy OLEZ stack via 2 method(use one)
 ---
 The first step is to create a OCI Resource Manager Stack. The Stack is a collection of Oracle Cloud Infrastructure resources corresponding to a given Terraform configuration. Each stack resides in the compartment you specify, in a single region; however, resources on a given stack can be deployed across multiple regions. An OCID (unique identifier) is assigned to each stack.
 
-1. Download the latest [`oelz`](https://github.com/oracle-quickstart/oci-landing-zones/tree/master) file.
-2. [Login](https://cloud.oracle.com/resourcemanager/stacks/create) to Oracle Cloud Infrastructure.
-3. Import the stack `Home > Developer Services > Resource Manager > Stacks > Create Stack`
+1. Go to the [`oelz`](https://github.com/oracle-quickstart/oci-landing-zones/tree/master).
+2. Click on Deploy to Oracle Cloud button.
+3. [Login](https://cloud.oracle.com/resourcemanager/stacks/create) to Oracle Cloud Infrastructure.
+4. Import the stack `Home > Developer Services > Resource Manager > Stacks > Create Stack`
 
 4. In the stack section, click create stack and choose template as the origin of the Terraform configuration.
     |Varibale Name|Value|
