@@ -1,4 +1,4 @@
-# Lab 2: Configure Variables for Basic Deployment
+# Configure Variables for Basic Deployment
 
 ## Introduction
 
@@ -12,10 +12,6 @@ In this lab you will:
 
 - Use the Resource Manager GUI to enter variable values
 - Inspect available configuration options for the Landing Zone
-
-### Prerequisites
-
-Previous Labs
 
 ## Task 1: Enter Environment Variables
 

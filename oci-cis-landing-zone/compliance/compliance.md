@@ -1,4 +1,4 @@
-# Lab 5: Run CIS Compliance Checker Script
+# Run CIS Compliance Checker Script
 
 ## Introduction
 
