@@ -77,9 +77,6 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 8. Gather the Provisioned Resources OCID Value. 
     * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output 
 
-### Verification
----
-
 
 ## Task 2: Create OELZ stack via CLI
 ---
@@ -163,6 +160,16 @@ The tenancy you intend to deploy the OELZ to.
  8) Destroy the terraform configuration resources via "terraform destroy -var-file=\"livelab.tfvars\"".
     ![terraform_destroy_1](./images/terraform_destroy_1.png)
     ![terraform_destroy_2](./images/terraform_destroy_2.png)
+
+### Task 3: Verify OELZ Resources
+---
+
+1) Go to Hamburger-->Identity & Security-->Compartments and click on "LIVELAB-OCI-CMP-HOME" compartment and you can see the compartment struture defined on the introduction section.
+
+![compartment_1](./images/compartment_view_1.png)
+![compartment_2](./images/compartment_view_2.png)
+
+
 ## Acknowledgements
 ---
 * **Author** - LiveLabs Team
