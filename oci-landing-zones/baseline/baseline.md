@@ -77,46 +77,18 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     ||prod_spoke_subnet_db_cidr_block|10.1.2.0/24|
     ||Bastion client CIDR block allow list|10.0.0.0/16, 10.0.0.0/24|
     
-5.1  Enter IAM Variables
+5.1  Enter IAM Variables : IAM lets you control who has access to specific cloud resources and what type of access a group of users can have. The OELZ provisions IAM groups with established roles and access levels. The group names listed are the default names but can be overridden by updating using the Terraform variables. 
     ![IAM Vars](./images/baseline_iam_variables.png)
-5.2  Enter Identity Variables
+5.2  Enter Identity Variables : The identity module is responsible for creating the identity domain "free", federation and the resources related to the domain.The identity module will create the identity domain,users, groups and policies.
     ![Identity Vars](./images/baseline_identity_variables.png)
-5.3  Enter Security Variables
+5.3  Enter Security Variables : Enter Security variables for Bastion.
     ![Security Vars](./images/baseline_security_variables.png)
-5.4  Enter Budget Variables
+5.4  Enter Budget Variables : The budgets module is responsible for deploying the budget component in an environment.
     ![Budget Vars](./images/baseline_budget_variables.png)
-5.5  Enter Network Variables
+5.5  Enter Network Variables : Network module  will deploy a type of network called "hub & spoke" that will allow the various workloads to interconnect with each other. 
     ![Network Vars](./images/baseline_network_variables.png)
-5.6  Enter Tagging Variables
+5.6  Enter Tagging Variables : Tagging allows you to add metadata to resources, which enables you to define keys and values and associate them with resources.
     ![Tagging Vars](./images/baseline_tagging_variables.png)
-
-    * The tag fields correspond to freeform tags that are applied to resources created within the template. These can be used to identify the cost center and location of the resources. Each resource created is also given a default assigned value for the Description tag.
-    * The parent compartment and other compartment name variables are used to rename the compartment structure. This includes the parent level compartment, security, network, and workload-specific compartments.
-
-    ![Tagging and Compartment Vars](./images/variables-tagging-compartment.png)
-
-2. Enter IAM Vars including break glass user email list. Group name variables can be left as default.
-
-    * The break glass user is an IAM user created with full administrator permissions. Entering a valid email here will create the user and send an email allowing access.
-    * IAM lets you control who has access to specific cloud resources and what type of access a group of users can have. The Baseline Landing Zone provisions IAM groups with established roles and access levels. The group names listed are the default names but can be overridden by updating using the Terraform variables. 
-
-
-3. Enter Networking variables for the VCN and subnet configuration
-
-    * The landing zone provisions a VCN, nat gateway, internet gateway, and shared services subnets. You will need to input cidr blocks and dns labels.
-    * The landing zone also provides options for connectivity using an Ipsec tunnel or a Fastconnect connection. In this lab however, it can remain disabled.
-
-
-4. Enter Security variables for Cloud Guard, Vulnerability Scanning Service, VCN Flow Logging, and Audit Logs.
-
-    * Cloud Guard is an OCI resource that detects misconfigured resources and insecure activity across tenants. It enables security administrators to triage and resolve cloud security issues. Security inconsistencies can be automatically resolved with out-of-the-box security recipes.
-    * VCN Flow Logs for the provisioned VCN subnets can be viewed in the Logging Analytics Dashboard. You can also enter subnet ocids to log traffic for externally created subnets. Audit Logging can also be enabled using the same variable which enables logging and stores them in an archive bucket.
-    * The bastion provides restricted and time-limited access to cloud resources without public-facing endpoints. There are two types of bastion sessions, managed SSH and port forwarding, which depends on the type of target resource. Input the cidr of the bastion subnet as well as the cidr blocks the bastion can connect to.
-
-5. Enter the sample variables for creation of Bastions, Dynamic Routing Gateway(DRG) and Monitoring. 
-
-    ![Bastion Service Variables](./images/landing-zone-baseline-variable-4.png)
-    ![All Stack Variables Snapshot](./images/landing-zone-baseline-variable-6.png)
     
 
 6. Create the Stack.
