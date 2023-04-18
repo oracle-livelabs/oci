@@ -149,6 +149,11 @@ The tenancy you intend to deploy the OELZ to.
     |prod_spoke_subnet_app_cidr_block|10.1.2.0/24|
     |prod_spoke_subnet_db_cidr_block|10.1.2.0/24|
     
+ 4) Validate the changes . Issue the command "terraform validate".
+ 5) Initializes Terraform Configuration files via "terraform init".
+ 6) Preview the changes that Terraform will to make to your infrastructure via "terraform plan".
+ 7) Executes the changes defined by your Terraform configuration to create, update, or destroy resources via "terraform apply".
+ 8) Destroy the terraform configuration resources via "terraform destory".
 
 ## Acknowledgements
 ---
