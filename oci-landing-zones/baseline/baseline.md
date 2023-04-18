@@ -48,11 +48,10 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     ![Create Stack](./images/baseline_create_stack_1.png)
 
 3. Click on the zip file and select the saved zip file.
-    ![Select Orm Template](./images/baseline_stack_2.png)
-    ![Select Orm Template](./images/baseline_stack_3.png)
+    ![Select Orm Template](./images/baseline_selectfile.png)
     
 4. Click on next button.
-    ![Select Orm Template](./images/baseline_selectfile.png)
+    
     
 5. Configure Variables. Most of the default value are pre-defined , only the default domain email need to updated. 
 
