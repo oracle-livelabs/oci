@@ -39,32 +39,31 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 1. Open up Resource Manager service. You can click directly on Resource Manager in the navigation path menu, otherwise, Go back to the main Navigation Menu -> Developer Services -> Resource Manager.
 
 2. In the stack section, click create stack and choose template as the origin of the Terraform configuration.
-    ![Create Stack](./images/baseline_create_stack_1.png)
-
-3. Click select template and click on the Enterprise scale baseline landing zone under the architecture tab.
-    ![Select Orm Template](./images/browse-orm-templates.png)
-
-4. In the Stack Information section, enter:
-
     |Varibale Name|Value|
     |--|--|
-    |Parent compartment name|`LZ_Parent_Demo`|
+    |Parent compartment name|`OELZ_Demo`|
     |Create in Compartment| tenancy (root)|
     |Terraform Version| leave the default option if you have the option to select it|
+    
+    ![Create Stack](./images/baseline_create_stack_1.png)
 
-5. Click on Next in the bottom of the page to go to the `2. Configure variables` page.
+3. Click on the zip file and select the saved zip file.
+    ![Select Orm Template](./images/browse-orm-templates.png)
 
-## Task 2: Configure Variables
+4. Click on next button.
+    ![Select Orm Template](./images/browse-orm-templates.png)
+    
+5. Configure Variables. Most of the default value are pre-defined , only the default domain email need to updated. 
 
-* Sample Variable Values   
+* Sample Variable Values Used  
     |Variable|Value|
     |--|--|
-    |Tag cost center|`Example_tag_cost_center`|
-    |Tag geo location|`Example_tag_geo_location`|
-    |Parent compartment name|`LZ_Parent_Demo`|
-    |Global Resources Control|Check the Box|
-    |Break glass user email list|example@test.com|
-    |VCN CIDR block|10.0.0.0/16|
+    |resource_label|`Example_tag_cost_center`|
+    |prod_domain_admin_email|`example@domain.com`|
+    |home_compartment_name|`LIVELAB-OCI-CMP-HOME`|
+    |prod_cost_center_tagging|`LIVELAB_COST_TAG`|
+    |prod_geo_location_tagging|`LIVELAB_GEO_TAG`|
+    |prod_enable_tagging|10.0.0.0/16|
     |VCN DNS label|vcn|
     |Shared service subnet CIDR block|10.0.6.0/24|
     |Shared service subnet DNS label|shared|
