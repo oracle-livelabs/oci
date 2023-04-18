@@ -80,14 +80,14 @@ Follow these steps to completely remove all provisioned resources:
 * From the Stack Details, select Terraform Actions > Destroy
     ![mushop_delete_stack](.//images/mushop-delete-stack.png)
 * Confirm the Destroy job when prompted
-    ![mushop_destroy_confirm](.//images/mushop-destroy-confirm)
+    ![mushop_destroy_confirm](.//images/mushop-destroy-confirm.png)
 * The job status will be In Progress while resources are terminated. 
-    ![mushop_destroy_in_progress](.//images/mushop-destroy-in-progress)
-    ![mushop_destroy_in_progress_check](.//images/mushop-destroy-in-progress-check)
+    ![mushop_destroy_in_progress](.//images/mushop-destroy-in-progress.png)
+    ![mushop_destroy_in_progress_check](.//images/mushop-destroy-in-progress-check.png)
 * Once the destroy job has succeeded, return to the Stack Details page and Click Delete Stack and confirm when prompted
-    ![mushop_destroy_complete](.//images/mushop-destroy-complete)
-    ![mushop_stack_delete](.//images/mushop-stack-delete)
-    ![mushop_stack_delete_confirm](.//images/mushop-stack-delete-confrim)
+    ![mushop_destroy_complete](.//images/mushop-destroy-complete.png)
+    ![mushop_stack_delete](.//images/mushop-stack-delete.png)
+    ![mushop_stack_delete_confirm](.//images/mushop-stack-delete-confrim.png)
 
 
 
