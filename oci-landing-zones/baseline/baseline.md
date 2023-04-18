@@ -77,8 +77,18 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     ||prod_spoke_subnet_db_cidr_block|10.1.2.0/24|
     ||Bastion client CIDR block allow list|10.0.0.0/16, 10.0.0.0/24|
     
-* Enter Variables
-
+5.1) Enter IAM Variables
+    ![IAM Vars](./images/baseline_iam_variables.png)
+5.2) Enter Identity Variables
+    [IAM Vars](./images/baseline_identity_variables.png)
+5.3) Enter Security Variables
+    [IAM Vars](./images/baseline_security_variables.png)
+5.4) Enter Budget Variables
+    [IAM Vars](./images/baseline_budget_variables.png)
+5.5) Enter Network Variables
+    [IAM Vars](./images/baseline_network_variables.png)
+5.6) Enter Tagging Variables
+    [IAM Vars](./images/baseline_tagging_variables.png)
     * The tag fields correspond to freeform tags that are applied to resources created within the template. These can be used to identify the cost center and location of the resources. Each resource created is also given a default assigned value for the Description tag.
     * The parent compartment and other compartment name variables are used to rename the compartment structure. This includes the parent level compartment, security, network, and workload-specific compartments.
 
