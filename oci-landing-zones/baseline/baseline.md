@@ -56,8 +56,8 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 5. Configure Variables. Most of the default value are pre-defined , only the default domain email need to updated. 
 
 * Sample Variable Values Used  
-    |Variable|Value|
-    |--|--|
+    |Defination|Variable|Value|
+    |--|--|--|
     |resource_label|`Example_tag_cost_center`|
     |prod_domain_admin_email|`example@domain.com`|
     |home_compartment_name|`LIVELAB-OCI-CMP-HOME`|
@@ -71,15 +71,13 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     |prod_hub_vcn_cidr_block|10.1.0.0/16|
     |prod_hub_public_subnet_cidr_block|10.1.1.0/24|
     |prod_hub_private_subnet_cidr_block|10.1.2.0/24|
+    |prod_spoke_vcn_cidr|10.1.2.0/24|
+    |prod_spoke_subnet_web_cidr_block|10.1.2.0/24|
+    |prod_spoke_subnet_app_cidr_block|10.1.2.0/24|
+    |prod_spoke_subnet_db_cidr_block|10.1.2.0/24|
     |Bastion client CIDR block allow list|10.0.0.0/16, 10.0.0.0/24|
-    |Use IPsec DRG?|Check the Box|
-    |CPE IP address|10.0.0.0|
-    |IPsec connection static routes|10.0.1.0/24|
-    |Security Admin Email Endpoints|example@test.com|
-    |Budget Admin Email Endpoints|example@test.com|
-    |Network Admin Email Endpoints|example@test.com|
     
-* Enter Tagging and Compartment Variables
+* Enter Variables
 
     * The tag fields correspond to freeform tags that are applied to resources created within the template. These can be used to identify the cost center and location of the resources. Each resource created is also given a default assigned value for the Description tag.
     * The parent compartment and other compartment name variables are used to rename the compartment structure. This includes the parent level compartment, security, network, and workload-specific compartments.
