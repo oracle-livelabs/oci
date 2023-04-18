@@ -23,6 +23,9 @@ Prerequisites
 
 This is a Terraform configuration that deploys the MuShop basic sample application on [Oracle Cloud Infrastructure][oci] and is designed to run using only the Always Free tier resources.
 
+Mushop Topology Details
+![Topology](.//images/mushop-topology.png)
+
 The repository contains the application code as well as the [Terraform][tf] code to create a [Resource Manager][orm] stack, that creates all the required resources and configures the application on the created resources. To simplify getting started, the Resource Manager Stack is created as part of each [release](https://github.com/oracle-quickstart/oci-cloudnative/releases)
 
 The steps below guide you through deploying the application on your tenancy using the OCI Resource Manager.
@@ -44,39 +47,13 @@ The steps below guide you through deploying the application on your tenancy usin
    > The upload can take a few seconds, after which you will be taken to the newly created stack
    ![mushop_stack_info](.//images/mushop-stack-info.png)
 
-Landing Zone Topology Details
 
-![Topology](.//images/mushop-topology.png)
-
-*	Download the application files from the location https://github.com/oracle-quickstart/oci-cloudnative/releases/latest/download/mushop-basic-stack-latest.zip. 
-*  Login to Oracle Cloud Infrastructure.
-* Create a New Stack under the Resource Manager. 
-    Hamburger > Developer Services > Resource Manager > Stacks > Create Stack
-* Upload the mushop-basic-stack-latest.zip file that was downloaded earlier, and provide a name and description for the stack
-
-![Stack Definition](.//images/mushop-install-1.png)
-
-* Configure the Varibles for the Stack.
-    *	Database Name - You can choose to provide a database name (optional
-    *	SSH Public Key - (Optional) Provide a public SSH key if you wish to establish SSH access to the compute node(s).
-
-![Stack Varible Definition](.//images/mushop-install-2.png)
-
-* Deploy the Stack.
-
-![Stack Deployment Snapshot](.//images/mushop-install-3.png)
-
-* Deployment Logs.
-
-![Stack Deployment Logs Snapshot](.//images/mushop-log.png)
-
-* Verify the Mushop Application Deployment.
-
-![Mushop Application Details](.//images/mushop-application.png)
-
-* Verify the Mushop Application Dashboard.
-
-![Mushop Application DashBoard](.//images/mushop-application-url.png)
+## Task 1: Verify Mushop Application Deployment.
+1) Go to > `Home > Developer Services > Resource Manager > Stacks` and click on the newly created stack and make sure its state is Active.
+   ![mushop_stack_state_info](.//images/mushop-stack-state-info.png)
+2) Click on the newly created mushop stack
+   ![mushop_stack_state_get_info](.//images/mushop-stack-get-information.png)
+   ![mushop_stack_app_info](.//images/mushop-app-information.png)
 
 ## Task 2: Deployment Resource Management
 
