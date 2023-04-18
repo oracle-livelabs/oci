@@ -90,7 +90,6 @@ The OELZ further supports Oracle's Security-First Cloud strategy tenets:
 
 ## Workloads
 
----
 Workloads are the "shell" for you to deploy an application or service into. They provide infrastructure such as a compartment you can place application resources in, user groups to manage the application, network and logging infrastructure, etc. The OELZ will set up one initial workload configuration in prod Environment. Workload Compartment will be used to deploy Mushop Application.
 
 ## Additional Recommended Resources
