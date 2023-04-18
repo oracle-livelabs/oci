@@ -156,13 +156,13 @@ Back to page of the Autonomous Database,
  
     ![APEX Installation](images/apim-apex5.png)
 
-- Go in the files that you have downloaded from Git
-- Choose *apex/apex_apim.sql*
-- Click *Next*
-- Click *Next*
-- Click *Install Application*
-- In Install Application, Click *Next*
-- Click *Install*
+    - Go in the files that you have downloaded from Git
+    - Choose *apex/apex_apim.sql*
+    - Click *Next*
+    - Click *Next*
+    - Click *Install Application*
+    - In Install Application, Click *Next*
+    - Click *Install*
 
 We have now a running API Management Portal but it is empty.
 - Click *Run Application*

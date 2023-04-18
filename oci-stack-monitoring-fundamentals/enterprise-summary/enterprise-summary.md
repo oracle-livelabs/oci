@@ -20,7 +20,7 @@ Estimated time: 10 minutes
 
 ## Task 1: Identify resources that are down across the enterprise
 
-1. Open the navigation menu in the Oracle Cloud console, and select **Observability & Management** > **Stack Monitoring** under **Application Performance Monitoring**.
+1. Open the navigation menu in the Oracle Cloud console, and select **Observability & Management** > **Stack Monitoring** under Application Performance Monitoring.
 
 	![Oracle Cloud console, Navigation Menu](images/1-1-console.png " ")
 
@@ -38,7 +38,7 @@ Estimated time: 10 minutes
 
 	Now that we have identified resources in a down state, let's identify those that are Not Reporting. Not Reporting generally indicates the agent is no longer uploading data. Stack Monitoring updates the status of monitored resources to Not Reporting to inform you there is an issue obtaining the resource's status. Alarms can be configured to notify you when the resource is Down or Not Reporting. 
 
-	Using the Status filter located in the center of the slide-out, update the Status filter from Down to Not reporting. The table now displays all the resources in a Not Reporting state. Clicking a resource name will navigate you to that resource's homepage, where you can leverage the Stack Monitoring resource associations to identify the agent monitoring the resource and navigate to the agent's homepage to troubleshoot. We'll cover navigating to related resources in a later lab. For now, let's return to the Enterprise Summary. Click the Close button in the lower-left corner of the slide-out.
+	Using the Status filter located in the center of the slide-out, update the Status filter from Down to Not reporting. The table now displays all the resources in a Not Reporting state. Clicking a resource name will navigate you to that resource's homepage, where you can leverage the Stack Monitoring resource associations to identify the agent monitoring the resource and navigate to the agent's homepage to troubleshoot. We'll cover navigating to related resources in a later lab. For now, let's return to the Enterprise Summary. Click the **Close** button in the lower-left corner of the slide-out.
 
  	![Stack Monitoring alarm slide-out filtered by resources that are not reporting](images/1-3-ent-sum.png " ")
 
@@ -56,11 +56,9 @@ Estimated time: 10 minutes
 
  	![Status by resource type chart filtered to show only not reporting resources](images/2-2-ent-sum.png " ")
 
- 	If we wish to see a more detailed list of hosts that are not reporting, click the host bar on the left side of the chart. This will invoke a slide-out and display a list of host names, status, and type. From this slide-out, it is simple to update the filter to see other states, and resource types, or simply search for a resource by name. Clicking any resource name within the slide-out will navigate you to that resource's homepage for further troubleshooting.
+ 	If we wish to see a more detailed list of hosts that are not reporting, click the host bar on the left side of the chart. This will invoke a slide-out and display a list of host names, status, and type. From this slide-out, it is simple to update the filter to see other states, and resource types, or simply search for a resource by name. Clicking any resource name within the slide-out will navigate you to that resource's homepage for further troubleshooting. To return to the Enterprise Summary click the **Close** button in the lower-left corner of the slide-out.
 
  	![Status by resource type slide-out, showing only hosts not reporting](images/2-3-ent-sum.png " ")
-
-	To return to the Enterprise Summary click the **Close** button in the lower-left corner of the slide-out.
 
 3. Reset Status by resource type chart
 	
@@ -109,11 +107,13 @@ Estimated time: 10 minutes
 
 	Stack Monitoring makes it easy to troubleshoot any resource type and any metric at any time. All performance charts and tables can be modified or replaced to help identify problems or troubleshoot a specific performance problem. The Enterprise Summary allows you to update a chart to display any two host metrics. If you have concerns regarding network storage latency you can update a scatter plot to Disk Activity and Network Activity to correlate the performance of network read and writes. Alternatively, any scatter-plot or table change can be saved as your default when viewing the Enterprise Summary, by clicking **Save as default**. 
 
+ 	![Enterprise Summary, highlighting the button to save as default](images/4-2-ent-sum.png " ")
+
 2. Scatter plots charts
 
-	Provide a visual representation of the performance of every resource in your enterprise. Using the scatter plot charts you can correlate any two metrics at the same time. For example, you can correlate the IOPS and CPU of an Oracle Database to understand how heavily utilized the database is. This makes it easy to identify if one or more resources are performing differently than the others. For instance, an Oracle Database with a data point at the top right corner represents a busy database, while a data point at the bottom left is idle. If you identify a performance anomaly, clicking on the data point will allow you to review the trend of that metric.
+	The scatter plots provide a visual representation of the performance of every resource in your enterprise. Using the scatter plots you can correlate any two metrics at the same time. For example, you can correlate the IOPS and CPU of an Oracle Database to understand how heavily utilized the database is. This makes it easy to identify if one or more resources are performing differently than the others. For instance, an Oracle Database with a data point at the top right corner represents a busy database, while a data point at the bottom left is idle. If you identify a performance anomaly, clicking on the data point will allow you to review the trend of that metric.
 
- 	![Enterprise Summary, highlighting the button to save as default](images/4-2-ent-sum.png " ")
+ 	![Enterprise Summary, scatter plot charts](images/4-22-ent-sum.png " ")
 
 	Let's review memory the swap utilization of all hosts within this enterprise. Navigate to the **Memory and Swap** chart located under the **Host** tier at the bottom center of the Enterprise Summary. Every monitored host within Stack Monitoring is represented in this chart. You can assess the overall usage of memory and swap across all hosts. You can identify which host is utilizing the most memory and swap and see the majority of hosts are using very little to no swap. If troubleshooting an issue, you can hover over a plot point and see the value of the metrics.
 
@@ -125,7 +125,7 @@ Estimated time: 10 minutes
 
 2. Tables
 
- 	Located on the right-hand side of the page, Tables enable you to quickly identify which hosts or databases have the highest filesystem usage or tablespace usage. By default, **Tables** provide up to the four highest utilized or consumed resources of a given metric. The number of rows displayed can be updated from 4 to 10, 20, or all. Let's review the top 20 most heavily utilized filesystems within the enterprise. Locate the **Filesystem Utilization** chart on the right side under the **Hosts** tier. Click the pencil icon in the top right of the chart. After clicking the pencil, enable the **Advanced** menu items by updating the **Advanced** flag. Enabling the Advanced menu provides access to optional features of a table or chart. Click **Display records** to change the value of rows displayed from 4 to **20**. With the value updated to 20, click **Apply** in the lower left of the slide-out to return to the Enterprise Summary. 
+ 	Located on the right-hand side of the page, **Tables** enable you to quickly identify which hosts or databases have the highest filesystem usage or tablespace usage. By default, Tables provide up to the four highest utilized or consumed resources of a given metric. The number of rows displayed can be updated from 4 to 10, 20, or all. Let's review the top 20 most heavily utilized filesystems within the enterprise. Locate the **Filesystem Utilization** chart on the right side under the **Hosts** tier. Click the pencil icon in the top right of the chart. After clicking the pencil, enable the **Advanced** menu items by updating the **Advanced** flag. Enabling the Advanced menu provides access to optional features of a table or chart. Click **Display records** to change the value of rows displayed from 4 to **20**. With the value updated to 20, click **Apply** in the lower left of the slide-out to return to the Enterprise Summary. 
 
  	![Host filesystem table edit screen, highlighting the count of records to display in the table](images/4-5-ent-sum.png " ")
 
@@ -153,7 +153,7 @@ Estimated time: 10 minutes
 
  	![WebLogic server tier, CPU and Memory Utilization chart highlighting the dimension of heap](images/5-2-ent-sum.png " ")
 
-	You are done reviewing JVM heap utilization, let's reset the Enterprise Summary to the default configuration. To reset the page, locate the **Restore default** link in the left menu bar under **View**. Once clicked, the page will reset to the out-of-the-box configuration. 
+	Once you are done reviewing JVM heap utilization, let's reset the Enterprise Summary to the default configuration. To reset the page, locate the **Restore default** link in the left menu bar under **View**. Once clicked, the page will reset to the out-of-the-box configuration. 
 
  	![Enterprise Summary, highlighting the restore default button](images/5-3-ent-sum.png " ")
 
