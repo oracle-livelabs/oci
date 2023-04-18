@@ -169,6 +169,11 @@ The tenancy you intend to deploy the OELZ to.
 ![compartment_1](./images/compartment_view_1.png)
 ![compartment_2](./images/compartment_view_2.png)
 
+2) Hub VCN : Go to Hamburger-->Networking-->Virtual Cloud Networks(VCN). GO to compartment tab and select the "OCI-ELZ-L-SRD-NET" compartment.
+
+![vcn_1](./images/vcn_1.png)
+![vcn_2](./images/vcn_2.png)
+![vcn_3](./images/vcn_3.png)
 
 ## Acknowledgements
 ---
