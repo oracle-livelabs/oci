@@ -15,12 +15,55 @@ Estimated Time: 20 Minutes
 
 ### Objectives
 
+- Enable Run Commands on all the Compute Instances
 - Create a Switchover plan
 - Customize the Switchover plan - Add PeopleSoft Application Server boot up group
 - Customize the Switchover plan - Add PeopleSoft Process Scheduler Server (Linux) boot up group
 - Customize the Switchover plan - Add PeopleSoft Process Scheduler Server (Windows) boot up group
 - Customize the Switchover plan - Add PeopleSoft Web Server boot up group
 - Customize the Switchover plan - Add PeopleSoft Elastic Search & Kibana Service boot up group
+
+## Task 1: Enable Run Commands on an Instance
+
+   Run command feature will help in exeucting custom boot up scripts as part of the FSDR.
+
+1. Create a dynamic group that includes the instances that you want to allow commands to run on. For example, a rule inside the dynamic group can state:
+
+     ````
+      <copy>any { instance.id = 'ocid1.instance.oc1.phx.<unique_ID_1>', 'ocid1.instance.oc1.phx.<unique_ID_2>' }</copy>
+
+     ````
+  We will create a new dynamic group and add PeopleSoft Application Server Compute Instance, PeopleSoft Process Scheduler (Linux) Compute Instance, PeopleSoft Process Scheduler (Windows) Compute Instance, PeopleSoft Web Server and Elastic Search & Kibana services Compute Instance.
+
+  Login to OCI Console and select *Ashburn* or *Phoenix* region as Dynamic Group will be created at tenancy level.
+
+  Select Migration and Disaster Recovery from the Hamburger menu, then **Identity & Security** -> **Dynamic Group**.
+
+    ![ashburn region dynamic group](./images/ashburn-dynamic-group-home.png)
+
+2. Click on Create Dynamic Group.
+
+   Provide a name for the Dynamic Group.
+
+   Provide a description for the Dyanmic Group.
+
+   Click on Rule Builder.
+
+    ![ashburn region dynamic group create](./images/ashburn-dynamic-group-create.png)
+
+    Change Include instances that match: to **Any of the following**.
+
+    Add one by one OCID's of both *Ashburn* and *Phoenix* regions hosted PeopleSoft Application Server Compute Instance, PeopleSoft Process Scheduler (Linux) Compute Instance, PeopleSoft Process Scheduler (Windows) Compute Instance, PeopleSoft Web Server and Elastic Search & Kibana services Compute Instance.
+
+    ![ashburn region dynamic group rule](./images/ashburn-dynamic-group-rule.png)
+
+    Click on Add Rule.
+
+    Click on Create.
+
+    ![ashburn region dynamic group rule](./images/ashburn-dynamic-group-created.png)
+
+    You will now be able to see all the PeopleSoft Compute Instances of both *Ashburn* and *Phoenix* regions are added in the Dynamic Group.
 
 ## Task 1: Create a Switchover plan
 
@@ -36,90 +79,162 @@ Estimated Time: 20 Minutes
 
   ![drpg home](./images/phoenix-drpg.png)
 
-4. Select the **mushop-phoenix** DRPG and navigate to Plans under the resources section.
+4. Select the **FSCM92-FSDR-Group-Phoenix** DRPG and navigate to Plans under the resources section. Click on Create Plan.
 
   ![drpg dr plan](./images/phoenix-drplan.png)
 
-- Create plan
-- Name as **mushop-app-switchover**
-- Plan type as **Switchover (planned)**
-- Hit Create
+  Provide a name for the Switchover Plan.
+
+  Select Plan type as **Switchover (planned)**.
 
   ![drpg create plan](./images/phoenix-create-drplan.png)
 
-  The plan will start creating; select the plan **mushop-app-switchover**.
+  The plan will start creating.
 
   ![drpg creating plan](./images/phoenix-drplan-creating.png)
 
-  Refresh the DR Plan page if required. You can monitor the request's status in the **Work requests** section under Resources. Within a minute, the plan will get created, and it should be in *active* State.
+  Refresh the DR Plan page if required. You can monitor the request's status in the **Work requests** section under Resources. Within few minutes, the plan will get created, and it should be in *active* State.
 
   ![drpg plan created](./images/phoenix-drplan-created.png)
 
-  Select the **mushop-app-switchover** plan, and you should be able to various built-in plan groups.
+  Select the **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** plan, and you should be able to see the built-in plan groups.
 
   ![drpg plan details](./images/phoenix-drplan-details.png)
 
-  Based on the members we added in both primary and standby DRPG, FSDR created these built-in plans. You can navigate the plan groups to see the various steps created.
+  Based on the members we added in both primary and standby DRPG, FSDR created these built-in plans.
 
-  ![drpg plan more details](./images/phoenix-drplan-moredetails.png)
+- **Built-in Prechecks** - These are the prechecks for the DB switchover.
+- **Switchover Databases (Standby)** - Database switchover.
 
-- Built-in Prechecks - These are prechecks for the app, DB, and volume group switchover
-- Stop Compute Instances (Primary) - Stop app virtual machines in the Ashburn region (primary)
-- Switchover Volume Group (Standby) - Switchover volume group in the phoenix region (standby)
-- Switchover Autonomous Databases (Standby) - Switchover ATP DB from Ashburn to Phoenix region
-- Launch Compute Instances (Standby) - Create app virtual machines in the phoenix region (standby)
-- Terminate Compute Instances (Primary) - Though the group says terminate compute instances, FSDR *will not terminate* the app virtual machines in the primary region.
-- Reverse Volume Group Replication policies (Standby)- Set up reverse volume group replication from Phoenix to Ashburn region.
-- Delete Volume Group (Primary)- Though the group says as delete volume group, we will not delete those in the Ashburn region.
+  ![drpg plan details](./images/phoenix-drplan-detail.png)
 
-## Task 2: Gather Load Balancer OCID's
+## Task 2: Customize the Switchover plan - Add Application Server Boot-up Script
 
-1. As a prerequisite, we need to gather OCIDs (Oracle Cloud Identifier) of load balancers running in the Ashburn (Primary) and Phoenix (Standby) region.
-
-2. Leave the existing DRPG console tabs as running. Now open two new OCI console tabs and ensure you are logged into the auburn region and phoenix region, respectively.
-
-3. From the Hamburger menu, select **Networking**, then **Load Balancers**. Make sure you are logged in to **Ashburn** region.
-  
-  ![ashburn loadbalancer home](./images/loadbalancer-navigate.png)
-
-4. You should have a load balancer with the name **mushop-xxxx**; choose the right compartment assigned to you. Select the three dots on the right end of the load balancer details. Select **Copy OCID** and paste the OCID details safely into any preferred notes. You should have something similar to below
-
- **ocid1.loadbalancer.oc1.iad.aaaaaaaa2t4kwwavlgwghuebrce6mgqm5ewrsj5kscw2t5ncdpxdpo6ztvaq** (**Don't use this**)
-
-  ![ashburn loadbalancer OCID](./images/ashburn-lb-ocid.png)
-
-5. From the Hamburger menu, select **Networking**, then **Load Balancers**. Make sure you are logged in to **Phoenix** region.
-  
-  ![phonenix loadbalancer home](./images/loadbalancer-navigate.png)
-
-6. You should have a load balancer with the name **mushop-xxxx**; choose the right compartment assigned to you. Select the three dots on the right end of the balancer details. Select **Copy OCID** and paste the OCID details safely into any preferred notes. You should have value something similar to below
-
- **ocid1.loadbalancer.oc1.phx.aaaaaaaaqo6sn6xku3vcuiqjb7emuastpzdrd4yrdgozh5g2c3bahwdkhiyq**  (**Don't use this**)
-
-  ![phoenix loadbalancer OCID](./images/phoenix-lb-ocid.png)
-
-
-## Task 3: Customize the Switchover plan- Remove Primary Load Balancer Backends group
-
-1. Use the browser tab where you have created the switchover plan in phoenix region. Create user-defined groups for mushop application switchover. We need to create four user-defined groups. Let's create those. You can do this by selecting **Add group** in the *mushop-app-switchover* plan
+1. Click on Add group.
 
   ![add plan group](./images/phoenix-plangroup-add.png)
 
-2. Add "Remove Primary Load Balancer Backends" User defined group
+2. Add "Start Application Server Domains" User defined group. Click on Add Step.
 
-  - Add *Remove Primary Load Balancer Backends* in Group name
-  - Add *Remove Primary Backend on Node-0* in Step name
-  - Select Error mode as "Stop on error."
+    ![add-app-boot-script](./images/phoenix-add-app-boot-script.png)
+
+  - Add *Start Application Server Domains* in Group name
+  - Add *Boot of Application Server Domains* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - Leave the enabled tick mark
-  - In the region, select "US East (Ashburn)."
+  - In the region, select "US East (Phoenix)"
   - Select the "Run local script" option
-  - Select "mushop-xxxxx-0" instance in "Target instance in compartment"
-  - In script parameters, add the below script
+  - Select application server instance in "Target instance in compartment"
+  - In script parameters, add the location of the application server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
+
+  **#!/bin/bash**
+
+  **cd /u01/app/psoft/fscm92-dbaas-vinay-app/ps\_cfg\_home/appserv/APPDOM01/**
+
+  **rm -rf CACHE**
+
+  **psadmin -c cleanipc -d APPDOM01**
+
+  **psadmin -c purge -d APPDOM01**
+
+  **psadmin -c boot -d APPDOM01**
+
+  - Run as user will be the username who has access to boot Application Server domain
+
+  Click on Add Step.
  
-  ````
-    <copy>/usr/bin/sudo /home/opc/fsdrsscripts/removeFromBackendset.py <REPLACE WITH YOUR OCID></copy>
-  ````
+  Click on Add.
+
+  ![add-app-boot-group](./images/phoenix-add-app-boot-group.png)
+
+## Task 3: Customize the Switchover plan - Add Process Scheduler Server (Linux) Boot-up Script
+    
+1. Click on Add group.
+
+  ![add plan group](./images/phoenix-plangroup-add.png)
+
+2. Add "Start Process Scheduler Domains (Linux)" User defined group. Click on Add Step.
+
+    ![phoenix-add-prcs-linux-boot-script](./images/phoenix-add-prcs-linux-boot-script.png)
+
+  - Add *Start Process Scheduler Domains (Linux)* in Group name
+  - Add *Boot up Process Scheduler Domains (Linux)* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
+  - Leave the default "3600" seconds in Timeout in seconds
+  - In the region, select "US East (Phoenix)"
+  - Select the "Run local script" option
+  - Select process scheduler server instance in "Target instance in compartment"
+  - In script parameters, add the location of the application server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
+
+  **#!/bin/bash**
+
+  **cd /u01/app/psoft/fscm92-dbaas-vinay-prcs/ps_cfg_home/appserv/prcs/PRCSDOM01**
+
+  **rm -rf CACHE**
+
+  **psadmin -p cleanipc -d PRCSDOM01**
+
+  **psadmin -p start -d PRCSDOM01**
+
+  - Run as user will be the username who has access to boot Process Scheduler Server domain
+
+  Click on Add Step.
+ 
+  Click on Add.
+
+    ![add-prcs-linux-boot-group](./images/phoenix-add-prcs-linux-boot-group.png)
+
+## Task 4: Customize the Switchover plan - Add Process Scheduler Server (Windows) Boot-up Script
+    
+1. Click on Add group.
+
+  ![add plan group](./images/phoenix-plangroup-add.png)
+
+2. Add "Start Process Scheduler Domains (Windows)" User defined group. Click on Add Step.
+
+    ![phoenix-add-prcs-windows-boot-script](./images/phoenix-add-prcs-windows-boot-script.png)
+
+  - Add *Start Process Scheduler Domains (Windows)* in Group name
+  - Add *Boot up Process Scheduler Domains (Windows)* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
+  - Leave the default "3600" seconds in Timeout in seconds
+  - In the region, select "US East (Phoenix)"
+  - Select the "Run local script" option
+  - Select process scheduler server instance in "Target instance in compartment"
+  - In script parameters, add the location of the application server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
+
+  **@ECHO OFF**
+
+  **SET TUXDIR=D:\app\psoft\ps\_home\pt\bea\tuxedo\tuxedo12.2.2.0.0\_VS2017**
+
+  **SET PS\HOME=D:\app\psoft\ps_home\pt\ps\_home8.60.03**
+
+  **SET PS\_APP\_HOME=D:\app\psoft\ps\_app\_home\pt\fscm\_app\_home**
+
+  **SET PS\_CFG\_HOME=D:\app\psoft\ps\_cfg\_home\FSCM92**
+
+  **SET PS\_CUST\_HOME=D:\app\psoft\ps\_cust\_home\FSCM92**
+  
+  **d:**
+  
+  **cd D:\app\psoft\ps_home\pt\ps\_home8.60.03\appserv**
+
+  **psadmin.exe -p start -d FSCM92\_PSNT**
+
+  - Run as user will be blank for Windows compute instance.
+
+  Click on Add Step.
+ 
+  Click on Add.
+
+    ![add-prcs-linux-boot-group](./images/phoenix-add-prcs-linux-boot-group.png)
+
+
+
+
 
   **Replace the OCID of the primary (Ashburn) load balancer as per step 2.4; make sure you replace the OCID of your load balancer without fail in the above command,remove angle brackets,note there is space after removeFromBackendset.py**
 
