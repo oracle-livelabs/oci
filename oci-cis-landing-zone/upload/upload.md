@@ -1,14 +1,10 @@
-# Lab 1: Upload Landing Zone Terraform files to Resource Manager
+# Upload Landing Zone Terraform files to Resource Manager
 
 ## Introduction
 
 In this Lab we will upload the files for the OCI CIS Landing Zone from the public GitHub repository into Resource Manager. The process for this is simple.
 
 Estimated Lab Time: 5 minutes
-
-### Prerequisites
-
-None
 
 ### Objectives
 

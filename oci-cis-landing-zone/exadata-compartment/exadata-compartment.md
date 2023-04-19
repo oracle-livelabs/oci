@@ -1,4 +1,4 @@
-# Lab 4: Create Compartment for Exadata
+# Create Compartment for Exadata
 
 ## Introduction
 
@@ -17,10 +17,6 @@ In this lab, you will:
 - Reconfigure Stack Variables
 - Create and validate an updated Plan
 - Apply a Plan in place
-
-### Prerequisites
-
-Previous Labs
 
 ## Task 1: Edit Configurations
 
