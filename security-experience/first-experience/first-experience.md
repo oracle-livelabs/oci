@@ -132,7 +132,7 @@ This lab assumes you have completed previous lab.
 
 Once you are logged in as SECASSESSMENT user, click SQL under Development:
 
-   ![Click SQL](images/click-sql.png "Click SQL")
+   ![Click SQL](images/sql.png "Click SQL")
 
 Enter the following command in the SQL Web Developer (logged in as SECASSESSMENT user):
 
@@ -155,7 +155,7 @@ After the script is completely executed, and you loaded the CSV file in your Aut
 
 1.	On the Autonomous Database dashboard, click on SecAssessments under Instance Name on APEX Instance section:
 
-    ![Click Instance Name](images/click-instance-name.png "Click Instance Name")
+    ![Click Instance Name](images/apex.png "Click Instance Name")
 
 2.	Click Launch APEX.
 
@@ -163,7 +163,7 @@ After the script is completely executed, and you loaded the CSV file in your Aut
 
 3. The log in page for APEX will be prompted and you need to log in as SECASSESSMENT user.
 
-    ![Log in as SECASSESSMENT](images/log-in-as-secassessment.png "Log in as SECASSESSMENT")
+    ![Log in as SECASSESSMENT](images/sign-in-apex.png "Log in as SECASSESSMENT")
 
 4. Once you are logged in, click App Builder and the Security Dashboard application that you installed earlier. Click Run Application.
 
@@ -272,4 +272,4 @@ security_assessment.py  	[-h][-t CONFIG_PROFILE][-p PROXY]
 
 ## Acknowledgements
 * **Authors** - Sonia Yuste (OCI Security Specialist), Damien Rilliard (OCI Security Senior Director) 
-* **Last Updated By/Date** - Sonia Yuste, January 2023
+* **Last Updated By/Date** - Sonia Yuste, April 2023
