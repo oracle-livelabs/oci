@@ -2,12 +2,7 @@
   "workshoptitle": "Full Stack DR Service",
   "help": "livelabs-help-db-us@oracle.com",
   "tutorials": [
-    {
-      "title": "Get Started",
-      "description": "Login to Oracle Cloud",
-      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
-    },
-    {
+   {
       "title": "Introduction",
       "description": "Introduction to Full Stack DR Service and workshop",
       "filename": "../../introduction/introduction.md"

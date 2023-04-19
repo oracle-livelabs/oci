@@ -1,5 +1,40 @@
 # **Protect PeopleSoft Application using Oracle Full Stack Disaster Recovery**
 
+## About the Workshop
+
+In this workshop, we will see how easily Full Stack Disaster Recovery will help to orchestrate DR switchover operations for a PeopleSoft Application deployed in OCI across two OCI regions.
+
+# **Workshop Objectives**
+
+- Verify the status of the PeopleSoft environments in Ashburn (Primary) and Phoenix (Standby) regions for using the FSDR.
+- Create DR Protection groups (DRPG) in Ashburn (Primary) and Phoenix (Standby) regions.
+- Associate Ashburn DRPG as Primary and Phoenix DRPG as Standby.
+- Add members to Ashburn DRPG. Application Virtual machines and DBCS (Database Cloud Services) database.
+- Add members to Phoenix DRPG. Standby DBCS Database.
+- Create and Customize DR Switchover Plan in Phoenix( Standby) DRPG
+- Run DR Switchover Pre-checks in Phoenix( Standby) DRPG
+- Run DR Switchover Plan in Phoenix( Standby) DRPG
+- Verify the PeopleSoft application accessiblity from Phoenix (New Primary) region.
+
+# **Prerequisites**
+
+- An active PeopleSoft applications hosted in Ashburn region (Primary) with below PeopleSoft components.
+    - PeopleSoft Database hosted on OCI Database as a Service (DbaaS) platform / Database Cloud Service(DBCS)
+    - PeopleSoft Application Server domain hosted on Linux
+    - PeopleSoft Process Scheduler domain hosted on Linux
+    - PeopleSoft Process Scheduler domain hosted on Windows
+    - PeopleSoft Web Server domain hosted on Linux
+    - Elastic Search and Kibana services hosted on Linux
+- A standby PeopleSoft applications hosted in Phoenix region (Standby) with below PeopleSoft components.
+    - PeopleSoft Application Server domain hosted on Linux
+    - PeopleSoft Process Scheduler domain hosted on Linux
+    - PeopleSoft Process Scheduler domain hosted on Windows
+    - PeopleSoft Web Server domain hosted on Linux
+    - Elastic Search and Kibana services hosted on Linux
+- Files and folders synchronization enabled between Ashburn (Primary) and Phoenix (Standby) for all customisations and psreports.
+- Load Balancer running in Ashburn (Primary) and Phoenix (Standby) regions.
+- DNS record pointing to public IP of Ashburn (Primary) Load Balancer.
+
 ## Overview of OCI Full Stack Disaster Recovery
 
 Full Stack Disaster Recovery Service is a fully managed OCI disaster recovery orchestration and management service that provides comprehensive disaster recovery capabilities for all layers of an application stack, including infrastructure, middleware, database, and application across  **OCI regions**.
@@ -41,44 +76,9 @@ Full Stack Disaster Recovery provides multiple benefits in the area of business 
 - Executes scalable and reliable complete stack switchover and failover operations with a button.
 - Operates at the service level instead of requiring the customer to manually failover VMs, databases, middleware, applications, storage, and load balancers.
 
-## About the Workshop
-
-In this workshop, we will see how easily Full Stack Disaster Recovery will help to orchestrate DR switchover operations for a PeopleSoft Application deployed in OCI across two OCI regions.
-
 ## Estimated Workshop Time
 
 Approximately 4 hrs
-
-## Workshop Objectives
-
-- Verify the status of the PeopleSoft environments in Ashburn (Primary) and Phoenix (Standby) regions for using the FSDR.
-- Create DR Protection groups (DRPG) in Ashburn (Primary) and Phoenix (Standby) regions.
-- Associate Ashburn DRPG as Primary and Phoenix DRPG as Standby.
-- Add members to Ashburn DRPG. Application Virtual machines and DBCS (Database Cloud Services) database.
-- Add members to Phoenix DRPG. Standby DBCS Database.
-- Create and Customize DR Switchover Plan in Phoenix( Standby) DRPG
-- Run DR Switchover Pre-checks in Phoenix( Standby) DRPG
-- Run DR Switchover Plan in Phoenix( Standby) DRPG
-- Verify the PeopleSoft application accessiblity from Phoenix (New Primary) region.
-
-## Prerequisites
-
-- An active PeopleSoft applications hosted in Ashburn region (Primary) with below PeopleSoft components.
-    - PeopleSoft Database hosted on OCI Database as a Service (DbaaS) platform / Database Cloud Service(DBCS)
-    - PeopleSoft Application Server domain hosted on Linux
-    - PeopleSoft Process Scheduler domain hosted on Linux
-    - PeopleSoft Process Scheduler domain hosted on Windows
-    - PeopleSoft Web Server domain hosted on Linux
-    - Elastic Search and Kibana services hosted on Linux
-- A standby PeopleSoft applications hosted in Phoenix region (Standby) with below PeopleSoft components.
-    - PeopleSoft Application Server domain hosted on Linux
-    - PeopleSoft Process Scheduler domain hosted on Linux
-    - PeopleSoft Process Scheduler domain hosted on Windows
-    - PeopleSoft Web Server domain hosted on Linux
-    - Elastic Search and Kibana services hosted on Linux
-- Files and folders synchronization enabled between Ashburn (Primary) and Phoenix (Standby) for all customisations and psreports.
-- Load Balancer running in Ashburn (Primary) and Phoenix (Standby) regions.
-- DNS record pointing to public IP of Ashburn (Primary) Load Balancer.
 
 ## PeopleSoft Architecture
 
