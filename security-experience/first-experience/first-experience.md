@@ -188,7 +188,7 @@ After the script is completely executed, and you loaded the CSV file in your Aut
 
     As an example, if all services are enabled, you will see something similar to:
   
-    ![Security assessment results](images/results-table.png "Security assessment results")
+    ![Security assessment results](images/security-assessment.png "Security assessment results")
 
     As well, at the bottom of the page you can see a button to be redirected to Oracle contacts page, in case you want to request an Oracle Security Workshop.
     
