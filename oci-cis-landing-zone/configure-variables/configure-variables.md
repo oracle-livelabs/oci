@@ -83,7 +83,7 @@ All are useful tools, but for the sake of starting simple will not be a part of 
 2. __Leave the _Run apply_ button unchecked__.
 ![Apply Button](images/apply-button.png "Leave the apply button unchecked")
 
-3. Click the __Save Changes__ button when finished.
+3. Click the __Create__ button when finished.
 
 Once the Stack configuration is saved, move on to the next lab to continue.
 
