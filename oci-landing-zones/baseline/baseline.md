@@ -38,8 +38,15 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
 1. Go to the [`oelz`](https://github.com/oracle-quickstart/oci-landing-zones/tree/master).
 2. Click on Deploy to Oracle Cloud button.
-3. [Login](https://cloud.oracle.com/resourcemanager/stacks/create) to Oracle Cloud Infrastructure.
-4. Import the stack `Home > Developer Services > Resource Manager > Stacks > Create Stack`
+    ![oelz stack_deploy](./images/oelz-stack-deployment-1.png)
+3. Enter the Tenancy Name and click on next.
+    ![oelz stack_deploy_1](./images/oelz-stack-deployment-2.png)
+4. Select the identity domain and click on next.
+    ![oelz stack_deploy_2](./images/oelz-stack-deployment-3.png)
+5. Provide Tenancy User Credential (make sure user have administrator privilege) and Sign in.
+    ![oelz stack_deploy_3](./images/oelz-stack-deployment-4.png) 
+7. [Login](https://cloud.oracle.com/resourcemanager/stacks/create) to Oracle Cloud Infrastructure.
+8. Import the stack `Home > Developer Services > Resource Manager > Stacks > Create Stack`
 
 4. In the stack section, click create stack and choose template as the origin of the Terraform configuration.
     |Varibale Name|Value|
