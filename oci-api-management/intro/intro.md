@@ -39,6 +39,12 @@ Create an API Management Portal:
     - Cloud Native program 
     - Oracle Integration
 
+### Prerequisites
+
+This lab assumes you have:
+- An Oracle account
+- Or that you will create one in *Get Started*
+
 ## Acknowledgements 
 
 - **Authors**
