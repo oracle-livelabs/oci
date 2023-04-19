@@ -2,210 +2,325 @@
 
 ## Introduction
 
-In this lab, we will add members to the DR Protection groups created and associated in the previous lab. Ashburn is a primary region, and Phoenix is the standby region.
+In this lab, we will add members to the DR Protection groups created and associated in the previous lab. Ashburn is the primary region and Phoenix is the standby region.
 
-Estimated Time: 10 Minutes
-
-Watch the video below for a quick walkthrough of the lab.
-
-[Add members to DRPG](videohub:1_vhwdwhfk)
+Estimated Time: 20 Minutes
 
 ### Objectives
 
 - Add members to Ashburn DRPG (Primary)
 - Add members to Phoenix DRPG (Standby)
 
-In Ashburn (Primary), members to add ATP ( Primary DB), 2 MuShop Compute VM's, 2 Volume groups( Boot volumes of MuShop Compute VM's)
-In Phoenix (Standby), members to add ATP ( Standby DB)
+In Ashburn (Primary) region, members to add are below. 
+ 
+- PeopleSoft Active Database hosted on DbaaS / DBCS platform
+- PeopleSoft Application Server Compute Instance (Linux)
+- PeopleSoft Process Scheduler Server Compute Instance (Linux)
+- PeopleSoft Process Scheduler Server Compute Instance (Windows)
+- PeopleSoft Web Server Compute Instance (Linux)
+- Elastic Search and Kibana Server (Linux)
 
-As part of the MuShop architecture, FSDR will create the MuShop VMs on the fly during the Switchover.
+In Phoenix (Standby), members to add are below.
+
+- PeopleSoft Standby Database hosted on DbaaS / DBCS platform
+- PeopleSoft Application Server Compute Instance (Linux)
+- PeopleSoft Process Scheduler Server Compute Instance (Linux)
+- PeopleSoft Process Scheduler Server Compute Instance (Windows)
+- PeopleSoft Web Server Compute Instance (Linux)
+- Elastic Search and Kibana Server (Linux)
 
 ## Task 1: Add members to Ashburn DRPG (Primary)
 
-1. Login into OCI Console with your provided Credentials. The primary region should be **Ashburn**.
+1. Login into OCI Console. The primary region should be **Ashburn**.
 
-  ![oci console ashburn](./images/ashburn-region.png)
+   ![oci console ashburn](./images/ashburn-region1.png)
 
-2. Select **Migration and Disaster Recovery** from the Hamburger menu, then **Disaster Recovery** -> **DR Protection Groups**. Verify the region in **Ashburn**
+2. Select **Migration and Disaster Recovery** from the Hamburger menu, then **Disaster Recovery** -> **DR Protection Groups**. Verify the region is **Ashburn**
 
-  ![drpg navigation page](./images/ashburn-drpgpage.png)
+   ![drpg navigation page](./images/ashburn-drpgpage1.png)
 
-3. You will land on the Disaster Recovery Protection group home page; make sure you have selected *the Ashburn* region.
+3. You will land on the Disaster Recovery Protection group home page; make sure you have selected *the Ashburn* region. Click on **FSCM92-FSDR-Group-Ashburn** DRPG.
 
-  ![drpg landing page](./images/ashburn-drpg.png)
+   ![drpg landing page](./images/ashburn-drpg1.png)
 
-4. In the Ashburn region DRPG page, add the members required in the **mushop-ashburn** DRPG. *We will add ATP Primary Database, two mushop compute VMs, and two-volume groups for the boot volumes of mushop compute VMs*. Let's add those details.
+  In the Ashburn region DRPG page, add the members required in the **FSCM92-FSDR-Group-Ashburn** DRPG. 
 
-5. Add ATP Primary Database. 
+4. Add Primary DBCS / DbaaS Database. 
 
-Select **mushop-ashburn** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
+  Select **FSCM92-FSDR-Group-Ashburn** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
 
-![drpg add member](./images/ashburn-add-member.png)
+  ![drpg add member](./images/ashburn-add-member.png)
 
-It will show various resource types and select **Autonomous Database**
-![drpg resource type](./images/Ashburn-resource-type.png)
+ - Resource Type is **Database**
+ - Database Type is **Oracle Base Database**
+ - Database System will be PeopleSoft Primary Application Database
+ - Database Home will be auto-popluated
+ - Database will be auto-popluated
+ - Database password secret will be the secret created in Lab 1.
 
-Select the Database in your compartment; it will have MushopDB-XXXXX. Verify it and hit add. Make sure to check the box **"I understand that all existing plans will be deleted"**
+  Make sure to check the box **"I understand that all existing plans will be deleted"**.
 
-![drpg add atp](./images/ashburn-atp-add.png)
+Click on **Add**.
 
-**mushop-ashburn** DRPG status will change to updating; wait for a few seconds. You should see that the ATP database is added as a member. Refresh the DRPG page if required. You can monitor the request's status in the **Work requests** section under Resources.
+   ![ashburn-add-db](./images/ashburn-add-db.png)
 
-![drpg atp added](./images/ashburn-atp-added.png)
+  **FSCM92-FSDR-Group-Ashburn** DRPG status will change to updating; wait for a few seconds. You should see that the database is added as a member. Refresh the DRPG page if required. You can monitor the request's status in the **Work requests** section under Resources.
 
-Navigate back to the DR Protection group page; the status of DRPG should be active.
+  Navigate back to the DR Protection group page; the status of DRPG should be active.
 
-6. Add first Compute instance **mushop-xxxxx-0**
+   ![drpg atp added](./images/ashburn-db-added.png)
 
-Select **mushop-ashburn** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
+6. Add PeopleSoft Application Server Compute instance.
 
-![drpg add member](./images/ashburn-add-member.png)
+  Select **FSCM92-FSDR-Group-Ashburn** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
 
-It will show various resource types and select **Compute**
-![drpg resource type](./images/Ashburn-resource-type.png)
+   ![drpg add member](./images/ashburn-add-member.png)
 
-- Resource Type as Compute
+  It will show various resource types and select **Compute**
+   ![drpg resource type](./images/ashburn-add-app.png)
+
+- Resource Type is **Compute**
 - Make sure to check the box **"I understand that all existing plans will be deleted"**
-- Instances in Compartment, select *mushop-xxxxx-0*
-- Click the checkmark in the Move instance on switchover or failover.
-- Destination compartment, select your compartment name
-- Ignore the Destination dedicated VM host section
-- Click Add VNIC mapping. This will pop up inputs for Add VNIC mapping
-- Select VNIC as *primaryvnic*
-- Destination subnet as *mushop-main-xxxxx*
-- Ignore Network security groups
+- Instances in Compartment, select PeopleSoft Application Server Compute Instance
+- **Uncheck** the checkmark of **Move instance on switchover or failover**.
 - Click Add
 
-  ![drpg compute vnic](./images/ashburn-vnic-node0.png)
+  **FSCM92-FSDR-Group-Ashburn** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that PeopleSoft Application Server compute instance has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
 
-- You should be able to able to add VNIC details, verify and click Add
+   ![drpg compute added](./images/ashburn-app-added.png)
 
-  ![drpg vnic added](./images/ashburn-compute-node0.png)
+  Navigate back to the DR Protection group page; the status of DRPG should be active.
 
-**mushop-ashburn** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that compute instance **mushop-xxxxx-0** has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
+7. Add PeopleSoft Process Scheduler Server Compute instance (Linux).
 
-  ![drpg compute added](./images/ashburn-node0-added.png)
+  Select **FSCM92-FSDR-Group-Ashburn** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
 
-Navigate back to the DR Protection group page; the status of DRPG should be active.
+   ![drpg add member](./images/ashburn-add-member.png)
 
-7. Add second Compute instance **mushop-xxxxx-1**
+  It will show various resource types and select **Compute**
+   ![drpg resource type](./images/ashburn-add-prcs.png)
 
-Select **mushop-ashburn** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
-
-![drpg add member](./images/ashburn-add-member.png)
-
-It will show various resource types and select **Compute**
-![drpg resource type](./images/Ashburn-resource-type.png)
-
-- Resource Type as Compute
+- Resource Type is **Compute**
 - Make sure to check the box **"I understand that all existing plans will be deleted"**
-- Instances in Compartment, select *mushop-xxxxx-1*
-- Click the checkmark in the Move instance on switchover or failover.
-- Destination compartment, select your compartment name
-- Ignore the Destination dedicated VM host section
-- Click Add VNIC mapping. This will pop up inputs for Add VNIC mapping
-- Select VNIC as *primaryvnic*
-- Destination subnet as *mushop-main-xxxxx*
-- Ignore Network security groups
+- Instances in Compartment, select PeopleSoft Process Scheduler Server Compute Instance (Linux)
+- **Uncheck** the checkmark of **Move instance on switchover or failover**
 - Click Add
 
-  ![drpg compute vnic](./images/ashburn-vnic-node1.png)
+  **FSCM92-FSDR-Group-Ashburn** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that PeopleSoft Process Scheduler Server compute instance (Linux) has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
 
-- You should be able to able to add VNIC details, verify and click Add
+  Navigate back to the DR Protection group page; the status of DRPG should be active.
 
-  ![drpg vnic added](./images/ashburn-compute-node1.png)
+  ![drpg compute added](./images/ashburn-prcs-added.png)
 
-**mushop-ashburn** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that compute instance **mushop-xxxxx-1** has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
+8. Add PeopleSoft Process Scheduler Server Compute instance (Windows).
 
-  ![drpg compute added](./images/ashburn-node1-added.png)
+  Select **FSCM92-FSDR-Group-Ashburn** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
 
-Navigate back to the DR Protection group page; the status of DRPG should be active.
+   ![drpg add member](./images/ashburn-add-member.png)
 
-8. Add the first volume group  **mushop-volume-group-0**. This volume group consists of the boot volume of mushop-xxxx-0 VM and has cross-region replication configured to the phoenix region.
+  It will show various resource types and select **Compute**
+   ![drpg resource type](./images/ashburn-add-prcs-win.png)
 
-Select **mushop-ashburn** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
-
-![drpg add member](./images/ashburn-add-member.png)
-
-It will show various resource types and select **Volume group**
-![drpg resource type](./images/Ashburn-resource-type.png)
-
-- Resource Type as Volume Group
+- Resource Type is **Compute**
 - Make sure to check the box **"I understand that all existing plans will be deleted"**
-- Select volume group **mushop-volume-group-0**
-- Verify and add
+- Instances in Compartment, select PeopleSoft Process Scheduler Server Compute Instance (Linux)
+- **Uncheck** the checkmark of **Move instance on switchover or failover**
+- Click Add
 
-  ![drpg add volume group](./images/ashburn-add-vg0.png)
+  **FSCM92-FSDR-Group-Ashburn** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that PeopleSoft Process Scheduler Server compute instance (Windows) has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
 
-**mushop-ashburn** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that volume group **mushop-volume-group-0** has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
+  Navigate back to the DR Protection group page; the status of DRPG should be active.
 
-  ![drpg volume group added](./images/ashburn-vg0-added.png)
+  ![drpg compute added](./images/ashburn-prcs-win-added.png)
 
-Navigate back to the DR Protection group page; the status of DRPG should be active.
+9. Add PeopleSoft Process Web Server Compute instance.
 
-9. Add the second volume group **mushop-volume-group-1**. This volume group consists of the boot volume of mushop-xxxx-1 VM, and it has cross-region replication configured to the phoenix region.
+  Select **FSCM92-FSDR-Group-Ashburn** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
 
-Select **mushop-ashburn** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
+   ![drpg add member](./images/ashburn-add-member.png)
 
-![drpg add member](./images/ashburn-add-member.png)
+  It will show various resource types and select **Compute**
+   ![drpg resource type](./images/ashburn-add-web.png)
 
-It will show various resource types and select **Volume group**
-![drpg resource type](./images/Ashburn-resource-type.png)
-
-- Resource Type as Volume Group
+- Resource Type is **Compute**
 - Make sure to check the box **"I understand that all existing plans will be deleted"**
-- Select volume group **mushop-volume-group-1**
-- Verify and add
+- Instances in Compartment, select PeopleSoft Process Scheduler Server Compute Instance (Linux)
+- **Uncheck** the checkmark of **Move instance on switchover or failover**
+- Click Add
 
-  ![drpg add volume group](./images/ashburn-add-vg1.png)
+  **FSCM92-FSDR-Group-Ashburn** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that PeopleSoft Web Server compute instance has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
 
-**mushop-ashburn** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that volume group **mushop-volume-group-1** has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
+  Navigate back to the DR Protection group page; the status of DRPG should be active.
 
-   ![drpg volume group added](./images/ashburn-vg1-added.png)
+  ![drpg compute added](./images/ashburn-web-added.png)
 
-Navigate back to the DR Protection group page; the status of DRPG should be active.
+10. Add Elastic Search and Kibana Services Compute instance.
 
-10. We have added all the required members in the **mushop-ashburn** DRPG. It should show ATP Database, 2 Compute Instances, and 2 Volume groups.
+  Select **FSCM92-FSDR-Group-Ashburn** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
 
-    ![drpg members ashburn](./images/ashburn-allmembers.png)
+   ![drpg add member](./images/ashburn-add-member.png)
+
+  It will show various resource types and select **Compute**
+   ![drpg resource type](./images/ashburn-add-elk.png)
+
+- Resource Type is **Compute**
+- Make sure to check the box **"I understand that all existing plans will be deleted"**
+- Instances in Compartment, select PeopleSoft Process Scheduler Server Compute Instance (Linux)
+- **Uncheck** the checkmark of **Move instance on switchover or failover**
+- Click Add
+
+  **FSCM92-FSDR-Group-Ashburn** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that Elastic Search & Kibana Service compute instance has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
+
+  Navigate back to the DR Protection group page; the status of DRPG should be active.
+
+  ![drpg compute added](./images/ashburn-elk-added.png)
 
 
 ## Task 2: Add members to Phoenix DRPG (Standby)
 
-1. Login into OCI Console with your provided Credentials. The Standby region should be **Pheonix**.
+1. Login into OCI Console. The standby region should be **Phoenix**.
 
-  ![oci console phoenix](./images/phoenix-region.png)
+   ![oci console phoenix](./images/phoenix-region1.png)
 
-2. Select **Migration and Disaster Recovery** from the Hamburger menu, then **Disaster Recovery** -> **DR Protection Groups** Verify the region in **Phoenix**
+2. Select **Migration and Disaster Recovery** from the Hamburger menu, then **Disaster Recovery** -> **DR Protection Groups**. Verify the region is **Phoenix**.
 
-  ![drpg navigation page](./images/phoenix-drpgpage.png)
+   ![drpg navigation page](./images/phoenix-drpgpage1.png)
 
-3. You will land on the Disaster Recovery Protection group home page; make sure you have selected the Phoenix region.
+3. You will land on the Disaster Recovery Protection group home page; make sure you have selected the *Phoenix* region. Click on **FSCM92-FSDR-Group-Phoenix** DRPG.
 
-  ![drpg landing page](./images/phoenix-drpg.png)
+   ![drpg landing page](./images/phoenix-drpg2.png)
 
-4. In the Phoenix region DRPG page, add the members required in the **mushop-phoenix** DRPG. *We will be adding only ATP Standby Database*. Let's add those details.  **We don't need to add compute and volume groups, as those will be created automatically during the DR switchover process by FSDR**
+  In the Phoenix region DRPG page, add the members required in the **FSCM92-FSDR-Group-Phoenix** DRPG. 
 
-6. Add ATP Standby Database. Select **mushop-phoenix** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
+4. Add Standby DBCS / DbaaS Database. 
 
-![drpg add member](./images/phoenix-add-member.png)
+  Select **FSCM92-FSDR-Group-Phoenix** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
 
-It will show various resource types and select **Autonomous Database**
-![drpg resource type](./images/phoenix-resource-type.png)
+  ![drpg add member](./images/phoenix-add-member.png)
 
-Select the Database in your compartment; it will have **MushopDB-XXXXX**. Verify it and hit add. Make sure to check the box **"I understand that all existing plans will be deleted"**
+ - Resource Type is **Database**
+ - Database Type is **Oracle Base Database**
+ - Database System will be PeopleSoft Application Standby Database
+ - Database Home will be auto-popluated
+ - Database will be auto-popluated
+ - Database password secret will be the secret created in Lab 1.
 
-![drpg add atp](./images/phoenix-atp-add.png)
+  Make sure to check the box **"I understand that all existing plans will be deleted"**.
 
-**mushop-phoenix** DRPG status will change to updating; wait for a few seconds. You should be able to see ATP database has been added as Member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
+Click on **Add**.
 
-![drpg atp added](./images/phoenix-atp-added.png)
+   ![ashburn-add-db](./images/phoenix-add-db.png)
 
-Navigate back to the DR Protection group page; the status of DRPG should be active.
+  **FSCM92-FSDR-Group-Phoenix** DRPG status will change to updating; wait for a few seconds. You should see that the database is added as a member. Refresh the DRPG page if required. You can monitor the request's status in the **Work requests** section under Resources.
 
-7. Now, we have added all the required members in the **mushop-phoenix** DRPG. It should show ATP Database.
+  Navigate back to the DR Protection group page; the status of DRPG should be active.
 
-    ![drpg members phoenix](./images/phoenix-allmembers.png)
+   ![drpg db added](./images/phoenix-db-added.png)
+
+6. Add Standby PeopleSoft Application Server Compute instance.
+
+  Select **FSCM92-FSDR-Group-Phoenix** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
+
+   ![drpg add member](./images/phoenix-add-member.png)
+
+  It will show various resource types and select **Compute**
+   ![drpg resource type](./images/phoenix-add-app.png)
+
+- Resource Type is **Compute**
+- Make sure to check the box **"I understand that all existing plans will be deleted"**
+- Instances in Compartment, select PeopleSoft Application Server Compute Instance
+- **Uncheck** the checkmark of **Move instance on switchover or failover**.
+- Click Add
+
+  **FSCM92-FSDR-Group-Phoenix** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that Standby PeopleSoft Application Server compute instance has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
+
+   ![drpg compute added](./images/phoenix-app-added.png)
+
+  Navigate back to the DR Protection group page; the status of DRPG should be active.
+
+7. Add Standby PeopleSoft Process Scheduler Server Compute instance (Linux).
+
+  Select **FSCM92-FSDR-Group-Phoenix** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
+
+   ![drpg add member](./images/phoenix-add-member.png)
+
+  It will show various resource types and select **Compute**
+   ![drpg resource type](./images/phoenix-add-prcs.png)
+
+- Resource Type is **Compute**
+- Make sure to check the box **"I understand that all existing plans will be deleted"**
+- Instances in Compartment, select PeopleSoft Application Server Compute Instance
+- **Uncheck** the checkmark of **Move instance on switchover or failover**.
+- Click Add
+
+  **FSCM92-FSDR-Group-Phoenix** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that Standby PeopleSoft Process Scheduler Server compute instance (Linux) has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
+
+   ![drpg compute added](./images/phoenix-prcs-added.png)
+
+  Navigate back to the DR Protection group page; the status of DRPG should be active.
+
+8. Add Standby PeopleSoft Process Scheduler Server Compute instance (Windows).
+
+  Select **FSCM92-FSDR-Group-Phoenix** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
+
+   ![drpg add member](./images/phoenix-add-member.png)
+
+  It will show various resource types and select **Compute**
+   ![drpg resource type](./images/phoenix-add-prcs-win.png)
+
+- Resource Type is **Compute**
+- Make sure to check the box **"I understand that all existing plans will be deleted"**
+- Instances in Compartment, select PeopleSoft Application Server Compute Instance
+- **Uncheck** the checkmark of **Move instance on switchover or failover**.
+- Click Add
+
+  **FSCM92-FSDR-Group-Phoenix** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that Standby PeopleSoft Process Scheduler Server compute instance (Windows) has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
+
+   ![drpg compute added](./images/phoenix-prcs-win-added.png)
+
+  Navigate back to the DR Protection group page; the status of DRPG should be active.
+
+9. Add Standby PeopleSoft Web Server Compute instance.
+
+  Select **FSCM92-FSDR-Group-Phoenix** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
+
+   ![drpg add member](./images/phoenix-add-member.png)
+
+  It will show various resource types and select **Compute**
+   ![drpg resource type](./images/phoenix-add-web.png)
+
+- Resource Type is **Compute**
+- Make sure to check the box **"I understand that all existing plans will be deleted"**
+- Instances in Compartment, select PeopleSoft Application Server Compute Instance
+- **Uncheck** the checkmark of **Move instance on switchover or failover**.
+- Click Add
+
+  **FSCM92-FSDR-Group-Phoenix** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that Standby PeopleSoft Web Server compute instance has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
+
+   ![drpg compute added](./images/phoenix-web-added.png)
+
+  Navigate back to the DR Protection group page; the status of DRPG should be active.
+
+10. Add Standby Elastic Search and Kibana Service Compute instance.
+
+  Select **FSCM92-FSDR-Group-Phoenix** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
+
+   ![drpg add member](./images/phoenix-add-member.png)
+
+  It will show various resource types and select **Compute**
+   ![drpg resource type](./images/phoenix-add-elk.png)
+
+- Resource Type is **Compute**
+- Make sure to check the box **"I understand that all existing plans will be deleted"**
+- Instances in Compartment, select PeopleSoft Application Server Compute Instance
+- **Uncheck** the checkmark of **Move instance on switchover or failover**.
+- Click Add
+
+  **FSCM92-FSDR-Group-Phoenix** DRPG status will change to updating; wait for a few seconds. DRPG status will change to active.You should be able to see that Standby Elastic Search & Kibana Service compute instance has been added as a member. Refresh the DRPG page if required. You can monitor the status in the *Work requests* section under Resources.
+
+   ![drpg compute added](./images/phoenix-elk-added.png)
+
+  Navigate back to the DR Protection group page; the status of DRPG should be active.
 
 You may now **proceed to the next lab**.
 

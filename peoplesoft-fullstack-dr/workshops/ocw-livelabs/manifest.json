@@ -3,19 +3,14 @@
   "help": "livelabs-help-db-us@oracle.com",
   "tutorials": [
     {
-      "title": "Get Started",
-      "description": "Login to Oracle Cloud",
-      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
-    },
-    {
       "title": "Introduction",
       "description": "Introduction to OCI Full Stack Disaster Recovery and workshop",
       "filename": "../../introduction/introduction.md"
     },
     {
       "title": "Lab 1: Prepare environments",
-      "description": "Prepare environments",
-      "filename": "../../pre-switchover/pre-switchover.md"
+      "description": "FSDR Pre-requisites Setup",
+      "filename": "../../fsdr-pre-requisites-setup/fsdr-pre-req-setup.md"
     },
     {
       "title": "Lab 2: Create and Associate DRPG",

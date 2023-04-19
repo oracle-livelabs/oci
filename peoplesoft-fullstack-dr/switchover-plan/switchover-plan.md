@@ -2,34 +2,31 @@
 
 ## Introduction
 
-In this lab, we will create a DR Switchover plan and customize the plan with additional steps. Ashburn is a primary region, and Phoenix is the standby region. FSDR provides two types of plan
+In this lab, we will create a DR Switchover plan and customize the plan with the additional steps. Ashburn is the primary region and Phoenix is the standby region. FSDR provides two types of plan
 
 - Switchover (Maintenance/Planned Disaster Recovery)
 - Failover   (Actual Disaster Recovery/Unplanned)
 
-This lab will focus on how to create a Switchover plan and customize the plan as per MuShop application requirements. DR Plan *must* be created in the standby region (Phoenix). It is because, in the case of the worst-case scenario, the entire primary region outside the FSDR will not be accessible from the primary region.
+This lab will focus on how to create a Switchover plan and customize the plan as per PeopleSoft application requirements. 
+
+**DR Plan *must* be created in the standby region (Phoenix)**. It is because, in the case of the worst-case scenario, the entire primary region outside the FSDR will not be accessible from the primary region.
 
 Estimated Time: 20 Minutes
-
-Watch the video below for a quick walkthrough of the lab.
-
-[Create DR Switchover plan](videohub:1_zf3hto6p)
 
 ### Objectives
 
 - Create a Switchover plan
-- Gather Load Balancer OCID's
-- Customize the Switchover plan- Remove Primary Load Balancer Backends group
-- Customize the Switchover plan- Restore Database Wallet group
-- Customize the Switchover plan- Restore the Application Group
-- Customize the Switchover plan- Add Standby Load Balancer Backends group
-- Review the Switchover plan- Reorder groups
+- Customize the Switchover plan - Add PeopleSoft Application Server boot up group
+- Customize the Switchover plan - Add PeopleSoft Process Scheduler Server (Linux) boot up group
+- Customize the Switchover plan - Add PeopleSoft Process Scheduler Server (Windows) boot up group
+- Customize the Switchover plan - Add PeopleSoft Web Server boot up group
+- Customize the Switchover plan - Add PeopleSoft Elastic Search & Kibana Service boot up group
 
 ## Task 1: Create a Switchover plan
 
-1. Login into OCI Console with your provided Credentials. Select region as **Phoenix**.
+1. Login into OCI Console. Select region as **Phoenix**.
 
-  ![phoenix region](./images/phoenix-region.png)
+  ![phoenix region](./images/phoenix-region1.png)
 
 2. Select Migration and Disaster Recovery from the Hamburger menu, then **Disaster Recovery** -> **DR Protection Groups**. Verify the region is **Phoenix**
 
