@@ -61,45 +61,11 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     ![oelz stack_deploy_11](./images/freetrial-stack-deployment-tagging.png)
 13. Review the variables , select on apply and click on create.
     ![oelz stack_deploy_12](./images/freetrial-stack-deployment-review.png)
-4. In the stack section, click create stack and choose template as the origin of the Terraform configuration.
-    |Varibale Name|Value|
-    |--|--|
-    |Parent compartment name|`OELZ_Demo`|
-    |Create in Compartment| tenancy (root)|
-    |Terraform Version| leave the default option if you have the option to select it|
-    
-    ![Create Stack](./images/baseline_create_stack_1.png)
-
-4. Click on the zip file and select the saved zip file.
-    ![Select Orm Template](./images/baseline_selectfile.png)
-    
-5. Click on next button.
-    
-    
-6. Configure Variables. Most of the default value are pre-defined , only the default domain email need to updated. 
-    
-6.1  Enter IAM Variables : IAM lets you control who has access to specific cloud resources and what type of access a group of users can have. The OELZ provisions IAM groups with established roles and access levels. The group names listed are the default names but can be overridden by updating using the Terraform variables. 
-    ![IAM Vars](./images/baseline_iam_variables.png)
-6.2  Enter Identity Variables : The identity module is responsible for creating the identity domain "free", federation and the resources related to the domain.The identity module will create the identity domain,users, groups and policies.
-    ![Identity Vars](./images/baseline_identity_variables.png)
-6.3  Enter Security Variables : Enter Security variables for Bastion.
-    ![Security Vars](./images/baseline_security_variables.png)
-6.4  Enter Budget Variables : The budgets module is responsible for deploying the budget component in an environment.
-    ![Budget Vars](./images/baseline_budget_variables.png)
-6.5  Enter Network Variables : Network module  will deploy a type of network called "hub & spoke" that will allow the various workloads to interconnect with each other. 
-    ![Network Vars](./images/baseline_network_variables.png)
-6.6  Enter Tagging Variables : Tagging allows you to add metadata to resources, which enables you to define keys and values and associate them with resources.
-    ![Tagging Vars](./images/baseline_tagging_variables.png)
-    
-
-7. Create the Stack.
-    ![Stack Creation Step](./images/baseline_stack_deployment.png)
-    
-8. Wait for the atleast ten minutes and then the Stack Jobs Status. 
-
-9. Gather the Provisioned Resources OCID Value. 
-    * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output 
-
+14. Wait for atleast 10 minutes for full deployment then check the Stack Jobs Status.
+    ![oelz stack_deploy_13](./images/freetrial-stack-status.png)
+    ![oelz stack_deploy_14](./images/freetrial-stack-status-final)
+15. Gather the Provisioned Resources OCID Value. 
+    * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output
 
 ## Task 2: Create OELZ stack via CLI
 ---
