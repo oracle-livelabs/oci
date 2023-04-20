@@ -68,7 +68,9 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output
     ![oelz stack_deploy_14](./images/freetrial-stack-status-resource.png)
   
-## Task 2: Create OELZ stack via CLI
+16. Go to Mushop Deployment.
+
+## Task 2: Create OELZ stack via CLI (Optional Not Needed if Task 1 is used)
 ---
 ### Prerequisites
 To deploy the OELZ from the terraform cli you will need the following prerequisites.
