@@ -66,7 +66,8 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     ![oelz stack_deploy_14](./images/freetrial-stack-status-final.png)
 15. Gather the Provisioned Resources OCID Value. 
     * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output
-
+    ![oelz stack_deploy_14](./images/freetrial-stack-status-resource.png)
+  
 ## Task 2: Create OELZ stack via CLI
 ---
 ### Prerequisites
