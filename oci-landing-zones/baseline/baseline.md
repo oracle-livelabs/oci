@@ -63,7 +63,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     ![oelz stack_deploy_12](./images/freetrial-stack-deployment-review.png)
 14. Wait for atleast 10 minutes for full deployment then check the Stack Jobs Status.
     ![oelz stack_deploy_13](./images/freetrial-stack-status.png)
-    ![oelz stack_deploy_14](./images/freetrial-stack-status-final)
+    ![oelz stack_deploy_14](./images/freetrial-stack-status-final.png)
 15. Gather the Provisioned Resources OCID Value. 
     * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output
 
