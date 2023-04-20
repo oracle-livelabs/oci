@@ -90,9 +90,31 @@ Follow these steps to completely remove all provisioned resources:
     ![mushop_stack_delete_confirm](.//images/mushop-stack-delete-confirm.png)
 
 
+## Task 4: Delete OELZ Stack 
 
+To delete entire OELZ stack, there are a few resources that will require some manual intervention due to dependancies or conditions that are outside of Terraform's knowledge. 
 
-## Task 4: Known Issue 
+The steps to clean up these resources is as follows: 
+
+1. Bucket Removal (For each Environment)
+    * Navigate to the audit bucket, default bucket, and service event bucket in the logging compartment, and archive bucket in the home compartment.
+    * For each bucket:
+      * Delete the retention rules: on the bucket page, navigate to Resource → Retention Rules.
+      * Delete all the objects in the bucket: on the bucket page, navigate to Resource → Objects.
+      * Delete the bucket.
+
+2. Identity Domain (For each Environment)
+
+    * Deactivate the identity domain created in the security compartment for each env: on the Identity Domain page, navigate to More actions → Deactivate.
+    * Delete the identity domain. 
+
+3. Vault/Key (For each Environment)
+
+    * The vault cannot be deleted right away. Vaults have a minimum 7-Day waiting period before deletion. This is because once the Vault is deleted, all data encrypted with keys in that Vault becomes unreadable. 
+    * You can move the vault and the Master Encryption Key to another compartment outside the Enterprise Scale Baseline Landing Zone home before deleting it in order to delete the landing zone.
+    * Or you can schedule a deletion for the key and the vault, and then wait to delete the Enterprise Scale Baseline Landing Zone when the Vault and key have been deleted. 
+
+## Task 5: Known Issue 
 
 * In case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources.
 * Sometimes DB provisioning is not allowed in the tenanacy , in this case Job will fail. Click on Destroy button will trigger the job to remove provisioned resources.
