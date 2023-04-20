@@ -159,14 +159,19 @@ The tenancy you intend to deploy the OELZ to.
 
 1) Go to Hamburger-->Identity & Security-->Compartments and click on "LIVELAB-OCI-CMP-HOME" compartment and you can see the compartment struture defined on the introduction section.
 
-![compartment_1](./images/compartment_view_1.png)
-![compartment_2](./images/compartment_view_2.png)
+![compartment_1](./images/compartment-1.png)
+![compartment_2](./images/compartment-2.png)
+![compartment_3](./images/compartment-3.png)
 
 2) Hub VCN : Go to Hamburger-->Networking-->Virtual Cloud Networks(VCN). GO to compartment tab and select the "OCI-ELZ-L-SRD-NET" compartment.
 
-![vcn_1](./images/vcn_1.png)
-![vcn_2](./images/vcn_2.png)
-![vcn_3](./images/vcn_3.png)
+![vcn_1](./images/hub-info-1.png)
+![vcn_2](./images/hub-info-2.png)
+
+3) Spoke VCN : Go to Hamburger-->Networking-->Virtual Cloud Networks(VCN) . GO to compartment tab and select the Workload compartment.
+
+![spoke_1](./images/spoke-info-1.png)
+![spoke_2](./images/spoke-info-2.png)
 
 
 ## Acknowledgements
