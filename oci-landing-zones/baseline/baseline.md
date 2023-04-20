@@ -45,9 +45,22 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     ![oelz stack_deploy_2](./images/oelz-stack-deployment-3.png)
 5. Provide Tenancy User Credential (make sure user have administrator privilege) and Sign in.
     ![oelz stack_deploy_3](./images/oelz-stack-deployment-4.png) 
-7. [Login](https://cloud.oracle.com/resourcemanager/stacks/create) to Oracle Cloud Infrastructure.
-8. Import the stack `Home > Developer Services > Resource Manager > Stacks > Create Stack`
-
+6. Select the freetrail-landing-zone under Working Directory and click Next.
+    ![oelz stack_deploy_4](./images/freetrial-stack-deployment-1.png) 
+7. IAM Variable are pre-defined and nothing to add here.
+    ![oelz stack_deploy_5](./images/freetrial-stack-deployment-iam.png) 
+8. Identity Variables are pre-defined and nothing to add here.
+    ![oelz stack_deploy_6](./images/freetrial-stack-deployment-identity.png)
+9. Security Variables are pre-defined and nothing to add here.
+    ![oelz stack_deploy_7](./images/freetrial-stack-deployment-security.png)
+10. Budget Variables are pre-defined and nothing to add here.
+    ![oelz stack_deploy_9](./images/freetrial-stack-deployment-budget.png)
+11. Network Variables are pre-defined and nothing to add here.
+    ![oelz stack_deploy_10](./images/freetrial-stack-deployment-network.png)
+12. Tagging Variables are pre-defined and nothing to add here, Please click Next.
+    ![oelz stack_deploy_11](./images/freetrial-stack-deployment-tagging.png)
+13. Review the variables , select on apply and click on create.
+    ![oelz stack_deploy_12](./images/freetrial-stack-deployment-review.png)
 4. In the stack section, click create stack and choose template as the origin of the Terraform configuration.
     |Varibale Name|Value|
     |--|--|
