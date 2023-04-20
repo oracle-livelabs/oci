@@ -140,19 +140,19 @@ The tenancy you intend to deploy the OELZ to.
     |prod_spoke_subnet_db_cidr_block|10.1.2.0/24|
     
  4) Validate the changes . Issue the command "terraform validate".
-    ![terraform_validate](./images/terraform_validate.png)
+    ![terraform_validate](./images/terraform-validate.png)
  5) Initializes Terraform Configuration files via "terraform init".
-    ![terraform_init](./images/terraform_init.png)
+    ![terraform_init](./images/terraform-init.png)
  6) Preview the changes that Terraform will to make to your infrastructure via "terraform plan -var-file=\"livelab.tfvars\"".
-    ![terraform_plan_1](./images/terraform_plan_1.png)
-    ![terraform_plan_2](./images/terraform_plan_2.png)
+    ![terraform_plan_1](./images/terraform-plan-1.png)
+    ![terraform_plan_2](./images/terraform-plan-2.png)
  7) Executes the changes defined by your Terraform configuration to create or update resources via "terraform apply -var-file=\"livelab.tfvars\"" and wait for atleast 10 min to finish provisioning.
-    ![terraform_apply_1](./images/terraform_apply_1.png)
-    ![terraform_apply_2](./images/terraform_apply_2.png)
-    ![terraform_apply_3](./images/terraform_apply_3.png)
+    ![terraform_apply_1](./images/terraform-apply-1.png)
+    ![terraform_apply_2](./images/terraform-apply-2.png)
+    ![terraform_apply_3](./images/terraform-apply-3.png)
  8) Destroy the terraform configuration resources via "terraform destroy -var-file=\"livelab.tfvars\"".
-    ![terraform_destroy_1](./images/terraform_destroy_1.png)
-    ![terraform_destroy_2](./images/terraform_destroy_2.png)
+    ![terraform_destroy_1](./images/terraform-destroy-1.png)
+    ![terraform_destroy_2](./images/terraform-destroy-2.png)
 
 ### Task 3: Verify OELZ Resources
 ---
