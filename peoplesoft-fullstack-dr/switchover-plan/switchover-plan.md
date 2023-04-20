@@ -11,7 +11,7 @@ This lab will focus on how to create a Switchover plan and customize the plan as
 
 **DR Plan *must* be created in the standby region (Phoenix)**. It is because, in the case of the worst-case scenario, the entire primary region outside the FSDR will not be accessible from the primary region.
 
-Estimated Time: 20 Minutes
+Estimated Time: 120 Minutes
 
 ### Objectives
 
@@ -25,7 +25,11 @@ Estimated Time: 20 Minutes
 
 ## Task 1: Enable Run Commands on an Instance
 
-   Run command feature will help in exeucting custom boot up scripts as part of the FSDR.
+Run command feature will help in exeucting custom boot up scripts as part of the FSDR.
+
+Please refer below link to know more about on how to enable Run Commands in Compute Instance.
+
+[Running Commands on an Instance](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/runningcommands.htm)
 
 1. Create a dynamic group that includes the instances that you want to allow commands to run on. For example, a rule inside the dynamic group can state:
 
@@ -65,7 +69,55 @@ Estimated Time: 20 Minutes
 
     You will now be able to see all the PeopleSoft Compute Instances of both *Ashburn* and *Phoenix* regions are added in the Dynamic Group.
 
-## Task 1: Create a Switchover plan
+3. Running Commands with Administrator Privileges
+
+  If a command requires administrator permissions, you must grant administrator permissions to the Compute Instance Run Command plugin to be able to run the command. The plugin runs as the ocarun user.
+
+  To grant sudo permissions on Linux instances, please run below commands in all of the PeopleSoft Application, Web, Process Scheduler and Elastic Search & Kibana servers of Linux.
+
+    - On the instance, create a sudoers configuration file for the Compute Instance Run Command plugin:
+
+     ````
+      <copy>vi ./101-oracle-cloud-agent-run-command</copy>
+
+     ````
+
+    - Allow the ocarun user to run all commands as sudo by adding the following line to the configuration file:
+
+     ````
+      <copy>ocarun ALL=(ALL) NOPASSWD:ALL</copy>
+
+     ````
+
+    - Validate that the syntax in the configuration file is correct:
+
+     ````
+      <copy>visudo -cf ./101-oracle-cloud-agent-run-command</copy>
+
+     ````
+
+    If the syntax is correct, the follow message is returned:
+
+
+      **./101-oracle-cloud-agent-run-command: parsed OK**
+
+    - Add the configuration file to /etc/sudoers.d:
+
+     ````
+      <copy>sudo cp ./101-oracle-cloud-agent-run-command /etc/sudoers.d/</copy>
+
+     ````
+
+    **To grant administrator permissions on Windows instances**
+
+    - On all of the Windows instances, run the following command in PowerShell:
+
+     ````
+      <copy>Add-LocalGroupMember -Group "Administrators" -Member "NT SERVICE\OCARUN" | Restart-Service -Name OCARUN -Force</copy>
+
+     ````
+
+## Task 2: Create a Switchover plan
 
 1. Login into OCI Console. Select region as **Phoenix**.
 
@@ -108,7 +160,49 @@ Estimated Time: 20 Minutes
 
   ![drpg plan details](./images/phoenix-drplan-detail.png)
 
-## Task 2: Customize the Switchover plan - Add Application Server Boot-up Script
+## Task 3: Customize the Switchover plan - Add DNS Record Update Script
+
+1. Click on Add group.
+
+  ![add plan group](./images/phoenix-plangroup-add.png)
+
+2. Add "DNS Record Update" User defined group. Click on Add Step.
+
+    ![phoenix-add-dns-update-script](./images/phoenix-add-dns-update-script.png)
+
+  - Add *DNS Record Update* in Group name
+  - Add *Update DNS Record* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
+  - Leave the default "3600" seconds in Timeout in seconds
+  - In the region, select "US East (Phoenix)"
+  - Select the "Run local script" option
+  - Select the server instance in "Target instance in compartment" where you have placed the DNS record update script
+  - In the script parameters, add the location of the DNS Record update script. Below is an example of DNS record update script, please write a boot up shell script according to your setup and configurations.
+
+    **#!/bin/bash**
+
+    **oci dns record rrset update**
+
+    **--zone-name-or-id "psftchatbot.tk"**
+
+    **--domain "fscm92.psftchatbot.tk"**
+
+    **--rtype "A"**
+ 
+    **--items '[{"domain":"fscm92.psftchatbot.tk","rdata":"158.101.24.177","rtype":"A","ttl":60}]'**
+
+    **--force**
+
+  - Run as user will be the username who has access to update DNS records.
+
+  Click on Add Step.
+ 
+  Click on Add.
+
+  ![phoenix-add-dns-update-group](./images/phoenix-add-dns-update-group.png)
+
+## Task 4: Customize the Switchover plan - Add Application Server Boot-up Script
 
 1. Click on Add group.
 
@@ -148,7 +242,7 @@ Estimated Time: 20 Minutes
 
   ![add-app-boot-group](./images/phoenix-add-app-boot-group.png)
 
-## Task 3: Customize the Switchover plan - Add Process Scheduler Server (Linux) Boot-up Script
+## Task 5: Customize the Switchover plan - Add Process Scheduler Server (Linux) Boot-up Script
     
 1. Click on Add group.
 
@@ -166,11 +260,11 @@ Estimated Time: 20 Minutes
   - In the region, select "US East (Phoenix)"
   - Select the "Run local script" option
   - Select process scheduler server instance in "Target instance in compartment"
-  - In script parameters, add the location of the application server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
+  - In script parameters, add the location of the process scheduler server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
 
   **#!/bin/bash**
 
-  **cd /u01/app/psoft/fscm92-dbaas-vinay-prcs/ps_cfg_home/appserv/prcs/PRCSDOM01**
+  **cd /u01/app/psoft/fscm92-dbaas-vinay-prcs/ps\_cfg\_home/appserv/prcs/PRCSDOM01**
 
   **rm -rf CACHE**
 
@@ -178,7 +272,7 @@ Estimated Time: 20 Minutes
 
   **psadmin -p start -d PRCSDOM01**
 
-  - Run as user will be the username who has access to boot Process Scheduler Server domain
+  - Run as user will be the username who has access to boot Process Scheduler Server domain.
 
   Click on Add Step.
  
@@ -186,7 +280,7 @@ Estimated Time: 20 Minutes
 
     ![add-prcs-linux-boot-group](./images/phoenix-add-prcs-linux-boot-group.png)
 
-## Task 4: Customize the Switchover plan - Add Process Scheduler Server (Windows) Boot-up Script
+## Task 6: Customize the Switchover plan - Add Process Scheduler Server (Windows) Boot-up Script
     
 1. Click on Add group.
 
@@ -204,13 +298,13 @@ Estimated Time: 20 Minutes
   - In the region, select "US East (Phoenix)"
   - Select the "Run local script" option
   - Select process scheduler server instance in "Target instance in compartment"
-  - In script parameters, add the location of the application server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
+  - In script parameters, add the location of the process scheduler server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
 
   **@ECHO OFF**
 
   **SET TUXDIR=D:\app\psoft\ps\_home\pt\bea\tuxedo\tuxedo12.2.2.0.0\_VS2017**
 
-  **SET PS\HOME=D:\app\psoft\ps_home\pt\ps\_home8.60.03**
+  **SET PS\HOME=D:\app\psoft\ps\_home\pt\ps\_home8.60.03**
 
   **SET PS\_APP\_HOME=D:\app\psoft\ps\_app\_home\pt\fscm\_app\_home**
 
@@ -220,7 +314,7 @@ Estimated Time: 20 Minutes
   
   **d:**
   
-  **cd D:\app\psoft\ps_home\pt\ps\_home8.60.03\appserv**
+  **cd D:\app\psoft\ps\_home\pt\ps\_home8.60.03\appserv**
 
   **psadmin.exe -p start -d FSCM92\_PSNT**
 
@@ -232,265 +326,103 @@ Estimated Time: 20 Minutes
 
     ![add-prcs-linux-boot-group](./images/phoenix-add-prcs-linux-boot-group.png)
 
-
-
-
-
-  **Replace the OCID of the primary (Ashburn) load balancer as per step 2.4; make sure you replace the OCID of your load balancer without fail in the above command,remove angle brackets,note there is space after removeFromBackendset.py**
-
-  - Leave the field blank in "Run as user."
-  - Verify all the details and hit add
-
-  ![create lbremove plangroup](./images/phoenix-lbremove-node0.png)
-
-  - **mushop-phoenix**  DRPG will go into updating state, and after a few seconds, it will return to the active state. Refresh the DRPG page if required. You should be able to see that the *Remove Primary Load Balancer Backends* Plan group has been added successfully with the *Remove Primary Backend on Node-0* step. Note that the type in the group name it will show as **User defined** as this is a user-defined group.
-
-  ![create lbremove plangroup](./images/phoenix-lbremove-node0-added.png)
-
-3.Need to add another step for *Remove Primary Backend on Node-1* in *Remove Primary Load Balancer Backends* Plan group
-
-- Select the three dots section in the right end from the *Remove Primary Load Balancer Backends* Plan group. Select **Add Step**
-
-  ![add lbremove step](./images/phoenix-lbremove-addstep.png)
-
-- Leave the default Group name
-- Add *Remove Primary Backend on Node-1* in Step name
-- Select Error mode as "Stop on error."
-- Leave the default "3600" seconds in Timeout in seconds
-- Leave the enabled tick mark
-- In the region, select "US East (Ashburn)."
-- Select the "Run local script" option
-- Select "mushop-xxxxx-1" instance in "Target instance in compartment"
-- In script parameters, add the below script
-
-    ````
-    <copy>/usr/bin/sudo /home/opc/fsdrsscripts/removeFromBackendset.py <REPLACE WITH YOUR OCID></copy>
-    ````
-
- **Replace the OCID of the primary (Ashburn) load balancer as per step 2.4; make sure you replace the OCID of your load balancer without fail in the above command,remove angle brackets,note there is space after removeFromBackendset.py**
-
-- Leave the field blank in "Run as user."
-- Verify all the details and hit add
-
-  ![adding lbremove step](./images/phoenix-lbremove-node1.png)
-
-- **mushop-phoenix** DRPG will go into updating state, and after a few seconds, it will return to the active state. Refresh the DRPG page if required. You should be able to see that the *Remove Primary Load Balancer Backends* Plan group has been modified successfully with the *Remove Primary Backend on Node-1* step. Now you can see that both steps have been added to the group.
-
-  ![added lbremove step](./images/phoenix-lbremove-steps.png)
-
-
-## Task 4: Customize the Switchover plan- Restore Database Wallet group
-
-1. Create a user-defined group for "Restore Database Wallet." This can be done by selecting **Add group** in the *Restore Database Wallet* plan
+## Task 7: Customize the Switchover plan - Add Web Server Boot-up Script
+    
+1. Click on Add group.
 
   ![add plan group](./images/phoenix-plangroup-add.png)
 
-2. Add "Restore Database Wallet" User defined group
+2. Add "Start Web Server Domains" User defined group. Click on Add Step.
 
-- Add *Restore Database Wallet* in the Group name
-- Add *Restore Database Wallet on Node-0* in Step name
-- Select Error mode as "Stop on error."
-- Leave the default "3600" seconds in Timeout in seconds
-- Leave the enabled tick mark
-- In the region, select "US East (Ashburn)."
-- Select the "Run local script" option
-- Select "mushop-xxxxx-0" instance in "Target instance in compartment"
-- In script parameters, add the below script
+    ![phoenix-add-web-boot-script](./images/phoenix-add-web-boot-script.png)
 
-    ````
-    <copy>/usr/bin/sudo /home/opc/fsdrsscripts/mushop_db_wallet_restore.sh</copy>
-    ````
-- Leave the field blank in "Run as user."
-- Verify all the details and hit add
+  - Add *Start Web Server Domains* in Group name
+  - Add *Boot up Web Server Domains* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
+  - Leave the default "3600" seconds in Timeout in seconds
+  - In the region, select "US East (Phoenix)"
+  - Select the "Run local script" option
+  - Select web server instance in "Target instance in compartment"
+  - In script parameters, add the location of the web server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
 
-  ![create dbrestore group](./images/phoenix-dbrestore-node0.png)
+    **#!/bin/bash**
 
-- **mushop-phoenix** drpg will go into updating state, and after a few seconds, it will return to active state. Refresh the DRPG page if required. You should be able to see that the *Restore Database Wallet* plan group has been added successfully with the *Restore Database Wallet on Node-0* step. Note the type in the group name. It will show as **User defined** as this is a user-defined group.
+    **cd /u01/app/psoft/fscm92-dbaas-vinay-web/ps\_cfg\_home/webserv/WEBSERVER01/applications/peoplesoft/PORTAL.war/**
 
-  ![created dbrestore group](./images/phoenix-dbrestore-node0-added.png)
+    **rm -rf cache**
 
-3.Need to add another step for *Restore Database Wallet on Node-1* in *Restore Database Wallet* plan group
+    **psadmin -w start -d WEBSERVER01**
 
-- From the *Restore Database Wallet* Plan group, select the three dots section at the right end. Select **Add Step**
+  - Run as user will be the username who has access to boot Web Scheduler Server domain
 
-  ![add dbrestore step](./images/phoenix-dbrestore-addstep.png)
+  Click on Add Step.
+ 
+  Click on Add.
 
-- Leave the default Group name
-- Add *Restore Database Wallet on Node-1* in Step name
-- Select Error mode as "Stop on error."
-- Leave the default "3600" seconds in Timeout in seconds
-- Leave the enabled tick mark
-- In the region, select "US East (Ashburn)."
-- Select the "Run local script" option
-- Select "mushop-xxxxx-1" instance in "Target instance in compartment"
-- In script parameters, add the below script
+    ![phoenix-add-web-boot-group](./images/phoenix-add-web-boot-group.png)
 
-    ````
-        <copy>/usr/bin/sudo /home/opc/fsdrsscripts/mushop_db_wallet_restore.sh</copy>
-    ````
-- Leave the field blank in "Run as user."
-- Verify all the details and hit add
-
-  ![adding dbrestore step](./images/phoenix-dbrestore-node1.png)
-
-- **mushop-phoenix** drpg will go into updating state, and after a few seconds, it will return to active state. Refresh the DRPG page if required. You should be able to see that the *Restore Database Wallet* Plan group has been modified successfully with the *RRestore Database Wallet on Node-1* step. Now you can see that both steps have been added to the group.
-
-  ![added dbrestore step](./images/phoenix-dbrestore-steps.png)
-
-## Task 5: Customize the Switchover plan- Restore the Application Group
-
-1. Create a user-defined group for "Restore Application." This can be done by selecting **Add group** in the *mushop-app-switchover* plan
+## Task 8: Customize the Switchover plan - Add Elastic Search Services Boot-up Script
+    
+1. Click on Add group.
 
   ![add plan group](./images/phoenix-plangroup-add.png)
 
-2. Add "Restore Application" User defined group
+2. Add "Start Elastic Search Services" User defined group. Click on Add Step.
 
-- Add *Restore Application* in the Group name
-- Add *Restore Application on Node-0* in Step name
-- Select Error mode as "Stop on error."
-- Leave the default "3600" seconds in Timeout in seconds
-- Leave the enabled tick mark
-- In the region, select "US East (Ashburn)."
-- Select the "Run local script" option
-- Select "mushop-xxxxx-0" instance in "Target instance in compartment"
-- In script parameters, add the below script
-    ````
-        <copy>/usr/bin/sudo /home/opc/fsdrsscripts/mushop_reconfigure.sh</copy>
-    ````
-- Leave the field blank in "Run as user."
-- Verify all the details and hit add
+    ![phoenix-add-elk-boot-script](./images/phoenix-add-elk-boot-script.png)
 
-  ![create restoreapp group](./images/phoenix-restoreapp-node0.png)
+  - Add *Start Elastic Search Services* in Group name
+  - Add *Boot up Elastic Search Services* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
+  - Leave the default "3600" seconds in Timeout in seconds
+  - In the region, select "US East (Phoenix)"
+  - Select the "Run local script" option
+  - Select Elastic Search server instance in "Target instance in compartment"
+  - In the script parameters, add the location of the Elastic Search services start-up script
+  - Run as user will be the username who has access to boot Elastic Search services
 
-- **mushop-phoenix** drpg will go into updating state, and after a few seconds, it will return to active state. Refresh the DRPG page if required. You should be able to see that the *Restore Application* plan group has been added successfully with the *Restore Application on Node-0* step. Note the type in the group name. It will show as **User defined** as this is a user-defined group.
+  Click on Add Step.
+ 
+  Click on Add.
 
-  ![created restoreapp group](./images/phoenix-restoreapp-node0-added.png)
+    ![phoenix-add-elk-boot-group](./images/phoenix-add-elk-boot-group.png)
 
-3.We Need to add another step for *Restore Application on Node-1* in the *Restore Application* plan group
-
-- From the *Restore Application* Plan group, select the three dots section at the right end. Select **Add Step**
-
-  ![add restoreapp step](./images/phoenix-restoreapp-addstep.png)
-
-- Leave the default Group name
-- Add *Restore Application on Node-1* in Step name
-- Select Error mode as "Stop on error."
-- Leave the default "3600" seconds in Timeout in seconds
-- Leave the enabled tick mark
-- In the region, select "US East (Ashburn)."
-- Select the "Run local script" option
-- Select "mushop-xxxxx-1" instance in "Target instance in compartment"
-- In script parameters, add the below script
-    ````
-        <copy>/usr/bin/sudo /home/opc/fsdrsscripts/mushop_reconfigure.sh</copy>
-    ````
-- Leave the field blank in "Run as user."
-- Verify all the details and hit add
-
-  ![adding restoreapp step](./images/phoenix-restoreapp-node1.png)
-
-- **mushop-phoenix** drpg will go into updating state, and after a few seconds, it will return to active state. Refresh the DRPG page if required. You should be able to see that the *Restore Application* Plan group has been modified successfully with the *RRestore Application on Node-1* step. Now you can see that both steps have been added to the group.
-
-  ![added restoreapp step](./images/phoenix-restoreapp-steps.png)
-
-
-## Task 6: Customize the Switchover plan- Add Standby Load Balancer Backends group
-
-1. Create a user-defined group for "Add Standby Load Balancer Backends." This can be done by selecting **Add group** in the *mushop-app-switchover* plan
+## Task 9: Customize the Switchover plan - Add Kibana Services Boot-up Script
+    
+1. Click on Add group.
 
   ![add plan group](./images/phoenix-plangroup-add.png)
 
-2. Add "Add Standby Load Balancer Backends" User defined group
+2. Add "Start Kibana Services" User defined group. Click on Add Step.
 
-- Add *Add Standby Load Balancer Backends* in Group name
-- Add *Add Standby Backend on Node-0* in Step name
-- Select Error mode as "Stop on error."
-- Leave the default "3600" seconds in Timeout in seconds
-- Leave the enabled tick mark
-- In the region, select "US East (Ashburn)."
-- Select the "Run local script" option
-- Select "mushop-xxxxx-0" instance in "Target instance in compartment"
-- In script parameters, add the below script
+    ![phoenix-add-kibana-boot-script](./images/phoenix-add-kibana-boot-script.png)
 
-    ````
-        <copy>/usr/bin/sudo /home/opc/fsdrsscripts/addToBackendset.py <REPLACE WITH YOUR OCID></copy>
-    ````
+  - Add *Start Kibana Services* in Group name
+  - Add *Boot up Kibana Services* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
+  - Leave the default "3600" seconds in Timeout in seconds
+  - In the region, select "US East (Phoenix)"
+  - Select the "Run local script" option
+  - Select Kibana server instance in "Target instance in compartment"
+  - In the script parameters, add the location of the Kibana services start-up script
+  - Run as user will be the username who has access to boot Kibana services
 
- **You need to replace the OCID of the standby (Phoenix) load balancer as per step 2.6; make sure you replace the OCID of your load balancer without fail in the above command,remove angle brackets,note there is space after addToBackendset.py**
+  Click on Add Step.
+ 
+  Click on Add.
 
+    ![phoenix-add-kibana-boot-group](./images/phoenix-add-kibana-boot-group.png)
 
-- Leave the field blank in "Run as user."
-- Verify all the details and hit add
+You will now be able to see all the built in and user defined custom groups in the FSDR plan like below.
 
-  ![create loadbalancer add group](./images/phoenix-lbadd-node0.png)
-
-- **mushop-phoenix** drpg will go into updating state, and after a few seconds, it will return to active state. Refresh the DRPG page if required. You should be able to see that the *Add Standby Load Balancer Backends* Plan group has been added successfully with the *Add Standby Backend on Node-0* step. Note the type in the group name. It will show as **User defined** as this is a user-defined group.
-
-  ![created loadbalancer add group](./images/phoenix-lbadd-node0-added.png)
-
-3.Need to add another step for *Add Standby Backend on Node-1* in *Add Standby Load Balancer Backends* Plan group
-
-- Select the three dots section in the right end from the *Add Standby Load Balancer Backends* Plan group. Select **Add Step** 
-
-  ![add step to adding loadbalancer group](./images/phoenix-lbadd-addstep.png)
-
-- Leave the default Group name
-- Add *Add Standby Backend on Node-1* in Step name
-- Select Error mode as "Stop on error."
-- Leave the default "3600" seconds in Timeout in seconds
-- Leave the enabled tick mark
-- In the region, select "US East (Ashburn)."
-- Select the "Run local script" option
-- Select "mushop-xxxxx-1" instance in "Target instance in compartment"
-- In script parameters, add the below script
-
-    ````
-        <copy>/usr/bin/sudo /home/opc/fsdrsscripts/addToBackendset.py <REPLACE WITH YOUR OCID></copy>
-    ````
-
- **You need to replace the OCID of the standby (Phoenix) load balancer as per step 2.6; make sure you replace the OCID of your load balancer without fail in the above command,remove angle brackets,note there is space after addToBackendset.py**
-
-- Leave the field blank in "Run as user."
-- Verify all the details and hit add
-
-  ![adding step to adding loadbalancer group](./images/phoenix-lbadd-node1.png)
-
-- **mushop-phoenix** drpg will go into updating state, and after a few seconds, it will return to active state. Refresh the DRPG page if required. You should be able to see that the *Add Standby Load Balancer Backends* Plan group has been modified successfully with the *Add Standby Backend on Node-1* step. Now you can see that both steps have been added to the group.
-
-  ![added step to adding loadbalancer group](./images/phoenix-lbadd-steps.png)
-
-
-## Task 7: Verify and reorder the User defined groups
-
-1. We have created all the required user-defined groups in the **mushop-app-switchover** switchover plan as part of the Mushop application switchover.
-
-   ![review all userdefined groups](./images/phoenix-userdef-groups.png)
-
-2. Let's review the **mushop-app-switchover** switchover plan 
-
--  Built-in Prechecks - These are the built-in prechecks groups for all the Plan groups (Built-in and User defined)
--  Based on the members we have added in both Primary DRPG and Standby DRPG, FSDRS created seven Built-in switchover plan
--  We have manually created four user-defined groups per the Mushop application switchover requirement.
--  In summary, the **mushop-app-switchover** switchover plan has created with *one*- Built-in precheck plan group, *seven*- Built-in Plan group,*four*- User defined Plan group
-
-  ![all groups in DR plan](./images/phoenix-all-plangroups.png)
-
-3.Plan groups can be reordered as per the switchover workflow requirement. As part of the Mushop Switchover plan, we would like to execute **Remove Primary Load Balancer Backends** plan group after the **Built-In Prechecks** plan group. Use the **Actions** after the Add group, and select **Reorder groups**
-
-  ![reorder dr plan group](./images/phoenix-reorder-groups.png)
-
-4.Go to the **Remove Primary Load Balancer Backends** plan group, use the move up **^** symbol, and keep moving up the **Remove Primary Load Balancer Backends** plan group and place it after the **Built-In Prechecks** plan group. This is very important to execute the plan groups in the proper order. Verify and hit **Save changes**. Don't move the other groups. 
-
-  ![moving the plangroup](./images/phoenix-plangrp-moving.png)
-  ![moved the plangroup](./images/phoenix-plangrp-moved.png) 
-
-5.You should be able to see **Remove Primary Load Balancer Backends** plan group moved after the **Built-In Prechecks** plan group.
-
-  ![final plangroup](./images/phoenix-final-plan.png)
+   ![phoenix-dr-plan-all-group](./images/phoenix-dr-plan-all-group.png)
 
    You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** -  Suraj Ramesh, Principal Product Manager
-- **Last Updated By/Date** -  Suraj Ramesh,September 2022
+- **Author** -  Vinay Shivanan, Prinicpal Cloud Architect
+- **Last Updated By/Date** -  Vinay Shivanan, Prinicpal Cloud Architect, April 2023
