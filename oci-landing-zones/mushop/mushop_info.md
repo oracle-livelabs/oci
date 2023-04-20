@@ -96,21 +96,23 @@ To delete entire OELZ stack, there are a few resources that will require some ma
 
 The steps to clean up these resources is as follows: 
 
-1. Bucket Removal (For each Environment)
+1. Bucket Removal
     - Navigate to the audit bucket, default bucket, and service event bucket in the logging compartment, and archive bucket in the home compartment.
     - For each bucket:
         - Delete the retention rules: on the bucket page, navigate to Resource → Retention Rules.
         - Delete all the objects in the bucket: on the bucket page, navigate to Resource → Objects.
         - Delete the bucket.
 
-2. Identity Domain (For each Environment)
+2. Identity Domain
     - Deactivate the identity domain created in the security compartment for each env: on the Identity Domain page, navigate to More actions → Deactivate.
     - Delete the identity domain. 
 
-3. Vault/Key (For each Environment)
+3. Vault/Key
     - The vault cannot be deleted right away. Vaults have a minimum 7-Day waiting period before deletion. This is because once the Vault is deleted, all    data encrypted with keys in that Vault becomes unreadable. 
     * You can move the vault and the Master Encryption Key to another compartment outside the Enterprise Scale Baseline Landing Zone home before deleting it in order to delete the landing zone.
     * Or you can schedule a deletion for the key and the vault, and then wait to delete the Enterprise Scale Baseline Landing Zone when the Vault and key have been deleted. 
+
+4. Delete the stack.
 
 ## Task 5: Known Issue 
 
