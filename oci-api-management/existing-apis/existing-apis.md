@@ -64,94 +64,86 @@ Estimated time: 20 min
     ```
 
 ## Task 2: Add existing APIs from Oracle Integration
-### 1. Create an Oracle Integration installation
 
-Let's create an Oracle Integration Installation with some samples:
-- Menu Developer Services / Application Integration 
+1. Create an Oracle Integration installation
+    - Menu Developer Services / Application Integration 
 
-    ![Oracle Integration](images/apim-oic1.png)
+        ![Oracle Integration](images/apim-oic1.png)
 
-- Click *Create Instance*
-- Name *oic\_apim*
-- Choose Integration Cloud Gen 2 (not tested yet with Gen3)
-- Choose your version and license type
-- Click *Create*
-- When the instance is green, click *Service Console*
-- In the Oracle Integration menu, choose *Integrations* / *Integrations* again
-- Remove the filter with your username
-- You will see some preinstalled sample. 
- 
-    ![Oracle Integration - Samples](images/apim-oic2.png)
+    - Click *Create Instance*
+    - Name *oic\_apim*
+    - Choose Integration Cloud Gen 2 (not tested yet with Gen3)
+    - Choose your version and license type
+    - Click *Create*
+    - When the instance is green, click *Service Console*
+2. Install Samples
+    - In the Oracle Integration menu, choose *Integrations* / *Integrations* again
+    - Remove the filter with your username
+    - You will see some preinstalled sample. 
+    
+        ![Oracle Integration - Samples](images/apim-oic2.png)
 
-- Hover your mouse on the first line (Echo) and activate the integration
-- In the dialog, click *Activate* again
-- Do the same for several other integrations
+    - Hover your mouse on the first line (Echo) and activate the integration
+    - In the dialog, click *Activate* again
+    - Do the same for several other integrations
 
-    ![Oracle Integration - Samples](images/apim-oic3.png)
+        ![Oracle Integration - Samples](images/apim-oic3.png)
 
-- Note the host name of OIC from the URL (##OIC\_HOST##): ex: oic-apim-xxxxx-fr.integration.ocp.oraclecloud.com
+3. Note the host name of OIC from the URL (##OIC\_HOST##): ex: oic-apim-xxxxx-fr.integration.ocp.oraclecloud.com
+4. Go back the APEX API Portal (##PORTAL\_URL##)
+    - Click on the menu 
+    - Then *Source*
+5. Click *Oracle Integration Credentials* 
+    - For OCI Username, enter ##USERNAME##
+    - For Password, enter ##PASSWORD##
 
-### 2. Credentials
-- Go back the APEX API Portal (##PORTAL\_URL##)
-- Click on the menu 
-- Then *Source*
-- Click *Oracle Integration Credentials* 
-- For OCI Username, enter ##USERNAME##
-- For Password, enter ##PASSWORD##
-
-    ![Oracle Integration - Samples](images/apim-oic-cred.png)
+        ![Oracle Integration - Samples](images/apim-oic-cred.png)
 
 It will allow the database to call the OIC URLs
 
 ### 3. Create OIC Source
 
-- Still in the Source screen.
-- Click *Create*
-- Source Type *Oracle Integration*
-- Oracle Integration Host: ##OIC\_HOST##
-- Click *Create*
+1. Still in the Source screen.
+    - Click *Create*
+    - Source Type *Oracle Integration*
+    - Oracle Integration Host: ##OIC\_HOST##
+    - Click *Create*
 
-    ![Oracle Integration - Credentials](images/apim-source-oic.png)
+        ![Oracle Integration - Credentials](images/apim-source-oic.png)
 
 ## Task 3: Add existing API from API Gateway
 
-### 1. Get APIW OCID
+1. Get APIW OCID
+    - Please find back the Compartment OCID that was used to create the API Gateway in Lab 2 (Cloud Native). (##COMPARTMENT\_OCID##)
+2. Go back the APEX API Portal (##PORTAL\_URL##)
+    - Click on the menu 
+    - Then *Source*
+3. Click *API Gateway Credentials* 
+    - For User OCID, enter ##USER\_OCID##
+    - For Tenancy OCID, enter ##TENANT\_OCID##
+    - For Private Key, enter ##PRIVATE\_KEY##
+    - For Fingerprint, enter ##FINGERPRINT##
+    - Click *Create*
 
-Please find back the Compartment OCID that was used to create the API Gateway in Lab 2 (Cloud Native). (##COMPARTMENT\_OCID##)
+        ![Oracle Integration - Credentials](images/apim-apigw-cred.png)
 
-### 2. Credentials
+    It will allow the database to call the APIGW URLs
+4.  Create APIGW Source. 
+    - Still in the Source screen.
+    - Click *Create*
+    - Source Type *OCI API Gateway*
+    - Oracle Integration Host: ##COMPARTMENT\_OCID##
+    - Click *Create*
 
-- Go back the APEX API Portal (##PORTAL\_URL##)
-- Click on the menu 
-- Then *Source*
-- Click *API Gateway Credentials* 
-- For User OCID, enter ##USER\_OCID##
-- For Tenancy OCID, enter ##TENANT\_OCID##
-- For Private Key, enter ##PRIVATE\_KEY##
-- For Fingerprint, enter ##FINGERPRINT##
-- Click *Create*
-
-    ![Oracle Integration - Credentials](images/apim-apigw-cred.png)
-
-It will allow the database to call the APIGW URLs
-
-### 3. Create APIGW Source
-
-- Still in the Source screen.
-- Click *Create*
-- Source Type *OCI API Gateway*
-- Oracle Integration Host: ##COMPARTMENT\_OCID##
-- Click *Create*
-
-    ![Oracle Integration - Credentials](images/apim-source-apigw.png)
+        ![Oracle Integration - Credentials](images/apim-source-apigw.png)
 
 ## Task 4: Discover and Test
 
-- Still in the Source screen.
-- Click *Discover All*
-- Go and check the result in the Portal 
+1. Still in the Source screen.
+    - Click *Discover All*
+    - Go and check the result in the Portal 
 
-    ![Oracle Integration - Credentials](images/apim-oic-test.png)
+        ![Oracle Integration - Credentials](images/apim-oic-test.png)
 
 ## Troubleshooting
 

@@ -4,6 +4,8 @@
 
 Neste Lab você vai dar um passo a mais no desenvolvimento de suas análises utilizando funcionalidades avançadas que o Oracle Analytics Cloud (OAC) oferece para você para enriquecer ainda mais seus insights.
 
+[Oracle Video Hub video scaled to Large size](videohub:1_6oeev9ax:large)
+
 *Tempo estimado para o Lab:* 25 Minutos
 
 ### Objetivos
@@ -255,4 +257,4 @@ Nesta sessão você aprendeu a utilizar recursos avançados para criação de Da
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Guilherme Galhardo, Mar/2023
+- **Último Update Por/Date** - Guilherme Galhardo, Abr/2023
