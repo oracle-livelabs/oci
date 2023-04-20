@@ -120,6 +120,7 @@ The tenancy you intend to deploy the OELZ to.
     |prod_budget_amount|`10000000`|
     |prod_enable_budget|`true`|
     |is_create_alarms|`false`|
+    |is_service_connector_limit|`true`|
     |domain_license_type|`free`|
     |onboard_log_analytics|`false`|
     |prod_enable_vpn|`false`|
@@ -167,9 +168,6 @@ The tenancy you intend to deploy the OELZ to.
 ![vcn_2](./images/vcn_2.png)
 ![vcn_3](./images/vcn_3.png)
 
-2) Spoke VCN : Go to Hamburger-->Networking-->Virtual Cloud Networks(VCN). GO to compartment tab and select the "OCI-ELZ-L-Workload1-IAD" compartment.
-
-![spoke_1](./images/spoke_1.png)
 
 ## Acknowledgements
 ---
