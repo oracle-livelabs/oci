@@ -4,7 +4,7 @@
 
 In this lab, we will Create and Associate Disaster Recovery Protection Groups (DRPG). Ashburn is the primary region and Phoenix is the standby region.
 
-What is DRPG – A resource type used by FSDR.  A DR Protection Group represents a consistency grouping defined for the purposes of disaster recovery.  It is a collection of different OCI resources that comprise an application and must be treated as a combined group when performing disaster recovery operations.  For example, a DR Protection Group may consist of application servers (compute instances), associated block storage (grouped as volume groups) and databases.
+What is DRPG – A resource type used by Full Stack Disaster Recovery.  A DR Protection Group represents a consistency grouping defined for the purposes of disaster recovery.  It is a collection of different OCI resources that comprise an application and must be treated as a combined group when performing disaster recovery operations.  For example, a DR Protection Group may consist of application servers (compute instances), associated block storage (grouped as volume groups) and databases.
 
 Estimated Time: 15 Minutes
 
@@ -38,7 +38,7 @@ Estimated Time: 15 Minutes
 
 5. Create DRPG in the Ashburn region. Click on Create DR Protection group in the Ashburn region browser tab.
 
-    - Provide a name for the FSDR Protection Group
+    - Provide a name for the Full Stack Disaster Recovery Protection Group
     - Select the right compartment
     - Select the object storage bucket created in Lab 1 which is **FSDR\_Bucket\_Ashburn**
     - Ignore Role and leave as **Not Configured**
@@ -54,7 +54,7 @@ Estimated Time: 15 Minutes
 
 6. Create DRPG in the Phoenix region. Select Create DR Protection group in the Phoenix region browser tab.
 
-    - Provide a name for the FSDR Protection Group
+    - Provide a name for the Full Stack Disaster Recovery Protection Group
     - Select the right compartment
     - Select the object storage bucket created in Lab 1 which is **FSDR\_Bucket\_Phoenix**
     - Ignore Role and leave as **Not Configured**

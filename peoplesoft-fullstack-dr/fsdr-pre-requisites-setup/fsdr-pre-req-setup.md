@@ -27,7 +27,7 @@ An Oracle Data Guard implementation requires two DB systems, one containing the 
 
 ## Task 1: Preparing Object Storage Buckets for Operation Logs
 
-Full Stack Disaster Recovery (FSDR) configurations use Object Storage to store Disaster Recovery (DR) operation logs.
+Full Stack Disaster Recovery (Full Stack Disaster Recovery) configurations use Object Storage to store Disaster Recovery (DR) operation logs.
 
 Before you create any DR configurations, you must create Object Storage buckets in both Ashburn (primary) and Phoenix (standby) regions to include in the DR configuration process.
 
