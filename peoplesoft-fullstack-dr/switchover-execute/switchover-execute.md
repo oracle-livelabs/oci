@@ -1,14 +1,10 @@
-# Perform pre-checks for the DR Switchover Plan
+# Execute DR Switchover Plan
 
 ## Introduction
 
-In this lab, we will execute the actual switchover plan for the **mushop-app-switchover** switchover plan, which we have created in lab 4. The switchover plan will execute the series of steps per the switchover plan.
+In this lab, we will execute the actual switchover plan for the **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** switchover plan, which we have created in lab 4. The switchover plan will execute the series of steps per the switchover plan.
 
 Estimated Time: 20 Minutes
-
-Watch the video below for a quick walkthrough of the lab.
-
-[Perform Switchover](videohub:1_d9ownrzi)
 
 ### Objectives
 
@@ -16,9 +12,9 @@ Watch the video below for a quick walkthrough of the lab.
 - Monitor the executed switchover plan
 - Verify the executed switchover plan
 
-## Task 1: Execute switchover for mushop-app-switchover plan
+## Task 1: Execute the switchover plan
 
-1. Login into OCI Console with your provided Credentials. Select region as **Pheonix**.
+1. Login into OCI Console. Select region as **Pheonix**.
 
   ![oci console phoenix](./images/phoenix-region.png)
 
