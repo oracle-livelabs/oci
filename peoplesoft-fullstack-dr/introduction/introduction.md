@@ -4,7 +4,7 @@
 
 In this workshop, we will see how easily Full Stack Disaster Recovery will help to orchestrate DR switchover operations for a PeopleSoft Application deployed in OCI across two OCI regions.
 
-## Estimated Workshop Time
+### **Estimated Workshop Time**
 
 Approximately 6 hrs
 
