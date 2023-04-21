@@ -43,7 +43,7 @@ Estimated Time: 20 Minutes
 
   ![drpg execute confirm](./images/phoenix-execute-run-1.png)
 
-## Task 2: Monitor the executed mushop-app-switchover Plan
+## Task 2: Monitor the executed switchover Plan
 
 1. Navigate to **Plan executions** section under **Resources** and select the **FSCM92-FSDR-Switchover-From-Ashburn-To-Phoenix** plan execution.Initially, it will show all the steps as *Queued*.
 
@@ -65,8 +65,6 @@ Estimated Time: 20 Minutes
 
 7. Wait for all the steps to complete successfully.  It is important to monitor the progress of each step and take actions in case of any failures.  Switchover Databases (Standby) group will run for around 10 minutes. 
 
-**Approximately it will take *20-30* mins to successfully complete the switchover plan in this workshop**
-
 ## Task 3: Verify the executed switchover plan
 
 1. From the plan execution detail, verify the duration of each step, status, duration of the entire switchover plan, etc. *It is essential to have successful completion of all steps*. In this example it took around 27 minutes to complete. These timings will vary.Use the Expand all button to expand all the steps and the Collapse all button for collapsing. Use the view or download log option to see step execution details.
@@ -75,15 +73,9 @@ Estimated Time: 20 Minutes
 
 You may now **proceed to the next lab**.
 
-Refer to the **Troubleshooting tips** section for known failures and corrective actions.
-
-## Troubleshooting tips
-
-1. If any of the Step fails, verify the log and take necessary actions.
-2. If required cancel the plan and run prechecks as per Lab 5.1, verify for successful execution.
-
-
 ## Acknowledgements
 
-- **Author** -  Suraj Ramesh, Principal Product Manager
-- **Last Updated By/Date** -  Suraj Ramesh,September 2022
+- **Author** -  Vinay Shivanna, Principal Cloud Architect
+- **Contributors** - 
+- **Last Updated By/Date** -  Vinay Shivanna, April 2023
+
