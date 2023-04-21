@@ -11,12 +11,14 @@ This lab will focus on how to create a Switchover plan and customize the plan as
 
 **DR Plan *must* be created in the standby region (Phoenix)**. It is because, in the case of the worst-case scenario, the entire primary region outside the FSDR will not be accessible from the primary region.
 
-Estimated Time: 120 Minutes
+Estimated Time: 180 Minutes
 
 ### Objectives
 
 - Enable Run Commands on all the Compute Instances
 - Create a Switchover plan
+- Customize the Switchover plan - Add PeopleSoft Application Shutdown group
+- Customize the Switchover plan - Add DNS Record Update Script
 - Customize the Switchover plan - Add PeopleSoft Application Server boot up group
 - Customize the Switchover plan - Add PeopleSoft Process Scheduler Server (Linux) boot up group
 - Customize the Switchover plan - Add PeopleSoft Process Scheduler Server (Windows) boot up group
@@ -160,11 +162,151 @@ Please refer below link to know more about on how to enable Run Commands in Comp
 
   ![drpg plan details](./images/phoenix-drplan-detail.png)
 
-## Task 3: Customize the Switchover plan - Add DNS Record Update Script
+## Task 3: Customize the Switchover plan - Add PeopleSoft Application Shutdown group
+
+We will shutdown PeopleSoft Applicaitons in **Ashburn** region as we are doing the switchover from *Ashburn* to *Phoenix*. 
 
 1. Click on Add group.
 
-  ![add plan group](./images/phoenix-plangroup-add.png)
+    ![add plan group](./images/phoenix-plangroup-add.png)
+
+2. Add "Stop PeopleSoft Application in Ashburn" User defined group. Click on Add Step.
+
+    ![phoenix-plangroup-shutdown-psft](./images/phoenix-plangroup-shutdown-psft.png)
+
+    ![phoenix-plangroup-shutdown-app](./images/phoenix-plangroup-shutdown-app.png)
+
+  - Add *Stop PeopleSoft Application in Ashburn* in Group name
+  - Add *Stop PeopleSoft Application Server Domain* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
+  - Leave the default "3600" seconds in Timeout in seconds
+  - In the region, select "US East (Ashburn)"
+  - Select the "Run local script" option
+  - Select the Application Server instance in "Target instance in compartment" where you have placed the Application Server Domain Shutdown script
+  - In the script parameters, add the location of the Application Server Domain Shutdown script. Below is an example of Application Server Domain Shutdown script, please write a shutdown shell script according to your setup and configurations.
+
+    **#!/bin/bash**
+
+    **psadmin -c shutdown! -d APPDOM01**
+
+    **cd /u01/app/psoft/fscm92-dbaas-vinay-app/ps\_cfg\_home/appserv/APPDOM01/**
+
+    **rm -rf CACHE**
+
+    **psadmin -c cleanipc -d APPDOM01**
+
+  - Run as user will be the username who has access to shutdown PeopleSoft Application Server Domain.
+
+Click on Add Step.
+
+3. We will now add Process Scheduler server (Linux) shutdown step. Click on Add Step.
+
+    ![phoenix-plangroup-shutdown-prcs](./images/phoenix-plangroup-shutdown-prcs.png)
+
+    ![phoenix-plangroup-shutdown-prcs2](./images/phoenix-plangroup-shutdown-prcs2.png)
+
+  - Add *Stop PeopleSoft Procss Scheduler Server Domain (Linux)* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
+  - Leave the default "3600" seconds in Timeout in seconds
+  - In the region, select "US East (Ashburn)"
+  - Select the "Run local script" option
+  - Select the Process Scheduler Server (Linux) instance in "Target instance in compartment" where you have placed the Process Scheduler Server Domain Shutdown script
+  - In the script parameters, add the location of the Process Scheduler Server Domain Shutdown script. Below is an example of Process Scheduler Server Domain script, please write a shutdown shell script according to your setup and configurations.
+
+    **#!/bin/bash**
+
+    **psadmin -p stop -d PRCSDOM01**
+
+    **cd /u01/app/psoft/fscm92-dbaas-vinay-prcs/ps\_cfg\_home/appserv/prcs/PRCSDOM01**
+    
+    **rm -rf CACHE** 
+
+    **psadmin -p cleanipc -d PRCSDOM01**
+
+  - Run as user will be the username who has access to shutdown PeopleSoft Process Scheduler Server Domain.
+
+Click on Add Step.
+
+4. We will now add Process Scheduler server (Windows) shutdown step. Click on Add Step.
+
+    ![phoenix-plangroup-shutdown-prcs3](./images/phoenix-plangroup-shutdown-prcs3.png)
+
+    ![phoenix-plangroup-shutdown-prcs4](./images/phoenix-plangroup-shutdown-prcs4.png)
+
+  - Add *Stop PeopleSoft Procss Scheduler Server Domain (Windows)* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
+  - Leave the default "3600" seconds in Timeout in seconds
+  - In the region, select "US East (Ashburn)"
+  - Select the "Run local script" option
+  - Select the Process Scheduler Server (Windows) instance in "Target instance in compartment" where you have placed the Process Scheduler Server Domain Shutdown script
+  - In the script parameters, add the location of the Process Scheduler Server Domain Shutdown script. Below is an example of Process Scheduler Server Domain script, please write a shutdown shell script according to your setup and configurations.
+
+    **@ECHO OFF**
+
+    **SET TUXDIR=D:\app\psoft\ps\_home\pt\bea\tuxedo\tuxedo12.2.2.0.0\_VS2017**
+
+    **SET PS\_HOME=D:\app\psoft\ps\_home\pt\ps\_home8.60.03**
+
+    **SET PS\_APP\_HOME=D:\app\psoft\ps\_app\_home\pt\fscm\_app\_home**
+    **SET PS\_CFG\_HOME=D:\app\psoft\ps\_cfg\_home\FSCM92**
+
+    **SET PS\_CUST\_HOME=D:\app\psoft\ps\_cust\_home\FSCM92**
+
+    **d:**
+
+    **cd D:\app\psoft\ps\_home\pt\ps_home8.60.03\appserv**
+    
+    **psadmin.exe -p stop -d FSCM92\_PSNT** 
+
+  - Leave Run as user blank for Windows Compute Instance.
+
+Click on Add Step.
+
+5. We will now add Web Server shutdown step. Click on Add Step.
+
+    ![phoenix-plangroup-shutdown-web](./images/phoenix-plangroup-shutdown-web.png)
+
+    ![phoenix-plangroup-shutdown-web2](./images/phoenix-plangroup-shutdown-web2.png)
+
+  - Add *Stop PeopleSoft Web Server Domain* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
+  - Leave the default "3600" seconds in Timeout in seconds
+  - In the region, select "US East (Ashburn)"
+  - Select the "Run local script" option
+  - Select the Web Server (Windows) instance in "Target instance in compartment" where you have placed the Web Server Domain Shutdown script
+  - In the script parameters, add the location of theWeb Server Domain Shutdown script. Below is an example of Web Server Domain script, please write a shutdown shell script according to your setup and configurations.
+
+    **#!/bin/bash**
+
+    **psadmin -w shutdown! -d WEBSERVER01** 
+    
+    **cd /u01/app/psoft/fscm92-dbaas-vinay-web/ps\_cfg\_home/webserv/WEBSERVER01/applications/peoplesoft/PORTAL.war/**
+
+    **rm -rf cache**
+
+  - Run as user will be the username who has access to shutdown PeopleSoft Web Server Domain.
+
+  Click on Add Step.
+
+  Now, we have added shutdown steps for PeopleSoft Application Server, Process Scheduler (both Linux and Windows) and Web server domains hosted in *Ashburn* region.
+   
+   ![phoenix-plangroup-shutdown-ashburn-psft](./images/phoenix-plangroup-shutdown-ashburn-psft.png)
+
+   Click on Add.
+
+   DRPG will go to status of Updating, please wait for few minutes.
+
+    ![phoenix-shutdown-ashburn-psft-done](./images/phoenix-shutdown-ashburn-psft-done.png)
+
+## Task 4: Customize the Switchover plan - Add DNS Record Update Script
+
+1. Click on Add group.
+
+    ![add plan group](./images/phoenix-plangroup-add.png)
 
 2. Add "DNS Record Update" User defined group. Click on Add Step.
 
@@ -175,7 +317,7 @@ Please refer below link to know more about on how to enable Run Commands in Comp
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Phoenix)"
+  - In the region, select "US West (Phoenix)"
   - Select the "Run local script" option
   - Select the server instance in "Target instance in compartment" where you have placed the DNS record update script
   - In the script parameters, add the location of the DNS Record update script. Below is an example of DNS record update script, please write a boot up shell script according to your setup and configurations.
@@ -202,22 +344,24 @@ Please refer below link to know more about on how to enable Run Commands in Comp
 
   ![phoenix-add-dns-update-group](./images/phoenix-add-dns-update-group.png)
 
-## Task 4: Customize the Switchover plan - Add Application Server Boot-up Script
+## Task 5: Customize the Switchover plan - Add PeopleSoft Application Boot-up Group
 
 1. Click on Add group.
 
   ![add plan group](./images/phoenix-plangroup-add.png)
 
-2. Add "Start Application Server Domains" User defined group. Click on Add Step.
+2. Add "Start Application Server Domains" User defined group. We will now add PeopleSoft Application Server boot up step. Click on Add Step.
 
     ![add-app-boot-script](./images/phoenix-add-app-boot-script.png)
 
-  - Add *Start Application Server Domains* in Group name
+    ![add-app-boot-script](./images/phoenix-add-app-boot-script2.png)
+
+  - Add *Start PeopleSoft Application in Phoenix* in Group name
   - Add *Boot of Application Server Domains* in Step name
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Phoenix)"
+  - In the region, select "US West (Phoenix)"
   - Select the "Run local script" option
   - Select application server instance in "Target instance in compartment"
   - In script parameters, add the location of the application server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
@@ -238,26 +382,17 @@ Please refer below link to know more about on how to enable Run Commands in Comp
 
   Click on Add Step.
  
-  Click on Add.
+3. We will now add PeopleSoft Process Scheduler (Linux) boot up step.
 
-  ![add-app-boot-group](./images/phoenix-add-app-boot-group.png)
-
-## Task 5: Customize the Switchover plan - Add Process Scheduler Server (Linux) Boot-up Script
-    
-1. Click on Add group.
-
-  ![add plan group](./images/phoenix-plangroup-add.png)
-
-2. Add "Start Process Scheduler Domains (Linux)" User defined group. Click on Add Step.
+    ![add-prcs-boot-script](./images/phoenix-add-prcs-boot-script.png)
 
     ![phoenix-add-prcs-linux-boot-script](./images/phoenix-add-prcs-linux-boot-script.png)
 
-  - Add *Start Process Scheduler Domains (Linux)* in Group name
   - Add *Boot up Process Scheduler Domains (Linux)* in Step name
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Phoenix)"
+  - In the region, select "US West (Phoenix)"
   - Select the "Run local script" option
   - Select process scheduler server instance in "Target instance in compartment"
   - In script parameters, add the location of the process scheduler server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
@@ -276,26 +411,17 @@ Please refer below link to know more about on how to enable Run Commands in Comp
 
   Click on Add Step.
  
-  Click on Add.
-
-    ![add-prcs-linux-boot-group](./images/phoenix-add-prcs-linux-boot-group.png)
-
-## Task 6: Customize the Switchover plan - Add Process Scheduler Server (Windows) Boot-up Script
-    
-1. Click on Add group.
-
-  ![add plan group](./images/phoenix-plangroup-add.png)
-
-2. Add "Start Process Scheduler Domains (Windows)" User defined group. Click on Add Step.
+4. We will now add PeopleSoft Process Scheduler (Windows) boot up step. Click on Add Step.
 
     ![phoenix-add-prcs-windows-boot-script](./images/phoenix-add-prcs-windows-boot-script.png)
 
-  - Add *Start Process Scheduler Domains (Windows)* in Group name
+    ![phoenix-add-prcs-windows-boot-script](./images/phoenix-add-prcs-windows-boot-script2.png)
+
   - Add *Boot up Process Scheduler Domains (Windows)* in Step name
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Phoenix)"
+  - In the region, select "US West (Phoenix)"
   - Select the "Run local script" option
   - Select process scheduler server instance in "Target instance in compartment"
   - In script parameters, add the location of the process scheduler server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
@@ -324,24 +450,17 @@ Please refer below link to know more about on how to enable Run Commands in Comp
  
   Click on Add.
 
-    ![add-prcs-linux-boot-group](./images/phoenix-add-prcs-linux-boot-group.png)
-
-## Task 7: Customize the Switchover plan - Add Web Server Boot-up Script
-    
-1. Click on Add group.
-
-  ![add plan group](./images/phoenix-plangroup-add.png)
-
-2. Add "Start Web Server Domains" User defined group. Click on Add Step.
+5. We will now add Web Server Boot up step. Click on Add Step.
 
     ![phoenix-add-web-boot-script](./images/phoenix-add-web-boot-script.png)
 
-  - Add *Start Web Server Domains* in Group name
+    ![phoenix-add-web-boot-script](./images/phoenix-add-web-boot-script2.png)
+
   - Add *Boot up Web Server Domains* in Step name
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Phoenix)"
+  - In the region, select "US West (Phoenix)"
   - Select the "Run local script" option
   - Select web server instance in "Target instance in compartment"
   - In script parameters, add the location of the web server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
@@ -354,57 +473,49 @@ Please refer below link to know more about on how to enable Run Commands in Comp
 
     **psadmin -w start -d WEBSERVER01**
 
-  - Run as user will be the username who has access to boot Web Scheduler Server domain
+  - Run as user will be the username who has access to boot Web Server domain.
 
   Click on Add Step.
+
+    ![phoenix-add-boot-scripts](./images/phoenix-add-boot-scripts.png)
  
   Click on Add.
 
-    ![phoenix-add-web-boot-group](./images/phoenix-add-web-boot-group.png)
-
-## Task 8: Customize the Switchover plan - Add Elastic Search Services Boot-up Script
+## Task 6: Customize the Switchover plan - Add Elastic Search and Kibana Services Boot-up Scripts
     
 1. Click on Add group.
 
   ![add plan group](./images/phoenix-plangroup-add.png)
 
-2. Add "Start Elastic Search Services" User defined group. Click on Add Step.
+2. We will now add Elastic Search boot up script. Click on Add Step.
 
     ![phoenix-add-elk-boot-script](./images/phoenix-add-elk-boot-script.png)
 
-  - Add *Start Elastic Search Services* in Group name
+    ![phoenix-add-elk-boot-script](./images/phoenix-add-elk-boot-script2.png)
+
   - Add *Boot up Elastic Search Services* in Step name
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Phoenix)"
+  - In the region, select "US West (Phoenix)"
   - Select the "Run local script" option
   - Select Elastic Search server instance in "Target instance in compartment"
   - In the script parameters, add the location of the Elastic Search services start-up script
   - Run as user will be the username who has access to boot Elastic Search services
 
   Click on Add Step.
+
+      ![phoenix-add-elk-boot-group](./images/phoenix-add-kibana-boot-group.png)
  
-  Click on Add.
-
-    ![phoenix-add-elk-boot-group](./images/phoenix-add-elk-boot-group.png)
-
-## Task 9: Customize the Switchover plan - Add Kibana Services Boot-up Script
-    
-1. Click on Add group.
-
-  ![add plan group](./images/phoenix-plangroup-add.png)
-
-2. Add "Start Kibana Services" User defined group. Click on Add Step.
+3. We will now add Kibana Services boot up script. 
 
     ![phoenix-add-kibana-boot-script](./images/phoenix-add-kibana-boot-script.png)
 
-  - Add *Start Kibana Services* in Group name
   - Add *Boot up Kibana Services* in Step name
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Phoenix)"
+  - In the region, select "US West (Phoenix)"
   - Select the "Run local script" option
   - Select Kibana server instance in "Target instance in compartment"
   - In the script parameters, add the location of the Kibana services start-up script
@@ -414,11 +525,32 @@ Please refer below link to know more about on how to enable Run Commands in Comp
  
   Click on Add.
 
-    ![phoenix-add-kibana-boot-group](./images/phoenix-add-kibana-boot-group.png)
+    ![phoenix-add-kibana-boot-group](./images/phoenix-add-kibana-boot-group2.png)
 
 You will now be able to see all the built in and user defined custom groups in the FSDR plan like below.
 
    ![phoenix-dr-plan-all-group](./images/phoenix-dr-plan-all-group.png)
+
+## Task 76: Customize the Switchover plan - DR Plan Re-Ordering
+
+  We will now re-order the DR plan to stop PeopleSoft Application in Primary (*Ashburn*) region first 
+  followed by switchover to Standby (*Phoenix*) region.
+
+1. Click on Actions under the DR plan and click on **Reorder groups**.
+
+   ![phoenix-dr-plan-re-order](./images/phoenix-dr-plan-re-order.png)
+
+   Move group **Stop PeopleSoft Application in Ashburn** one order above **Switchover Databases (Standby)** so that Ashburn region hosted Primary production application is shutdown before switchover.
+
+   ![phoenix-dr-plan-re-order-shutdown](./images/phoenix-dr-plan-re-order-shutdown.png)  
+
+   ![phoenix-dr-plan-re-order-shutdown1](./images/phoenix-dr-plan-re-order-shutdown1.png)
+
+   Click Save changes.
+
+  Now the DR Swithover plan is re-ordered as below.
+
+   ![phoenix-dr-plan-re-order-done](./images/phoenix-dr-plan-re-order-done.png)
 
    You may now **proceed to the next lab**.
 
