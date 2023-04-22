@@ -14,7 +14,7 @@ Estimated Time: 15 Minutes
 - Monitor the executed prechecks plan
 - Verify the executed prechecks plan
 
-## Task 1: Perform Run prechecks for the mushop-app-switchover plan
+## Task 1: Perform Run prechecks for the Switchover plan
 
 1. Login into OCI Console. Select region as **Pheonix**.
 
@@ -42,7 +42,7 @@ Estimated Time: 15 Minutes
 
 ## Task 2: Monitor the executed prechecks plan
 
-1. Navigate to **Plan executions** section under **Resources** and select the **mushop-app-switchover-prechecks** plan execution.Initially, it will show all the **Built-in Prechecks** as *queued or in-progess*
+1. Navigate to **Plan executions** section under **Resources** and select the **FSCM92-FSDR-Switchover-From-Ashburn-To-Phoenix-Prechecks** plan execution.Initially, it will show all the **Built-in Prechecks** as *queued or in-progess*
 
   ![prechecks status](./images/phoenix-execute-in-progress.png)
 
