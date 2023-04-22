@@ -49,7 +49,7 @@ Estimated Time: 15 Minutes
 
 2. After 2-3 mins, **Built-in Prechecks**  will be completed successfully. You can verify the duration of each step, status, duration of entire prechecks, etc. *It is essential to have successful completion of pre-check execution*
 
-      ![prechecks completed](./images/phoenix-execute-done.png)
+      ![prechecks completed](./images/phoenix-execute-donevdvf.png)
 
    You may now **proceed to the next lab**.
 

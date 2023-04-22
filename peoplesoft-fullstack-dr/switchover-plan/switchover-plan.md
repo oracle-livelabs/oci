@@ -18,12 +18,15 @@ Estimated Time: 180 Minutes
 - Enable Run Commands on all the Compute Instances
 - Create a Switchover plan
 - Customize the Switchover plan - Add PeopleSoft Application Shutdown group
+- Customize the Switchover plan - Disable files synchronization (rsync) jobs in Ashburn
 - Customize the Switchover plan - Add DNS Record Update Script
 - Customize the Switchover plan - Add PeopleSoft Application Server boot up group
 - Customize the Switchover plan - Add PeopleSoft Process Scheduler Server (Linux) boot up group
 - Customize the Switchover plan - Add PeopleSoft Process Scheduler Server (Windows) boot up group
 - Customize the Switchover plan - Add PeopleSoft Web Server boot up group
 - Customize the Switchover plan - Add PeopleSoft Elastic Search & Kibana Service boot up group
+- Customize the Switchover plan - Enable files synchronization (rsync) jobs in Phoenix 
+- Customize the Switchover plan - DR Plan Re-Ordering
 
 ## Task 1: Enable Run Commands on an Instance
 
@@ -181,7 +184,7 @@ We will shutdown PeopleSoft Applicaitons in **Ashburn** region as we are doing t
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Ashburn)"
+  - In the region, select "**US East (Ashburn)**"
   - Select the "Run local script" option
   - Select the Application Server instance in "Target instance in compartment" where you have placed the Application Server Domain Shutdown script
   - In the script parameters, add the location of the Application Server Domain Shutdown script. Below is an example of Application Server Domain Shutdown script, please write a shutdown shell script according to your setup and configurations.
@@ -190,7 +193,7 @@ We will shutdown PeopleSoft Applicaitons in **Ashburn** region as we are doing t
 
     **psadmin -c shutdown! -d APPDOM01**
 
-    **cd /u01/app/psoft/fscm92-dbaas-vinay-app/ps\_cfg\_home/appserv/APPDOM01/**
+    **cd /u01/app/psoft/fscm92-dbaas-app/ps\_cfg\_home/appserv/APPDOM01/**
 
     **rm -rf CACHE**
 
@@ -210,7 +213,7 @@ Click on Add Step.
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Ashburn)"
+  - In the region, select "**US East (Ashburn)**"
   - Select the "Run local script" option
   - Select the Process Scheduler Server (Linux) instance in "Target instance in compartment" where you have placed the Process Scheduler Server Domain Shutdown script
   - In the script parameters, add the location of the Process Scheduler Server Domain Shutdown script. Below is an example of Process Scheduler Server Domain script, please write a shutdown shell script according to your setup and configurations.
@@ -219,7 +222,7 @@ Click on Add Step.
 
     **psadmin -p stop -d PRCSDOM01**
 
-    **cd /u01/app/psoft/fscm92-dbaas-vinay-prcs/ps\_cfg\_home/appserv/prcs/PRCSDOM01**
+    **cd /u01/app/psoft/fscm92-dbaas-prcs/ps\_cfg\_home/appserv/prcs/PRCSDOM01**
     
     **rm -rf CACHE** 
 
@@ -239,7 +242,7 @@ Click on Add Step.
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Ashburn)"
+  - In the region, select "**US East (Ashburn)**"
   - Select the "Run local script" option
   - Select the Process Scheduler Server (Windows) instance in "Target instance in compartment" where you have placed the Process Scheduler Server Domain Shutdown script
   - In the script parameters, add the location of the Process Scheduler Server Domain Shutdown script. Below is an example of Process Scheduler Server Domain script, please write a shutdown shell script according to your setup and configurations.
@@ -275,7 +278,7 @@ Click on Add Step.
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Ashburn)"
+  - In the region, select "**US East (Ashburn)**"
   - Select the "Run local script" option
   - Select the Web Server (Windows) instance in "Target instance in compartment" where you have placed the Web Server Domain Shutdown script
   - In the script parameters, add the location of theWeb Server Domain Shutdown script. Below is an example of Web Server Domain script, please write a shutdown shell script according to your setup and configurations.
@@ -284,7 +287,7 @@ Click on Add Step.
 
     **psadmin -w shutdown! -d WEBSERVER01** 
     
-    **cd /u01/app/psoft/fscm92-dbaas-vinay-web/ps\_cfg\_home/webserv/WEBSERVER01/applications/peoplesoft/PORTAL.war/**
+    **cd /u01/app/psoft/fscm92-dbaas-web/ps\_cfg\_home/webserv/WEBSERVER01/applications/peoplesoft/PORTAL.war/**
 
     **rm -rf cache**
 
@@ -302,7 +305,70 @@ Click on Add Step.
 
     ![phoenix-shutdown-ashburn-psft-done](./images/phoenix-shutdown-ashburn-psft-done.png)
 
-## Task 4: Customize the Switchover plan - Add DNS Record Update Script
+## Task 4: Customize the Switchover plan - Disable files synchronization (rsync) jobs in Ashburn
+
+As part of this task, we will disable all the synchronization jobs that are enabled to run in Ashburn region to keep DR (standby) in sync with production environment.
+
+1. Click on Add group.
+
+    ![add plan group](./images/phoenix-plangroup-add.png)
+
+2. We will disable cronjob (rsync) in Application Server. Add "Stop\_rsync\_in\_Ashburn\_App" User defined group. Click on Add Step.
+
+    ![phoenix-add-sync-stop-script](./images/phoenix-add-sync-stop-script.png)
+
+    ![phoenix-add-app-sync-stop-script](./images/phoenix-add-app-sync-stop-script.png)    
+
+    - Add *Disable\_rsync\_in\_Ashburn\_App* in Step name
+    - Leave the Enable Step as ticked
+    - Select Error mode as "Stop on error"
+    - Leave the default "3600" seconds in Timeout in seconds
+    - In the region, select "**US East (Ashburn)**"
+    - Select the "Run local script" option
+    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) disable script
+    - In the script parameters, add the location of the cronjob (rsync) disable script.
+  
+    Click on Add Step.
+
+3. We will now disable cronjob (rsync) in Process Scheduler Server. Click on Add Step.
+
+    ![phoenix-add-sync-stop-script](./images/phoenix-add-sync-stop-script2.png)
+
+    ![phoenix-add-prcs-sync-stop-script](./images/phoenix-add-prcs-sync-stop-script.png)    
+
+    - Add *Disable-rsync-in-Ashburn-PRCS* in Step name
+    - Leave the Enable Step as ticked
+    - Select Error mode as "Stop on error"
+    - Leave the default "3600" seconds in Timeout in seconds
+    - In the region, select "**US East (Ashburn)**"
+    - Select the "Run local script" option
+    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) disable script
+    - In the script parameters, add the location of the cronjob (rsync) disable script.
+
+    Click on Add Step.
+
+4. We will now disable cronjob (rsync) in Web Server. Click on Add Step.
+
+    ![phoenix-add-sync-stop-script](./images/phoenix-add-sync-stop-script3.png)
+
+    ![phoenix-add-web-sync-stop-script](./images/phoenix-add-web-sync-stop-script.png)    
+
+    - Add *Disable-rsync-in-Ashburn-WEB* in Step name
+    - Leave the Enable Step as ticked
+    - Select Error mode as "Stop on error"
+    - Leave the default "3600" seconds in Timeout in seconds
+    - In the region, select "**US East (Ashburn)**"
+    - Select the "Run local script" option
+    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) disable script
+    - In the script parameters, add the location of the cronjob (rsync) disable script.
+
+  Click on Add Step.
+
+  Click on Add.
+
+    ![phoenix-add-sync-stop-script-done](./images/add-sync-stop-script-done.png)    
+
+## Task 5: Customize the Switchover plan - Add DNS Record Update Script
 
 1. Click on Add group.
 
@@ -324,17 +390,7 @@ Click on Add Step.
 
     **#!/bin/bash**
 
-    **oci dns record rrset update**
-
-    **--zone-name-or-id "psftchatbot.tk"**
-
-    **--domain "fscm92.psftchatbot.tk"**
-
-    **--rtype "A"**
- 
-    **--items '[{"domain":"fscm92.psftchatbot.tk","rdata":"158.101.24.177","rtype":"A","ttl":60}]'**
-
-    **--force**
+    **oci dns record rrset update --config-file /u01/app/psoft/fscm92-dbaas-app/home/psadm2/.oci/config --zone-name-or-id "psftchatbot.tk" --domain "fscm92.psftchatbot.tk" --rtype "A" --items '[{"domain":"fscm92.psftchatbot.tk","rdata":"158.101.24.177","rtype":"A","ttl":60}]' --force**
 
   - Run as user will be the username who has access to update DNS records.
 
@@ -344,7 +400,7 @@ Click on Add Step.
 
   ![phoenix-add-dns-update-group](./images/phoenix-add-dns-update-group.png)
 
-## Task 5: Customize the Switchover plan - Add PeopleSoft Application Boot-up Group
+## Task 6: Customize the Switchover plan - Add PeopleSoft Application Boot-up Group
 
 1. Click on Add group.
 
@@ -368,7 +424,7 @@ Click on Add Step.
 
   **#!/bin/bash**
 
-  **cd /u01/app/psoft/fscm92-dbaas-vinay-app/ps\_cfg\_home/appserv/APPDOM01/**
+  **cd /u01/app/psoft/fscm92-dbaas-app/ps\_cfg\_home/appserv/APPDOM01/**
 
   **rm -rf CACHE**
 
@@ -399,7 +455,7 @@ Click on Add Step.
 
   **#!/bin/bash**
 
-  **cd /u01/app/psoft/fscm92-dbaas-vinay-prcs/ps\_cfg\_home/appserv/prcs/PRCSDOM01**
+  **cd /u01/app/psoft/fscm92-dbaas-prcs/ps\_cfg\_home/appserv/prcs/PRCSDOM01**
 
   **rm -rf CACHE**
 
@@ -467,7 +523,7 @@ Click on Add Step.
 
     **#!/bin/bash**
 
-    **cd /u01/app/psoft/fscm92-dbaas-vinay-web/ps\_cfg\_home/webserv/WEBSERVER01/applications/peoplesoft/PORTAL.war/**
+    **cd /u01/app/psoft/fscm92-dbaas-web/ps\_cfg\_home/webserv/WEBSERVER01/applications/peoplesoft/PORTAL.war/**
 
     **rm -rf cache**
 
@@ -481,7 +537,7 @@ Click on Add Step.
  
   Click on Add.
 
-## Task 6: Customize the Switchover plan - Add Elastic Search and Kibana Services Boot-up Scripts
+## Task 7: Customize the Switchover plan - Add Elastic Search and Kibana Services Boot-up Scripts
     
 1. Click on Add group.
 
@@ -531,7 +587,70 @@ You will now be able to see all the built in and user defined custom groups in t
 
    ![phoenix-dr-plan-all-group](./images/phoenix-dr-plan-all-group.png)
 
-## Task 76: Customize the Switchover plan - DR Plan Re-Ordering
+## Task 8: Customize the Switchover plan - Enable files synchronization (rsync) jobs in Phoenix
+
+ As part of this task, we will enable synchronization (rsync) jobs in Phoenix to reverse the sync from Phoenix to Ashburn post switchover as the roles (priamry and standby) are now reversed.
+
+ 1. Click on Add group.
+
+    ![add plan group](./images/phoenix-plangroup-add.png)
+
+2. We will enable cronjob (rsync) in Application Server. Add "Enable_rsync_in_Phoenix" User defined group. Click on Add Step.
+
+    ![phoenix-add-sync-start-script](./images/phoenix-add-sync-start-script.png)
+
+    ![phoenix-add-app-sync-start-script](./images/phoenix-add-app-sync-start-script.png)    
+
+    - Add *Enable-rsync-in-Ashburn-App* in Step name
+    - Leave the Enable Step as ticked
+    - Select Error mode as "Stop on error"
+    - Leave the default "3600" seconds in Timeout in seconds
+    - In the region, select "US West (Phoenix)"
+    - Select the "Run local script" option
+    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
+    - In the script parameters, add the location of the cronjob (rsync) enable script.
+  
+    Click on Add Step.
+
+3. We will now enable cronjob (rsync) in Process Scheduler Server. Click on Add Step.
+
+    ![phoenix-add-sync-stop-script](./images/phoenix-add-sync-start-script2.png)
+
+    ![phoenix-add-prcs-sync-stop-script](./images/phoenix-add-prcs-sync-start-script.png)    
+
+    - Add *Enable-rsync-in-Ashburn-PRCS* in Step name
+    - Leave the Enable Step as ticked
+    - Select Error mode as "Stop on error"
+    - Leave the default "3600" seconds in Timeout in seconds
+    - In the region, select "US West (Phoenix)"
+    - Select the "Run local script" option
+    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
+    - In the script parameters, add the location of the cronjob (rsync) enable script.
+
+    Click on Add Step.
+
+4. We will now enable cronjob (rsync) in Web Server. Click on Add Step.
+
+    ![phoenix-add-sync-stop-script](./images/phoenix-add-sync-start-script3.png)
+
+    ![phoenix-add-web-sync-stop-script](./images/phoenix-add-web-sync-start-script.png)    
+
+    - Add *Enable-rsync-in-Ashburn-WEB* in Step name
+    - Leave the Enable Step as ticked
+    - Select Error mode as "Stop on error"
+    - Leave the default "3600" seconds in Timeout in seconds
+    - In the region, select "US West (Phoenix)"
+    - Select the "Run local script" option
+    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
+    - In the script parameters, add the location of the cronjob (rsync) enable script.
+
+  Click on Add Step.
+
+  Click on Add.
+
+    ![phoenix-add-sync-start-script-done](./images/add-sync-start-script-done.png)    
+
+## Task 9: Customize the Switchover plan - DR Plan Re-Ordering
 
   We will now re-order the DR plan to stop PeopleSoft Application in Primary (*Ashburn*) region first 
   followed by switchover to Standby (*Phoenix*) region.
@@ -548,7 +667,17 @@ You will now be able to see all the built in and user defined custom groups in t
 
    Click Save changes.
 
-  Now the DR Swithover plan is re-ordered as below.
+2. Click on Actions under the DR plan and click on **Reorder groups**.
+
+   ![phoenix-dr-plan-re-order](./images/phoenix-dr-plan-re-order.png)
+
+   Move group **Stop\_rsync\_in\_Ashburn\_App** order above **Switchover Databases (Standby)**.
+
+   ![phoenix-dr-plan-re-order-sync](./images/phoenix-dr-plan-re-order-sync.png) 
+
+   Click Save changes.
+
+   Now the DR Swithover plan is re-ordered as below.
 
    ![phoenix-dr-plan-re-order-done](./images/phoenix-dr-plan-re-order-done.png)
 

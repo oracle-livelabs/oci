@@ -76,6 +76,5 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** -  Vinay Shivanna, Principal Cloud Architect
-- **Contributors** - 
 - **Last Updated By/Date** -  Vinay Shivanna, April 2023
 
