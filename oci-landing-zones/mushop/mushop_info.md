@@ -37,12 +37,12 @@ The steps below guide you through deploying the application on your tenancy usin
 3. Upload the `mushop-basic-stack-latest.zip` file that was downloaded earlier, and provide a name and description for the stack
     ![mushop_stack_zip](.//images/mushop-upload-zip-file.png)
     ![mushop_stack_var](.//images/mushop-upload-zip-var-name.png)
-5. Configure the stack
+4. Configure the stack
    1. **Database Name** - You can choose to provide a database name (optional)
    2. **Node Count** - Select if you want to deploy one or two application instances.
    3. **SSH Public Key** - (Optional) Provide a public SSH key if you wish to establish SSH access to the compute node(s).
    ![mushop_configure_stack](.//images/mushop-configure-stack.png)
-6. Review the information and click Create button.
+5. Review the information and click Create button.
    ![mushop_stack_review](.//images/mushop-stack-review.png)
    > The upload can take a few seconds, after which you will be taken to the newly created stack
    ![mushop_stack_info](.//images/mushop-stack-info.png)
