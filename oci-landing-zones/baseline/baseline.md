@@ -79,14 +79,11 @@ To deploy the OELZ from the terraform cli you will need the following prerequisi
 - [OCI Terraform provider](https://registry.terraform.io/providers/oracle/oci/latest/docs) v4.109.0 or later
 - [oci - cli](https://github.com/oracle/oci-cli)
 
-* User
-The OELZ should be deployed by a user who is a member of the Administrators group for the tenancy. This user need to have an api key entry defined as decribed [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformproviderconfiguration.htm). Once the user and API Key are defined your oci-cli config should resemble.
+* **User** : The OELZ should be deployed by a user who is a member of the Administrators group for the tenancy. This user need to have an api key entry defined as decribed [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformproviderconfiguration.htm). Once the user and API Key are defined your oci-cli config should resemble.
 
-* Region
-The OELZ should be deployed to the tenancy's Home Region.
+* **Region**  : The OELZ should be deployed to the tenancy's Home Region.
 
-* Tenancy
-The tenancy you intend to deploy the OELZ to.
+* **Tenancy** : The tenancy you intend to deploy the OELZ to.
 
 ```text
 [DEFAULT]
