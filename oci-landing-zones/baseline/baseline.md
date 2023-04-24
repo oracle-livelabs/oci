@@ -32,7 +32,8 @@ Prerequisites
 * User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc).
 
 
-Task 1: Create OELZ stack via ORM
+
+## Task 1: Create OELZ stack via ORM
 ---
 The first step is to create a OCI Resource Manager Stack. The Stack is a collection of Oracle Cloud Infrastructure resources corresponding to a given Terraform configuration. Each stack resides in the compartment you specify, in a single region; however, resources on a given stack can be deployed across multiple regions. An OCID (unique identifier) is assigned to each stack.
 
@@ -70,20 +71,24 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
   
 16. Go to Mushop Deployment.
 
-Task 2: Create OELZ stack via CLI (Optional Not Needed if Task 1 is used)
+
+## Task 2: Create OELZ stack via CLI (Optional Not Needed if Task 1 is used)
+---
+Prerequisites
 ---
 
-Prerequisites
 To deploy the OELZ from the terraform cli you will need the following prerequisites.
 - [Latest Version of Terrafom](https://developer.hashicorp.com/terraform/downloads)
 - [OCI Terraform provider](https://registry.terraform.io/providers/oracle/oci/latest/docs) v4.109.0 or later
 - [oci - cli](https://github.com/oracle/oci-cli)
+
 
 * **User** : The OELZ should be deployed by a user who is a member of the Administrators group for the tenancy. This user need to have an api key entry defined as decribed [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformproviderconfiguration.htm). Once the user and API Key are defined your oci-cli config should resemble.
 
 * **Region**  : The OELZ should be deployed to the tenancy's Home Region.
 
 * **Tenancy** : The tenancy you intend to deploy the OELZ to.
+
 
 ```text
 [DEFAULT]
@@ -93,7 +98,6 @@ tenancy=ocid1.xxxxxx.xxxxxx.xxxxxx..... #tenancy ocid
 region=us-phoenix-1 #or desired region
 key_file=<path to your private keyfile> # TODO
 ```
-
 
 1) Clone the OELZ Terraform templates from the [oelz_github](https://github.com/oracle-quickstart/oci-landing-zones/tree/master).
 2) Go to Directory landing-zones/templates/freetrial-landing-zone.
@@ -154,7 +158,8 @@ key_file=<path to your private keyfile> # TODO
     ![terraform_destroy_1](./images/terraform-destroy-1.png)
     ![terraform_destroy_2](./images/terraform-destroy-2.png)
 
-Task 3: Verify OELZ Resources
+
+## Task 3: Verify OELZ Resources
 ---
 
 1) Go to Hamburger-->Identity & Security-->Compartments and click on "LIVELAB-OCI-CMP-HOME" compartment and you can see the compartment struture defined on the introduction section.

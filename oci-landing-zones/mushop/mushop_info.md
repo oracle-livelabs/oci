@@ -28,6 +28,7 @@ Mushop Topology Details
 
 The repository contains the application code as well as the [Terraform][tf] code to create a [Resource Manager][orm] stack, that creates all the required resources and configures the application on the created resources. To simplify getting started, the Resource Manager Stack is created as part of each [release](https://github.com/oracle-quickstart/oci-cloudnative/releases)
 
+
 The steps below guide you through deploying the application on your tenancy using the OCI Resource Manager.
 
 1. Download the latest [`mushop-basic-stack-latest.zip`](https://github.com/oracle-quickstart/oci-cloudnative/releases/latest/download/mushop-basic-stack-latest.zip) file.
@@ -52,7 +53,9 @@ The steps below guide you through deploying the application on your tenancy usin
    ![mushop_stack_info](.//images/mushop-stack-info.png)
 
 
+
 ## Task 2: Verify Mushop Application Resources Deployment.
+
 1) Go to `Home > Developer Services > Resource Manager > Stacks` and click on the newly created stack and make sure its state is Active.
    ![mushop_stack_state_info](.//images/mushop-stack-state-info.png)
 2) Click on the newly created mushop stack
@@ -74,7 +77,7 @@ Hamburger > Networking > Load Balancers
 
 * Note: in case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources.
 
-## Task 3: Delete Mushop Application 
+## Task 3: Delete Mushop Application  
 
 With the use of Terraform, the Resource Manager stack is also responsible for terminating the application.
 
@@ -118,7 +121,8 @@ The steps to clean up these resources is as follows:
 
 4. Delete the stack.
 
-## Task 5: Known Issue 
+Task 5: Known Issue 
+--- 
 
 * In case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources.
 * Sometimes DB provisioning is not allowed in the tenanacy , in this case Job will fail. Click on Destroy button will trigger the job to remove provisioned resources.
