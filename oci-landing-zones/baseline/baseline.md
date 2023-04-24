@@ -70,7 +70,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
   
 16. Go to Mushop Deployment.
 
-## Task 2: Create OELZ stack via CLI (Optional Not Needed if Task 1 is used)
+Task 2: Create OELZ stack via CLI (Optional Not Needed if Task 1 is used)
 ---
 ### Prerequisites
 To deploy the OELZ from the terraform cli you will need the following prerequisites.
@@ -154,7 +154,7 @@ The tenancy you intend to deploy the OELZ to.
     ![terraform_destroy_1](./images/terraform-destroy-1.png)
     ![terraform_destroy_2](./images/terraform-destroy-2.png)
 
-### Task 3: Verify OELZ Resources
+Task 3: Verify OELZ Resources
 ---
 
 1) Go to Hamburger-->Identity & Security-->Compartments and click on "LIVELAB-OCI-CMP-HOME" compartment and you can see the compartment struture defined on the introduction section.
