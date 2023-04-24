@@ -11,15 +11,11 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Deploy Baseline Landing Zone",
+            "title": "Lab 1: Deploy OELZ Baseline Landing Zone",
             "filename": "../../baseline/baseline.md"
         },
         {
-            "title": "Lab 2: Extend the Landing Zone",
-            "filename": "../../workflow/workflow.md"
-        },
-        {
-	    "title": "Lab 3: Landing Zone Intergration with Mushop",
+	    "title": "Lab 2: Deploy Mushop 3-tier on OELZ",
             "filename": "../../mushop/mushop_info.md"
         },	
         {
