@@ -41,7 +41,11 @@ The steps below guide you through deploying the application on your tenancy usin
    1. **Database Name** - You can choose to provide a database name (optional)
    2. **Node Count** - Select if you want to deploy one or two application instances.
    3. **SSH Public Key** - (Optional) Provide a public SSH key if you wish to establish SSH access to the compute node(s).
-   ![mushop_configure_stack](.//images/mushop-configure-stack.png)
+   ![mushop_configure_stack1](.//images/mushop-optional-configuration.png)
+   ![mushop_configure_stack2](.//images/mushop-advanced-resource.png)
+   ![mushop_configure_stack3](.//images/mushop-lb-advanced-resource.png)
+   ![mushop_configure_stack4](.//images/mushop-lb-advanced-resource-options.png)
+   ![mushop_configure_stack5](.//images/mushop-create-stack.png)
 5. Review the information and click Create button.
    ![mushop_stack_review](.//images/mushop-stack-review.png)
    > The upload can take a few seconds, after which you will be taken to the newly created stack
