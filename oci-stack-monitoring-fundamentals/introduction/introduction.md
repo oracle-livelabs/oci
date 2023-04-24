@@ -8,7 +8,7 @@ In this workshop learn how to identify application outages across your enterpris
 
 Finally, get familiar with Stack Monitoring's home pages and how to triage open alarms and view metric performance over time. Utilize Stack Monitoring's application topology to identify and troubleshoot issues across an application stack. Leverage Stack Monitoring's **Stack View** to get a holistic perspective of key performance metrics across an entire application, for this workshop we will use an E-Business Suite application.
 
-Estimated time for this workshop: 30 minutes
+Estimated time for this workshop: 60 minutes
 
 ### About Oracle Cloud Infrastructure Stack Monitoring
 
@@ -29,6 +29,7 @@ In this workshop, the following topics will be covered:
   - Review application topology
   - Navigate across an application stack
   - Review key vital signs of an application's overall health using the Stack View
+* Putting it all together
 
 ### Prerequisites
 
@@ -40,4 +41,4 @@ In this workshop, the following topics will be covered:
 - **Contributors** - Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,
 - Steven Lemme, Senior Principal Product Manager,
 Anand Prabhu, Sr. Member of Technical Staff
-- **Last Updated By/Date** - Aaron Rimel, February 2023
+- **Last Updated By/Date** - Aaron Rimel, May 2023

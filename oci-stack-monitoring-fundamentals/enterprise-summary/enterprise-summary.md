@@ -4,7 +4,7 @@
 
 In this workshop, you will learn how the Enterprise Summary can be capitalized to monitor the status and performance of an application and its underlying tech stack. You will understand how to review the overall availability status of all resources, identify the resources that are down, and review the open alarms. Additionally, you will identify the list of Oracle Databases in a Not Reporting state. You will further learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, because you are monitoring each tier, you will see how to interact with the Enterprise Summary UI to dynamically view other metrics. 
 
-Estimated time: 10 minutes
+Estimated time: 20 minutes
 
 ### Objectives
 
@@ -89,6 +89,17 @@ Estimated time: 10 minutes
  	Clicking an alarm name will open a new tab in your browser to investigate and work the alarm within Oracle Cloud Infrastructure's Monitoring Service.
 
  	![Oracle Cloud Monitoring Service, showing details of the host down alarm](images/3-3-ent-sum.png " ")
+
+ 	With the new browser tab open, let's review this example alarm. The **Alarm Definition** provides critical details into the firing state for this specific metric. 
+ 	1) At the top of the page, we can see the name of the alarm, Host Down, and the current status of the alarm is **Firing**, and the severity is **Critical**. 
+ 	
+ 	2) Moving down the page, we can identify the compartment where the alarming resource resides, OracleApps. The OCID of the resource is provided to help identify the offending resource. To identify the resource in a firing state, the OCID can copied and placed into the OCI search bar for easy identification and navigation. Next we see the **Namespace**. Stack Monitoring places all metric data into the **oracle_appmgmt** namespace. This is true for all resource types except Oracle Database. Oracle Database metrics are stored in the **oracle_oci_database** namespace. Stack Monitoring utilizes **Resource groups** to organize the large number of metrics provided out-of-the-box. Examples of Resource groups include: host, apache_tomcat, weblogic_j2eeserver, and elastic_search to name a few. 
+ 	
+ 	3) The OCI Monitoring Service provides a variety of ways to notify users an alarm is firing. In this example, we can see this alarm is defined to notify users within the Topic, StackMonDemo. A topic is a grouping of similar notification types, such as a list of email addresses. Examples of other Topic subscription protocols include Slack, PagerDuty, or a custom function to name a few. 
+ 	
+ 	This particular alarm is configured to group notifications across metric streams. Grouping notifications within a metric stream reduces the number of alarms a user would receive. Using this alarm as an example, **Host Down**, was configured to fire if any host within this compartment, OracleApps, goes down. The members of the Topic Stack MonDemo notification group will be notified via email. Should more than one host go down, a single email will be sent to each member of the group, and the notification and alarm status page will denote multiple OCIDs in a firing state.
+
+ 	4) By default when the **Alarm Definition** browser tab opens, the last hour of firing history will be displayed. The time period can easily be adjusted using the drop-down.
 
  	Once you have reviewed the alarm, close the browser tab to return to Stack Monitoring. 
 
