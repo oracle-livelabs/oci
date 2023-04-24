@@ -53,15 +53,15 @@ Estimated Time: 20 Minutes
 
 3. All the *plan groups* will run serially, but steps inside each *plan group* will be parallel. Monitor the various plan group and steps which are running. Navigate to the three dots section for the respective plan group step and click. You get the option to view the log and download the log. These logs are stored in the object storage bucket provided during the DRPG creation. You can monitor the Progress and download the log if necessary for troubleshooting.
 
-   ![drpg execute monitor log](./images/phoenix-execute-viewlog.png)
+   ![drpg execute monitor log](./images/phoenix-execute-viewlog222.png)
 
 5. Once each plan group is executed successfully, it will move on to the next group for execution. 
 
-   ![drpg execute monitor progress](./images/phoenix-execute-moving.png)
+   ![drpg execute monitor progress](./images/phoenix-execute-moving222.png)
 
 6. Keep monitoring the rest of the groups and steps; each step will complete depending on the actual task.
 
-   ![drpg execute monitor progress1 ](./images/phoenix-execute-moving1.png)
+   ![drpg execute monitor progress1 ](./images/phoenix-execute-moving1222.png)
 
 7. Wait for all the steps to complete successfully.  It is important to monitor the progress of each step and take actions in case of any failures.  Switchover Databases (Standby) group will run for around 10 minutes. 
 
@@ -69,7 +69,7 @@ Estimated Time: 20 Minutes
 
 1. From the plan execution detail, verify the duration of each step, status, duration of the entire switchover plan, etc. *It is essential to have successful completion of all steps*. In this example it took around 27 minutes to complete. These timings will vary.Use the Expand all button to expand all the steps and the Collapse all button for collapsing. Use the view or download log option to see step execution details.
 
-      ![drpg execution done](./images/phoenix-execute-done.png)
+      ![drpg execution done](./images/phoenix-execute-done222.png)
 
 You may now **proceed to the next lab**.
 
