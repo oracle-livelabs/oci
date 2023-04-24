@@ -4,7 +4,7 @@
 
 In this workshop, you will learn how the Enterprise Summary can be capitalized to monitor the status and performance of an application and its underlying tech stack. You will understand how to review the overall availability status of all resources, identify the resources that are down, and review the open alarms. Additionally, you will identify the list of Oracle Databases in a Not Reporting state. You will further learn how to review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, because you are monitoring each tier, you will see how to interact with the Enterprise Summary UI to dynamically view other metrics. 
 
-Estimated time: 20 minutes
+Estimated time: 30 minutes
 
 ### Objectives
 
@@ -13,6 +13,7 @@ Estimated time: 20 minutes
 * Review open alarms by severity
 * Review the performance of resources across an enterprise
 * Dynamically investigate other key performance metrics
+* Discover an E-Business Suite Application and its underlying tech stack
 
 ### Prerequisites
 
@@ -167,6 +168,53 @@ Estimated time: 20 minutes
 	Once you are done reviewing JVM heap utilization, let's reset the Enterprise Summary to the default configuration. To reset the page, locate the **Restore default** link in the left menu bar under **View**. Once clicked, the page will reset to the out-of-the-box configuration. 
 
  	![Enterprise Summary, highlighting the restore default button](images/5-3-ent-sum.png " ")
+
+ 	Now let's review discovery and promotion, how resources become monitored in Stack Monitoring.
+
+## Task 6: Discover an E-Business Suite Application and its underlying tech stack
+
+Monitoring begins with discovery. The first step to monitoring an E-Business Suite (EBS) application is to enable full monitoring of the hosts the application runs on. Next, discover the Oracle Database used by the application. Finish by discovering the application or application technology such as EBS or Tomcat. When discovering an application such as EBS or PeopleSoft, the discovery job discovers the entire application stack and its components such as Concurrent Manager and Notification Mailer, as well as the underlying WebLogic Domain and WebLogic Servers will be discovered. Let's begin by walking through the promotion of a host. For the promotion and discovery exercises we will **cancel** in-lieu of clicking discovery, as user access within the lab is limited.
+
+1. Promote an OCI Compute Instance
+
+	For OCI compute instances, simply enable the Management Agent Plugin of the Oracle Cloud Agent. For on-premises hosts, install the Management Agent. After setting up the Management Agent, a promotion job will automatically be created to enable full monitoring of the underlying host, i.e., the on-premises host or OCI compute instance. To start the promotion job, administrators can simply go to Stack Monitoring’s **Promote to full monitoring page**, locate the host and select its Promote link (here we can choose any of the entries with a resource type of **Host**.
+
+![Promote to full monitoring, highlighting a host to promote](images/6-1-ent-sum.png " ")
+
+In the slide-out panel that appears, review that the resource name is the host's fully qualified domain name (FQDN) (i.e., hostname). Once the hostname has been validated, you would click Promote. However, we will click **Cancel**. In your own environment, you would click on Promote Resource, and within minutes, the promotion job would complete and full host monitoring is enabled.
+
+![Host resource promotion slide-out, with fields pre-filled](images/6-2-ent-sum.png " ")
+
+2. Discover the database that contains the EBS application schema
+
+	Once the the hosts the application and database run on have been promoted to full monitoring, the next step is to discover the database where the EBS schema resides. To get started with the database discovery, click **Resource discovery** located in the left menu.
+
+![Resource discovery page, highlighting discovery workflow buttons](images/6-3-ent-sum.png " ")
+	
+From the the **Resource discovery** page , click **Discover New Resource**. To discover either a CDB or single instance database, select **Oracle Database** from the drop-down. If your application is running in a PDB, the CDB should be discovered prior to discovering the PDB thought the menu **Pluggable DB**.
+
+We once again start by assigning the database a name. Ensure to use a name that is meaningful to the user. Next provide the DNS hostname or SCAN name depending on your listener configuration. Now provide a port, here we will use 1521 and the service name of ebsdb.world. From the drop-down, you can select an agent that would monitor this database. For Oracle Databases, the agent can be local (installed on the host) or remote (installed anywhere with network access to the host). Finally provide a username and password of the user who has the privileges necessary to monitor the database. Oracle provides a script to create a database monitoring user, this will not be covered in this lesson (Doc ID: 2857604.1).
+
+Once all of the fields are completed, once again click **Cancel**. 
+
+![Oracle Database slide-out, with fields completed](images/6-4-ent-sum.png " ")
+
+3. Discover the EBS application
+
+From the the **Resource discovery** page, click **Discover New Resource**. Select **EBS** from the drop-down list of resource types provided. After selecting EBS from the drop-down, a curated list of fields are provided to help drive the discovery process. This list is unique to the EBS discovery. Lets begin by providing the resource a name. When assigning a name, once again ensure the resource name is meaningful to the user. The EBS discovery process is dependent on the version version of EBS being ran, here we will select 12.2.
+
+Enter the host name and port of the database that EBS is running on. Next, enter your database service name, we will enter the service name ebsdb. Prior to discovering EBS, it is imperative EBS specific database user grants are applied to the monitoring user prior to discovery. Always remember to follow the prerequisites outlined in Stack Monitoring's documentation prior to discovery. If your monitoring user includes sysdba privileges, ensure you select the sysdba role radio button.
+
+![EBS discovery slide-out, with upper fields completed](images/6-5-ent-sum.png " ")
+
+Now lets enter details of the application layer. Enter the host in which the EBS application is running on. Now enter the port of your WebLogic admin server, we'll enter 7001. Next choose your EBS application protocol. In this example, we will choose t3 (http). Next enter your WebLogic username, here we have chosen wlsadmin, then enter the user's password.
+Selecting the Management Agent field, a drop-down list of all known agents within your compartment are shown. This is typically the agent installed locally in which the EBS application runs on.
+
+Once all fields are complete, we would typically click Discover. We will again select **Cancel**.
+
+![EBS discovery slide-out, with lower fields completed](images/6-6-ent-sum.png " ")
+
+With the resources now being monitored, lets take a closer look at the resource homepages that are created during discovery, and the relationships between resources that were created.
 
 You may now **proceed to the next lab**.
 
