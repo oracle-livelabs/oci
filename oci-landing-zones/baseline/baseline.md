@@ -32,7 +32,7 @@ In this lab, you can deploy OLEZ stack via 2 method(use one)
 * User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc).
 
 
-## Task 1: Create OELZ stack via ORM
+Task 1: Create OELZ stack via ORM
 ---
 The first step is to create a OCI Resource Manager Stack. The Stack is a collection of Oracle Cloud Infrastructure resources corresponding to a given Terraform configuration. Each stack resides in the compartment you specify, in a single region; however, resources on a given stack can be deployed across multiple regions. An OCID (unique identifier) is assigned to each stack.
 
