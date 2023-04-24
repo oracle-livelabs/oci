@@ -4,7 +4,7 @@
 
 In this lab, you will become familiar with using Stack Monitoring's resource's homepage. 
 
-Estimated time: 15 minutes
+Estimated time: 20 minutes
 
 ### Objectives
 
