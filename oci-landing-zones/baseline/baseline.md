@@ -19,14 +19,14 @@ Estimated time: 30 minutes
 Watch the video below for a quick walk-through of the lab. 
 [Deploy Baseline Landing Zone](videohub:1_mf98gcul)
 
-Objectives
----
+## Objectives
+
 In this lab, you can deploy OLEZ stack via 2 method(use one)
 
 * Create OELZ stack via ORM.
 * Create OELZ stack via CLI.
 
-Prerequisites
+## Prerequisites
 ---
 * An Oracle Free Tier(Trial), Paid or LiveLabs Cloud Account
 * User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc).
@@ -34,7 +34,7 @@ Prerequisites
 
 
 ## Task 1: Create OELZ stack via ORM
----
+
 The first step is to create a OCI Resource Manager Stack. The Stack is a collection of Oracle Cloud Infrastructure resources corresponding to a given Terraform configuration. Each stack resides in the compartment you specify, in a single region; however, resources on a given stack can be deployed across multiple regions. An OCID (unique identifier) is assigned to each stack.
 
 1. Go to the [`oelz`](https://github.com/oracle-quickstart/oci-landing-zones/tree/master).
@@ -73,7 +73,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
 
 ## Task 2: Create OELZ stack via CLI (Optional Not Needed if Task 1 is used)
----
+
 Prerequisites
 ---
 
@@ -160,7 +160,6 @@ key_file=<path to your private keyfile> # TODO
 
 
 ## Task 3: Verify OELZ Resources
----
 
 1) Go to Hamburger-->Identity & Security-->Compartments and click on "LIVELAB-OCI-CMP-HOME" compartment and you can see the compartment struture defined on the introduction section.
 
