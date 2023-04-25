@@ -280,8 +280,8 @@ Click on Add Step.
   - Leave the default "3600" seconds in Timeout in seconds
   - In the region, select "**US East (Ashburn)**"
   - Select the "Run local script" option
-  - Select the Web Server (Windows) instance in "Target instance in compartment" where you have placed the Web Server Domain Shutdown script
-  - In the script parameters, add the location of theWeb Server Domain Shutdown script. Below is an example of Web Server Domain script, please write a shutdown shell script according to your setup and configurations.
+  - Select the Web Server instance in "Target instance in compartment" where you have placed the Web Server Domain Shutdown script
+  - In the script parameters, add the location of the Web Server Domain Shutdown script. Below is an example of Web Server Domain script, please write a shutdown shell script according to your setup and configurations.
 
     **#!/bin/bash**
 
@@ -304,6 +304,88 @@ Click on Add Step.
    DRPG will go to status of Updating, please wait for few minutes.
 
     ![phoenix-shutdown-ashburn-psft-done](./images/phoenix-shutdown-ashburn-psft-done.png)
+
+
+6. We will now add Elastic Search services shutdown step. Click on Add Step.
+
+    ![phoenix-plangroup-shutdown-elk](./images/phoenix-plangroup-shutdown-elk.png)
+
+  - Add *Stop Elastic Search Services in Ashburn* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
+  - Leave the default "3600" seconds in Timeout in seconds
+  - In the region, select "**US East (Ashburn)**"
+  - Select the "Run local script" option
+  - Select the Elastic Search Server compute instance in "Target instance in compartment" where you have placed the Elastic Search services Shutdown script
+  - In the script parameters, add the location of the Elastic Search services Shutdown script. Below is an example of Elastic Search services Shutdown script, please write a shutdown shell script according to your setup and configurations.
+
+    **#!/bin/bash**
+
+    **PID=`ps -eaf | grep "elas" | awk '{print $2}'`**
+    
+    **echo "$PID"**
+
+    **if [[ -z "$PID" ]];**
+
+    **then(**
+    
+      **echo "Elastic Search is not running!"**
+    
+    **)else(**
+            
+      **kill -9 $PID**
+
+    **)fi**
+
+  - Run as user will be the username who has access to shutdown Elastic Search services.
+
+  Click on Add Step.
+
+7. We will now add Kibana services shutdown step. Click on Add Step.
+
+    ![phoenix-plangroup-shutdown-kibana](./images/phoenix-plangroup-shutdown-kibana.png)
+
+  - Add *Stop Kibana Services in Ashburn* in Step name
+  - Leave the Enable Step as ticked
+  - Select Error mode as "Stop on error"
+  - Leave the default "3600" seconds in Timeout in seconds
+  - In the region, select "**US East (Ashburn)**"
+  - Select the "Run local script" option
+  - Select the Kibana Server compute instance in "Target instance in compartment" where you have placed the Kibana services Shutdown script
+  - In the script parameters, add the location of the Kibana services Shutdown script. Below is an example of Kibana services Shutdown script, please write a shutdown shell script according to your setup and configurations.
+
+    **#!/bin/bash**
+
+    **PID=`ps -eaf | grep "./node/bin" | awk '{print $2}'`**
+    
+    **echo "$PID"**
+
+    **if [[ -z "$PID" ]];**
+
+    **then(**
+    
+      **echo "Kibana Service is not running!"**
+    
+    **)else(**
+            
+      **kill -9 $PID**
+
+    **)fi**
+
+  - Run as user will be the username who has access to shutdown Kibana services.
+
+  Click on Add Step.
+
+  Now, we have added shutdown steps for PeopleSoft Application Server, Process Scheduler (both Linux and Windows), Web server domains, Elastic Search and Kibana services hosted in *Ashburn* region.
+   
+   ![phoenix-plangroup-shutdown-ashburn-psft](./images/phoenix-plangroup-shutdown-ashburn-psft.png)
+
+   Click on Add.
+
+   DRPG will go to status of Updating, please wait for few minutes.
+
+    ![phoenix-shutdown-ashburn-psft-done](./images/phoenix-shutdown-ashburn-psft-done.png)
+
 
 ## Task 4: Customize the Switchover plan - Disable files synchronization (rsync) jobs in Ashburn
 
@@ -539,7 +621,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
 ## Task 7: Customize the Switchover plan - Add Elastic Search and Kibana Services Boot-up Scripts
     
-1. Click on Add group.
+1. Click on Add group. Provide a name to the group as Start Elastic Search & Kibana Services.
 
   ![add plan group](./images/phoenix-plangroup-add.png)
 
@@ -595,7 +677,7 @@ You will now be able to see all the built in and user defined custom groups in t
 
     ![add plan group](./images/phoenix-plangroup-add.png)
 
-2. We will enable cronjob (rsync) in Application Server. Add "Enable_rsync_in_Phoenix" User defined group. Click on Add Step.
+2. We will enable cronjob (rsync) in Application Server. Add "Enable\_rsync\_in\_Phoenix" User defined group. Click on Add Step.
 
     ![phoenix-add-sync-start-script](./images/phoenix-add-sync-start-script.png)
 
