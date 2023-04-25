@@ -64,19 +64,15 @@ The steps below guide you through deploying the application on your tenancy usin
    ![mushop_stack_app_info](.//images/mushop-app-information.png)
 
 
-* VCN Details
-Hamburger > Networking > Virtual Cloud Networks
+3. VCN Details : Hamburger > Networking > Virtual Cloud Networks
 ![VCN Info](.//images/mushop-vcn-info.png)
 
-* Load Balancer Details
-Hamburger > Networking > Load Balancers
+4. Load Balancer Details : Hamburger > Networking > Load Balancers
 ![Load Balancer Info](.//images/mushop-lb.png)
 
-* Compute Node
+5. Compute Node : 
+    ![Load Balancer BackEnd](.//images/mushop-lb-backend.png)
 
-![Load Balancer BackEnd](.//images/mushop-lb-backend.png)
-
-* Note: in case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources.
 
 ## Task 3: Delete Mushop Application  
 
