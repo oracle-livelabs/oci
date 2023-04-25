@@ -64,10 +64,10 @@ The steps below guide you through deploying the application on your tenancy usin
    ![mushop_stack_app_info](.//images/mushop-app-information.png)
 
 
-3. VCN Details : Hamburger > Networking > Virtual Cloud Networks
+3. VCN Details : `Hamburger > Networking > Virtual Cloud Networks`.
 ![VCN Info](.//images/mushop-vcn-info.png)
 
-4. Load Balancer Details : Hamburger > Networking > Load Balancers
+4. Load Balancer Details : `Hamburger > Networking > Load Balancers`.
 ![Load Balancer Info](.//images/mushop-lb.png)
 
 5. Compute Node : 
