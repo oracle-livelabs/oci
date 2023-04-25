@@ -103,7 +103,6 @@ key_file=<path to your private keyfile> # TODO
 2. Go to Directory landing-zones/templates/freetrial-landing-zone.
 3. Configure Variables on the file landing-zones/templates/freetrial-landing-zone/livelab.tfvars and save the file.
 
-    - Variables Values Used
     |Variable|Value|
     |--|--|
     |current_user_ocid|`ocid1.xxxxxx.xxxxxx.xxxxxx.....`|
