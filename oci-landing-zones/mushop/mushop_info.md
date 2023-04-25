@@ -1,5 +1,5 @@
 
-# Intergration of Landing Zone with Mushop Service
+## Intergration of Oracle Enterprise Landing Zone with Mushop Service
 
 In this lab exercise, you will walk through the process of integration of Landing Zone with the third party microservices. MuShop represents a showcase of many OCI Cloud Native services as a unified reference application. Mushop is a set of micro services which implement e-commerce platforms on the OCI solution, and its resources will be used to integrate with the OCI Landing Zone.
 
@@ -8,13 +8,13 @@ Estimated time: 20 minutes
 Watch the video below for a quick walk-through of the lab. 
 [DLanding Zone Integration with Mushop](videohub:1_5wzjars7)
 
-Objectives
+## Objectives
 
 In this lab, you will:
 
     Learn the process of intergration of thrid party app with the Landing Zone.
 
-Prerequisites
+## Prerequisites
 
     An Oracle Free Tier(Trial), Paid or LiveLabs Cloud Account
     User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc) and Database Service.
