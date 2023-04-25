@@ -57,9 +57,9 @@ The steps below guide you through deploying the application on your tenancy usin
 
 ## Task 2: Verify Mushop Application Resources Deployment.
 
-1) Go to `Home > Developer Services > Resource Manager > Stacks` and click on the newly created stack and make sure its state is Active.
+1. Go to `Home > Developer Services > Resource Manager > Stacks` and click on the newly created stack and make sure its state is Active.
    ![mushop_stack_state_info](.//images/mushop-stack-state-info.png)
-2) Click on the newly created mushop stack
+2. Click on the newly created mushop stack
    ![mushop_stack_state_get_info](.//images/mushop-stack-get-information.png)
    ![mushop_stack_app_info](.//images/mushop-app-information.png)
 
@@ -84,15 +84,15 @@ With the use of Terraform, the Resource Manager stack is also responsible for te
 
 Follow these steps to completely remove all provisioned resources:
 
-* Return to the Oracle Cloud Infrastructure Console and go to `Home > Developer Services > Resource Manager > Stacks`. Select the Mushop Stack.
-* From the Stack Details, select Terraform Actions > Destroy
+1. Return to the Oracle Cloud Infrastructure Console and go to `Home > Developer Services > Resource Manager > Stacks`. Select the Mushop Stack.
+2. From the Stack Details, select Terraform Actions > Destroy
     ![mushop_delete_stack](.//images/mushop-delete-stack.png)
-* Confirm the Destroy job when prompted
+3. Confirm the Destroy job when prompted
     ![mushop_destroy_confirm](.//images/mushop-destroy-confirm.png)
-* The job status will be In Progress while resources are terminated. 
+4. The job status will be In Progress while resources are terminated. 
     ![mushop_destroy_in_progress](.//images/mushop-destroy-in-progress.png)
     ![mushop_destroy_in_progress_check](.//images/mushop-destroy-in-progress-check.png)
-* Once the destroy job has succeeded, return to the Stack Details page and Click Delete Stack and confirm when prompted
+5. Once the destroy job has succeeded, return to the Stack Details page and Click Delete Stack and confirm when prompted
     ![mushop_destroy_complete](.//images/mushop-destroy-complete.png)
     ![mushop_stack_delete](.//images/mushop-stack-delete.png)
     ![mushop_stack_delete_confirm](.//images/mushop-stack-delete-confirm.png)
@@ -124,8 +124,8 @@ The steps to clean up these resources is as follows:
 
 ## Task 5: Known Issue 
 
-* In case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources.
-* Sometimes DB provisioning is not allowed in the tenanacy , in this case Job will fail. Click on Destroy button will trigger the job to remove provisioned resources.
+1. In case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources.
+2. Sometimes DB provisioning is not allowed in the tenanacy , in this case Job will fail. Click on Destroy button will trigger the job to remove provisioned resources.
 
 ## Acknowledgements
 
