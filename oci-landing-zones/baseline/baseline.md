@@ -1,6 +1,6 @@
 # Provision Oracle Enterprise Landing Zone Infrastructure.
 
-## Introduction
+### Introduction
 
 In this lab exercise, you will provision all the Infrastructure resources used by your applications through Infrastructure As Code (IaC) using [Terraform](https://www.terraform.io) on [Oracle Cloud Infrastructure Resource Manager service (ORM)](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm).  
 
@@ -19,15 +19,15 @@ Estimated time: 30 minutes
 Watch the video below for a quick walk-through of the lab. 
 [Deploy Baseline Landing Zone](videohub:1_mf98gcul)
 
-## Objectives
+### Objectives
 
 In this lab, you can deploy OLEZ stack via 2 method(use one)
 
 * Create OELZ stack via ORM.
 * Create OELZ stack via CLI.
 
-## Prerequisites
----
+### Prerequisites
+
 * An Oracle Free Tier(Trial), Paid or LiveLabs Cloud Account
 * User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc).
 
@@ -74,8 +74,8 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
 ## Task 2: Create OELZ stack via CLI (Optional Not Needed if Task 1 is used)
 
-Prerequisites
----
+### Prerequisites
+
 
 To deploy the OELZ from the terraform cli you will need the following prerequisites.
 - [Latest Version of Terrafom](https://developer.hashicorp.com/terraform/downloads)
