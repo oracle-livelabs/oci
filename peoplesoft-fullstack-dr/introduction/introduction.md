@@ -37,8 +37,12 @@ Approximately 6 hrs
     - PeopleSoft Web Server domain hosted on Linux
     - Elastic Search and Kibana services hosted on Linux
 - Files and folders synchronization enabled between Ashburn (Primary) and Phoenix (Standby) for all customisations and psreports.
-- Load Balancer running in Ashburn (Primary) and Phoenix (Standby) regions.
-- DNS record pointing to public IP of Ashburn (Primary) Load Balancer.
+- Load Balancer running in Ashburn (Primary) and Phoenix (Standby) regions
+- DNS record pointing to public IP of Ashburn (Primary) Load Balancer
+- Custom scripts to start and stop PeopleSoft Application Server, Web Server and Process Scheduler domains.
+- Custom scripts to start and stop Elastic Search and Kibana Services
+- Custom script to update DNS domain record update
+- Custom scripts to enable and disable files and folders synchronization jobs
 
 ## Overview of OCI Full Stack Disaster Recovery
 

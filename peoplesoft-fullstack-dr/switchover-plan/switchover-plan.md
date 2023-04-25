@@ -473,7 +473,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
     **#!/bin/bash**
 
-    **oci dns record rrset update --config-file /u01/app/psoft/fscm92-dbaas-app/home/psadm2/.oci/config --zone-name-or-id "psftchatbot.tk" --domain "fscm92.psftchatbot.tk" --rtype "A" --items '[{"domain":"fscm92.psftchatbot.tk","rdata":"158.101.24.177","rtype":"A","ttl":60}]' --force**
+    **oci dns record rrset update --config-file /u01/app/psoft/fscm92-dbaas-app/home/psadm2/.oci/config --zone-name-or-id "psftchatbot.tk" --domain "fscm92.psftchatbot.tk" --rtype "A" --items '[{"domain":"fscm92.psftchatbot.tk","rdata":"158.101.**.**","rtype":"A","ttl":60}]' --force**
 
   - Run as user will be the username who has access to update DNS records.
 

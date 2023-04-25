@@ -8,31 +8,42 @@ Estimated Time: 20 Minutes
 
 ### Objectives
 
+- Verify PeopleSoft Application status in Ashburn
 - Execute the switchover plan
 - Monitor the executed switchover plan
 - Verify the executed switchover plan
 
+## Task 1: Check and verify PeopleSoft Application status in Ashburn
+
+1. Do a nslookup to PeopleSoft Application DNS domain name and make a note of the public IP.
+
+    ![oci ashburn nslookup](./images/ashburn-nslookup.png)
+
+2. Run a sample process in PeopleSoft Application running in Ashburn region and make an note of the Process Instance number and report output.
+
+
+
 ## Task 1: Execute the switchover plan
 
 1. Login into OCI Console. Select region as **Pheonix**.
-
-  ![oci console phoenix](./images/phoenix-region.png)
+ 
+    ![oci console phoenix](./images/phoenix-region.png)
 
 2. Select Migration and Disaster Recovery from the Hamburger menu, then **Disaster Recovery** -> **DR Protection Groups**. Verify the region is **Phoenix**
 
-  ![drpg navigation](./images/phoenix-drpgpage.png)
+    ![drpg navigation](./images/phoenix-drpgpage.png)
 
 3. You will land on the Disaster Recovery Protection group home page; make sure you have selected the Phoenix region.
 
-  ![drpg landing page](./images/phoenix-drpg.png)
+    ![drpg landing page](./images/phoenix-drpg.png)
 
 4. Select the **FSCM92-FSDR-Group-Phoenix** DRPG and select **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** plan
 
-  ![drpg switchover plan](./images/phoenix-sw-plan.png)
+    ![drpg switchover plan](./images/phoenix-sw-plan.png)
 
 5. Navigate to the **Execute Plan** section, which will be right below the **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** plan, and select
 
-  ![drpg execute plan](./images/phoenix-execute-plan.png)
+    ![drpg execute plan](./images/phoenix-execute-plan.png)
 
 6. In the **Execute Plan** window
 
@@ -41,7 +52,7 @@ Estimated Time: 20 Minutes
 - Leave the **Ignore warnings** as it is
 - Verify and hit **Execute DR Plan**
 
-  ![drpg execute confirm](./images/phoenix-execute-run-1.png)
+    ![drpg execute confirm](./images/phoenix-execute-run-1.png)
 
 ## Task 2: Monitor the executed switchover Plan
 
@@ -49,27 +60,27 @@ Estimated Time: 20 Minutes
 
   Refresh the page; within a few seconds, the **State** will change from *Queued* to *In Progress*.
 
-  ![drpg execute monitor1](./images/phoenix-execute-inprogress.png)
+    ![drpg execute monitor1](./images/phoenix-execute-inprogress.png)
 
 3. All the *plan groups* will run serially, but steps inside each *plan group* will be parallel. Monitor the various plan group and steps which are running. Navigate to the three dots section for the respective plan group step and click. You get the option to view the log and download the log. These logs are stored in the object storage bucket provided during the DRPG creation. You can monitor the Progress and download the log if necessary for troubleshooting.
 
-   ![drpg execute monitor log](./images/phoenix-execute-viewlog222.png)
+     ![drpg execute monitor log](./images/phoenix-execute-viewlog.png)
 
 5. Once each plan group is executed successfully, it will move on to the next group for execution. 
 
-   ![drpg execute monitor progress](./images/phoenix-execute-moving222.png)
+     ![drpg execute monitor progress](./images/phoenix-execute-moving.png)
 
 6. Keep monitoring the rest of the groups and steps; each step will complete depending on the actual task.
 
-   ![drpg execute monitor progress1 ](./images/phoenix-execute-moving1222.png)
+     ![drpg execute monitor progress](./images/phoenix-execute-moving2.png)
 
-7. Wait for all the steps to complete successfully.  It is important to monitor the progress of each step and take actions in case of any failures.  Switchover Databases (Standby) group will run for around 10 minutes. 
+7. Wait for all the steps to complete successfully.  It is important to monitor the progress of each step and take actions in case of any failures. 
 
 ## Task 3: Verify the executed switchover plan
 
 1. From the plan execution detail, verify the duration of each step, status, duration of the entire switchover plan, etc. *It is essential to have successful completion of all steps*. In this example it took around 27 minutes to complete. These timings will vary.Use the Expand all button to expand all the steps and the Collapse all button for collapsing. Use the view or download log option to see step execution details.
 
-      ![drpg execution done](./images/phoenix-execute-done222.png)
+      ![drpg execution done](./images/phoenix-execute-done.png)
 
 You may now **proceed to the next lab**.
 
