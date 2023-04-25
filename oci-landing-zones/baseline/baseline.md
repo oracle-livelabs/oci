@@ -78,9 +78,9 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
 
 
 To deploy the OELZ from the terraform cli you will need the following prerequisites.
-- [Latest Version of Terrafom](https://developer.hashicorp.com/terraform/downloads)
-- [OCI Terraform provider](https://registry.terraform.io/providers/oracle/oci/latest/docs) v4.109.0 or later
-- [oci - cli](https://github.com/oracle/oci-cli)
+1. [Latest Version of Terrafom](https://developer.hashicorp.com/terraform/downloads)
+2. [OCI Terraform provider](https://registry.terraform.io/providers/oracle/oci/latest/docs) v4.109.0 or later
+3. [oci - cli](https://github.com/oracle/oci-cli)
 
 
 * **User** : The OELZ should be deployed by a user who is a member of the Administrators group for the tenancy. This user need to have an api key entry defined as decribed [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformproviderconfiguration.htm). Once the user and API Key are defined your oci-cli config should resemble.
@@ -103,7 +103,7 @@ key_file=<path to your private keyfile> # TODO
 2. Go to Directory landing-zones/templates/freetrial-landing-zone.
 3. Configure Variables on the file landing-zones/templates/freetrial-landing-zone/livelab.tfvars and save the file.
 
-* Variables Values Used. 
+*** Variables Values Used. 
     |Variable|Value|
     |--|--|
     |current_user_ocid|`ocid1.xxxxxx.xxxxxx.xxxxxx.....`|
