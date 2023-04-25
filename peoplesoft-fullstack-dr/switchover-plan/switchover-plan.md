@@ -24,7 +24,8 @@ Estimated Time: 180 Minutes
 - Customize the Switchover plan - Add PeopleSoft Process Scheduler Server (Linux) boot up group
 - Customize the Switchover plan - Add PeopleSoft Process Scheduler Server (Windows) boot up group
 - Customize the Switchover plan - Add PeopleSoft Web Server boot up group
-- Customize the Switchover plan - Add PeopleSoft Elastic Search & Kibana Service boot up group
+- Customize the Switchover plan - Add Elastic Search Service boot up group
+- Customize the Switchover plan - Add Kibana Service boot up group
 - Customize the Switchover plan - Enable files synchronization (rsync) jobs in Phoenix 
 - Customize the Switchover plan - DR Plan Re-Ordering
 
@@ -619,11 +620,11 @@ As part of this task, we will disable all the synchronization jobs that are enab
  
   Click on Add.
 
-## Task 7: Customize the Switchover plan - Add Elastic Search and Kibana Services Boot-up Scripts
+## Task 7: Customize the Switchover plan - Add Elastic Search Services Boot-up Scripts
     
-1. Click on Add group. Provide a name to the group as Start Elastic Search & Kibana Services.
+1. Click on Add group. Provide a name to the group as Start Elastic Search Services.
 
-  ![add plan group](./images/phoenix-plangroup-add.png)
+    ![add plan group](./images/phoenix-plangroup-add.png)
 
 2. We will now add Elastic Search boot up script. Click on Add Step.
 
@@ -631,6 +632,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
     ![phoenix-add-elk-boot-script](./images/phoenix-add-elk-boot-script2.png)
 
+  - Add *Start Elastic Search Services* in group name
   - Add *Boot up Elastic Search Services* in Step name
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
@@ -638,17 +640,41 @@ As part of this task, we will disable all the synchronization jobs that are enab
   - In the region, select "US West (Phoenix)"
   - Select the "Run local script" option
   - Select Elastic Search server instance in "Target instance in compartment"
-  - In the script parameters, add the location of the Elastic Search services start-up script
+  - In the script parameters, add the location of the Elastic Search services start-up script.Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
+
+      **#!/bin/bash**
+
+      **export JAVA\_HOME=/u01/app/es\_home/es/pt/es\_jdk11.0.17**
+
+      **# This is a wrapper script -- wrapper.sh**
+
+      **echo "Invoking command in nohup.."**
+
+      **nohup /u01/app/es\_home/es/pt/elasticsearch7.10.0/bin/elasticsearch > /tmp/elas.out 2>&1 &**
+      
+      **echo `sleep 30`**
+      
+      **exit 0**
+
   - Run as user will be the username who has access to boot Elastic Search services
 
-  Click on Add Step.
+  Click on Add.
 
-      ![phoenix-add-elk-boot-group](./images/phoenix-add-kibana-boot-group.png)
- 
-3. We will now add Kibana Services boot up script. 
+    ![phoenix-add-elk-boot-group](./images/phoenix-add-elk-boot-group.png)
+
+## Task 8: Customize the Switchover plan - Add Kibana Services Boot-up Scripts
+
+1. Click on Add group. Provide a name to the group as Start Kibana Services.
+
+    ![add plan group](./images/phoenix-plangroup-add.png)
+
+2. We will now add Kibana Services boot up script. Click on Add Step.
 
     ![phoenix-add-kibana-boot-script](./images/phoenix-add-kibana-boot-script.png)
+ 
+    ![phoenix-add-kibana-boot-script](./images/phoenix-add-kibana-boot-script2.png)
 
+  - Add *Start Kibana Services* in group name
   - Add *Boot up Kibana Services* in Step name
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
@@ -656,20 +682,29 @@ As part of this task, we will disable all the synchronization jobs that are enab
   - In the region, select "US West (Phoenix)"
   - Select the "Run local script" option
   - Select Kibana server instance in "Target instance in compartment"
-  - In the script parameters, add the location of the Kibana services start-up script
+  - In the script parameters, add the location of the Kibana services start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
+
+      **#!/bin/bash**
+
+      **export JAVA\_HOME=/u01/app/es\_home/es/pt/es\_jdk11.0.17**
+
+      **# This is a wrapper script -- wrapper.sh**
+
+      **echo "Invoking command in nohup.."**
+
+      **nohup /u01/app/es\_home/es/pt/Kibana7.10.0/bin/kibana > /tmp/kibana.out 2>&1 &**
+
+      **echo `sleep 30`**
+
+      **exit 0**
+
   - Run as user will be the username who has access to boot Kibana services
 
-  Click on Add Step.
- 
   Click on Add.
 
-    ![phoenix-add-kibana-boot-group](./images/phoenix-add-kibana-boot-group2.png)
+    ![phoenix-add-kibana-boot-group](./images/phoenix-add-kibana-boot-group3.png)
 
-You will now be able to see all the built in and user defined custom groups in the FSDR plan like below.
-
-   ![phoenix-dr-plan-all-group](./images/phoenix-dr-plan-all-group.png)
-
-## Task 8: Customize the Switchover plan - Enable files synchronization (rsync) jobs in Phoenix
+## Task 9: Customize the Switchover plan - Enable files synchronization (rsync) jobs in Phoenix
 
  As part of this task, we will enable synchronization (rsync) jobs in Phoenix to reverse the sync from Phoenix to Ashburn post switchover as the roles (priamry and standby) are now reversed.
 
@@ -732,7 +767,7 @@ You will now be able to see all the built in and user defined custom groups in t
 
     ![phoenix-add-sync-start-script-done](./images/add-sync-start-script-done.png)    
 
-## Task 9: Customize the Switchover plan - DR Plan Re-Ordering
+## Task 10: Customize the Switchover plan - DR Plan Re-Ordering
 
   We will now re-order the DR plan to stop PeopleSoft Application in Primary (*Ashburn*) region first 
   followed by switchover to Standby (*Phoenix*) region.

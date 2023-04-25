@@ -14,7 +14,7 @@ Approximately 6 hrs
 - Create DR Protection groups (DRPG) in Ashburn (Primary) and Phoenix (Standby) regions.
 - Associate Ashburn DRPG as Primary and Phoenix DRPG as Standby.
 - Add members to Ashburn DRPG. Application Virtual machines and DBCS (Database Cloud Services) database.
-- Add members to Phoenix DRPG. Standby DBCS Database.
+- Add members to Phoenix DRPG. Application Virtual machines and Standby DBCS Database.
 - Create and Customize DR Switchover Plan in Phoenix( Standby) DRPG
 - Run DR Switchover Pre-checks in Phoenix( Standby) DRPG
 - Run DR Switchover Plan in Phoenix( Standby) DRPG
@@ -22,14 +22,15 @@ Approximately 6 hrs
 
 # **Prerequisites**
 
-- An active PeopleSoft applications hosted in Ashburn region (Primary) with below PeopleSoft components.
-    - PeopleSoft Database hosted on OCI Database as a Service (DbaaS) platform / Database Cloud Service(DBCS)
+- An active PeopleSoft application hosted in Ashburn region (Primary) with below PeopleSoft components.
+    - PeopleSoft Database hosted on OCI Database as a Service (DbaaS) platform / Database Cloud Service  (DBCS)
     - PeopleSoft Application Server domain hosted on Linux
     - PeopleSoft Process Scheduler domain hosted on Linux
     - PeopleSoft Process Scheduler domain hosted on Windows
     - PeopleSoft Web Server domain hosted on Linux
     - Elastic Search and Kibana services hosted on Linux
 - A standby PeopleSoft applications hosted in Phoenix region (Standby) with below PeopleSoft components.
+    - A standby Database hosted on OCI Database as a Service (DbaaS) platform / Database Cloud Service  (DBCS) with Data Guard enabled between Ashburn hosted Database.
     - PeopleSoft Application Server domain hosted on Linux
     - PeopleSoft Process Scheduler domain hosted on Linux
     - PeopleSoft Process Scheduler domain hosted on Windows
@@ -86,7 +87,7 @@ Below is the architecture of PeopleSoft environment running on Oracle Cloud Infr
 
 ## Environment details
 
-- **Ashburn** is the Primary region, and **Phoenix** is the Standby region.
+- **Ashburn** is the Primary region and **Phoenix** is the Standby region.
 * **PeopleSoft Application** - FSCM 9.2.47
 * **PeopleTools** - 8.60.03
 * **Database** - 19.17.0.0.0

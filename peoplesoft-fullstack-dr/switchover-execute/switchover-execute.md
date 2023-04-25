@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, we will execute the actual switchover plan for the **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** switchover plan, which we have created in lab 4. The switchover plan will execute the series of steps as per the order.
+In this lab, we will execute the actual switchover plan  **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix**, which we have created in lab 4. The switchover plan will execute the series of steps as per the order.
 
 Estimated Time: 20 Minutes
 
