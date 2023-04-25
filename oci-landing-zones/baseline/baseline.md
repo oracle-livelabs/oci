@@ -1,6 +1,6 @@
 # Provision Oracle Enterprise Landing Zone Infrastructure.
 
-### Introduction
+## Introduction
 
 In this lab exercise, you will provision all the Infrastructure resources used by your applications through Infrastructure As Code (IaC) using [Terraform](https://www.terraform.io) on [Oracle Cloud Infrastructure Resource Manager service (ORM)](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm).  
 
