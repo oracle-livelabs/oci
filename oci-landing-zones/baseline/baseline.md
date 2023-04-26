@@ -27,13 +27,14 @@ In this lab, you can deploy OLEZ stack via 2 method(use one)
 * Create OELZ stack via CLI.
 
 ### Prerequisites
----
+
 * An Oracle Free Tier(Trial), Paid or LiveLabs Cloud Account
 * User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc).
 
 
+
 ## Task 1: Create OELZ stack via ORM
----
+
 The first step is to create a OCI Resource Manager Stack. The Stack is a collection of Oracle Cloud Infrastructure resources corresponding to a given Terraform configuration. Each stack resides in the compartment you specify, in a single region; however, resources on a given stack can be deployed across multiple regions. An OCID (unique identifier) is assigned to each stack.
 
 1. Go to the [`oelz`](https://github.com/oracle-quickstart/oci-landing-zones/tree/master).
@@ -70,16 +71,24 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
   
 16. Go to Mushop Deployment.
 
-## Task 2: Create OELZ stack via CLI (Optional Not Needed if Task 1 is used)
----
-### Prerequisites
-To deploy the OELZ from the terraform cli you will need the following prerequisites.
-- [Latest Version of Terrafom](https://developer.hashicorp.com/terraform/downloads)
-- [OCI Terraform provider](https://registry.terraform.io/providers/oracle/oci/latest/docs) v4.109.0 or later
-- [oci - cli](https://github.com/oracle/oci-cli)
 
-## User
-The OELZ should be deployed by a user who is a member of the Administrators group for the tenancy. This user need to have an api key entry defined as decribed [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformproviderconfiguration.htm). Once the user and API Key are defined your oci-cli config should resemble.
+## Task 2: Create OELZ stack via CLI (Optional Not Needed if Task 1 is used)
+
+### Prerequisites
+
+
+To deploy the OELZ from the terraform cli you will need the following prerequisites.
+1. [Latest Version of Terrafom](https://developer.hashicorp.com/terraform/downloads)
+2. [OCI Terraform provider](https://registry.terraform.io/providers/oracle/oci/latest/docs) v4.109.0 or later
+3. [oci - cli](https://github.com/oracle/oci-cli)
+
+
+* **User** : The OELZ should be deployed by a user who is a member of the Administrators group for the tenancy. This user need to have an api key entry defined as decribed [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformproviderconfiguration.htm). Once the user and API Key are defined your oci-cli config should resemble.
+
+* **Region**  : The OELZ should be deployed to the tenancy's Home Region.
+
+* **Tenancy** : The tenancy you intend to deploy the OELZ to.
+
 
 ```text
 [DEFAULT]
@@ -89,17 +98,11 @@ tenancy=ocid1.xxxxxx.xxxxxx.xxxxxx..... #tenancy ocid
 region=us-phoenix-1 #or desired region
 key_file=<path to your private keyfile> # TODO
 ```
-## Region
-The OELZ should be deployed to the tenancy's Home Region.
 
-## Tenancy
-The tenancy you intend to deploy the OELZ to.
+1. Clone the OELZ Terraform templates from the [oelz_github](https://github.com/oracle-quickstart/oci-landing-zones/tree/master).
+2. Go to Directory landing-zones/templates/freetrial-landing-zone.
+3. Configure Variables on the file landing-zones/templates/freetrial-landing-zone/livelab.tfvars and save the file.
 
-1) Clone the OELZ Terraform templates from the [oelz_github](https://github.com/oracle-quickstart/oci-landing-zones/tree/master).
-2) Go to Directory landing-zones/templates/freetrial-landing-zone.
-3) Configure Variables on the file landing-zones/templates/freetrial-landing-zone/livelab.tfvars and save the file.
-
-* Variables Values Used. 
     |Variable|Value|
     |--|--|
     |current_user_ocid|`ocid1.xxxxxx.xxxxxx.xxxxxx.....`|
@@ -139,36 +142,36 @@ The tenancy you intend to deploy the OELZ to.
     |prod_spoke_subnet_app_cidr_block|10.1.2.0/24|
     |prod_spoke_subnet_db_cidr_block|10.1.2.0/24|
     
- 4) Validate the changes . Issue the command "terraform validate".
+ 4. Validate the changes . Issue the command "terraform validate".
     ![terraform_validate](./images/terraform-validate.png)
- 5) Initializes Terraform Configuration files via "terraform init".
+ 5. Initializes Terraform Configuration files via "terraform init".
     ![terraform_init](./images/terraform-init.png)
- 6) Preview the changes that Terraform will to make to your infrastructure via "terraform plan -var-file=\"livelab.tfvars\"".
+ 6. Preview the changes that Terraform will to make to your infrastructure via "terraform plan -var-file=\"livelab.tfvars\"".
     ![terraform_plan_1](./images/terraform-plan-1.png)
     ![terraform_plan_2](./images/terraform-plan-2.png)
- 7) Executes the changes defined by your Terraform configuration to create or update resources via "terraform apply -var-file=\"livelab.tfvars\"" and wait for atleast 10 min to finish provisioning.
+ 7. Executes the changes defined by your Terraform configuration to create or update resources via "terraform apply -var-file=\"livelab.tfvars\"" and wait for atleast 10 min to finish provisioning.
     ![terraform_apply_1](./images/terraform-apply-1.png)
     ![terraform_apply_2](./images/terraform-apply-2.png)
     ![terraform_apply_3](./images/terraform-apply-3.png)
- 8) Destroy the terraform configuration resources via "terraform destroy -var-file=\"livelab.tfvars\"".
+ 8. Destroy the terraform configuration resources via "terraform destroy -var-file=\"livelab.tfvars\"".
     ![terraform_destroy_1](./images/terraform-destroy-1.png)
     ![terraform_destroy_2](./images/terraform-destroy-2.png)
 
-### Task 3: Verify OELZ Resources
----
 
-1) Go to Hamburger-->Identity & Security-->Compartments and click on "LIVELAB-OCI-CMP-HOME" compartment and you can see the compartment struture defined on the introduction section.
+## Task 3: Verify OELZ Resources
+
+1. Go to Hamburger-->Identity & Security-->Compartments and click on "LIVELAB-OCI-CMP-HOME" compartment and you can see the compartment struture defined on the introduction section.
 
 ![compartment_1](./images/compartment-1.png)
 ![compartment_2](./images/compartment-2.png)
 ![compartment_3](./images/compartment-3.png)
 
-2) Hub VCN : Go to Hamburger-->Networking-->Virtual Cloud Networks(VCN). GO to compartment tab and select the "OCI-ELZ-L-SRD-NET" compartment.
+2. Hub VCN : Go to Hamburger-->Networking-->Virtual Cloud Networks(VCN). GO to compartment tab and select the "OCI-ELZ-L-SRD-NET" compartment.
 
 ![vcn_1](./images/hub-info-1.png)
 ![vcn_2](./images/hub-info-2.png)
 
-3) Spoke VCN : Go to Hamburger-->Networking-->Virtual Cloud Networks(VCN) . GO to compartment tab and select the Workload compartment.
+3. Spoke VCN : Go to Hamburger-->Networking-->Virtual Cloud Networks(VCN) . GO to compartment tab and select the Workload compartment.
 
 ![spoke_1](./images/spoke-info-1.png)
 ![spoke_2](./images/spoke-info-2.png)
