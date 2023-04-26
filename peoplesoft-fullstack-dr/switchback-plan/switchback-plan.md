@@ -202,7 +202,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
     ![ashburn-add-app-sync-stop-script](./images/ashburn-add-app-sync-stop-script.png)    
 
-    - Add *Disable-rsync-in-Ashburn-APP* in Step name
+    - Add *Disable-rsync-in-Phoenix-APP* in Step name
     - Leave the Enable Step as ticked
     - Select Error mode as "Stop on error"
     - Leave the default "3600" seconds in Timeout in seconds
@@ -220,7 +220,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
     ![phoenix-add-prcs-sync-stop-script](./images/phoenix-add-prcs-sync-stop-script.png)    
 
-    - Add *Disable-rsync-in-Ashburn-PRCS* in Step name
+    - Add *Disable-rsync-in-Phoenix-PRCS* in Step name
     - Leave the Enable Step as ticked
     - Select Error mode as "Stop on error"
     - Leave the default "3600" seconds in Timeout in seconds
@@ -238,7 +238,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
     ![phoenix-add-web-sync-stop-script](./images/phoenix-add-web-sync-stop-script.png)    
 
-    - Add *Disable-rsync-in-Ashburn-WEB* in Step name
+    - Add *Disable-rsync-in-Phoenix-WEB* in Step name
     - Leave the Enable Step as ticked
     - Select Error mode as "Stop on error"
     - Leave the default "3600" seconds in Timeout in seconds
@@ -499,9 +499,9 @@ Click on Add.
 
    Move group **Stop PeopleSoft Application in Phoenix** one order above **Switchover Databases (Standby)** so that Ashburn region hosted Primary production application is shutdown before switchover.
 
-   ![phoenix-dr-plan-re-order-shutdown](./images/phoenix-dr-plan-re-order-shutdown.png)  
+    ![phoenix-dr-plan-re-order-shutdown](./images/phoenix-dr-plan-re-order-shutdown.png)  
 
-   ![phoenix-dr-plan-re-order-shutdown1](./images/phoenix-dr-plan-re-order-shutdown1.png)
+    ![phoenix-dr-plan-re-order-shutdown1](./images/phoenix-dr-plan-re-order-shutdown1.png)
 
    Click Save changes.
 
@@ -511,13 +511,15 @@ Click on Add.
 
    Move group **Stop\_rsync\_in\_Phoenix\_App** one order above **Switchover Databases (Standby)**.
 
-   ![phoenix-dr-plan-re-order-sync](./images/phoenix-dr-plan-re-order-sync.png) 
+    ![phoenix-dr-plan-re-order-sync](./images/phoenix-dr-plan-re-order-sync.png) 
+
+    ![phoenix-dr-plan-re-order-sync](./images/phoenix-dr-plan-re-order-sync1.png) 
 
    Click Save changes.
 
    Now the DR Swithover plan is re-ordered as below.
 
-   ![phoenix-dr-plan-re-order-done](./images/phoenix-dr-plan-re-order-done.png)
+    ![phoenix-dr-plan-re-order-done](./images/phoenix-dr-plan-re-order-done.png)
 
    You may now **proceed to the next lab**.
 
