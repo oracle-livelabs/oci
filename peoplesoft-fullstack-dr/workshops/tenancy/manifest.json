@@ -53,6 +53,11 @@
       "filename": "../../switchback-prechecks/switchback-prechecks.md"
     },
     {
+      "title": "Lab 10: Perform Switchover (Rollback)" ,
+      "description": "Perform Switchover (Rollback)",
+      "filename": "../../switchback-execute/switchback-execute.md"
+    },
+    {
       "title": "Need Help?",
       "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
     }

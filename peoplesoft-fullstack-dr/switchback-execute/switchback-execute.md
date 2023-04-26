@@ -1,53 +1,53 @@
-# Execute DR Switchover Plan
+# Execute DR Switchover (Rollback) Plan
 
 ## Introduction
 
-In this lab, we will execute the actual switchover plan  **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix**, which we have created in lab 4. The switchover plan will execute the series of steps as per the order.
+In this lab, we will execute the actual switchover plan  **FSCM92-FSDR-Switchover-From-Phoenix-To-Ashburn**, which we have created in lab 8. The switchover (rollback) plan will execute the series of steps as per the order.
 
 Estimated Time: 25 Minutes
 
 ### Objectives
 
-- Verify PeopleSoft Application status in Ashburn
+- Verify PeopleSoft Application status in Phoenix
 - Execute the switchover plan
 - Monitor the executed switchover plan
 - Verify the executed switchover plan
 
-## Task 1: Check and verify PeopleSoft Application status in Ashburn
+## Task 1: Check and verify PeopleSoft Application status in Phoenix
 
-1. Do a nslookup to PeopleSoft Application DNS domain name and notice that it resolves to public IP of Ashburn Load Balancer.
+1. Do a nslookup to PeopleSoft Application DNS domain name and notice that it resolves to public IP of Phoenix Load Balancer.
 
-    ![oci ashburn nslookup](./images/ashburn-nslookup.png)
+    ![oci phoenix nslookup](./images/phoenix-nslookup.png)
 
 2. Run a sample process in PeopleSoft Application running in Ashburn region and make an note of the Process Instance number and report output.
 
-    ![ashburn-sample-process](./images/ashburn-sample-process.png)
+    ![phoenix-sample-process](./images/phoenix-sample-process.png)
 
 ## Task 1: Execute the switchover plan
 
-1. Login into OCI Console. Select region as **Phoenix**.
+1. Login into OCI Console. Select region as **Ashburn**.
  
-    ![oci console phoenix](./images/phoenix-region.png)
+    ![oci console phoenix](./images/ashburn-region.png)
 
-2. Select Migration and Disaster Recovery from the Hamburger menu, then **Disaster Recovery** -> **DR Protection Groups**. Verify the region is **Phoenix**
+2. Select Migration and Disaster Recovery from the Hamburger menu, then **Disaster Recovery** -> **DR Protection Groups**. Verify the region is **Ashburn**
 
-    ![drpg navigation](./images/phoenix-drpgpage.png)
+    ![drpg navigation](./images/ashburn-drpgpage.png)
 
 3. You will land on the Disaster Recovery Protection group home page; make sure you have selected the Phoenix region.
 
-    ![drpg landing page](./images/phoenix-drpg.png)
+    ![drpg landing page](./images/ashburn-drpg.png)
 
-4. Select the **FSCM92-FSDR-Group-Phoenix** DRPG and select **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** plan
+4. Select the **FSCM92-FSDR-Group-Ashburn** DRPG and select **FSCM92-FSDR-Switchover-From-Phoenix-To-Ashburn** plan
 
     ![drpg switchover plan](./images/phoenix-sw-plan.png)
 
-5. Navigate to the **Execute Plan** section, which will be right below the **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** plan, and select
+5. Navigate to the **Execute Plan** section, which will be right below the **FSCM92-FSDR-Switchover-From-Phoenix-To-Ashburn** plan, and select
 
     ![drpg execute plan](./images/phoenix-execute-plan.png)
 
 6. In the **Execute Plan** window
 
-- Provide a name for the Plan execution like **FSCM92-FSDR-Switchover-From-Ashburn-To-Phoenix**
+- Provide a name for the Plan execution like **FSCM92-FSDR-Switchover-From-Phoenix-To-Ashburn**
 - Uncheck the **Enable prechecks**  (  Prechecks were executed successfully in Lab 5)
 - Leave the **Ignore warnings** as it is
 - Verify and hit **Execute DR Plan**
