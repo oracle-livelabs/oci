@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, we will execute **Run Prechecks** for the **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** switchover plan, which we have created in lab4.
+In this lab, we will execute **Run Prechecks** for the **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** switchover plan, which we have created in lab 4.
 
 Execute **Run Prechecks**  will perform only the *pre-checks* and not the actual execution. Having the pre-checks completed successfully is essential as a pre-requisite for running the actual switchover plan.
 
