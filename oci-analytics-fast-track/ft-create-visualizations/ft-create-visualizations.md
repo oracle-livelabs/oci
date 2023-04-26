@@ -4,6 +4,8 @@
 
 Nesse Lab você vai aprender a criar visualizações no Oracle Analytics Cloud.
 
+[Oracle Video Hub video scaled to Large size](videohub:1_6xkzayss:large)
+
 *Tempo estimado para o Lab:* 30 Minutos
 
 ### Objetivos
@@ -334,4 +336,4 @@ Nesta sessão você aprendeu a criar um dashboard com visualizações básicas d
 ## Autoria
 
 - **Autores** - Guilherme Galhardo, Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias
-- **Último Updated Por/Data** - Guilherme Galhardo, Mar/2023
+- **Último Updated Por/Data** - Guilherme Galhardo, Abr/2023
