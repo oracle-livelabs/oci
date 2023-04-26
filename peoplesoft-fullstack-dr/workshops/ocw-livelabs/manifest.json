@@ -43,6 +43,11 @@
       "filename": "../../post-switchover/post-switchover.md"
     },
     {
+      "title": "Lab 8: Create DR Switchover (Rollback) plan",
+      "description": "Switchback tasks",
+      "filename": "../../switchback-plan/switchback-plan.md"
+    },
+    {
       "title": "Oracle CloudWorld 2022 - Get Help",
       "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
     }

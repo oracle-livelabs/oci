@@ -4,7 +4,7 @@
 
 In this lab, we will execute the actual switchover plan  **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix**, which we have created in lab 4. The switchover plan will execute the series of steps as per the order.
 
-Estimated Time: 20 Minutes
+Estimated Time: 25 Minutes
 
 ### Objectives
 
@@ -21,7 +21,7 @@ Estimated Time: 20 Minutes
 
 2. Run a sample process in PeopleSoft Application running in Ashburn region and make an note of the Process Instance number and report output.
 
-
+    ![ashburn-sample-process](./images/ashburn-sample-process.png)
 
 ## Task 1: Execute the switchover plan
 
@@ -89,5 +89,5 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** -  Vinay Shivanna, Principal Cloud Architect
-- **Last Updated By/Date** -  Vinay Shivanna, April 2023
+- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023
 

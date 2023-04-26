@@ -1,23 +1,20 @@
-# Verify the DR Protection group status and MuShop Application post switchover
+# Verify the DR Protection group status and PeopleSoft Application post switchover
 
 ## Introduction
 
-We will verify the DR Protection Group (DRPG) status and MuShop Application post switchover.
+We will verify the DR Protection Group (DRPG) status and PeopleSoft Application post switchover.
 
-Estimated Time: 5 Minutes
-
-Watch the video below for a quick walkthrough of the lab.
-
-[Post Switchover tasks](videohub:1_o4qx53ec)
+Estimated Time: 15 Minutes
 
 ### Objectives
 
 - Verify the DRPG status
-- Access the MuShop Application from the phoenix region
+- Access the PeopleSoft Application from the phoenix region
+- Verify DNS domain record and PeopleSoft Process Instances
 
 ## Task 1: Verify the DRPG status
 
-1. Login into OCI Console with your provided Credentials. Select region as **Pheonix**.
+1. Login into OCI Console. Select region as **Pheonix**.
 
   ![oci console phoenix](./images/phoenix-region.png)
 
@@ -25,11 +22,11 @@ Watch the video below for a quick walkthrough of the lab.
 
   ![drpg navigation page](./images/phoenix-drpgpage.png)
 
-3. Notice the *Role* of the **mushop-phoenix** DRPG; it has automatically changed to *Primary*. Now we have our new primary region as *Phoenix region*
+3. Notice the *Role* of the **FSCM92-FSDR-Group-Phoenix** DRPG; it has automatically changed to *Primary*. Now we have our new primary region as *Phoenix region*
 
   ![phoenix drpg status](./images/phoenix-drpg-status.png)
 
-4. Login into OCI Console with your provided Credentials. Select region as **Ashburn**.
+4. Change the region to **Ashburn**.
 
   ![oci console ashburn](./images/ashburn-region.png)
 
@@ -37,32 +34,40 @@ Watch the video below for a quick walkthrough of the lab.
 
   ![drpg navigation page](./images/ashburn-drpgpage.png)
 
-6. Notice the *Role* of the **mushop-ashburn** DRPG; it has automatically changed to *Standby*. Now we have our new standby region as *Ashburn region*
+6. Notice the *Role* of the **FSCM92-FSDR-Group-Ashburn** DRPG; it has automatically changed to *Standby*. Now we have our new standby region as *Ashburn region*
 
   ![ashburn drpg status](./images/ashburn-drpg-status.png)
 
 
-## Task 2: Access MuShop Application from the phoenix region
+## Task 2: Access PeopleSoft Application from the phoenix region
 
 1. From the Hamburger menu, select **Networking**, then **Load Balancers** .Verify the region is **Phoenix**
   
      ![phoenix load balancer navigation](./images/phoenix-loadbalancer-navigate.png)
 
- Gather the Public IP address of the Load Balancer
+  The Overall Health status of the Load Balancer will be OK.
 
-     ![phoenix load balancer ip](./images/phoenix-loadbalancer-ip.png)
+     ![phoenix-loadbalancer-health](./images/phoenix-loadbalancer-health.png)
 
-  Open a tab in your browser and verify the Mushop Application using the gathered public IP address. You should be able to see that the application is working as expected from the Phoenix region.
+2. Open a tab in your browser and access the PeopleSoft Application. You should be able to see that the application is working as expected from the Phoenix region.
 
-      ![mushop app verification](./images/phoenix-mushop-app.png)
+      ![phoenix-peoplesoft-app-verify](./images/phoenix-peoplesoft-app-verify.png)
 
-**Mushop application is accessible from the new primary region (Phoenix)**
+  **PeopleSoft application is accessible from the new primary region (Phoenix)**
 
+## Task 3: Verify DNS domain record and PeopleSoft Process Instances
 
-This concludes the lab Protect your business using Oracle Full Stack Disaster Recovery Service. We have seen the complete automation of switching over a MuShop application (Full Stack) from the Ashburn region to the Phoenix region with a single click of a button! 
+1. Run nslookup command to verify that DNS domain record is resolving to public IP of Phoenix Load Balancer.
 
+     ![phoenix-dns-verify](./images/phoenix-dns-verify.png)
+
+2. Login to PeopleSoft application and go to Process Monitor to check and verify that Processes which were ran in Ashburn region are still present and accessible after switching to Phoenix region.
+
+     ![phoenix-sample-process](./images/phoenix-sample-process.png)
+
+We have now achieved the complete automation of switching over a PeopleSoft application (Full Stack) from the Ashburn region to the Phoenix region with a single click of a button! 
 
 ## Acknowledgements
 
-- **Author** -  Suraj Ramesh, Principal Product Manager
-- **Last Updated By/Date** -  Suraj Ramesh,September 2022
+- **Author** -  Vinay Shivanna, Principal Cloud Architect
+- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023

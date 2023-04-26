@@ -17,15 +17,12 @@ Estimated Time: 180 Minutes
 
 - Enable Run Commands on all the Compute Instances
 - Create a Switchover plan
-- Customize the Switchover plan - Add PeopleSoft Application Shutdown group
+- Customize the Switchover plan - Add PeopleSoft Application Shutdown group in Ashburn
 - Customize the Switchover plan - Disable files synchronization (rsync) jobs in Ashburn
 - Customize the Switchover plan - Add DNS Record Update Script
-- Customize the Switchover plan - Add PeopleSoft Application Server boot up group
-- Customize the Switchover plan - Add PeopleSoft Process Scheduler Server (Linux) boot up group
-- Customize the Switchover plan - Add PeopleSoft Process Scheduler Server (Windows) boot up group
-- Customize the Switchover plan - Add PeopleSoft Web Server boot up group
-- Customize the Switchover plan - Add Elastic Search Service boot up group
-- Customize the Switchover plan - Add Kibana Service boot up group
+- Customize the Switchover plan - Add PeopleSoft Application boot up group in Phoenix
+- Customize the Switchover plan - Add Elastic Search Service boot up group in Phoenix
+- Customize the Switchover plan - Add Kibana Service boot up group in Phoenix
 - Customize the Switchover plan - Enable files synchronization (rsync) jobs in Phoenix 
 - Customize the Switchover plan - DR Plan Re-Ordering
 
@@ -166,7 +163,7 @@ Please refer below link to know more about on how to enable Run Commands in Comp
 
   ![drpg plan details](./images/phoenix-drplan-detail.png)
 
-## Task 3: Customize the Switchover plan - Add PeopleSoft Application Shutdown group
+## Task 3: Customize the Switchover plan - Add PeopleSoft Application Shutdown group in Ashburn
 
 We will shutdown PeopleSoft Applicaitons in **Ashburn** region as we are doing the switchover from *Ashburn* to *Phoenix*. 
 
@@ -409,7 +406,8 @@ As part of this task, we will disable all the synchronization jobs that are enab
     - In the region, select "**US East (Ashburn)**"
     - Select the "Run local script" option
     - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) disable script
-    - In the script parameters, add the location of the cronjob (rsync) disable script.
+    - In the script parameters, add the location of the cronjob (rsync) disable script
+    - Run as user will be the user who has access to disable cronjobs
   
     Click on Add Step.
 
@@ -426,7 +424,8 @@ As part of this task, we will disable all the synchronization jobs that are enab
     - In the region, select "**US East (Ashburn)**"
     - Select the "Run local script" option
     - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) disable script
-    - In the script parameters, add the location of the cronjob (rsync) disable script.
+    - In the script parameters, add the location of the cronjob (rsync) disable script
+    - Run as user will be the user who has access to disable cronjobs
 
     Click on Add Step.
 
@@ -443,7 +442,8 @@ As part of this task, we will disable all the synchronization jobs that are enab
     - In the region, select "**US East (Ashburn)**"
     - Select the "Run local script" option
     - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) disable script
-    - In the script parameters, add the location of the cronjob (rsync) disable script.
+    - In the script parameters, add the location of the cronjob (rsync) disable script
+    - Run as user will be the user who has access to disable cronjobs
 
   Click on Add Step.
 
@@ -483,7 +483,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
   ![phoenix-add-dns-update-group](./images/phoenix-add-dns-update-group.png)
 
-## Task 6: Customize the Switchover plan - Add PeopleSoft Application Boot-up Group
+## Task 6: Customize the Switchover plan - Add PeopleSoft Application Boot-up Group in Phoenix
 
 1. Click on Add group.
 
@@ -620,7 +620,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
  
   Click on Add.
 
-## Task 7: Customize the Switchover plan - Add Elastic Search Services Boot-up Scripts
+## Task 7: Customize the Switchover plan - Add Elastic Search Services Boot-up Scripts in Phoenix
     
 1. Click on Add group. Provide a name to the group as Start Elastic Search Services.
 
@@ -662,7 +662,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
     ![phoenix-add-elk-boot-group](./images/phoenix-add-elk-boot-group.png)
 
-## Task 8: Customize the Switchover plan - Add Kibana Services Boot-up Scripts
+## Task 8: Customize the Switchover plan - Add Kibana Services Boot-up Scripts in Phoenix
 
 1. Click on Add group. Provide a name to the group as Start Kibana Services.
 
@@ -718,14 +718,15 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
     ![phoenix-add-app-sync-start-script](./images/phoenix-add-app-sync-start-script.png)    
 
-    - Add *Enable-rsync-in-Ashburn-App* in Step name
+    - Add *Enable-rsync-in-Phoenix-App* in Step name
     - Leave the Enable Step as ticked
     - Select Error mode as "Stop on error"
     - Leave the default "3600" seconds in Timeout in seconds
     - In the region, select "US West (Phoenix)"
     - Select the "Run local script" option
     - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
-    - In the script parameters, add the location of the cronjob (rsync) enable script.
+    - In the script parameters, add the location of the cronjob (rsync) enable script
+    - Run as user will be the user who has access to enable cronjobs
   
     Click on Add Step.
 
@@ -735,14 +736,15 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
     ![phoenix-add-prcs-sync-stop-script](./images/phoenix-add-prcs-sync-start-script.png)    
 
-    - Add *Enable-rsync-in-Ashburn-PRCS* in Step name
+    - Add *Enable-rsync-in-Phoenix-PRCS* in Step name
     - Leave the Enable Step as ticked
     - Select Error mode as "Stop on error"
     - Leave the default "3600" seconds in Timeout in seconds
     - In the region, select "US West (Phoenix)"
     - Select the "Run local script" option
     - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
-    - In the script parameters, add the location of the cronjob (rsync) enable script.
+    - In the script parameters, add the location of the cronjob (rsync) enable script
+    - Run as user will be the user who has access to enable cronjobs
 
     Click on Add Step.
 
@@ -752,20 +754,19 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
     ![phoenix-add-web-sync-stop-script](./images/phoenix-add-web-sync-start-script.png)    
 
-    - Add *Enable-rsync-in-Ashburn-WEB* in Step name
+    - Add *Enable-rsync-in-Phoenix-WEB* in Step name
     - Leave the Enable Step as ticked
     - Select Error mode as "Stop on error"
     - Leave the default "3600" seconds in Timeout in seconds
     - In the region, select "US West (Phoenix)"
     - Select the "Run local script" option
     - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
-    - In the script parameters, add the location of the cronjob (rsync) enable script.
+    - In the script parameters, add the location of the cronjob (rsync) enable script
+    - Run as user will be the user who has access to enable cronjobs
 
   Click on Add Step.
 
   Click on Add.
-
-    ![phoenix-add-sync-start-script-done](./images/add-sync-start-script-done.png)    
 
 ## Task 10: Customize the Switchover plan - DR Plan Re-Ordering
 

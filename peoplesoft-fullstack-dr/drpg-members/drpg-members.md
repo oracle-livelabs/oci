@@ -330,5 +330,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** -  Suraj Ramesh, Principal Product Manager
-- **Last Updated By/Date** -  Suraj Ramesh,September 2022
+- **Author** -  Vinay Shivanna, Principal Cloud Architect
+- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023
