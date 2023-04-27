@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "The Title of the Workshop is Defined in the Manifest File",
+    "workshoptitle": "How to Host a Highly Available Website using OCI Core Services",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
@@ -18,29 +18,33 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Provision an Instance",
+            "title": "Lab 1: Setting Up a VCN",
             "description": "Labs that follow the introduction are numbered, starting with Lab 1",
-            "filename": "../../provision/provision.md"
+            "filename": "../../vcn/vcn.md"
         },
         {
-            "title": "Lab 2: Setup the Environment",
-            "filename": "../../setup/setup.md"
+            "title": "Lab 2: Provisioning a Compute Instance and Installing WordPress",
+            "filename": "../../compute-wordpress/compute-wordpress.md"
         },
         {
-            "title": "Lab 3: Load Data into an Instance",
-            "filename": "../../data-load/data-load.md"
+            "title": "Lab 3: Configuring a MySQL Database",
+            "filename": "../../mysql/mysql.md"
         },
         {
-            "title": "Lab 4: Query Data",
-            "filename": "../../query/query.md"
+            "title": "Lab 4: Setting Up a Load Balancer",
+            "filename": "../../load-balancer/load-balancer.md"
         },
         {
-            "title": "Lab 5: Tables in LiveLabs",
-            "filename": "../../tables/tables.md"
+            "title": "Lab 5: Working with DNS",
+            "filename": "../../dns/dns.md"
         },
         {
-            "title": "Lab 6: Variables in LiveLabs",
-            "filename": "../../variables/variables.md"
+            "title": "Lab 6: Configuring Block Volumes",
+            "filename": "../../block-volumes/block-volumes.md"
+        },
+        {
+            "title": "Lab 7: Using OS Management For Patches and Updates",
+            "filename": "../../os-management/os-management.md"
         },
         {
             "title": "Need Help?",
