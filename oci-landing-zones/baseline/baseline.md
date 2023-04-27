@@ -1,4 +1,4 @@
-# Provision the Infrastructure using Resource Manager
+# Provision Oracle Enterprise Landing Zone Infrastructure.
 
 ## Introduction
 
@@ -21,10 +21,10 @@ Watch the video below for a quick walk-through of the lab.
 
 ### Objectives
 
-In this lab, you will:
+In this lab, you can deploy OLEZ stack via 2 method(use one)
 
-* Create an ORM Stack and configuration from the baseline landing zone template
-* Provision Infrastructure: Network, IAM, Security
+* Create OELZ stack via ORM.
+* Create OELZ stack via CLI.
 
 ### Prerequisites
 
@@ -32,120 +32,153 @@ In this lab, you will:
 * User that belongs to the Administrator group or has granted privileges to manage multiple OCI resources (IAM, ORM, Network, etc).
 
 
-## Task 1: Create ORM Stack
+
+## Task 1: Create OELZ stack via ORM
 
 The first step is to create a OCI Resource Manager Stack. The Stack is a collection of Oracle Cloud Infrastructure resources corresponding to a given Terraform configuration. Each stack resides in the compartment you specify, in a single region; however, resources on a given stack can be deployed across multiple regions. An OCID (unique identifier) is assigned to each stack.
 
-1. Open up Resource Manager service. You can click directly on Resource Manager in the navigation path menu, otherwise, Go back to the main Navigation Menu -> Developer Services -> Resource Manager.
+1. Go to the [`oelz`](https://github.com/oracle-quickstart/oci-landing-zones/tree/master).
+2. Click on Deploy to Oracle Cloud button.
+    ![oelz stack_deploy](./images/oelz-stack-deployment-1.png)
+3. Enter the Tenancy Name and click on next.
+    ![oelz stack_deploy_1](./images/oelz-stack-deployment-2.png)
+4. Select the identity domain and click on next.
+    ![oelz stack_deploy_2](./images/oelz-stack-deployment-3.png)
+5. Provide Tenancy User Credential (make sure user have administrator privilege) and Sign in.
+    ![oelz stack_deploy_3](./images/oelz-stack-deployment-4.png) 
+6. Select the freetrail-landing-zone under Working Directory and click Next.
+    ![oelz stack_deploy_4](./images/freetrial-stack-deployment-1.png) 
+7. IAM Variable are pre-defined and nothing to add here.
+    ![oelz stack_deploy_5](./images/freetrial-stack-deployment-iam.png) 
+8. Identity Variables are pre-defined and nothing to add here.
+    ![oelz stack_deploy_6](./images/freetrial-stack-deployment-identity.png)
+9. Security Variables are pre-defined and nothing to add here.
+    ![oelz stack_deploy_7](./images/freetrial-stack-deployment-security.png)
+10. Budget Variables are pre-defined and nothing to add here.
+    ![oelz stack_deploy_9](./images/freetrial-stack-deployment-budget.png)
+11. Network Variables are pre-defined and nothing to add here.
+    ![oelz stack_deploy_10](./images/freetrial-stack-deployment-network.png)
+12. Tagging Variables are pre-defined and nothing to add here, Please click Next.
+    ![oelz stack_deploy_11](./images/freetrial-stack-deployment-tagging.png)
+13. Review the variables , select on apply and click on create.
+    ![oelz stack_deploy_12](./images/freetrial-stack-deployment-review.png)
+14. Wait for atleast 10 minutes for full deployment then check the Stack Jobs Status.
+    ![oelz stack_deploy_13](./images/freetrial-stack-status.png)
+    ![oelz stack_deploy_14](./images/freetrial-stack-status-final.png)
+15. Gather the Provisioned Resources OCID Value. 
+    * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output
+    ![oelz stack_deploy_14](./images/freetrial-stack-status-resource.png)
+  
+16. Go to Mushop Deployment.
 
-2. In the stack section, click create stack and choose template as the origin of the Terraform configuration.
-    ![Create Stack](./images/create-stack.png)
 
-3. Click select template and click on the Enterprise scale baseline landing zone under the architecture tab.
-    ![Select Orm Template](./images/browse-orm-templates.png)
+## Task 2: Create OELZ stack via CLI (Optional Not Needed if Task 1 is used)
 
-4. In the Stack Information section, enter:
+### Prerequisites
 
-    |Varibale Name|Value|
-    |--|--|
-    |Parent compartment name|`LZ_Parent_Demo`|
-    |Create in Compartment| tenancy (root)|
-    |Terraform Version| leave the default option if you have the option to select it|
 
-5. Click on Next in the bottom of the page to go to the `2. Configure variables` page.
+To deploy the OELZ from the terraform cli you will need the following prerequisites.
+1. [Latest Version of Terrafom](https://developer.hashicorp.com/terraform/downloads)
+2. [OCI Terraform provider](https://registry.terraform.io/providers/oracle/oci/latest/docs) v4.109.0 or later
+3. [oci - cli](https://github.com/oracle/oci-cli)
 
-## Task 2: Configure Variables
 
-* Sample Variable Values   
+* **User** : The OELZ should be deployed by a user who is a member of the Administrators group for the tenancy. This user need to have an api key entry defined as decribed [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformproviderconfiguration.htm). Once the user and API Key are defined your oci-cli config should resemble.
+
+* **Region**  : The OELZ should be deployed to the tenancy's Home Region.
+
+* **Tenancy** : The tenancy you intend to deploy the OELZ to.
+
+
+```text
+[DEFAULT]
+user=ocid1.xxxxxx.xxxxxx.xxxxxx.....  #ocid of the user
+fingerprint=xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx #user api key fingerprint
+tenancy=ocid1.xxxxxx.xxxxxx.xxxxxx..... #tenancy ocid
+region=us-phoenix-1 #or desired region
+key_file=<path to your private keyfile> # TODO
+```
+
+1. Clone the OELZ Terraform templates from the [oelz_github](https://github.com/oracle-quickstart/oci-landing-zones/tree/master).
+2. Go to Directory landing-zones/templates/freetrial-landing-zone.
+3. Configure Variables on the file landing-zones/templates/freetrial-landing-zone/livelab.tfvars and save the file.
+
     |Variable|Value|
     |--|--|
-    |Tag cost center|`Example_tag_cost_center`|
-    |Tag geo location|`Example_tag_geo_location`|
-    |Parent compartment name|`LZ_Parent_Demo`|
-    |Global Resources Control|Check the Box|
-    |Break glass user email list|example@test.com|
-    |VCN CIDR block|10.0.0.0/16|
-    |VCN DNS label|vcn|
-    |Shared service subnet CIDR block|10.0.6.0/24|
-    |Shared service subnet DNS label|shared|
-    |Bastion client CIDR block allow list|10.0.0.0/16, 10.0.0.0/24|
-    |Bastion subnet CIDR block|10.0.7.0/24|
-    |Use IPsec DRG?|Check the Box|
-    |CPE IP address|10.0.0.0|
-    |IPsec connection static routes|10.0.1.0/24|
-    |Security Admin Email Endpoints|example@test.com|
-    |Budget Admin Email Endpoints|example@test.com|
-    |Network Admin Email Endpoints|example@test.com|
+    |current_user_ocid|`ocid1.xxxxxx.xxxxxx.xxxxxx.....`|
+    |region|`us-phoenix-1 #or desired region`|
+    |tenancy_ocid|`ocid1.xxxxxx.xxxxxx.xxxxxx.....`|
+    |api_fingerprint|`xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx`|
+    |api_private_key_path|`<path to your private keyfile>`|
+    |resource_label|`LIVELAB_ALERT`|
+    |enable_compartment_delete|`false`|
+    |prod_domain_admin_email|`example@domain.com`|
+    |home_compartment_name|`LIVELAB-OCI-CMP-HOME`|
+    |enable_cloud_guard|`false`|
+    |cloud_guard_target_tenancy|`false`|
+    |prod_enable_bastion|`true`|
+    |prod_bastion_client_cidr_block_allow_list|10.0.0.0/16, 10.0.0.0/24|
+    |prod_budget_alert_rule_message|`LIVELAB_ALERT`|
+    |prod_budget_alert_rule_threshold|`1000000`|
+    |prod_budget_amount|`10000000`|
+    |prod_enable_budget|`true`|
+    |is_create_alarms|`false`|
+    |is_service_connector_limit|`true`|
+    |domain_license_type|`free`|
+    |onboard_log_analytics|`false`|
+    |prod_enable_vpn|`false`|
+    |prod_cost_center_tagging|`LIVELAB_COST_TAG`|
+    |prod_geo_location_tagging|`LIVELAB_GEO_TAG`|
+    |prod_enable_internet_gateway_hub|`true`|
+    |prod_enable_nat_gateway_hub|`true`|
+    |prod_enable_service_gateway_hub|`true`|
+    |prod_enable_nat_gateway_spoke|`true`|
+    |prod_enable_service_gateway_spoke|`true`|
+    |prod_hub_vcn_cidr_block|10.1.0.0/16|
+    |prod_hub_public_subnet_cidr_block|10.1.1.0/24|
+    |prod_hub_private_subnet_cidr_block|10.1.2.0/24|
+    |prod_spoke_vcn_cidr|10.1.2.0/24|
+    |prod_spoke_subnet_web_cidr_block|10.1.2.0/24|
+    |prod_spoke_subnet_app_cidr_block|10.1.2.0/24|
+    |prod_spoke_subnet_db_cidr_block|10.1.2.0/24|
     
-* Enter Tagging and Compartment Variables
-
-    * The tag fields correspond to freeform tags that are applied to resources created within the template. These can be used to identify the cost center and location of the resources. Each resource created is also given a default assigned value for the Description tag.
-    * The parent compartment and other compartment name variables are used to rename the compartment structure. This includes the parent level compartment, security, network, and workload-specific compartments.
-
-    ![Tagging and Compartment Vars](./images/variables-tagging-compartment.png)
-
-2. Enter IAM Vars including break glass user email list. Group name variables can be left as default.
-
-    * The break glass user is an IAM user created with full administrator permissions. Entering a valid email here will create the user and send an email allowing access.
-    * IAM lets you control who has access to specific cloud resources and what type of access a group of users can have. The Baseline Landing Zone provisions IAM groups with established roles and access levels. The group names listed are the default names but can be overridden by updating using the Terraform variables. 
-
-    ![IAM Vars](./images/variables-iam.png)
-
-3. Enter Networking variables for the VCN and subnet configuration
-
-    * The landing zone provisions a VCN, nat gateway, internet gateway, and shared services subnets. You will need to input cidr blocks and dns labels.
-    * The landing zone also provides options for connectivity using an Ipsec tunnel or a Fastconnect connection. In this lab however, it can remain disabled.
-
-    ![VCN Variables](./images/landing-zone-baseline-variable-2.png)
-
-4. Enter Security variables for Cloud Guard, Vulnerability Scanning Service, VCN Flow Logging, and Audit Logs.
-
-    * Cloud Guard is an OCI resource that detects misconfigured resources and insecure activity across tenants. It enables security administrators to triage and resolve cloud security issues. Security inconsistencies can be automatically resolved with out-of-the-box security recipes.
-    * VCN Flow Logs for the provisioned VCN subnets can be viewed in the Logging Analytics Dashboard. You can also enter subnet ocids to log traffic for externally created subnets. Audit Logging can also be enabled using the same variable which enables logging and stores them in an archive bucket.
-    * The bastion provides restricted and time-limited access to cloud resources without public-facing endpoints. There are two types of bastion sessions, managed SSH and port forwarding, which depends on the type of target resource. Input the cidr of the bastion subnet as well as the cidr blocks the bastion can connect to.
-
-    ![Security Variables](./images/landing-zone-baseline-variable-3.png)
-
-5. Enter the sample variables for creation of Bastions, Dynamic Routing Gateway(DRG) and Monitoring. 
-
-    ![Bastion Service Variables](./images/landing-zone-baseline-variable-4.png)
-    ![All Stack Variables Snapshot](./images/landing-zone-baseline-variable-6.png)
-    
-
-6. Create the Stack.
-    ![Stack Creation Step](./images/landing-zone-stack-info.png)
-    
-7. Wait for the atleast ten minutes and then the Stack Jobs Status. 
-
-8. Gather the Provisioned Resources OCID Value. 
-    * Hamburger-->Resource Manager-->Stacks-->Stacks Detail-->Resource-> Select Output 
-
-![Stack Created Resources OCID Snapshot](./images/landing-zone-stack-output.png)
+ 4. Validate the changes . Issue the command "terraform validate".
+    ![terraform_validate](./images/terraform-validate.png)
+ 5. Initializes Terraform Configuration files via "terraform init".
+    ![terraform_init](./images/terraform-init.png)
+ 6. Preview the changes that Terraform will to make to your infrastructure via "terraform plan -var-file=\"livelab.tfvars\"".
+    ![terraform_plan_1](./images/terraform-plan-1.png)
+    ![terraform_plan_2](./images/terraform-plan-2.png)
+ 7. Executes the changes defined by your Terraform configuration to create or update resources via "terraform apply -var-file=\"livelab.tfvars\"" and wait for atleast 10 min to finish provisioning.
+    ![terraform_apply_1](./images/terraform-apply-1.png)
+    ![terraform_apply_2](./images/terraform-apply-2.png)
+    ![terraform_apply_3](./images/terraform-apply-3.png)
+ 8. Destroy the terraform configuration resources via "terraform destroy -var-file=\"livelab.tfvars\"".
+    ![terraform_destroy_1](./images/terraform-destroy-1.png)
+    ![terraform_destroy_2](./images/terraform-destroy-2.png)
 
 
+## Task 3: Verify OELZ Resources
 
-## Task 3: Provisioning the Infrastructure
+1. Go to Hamburger-->Identity & Security-->Compartments and click on "LIVELAB-OCI-CMP-HOME" compartment and you can see the compartment struture defined on the introduction section.
 
-1. After creating the Stack, you can perform some Terraform operations that are also known as `Jobs` in OCI. By clicking on `Plan` button and defining a name for your plan, e.g. `deploy1` Resource Manager will parse your Terraform configuration and creates an execution plan for the associated stack. The execution plan lists the sequence of specific actions planned to provision your Oracle Cloud Infrastructure resources. The execution plan is handed off to the apply job, which then executes the instructions.
-    ![ORM Stack - jobs menu](./images/oci-orm-jobs-menu.png)
-    ![ORM Stack - plan - deploy1](./images/oci-orm-plan-deploy1.png)
+![compartment_1](./images/compartment-1.png)
+![compartment_2](./images/compartment-2.png)
+![compartment_3](./images/compartment-3.png)
 
+2. Hub VCN : Go to Hamburger-->Networking-->Virtual Cloud Networks(VCN). GO to compartment tab and select the "OCI-ELZ-L-SRD-NET" compartment.
 
-2. Once the job state is `Succeeded`, click on `Stack Details` navigation menu on the top of the page to go back to the previous page. 
-    ![ORM Stack - plan - deploy1 succeed](./images/oci-orm-plan-deploy1-succeed.png)
+![vcn_1](./images/hub-info-1.png)
+![vcn_2](./images/hub-info-2.png)
 
+3. Spoke VCN : Go to Hamburger-->Networking-->Virtual Cloud Networks(VCN) . GO to compartment tab and select the Workload compartment.
 
-3. Then, click `Apply` and enter a name (e.g `deploy1`), select the Apply Job Plan resolution that was previously created (`deploy1`). This will apply the execution plan to create (or modify) your Oracle Cloud Infrastructure resources. This operation will take some time to complete (15-20 minutes) as it is going to provision all infrastructure resources needed by this lab (IAM, Network, Logging, OKE).
-
-4. After that, if you want to make any change to the variables, you can go back to the Stack details page, click on `Edit` button to change them. Then, you need to run Plan and Apply jobs to make these changes into the infrastructure. Always review the execution plan as some resources are immutable and they can be completely destroyed and recreated by Terraform/ORM after hitting `Apply`.
-
-Note: in case of quota/service limit/permission issues, Apply job will fail and partial resources will be provisioned. Click on Destroy button will trigger the job to remove provisioned resources. 
-
-You may now proceed to the next lab.
+![spoke_1](./images/spoke-info-1.png)
+![spoke_2](./images/spoke-info-2.png)
 
 
 ## Acknowledgements
-
+---
 * **Author** - LiveLabs Team
 * **Contributors** - LiveLabs Team, Arabella Yao
 * **Last Updated By/Date** - Arabella Yao, September 2022

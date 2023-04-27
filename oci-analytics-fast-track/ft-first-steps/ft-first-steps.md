@@ -4,6 +4,8 @@
 
 Neste Lab você vai aprender a navegar pela interface do Oracle Analytics Cloud e, conectar o OAC a dados.
 
+[Oracle Video Hub video scaled to Large size](videohub:1_emf4ny76:large)
+
 ***Overview***
 
 O Oracle Analytics Cloud é um serviço de nuvem pública escalável e seguro que fornece um conjunto completo de recursos para explorar e executar análises colaborativas para você, seu grupo de trabalho e sua empresa. Com o Oracle Analytics Cloud, você também tem recursos flexíveis de gerenciamento de serviços, incluindo configuração rápida, dimensionamento e patches fáceis.
@@ -226,4 +228,4 @@ Além disso, você aprendeu quais fontes de dados você pode usar em conjuntos d
 ## Autoria
 
 - **Autores** - Isabelle Dias,Thais Henrique, Isabella Alvarez, Breno Comin, Guilherme Galhardo
-- **Último Update Por/Data** - Thais Henrique, Mar/2023
+- **Último Update Por/Data** - Thais Henrique, Abr/2023
