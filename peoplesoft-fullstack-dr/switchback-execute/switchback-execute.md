@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, we will execute the actual switchover plan  **FSCM92-FSDR-Switchover-From-Phoenix-To-Ashburn**, which we have created in lab 8. The switchover (rollback) plan will execute the series of steps as per the order.
+In this lab, we will execute the actual switchover (rollback) plan  **FSCM92-FSDR-Switchover-From-Phoenix-To-Ashburn**, which we have created in lab 8. The switchover (rollback) plan will execute the series of steps as per the order.
 
 Estimated Time: 25 Minutes
 
@@ -62,19 +62,19 @@ Estimated Time: 25 Minutes
 
     ![drpg execute monitor1](./images/phoenix-execute-inprogress.png)
 
-3. All the *plan groups* will run serially, but steps inside each *plan group* will be parallel. Monitor the various plan group and steps which are running. Navigate to the three dots section for the respective plan group step and click. You get the option to view the log and download the log. These logs are stored in the object storage bucket provided during the DRPG creation. You can monitor the Progress and download the log if necessary for troubleshooting.
+2. All the *plan groups* will run serially, but steps inside each *plan group* will be parallel. Monitor the various plan group and steps which are running. Navigate to the three dots section for the respective plan group step and click. You get the option to view the log and download the log. These logs are stored in the object storage bucket provided during the DRPG creation. You can monitor the Progress and download the log if necessary for troubleshooting.
 
      ![drpg execute monitor log](./images/phoenix-execute-viewlog.png)
 
-5. Once each plan group is executed successfully, it will move on to the next group for execution. 
+3. Once each plan group is executed successfully, it will move on to the next group for execution. 
 
      ![drpg execute monitor progress](./images/phoenix-execute-moving.png)
 
-6. Keep monitoring the rest of the groups and steps; each step will complete depending on the actual task.
+4. Keep monitoring the rest of the groups and steps; each step will complete depending on the actual task.
 
      ![drpg execute monitor progress](./images/phoenix-execute-moving2.png)
 
-7. Wait for all the steps to complete successfully.  It is important to monitor the progress of each step and take actions in case of any failures. 
+5. Wait for all the steps to complete successfully.  It is important to monitor the progress of each step and take actions in case of any failures. 
 
 ## Task 3: Verify the executed switchover plan
 
