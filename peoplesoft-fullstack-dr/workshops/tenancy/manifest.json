@@ -63,6 +63,11 @@
       "filename": "../../post-switchback/post-switchback.md"
     },
     {
+      "title": "Lab 12: Create DR Failover plan" ,
+      "description": "Create DR Failover plan",
+      "filename": "../../failover-plan/failover-plan.md"
+    },
+    {
       "title": "Need Help?",
       "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
     }
