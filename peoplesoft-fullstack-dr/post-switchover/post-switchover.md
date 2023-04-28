@@ -65,7 +65,7 @@ Estimated Time: 15 Minutes
 
      ![phoenix-sample-process](./images/phoenix-sample-process.png)
 
-We have now achieved the complete automation of switching over a PeopleSoft application (Full Stack) from the Ashburn region to the Phoenix region with a single click of a button! 
+We have now achieved the complete automation of switching over a PeopleSoft application (Full Stack) from Ashburn region to Phoenix region with a single click of a button.
 
 ## Acknowledgements
 

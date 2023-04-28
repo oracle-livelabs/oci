@@ -58,6 +58,11 @@
       "filename": "../../switchback-execute/switchback-execute.md"
     },
     {
+      "title": "Lab 11: Post Switchover (Rollback) tasks" ,
+      "description": "Post Switchover (Rollback) tasks",
+      "filename": "../../post-switchback/post-switchback.md"
+    },
+    {
       "title": "Need Help?",
       "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
     }
