@@ -28,8 +28,8 @@
       "filename": "../../switchover-plan/switchover-plan.md"
     },
     {
-      "title": "Lab 5: Perform prechecks" ,
-      "description": "Perform prechecks",
+      "title": "Lab 5: Perform Switchover prechecks" ,
+      "description": "Perform Switchover prechecks",
       "filename": "../../switchover-prechecks/switchover-prechecks.md"
     },
     {
@@ -66,6 +66,11 @@
       "title": "Lab 12: Create DR Failover plan" ,
       "description": "Create DR Failover plan",
       "filename": "../../failover-plan/failover-plan.md"
+    },
+    {
+      "title": "Lab 13: Perform Failover prechecks" ,
+      "description": "Perform Failover prechecks",
+      "filename": "../../failover-prechecks/failover-prechecks.md"
     },
     {
       "title": "Oracle CloudWorld 2022 - Get Help",

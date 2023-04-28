@@ -68,6 +68,11 @@
       "filename": "../../failover-plan/failover-plan.md"
     },
     {
+      "title": "Lab 13: Perform Failover prechecks" ,
+      "description": "Perform Failover prechecks",
+      "filename": "../../failover-prechecks/failover-prechecks.md"
+    },
+    {
       "title": "Need Help?",
       "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
     }
