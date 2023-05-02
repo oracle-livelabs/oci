@@ -4,6 +4,8 @@
 
 Após a conexão com o banco e seleção das tabelas, neste lab você vai aprender a preparar seu Conjunto de Dados (Dataset) no Oracle Analytics Cloud, trazendo dados externos, enriquecendo a análise e realizando transformações preliminares à criação dos gráficos e visualizações
 
+[Oracle Video Hub video scaled to Large size](videohub:1_87a9ge7u:large)
+
 *Tempo estimado para o Lab:* 45 Minutos
 
 ### Objetivos
@@ -160,7 +162,7 @@ Clique em **Adicionar Etapa** para salvar esse passo. Reproduza o processo no GI
 
 ![Criando Cálculo OAC](./images/gifft.gif)
 
-Nossas colunas já estão com a classificação correta (Atributo/Métrica), mas as métricas podem ter diferentes formas de agregação (Soma, Média, Contagem...). Também é possível criar uma formatação para indicar que uma coluna é um valor de moeda em reais (R$), por exemplo. 
+Nossas colunas já estão com a classificação correta (Atributo/Métrica), mas as métricas podem ter diferentes formas de agregação (Soma, Média, Contagem...). Também é possível criar uma formatação para indicar que uma coluna é um valor de moeda em reais (R$), por exemplo.
 
 9. Seleciona a coluna **VENDAS**, clique na área inferior esquerda no **#** e dentro do Formato do Número, selecione **Moeda**.
 
@@ -182,7 +184,8 @@ Nossas colunas já estão com a classificação correta (Atributo/Métrica), mas
 
 ![Salvar o Projeto](./images/salve-novamente.png)
 
-Parabéns, você concluiu o laboratório de Preparação de Conjunto de Dados!
+Parabéns, você terminou esse laboratório!
+Você pode **seguir para o próximo Lab**.
 
 ## Conclusão
 
@@ -191,4 +194,4 @@ Nesta sessão você aprendeu a preparar um Conjunto de Dados no Oracle Analytics
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabela Alvarez, Breno Comin, Isabelle Dias e Guilherme Galhardo
-- **Último Update Por/Date** - Breno Comin, Fev/2023
+- **Último Update Por/Date** - Breno Comin, Abr/2023

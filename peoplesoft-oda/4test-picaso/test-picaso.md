@@ -69,6 +69,6 @@ In this lab, you tested the PeopleSoft PICASO chatbot configured using Oracle Di
 ## Acknowledgements
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
 * **Contributors** - Deepak Kumar M, Principal Cloud Architect
-* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, October 2022
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, March 2023
 
 
