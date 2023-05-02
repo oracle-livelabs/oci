@@ -73,7 +73,7 @@ Finally, you need to create a **policy** which grants manage privileges in a new
 
     In the **Policies** page click **Create Policy**.
 
-    ![Create a new policy](images/create-a-new-policy.png)
+    ![Create a new policy](images/create-a-new-policy.png =30%x*)
 
 3. Define a new policy
 
@@ -88,13 +88,13 @@ Finally, you need to create a **policy** which grants manage privileges in a new
     Your policy should look like this:
 
      ```text
-     <copy>Allow group << group name >> to manage all-resources in compartment << compartment name >> </copy>
+     <copy>Allow group < group name > to manage all-resources in compartment < compartment name > </copy>
      ```
    
     for example, 
 
     ```text
-     <copy>Allow group AIDEMO-Group to manage all-resources in compartment aidemo</copy>
+     <copy>Allow group AIDEMOGroup to manage all-resources in compartment aidemo</copy>
     ```
 
  
@@ -111,19 +111,19 @@ To find out which steps you need to perform, you can navigate to **Data Labeling
 
     From the **Navigator** menu select **Analytics & AI** and then **Data Labeling**.
 
-    ![Navigate to Data Labeling](./images/navigate-to-data-labeling.png " ")
+    ![Navigate to Data Labeling](images/navigate-to-data-labeling.png " ")
 
 2. (optional) Open Datasets sub-page
 
     Click on **Datasets** link under **Data Labeling** on the left side of the page. This will open **Dataset list** page in selected Compartment (you might need to change compartment to the one you've created for this workshop).
 
-    ![Open Datasets page](./images/open-datasets-page.png " ")
+    ![Open Datasets page](images/open-datasets-page.png " ")
 
 3. (optional) Verify data labeling prerequisites
 
     Expand **Show more information** to display what prerequisites have to be met before you can start your data labeling exercise. If these are not met, then Data Labeling might not run properly.
 
-    ![Show more information for Data Labeling](./images/show-more-for-data-labeling.png " ")
+    ![Show more information for Data Labeling](images/show-more-for-data-labeling.png " ")
 
     You have already created a new OCI group, hence creating a new OCI group is not needed. Continue with creating a new dynamic group.
 
@@ -131,7 +131,7 @@ To find out which steps you need to perform, you can navigate to **Data Labeling
 
     From **Navigator** menu choose **Identity & Security** and then **Dynamic Groups**.
 
-    ![Navigate to Dynamic Groups](./images/navigate-to-dynamic-groups.png " ")
+    ![Navigate to Dynamic Groups](images/navigate-to-dynamic-groups.png " ")
 
 5. Create a new dynamic group
 
@@ -143,61 +143,47 @@ To find out which steps you need to perform, you can navigate to **Data Labeling
     <copy>ALL { resource.type = 'datalabelingdataset' }</copy>
     ```
 
-    ![Define dynamic group for data labeling](./images/define-dynamic-group-for-data-labeling.png " ")
+    ![Define dynamic group for data labeling](images/define-dynamic-group-for-data-labeling.png " ")
 
-6. Verify your new dynamic group
-
-    Verify that your **Dynamic Group** is properly defined.
-
-    ![Verify dynamic group for data labeling](./images/verify-dynamic-group-for-data-labeling.png " ")
-
-7. Set policies for data labeling
+6. Set policies for data labeling
 
     From the **Navigator** menu select **Identity & Security** and then choose **Policies**.
 
     ![Navigate to policies](https://oracle-livelabs.github.io/common/images/console/id-policies.png " ")
 
-8. Create a new policy for non-administrative users
+7. Create a new policy for non-administrative users
 
     Make sure that you've selected your *root* compartment first. Then click **Create Policy**.
 
     The first policy is for non-administrative users. These users are members of previously created OCI Group.
 
-    OCI Group needs the following privileges (assuming OCI Group is called *OCI-X-Ray-Group* and compartment's name is *X-Rays-Image-Classification*):
+    OCI Group needs the following privileges (assuming OCI Group is called **AIDEMOGroup** and compartment's name is **aidemo**):
 
     ```text
-    <copy>allow group OCI-X-Ray-Group to read buckets in compartment X-Rays-Image-Classification
-    allow group OCI-X-Ray-Group to manage objects in compartment X-Rays-Image-Classification
-    allow group OCI-X-Ray-Group to read objectstorage-namespaces in compartment X-Rays-Image-Classification
-    allow group OCI-X-Ray-Group to manage data-labeling-family in compartment X-Rays-Image-Classification</copy>
+    <copy>allow group AIDEMOGroup to read buckets in compartment aidemo
+    allow group AIDEMOGroup to manage objects in compartment aidemo
+    allow group AIDEMOGroup to read objectstorage-namespaces in compartment aidemo
+    allow group AIDEMOGroup to manage data-labeling-family in compartment aidemo</copy>
     ```
 
-    ![Define data labeling policy for non-administrative users](./images/define-policy-for-non-admin-users.png " ")
-
-    Verify and double check all policies statements are properly entered and click **Create**.
-
-    ![Verify data labeling policy for non-administrative users](./images/verify-policy-for-non-admin-user.png " ")
-
-9. Create a new policy for dynamic group
+    ![Define data labeling policy for non-administrative users](images/datalabel-policies.png " ")
+ 
+8. Create a new policy for dynamic group
 
     Repeat **Create Policy** for Dynamic Group you've created in the previous step. 
 
     Make sure that you've selected your *root* compartment.
 
-    Enter the following statements (again assuming Dynamic Group is called *X-Ray-Image-Classification\_Dynamic\_Group* and compartment's name is *X-Rays-Image-Classification*):
+    Enter the following statements (assuming Dynamic Group is called **AIDEMODynamicGroup** and compartment's name is **aidemo**):
 
     ```text
-    <copy>allow dynamic-group X-Ray-Image-Classification_Dynamic_Group to read buckets in compartment X-Rays-Image-Classification
-    allow dynamic-group X-Ray-Image-Classification_Dynamic_Group to read objects in compartment X-Rays-Image-Classification
-    allow dynamic-group X-Ray-Image-Classification_Dynamic_Group to manage objects in compartment X-Rays-Image-Classification where any {request.permission='OBJECT_CREATE'}</copy>
+    <copy>allow AIDEMODynamicGroup to read buckets in compartment aidemo
+    allow dynamic-group AIDEMODynamicGroup to read objects in compartment aidemo
+    allow dynamic-group AIDEMODynamicGroup to manage objects in compartment aidemo where any {request.permission='OBJECT_CREATE'}</copy>
     ```
 
-    ![Define data labeling policy for Dynamic Groups](./images/define-policy-for-dynamic-groups.png " ")
-
-    Verify and double check all policies statements are properly entered and click **Create**.
-
-    ![Verify data labeling policy for Dynamic Groups](./images/verify-policy-for-dynamic-groups.png " ")
-
+    ![Define data labeling policy for Dynamic Groups](images/define-policy-for-dynamic-groups.png " ")
+ 
     You are now ready to start using Data Labeling service.
 
 ## Task 9: Create new policies for OCI Vision service
@@ -208,7 +194,11 @@ Similarly to Data Labeling service, you will require some privileges to use OCI 
 
     Using **Navigator** (on the left) navigate to **Analytics & AI** and then choose **Vision**.
 
-    ![Navigate to Vision](./images/navigate-to-vision.png " ")
+    ![Navigate to Vision](images/navigate-to-vision.png " ")
+
+    Check Vision overview page
+
+    ![Navigate to Vision](images/vision-overview.png " ")
 
 2. (optional) Go to custom Projects sub-page
 
@@ -216,43 +206,32 @@ Similarly to Data Labeling service, you will require some privileges to use OCI 
 
     In your case, you will create your own custom model. So, Click **Projects**
 
-    ![Go to Projects](./images/go-to-projects.png " ")
+    ![Go to Projects](./images/create-project.png " ")
 
-3. (optional) Review important information about custom projects
-
-    When you open the **Projects** page, pay attention to **important information** note that is displayed at the top of the page. There are some policies required which need to be set before you create a new custom project and before you start training your models.
-
-    ![Review Important Information](./images/review-important-information.png " ")
-
-4. Set policies for Vision
+3. Set policies for Vision
 
     From the **Navigator** menu select **Identity & Security** and then choose **Policies**.
 
     ![Navigate to policies](https://oracle-livelabs.github.io/common/images/console/id-policies.png " ")
 
-5. Create a new policy
+4. Create a new policy
 
     Click **Create Policy**.
 
-    ![Navigate to Vision](./images/create-a-new-policy.png =30%x*)
+    ![Navigate to Vision](images/create-a-new-policy.png =30%x*)
 
-6. Define policies to access Vision service
+5. Define policies to access Vision service
 
     Provide a name of a new policy and description in **Create Policy** dialog page. In the **Policy Builder** section enable **Show manual editor** and enter the following policy:
 
     ```text
-    <copy>allow group OCI-X-Ray-Group to manage ai-service-vision-family in tenancy</copy>
+    <copy>allow group AIDEMOGroup to manage ai-service-vision-family in tenancy
+    allow group AIDEMOGroup to manage object-family in tenancy</copy>
     ```
 
-    ![Define a new policy for Vision](./images/define-a-new-policy-for-vision.png =50%x*)
+    ![Define a new policy for Vision](images/review-important-information.png =50%x*)
 
     Click **Create**.
-
-7. Confirm Policy
-
-    Wait until policy is created and verify it has been properly set.
-
-    ![Verify a new policy for Vision](./images/verify-a-new-policy-for-vision.png =50%x*)
  
 
 ## Learn More
