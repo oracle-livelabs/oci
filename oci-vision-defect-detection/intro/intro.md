@@ -2,10 +2,7 @@
 
 ## About this Workshop
 
-Manual inventory management can be a time consuming and labor intensive process. Manufacturers often struggle with keeping an updated stock of inventory and keeping track of inventory location, leading to lost revenue and under-utilised capital. The inventory counting process on-site for large remote factories or warehouse facilities involves time and resource intensive steps, constraints and is prone to errors.
-OCI Vision can be used to supplement manual inventory management efforts by using drones (or other robots) to observe, count and report information reliably and faster.  
-  
-This workshop features elements of the recently developed proof-of-concept for Oracle Industry Lab, where the goal was to use stacked pipes as an example of an automated inventory counting scenario, using a programmable drone and a trained, custom OCI Vision model.
+Proactively de-risking operational resources and detecting issues across the areas of vegetation overgrowth, utility assets, and factory machinery can be a time-consuming and labor intensive process, but it can be automated with AI. In this hands-on lab, you'll build a custom machine learning model to detect rust on utility poles. No data science experience required! This solution can be applied across a number of different related use cases and sectors. Bring your questions and ask our AI experts for their advice on how to apply this technology to your scenario.
 
 Estimated Time: 90 minutes
 
@@ -14,9 +11,9 @@ Estimated Time: 90 minutes
 In this workshop, you will:
 - Understand the prerequisites and prepare your tenancy for the creation of an OCI Vision model
 - Label images with OCI Data Labeling
-- Build a custom Vision model
+- Build a custom OCI Vision model
 
 ## Acknowledgements
 
-* **Authors** - Mark Heffernan, Ted Basile, Aparna Chaturvedi, Jason Monden
-* **Last Updated By/Date** - May 2023
+* **Authors** - Mark Heffernan, Jason Monden, and Ted Basile
+* **Last Updated By/Date** - Mark Heffernan, May 2023

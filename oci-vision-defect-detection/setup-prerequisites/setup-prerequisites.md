@@ -110,5 +110,5 @@ In this task, you will create the required OCI IAM policy.
 
 ## Acknowledgements
 
-* **Authors** - Mark Heffernan, Ted Basile, Aparna Chaturvedi, Jason Monden
-* **Last Updated By/Date** - May 2023
+* **Authors** - Mark Heffernan, Jason Monden, and Ted Basile
+* **Last Updated By/Date** - Mark Heffernan, May 2023
