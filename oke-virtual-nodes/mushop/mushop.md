@@ -1,10 +1,10 @@
-# Title of the Lab
+# Deploy a sample eCommerce application (MuShop) to the cluster
 
 ## Introduction
 
 *Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
 
-Estimated Time: -- minutes
+Estimated Time: 20 minutes
 
 ### About <Product/Technology> (Optional)
 Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than two sections/paragraphs, please utilize the "Learn More" section.
