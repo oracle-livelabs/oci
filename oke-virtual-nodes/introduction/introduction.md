@@ -2,9 +2,9 @@
 
 ## About this Workshop
 
-Get hands-on learning with training labs about Oracle cloud solutions. The workshops featured cover various solutions, skill levels, and categories based on Oracle Cloud Infrastructure (OCI).
+In this workshop, you will learn how to provision Oracle Container Engine for Kubernetes (OKE) with Virtual Nodes and Deploy the MuShop e-Commerce demo app with few commands.
 
-Estimated time: 60 minutes
+Workshop Estimated time: 60 minutes
 
 ### Objectives
 
@@ -25,8 +25,8 @@ This lab assumes you have:
 
 ## Learn More
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [Get to Know the Console](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/console.htm)
+* [Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)
 
 ## Acknowledgements
 
