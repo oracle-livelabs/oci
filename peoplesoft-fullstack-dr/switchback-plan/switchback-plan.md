@@ -4,9 +4,9 @@
 
 In our previous lab, we have switched over PeopleSoft application from *Ashburn* to *Phoenix* region.
 
-In this lab, we will create a DR Switchover plan (from *Phoenix* to *Ashburn*) and customize the plan with the additional steps. *Phoenix* is the primary region and *Ashburn* is the standby region. 
+In this lab, we will create a DR Switchover (Rollback) plan (from *Phoenix* to *Ashburn*) and customize the plan with the additional steps. *Phoenix* is the primary region and *Ashburn* is the standby region. 
 
-This lab will focus on how to create a Switchover plan and customize the plan as per PeopleSoft application requirements. 
+This lab will focus on how to create a Switchover (Rollback) plan and customize the plan as per the PeopleSoft application requirements. 
 
 **DR Plan *must* be created in the standby region (Ashburn)**. 
 

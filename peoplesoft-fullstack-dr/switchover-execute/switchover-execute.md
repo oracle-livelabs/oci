@@ -78,11 +78,11 @@ Estimated Time: 25 Minutes
 
 ## Task 3: Verify the executed switchover plan
 
-1. From the plan execution detail, verify the duration of each step, status, duration of the entire switchover plan, etc. *It is essential to have successful completion of all steps*. In this example it took around 27 minutes to complete. These timings will vary.Use the Expand all button to expand all the steps and the Collapse all button for collapsing. Use the view or download log option to see step execution details.
+1. From the plan execution detail, verify the duration of each step, status, duration of the entire switchover plan, etc. *It is essential to have successful completion of all steps*. Use the Expand all button to expand all the steps and the Collapse all button for collapsing. Use the view or download log option to see step execution details.
 
       ![drpg execution done](./images/phoenix-execute-done.png)
 
-   The entire DR Switchover operation took around 18 minutes to complete.
+   **The entire DR Switchover operation took around 18 minutes to complete**.
 
 You may now **proceed to the next lab**.
 

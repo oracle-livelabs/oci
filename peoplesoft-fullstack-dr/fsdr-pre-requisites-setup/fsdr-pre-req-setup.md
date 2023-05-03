@@ -18,7 +18,7 @@ An Oracle Data Guard implementation requires two DB systems, one containing the 
 - Both DB systems must be in the same compartment.
 - The DB systems must be the same shape type (for example, if the shape of the primary database is a virtual machine, then the shape of the standby database can be any other virtual machine shape).
 - The database versions and editions must be identical. Oracle Data Guard does not support Oracle Database Standard Edition. (Active Data Guard requires Enterprise Edition - Extreme Performance.)
-- Each database in a Data Guard association must have a unique name (DB_UNIQUE_NAME) value that is not in use by other databases in the DB systems the house the Data Guard association. However, the primary and standby database can use the same database name DB_NAME value.
+- Each database in a Data Guard association must have a unique name (DB\_UNIQUE\_NAME) value that is not in use by other databases in the DB systems the house the Data Guard association. However, the primary and standby database can use the same database name DB\_NAME value.
 - The database edition determines whether Active Data Guard (ADG) can be used. ADG is only available with Enterprise Edition Extreme Performance. If you are using the BYOL licensing model and if your license does not include Active Data Guard, then you must ensure that Active Data Guard is not enabled when configuring Data Guard for Enterprise Edition Extreme Performance. Alternately, you can use Enterprise Edition or Enterprise Edition High Performance, which do not enable ADG by default. See Use Oracle Data Guard with the Database CLI.
 - If your primary and standby databases are in the same region, then both must use the same virtual cloud network (VCN).
 - If your primary and standby databases are in different regions, then you must peer the virtual cloud networks (VCNs) for each database. See [Remote VCN Peering using an RPC](https://docs.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/bm-and-vm-dbs-cloud/dbscb&id=oci-remote-VCN-peering).
@@ -27,7 +27,7 @@ An Oracle Data Guard implementation requires two DB systems, one containing the 
 
 ## Task 1: Preparing Object Storage Buckets for Operation Logs
 
-Full Stack Disaster Recovery (Full Stack Disaster Recovery) configurations use Object Storage to store Disaster Recovery (DR) operation logs.
+Full Stack Disaster Recovery configurations uses Object Storage to store Disaster Recovery (DR) operation logs.
 
 Before you create any DR configurations, you must create Object Storage buckets in both Ashburn (primary) and Phoenix (standby) regions to include in the DR configuration process.
 
@@ -47,7 +47,7 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![ashburn-object-storage](./images/ashburn-object-storage.png)
 
-3. Click on Create Bucket and provide a name for the bucket and select the Default Storage Tier as **Standard**.
+3. Click on Create Bucket and provide a name for the bucket and select the Default Storage Tier as **Standard**. Click on Create.
 
     ![ashburn-create-bucket](./images/ashburn-bucket.png)
 
@@ -55,7 +55,7 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![phoenix-object-storage](./images/phoenix-object-storage.png)
 
-5. Click on Create Bucket and provide a name for the bucket and select the Default Storage Tier as **Standard**.
+5. Click on Create Bucket and provide a name for the bucket and select the Default Storage Tier as **Standard**. Click on Create.
 
     ![phoenix-create-bucket](./images/phoenix-bucket.png)
 
@@ -65,7 +65,7 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![dbcs home](./images/ashburn-dbcs-home.png)
 
-2. Click on the relevant DB System. Click on the Database.
+2. Click on the relevant PeopleSoft DB System. Click on the Database.
 
     ![ashburn-dbcs-dg](./images/ashburn-dbcs-dg.png)
 
@@ -77,7 +77,7 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![click-enable-data-guard](./images/ashburn-enable-dg.png)
 
-5. Provide a peer DB display name, select the DR standby region in this case it will be Phoenix, select the Availability Domain (recommended to host in the same Availability Domain which is hosting the PeopleSoft Application Tier).
+5. Provide a peer DB display name, select the DR standby region in this case it will be Phoenix, select the Availability Domain (recommended to host in the same Availability Domain where PeopleSoft Application Tiers are hosted).
 
     ![dg-info](./images/ashburn-dg-info.png)
 
@@ -101,7 +101,7 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![ashburn-dg-next](./images/ashburn-dg-next.png)
 
-6. Enter the database administrator password of the primary database in the Database password field. Use this same database administrator password for the standby database. Click on Enable Data Guard.
+6. Enter the database administrator password of the primary database in the Database password field. Click on Enable Data Guard.
 
     ![ashburn-dg-db-pwd](./images/ashburn-dg-db-pwd.png)
 
@@ -109,19 +109,23 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![ashburn-dg-complete](./images/ashburn-dg-complete.png)
 
-7. Create a vault in the Ashburn (primary) region. From the Ashburn region OCI console, select **Identity & Security** from the Hamburger menu then **Vault**.
+We will now create Vaults in both *Ashburn* and *Phoenix* regions to store Database Admin passwords which will be used during DR operations.
+
+7. Create a vault in the Ashburn (primary) region. 
+
+    From the Ashburn region OCI console, select **Identity & Security** from the Hamburger menu then **Vault**.
 
     ![ashburn-vault-home](./images/ashburn-vault-page.png)
 
-8. Click on Create Vault. Select the right compartment and provide a name for the Vault.
+8. Click on Create Vault. Select the right compartment and provide a name for the Vault. Click on Create Vault. Vault will now be created.
 
     ![ashburn-create-vault](./images/ashburn-create-vault.png)
 
-9. Under Resources, click on Master Encryption Keys and click on Create Key.
+9. Click on newly created Vault and Under Resources, click on Master Encryption Keys and click on Create Key.
 
     ![ashburn-click-key-vault](./images/ashburn-vault-key.png)
 
-10. Select the right compartment, Protection Mode will be **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Length will be 256 bits. Click on Create Key.
+10. Select the right compartment, Protection Mode will be **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Length will be **256** bits. Click on Create Key.
 
     ![ashburn-create-key](./images/ashburn-create-key.png)
 
@@ -137,11 +141,13 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![change-region](./images/change-region.png)
 
-14. Create a vault in the Phoenix (standby) region. From the Phoenix region OCI console, select **Identity & Security** from the Hamburger menu then **Vault**.
+14. Create a vault in the Phoenix (standby) region. 
+
+    From the Phoenix region OCI console, select **Identity & Security** from the Hamburger menu then **Vault**.
 
     ![phoenix-vault-home](./images/phoenix-vault-page.png)
 
-15. Click on Create Vault. Select the right compartment and provide a name for the Vault.
+15. Click on Create Vault. Select the right compartment and provide a name for the Vault. Click on Create Vault.
 
     ![phoenix-create-vault](./images/phoenix-create-vault.png)
 
@@ -149,7 +155,7 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![phoenix-click-key-vault](./images/phoenix-vault-key.png)
 
-17. Select the right compartment, Protection Mode will be **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Length will be 256 bits. Click on Create Key.
+17. Select the right compartment, Protection Mode will be **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Length will be **256** bits. Click on Create Key.
 
     ![phoenix-create-key](./images/phoenix-create-key.png)
 

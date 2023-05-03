@@ -7,7 +7,7 @@ In this lab, we will create a DR Switchover plan and customize the plan with the
 - Switchover (Maintenance/Planned Disaster Recovery)
 - Failover   (Actual Disaster Recovery/Unplanned)
 
-This lab will focus on how to create a Switchover plan and customize the plan as per PeopleSoft application requirements. 
+This lab will focus on how to create a Switchover plan and customize the plan as per the PeopleSoft application requirements. 
 
 **DR Plan *must* be created in the standby region (Phoenix)**. It is because, in the case of the worst-case scenario, the entire primary region outside the FSDR will not be accessible from the primary region.
 
@@ -28,7 +28,7 @@ Estimated Time: 180 Minutes
 
 ## Task 1: Enable Run Commands on an Instance
 
-Run command feature will help in executing custom boot up scripts as part of the FSDR.
+Run command feature will help in executing custom start and shutdown scripts as part of the FSDR.
 
 Please refer below link to know more about on how to enable Run Commands in Compute Instance.
 
@@ -297,12 +297,6 @@ Click on Add Step.
    
    ![phoenix-plangroup-shutdown-ashburn-psft](./images/phoenix-plangroup-shutdown-ashburn-psft.png)
 
-   Click on Add.
-
-   DRPG will go to status of Updating, please wait for few minutes.
-
-    ![phoenix-shutdown-ashburn-psft-done](./images/phoenix-shutdown-ashburn-psft-done.png)
-
 
 6. We will now add Elastic Search services shutdown step. Click on Add Step.
 
@@ -376,8 +370,6 @@ Click on Add Step.
 
   Now, we have added shutdown steps for PeopleSoft Application Server, Process Scheduler (both Linux and Windows), Web server domains, Elastic Search and Kibana services hosted in *Ashburn* region.
    
-   ![phoenix-plangroup-shutdown-ashburn-psft](./images/phoenix-plangroup-shutdown-ashburn-psft.png)
-
    Click on Add.
 
    DRPG will go to status of Updating, please wait for few minutes.
@@ -466,7 +458,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
+  - In the region, select "**US West (Phoenix)**"
   - Select the "Run local script" option
   - Select the server instance in "Target instance in compartment" where you have placed the DNS record update script
   - In the script parameters, add the location of the DNS Record update script. Below is an example of DNS record update script, please write a boot up shell script according to your setup and configurations.
@@ -500,7 +492,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
+  - In the region, select "**US West (Phoenix)**"
   - Select the "Run local script" option
   - Select application server instance in "Target instance in compartment"
   - In script parameters, add the location of the application server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
@@ -519,7 +511,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
   - Run as user will be the username who has access to boot Application Server domain
 
-  Click on Add Step.
+Click on Add Step.
  
 3. We will now add PeopleSoft Process Scheduler (Linux) boot up step.
 
@@ -531,7 +523,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
+  - In the region, select "**US West (Phoenix)**"
   - Select the "Run local script" option
   - Select process scheduler server instance in "Target instance in compartment"
   - In script parameters, add the location of the process scheduler server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
@@ -548,7 +540,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
   - Run as user will be the username who has access to boot Process Scheduler Server domain.
 
-  Click on Add Step.
+Click on Add Step.
  
 4. We will now add PeopleSoft Process Scheduler (Windows) boot up step. Click on Add Step.
 
@@ -560,7 +552,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
+  - In the region, select "**US West (Phoenix)**"
   - Select the "Run local script" option
   - Select process scheduler server instance in "Target instance in compartment"
   - In script parameters, add the location of the process scheduler server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
@@ -587,7 +579,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
   Click on Add Step.
  
-  Click on Add.
+Click on Add.
 
 5. We will now add Web Server Boot up step. Click on Add Step.
 
@@ -599,7 +591,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
+  - In the region, select "**US West (Phoenix)**"
   - Select the "Run local script" option
   - Select web server instance in "Target instance in compartment"
   - In script parameters, add the location of the web server domain start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
@@ -618,7 +610,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
     ![phoenix-add-boot-scripts](./images/phoenix-add-boot-scripts.png)
  
-  Click on Add.
+Click on Add.
 
 ## Task 7: Customize the Switchover plan - Add Elastic Search Services Boot-up Scripts in Phoenix
     
@@ -637,7 +629,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
+  - In the region, select "**US West (Phoenix)**"
   - Select the "Run local script" option
   - Select Elastic Search server instance in "Target instance in compartment"
   - In the script parameters, add the location of the Elastic Search services start-up script.Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
@@ -679,7 +671,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
+  - In the region, select "**US West (Phoenix)**"
   - Select the "Run local script" option
   - Select Kibana server instance in "Target instance in compartment"
   - In the script parameters, add the location of the Kibana services start-up script. Below is an example boot-up script, please write a boot up shell script according to your setup and configurations.
@@ -700,9 +692,9 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
   - Run as user will be the username who has access to boot Kibana services
 
-  Click on Add.
+Click on Add.
 
-    ![phoenix-add-kibana-boot-group](./images/phoenix-add-kibana-boot-group3.png)
+   ![phoenix-add-kibana-boot-group](./images/phoenix-add-kibana-boot-group3.png)
 
 ## Task 9: Customize the Switchover plan - Enable files synchronization (rsync) jobs in Phoenix
 
@@ -722,13 +714,13 @@ As part of this task, we will disable all the synchronization jobs that are enab
     - Leave the Enable Step as ticked
     - Select Error mode as "Stop on error"
     - Leave the default "3600" seconds in Timeout in seconds
-    - In the region, select "US West (Phoenix)"
+    - In the region, select "**US West (Phoenix)**"
     - Select the "Run local script" option
     - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
     - In the script parameters, add the location of the cronjob (rsync) enable script
     - Run as user will be the user who has access to enable cronjobs
   
-    Click on Add Step.
+Click on Add Step.
 
 3. We will now enable cronjob (rsync) in Process Scheduler Server. Click on Add Step.
 
@@ -740,13 +732,13 @@ As part of this task, we will disable all the synchronization jobs that are enab
     - Leave the Enable Step as ticked
     - Select Error mode as "Stop on error"
     - Leave the default "3600" seconds in Timeout in seconds
-    - In the region, select "US West (Phoenix)"
+    - In the region, select "**US West (Phoenix)**"
     - Select the "Run local script" option
     - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
     - In the script parameters, add the location of the cronjob (rsync) enable script
     - Run as user will be the user who has access to enable cronjobs
 
-    Click on Add Step.
+Click on Add Step.
 
 4. We will now enable cronjob (rsync) in Web Server. Click on Add Step.
 
@@ -758,7 +750,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
     - Leave the Enable Step as ticked
     - Select Error mode as "Stop on error"
     - Leave the default "3600" seconds in Timeout in seconds
-    - In the region, select "US West (Phoenix)"
+    - In the region, select "**US West (Phoenix)**"
     - Select the "Run local script" option
     - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
     - In the script parameters, add the location of the cronjob (rsync) enable script
@@ -766,7 +758,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
   Click on Add Step.
 
-  Click on Add.
+Click on Add.
 
 ## Task 10: Customize the Switchover plan - DR Plan Re-Ordering
 
@@ -783,7 +775,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
    ![phoenix-dr-plan-re-order-shutdown1](./images/phoenix-dr-plan-re-order-shutdown1.png)
 
-   Click Save changes.
+Click Save changes.
 
 2. Click on Actions under the DR plan and click on **Reorder groups**.
 
@@ -803,5 +795,5 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
 ## Acknowledgements
 
-- **Author** -  Vinay Shivanan, Prinicpal Cloud Architect
-- **Last Updated By/Date** -  Vinay Shivanan, Prinicpal Cloud Architect, April 2023
+- **Author** -  Vinay Shivanna, Principal Cloud Architect
+- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023

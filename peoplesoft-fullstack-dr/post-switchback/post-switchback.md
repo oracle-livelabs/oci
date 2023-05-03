@@ -1,4 +1,4 @@
-# Verify the DR Protection group status and PeopleSoft Application post switchover
+# Verify the DR Protection group status and PeopleSoft Application post Switchover (Rollback)
 
 ## Introduction
 
@@ -60,7 +60,7 @@ Estimated Time: 15 Minutes
 
      ![ashburn-dns-verify](./images/ashburn-dns-verify.png)
 
-2. Login to PeopleSoft application and go to Process Monitor to check and verify that Processes which were ran in Ashburn region are still present and accessible after switching to Ashburn region.
+2. Login to PeopleSoft application and go to Process Monitor to check and verify that Processes which were ran in Phoenix region are still present and accessible after switching to Ashburn region.
 
      ![ashburn-sample-process](./images/ashburn-sample-process.png)
 

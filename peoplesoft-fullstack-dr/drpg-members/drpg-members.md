@@ -11,7 +11,7 @@ Estimated Time: 20 Minutes
 - Add members to Ashburn DRPG (Primary)
 - Add members to Phoenix DRPG (Standby)
 
-In Ashburn (Primary) region, members to add are below. 
+In Ashburn (Primary) region, members to be added are below. 
  
 - PeopleSoft Active Database hosted on DbaaS / DBCS platform
 - PeopleSoft Application Server Compute Instance (Linux)
@@ -20,7 +20,7 @@ In Ashburn (Primary) region, members to add are below.
 - PeopleSoft Web Server Compute Instance (Linux)
 - Elastic Search and Kibana Server (Linux)
 
-In Phoenix (Standby), members to add are below.
+In Phoenix (Standby), members to be added are below.
 
 - PeopleSoft Standby Database hosted on DbaaS / DBCS platform
 - PeopleSoft Application Server Compute Instance (Linux)

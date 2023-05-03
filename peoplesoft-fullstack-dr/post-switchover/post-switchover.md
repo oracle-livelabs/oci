@@ -1,4 +1,4 @@
-# Verify the DR Protection group status and PeopleSoft Application post switchover
+# Verify the DR Protection group status and PeopleSoft Application post Switchover
 
 ## Introduction
 

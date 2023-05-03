@@ -10,36 +10,47 @@ Approximately 6 hrs
 
 # **Workshop Objectives**
 
-- Verify the status of the PeopleSoft environments in Ashburn (Primary) and Phoenix (Standby) regions for using the Full Stack Disaster Recovery.
-- Create DR Protection groups (DRPG) in Ashburn (Primary) and Phoenix (Standby) regions.
-- Associate Ashburn DRPG as Primary and Phoenix DRPG as Standby.
-- Add members to Ashburn DRPG. Application Virtual machines and DBCS (Database Cloud Services) database.
-- Add members to Phoenix DRPG. Application Virtual machines and Standby DBCS Database.
+- Verify the status of the PeopleSoft environments in Ashburn (Primary) and Phoenix (Standby) regions for using the Full Stack Disaster Recovery
+- Create DR Protection groups (DRPG) in Ashburn (Primary) and Phoenix (Standby) regions
+- Associate Ashburn DRPG as Primary and Phoenix DRPG as Standby
+- Add members to Ashburn DRPG. Application Virtual machines and DBCS (Database Cloud Services) database
+- Add members to Phoenix DRPG. Application Virtual machines and Standby DBCS Database
 - Create and Customize DR Switchover Plan in Phoenix( Standby) DRPG
-- Run DR Switchover Pre-checks in Phoenix( Standby) DRPG
-- Run DR Switchover Plan in Phoenix( Standby) DRPG
-- Verify the PeopleSoft application accessibility from Phoenix (New Primary) region.
+- Execute DR Switchover Pre-checks in Phoenix (Standby) DRPG
+- Execute DR Switchover Plan in Phoenix (Standby) DRPG
+- Verify the PeopleSoft application accessibility from Phoenix (New Primary) region
+- Create and Customize DR Switchover (Rollback) Plan in Ashburn (Standby) DRPG
+- Execute DR Switchover (Rollback) Pre-checks in Ashburn (Standby) DRPG
+- Execute DR Switchover (Rollback) Plan in Ashburn (Standby) DRPG
+- Verify the PeopleSoft application accessibility from Ashburn (New Primary) region
+- Create and Customize DR Failover Plan in Ashburn (Standby) DRPG
+- Execute DR Failover Pre-checks in Ashburn (Standby) DRPG
+- Execute DR Failover Plan in Ashburn (Standby) DRPG
+- Verify the PeopleSoft application accessibility from Phoenix (New Primary) region
 
 # **Prerequisites**
 
 - An active PeopleSoft application hosted in Ashburn region (Primary) with below PeopleSoft components.
-    - PeopleSoft Database hosted on OCI Database as a Service (DbaaS) platform / Database Cloud Service  (DBCS)
+
+    - PeopleSoft Database hosted on OCI Database as a Service (DbaaS) / Database Cloud Service  (DBCS)
     - PeopleSoft Application Server domain hosted on Linux
     - PeopleSoft Process Scheduler domain hosted on Linux
     - PeopleSoft Process Scheduler domain hosted on Windows
     - PeopleSoft Web Server domain hosted on Linux
     - Elastic Search and Kibana services hosted on Linux
+
 - A standby PeopleSoft applications hosted in Phoenix region (Standby) with below PeopleSoft components.
-    - A standby Database hosted on OCI Database as a Service (DbaaS) platform / Database Cloud Service  (DBCS) with Data Guard enabled between Ashburn hosted Database.
+
+    - A standby Database hosted on OCI Database as a Service (DbaaS) platform / Database Cloud Service  (DBCS) with Data Guard enabled with Ashburn hosted Database
     - PeopleSoft Application Server domain hosted on Linux
     - PeopleSoft Process Scheduler domain hosted on Linux
     - PeopleSoft Process Scheduler domain hosted on Windows
     - PeopleSoft Web Server domain hosted on Linux
     - Elastic Search and Kibana services hosted on Linux
-- Files and folders synchronization enabled between Ashburn (Primary) and Phoenix (Standby) for all customizations and psreports.
+- Files and folders synchronization enabled between Ashburn (Primary) and Phoenix (Standby) for all customizations and psreports
 - Load Balancer running in Ashburn (Primary) and Phoenix (Standby) regions
 - DNS record pointing to public IP of Ashburn (Primary) Load Balancer
-- Custom scripts to start and stop PeopleSoft Application Server, Web Server and Process Scheduler domains.
+- Custom scripts to start and stop PeopleSoft Application Server, Web Server and Process Scheduler domains
 - Custom scripts to start and stop Elastic Search and Kibana Services
 - Custom script to update DNS domain record update
 - Custom scripts to enable and disable files and folders synchronization jobs
@@ -74,7 +85,7 @@ Below are some of the critical functionalities of Full Stack Disaster Recovery S
 
 Full Stack Disaster Recovery provides multiple benefits in the area of business continuity.
 
-- Provides comprehensive disaster protection for the entire Application( Oracle/Non-Oracle) stack, including databases, VMs, attached volumes, storage, and applications across different OCI regions.
+- Provides comprehensive disaster protection for the entire Application( Oracle/Non-Oracle) stack, including databases, Compute Instances, attached block volumes and applications across different OCI regions.
 - Minimizes Recovery Time Objectives (RTO).
 - Automates disaster recovery operations.
 - Eliminates the need for domain specialists and dedicated administrators for disaster recovery.
