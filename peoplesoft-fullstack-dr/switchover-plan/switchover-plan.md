@@ -28,7 +28,7 @@ Estimated Time: 180 Minutes
 
 ## Task 1: Enable Run Commands on an Instance
 
-Run command feature will help in exeucting custom boot up scripts as part of the FSDR.
+Run command feature will help in executing custom boot up scripts as part of the FSDR.
 
 Please refer below link to know more about on how to enable Run Commands in Compute Instance.
 
@@ -52,7 +52,7 @@ Please refer below link to know more about on how to enable Run Commands in Comp
 
    Provide a name for the Dynamic Group.
 
-   Provide a description for the Dyanmic Group.
+   Provide a description for the Dynamic Group.
 
    Click on Rule Builder.
 
@@ -165,7 +165,7 @@ Please refer below link to know more about on how to enable Run Commands in Comp
 
 ## Task 3: Customize the Switchover plan - Add PeopleSoft Application Shutdown group in Ashburn
 
-We will shutdown PeopleSoft Applicaitons in **Ashburn** region as we are doing the switchover from *Ashburn* to *Phoenix*. 
+We will shutdown PeopleSoft Applications in **Ashburn** region as we are doing the switchover from *Ashburn* to *Phoenix*. 
 
 1. Click on Add group.
 
@@ -207,7 +207,7 @@ Click on Add Step.
 
     ![phoenix-plangroup-shutdown-prcs2](./images/phoenix-plangroup-shutdown-prcs2.png)
 
-  - Add *Stop PeopleSoft Procss Scheduler Server Domain (Linux)* in Step name
+  - Add *Stop PeopleSoft Process Scheduler Server Domain (Linux)* in Step name
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
@@ -236,7 +236,7 @@ Click on Add Step.
 
     ![phoenix-plangroup-shutdown-prcs4](./images/phoenix-plangroup-shutdown-prcs4.png)
 
-  - Add *Stop PeopleSoft Procss Scheduler Server Domain (Windows)* in Step name
+  - Add *Stop PeopleSoft Process Scheduler Server Domain (Windows)* in Step name
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds

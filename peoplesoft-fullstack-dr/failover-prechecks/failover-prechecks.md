@@ -16,7 +16,7 @@ Estimated Time: 15 Minutes
 
 ## Task 1: Perform Run prechecks for the Failover plan
 
-1. Login into OCI Console. Select region as **Pheonix**.
+1. Login into OCI Console. Select region as **Phoenix**.
 
   ![phoenix oci console](./images/phoenix-region.png)
 
@@ -42,7 +42,7 @@ Estimated Time: 15 Minutes
 
 ## Task 2: Monitor the executed prechecks plan
 
-1. Navigate to **Plan executions** section under **Resources** and select the **FSCM92-FSDR-Failover-From-Ashburn-To-Phoenix-Prechecks** plan execution.Initially, it will show all the **Built-in Prechecks** as *queued or in-progess*
+1. Navigate to **Plan executions** section under **Resources** and select the **FSCM92-FSDR-Failover-From-Ashburn-To-Phoenix-Prechecks** plan execution.Initially, it will show all the **Built-in Prechecks** as *queued or in-progress*
 
   ![prechecks status](./images/phoenix-execute-in-progress.png)
 

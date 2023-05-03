@@ -54,8 +54,8 @@ In Phoenix (Standby), members to add are below.
  - Resource Type is **Database**
  - Database Type is **Oracle Base Database**
  - Database System will be PeopleSoft Primary Application Database
- - Database Home will be auto-popluated
- - Database will be auto-popluated
+ - Database Home will be auto-populated
+ - Database will be auto-populated
  - Database password secret will be the secret created in Lab 1.
 
   Make sure to check the box **"I understand that all existing plans will be deleted"**.
@@ -201,8 +201,8 @@ Click on **Add**.
  - Resource Type is **Database**
  - Database Type is **Oracle Base Database**
  - Database System will be PeopleSoft Application Standby Database
- - Database Home will be auto-popluated
- - Database will be auto-popluated
+ - Database Home will be auto-populated
+ - Database will be auto-populated
  - Database password secret will be the secret created in Lab 1.
 
   Make sure to check the box **"I understand that all existing plans will be deleted"**.

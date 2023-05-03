@@ -2,7 +2,7 @@
 
 ## About the Workshop
 
-In this workshop, we will see how easily Full Stack Disaster Recovery will help to orchestrate DR switchover operations for a PeopleSoft Application deployed in OCI across two OCI regions.
+In this workshop, we will see how easily Full Stack Disaster Recovery will help to orchestrate DR Switchover and Failover operations for a PeopleSoft Application deployed in Oracle Cloud Infrastructure (OCI) across two OCI regions.
 
 ### **Estimated Workshop Time**
 
@@ -18,7 +18,7 @@ Approximately 6 hrs
 - Create and Customize DR Switchover Plan in Phoenix( Standby) DRPG
 - Run DR Switchover Pre-checks in Phoenix( Standby) DRPG
 - Run DR Switchover Plan in Phoenix( Standby) DRPG
-- Verify the PeopleSoft application accessiblity from Phoenix (New Primary) region.
+- Verify the PeopleSoft application accessibility from Phoenix (New Primary) region.
 
 # **Prerequisites**
 
@@ -36,7 +36,7 @@ Approximately 6 hrs
     - PeopleSoft Process Scheduler domain hosted on Windows
     - PeopleSoft Web Server domain hosted on Linux
     - Elastic Search and Kibana services hosted on Linux
-- Files and folders synchronization enabled between Ashburn (Primary) and Phoenix (Standby) for all customisations and psreports.
+- Files and folders synchronization enabled between Ashburn (Primary) and Phoenix (Standby) for all customizations and psreports.
 - Load Balancer running in Ashburn (Primary) and Phoenix (Standby) regions
 - DNS record pointing to public IP of Ashburn (Primary) Load Balancer
 - Custom scripts to start and stop PeopleSoft Application Server, Web Server and Process Scheduler domains.

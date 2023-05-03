@@ -307,5 +307,5 @@ DR Failover plan is now updated with customized steps.
 
 ## Acknowledgements
 
-- **Author** -  Vinay Shivanan, Prinicpal Cloud Architect
-- **Last Updated By/Date** -  Vinay Shivanan, Prinicpal Cloud Architect, April 2023
+- **Author** -  Vinay Shivanna, Principal Cloud Architect
+- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023

@@ -69,7 +69,7 @@ Estimated Time: 180 Minutes
 
 ## Task 2: Customize the Switchover plan - Add PeopleSoft Application Shutdown group in Phoenix
 
-We will shutdown PeopleSoft Applicaitons in **Phoenix** region as we are doing the switchover from *Phoenix* to *Ashburn*. 
+We will shutdown PeopleSoft Applications in **Phoenix** region as we are doing the switchover from *Phoenix* to *Ashburn*. 
 
 1. Click on Add group.
 
@@ -99,7 +99,7 @@ Click on Add Step.
 
     ![ashburn-plangroup-shutdown-prcs2](./images/ashburn-plangroup-shutdown-prcs2.png)
 
-  - Add *Stop PeopleSoft Procss Scheduler Server Domain (Linux)* in Step name
+  - Add *Stop PeopleSoft Process Scheduler Server Domain (Linux)* in Step name
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
@@ -117,7 +117,7 @@ Click on Add Step.
 
     ![ashburn-plangroup-shutdown-prcs4](./images/ashburn-plangroup-shutdown-prcs4.png)
 
-  - Add *Stop PeopleSoft Procss Scheduler Server Domain (Windows)* in Step name
+  - Add *Stop PeopleSoft Process Scheduler Server Domain (Windows)* in Step name
   - Leave the Enable Step as ticked
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
@@ -424,7 +424,7 @@ Click on Add.
 
 ## Task 9: Customize the Switchover plan - Enable files synchronization (rsync) jobs in Ashburn
 
- As part of this task, we will enable synchronization (rsync) jobs in Phoenix to reverse the sync from Phoenix to Ashburn post switchover as the roles (priamry and standby) are now reversed.
+ As part of this task, we will enable synchronization (rsync) jobs in Phoenix to reverse the sync from Phoenix to Ashburn post switchover as the roles (primary and standby) are now reversed.
 
  1. Click on Add group.
 
@@ -517,7 +517,7 @@ Click on Add.
 
    Click Save changes.
 
-   Now the DR Swithover plan is re-ordered as below.
+   Now the DR Switchover (rollback) plan is re-ordered as below.
 
     ![phoenix-dr-plan-re-order-done](./images/phoenix-dr-plan-re-order-done.png)
 
@@ -525,5 +525,5 @@ Click on Add.
 
 ## Acknowledgements
 
-- **Author** -  Vinay Shivanan, Prinicpal Cloud Architect
-- **Last Updated By/Date** -  Vinay Shivanan, Prinicpal Cloud Architect, April 2023
+- **Author** -  Vinay Shivanna, Principal Cloud Architect
+- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023

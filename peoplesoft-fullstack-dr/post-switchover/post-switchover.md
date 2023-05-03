@@ -14,7 +14,7 @@ Estimated Time: 15 Minutes
 
 ## Task 1: Verify the DRPG status
 
-1. Login into OCI Console. Select region as **Pheonix**.
+1. Login into OCI Console. Select region as **Phoenix**.
 
   ![oci console phoenix](./images/phoenix-region.png)
 

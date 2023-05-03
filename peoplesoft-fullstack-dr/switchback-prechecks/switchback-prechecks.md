@@ -42,7 +42,7 @@ Estimated Time: 15 Minutes
 
 ## Task 2: Monitor the executed prechecks plan
 
-1. Navigate to **Plan executions** section under **Resources** and select the **FSCM92-FSDR-Switchover-From-Phoenix-To-Ashburn-Prechecks** plan execution.Initially, it will show all the **Built-in Prechecks** as *queued or in-progess*
+1. Navigate to **Plan executions** section under **Resources** and select the **FSCM92-FSDR-Switchover-From-Phoenix-To-Ashburn-Prechecks** plan execution.Initially, it will show all the **Built-in Prechecks** as *queued or in-progress*
 
   ![prechecks status](./images/phoenix-execute-in-progress.png)
 

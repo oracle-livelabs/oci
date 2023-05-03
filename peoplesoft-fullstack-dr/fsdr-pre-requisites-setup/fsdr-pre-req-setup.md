@@ -69,7 +69,7 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![ashburn-dbcs-dg](./images/ashburn-dbcs-dg.png)
 
-3. Under Resources section, click on Data Guard Assosciations.
+3. Under Resources section, click on Data Guard Associations.
 
     ![ashburn-dbcs-dg-enable](./images/ashburn-dbcs-dg-enable.png)
 
@@ -121,7 +121,7 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![ashburn-click-key-vault](./images/ashburn-vault-key.png)
 
-10. Select the right compartment, Protection Mode will be **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Lenght will be 256 bits. Click on Create Key.
+10. Select the right compartment, Protection Mode will be **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Length will be 256 bits. Click on Create Key.
 
     ![ashburn-create-key](./images/ashburn-create-key.png)
 
@@ -149,7 +149,7 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![phoenix-click-key-vault](./images/phoenix-vault-key.png)
 
-17. Select the right compartment, Protection Mode will be **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Lenght will be 256 bits. Click on Create Key.
+17. Select the right compartment, Protection Mode will be **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Length will be 256 bits. Click on Create Key.
 
     ![phoenix-create-key](./images/phoenix-create-key.png)
 
