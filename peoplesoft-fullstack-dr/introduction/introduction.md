@@ -15,7 +15,7 @@ Approximately 6 hrs
 - Associate Ashburn DRPG as Primary and Phoenix DRPG as Standby
 - Add members to Ashburn DRPG. Application Virtual machines and DBCS (Database Cloud Services) database
 - Add members to Phoenix DRPG. Application Virtual machines and Standby DBCS Database
-- Create and Customize DR Switchover Plan in Phoenix( Standby) DRPG
+- Create and Customize DR Switchover Plan in Phoenix (Standby) DRPG
 - Execute DR Switchover Pre-checks in Phoenix (Standby) DRPG
 - Execute DR Switchover Plan in Phoenix (Standby) DRPG
 - Verify the PeopleSoft application accessibility from Phoenix (New Primary) region
