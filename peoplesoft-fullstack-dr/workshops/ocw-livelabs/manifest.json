@@ -76,6 +76,11 @@
       "title": "Lab 14: Perform Failover" ,
       "description": "Perform Failover",
       "filename": "../../failover-execute/failover-execute.md"
+    },
+    {
+      "title": "Lab 15: Post Failover Tasks" ,
+      "description": "Post Failover Tasks",
+      "filename": "../../post-failover/post-failover.md"
     }
   ]
 }
