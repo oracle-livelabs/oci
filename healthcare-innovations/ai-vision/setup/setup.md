@@ -236,57 +236,14 @@ Similarly to Data Labeling service, you will require some privileges to use OCI 
     ![Define a new policy for Vision](images/review-important-information.png =50%x*)
 
     Click **Create**.
- 
-## Task 6: Install OCI CLI
-
-The CLI is a small-footprint tool that you can use on its own or with the Console to complete Oracle Cloud Infrastructure tasks. The CLI provides the same core functionality as the Console, plus additional commands. Some of these, such as the ability to run scripts, extend Console functionality.
-
-**Install OCI CLI on MAC OS**
-
-```text
-<copy>brew update && brew install oci-cli</copy>
-```
-
-**Install OCI CLI on Windows OS**
-
-Download the installer script
-
-```text
-<copy>Invoke-WebRequest https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1 -OutFile install.ps1</copy>
-```
-
-To run the installer script without prompting the user, accepting the default settings, run the following command:
-
-```text
-<copy>./install.ps1 -AcceptAllDefaults  </copy>
-```
-
-**On Linux and Unix**
-
-```text
-<copy>bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"</copy>
-```
-
-**Verifying the OCI CLI Installation**
-
-```text
-<copy>oci --version</copy>
-```
-
-Output will be similar to this version number might vary
-
-```text
-<copy>3.23.4</copy>
-```
+  
 
 ## Learn More
 
 * [OCI Documentation](https://docs.oracle.com/en-us/iaas/Content/home.htm)
 * [Data Labeling Service](https://docs.oracle.com/en-us/iaas/data-labeling/data-labeling/using/about.htm)
 * [Configure OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliconfigure.htm)
-
+ 
 ## Acknowledgements
-
-* **Author** -  
-* **Contributors** -   
-* **Last Updated By/Date** -  
+* **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
+* **Last Updated By/Date** - May 3rd, 2023

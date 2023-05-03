@@ -27,25 +27,29 @@
       "filename": "../../setup/setup.md"
     },
     {
-      "title": "Lab 3: Create Image Library",
+      "title": "Lab 3: Setup OCI CLI",
+      "filename": "../../setup-ocicli/setup-ocicli.md"
+    },
+    {
+      "title": "Lab 4: Create Image Library",
       "filename": "../../create/create.md"
     },
     {
-      "title": "Lab 4: Label Images",
+      "title": "Lab 5: Label Images",
       "filename": "../../label/label.md"
     },
     {
-      "title": "Lab 5: Train the model",
+      "title": "Lab 6: Train the model",
       "filename": "../../train/train-model.md"
     },
     {
-      "title": "Lab 6: Apex Application for Visualisation",
+      "title": "Lab 7: Apex Application for Visualisation",
       "filename": "../../apex-ui/apex-ui.md"
     },
     {
-      "title": "Lab 7: Solution Architecture",
+      "title": "Lab 8: Solution Architecture",
       "filename": "../../architecture/architecture.md"
-    }, 
+    },
     {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
