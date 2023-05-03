@@ -2,9 +2,9 @@
 
 ## About this Workshop
 
-This introduction covers the complete "parent" workshop. Use this text to set up the story for the workshop. Be engaging - what will the learner get from spending their time on this workshop?
+The labs in this workshop will guide you to set up a highly available and fully functional WordPress and MySQL Database architecture that can host your website on Oracle Cloud Infrastructure (OCI). At the end of this workshop, you will be ready to go ahead and start designing and using your website while having been introduced to some of OCI's core services and how they work together. 
 
-Estimated Workshop Time: -- hours -- minutes (This estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
+*Estimated Workshop Time:* X hours XX minutes.
 
 *You may add an option video, using this format: [](youtube:YouTube video id)*
 
@@ -12,25 +12,22 @@ Estimated Workshop Time: -- hours -- minutes (This estimate is for the entire wo
 
 ### Objectives
 
-*List objectives for the workshop*
-
 In this workshop, you will learn how to:
-* Provision
-* Setup
-* Load
-* Query
+* Set Up a Virtual Cloud Network (VCN)
+* Provison a Compute Instance and Install WordPress
+* Configure a MySQL Database
+* Setting Up a Load Balancer
+* Work with DNS
+* Confugure Block Volumes
+* Use OS Management for Patching and Upgrading
 
 ### Prerequisites (Optional)
 
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. **Do NOT list** each previous lab as a prerequisite.*
-
 This lab assumes you have:
-* An Oracle account
-* All previous labs successfully completed
+* An Oracle Cloud Account
+* A Web Browser
 
-*This is the "fold" - below items are collapsed by default*
 
-In general, the Introduction does not have Steps.
 
 ## Learn More
 
@@ -40,6 +37,6 @@ In general, the Introduction does not have Steps.
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - <Bernie Castro, Cloud Engineer>
+* **Contributors** -  <Puru Patel, Cloud Engineer>
+* **Last Updated By/Date** - <Bernie Castro, May 2023>
