@@ -50,7 +50,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     ![oelz stack_deploy_4](./images/freetrial-stack-deployment-1.png) 
 7. IAM Variable are pre-defined and nothing to add here.
     ![oelz stack_deploy_5](./images/freetrial-stack-deployment-iam.png) 
-8. Identity Variables are pre-defined and nothing to add here.
+8. Identity Variables are pre-defined with default values. Please enter your email address in Domain Admin Email field.
     ![oelz stack_deploy_6](./images/freetrial-stack-deployment-identity.png)
 9. Security Variables are pre-defined and nothing to add here.
     ![oelz stack_deploy_7](./images/freetrial-stack-deployment-security.png)
@@ -60,7 +60,7 @@ The first step is to create a OCI Resource Manager Stack. The Stack is a collect
     ![oelz stack_deploy_10](./images/freetrial-stack-deployment-network.png)
 12. Tagging Variables are pre-defined and nothing to add here, Please click Next.
     ![oelz stack_deploy_11](./images/freetrial-stack-deployment-tagging.png)
-13. Review the variables , select on apply and click on create.
+13. Review the variables , select on "Run apply" and click on create.
     ![oelz stack_deploy_12](./images/freetrial-stack-deployment-review.png)
 14. Wait for atleast 10 minutes for full deployment then check the Stack Jobs Status.
     ![oelz stack_deploy_13](./images/freetrial-stack-status.png)
