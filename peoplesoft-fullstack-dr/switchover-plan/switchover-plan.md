@@ -796,4 +796,5 @@ Click Save changes.
 ## Acknowledgements
 
 - **Author** -  Vinay Shivanna, Principal Cloud Architect
+- **Contributors** - Suraj Ramesh, Principal Product Manager
 - **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023

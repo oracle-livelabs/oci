@@ -8,6 +8,11 @@
       "filename": "../../introduction/introduction.md"
     },
     {
+      "title": "Get Started",
+      "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable).",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
       "title": "Lab 1: Pre-requisites Setup",
       "description": "FSDR Pre-requisites Setup",
       "filename": "../../fsdr-pre-requisites-setup/fsdr-pre-req-setup.md"
@@ -81,6 +86,11 @@
       "title": "Lab 15: Post Failover Tasks" ,
       "description": "Post Failover Tasks",
       "filename": "../../post-failover/post-failover.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
     }
   ]
 }

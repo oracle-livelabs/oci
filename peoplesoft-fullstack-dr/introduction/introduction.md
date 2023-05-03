@@ -8,7 +8,7 @@ In this workshop, we will see how easily Full Stack Disaster Recovery will help 
 
 Approximately 6 hrs
 
-# **Workshop Objectives**
+### Workshop Objectives
 
 - Verify the status of the PeopleSoft environments in Ashburn (Primary) and Phoenix (Standby) regions for using the Full Stack Disaster Recovery
 - Create DR Protection groups (DRPG) in Ashburn (Primary) and Phoenix (Standby) regions
