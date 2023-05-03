@@ -7,6 +7,14 @@
 We’ll share how we trained our AI Machine learning models with CT scan images to identify both breast and lung cancers, and even incorporated features to help doctors or patients dictate medical symptoms and diagnoses quickly by sending an email of the audio message along with the medical transcription text. If doctors or nurses aren’t available, we’ll show you how digital assistants can advise patients with health concerns, answer questions about symptoms, and even locate the nearest hospital.
  
 Researchers & data enthusiasts can also analyse extensive data using open research datasets to accelerate early disease detection and prevention for better Health.
+
+### Objectives
+ 
+In this workshop, you will learn how to:
+* Provision Oracle Autonomous Database
+* Create and Train AI Vision Model of type Image Classification
+* Upload Image to Object storage and detect Breast/Lung Cancer with possiblity percentage
+* Develop Oracle Apex Application Front end for image uploading and viewing results
  
 
 #### About Breast Cancer
@@ -34,14 +42,6 @@ Lung cancer includes two main types: non-small cell lung cancer and small cell l
 [Lung cancer and prostate cancer are the most common among men](https://www.uicc.org/news/globocan-2020-new-global-cancer-data), together accounting for nearly one-third of all male cancers.
 
 ![Mens's Lung Cancer 2020](images/lungcancer.png =50%x* )
-
-### Objectives
- 
-In this workshop, you will learn how to:
-* Provision Oracle Autonomous Database
-* Create and Train AI Vision Model of type Image Classification
-* Upload Image to Object storage and detect Breast/Lung Cancer with possiblity percentage
-* Develop Oracle Apex Application Front end for image uploading and viewing results
 
 ### Prerequisites (Optional)
  

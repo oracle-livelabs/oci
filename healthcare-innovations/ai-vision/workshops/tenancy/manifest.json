@@ -6,10 +6,6 @@
     "adb-provision-body.md": "https://raw.githubusercontent.com/oracle-livelabs/common/main/building-blocks/tasks/adb/provision-body.md"
   },
   "help": "livelabs-help-**enterarea**_us@oracle.com",
-  "variables": [
-    "../../variables/variables.json",
-    "../../variables/variables-in-another-file.json"
-  ],
   "tutorials": [
     {
       "title": "Introduction",
@@ -44,15 +40,11 @@
     },
     {
       "title": "Lab 6: Apex Application for Visualisation",
-      "filename": "../../variables/variables.md"
+      "filename": "../../apex-ui/apex-ui.md"
     },
     {
       "title": "Lab 7: Solution Architecture",
       "filename": "../../architecture/architecture.md"
-    },
-    {
-      "title": "Lab 8: Next Steps",
-      "filename": "../../variables/variables.md"
     }, 
     {
       "title": "Need Help?",
