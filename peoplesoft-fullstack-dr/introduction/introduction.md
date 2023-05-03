@@ -28,7 +28,7 @@ Approximately 6 hrs
 - Execute DR Failover Plan in Ashburn (Standby) DRPG
 - Verify the PeopleSoft application accessibility from Phoenix (New Primary) region
 
-# **Prerequisites**
+### Prerequisites
 
 - An active PeopleSoft application hosted in Ashburn region (Primary) with below PeopleSoft components.
 
