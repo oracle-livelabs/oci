@@ -18,7 +18,7 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Setting Up a VCN",
+            "title": "Lab 1: Setting Up a Virtual Cloud Network",
             "description": "Labs that follow the introduction are numbered, starting with Lab 1",
             "filename": "../../vcn/vcn.md"
         },

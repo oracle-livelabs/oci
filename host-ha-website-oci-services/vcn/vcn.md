@@ -1,94 +1,130 @@
-# Title of the Lab
+# Create a Virtual Cloud Network
 
 ## Introduction
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
+This lab walks you through the steps to create a Virtual Cloud Network (VCN) on the OCI Console that will allow the desired connectivity to your instances.
 
 Estimated Time: -- minutes
 
-### About <Product/Technology> (Optional)
-Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than two sections/paragraphs, please utilize the "Learn More" section.
-
 ### Objectives
 
-*List objectives for this lab using the format below*
-
 In this lab, you will:
-* Objective 1
-* Objective 2
-* Objective 3
+* Create a Virtual Cloud Network using the VCN Wizard
+* Configure Security Lists to Allow SSH, MySQL, and HTTP connections
+* Configure a Network Security Group (optional)
 
 ### Prerequisites (Optional)
 
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. Do NOT list each previous lab as a prerequisite.*
-
-This lab assumes you have:
 * An Oracle Cloud account
-* All previous labs successfully completed
+* Login to the OCI Dashboard
+* A Child Compartment in your OCI Tenancy for this Lab
 
 
-*This is the "fold" - below items are collapsed by default*
+## Task 1: Create a Virtual Cloud Network using the VCN Wizard
 
-## Task 1: Concise Task Description
-
-(optional) Task 1 opening paragraph.
-
-1. Step 1
+1. Click Navigation
+  Select Networking
+  Select Virtual Cloud Networks
 
 	![Image alt text](images/sample1.png)
 
-	> **Note:** Use this format for notes, hints, and tips. Only use one "Note" at a time in a step.
-
-2. Step 2
+2. Click **Start VCN Wizard**
 
   ![Image alt text](images/sample1.png)
 
-4. Example with inline navigation icon ![Image alt text](images/sample2.png) click **Navigation**.
+4. Select 'Create VCN with Internet Connectivity'
+  Click 'Start Wizard'
 
-5. Example with bold **text**.
+  ![Image alt text](images/sample1.png)
 
-   If you add another paragraph, add 3 spaces before the line.
+5. Fill out the 'Configuration' page
+  VCN Name: *WordPress-VCN*
+  Compartment: *Select Your Compartment*
 
-## Task 2: Concise Task Description
+  ![Image alt text](images/sample1.png)
 
-1. Step 1 - tables sample
 
-  Use tables sparingly:
 
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
+  Click 'Next'
 
-2. You can also include bulleted lists - make sure to indent 4 spaces:
+6. Review VCN, Subnets, and Gateways
+	> **Note:** Feel free to take a look at everything the VCN Wizard will automatically create for you.
 
-    - List item 1
-    - List item 2
+  ![Image alt text](images/sample1.png)
 
-3. Code examples
+7. Click 'Create' to create the VCN
+	> **Note:** This step should only take less than a minute
 
-    ```
-    Adding code examples
-  	Indentation is important for the code example to appear inside the step
-    Multiple lines of code
-  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
-    ```
+  ![Image alt text](images/sample1.png)
 
-4. Code examples that include variables
+8. Click 'View Virtual Cloud Network' to display the created VCN
 
-	```
-  <copy>ssh -i <ssh-key-file></copy>
-  ```
+  ![Image alt text](images/sample1.png)
 
-## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
+## Task 2: Configure Security Lists
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+1. In the WordPress-VCN page, go to 'Security Lists'
+  Click the security list for the **private subnet**
+
+2. Click 'Add Ingress Rules'
+  Add the following rules:
+
+    Rule 1:
+    -Stateless: unchecked
+    -Source CIDR: 10.0.0.0/24 (CIDR block for public subnet)
+    -IP Protocol: TCP
+    -Destination Port: 22
+    -Description: SSH Access from the Public Subnet
+
+    Rule 2:
+    -Stateless: unchecked
+    -Source CIDR: 10.0.0.0/24 (CIDR block for public subnet)
+    -IP Protocol: TCP
+    -Destination Port: 80
+    -Description: HTTPs Access from the Public Subnet
+
+3. Go back to the WordPress-VCN 'Security Lists' page
+  Click the security list for the **public subnet**
+
+4. Click 'Add Ingress Rules'
+  Add the following rule:
+
+    Rule 1:
+    -Stateless: unchecked
+    -Source CIDR: 0.0.0.0/0
+    -IP Protocol: TCP
+    -Destination Port: 80
+    -Description: HTTPs Access from the Public Internet
+
+5. Allow  SSH Access Into Your Public Subnet From a Specific Set of IP Addresses (optional)
+  > **Note:** This step is a recommended best practice when implementing an actual architecture you do not want getting hacked or reached by unknown entities. Performing this step will only allow a certain set of IP addresses you define to reach your public subnet's resources.
+
+  In the **public subnet** security list, edit the SSH (port 22) ingress rule:
+
+    Source CIDR: 0.0.0.0/0--> <your desired public IP Range>
+
+    For example, if you only wanted your local computer to SSH into the public subnet's resources:
+      12.0.48.72/32
+
+## Task 3: Create a Network Security Group for MySQL Connections
+
+1. Go back to the WordPress-VCN and go to 'Network Security Groups'
+
+2. Click 'Create Network Security Group'
+  Fill in a name (i.e MySQL-NSG) and click 'Next'
+
+3. Add the following rule:
+    -Stateless: unchecked
+    -Source CIDR: 10.0.0.0/24
+    -IP Protocol: TCP
+    -Destination Port: 3306, 33060
+    -Description: MySQL Port Access
+
+4. Click 'Create'
+
+Congratulations! You have successfully set up your VCN! Please proceed with the next lab
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - <Bernie Castro, Cloud Engineer>
+* **Last Updated By/Date** - <Bernie Castro, May 2023>
