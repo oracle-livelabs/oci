@@ -117,7 +117,7 @@ Download [filenames list](files/normal-breasts.txt) in the above folder.
 
 ## Task 4: Load images to Object Storage using OCI CLI
 
- TBC. To be completed
+ TBC. To be completed ..
  
 ## Task 5: Verify images are loaded properly
 
