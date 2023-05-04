@@ -14,11 +14,12 @@ The labs in this workshop will guide you to set up a highly available and fully 
 
 In this workshop, you will learn how to:
 * Set Up a Virtual Cloud Network (VCN)
-* Provison a Compute Instance and Install WordPress
 * Configure a MySQL Database
 * Setting Up a Load Balancer
+* Provision a Compute Instance for the Bastion Host
+* Provision a Compute Instance for WordPress
 * Work with DNS
-* Confugure Block Volumes
+* Configure Block Volumes
 * Use OS Management for Patching and Upgrading
 
 ### Prerequisites (Optional)

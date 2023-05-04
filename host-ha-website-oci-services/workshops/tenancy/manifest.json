@@ -23,27 +23,31 @@
             "filename": "../../vcn/vcn.md"
         },
         {
-            "title": "Lab 2: Provisioning a Compute Instance and Installing WordPress",
-            "filename": "../../compute-wordpress/compute-wordpress.md"
-        },
-        {
-            "title": "Lab 3: Configuring a MySQL Database",
+            "title": "Lab 2: Configuring a MySQL Database",
             "filename": "../../mysql/mysql.md"
         },
         {
-            "title": "Lab 4: Setting Up a Load Balancer",
+            "title": "Lab 3: Setting Up a Load Balancer",
             "filename": "../../load-balancer/load-balancer.md"
         },
         {
-            "title": "Lab 5: Working with DNS",
+            "title": "Lab 4: Provisioning a Compute Instance and Using a Bastion Host",
+            "filename": "../../compute-wordpress/compute-bastion.md"
+        },
+        {
+            "title": "Lab 5: Provisioning a Compute Instance and Installing WordPress",
+            "filename": "../../compute-wordpress/compute-wordpress.md"
+        },
+        {
+            "title": "Lab 6: Working with DNS",
             "filename": "../../dns/dns.md"
         },
         {
-            "title": "Lab 6: Configuring Block Volumes",
+            "title": "Lab 7: Configuring Block Volumes",
             "filename": "../../block-volumes/block-volumes.md"
         },
         {
-            "title": "Lab 7: Using OS Management For Patches and Updates",
+            "title": "Lab 8: Using OS Management For Patches and Updates",
             "filename": "../../os-management/os-management.md"
         },
         {
