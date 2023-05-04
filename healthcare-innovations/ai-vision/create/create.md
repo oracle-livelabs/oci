@@ -103,13 +103,13 @@ Download [Breast Cancer Detection-ROI-1024 Dataset] (https://www.kaggle.com/data
 
 Create 2 folders **NORMAL\_BREASTS** and **BREAST\_CANCER** and place the files in respective folder
 
-Breast with Cancer 
+Images with Breast Cancer 
 
 ![Raw Images Breast Cancer](images/breast-cancer.png " ")
 
 Download [filenames list](files/breast-cancer-images.txt) in the above folder.
 
-Normal Breast
+Images with Normal Breast
 
 ![Raw Images Normal Breast](images/normal-breast.png " ")
 
