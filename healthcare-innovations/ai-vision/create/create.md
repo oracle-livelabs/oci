@@ -57,14 +57,35 @@ You will organize your image library in a new **Object Storage Bucket**.
     ![Create a new buckets](images/create-bucket-1-details.png " ")
 
     Similarly, create another bucket **X-Rays-LungCancer-for-Training** and then click **Create Bucket**.
+ 
 
-    ![Create a new buckets](images/create-bucket-2.png " ")
+## Task 3: Classify Images to Folders (Data Preparation)
 
-    Verify Bucket Details
+You will organize your image library in a new **Object Storage Bucket**.
 
-    ![Create a new buckets](images/create-bucket-2-details.png " ")
-  
-## Task 3a: Load images to Object Storage using OCI CLI
+Let us start with Lung Cancer Image Library.
+
+Download [Chest CT-Scan images Dataset] (https://www.kaggle.com/datasets/mohamedhanyyy/chest-ctscan-images) 124 mb zip file, This will download file by name archive.zip, extract the zip file this will create directory structure as shown below.
+
+![Raw Images Lung Cancer](images/raw-images.png " ")
+
+Create new Local folder on your laptop **XRayLungCancer**
+
+Copy folders and files from Data/train/* to XRayLungCancer, This should look as below
+
+![Raw Images Lung Cancer](images/lung-cancer-new-folder.png " ")
+
+Rename large.cell.carcinoma\_left.hilum\_T2\_N2\_M0\_IIIa folder to **LUNG\_CANCER\_LARGE\_CELLS**
+
+Rename normal folder to **NORMAL\_LUNG**
+
+Rename adenocarcinoma\_left.lower.lobe\_T2\_N0\_M0\_Ib folder to **LUNG\_CANCER\_LEFT\_LOWER\_LOBE**
+
+Rename squamous.cell.carcinoma\_left.hilum\_T1\_N2\_M0\_IIIa folder to **LUNG\_CANCER\_FLAT\_CELLS**
+
+![Raw Images Lung Cancer](images/lung-cancer-cleaned-folders.png " ")
+
+## Task 2: Load images to Object Storage using OCI CLI
 
 Original image dataset resides on Kaggle.com. We will download the required images into our local desktop/laptop machine where OCI Cli has been setup and upload these images using OCI Cli Command, There are many other options to upload images into a bucket eighter by manually uploading each image using OCI Console for image upload into a bucket or downloading these images into cloud shell and uploading from there:
 
