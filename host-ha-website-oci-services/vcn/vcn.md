@@ -42,11 +42,11 @@ In this lab, you will:
 
   ![Image alt text](images/start-vcn-wizard.png)
 
-4. Select 'Create VCN with Internet Connectivity' then click 'Start Wizard'
+3. Select 'Create VCN with Internet Connectivity' then click 'Start Wizard'
 
   ![Image alt text](images/vcn-wiz-int-conn.png)
 
-5. Fill out the 'Configuration' page
+4. Fill out the 'Configuration' page
   * VCN Name: *WordPress-VCN*
   * Compartment: *Select Your Compartment*
 
@@ -56,15 +56,15 @@ In this lab, you will:
 
   Click 'Next'
 
-6. Review VCN, Subnets, and Gateways
+5. Review VCN, Subnets, and Gateways
 	> **Note:** Feel free to take a look at everything the VCN Wizard will automatically create for you.
 
-7. Click 'Create' to create the VCN
+6. Click 'Create' to create the VCN
 	> **Note:** This step should take less than a minute
 
   ![Image alt text](images/vcn-creation.png)
 
-8. Click 'View Virtual Cloud Network' to display the created VCN
+7. Click 'View Virtual Cloud Network' to display the created VCN
 
   ![Image alt text](images/vcn-details-page.png)
 
@@ -90,7 +90,6 @@ In this lab, you will:
 
   ![Image alt text](images/private-sl-ssh.png)
 
-
 3. Click 'Add Ingress Rules' and add the following rule
 
   ![Image alt text](images/private-sl-add-ingress.png)
@@ -105,7 +104,7 @@ In this lab, you will:
 
   ![Image alt text](images/private-sl-ssh.png)
 
-3. Go back to the WordPress-VCN 'Security Lists' page
+4. Go back to the WordPress-VCN 'Security Lists' page
 
 
 
@@ -113,7 +112,7 @@ In this lab, you will:
 
   ![Image alt text](images/security-list-public-subnet.png)
 
-4. Click 'Add Ingress Rules'
+5. Click 'Add Ingress Rules'
 
 
 
@@ -128,7 +127,7 @@ In this lab, you will:
 
   ![Image alt text](images/public-sl-http.png)
 
-5. Allow  SSH Access Into Your Public Subnet From a Specific Set of IP Addresses (optional)
+6. Allow  SSH Access Into Your Public Subnet From a Specific Set of IP Addresses (optional)
   > **Note:** This step is a recommended best practice when implementing an actual architecture you do not want getting hacked or reached by unknown entities. Performing this step will only allow a certain set of IP addresses you define to reach your public subnet's resources.
 
   In the **public subnet** security list, edit the SSH (port 22) ingress rule:
