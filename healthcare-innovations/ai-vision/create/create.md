@@ -97,7 +97,7 @@ Normal Lung Image
 
 Download [filenames list](files/normal-lungs.txt) in the above folder to verify your folder. or create a folder with these files
 
-## Task 3: Breast Cancer - (Optional) Classify Images to Folders (Data Preparation)
+## Task 3: Breast Cancer - Classify Images to Folders (Data Preparation) (Optional Task) 
 
 Download [Breast Cancer Detection-ROI-1024 Dataset] (https://www.kaggle.com/datasets/aryamaanthakur/rsna-breast-cancer-detection-roi-1024) 14 GB zip file, This will download file by name archive.zip, extract the zip file this will create directory structure as shown below. This will download around 54000 images
 
@@ -134,12 +134,14 @@ for example in case of breast cancer
 ```text
 <copy>oci os object bulk-upload -ns mytenancy -bn X-Rays-LungCancer-for-Training --src-dir /Users/myuser/XRayLungCancer --overwrite --content-type 'image/*'</copy>
 ```
-
-
  
 ## Task 5: Verify images are loaded properly
 
- TBC. To be completed
+You can now verify the objects in bucket by using OCI CLI or just by accessing the bucket in OCI console
+
+ ```text
+<copy>oci os object list --namespace <object_storage_namespace> --bucket-name <bucket_name></copy>
+```
 
 This concludes this lab. You can **proceed now to the next lab**.
 
