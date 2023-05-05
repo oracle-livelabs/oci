@@ -75,9 +75,13 @@ First you need to create a new compartment for the purpose of this workshop. To 
 
     ![Compartments](./images/compartments.png "Compartments")
 
-2.	Create a new compartment by clicking Create Compartment and name it “USE_Workshop”
+2.	Create a new compartment by clicking Create Compartment as bellow:
 
     ![Create Compartment](./images/create-compartment.png "Create Compartment")
+
+    Name it "USE_Workshop" and click Create Compartment
+
+    ![Create Compartment with info](./images/create-compartment-info.png "Create Compartment with info")
 
 
 Now that you have a compartment for the workshop, you will create a bucket in Object Storage to store your security assessment report. Optionally, you can create a second bucket if you want to run as well the CIS compliance assessment.
@@ -176,7 +180,7 @@ To be able to access the web SQL Developer provided in your Autonomous Database,
     Granting UNLIMITED TABLESPACE privilege allows a user to use all the allocated storage space. You cannot selectively revoke tablespace access from a user with the UNLIMITED TABLESPACE privilege. You can grant selective or restricted access only after revoking the privilege.
     For sake of simplicity, you can use same password you used for ADMIN user.
 
-9. Enable REST for the new created schema SECASSESSMENT. To do that, go to the Autonomous Database dashboard, click Database Actions and click DATABASE USERS under the section Administration.
+9. Enable REST for the new created schema SECASSESSMENT. To do that, go back to the Autonomous Database dashboard, click again Database Actions as you did previously, but this time click DATABASE USERS under the section Administration.
 
     ![Database Users](./images/dbusers.png "Database Users")
 
@@ -242,7 +246,7 @@ To be able to access the web SQL Developer provided in your Autonomous Database,
 
 Proceed to OCI console to perform the next steps:
 
-1. On the Autonomous Database dashboard, click on SecAssessments under Instance Name on APEX Instance section:
+1. On the Autonomous Database dashboard, click on SecAssessment under Instance Name on APEX Instance section:
 
     ![APEX](./images/apex.png "APEX")
 
@@ -273,11 +277,15 @@ Proceed to OCI console to perform the next steps:
     ![Create Workspace for SECASSESSMENT user](./images/secassess-workspace.png "Create Workspace for SECASSESSMENT user")
 
 
-7. Sign out of Administration Services and sign in to OCISECURITYCENTER to begin building applications. Click Sign Out:
+7. Sign out of Administration Services and sign in to OCISECURITYCENTER to begin building applications. To do that, click on the top right corner admin icon and click Sign out:
 
     ![Sign Out](./images/sign-out.png "Sign Out")
 
-9. Sign in with the following credentials:
+9. Now, click Return to Sign In Page:
+
+    ![Return to Sign In](./images/return-sign-in.png "Return to Sign In")
+
+    and sign in with the following credentials:
 
     ![Sign In](./images/sign-in-apex.png "Sign In")
 
@@ -323,7 +331,7 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Sonia Yuste (OCI Security Specialist), Damien Rilliard (OCI Security Senior Director)
-* **Last Updated By/Date** - Sonia Yuste, January 2023
+* **Last Updated By/Date** - Sonia Yuste, April 2023
 
 
 ## Learn More
