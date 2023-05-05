@@ -1,3 +1,4 @@
+
 # **Protect PeopleSoft Application using Oracle Full Stack Disaster Recovery**
 
 ## About the Workshop
@@ -13,8 +14,8 @@ Approximately 6 hrs
 - Verify the status of the PeopleSoft environments in Ashburn (Primary) and Phoenix (Standby) regions for using the Full Stack Disaster Recovery
 - Create DR Protection groups (DRPG) in Ashburn (Primary) and Phoenix (Standby) regions
 - Associate Ashburn DRPG as Primary and Phoenix DRPG as Standby
-- Add members to Ashburn DRPG. Application Virtual machines and DBCS (Database Cloud Services) database
-- Add members to Phoenix DRPG. Application Virtual machines and Standby DBCS Database
+- Add members to Ashburn DRPG - Application Virtual machines and Primary Oracle Base DB Services database
+- Add members to Phoenix DRPG - Application Virtual machines and Standby Oracle Base DB Services Database
 - Create and Customize DR Switchover Plan in Phoenix (Standby) DRPG
 - Execute DR Switchover Pre-checks in Phoenix (Standby) DRPG
 - Execute DR Switchover Plan in Phoenix (Standby) DRPG
@@ -32,7 +33,7 @@ Approximately 6 hrs
 
 - An active PeopleSoft application hosted in Ashburn region (Primary) with below PeopleSoft components.
 
-    - PeopleSoft Database hosted on OCI Database as a Service (DbaaS) / Database Cloud Service  (DBCS)
+    - PeopleSoft Database hosted on OCI Database as a Oracle Base DB Services
     - PeopleSoft Application Server domain hosted on Linux
     - PeopleSoft Process Scheduler domain hosted on Linux
     - PeopleSoft Process Scheduler domain hosted on Windows
@@ -41,7 +42,7 @@ Approximately 6 hrs
 
 - A standby PeopleSoft applications hosted in Phoenix region (Standby) with below PeopleSoft components.
 
-    - A standby Database hosted on OCI Database as a Service (DbaaS) platform / Database Cloud Service  (DBCS) with Data Guard enabled with Ashburn hosted Database
+    - A standby Database hosted on OCI Database as a Oracle Base DB Services with Data Guard enabled with Ashburn hosted Database
     - PeopleSoft Application Server domain hosted on Linux
     - PeopleSoft Process Scheduler domain hosted on Linux
     - PeopleSoft Process Scheduler domain hosted on Windows
