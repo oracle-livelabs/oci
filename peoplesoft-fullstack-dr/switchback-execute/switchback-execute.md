@@ -82,7 +82,7 @@ Estimated Time: 25 Minutes
 
       ![drpg execution done](./images/phoenix-execute-done.png)
 
-   **The entire DR Switchover (rollback) operation took around 18 minutes to complete.**
+   **The entire DR Switchover (rollback) operation took around 18 minutes to complete.** This time will vary based on various factors like custom scripts execution, number of compute instances involved in DR operations etc.
 
 You may now **proceed to the next lab**.
 
