@@ -1,8 +1,6 @@
 
 # Introduction
 
-Estimated time: 60 minutes
-
 ## About this Workshop
 
 In this lab, we show how to create an API Management Portal with the following features:
@@ -14,12 +12,8 @@ In this lab, we show how to create an API Management Portal with the following f
     -  Any API specification type: REST (OpenAPI/Swagger/...), SOAP (WSDL), ...
 - Git Integration:
     - APIs are linked to Git where the source code is stored.
-
+ 
 ![Introduction Usecase](images/apim-intro.png)
-
-### Objective
-
-Create an API Management Portal. 
 
 ### Architecture
 
@@ -33,14 +27,23 @@ The APIs database can be populated in 2 ways:
 - For new APIs, during a CI/CD DevOps pipeline, with "curl" to add the new API in the Portal
 - For existing APIS by discovering APIs definition 
 
-### Steps
+Estimated Workshop Time: 60 minutes
 
+### Objectives
+
+Create an API Management Portal:
 - Create an Autonomous Database to install the APEX application
 - Install the APEX application
 - Test the application with:
     - API Gateway
     - Cloud Native program 
     - Oracle Integration
+
+### Prerequisites
+
+This lab assumes you have:
+- An Oracle account
+- Or that you will create one in *Get Started*
 
 ## Acknowledgements 
 

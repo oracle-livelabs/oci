@@ -22,9 +22,9 @@ Neste Laboratório você vai:
 
 ## Tarefa 1: Acessar a instância do Oracle Analytics Cloud
 
-O Oracle Analytics Cloud é um dos serviços disponível dentro de OCI (Oracle Cloud Infrastructure). Você poderia acessá-lo diretamente através da sua URL. Porém nessa tarefa você vai aprender como acessar o OAC usando a console em OCI e navegando pelo menu de serviços até a instância do Oracle Analytics Cloud que vamos usar nesse Workshop.
+O Oracle Analytics Cloud é um dos serviços disponível dentro de OCI (Oracle Cloud Infrastructure). Você poderia acessá-lo diretamente através da sua URL, porém nessa tarefa você vai aprender como acessar o OAC usando a console em OCI e navegando pelo menu de serviços até a instância do Oracle Analytics Cloud que vamos usar nesse Workshop.
 
-Após fazer o login no ambiente fornecido para você com suas credenciais exclusivas (Ver Lab "Pré-requisitos")
+Após fazer o login no ambiente fornecido para você com suas credenciais exclusivas (Ver Lab "Pré-requisitos"):
 
 1. Você verá a console OCI. Verifique se você está na Região correta *US East (Ashburn)*, em seguida clique no menu de hamburger na lateral superior esquerda.
 
@@ -48,27 +48,41 @@ Após fazer o login no ambiente fornecido para você com suas credenciais exclus
 
 ## Tarefa 2: Criando um Conjunto de Dados
 
-Dentro do Oracle Analytics, grande parte da navegação é feita pelo **Menu Hambúrger**. Sempre que quiser retornar à Home page, você deve:
+Dentro do Oracle Analytics, grande parte da navegação é feita pelo **Menu Hambúrguer**. Sempre que quiser retornar à Home page, você deve:
 
-1.	Clicar no Menu Hambúrger no lado superior esquerdo da tela principal,
+1.	Clicar no Menu Hambúrguer no lado superior esquerdo da tela principal,
 
-    ![menu do OAC "Hambúrger"](.\images\menu_hamburguer.png)
+    ![menu do OAC "Hambúrguer"](.\images\menu_hamburguer.png)
 
     Assim que a barra lateral se expandir, você verá o ícone correspondente a **Home**, selecione-o.
 
-    ![menu do OAC "Hambúrger"](.\images\home_analytics.png)
+    ![menu do OAC "Hambúrguer"](.\images\home_analytics.png)
 
 2.	Seguindo o mesmo passo de clicar no **Menu Hambúrguer**, ao clicar em **Dados**, você será direcionado para a área em que são gerenciadas as conexões e os conjuntos de dados. É aqui que os dados mapeados ficam disponíveis para serem usados, sejam eles um banco de dados, uma aplicação, uma planilha ou uma API.
 
     ![Home Dados"](.\images\home_dados.png)
 
-3.	Navegue até a aba **Conexões**, e busque pela conexão **ADW_ANALYTICS_CHALLENGE**, clique nela para criar um Conjunto de dados a partir dela. Conjuntos de dados são modelos de dados self-service que você cria especificamente para sua visualização de dados e requisitos de análise.
+3.	Navegue até a aba **Conexões**, e busque pela conexão **ADW\_ANALYTICS\_CHALLENGE**, clique nela para criar um Conjunto de dados a partir dela. Conjuntos de dados são modelos de dados self-service que você cria especificamente para sua visualização de dados e requisitos de análise.
 
     ![Conexões Challenge"](.\images\conexoes_challenge.png)
 
-4.	Isso abrirá uma tela como a que pode ser vista abaixo. Clique em **ADW_ANALYTICS_CHALLENGE**, logo em seguida em **Esquemas** e depois em **FORMULA1** para abrir as 6 tabelas com dados que poderão ser utilizadas no desafio. Arraste a primeira delas, **DRIVER_STANDINGS** para a área da tela em branco.
+4.	Isso abrirá uma tela como a que pode ser vista abaixo. Clique em **ADW\_ANALYTICS\_CHALLENGE**, logo em seguida em **Esquemas** e depois em **FORMULA1** para abrir as 6 tabelas com dados que poderão ser utilizadas no desafio. Arraste a primeira delas, **DRIVER_STANDINGS** para a área da tela em branco.
 
     ![Driver Standings Tabela"](.\images\driver_standings_tabela.png)
+
+Se você quiser fazer o download desses dados, pode encontrá-los nos links abaixo:
+
+[Download - Races](https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/dx3YybE7Ax5bQWGnbnO-ke42vjb4s9qnaHPoEFPNmDwp5u-nMf-lDTWWfhUmrkNK/n/fruktknlrefu/b/workshop-redbull-analytics/o/RACES.csv)
+
+[Download - Lap Times](https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/M8g8i7K4yo6DSiv9mXN_jVtLIJZSGB4lmEhYZ0mfX9DuwJKAGMafM8XGzw5kIKXn/n/fruktknlrefu/b/workshop-redbull-analytics/o/LAP_TIMES.csv)
+
+[Download - Safety Car](https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/PlYaI3Fp8SLzYwA_31L2Zj5_3aam_YbMRoIk4C1FEvhgqruQfa76pFyZwM4l2lyx/n/fruktknlrefu/b/workshop-redbull-analytics/o/SAFETY_CAR.csv)
+
+[Download - Pit Stop](https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/OIUA5aX1tAkmoWpDty8VzBlKxm_TJDY8Sm12K2BbG1palHy5dnXPkfbNB2m0ZVDU/n/fruktknlrefu/b/workshop-redbull-analytics/o/PIT_STOPS.csv)
+
+[Download - Race Results](https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/5ijlW0pUZ2yr4wbs_NICe73AemtiCl_iI2fTKr85-vDkirQZs1MAwhpzYIH_w1dZ/n/fruktknlrefu/b/workshop-redbull-analytics/o/RESULTS.csv)
+
+[Download - Driver Ranking](https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/LC9WxthFNE_v46C40Wccor1Z9Qw1toNRagnqb4jPMhh3IVk0PbLSN1si5k5sphUk/n/fruktknlrefu/b/workshop-redbull-analytics/o/DRIVER_STANDINGS.csv)
 
 5. A plataforma identificará a tabela e suas colunas.
 
@@ -149,15 +163,17 @@ Pronto! Seus conjuntos de dados estão preparado para ser utilizados para gerar 
 
     ![Análise Sete"](.\images\analise_sete.png)
 
-## Tarefa 4: O Grande Desafio
+## Tarefa 4: O Desafio
 
-1. Utilizando as técnicas apresentadas no evento e mais outras que você pode explorar por sua conta, encontre padrões e curiosidades nos dados compartilhados com vocês. Tente criar uma narrativa e explorar possibilidades, pois deverá ser feita uma apresentação com o resultado final dessa análise, em um vídeo de até 2 minutos ou compartilhando o arquivo .dva e um guia descrevendo qual o resultado das análises. A melhor análise será aquela que explorar melhor as capacidades da plataforma, criar um visual agradável, uma narrativa coesa e conseguir se aprofundar nos detalhes, e será premiada com um brinde surpresa!
+1. Utilizando as técnicas apresentadas no evento e mais outras que você pode explorar por sua conta, encontre padrões e curiosidades nos dados compartilhados com vocês. Tente criar uma narrativa e explorar possibilidades, pois deverá ser feita uma apresentação com o resultado final dessa análise, em um vídeo de até 2 minutos ou compartilhando o arquivo .dva com comentários descrevendo qual o resultado das análises. A melhor análise será aquela que explorar melhor as capacidades da plataforma, criar um visual agradável, uma narrativa coesa e conseguir se aprofundar nos detalhes.
 
-2. As submissões deverão ser realizadas no portal PREENCHER AQUI até as 12h do dia 20 de Abril de 2023. O resultado será divulgado no dia 26 de Abril de 2023.
+2. As submissões deverão ser realizadas no portal: **https://bit.ly/AnalyticsRacingChallenge** até as 20h do dia 18 de Abril de 2023. 
+
+3. O resultado será divulgado no dia **20 de Abril de 2023**.
 
 ## Conclusão
 
-Nesta sessão você aprendeu a explorar alguns recursos do Analytics, e embarcou em uma aventura que premiará aquelas análises criadas com maior dedicação e criatividade. Boa sorte!
+Nesta sessão você aprendeu a explorar alguns recursos do Analytics, e embarcou em uma aventura que reconhecerá aquelas análises criadas com maior dedicação e criatividade. Boa sorte!
 
 
 ## Autoria

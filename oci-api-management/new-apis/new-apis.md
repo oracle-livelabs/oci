@@ -6,29 +6,31 @@
 Estimated time: 20 min
 
 ### Objectives
-
-- Add new APIs written with Cloud Native (Java/Node/Dotnet/Python/...)
+ 
+- Create several Cloud Native (Java/Node/Dotnet/Python/...) APIs with the help of Terraform
+- Add the APIs in the Portal 
 
 ### Prerequisites
 
-Follow previous labs.
+- Follow previous labs.
 
 ## Task 1: Add new APIs written with Cloud Native
 
-- Go to Oracle Cloud Home page
-- Go to Cloud Shell.
-- When the shell is started, clone the git repository in the shell:
+1. Go to Oracle Cloud Home page
+2. Go to Cloud Shell.
+3. When the shell is started, clone the git repository in the shell:
   
-```
-<copy>
-git clone https://github.com/mgueury/oci-api-portal.git
-cd oci-api-portal/cloud-native-sample
-vi group_common/env.sh
-</copy>
-```
+    ```
+    <copy>
+    git clone https://github.com/mgueury/oci-api-portal.git
+    cd oci-api-portal/cloud-native-sample
+    vi group_common/env.sh
+    </copy>
+    ```
 
-![Cloud Shell](images/apim-cloudshell.png)
+    ![Cloud Shell](images/apim-cloudshell.png)
 
+### 2. Build
 In the file group_common/env.sh, you have to set: 
 - TF\_VAR\_compartment\_ocid in a compartment where the APIGW and VM with the APIs will be created. If no compartment is given and you are Admin of the OCI Tenant, an compartment oci-starter will be created. To get your compartment:
     - Go to OCI Menu/Identity & Security/Compartments.
@@ -38,13 +40,13 @@ In the file group_common/env.sh, you have to set:
 - APIM\_HOST to the APEX Host Name: ##APEX\_HOST##
 - Then run the build. This will take about 15 mins. 
 
-```
-<copy>
-./build_group.sh
-</copy>
-```
+    ```
+    <copy>
+    ./build_group.sh
+    </copy>
+    ```
 
-![Introduction Usecase](images/apim-test-edit-env.png)
+    ![Introduction Usecase](images/apim-test-edit-env.png)
 
 It will build with Terraform:
 - An API Gateway
