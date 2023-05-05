@@ -124,24 +124,28 @@ In this lab, you will:
     - Destination Port: 80
     - Description: Allows HTTPs Access from the Public Internet
 
-  ![Image alt text](images/public-sl-http.png)
+    ![Image alt text](images/public-sl-http.png)
 
 
 
     Add the Ingress Rule
 
 6. Allow  SSH Access Into Your Public Subnet From a Specific Set of IP Addresses (optional)
-  > **Note:** This step is a recommended best practice when implementing an actual architecture you do not want getting hacked or reached by unknown entities. Performing this step will only allow a certain set of IP addresses you define to reach your public subnet's resources.
-
-    In the **public subnet** security list, edit the SSH (port 22) ingress rule:
-
-  ![Image alt text](images/public-sl-ssh.png)
+    > **Note:** This step is a recommended best practice when implementing an actual architecture you do not want getting hacked or reached by unknown entities. Performing this step will only allow a certain set of IP addresses you define to reach your public subnet's resources.
 
 
 
-    Source CIDR: 0.0.0.0/0 -> <your desired public IP Range>
+  In the **public subnet** security list, edit the SSH (port 22) ingress rule:
 
-    For example, if you only wanted your local computer to SSH into the public subnet's resources:
+    ![Image alt text](images/public-sl-ssh.png)
+
+
+
+  Source CIDR: 0.0.0.0/0 -> <your desired public IP Range>
+
+
+
+  For example, if you only wanted your local computer to SSH into the public subnet's resources:
    - 10.10.10.10/32
 
 ## Task 3: Create a Network Security Group for MySQL Connections
