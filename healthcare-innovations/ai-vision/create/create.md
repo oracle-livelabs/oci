@@ -147,6 +147,7 @@ This concludes this lab. You can **proceed now to the next lab**.
 
 * [OCI Object Storage](https://docs.oracle.com/en-us/iaas/Content/Object/home.htm)
 * [OCI CLI Command Reference](https://docs.oracle.com/en-us/iaas/tools/oci-cli/3.22.3/oci_cli_docs/oci.html)
-
-
-## Acknowledgements 
+ 
+## Acknowledgements
+* **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
+* **Last Updated By/Date** - May 5th, 2023.
