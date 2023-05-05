@@ -205,5 +205,5 @@ This lab assumes you have:
       * First Steps with WordPress: https://wordpress.org/documentation/article/first-steps-with-wordpress-block-editor/
 
 ## Acknowledgements
-* **Author** - <Name, Bernie Castro, Cloud Engineer>
-* **Last Updated By/Date** - <Bernie Castro, May 2023>
+* **Author** - Bernie Castro, Cloud Engineer
+* **Last Updated By/Date** - Bernie Castro, May 2023

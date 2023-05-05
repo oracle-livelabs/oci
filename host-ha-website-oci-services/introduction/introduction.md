@@ -38,6 +38,6 @@ This lab assumes you have:
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - <Bernie Castro, Cloud Engineer>
-* **Contributors** -  <Puru Patel, Cloud Engineer>
-* **Last Updated By/Date** - <Bernie Castro, May 2023>
+* **Author** - Bernie Castro, Cloud Engineer
+* **Contributors** - Puru Patel, Cloud Engineer
+* **Last Updated By/Date** - Bernie Castro, May 2023

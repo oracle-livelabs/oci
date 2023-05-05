@@ -1,4 +1,4 @@
-# Title of the Lab
+# Setting Up a Load Balancer
 
 ## Introduction
 
@@ -87,6 +87,5 @@ This lab assumes you have:
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - Bernie Castro, Cloud Engineer
+* **Last Updated By/Date** - Bernie Castro, May 2023

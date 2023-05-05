@@ -1,22 +1,15 @@
-# Title of the Lab
+# Configuring a MySQL Database
 
 ## Introduction
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
+This lab will walk you through creating and configuring an Oracle MySQL Database Service instance.
 
 Estimated Time: -- minutes
 
-### About <Product/Technology> (Optional)
-Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than two sections/paragraphs, please utilize the "Learn More" section.
-
 ### Objectives
 
-*List objectives for this lab using the format below*
-
 In this lab, you will:
-* Objective 1
-* Objective 2
-* Objective 3
+* Create and configure a Standalone MySQL Database System
 
 ### Prerequisites (Optional)
 
@@ -26,77 +19,76 @@ This lab assumes you have:
 * An Oracle Cloud account
 * All previous labs successfully completed
 
+## Task 1: Create a Standalone MySQL Database Service instance
 
-*Below, is the "fold"--where items are collapsed by default.*
+1. Click Navigation
 
-## Task 1: Concise Task Description
 
-(optional) Task 1 opening paragraph.
 
-1. Step 1
+  Select Databases
 
-	![Image alt text](images/sample1.png)
 
-  To create a link to local file you want the reader to download, use the following formats. _The filename must be in lowercase letters and CANNOT include any spaces._
 
-	Download the [starter file](files/starter-file.sql) SQL code.
+  Select MySQL or 'DB Systems'
 
-	When the file type is recognized by the browser, it will attempt to render it. So you can use the following format to force the download dialog box.
+	![Image alt text](images/databases-mysql.png)
 
-	Download the [sample JSON code](files/sample.json?download=1).
+2. Click 'Create DB system'
 
-  > Note: do not include zip files, CSV, PDF, PSD, JAR, WAR, EAR, bin, or exe files - you must have those objects stored somewhere else. We highly recommend using Oracle Cloud Object Store and creating a PAR URL instead. See [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/en-us/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
+  ![Image alt text](images/mysql-create.png)
 
-2. Step 2
+3. Fill out the Instance Information:
+    - Production
+    - Compartment: *Select Your Compartment*
+    - Name: WordPress-MySQL-SA
+    - Description: MySQL Database Stand Alone for WordPress
+    - Standalone
 
-  ![Image alt text](images/sample1.png)
+    ![Image alt text](images/mysql-db-info.png)
 
-4. Example with inline navigation icon ![Image alt text](images/sample2.png) click **Navigation**.
+4. Create Administrator Credentials
+    - Username: admin
+    - Password: ???
+    - Confirm Password: ???
 
-5. Example with bold **text**.
+    ![Image alt text](images/mysql-admin.png)
 
-   If you add another paragraph, add 3 spaces before the line.
+5. Configure Networking
+    - VCN: Select **WordPress-VCN**
+    - Subnet: Select the **private subnet**
 
-## Task 2: Concise Task Description
+    ![Image alt text](images/mysql-networking.png)
 
-1. Step 1 - tables sample
+6. Configure Placement
+    - Availability Domain: *Leave as default*
 
-  Use tables sparingly:
+    ![Image alt text](images/mysql-placement.png)
 
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
+7. Configure Hardware
+    - Change shape to: **MySQL.VM.Standard.E3.1.8GB**
+    - Data Storage Size: 50 GB
 
-2. You can also include bulleted lists - make sure to indent 4 spaces:
+    ![Image alt text](images/mysql-hardware.png)
 
-    - List item 1
-    - List item 2
+8. Configure Backup Plan
+    -Keep on 'Enable Automatic Backup'
 
-3. Code examples
+    ![Image alt text](images/mysql-backup.png)
 
-    ```
-    Adding code examples
-  	Indentation is important for the code example to appear inside the step
-    Multiple lines of code
-  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
-    ```
+9. Click 'Create'
 
-4. Code examples that include variables
+    ![Image alt text](images/mysql-provisioning.png)
 
-	```
-  <copy>ssh -i <ssh-key-file></copy>
-  ```
 
-## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
+    The MySQL instance can take 10+ minutes to be ready. Once the state turns to 'Active' and the icon turns to green, the DB system is ready for use.
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+    ![Image alt text](images/mysql-active.png)
+
+10. On the MySQL page, check the Endpoint (Private IP) and Save It For Later
+
+    ![Image alt text](images/mysql-ip-address.png)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - Bernie Castro, Cloud Engineer
+* **Last Updated By/Date** - Bernie Castro, May 2023

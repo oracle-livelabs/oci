@@ -61,11 +61,9 @@ This lab assumes you have:
 
 6. Add SSH Keys
    - Here, select 'Generate a key pair for me' and save both the public and private SSH keys to your computer.
-  - Optionally, you can upload or paste your own public SSH key if you already have your own key pair.
+   - Optionally, you can upload or paste your own public SSH key if you already have your own key pair.
 
-   > **Note:** If you generate new keys, you will NOT be able to retrieve these keys later on if you don't already have them. Save both private and public keys and be sure to keep them somewhere safe!
-
-    ![Image alt text](images/compute-ssh.png)
+  ![Image alt text](images/compute-ssh.png)
 
 7. Click 'Create'
 
@@ -107,5 +105,5 @@ This lab assumes you have:
   ![Image alt text](images/sample1.png)
 
 ## Acknowledgements
-* **Author** - <Name, Bernie Castro, Cloud Engineer>
-* **Last Updated By/Date** - <Bernie Castro, May 2023>
+* **Author** - Bernie Castro, Cloud Engineer
+* **Last Updated By/Date** - Bernie Castro, May 2023
