@@ -101,9 +101,9 @@ Download [filenames list](files/normal-lungs.txt) in the above folder to verify 
 
 Download [Breast Cancer Detection-ROI-1024 Dataset] (https://www.kaggle.com/datasets/aryamaanthakur/rsna-breast-cancer-detection-roi-1024) 14 GB zip file, This will download file by name archive.zip, extract the zip file this will create directory structure as shown below. This will download around 54000 images
 
-Create 2 folders **NORMAL\_BREASTS** and **BREAST\_CANCER** and place the files in respective folder
+Create folder **XRayBreastCancer** under this create 2 folders **NORMAL\_BREASTS** and **BREAST\_CANCER** and place the files in respective folder
 
-Images with Breast Cancer 
+You can create a folder with approximately 2000 images with Breast Cancer 
 
 ![Raw Images Breast Cancer](images/breast-cancer.png " ")
 
@@ -117,7 +117,25 @@ Download [filenames list](files/normal-breasts.txt) in the above folder.
 
 ## Task 4: Load images to Object Storage using OCI CLI
 
- TBC. To be completed ..
+Upload images from main folder into OCI Object storage, subfolders will be automatically created
+
+```text
+<copy>oci os object bulk-upload -ns <Namespace Name> -bn <Bucket Name> --src-dir <Source Folder> --overwrite --content-type 'image/*'</copy>
+```
+
+for example in case of lung cancer
+
+```text
+<copy>oci os object bulk-upload -ns mytenancy -bn X-Rays-BreastCancer-for-Training --src-dir /Users/myuser/XRayBreastCancer --overwrite --content-type 'image/*'</copy>
+```
+
+for example in case of breast cancer
+
+```text
+<copy>oci os object bulk-upload -ns mytenancy -bn X-Rays-LungCancer-for-Training --src-dir /Users/myuser/XRayLungCancer --overwrite --content-type 'image/*'</copy>
+```
+
+
  
 ## Task 5: Verify images are loaded properly
 

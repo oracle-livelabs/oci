@@ -37,7 +37,7 @@ Under the same page click on **Add API Key** button
 
 ![Navigate to Data Labeling](images/add-api-keys.png " ") 
 
-## Task 3: Generate and Download Key Pair
+## Task 3: Generate and Download RSA Key Pair in PEM format used for API Signing
 
 Choose an Option to Generate a new key pair, if you already have keys generated you can upload them here, most important is when you generate the key pair download both of them, Click **Add** button
 
@@ -129,7 +129,7 @@ Reality check if we can list all buckets in a compartment to check if all config
 
 ```text
 <copy>[DEFAULT]
-oci os bucket list --compartment-id ocid1.compartment.oc1..aaaaaaaaud6tkdn6n23cbvc4hexs6n4hggetkwo4viqyneyroixcmj54u32q</copy>
+oci os bucket list --compartment-id ocid1.compartment.oc1..aaaaaaaaud6tkdyourcompartmentocidxs6n4hgg</copy>
 ```
 
 The Output will be something like this
