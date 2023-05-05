@@ -161,6 +161,14 @@ The Output will be something like this
 }</copy>
 ```
 
+## Task 7: Make note of OCI CLI configuration file
+
+We will be using this config file path and OCIDs here in later labs, please make a note of them  
+
+```text
+<copy>~/.oci/config</copy>
+```
+
 ## Learn More
  
 * [OCI Documentation](https://docs.oracle.com/en-us/iaas/Content/home.htm)

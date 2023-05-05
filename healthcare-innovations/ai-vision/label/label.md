@@ -28,109 +28,7 @@ This lab assumes you have:
 
 * Completed previous labs of this workshop: **Lab 1: Setup environment** and **Lab 2: Create image library**.
 
-## Task 1: Generate dataset records and label images using Data Labeling tool
-
-Basic data labeling tool is provided within OCI. With this data labeling tool, you can label one image at the time, which is useful if your image library is not too large. In case of larger libraries, manual image labeling can be very time consuming and error prone. That is why, you will use programmatic data labeling using utilities provided by Oracle. Required code and instructions will be provided in the second task.
-
-But before you continue, you need to perform the first step, **Create Dataset** based on your object storage based image library.
-
-1. Navigate to Data Labeling page
-
-    From the **Navigator** menu select **Analytics & AI** and then **Data Labeling**.
-
-    ![Navigate to Data Labeling](./images/navigate-to-data-labeling.png " ")
-
-2. Go to datasets
-
-    Click on **Datasets** link under **Data Labeling** on the left side of the page.
-
-    ![Open Datasets page](./images/open-datasets-page.png " ")
-
-3. Create a new dataset
-
-    This will open **Dataset list** page in selected compartment (make sure you are in correct compartment as you might need to change compartment to the one you've created for this workshop).
-
-    Make sure you've selected your compartment where your image library resides, ie. *X-Rays-Image-Classification* and then click **Create dataset**.
-
-    ![Create a new dataset](./images/create-a-new-dataset.png " ")
-
-4. Define your dataset - Add dataset details
-
-    Use **Create dataset** wizard and set the parameters of your dataset.
-
-    First, **Name** your dataset and optionally add **Description** and provide **Labeling instructions**
-
-    ![Define dataset details](./images/define-dataset-details.png " ")
-
-    Click *Images* from **Dataset format** and *Single label* for **Annotation class**.
-
-    Click **Next**
-
-5. Define your dataset - Add files and labels
-
-    In the 2nd step choose *Select from Object Storage* and provide **Object Storage location** details. This should be your bucket (ie. *X-Rays-Image-Classification*) where you've put all of your images.
-
-    ![Define dateset by adding files and labels](./images/define-dataset-files-and-labels.png " ")
-
-    Then scroll down to the lower section of this step.
-
-    You will see your images displayed in a gallery view.
-
-    ![Define dataset - gallery view](./images/define-dataset-gallery-view.png " ")
-
-    Enter two labels: *PNEUMONIA* and *NORMAL* in **Labels set** field.
-
-    Click **Next**.
-
-6. Define your dataset - Review and Create
-
-    ![Define dataset - specify labels](./images/define-dataset-specify-labels.png " ")
-
-    Review your dataset details and click **Create**
-
-7. Generating records
-
-    Records for your dataset will be generated. This will take approx. 15-30 minutes. You can track the progress in top right corner.
-
-    ![Dataset records generation](./images/dataset-records-generation.png " ")
-
-    For more details click **More Actions** and select **View work request** menu option.
-
-    ![Work requests list](./images/more-actions-menu.png =20%x*)
-
-    Work requests list opens.
-
-    ![Work requests list](./images/work-requests.png " ")
-
-    Click on your work request name for more details.
-
-    ![Work request details](./images/work-requests-details.png " ")
-
-8. Review your dataset
-
-    When finished, you can review the results of the records generation activity. For example, you can see that there were 4938 records generated, none of them have been labeled yet.
-
-    ![Review dataset](./images/review-dataset.png " ")
-
-    You can switch between **Data records** and **Gallery view** details.
-
-    ![Switch views for dataset](./images/review-dataset-switch-views.png " ")
-
-9. Use data labeling tool and set labels manually
-
-    Click on the first image and **Data Labeling** tool will open. Since the first image is from *PNEUMONIA* folder, you should label it as *PNEUMONIA*.
-
-    Click **Save & next** and continue with manual labeling process.
-
-    ![Set labels using data labeling tool](./images/set-labels-using-data-labeling-tool.png " ")
-
-    When you're done with labeling, exit by clicking **Cancel**. You can now check how many records have been labeled. In our example, only 1 out of 4938 records.
-
-    ![Review dataset - labeled records](./images/review-dataset-labeled-records.png " ")
-
-    There should be alternative, bulk labeling option, to label your images.
-
-## Task 2: Bulk image labeling
+## Task 1: Bulk image labeling
 
 We have 5000+ images to label. This is too much to label images manually, hence we will use a python program to label images programmatically.
 
@@ -149,12 +47,7 @@ For the purpose of this labe, we have used original python code and adjusted it 
     If unzipped, *lab2.zip* has the following structure:
 
     ![Lab2 ZIP file content and structure](./images/lab2-zip-file-content.png =60%x*)
-
-2. Open cloud shell
-
-    In the OCI console, on the top bar, click **Developer Tools** icon to open associated menu and choose **Cloud Shell** option. That would open **Cloud Shell** terminal window.
-
-    ![Open Cloud Shell](./images/open-cloud-shell.png " ")
+ 
 
 3. Upload pre-prepared files for data labeling.
 
