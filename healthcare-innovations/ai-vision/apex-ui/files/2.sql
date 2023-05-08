@@ -67,7 +67,7 @@ PROCEDURE upload_file
   (p_apex_file_name    IN VARCHAR2, 
    x_file_name        OUT VARCHAR2, 
    x_object_store_url OUT VARCHAR2, 
-   x_document_id      OUT cndemo_document_ai_docs.document_id%TYPE) IS 
+   x_document_id      OUT VISION_AI_DOCS.document_id%TYPE) IS 
  
   CURSOR cr_file_info IS 
     SELECT filename 
@@ -95,7 +95,7 @@ BEGIN
     x_object_store_url => x_object_store_url); 
  
   -- Create Document Record 
-  INSERT INTO cndemo_document_ai_docs (file_name, mime_type, object_store_url) 
+  INSERT INTO VISION_AI_DOCS (file_name, mime_type, object_store_url) 
   VALUES (lr_file_info.filename, lr_file_info.mime_type, x_object_store_url)  
   RETURNING document_id INTO x_document_id; 
  
@@ -107,7 +107,7 @@ END upload_file;
 -------------------------------------------------------------------------------- 
 PROCEDURE document_ai 
   (p_file_name   IN VARCHAR2, 
-   p_document_id IN cndemo_document_ai_docs.document_id%TYPE) IS 
+   p_document_id IN VISION_AI_DOCS.document_id%TYPE) IS 
   
    CURSOR cr_document_data (cp_json IN CLOB) IS 
     SELECT jt.* 
@@ -167,7 +167,7 @@ BEGIN
     VALUES (p_document_id,r_field.field_type_code,r_field.field_label,r_field.label_score,r_field.field_value); 
   END LOOP; 
     
-  UPDATE cndemo_document_ai_docs 
+  UPDATE VISION_AI_DOCS 
   SET    doc_ai_json         = l_response_json 
   ,      label1       = lr_document_data.label1 
   ,      label1_score      = lr_document_data.label1_score 
@@ -184,7 +184,7 @@ END document_ai;
 PROCEDURE process_file 
   (p_apex_file_name  IN VARCHAR2, 
    v_id IN MACHINE_LEARNING_CONFIGS.ID%TYPE,
-   x_document_id    OUT cndemo_document_ai_docs.document_id%TYPE) IS 
+   x_document_id    OUT VISION_AI_DOCS.document_id%TYPE) IS 
  
   l_object_store_url    VARCHAR2(1000); 
   l_file_name           VARCHAR2(100); 
@@ -236,12 +236,12 @@ END get_file;
 -------------------------------------------------------------------------------- 
 -------------------------------------------------------------------------------- 
 PROCEDURE render_document 
-  (x_document_id  IN cndemo_document_ai_docs.document_id%TYPE) IS 
+  (x_document_id  IN VISION_AI_DOCS.document_id%TYPE) IS 
  
   CURSOR cr_document IS 
     SELECT mime_type 
     ,      object_store_url 
-    FROM   cndemo_document_ai_docs 
+    FROM   VISION_AI_DOCS 
     WHERE  document_id = x_document_id; 
  
   lr_document           cr_document%ROWTYPE; 

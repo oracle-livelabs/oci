@@ -1,8 +1,7 @@
 create or replace PACKAGE IMAGE_AI_PK AS 
 ------------------------------------------------------------------------------- 
 -- NAME        : IMAGE_AI_PK 
--- FILE NAME   : IMAGE_AI_PK.sql  
--- Author   19-Mar-2023  Madhusudhan Rao for IMAGE AI Service. 
+-- FILE NAME   : IMAGE_AI_PK.sql   
 ------------------------------------------------------------------------------- 
   
   GC_WC_CREDENTIAL_ID        CONSTANT VARCHAR2(50)   := 'Ind_OCI_WebCred';  
@@ -36,9 +35,9 @@ create or replace PACKAGE IMAGE_AI_PK AS
 PROCEDURE process_file 
   (p_apex_file_name  IN VARCHAR2, 
    v_id IN MACHINE_LEARNING_CONFIGS.ID%TYPE,
-   x_document_id    OUT cndemo_document_ai_docs.document_id%TYPE); 
+   x_document_id    OUT VISION_AI_DOCS.document_id%TYPE); 
  
 PROCEDURE render_document 
-  (x_document_id  IN cndemo_document_ai_docs.document_id%TYPE); 
+  (x_document_id  IN VISION_AI_DOCS.document_id%TYPE); 
    
 END IMAGE_AI_PK; 
