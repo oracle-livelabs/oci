@@ -282,4 +282,4 @@ This lab assumes you have:
 
 ## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer
-* **Last Updated By/Date** - <Bernie Castro, May 2023
+* **Last Updated By/Date** - Bernie Castro, May 2023

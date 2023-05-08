@@ -88,9 +88,11 @@ In this lab, you will:
 
   ![Image alt text](images/private-sl-ssh.png)
 
-3. Click 'Add Ingress Rules' and add the following rule for HTTP connections
+3. Click 'Add Ingress Rules'
 
   ![Image alt text](images/private-sl-add-ingress.png)
+
+4. Add the following rule for HTTP connections
 
 
 
@@ -102,7 +104,7 @@ In this lab, you will:
 
   ![Image alt text](images/private-sl-http.png)
 
-4. Add another rule for MySQL connections
+5. Add another rule for MySQL connections
 
 
 
@@ -116,7 +118,7 @@ In this lab, you will:
   ![Image alt text](images/private-sl-mysql.png)
 
 
-5. Go back to the WordPress-VCN 'Security Lists' page
+6. Go back to the WordPress-VCN 'Security Lists' page
 
 
 
@@ -126,11 +128,9 @@ In this lab, you will:
 
   ![Image alt text](images/security-list-public-subnet.png)
 
-6. Click 'Add Ingress Rules'
+7. Click 'Add Ingress Rules' and add the following rule for HTTP connections
 
 
-
-  Add the following rule:
 
     Rule 1:
     - Stateless: unchecked
@@ -141,11 +141,7 @@ In this lab, you will:
 
     ![Image alt text](images/public-sl-http.png)
 
-
-
-    Add the Ingress Rule
-
-7. Allow  SSH Access Into Your Public Subnet From a Specific Set of IP Addresses (optional)
+8. Allow  SSH Access Into Your Public Subnet From a Specific Set of IP Addresses (optional)
     > **Note:** This step is a recommended best practice when implementing an actual architecture you do not want getting hacked or reached by unknown entities. Performing this step will only allow a certain set of IP addresses you define to reach your public subnet's resources.
 
 
