@@ -242,7 +242,7 @@ For the purpose of this labe, we have used original python code and adjusted it 
     </copy>
     ```
    
-3. Run bulk image labeling program
+3. Run bulk image labeling program 
 
     You can finally start with bulk image labeling. Make sure you are in *data-labeling* folder in **Cloud Shell** and run *main.py*.
 
