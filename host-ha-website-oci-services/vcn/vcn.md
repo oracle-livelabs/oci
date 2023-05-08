@@ -100,7 +100,7 @@ In this lab, you will:
     - Destination Port: 80
     - Description: Allows HTTP Access from the Public Subnet Only
 
-  ![Image alt text](images/private-sl-ssh.png)
+  ![Image alt text](images/private-sl-http.png)
 
 4. Add another rule for MySQL connections
 

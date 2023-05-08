@@ -69,7 +69,10 @@ This lab assumes you have:
     ![Image alt text](images/mysql-hardware.png)
 
 8. Configure Backup Plan
-    -Keep on 'Enable Automatic Backup'
+
+
+
+    - Keep on 'Enable Automatic Backup'
 
     ![Image alt text](images/mysql-backup.png)
 

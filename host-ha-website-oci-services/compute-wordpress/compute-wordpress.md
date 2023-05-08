@@ -10,7 +10,7 @@ Estimated Lab Time: -- minutes
 
 In this lab, you will:
 * Connect to a Compute instance in a private subnet using the Bastion host
-* Install WordPress
+* Install WordPress (along with all other necessary packages)
 
 ### Prerequisites
 
@@ -19,6 +19,45 @@ This lab assumes you have:
 * All previous labs successfully completed
 
 ## Task 1: Provisioning a Compute Instance to host WordPress
+
+1. Click Navigation
+
+
+
+  Select Compute
+
+
+
+  Select Instances
+
+2. Click 'Create Instance'
+
+3. Fill out the Instance Information:
+
+
+
+    - Name: **WebServer-WordPress**
+    - Compartment: *Select Your Compartment*
+    - Availability Domain: *Leave as AD1*
+    - Image: Select **Oracle Linux 8**
+    - Shape: Select **VM.Standard.E4.Flex**
+    - VCN: Select **WordPress-VCN**
+    - Subnet: Select the **private subnet**
+
+4. Add SSH Keys
+
+
+
+   - Here, select 'Generate a key pair for me' and save both the public and private SSH keys to your computer.
+   - Optionally, you can upload or paste your own public SSH key if you already have your own key pair.
+
+  > Note: These keys should be different than the ones attached to your Bastion host, for best security practices.
+
+5. Click Create and wait until it finishes provisioning
+
+6. Once provisioned, take a note of the instance's private IP address.
+
+  ![Image alt text](images/wordpress-instance-details.png)
 
 ## Task 2: Connecting to your WordPress Instance
 
@@ -49,15 +88,52 @@ This lab assumes you have:
     <copy>sudo firewall-cmd --reload</copy>
     ```
 
-2. Test the Apache Server using the [...] on your Web Browser
+
+## Task 4. Attaching Your WordPress Instance to Your Load Balancer and Connecting to Web Server
+
+1. On the OCI Console, click Navigation
+
+
+
+  Select Networking
+
+
+
+  Select 'Load Balancers'
+
+2. Select your Load Balancer (**WordPress-LoadBalancer**)
+
+  ![Image alt text](images/wordpress-loadbalancer-select.png)
+
+3. Go to 'Backend Sets' and select the listed default backend set
+
+  ![Image alt text](images/wp-lb-backendset.png)
+
+4. Go to 'Backends' and click 'Add backends'
+
+  ![Image alt text](images/wp-lb-addbackend.png)
+
+5. Select your WordPress instance (**WebServer-WordPress**)
+
+  ![Image alt text](images/wp-lb-add-instance.png)
+
+  > Note: You can leave on 'Automatically add security list rules' to automatically add the appropriate HTTP rules, but this is not required as this workshop already showed you how to add the required rules, assuming you have completed all the labs to this point. In the future, this feature is useful so you don't have to manually add rules yourself. If you already have the required rules and you leave this on, however, the same rules will be created redundantly.
+
+6. Click 'Add'
+
+7. Wait for the work request to finish
+
+  ![Image alt text](images/sample.png)
+
+8. Test the Apache Server using the Load Balancer's Public IP on your Web Browser
 
 
 
     Example: http://10.10.10.10
 
-    ![Image alt text](images/sample1.png)
+    ![Image alt text](images/sample.png)
 
-## Task 4. Install PHP
+## Task 5. Install PHP
 
 1. Install php
     ```
@@ -98,7 +174,7 @@ This lab assumes you have:
 
   ![Image alt text](images/sample1.png)
 
-## Task 5. Install WordPress
+## Task 6. Install WordPress
 
 1. Install required packages
   ```
@@ -143,7 +219,7 @@ This lab assumes you have:
   <copy>sudo setsebool -P httpd_can_network_connect_db 1</copy>
   ```
 
-## Task 6. Install MySQL Shell, and create the WordPress user and database
+## Task 7. Install MySQL Shell, and create the WordPress user and database
 
 1. Install MySQL Shell and setup wordpress database
   ```
@@ -172,7 +248,7 @@ This lab assumes you have:
   <copy>\q</copy>
   ```
 
-## Task 7. Configure WordPress
+## Task 8. Configure WordPress
 
 1. From a browser access http://instance public IP/wp-admin/setup-config.php.
 
@@ -206,4 +282,4 @@ This lab assumes you have:
 
 ## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer
-* **Last Updated By/Date** - Bernie Castro, May 2023
+* **Last Updated By/Date** - <Bernie Castro, May 2023
