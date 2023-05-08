@@ -10,8 +10,7 @@ Estimated Time: -- minutes
 
 In this lab, you will:
 * Create a Virtual Cloud Network using the VCN Wizard
-* Edit Security Lists to Allow SSH and HTTP connections
-* Configure a Network Security Group to allow MySQL connections
+* Edit Security Lists to Allow SSH, HTTP, and MySQL connections
 
 ### Prerequisites
 
@@ -89,7 +88,7 @@ In this lab, you will:
 
   ![Image alt text](images/private-sl-ssh.png)
 
-3. Click 'Add Ingress Rules' and add the following rule
+3. Click 'Add Ingress Rules' and add the following rule for HTTP connections
 
   ![Image alt text](images/private-sl-add-ingress.png)
 
@@ -99,19 +98,35 @@ In this lab, you will:
     - Source CIDR: 10.0.0.0/24 (CIDR block for public subnet)
     - IP Protocol: TCP
     - Destination Port: 80
-    - Description: Allows HTTPs Access from the Public Subnet Only
+    - Description: Allows HTTP Access from the Public Subnet Only
 
   ![Image alt text](images/private-sl-ssh.png)
 
-4. Go back to the WordPress-VCN 'Security Lists' page
+4. Add another rule for MySQL connections
+
+
+
+    - Stateless: unchecked
+    - Direction: Ingress
+    - Source CIDR: 10.0.0.0/24
+    - IP Protocol: TCP
+    - Destination Port: 3306, 33060
+    - Description: Allows MySQL Port Access from Public Subnet Only
+
+  ![Image alt text](images/private-sl-mysql.png)
+
+
+5. Go back to the WordPress-VCN 'Security Lists' page
 
 
 
   Click the security list for the **public subnet**
 
+
+
   ![Image alt text](images/security-list-public-subnet.png)
 
-5. Click 'Add Ingress Rules'
+6. Click 'Add Ingress Rules'
 
 
 
@@ -130,7 +145,7 @@ In this lab, you will:
 
     Add the Ingress Rule
 
-6. Allow  SSH Access Into Your Public Subnet From a Specific Set of IP Addresses (optional)
+7. Allow  SSH Access Into Your Public Subnet From a Specific Set of IP Addresses (optional)
     > **Note:** This step is a recommended best practice when implementing an actual architecture you do not want getting hacked or reached by unknown entities. Performing this step will only allow a certain set of IP addresses you define to reach your public subnet's resources.
 
 
@@ -147,32 +162,6 @@ In this lab, you will:
 
   For example, if you only wanted your local computer to SSH into the public subnet's resources:
    - 10.10.10.10/32
-
-## Task 3: Create a Network Security Group for MySQL Connections
-
-1. Go back to the WordPress-VCN and go to 'Network Security Groups'
-
-  ![Image alt text](images/vcn-nsg.png)
-
-2. Click 'Create Network Security Group'
-
-
-
-  Fill in a name (i.e MySQL-NSG) and click 'Next'
-
-  ![Image alt text](images/nsg-name.png)
-
-3. Add the following rule:
-    - Stateless: unchecked
-    - Direction: Ingress
-    - Source CIDR: 10.0.0.0/24
-    - IP Protocol: TCP
-    - Destination Port: 3306, 33060
-    - Description: Allows MySQL Port Access from Public Subnet Only
-
-    ![Image alt text](images/nsg-rule.png)
-
-4. Click 'Create'
 
 Congratulations! You have successfully set up your VCN! Please proceed with the next lab
 

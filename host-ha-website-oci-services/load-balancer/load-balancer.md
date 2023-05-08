@@ -2,89 +2,111 @@
 
 ## Introduction
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
+This lab will show you how to set up a load balancer for HTTP connections. You will be using this later to connect to the web server made on your WordPress instance in your private subnet.
 
 Estimated Lab Time: -- minutes
 
-### About <Product/Technology> (Optional)
-Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than two sections/paragraphs, please utilize the "Learn More" section.
-
 ### Objectives
 
-*List objectives for this lab using the format below*
-
 In this lab, you will:
-* Objective 1
-* Objective 2
-* Objective 3
+* Create a load balancer to connect to your WordPress instance using HTTP
 
-### Prerequisites (Optional)
-
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is necessary to complete the lab. Do NOT list each previous lab as a prerequisite.*
+### Prerequisites
 
 This lab assumes you have:
 * An Oracle Cloud account
 * All previous labs successfully completed
 
+## Task 1: Provision a Load Balancer
 
-*This is the "fold" - below items are collapsed by default*
+1. Click Navigation
 
-## Task 1: Concise Task Description
 
-(optional) Task 1 opening paragraph.
 
-1. Step 1
+  Select Networking
 
-	![Image alt text](images/sample1.png)
 
-2. Step 2
 
-  ![Image alt text](images/sample1.png)
+  Select 'Load Balancers'
 
-4. Example with inline navigation icon ![Image alt text](images/sample2.png) click **Navigation**.
+	![Image alt text](images/networking-loadbalancer.png)
 
-5. Example with bold **text**.
+2. Select 'Create Load Balancer'
 
-   If you add another paragraph, add 3 spaces before the line.
+  ![Image alt text](images/loadbalancer-create.png)
 
-## Task 2: Concise Task Description
+3. Select 'Load balancer' type and create
 
-1. Step 1 - tables sample
+  ![Image alt text](images/loadbalancer-type.png)
 
-  Use tables sparingly:
+4. Add details
 
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
 
-2. You can also include bulleted lists - make sure to indent 4 spaces:
 
-    - List item 1
-    - List item 2
+    - Visibility: Public
+    - Public IP Address: Ephemeral
 
-3. Code examples
+    ![Image alt text](images/loadbalancer-details.png)
 
-    ```
-    Adding code examples
-  	Indentation is important for the code example to appear inside the step
-    Multiple lines of code
-  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
-    ```
+5. Choose Networking
 
-4. Code examples that include variables
 
-	```
-  <copy>ssh -i <ssh-key-file></copy>
-  ```
 
-## Learn More
+    - VCN: Select **WordPress-VCN**
+    - Subnet: Select **public subnet**
 
-*(optional - include links to docs, white papers, blogs, etc)*
+  ![Image alt text](images/loadbalancer-networking.png)
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+
+
+    Click **Next**
+
+6. Select Load Balancing Policy
+
+
+
+  You can choose your desired load balancing policy you want for your application. For this lab's purposes, **Weighted Round Robin** is selected.
+
+  ![Image alt text](images/loadbalancer-policy.png)
+
+7. Specify Health Check Policy
+
+
+
+  Ensure the following are set:
+    - Protocol: HTTP
+    - Port: 80
+
+  ![Image alt text](images/loadbalancer-healthcheck.png)
+
+
+
+  Click Next
+
+7. Configure Listener
+
+
+
+    - Name: WordPressLB_Listener
+    - Traffic: HTTP
+    - Port: 80
+
+  ![Image alt text](images/load-balancer-listener.png)
+
+
+
+    Click Next
+
+8. Accept default for logging and click 'Submit' to create the load balancer
+
+  ![Image alt text](loadbalancer-provisioning.png)
+
+9. Once the Load Balancer is 'Active', take note of it's public IP address.
+
+  ![Image alt text](loadbalancer-provisioning.png)
+
+  > Note: Notice the health check on the load balancer. This is because no backend sets have been added yet. You can ignore this for now since you will add backends in later labs.
+
 
 ## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer

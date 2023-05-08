@@ -11,9 +11,7 @@ Estimated Time: -- minutes
 In this lab, you will:
 * Create and configure a Standalone MySQL Database System
 
-### Prerequisites (Optional)
-
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. Do NOT list each previous lab as a prerequisite.*
+### Prerequisites
 
 This lab assumes you have:
 * An Oracle Cloud account
