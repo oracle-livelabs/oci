@@ -143,6 +143,14 @@ You can now verify the objects in bucket by using OCI CLI or just by accessing t
 <copy>oci os object list --namespace <object_storage_namespace> --bucket-name <bucket_name></copy>
 ```
 
+On OCI Console under Bucket that you have created, you can view the newly created folders and files
+
+![View folders](images/view-folders.png " ")
+
+View files in each folder
+
+![View Images](images/view-images.png " ")
+
 This concludes this lab. You can **proceed now to the next lab**.
 
 ## Learn More
