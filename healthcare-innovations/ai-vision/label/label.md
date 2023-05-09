@@ -47,7 +47,7 @@ But before you continue, you need to perform the first step, **Create Dataset** 
 
     This will open **Dataset list** page in selected compartment (make sure you are in correct compartment as you might need to change compartment to the one you've created for this workshop).
 
-    Make sure you've selected your compartment where your image library resides, ie. *X-Rays-Image-Classification* and then click **Create dataset**.
+    Make sure you've selected your compartment where your image library resides, click **Create dataset**.
 
     First, **Name** your dataset and optionally add **Description** and provide **Labeling instructions**
   
@@ -115,7 +115,7 @@ For the purpose of this labe, we have used original python code and adjusted it 
     # python3 help.py
 
     # config file path
-    config_file_path="/home/.oci/config"
+    config_file_path="< PATH TO OCI CONFIG FILE >"
     # config file profile
     config_profile="DEFAULT"
     # region identifier of DLS Dataset
@@ -124,7 +124,7 @@ For the purpose of this labe, we have used original python code and adjusted it 
     # compartment where DLS Dataset exists
     compartment_id = "ocid1.compartment.oc1.... <YOUR COMPARTMENT OCID> ..."
     # ocid of the DLS Dataset
-    dataset_id = "ocid1.datalabelingdataset.oc1.eu-frankfurt-1.... <YOUR DATASET OCID> ..."
+    dataset_id = "ocid1.datalabelingdataset.oc1.<REGION>.... <YOUR DATASET OCID> ..."
     # an array where the elements are all of the labels that you will use to annotate records in your DLS Dataset with. Each element is a separate label.
     labels = ["NORMAL", "PNEUMONIA"]
     # the algorithm that will be used to assign labels to DLS Dataset records
@@ -145,20 +145,21 @@ For the purpose of this labe, we have used original python code and adjusted it 
     <copy>
     # for help, run:
     # python3 help.py
-
-    # config file path /Users/madhusudhanrao/.oci/
-    config_file_path="/Users/madhusudhanrao/.oci/config"
+ 
+    config_file_path="/Users/username/.oci/config"
     # config file profile
     config_profile="DEFAULT"
     # region identifier of DLS Dataset
     region_identifier="us-phoenix-1"
-    # compartment where DLS Dataset exists (madhurao compartment)
-    compartment_id = "ocid1.compartment.oc1..aaaaaaaaud6tkdn6n23cbvc4hexs6n4hggetkwo4viqyneyroixcmj54u32q"
+    # compartment where DLS Dataset exists  
+    compartment_id = "ocid1.compartment.oc1..aaaaaaaaud6tk-your-compartment-ocid-o4viqyneyroixcmj54u32q"
     # ocid of the DLS Dataset 
-    dataset_id = "ocid1.datalabelingdataset.oc1.phx.amaaaaaaknuwtjiax3bm73lh2bxnn3443w7lwfo3sng27nztil75ufwxsh2a"
+    dataset_id = "ocid1.datalabelingdataset.oc1.phx.ama-your-dataset-ocid-43w7lwfo3sng27nztil75ufwxsh2a"
     # an array where the elements are all of the labels that you will use to annotate records in your DLS Dataset with. Each element is a separate label.
+    #Labels for Breast Cancer below
     #labels = ["BREAST-WITH-CANCER", "NORMAL-BREAST"]
-    labels = ["NORMAL-LUNGS", "PNEUMONIA", "COVID","BREAST-WITH-CANCER", "NORMAL-BREAST"]
+    #Labels for Lung Cancer below
+    labels = ["LUNG_CANCER_FLAT_CELLS", "LUNG_CANCER_LARGE_CELLS", "LUNG_CANCER_LEFT_LOWER_LOBE","NORMAL_LUNG"]
     # the algorithm that will be used to assign labels to DLS Dataset records
     labeling_algorithm = "first_match"
     # use for first_match labeling algorithm
@@ -210,23 +211,22 @@ For the purpose of this labe, we have used original python code and adjusted it 
     </copy>
     ```
 
-    To Label Breast Cancer update config.py 
+    To Label Breast Cancer update config.py just change labels and dataset ocid
 
     ```python
     <copy>
     # for help, run:
     # python3 help.py
-
-    # config file path /Users/madhusudhanrao/.oci/
-    config_file_path="/Users/madhusudhanrao/.oci/config"
+ 
+    config_file_path="/Users/username/.oci/config"
     # config file profile
     config_profile="DEFAULT"
     # region identifier of DLS Dataset
     region_identifier="us-phoenix-1"
-    # compartment where DLS Dataset exists (madhurao compartment)
-    compartment_id = "ocid1.compartment.oc1..aaaaaaaaud6tkdn6n23cbvc4hexs6n4hggetkwo4viqyneyroixcmj54u32q"
+    # compartment where DLS Dataset exists  
+    compartment_id = "ocid1.compartment.oc1..aaaaaaaaud6tk-your-compartment-4viqyneyroixcmj54u32q"
     # ocid of the DLS Dataset 
-    dataset_id = "ocid1.datalabelingdataset.oc1.phx.amaaaaaaknuwtjiax3bm73lh2bxnn3443w7lwfo3sng27nztil75ufwxsh2a"
+    dataset_id = "ocid1.datalabelingdataset.oc1.phx.amaaaaaak-your-dataset-7lwfo3sng27nztil75ufwxsh2a"
     # an array where the elements are all of the labels that you will use to annotate records in your DLS Dataset with. Each element is a separate label.
     labels = ["BREAST-WITH-CANCER", "NORMAL-BREAST"] 
     # the algorithm that will be used to assign labels to DLS Dataset records
