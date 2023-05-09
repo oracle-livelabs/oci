@@ -70,7 +70,7 @@ But before you continue, you need to perform the first step, **Create Dataset** 
 
     This will open **Dataset list** page in selected compartment (make sure you are in correct compartment as you might need to change compartment to the one you've created for this workshop).
 
-    Make sure you've selected your compartment where your image library resides, ie. *X-Rays-Image-Classification* and then click **Create dataset**.
+    Make sure you've selected your compartment where your image library resides, and then click **Create dataset**.
 
     First, **Name** your dataset and optionally add **Description** and provide **Labeling instructions**
   

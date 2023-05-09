@@ -13,10 +13,11 @@ OCI Vision is a serverless, cloud native service that provides deep learning-bas
 ### Objectives
 
 In this lab, you will:
-
-* Set a staging bucket required for storing temporary prediction results
-* Create a new image classification model using OCI Vision
-* Test a model using OCI Vision
+ 
+* Create OCI Vision Project
+* Create OCI Vision Model
+* Train the Model with the Dataset previously created.
+* Test the Model
 
 ### Prerequisites
 
@@ -24,7 +25,6 @@ This lab assumes you have:
 
 * Completed previous labs of this workshop: **Setup environment**, **Create image library** and **Label images**.
 
- 
 ## Task 1: Create your Vision Project
 
 In the previous lab, you have labeled all images (records) in your dataset, which is prerequisite to start working with **Vision** service. In this lab, you will create your first **vision**, image classification, model and you will run some tests to confirm it is working properly.
@@ -71,7 +71,7 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 
     In this second step, you need to define parameters for the model itself. As you can see, there isn't much to do. Provide a name and description and then define **training duration**.
 
-    As you can see you can choose between *up to 24 hours*, *about an hour* and *custom duration*. In the script, **the recommended** option is chosen, which means up to 24 hours. In fact it should take approx. 5 hours to complete. But feel free to pick your option.
+    As you can see you can choose between *up to 24 hours*, *about an hour* and *custom duration*. In the script, **Recommended Mode** option is chosen, which means up to 24 hours. In fact it should take approx. 5 hours to complete. But feel free to pick your option. However in this case we can choose **Quick Mode** and later update to **Recommended Mode**
 
     ![Create a new Vision model](images/train-model.png " ")
  
@@ -113,13 +113,13 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 
     ![Test model for NORMAL image](images/upload-file.png " ")
 
-    You can repeat and perform prediction for one image which is clearly showing **LUNG_CANCER_LEFT_LOWER_LOBE** with **41% confidence** and **LUNG_CANCER_FLAT_CELLS** with **35% Confidence** and **NORMAL_LUNG** being **0% Confidence**.
+    You can repeat and perform prediction for one image which is clearly showing **LUNG\_CANCER\_LEFT\_LOWER\_LOBE** with **41% confidence** and **LUNG\_CANCER\_FLAT\_CELLS** with **35% Confidence** and **NORMAL\_LUNG** being **0% Confidence**.
 
     Repeat for any other images
 
     ![Test model for NORMAL image](images/normal-lung-analysis.png " ")
 
-    You can repeat and perform prediction for one image which is clearly showing **NORMAL_LUNG** being **97% Confidence** **LUNG_CANCER_LEFT_LOWER_LOBE** with **1% confidence** and **LUNG_CANCER_FLAT_CELLS** with **1% Confidence**.
+    You can repeat and perform prediction for one image which is clearly showing **NORMAL\_LUNG** being **97% Confidence** **LUNG\_CANCER\_LEFT\_LOWER\_LOBE** with **1% confidence** and **LUNG\_CANCER\_FLAT\_CELLS** with **1% Confidence**.
 
 
     **Please Note:** As an alternative you can create a bucket upload the images to that bucket, get the par url and use **Object storage** radio button, this will also bring same result but request JSON will change for input source element.
@@ -139,14 +139,14 @@ Review Request Response JSON this will be essential for us while building Applic
 
     ```json
     <copy>{
-    "compartmentId": "ocid1.compartment.oc1..aaaaaaaaud6tkdn6n23cbvc4hexs6n4hggetkwo4viqyneyroixcmj54u32q",
+    "compartmentId": "ocid1.compartment.oc1..aaaaaaaaud6tkdn-your-comparment-ocid-4viqyneyroixcmj54u32q",
     "image": {
         "source": "INLINE",
         "data": "......"
     },
     "features": [
         {
-        "modelId": "ocid1.aivisionmodel.oc1.phx.amaaaaaaknuwtjialsvxmpvyobz6zg4wkgkehk7yaxywphmazehr5ora75wq",
+        "modelId": "ocid1.aivisionmodel.oc1.phx.amaaaaaaknuwtj-your-model-id-yaxywphmazehr5ora75wq",
         "featureType": "IMAGE_CLASSIFICATION",
         "maxResults": 5
         }
