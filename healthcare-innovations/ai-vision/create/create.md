@@ -2,9 +2,7 @@
 
 ## Introduction
 
-TBC - To be completed. 
-
-This lab walks you through the steps to organize an image library in Object Storage. You will have an option to download images directly to OCI Cloud Shell and then from Cloud Shell into Object Storage. Alternatively, you can also load images to Object Storage from your laptop, assuming you have already download images to your laptop. The first approach is faster and recommended.
+This lab walks you through organising an image library in OCI Object Storage. You will load images to Object Storage directly from your laptop using OCI CLI. There are other options to upload images to object storage, such as using OCI Cloud Shell. This is not covered in this lab.
 
 Estimated time: 30 minutes
 
@@ -15,12 +13,10 @@ OCI Object Storage service is an internet-scale, high-performance storage platfo
 ### Objectives
 
 In this lab, you will:
-
+ 
 * Create a new bucket within Object Storage
-* Set bucket visibility and access
-* Download images from Kaggle.com to OCI Cloud Shell
-* Load images from OCI Cloud Shell to your bucket
-* Alternatively, load images to Object Storage from your computer
+* Download XRay images and classify these images into different folders 
+* Load images from OCI Cloud Shell to your bucket 
 
 ### Prerequisites
 
