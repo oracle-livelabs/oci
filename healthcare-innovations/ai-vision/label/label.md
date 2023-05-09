@@ -2,15 +2,13 @@
 
 ## Introduction
 
-TBC - To be completed. 
+This lab walks you through the steps to create a new dataset of records using images from your image library and label those images.
 
-This lab walks you through the steps to create a new dataset of records using images from your image library and to label those images with one of the two labels: PNEUMONIA and NORMAL.
-
-Estimated Time: 60 minutes
+Estimated Time: 30 minutes
 
 ### About Data Labeling
 
-Oracle Cloud Infrastructure (OCI) Data Labeling is a service for building labeled datasets to more accurately train AI and machine learning models. With OCI Data Labeling, developers and data scientists assemble data, create and browse datasets, and apply labels to data records through user interfaces and public APIs. The labeled datasets can be exported for model development across Oracleâ€™s AI and data science services for a seamless model-building experience.
+Oracle Cloud Infrastructure (OCI) Data Labeling is a service for building labeled datasets to more accurately train AI and machine learning models. With OCI Data Labeling, developers and data scientists assemble data, create and browse datasets, and apply labels to data records through user interfaces and public APIs. The labeled datasets can be exported for model development across Oracle's AI and data science services for a seamless model-building experience.
 
 In case of images, we need to assign a label to an image, which describes and classifies that image. Or using same service, we can annotate parts of images and again tell the system what is that particular part of an image. For example, a wheel as a part of the car in the picture.
 
@@ -19,14 +17,13 @@ In case of images, we need to assign a label to an image, which describes and cl
 In this lab, you will:
 
 * Create a new dataset using images from object storage
-* Label images using Data Labeling utility
 * Label images programmatically
 
 ### Prerequisites
 
 This lab assumes you have:
 
-* Completed previous labs of this workshop: **Lab 1: Setup environment** and **Lab 2: Create image library**.
+* Completed previous labs of this workshop: **Setup environment** and **Create image library**.
 
 ## Task 1: Generate dataset records and label images using Data Labeling tool for Lung Cancer
 

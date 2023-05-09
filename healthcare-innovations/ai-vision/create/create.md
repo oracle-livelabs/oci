@@ -22,7 +22,7 @@ In this lab, you will:
 
 This lab assumes you have:
 
-* Completed **Lab 2: Setup environment** lab and already logged into OCI console
+* Completed **Setup environment** and **Setup OCI CLI** lab and already logged into OCI console
 
 ## Task 1: Create a new bucket
 
