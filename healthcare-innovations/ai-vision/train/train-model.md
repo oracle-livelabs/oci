@@ -1,8 +1,6 @@
-# Lab 5: Train image classification model
+# Lab 6: Train image classification model
 
 ## Introduction
-
-TBC - To be completed. 
 
 This lab walks you through the steps to train custom Image Classification model and to perform basic testing using OCI Vision.
 
@@ -24,7 +22,7 @@ In this lab, you will:
 
 This lab assumes you have:
 
-* Completed previous labs of this workshop: **Lab 1: Setup environment**, **Lab 2: Create image library** and **Lab 3: Label images**.
+* Completed previous labs of this workshop: **Setup environment**, **Create image library** and **Label images**.
 
  
 ## Task 1: Create your Vision Project
@@ -41,7 +39,7 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
  
 2. Continue with customer project setup
 
-    Click **Projects** on the left side menu list, confirm you are in correct **Compartment** (ie. *X-Rays-Image-Classification*) and click **Create Project**
+    Click **Projects** on the left side menu list, confirm you are in correct **Compartment** and click **Create Project**
 
     ![Create a new project in Vision](images/create-project.png " ")
 
@@ -219,4 +217,6 @@ Review Request Response JSON this will be essential for us while building Applic
 
 
 ## Acknowledgements
+* **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
+* **Last Updated By/Date** - May 5th, 2023.
  

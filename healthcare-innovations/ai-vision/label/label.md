@@ -265,9 +265,7 @@ This concludes this lab. You can **proceed to the next lab**.
 ## Learn More
 
 * [OCI Data Labeling](https://docs.oracle.com/en-us/iaas/data-labeling/data-labeling/using/home.htm)
-
+ 
 ## Acknowledgements
-
-* **Author** -  
-* **Contributors** -   
-* **Last Updated By/Date** -  
+* **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
+* **Last Updated By/Date** - May 5th, 2023.
