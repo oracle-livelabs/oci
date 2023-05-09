@@ -2,10 +2,10 @@
 
 ## About this workshop 
 
- Machine Learning and Artificial Intelligence tools are unprecedentedly changing modern healthcare. Given the speed of innovation and global outreach, it can be challenging for patients and healthcare providers to stay abreast of the latest technological advances and how they will impact the future. In this session, we will show how Artificial Intelligence (AI) with Machine Learning (ML) is helping identify breast and lung cancer with quick solutions using Oracle APEX, Autonomous Database, OCI, AI Services, and Oracle Analytics Cloud in just 4 weeks.
- 
-We’ll share how we trained our AI Machine learning models with CT scan images to identify both breast and lung cancers, and even incorporated features to help doctors or patients dictate medical symptoms and diagnoses quickly by sending an email of the audio message along with the medical transcription text. If doctors or nurses aren’t available, we’ll show you how digital assistants can advise patients with health concerns, answer questions about symptoms, and even locate the nearest hospital.
- 
+Machine Learning and Artificial Intelligence tools are unprecedentedly changing modern healthcare. Given the speed of innovation and global outreach, it can be challenging for patients and healthcare providers to stay abreast of the latest technological advances and how they will impact the future. In this session, we will show how Artificial Intelligence (AI) with Machine Learning (ML) is helping identify breast and lung cancer with quick solutions using Oracle APEX, Autonomous Database, OCI, AI Services, and Oracle Analytics Cloud in just four weeks.
+
+We’ll share how we trained our AI Machine learning models with CT scan images to identify both breast and lung cancers and even incorporated features to help doctors or patients dictate medical symptoms and diagnoses quickly by sending an email of the audio message along with the medical transcription text. If doctors or nurses aren’t available, we’ll show you how digital assistants can advise patients with health concerns, answer questions about symptoms, and even locate the nearest hospital.
+
 Researchers & data enthusiasts can also analyse extensive data using open research datasets to accelerate early disease detection and prevention for better Health.
 
 ### Objectives
@@ -13,13 +13,13 @@ Researchers & data enthusiasts can also analyse extensive data using open resear
 In this workshop, you will learn how to:
 * Provision Oracle Autonomous Database
 * Create and Train AI Vision Model of type Image Classification
-* Upload Image to Object storage and detect Breast/Lung Cancer with possiblity percentage
+* Upload Image to Object storage and detect Breast/Lung Cancer with a confidence percentage
 * Develop Oracle Apex Application Front end for image uploading and viewing results
  
 
 #### About Breast Cancer
 
-Breast cancer is the most diagnosed cancer among women worldwide, [Breast cancer represents 1 in 4 cancers diagnosed among women globally](https://www.uicc.org/news/globocan-2020-new-global-cancer-data). Colorectal, lung, cervical, and thyroid cancers are also common among women. It is the most frequent cancer amongst both sexes and is the leading cause of death from cancer in women. The estimated 2.3 million new cases indicate that one in every 8 cancers diagnosed in 2020 was breast cancer. In 2020, there were an estimated 684,996 deaths from breast cancer, with a disproportionate number of these deaths occurring in low-resource settings.
+Breast cancer is the most diagnosed cancer among women worldwide [Breast cancer represents 1 in 4 cancers diagnosed among women globally](https://www.uicc.org/news/globocan-2020-new-global-cancer-data). Colorectal, lung, cervical, and thyroid cancers are also common among women. It is the most frequent cancer amongst both sexes and is the leading cause of death from cancer in women. The estimated 2.3 million new cases indicate that one in every eight cancers diagnosed in 2020 was breast cancer. In 2020, there were an estimated 684,996 deaths from breast cancer, with a disproportionate number of these deaths occurring in low-resource settings.
 
 Breast cancer cells usually form a tumour that can often be seen on an x-ray or felt as a lump. It becomes advanced breast cancer if spread outside the breast through blood vessels and lymph vessels. When breast cancer spreads to other body parts (such as the liver, lungs, bones or brain), it is said to have metastasized and is referred to as metastatic breast cancer. Breast cancer is the most common cancer among women. Breast cancer occurs when some breast cells begin to grow abnormally. These cells divide more rapidly than healthy cells and continue to gather, forming a lump or mass. The cells may spread (metastasize) to the lymph nodes or other body parts. Breast cancer mostly begins with cells in the milk-producing ducts (invasive ductal carcinoma), the glandular tissue called lobules (invasive lobular carcinoma), or other cells or tissue within the breast.
 
@@ -29,7 +29,7 @@ Researchers have identified hormonal, lifestyle and environmental factors that m
 
 #### About Is Lung Cancer
 
-Cancer is a disease in which cells in the body grow out of control. When cancer starts in the lungs, it is called lung cancer.Worldwide, lung cancer is the second most commonly diagnosed cancer. NSCLC is the most common type of lung cancer in the United States, accounting for 81% of all lung cancer diagnoses.
+Cancer is a disease in which cells in the body grow out of control. When cancer starts in the lungs, it is called lung cancer Worldwide, lung cancer is the second most commonly diagnosed cancer. NSCLC is the most common type of lung cancer in the United States, accounting for 81% of all lung cancer diagnoses.
 
 In 2023, an estimated [238,340 adults (117,550 men and 120,790 women)](https://www.cancer.net/cancer-types/lung-cancer-non-small-cell/statistics) in the United States will be diagnosed with lung cancer. Worldwide, an estimated 2,206,771 people were diagnosed with lung cancer in 2020. These statistics include both small cell lung cancer and NSCLC.
 
@@ -46,7 +46,9 @@ Lung cancer includes two main types: non-small cell lung cancer and small cell l
 ### Prerequisites (Optional)
  
 This lab assumes you have:
+
 * An Oracle account
+* Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
   
 ## What Is a Mammogram?
 

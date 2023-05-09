@@ -2,11 +2,11 @@
 
 ## Introduction
 
-TBC - To be completed. 
+In this lab, we will set up the required policies to run through the workshop as non-administrative users. However, you can skip most parts of this lab if you have administrative access.
 
-Data labeling is the process of identifying properties (labels) of documents, text, and images (records), and annotating (labeling) them with those properties. The topic of a news article, the sentiment of a tweet, the caption of an image, important words spoken in an audio recording, the genre of a video are all examples of a data label.
+Data labelling is the process of identifying properties (labels) of documents, text, and images (records) and annotating (labelling) them with those properties.  
 
-Many machine learning techniques require labeled data before they can be used to train machines to complete an autonomous task. Data labeling is thus an integral part of an Artificial Intelligence (AI) or Machine Learning (ML) project.
+Many machine learning techniques require labeled data before they can be used to train machines to complete an autonomous task. Data labeling is an integral part of an Artificial Intelligence (AI) or Machine Learning (ML) project.
 
 Data Labeling lets you create and browse datasets, view data records (documents, text, and images), and apply labels to build AI/ML models. Datasets can be exported as line-delimited JSON for use in machine learning model development. Datasets are accessible and interoperable across other Data and AI services to support supervised training. For example, Oracle Cloud Infrastructure Language can be used to create specialized models, but only if labeled data is available for training the model. Data Labeling lets you quickly start labeling raw datasets with a minimal number of configuration steps. Thus, it also provides the data labeling experience for Oracle Cloud Infrastructure AI services.
 
@@ -18,8 +18,7 @@ In this lab, you will:
 
 * Create a new compartment for objects used in workshop
 * Set policies for the new OCI group to manage a new compartment
-* Create new policies for Vision service
-* Create a new policy for Cloud Shell access
+* Create new policies for Vision service 
 
 ### Prerequisites
 
