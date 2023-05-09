@@ -71,7 +71,7 @@ This lab assumes you have:
 
     ```
     <copy>Host WordPressServer
-		HostName <wordpress_server_public_ip>
+		HostName <wordpress_server_private_ip>
 		User opc
 		Port 22
 		IdentityFile <ssh-key-file-full-path>
