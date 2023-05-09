@@ -82,27 +82,63 @@ This lab assumes you have:
 1. Open up a Terminal
     > **Note:** This lab's tutorial will be using Mac Terminal, but you can use other tools such as PuTTY for Windows or even Cloud Shell on the OCI Console.
 
-
-
-  ![Image alt text](images/sample1.png)
-
 2. Take note of your Bastion instance's public IP address
 
   ![Image alt text](images/compute-public-ip.png)
 
-3. In your Terminal, SSH into the Bastion host using the following format
+3. In your Terminal, change the directory to where your Bastion host's SSH Key is located
+
+  ```
+  cd <ssh-key-path>
+  ```
+
+
+
+    For example, use the code below if your SSH key is in the /Users/JohnDoe/Documents/BastionHost folder.
+
+    ```
+    cd /
+    ```
+
+    ```
+    cd/Users/JohnDoe/Documents/BastionHost
+    ```
+
+4. SSH into the Bastion host using the following format
 
   ```
   <copy>ssh -i <ssh-key-file> opc@<bastion_host_public_ip></copy>
   ```
 
-  ![Image alt text](images/sample1.png)
 
-    > **Note:** Make sure to specify the SSH private key file location or change your directories as needed
+    > **Note:** If you did not change your directory, make sure to specify the full path for the SSH private key file location (i.e. /Users/JohnDoe/Documents/BastionHost/ssh-key-2023-05-05.key).
 
 4. Verify you have connected to the Bastion host
 
-  ![Image alt text](images/sample1.png)
+## Task 3. Add your Bastion host's connection information to the config file for easy access (optional)
+
+1. Go into the config file
+
+  ```
+  <copy>nano ~/.ssh/config</copy>
+  ```
+
+2. Add the Bastion's host configuration using the following format
+
+  '''
+  <copy>Host BastionHost
+    HostName <bastion_host_public_ip>
+    User opc
+    Port 22
+    IdentityFile <ssh-key-file-full-path></copy>
+  '''
+
+3. SSH into Bastion host To verify the configuration
+
+  ```
+  ssh BastionHost
+  ```
+
 
 ## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer
