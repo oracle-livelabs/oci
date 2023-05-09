@@ -1,16 +1,16 @@
-# Lab 7: Creating Oracle APEX user interface for OCI Vision
+# Lab 7: Creating Oracle APEX user interface for OCI Vision (Optional)
 
 ## Introduction
 
-TBC - To be completed. 
-
 This lab walks you through the steps to train custom Image Classification model and to perform basic testing using OCI Vision.
 
-Estimated Time: 90 minutes (up to 6 hours if maximum training duration is selected).
+Estimated Time: 30 minutes.
 
 ### About Oracle APEX
 
-OCI Vision is a serverless, cloud native service that provides deep learning-based, prebuilt, and custom computer vision models over REST APIs. OCI Vision helps you identify and locate objects, extract text, and identify tables, document types, and key-value pairs from business documents like receipts.
+Oracle APEX is the world's most popular enterprise low-code application platform that enables you to build scalable, secure enterprise apps, with world-class features. These apps can be deployed anywhere - cloud or on-premises
+
+Using APEX, developers can quickly develop and deploy compelling apps that solve real problems and provide immediate value. You don't need to be an expert in a vast array of technologies to deliver sophisticated solutions. Focus on solving the problem and let APEX take care of the rest.
 
 ### Objectives
 
@@ -24,13 +24,21 @@ In this lab, you will:
 
 This lab assumes you have:
 
-* Completed previous labs of this workshop: **Lab 1: Setup environment**, **Lab 2: Create image library** and **Lab 3: Label images**.
+* Completed previous labs of this workshop.
 * You have an Oracle APEX workspace already created.
 
 
 ## Task 1: Setup Oracle APEX Web Credentials
 
-In the previous lab, you have labeled all images (records) in your dataset, which is prerequisite to start working with **Vision** service. In this lab, you will create your first **vision**, image classification, model and you will run some tests to confirm it is working properly.
+Oracle APEX Web Credentials provides a convenient and secure mechanism for storing the following types of credentials:
+
+* Basic Authentication (Username & password)
+* OAuth2 Client Credentials (Client ID & Client Secret)
+* OCI Native Authentication (Access Oracle Cloud Resources, e.g., Object Storage)
+* HTTP Header (The credential is added to the REST request as an HTTP Header)
+* URL Query String (The credential is added to the URL of the REST request as a Query String Parameter).
+
+We will be using OCI Native Authentication required to connect with Object Storage
 
 1. Create Web Credentials
 
@@ -45,7 +53,7 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
  
 ## Task 2: Table - MACHINE LEARNING CONFIGS
 
-TBD.
+We can directly code Object storage bucket location, Web Credential Name, Request JSON etc., directly in PL/SQL code to validate XRay Image. However, it is a good practice to store this in a database table so that we can easily update this and add more models in future, so we create a machine learning configuration table for this purpose.
 
 1. Create **MACHINE\_LEARNING\_CONFIGS** to store Machine Learning Configuration Details.
 
@@ -69,7 +77,7 @@ TBD.
     </copy>
     ```
 
-    **Sample Data**  
+    **Sample Configuration Data** in the table.
 
     ANALYSIS\_NAME = Lung Cancer
 
@@ -104,6 +112,8 @@ TBD.
 TBD.
 
 1. Create **VISION\_AI\_DOCS** to store Machine Learning Configuration Details.
+
+VISION\_AI\_DOCS table is primarily used to store the JSON response after uploading the image to object storage, querying the model against a trained OCI Vision model. The JSON response contains the OCI Labels and their corresponding confidence scores. 
 
     ```sql
     <copy> 
@@ -157,7 +167,7 @@ TBD.
 
 ## Task 4: Table - VISION AI FIELDS
 
-TBD.
+VISION\_AI\_FIELDS table is used to store the labels and corresponding scores. This is what we get after the parsing of the JSON response.
 
 1. Create **VISION\_AI\_FIELDS** .
 
@@ -548,8 +558,6 @@ There are 3 main sections on this page
 
 ![Navigate to Vision](images/image-after-submit.png " ")
 
-
-  
 ## Task 7: Apex Page in Edit Mode
 
 TBC
@@ -578,6 +586,6 @@ This concludes this lab and you can **proceed to the next lab**.
 * [OCI Vision](https://docs.oracle.com/en-us/iaas/vision/vision/using/home.htm)
 * [WPG_DOCLOAD](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/WPG_DOCLOAD.html)
 
-
 ## Acknowledgements
- 
+* **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
+* **Last Updated By/Date** - May 5th, 2023.

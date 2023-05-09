@@ -215,7 +215,6 @@ Review Request Response JSON this will be essential for us while building Applic
 
 * [OCI Vision](https://docs.oracle.com/en-us/iaas/vision/vision/using/home.htm)
 
-
 ## Acknowledgements
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
 * **Last Updated By/Date** - May 5th, 2023.
