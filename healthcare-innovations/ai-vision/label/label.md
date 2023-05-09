@@ -1,4 +1,4 @@
-# Lab 4: Label images
+# Lab 5: Label images
 
 ## Introduction
 

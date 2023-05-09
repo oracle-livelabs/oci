@@ -1,4 +1,4 @@
-# Create an Oracle Autonomous Database 
+# Lab 1: Create an Oracle Autonomous Database 
 
 ## Introduction
 
