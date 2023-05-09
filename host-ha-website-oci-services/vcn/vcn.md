@@ -132,14 +132,13 @@ In this lab, you will:
 
 
 
-    Rule 1:
     - Stateless: unchecked
     - Source CIDR: 0.0.0.0/0
     - IP Protocol: TCP
     - Destination Port: 80
     - Description: Allows HTTPs Access from the Public Internet
 
-    ![Image alt text](images/publicsl-httprule.png)
+  ![Image alt text](images/publicsl-httprule.png)
 
 8. Allow  SSH Access Into Your Public Subnet From a Specific Set of IP Addresses (optional)
     > **Note:** This step is a recommended best practice when implementing an actual architecture you do not want getting hacked or reached by unknown entities. Performing this step will only allow a certain set of IP addresses you define to reach your public subnet's resources.
