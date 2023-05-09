@@ -61,6 +61,31 @@ This lab assumes you have:
 
 ## Task 2: Connecting to your WordPress Instance
 
+1. Go into the config file
+
+  ```
+  <copy>nano ~/.ssh/config</copy>
+  ```
+
+2. Add the Bastion's host configuration using the following format
+
+    ```
+    <copy>Host WordPressServer
+		HostName <wordpress_server_public_ip>
+		User opc
+		Port 22
+		IdentityFile <ssh-key-file-full-path>
+		ProxyJump Bastion Host</copy>
+    ```
+
+  > Note: Ideally, your SSH keys for your Bastion host and your web server should be different. So if your SSH key for the Bastion is in the /Users/JohnDoe/Documents/BastionHost folder, your web server's SSH key might be in the /Users/JohnDoe/Documents/WPServer folder.
+
+3. SSH into the WordPress server To verify the configuration
+
+  ```
+  ssh WordPressServer
+  ```
+
 ## Task 3: Installing Apache
 
 1. Install Apache app server
