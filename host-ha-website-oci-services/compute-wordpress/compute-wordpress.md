@@ -83,7 +83,7 @@ This lab assumes you have:
 3. SSH into the WordPress server To verify the configuration
 
   ```
-  ssh WordPressServer
+  <copy>ssh WordPressServer</copy>
   ```
 
 ## Task 3: Installing Apache

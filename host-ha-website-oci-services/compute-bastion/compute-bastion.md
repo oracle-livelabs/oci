@@ -89,7 +89,7 @@ This lab assumes you have:
 3. In your Terminal, change the directory to where your Bastion host's SSH Key is located
 
   ```
-  cd <ssh-key-path>
+  <copy>cd <ssh-key-path></copy>
   ```
 
 
@@ -136,7 +136,7 @@ This lab assumes you have:
 3. SSH into the Bastion host To verify the configuration
 
   ```
-  ssh BastionHost
+  <copy>ssh BastionHost</copy>
   ```
 
 
