@@ -75,7 +75,7 @@ This lab assumes you have:
 		User opc
 		Port 22
 		IdentityFile <ssh-key-file-full-path>
-		ProxyJump Bastion Host</copy>
+		ProxyJump BastionHost</copy>
     ```
 
   > Note: Ideally, your SSH keys for your Bastion host and your web server should be different. So if your SSH key for the Bastion is in the /Users/JohnDoe/Documents/BastionHost folder, your web server's SSH key might be in the /Users/JohnDoe/Documents/WPServer folder.
