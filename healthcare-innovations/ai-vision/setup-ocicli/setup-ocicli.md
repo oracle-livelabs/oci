@@ -3,7 +3,9 @@
 ## Introduction
 
 In this Lab, we will set up the OCI command line interface. This will help us upload images to the Object storage bucket. Later, we will use details such as User OCID, Fingerprint and others in the Oracle Apex front-end development lab.  
- 
+
+### About OCI CLI
+
 The CLI is a small-footprint tool you can use on its own or with the Console to complete Oracle Cloud Infrastructure tasks. The CLI provides the same core functionality as the Console, plus additional commands. Some of these, such as the ability to run scripts, extend Console functionality.
 
 Estimated time: 20 minutes
@@ -12,7 +14,7 @@ Estimated time: 20 minutes
 
 In this lab, you will:
 
-* Get Users OCID
+* Get User's OCID
 * Add User's API Key
 * Generate and Download RSA Key Pair in PEM format
 * Install OCI Command Line Interface

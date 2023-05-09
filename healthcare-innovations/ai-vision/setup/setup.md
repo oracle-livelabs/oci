@@ -4,11 +4,9 @@
 
 In this lab, we will set up the required policies to run through the workshop as non-administrative users. However, you can skip most parts of this lab if you have administrative access.
 
-Data labelling is the process of identifying properties (labels) of documents, text, and images (records) and annotating (labelling) them with those properties.  
+### About OCI Policies
 
-Many machine learning techniques require labeled data before they can be used to train machines to complete an autonomous task. Data labeling is an integral part of an Artificial Intelligence (AI) or Machine Learning (ML) project.
-
-Data Labeling lets you create and browse datasets, view data records (documents, text, and images), and apply labels to build AI/ML models. Datasets can be exported as line-delimited JSON for use in machine learning model development. Datasets are accessible and interoperable across other Data and AI services to support supervised training. For example, Oracle Cloud Infrastructure Language can be used to create specialized models, but only if labeled data is available for training the model. Data Labeling lets you quickly start labeling raw datasets with a minimal number of configuration steps. Thus, it also provides the data labeling experience for Oracle Cloud Infrastructure AI services.
+If you're just trying out Oracle Cloud Infrastructure or doing a proof-of-concept project with infrastructure resources, you may not need more than a few administrators with full access to everything. In that case, you can simply create any new users you need and add them to the Administrators group. The users will be able to do anything with any kind of resource. And you can create all your resources directly in the tenancy (the root compartment). You don't need to create any compartments yet, or any other policies beyond the Tenant Admin Policy, which automatically comes with your tenancy and can't be changed.
 
 Estimated time: 30 minutes
 
