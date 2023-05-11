@@ -88,7 +88,7 @@ This lab assumes you have:
 
 ## Task 3: Installing Apache
 
-1. Install Apache app server
+1. Install Apache HTTP Server and php. 
 
 
 
@@ -97,6 +97,7 @@ This lab assumes you have:
     <copy>sudo yum install httpd -y</copy>
     ```
 
+2. Enable and start Apache HTTP Server
     ```
     <copy>sudo systemctl enable httpd</copy>
     ```
@@ -105,13 +106,24 @@ This lab assumes you have:
     <copy>sudo systemctl restart httpd</copy>
     ```
 
+3. Allow HTTP and HTTPS in the local IP tables firewall
     ```
     <copy>sudo firewall-cmd --permanent --add-port=80/tcp</copy>
     ```
 
     ```
+    <copy>sudo firewall-cmd --permanent --add-port=443/tcp</copy>
+    ```
+
+    ```
     <copy>sudo firewall-cmd --reload</copy>
     ```
+
+4. Test the info.php page on your web browser
+
+    Example: http://10.10.10.10
+
+  ![Image alt text](images/sample1.png)
 
 
 ## Task 4. Attaching Your WordPress Instance to Your Load Balancer and Connecting to Web Server
@@ -158,74 +170,65 @@ This lab assumes you have:
 
     ![Image alt text](images/sample.png)
 
-## Task 5. Install PHP
+## Task 5. Install PHP and other required packages
 
-1. Install php
+1. Install php and create a test php page
     ```
-    <copy>sudo dnf module install php:7.4 -y</copy>
-    ```
-
-    ```
-    <copy>sudo yum install php-cli php-mysqlnd php-zip php-gd php-mbstring php-xml php-json -y</copy>
-    ```
-
-    ```
-    <copy>php -v</copy>
-    ```
-
-    ```
-    <copy>php -m |grep mysql</copy>
+    <copy>sudo yum install -y php</copy>
     ```
 
     ```
     <copy>sudo systemctl restart httpd</copy>
     ```
 
-2. Create a test PHP file (info.php)
+2. Create a test PHP file
     ```
-    <copy>sudo nano /var/www/html/info.php</copy>
-    ```
-
-3. Add the following code to the editor and save the file (ctr + o) (ctl + x)
-    ```
-    <copy><?php
-    phpinfo();
-    ?></copy>
+    <copy>echo -e '<?php \nphpinfo();' | sudo tee /var/www/html/test.php</copy>
     ```
 
-4. Test the info.php page on your web browser
+3. Test the info.php page on your web browser
 
-    Example: http://10.10.10.10/info.php
+    Example: http://10.10.10.10/test.php
 
   ![Image alt text](images/sample1.png)
 
-## Task 6. Install WordPress
+4. Install MySQL and MySQL Shell
+    ```
+    <copy>sudo yum -y install https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm</copy>
+    ```
 
-1. Install required packages
+    ```
+    <copy>sudo yum -y install mysql-shell</copy>
+    ```
+
+5. Install other required packages for WordPress
   ```
-  <copy>sudo yum install -y php-mysqlnd php-zip php-gd php-mcrypt php-mbstring php-xml php-json</copy>
+  <copy>sudo yum install -y php-mysqlnd php-zip php-gd php-mbstring php-xml php-json</copy>
   ```
 
   ```
   <copy>sudo systemctl restart httpd</copy>
   ```
 
-2. Download the latest WordPress
+
+## Task 6. Install WordPress
+
+1. Download the latest WordPress
   ```
   <copy>curl -O https://wordpress.org/latest.tar.gz</copy>
   ```
 
-3. Extract latest.tar.gz to /var/www/html (Apache document root).
+2. Extract latest.tar.gz to /var/www/html (Apache document root).
   ```
   <copy>sudo tar zxf latest.tar.gz -C /var/www/html/ --strip 1</copy>
   ```
 
-4. Adjust ownership.
+3. Adjust ownership.
   ```
   <copy>sudo chown apache. -R /var/www/html/</copy>
   ```
 
-5. Create upload directory, adjust ownership.
+4. Create upload directory, adjust ownership.
   ```
   <copy>sudo mkdir /var/www/html/wp-content/uploads</copy>
   ```
@@ -234,29 +237,24 @@ This lab assumes you have:
   <copy>sudo chown apache:apache /var/www/html/wp-content/uploads</copy>
   ```
 
-6. Adjust SE Linux.
+5. Adjust SE Linux.
   ```
   <copy>sudo chcon -t httpd_sys_rw_content_t /var/www/html -R</copy>
   ```
 
-7. Allow Apache to connect to an external database.
+6. Allow Apache to connect to an external database.
   ```
   <copy>sudo setsebool -P httpd_can_network_connect_db 1</copy>
   ```
 
-## Task 7. Install MySQL Shell, and create the WordPress user and database
+## Task 7. Connect to MySQL Shell and create the WordPress user and database
 
-1. Install MySQL Shell and setup wordpress database
-  ```
-  <copy>sudo yum -y install mysql-shell</copy>
-  ```
-
-2. Connect to the MySql database service using MySQL Shell.
+1. Connect to the MySql database service using MySQL Shell.
   ```
   <copy>mysqlsh --sql -u admin -h <MDS end point IP></copy>
   ```
 
-3. Create WordPress database and user.
+2. Create WordPress database and user.
   ```
   <copy>create database wordpress;</copy>
   ```

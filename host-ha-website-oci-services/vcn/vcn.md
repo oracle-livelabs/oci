@@ -92,14 +92,23 @@ In this lab, you will:
 
   ![Image alt text](images/private-sl-add-ingress.png)
 
-4. Add the following rule for HTTP connections
+4. Add the following rules for HTTP connections
 
 
-
+    Rule 1
     - Stateless: unchecked
     - Source CIDR: 10.0.0.0/24 (CIDR block for public subnet)
     - IP Protocol: TCP
     - Destination Port: 80
+    - Description: Allows HTTP Access from the Public Subnet Only
+
+
+
+    Rule 2
+    - Stateless: unchecked
+    - Source CIDR: 10.0.0.0/24 (CIDR block for public subnet)
+    - IP Protocol: TCP
+    - Destination Port: 443
     - Description: Allows HTTP Access from the Public Subnet Only
 
   ![Image alt text](images/privatesl-httprule.png)
@@ -113,7 +122,7 @@ In this lab, you will:
     - Source CIDR: 0.0.0.0/0
     - IP Protocol: TCP
     - Destination Port: 3306, 33060
-    - Description: Allows MySQL Port Access
+    - Description: Allows MySQL(X) Port Access
 
   ![Image alt text](images/private-sl-mysql.png)
 
@@ -128,15 +137,25 @@ In this lab, you will:
 
   ![Image alt text](images/security-list-public-subnet.png)
 
-7. Click 'Add Ingress Rules' and add the following rule for HTTP connections
+7. Click 'Add Ingress Rules' and add the following rules for HTTP connections
 
 
 
+    Rule 1
     - Stateless: unchecked
     - Source CIDR: 0.0.0.0/0
     - IP Protocol: TCP
     - Destination Port: 80
-    - Description: Allows HTTPs Access from the Public Internet
+    - Description: Allows HTTP Access from the Public Internet
+
+
+
+    Rule 2
+    - Stateless: unchecked
+    - Source CIDR: 0.0.0.0/0
+    - IP Protocol: TCP
+    - Destination Port: 443
+    - Description: Allows HTTP Access from the Public Internet
 
   ![Image alt text](images/publicsl-httprule.png)
 
