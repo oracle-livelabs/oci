@@ -119,12 +119,6 @@ This lab assumes you have:
     <copy>sudo firewall-cmd --reload</copy>
     ```
 
-4. Test the info.php page on your web browser
-
-    Example: http://10.10.10.10
-
-  ![Image alt text](images/sample1.png)
-
 
 ## Task 4. Attaching Your WordPress Instance to Your Load Balancer and Connecting to Web Server
 
@@ -186,7 +180,7 @@ This lab assumes you have:
     <copy>echo -e '<?php \nphpinfo();' | sudo tee /var/www/html/test.php</copy>
     ```
 
-3. Test the info.php page on your web browser
+3. Test the info.php page on your web browser using the load balancer's IP address
 
     Example: http://10.10.10.10/test.php
 
@@ -256,15 +250,19 @@ This lab assumes you have:
 
 2. Create WordPress database and user.
     ```
-    <copy>create database wordpress;</copy>
+    <copy>create database wordpressdb;</copy>
     ```
 
     ```
-    <copy>create user wp IDENTIFIED BY 'Welcome#12345';</copy>
+    <copy>create user 'wpuser'@'%'  IDENTIFIED BY 'Welcome#12345';</copy>
     ```
 
     ```
-    <copy>GRANT ALL PRIVILEGES ON wordpress.* To wp;</copy>
+    <copy>GRANT ALL PRIVILEGES ON wordpress.* To 'wpuser'@'%’;</copy>
+    ```
+
+    ```
+    <copy>ALTER USER 'wpuser2'@'%' IDENTIFIED WITH mysql_native_password BY 'Welcome#12345';</copy>
     ```
 
     ```
@@ -273,7 +271,7 @@ This lab assumes you have:
 
 ## Task 8. Configure WordPress
 
-1. From a browser access http://instance public IP/wp-admin/setup-config.php.
+1. From a browser access http://load-balancer-ip-address/wp-admin/setup-config.php.
 
 2. Click Let’s Go.
 

@@ -119,10 +119,10 @@ In this lab, you will:
 
     - Stateless: unchecked
     - Direction: Ingress
-    - Source CIDR: 0.0.0.0/0
+    - Source CIDR: 10.0.1.0/24
     - IP Protocol: TCP
     - Destination Port: 3306, 33060
-    - Description: Allows MySQL(X) Port Access
+    - Description: Allows MySQL(X) Port Access from Private Subnet Only
 
   ![Image alt text](images/private-sl-mysql.png)
 
