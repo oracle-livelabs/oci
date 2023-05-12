@@ -63,9 +63,9 @@ This lab assumes you have:
 
 1. Go into the config file
 
-  ```
-  <copy>nano ~/.ssh/config</copy>
-  ```
+    ```
+    <copy>nano ~/.ssh/config</copy>
+    ```
 
 2. Add the Bastion's host configuration using the following format
 
@@ -82,9 +82,9 @@ This lab assumes you have:
 
 3. SSH into the WordPress server To verify the configuration
 
-  ```
-  <copy>ssh WordPressServer</copy>
-  ```
+    ```
+    <copy>ssh WordPressServer</copy>
+    ```
 
 ## Task 3: Installing Apache
 
@@ -202,74 +202,74 @@ This lab assumes you have:
     ```
 
 5. Install other required packages for WordPress
-  ```
-  <copy>sudo yum install -y php-mysqlnd php-zip php-gd php-mbstring php-xml php-json</copy>
-  ```
+    ```
+   <copy>sudo yum install -y php-mysqlnd php-zip php-gd php-mbstring php-xml php-json</copy>
+    ```
 
-  ```
-  <copy>sudo systemctl restart httpd</copy>
-  ```
+    ```
+    <copy>sudo systemctl restart httpd</copy>
+    ```
 
 
 ## Task 6. Install WordPress
 
 1. Download the latest WordPress
-  ```
-  <copy>curl -O https://wordpress.org/latest.tar.gz</copy>
-  ```
+    ```
+    <copy>curl -O https://wordpress.org/latest.tar.gz</copy>
+    ```
 
 2. Extract latest.tar.gz to /var/www/html (Apache document root).
-  ```
-  <copy>sudo tar zxf latest.tar.gz -C /var/www/html/ --strip 1</copy>
-  ```
+    ```
+    <copy>sudo tar zxf latest.tar.gz -C /var/www/html/ --strip 1</copy>
+    ```
 
 3. Adjust ownership.
-  ```
-  <copy>sudo chown apache. -R /var/www/html/</copy>
-  ```
+    ```
+    <copy>sudo chown apache. -R /var/www/html/</copy>
+    ```
 
 4. Create upload directory, adjust ownership.
-  ```
-  <copy>sudo mkdir /var/www/html/wp-content/uploads</copy>
-  ```
+    ```
+    <copy>sudo mkdir /var/www/html/wp-content/uploads</copy>
+    ```
 
-  ```
-  <copy>sudo chown apache:apache /var/www/html/wp-content/uploads</copy>
-  ```
+    ```
+    <copy>sudo chown apache:apache /var/www/html/wp-content/uploads</copy>
+    ```
 
 5. Adjust SE Linux.
-  ```
-  <copy>sudo chcon -t httpd_sys_rw_content_t /var/www/html -R</copy>
-  ```
+    ```
+    <copy>sudo chcon -t httpd_sys_rw_content_t /var/www/html -R</copy>
+    ```
 
 6. Allow Apache to connect to an external database.
-  ```
-  <copy>sudo setsebool -P httpd_can_network_connect_db 1</copy>
-  ```
+    ```
+    <copy>sudo setsebool -P httpd_can_network_connect_db 1</copy>
+    ```
 
 ## Task 7. Connect to MySQL Shell and create the WordPress user and database
 
 1. Connect to the MySql database service using MySQL Shell.
-  ```
-  <copy>mysqlsh --sql -u admin -h <MDS end point IP></copy>
-  ```
+    ```
+    <copy>mysqlsh --sql -u admin -h <MDS end point IP></copy>
+    ```
 
 2. Create WordPress database and user.
-  ```
-  <copy>create database wordpress;</copy>
-  ```
+    ```
+    <copy>create database wordpress;</copy>
+    ```
 
-  ```
-  <copy>create user wp IDENTIFIED BY 'Welcome#12345';</copy>
-  ```
+    ```
+    <copy>create user wp IDENTIFIED BY 'Welcome#12345';</copy>
+    ```
 
-  ```
-  <copy>GRANT ALL PRIVILEGES ON wordpress.* To wp;</copy>
-  ```
+    ```
+    <copy>GRANT ALL PRIVILEGES ON wordpress.* To wp;</copy>
+    ```
 
-  ```
-  <copy>\q</copy>
-  ```
+    ```
+    <copy>\q</copy>
+    ```
 
 ## Task 8. Configure WordPress
 
