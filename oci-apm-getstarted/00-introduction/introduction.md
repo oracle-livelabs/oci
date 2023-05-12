@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-In this workshop, you will learn how to use Oracle Cloud APM to detect a performance issue from a cloud-native application, analyze the symptoms and identify the root cause.
+In this workshop, you will learn how to use Oracle Cloud APM to detect a performance issue from a cloud-native application, analyze the symptoms and identify the root cause. 
 
 You will examine performance alarms in the APM Home dashboard, observe activities in the out-of-the-box performance widgets in the Synthetic Monitors dashboard, inspect client details in the HTTP Archive (HAR) file, and finally explore the server-side details using the APM Trace Explorer.
 
