@@ -258,11 +258,11 @@ This lab assumes you have:
     ```
 
     ```
-    <copy>GRANT ALL PRIVILEGES ON wordpress.* To 'wpuser'@'%’;</copy>
+    <copy>GRANT ALL PRIVILEGES ON wordpressdb.* To 'wpuser'@'%’;</copy>
     ```
 
     ```
-    <copy>ALTER USER 'wpuser2'@'%' IDENTIFIED WITH mysql_native_password BY 'Welcome#12345';</copy>
+    <copy>ALTER USER 'wpuser'@'%' IDENTIFIED WITH mysql_native_password BY 'Welcome#12345';</copy>
     ```
 
     ```
