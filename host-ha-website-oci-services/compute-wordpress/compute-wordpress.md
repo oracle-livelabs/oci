@@ -152,9 +152,9 @@ This lab assumes you have:
 
 6. Click 'Add'
 
-7. Wait for the work request to finish
+7. Wait for the work request to finish and for the health check to return "OK"
 
-  ![Image alt text](images/sample.png)
+  ![Image alt text](images/wp-lb-instance-added.png)
 
 8. Test the Apache Server using the Load Balancer's Public IP on your Web Browser
 
@@ -162,7 +162,7 @@ This lab assumes you have:
 
     Example: http://10.10.10.10
 
-    ![Image alt text](images/sample.png)
+    ![Image alt text](images/wp-lb-apache-page.png)
 
 ## Task 5. Install PHP and other required packages
 
@@ -177,14 +177,14 @@ This lab assumes you have:
 
 2. Create a test PHP file
     ```
-    <copy>echo -e '<?php \nphpinfo();' | sudo tee /var/www/html/test.php</copy>
+    <copy>echo -e '<?php \nphpinfo();' | sudo tee /var/www/html/info.php</copy>
     ```
 
 3. Test the info.php page on your web browser using the load balancer's IP address
 
-    Example: http://10.10.10.10/test.php
+    Example: http://10.10.10.10/info.php
 
-  ![Image alt text](images/sample1.png)
+  ![Image alt text](images/wp-php-page.png)
 
 4. Install MySQL and MySQL Shell
     ```
@@ -273,9 +273,11 @@ This lab assumes you have:
 
 1. From a browser access http://load-balancer-ip-address/wp-admin/setup-config.php.
 
+  ![Image alt text](images/wp-welcome-config-php.png)
+
 2. Click Let’s Go.
 
-3. Fill the following information:
+3. Fill the following information for the database connection and then click Submit:
 
 
 
@@ -285,17 +287,36 @@ This lab assumes you have:
     - Database Host: MySQL Database Service IP address
     - Table Prefix: leave as is. only need to change if multiple WordPress running on the same database
 
+  ![Image alt text](images/wp-db-connection.png)
+
 4. Click Run the installation.
 
-5. Fill the following information in the welcome screen:
+  ![Image alt text](images/wp-run-installation.png)
+
+5. Fill the following information in the welcome screen then click Install WordPress:
 
 
 
     - Site Title: WordPress site title
-    - Username: WordPress admin
-    - Password: WordPress admin password
+    - Username: WordPress website user
+    - Password: WordPress website password
     - Your Email: your email
     - Click Install WordPress.
+
+    ![Image alt text](images/wp-welcome-page.png)
+
+6. Click Log In
+
+  ![Image alt text](images/wp-success-install.png)
+
+7. Log in with the Wordpress website user and password you just created
+
+  ![Image alt text](images/wp-login-page.png)
+
+7. Congratulations! You have now installed WordPress!
+
+  ![Image alt text](images/wp-dashboard.png)
+
 
 
     You may now follow the instructions on:

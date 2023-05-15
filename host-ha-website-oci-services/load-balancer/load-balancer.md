@@ -74,7 +74,7 @@ This lab assumes you have:
 
 
   Ensure the following are set:
-    - Protocol: HTTP
+    - Protocol: TCP
     - Port: 80
 
   ![Image alt text](images/loadbalancer-healthcheck.png)
@@ -88,7 +88,7 @@ This lab assumes you have:
 
 
     - Name: WordPressLB_Listener
-    - Traffic: HTTP
+    - Traffic: TCP
     - Port: 80
 
   ![Image alt text](images/load-balancer-listener.png)
