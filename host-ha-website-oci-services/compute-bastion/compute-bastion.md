@@ -4,7 +4,7 @@
 
 This lab will walk you through how to create Compute instances. More specifically, it will show you how to create a Bastion host in a public subnet that will used to connect to resources in a private subnet.
 
-Estimated Lab Time: -- minutes
+Estimated Lab Time: 10 minutes
 
 ### Objectives
 

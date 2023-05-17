@@ -2,99 +2,92 @@
 
 ## Introduction
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
+This lab will walk you through using your domain name (acquired through a third-party domain name registrar) with Oracle DNS to point to your load balancer's public IP address.
 
-Estimated Time: -- minutes
+Estimated Time: 10 minutes
 
-### About <Product/Technology> (Optional)
-Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than two sections/paragraphs, please utilize the "Learn More" section.
+### About Domain Name Registrars and Oracle Domain Name System (DNS)
+A
 
 ### Objectives
 
-*List objectives for this lab using the format below*
-
 In this lab, you will:
-* Objective 1
-* Objective 2
-* Objective 3
+* Create a DNS zone on OCI and add an A record
+* Change name servers through the domain name registrar
+* Access your load balancer via your domain name
 
 ### Prerequisites (Optional)
-
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. Do NOT list each previous lab as a prerequisite.*
 
 This lab assumes you have:
 * An Oracle Cloud account
 * All previous labs successfully completed
+* A domain name you've acquired through a third-party domain name registrar
+
+## Task 1: Create a DNS Zone
+
+Once you have bought a domain name you wish to use for you site, you are ready to use Oracle DNS.
+
+1. Click Navigation
 
 
-*Below, is the "fold"--where items are collapsed by default.*
 
-## Task 1: Concise Task Description
+  Select Networking
 
-(optional) Task 1 opening paragraph.
 
-1. Step 1
 
-	![Image alt text](images/sample1.png)
+  Under DNS Management, click Zones
 
-  To create a link to local file you want the reader to download, use the following formats. _The filename must be in lowercase letters and CANNOT include any spaces._
+	![Image alt text](images/networking-dns-zones.png)
 
-	Download the [starter file](files/starter-file.sql) SQL code.
+2. Click Create Zone
 
-	When the file type is recognized by the browser, it will attempt to render it. So you can use the following format to force the download dialog box.
+  ![Image alt text](images/dns-create-zone.png)
 
-	Download the [sample JSON code](files/sample.json?download=1).
+3. Fill out the information for the public zone
 
-  > Note: do not include zip files, CSV, PDF, PSD, JAR, WAR, EAR, bin, or exe files - you must have those objects stored somewhere else. We highly recommend using Oracle Cloud Object Store and creating a PAR URL instead. See [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/en-us/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
+    - Method: Manual
+    - Zone Type: Primary
+    - Zone name: **Your domain name**
 
-2. Step 2
+  ![Image alt text](images/dns-zone-manual.png)
 
-  ![Image alt text](images/sample1.png)
 
-4. Example with inline navigation icon ![Image alt text](images/sample2.png) click **Navigation**.
 
-5. Example with bold **text**.
+  Optionally, you cannot import your Zone File if you already have records set up.
 
-   If you add another paragraph, add 3 spaces before the line.
+  ![Image alt text](images/dns-zone-import.png)
 
-## Task 2: Concise Task Description
+4. Wait for the Zone to finish provisioning and take note of the 4 nameservers for your zone.
 
-1. Step 1 - tables sample
+  ![Image alt text](images/dns-zone-provisioning.png)
 
-  Use tables sparingly:
+5. Through your Domain Name Registrar, go to the DNS management and change the nameservers to the 4 OCI nameservers listed in your zone.
 
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
+  ![Image alt text](images/dns-registrar-change-ns.png)
 
-2. You can also include bulleted lists - make sure to indent 4 spaces:
+  > Note: Depending on the domain registrar, it could take a while for the nameservers to be redirected to OCI.
 
-    - List item 1
-    - List item 2
+6. Your domain is now managed by OCI! Now, go to Records in your OCI zone and click Manage Records.
 
-3. Code examples
+  ![Image alt text](images/dns-manage-records.png)
 
-    ```
-    Adding code examples
-  	Indentation is important for the code example to appear inside the step
-    Multiple lines of code
-  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
-    ```
+7. Click Add Record and fill in the following information and then add record:
 
-4. Code examples that include variables
+    - Type: A - IPv4 Address
+    - TTL: 3600 (leave as default)
+    - RDATA Address: **your load balancer's IP address**
 
-	```
-  <copy>ssh -i <ssh-key-file></copy>
-  ```
+  ![Image alt text](images/dns-add-record.png)
 
-## Learn More
+8. Click Publish Changes and then confirm
 
-*(optional - include links to docs, white papers, blogs, etc)*
+  ![Image alt text](images/dns-publish-record.png)
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+9. Now that your A record shows up in your zone, use your domain name in your web browser to check it points to your WordPress instance through the load balancer.
+
+  ![Image alt text](images/dns-wordpress.png)
+
+10. Congratulations! You have successfully got started with Oracle DNS
 
 ## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer

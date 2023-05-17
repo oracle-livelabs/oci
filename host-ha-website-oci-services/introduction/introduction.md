@@ -4,11 +4,7 @@
 
 The labs in this workshop will guide you to set up a highly available and fully functional WordPress and MySQL Database architecture that can host your website on Oracle Cloud Infrastructure (OCI). At the end of this workshop, you will be ready to go ahead and start designing and using your website while having been introduced to some of OCI's core services and how they work together. 
 
-*Estimated Workshop Time:* X hours XX minutes.
-
-*You may add an option video, using this format: [](youtube:YouTube video id)*
-
-  [](youtube:zNKxJjkq0Pw)
+*Estimated Workshop Time:* 1 hours 20 minutes.
 
 ### Objectives
 
@@ -19,7 +15,6 @@ In this workshop, you will learn how to:
 * Provision a Compute Instance for the Bastion Host
 * Provision a Compute Instance for WordPress
 * Work with DNS
-* Configure Block Volumes
 * Use OS Management for Patching and Upgrading
 
 ### Prerequisites (Optional)
@@ -27,12 +22,11 @@ In this workshop, you will learn how to:
 This lab assumes you have:
 * An Oracle Cloud Account
 * A Web Browser
+* For the DNS lab, you will need a Domain Name acquired through a third-party registrar
 
 
 
 ## Learn More
-
-*(optional - include links to docs, white papers, blogs, etc)*
 
 * [URL text 1](http://docs.oracle.com)
 * [URL text 2](http://docs.oracle.com)

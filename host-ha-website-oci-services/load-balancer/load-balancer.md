@@ -4,7 +4,7 @@
 
 This lab will show you how to set up a load balancer for HTTP connections. You will be using this later to connect to the web server made on your WordPress instance in your private subnet.
 
-Estimated Lab Time: -- minutes
+Estimated Lab Time: 10 minutes
 
 ### Objectives
 

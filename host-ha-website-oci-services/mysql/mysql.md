@@ -4,7 +4,7 @@
 
 This lab will walk you through creating and configuring an Oracle MySQL Database Service instance.
 
-Estimated Time: -- minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 

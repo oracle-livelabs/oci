@@ -43,11 +43,7 @@
             "filename": "../../dns/dns.md"
         },
         {
-            "title": "Lab 7: Configuring Block Volumes",
-            "filename": "../../block-volumes/block-volumes.md"
-        },
-        {
-            "title": "Lab 8: Using OS Management For Patches and Updates",
+            "title": "Lab 7: Using OS Management For Patches and Updates",
             "filename": "../../os-management/os-management.md"
         },
         {
