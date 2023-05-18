@@ -47,8 +47,8 @@
             "filename": "../../os-management/os-management.md"
         },
         {
-            "title": "Lab 8: Creating an Instance Pool for High Availability",
-            "filename": "../../instance-pool/instance-pool.md"
+            "title": "Lab 8: Making Your WordPress Server Highly Available",
+            "filename": "../../high-availability/high-availability.md"
         },
         {
             "title": "Need Help?",

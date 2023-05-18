@@ -16,7 +16,7 @@ In this workshop, you will learn how to:
 * Provision a Compute Instance for WordPress
 * Work with DNS
 * Use OS Management for Patching and Upgrading
-* Configure an Instance Pool for High Availability
+* Make Your WordPress Server Highly Available
 
 ### Prerequisites (Optional)
 
