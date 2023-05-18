@@ -2,91 +2,195 @@
 
 ## Introduction
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
+This lab will walk you through enabling the OS Management service on your WordPress instance and show you how you can download software packages for upgrading and patching. The OS Management agent is a useful tool that will help you in future development as well as providing you suggested package updates for a variety of reasons. Currently, it will recommend updates based on one of the following reasons: Security, Bug, Enhancement, or Other. The tool will let you install these and any other packages you want to install based on a schedule you can define.
 
 Estimated Time: 15 minutes
 
-### About <Product/Technology> (Optional)
-Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than two sections/paragraphs, please utilize the "Learn More" section.
-
 ### Objectives
 
-*List objectives for this lab using the format below*
-
 In this lab, you will:
-* Objective 1
-* Objective 2
-* Objective 3
+* Enable the OS Management service
+* Download software packages to your instance
 
 ### Prerequisites (Optional)
-
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. Do NOT list each previous lab as a prerequisite.*
 
 This lab assumes you have:
 * An Oracle Cloud account
 * All previous labs successfully completed
 
+## Task 1: Create a Dynamic Group For Your WordPress Instance(s)
 
-*This is the "fold" - below items are collapsed by default*
+1. Click Navigation
 
-## Task 1: Concise Task Description
 
-(optional) Task 1 opening paragraph.
 
-1. Step 1
+  Select Identity & Security
 
-	![Image alt text](images/sample1.png)
 
-	> **Note:** Use this format for notes, hints, and tips. Only use one "Note" at a time in a step.
 
-2. Step 2
+  Under Identity, select Domains
 
-  ![Image alt text](images/sample1.png)
+	![Image alt text](images/osm-identity-domains.png)
 
-4. Example with inline navigation icon ![Image alt text](images/sample2.png) click **Navigation**.
+2. Click the "Default" domain or optionally create a new domain
 
-5. Example with bold **text**.
+  ![Image alt text](images/osm-default-domain.png)
 
-   If you add another paragraph, add 3 spaces before the line.
+3. Go to Dynamic Groups and click "Create dynamic group"
 
-## Task 2: Concise Task Description
+  ![Image alt text](images/osm-create-dynamicgroup.png)
 
-1. Step 1 - tables sample
+4. Fill out the dynamic group name and matching rules
 
-  Use tables sparingly:
 
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
 
-2. You can also include bulleted lists - make sure to indent 4 spaces:
+  For the dynamic group matching rules, you can either include individual instance through their instance OCID, or include every instance inside a compartment by the compartment's OCID. Use the rule(s) you prefer. However, this lab will use the compartment for the rule.
 
-    - List item 1
-    - List item 2
-
-3. Code examples
-
-    ```
-    Adding code examples
-  	Indentation is important for the code example to appear inside the step
-    Multiple lines of code
-  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
-    ```
-
-4. Code examples that include variables
-
-	```
-  <copy>ssh -i <ssh-key-file></copy>
+  ```
+  <copy>Any {instance.compartment.id = 'ocid1.compartment.oc1..exampleuniqueid’}</copy>
   ```
 
-## Learn More
+  ![Image alt text](images/osm-dynamicgroup-rules.png)
 
-*(optional - include links to docs, white papers, blogs, etc)*
+  > Note: You can find the instance or compartment OCID by navigating to the respective OCI console page.
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+5. Click Create
+
+  ![Image alt text](images/osm-dynamicgroup.png)
+
+## Task 2: Create Required Policies
+
+1. Click Navigation
+
+
+
+  Select Identity & Security
+
+
+
+  Under Identity, select Policies
+
+	![Image alt text](images/osm-identity-policies.png)
+
+2. Click Create Policy
+
+3. Fill out the following policy information:
+
+    - Name: WordPressDG-OSM-Access
+    - Description: WordPress Dynamic Group access for OS Management Service
+    - Compartment: Select your compartment
+    - Show manual editor: On
+    - Policy Builder: Insert the following 2 lines
+
+  ```
+  <copy>Allow dynamic-group <dynamic_group_name> to read instance-family in compartment <compartment_name></copy>
+  ```
+
+  ```
+  <copy>Allow dynamic-group <dynamic_group_name> to use osms-managed-instances in compartment <compartment_name></copy>
+  ```
+
+  ![Image alt text](images/osm-create-policy.png)
+
+4. Click Create
+
+  ![Image alt text](images/osm-access-policy.png)
+
+5. Create one more policy using the following info:
+
+    - Name: OSM-Service-Read
+    - Description: Allow OS Management Service to read instances
+    - Compartment: Select your root compartment
+    - Show manual editor: On
+    - Policy Builder: Insert the following line
+
+  ```
+  <copy>Allow service osms to read instances in tenancy</copy>
+  ```
+
+  ![Image alt text](images/osm-create-policy2.png)
+
+6. Click Create
+
+  ![Image alt text](images/osm-serviceread-policy.png)
+
+## Task 3: Enable OS Management On Your Compute Instance
+
+1. Go to your WordPress compute instance console page
+
+2. Under the Oracle Cloud Agent tab, enable the OS Management Agent if not already enabled.
+
+  ![Image alt text](images/osm-agent-enable.png)
+
+3. In your terminal, SSH into your WordPress instance like you did in the previous labs.
+
+  ```
+  <copy>ssh WordPressServer</copy>
+  ```
+
+4. Restart the Oracle Cloud Agent by running the following command:
+
+  ```
+  <copy>sudo systemctl restart oracle-cloud-agent.service</copy>
+  ```
+
+  > Note: It can take up to 10 minutes for the change to take effect.
+
+5. Validate whether your instance can reach the OS Management ingestion service.
+
+  ```
+  <copy>curl https://ingestion.osms.<region>.oci.oraclecloud.com/</copy>
+  ```
+
+
+
+  For <region>, specify the region identifier (for example, us-phoenix-1). See [Regions and Availability Domains](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm) for more information about region identifiers.
+
+
+
+  The 403 Forbidden status code message is expected in the output.
+
+  ![Image alt text](images/osm-validate-service.png)
+
+6. Check if the OSM Agent is enabled and active using:
+
+  ```
+  <copy>systemctl is-enabled oracle-cloud-agent && systemctl is-active oracle-cloud-agent</copy>
+  ```
+
+7. Back on the OCI console WordPress page, go to OS Management under Resources.
+
+  ![Image alt text](images/osm-compute-page.png)
+
+## Task 4: Installing Recommended Packages with OS Management
+
+1. Select the 3 dots on the right of the OS Management section, and click View OS Management details.
+
+2. On the OS Management instance page, take note of the suggested package updates.
+
+  ![Image alt text](images/osm-instance-osmdetails.png)
+
+
+
+  Clicking the links under the version and the notice type will provide you more information about the packages, affected modules, and affected OSM-enabled instances. Also notice the type of recommendation, which can be one of four: Security, Bug, Enhancement, or Other.
+
+3. Select the recommended security update and then click Install Updates.
+
+  ![Image alt text](images/osm-install-updates.png)
+
+4. Notice you can install now or on a custom schedule. For this lab, choose Install Now and then click Install Package Update.
+
+  ![Image alt text](images/osm-install-now.png)
+
+  ![Image alt text](images/osm-custom-schedule.png)
+
+5. Your packages should now be installing. Wait for them to finish.
+
+  ![Image alt text](images/osm-install-inprogress.png)
+
+6. Success! You have successfully installed a recommended package using the OS Management service.
+
+  ![Image alt text](images/osm-install-success.png)
 
 * **Author** - Bernie Castro, Cloud Engineer
 * **Last Updated By/Date** - Bernie Castro, May 2023

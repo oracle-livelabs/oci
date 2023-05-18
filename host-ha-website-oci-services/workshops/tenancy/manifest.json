@@ -47,6 +47,10 @@
             "filename": "../../os-management/os-management.md"
         },
         {
+            "title": "Lab 8: Creating an Instance Pool for High Availability",
+            "filename": "../../instance-pool/instance-pool.md"
+        },
+        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"

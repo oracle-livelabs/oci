@@ -83,11 +83,11 @@ Once you have bought a domain name you wish to use for you site, you are ready t
 
   ![Image alt text](images/dns-publish-record.png)
 
-9. Now that your A record shows up in your zone, use your domain name in your web browser to check it points to your WordPress instance through the load balancer.
+9. Now that your A record shows up in your zone, use your domain name in your web browser to check that it points to your WordPress instance through the load balancer.
 
   ![Image alt text](images/dns-wordpress.png)
 
-10. Congratulations! You have successfully got started with Oracle DNS
+10. Congratulations! You have successfully got set up Oracle DNS
 
 ## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer
