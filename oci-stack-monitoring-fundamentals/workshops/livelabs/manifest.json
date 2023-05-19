@@ -17,7 +17,6 @@
             "description": "Access the Stack Monitoring workshop environment",
             "filename": "../../access-env/access-env.md"
         },
-
         {
             "title": "Lab 2: Enterprise Summary",
             "description": "Get to know Stack Monitoring's Enterprise Summary",
@@ -27,6 +26,21 @@
             "title": "Lab 3: Resource Homepages",
             "description": "Get to know Stack Monitoring's Resource Homepages",
             "filename": "../../homepages/homepages.md"
+        },
+        {
+            "title": "Lab 4: Resource Discovery",
+            "description": "Review Stack Monitoring's Resource Discovery Process",
+            "filename": "../../discovery/discovery.md"
+        },
+        {
+            "title": "Lab 5: Working with Alarms",
+            "description": "Review Stack Monitoring's Resource Discovery Process",
+            "filename": "../../alarms/alarms.md"
+        },
+        {
+            "title": "Lab 6: Putting it all together",
+            "description": "Get to know Stack Monitoring's Resource Homepages",
+            "filename": "../../together/together.md"
         },
         {
             "title": "Need Help?",
