@@ -107,6 +107,7 @@ This lab assumes you have:
 
   > Note: Notice the health check on the load balancer. This is because no backend sets have been added yet. You can ignore this for now since you will add backends in later labs.
 
+You may now **proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer

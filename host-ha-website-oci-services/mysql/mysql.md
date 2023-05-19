@@ -90,6 +90,8 @@ This lab assumes you have:
 
     ![Image alt text](images/mysql-ip-address.png)
 
+You may now **proceed to the next lab.**
+
 ## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer
 * **Last Updated By/Date** - Bernie Castro, May 2023

@@ -133,12 +133,13 @@ This lab assumes you have:
 		IdentityFile <ssh-key-file-full-path></copy>
     ```
 
-3. SSH into the Bastion host To verify the configuration
+3. SSH into the Bastion host to verify the configuration
 
   ```
   <copy>ssh BastionHost</copy>
   ```
 
+You may now **proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer

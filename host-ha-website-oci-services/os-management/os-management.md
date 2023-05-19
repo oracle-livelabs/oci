@@ -192,5 +192,7 @@ This lab assumes you have:
 
   ![Image alt text](images/osm-install-success.png)
 
+You may now **proceed to the next lab.**
+
 * **Author** - Bernie Castro, Cloud Engineer
 * **Last Updated By/Date** - Bernie Castro, May 2023

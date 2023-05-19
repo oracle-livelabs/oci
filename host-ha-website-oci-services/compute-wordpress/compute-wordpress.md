@@ -322,6 +322,8 @@ This lab assumes you have:
     You may now follow the instructions on:
       * First Steps with WordPress: https://wordpress.org/documentation/article/first-steps-with-wordpress-block-editor/
 
+You may now **proceed to the next lab.**
+
 ## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer
 * **Last Updated By/Date** - Bernie Castro, May 2023

@@ -177,7 +177,7 @@ In this lab, you will:
   For example, if you only wanted your local computer to SSH into the public subnet's resources:
    - 10.10.10.10/32
 
-Congratulations! You have successfully set up your VCN! Please proceed with the next lab
+Congratulations! You have successfully set up your VCN! You may now **proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - <Bernie Castro, Cloud Engineer>

@@ -89,6 +89,8 @@ Once you have bought a domain name you wish to use for you site, you are ready t
 
 10. Congratulations! You have successfully got set up Oracle DNS
 
+You may now **proceed to the next lab.**
+
 ## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer
 * **Last Updated By/Date** - Bernie Castro, May 2023
