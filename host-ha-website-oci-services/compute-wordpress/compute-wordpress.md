@@ -4,7 +4,7 @@
 
 This lab will walk you through how to create a new compute instance to host your WordPress site and how to connect to it using the Bastion host created in the previous lab. You will also shown how to connect to the WordPress web page by using the Load Balancer also created in a previous lab.
 
-Estimated Lab Time: 20 minutes
+Estimated Lab Time: 15 minutes
 
 ### Objectives
 

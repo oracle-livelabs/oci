@@ -4,7 +4,7 @@
 
 This lab will walk you through enabling the OS Management service on your WordPress instance and show you how you can download software packages for upgrading and patching. The OS Management agent is a useful tool that will help you in future development as well as providing you suggested package updates for a variety of reasons. Currently, it will recommend updates based on one of the following reasons: Security, Bug, Enhancement, or Other. The tool will let you install these and any other packages you want to install based on a schedule you can define.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
