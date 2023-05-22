@@ -25,13 +25,6 @@ This lab assumes you have:
 * A Web Browser
 * For the DNS lab, you will need a domain name acquired through a third-party registrar
 
-
-
-## Learn More
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
-
 ## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer
 * **Contributors** - Puru Patel, Cloud Engineer
