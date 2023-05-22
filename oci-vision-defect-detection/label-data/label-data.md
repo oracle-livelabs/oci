@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will focus on labeling pictures of stacked pipes using OCI Data Labeling, so that your own custom OCI Vision model can be later created and trained.
+In this lab, you will focus on labeling pictures of utility poles with rust using OCI Data Labeling. The OCI Vision service will later use these images to train a custom OCI Vision model.
 
 Estimated Time: 20 minutes
 
@@ -16,10 +16,10 @@ Watch the video below for a quick walk-through of the lab.
 
 ## Task 1: Download the model training images
 
-1. Click [here](https://github.com/oracle-livelabs/oci/raw/main/oci-vision-inventory/images/model/pipes_samples.zip) to download the ZIP file containing the sample pictures. 
+1. Click [here](https://github.com/oracle-livelabs/oci/raw/main/oci-vision-defect-detection/images/model/utility_poles.zip) to download the ZIP file containing the sample pictures. 
 2. Extract the contents of the file to a location of your choice.
 
-## Task 2: Object Storage bucket creation 
+## Task 2: Object Storage bucket creation
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Storage** and then click **Buckets**. 
@@ -44,7 +44,7 @@ Watch the video below for a quick walk-through of the lab.
    
    ![Creation of Data Labeling dataset - 3](../images/create_dataset3.png)
 
-7. Add a new label called 'pipe' by typing it in the label box, and click **Next**.
+7. Add a new label called 'rust' by typing it in the label box, and click **Next**.
 
    ![Creation of Data Labeling dataset - 4](../images/create_dataset4.png)
 
@@ -60,9 +60,9 @@ Watch the video below for a quick walk-through of the lab.
 
    ![Labeling an image](../images/labeling_an_image.png)
    
-3. This task will be complete once all the images are labeled.
+3. Once all the images are labeled, you may **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Authors** - Mark Heffernan, Jason Monden, and Ted Basile
+* **Authors** - Mark Heffernan and Jason Monden
 * **Last Updated By/Date** - Mark Heffernan, May 2023

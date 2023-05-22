@@ -25,7 +25,7 @@ Watch the video below for a quick walk-through of the lab.
 
 4. Click **Create project**. Provide *vision-project* as name, select *vision-livelab* as compartment, and click **Create project**.
 
-## Task 2: Create the OCI Vision pipe detection model
+## Task 2: Create the OCI Vision rust detection model
 
 1. Once the project status is *Active*, select *vision-project*.
 2. While on the OCI Vision project details page, click **Create Model**.
@@ -38,8 +38,9 @@ Watch the video below for a quick walk-through of the lab.
 6. Choose *Quick training* and click **Next**.
    ![Creation of OCI Vision model - 2](../images/create_model2.png)
 7. Click **Create and train**. For this model, training will take about 20 minutes.
+8. Once the model is trained, you may **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Authors** - Mark Heffernan, Jason Monden, and Ted Basile
+* **Authors** - Mark Heffernan and Jason Monden
 * **Last Updated By/Date** - Mark Heffernan, May 2023

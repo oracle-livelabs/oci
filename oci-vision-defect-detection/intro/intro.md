@@ -15,5 +15,5 @@ In this workshop, you will:
 
 ## Acknowledgements
 
-* **Authors** - Mark Heffernan, Jason Monden, and Ted Basile
+* **Authors** - Mark Heffernan and Jason Monden
 * **Last Updated By/Date** - Mark Heffernan, May 2023

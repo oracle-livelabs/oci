@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will test the recently created OCI Vision model to recognize stacked pipes in a test picture. You will do so by accessing the existing user interface for model testing in the Oracle Cloud Console.
+In this lab, you will test the recently created OCI Vision model to recognize rust on utility poles in a test picture. You will do so by accessing the existing user interface for model testing in the Oracle Cloud Console.
 
 Estimated Time: 10 minutes
 
@@ -25,13 +25,13 @@ Watch the video below for a quick walk-through of the lab.
 
    ![Test the OCI Vision model - 1](../images/test_model1.png)
 
-3. You can view the JSON response on the right side of the screen. The JSON response includes the confidence values for each pipe that was identified.
+3. You can view the JSON response on the right side of the screen. The JSON response includes the confidence values for each instance of rust that was identified.
 
-   > **Note:** You may see in your test results that some objects were incorrectly labeled or some pipes were not labeled. This is because the dataset used to train the model in this lab is very small. The intent of this lab is to provide you with the knowledge of how to build a custom model with the OCI Vision service, not to build a production ready model. To build a production ready model, we recommend using a much larger dataset to train the model.
+   > **Note:** You may see in your test results that some objects were incorrectly labeled or some instances of rust were not labeled. This is because the dataset used to train the model in this lab is very small. The intent of this lab is to provide you with the knowledge of how to build a custom model with the OCI Vision service, not to build a production ready model. To build a production ready model, we recommend using a much larger dataset to train the model.
 
    ![Test the OCI Vision model - 2](../images/test_model2.png)
 
 ## Acknowledgements
 
-* **Authors** - Mark Heffernan, Jason Monden, and Ted Basile
+* **Authors** - Mark Heffernan and Jason Monden
 * **Last Updated By/Date** - Mark Heffernan, May 2023

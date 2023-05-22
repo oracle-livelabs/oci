@@ -108,7 +108,9 @@ In this task, you will create the required OCI IAM policy.
 
    ![OCI Vision object detection pretrained model](../images/oci_vision_pretrained_object_detection.png)
 
+5. Once you have confirmed access, you may **proceed to the next lab**.
+
 ## Acknowledgements
 
-* **Authors** - Mark Heffernan, Jason Monden, and Ted Basile
+* **Authors** - Mark Heffernan and Jason Monden
 * **Last Updated By/Date** - Mark Heffernan, May 2023
