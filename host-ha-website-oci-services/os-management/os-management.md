@@ -1,4 +1,4 @@
-# Using OS Management For Patches and Updates
+# Use OS Management For Patches and Updates
 
 ## Introduction
 
@@ -194,5 +194,6 @@ This lab assumes you have:
 
 You may now **proceed to the next lab.**
 
+## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer
 * **Last Updated By/Date** - Bernie Castro, May 2023

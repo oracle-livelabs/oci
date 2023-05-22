@@ -1,4 +1,4 @@
-# Setting Up a Load Balancer
+# Set Up a Load Balancer
 
 ## Introduction
 
@@ -99,11 +99,11 @@ This lab assumes you have:
 
 9. Accept default for logging and click 'Submit' to create the load balancer
 
-  ![Image alt text](loadbalancer-provisioning.png)
+  ![Image alt text](images/loadbalancer-provisioning.png)
 
 10. Once the Load Balancer is 'Active', take note of it's public IP address.
 
-  ![Image alt text](loadbalancer-active.png)
+  ![Image alt text](images/loadbalancer-active.png)
 
   > Note: Notice the health check on the load balancer. This is because no backend sets have been added yet. You can ignore this for now since you will add backends in later labs.
 

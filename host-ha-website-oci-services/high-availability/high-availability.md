@@ -1,4 +1,4 @@
-# Making Your WordPress Server Highly Available
+# Make Your WordPress Server Highly Available
 
 ## Introduction
 
@@ -76,5 +76,6 @@ This lab assumes you have:
 
   Congratulations! You have made your WordPress server available should one of the two utilized availability domains were to experience an outage. The same design could be implemented to a third availability domain or by using different fault domains to increase the server's availability. You can now simulate an outage by stopping one of the instances and trying to access the WordPress server through your domain name or load balancer IP. Repeat the process by stopping the other instance and then by stopping both instances.
 
+## Acknowledgements
 * **Author** - Bernie Castro, Cloud Engineer
 * **Last Updated By/Date** - Bernie Castro, May 2023

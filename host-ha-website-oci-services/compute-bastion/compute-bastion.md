@@ -1,4 +1,4 @@
-# Provisioning a Compute Instance and Using a Bastion Host
+# Provision a Compute Instance and Using a Bastion Host
 
 ## Introduction
 
@@ -100,9 +100,9 @@ This lab assumes you have:
   cd /
   ```
 
-  ``
+  ```
   cd/Users/JohnDoe/Documents/BastionHost
-  ``
+  ```
 
 4. SSH into the Bastion host using the following format
 

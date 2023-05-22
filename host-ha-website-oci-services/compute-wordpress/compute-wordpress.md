@@ -1,4 +1,4 @@
-# Provisioning a Compute Instances and Installing WordPress
+# Provision a Compute Instances and Installing WordPress
 
 ## Introduction
 

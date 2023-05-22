@@ -1,11 +1,11 @@
 {
-    "workshoptitle": "How to Host a Highly Available Website using OCI Core Services",
+    "workshoptitle": "Host a Highly Available Website using OCI Core Services",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
     "variables": ["../../variables/variables.json",
                  "../../variables/variables-in-another-file.json"],
-    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
@@ -18,47 +18,42 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Setting Up a Virtual Cloud Network",
+            "title": "Lab 1: Set Up a Virtual Cloud Network",
             "description": "Labs that follow the introduction are numbered, starting with Lab 1",
             "filename": "../../vcn/vcn.md"
         },
         {
-            "title": "Lab 2: Configuring a MySQL Database",
+            "title": "Lab 2: Configure a MySQL Database",
             "filename": "../../mysql/mysql.md"
         },
         {
-            "title": "Lab 3: Setting Up a Load Balancer",
+            "title": "Lab 3: Set Up a Load Balancer",
             "filename": "../../load-balancer/load-balancer.md"
         },
         {
-            "title": "Lab 4: Provisioning a Compute Instance and Using a Bastion Host",
+            "title": "Lab 4: Provision a Compute Instance and Using a Bastion Host",
             "filename": "../../compute-bastion/compute-bastion.md"
         },
         {
-            "title": "Lab 5: Provisioning a Compute Instance and Installing WordPress",
+            "title": "Lab 5: Provision a Compute Instance and Installing WordPress",
             "filename": "../../compute-wordpress/compute-wordpress.md"
         },
         {
-            "title": "Lab 6: Working with DNS",
+            "title": "Lab 6: Work with DNS",
             "filename": "../../dns/dns.md"
         },
         {
-            "title": "Lab 7: Using OS Management For Patches and Updates",
+            "title": "Lab 7: Use OS Management For Patches and Updates",
             "filename": "../../os-management/os-management.md"
         },
         {
-            "title": "Lab 8: Making Your WordPress Server Highly Available",
+            "title": "Lab 8: Make Your WordPress Server Highly Available",
             "filename": "../../high-availability/high-availability.md"
         },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
-        },
-        {
-            "title": "Other LiveLabs you might like",
-            "description": "Other LiveLabs you might like",
-            "filename": "../../other-livelabs/other-livelabs.md"
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
         }
     ]
 }

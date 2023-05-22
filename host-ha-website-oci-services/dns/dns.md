@@ -1,4 +1,4 @@
-# Working with DNS
+# Work with DNS
 
 ## Introduction
 

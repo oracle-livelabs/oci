@@ -1,4 +1,4 @@
-# Configuring a MySQL Database
+# Configure a MySQL Database
 
 ## Introduction
 
