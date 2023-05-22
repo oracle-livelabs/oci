@@ -92,13 +92,10 @@ Estimated time: 10 minutes
 
 	Having reviewed EBS application specific metrics, let's investigate the entire EBS application stack using the **Stack View**. Click the **Stack View** tab. 
 
-	The Stack View provides a holistic perspective of key performance metrics across an entire application and application stack technologies, a differentiated capability of Stack Monitoring. Within Stack View, you can observe an application including its key underlying components and technology stack all together in one place.
-
-	Stack View provides specially curated key performance metrics for the health and performance of the entire application. Let's begin by adjusting the time frame from the **Last 60 Minutes** to **Last 24 Hours**. Now expand each tier. With each tier expanded, you get a complete view of the performance of your EBS application.
-
-	EBS admins typically have an idea of the time it takes for a request to complete, and which requests run long. You can hover over a data point and perform correlation across the charts on the page. Reviewing the **EBS tier** you can review the five worst programs by average running time and max running time. 
-
-	Within the **Concurrent Manager tier**, you can see once again 100% of the Completed Concurrent Requests finished successfully. From the Concurrent Manager tier you can also identify if there are any long active concurrent requests.
+	* The Stack View provides a holistic perspective of key performance metrics across an entire application and application stack technologies, a differentiated capability of Stack Monitoring. Within Stack View, you can observe an application including its key underlying components and technology stack all together in one place.
+	* Stack View provides specially curated key performance metrics for the health and performance of the entire application. Let's begin by adjusting the time frame from the **Last 60 Minutes** to **Last 24 Hours**. Now expand each tier. With each tier expanded, you get a complete view of the performance of your EBS application.
+	* EBS admins typically have an idea of the time it takes for a request to complete, and which requests run long. You can hover over a data point and perform correlation across the charts on the page. Reviewing the **EBS tier** you can review the five worst programs by average running time and max running time. 
+	* Within the **Concurrent Manager tier**, you can see once again 100% of the Completed Concurrent Requests finished successfully. From the Concurrent Manager tier you can also identify if there are any long active concurrent requests.
 
 	![EBS Stack View, highlighting technology stack tiers](images/4-4-together.png " ")
 
@@ -116,7 +113,12 @@ Estimated time: 10 minutes
 
 ## Conclusion
 
-Overall, you have learned how Stack Monitoring enables you to monitor the overall health of your applications and their underlying stack including servers, databases, and hosts. How the Enterprise Summary can be used to immediately assess status and performance across each application stack tier, and its interactive design enables dynamic changes to any performance charts. Resource homepages provide you with a curated view of the health and performance of resources through charts, tables, and Stack View. You learned how Stack Monitoring can automatically provide an application topology automatically when discovering applications. The associations between resources further enables easy navigation up and down the application stack to ease and speed up the triaging and remediation of application performance issues. And finally, you learned how the Stack View provides the ability to research the health and performance of the entire application stack from a single page to reduced incident times. 
+* Overall, you have learned how Stack Monitoring enables you to monitor the overall health of your applications and their underlying stack including servers, databases, and hosts. 
+* How the Enterprise Summary can be used to immediately assess status and performance across each application stack tier, and its interactive design enables dynamic changes to any performance charts. 
+* Resource homepages provide you with a curated view of the health and performance of resources through charts, tables, and Stack View. 
+* You learned how Stack Monitoring can automatically provide an application topology automatically when discovering applications. 
+	- The associations between resources further enables easy navigation up and down the application stack to ease and speed up the triaging and remediation of application performance issues. 
+* And finally, you learned how the Stack View provides the ability to research the health and performance of the entire application stack from a single page to reduced incident times. 
 
 For more information and full range of capabilities of the Stack Monitoring solution, view the **[Stack Monitoring](https://docs.oracle.com/en-us/iaas/stack-monitoring/index.html)** Documentation.
 

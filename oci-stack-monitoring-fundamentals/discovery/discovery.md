@@ -99,11 +99,23 @@ Once all of the fields are completed, once again click **Cancel**.
 
 	![Resource discovery page drop-down menu items, highlighting Oracle Database resource type](images/4-1-discovery.png " ")
 
-	Lets begin by providing the resource a name. Once again, when assigning a name ensure the resource name is meaningful to the user, enter **EBS\_DEMO2**. The EBS discovery process is dependent on the version version of EBS being ran, here we will select **12.2**. Enter the host name, **apps.example.com**, and port of the database that EBS is running on, **1521**. Next, enter your database service name, we will enter the service name **ebscdb**. Prior to discovering EBS, it is imperative EBS specific database user grants are applied to the monitoring user prior to discovery. Always remember to follow the prerequisites outlined in Stack Monitoring's [documentation](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/promotion-and-discovery.html) prior to discovery. When discovering EBS, the database user should have limited access to perform only functions related to monitoring. Enter the username **c##mon\_user**. Once again, since this is a demonstration, enter any value for the password. If your monitoring user requires sysdba privileges, select that radio button here.
+	* Lets begin by providing the resource a name. Once again, when assigning a name ensure the resource name is meaningful to the user, enter **EBS\_DEMO2**. 
+	* The EBS discovery process is dependent on the version version of EBS being ran, here we will select **12.2**. 
+	* Enter the host name, **apps.example.com**, and port of the database that EBS is running on, **1521**. 
+	* Next, enter your database service name, we will enter the service name **ebscdb**. 
+	* Prior to discovering EBS, it is imperative EBS specific database user grants are applied to the monitoring user prior to discovery. Always remember to follow the prerequisites outlined in Stack Monitoring's [documentation](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/promotion-and-discovery.html) prior to discovery. When discovering EBS, the database user should have limited access to perform only functions related to monitoring. 
+	* Enter the username **c##mon\_user**. Once again, since this is a demonstration, enter any value for the password. 
+		- If your monitoring user requires sysdba privileges, select that radio button here.
 
 	![Resource discovery slide-out, with upper fields completed](images/4-2-discovery.png " ")
 
-	Now lets enter details of the application layer. Enter the host in which the EBS application is running on, once again enter **apps.oracle.com**. Now enter the port of your WebLogic admin server, enter **7001**. Our demo EBS environment is running http, or t3. If your application is encrypted, you would select t3s. In this example choose **t3** (http). Next enter your WebLogic username, here you will enter **wlsadmin**, then enter the any value for the user's password. When selecting the Management Agent field, a drop-down list of all known agents within your compartment are shown. EBS can be monitored either by a locally installed agent, or an agent installed on another host. Here you can select any agent in the list.
+	* Now lets enter details of the application layer. 
+	* Enter the host in which the EBS application is running on, once again enter **apps.oracle.com**. 
+	* Now enter the port of your WebLogic admin server, enter **7001**. 
+	* Our demo EBS environment is running http, or t3. 
+		- If your application is encrypted, you would select t3s. In this example choose **t3** (http). 
+	* Next enter your WebLogic username, here you will enter **wlsadmin**, then enter the any value for the user's password. 
+	* When selecting the Management Agent field, a drop-down list of all known agents within your compartment are shown. EBS can be monitored either by a locally installed agent, or an agent installed on another host. Here you can select any agent in the list.
 
 	Once all fields are complete, we would typically click Discover. However, we will again select **Cancel**.
 
