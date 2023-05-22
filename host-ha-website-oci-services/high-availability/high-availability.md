@@ -26,11 +26,11 @@ This lab assumes you have:
 
   Under More Actions, select 'Create custom image'
 
-  ![Image alt text](images/ha-create-custom-image.png)
+  ![Create Custom Image](images/ha-create-custom-image.png)
 
 2. Give it a name and click create the image
 
-  ![Image alt text](images/ha-name-custom-image.png)
+  ![Name Custom Image](images/ha-name-custom-image.png)
 
 3. Once it finishes creating, click Navigation
 
@@ -38,15 +38,15 @@ This lab assumes you have:
 
   Under Compute, select Custom Images
 
-  ![Image alt text](images/ha-compute-customimage.png)
+  ![Compute Custom Images](images/ha-compute-customimage.png)
 
 4. Find your image and click on it.
 
-  ![Image alt text](images/ha-find-custom-image.png)
+  ![Find Custom Image](images/ha-find-custom-image.png)
 
 5. On the image console page, click 'Create Instance'
 
-  ![Image alt text](images/ha-create-instance.png)
+  ![Create Instance](images/ha-create-instance.png)
 
 6. Fill out the following information to create the new instance:
     - Name: **WebServer2-WordPress**
@@ -60,17 +60,17 @@ This lab assumes you have:
 
 7. Wait for you instance to finish provisioning.
 
-  ![Image alt text](images/ha-instance-running.png)
+  ![Instance Running](images/ha-instance-running.png)
 
 8. Go to your load balancer and then go to your backend set.
 
   Click 'Add backends' and add your 2nd WordPress instance.
 
-  ![Image alt text](images/ha-lb-add-backend.png)
+  ![Load Balancer Add Backend](images/ha-lb-add-backend.png)
 
 9. Wait for the instance to successfully be added to the load balancer's backend set and pass the health check.
 
-  ![Image alt text](images/ha-lb-success.png)
+  ![Load Balancer Success](images/ha-lb-success.png)
 
 
 

@@ -19,7 +19,7 @@ In this lab, you will:
 * A Child Compartment in your OCI Tenancy for this Lab (optional)
 
 
-![Image alt text](images/oci-dashboard.png)
+![OCI Dashboard](images/oci-dashboard.png)
 
 
 
@@ -35,21 +35,21 @@ In this lab, you will:
 
   Select Virtual Cloud Networks
 
-	![Image alt text](images/networking-vcn.png)
+	![Navigation Virtual Cloud Network](images/networking-vcn.png)
 
 2. Click **Start VCN Wizard**
 
-  ![Image alt text](images/start-vcn-wizard.png)
+  ![Start VCN Wizard](images/start-vcn-wizard.png)
 
 3. Select 'Create VCN with Internet Connectivity' then click 'Start Wizard'
 
-  ![Image alt text](images/vcn-wiz-int-conn.png)
+  ![VCN with Internet Connectivity](images/vcn-wiz-int-conn.png)
 
 4. Fill out the 'Configuration' page
   * VCN Name: *WordPress-VCN*
   * Compartment: *Select Your Compartment*
 
-  ![Image alt text](images/vcn-config.png)
+  ![VCN Configuration](images/vcn-config.png)
 
 
 
@@ -60,11 +60,11 @@ In this lab, you will:
 6. Click 'Create' to create the VCN
 	> **Note:** This step should take less than a minute
 
-  ![Image alt text](images/vcn-creation.png)
+  ![VCN Creation](images/vcn-creation.png)
 
 7. Click 'View Virtual Cloud Network' to display the created VCN
 
-  ![Image alt text](images/vcn-details-page.png)
+  ![VCN Details Page](images/vcn-details-page.png)
 
 
 ## Task 2: Configure Security Lists
@@ -75,22 +75,22 @@ In this lab, you will:
 
   Click the security list for the **private subnet**
 
-  ![Image alt text](images/security-list-private-subnet.png)
+  ![Private Subnet Security List](images/security-list-private-subnet.png)
 
 2. Edit the default SSH (port 22) ingress rule
 
-  ![Image alt text](images/private-sl-ssh-edit.png)
+  ![Edit SSH Rule](images/private-sl-ssh-edit.png)
 
 
 
     - CIDR Block: 10.0.0.0/24 (Public Subnet's CIDR Block)
     - Description: Allows SSH Access from the Public Subnet Only
 
-  ![Image alt text](images/private-sl-ssh.png)
+  ![SSH Rule](images/private-sl-ssh.png)
 
 3. Click 'Add Ingress Rules'
 
-  ![Image alt text](images/private-sl-add-ingress.png)
+  ![Add Ingress Rule](images/private-sl-add-ingress.png)
 
 4. Add the following rules for HTTP connections
 
@@ -111,7 +111,7 @@ In this lab, you will:
     - Destination Port: 443
     - Description: Allows HTTP Access from the Public Subnet Only
 
-  ![Image alt text](images/privatesl-httprule.png)
+  ![Private Subnet HTTP Rule](images/privatesl-httprule.png)
 
 5. Add another rule for MySQL connections
 
@@ -124,7 +124,7 @@ In this lab, you will:
     - Destination Port: 3306, 33060
     - Description: Allows MySQL(X) Port Access from Private Subnet Only
 
-  ![Image alt text](images/private-sl-mysql.png)
+  ![Private Subnet MySQL Rule](images/private-sl-mysql.png)
 
 
 6. Go back to the WordPress-VCN 'Security Lists' page
@@ -135,7 +135,7 @@ In this lab, you will:
 
 
 
-  ![Image alt text](images/security-list-public-subnet.png)
+  ![Public Subnet Security List](images/security-list-public-subnet.png)
 
 7. Click 'Add Ingress Rules' and add the following rules for HTTP connections
 
@@ -157,7 +157,7 @@ In this lab, you will:
     - Destination Port: 443
     - Description: Allows HTTP Access from the Public Internet
 
-  ![Image alt text](images/publicsl-httprule.png)
+  ![Public Subnet HTTP Rule](images/publicsl-httprule.png)
 
 8. Allow  SSH Access Into Your Public Subnet From a Specific Set of IP Addresses (optional)
     > **Note:** This step is a recommended best practice when implementing an actual architecture you do not want getting hacked or reached by unknown entities. Performing this step will only allow a certain set of IP addresses you define to reach your public subnet's resources.
@@ -166,7 +166,7 @@ In this lab, you will:
 
   In the **public subnet** security list, edit the SSH (port 22) ingress rule:
 
-    ![Image alt text](images/public-sl-ssh.png)
+    ![Public Subnet SSH Rule](images/public-sl-ssh.png)
 
 
 

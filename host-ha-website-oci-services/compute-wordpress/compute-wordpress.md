@@ -1,4 +1,4 @@
-# Provision a Compute Instances and Installing WordPress
+# Provision a Compute Instance for the WordPress Server
 
 ## Introduction
 
@@ -57,7 +57,7 @@ This lab assumes you have:
 
 6. Once provisioned, take a note of the instance's private IP address.
 
-  ![Image alt text](images/wordpress-instance-details.png)
+  ![WordPress Instance Details](images/wordpress-instance-details.png)
 
 ## Task 2: Connecting to your WordPress Instance
 
@@ -88,7 +88,7 @@ This lab assumes you have:
 
 ## Task 3: Installing Apache
 
-1. Install Apache HTTP Server and php. 
+1. Install Apache HTTP Server and php.
 
 
 
@@ -134,19 +134,19 @@ This lab assumes you have:
 
 2. Select your Load Balancer (**WordPress-LoadBalancer**)
 
-  ![Image alt text](images/wordpress-loadbalancer-select.png)
+  ![WordPress Load Balancer Select](images/wordpress-loadbalancer-select.png)
 
 3. Go to 'Backend Sets' and select the listed default backend set
 
-  ![Image alt text](images/wp-lb-backendset.png)
+  ![Load Balancer Backend Set](images/wp-lb-backendset.png)
 
 4. Go to 'Backends' and click 'Add backends'
 
-  ![Image alt text](images/wp-lb-addbackend.png)
+  ![Add Backend](images/wp-lb-addbackend.png)
 
 5. Select your WordPress instance (**WebServer-WordPress**)
 
-  ![Image alt text](images/wp-lb-add-instance.png)
+  ![Add Instance](images/wp-lb-add-instance.png)
 
   > Note: You can leave on 'Automatically add security list rules' to automatically add the appropriate HTTP rules, but this is not required as this workshop already showed you how to add the required rules, assuming you have completed all the labs to this point. In the future, this feature is useful so you don't have to manually add rules yourself. If you already have the required rules and you leave this on, however, the same rules will be created redundantly.
 
@@ -154,7 +154,7 @@ This lab assumes you have:
 
 7. Wait for the work request to finish and for the health check to return "OK"
 
-  ![Image alt text](images/wp-lb-instance-added.png)
+  ![Instance Added](images/wp-lb-instance-added.png)
 
 8. Test the Apache Server using the Load Balancer's Public IP on your Web Browser
 
@@ -162,7 +162,7 @@ This lab assumes you have:
 
     Example: http://10.10.10.10
 
-    ![Image alt text](images/wp-lb-apache-page.png)
+    ![WordPress Apache Page](images/wp-lb-apache-page.png)
 
 ## Task 5. Install PHP and other required packages
 
@@ -184,7 +184,7 @@ This lab assumes you have:
 
     Example: http://10.10.10.10/info.php
 
-  ![Image alt text](images/wp-php-page.png)
+  ![PHP Page](images/wp-php-page.png)
 
 4. Install MySQL and MySQL Shell
     ```
@@ -273,7 +273,7 @@ This lab assumes you have:
 
 1. From a browser access http://load-balancer-ip-address/wp-admin/setup-config.php.
 
-  ![Image alt text](images/wp-welcome-config-php.png)
+  ![Welcome Configuration Page](images/wp-welcome-config-php.png)
 
 2. Click Let’s Go.
 
@@ -287,11 +287,11 @@ This lab assumes you have:
     - Database Host: MySQL Database Service IP address
     - Table Prefix: leave as is. only need to change if multiple WordPress running on the same database
 
-  ![Image alt text](images/wp-db-connection.png)
+  ![Database Connection](images/wp-db-connection.png)
 
 4. Click Run the installation.
 
-  ![Image alt text](images/wp-run-installation.png)
+  ![Run Install](images/wp-run-installation.png)
 
 5. Fill the following information in the welcome screen then click Install WordPress:
 
@@ -303,19 +303,19 @@ This lab assumes you have:
     - Your Email: your email
     - Click Install WordPress.
 
-    ![Image alt text](images/wp-welcome-page.png)
+    ![WordPress Welcome Page](images/wp-welcome-page.png)
 
 6. Click Log In
 
-  ![Image alt text](images/wp-success-install.png)
+  ![Successful Install](images/wp-success-install.png)
 
 7. Log in with the Wordpress website user and password you just created
 
-  ![Image alt text](images/wp-login-page.png)
+  ![WordPress Login](images/wp-login-page.png)
 
 7. Congratulations! You have now installed WordPress!
 
-  ![Image alt text](images/wp-dashboard.png)
+  ![WordPress Dashboard](images/wp-dashboard.png)
 
 
 

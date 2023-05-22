@@ -1,4 +1,4 @@
-# Provision a Compute Instance and Using a Bastion Host
+# Provision a Compute Instance for the Bastion Host
 
 ## Introduction
 
@@ -30,7 +30,7 @@ This lab assumes you have:
 
   Select Instances
 
-	![Image alt text](images/compute-instances.png)
+	![Navigation-Compute-Instances](images/compute-instances.png)
 
 2. Click 'Create Instance'
 
@@ -39,41 +39,41 @@ This lab assumes you have:
     - Compartment: *Select Your Compartment*
     - Availability Domain: *Leave as AD1*
 
-   ![Image alt text](images/compute-name-ad.png)
+   ![Create Instance](images/compute-name-ad.png)
 
 4. Edit the Image and Shape as Needed
     - For Image: Select **Oracle Linux 8**
 
-    ![Image alt text](images/compute-image-shape.png)
+    ![Image and Shape](images/compute-image-shape.png)
 
 
 
     - For Shape: Select **VM.Standard.E4.Flex**
 
-    ![Image alt text](images/compute-pick-shape.png)
+    ![Pick Compute Shape](images/compute-pick-shape.png)
 
 5. Review the Networking Settings
     - VCN: Select **WordPress-VCN**
     - Subnet: Select the **public subnet**
     - Public IPv4 Address: Select **Assign a public IPv4 address**
 
-    ![Image alt text](images/compute-networking.png)
+    ![Compute Networking](images/compute-networking.png)
 
 6. Add SSH Keys
    - Here, select 'Generate a key pair for me' and save both the public and private SSH keys to your computer.
    - Optionally, you can upload or paste your own public SSH key if you already have your own key pair.
 
-  ![Image alt text](images/compute-ssh.png)
+  ![Compute SSH](images/compute-ssh.png)
 
 7. Click 'Create'
 
-    ![Image alt text](images/compute-provisioning.png)
+    ![Compute Provisioning](images/compute-provisioning.png)
 
 
 
     Wait for the instance to finish Provisioning. When it is done, the orange block will turn green.
 
-    ![Image alt text](images/compute-running.png)
+    ![Compute Running](images/compute-running.png)
 
 
 
@@ -84,7 +84,7 @@ This lab assumes you have:
 
 2. Take note of your Bastion instance's public IP address
 
-  ![Image alt text](images/compute-public-ip.png)
+  ![Compute Public IP](images/compute-public-ip.png)
 
 3. In your Terminal, change the directory to where your Bastion host's SSH Key is located
 

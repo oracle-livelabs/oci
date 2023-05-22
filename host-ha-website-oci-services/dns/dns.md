@@ -37,11 +37,11 @@ Once you have bought a domain name you wish to use for you site, you are ready t
 
   Under DNS Management, click Zones
 
-	![Image alt text](images/networking-dns-zones.png)
+	![Navigation DNS Zones](images/networking-dns-zones.png)
 
 2. Click Create Zone
 
-  ![Image alt text](images/dns-create-zone.png)
+  ![Create Zone](images/dns-create-zone.png)
 
 3. Fill out the information for the public zone
 
@@ -49,27 +49,27 @@ Once you have bought a domain name you wish to use for you site, you are ready t
     - Zone Type: Primary
     - Zone name: **Your domain name**
 
-  ![Image alt text](images/dns-zone-manual.png)
+  ![DNS Zone Manual Entry](images/dns-zone-manual.png)
 
 
 
   Optionally, you cannot import your Zone File if you already have records set up.
 
-  ![Image alt text](images/dns-zone-import.png)
+  ![DNS Zone Import](images/dns-zone-import.png)
 
 4. Wait for the Zone to finish provisioning and take note of the 4 nameservers for your zone.
 
-  ![Image alt text](images/dns-zone-provisioning.png)
+  ![Zone Provisioning](images/dns-zone-provisioning.png)
 
 5. Through your Domain Name Registrar, go to the DNS management and change the nameservers to the 4 OCI nameservers listed in your zone.
 
-  ![Image alt text](images/dns-registrar-change-ns.png)
+  ![Change Nameservers](images/dns-registrar-change-ns.png)
 
   > Note: Depending on the domain registrar, it could take a while for the nameservers to be redirected to OCI.
 
 6. Your domain is now managed by OCI! Now, go to Records in your OCI zone and click Manage Records.
 
-  ![Image alt text](images/dns-manage-records.png)
+  ![Zone Manage Records](images/dns-manage-records.png)
 
 7. Click Add Record and fill in the following information and then add record:
 
@@ -77,15 +77,15 @@ Once you have bought a domain name you wish to use for you site, you are ready t
     - TTL: 3600 (leave as default)
     - RDATA Address: **your load balancer's IP address**
 
-  ![Image alt text](images/dns-add-record.png)
+  ![Add Record](images/dns-add-record.png)
 
 8. Click Publish Changes and then confirm
 
-  ![Image alt text](images/dns-publish-record.png)
+  ![Publish Record](images/dns-publish-record.png)
 
 9. Now that your A record shows up in your zone, use your domain name in your web browser to check that it points to your WordPress instance through the load balancer.
 
-  ![Image alt text](images/dns-wordpress.png)
+  ![WordPress DNS Page](images/dns-wordpress.png)
 
 10. Congratulations! You have successfully got set up Oracle DNS
 

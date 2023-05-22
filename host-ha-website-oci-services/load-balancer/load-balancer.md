@@ -29,15 +29,15 @@ This lab assumes you have:
 
   Select 'Load Balancers'
 
-	![Image alt text](images/networking-loadbalancer.png)
+	![Navigation Load Balancers](images/networking-loadbalancer.png)
 
 2. Select 'Create Load Balancer'
 
-  ![Image alt text](images/loadbalancer-create.png)
+  ![Create Load Balancer](images/loadbalancer-create.png)
 
 3. Select 'Load balancer' type and create
 
-  ![Image alt text](images/loadbalancer-type.png)
+  ![Load Balancer Type](images/loadbalancer-type.png)
 
 4. Add details
 
@@ -46,7 +46,7 @@ This lab assumes you have:
     - Visibility: Public
     - Public IP Address: Ephemeral
 
-    ![Image alt text](images/loadbalancer-details.png)
+    ![Load Balancer Details](images/loadbalancer-details.png)
 
 5. Choose Networking
 
@@ -55,7 +55,7 @@ This lab assumes you have:
     - VCN: Select **WordPress-VCN**
     - Subnet: Select **public subnet**
 
-  ![Image alt text](images/loadbalancer-networking.png)
+  ![Load Balancer Networking](images/loadbalancer-networking.png)
 
 
 
@@ -67,7 +67,7 @@ This lab assumes you have:
 
   You can choose your desired load balancing policy you want for your application. For this lab's purposes, **Weighted Round Robin** is selected.
 
-  ![Image alt text](images/loadbalancer-policy.png)
+  ![Load Balancer Policy](images/loadbalancer-policy.png)
 
 7. Specify Health Check Policy
 
@@ -77,7 +77,7 @@ This lab assumes you have:
     - Protocol: TCP
     - Port: 80
 
-  ![Image alt text](images/loadbalancer-healthcheck.png)
+  ![Load Balancer Health Check](images/loadbalancer-healthcheck.png)
 
 
 
@@ -91,7 +91,7 @@ This lab assumes you have:
     - Traffic: TCP
     - Port: 80
 
-  ![Image alt text](images/load-balancer-listener.png)
+  ![Load Balancer Listener](images/load-balancer-listener.png)
 
 
 
@@ -99,11 +99,11 @@ This lab assumes you have:
 
 9. Accept default for logging and click 'Submit' to create the load balancer
 
-  ![Image alt text](images/loadbalancer-provisioning.png)
+  ![Load Balancer Provisioning](images/loadbalancer-provisioning.png)
 
 10. Once the Load Balancer is 'Active', take note of it's public IP address.
 
-  ![Image alt text](images/loadbalancer-active.png)
+  ![Load Balancer Active](images/loadbalancer-active.png)
 
   > Note: Notice the health check on the load balancer. This is because no backend sets have been added yet. You can ignore this for now since you will add backends in later labs.
 

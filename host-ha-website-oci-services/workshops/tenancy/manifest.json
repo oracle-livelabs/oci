@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Host a Highly Available Website using OCI Core Services",
+    "workshoptitle": "Host a Highly Available MySQL-Backed WordPress Website with OCI Core Services",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
@@ -31,11 +31,11 @@
             "filename": "../../load-balancer/load-balancer.md"
         },
         {
-            "title": "Lab 4: Provision a Compute Instance and Using a Bastion Host",
+            "title": "Lab 4: Provision a Compute Instance for the Bastion Host",
             "filename": "../../compute-bastion/compute-bastion.md"
         },
         {
-            "title": "Lab 5: Provision a Compute Instance and Installing WordPress",
+            "title": "Lab 5: Provision a Compute Instance for the WordPress Server",
             "filename": "../../compute-wordpress/compute-wordpress.md"
         },
         {

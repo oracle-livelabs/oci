@@ -30,15 +30,15 @@ This lab assumes you have:
 
   Under Identity, select Domains
 
-	![Image alt text](images/osm-identity-domains.png)
+	![Navigation Domains](images/osm-identity-domains.png)
 
 2. Click the "Default" domain or optionally create a new domain
 
-  ![Image alt text](images/osm-default-domain.png)
+  ![Default Domain](images/osm-default-domain.png)
 
 3. Go to Dynamic Groups and click "Create dynamic group"
 
-  ![Image alt text](images/osm-create-dynamicgroup.png)
+  ![Create Dynamic Group](images/osm-create-dynamicgroup.png)
 
 4. Fill out the dynamic group name and matching rules
 
@@ -50,13 +50,13 @@ This lab assumes you have:
   <copy>Any {instance.compartment.id = 'ocid1.compartment.oc1..exampleuniqueid’}</copy>
   ```
 
-  ![Image alt text](images/osm-dynamicgroup-rules.png)
+  ![Dynaminc Group Rules](images/osm-dynamicgroup-rules.png)
 
   > Note: You can find the instance or compartment OCID by navigating to the respective OCI console page.
 
 5. Click Create
 
-  ![Image alt text](images/osm-dynamicgroup.png)
+  ![Create Dynamic Group](images/osm-dynamicgroup.png)
 
 ## Task 2: Create Required Policies
 
@@ -70,7 +70,7 @@ This lab assumes you have:
 
   Under Identity, select Policies
 
-	![Image alt text](images/osm-identity-policies.png)
+	![Navigation Policies](images/osm-identity-policies.png)
 
 2. Click Create Policy
 
@@ -90,11 +90,11 @@ This lab assumes you have:
   <copy>Allow dynamic-group <dynamic_group_name> to use osms-managed-instances in compartment <compartment_name></copy>
   ```
 
-  ![Image alt text](images/osm-create-policy.png)
+  ![Policy Information](images/osm-create-policy.png)
 
 4. Click Create
 
-  ![Image alt text](images/osm-access-policy.png)
+  ![Create Policy](images/osm-access-policy.png)
 
 5. Create one more policy using the following info:
 
@@ -108,11 +108,11 @@ This lab assumes you have:
   <copy>Allow service osms to read instances in tenancy</copy>
   ```
 
-  ![Image alt text](images/osm-create-policy2.png)
+  ![2nd Policy Information](images/osm-create-policy2.png)
 
 6. Click Create
 
-  ![Image alt text](images/osm-serviceread-policy.png)
+  ![Create Second Policy](images/osm-serviceread-policy.png)
 
 ## Task 3: Enable OS Management On Your Compute Instance
 
@@ -120,7 +120,7 @@ This lab assumes you have:
 
 2. Under the Oracle Cloud Agent tab, enable the OS Management Agent if not already enabled.
 
-  ![Image alt text](images/osm-agent-enable.png)
+  ![OSM Agent Enable](images/osm-agent-enable.png)
 
 3. In your terminal, SSH into your WordPress instance like you did in the previous labs.
 
@@ -150,7 +150,7 @@ This lab assumes you have:
 
   The 403 Forbidden status code message is expected in the output.
 
-  ![Image alt text](images/osm-validate-service.png)
+  ![Validate OSM Service](images/osm-validate-service.png)
 
 6. Check if the OSM Agent is enabled and active using:
 
@@ -160,7 +160,7 @@ This lab assumes you have:
 
 7. Back on the OCI console WordPress page, go to OS Management under Resources.
 
-  ![Image alt text](images/osm-compute-page.png)
+  ![WordPress Compute Page Resources](images/osm-compute-page.png)
 
 ## Task 4: Installing Recommended Packages with OS Management
 
@@ -168,7 +168,7 @@ This lab assumes you have:
 
 2. On the OS Management instance page, take note of the suggested package updates.
 
-  ![Image alt text](images/osm-instance-osmdetails.png)
+  ![OSM Instance Details](images/osm-instance-osmdetails.png)
 
 
 
@@ -176,21 +176,21 @@ This lab assumes you have:
 
 3. Select the recommended security update and then click Install Updates.
 
-  ![Image alt text](images/osm-install-updates.png)
+  ![Install Updates](images/osm-install-updates.png)
 
 4. Notice you can install now or on a custom schedule. For this lab, choose Install Now and then click Install Package Update.
 
-  ![Image alt text](images/osm-install-now.png)
+  ![Install Now](images/osm-install-now.png)
 
-  ![Image alt text](images/osm-custom-schedule.png)
+  ![Custom Schedule](images/osm-custom-schedule.png)
 
 5. Your packages should now be installing. Wait for them to finish.
 
-  ![Image alt text](images/osm-install-inprogress.png)
+  ![Install In Progress](images/osm-install-inprogress.png)
 
 6. Success! You have successfully installed a recommended package using the OS Management service.
 
-  ![Image alt text](images/osm-install-success.png)
+  ![Install Success](images/osm-install-success.png)
 
 You may now **proceed to the next lab.**
 
