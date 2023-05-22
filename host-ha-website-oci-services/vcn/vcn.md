@@ -111,8 +111,6 @@ In this lab, you will:
     - Destination Port: 443
     - Description: Allows HTTP Access from the Public Subnet Only
 
-  ![Private Subnet HTTP Rule](images/privatesl-httprule.png)
-
 5. Add another rule for MySQL connections
 
 
@@ -156,8 +154,6 @@ In this lab, you will:
     - IP Protocol: TCP
     - Destination Port: 443
     - Description: Allows HTTP Access from the Public Internet
-
-  ![Public Subnet HTTP Rule](images/publicsl-httprule.png)
 
 8. Allow  SSH Access Into Your Public Subnet From a Specific Set of IP Addresses (optional)
     > **Note:** This step is a recommended best practice when implementing an actual architecture you do not want getting hacked or reached by unknown entities. Performing this step will only allow a certain set of IP addresses you define to reach your public subnet's resources.

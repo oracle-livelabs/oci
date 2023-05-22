@@ -97,11 +97,11 @@ This lab assumes you have:
   For example, use the code below if your SSH key is in the /Users/JohnDoe/Documents/BastionHost folder.
 
   ```
-  cd /
+  <copy>cd /</copy>
   ```
 
   ```
-  cd/Users/JohnDoe/Documents/BastionHost
+  <copy>cd/Users/JohnDoe/Documents/BastionHost<copy>
   ```
 
 4. SSH into the Bastion host using the following format
