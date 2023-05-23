@@ -53,10 +53,12 @@ We will be using OCI Native Authentication required to connect with Object Stora
 
     ![Navigate to Vision](images/create-web-credentials.png " ")
 
+    Provide user OCID, tenancy OCID, fingerprint and authentication type as **Oracle Cloud Infrastructure**
+
     ![Navigate to Vision](images/web-credentials-details.png " ")
 
  
-## Task 2: Table - MACHINE LEARNING CONFIGS
+## Task 2: Create Table - MACHINE LEARNING CONFIGS
 
 We can directly code Object storage bucket location, Web Credential Name, Request JSON etc., directly in PL/SQL code to validate XRay Image. However, it is a good practice to store this in a database table so that we can easily update this and add more models in future, so we create a machine learning configuration table for this purpose.
 
@@ -112,7 +114,7 @@ We can directly code Object storage bucket location, Web Credential Name, Reques
     
     Your-Bucket-Name is the Bucket Name where Image will be temporarily uploaded.
 
-## Task 3: Table - VISION AI DOCS
+## Task 3: Create Table - VISION AI DOCS
  
 1. Create **VISION\_AI\_DOCS** to store Machine Learning Configuration Details.
 
@@ -168,7 +170,7 @@ We can directly code Object storage bucket location, Web Credential Name, Reques
     </copy>
     ```
 
-## Task 4: Table - VISION AI FIELDS
+## Task 4: Create Table - VISION AI FIELDS
 
 VISION\_AI\_FIELDS table is used to store the labels and corresponding scores. This is what we get after the parsing of the JSON response.
 
@@ -216,7 +218,7 @@ VISION\_AI\_FIELDS table is used to store the labels and corresponding scores. T
     </copy>
     ```
    
-## Task 5: PL/SQL Package
+## Task 5: Create PL/SQL Package
 
 You can login to Oracle APEX Workspace and select SQL worksheet to run any of the SQL commands or Create Tables or Packages.
 
@@ -549,25 +551,15 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     </copy>
     ```
 
-## Task 6: Create Page to Upload file and display results
- 
-There are 3 main sections on this page
+## Task 6: Verify File upload settings, Process image action
 
-1. File Upload
-
-![Navigate to Vision](images/model-name.png " ")
-
-![Navigate to Vision](images/result-after-submit.png " ")
-
-![Navigate to Vision](images/image-after-submit.png " ")
-
-## Task 7: Apex Page in Edit Mode
-
-In the Apex page will use file upload dropzone plugin
+In the Apex page, we will use the file upload Dropzone plugin, or we can also use the regular file upload page item.
 
 1. Apex
 
 ![Navigate to Vision](images/apex-image-file.png " ")
+
+Process image action
 
 ![Navigate to Vision](images/process-image-button.png " ")
 
@@ -580,6 +572,22 @@ BEGIN
 END; 
 </copy>
 ```
+
+## Task 7: Create Oracle Apex Page to Upload file and display results
+ 
+There are 3 main sections on this page
+
+1. File Upload
+
+![Navigate to Vision](images/model-name.png " ")
+
+![Navigate to Vision](images/result-after-submit.png " ")
+
+![Navigate to Vision](images/image-after-submit.png " ")
+
+
+
+
 
 
 This concludes this lab and you can **proceed to the next lab**.
