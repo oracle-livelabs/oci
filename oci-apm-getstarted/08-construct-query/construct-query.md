@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The **Trace Explorer Query Language (TQL)** is used to retrieve and analyze the tracing data. TQL follows a SQL-like, purpose-built for tracing data, and syntax. It makes use of clauses to retrieve, aggregate, filter, and perform operations on trace and span attributes (dimensions and metrics).cPre-created TQL queries are available in the query bar for commonly used searches. These can be used as-is or as a starting point for more specific queries.
+The **Trace Explorer Query Language (TQL)** is used to retrieve and analyze the tracing data. TQL follows a SQL-like, purpose-built for tracing data, and syntax. It makes use of clauses to retrieve, aggregate, filter, and perform operations on trace and span attributes (dimensions and metrics).Pre-created TQL queries are available in the query bar for commonly used searches. These can be used as-is or as a starting point for more specific queries.
 In this lab, you will learn how to create such queries by following the below examples.
  
 In this example, we demonstrate how to gain insight about End User sessions in an e-commerce application (optional: you can use the demo application here: http://apm.omcdemo.net. Login using any name/password to see your own session in the trace data)
@@ -268,6 +268,7 @@ In some cases, you may want to know whether a user made a click action on Web UI
 	``` bash
 	<copy>
 	show (traces) min(UserName) as "User Name",
+		sum(PageViews) as "Page Views",
 		count(*) as "Traces",
 		max(TraceLatestSpanEndTime) - min(TraceFirstSpanStartTime) as Duration,
 		case when(sum(case when (JourneyPhase = '4-orderConfirmed') then 1 else 0 end))>0 then 'reached' else '-' end as step4,
