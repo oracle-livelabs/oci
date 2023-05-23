@@ -297,10 +297,8 @@ With the information on the button click, you may want to get an understanding o
 
 	Explanations:
 	* The **CASE** expression returns a value when the first condition is met.
-	* The **MIN** and **MAX** functions display the minimum and maximum values of a dimension respectively.
-	* max(TraceLatestSpanEndTime) - min(TraceFirstSpanStartTime) determines the duration of the session.
-	* Adds a column **time to addToCart**, with a ***avg?*** duration to reach step 2 as a value
-	* Adds a column **time to checkOut**, with a duration to reach step 3 as a value
+	* Adds a column **time to addToCart**, which indicates the amount of time a user spent on the website before adding a product to a cart.
+	* Adds a column **time to checkOut** that measures the time elapsed before a user proceeds with the checkout process.
 
 2. Next, modify the **ORDER BY** statement as shown below, so that the results are sorted based on the **Duration**.
 
