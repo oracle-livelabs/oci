@@ -2,8 +2,7 @@
 
 ## Introduction
 
-The **Trace Explorer Query Language (TQL)** is used to retrieve and analyze the tracing data. TQL follows a SQL-like, purpose-built for tracing data, and syntax. It makes use of clauses to retrieve, aggregate, filter, and perform operations on trace and span attributes (dimensions and metrics).
-A condensed TQL guide, plus examples, is available in-page by selecting the **i**, or the **Infomation** button under the **Run** button. Pre-created TQL queries are available in the query bar for commonly used searches. These can be used as-is or as a starting point for more specific queries.
+The **Trace Explorer Query Language (TQL)** is used to retrieve and analyze the tracing data. TQL follows a SQL-like, purpose-built for tracing data, and syntax. It makes use of clauses to retrieve, aggregate, filter, and perform operations on trace and span attributes (dimensions and metrics).cPre-created TQL queries are available in the query bar for commonly used searches. These can be used as-is or as a starting point for more specific queries.
 In this lab, you will learn how to create such queries by following the below examples.
  
 In this example, we demonstrate how to gain insight about End User sessions in an e-commerce application (optional: you can use the demo application here: http://apm.omcdemo.net. Login using any name/password to see your own session in the trace data)
@@ -40,8 +39,13 @@ The query used above is a quick pick for a “session”, showing end-users that
 	</copy>
 	```
 
-7. Verify the result in the **Traces** view. The query returns the traces categorized by session for the specified timeframe. It provides basic information with an overview of the traces that you can further drill down for more details.  
+    ![Oracle Cloud, Trace Explorer](images/8-1-4-type-simple-query.png " ")
 
+      > **Note:** A condensed TQL guide, plus examples, is available in-page by selecting the **Infomation** button under the **Run** button.     ![Oracle Cloud, Trace Explorer](images/8-1-6-view-syntax-info.png " ")
+
+
+7. Verify the result in the **Traces** view. The query returns the traces categorized by session for the specified timeframe. It provides basic information with an overview of the traces that you can further drill down for more details.  
+    ![Oracle Cloud, Trace Explorer](images/8-1-5-simple-query-traces.png " ")
 ## Task 2: Add more data to the query
 
 The query used in the previous task provided some basic information, however, you may have use cases that desire to add more information. This section explores some options to enrich the query with more fields. To begin with, let’s insert another column that shows a username in the query results.
@@ -61,6 +65,8 @@ The query used in the previous task provided some basic information, however, yo
 	show (traces) min(UserName) as "User Name",  * group by sessionId
 	</copy>
 	```
+    ![Oracle Cloud, Trace Explorer](images/8-2-1-with-username.png " ")
+
 3. Add a **HAVING** clause, **having min(UserName) is not omitted** to restrict the selection to the query. Your query should look like below.
 
 	``` bash
@@ -76,16 +82,20 @@ The query used in the previous task provided some basic information, however, yo
 
 4. Click **Run**. Verify that a new column **User Name** is added and ensure that each row contains a value in that column. 
 
+    ![Oracle Cloud, Trace Explorer](images/8-2-2-with-having.png " ")
+
 5. In some cases, you may have multiple applications touched in a single session. You can use the same syntax to cover this use case, by replacing the variable **UserName** with **webApplicationName**, and specify display name as **“Web App”**.  Your query should look like below.
 
 	``` bash
 	<copy>
-	show (traces) min(webApplicationName) as " Web App", * group by sessionId
+	show (traces) min(webApplicationName) as "Web App", * group by sessionId
 	having min(webApplicationName) is not omitted
 	</copy>
 	```
 
 6. Click **Run** and verify the results in the **Traces** view.
+
+    ![Oracle Cloud, Trace Explorer](images/8-2-3-webapp.png " ")
 
 Often the business cases require some insight into the distribution of the web applications used in the sessions. To cover this requirement, you can use the **unique_values** function and show the unique values of the dimension in the result. 
 
@@ -99,7 +109,9 @@ Often the business cases require some insight into the distribution of the web a
 	</copy>
 	```
 
-8. Click **Run** to verify the results in the **Traces** View. Ensure that the **Web App** column displays the values with bars visually represents the distribution of the Web Apps.
+8. Click **Run** to verify the results in the **Traces** View. Ensure that the **Web App** column displays the values with bars, which visually represent the distribution of the Web Apps.
+
+    ![Oracle Cloud, Trace Explorer](images/8-2-4-unique-web-app.png " ")
 
 ## Task 3: Add a condition to the query
 
@@ -125,6 +137,8 @@ Queries can be also modified by adding a filter, to narrow down the traces to me
 * **Traces**: Numbers of traces per username
 * **Duration**: Duration of the session, measured as the time between the **first span start time** and the **last span end time**
 
+    ![Oracle Cloud, Trace Explorer](images/8-3-1-session-simplified.png " ")
+
 In the web-based shopping cart application that is monitored by APM, users are expected to run a transaction having a series of steps to complete the purchase. In this environment, the buying process is covered through Journey data. The customer journey steps are defined as the following.
 
 	* 0-search
@@ -139,9 +153,17 @@ The query can be adapted by adding a **WHERE** clause that limits the sessions t
 
 3. In the **Attributes** pane, in the **Search** field, type **“journey”**. This will filter the list of attributes.
 
+
+
 4. Click **JourneyPhase**.
 
+    ![Oracle Cloud, Trace Explorer](images/8-3-2-attribute-search.png " ")
+
+
 5. Select **4-orderConfirmed** and click Add to **Query**
+
+    ![Oracle Cloud, Trace Explorer](images/8-3-3-click-add-to-query.png " ")
+
 
 6. Verify the condition **(JourneyPhase = '4-orderConfirmed')** was automatically added in the where clause.
 
@@ -156,8 +178,12 @@ The query can be adapted by adding a **WHERE** clause that limits the sessions t
 	order by max(TraceLatestSpanEndTime)
 	</copy>
 	```
-
+    ![Oracle Cloud, Trace Explorer](images/8-3-4-verify-query.png " ")
 7. Click **Run** and view the results. Only traces that have the **JourneyPhase** dimension set to **“4-order confirmed”** will be displayed in the **Traces** view.
+
+
+    ![Oracle Cloud, Trace Explorer](images/8-3-5-session-with-journey.png " ")
+
 
 Note that although the query displayed the traces that have reached the final journey phase, the values shown for page views, traces, and duration columns are considerably smaller compared to before adding the condition.
 
@@ -214,7 +240,10 @@ To fix the invalidated data in the query, we can move out the condition that was
 	</copy>
 	```
 
+    ![Oracle Cloud, Trace Explorer](images/8-4-1-updated-query.png " ")
+
 5. Click **Run**. Verify the result in the **Traces** view. Although returned the same set of traces, columns include complete session data. Also, there is a newly added column **“step4”** confirming the transaction is completed.
+    ![Oracle Cloud, Trace Explorer](images/8-4-2-updated-query-traces.png " ")
 
 ## Task 5:  Add more conditions verifying the user's action
 
@@ -249,9 +278,9 @@ In some cases, you may want to know whether a user made a click action on Web UI
 	order by max(TraceLatestSpanEndTime)
 	</copy>
 	```
-
+    ![Oracle Cloud, Trace Explorer](images/8-5-1-query-with-elementcheck.png " ")
 3. Click **Run**. Verify that a new column **Button** was added, and values are populated.
-
+    ![Oracle Cloud, Trace Explorer](images/8-5-2-session-with-journey.png " ")
 ## Task 6: Gain insights into the time required to reach steps
 
 With the information on the button click, you may want to get an understanding of the time that users spend while they go through the steps of the journey. Users click around and go back and forth through the funnel in some cases, so data gets more useful if it’s normalized by using the time needed to reach a step as a guideline.
@@ -299,15 +328,9 @@ With the information on the button click, you may want to get an understanding o
 	order by max(TraceLatestSpanEndTime) - min(TraceFirstSpanStartTime) desc
 	</copy>
 	```
-
+    ![Oracle Cloud, Trace Explorer](images/8-6-1-verify-final-query.png " ")
 4. Click **Run**. Verify that new columns are added, indicating how much time the user spent to reach the **“add to cart”** and **“time to check out”** steps.  Also ensure that the results are sorted by the **Duration**.
-
-
-
-
-
-
-
+    ![Oracle Cloud, Trace Explorer](images/8-6-2-final-traces.png " ")
 
 ## Acknowledgements
 
