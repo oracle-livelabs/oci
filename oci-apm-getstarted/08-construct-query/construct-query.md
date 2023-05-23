@@ -272,7 +272,7 @@ In some cases, you may want to know whether a user made a click action on Web UI
 		count(*) as "Traces",
 		max(TraceLatestSpanEndTime) - min(TraceFirstSpanStartTime) as Duration,
 		case when(sum(case when (JourneyPhase = '4-orderConfirmed') then 1 else 0 end))>0 then 'reached' else '-' end as step4,
-		case when(sum(case when (ApmrumClickElementId='/html/body/app-root/app-prod-list/div/div[3]/div[4]/mat-card/mat-card-actions/button/span') then 1 else 0 end))>0 then 'clicked' else '-' end as clicked
+		case when(sum(case when (ApmrumClickElementId='/html/body/app-root/app-prod-list/div/div[3]/div[4]/mat-card/mat-card-actions/button/span') then 1 else 0 end))>0 then 'clicked' else '-' end as Button
 	where ( ApmrumPageUpdateType is not omitted OR ApmrumType='Connection')
 	group by SessionId
 	having  sum(case when (JourneyPhase = '4-orderConfirmed') then 1 else 0 end) >0
