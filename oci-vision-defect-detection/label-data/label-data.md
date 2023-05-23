@@ -16,7 +16,7 @@ Watch the video below for a quick walk-through of the lab.
 
 ## Task 1: Download the model training images
 
-1. Click [here](https://github.com/oracle-livelabs/oci/raw/main/oci-vision-defect-detection/images/model/utility_poles.zip) to download the ZIP file containing the sample pictures. 
+1. Click [here](https://github.com/oracle-livelabs/oci/raw/main/oci-vision-defect-detection/images/model/utility_pole_samples.zip) to download the ZIP file containing the sample pictures. 
 2. Extract the contents of the file to a location of your choice.
 
 ## Task 2: Object Storage bucket creation
