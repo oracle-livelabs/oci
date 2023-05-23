@@ -37,89 +37,64 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 
     ![Navigate to Vision](images/navigate-to-vision-2.png " ")
  
-2. Continue with customer project setup
+2. Continue with AI Vision project setup
 
-    Click **Projects** on the left side menu list, confirm you are in correct **Compartment** and click **Create Project**
+    Click **Projects** on the left side menu list, confirm you are in correct **Compartment** and click **Create Project** provide project name and description.
 
-    ![Create a new project in Vision](images/create-project.png " ")
-
-3. Define new custom project
-
-    Select compartment in which you would like to create your vision model. Give your model **name** and provide **short description**. Click **Create project**.
-
-    ![Define project](images/project-name.png " ")
-
-## Task 2: Train your Vision model
+    ![Create a new project in Vision](images/create-bc-project.png " ")
  
-1. Create a new vision model
 
-    Project page opens. You can see there is a list of **Models** that is currently empty. So, let's create your first Vision model.
+## Task 2: Create and Train your Vision model
+ 
+1. Create a new AI Vision model
+ 
+    Click **Create Model**, select model type as **Image classification**, under training data **choose existing dataset**
 
-    Click **Create Model**
+    Under Data Source choose the dataset that we had created in our previous lab. click **Next**
 
-    ![Create a new Vision model](images/create-a-new-model.png " ")
+    ![Create a new Vision model](images/select-data.png " ")
 
-5. Create and train model - Select data step
+2. Train model  
 
-    Create and Train Model wizard will now take you through a few simple steps.
+    Provide the Model display name and description, training duration can be **Recommended mode**. 
+    
+    *Note: higher the number of images & higher the training duration better the AI model. Typically 2000+ images would create a good model. recommended mode completes in less than a few hours, around 2 to 3 hours for approx 2000 images*
 
-    In the first step, you need to provide data for the model to be trained on. You are obviously using your X-Ray Images dataset, which was labeled, using **Data Labeling Service** in the previous lab.
+    ![Create a new Vision model](images/train-model-bc.png " ")
 
     Click **Next** to proceed to the second step.
+
+    Review the settings, click on **Create and train** button
+
+    ![Create a new Vision model](images/review-data.png " ")
+
+    This will create a work request which you can monitor for percentage completed.
+    
+    You can also monitor the progress by reviewing **Log Messages**.
  
-6. Create and Train Model - Train model step
-
-    In this second step, you need to define parameters for the model itself. As you can see, there isn't much to do. Provide a name and description and then define **training duration**.
-
-    As you can see you can choose between *up to 24 hours*, *about an hour* and *custom duration*. In the script, **Recommended Mode** option is chosen, which means up to 24 hours. In fact it should take approx. 5 hours to complete. But feel free to pick your option. However in this case we can choose **Quick Mode** and later update to **Recommended Mode**
-
-    ![Create a new Vision model](images/train-model.png " ")
- 
-    Click **Next** to proceed to the **Review** step.
-
-7. Create and Train Model - Review step
-
-    In this step you will only review and confirm the settings. If you are ok with them, click **Create and train**.
- 
-
-8. Training in progress ...
-
-    Model training is in progress. In the **Project details: models** page you can monitor the progress by clicking the **Work Request** operation (in this case **CREATE_MODEL**).
- 
-
-9. Work request log monitoring
-
-    You can monitor the progress by reviewing **Log Messages**.
- 
-
-10. Evaluate your model
+3. Evaluate your model
 
     When model training is completed - **State** is *Succeeded* and **% Complete** is *100%*.
-
-    In the **Training metrics** area calculated metrics that were automatically calculated using 10% of images as test dataset. Training metrics **Precision**, **Recall** and **F1 Score** are in this case around 95%.
-
-    ![Evaluate model and review metrics](images/evaluate-model.png " ")
- 
-
+  
 ## Task 3: Analyze and evaluate your model
 
 1. Test you model using known images
  
     Click **Local File** and upload image
 
-    ![Upload NORMAL image](images/analyze.png " ")
+    ![Upload NORMAL image](images/bc-review-1.png " ")
 
     Image will be uploaded and automatically analyzed. **Image** and prediction **Results** are displayed.  
 
-    ![Test model for NORMAL image](images/upload-file.png " ")
-
-    You can repeat and perform prediction for one image which is clearly showing **LUNG\_CANCER\_LEFT\_LOWER\_LOBE** with **41% confidence** and **LUNG\_CANCER\_FLAT\_CELLS** with **35% Confidence** and **NORMAL\_LUNG** being **0% Confidence**.
+     ![Upload NORMAL image](images/bc-review-2.png " ")
+  
+    You can repeat and perform prediction for one image which is clearly showing **BREAST\_CANCER** with **99% confidence**.
 
     Repeat for any other images
 
-    ![Test model for NORMAL image](images/normal-lung-analysis.png " ")
+    ![Upload NORMAL image](images/bc-review-3.png " ")
 
-    You can repeat and perform prediction for one image which is clearly showing **NORMAL\_LUNG** being **97% Confidence** **LUNG\_CANCER\_LEFT\_LOWER\_LOBE** with **1% confidence** and **LUNG\_CANCER\_FLAT\_CELLS** with **1% Confidence**.
+    This is showing it is **NORMAL\_BREAST** with **76% confidence**.
 
 
     **Please Note:** As an alternative you can create a bucket upload the images to that bucket, get the par url and use **Object storage** radio button, this will also bring same result but request JSON will change for input source element.
@@ -127,7 +102,7 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 
 ## Task 4: Review Request and Response JSON
 
-Review Request Response JSON this will be essential for us while building Application front end
+Review Request and Response JSON this will be essential for us while building Application front end
 
 1. Analyze predictions, confidence, requests and responses
 
@@ -161,40 +136,22 @@ Review Request Response JSON this will be essential for us while building Applic
     "imageObjects": null,
     "labels": [
         {
-        "name": "NORMAL_LUNG",
-        "confidence": 0.9721929
+        "name": "NORMAL-BREAST",
+        "confidence": 0.7636917
         },
         {
-        "name": "LUNG_CANCER_LEFT_LOWER_LOBE",
-        "confidence": 0.011257403
-        },
-        {
-        "name": "LUNG_CANCER_FLAT_CELLS",
-        "confidence": 0.010139201
-        },
-        {
-        "name": "LUNG_CANCER_LARGE_CELLS",
-        "confidence": 0.006410511
+        "name": "BREAST-WITH-CANCER",
+        "confidence": 0.23630832
         }
     ],
     "ontologyClasses": [
         {
-        "name": "NORMAL_LUNG",
+        "name": "BREAST-WITH-CANCER",
         "parentNames": [],
         "synonymNames": []
         },
         {
-        "name": "LUNG_CANCER_FLAT_CELLS",
-        "parentNames": [],
-        "synonymNames": []
-        },
-        {
-        "name": "LUNG_CANCER_LARGE_CELLS",
-        "parentNames": [],
-        "synonymNames": []
-        },
-        {
-        "name": "LUNG_CANCER_LEFT_LOWER_LOBE",
+        "name": "NORMAL-BREAST",
         "parentNames": [],
         "synonymNames": []
         }
@@ -218,4 +175,3 @@ Review Request Response JSON this will be essential for us while building Applic
 ## Acknowledgements
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
 * **Last Updated By/Date** - May 5th, 2023.
- 
