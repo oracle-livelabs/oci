@@ -71,4 +71,4 @@ This concludes this lab. You can **proceed now to the next lab**.
  
 ## Acknowledgements
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - May 5th, 2023.
+* **Last Updated By/Date** - May 23rd, 2023.
