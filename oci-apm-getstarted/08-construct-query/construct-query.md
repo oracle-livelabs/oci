@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The **Trace Explorer Query Language (TQL)** is used to retrieve and analyze the tracing data. TQL follows a SQL-like, purpose-built for tracing data, and syntax. It makes use of clauses to retrieve, aggregate, filter, and perform operations on trace and span attributes (dimensions and metrics).Pre-created TQL queries are available in the query bar for commonly used searches. These can be used as-is or as a starting point for more specific queries.
+The **Trace Explorer Query Language (TQL)** is used to retrieve and analyze the tracing data. TQL follows a SQL-like, purpose-built for tracing data, and syntax. It makes use of clauses to retrieve, aggregate, filter, and perform operations on trace and span attributes (dimensions and metrics). Pre-created TQL queries are available in the query bar for commonly used searches. These can be used as-is or as a starting point for more specific queries.
 In this lab, you will learn how to create such queries by following the below examples.
  
 In this example, we demonstrate how to gain insight about End User sessions in an e-commerce application (optional: you can use the demo application here: http://apm.omcdemo.net. Login using any name/password to see your own session in the trace data)
@@ -12,7 +12,7 @@ Estimated time: 20 minutes
 ### Objectives
 
 * Understand the syntax formatting in TQL
-* Learn how to construct a complex queries based on a basic query
+* Learn how to construct complex queries based on a basic query
 
 ### Prerequisites
 
@@ -58,7 +58,7 @@ The query used in the previous task provided some basic information, however, yo
 	</copy>
 	```
 
-2. Add a new column for a user name, by inserting **min(UserName) as "User Name",**  to the query. Your query should be look like below.
+2. Add a new column for a user name, by inserting **min(UserName) as "User Name",**  to the query. Your query should look like the one below.
 
 	``` bash
 	<copy>
@@ -67,7 +67,7 @@ The query used in the previous task provided some basic information, however, yo
 	```
     ![Oracle Cloud, Trace Explorer](images/8-2-1-with-username.png " ")
 
-3. Add a **HAVING** clause, **having min(UserName) is not omitted** to restrict the selection to the query. Your query should look like below.
+3. Add a **HAVING** clause, **having min(UserName) is not omitted** to restrict the selection to the query. Your query should look like the one below.
 
 	``` bash
 	<copy>
@@ -77,14 +77,14 @@ The query used in the previous task provided some basic information, however, yo
 	```
 	Explanations of the syntax used in the query:
 	* **min(UserName) as “User Name”**: “min” function is used for the username, which takes the first username in alphabetical order, in case multiple usernames were used in a single session.
-	* **“*” (asterisk)**:  Used in group by or non-group queries as a shortcut to display expected attributes 
+	* **“*” (asterisk)**:  Used in a group by or non-group queries as a shortcut to display expected attributes 
 	* **having min(UserName) is not omitted**: The having clause that excludes the spans without a username is added to filter out the traces when a user did not log in at all.
 
 4. Click **Run**. Verify that a new column **User Name** is added and ensure that each row contains a value in that column. 
 
     ![Oracle Cloud, Trace Explorer](images/8-2-2-with-having.png " ")
 
-5. In some cases, you may have multiple applications touched in a single session. You can use the same syntax to cover this use case, by replacing the variable **UserName** with **webApplicationName**, and specify display name as **“Web App”**.  Your query should look like below.
+5. In some cases, you may have multiple applications touched in a single session. You can use the same syntax to cover this use case, by replacing the variable **UserName** with **webApplicationName**, and specifying the display name as **“Web App”**. Your query should look like the one below.
 
 	``` bash
 	<copy>
@@ -99,7 +99,7 @@ The query used in the previous task provided some basic information, however, yo
 
 Often the business cases require some insight into the distribution of the web applications used in the sessions. To cover this requirement, you can use the **unique_values** function and show the unique values of the dimension in the result. 
 
-7. Replace the first min function in the query, with **unique_values** function.  Your query should look like below. 
+7. Replace the first min function in the query, with the **unique_values** function.  Your query should look like the one below. 
 
 	``` bash
 	<copy>
@@ -131,7 +131,7 @@ Queries can be also modified by adding a filter, to narrow down the traces to me
 	</copy>
 	```
 
-2. Click **Run** to see the results. The query returns following columns:
+2. Click **Run** to see the results. The query returns the following columns:
 * **User Name**: A username used in the session
 * **Page Views**: Total number of page views in the session
 * **Traces**: Numbers of traces per username
@@ -258,7 +258,7 @@ In some cases, you may want to know whether a user made a click action on Web UI
 	Explanations:
 
 	* The **CASE** expression returns a value when the first condition is met.
-	* The **SUM** function in the query counts the occurrences within each group. In this example, it indicates the number of cases that when the **ApmrumClickElementId** is set to the element **'/html/body/app-root/app-prod-list/div/div[3]/div[4]/mat-card/mat-card-actions/button/span'**, indicating the element was clicked.
+	* The **SUM** function in the query counts the occurrences within each group. In this example, it indicates the number of cases when the **ApmrumClickElementId** is set to the element **'/html/body/app-root/app-prod-list/div/div[3]/div[4]/mat-card/mat-card-actions/button/span'**, indicating the element was clicked.
 	* A new column **“Button”** is added
 	* If the element is clicked, it returns **“clicked”** as a value in the **Button** column
 	* If not clicked, it returns **“-”** as a value in the **Button** column
@@ -328,7 +328,7 @@ With the information on the button click, you may want to get an understanding o
 	</copy>
 	```
     ![Oracle Cloud, Trace Explorer](images/8-6-1-verify-final-query.png " ")
-4. Click **Run**. Verify that new columns are added, indicating how much time the user spent to reach the **“add to cart”** and **“time to check out”** steps.  Also ensure that the results are sorted by the **Duration**.
+4. Click **Run**. Verify that new columns are added, indicating how much time the user spent to reach the **“add to cart”** and **“time to check out”** steps.  Also, ensure that the results are sorted by the **Duration**.
     ![Oracle Cloud, Trace Explorer](images/8-6-2-final-traces.png " ")
 
 ## Acknowledgements

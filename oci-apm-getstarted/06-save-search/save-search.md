@@ -2,220 +2,141 @@
 
 ## Introduction
 
-In this lab, you will save the query created in the previous lab for future use and include it in the quick bar for frequent access.
+In this lab, you will learn how to save a custom query for future use and incorporating it into the quick bar for convenient and frequent access.
 
 Estimated time: 15 minutes
 
 ### Objectives
 
 * Save a query to a compartment
-* Create a custom Query bar
-* Add the query to the custom Query bar
-* Make the custom Query bar as default 
+* Create a custom query bar
+* Add the query to the custom query bar
+* Set the custom query bar as the default option
 
 ### Prerequisites
 
 * Completion of the preceding labs in this workshop
 
-## Task 1: todo
+## Task 1: Run a custom query in Trace Explorer
 
-1. At the end of the previous lab, you selected to launch the **Trace Explorer** from the **Monitor History** page. Traces that are listed in the **Traces** section are captured from the monitor run.
+1. In the OCI console, from **Navigation Menu** > **Observability and Management** > **Trace Explorer** under **Application Performance Monitoring**.
 
-	![Oracle Cloud, Trace Explorer](images/1-0-te-mainpage.png " ")
+2. **Trace Explorer** opens in the screen.
+    ![Oracle Cloud, Trace Explorer](images/6-1-1-te-landing-page.png " ")
 
-2. Examine the **where clause** in the query. You will see the parameters **Monitor ID**, **Vantage point**, and the **MonitorRunId** carried over from the Monitor History page, and automatically constructed a query to show a list of traces for this particular monitor run.
+3. Ensure the **Compartment** is set to **root/eStore/WineStore** and the **APM Domain** is set to **Prod**.
 
-	![Oracle Cloud, Trace Explorer](images/1-1-monitor-svc-query.png " ")
-
-## Task 2: Understand relations of services and operations in the Topology view
-
-1. Click the **Topology** Icon on the right-hand side of the screen.
-
-	![Oracle Cloud, Trace Explorer](images/1-2-toplogy-togglebtn.png " ")
-
-
-2. The **Topology** diagram opens. This is the **Service topology** constructed from the flow of the 15 traces, or transactions, executed by the Monitor.
-
-
-	![Oracle Cloud, Trace Explorer](images/1-3-toplogy-svr-view.png " ")
-
-3. Examine the diagram by hovering the mouse over the nodes and arrows.
-
- 	Hovering over a service shows the service name.
-
-	![Oracle Cloud, Trace Explorer](images/1-5-toplogy-svc.png " ")
-
-	Hovering over an arrow shows the connection details between the services. Notice that the thicker the arrow, the longer the connection time. So the diagram helps you to identify where in the services the slowness has occurred.  
-
-	![Oracle Cloud, Trace Explorer](images/1-4-toplogy-cursul-jdbc.png " ")
-
-
-4. Click the **Operations** button to see the operation level topology. The operations view shows the flow of individual spans within the services.
-
-
-	![Oracle Cloud, Trace Explorer](images/1-6-toplogy-show-opr.png " ")
-
-
-5. Now the topology shows the operations. Click the **Show Diagram Controls** icon (icon with four bars).
-
-	![Oracle Cloud, Trace Explorer](images/1-7-toplogy-show-diag.png " ")
-
-6. Click **Arrow Width** to open a pulldown. Then select **Max Span Duration**.
-
-	![Oracle Cloud, Trace Explorer](images/1-8-toplogy-max-duration.png " ")
-
-7. Click **X** to close the pane.
-
-	![Oracle Cloud, Trace Explorer](images/1-9-toplogy-menu-close.png " ")
-
-8. Find a path with thick arrows in the diagram to identify the slowness. In the screenshot below, a path involving the checkout is taking a long time.
-
-	![Oracle Cloud, Trace Explorer](images/1-10-toplogy-confirm-flow.png " ")
-
-9. Hover the mouse over the arrow between the last operation and the database. A floating window shows information about the slow SQL executed.
-
-	![Oracle Cloud, Trace Explorer](images/1-11-topology-opr-query.png " ")
-
-
-## Task 3: Drill down to the trace Details
-
-1. Click the black triangle icon on the right side of the Query view. A list of queries used in the session will show in a pulldown. Select the previous query executed.
-
-	![Oracle Cloud, Trace Explorer](images/1-12-select-past-query.png " ")
-
-2. Now you are back at the **Traces** section. Look at the transactions (traces) executed by the monitor, and locate the slow trace that is taking more than 15 seconds. In the screenshot below, there is a trace that is taking 18 seconds to complete. Click the link in the first column.
-
-	![Oracle Cloud, Trace Explorer](images/1-13-select-long-running-trace.png " ")
-
-
-3. The Trace detail page opens and displays the flow of action for the specific transaction, in **Topology** and **Waterfall** views.
-
-	![Oracle Cloud, Trace Explorer](images/1-14-trace-details-main.png " ")
-
-	>**Note:** The operations in the topology are the spans that are seen in the waterfall view.
-
-	In the **Topology** view, hover the mouse over the icons. As you have already verified in the previous steps, slowness is seen in the monitor when a checkout button is clicked by the synthetic user.
-
-	![Oracle Cloud, Trace Explorer](images/1-15-tp-svc.png " ")
-
-
-4. Click the triangle icon next to the **Topology** label, to minimize the topology region.
-
-	![Oracle Cloud, Trace Explorer](images/1-16-tp-collapse.png " ")
-
-
-5. The waterfall view shows the spans invoked in the transaction. If the trace is spread across multiple services, spans in each service appear in a different color. Review the following.
-
-
-	 - The view visualizes the workflow of the trace and the relation between the spans.
-	 - Each bar represents a span, and the time length goes from left to right.
-	 - The longer the bar, the more time was consumed to complete the operation.
-	 - The bar at the top is a root span, and child spans are nested below.
-	 - Spans may wait for the next span to complete, or may not if it is an async call.
-
-
-	 ![Oracle Cloud, Trace Explorer](images/1-17-gant-chart-view.png " ")
-
-	 	>**Note:** The waterfall view is visualized in the form of a Gantt chart.
-
-6. Look at the waterfall view, and try to identify the slow span. For example, in the screenshot below, **wsk-checkou:update** is the bottleneck, blocking the payment service from the process.
-
-	![Oracle Cloud, Trace Explorer](images/1-18-spot-jdbc-span.png " ")
-
-	Click the link or the bar of the span.
-
-7. **Span details** page opens. On this page, span details are provided in the list of dimensions. Scroll down the list, and review the information of the span. E.g., the App server name, type and the port it uses, Kubernetes node and pod names, and the information related to the host and Oracle Cloud. Because this span is a JDBC span, it also includes information from the database. These dimensions are provided out-of-the-box and can help you investigate a problem. You can also create custom dimensions.
-
-	![Oracle Cloud, Trace Explorer](images/1-19-span-details-main.png " ")
-
-8. As scrolling down, locate the dimensions related to the database. In this case, you identified that the problem is a slow SQL. The dimensions provide the actual SQL, the time it took to execute, the DB Connection string, and the SQLID.
-
-	![Oracle Cloud, Trace Explorer](images/1-20-sql-id.png " ")
-
-	Using the DB Connection string and the SQLID, you can drill down to perfhub and/or Operations Insights service in Oracle Cloud, to investigate the issue with the database.
-
-	 >**Note:** You can use in context drill down to the database services, by clicking the **OPSCI** or **PerfHub** buttons in the **Available Drill downs** section.
-	![Oracle Cloud, Trace Explorer](images/1-20-1-drilldown.png " ")
-
-9. Click **Close**, then click the **Trace Explorer** link from the breadcrumb to go back to the Trace Explorer main page.
-
-	![Oracle Cloud, Trace Explorer](images/1-21-spanpage-close.png " ")
-	![Oracle Cloud, Trace Explorer](images/1-22-click-tx-link.png " ")
-
-
-## Task 4: Inspect the SQL spans by executions
-
-
-1. Now you are back at the Trace Explore the main page. From the Quick Pick tab, click **SQLs**.
-
-	![Oracle Cloud, Trace Explorer](images/1-23-click-sqls-tab.png " ")
-
-2. Verify that the SQL that comes at the top of the list, is the same SQL, which you found as a bottleneck in the previous steps. The view is sorted by the slowest average duration. Next, let's check whether the SQL is always slow or not. Click the **Count** column of the SQL on the top row.
-	![Oracle Cloud, Trace Explorer](images/1-24-click-count.png " ")
-
-3. 	You can see each of the individual executions of the SQL. Confirm that the SQL is not always slow when executed. Scroll down the list as needed.
-
-	![Oracle Cloud, Trace Explorer](images/1-25-check-slow-sqls.png " ")
-
-
-## Task 5: Analyze the SQL spans with the histogram query
-
-1. Another way to analyze the distribution is to use the histogram view. Click the three-dot icon under the **Run** button, then click **Open**.
-
-	![Oracle Cloud, Trace Explorer](images/1-27-open-saved-query-menu.png " ")
-
-2. Type **histogram** in the search field. Select the query **SQL-Histogram**, then click **Open**.
-
-	![Oracle Cloud, Trace Explorer](images/1-28-open-histogram-query.png " ")
-
-
-	>**Note:** Alternatively, copy the text below, paste it into the **Query** view, then hit enter, or press the **Run** button.
+4. Place the cursor on the **Query view**. Either use your mouse or type Ctrl+A to select all.
+    ![Oracle Cloud, Trace Explorer](images/6-1-2-queryview-selectall.png " ")
+5. Press the delete key on your keyboard to remove the text.
+    ![Oracle Cloud, Trace Explorer](images/6-1-3-queryview-blank.png " ")
+6. Type the text below into the **Query** view.
 
 	``` bash
 	<copy>
-	show spans histogram(spanDuration, 2000,10000,10) as Bucket, min(spanDuration) as "Min", max(spanDuration) as "Max", count(*) as count, avg(spanDuration) as Avg  where operationName='/frontStore/checkout' group by histogram(spanDuration, 2000,10000,10) order by max(spanDuration) asc
+	show (traces) min(UserName) as "User Name",
+		sum(PageViews) as "Page Views",
+		count(*) as "Traces",
+		max(TraceLatestSpanEndTime) - min(TraceFirstSpanStartTime) as Duration,
+		min(case when (JourneyPhase = '2-addToCart') then TraceLatestSpanEndTime  end ) - min(TraceFirstSpanStartTime) as "time to addToCart",
+		min(case when (JourneyPhase = '3-checkedOut') then TraceLatestSpanEndTime  end ) - min(TraceFirstSpanStartTime) as "time to checkOut",
+	case when(sum(case when (JourneyPhase = '4-orderConfirmed') then 1 else 0 end))>0 then 'reached' else '0' end as step4,
+	case when(sum(case when (ApmrumClickElementId='/html/body/app-root/app-prod-list/div/div[3]/div[4]/mat-card/mat-card-actions/button/span') then 1 else 0 end))>0 then 'clicked' else '-' end as Button
+	where ( ApmrumPageUpdateType is not omitted OR ApmrumType='Connection')
+	group by SessionId
+	having  sum(case when (JourneyPhase = '4-orderConfirmed') then 1 else 0 end) >0
+	order by max(TraceLatestSpanEndTime) - min(TraceFirstSpanStartTime) desc
 	</copy>
 	```
 
-3. Inspect the histogram view opened on the screen.
+      > **Note:** The query retrieves session data for transactions conducted within a web-based shopping cart application. The process of constructing this query is explained in Lab 9.
+    ![Oracle Cloud, Trace Explorer](images/6-1-4-custom-query.png " ")
 
-	![Oracle Cloud, Trace Explorer](images/1-30-histogram-view.png " ")
-
-  In the above screenshot, you can see the following.
-
-  -  In 90% of the total executions (the top row) the SQL runs 13 milli-seconds in average. So it is usually very fast.
-    ![Oracle Cloud, Trace Explorer](images/1-31-fast-sqls.png " ")
+7. Click **Run**. Verify the results in the **Traces** view.
+    ![Oracle Cloud, Trace Explorer](images/6-1-5-session-traces.png " ")
 
 
-  - However, in some cases, it runs much slower. 6% of the total executions show the duration more than 10 seconds.
-    ![Oracle Cloud, Trace Explorer](images/1-32-slow-sql.png " ")
+## Task 2: Save the custom query to your compartment
 
+1. Click the three dots icon under **Run**, click **Save**.
+    ![Oracle Cloud, Trace Explorer](images/6-2-1-custom-query.png " ")
+2. In the **Save query** window, expand the tree view **root/LiveLabs-Compartments/LiveLabs** and locate your compartment.
+    ![Oracle Cloud, Trace Explorer](images/6-2-2-select-compartment.png " ")
+      > **Note:** You can find your compartment name in the **Reservation Information** pane. Click **View Login Info** at the top left corner of this page to access the page.
+	      ![Oracle Cloud, Trace Explorer](images/6-2-3-compartment-name.png " ")
 
+3. Ensure your compartment name is entered in the **Query compartment** field. Name the query **Session Analysis**. Click **Save**.
+    ![Oracle Cloud, Trace Explorer](images/6-2-4-save-query.png " ")
+4. Click the three dots icon under **Run**, click **Open**.
+    ![Oracle Cloud, Trace Explorer](images/6-2-5-find-query.png " ")
+5. Select your compartment in the **Compartment** field, then type **Session** in the **Search** field. Find the query you saved with the name, **Session Analysis**. Select the query and click **Open** to close the window.
+    ![Oracle Cloud, Trace Explorer](images/6-2-6-custom-query.png " ")
 
-    > **Note:** You can further diagnose the issue in the PerfHub and use the Operations Insights service to solve this problem in the database.
+6. Verify that the session data from the saved query is loaded into the **Traces** view. 
+    ![Oracle Cloud, Trace Explorer](images/6-2-7-view-traces.png " ")
 
-    Although we do not cover the database side diagnostics in this workshop, the root cause of the issue is the lock contention in the database that the update statement is being blocked by another SQL that is doing a select on the same table. That uses a lot of CPU and takes a long time to execute, and is causing the update statement that usually runs in ms while slows down intermittently. Using Perfhub and/or the Operations Insights service, you can find and resolve this problem.
+## Task 3: Add the custom query to a quick bar
 
-    For more details on the solution at the database, please watch the following video that demonstrates how the contention can be identified and how it can be resolved. In the video, you can see the issue is resolved by enabling the auto index feature to the autonomous database using the Operations Insights service in Oracle Cloud.
+Next, let's save the query to the query bar so that you can quickly pick it up and load it onto the Query view the next time.
 
+1. Select the three dots icon at the right side of the **Query bar**, and select **Manage**.
+    ![Oracle Cloud, Trace Explorer](images/6-3-1-open-query-bar-options.png " ")
+2. This will open the APM administration page.
+    ![Oracle Cloud, Admin page](images/6-3-2-admin-page-quick-bar.png " ")
+3. Select your assigned compartment.
+    ![Oracle Cloud, Admin page](images/6-3-3-treeview-compartment.png " ")
 
-    [Demonstration, A New Platform for Multicloud Observability and Management](https://youtu.be/EnsQMOEhWjQ?t=1058)
+4. Select the three dots icon at the right side of the default **APM Query bar**. 
+	![Oracle Cloud, Admin page](images/6-3-4-select-compartment.png " ")
+5. Verify that the **Edit** option is disabled. This is because the default query bar is not editable. Click **Duplicate**.
+	![Oracle Cloud, Admin page](images/6-3-5-quickbar-option-dupe.png " ")
 
-    [![YouTube](images/1-33-session-thumbnail.png)](https://youtu.be/EnsQMOEhWjQ?t=1058 "Redirect to YouTube")
+6. **Duplicate query bar** window opens.
+	* Select your assigned compartment in the LiveLabs session.
+	* Name the query bar. For example, **My APM lab Query Bar**.
+	* Click **Add query**.
+	![Oracle Cloud, Admin page](images/6-3-6-name-duplicated-qbar.png " ")
+7. **Add query** window opens.
+	* Ensure your assigned compartment is selected.
+	* Add a check to the query saved in the previous steps. This is the query you want to add to the query bar.
+	* Click **Add Query**
+	![Oracle Cloud, Admin page](images/6-3-7-add-query-to-qbar.png " ")
 
-## Conclusion
+8. Verify that the query was added to the bottom of the list.
+	![Oracle Cloud, Admin page](images/6-3-8-verify-query-added.png " ")
+9. You can change the order shown up in the query bar. Select the three lines on the right side of the box, and drag and drop it to bring it to the top.
+	![Oracle Cloud, Admin page](images/6-3-9-drag-drop-query.png " ")
+10. Click **Duplicate** 
+	![Oracle Cloud, Admin page](images/6-3-10-click-duplicate.png " ")
 
-  In this workshop, you have learned how to use various APM features to detect a performance problem, analyze the data, and drill down to the cause of the problem.
+11. A new query bar, **“APM Lab query bar”** is created. Click **Trace Explorer** from the menu under **APM** on the left side of the screen. 
+	![Oracle Cloud, Admin page](images/6-3-11-confirm-new-qbar.png " ")
 
-  You can use the APM Home page and Alarm details page to understand the potential issue in your application, use the Monitors dashboard page to examine the collected data, and use the Monitor history page and the APM Trace Explorer to drill down to the cause of the problem.
+## Task 4: Enable the custom quick bar
 
-  For more information on APM, refer to the OCI documentation, **[Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)**.
+1. In the Trace Explorer, select the three dots icon at the end of the query bar. Click **Open**.
+	![Oracle Cloud, Trace Explorer](images/6-4-1-open-qbar-options.png " ")
+2. In the **Open query bar** window, select the custom query bar you created.
+	![Oracle Cloud, Trace Explorer](images/6-4-2-open-qbar-compartment.png " ")
 
+     > **Note:** You can review the menu of queries saved in the query bar, by clicking the triangle icon.
+	![Oracle Cloud, Trace Explorer](images/6-4-3-review-saved-queries.png " ")
+3. Confirm that the **Session Analysis** is displayed as the first quick pick in the query bar menu. 
+	![Oracle Cloud, Trace Explorer](images/6-4-4-confirm-custom-qbar.png " ")
 
+4. As it is the first quick pick, the result is already loaded in the Traces view. Verify the columns and values.
+	![Oracle Cloud, Trace Explorer](images/6-4-5-confirm-traces.png " ")
 
+## Task 5: Set the custom quick bar as default
+
+1. In the **Query Bar** view, select three dots. In the menu opened, select **Save as default**.
+	![Oracle Cloud, Trace Explorer](images/6-5-1-open-qbar-options.png " ")
+2. In the confirmation dialog, click **Save**.
+	![Oracle Cloud, Trace Explorer](images/6-5-2-open-qbar-options.png " ")
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
-
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
