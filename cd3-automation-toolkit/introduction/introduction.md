@@ -2,44 +2,74 @@
 
 ## About this Workshop
 
-This introduction covers the complete "parent" workshop. Use this text to set up the story for the workshop. Be engaging - what will the learner get from spending their time on this workshop?
+This set of labs will walk you through deploying various OCI services. Upon completion of the labs, a full set of OCI resources will be created as a base infrastructure to install and configure an application.
 
-Estimated Workshop Time: -- hours -- minutes (This estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
+[CD3 Automation Toolkit Explained in 1 minute](youtube:TSNu0pUHYsE&list=PLPIzp-E1msrbJ3WawXVhzimQnLw5iafcp&index=1)
 
-*You may add an option video, using this format: [](youtube:YouTube video id)*
-
-  [](youtube:zNKxJjkq0Pw)
+Estimated Workshop Time: 1 Hour 30 Minutes
 
 ### Objectives
 
-*List objectives for the workshop*
-
 In this workshop, you will learn how to:
-* Provision
-* Setup
-* Load
-* Query
+- Getting Started with CD3 Automation Toolkit
+- Build OCI infrastructure using CD3 Automation Toolkit
+- Grouping of generated Terraform files
+- Produce and Inspect Terraform Plan
+- Apply Plan to OCI tenancy
+- OCI Resource Manager Upload
+- Terraform Destroy to reset
 
-### Prerequisites (Optional)
+### Prerequisites
 
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. **Do NOT list** each previous lab as a prerequisite.*
+This lab has the following pre-requisites:
 
-This lab assumes you have:
-* An Oracle account
-* All previous labs successfully completed
+- A [free tier](https://www.oracle.com/cloud/free/) or paid OCI tenancy
+- An account in the Administrators group in OCI
+- Basic understanding of Git
+- Any docker CLI compatible platform such as Docker or Rancher.
+- Local Directory - A directory in your local system that will be shared with the container to hold the generated Terraform files.
 
-*This is the "fold" - below items are collapsed by default*
+## The CD3 Automation Toolkit Architecture
 
-In general, the Introduction does not have Steps.
+![CD3 Automation Toolkit Architecture](images/CD3_Architecture.png "CD3 Automation Toolkit Architecture")
+
+### Overview
+
+CD3 stands for **C**loud **D**eployment **D**esign **D**eliverable. [The CD3 Automation toolkit](https://github.com/oracle-devrel/cd3-automation-toolkit) has been developed to help in automating the OCI resource object management.
+
+It reads input data in the form of CD3 Excel sheet and generates the terraform files which can be used to provision the resources in OCI instead of handling the task through the OCI console manually. 
+
+The toolkit also reverse engineers the components in OCI back to the Excel sheet and Terraform configuration. 
+
+This generated Terraform code can be used by the OCI Resource Manager or leveraged by the organisations’ CI/CD processes.
+
+### Cost
+
+All resources deployed by the Automation Toolkit are OCI native services, meaning it may have cost impact based on tenancy billing plan.
+
+### Architecture Components
+
+The Automation Toolkit will deploy a full set of resources suitable for a production cloud, including:
+
+- Identity and Access Management (IAM) Controls
+- One or More Virtual Cloud Networks (VCNs)
+- Compute Service
+- Block Volume
+- Autonomous Transaction Processing Database
+- Cloud Events Rules
+- Alarms
+- OCI Notifications 
+- Budget Controls
+
+Most things in OCI can be provisioned with Terraform. While beyond the scope of this lab, more information on using Terraform in OCI can be found [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraform.htm).
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [Documentation](https://github.com/oracle-devrel/cd3-automation-toolkit)
+* [Learning Videos](https://www.youtube.com/watch?v=TSNu0pUHYsE&list=PLPIzp-E1msrbJ3WawXVhzimQnLw5iafcp)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+
+- __Author__ - Dipesh Rathod
+- __Contributors__ - Murali N V, Suruchi Singla
+- __Last Updated By/Date__ - Dipesh Rathod, May 2023
