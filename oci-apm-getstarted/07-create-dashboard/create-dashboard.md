@@ -39,7 +39,7 @@ To begin, you need to define the specific query for which you want to create a d
     ![Oracle Cloud, Trace Explorer](images/7-1-2-short-query.png " ")
 
       > **Note:** * (asterisk) in the query is used as a shortcut to display expected attributes. Optionally, you can enhance the query with more refined column titles: 
-	     ***show spans OperationName as "Request name", avg(ApdexScore) as Apdex,count(*) as Count, percent_of_items() as "% of Total Count", avg(SpanDuration) as "Avg Duration", sum(errorCount) as Errors where Kind='SERVER' group by OperationName,ServiceName order by count(*) desc***
+	     ***show spans OperationName as "Request name", avg(ApdexScore) as Apdex,count(\*) as Count, percent\_of\_items() as "% of Total Count", avg(SpanDuration) as "Avg Duration", sum(errorCount) as Errors where Kind='SERVER' group by OperationName,ServiceName order by count(\*) desc***
 	   ![Oracle Cloud, Trace Explorer](images/7-1-3-enhanced-query.png " ")
 
 5. Select and copy the text from the Query view, either by the CTRL+C or by right-clicking and selecting the **Copy** option from the context menu.
@@ -85,11 +85,11 @@ At present, the widget displays the default query. You can change the query depe
     ![Oracle Cloud, Create Dashboards page](images/7-3-2-widget-expand.png " ")
 2.	Under **Configured Widget input** section, click **"*" (asterisk)** showing next to the Trace Table Query. 
     ![Oracle Cloud, Create Dashboards page](images/7-3-3-click-asterisk.png " ")
-3. The **Configure Trace Table Query Input** window opens. Replace the text with the query from the Trace Explorer. 
+3. The **Configure Trace Table Query Input** window opens. Replace the text with the query from the Trace Explorer. Note that the query used in this example is the enhanced version.
 
 	``` bash
 	<copy>
-	show spans * where kind = 'SERVER' group by serviceName, operationName
+	show spans OperationName as "Request name", avg(ApdexScore) as Apdex,count(*) as Count, percent_of_items() as "% of Total Count", avg(SpanDuration) as "Avg Duration", sum(errorCount) as Errors where Kind='SERVER' group by OperationName,ServiceName order by count(*) desc
 	</copy>
 	```
 
@@ -97,12 +97,14 @@ At present, the widget displays the default query. You can change the query depe
 6. Confirm the APM Trace Table widget now shows the data from the copied query. 
     ![Oracle Cloud, Create Dashboards page](images/7-3-5-load-query-in-widget.png " ")
 
+7. In the **Widgets** tab, change the **Widget label** from APM Trace Table to **Server Requests**. Verify that the widget title is updated to Server Requests.
+    ![Oracle Cloud, Create Dashboards page](images/7-3-6-change-widget-name.png " ")
 ## Task 4: Add a filter to the widget
 
 1. Next let's add a filter based on service names so that you can narrow down the data and focus on a specified service. Click **Filters** tab.
     ![Oracle Cloud, Create Dashboards page](images/7-4-1-click-filters.png " ")
-2. In the search field, type **trace**. You will see **Trace Dimension Filter** appear in the list.
-    ![Oracle Cloud, Create Dashboards page](images/7-4-2-click-filters.png " ")	
+2. In the search field, type **spans**. You will see the **Spans Dimension Filter** in the list.
+    ![Oracle Cloud, Create Dashboards page](images/7-4-2-type-spans.png " ")	
 3. Drag the filter to the **Filter** pane at the upper side of the screen. This will add a filter to the dashboard.
     ![Oracle Cloud, Create Dashboards page](images/7-4-3-drag-drop.png " ")	
 4. **Configure APM Domain input** window opens. Leave as default, and click **Save changes**.
@@ -110,22 +112,24 @@ At present, the widget displays the default query. You can change the query depe
 5.	**Configure Dimension Name input** window opens. Click **Enter a Value** field and type **servicename**. Select **ServiceName** from the pull-down menu. Click **Save changes**.
     ![Oracle Cloud, Create Dashboards page](images/7-4-5-configure-dimension.png " ")	
 
-6.	In the **Filters** tab, in the **Filter label** field, change the filter name to **Service name**. Confirm that the name is also changed in the filter.
+6.	In the **Filters** tab, in the **Filter label** field, change the filter name to **Service Name**. Confirm that the name is also changed in the filter.
     ![Oracle Cloud, Create Dashboards page](images/7-4-6-change-filter-name.png " ")	
 7.	Click **Widgets** tab. Then click **Edit Widgets**.
     ![Oracle Cloud, Create Dashboards page](images/7-4-7-edit-widget.png " ")	
-8.	Expand **APM Trace Table** and click **Add Input**.
+8.	Expand **Server Requests** and click **Add Input**.
     ![Oracle Cloud, Create Dashboards page](images/7-4-8-add-input.png " ")	
-9.	In **Configure input for APM Trace Table**, in **Select and Existing filter** field, select **Service Name**. Note that the **Parameter Name** field is updated and displays **ServiceName** as a value. Click **Save changes**.
+9.	In **Configure input for Server Requests**, in **Select and Existing filter** field, select **Service Name**. Note that the **Parameter Name** field is updated and displays **ServiceName** as a value. Click **Save changes**.
     ![Oracle Cloud, Create Dashboards page](images/7-4-9-configure-input.png " ")	
 10.	Now that **Service Name** filter is connected to the widget. Click **About** tab, and make sure your assigned compartment is selected. This is where the dashboard will be saved. Click **Save changes**.
     ![Oracle Cloud, Create Dashboards page](images/7-4-10-save-dashboard.png " ")
-13.	This will open the new dashboard you just saved. Select different service names from the **Service name** filter. Ensure the **Compartment** is set to **root/eStore/WineStore** and the **APM Domain** is set to **Prod**. Verify that the data selections dynamically change as you select different service names from the **Service name** filter.
-    ![Oracle Cloud, Custom Dashboard](images/7-4-11-new-dashboard-data-selection-a.png " ")
-	![Oracle Cloud, Custom Dashboard](images/7-4-12-new-dashboard-data-selection-b.png " ")
+13.	This will open the new dashboard you just saved. Select different service names from the **Service name** filter. Ensure the **Compartment** is set to **root/eStore/WineStore** and the **APM Domain** is set to **Prod**. 
+    ![Oracle Cloud, Custom Dashboard](images/7-4-11-new-dashboard.png " ")
+14. Verify that the data selections dynamically change as you select different service names from the **Service name** filter.
+    ![Oracle Cloud, Custom Dashboard](images/7-4-12-new-dashboard-data-selection-a.png " ")
+	![Oracle Cloud, Custom Dashboard](images/7-4-13-new-dashboard-data-selection-b.png " ")
 
 
-## Task 5: Import custom trace data widget
+## Task 5: Add a custom widget
 
  Next, we will import a preconfigured custom widget having wide range of visualization options, which is designed to accept customizable TQL expressions.
 
@@ -171,23 +175,58 @@ At present, the widget displays the default query. You can change the query depe
 9. Locate the custom dashboard, **My new dashboard**, you created, right-click the three dots icon at the end of the row, then select **Edit**.
 	![Oracle Cloud, Dashboards page](images/7-5-8-right-click-edit.png " ")
 10. In the **My new dashboard** editing page, select **Widgets** tab. 
-	![Oracle Cloud, Edit Dashboards page](images/7-5-9-ctdw-apdex.png " ")
-11. Type **ctdw** to filter the widgets. Select **CTDW Apdex**, drag and drop it into the main pane.
+	![Oracle Cloud, Edit Dashboards page](images/7-5-9-click-widget.png " ")
+11. Type **ctdw** to filter the widgets. Verify the **CTDW Apdex** widget appears on the top.
 	![Oracle Cloud, Edit Dashboards page](images/7-5-10-ctdw-apdex.png " ")
-12. **Configure APM domain input** window opens. Click **Save changes**.
+12. Select **CTDW Apdex**, drag and drop it into the main pane.
+	![Oracle Cloud, Edit Dashboards page](images/7-5-10-drag-drop.png " ")
+
+
+13. **Configure APM domain input** window opens. Click **Save changes**.
 	![Oracle Cloud, Edit Dashboards page](images/7-5-11-configure-domain.png " ")
-13. **CTDW Apdex** widget is added to the dashboard. Click **Edit widgets**. 
+14. **CTDW Apdex** widget is added to the dashboard. Click **Edit widgets**. 
 	![Oracle Cloud, Edit Dashboards page](images/7-5-12-edit-widgets.png " ")
-14. Expand the **CTDW Apdex** section, click **Add Input**.
-	![Oracle Cloud, Edit Dashboards page](images/7-5-13-add-input.png " ")
-15. **Configure input for CTDW Apdex** window opens. In the **Select an existing filter** field, select **Service name**. The parameter name is **ServiceName**. Click **Save changes**.
-	![Oracle Cloud, Edit Dashboards page](images/7-5-14-configure-input-apdex.png " ")
-16. Set the **Compartment** to **root/eStore/WineStore** and the **APM Domain** to **Prod**. Ensure the data is populated in the widgets. Click **Save Changes**.
-	![Oracle Cloud, Edit Dashboards page](images/7-5-14-save-changes.png " ")
-17. Dashboard is updated with an Apdex widget. select different service names from the **Service name** filter to verify the data selection changes for both widgets.
-	![Oracle Cloud, Edit Dashboards page](images/7-5-15-dashboard-final.png " ")
+
+15. In the **Widgets** tab, **Widget label** field, change the label from CTDW Apdex to **Apdex**. Note that the Widget title also changes to Apdex.
+	![Oracle Cloud, Edit Dashboards page](images/7-5-13-change-widget-title.png " ")
+
+16. In the **Configured Widget inputs** section, locate the first query **Show traces count(apdexLevel)..**. Click the pencil icon next to the query to edit this query.
+	![Oracle Cloud, Edit Dashboards page](images/7-5-13-click-sql.png " ")
 
 
+17. In the **Congigure Trace query input for Apdex** window, replace the value with the following query. Click **Save changes**.
+
+	``` bash
+	<copy>
+	show spans count(apdexLevel) as value, apdexLevel as series where apdexLevel is not omitted and kind='SERVER' group by apdexLevel order by min(apdexScore) asc
+	</copy>
+	```
+	![Oracle Cloud, Edit Dashboards page](images/7-5-14-enter-query.png " ")
+
+
+
+18. In the **Configured Widget inputs** section, locate the second query, **Show traces avg(apdexScore)..**. Click the pencil icon next to the query to edit this query.
+	![Oracle Cloud, Edit Dashboards page](images/7-5-15-click-second-sql.png " ")
+19. In the **Congigure Trace query input for Apdex** window, replace the value with the following query. Click **Save changes**.
+
+	``` bash
+	<copy>
+	show spans avg(apdexScore) as value where apdexScore is not omitted and kind='SERVER'
+	</copy>
+	```
+	![Oracle Cloud, Edit Dashboards page](images/7-5-16-enter-second-query.png " ")
+
+20. Expand the **Apdex** section, click **Add Input**.
+	![Oracle Cloud, Edit Dashboards page](images/7-5-17-add-input.png " ")
+21. **Configure input for CTDW Apdex** window opens. In the **Select an existing filter** field, select **Service name**. The parameter name is **ServiceName**. Click **Save changes**.
+	![Oracle Cloud, Edit Dashboards page](images/7-5-18-configure-input-apdex.png " ")
+22. Set the **Compartment** to **root/eStore/WineStore** and the **APM Domain** to **Prod**. Ensure the data is populated in the widgets. Click **Save Changes**.
+	![Oracle Cloud, Edit Dashboards page](images/7-5-19-save-changes.png " ")
+23. Dashboard is updated with an Apdex widget. 
+	![Oracle Cloud, Edit Dashboards page](images/7-5-20-dashboard-final.png " ")
+24. Select different service names from the **Service name** filter to verify the data selection changes for both widgets.
+	![Oracle Cloud, Edit Dashboards page](images/7-5-21-dashboard-select-a.png " ")
+	![Oracle Cloud, Edit Dashboards page](images/7-5-22-dashboard-select-b.png " ")
 ## Acknowledgements
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
