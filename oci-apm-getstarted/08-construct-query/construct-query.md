@@ -117,7 +117,7 @@ Often the business cases require some insight into the distribution of the web a
 
 Queries can be also modified by adding a filter, to narrow down the traces to meet the specified condition. As a result, it increases the visibility of a particular condition that is of interest. In this task, we will explore those options. 
 
-1.	We will start off with a slightly simplified version of the original Session data. Type the text below it into the Query view. 
+1. We will start off with a slightly simplified version of the original Session data. Type the text below it into the Query view. 
 
 	``` bash
 	<copy>
