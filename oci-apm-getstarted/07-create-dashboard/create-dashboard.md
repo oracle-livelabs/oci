@@ -77,7 +77,7 @@ To begin, you need to define the specific query for which you want to create a d
 
 ## Task 3: Customize the Trace Table widget	
 
-At present, the widget displays the default query. You can change the query depends on your desired data requirements.
+At present, the widget displays the default query. You can change the query depending on your desired data requirements.
 
 1. In the **Widgets** tab, Click **Edit Widgets**.  
     ![Oracle Cloud, Create Dashboards page](images/7-3-1-edit-widget.png " ")
@@ -118,20 +118,20 @@ At present, the widget displays the default query. You can change the query depe
     ![Oracle Cloud, Create Dashboards page](images/7-4-7-edit-widget.png " ")	
 8.	Expand **Server Requests** and click **Add Input**.
     ![Oracle Cloud, Create Dashboards page](images/7-4-8-add-input.png " ")	
-9.	In **Configure input for Server Requests**, in **Select and Existing filter** field, select **Service Name**. Note that the **Parameter Name** field is updated and displays **ServiceName** as a value. Click **Save changes**.
+9.	In **Configure input for Server Requests**, in **Select an Existing filter** field, select **Service Name**. Note that the **Parameter Name** field is updated and displays **ServiceName** as a value. Click **Save changes**.
     ![Oracle Cloud, Create Dashboards page](images/7-4-9-configure-input.png " ")	
-10.	Now that **Service Name** filter is connected to the widget. Click **About** tab, and make sure your assigned compartment is selected. This is where the dashboard will be saved. Click **Save changes**.
+10.	Now the **Service Name** filter is connected to the widget. Click **About** tab, and make sure your assigned compartment is selected. This is where the dashboard will be saved. Click **Save changes**.
     ![Oracle Cloud, Create Dashboards page](images/7-4-10-save-dashboard.png " ")
-13.	This will open the new dashboard you just saved. Select different service names from the **Service name** filter. Ensure the **Compartment** is set to **root/eStore/WineStore** and the **APM Domain** is set to **Prod**. 
+13.	This will open the new dashboard you just saved. Ensure the **Compartment** is set to **root/eStore/WineStore** and the **APM Domain** is set to **Prod**. 
     ![Oracle Cloud, Custom Dashboard](images/7-4-11-new-dashboard.png " ")
-14. Verify that the data selections dynamically change as you select different service names from the **Service name** filter.
+14.  Verify that the data selections dynamically change as you select different service names from the **Service Name** filter.
     ![Oracle Cloud, Custom Dashboard](images/7-4-12-new-dashboard-data-selection-a.png " ")
 	![Oracle Cloud, Custom Dashboard](images/7-4-13-new-dashboard-data-selection-b.png " ")
 
 
 ## Task 5: Add a custom widget
 
- Next, we will import a preconfigured custom widget having wide range of visualization options, which is designed to accept customizable TQL expressions.
+ Next, we will import a preconfigured custom widget with a wide range of visualization options designed to accept customizable TQL expressions.
 
 
 1. Download the custom widget to your computer, from the URL below:
@@ -194,7 +194,7 @@ At present, the widget displays the default query. You can change the query depe
 	![Oracle Cloud, Edit Dashboards page](images/7-5-13-click-sql.png " ")
 
 
-17. In the **Congigure Trace query input for Apdex** window, replace the value with the following query. Click **Save changes**.
+17. In the **Configure Trace query input for Apdex** window, replace the value with the following query. Click **Save changes**.
 
 	``` bash
 	<copy>
@@ -207,7 +207,7 @@ At present, the widget displays the default query. You can change the query depe
 
 18. In the **Configured Widget inputs** section, locate the second query, **Show traces avg(apdexScore)..**. Click the pencil icon next to the query to edit this query.
 	![Oracle Cloud, Edit Dashboards page](images/7-5-15-click-second-sql.png " ")
-19. In the **Congigure Trace query input for Apdex** window, replace the value with the following query. Click **Save changes**.
+19. In the **Configure Trace query input for Apdex** window, replace the value with the following query. Click **Save changes**.
 
 	``` bash
 	<copy>
@@ -216,7 +216,7 @@ At present, the widget displays the default query. You can change the query depe
 	```
 	![Oracle Cloud, Edit Dashboards page](images/7-5-16-enter-second-query.png " ")
 
-20. Expand the **Apdex** section, click **Add Input**.
+20. If closed, expand the **Apdex** section, then click **Add Input**.
 	![Oracle Cloud, Edit Dashboards page](images/7-5-17-add-input.png " ")
 21. **Configure input for CTDW Apdex** window opens. In the **Select an existing filter** field, select **Service name**. The parameter name is **ServiceName**. Click **Save changes**.
 	![Oracle Cloud, Edit Dashboards page](images/7-5-18-configure-input-apdex.png " ")
@@ -224,7 +224,7 @@ At present, the widget displays the default query. You can change the query depe
 	![Oracle Cloud, Edit Dashboards page](images/7-5-19-save-changes.png " ")
 23. Dashboard is updated with an Apdex widget. 
 	![Oracle Cloud, Edit Dashboards page](images/7-5-20-dashboard-final.png " ")
-24. Select different service names from the **Service name** filter to verify the data selection changes for both widgets.
+24. Select different service names from the **Service Name** filter to verify the data selection changes for both widgets.
 	![Oracle Cloud, Edit Dashboards page](images/7-5-21-dashboard-select-a.png " ")
 	![Oracle Cloud, Edit Dashboards page](images/7-5-22-dashboard-select-b.png " ")
 ## Acknowledgements
