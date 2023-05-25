@@ -1,26 +1,22 @@
 {
-    "workshoptitle": "Deploying OCI Streaming Service",
+    "workshoptitle": "Deploy Compute, Block Volume and ATP using CD3 Automation Toolkit",
     "help": "livelabs-help-oci_us@oracle.com",
 	"tutorials": [
         {
-            "title": "Introduction",
-            "filename": "./../../intro/intro.md"
+            "title": "Lab 1: Getting Started with CD3 Automation Toolkit",
+            "filename": "./../../getting-started/getting-started.md"
         },
         {
-            "title": "Get Started",
-            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+            "title": "Lab 2: Deploy compute, block volume with Autonomous Transaction Processing database",
+            "filename": "./../../deploy-compute/deploy-compute.md"
         },
         {
-            "title": "Lab 1: Stream Pools and Streams",
-            "filename": "./../../stream-pools/stream-pools.md"
+            "title": "Lab 3: Uploading stack to OCI resource manager",
+            "filename": "./../../upload-resourcemanager/upload-resourcemanager.md"
         },
         {
-            "title": "Lab 2: Publish Messages",
-            "filename": "./../../publish-messages/publish-messages.md"
-        },
-        {
-            "title": "Lab 3: Consume Messages",
-            "filename": "./../../consume-messages/consume-messages.md"
+            "title": "Lab 4: Create OCI cloud event rules, alarms and notifications",
+            "filename": "./../../create-eventalarm/create-eventalarm.md"
         },
         {
             "title": "Need Help?",
