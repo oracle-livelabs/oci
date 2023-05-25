@@ -58,7 +58,7 @@ With the new browser tab open, let's review this example alarm. The OCI Monitori
  	
  	![OCI Monitoring Service, highlighting the Compartment, OCID, Namespace, and Resource group fields](images/2-5-alarms.png " ")
  	
-	The OCI Monitoring Service provides a variety of ways to notify users an alarm is firing. In this example, we can see this alarm is defined to notify using the Topic, **StackMonDemo**. A topic is a reusable grouping of notifications. A Topic can include a mix of subscription protocols that include Slack, PagerDuty, email addresses, or a custom functions. 
+	The OCI Monitoring Service provides a variety of ways to notify users an alarm is firing. In this example, we can see this alarm is defined to notify using the Topic, **StackMonDemo**. A topic is a reusable grouping of notifications. A Topic can include a mix of subscription protocols that include Slack, PagerDuty, email addresses, or a custom function. 
 
 	This particular alarm is configured to **Group notifications across metric streams**. Grouping notifications within a metric stream reduces the number of alarms a user would receive. Using this alarm as an example, root filesystem utilization > 70%, was configured to fire if any host's root filesystem within this compartment, OracleApps, goes above 70%. The members of the Topic StackMonDemo notification group will be notified via email. Should more than one host's root filesystem utilization go above 70%, a single email will be sent to each member of the group, and the notification and alarm status page will denote multiple hosts in a firing state.
 

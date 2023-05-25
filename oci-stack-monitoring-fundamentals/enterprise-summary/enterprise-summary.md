@@ -1,5 +1,7 @@
 # Stack Monitoring's Enterprise Summary
 
+![Exercise Overview](images/1-1-ent-sum-overview.mp4" ")
+
 ## Introduction
 
 In this workshop, you will learn how the Enterprise Summary can be used to monitor the status and performance of an application and its underlying tech stack. You will review the overall availability status of all resources, identify the resources that are down and list the Oracle Databases in a Not Reporting state. Next review open alarms across an enterprise. You will also review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, because you are monitoring each tier, you will see how to interact with the Enterprise Summary UI to dynamically view other metrics. 
