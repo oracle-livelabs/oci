@@ -7,7 +7,7 @@ In this lab, you will learn how to create such queries by following the below ex
  
 In this example, we demonstrate how to gain insight about End User sessions in an e-commerce application (optional: you can use the demo application here: http://apm.omcdemo.net. Login using any name/password to see your own session in the trace data)
 
-Estimated time: 20 minutes
+Estimated time: 15 minutes
 
 ### Objectives
 
