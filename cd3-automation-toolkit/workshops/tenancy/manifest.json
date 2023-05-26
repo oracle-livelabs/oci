@@ -11,12 +11,12 @@
             "filename": "./../../deploy-compute/deploy-compute.md"
         },
         {
-            "title": "Lab 3: Uploading stack to OCI resource manager",
-            "filename": "./../../upload-resourcemanager/upload-resourcemanager.md"
+            "title": "Lab 3: Create OCI cloud event rules, alarms and notifications",
+            "filename": "./../../create-eventalarm/create-eventalarm.md"
         },
         {
-            "title": "Lab 4: Create OCI cloud event rules, alarms and notifications",
-            "filename": "./../../create-eventalarm/create-eventalarm.md"
+            "title": "Lab 4: Uploading stack to OCI resource manager",
+            "filename": "./../../upload-resourcemanager/upload-resourcemanager.md"
         },
         {
             "title": "Need Help?",
