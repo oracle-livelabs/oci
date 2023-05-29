@@ -52,14 +52,18 @@ _e.g._ python setUpOCI.py /cd3user/tenancies/usr1_livelab/usr1_livelab_setUpOCI.
 
 5. Navigate to the above path and execute the terraform commands:
 
-> > terraform init </br>
-> > terraform plan
+```
+terraform init
+terraform plan
+```
 
 Wait for a bit until the plan succeeds and plan logs are available under _Logs_. Take a look to familiarize yourself with the log format. Scroll down until you see the line `Plan: X to add, 0 to change, 0 to destroy`.
 
 6. Once satisfied by the plan logs, we put it into motion by starting the Apply process.
 
-> > terraform apply
+```
+terraform apply
+```
 
 The apply process can take some time, so patience is required.
 
