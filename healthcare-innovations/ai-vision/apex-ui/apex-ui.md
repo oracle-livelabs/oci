@@ -116,9 +116,9 @@ We can directly code Object storage bucket location, Web Credential Name, Reques
 
 ## Task 3: Create Table - VISION AI DOCS
  
-1. Create **VISION\_AI\_DOCS** to store Machine Learning Configuration Details.
+1. Create **VISION\_AI\_DOCS** Table.
 
-    VISION\_AI\_DOCS table is primarily used to store the JSON response after uploading the image to object storage, querying the model against a trained OCI Vision model. The JSON response contains the OCI Labels and their corresponding confidence scores. 
+    VISION\_AI\_DOCS table is primarily used to store the JSON response after uploading the image to object storage, querying the image against a trained OCI Vision model. The JSON response contains the OCI Labels and their corresponding confidence scores. 
 
     ```sql
         <copy> 
