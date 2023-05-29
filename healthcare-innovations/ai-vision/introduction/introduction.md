@@ -8,6 +8,8 @@ We’ll share how we trained our AI Machine learning models with CT scan images 
 
 Researchers & data enthusiasts can also analyse extensive data using open research datasets to accelerate early disease detection and prevention for better Health.
 
+*Estimated Workshop Time: 2 hours*
+
 ### Objectives
  
 In this workshop, you will learn how to:
