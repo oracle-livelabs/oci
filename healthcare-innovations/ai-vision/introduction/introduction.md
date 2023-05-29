@@ -82,29 +82,7 @@ Other abnormalities include:
 ![Women's Breast Cancer 2020](images/breast-cancer-1.png =30%x* )
 
 ![Women's Breast Cancer 2020](images/breast-cancer-2.png =30%x* )
- 
-## CT Scan - Flat cell (Squamous carcinoma) of the Lung Cancer
-
-Squamous cell carcinoma start in squamous cells, which are flat cells that line the inside of the airways in the lungs. They are often linked to a history of smoking and tend to be found in the central part of the lungs, near a main airway (bronchus).
-
-[Squamous cell carcinoma](https://www.health.harvard.edu/cancer/squamous-cell-carcinoma-of-the-lung) of the lung is a type of lung cancer. It occurs when abnormal lung cells multiply out of control and form a tumor. Eventually, tumor cells can spread (metastasize) to other parts of the body, Squamous cell carcinoma accounts for ~30-35% of all lung cancers and in most instances is due to heavy smoking. In general, squamous carcinomas are encountered more frequently in male smokers, and adenocarcinoma in female smokers, although these results vary from series to series.
-
-![Lung Cancer 2020](images/flatcelllung.jpeg =30%x* )
-
-![Normal Lung Cancer](images/smokerlung.png =30%x* )
-
-## CT Scan - Large cell of the Lung Cancer
-
-Large cell (undifferentiated) carcinoma can appear in any part of the lung. It tends to grow and spread quickly, which can make it harder to treat. A subtype of large cell carcinoma, known as **large cell neuroendocrine carcinoma (LCNEC)**, is a fast-growing cancer that is very similar to small cell lung cancer.
-   
-![Lung Cancer 2020](images/undifferentiated-large-cell-carcinoma.jpg =30%x* )
-
-## CT Scan - Normal Lung
- 
-![Normal Lung Cancer](images/normal-lungs.png =30%x* )
-
-![Normal Lung Cancer](images/normal-lung2.png =30%x* )
-
+  
 ## Learn More
  
 * [Cancer.org](https://www.cancer.org/)
