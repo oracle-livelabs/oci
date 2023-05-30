@@ -25,7 +25,7 @@ OCI Functions의 사용사례로 Logging 서비스와 연동하여, OCI 자원�
 
 ## Task 1. 테스트용 Compute 인스턴스 준비
 
-Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴스를 준비하는 과정입니다. Service Log 중에서 VCN Flow Logs에 대해서는 Function으로 인한 것과 혼선을 방지하기 위해서 Compute 인스턴스용 **Public Subnet**을 따로 만들어 사용합니다. (Function이 사용하는 Subnet을 함께 사용하는 경우, 로그 발생과 Function 호출의 무한 반복이 발생할 소지가 있습니다.)
+Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴스를 준비하는 과정입니다. Service Log 중에서 VCN Flow Logs에 대해서는 Function으로 인한 발생하는 로그와 혼선을 방지하기 위해서 Compute 인스턴스용 **Public Subnet**을 추가로 하나 더 만들어 사용합니다. (Function이 사용하는 Subnet을 함께 사용하는 경우, 로그 발생과 Function 호출의 무한 반복이 발생할 소지가 있습니다.)
 
 1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Compute**으로 이동한 다음 **Instances** 을 선택합니다.
 
@@ -163,8 +163,8 @@ Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴�
     - requirements.txt을 아래와 같이 변경합니다.
     ```
     <copy>
-    fdk>=0.1.51
-    requests
+    fdk>=0.1.57
+    requests    
     </copy>
     ```
 
@@ -223,7 +223,7 @@ Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴�
 
 6. 만든 Service Connector(svc-connector-audit-logs-to-function) 화면으로 돌아갑니다.
 
-7. Metric 정보를 통해 실행된 것을 볼 수 있습니다.
+7. 잠시후, Metric 정보를 통해 실행된 것을 볼 수 있습니다.
 
     ![Service Connector Metrics](images/service-connector-metrics.png)
 
@@ -433,5 +433,5 @@ Service Log를 활성화하는 기능을 제공합니다. 그 중에서 보안�
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, February 2023
+* **Last Updated By/Date** - DongHee Lee, May 2023
 

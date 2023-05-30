@@ -21,7 +21,7 @@ OCI Functions의 사용사례로 API Backend로 사용하는 사례입니다. �
 
 ## Task 1. API Backend용 Function 만들기
 
-Backend API로서 Function이 역할을 수행할때, 즉 HTTP로 호출되었을 때 호출 정보들을 가져오는 부분에 우선 살펴봅니다. 일단은 hello-world 버전을 그대로 사용합니다.
+Backend API로서 Function이 역할을 수행할때, 코드 구현시 사용할 수 있는 메타 정보를 먼저 알아봅니다. 즉 HTTP로 호출되었을 때 호출 정보들을 가져오는 부분에 우선 살펴봅니다. 일단은 hello-world 버전을 그대로 사용합니다.
 API의 내부 로직은 이후 요건에 따라 각 개발언어로 구현하면 될 것입니다.
 
 1. Cloud Shell을 실행합니다.
@@ -69,7 +69,7 @@ API의 내부 로직은 이후 요건에 따라 각 개발언어로 구현하면
 
     - Name: 예, oci-hol-gateway
     - Type: Public
-    - Compartment: oci-hol
+    - Compartment: oci-hol-xx
     - Network
         * Virtual Cloud Network: 앞서 만든 VCN, 예, oci-hol-vcn
         * Subnet: Public Subnet, 예, Public Subnet-oci-hol-vcn
@@ -77,7 +77,7 @@ API의 내부 로직은 이후 요건에 따라 각 개발언어로 구현하면
 
     ![Create Gateway](images/create-api-gateway.png =40%x*)
 
-4. 게이트웨이가 생성되면 **Resources** >> **Deployment**로 이동합니다.
+4. 게이트웨이가 생성되면 **Resources** >> **Deployments**로 이동합니다.
 
 5. **Create Deployment**를 클릭합니다.
 
@@ -183,7 +183,7 @@ API Gateway로 요청이 오면, Functions을 호출하는 것은 앞선 Task에
 
     ```
     <copy>
-    export API_ENDPOINT=https://axlkt2ag5uuvijvztnutbbxicu.apigateway.ap-chuncheon-1.oci.customer-oci.com/v1
+    export API_ENDPOINT=https://axlk_________________bxicu.apigateway.ap-chuncheon-1.oci.customer-oci.com/v1
     curl -X POST \
       "$API_ENDPOINT/http-info" \
       -H 'content-type: application/json' \
@@ -202,7 +202,11 @@ API Gateway로 요청이 오면, Functions을 호출하는 것은 앞선 Task에
 
 HTTP 기반 Web API(REST API)를 사용하는 경우, HTTP Body 전문외에 Request URL, Query Parameter, HTTP Header 등 API 처리를 위한 추가적인 정보가 필요합니다. OCI Function에서 해당 정보를 가져오는 방법을 확인해 봅니다.
 
-1. Function 초기화후 만들어지는 handler 함수의 파라미터를 보면, ctx, data 두 변수가 있습니다. data는 Request Body가 들어있으면, ctx는 Function의 Context 정보가 들어 있고, HTTP 요청의 경우, HTTP 관련 추가 데이터가 들어 있게 됩니다.
+1. Function 초기화후 만들어지는 handler 함수의 기본 파라미터를 보면, ctx, data 두 변수가 있습니다.
+
+    - data: Request Body가 들어있습니다
+    - ctx: Function의 Context 정보가 들어 있고, HTTP 요청의 경우, HTTP 관련 추가 데이터가 들어 있게 됩니다
+
 
     ```
     # Ex) Python Function
@@ -233,7 +237,7 @@ HTTP 기반 Web API(REST API)를 사용하는 경우, HTTP Body 전문외에 Req
     | Method         | str            | Function 호출시의 HTTP Method                    |
     {: title="Python FDK Request Context"}
 
-3. func.py를 업데이트 합니다.
+3. 확인을 위해 func.py를 업데이트 합니다.
 
     ```
     <copy>
@@ -291,7 +295,7 @@ HTTP 기반 Web API(REST API)를 사용하는 경우, HTTP Body 전문외에 Req
 
     ```
     <copy>
-    API_ENDPOINT=https://axlkt2ag5uuvijvztnutbbxicu.apigateway.ap-chuncheon-1.oci.customer-oci.com/v1
+    API_ENDPOINT=https://axlk_________________bxicu.apigateway.ap-chuncheon-1.oci.customer-oci.com/v1
     curl -X POST \
       "$API_ENDPOINT/http-info?device-id=device-yyyy&device-id=device-zzzz" \
       -H 'content-type: application/json' \
@@ -377,7 +381,7 @@ HTTP 기반 Web API(REST API)를 사용하는 경우, HTTP Body 전문외에 Req
 
     ```
     <copy>
-    API_ENDPOINT=https://axlkt2ag5uuvijvztnutbbxicu.apigateway.ap-chuncheon-1.oci.customer-oci.com/v1
+    API_ENDPOINT=https://axlk_________________bxicu.apigateway.ap-chuncheon-1.oci.customer-oci.com/v1
     curl -X POST \
       "$API_ENDPOINT/http-info?device-id=device-yyyy" \
       -H 'content-type: application/json' \
@@ -462,10 +466,10 @@ HTTP 기반 Web API(REST API)를 사용하는 경우, HTTP Body 전문외에 Req
     ```
     <copy>
     time curl -X POST \
-      "$API_ENDPOINT/http-info?device-id=device-yyyy" \      
+      "$API_ENDPOINT/http-info?device-id=device-yyyy" \
       -H 'content-type: application/json' \
       -H 'x-device-id: device-xxxx' \
-      -d '{ "name": "KilDong" }'
+      -d '{ "name": "KilDong" }'      
     </copy>
     ```
 
@@ -475,7 +479,7 @@ HTTP 기반 Web API(REST API)를 사용하는 경우, HTTP Body 전문외에 Req
 
     ```
     $ time curl -X POST \
-    >   'https://puee____oj5u.apigateway.ap-chuncheon-1.oci.customer-oci.com/v1/http-info?device-id=device-yyyy' \
+    >   "$API_ENDPOINT/http-info?device-id=device-yyyy" \
     >   -H 'content-type: application/json' \
     >   -H 'x-device-id: device-xxxx' \
     >   -d '{ "name": "KilDong" }'
@@ -507,4 +511,4 @@ HTTP 기반 Web API(REST API)를 사용하는 경우, HTTP Body 전문외에 Req
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, February 2023
+* **Last Updated By/Date** - DongHee Lee, May 2023
