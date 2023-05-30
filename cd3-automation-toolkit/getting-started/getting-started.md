@@ -67,7 +67,7 @@ docker ps
 ```
 docker ps
 ```
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note down the container ID from this cmd output.
+> Note down the container ID from this cmd output.
 
 2. Enter the container
 ```bash
@@ -86,7 +86,7 @@ cd /cd3user/oci_tools/cd3_automation_toolkit/user-scripts/
 python createAPIKey.py 
 ```
 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This will generate the public/private key pair(oci_api_public.pem and oci_api_private.pem) at /cd3user/tenancies/keys/
+> This will generate the public/private key pair(oci_api_public.pem and oci_api_private.pem) at /cd3user/tenancies/keys/
 2. In case you already have the keys, you should copy the private key file inside the container and rename it to *oci_api_private.pem*.
 
 ### **Step 3: Upload the Public key to OCI console.**
