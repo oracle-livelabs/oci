@@ -544,8 +544,45 @@ END;
  
 
 ![Navigate to Vision](images/edit-page.png " ")
+
+## Task 7: Create Custom reports to display key value pairs and document features
+
+From the JSON response received from Document Understanding AI service, this reponse is written into a table and JSON is parsed, create 2 custom reports with following queries to display the result of document processed.
+
+![Navigate to Vision](images/custom-reports.png " ")
+
+Custom report query for Receipt Attributes
+
+```sql
+<copy>
+SELECT file_name
+,      mime_type
+,      language_code
+,      TO_CHAR(ROUND(language_score * 100 ,1),'fm999.0') || '%' language_score
+,      INITCAP(document_type_code) document_type
+,      TO_CHAR(ROUND(document_type_score * 100,1),'fm999.0') || '%' document_type_score
+,      page_count
+FROM   document_ai_docs
+WHERE  document_id = :P5_DOCUMENT_ID
+</copy>
+```
+
+Custom report query for Field Labels
+
+```sql
+<copy>
+SELECT field_label
+,      ROUND(label_score * 100,0) label_score
+,      field_value
+FROM   document_ai_fields
+WHERE  document_id = :P5_DOCUMENT_ID
+ORDER BY field_label 
+</copy>
+```
+
+where P5\_DOCUMENT\_ID is page item of document id of uploaded document.
  
-## Task 7: Create Oracle Apex Page to Upload file and display results
+## Task 8: Create Oracle Apex Page to Upload file and display results
  
 Upload the file verify the document properties where image is converted into text
 
@@ -566,8 +603,9 @@ This concludes this lab and you can **proceed to the next lab**.
 ## Learn More
 
 * [Analyze Document](https://docs.oracle.com/en-us/iaas/tools/oci-cli/3.28.0/oci_cli_docs/cmdref/ai-vision/analyze-document.html)
-* [WPG_DOCLOAD](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/WPG_DOCLOAD.html)
+* [Document Understanding](https://docs.oracle.com/en-us/iaas/document-understanding/document-understanding/using/home.htm)
 
 ## Acknowledgements
+
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - May 23rd, 2023.
+* **Last Updated By/Date** - May 23rd, 2023
