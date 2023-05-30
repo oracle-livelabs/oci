@@ -71,5 +71,5 @@ Most of the resources in OCI can be provisioned with Terraform. While beyond the
 ## Acknowledgements
 
 - __Author__ - Dipesh Rathod
-- __Contributors__ - Murali N V, Suruchi Singla
+- __Contributors__ - Murali N V, Suruchi Singla, Lasya Vadavalli
 - __Last Updated By/Date__ - Dipesh Rathod, May 2023

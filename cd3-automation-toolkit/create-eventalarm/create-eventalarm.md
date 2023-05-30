@@ -76,5 +76,5 @@ Ask yourself how these resources will make your environment more healthy.
 ## Acknowledgements
 
 - __Author__ - Dipesh Rathod
-- __Contributors__ - Murali N V, Suruchi Singla
+- __Contributors__ - Murali N V, Suruchi Singla, Lasya Vadavalli
 - __Last Updated By/Date__ - Dipesh Rathod, May 2023
