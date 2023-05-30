@@ -186,7 +186,7 @@ At present, the widget displays the default query. You can change the query depe
 	![Oracle Cloud, Edit Dashboards page](images/7-5-11-configure-domain.png " ")
 14. **CTDW Apdex** widget is added to the dashboard. Click **Edit widgets**. 
 	![Oracle Cloud, Edit Dashboards page](images/7-5-12-edit-widgets.png " ")
-      > **Note:** You can change the widget layout by pressing and holding the two bars icon of a widget and drag and drop. 	![Oracle Cloud, Edit Dashboards page](images/7-5-12-note-move-widgets.png " ")
+      > **Note:** You can change the widget layout by pressing and holding the two bars icon of a widget and dragging and dropping to the desired location. 	![Oracle Cloud, Edit Dashboards page](images/7-5-12-note-move-widgets.png " ")
 
 15. In the **Widgets** tab, **Widget label** field, change the label from CTDW Apdex to **Apdex**. Note that the Widget title also changes to Apdex.
 	![Oracle Cloud, Edit Dashboards page](images/7-5-13-change-widget-title.png " ")
