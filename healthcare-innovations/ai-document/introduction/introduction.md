@@ -13,6 +13,7 @@ In this workshop, we will leverage Oracle Document Understanding to scan through
 In this workshop, you will learn how to:
 
 * Provision Oracle Autonomous Database (Optional)
+* Understand various pretrained models of Oracle Document Understanding AI Services
 * Prepare the database by creating the required schema
 * Upload medical receipts to Object storage and create expense items.
 * Develop Oracle Apex Application Front end for image uploading and viewing expense items.

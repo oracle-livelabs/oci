@@ -28,7 +28,7 @@ This lab assumes you have:
 
 * Completed previous labs of this workshop: **Setup environment**, you have access to create OCI Bucket and Oracle Document Understanding AI services.
 
-## Task 1: Create Bucket
+## Task 1: Create OCI Bucket
 
 Login to cloud.oracle.com from the top left navigation and select bucket under the storage menu.
 
