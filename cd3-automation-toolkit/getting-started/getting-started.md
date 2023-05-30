@@ -10,114 +10,87 @@ To begin the process of setting up the Toolkit and connecting to OCI, please fol
 Estimated Lab Time: 20 minutes
 <br>
 
-## **Objectives**
+### Objectives
 
-In this lab, you will:
+The objectives of this lab are:
 
 - Clone the CD3 repo
 - Build an image from the dockerfile in repo
 - Run the CD3 container
 - Connect Docker container to OCI tenancy
- 
-<br>
 
-## **Prerequisites**
+### Prerequisites
 - Git 
 - Any Docker CLI compatible platform such as Docker or Rancher
 - Local Directory: A directory in your local system that will be shared with the container to hold the generated Terraform files.
 - OCI Tenancy Access Requirement - Appropriate IAM policies must be in place for each of the resources that the user may try to create. Minimum requirement for the user to get started is to have the ability to read to the tenancy.
+ 
+## Task 1: Clone the repo
 
-<br>
-
-## **Task 1: Clone the repo**
-
-- Open your terminal and navigate to the desired directory where you intend to download the git repository.
-- Run the git clone command as shown below:
-    ```bash
+1. Open your terminal and navigate to the desired directory where you intend to download the git repository.
+2. Run the git clone command as shown below:
+    ```
+    bash
     git clone https://github.com/oracle-devrel/cd3-automation-toolkit
     ```
-- Once the cloning completes successfully, the repo will replicate to the local directory.
+3. Once the cloning completes successfully, the repo will replicate to the local directory.
 
-<br>
+## Task 2: Build an image from the Dockerfile obtained from the above download
 
- ## **Task 2: Build an image from the Dockerfile obtained from the above download**
+ 1. Change directory to 'cd3-automation-toolkit'(i.e. the cloned repo in your local).
 
- - Change directory to 'cd3-automation-toolkit'(i.e. the cloned repo in your local).
-
-- Execute:
-```bash 
+2. Execute:
+```
+bash 
 docker build --platform linux/amd64 -t cd3toolkit:${image_tag} -f Dockerfile --pull --no-cache . 
 ```
 
->**Note:** *${image_tag} should be replaced with suitable tag as per your requirements/standards.
-            The period (.) at the end of the docker build command is required.*
+> __Note:__ *${image_tag} should be replaced with suitable tag as per your requirements/standards. The period (.) at the end of the docker build command is required.*
 
+## Task 3: Run the CD3 container
 
-<br>
-
-## **Save the image (optional)**
-
-- Run 
-``` bash
-docker save cd3toolkit:${image_tag} | gzip > cd3toolkit_${image_tag}.tar.gz
-```
-
-<br>
-
-## **Task 3: Run the CD3 container**
-
-- Execute the below *docker run* command:
+1. Execute the below *docker run* command:
 ```
 docker run --platform linux/amd64 -it -d -v <directory_in_local_system_where_the_files_must_be_generated>:/cd3user/tenancies <image_name>:<image_tag>
 ```
-- Verify the container:
+2. Verify the container:
 ```
 docker ps
 ```
 
-<br>
+## Task 4: Connect Docker container to OCI tenancy
 
-## **Task 4: Connect Docker container to OCI tenancy**
-
-<br>
-
-   ###  **Step 1: Exec into the container:**
-<br>
+###  **Step 1: Exec into the container:**
  
- - List out all the containers:
+ 1. List out all the containers:
 
 ```
 docker ps
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note down the container ID from this cmd output.
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note down the container ID from this cmd output.
 
-- Enter the container
+2. Enter the container
 ```bash
 docker exec -it <container_id> bash
 ```
-Change directory to *'user-scripts'*
+3. Change directory to *'user-scripts'*
 
 ```
 cd /cd3user/oci_tools/cd3_automation_toolkit/user-scripts/
 ```
-<br>
-
 ### **Step 2: Create API PEM Key:**
-<br>
 
-- RSA key pair in PEM format (minimum 2048 bits) is needed to use OCI APIs. If the key pair does not exist, create them by executing *createAPIKey.py* under *'user-scripts'* folder:
+1. RSA key pair in PEM format (minimum 2048 bits) is needed to use OCI APIs. If the key pair does not exist, create them by executing *createAPIKey.py* under *'user-scripts'* folder:
 
 ``` 
 python createAPIKey.py 
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This will generate the public/private key pair(oci_api_public.pem and oci_api_private.pem) at /cd3user/tenancies/keys/
-- In case you already have the keys, you should copy the private key file inside the container and rename it to *oci_api_private.pem*.
-
-<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This will generate the public/private key pair(oci_api_public.pem and oci_api_private.pem) at /cd3user/tenancies/keys/
+2. In case you already have the keys, you should copy the private key file inside the container and rename it to *oci_api_private.pem*.
 
 ### **Step 3: Upload the Public key to OCI console.**
-<br>
+
 Upload the Public key to "APIkeys" under user settings in OCI Console. Pre-requisite to use the complete functionality of the Automation Toolkit is to have the user as an administrator to the tenancy.
 
    - Open the Console, and sign in as the user.
@@ -128,14 +101,9 @@ View the details for the user who will be calling the API with the key pair.
    - Click Add Public Key.
    - Paste the contents of the PEM public key in the dialog box and click *Add*.
 
-<br>
+### **Step 4: Edit tenancyconfig.properties:**
 
-   ### **Step 4: Edit tenancyconfig.properties:**
-
-   <br>
-
-   Enter the required details in *tenancyconfig.properties*
-
+Enter the required details in *tenancyconfig.properties*
 
 ```
 [Default]
@@ -164,29 +132,21 @@ outdir_structure_file=
 ssh_public_key=
 
 ```
-<br>
-
 ### **Step 5 : Initialise the environment:**
 
-<br>
 To initialise your environment for utilizing the automation toolkit, execute:
 
 ```
 python createTenancyConfig.py tenancyconfig.properties
 ```
 
->**Note:** *If the API Keys were generated and added to the OCI console using previous steps, it might take a couple of seconds to reflect. Thus, running the above command immediately might result in Authentication Errors.
+> **Note:** *If the API Keys were generated and added to the OCI console using previous steps, it might take a couple of seconds to reflect. Thus, running the above command immediately might result in Authentication Errors.
 In such cases, please retry after a minute.*
-
-<br>
 
 Here is a screenshot of example execution of the script:
 
- ![image](https://user-images.githubusercontent.com/103508105/221942089-5c52b221-96f1-4a73-9a10-46159ae4a75c.png)
-
+ ![image](images/example_execution.png)
 
 After the *createTenancyConfig.py* script is executed, customer specific files get created under */cd3user/tenancies/\<customer_name>* with \<customer_name> provided in *tenancyconfig.properties* as prefix.
-
-<br>
 
 Once you verify the files generated, Follow the next lab to upload the CD3 Excel file and execute setUpOCI.py script which is the heart of the toolkit. The setUpOCI.py creates the resources specified in the uploaded Excel.
