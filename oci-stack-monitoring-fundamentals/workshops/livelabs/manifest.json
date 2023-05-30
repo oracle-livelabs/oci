@@ -13,7 +13,7 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Access the Stack Monitoring workshop environment",
+            "title": "Lab 1: Accessing the workshop environment",
             "description": "Access the Stack Monitoring workshop environment",
             "filename": "../../access-env/access-env.md"
         },
@@ -33,7 +33,7 @@
             "filename": "../../discovery/discovery.md"
         },
         {
-            "title": "Lab 5: Working with Alarms",
+            "title": "Lab 5: Viewing and Creating Alarms",
             "description": "Review Stack Monitoring's Resource Discovery Process",
             "filename": "../../alarms/alarms.md"
         },
