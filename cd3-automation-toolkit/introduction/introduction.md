@@ -11,9 +11,9 @@ Estimated Workshop Time: 1 Hour 30 Minutes
 ### Objectives
 
 In this workshop, you will learn how to:
-- Getting Started with CD3 Automation Toolkit
+- Get Started with CD3 Automation Toolkit
 - Build OCI infrastructure using CD3 Automation Toolkit
-- Grouping of generated Terraform files
+- Group the generated Terraform files
 - Produce and Inspect Terraform Plan
 - Apply Plan to OCI tenancy
 - OCI Resource Manager Upload
@@ -61,7 +61,7 @@ The Automation Toolkit will deploy a full set of resources suitable for a produc
 - OCI Notifications 
 - Budget Controls
 
-Most things in OCI can be provisioned with Terraform. While beyond the scope of this lab, more information on using Terraform in OCI can be found [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraform.htm).
+Most of the resources in OCI can be provisioned with Terraform. While beyond the scope of this lab, more information on using Terraform with OCI can be found [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraform.htm).
 
 ## Learn More
 
