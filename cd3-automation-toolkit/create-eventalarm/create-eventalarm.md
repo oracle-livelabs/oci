@@ -19,8 +19,8 @@ Estimated Lab Time: 30 minutes
 
 The objectives of this lab are:
 
-- Add OCI event rule, alarm and notifications in excel spreadsheet.
-- Deploy event rule, alarm and notifcations.
+- Add OCI event rule, alarm and notifications in excel spreadsheet
+- Deploy event rule, alarm and notifcations
 - Use the Plan to Terraform Apply
 
 ## Task 1: Add OCI event rule, alarm and notifications in Excel Spreadsheet
