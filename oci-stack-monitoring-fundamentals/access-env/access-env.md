@@ -1,4 +1,4 @@
-# Access Stack Monitoring Workshop environment
+# Accessing the Workshop environment
 
 ## Introduction
 
