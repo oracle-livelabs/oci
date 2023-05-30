@@ -116,7 +116,7 @@ Next, let's save the query to the query bar so that you can quickly pick it up a
 
 1. In the Trace Explorer, select the three dots icon at the end of the query bar. Click **Open**.
 	![Oracle Cloud, Trace Explorer](images/6-4-1-open-qbar-options.png " ")
-2. In the **Open query bar** window, select the custom query bar you created.
+2. In the **Open query bar** window, select the custom query bar you created, then click **Open**.
 	![Oracle Cloud, Trace Explorer](images/6-4-2-open-qbar-compartment.png " ")
 
      > **Note:** You can review the menu of queries saved in the query bar, by clicking the triangle icon.
