@@ -24,4 +24,4 @@ In this workshop, you will learn how to:
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database 
-* **Last Updated By/Date** - May 2nd, 2023
+* **Last Updated By/Date** - May 30th, 2023
