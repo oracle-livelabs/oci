@@ -13,7 +13,7 @@ Estimated Time: 20 Minutes
 
 In Ashburn (Primary) region, members to be added are below. 
  
-- PeopleSoft Active Database hosted on DbaaS / DBCS platform
+- PeopleSoft Active Database hosted on Oracle Base DB Services
 - PeopleSoft Application Server Compute Instance (Linux)
 - PeopleSoft Process Scheduler Server Compute Instance (Linux)
 - PeopleSoft Process Scheduler Server Compute Instance (Windows)
@@ -22,7 +22,7 @@ In Ashburn (Primary) region, members to be added are below.
 
 In Phoenix (Standby), members to be added are below.
 
-- PeopleSoft Standby Database hosted on DbaaS / DBCS platform
+- PeopleSoft Standby Database hosted on Oracle Base DB Services
 - PeopleSoft Application Server Compute Instance (Linux)
 - PeopleSoft Process Scheduler Server Compute Instance (Linux)
 - PeopleSoft Process Scheduler Server Compute Instance (Windows)
@@ -45,7 +45,7 @@ In Phoenix (Standby), members to be added are below.
 
   In the Ashburn region DRPG page, add the members required in the **FSCM92-FSDR-Group-Ashburn** DRPG. 
 
-4. Add Primary DBCS / DbaaS Database. 
+4. Add Primary Oracle Base DB Services. 
 
   Select **FSCM92-FSDR-Group-Ashburn** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
 
@@ -192,7 +192,7 @@ Click on **Add**.
 
   In the Phoenix region DRPG page, add the members required in the **FSCM92-FSDR-Group-Phoenix** DRPG. 
 
-4. Add Standby DBCS / DbaaS Database. 
+4. Add Standby Oracle Base DB Services. 
 
   Select **FSCM92-FSDR-Group-Phoenix** DRPG, navigate to **Members** in the *Resources* section, and hit **Add Member**
 

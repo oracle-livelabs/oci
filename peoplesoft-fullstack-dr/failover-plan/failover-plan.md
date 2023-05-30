@@ -4,8 +4,10 @@
 
 In this lab, we will create a DR Failover plan and customize the plan with the additional steps. Ashburn is the primary region and Phoenix is the standby region. FSDR provides two types of plan
 
-- Failover (Maintenance/Planned Disaster Recovery)
+- Switchover (Maintenance/Planned Disaster Recovery)
 - Failover   (Actual Disaster Recovery/Unplanned)
+
+Failover is the process of transferring mission-critical workloads from the primary production center and recovering the system at an off-site location (DR region). The main goal of failover is to mitigate the negative impact of a disaster or service disruption on business services and customers. Hence all of the tasks as part of this failover lab will be executed in the DR region which is Phoenix.
 
 This lab will focus on how to create a Failover plan and customize the plan as per PeopleSoft application requirements. 
 

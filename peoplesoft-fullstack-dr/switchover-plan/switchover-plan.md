@@ -26,6 +26,11 @@ Estimated Time: 180 Minutes
 - Customize the Switchover plan - Enable files synchronization (rsync) jobs in Phoenix 
 - Customize the Switchover plan - DR Plan Re-Ordering
 
+### Prerequisites
+
+- Install oci cli packages in the compute instance which will run the DNS record update script. Refer to [OCI CLI Installation Guide](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm)
+- OCI user API Key added in OCI tenancy and place the configuration file in the compute instance which will be used to run the DNS record update script. Refer to [Add an API Signing Key](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm)
+
 ## Task 1: Enable Run Commands on an Instance
 
 Run command feature will help in executing custom start and shutdown scripts as part of the FSDR.
@@ -461,7 +466,7 @@ As part of this task, we will disable all the synchronization jobs that are enab
   - In the region, select "**US West (Phoenix)**"
   - Select the "Run local script" option
   - Select the server instance in "Target instance in compartment" where you have placed the DNS record update script
-  - In the script parameters, add the location of the DNS Record update script. Below is an example of DNS record update script, please write a boot up shell script according to your setup and configurations.
+  - In the script parameters, add the location of the DNS Record update script. Below is an example of DNS record update script, please write a boot up shell script according to your setup and configurations. Please note oci cli is installed in this compute instance and a config file is created by adding an API key in users settings in OCI.
 
     **#!/bin/bash**
 
