@@ -5,7 +5,7 @@
         {
             "title": "Introduction",
             "description": "Introduction",
-            "filename": "../../00-introduction/introduction.md"
+            "filename": "../../a-introduction/introduction.md"
         },
         {
             "title": "Get Started",
@@ -15,44 +15,54 @@
         {
             "title": "Lab 1: Create a Kubernetes cluster",
             "description": "Create a Kubernetes cluster",
-            "filename": "../../01-create-oke/create-oke.md"
+            "filename": "../../b-lab-one-create-oke/create-oke.md"
         },
 
         {
             "title": "Lab 2: Create an APM Domain and obtain Data Upload Endpoint and Private Data Key ",
             "description": "Create an APM Domain and obtain Data Upload Endpoint and Private Data Key ",
-            "filename": "../../02-create-domain/create-domain.md"
+            "filename": "../../c-lab-two-create-domain/create-domain.md"
          },
         {
             "title": "Lab 3: Build a microservices application",
             "description": "Build a microservices application",
-            "filename": "../../03-build-app/build-app.md"
+            "filename": "../../d-lab-three-build-app/build-app.md"
         },
 
         {
-            "title": "Lab 4: Create and configure a file system",
-            "description": "Create and configure a file system",
-            "filename": "../../04-create-file-system/create-file-system.md"
+            "title": "Lab 4 (Paid Tenancy): Create and configure a file system",
+            "description": "Create and configure a file system (Paid Tenancy)",
+            "filename": "../../e-lab-four-create-file-system/create-file-system.md"
         },
         {
-            "title": "Lab 5: Instrument server monitoring",
+            "title": "Lab 4 (Free Trial): Create and configure block volumes",
+            "description": "Create and configure block volumes (Free Trial)",
+            "filename": "../../f-lab-four-b-create-block-volume/create-block-volume.md"
+        },
+        {
+            "title": "Lab 5 (Paid Tenancy): Instrument server monitoring on the file system",
             "description": "Instrumentation for server monitoring",
-            "filename": "../../05-configure-apm-agent/configure-apm-agent.md"
+            "filename": "../../g-lab-five-configure-apm-agent/configure-apm-agent.md"
+        },
+        {
+            "title": "Lab 5 (Free Trial): Instrument server monitoring on the block volumes",
+            "description": "Instrumentation for server monitoring",
+            "filename": "../../h-lab-five-b-configure-apm-agent/b-configure-apm-agent.md"
         },
         {
             "title": "Lab 6: Instrument browser monitoring",
             "description": "Instrumentation for browser monitoring",
-            "filename": "../../06-configure-browser-agent/configure-browser-agent.md"
+            "filename": "../../i-lab-six-configure-browser-agent/configure-browser-agent.md"
         },
         {
             "title": "Lab 7: View traces and spans in APM Trace Explorer",
             "description": "View traces and spans in APM Trace Explorer",
-            "filename": "../../07-view-traces/view-traces.md"
+            "filename": "../../j-lab-seven-view-traces/view-traces.md"
         },
         {
             "title": "Lab 8: Clean up the workshop environment",
             "description": "Clean up the workshop environment",
-            "filename": "../../08-cleanup/cleanup.md"
+            "filename": "../../k-lab-eight-cleanup/cleanup.md"
         },
         {
             "title": "Need Help?",

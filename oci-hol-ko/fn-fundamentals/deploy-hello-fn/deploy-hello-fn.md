@@ -187,8 +187,9 @@ Oracle Functions을 실행하는 데에 대한 기본 사항을 알아봅니다.
         name: hello-java
         version: 0.0.1
         runtime: java
-        build_image: fnproject/fn-java-fdk-build:jdk17-1.0.162
-        run_image: fnproject/fn-java-fdk:jre17-1.0.162
+        build_image: fnproject/fn-java-fdk-build:jdk17-1.0.174
+        run_image: fnproject/fn-java-fdk:jre17-1.0.174
+        cmd: com.example.fn.HelloFunction::handleRequest        
         ```
 
 10. Function을 배포합니다.
@@ -209,6 +210,7 @@ Oracle Functions을 실행하는 데에 대한 기본 사항을 알아봅니다.
     51c82b74fabc: Mounted from xxxxxxxxxxxx/jdoe/hello-java 
     0.0.2: digest: sha256:6a6fb3d214a8fdfac3aa2d4048ad5c338fe4d789c05d113cd290e5817af2925d size: 2001
     Updating function hello-java using image yny.ocir.io/xxxxxxxxxxxx/oci-hol/oci-hol-fn-app/hello-java:0.0.2...
+    Successfully created function: hello-java with yny.ocir.io/xxxxxxxxxxxx/oci-hol-fn-app/hello-java:0.0.2
     ```
 
 11. 배포된 Function을 fn CLI로 호출해봅니다.
@@ -292,7 +294,7 @@ Function에서 많이 사용하는 Python으로 동일한 과정을 수행해 �
         * requirements.txt: func.py에서 추가적으로 사용되는 패키지 의존성을 여기에 추가합니다.
         ```
         $ cat requirements.txt 
-        fdk>=0.1.50
+        fdk>=0.1.57
         ```
 
         * func.yaml: Function 정의 파일입니다. 자바때와 동일한 형식입니다.
@@ -417,4 +419,4 @@ Function에서 많이 사용하는 Python으로 동일한 과정을 수행해 �
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, January 2023
+* **Last Updated By/Date** - DongHee Lee, May 2023

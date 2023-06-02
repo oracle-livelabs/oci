@@ -20,7 +20,7 @@ In more details:
 
 Below you can see the Security Center dashboard you will see at the end of the workshop, with your security assessment results:
 
-![Security Center dashboard](./images/results-table.png "Security Center dashboard")
+![Security Center dashboard](./images/security-assessment.png "Security Center dashboard")
 
 Optionally, you will have as well a view of the CIS compliance in your OCI tenant:
 
