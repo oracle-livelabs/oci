@@ -20,7 +20,7 @@ Nesse Lab você vai aprender a criar um Conjunto de Dados (Dataset) no Oracle An
 
 ![Botão Criar e depois em Conexão](./images/click-create-1.png)
 
-2.	Selecione a conexão com o Autonomous Data Warehouse: **ADW\_FAST\_TRACK**.
+2.	Selecione a conexão criada por você anteriormente:
 
 ![Selecione a conexão com ADW ](./images/create-dataset-2.png)
 

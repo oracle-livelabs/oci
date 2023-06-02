@@ -7,7 +7,7 @@ Para iniciar seu workshop, você precisa fazer login em nosso LiveLabs Sandbox.
 
 Neste laboratório, mostraremos onde você pode encontrar as informações de login e como fazer login no LiveLabs Sandbox
 
-Tempo estimado para o Lab: 5 minutos
+*Tempo estimado para o Lab: 5 minutos
 
 ### Objetivos
 
