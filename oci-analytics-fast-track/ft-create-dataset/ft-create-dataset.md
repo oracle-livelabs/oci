@@ -2,7 +2,9 @@
 
 ## Introdução
 
-Nesse Lab você vai aprender a criar um Conjunto de Dados (Dataset) no Oracle Analytics Cloud.
+Neste Lab você vai aprender a criar um Conjunto de Dados (Dataset) no Oracle Analytics Cloud.
+
+[Oracle Video Hub video scaled to Large size](videohub:1_1ei28osm:large)
 
 **Conjuntos de Dados** podem ser criados usando uma ou mais tabelas, que podem ser de uma mesma conexão ou de conexões diferentes (inclusive podemos usar arquivos CSV ou XLSX). Você pode unir todas essa tabelas dentro do "Diagrama de Junções" (Join).
 
@@ -113,4 +115,4 @@ Nesta sessão você aprendeu criar um Conjunto de Dados no Oracle Analytics Clou
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Isabelle Dias, Maio/2023
+- **Último Update Por/Date** - Thais Henrique, Abr/2023
