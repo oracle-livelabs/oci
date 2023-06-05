@@ -19,36 +19,76 @@ Estimated time: 20 min
 
 - Follow previous labs.
 
-## Task 1: User details
+## Task 1: User and Tenancy details
 
-1. We need data about the user
-    - Go on the OCI Homepage
-    - Take a note of the region name: *##REGION##*
+1. First, we need data about your tenancy.
+    - On the top, right, click *Tenancy: name*
+    - Copy the tenancy OCID *##TENANCY\_OCID##*
+
+        ![Tenancy](images/opensearch-tenancy.png)
+
+2. Then, we need data about the user
     - On the top, right, click *Your username*
     - Copy the username *##USERNAME##* (without oracleidentitycloudservice )
-    ![Oracle Integration](images/apim-user.png)
+    - Copy the user OCID *##USER\_OCID##*
+    - Click on *API Keys*
+
+        ![User](images/opensearch-user.png)
+
+    - Click *Add API Key*
+    - Generate one
+    - Download it *##PRIVATE_KEY##*
+    - Copy the *##FINGERPRINT##*
+
+        ![User API Keys](images/opensearch-user2.png)
+
+    In your computer (NOT in cloud shell), you need to convert the PEM key to RSA format:
+    - Run the below command 
+    - And keep the ##PRIVATE\_KEY\_RSA\_FORMAT##
+
+    ```
+    <copy>
+    openssl rsa -in ##PRIVATE_KEY## -out ##PRIVATE_KEY_RSA_FORMAT##
+    </copy>
+    ex: openssl rsa -in private_key.pem -out private_key_rsa_format.pem
+    ````
+
+    Double-check that the private\_key\_rsa_format.pem is really in RSA format like this:
+
+    ```
+    <copy>
+    -----BEGIN RSA PRIVATE KEY-----
+    ...
+    -----END RSA PRIVATE KEY-----
+    </copy>
+    ```
 
 ## Task 2: Add existing APIs from Oracle Integration
 
 1. Create an Oracle Integration installation
     - Menu Developer Services / Application Integration 
+
         ![Oracle Integration](images/apim-oic1.png)
+
     - Click *Create Instance*
     - Name *oic\_apim*
-    - Choose Integration Cloud Gen 2 (not tested yet with Gen3)
+    - Choose Integration Cloud Gen 2 
     - Choose your version and license type
     - Click *Create*
     - When the instance is green, click *Service Console*
 2. Install Samples
     - In the Oracle Integration menu, choose *Integrations* / *Integrations* again
     - Remove the filter with your username
-    - You will see some preinstalled samples. 
-   
+    - You will see some preinstalled sample. 
+    
         ![Oracle Integration - Samples](images/apim-oic2.png)
+
     - Hover your mouse on the first line (Echo) and activate the integration
     - In the dialog, click *Activate* again
     - Do the same for several other integrations
+
         ![Oracle Integration - Samples](images/apim-oic3.png)
+
 3. Note the host name of OIC from the URL (##OIC\_HOST##): ex: oic-apim-xxxxx-fr.integration.ocp.oraclecloud.com
 4. Go back the APEX API Portal (##PORTAL\_URL##)
     - Click on the menu 
@@ -56,12 +96,19 @@ Estimated time: 20 min
 5. Click *Oracle Integration Credentials* 
     - For OCI Username, enter ##USERNAME##
     - For Password, enter ##PASSWORD##
+
         ![Oracle Integration - Samples](images/apim-oic-cred.png)
-6. Still in the Discover Source screen.
-    - Click *Create*
-    - Source Type *Oracle Integration 2*
+
+It will allow the database to call the OIC URLs
+
+### 3. Create OIC Source
+
+1. Still in the Source screen.
+    - Click *Create Source*
+    - Source Type *Oracle Integration*
     - Oracle Integration Host: ##OIC\_HOST##
     - Click *Create*
+
         ![Oracle Integration - Credentials](images/apim-source-oic.png)
 
 ## Task 3: Add existing API from API Gateway
@@ -76,7 +123,6 @@ Estimated time: 20 min
     - Click *Create*
     - Source Type *OCI API Gateway*
     - Compartment OCID: ##COMPARTMENT\_OCID##
-    - Region: ##REGION##
     - Click *Create*
 
         ![Oracle Integration - Credentials](images/apim-source-apigw.png)
@@ -143,4 +189,5 @@ Estimated time: 20 min
 ## Acknowledgements
 
 - **Authors**
-    - Marc Gueury / Phil Wilkins / Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+    - Marc Gueury / Phil Wilkins /  Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+
