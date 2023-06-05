@@ -81,12 +81,7 @@ When the Task 1 build is done.
 1. Go to Oracle Cloud Home page
 2. Go to Cloud Editor.
 3. When the editor is started, open a terminal
-4. Clone the git repository
-    ```
-    <copy>
-    git clone https://github.com/mgueury/oci-api-portal.git
-    </copy>
-    ```
+4. The git repository should already be cloned (see Task 1)
 5. Edit the file oci-api-portal/cloud-native-k8s/group_common/env.sh
     ![Cloud Shell](images/apim-cloudeditor.png)
 6. In the file group_common/env.sh, you have to set: 
@@ -105,7 +100,7 @@ When the Task 1 build is done.
             cd -
             </copy>
             ```
-        - Take a note of it
+        - Take a note of it ##AUTH\_TOKEN##
 7. Then run the build. This will take about 20 mins. 
     ```
     <copy>

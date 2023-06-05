@@ -229,7 +229,7 @@ In case you make a mistake and need to restart the installation, most of the tim
     ```
     DROP USER API CASCADE
     ```
-3. Redo again from Task 2 - Create the database user.
+3. Restart again from Task 2 - Create the database user.
 
 ## Acknowledgements
 
