@@ -49,11 +49,31 @@ docker build --platform linux/amd64 -t cd3toolkit:${image_tag} -f Dockerfile --p
 
 ## Task 3: Run the CD3 container
 
+<<<<<<< HEAD:cd3-automation-toolkit/getting-started/getting-started.md
 1. Execute the below *docker run* command:
 ```
 docker run --platform linux/amd64 -it -d -v <directory_in_local_system_where_the_files_must_be_generated>:/cd3user/tenancies <image_name>:<image_tag>
 ```
 2. Verify the container:
+=======
+
+
+<br>
+
+## **Task 3: Run the CD3 container**
+
+- Execute the below *docker run* command:
+
+```
+docker run --platform linux/amd64 -it -d -v <directory_in_local_system_where_the_files_must_be_generated>:/cd3user/tenancies <image_name>:<image_tag>
+```
+<br>
+
+![docker_run](images/docker_run.png "docker run command example")
+
+<br>
+- Verify the container:
+>>>>>>> b207e52 (compute,setup toolkit updated):cd3-automation-toolkit/Setup the Toolkit/setup_the_toolkit.md
 ```
 docker ps
 ```
@@ -149,4 +169,15 @@ Here is a screenshot of example execution of the script:
 
 After the *createTenancyConfig.py* script is executed, customer specific files get created under */cd3user/tenancies/\<customer_name>* with \<customer_name> provided in *tenancyconfig.properties* as prefix.
 
+<<<<<<< HEAD:cd3-automation-toolkit/getting-started/getting-started.md
 Once you verify the files generated, Follow the next lab to upload the CD3 Excel file and execute setUpOCI.py script which is the heart of the toolkit. The setUpOCI.py creates the resources specified in the uploaded Excel.
+=======
+<br>
+(summary)
+(acknowledgement)
+<br>
+
+Once you verify the files generated, Follow the next lab to upload the CD3 Excel file and execute setUpOCI.py script which is the heart of the toolkit. The setUpOCI.py creates the resources specified in the uploaded Excel.
+
+[def]: images/docker_run.png "example run of docker run command"
+>>>>>>> b207e52 (compute,setup toolkit updated):cd3-automation-toolkit/Setup the Toolkit/setup_the_toolkit.md
