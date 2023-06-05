@@ -42,24 +42,33 @@ Estimated time: 20 min
 2. Install Samples
     - In the Oracle Integration menu, choose *Integrations* / *Integrations* again
     - Remove the filter with your username
-    - You will see some preinstalled samples. 
-   
+    - You will see some preinstalled sample. 
+    
         ![Oracle Integration - Samples](images/apim-oic2.png)
+
     - Hover your mouse on the first line (Echo) and activate the integration
     - In the dialog, click *Activate* again
     - Do the same for several other integrations
+
         ![Oracle Integration - Samples](images/apim-oic3.png)
+
 3. Note the host name of OIC from the URL (##OIC\_HOST##): ex: oic-apim-xxxxx-fr.integration.ocp.oraclecloud.com
 4. Go back the APEX API Portal (##PORTAL\_URL##)
     - Click on the menu 
-    - Then *Discover Source*
+    - Then *Source*
 5. Click *Oracle Integration Credentials* 
     - For OCI Username, enter ##USERNAME##
     - For Password, enter ##PASSWORD##
+
         ![Oracle Integration - Samples](images/apim-oic-cred.png)
-6. Still in the Discover Source screen.
+
+It will allow the database to call the OIC URLs
+
+### 3. Create OIC Source
+
+1. Still in the Source screen.
     - Click *Create*
-    - Source Type *Oracle Integration 2*
+    - Source Type *Oracle Integration*
     - Oracle Integration Host: ##OIC\_HOST##
     - Click *Create*
         ![Oracle Integration - Credentials](images/apim-source-oic.png)
