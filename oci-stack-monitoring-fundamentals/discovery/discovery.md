@@ -83,7 +83,7 @@ Estimated time: 15 minutes
 
 	![Resource discovery page drop-down menu items, highlighting Oracle Database resource type](images/3-2-discovery.png " ")
 
-	We begin by assigning the database a name. When discovering a resource within Stack Monitoring that is not ephemeral, it is important to provide the resource a meaningful name. Here we will enter **ebs\_prod\_db**. Next provide the DNS hostname or SCAN name depending on your listener configuration, we will enter **ebsproddb1.myacme.com**. Now provide a port, here we will use **1521** and the service name of **ebscdb**. From the drop-down, you can select an agent that will be responsible for monitoring this database. For Oracle Databases, the agent can be local (installed on the host) or remote (installed anywhere with network access to the host). Select any agent from the drop-down list. Finally provide the monitoring user's credentials. First the username, **c##mon\_user**. Next, since this is a demo enter any value for the password. 
+	We begin by assigning the database a name. When discovering a resource within Stack Monitoring that is not ephemeral, it is important to provide the resource a meaningful name. Here we will enter **ebs\_prod\_db**. Next provide the DNS hostname or SCAN name depending on your listener configuration, we will enter **ebsproddb1.myacme.com**. Now provide a port, here we will use **1521** and the service name of **ebscdb**. From the drop-down, you can select an agent that will be responsible for monitoring this database. For Oracle Databases, the agent can be local (installed on the host) or remote (installed anywhere with network access to the host). Select any agent from the drop-down list. Finally provide the monitoring user's credentials. First the username, **monuser**. Next, since this is a demo enter any value for the password. 
 
 	Stack Monitoring provides a script to create a least privileges user for monitoring an Oracle Database. For more information see **MOS Doc ID 2857604.1**. 
 
@@ -104,7 +104,7 @@ Once all of the fields are completed, once again click **Cancel**.
 	* Enter the host name, **apps.example.com**, and port of the database that EBS is running on, **1521**. 
 	* Next, enter your database service name, we will enter the service name **ebscdb**. 
 	* Prior to discovering EBS, it is imperative EBS specific database user grants are applied to the monitoring user prior to discovery. Always remember to follow the prerequisites outlined in Stack Monitoring's [documentation](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/promotion-and-discovery.html) prior to discovery. When discovering EBS, the database user should have limited access to perform only functions related to monitoring. 
-	* Enter the username **c##mon\_user**. Once again, since this is a demonstration, enter any value for the password. 
+	* Enter the username **monuser**. Once again, since this is a demonstration, enter any value for the password. 
 		- If your monitoring user requires sysdba privileges, select that radio button here.
 
 	![Resource discovery slide-out, with upper fields completed](images/4-2-discovery.png " ")
@@ -133,4 +133,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,
 - Steven Lemme, Senior Principal Product Manager,
 Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, May 2023
+* **Last Updated By/Date** - Aaron Rimel, June 2023
