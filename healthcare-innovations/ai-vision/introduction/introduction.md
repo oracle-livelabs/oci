@@ -104,4 +104,4 @@ Sample images of most likely Breast Cancer.
 ## Acknowledgements
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
 * **Contributors** - Bo English-Wiczling, Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - May 2nd, 2023
+* **Last Updated By/Date** - June 6th, 2023
