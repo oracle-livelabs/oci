@@ -67,7 +67,7 @@ OCI 대시보드에 로그인하여 리소스 생성에 필요한 정보를 확�
     - Policy Builder:
 
         * **Policy Use Cases**에서 사전 정의된 Policy 중에서 **Functions**으로 선택
-        * **Common policy templates**는 기본값인 `Let users create, deploy and manage functions and applications using Cloud Shell` 선택
+        * **Common policy templates**는 기본값인 `Let users create, deploy and manage functions and applications` 선택
         * Policy를 적용할 사용자 그룹을 선택합니다. 예) `oci-group`
         * Policy가 적용될 Compartment를 앞서 만든 Compartment로 선택합니다. 예) oci-hol*-xx*
 
@@ -124,4 +124,4 @@ OCI 대시보드에 로그인하여 리소스 생성에 필요한 정보를 확�
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, January 2023
+* **Last Updated By/Date** - DongHee Lee, May 2023

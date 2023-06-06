@@ -69,4 +69,4 @@ The Cloud Guard Cloud service is already enabled. You will have to wait just som
 
 ## Acknowledgements
 * **Authors** - Sonia Yuste, Damien Rilliard
-* **Last Updated By/Date** - Sonia Yuste, January 2023
+* **Last Updated By/Date** - Sonia Yuste, April 2023

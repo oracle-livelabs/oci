@@ -1,8 +1,10 @@
-# Lab 5: Run CIS Compliance Checker Script
+# Run CIS Compliance Checker Script
 
 ## Introduction
 
-In this lab the Landing Zone should be successfully deployed. As time goes on and development or maintenance has been done to the Landing Zone environment, how do you ensure that compliance to CIS controls is maintained? One way is to run the [CIS Compliance Script](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/compliance-script.md) included in the Landing Zone.
+In this lab the Landing Zone should be successfully deployed. As time goes on and development or maintenance has been done to the Landing Zone environment, how do you ensure that compliance to CIS controls is still maintained? One way is to run the [CIS Compliance Script](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/compliance-script.md) included in the Landing Zone.
+
+_Note that the compliance script is included with the Landing Zone, but has no dependency on it. The script can be used in any OCI tenancy in this manner._
 
 Estimated Lab Time: 10 minutes
 
@@ -13,6 +15,11 @@ In this lab, you will:
 - Use the Cloud Shell to run the Compliance Checker script
 - Download the script output to your local machine
 - Inspect the report findings
+
+### Prerequisites
+
+- An account with _read all-resources_ permissions in OCI
+- [Access to the OCI Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/devcloudshellintro.htm#Required_IAM_Policy)
 
 ## Task 1: Run the Script
 

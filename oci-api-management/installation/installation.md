@@ -50,7 +50,6 @@ First, let's create an Autonomous database.
 1. Go the menu
     - Oracle Database
     - Autonomous Database
-
         ![ATP1](images/apim-atp.png)
 
 2. Click *Create Autonomous Database*
@@ -69,6 +68,47 @@ First, let's create an Autonomous database.
     - Copy the Database OCID (Take note of it: ##DB\_OCID##)
 
         ![ATP2](images/apim-atp3.png)
+
+## Task 2: Create the Database User
+
+1. Go to the SQL interface
+    In the page of the Autonomous Database,
+    - Click on *Database Actions*
+    - If you get a prompt asking for an user/password, enter ADMIN/##DB\_PASSWORD##
+    - Then *SQL*
+
+        ![Database Actions](images/apim-sql0.png)
+
+2. Run the following SQL to create the user API.
+    - Replace the password in the schema creation to your own (to make it easy, let's use the same than ADMIN ##DB_PASSWORD##) 
+
+        ```
+        <copy>
+        grant connect, resource, unlimited tablespace, create view to API identified by ##DB_PASSWORD##
+        /
+        GRANT execute ON dbms_cloud_oci_ag_deployment_list_deployments_response_t TO API;
+        GRANT execute ON dbms_cloud_oci_apigateway_deployment_collection_t TO API;
+        GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_tbl TO API;
+        GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_t TO API;
+        GRANT execute ON DBMS_CLOUD_OCI_AG_DEPLOYMENT TO API;
+        GRANT execute ON DBMS_CLOUD TO API;
+        GRANT execute on DBMS_NETWORK_ACL_ADMIN to API;
+        /
+        BEGIN
+        ORDS.enable_schema(
+            p_enabled             => TRUE,
+            p_schema              => 'API',
+            p_url_mapping_type    => 'BASE_PATH',
+            p_url_mapping_pattern => 'apim',
+            p_auto_rest_auth      => FALSE
+        );
+        COMMIT;
+        end;
+        /
+        </copy>
+        ```
+
+        ![APEX Installation](images/apim-sql1.png)
 
 ## Task 2: Create the Database User
 

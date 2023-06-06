@@ -1,4 +1,4 @@
-# Lab 3: Apply and Inspect Resources
+# Apply and Inspect Resources
 
 ## Introduction
 
@@ -25,19 +25,15 @@ The objectives of this lab are:
 - Use the Plan to Terraform Apply
 - Inspect the Apply output
 
-### Prerequisites
-
-Previous Labs
-
 ## Task 1: Create a Plan
 
 1. From the _Stack Details_ page, we will click the first __Plan__ button, followed by the second __Plan__ button in the side menu. ![Plan Buttons](images/plan-job.png "Click the plan buttons!")
-2. Wait for a bit until the plan succeeds and plan logs are available under _Logs_. Take a look to familiarize yourself with the log format. Scroll down until you see the line `Plan: X to add, 0 to change, 0 to destroy`. The exact number to add may vary, but should be in the ballpark of the screenshot below: ![Plan Log Output](images/plan_output.png "The plan logs content")
+2. Wait for a bit until the plan succeeds and plan logs are available under _Logs_. Take a look to familiarize yourself with the log format. Scroll down until you see the line `Plan: X to add, 0 to change, 0 to destroy`. The exact number to add may vary, but should be in the ballpark of the screenshot below: ![Plan Log Output](images/plan-output.png "The plan logs content")
 
 ## Task 2: Apply the Plan
 
 1. Once satisfied by the plan logs, we put it into motion by starting the Apply process. Start by navigating back to the _Stack details_ page. Click __Apply__ and a side menu will populate. Select your plan job from the _Apply job plan resolution_ drop down and click __Apply__ again. The apply process can take up to 20 minutes, so some patience is required. ![Apply Job Buttons](images/apply-job.png "Run the apply job")
-2. Once the apply is complete, check to make sure the resources created match with your plan output. ![Apply Job Output](images/apply_output.png "Apply logs")
+2. Once the apply is complete, check to make sure the resources created match with your plan output. ![Apply Job Output](images/apply-output.png "Apply logs")
 
 ## Task 3: Inspect Created Objects
 
