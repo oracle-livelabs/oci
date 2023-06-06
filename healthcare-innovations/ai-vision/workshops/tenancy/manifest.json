@@ -5,7 +5,7 @@
     "adb-goto-service-body.md": "https://raw.githubusercontent.com/oracle-livelabs/common/main/building-blocks/tasks/adb/goto-service-body.md",
     "adb-provision-body.md": "https://raw.githubusercontent.com/oracle-livelabs/common/main/building-blocks/tasks/adb/provision-body.md"
   },
-  "help": "livelabs-help-**enterarea**_us@oracle.com",
+  "help": "livelabs-help-oci_us@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
@@ -45,10 +45,6 @@
     {
       "title": "Lab 7: Apex Application for Visualisation",
       "filename": "../../apex-ui/apex-ui.md"
-    },
-    {
-      "title": "Lab 8: Solution Architecture",
-      "filename": "../../architecture/architecture.md"
     },
     {
       "title": "Need Help?",
