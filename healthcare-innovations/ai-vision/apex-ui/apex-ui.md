@@ -551,7 +551,7 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     </copy>
     ```
 
-## Task 6: Verify File upload settings, Process image action
+## Task 6: Verify File upload settings, Process Image button action
 
 In the Apex page, we will use the file upload Dropzone plugin, or we can also use the regular file upload page item.
 
@@ -559,7 +559,7 @@ In the Apex page, we will use the file upload Dropzone plugin, or we can also us
 
 ![Navigate to Vision](images/apex-image-file.png " ")
 
-Process image action
+Process Image button action
 
 ![Navigate to Vision](images/process-image-button.png " ")
 
