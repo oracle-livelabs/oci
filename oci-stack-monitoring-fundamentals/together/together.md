@@ -125,7 +125,7 @@ For more information and full range of capabilities of the Stack Monitoring solu
 ## Acknowledgements
 
 * **Author** - Aaron Rimel, Principal Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,
-- Steven Lemme, Senior Principal Product Manager,
+- **Contributors** - Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
+- Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, May 2023
+* **Last Updated By/Date** - Aaron Rimel, June 2023
