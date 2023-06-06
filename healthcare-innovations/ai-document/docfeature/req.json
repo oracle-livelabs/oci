@@ -1,0 +1,22 @@
+{
+  "processorConfig": {
+    "language": "ENG",
+    "processorType": "GENERAL",
+    "features": [
+      {
+        "featureType": "TEXT_EXTRACTION"
+      }
+    ],
+    "isZipOutputEnabled": false
+  },
+  "compartmentId": "ocid1.compartment.oc1..aaaaaaaahpj4ht6nqey3pragqij26cpzfqil5uxy434qyfw3nmxjkjggpcxa",
+  "inputLocation": {
+    "sourceType": "INLINE_DOCUMENT_CONTENT",
+    "data": "......"
+  },
+  "outputLocation": {
+    "namespaceName": "oradbclouducm",
+    "bucketName": "DocAI-Images",
+    "prefix": "DA"
+  }
+}

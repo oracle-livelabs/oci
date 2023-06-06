@@ -57,7 +57,7 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
 
     - Name: `functions-buckets-policy`.
     - Description: `Policy that allows functions dynamic group to manage objects in the bucket`.
-    - Compartment: 계속 사용하던 Compartment 선택, **oci-hol**를 선택
+    - Compartment: 계속 사용하던 Compartment 선택, **oci-hol-xx**를 선택
     - Policy Builder: **Show manual editor** 슬라이딩 버튼을 클릭하여 직접 입력합니다.
         * [compartment-name]은 오브젝트 스토리지 버킷이 있는 Compartment 이름으로 대체합니다. 예, oci-hol
         * [compartment-id]는 방금 복사해둔 Function이 속한 Compartment의 OCID
@@ -423,9 +423,9 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
 
     ```
     <copy>
-    fdk>=0.1.51
+    fdk>=0.1.57
     oci
-    pillow
+    pillow    
     </copy> 
     ```
 
@@ -437,7 +437,7 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
     </copy>        
     ```
 
-10. 복사해서 example-event.json 파일을 테스트를 위해 수정합니다.
+10. 앞서 저장해둔 example-event.json 파일을 테스트를 위해 수정합니다.
 
     - data.resourceName: iceberg.png
     - data.additionalDetails.namespace: 모를 경우 Cloud Shell에서 *`oci os ns get`* 명령으로 확인
@@ -488,7 +488,7 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
     {"imageName": "iceberg.png", "thumbnailName": "iceberg-thumbnail.png"
     ```
 
-## Task 7. Object Store 이벤트기반 테스트
+## Task 7. Object Storage 이벤트기반 테스트
 
 1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Storage**에서 **Object Storage & Archive Storage** 하위메뉴인 **Bucket**을 선택합니다.
 
@@ -510,4 +510,4 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, February 2023
+* **Last Updated By/Date** - DongHee Lee, May 2023
