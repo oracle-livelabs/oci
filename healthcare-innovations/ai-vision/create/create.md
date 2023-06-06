@@ -16,7 +16,7 @@ In this lab, you will:
  
 * Create a new bucket within Object Storage
 * Download XRay images and classify these images into different folders 
-* Load images from OCI Cloud Shell to your bucket 
+* Upload images to OCI Bucket using OCI CLI
 
 ### Prerequisites
 
@@ -52,7 +52,7 @@ Replace namespace, bucket_name and local folder as per your settings, for exampl
  
 ## Task 3: Verify images are correctly loaded
 
-You can now verify the objects in the bucket by using OCI CLI or just by accessing the bucket in the OCI console
+You can now verify the objects in the bucket by using OCI CLI or just by accessing the bucket in the OCI console. delete any hidden files like .DS files which get uploaded if you are using macOS
 
  ```text
 <copy>oci os object list --namespace <object_storage_namespace> --bucket-name <bucket_name></copy>
@@ -70,5 +70,6 @@ This concludes this lab. You can **proceed now to the next lab**.
 * [OCI CLI Command Reference](https://docs.oracle.com/en-us/iaas/tools/oci-cli/3.22.3/oci_cli_docs/oci.html)
  
 ## Acknowledgements
+
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
 * **Last Updated By/Date** - May 23rd, 2023.

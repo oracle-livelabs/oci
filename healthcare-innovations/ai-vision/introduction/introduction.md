@@ -1,24 +1,25 @@
 # Introduction
 
-## About this workshop 
+## About this workshop
 
-Machine Learning and Artificial Intelligence tools are unprecedentedly changing modern healthcare. Given the speed of innovation and global outreach, it can be challenging for patients and healthcare providers to stay abreast of the latest technological advances and how they will impact the future. In this session, we will show how Artificial Intelligence (AI) with Machine Learning (ML) is helping identify breast and lung cancer with quick solutions using Oracle APEX, Autonomous Database, OCI, AI Services, and Oracle Analytics Cloud in just four weeks.
+Machine Learning and Artificial Intelligence tools are unprecedentedly changing modern healthcare. Given the speed of innovation and global outreach, it can be challenging for patients and healthcare providers to stay abreast of the latest technological advances and how they will impact the future. 
 
-We’ll share how we trained our AI Machine learning models with CT scan images to identify both breast and lung cancers and even incorporated features to help doctors or patients dictate medical symptoms and diagnoses quickly by sending an email of the audio message along with the medical transcription text. If doctors or nurses aren’t available, we’ll show you how digital assistants can advise patients with health concerns, answer questions about symptoms, and even locate the nearest hospital.
+In this workshop, we will show how Artificial Intelligence (AI) and Machine Learning (ML) are helping identify breast cancer using Oracle APEX, Oracle AI Vision Service, and Oracle Autonomous Database.  
 
-Researchers & data enthusiasts can also analyse extensive data using open research datasets to accelerate early disease detection and prevention for better Health.
-
-*Estimated Workshop Time: 2 hours*
+We’ll share how we trained our AI Machine learning models with X-Ray mammography images to identify breast cancers and even incorporated many other features, such as helping doctors or patients dictate medical symptoms and diagnoses quickly by sending an email of the audio message and the medical transcription text.  
+ 
+Estimated Workshop Time: 4 hours
 
 ### Objectives
- 
-In this workshop, you will learn how to:
-* Provision Oracle Autonomous Database
-* Create and Train AI Vision Model of type Image Classification
-* Upload Image to Object storage and detect Breast/Lung Cancer with a confidence percentage
-* Develop Oracle Apex Application Front end for image uploading and viewing results
- 
 
+In this workshop, you will learn how to:
+
+* Provision Oracle Autonomous Database
+* Upload X-Ray Image to OCI Object storage and detect Breast Cancer.
+* Label Images using OCI Data Labeling Service
+* Create and Train AI Vision Model.
+* Develop Oracle Apex Application Front end for image analysis
+ 
 #### About Breast Cancer
 
 Breast cancer is the most diagnosed cancer among women worldwide [Breast cancer represents 1 in 4 cancers diagnosed among women globally](https://www.uicc.org/news/globocan-2020-new-global-cancer-data). Colorectal, lung, cervical, and thyroid cancers are also common among women. It is the most frequent cancer amongst both sexes and is the leading cause of death from cancer in women. The estimated 2.3 million new cases indicate that one in every eight cancers diagnosed in 2020 was breast cancer. In 2020, there were an estimated 684,996 deaths from breast cancer, with a disproportionate number of these deaths occurring in low-resource settings.
@@ -65,6 +66,7 @@ If a tumour is benign, it is not a health risk and is unlikely to grow or change
 Small white specks are usually harmless. The radiologist will check their shape and pattern, as they can sometimes be a sign of cancer.
 
 ## Other Breast abnormalities
+
 As well as dense breast tissue and possible tumours, a radiologist will look for anything unusual on a mammogram.
 
 Other abnormalities include:
@@ -77,18 +79,26 @@ Other abnormalities include:
 
 ## Normal Breast Mammogram
 
+Sample image of Normal Breast.
+
 ![Women's Normal Breast 2020](images/normal-breast.png =30%x* )
 
+![Women's Normal Breast 2020](images/normal-breast_131577.png =30%x* )
+  
 ## Breast Cancer Mammogram  
+
+Sample images of most likely Breast Cancer.
 
 ![Women's Breast Cancer 2020](images/breast-cancer-1.png =30%x* )
 
 ![Women's Breast Cancer 2020](images/breast-cancer-2.png =30%x* )
+
+![Women's Normal Breast 2020](images/breast-cancer.jpeg =30%x* )
   
 ## Learn More
  
+* [Radiological Society of North America (RSNA) Research](https://www.rsna.org/research)
 * [Cancer.org](https://www.cancer.org/)
-* [Radiopedia.org](https://radiopaedia.org/?lang=us)
 * [Cancer.gov](https://www.cancer.gov/ccg/)
 
 ## Acknowledgements

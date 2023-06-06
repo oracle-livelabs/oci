@@ -120,11 +120,12 @@ for example the completed file might look like this
 
 ```text
 <copy>[DEFAULT]
-user=ocid1.user.oc1..aaaaaaaaompuuserocidjs4eyhaustwbtp4tx63smy6knndy5q
-fingerprint=ad:a7:73:a2:23:27:1c:why:th:is:2e:0c:a9:22:bb
-tenancy=ocid1.tenancy.oc1..aaaaaaaa6vfqmytenancyvzpfdp255vjqpsdd6ahdouq
+user=ocid1.user.oc1..aaaaaaaaompu-user-ocid-x63smy6knndy5q
+fingerprint=ad:a7:73:a2:23:-user-fingerprint-:0c:a9:22:bb
+tenancy=ocid1.tenancy.oc1..aaaaaaaa6v-tenancy-ocid-sdd6ahdouq
 region=us-ashburn-1
-key_file=/Users/mysystem/.oci/oci_api_key.pem</copy>
+key_file=/Users/-user-name-/.oci/oci_api_key.pem
+</copy>
 ```
 
 ## Task 6: List all buckets in a compartment
@@ -133,7 +134,7 @@ Reality check if we can list all buckets in a compartment to check if all config
 
 ```text
 <copy>[DEFAULT]
-oci os bucket list --compartment-id ocid1.compartment.oc1..aaaaaaaaud6tkdyourcompartmentocidxs6n4hgg</copy>
+oci os bucket list --compartment-id ocid1.compartment.oc1..aaaaaaaaud6t-compartment-ocid-xs6n4hgg</copy>
 ```
 
 The Output will be something like this
