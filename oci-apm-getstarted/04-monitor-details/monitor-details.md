@@ -20,7 +20,7 @@ Estimated time: 5 minutes
 
 1.  The Monitor page provides details about an APM monitor, for example, when and where the monitor is run, a link to the monitor script, or a history of the monitor running.  Examine the **Monitor Information** tab, **General Information** section.
 
-	  ![Oracle Cloud console, Monitor details](images/1-0-monitor.png " ")
+	  ![Oracle Cloud console, Monitor details](images/1-0-general-info.png " ")
 
     In this example, you can observe the information including the following.
      - **Interval** is 8 minutes. So the monitor runs every 8 minutes.
@@ -31,56 +31,56 @@ Estimated time: 5 minutes
 
 2. Scroll down the page and locate the **History** section. History provides additional insights into the alarm we examined in the previous labs. From the list of the runs, you can see the long-running calls are run from multiple vantage points, and not based on a specific region. So you can assume it is not a geographical problem where the monitor was executed, but related to the monitor itself.
 
-	  ![Oracle Cloud console, Monitor details](images/1-1-monitor.png " ")
+	  ![Oracle Cloud console, Monitor details](images/1-1-monitor-history.png " ")
 
-3. Let's examine the details of a specific run. Find one of the slow runs from your list, and click the three dots at the end of the row. In this example, the monitor in the top row that took 26 seconds to execute is selected.
+3. Let's examine the details of a specific run. Find one of the slow runs from your list, and click the three dots at the end of the row. In this example, the monitor in the top row that took 32 seconds to execute is selected.
 
-	  ![Oracle Cloud console, Monitor details](images/1-2-monitor.png " ")
+	  ![Oracle Cloud console, Monitor details](images/1-2-slow-monitor-menu.png " ")
 
     You will see a menu opened. This opens a menu that provides you options to analyze the monitor execution. For example, you can see an Error message in case of a failed script run, or Trace details in case of a network issue. You can also see screenshots of the HTML pages navigated in the monitor, or download browser console logs.
 
     >**Note:** In the example screenshot, the **View Error Message** menu is disabled, because the selected run did not have a failure. In case of a failed script run, you can select to see an error message.
-    	  ![Oracle Cloud console, Monitor details](images/1-3-monitor.png " ")
+    	  ![Oracle Cloud console, Monitor details](images/1-3-err-msg.png " ")
 
 ## Task 2: Examine the HAR file
 
 1. Select **View HAR** from the menu.
 
-	  ![Oracle Cloud console, Monitor details](images/1-4-monitor.png " ")
+	  ![Oracle Cloud console, Monitor details](images/1-4-menu-view-har.png " ")
 
     The **View HAR** page opens. The HTTP Archive file (HAR file) holds details of a specific monitor call. APM collects HAR files at the monitor executions and visualizes them on this page.
 
-    ![Oracle Cloud console, View HAR](images/1-5-monitor.png " ")
+    ![Oracle Cloud console, View HAR](images/1-5-view-har-page.png " ")
 
 2. On the upper side of the screen, there are pie charts showing load time breakdown information. Looking at the **Time Spent on state** chart, you can see that most of the time was spent in a wait state.
 
-    ![Oracle Cloud console, View HAR](images/1-6-monitor.png " ")
+    ![Oracle Cloud console, View HAR](images/1-6-summary-charts.png " ")
 
 3. Scroll down to the **Steps** section, and find the row that has the long execution time. In this example, that is Step 9.
 
-    ![Oracle Cloud console, View HAR](images/1-7-monitor.png " ")
+    ![Oracle Cloud console, View HAR](images/1-7-step9.png " ")
 
 4. Expand step 9 (or your selection of the slow step) by clicking the triangle icon at the beginning of the row.
 
-    ![Oracle Cloud console, View HAR](images/1-8-monitor.png " ")
+    ![Oracle Cloud console, View HAR](images/1-8-expand-step9.png " ")
 
     You can see the checkout POST operation was taking the majority of the time
 
-    ![Oracle Cloud console, View HAR](images/1-9-monitor.png " ")
+    ![Oracle Cloud console, View HAR](images/1-9-post-checkout.png " ")
 
 5. Click **Close** to exit the View HAR page
 
-    ![Oracle Cloud console, View HAR](images/1-10-monitor.png " ")
+    ![Oracle Cloud console, View HAR](images/1-10-close-har.png " ")
 
 ## Task 3: Drill down to the Trace Explorer
 
 1. You are back at the **History** section of the **Monitor details** page. On the same monitor run, click the three-dot icon to open the menu, then select **View Trace Details**.
 
-    ![Oracle Cloud console, Monitor details](images/1-11-monitor.png " ")
+    ![Oracle Cloud console, Monitor details](images/1-11-view-trace.png " ")
 
 2. This will open the **Trace Explorer**. In the next lab, you will examine the trace details of this monitor run.
 
-    ![Oracle Cloud console, Monitor details](images/1-12-monitor.png " ")
+    ![Oracle Cloud console, Monitor details](images/1-12-tx-page.png " ")
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
@@ -89,4 +89,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, August 2022
+* **Last Updated By/Date** - Yutaka Takatsu, May 2023
