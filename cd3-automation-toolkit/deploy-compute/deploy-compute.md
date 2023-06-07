@@ -237,7 +237,7 @@ Save the file.
       python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
 
 
-## **Task 4: Generate terraform files and create our resources in OCI **
+## **Task 4: Generate terraform files and create our resources in OCI**
 
 - From the *setUpOCI.py* output menu, select option 1: Identity--> 1: Add/Modify/Delete Compartments. 
 - After the Terraform files are created, Navigate to identity directory under home region directory:
