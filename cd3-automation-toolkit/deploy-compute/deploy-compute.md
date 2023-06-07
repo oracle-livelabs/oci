@@ -1,20 +1,16 @@
-## **Deploy OCI resources using CD3 Toolkit**
+# Deploy OCI resources using CD3 Toolkit
 
-<br>
+## Introduction
 
-## **Introduction**
-
-This is a continuation of the lab 2: [Setup the CD3 toolkit](/cd3-automation-toolkit/Setup%20the%20Toolkit/setup_the_toolkit.md)
+This is a continuation of the lab 2 : [Setup the CD3 toolkit](/cd3-automation-toolkit/Setup%20the%20Toolkit/setup_the_toolkit.md)
 
 As a recap, in the previous lab we cloned the cd3 repo, built an image, executed the CD3 container and connected it to the OCI tenancy. We were able to see the customer specific files getting generated in the outdirectory.
 
-In this lab, we will go through the process of provisioning the following OCI resources using CD3: Compartments, VCN, Subnets, Compute, Block Volume, ATP.
-
 Estimated lab time: 25 minutes
 
-<br>
+### Objectives
 
-## **Objectives**
+We will go through the process of provisioning the following OCI resources using CD3: Compartments, VCN, Subnets, Compute, Block Volume, ATP.
 
 In this lab, you will:
 
@@ -22,34 +18,22 @@ In this lab, you will:
 - Execute the setUpOCI.py script.
 - Execute terraform commands from the respective service folders. 
 
-<br>
-
-## **Prerequisites**
+### Prerequisites
 
 - Please follow the previous lab till the last step. Once you are be able to view the customer specific files in the outdirectory, you are all set to continue with this lab.
 
-<br>
-
-## **Task 1:  Add required resource parameter values in the Excel file**
-
+## Task 1:  Add required resource parameter values in the Excel file
 
 - Choose CD3-CIS-template from [CD3 Excel templates](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/RunningAutomationToolkit.md#excel-sheet-templates). 
 
 
- >Note: Any template other than *CIS Management services* template can be used to provision these services.
-
-
+> Note: Any template other than *CIS Management services* template can be used to provision these services.
 
 - Refer to the blue section in each worksheet to fill the resource details in proper formats. Not all fields are mandatory. 
 
->Note: Please fill resources data before the \<END> tag. Any data below the \<END> tag will not be processed.
+> Note: Please fill resources data before the \<END> tag. Any data below the \<END> tag will not be processed.
 
-
-
-<br>
-
-        
-- **Add details for Compartment:**
+- __Add details for Compartment:__
 
   - Open the "Compartments" tab and add your compartment data with below image as example.
 
@@ -57,26 +41,14 @@ In this lab, you will:
 
       *Parent_compartment 1::Parent_compartment 2:: ... ::Parent_compartment n*
 
-<br>
-
->Note: Make sure to provide your Tenancy's home region under the "Region" column, as Identity components can only be created in the home region.
-
-<br>
+> Note: Make sure to provide your Tenancy's home region under the "Region" column, as Identity components can only be created in the home region.
 
 Refer to the below image as example:
-
-
-
 ![Compartment](/cd3-automation-toolkit/deploy-compute/images/compartment.png)
 
-<br>
- 
-<br>
-
-- **Add details for the VCN:**
+- __Add details for the VCN:__
 
   - Navigate to "VCNs" sheet and create a VCN with the following details:
-
 
   - Compartment name format: *parent_compartment1::parent_compartment2::child_compartmemt*
 
@@ -84,16 +56,11 @@ Refer to the below image as example:
 
     CIDR: 10.110.0.0/24
 
-  <br>
-
     Refer to the below image as example:
-<br>
 
    ![vcn](/cd3-automation-toolkit/deploy-compute/images/vcn.png)
 
-<br>
-
-- **Add DHCP details for cd3_vcn**
+- __Add DHCP details for cd3_vcn__
 
    - Navigate to "DHCP" sheet and create DHCP Options with the following details:
 
@@ -105,15 +72,11 @@ Refer to the below image as example:
 
      Search domain: oci.com
 
- <br>
-  
-   Refer to the below image as example:
+  Refer to the below image as example:
 
    ![dhcp](/cd3-automation-toolkit/deploy-compute/images/dhcp.png)
 
-<br>
-
-- **Add details for creating Subnets in cd3_vcn**
+- __Add details for creating Subnets in cd3_vcn__
 
    - Navigate to "SubnetsVLANs" sheet and create subnets with the following details:
 
@@ -122,15 +85,11 @@ Refer to the below image as example:
 
      subnet2: private subnet: CIDR- 10.110.0.64/26 : Route table: RT2, Security list: SL2, Route to NGW.
 
- <br>
-  
-   Refer to the below image as example:
+  Refer to the below image as example:
 
   ![subnets](/cd3-automation-toolkit/deploy-compute/images/subnets.png)
 
-<br>
-
-- **Add details for Route rules**
+- __Add details for Route rules__
 
   - Navigate to "RouteRulesinOCI" sheet and create Route rules with following details:
 
@@ -139,15 +98,11 @@ Refer to the below image as example:
 
     RT2: Target-ngw_destination(fixed value for NAT Gateway target), Destination type: CIDR, Destination CIDR: 0.0.0.0/0
 
- <br>
-  
-   Refer to the below image as example:
+  Refer to the below image as example:
 
    ![routerules](/cd3-automation-toolkit/deploy-compute/images/routerules.png)
 
-<br>
-
-- **Add details for Security rules**
+- __Add details for Security rules__
 
    - Navigate to "SecRulesOCI" sheet and create Security rules with following details:
 
@@ -156,16 +111,11 @@ Refer to the below image as example:
 
      SL2: STATEFUL: INGRESS: TCP: Source- 0.0.0.0/0, Destination port - 1521, 1522
 
- <br>
-  
-   Refer to the below image as example:
+  Refer to the below image as example:
 
    ![secrule](/cd3-automation-toolkit/deploy-compute/images/secrules.png)
 
-<br>
-
-
-- **Add details for Compute VM**
+- __Add details for Compute VM__
 
 
    - Navigate to "Instances" sheet and create a Compute Instance with below details:
@@ -173,50 +123,35 @@ Refer to the below image as example:
 
    - cd3_vm: subnet-cd3_vcn_subnet1 (vcn_subnet): image::Linux , VM.Standard.E3.Flex::2, ssh_public_key
 
->Note: To add SSH keys to the vm, place them in **variables.tf** under *ssh_public_key* variable.
+> Note: To add SSH keys to the vm, place them in **variables.tf** under *ssh_public_key* variable.
 
-<br>
-
-   Refer to the below image as example:
+  Refer to the below image as example:
   ![vm](/cd3-automation-toolkit/deploy-compute/images/vm.png)
 
-<br>
-
-- **Add details for Block Volumes**
+- __Add details for Block Volumes__
 
    - Navigate to "Block Volumes" sheet and create a Block Volume with below details:
 
    - cd3_blockvolume: 20 VPUs per GB, 150GB size, attached to cd3_vm using paravirtualized mode.
 
- <br>
-  
-   Refer to the below image as example:
+  Refer to the below image as example:
 
    ![blockvolumes](/cd3-automation-toolkit/deploy-compute/images/blockvolume.png)
 
-<br>
-
- - **Add details for ATP** 
-<br>
+- __Add details for ATP__
 
    - Navigate to "ADB" sheet and create an ATP service with the below details:
 
 
    - cd3_ATP: subnet-cd3_vcn_subnet2, DB Name: adb123db, CPU Core Count-10, Data Storage Size in TB -100, LICENSE_INCLUDED.
 
- <br>
-  
   Refer to the below image as example:
 
   ![ATP](/cd3-automation-toolkit/deploy-compute/images/atp.png)
 
-<br>
-
 Once all the resource details are filled, save the Excel file. 
 
-<br>
-
-## **Task 2: Add Excel path to <customer_name>_setUpoci.properties**
+## Task 2: Add Excel path to <customer_name>_setUpoci.properties
 
 - Under /cd3user/tenancies/<customer_name>, open <customer_name>_setUpOCI.properties, and add the Excel file path at the "cd3file" parameter. 
 
@@ -228,7 +163,7 @@ the *non_gf_tenancy* parameter should be set to **false**.
 Save the file.
 
 
-## **Task 3: Execute setUpOCI.py**
+## Task 3: Execute setUpOCI.py
 
 - To create the Terraform files for our resources, we should run the setUpOCI.py script.
 - Navigate to */cd3user/oci_tools/cd3_automation_toolkit/* and execute the below command.
@@ -237,7 +172,7 @@ Save the file.
       python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
 
 
-## **Task 4: Generate terraform files and create our resources in OCI**
+## Task 4: Generate terraform files and create our resources in OCI
 
 - From the *setUpOCI.py* output menu, select option 1: Identity--> 1: Add/Modify/Delete Compartments. 
 - After the Terraform files are created, Navigate to identity directory under home region directory:
@@ -246,7 +181,7 @@ Save the file.
 
 -  Execute terraform init,plan and apply to create the compartment.
 
->Note: Since we are creating all resources in the **demo_compartment**, we should first create the compartment in OCI and run fetch compartments again. This way the variables file has the **demo_compartment** entry and other resources can be created in it.
+> Note: Since we are creating all resources in the **demo_compartment**, we should first create the compartment in OCI and run fetch compartments again. This way the variables file has the **demo_compartment** entry and other resources can be created in it.
 
 
 - Next go back to the folder */cd3user/oci_tools/cd3_automation_toolkit/* and execute the setUpOCI.py again as shown in **Task 3** and select *fetch compartments*.
@@ -267,13 +202,4 @@ Under *Database*: Select- Option 3
 
 - Enter into each of the required service folders (network, compute, database) and execute **terraform init**, **terraform plan** and **terraform apply** to provision those resources on OCI.
 
-
-<br>
-
 In this lab, we have learnt how to enter details in the CD3 Excel templates, execute setUpOCI.py to create terraform files and cerate OCI resources using those terraform files.
-
-<br>
-
-
-
-
