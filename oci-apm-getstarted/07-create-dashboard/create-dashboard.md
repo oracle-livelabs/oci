@@ -85,7 +85,7 @@ At present, the widget displays the default query. You can change the query depe
     ![Oracle Cloud, Create Dashboards page](images/7-3-2-widget-expand.png " ")
 2.	Under **Configured Widget input** section, click **"*" (asterisk)** showing next to the Trace Table Query. 
     ![Oracle Cloud, Create Dashboards page](images/7-3-3-click-asterisk.png " ")
-3. The **Configure Trace Table Query Input** window opens. Replace the text with the query from the Trace Explorer. Note that the query used in this example is the enhanced version.
+3. The **Configure Trace Table Query Input** window opens. Replace the text with the query from the Trace Explorer, then click **Save Changes**. Note that the query used in this example is the enhanced version.
 
 	``` bash
 	<copy>
