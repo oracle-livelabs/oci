@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This lab walks you through organising an image library in OCI Object Storage. You will load images to Object Storage directly from your laptop using OCI CLI. There are other options to upload images to object storage, such as using OCI Cloud Shell. This is not covered in this lab.
+This lab walks you through organising an image library in OCI Object Storage. You will load images to Object Storage directly from your laptop using OCI CLI. There are other options to upload images to object storage, such as using OCI Cloud Shell.
+
+[Youtube video on Create Image Library](youtube:Y3xsaFSwRmA:large)
 
 Estimated time: 30 minutes
 

@@ -30,7 +30,7 @@ Researchers have identified hormonal, lifestyle and environmental factors that m
  
  ![Women's Cancer 2020](images/womens-cancer.png =50%x* )
 
-#### About Is Lung Cancer
+#### About Lung Cancer
 
 Cancer is a disease in which cells in the body grow out of control. When cancer starts in the lungs, it is called lung cancer Worldwide, lung cancer is the second most commonly diagnosed cancer. NSCLC is the most common type of lung cancer in the United States, accounting for 81% of all lung cancer diagnoses.
 
@@ -52,56 +52,11 @@ This lab assumes you have:
 
 * An Oracle account
 * Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
-  
-## What Is a Mammogram?
 
- A mammogram is an X-ray picture of the breast. Doctors use a mammogram to look for early signs of breast cancer. Regular mammograms are the best tests doctors have to find breast cancer early, sometimes up to three years before it can be felt. Patients should continue to get mammograms according to recommended time intervals. Mammograms work best when they can be compared with previous ones. This allows the radiologist to compare them to look for changes in your breasts.
-
-## What does Breast Cancer look like on a Mammogram?
-
-Any area that does not look like normal tissue is a possible cause for concern. The radiologist will look for areas of white, high-density tissue and note its size, shape, and edges. A lump or tumour is a focused white area on a mammogram. Tumours can be cancerous or benign.
-
-If a tumour is benign, it is not a health risk and is unlikely to grow or change shape. Most tumours found in the breasts are non-cancerous.
-
-Small white specks are usually harmless. The radiologist will check their shape and pattern, as they can sometimes be a sign of cancer.
-
-## Other Breast abnormalities
-
-As well as dense breast tissue and possible tumours, a radiologist will look for anything unusual on a mammogram.
-
-Other abnormalities include:
-
-* Cysts, which are small fluid-filled sacs. Most are simple cysts, which have a thin wall and are not cancerous. If a doctor cannot classify a cyst as a simple cyst, they may do further tests to ensure that it is not cancerous.
-* Calcifications, which are deposits of calcium. Larger deposits of calcium are called macrocalcifications, and they usually occur as a result of ageing. Smaller deposits are called microcalcifications. Depending on the appearance of the microcalcifications, a doctor may test them for possible signs of cancer.
-* Fibroadenomas are benign tumours in the breast. They are round and may feel like marble. People in their 20s and 30s are more likelyTrusted Source to have a fibroadenoma, but they can occur at any age.
-* Scar tissue, which often appears white on a mammogram. It is best to inform a doctor of any scarring on the breasts beforehand.
- 
-
-## Normal Breast Mammogram
-
-Sample image of Normal Breast.
-
-![Women's Normal Breast 2020](images/normal-breast.png =30%x* )
-
-![Women's Normal Breast 2020](images/normal-breast_131577.png =30%x* )
-  
-## Breast Cancer Mammogram  
-
-Sample images of most likely Breast Cancer.
-
-![Women's Breast Cancer 2020](images/breast-cancer-1.png =30%x* )
-
-![Women's Breast Cancer 2020](images/breast-cancer-2.png =30%x* )
-
-![Women's Normal Breast 2020](images/breast-cancer.jpeg =30%x* )
-  
-## Learn More
- 
-* [Radiological Society of North America (RSNA) Research](https://www.rsna.org/research)
-* [Cancer.org](https://www.cancer.org/)
-* [Cancer.gov](https://www.cancer.gov/ccg/)
-
+You may now **proceed to the next lab**.
+    
 ## Acknowledgements
+
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
 * **Contributors** - Bo English-Wiczling, Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - June 6th, 2023
+* **Last Updated By/Date** - June 9th, 2023

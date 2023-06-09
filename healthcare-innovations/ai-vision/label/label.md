@@ -4,6 +4,8 @@
 
 This lab walks you through the steps to create a new dataset of records using images from your image library and label those images.
 
+[Youtube video on Create Image Library](youtube:Y3xsaFSwRmA:large)
+
 Estimated Time: 30 minutes
 
 ### About Data Labeling

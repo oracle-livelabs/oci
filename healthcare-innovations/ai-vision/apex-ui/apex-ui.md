@@ -9,6 +9,8 @@ This Lab walks you through the process of creating the Oracle Apex front-end App
 * Receive the response JSON and parse it to get the confidence score against the label as a key-value pair, 
 * Generate an Oracle Apex chart using the JSON response's key-value pair.
 
+[Youtube video on Oracle APEX User Interface](youtube:n-p6ohGn5xM:large)
+
 Estimated Time: 30 minutes.
 
 ### About Oracle APEX
