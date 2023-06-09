@@ -154,4 +154,4 @@ Nesta sessão você aprendeu a configurar o modo de apresentação e aprendeu a 
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Thais Henrique, Abr/2023
+- **Último Update Por/Date** - Thais Henrique, Mar/2023
