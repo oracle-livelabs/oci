@@ -4,7 +4,9 @@
 
 This lab walks you through the steps to train custom Image Classification model and to perform basic testing using OCI Vision.
 
-Estimated Time: 90 minutes (up to 6 hours if maximum training duration is selected).
+[Youtube video on Create Image Library](youtube:Y3xsaFSwRmA:large)
+
+Estimated Time: 90 minutes.  
 
 ### About OCI Vision
 
