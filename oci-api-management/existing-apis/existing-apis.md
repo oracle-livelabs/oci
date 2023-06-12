@@ -42,7 +42,7 @@ Estimated time: 20 min
 2. Install Samples
     - In the Oracle Integration menu, choose *Integrations* / *Integrations* again
     - Remove the filter with your username
-    - You will see some preinstalled sample. 
+    - You will see some preinstalled samples. 
     
         ![Oracle Integration - Samples](images/apim-oic2.png)
 
