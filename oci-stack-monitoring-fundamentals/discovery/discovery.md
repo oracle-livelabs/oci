@@ -45,6 +45,10 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud console Menu](images/2-1-console.png " ")
 
+	Once you arrive at the Enterprise Summary, select the compartment OracleApps under eStore.
+
+	![OCI Compartment list, highlighting the OracleApps compartment](images/1-2-console.png " ")	
+
 	From the Stack Monitoring Enterprise Summary, select **Promote to full monitoring** in the left lower menu.
 
 	![Stack Monitoring Enterprise Summary, highlighting the Promote to full monitoring link](images/2-1-discovery.png " ")
@@ -55,7 +59,7 @@ Estimated time: 15 minutes
 
 	![Promote to full monitoring page, highlighting the host to promote, and the promote link](images/2-2-discovery.png " ")
 
-	Clicking promote invokes a slide-out. From within the slide-out panel, review that the **Resource Name** is the host's fully qualified domain name (FQDN) (i.e., hostname). Next select the agent from the **Management Agent** drop-down list that will be responsible for monitoring the host. Once the Resource Name has been validated, and the monitoring agent has been selected, in your own environment you would click Promote Resource. However, in this lab you will click **Cancel**. Clicking **Promote Resource** will submit the promotion job, and within minutes Stack Monitoring would begin collecting a richer set of metrics than is available out-of-the-box.
+	Clicking promote invokes a slide-out. From within the slide-out panel, validate that the **Resource Name** is the host's fully qualified domain name (FQDN) (i.e., hostname). **Management Agent**, Stack Monitoring automatically identifies the local Management Agent running on the host, no action is required. Once the Resource Name has been validated, and the monitoring agent has been selected, in your own environment you would click Promote Resource. However, in this lab you will click **Cancel**. Clicking **Promote Resource** will submit the promotion job, and within minutes Stack Monitoring would begin collecting a richer set of metrics than is available out-of-the-box.
 
 	![Host resource promotion slide-out, with fields pre-filled](images/2-3-discovery.png " ")
 
@@ -75,7 +79,7 @@ Estimated time: 15 minutes
 	
 2. Complete the Oracle Database discovery
 
-	Let's begin by invoking the discovery slide-out, select **Discovery New Resource**.
+	Let's begin by invoking the discovery slide-out, select **Discover New Resource**.
 
 	To discover either a CDB or single instance database, select **Oracle Database** from the drop-down. If your application is running in a PDB, you should first discover the CDB prior to discovering the a **Pluggable DB**. In this lab we will review the discovery process of an Oracle Database. 
 

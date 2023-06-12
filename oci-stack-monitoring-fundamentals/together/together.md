@@ -24,6 +24,10 @@ Estimated time: 10 minutes
 
 	![Oracle Cloud console, Navigation Menu showing Stack Monitoring](images/1-1-console.png " ")
 
+	Once you arrive at the Enterprise Summary, select the compartment OracleApps under eStore.
+
+	![OCI Compartment list, highlighting the OracleApps compartment](images/1-2-console.png " ")	
+
 ## Task 2: Identify an alarm
 
 1. Identify an alarm in a firing state
@@ -113,12 +117,13 @@ Estimated time: 10 minutes
 
 ## Conclusion
 
-* Overall, you have learned how Stack Monitoring enables you to monitor the overall health of your applications and their underlying stack including servers, databases, and hosts. 
-* How the Enterprise Summary can be used to immediately assess status and performance across each application stack tier, and its interactive design enables dynamic changes to any performance charts. 
+Overall, you have learned how: 
+* Stack Monitoring enables you to monitor the overall health of your applications and their underlying stack including servers, databases, and hosts. 
+* Enterprise Summary can be used to immediately assess status and performance across each application stack tier, and its interactive design enables dynamic changes to any performance charts. 
 * Resource homepages provide you with a curated view of the health and performance of resources through charts, tables, and Stack View. 
-* You learned how Stack Monitoring can automatically provide an application topology automatically when discovering applications. 
+* Stack Monitoring can automatically provide an application topology automatically when discovering applications. 
 	- The associations between resources further enables easy navigation up and down the application stack to ease and speed up the triaging and remediation of application performance issues. 
-* And finally, you learned how the Stack View provides the ability to research the health and performance of the entire application stack from a single page to reduced incident times. 
+* And finally, the Stack View provides the ability to research the health and performance of the entire application stack from a single page to reduced incident times. 
 
 For more information and full range of capabilities of the Stack Monitoring solution, view the **[Stack Monitoring](https://docs.oracle.com/en-us/iaas/stack-monitoring/index.html)** Documentation.
 

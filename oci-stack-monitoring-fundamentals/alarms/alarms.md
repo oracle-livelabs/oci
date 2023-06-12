@@ -24,6 +24,10 @@ Estimated time: 10 minutes
 
 	![Oracle Cloud console, Navigation Menu](images/1-1-console.png " ")
 
+	Once you arrive at the Enterprise Summary, select the compartment OracleApps under eStore.
+
+	![OCI Compartment list, highlighting the OracleApps compartment](images/1-2-console.png " ")	
+
 2. Locate the **Alarms** region at the top right of the Enterprise Summary. 
 
 	Stack Monitoring provides quick access to all open alarms on your monitored resources. The **Alarms** region provides a total count of open alarms, as well as a count of alarms by severity. Clicking on a count of alarms invokes a slide-out. The slide-out provides greater details of the open alarms and is filtered by the severity count selected. 
@@ -101,7 +105,7 @@ With the new browser tab open, let's review this example alarm. The OCI Monitori
 
 	In order for the concurrent manager availability to roll up to the EBS application, we must choose an appropriate **Dimension name**. Choose **resource name**, then select **PROD\_EBS\_04\_ConcurrentProcessing**.
 
-	In OCI monitoring, the equivalent of a resource state of up is 1. To alarm when the concurrent manager is down, choose the operator **equal to**, the value **0**, and trigger delay minutes to **1**. The trigger delay can help protect from false alarms by setting to a higher value. However in doing so will postpone the notification. You must chose a period that will not cause false alarms, while also generating timely alarms that allow your organization to meet your defined SLAs.
+	In OCI monitoring, the equivalent of a resource state of up is 1. To alarm when the concurrent manager is down, choose the operator **equal to**, the value **0**, and trigger delay minutes to **1**. The trigger delay can help protect from false alarms by setting to a higher value. However in doing so will postpone the notification. You must choose a period that will not cause false alarms, while also generating timely alarms that allow your organization to meet your defined SLAs.
 
 	![OCI Monitoring Service Create Alarm page, highlighting the metric description, dimensions, trigger rule, and monitoring status](images/3-5-alarms.png " ")
 

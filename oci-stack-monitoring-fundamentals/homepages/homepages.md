@@ -23,6 +23,10 @@ Estimated time: 10 minutes
 
 	![Oracle Cloud console Menu](images/1-1-console.png " ")
 
+	Once you arrive at the Enterprise Summary, select the compartment OracleApps under eStore.
+
+	![OCI Compartment list, highlighting the OracleApps compartment](images/1-2-console.png " ")	
+
 2. Navigate to a **Concurrent Manager** resource.
 
 	The Enterprise Summary page opens. The concurrent manager is one of the key resources you should monitor to help maintain the service level of an E-Business Suite (EBS) application. In the last lab we discussed that when you are troubleshooting, the Enterprise Summary provides quick insight into the performance of your resources at a glance. The Enterprise Summary also provide easy navigation to all of your monitored resources. For instance, when reviewing the EBS tier of the Enterprise Summary, should you see any concern, click the plot point of the Concurrent Manager and a slide-out window will appear providing historical metric details.

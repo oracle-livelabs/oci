@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In this workshop, you will learn how the Enterprise Summary can be used to monitor the status and performance of an application and its underlying tech stack. You will review the overall availability status of all resources, identify the resources that are down and list the Oracle Databases in a Not Reporting state. Next review open alarms across an enterprise. You will also review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, because you are monitoring each tier, you will see how to interact with the Enterprise Summary UI to dynamically view other metrics. 
+In this workshop, you will learn how the Enterprise Summary can be used to monitor the status and performance of an application and its underlying tech stack. You will review the overall availability status of all resources, identify the resources that are down and list the Oracle Databases in a Not Reporting state. Next, review open alarms across an enterprise. You will also review performance metrics of the various tiers (e.g. E-Business Suite, PeopleSoft, WebLogic Server, Oracle Database, and Host). Finally, because you are monitoring each tier, you will see how to interact with the Enterprise Summary UI to dynamically view other metrics. 
 
 Estimated time: 20 minutes
 
@@ -25,6 +25,10 @@ Estimated time: 20 minutes
 1. Open the navigation menu in the Oracle Cloud console, and select **Observability & Management** > **Stack Monitoring** under Application Performance Monitoring.
 
 	![Oracle Cloud console, Navigation Menu](images/1-1-console.png " ")
+
+	Once you arrive at the Enterprise Summary, select the compartment OracleApps under eStore.
+
+	![OCI Compartment list, highlighting the OracleApps compartment](images/1-2-console.png " ")	
 
 2. Identify resources in a **Down** state
 

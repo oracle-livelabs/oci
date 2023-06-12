@@ -4,9 +4,20 @@
 
 In this workshop, you will become familiar with Oracle's Stack Monitoring solution. Stack Monitoring is an Oracle Cloud Infrastructure (OCI) cloud-native service to monitor and view the health and performance of an application and its underlying tech stack. Stack Monitoring can discover and monitor applications running within Oracle Cloud Infrastructure (OCI), on-premises, or another cloud provider.
 
-In this workshop learn how to identify application outages across your enterprise at a glance utilizing Stack Monitoring's **Enterprise Summary**. Understand how to identify, review and triage any open alarms. See how you can leverage Stack Monitoring's **tier-organized Key Performance Metrics (KPI's)** to review performance outliers. Learn how to dynamically configure the Enterprise Summary to help identify performance problems. The dynamic Enterprise Summary is very useful when you need to swap a metric chart or table with another to troubleshoot an alarm that is not displayed by default.
+In this workshop learn how to:
+* Identify application outages across your enterprise at a glance utilizing Stack Monitoring's **Enterprise Summary**. 
+* Understand how to identify, review and triage any open alarms. 
+* See how you can leverage Stack Monitoring's **tier-organized Key Performance Metrics (KPI's)** to review performance outliers. 
+* Learn how to dynamically configure the Enterprise Summary to help identify performance problems. The dynamic Enterprise Summary is very useful when you need to swap a metric chart or table with another to troubleshoot an alarm that is not displayed by default.
 
-In this workshop you will get familiar with Stack Monitoring's **home pages** and how to triage open alarms and view metric performance over time. Next, review Stack Monitoring's **UI driven discovery process**. You will **review an open alarm notification**, then review the steps to **configure an alarm**. Utilize Stack Monitoring's **application topology** to identify and troubleshoot issues across an application stack. And finally, leverage Stack Monitoring's **Stack View** to get a holistic perspective of key performance metrics across an entire application. While most of what is covered in this workshop is consistent across all applications such as PeopleSoft, the workshop will focus on an E-Business Suite application. 
+In this workshop you will get familiar with:
+* Stack Monitoring's **home pages** and how to triage open alarms and view metric performance over time. 
+* Review Stack Monitoring's **UI driven discovery process**. 
+* **Review an open alarm notification**, then review the steps to **configure an alarm**. 
+* Utilize Stack Monitoring's **application topology** to identify and troubleshoot issues across an application stack. 
+* Leverage Stack Monitoring's **Stack View** to get a holistic perspective of key performance metrics across an entire application. 
+
+While most of what is covered in this workshop is consistent across all applications such as PeopleSoft, the workshop will focus on an E-Business Suite application. 
 
 Estimated time for this workshop: 60 minutes
 
@@ -22,7 +33,7 @@ In this workshop, the following topics will be covered:
     - Identify a list of resources in a down state across the enterprise
     - Review open alarms across an enterprise
     - Review the performance of resources across each application tier
-    - Dynamically investigating other performance metrics
+    - Dynamically investigate other performance metrics
 * **Homepages**
     - Review a resource home page
     - Review Performance menu including, alarms, charts, tables, and Stack View
@@ -41,7 +52,7 @@ In this workshop, the following topics will be covered:
     - Navigate to homepage of resource in a firing state
     - Review performance of resource
     - Navigate within the applications topology
-    - Review an application performance using Stack View
+    - Review an application's performance using Stack View
 
 ### Prerequisites
 
