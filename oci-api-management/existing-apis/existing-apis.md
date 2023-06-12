@@ -55,7 +55,7 @@ Estimated time: 20 min
 3. Note the host name of OIC from the URL (##OIC\_HOST##): ex: oic-apim-xxxxx-fr.integration.ocp.oraclecloud.com
 4. Go back the APEX API Portal (##PORTAL\_URL##)
     - Click on the menu 
-    - Then *Source*
+    - Then *Discover Source*
 5. Click *Oracle Integration Credentials* 
     - For OCI Username, enter ##USERNAME##
     - For Password, enter ##PASSWORD##
