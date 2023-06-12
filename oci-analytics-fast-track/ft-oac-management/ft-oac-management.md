@@ -4,10 +4,9 @@
 
 Neste Lab você vai aprender a gerenciar a solução Oracle Analytics Cloud.
 
-*Este Lab só pode ser realizado por usuários que possuam o perfil de Administrador dentro do Oracle Analytics Cloud. Não é o caso dos usuários do Fast Track, portanto, está como Lab opcional para usuários que possuam a solução.*
-
 [Oracle Video Hub video scaled to Large size](videohub:1_k00wf9ol:large)
 
+*Este Lab só pode ser realizado por usuários que possuam o perfil de Administrador dentro do Oracle Analytics Cloud. Não é o caso dos usuários do Fast Track, portanto, está como Lab opcional para usuários que possuam a solução.*
 
 *Tempo estimado para o Lab:* 30 Minutos
 
@@ -93,4 +92,4 @@ Nesta sessão você aprendeu a realizar tarefas de gerenciamento do Oracle Analy
 ## Autoria
 
 - **Autores** - Breno Comin, Guilherme Galhardo, Isabella Alvarez, Isabelle Dias, Thais Henrique
-- **Último Updated Por/Data** - Gabriela Miyazima, Abr/2023
+- **Último Updated Por/Data** - Gabriela Miyazima, Mar/2023

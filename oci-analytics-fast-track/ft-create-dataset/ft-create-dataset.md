@@ -115,4 +115,4 @@ Nesta sessão você aprendeu criar um Conjunto de Dados no Oracle Analytics Clou
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Thais Henrique, Abr/2023
+- **Último Update Por/Date** - Isabelle Dias, Maio/2023

@@ -7,7 +7,7 @@ Para iniciar seu workshop, você precisa fazer login em nosso LiveLabs Sandbox.
 
 Neste laboratório, mostraremos onde você pode encontrar as informações de login e como fazer login no LiveLabs Sandbox
 
-*Tempo estimado para o Lab: 5 minutos
+Tempo estimado para o Lab: 5 minutos
 
 ### Objetivos
 
@@ -43,15 +43,15 @@ Após criar uma reserva para um Workshop LiveLab, você receberá um e-mail info
 
 5. Em seguida mantenha a opção **Default** e clique em **Next**.
 
-![Mantenha Default](.\images\access-tenancy-livelabs.png)
+![Mantenha Default](.\images\access-tenancy-livelabs.png) 
 
 6. Preencha os campos com seu usuário com a senha fornecidos em **View Login Info**, em seguida clique em **Sign-in**
 
-![Preencha as informações](.\images\put-credentials.png)
+![Preencha as informações](.\images\put-credentials.png) 
 
 7. Você deverá criar uma nova senha de acesso para seu usuário. (Você usará essa senha a partir de agora)
 
-![faça o reset da sua senha](.\images\password-reset.png)
+![faça o reset da sua senha](.\images\reset-password.png).
 
 Pronto! Você acabou de acessar o ambiente que usaremos para os próximos Labs práticos
 
@@ -62,4 +62,4 @@ Você pode **seguir para o próximo Lab**.
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Thais Henrique, Mar/2023
+- **Último Update Por/Date** - Thais Henrique, Dez/2022
