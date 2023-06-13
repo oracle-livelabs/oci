@@ -4,18 +4,18 @@
 	"tutorials": [
         {
             "title": "Lab 1: Getting Started with CD3 Automation Toolkit",
-            "filename": "./../../getting-started/getting-started.md"
+            "filename": "./../../setup-the-toolkit/setup-the-toolkit.md"
         },
         {
-            "title": "Lab 2: Deploy compute, block volume with Autonomous Transaction Processing database",
+            "title": "Lab 2: Deploy OCI Network, Compute, Block Volume with Autonomous Transaction Processing database",
             "filename": "./../../deploy-compute/deploy-compute.md"
         },
         {
-            "title": "Lab 3: Create OCI cloud event rules, alarms and notifications",
+            "title": "Lab 3: Create OCI Cloud Event Rules, Alarms and Notifications",
             "filename": "./../../create-eventalarm/create-eventalarm.md"
         },
         {
-            "title": "Lab 4: Uploading stack to OCI resource manager",
+            "title": "Lab 4: Uploading stack to OCI Resource Manager",
             "filename": "./../../upload-resourcemanager/upload-resourcemanager.md"
         },
         {

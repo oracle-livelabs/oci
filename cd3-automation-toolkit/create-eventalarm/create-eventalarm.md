@@ -2,15 +2,15 @@
 
 ## Introduction
 
-Oracle Cloud Infrastructure services emit events, which are structured messages that indicate changes in resources. 
+Oracle Cloud Infrastructure services emit Events, which are structured messages that indicate changes in resources. 
 
 The Notifications service lets you know when something happens with your resources in Oracle Cloud Infrastructure. 
 
-Using alarms and event rules, you can get human-readable messages through email and text messages (SMS).
+Using Alarms and Event Rules, you can get human-readable messages through email and text messages (SMS).
 
-Some examples of how you might use Events and notifications: 
+Some examples of how you might use Events and Notifications: 
 
-- Send a notification to a DevOps team when a database backup completes.
+- Send a Notification to a DevOps team when a database backup completes.
 - Convert files of one format to another when files are uploaded to an Object Storage bucket.
 
 Estimated Lab Time: 30 minutes
@@ -19,13 +19,13 @@ Estimated Lab Time: 30 minutes
 
 The objectives of this lab are:
 
-- Add OCI event rule, alarm and notifications in excel spreadsheet
-- Deploy event rule, alarm and notifcations
-- Use the Plan to Terraform Apply
+- Add OCI Event Rule, Alarm and Notifications details in Excel spreadsheet.
+- Execute the setUpOCI.py script to generate Terraform files.
+- Execute Terraform commands from the respective service folder. 
 
-## Task 1: Add OCI event rule, alarm and notifications in Excel Spreadsheet
+## Task 1: Add OCI Event Rule, Alarm and Notifications in Excel Spreadsheet
 
-1. Copy __CD3-CIS-ManagementServices-template.xlsx__ from /cd3user/oci_tools/cd3_automation_toolkit/example to localy on your system.
+1. Copy __CD3-CIS-ManagementServices-template.xlsx__ from /cd3user/oci_tools/cd3_automation_toolkit/example to locally on your system.
 
 2. Open __CD3-CIS-ManagementServices-template.xlsx__ and update __Events, Alarms, Notifications__ tabs based on your requirements and save it. You could use CIS standard pre-filled data in spreadsheet.
 
@@ -35,9 +35,9 @@ _e.g._ ![Event Rule](images/Event_Rule.jpg)
 
 ![Alarms](images/Alarms.jpg)
 
-## Task 2: Deploy OCI Event rule, alarm and notifications
+## Task 2: Deploy OCI Event Rule, Alarm and Notifications
 
-1. Place _CD3-CIS-ManagementServices-template.xlsx_ excel sheet at appropriate location in your container and provide the corresponding path in cd3file parmeter of: /cd3user/tenancies /<customer_name>/<customer_name>_setUpOCI.properties file.
+1. Place _CD3-CIS-ManagementServices-template.xlsx_ Excel sheet at appropriate location in your container and provide the corresponding path in cd3file parameter of: /cd3user/tenancies /<customer_name>/<customer_name>_setUpOCI.properties file.
 
 _e.g._ cd3file=/cd3user/tenancies/usr1_livelab/CD3-CIS-ManagementServices-template.xlsx
 

@@ -10,13 +10,11 @@ Estimated lab time: 25 minutes
 
 ### Objectives
 
-We will go through the process of provisioning the following OCI resources using CD3: Compartments, VCN, Subnets, Compute, Block Volume, ATP.
-
 In this lab, you will:
 
-- Add required resource parameter values to the Excel sheet.
-- Execute the setUpOCI.py script.
-- Execute terraform commands from the respective service folders. 
+- Add required parameter values for Compartments, VCN, Subnets, Compute, Block Volume, ATP to the Excel file.
+- Execute the setUpOCI.py script to generate terraform files.
+- Execute Terraform commands from the respective service folders. 
 
 ### Prerequisites
 
@@ -27,7 +25,7 @@ In this lab, you will:
 - Choose CD3-CIS-template from [CD3 Excel templates](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/RunningAutomationToolkit.md#excel-sheet-templates). 
 
 
-> Note: Any template other than *CIS Management services* template can be used to provision these services.
+> Note: Any template other than *CD3-CIS-ManagementServices-template* can be used to provision these services.
 
 - Refer to the blue section in each worksheet to fill the resource details in proper formats. Not all fields are mandatory. 
 
@@ -41,7 +39,7 @@ In this lab, you will:
 
       *Parent_compartment 1::Parent_compartment 2:: ... ::Parent_compartment n*
 
-> Note: Make sure to provide your Tenancy's home region under the "Region" column, as Identity components can only be created in the home region.
+> Note: Provide your Tenancy's "home region" under the "Region" column. (same for all OCI Identity components).
 
 Refer to the below image as example:
 ![Compartment](/cd3-automation-toolkit/deploy-compute/images/compartment.png)
@@ -200,6 +198,21 @@ Under *Database*: Select- Option 3
 
 - Once the Terraform files are created from above step, navigate to */cd3user/tenancies/<customer_name>/terraform_files/<region>/<services>* for each of the services: Network, Compute, Database. Block volume terraform files are generated under compute directory.
 
-- Enter into each of the required service folders (network, compute, database) and execute **terraform init**, **terraform plan** and **terraform apply** to provision those resources on OCI.
+- Enter into each of the required service folders (network, compute, database) and execute the below terraform commands to provision the resources in OCI.
 
-In this lab, we have learnt how to enter details in the CD3 Excel templates, execute setUpOCI.py to create terraform files and cerate OCI resources using those terraform files.
+```
+ terraform init
+ terraform plan 
+ terraform apply 
+ 
+ ```
+
+- The created resources can be viewed on the OCI console.
+
+In this lab, we have learnt how to enter details in the CD3 Excel templates, execute setUpOCI.py to create terraform files and create OCI resources using those terraform files.
+
+## Acknowledgements
+
+- __Author__ - Lasya Vadavalli
+- __Contributors__ - Murali N V, Suruchi Singla, Dipesh Rathod
+- __Last Updated By/Date__ - Lasya Vadavalli, June 2023
