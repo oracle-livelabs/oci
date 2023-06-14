@@ -27,53 +27,61 @@ In this lab, you will:
 
 ## Task 1: Create Kubernetes Cluster
 
-1. From the OCI Services menu, click **Developer Services** > **Kubernetes Clusters (OKE)**.
+1. From the OCI Services menu (![Console Menu](images/oci_hamburger_menu.png)), click **Developer Services** > **Kubernetes Clusters (OKE)**.
 
-  ![Click Kubernetes Clusters (OKE)](images/sample1.png)
+  ![Click Kubernetes Clusters (OKE)](images/oci_oke_menu.png)
 
-1. Under **List Scope**, select the compartment in which you would like to create a cluster. Click **Create Cluster**.
+1. Under **List Scope**, select the compartment in which you would like to create a cluster, then Click **Create Cluster**.
 
-  ![Click Create Cluster](images/sample1.png)
+    > Note: You can select the root compartment if using a trial or test tenancy, but is recommended to create a new compartment for better organization.
+
+    ![Click Create Cluster](images/oci_oke_landing.png)
 
 1. Choose **Quick Create** and click **Submit**.
 
-  ![Submit](images/sample1.png)
+    ![Submit](images/oke_create_cluster_quick_create.png)
 
 1. Fill out the form.
 
-    * Name: Provide a name (oke-cluster in this example)
-    * Compartment: Choose your compartment
+    * Name: Provide a name (cluster1 in this example)
+    * Compartment: Choose your compartment (You can leave the default if select on the previous step)
     * Kubernetes Version: Choose the most recent version (Minimum 1.25.4 for OKE Virtual Nodes)
-    * Kubernetes API Endpoint: Public Endpoint
-    * Node type: **Virtual**
+    * Kubernetes API Endpoint: Public Endpoint (default)
+    * Node type: **Virtual** (Need to select option to enable Virtual Nodes)
     * Node count: 3
     * Pod shape: Pod.Standard.E4.Flex
 
   Click **Next**
 
-  ![Quick Create form](images/sample1.png)
+  ![Quick Create form](images/oke_create_quick_cluster_form.png)
 
-1. Click ![Create Cluster](images/sample2.png) button.
+  You will be presented with the **Resources to be created** page. This page shows the resources that will be created when you create the cluster.
+
+1. Click on the![Create Cluster](images/oke_create_cluster_button.png)button.
 
     **We now have a OKE cluster with 3 node Virtual node pool and Virtual Cloud Network with all the necessary resources and configuration needed**
 
-    ![Create Cluster Summary](images/sample2.png)
+    ![Create Cluster Summary](images/oke_created_resources.png)
+
+    You can close this window.
 
 ## Task 2: Check that the OKE Cluster started the provisioning
 
-1. From the OCI Services menu, click **Developer Services** > **Kubernetes Clusters (OKE)**.
+1. (If already on the Cluster Information Screen, jump to the step 3) From the OCI Services menu ![Console Menu](images/oci_hamburger_menu.png), click **Developer Services** > **Kubernetes Clusters (OKE)**.
 
-  ![Click Kubernetes Clusters (OKE)](images/sample1.png)
+    ![Click Kubernetes Clusters (OKE)](images/oci_oke_menu.png)
 
-  > **Note:** This is the same step as the previous task, you may already be on that page.
+    > **Note:** This is the same step as the previous task, you may already be on that page.
 
 1. Check the status of the just created OKE Cluster.
 
-  ![Click Kubernetes Clusters (OKE)](images/sample1.png)
+    ![Click Kubernetes Clusters (OKE)](images/oke_list_clusters_creating.png)
 
 1. Click the just created OKE Cluster.
 
-  ![Click Kubernetes Clusters (OKE)](images/sample1.png)
+    ![Click Kubernetes Clusters (OKE)](images/oke_creating_cluster.png)
+
+> Note: The cluster will take a few minutes to be ready. You can go to the next lab while the cluster is being provisioning.
 
 ## Learn More
 
