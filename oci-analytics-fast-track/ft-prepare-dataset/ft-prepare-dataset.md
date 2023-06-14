@@ -194,4 +194,4 @@ Nesta sessão você aprendeu a preparar um Conjunto de Dados no Oracle Analytics
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabela Alvarez, Breno Comin, Isabelle Dias e Guilherme Galhardo
-- **Último Update Por/Date** - Breno Comin, Abr/2023
+- **Último Update Por/Date** - Breno Comin, Mar/2023

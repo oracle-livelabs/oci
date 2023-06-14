@@ -21,12 +21,12 @@ This section sets general environmental configurations for the Landing Zone. Inp
 2. The second field is __Service Label__. This service label will be prepended to everything created by the Landing Zone. As such, we need to choose a succinct value to enter. The requirements for service labels are 2-8 characters, the first being a letter, and last 2-8 characters being either a letter or number. If you violate these rules, the field will let you know.
 3. The third field is __CIS Level__. There are two levels of CIS compliance to choose from. These levels correspond to requirements found in the [CIS OCI Foundations Benchmark v1.2](https://www.cisecurity.org/benchmark/oracle_cloud/). To see a full list of changes between CIS Levels 1 & 2, please refer to the benchmark. The high level summary is that CIS Level 2 requires more strict encryption necessitating the creation of an [OCI Vault](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm) and encryption keys. __We will use CIS Level 1 for this lab__.
 
-![The Environment Menu Options](images/environment-menu.png "Environment Menu Options")_Note that the invalid service label is triggering an error message_
+    ![The Environment Menu Options](images/environment-menu.png "Environment Menu Options")_Note that the invalid service label is triggering an error message_
 
-One optional setting that we recommend in enterprise tenancies is the _Enclosing Compartment_ selection. Selecting a compartment from the drop down menu will create the Landing Zone inside the selected compartment. This allows for multiple Landing Zones to be used in a tenancy. This is useful for creating separate Dev/Test/Production environments in a single OCI tenant. Each Landing Zone will be able to support independent group memberships and permission structures via this mechanism. Note that __the enclosing compartment must be created prior to configuring the Landing Zone__.
+4. Check _Use an enclosing compartment_ box to show the _Existing enclosing compartment_ parameter.
+5. Select the compartment from Lab 1 Task 1 from the drop down menu under _Existing enclosing compartment_. Selecting a compartment from the drop down menu will create the Landing Zone inside the selected compartment. This allows for multiple Landing Zones to be used in a tenancy. This is useful for use cases such as creating separate Dev/Test/Production environments in a single OCI tenant. Each Landing Zone will be able to support independent group memberships and permission structures via this mechanism.
 
-_Using an Enclosing Compartment is optional in this lab, but useful for following best practices._
-![An Enclosing Compartment is Selected](images/enclosing-compartment.png "Enclosing Compartment Dropdown")
+    ![An Enclosing Compartment is Selected](images/enclosing-compartment.png "Enclosing Compartment Dropdown")
 
 ## Task 2: Enter Networking Variables
 
@@ -68,7 +68,7 @@ Leaving the _Enable Object Storage bucket_ checkbox selected will create an Obje
 
 ### Cloud Guard
 
-Leave the _Enable Cloud Guard Service?_ button unchecked. Cloud Guard is a Cloud Security Posture Management tool that is free to use for paid accounts. If Cloud Guard already has targets set, checking this box will cause the deployment to fail. If you are using a free tier account, Cloud Guard is not included and the deployment will fail.
+1. Uncheck the _Enable Cloud Guard Service?_ button if it is selected. Cloud Guard is a Cloud Security Posture Management tool that is free to use for paid accounts. If Cloud Guard already has targets set, checking this box will cause the deployment to fail. If you are using a free tier account, Cloud Guard is not included and the deployment will fail.
 
 We recommend using Cloud Guard if eligible. For the purposes of this lab, we are not going to use it with the Landing Zone.
 
@@ -80,8 +80,8 @@ All are useful tools, but for the sake of starting simple will not be a part of 
 
 1. Click __Next__ to continue to the review page. Quickly double check the variables entered.
 
-2. __Leave the _Run apply_ button unchecked__.
-![Apply Button](images/apply-button.png "Leave the apply button unchecked")
+2. __Uncheck the _Run apply_ button__.
+![Apply Button](images/apply-button.png "Uncheck the Run apply button")
 
 3. Click the __Create__ button when finished.
 
