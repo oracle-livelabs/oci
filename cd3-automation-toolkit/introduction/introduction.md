@@ -6,7 +6,7 @@ This set of labs will walk you through deploying various OCI services. Upon comp
 
 [CD3 Automation Toolkit Explained in 1 minute](youtube:TSNu0pUHYsE&list=PLPIzp-E1msrbJ3WawXVhzimQnLw5iafcp&index=1)
 
-Estimated Workshop Time: 1 Hour 30 Minutes
+Estimated Workshop Time: 1 Hour 10 Minutes
 
 ### Objectives
 
