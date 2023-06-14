@@ -6,7 +6,7 @@ This is a continuation of the lab 2 : [Setup the CD3 toolkit](/cd3-automation-to
 
 As a recap, in the previous lab we cloned the cd3 repo, built an image, executed the CD3 container and connected it to the OCI tenancy. We were able to see the customer specific files getting generated in the outdirectory.
 
-Estimated lab time: 25 minutes
+Estimated lab time: 30 minutes
 
 ### Objectives
 
@@ -18,7 +18,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-- Please follow the previous lab till the last step. Once you are be able to view the customer specific files in the outdirectory, you are all set to continue with this lab.
+- Please follow the previous lab till the last step. Once you are able to view the customer specific files in the outdirectory, you are all set to continue with this lab.
 
 ## Task 1:  Add required resource parameter values in the Excel file
 
@@ -170,19 +170,22 @@ Once all the resource details are filled, save the Excel file.
 
 ## Task 4: Generate terraform files and create our resources in OCI
 
-- From the *setUpOCI.py* output menu, select option 1: Identity--> 1: Add/Modify/Delete Compartments. 
-- After the Terraform files are created, Navigate to identity directory under home region directory:
+1. Select option 1 from *setUpOCI.py* output menu. 
+> Identity--> 1: Add/Modify/Delete Compartments. 
+
+2. Navigate to identity directory under home region directory after Terraform files are created.
                   
       cd /cd3user/tenancies/<customer_name>/terraform_files/<home_region>/identity
 
--  Execute terraform init,plan and apply to create the compartment.
+3. Execute terraform init, plan and apply to create the compartment.
 
 > Note: Since we are creating all resources in the **demo_compartment**, we should first create the compartment in OCI and run fetch compartments again. This way the variables file has the **demo_compartment** entry and other resources can be created in it.
 
+4. Go back to the folder */cd3user/oci_tools/cd3_automation_toolkit/* and execute the setUpOCI.py again as shown in **Task 3** and select *fetch compartments*.
 
-- Next go back to the folder */cd3user/oci_tools/cd3_automation_toolkit/* and execute the setUpOCI.py again as shown in **Task 3** and select *fetch compartments*.
+> This option will update OCID of newly created compartments in TF file.
 
-- After the compartments data is updated, under the *setUpOCI.py* output menu select: 3,4,5,6 options to create terraform files for Network, Compute, Storage and Database respectively.
+5. Select: 3,4,5,6 options to create terraform files for Network, Compute, Storage and Database respectively from the *setUpOCI.py* output menu.
 
 Under *Network*: Select- Options 1,3,4 
 
@@ -192,11 +195,11 @@ Under *Storage*: Select- Option 1
 
 Under *Database*: Select- Option 3
 
-- Terraform files are generated under the respective Service directories of the Region directory.
+> Terraform files are generated under the respective Service directories of the Region directory.
 
-- Once the Terraform files are created from above step, navigate to */cd3user/tenancies/<customer_name>/terraform_files/<region>/<services>* for each of the services: Network, Compute, Database. Block volume terraform files are generated under compute directory.
+6. Once the Terraform files are created from above step, navigate to */cd3user/tenancies/<customer_name>/terraform_files/<region>/<services>* for each of the services: Network, Compute, Database. Block volume terraform files are generated under compute directory.
 
-- Enter into each of the required service folders (network, compute, database) and execute the below terraform commands to provision the resources in OCI.
+7. Enter into each of the required service folders (network, compute, database) and execute the below terraform commands to provision the resources in OCI.
 
 ```
  terraform init
@@ -205,7 +208,7 @@ Under *Database*: Select- Option 3
  
  ```
 
-- The created resources can be viewed on the OCI console.
+8. The created resources can be viewed on the OCI console.
 
 In this lab, we have learnt how to enter details in the CD3 Excel templates, execute setUpOCI.py to create terraform files and create OCI resources using those terraform files.
 
