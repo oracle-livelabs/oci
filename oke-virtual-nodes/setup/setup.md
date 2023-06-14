@@ -27,24 +27,24 @@ This lab assumes you have:
 
 To create and use clusters with virtual nodes and virtual node pools, you must endorse the Container Engine for Kubernetes service to allow virtual nodes to create container instances in the Container Engine for Kubernetes service tenancy with a VNIC connected to a subnet of a VCN in your tenancy.
 
-1. From the OCI Services menu, click **Identity & Security** > **Policies**.
+1. From the OCI Services menu (![Console Menu](images/oci_hamburger_menu.png)), click **Identity & Security** > **Policies**.
 
-  ![Click Policies](images/sample1.png)
+    ![Click Policies](images/oci_policies_menu.png)
 
-1. Under **List Scope**, select the (root) compartment. Click ![Create Policy](images/sample2.png) button.
+1. Under **List Scope**, select the (root) compartment. Click ![Create Policy](images/oci_policy_create_button.png) button.
 
-  ![Click Policy](images/sample1.png)
+    > Note: This policy can only be created on the root compartment. If you do not have access, you need to contact your tenancy administrator to create for you.
+
+    ![Click Policy](images/oci_policies_landing.png)
 
 1. Fill out the form.
 
-    * Name: Provide a name (oke-virtual-node-policy in this example)
-    * Description: Policies for the OKE Virtual Nodes Service
+    * Name: Provide a name (`oke-virtual-node-policy` in this example)
+    * Description: Endorsement for the OKE Virtual Nodes Service
     * Compartment: Choose the (root) compartment
     * On the Policy Builder, switch to **Show manual editor**
 
-  Click **Next**
-
-  ![Create Policy form](images/sample1.png)
+    ![Create Policy form](images/oci_create_policy_virtual_nodes_form.png)
 
 1. On the **Policy Builder** box, enter the exactly policies as shown below:
 
@@ -60,23 +60,29 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
     endorse any-user to associate compute-container-instances in compartment ske_compartment of tenancy ske with network-security-group in tenancy where ALL {request.principal.type='virtualnode',request.operation='CreateContainerInstance'}
     ```
 
-  > **Note:** Do not change any of the OCIDs, copy as is
+    > **Note:** Do not change any of the OCIDs, copy as is
 
-  ![Policy Builder](images/sample1.png)
+    ![Create Policy form with Policies](images/oci_create_policy_virtual_nodes_policies.png)
+
+1. Click **Create**
+
+    You should see the policy created showing 5 items.
+
+    ![Created Policy](images/oci_policy_for_virtual_nodes.png)
 
 ## Task 2: Update Network Security List for LoadBalancer
 
 1. From the OCI Services menu, click **Networking** > **Virtual cloud networks**.
 
-  ![Click Policies](images/sample1.png)
+  ![VCN Menu](images/oci_vcn_menu.png)
 
 1. Under **List Scope**, select the same compartment used to create a cluster. Click on the vcn created for the OKE Cluster
 
-  ![VCN List](images/sample1.png)
+  ![VCN List](images/oci_vcn_landing.png)
 
 1. Click on the Security Lists and select the **oke-svclbseclist-quick-xxxx-yyyy**.
 
-  ![Sec List](images/sample1.png)
+  ![Sec List](images/oci_vcn_security_lists.png)
 
 1. Click on the Egress Rules and click **Add Egress Rules** button.
 
@@ -84,12 +90,12 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
 
 1. Enter the **Egress Rule 1**.
 
-    * Destination Type: CIDR
-    * Destination CIDR:
-    * IP Protocol: TCP
-    * Source Port Range:
-    * Destination Port Range:
-    * Description:
+    * Destination Type: `CIDR`
+    * Destination CIDR: `10.0.10.0/24`
+    * IP Protocol: `TCP`
+    * Source Port Range: `30000`
+    * Destination Port Range: `32767`
+    * Description: `Traffic to pod and health check node port traffic for external-traffic-policy=local`
 
     Click **Add Egress Rules** button
 
@@ -100,6 +106,32 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
   ![Egress Rules Completed](images/sample1.png)
 
 ## Task 3: Configure the Kubernetes Cluster access on the OCI Cloud Shell
+
+1. (If already on the Cluster Information Screen, jump to the step 3) From the OCI Services menu ![Console Menu](images/oci_hamburger_menu.png), click **Developer Services** > **Kubernetes Clusters (OKE)**.
+
+    ![Click Kubernetes Clusters (OKE)](images/oci_oke_menu.png)
+
+    > **Note:** This is the same step as the previous task, you may already be on that page.
+
+1. Click on the OKE Cluster.
+
+    ![Click Kubernetes Clusters (OKE)](images/oke_list_clusters.png)
+
+1. On the **Cluster details**, click on the **Access Cluster** button.
+
+    ![Click Access Cluster](images/oke_cluster_details_access_cluster.png)
+
+1. On the **Access Your Cluster**, click on the **Launch Cloud Shell** button to launch the OCI Cloud Shell.
+
+    ![Click Access Cluster](images/oke_access_your_cluster.png)
+
+1. On the **Access Your Cluster**, click on the **Copy** button to copy the oci-cli command.
+
+    ![Click Access Cluster](images/oke_cluster_cloud_shell_1.png)
+
+1. Paste to the OCI Cloud Shell and press enter.
+
+    ![Click Access Cluster](images/oke_cluster_cloud_shell_2.png)
 
 1. On OCI Console, Top-Right, click the ![Cloud Shell Icon](images/sample1.png) icon and select **Cloud Shell**.
 
