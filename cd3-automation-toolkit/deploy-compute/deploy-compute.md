@@ -24,16 +24,16 @@ In this lab, you will:
 
 ## Task 1:  Add required resource parameter values in the Excel file
 
-- Choose CD3-CIS-template from [CD3 Excel templates](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/RunningAutomationToolkit.md#excel-sheet-templates). 
+1. Choose CD3-CIS-template from [CD3 Excel templates](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/RunningAutomationToolkit.md#excel-sheet-templates). 
 
 
 > Note: Any template other than *CIS Management services* template can be used to provision these services.
 
-- Refer to the blue section in each worksheet to fill the resource details in proper formats. Not all fields are mandatory. 
+2. Refer to the blue section in each worksheet to fill the resource details in proper formats. Not all fields are mandatory. 
 
 > Note: Please fill resources data before the \<END> tag. Any data below the \<END> tag will not be processed.
 
-- __Add details for Compartment:__
+3. __Add details for Compartment:__
 
   - Open the "Compartments" tab and add your compartment data with below image as example.
 
@@ -46,7 +46,7 @@ In this lab, you will:
 Refer to the below image as example:
 ![Compartment](/cd3-automation-toolkit/deploy-compute/images/compartment.png)
 
-- __Add details for the VCN:__
+4. __Add details for the VCN:__
 
   - Navigate to "VCNs" sheet and create a VCN with the following details:
 
@@ -60,7 +60,7 @@ Refer to the below image as example:
 
    ![vcn](/cd3-automation-toolkit/deploy-compute/images/vcn.png)
 
-- __Add DHCP details for cd3_vcn__
+5. __Add DHCP details for cd3_vcn__
 
    - Navigate to "DHCP" sheet and create DHCP Options with the following details:
 
@@ -76,7 +76,7 @@ Refer to the below image as example:
 
    ![dhcp](/cd3-automation-toolkit/deploy-compute/images/dhcp.png)
 
-- __Add details for creating Subnets in cd3_vcn__
+6. __Add details for creating Subnets in cd3_vcn__
 
    - Navigate to "SubnetsVLANs" sheet and create subnets with the following details:
 
@@ -89,7 +89,7 @@ Refer to the below image as example:
 
   ![subnets](/cd3-automation-toolkit/deploy-compute/images/subnets.png)
 
-- __Add details for Route rules__
+7. __Add details for Route rules__
 
   - Navigate to "RouteRulesinOCI" sheet and create Route rules with following details:
 
@@ -102,7 +102,7 @@ Refer to the below image as example:
 
    ![routerules](/cd3-automation-toolkit/deploy-compute/images/routerules.png)
 
-- __Add details for Security rules__
+8. __Add details for Security rules__
 
    - Navigate to "SecRulesOCI" sheet and create Security rules with following details:
 
@@ -115,7 +115,7 @@ Refer to the below image as example:
 
    ![secrule](/cd3-automation-toolkit/deploy-compute/images/secrules.png)
 
-- __Add details for Compute VM__
+9. __Add details for Compute VM__
 
 
    - Navigate to "Instances" sheet and create a Compute Instance with below details:
@@ -128,7 +128,7 @@ Refer to the below image as example:
   Refer to the below image as example:
   ![vm](/cd3-automation-toolkit/deploy-compute/images/vm.png)
 
-- __Add details for Block Volumes__
+10. __Add details for Block Volumes__
 
    - Navigate to "Block Volumes" sheet and create a Block Volume with below details:
 
@@ -138,7 +138,7 @@ Refer to the below image as example:
 
    ![blockvolumes](/cd3-automation-toolkit/deploy-compute/images/blockvolume.png)
 
-- __Add details for ATP__
+11. __Add details for ATP__
 
    - Navigate to "ADB" sheet and create an ATP service with the below details:
 
@@ -153,20 +153,18 @@ Once all the resource details are filled, save the Excel file.
 
 ## Task 2: Add Excel path to <customer_name>_setUpoci.properties
 
-- Under /cd3user/tenancies/<customer_name>, open <customer_name>_setUpOCI.properties, and add the Excel file path at the "cd3file" parameter. 
+1. Under /cd3user/tenancies/<customer_name>, open <customer_name>_setUpOCI.properties, and add the Excel file path at the "cd3file" parameter. 
 
-- Since we are creating new resources, and not modifying any existing ones,
-the *non_gf_tenancy* parameter should be set to **false**. 
+2. Set *non_gf_tenancy* parameter to **false**, since we are creating new resources, and not modifying any existing ones. 
 
-- Other values are automatically populated form running the createTenancy.py script in the previous lab.
-
-Save the file.
+3. Save the file.
 
 
 ## Task 3: Execute setUpOCI.py
 
-- To create the Terraform files for our resources, we should run the setUpOCI.py script.
-- Navigate to */cd3user/oci_tools/cd3_automation_toolkit/* and execute the below command.
+1. Run setUpOCI.py script to create the Terraform files for our resources.
+
+2. Navigate to */cd3user/oci_tools/cd3_automation_toolkit/* and execute the below command.
         
     
       python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
