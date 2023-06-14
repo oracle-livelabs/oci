@@ -7,7 +7,7 @@ The CD3 Automation toolkit is available in the github public repo : [CD3 github 
 
 To begin the process of setting up the Toolkit and connecting to OCI, please follow the step-by-step instructions outlined in this lab.
 
-Estimated Lab Time: 20 minutes
+Estimated Lab Time: 10 minutes
 <br>
 
 ### Objectives
@@ -17,13 +17,14 @@ The objectives of this lab are:
 - Clone the CD3 repo
 - Build an image from the dockerfile in repo
 - Run the CD3 container
-- Connect Docker container to OCI tenancy
+- Connect CD3 container to OCI tenancy
 
 ### Prerequisites
+
 - Git 
-- Any Docker CLI compatible platform such as Docker or Rancher
+- Any Docker CLI compatible platform such as Docker or Rancher.
 - Local Directory: A directory in your local system that will be shared with the container to hold the generated Terraform files.
-- OCI Tenancy Access Requirement - Appropriate IAM policies must be in place for each of the resources that the user may try to create. Minimum requirement for the user to get started is to have the ability to read to the tenancy.
+- OCI Tenancy access requirement - Appropriate IAM policies must be in place for each of the resources that the user may try to create. Minimum requirement for the user to get started is to have the ability to read to the tenancy.
  
 ## Task 1: Clone the repo
 
@@ -35,9 +36,9 @@ The objectives of this lab are:
     ```
 3. Once the cloning completes successfully, the repo will replicate to the local directory.
 
-## Task 2: Build an image from the Dockerfile obtained from the above download
+## Task 2: Build an image from the Dockerfile obtained from the above clone
 
- 1. Change directory to 'cd3-automation-toolkit'(i.e. the cloned repo in your local).
+ 1. Change directory to *'cd3-automation-toolkit'*(i.e. the cloned repo in your local).
 
 2. Execute:
 ```
@@ -46,8 +47,6 @@ docker build --platform linux/amd64 -t cd3toolkit:${image_tag} -f Dockerfile --p
 ```
 
 > __Note:__ *${image_tag} should be replaced with suitable tag as per your requirements/standards. The period (.) at the end of the docker build command is required.*
-
-## Task 3: Run the CD3 container
 
 
 
@@ -81,7 +80,8 @@ docker ps
 ```
 > Note down the container ID from this cmd output.
 
-2. Enter the container
+2. Enter the container using the above container id.
+
 ```bash
 docker exec -it <container_id> bash
 ```
@@ -98,7 +98,8 @@ cd /cd3user/oci_tools/cd3_automation_toolkit/user-scripts/
 python createAPIKey.py 
 ```
 
-> This will generate the public/private key pair(oci_api_public.pem and oci_api_private.pem) at /cd3user/tenancies/keys/
+> This will generate the public/private key pair(oci_api_public.pem and oci_api_private.pem) at */cd3user/tenancies/keys/*
+
 2. In case you already have the keys, you should copy the private key file inside the container and rename it to *oci_api_private.pem*.
 
 ### **Step 3: Upload the Public key to OCI console.**
@@ -106,11 +107,11 @@ python createAPIKey.py
 Upload the Public key to "APIkeys" under user settings in OCI Console. Pre-requisite to use the complete functionality of the Automation Toolkit is to have the user as an administrator to the tenancy.
 
    - Open the Console, and sign in as the user.
-View the details for the user who will be calling the API with the key pair.
+   - View the details for the user who will be calling the API with the key pair.
 
-   - Open the Profile menu (User menu icon) and click User Settings.
+   - Open the Profile menu (User menu icon) and click **User Settings**.
 
-   - Click Add Public Key.
+   - Click **Add Public Key**.
    - Paste the contents of the PEM public key in the dialog box and click *Add*.
 
 ### **Step 4: Edit tenancyconfig.properties:**
@@ -165,10 +166,17 @@ This lab concludes with the verification of the generated customer specific file
 
 <br>
 
-In this lab, we have cloned the CD3 repo, built an image from it, executed the cd3 container and connected it to OCI tenancy using config details.
+In this lab, we have cloned the CD3 repo, built an image from it, executed the cd3 container and connected it to the OCI tenancy using config details.
 
 <br>
 
 Follow the next lab to upload the CD3 Excel file and execute setUpOCI.py script which generates the terraform files. 
 
-[def]: images/docker_run.png "example run of docker run command"
+[def]: images/docker_run.png "example  of docker run command"
+
+
+## Acknowledgements
+
+- __Author__ - Lasya Vadavalli
+- __Contributors__ - Murali N V, Suruchi Singla, Dipesh Rathod
+- __Last Updated By/Date__ - Lasya Vadavalli, June 2023
