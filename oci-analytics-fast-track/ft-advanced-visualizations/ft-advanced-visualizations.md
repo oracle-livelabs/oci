@@ -257,4 +257,4 @@ Nesta sessão você aprendeu a utilizar recursos avançados para criação de Da
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Guilherme Galhardo, Abr/2023
+- **Último Update Por/Date** - Guilherme Galhardo, Mar/2023

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn how to save a custom query for future use and incorporating it into the quick bar for convenient and frequent access.
+In this lab, you will learn how to save a custom query for future use and incorporate it into the quick bar for convenient and frequent access.
 
 Estimated time: 15 minutes
 

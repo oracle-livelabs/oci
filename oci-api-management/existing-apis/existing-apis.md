@@ -35,7 +35,7 @@ Estimated time: 20 min
         ![Oracle Integration](images/apim-oic1.png)
     - Click *Create Instance*
     - Name *oic\_apim*
-    - Choose Integration Cloud Gen 2 (it takes more time, steps with Gen3)
+    - Choose Integration Cloud Gen 2 (it takes more time, steps, with Gen3)
     - Choose your version and license type
     - Click *Create*
     - When the instance is green, click *Service Console*
