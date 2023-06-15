@@ -21,7 +21,7 @@ In this lab, you will:
 * Deploy MuShop to the OKE Virtual Nodes Cluster
 * Expose your app publicly
 
-### Prerequisites (Optional)
+### Prerequisites
 
 * Completed the [Provisioning](../provision/provision.md) lab
 * Completed the [Setup](../setup/setup.md) lab
@@ -75,28 +75,6 @@ In this lab, you will:
     cluster-c4daylfgvrg
     ````
 
-1. Create a namespace for MuShop App (microservices will reside on this namespace)
-
-    ````shell
-    <copy>
-    kubectl create namespace mushop
-    </copy>
-    ````
-
-    Sample response:
-
-    ````shell
-    namespace/mushop created
-    ````
-
-1. Set the default **kubectl** namespace to skip adding **--namespace _mushop_** to every command.  You can replace *mushop* with *your name*.
-
-    ````shell
-    <copy>
-    kubectl config set-context --current --namespace=mushop
-    </copy>
-    ````
-
 ## Task 2: Deploy the eCommerce App with Helm
 
 Remembering that helm provides a way of packaging and deploying configurable charts, next we will deploy the application in "mock mode" where cloud services are mocked, yet the application is fully functional
@@ -105,7 +83,7 @@ Remembering that helm provides a way of packaging and deploying configurable cha
 
     ````shell
     <copy>
-    helm install mushop deploy/complete/helm-chart/mushop --set global.mock.service="all"
+    helm install mushop ./deploy/complete/helm-chart/mushop -f ./deploy/complete/helm-chart/mushop/values-virtual-nodes.yaml
     </copy>
     ````
 
@@ -119,13 +97,11 @@ Remembering that helm provides a way of packaging and deploying configurable cha
 
     *Note:* To leave the _watch_ press `CTRL-C` anytime. If do not want to keep watching and just see the current list of PODS, just use `kubectl get pods`
 
-1. After inspecting the resources created with helm install, launch the application in your browser using the **EXTERNAL-IP** from the nginx ingress.
-
-1. Find the EXTERNAL-IP assigned to the ingress controller.  Open the IP address in your browser.
+1. Find the EXTERNAL-IP assigned to the edge microservice.  Open the IP address in your browser.
 
     ````shell
     <copy>
-    kubectl get svc mushop-utils-ingress-nginx-controller --namespace mushop-utilities
+    kubectl get svc edge
     </copy>
     ````
 
@@ -159,8 +135,6 @@ You can use these commands to see when applications were deployed, what their cu
     kubectl get deployments
     </copy>
     ````
-
-    *Note:* You should use `kubectl get deployments --namespace mushop` if you didn't set _mushop_ as default namespace
 
 1. Check the pods deployed
 
@@ -225,7 +199,7 @@ You can use these commands to see when applications were deployed, what their cu
 
     ````shell
     <copy>
-    helm template mushop deploy/complete/helm-chart/mushop --set global.mock.service="all" --output-dir ./out
+    helm template mushop ./deploy/complete/helm-chart/mushop -f ./deploy/complete/helm-chart/mushop/values-virtual-nodes.yaml --output-dir ./out
     <copy>
     ````
 
