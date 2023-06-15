@@ -80,13 +80,13 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
 
   ![VCN List](images/oci_vcn_landing.png)
 
-1. Click on the Security Lists and select the **oke-svclbseclist-quick-xxxx-yyyy**.
+1. Click on the Security Lists and select something similar to **oke-svclbseclist-quick-cluster1-aaaaaaaaaa**.
 
   ![Sec List](images/oci_vcn_security_lists.png)
 
 1. Click on the Egress Rules and click **Add Egress Rules** button.
 
-  ![Egress Rules](images/sample1.png)
+  ![Egress Rules](images/oci-vcn-seclist-lb-egress.png)
 
 1. Enter the **Egress Rule 1**.
 
@@ -99,11 +99,22 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
 
     Click **Add Egress Rules** button
 
-  ![Add Egress Rules](images/sample1.png)
+  ![Add Egress Rules](images/oci-vcn-seclist-egress-add.png)
+
+1. Enter the **Egress Rule 2**.
+
+    * Destination Type: `CIDR`
+    * Destination CIDR: `10.0.10.0/24`
+    * IP Protocol: `TCP`
+    * Source Port Range: `ALL`
+    * Destination Port Range: `10256`
+    * Description: `Allow OCI load balancer or network load balancer to communicate with kube-proxy on worker nodes.`
+
+    Click **Add Egress Rules** button
 
 1. Your Egress Rules should looks like this:
 
-  ![Egress Rules Completed](images/sample1.png)
+  ![Egress Rules Completed](images/oci-vcn-seclist-egress-list.png)
 
 ## Task 3: Configure the Kubernetes Cluster access on the OCI Cloud Shell
 

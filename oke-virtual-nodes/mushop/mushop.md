@@ -40,12 +40,12 @@ In this lab, you will:
 
     ````shell
     Cloning into 'mushop'...
-    remote: Enumerating objects: 542, done.
-    remote: Counting objects: 100% (542/542), done.
-    remote: Compressing objects: 100% (313/313), done.
-    remote: Total 15949 (delta 288), reused 424 (delta 200), pack-reused 15407
-    Receiving objects: 100% (15949/15949), 17.59 MiB | 33.71 MiB/s, done.
-    Resolving deltas: 100% (9557/9557), done.
+    remote: Enumerating objects: 23629, done.
+    remote: Counting objects: 100% (429/429), done.
+    remote: Compressing objects: 100% (230/230), done.
+    remote: Total 23629 (delta 265), reused 343 (delta 198), pack-reused 23200
+    Receiving objects: 100% (23629/23629), 28.26 MiB | 31.69 MiB/s, done.
+    Resolving deltas: 100% (14463/14463), done.
     ````
 
 1. Change to the mushop directory
@@ -75,6 +75,32 @@ In this lab, you will:
     cluster-c4daylfgvrg
     ````
 
+1. Check pods running on the newly created OKE Virtual Nodes cluster
+
+    ````shell
+    <copy>
+    kubectl get pods --all-namespaces
+    </copy>
+    ````
+
+    Sample response:
+
+    ````shell
+    NAMESPACE     NAME                                   READY   STATUS        RESTARTS   AGE
+    kube-system   coredns-69db49c7c5-2gdk5               1/1     Running       0          1h
+    kube-system   coredns-69db49c7c5-fj652               1/1     Running       0          1h
+    kube-system   coredns-69db49c7c5-n5z4f               1/1     Running       0          1h
+    kube-system   csi-oci-node-f8rmc                     0/1     Terminating   0          1h
+    kube-system   csi-oci-node-pn9db                     0/1     Terminating   0          1h
+    kube-system   csi-oci-node-psblj                     0/1     Terminating   0          1h
+    kube-system   kube-dns-autoscaler-797876fc74-8b7db   1/1     Running       0          1h
+    kube-system   kube-proxy-42ngk                       0/1     Pending       0          1h
+    kube-system   kube-proxy-g4ms8                       0/1     Pending       0          1h
+    kube-system   kube-proxy-zjd48                       0/1     Pending       0          1h
+    ````
+
+    >Note: You may see the `kube-proxy` and `csi-oci-node` pods pending or terminating.  This is expected.
+
 ## Task 2: Deploy the eCommerce App with Helm
 
 Remembering that helm provides a way of packaging and deploying configurable charts, next we will deploy the application in "mock mode" where cloud services are mocked, yet the application is fully functional
@@ -83,7 +109,7 @@ Remembering that helm provides a way of packaging and deploying configurable cha
 
     ````shell
     <copy>
-    helm install mushop ./deploy/complete/helm-chart/mushop -f ./deploy/complete/helm-chart/mushop/values-virtual-nodes.yaml
+    helm upgrade --install mushop ./deploy/complete/helm-chart/mushop -f ./deploy/complete/helm-chart/mushop/values-virtual-nodes.yaml
     </copy>
     ````
 
@@ -95,7 +121,28 @@ Remembering that helm provides a way of packaging and deploying configurable cha
     </copy>
     ````
 
-    *Note:* To leave the _watch_ press `CTRL-C` anytime. If do not want to keep watching and just see the current list of PODS, just use `kubectl get pods`
+    >Note: To leave the _watch_ press `CTRL-C` anytime. If do not want to keep watching and just see the current list of PODS, just use `kubectl get pods`
+
+1. Make sure all the pods are in the `Running` state.
+
+    ````shell
+    <copy>
+    kubectl get pods
+    </copy>
+    ````
+
+    Sample response:
+
+    ````shell
+    NAME                                  READY   STATUS      RESTARTS   AGE
+    mushop-api-6cbb9957fc-smmqf           1/1     Running     0          3m3s
+    mushop-assets-687c574c68-r2wf6        1/1     Running     0          3m3s
+    mushop-assets-deploy-1-kbnj5          0/1     Completed   0          3m3s
+    mushop-edge-645bc886c7-8m52n          1/1     Running     0          3m3s
+    mushop-fulfillment-76f98cddbb-vnp6h   1/1     Running     0          3m2s
+    mushop-session-67bc86d446-jnq8w       1/1     Running     0          3m3s
+    mushop-storefront-5747bd4644-tdn4v    1/1     Running     0          3m3s
+    ````
 
 1. Find the EXTERNAL-IP assigned to the edge microservice.  Open the IP address in your browser.
 
@@ -103,6 +150,13 @@ Remembering that helm provides a way of packaging and deploying configurable cha
     <copy>
     kubectl get svc edge
     </copy>
+    ````
+
+    Sample response:
+
+    ````shell
+    NAME   TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)        AGE
+    edge   LoadBalancer   10.96.74.116   143.47.123.86   80:32756/TCP   3m31s
     ````
 
 1. Open to the MuShop Storefront by using your browser connecting to http://< EXTERNAL-IP >
