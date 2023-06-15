@@ -137,21 +137,35 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
 
   ![Cloud Shell Access](images/sample1.png)
 
-## Task 4: Check OKE Cluster and Virtual Node pool completion
+## Task 4: Check OKE Cluster and Virtual Node pool provisioning completion
 
-1. From the OCI Services menu, click **Developer Services** > **Kubernetes Clusters (OKE)**.
+1. (If already on the Cluster Information Screen, jump to the step 3) From the OCI Services menu ![Console Menu](images/oci_hamburger_menu.png), click **Developer Services** > **Kubernetes Clusters (OKE)**.
 
-  ![Click Kubernetes Clusters (OKE)](images/sample1.png)
+    ![Click Kubernetes Clusters (OKE)](images/oci_oke_menu.png)
 
-  > **Note:** This is the same step as the previous task, you may already be on that page.
+    > **Note:** This is the same step as the previous task, you may already be on that page.
 
-1. Check the status of the just created OKE Cluster.
+1. Click on the OKE Cluster.
 
-  ![Click Kubernetes Clusters (OKE)](images/sample1.png)
+    ![Click Kubernetes Clusters (OKE)](images/oke_list_clusters.png)
 
-1. Click the just created OKE Cluster.
+    > **Note:** If the cluster is showing _Active_, means that the controlplane have been provisioned, but the worker nodes may still being provisioned. You can check on the next step if the worker nodes are ready as well.
 
-  ![Click Kubernetes Clusters (OKE)](images/sample1.png)
+1. On the **Cluster details**, check the **Cluster Status**. If is not _Active_, wait until it is to proceed to the next step.
+
+    ![Click Access Cluster](images/oke_cluster_details.png)
+
+1. With **Cluster Status** showing _Active_, Click on the Node pools and check if the **Node pool status** is showing _Active_. If is not _Active_, wait until it is to proceed to the next step.
+
+    ![Click Access Cluster](images/oke_node_pool_active.png)
+
+1. To verify that the Virtual nodes are on the **Node state** _Active_, click on the Virtual Node pool details, or click on the total number of nodes to go directly to the nodes, as shown on the image bellow.
+
+    ![Click Access Cluster](images/oke_node_pool_pool1.png)
+
+1. If all the Virtual Nodes are showing **Node state** _Active_, you are ready to proceed to the next Lab.
+
+    ![Click Access Cluster](images/oke_virtual_nodes_state.png)
 
 ## Learn More
 
@@ -162,4 +176,4 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
 
 * **Author** - Adao Oliveira Junior, Solutions Architect
 * **Contributors** -  Adao Oliveira Junior, Solutions Architect
-* **Last Updated By/Date** - Adao Oliveira Junior, May 2023
+* **Last Updated By/Date** - Adao Oliveira Junior, Jun 2023

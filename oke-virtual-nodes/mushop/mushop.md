@@ -2,101 +2,242 @@
 
 ## Introduction
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
+There are four options for deploying MuShop. They range from manual (docker), automated (Helm) to fully automated (Terraform).
 
-Estimated Time: 20 minutes
+![MuShop Deployment](images/mushop-deploy-options-helm.png)
 
-### About <Product/Technology> (Optional)
-Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than two sections/paragraphs, please utilize the "Learn More" section.
+Designing in microservices offers excellent separation concerns and provides developer independence.  While these benefits are clear, they can often introduce some complexity for the development environment.  Services support configurations that offer flexibility, when necessary, and establish parity as much as possible.  It is essential to use the same tools for development to production.
+
+![MuShop Deployment](images/mushop-diagram.png)
+*Note: This diagram contains services not covered by these labs.*
+
+Estimated Lab Time: 10 minutes
 
 ### Objectives
 
-*List objectives for this lab using the format below*
-
 In this lab, you will:
-* Objective 1
-* Objective 2
-* Objective 3
+
+* Download Source Code
+* Deploy MuShop to the OKE Virtual Nodes Cluster
+* Expose your app publicly
 
 ### Prerequisites (Optional)
 
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. Do NOT list each previous lab as a prerequisite.*
+* Completed the [Provisioning](../provision/provision.md) lab
+* Completed the [Setup](../setup/setup.md) lab
 
-This lab assumes you have:
-* An Oracle Cloud account
-* All previous labs successfully completed
+## Task 1: Obtain MuShop source code
 
+1. Open up Cloud Shell and clone the github repo.
 
-*Below, is the "fold"--where items are collapsed by default.*
+    ````shell
+    <copy>
+    git clone https://github.com/oracle-quickstart/oci-cloudnative.git mushop
+    </copy>
+    ````
 
-## Task 1: Concise Task Description
+    Sample response:
 
-(optional) Task 1 opening paragraph.
+    ````shell
+    Cloning into 'mushop'...
+    remote: Enumerating objects: 542, done.
+    remote: Counting objects: 100% (542/542), done.
+    remote: Compressing objects: 100% (313/313), done.
+    remote: Total 15949 (delta 288), reused 424 (delta 200), pack-reused 15407
+    Receiving objects: 100% (15949/15949), 17.59 MiB | 33.71 MiB/s, done.
+    Resolving deltas: 100% (9557/9557), done.
+    ````
 
-1. Step 1
+1. Change to the mushop directory
 
-	![Image alt text](images/sample1.png)
+    ````shell
+    <copy>
+    cd mushop
+    </copy>
+    ````
 
-  To create a link to local file you want the reader to download, use the following formats. _The filename must be in lowercase letters and CANNOT include any spaces._
+    ![MuShop Tree](images/mushop-code.png)
 
-	Download the [starter file](files/starter-file.sql) SQL code.
+    *./deploy:* Collection of application deployment resources
+    *./src:* MuShop individual service code, Dockerfile, etc
 
-	When the file type is recognized by the browser, it will attempt to render it. So you can use the following format to force the download dialog box.
+1. Check **kubectl** context
 
-	Download the [sample JSON code](files/sample.json?download=1).
+    ````shell
+    <copy>
+    kubectl config current-context
+    </copy>
+    ````
 
-  > Note: do not include zip files, CSV, PDF, PSD, JAR, WAR, EAR, bin, or exe files - you must have those objects stored somewhere else. We highly recommend using Oracle Cloud Object Store and creating a PAR URL instead. See [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/en-us/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
+    Sample response:
 
-2. Step 2
+    ````shell
+    cluster-c4daylfgvrg
+    ````
 
-  ![Image alt text](images/sample1.png)
+1. Create a namespace for MuShop App (microservices will reside on this namespace)
 
-4. Example with inline navigation icon ![Image alt text](images/sample2.png) click **Navigation**.
+    ````shell
+    <copy>
+    kubectl create namespace mushop
+    </copy>
+    ````
 
-5. Example with bold **text**.
+    Sample response:
 
-   If you add another paragraph, add 3 spaces before the line.
+    ````shell
+    namespace/mushop created
+    ````
 
-## Task 2: Concise Task Description
+1. Set the default **kubectl** namespace to skip adding **--namespace _mushop_** to every command.  You can replace *mushop* with *your name*.
 
-1. Step 1 - tables sample
+    ````shell
+    <copy>
+    kubectl config set-context --current --namespace=mushop
+    </copy>
+    ````
 
-  Use tables sparingly:
+## Task 2: Deploy the eCommerce App with Helm
 
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
+Remembering that helm provides a way of packaging and deploying configurable charts, next we will deploy the application in "mock mode" where cloud services are mocked, yet the application is fully functional
 
-2. You can also include bulleted lists - make sure to indent 4 spaces:
+1. Deploy the application in "mock mode" where cloud services are mocked, yet the application is fully functional
 
-    - List item 1
-    - List item 2
+    ````shell
+    <copy>
+    helm install mushop deploy/complete/helm-chart/mushop --set global.mock.service="all"
+    </copy>
+    ````
 
-3. Code examples
+1. Please be patient. It may take a few moments to download all the application images.
 
-    ```
-    Adding code examples
-  	Indentation is important for the code example to appear inside the step
-    Multiple lines of code
-  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
-    ```
+    ````shell
+    <copy>
+    kubectl get pods --watch
+    </copy>
+    ````
 
-4. Code examples that include variables
+    *Note:* To leave the _watch_ press `CTRL-C` anytime. If do not want to keep watching and just see the current list of PODS, just use `kubectl get pods`
 
-	```
-  <copy>ssh -i <ssh-key-file></copy>
-  ```
+1. After inspecting the resources created with helm install, launch the application in your browser using the **EXTERNAL-IP** from the nginx ingress.
+
+1. Find the EXTERNAL-IP assigned to the ingress controller.  Open the IP address in your browser.
+
+    ````shell
+    <copy>
+    kubectl get svc mushop-utils-ingress-nginx-controller --namespace mushop-utilities
+    </copy>
+    ````
+
+1. Open to the MuShop Storefront by using your browser connecting to http://< EXTERNAL-IP >
+
+    ![MuShop Storefront](images/mushop-storefront.png)
+
+## Task 3: Explore the deployed app
+
+When you create a Deployment, you'll need to specify the container image for your application and the number of replicas that you want to run.
+
+Kubernetes created a Pod to host your application instance. A Pod is a Kubernetes abstraction that represents a group of one or more application containers (such as Docker), and some shared resources for those containers. Those resources include:
+
+* Shared storage, as Volumes
+* Networking, as a unique cluster IP address
+* Information about how to run each container, such as the container image version or specific ports to use
+
+The most common operations can be done with the following kubectl commands:
+
+* **kubectl get** - list resources
+* **kubectl describe** - show detailed information about a resource
+* **kubectl logs** - print the logs from a container in a pod
+* **kubectl exec** - execute a command on a container in a pod
+
+You can use these commands to see when applications were deployed, what their current statuses are, where they are running and what their configurations are.
+
+1. Check the microservices deployments for MuShop
+
+    ````shell
+    <copy>
+    kubectl get deployments
+    </copy>
+    ````
+
+    *Note:* You should use `kubectl get deployments --namespace mushop` if you didn't set _mushop_ as default namespace
+
+1. Check the pods deployed
+
+    ````shell
+    <copy>
+    kubectl get pods
+    </copy>
+    ````
+
+1. Get the last created pod to inspect
+
+    ````shell
+    <copy>
+    export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}'|awk '{print $1}'|tail -n 1) && \
+    echo Using Pod: $POD_NAME
+    </copy>
+    ````
+
+1. View what containers are inside that Pod and what images are used to build those containers
+
+    ````shell
+    <copy>
+    kubectl describe pod $POD_NAME
+    </copy>
+    ````
+
+1. Anything that the application would normally send to `STDOUT` becomes logs for the container within the Pod. We can retrieve these logs using the `kubectl logs` command:
+
+    ````shell
+    <copy>
+    kubectl logs $POD_NAME
+    </copy>
+    ````
+
+1. Execute commands directly on the container once the Pod is up and running.
+
+    ````shell
+    <copy>
+    kubectl exec $POD_NAME env
+    </copy>
+    ````
+
+1. List the content of the Pod’s container work folder:
+
+    ````shell
+    <copy>
+    kubectl exec -ti $POD_NAME ls
+    </copy>
+    ````
+
+    *Note:* You can also start a `bash` session on the Pod's container, just change the `ls` to `bash`. Remember that you need to type `exit` to exit the bash session.
+
+## Task 4: Under the Hood
+
+1. To get a better look at all the installed Kubernetes manifests by using the template command.
+
+    ````shell
+    <copy>
+    mkdir ./out
+    <copy>
+    ````
+
+    ````shell
+    <copy>
+    helm template mushop deploy/complete/helm-chart/mushop --set global.mock.service="all" --output-dir ./out
+    <copy>
+    ````
+
+1. Explore the files, and see each output.
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [MuShop Github Repo](https://github.com/oracle-quickstart/oci-cloudnative)
+* [MuShop Deployment documentation](https://oracle-quickstart.github.io/oci-cloudnative/cloud/)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+
+* **Author** - Adao Oliveira Junior, Solutions Architect
+* **Contributors** -  Adao Oliveira Junior, Solutions Architect
+* **Last Updated By/Date** - Adao Oliveira Junior, Jun 2023
