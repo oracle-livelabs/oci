@@ -25,10 +25,8 @@ Estimated Time: 10 minutes
     Sample response:
 
     ````shell
-    NAME                    NAMESPACE               REVISION        UPDATED                                 STATUS          CHART                           APP VERSION
-    mushop                  mushop                  1               2020-01-31 21:14:48.511917 -0600 CST    deployed        mushop-0.1.0                    1.0
-    oci-broker              mushop-utilities        1               2020-01-31 20:46:30.565257 -0600 CST    deployed        oci-service-broker-1.3.3
-    mushop-utils            mushop-utilities        1               2020-01-31 20:32:05.864769 -0600 CST    deployed        mushop-setup-0.0.1              1.0
+    NAME    NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
+    mushop  default         1               2023-06-15 17:20:52.207651881 +0000 UTC deployed        mushop-0.2.1    2.0 
     ````
 
 ## Task 2: Clean Up MuShop App
@@ -45,11 +43,11 @@ Estimated Time: 10 minutes
 
 1. Delete the OKE Cluster
 
-![Delete Kubernetes Clusters](images/OKE-delete-cluster.png " ")
+![Delete Kubernetes Clusters](images/oke-delete-cluster.png " ")
 
 1. Confirm
 
-![Confirm delete Kubernetes Clusters](images/OKE-delete-cluster-confirm.png " ")
+![Confirm delete Kubernetes Clusters](images/oke-delete-cluster-confirm.png " ")
 
 This action will delete the Kubernetes Cluster and the Node Pool, terminating the worker nodes Compute Instances
 

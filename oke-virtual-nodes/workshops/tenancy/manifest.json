@@ -26,11 +26,7 @@
             "filename": "../../mushop/mushop.md"
         },
         {
-            "title": "Lab 4: Configure the cluster to use Virtual Nodes to autoscale the application",
-            "filename": "../../extras/extras.md"
-        },
-        {
-            "title": "Lab 5: (Optional) Cleanup the environment",
+            "title": "Lab 4: (Optional) Cleanup the environment",
             "filename": "../../cleanup/cleanup.md"
         },
         {
