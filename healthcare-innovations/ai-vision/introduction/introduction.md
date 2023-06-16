@@ -6,20 +6,53 @@ Machine Learning and Artificial Intelligence tools are unprecedentedly changing 
 
 In this workshop, we will show how Artificial Intelligence (AI) and Machine Learning (ML) are helping identify breast cancer using Oracle APEX, Oracle AI Vision Service, and Oracle Autonomous Database.  
 
-We’ll share how we trained our AI Machine learning models with X-Ray mammography images to identify breast cancers and even incorporated many other features, such as helping doctors or patients dictate medical symptoms and diagnoses quickly by sending an email of the audio message and the medical transcription text.  
+We’ll share how we trained our AI Machine learning models with X-Ray mammography images to identify breast cancers and even incorporated many other features, such as helping doctors or patients dictate medical symptoms and diagnoses quickly by sending an email of the audio message and the medical transcription text. 
+
+[Youtube video on AI for Healthcare Demo](youtube:VjeoHU4I6SI:large)
+
+![Archiecture](images/architecture.png " ")
  
 Estimated Workshop Time: 4 hours
 
-### Objectives
+**AI for Healthcare - Table of Contents**
 
-In this workshop, you will learn how to:
+*Introduction to Lab 3*
 
-* Provision Oracle Autonomous Database
-* Upload X-Ray Image to OCI Object storage and detect Breast Cancer.
-* Label Images using OCI Data Labeling Service
-* Create and Train AI Vision Model.
-* Develop Oracle Apex Application Front end for image analysis
- 
+These are common labs required for most of the other labs under this workshop.
+
+* Introduction
+* Get Started
+* Lab 1: Setup OCI Policies
+* Lab 2: Provision of an Autonomous Database
+* Lab 3: Setup OCI CLI
+
+*Lab 4 to Lab 8*
+
+These Labs help us Detect Breast Cancer using Oracle **OCI Vision** AI Service.
+
+* Lab 4: Detect Cancer with AI Vision
+* Lab 5: Create an Image Library
+* Lab 6: Label Images
+* Lab 7: Train the model
+* Lab 8: Oracle APEX Application for Breast Cancer Detection
+
+*Lab 9 to Lab 11*
+
+These Labs help us create medical expenses using Oracle **OCI Document Understanding** AI Service.
+
+* Lab 9:Introduction - Document Understanding
+* Lab 10: Document Understanding Features
+* Lab 11: Oracle APEX Application for Medical Receipt Processing
+
+*Lab 12 to Lab 15*
+
+These Labs help us with medical transcription and consulting virtual AI doctors using Oracle **OCI Speech** AI Service and **OpenAI** integration.
+
+* Lab 12: Introduction - Speech AI
+* Lab 13: Create Speech Transcription Job
+* Lab 14: Oracle APEX Application for Speech Transcription
+* Lab 15: Oracle Speech and OpenAI Integration
+
 #### About Breast Cancer
 
 Breast cancer is the most diagnosed cancer among women worldwide [Breast cancer represents 1 in 4 cancers diagnosed among women globally](https://www.uicc.org/news/globocan-2020-new-global-cancer-data). Colorectal, lung, cervical, and thyroid cancers are also common among women. It is the most frequent cancer amongst both sexes and is the leading cause of death from cancer in women. The estimated 2.3 million new cases indicate that one in every eight cancers diagnosed in 2020 was breast cancer. In 2020, there were an estimated 684,996 deaths from breast cancer, with a disproportionate number of these deaths occurring in low-resource settings.

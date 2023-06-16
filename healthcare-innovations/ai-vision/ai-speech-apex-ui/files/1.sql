@@ -1,0 +1,21 @@
+create or replace PACKAGE SPEECH_AI_PK AS 
+ 
+  GC_WC_CREDENTIAL_ID        CONSTANT VARCHAR2(50)   := 'Your-Apex-Credentials';  
+ 
+  --- Dynamic variables ---------
+  v_GC_OCI_OBJ_STORE_BASE_URL  MACHINE_LEARNING_CONFIGS.GC_OCI_OBJ_STORE_BASE_URL%TYPE;
+  v_GC_OCI_DOC_AI_URL          MACHINE_LEARNING_CONFIGS.GC_OCI_DOC_AI_URL%TYPE;
+  v_GC_OCI_DOC_AI_TIMEOUT_SECS  MACHINE_LEARNING_CONFIGS.GC_OCI_DOC_AI_TIMEOUT_SECS%TYPE;
+  v_GC_WC_CREDENTIAL_ID  MACHINE_LEARNING_CONFIGS.GC_WC_CREDENTIAL_ID%TYPE;
+  v_GC_OCI_REQ_AI_PAYLOAD MACHINE_LEARNING_CONFIGS.GC_OCI_REQ_AI_PAYLOAD%TYPE;
+  --PROCEDURE initialize;
+   
+PROCEDURE process_file 
+  (p_apex_file_name  IN VARCHAR2, 
+   v_id IN MACHINE_LEARNING_CONFIGS.ID%TYPE,
+   x_document_id    OUT document_ai_docs.document_id%TYPE); 
+ 
+PROCEDURE render_document 
+  (x_document_id  IN document_ai_docs.document_id%TYPE); 
+   
+END SPEECH_AI_PK;
