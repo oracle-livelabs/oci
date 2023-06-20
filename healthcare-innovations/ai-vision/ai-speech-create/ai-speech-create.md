@@ -1,4 +1,4 @@
-# Lab 13: Create Speech Transcription Job
+# Lab 12: Create an Image Library to Detect Breast Cancer
 
 ## Introduction
 
@@ -17,7 +17,7 @@ In this lab, you will:
 * Generate Audio File
 * Upload Audio file to OCI Bucket 
 * Create Speech Transcription Job
-* View Transcription Output files
+* Review Transcription Job Output in JSON and .SRT files
 
 ### Prerequisites
 
@@ -69,7 +69,7 @@ The speech transcription job will change from creating status to active status w
 
 ![Speech Transcription Job](images/speech-transcription-022.png " ")
 
-## Task 4: View Output files
+## Task 4: Review Transcription Job Output in JSON and .SRT files
 
 Click on the Active Speech Job for more details.
 

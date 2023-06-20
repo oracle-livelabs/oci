@@ -10,48 +10,163 @@ We’ll share how we trained our AI Machine learning models with X-Ray mammograp
 
 [Youtube video on AI for Healthcare Demo](youtube:VjeoHU4I6SI:large)
 
+**AI for Healthcare**: Learn about the latest innovations that are happening in Healthcare, such as using **OCI Vision** for Breast Cancer Detection, Lung Cancer Detection or finding out about Covid or Pneumonia early stage, using the power of **OCI Document Understanding** to submit medical expenses, or using **OCI Speech** to ask a doctor about specific medical symptoms and get a response back from a Virtual Doctor leveraging the power of **OpenAI**. Chat with virtual doctor through **Oracle Digital Assistant** asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyse complex clinical data or genome sequences with **Oracle Analytics Cloud** or locate nearest Hospital with **Oracle Spatial** and contact them.
+
+Running on top of the world's most powerful database, **Oracle Autonomous Database** and Low Code development platform **Oracle APEX**
+
 ![Archiecture](images/architecture.png " ")
  
-Estimated Workshop Time: 4 hours
+Estimated Workshop Time: 16 hours (Approximately)
+
+<hr/><hr/> 
 
 **AI for Healthcare - Table of Contents**
 
-*Introduction to Lab 3*
+*Workshop 1: Common Labs - Introduction Lab to Lab 3*
 
-These are common labs required for most of the other labs under this workshop.
+These are common labs are required for most of the other labs under this workshop.
 
 * Introduction
+    * About the workshop
+    * Table of Contents
+    * About Breast Cancer
 * Get Started
-* Lab 1: Setup OCI Policies
-* Lab 2: Provision of an Autonomous Database
-* Lab 3: Setup OCI CLI
+    * Sign-in to Oracle [cloud web console](cloud.oracl.com)
+* Lab 1: Setup [**OCI Policies**](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Identity/access/manage-accessresources.htm)
+    * Create OCI Bucket
+    * Create a new compartment
+    * Setup policies for Compartment management
+    * Setup policies for OCI Data Labeling
+    * Setup policies for OCI Vision service
+    * Setup policies for OCI Document Understanding Service
+    * Setup policies for OCI Speech
+* Lab 2: Provision of an [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/)
+    * Create or select a compartment
+    * Choose Autonomous Database from the OCI services menu
+    * Create the Autonomous Database instance
+* Lab 3: Setup OCI [**Command Line Interface (CLI)**](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
+    * Get User's OCID
+    * Add User's API Key
+    * Generate and Download RSA Key Pair in PEM format
+    * Install OCI Command Line Interface
+    * Update OCI Configuration file
+    * List all Buckets in a Compartment using OCI CLI
 
-*Lab 4 to Lab 8*
+<hr/><hr/>
+*Workshop 2: Detect Breast Cancer - Lab 4 to Lab 8*
 
-These Labs help us Detect Breast Cancer using Oracle **OCI Vision** AI Service.
+In this Workshop (*Collection of Labs*) These Labs guide us in detecting Breast Cancer using Oracle [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) AI Service.
 
-* Lab 4: Detect Cancer with AI Vision
-* Lab 5: Create an Image Library
+* Lab 4: Understanding Mammography and Breast Cancer (<u>Optional Lab</u>)
+    * What is a Mammogram?
+    * How does Breast Cancer look like on a Mammogram?
+    * Other Breast abnormalities
+    * Normal Breast Mammogram 
+    * Breast Cancer Mammogram
+* Lab 5: Create Image Library to Detect Breast Cancer
+    * Data Preparation by Classifying Images. 
+    * Load images to Object Storage using OCI CLI
+    * Verify images are correctly loaded
 * Lab 6: Label Images
-* Lab 7: Train the model
-* Lab 8: Oracle APEX Application for Breast Cancer Detection
+    * Generate dataset records using [**OCI Data Labeling**](https://www.oracle.com/in/artificial-intelligence/data-labeling/) for Breast Cancer
+    * Bulk image labeling
+    * Verify Bulk Data labelled images
+* Lab 7: Train the model using Image Classification AI model
+    * Create OCI Vision Project
+    * Create and Train Vision Model
+    * Analyze and evaluate your Model
+    * Review Request and Response JSON
+* Lab 8: [**Oracle APEX**](https://apex.oracle.com/en/) Application for Breast Cancer Detection
+    * Setup Oracle APEX Web Credentials
+    * Create required schema - 
+        * Tables: MACHINE LEARNING CONFIGS, VISION AI DOCS, VISION AI FIELDS
+        * PL/SQL Procedure IMAGE\_AI\_PK, Triggers etc.
+    * Create Oracle APEX Page
+    * Verify Oracle APEX File upload settings
+    * Display results
 
-*Lab 9 to Lab 11*
+<hr/><hr/>
+*Workshop 3: Create Medical Expenses - Lab 9 to Lab 10*
 
-These Labs help us create medical expenses using Oracle **OCI Document Understanding** AI Service.
+These Labs guide us in creating medical expenses using Oracle [**OCI Document Understanding**](https://docs.oracle.com/en-us/iaas/document-understanding/document-understanding/using/home.htm) AI Service.
 
-* Lab 9:Introduction - Document Understanding
-* Lab 10: Document Understanding Features
-* Lab 11: Oracle APEX Application for Medical Receipt Processing
+* Lab 9: Introduction to Pretrained Oracle Document AI Models
+    * Text Extraction
+    * Table Extraction
+    * Key Value Extraction
+    * Document classification
+    * Analyze the request and response JSON files
+* Lab 10: Oracle APEX Application for Medical Receipt Processing
+    * Setup Oracle APEX Web Credentials
+    * Create required schema - 
+        * Tables: MACHINE LEARNING CONFIGS, DOCUMENT AI DOCS, DOCUMENT AI FIELDS
+        * PL/SQL Procedure DOCUMENT\_AI\_PK, Triggers etc.
+    * Create Oracle APEX Page
+    * Verify Oracle APEX File upload settings
+    * Create Custom Reports and Verify Results of uploaded receipt file.
+    * Create Expense Item from uploaded receipt
 
-*Lab 12 to Lab 15*
+<hr/><hr/>
+*Workshop 4: Create Medical Transcriptions - Lab 11 to Lab 13*
 
-These Labs help us with medical transcription and consulting virtual AI doctors using Oracle **OCI Speech** AI Service and **OpenAI** integration.
+These Labs help us with medical transcription and consulting virtual AI doctors using Oracle [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/) AI Service.
 
-* Lab 12: Introduction - Speech AI
-* Lab 13: Create Speech Transcription Job
-* Lab 14: Oracle APEX Application for Speech Transcription
-* Lab 15: Oracle Speech and OpenAI Integration
+* Lab 11: Introduction - Speech AI
+    * AI Speech to Text or OCI Speech.
+    * Analyze data from audio and video files.
+* Lab 12: Create Speech Transcription Job
+    * Generate Audio File
+    * Upload Audio file to OCI Bucket
+    * Create Speech Transcription Job
+    * Review Transcription Job Output in JSON and .SRT files 
+* Lab 13: Oracle APEX Application for Speech Transcription
+    * Setup Oracle APEX Web Credentials
+    * Create required schema - 
+        * Tables: MACHINE LEARNING CONFIGS, SPEECH AI DOCS, SPEECH AI FIELDS
+        * PL/SQL Procedure SPEECH\_AI\_PK, Triggers etc.
+    * Create Oracle APEX Page
+    * Verify Oracle APEX File upload settings
+    * Upload the audio file from the local file system to the OCI object storage bucket using OCI Object storage rest APIs.
+    * Create Speech Transcription Job
+    * Review Audio file and Transcribed text content of Audio file
+
+<hr/><hr/>
+*Workshop 5: Create Medical Transcriptions - Lab 14*
+
+Integrating [**Oracle APEX**](https://apex.oracle.com/en/) Application with [**OpenAI**](https://openai.com/) REST APIs
+
+* Lab 14: Oracle Speech and OpenAI Integration
+    * Create OpenAI Key
+    * Understand OpenAI Authentication  
+    * Integrating Oracle Speech AI Output with OpenAI
+    * OpenAI Integration with Oracle APEX without using OCI Speech AI
+
+<hr/><hr/>
+*Workshop 6: Create Chatbot for Frequently asked Medical Questions - Lab 15 - Lab 16*
+
+This workshop would enable users to interact with a [**Oracle Digital Assistant**](https://www.oracle.com/in/chatbots/) Chatbot with frequently asked questions related to cancer or COVID or Pneumonia or any other health issues, Get medical advise on time.
+
+* Lab 15: Setup Oracle Digital Assistant
+    * Oracle Digital Assistant for [**natural language processing(NLP)**](https://en.wikipedia.org/wiki/Natural_language_processing), [**natural language understanding**](https://en.wikipedia.org/wiki/Natural-language_understanding) (NLU) 
+    * Provision Oracle Digital Assistant from OCI services
+    * Create Oracle Digital Assistant Skill 
+    * Adding Knowledge document for Frequently asked questions (FAQs)
+    * Train the ODA Model
+    * Preview the Model and Skill
+    * Add Auto Complete Suggestion and Utterances.
+    * Create Web Channel for a Skill
+* Lab 16: Oracle APEX Integration with ODA
+    * Download ODA Oracle Native Client SDK
+    * Get channel id from ODA console
+    * Configure settings.js file
+    * Upload CSS, Image and JS files to Oracle APEX 
+    * HTML Code to add ODA chatbot on APEX page
+    * Bot Initiated Conversation
+    * Update YAML flow in ODA
+    * Demo of Chatbot in Oracle APEX Page
+
+<hr/><hr/>
+
 
 #### About Breast Cancer
 

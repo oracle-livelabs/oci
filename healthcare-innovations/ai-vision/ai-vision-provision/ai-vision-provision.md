@@ -17,13 +17,7 @@ In this lab, you will:
 - This lab requires completion of the Get Started section in the Contents menu on the left.
 
 ## Task 1: Create or select a compartment
-
-<!--
-    {
-        "name":"Create an OCI Compartment",
-        "description":"Create a new compartment using the OCI service console"
-    }
--->
+ 
 A compartment is a collection of cloud assets, like compute instances, load balancers, databases, and so on. By default, a root compartment was created for you when you created your tenancy (for example, when you registered for the trial account). It is possible to create everything in the root compartment, but Oracle recommends that you create sub-compartments to help manage your resources more efficiently.
 
 If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges to create a compartment and should skip this first task. Oracle LiveLabs has already created a compartment for you and you should use that one. Even though you can't create a compartment, you can review the steps below to see how it is done.
@@ -44,13 +38,7 @@ If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges 
     The compartment is created and you can use it for your cloud services!
 
 ## Task 2: Choose Autonomous Database from the OCI services menu
-
-<!--
-    {
-        "name":"Go to Autonomous Database Service",
-        "description":"Navigate to ADB using the OCI menu. AUTHORS: For expediency, this task uses the ADMIN user/password to open Database Actions. In your workshop, you might want to substitute a different user/password to open Database Actions."
-    }
--->
+ 
 1. Once logged into Oracle Cloud, click the navigation menu in the upper left to show top level navigation choices:
 
     ![Click OCI navigation menu.](images/oci-navigation-invoke.png " ")
@@ -80,13 +68,7 @@ If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges 
 </if>
 
 ## Task 3: Create the Autonomous Database instance
-
-<!--
-    {
-        "name":"Provision Autonomous Database",
-        "description":"Provision an ADB. Use the `variables.json` file to update provisioning parameters, including database name, OCPUs, storage and more."
-    }
--->
+ 
 1. Click **Create Autonomous Database** to start the instance creation process.
 
     ![Click Create Autonomous Database.](images/adb-click-create-adb.png "Create ADB")

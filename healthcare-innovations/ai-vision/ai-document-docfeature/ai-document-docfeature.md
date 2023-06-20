@@ -1,9 +1,11 @@
-# Lab 10: Document Understanding Features
+# Lab 9: Introduction to Pretrained Oracle Document AI Models
 
 ## Introduction
 
-This lab walks you through various features of document understanding AI service.
+In this workshop, we will leverage Oracle Document Understanding to scan through a medical bill receipt and create an expense item. The expense approver can view the submitted expenses and approve or reject them.
 
+Oracle Cloud Infrastructure Document Understanding is an AI service that enables developers to extract text, tables, and other key data from document files through APIs and command-line interface tools. With Document Understanding, you can automate tedious business processing tasks with prebuilt AI models and customize document extraction to fit your industry-specific needs.
+ 
 Estimated Time: 20 minutes.
  
 ### About Pretrained Document AI Models
@@ -20,7 +22,7 @@ In this lab, you will use Document Understanding AI services for the following:
 * Table Extraction
 * Key Value Extraction
 * Document classification
-* Examine the request and response JSON files
+* Analyze the request and response JSON files
 
 ### Prerequisites
 

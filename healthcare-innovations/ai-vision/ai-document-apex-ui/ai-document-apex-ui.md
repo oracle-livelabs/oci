@@ -1,4 +1,4 @@
-# Lab 11: Oracle APEX Application for Medical Receipt processing 
+# Lab 10: Oracle APEX Application for Medical Receipt processing 
 
 ## Introduction
 
@@ -20,9 +20,14 @@ Using APEX, developers can quickly develop and deploy compelling apps that solve
 
 In this lab, you will:
 
-* Setup the security settings to connect with OCI 
-* Create required database tables, triggers, sequences, indexes and PL/SQL procedure
-* Upload the file to OCI Bucket using the Apex file upload plugin
+* Setup Oracle APEX Web Credentials
+* Create required schema - 
+    * Tables: MACHINE LEARNING CONFIGS, DOCUMENT AI DOCS, DOCUMENT AI FIELDS
+    * PL/SQL Procedure DOCUMENT\_AI\_PK, Triggers etc.
+* Create Oracle APEX Page
+* Verify Oracle APEX File upload settings
+* Create Custom Reports and Verify Results of uploaded receipt file.
+* Create Expense Item from uploaded receipt
 
 ### Prerequisites
 

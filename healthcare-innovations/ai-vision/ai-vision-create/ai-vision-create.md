@@ -1,4 +1,4 @@
-# Lab 5: Create image library
+# Lab 5: Create Image Library to Detect Breast Cancer
 
 ## Introduction
 
@@ -16,9 +16,9 @@ OCI Object Storage service is an internet-scale, high-performance storage platfo
 
 In this lab, you will:
  
-* Create a new bucket within Object Storage
-* Download XRay images and classify these images into different folders 
-* Upload images to OCI Bucket using OCI CLI
+* Data Preparation by Classifying Images. 
+* Load images to Object Storage using OCI CLI
+* Verify images are correctly loaded
 
 ### Prerequisites
 
@@ -26,7 +26,7 @@ This lab assumes you have:
 
 * Completed **Setup environment** and **Setup OCI CLI** lab and already logged into OCI console
 
-## Task 1: Breast Cancer - Classify Images (Data Preparation)  
+## Task 1: Data Preparation by Classifying Images. 
 
 Download the Breast Cancer Detection Dataset from any of your favourite repositories.
 

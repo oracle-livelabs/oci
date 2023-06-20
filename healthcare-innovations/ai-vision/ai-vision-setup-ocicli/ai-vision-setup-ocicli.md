@@ -21,7 +21,7 @@ In this lab, you will:
 * Generate and Download RSA Key Pair in PEM format
 * Install OCI Command Line Interface
 * Update OCI Configuration file
-* List All Buckets in a Compartment
+* List all Buckets in a Compartment using OCI CLI
 
 ### Prerequisites
 
@@ -30,20 +30,20 @@ This lab assumes:
 * You have an Oracle Cloud account with OCI and IDCS administration privileges or
 * Your OCI and IDCS administrator can perform steps in this lab for you.
 
-## Task 1: Make note of User OCID
+## Task 1: Get User's OCID
 
 After logging into cloud console, click on User Settings under top right navigation, this will take to **User Details** page,
 Copy the OCID into a text file we will need this later.
 
 ![Navigate to Data Labeling](images/user-ocid.png " ") 
 
-## Task 2: Add API Key
+## Task 2: Add User's API Key
 
 Under the same page click on **Add API Key** button
 
 ![Navigate to Data Labeling](images/add-api-keys.png " ") 
 
-## Task 3: Generate and Download RSA Key Pair in PEM format used for API Signing
+## Task 3: Generate and Download RSA Key Pair in PEM format
 
 Choose an Option to Generate a new key pair, if you already have keys generated you can upload them here, most important is when you generate the key pair download both of them, Click **Add** button
 
@@ -59,7 +59,7 @@ We can now see our newly created fingerprint
 
 ![Navigate to Data Labeling](images/fingerprint.png " ") 
 
-## Task 4: Install OCI CLI
+## Task 4: Install OCI Command Line Interface (CLI)
 
 The CLI is a small-footprint tool that you can use on its own or with the Console to complete Oracle Cloud Infrastructure tasks. The CLI provides the same core functionality as the Console, plus additional commands. Some of these, such as the ability to run scripts, extend Console functionality.
 
@@ -101,7 +101,7 @@ Output will be similar to this version number might vary
 <copy>3.23.4</copy>
 ```
 
-## Task 5: Create or Edit OCI CLI configuration file
+## Task 5: Update OCI Configuration file
 
 ```text
 <copy>vi ~/.oci/config</copy>
@@ -130,7 +130,7 @@ key_file=/Users/-user-name-/.oci/oci_api_key.pem
 </copy>
 ```
 
-## Task 6: List all buckets in a compartment
+## Task 6: List all Buckets in a Compartment using OCI CLI
 
 Reality check if we can list all buckets in a compartment to check if all configurations are correct.
 

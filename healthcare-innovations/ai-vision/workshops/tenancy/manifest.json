@@ -50,36 +50,39 @@
     {
       "title": "Lab 8: Oracle APEX Application for Breast Cancer Detection",
       "filename": "../../ai-vision-apex-ui/ai-vision-apex-ui.md"
-    },
-    {
-      "title": "Lab 9:Introduction - Document Understanding",
-      "description": "The Introduction is always second for LiveLabs. The title and contents menu title match for the Introduction.",
-      "filename": "../../ai-document-introduction/ai-document-introduction.md"
     }, 
     {
-      "title": "Lab 10: Document Understanding Features",
+      "title": "Lab 9: Document Understanding Features",
       "filename": "../../ai-document-docfeature/ai-document-docfeature.md"
     }, 
     {
-      "title": "Lab 11: Oracle APEX Application for Medical Receipt processing",
+      "title": "Lab 10: Oracle APEX Application for Medical Receipt processing",
       "filename": "../../ai-document-apex-ui/ai-document-apex-ui.md"
     }, 
     {
-      "title": "Lab 12: Introduction - Speech AI",
+      "title": "Lab 11: Introduction - Speech AI",
       "description": "The Introduction is always second for LiveLabs. The title and contents menu title match for the Introduction.",
       "filename": "../../ai-speech-introduction/ai-speech-introduction.md"
     },
     {
-      "title": "Lab 13: Create Speech Transcription Job",
+      "title": "Lab 12: Create Speech Transcription Job",
       "filename": "../../ai-speech-create/ai-speech-create.md"
     }, 
     {
-      "title": "Lab 14: Oracle APEX Application for Speech Transcription",
+      "title": "Lab 13: Oracle APEX Application for Speech Transcription",
       "filename": "../../ai-speech-apex-ui/ai-speech-apex-ui.md"
     },
     {
-      "title": "Lab 15: Oracle Speech and OpenAI Integration",
+      "title": "Lab 14: Oracle Speech and OpenAI Integration",
       "filename": "../../ai-speech-open-ai/ai-speech-open-ai.md"
+    },
+    {
+      "title": "Lab 15: Setup Oracle Digital Assistant",
+      "filename": "../../ai-oda-create/ai-oda-create.md"
+    },
+    {
+      "title": "Lab 16: Oracle APEX Integration with ODA",
+      "filename": "../../ai-oda-apex-ui/ai-oda-apex-ui.md"
     },
     {
       "title": "Need Help?",

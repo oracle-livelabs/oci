@@ -1,4 +1,4 @@
-# Lab 6: Label images
+# Lab 6: Label Images
 
 ## Introduction
 
@@ -18,8 +18,9 @@ In case of images, we need to assign a label to an image, which describes and cl
 
 In this lab, you will:
 
-* Create a new dataset using images from object storage
-* Label images programmatically
+* Generate dataset records using Data Labeling for Breast Cancer
+* Bulk image labeling
+* Verify Bulk Data labelled images
 
 ### Prerequisites
 
@@ -27,7 +28,7 @@ This lab assumes you have:
 
 * Completed previous labs of this workshop: **Setup environment** and **Create image library**.
 
-## Task 1: Generate dataset records and label images using Data Labeling tool for Breast Cancer
+## Task 1: Generate dataset records using Data Labeling for Breast Cancer
 
 Basic data labeling tool is provided within OCI. With this data labeling tool, you can label one image at the time, which is useful if your image library is not too large. In case of larger libraries, manual image labeling can be very time consuming and error prone. That is why, you will use programmatic data labeling using utilities provided by Oracle. Required code and instructions will be provided in the second task.
 
@@ -72,11 +73,8 @@ But before you continue, you need to perform the first step, **Create Dataset** 
     Review the details provided and click **Create**
 
     ![Create a new dataset](images/create-bc-dataset-4.png " ")
-
-    
  
-
-## Task 3: Bulk image labeling
+## Task 2: Bulk image labeling
 
 We have 5000+ images to label. This is too much to label images manually, hence we will use a python program to label images programmatically.
 
@@ -177,9 +175,8 @@ For the purpose of this labe, we have used original python code and adjusted it 
     ```
 
     Program will run approx. 30 minutes.
- 
-
-## Task 4: Verify Bulk labeling
+  
+## Task 3: Verify Bulk Data labelled images
 
 1. Verify if all the files have been labelled by our python code.
 

@@ -1,4 +1,4 @@
-# Lab 7: Train image classification model
+# Lab 7: Train the model using Image Classification AI model
 
 ## Introduction
 
@@ -17,9 +17,9 @@ OCI Vision is a serverless, cloud native service that provides deep learning-bas
 In this lab, you will:
  
 * Create OCI Vision Project
-* Create OCI Vision Model
-* Train the Model with the Dataset previously created.
-* Test the Model
+* Create and Train Vision Model
+* Analyze and evaluate your Model
+* Review Request and Response JSON
 
 ### Prerequisites
 
@@ -27,7 +27,7 @@ This lab assumes you have:
 
 * Completed previous labs of this workshop: **Setup environment**, **Create image library** and **Label images**.
 
-## Task 1: Create your Vision Project
+## Task 1: Create OCI Vision Project
 
 In the previous lab, you have labeled all images (records) in your dataset, which is prerequisite to start working with **Vision** service. In this lab, you will create your first **vision**, image classification, model and you will run some tests to confirm it is working properly.
 
@@ -46,7 +46,7 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
     ![Create a new project in Vision](images/create-bc-project.png " ")
  
 
-## Task 2: Create and Train your Vision model
+## Task 2: Create and Train Vision Model
  
 1. Create a new AI Vision model
  
@@ -78,7 +78,7 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 
     When model training is completed - **State** is *Succeeded* and **% Complete** is *100%*.
   
-## Task 3: Analyze and evaluate your model
+## Task 3: Analyze and evaluate your Model
 
 1. Test you model using known images
  

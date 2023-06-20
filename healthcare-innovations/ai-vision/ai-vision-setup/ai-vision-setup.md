@@ -14,9 +14,13 @@ Estimated time: 30 minutes
 
 In this lab, you will:
 
-* Create a new compartment for objects used in workshop
-* Set policies for the new OCI group to manage a new compartment
-* Create new policies for Vision service 
+* Create OCI Bucket
+* Create a new compartment
+* Setup policies for Compartment management
+* Setup policies for OCI Data Labeling
+* Setup policies for OCI Vision service
+* Setup policies for OCI Document Understanding Service
+* Setup policies for OCI Speech
 
 ### Prerequisites
 
@@ -84,7 +88,7 @@ You will use one compartment for all required objects in this workshop, hence yo
     ![Define a new Compartment](images/details.png)
    
 
-## Task 4: Policies for Compartment management
+## Task 4: Setup policies for Compartment management
 
 Finally, you need to create a **policy** which grants manage privileges in a new compartment to the new OCI group.
 
@@ -122,7 +126,7 @@ Finally, you need to create a **policy** which grants manage privileges in a new
      <copy>Allow group AIDEMOGroup to manage all-resources in compartment aidemo</copy>
     ```
  
-## Task 5: Policies for OCI Data Labeling
+## Task 5: Setup policies for OCI Data Labeling
 
 One of the tasks in this workshop will be data labeling. This is a process in which all images from your training image library will be assigned a single label that describe that specific image.  To be able to perform your data labeling process, you must perform the following prerequisite steps to:
 
@@ -208,7 +212,7 @@ To find out which steps you need to perform, you can navigate to **Data Labeling
  
     You are now ready to start using Data Labeling service.
 
-## Task 6: Policies for OCI Vision service
+## Task 6: Setup policies for OCI Vision service
 
 Similarly to Data Labeling service, you will require some privileges to use OCI Vision service. 
 
@@ -231,7 +235,7 @@ Similarly to Data Labeling service, you will require some privileges to use OCI 
 
     Click **Create**.
 
-## Task 7: Policies for OCI Document Understanding Service
+## Task 7: Setup policies for OCI Document Understanding Service
 
 Before you start using OCI Document Understanding, OCI policies should be setup for allowing you to access OCI Document Understanding Service. Follow these steps to configure required policies.
 
@@ -281,7 +285,7 @@ Before you start using OCI Document Understanding, OCI policies should be setup 
     <copy>allow group <group_in_tenancy> to manage object-family in compartment <output_bucket_located_object_storage_compartment></copy>
     ```
 
-## Task 8: Policies for OCI Speech
+## Task 8: Setup policies for OCI Speech
 
 Before you start using OCI Speech, your tenancy administrator should set up the following policies by following below steps:
 

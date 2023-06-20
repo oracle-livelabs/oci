@@ -1,4 +1,4 @@
-# Lab 15: Oracle Speech and OpenAI Chat GPTs Integration
+# Lab 14: Oracle Speech and OpenAI Chat GPTs Integration
 
 ## Introduction
 
@@ -34,8 +34,8 @@ In this lab, you will:
 
 * Create OpenAI Key
 * Understand OpenAI Authentication  
-* Integrating Oracle Speech AI Output with OpenAI Input to get Response
-* Response for Oracle APEX input from OpenAI
+* Integrating Oracle Speech AI Output with OpenAI
+* OpenAI Integration with Oracle APEX without using OCI Speech AI
 
 
 ### Prerequisites
@@ -81,7 +81,7 @@ If you want to specifically enable OpenAI plugins to work with your API, you can
 Below is an example of what the OAuth configuration inside of the ai-plugin.json file might look like:
 
 ```json
-    <copy>
+<copy>
         "auth": {
                 "type": "oauth",
                 "client_url": "https://example.com/authorize",
@@ -92,10 +92,10 @@ Below is an example of what the OAuth configuration inside of the ai-plugin.json
                     "openai": "OpenAI's Key"
                 }
             }
-    </copy>
-    ```
+</copy>
+```
  
-## Task 3: Integrating Oracle Speech AI Output with OpenAI Input to get Response
+## Task 3: Integrating Oracle Speech AI Output with OpenAI
 
 Create PL/SQL Dynamic Web Content
 

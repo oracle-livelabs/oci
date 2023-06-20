@@ -1,4 +1,4 @@
-# Lab 14: Oracle APEX Application for Speech Transcription
+# Lab 13: Oracle APEX Application for Speech Transcription
 
 ## Introduction
 
@@ -10,11 +10,16 @@ Estimated Time: 30 minutes.
 
 In this lab, you will:
 
-* Upload the audio file from the local file system to the OCI object storage bucket using OCI Object storage rest APIs
-* Input this audio file into the OCI Speech AI Service  
-* This will trigger a speech conversion Job.
-* After completing the job, parse the response JSON to get text output and display it in the APEX application.
-
+* Setup Oracle APEX Web Credentials
+* Create required schema - 
+    * Tables: MACHINE LEARNING CONFIGS, SPEECH AI DOCS, SPEECH AI FIELDS
+    * PL/SQL Procedure SPEECH\_AI\_PK, Triggers etc.
+* Create Oracle APEX Page
+* Verify Oracle APEX File upload settings
+* Upload the audio file from the local file system to the OCI object storage bucket using OCI Object storage rest APIs.
+* Create Speech Transcription Job
+* Review Audio file and Transcribed text content of Audio file
+ 
 ### Prerequisites
 
 This lab assumes you have:
@@ -396,7 +401,7 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     -- Replace the uploaded filename in the JSON payload to be sent to Document AI. 
     l_request_json := REPLACE(v_GC_OCI_REQ_AI_PAYLOAD, '#FILE_NAME#', p_file_name);
     
-    -- Set Content-Type in the Request Header. This is required by the Document AI REST Service. 
+    -- Set Content-Type in the Request Header. 
     apex_web_service.g_request_headers.DELETE; 
     apex_web_service.g_request_headers(1).name  := 'Content-Type'; 
     apex_web_service.g_request_headers(1).value := 'application/json'; 

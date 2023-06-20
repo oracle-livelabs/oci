@@ -1,4 +1,4 @@
-# Lab 4: Detect Cancer with AI Vision (Optional)
+# Lab 4: Understanding Mammography and Breast Cancer (Optional)
 
 ## AI Vision
 
@@ -13,8 +13,6 @@ Automatically extract textual or visual information from images and use that to 
 **Digital asset management**
 
 Enrich image-based files with metadata, including objects and colors for better indexing and retrieval in a digital asset management system or larger data warehouse. Easily retrieve images for uses ranging from intelligent search to retail management.
-
-
  
 Estimated Workshop Time: 4 hours
 
@@ -22,11 +20,11 @@ Estimated Workshop Time: 4 hours
 
 In this workshop, you will learn how to:
 
-* Provision Oracle Autonomous Database
-* Upload X-Ray Image to OCI Object storage and detect Breast Cancer.
-* Label Images using OCI Data Labeling Service
-* Create and Train AI Vision Model.
-* Develop Oracle Apex Application Front end for image analysis
+* What is a Mammogram?
+* How does Breast Cancer look like on a Mammogram?
+* Other Breast abnormalities
+* Normal Breast Mammogram 
+* Breast Cancer Mammogram  
 
 ### Prerequisites (Optional)
  
@@ -35,11 +33,11 @@ This lab assumes you have:
 * An Oracle account
 * Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
   
-## What Is a Mammogram?
+## What is a Mammogram?
 
  A mammogram is an X-ray picture of the breast. Doctors use a mammogram to look for early signs of breast cancer. Regular mammograms are the best tests doctors have to find breast cancer early, sometimes up to three years before it can be felt. Patients should continue to get mammograms according to recommended time intervals. Mammograms work best when they can be compared with previous ones. This allows the radiologist to compare them to look for changes in your breasts.
 
-## What does Breast Cancer look like on a Mammogram?
+## How does Breast Cancer look like on a Mammogram?
 
 Any area that does not look like normal tissue is a possible cause for concern. The radiologist will look for areas of white, high-density tissue and note its size, shape, and edges. A lump or tumour is a focused white area on a mammogram. Tumours can be cancerous or benign.
 
@@ -58,7 +56,6 @@ Other abnormalities include:
 * Fibroadenomas are benign tumours in the breast. They are round and may feel like marble. People in their 20s and 30s are more likelyTrusted Source to have a fibroadenoma, but they can occur at any age.
 * Scar tissue, which often appears white on a mammogram. It is best to inform a doctor of any scarring on the breasts beforehand.
  
-
 ## Normal Breast Mammogram
 
 Sample image of Normal Breast.

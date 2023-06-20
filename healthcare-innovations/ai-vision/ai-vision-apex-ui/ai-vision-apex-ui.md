@@ -23,10 +23,13 @@ Using APEX, developers can quickly develop and deploy compelling apps that solve
 
 In this lab, you will:
 
-* Setup the security settings to connect with OCI 
-* Create required database tables, triggers, sequences, indexes and PL/SQL procedure
-* Upload the file to OCI Bucket using the APEX file upload plugin
-* Display the result in a chart and the file that has been uploaded
+* Setup Oracle APEX Web Credentials
+* Create required schema - 
+    * Tables: MACHINE LEARNING CONFIGS, VISION AI DOCS, VISION AI FIELDS
+    * PL/SQL Procedure IMAGE\_AI\_PK, Triggers etc.
+* Create Oracle APEX Page
+* Verify Oracle APEX File upload settings
+* Display results 
 
 ### Prerequisites
 
@@ -220,7 +223,7 @@ VISION\_AI\_FIELDS table is used to store the labels and corresponding scores. T
     </copy>
     ```
    
-## Task 5: Create PL/SQL Package
+## Task 5: Create PL/SQL Backend Procedure
 
 You can login to Oracle APEX Workspace and select SQL worksheet to run any of the SQL commands or Create Tables or Packages.
 
@@ -284,9 +287,8 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     ------------------------------------------------------------------------------- 
     -- NAME        : IMAGE_AI_PK 
     -- FILE NAME   : IMAGE_AI_PK.sql   
-    ------------------------------------------------------------------------------- 
-    
-    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------
+    ----------------------------------------------------------------------
     PROCEDURE initialize (v_id IN MACHINE_LEARNING_CONFIGS.ID%TYPE) AS
     -- -----------------------------------------------------------------
             BEGIN
@@ -303,8 +305,8 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
             FROM   MACHINE_LEARNING_CONFIGS WHERE ID = v_id;
             END initialize;
     
-    -------------------------------------------------------------------------------- 
-    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------
+    ----------------------------------------------------------------------
     PROCEDURE put_file 
     (p_mime_type         IN VARCHAR2, 
     p_file_blob         IN BLOB, 
@@ -340,9 +342,8 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     RAISE; 
     END put_file; 
     
-    -------------------------------------------------------------------------------- 
-    
-    -------------------------------------------------------------------------------- 
+    ----------------------------------------------------------------------
+    ----------------------------------------------------------------------
     PROCEDURE upload_file 
     (p_apex_file_name    IN VARCHAR2, 
     x_file_name        OUT VARCHAR2, 
@@ -383,8 +384,8 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     RAISE; 
     END upload_file; 
     
-    -------------------------------------------------------------------------------- 
-    -------------------------------------------------------------------------------- 
+    ----------------------------------------------------------------------
+    ----------------------------------------------------------------------
     PROCEDURE document_ai 
     (p_file_name   IN VARCHAR2, 
     p_document_id IN VISION_AI_DOCS.document_id%TYPE) IS 
@@ -459,8 +460,8 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     RAISE; 
     END document_ai; 
     
-    -------------------------------------------------------------------------------- 
-    -------------------------------------------------------------------------------- 
+    ----------------------------------------------------------------------
+    ----------------------------------------------------------------------
     PROCEDURE process_file 
     (p_apex_file_name  IN VARCHAR2, 
     v_id IN MACHINE_LEARNING_CONFIGS.ID%TYPE,
@@ -489,8 +490,8 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     RAISE; 
     END process_file; 
     
-    -------------------------------------------------------------------------------- 
-    -------------------------------------------------------------------------------- 
+    ----------------------------------------------------------------------
+    ----------------------------------------------------------------------
     FUNCTION get_file (p_request_url IN VARCHAR2) RETURN BLOB IS 
     
     l_file_blob           BLOB; 
@@ -513,8 +514,8 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     RAISE; 
     END get_file; 
     
-    -------------------------------------------------------------------------------- 
-    -------------------------------------------------------------------------------- 
+    ----------------------------------------------------------------------
+    ----------------------------------------------------------------------
     PROCEDURE render_document 
     (x_document_id  IN VISION_AI_DOCS.document_id%TYPE) IS 
     
@@ -577,21 +578,21 @@ END;
 </copy>
 ```
 
-## Task 7: Create Oracle Apex Page to Upload file and display results
+## Task 7: Create Oracle APEX Page 
  
 There are 3 main sections on this page
 
-1. File Upload
+File Upload
 
 ![Navigate to Vision](images/model-name.png " ")
 
+Process Image
+
 ![Navigate to Vision](images/result-after-submit.png " ")
 
+Review Results and uploaded image
+
 ![Navigate to Vision](images/image-after-submit.png " ")
-
-
-
-
 
 
 This concludes this lab and you can **proceed to the next lab**.
