@@ -254,6 +254,14 @@ Use a good YAML editor like Visual Studio Code to edit and format YAML file and 
     </copy>
 ```
 
+Add 2 intents one for **Greeting** 
+
+![ODA Setup](images/intent-1.png " ")
+
+Another intent for **exit**.
+
+![ODA Setup](images/intent-2.png " ")
+
 ## Task 8: Demo of Chatbot in Oracle APEX Page
 
 Click on chat icon to launch chat. Bot will initiate conversation with message
