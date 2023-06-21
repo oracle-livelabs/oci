@@ -47,6 +47,8 @@ Once Analytics Instance is ready, click on **Access Information**
 
 ![Analytics Cloud](images/analytics-reports-4.png " ")
 
+> **Note** 1: For Clinical Trials Dataset you can google search for *Clinical Trials Dataset* and choose the dataset of your choice. from CSV dataset file create table  
+
 ## Task 2: Log in to Oracle Analytics Cloud Instance
 
 Log in to Analytics Cloud Instance, Click on **Console**
