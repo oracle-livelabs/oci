@@ -131,7 +131,7 @@ These Labs help us with medical transcription and consulting virtual AI doctors 
     * Review Audio file and Transcribed text content of the Audio file
 
 <hr/><hr/>
-*Workshop 5: Create Medical Transcriptions - Lab 14*
+*Workshop 5: Oracle APEX and OpenAI Chat GPTs Integration - Lab 14*
 
 Integrating [**Oracle APEX**](https://apex.oracle.com/en/) Application with [**OpenAI**](https://openai.com/) REST APIs
 
