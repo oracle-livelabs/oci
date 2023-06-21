@@ -24,7 +24,7 @@ Estimated Workshop Time: 16 hours (Approximately)
 
 *Workshop 1: Common Labs - Introduction Lab to Lab 3*
 
-These are common labs are required for most of the other labs under this workshop.
+These are common labs that are required for most of the other labs under this workshop.
 
 * Introduction
     * About the workshop
@@ -45,7 +45,7 @@ These are common labs are required for most of the other labs under this worksho
     * Choose Autonomous Database from the OCI services menu
     * Create the Autonomous Database instance
 * Lab 3: Setup OCI [**Command Line Interface (CLI)**](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
-    * Get User's OCID
+    * Get the User's OCID
     * Add User's API Key
     * Generate and Download RSA Key Pair in PEM format
     * Install OCI Command Line Interface
@@ -55,23 +55,23 @@ These are common labs are required for most of the other labs under this worksho
 <hr/><hr/>
 *Workshop 2: Detect Breast Cancer - Lab 4 to Lab 8*
 
-In this Workshop (*Collection of Labs*) These Labs guide us in detecting Breast Cancer using Oracle [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) AI Service.
+In this Workshop (*Collection of Labs*) .These Labs guide us in detecting Breast Cancer using Oracle [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) AI Service.
 
 * Lab 4: Understanding Mammography and Breast Cancer (<u>Optional Lab</u>)
     * What is a Mammogram?
-    * How does Breast Cancer look like on a Mammogram?
+    * What does Breast Cancer look like on a Mammogram?
     * Other Breast abnormalities
     * Normal Breast Mammogram 
     * Breast Cancer Mammogram
-* Lab 5: Create Image Library to Detect Breast Cancer
+* Lab 5: Create an Image Library to Detect Breast Cancer
     * Data Preparation by Classifying Images. 
     * Load images to Object Storage using OCI CLI
     * Verify images are correctly loaded
 * Lab 6: Label Images
     * Generate dataset records using [**OCI Data Labeling**](https://www.oracle.com/in/artificial-intelligence/data-labeling/) for Breast Cancer
-    * Bulk image labeling
+    * Bulk image labelling
     * Verify Bulk Data labelled images
-* Lab 7: Train the model using Image Classification AI model
+* Lab 7: Train the model using the **Image Classification** AI model
     * Create OCI Vision Project
     * Create and Train Vision Model
     * Analyze and evaluate your Model
@@ -86,7 +86,7 @@ In this Workshop (*Collection of Labs*) These Labs guide us in detecting Breast 
     * Display results
 
 <hr/><hr/>
-*Workshop 3: Create Medical Expenses - Lab 9 to Lab 10*
+*Workshop 3: Create Medical Expenses - Lab 9 to Lab 10* 
 
 These Labs guide us in creating medical expenses using Oracle [**OCI Document Understanding**](https://docs.oracle.com/en-us/iaas/document-understanding/document-understanding/using/home.htm) AI Service.
 
@@ -103,11 +103,11 @@ These Labs guide us in creating medical expenses using Oracle [**OCI Document Un
         * PL/SQL Procedure DOCUMENT\_AI\_PK, Triggers etc.
     * Create Oracle APEX Page
     * Verify Oracle APEX File upload settings
-    * Create Custom Reports and Verify Results of uploaded receipt file.
-    * Create Expense Item from uploaded receipt
+    * Create Custom Reports and Verify the results of uploaded receipt file.
+    * Create an Expense item from the uploaded receipt
 
 <hr/><hr/>
-*Workshop 4: Create Medical Transcriptions - Lab 11 to Lab 13*
+*Workshop 4: Create Medical Transcriptions - Lab 11 to Lab 13* 
 
 These Labs help us with medical transcription and consulting virtual AI doctors using Oracle [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/) AI Service.
 
@@ -116,7 +116,7 @@ These Labs help us with medical transcription and consulting virtual AI doctors 
     * Analyze data from audio and video files.
 * Lab 12: Create Speech Transcription Job
     * Generate Audio File
-    * Upload Audio file to OCI Bucket
+    * Upload an Audio file to OCI Bucket
     * Create Speech Transcription Job
     * Review Transcription Job Output in JSON and .SRT files 
 * Lab 13: Oracle APEX Application for Speech Transcription
@@ -128,7 +128,7 @@ These Labs help us with medical transcription and consulting virtual AI doctors 
     * Verify Oracle APEX File upload settings
     * Upload the audio file from the local file system to the OCI object storage bucket using OCI Object storage rest APIs.
     * Create Speech Transcription Job
-    * Review Audio file and Transcribed text content of Audio file
+    * Review Audio file and Transcribed text content of the Audio file
 
 <hr/><hr/>
 *Workshop 5: Create Medical Transcriptions - Lab 14*
@@ -142,25 +142,25 @@ Integrating [**Oracle APEX**](https://apex.oracle.com/en/) Application with [**O
     * OpenAI Integration with Oracle APEX without using OCI Speech AI
 
 <hr/><hr/>
-*Workshop 6: Create Chatbot for Frequently asked Medical Questions - Lab 15 - Lab 16*
+*Workshop 6: Create Chatbot for Frequently Asked Medical Questions - Lab 15 - Lab 16*
 
-This workshop would enable users to interact with a [**Oracle Digital Assistant**](https://www.oracle.com/in/chatbots/) Chatbot with frequently asked questions related to cancer or COVID or Pneumonia or any other health issues, Get medical advise on time.
+This workshop would enable users to interact with [**Oracle Digital Assistant**](https://www.oracle.com/in/chatbots/) Chatbot with frequently asked questions related to cancer or COVID, Pneumonia or any other health issues, Get medical advice on time.
 
 * Lab 15: Setup Oracle Digital Assistant
     * Oracle Digital Assistant for [**natural language processing(NLP)**](https://en.wikipedia.org/wiki/Natural_language_processing), [**natural language understanding**](https://en.wikipedia.org/wiki/Natural-language_understanding) (NLU) 
     * Provision Oracle Digital Assistant from OCI services
     * Create Oracle Digital Assistant Skill 
-    * Adding Knowledge document for Frequently asked questions (FAQs)
+    * Adding Knowledge documents for Frequently asked questions (FAQs)
     * Train the ODA Model
     * Preview the Model and Skill
-    * Add Auto Complete Suggestion and Utterances.
-    * Create Web Channel for a Skill
+    * Add AutoComplete Suggestion and Utterances.
+    * Create a Web Channel for a Skill
 * Lab 16: Oracle APEX Integration with ODA
     * Download ODA Oracle Native Client SDK
-    * Get channel id from ODA console
+    * Get channel id from the ODA console
     * Configure settings.js file
     * Upload CSS, Image and JS files to Oracle APEX 
-    * HTML Code to add ODA chatbot on APEX page
+    * HTML Code to add ODA chatbot on a Oracle APEX page
     * Bot Initiated Conversation
     * Update YAML flow in ODA
     * Demo of Chatbot in Oracle APEX Page
