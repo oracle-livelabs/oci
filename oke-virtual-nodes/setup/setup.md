@@ -49,6 +49,7 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
 1. On the **Policy Builder** box, enter the exactly policies as shown below:
 
     ```text
+    <copy>
     define tenancy ske as ocid1.tenancy.oc1..aaaaaaaacrvwsphodcje6wfbc3xsixhzcan5zihki6bvc7xkwqds4tqhzbaq
 
     define compartment ske_compartment as ocid1.compartment.oc1..aaaaaaaa2bou6r766wmrh5zt3vhu2rwdya7ahn4dfdtwzowb662cmtdc5fea
@@ -58,6 +59,7 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
     endorse any-user to associate compute-container-instances in compartment ske_compartment of tenancy ske with vnics in tenancy where ALL {request.principal.type='virtualnode',request.operation='CreateContainerInstance',request.principal.subnet=2.subnet.id}
 
     endorse any-user to associate compute-container-instances in compartment ske_compartment of tenancy ske with network-security-group in tenancy where ALL {request.principal.type='virtualnode',request.operation='CreateContainerInstance'}
+    </copy>
     ```
 
     > **Note:** Do not change any of the OCIDs, copy as is
@@ -143,10 +145,6 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
 1. Paste to the OCI Cloud Shell and press enter.
 
     ![Click Access Cluster](images/oke_cluster_cloud_shell_2.png)
-
-1. On OCI Console, Top-Right, click the ![Cloud Shell Icon](images/sample1.png) icon and select **Cloud Shell**.
-
-  ![Cloud Shell Access](images/sample1.png)
 
 ## Task 4: Check OKE Cluster and Virtual Node pool provisioning completion
 
