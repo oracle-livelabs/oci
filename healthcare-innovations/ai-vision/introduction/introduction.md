@@ -166,6 +166,19 @@ This workshop would enable users to interact with [**Oracle Digital Assistant**]
     * Demo of Chatbot in Oracle APEX Page
 
 <hr/><hr/>
+*Workshop 7: Oracle APEX Maps and Spatial queries to locate nearest Hospitals - Lab 17*
+
+This workshop walks you through the steps of locating Hospitals based on location and patient trauma 
+
+* Oracle APEX Maps and Spatial queries to locate nearest Hospitals
+    * Create the required schema
+    * Update SDO_GEOMETRY Column
+    * Create Oracle APEX Faceted Search
+    * Create Oracle APEX Map and Map Layer
+    * Demo of finding Hospital on Map based on Location and Trauma selected.
+    * Query to locate the nearest Hospital within a given radius
+
+<hr/><hr/>
 
 
 #### About Breast Cancer

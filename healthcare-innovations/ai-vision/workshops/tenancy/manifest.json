@@ -85,6 +85,10 @@
       "filename": "../../ai-oda-apex-ui/ai-oda-apex-ui.md"
     },
     {
+      "title": "Lab 17: Oracle APEX Maps and Spatial queries to Locate Hospitals",
+      "filename": "../../apex-map/apex-map.md"
+    },
+    {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
       "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
