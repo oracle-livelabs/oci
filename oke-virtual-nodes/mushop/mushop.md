@@ -26,9 +26,19 @@ In this lab, you will:
 * Completed the [Provisioning](../provision/provision.md) lab
 * Completed the [Setup](../setup/setup.md) lab
 
-## Task 1: Obtain MuShop source code
+## Task 1: Open Cloud Shell
 
-1. Open up Cloud Shell and clone the github repo.
+1. On OCI Console, Top-Right, click the ![Cloud Shell Icon](images/oci_cloud_shell_icon.png) icon and select **Cloud Shell**.
+
+  ![Cloud Shell Access](images/oci_cloud_shell_access.png)
+
+   > Note: For better terminal experience, you can maximize the Cloud Shell window by clicking the maximize icon on the top right of the Cloud Shell window.
+
+   ![Cloud Shell Maximize](images/oci_cloud_shell_maximize.png)
+
+## Task 2: Obtain MuShop source code
+
+1. On the Cloud Shell and clone the github repo.
 
     ````shell
     <copy>
@@ -86,22 +96,20 @@ In this lab, you will:
     Sample response:
 
     ````shell
-    NAMESPACE     NAME                                   READY   STATUS        RESTARTS   AGE
-    kube-system   coredns-69db49c7c5-2gdk5               1/1     Running       0          1h
-    kube-system   coredns-69db49c7c5-fj652               1/1     Running       0          1h
-    kube-system   coredns-69db49c7c5-n5z4f               1/1     Running       0          1h
-    kube-system   csi-oci-node-f8rmc                     0/1     Terminating   0          1h
-    kube-system   csi-oci-node-pn9db                     0/1     Terminating   0          1h
-    kube-system   csi-oci-node-psblj                     0/1     Terminating   0          1h
-    kube-system   kube-dns-autoscaler-797876fc74-8b7db   1/1     Running       0          1h
-    kube-system   kube-proxy-42ngk                       0/1     Pending       0          1h
-    kube-system   kube-proxy-g4ms8                       0/1     Pending       0          1h
-    kube-system   kube-proxy-zjd48                       0/1     Pending       0          1h
+    NAMESPACE     NAME                                   READY   STATUS    RESTARTS   AGE
+    kube-system   coredns-78d485568-rjvnk                0/1     Pending   0          18m
+    kube-system   csi-oci-node-4mwhl                     0/1     Pending   0          18m
+    kube-system   csi-oci-node-c5n8m                     0/1     Pending   0          18m
+    kube-system   csi-oci-node-wqhlj                     0/1     Pending   0          18m
+    kube-system   kube-dns-autoscaler-7464f65c5c-zgtls   0/1     Pending   0          18m
+    kube-system   kube-proxy-6w465                       0/1     Pending   0          18m
+    kube-system   kube-proxy-h8mkq                       0/1     Pending   0          18m
+    kube-system   kube-proxy-wqhsl                       0/1     Pending   0          18m
     ````
 
     >Note: You may see the `kube-proxy` and `csi-oci-node` pods pending or terminating.  This is expected.
 
-## Task 2: Deploy the eCommerce App with Helm
+## Task 3: Deploy the eCommerce App with Helm
 
 Remembering that helm provides a way of packaging and deploying configurable charts, next we will deploy the application in "mock mode" where cloud services are mocked, yet the application is fully functional
 
@@ -163,7 +171,7 @@ Remembering that helm provides a way of packaging and deploying configurable cha
 
     ![MuShop Storefront](images/mushop-storefront.png)
 
-## Task 3: Explore the deployed app
+## Task 4: Explore the deployed app
 
 When you create a Deployment, you'll need to specify the container image for your application and the number of replicas that you want to run.
 
@@ -235,13 +243,13 @@ You can use these commands to see when applications were deployed, what their cu
 
     ````shell
     <copy>
-    kubectl exec -ti $POD_NAME ls
+    kubectl exec -ti $POD_NAME -- ls
     </copy>
     ````
 
     *Note:* You can also start a `bash` session on the Pod's container, just change the `ls` to `bash`. Remember that you need to type `exit` to exit the bash session.
 
-## Task 4: Under the Hood
+## Task 5: Under the Hood
 
 1. To get a better look at all the installed Kubernetes manifests by using the template command.
 

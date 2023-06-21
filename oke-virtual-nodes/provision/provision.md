@@ -45,7 +45,7 @@ In this lab, you will:
 
     * Name: Provide a name (cluster1 in this example)
     * Compartment: Choose your compartment (You can leave the default if select on the previous step)
-    * Kubernetes Version: Choose the most recent version (Minimum 1.25.4 for OKE Virtual Nodes)
+    * Kubernetes Version: Choose the most recent version (Minimum 1.26.2 for OKE Virtual Nodes)
     * Kubernetes API Endpoint: Public Endpoint (default)
     * Node type: **Virtual** (Need to select option to enable Virtual Nodes)
     * Node count: 3
