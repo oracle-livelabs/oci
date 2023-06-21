@@ -267,6 +267,8 @@ You can use these commands to see when applications were deployed, what their cu
 
 1. Explore the files, and see each output.
 
+You may now **proceed to the next lab**.
+
 ## Learn More
 
 * [MuShop Github Repo](https://github.com/oracle-quickstart/oci-cloudnative)

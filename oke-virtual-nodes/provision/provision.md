@@ -83,6 +83,8 @@ In this lab, you will:
 
 > Note: The cluster will take a few minutes to be ready. You can go to the next lab while the cluster is being provisioning.
 
+You may now **proceed to the next lab**.
+
 ## Learn More
 
 * [Comparing Virtual Nodes with Managed Nodes](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengcomparingvirtualwithmanagednodes_topic.htm#contengusingvirtualormanagednodes_topic)

@@ -176,6 +176,8 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
 
     ![Click Access Cluster](images/oke_virtual_nodes_state.png)
 
+You may now **proceed to the next lab**.
+
 ## Learn More
 
 * [URL text 1](http://docs.oracle.com)
