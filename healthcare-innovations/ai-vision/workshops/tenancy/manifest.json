@@ -89,6 +89,10 @@
       "filename": "../../apex-map/apex-map.md"
     },
     {
+      "title": "Lab 18: Oracle Analytics Cloud for Clinical Data Analysis",
+      "filename": "../../analytics-reports/analytics-reports.md"
+    },
+    {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
       "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"

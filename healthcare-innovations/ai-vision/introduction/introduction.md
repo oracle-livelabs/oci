@@ -170,7 +170,7 @@ This workshop would enable users to interact with [**Oracle Digital Assistant**]
 
 This workshop walks you through the steps of locating Hospitals based on location and patient trauma 
 
-* Oracle APEX Maps and Spatial queries to locate nearest Hospitals
+* Oracle APEX Maps and [**Oracle Spatial**](https://www.oracle.com/in/database/spatial/) queries to locate nearest Hospitals
     * Create the required schema
     * Update SDO_GEOMETRY Column
     * Create Oracle APEX Faceted Search
@@ -179,8 +179,22 @@ This workshop walks you through the steps of locating Hospitals based on locatio
     * Query to locate the nearest Hospital within a given radius
 
 <hr/><hr/>
+*Workshop 8: Oracle Analytics Cloud for Clinical Data Analysis - Lab 18*
 
+This workshop walks you through the steps of creating an [**Oracle Analytics cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) instance, creating Analytics reports or Data Visualization and making these reports available in Oracle APEX Application. We will take the example of Analysing Clinical Data, but there are limitless opportunities to Analyse Healthcare Data using Oracle Analytics cloud
 
+* Oracle Analytics Cloud for Clinical Data Analysis
+    * Create Oracle Analytics Cloud Instance
+    * Log in to Oracle Analytics Cloud Instance
+    * Setup Autonomous Database Connection
+    * Create New Dataset from Table
+    * Create Data Visualization
+    * View reports in Designer Mode
+    * Copy Analytics Report Embed URLs
+    * Embed Reports in APEX Application
+
+<hr/><hr/>
+ 
 #### About Breast Cancer
 
 Breast cancer is the most diagnosed cancer among women worldwide [Breast cancer represents 1 in 4 cancers diagnosed among women globally](https://www.uicc.org/news/globocan-2020-new-global-cancer-data). Colorectal, lung, cervical, and thyroid cancers are also common among women. It is the most frequent cancer amongst both sexes and is the leading cause of death from cancer in women. The estimated 2.3 million new cases indicate that one in every eight cancers diagnosed in 2020 was breast cancer. In 2020, there were an estimated 684,996 deaths from breast cancer, with a disproportionate number of these deaths occurring in low-resource settings.
