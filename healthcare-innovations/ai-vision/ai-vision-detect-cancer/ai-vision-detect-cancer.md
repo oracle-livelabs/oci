@@ -1,4 +1,4 @@
-# Lab 4: Understanding Mammography and Breast Cancer (Optional)
+# Understanding Mammography and Breast Cancer (Optional)
 
 ## AI Vision
 
@@ -33,11 +33,11 @@ This lab assumes you have:
 * An Oracle account
 * Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
   
-## What is a Mammogram?
+## Task 1: What is a Mammogram?
 
  A mammogram is an X-ray picture of the breast. Doctors use a mammogram to look for early signs of breast cancer. Regular mammograms are the best tests doctors have to find breast cancer early, sometimes up to three years before it can be felt. Patients should continue to get mammograms according to recommended time intervals. Mammograms work best when they can be compared with previous ones. This allows the radiologist to compare them to look for changes in your breasts.
 
-## How does Breast Cancer look like on a Mammogram?
+## Task 2: How does Breast Cancer look like on a Mammogram?
 
 Any area that does not look like normal tissue is a possible cause for concern. The radiologist will look for areas of white, high-density tissue and note its size, shape, and edges. A lump or tumour is a focused white area on a mammogram. Tumours can be cancerous or benign.
 
@@ -45,7 +45,7 @@ If a tumour is benign, it is not a health risk and is unlikely to grow or change
 
 Small white specks are usually harmless. The radiologist will check their shape and pattern, as they can sometimes be a sign of cancer.
 
-## Other Breast abnormalities
+## Task 3: Other Breast abnormalities
 
 As well as dense breast tissue and possible tumours, a radiologist will look for anything unusual on a mammogram.
 
@@ -56,7 +56,7 @@ Other abnormalities include:
 * Fibroadenomas are benign tumours in the breast. They are round and may feel like marble. People in their 20s and 30s are more likelyTrusted Source to have a fibroadenoma, but they can occur at any age.
 * Scar tissue, which often appears white on a mammogram. It is best to inform a doctor of any scarring on the breasts beforehand.
  
-## Normal Breast Mammogram
+## Task 4: Normal Breast Mammogram
 
 Sample image of Normal Breast.
 
@@ -64,7 +64,7 @@ Sample image of Normal Breast.
 
 ![Women's Normal Breast 2020](images/normal-breast_131577.png =30%x* )
   
-## Breast Cancer Mammogram  
+## Task 5: Breast Cancer Mammogram  
 
 Sample images of most likely Breast Cancer.
 

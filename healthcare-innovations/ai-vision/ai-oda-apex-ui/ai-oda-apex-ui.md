@@ -1,4 +1,4 @@
-# Lab 16: Oracle APEX Integration with ODA
+# Oracle APEX Integration with ODA
 
 ## Introduction
 

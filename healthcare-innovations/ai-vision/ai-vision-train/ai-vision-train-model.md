@@ -1,4 +1,4 @@
-# Lab 7: Train the model using Image Classification AI model
+# Train the model using Image Classification AI model
 
 ## Introduction
 

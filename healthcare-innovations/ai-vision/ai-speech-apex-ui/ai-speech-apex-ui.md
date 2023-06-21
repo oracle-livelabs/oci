@@ -1,4 +1,4 @@
-# Lab 13: Oracle APEX Application for Speech Transcription
+# Oracle APEX Application for Speech Transcription
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Lab 5: Create Image Library to Detect Breast Cancer
+# Create Image Library to Detect Breast Cancer
 
 ## Introduction
 

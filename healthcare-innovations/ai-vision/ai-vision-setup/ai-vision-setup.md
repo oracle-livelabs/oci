@@ -1,4 +1,4 @@
-# Lab 1: Setup environment
+# Setup environment
 
 ## Introduction
 

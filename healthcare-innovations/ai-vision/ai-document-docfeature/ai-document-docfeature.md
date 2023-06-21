@@ -1,4 +1,4 @@
-# Lab 9: Introduction to Pretrained Oracle Document AI Models
+# Introduction to Pretrained Oracle Document AI Models
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Lab 9: Setup environment (Optional Steps)
+# Setup environment (Optional Steps)
 
 ## Introduction
 

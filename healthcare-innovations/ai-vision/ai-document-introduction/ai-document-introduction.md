@@ -1,4 +1,4 @@
-# Lab 9: Introduction to Document Understanding
+# Introduction to Document Understanding
 
 ## About this workshop 
 

@@ -207,4 +207,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
 * **Contributors** - Bo English-Wiczling, Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - June 20th, 2023
+* **Last Updated By/Date** - June 21th, 2023

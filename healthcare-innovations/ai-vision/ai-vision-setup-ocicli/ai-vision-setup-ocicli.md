@@ -1,4 +1,4 @@
-# Lab 3: Setup OCI CLI (Required Steps)
+# Setup OCI CLI (Required Steps)
 
 ## Introduction
 

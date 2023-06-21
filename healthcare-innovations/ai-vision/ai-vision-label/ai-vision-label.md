@@ -1,4 +1,4 @@
-# Lab 6: Label Images
+# Label Images
 
 ## Introduction
 

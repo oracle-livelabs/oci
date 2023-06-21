@@ -1,4 +1,4 @@
-# Lab 10: Oracle APEX Application for Medical Receipt processing 
+# Oracle APEX Application for Medical Receipt processing 
 
 ## Introduction
 

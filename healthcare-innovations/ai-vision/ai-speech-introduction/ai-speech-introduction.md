@@ -1,4 +1,4 @@
-# Lab 11: Introduction to OCI Speech
+# Introduction to OCI Speech
 
 ## About this workshop
 

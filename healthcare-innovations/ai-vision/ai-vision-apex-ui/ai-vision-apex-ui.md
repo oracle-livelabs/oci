@@ -1,4 +1,4 @@
-# Lab 8: Oracle APEX Application for Breast Cancer Detection
+# Oracle APEX Application for Breast Cancer Detection
 
 ## Introduction
 

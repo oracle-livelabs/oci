@@ -1,4 +1,4 @@
-# Lab 12: Create an Image Library to Detect Breast Cancer
+# Create an Image Library to Detect Breast Cancer
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Lab 11: Setup Policies and Create Bucket
+# Setup Policies and Create Bucket
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Lab 14: Oracle Speech and OpenAI Chat GPTs Integration
+# Oracle Speech and OpenAI Chat GPTs Integration
 
 ## Introduction
 

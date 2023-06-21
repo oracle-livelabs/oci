@@ -1,4 +1,4 @@
-# Lab 15: Setup Oracle Digital Assistant
+# Setup Oracle Digital Assistant
 
 ## About this workshop
 
