@@ -191,7 +191,19 @@ This workshop walks you through the steps of creating an [**Oracle Analytics clo
     * Copy Analytics Report Embed URLs
     * Embed Reports in APEX Application
 
- 
+*Setup OCI Email Delivery Service - Lab 19*
+
+This workshop walks you through the steps of setting up [**OCI Email Services**](https://www.oracle.com/in/cloud/networking/email-delivery/). This will help us email Doctors, Patients or any Health official with the required data. For example, we can email transcribed text to Doctor after the patient uploads an audio file or mail once the medical expenses have been approved or rejected
+
+* Setup OCI Email Delivery Service 
+    * Generate SMPT Credentials
+    * EMAIL Delivery Configuration
+    * Create Approved Sender  
+    * Configuring Oracle APEX to Send Email
+    * Plain Text only message
+    * Plain Text / HTML message
+    * Sending Speech Transcription and Audio file link in an Email
+
 ## About Breast Cancer
 
 Breast cancer is the most diagnosed cancer among women worldwide [Breast cancer represents 1 in 4 cancers diagnosed among women globally](https://www.uicc.org/news/globocan-2020-new-global-cancer-data). Colorectal, lung, cervical, and thyroid cancers are also common among women. It is the most frequent cancer amongst both sexes and is the leading cause of death from cancer in women. The estimated 2.3 million new cases indicate that one in every eight cancers diagnosed in 2020 was breast cancer. In 2020, there were an estimated 684,996 deaths from breast cancer, with a disproportionate number of these deaths occurring in low-resource settings.

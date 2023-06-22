@@ -93,6 +93,10 @@
       "filename": "../../analytics-reports/analytics-reports.md"
     },
     {
+      "title": "Lab 19: Setup OCI Email Delivery Service",
+      "filename": "../../oci-email/oci-email.md"
+    },
+    {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
       "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
