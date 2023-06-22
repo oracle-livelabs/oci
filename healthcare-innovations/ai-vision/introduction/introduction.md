@@ -10,19 +10,24 @@ We’ll share how we trained our AI Machine learning models with X-Ray mammograp
 
 [Youtube video on AI for Healthcare Demo](youtube:VjeoHU4I6SI:large)
 
-**AI for Healthcare**: Learn about the latest innovations that are happening in Healthcare, such as using **OCI Vision** for Breast Cancer Detection, Lung Cancer Detection or finding out about Covid or Pneumonia early stage, using the power of **OCI Document Understanding** to submit medical expenses, or using **OCI Speech** to ask a doctor about specific medical symptoms and get a response back from a Virtual Doctor leveraging the power of **OpenAI**. Chat with virtual doctor through **Oracle Digital Assistant** asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyse complex clinical data or genome sequences with **Oracle Analytics Cloud** or locate nearest Hospital with **Oracle Spatial** and contact them.
+[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations that are happening in Healthcare, Label Cancer Images using [**OCI Data Labeling Service**](https://www.oracle.com/in/artificial-intelligence/data-labeling/) and Analyze using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) for Breast Cancer, Lung Cancer Detection or finding out about Covid or Pneumonia early stage, using the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/artificial-intelligence/speech/) to ask a doctor about specific medical symptoms and get a response back from a Virtual Doctor leveraging the power of [**OpenAI**](https://openai.com/). Chat with virtual doctor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/) asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate nearest Hospital with [**Oracle Spatial**](https://www.oracle.com/in/database/spatial/) and contact them. Send Emails to Doctors or Hospitals using [**OCI Email Delivery Service**](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Email/home.htm)
 
-Running on top of the world's most powerful database, **Oracle Autonomous Database** and Low Code development platform **Oracle APEX**
+Running on top of the world's most powerful database, [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/) and Low Code development platform [**Oracle APEX**](https://apex.oracle.com/en/)
 
 ![Archiecture](images/architecture.png " ")
  
 Estimated Workshop Time: 16 hours (Approximately)
 
-<hr/><hr/> 
+### Prerequisites 
+ 
+This lab assumes you have:
 
-**AI for Healthcare - Table of Contents**
+* An Oracle account
+* Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
 
-*Workshop 1: Common Labs - Introduction Lab to Lab 3*
+## AI for Healthcare - Table of Contents
+
+*Common Labs - Introduction Lab to Lab 3*
 
 These are common labs that are required for most of the other labs under this workshop.
 
@@ -52,8 +57,7 @@ These are common labs that are required for most of the other labs under this wo
     * Update OCI Configuration file
     * List all Buckets in a Compartment using OCI CLI
 
-<hr/><hr/>
-*Workshop 2: Detect Breast Cancer - Lab 4 to Lab 8*
+*Detect Breast Cancer - Lab 4 to Lab 8*
 
 In this Workshop (*Collection of Labs*) .These Labs guide us in detecting Breast Cancer using Oracle [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) AI Service.
 
@@ -85,8 +89,7 @@ In this Workshop (*Collection of Labs*) .These Labs guide us in detecting Breast
     * Verify Oracle APEX File upload settings
     * Display results
 
-<hr/><hr/>
-*Workshop 3: Create Medical Expenses - Lab 9 to Lab 10* 
+*Create Medical Expenses - Lab 9 to Lab 10* 
 
 These Labs guide us in creating medical expenses using Oracle [**OCI Document Understanding**](https://docs.oracle.com/en-us/iaas/document-understanding/document-understanding/using/home.htm) AI Service.
 
@@ -106,8 +109,7 @@ These Labs guide us in creating medical expenses using Oracle [**OCI Document Un
     * Create Custom Reports and Verify the results of uploaded receipt file.
     * Create an Expense item from the uploaded receipt
 
-<hr/><hr/>
-*Workshop 4: Create Medical Transcriptions - Lab 11 to Lab 13* 
+*Create Medical Transcriptions - Lab 11 to Lab 13* 
 
 These Labs help us with medical transcription and consulting virtual AI doctors using Oracle [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/) AI Service.
 
@@ -130,8 +132,7 @@ These Labs help us with medical transcription and consulting virtual AI doctors 
     * Create Speech Transcription Job
     * Review Audio file and Transcribed text content of the Audio file
 
-<hr/><hr/>
-*Workshop 5: Oracle APEX and OpenAI Chat GPTs Integration - Lab 14*
+*Oracle APEX and OpenAI Chat GPTs Integration - Lab 14*
 
 Integrating [**Oracle APEX**](https://apex.oracle.com/en/) Application with [**OpenAI**](https://openai.com/) REST APIs
 
@@ -141,8 +142,7 @@ Integrating [**Oracle APEX**](https://apex.oracle.com/en/) Application with [**O
     * Integrating Oracle Speech AI Output with OpenAI
     * OpenAI Integration with Oracle APEX without using OCI Speech AI
 
-<hr/><hr/>
-*Workshop 6: Create Chatbot for Frequently Asked Medical Questions - Lab 15 - Lab 16*
+*Create Chatbot for Frequently Asked Medical Questions - Lab 15 - Lab 16*
 
 This workshop would enable users to interact with [**Oracle Digital Assistant**](https://www.oracle.com/in/chatbots/) Chatbot with frequently asked questions related to cancer or COVID, Pneumonia or any other health issues, Get medical advice on time.
 
@@ -165,8 +165,7 @@ This workshop would enable users to interact with [**Oracle Digital Assistant**]
     * Update YAML flow in ODA
     * Demo of Chatbot in Oracle APEX Page
 
-<hr/><hr/>
-*Workshop 7: Oracle APEX Maps and Spatial queries to locate nearest Hospitals - Lab 17*
+*Oracle APEX Maps and Spatial queries to locate nearest Hospitals - Lab 17*
 
 This workshop walks you through the steps of locating Hospitals based on location and patient trauma 
 
@@ -178,8 +177,7 @@ This workshop walks you through the steps of locating Hospitals based on locatio
     * Demo of finding Hospital on Map based on Location and Trauma selected.
     * Query to locate the nearest Hospital within a given radius
 
-<hr/><hr/>
-*Workshop 8: Oracle Analytics Cloud for Clinical Data Analysis - Lab 18*
+*Oracle Analytics Cloud for Clinical Data Analysis - Lab 18*
 
 This workshop walks you through the steps of creating an [**Oracle Analytics cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) instance, creating Analytics reports or Data Visualization and making these reports available in Oracle APEX Application. We will take the example of Analysing Clinical Data, but there are limitless opportunities to Analyse Healthcare Data using Oracle Analytics cloud
 
@@ -193,9 +191,8 @@ This workshop walks you through the steps of creating an [**Oracle Analytics clo
     * Copy Analytics Report Embed URLs
     * Embed Reports in APEX Application
 
-<hr/><hr/>
  
-#### About Breast Cancer
+## About Breast Cancer
 
 Breast cancer is the most diagnosed cancer among women worldwide [Breast cancer represents 1 in 4 cancers diagnosed among women globally](https://www.uicc.org/news/globocan-2020-new-global-cancer-data). Colorectal, lung, cervical, and thyroid cancers are also common among women. It is the most frequent cancer amongst both sexes and is the leading cause of death from cancer in women. The estimated 2.3 million new cases indicate that one in every eight cancers diagnosed in 2020 was breast cancer. In 2020, there were an estimated 684,996 deaths from breast cancer, with a disproportionate number of these deaths occurring in low-resource settings.
 
@@ -205,7 +202,7 @@ Researchers have identified hormonal, lifestyle and environmental factors that m
  
  ![Women's Cancer 2020](images/womens-cancer.png =50%x* )
 
-#### About Lung Cancer
+## About Lung Cancer
 
 Cancer is a disease in which cells in the body grow out of control. When cancer starts in the lungs, it is called lung cancer Worldwide, lung cancer is the second most commonly diagnosed cancer. NSCLC is the most common type of lung cancer in the United States, accounting for 81% of all lung cancer diagnoses.
 
@@ -221,17 +218,10 @@ Lung cancer includes two main types: non-small cell lung cancer and small cell l
 
 ![Mens's Lung Cancer 2020](images/lungcancer.png =50%x* )
 
-### Prerequisites (Optional)
- 
-This lab assumes you have:
-
-* An Oracle account
-* Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
-
 You may now **proceed to the next lab**.
     
 ## Acknowledgements
 
-* **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Contributors** - Bo English-Wiczling, Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - June 21th, 2023
+* **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
+* **Advisor** - Bo English-Wiczling, Senior Direct, Program Management, Oracle Database 
+* **Last Updated By/Date** - June 22nd, 2023

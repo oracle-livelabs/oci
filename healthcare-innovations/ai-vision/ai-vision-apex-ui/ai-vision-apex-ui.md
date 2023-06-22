@@ -58,11 +58,10 @@ We will be using OCI Native Authentication required to connect with Object Stora
 
     ![Navigate to Vision](images/create-web-credentials.png " ")
 
-    Provide user OCID, tenancy OCID, fingerprint and authentication type as **Oracle Cloud Infrastructure**
+2. Provide user OCID, tenancy OCID, fingerprint and authentication type as **Oracle Cloud Infrastructure**
 
     ![Navigate to Vision](images/web-credentials-details.png " ")
 
- 
 ## Task 2: Create Table - MACHINE LEARNING CONFIGS
 
 We can directly code Object storage bucket location, Web Credential Name, Request JSON etc., directly in PL/SQL code to validate XRay Image. However, it is a good practice to store this in a database table so that we can easily update this and add more models in future, so we create a machine learning configuration table for this purpose.
@@ -121,9 +120,7 @@ We can directly code Object storage bucket location, Web Credential Name, Reques
 
 ## Task 3: Create Table - VISION AI DOCS
  
-1. Create **VISION\_AI\_DOCS** Table.
-
-    VISION\_AI\_DOCS table is primarily used to store the JSON response after uploading the image to object storage, querying the image against a trained OCI Vision model. The JSON response contains the OCI Labels and their corresponding confidence scores. 
+1. Create **VISION\_AI\_DOCS** Table. VISION\_AI\_DOCS table is primarily used to store the JSON response after uploading the image to object storage, querying the image against a trained OCI Vision model. The JSON response contains the OCI Labels and their corresponding confidence scores. 
 
     ```sql
         <copy> 
@@ -232,11 +229,7 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     ```sql
     <copy>
     create or replace PACKAGE IMAGE_AI_PK AS 
-    ------------------------------------------------------------------------------- 
-    -- NAME        : IMAGE_AI_PK 
-    -- FILE NAME   : IMAGE_AI_PK.sql   
-    ------------------------------------------------------------------------------- 
-    
+      
     GC_WC_CREDENTIAL_ID        CONSTANT VARCHAR2(50)   := 'Ind_OCI_WebCred';  
     
     --- Dynamic variables ---------
@@ -284,11 +277,7 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     <copy>
     create or replace PACKAGE BODY IMAGE_AI_PK  
     IS 
-    ------------------------------------------------------------------------------- 
-    -- NAME        : IMAGE_AI_PK 
-    -- FILE NAME   : IMAGE_AI_PK.sql   
-    ----------------------------------------------------------------------
-    ----------------------------------------------------------------------
+    
     PROCEDURE initialize (v_id IN MACHINE_LEARNING_CONFIGS.ID%TYPE) AS
     -- -----------------------------------------------------------------
             BEGIN
@@ -549,8 +538,7 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     END render_document; 
     
     END; 
-    
-
+     
     </copy>
     ```
 
@@ -558,41 +546,41 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
 
 In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can also use the regular file upload page item.
 
-1. Apex
+1. In APEX page add page item of type file upload. You can optionally use Block dropzone plugin for better look and feel.
 
-![Navigate to Vision](images/apex-image-file.png " ")
+    ![Navigate to Vision](images/apex-image-file.png " ")
 
-Add Process Image button
+2. Add Process Image button
 
-![Navigate to Vision](images/process-image-button.png " ")
+    ![Navigate to Vision](images/process-image-button.png " ")
 
-This will invoke a process by name **Process File**
+3. This will invoke a process by name **Process File**
 
-![Navigate to Vision](images/process-file-sql.png " ")
+    ![Navigate to Vision](images/process-file-sql.png " ")
 
-```sql
-<copy>
-BEGIN
-  IMAGE_AI_PK.process_file (p_apex_file_name => :P2_IMAGE_FILE, v_id => :P2_MODEL_NAME, x_document_id => :P2_DOCUMENT_ID);
-END; 
-</copy>
-```
+    ```sql
+    <copy>
+    BEGIN
+    IMAGE_AI_PK.process_file (p_apex_file_name => :P2_IMAGE_FILE, v_id => :P2_MODEL_NAME, x_document_id => :P2_DOCUMENT_ID);
+    END; 
+    </copy>
+    ```
 
 ## Task 7: Create Oracle APEX Page 
  
 There are 3 main sections on this page
 
-File Upload
+1. File Upload
 
-![Navigate to Vision](images/model-name.png " ")
+    ![Navigate to Vision](images/model-name.png " ")
 
-Process Image
+2. Process Image
 
-![Navigate to Vision](images/result-after-submit.png " ")
+    ![Navigate to Vision](images/result-after-submit.png " ")
 
-Review Results and uploaded image
+3. Review Results and uploaded image
 
-![Navigate to Vision](images/image-after-submit.png " ")
+    ![Navigate to Vision](images/image-after-submit.png " ")
 
 
 This concludes this lab and you can **proceed to the next lab**.

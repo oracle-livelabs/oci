@@ -27,69 +27,69 @@ This lab assumes you have:
 
 ## Task 1: Generate Audio File (.wav or .mp3 format)  
 
-Use tools such as [Audacity](https://www.audacityteam.org/download/) or Apple QuickTime Player to convert your Audio into .wav or .mp3 files; alternatively, you can also download Audio files from any external sources. 
+1. Use tools such as [Audacity](https://www.audacityteam.org/download/) or Apple QuickTime Player to convert your Audio into .wav or .mp3 files; alternatively, you can also download Audio files from any external sources. 
 
-![Generate Audio file](images/audacity.png " ")
+    ![Generate Audio file](images/audacity.png " ")
  
 ## Task 2: Upload Audio file to OCI Bucket
 
-On cloud.oracle.com, Navigate to the bucket where you wish to upload the input audio files, select a folder under that bucket, and click the upload button.
+1. On cloud.oracle.com, Navigate to the bucket where you wish to upload the input audio files, select a folder under that bucket, and click the upload button.
 
-![Upload Audio file](images/upload-file-001.png " ")
+    ![Upload Audio file](images/upload-file-001.png " ")
 
-Browse and upload file from your local file system.
+2. Browse and upload file from your local file system.
 
-![Speech Transcription Job](images/upload-file-002.png " ")
+    ![Speech Transcription Job](images/upload-file-002.png " ")
 
 ## Task 3: Create Speech Transcription Job
 
-On cloud.oracle.com, Navigate to Analytics & AI, and Select Speech under AI Services
+1. On cloud.oracle.com, Navigate to Analytics & AI, and Select Speech under AI Services
  
-![Speech Transcription Job](images/speech-transcription-000.png " ")
+    ![Speech Transcription Job](images/speech-transcription-000.png " ")
 
-Review the overview tab, and go through the Oracle Documentation links. 
+2. Review the overview tab, and go through the Oracle Documentation links. 
 
-![Speech Transcription Job](images/speech-transcription-021.png " ")
+    ![Speech Transcription Job](images/speech-transcription-021.png " ")
 
-Click on Jobs and provide basic information. 
+3. Click on Jobs and provide basic information. 
 
-![Speech Transcription Job](images/speech-transcription-023.png " ")
+    ![Speech Transcription Job](images/speech-transcription-023.png " ")
 
-You can also provide a prefix to optional output folder under the selected Bucket.
+4. You can also provide a prefix to optional output folder under the selected Bucket.
 
-![Speech Transcription Job](images/speech-transcription-024.png " ")
+    ![Speech Transcription Job](images/speech-transcription-024.png " ")
 
-Choose OCI Bucket and then select the file which was uploaded. Click on the Submit button.
+5. Choose OCI Bucket and then select the file which was uploaded. Click on the Submit button.
 
-![Speech Transcription Job](images/speech-transcription-025.png " ")
+    ![Speech Transcription Job](images/speech-transcription-025.png " ")
 
-The speech transcription job will change from creating status to active status within few seconds.
+6. The speech transcription job will change from creating status to active status within few seconds.
  
-![Speech Transcription Job](images/speech-transcription-026.png " ")
+    ![Speech Transcription Job](images/speech-transcription-026.png " ")
 
-![Speech Transcription Job](images/speech-transcription-022.png " ")
+    ![Speech Transcription Job](images/speech-transcription-022.png " ")
 
 ## Task 4: Review Transcription Job Output in JSON and .SRT files
 
-Click on the Active Speech Job for more details.
+1. Click on the Active Speech Job for more details.
 
-![Speech Transcription Job](images/speech-transcription-027.png " ")
+    ![Speech Transcription Job](images/speech-transcription-027.png " ")
 
-Click on Output Bucket
+2. Click on Output Bucket
 
-![Speech Transcription Job](images/speech-transcription-028.png " ")
+    ![Speech Transcription Job](images/speech-transcription-028.png " ")
 
-Download the JSON Output Object
+3. Download the JSON Output Object
 
-![Speech Transcription Job](images/speech-transcription-029.png " ")
+    ![Speech Transcription Job](images/speech-transcription-029.png " ")
 
-Open the JSON file in a browser like Firefox or any notepad, review the JSON structure.
+    Open the JSON file in a browser like Firefox or any notepad, review the JSON structure.
 
-![Speech Transcription Job](images/speech-transcription-031.png " ")
+    ![Speech Transcription Job](images/speech-transcription-031.png " ")
 
-Rename the .srt to .txt file and open it in any text editor.
+4. Rename the .srt to .txt file and open it in any text editor.
 
-![Speech Transcription Job](images/speech-transcription-030.png " ")
+    ![Speech Transcription Job](images/speech-transcription-030.png " ")
  
 
 This concludes this lab. You can **proceed now to the next lab**.

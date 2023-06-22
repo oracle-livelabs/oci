@@ -538,25 +538,25 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
 
 In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can also use the regular file upload page item.
 
-1. Apex
+1. In the APEX page add page item of type file upload
 
-![Apex Code](images/apex-file-process.png " ")
+    ![Apex Code](images/apex-file-process.png " ")
 
-Add Process Audio button
+2. Add Process Audio button
 
-![Apex Code](images/speech-button.png " ")
+    ![Apex Code](images/speech-button.png " ")
 
-This will invoke a process by name **Process File**
+3. This will invoke a process by name **Process File**
 
-![Apex Code](images/apex-file.png " ")
+    ![Apex Code](images/apex-file.png " ")
 
-```sql
-<copy>
-BEGIN
-  SPEECH_AI_PK.process_file (p_apex_file_name => :P34_RECEIPT_FILE, v_id => 62, x_document_id => :P34_DOCUMENT_ID);
-END;
-</copy>
-```
+    ```sql
+    <copy>
+    BEGIN
+    SPEECH_AI_PK.process_file (p_apex_file_name => :P34_RECEIPT_FILE, v_id => 62, x_document_id => :P34_DOCUMENT_ID);
+    END;
+    </copy>
+    ```
 
 ## Task 7: Create Oracle Apex Page to Upload file and display results
  
@@ -564,94 +564,94 @@ There are 4 main sections on this page
 
 1. Create Audio File.
 
-![Navigate to Vision](images/record-audio.png " ")
+    ![Navigate to Vision](images/record-audio.png " ")
 
 2. Record audio feature and save the audio file on disk.
 
-![Navigate to Vision](images/speech-ai-record.png " ")
+    ![Navigate to Vision](images/speech-ai-record.png " ")
 
 3. Upload Audio file saved on disk and click on **Process Speech** buton. View the current speech job that has been submitted by the user.
 
-![Navigate to Vision](images/speech-ai-list.png " ")
+    ![Navigate to Vision](images/speech-ai-list.png " ")
 
 4. Edit view to list current speech job.
 
-![Navigate to Vision](images/show-current-job.png " ")
+    ![Navigate to Vision](images/show-current-job.png " ")
 
 5. Once the Job execution has been completed, view the speech converted to text. You can also feed this response text as input to OpenAI (which we will about talk in next lab)
 
-![Navigate to Vision](images/speech-ai-response.png " ")
+    ![Navigate to Vision](images/speech-ai-response.png " ")
 
-![Navigate to Vision](images/speech-popup.png " ")
+    ![Navigate to Vision](images/speech-popup.png " ")
 
 6. The Query to extract current speech job is listed below. please update according to your environment.
  
-```sql
-<copy>
-    DECLARE
-   l_max_sal NUMBER;
-   audio_url varchar2(500) := 'https://objectstorage.us-phoenix-1.oraclecloud.com/n/your-namespace/b/your-bucket/o/'||:P22_OBJ;
-   myext varchar2(500) := :P22_OBJ;
-   cnt number := 0;
-   cntw number := 0;
-   fulljsonurl varchar2(2000) := 'https://objectstorage.us-phoenix-1.oraclecloud.com/n/your-namespace/b/your-bucket/o/'||:P22_OBJ;
-   --p_clob001 clob;
-   l_response clob;
-   l_http_status_code number;
-   l_inputaudio varchar2(2000) := :P22_OBJ;
-   l_filename varchar2(100) := :P22_FN;
-   l_spjob varchar2(2000) := 'https://objectstorage.us-phoenix-1.oraclecloud.com/n/your-namespace/b/your-bucket/o/'||:P22_SPJOB||'your-namespace_medical_transcripts_Input/'||:P22_FN||'.json';
+    ```sql
+    <copy>
+        DECLARE
+    l_max_sal NUMBER;
+    audio_url varchar2(500) := 'https://objectstorage.us-phoenix-1.oraclecloud.com/n/your-namespace/b/your-bucket/o/'||:P22_OBJ;
+    myext varchar2(500) := :P22_OBJ;
+    cnt number := 0;
+    cntw number := 0;
+    fulljsonurl varchar2(2000) := 'https://objectstorage.us-phoenix-1.oraclecloud.com/n/your-namespace/b/your-bucket/o/'||:P22_OBJ;
+    --p_clob001 clob;
+    l_response clob;
+    l_http_status_code number;
+    l_inputaudio varchar2(2000) := :P22_OBJ;
+    l_filename varchar2(100) := :P22_FN;
+    l_spjob varchar2(2000) := 'https://objectstorage.us-phoenix-1.oraclecloud.com/n/your-namespace/b/your-bucket/o/'||:P22_SPJOB||'your-namespace_medical_transcripts_Input/'||:P22_FN||'.json';
+        
+    BEGIN 
+        cnt := INSTR(:P22_OBJ, '.json');
+        cntw := INSTR(:P22_OBJ, '.wav');  
+            
+        apex_web_service.g_request_headers.delete(); 
+        apex_web_service.g_request_headers(1).name  := 'Content-Type'; 
+        apex_web_service.g_request_headers(1).value := 'application/json';  
+
+        l_response := apex_web_service.make_rest_request(  
+        p_url => l_spjob,
+        p_http_method => 'GET' 
+            ); 
     
-BEGIN 
-    cnt := INSTR(:P22_OBJ, '.json');
-    cntw := INSTR(:P22_OBJ, '.wav');  
-         
-    apex_web_service.g_request_headers.delete(); 
-    apex_web_service.g_request_headers(1).name  := 'Content-Type'; 
-    apex_web_service.g_request_headers(1).value := 'application/json';  
+        -- add response object to apex collection --
+        --and display collection using classic report query --
+        l_http_status_code := apex_web_service.g_status_code; 
+        if l_http_status_code = 200 then 
+        apex_collection.create_or_truncate_collection( 'REST_COLLECTION' ); 
+        apex_collection.add_member( 
+            p_collection_name => 'REST_COLLECTION', 
+            p_clob001 =>         l_response  ); 
+        end if;      
 
-    l_response := apex_web_service.make_rest_request(  
-    p_url => l_spjob,
-    p_http_method => 'GET' 
-        ); 
- 
-    -- add response object to apex collection --
-    --and display collection using classic report query --
-    l_http_status_code := apex_web_service.g_status_code; 
-    if l_http_status_code = 200 then 
-    apex_collection.create_or_truncate_collection( 'REST_COLLECTION' ); 
-    apex_collection.add_member( 
-        p_collection_name => 'REST_COLLECTION', 
-        p_clob001 =>         l_response  ); 
-    end if;      
-
-    -- display audio file on browser --
-    htp.p('<audio controls preload>
-        <source src="'||audio_url||'" type="audio/mpeg">
-    </audio>');
-   
-END;
-    </copy>
-    ```
+        -- display audio file on browser --
+        htp.p('<audio controls preload>
+            <source src="'||audio_url||'" type="audio/mpeg">
+        </audio>');
+    
+    END;
+        </copy>
+        ```
 
 7. Display APEX Collection to view Transcription reponse
 
-![Navigate to Vision](images/apex-collection.png " ")
+    ![Navigate to Vision](images/apex-collection.png " ")
 
-```sql
-<copy>
-    select 
-    j."transcription"  
-    from apex_collections c, json_table(
-    c.clob001 format json,
-    '$.transcriptions[*]'
-    columns (
-    "transcription"      VARCHAR2(4000)  path '$.transcription' 
-    )
-    ) j
-    where c.collection_name = 'REST_COLLECTION'  
-</copy>
-```
+    ```sql
+    <copy>
+        select 
+        j."transcription"  
+        from apex_collections c, json_table(
+        c.clob001 format json,
+        '$.transcriptions[*]'
+        columns (
+        "transcription"      VARCHAR2(4000)  path '$.transcription' 
+        )
+        ) j
+        where c.collection_name = 'REST_COLLECTION'  
+    </copy>
+    ```
 
 This concludes this lab and you can **proceed to the next lab**.
 
@@ -661,5 +661,6 @@ This concludes this lab and you can **proceed to the next lab**.
 * [WPG_DOCLOAD](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/WPG_DOCLOAD.html)
 
 ## Acknowledgements
+
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
 * **Last Updated By/Date** - May 23rd, 2023.

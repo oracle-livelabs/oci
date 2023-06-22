@@ -56,7 +56,7 @@ We will be using OCI Native Authentication required to connect with Object Stora
 
     ![Navigate to Vision](images/create-web-credentials.png " ")
 
-    Provide user OCID, tenancy OCID, fingerprint and authentication type as **Oracle Cloud Infrastructure**
+2. Provide user OCID, tenancy OCID, fingerprint and authentication type as **Oracle Cloud Infrastructure**
 
     ![Navigate to Vision](images/web-credentials-details.png " ")
  
@@ -66,7 +66,7 @@ We will be using OCI Native Authentication required to connect with Object Stora
 
     DOCUMENT\_AI\_DOCS table is primarily used to store the JSON response after uploading the image to object storage, querying the image against a Document Understanding pre-trained AI model. The JSON response contains the OCI Labels and their corresponding confidence scores. 
 
-    Some of the Pre-trained models are:
+2. Some of the Pre-trained models are:
     
     * Optical Character Recognition (OCR)
     * Document Classification.
@@ -229,7 +229,7 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     </copy>
     ```
 
-    replace *xnamespace* with your OCI namespace and *xbucket* with your file upload bucket where documents will be temporarily uploaded for AI analysis
+2. Replace *xnamespace* with your OCI namespace and *xbucket* with your file upload bucket where documents will be temporarily uploaded for AI analysis
 
     Create Package Body
 
@@ -304,8 +304,7 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     l_response := apex_web_service.make_rest_request 
     (p_url                  => UTL_URL.ESCAPE(x_object_store_url), 
         p_http_method          => 'PUT', 
-        p_body_blob            => p_file_blob, 
-        --p_credential_static_id => GC_WC_CREDENTIAL_ID); 
+        p_body_blob            => p_file_blob,  
         p_credential_static_id => GC_WC_CREDENTIAL_ID); 
     
     IF apex_web_service.g_status_code != 200 then 
@@ -316,9 +315,8 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     RAISE; 
     END put_file; 
     
-    -------------------------------------------------------------------------------- 
-    
-    -------------------------------------------------------------------------------- 
+    --------------------------------------------------------------- 
+    ---------------------------------------------------------------  
     PROCEDURE upload_file 
     (p_apex_file_name    IN VARCHAR2, 
     x_file_name        OUT VARCHAR2, 
@@ -359,8 +357,8 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     RAISE; 
     END upload_file; 
     
-    -------------------------------------------------------------------------------- 
-    -------------------------------------------------------------------------------- 
+    --------------------------------------------------------------- 
+    --------------------------------------------------------------- 
     PROCEDURE document_ai 
     (p_file_name   IN VARCHAR2, 
     p_document_id IN document_ai_docs.document_id%TYPE) IS 
@@ -437,8 +435,8 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     RAISE; 
     END document_ai; 
     
-    -------------------------------------------------------------------------------- 
-    -------------------------------------------------------------------------------- 
+    --------------------------------------------------------------- 
+    --------------------------------------------------------------- 
     PROCEDURE process_file 
     (p_apex_file_name  IN VARCHAR2, 
     x_document_id    OUT document_ai_docs.document_id%TYPE) IS 
@@ -464,8 +462,8 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     RAISE; 
     END process_file; 
     
-    -------------------------------------------------------------------------------- 
-    -------------------------------------------------------------------------------- 
+    --------------------------------------------------------------- 
+    --------------------------------------------------------------- 
     FUNCTION get_file (p_request_url IN VARCHAR2) RETURN BLOB IS 
     
     l_file_blob           BLOB; 
@@ -488,8 +486,8 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     RAISE; 
     END get_file; 
     
-    -------------------------------------------------------------------------------- 
-    -------------------------------------------------------------------------------- 
+    --------------------------------------------------------------- 
+    --------------------------------------------------------------- 
     PROCEDURE render_document 
     (x_document_id  IN document_ai_docs.document_id%TYPE) IS 
     
@@ -531,63 +529,60 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
 
 In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can also use the regular file upload page item.
 
-1. Apex
+1. In APEX Page. Onclick of submit button invoke Apex **Process** by name **process file**
 
-![Navigate to Vision](images/file-upload.png " ") 
- 
-Onclick of submit button invoke Apex **Process** by name **process file**
+    ![Navigate to Vision](images/file-upload.png " ") 
+  
+2. This will invoke the PL/SQL procedure passing the document id and filename of uploaded file.
 
-This will invoke the PL/SQL procedure passing the document id and filename of uploaded file.
+    ![Navigate to Vision](images/submit-button.png " ")
 
-![Navigate to Vision](images/submit-button.png " ")
+    ```sql
+    <copy>
+    BEGIN
+    document_ai_pk.process_file (p_apex_file_name => :P23_RECEIPT_FILE, x_document_id => :P23_DOCUMENT_ID); 
+    END;  
+    </copy>
+    ```  
 
-```sql
-<copy>
-BEGIN
-  document_ai_pk.process_file (p_apex_file_name => :P23_RECEIPT_FILE, x_document_id => :P23_DOCUMENT_ID); 
-END;  
-</copy>
-```
- 
-
-![Navigate to Vision](images/edit-page.png " ")
+    ![Navigate to Vision](images/edit-page.png " ")
 
 ## Task 7: Create Custom reports to display key value pairs and document features
 
-From the JSON response received from Document Understanding AI service, this reponse is written into a table and JSON is parsed, create 2 custom reports with following queries to display the result of document processed.
+1. From the JSON response received from Document Understanding AI service, this reponse is written into a table and JSON is parsed, create 2 custom reports with following queries to display the result of document processed.
 
-![Navigate to Vision](images/custom-reports.png " ")
+    ![Navigate to Vision](images/custom-reports.png " ")
 
-Custom report query for Receipt Attributes
+2. Custom report query for Receipt Attributes
 
-```sql
-<copy>
-SELECT file_name
-,      mime_type
-,      language_code
-,      TO_CHAR(ROUND(language_score * 100 ,1),'fm999.0') || '%' language_score
-,      INITCAP(document_type_code) document_type
-,      TO_CHAR(ROUND(document_type_score * 100,1),'fm999.0') || '%' document_type_score
-,      page_count
-FROM   document_ai_docs
-WHERE  document_id = :P5_DOCUMENT_ID
-</copy>
-```
+    ```sql
+    <copy>
+    SELECT file_name
+    ,      mime_type
+    ,      language_code
+    ,      TO_CHAR(ROUND(language_score * 100 ,1),'fm999.0') || '%' language_score
+    ,      INITCAP(document_type_code) document_type
+    ,      TO_CHAR(ROUND(document_type_score * 100,1),'fm999.0') || '%' document_type_score
+    ,      page_count
+    FROM   document_ai_docs
+    WHERE  document_id = :P5_DOCUMENT_ID
+    </copy>
+    ```
 
-Custom report query for Field Labels
+3. Custom report query for Field Labels
 
-```sql
-<copy>
-SELECT field_label
-,      ROUND(label_score * 100,0) label_score
-,      field_value
-FROM   document_ai_fields
-WHERE  document_id = :P5_DOCUMENT_ID
-ORDER BY field_label 
-</copy>
-```
+    ```sql
+    <copy>
+    SELECT field_label
+    ,      ROUND(label_score * 100,0) label_score
+    ,      field_value
+    FROM   document_ai_fields
+    WHERE  document_id = :P5_DOCUMENT_ID
+    ORDER BY field_label 
+    </copy>
+    ```
 
-where P5\_DOCUMENT\_ID is page item of document id of uploaded document.
+    where P5\_DOCUMENT\_ID is page item of document id of uploaded document.
  
 ## Task 8: Create Oracle Apex Page to Upload file and display results
  
@@ -595,15 +590,15 @@ Upload the file verify the document properties where image is converted into tex
 
 1. Upload Sample image file 
 
-![Navigate to Vision](images/city.jpeg " ")
+    ![Navigate to Vision](images/city.jpeg " ")
 
-View other uploaded receipts
+2. View other uploaded receipts
 
-![Navigate to Vision](images/medical-docs.png " ")
+    ![Navigate to Vision](images/medical-docs.png " ")
 
-View response
+3. View response
 
-![Navigate to Vision](images/medical-docs2.png " ")
+    ![Navigate to Vision](images/medical-docs2.png " ")
   
 This concludes this lab and you can **proceed to the next lab**.
 

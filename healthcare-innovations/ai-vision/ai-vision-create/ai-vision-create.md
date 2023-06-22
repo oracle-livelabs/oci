@@ -28,41 +28,43 @@ This lab assumes you have:
 
 ## Task 1: Data Preparation by Classifying Images. 
 
-Download the Breast Cancer Detection Dataset from any of your favourite repositories.
+1. Download the Breast Cancer Detection Dataset from any of your favourite repositories.
 
-Create folder **XRayBreastCancer** under this, create two folders **NORMAL\_BREAST** and **BREAST\_WITH\_CANCER**, and place the files in their respective folder
- 
-![Raw Images Breast Cancer](images/breast-cancer.png " ")
- 
-Images with Normal Breast
+2. Create folder **XRayBreastCancer** under this, create two folders **NORMAL\_BREAST** and **BREAST\_WITH\_CANCER**, and place the files in their respective folder
 
-![Raw Images Normal Breast](images/normal-breast.png " ")
+3. Images with Breast Cancer
+
+    ![Raw Images Breast Cancer](images/breast-cancer.png " ")
+
+4. Images with Normal Breast
+
+    ![Raw Images Normal Breast](images/normal-breast.png " ")
  
 ## Task 2: Load images to Object Storage using OCI CLI
 
-Upload images from main folder into OCI Object storage, subfolders will be automatically created
+1. Upload images from main folder into OCI Object storage, subfolders will be automatically created
 
-```text
-<copy>oci os object bulk-upload --namespace < namespace > -bn < bucket_name > --src-dir < local folder > --overwrite --content-type 'image/*'</copy>
-```
+    ```text
+    <copy>oci os object bulk-upload --namespace < namespace > -bn < bucket_name > --src-dir < local folder > --overwrite --content-type 'image/*'</copy>
+    ```
 
-Replace namespace, bucket_name and local folder as per your settings, for example
+2. Replace namespace, bucket_name and local folder as per your settings, for example
 
-```text
-<copy>oci os object bulk-upload --namespace mytenancyname -bn X-Rays-BreastCancer-for-Training --src-dir /Users/myuser/XRayBreastCancer --overwrite --content-type 'image/*'</copy>
-```
+    ```text
+    <copy>oci os object bulk-upload --namespace mytenancyname -bn X-Rays-BreastCancer-for-Training --src-dir /Users/myuser/XRayBreastCancer --overwrite --content-type 'image/*'</copy>
+    ```
  
 ## Task 3: Verify images are correctly loaded
 
-You can now verify the objects in the bucket by using OCI CLI or just by accessing the bucket in the OCI console. delete any hidden files like .DS files which get uploaded if you are using macOS
+1. You can now verify the objects in the bucket by using OCI CLI or just by accessing the bucket in the OCI console. delete any hidden files like .DS files which get uploaded if you are using macOS
 
- ```text
-<copy>oci os object list --namespace <object_storage_namespace> --bucket-name <bucket_name></copy>
-```
+    ```text
+    <copy>oci os object list --namespace <object_storage_namespace> --bucket-name <bucket_name></copy>
+    ```
 
-On OCI Console under Bucket that you have created, you can view the newly created folders and files
+2. On OCI Console under Bucket that you have created, you can view the newly created folders and files
 
-![View folders](images/breast-cancer-bucket.png " ")
+    ![View folders](images/breast-cancer-bucket.png " ")
  
 This concludes this lab. You can **proceed now to the next lab**.
 

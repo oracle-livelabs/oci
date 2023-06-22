@@ -34,21 +34,15 @@ Basic data labeling tool is provided within OCI. With this data labeling tool, y
 
 But before you continue, you need to perform the first step, **Create Dataset** based on your object storage based image library.
 
-1. Navigate to Data Labeling page
-
-    From the **Navigator** menu select **Analytics & AI** and then **Data Labeling**.
+1. Navigate to Data Labeling page. From the **Navigator** menu select **Analytics & AI** and then **Data Labeling**.
 
     ![Navigate to Data Labeling](images/data-label.png " ")
 
-2. Go to datasets
-
-    Click on **Datasets** link under **Data Labeling** on the left side of the page.
+2. Go to datasets. Click on **Datasets** link under **Data Labeling** on the left side of the page.
 
     ![Open Datasets page](images/open-datasets-page.png " ")
 
-3. Create a new dataset
-
-    This will open **Dataset list** page in selected compartment (make sure you are in correct compartment as you might need to change compartment to the one you've created for this workshop).
+3. Create a new dataset. This will open **Dataset list** page in selected compartment (make sure you are in correct compartment as you might need to change compartment to the one you've created for this workshop).
 
     Make sure you've selected your compartment where your image library resides, click **Create dataset**.
 
@@ -60,39 +54,33 @@ But before you continue, you need to perform the first step, **Create Dataset** 
 
     First, **Name** your dataset and optionally add **Description** and provide **Labeling instructions**
   
-    Click *Images* from **Dataset format** and *Single label* for **Annotation class**.
+4. Click *Images* from **Dataset format** and *Single label* for **Annotation class**.
   
     ![Create a new dataset](images/create-bc-dataset-2.png " ")
 
     Enter two labels: **BREAST\_WITH\_CANCER**, **NORMAL\_BREAST** in **Labels set** field.
 
-    Click **Next**
+5. Click **Next** and Review the details provided and click **Create**
 
     ![Create a new dataset](images/create-bc-dataset-3.png " ")
-
-    Review the details provided and click **Create**
-
+ 
     ![Create a new dataset](images/create-bc-dataset-4.png " ")
  
 ## Task 2: Bulk image labeling
 
-We have 5000+ images to label. This is too much to label images manually, hence we will use a python program to label images programmatically.
+1. We have 5000+ images to label. This is too much to label images manually, hence we will use a python program to label images programmatically.
 
-Oracle provides code which can be adjusted and used in your specific case. You can find the *original code* on [Github](https://github.com/oracle-samples/oci-data-science-ai-samples/tree/master/data_labeling_examples).
+2. Oracle provides code which can be adjusted and used in your specific case. You can find the *original code* on [Github](https://github.com/oracle-samples/oci-data-science-ai-samples/tree/master/data_labeling_examples).
 
-![Data labeling examples on Github](./images/data-labeling-examples.png " ")
+    ![Data labeling on Github](./images/data-labeling-examples.png " ")
 
-For the purpose of this labe, we have used original python code and adjusted it already to this workshop requirements. You will upload this adjusted code to your OCI environment and run bulk image labeling from there.
+3. Download python code. [lab2.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/b1_vZe_9llVqw_oTDq-SQyRrkDshcuABTHc6QuUDG984jfUi0mbk5x7pOZ7mPDPh/n/c4u04/b/livelabsfiles/o/partner-solutions/oas-and-vision/lab2.zip) to your computer.
 
-1. Download python code.
+4. Extract the zip file, it creates a folder structure similar 
 
-    Download [lab2.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/b1_vZe_9llVqw_oTDq-SQyRrkDshcuABTHc6QuUDG984jfUi0mbk5x7pOZ7mPDPh/n/c4u04/b/livelabsfiles/o/partner-solutions/oas-and-vision/lab2.zip) to your computer.
-
-    Extract the zip file, it creates a folder structure similar 
-
-    ![Lab2 ZIP file content and structure](images/view-extraction.png =60%x*)
+    ![extract structure](images/view-extraction.png =60%x*)
  
-2. Update config.py file with required configuration parameters
+5. Update config.py file with required configuration parameters
 
     In order to run the data labeling program properly, you need to make some changes in */data-labeling/config.py* and */.oci/config* files.
 
@@ -166,9 +154,7 @@ For the purpose of this labe, we have used original python code and adjusted it 
     </copy>
     ``` 
    
-3. Run bulk image labeling program 
-
-    You can finally start with bulk image labeling. Make sure you are in *data-labeling* folder in **Cloud Shell** and run *main.py*.
+6. You can finally start with bulk image labeling. Run *main.py*.
 
     ```text
     <copy>python3 main.py</copy>
@@ -182,11 +168,10 @@ For the purpose of this labe, we have used original python code and adjusted it 
 
     ![Data Labeling is completed](images/verify-bulklabel.png " ")
 
-    We can click on the image and update label if required or verify the label
+2. We can click on the image and update label if required or verify the label
 
     ![Data Labeling is completed](images/normal-label.png " ")
- 
-
+  
 This concludes this lab. You can **proceed to the next lab**.
 
 ## Learn More

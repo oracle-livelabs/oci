@@ -58,21 +58,21 @@ Other abnormalities include:
  
 ## Task 4: Normal Breast Mammogram
 
-Sample image of Normal Breast.
+1. Sample image of Normal Breast.
 
-![Women's Normal Breast 2020](images/normal-breast.png =30%x* )
+    ![Women's Normal Breast 2020](images/normal-breast.png =30%x* )
 
-![Women's Normal Breast 2020](images/normal-breast_131577.png =30%x* )
+    ![Women's Normal Breast 2020](images/normal-breast_131577.png =30%x* )
   
 ## Task 5: Breast Cancer Mammogram  
 
-Sample images of most likely Breast Cancer.
+1. Sample images of most likely Breast Cancer.
 
-![Women's Breast Cancer 2020](images/breast-cancer-1.png =30%x* )
+    ![Women's Breast Cancer 2020](images/breast-cancer-1.png =30%x* )
 
-![Women's Breast Cancer 2020](images/breast-cancer-2.png =30%x* )
+    ![Women's Breast Cancer 2020](images/breast-cancer-2.png =30%x* )
 
-![Women's Normal Breast 2020](images/breast-cancer.jpeg =30%x* )
+    ![Women's Normal Breast 2020](images/breast-cancer.jpeg =30%x* )
 
 You may now **proceed to the next lab**.
   
@@ -84,6 +84,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Contributors** - Bo English-Wiczling, Senior Direct, Program Management, Oracle Database 
+* **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database 
 * **Last Updated By/Date** - June 6th, 2023

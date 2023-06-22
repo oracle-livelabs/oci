@@ -31,34 +31,27 @@ This lab assumes you have:
 
 In the previous lab, you have labeled all images (records) in your dataset, which is prerequisite to start working with **Vision** service. In this lab, you will create your first **vision**, image classification, model and you will run some tests to confirm it is working properly.
 
-1. Navigate to Vision page
-
-    Using **Navigator** (on the left) navigate to **Analytics & AI** and then choose **Vision**.
+1. Navigate to Vision page, Using **Navigator** (on the left) navigate to **Analytics & AI** and then choose **Vision**.
 
     ![Navigate to Vision](images/navigate-to-vision.png " ")
 
     ![Navigate to Vision](images/navigate-to-vision-2.png " ")
  
-2. Continue with AI Vision project setup
-
-    Click **Projects** on the left side menu list, confirm you are in correct **Compartment** and click **Create Project** provide project name and description.
+2. Continue with AI Vision project setup. Click **Projects** on the left side menu list, confirm you are in correct **Compartment** and click **Create Project** provide project name and description.
 
     ![Create a new project in Vision](images/create-bc-project.png " ")
  
-
 ## Task 2: Create and Train Vision Model
  
 1. Create a new AI Vision model
  
     Click **Create Model**, select model type as **Image classification**, under training data **choose existing dataset**
 
-    Under Data Source choose the dataset that we had created in our previous lab. click **Next**
+2. Under Data Source choose the dataset that we had created in our previous lab. click **Next**
 
     ![Create a new Vision model](images/select-data.png " ")
 
-2. Train model  
-
-    Provide the Model display name and description, training duration can be **Recommended mode**. 
+3. Train model. Provide the Model display name and description, training duration can be **Recommended mode**. 
     
     *Note: higher the number of images & higher the training duration better the AI model. Typically 2000+ images would create a good model. recommended mode completes in less than a few hours, around 2 to 3 hours for approx 2000 images*
 
@@ -66,7 +59,7 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 
     Click **Next** to proceed to the second step.
 
-    Review the settings, click on **Create and train** button
+4. Review the settings, click on **Create and train** button
 
     ![Create a new Vision model](images/review-data.png " ")
 
@@ -74,7 +67,7 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
     
     You can also monitor the progress by reviewing **Log Messages**.
  
-3. Evaluate your model
+5. Evaluate your model
 
     When model training is completed - **State** is *Succeeded* and **% Complete** is *100%*.
   
@@ -86,19 +79,16 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 
     ![Upload NORMAL image](images/bc-review-1.png " ")
 
-    Image will be uploaded and automatically analyzed. **Image** and prediction **Results** are displayed.  
+2. Image will be uploaded and automatically analyzed. **Image** and prediction **Results** are displayed.  
 
      ![Upload NORMAL image](images/bc-review-2.png " ")
   
-    You can repeat and perform prediction for one image which is clearly showing **BREAST\_CANCER** with **99% confidence**.
-
-    Repeat for any other images
+3. You can repeat and perform prediction for one image which is clearly showing **BREAST\_CANCER** with **99% confidence**. Repeat for any other images  
 
     ![Upload NORMAL image](images/bc-review-3.png " ")
 
     This is showing it is **NORMAL\_BREAST** with **76% confidence**.
-
-
+ 
     **Please Note:** As an alternative you can create a bucket upload the images to that bucket, get the par url and use **Object storage** radio button, this will also bring same result but request JSON will change for input source element.
  
 
@@ -175,5 +165,6 @@ Review Request and Response JSON this will be essential for us while building Ap
 * [OCI Vision](https://docs.oracle.com/en-us/iaas/vision/vision/using/home.htm)
 
 ## Acknowledgements
+
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
 * **Last Updated By/Date** - May 23rd, 2023.
