@@ -4,11 +4,11 @@
 
 There are four options for deploying MuShop. They range from manual (docker), automated (Helm) to fully automated (Terraform).
 
-![MuShop Deployment](images/mushop-deploy-options-helm.png)
+![MuShop Deployment](images/mushop_deploy_options_helm.png)
 
 Designing in microservices offers excellent separation concerns and provides developer independence.  While these benefits are clear, they can often introduce some complexity for the development environment.  Services support configurations that offer flexibility, when necessary, and establish parity as much as possible.  It is essential to use the same tools for development to production.
 
-![MuShop Deployment](images/mushop-diagram.png)
+![MuShop Deployment](images/mushop_diagram.png)
 *Note: This diagram contains services not covered by these labs.*
 
 Estimated Lab Time: 10 minutes
@@ -66,7 +66,7 @@ In this lab, you will:
     </copy>
     ````
 
-    ![MuShop Tree](images/mushop-code.png)
+    ![MuShop Tree](images/mushop_code.png)
 
     *./deploy:* Collection of application deployment resources
     *./src:* MuShop individual service code, Dockerfile, etc
@@ -169,7 +169,7 @@ Remembering that helm provides a way of packaging and deploying configurable cha
 
 1. Open to the MuShop Storefront by using your browser connecting to http://< EXTERNAL-IP >
 
-    ![MuShop Storefront](images/mushop-storefront.png)
+    ![MuShop Storefront](images/mushop_storefront.png)
 
 ## Task 4: Explore the deployed app
 
