@@ -4,7 +4,7 @@
 
 On this lab, you will create the required IAM Policies for Using Virtual Nodes, Update Network Security Lists and wait for full provisioning of the OKE cluster and the Virtual Node Pool.
 
-Estimated Lab Time: 25 minutes
+Estimated Time: 25 minutes
 
 ### Objectives
 

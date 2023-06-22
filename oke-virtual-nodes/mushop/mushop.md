@@ -11,7 +11,7 @@ Designing in microservices offers excellent separation concerns and provides dev
 ![MuShop Deployment](images/mushop_diagram.png)
 *Note: This diagram contains services not covered by these labs.*
 
-Estimated Lab Time: 10 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -30,11 +30,11 @@ In this lab, you will:
 
 1. On OCI Console, Top-Right, click the ![Cloud Shell Icon](images/oci_cloud_shell_icon.png) icon and select **Cloud Shell**.
 
-  ![Cloud Shell Access](images/oci_cloud_shell_access.png)
+    ![Cloud Shell Access](images/oci_cloud_shell_access.png)
 
-   > Note: For better terminal experience, you can maximize the Cloud Shell window by clicking the maximize icon on the top right of the Cloud Shell window.
+    > Note: For better terminal experience, you can maximize the Cloud Shell window by clicking the maximize icon on the top right of the Cloud Shell window.
 
-   ![Cloud Shell Maximize](images/oci_cloud_shell_maximize.png)
+    ![Cloud Shell Maximize](images/oci_cloud_shell_maximize.png)
 
 ## Task 2: Obtain MuShop source code
 
