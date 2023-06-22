@@ -12,7 +12,7 @@ Estimated time: 20 minutes
 * Identify application outages and resources that are down
 * Review open alarms by severity
 * Review the performance of resources across an enterprise
-* Dynamically investigate other key performance metrics
+* Investigate other key performance metrics on the fly
 
 ### Prerequisites
 
@@ -124,7 +124,7 @@ Estimated time: 20 minutes
 
  	![Host tier, highlighting the chart filesystem utilization with more than four records displayed](images/4-7-ent-sum.png " ")
 
-## Task 5: Dynamically investigate other key performance metrics
+## Task 5: Investigate other key performance metrics on the fly
 
 1. Review WebLogic JVM Memory Utilization
 
