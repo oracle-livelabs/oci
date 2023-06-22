@@ -2,9 +2,9 @@
 
 ## About this Workshop
 
-This introduction covers the complete "parent" workshop. Use this text to set up the story for the workshop. Be engaging - what will the learner get from spending their time on this workshop?
+In this lab we will walk you through how to set up Oracle Cloud connectivity to extend OCI into other cloud providers.
 
-Estimated Workshop Time: -- hours -- minutes (This estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
+Estimated Workshop Time: 60 minutes
 
 *You may add an option video, using this format: [](youtube:YouTube video id)*
 
@@ -15,10 +15,8 @@ Estimated Workshop Time: -- hours -- minutes (This estimate is for the entire wo
 *List objectives for the workshop*
 
 In this workshop, you will learn how to:
-* Provision
-* Setup
-* Load
-* Query
+* Configure Connectivity within OCI
+* Extend connectivity to other cloud providers
 
 ### Prerequisites (Optional)
 
@@ -27,6 +25,7 @@ In this workshop, you will learn how to:
 This lab assumes you have:
 * An Oracle account
 * All previous labs successfully completed
+* A cloud provider, such as Microsoft Azure, with the ability to privately connect to OCI.
 
 *This is the "fold" - below items are collapsed by default*
 
@@ -40,6 +39,6 @@ In general, the Introduction does not have Steps.
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
+* **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
 * **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, June 2023
