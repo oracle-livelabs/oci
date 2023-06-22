@@ -42,7 +42,7 @@ To sign in to the Console, you need the following:
 
 ## Reference Diagram
 
-![Reference Diagram](images/OracleCloudWorldTopology.jpg)
+![Reference Diagram](images/multicloud-topology.jpg)
 
 ## Deploy a Virtual Cloud Network (VCN)
 
@@ -55,14 +55,14 @@ Create a VCN on Oracle Cloud Infrastructure:
     <details>
     <summary>Click to reveal image</summary>
     
-    ![Setup a Network with a Wizard](images_vcn/setupVCN1.png)
+    ![Setup a Network with a Wizard](images-vcn/setupVCN1.png)
     </details>
 
 2. Select **VCN with Internet Connectivity**, and then click **Start VCN Wizard**.
     <details>
     <summary>Click to reveal image</summary>
 
-    ![Start VCN Wizard](images_vcn/setupVCN2.png)
+    ![Start VCN Wizard](images-vcn/setupVCN2.png)
     </details>
 
 3. Complete the following fields:
@@ -80,7 +80,7 @@ Create a VCN on Oracle Cloud Infrastructure:
     <details>
     <summary>Click to reveal image</summary>
 
-    ![Create a VCN Configuration|Foobar](images_vcn/setupVCN3.png)
+    ![Create a VCN Configuration|Foobar](images-vcn/setupVCN3.png)
     </details>
 
 4. Press the **Next** button at the bottom of the screen.
@@ -90,7 +90,7 @@ Create a VCN on Oracle Cloud Infrastructure:
     <details>
     <summary>Click to reveal image</summary>
 
-    ![Review CV Configuration](images_vcn/setupVCN4.png)
+    ![Review CV Configuration](images-vcn/setupVCN4.png)
     </details>
 
 6. Press the **Create** button to create the VCN. I will take a moment to create the VCN and a progress screen will keep you apprised of the workflow.
@@ -98,7 +98,7 @@ Create a VCN on Oracle Cloud Infrastructure:
     <details>
     <summary>Click to reveal image</summary>
 
-    ![Workflow](images_vcn/workflow.png)
+    ![Workflow](images-vcn/workflow.png)
     </details>
 
 7. Once you see that the creation is complete (see previous screenshot), click on the **View Virtual Cloud Network** button and verify that the VCN is in a "Provisioned" state.
@@ -108,7 +108,7 @@ Video of the VCN deployment process for your reference:
 <details>
 <summary>Click to reveal video</summary>
 
-<video src="files/1_VCN_Quickstart.mp4" controls title="Title"></video>
+<video src="files/1-vcn-quickstart.mp4" controls title="Title"></video>
 </details>
 
 ## Deploy a Dynamic Routing Gateway (DRG)
@@ -126,7 +126,7 @@ Video of the DRG deployment process for your reference:
 <details>
 <summary>Click to reveal video</summary>
 
-<video src="files/2_DRG_Buildout.mp4" controls title="Title"></video>
+<video src="files/2-drg-deployment.mp4" controls title="Title"></video>
 </details>
 
 ## Create a Private Connection with FastConnect
@@ -163,7 +163,7 @@ Video of the FastConnect deployment process for your reference:
 <details>
 <summary>Click to reveal video</summary>
 
-<video src="files/3_FastConnect_Deployment.mp4" controls title="Title"></video>
+<video src="files/3-fastconnect-deployment.mp4" controls title="Title"></video>
 </details>
 </details>
 
@@ -221,7 +221,7 @@ Log into the Virtual Machine with CloudShell
 <details>
 <summary>Click to reveal video</summary>
 
-<video src="files/4_CloudShell_and_Instance_Setup.mp4" controls title="Title"></video>
+<video src="files/4-cloudshell-and-instance-setup.mp4" controls title="Title"></video>
 </details>
 
 **TODO**
