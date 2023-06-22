@@ -12,7 +12,7 @@ Estimated Lab Time: 20 minutes
 
 In this lab, you will:
 * Prepare CloudShell
-* Launch a Virtual Machine in the VCN created in Lab 1
+* Launch a Virtual Machine within the VCN created in Lab 1
 * Connect to the Virtual Machine
 * Test Connectivity
 
