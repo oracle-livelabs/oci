@@ -31,131 +31,151 @@ This lab assumes you have:
 
 ## Task 1: Create Oracle Analytics Cloud Instance
  
-Login to cloud.oracl.com from the top left navigation select **Analytics & AI** and then select **Analytics** Cloud under **Analytics**
+1. Login to cloud.oracl.com from the top left navigation select **Analytics & AI** and then select **Analytics** Cloud under **Analytics**
  
-![Analytics Cloud](images/analytics-reports-1.png " ")
+    ![Analytics Cloud](images/analytics-reports-1.png " ")
 
-Click on **Create Instance**. Provide details such as Name, Description and OCPU
+2. Click on **Create Instance**. Provide details such as Name, Description and OCPU
 
-![Analytics Cloud](images/analytics-reports-2.png " ")
+    ![Analytics Cloud](images/analytics-reports-2.png " ")
 
-Select License Type and Edition
+3. Select License Type and Edition
 
-![Analytics Cloud](images/analytics-reports-3.png " ")
+    ![Analytics Cloud](images/analytics-reports-3.png " ")
 
-Once Analytics Instance is ready, click on **Access Information**
+4. Once Analytics Instance is ready, click on **Access Information**
 
-![Analytics Cloud](images/analytics-reports-4.png " ")
+    ![Analytics Cloud](images/analytics-reports-4.png " ")
 
-> **Note** 1: For Clinical Trials Dataset you can google search for *Clinical Trials Dataset* and choose the dataset of your choice. from CSV dataset file create table  
+    > **Note** 1: For Clinical Trials Dataset you can google search for *Clinical Trials Dataset* and choose the dataset of your choice. from CSV dataset file create table  
 
 ## Task 2: Log in to Oracle Analytics Cloud Instance
 
-Log in to Analytics Cloud Instance, Click on **Console**
+1. Log in to Analytics Cloud Instance, Click on **Console**
 
-![Analytics Cloud](images/analytics-reports-5.png " ")
+    ![Analytics Cloud](images/analytics-reports-5.png " ")
 
-Under **Safe Domain** provide your APEX Instance URL
+2. Under **Safe Domain** provide your APEX Instance URL
 
-![Analytics Cloud](images/analytics-reports-6.png " ")
+    ![Analytics Cloud](images/analytics-reports-6.png " ")
 
-Click on Connections Tab.
+3. Click on Connections Tab.
 
-![Analytics Cloud](images/analytics-reports-7.png " ")
+    ![Analytics Cloud](images/analytics-reports-7.png " ")
 
 ## Task 3: Setup Autonomous Database Connection
 
-![Analytics Cloud](images/analytics-reports-8.png " ")
+1. Setup Autonomous Database Connection
 
-Select **Oracle Autonomous Data Warehouse** button
+    ![Analytics Cloud](images/analytics-reports-8.png " ")
 
-![Analytics Cloud](images/analytics-reports-9.png " ")
+2. Select **Oracle Autonomous Data Warehouse** button
 
-Provide Database Connection Details and Upload Database Wallet, Encryption type can be **Mutual TLS**
+    ![Analytics Cloud](images/analytics-reports-9.png " ")
 
-![Analytics Cloud](images/analytics-reports-10.png " ")
+3. Provide Database Connection Details and Upload Database Wallet, Encryption type can be **Mutual TLS**
 
-You can also add additional report users, if required.
+    ![Analytics Cloud](images/analytics-reports-10.png " ")
 
-![Analytics Cloud](images/analytics-reports-11.png " ")
+    You can also add additional report users, if required.
+
+    ![Analytics Cloud](images/analytics-reports-11.png " ")
 
 ## Task 4: Create New Dataset from Table
 
-Click on create data set and you should be able to all the tables that the user has access to.
+1. Click on create data set and you should be able to all the tables that the user has access to.
 
-![Analytics Cloud](images/analytics-reports-12.png " ")
+    ![Analytics Cloud](images/analytics-reports-12.png " ")
 
 ## Task 5: Create Data Visualization
 
-Create workbook, where you can drag and drop database columns to create different types of Visualization
+1. Create workbook, where you can drag and drop database columns to create different types of Visualization
 
-![Analytics Cloud](images/analytics-reports-19.png " ")
+    ![Analytics Cloud](images/analytics-reports-19.png " ")
 
-![Analytics Cloud](images/analytics-reports-20.png " ")
+    ![Analytics Cloud](images/analytics-reports-20.png " ")
 
-Click on **Developer** Option under extreme right menu
+2. Click on **Developer** Option under extreme right menu
 
-![Analytics Cloud](images/analytics-reports-21.png " ")
+    ![Analytics Cloud](images/analytics-reports-21.png " ")
 
 ## Task 6: View reports in Designer Mode
 
-You can click on **Data Insights** that can generate various visualizations or you can create your own visualizations
+1. You can click on **Data Insights** that can generate various visualizations or you can create your own visualizations
  
-![Analytics Cloud](images/analytics-reports-13.png " ")
+    ![Analytics Cloud](images/analytics-reports-13.png " ")
 
-![Analytics Cloud](images/analytics-reports-14.png " ")
+    Report Canvas 1
 
-![Analytics Cloud](images/analytics-reports-15.png " ")
+    ![Analytics Cloud](images/analytics-reports-14.png " ")
 
-![Analytics Cloud](images/analytics-reports-16.png " ")
+    Report Canvas 2
 
-![Analytics Cloud](images/analytics-reports-17.png " ")
+    ![Analytics Cloud](images/analytics-reports-15.png " ")
 
-![Analytics Cloud](images/analytics-reports-18.png " ")
+    Report Canvas 3
+
+    ![Analytics Cloud](images/analytics-reports-16.png " ")
+
+    Report Canvas 4
+
+    ![Analytics Cloud](images/analytics-reports-17.png " ")
+
+    Report Canvas 5
+
+    ![Analytics Cloud](images/analytics-reports-18.png " ")
 
 ## Task 7: Copy Analytics Report Embed URLs 
 
-Copy Analytics Report Embed URLs when you click on **Developer** Option
+1. Copy Analytics Report Embed URLs when you click on **Developer** Option
 
-![Analytics Cloud](images/analytics-reports-22.png " ")
+    Copy Script URL
 
-![Analytics Cloud](images/analytics-reports-23.png " ")
+    ![Analytics Cloud](images/analytics-reports-22.png " ")
 
-![Analytics Cloud](images/analytics-reports-24.png " ")
+    Copy Report Canvas Embed URL 
 
-![Analytics Cloud](images/analytics-reports-25.png " ")
+    ![Analytics Cloud](images/analytics-reports-23.png " ")
+
+2. Review and Add other Insights
+
+    ![Analytics Cloud](images/analytics-reports-24.png " ")
+
+    Review and Add other Insights
+
+    ![Analytics Cloud](images/analytics-reports-25.png " ")
 
 ## Task 8: Embed Reports in APEX Application
 
-Add HTML code snippet in the APEX Application region, Add project path as shown below.
+1. Add HTML code snippet in the APEX Application region, Add project path as shown below.
 
-```html
-<copy>
-    <div style="width:100%;height:1200px" >
-    <oracle-dv 
-    project-path="/@Catalog/users/username/foldername/Clinical-Dataset-Workbook" >
-    </oracle-dv>
-    </div>
-</copy>
-```
+    ```html
+    <copy>
+        <div style="width:100%;height:1200px" >
+        <oracle-dv 
+        project-path="/@Catalog/users/username/foldername/Clinical-Dataset-Workbook" >
+        </oracle-dv>
+        </div>
+    </copy>
+    ```
 
-![Analytics Cloud](images/analytics-reports-28.png " ")
+    ![Analytics Cloud](images/analytics-reports-28.png " ")
 
-Add Call to embedding.js
+2. Add Call to embedding.js
 
-```html
-<copy>
-https://yourinstance.analytics.ocp.oraclecloud.com/public/dv/v1/embedding/standalone/embedding.js
-</copy>
-```
+    ```html
+    <copy>
+    https://yourinstance.analytics.ocp.oraclecloud.com/public/dv/v1/embedding/standalone/embedding.js
+    </copy>
+    ```
 
-Run the APEX Page to view Oracle Analytics Reports
+3. Run the APEX Page to view Oracle Analytics Reports
 
-![Analytics Cloud](images/analytics-reports-29.png " ")
+    ![Analytics Cloud](images/analytics-reports-29.png " ")
 
-![Analytics Cloud](images/analytics-reports-26.png " ")
+    ![Analytics Cloud](images/analytics-reports-26.png " ")
 
-![Analytics Cloud](images/analytics-reports-27.png " ")
+    ![Analytics Cloud](images/analytics-reports-27.png " ")
 
 This concludes this lab and you can **proceed to the next lab**.
 
