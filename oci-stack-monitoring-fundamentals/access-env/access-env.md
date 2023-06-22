@@ -1,4 +1,4 @@
-# Accessing the Workshop environment
+# Access the Workshop environment
 
 ## Introduction
 
