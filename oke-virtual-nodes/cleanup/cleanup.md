@@ -43,11 +43,11 @@ Estimated Time: 10 minutes
 
 1. Delete the OKE Cluster
 
-![Delete Kubernetes Clusters](images/oke-delete-cluster.png " ")
+![Delete Kubernetes Clusters](images/oke-delete-cluster.png)
 
 1. Confirm
 
-![Confirm delete Kubernetes Clusters](images/oke-delete-cluster-confirm.png " ")
+![Confirm delete Kubernetes Clusters](images/oke-delete-cluster-confirm.png)
 
 This action will delete the Kubernetes Cluster and the Node Pool, terminating the worker nodes Compute Instances
 

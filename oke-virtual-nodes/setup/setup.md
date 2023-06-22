@@ -180,8 +180,8 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [Required IAM Policies for Using Virtual Nodes](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengvirtualnodes-Required_IAM_Policies.htm)
+* [Using Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/devcloudshellgettingstarted.htm)
 
 ## Acknowledgements
 

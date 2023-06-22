@@ -1,4 +1,4 @@
-# Provisioning Oracle Container Engine for Kubernetes (OKE) with Virtual Nodes
+# Provision of Oracle Container Engine for Kubernetes (OKE) with Virtual Nodes
 
 ## Introduction
 
@@ -88,7 +88,6 @@ You may now **proceed to the next lab**.
 ## Learn More
 
 * [Comparing Virtual Nodes with Managed Nodes](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengcomparingvirtualwithmanagednodes_topic.htm#contengusingvirtualormanagednodes_topic)
-* [Required IAM Policies for Using Virtual Nodes](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengvirtualnodes-Required_IAM_Policies.htm)
 
 ## Acknowledgements
 
