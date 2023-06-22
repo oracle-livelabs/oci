@@ -25,7 +25,7 @@ This lab assumes you have:
 * An Oracle account
 * Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
 
-## AI for Healthcare - Table of Contents
+### AI for Healthcare - Table of Contents
 
 *Common Labs - Introduction Lab to Lab 3*
 
