@@ -69,7 +69,7 @@ Estimated time: 15 minutes
 
 	![Host resource promotion page, highlighting Resource discovery menu link](images/2-4-discovery.png " ")
 
-## Task 3: Discover the Oracle Database
+## Task 3: Discover an Oracle Database
 
 1. Discover the database that contains the EBS application schema
 
@@ -95,7 +95,7 @@ Estimated time: 15 minutes
 
 Once all of the fields are completed, once again click **Cancel**. 
 
-## Task 4: Discover the E-Business Suite Application
+## Task 4: Discover an E-Business Suite Application
 
 1. Complete an EBS discovery
 

@@ -1,4 +1,4 @@
-# Applying what you have learned
+# Apply what you have learned
 
 ## Introduction
 

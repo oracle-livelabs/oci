@@ -1,4 +1,4 @@
-# Viewing and Creating Alarms
+# How to View and Create Alarms
 
 ## Introduction
 
