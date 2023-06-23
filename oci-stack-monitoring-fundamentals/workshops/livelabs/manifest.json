@@ -1,6 +1,6 @@
 {
   "workshoptitle": "Get started with Oracle Stack Monitoring",
-	"help": "livelabs-help-em_us@oracle.com",
+    "help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
@@ -13,7 +13,7 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Accessing the workshop environment",
+            "title": "Lab 1: Access the workshop environment",
             "description": "Access the Stack Monitoring workshop environment",
             "filename": "../../access-env/access-env.md"
         },
@@ -33,13 +33,13 @@
             "filename": "../../discovery/discovery.md"
         },
         {
-            "title": "Lab 5: Viewing and Creating Alarms",
-            "description": "Review Stack Monitoring's Resource Discovery Process",
+            "title": "Lab 5: View and Create Alarms",
+            "description": "View and Create an Alarm",
             "filename": "../../alarms/alarms.md"
         },
         {
-            "title": "Lab 6: Putting it all together",
-            "description": "Get to know Stack Monitoring's Resource Homepages",
+            "title": "Lab 6: Apply what you have learned",
+            "description": "Apply lessons learned in previous labs to troubleshoot a Concurrent Manager",
             "filename": "../../together/together.md"
         },
         {
