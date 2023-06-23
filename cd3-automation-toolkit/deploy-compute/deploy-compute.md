@@ -4,17 +4,20 @@
 
 This is a continuation of the lab 2 : [Setup the CD3 toolkit](/cd3-automation-toolkit/Setup%20the%20Toolkit/setup_the_toolkit.md)
 
-As a recap, in the previous lab we cloned the cd3 repo, built an image, executed the CD3 container and connected it to the OCI tenancy. We were able to see the customer specific files getting generated in the outdirectory.
+As a recap, in the previous lab we cloned the cd3 repo, built an image, executed the CD3 container and connected it to the OCI tenancy. 
 
-Estimated lab time: 30 minutes
 
 ### Objectives
 
 In this lab, you will:
 
 - Add required parameter values for Compartments, VCN, Subnets, Compute, Block Volume, ATP to the Excel file.
-- Execute the setUpOCI.py script to generate terraform files.
-- Execute Terraform commands from the respective service folders. 
+- Execute the *setUpOCI.py* script to generate terraform files.
+- Execute terraform commands from the respective service folders. 
+
+<br>
+
+Estimated lab time: 30 minutes
 
 ### Prerequisites
 
@@ -33,7 +36,7 @@ In this lab, you will:
 
 3. __Add details for Compartment:__
 
-  - Open the "Compartments" tab and add your compartment data with below image as example.
+  - Open the **"Compartments"** tab and add your compartment data with below image as example.
 
    - If the parent compartment is not under root directly, then provide it in the below format:
 
@@ -46,11 +49,11 @@ Refer to the below image as example:
 
 4. __Add details for the VCN:__
 
-  - Navigate to "VCNs" sheet and create a VCN with the following details:
+  - Navigate to **"VCNs"** sheet and create a VCN with the following details:
 
   - Compartment name format: *parent_compartment1::parent_compartment2::child_compartmemt*
 
-    VCN: cd3_vcn
+    Name: cd3_vcn
 
     CIDR: 10.110.0.0/24
 
@@ -60,7 +63,7 @@ Refer to the below image as example:
 
 5. __Add DHCP details for cd3_vcn__
 
-   - Navigate to "DHCP" sheet and create DHCP Options with the following details:
+   - Navigate to **"DHCP"** sheet and create DHCP Options with the following details:
 
    - VCN: cd3_vcn
 
@@ -76,12 +79,12 @@ Refer to the below image as example:
 
 6. __Add details for creating Subnets in cd3_vcn__
 
-   - Navigate to "SubnetsVLANs" sheet and create subnets with the following details:
+   - Navigate to **"SubnetsVLANs"** sheet and create subnets with the following details:
 
 
-   - subnet1: public subnet: CIDR- 10.110.0.0/26 : Route table: RT1, Security list: SL1, Route to IGW.
+   - Name: subnet1, public subnet, CIDR: 10.110.0.0/26, Route table: RT1, Security list: SL1, Route to IGW.
 
-     subnet2: private subnet: CIDR- 10.110.0.64/26 : Route table: RT2, Security list: SL2, Route to NGW.
+     Name: subnet2, private subnet, CIDR: 10.110.0.64/26, Route table: RT2, Security list: SL2, Route to NGW.
 
   Refer to the below image as example:
 
@@ -89,12 +92,12 @@ Refer to the below image as example:
 
 7. __Add details for Route rules__
 
-  - Navigate to "RouteRulesinOCI" sheet and create Route rules with following details:
+  - Navigate to **"RouteRulesinOCI"** sheet and create Route rules with following details:
 
 
-  - RT1: Target-igw_destination (fixed value for Internet Gateway target), Destination type: CIDR, Destination CIDR: 0.0.0.0/0
+  - Name: RT1, Target:cd3_vcn_igw, Destination type: CIDR, Destination CIDR: 0.0.0.0/0
 
-    RT2: Target-ngw_destination(fixed value for NAT Gateway target), Destination type: CIDR, Destination CIDR: 0.0.0.0/0
+    Name: RT2, Target:cd3_vcn_ngw, Destination type: CIDR, Destination CIDR: 0.0.0.0/0
 
   Refer to the below image as example:
 
@@ -102,12 +105,12 @@ Refer to the below image as example:
 
 8. __Add details for Security rules__
 
-   - Navigate to "SecRulesOCI" sheet and create Security rules with following details:
+   - Navigate to **"SecRulesOCI"** sheet and create Security rules with following details:
 
 
-   - SL1: STATEFUL: INGRESS: TCP: Source- 0.0.0.0/0, Destination port - 22
+   - Name: SL1, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 22
 
-     SL2: STATEFUL: INGRESS: TCP: Source- 0.0.0.0/0, Destination port - 1521, 1522
+     Name: SL2, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 1521, 1522
 
   Refer to the below image as example:
 
@@ -116,21 +119,40 @@ Refer to the below image as example:
 9. __Add details for Compute VM__
 
 
-   - Navigate to "Instances" sheet and create a Compute Instance with below details:
+   - Navigate to **"Instances"** sheet and create a Compute Instance with below details:
 
+   - We will provision an **always-free** Instance in this lab.
 
-   - cd3_vm: subnet-cd3_vcn_subnet1 (vcn_subnet): image::Linux , VM.Standard.E3.Flex::2, ssh_public_key
+   - Name: cd3_vm, subnet: cd3_vcn_subnet1 (format: *vcnname_subnetname*), Source details- image::Linux , shape: VM.Standard.E3.Flex::2, ssh_public_key to ssh into the instance,
 
 > Note: To add SSH keys to the vm, place them in **variables.tf** under *ssh_public_key* variable.
+
+ __Creating a simple web application__
+
+   - Create a column **"Cloud Init Script"** in the **Instances** sheet before the *defined tags* column and enter its value as "web.sh" in the same row with cd3_vm instance details.
+   - Create a bash file "web.sh" under /cd3user/tenancies/<customer_name>/terraform_files/<region_name>/compute/scripts.
+   - Copy below sample script to enable Apache on the instance.
+
+          #!/bin/bash
+          sudo yum install -y httpd
+          sudo systemctl enable httpd
+          sudo systemctl restart httpd
+          sudo systemctl stop firewalld
+          sudo systemctl disable firewalld
+          sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+          sudo iptables-save
+
+
 
   Refer to the below image as example:
   ![vm](/cd3-automation-toolkit/deploy-compute/images/vm.png)
 
+
 10. __Add details for Block Volumes__
 
-   - Navigate to "Block Volumes" sheet and create a Block Volume with below details:
+   - Navigate to **"Block Volumes"** sheet and create a Block Volume with below details:
 
-   - cd3_blockvolume: 20 VPUs per GB, 150GB size, attached to cd3_vm using paravirtualized mode.
+   - cd3_blockvolume: 20 VPUs per GB, 150GB size, attached to *cd3_vm* using paravirtualized mode.
 
   Refer to the below image as example:
 
@@ -138,8 +160,9 @@ Refer to the below image as example:
 
 11. __Add details for ATP__
 
-   - Navigate to "ADB" sheet and create an ATP service with the below details:
+   - Navigate to **"ADB"** sheet and create an ATP service with the below details:
 
+   - We will provision an **always-free** ATP for the lab.
 
    - cd3_ATP: subnet-cd3_vcn_subnet2, DB Name: adb123db, CPU Core Count-10, Data Storage Size in TB -100, LICENSE_INCLUDED.
 
