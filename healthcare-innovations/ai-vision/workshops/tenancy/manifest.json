@@ -93,7 +93,11 @@
       "filename": "../../analytics-reports/analytics-reports.md"
     },
     {
-      "title": "Lab 19: Setup OCI Email Delivery Service",
+      "title": "Lab 19: Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection",
+      "filename": "../../ai-anomaly-detection/ai-anomaly-detection.md"
+    },
+    {
+      "title": "Lab 20: Setup OCI Email Delivery Service",
       "filename": "../../oci-email/oci-email.md"
     },
     {
