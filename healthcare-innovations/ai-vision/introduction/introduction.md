@@ -244,10 +244,14 @@ Lung cancer includes two main types: non-small cell lung cancer and small cell l
 
 ![Mens's Lung Cancer 2020](images/lungcancer.png =50%x* )
 
+## Important
+
+This article provides a basic example of using OCI Vision and other AI services. This example is for illustration and demonstration purposes only and isn't intended to replace any medical imagery analysis tool or official diagnosis recommendation made by a professional. Users need to receive the proper regulated compliance and approvals before using for medical and diagnostic use.
+
 You may now **proceed to the next lab**.
     
 ## Acknowledgements
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
-* **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Direct, Program Management, Oracle Database 
+* **Advisor** - Bo English-Wiczling, Senior Direct, Program Management, Oracle Database 
 * **Last Updated By/Date** - June 24th, 2023
