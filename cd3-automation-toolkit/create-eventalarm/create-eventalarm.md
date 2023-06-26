@@ -21,7 +21,10 @@ The objectives of this lab are:
 
 - Add OCI Event Rule, Alarm and Notifications details in Excel spreadsheet.
 - Execute the setUpOCI.py script to generate Terraform files.
-- Execute Terraform commands from the respective service folder. 
+- Execute Terraform commands from the respective service folder.
+
+### Prerequisites
+Please follow the previous lab till the last step. Once you are able to provision OCI service, you are all set to continue with this lab.
 
 ## Task 1: Add OCI Event Rule, Alarm and Notifications in Excel Spreadsheet
 
