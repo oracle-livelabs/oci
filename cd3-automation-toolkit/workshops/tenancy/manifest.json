@@ -7,7 +7,7 @@
             "filename": "./../../setup-the-toolkit/setup-the-toolkit.md"
         },
         {
-            "title": "Lab 2: Deploy OCI Network, Compute, Block Volume with Autonomous Transaction Processing database",
+            "title": "Lab 2: Deploy OCI resources using CD3 Toolkit",
             "filename": "./../../deploy-compute/deploy-compute.md"
         },
         {
