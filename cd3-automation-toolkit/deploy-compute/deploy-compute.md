@@ -254,6 +254,8 @@ Under *Database*: Select- Option 3
 
 In this lab, we have learnt how to enter details in the CD3 Excel templates, execute setUpOCI.py to create terraform files and create OCI resources using those terraform files.
 
+You may now __proceed to the next lab__.
+
 ## Acknowledgements
 
 - __Author__ - Lasya Vadavalli
