@@ -18,10 +18,10 @@
             "title": "Lab 4: Uploading stack to OCI Resource Manager",
             "filename": "./../../upload-resourcemanager/upload-resourcemanager.md"
         },
-        {
+         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/need-help/need-help-livelabs.md"
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
         }
     ]
 }
