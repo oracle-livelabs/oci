@@ -17,7 +17,7 @@ In this lab, you will:
 
 <br>
 
-Estimated lab time: 30 minutes
+Estimated lab time: 20 minutes
 
 ### Prerequisites
 
@@ -30,10 +30,12 @@ Estimated lab time: 30 minutes
 
 > Note: Any template other than *CD3-CIS-ManagementServices-template* can be used to provision these services.
 
+<br>
 2. Refer to the blue section in each worksheet to fill the resource details in proper formats. Not all fields are mandatory. 
 
 > Note: Please fill resources data before the \<END> tag. Any data below the \<END> tag will not be processed.
 
+<br>
 3. __Add details for Compartment:__
 
   - Open the **"Compartments"** tab and add your compartment data with below image as example.
@@ -46,6 +48,8 @@ Estimated lab time: 30 minutes
 
 Refer to the below image as example:
 ![Compartment](/cd3-automation-toolkit/deploy-compute/images/compartment.png)
+
+<br>
 
 4. __Add details for the VCN:__
 
@@ -60,6 +64,8 @@ Refer to the below image as example:
     Refer to the below image as example:
 
    ![vcn](/cd3-automation-toolkit/deploy-compute/images/vcn.png)
+
+   <br>
 
 5. __Add DHCP details for cd3_vcn__
 
@@ -77,6 +83,8 @@ Refer to the below image as example:
 
    ![dhcp](/cd3-automation-toolkit/deploy-compute/images/dhcp.png)
 
+   <br>
+
 6. __Add details for creating Subnets in cd3_vcn__
 
    - Navigate to **"SubnetsVLANs"** sheet and create subnets with the following details:
@@ -89,6 +97,8 @@ Refer to the below image as example:
   Refer to the below image as example:
 
   ![subnets](/cd3-automation-toolkit/deploy-compute/images/subnets.png)
+
+  <br>
 
 7. __Add details for Route rules__
 
@@ -103,6 +113,8 @@ Refer to the below image as example:
 
    ![routerules](/cd3-automation-toolkit/deploy-compute/images/routerules.png)
 
+<br>
+
 8. __Add details for Security rules__
 
    - Navigate to **"SecRulesOCI"** sheet and create Security rules with following details:
@@ -115,6 +127,8 @@ Refer to the below image as example:
   Refer to the below image as example:
 
    ![secrule](/cd3-automation-toolkit/deploy-compute/images/secrules.png)
+
+   <br>
 
 9. __Add details for Compute VM__
 
@@ -142,12 +156,15 @@ Refer to the below image as example:
           sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
           sudo iptables-save
 
+ 
+>Note: Check logs under /var/lib/cloud/instance to ensure the correct data was passed.
 
+<br>
 
   Refer to the below image as example:
   ![vm](/cd3-automation-toolkit/deploy-compute/images/vm.png)
 
-
+<br>
 10. __Add details for Block Volumes__
 
    - Navigate to **"Block Volumes"** sheet and create a Block Volume with below details:
@@ -157,6 +174,8 @@ Refer to the below image as example:
   Refer to the below image as example:
 
    ![blockvolumes](/cd3-automation-toolkit/deploy-compute/images/blockvolume.png)
+
+   <br>
 
 11. __Add details for ATP__
 
