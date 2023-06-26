@@ -26,10 +26,17 @@ TENANCY_OCID = (SAMPLE) ocid1.tenancy.oc1..amaaaaaaaa
 COMPARTMENT_OCID = (SAMPLE) ocid1.compartment.oc1..amaaaaaaaa
 USER_OCID = (SAMPLE) ocid1.user.oc1..amaaaaaaaa
 AUTH_TOKEN = (SAMPLE)  X1232324_TGH
-PRIVATE_KEY = (SAMPLE)
+PRIVATE_KEY = (SAMPLE) file private_key.pem
+
+-----BEGIN PRIVATE KEY-----
+AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9sdfhkjdhf
+...
+-----END PRIVATE KEY-----
+
+PRIVATE_KEY_RSA_FORMAT = (SAMPLE) file private_key_rsa_format.pem
 
 -----BEGIN RSA PRIVATE KEY-----
-AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9sdfhkjdhf
+ABCDEpAIBAAKCAQEAxHbqmTFASn48FY8mVtVZoUUE5iixGFpcN6JSdHHaxtkqTbx2
 ...
 -----END RSA PRIVATE KEY-----
 
@@ -42,6 +49,8 @@ STREAM_USERNAME = (SAMPLE) tenancy/oracleidentitycloudservice/name@domain.com/oc
 
 OPENSEARCH_API_ENDPOINT = (SAMPLE) https://amaaaaaaaa.opensearch.eu-frankfurt-1.oci.oraclecloud.com:9200
 OPENSEARCH_HOST = (SAMPLE) amaaaaaaaa.opensearch.eu-frankfurt-1.oci.oraclecloud.com
+OPENSEARCH_USER = opensearch-user
+OPENSEARCH_PWD = (SAMPLE) LiveLab--123
 
 OIC_HOST = (SAMPLE) opensearch-oic-namespace-fr.integration.ocp.oraclecloud.com
 
@@ -270,9 +279,18 @@ Go the menu
 - Name: *opensearch-cluster*
 - Click *Next*
 
+![Menu Cluster](images/opensearch-cluster-security.png)
+
+On the second screen (Configure security), 
+- Username: *opensearch-user*
+- Password (for ex): *LiveLab--123*
+- Confirm Password: *LiveLab--123*
+
+After creating the compartment, copy the user/password in your text editor. *##OPENSEARCH\_USER##* and *##OPENSEARCH\_PWD##*. We will need them later.
+
 ![Create Cluster](images/opensearch-cluster2.png)
 
-On the second screen (configure nodes), 
+On the third screen (configure nodes), 
 - Keep the default: *Development*
 - Click *Next*
 
@@ -380,7 +398,7 @@ Then,
     - Path: */search*
     - Method: *ANY*
     - Backend-Type: *HTTP*
-    - URL: *https://##OPENSEARCH_HOST##:9200/oic/_search*
+    - URL: *https://##OPENSEARCH_HOST##:9200/oic/\_search*
         - ex: https://amaaaaaabbbbbbb.opensearch.eu-frankfurt-1.oci.oraclecloud.com:9200/oic/_search
     - Click *Next*
 - Then *Create*

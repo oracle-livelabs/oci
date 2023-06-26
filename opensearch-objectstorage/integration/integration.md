@@ -42,14 +42,14 @@ Go the menu
 
 First, we need data about your tenancy and user.
 - On the top, right, click *Tenancy: name*
-- Copy the tenancy OCID *##TENANCY_OCID##*
+- Copy the tenancy OCID *##TENANCY\_OCID##*
 
 ![Tenancy](images/opensearch-tenancy.png)
 
 Then, we need data about the user
 - On the top, right, click *Your username*
 - Copy the username *##USERNAME##* (without oracleidentitycloudservice )
-- Copy the user OCID *##USER OCID##*
+- Copy the user OCID *##USER\_OCID##*
 - Click on *API Keys*
 
 ![User](images/opensearch-user.png)
@@ -60,6 +60,23 @@ Then, we need data about the user
 - Copy the *##FINGERPRINT##*
 
 ![User API Keys](images/opensearch-user2.png)
+
+In your computer (NOT in cloud shell), you need to convert the PEM key to RSA format:
+- Run the below command 
+- And keep the ##PRIVATE\_KEY\_RSA\_FORMAT##
+
+```
+openssl rsa -in ##PRIVATE_KEY## -out ##PRIVATE_KEY_RSA_FORMAT##
+ex: openssl rsa -in private_key.pem -out private_key_rsa_format.pem
+````
+
+Double-check that the private\_key\_rsa_format.pem is really in RSA format like this:
+
+```
+-----BEGIN RSA PRIVATE KEY-----
+...
+-----END RSA PRIVATE KEY-----
+```
 
 ## Task 3: Create an Agent Group
 
@@ -225,7 +242,7 @@ Fill the Connection details:
     - ex: https://xxxx.eu-frankfurt-1.functions.oci.oraclecloud.com/20181201/functions/ocid1.fnfunc.oc1.eu-frankfurt-1.aaaaaaabbbbb
 - Tenancy OCID = *##TENANCY_OCID##*
 - User OCID = *##USER_OCID##*
-- Private KEY =  *##PRIVATE_KEY##*
+- Private KEY =  *##PRIVATE_KEY_RSA_FORMAT##*
 - Finger Print = *##FINGERPRINT##*
 - *Save / Test / Save* until 100%
 
@@ -237,6 +254,9 @@ Fill the Connection details:
 Fill the Connection details:
 - Connection URL = *##OPENSEARCH\_API\_ENDPOINT##*
     - ex: https://xxxx.eu-frankfurt-1.functions.oci.oraclecloud.com/20181201/functions/ocid1.fnfunc.oc1.eu-frankfurt-1.aaaaaaabbbbb
+- Security Policy: *Basic Authentication*
+- Username:  *##OPENSEARCH\_USER##* (ex: opensearch-user)
+- Password:  *##OPENSEARCH\_PWD##* (ex: LiveLab--123)
 - Agent Group: *OPENSEARCH\_AGENT\_GROUP*
 - *Save / Test / Save* until 100%
 
@@ -259,7 +279,7 @@ Then fill the Connection details:
     - ex: https://vision.aiservice.eu-frankfurt-1.oci.oraclecloud.com
 - Tenancy OCID = *##TENANCY_OCID##*
 - User OCID = *##USER_OCID##*
-- Private KEY =  *##PRIVATE_KEY##*
+- Private KEY =  *##PRIVATE_KEY_RSA_FORMAT##*
 - Finger Print = *##FINGERPRINT##*
 - *Save / Test / Save* until 100%
 

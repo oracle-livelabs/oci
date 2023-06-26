@@ -13,6 +13,8 @@ Estimated Lab Time: 20 minutes.
 - Validate East-West (Web to Database & Database to Web)
 - Validate East-West Traffic (Web & DB Application to Oracle Services Network)
 
+**Please Read:** For each traffic flow scenario, ensure that network address translation (NAT) and security policies are configured on the Firewalls. The currently supported **Flexible Network Load Balancer** use case requires that you enable **source NAT** on the firewalls from which traffic is exiting.
+
 ### Prerequisites
 
 - Oracle Cloud Infrastructure paid account credentials (User, Password, Tenant, and Compartment)
@@ -284,7 +286,7 @@ You may now [proceed to the next lab](#next).
 
 ## Acknowledgements
 
-- **Author** - Arun Poonia, Senior Solutions Architect
-- **Adapted by** - Cisco
+- **Author** - Arun Poonia, Principal Solutions Architect
+- **Adapted by** -  Cisco
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, August 2021
+- **Last Updated By/Date** - Arun Poonia, Oct 2022

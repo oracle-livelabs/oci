@@ -24,7 +24,7 @@ In this activity, you will:
 
     > Go to **Risk Management Cloud tab**, then click **‘Advanced Controls’**
 
-    ![isk Management Cloud](images/image001.png)
+    ![Risk Management Cloud](images/image001.png)
 
 
 2. 
@@ -41,7 +41,7 @@ In this activity, you will:
 
 4. 
 
-      > **Select** Results Count **‘51’** – to see results. Take note the number of results.
+      > **Select** Results Count **‘52’** (or whatever # is displayed) – to see results. Take note the number of results.
 
     ![Results Count](images/image004.png)
 

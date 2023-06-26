@@ -1,0 +1,13 @@
+{
+    "mediaWorkflowConfigurationIds": [],
+    "compartmentId": "{{compartment_ocid}}",
+    "mediaWorkflowName": "ingestWorkflow",
+    "workflowIdentifierType": "NAME",
+    "displayName": "display",
+    "parameters": {
+        "inputs": {
+            "mediaAssetId": "Update the Master Playlist Asset ID",
+            "distributionChannelId": "<< Update the Distribution Channel ID>>"
+        }
+    }
+}

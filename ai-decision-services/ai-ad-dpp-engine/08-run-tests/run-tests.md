@@ -20,7 +20,7 @@ The following steps can be used to verify the workflow or troubleshoot issues (i
 - If the Run moves to Failed status, check the stdout and stderr logs under the Logs tab. **NOTE**: the log may need a couple minutes to show up after the Run fails. Logs can also be downloaded from the log bucket in zip format.
 - During the Run, Processed data will be saved in CSV format in **staging-bucket** under the folder specified in the driver configuration file, in a subdirectory named **training\_processed_data\_\<current datetime\>**. See sample screenshot below.
 
-![](./images/Exp1.png)
+![](./images/exp1.png)
 
 - Once the Run succeeds, a new AD model should get trained successfully. 
   
@@ -44,7 +44,7 @@ The following steps can be used to verify the workflow or troubleshoot issues (i
 
 Details of the trained model such as FAP(False Alarm Probability) can be checked under **Anomaly Detection** or from the search panel.
 
-![](./images/Exp2.png)
+![](./images/exp2.png)
 
 ## 3. Run Inferencing Pipeline
 
@@ -56,7 +56,7 @@ Follow the instructions described in Step [2] (above) to monitor the pipeline an
 
 After a successful run, the results should be populated as shown in the screenshot below in the **output-bucket** under **inference_results**:
 
-![](./images/Exp3.png)
+![](./images/exp3.png)
 
 Download the CSV file to view and verify the anomaly detection results. When the sample test data set provided in section/lab is used for inference, AD Service output will be as shown below.
 
@@ -90,7 +90,7 @@ Download the CSV file to view and verify the anomaly detection results. When the
 ```
 The above result contains the estimated value of each data point along with its anomaly score. OCI Anomaly Detection results can also be visualized using OCI Console as shown below.
 
-![Visualization of Anomaly Detection result](./images/Exp4.jpg)
+![Visualization of Anomaly Detection result](./images/exp4.jpg)
 
 **Congratulations!**  You have successfully completed all labs in this workshop.
 

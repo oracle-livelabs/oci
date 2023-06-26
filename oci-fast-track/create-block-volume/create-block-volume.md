@@ -23,7 +23,6 @@ Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Clou
 
 - **Name**: block_vol500GB
 - **Create in Compartment**: `<seu-compartment>`
-- **Virtual Cloud Network**: `<sua-vcn>`
 - **Availability Domain**: AD 1
 - **Size**: 500 GB
 - **Backup Policy**: Bronze
