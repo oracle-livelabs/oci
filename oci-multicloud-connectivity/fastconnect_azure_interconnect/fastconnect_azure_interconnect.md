@@ -29,27 +29,19 @@ This lab assumes you have:
 
 Show the Azure ExpressRoute tasks here.
 
-## Task 2: Configure Oracle Cloud FastConnect
+1. Create an ExpressRoute Circuit
 
-(optional) Task 1 opening paragraph.
+2. Create a Virtual WAN
+
+3. Connect ExpressRoute to Hub Gateway
+
+4. Connect VNet to Hub Gateway
+
+## Task 2: Configure Oracle Cloud FastConnect
 
 1. From the Navigation Menu, navigate to **Networking -> Customer Connectivity -> FastConnect**. Click on **Create FastConnect**.
 
-	![Image alt text](images/sample1.png)
-
-  To create a link to local file you want the reader to download, use the following formats. _The filename must be in lowercase letters and CANNOT include any spaces._
-
-	Download the [starter file](files/starter-file.sql) SQL code.
-
-	When the file type is recognized by the browser, it will attempt to render it. So you can use the following format to force the download dialog box.
-
-	Download the [sample JSON code](files/sample.json?download=1).
-
-  > Note: do not include zip files, CSV, PDF, PSD, JAR, WAR, EAR, bin, or exe files - you must have those objects stored somewhere else. We highly recommend using Oracle Cloud Object Store and creating a PAR URL instead. See [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/en-us/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
-
 2. Make sure **FastConnect Partner** is selected, and the click on the **Partner** Dropdown menu. Select **Microsoft Azure: ExpressRoute** and click **Next**.
-
-  ![Image alt text](images/sample1.png)
 
 3. Complete the following fields:
 

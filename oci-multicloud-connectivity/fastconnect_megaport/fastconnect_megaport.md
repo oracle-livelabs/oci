@@ -23,25 +23,11 @@ This lab assumes you have:
 
 * Access to the MegaPort portal.
 
-## Task 1: Build a Virtual Cross Connect (VXC) in the MegaPort Portal
+## Task 1: Configure Oracle Cloud FastConnect to MegaPort
 
-Do your thing here on the MegaPort portal
-
-(optional) Task 1 opening paragraph.
+Show the MegaPort OCI steps here.
 
 1. From the Navigation Menu, navigate to **Networking -> Customer Connectivity -> FastConnect**. Click on **Create FastConnect**.
-
-	![Image alt text](images/sample1.png)
-
-  To create a link to local file you want the reader to download, use the following formats. _The filename must be in lowercase letters and CANNOT include any spaces._
-
-	Download the [starter file](files/starter-file.sql) SQL code.
-
-	When the file type is recognized by the browser, it will attempt to render it. So you can use the following format to force the download dialog box.
-
-	Download the [sample JSON code](files/sample.json?download=1).
-
-  > Note: do not include zip files, CSV, PDF, PSD, JAR, WAR, EAR, bin, or exe files - you must have those objects stored somewhere else. We highly recommend using Oracle Cloud Object Store and creating a PAR URL instead. See [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/en-us/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
 
 2. Make sure **FastConnect Partner** is selected, and the click on the **Partner** Dropdown menu. Select **Microsoft Azure: ExpressRoute** and click **Next**.
 
@@ -51,7 +37,7 @@ Do your thing here on the MegaPort portal
 
     |                  **Field**              |    **Vaue**  |
     |----------------------------------------|:------------:|
-    |NAME |    _ConnectionToAzure    |
+    |NAME |    _ConnectionToMegaPort_   |
     |COMPARTMENT |  *Choose your lab compartment*    |
     |Virtual Circuit Type|    Private Virtual Circuit    |
     |Dynamic Routing Gateway|  *DRG from previous step*  |
@@ -62,9 +48,32 @@ Do your thing here on the MegaPort portal
     |Customer Secondary BGP IPv4 Address|    169.254.1.2/30    |
     |Oracle Secondary BGP IPv4 Address|    169.254.1.1/30   |
 
-## Task 2: Configure Oracle Cloud FastConnect to MegaPort
+## Task 2: Build a Virtual Cross Connect (VXC) in the MegaPort Portal
 
-Show the MegaPort OCI steps here.
+Do your thing here on the MegaPort portal
+
+1. In the Megaport Portal, go to the Services page and select the Port you want to use.
+If you haven’t already created a Port, see Creating a Port.
+
+2. Add an VXC connection for the Port.
+If this is the first connection for the Port, click the Oracle tile. The tile is a shortcut to the configuration page. Alternatively, click +Connection, click Cloud, and click Oracle.
+
+3. Enter your Oracle Cloud ID (OCID).
+The Portal verifies the OCID and displays the available port locations based on the FastConnect region. (For example, if your FastConnect service is deployed in Ashburn, you only see the Ashburn FastConnect targets).
+
+4. Select a target location for your first connection and click Next.
+
+5. Complete the following fields:
+
+    |                  **Field**              |    **Vaue**  |
+    |----------------------------------------|:------------:|
+    |Connection Name |    _nameofVXC_   |
+    |Rate Limit|    Private Virtual Circuit    |
+    |Preferred A-End VLAN|  Untag  |
+
+6. Click Next
+
+The MegaPort connection has been configured.
 
 ## Learn More
 

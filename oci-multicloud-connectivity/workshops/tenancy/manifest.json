@@ -4,12 +4,10 @@
     "tutorials": [
         {
             "title": "Introduction",
-            "description": "The Introduction is always first. The title and contents menu title match for the Introduction.",
             "filename": "../../introduction/introduction.md"
         },
         {
             "title": "Deploy a Virtual Cloud Network (VCN)",
-            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
             "filename": "../../vcn/vcn.md"
         },
         {
@@ -25,12 +23,15 @@
             "filename": "../../fastconnect_megaport/fastconnect_megaport.md"
         },
         {
-            "title": "Verify MultiCloud Connectivity",
-            "filename": "../../verification/verification.md"
+            "title": "Deploy and Access a Virtual Machine",
+            "filename": "../../access-oci-vm/access-vm.md"
         },
         {
-            "title": "Other LiveLabs you might like",
-            "description": "Other LiveLabs you might like",
+            "title": "Verify MultiCloud Connectivity",
+            "filename": "../../verify-connectivity/verify-connectivity.md"
+        },
+        {
+            "title": "Outro",
             "filename": "../../other-livelabs/other-livelabs.md"
         }
     ]

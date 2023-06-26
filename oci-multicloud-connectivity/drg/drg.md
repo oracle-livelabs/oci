@@ -6,6 +6,8 @@ In this lab you will build a Dynamic Routing Gateway (DRG) to extend private con
 
 Estimated Lab Time: 10 minutes
 
+DRG QuickStart: [Quickstart Video](youtube:PwcLY9fmU3k:large)
+
 ### About Dynamic Routing Gateway (DRG)
 A DRG acts as a virtual router, providing a path for traffic between your on-premises networks and VCNs, and can also be used to route traffic between VCNs. Using different types of attachments, custom network topologies can be constructed using components in different regions and tenancies.
 
@@ -27,3 +29,6 @@ In this lab, you will:
   ![Image alt text](images/sample1.png)
 
 3. Under **Resources** go to **Virtual Cloud Network Attachments** and click **Create Virtual Network Attachment**. Optionally give the attachment a name, and then select the name of the VCN you created in the previous step. Move on to the next step when the VCN attachment Lifecycle State moves to "Attached".
+
+MultiCloud HOL - VCN Quickstart Walkthrough
+HOL Walkthrough for VCN Quickstart

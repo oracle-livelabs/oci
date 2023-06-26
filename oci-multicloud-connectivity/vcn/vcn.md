@@ -6,6 +6,8 @@ In this lab you will build a Virtual Cloud Network (VCN) to create a private net
 
 Estimated Time: 10 minutes
 
+VCN QuickStart: [Quickstart Video](youtube:svGxVEifOe0:large)
+
 ### About Virtual Cloud Networks (VCNs)
 Oracle Cloud Infrastructure (OCI) Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables, and configuring stateful firewalls. 
 
@@ -24,11 +26,9 @@ This lab assumes you have:
 
 ## Task 1: VCN Wizard
 
-(optional) Task 1 opening paragraph.
-
 1. On the Oracle Cloud Infrastructure Console Home page, under the Quick Actions header, click on Set up a network with a wizard.
 
-	![Quick Actions Wizard](images/setupVCN1.png)
+  ![Quick Actions Wizard](images/setupVCN1.png)
 
 	> **Note:** Use this format for notes, hints, and tips. Only use one "Note" at a time in a step.
 
