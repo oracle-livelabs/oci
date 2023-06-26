@@ -42,7 +42,7 @@ To sign in to the Console, you need the following:
 
 ## Reference Diagram
 
-![Reference Diagram](images/multicloud-topology.jpg)
+![Reference Diagram](../introduction/images/multicloud-topology.jpg)
 
 ## Deploy a Virtual Cloud Network (VCN)
 
@@ -55,14 +55,14 @@ Create a VCN on Oracle Cloud Infrastructure:
     <details>
     <summary>Click to reveal image</summary>
     
-    ![Setup a Network with a Wizard](images/setupVCN1.png)
+    ![Setup a Network with a Wizard](../vcn/images/setupVCN1.png)
     </details>
 
 2. Select **VCN with Internet Connectivity**, and then click **Start VCN Wizard**.
     <details>
     <summary>Click to reveal image</summary>
 
-    ![Start VCN Wizard](images/setupVCN2.png)
+    ![Start VCN Wizard](../vcn/images/setupVCN2.png)
     </details>
 
 3. Complete the following fields:
@@ -80,7 +80,7 @@ Create a VCN on Oracle Cloud Infrastructure:
     <details>
     <summary>Click to reveal image</summary>
 
-    ![Create a VCN Configuration|Foobar](images/setupVCN3.png)
+    ![Create a VCN Configuration|Foobar](../vcn/images/setupVCN3.png)
     </details>
 
 4. Press the **Next** button at the bottom of the screen.
@@ -90,7 +90,7 @@ Create a VCN on Oracle Cloud Infrastructure:
     <details>
     <summary>Click to reveal image</summary>
 
-    ![Review CV Configuration](images/setupVCN4.png)
+    ![Review CV Configuration](../vcn/images/setupVCN4.png)
     </details>
 
 6. Press the **Create** button to create the VCN. I will take a moment to create the VCN and a progress screen will keep you apprised of the workflow.
@@ -98,7 +98,7 @@ Create a VCN on Oracle Cloud Infrastructure:
     <details>
     <summary>Click to reveal image</summary>
 
-    ![Workflow](images/workflow.png)
+    ![Workflow](../vcn/images/workflow.png)
     </details>
 
 7. Once you see that the creation is complete (see previous screenshot), click on the **View Virtual Cloud Network** button and verify that the VCN is in a "Provisioned" state.
@@ -170,6 +170,9 @@ Video of the FastConnect deployment process for your reference:
 <details>
 <summary>(WIP) MegaPort</summary>
 
+[Getting Started Doc](https://docs.megaport.com/cloud/megaport/oracle/)
+[FastConnect MegaPort Integration](https://blogs.oracle.com/cloud-infrastructure/post/simple-guide-oci-megaport-now-integrated)
+
 Build a MegaPort Connection
 <details>
 <summary>Click to reveal video</summary>
@@ -239,3 +242,5 @@ In this lab, you deployed the OCI network constructs necessary to set up a Multi
 [Reference Architecture- Azure InterConnect](https://docs.oracle.com/en/solutions/oci-azure/index.html#GUID-84688C94-C76D-404F-AAAF-5AC091E2FAD6)
 
 [Reference Architecture - Deploy a multicloud split-stack solution across OCI, AWS and GCP](https://docs.oracle.com/en/solutions/oci-aws-gcp-multicloud/index.html#GUID-FD1D132A-9B50-403E-9B79-BE80A3DB1A7F)
+
+[Blog - Step By Step Guide Interconnecting OCI and Azure](https://blogs.oracle.com/cloudmarketplace/post/step-by-step-guide-interconnecting-oracle-cloud-infrastructure-and-microsoft-azure)

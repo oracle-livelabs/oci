@@ -27,15 +27,3 @@ In this lab, you will:
   ![Image alt text](images/sample1.png)
 
 3. Under **Resources** go to **Virtual Cloud Network Attachments** and click **Create Virtual Network Attachment**. Optionally give the attachment a name, and then select the name of the VCN you created in the previous step. Move on to the next step when the VCN attachment Lifecycle State moves to "Attached".
-
-## Learn More
-
-*(optional - include links to docs, white papers, blogs, etc)*
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
-
-## Acknowledgements
-* **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, June 2023

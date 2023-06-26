@@ -11,15 +11,11 @@ Oracle Cloud Infrastructure (OCI) Virtual Cloud Networks (VCNs) provide customiz
 
 ### Objectives
 
-*List objectives for this lab using the format below*
-
 In this lab, you will:
 
 * Setup a VCN using the VCN Wizard
 
-### Prerequisites (Optional)
-
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. Do NOT list each previous lab as a prerequisite.*
+### Prerequisites
 
 This lab assumes you have:
 
@@ -64,16 +60,3 @@ This lab assumes you have:
 6. Press the **Create** button to create the VCN. I will take a moment to create the VCN and a progress screen will keep you apprised of the workflow.
 
 7. Once you see that the creation is complete (see previous screenshot), click on the **View Virtual Cloud Network** button and verify that the VCN is in a "Provisioned" state.
-
-
-## Learn More
-
-*(optional - include links to docs, white papers, blogs, etc)*
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
-
-## Acknowledgements
-* **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, June 2023
