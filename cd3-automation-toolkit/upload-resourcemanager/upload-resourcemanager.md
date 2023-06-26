@@ -14,6 +14,9 @@ The objectives of this lab are:
 
 - Create a Resource Manager Stack
 
+### Prerequisites
+Please follow the previous lab till the last step. Once you are able to provision OCI event alarms and notifications, you are all set to continue with this lab.
+
 ## Task 1: Create a Resource Manager Stack
 
 1. Execute the setUpOCI Script:
