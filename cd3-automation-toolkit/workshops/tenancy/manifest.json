@@ -3,7 +3,7 @@
     "help": "livelabs-help-oci_us@oracle.com",
 	"tutorials": [
         {
-            "title": "Lab 1: Getting Started with CD3 Automation Toolkit",
+            "title": "Lab 1: Get started with CD3 Automation Toolkit setup",
             "filename": "./../../setup-the-toolkit/setup-the-toolkit.md"
         },
         {
