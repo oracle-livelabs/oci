@@ -74,7 +74,9 @@ The apply process can take some time, so patience is required.
 
 Go to __OCI console__ under compartment which was selected for deployment and take a few moments to explore the resources created. 
 
-Ask yourself how these resources will make your environment more healthy. 
+Ask yourself how these resources will make your environment more healthy.
+
+You may now __proceed to the next lab__.
 
 ## Acknowledgements
 

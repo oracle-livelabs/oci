@@ -174,6 +174,7 @@ Follow the next lab to upload the CD3 Excel file and execute setUpOCI.py script 
 
 [def]: images/docker_run.png "example  of docker run command"
 
+You may now __proceed to the next lab__.
 
 ## Acknowledgements
 
