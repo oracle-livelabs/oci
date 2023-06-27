@@ -23,6 +23,10 @@
             "filename": "../../fastconnect_megaport/fastconnect_megaport.md"
         },
         {
+            "title": "(Option 3): FastConnect - Equinix",
+            "filename": "../../fastconnect_megaport/fastconnect_equinix.md"
+        },
+        {
             "title": "Deploy and Access a Virtual Machine",
             "filename": "../../access-oci-vm/access-vm.md"
         },

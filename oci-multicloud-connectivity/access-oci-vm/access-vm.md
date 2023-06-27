@@ -15,46 +15,66 @@ In this lab, you will:
 * Connect to the Virtual Machine
 * Test Connectivity
 
-Virtual Machine QuickStart:[Quickstart Video](youtube:8WWpGHxvhw4:large)
-
 ## Task 1: Prepare CloudShell
 
 1. Go to the top right hand corner of the UI and click on **Developer Tools -> Cloud Shell**
+    ![Start Cloud Shell](images/cloudshell-1.png)
 
-2. Generate a new SSH key by running the **ssh-keygen** command. Leave all of the values as their default (empty).
+2. If you are prompted to start a Cloud Shell tutorial, type in **n** and press enter.
 
-3. Run the command **cat ~/.ssh/id_rsa** and copy the contents to your clipboard or a note space. This will be used in the next step when creating a virtual machine.
+    ![Cloud Shell Tutorial](images/cloudshell-2.png)
+
+3. Generate a new SSH key by running the **ssh-keygen** command. Leave all of the values as their default (empty).
+    
+    ![SSH Keygen](images/cloudshell-3.png)
+
+4. Run **cat ~/.ssh/id_rsa** to copy the contents of the public key to your clipboard. This will be used in the next step when creating a virtual machine.
+    ![Copy Public Key Contents](images/cloudshell-4.png)
 
 ## Task 2: Launch a Virtual Machine
 
-1. On the Home Page under **Launch Resources**, click on **Create a VM Instance**.
+1. From the Navigation Menu, under **Compute**, click on **Instances**.
 
-2. On the **Create Compute Instance** page, most of the options will be left as default except for the following.
+    ![Navigate to Instances](images/instance-1.png)
 
-    |                  **Field**              |    **Vaue**  |
-    |----------------------------------------|:------------:|
-    |Name |    Connectivity_Test_Instance    |
-    |Create in Compartment |  *lab compartment*    |
+2. On the **Create Instance**
 
-    Verify the Network Configuration:
+    ![Create Instance](images/instance-2.png)
+
+3. Set a Name and lab Compartment for the instance.
+
+    ![Instance Name and Compartment](images/instance-3.png)
+
+4. Verify the Network Configuration:
 
     1. Under **Networking: Virtual Cloud Network** - Verify the correct compartment and select the VCN created earlier in the lab.
-    2. Under **Networking: Subnet** - Select the Public Subnet of the VCN.
+    2. Under **Networking: Subnet** , **Select an existing subnet** and select the the Public Subnet of the VCN created earlier in the lab.
     3. Under **Public IPv4 Address** - Select "Assign a Public IPv4 Address".
 
-    Add the Public SSH Key:
+    ![Instance Networking](images/instance-4.png)
 
-    1. Under **Add SSH Configuration**, select "Paste Public Keys" and add the public key you created from the CloudShell instance.
+5. Under **Add SSH Keys**, select "Paste Public Keys" and paste the public key you created from the Cloud Shell instance from the first task in this lab.
 
-    Click **Create** and wait for the instance state to be "Running". Make note of the Public IPv4 Address of the instance under **Primary VNIC**.
+    ![Add Public SSH Key](images/instance-5.png)
 
-## Task 3: Log into the Virtual Machine with CloudShell
+6. Click **Create**.
 
-1. Go back to the CloudShell instance by navigating to the top right of the OCI Console and going UI and click on **Developer Tools -> Cloud Shell**
+    ![Create Instance](images/instance-6.png)
 
-2. Run the following command **ssh opc@*public_ip***, where public_ip is the public IP address of your Virtual Machine. Now you are logged in via SSH to the virtual machine. In the next step we will run a series of tests to verify connectivity with the 3rd party cloud provider.
+7. Once the Virtual Machine is "Running", copy the **Public IPv4 Address**, and note that the username of the instance is **opc**.
 
-## Learn More
+    ![Instance Access Details](images/instance-7.png)
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+## Task 3: Log into the Virtual Machine with Cloud Shell
+
+1. In the bottom left corner of the UI, click on **Restore** to restore the Cloud Shell session.
+
+    ![Restore Cloud Shell Session](images/login-1.png)
+
+2. Run the following command **ssh opc@_publicip_** where *publicip* is the public IP address of your Virtual Machine. Accept the ECDSA fingerprint. You are now SSH'd into the Virtual Machine via Cloud Shell. In the next step we will run a series of tests to verify connectivity with the 3rd party cloud provider.
+
+    ![SSH to VM Via Cloud Shell](images/login-2.png)
+
+## Video Walkthrough
+
+Virtual Machine QuickStart:[Quickstart Video](youtube:8WWpGHxvhw4:large)
