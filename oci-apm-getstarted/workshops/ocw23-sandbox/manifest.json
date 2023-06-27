@@ -39,9 +39,26 @@
             "description": "Explore APM Trace Data",
             "filename": "../../05-explore-trace-data/explore-trace-data.md"
         },
+
+        {
+            "title": "Lab 6: Save a custom query",
+            "description": "Save the query and add to a query bar",
+            "filename": "../../06-save-search/save-search.md"
+        },
+        {
+            "title": "Lab 7: Create a custom dashboard",
+            "description": "Create chart from the saved query and add it to a custom dashboard",
+            "filename": "../../07-create-dashboard/create-dashboard.md"
+        },
+        {
+            "title": "Lab 8: Construct complex queries",
+            "description": "Construct complex queries",
+            "filename": "../../08-construct-query/construct-query.md"
+        },
         {
             "title": "Oracle CloudWorld 2023 - Get Help",
             "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
         }
+        
     ]
 }
