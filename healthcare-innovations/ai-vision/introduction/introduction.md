@@ -10,12 +10,6 @@ We’ll share how we trained our AI Machine learning models with X-Ray mammograp
 
 [Youtube video on AI for Healthcare Demo](youtube:VjeoHU4I6SI:large)
 
-[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations that are happening in Healthcare, Label Cancer Images using [**OCI Data Labeling Service**](https://www.oracle.com/in/artificial-intelligence/data-labeling/) and Analyze using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) for Breast Cancer, Lung Cancer Detection or finding out about Covid or Pneumonia early stage, using the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/artificial-intelligence/speech/) to ask a doctor about specific medical symptoms and get a response back from a Virtual Doctor leveraging the power of [**OpenAI**](https://openai.com/). Chat with virtual doctor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/) asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate nearest Hospital with [**Oracle Spatial**](https://www.oracle.com/in/database/spatial/) and contact them. Send Emails to Doctors or Hospitals using [**OCI Email Delivery Service**](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Email/home.htm)
-
-Running on top of the world's most powerful database, [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/) and Low Code development platform [**Oracle APEX**](https://apex.oracle.com/en/)
-
-![Archiecture](images/architecture.png " ")
- 
 Estimated Workshop Time: 16 hours (Approximately)
 
 ### Prerequisites 
@@ -24,7 +18,15 @@ This lab assumes you have:
 
 * An Oracle account
 * Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
+ 
+[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations in Healthcare, Detect Breast Cancer and Lung Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) at an early stage. Detect Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/). Use the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/), ask a doctor about specific medical symptoms and get a response from a virtual Doctor leveraging the power of [**OpenAI**](https://openai.com/). Chat with a virtual doctor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/), asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate the nearest Hospital with [**Oracle Spatial and Maps**](https://www.oracle.com/in/database/spatial/) and contact them. And much more.
 
+Running on top of the world's most powerful database, [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/) and Low Code development platform [**Oracle APEX**](https://apex.oracle.com/en/)
+
+### AI for Healthcare - Technology Architecture
+
+![Archiecture](images/architecture-2.png " ")
+ 
 ### AI for Healthcare - Table of Contents
 
 *Common Labs - Introduction Lab to Lab 3*
@@ -45,6 +47,7 @@ These are common labs that are required for most of the other labs under this wo
     * Setup policies for OCI Vision service
     * Setup policies for OCI Document Understanding Service
     * Setup policies for OCI Speech
+    * Setup policies for OCI Anomaly Detection
 * Lab 2: Provision of an [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/)
     * Create or select a compartment
     * Choose Autonomous Database from the OCI services menu
@@ -191,7 +194,18 @@ This workshop walks you through the steps of creating an [**Oracle Analytics clo
     * Copy Analytics Report Embed URLs
     * Embed Reports in APEX Application
 
-*Setup OCI Email Delivery Service - Lab 19*
+*Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection - Lab 19*
+
+This lab walks you through the steps detecting Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/).
+
+* Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection
+    * Approach to ECG Interpretation - ECG Data Preparation
+    * Upload the ECG Training data to OCI Object storage
+    * Create and Train the ECG Model
+    * Review Model and Data settings
+    * Detect ECG Anomalies
+
+*Setup OCI Email Delivery Service - Lab 20*
 
 This workshop walks you through the steps of setting up [**OCI Email Services**](https://www.oracle.com/in/cloud/networking/email-delivery/). This will help us email Doctors, Patients or any Health official with the required data. For example, we can email transcribed text to Doctor after the patient uploads an audio file or mail once the medical expenses have been approved or rejected
 
@@ -230,10 +244,14 @@ Lung cancer includes two main types: non-small cell lung cancer and small cell l
 
 ![Mens's Lung Cancer 2020](images/lungcancer.png =50%x* )
 
+## Important
+
+This workshop provides a basic example of using OCI Vision and other AI services. This example is for illustration and demonstration purposes only and isn't intended to replace any medical imagery analysis tool or official diagnosis recommendation made by a professional. Users need to receive the proper regulated compliance and approvals before using for medical and diagnostic use.
+
 You may now **proceed to the next lab**.
     
 ## Acknowledgements
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
 * **Advisor** - Bo English-Wiczling, Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - June 22nd, 2023
+* **Last Updated By/Date** - June 25th, 2023

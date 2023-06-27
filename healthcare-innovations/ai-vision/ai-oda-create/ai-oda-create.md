@@ -132,7 +132,7 @@ To set up the Oracle Digital Assistant on the OCI tenancy, you will:
 
   ![ODA provisioned status](./images/create-skill-12.png " ")
 
-2. Select **Linguisting based Model**, click **Submit** button
+2. Select **Linguistic based Model**, click **Submit** button
 
   ![ODA provisioned status](./images/create-skill-13.png " ")
 

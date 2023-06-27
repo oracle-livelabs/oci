@@ -21,6 +21,7 @@ In this lab, you will:
 * Setup policies for OCI Vision service
 * Setup policies for OCI Document Understanding Service
 * Setup policies for OCI Speech
+* Setup policies for OCI Anomaly Detection
 
 ### Prerequisites
 
@@ -320,7 +321,8 @@ Before you start using OCI Speech, your tenancy administrator should set up the 
         ![Add users to group button](./images/add-users-to-group.png " ")
 
     Create a new policy with the below statement:
-        ```
+
+    ```
         <copy>
         allow group group-name to manage ai-service-speech-family in tenancy
         allow group group-name to manage object-family in tenancy
@@ -333,7 +335,15 @@ Before you start using OCI Speech, your tenancy administrator should set up the 
         ```
         ![Create policy for group information window](./images/group-name-policy.png " ") 
 
+## Task 9: Setup policies for OCI Anomaly Detection
 
+1. Before you start using anonmaly detection service, your tenancy administrator should set up the following policies.
+
+    ```
+        <copy>
+        allow group-name to manage ai-service-anomaly-detection-family in tenancy 
+        </copy>
+        ```
 
 This concludes this lab. You can **proceed now to the next lab**.
   
