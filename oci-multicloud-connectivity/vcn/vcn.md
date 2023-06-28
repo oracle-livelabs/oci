@@ -22,6 +22,10 @@ In this lab, you will:
 
 * Setup a VCN using the VCN Wizard.
 
+## Video Walkthrough
+
+[VCN Quickstart Video](youtube:svGxVEifOe0:large)
+
 ## Task 1: VCN Wizard
 
 > **The VCN Wizard will automatically create the required dependencies for the VCN, such as route tables, subnets and gateways**
@@ -42,7 +46,3 @@ In this lab, you will:
 
 5. When VCN creation is complete, click on **View VCN**. Proceed to the next lab.
     ![Workflow](images/vcn-5.png)
-
-## Video Walkthrough
-
-[VCN Quickstart Video](youtube:svGxVEifOe0:large)

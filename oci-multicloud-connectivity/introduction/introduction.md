@@ -32,11 +32,3 @@ In this workshop, you will learn how to:
 * Setup a FastConnect Connection
 * Deploy a Virtual Machine
 * Verify MultiCloud Connectivity
-
-## OCI Reference Acronym List
-
-**DRG** - Dynamic Routing Gateway
-
-**VCN** - Virtual Cloud Network
-
-**OCI** - Oracle Cloud Infrastructure

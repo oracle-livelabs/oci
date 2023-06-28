@@ -17,6 +17,10 @@ In this lab, you will:
 * Deploy a Dynamic Routing Gateway
 * Attach the Dynamic Routing Gateway to the VCN created in the previous lab
 
+## Video Walkthrough
+
+[DRG Walkthrough](youtube:PwcLY9fmU3k:large)
+
 ## Task 1: Deploy a Dynamic Routing Gateway (DRG)
 
 1. From the Oracle Cloud Home Page, navigate to **Networking -> Customer Connectivity -> Dynamic Routing Gateway**.
@@ -37,7 +41,3 @@ In this lab, you will:
 5. Optionally give the attachment a name, and then select the name of the VCN you created in the previous step. Move on to the next step when the VCN attachment Lifecycle State moves to "Attached".
 
   ![Verify VCN Attachment](images/drg-5.png)
-
-## Video Walkthrough
-
-[DRG Walkthrough](youtube:PwcLY9fmU3k:large)

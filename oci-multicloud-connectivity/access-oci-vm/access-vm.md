@@ -15,6 +15,10 @@ In this lab, you will:
 * Connect to the Virtual Machine
 * Test Connectivity
 
+## Video Walkthrough
+
+Virtual Machine QuickStart:[Quickstart Video](youtube:8WWpGHxvhw4:large)
+
 ## Task 1: Prepare CloudShell
 
 1. Go to the top right hand corner of the UI and click on **Developer Tools -> Cloud Shell**
@@ -74,7 +78,3 @@ In this lab, you will:
 2. Run the following command **ssh opc@_publicip_** where *publicip* is the public IP address of your Virtual Machine. Accept the ECDSA fingerprint. You are now SSH'd into the Virtual Machine via Cloud Shell. In the next step we will run a series of tests to verify connectivity with the 3rd party cloud provider.
 
     ![SSH to VM Via Cloud Shell](images/login-2.png)
-
-## Video Walkthrough
-
-Virtual Machine QuickStart:[Quickstart Video](youtube:8WWpGHxvhw4:large)
