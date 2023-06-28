@@ -15,16 +15,16 @@
             "filename": "../../drg/drg.md"
         },
         {
-            "title": "(Option 1): FastConnect - Azure Interconnect",
+            "title": "(Connectivity Option 1): Azure Interconnect",
             "filename": "../../fastconnect_azure_interconnect/fastconnect_azure_interconnect.md"
         },
         {
-            "title": "(Option 2): FastConnect - MegaPort",
-            "filename": "../../fastconnect_megaport/fastconnect_megaport.md"
+            "title": "WIP(Connectivity Option 2): Equinix",
+            "filename": "../../fastconnect_equinix/fastconnect_equinix.md"
         },
         {
-            "title": "(Option 3): FastConnect - Equinix",
-            "filename": "../../fastconnect_equinix/fastconnect_equinix.md"
+            "title": "WIP(Connectivity Option 3): MegaPort",
+            "filename": "../../fastconnect_megaport/fastconnect_megaport.md"
         },
         {
             "title": "Deploy and Access a Virtual Machine",
@@ -35,7 +35,7 @@
             "filename": "../../verify-connectivity/verify-connectivity.md"
         },
         {
-            "title": "Outro",
+            "title": "WIPLearn More",
             "filename": "../../other-livelabs/other-livelabs.md"
         }
     ]
