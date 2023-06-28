@@ -32,11 +32,11 @@ Please follow the previous lab till the last step. Once you are able to provisio
 
 2. Open __CD3-CIS-ManagementServices-template.xlsx__ and update __Events, Alarms, Notifications__ tabs based on your requirements and save it. You could use CIS standard pre-filled data in spreadsheet.
 
-_e.g._ ![Event Rule](images/Event_Rule.jpg)
+_e.g._ ![Event Rule](images/event_rule.jpg)
 
 ![Notifications](images/notifications.jpg)
 
-![Alarms](images/Alarms.jpg)
+![Alarms](images/alarms.jpg)
 
 ## Task 2: Deploy OCI Event Rule, Alarm and Notifications
 
