@@ -1,12 +1,12 @@
 {
-  "workshoptitle": "The Title of the Workshop is defined in the manifest",
+  "workshoptitle": "Setting up Highly Available and Secure Infrastructure with Terraform",
   "help": "livelabs-help-**enterarea**_us@oracle.com",
   "variables": ["../../variables/variables.json",
     "../../variables/variables-in-another-file.json"],
   "tutorials": [
     {
       "title": "Introduction",
-      "description": "The Introduction is always second for LiveLabs. The title and contents menu title match for the Introduction.",
+      "description": "This lab walks you through how to set up Infrastruce as code using Terraform on OCI.",
       "filename": "/oci/IaC/introduction/introduction.md"
     },
     {
@@ -36,8 +36,8 @@
         "filename": "../../tables/tables.md"
     },
     {
-            "title": "Lab 6: Variables in LiveLabs",
-            "filename": "../../variables/variables.md"
+        "title": "Lab 6: Variables in LiveLabs",
+        "filename": "../../variables/variables.md"
     },
     {
       "title": "Need Help?",
