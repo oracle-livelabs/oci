@@ -145,7 +145,7 @@ Agent Configuration는 로그를 수집하는 agent를 설정하는 부분입니
     ...    
     ````
 
-1. Mushop UI이 store-front Pod의 로그를 조회합니다. app: storefornt 레이블을 기준으로 로그를 조회합니다.
+1. Mushop UI이 store-front Pod의 로그를 조회합니다. app: storefront 레이블을 기준으로 로그를 조회합니다.
 
     ````
     <copy>
@@ -244,7 +244,7 @@ Agent Configuration는 로그를 수집하는 agent를 설정하는 부분입니
 
     ```
     <copy>    
-    helm install elasticsearch -f values.yaml bitnami/elasticsearch --version 19.5.8 -n logging
+    helm install elasticsearch -f values.yaml bitnami/elasticsearch --version 19.9.5 -n logging
     </copy>
     ```
 
@@ -253,7 +253,7 @@ Agent Configuration는 로그를 수집하는 agent를 설정하는 부분입니
     아래와 같이 설치되며, 실제 컨테이너가 기동하는 데 까지 약간의 시간이 걸립니다.
  
     ```
-    $ helm install elasticsearch -f values.yaml bitnami/elasticsearch --version 19.5.8 -n logging
+    $ helm install elasticsearch -f values.yaml bitnami/elasticsearch --version 19.9.5 -n logging
     NAME: elasticsearch
     ...
       Elasticsearch can be accessed within the cluster on port 9200 at elasticsearch.logging.svc.cluster.local
@@ -264,7 +264,7 @@ Agent Configuration는 로그를 수집하는 agent를 설정하는 부분입니
         curl http://127.0.0.1:9200/
     ```
 
-7. 설치된 elastic search 내부 주소와 포트를 확인합니다. 이후 Fluentd에서 로그 전송을 위해 사용할 주소입니다.
+7. 설치된 elastic search 내부 주소와 포트를 확인합니다. 이후 fluentbit에서 로그 전송을 위해 사용할 주소입니다.
     - 주소: elasticsearch.logging.svc.cluster.local
     - 포트: 9200
 
@@ -284,145 +284,71 @@ Agent Configuration는 로그를 수집하는 agent를 설정하는 부분입니
     </copy>
     ```
 
-### Fluentd 구성
+### Fluent Bit 구성
 
 참고 문서
 
-- [Kubernetes - Fluentd](https://docs.fluentd.org/container-deployment/kubernetes)
-- https://gist.github.com/agapoff/77d746b4588ee37a9e8074904533f6bc
+- https://docs.fluentbit.io/manual/installation/kubernetes#installation
+
+1. FluentBit Helm Chart 저장소를 추가합니다.
+
+    ```
+    <copy>
+    helm repo add fluent https://fluent.github.io/helm-charts
+    </copy>
+    ```
+
+2. ElasticSearch로 로그를 포워딩하기 위한 설정값을 작성합니다.
+
+    - Replace_Dots On: 다음과 같이 labels의 key에 app.kubernetes.io와 같이 *.*이 포함된 경우 ElasticSearch 전송시 오류가 발생합니다. 이를 방지하기 위해 추가합니다.
+
+        ```
+        apiVersion: v1
+        kind: Pod
+        metadata:
+          ...
+          labels:
+            ...
+            app.kubernetes.io/name: storefront
+            ...
+        ```    
 
 
-1. Fluentd 설치를 위한 Service Account를 생성하고 관련 권한을 정의합니다.
+    - Suppress\_Type\_Name On: ElasticSearch 8에서 _type 관련 오류가 발생하는 것을 방지하기 위해 추가합니다.
+        * [Removal of mapping types](https://www.elastic.co/guide/en/elasticsearch/reference/current/removal-of-types.html#_schedule_for_removal_of_mapping_types)
 
     ````
     <copy>
-    cat <<EOF > fluentd-rbac.yaml
-    ---
-    apiVersion: v1
-    kind: ServiceAccount
-    metadata:
-      name: fluentd
-      namespace: kube-system
-    
-    ---
-    apiVersion: rbac.authorization.k8s.io/v1
-    kind: ClusterRole
-    metadata:
-      name: fluentd
-    rules:
-    - apiGroups:
-      - ""
-      resources:
-      - pods
-      - namespaces
-      verbs:
-      - get
-      - list
-      - watch
-    
-    ---
-    kind: ClusterRoleBinding
-    apiVersion: rbac.authorization.k8s.io/v1
-    metadata:
-      name: fluentd
-    roleRef:
-      kind: ClusterRole
-      name: fluentd
-      apiGroup: rbac.authorization.k8s.io
-    subjects:
-    - kind: ServiceAccount
-      name: fluentd
-      namespace: kube-system
+    cat <<EOF > myvalues.yaml
+    config:
+      outputs: |
+        [OUTPUT]
+            Name es
+            Match *
+            Host elasticsearch.logging.svc.cluster.local
+            Port 9200
+            tls Off
+            tls.verify Off
+            Retry_Limit False
+            Logstash_Format On
+            Logstash_Prefix logstash
+            Trace_Error On
+            Replace_Dots On
+            Suppress_Type_Name On
     EOF
     
     </copy>
     ````
 
-2. fluentd damonset 정의
 
-    ````
-    <copy>
-    cat <<EOF > fluentd-daemonset-elasticsearch.yaml
-    ---
-    apiVersion: apps/v1
-    kind: DaemonSet
-    metadata:
-      name: fluentd
-      namespace: kube-system
-      labels:
-        k8s-app: fluentd-logging
-        version: v1
-    spec:
-      selector:
-        matchLabels:
-          k8s-app: fluentd-logging
-          version: v1
-      template:
-        metadata:
-          labels:
-            k8s-app: fluentd-logging
-            version: v1
-        spec:
-          serviceAccount: fluentd
-          serviceAccountName: fluentd
-          tolerations:
-          - key: node-role.kubernetes.io/control-plane
-            effect: NoSchedule
-          - key: node-role.kubernetes.io/master
-            effect: NoSchedule
-          containers:
-          - name: fluentd
-            image: fluent/fluentd-kubernetes-daemonset:v1-debian-elasticsearch
-            env:
-              - name: K8S_NODE_NAME
-                valueFrom:
-                  fieldRef:
-                    fieldPath: spec.nodeName
-              - name:  FLUENT_ELASTICSEARCH_HOST
-                value: "elasticsearch.logging.svc.cluster.local"
-              - name:  FLUENT_ELASTICSEARCH_PORT
-                value: "9200"
-              - name: FLUENT_ELASTICSEARCH_SCHEME
-                value: "http"
-              - name: FLUENTD_SYSTEMD_CONF
-                value: disable
-              - name: FLUENT_CONTAINER_TAIL_PARSER_TYPE
-                value: "cri"
-              - name: FLUENT_CONTAINER_TAIL_PARSER_TIME_FORMAT
-                value: "%Y-%m-%dT%H:%M:%S.%N%:z"
-            resources:
-              limits:
-                memory: 200Mi
-              requests:
-                cpu: 100m
-                memory: 200Mi
-            volumeMounts:
-            - name: varlog
-              mountPath: /var/log
-            - name: dockercontainerlogdirectory
-              mountPath: /var/log/pods
-              readOnly: true
-          terminationGracePeriodSeconds: 30
-          volumes:
-          - name: varlog
-            hostPath:
-              path: /var/log
-          - name: dockercontainerlogdirectory
-            hostPath:
-              path: /var/log/pods
-    EOF
-    
-    </copy>    
-    ````
+3. OKE 클러스터에 FluentBit을 설치합니다.
 
-3. FluentD 설치
-
-    ```bash
-    <copy>
-    kubectl apply -f fluentd-rbac.yaml
-    kubectl apply -f fluentd-daemonset-elasticsearch.yaml
-    </copy>        
     ```
+    <copy>
+    helm upgrade --install fluent-bit fluent/fluent-bit -f myvalues.yaml -n logging 
+    </copy>
+    ```
+
 
 ### Kibana 설정
 
@@ -444,11 +370,9 @@ Agent Configuration는 로그를 수집하는 agent를 설정하는 부분입니
 
     ![Kibana Discover](images/kibana-discover.png)
 
-5. Create index pattern을 클릭합니다.
+5. 인덱스 패턴을 만들기 위해 Create data view를 클릭합니다.
 
-6. 인덱스 패턴을 만들기 위해 Create data view를 클릭합니다.
-
-7. 인덱스 패턴을 생성합니다.
+6. 인덱스 패턴을 생성합니다.
 
     오른쪽에서 보듯이 FluentD에서 전송된 로그는 logstash-로 시작합니다.
 
@@ -458,32 +382,32 @@ Agent Configuration는 로그를 수집하는 agent를 설정하는 부분입니
 
     ![Kibana Create Index](images/kibana-create-index.png)
 
-8. 생성한 인덱스 패턴을 통해 수집된 로그를 확인할 수 있습니다.
+7. 생성한 인덱스 패턴을 통해 수집된 로그를 확인할 수 있습니다.
 
-9. 테스트를 위해 MuShop을 접속합니다.
+8. 테스트를 위해 MuShop을 접속합니다.
 
     - 예, http://138.xxx.xxx.xxx/?efk-test
 
-10. 로그 확인
+9. 로그 확인
 
     ````
     $ kubectl logs -lapp=storefront -f --tail=10
     ...
-    10.244.0.10 - - [19/Jan/2023:03:49:09 +0000] "GET /?efk-test HTTP/1.1" 200 4793 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.1.0, 10.244.0.134"
+    10.244.0.57 - - [27/Jun/2023:02:58:10 +0000] "GET /?efk-test HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.244.1.0, 10.244.0.133"    
     ...
     ````
 
-11. 테스트 앱의 로그를 확인하기 위해 필터링을 위해 **+** 아이콘을 클릭한후 **kubernetes.namespace_name=mushop** 로 지정합니다.
+10. 테스트 앱의 로그를 확인하기 위해 필터링을 위해 **+** 아이콘을 클릭한후 **kubernetes.namespace_name=mushop** 로 지정합니다.
 
     ![Kibana Add Filter](images/kibana-add-filter.png)
 
-12. **+** 아이콘을 클릭한후 **kubernetes.container_name=storefront** 로 지정합니다.
+11. **+** 아이콘을 클릭한후 **kubernetes.container_name=storefront** 도 추가합니다.
 
-13. 아래와 같이 kibana에서 테스트 앱의 로그를 확인할 수 있습니다.
+12. 아래와 같이 kibana에서 테스트 앱의 로그를 확인할 수 있습니다.
 
     ![Kibana Logging Search](images/efk-logging-search.png)
 
-14. EFK를 통해 OKE 상의 로그를 수집하는 예시였습니다. EFK에 대한 상세 내용은 제품 관련 홈페이지와 커뮤니티 사이트를 참고하기 바랍니다.
+13. EFK를 통해 OKE 상의 로그를 수집하는 예시였습니다. EFK에 대한 상세 내용은 제품 관련 홈페이지와 커뮤니티 사이트를 참고하기 바랍니다.
 
 
 이제 **다음 실습을 진행**하시면 됩니다.
@@ -493,4 +417,4 @@ Agent Configuration는 로그를 수집하는 agent를 설정하는 부분입니
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, January 2023
+- **Last Updated By/Date** - DongHee Lee, June 2023

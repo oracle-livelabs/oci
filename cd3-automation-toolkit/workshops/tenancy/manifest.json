@@ -1,0 +1,27 @@
+{
+    "workshoptitle": "Deploy Compute, Block Volume and ATP using CD3 Automation Toolkit",
+    "help": "livelabs-help-oci_us@oracle.com",
+	"tutorials": [
+        {
+            "title": "Lab 1: Get started with CD3 Automation Toolkit setup",
+            "filename": "./../../setup-the-toolkit/setup-the-toolkit.md"
+        },
+        {
+            "title": "Lab 2: Deploy OCI resources using CD3 Toolkit",
+            "filename": "./../../deploy-compute/deploy-compute.md"
+        },
+        {
+            "title": "Lab 3: Create OCI Cloud Event Rules, Alarms and Notifications",
+            "filename": "./../../create-eventalarm/create-eventalarm.md"
+        },
+        {
+            "title": "Lab 4: Uploading stack to OCI Resource Manager",
+            "filename": "./../../upload-resourcemanager/upload-resourcemanager.md"
+        },
+         {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

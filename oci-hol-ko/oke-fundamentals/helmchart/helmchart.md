@@ -26,7 +26,7 @@ Helm은 복잡한 쿠버네티스 애플리케이션을 배포하기 위한 쿠�
 
 ## Task 1: 샘플 차트 만들기
 
-[Helm Chart Template Guide](https://helm.sh/docs/chart_template_guide/getting_started/) 예제를 따라 만든 샘플 차트를 만듭니다.
+[Helm Chart Template Guide](https://helm.sh/docs/chart_template_guide/getting_started/) 예제를 따라 만든 샘플 차트을 만들어 OKE 클러스터에 배포하는 과정입니다.
 
 1. Cloud Shell을 실행합니다.
 
@@ -128,8 +128,7 @@ Helm은 복잡한 쿠버네티스 애플리케이션을 배포하기 위한 쿠�
          targetPort: 8080
     43 
     44 ingress:    
-    ...
-    </copy>      
+    ... 
     ````
 
 ## Task 2: Helm Chart로 OKE 클러스터에 배포하기
@@ -153,19 +152,24 @@ Helm은 복잡한 쿠버네티스 애플리케이션을 배포하기 위한 쿠�
 
     실행 예시
     ````
-    NAME                                                   READY   STATUS    RESTARTS   AGE
-    pod/mychart-b8764659c-9nrhh                            1/1     Running   0          83s
+    $ helm list
+    NAME    NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
+    mychart default         1               2023-06-26 08:07:41.327055597 +0000 UTC deployed        mychart-0.1.0   1.16.0     
+    $ kubectl get all
+    NAME                           READY   STATUS    RESTARTS   AGE
+    pod/mychart-57c5f84846-xhdd5   1/1     Running   0          47s
     
-    NAME                                   TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)             AGE
-    service/kubernetes                     ClusterIP      10.96.0.1       <none>           443/TCP,12250/TCP   5h17m
-    service/mychart                        LoadBalancer   10.96.135.110   150.xx.xxx.xxx   80:32155/TCP        83s
+    NAME                 TYPE           CLUSTER-IP    EXTERNAL-IP     PORT(S)             AGE
+    service/kubernetes   ClusterIP      10.96.0.1     <none>          443/TCP,12250/TCP   64m
+    service/mychart      LoadBalancer   10.96.77.21   150.x.xxx.xxx   80:31057/TCP        47s
     
-    NAME                                              READY   UP-TO-DATE   AVAILABLE   AGE
-    deployment.apps/mychart                           1/1     1            1           83s
+    NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
+    deployment.apps/mychart   1/1     1            1           47s
     
-    NAME                                                         DESIRED   CURRENT   READY   AGE
-    replicaset.apps/mychart-b8764659c                            1         1         1       83s
+    NAME                                 DESIRED   CURRENT   READY   AGE
+    replicaset.apps/mychart-57c5f84846   1         1         1       47s
     ````
+
 3. Pod가 정상적으로 기동하였습니다. service/mychart의 LoadBalancer의 EXTERNAL-IP를 통해 서비스를 요청합니다.
 
     ````
@@ -193,4 +197,4 @@ Helm은 복잡한 쿠버네티스 애플리케이션을 배포하기 위한 쿠�
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, January 2023
+- **Last Updated By/Date** - DongHee Lee, June 2023
