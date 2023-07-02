@@ -7,10 +7,16 @@ Machine Learning and Artificial Intelligence tools are unprecedentedly changing 
 In this workshop, we will show how Artificial Intelligence (AI) and Machine Learning (ML) are helping identify breast cancer using Oracle APEX, Oracle AI Vision Service, and Oracle Autonomous Database.  
 
 We’ll share how we trained our AI Machine learning models with X-Ray mammography images to identify breast cancers and even incorporated many other features, such as helping doctors or patients dictate medical symptoms and diagnoses quickly by sending an email of the audio message and the medical transcription text. 
+  
+### Complete Demo and Architecture video
+
+[Youtube video on AI for Healthcare Demo](youtube:iBV76Upi1VM:large)
+
+### Introduction video
 
 [Youtube video on AI for Healthcare Demo](youtube:VjeoHU4I6SI:large)
 
-Estimated Workshop Time: 16 hours (Approximately)
+*Estimated Workshop Time: 16 hours (Approximately)*
 
 ### Prerequisites 
  
@@ -253,5 +259,5 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
-* **Advisor** - Bo English-Wiczling, Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - June 25th, 2023
+* **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Direct, Program Management, Oracle Database 
+* **Last Updated By/Date** - July 2nd, 2023
