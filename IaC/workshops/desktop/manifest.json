@@ -7,12 +7,12 @@
     {
       "title": "Introduction",
       "description": "This lab walks you through how to set up Infrastruce as code using Terraform on OCI.",
-      "filename": "/oci/IaC/introduction/introduction.md"
+      "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Get Started with noVNC Remote Desktop",
-      "description": "Using noVNC Remote Desktop",
-      "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
+      "title": "Test",
+      "description": "Testing",
+      "filename": "../../data-load/data-load.md"
     },
     {
       "title": "Lab 1: Provision an Instance",
@@ -34,10 +34,6 @@
     {
         "title": "Lab 5: Tables in LiveLabs",
         "filename": "../../tables/tables.md"
-    },
-    {
-        "title": "Lab 6: Variables in LiveLabs",
-        "filename": "../../variables/variables.md"
     },
     {
       "title": "Need Help?",
