@@ -25,7 +25,7 @@ This lab assumes you have:
 * An Oracle account
 * Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
  
-[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations in Healthcare, Detect Breast Cancer and Lung Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) at an early stage. Detect Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/). Use the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/), ask a doctor about specific medical symptoms and get a response from a virtual Doctor leveraging the power of [**OpenAI**](https://openai.com/). Chat with a virtual doctor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/), asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate the nearest Hospital with [**Oracle Spatial and Maps**](https://www.oracle.com/in/database/spatial/) and contact them. And much more.
+[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations in Healthcare, Detect Breast Cancer and Lung Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) at an early stage. Detect Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/). Use the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/), ask a doctor about specific medical symptoms and get a response from a virtual Doctor leveraging the power of [**OpenAI**](https://openai.com/). Chat with a virtual doctor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/), asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate the nearest Hospital with [**Oracle Spatial and Maps**](https://www.oracle.com/in/database/spatial/) and contact them.[**Oracle Blockchain**](https://www.oracle.com/blockchain/) for Biometric data security by preventing illicit insider data changes. and much more. 
 
 Running on top of the world's most powerful database, [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/) and Low Code development platform [**Oracle APEX**](https://apex.oracle.com/en/)
 
@@ -68,7 +68,7 @@ These are common labs that are required for most of the other labs under this wo
 
 *Detect Breast Cancer - Lab 4 to Lab 8*
 
-In this Workshop (*Collection of Labs*) .These Labs guide us in detecting Breast Cancer using Oracle [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) AI Service.
+This workshop will guide you in detecting Breast Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) AI Service.
 
 * Lab 4: Understanding Mammography and Breast Cancer (<u>Optional Lab</u>)
     * What is a Mammogram?
@@ -86,8 +86,8 @@ In this Workshop (*Collection of Labs*) .These Labs guide us in detecting Breast
     * Verify Bulk Data labelled images
 * Lab 7: Train the model using the **Image Classification** AI model
     * Create OCI Vision Project
-    * Create and Train Vision Model
-    * Analyze and evaluate your Model
+    * Create and Train OCI AI vision model
+    * Analyze and evaluate your model
     * Review Request and Response JSON
 * Lab 8: [**Oracle APEX**](https://apex.oracle.com/en/) Application for Breast Cancer Detection
     * Setup Oracle APEX Web Credentials
@@ -153,7 +153,7 @@ Integrating [**Oracle APEX**](https://apex.oracle.com/en/) Application with [**O
 
 *Create Chatbot for Frequently Asked Medical Questions - Lab 15 - Lab 16*
 
-This workshop would enable users to interact with [**Oracle Digital Assistant**](https://www.oracle.com/in/chatbots/) Chatbot with frequently asked questions related to cancer or COVID, Pneumonia or any other health issues, Get medical advice on time.
+This workshop would enable users to interact with [**Oracle Digital Assistant**](https://www.oracle.com/in/chatbots/) Chatbot with frequently asked questions related to cancer or COVID, Pneumonia or any other health issues, and get medical advice on time.
 
 * Lab 15: Setup Oracle Digital Assistant
     * Oracle Digital Assistant for [**natural language processing(NLP)**](https://en.wikipedia.org/wiki/Natural_language_processing), [**natural language understanding**](https://en.wikipedia.org/wiki/Natural-language_understanding) (NLU) 
@@ -169,7 +169,7 @@ This workshop would enable users to interact with [**Oracle Digital Assistant**]
     * Get channel id from the ODA console
     * Configure settings.js file
     * Upload CSS, Image and JS files to Oracle APEX 
-    * HTML Code to add ODA chatbot on a Oracle APEX page
+    * HTML Code to add ODA chatbot on an Oracle APEX page
     * Bot Initiated Conversation
     * Update YAML flow in ODA
     * Demo of Chatbot in Oracle APEX Page
@@ -202,7 +202,7 @@ This workshop walks you through the steps of creating an [**Oracle Analytics clo
 
 *Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection - Lab 19*
 
-This lab walks you through the steps detecting Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/).
+This lab walks you through the steps of detecting Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/).
 
 * Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection
     * Approach to ECG Interpretation - ECG Data Preparation
@@ -211,7 +211,16 @@ This lab walks you through the steps detecting Cardiovascular disease with Elect
     * Review Model and Data settings
     * Detect ECG Anomalies
 
-*Setup OCI Email Delivery Service - Lab 20*
+*Biometrics with Blockchain - Lab 20*
+
+This lab walks you through preventing illicit insider changes to users' biometric data using [**Oracle Blockchain**](https://www.oracle.com/blockchain/). It Permits insert-only SQL operations, with no updates and other modifications allowed, and restricts deletions.
+
+* Biometrics with Blockchain
+    * Create a Blockchain table.
+    * Insert Biometric data into the blockchain table.
+    * Demonstrate Blockchain Data Security. 
+
+*Setup OCI Email Delivery Service - Lab 21*
 
 This workshop walks you through the steps of setting up [**OCI Email Services**](https://www.oracle.com/in/cloud/networking/email-delivery/). This will help us email Doctors, Patients or any Health official with the required data. For example, we can email transcribed text to Doctor after the patient uploads an audio file or mail once the medical expenses have been approved or rejected
 
