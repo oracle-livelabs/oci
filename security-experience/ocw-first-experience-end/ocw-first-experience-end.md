@@ -25,13 +25,13 @@ This lab assumes you have completed previous lab.
 
 For the purpose of this lab, an Autonomous Database was created for you with following details:
 
-* **Autonomous Database name**: SecAssessment\_XXX, where XXX is your student´s number.
+* **Autonomous Database name**: ocw23-OCI-SecAssessment\_XXX, where XXX is your student number.
 * **Tables created (REST enabled)**: OCISECURITYCENTER, OCICISCOMPLIANCECHECK.
 * **Users**: ADMIN, SECASSESSMENT
 * **Passwords**: Provided to you by the trainers
 * **Curl command location URLs**:
-    * For OCISECURITYCENTER table:
-    * For OCICISCOMPLIANCECHECK table:
+    * For OCISECURITYCENTER table: https://ygsxdohluenid9i-ocw23secassessmentXXX.adb.eu-frankfurt-1.oraclecloudapps.com/ords/secassessment/ocisecuritycenter/  where you need to replace XXX with your student number.
+    * For OCICISCOMPLIANCECHECK table: https://ygsxdohluenid9i-ocw23secassessmentXXX.adb.eu-frankfurt-1.oraclecloudapps.com/ords/secassessment/ociciscompliancecheck/ where you need to replace XXX with your student number.
 
 1. Now you need to upload the CSV file stored in your bucket to your Autonomous Database. To do that, you will perform a REST call to the table where you want to store these results. To do that, run the following in the Cloud Shell terminal:
     
@@ -70,12 +70,13 @@ For the purpose of this lab, an Autonomous Database was created for you with fol
 
     ![Click Autonomous Database](images/autonomous-menu.png "Click Autonomous Database")
 
-4. Once in the Autonomous Database page, specify the compartment ocw23-SecAssessment-HOL:
+4. Once in the Autonomous Database page, specify the compartment ocw23-OCI-Security-Assessment-HOL:
 
+    ![Select compartment](images/autonomous-compartment.png "Select compartment")
 
 5. Identify your Autonomous Database in the list, and click on it. Once there, click Database Actions button:  
 
-    ![Database Actions](images/database-actions.png "Database Actions")
+    ![Database Actions](images/adb-db-actions.png "Database Actions")
 
     **Note:** You may need to log in first as ADMIN, then Click Sign Out, and log in as SECASSESSMENT user.
 
@@ -107,32 +108,36 @@ For the purpose of this lab, an Autonomous Database was created for you with fol
 
 After the script is completely executed, and you loaded the CSV file in your Autonomous Database, you can log in to your APEX and the Security Dashboard appears. This dashboard is showing in a graphical format the security assessment report info.
 
-1.	On the Autonomous Database dashboard, click on SecAssessment\_XXX under Instance Name on APEX Instance section:
+1.	On the Autonomous Database dashboard, click on ocw23-OCI-SecAssessment\_XXX under Instance Name on APEX Instance section, where XXX is your student number:
 
-    ![Click Instance Name](images/apex.png "Click Instance Name")
+    ![Click Instance Name](images/apex-instance.png "Click Instance Name")
 
 2.	Click Launch APEX.
 
-    ![Launch APEX](images/launch-apex.png "Launch APEX")
+    ![Launch APEX](images/run-apex.png "Launch APEX")
 
 3. The log in page for APEX will be prompted and you need to log in as SECASSESSMENT user.
 
     ![Log in as SECASSESSMENT](images/sign-in-apex.png "Log in as SECASSESSMENT")
 
-4. Once you are logged in, click App Builder and the Security Dashboard application that you installed earlier. Click Run Application.
+4. Once you are logged in, click App Builder and then click in the application called OCI SECURITY ASSESSMENT:
 
-    ![Run application](images/run-application.png "Run application")
+    ![Click on the application](images/apex-app.png "Click on the application")
 
-5. Log in as SECASSESSMENT user in the application:
+5. Click Run Application:
+
+    ![Run application](images/run-app.png "Run application")
+
+6. Log in as SECASSESSMENT user in the application:
 
     ![Log in to the application](images/log-in-application.png "Log in to the application")
 
-6. The OCI Security Assessment dashboard will appear. Click on the card to view your security assessment results.
+7. The OCI Security Assessment dashboard will appear. Click on the card to view your security assessment results.
 
     ![OCI Security Assessment Dashboard](images/secassessment-dashboard.png "OCI Security Assessment Dashboard")
 
 
-7. Once you click, you will see the results obtained in the Security Assessment report in a table.
+8. Once you click, you will see the results obtained in the Security Assessment report in a table.
 
     In this section, you can easily see the suggestions in the OCI Security Assessment dashboard, to enable or not some security services according to your current implementation with three different options and colours:
 

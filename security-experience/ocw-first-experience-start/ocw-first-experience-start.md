@@ -49,10 +49,10 @@ This lab assumes you got access to the OCI tenant provided for this workshop. Lo
     ```
 5. Run the script and save results in your bucket:
 
-    **Note**: You have been provided with a specific bucket for the purpose of this lab. To identify your bucket's name, it has the following format: security\_assessment\_XXX, where XXX corresponds to your student's number, provided to you by the trainers. 
+    **Note**: You have been provided with a specific bucket for the purpose of this lab. To identify your bucket's name, it has the following format: ocw23-public-bucket-XXX, where XXX corresponds to your student number, provided to you by the trainers. For example, if your student number is 001, you need to run following command:
 
     ```
-    python3 security_assessment.py -dt --output-to-bucket security_assessment_XXX
+    python3 security_assessment.py -dt --output-to-bucket ocw23-public-bucket-001
     ```
     
     After running the python script, you will see a similar output in Cloud Shell:
@@ -85,10 +85,10 @@ This lab assumes you got access to the OCI tenant provided for this workshop. Lo
     ```
     cd cis_reports
     ```
-    to run the script and store the generated report in a bucket, specify in the command your bucket for CIS compliance reports. In this case, the bucket's name is cis\_report\_XXX, where XXX is your student's number:
+    to run the script and store the generated report in a bucket, specify in the command your bucket for CIS compliance reports. In this case, the bucket's name is ocw23-cis-bucket-XXX, where XXX is your student number. For example, if your student number is 001, you need to run following command:
 
     ```
-    python3 cis_reports.py -dt --output-to-bucket cis_report_XXX
+    python3 cis_reports.py -dt --output-to-bucket ocw23-cis-bucket-001
     ```  
 
 

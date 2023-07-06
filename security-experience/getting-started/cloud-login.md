@@ -39,6 +39,5 @@ If you've signed out of the Oracle Cloud, use these steps to sign back in.
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
-- **Created By/Date** - 
-- **Contributors** - 
-- **Last Updated By** - 
+- **Authors** - Damien Rilliard (OCI Senior Security Director), Sonia Yuste (OCI Security Specialist) 
+- **Last Updated By** - Sonia Yuste, July 2023
