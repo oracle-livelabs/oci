@@ -15,7 +15,7 @@ This lab assumes that you have successfully completed the previous labs in the *
 ## Task 1: Automatic activation of Cloud Guard
 Oracle recommends strongly to activate Oracle Cloud Guard as the first step for your OCI onboarding, to have a complete view of your OCI security.
 
-To see if it is enabled in your tenant, log in to your OCI Security dashboard, as you did in the previous lab.  
+To see if it is enabled in your tenant, log in to your OCI Security dashboard, as you did in the previous lab..
 
 In case Oracle Cloud Guard is not enabled, follow the next steps:
 
