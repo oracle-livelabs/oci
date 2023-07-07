@@ -56,6 +56,7 @@ In this task you will have a look at detected security problems in your OCI tena
 
 6. Once you identified the problem associated to your bucket, click on it and review the details, recommendations and all the info that Cloud Guard reports about the problem:
 
+    ![Problem details](./images/problem-bucket.png "Problem details")
 
 7. After you reviewed, you can click on **Remediate** and the visibility of the bucket will be made private:
 

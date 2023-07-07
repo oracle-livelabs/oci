@@ -28,7 +28,7 @@ If you've signed out of the Oracle Cloud, use these steps to sign back in.
 
     ![Click Continue Single Sign-In](./images/cloud-login-tenant.png " ")
 
-3. Enter your Cloud Account credentials and click **Sign In**. For this step please use your user account called "Secops_XXX" where XXX is your training student number. All the account information should have been given to you when you entered the training room, if not please call a trainer to assist. 
+3. Enter your Cloud Account credentials and click **Sign In**. For this step please use your user account called "Student\_Account\_XXX" where XXX is your training student number. All the account information should have been given to you when you entered the training room, if not please call a trainer to assist. 
 
     ![Sign in](./images/oci-signin.png " ")
 
