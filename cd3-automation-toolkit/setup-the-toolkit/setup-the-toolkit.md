@@ -43,10 +43,10 @@ The objectives of this lab are:
 1. Change directory to *'cd3-automation-toolkit'*(i.e. the cloned repo in your local).
 
 2. Execute:
-```
-bash 
-docker build --platform linux/amd64 -t cd3toolkit:${image_tag} -f Dockerfile --pull --no-cache . 
-```
+   ```
+   bash 
+   docker build --platform linux/amd64 -t cd3toolkit:${image_tag} -f Dockerfile --pull --no-cache . 
+   ```
 
 > __Note:__ *${image_tag} should be replaced with suitable tag as per your requirements/standards. The period (.) at the end of the docker build command is required.*
 
@@ -56,15 +56,15 @@ docker build --platform linux/amd64 -t cd3toolkit:${image_tag} -f Dockerfile --p
 
 1. Execute the below *docker run* command:
 
-```
-docker run --platform linux/amd64 -it -d -v <directory_in_local_system_where_the_files_must_be_generated>:/cd3user/tenancies <image_name>:<image_tag>
-```
+   ```
+   docker run --platform linux/amd64 -it -d -v <directory_in_local_system_where_the_files_must_be_generated>:/cd3user/tenancies <image_name>:<image_tag>
+   ```
 ![docker_run](images/docker_run.png "docker run command example")
 
 2. Verify the container:
-```
-docker ps
-```
+   ```
+   docker ps
+   ```
 <br>
 
 ## Task 4: Connect Docker container to OCI tenancy
@@ -73,28 +73,28 @@ docker ps
  
  1. List out all the containers:
 
-```
-docker ps
-```
+   ```
+   docker ps
+   ```
 > Note down the container ID from this cmd output.
 
 2. Enter the container using the above container id.
 
-```bash
-docker exec -it <container_id> bash
-```
+   ```bash
+   docker exec -it <container_id> bash
+   ```
 3. Change directory to *'user-scripts'*
 
-```
-cd /cd3user/oci_tools/cd3_automation_toolkit/user-scripts/
-```
+   ```
+   cd /cd3user/oci_tools/cd3_automation_toolkit/user-scripts/
+   ```
 ### **Step 2: Create API PEM Key:**
 
 1. RSA key pair in PEM format (minimum 2048 bits) is needed to use OCI APIs. If the key pair does not exist, create them by executing *createAPIKey.py* under *'user-scripts'* folder:
 
-``` 
-python createAPIKey.py 
-```
+   ``` 
+   python createAPIKey.py 
+   ```
 
 > This will generate the public/private key pair(oci_api_public.pem and oci_api_private.pem) at */cd3user/tenancies/keys/*
 
