@@ -65,6 +65,7 @@ docker run --platform linux/amd64 -it -d -v <directory_in_local_system_where_the
 ```
 docker ps
 ```
+<br>
 
 ## Task 4: Connect Docker container to OCI tenancy
 
