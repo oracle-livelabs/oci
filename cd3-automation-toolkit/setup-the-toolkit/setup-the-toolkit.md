@@ -59,7 +59,7 @@ The objectives of this lab are:
    ```
    docker run --platform linux/amd64 -it -d -v <directory_in_local_system_where_the_files_must_be_generated>:/cd3user/tenancies <image_name>:<image_tag>
    ```
-![docker_run](images/docker_run.png "docker run command example")
+   ![docker_run](images/docker_run.png "docker run command example")
 
 2. Verify the container:
    ```
