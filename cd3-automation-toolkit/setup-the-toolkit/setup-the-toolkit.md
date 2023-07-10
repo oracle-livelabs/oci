@@ -73,9 +73,9 @@ The objectives of this lab are:
  
  1. List out all the containers:
 
-   ```
-   docker ps
-   ```
+    ```
+    docker ps
+    ```
 > Note down the container ID from this cmd output.
 
 2. Enter the container using the above container id.
