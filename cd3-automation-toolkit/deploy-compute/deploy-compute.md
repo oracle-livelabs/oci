@@ -56,7 +56,7 @@ Refer to the below image as example:
 
     Refer to the below image as example:
 
-   ![vcn](/cd3-automation-toolkit/deploy-compute/images/vcn.png)
+   ![vcn](images/vcn.png "details for vcn")
 
 5. Add DHCP details for cd3_vcn
 
@@ -72,7 +72,7 @@ Refer to the below image as example:
 
   Refer to the below image as example:
 
-   ![dhcp](/cd3-automation-toolkit/deploy-compute/images/dhcp.png)
+   ![dhcp](images/dhcp.png "details of dhcp configuration")
 
 6. Add details for creating Subnets in cd3_vcn
 
@@ -85,7 +85,7 @@ Refer to the below image as example:
 
   Refer to the below image as example:
 
-  ![subnets](/cd3-automation-toolkit/deploy-compute/images/subnets.png)
+  ![subnets](images/subnets.png "subnet details")
 
 7. Add details for Route rules
 
@@ -97,7 +97,7 @@ Refer to the below image as example:
 
   Refer to the below image as example:
 
-   ![routerules](/cd3-automation-toolkit/deploy-compute/images/routerules.png)
+   ![routerules](images/routerules.png "details of route rules")
 
 8. Add details for Security rules
 
@@ -109,7 +109,7 @@ Refer to the below image as example:
 
   Refer to the below image as example:
 
-   ![secrule](/cd3-automation-toolkit/deploy-compute/images/secrules.png)
+   ![secrule](images/secrules.png "details of sec rules")
 
 9. Add details for Compute VM
    - Navigate to **"Instances"** sheet and create a Compute Instance with below details:
@@ -139,7 +139,7 @@ Refer to the below image as example:
 >Note: Check logs under /var/lib/cloud/instance to ensure the correct data was passed.
 
   Refer to the below image as example:
-  ![vm](/cd3-automation-toolkit/deploy-compute/images/vm.png)
+  ![vm](images/vm.png "details of compute")
 
 11. Add details for Block Volumes
 
@@ -149,7 +149,7 @@ Refer to the below image as example:
 
   Refer to the below image as example:
 
-   ![blockvolumes](/cd3-automation-toolkit/deploy-compute/images/blockvolume.png)
+   ![blockvolumes](images/blockvolume.png "details of block volume")
 
 11. Add details for ATP
 
@@ -161,7 +161,7 @@ Refer to the below image as example:
 
   Refer to the below image as example:
 
-  ![ATP](/cd3-automation-toolkit/deploy-compute/images/atp.png)
+  ![ATP](images/atp.png "ATP example")
 
 Once all the resource details are filled, save the Excel file. 
 
