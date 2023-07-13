@@ -31,10 +31,20 @@ Running on top of the world's most powerful database, [**Oracle Autonomous Datab
 
 ### AI for Healthcare - Technology Architecture
 
-![Archiecture](images/architecture-2.png " ")
+![Archiecture](images/architecture-v3.png " ")
+
+### AI for Healthcare - Learning path
+
+Learning paths are independent of each other, for example after completing common labs you can directly work on AI Vision or Document Understanding Labs. most of the labs are Optional and independent of each other.
+
+![Learning Path 1](images/learning-path-1.png " ")
+
+![Learning Path 2](images/learning-path-2.png " ")
+
+![Learning Path 32](images/learning-path-3.png " ")
  
 ### AI for Healthcare - Table of Contents
-
+ 
 *Common Labs - Introduction Lab to Lab 3*
 
 These are common labs that are required for most of the other labs under this workshop.
@@ -45,7 +55,10 @@ These are common labs that are required for most of the other labs under this wo
     * About Breast Cancer
 * Get Started
     * Sign-in to Oracle [cloud web console](cloud.oracl.com)
-* Lab 1: Setup [**OCI Policies**](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Identity/access/manage-accessresources.htm)
+* Lab 1: Setup [**OCI Policies**](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Identity/access/manage-accessresources.htm) 
+
+ *Setting up Policies is required Only if you do not have administrative access in your tenancy.*
+
     * Create OCI Bucket
     * Create a new compartment
     * Setup policies for Compartment management
@@ -117,7 +130,7 @@ These Labs guide us in creating medical expenses using Oracle [**OCI Document Un
     * Verify Oracle APEX File upload settings
     * Create Custom Reports and Verify the results of uploaded receipt file.
     * Create an Expense item from the uploaded receipt
-
+ 
 *Create Medical Transcriptions - Lab 11 to Lab 13* 
 
 These Labs help us with medical transcription and consulting virtual AI doctors using Oracle [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/) AI Service.
@@ -269,4 +282,4 @@ You may now **proceed to the next lab**.
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
 * **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - July 2nd, 2023
+* **Last Updated By/Date** - July 13th, 2023
