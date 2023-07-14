@@ -1,15 +1,11 @@
-# Create an Image Library to Detect Breast Cancer
+# Create Speech Transcription Job
 
 ## Introduction
 
-This lab walks you through organising an image library in OCI Object Storage. You will load images to Object Storage directly from your laptop using OCI CLI. There are other options to upload images to object storage, such as using OCI Cloud Shell.
+In this lab, we will walk you through the process of uploading an audio file into OCI object storage, creating a Speech transcription job and reviewing the output of transcription in both JSON and SRT formats..
  
-Estimated time: 30 minutes
-
-### About OCI Object Storage
-
-OCI Object Storage service is an internet-scale, high-performance storage platform that offers reliable and cost-efficient data durability. The Object Storage service can store an unlimited amount of unstructured data of any content type, including analytic data and rich content, like images and videos.
-
+Estimated time: 20 minutes
+ 
 ### Objectives
 
 In this lab, you will:
