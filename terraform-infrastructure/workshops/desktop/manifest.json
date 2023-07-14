@@ -15,25 +15,25 @@
       "filename": "../../data-load/data-load.md"
     },
     {
-      "title": "Lab 1: Provision an Instance",
+      "title": "Lab 1: Setting up your Tenancy",
       "description": "Labs that follow the introduction are numbered, starting with Lab 1",
-      "filename": "../../provision/provision.md"
-    },
-    {
-      "title": "Lab 2: Setup the Environment",
       "filename": "../../setup/setup.md"
     },
     {
-      "title": "Lab 3: Load Data into an Instance",
-      "filename": "../../data-load/data-load.md"
+      "title": "Lab 2: Editing Terraform provider",
+      "filename": "../../terraform/terraform.md"
     },
     {
-      "title": "Lab 4: Query Data",
-      "filename": "../../query/query.md"
+      "title": "Lab 3: Network Module",
+      "filename": "../../network/network.md"
     },
     {
-        "title": "Lab 5: Tables in LiveLabs",
-        "filename": "../../tables/tables.md"
+      "title": "Lab 4: Bastion and Webserver Modules",
+      "filename": "../../compute/compute.md"
+    },
+    {
+      "title": "Lab 5: Terraform Deployment",
+      "filename": "../../deploy/deploy.md"
     },
     {
       "title": "Need Help?",
