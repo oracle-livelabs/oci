@@ -14,7 +14,7 @@ This lab assumes you have:
 
 * **Option 1 -**  Access to a [FastConnect Partner](https://www.oracle.com/cloud/networking/fastconnect/providers/) that is available for your Oracle Cloud region and 3rd party cloud service provider.
 
-* **Option 2 -** Access to an Azure subscription with a supported Azure Interconnect region [Supported regions are documented here](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
+* **Option 2 -** Access to an Azure subscription with a supported Azure Interconnect region. [Supported regions are documented here](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
 
     > **Note:** If your OCI or Azure region does not support Azure Interconnect use **Option 1** to connect to Azure.
 

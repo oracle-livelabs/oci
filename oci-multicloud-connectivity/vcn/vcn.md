@@ -32,15 +32,11 @@ In this lab, you will:
 
 1. On the Oracle Cloud Infrastructure Console Home page, under the Quick Actions header, click on Set up a network with a wizard.
   ![Quick Actions Wizard](images/vcn-1.png)
-
 2. Select **VCN with Internet Connectivity**, and then click **Start VCN Wizard**.
   ![VCN with Internet Connectivity](images/vcn-2.png)
-
 3. The default parameters for the VCN quickstart will be used. Verify your configuration looks similar to the following, and press the **Next** button at the bottom of the screen :
   ![Create a VCN Configuration](images/vcn-3.png)
-
 4. Overview the configuration, then press the **Create** button at the bottom of the screen.
     ![Review CV Configuration](images/vcn-4.png)
-
 5. When VCN creation is complete, click on **View VCN**. Proceed to the next lab.
     ![Workflow](images/vcn-5.png)
