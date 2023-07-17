@@ -29,7 +29,7 @@ Virtual Machine QuickStart:[Quickstart Video](youtube:8WWpGHxvhw4:large)
     ![Cloud Shell Tutorial](images/cloudshell-2.png)
 
 3. Generate a new SSH key by running the **ssh-keygen** command. Leave all of the values as their default (empty).
-    
+
     ![SSH Keygen](images/cloudshell-3.png)
 
 4. Run **cat ~/.ssh/id_rsa** to copy the contents of the public key to your clipboard. This will be used in the next step when creating a virtual machine.

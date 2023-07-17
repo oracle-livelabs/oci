@@ -32,8 +32,10 @@ TODO
 
 1. Log into the Azure portal and click **Create Resource**.
     ![Alt text](images/vnet-gw-1.png)
+
 2. Under the Create Resource menu, navigate to **Networking -> Virtual Network Gateway** and click **Create**.
     ![Alt text](images/vnet-gw-2.png)
+
 3. For the new Virtual Network Gateway, give it a **Name**. Set the Gateway Type to **ExpressRoute**. Under **Virtual Network** select **Create Virtual Network**. Complete the following fields.
 
     |                  **Field**              |    **Vaue**  |
@@ -46,10 +48,13 @@ TODO
 
     Verify the configuration, and then select **OK**.
     ![Alt text](images/vnet-gw-3.png)
+
 4. Optionally, add Public IP address, Select **Create New**. Give the public IP address a **Name** and select the **SKU**. Then select **Review + create**.
     ![Alt text](images/vnet-gw-4.png)
+
 5. Verify the configuration, and then click **Create**.
     ![Alt text](images/vnet-gw-5.png)
+
 6. When your deployment says **Your deployment is complete**, move to the next task. This step can take anywhere from 15-45 minutes so be patient.
     ![Alt text](images/vnet-gw-6.png)
 
@@ -57,24 +62,34 @@ TODO
 
 1. From the Azure Portal main page, select **Create a Resource**.
     ![Alt text](images/azure-vm-1.png)
+
 2. Under Virtual Machine, select **Create**.
     ![Alt text](images/azure-vm-2.png)
+
 3. Under Create a virtual machine, select your **Resource Group**. Set the **Virtual Machine Name** and **Region**. Verify the image is **Ubuntu Server 20.04 LTS**
     ![Alt text](images/azure-vm-3.png)
+
 4. Optionally add the public key from Oracle Cloud Cloud Shell, and then click **Review + create**.
     ![Alt text](images/azure-vm-4.png)
+
 5. Verify the configuration, and then click **Create**.
     ![Alt text](images/azure-vm-5.png)
+
 6. While the Virtual Machine is deploying, modify the Network Security Group by clicking **Ubuntu-nsg**.
     ![Alt text](images/azure-vm-6.png)
+
 7. Select **Inbound Security Rules**.
     ![Alt text](images/azure-vm-7.png)
+
 8. Set Source and Destination to **Any**. Set the Source and Destination port ranges to "*". Set the Protocol to **ICMP**. Set the Action to **Allow**. Select **Add** to add the inbound security rule to the Network Security Group.
     ![Alt text](images/azure-vm-8.png)
+
 9. Go back to the Virtual Machine status by selecting the parent level object in the UI.
     ![Alt text](images/azure-vm-9.png)
+
 10. When the Virtual Machine status changes to "Complete", select **Go to Resource**.
     ![Alt text](images/azure-vm-10.png)
+
 11. Under Networking, notate the **Private IP Address** of the virtual machine. This will be our target to verify that connectivity works between Oracle Cloud and Azure later in the lab.
     ![Alt text](images/azure-vm-11.png)
 
@@ -82,18 +97,25 @@ TODO
 
 1. From the Azure Portal homepage, click on **Create a Resource**.
     ![Alt text](images/expressroute-1.png)
+
 2. In the search box, search for **ExpressRoute**.
     ![Alt text](images/expressroute-2.png)
+
 3. Find the ExpressRoute resource, and click **Create**.
     ![Alt text](images/expressroute-3.png)
+
 4. Under the **Basics** tab, select the proper **Resource Group** and give the ExpressRoute a **Name**. Click **Next: Configuration**.
     ![Alt text](images/expressroute-4.png)
+
 5. Under the Configuration tab, select **Oracle Cloud FastConnect** as the Provider. Select your Oracle Cloud region in Peering Location (this example uses the OCI Ashburn Region). Select the bandwidth you want the ExpressRoute circuit to have. Select **Standard** for the SKU. Click **Review + create**.
     ![Alt text](images/expressroute-5.png)
+
 6. Review the configuration, and then click **Create**.
     ![Alt text](images/expressroute-6.png)
+
 7. Wait for the deployment to complete. Afterwards, click **Go to resource**.
     ![Alt text](images/expressroute-7.png)
+
 8. Find the Service Key for the ExpressRoute circuit and copy it to your clipboard. You will use this in Task 4 to connect ExpressRoute to FastConnect.
     ![Alt text](images/expressroute-8.png)
 
@@ -134,10 +156,13 @@ TODO
 
 1. Go back to the ExpressRoute in the Azure Portal. Go to **Connections -> Add**.
     ![Alt text](images/expressroute-9.png)
+
 2. Under the **Basics** tab, add the **Resource Group**. Set the Connection type to **ExpressRoute**. Set the Name to **OCI_Azure_Connection**. Set the region to **East US**. Click **Next: Settings**.
     ![Alt text](images/expressroute-10.png)
+
 3. Under the **Settings** tab, select the Virtual Network created earlier in the lab. Select the ExpressRoute circuit created earlier in the lab. Click **Review + create**.
     ![Alt text](images/expressroute-11.png)
+
 4. Verify the configuration, and click **Create**.
     ![Alt text](images/expressroute-12.png)
 
@@ -145,10 +170,13 @@ TODO
 
 1. Go back to the Oracle Cloud Console. On the FastConnect, click on the **Dynamic Routing Gateway** resource.
     ![Alt text](images/fastconnect-7.png)
+
 2. Click on **DRG route tables**, and select **Autogenerated Drg Route Table for VCN attachments**.
     ![Alt text](images/fastconnect-8.png)
+
 3. Click **Get all route rules**.
     ![Alt text](images/fastconnect-9.png)
+
 4. Verify the 10.100.0.0/16 route is populated. 
     ![Alt text](images/fastconnect-10.png)
 

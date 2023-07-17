@@ -19,11 +19,7 @@
             "filename": "../../fastconnect_azure_interconnect/fastconnect_azure_interconnect.md"
         },
         {
-            "title": "WIP(Connectivity Option 2): Equinix",
-            "filename": "../../fastconnect_equinix/fastconnect_equinix.md"
-        },
-        {
-            "title": "WIP(Connectivity Option 3): MegaPort",
+            "title": "WIP(Connectivity Option 2): MegaPort",
             "filename": "../../fastconnect_megaport/fastconnect_megaport.md"
         },
         {

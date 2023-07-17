@@ -6,6 +6,8 @@ Oracle Cloud Infrastructure (OCI) Networking is a core tenet of a MultiCloud arc
 
 # Prerequisites
 
+MAKE SURE ADD FREE TIER FOR OCI STEPS
+
 This lab assumes you have:
 
 * Administrative Access to an Oracle Cloud Tenancy
@@ -21,7 +23,6 @@ This lab assumes you have:
 ![Deployment Diagram](images/multicloud-topology.png)
 
   > **Note:** This architecture diagram shows Azure as the 3rd party cloud. Connecting clouds other than Azure will follow a similar connectivity strategy.
-
 
 # Objectives
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab we will update the route table of the Virtual Cloud Network (VCN) and test end to end connectivity from Oracle Cloud to the external cloud provider, verifying that MultiCloud connectivity has been established. 
+In this lab we will update the route table of the Virtual Cloud Network (VCN) and test end to end connectivity from Oracle Cloud to the external cloud provider, verifying that MultiCloud connectivity has been established.
 
 Estimated Lab Time: 20 minutes
 

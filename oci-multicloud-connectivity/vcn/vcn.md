@@ -31,11 +31,9 @@ In this lab, you will:
 > **The VCN Wizard will automatically create the required dependencies for the VCN, such as route tables, subnets and gateways**
 
 1. On the Oracle Cloud Infrastructure Console Home page, under the Quick Actions header, click on Set up a network with a wizard.
-
   ![Quick Actions Wizard](images/vcn-1.png)
 
 2. Select **VCN with Internet Connectivity**, and then click **Start VCN Wizard**.
-
   ![VCN with Internet Connectivity](images/vcn-2.png)
 
 3. The default parameters for the VCN quickstart will be used. Verify your configuration looks similar to the following, and press the **Next** button at the bottom of the screen :
