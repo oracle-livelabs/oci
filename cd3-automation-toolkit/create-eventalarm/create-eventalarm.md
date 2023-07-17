@@ -67,7 +67,6 @@ Wait for a bit until the plan succeeds and plan logs are available under _Logs_.
     ```
     terraform apply
     ```
-
 The apply process can take some time, so patience is required.
 
 ## Task 4: Inspect Created Objects

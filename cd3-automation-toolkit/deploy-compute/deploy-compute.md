@@ -112,6 +112,7 @@ Refer to the below image as example:
    ![secrule](images/secrules.png "details of sec rules")
 
 9. Add details for Compute VM
+
    - Navigate to **"Instances"** sheet and create a Compute Instance with below details:
 
    - We will provision an **always-free** Instance in this lab.
@@ -120,7 +121,7 @@ Refer to the below image as example:
 
 > Note: To add SSH keys to the vm, place them in **variables.tf** under *ssh_public_key* variable.
 
- 10. Creating a simple web application
+10. Creating a simple web application
 
    - Create a column **"Cloud Init Script"** in the **Instances** sheet before the *defined tags* column and enter its value as "web.sh" in the same row with cd3_vm instance details.
    - Create a bash file "web.sh" under /cd3user/tenancies/<customer_name>/terraform_files/<region_name>/compute/scripts.
@@ -136,7 +137,7 @@ Refer to the below image as example:
           sudo iptables-save
 
  
->Note: Check logs under /var/lib/cloud/instance to ensure the correct data was passed.
+> Note: Check logs under /var/lib/cloud/instance to ensure the correct data was passed.
 
   Refer to the below image as example:
   ![vm](images/vm.png "details of compute")
@@ -183,7 +184,6 @@ Once all the resource details are filled, save the Excel file.
    ```
    python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
    ```
-
 ## Task 4: Generate terraform files and create our resources in OCI
 
 1. Select option 1 from *setUpOCI.py* output menu. 
@@ -220,6 +220,7 @@ Once all the resource details are filled, save the Excel file.
  terraform apply 
  
  ```
+
 8. The created resources can be viewed on the OCI console.
 
 In this lab, we have learnt how to enter details in the CD3 Excel templates, execute setUpOCI.py to create terraform files and create OCI resources using those terraform files.

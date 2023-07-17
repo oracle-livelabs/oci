@@ -44,12 +44,12 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
 
     ````shell
     Cloning into 'mushop'...
-    remote: Enumerating objects: 23293, done.
-    remote: Counting objects: 100% (93/93), done.
-    remote: Compressing objects: 100% (61/61), done.
-    remote: Total 23293 (delta 43), reused 59 (delta 31), pack-reused 23200
-    Receiving objects: 100% (23293/23293), 28.07 MiB | 31.75 MiB/s, done.
-    Resolving deltas: 100% (14244/14244), done.
+    remote: Enumerating objects: 23680, done.
+    remote: Counting objects: 100% (480/480), done.
+    remote: Compressing objects: 100% (242/242), done.
+    remote: Total 23680 (delta 286), reused 415 (delta 235), pack-reused 23200
+    Receiving objects: 100% (23680/23680), 28.27 MiB | 9.24 MiB/s, done.
+    Resolving deltas: 100% (14484/14484), done.
     ````
 
 1. mushop 폴더로 이동합니다.
@@ -146,7 +146,7 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     namespace/mushop-utilities created
     ````
 
-1. Helm을 사용하여 추가 설치될 서드 파티 애플리케이션 종속성 업데이트:
+1. Helm을 사용하여 함께 설치될 서드 파티 애플리케이션도 각 리파지토리에서 정보를 업데이트합니다.
 
     ````shell
     <copy>
@@ -158,23 +158,26 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
 
     ````shell
     Getting updates for unmanaged Helm repositories...
-    ...Successfully got an update from the "https://kubernetes-sigs.github.io/metrics-server" chart repository
     ...Successfully got an update from the "https://kubernetes.github.io/ingress-nginx" chart repository
+    ...Successfully got an update from the "https://kubernetes-sigs.github.io/metrics-server" chart repository
     ...Successfully got an update from the "https://charts.jetstack.io" chart repository
+    ...Successfully got an update from the "https://charts.jenkins.io" chart repository
     ...Successfully got an update from the "https://grafana.github.io/helm-charts" chart repository
     ...Successfully got an update from the "https://prometheus-community.github.io/helm-charts" chart repository
-    ...Successfully got an update from the "https://charts.helm.sh/stable" chart repository
+    Hang tight while we grab the latest from your chart repositories...
+    ...Successfully got an update from the "bitnami" chart repository
+    Update Complete. ⎈Happy Helming!⎈
     Saving 6 charts
     Downloading prometheus from repo https://prometheus-community.github.io/helm-charts
     Downloading grafana from repo https://grafana.github.io/helm-charts
     Downloading metrics-server from repo https://kubernetes-sigs.github.io/metrics-server
     Downloading ingress-nginx from repo https://kubernetes.github.io/ingress-nginx
     Downloading cert-manager from repo https://charts.jetstack.io
-    Downloading jenkins from repo https://charts.helm.sh/stable
+    Downloading jenkins from repo https://charts.jenkins.io
     Deleting outdated charts
     ````
 
-1. MuShop 유틸리티 애플리케이션 설치:
+1. MuShop 유틸리티 애플리케이션을 먼저 설치합니다.
 
     ````shell
     <copy>
@@ -227,7 +230,7 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
 
 ## Task 4: Helm을 사용하여 MuShop 애플리케이션 배포
 
-helm이 구성 가능한 차트를 패키징하고 배포하는 방법을 제공한다는 것을 앞서 알아 봤습니다. 이제 MuShop 애플리케이션을 **Mock Mode**로 배포하겠습니다.클라우드 서비스와 연동하도록 애플리케이션은 준비되어 있지만, 여기서는 MuShop 애플리케이션에 집중하기 위해 애플리케이션에서 클라우드 서비스를 목업 모드로 처리하도록 하겠습니다.
+helm이 구성 가능한 차트를 패키징하고 배포하는 방법을 제공한다는 것을 앞서 알아 봤습니다. 이제 MuShop 애플리케이션을 **Mock Mode**로 배포하겠습니다.클라우드 서비스와 연동하도록 애플리케이션은 준비되어 있지만, 여기서는 MuShop 애플리케이션에 집중하기 위해 애플리케이션에서 클라우드 서비스를 목업 모드(Mock Mode)로 처리하도록 하겠습니다.
 
 1. "mock mode"로 MuShop 애플리케이션 배포
 
@@ -383,4 +386,4 @@ helm이 구성 가능한 차트를 패키징하고 배포하는 방법을 제공
 * **Author** - Adao Junior
 * **Contributors** -  Kay Malcolm (DB Product Management), Adao Junior
 * **Last Updated By/Date** - Adao Junior, October 2020
-* **Korean Translator & Contributors** - DongHee Lee, August 2022
+* **Korean Translator & Contributors** - DongHee Lee, June 2023

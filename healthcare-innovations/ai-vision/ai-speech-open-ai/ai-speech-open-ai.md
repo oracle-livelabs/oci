@@ -4,6 +4,8 @@
 
 The OpenAI API can be applied to virtually any task that requires understanding or generating natural language and code. The OpenAI API can also be used to generate and edit images or convert speech into text. OpenAI offer a range of models with different capabilities and price points, as well as the ability to fine-tune custom models.
 
+If you are planning to use [Cohere](https://cohere.com/) AI instead of OpenAI please refer [this LinkedIn article](https://www.linkedin.com/feed/update/urn:li:activity:7082361643715747840/)
+
 **GPTs**
 
 OpenAI's GPT (generative pre-trained transformer) models have been trained to understand natural language and code. GPTs provide text outputs in response to their inputs. The inputs to GPTs are also referred to as "prompts". Designing a prompt is essentially how you “program” a GPT model, usually by providing instructions or some examples of how to successfully complete a task. GPTs can be used across a great variety of tasks including content or code generation, summarization, conversation, creative writing, and more. Read more in OpenAI's introductory [GPT guide](https://platform.openai.com/docs/guides/gpt) 
@@ -42,8 +44,7 @@ In this lab, you will:
 
 This lab assumes you have:
 
-* Completed previous labs of this workshop.
-* You have an Oracle APEX workspace already created.
+* Completed previous labs under Speech AI series. (Lab 11 to Lab 13)
 
 ## Task 1: Create OpenAI Key
 
@@ -257,7 +258,6 @@ This lab assumes you have:
         END; 
         </copy>
         ```
-
  
 This concludes this lab and you can **proceed to the next lab**.
 
@@ -266,6 +266,7 @@ This concludes this lab and you can **proceed to the next lab**.
 * [OpenAI Authentication](https://platform.openai.com/docs/plugins/authentication/oauth) 
 * [API Reference Guide](https://platform.openai.com/docs/api-reference)
 * [JSON Developer Guide](https://docs.oracle.com/en/database/oracle/oracle-database/19/adjsn/function-JSON_TABLE.html#GUID-0172660F-CE29-4765-BF2C-C405BDE8369A)
+* [Oracle to Deliver Powerful and Secure Generative AI Services for Business](https://www.oracle.com/in/news/announcement/oracle-to-deliver-powerful-and-secure-generative-ai-service-for-business-2023-06-13/)
 
 ## Acknowledgements
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database

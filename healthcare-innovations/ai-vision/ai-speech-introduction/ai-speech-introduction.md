@@ -23,7 +23,7 @@ OCI Speech ASR models support English, Spanish, and Portuguese, so you can trans
 **Easy to integrate**
 OCI Speech is a versatile service that can be called via REST APIs, different SDKs, and Oracle CLI. Developers can easily deploy a scalable speech service without having data science or ML expertise.
  
-Estimated Workshop Time: 4 hours
+Estimated Workshop Time: 10 mins
 
 ### Objectives
 
@@ -38,8 +38,7 @@ In this workshop, you will learn how to:
  
 This lab assumes you have:
 
-* An Oracle account
-* Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
+* This is Optional Lab, No Prerequisites for this lab
 
 You may now **proceed to the next lab**.
     

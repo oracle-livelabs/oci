@@ -48,6 +48,12 @@ This lab assumes you have:
     <copy>oci os object bulk-upload --namespace < namespace > -bn < bucket_name > --src-dir < local folder > --overwrite --content-type 'image/*'</copy>
     ```
 
+    > **Note :** if you have errors in data labelling ensure that you provide content type as *image/jpeg* or *image/png* .Check the OCI CLI [Command Reference](https://docs.oracle.com/en-us/iaas/tools/oci-cli/3.29.2/oci_cli_docs/cmdref/os/object/bulk-upload.html) 
+
+    ```text
+    <copy>oci os object bulk-upload --namespace < namespace > -bn < bucket_name > --src-dir < local folder > --overwrite --content-type image/jpeg </copy>
+    ```
+  
 2. Replace namespace, bucket_name and local folder as per your settings, for example
 
     ```text
