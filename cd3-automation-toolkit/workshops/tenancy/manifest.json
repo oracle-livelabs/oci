@@ -1,8 +1,12 @@
 {
-    "workshoptitle": "Deploy Compute, Block Volume and ATP using CD3 Automation Toolkit",
+    "workshoptitle": "Deploy a Web Application infrastructure using CD3 Automation Toolkit",
     "help": "livelabs-help-oci_us@oracle.com",
 	"tutorials": [
         {
+            "title": "Introduction",
+            "filename": "./../../introduction/introduction.md"
+        },
+	{
             "title": "Lab 1: Get started with CD3 Automation Toolkit setup",
             "filename": "./../../setup-the-toolkit/setup-the-toolkit.md"
         },
