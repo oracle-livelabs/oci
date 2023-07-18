@@ -20,9 +20,10 @@ Please follow the previous lab till the last step. Once you are able to provisio
 ## Task 1: Create a Resource Manager Stack
 
 1. Execute the setUpOCI Script:
-python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
-
-_e.g._ python setUpOCI.py /cd3user/tenancies/usr1_livelab/usr1_livelab_setUpOCI.properties
+    ```
+    python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
+    ```
+    __e.g.__ python setUpOCI.py /cd3user/tenancies/usr1_livelab/usr1_livelab_setUpOCI.properties
 
 2. Type __option 9__ for developer services and __option 1__ from submenu for __upload current terraform files/state to Resource Manager__.
 
@@ -32,15 +33,15 @@ _e.g._ python setUpOCI.py /cd3user/tenancies/usr1_livelab/usr1_livelab_setUpOCI.
 
 5. You can run plan option from resource manager to validate it. You could also download the terraform files for local modification and re-upload or use OCI online code editor.  
 
-```
-terraform plan
-```
+    ```
+    terraform plan
+    ```
 
 6. Wait for a bit until the plan succeeds and plan logs are available under _Logs_. Run apply if any changes are made to get it applied.
 
-```
-terraform apply
-```
+    ```
+    terraform apply
+    ```
 ## Acknowledgements
 
 - __Author__ - Dipesh Rathod

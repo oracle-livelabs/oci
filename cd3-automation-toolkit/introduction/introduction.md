@@ -4,8 +4,6 @@
 
 This set of labs will walk you through deploying various OCI services. Upon completion of the labs, a full set of OCI resources will be created as a base infrastructure to install and configure an application.
 
-[CD3 Automation Toolkit Explained in 1 minute](youtube:TSNu0pUHYsE&list=PLPIzp-E1msrbJ3WawXVhzimQnLw5iafcp&index=1)
-
 Estimated Workshop Time: 60 Minutes
 
 ### Objectives
