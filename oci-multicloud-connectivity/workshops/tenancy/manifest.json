@@ -15,12 +15,12 @@
             "filename": "../../drg/drg.md"
         },
         {
-            "title": "(Connectivity Option 1): Azure Interconnect",
-            "filename": "../../fastconnect_azure_interconnect/fastconnect_azure_interconnect.md"
+            "title": "(Connectivity Option 1): Megaport",
+            "filename": "../../fastconnect_megaport/fastconnect_megaport.md"
         },
         {
-            "title": "(Connectivity Option 2): MegaPort",
-            "filename": "../../fastconnect_megaport/fastconnect_megaport.md"
+            "title": "(Connectivity Option 2): Azure Interconnect",
+            "filename": "../../fastconnect_azure_interconnect/fastconnect_azure_interconnect.md"
         },
         {
             "title": "Deploy and Access a Virtual Machine",
@@ -31,7 +31,7 @@
             "filename": "../../verify-connectivity/verify-connectivity.md"
         },
         {
-            "title": "WIPLearn More",
+            "title": "Learn More",
             "filename": "../../other-livelabs/other-livelabs.md"
         }
     ]

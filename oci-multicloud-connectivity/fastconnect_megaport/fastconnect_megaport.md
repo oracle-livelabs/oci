@@ -2,34 +2,38 @@
 
 ## Introduction
 
-In this section, we will deploy the Oracle Cloud Infrastructure FastConnect service to extend private connectivity outside of Oracle Cloud Infrastructure.
+In this lab, we will deploy the Oracle Cloud Infrastructure FastConnect service to privately extend connectivity outside of Oracle Cloud Infrastructure.
 
 Estimated Time: 20 minutes
 
-### About FastConnect
+# About FastConnect
 
 FastConnect allows customers to connect directly external environments such as 3rd party cloud providers and on-premise data centers to their Oracle Cloud Infrastructure (OCI) virtual cloud network via dedicated, private, high-bandwidth connections.
 
-### Objectives
+# Objectives
 
 In this lab, you will:
 
-* Use the MegaPort portal to build a private connection.
-* Use the Oracle Cloud Console to create a FastConnect Connection to MegaPort
+* Use the Megaport portal to build a private connection.
+* Use the Oracle Cloud Console to create a FastConnect Connection to Megaport
 
-## Prerequisites
+# Prerequisites
 
-This lab assumes you have:
+This lab does not walk through the steps to connect additional cloud providers to Megaport. It is recommended to go through Megaport's [MCR documentation](https://docs.megaport.com/cloud/mcr/) for your additional cloud provider of choice and attach the cloud provider to MCR.
 
-* Access to the MegaPort portal.
+In addition to the previous requirements, this lab assumes you have:
 
-Warning: This lab does not walk through the necessary steps to set up the additional cloud provider. It is recommended to walk through the MegaPort's [MCR documentation](https://docs.megaport.com/cloud/mcr/) for your additional cloud provider of choice to attach the cloud provider to MCR. 
+* Access to the Megaport portal.
+* A 3rd party cloud provider with the following:
+    * Properly connected and configured 3rd party cloud to the Megaport Cloud Router after completing Task 2 in this lab. [MCR documentation](https://docs.megaport.com/cloud/mcr/)
+    * Non-overlapping Private IP space between clouds.
+    * A virtual machine deployed in the private network with ICMP (Ping) and SSH accessibility.
 
-After the additional cloud provider(s) are attached to the MCR, this lab assumes the following of the additional cloud providers that are attached to the MCR.
+![Megaport Architecture](images/mcr_architecture.png)
 
--Private IP space does not overlap between cloud providers.
--A virtual machine deployed in the private network with ICMP (Ping) and SSH accessibility.
--Internal routing of the additional cloud providers are configured to get traffic to the private circuit.
+## Video Walkthrough
+
+[Megaport Quickstart Video](youtube:G0CySk4mlqs:large)
 
 ## Task 1: Configure Oracle Cloud FastConnect
 
@@ -43,12 +47,11 @@ After the additional cloud provider(s) are attached to the MCR, this lab assumes
 
     |                  **Field**              |    **Vaue**  |
     |----------------------------------------|:------------:|
-    |NAME |    _ConnectionToMegaPort_   |
+    |NAME |    Megaport_1   |
     |COMPARTMENT |  *Choose your lab compartment*    |
     |Virtual Circuit Type|    Private Virtual Circuit    |
-    |Dynamic Routing Gateway|  *DRG from previous step*  |
+    |Dynamic Routing Gateway|  DynamicRoutingGateway  |
     |Provisioned Bandwidth|    1 Gbps    |
-    |Partner Service Key|    *service_key_from_Azure*    |
     |Customer Primary BGP IPv4 Address|    169.254.0.2/30    |
     |Oracle Primary BGP IPv4 Address|    169.254.0.1/30    |
     |Customer BGP ASN|    133937    |
@@ -56,14 +59,14 @@ After the additional cloud provider(s) are attached to the MCR, this lab assumes
 5. Verify your configuration matches the following, and then click **Create**.
   ![Verify configuration](images/mp_fc_4.png)
 
-## Task 2: Add Oracle Cloud FastConnect to MegaPort MCR
+## Task 2: Add Oracle Cloud FastConnect to Megaport MCR
 
 1. Under **Next Steps**, click **Complete connection**
   ![Complete Connection](images/mp_mcr_1.png)
-2. Use your MegaPort credentials to authenticate with MegaPort within the Oracle Cloud console.
-  ![Authenticate with MegaPort](images/mp_mcr_2.png)
+2. Use your Megaport credentials to authenticate with Megaport within the Oracle Cloud console. Click **Login to Megaport**.
+  ![Authenticate with Megaport](images/mp_mcr_2.png)
 3. Under **Configure connection** and select **Megaport Cloud Router**. Your configuration should look similar to the example below.
-  ![MegaPort Cloud Router Selection](images/mp_mcr_3.png)
+  ![Megaport Cloud Router Selection](images/mp_mcr_3.png)
 4. Under **Oracle virtual cross connect details** and set a name, location and rate limit for the connection similar to the configuration below.
   ![Oracle VXC](images/mp_mcr_4.png)
 5. Review the configuration, accept the agreement and then click **Complete connection**.
@@ -80,7 +83,8 @@ After the additional cloud provider(s) are attached to the MCR, this lab assumes
 3. Under **Chose Destination Type** select **Cloud**.
   ![Add another cloud](images/mp_portal_3.png)
 4. Under **Select Provider**, search for the additional cloud provider you would like to establish connectivity with. Follow the steps on the screen to set up the additional cloud provider. (The example below is looking to connect with Azure). It is also recommended to follow the steps in the [MCR documentation](https://docs.megaport.com/cloud/mcr/) to properly set up the other cloud provider.
-  ![Select Provider](images/mp_portal_4.png). You can also follow a full working deployment of Azure in the "Connectivity Option 1" lab.
+  ![Select Provider](images/mp_portal_4.png). 
+5. When the 3rd party cloud is properly connected to the Megaport Cloud Router, proceed to the next step.
 
 ## Learn More
 

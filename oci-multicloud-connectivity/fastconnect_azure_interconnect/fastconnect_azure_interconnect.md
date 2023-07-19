@@ -2,9 +2,11 @@
 
 ## Introduction
 
-In this section, we will deploy the Oracle Cloud Infrastructure FastConnect service to extend private connectivity outside of Oracle Cloud Infrastructure.
+In this lab, we will setup the Oracle Cloud Infrastructure FastConnect service to privately extend connectivity outside of Oracle Cloud Infrastructure.
 
-Estimated Time: 20 minutes
+Estimated Time: 30 minutes
+
+![Deployment Diagram](../fastconnect_azure_interconnect/images/multicloud-topology.png)
 
 ### About FastConnect
 
@@ -14,32 +16,33 @@ FastConnect allows customers to connect directly external environments such as 3
 
 In this lab, you will:
 
-* Use the Azure console to setup the connectivity requirements for the Azure Interconnect
-* Use the Oracle Cloud Console to create a FastConnect Connection to ExpressRoute
+* Use the Microsoft Azure Console to deploy the required network resources for the Azure Interconnect.
+* Use the Microsoft Azure Console to deploy a virtual machine to test and verify connectivity with Oracle Cloud.
+* Use the Oracle Cloud Console to create a FastConnect to directly connect to Azure ExpressRoute.
 
 ### Prerequisites
 
 This lab assumes you have:
 
-* Administrative Access to your Azure tenancy
+* Unrestricted lab access to your Microsoft Azure tenancy
 * The OCI and Azure region you are connecting are [supported Azure InterConnect regions](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
 
 ## Video Walkthrough
 
-TODO
+[Azure Quickstart Video](youtube:97dyUveTasQ:large)
 
 ## Task 1: Deploy an Azure VNet and Virtual Network Gateway
 
 1. Log into the Azure portal and click **Create Resource**.
     ![Create resource](images/vnet-gw-1.png)
 2. Under the Create Resource menu, navigate to **Networking -> Virtual Network Gateway** and click **Create**.
-    ![Create Resource](images/vnet-gw-2.png)
+    ![Create resource](images/vnet-gw-2.png)
 3. For the new Virtual Network Gateway, give it a **Name**. Set the Gateway Type to **ExpressRoute**. Under **Virtual Network** select **Create Virtual Network**. Complete the following fields.
 
     |                  **Field**              |    **Vaue**  |
     |----------------------------------------|:------------:|
     |Name |    Azure_VNET    |
-    |Resource Group |  _ChooseExistingorCreateANewOneHere_    |
+    |Resource Group |  _ChooseExistingORCreateANewOne_    |
     |Address Range|    10.100.0.0/16    |
     |Subnet Name|  azure_subnet  |
     |Address Range|  10.100.0.0/24  |
@@ -50,7 +53,7 @@ TODO
     ![Public IP](images/vnet-gw-4.png)
 5. Verify the configuration, and then click **Create**.
     ![Verify Config](images/vnet-gw-5.png)
-6. When your deployment says **Your deployment is complete**, move to the next task. **This step can take anywhere from 15-45 minutes so be patient.**
+6. When your deployment says **Your deployment is complete**, move to the next task. **The Azure Virtual Network Gateway can take anywhere from 15-45 minutes to deploy.**
     ![Verify Deployment Complete](images/vnet-gw-6.png)
 
 ## Task 2: Deploy an Azure VM
@@ -109,10 +112,10 @@ TODO
 
     |                  **Field**              |    **Vaue**  |
     |----------------------------------------|:------------:|
-    |NAME |    _ConnectionToAzure    |
+    |NAME |    OCI Azure Interconnect    |
     |COMPARTMENT |  *Choose your lab compartment*    |
     |Virtual Circuit Type|    Private Virtual Circuit    |
-    |Dynamic Routing Gateway|  *DRG from previous step*  |
+    |Dynamic Routing Gateway|  DynamicRoutingGateway  |
     |Provisioned Bandwidth|    1 Gbps    |
     |Partner Service Key|    *service_key_from_Azure*    |
     |Customer Primary BGP IPv4 Address|    169.254.0.2/30    |
@@ -130,14 +133,14 @@ TODO
 
 1. Go back to the ExpressRoute in the Azure Portal. Go to **Connections -> Add**.
     ![Add Connection to ExpressRoute](images/expressroute-9.png)
-2. Under the **Basics** tab, add the **Resource Group**. Set the Connection type to **ExpressRoute**. Set the Name to **OCI_Azure_Connection**. Set the region to **East US**. Click **Next: Settings**.
+2. Under the **Basics** tab, add the **Resource Group**. Set the Connection type to **ExpressRoute**. Set the Name to **OCI\_Azure_Connection**. Set the region to **East US**. Click **Next: Settings**.
     ![Set ExpressRoute settings](images/expressroute-10.png)
 3. Under the **Settings** tab, select the Virtual Network created earlier in the lab. Select the ExpressRoute circuit created earlier in the lab. Click **Review + create**.
     ![Select Virtual Network](images/expressroute-11.png)
 4. Verify the configuration, and click **Create**.
     ![Verify the config](images/expressroute-12.png)
 
-## Task 6: Verify Dynamic Routing Configuration
+## Task 6: Verify FastConnect Routing
 
 1. Go back to the Oracle Cloud Console. On the FastConnect, click on the **Dynamic Routing Gateway** resource.
     ![Dynamic Routing Gateway Select](images/fastconnect-7.png)
@@ -145,6 +148,6 @@ TODO
     ![Go to the VCN attachment route table](images/fastconnect-8.png)
 3. Click **Get all route rules**.
     ![Get the routes from the route table](images/fastconnect-9.png)
-4. Verify the 10.100.0.0/16 route is populated. 
+4. Verify the 10.100.0.0/16 route is populated. Seeing this route in the route table confirms that OCI is able to see the Azure network over the FastConnect connection.
     ![Verify routes received from Azure](images/fastconnect-10.png)
 5. Congratulations! This is major mile stone. In the next lab we will deploy a virtual machine and verify traffic traverses the private connection between Oracle Cloud and Azure.

@@ -1,30 +1,12 @@
 # Introduction
 
-## About this Workshop
+# About this Workshop
 
-Oracle Cloud Infrastructure (OCI) Networking is a core tenet of a MultiCloud architecture. This Hands On Lab will walk through the steps required to connect to 3rd party cloud infrastructure such as Azure, GCP and AWS. The Oracle Cloud networking resources deployed in this lab will include a VCN, DRG and FastConnect. Be aware that this lab is used to deploy a simple configuration and additional network and security considerations are needed for a production environment. Make sure to review [Overview of Networking](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm) to gain a full understanding of Oracle Cloud's network components and their relationships.
+Oracle Cloud Infrastructure (OCI) Networking is a core tenet of a MultiCloud architecture. This Hands On Lab will walk through the steps required to connect to Oracle Cloud to 3rd party cloud infrastructure such as Microsoft Azure, Google GCP and Amazon AWS. After the networking dependencies are met, you will deploy a test workload to verify connectivity between cloud providers.
 
-# Prerequisites
+The Oracle Cloud networking resources deployed in this lab will include a VCN, DRG and FastConnect. Make sure to review [Oracle Cloud Networking Overview](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm) become more familiar with Oracle Cloud's networking components and their relationships.
 
-MAKE SURE ADD FREE TIER FOR OCI STEPS
-
-This lab assumes you have:
-
-* Administrative Access to an Oracle Cloud Tenancy
-
-* **Option 1 -**  Access to a [FastConnect Partner](https://www.oracle.com/cloud/networking/fastconnect/providers/) that is available for your Oracle Cloud region and 3rd party cloud service provider.
-
-* **Option 2 -** Access to an Azure subscription with a supported Azure Interconnect region. [Supported regions are documented here](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
-
-    > **Note:** If your OCI or Azure region does not support Azure Interconnect use **Option 1** to connect to Azure.
-
-# Architecture Diagram
-
-![Deployment Diagram](images/multicloud-topology.png)
-
-  > **Note:** This architecture diagram shows Azure as the 3rd party cloud. Connecting clouds other than Azure will follow a similar connectivity strategy.
-
-# Objectives
+# Lab Objectives
 
 In this workshop, you will learn how to:
 
@@ -33,3 +15,15 @@ In this workshop, you will learn how to:
 * Setup a FastConnect Connection
 * Deploy a Virtual Machine
 * Verify MultiCloud Connectivity
+
+# Prerequisites
+
+This lab assumes you have:
+
+* Unrestricted lab access to an Oracle Cloud Tenancy
+* Unrestricted lab access to your 3rd party cloud provider (Azure, GCP, AWS, etc)
+
+**AND**
+
+* **Option 1 -**  Access to a [FastConnect Partner](https://www.oracle.com/cloud/networking/fastconnect/providers/) that is available for your Oracle Cloud region and 3rd party cloud service provider. This Hands-On Lab walks through a Megaport MCR deployment with Oracle Cloud.
+* **Option 2 -** Access to an Azure subscription with a [supported Azure Interconnect region](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability). If your OCI or Azure region does not support Azure Interconnect use **Option 1** to connect to Microsoft Azure.

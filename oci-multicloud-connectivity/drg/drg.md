@@ -2,15 +2,15 @@
 
 ## Introduction
 
-In this lab you will build a Dynamic Routing Gateway (DRG) to serve as a connectivity gateway for the VCN deployed in the previous lab.
+In this lab you will build a Dynamic Routing Gateway (DRG) to serve as a private connectivity gateway for the VCN deployed in the previous lab.
 
 Estimated Lab Time: 10 minutes
 
-### About Dynamic Routing Gateway (DRG)
+# About Dynamic Routing Gateway (DRG)
 
-A DRG acts as a virtual router, providing a path for traffic between your on-premises networks and VCNs, and can also be used to route traffic between VCNs. Using different types of attachments, custom network topologies can be constructed using components in different regions and tenancies.
+A DRG acts as a virtual router, providing a path for traffic between your on-premises networks, cloud provider infrastructure and VCNs, and can also be used to route traffic between VCNs. Using different types of attachments, custom network topologies can be constructed using components in different regions and tenancies.
 
-### Objectives
+# Objectives
 
 In this lab, you will:
 

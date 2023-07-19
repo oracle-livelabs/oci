@@ -2,20 +2,20 @@
 
 ## Introduction
 
-In this lab we will update the route table of the Virtual Cloud Network (VCN) and test end to end connectivity from Oracle Cloud to the external cloud provider, verifying that MultiCloud connectivity has been established.
+In this lab, we will complete the configuration of Oracle Cloud and verify MultiCloud connectivity has been established.
 
-Estimated Lab Time: 20 minutes
+Estimated Lab Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
 
 * Update the VCN Route Table
-* Verify end to end connectivity with your external cloud provider.
+* Verify private connectivity between Oracle Cloud and your external cloud provider.
 
 ## Video Walkthrough
 
-TODO
+[Verify Connectivity Video](youtube:oTcQNfchMKc:large)
 
 ## Task 1 : Update VCN Route Table
 
@@ -29,7 +29,7 @@ TODO
     ![Click on the route table of the subnet](images/route-table-4.png)
 5. Click **Add Route Rules**.
     ![Add a route rule](images/route-table-5.png)
-6. On the Route Rule, add **Dynamic Routing Gateway** as the Target Type. **CIDR Block** as the Destination Type. **10.100.0.0/16** as the Destination CIDR Block, and an option description. 
+6. On the Route Rule, add **Dynamic Routing Gateway** as the Target Type. **CIDR Block** as the Destination Type. **10.100.0.0/16** as the Destination CIDR Block, and an option description.
     ![Add the destination of the cloud provider](images/route-table-6.png)
 
 ## Task 2: Test Connectivity
@@ -39,10 +39,9 @@ TODO
 2. Run the command **ping _ip address_**, where **_ip address_** is the IP address of your external cloud provider's virtual machine private IP address.
     ![Ping the VM](images/test-connectivity-2.png)
 
-3. Congratulations! I hope you enjoyed the lab!
+3. Congratulations on getting Multicloud connectivity working! I hope you enjoyed the lab!
 
 ## Acknowledgements
 
 * **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, June 2023
+* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, July 2023
