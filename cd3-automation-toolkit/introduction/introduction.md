@@ -29,7 +29,7 @@ This lab has the following pre-requisites:
 
 ## The CD3 Automation Toolkit Architecture
 
-![CD3 Automation Toolkit Architecture](images/cd3_architecture.png "CD3 Automation Toolkit Architecture")
+    ![CD3 Automation Toolkit Architecture](images/cd3_architecture.png "CD3 Automation Toolkit Architecture")
 
 ### Overview
 
