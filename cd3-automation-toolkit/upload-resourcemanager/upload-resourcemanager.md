@@ -1,4 +1,4 @@
-# Uploading stack to OCI resource manager
+# Upload stack to OCI resource manager
 
 ## Introduction
 
