@@ -38,10 +38,10 @@ In this lab, you will:
 
       *Parent_compartment 1::Parent_compartment 2:: ... ::Parent_compartment n*
 
-    > Note: Provide your Tenancy's "home region" under the "Region" column. (same for all OCI Identity components).
-
-    Refer to the below image as example:
-    ![Compartment](images/compartment.png "compartment example")
+     > Note: Provide your Tenancy's "home region" under the "Region" column. (same for all OCI Identity components).
+     
+     Refer to the below image as example:
+    ![Compartment](./images/compartment.png "compartment example") 
 
 4. Add details for the VCN:
 
@@ -55,7 +55,7 @@ In this lab, you will:
 
     Refer to the below image as example:
 
-    ![vcn](images/vcn.png "details for vcn")
+    ![vcn](./images/vcn.png "details for vcn")
 
 5. Add DHCP details for cd3_vcn
 
@@ -71,7 +71,7 @@ In this lab, you will:
 
   Refer to the below image as example:
 
-    ![dhcp](images/dhcp.png "details of dhcp configuration")
+    ![dhcp](./images/dhcp.png "details of dhcp configuration")
 
 6. Add details for creating Subnets in cd3_vcn
 
@@ -84,7 +84,7 @@ In this lab, you will:
 
   Refer to the below image as example:
 
-    ![subnets](images/subnets.png "subnet details")
+    ![subnets](./images/subnets.png "subnet details")
 
 7. Add details for Route rules
 
@@ -96,7 +96,7 @@ In this lab, you will:
 
   Refer to the below image as example:
 
-    ![routerules](images/routerules.png "details of route rules")
+    ![routerules](./images/routerules.png "details of route rules")
 
 8. Add details for Security rules
 
@@ -108,7 +108,7 @@ In this lab, you will:
 
   Refer to the below image as example:
 
-    ![secrule](images/secrules.png "details of sec rules")
+    ![secrule](./images/secrules.png "details of sec rules")
 
 9. Add details for Compute VM
    - Navigate to **"Instances"** sheet and create a Compute Instance with below details:
@@ -138,7 +138,7 @@ In this lab, you will:
     > Note: Check logs under /var/lib/cloud/instance to ensure the correct data was passed.
 
   Refer to the below image as example:
-    ![vm](images/vm.png "details of compute")
+    ![vm](./images/vm.png "details of compute")
 
 11. Add details for Block Volumes
 
@@ -148,7 +148,7 @@ In this lab, you will:
 
   Refer to the below image as example:
 
-    ![blockvolumes](images/blockvolume.png "details of block volume")
+    ![blockvolumes](./images/blockvolume.png "details of block volume")
 
 11. Add details for ATP
 
@@ -160,7 +160,7 @@ In this lab, you will:
 
   Refer to the below image as example:
 
-    ![ATP](images/atp.png "ATP example")
+    ![ATP](./images/atp.png "ATP example")
 
 Once all the resource details are filled, save the Excel file. 
 
