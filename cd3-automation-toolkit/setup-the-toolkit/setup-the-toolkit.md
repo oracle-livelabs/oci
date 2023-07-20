@@ -143,15 +143,15 @@ Enter the required details in *tenancyconfig.properties*
 
 To initialise your environment for utilizing the automation toolkit, execute:
 
-    ```
     python createTenancyConfig.py tenancyconfig.properties
-    ```
+    
     > If the API Keys were generated and added to the OCI console using previous steps, it might take a couple of seconds to reflect.
     > Thus, running the above command immediately might result in Authentication Errors. In such cases, please retry after a minute.
 
 Here is a screenshot of example execution of the script:
 
-    ![tenancyconfig](images/tenancyconfig.png "tenancy config execution example")
+    ![tenancyconfig](./images/tenancy.png "tenancy config execution example")
+    ![docker_run](./images/docker_run.png "docker run command example")
  
 After the *createTenancyConfig.py* script is executed, customer specific files get created under */cd3user/tenancies/\<customer_name>* with \<customer_name> provided in *tenancyconfig.properties* as prefix.
 
