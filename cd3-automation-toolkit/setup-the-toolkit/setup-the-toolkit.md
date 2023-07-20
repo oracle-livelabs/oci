@@ -146,7 +146,6 @@ To initialise your environment for utilizing the automation toolkit, execute:
     ```
     python createTenancyConfig.py tenancyconfig.properties
     ```
-
     > If the API Keys were generated and added to the OCI console using previous steps, it might take a couple of seconds to reflect.
     > Thus, running the above command immediately might result in Authentication Errors. In such cases, please retry after a minute.
 
