@@ -40,7 +40,7 @@ In this lab, you will:
 
     > Note: Provide your Tenancy's "home region" under the "Region" column. (same for all OCI Identity components).
 
-Refer to the below image as example:
+    Refer to the below image as example:
     ![Compartment](images/compartment.png "compartment example")
 
 4. Add details for the VCN:

@@ -42,12 +42,11 @@ The objectives of this lab are:
 1. Change directory to *'cd3-automation-toolkit'*(i.e. the cloned repo in your local).
 
 2. Execute:
-   ```
-   bash 
-   docker build --platform linux/amd64 -t cd3toolkit:${image_tag} -f Dockerfile --pull --no-cache . 
-   ```
-
-    > __Note:__ *${image_tag} should be replaced with suitable tag as per your requirements/standards. The period (.) at the end of the docker build command is required.*
+    ```
+    bash 
+    docker build --platform linux/amd64 -t cd3toolkit:${image_tag} -f Dockerfile --pull --no-cache . 
+    ```
+    > '${image_tag}' should be replaced with suitable tag as per your requirements/standards. The period (.) at the end of the docker build command is required.
 
 <br>
 
@@ -114,8 +113,7 @@ Upload the Public key to "APIkeys" under user settings in OCI Console. Pre-requi
 ### 4. **Edit tenancyconfig.properties:**
 
 Enter the required details in *tenancyconfig.properties*
-
-    ```
+    
     [Default]
     # Mandatory Fields
     # Friendly name for the Customer Tenancy eg: demotenancy;
@@ -140,8 +138,7 @@ Enter the required details in *tenancyconfig.properties*
     # Optional Fields
     # SSH Key to launched instances
     ssh_public_key=
-
-    ```
+    
 ### 5. **Initialise the environment:**
 
 To initialise your environment for utilizing the automation toolkit, execute:
@@ -150,8 +147,7 @@ To initialise your environment for utilizing the automation toolkit, execute:
     python createTenancyConfig.py tenancyconfig.properties
     ```
 
-    > **Note:** *If the API Keys were generated and added to the OCI console using previous steps, it might take a couple of seconds to reflect. Thus, running the above command immediately might result in Authentication Errors.
-In such cases, please retry after a minute.*
+    > If the API Keys were generated and added to the OCI console using previous steps, it might take a couple of seconds to reflect. Thus, running the above command immediately might result in Authentication Errors. In such cases, please retry after a minute.
 
 Here is a screenshot of example execution of the script:
 
