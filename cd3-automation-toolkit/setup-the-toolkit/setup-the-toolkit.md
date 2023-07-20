@@ -144,9 +144,6 @@ Enter the required details in *tenancyconfig.properties*
 To initialise your environment for utilizing the automation toolkit, execute:
 
 Here is a screenshot of example execution of the script:
-
-    ![tenancyconfig](./images/tenancy.png "tenancy config execution example")
-    ![docker_run](./images/docker_run.png "docker run command example")
  
 After the *createTenancyConfig.py* script is executed, customer specific files get created under */cd3user/tenancies/\<customer_name>* with \<customer_name> provided in *tenancyconfig.properties* as prefix.
 
