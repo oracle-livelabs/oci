@@ -78,7 +78,7 @@ The objectives of this lab are:
 
 2. Enter the container using the above container id.
 
-    ```bash
+    ```
     docker exec -it <container_id> bash
     ```
 3. Change directory to *'user-scripts'*
