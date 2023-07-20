@@ -38,6 +38,11 @@ In this lab, you will:
 
       *Parent_compartment 1::Parent_compartment 2:: ... ::Parent_compartment n*
 
+     > Note: Provide your Tenancy's "home region" under the "Region" column. (same for all OCI Identity components).
+     
+     Refer to the below image as example:
+    ![Compartment](./images/compartment.png "compartment example") 
+
 4. Add details for the VCN:
 
   - Navigate to **"VCNs"** sheet and create a VCN with the following details:
