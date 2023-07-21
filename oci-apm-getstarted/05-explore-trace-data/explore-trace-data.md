@@ -203,21 +203,14 @@ Estimated time: 15 minutes
 
     Although we do not cover the database side diagnostics in this workshop, the root cause of the issue is the lock contention in the database that the update statement is being blocked by another SQL that is doing a select on the same table. That uses a lot of CPU and takes a long time to execute, and is causing the update statement that usually runs in ms while slows down intermittently. Using Perfhub and/or the Operations Insights service, you can find and resolve this problem.
 
-    For more details on the solution at the database, please watch the following video that demonstrates how the contention can be identified and how it can be resolved. In the video, you can see the issue is resolved by enabling the auto index feature to the autonomous database using the Operations Insights service in Oracle Cloud.
+    For more details on the solution at the database, please watch the following video that demonstrates how the contention can be identified and how it can be resolved. In the video, you can see the issue is resolved by enabling the auto index feature in the autonomous database.  Operations Insights was utilized to obtain in-depth analytics based on long-term historic performance data.
 
 
     [Demonstration, A New Platform for Multicloud Observability and Management](https://youtu.be/EnsQMOEhWjQ?t=1058)
 
     [![YouTube](images/1-33-session-thumbnail.png)](https://youtu.be/EnsQMOEhWjQ?t=1058 "Redirect to YouTube")
 
-## Conclusion
-
-  In this workshop, you have learned how to use various APM features to detect a performance problem, analyze the data, and drill down to the cause of the problem.
-
-  You can use the APM Home page and Alarm details page to understand the potential issue in your application, use the Monitors dashboard page to examine the collected data, and use the Monitor history page and the APM Trace Explorer to drill down to the cause of the problem.
-
-  For more information on APM, refer to the OCI documentation, **[Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)**.
-
+You may now **proceed to the next lab**.
 
 
 

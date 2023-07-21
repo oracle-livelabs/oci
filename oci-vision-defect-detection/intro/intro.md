@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-Proactively de-risking operational resources and detecting issues across the areas of vegetation overgrowth, utility assets, and factory machinery can be a time-consuming and labor intensive process, but it can be automated with AI. In this hands-on lab, you'll build a custom machine learning model to detect rust on utility poles. No data science experience required! This solution can be applied across a number of different related use cases and sectors. Bring your questions and ask our AI experts for their advice on how to apply this technology to your scenario.
+Detecting issues across the areas of vegetation overgrowth, utility assets, and factory machinery can be time consuming and labor intensive, but it can be automated with AI. In this lab, you’ll build a custom machine learning model to detect rust on utility poles using images collected by drones. This type of solution can be applied across several different verticals and requires no machine learning experience! Bring your questions and ask our AI experts for their advice on how to apply this technology to your scenario.
 
 Estimated Time: 90 minutes
 

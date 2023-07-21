@@ -22,29 +22,24 @@ Estimated time: 20 min
 
     ````
     <copy>
-    ##PORTAL_URL##    : Portal URL ex: https://xxxxx-apidb.adb.eu-frankfurt-1.oraclecloudapps.com/ords/r/api/apimgt/portal
+    ##PORTAL_URL##       : Portal URL ex: https://xxxxx-apidb.adb.eu-frankfurt-1.oraclecloudapps.com/ords/r/api/apimgt/portal
 
     // Autonomous Database / APEX 
-    ##DB_PASSWORD##   : DB Password    : (ex LiveLab__123)
-    ##APEX_HOST##     : APEX Host Name : (ex: abcdefghijk-db123.adb.eu-frankfurt-1.oraclecloudapps.com)
+    ##DB_PASSWORD##      : DB Password    : (ex LiveLab__123)
+    ##APEX_HOST##        : APEX Host Name : (ex: abcdefghijk-db123.adb.eu-frankfurt-1.oraclecloudapps.com)
 
     // OIC Discovery
-    ##USERNAME##      : Federated user (IDCS user) that you use to log in OIC. Often an email ex: john.doe@domain.com
-    ##PASSWORD##      : is the password of that user
-    ##OIC_HOST##      : ex: myoic-abcdefgh-fr.integration.ocp.oraclecloud.com
+    ##USERNAME##         : Federated user (IDCS user) that you use to log in OIC. Often an email ex: john.doe@domain.com
+    ##PASSWORD##         : is the password of that user
+    ##OIC_HOST##         : ex: myoic-abcdefgh-fr.integration.ocp.oraclecloud.com
 
     // APIGW Discovery
-    ##COMPARTMENT_OCID## : Compartment OCID where APIGW is installed. Ex: ocid1.compartment.oc1..xxxxxx
-    ##USER_OCID##     : ex: ocid1.user.oc1..xxxxxxxxxxx
-    ##TENANCY_OCID##  : ex: ocid1.tenancy.oc1..xxxxxxxxxxx
-    ##FINGERPRINT##   : ex: 10:12:14:AB:10:12:14:AB:10:12:14:AB:10:12:14:AB
-    ##PRIVATE_KEY##   : ex (notice the RSA PRIVATE KEY):
+    ##DB_OCID##          : ex: ocid1.autonomousdatabase.oc1..xxxxxxxxxxx
+    ##COMPARTMENT_OCID## : ex: ocid1.compartment.oc1..xxxxxxxxxx
+    ##REGION##           : ex: eu-frankfurt-1
 
-    -----BEGIN RSA PRIVATE KEY-----
-    qsdqksjdkjsqlkjmLKQJMJLKSFlqkjmfkljdslk
-    ...
-    qHKJFDkjdhj==
-    -----END RSA PRIVATE KEY-----
+    // Kubernetes
+    ##AUTH_TOKEN##       : Optional
     </copy>
     ````
 
@@ -55,7 +50,6 @@ First, let's create an Autonomous database.
 1. Go the menu
     - Oracle Database
     - Autonomous Database
-
         ![ATP1](images/apim-atp.png)
 
 2. Click *Create Autonomous Database*
@@ -70,6 +64,10 @@ First, let's create an Autonomous database.
     - Then *Create Autonomous Database*
 
         ![ATP2](images/apim-atp2.png)
+3. When the database is started
+    - Copy the Database OCID (Take note of it: ##DB\_OCID##)
+
+        ![ATP2](images/apim-atp3.png)
 
 ## Task 2: Create the Database User
 
@@ -94,9 +92,14 @@ First, let's create an Autonomous database.
         GRANT execute ON dbms_cloud_oci_apigateway_deployment_summary_t TO API;
         GRANT execute ON DBMS_CLOUD_OCI_AG_DEPLOYMENT TO API;
         GRANT execute ON DBMS_CLOUD TO API;
+        GRANT execute ON dbms_cloud_oci_id_identity_list_regions_response_t TO API;
+        GRANT execute ON DBMS_CLOUD_OCI_IDENTITY_REGION_TBL TO API;
+        GRANT execute ON DBMS_CLOUD_OCI_IDENTITY_REGION_T TO API;
+        GRANT execute ON DBMS_CLOUD_OCI_ID_IDENTITY TO API;
         GRANT execute on DBMS_NETWORK_ACL_ADMIN to API;
         /
         BEGIN
+        DBMS_CLOUD_ADMIN.ENABLE_RESOURCE_PRINCIPAL(username => 'API');
         ORDS.enable_schema(
             p_enabled             => TRUE,
             p_schema              => 'API',
@@ -112,8 +115,45 @@ First, let's create an Autonomous database.
 
         ![APEX Installation](images/apim-sql1.png)
 
+## Task 3: Create a Dynamic Group and Policy
 
-## Task 3: Install the APEX program
+Here I assume that the tenant is using the new Identity Domains. If it is not the case, the Dynamic group, Policy are about at the same place in the menu.
+
+1. Go the menu 
+    - Identity And Security
+    - Domains
+    - Click on the *Default (Current Domain)*
+    - Click *Dynamic Group*
+    - Click the button *Create Dynamic Group*
+    - Name *API\_MANAGEMENT\_DYN\_GROUP*
+    - Description *API\_MANAGEMENT\_DYN\_GROUP*
+    - In the Rule, you need to use the DB_OCID from the notes. 
+        ```
+        <copy>
+        resource.id = '##DB_OCID##'
+        </copy>
+        ```
+    - Click *Create*
+        ![Dynamic Group](images/apim-dyngroup.png)
+2. Go the menu 
+    - Identity And Security
+    - Policies
+    - Click *Create Policy*
+    - Name *API\_MANAGEMENT\_POLICY*
+    - Description *API\_MANAGEMENT\_POLICY*
+    - Compartment: Choose the *root* compartment
+    - Policy, click *Show manual editor*
+    
+        ```
+        <copy>
+        Allow dynamic-group API_MANAGEMENT_DYN_GROUP to manage api-gateway-family in tenancy
+        </copy>
+        ```
+
+
+    ![Policies](images/apim-policy.png)
+
+## Task 4: Install the APEX program
 
 Back to page of the Autonomous Database,
 1. Go to APEX. Click again on *Database Actions*
@@ -146,10 +186,10 @@ Back to page of the Autonomous Database,
     - Click on your top right icon. Then *Sign-out*
 
 4. In the APEX login page
-        - Workspace: *API*
-        - Database User: *API*
-        - Password: See ##DB\_PASSWORD##
-        - Click *Sign In*
+    - Workspace: *API*
+    - Database User: *API*
+    - Password: See ##DB\_PASSWORD##
+    - Click *Sign In*
     - In Apex, 
         - Click Menu *App Builder*
         - *Import*
@@ -167,7 +207,7 @@ Back to page of the Autonomous Database,
 We have now a running API Management Portal but it is empty.
 - Click *Run Application*
 
-## Task 4: Test the empty installation
+## Task 5: Test the empty installation
 
 We have now a running API Management Portal but it is empty.
 1. Login *API* / Password - See ##DB_PASSWORD##
@@ -180,7 +220,17 @@ We have now a running API Management Portal but it is empty.
 
     ![Empty](images/apim-apex-empty.png)
 
+## Know issues
+
+In case you make a mistake and need to restart the installation, most of the time the API User needs to be deleted and APEX application needs to be reinstalled. 
+1. Go back to Task 2 - Create the database user.
+2. Drop first the API user with SQL admin interface.
+    ```
+    DROP USER API CASCADE
+    ```
+3. Restart again from Task 2 - Create the database user.
+
 ## Acknowledgements
 
 - **Authors**
-    - Marc Gueury / Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+    - Marc Gueury / Phil Wilkins /  Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran

@@ -45,7 +45,7 @@ Estimated time: 5 minutes
 	 	![Oracle Cloud console, APM Home](images/1-4-2-failed-monitors.png " ")
 
 
-3. Right to the Vantage point chart, you will see the **Load and Execution Time** chart. Spot a few spikes indicating slow executions in the chart. These likely caused an Alarm we saw earlier. Hover the mouse over the data points to see details.
+3. Find the **Load and Execution Time** chart. Spot a few spikes indicating slow executions in the chart. These likely caused an Alarm we saw earlier. Hover the mouse over the data points to see details.
 
  	![Oracle Cloud console, APM Home](images/1-5-load-exec-time.png " ")
 
