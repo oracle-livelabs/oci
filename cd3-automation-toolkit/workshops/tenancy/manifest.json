@@ -6,7 +6,11 @@
             "title": "Introduction",
             "filename": "./../../introduction/introduction.md"
         },
-	{
+        {
+            "title": "Get Started",
+            "filename": "./../../get-started/cloud-login.md"
+        },
+	    {
             "title": "Lab 1: Get started with CD3 Automation Toolkit setup",
             "filename": "./../../setup-the-toolkit/setup-the-toolkit.md"
         },
@@ -19,7 +23,7 @@
             "filename": "./../../create-eventalarm/create-eventalarm.md"
         },
         {
-            "title": "Lab 4: Uploading stack to OCI Resource Manager",
+            "title": "Lab 4: Upload stack to OCI Resource Manager",
             "filename": "./../../upload-resourcemanager/upload-resourcemanager.md"
         },
          {

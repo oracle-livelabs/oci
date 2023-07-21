@@ -6,6 +6,7 @@ This is a continuation of the lab 1 : [Setup the CD3 toolkit](/cd3-automation-to
 
 As a recap, in the previous lab we cloned the cd3 repo, built an image, executed the CD3 container and connected it to the OCI tenancy. 
 
+Estimated time: 20 minutes
 
 ### Objectives
 
@@ -15,8 +16,6 @@ In this lab, you will:
 - Execute the *setUpOCI.py* script to generate terraform files.
 - Execute terraform commands from the respective service folders. 
 
-Estimated lab time: 20 minutes
-
 ### Prerequisites
 
 - Please follow the previous lab till the last step. Once you are able to view the customer specific files in the outdirectory, you are all set to continue with this lab.
@@ -25,11 +24,11 @@ Estimated lab time: 20 minutes
 
 1. Choose CD3-CIS-template from [CD3 Excel templates](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/RunningAutomationToolkit.md#excel-sheet-templates). 
 
-> Note: Any template other than *CD3-CIS-ManagementServices-template* can be used to provision these services.
+    > Note: Any template other than *CD3-CIS-ManagementServices-template* can be used to provision these services.
 
 2. Refer to the blue section in each worksheet to fill the resource details in proper formats. Not all fields are mandatory. 
 
-> Note: Please fill resources data before the \<END> tag. Any data below the \<END> tag will not be processed.
+    > Note: Please fill resources data before the \<END> tag. Any data below the \<END> tag will not be processed.
 
 3. Add details for Compartment:
 
@@ -39,10 +38,10 @@ Estimated lab time: 20 minutes
 
       *Parent_compartment 1::Parent_compartment 2:: ... ::Parent_compartment n*
 
-> Note: Provide your Tenancy's "home region" under the "Region" column. (same for all OCI Identity components).
-
-Refer to the below image as example:
-      ![Compartment](images/compartment.png "compartment example")
+     > Note: Provide your Tenancy's "home region" under the "Region" column. (same for all OCI Identity components).
+     
+     Refer to the below image as example:
+    ![Compartment](./images/compartment.png "compartment example") 
 
 4. Add details for the VCN:
 
@@ -56,7 +55,7 @@ Refer to the below image as example:
 
     Refer to the below image as example:
 
-   ![vcn](images/vcn.png "details for vcn")
+    ![vcn](./images/vcn.png "details for vcn")
 
 5. Add DHCP details for cd3_vcn
 
@@ -72,7 +71,7 @@ Refer to the below image as example:
 
   Refer to the below image as example:
 
-   ![dhcp](images/dhcp.png "details of dhcp configuration")
+    ![dhcp](./images/dhcp.png "details of dhcp configuration")
 
 6. Add details for creating Subnets in cd3_vcn
 
@@ -85,7 +84,7 @@ Refer to the below image as example:
 
   Refer to the below image as example:
 
-  ![subnets](images/subnets.png "subnet details")
+    ![subnets](./images/subnets.png "subnet details")
 
 7. Add details for Route rules
 
@@ -97,7 +96,7 @@ Refer to the below image as example:
 
   Refer to the below image as example:
 
-   ![routerules](images/routerules.png "details of route rules")
+    ![routerules](./images/routerules.png "details of route rules")
 
 8. Add details for Security rules
 
@@ -109,7 +108,7 @@ Refer to the below image as example:
 
   Refer to the below image as example:
 
-   ![secrule](images/secrules.png "details of sec rules")
+    ![secrule](./images/secrules.png "details of sec rules")
 
 9. Add details for Compute VM
 
@@ -119,7 +118,7 @@ Refer to the below image as example:
 
    - Name: cd3_vm, subnet: cd3_vcn_subnet1 (format: *vcnname_subnetname*), Source details- image::Linux , shape: VM.Standard.E3.Flex::2, ssh_public_key to ssh into the instance,
 
-> Note: To add SSH keys to the vm, place them in **variables.tf** under *ssh_public_key* variable.
+    > Note: To add SSH keys to the vm, place them in **variables.tf** under *ssh_public_key* variable.
 
 10. Creating a simple web application
 
@@ -137,10 +136,10 @@ Refer to the below image as example:
           sudo iptables-save
 
  
-> Note: Check logs under /var/lib/cloud/instance to ensure the correct data was passed.
+    > Note: Check logs under /var/lib/cloud/instance to ensure the correct data was passed.
 
   Refer to the below image as example:
-  ![vm](images/vm.png "details of compute")
+    ![vm](./images/vm.png "details of compute")
 
 11. Add details for Block Volumes
 
@@ -150,7 +149,7 @@ Refer to the below image as example:
 
   Refer to the below image as example:
 
-   ![blockvolumes](images/blockvolume.png "details of block volume")
+    ![blockvolumes](./images/blockvolume.png "details of block volume")
 
 11. Add details for ATP
 
@@ -162,7 +161,7 @@ Refer to the below image as example:
 
   Refer to the below image as example:
 
-  ![ATP](images/atp.png "ATP example")
+    ![ATP](./images/atp.png "ATP example")
 
 Once all the resource details are filled, save the Excel file. 
 
@@ -187,7 +186,7 @@ Once all the resource details are filled, save the Excel file.
 ## Task 4: Generate terraform files and create our resources in OCI
 
 1. Select option 1 from *setUpOCI.py* output menu. 
-> Identity--> 1: Add/Modify/Delete Compartments. 
+    > Identity--> 1: Add/Modify/Delete Compartments. 
 
 2. Navigate to identity directory under home region directory after Terraform files are created.
                   
@@ -195,11 +194,11 @@ Once all the resource details are filled, save the Excel file.
 
 3. Execute terraform init, plan and apply to create the compartment.
 
-> Note: Since we are creating all resources in the **demo_compartment**, we should first create the compartment in OCI and run fetch compartments again. This way the variables file has the **demo_compartment** entry and other resources can be created in it.
+    > Note: Since we are creating all resources in the **demo_compartment**, we should first create the compartment in OCI and run fetch compartments again. This way the variables file has the **demo_compartment** entry and other resources can be created in it.
 
 4. Go back to the folder */cd3user/oci_tools/cd3_automation_toolkit/* and execute the setUpOCI.py again as shown in **Task 3** and select *fetch compartments*.
 
-> This option will update OCID of newly created compartments in TF file.
+    > This option will update OCID of newly created compartments in TF file.
 
 5. Select: 3,4,5,6 options to create terraform files for Network, Compute, Storage and Database respectively from the *setUpOCI.py* output menu.
 
@@ -208,19 +207,18 @@ Once all the resource details are filled, save the Excel file.
 - Under *Storage*: Select- Option 1
 - Under *Database*: Select- Option 3
 
-> Terraform files are generated under the respective Service directories of the Region directory.
+    > Terraform files are generated under the respective Service directories of the Region directory.
 
 6. Once the Terraform files are created from above step, navigate to */cd3user/tenancies/<customer_name>/terraform_files/<region>/<services>* for each of the services: Network, Compute, Database. Block volume terraform files are generated under compute directory.
 
 7. Enter into each of the required service folders (network, compute, database) and execute the below terraform commands to provision the resources in OCI.
 
-```
- terraform init
- terraform plan 
- terraform apply 
- 
- ```
-
+    ```
+    terraform init
+    terraform plan 
+    terraform apply 
+    ```
+  
 8. The created resources can be viewed on the OCI console.
 
 In this lab, we have learnt how to enter details in the CD3 Excel templates, execute setUpOCI.py to create terraform files and create OCI resources using those terraform files.
