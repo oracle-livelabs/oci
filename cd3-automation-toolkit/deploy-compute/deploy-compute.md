@@ -32,22 +32,22 @@ In this lab, you will:
 
 3. Add details for Compartment:
 
-  - Open the **"Compartments"** tab and add your compartment data with below image as example.
+    - Open the **"Compartments"** tab and add your compartment data with below image as example.
 
-   - If the parent compartment is not under root directly, then provide it in the below format:
+    - If the parent compartment is not under root directly, then provide it in the below format:
 
       *Parent_compartment 1::Parent_compartment 2:: ... ::Parent_compartment n*
 
-     > Note: Provide your Tenancy's "home region" under the "Region" column. (same for all OCI Identity components).
+    > Note: Provide your Tenancy's "home region" under the "Region" column. (same for all OCI Identity components).
      
-     Refer to the below image as example:
+    Refer to the below image as example:
     ![Compartment](./images/compartment.png "compartment example") 
 
 4. Add details for the VCN:
 
-  - Navigate to **"VCNs"** sheet and create a VCN with the following details:
+    - Navigate to **"VCNs"** sheet and create a VCN with the following details:
 
-  - Compartment name format: *parent_compartment1::parent_compartment2::child_compartmemt*
+    - Compartment name format: *parent_compartment1::parent_compartment2::child_compartmemt*
 
     Name: cd3_vcn
 
@@ -59,9 +59,9 @@ In this lab, you will:
 
 5. Add DHCP details for cd3_vcn
 
-   - Navigate to **"DHCP"** sheet and create DHCP Options with the following details:
+    - Navigate to **"DHCP"** sheet and create DHCP Options with the following details:
 
-   - VCN: cd3_vcn
+    - VCN: cd3_vcn
 
      DHCP-option: dhcp-internal
 
@@ -69,44 +69,44 @@ In this lab, you will:
 
      Search domain: oci.com
 
-  Refer to the below image as example:
+    Refer to the below image as example:
 
     ![dhcp](./images/dhcp.png "details of dhcp configuration")
 
 6. Add details for creating Subnets in cd3_vcn
 
-   - Navigate to **"SubnetsVLANs"** sheet and create subnets with the following details:
+    - Navigate to **"SubnetsVLANs"** sheet and create subnets with the following details:
 
 
-   - Name: subnet1, public subnet, CIDR: 10.110.0.0/26, Route table: RT1, Security list: SL1, Route to IGW.
+    - Name: subnet1, public subnet, CIDR: 10.110.0.0/26, Route table: RT1, Security list: SL1, Route to IGW.
 
      Name: subnet2, private subnet, CIDR: 10.110.0.64/26, Route table: RT2, Security list: SL2, Route to NGW.
 
-  Refer to the below image as example:
+    Refer to the below image as example:
 
     ![subnets](./images/subnets.png "subnet details")
 
 7. Add details for Route rules
 
-  - Navigate to **"RouteRulesinOCI"** sheet and create Route rules with following details:
+    - Navigate to **"RouteRulesinOCI"** sheet and create Route rules with following details:
 
-  - Name: RT1, Target:cd3_vcn_igw, Destination type: CIDR, Destination CIDR: 0.0.0.0/0
+    - Name: RT1, Target:cd3_vcn_igw, Destination type: CIDR, Destination CIDR: 0.0.0.0/0
 
-  - Name: RT2, Target:cd3_vcn_ngw, Destination type: CIDR, Destination CIDR: 0.0.0.0/0
+    - Name: RT2, Target:cd3_vcn_ngw, Destination type: CIDR, Destination CIDR: 0.0.0.0/0
 
-  Refer to the below image as example:
+    Refer to the below image as example:
 
     ![routerules](./images/routerules.png "details of route rules")
 
 8. Add details for Security rules
 
-   - Navigate to **"SecRulesOCI"** sheet and create Security rules with following details:
+    - Navigate to **"SecRulesOCI"** sheet and create Security rules with following details:
 
-   - Name: SL1, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 22
+    - Name: SL1, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 22
 
-   - Name: SL2, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 1521, 1522
+    - Name: SL2, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 1521, 1522
 
-  Refer to the below image as example:
+    Refer to the below image as example:
 
     ![secrule](./images/secrules.png "details of sec rules")
 
@@ -122,9 +122,9 @@ In this lab, you will:
 
 10. Creating a simple web application
 
-   - Create a column **"Cloud Init Script"** in the **Instances** sheet before the *defined tags* column and enter its value as "web.sh" in the same row with cd3_vm instance details.
-   - Create a bash file "web.sh" under /cd3user/tenancies/<customer_name>/terraform_files/<region_name>/compute/scripts.
-   - Copy below sample script to enable Apache on the instance.
+    - Create a column **"Cloud Init Script"** in the **Instances** sheet before the *defined tags* column and enter its value as "web.sh" in the same row with cd3_vm instance details.
+    - Create a bash file "web.sh" under /cd3user/tenancies/<customer_name>/terraform_files/<region_name>/compute/scripts.
+    - Copy below sample script to enable Apache on the instance.
 
           #!/bin/bash
           sudo yum install -y httpd
@@ -138,28 +138,28 @@ In this lab, you will:
  
     > Note: Check logs under /var/lib/cloud/instance to ensure the correct data was passed.
 
-  Refer to the below image as example:
+    Refer to the below image as example:
     ![vm](./images/vm.png "details of compute")
 
 11. Add details for Block Volumes
 
-   - Navigate to **"Block Volumes"** sheet and create a Block Volume with below details:
+    - Navigate to **"Block Volumes"** sheet and create a Block Volume with below details:
 
-   - cd3_blockvolume: 20 VPUs per GB, 150GB size, attached to *cd3_vm* using paravirtualized mode.
+    - cd3_blockvolume: 20 VPUs per GB, 150GB size, attached to *cd3_vm* using paravirtualized mode.
 
-  Refer to the below image as example:
+    Refer to the below image as example:
 
     ![blockvolumes](./images/blockvolume.png "details of block volume")
 
 11. Add details for ATP
 
-   - Navigate to **"ADB"** sheet and create an ATP service with the below details:
+    - Navigate to **"ADB"** sheet and create an ATP service with the below details:
 
-   - We will provision an **always-free** ATP for the lab.
+    - We will provision an **always-free** ATP for the lab.
 
-   - cd3_ATP: subnet-cd3_vcn_subnet2, DB Name: adb123db, CPU Core Count-10, Data Storage Size in TB -100, LICENSE_INCLUDED.
+    - cd3_ATP: subnet-cd3_vcn_subnet2, DB Name: adb123db, CPU Core Count-10, Data Storage Size in TB -100, LICENSE_INCLUDED.
 
-  Refer to the below image as example:
+    Refer to the below image as example:
 
     ![ATP](./images/atp.png "ATP example")
 
@@ -202,10 +202,10 @@ Once all the resource details are filled, save the Excel file.
 
 5. Select: 3,4,5,6 options to create terraform files for Network, Compute, Storage and Database respectively from the *setUpOCI.py* output menu.
 
-- Under *Network*: Select- Options 1,3,4 
-- Under *Compute*: Select- Option 2
-- Under *Storage*: Select- Option 1
-- Under *Database*: Select- Option 3
+    - Under *Network*: Select- Options 1,3,4 
+    - Under *Compute*: Select- Option 2
+    - Under *Storage*: Select- Option 1
+    - Under *Database*: Select- Option 3
 
     > Terraform files are generated under the respective Service directories of the Region directory.
 
