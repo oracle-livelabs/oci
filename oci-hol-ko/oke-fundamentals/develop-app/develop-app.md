@@ -31,11 +31,11 @@
     
 1. (Option #1) [Spring Initializr](https://start.spring.io)를 사용하여 기본 프로젝트 소스파일을 만듭니다.
 
-    1) 아래 그림과 같이 프로젝트 정보를 입력하고 **Generate**를 클릭하여 소스파일을 생성합니다.
+    1) 아래 그림과 같이 프로젝트 정보(Spring Boot 2.7.x, Java 11)를 입력하고 **Generate**를 클릭하여 소스파일을 생성합니다.
     ![Spring Initializr](images/spring-initializr.png)
 
     2) 다운로드 받은 파일을 Cloud Shell에 업로드 합니다.
-    ![File Upload](images/cloud-shell-upload-1.png =20%x*)
+    ![File Upload](images/cloud-shell-upload-1.png =30%x*)
 
     ![File Upload](images/cloud-shell-upload-2.png =50%x*)        
 
@@ -46,13 +46,13 @@
 
     ````
     <copy>
-    curl https://start.spring.io/starter.tgz -d type=maven-project -d bootVersion=2.7.7.RELEASE -d baseDir=rest-service -d name=rest-service -d artifactId=rest-service -d javaVersion=11 -d dependencies=web,actuator | tar -xzvf -
+    curl https://start.spring.io/starter.tgz -d type=maven-project -d bootVersion=2.7.11.RELEASE -d baseDir=rest-service -d name=rest-service -d artifactId=rest-service -d javaVersion=11 -d dependencies=web,actuator | tar -xzvf -
     </copy>
     ````
 
 3. **rest-service** 폴더로 이동합니다.
 
-4. 요청에 대한 응답 메시지를 아래와 같은 JSON 메시지 응답하는 코드를 구현합니다.
+4. 요청에 대한 응답 메시지를 아래와 같은 JSON 메시지 응답하는 코드를 구현하겠습니다.
 
     ````
     {
@@ -162,18 +162,18 @@
      \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
       '  |____| .__|_| |_|_| |_\__, | / / / /
      =========|_|==============|___/=/_/_/_/
-     :: Spring Boot ::                (v2.7.7)
+     :: Spring Boot ::               (v2.7.13)
     
-    2023-01-17 07:22:47.818  INFO 17160 --- [           main] c.e.restservice.RestServiceApplication   : Starting RestServiceApplication v0.0.1-SNAPSHOT using Java 11.0.17 on a26b0462025b with PID 17160 (/home/winter/rest-service/target/rest-service-0.0.1-SNAPSHOT.jar started by winter in /home/winter/rest-service)
-    2023-01-17 07:22:47.828  INFO 17160 --- [           main] c.e.restservice.RestServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-    2023-01-17 07:22:50.385  INFO 17160 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-    2023-01-17 07:22:50.433  INFO 17160 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-    2023-01-17 07:22:50.435  INFO 17160 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
-    2023-01-17 07:22:50.659  INFO 17160 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-    2023-01-17 07:22:50.660  INFO 17160 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2603 ms
-    2023-01-17 07:22:51.874  INFO 17160 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-    2023-01-17 07:22:51.976  INFO 17160 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-    2023-01-17 07:22:52.040  INFO 17160 --- [           main] c.e.restservice.RestServiceApplication   : Started RestServiceApplication in 5.594 seconds (JVM running for 6.679)
+    2023-06-26 07:42:34.639  INFO 5332 --- [           main] c.e.restservice.RestServiceApplication   : Starting RestServiceApplication v0.0.1-SNAPSHOT using Java 11.0.17 on eff504e32675 with PID 5332 (/home/winter/rest-service/target/rest-service-0.0.1-SNAPSHOT.jar started by winter in /home/winter/rest-service)
+    2023-06-26 07:42:34.659  INFO 5332 --- [           main] c.e.restservice.RestServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+    2023-06-26 07:42:37.114  INFO 5332 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+    2023-06-26 07:42:37.130  INFO 5332 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+    2023-06-26 07:42:37.132  INFO 5332 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.76]
+    2023-06-26 07:42:37.311  INFO 5332 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+    2023-06-26 07:42:37.312  INFO 5332 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2444 ms
+    2023-06-26 07:42:38.392  INFO 5332 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+    2023-06-26 07:42:38.465  INFO 5332 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+    2023-06-26 07:42:38.494  INFO 5332 --- [           main] c.e.restservice.RestServiceApplication   : Started RestServiceApplication in 4.986 seconds (JVM running for 5.906)
     ````
 
 11. Code Editor 메뉴에서 **Terminal** &gt; **New Terminal**을 클릭하여 Terminal을 하나 더 실행합니다.
@@ -198,7 +198,7 @@
 
 쿠버네티스에서 실행하기 위해서는 구동할 서비스 애플리케이션을 컨테이너화 하여야 합니다. Docker 클라이언트를 통해 컨테이너 이미지를 만듭니다.
 
-1. 프로젝트 폴더에 Dockerfile을 아래와 같이 만듭니다. openjdk:8-jdk-alpine 베이스 이미지를 사용하여 빌드된 JAR 파일을 이미지 내부로 복사하고 java -jar로 실행하게 하는 예시입니다.
+1. 프로젝트 폴더에 Dockerfile을 아래와 같이 만듭니다. eclipse-temurin:11-jdk-alpine 베이스 이미지를 사용하여 빌드된 JAR 파일을 이미지 내부로 복사하고 java -jar로 실행하게 하는 예시입니다.
 
     ````
     <copy>
@@ -218,28 +218,29 @@
     ````
 
     ````
-    Sending build context to Docker daemon  19.92MB
+    $ docker build -t spring-boot-greeting:1.0 .
+    Sending build context to Docker daemon  20.01MB
     Step 1/4 : FROM eclipse-temurin:11-jdk-alpine
     Trying to pull repository docker.io/library/eclipse-temurin ... 
     11-jdk-alpine: Pulling from docker.io/library/eclipse-temurin
-    8921db27df28: Pull complete 
-    846e3b32ee5a: Pull complete 
-    757b01b0b48f: Pull complete 
-    ddd76e48fe00: Pull complete 
-    Digest: sha256:518d77ae88afdd2f2d000f132763e3095e45136c5dc4f13789720ffd0fc29d76
+    31e352740f53: Pull complete 
+    8aadc9aaa732: Pull complete 
+    ebf3b64fad21: Pull complete 
+    73befd8a0f35: Pull complete 
+    Digest: sha256:71ea4bc5fef8a26253490d79b52bafc165a36ce2d1419ffcbf86c115b8532bae
     Status: Downloaded newer image for eclipse-temurin:11-jdk-alpine
-     ---> 9e9bab9cd468
+     ---> 1bfe29d6175f
     Step 2/4 : ARG JAR_FILE=target/*.jar
-     ---> Running in 99bae7626a81
-    Removing intermediate container 99bae7626a81
-     ---> 64a664f12240
+     ---> Running in 676a75cc8521
+    Removing intermediate container 676a75cc8521
+     ---> ca789ab88c0c
     Step 3/4 : COPY ${JAR_FILE} app.jar
-     ---> d123f1be4d18
+     ---> b15d18ced4a0
     Step 4/4 : ENTRYPOINT ["java","-jar","/app.jar"]
-     ---> Running in 2bd71801aa29
-    Removing intermediate container 2bd71801aa29
-     ---> 2410926b47e6
-    Successfully built 2410926b47e6
+     ---> Running in e24a1cfee1d6
+    Removing intermediate container e24a1cfee1d6
+     ---> d80c787e4182
+    Successfully built d80c787e4182
     Successfully tagged spring-boot-greeting:1.0
     ````    
 
@@ -248,8 +249,8 @@
     ````    
     $ <copy>docker images</copy>
     REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
-    spring-boot-greeting   1.0                 2410926b47e6        40 seconds ago      371MB
-    eclipse-temurin        11-jdk-alpine       9e9bab9cd468        7 days ago          351MB
+    spring-boot-greeting   1.0                 d80c787e4182        32 seconds ago      363MB
+    eclipse-temurin        11-jdk-alpine       1bfe29d6175f        11 days ago         344MB
     ````    
 
 ## Task 3: OCIR에 이미지 등록하기
@@ -261,7 +262,6 @@
     - region-key or region-identifier: 두개 다 사용 가능, 서울은 icn 또는 ap-seoul-1, 춘천은 yny 또는 ap-chuncheon-1을 쓰면 됩니다.
         * 전체 리전별 주소정보는 [OCIR Available Endpoint](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm#regional-availability)에서 확인하세요.
     - tenancy-namespace: OCI 콘솔 Tenancy 상세 정보에서 Object Storage Namespace로 확인하거나, 아래 예시와 같이 Cloud Shell에서 **oci os ns get**으로 확인합니다.
-    - repo-name: 이미지 이름, 경로가 있는 경우 경로를 포함한 이름
 
         ````
         $ <copy>oci os ns get</copy>
@@ -269,6 +269,9 @@
             "data": "axjowrxaexxx"
         }
         ````
+
+    - repo-name: OCIR에서 고유하게 사용할 이름입니다. 사용할 이미지 이름, 경로가 있는 경우 경로를 포함한 이름
+
 
 2. OCIR 등록을 위해 기존 이미지에 추가로 태그를 답니다.
     - OCI_REGION: *각자 환경에 맞게 수정 필요*, 예시) ap-chuncheon-1
@@ -296,9 +299,9 @@
         $ docker tag spring-boot-greeting:1.0 $OCI_REGION.ocir.io/$TENANCY_NAMESPACE/oci-hol-xx/spring-boot-greeting:1.0
         $ docker images
         REPOSITORY                                                            TAG                 IMAGE ID            CREATED             SIZE
-        ap-chuncheon-1.ocir.io/axjowrxaexxx/oci-hol-xx/spring-boot-greeting   1.0                 2410926b47e6        10 minutes ago      371MB
-        spring-boot-greeting                                                  1.0                 2410926b47e6        10 minutes ago      371MB
-        eclipse-temurin                                                       11-jdk-alpine       9e9bab9cd468        7 days ago          351MB
+        ap-chuncheon-1.ocir.io/axjowrxaexxx/oci-hol-xx/spring-boot-greeting   1.0                 d80c787e4182        4 minutes ago       363MB
+        spring-boot-greeting                                                  1.0                 d80c787e4182        4 minutes ago       363MB
+        eclipse-temurin                                                       11-jdk-alpine       1bfe29d6175f        11 days ago         344MB        
         ````    
 
 3. OCIR에 이미지를 Push 하기 위해서는 Docker CLI로 OCIR에 로그인이 필요합니다. Username 및 Password는 다음과 같습니다.
@@ -352,7 +355,7 @@
 
 6. Root compartment에 Push한 이미지가 등록된 것을 볼 수 있습니다.
 
-    > 특정 Compartment에 이미지를 Push 하기 위해서는 Push 되기 전에 OCIR에 Repository가 만들어져 있어야 합니다. 없는 경우 Root Commpartment에 자동으로 Private Repository가 생성되도록 기본 설정되어 있습니다.
+    > 특정 Compartment에 이미지를 Push 하기 위해서는 Push 되기 전에 OCIR에 Repository가 만들어져 있어야 합니다. 없는 경우 Root Compartment에 자동으로 Private Repository가 생성되도록 기본 설정되어 있습니다.
 
     ![OCIR Image](images/ocir-spring-boot-greeting.png)     
 
@@ -371,6 +374,7 @@
 2. 다음 YAML 파일을 이용해 OKE에 배포합니다. Load Balancer 사용도 함께 진행하기 위해 Service 자원도 함께 배포합니다.
 
     - 배포 파일 생성합니다. 예, 파일명: spring-boot-greeting.yaml
+    
         * *`IMAGE_REGISTRY_PATH`*: *각자에 맞게 수정 필요*, 예시에서는 `ap-chuncheon-1.ocir.io/axjowrxaexxx/oci-hol-xx/spring-boot-greeting:1.0`
 
     ````
@@ -430,18 +434,19 @@
     ````
 
     ````
+    $ kubectl get all
     NAME                                                   READY   STATUS    RESTARTS   AGE
-    pod/spring-boot-greeting-deployment-84c4865b98-7rmrp   1/1     Running   0          34s
+    pod/spring-boot-greeting-deployment-5d5f6c6677-r9s45   1/1     Running   0          3m41s
     
-    NAME                                   TYPE           CLUSTER-IP     EXTERNAL-IP       PORT(S)        AGE
-    service/kubernetes                     ClusterIP      10.96.0.1      <none>            443/TCP        10h
-    service/spring-boot-greeting-service   LoadBalancer   10.96.75.242   150.xxx.xxx.xxx   80:32418/TCP   35s
+    NAME                                   TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)             AGE
+    service/kubernetes                     ClusterIP      10.96.0.1      <none>           443/TCP,12250/TCP   56m
+    service/spring-boot-greeting-service   LoadBalancer   10.96.152.59   150.xx.xxx.xxx   80:30152/TCP        3m41s
     
     NAME                                              READY   UP-TO-DATE   AVAILABLE   AGE
-    deployment.apps/spring-boot-greeting-deployment   1/1     1            1           35s
+    deployment.apps/spring-boot-greeting-deployment   1/1     1            1           3m41s
     
     NAME                                                         DESIRED   CURRENT   READY   AGE
-    replicaset.apps/spring-boot-greeting-deployment-84c4865b98   1         1         1       35s
+    replicaset.apps/spring-boot-greeting-deployment-5d5f6c6677   1         1         1       3m41s    
     ````
 
 5. Pod가 정상적으로 기동하였습니다. LoadBalancer의 EXTERNAL-IP를 통해 서비스를 요청합니다.
@@ -476,4 +481,4 @@
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, January 2023
+- **Last Updated By/Date** - DongHee Lee, June 2023
