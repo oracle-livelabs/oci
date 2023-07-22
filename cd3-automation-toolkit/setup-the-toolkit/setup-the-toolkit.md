@@ -50,7 +50,7 @@ The objectives of this lab are:
 
 <br>
 
-## **Task 3: Run the CD3 container**
+## Task 3: Run the CD3 container
 
 1. Execute the below *docker run* command:
 
@@ -102,18 +102,19 @@ The objectives of this lab are:
 
 Upload the Public key to "APIkeys" under user settings in OCI Console. Pre-requisite to use the complete functionality of the Automation Toolkit is to have the user as an administrator to the tenancy.
 
-   - Open the Console, and sign in as the user.
-   - View the details for the user who will be calling the API with the key pair.
+   1. Open the Console, and sign in as the user.
+   2. View the details for the user who will be calling the API with the key pair.
 
-   - Open the Profile menu (User menu icon) and click **User Settings**.
+   3. Open the Profile menu (User menu icon) and click **User Settings**.
 
-   - Click **Add Public Key**.
-   - Paste the contents of the PEM public key in the dialog box and click *Add*.
+   4. Click **Add Public Key**.
+   5. Paste the contents of the PEM public key in the dialog box and click *Add*.
 
 ### 4. **Edit tenancyconfig.properties:**
 
 Enter the required details in *tenancyconfig.properties*
 
+   ```
     [Default]
     # Mandatory Fields
     # Friendly name for the Customer Tenancy eg: demotenancy;
@@ -138,18 +139,19 @@ Enter the required details in *tenancyconfig.properties*
     # Optional Fields
     # SSH Key to launched instances
     ssh_public_key=
+   ```
        
 ### 5. **Initialise the environment:**
 
 To initialise your environment for utilizing the automation toolkit, execute:
 
      
- >Note:
+   >Note:
     If the API Keys were generated and added to the OCI console using previous steps, it might take a couple of seconds to reflect.
 Thus, running the above command immediately might result in Authentication Errors. In such cases, please retry after a minute.
  
 Here is a screenshot of example execution of the script:
-       ![tenancyconfig](./images/tenancyconfig.png "tenancy config execution example")
+    ![tenancyconfig](./images/tenancyconfig.png "tenancy config execution example")
  
 After the *createTenancyConfig.py* script is executed, customer specific files get created under */cd3user/tenancies/\<customer_name>* with \<customer_name> provided in *tenancyconfig.properties* as prefix.
 
