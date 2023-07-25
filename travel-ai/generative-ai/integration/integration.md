@@ -2,33 +2,134 @@
 
 ## Introduction
 
-TBD.
+TBD
 
-Estimated Time: 30 minutes.  
+Estimated Lab Time: 45 minutes
 
-### About OCI Anomaly Detection
-
-TBD.
- 
 ### Objectives
 
 In this lab, you will:
- 
-* TBD. 
 
-### Prerequisites
+- TBD. 
+
+### Prerequisites:
 
 This lab assumes you have:
 
 * You have Completed **Get Started**  
 
-## Task 1: Approach to ECG Interpretation - ECG Data Preparation
- 
-1. TBD.
+### About Amadeus APIs
 
-    ![Near by Sites](images/cheap-tickets-01.png)
+Amadeus provides access to APIs solutions that unlock travel content and services, as well as to all resources developers that may need to take full advantage of those APIs. 
+
+Amadeus was the first Global Distribution System to introduce a structured API, back in 2000. Since then, we have published new version based on XML and Web Services in 2006.
+
+[Amadeus Web Services](https://amadeus.com/en/topic/api) is a unique point of access for all Amadeus content and has been built on scalable Open System architecture and XML formatting to ensure that you always remain at the cutting-edge of architecture and technology.
  
+## Task 1: Sign Up and Sign In to Amadeus
  
+1. Sign up and Sign into [Amadeus Developer site](https://developers.amadeus.com/my-apps) and create your App.
+2. Amadeus Developer Dashboard
+   ![Near by Sites](images/amadeus.png)
+3. Read their [Get started guide](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335)
+ 
+## Task 2: Create Web Credentials
+
+1. Under APEX **Workspace Utilities**, select **Web Credentials**
+   
+2. Web Credentials
+   
+   ![Near by Sites](images/web-credentials.png) 
+   
+3. Under Authentication Type select **OAuth2 Client**, copy paste the Client ID and Client Secret
+   
+4. OAuth2 Client
+   
+   ![Near by Sites](images/web-credentials-02.png) 
+
+## Task 3: Create APEX Page
+ 
+1. Add a Process on submit of a button, which will invoke the REST API and get the flight prices
+2. Record the flight price data into a temporary table, the data includes source airport code, destination airport code, travel date and prices based on dates choose.
+   
+   ![Near by Sites](images/process.png) 
+
+3. PL/SQL code  
+
+    ```sql
+        <copy> 
+            DECLARE
+            l_response_clob         CLOB;
+            l_rest_url              VARCHAR2(1000);
+            l_token_url             VARCHAR2(1000);
+            l_count_posted          PLS_INTEGER; 
+            l_type VARCHAR2(100); 
+            l_returnDate VARCHAR2(100);
+            l_total NUMBER;
+            l_locations VARCHAR2(100); 
+            l_origin VARCHAR2(100) := :P28_ORIGIN; --- 'MAD' (Airport Code)
+            l_destination VARCHAR2(100) := :P28_DESTINATION ; -- 'LON' (Airport Code) 
+            -- Date of Journey, This can be replaced by a variable
+            l_departureDate VARCHAR2(100) := '2023-09-09';  
+            fid FLIGHTDATA.fid%TYPE; 
+
+            CURSOR C1  IS 
+            SELECT jt.* 
+            FROM   JSON_TABLE(l_response_clob, '$.data[*]'  
+            COLUMNS  
+                (l_type VARCHAR2(100) PATH '$.type',
+                l_departureDate VARCHAR2(100) PATH '$.departureDate',
+                l_returnDate VARCHAR2(100) PATH '$.returnDate',
+                l_total number PATH '$.price[0].total'  )
+            ) jt; 
+
+            BEGIN
+
+            l_rest_url  := 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin='||l_origin||'&destination='||l_destination||'&departureDate='||l_departureDate||'';
+            l_token_url := 'https://test.api.amadeus.com/v1/security/oauth2/token';
+
+            apex_web_service.g_request_headers.DELETE; 
+            apex_web_service.g_request_headers(1).name  := 'Content-Type'; 
+            apex_web_service.g_request_headers(1).value := 'application/json'; 
+
+            l_response_clob := apex_web_service.make_rest_request 
+            (p_url                  => l_rest_url, 
+            p_http_method          => 'GET',  
+            p_credential_static_id => 'AmadeusAuth',
+            p_token_url            => l_token_url ); 
+
+            -- Use a temporary table to store flight price data and retrieve it back in the page 
+            DELETE FROM FLIGHTDATA;
+            For row_1 In C1 Loop
+                l_type := row_1.l_type;
+                l_departureDate := row_1.l_departureDate;
+                l_returnDate := row_1.l_returnDate;
+                l_total := row_1.l_total;   
+                INSERT INTO FLIGHTDATA (Origin, Destination, DepartureDate, ReturnDate, price ) 
+                VALUES (l_origin, l_destination, 
+                to_char(to_date(l_departureDate,'yy-MM-dd')),
+                to_char(to_date(l_returnDate,'yy-MM-dd')), 
+                l_total);   
+            End Loop;     
+
+            IF apex_web_service.g_status_code != 200 then 
+                raise_application_error(-20112,'Unable to call OCI Flight Price Service.');  
+            END IF;  
+
+            END;     
+        </copy>
+        ```
+
+4. Run a select query against flight data table to display flight prices
+   
+   ![Near by Sites](images/apex-01.png) 
+
+## Task 4: Demo
+
+1. Input Origin Airport,Destination Airport code and Date of Journey 
+   
+   ![Near by Sites](images/apex-02.png) 
+
     This concludes this lab and you can **proceed to the next lab**.
 
 ## Learn More

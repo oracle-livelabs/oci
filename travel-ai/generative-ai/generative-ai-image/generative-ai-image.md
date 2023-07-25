@@ -314,7 +314,9 @@ We will use [Pannellum Lightweight Panorama Viewer for the Web](https://pannellu
 
     ![Generative AI](images/generative-ai-01.png)
 
-2. Ask AI about the UNESCO Site 
+2. Ask AI about the UNESCO Site  
+
+    >**Note:** We will talk about how to Generate AI text in our next lab
 
     ![Generative AI](images/generative-ai-02.png)
 
