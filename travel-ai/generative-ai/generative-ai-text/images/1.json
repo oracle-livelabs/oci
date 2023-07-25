@@ -1,0 +1,19 @@
+{
+  "id": "cmpl-7fslfpfgGvmeLmiAU6PRVsThk3428",
+  "object": "text_completion",
+  "created": 1690216331,
+  "model": "text-davinci-003",
+  "choices": [
+    {
+      "text": "\n\n1. Take a Guided Tour: Take an official tour of the Statue of Liberty and learn about its history, symbolism, and legacy.\n\n2. Climb the Pedestal and Staircase: Get up close and personal with the Statue of Liberty by climbing up the pedestal and staircase.\n\n3. Take a Ferry Ride to the Island: Take a ride across the New York Harbor to the Statue of Liberty Island and get some great views of the New York skyline.\n\n4. Visit the Museum: Explore the history of the Statue of Liberty and learn about its immigrant past at the Statue of Liberty Museum.\n\n5. Host a Special Event: Host a unique event at the Statue of Liberty and create memories that will last a lifetime.\n\n6. Go on a Night Tour: Enjoy the beauty of the Statue of Liberty at night by taking a night tour.\n\n7. Take a Cruise: Take a cruise around the Statue of Liberty and get some great views.\n\n8. Buy Souvenirs: Buy a souvenir or two from the gift shop to remember your visit.\n\n9. Take Photos: Capture the beauty of the Statue of Liberty and create some amazing photos.\n\n10. Enjoy the",
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "length"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 11,
+    "completion_tokens": 256,
+    "total_tokens": 267
+  }
+}
