@@ -1,15 +1,10 @@
-# MultiCloud Connectivity Lab
+# Introduction
 
-## Introduction
+## About this Workshop
 
-Oracle Cloud Infrastructure (OCI) Networking is a core tenet of a MultiCloud architecture. This Hands On Lab will walk through the steps required to connect to Oracle Cloud to 3rd party cloud infrastructure such as Microsoft Azure, Google GCP and Amazon AWS. After the networking dependencies are met, you will deploy a test workload to verify connectivity between cloud providers.
+Oracle Cloud Infrastructure (OCI) Networking is a core tenet of a MultiCloud architecture. This Hands On Lab will walk through the steps required to connect to Oracle Cloud to 3rd party cloud infrastructure such as Microsoft Azure, Google GCP and Amazon AWS. After the networking dependencies are met, you will deploy a test workload to verify connectivity between cloud providers. The Oracle Cloud networking resources deployed in this lab will include a VCN, DRG and FastConnect. Make sure to review [Oracle Cloud Networking Overview](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm) become more familiar with Oracle Cloud's networking components and their relationships.
 
-The Oracle Cloud networking resources deployed in this lab will include a VCN, DRG and FastConnect. Make sure to review [Oracle Cloud Networking Overview](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm) become more familiar with Oracle Cloud's networking components and their relationships.
-
-**Lab Objectives**
-
-**Estimated Lab Time: ~60 minutes**
-
+### Objectives
 
 In this workshop, you will learn how to:
 
@@ -19,7 +14,7 @@ In this workshop, you will learn how to:
 * Deploy a Virtual Machine
 * Verify MultiCloud Connectivity
 
-**Prerequisites**
+### Prerequisites
 
 This lab assumes you have:
 

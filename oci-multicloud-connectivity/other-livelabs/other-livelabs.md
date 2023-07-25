@@ -2,7 +2,7 @@
 
 In this lab, you deployed the OCI network constructs necessary to set up a MultiCloud environment. After setting up the environment, we tested and verified the connectivity over the FastConnect by connecting to the private IP address of the Azure instance. I hope you enjoyed the lab! To extend your learning beyond this lab, take a look at the following.
 
-### **Learn More**
+## **Learn More**
 
 * [Azure Interconnect Overview](https://www.oracle.com/cloud/azure/interconnect/)
 
@@ -17,4 +17,4 @@ In this lab, you deployed the OCI network constructs necessary to set up a Multi
 * **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
 * **Last Updated By/Date** - <Name, Month Year> Jake Bloom, July 2023
 
-### **I hope you enjoyed the lab!**
+## **I hope you enjoyed the lab!**

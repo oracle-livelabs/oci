@@ -11,7 +11,7 @@
             "filename": "../../vcn/vcn.md"
         },
         {
-            "title": "Lab 2: Setup a Dynamic Routing Gateway",
+            "title": "Lab 2: Setup a DRG",
             "filename": "../../drg/drg.md"
         },
         {
@@ -33,6 +33,11 @@
         {
             "title": "Learn More",
             "filename": "../../other-livelabs/other-livelabs.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
         }
     ]
 }

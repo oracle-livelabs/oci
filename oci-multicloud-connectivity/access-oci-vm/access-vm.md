@@ -1,6 +1,10 @@
 # Launch a Virtual Machine
 
-**Estimated Lab Time: 20 minutes**
+## Introduction
+
+Estimated Lab Time: 20 minutes
+
+### Objectives
 
 In this lab, you will:
 
@@ -9,7 +13,7 @@ In this lab, you will:
 * Connect to the Virtual Machine
 * Test Connectivity
 
-## Video Walkthrough
+### Video Walkthrough
 
 [Quickstart Video](youtube:8WWpGHxvhw4:large)
 
@@ -25,7 +29,7 @@ In this lab, you will:
     ![Copy Public Key Contents](images/cloudshell-4.png)
 
 ## Task 2: Launch a Virtual Machine
-Set up a private subnet instead of public
+
 1. From the Navigation Menu, under **Compute**, click on **Instances**.
     ![Navigate to Instances](images/instance-1.png)
 2. On the **Create Instance**
@@ -50,6 +54,7 @@ Set up a private subnet instead of public
     ![Restore Cloud Shell Session](images/login-1.png)
 2. Run the following command **ssh opc@_publicip_** where **_publicip_** is the public IP address of your Virtual Machine. Accept the ECDSA fingerprint. You are now connected to the Virtual Machine with SSH through Cloud Shell. In the next step we will verify connectivity with the 3rd party cloud provider.
     ![SSH to VM Via Cloud Shell](images/login-2.png)
+3. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

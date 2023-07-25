@@ -4,7 +4,15 @@
 
 # Azure Interconnect
 
-**Estimated Time: 30 minutes**
+## Introduction
+
+Estimated Time: 30 minutes
+
+### About FastConnect
+
+FastConnect allows customers to connect directly external environments such as 3rd party cloud providers and on-premise data centers to their Oracle Cloud Infrastructure (OCI) virtual cloud network via dedicated, private, high-bandwidth connections.
+
+### Objectives
 
 In this lab, you will:
 
@@ -12,18 +20,14 @@ In this lab, you will:
 * Use the Microsoft Azure Console to deploy a virtual machine to test and verify connectivity with Oracle Cloud.
 * Use the Oracle Cloud Console to create a FastConnect to directly connect to Azure ExpressRoute.
 
-About FastConnect
-
-FastConnect allows customers to connect directly external environments such as 3rd party cloud providers and on-premise data centers to their Oracle Cloud Infrastructure (OCI) virtual cloud network via dedicated, private, high-bandwidth connections.
-
-Prerequisites
+### Prerequisites
 
 This lab assumes you have:
 
 * Unrestricted lab access to your Microsoft Azure tenancy
 * The OCI and Azure region you are connecting are [supported Azure InterConnect regions](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
 
-## Video Walkthrough
+### Video Walkthrough
 
 [Azure Quickstart Video](youtube:97dyUveTasQ:large)
 
@@ -35,7 +39,7 @@ This lab assumes you have:
     ![Create resource](images/vnet-gw-2.png)
 3. For the new Virtual Network Gateway, give it a **Name**. Set the Gateway Type to **ExpressRoute**. Under **Virtual Network** select **Create Virtual Network**. Complete the following fields.
 
-    |                  **Field**              |    **Vaue**  |
+    |                  **Field**              |    **Value**  |
     |----------------------------------------|:------------:|
     |Name |    Azure_VNET    |
     |Resource Group |  _ChooseExistingORCreateANewOne_    |
@@ -52,7 +56,7 @@ This lab assumes you have:
 6. When your deployment says **Your deployment is complete**, move to the next task. **The Azure Virtual Network Gateway can take anywhere from 15-45 minutes to deploy.**
     ![Verify Deployment Complete](images/vnet-gw-6.png)
 
-## Task 2: Deploy an Azure VM
+## Task 2: Deploy an Azure Virtual Machine
 
 1. From the Azure Portal main page, select **Create a Resource**.
     ![Create VM](images/azure-vm-1.png)
@@ -77,7 +81,7 @@ This lab assumes you have:
 11. Under Networking, notate the **Private IP Address** of the virtual machine. This will be our target to verify that connectivity works between Oracle Cloud and Azure later in the lab.
     ![Notate private IP address](images/azure-vm-11.png)
 
-## Task 3: Deploy Azure ExpressRoute
+## Task 3: Deploy an Azure ExpressRoute
 
 1. From the Azure Portal homepage, click on **Create a Resource**.
     ![Create Resource](images/expressroute-1.png)
@@ -96,7 +100,7 @@ This lab assumes you have:
 8. Find the Service Key for the ExpressRoute circuit and copy it to your clipboard. You will use this in Task 4 to connect ExpressRoute to FastConnect.
     ![Collect the service key from ExpressRoute](images/expressroute-8.png)
 
-## Task 4: Configure Oracle Cloud FastConnect
+## Task 4: Configure an Oracle Cloud FastConnect
 
 1. From the Oracle Cloud Home Page, navigate to **Networking -> Customer Connectivity -> FastConnect**.
     ![FastConnect](images/fastconnect-1.png)
@@ -106,7 +110,7 @@ This lab assumes you have:
     ![FastConnect Partner Azure](images/fastconnect-3.png)
 4. Complete the following fields:
 
-    |                  **Field**              |    **Vaue**  |
+    |                  **Field**              |    **Value**  |
     |----------------------------------------|:------------:|
     |NAME |    OCI Azure Interconnect    |
     |COMPARTMENT |  _Choose your lab compartment_    |
@@ -161,18 +165,22 @@ This lab assumes you have:
 
 # Megaport
 
-**Estimated Time: 30 minutes**
+## Introduction
+
+Estimated Time: 30 minutes
+
+### About FastConnect
+
+FastConnect allows customers to connect directly external environments such as 3rd party cloud providers and on-premise data centers to their Oracle Cloud Infrastructure (OCI) virtual cloud network via dedicated, private, high-bandwidth connections.
+
+### Objectives
 
 In this lab, you will:
 
 * Use the Megaport portal to build a private connection.
 * Use the Oracle Cloud Console to create a FastConnect Connection to Megaport
 
-## About FastConnect
-
-FastConnect allows customers to connect directly external environments such as 3rd party cloud providers and on-premise data centers to their Oracle Cloud Infrastructure (OCI) virtual cloud network via dedicated, private, high-bandwidth connections.
-
-## Prerequisites
+### Prerequisites
 
 This lab has the following prerequisites:
 
@@ -182,9 +190,9 @@ This lab has the following prerequisites:
   * Non-overlapping Private IP space between clouds.
   * A virtual machine deployed in the private network with ICMP (Ping) and SSH accessibility.
 
-> This lab does not walk through the steps to connect additional cloud providers to Megaport. It is recommended to go through Megaport's [MCR documentation](https://docs.megaport.com/cloud/mcr/) for your additional cloud provider of choice and attach the cloud provider to MCR.
+> **Note:** This lab does not walk through the steps to connect additional cloud providers to Megaport. It is recommended to go through Megaport's [MCR documentation](https://docs.megaport.com/cloud/mcr/) for your additional cloud provider of choice and attach the cloud provider to MCR.
 
-## Video Walkthrough
+### Video Walkthrough
 
 [Megaport Quickstart Video](youtube:G0CySk4mlqs:large)
 
@@ -198,7 +206,7 @@ This lab has the following prerequisites:
   ![Select Megaport FastConnect partner](images/mp_fc_3.png)
 4. Complete the following fields:
 
-    |                  **Field**              |    **Vaue**  |
+    |                  **Field**              |    **Value**  |
     |----------------------------------------|:------------:|
     |NAME |    Megaport_1   |
     |COMPARTMENT |  _Choose your lab compartment_    |
@@ -239,7 +247,8 @@ Get location details for the POPS
   ![Add another cloud](images/mp_portal_3.png)
 4. Under **Select Provider**, search for the additional cloud provider you would like to establish connectivity with. Follow the steps on the screen to set up the additional cloud provider. (The example below is looking to connect with Azure). It is also recommended to follow the steps in the [MCR documentation](https://docs.megaport.com/cloud/mcr/) to properly set up the other cloud provider.
   ![Select Provider](images/mp_portal_4.png).
-5. When the 3rd party cloud is properly connected to the Megaport Cloud Router, proceed to the next step.
+5. Verify the 3rd party cloud is properly connected to the Megaport Cloud Router.
+6. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
