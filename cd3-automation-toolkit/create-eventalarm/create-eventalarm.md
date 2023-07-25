@@ -13,7 +13,7 @@ Some examples of how you might use Events and Notifications:
 - Send a Notification to a DevOps team when a database backup completes.
 - Convert files of one format to another when files are uploaded to an Object Storage bucket.
 
-Estimated Lab Time: 15 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
@@ -69,7 +69,7 @@ Wait for a bit until the plan succeeds and plan logs are available under _Logs_.
     ```
 The apply process can take some time, so patience is required.
 
-## Task 4: Inspect Created Objects
+## Task 3: Inspect Created Objects
 
 Go to __OCI console__ under compartment which was selected for deployment and take a few moments to explore the resources created. 
 
