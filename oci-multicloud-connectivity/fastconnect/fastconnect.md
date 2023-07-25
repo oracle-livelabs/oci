@@ -161,7 +161,7 @@ This lab assumes you have:
 
 <if type="Megaport">
 
-![Megaport Architecture](images/mcr_architecture.png)
+![Megaport Architecture](images/mcr_architecture.png " ")
 
 # Megaport
 

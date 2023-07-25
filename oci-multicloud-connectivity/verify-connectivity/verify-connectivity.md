@@ -36,7 +36,7 @@ In this lab, you will:
     ![Restore Cloud Shell](images/test-connectivity-1.png)
 2. Run the command **ping _ip address_**, where **_ip address_** is the IP address of your external cloud provider's virtual machine private IP address.
     ![Ping the VM](images/test-connectivity-2.png)
-3. Congratulations! You've completed the lab.
+3. Congratulations! You've completed the lab. The Virtual Machine, FastConnect, DRG and VCN can now be destroyed.
 
 ## Acknowledgements
 

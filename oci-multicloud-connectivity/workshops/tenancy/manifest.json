@@ -7,6 +7,11 @@
             "filename": "../../introduction/introduction.md"
         },
         {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable).",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
             "title": "Lab 1: Setup a Virtual Cloud Network",
             "filename": "../../vcn/vcn.md"
         },
@@ -29,10 +34,6 @@
         {
             "title": "Lab 5: Verify MultiCloud Connectivity",
             "filename": "../../verify-connectivity/verify-connectivity.md"
-        },
-        {
-            "title": "Learn More",
-            "filename": "../../other-livelabs/other-livelabs.md"
         },
         {
             "title": "Need Help?",
