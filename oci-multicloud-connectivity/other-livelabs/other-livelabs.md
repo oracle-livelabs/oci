@@ -12,9 +12,9 @@ In this lab, you deployed the OCI network constructs necessary to set up a Multi
 
 * [Reference Architecture - Deploy a 'multicloud' split-stack solution across OCI, AWS and GCP](https://docs.oracle.com/en/solutions/oci-aws-gcp-multicloud/index.html#GUID-FD1D132A-9B50-403E-9B79-BE80A3DB1A7F)
 
-### **Acknowledgements**
+## Acknowledgements
 
 * **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
 * **Last Updated By/Date** - <Name, Month Year> Jake Bloom, July 2023
 
-## I hope you enjoyed the lab!
+### **I hope you enjoyed the lab!**

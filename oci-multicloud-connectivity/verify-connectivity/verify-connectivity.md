@@ -1,4 +1,4 @@
-# Objectives
+# Verify MultiCloud Connectivity
 
 **Estimated Lab Time: 10 minutes**
 
@@ -6,8 +6,6 @@ In this lab, you will:
 
 * Update the VCN Route Table
 * Verify private connectivity between Oracle Cloud and your external cloud provider.
-
-## 
 
 ## Video Walkthrough
 
@@ -34,3 +32,8 @@ In this lab, you will:
     ![Restore Cloudshell](images/test-connectivity-1.png)
 2. Run the command **ping _ip address_**, where **_ip address_** is the IP address of your external cloud provider's virtual machine private IP address.
     ![Ping the VM](images/test-connectivity-2.png)
+
+## Acknowledgements
+
+* **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
+* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, July 2023

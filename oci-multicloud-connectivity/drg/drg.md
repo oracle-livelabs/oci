@@ -1,9 +1,9 @@
-# Objectives
+# Setup a Dynamic Routing Gateway
 **Estimated Lab Time: 10 minutes**
 
 In this lab you will build a Dynamic Routing Gateway (DRG) to serve as a private connectivity gateway for the VCN deployed in the previous lab.
 
-## About Dynamic Routing Gateway (DRG)
+About Dynamic Routing Gateway (DRG)
 
 A DRG acts as a virtual router, providing a path for traffic between your on-premises networks, cloud provider infrastructure and VCNs, and can also be used to route traffic between VCNs. Using different types of attachments, custom network topologies can be constructed using components in different regions and tenancies.
 
@@ -23,3 +23,8 @@ A DRG acts as a virtual router, providing a path for traffic between your on-pre
   ![Attach VCN to DRG](images/drg-4.png)
 5. Optionally give the attachment a name, and then select the name of the VCN you created in the previous step. Move on to the next step when the VCN attachment Lifecycle State moves to "Attached".
   ![Verify VCN Attachment](images/drg-5.png)
+
+## Acknowledgements
+
+* **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
+* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, July 2023
