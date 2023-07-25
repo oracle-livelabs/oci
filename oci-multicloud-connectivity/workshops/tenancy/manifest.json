@@ -1,33 +1,33 @@
 {
     "workshoptitle": "MultiCloud Network Connectivity",
-    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
             "filename": "../../introduction/introduction.md"
         },
         {
-            "title": "Deploy a Virtual Cloud Network (VCN)",
+            "title": "Lab 1: Setup a Virtual Cloud Network",
             "filename": "../../vcn/vcn.md"
         },
         {
-            "title": "Deploy a Dynamic Routing Gateway (DRG)",
+            "title": "Lab 2: Setup a Dynamic Routing Gateway",
             "filename": "../../drg/drg.md"
         },
         {
-            "title": "(Connectivity Option 1): Megaport",
-            "filename": "../../fastconnect_megaport/fastconnect_megaport.md"
+            "title": "Lab 3: Setup a FastConnect",
+            "filename": "../../fastconnect/fastconnect.md",
+            "type": {
+                "Interconnect" : "Azure Interconnect",
+                "Megaport" : "Megaport"
+            }
         },
         {
-            "title": "(Connectivity Option 2): Azure Interconnect",
-            "filename": "../../fastconnect_azure_interconnect/fastconnect_azure_interconnect.md"
-        },
-        {
-            "title": "Deploy and Access a Virtual Machine",
+            "title": "Lab 4: Launch a Virtual Machine",
             "filename": "../../access-oci-vm/access-vm.md"
         },
         {
-            "title": "Verify MultiCloud Connectivity",
+            "title": "Lab 5: Verify MultiCloud Connectivity",
             "filename": "../../verify-connectivity/verify-connectivity.md"
         },
         {

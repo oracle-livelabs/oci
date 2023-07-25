@@ -1,12 +1,6 @@
-# Verify MultiCloud Connectivity
+# Objectives
 
-## Introduction
-
-In this lab, we will deploy the a Virtual Machine and then use it to verify connectivity over the FastConnect.
-
-Estimated Lab Time: 20 minutes
-
-### Objectives
+**Estimated Lab Time: 20 minutes**
 
 In this lab, you will:
 
@@ -15,9 +9,11 @@ In this lab, you will:
 * Connect to the Virtual Machine
 * Test Connectivity
 
+## 
+
 ## Video Walkthrough
 
-Virtual Machine QuickStart:[Quickstart Video](youtube:8WWpGHxvhw4:large)
+[Quickstart Video](youtube:8WWpGHxvhw4:large)
 
 ## Task 1: Prepare CloudShell
 
@@ -31,7 +27,7 @@ Virtual Machine QuickStart:[Quickstart Video](youtube:8WWpGHxvhw4:large)
     ![Copy Public Key Contents](images/cloudshell-4.png)
 
 ## Task 2: Launch a Virtual Machine
-
+Set up a private subnet instead of public
 1. From the Navigation Menu, under **Compute**, click on **Instances**.
     ![Navigate to Instances](images/instance-1.png)
 2. On the **Create Instance**
