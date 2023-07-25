@@ -12,7 +12,11 @@ Oracle Cloud Infrastructure (OCI) Virtual Cloud Networks (VCNs) provide customiz
 
 In this lab, you will:
 
-* Build a Virtual Cloud Network (VCN) using the VCN Wizard.
+* Build a Virtual Cloud Network (VCN) using the VCN Wizard
+
+### Prerequisites
+
+* OCI console access with VCN deployment permissions
 
 ### Video Walkthrough
 

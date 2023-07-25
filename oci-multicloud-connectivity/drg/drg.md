@@ -12,7 +12,12 @@ A DRG acts as a virtual router, providing a path for traffic between your on-pre
 
 In this lab you will:
 
-* Build a Dynamic Routing Gateway (DRG) to serve as a private connectivity gateway for the VCN deployed in the previous lab.
+* Build a Dynamic Routing Gateway (DRG) to serve as a private connectivity gateway for the VCN deployed in the previous lab
+
+### Prerequisites
+
+* Tasks completed in the previous lab
+* OCI console access with DRG deployment permissions
 
 ### Video Walkthrough
 

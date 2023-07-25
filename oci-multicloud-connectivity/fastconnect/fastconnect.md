@@ -24,8 +24,9 @@ In this lab, you will:
 
 This lab assumes you have:
 
+* All tasks completed from Lab 1 and 2.
 * Unrestricted lab access to your Microsoft Azure tenancy
-* The OCI and Azure region you are connecting are [supported Azure InterConnect regions](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
+* The OCI and Azure region you are connecting are [supported Azure InterConnect regions](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability)
 
 ### Video Walkthrough
 
@@ -184,7 +185,8 @@ In this lab, you will:
 
 This lab has the following prerequisites:
 
-* Access to the Megaport portal.
+* All tasks completed from Lab 1 and 2
+* Access to the Megaport portal
 * A 3rd party cloud provider with the following:
   * Properly connected and configured 3rd party cloud to the Megaport Cloud Router after completing Task 2 in this lab. [MCR documentation](https://docs.megaport.com/cloud/mcr/)
   * Non-overlapping Private IP space between clouds.

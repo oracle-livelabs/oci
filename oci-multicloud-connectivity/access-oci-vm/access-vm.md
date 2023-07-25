@@ -13,6 +13,11 @@ In this lab, you will:
 * Connect to the Virtual Machine
 * Test Connectivity
 
+### Prerequisites
+
+* All tasks completed from Lab 1, 2 and 3
+* Permissions to deploy a Virtual Machine
+
 ### Video Walkthrough
 
 [Quickstart Video](youtube:8WWpGHxvhw4:large)
