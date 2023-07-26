@@ -25,7 +25,7 @@ Please follow the previous lab till the last step. Once you are able to provisio
     ```
     __e.g.__ python setUpOCI.py '/cd3user/tenancies/usr1_livelab/usr1_livelab_setUpOCI.properties'
 
-2. Type __option 9__ for developer services and __option 1__ from submenu for __upload current terraform files/state to Resource Manager__.
+2. Type __option 9__ for developer services and __option 1__ from submenu to __upload current terraform files/state to Resource Manager__.
 
 3. Once the execution is successful, you will see the stack in resource manager and '<customer_name>'-'<region_dir>'-stacks.zip file will be generated under the folder '/cd3user/tenancies/<customer_name>/terraform_files/<region_dir>'.
 

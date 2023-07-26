@@ -28,12 +28,12 @@ The objectives of this lab are:
 ## Task 1: Clone the repo
 
 1. Open your terminal and navigate to the desired directory where you intend to download the git repository.
-1. Run the git clone command as shown below:
+2. Run the git clone command as shown below:
     ```
     bash
     git clone https://github.com/oracle-devrel/cd3-automation-toolkit
     ```
-1. Once the cloning completes successfully, the repo will replicate to the local directory.
+3. Once the cloning completes successfully, the repo will replicate to the local directory.
 
 <br>
 
@@ -41,7 +41,7 @@ The objectives of this lab are:
 
 1. Change directory to *'cd3-automation-toolkit'*(i.e. the cloned repo in your local).
 
-1. Execute:
+2. Execute:
     ```
     bash 
     docker build --platform linux/amd64 -t cd3toolkit:$'<image_tag>' -f Dockerfile --pull --no-cache . 
@@ -60,7 +60,7 @@ The objectives of this lab are:
     ```
     ![docker_run](./images/docker_run.png "docker run command example")
 
-1. Verify the container:
+2. Verify the container:
     ```
     docker ps
     ```
@@ -77,12 +77,12 @@ The objectives of this lab are:
     ```
     >**Note:** Note down the container ID from this cmd output.
 
-1. Enter the container using the above container id.
+2. Enter the container using the above container id.
 
     ```
     docker exec -it <container_id> bash
     ```
-1. Change directory to *'user-scripts'*
+3. Change directory to *'user-scripts'*
 
     ```
     cd '/cd3user/oci_tools/cd3_automation_toolkit/user-scripts/'
@@ -91,29 +91,29 @@ The objectives of this lab are:
 
 RSA key pair in PEM format (minimum 2048 bits) is needed to use OCI APIs. If the key pair does not exist, create them by executing *createAPIKey.py* under *'user-scripts'* folder:
 
-    ``` 
+   ``` 
     python createAPIKey.py 
-    ```
+   ```
 
-    ```
+   ```
     This will generate the public/private key pair(oci_api_public.pem and oci_api_private.pem) at /cd3user/tenancies/keys/
-    ```
+   ```
 
-    ```
+   ```
     In case you already have the keys, you should copy the private key file inside the container and rename it to oci_api_private.pem.
-    ```
+   ```
 
 ### 3. **Upload the Public key to OCI console.**
 
 Upload the Public key to "APIkeys" under user settings in OCI Console. Pre-requisite to use the complete functionality of the Automation Toolkit is to have the user as an administrator to the tenancy.
 
    1. Open the Console, and sign in as the user.
-   1. View the details for the user who will be calling the API with the key pair.
+   2. View the details for the user who will be calling the API with the key pair.
 
-   1. Open the Profile menu (User menu icon) and click **User Settings**.
+   3. Open the Profile menu (User menu icon) and click **User Settings**.
 
-   1. Click **Add Public Key**.
-   1. Paste the contents of the PEM public key in the dialog box and click *Add*.
+   4. Click **Add Public Key**.
+   5. Paste the contents of the PEM public key in the dialog box and click *Add*.
 
 ### 4. **Edit tenancyconfig.properties:**
 
