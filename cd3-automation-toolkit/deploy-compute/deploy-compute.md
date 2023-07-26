@@ -119,8 +119,7 @@ In this lab, you will:
     - Navigate to **"Instances"** sheet and create a **always-free** Compute Instance with below details:
 
     ```
-    Name: cd3_vm, subnet: cd3_vcn_subnet1 (format: vcnname_subnetname), Source details- image::Linux, shape: VM.Standard.E3.Flex::2, ssh_public_key
-    
+    Name: cd3_vm, subnet: cd3_vcn_subnet1 (format: vcnname_subnetname), Source details- image::Linux, shape: VM.Standard.E3.Flex::2, ssh_public_key    
     ```
 
     ```
@@ -205,7 +204,7 @@ In this lab, you will:
 2. Navigate to *'/cd3user/oci_tools/cd3_automation_toolkit/'* and execute the below command.
         
     ```
-    python setUpOCI.py '/cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties'
+    python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
     ```
 ## Task 4: Generate terraform files and create our resources in OCI
 
@@ -213,14 +212,20 @@ In this lab, you will:
     >**Note:** Identity--> 1: Add/Modify/Delete Compartments. 
 
 2. Navigate to identity directory under home region directory after Terraform files are created.
-                  
-   cd '/cd3user/tenancies/<customer_name>/terraform_files/<home_region>/identity'
+
+    ```               
+    cd /cd3user/tenancies/<customer_name>/terraform_files/<home_region>/identity
+    ```
 
 3. Execute terraform init, plan and apply to create the compartment.
 
-    >**Note:** Since we are creating all resources in the **'demo_compartment'**, we should first create the compartment in OCI and run fetch compartments again. This way the variables file has the **'demo_compartment'** entry and other resources can be created in it.
+    >**Note:** Since we are creating all resources in the **democompartment**, we should first create the compartment in OCI and run fetch compartments again. This way the variables file has the **compartment** entry and other resources can be created in it.
 
-4. Go back to the folder */cd3user/oci_tools/cd3_automation_toolkit/* and execute the setUpOCI.py again as shown in **Task 3** and select *fetch compartments*.
+4. Go back to the below folder and execute the setUpOCI.py again as shown in **Task 3** and select *fetch compartments*.
+
+    ```
+    /cd3user/oci_tools/cd3_automation_toolkit/
+    ```
 
     >**Note:** This option will update OCID of newly created compartments in TF file.
 
@@ -233,7 +238,11 @@ In this lab, you will:
 
     >**Note:** Terraform files are generated under the respective Service directories of the Region directory.
 
-6. Once the Terraform files are created from above step, navigate to *'/cd3user/tenancies/<customer_name>/terraform_files/<region>/<services>'* for each of the services: Network, Compute, Database. Block volume terraform files are generated under compute directory.
+6. Once the Terraform files are created from above step, navigate to below path for each of the services: Network, Compute, Database and Block volume.
+
+    ```
+    /cd3user/tenancies/<customer_name>/terraform_files/<region>/<services>
+    ```
 
 7. Enter into each of the required service folders (network, compute, database) and execute the below terraform commands to provision the resources in OCI.
 
