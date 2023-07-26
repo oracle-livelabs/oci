@@ -13,8 +13,12 @@ Automatically extract textual or visual information from images and use that to 
 **Digital asset management**
 
 Enrich image-based files with metadata, including objects and colors for better indexing and retrieval in a digital asset management system or larger data warehouse. Easily retrieve images for uses ranging from intelligent search to retail management.
+
+**Important**
+
+This workshop provides a basic example of using OCI Vision and other AI services. This example is for illustration and demonstration purposes only and isn't intended to replace any medical imagery analysis tool or official diagnosis recommendation made by a professional. Users need to receive the proper regulated compliance and approvals before using for medical and diagnostic use.
  
-Estimated Workshop Time: 4 hours
+Estimated Workshop Time: 20 mins
 
 ### Objectives
 
@@ -30,9 +34,8 @@ In this workshop, you will learn how to:
  
 This lab assumes you have:
 
-* An Oracle account
-* Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
-  
+* No Prerequisites for this Lab 
+
 ## Task 1: What is a Mammogram?
 
  A mammogram is an X-ray picture of the breast. Doctors use a mammogram to look for early signs of breast cancer. Regular mammograms are the best tests doctors have to find breast cancer early, sometimes up to three years before it can be felt. Patients should continue to get mammograms according to recommended time intervals. Mammograms work best when they can be compared with previous ones. This allows the radiologist to compare them to look for changes in your breasts.

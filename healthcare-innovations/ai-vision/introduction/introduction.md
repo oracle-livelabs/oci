@@ -7,16 +7,16 @@ Machine Learning and Artificial Intelligence tools are unprecedentedly changing 
 In this workshop, we will show how Artificial Intelligence (AI) and Machine Learning (ML) are helping identify breast cancer using Oracle APEX, Oracle AI Vision Service, and Oracle Autonomous Database.  
 
 We’ll share how we trained our AI Machine learning models with X-Ray mammography images to identify breast cancers and even incorporated many other features, such as helping doctors or patients dictate medical symptoms and diagnoses quickly by sending an email of the audio message and the medical transcription text. 
+  
+### Complete Demo and Architecture video
+
+[Youtube video on AI for Healthcare Demo](youtube:iBV76Upi1VM:large)
+
+### Introduction video
 
 [Youtube video on AI for Healthcare Demo](youtube:VjeoHU4I6SI:large)
 
-[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations that are happening in Healthcare, Label Cancer Images using [**OCI Data Labeling Service**](https://www.oracle.com/in/artificial-intelligence/data-labeling/) and Analyze using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) for Breast Cancer, Lung Cancer Detection or finding out about Covid or Pneumonia early stage, using the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/artificial-intelligence/speech/) to ask a doctor about specific medical symptoms and get a response back from a Virtual Doctor leveraging the power of [**OpenAI**](https://openai.com/). Chat with virtual doctor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/) asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate nearest Hospital with [**Oracle Spatial**](https://www.oracle.com/in/database/spatial/) and contact them. Send Emails to Doctors or Hospitals using [**OCI Email Delivery Service**](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Email/home.htm)
-
-Running on top of the world's most powerful database, [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/) and Low Code development platform [**Oracle APEX**](https://apex.oracle.com/en/)
-
-![Archiecture](images/architecture.png " ")
- 
-Estimated Workshop Time: 16 hours (Approximately)
+*Estimated Workshop Time: 16 hours (Approximately)*
 
 ### Prerequisites 
  
@@ -24,9 +24,27 @@ This lab assumes you have:
 
 * An Oracle account
 * Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
+ 
+[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations in Healthcare, Detect Breast Cancer and Lung Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) at an early stage. Detect Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/). Use the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/), ask a doctor about specific medical symptoms and get a response from a virtual Doctor leveraging the power of [**OpenAI**](https://openai.com/). Chat with a virtual doctor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/), asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate the nearest Hospital with [**Oracle Spatial and Maps**](https://www.oracle.com/in/database/spatial/) and contact them.[**Oracle Blockchain**](https://www.oracle.com/blockchain/) for Biometric data security by preventing illicit insider data changes. and much more. 
 
+Running on top of the world's most powerful database, [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/) and Low Code development platform [**Oracle APEX**](https://apex.oracle.com/en/)
+
+### AI for Healthcare - Technology Architecture
+
+![Archiecture](images/architecture-v3.png " ")
+
+### AI for Healthcare - Learning path
+
+Learning paths are independent of each other, for example after completing common labs you can directly work on AI Vision or Document Understanding Labs. most of the labs are Optional and independent of each other.
+
+![Learning Path 1](images/learning-path-1.png " ")
+
+![Learning Path 2](images/learning-path-2.png " ")
+
+![Learning Path 32](images/learning-path-3.png " ")
+ 
 ### AI for Healthcare - Table of Contents
-
+ 
 *Common Labs - Introduction Lab to Lab 3*
 
 These are common labs that are required for most of the other labs under this workshop.
@@ -37,7 +55,10 @@ These are common labs that are required for most of the other labs under this wo
     * About Breast Cancer
 * Get Started
     * Sign-in to Oracle [cloud web console](cloud.oracl.com)
-* Lab 1: Setup [**OCI Policies**](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Identity/access/manage-accessresources.htm)
+* Lab 1: Setup [**OCI Policies**](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Identity/access/manage-accessresources.htm) 
+
+ *Setting up Policies is required Only if you do not have administrative access in your tenancy.*
+
     * Create OCI Bucket
     * Create a new compartment
     * Setup policies for Compartment management
@@ -45,6 +66,7 @@ These are common labs that are required for most of the other labs under this wo
     * Setup policies for OCI Vision service
     * Setup policies for OCI Document Understanding Service
     * Setup policies for OCI Speech
+    * Setup policies for OCI Anomaly Detection
 * Lab 2: Provision of an [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/)
     * Create or select a compartment
     * Choose Autonomous Database from the OCI services menu
@@ -59,7 +81,7 @@ These are common labs that are required for most of the other labs under this wo
 
 *Detect Breast Cancer - Lab 4 to Lab 8*
 
-In this Workshop (*Collection of Labs*) .These Labs guide us in detecting Breast Cancer using Oracle [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) AI Service.
+This workshop will guide you in detecting Breast Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) AI Service.
 
 * Lab 4: Understanding Mammography and Breast Cancer (<u>Optional Lab</u>)
     * What is a Mammogram?
@@ -77,8 +99,8 @@ In this Workshop (*Collection of Labs*) .These Labs guide us in detecting Breast
     * Verify Bulk Data labelled images
 * Lab 7: Train the model using the **Image Classification** AI model
     * Create OCI Vision Project
-    * Create and Train Vision Model
-    * Analyze and evaluate your Model
+    * Create and Train OCI AI vision model
+    * Analyze and evaluate your model
     * Review Request and Response JSON
 * Lab 8: [**Oracle APEX**](https://apex.oracle.com/en/) Application for Breast Cancer Detection
     * Setup Oracle APEX Web Credentials
@@ -108,7 +130,7 @@ These Labs guide us in creating medical expenses using Oracle [**OCI Document Un
     * Verify Oracle APEX File upload settings
     * Create Custom Reports and Verify the results of uploaded receipt file.
     * Create an Expense item from the uploaded receipt
-
+ 
 *Create Medical Transcriptions - Lab 11 to Lab 13* 
 
 These Labs help us with medical transcription and consulting virtual AI doctors using Oracle [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/) AI Service.
@@ -144,7 +166,7 @@ Integrating [**Oracle APEX**](https://apex.oracle.com/en/) Application with [**O
 
 *Create Chatbot for Frequently Asked Medical Questions - Lab 15 - Lab 16*
 
-This workshop would enable users to interact with [**Oracle Digital Assistant**](https://www.oracle.com/in/chatbots/) Chatbot with frequently asked questions related to cancer or COVID, Pneumonia or any other health issues, Get medical advice on time.
+This workshop would enable users to interact with [**Oracle Digital Assistant**](https://www.oracle.com/in/chatbots/) Chatbot with frequently asked questions related to cancer or COVID, Pneumonia or any other health issues, and get medical advice on time.
 
 * Lab 15: Setup Oracle Digital Assistant
     * Oracle Digital Assistant for [**natural language processing(NLP)**](https://en.wikipedia.org/wiki/Natural_language_processing), [**natural language understanding**](https://en.wikipedia.org/wiki/Natural-language_understanding) (NLU) 
@@ -160,7 +182,7 @@ This workshop would enable users to interact with [**Oracle Digital Assistant**]
     * Get channel id from the ODA console
     * Configure settings.js file
     * Upload CSS, Image and JS files to Oracle APEX 
-    * HTML Code to add ODA chatbot on a Oracle APEX page
+    * HTML Code to add ODA chatbot on an Oracle APEX page
     * Bot Initiated Conversation
     * Update YAML flow in ODA
     * Demo of Chatbot in Oracle APEX Page
@@ -191,7 +213,27 @@ This workshop walks you through the steps of creating an [**Oracle Analytics clo
     * Copy Analytics Report Embed URLs
     * Embed Reports in APEX Application
 
-*Setup OCI Email Delivery Service - Lab 19*
+*Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection - Lab 19*
+
+This lab walks you through the steps of detecting Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/).
+
+* Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection
+    * Approach to ECG Interpretation - ECG Data Preparation
+    * Upload the ECG Training data to OCI Object storage
+    * Create and Train the ECG Model
+    * Review Model and Data settings
+    * Detect ECG Anomalies
+
+*Biometrics with Blockchain - Lab 20*
+
+This lab walks you through preventing illicit insider changes to users' biometric data using [**Oracle Blockchain**](https://www.oracle.com/blockchain/). It Permits insert-only SQL operations, with no updates and other modifications allowed, and restricts deletions.
+
+* Biometrics with Blockchain
+    * Create a Blockchain table.
+    * Insert Biometric data into the blockchain table.
+    * Demonstrate Blockchain Data Security. 
+
+*Setup OCI Email Delivery Service - Lab 21*
 
 This workshop walks you through the steps of setting up [**OCI Email Services**](https://www.oracle.com/in/cloud/networking/email-delivery/). This will help us email Doctors, Patients or any Health official with the required data. For example, we can email transcribed text to Doctor after the patient uploads an audio file or mail once the medical expenses have been approved or rejected
 
@@ -230,10 +272,14 @@ Lung cancer includes two main types: non-small cell lung cancer and small cell l
 
 ![Mens's Lung Cancer 2020](images/lungcancer.png =50%x* )
 
+## Important
+
+This workshop provides a basic example of using OCI Vision and other AI services. This example is for illustration and demonstration purposes only and isn't intended to replace any medical imagery analysis tool or official diagnosis recommendation made by a professional. Users need to receive the proper regulated compliance and approvals before using for medical and diagnostic use.
+
 You may now **proceed to the next lab**.
     
 ## Acknowledgements
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
-* **Advisor** - Bo English-Wiczling, Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - June 22nd, 2023
+* **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Direct, Program Management, Oracle Database 
+* **Last Updated By/Date** - July 13th, 2023

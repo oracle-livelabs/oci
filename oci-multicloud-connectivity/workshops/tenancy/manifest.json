@@ -1,0 +1,44 @@
+{
+    "workshoptitle": "MultiCloud Network Connectivity",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable).",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Setup a Virtual Cloud Network",
+            "filename": "../../vcn/vcn.md"
+        },
+        {
+            "title": "Lab 2: Setup a DRG",
+            "filename": "../../drg/drg.md"
+        },
+        {
+            "title": "Lab 3: Setup a FastConnect",
+            "filename": "../../fastconnect/fastconnect.md",
+            "type": {
+                "Interconnect" : "Azure Interconnect",
+                "Megaport" : "Megaport"
+            }
+        },
+        {
+            "title": "Lab 4: Launch a Virtual Machine",
+            "filename": "../../access-oci-vm/access-vm.md"
+        },
+        {
+            "title": "Lab 5: Verify MultiCloud Connectivity",
+            "filename": "../../verify-connectivity/verify-connectivity.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

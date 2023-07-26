@@ -28,17 +28,17 @@ This lab assumes you have:
 
 ## Task 1: Data Preparation by Classifying Images. 
 
-1. Download the Breast Cancer Detection Dataset from any of your favourite repositories.
+1. Create folder **XRayBreastCancer** under this, create two folders **NORMAL\_BREAST** and **BREAST\_WITH\_CANCER**, and place the files in their respective folder
 
-2. Create folder **XRayBreastCancer** under this, create two folders **NORMAL\_BREAST** and **BREAST\_WITH\_CANCER**, and place the files in their respective folder
-
-3. Images with Breast Cancer
+2. Images with Breast Cancer
 
     ![Raw Images Breast Cancer](images/breast-cancer.png " ")
 
-4. Images with Normal Breast
+3. Images with Normal Breast
 
     ![Raw Images Normal Breast](images/normal-breast.png " ")
+
+    > **Note:** From Google search, look for *Breast Cancer Detection Dataset* and download from any of your favourite data sources or bring your own data.
  
 ## Task 2: Load images to Object Storage using OCI CLI
 
@@ -48,6 +48,12 @@ This lab assumes you have:
     <copy>oci os object bulk-upload --namespace < namespace > -bn < bucket_name > --src-dir < local folder > --overwrite --content-type 'image/*'</copy>
     ```
 
+    > **Note :** if you have errors in data labelling ensure that you provide content type as *image/jpeg* or *image/png* .Check the OCI CLI [Command Reference](https://docs.oracle.com/en-us/iaas/tools/oci-cli/3.29.2/oci_cli_docs/cmdref/os/object/bulk-upload.html) 
+
+    ```text
+    <copy>oci os object bulk-upload --namespace < namespace > -bn < bucket_name > --src-dir < local folder > --overwrite --content-type image/jpeg </copy>
+    ```
+  
 2. Replace namespace, bucket_name and local folder as per your settings, for example
 
     ```text
