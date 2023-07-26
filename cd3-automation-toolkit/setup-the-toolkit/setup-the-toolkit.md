@@ -95,9 +95,9 @@ The objectives of this lab are:
     python createAPIKey.py 
     ```
 
-    >**Note:** This will generate the 'public/private key pair(<oci_api_public.pem> and <oci_api_private.pem>)' at */cd3user/tenancies/keys/*
+    >**Note:** This will generate the public/private key pair("<oci_api_public.pem>" and "<oci_api_private.pem>") at */cd3user/tenancies/keys/*
 
-1. In case you already have the keys, you should copy the private key file inside the container and rename it to *'<oci_api_private.pem>'*.
+1. In case you already have the keys, you should copy the private key file inside the container and rename it to *"<oci_api_private.pem>"*.
 
 ### 3. **Upload the Public key to OCI console.**
 
