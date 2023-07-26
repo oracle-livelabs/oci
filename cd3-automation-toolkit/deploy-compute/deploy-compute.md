@@ -22,122 +22,133 @@ In this lab, you will:
 
 ## Task 1:  Add required resource parameter values in the Excel file
 
-1. Choose CD3-CIS-template from [CD3 Excel templates](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/RunningAutomationToolkit.md#excel-sheet-templates). 
+1. Identity
 
-    >**Note:** Any template other than *CD3-CIS-ManagementServices-template* can be used to provision these services.
+    1. Choose CD3-CIS-template from [CD3 Excel templates](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/RunningAutomationToolkit.md#excel-sheet-templates). 
 
-1. Refer to the blue section in each worksheet to fill the resource details in proper formats. Not all fields are mandatory. 
+        >**Note:** Any template other than *CD3-CIS-ManagementServices-template* can be used to provision these services.
 
-    >**Note:** Please fill resources data before the \<END> tag. Any data below the \<END> tag will not be processed.
+    2. Refer to the blue section in each worksheet to fill the resource details in proper formats. Not all fields are mandatory. 
 
-1. Add details for Compartment:
+        >**Note:** Please fill resources data before the \'<END>' tag. Any data below the \'<END>' tag will not be processed.
 
-    - Open the **"Compartments"** tab and add your compartment data with below image as example.
+    3. Add details for Compartment:
 
-    - If the parent compartment is not under root directly, then provide it in the below format:
+        - Open the **"Compartments"** tab and add your compartment data with below image as example.
 
-      *Parent_compartment 1::Parent_compartment 2:: ... ::Parent_compartment n*
+        - If the parent compartment is not under root directly, then provide it in the below format:
 
-    >**Note:** Provide your Tenancy's "home region" under the "Region" column. (same for all OCI Identity components).
+        *Parentcompartment1::Parentcompartment2:: ... ::Parentcompartment n*
+
+        >**Note:** Provide your Tenancy's "home region" under the "Region" column. (same for all OCI Identity components).
      
-    Refer to the below image as example:
-    ![Compartment](./images/compartment.png "compartment example") 
+        Refer to the below image as example:
+        ![Compartment](./images/compartment.png "compartment example") 
 
-1. Add details for the VCN:
+2. Network
 
-    - Navigate to **"VCNs"** sheet and create a VCN with the following details:
+    1. Add details for the VCN:
 
-    - Compartment name format: *parent_compartment1::parent_compartment2::child_compartmemt*
+        - Navigate to **"VCNs"** sheet and create a VCN with the following details:
 
-    Name: cd3_vcn
+        - Compartment name format: *parentcompartment1::parentcompartment2::child_compartmemt*
 
-    CIDR: 10.110.0.0/24
+        Name: cd3_vcn
 
-    Refer to the below image as example:
+        CIDR: 10.110.0.0/24
 
-    ![vcn](./images/vcn.png "details for vcn")
+        Refer to the below image as example:
 
-1. Add DHCP details for cd3_vcn
+        ![vcn](./images/vcn.png "details for vcn")
 
-    - Navigate to **"DHCP"** sheet and create DHCP Options with the following details:
+    2. Add DHCP details for cd3_vcn
 
-    - VCN: cd3_vcn
+        - Navigate to **"DHCP"** sheet and create DHCP Options with the following details:
 
-     DHCP-option: dhcp-internal
+        - VCN: cd3_vcn
 
-     ServerType: VcnLocalPlusInternet
+        DHCP-option: dhcp-internal
 
-     Search domain: oci.com
+        ServerType: VcnLocalPlusInternet
 
-    Refer to the below image as example:
+        Search domain: oci.com
 
-    ![dhcp](./images/dhcp.png "details of dhcp configuration")
+        Refer to the below image as example:
 
-1. Add details for creating Subnets in cd3_vcn
+        ![dhcp](./images/dhcp.png "details of dhcp configuration")
 
-    - Navigate to **"SubnetsVLANs"** sheet and create subnets with the following details:
+    3. Add details for creating Subnets in cd3_vcn
 
+        - Navigate to **"SubnetsVLANs"** sheet and create subnets with the following details:
 
-    - Name: subnet1, public subnet, CIDR: 10.110.0.0/26, Route table: RT1, Security list: SL1, Route to IGW.
+        - Name: subnet1, public subnet, CIDR: 10.110.0.0/26, Route table: RT1, Security list: SL1, Route to IGW.
 
-     Name: subnet2, private subnet, CIDR: 10.110.0.64/26, Route table: RT2, Security list: SL2, Route to NGW.
+        Name: subnet2, private subnet, CIDR: 10.110.0.64/26, Route table: RT2, Security list: SL2, Route to NGW.
 
-    Refer to the below image as example:
+        Refer to the below image as example:
 
-    ![subnets](./images/subnets.png "subnet details")
+        ![subnets](./images/subnets.png "subnet details")
 
-1. Add details for Route rules
+    4. Add details for Route rules
 
-    - Navigate to **"RouteRulesinOCI"** sheet and create Route rules with following details:
+        - Navigate to **"RouteRulesinOCI"** sheet and create Route rules with following details:
 
-    - Name: RT1, Target:'cd3_vcn_igw', Destination type: CIDR, Destination CIDR: 0.0.0.0/0
+        - Name: RT1, Target:'cd3_vcn_igw', Destination type: CIDR, Destination CIDR: 0.0.0.0/0
 
-    - Name: RT2, Target:'cd3_vcn_ngw', Destination type: CIDR, Destination CIDR: 0.0.0.0/0
+        - Name: RT2, Target:'cd3_vcn_ngw', Destination type: CIDR, Destination CIDR: 0.0.0.0/0
 
-    Refer to the below image as example:
+        Refer to the below image as example:
 
-    ![routerules](./images/routerules.png "details of route rules")
+        ![routerules](./images/routerules.png "details of route rules")
 
-1. Add details for Security rules
+    5. Add details for Security rules
 
-    - Navigate to **"SecRulesOCI"** sheet and create Security rules with following details:
+        - Navigate to **"SecRulesOCI"** sheet and create Security rules with following details:
 
-    - Name: SL1, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 22
+        - Name: SL1, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 22
 
-    - Name: SL2, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 1521, 1522
+        - Name: SL2, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 1521, 1522
 
-    Refer to the below image as example:
+        Refer to the below image as example:
 
-    ![secrule](./images/secrules.png "details of sec rules")
+        ![secrule](./images/secrules.png "details of sec rules")
 
-1. Add details for Compute VM
+3. Compute
 
-   - Navigate to **"Instances"** sheet and create a Compute Instance with below details:
+    1. Add details for Compute VM
 
-   - We will provision an **always-free** Instance in this lab.
+        - Navigate to **"Instances"** sheet and create a **always-free** Compute Instance with below details:
 
-   - Name: 'cd3_vm', subnet: 'cd3_vcn_subnet1' (format: *'vcnname_subnetname'*), Source details- image::Linux , shape: VM.Standard.E3.Flex::2, ssh_public_key to ssh into the instance,
+        ```
+        Name: cd3_vm, subnet: cd3_vcn_subnet1 (format: vcnname_subnetname), Source details- image::Linux, shape: VM.Standard.E3.Flex::2, ssh_public_key
+        ```
 
-    >**Note:** To add SSH keys to the vm, place them in **variables.tf** under *'ssh_public_key'* variable.
+        ```
+        To add SSH keys to the vm, place them in variables.tf under ssh_public_key variable.
+        ```
 
-10. Creating a simple web application
+    2. Creating a simple web application
 
-    - Create a column **"Cloud Init Script"** in the **Instances** sheet before the *defined tags* column and enter its value as "web.sh" in the same row with cd3_vm instance details.
-    - Create a bash file "web.sh" under /cd3user/tenancies/'<customer_name>/terraform_files/<region_name>'/compute/scripts.
-    - Copy below sample script to enable Apache on the instance.
+        - Create a column **"Cloud Init Script"** in the **Instances** sheet before the *defined tags* column and enter its value as "web.sh" in the same row with cd3_vm instance details.
 
-    ```
-    <copy>
-     #!/bin/bash
-     sudo yum install -y httpd
-     sudo systemctl enable httpd
-     sudo systemctl restart httpd
-     sudo systemctl stop firewalld
-     sudo systemctl disable firewalld
-     sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
-     sudo iptables-save
-    </copy>
-    ```
+        - Create bash file "web.sh" under below path and copy sample script to enable Apache on the instance.
+    
+        ```
+        /cd3user/tenancies/<customer_name>/terraform_files/<region_name>/compute/scripts
+        ```
+
+        ```
+        <copy>
+         #!/bin/bash
+         sudo yum install -y httpd
+         sudo systemctl enable httpd
+         sudo systemctl restart httpd
+         sudo systemctl stop firewalld
+         sudo systemctl disable firewalld
+         sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+         sudo iptables-save
+        </copy>
+       ```
  
     >**Note:** Check logs under /var/lib/cloud/instance to ensure the correct data was passed.
 
@@ -148,7 +159,9 @@ In this lab, you will:
 
     - Navigate to **"Block Volumes"** sheet and create a Block Volume with below details:
 
-    - cd3_blockvolume: 20 VPUs per GB, 150GB size, attached to *cd3_vm* using paravirtualized mode.
+    ```
+    cd3_blockvolume: 20 VPUs per GB, 150GB size, attached to cd3_vm using paravirtualized mode
+    ```
 
     Refer to the below image as example:
 
@@ -156,11 +169,11 @@ In this lab, you will:
 
 11. Add details for ATP
 
-    - Navigate to **"ADB"** sheet and create an ATP service with the below details:
+    - Navigate to **"ADB"** sheet and create an **always-free** ATP service with the below details:
 
-    - We will provision an **always-free** ATP for the lab.
-
-    - 'cd3_ATP': 'subnet-cd3_vcn_subnet2', DB Name: adb123db, CPU Core Count-10, Data Storage Size in TB -100, 'LICENSE_INCLUDED'.
+    ```
+    cd3_ATP: subnet-cd3_vcn_subnet2, DB Name: adb123db, CPU Core Count-10, Data Storage Size in TB -100, LICENSE_INCLUDED
+    ```
 
     Refer to the below image as example:
 
