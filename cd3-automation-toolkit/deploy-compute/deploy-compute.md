@@ -22,17 +22,17 @@ In this lab, you will:
 
 ## Task 1:  Add required resource parameter values in the Excel file
 
-1. Identity
+### 1. **Identity**
 
-    1. Choose CD3-CIS-template from [CD3 Excel templates](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/RunningAutomationToolkit.md#excel-sheet-templates). 
+   1. Choose CD3-CIS-template from [CD3 Excel templates](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/RunningAutomationToolkit.md#excel-sheet-templates). 
 
         >**Note:** Any template other than *CD3-CIS-ManagementServices-template* can be used to provision these services.
 
-    2. Refer to the blue section in each worksheet to fill the resource details in proper formats. Not all fields are mandatory. 
+   2. Refer to the blue section in each worksheet to fill the resource details in proper formats. Not all fields are mandatory. 
 
         >**Note:** Please fill resources data before the \'<END>' tag. Any data below the \'<END>' tag will not be processed.
 
-    3. Add details for Compartment:
+   3. Add details for Compartment:
 
         - Open the **"Compartments"** tab and add your compartment data with below image as example.
 
@@ -45,9 +45,9 @@ In this lab, you will:
         Refer to the below image as example:
         ![Compartment](./images/compartment.png "compartment example") 
 
-2. Network
+### 2. **Network**
 
-    1. Add details for the VCN:
+   1. Add details for the VCN:
 
         - Navigate to **"VCNs"** sheet and create a VCN with the following details:
 
@@ -61,7 +61,7 @@ In this lab, you will:
 
         ![vcn](./images/vcn.png "details for vcn")
 
-    2. Add DHCP details for cd3_vcn
+   2. Add DHCP details for cd3_vcn
 
         - Navigate to **"DHCP"** sheet and create DHCP Options with the following details:
 
@@ -77,7 +77,7 @@ In this lab, you will:
 
         ![dhcp](./images/dhcp.png "details of dhcp configuration")
 
-    3. Add details for creating Subnets in cd3_vcn
+   3. Add details for creating Subnets in cd3_vcn
 
         - Navigate to **"SubnetsVLANs"** sheet and create subnets with the following details:
 
@@ -89,7 +89,7 @@ In this lab, you will:
 
         ![subnets](./images/subnets.png "subnet details")
 
-    4. Add details for Route rules
+   4. Add details for Route rules
 
         - Navigate to **"RouteRulesinOCI"** sheet and create Route rules with following details:
 
@@ -101,7 +101,7 @@ In this lab, you will:
 
         ![routerules](./images/routerules.png "details of route rules")
 
-    5. Add details for Security rules
+   5. Add details for Security rules
 
         - Navigate to **"SecRulesOCI"** sheet and create Security rules with following details:
 
@@ -113,9 +113,9 @@ In this lab, you will:
 
         ![secrule](./images/secrules.png "details of sec rules")
 
-3. Compute
+### 3. **Compute**
 
-    1. Add details for Compute VM
+   1. Add details for Compute VM
 
         - Navigate to **"Instances"** sheet and create a **always-free** Compute Instance with below details:
 
@@ -127,7 +127,7 @@ In this lab, you will:
         To add SSH keys to the vm, place them in variables.tf under ssh_public_key variable.
         ```
 
-    2. Creating a simple web application
+   2. Creating a simple web application
 
         - Create a column **"Cloud Init Script"** in the **Instances** sheet before the *defined tags* column and enter its value as "web.sh" in the same row with cd3_vm instance details.
 
@@ -150,36 +150,36 @@ In this lab, you will:
         </copy>
        ```
  
-    >**Note:** Check logs under /var/lib/cloud/instance to ensure the correct data was passed.
+       >**Note:** Check logs under /var/lib/cloud/instance to ensure the correct data was passed.
 
-    Refer to the below image as example:
-    ![vm](./images/vm.png "details of compute")
+        Refer to the below image as example:
+        ![vm](./images/vm.png "details of compute")
 
-11. Add details for Block Volumes
+   3. Add details for Block Volumes
 
-    - Navigate to **"Block Volumes"** sheet and create a Block Volume with below details:
+        - Navigate to **"Block Volumes"** sheet and create a Block Volume with below details:
 
-    ```
-    cd3_blockvolume: 20 VPUs per GB, 150GB size, attached to cd3_vm using paravirtualized mode
-    ```
+        ```
+        cd3_blockvolume: 20 VPUs per GB, 150GB size, attached to cd3_vm using paravirtualized mode
+        ```
 
-    Refer to the below image as example:
+        Refer to the below image as example:
 
-    ![blockvolumes](./images/blockvolume.png "details of block volume")
+        ![blockvolumes](./images/blockvolume.png "details of block volume")
 
-11. Add details for ATP
+### 4. **Database**
 
-    - Navigate to **"ADB"** sheet and create an **always-free** ATP service with the below details:
+   1. Add details for ATP by navigating to **"ADB"** sheet and create an **always-free** ATP service with the below details:
 
-    ```
-    cd3_ATP: subnet-cd3_vcn_subnet2, DB Name: adb123db, CPU Core Count-10, Data Storage Size in TB -100, LICENSE_INCLUDED
-    ```
+        ```
+        cd3_ATP: subnet-cd3_vcn_subnet2, DB Name: adb123db, CPU Core Count-10, Data Storage Size in TB -100, LICENSE_INCLUDED
+        ```
 
-    Refer to the below image as example:
+        Refer to the below image as example:
 
-    ![ATP](./images/atp.png "ATP example")
+        ![ATP](./images/atp.png "ATP example")
 
-Once all the resource details are filled, save the Excel file. 
+   2. Once all the resource details are filled, save the Excel file. 
 
 ## Task 2: Add Excel path to '<customer_name>_setUpoci.properties'
 
@@ -234,7 +234,9 @@ Once all the resource details are filled, save the Excel file.
     terraform plan 
     terraform apply 
     ```
-  
+
+    >Note: We are using terraform commands to provision resources in this lab. We will also leverage this terraform code in resource manager in upcoming lab.  
+
 1. Review the terraform output and the created resources can be viewed on the OCI console.
 
     ![TFAPPLY](./images/apply-output.png "Terraform Output")

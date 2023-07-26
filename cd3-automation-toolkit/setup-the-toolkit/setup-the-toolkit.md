@@ -89,7 +89,7 @@ The objectives of this lab are:
     ```
 ### 2. **Create API PEM Key:**
 
-1. RSA key pair in PEM format (minimum 2048 bits) is needed to use OCI APIs. If the key pair does not exist, create them by executing *createAPIKey.py* under *'user-scripts'* folder:
+RSA key pair in PEM format (minimum 2048 bits) is needed to use OCI APIs. If the key pair does not exist, create them by executing *createAPIKey.py* under *'user-scripts'* folder:
 
     ``` 
     python createAPIKey.py 
