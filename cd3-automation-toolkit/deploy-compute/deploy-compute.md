@@ -90,9 +90,9 @@ In this lab, you will:
 
     - Navigate to **"RouteRulesinOCI"** sheet and create Route rules with following details:
 
-    - Name: RT1, Target:cd3_vcn_igw, Destination type: CIDR, Destination CIDR: 0.0.0.0/0
+    - Name: RT1, Target:'cd3_vcn_igw', Destination type: CIDR, Destination CIDR: 0.0.0.0/0
 
-    - Name: RT2, Target:cd3_vcn_ngw, Destination type: CIDR, Destination CIDR: 0.0.0.0/0
+    - Name: RT2, Target:'cd3_vcn_ngw', Destination type: CIDR, Destination CIDR: 0.0.0.0/0
 
     Refer to the below image as example:
 
@@ -116,14 +116,14 @@ In this lab, you will:
 
    - We will provision an **always-free** Instance in this lab.
 
-   - Name: cd3_vm, subnet: cd3_vcn_subnet1 (format: *vcnname_subnetname*), Source details- image::Linux , shape: VM.Standard.E3.Flex::2, ssh_public_key to ssh into the instance,
+   - Name: 'cd3_vm', subnet: 'cd3_vcn_subnet1' (format: *'vcnname_subnetname'*), Source details- image::Linux , shape: VM.Standard.E3.Flex::2, ssh_public_key to ssh into the instance,
 
-    >**Note:** To add SSH keys to the vm, place them in **variables.tf** under *ssh_public_key* variable.
+    >**Note:** To add SSH keys to the vm, place them in **variables.tf** under *'ssh_public_key'* variable.
 
 1. Creating a simple web application
 
     - Create a column **"Cloud Init Script"** in the **Instances** sheet before the *defined tags* column and enter its value as "web.sh" in the same row with cd3_vm instance details.
-    - Create a bash file "web.sh" under /cd3user/tenancies/<customer_name>/terraform_files/<region_name>/compute/scripts.
+    - Create a bash file "web.sh" under /cd3user/tenancies/'<customer_name>/terraform_files/<region_name>'/compute/scripts.
     - Copy below sample script to enable Apache on the instance.
 
     ```
@@ -160,7 +160,7 @@ In this lab, you will:
 
     - We will provision an **always-free** ATP for the lab.
 
-    - cd3_ATP: subnet-cd3_vcn_subnet2, DB Name: adb123db, CPU Core Count-10, Data Storage Size in TB -100, LICENSE_INCLUDED.
+    - 'cd3_ATP': 'subnet-cd3_vcn_subnet2', DB Name: adb123db, CPU Core Count-10, Data Storage Size in TB -100, 'LICENSE_INCLUDED'.
 
     Refer to the below image as example:
 
@@ -168,11 +168,11 @@ In this lab, you will:
 
 Once all the resource details are filled, save the Excel file. 
 
-## Task 2: Add Excel path to <customer_name>_setUpoci.properties
+## Task 2: Add Excel path to '<customer_name>_setUpoci.properties'
 
-1. Under /cd3user/tenancies/<customer_name>, open <customer_name>_setUpOCI.properties, and add the Excel file path at the "cd3file" parameter. 
+1. Under '/cd3user/tenancies/<customer_name>', open '<customer_name>_setUpOCI.properties', and add the Excel file path at the "cd3file" parameter. 
 
-1. Set *non_gf_tenancy* parameter to **false**, since we are creating new resources, and not modifying any existing ones. 
+1. Set *'non_gf_tenancy'* parameter to **false**, since we are creating new resources, and not modifying any existing ones. 
 
 1. Save the file.
 
@@ -181,10 +181,10 @@ Once all the resource details are filled, save the Excel file.
 
 1. Run setUpOCI.py script to create the Terraform files for our resources.
 
-1. Navigate to */cd3user/'oci_tools/cd3_automation_toolkit'/* and execute the below command.
+1. Navigate to *'/cd3user/oci_tools/cd3_automation_toolkit/'* and execute the below command.
         
    ```
-   python setUpOCI.py /cd3user/tenancies/'<customer_name>/<customer_name>_setUpOCI.properties'
+   python setUpOCI.py '/cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties'
    ```
 ## Task 4: Generate terraform files and create our resources in OCI
 
@@ -193,11 +193,11 @@ Once all the resource details are filled, save the Excel file.
 
 1. Navigate to identity directory under home region directory after Terraform files are created.
                   
-   cd /cd3user/tenancies/'<customer_name>/terraform_files/<home_region>'/identity
+   cd '/cd3user/tenancies/<customer_name>/terraform_files/<home_region>/identity'
 
 1. Execute terraform init, plan and apply to create the compartment.
 
-    >**Note:** Since we are creating all resources in the '**demo_compartment**', we should first create the compartment in OCI and run fetch compartments again. This way the variables file has the '**demo_compartment**' entry and other resources can be created in it.
+    >**Note:** Since we are creating all resources in the **'demo_compartment'**, we should first create the compartment in OCI and run fetch compartments again. This way the variables file has the **'demo_compartment'** entry and other resources can be created in it.
 
 1. Go back to the folder */cd3user/oci_tools/cd3_automation_toolkit/* and execute the setUpOCI.py again as shown in **Task 3** and select *fetch compartments*.
 
@@ -212,7 +212,7 @@ Once all the resource details are filled, save the Excel file.
 
     >**Note:** Terraform files are generated under the respective Service directories of the Region directory.
 
-1. Once the Terraform files are created from above step, navigate to */cd3user/tenancies/'<customer_name>/terraform_files/<region>/<services>'* for each of the services: Network, Compute, Database. Block volume terraform files are generated under compute directory.
+1. Once the Terraform files are created from above step, navigate to *'/cd3user/tenancies/<customer_name>/terraform_files/<region>/<services>'* for each of the services: Network, Compute, Database. Block volume terraform files are generated under compute directory.
 
 1. Enter into each of the required service folders (network, compute, database) and execute the below terraform commands to provision the resources in OCI.
 

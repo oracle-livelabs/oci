@@ -56,7 +56,7 @@ The objectives of this lab are:
 1. Execute the below *docker run* command:
 
     ```
-    docker run --platform linux/amd64 -it -d -v <directory_in_local_system_where_the_files_must_be_generated>:/cd3user/tenancies <image_name>:<image_tag>
+    docker run --platform linux/amd64 -it -d -v '<directory_in_local_system_where_the_files_must_be_generated>':/cd3user/tenancies '<image_name>':'<image_tag>'
     ```
     ![docker_run](./images/docker_run.png "docker run command example")
 
@@ -85,7 +85,7 @@ The objectives of this lab are:
 1. Change directory to *'user-scripts'*
 
     ```
-    cd /cd3user/'oci_tools/cd3_automation_toolkit'/user-scripts/
+    cd '/cd3user/oci_tools/cd3_automation_toolkit/user-scripts/'
     ```
 ### 2. **Create API PEM Key:**
 
@@ -95,9 +95,9 @@ The objectives of this lab are:
     python createAPIKey.py 
     ```
 
-    >**Note:** This will generate the public/private key pair(oci_api_public.pem and oci_api_private.pem) at */cd3user/tenancies/keys/*
+    >**Note:** This will generate the public/private key pair('oci_api_public.pem' and 'oci_api_private.pem') at */cd3user/tenancies/keys/*
 
-1. In case you already have the keys, you should copy the private key file inside the container and rename it to *oci_api_private.pem*.
+1. In case you already have the keys, you should copy the private key file inside the container and rename it to *'oci_api_private.pem'*.
 
 ### 3. **Upload the Public key to OCI console.**
 
