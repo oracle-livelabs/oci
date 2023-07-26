@@ -21,27 +21,24 @@ Please follow the previous lab till the last step. Once you are able to provisio
 
 1. Execute the setUpOCI Script:
     ```
-    python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
+    python setUpOCI.py '/cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties'
     ```
-    __e.g.__ python setUpOCI.py /cd3user/tenancies/usr1_livelab/usr1_livelab_setUpOCI.properties
+    __e.g.__ python setUpOCI.py '/cd3user/tenancies/usr1_livelab/usr1_livelab_setUpOCI.properties'
 
 2. Type __option 9__ for developer services and __option 1__ from submenu for __upload current terraform files/state to Resource Manager__.
 
-3. Once the execution is successful, you will see the stack in resource manager and <customer_name>-<region_dir>-stacks.zip file will be generated under the folder /cd3user/tenancies/<customer_name>/terraform_files/<region_dir>.
+3. Once the execution is successful, you will see the stack in resource manager and '<customer_name>'-'<region_dir>'-stacks.zip file will be generated under the folder '/cd3user/tenancies/<customer_name>/terraform_files/<region_dir>'.
 
 4. Go to __OCI console__ under compartment which was selected for upload and take a few moments to explore the stack created.
 
-5. You can run plan option from resource manager to validate it. You could also download the terraform files for local modification and re-upload or use OCI online code editor.  
+5. You can run plan option from resource manager to validate it. You could also download the terraform files for local modification and re-upload or use [OCI online code editor](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Tasks/code-editor.htm).  
 
-    ```
-    terraform plan
-    ```
+    ![terraform plan](./images/plan-output.png "Terraform plan")
 
 6. Wait for a bit until the plan succeeds and plan logs are available under _Logs_. Run apply if any changes are made to get it applied.
 
-    ```
-    terraform apply
-    ```
+    ![terraform apply](./images/apply-output.png "Terraform apply")
+
 ## Acknowledgements
 
 - __Author__ - Dipesh Rathod

@@ -120,7 +120,7 @@ In this lab, you will:
 
     >**Note:** To add SSH keys to the vm, place them in **variables.tf** under *'ssh_public_key'* variable.
 
-1. Creating a simple web application
+10. Creating a simple web application
 
     - Create a column **"Cloud Init Script"** in the **Instances** sheet before the *defined tags* column and enter its value as "web.sh" in the same row with cd3_vm instance details.
     - Create a bash file "web.sh" under /cd3user/tenancies/'<customer_name>/terraform_files/<region_name>'/compute/scripts.
@@ -144,7 +144,7 @@ In this lab, you will:
     Refer to the below image as example:
     ![vm](./images/vm.png "details of compute")
 
-1. Add details for Block Volumes
+11. Add details for Block Volumes
 
     - Navigate to **"Block Volumes"** sheet and create a Block Volume with below details:
 
@@ -154,7 +154,7 @@ In this lab, you will:
 
     ![blockvolumes](./images/blockvolume.png "details of block volume")
 
-1. Add details for ATP
+11. Add details for ATP
 
     - Navigate to **"ADB"** sheet and create an ATP service with the below details:
 
