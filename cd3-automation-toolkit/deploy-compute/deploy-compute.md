@@ -107,6 +107,7 @@ In this lab, you will:
 5. Add details for Security rules
 
     - Navigate to *SecRulesOCI* sheet and create Security rules with following details:
+
     - Name: SL1, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 22
 
     - Name: SL2, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 1521, 1522
@@ -213,6 +214,7 @@ In this lab, you will:
 ## Task 4: Generate terraform files and create our resources in OCI
 
 1. Select option 1 from *setUpOCI.py* output menu. 
+
     >**Note:** Identity--> 1: Add/Modify/Delete Compartments. 
 
 2. Navigate to identity directory under home region directory after Terraform files are created.
