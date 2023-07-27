@@ -369,3 +369,4 @@ Congratulations on completing this lab!. You may now **proceed to the next lab**
 * [Blockadelabs](https://www.blockadelabs.com/index.html) 
 * [SkyBox AI](https://skybox.blockadelabs.com/)
 * [Pannellum Lightweight Panorama Viewer for the Web](https://pannellum.org/)
+* [Generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence)

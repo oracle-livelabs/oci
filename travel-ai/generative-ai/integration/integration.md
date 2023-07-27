@@ -2,7 +2,7 @@
 
 ## Introduction
 
-TBD
+In this Lab, we will integrate with Amadeus Travel APIs to find out low-price airfares and plan our return dates based on available fares. This can also be extended further to look for offers on each of these flights that this Lab does not cover. 
 
 Estimated Lab Time: 45 minutes
 
@@ -10,13 +10,14 @@ Estimated Lab Time: 45 minutes
 
 In this lab, you will:
 
-- TBD. 
+- To find lowest price flight from source location of traveler to destination UNESCO site Airport based on traveling date
 
 ### Prerequisites:
 
 This lab assumes you have:
 
-* You have Completed **Get Started**  
+* You have Completed **Get Started**
+* Autonomous Database has been created and Data has been loaded  
 
 ### About Amadeus APIs
 
@@ -25,6 +26,17 @@ Amadeus provides access to APIs solutions that unlock travel content and service
 Amadeus was the first Global Distribution System to introduce a structured API, back in 2000. Since then, we have published new version based on XML and Web Services in 2006.
 
 [Amadeus Web Services](https://amadeus.com/en/topic/api) is a unique point of access for all Amadeus content and has been built on scalable Open System architecture and XML formatting to ensure that you always remain at the cutting-edge of architecture and technology.
+
+### How to find the cheapest routes from a given airport 
+
+The Amadeus Flight Inspiration Search API returns a list of the cheapest destinations from a given departure airport. To ensure the quickest response, the API provides results from a large cache of flight prices updated daily.  
+
+To call the API, we just need to provide the IATA airport code of our city of departure. We can further customize our request using optional parameters like departure date range, maximum price or trip duration.  
+
+Let’s look at an example request for the cheapest routes from London in December 2021: 
+
+GET https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=LON&departureDate=2021-12-01,2021-12-31 
+
  
 ## Task 1: Sign Up and Sign In to Amadeus
  
@@ -134,8 +146,7 @@ Amadeus was the first Global Distribution System to introduce a structured API, 
 
 ## Learn More
 
-* [Wiki Source](https://en.wikipedia.org/wiki/Electrocardiography)
-* [ECG findings and CHD](https://www.sevencountriesstudy.com/ecg-predictors-and-coronary-heart-disease/)
+* [Cheap Flights](https://developers.amadeus.com/blog/cheap-flights-to-anywhere-amadeus-flight-search) 
 
 ## Acknowledgements
 

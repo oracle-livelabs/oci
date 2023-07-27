@@ -10,7 +10,7 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Learn how to provision a new OracleAutonomous Database
+- Learn how to provision a new Oracle Autonomous Database
 
 ### Prerequisites
 

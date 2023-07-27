@@ -1,6 +1,28 @@
 # Introduction
 
-## About this workshop
+## About Generative Artificial Intelligence (AI) 
+
+Generative artificial intelligence (AI) is artificial intelligence capable of generating text, images, or other media in response to prompts. Generative AI models learn the patterns and structure of their input training data by applying neural network machine learning techniques, and then generate new data that has similar characteristics. 
+
+[**Generative AI**](https://en.wikipedia.org/wiki/Generative_artificial_intelligence) has potential applications across a wide range of industries, including art, writing, software development, product design, healthcare, finance, gaming, marketing, and fashion.Investment in generative AI surged during the early 2020s, with large companies such as Microsoft, Google, and Baidu as well as numerous smaller firms developing generative AI models.
+
+Source: [Wikipedia.org](https://www.gartner.com/en/topics/generative-ai)
+
+Generative AI can learn from existing artifacts to generate new, realistic artifacts (at scale) that reflect the characteristics of the training data but don’t repeat it. It can produce a variety of novel content, such as images, video, music, speech, text, software code and product designs.
+
+Generative AI uses a number of techniques that continue to evolve. Foremost are AI foundation models, which are trained on a broad set of unlabeled data that can be used for different tasks, with additional fine-tuning. Complex math and enormous computing power are required to create these trained models, but they are, in essence, prediction algorithms.
+ 
+![Near by Sites](images/journey-to-generative-ai.png =50%x*  " ")
+
+Today, generative AI most commonly creates content in response to natural language requests — it doesn’t require knowledge of or entering code — but the enterprise use cases are numerous and include innovations in drug and chip design and material science development.
+
+In a recent Gartner webinar poll of more than 2,500 executives, 38% indicated that customer experience and retention is the primary purpose of their generative AI investments. This was followed by revenue growth (26%), cost optimization (17%) and business continuity (7%).
+
+![Near by Sites](images/primary-focus-of-generative-ai-initiatives.png =50%x*  " ")
+
+Source: [Gartner.com](https://www.gartner.com/en/topics/generative-ai)
+
+### About this workshop 
 
 This workshop showcases a 360-degree view of UNESCO heritage sites to Travelers. Visualize how it feels to be there in that place now. They can also ask Travel expert guide questions related to that UNESCO heritage site, such as its History, activities around it or places for shopping. This also helps to find the nearest accommodations available or look out for other nearby UNESCO sites and Airports. 
 
@@ -10,8 +32,6 @@ Once the Travel plan is made, find the low-fare plane tickets from their locatio
  
 Leverage digital assistants' capability to find information related to Travel advisory, Passport related questions or Visa documentation. All this leveraging the power of Generative AI for Travel.
 
-After completing this workshop, you will know how to Generate AI Images, Text and Integrate with various external applications related to Travel.
-    
 *Estimated Workshop Time: 5 hours (Approximately)*
 
 ### Prerequisites 
