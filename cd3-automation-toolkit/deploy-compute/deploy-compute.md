@@ -36,7 +36,7 @@ In this lab, you will:
 
 3. Add details for Compartment:
 
-    - Open the **"Compartments"** tab and add your compartment data with below image as example.
+    - Open the *Compartments* tab and add your compartment data with below image as example.
 
     - If the parent compartment is not under root directly, then provide it in the below format:
 
@@ -51,7 +51,7 @@ In this lab, you will:
 
 1. Add details for the VCN:
 
-    - Navigate to **"VCNs"** sheet and create a VCN with the following details:
+    - Navigate to *VCNs* sheet and create a VCN with the following details:
 
     - Compartment name format: *parentcompartment1::parentcompartment2::child_compartmemt*
 
@@ -65,7 +65,7 @@ In this lab, you will:
 
 2. Add DHCP details for cd3_vcn
 
-    - Navigate to **"DHCP"** sheet and create DHCP Options with the following details:
+    - Navigate to *DHCP* sheet and create DHCP Options with the following details:
 
     - VCN: cd3_vcn
 
@@ -81,7 +81,7 @@ In this lab, you will:
 
 3. Add details for creating Subnets in cd3_vcn
 
-    - Navigate to **"SubnetsVLANs"** sheet and create subnets with the following details:
+    - Navigate to *SubnetsVLANs* sheet and create subnets with the following details:
 
     - Name: subnet1, public subnet, CIDR: 10.110.0.0/26, Route table: RT1, Security list: SL1, Route to IGW.
 
@@ -93,7 +93,7 @@ In this lab, you will:
 
 4. Add details for Route rules
 
-    - Navigate to **"RouteRulesinOCI"** sheet and create Route rules with following details:
+    - Navigate to *RouteRulesinOCI* sheet and create Route rules with following details:
 
     ``` 
     Name: RT1, Target:'cd3_vcn_igw', Destination type: CIDR, Destination CIDR: 0.0.0.0/0
@@ -106,7 +106,7 @@ In this lab, you will:
 
 5. Add details for Security rules
 
-    - Navigate to **"SecRulesOCI"** sheet and create Security rules with following details:
+    - Navigate to *SecRulesOCI* sheet and create Security rules with following details:
     - Name: SL1, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 22
 
     - Name: SL2, STATEFUL, type: INGRESS, protocol:TCP, Source- 0.0.0.0/0, Destination port - 1521, 1522
@@ -119,7 +119,7 @@ In this lab, you will:
 
 1. Add details for Compute VM
 
-    - Navigate to **"Instances"** sheet and create a **always-free** Compute Instance with below details:
+    - Navigate to *Instances* sheet and create a **always-free** Compute Instance with below details:
 
     ```
     Name: cd3_vm, subnet: cd3_vcn_subnet1 (format: vcnname_subnetname), Source details- image::Linux, shape: VM.Standard.E3.Flex::2, ssh_public_key    
@@ -131,7 +131,7 @@ In this lab, you will:
 
 2. Creating a simple web application
 
-    - Create a column **"Cloud Init Script"** in the **Instances** sheet before the *defined tags* column and enter its value as "web.sh" in the same row with cd3_vm instance details.
+    - Create a column *Cloud Init Script* in the *Instances* sheet before the *defined tags* column and enter its value as "web.sh" in the same row with cd3_vm instance details.
 
     - Create bash file "web.sh" under below path and copy sample script to enable Apache on the instance.
     
@@ -159,7 +159,7 @@ In this lab, you will:
 
 3. Add details for Block Volumes
 
-    - Navigate to **"Block Volumes"** sheet and create a Block Volume with below details:
+    - Navigate to *Block Volumes* sheet and create a Block Volume with below details:
 
     ```
     cd3_blockvolume: 20 VPUs per GB, 150GB size, attached to cd3_vm using paravirtualized mode
@@ -171,7 +171,7 @@ In this lab, you will:
 
 ### 4. **Database**
 
-1. Add details for ATP by navigating to **ADB** sheet and create an **always-free** ATP service with the below details:
+1. Add details for ATP by navigating to *ADB* sheet and create an **always-free** ATP service with the below details:
 
     ```
     cd3_ATP: subnet-cd3_vcn_subnet2, DB Name: adb123db, CPU Core Count-10, Data Storage Size in TB -100, LICENSE_INCLUDED
@@ -191,7 +191,7 @@ In this lab, you will:
     /cd3user/tenancies/<customer_name>_setUpOCI.properties
     ```
 
-2. Set below parameter to **false**, since we are creating new resources, and not modifying any existing ones.
+2. Set below parameter to *false*, since we are creating new resources, and not modifying any existing ones.
 
     ```
     non_gf_tenancy = false
@@ -223,9 +223,9 @@ In this lab, you will:
 
 3. Execute terraform init, plan and apply to create the compartment.
 
-    >**Note:** Since we are creating all resources in the **democompartment**, we should first create the compartment in OCI and run fetch compartments again. This way the variables file has the **compartment** entry and other resources can be created in it.
+    >**Note:** Since we are creating all resources in the *democompartment*, we should first create the compartment in OCI and run fetch compartments again. This way the variables file has the *compartment* entry and other resources can be created in it.
 
-4. Go back to the below folder and execute the setUpOCI.py again as shown in **Task 3** and select *fetch compartments*.
+4. Go back to the below folder and execute the setUpOCI.py again as shown in *Task 3* and select *fetch compartments*.
 
     ```
     /cd3user/oci_tools/cd3_automation_toolkit/

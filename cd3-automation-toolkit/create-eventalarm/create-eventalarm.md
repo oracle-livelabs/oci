@@ -28,13 +28,13 @@ Please follow the previous lab till the last step. Once you are able to provisio
 
 ## Task 1: Add OCI Event Rule, Alarm and Notifications in Excel Spreadsheet
 
-1. Copy __CD3-CIS-ManagementServices-template.xlsx__ from below path to locally on your system.
+1. Copy *CD3-CIS-ManagementServices-template.xlsx* from below path to locally on your system.
 
     ```
     /cd3user/oci_tools/cd3_automation_toolkit/example
     ```
 
-2. Open __CD3-CIS-ManagementServices-template.xlsx__ and update __Events, Alarms, Notifications__ tabs based on your requirements and save it. You could use CIS standard pre-filled data in spreadsheet.
+2. Open *CD3-CIS-ManagementServices-template.xlsx* and update *Events, Alarms, Notifications* tabs based on your requirements and save it. You could use CIS standard pre-filled data in spreadsheet.
 
     _e.g._ ![Event Rule](images/event_rule.jpg)
 
@@ -44,29 +44,29 @@ Please follow the previous lab till the last step. Once you are able to provisio
 
 ## Task 2: Deploy OCI Event Rule, Alarm and Notifications
 
-1. Place _CD3-CIS-ManagementServices-template.xlsx_ Excel sheet at appropriate location in your container and provide the corresponding path in cd3file parameter at below path.
+1. Place *CD3-CIS-ManagementServices-template.xlsx* Excel sheet at appropriate location in your container and provide the corresponding path in cd3file parameter at below path.
 
     ```
     /cd3user/tenancies /<customer_name>/<customer_name>_setUpOCI.properties
     e.g. cd3file=/cd3user/tenancies/usr1_livelab/CD3-CIS-ManagementServices-template.xlsx
     ```
 
-2. Execute the setUpOCI Script from below path:
+2. *Execute* the setUpOCI Script from below path:
 
     ```
     python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
     e.g. cd3file=/cd3user/tenancies/usr1_livelab/CD3-CIS-ManagementServices-template.xlsx
     ```
 
-3. Type __option 8__ for management services from Menu and __option 2__ from submenu for __add/modify/delete events__.
+3. Type *option 8* for management services from Menu and *option 2* from submenu for *add/modify/delete events*.
 
-4. Once the execution is successful, tfvars file will be generated under below folder in that region.
+4. Once the execution is *successful*, tfvars file will be generated under below folder in that region.
 
     ```
     <customer_name>_events.auto.tfvars file under /cd3user/tenancies/<customer_name>/terraform_files/<region_dir>
     ```
 
-5. Navigate to the above path and execute the terraform commands:
+5. Navigate to the above path and *execute* the terraform commands:
 
     ```
     terraform init
@@ -75,7 +75,7 @@ Please follow the previous lab till the last step. Once you are able to provisio
 
 Wait for a bit until the plan succeeds and plan logs are available under _Logs_. Take a look to familiarize yourself with the log format. Scroll down until you see the line `Plan: X to add, 0 to change, 0 to destroy`.
 
-6. Once satisfied by the plan logs, we put it into motion by starting the Apply process.
+6. Once satisfied by the plan logs, we put it into motion by starting the *Apply* process.
 
     ```
     terraform apply
@@ -84,7 +84,7 @@ The apply process can take some time, so patience is required.
 
 ## Task 3: Inspect Created Objects
 
-Go to __OCI console__ under compartment which was selected for deployment and take a few moments to explore the resources created. 
+Go to *OCI console* under compartment which was selected for deployment and take a few moments to explore the resources created. 
 
 Ask yourself how these resources will make your environment more healthy.
 
