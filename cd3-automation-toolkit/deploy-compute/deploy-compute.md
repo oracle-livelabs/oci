@@ -204,9 +204,10 @@ In this lab, you will:
 
 1. Run setUpOCI.py script to create the Terraform files for our resources.
 
-2. Navigate to *'/cd3user/oci_tools/cd3_automation_toolkit/'* and execute the below command.
+2. Navigate to below path and execute the command.
         
     ```
+    cd /cd3user/oci_tools/cd3_automation_toolkit/
     python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
     ```
 ## Task 4: Generate terraform files and create our resources in OCI
