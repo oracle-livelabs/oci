@@ -250,8 +250,7 @@ This lab assumes you have:
 3. User selects one of the drop down questions.
 
     ![ODA Setup](images/oda-2.png " ")  
- 
-
+  
 4. User says *Bye* and Bot understands the **Exit Intent**
  
 5. Bot replies back with a welcome message!

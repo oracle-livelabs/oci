@@ -1,4 +1,4 @@
-# Travel Advisor Chatbot
+# Create Travel Advisor Chatbot
 
 ## About this workshop
 
