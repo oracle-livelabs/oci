@@ -30,7 +30,9 @@ In this lab, you will:
 
 2. Refer to the blue section in each worksheet to fill the resource details in proper formats. Not all fields are mandatory. 
 
-    >**Note:** Please fill resources data before the \'<END>' tag. Any data below the \'<END>' tag will not be processed.
+    ```
+    Please fill resources data before the <END> tag. Any data below the <END> tag will not be processed.
+    ```
 
 3. Add details for Compartment:
 
@@ -93,9 +95,10 @@ In this lab, you will:
 
     - Navigate to **"RouteRulesinOCI"** sheet and create Route rules with following details:
 
-    - Name: RT1, Target:'cd3_vcn_igw', Destination type: CIDR, Destination CIDR: 0.0.0.0/0
-
-    - Name: RT2, Target:'cd3_vcn_ngw', Destination type: CIDR, Destination CIDR: 0.0.0.0/0
+    ``` 
+    Name: RT1, Target:'cd3_vcn_igw', Destination type: CIDR, Destination CIDR: 0.0.0.0/0
+    Name: RT2, Target:'cd3_vcn_ngw', Destination type: CIDR, Destination CIDR: 0.0.0.0/0
+    ```
 
     Refer to the below image as example:
 
