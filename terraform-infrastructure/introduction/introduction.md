@@ -24,6 +24,7 @@ In this workshop, you will learn how to:
 
 This lab assumes you have:
 * An Oracle account
+* OCI CLI configured
 * Familiarity with Networking is desirable, but not required
 * Some understanding of cloud, networking, Terraform terms is helpful
 * Familiarity with Oracle Cloud Infrastructure (OCI) is helpful
@@ -31,7 +32,7 @@ This lab assumes you have:
 ## Learn More
 
 * [OCI Provider](https://registry.terraform.io/providers/oracle/oci/latest/docs)
-* [URL text 2](http://docs.oracle.com)
+* [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 * **Authors** - Germain Vargas, Cloud Enginner

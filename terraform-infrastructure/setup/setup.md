@@ -20,8 +20,7 @@ In this lab, you will:
 
 This lab assumes you have:
 * An Oracle Cloud account
-
-
+* Have OCI CLI Setup
 
 ## Task 1: Generate SSH Key
 
@@ -40,9 +39,6 @@ If you already have an SSH key pair, you may use that to connect to your environ
   On Mac, start up the terminal by using cmd + space and typing terminal or cmd + shift + U and click on terminal
 
   Once in the terminal type ssh-key or copy and paste the command into the terminal, press enter. You will prompted to enter file to save your key. pressing enter will select default in your .ssh folder. Press enter twice for no passphrase. Remember where it is saved as we will reference this later when creating instances.
-
-
-
 
 ### 2. **On Windows 10**
 
@@ -72,16 +68,15 @@ If you already have an SSH key pair, you may use that to connect to your environ
 
   ![confirm-keygen-windows](images/confirm-keygen-windows.png)
 
-
 ## Task 2: Generate an API Key on the OCI Console
 
-1. Step 1 - 
+1. **Profile**
 
   ![profile](images/profile.png)
 
     Once logged in to your tenancy click on your profile on the top right corner and click on profile.
 
-2. Step 2
+2. **API keys**
 
   ![api](images/api.png)
 
@@ -89,7 +84,7 @@ If you already have an SSH key pair, you may use that to connect to your environ
 
     Next, click on Add API key.
 
-3. Step 3
+3. **Add API key**
 
   ![api-gen](images/api-gen.png)
 
@@ -101,22 +96,76 @@ If you already have an SSH key pair, you may use that to connect to your environ
     
     Click on Add.
 
-    This will add the new API Key. We will be referencing this later along with the Fingerprint.
+    ![api-config](images/api-config.png)
+
+    This will add the new API Key. Copy the configuration as we will be referencing this later.
 
 ## Task 3: Create Compartment
 
-## Task 4: Gather OCIDS
+A compartment is a logical folder where you can organize your resources. For this Lab we will create a compartment to hold our resources like compute and networking services. 
 
-## Task 5: Setting up Terraform
+1. **Navigation Menu**
+
+  ![navigation-menu](images/navigation-menu.png)
+
+  Click on the Navigation menu on the top left of the console.
+
+2. **Compartments**
+
+  ![navigation-compartment](images/navigation-compartment.png)
+
+  Click on Identity & Security and then compartments under Identity
+
+3. **Create Compartment**
+
+  ![compartment](images/compartment.png)
+
+  Click on create compartment, Give it a name like terraform and a description (optional). 
+
+  Select parent compartment as the root compartment.
+
+  Click Create Compartment.
+
+  ![create-compartment](images/create-compartment.png)
+
+4. **Compartment OCID**
+
+  Most types of Oracle Cloud Infrastructure resources have an Oracle-assigned unique ID called an Oracle Cloud Identifier (OCID). It's included as part of the resource's information in both the Console and API.
+
+  The last piece of information needed from the compartment is the OCID.
+
+  Click on your newly created compartment and copy the OCID.
+
+  We will be referencing the OCID on the next Task.
+
+  ![compartment-ocid](images/compartment-ocid.png)
+
+## Task 4: Setting up Terraform
+
+  Terraform is used to automate the process of provisioning and managing resources.
+
+1. **Terraform**
+    
+    Download [Terraform](https://www.terraform.io/downloads.html/)
+
+    For macOS follow these steps: 
+  ```
+  brew tap hashicorp/tap <copy></copy>
+  ```
+  ```
+  brew install hashicorp/tap/terraform <copy></copy>
+  ```
+
+  Download the [Terraform template](files/starter-file.sql) Terraform template. 
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
-
 * [Required Keys and OCIDs](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm#Required_Keys_and_OCIDs)
-* [URL text 2](http://docs.oracle.com)
+* [Compartments](https://docs.oracle.com/en/cloud/foundation/cloud_architecture/governance/compartments.html#what-is-a-compartment)
+* [OCIDs](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/identifiers.htm)
+* [OCI Provider](https://registry.terraform.io/providers/oracle/oci/latest/docs)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - Germain Vargas, Cloud Engineer
+* **Contributors** -  David Ortega, Cloud Engineer and Hoyoung Kim, Cloud Engineer
+* **Last Updated By/Date** - Germain Vargas, July 2023
