@@ -41,15 +41,11 @@ This lab assumes you have:
 ## Task 2: Get channel id from ODA console. 
 
 1. Login to ODA and under Channels, copy the channel id
-
-    ![ODA Setup](images/oda-setup-4.png " ")
-
+  
 ## Task 3: Configure settings.js file
 
 1. Edit **settings.js** file under scripts folder, 
-
-    ![ODA Setup](images/oda-setup-7.png " ")
-
+ 
     In **chatWidgetSettings** update **URI** and **channelId**
  
     ```javascript
@@ -67,17 +63,11 @@ This lab assumes you have:
         };
     </copy>
     ```
-
-    ![ODA Setup](images/oda-setup-8.png " ")
-
+ 
 2. Now the chatbot is connected with ODA channel.
-
-    ![ODA Setup](images/oda-setup-5.png " ")
-
+ 
 3. You can see Auto complete questions and get corresponding answers.
-
-    ![ODA Setup](images/oda-setup-6.png " ")
-
+  
 ## Task 4: Upload CSS, Image and JS files to Oracle APEX 
 
 1. Upload CSS, Image and JS files to Oracle APEX under \Shared Components\Static Application Files
@@ -165,7 +155,7 @@ This lab assumes you have:
                 // Provide translations for the strings used in the widget
                 en: {                                   
                     // en locale, can be configured for any locale
-                    chatTitle: 'Ask Dr. Artie'       
+                    chatTitle: 'Ask Travel Guide Artie'       
                     // Set title at chat header
                 }
             }, 
@@ -183,7 +173,7 @@ This lab assumes you have:
     ```yaml 
         <copy>
             main: true
-            name: DrArtie
+            name: TravelGuideArtie
             context:
             
             variables: 
@@ -216,7 +206,7 @@ This lab assumes you have:
                 metadata:
                     responseItems:
                     - type: "text"
-                        text: "Greetings. Allow me to introduce myself. I am Artie, a digital assistant." 
+                        text: "Greetings. Allow me to introduce myself. I am Travel Guide Artie, a digital assistant." 
                 transitions:
                 return: "done"  
 
@@ -244,42 +234,31 @@ This lab assumes you have:
                 return: "done"
         </copy>
     ```
-
-3. Add 2 intents one for **Greeting** 
-
-    ![ODA Setup](images/intent-1.png " ")
-
-4. Another intent for **exit**.
-
-    ![ODA Setup](images/intent-2.png " ")
-
+  
 ## Task 8: Demo of Chatbot in Oracle APEX Page
 
-1. Click on chat icon to launch chat. Bot will initiate conversation with message
-
-    *Greetings. Allow me to introduce myself. I am Dr. Artie, a medical assistant.*
-
-    *How may I offer assistance? I can answer many questions related to Cancer and Covid.*
-    
-    ![ODA Setup](images/oda-setup-14.png " ")
+1. Hello Message from Oracle Digital Assistant coming from **Greetings Intent**
+  
+    ![ODA Setup](images/oda-1.png " ")
 
 2. From the auto complete questions user selects
 
-    *What is Cancer?*
+    *Visa* 
 
-    ![ODA Setup](images/oda-setup-15.png " ")
+    ![ODA Setup](images/oda-3.png " ")
 
-    Bot replies back with answer
+3. User selects one of the drop down questions.
 
-    *All cells in the body keep multiplying throughout life. Normal cells multiply under control. Cancer cells lose this control and start multiplying more than required. These cells can damage the organ where the cell multiplication is occurring and can also spread to other sites.*
+    ![ODA Setup](images/oda-2.png " ")  
+ 
 
-    ![ODA Setup](images/oda-setup-16.png " ")
+4. User says *Bye* and Bot understands the **Exit Intent**
+ 
+5. Bot replies back with a welcome message!
+   
+   ![ODA Setup](images/oda-5.png " ")  
 
-3. User says *Bye* and Bot understands the **exit intent**
-
-    replies back with a greeting
-
-    *You are welcome, have a great day*
+    *You are welcome, Have a great time. Bon voyage!*
  
 This concludes this lab and you can **proceed to the next lab**.
 

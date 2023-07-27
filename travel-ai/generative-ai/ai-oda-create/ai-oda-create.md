@@ -106,75 +106,56 @@ To set up the Oracle Digital Assistant on the OCI tenancy, you will:
 
   ![ODA provisioned status](./images/create-skill-5.png " ")
 
-  This will start creation of [ODA Intents](https://docs.oracle.com/en/cloud/paas/digital-assistant/use-chatbot/intents1.html) automatically from FAQ URL.
+  This will start creation of [ODA Intents](https://docs.oracle.com/en/cloud/paas/digital-assistant/use-chatbot/intents1.html) automatically from FAQ URL. 
 
-  ![ODA provisioned status](./images/create-skill-6.png " ")
+3. Review the intents.
 
-3. View the progress.
-
-  ![ODA provisioned status](./images/create-skill-7.png " ")
-
-4. Review the intents.
-
-  ![ODA provisioned status](./images/create-skill-8.png " ")
+  ![ODA provisioned status](./images/skill-2.png " ")
 
   Review new intents and edit if required, click on  **Add Intents to Skill** button
 
-  ![ODA provisioned status](./images/create-skill-9.png " ")
+  ![ODA provisioned status](./images/skill-1.png " ")
 
-5. Click on **Yes** button.
-
-  ![ODA provisioned status](./images/create-skill-11.png " ")
-
+1. Click on **Yes** button.
+ 
 ## Task 5:  Train the ODA Model
  
 1. Click on **Train** button, 
 
-  ![ODA provisioned status](./images/create-skill-12.png " ")
+  ![ODA provisioned status](./images/skill-3.png " ")
 
-2. Select **Linguistic based Model**, click **Submit** button
-
-  ![ODA provisioned status](./images/create-skill-13.png " ")
+2. Select **Linguistic based Model**, click **Submit** button 
 
 3. Select **Machine learning based Model**, click **Submit** button
-
-  ![ODA provisioned status](./images/create-skill-14.png " ")
  
 ## Task 6:  Preview the Model and Skill
 
 1. Click on **Preview** icon in the top navigation next to **Train** button, This will open intent test area where you can provide input and review the output that should identify the intent and deliver the answer.On the right side under Intent/Q&A review the flow especially the one with 100% scoring.
 
-  ![ODA provisioned status](./images/create-skill-12.png " ")
- 
-  ![ODA provisioned status](./images/create-skill-15.png " ") 
+  ![ODA provisioned status](./images/skill-4.png " ") 
 
 2. Change the Question and see the response back.
-
-  ![ODA provisioned status](./images/create-skill-16.png " ")
+ 
 
 ## Task 7:  Add Auto Complete Suggestion and Utterances.
 
 1. Under the Intent, you can also add **Auto Complete Suggestion**. where user need not type the entire question to get his question intent and get the corresponding answer.
 
-  ![ODA provisioned status](./images/create-skill-17.png " ")
+  ![ODA provisioned status](./images/skill-5.png " ")
 
 2. Under the Intent, review **Utterances**, same question can be asked in different ways, this is where we capture different questions that link to same answer or have a common intent.
 
-  ![ODA provisioned status](./images/create-skill-18.png " ")
+  ![ODA provisioned status](./images/skill-6.png " ")
 
 ## Task 8: Create Web Channel for a Skill
 
 1. Click on the left navigation menu, Under **Development** select **Channels**, Click on **Add Channel** button
 
-  ![ODA Channel](./images/create-channel-1.png " ")
+  ![ODA Channel](./images/skill-7.png " ")
 
 2. Provide **channel name**, select the skill which we just created under **Route To** option, 
 
-  ![ODA Channel](./images/create-channel-3.png " ")
-
 3. Channel type should be **Oracle Web**, Allowed domains can be * or you can specify any particular domain which will act as host to this channel. This will generate **secret** and **channel id**
-
-  ![ODA Channel](./images/create-channel-2.png " ")
  
 You may now **proceed to the next lab.**
 
