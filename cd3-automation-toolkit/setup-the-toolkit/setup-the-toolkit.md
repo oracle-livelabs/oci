@@ -85,7 +85,7 @@ The objectives of this lab are:
 3. Change directory to *'user-scripts'*
 
     ```
-    cd '/cd3user/oci_tools/cd3_automation_toolkit/user-scripts/'
+    cd /cd3user/oci_tools/cd3_automation_toolkit/user-scripts/
     ```
 ### 2. **Create API PEM Key:**
 
@@ -95,25 +95,29 @@ RSA key pair in PEM format (minimum 2048 bits) is needed to use OCI APIs. If the
     python createAPIKey.py 
    ```
 
+This will generate the public/private key pair at /cd3user/tenancies/keys/
+   
    ```
-    This will generate the public/private key pair(oci_api_public.pem and oci_api_private.pem) at /cd3user/tenancies/keys/
+    oci_api_public.pem and oci_api_private.pem
    ```
 
+   In case you already have the keys, you should copy the private key file inside the container and rename it to below.
+   
    ```
-    In case you already have the keys, you should copy the private key file inside the container and rename it to oci_api_private.pem.
+    oci_api_private.pem
    ```
 
 ### 3. **Upload the Public key to OCI console.**
 
 Upload the Public key to "APIkeys" under user settings in OCI Console. Pre-requisite to use the complete functionality of the Automation Toolkit is to have the user as an administrator to the tenancy.
 
-   1. Open the Console, and sign in as the user.
-   2. View the details for the user who will be calling the API with the key pair.
+   1. Open the *Console*, and sign in as the user.
+   2. View the details for the user who will be calling the API with the *key pair*.
 
-   3. Open the Profile menu (User menu icon) and click **User Settings**.
+   3. Open the Profile menu (User menu icon) and click *User Settings*.
 
-   4. Click **Add Public Key**.
-   5. Paste the contents of the PEM public key in the dialog box and click *Add*.
+   4. Click *Add Public Key*.
+   5. Paste the contents of the *PEM public key* in the dialog box and click *Add*.
 
 ### 4. **Edit tenancyconfig.properties:**
 
@@ -158,8 +162,10 @@ Here is a screenshot of example execution of the script:
     
    ![tenancyconfig](./images/tenancyconfig.png "tenancy config execution example")
  
+   After the createTenancyConfig.py script is executed, customer specific files get created under below path.
+   
    ```
-    After the createTenancyConfig.py script is executed, customer specific files get created under /cd3user/tenancies/customer_name with customer_name provided in tenancyconfig.properties as prefix.
+    /cd3user/tenancies/customer_name with customer_name provided in tenancyconfig.properties as prefix
    ```
 
 This lab concludes with the verification of the generated customer specific files.
