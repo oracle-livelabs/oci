@@ -19,29 +19,30 @@ Please follow the previous lab till the last step. Once you are able to provisio
 
 ## Task 1: Create a Resource Manager Stack
 
-1. Execute the setUpOCI Script:
+1. Execute the *setUpOCI* Script:
     ```
     python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
-    ```
-    __e.g.__ python setUpOCI.py /cd3user/tenancies/usr1_livelab/usr1_livelab_setUpOCI.properties
-
-2. Type __option 9__ for developer services and __option 1__ from submenu for __upload current terraform files/state to Resource Manager__.
-
-3. Once the execution is successful, you will see the stack in resource manager and <customer_name>-<region_dir>-stacks.zip file will be generated under the folder /cd3user/tenancies/<customer_name>/terraform_files/<region_dir>.
-
-4. Go to __OCI console__ under compartment which was selected for upload and take a few moments to explore the stack created.
-
-5. You can run plan option from resource manager to validate it. You could also download the terraform files for local modification and re-upload or use OCI online code editor.  
-
-    ```
-    terraform plan
+    e.g. python setUpOCI.py /cd3user/tenancies/usr1_livelab/usr1_livelab_setUpOCI.properties
     ```
 
-6. Wait for a bit until the plan succeeds and plan logs are available under _Logs_. Run apply if any changes are made to get it applied.
+2. Type *option 9* for developer services and *option 1* from submenu to *upload current terraform files/state to Resource Manager*.
+
+3. Once the *execution* is successful, you will see the below stack in resource manager and file will be generated under the folder.
 
     ```
-    terraform apply
+    <customer_name>-<region_dir>-stacks.zip file will be generated under the folder /cd3user/tenancies/<customer_name>/terraform_files/<region_dir>
     ```
+
+4. Go to *OCI console* under compartment which was selected for upload and take a few moments to explore the stack created.
+
+5. You can run *plan option* from resource manager to validate it. You could also download the terraform files for local modification and re-upload or use [OCI online code editor](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Tasks/code-editor.htm).  
+
+    ![terraform plan](./images/plan-output.png "Terraform plan")
+
+6. Wait for a bit until the plan *succeeds* and plan logs are available under *Logs*. Run apply if any changes are made to get it applied.
+
+    ![terraform apply](./images/apply-output.png "Terraform apply")
+
 ## Acknowledgements
 
 - __Author__ - Dipesh Rathod
