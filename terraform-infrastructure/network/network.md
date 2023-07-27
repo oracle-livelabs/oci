@@ -33,6 +33,7 @@ This lab assumes you have:
 
 *Below, is the "fold"--where items are collapsed by default.*
 
+<<<<<<< Updated upstream
 ## Task 1: Terraform .tf files for Networking
 In Terrafrom, there are mulitple files that are created to define input variables for infrastructure deployment. It is one of several ways to provide values to the variables used in a Terrafrom configuration. In this section we will be using the ".tf" extension which stands for Terrafrom.
 
@@ -62,6 +63,48 @@ In the file replace the tenancy, and userid with the corresponding ocids
 In Terrafrom, there are mulitple files that are created to define input variables for infrastructure deployment. It is one of several ways to provide values to the variables used in a Terrafrom configuration. In this secrtion we will be using the ".tfvars" extension which stands for Terraform Variables. The "terrafrom.tfvars" file allows you to define variables in a seperate file rather than hardcoding them directly into the configuration of a resource. This seperation helps keep sensitive infromation out of the main configuration files, making it easier to manage and share the codebase. 
 
 ### 1. Terraform terrafrom.tfvars file
+=======
+## Task 1: Terrafrom Variables for Networking
+
+The SSH (Secure Shell) protocol is a method for secure remote login from one computer to another. SSH enables secure system administration and file transfers over insecure networks using encryption to secure the connections between endpoints. SSH keys are an important part of securely accessing Oracle Cloud Infrastructure compute instances in the cloud.
+
+### 1. Terraform variables.tf
+
+
+
+
+## Task 2: Concise Task Description
+
+1. Step 1 - tables sample
+
+  Use tables sparingly:
+
+  | Column 1 | Column 2 | Column 3 |
+  | --- | --- | --- |
+  | 1 | Some text or a link | More text  |
+  | 2 |Some text or a link | More text |
+  | 3 | Some text or a link | More text |
+
+2. You can also include bulleted lists - make sure to indent 4 spaces:
+
+    - List item 1
+    - List item 2
+
+3. Code examples
+
+    ```
+    Adding code examples
+  	Indentation is important for the code example to appear inside the step
+    Multiple lines of code
+  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
+    ```
+
+4. Code examples that include variables
+
+	```
+  <copy>ssh -i <ssh-key-file></copy>
+  ```
+>>>>>>> Stashed changes
 
 ## Learn More
 
