@@ -2,27 +2,23 @@
 
 ## Introduction
 
-TBD.
+Ten must-visit UNESCO World Heritage Sites. There are 1157 UNESCO World Heritage Sites (January 2023) across 167 countries. Among these, 900 are cultural, 218 are natural, and 39 are mixed properties. Here is a look at 10 of UNESCO's must-visit world heritage sites you'd love to visit.
+
+In this lab, you will learn how to Generate AI images of these sites and help travelers decide on where they would like to visit this time.
 
 Estimated Time: 30 minutes.  
-
-### About X
-
-We will use [Pannellum Lightweight Panorama Viewer for the Web](https://pannellum.org/) to display image in Panoramic view. I will not explain the details of how to use this viewer it is available in their official website. 
- 
+  
 ### Objectives
 
 In this lab, you will:
  
-* TBD. 
-
-
-
+* Generate AI images of Top 10 UNESCO sites. 
+ 
 ### Prerequisites
 
 This lab assumes you have:
 
-* You have Completed **Get Started**  
+* You have Completed Previous Labs
 * You have basic knowledge of Oracle APEX, PL/SQL, HTML and CSS
  
 ## Task 1: Panorama Viewer for the Web 
@@ -222,9 +218,7 @@ This lab assumes you have:
 
 ## Learn More
 
-* [Blockadelabs](https://www.blockadelabs.com/index.html) 
-* [SkyBox AI](https://skybox.blockadelabs.com/)
-* [Pannellum Lightweight Panorama Viewer for the Web](https://pannellum.org/)
+* [Top 10 must see sites](https://timesofindia.indiatimes.com/travel/destinations/most-accessible-international-holiday-destinations/photostory/101794772.cms)
 
 ## Acknowledgements
 

@@ -2,19 +2,15 @@
 
 ## Introduction
 
-TBD.
+In this lab, we will use the Maps, and Geo-Spatial features to locate the nearest UNESCO sites and Airports based on your selected UNESCO site. we will also see how we can get the best accommodation nearby within budget.
 
 Estimated Time: 30 minutes.  
-
-### About TBD
-
-TBD.
- 
+  
 ### Objectives
 
 In this lab, you will:
  
-* TBD. 
+* Locate Nearest Airports and UNESCO Sites within a given distance. 
 
 ### Prerequisites
 

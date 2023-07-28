@@ -2,7 +2,7 @@
 
 ## Introduction
 
-TBD.
+In this lab, you will learn how to Generate AI Images using Blockade Labs REST APIs and show that in a panoramic view.
 
 Estimated Lab Time: 45 minutes
 
@@ -10,11 +10,13 @@ Estimated Lab Time: 45 minutes
 
 In this lab, you will:
 
-- TBD. 
+- Generate AI Images using Blockade Labs REST APIs. 
 
 ### Prerequisites:
 
-- A Free tier or paid tenancy account in OCI (Oracle Cloud Infrastructure) 
+- Completed Previous Labs and have access to Oracle APEX application.
+- Intermediate Knowledge of Oracle APEX and PL/SQL
+- We will not be showing how to create Oracle APEX workspace or an Application.
 
 ### About Blockade Labs 
 
@@ -34,6 +36,7 @@ To Generate AI Images there are many other options for example to name a few.
 * [Pixlr](https://pixlr.com/ai/ai-image-generator/) AI image generator
 * [DeepAI](https://deepai.org/) AI image generator
 * [Picsart](https://picsart.com/create) AI image generator
+* [Google Bard](https://bard.google.com/) is an AI chatbot that uses a large language model to converse with users. It was launched by Google in early 2023 as an experiment that is based on a conversational large language model. this not only generates image based on the prompt but also AI text content related to the generated image. read more about [Bard updates](https://bard.google.com/updates)
 * [Fotor](https://www.fotor.com/images/create) AI image generator and many more.. 
 
 My choice was based on following factors
@@ -370,3 +373,8 @@ Congratulations on completing this lab!. You may now **proceed to the next lab**
 * [SkyBox AI](https://skybox.blockadelabs.com/)
 * [Pannellum Lightweight Panorama Viewer for the Web](https://pannellum.org/)
 * [Generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence)
+
+## Acknowledgements
+
+* **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
+* **Last Updated By/Date** - July 28th, 2023.

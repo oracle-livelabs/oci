@@ -1,5 +1,25 @@
 # Introduction
 
+### About this workshop 
+
+This workshop showcases a 360-degree view of UNESCO heritage sites to Travelers. Visualize how it feels to be there in that place now. They can also ask Travel expert guide questions related to that UNESCO heritage site, such as its History, activities around it or places for shopping. This also helps to find the nearest accommodations available or look out for other nearby UNESCO sites and Airports. 
+
+Travelers can also plan for an Airbnb accommodation within their budget and nearby, preview it inside and get a street view. Ask for the activities around that place.
+ 
+Once the Travel plan is made, find the low-fare plane tickets from their location to the UNESCO site and plan their return journey.
+ 
+Leverage digital assistants' capability to find information related to Travel advisory, Passport related questions or Visa documentation. All this leveraging the power of Generative AI for Travel.
+
+*Estimated Workshop Time: 5 hours (Approximately)*
+
+### Prerequisites 
+ 
+This lab assumes you have:
+
+* An Oracle account
+* Advanced Developer Knowledge of Oracle APEX and Oracle PL/SQL
+* If you are new to Oracle APEX or PL/SQL, please refer related other Oracle Livelabs on those topics
+
 ## About Generative Artificial Intelligence (AI) 
 
 Generative artificial intelligence (AI) is artificial intelligence capable of generating text, images, or other media in response to prompts. Generative AI models learn the patterns and structure of their input training data by applying neural network machine learning techniques, and then generate new data that has similar characteristics. 
@@ -22,25 +42,7 @@ In a recent Gartner webinar poll of more than 2,500 executives, 38% indicated th
 
 Source: [Gartner.com](https://www.gartner.com/en/topics/generative-ai)
 
-### About this workshop 
 
-This workshop showcases a 360-degree view of UNESCO heritage sites to Travelers. Visualize how it feels to be there in that place now. They can also ask Travel expert guide questions related to that UNESCO heritage site, such as its History, activities around it or places for shopping. This also helps to find the nearest accommodations available or look out for other nearby UNESCO sites and Airports. 
-
-Travelers can also plan for an Airbnb accommodation within their budget and nearby, preview it inside and get a street view. Ask for the activities around that place.
- 
-Once the Travel plan is made, find the low-fare plane tickets from their location to the UNESCO site and plan their return journey.
- 
-Leverage digital assistants' capability to find information related to Travel advisory, Passport related questions or Visa documentation. All this leveraging the power of Generative AI for Travel.
-
-*Estimated Workshop Time: 5 hours (Approximately)*
-
-### Prerequisites 
- 
-This lab assumes you have:
-
-* An Oracle account
-* Advanced Developer Knowledge of Oracle APEX and Oracle PL/SQL
-* If you are new to Oracle APEX or PL/SQL, please refer related other Oracle Livelabs on those topics
   
 ### Generative AI for Travel - Technology Architecture
 
@@ -128,4 +130,4 @@ You may now **proceed to the next lab**.
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
 * **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Director, Database Developer Relations
-* **Last Updated By/Date** - July 27th, 2023
+* **Last Updated By/Date** - July 28th, 2023

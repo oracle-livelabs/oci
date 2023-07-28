@@ -32,11 +32,11 @@ This lab assumes you have:
 
     Extract **Oracle Digital Assistant - Oracle Native Client SDK 23.4.1** zip file, please note version number might change
 
-    ![ODA Setup](images/oda-setup-1.png " ")
+    ![Create ODA Setup](images/oda-setup-1.png " ")
 
 2. Run the index.html file from your web browser, This will show the disconnected status
 
-    ![ODA Setup](images/oda-setup-3.png " ")
+    ![ODA Setup Disconnected status](images/oda-setup-3.png " ")
 
 ## Task 2: Get channel id from ODA console. 
 
@@ -72,9 +72,9 @@ This lab assumes you have:
 
 1. Upload CSS, Image and JS files to Oracle APEX under \Shared Components\Static Application Files
 
-    ![ODA Setup](images/oda-setup-10.png " ")
+    ![Shared Components](images/oda-setup-10.png " ")
 
-    ![ODA Setup](images/oda-setup-11.png " ")
+    ![Static Application Files](images/oda-setup-11.png " ")
 
 2. CSS file can be customized for placement of chat icon and colors. 
 
@@ -130,7 +130,7 @@ This lab assumes you have:
 
 1. Add **Static Content** under APEX Body region
 
-    ![ODA Setup](images/oda-setup-9.png " ")
+    ![ODA chatbot](images/oda-setup-9.png " ")
 
     ```html 
         <copy>
@@ -146,7 +146,7 @@ This lab assumes you have:
 
 1. Instead of user initiating conversation, you can have bot initiate the conversation, to do this update settings.js with following 
 
-    ![ODA Setup](images/oda-setup-13.png " ")
+    ![ODA initiating conversation](images/oda-setup-13.png " ")
 
     ```javascript 
         <copy>
@@ -166,7 +166,7 @@ This lab assumes you have:
 
 1. If you want bot initiated conversation instead of user initiated conversation, then the bot should send message to the client browser once it is connected, this we can acheive by updating YAML flow in ODA as shown below.
 
-    ![ODA Setup](images/oda-setup-12.png " ")
+    ![ODA bot initiated conversation](images/oda-setup-12.png " ")
 
 2. Use a good YAML editor like Visual Studio Code to edit and format YAML file and copy paste into ODA Flow.
 
@@ -239,23 +239,21 @@ This lab assumes you have:
 
 1. Hello Message from Oracle Digital Assistant coming from **Greetings Intent**
   
-    ![ODA Setup](images/oda-1.png " ")
+    ![ODA Hello Message](images/oda-1.png " ")
 
-2. From the auto complete questions user selects
-
-    *Visa* 
-
-    ![ODA Setup](images/oda-3.png " ")
+2. From the auto complete questions user selects *Visa* 
+ 
+    ![ODA auto complete](images/oda-3.png " ")
 
 3. User selects one of the drop down questions.
 
-    ![ODA Setup](images/oda-2.png " ")  
+    ![ODA drop down questions](images/oda-2.png " ")  
   
 4. User says *Bye* and Bot understands the **Exit Intent**
  
 5. Bot replies back with a welcome message!
    
-   ![ODA Setup](images/oda-5.png " ")  
+   ![ODA welcome message](images/oda-5.png " ")  
 
     *You are welcome, Have a great time. Bon voyage!*
  
@@ -263,10 +261,9 @@ This concludes this lab and you can **proceed to the next lab**.
 
 ## Learn More
 
-* [Analyze Document](https://docs.oracle.com/en-us/iaas/tools/oci-cli/3.28.0/oci_cli_docs/cmdref/ai-vision/analyze-document.html)
-* [Document Understanding](https://docs.oracle.com/en-us/iaas/document-understanding/document-understanding/using/home.htm)
+* [Downloads](https://www.oracle.com/downloads/cloud/amce-downloads.html) 
 
 ## Acknowledgements
-
-* **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - May 23rd, 2023
+ 
+* **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
+* **Last Updated By/Date** - July 28th, 2023.

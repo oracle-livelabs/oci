@@ -2,7 +2,7 @@
 
 ## Introduction
 
-TBD
+In this lab, you will learn how to Generate AI Text using Cohere or OpenAI REST APIs and help Travelers answer their questions related to the UNESCO site or activities around that site or even about the City itself.
 
 Estimated Lab Time: 45 minutes
 
@@ -10,12 +10,12 @@ Estimated Lab Time: 45 minutes
 
 In this lab, you will:
 
-- TBD. 
+- Generate AI Text using Cohere or OpenAI REST APIs. 
 
 ### Prerequisites:
 
-- A Free tier or paid tenancy account in OCI (Oracle Cloud Infrastructure)
-- Tenancy is whitelisted to be able to use OCI Speech
+- Completed Previous Labs and have access to Oracle APEX application.
+- Intermediate Knowledge of Oracle APEX and PL/SQL 
 
 ### [About Cohere](https://cohere.com/)
 
@@ -185,7 +185,7 @@ These results might vary based on tokens supplied or other JSON inputs during re
 
 1. Sign up, Sing in and Get OpenAI API key from [API keys - OpenAI API](https://platform.openai.com/account/api-keys) 
 2. Learn more in the rate limits documentation, or reference the default [rate limits](https://platform.openai.com/docs/guides/rate-limits/overview) for OpenAI's models. 
-3. ![Generative AI](images/openai-key.png) 
+3. ![Generative AI OpenAI Key](images/openai-key.png) 
 
 ## Task 4: Getting Response from OpenAI
 
@@ -270,22 +270,29 @@ These results might vary based on tokens supplied or other JSON inputs during re
  
 2. Ask AI about an UNESCO site.
     
-   ![Generative AI](images/generative-ai-02.png) 
+   ![Generative AI UNESCO site](images/generative-ai-02.png) 
 
 3. Ask AI about another UNESCO site.   
 
-    ![Generative AI](images/generative-ai-05.png)
+    ![Generative AI UNESCO site](images/generative-ai-05.png)
 
 4. Ask AI about an Accommodation site and Generate AI Image
 
-    ![Generative AI](images/generative-ai-06.png)
+    ![Generative AI Accommodation](images/generative-ai-06.png)
 
-    ![Generative AI](images/generative-ai-07.png)
+    ![Generative AI Accommodation](images/generative-ai-07.png)
  
 Congratulations on completing this lab!, You may now **proceed to the next lab**
 
 ## Learn More
 
-[OCI Speech Policies](https://docs.oracle.com/en-us/iaas/Content/speech/using/policies.htm)
+* [JSON_TABLE](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/JSON_TABLE.html)
+* [About OpenAI](https://openai.com/about)
+* [About Cohere](https://cohere.com/)
 
-[OCI Object Storage](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm)
+## Acknowledgements
+
+* **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
+* **Last Updated By/Date** - July 28th, 2023.
+
+ 

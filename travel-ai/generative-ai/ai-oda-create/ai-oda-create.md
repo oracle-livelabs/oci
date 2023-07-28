@@ -160,12 +160,7 @@ To set up the Oracle Digital Assistant on the OCI tenancy, you will:
 You may now **proceed to the next lab.**
 
 ## Acknowledgements
-
-* **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - June 10th, 2023
-
-## Learn more
-
-* [Breast cancer FAQ](https://www.cancercenter.com/cancer-types/breast-cancer/questions)
-
-* [Oracle Digital Assistant Skills](https://docs.oracle.com/en/cloud/paas/digital-assistant/use-chatbot/create-configure-and-version-skills1.html)
+ 
+* **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
+* **Last Updated By/Date** - July 28th, 2023.
+ 

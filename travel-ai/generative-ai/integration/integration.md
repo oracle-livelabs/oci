@@ -51,20 +51,20 @@ GET https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=LON&depa
    
 2. Web Credentials
    
-   ![Near by Sites](images/web-credentials.png) 
+   ![Web Credentials](images/web-credentials.png) 
    
 3. Under Authentication Type select **OAuth2 Client**, copy paste the Client ID and Client Secret
    
 4. OAuth2 Client
    
-   ![Near by Sites](images/web-credentials-02.png) 
+   ![OATH settings](images/web-credentials-02.png) 
 
 ## Task 3: Create APEX Page
  
 1. Add a Process on submit of a button, which will invoke the REST API and get the flight prices
 2. Record the flight price data into a temporary table, the data includes source airport code, destination airport code, travel date and prices based on dates choose.
    
-   ![Near by Sites](images/process.png) 
+   ![APEX Page Process](images/process.png) 
 
 3. PL/SQL code  
 
@@ -134,13 +134,13 @@ GET https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=LON&depa
 
 4. Run a select query against flight data table to display flight prices
    
-   ![Near by Sites](images/apex-01.png) 
+   ![Flight Data](images/apex-01.png) 
 
 ## Task 4: Demo
 
 1. Input Origin Airport,Destination Airport code and Date of Journey 
    
-   ![Near by Sites](images/apex-02.png) 
+   ![Origin Airport](images/apex-02.png) 
 
     This concludes this lab and you can **proceed to the next lab**.
 
