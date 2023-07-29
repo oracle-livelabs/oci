@@ -178,7 +178,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Nilay Panchal, Oracle Autonomous Database Product Management
-- **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
-- **Last Updated By/Date** - Marty Gubar, ADB PM, July 2022
-- **Built with Blocks**
+* **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
+* **Last Updated By/Date** - June 24th, 2023.

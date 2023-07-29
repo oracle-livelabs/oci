@@ -10,7 +10,7 @@ Once the Travel plan is made, find the low-fare plane tickets from their locatio
  
 Leverage digital assistants' capability to find information related to Travel advisory, Passport related questions or Visa documentation. All this leveraging the power of Generative AI for Travel.
 
-*Estimated Workshop Time: 5 hours (Approximately)*
+Estimated Workshop Time: 5 hours (Approximately)
 
 ### Prerequisites 
  

@@ -3,25 +3,8 @@
 ## About this workshop
 
 In this lab, we'll provision the Oracle Digital Assistant [ODA] from Oracle Cloud Infrastructure services.
-
-**Oracle Digital Assistant**
-
-Oracle Digital Assistant delivers a complete AI platform to create conversational experiences for business applications through text, chat, and voice interfaces.
-
-*Conversational AI*
-
-Natural language understanding and machine learning
-Oracle Digital Assistant applies deep semantic parsing using natural language processing, natural language understanding (NLU), and custom algorithms to understand common conversations to derive accurate intent and context.
-
-*AI-powered voice*
-
-Eliminate reliance on third-party offerings with Oracle’s AI-powered voice. Users can communicate with their business application using voice commands with an assistant that understands their business-specific vocabulary and enables naturally expressive interactions. Give your customers more control of their data by providing end-to-end security and compliance with privacy standards, such as PII and GDPR.
-
-*Analytics and insights*
-
-Gain customer insights through built-in analytics that identify conversational bottlenecks and usage patterns and make data-driven decisions that continually improve the user experience.
-
-Estimated Time: 10 minutes
+ 
+Estimated Time: 20 minutes
 
 ### Objectives
 
@@ -39,6 +22,23 @@ To set up the Oracle Digital Assistant on the OCI tenancy, you will:
 ### Prerequisites
 
 * A user with access to provision & manage Core OCI services like Oracle Digital Assistant
+
+### About Oracle Digital Assistant
+  
+Oracle Digital Assistant delivers a complete AI platform to create conversational experiences for business applications through text, chat, and voice interfaces.
+
+*Conversational AI*
+
+Natural language understanding and machine learning
+Oracle Digital Assistant applies deep semantic parsing using natural language processing, natural language understanding (NLU), and custom algorithms to understand common conversations to derive accurate intent and context.
+
+*AI-powered voice*
+
+Eliminate reliance on third-party offerings with Oracle’s AI-powered voice. Users can communicate with their business application using voice commands with an assistant that understands their business-specific vocabulary and enables naturally expressive interactions. Give your customers more control of their data by providing end-to-end security and compliance with privacy standards, such as PII and GDPR.
+
+*Analytics and insights*
+
+Gain customer insights through built-in analytics that identify conversational bottlenecks and usage patterns and make data-driven decisions that continually improve the user experience.
 
 ## Task 1: Log into OCI
 

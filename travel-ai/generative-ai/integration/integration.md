@@ -33,9 +33,6 @@ The Amadeus Flight Inspiration Search API returns a list of the cheapest destina
 
 To call the API, we just need to provide the IATA airport code of our city of departure. We can further customize our request using optional parameters like departure date range, maximum price or trip duration.  
 
-Let’s look at an example request for the cheapest routes from London in December 2021: 
-
-GET https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=LON&departureDate=2021-12-01,2021-12-31 
 
  
 ## Task 1: Sign Up and Sign In to Amadeus
@@ -44,6 +41,9 @@ GET https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=LON&depa
 2. Amadeus Developer Dashboard
    ![Near by Sites](images/amadeus.png)
 3. Read their [Get started guide](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335)
+4. Let’s look at an example request for the cheapest routes from London in December 2021: 
+
+    GET https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=LON&departureDate=2021-12-01,2021-12-31 
  
 ## Task 2: Create Web Credentials
 
