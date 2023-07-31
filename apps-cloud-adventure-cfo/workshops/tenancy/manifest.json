@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Cloud Adventure – for the Office of the CFO",
+    "workshoptitle": "Cloud Adventure Activity Guide – for the Office of the CFO",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -7,19 +7,15 @@
             "filename": "../../00-introduction/introduction.md"
         },
         {
-            "title": "Lab 1: Account Monitor",
-            "filename": "../../02-manage-monitor/account-monitor.md"
-        },
-        {
-            "title": "Lab 2: Predictive Capabilities",
+            "title": "Lab 1: Predictive Capabilities",
             "filename": "../../04-predictive/predictive.md"
         },
         {
-            "title": "Lab 3: Procurement",
+            "title": "Lab 2: Procurement",
             "filename": "../../05-procurement/procurement.md"
         },
         {
-            "title": "Lab 4: Risk Management",
+            "title": "Lab 3: Risk Management",
             "filename": "../../03-risk-mgmt/risk-management.md"
         },
         {
