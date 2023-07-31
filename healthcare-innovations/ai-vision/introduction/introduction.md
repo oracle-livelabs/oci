@@ -326,4 +326,4 @@ You may now **proceed to the next lab**.
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
 * **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - July 13th, 2023
+* **Last Updated By/Date** - July 31st, 2023
