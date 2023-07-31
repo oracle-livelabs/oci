@@ -40,7 +40,9 @@ Per pod, maintenance notifications will be delivered. An announcement Email will
 9. It will open a new tab. Notice the *State* of the subscription *Pending*
 ![Subscription pending](images/task1/subscription-pending.png)
 10. Go to your email and open the email from Oracle Cloud and click on *Confirm Subscription*
+![Confirm topic subscription](images/task1/confirm-topic-subscription.png)
 11. It will open a new tab with the Subscription confirmed message
+![Subscription confirmed](images/task1/topic-subscription-confirmed.png)
 12. Go back to the Topic in the browser tab, you were on and refresh to see the Pending state change to *Active*. You are now subscribed to receive email announcements for the environments you are about to create.
 ![Subscription active](images/task1/subscription-active.png)
 13. Close the Subscription confirmed tab and Topic tab and return to the Subscriptions page as seen in step 8. Click on the Subscription Name. USer2sub in the case. Confirm that Filter group has compartment and service added.
