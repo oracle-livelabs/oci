@@ -10,22 +10,21 @@ The new experience for Fusion Applications Environment Management unifies the ad
 
 ### Objective
 * Learn how to log in to your Oracle Cloud Account
-* Configure the Cloud Account for the workshop
+* Get to know the Oracle Cloud Console navigation
 
-Estimated Lab Time: 5+ minutes.
+Estimated Time: 5+ minutes.
 
 ## Task 1: Log in to Oracle Cloud Console
-1. Open the site https://cloud.oracle.com/applications
+1. Open the site by clicking https://cloud.oracle.com
 2. Enter the Cloud Account Name = PMPreProd, Click Next
 ![Cloud account Sign-In](images/cloud-account-signin.png)
 3. Make sure the default Identity domain is selected, Click Next
 ![Select Identity domain](images/select-identity-domain.png)
-4. Enter the password given to you and Change the password,
-![Change password](images/change-password.png)
-5. OR Enter the username/password provided to you
-6. Take the OCI tour. Click on Begin Tour
-
-## Task 2: Account setup
+4. Enter the password given to you
+![Enter login password](images/enter-login-info.png)
+5. Take the Console tour. On the bottom of the Applications page, *Learning* section/*GUIDED TOURS* click on *Take a Console tour*. The tour will walk you through the console user experience in 12 steps and will take about a minute or so to complete. Once finished, you can begin the 1st Lab.
+![SaaS Homepage](images/saas-homepage.png)
+![Guided Tour](images/guided-tour.png)
 
 ## Acknowledgements
 * **Author** - <Name, Title, Group>
