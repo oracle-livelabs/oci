@@ -67,7 +67,7 @@ It will allow the database to call the OIC URLs
 ### 3. Create OIC Source
 
 1. Still in the Source screen.
-    - Click *Create*
+    - Click *Create Source*
     - Source Type *Oracle Integration*
     - Oracle Integration Host: ##OIC\_HOST##
     - Click *Create*
@@ -82,7 +82,7 @@ It will allow the database to call the OIC URLs
     - Then *Discover Source*
 3.  Create APIGW Source. 
     - Still in the Source screen.
-    - Click *Create*
+    - Click *Create Source*
     - Source Type *OCI API Gateway*
     - Compartment OCID: ##COMPARTMENT\_OCID##
     - Region: ##REGION##

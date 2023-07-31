@@ -19,6 +19,7 @@ Estimated time: 20 min
 1. Go to Oracle Cloud Home page
 2. Go to Cloud Editor.
 3. When the editor is started, open a terminal
+    ![Cloud Shell](images/apim-cloudeditor-terminal.png)
 4. Clone the git repository
     ```
     <copy>
