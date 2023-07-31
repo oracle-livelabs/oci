@@ -645,13 +645,13 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 2. OKE 유형을 선택합니다.
 
-   - Name: 클러스터 이름 예, oke-cluster-1
+    - Name: 클러스터 이름 예, oke-cluster-1
 
-   ![Create Environment](images/create-environment.png)
+    ![Create Environment](images/create-environment.png)
 
 3. 배포할 클러스터를 선택합니다.
 
-   ![Target OKE Cluster](images/oke-environment.png =50%x*)
+    ![Target OKE Cluster](images/oke-environment.png =50%x*)
 
    
 ### Kubernetes manifest 배포 Stage 만들기
