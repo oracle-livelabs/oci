@@ -1,5 +1,5 @@
 
-# Lab 2: Add Existing APIs
+# Lab 3: Add Existing APIs
 
 ## Introduction
 
@@ -68,12 +68,12 @@ It will allow the database to call the OIC URLs
 
 1. Still in the Source screen.
     - Click *Create Source*
-    - Source Type *Oracle Integration*
+    - Source Type *Oracle Integration 2*
     - Oracle Integration Host: ##OIC\_HOST##
     - Click *Create*
         ![Oracle Integration - Credentials](images/apim-source-oic.png)
 
-## Task 3: Add existing API from API Gateway
+## Task 3: (optional) Add existing API from API Gateway
 
 1. Get APIW OCID
     - Please find back the Compartment OCID that was used to create the API Gateway in Lab 2 (Cloud Native). (##COMPARTMENT\_OCID##)
@@ -148,7 +148,15 @@ It will allow the database to call the OIC URLs
 
 - The right to call OCI API could probably be improved with OCI policies instead of encoding the user ocid, ...
 
+## Known Issues
 
+- When pressing Discover All, there is an *error: ORA-40441 - JSON Syntax Error*
+    - Symptoms: When running this command, it works 
+       ```
+       curl -k -u ##USER##:##PASSWORD## https://##OIC_HOST/ic/api/integration/v1/integrations | jq .  
+       ```
+    - Work-around: Wait 2/5 mins and it works.
+   
 ## Acknowledgements
 
 - **Authors**
