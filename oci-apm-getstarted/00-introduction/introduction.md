@@ -2,12 +2,12 @@
 
 ## About this Workshop
 
-In this workshop, you will learn how to use Oracle Cloud APM to detect a performance issue from a cloud-native application, analyze the symptoms and identify the root cause.
+In this workshop, you will learn how to use Oracle Cloud APM to detect a performance issue from a cloud-native application, analyze the symptoms and identify the root cause. 
 
-You will examine performance alarms in the APM Home dashboard, observe activities in the out-of-the-box performance widgets in the Synthetic Monitors dashboard, inspect client details in the HTTP Archive (HAR) file, and finally explore the server-side details using the APM Trace Explorer.
+You will examine performance alarms on the APM Home dashboard, monitor activities with the pre-built performance widgets on the Synthetic Monitors dashboard, inspect client details in the HTTP Archive (HAR) file, and inspect server-side details using the APM Trace Explorer. Additionally, you will create complex personalized queries, save them for future use, and generate widgets to visually represent the data on a custom dashboard.
 
 
-Estimated Time: 35 minutes
+Estimated Time: 80 minutes
 
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 
@@ -25,7 +25,9 @@ In this workshop, you will:
 * Analyze APM Monitors
 * Inspect Monitor Details and History
 * Explore APM Trace Data
-
+* Save a custom query
+* Create a custom dashboard
+* Construct complex queries
 
   [Oracle Cloud APM tutorial: Synthetic monitoring](https://www.youtube.com/watch?v=31lJYvmT6b0)
     [](youtube:31lJYvmT6b0)
@@ -38,9 +40,7 @@ In this workshop, you will:
 
 ### More APM Workshops
 
--	**[Use OpenTracing for Microservices with Helidon Utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=917)**  Workshop
--	**[Trace a Native Cloud App Utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=916)** Workshop
--	**[Monitor Traces for WebLogic on Kubernetes utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=932)** Workshop
+* Please visit: **[APM LiveLabs workshops](https://apexapps.oracle.com/pls/apex/f?p=133:100:111996377805307::::SEARCH:application+Performance+monitoring)**.
 
 
 ## Acknowledgements
@@ -49,4 +49,4 @@ In this workshop, you will:
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, August 2022
+- **Last Updated By/Date** - Yutaka Takatsu, May 2023

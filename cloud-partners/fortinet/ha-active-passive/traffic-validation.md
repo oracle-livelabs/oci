@@ -288,7 +288,7 @@ You may now [proceed to the next lab](#next).
 
 ## Acknowledgements
 
-- **Author** - Arun Poonia, Senior Solutions Architect
-- **Adapted by** - Fortinet
+- **Author** - Arun Poonia, Principal Solutions Architect
+- **Adapted by** -  Fortinet
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, July 2021
+- **Last Updated By/Date** - Arun Poonia, Oct 2022

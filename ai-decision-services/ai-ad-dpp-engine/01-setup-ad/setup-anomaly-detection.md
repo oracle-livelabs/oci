@@ -5,7 +5,7 @@ Lab 1: Configure OCI Anomaly Detection
 
    Login to [OCI Console](https://cloud.oracle.com). Go to AI Services → Anomaly Detection. 
 
-   ![](./images/Set-AD1.png)
+   ![](./images/set-ad1.png)
 
 ## 2. Create an Anomaly Detection *Project*
 
@@ -13,7 +13,7 @@ Lab 1: Configure OCI Anomaly Detection
 
    Create an Anomaly Detection *Project* by clicking on **Create Project**.  See Screenshot below.
 
-   ![](./images/Set-AD2.png)
+   ![](./images/set-ad2.png)
 
    **IMPORTANT**: Note the **OCID** of the Project. This value will be used in a subsequent Lab.
 

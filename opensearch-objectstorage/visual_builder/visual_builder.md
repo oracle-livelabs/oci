@@ -49,7 +49,7 @@ You have the other values from the previous labs.
 - Edit the *Key ID*
   - In the *Key ID*, type
     *##TENANCY\_OCID##/##USER\_OCID/##FINGERPRINT##*
-  - In the Private Key, paste your OCI Private Key *##PRIVATE_KEY##*
+  - In the Private Key, paste your OCI Private Key *##PRIVATE\_KEY\_RSA\_FORMAT##*
   - Click *Save*
 - Click *Save* again
 
@@ -69,12 +69,18 @@ Redo this for the second connection:
 - Click on the *Service icon*
 - Choose the *opensearch* connection 
 - Click on *Servers* tab 
-- Then *Edit icon*
+- Then *Edit icon* 
 
 ![Connection OpenSearch](images/opensearch-vb-connection-opensearch.png)
 
 - Instance URL: *https://##APIGW_HOSTNAME##*
   Ex: https://xxxxxxxx.apigateway.eu-frankfurt-1.oci.customer-oci.com
+- In Authentication for Logged-in-users 
+    - Type: *Basic*
+    - Edit Username. Username = *##OPENSEARCH\_USER##* / Password = *##OPENSEARCH\_PWD##*
+- In Authentication for Anonymous users, the same: 
+    - Type: *Basic*
+    - Edit Username. Username = *##OPENSEARCH\_USER##* / Password = *##OPENSEARCH\_PWD##*
 - Click *Save*
 
 ![Edit Connection OpenSearch](images/opensearch-vb-connection-opensearch2.png)
@@ -86,6 +92,16 @@ You can also test the connection:
 - Click *Send Request*
 
 ![Test Connection OpenSearch](images/opensearch-vb-connection-opensearch3.png)
+
+### C. Variable region
+
+We need also to give the region to Visual Builder that will use it to call the preAuthRequest.
+- Click on the Application name: *opensearch*
+- Go to the *Variables* tab
+- Click on the variable *region*
+- Edit it and replace with your region name. Ex: eu-frankfurt1
+
+![Edit variable region](images/opensearch-vb-variable-region.png)
 
 ## Test the application
 
