@@ -95,7 +95,7 @@ First, let's create an Autonomous database.
 
 1. Go to the SQL interface
     In the page of the Autonomous Database,
-    - Click on *Database Actions*
+    - Click on *Database Actions* / *View all database Actions*
     - If you get a prompt asking for an user/password, enter ADMIN/##DB\_PASSWORD##
     - Then *SQL*
 
@@ -179,7 +179,7 @@ Here I assume that the tenant is using the new Identity Domains. If it is not th
 ## Task 5: Install the APEX program
 
 Back to page of the Autonomous Database,
-1. Go to APEX. Click again on *Database Actions*
+1. Go to APEX. Click again on *Database Actions* / *View all database Actions*
 
     ![APEX Installation](images/apim-apex0.png)
 
