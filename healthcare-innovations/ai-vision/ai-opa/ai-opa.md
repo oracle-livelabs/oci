@@ -18,6 +18,14 @@ This lab assumes you have the following:
 
 * Completed Setup environment and Created an Oracle Autonomous Database lab and already logged into OCI console
 * You have created Integration services as in the last two labs using Oracle Integration Cloud.
+
+### AI for Healthcare - Complete Demo and Architecture video
+
+[Youtube video on AI for Healthcare Demo](youtube:iBV76Upi1VM:large)
+
+### AI for Healthcare Demo - with Patient Admission Process (extended demo)
+
+[Youtube video on AI for Healthcare Demo](youtube:ok-fYO0CV2I:large)
  
 ### Breast Cancer Patient Admission Use case and process flow (with Integration Cloud and Process Automation) 
 
@@ -197,4 +205,4 @@ This concludes AI for Healthcare EPIC workshop. Thank you, and Happy Learning! :
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - 4th July, 2023.
+* **Last Updated By/Date** - 1st Aug, 2023.

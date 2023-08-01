@@ -8,9 +8,13 @@ In this workshop, we will show how Artificial Intelligence (AI) and Machine Lear
 
 We’ll share how we trained our AI Machine learning models with X-Ray mammography images to identify breast cancers and even incorporated many other features, such as helping doctors or patients dictate medical symptoms and diagnoses quickly by sending an email of the audio message and the medical transcription text. 
   
-### Complete Demo and Architecture video
+### AI for Healthcare - Complete Demo and Architecture video
 
 [Youtube video on AI for Healthcare Demo](youtube:iBV76Upi1VM:large)
+
+### AI for Healthcare Demo - with Patient Admission Process (extended demo)
+
+[Youtube video on AI for Healthcare Demo](youtube:ok-fYO0CV2I:large)
 
 ### Introduction video
 
