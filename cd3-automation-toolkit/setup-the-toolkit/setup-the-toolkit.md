@@ -7,8 +7,7 @@ The CD3 Automation toolkit is available in the github public repo : [CD3 github 
 
 To begin the process of setting up the Toolkit and connecting to OCI, please follow the step-by-step instructions outlined in this lab.
 
-Estimated Lab Time: 10 minutes
-<br>
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -43,122 +42,131 @@ The objectives of this lab are:
 1. Change directory to *'cd3-automation-toolkit'*(i.e. the cloned repo in your local).
 
 2. Execute:
-   ```
-   bash 
-   docker build --platform linux/amd64 -t cd3toolkit:${image_tag} -f Dockerfile --pull --no-cache . 
-   ```
-
-> __Note:__ *${image_tag} should be replaced with suitable tag as per your requirements/standards. The period (.) at the end of the docker build command is required.*
+    ```
+    bash 
+    docker build --platform linux/amd64 -t cd3toolkit:$'<image_tag>' -f Dockerfile --pull --no-cache . 
+    ```
+    
+    >**Note:**'$<image_tag>' should be replaced with suitable tag as per your requirements/standards. The period (.) at the end of the docker build command is required.
 
 <br>
 
-## **Task 3: Run the CD3 container**
+## Task 3: Run the CD3 container
 
 1. Execute the below *docker run* command:
 
-   ```
-   docker run --platform linux/amd64 -it -d -v <directory_in_local_system_where_the_files_must_be_generated>:/cd3user/tenancies <image_name>:<image_tag>
-   ```
-   ![docker_run](images/docker_run.png "docker run command example")
+    ```
+    docker run --platform linux/amd64 -it -d -v '<directory_in_local_system_where_the_files_must_be_generated>':/cd3user/tenancies '<image_name>':'<image_tag>'
+    ```
+    ![docker_run](./images/docker_run.png "docker run command example")
 
 2. Verify the container:
-   ```
-   docker ps
-   ```
+    ```
+    docker ps
+    ```
 <br>
 
 ## Task 4: Connect Docker container to OCI tenancy
 
-###  **Step 1: Exec into the container:**
+### 1. **Exec into the container:**
  
- 1. List out all the containers:
+1. List out all the containers:
 
     ```
     docker ps
     ```
-> Note down the container ID from this cmd output.
+    >**Note:** Note down the container ID from this cmd output.
 
 2. Enter the container using the above container id.
 
-   ```bash
-   docker exec -it <container_id> bash
-   ```
+    ```
+    docker exec -it <container_id> bash
+    ```
 3. Change directory to *'user-scripts'*
 
-   ```
-   cd /cd3user/oci_tools/cd3_automation_toolkit/user-scripts/
-   ```
-### **Step 2: Create API PEM Key:**
+    ```
+    cd /cd3user/oci_tools/cd3_automation_toolkit/user-scripts/
+    ```
+### 2. **Create API PEM Key:**
 
-1. RSA key pair in PEM format (minimum 2048 bits) is needed to use OCI APIs. If the key pair does not exist, create them by executing *createAPIKey.py* under *'user-scripts'* folder:
+RSA key pair in PEM format (minimum 2048 bits) is needed to use OCI APIs. If the key pair does not exist, create them by executing *createAPIKey.py* under *'user-scripts'* folder:
 
    ``` 
-   python createAPIKey.py 
+    python createAPIKey.py 
    ```
 
-> This will generate the public/private key pair(oci_api_public.pem and oci_api_private.pem) at */cd3user/tenancies/keys/*
+This will generate the public/private key pair at /cd3user/tenancies/keys/
+   
+   ```
+    oci_api_public.pem and oci_api_private.pem
+   ```
 
-2. In case you already have the keys, you should copy the private key file inside the container and rename it to *oci_api_private.pem*.
+   In case you already have the keys, you should copy the private key file inside the container and rename it to below.
+   
+   ```
+    oci_api_private.pem
+   ```
 
-### **Step 3: Upload the Public key to OCI console.**
+### 3. **Upload the Public key to OCI console.**
 
 Upload the Public key to "APIkeys" under user settings in OCI Console. Pre-requisite to use the complete functionality of the Automation Toolkit is to have the user as an administrator to the tenancy.
 
-   - Open the Console, and sign in as the user.
-   - View the details for the user who will be calling the API with the key pair.
+   1. Open the *Console*, and sign in as the user.
+   2. View the details for the user who will be calling the API with the *key pair*.
 
-   - Open the Profile menu (User menu icon) and click **User Settings**.
+   3. Open the Profile menu (User menu icon) and click *User Settings*.
 
-   - Click **Add Public Key**.
-   - Paste the contents of the PEM public key in the dialog box and click *Add*.
+   4. Click *Add Public Key*.
+   5. Paste the contents of the *PEM public key* in the dialog box and click *Add*.
 
-### **Step 4: Edit tenancyconfig.properties:**
+### 4. **Edit tenancyconfig.properties:**
 
 Enter the required details in *tenancyconfig.properties*
 
-```
-[Default]
-# Mandatory Fields
-# Friendly name for the Customer Tenancy eg: demotenancy;
-# The generated .auto.tfvars will be prefixed with this customer name
-customer_name=
-tenancy_ocid=
-fingerprint=
-user_ocid=
+   ```
+    [Default]
+    # Mandatory Fields
+    # Friendly name for the Customer Tenancy eg: demotenancy;
+    # The generated .auto.tfvars will be prefixed with this customer name
+    customer_name=
+    tenancy_ocid=
+    fingerprint=
+    user_ocid=
 
-# Path of API Private Key (PEM Key) File; If the PEM keys were generated by running createAPI.py, leave this field empty.
-# Defaults to /cd3user/tenancies/keys/oci_api_private.pem when left empty.
-key_path=
+    # Path of API Private Key (PEM Key) File; If the PEM keys were generated by running createAPI.py, leave this field empty.
+    # Defaults to /cd3user/tenancies/keys/oci_api_private.pem when left empty.
+    key_path=
 
-# Region ; defaults to us-ashburn-1 when left empty.
-region=
+    # Region ; defaults to us-ashburn-1 when left empty.
+    region=
 
-# Leave it blank if you want single outdir or specify absolute path for outdir_structure_file.properties containing directory structure for OCI services.
-outdir_structure_file=
-#or
-#outdir_structure_file=/cd3user/oci_tools/cd3_automation_toolkit/user-scripts/outdir_structure_file.properties
+    # Leave it blank if you want single outdir or specify absolute path for outdir_structure_file.properties containing directory structure for OCI services.
+    outdir_structure_file=
+    #or
+    #outdir_structure_file=/cd3user/oci_tools/cd3_automation_toolkit/user-scripts/outdir_structure_file.properties
 
-# Optional Fields
-# SSH Key to launched instances
-ssh_public_key=
-
-```
-### **Step 5 : Initialise the environment:**
+    # Optional Fields
+    # SSH Key to launched instances
+    ssh_public_key=
+   ```
+       
+### 5. **Initialise the environment:**
 
 To initialise your environment for utilizing the automation toolkit, execute:
-
-```
-python createTenancyConfig.py tenancyconfig.properties
-```
-
-> **Note:** *If the API Keys were generated and added to the OCI console using previous steps, it might take a couple of seconds to reflect. Thus, running the above command immediately might result in Authentication Errors.
-In such cases, please retry after a minute.*
-
-Here is a screenshot of example execution of the script:
-
-![tenancyconfig](images/tenancyconfig.png "tenancy config execution example")
+     
+   >**Note:**
+    If the API Keys were generated and added to the OCI console using previous steps, it might take a couple of seconds to reflect.
+Thus, running the above command immediately might result in Authentication Errors. In such cases, please retry after a minute.
  
-After the *createTenancyConfig.py* script is executed, customer specific files get created under */cd3user/tenancies/\<customer_name>* with \<customer_name> provided in *tenancyconfig.properties* as prefix.
+Here is a screenshot of example execution of the script:
+    
+   ![tenancyconfig](./images/tenancyconfig.png "tenancy config execution example")
+ 
+   After the createTenancyConfig.py script is executed, customer specific files get created under below path.
+   
+   ```
+    /cd3user/tenancies/customer_name with customer_name provided in tenancyconfig.properties as prefix
+   ```
 
 This lab concludes with the verification of the generated customer specific files.
 
