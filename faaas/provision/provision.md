@@ -45,7 +45,7 @@ Per pod, maintenance notifications will be delivered. An announcement Email will
 ![Subscription confirmed](images/task1/topic-subscription-confirmed.png)
 12. Go back to the Topic in the browser tab, you were on and refresh to see the Pending state change to *Active*. You are now subscribed to receive email announcements for the environments you are about to create.
 ![Subscription active](images/task1/subscription-active.png)
-13. Close the Subscription confirmed tab and Topic tab and return to the Subscriptions page as seen in step 8. Click on the Subscription Name. USer2sub in the case. Confirm that Filter group has compartment and service added.
+13. Close the Subscription confirmed tab and Topic tab and return to the Subscriptions page as seen in step 8. Click on the Subscription Name. User2Sub in the case. Confirm that Filter group has compartment and service added.
 ![Subscription filter groups](images/task1/subscription-filter-groups.png)
 
 ## Task 2: Provision Fusion Environments

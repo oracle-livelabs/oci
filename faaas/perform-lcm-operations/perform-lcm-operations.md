@@ -60,19 +60,66 @@ Estimated Time: 20+ minutes
 ![Refresh completed mail](images/task1/refresh-completed-email.png)
 
 ## Task 2: Edit Language Pack
-Add Spanish, etc.
+You can add language packs to an environment. For more information about language packs, see [Understanding Language Packs](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/plan-environment.htm#about-language-packs). Note that you can't remove a language pack.
 
-watch work request
+1. Navigate to the environment: On the **Applications tab** of the Console, click **Fusion Applications**. On the **Overview** page, find the environment family for the environment, and then click the environment name.
+2. Under **Resources**, click **Language packs**.
+3. Click **Install**.
+    - Select the check box for the language to include. You can add two language packs at a time.
+    - Click **Install**.
+    ![Language packs panel](images/task2/language-packs-panel.png)
+    - Follow the confirmation prompts, enter 1 and click **Install**
+    ![Confirm install language](images/task2/confirm-install-language.png)
+4. Go to Work request and notice that the Updating environment Work request is Accepted, then In progress, and then Succeeded in a few minutes.
+![Install language pack work request](images/task2/language-pack-work-request.png)
+5. Go back to the Language Packs resource and notice that Spanish has been added.
+![Language pack added](images/task2/added-language-pack.png)
+
+
 ## Task 3: Enable Network Restrictions
-Add cidr rule
+Users can allow access to Fusion Application only from selected public IPs. You can configure CIDR ranges or VCNs. In this exercise, we will enter a CIDR/IP range.
 
-watch work request
+1. Click **Networking** from the resources section
+2. In the Networking tab, Access control rules. Click **Create rule** and select the following values
+    - IP notification type = CIDR block
+    - CIDR Block = 0.0.0.0/0
+3. Click on **Create rule**
+![Create network rule](images/task3/create-network-rule.png)
+4. Check the Work request for the same
+5. Go back to Networking to see the CIDR block entry in the Access control rules
+![Created network rule](images/task3/created-network-rule.png)
+
 ## Task 4: Edit Maintenance
-For a pod, enable monthly patching, update the patching cadence to production
+1. Note down the Next Maintenance date for the environment. Make sure you are working on a dev or test environment.
+![Next maintenance](images/task4/next-maintenance.png)
+2. Go to **Maintenance** under Resources
+3. Click on **Edit maintenance**
+![Edit maintenance panel](images/task4/edit-env-maintenance-panel.png)
+4. Click on **Custom**. Change Patching cadence to **Production**. and **Save changes**.
+![Custom environment maintenance](images/task4/select-custom-maintenance.png)
+5. Note the change in Next maintenance date for the environment, it would have moved 2 weeks ahead. Maintenance can be performed in the first week of the month (non-production cadence) or in the third week of the month (production cadence). Typically, for test and development environments you would choose non-production and for production environments, you would choose production. See [Types of Maintenance and Schedules](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/plan-environment-family.htm#maint-types) for more details.
+6. Check the Work request for Updating environment.
 
-watch work request
 ## Task 5: Edit Encryption
-Create Vault, Key, Create policy, update pod with vault/key to schedule
+By default, your Fusion Applications environments are protected by Oracle-managed encryption keys. By subscribing to the Oracle Break Glass and Database Vault service, you are offered the customer-managed keys feature that allows you to provide and manage the encryption keys that protect your environments. Fusion Applications leverages the OCI Vault service to enable you to create and manage encryption keys to secure the data stored at rest in your production and non-production environments. You can set up keys on your environment either during environment creation or you can add the key to an existing environment. Before you assign the Vault and Keys to the Environment, you need to create Vault and AES-256 type Key in your account and assign permissions by writing policies for the same For more info please refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/manage-security-key-management.htm).
+
+1. Go to Security under Resources and click on Edit encryption key.
+![Edit encryption key](images/task5/edit-encryption-key.png)
+2. Click on the **Customer-managed key** and enter the details as follows
+    - Change **compartment** for the vault to pmpreprod (root)
+    - Select the **FusionVault** 
+    - Select **FusionKey** in the Master encryption key field
+3. Note the Encryption scheduling alert - Updating the encryption of an existing environment will be done during the next maintenance downtime. **Save changes**
+![Select customer managed key](images/task5/customer-managed-key.png)
+4. Notice the Customer-managed encryption is scheduled. Click on the Key Status - **Scheduled**
+![Key scheduled](images/task5/customer-managed-key-scheduled.png)
+![Key scheduled panel](images/task5/scheduled-encryption-panel.png)
+5. Check the Work request for the same - Updating environment.
+
+**Note**: When the custom key is active, the key version will be displayed on the screen and you can go to the Key management screen, by clicking the Key link and perform Key management operations such as
+- Key Rotate, Key Rotate with external key/BYOK (Bring your own key) - Key rotation creates a new key version. Fusion will automatically change the key version and will reflect the new version in the Encryption resource of the environment detail page. This change is seamless for the fusion application user and required no downtime.
+- Enable/Disable key to remove access to fusion environments from the user interface and also from the backend. Key Disable operation affects Fusion environments in a few minutes while enabling the Key back will take an hour or so.
+![Key details](images/task5/vault-key-details.png)
 
 ## Acknowledgements
 * **Author** - <Name, Title, Group>
