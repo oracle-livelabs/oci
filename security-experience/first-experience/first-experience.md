@@ -126,7 +126,7 @@ This lab assumes you have completed previous lab.
 
 3. (Optional) As a verification step, you can go back in the SQL tools by clicking Database Actions on your Autonomous Database, and log in as SECASSESSMENT user:  
 
-    ![Database Actions](images/database-actions.png "Database Actions")
+    ![Database Actions](images/database-actions-security.png "Database Actions")
 
 **Note:** You may need to log in first as ADMIN, then Click Sign Out, and log in as SECASSESSMENT user.
 

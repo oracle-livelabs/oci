@@ -150,7 +150,7 @@ To be able to access the web SQL Developer provided in your Autonomous Database,
 
 4.	Once the Autonomous Database status is set to green and ACTIVE, click on Database Actions.
 
-    ![Database Actions](./images/database-actions.png "Database Actions")
+    ![Database Actions](./images/database-actions-security.png "Database Actions")
 
 5. Log in with ADMIN user and the password you provided during database creation.
 
