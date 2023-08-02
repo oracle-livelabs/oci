@@ -14,9 +14,6 @@ In this workshop, you will learn how to:
 2.	Elegance of a Modern approach to Sourcing and Self-service Procurement 
 3.	Sophistication of an Advanced Risk Monitoring Solution  
 
-Adventure awaits, show what you know, and rise to the top of the leader board!!!
-
-[![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:)
 
 
 ## Acknowledgements

@@ -104,6 +104,8 @@ In this activity, you will:
 
     [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:)
 
+    [Click here](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
+
 
 ## Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services
