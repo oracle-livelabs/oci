@@ -250,5 +250,5 @@ In this activity, you will:
 
 ## Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services
-* **Contributors** -  Harold Dickerman, Business Architect
-* **Last Updated By/Date** - Kevin Lazarz, September 2022
+* **Contributors** -  Steve Quinton, Team Lead – Risk Solutions 
+* **Last Updated By/Date** - Kevin Lazarz, August 2023
