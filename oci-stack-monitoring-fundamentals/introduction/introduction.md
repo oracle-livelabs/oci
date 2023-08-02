@@ -47,7 +47,7 @@ In this workshop, the following topics will be covered:
 * **Alarms**
     - Review an open alarm notification
     - Review the process of configuring an alarm
-* **Putting it all together**
+* **Apply what you have learned**
     - Review an open alarm
     - Navigate to homepage of resource in a firing state
     - Review performance of resource
@@ -65,4 +65,4 @@ In this workshop, the following topics will be covered:
     * Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
     * Steven Lemme, Senior Principal Product Manager,  
     * Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, June 2023
+* **Last Updated By/Date** - Aaron Rimel, July 2023
