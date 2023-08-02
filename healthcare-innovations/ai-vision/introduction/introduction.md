@@ -258,11 +258,11 @@ These labs walk you through the steps of setting up [**OCI Email Services**](htt
     * Plain Text / HTML message
     * Sending Speech Transcription and Audio file link in an Email
 
-*Patient Admission Process after Breast Cancer Detection - Lab 23 to Lab 25*
+*Patient Admission Process after Breast Cancer Detection - Lab 22 to Lab 24*
 
 These labs walk you through the steps of creating Oracle Integration Cloud Integration Service and Process automation for the Patient Admission process.
 
-* Create Get Patient Details Integration - Oracle Integration Cloud - Lab 23 
+* Create Get Patient Details Integration - Oracle Integration Cloud 
     * Access Autonomous Database Instance and Download Wallet
     * Log in to Oracle Integration Cloud and Create an Oracle Autonomous Warehouse Database connection
     * Create First Integration to Get Patient Details
@@ -274,7 +274,7 @@ These labs walk you through the steps of creating Oracle Integration Cloud Integ
 
 In this lab, you will learn how to create Oracle Integration Cloud Integration Service for Updating the Patient Data.
 
-* Create Update Patient Details Integration - Oracle Integration Cloud - Lab 24   
+* Create Update Patient Details Integration - Oracle Integration Cloud 
     * Create Second Integration to Update Patient Details
     * Add Database Connection Adapter
     * Add Mapper
@@ -284,7 +284,7 @@ In this lab, you will learn how to create Oracle Integration Cloud Integration S
 
 In this lab you will create end to end patient admission process using Oracle Integration Cloud Generation 2 with Process Automation.
 
-* Complete Process Automation for Patient Admission Process - Lab 25   
+* Complete Process Automation for Patient Admission Process 
     * Create Patient Admission Process Application.
     * Add Human Task as Doctor's Activity
     * Add Human Task as Hospital Administrator's Activity

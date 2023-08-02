@@ -104,15 +104,15 @@
       "filename": "../../oci-email/oci-email.md"
     },
     {
-      "title": "Lab 23: Get Patient Details Integration - OIC",
+      "title": "Lab 22: Get Patient Details Integration - OIC",
       "filename": "../../ai-oic-getpatientdata/getpatientdata.md"
     },
     {
-      "title": "Lab 24: Update Patient Details Integration - OIC",
+      "title": "Lab 23: Update Patient Details Integration - OIC",
       "filename": "../../ai-oic-updatepatientdata/updatepatientdata.md"
     },
     {
-      "title": "Lab 25: Process Automation - Patient Admission Process",
+      "title": "Lab 24: Process Automation - Patient Admission Process",
       "filename": "../../ai-opa/ai-opa.md"
     },
     {
