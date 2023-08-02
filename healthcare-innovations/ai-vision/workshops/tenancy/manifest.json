@@ -60,7 +60,7 @@
       "filename": "../../ai-document-apex-ui/ai-document-apex-ui.md"
     },
     {
-      "title": "Lab 11: Introduction - Speech AI", 
+      "title": "Lab 11: Introduction - Speech AI",
       "filename": "../../ai-speech-introduction/ai-speech-introduction.md"
     },
     {
@@ -102,6 +102,18 @@
     {
       "title": "Lab 21: Setup OCI Email Delivery Service",
       "filename": "../../oci-email/oci-email.md"
+    },
+    {
+      "title": "Lab 22: Get Patient Details Integration - OIC",
+      "filename": "../../ai-oic-getpatientdata/getpatientdata.md"
+    },
+    {
+      "title": "Lab 23: Update Patient Details Integration - OIC",
+      "filename": "../../ai-oic-updatepatientdata/updatepatientdata.md"
+    },
+    {
+      "title": "Lab 24: Process Automation - Patient Admission Process",
+      "filename": "../../ai-opa/ai-opa.md"
     },
     {
       "title": "Need Help?",
