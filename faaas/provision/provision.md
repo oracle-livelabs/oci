@@ -19,7 +19,7 @@ Explore the Fusion overview page. Explore the audit trail security functionality
 Estimated Time: 20+ minutes
 
 ## Task 1: Subscribe to Announcements
-Per pod, maintenance notifications will be delivered. An announcement Email will be received for Env refresh later
+Oracle automatically notifies you by email to let you know about maintenance-related activities, including the dates for the next scheduled maintenance. For more info refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/about-notifications.htm).
 
 1. Click on the **Bell - Announcement Icon** on the top right hand corner to land on the Announcements page. New or unread announcements are indicated by a little green dot on the bell icon.
 ![Announcements page](images/task1/announcements.png)
