@@ -98,8 +98,14 @@ In this activity, you will:
     
     ![walk through](images/image018.png)
 
+15. 
+
+  Adventure awaits, show what you know, and rise to the top of the leader board!!!
+
+    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:)
+
 
 ## Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services
-* **Contributors** -  Harold Dickerman, Business Architect
-* **Last Updated By/Date** - Kevin Lazarz, January 2023
+* **Contributors** -  Steve Quinton, Team Lead – Risk Solutions 
+* **Last Updated By/Date** - Kevin Lazarz, August 2023

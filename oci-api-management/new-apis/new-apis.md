@@ -19,6 +19,7 @@ Estimated time: 20 min
 1. Go to Oracle Cloud Home page
 2. Go to Cloud Editor.
 3. When the editor is started, open a terminal
+    ![Cloud Shell](images/apim-cloudeditor-terminal.png)
 4. Clone the git repository
     ```
     <copy>
@@ -28,11 +29,7 @@ Estimated time: 20 min
 5. Edit the file oci-api-portal/cloud-native-sample/group_common/env.sh
     ![Cloud Shell](images/apim-cloudeditor.png)
 6. In the file group_common/env.sh, you have to set: 
-    - TF\_VAR\_compartment\_ocid in a compartment where the infrastructure components will be created. If no compartment is given and you are Admin of the OCI Tenant, an compartment oci-starter will be created. To get your compartment:
-        - Go to OCI Menu/Identity & Security/Compartments.
-        - Choose your compartment 
-        - And copy the OCID
-        - Take a note ##COMPARTMENT_OCID##
+    - TF\_VAR\_compartment\_ocid to your ##COMPARTMENT_OCID## (see Notes)
     - APIM\_HOST to the APEX Host Name: ##APEX\_HOST##
 7. Then run the build. This will take about 15 mins. 
     ```
@@ -85,11 +82,7 @@ When the Task 1 build is done.
 5. Edit the file oci-api-portal/cloud-native-k8s/group_common/env.sh
     ![Cloud Shell](images/apim-cloudeditor.png)
 6. In the file group_common/env.sh, you have to set: 
-    - TF\_VAR\_compartment\_ocid in a compartment where the infrastructure components will be created. If no compartment is given and you are Admin of the OCI Tenant, an compartment oci-starter will be created. To get your compartment:
-        - Go to OCI Menu/Identity & Security/Compartments.
-        - Choose your compartment 
-        - And copy the OCID
-        - Take a note ##COMPARTMENT_OCID##
+    - TF\_VAR\_compartment\_ocid to your ##COMPARTMENT_OCID## (see Notes)
     - APIM\_HOST to the APEX Host Name: ##APEX\_HOST##
     - TF\_VAR\_auth\_token to the your OCI Auth token (an Auth Token for your user profile)
         - If you have no such token, please generate one with this script
