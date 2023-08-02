@@ -235,6 +235,12 @@ In this activity, you will:
         
     ![Home Page](images/image034.png)
 
+30. 
+
+    Adventure awaits, show what you know, and rise to the top of the leader board!!!
+
+    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:)
+
 ## Summary
 
   You can easily configure the key accounts that is important to you and compare balances real time to PTD, QTD, YTD. Click on the home link to navigate back to the home page. This concludes this activity of account monitor, to summarize – you were able to first define what are the key accounts you want to monitor and then easily view the variances, you were able to very easily identify the variance and drill down to the lowest level of the transaction along with viewing attachments. 
