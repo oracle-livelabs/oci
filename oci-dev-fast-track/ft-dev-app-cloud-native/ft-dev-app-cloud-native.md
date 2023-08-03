@@ -2,6 +2,8 @@
 
 Laboratório para mostrar na prática o funcionamento das ferramentas de desenvolvimento em OCI.
 
+*Tempo estimado para o Lab:* 30 Minutos
+
 ## Introdução
 
 Criar uma aplicação no Kubernetes com as imagens de container armazenadas no Oracle Container Registry (OCIR). O backend da aplicação será exposto através do API Gateway, onde receberá os headers de CORS necessários para se comunicar com o frontend.
@@ -11,12 +13,14 @@ A aplicação já contará com as bibliotecas e configurações necessárias par
 Vamos coletar algumas informações na tenancy do OCI que serão utilizadas ao longo do laboratório, recomendamos que as anote em um bloco de notas para ter acesso quando necessário. São elas:
 
 ```bash
+<copy>
 1. Tenancy Namespace:
 2. User Name:
 3. Auth Token:
 4. APM Endpoint:
 5. Public Key:
 6. Código da Região:
+</copy>
 ```
 
 ## Task 1: Tenancy Namespace
@@ -62,16 +66,20 @@ Vamos precisar do Docker para fazer o build dos containers da aplicação e faze
 ![icone cloud shell](./images/open-cloud-shell.PNG)
 
 ```bash
+<copy>
 docker login <Codigo Region>.ocir.io -u <tenancy-namespace>/<username>
+</copy>
 ```
 
 Resultado:
 
 ```bash
+<copy>
 password: <Auth Token>
 WARNING! Your password will be stored unencrypted in /home/trial01oci/.docker/config.json.
 Configure a credential helper to remove this warning. See
 https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+</copy>
 ```
 
 ## Task 5: Configurar o Kubectl
@@ -87,25 +95,30 @@ Agora vamos configurar o acesso ao Kubernetes via Kubectl no Cloud Shell, no men
 Exemplo:
 
 ```bash
+<copy>
 $ oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.sa-saopaulo-1.aaaaaaaan2pf --file $HOME/.kube/config --region sa-saopaulo-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
 
 New config written to the Kubeconfig file /home/trial01oci/.kube/config
-
+</copy>
 ```
 
 O acesso pode ser testado com o seguinte comando:
 
 ```bash
+<copy>
 kubectl get nodes
+</copy>
 ```
 
 Deve ter uma resposta parecida com essa:
 
 ```bash
+<copy>
 NAME           STATUS   ROLES   AGE     VERSION
 10.20.10.125   Ready    node    3h23m   v1.21.5
 10.20.10.138   Ready    node    3h23m   v1.21.5
 10.20.10.208   Ready    node    3h23m   v1.21.5
+</copy>
 ```
 
 ## Task 6: Copiar o Código
@@ -113,7 +126,9 @@ NAME           STATUS   ROLES   AGE     VERSION
 1. Abra o Cloud Shell e execute o git clone do código da aplicação:
 
 ```bash
+<copy>
 git clone https://github.com/ChristoPedro/labcodeappdev.git
+</copy>
 ```
 
 ## Task 7: Configurar e fazer o Deploy do Backend
@@ -121,7 +136,9 @@ git clone https://github.com/ChristoPedro/labcodeappdev.git
 1. Navegue até a pasta do backend:
 
 ```bash
+<copy>
 cd labcodeappdev/Backend/code
+</copy>
 ```
 
 2. Vamos realizar o build da imagem do backend e depois fazer o push para o OCIR.
@@ -131,7 +148,9 @@ cd labcodeappdev/Backend/code
 3. Execute o comando:
 
 ```bash
+<copy>
 docker build -t <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/back .
+</copy>
 ```
 
 ### Docker Push
@@ -139,7 +158,9 @@ docker build -t <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/back .
 Depois da Build vamos fazer o push para o OCIR
 
 ```bash
+<copy>
 docker push <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/back
+</copy>
 ```
 
 ## Task 8:  Criando Secret no Kubernetes
@@ -149,13 +170,17 @@ Vamos criar um secret que irá conter as informações do login do OCIR. Permiti
 1. Basta executar esse código, substituindo os valores
 
 ```bash
+<copy>
 kubectl create secret docker-registry ocisecret --docker-server=<region-key>.ocir.io --docker-username='<tenancy-namespace>/<oci-username>' --docker-password='<oci-auth-token>' --docker-email='<email-address>'
-````
+</copy>
+```
 
 Resposta:
 
 ```bash
+<copy>
 secret/ocisecret created
+</copy>
 ```
 
 2.  Configurar o Manifesto de Kubernetes
@@ -163,13 +188,17 @@ secret/ocisecret created
 Vamos agora voltar uma pasta:
 
 ```bash
+<copy>
 cd ..
+</copy>
 ```
 
 3. Editar o código para adicionar os parametros do APM e da imagem:
 
 ```bash
+<copy>
 vi Deploybackend.yaml
+</copy>
 ```
 
 4. Pressione **i** para editar.
@@ -177,7 +206,9 @@ vi Deploybackend.yaml
 5. Substitua os valores de **Image-Name**, **Endpoint do APM** e **Key do APM** nas seguites linhas:
 
 ```note
+<copy>
 Image-Name = <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/back
+</copy>
 ```
 
 ```yaml
@@ -193,6 +224,7 @@ Image-Name = <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/back
           value: "[Substitua pela Public Key do APM]"
 ```
 
+
 6. Após substituir os valores utilize os seguintes comando **ESC : WQ** e pressione Enter.
 
 7. Deploy no Kubernetes
@@ -200,20 +232,26 @@ Image-Name = <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/back
 Com o arquivo editado podemos executar o seguinte comando para realizar o deploy:
 
 ```bash
+<copy>
 kubectl apply -f Deploybackend.yaml
+</copy>
 ```
 
 Deve ter uma saida como a seguinte:
 
 ```bash
+<copy>
 deployment.apps/cepapp-backend created
 service/cepapp-backend created
+</copy>
 ```
 
 Podemos usar o seguinte código para saber se os pods já estão no ar:
 
 ```bash
+<copy>
 kubectl get pods
+</copy>
 ```
 
 ## Task 9:  Configuração API Gateway
@@ -221,14 +259,18 @@ kubectl get pods
 1. Primeiro precisamos descobrir o IP do **Load Balancer** do serviço do backend.
 
 ```bash
+<copy>
 kubectl get svc cepapp-backend
+</copy>
 ```
 
 A resposta será parecida com essa:
 
 ```bash
+<copy>
 NAME             TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)          AGE
 cepapp-backend   LoadBalancer   10.96.123.143   10.20.20.237   5000:31952/TCP   13m
+</copy>
 ```
 
 Vamos utilizar o EXTERNAL-IP para realizar expor-lo através do **API Gateway**.
@@ -278,7 +320,9 @@ Na região do CORS clique no botão add e preencha os seguintes campos:
 9. Basta jogar o endpoint no navegador, no seguinte formato:
 
 ```bash
+<copy>
 <seu_endpoint>/getcep?cep=<cep-da-sua-casa>
+</copy>
 ```
 
 ![imagem navegador](images/api6.png)
@@ -292,25 +336,33 @@ Para o Frontend precisamos substituir o URL do backend e as informações do APM
 Vamos navegar até a pasta do javascript:
 
 ```bash
+<copy>
 cd $HOME/labcodeappdev/Frontend/code/js
+</copy>
 ```
 
 E editar o arquivo **api.js**
 
 ```bash
+<copy>
 vi api.js
+</copy>
 ```
 
 2. Vamos substituir a variável url.
 
-```js
+```bash
+<copy>
 const url = '[Substituia com a URL do API Gateway]'
+</copy>
 ```
 
 3. Para isso pressione **i** para editar o arquivo substitua as informações dentro das aspas.
 
-```js
+```bash
+<copy>
 const url = 'https://ghstpnks2qut3htj2w7zmdtghi.apigateway.sa-saopaulo-1.oci.customer-oci.com/cep/getcep'
+</copy>
 ```
 
 4. Para salvar use as teclas **ESC : WQ** .
@@ -318,18 +370,23 @@ const url = 'https://ghstpnks2qut3htj2w7zmdtghi.apigateway.sa-saopaulo-1.oci.cus
 5. Agora precisamos configurar o APM no HTML, vamos voltar uma pasta:
 
 ```bash
+<copy>
 cd ..
+</copy>
 ```
 
 6. Editar o arquivo **index.html**:
 
 ```bash
+<copy>
 vi index.html
+</copy>
 ```
 
 7. Substituir os valores nas seguintes linhas:
 
-```html
+```bash
+<copy>
 <script>
   window.apmrum = (window.apmrum || {}); 
   window.apmrum.serviceName='CEP';
@@ -338,6 +395,7 @@ vi index.html
   window.apmrum.OracleAPMPublicDataKey='[Substitua com a Public Key do APM]';
 </script>
 <script async crossorigin="anonymous" src="[Substitua com o Endpoint do APM]/static/jslib/apmrum.min.js"></script>
+</copy>
 ```
 
 8. Salve o arquivo.
@@ -347,7 +405,9 @@ vi index.html
 9. Após, configurar o frontend, vamos realizar a build do docker com o seguinte comando.
 
 ```bash
+<copy>
 docker build -t <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/front .
+</copy>
 ```
 
 ### Docker Push Front
@@ -355,7 +415,9 @@ docker build -t <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/front .
 10. Ao final da build podemos fazer o push para o OCIR
 
 ```bash
+<copy>
 docker push <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/front
+</copy>
 ```
 
 ## Task 11: Configurar o Manifesto do Kubernetes
@@ -363,19 +425,25 @@ docker push <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/front
 1. Agora precisamos voltar mais uma pasta:
 
 ```bash
+<copy>
 cd ..
+</copy>
 ```
 
 2. Editar o arquivo Deployfrontend.yaml:
 
 ```bash
+<copy>
 vi Deployfrontend.yaml
+</copy>
 ```
 
  3. Pressione **i** para editar o arquivo, e substitua a **Image-Name**:
 
- ```note
-Image-Name = <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/front
+ ```bash
+ <copy>
+image-Name = <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/front
+</copy>
 ```
 
  ```yaml
@@ -396,14 +464,18 @@ Image-Name = <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/front
 5. Agora vamos executar o deploy do frontend no Kubernetes com o seguinte comando:
 
 ```bash
+<copy>
 kubectl apply -f Deployfrontend.yaml
+</copy>
 ```
 
 Resultado:
 
 ```bash
+<copy>
 deployment.apps/cepapp-front created
 service/cepapp-front created
+</copy>
 ```
 
 ## Task 12:  Testando a Aplicação
@@ -413,14 +485,18 @@ Agora com o deploy do frontend e do backend podemos testar a aplicação.
 1. Vamos obter o IP do Load Balancer do Frontend para acessar a aplicação:
 
 ```bash
+<copy>
 kubectl get svc cepapp-front
+</copy>
 ```
 
 Obtendo um resultado parecido com esse:
 
 ```bash
+<copy>
 NAME           TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)        AGE
 cepapp-front   LoadBalancer   10.96.188.10   152.70.213.248   80:31117/TCP   89s
+</copy>
 ```
 
 2. Basta copiar o IP externo no navegador e testar se aplicação retorna as informações.
@@ -429,10 +505,10 @@ cepapp-front   LoadBalancer   10.96.188.10   152.70.213.248   80:31117/TCP   89s
 
 ## Conclusão
 
-Nesta sessão você aprendeu como utilizar Kubernetes na criação de uma aplicação já com bibliotecas e configurações necessárias!
+### Parabéns!!!👏🏻 Nesta sessão você aprendeu como utilizar Kubernetes na criação de uma aplicação já com bibliotecas e configurações necessárias! Você terminou esse laboratório pode seguir para o próximo Lab.
 
 
-## Reconhecimentos
+## Autoria
 
 - **Autores** - Andressa Siqueira, Debora Silvia, Thais Henrique
 - **Último Update Por/Date** - Andressa Siqueira Agosto/2023

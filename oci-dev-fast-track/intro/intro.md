@@ -9,7 +9,7 @@ Nosso objetivo é que, ao final deste workshop, os participantes possam adotar e
 
 *Tempo estimado para o Workshop:* 4 Horas
 
-### Objetivos
+## Task 1: Objetivos
 
 Por meio deste guia, iremos fornecer laboratórios práticos de:
 
@@ -20,11 +20,11 @@ Por meio deste guia, iremos fornecer laboratórios práticos de:
 - Aplicações Nativas (Monitoring, Logging, Logging Analytics, Operations Insights e APM)
 
 
-## Saiba Mais
+## Task 2: Saiba Mais
 
 [Acesse nossa página](https://www.oracle.com/br/cloud/cloud-native/).
 
-## Reconhecimentos
+##   Autoria
 
 - **Autores** - Andressa Siqueira, Debora Silva e Thais Henrique
 - **Último Updated Por/Data** - Andressa Siqueira Agosto/2023

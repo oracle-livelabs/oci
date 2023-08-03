@@ -61,7 +61,7 @@ Default branch: main
 7. Na página do repositório recém-criado, clique em HTTPS e:
 Copie para o bloco de notas a informação do usuário a ser utilizado para trabalhar com o git (Usuário Git).
 Copie o comando git clone e o execute no Cloud Shell.
-![clicar botao azul https](images/click-https.png)
+![clicar botao azul https](images/clickgit.png)
 
 8. No Cloud Shell, ao executar o comando, informe o Usuario Git recém-copiado, e o seu Auth Token como senha.
 
@@ -346,16 +346,13 @@ curl --location --request POST '<EXTERNAL-IP>:8081/processcart' \
 -Você deverá visualizar como resposta a soma dos preços dos produtos! Experimente modificar os valores para checar a soma!
 ![resposta cloud shell](images/cloud-shell-sum.png)
 
-👏🏻 Parabéns!!! Você foi capaz de construir com sucesso um pipeline completo de DevOps na OCI! 🚀
-
-
 
 ## Conclusão
 
-Nesta sessão você aprendeu a construir uma esteira de desenvolvimento, com o serviço OCI DevOps, que automatiza a entrega de uma aplicação conteinerizada a um cluster Kubernetes!
+### Parabéns!!!👏🏻 Você foi capaz de construir com sucesso um pipeline completo de DevOps na OCI! Você terminou esse laboratório pode seguir para o próximo Lab.
 
 
-## Reconhecimentos
+## Autoria
 
 - **Autores** - Andressa Siqueira, Debora Silva, Thais Henrique
 - **Último Update Por/Date** - Andressa Siqueira Agosto/2023

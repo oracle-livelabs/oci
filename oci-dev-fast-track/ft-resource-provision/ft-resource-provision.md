@@ -1,4 +1,4 @@
-# Provisionar Recursos
+# Pré Requisito - Provisionar Recursos
 
 ## Introdução
 
@@ -27,6 +27,7 @@ Juntamente com recursos de Rede e Gerenciamento como:
 - Policies
 - Compartments
 
+*Tempo estimado para o Lab:* 30 Minutos
 - - -
 
 ## Task 1: Criação de compartimento
@@ -94,13 +95,11 @@ Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório d
 
 10. Após finalizar o Apply com sucesso, podemos conferir o provisionamento dos nossos recursos!
 
-### ✔ Ambientes provisionados com sucesso!!! Você provisionou recursos usando Terraform na OCI! 🚀
-
 ## Conclusão
 
-Nesta sessão você aprendeu a como provisionar os recursos utilzando Terraform e Resource Manager!
+### Ambientes provisionados com sucesso! Você provisionou recursos usando Terraform na OCI! Você terminou os pré-requisitos! Você pode seguir para o próximo Lab.
 
-## Reconhecimentos
+##  Autoria
 
 - **Autores** - Andressa Siqueira, Debora Silva, Thais Henrique
 - **Último Update Por/Date** - Andressa Siqueira Agosto/2023

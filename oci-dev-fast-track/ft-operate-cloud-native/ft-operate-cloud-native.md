@@ -11,6 +11,8 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 - 🧾 [Documentação do OCI Logging](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/loggingoverview.htm)
 - 🧾 [Documentação do OCI Logging Analytics](https://docs.oracle.com/en-us/iaas/logging-analytics/index.html)
 
+
+
 **A seguir você aprenderá o passo-a-passo desta configuração:**
 
 Como pré-requisito, faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI!
@@ -133,11 +135,11 @@ Dica: Utilizar Save as.. ao inverso de Save para conseguir salvar o resultado co
 
 ## Conclusão
 
-### Parabéns!!! Você foi capaz de configurar com sucesso um pipeline completo de **Logging** e **Logging Analytics** em OCI! 🚀
+### Parabéns!!! 👏🏻 Você foi capaz de configurar com sucesso um pipeline completo de **Logging** e **Logging Analytics** em OCI! Você terminou esse laboratório pode seguir para o próximo Lab.
 
 
 
-## Reconhecimentos
+## Autoria
 
 - **Autores** - Andressa Siqueira, Debora Silva, Thais Henrique
 - **Último Update Por/Date** - Andressa Siqueira Agosto/2023

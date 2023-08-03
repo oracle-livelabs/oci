@@ -27,7 +27,7 @@ Vamos coletar algumas informações na tenancy do OCI que serão utilizadas ao l
 
 1. Para geração de auth token:
 No canto direito superior clique no icone de perfil, e em seguida selecione seu usuário, conforme imagem abaixo:
-![icone perfil](images/IMG00_1.png)
+![icone perfil](images/user-details.png)
 
 2. No canto esquerdo inferior, abaixo de Recursos (Resources) selecione Auth Tokens:
 ![botao generate token](images/authtoken.png)
@@ -73,7 +73,7 @@ Para acessar o guide, clique em Conceitos Básicos (Getting Started) no canto in
 ![gettins started](images/gettingstart.png)
 
 Selecione a opção de Configuração do Cloud Shell (Cloud Shell Setup).
-![cloud shell setup](images/gettinopcoes.png)
+![cloud shell setup](images/gettingopcoes.png)
 
 Execute os passos 1,2 e 3 do guide sem nenhuma alteração:
 ![campos um dois tres](images/passos.png)
@@ -199,12 +199,12 @@ Não se preocupe caso nenhum item tenha sido encontrado, este processo pode leva
 ![campo carregar mensagens](images/mensagensfinal.png)
 
 
-
 ## Conclusão
 
-Nesta sessão você aprendeu a criar uma aplicação baseada em eventos que coleta informações e envia á uma fila de ingestão de dados.
+### Parabéns!!!👏🏻 Nesta sessão você aprendeu a criar uma aplicação baseada em eventos que coleta informações e envia á uma fila de ingestão de dados! Você terminou esse laboratório pode seguir para o próximo Lab.
 
-## Reconhecimentos
+
+## Autoria
 
 - **Autores** - Andressa Siqueira, Debora Silva, Thais Henrique
 - **Último Update Por/Date** - Andressa Siqueira Agosto/2023
