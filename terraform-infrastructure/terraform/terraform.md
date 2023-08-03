@@ -2,10 +2,11 @@
 
 ## Setting up your Tenancy
 
-This lab walks you through how to set up Infrastruce as code using Terraform on OCI. 
+This lab walks you through how to set up the OCI provider in the Terrafrom. 
 
 Estimated Time: 20 minutes
 
+<!--- 
 ### Objectives
 
 In this lab, you will:
@@ -18,66 +19,29 @@ This lab assumes you have:
 
 
 *Below, is the "fold"--where items are collapsed by default.*
+-->
+## Task 1: Terrafrom defining the OCI Provider in the Terraform
+The Terrafrom main.tf file is the main entry point for the Terraform configuration. It contains the core infrastructure definitions for the Terraform environment. 
 
-## Task 1: Concise Task Description
+The first definition in this file is the provider. In Terraform, a "provider" is a plugin that allows Terraform to interact with a specific cloud or infrastructure platform to create, manage, and delete resources. The provider is an essential component as it enables Terraform to abstract the underlying APIs of various cloud providers. In this lab we will be defining the provider using the main.tf and provider.auto.tfvars files. 
 
-(optional) Task 1 opening paragraph.
+**Step 1** 
 
-1. Step 1
+Open the provider.auto.tfvars file. In the file you will see a Terraform configuration block that defines the necessary configurations to authenticate and interact with the Oracle Cloud Infrastructure APIs.
 
-	![Image alt text](images/sample1.png)
+ ![providerfile](images/providerfile.png)
 
-  To create a link to local file you want the reader to download, use the following formats. _The filename must be in lowercase letters and CANNOT include any spaces._
+**Step 2**
 
-	Download the [starter file](files/starter-file.sql) SQL code.
+In the file replace the tenancy, and userid values with the corresponding ocids gathered in the previous labs. As well as replacing the fingerprint string gathered when generating the API key on the OCI console. When generating the API key on OCI console you downloaded a public and private file into your local machine. In the key-file-path variable replace the value with the path to where you stored the private file for the API key. The last variable is region, which is where you identify the region where the resources will be created. Replace the value with the region id for example the Phoenix region id will be "us-phoenix-1".
 
-	When the file type is recognized by the browser, it will attempt to render it. So you can use the following format to force the download dialog box.
+ ![providerautotfvars](images/providerautotfvars.png)
 
-	Download the [sample JSON code](files/sample.json?download=1).
+**Step 3**
 
-  > Note: do not include zip files, CSV, PDF, PSD, JAR, WAR, EAR, bin, or exe files - you must have those objects stored somewhere else. We highly recommend using Oracle Cloud Object Store and creating a PAR URL instead. See [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/en-us/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
+Open the main.tf file. In the file we can see that there is a provider configuration block similar to the one in provider.auto.tfvars. However there is no need to edit this block as it is requesting the values from the configuration block that was just edited in the previous step.
 
-2. Step 2
-
-  ![Image alt text](images/sample1.png)
-
-4. Example with inline navigation icon ![Image alt text](images/sample2.png) click **Navigation**.
-
-5. Example with bold **text**.
-
-   If you add another paragraph, add 3 spaces before the line.
-
-## Task 2: Concise Task Description
-
-1. Step 1 - tables sample
-
-  Use tables sparingly:
-
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
-
-2. You can also include bulleted lists - make sure to indent 4 spaces:
-
-    - List item 1
-    - List item 2
-
-3. Code examples
-
-    ```
-    Adding code examples
-  	Indentation is important for the code example to appear inside the step
-    Multiple lines of code
-  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
-    ```
-
-4. Code examples that include variables
-
-	```
-  <copy>ssh -i <ssh-key-file></copy>
-  ```
+ ![ociprovider](images/ociprovider.png)
 
 ## Learn More
 
