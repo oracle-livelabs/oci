@@ -435,4 +435,4 @@ Nesta sessão você aprendeu como utilizar Kubernetes na criação de uma aplica
 ## Reconhecimentos
 
 - **Autores** - Andressa Siqueira, Debora Silvia, Thais Henrique
-- **Último Update Por/Date** - Debora Silva, Abril/2023
+- **Último Update Por/Date** - Andressa Siqueira Agosto/2023

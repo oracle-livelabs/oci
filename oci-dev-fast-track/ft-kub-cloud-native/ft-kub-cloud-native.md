@@ -177,7 +177,7 @@ A emissão de eventos a partir de um bucket é opcional, podendo ser habilitada 
 
 14. Estamos prontos para realizar o teste, mantenha a aba principal aberta.
 
-## Task 6:Teste
+## Task 6: Teste
 1. Crie um arquivo de formato .txt em seu computador local, com o conteúdo de sua preferência. (O formato .txt utf-8 não é obrigatório, porém todos os testes realizados nesse workshop foram considerando esse formato)
 ![bloco de notas](images/testestream.png)
 
@@ -207,4 +207,4 @@ Nesta sessão você aprendeu a criar uma aplicação baseada em eventos que cole
 ## Reconhecimentos
 
 - **Autores** - Andressa Siqueira, Debora Silva, Thais Henrique
-- **Último Update Por/Date** - Debora Silva Abril/2023
+- **Último Update Por/Date** - Andressa Siqueira Agosto/2023

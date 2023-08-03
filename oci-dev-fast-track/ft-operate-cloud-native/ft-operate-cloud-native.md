@@ -1,4 +1,4 @@
-# Lab 5 - Desenvolver Aplicações Nativas em Nuvem
+# Lab 5 - Operando Aplicações Nativas em Nuvem
 
 ## Introdução
 
@@ -15,9 +15,7 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 Como pré-requisito, faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI!
 
-Execute o [Lab 1](https://github.com/CeInnovationTeam/Developer-Fast-Track-v2/tree/main/Lab.%20%231%20-%20Resource%20Provisioning), caso não o tenha executado anteriormente;
-
-*Tempo estimado para o Lab:* 30 Minutos
+Execute o Lab 1, caso não o tenha executado anteriormente;
 
 ## Task 1:  Ativar o serviço de Logging e habilitar a coleta dos Logs
 
@@ -142,7 +140,7 @@ Dica: Utilizar Save as.. ao inverso de Save para conseguir salvar o resultado co
 ## Reconhecimentos
 
 - **Autores** - Andressa Siqueira, Debora Silva, Thais Henrique
-- **Último Update Por/Date** - Debora Silva, Abril/2023
+- **Último Update Por/Date** - Andressa Siqueira Agosto/2023
 
 
 

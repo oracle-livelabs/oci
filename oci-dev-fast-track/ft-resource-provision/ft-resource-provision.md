@@ -55,7 +55,7 @@ Excelente!!! Podemos agora iniciar com os passos do nosso lab!
 
 Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório do github.
 
- 1. Para isso, acesse o [repositório](https://objectstorage.us-ashburn-1.oraclecloud.com/p/2rLtitUHPADWzRYC8ZsUdRHtoYh8yyMYLlXA6FCLTJlVNqWmIRzAFA4gAiQEnM_k/n/id3kyspkytmr/b/bucket-devft/o/terraform-dev-ft-main.zip) e clique em **Download ZIP**.
+ 1. Para isso, acesse o [repositório](https://github.com/CeInnovationTeam/terraform-dev-ft) e clique em **Download ZIP**.
 
 
 ![imagem git hub repositorio](./images/github-repository.PNG)
@@ -103,5 +103,5 @@ Nesta sessão você aprendeu a como provisionar os recursos utilzando Terraform 
 ## Reconhecimentos
 
 - **Autores** - Andressa Siqueira, Debora Silva, Thais Henrique
-- **Último Update Por/Date** - Debora Silva, Abril/2023
+- **Último Update Por/Date** - Andressa Siqueira Agosto/2023
 

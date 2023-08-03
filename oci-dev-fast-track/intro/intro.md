@@ -7,24 +7,24 @@ Para começar, é importante verificar se o usuário tem uma compreensão clara 
 
 Nosso objetivo é que, ao final deste workshop, os participantes possam adotar estratégias para utilização dos recursos de desenvolvimento nativos em nuvem, com as melhores práticas em OCI.
 
-*Tempo estimado para o Workshop:* 8 Horas
+*Tempo estimado para o Workshop:* 4 Horas
 
 ### Objetivos
 
 Por meio deste guia, iremos fornecer laboratórios práticos de:
 
-- Provisionamento de Recursos (infraestrutura como Código).
-- Desenvolvimento de Aplicações Cloud Native I (API Gateway, OKE, OCIR)
-- Desenvolvimento de Aplicações Cloud Native II(Functions, Streaming, Events)
-- Implantação Automática ( DevOps)
-- Aplicações Nativas ( Monitoring, Logging, Logging Analytics, Operations Insights e APM)
+- Provisionamento de Recursos (Infraestrutura como Código).
+- Desenvolvimento de Aplicações Cloud Native - Parte 1 (API Gateway, OKE, OCIR)
+- Desenvolvimento de Aplicações Cloud Native - Parte 2(Functions, Streaming, Events)
+- Implantação Automática (DevOps)
+- Aplicações Nativas (Monitoring, Logging, Logging Analytics, Operations Insights e APM)
 
 
 ## Saiba Mais
 
-[Acesse nossa página](https://www.oracle.com/br/devops/devops-service/).
+[Acesse nossa página](https://www.oracle.com/br/cloud/cloud-native/).
 
 ## Reconhecimentos
 
 - **Autores** - Andressa Siqueira, Debora Silva e Thais Henrique
-- **Último Updated Por/Data** - Debora Silva  Abril /2023
+- **Último Updated Por/Data** - Andressa Siqueira Agosto/2023

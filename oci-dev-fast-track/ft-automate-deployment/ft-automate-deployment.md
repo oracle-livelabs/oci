@@ -358,4 +358,4 @@ Nesta sessão você aprendeu a construir uma esteira de desenvolvimento, com o s
 ## Reconhecimentos
 
 - **Autores** - Andressa Siqueira, Debora Silva, Thais Henrique
-- **Último Update Por/Date** - Debora Silva, Abril/2023
+- **Último Update Por/Date** - Andressa Siqueira Agosto/2023
