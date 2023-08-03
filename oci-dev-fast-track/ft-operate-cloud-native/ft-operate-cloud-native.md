@@ -4,7 +4,7 @@
 
 Olá, neste laboratório você aprenderá como registrar, monitorar e analisar os logs da infraestrutura Compute de OCI que você provisionou nos laboratórios anteriotes utilizando a
 
-**Oracle Cloud Observability and Management Platform**!
+**Oracle Cloud Observability and Management Platform**
 
 
 - 🌀 [Página oficial do OCI Observability and Management Platform](https://www.oracle.com/br/manageability/)
