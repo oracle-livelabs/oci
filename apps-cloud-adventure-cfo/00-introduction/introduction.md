@@ -15,7 +15,6 @@ In this workshop, you will learn how to:
 3.	Sophistication of an Advanced Risk Monitoring Solution  
 
 
-
 ## Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services
 * **Contributors** -  Steve Quinton, Team Lead – Risk Solutions 
