@@ -111,6 +111,6 @@ For more info refer to the [documentation](https://docs.oracle.com/en-us/iaas/Co
 ![Audit trail](images/task4/audit-trail.png)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - Ankit Kumar, Product Manager in FAaaS
+* **Contributors** -  Tirthankar Nayak, Pranjal Jain, Sai Krishna Palagummi, Pratik Agrawal, Suby Thomas
+* **Last Updated By/Date** - Tirthankar Nayak - August 2023

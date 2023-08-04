@@ -28,6 +28,6 @@ Estimated Time: 5+ minutes.
 ![Finished Guided Tour](images/tour-finished.png)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - Ankit Kumar, Product Manager in FAaaS
+* **Contributors** -  Tirthankar Nayak, Pranjal Jain, Sai Krishna Palagummi, Pratik Agrawal, Suby Thomas
+* **Last Updated By/Date** - Tirthankar Nayak - August 2023

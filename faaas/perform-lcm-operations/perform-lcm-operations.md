@@ -131,6 +131,6 @@ By default, your Fusion Applications environments are protected by Oracle-manage
 ![Key details](images/task5/vault-key-details.png)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - Ankit Kumar, Product Manager in FAaaS
+* **Contributors** -  Tirthankar Nayak, Pranjal Jain, Sai Krishna Palagummi, Pratik Agrawal, Suby Thomas
+* **Last Updated By/Date** - Tirthankar Nayak - August 2023

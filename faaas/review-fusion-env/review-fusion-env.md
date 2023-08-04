@@ -95,6 +95,6 @@ For more info please refer to [documentation](https://docs.oracle.com/en-us/iaas
 ![Edit resource settings](images/task4/edit-resource-settings.png)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - Ankit Kumar, Product Manager in FAaaS
+* **Contributors** -  Tirthankar Nayak, Pranjal Jain, Sai Krishna Palagummi, Pratik Agrawal, Suby Thomas
+* **Last Updated By/Date** - Tirthankar Nayak - August 2023
