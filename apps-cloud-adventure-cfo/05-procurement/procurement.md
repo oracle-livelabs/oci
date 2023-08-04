@@ -44,16 +44,15 @@ In this activity, you will:
 
 4. 
 
-  Here is the initial monitor page with analytical information for current value, potential savings, and supplier response amounts.  
-  At the bottom of the page are the suppliers. Five were invited and three responded. Notice EIP was ranked first, but wasn’t awarded, so you have to dive deeper to find why.
-
-  To see more information about this negotiation you can use the analytical tools available through Cloud Procurement
+  Here is the initial monitor page with analytical information about responses.  
+  Notice EIP was ranked first, but wasn’t awarded.  Let’s dive deeper to find why.  
+  We can use the analytical tools available through Cloud Procurement to analyze further.
   
     > Select **Actions** drop-down menu, then click **Analyze**, select **Analyze Negotiation** from the drop-down menu
     
       ![change](images/4-strategic-procurement.png)
 
-5. 
+1. 
 
   With analytics built into the sourcing process, we see awards by supplier, total savings, and savings by line item.  
   At the bottom of the page are supplier response information where we can pull in response details to see why EIP Inc wasn’t awarded this negotiation despite the highest savings potential.
@@ -106,6 +105,8 @@ In this activity, you will:
   Adventure awaits, show what you know, and rise to the top of the leader board!!!
 
     [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:)
+
+    [Click here](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
 
 
 
@@ -211,6 +212,8 @@ In this activity, you will:
   Adventure awaits, show what you know, and rise to the top of the leader board!!!
 
       [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:)
+
+      [Click here](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
 
 
 # Acknowledgements
