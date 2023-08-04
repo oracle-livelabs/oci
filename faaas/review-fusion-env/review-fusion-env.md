@@ -12,22 +12,25 @@ In this lab we will log into another cloud account and look at an actual environ
 Estimated Time: 20+ minutes
 
 ## Get Started
-1. Log out of your workshop account. Click on Sign out from the profile icon at the top right-hand corner of the screen.
+1. If you are logged-in, then log out of your workshop account. Click on the Profile icon at the top right-hand corner of the screen. Click on **Sign out** to logout of the account.
 ![Cloud account signout](images/get-started/cloud-account-signout.png)
-2. Login to https://cloud.oracle.com Faaasproduction33 tenancy. Username/password will be provided in the lab.
+2. Navigate to https://cloud.oracle.com
+3. Use **Faaasproduction33** tenancy to login to cloud portal.
+4. Select **Default** identity domain.
+5. Enter the Username/password (will be provided in the lab) and click **Sign In**.
 
 ## Task 1: Subscription
-1. Go to the Quick Actions on the Applications homepage and click on View subscriptions
+1. Goto the **Quick Actions** under **Applications** tab and click on **View subscriptions**
 ![Quick actions - View subscriptions](images/task1/view-subscription.png)
-2. Notice the subscriptions in the account. Type tells you if it is an Application or Infrastructure service.
+2. Notice the subscriptions in the account. **Type** column tells you if it is an Application or Infrastructure service. Click on the Fusion subscription.
 ![Subscriptions page](images/task1/subscriptions-page.png)
-3. Click on Fusion subscription and notice the Service Products in it
+3. Take a look at the Subscription services. Click on 1st product quantity for HCM Base product **500**.
 ![Subscription services](images/task1/subscription-services.png)
-4. Click on 1st product quantity for HCM Base product 500 and see more details on the product.
+4. See more details on the product.
 ![Order details](images/task1/order-details-panel.png)
 
 ## Task 2: Metrics
-Monthly performance metrics for a specific month are displayed after the end of the calendar month. After the end of the month, calculations are run to determine the overall performance for the month. There are 2 charts available - 
+Monthly performance metrics for a specific month are displayed after the end of the calendar month. After the end of the month, calculations are run to determine the overall performance for the month. Monthly performance metrics are available for Production environment only. There are 2 charts available:
 - Monthly Service Availability - % of application availability that is caused by unplanned downtime
 - Monthly application average response time - average page responses by the server in milliseconds
 
@@ -41,7 +44,7 @@ For more info please refer to the [documentation](https://docs.oracle.com/en-us/
 ![Metrics table view](images/task2/metrics-table-view.png)
 
 ## Task 3: Integrations
-You can discover and manage the services that are integrated with your Fusion Applications environments.
+You can discover and manage the services that are integrated with your Fusion Applications environments. 
 
 When you provision an environment, additional services are provisioned and integrated with your Fusion Applications. These services extend the functionality of your applications. The set of additional services that are provisioned varies depending on the subscriptions (or SKUs) you purchased and the type of environment (production or non-production). The Integrations feature of environment management lets you discover and manage these additional services from a single interface.
 

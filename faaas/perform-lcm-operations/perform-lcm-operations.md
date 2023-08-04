@@ -2,10 +2,10 @@
 
 ## Introduction
 
-Perform Lifecycle Management activities on the pod
+Perform Lifecycle Management activities on the Fusion Applications environment
 
 ### Objective
-* Learn how to refresh an environment and mask data on test or development environment
+* Learn how to refresh and mask data on test or development environment
 * Learn how to edit a language pack
 * Learn how to enable network restrictions
 * Learn how to edit maintenance
@@ -14,7 +14,9 @@ Perform Lifecycle Management activities on the pod
 Estimated Time: 20+ minutes
 
 ## Task 1: Refresh Environment
-1. Go back to Fusion environment detail page. Click ORACLE Cloud (upper left-hand corner to goto the Applications tab) Open My Applications, Fusion Applications chevron, and click on test or dev environment.
+An environment refresh copies data from a source environment to a target environment, making a copy of the source environment onto the target environment. Environment refreshes ensure a predictable experience during testing activities by providing a comparable non-production environment for testing and validation, before applying changes to your production environment. For more info refer to [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/refresh-environment.htm).
+
+1. Click **ORACLE Cloud** (upper left-hand corner to goto the Applications tab) Open My Applications, Fusion Applications chevron, and click on test or dev environment. **Note**: You cannot refresh a production Environment, so make sure you are working on Test or development environment.
 ![Select test or dev environment](images/task1/select-test-dev-env.png)
 2. Click on **Refresh** Tab in the Resources section on the left-hand side.
 ![Refresh section](images/task1/refresh-section.png)
@@ -31,7 +33,7 @@ Estimated Time: 20+ minutes
 ![Refresh created](images/task1/created-refresh.png)
 7. Click on **Work Request** in the left-hand resources section to see the Refreshing environment work request created with 0% completed state. **Note**: Since this is a simulation of refresh. The job will be completed within minutes. In actual environments Refresh can take a few hours to complete.
 ![Created refresh work request](images/task1/refresh-work-request.png)
-8. Go back to the Refresh resource. Notice the Last refresh date is stamped in the header and status in the details is Succeeded.
+8. Go back to the Refresh resource and refresh the page. Notice the Last refresh date is stamped in the header and status in the details is Succeeded.
 ![Refresh now succeeded](images/task1/refresh-succeeded.png)
 9. Go back to Work requests in the Resources section and notice the Operation Refreshing environment Status has changed to Succeeded and % Complete 100%
 ![Refresh now work request succeeded](images/task1/refresh-wr-succeeded.png)
@@ -46,29 +48,35 @@ Estimated Time: 20+ minutes
 ![Confirm refresh later](images/task1/refresh-confirm.png)
 13. Notice that the Scheduled job is posted in the Refresh tab
 ![Refresh later scheduled](images/task1/refresh-later-scheduled.png)
-14. In case a user forgets to mask data during refresh, or there is additional sources of data in the fusion environment that needs to be masked, users can run data masking as a standalone job. Go to the **Security** tab of the Resources section and then open the **Data Masking** tab
+14. There is an option to re-schedule / cancel a refresh. Click on the 3 dots next to the Scheduled refresh and open the menu. Click on **Reschedule** refresh option.
+![Reschedule refresh](images/task1/reschedule-refresh-option.png)
+15. Enter the **New refresh date** and **environment name** to confirm re-schedule refresh. Click **Reschedule**.
+![Confirm reschedule refresh](images/task1/confirm-reschedule-refresh.png)
+16. The refresh should now be scheduled to the new date.
+![Confirm reschedule refresh](images/task1/rescheduled-refresh.png)
+17. In case a user forgets to mask data during refresh, or there is additional sources of data in the fusion environment that needs to be masked, users can run data masking as a standalone job. Go to the **Security** tab of the Resources section and then open the **Data Masking** tab
 ![Data masking tab](images/task1/data-masking-tab.png)
-15. Click on Run data masking. Data masking confirmation modal pops up. Enter the environment name and click on Run data masking.
+18. Click on Run data masking. Data masking confirmation modal pops up. Enter the environment name and click on Run data masking.
 ![Confirm run data masking](images/task1/run-data-masking.png)
-16. Data masking job will be seen in the tab with the status In progress, which will change to Succeeded in a few minutes. you might need to refresh the browser to see the updates. **Note**: Since this is a simulation of a data masking job, it will be completed within a few minutes. The actual job will take a few hours. Also, the environment is unavailable during this time.
+19. Data masking job will be seen in the tab with the status In progress, which will change to Succeeded in a few minutes. you might need to refresh the browser to see the updates. **Note**: Since this is a simulation of a data masking job, it will be completed within a few minutes. The actual job will take a few hours. Also, the environment is unavailable during this time.
 ![Data masking run added](images/task1/data-masking-added.png)
-17. Work request will be created as well, where you can monitor the progress.
+20. Work request will be created as well, where you can monitor the progress.
 ![Data masking work request](images/task1/data-masking-work-request.png)
-18. Click on the **Bell-Announcement** icon on the top right-hand corner to go to the announcements page. Click on the **Announcements** and make sure your compartment is selected. You will see the announcement for the fusion environments you created. Notice the **Environment Refresh Completed** announcement.
+21. Click on the **Bell-Announcement** icon on the top right-hand corner to go to the announcements page. Click on the **Announcements** and make sure your compartment is selected. You will see the announcement for the fusion environments you created. Notice the **Environment Refresh Completed** announcement.
 ![Refresh completed announcement](images/task1/env-refresh-completed-announcement.png)
-19. Check your email for the announcement
+22. Check your email for the announcement
 ![Refresh completed mail](images/task1/refresh-completed-email.png)
 
 ## Task 2: Edit Language Pack
 You can add language packs to an environment. For more information about language packs, see [Understanding Language Packs](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/plan-environment.htm#about-language-packs). Note that you can't remove a language pack.
 
-1. Navigate to the environment: On the **Applications tab** of the Console, click **Fusion Applications**. On the **Overview** page, find the environment family for the environment, and then click the environment name.
+1. Navigate to the environment details page: Click on the **Oracle Cloud icon** to go to the **Applications Homepage**, click **Fusion Applications**. On the **Overview** page, find the environment family for the environment, and then click on any environment name to go to the details page.
 2. Under **Resources**, click **Language packs**.
 3. Click **Install**.
     - Select the check box for the language to include. You can add two language packs at a time.
     - Click **Install**.
     ![Language packs panel](images/task2/language-packs-panel.png)
-    - Follow the confirmation prompts, enter 1 and click **Install**
+    - Follow the confirmation prompts, enter 1 or 2 based on number of language selected. Click **Install**
     ![Confirm install language](images/task2/confirm-install-language.png)
 4. Go to Work request and notice that the Updating environment Work request is Accepted, then In progress, and then Succeeded in a few minutes.
 ![Install language pack work request](images/task2/language-pack-work-request.png)
@@ -93,12 +101,13 @@ Users can allow access to Fusion Application only from selected public IPs. You 
 1. Note down the Next Maintenance date for the environment. Make sure you are working on a dev or test environment.
 ![Next maintenance](images/task4/next-maintenance.png)
 2. Go to **Maintenance** under Resources
-3. Click on **Edit maintenance**
+3. Click on **Edit maintenance**.
+4. Click on **Custom**.
 ![Edit maintenance panel](images/task4/edit-env-maintenance-panel.png)
-4. Click on **Custom**. Change Patching cadence to **Production**. and **Save changes**.
+5. Change Patching cadence to **Production**. and **Save changes**.
 ![Custom environment maintenance](images/task4/select-custom-maintenance.png)
-5. Note the change in Next maintenance date for the environment, it would have moved 2 weeks ahead. Maintenance can be performed in the first week of the month (non-production cadence) or in the third week of the month (production cadence). Typically, for test and development environments you would choose non-production and for production environments, you would choose production. See [Types of Maintenance and Schedules](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/plan-environment-family.htm#maint-types) for more details.
-6. Check the Work request for Updating environment.
+6. Note the change in Next maintenance date for the environment, it would have moved 2 weeks ahead. Maintenance can be performed in the first week of the month (non-production cadence) or in the third week of the month (production cadence). Typically, for test and development environments you would choose non-production and for production environments, you would choose production. See [Types of Maintenance and Schedules](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/plan-environment-family.htm#maint-types) for more details.
+7. Check the Work request for Updating environment.
 
 ## Task 5: Edit Encryption
 By default, your Fusion Applications environments are protected by Oracle-managed encryption keys. By subscribing to the Oracle Break Glass and Database Vault service, you are offered the customer-managed keys feature that allows you to provide and manage the encryption keys that protect your environments. Fusion Applications leverages the OCI Vault service to enable you to create and manage encryption keys to secure the data stored at rest in your production and non-production environments. You can set up keys on your environment either during environment creation or you can add the key to an existing environment. Before you assign the Vault and Keys to the Environment, you need to create Vault and AES-256 type Key in your account and assign permissions by writing policies for the same For more info please refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/manage-security-key-management.htm).
@@ -116,7 +125,7 @@ By default, your Fusion Applications environments are protected by Oracle-manage
 ![Key scheduled panel](images/task5/scheduled-encryption-panel.png)
 5. Check the Work request for the same - Updating environment.
 
-**Note**: When the custom key is active, the key version will be displayed on the screen and you can go to the Key management screen, by clicking the Key link and perform Key management operations such as
+**Note**: When the custom key is active, the key version will be displayed on the screen and you can go to the Key management screen, by clicking the Key link and perform Key management operations such as:
 - Key Rotate, Key Rotate with external key/BYOK (Bring your own key) - Key rotation creates a new key version. Fusion will automatically change the key version and will reflect the new version in the Encryption resource of the environment detail page. This change is seamless for the fusion application user and required no downtime.
 - Enable/Disable key to remove access to fusion environments from the user interface and also from the backend. Key Disable operation affects Fusion environments in a few minutes while enabling the Key back will take an hour or so.
 ![Key details](images/task5/vault-key-details.png)

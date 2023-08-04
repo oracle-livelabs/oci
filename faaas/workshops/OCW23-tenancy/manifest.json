@@ -3,6 +3,10 @@
     "help": "livelabs-help-**enterarea**_us@oracle.com",
     "tutorials": [
         {
+            "title": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
             "title": "Get Started",
             "filename": "../../get-started/get-started.md"
         },
