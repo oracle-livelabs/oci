@@ -20,7 +20,6 @@ In this lab, you will:
 
 This lab assumes you have:
 * An Oracle Cloud account
-* Have OCI CLI Setup
 
 ## Task 1: Generate SSH Key
 

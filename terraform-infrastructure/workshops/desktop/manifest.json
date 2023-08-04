@@ -10,11 +10,6 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Test",
-      "description": "Testing",
-      "filename": "../../data-load/data-load.md"
-    },
-    {
       "title": "Lab 1: Setting up your Tenancy",
       "description": "Labs that follow the introduction are numbered, starting with Lab 1",
       "filename": "../../setup/setup.md"

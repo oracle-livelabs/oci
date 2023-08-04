@@ -36,5 +36,5 @@ This lab assumes you have:
 
 ## Acknowledgements
 * **Authors** - Germain Vargas, Cloud Enginner
-* **Contributors** - David Ortega, Cloud Enginner - Hoyoung Kim, Cloud Enginner
+* **Contributors** - David Ortega, Cloud Enginner and Hoyoung Kim, Cloud Enginner
 * **Last Updated By/Date** - Germain Vargas, July 2023
