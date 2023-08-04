@@ -4,54 +4,38 @@
 
 ### Introduction
 
-This lab walks you through how to set up Networking Infrastruce as code using Terraform on OCI. 
+This hands-on lab walks goes through the process of setting up Networking Infrastructure as code using Terraform on Oracle Cloud Infrastructure(OCI). In this lab, you will learn how to harness the power of Terraform to define and provision your OCI networking resources programmatically. By leveraging the OCI Terraform environment provided in the previous lab, you will be able to create a variety of networking resources, just as you would in the OCI console, but in a more automated and repeatable manner.
 
-Estimated Time: 30 minutes
+Throughout the lab, you will be guided through multiple tasks that demonstrate how to create various networking components, such as Virtual Cloud Networks(VCNs), Route Tables and Load Balancers. By the end of this lab, you will have gained practical experience in utilizing Terraform to design and deploy OCI networking resources, understanding how to input the necessary parameters that mirror those found in the OCI console.
 
-### About <Product/Technology> 
-In Terrafrom, there are mulitple files that are created to define input variables for infrastructure deployment. It is one of several ways to provide values to the variables used in a Terrafrom configuration. In this section we will be using the ".tf" extension which stands for Terrafrom.
+Estimated Time: 1 hour and 30 minutes
 
-In the terraform environment provided for this lab, you can see that there are mulitple files with the .tf extension. These files contain the infrastructure-as-code (IAC) instructions that define and describe the resources and services you want to provision and manage in OCI.
-
-
-<!--- 
 ### Objectives
 
-*List objectives for this lab using the format below*
-
-
 In this lab, you will:
-* Learn about 
-* Learn how to provision OCI resources through Terraform
-* Objective 3
--->
+* Create a VCN with private and public subnets
+* Create Security Lists for the VCN's subnets
+* Create Gateways and Route tables for the VCN
+* Create a Load Balancer 
+* Create a Network Security Group
 
-<!--- 
-### Prerequisites (Optional)
-
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. Do NOT list each previous lab as a prerequisite.*
-
-This lab assumes you have:
-* An Oracle Cloud account
-* Familiarity with Networking is desirable, but not required
-* Some understanding of cloud, networking, Terraform terms is helpful
-* Familiarity with Oracle Cloud Infrastructure (OCI) is helpful
-
-
-*Below, is the "fold"--where items are collapsed by default.*
--->
 ## Task 1: Creating a VCN in Terraform
-<!--In Terrafrom, there are mulitple files that are created to define input variables for infrastructure deployment. It is one of several ways to provide values to the variables used in a Terrafrom configuration. In this secrtion we will explaining the ".tfvars" extension which stands for Terraform Variables. The "terrafrom.tfvars" file allows you to define variables in a seperate file rather than hardcoding them directly into the configuration of a resource. This seperation helps keep sensitive infromation out of the main configuration files, making it easier to manage and share the codebase. 
--->
+
+In Terraform, managing input variables is a critical aspect of building flexible and reusable infrastructure configurations. One of the ways to provide values to variables in a Terraform configuration is by using the terraform.tfvars file. The .tfvars extension stands for Terraform Variables.
+
+The terrafrom.tfvars file allows you to define and assign values to variables separately from the main configuration files. This seperation helps keep sensitive infromation out of the main configuration files, making it easier to manage and share the code infrastructure. 
+
 **1. Open terraform.tfvars**
 
-Open the terrafrom.tfvars file. In the file you will see that there is maps of data structures containing several attributes for configuring OCI resources.
+Open the terrafrom.tfvars file in the Terraform environment provided in the prevoius lab.  
 
 ![picute1](images/terrafromtfvars.png)
 
+The file contains maps of data structures containing several attributes for configuring resources on OCI. These maps, structured as data structures, facilitate the definition of complex configurations with ease. Each map corresponds to a specific OCI resource and contains a set of key-value pairs representing various resource properties.
+
 **2. Compartment OCID**
 
-In the terrafrom.tfvars file, navigate to the compartment\_ids variable block. Copy the comp-ocid variable string below and paste it in the compartment\_ids variable block. Replace the string value with the compartment OCID gathered in the previous lab. This compartment is where all resources defined in the terraform enviroment will be deployed.
+In the terrafrom.tfvars file, navigate to the compartment\_ids variable block. Copy the comp-ocid variable string below and paste it in the compartment\_ids variable block. Replace the string value with the compartment OCID gathered in the previous lab. 
 
 ```
 <copy>
@@ -59,11 +43,14 @@ comp-ocid = "&lt;replace-compartment-ocid-here&gt;"
 </copy>
 ```
 
+The compartment\_ids block holds the compartment OCID in the Terrafrom Environment. This OCID serves as the compartment location in which all resources will be created on OCI. Each resource's data structure reaches out for the compartment OCID, recognizing it by the identifier comp-ocid. This connection ensures that every resource we create will deploy within the intended compartment
+
 ![picture2](images/compartmentocid.png)
+
 
 **3. Creating VCN**
 
-We can now start creating a VCN in Terraform by navigating to the vcn\_params data structure. Copy the variable strings below and paste it in the vcn\_params data block. 
+In the terrafrom.tfvars file, navigate to the vcn\_params data structure. Copy the variable strings below and paste it into the vcn\_params data block. 
 
 ```
 <copy>
@@ -80,21 +67,48 @@ Replace the following string values to the respective variables in the vcn\_para
 * vcn_cidr = 10.0.0.0/16
 * dns_label = ociwebappsvcn
 
-These values will provided the necessay atrributes to create the VCN on OCI with the respective values in Terraform.
+The display\_name variable provides the VCN with a name that will be displayed on the OCI console. The vcn\_cidr variable assigns a specific Classless Inter-Domain Routing (CIDR) block to the VCN, defining its IP address range and subnetting. While the dns\_label variable gives a DNS label to the VCN, which serves as a basis for generating the VNC's DNS Domain Name. In the VCN data block you can also find that the compartment\_data attribute calls upon the comp-ocid variable, housing the compartment OCID for the targeted OCI compartment where the VCN will be provisioned. These atrributes form the backbone of the VCN configuration, providing Terraform with the required information needed to orchestrate and create the VCN on an OCI environment.
 
 ![picture3](images/vcnparams.png)
 
 **Step 4**
 
-The next step consist of creating private and public subnets for the VCN that you just created in Terraform. For this VCN you will be creating one private subnet and two public subnets. Navigate to the subnet_params data structure in the terraform.tfvars file.
+In the terrafrom.tfvars file, navigate to the subnet\_params data structure. In the data structure there are three different data blocks that are used to provide attributes to create subnets for the VCN. The next step consist of creating private and public subnets for the VCN being created in Terraform. For this VCN you will be creating one private subnet and two public subnets. 
 
-Replace the following for each varaible in the oci-priv-subnet data structure within subnet_params.
+The first subnet being created is a Private subnet. In the subnet\_params data structure. Copy the variable strings below and paste it into the oci-priv-subnet data block. 
+
+```
+<copy>
+vcn_data          = "oci-vcn"
+sl_data           = "oci-priv-sl"
+rt_data           = "oci-priv-rt"
+display_name      = "<replace-private-subnet-name-here>"
+cidr_block        = "<replace-private-subnet-cidr-here>"
+dns_label         = "<replace-private-subnet-dnslabel-here>"
+</copy>
+```
+
+Replace the following for each varaible in the oci-priv-subnet data block.
 
 * display_name = priv-subnet-oci-WebApps-vcn
 * vcn_cidr = 10.0.1.0/24
 * dns_label = privsubdnsWeb
 
+The display\_name variable provides the VCN with a name that will be displayed on the OCI console. The vcn\_cidr variable assigns a specific Classless Inter-Domain Routing (CIDR) block to the VCN, defining its IP address range and subnetting. While the dns\_label variable gives a DNS label to the VCN, which serves as a basis for generating the VNC's DNS Domain Name. In the VCN data block you can also find that the compartment\_data attribute calls upon the comp-ocid variable, housing the compartment OCID for the targeted OCI compartment where the VCN will be provisioned. These atrributes form the backbone of the VCN configuration, providing Terraform with the required information needed to orchestrate and create the VCN on an OCI environment.
+
 ![picture4](images/privatesub.png)
+
+
+```
+<copy>
+vcn_data          = "oci-vcn"
+sl_data           = "oci-priv-sl"
+rt_data           = "oci-priv-rt"
+display_name      = "<replace-private01-subnet-name-here>"
+cidr_block        = "<replace-private01-subnet-cidr-here>"
+dns_label         = "<replace-private01-subnet-dnslabel-here>"
+</copy>
+```
 
 Replace the following for each varaible in the oci-pub-subnet-01 data structure within subnet_params.
 
@@ -103,6 +117,17 @@ Replace the following for each varaible in the oci-pub-subnet-01 data structure 
 * dns_label = pubsubdnsLB
 
 ![picture5](images/pubsub1.png)
+
+```
+<copy>
+vcn_data          = "oci-vcn"
+sl_data           = "oci-priv-sl"
+rt_data           = "oci-priv-rt"
+display_name      = "<replace-private02-subnet-name-here>"
+cidr_block        = "<replace-private02-subnet-cidr-here>"
+dns_label         = "<replace-private02-subnet-dnslabel-here>"
+</copy>
+```
 
 Replace the following for each varaible in the oci-pub-subnet-02 data structure within subnet_params.
 
@@ -114,51 +139,210 @@ Replace the following for each varaible in the oci-pub-subnet-02 data structure 
 
 You have now created a VCN with pirvate and public subnets in the Terraform environment.
 
-## Task 2: Creating a Secuirty Lists in Terraform for Private and Public subnets.
+## Task 2: Creating Secuirty Lists in Terraform for Private and Public subnets.
 
 **Step 1** 
 
 In the terrafrom.tfvars file, navigate to the sl_params data structure. Within the sl_params you will see there is combination of data structures that create ingress and egress rules for the private and public subnets created in the previous task.
 
-We can take oci-priv-sl as an example to better understand what is going on. 
+```
+<copy>
+stateless   = "<replace-true-or-false-here>"                      
+protocol    = "<replace-traffic-protocol-here>"                          
+source      = "<replace-traffic-source-here>"                
+source_type = "<replace-source-type-here>"                 
+tcp_options = [                            
+    {
+        min = <replace-min-destination-port-here>                              
+        max = <replace-max-destination-port-here>                             
+    }
+]
+udp_options  = []                           
+icmp_options = []
+</copy>
+```
+
+* stateless   = false                    
+* protocol    = 6                          
+* source      = 10.0.2.0/24                
+* source\_type = CIDR_BLOCK
+* min = 22
+* max = 22                 
+
+```
+<copy>
+stateless   = "<replace-true-or-false-here>"                      
+protocol    = "<replace-traffic-protocol-here>"                          
+source      = "<replace-traffic-source-here>"                
+source_type = "<replace-source-type-here>"                 
+tcp_options = [                            
+    {
+        min = <replace-min-destination-port-here>                              
+        max = <replace-max-destination-port-here>                             
+    }
+]
+udp_options  = []                           
+icmp_options = []
+</copy>
+```
+
+* stateless   = false                    
+* protocol    = 6                          
+* source      = 10.0.3.0/24                
+* source\_type = CIDR_BLOCK
+* min = 80
+* max = 80  
+
+```
+<copy>
+stateless   = "<replace-true-or-false-here>"                      
+protocol    = "<replace-traffic-protocol-here>"                       
+destination = "<replace-traffic-destination-here>"                   
+description = "<replace-rule-description-here>"  
+</copy>
+```
+
+* stateless   = false                    
+* protocol    = all    
+* destination = 0.0.0.0/0
+* description = All traffic for all ports
+
+![picture7](images/priv_sl.png)
+
+```
+<copy>
+stateless   = "<replace-true-or-false-here>"                      
+protocol    = "<replace-traffic-protocol-here>"                          
+source      = "<replace-traffic-source-here>"                
+source_type = "<replace-source-type-here>"                 
+tcp_options = [                            
+    {
+        min = <replace-min-destination-port-here>                              
+        max = <replace-max-destination-port-here>                             
+    }
+]
+udp_options  = []                           
+icmp_options = []
+</copy>
+```
+
+* stateless   = false                    
+* protocol    = 6                          
+* source      = 10.0.3.0/24               
+* source\_type = CIDR_BLOCK
+* min = 22
+* max = 22                 
+
+
+```
+<copy>
+stateless   = "<replace-true-or-false-here>"                      
+protocol    = "<replace-traffic-protocol-here>"                       
+destination = "<replace-traffic-destination-here>"                   
+description = "<replace-rule-description-here>"  
+</copy>
+```
+
+* stateless   = false                    
+* protocol    = all    
+* destination = 0.0.0.0/0
+* description = All traffic for all ports
+
+
+![picture8](images/pub01sl.png)
+
+```
+<copy>
+stateless   = "<replace-true-or-false-here>"                      
+protocol    = "<replace-traffic-protocol-here>"                          
+source      = "<replace-traffic-source-here>"                
+source_type = "<replace-source-type-here>"                 
+tcp_options = [                            
+    {
+        min = <replace-min-destination-port-here>                              
+        max = <replace-max-destination-port-here>                             
+    }
+]
+udp_options  = []                           
+icmp_options = []
+</copy>
+```
+
+* stateless   = false                    
+* protocol    = 6                          
+* source      = 0.0.0.0/0                
+* source\_type = CIDR_BLOCK
+* min = 22
+* max = 22                 
+
+
+```
+<copy>
+stateless   = "<replace-true-or-false-here>"                      
+protocol    = "<replace-traffic-protocol-here>"                       
+destination = "<replace-traffic-destination-here>"                   
+description = "<replace-rule-description-here>"  
+</copy>
+```
+
+* stateless   = false                    
+* protocol    = all    
+* destination = 0.0.0.0/0
+* description = All traffic for all ports
+
+![picture9](images/pub02sl.png)
 
 
 
-
-## Task 3: Creating a Route tables and Gateways in Terraform for Private and Public subnets.
+## Task 3: Creating Route tables and Gateways in Terraform for Private and Public subnets.
 
 **Step 1**
 
-In this section you will first be creating an Internet gateway, Nat gateway and Service gate way that will then be attached to their respective route table.
+```
+<copy>
+vcn_data     = "oci-vcn"                          
+display_name = "<replace-igw-name-here>" 
+</copy>
+```
 
-In the terrafrom.tfvars file, navigate to the igw_params data structure. 
+* display_name = internet-gateway-oci-WebApps-vcn
 
-Replace the following for each varaible in the oci-ig data structure within igw_params.
+![picture10](images/igwpic.png)
 
-* display_name = service-gateway-oci-WebApps-vcn
-
-![picture7](images/igwpic.png)
-
-Replace the following for each varaible in the oci-ngw data structure within ngw_params.
+```
+<copy>
+vcn_data     = "oci-vcn"              
+display_name = "<replace-ngw-name-here>"
+</copy>
+```
 
 * display_name = ngw-oci-WebApps-vcn
 
-![picture8](images/ngwpic.png)
+![picture11](images/ngwpic.png)
 
-Replace the following for each varaible in the oci-sgw data structure within sqw_params.
+```
+<copy>
+vcn_data     = "oci-vcn"                                      
+display_name = "<replace-sgw-name-here>"              
+service_name = "<replace-sgw-region-service-here>"
+</copy>
+```
 
 * display_name = service-gateway-oci-WebApps-vcn
 * service_name = All PHX Services In Oracle Services Network
 
-![picture9](images/sgwpic.png)
+![picture12](images/sgwpic.png)
 
-Replace the following for each varaible in the oci-priv-rt data structure within rt_params.
-
-* display_name = rt-priv-subnet-oci-WebApps-vcn
-
-![picture10](images/privrtpic.png)
-
-Attaching Service gateway to the private route table consists of replace the following for each varaible in the route_rules data structure within oci-priv-rt.
+```
+<copy>
+destination = <replace-traffic-destination-here>          
+use_igw     = <replace-igw-true-or-false-here>        
+igw_data    = <replace-igw-data-structure-here>         
+use_sgw     = <replace-sgw-true-or-false-here>         
+sgw_data    = <replace-sgw-data-structure-here>   
+ngw_data    = <replace-ngw-data-structure-here>
+</copy>
+```
 
 * destination = null
 * use_igw     = false
@@ -167,7 +351,16 @@ Attaching Service gateway to the private route table consists of replace the fol
 * sgw_name    = oci-sgw
 * ngw_name    = null
 
-Attaching Nat gateway to the private route table consists of replace the following for each varaible in the route_rules data structure within oci-priv-rt.
+```
+<copy>
+destination = <replace-traffic-destination-here>          
+use_igw     = <replace-igw-true-or-false-here>        
+igw_data    = <replace-igw-data-structure-here>         
+use_sgw     = <replace-sgw-true-or-false-here>         
+sgw_data    = <replace-sgw-data-structure-here>   
+ngw_data    = <replace-ngw-data-structure-here> 
+</copy>
+```
 
 * destination = "0.0.0.0/0"
 * use_igw     = false
@@ -176,48 +369,174 @@ Attaching Nat gateway to the private route table consists of replace the followi
 * sgw_name    = null
 * ngw_name    = oci-ngw
 
-![picture11](images/privrrpic.png)
+![picture13](images/privrt.png)
 
-Replace the following for each varaible in the oci-pub-rt data structure within rt_params.
-
-* display_name = rt-pub-subnet-oci-WebApps-vcn
-
-![picture12](images/pubrtpic.png)
-
-Attaching Service gateway to the private route table consists of replace the following for each varaible in the route_rules data structure within oci-pub-rt.
+```
+<copy>
+destination = <replace-traffic-destination-here>          
+use_igw     = <replace-igw-true-or-false-here>        
+igw_data    = <replace-igw-data-structure-here>         
+use_sgw     = <replace-sgw-true-or-false-here>         
+sgw_data    = <replace-sgw-data-structure-here>   
+ngw_data    = <replace-ngw-data-structure-here>   
+</copy>
+```
 
 * destination = "0.0.0.0/0"
 * use_igw     = true
-* igw_name    = null
-* use_sgw     = oci-ig
+* igw_name    = oci-ig
+* use_sgw     = false
 * sgw_name    = null
 * ngw_name    = null
 
-![picture6](images/pubrrpic.png)
+![picture14](images/pubrt.png)
 
 ## Task 4: Creating a Loadbalancer in Terraform.
 
-## Task 5: Creating a Network Security Group in Terraform.
-
-Replace the following for each varaible in the oci-lb data structure within lb_params.
+```
+<copy>
+compartment_data = "comp-ocid"         
+subnet_data      = "oci-pub-subnet-01" 
+nsg_data         = "oci-nsg"           
+display_name     = "<replace-lb-name-here>"    
+shape            = "<replace-lb-shape-here>"          
+defaultmax       = <replace-connection-max>                
+defaultmin       = <replace-connection-min>    
+</copy>
+```
 
 * display_name = oci-WebApps-lb
 * shape = flexible
 * defaultmax = 100
 * defaultmin = 10
 
-Replace the following for each varaible in the oci-lb-listener data structure within listener_params.
+![picture15](images/lb.png)
+
+```
+<copy>
+lb_data     = "oci-lb"                
+backend_data = "oci-lb-backendset"    
+display_name = "<replace-listener-name-here>"      
+port         = "<replace-listener-port-here>"                  
+protocol     = "<replace-listener-protocol-here>"   
+</copy>
+```
 
 * display_name = oci-WebLB-listener
 * port = 80
 * protocol = HTTP
 
-Replace the following for each varaible in the oci-lb-backendset data structure within backendset_params.
+![picture16](images/lblisten.png)
+
+```
+<copy>
+lb_data     = "oci-lb"             
+display_name = "<replace-backendset-name-here>"  
+policy       = "<replace-traffic-policy-here>"   
+</copy>
+```
 
 * display_name = oci-lb-backendset
 * policy = ROUND_ROBIN
 
-Replace the following for each varaible in the oci-lb-backend01 data structure within backend_params.
+![picture17](images/lbbackendset.png)
+
+```
+<copy>
+lb_data   = "oci-lb"               
+backend_data = "oci-lb-backendset" 
+webserver_name = "<replace-webserver1-name-here>"     
+backup       = "<replace-backup-true-or-false-here>"             
+drain        = "<replace-drain-true-or-false-here>"              
+offline      = "<replace-offline-true-or-false-here>"            
+port         = "<replace-backend-port-here>"                
+weight       = "<replace-backend-weight-here>"   
+</copy>
+```
+
+* webserver_name = Webserver01
+* backup = false         
+* drain = false                 
+* offline = false          
+* port = 80                
+* weight = 1     
+
+```
+<copy>
+lb_data   = "oci-lb"               
+backend_data = "oci-lb-backendset" 
+webserver_name = "<replace-webserver2-name-here>"     
+backup       = "<replace-backup-true-or-false-here>"             
+drain        = "<replace-drain-true-or-false-here>"              
+offline      = "<replace-offline-true-or-false-here>"            
+port         = "<replace-backend-port-here>"                
+weight       = "<replace-backend-weight-here>"   
+</copy>
+```
+
+* webserver_name = Webserver02
+* backup = false         
+* drain = false                 
+* offline = false          
+* port = 80                
+* weight = 1
+
+```
+<copy>
+lb_data   = "oci-lb"               
+backend_data = "oci-lb-backendset" 
+webserver_name = "<replace-webserver3-name-here>"     
+backup       = "<replace-backup-true-or-false-here>"             
+drain        = "<replace-drain-true-or-false-here>"              
+offline      = "<replace-offline-true-or-false-here>"            
+port         = "<replace-backend-port-here>"                
+weight       = "<replace-backend-weight-here>"   
+</copy>
+```
+
+* webserver_name = Webserver03
+* backup = false         
+* drain = false                 
+* offline = false          
+* port = 80                
+* weight = 1
+
+![picture18](images/lbbackend.png)
+
+
+## Task 5: Creating a Network Security Group in Terraform.
+
+```
+<copy>
+vcn_data     = "oci-vcn" 
+display_name = "<replace-nsg-name-here>"    
+</copy>
+```
+
+* display_name = nsg-oci-WebApps-vcn
+
+![picture19](images/nsg.png)
+
+```
+<copy>
+nsg_data     = "oci-nsg"               
+direction    = "<replace-traffic-direction-here>"               
+protocol     = "<replace-traffic-protocol-here>"                    
+destination  = "<replace-traffic-destination-here>"                    
+source       = "<replace-traffic-source-here>"             
+stateless    = "<replace-true-or-false-here>"              
+source_type  = "<replace-source-type-here>"    
+</copy>
+```
+
+* direction = INGRESS             
+* protocol = 6                     
+* destination = 80                   
+* source = 0.0.0.0/0            
+* stateless = false              
+* source\_type = CIDR_BLOCK
+
+![picture20](images/nsgsr.png)
 
 
 
