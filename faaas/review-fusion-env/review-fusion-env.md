@@ -17,7 +17,7 @@ Estimated Time: 20+ minutes
 ## Get Started
 1. If you are logged-in, then log out of your workshop account. Click on the Profile icon at the top right-hand corner of the screen. Click on **Sign out** to logout of the account.
 
-  ![Cloud account signout](images/get-started/cloud-account-signout.png)
+  ![Cloud account signout](images/cloud-account-signout.png)
 
 2. Navigate to https://cloud.oracle.com
 3. Use **Faaasproduction33** tenancy to login to cloud portal.
@@ -27,19 +27,19 @@ Estimated Time: 20+ minutes
 ## Task 1: Subscription
 1. Goto the **Quick Actions** under **Applications** tab and click on **View subscriptions**
 
-  ![Quick actions - View subscriptions](images/task1/view-subscription.png)
+  ![Quick actions - View subscriptions](images/view-subscription.png)
 
 2. Notice the subscriptions in the account. **Type** column tells you if it is an Application or Infrastructure service. Click on the Fusion subscription.
 
-  ![Subscriptions page](images/task1/subscriptions-page.png)
+  ![Subscriptions page](images/subscriptions-page.png)
 
 3. Take a look at the Subscription services. Click on 1st product quantity for HCM Base product **500**.
 
-  ![Subscription services](images/task1/subscription-services.png)
+  ![Subscription services](images/subscription-services.png)
 
 4. See more details on the product.
 
-  ![Order details](images/task1/order-details-panel.png)
+  ![Order details](images/order-details-panel.png)
 
 ## Task 2: Metrics
 Monthly performance metrics for a specific month are displayed after the end of the calendar month. After the end of the month, calculations are run to determine the overall performance for the month. Monthly performance metrics are available for Production environment only. There are 2 charts available:
@@ -50,15 +50,15 @@ For more info please refer to the [documentation](https://docs.oracle.com/en-us/
 
 1. Go back to the **Applications** homepage by clicking on **ORACLE Cloud** and then click on the **Fusion-prod** Production environment.
 
-  ![Applications homepage](images/task2/apps-homepage.png)
+  ![Applications homepage](images/apps-homepage.png)
 
 2. Go to Metrics section of Resources for the environment
 
-  ![Metrics chart view](images/task2/metrics-chart-view.png)
+  ![Metrics chart view](images/metrics-chart-view.png)
 
 3. Hover over the bars to see. the exact value for each month. Additionally, you can change the chart type by clicking on Options and changing from Bar to Table view
 
-  ![Metrics table view](images/task2/metrics-table-view.png)
+  ![Metrics table view](images/metrics-table-view.png)
 
 ## Task 3: Integrations
 You can discover and manage the services that are integrated with your Fusion Applications environments. 
@@ -77,24 +77,24 @@ For more info please refer to the [documentation](https://docs.oracle.com/en-us/
 
 1. Login to Fusion Application for the production environment, by clicking on **View Application** or **Application URL**. Username/password will be provided in the lab.
  
-  ![View application](images/task3/view-application.png)
-  ![Application login](images/task3/application-login.png)
-  ![Application welcome page](images/task3/application-welcome-page.png)
+  ![View application](images/view-application.png)
+  ![Application login](images/application-login.png)
+  ![Application welcome page](images/application-welcome-page.png)
 
 2. Go to **Integrations** resources for the production fusion environment and click on the **Application URL** for all 4 services - Fusion Analytics Warehouse, Application Integration, Visual Builder, and Digital Assistant. The 4 Integration Applications will open in new tabs. Notice that you are able to login to all integrations with Single Sign on from Fusion Application Identity.
 
-  ![Integrations](images/task3/integrations-section.png)
-  ![Fusion analytics warehouse](images/task3/fusion-analytics-warehouse.png)
-  ![Application integration](images/task3/application-integration.png)
-  ![Digital assistant](images/task3/digital-assistant.png)
-  ![Visual Builder](images/task3/visual-builder.png)
+  ![Integrations](images/integrations-section.png)
+  ![Fusion analytics warehouse](images/fusion-analytics-warehouse.png)
+  ![Application integration](images/application-integration.png)
+  ![Digital assistant](images/digital-assistant.png)
+  ![Visual Builder](images/visual-builder.png)
 
 3. Return to the Fusion - Integrations Resource page and click on the Service URLs. Open all 4 of them in new tabs. Similar to Fusion environment detail pages you can view the respective integration resource detail pages.
     
-  ![Fusion analytics warehouse details](images/task3/faw-details.png)
-  ![Application integration details](images/task3/application-integration-details.png)
-  ![Digital assistant details](images/task3/digital-assistant-details.png)
-  ![Visual builder details](images/task3/visual-builder-details.png)
+  ![Fusion analytics warehouse details](images/faw-details.png)
+  ![Application integration details](images/application-integration-details.png)
+  ![Digital assistant details](images/digital-assistant-details.png)
+  ![Visual builder details](images/visual-builder-details.png)
 
 ## Task 4: Lockbox
 In case when Oracle-authorized personnel needs to access resources to troubleshoot or help resolve an issue with your applications environment. Break Glass provides you with the ability to temporarily grant access to Oracle Support using a securely administered workflow.
@@ -108,18 +108,18 @@ For more info please refer to [documentation](https://docs.oracle.com/en-us/iaas
 
 1. Go to **Security** resource and click on **Breakglass**
 
-  ![Breakglass tab](images/task4/breakglass-tab.png)
+  ![Breakglass tab](images/breakglass-tab.png)
 
 2. Notice the lockbox details -
     - Auto-approval is enabled. 
     - Password expiration time = 90 minutes. Each time an access request is granted, the password is valid for 90 hours.
 3. Users can view and modify the lockbox settings. Click on the **Resource setting** link.
 
-  ![Resource setting details](images/task4/resource-setting-details.png)
+  ![Resource setting details](images/resource-setting-details.png)
 
 4. Users can modify the access duration and customize approval templates. Click on **Edit** and then **Cancel**
 
-  ![Edit resource settings](images/task4/edit-resource-settings.png)
+  ![Edit resource settings](images/edit-resource-settings.png)
 
 ## Learn More
 * See the [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/home.htm) on Oracle Fusion Applications Environment Management.
