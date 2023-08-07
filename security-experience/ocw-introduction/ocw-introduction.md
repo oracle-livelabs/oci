@@ -1,28 +1,16 @@
 # Introduction
 
-The purpose of this workshop is to help you and make more simple for you to do your first security assessment in a Oracle Cloud Infrastructure (OCI) tenancy that is provided to you by the trainers, going at the same time through a guided selection of available security services according to the results of your security assessment. Optionally, you will be able to run a provided compliance script to check the CIS (Center Internet Security) compliance for your tenant. By doing this workshop, you will enjoy the Oracle Unique Security Experience.
+The purpose of this workshop is to accompany you on your journey to your first security and compliance assessments in Oracle Cloud Infrastructure (OCI). During this workshop, you will be able to discover and get familiar with all the security capabilities that Oracle Cloud offers natively, besides checking the CIS (Center Internet Security) compliance. This will make sure you can enjoy your first Oracle Unique Security Experience.
 
 ### About this Workshop
 
-As a summary, during this workshop, you will be provided with a Python script to execute your security asssessment, and a user interface (APEX application) that will show you your Security Center dashboard. In this dashboard, you will be able to find the results of your assessment, together with a guided selection of the proper security services. 
+In order to be able to perform this workshop, you will be provided with a link to download two Python scripts. By running those scripts in OCI, you will be able to execute your security and compliance asssessments. Apart from that, an APEX application running on an Oracle Autonomous Database will act as User Interface for your Security and Compliance Center. In this UI, you will be able to find the results of your assessments, together with an overview of available security services. You will have the opportunity to try some of these security services as the last part of the workshop.
 
-In more details: 
-
-* The security assessment will determine which OCI security services are activated and which not. 
-* The Security Center dashboard will provide you:
-
-    * Suggestions based on your assessments. In case you a specific security service is not being leveraged, the Security Center dashboard will provide you with all the details on that service.
-
-    * Guided security services selection. The Security Center dashboard will guide you to enable the needed security services, by giving you descriptions with benefits, purpose of the service and options with direct links to the console and the documentation.
-
-    * Security services implementation. The Security Center dashboard will offer you as well the option to direct links to Terraform script to activate a security service with a click.
-
-
-Below you can see the Security Center dashboard you will see at the end of the workshop, with your security assessment results:
+Below you can see an example of the Security and Compliance Center showing security and compliance assessments:
 
 ![Security Center dashboard](./images/security-assessment.png "Security Center dashboard")
 
-Optionally, you will have as well a view of the CIS compliance in your OCI tenant:
+
 
 ![Security Center dashboard and CIS](./images/cis-table.png "Security Center dashboard and CIS")
 
@@ -31,16 +19,15 @@ Estimated Workshop Time: 60 minutes (this estimate is for the entire workshop - 
 
 ### Objectives
 
-* Execute your first security assessment by launching a Python script (provided in this workshop) in Oracle Cloud Shell. Oracle Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console, and provides an ephemeral machine to use as a host for a Linux shell. 
-The script generates your security assessment reports in CSV files, and stores these files in two locations simulataneously:
+* Execute your first security and compliance assessment by launching a Python script in Oracle Cloud Shell. Oracle Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console, and provides an ephemeral machine to use as a host for a Linux shell. 
+The script generates your security and compliance assessment reports in CSV files, and stores those files in two locations simulataneously:
 
     * The Cloud Shell Linux machine
     * An Object Storage bucket
 
 * Transfer the security assessment reports from the Cloud Shell Linux machine to an Autonomous Database table via REST API calls.
-* An APEX application hosted in the same Autonomous Database will act as your Security Center dashboard.
-* Check all results of your security assessments in the Security Center dashboard, and navigate through the different pages to check available security services that you could deploy in OCI.
-* Have an overview of some basic security services in OCI.
+* Check all results of your security and compliance assessments in the Security and Compliance Center. Navigate through the different pages to check available security services available in OCI.
+* Have a look and try some main security services in OCI.
 
 Below you can see the architecture components for this Unique Security Experience:
 

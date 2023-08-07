@@ -1,26 +1,24 @@
 # Run your first OCI security assessment
 
 ## Introduction
-This lab will show you how to start to automate the journey to security by using the provided key components that will make you have that Unique Security Experience. You will start by running the OCI Security Assessment.
+This lab will show you how to start to automate the journey to security by using the provided key components that will make you have that Unique Security Experience. 
 
 Estimated time: 20 minutes
 
 ### Objectives
 In this lab, you will:
 
-- Download and run security and compliance assessment scripts
-- Store assessment results in Object Storage buckets
-
-Please see picture below with the components and actions involved in the Unique Security Experience:
-
-   ![Diagram](./images/second-lab-diagram.png "Diagram")
-
-You will perform step 1 in this lab. The steps 2 and 3 will be performed in the next lab.
+- Download and run security and compliance assessment scripts in Oracle Cloud Shell
+- Check assessment reports stored in OCI Cloud Shell machine and Object Storage buckets 
 
 ### Prerequisites
-This lab assumes you got access to the OCI tenant provided for this workshop. Log in to the Oracle Cloud tenant as states in previous section "Getting Started".
+This lab assumes you got access to the OCI tenant provided for this workshop. 
 
 ## Task 1: Download and run security assessment script
+
+In this task we will provide you with a link where you can download the Python script that you can execute to run your first security assessment in OCI. Once you download the script, you can save it locally and then you will run it in OCI Cloud Shell.
+
+1. Log in to OCI as states in previous section "Getting Started".
 
 1.	Download the [security assessment script.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/security_assessment.py)
     Now you can run that security assessment script in the Oracle Cloud Shell. In order to do that, open the Oracle Cloud Shell by clicking in the Cloud Shell icon in the Console header:
@@ -83,9 +81,11 @@ This lab assumes you got access to the OCI tenant provided for this workshop. Lo
 
 
 
-## Task 2 (Optional): Download and run CIS benchmark compliance assessment script
+## Task 2: Download and run CIS benchmark compliance assessment script
 
-1. Download the [CIS reports script.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/cis_reports.py) 
+In this task, similar process should be followed, but this time you will execute the compliance assessment.
+
+1. Download the [CIS reports script](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/cis_reports.py) and save it locally.
 
 2. Upload the script in the Cloud Shell terminal by doing drag and drop as you did with the security assessment script in previous task. Before going to the next step, please make sure you are on your home directory. If you are coming from previous step, just run the following command to go back to your home directory:
 

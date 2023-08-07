@@ -13,7 +13,7 @@ In this lab, you will:
 
 As you remember, in previous lab you performed step 1, described in the picture below. In this lab, you will perform steps 2 and 3:
 
-   ![Diagram](./images/second-lab-diagram.png "Diagram")
+
 
 
 ### Prerequisites
@@ -232,6 +232,10 @@ After the script is completely executed, and you loaded the CSV file in your Aut
     truncate table OCICISCOMPLIANCECHECK;
     select * from OCICISCOMPLIANCECHECK;
     ```
+
+To summarize, in previous labs you have completed the following process, which consist of the Oracle Unique Security Experience:
+
+   ![Diagram](./images/second-lab-diagram.png "Diagram")
 
 **This concludes this lab.**
 You may now **proceed to the next lab**.
