@@ -14,7 +14,7 @@ Estimated Time: 20+ minutes
 ### Prerequisites
 * This lab requires login to a new cloud account with the credentials provided.
 
-## Get Started
+## Task 1: Get Started
 1. If you are logged-in, then log out of your workshop account. Click on the Profile icon at the top right-hand corner of the screen. Click on **Sign out** to logout of the account.
 
   ![Cloud account signout](images/cloud-account-signout.png)
@@ -24,7 +24,7 @@ Estimated Time: 20+ minutes
 4. Select **Default** identity domain.
 5. Enter the Username/password (will be provided in the lab) and click **Sign In**.
 
-## Task 1: Subscription
+## Task 2: Subscription
 1. Goto the **Quick Actions** under **Applications** tab and click on **View subscriptions**
 
   ![Quick actions - View subscriptions](images/view-subscription.png)
@@ -41,7 +41,7 @@ Estimated Time: 20+ minutes
 
   ![Order details](images/order-details-panel.png)
 
-## Task 2: Metrics
+## Task 3: Metrics
 Monthly performance metrics for a specific month are displayed after the end of the calendar month. After the end of the month, calculations are run to determine the overall performance for the month. Monthly performance metrics are available for Production environment only. There are 2 charts available:
 - Monthly Service Availability - % of application availability that is caused by unplanned downtime
 - Monthly application average response time - average page responses by the server in milliseconds
@@ -60,7 +60,7 @@ For more info please refer to the [documentation](https://docs.oracle.com/en-us/
 
   ![Metrics table view](images/metrics-table-view.png)
 
-## Task 3: Integrations
+## Task 4: Integrations
 You can discover and manage the services that are integrated with your Fusion Applications environments. 
 
 When you provision an environment, additional services are provisioned and integrated with your Fusion Applications. These services extend the functionality of your applications. The set of additional services that are provisioned varies depending on the subscriptions (or SKUs) you purchased and the type of environment (production or non-production). The Integrations feature of environment management lets you discover and manage these additional services from a single interface.
@@ -96,7 +96,7 @@ For more info please refer to the [documentation](https://docs.oracle.com/en-us/
   ![Digital assistant details](images/digital-assistant-details.png)
   ![Visual builder details](images/visual-builder-details.png)
 
-## Task 4: Lockbox
+## Task 5: Lockbox
 In case when Oracle-authorized personnel needs to access resources to troubleshoot or help resolve an issue with your applications environment. Break Glass provides you with the ability to temporarily grant access to Oracle Support using a securely administered workflow.
 
 Key features of Break Glass with Oracle Managed Access include:
