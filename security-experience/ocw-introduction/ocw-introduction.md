@@ -1,12 +1,12 @@
 # Introduction
 
-The purpose of this workshop is to accompany you on your journey to your first security and compliance assessments in Oracle Cloud Infrastructure (OCI). During this workshop, you will be able to discover and get familiar with all the security capabilities that Oracle Cloud offers natively, besides checking the CIS (Center Internet Security) compliance. This will make sure you can enjoy your first Oracle Unique Security Experience.
+The purpose of this workshop is to accompany you on your journey to security and compliance in Oracle Cloud Infrastructure (OCI). During this workshop, you will be able to discover and get familiar with all the security capabilities that Oracle Cloud offers natively, besides checking the CIS (Center Internet Security) compliance. This will make sure you can enjoy your first Oracle Unique Security Experience.
+
+
 
 ### About this Workshop
 
-In order to be able to perform this workshop, you will be provided with a link to download two Python scripts. By running those scripts in OCI, you will be able to execute your security and compliance asssessments. Apart from that, an APEX application running on an Oracle Autonomous Database will act as User Interface for your Security and Compliance Center. In this UI, you will be able to find the results of your assessments, together with an overview of available security services. You will have the opportunity to try some of these security services as the last part of the workshop.
-
-Below you can see an example of the Security and Compliance Center showing security and compliance assessments:
+In this workshop, you will first have a look of main security services in an Oracle Cloud Infrastructure tenancy, where you will be able to explore and try the different native services such as Cloud Security Posture Management, Database security, etc. Once you do that, you will be able to execute your first security and compliance asssessments in OCI, where an APEX application running on an Oracle Autonomous Database will act as your User Interface for the Security and Compliance Center. Below you can see an example for security in the first image and compliance in the second one:
 
 ![Security Center dashboard](./images/security-assessment.png "Security Center dashboard")
 
@@ -19,6 +19,7 @@ Estimated Workshop Time: 60 minutes (this estimate is for the entire workshop - 
 
 ### Objectives
 
+* Have a look and try the main security services in OCI.
 * Execute your first security and compliance assessment by launching a Python script in Oracle Cloud Shell. Oracle Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console, and provides an ephemeral machine to use as a host for a Linux shell. 
 The script generates your security and compliance assessment reports in CSV files, and stores those files in two locations simulataneously:
 
@@ -27,7 +28,7 @@ The script generates your security and compliance assessment reports in CSV file
 
 * Transfer the security assessment reports from the Cloud Shell Linux machine to an Autonomous Database table via REST API calls.
 * Check all results of your security and compliance assessments in the Security and Compliance Center. Navigate through the different pages to check available security services available in OCI.
-* Have a look and try some main security services in OCI.
+
 
 Below you can see the architecture components for this Unique Security Experience:
 

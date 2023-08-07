@@ -65,7 +65,7 @@ In this task we will provide you with a link where you can download the Python s
 
     ![Go to buckets](images/buckets-menu.png "Go to buckets")
 
-7. Select the compartment ocw23-OCI-Security-Assessment-HOL on the menu left and locate your bucuket (remember your bucket name is ocw23-public-bucket-XXX where XXX is your student number). Click on your bucket:
+7. Select the compartment ocw23-OCI-Security-Assessment-HOL on the menu left and locate your bucket (remember your bucket name is ocw23-public-bucket-XXX where XXX is your student number). Click on your bucket:
 
     ![Locate your bucket](images/locate-your-bucket.png "Locate your bucket")
 

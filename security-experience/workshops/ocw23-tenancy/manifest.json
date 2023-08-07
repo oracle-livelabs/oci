@@ -18,19 +18,19 @@
             "filename": "../../getting-started/cloud-login.md"
         },
         {
-            "title": "Lab 1: Run your first OCI security assessment",
+            "title": "Lab 1: Overview of security services in OCI",
+            "description": "This lab will walk you through OCI security.",
+            "filename": "../../walk-through-security/walk-through-security.md"
+        },
+        {
+            "title": "Lab 2: Run your first OCI security assessment",
             "description": "This lab will show you how to run your first OCI security assessment report that will make you have that Unique Security Experience.",
             "filename": "../../ocw-first-experience-start/ocw-first-experience-start.md"
         },
         {
-            "title": "Lab 2: View reports on OCI Security Center Dashboard",
+            "title": "Lab 3: View reports on OCI Security Center Dashboard",
             "description": "This lab will show you how to automate the journey to security by using the OCI Security Center.",
             "filename": "../../ocw-first-experience-end/ocw-first-experience-end.md"
-        },
-        {
-            "title": "Lab 3: Overview of security services in OCI",
-            "description": "This lab will walk you through OCI security.",
-            "filename": "../../walk-through-security/walk-through-security.md"
         },
         {
             "title": "Need Help?",
