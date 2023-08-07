@@ -195,8 +195,6 @@ By default, your Fusion Applications environments are protected by Oracle-manage
 
   ![Key details](images/task5/vault-key-details.png)
 
-***Congratulations! You have successfully completed the lab.***
-
 You may now [proceed to the next lab](#next).
 
 ## Learn More

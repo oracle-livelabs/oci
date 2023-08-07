@@ -9,6 +9,8 @@ The labs in this workshop walk you through all the steps to get started using th
 * Perform Refresh and other Lifecycle operations
 * Review Metrics, Announcements, Subscriptions, and other OCI services with Fusion environments.
 
+You may now [proceed to the next lab](#next).
+
 ## Learn More
 
 ### Technical Documentation

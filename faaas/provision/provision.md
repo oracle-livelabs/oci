@@ -150,8 +150,6 @@ For more info refer to the [documentation](https://docs.oracle.com/en-us/iaas/Co
 
   ![FA guided tours](images/task3/fa-guided-tours.png)
 
-***Congratulations! You have successfully completed the lab.***
-
 You may now [proceed to the next lab](#next).
 
 ## Task 4: Review Audit Trail (Optional)

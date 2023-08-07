@@ -40,8 +40,6 @@ Estimated Time: 5+ minutes.
   ![Guided Tour](images/guided-tour.png)
   ![Finished Guided Tour](images/tour-finished.png)
 
-***Congratulations! You have successfully completed the lab.***
-
 You may now [proceed to the next lab](#next).
 
 ## Acknowledgements
