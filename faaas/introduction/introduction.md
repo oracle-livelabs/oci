@@ -7,7 +7,7 @@ The labs in this workshop walk you through all the steps to get started using th
 ### Objectives
 * Provision Fusion Applications Environments
 * Perform Refresh and other Lifecycle operations
-* Review Metrics, Acnocements, Subscriptions, and other OCI services with Fusion environments.
+* Review Metrics, Announcements, Subscriptions, and other OCI services with Fusion environments.
 
 ## Learn More
 
