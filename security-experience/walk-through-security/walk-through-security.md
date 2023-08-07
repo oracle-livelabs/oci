@@ -1,4 +1,4 @@
-# Lab 3: Go for a walk through OCI Security
+# Go for a walk through OCI Security
 
 ## Introduction
 
