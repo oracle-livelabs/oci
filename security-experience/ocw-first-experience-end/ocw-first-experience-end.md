@@ -11,7 +11,7 @@ In this lab, you will:
 - Post security reports in Autonomous Database via REST calls
 - Check those reports in Security Dashboard UI
 
-As you remember, in previous lab you performed step 1, described in the picture below. In this lab, you will perform steps 2 and 3:
+
 
 
 
