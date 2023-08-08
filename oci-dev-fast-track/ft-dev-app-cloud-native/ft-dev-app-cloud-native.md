@@ -1,15 +1,11 @@
 # Lab 2 - Desenvolver Aplicações Nativas - Parte 1
 
+## Introdução
 Laboratório para mostrar na prática o funcionamento das ferramentas de desenvolvimento em OCI.
 
 *Tempo estimado para o Lab:* 30 Minutos
 
-## Introdução
-
-Criar uma aplicação no Kubernetes com as imagens de container armazenadas no Oracle Container Registry (OCIR). O backend da aplicação será exposto através do API Gateway, onde receberá os headers de CORS necessários para se comunicar com o frontend.
-
-A aplicação já contará com as bibliotecas e configurações necessárias para ser monitorada pelo APM que será demonstrado no laboratório 5.
-
+### **Pré requisitos**
 Vamos coletar algumas informações na tenancy do OCI que serão utilizadas ao longo do laboratório, recomendamos que as anote em um bloco de notas para ter acesso quando necessário. São elas:
 
 ```bash
@@ -22,6 +18,9 @@ Vamos coletar algumas informações na tenancy do OCI que serão utilizadas ao l
 6. Código da Região:
 </copy>
 ```
+### **Objetivos**
+Nesse Workshop você vai:
+Criar uma aplicação no Kubernetes com as imagens de container armazenadas no Oracle Container Registry (OCIR). O backend da aplicação será exposto através do API Gateway, onde receberá os headers de CORS necessários para se comunicar com o frontend. A aplicação já contará com as bibliotecas e configurações necessárias para ser monitorada pelo APM que será demonstrado no laboratório 4.
 
 ## Task 1: Tenancy Namespace
 

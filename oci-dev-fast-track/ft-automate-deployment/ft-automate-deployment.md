@@ -4,36 +4,32 @@
 
 Esse workshop foi desenvolvido com o intuito de demonstrar as funcionalidades da Oracle Cloud Infrastructure em cenários onde se faz necessário construir uma esteira de desenvolvimento, com o serviço OCI DevOps, que irá automatizar a entrega de uma aplicação conteinerizada a um cluster Kubernetes!
 
-***Conceitos desse laboratório***
-
-**Oracle Container Engine for Kubernetes**
-O Oracle Cloud Infrastructure Container Engine for Kubernetes é um serviço totalmente gerenciado, escalável e altamente disponível que você pode usar para implantar seus aplicativos de contêineres na nuvem.
-
-**OCI Devops**
-
-O serviço Oracle Cloud Infrastructure DevOps é uma plataforma completa de integração contínua/entrega contínua (CI/CD) para que os desenvolvedores simplifiquem e automatizem o ciclo de vida de desenvolvimento do software.
-
 *Tempo estimado para o Lab:* 30 Minutos
 
-### Pré requisitos
+### **Pré requisitos**
 
- * Efetuar os laboratórios de Resource Provisioning e Desenvolvendo aplicações Cloud Native - Parte 1
- * Coletar as seguintes informações:
+Efetuar os laboratórios de Resource Provisioning e Desenvolvendo aplicações Cloud Native - Parte 1
+Coletar as seguintes informações:
 
-Vamos coletar algumas informações na tenancy do OCI que serão utilizadas ao logo do laboratório, recomendamos que as anote em um bloco de nota para ter sempre em mãos de modo fácil. Serão coletadas as seguintes informações:
+- Vamos coletar algumas informações na tenancy do OCI que serão utilizadas ao logo do laboratório, recomendamos que as anote em um bloco de nota para ter sempre em mãos de modo fácil. Serão coletadas as seguintes informações:
 
-1. Após acessar sua conta.No 🍔 menu hambúrguer, acesse: Observability & Management → Application Performance → Administration.
+- Após acessar sua conta no menu superior esquerdo (hambúrguer), acesse: Observability & Management → Application Performance → Administration.
 ![menu observability administration](images/menu-administration.png)
 
-2. No canto esquerdo inferior, em Scope, valide se o Comparment criado no Lab 1 está selecionado.
-
-3. Selecione o domínio APM listado.
+- No canto esquerdo inferior, em Scope, valide se o Comparment criado no Lab 1 está selecionado.
+- Selecione o domínio APM listado.
 ![imagem apm domain](images/apmdomain.png)
 
-4. Copie a chave privada do domínio para um bloco de notas.
-![imagem chave privada](images/apmft.png)
-
+- Copie a chave privada do domínio para um bloco de notas.
 ![imagem dados chave](images/datakey.png)
+
+### **Objetivos**
+Nesse Workshop você vai:
+
+- Conhecer o Oracle Container Engine for Kubernetes
+O Oracle Cloud Infrastructure Container Engine for Kubernetes é um serviço totalmente gerenciado, escalável e altamente disponível que você pode usar para implantar seus aplicativos de contêineres na nuvem.
+
+- Conhecer o serviço Oracle Cloud Infrastructure DevOps é uma plataforma completa de integração contínua/entrega contínua (CI/CD) para que os desenvolvedores simplifiquem e automatizem o ciclo de vida de desenvolvimento do software.
 
 ## Task 1: Clonar o repositório e movimentar conteúdo para repositório do projeto DevOps
 
@@ -43,7 +39,7 @@ Vamos coletar algumas informações na tenancy do OCI que serão utilizadas ao l
 2. Clone o repositório do projeto:
 git clone https://github.com/CeInnovationTeam/BackendFTDev.git
 
-3. No 🍔 menu de hambúrguer, acesse: Developer Services → DevOps → Projects.
+3. No menu superior esquerdo (hambúrguer), acesse: Developer Services → DevOps → Projects.
 ![menu esquerdo developer services](images/developer-menu.png)
 
 4. Acesse o projeto listado (criado no provisionamento do Resource Manager).
