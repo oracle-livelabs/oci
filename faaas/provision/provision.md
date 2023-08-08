@@ -25,7 +25,7 @@ By subscribing to announcements, Oracle automatically notifies you by email to l
 
   ![Announcements page](images/announcements.png)
 
-2. On the left hand side. Change the **Compartment** from **Pmpreprod (root)** to your compartment **Compt2** in this case.
+2. On the left-hand side. Change the **Compartment** from **Pmpreprod (root)** to your compartment **Compt2** in this case.
 
   ![Announcements change compartment](images/announcements-change-comptmt.png)
 
@@ -37,7 +37,7 @@ By subscribing to announcements, Oracle automatically notifies you by email to l
 
   ![Subscription name](images/create-subscription-name.png)
 
-5. Select option **Selected announcements only**. Enter the **Filter group name**. Under Filters section, add filter for **Type** = Service, **Value** = Oracle Fusion Applications. This step filters only Fusion-related announcements that are for the environments that will be created(or exist). 
+5. Select the option **Selected announcements only**. Enter the **Filter group name**. Under the Filters section, add a filter for **Type** = Service, **Value** = Oracle Fusion Applications. This step filters only Fusion-related announcements that are for the environments that will be created(or exist). 
 
   ![Selected announcements only](images/create-subscription-selected.png)
 
@@ -69,7 +69,7 @@ By subscribing to announcements, Oracle automatically notifies you by email to l
 
   ![Subscription active](images/subscription-active.png)
 
-13. Close the Subscription confirmed tab and Topic tab and return to the Subscriptions page as seen in step 8. Click on the Subscription Name. User2Sub in the case. Confirm that Filter group has service added.
+13. Close the Subscription confirmed tab and Topic tab and return to the Subscriptions page as seen in step 8. Click on the Subscription Name. User2Sub in the case. Confirm that the Filter group has service added.
 
   ![Subscription filter groups](images/subscription-filter-groups.png)
 
@@ -79,7 +79,7 @@ The Oracle Cloud Console provides self-service management of the environments wh
 When you subscribe to Fusion Applications, you are allotted one production environment, one test environment, and you have the option of purchasing development environments. Before you provision these environments, you set up an environment family. The environment family ensures that the applications on all your environments are maintained, upgraded, and patched at the same levels.
 
 When you create an environment you can configure some options specifically for each environment in the family, including some maintenance schedule options, language packs, and network access control rules. After you create an environment, you can fully manage the lifecycle of the environment, including:
-View metrics and availability
+- View metrics and availability
 - Get detailed information about upcoming scheduled maintenance
 - Monitor maintenance in progress
 - Manage other services that are integrated with your Fusion Applications environment
@@ -98,7 +98,7 @@ For more info refer to the [documentation](https://docs.oracle.com/en-us/iaas/Co
 
   ![Change compartment](images/change-comp-overview-page.png)
 
-5. Step 1 : The first step of the wizard will setup the Fusion environment family.
+5. Step 1: The first step of the wizard will set up the Fusion environment family.
     - Environment Family is a group for environments and is set up to facilitate the management of the related environments that share the same subscription. It also ensures that the applications on all your environments are maintained, upgraded, and patched at the same levels. You set up an environment family before you provision your environments.  Environment family is prefilled to the tenancy name. Choose the subscriptions as per the diagram below. You can select and add all 3 fusion pillar subscriptions to the family. CX = 111111111, ERP = FACP\_TEST\_DM_BG\_FEATURES, and HCM = 666666666. 
       
       ![Create family step](images/create-family-step.png)
@@ -112,7 +112,7 @@ For more info refer to the [documentation](https://docs.oracle.com/en-us/iaas/Co
     
       ![Advanced options - Compartment](images/advanced-options-set-comp.png)
     
-    - Click on the **Maintenance** tab in the advanced options and notice the Quarterly schedule and Monthly patching. Oracle releases new features and major enhancements four times a year and applies them in the quarterly update. These updates are mandatory for all customers and are applied to your environments as per the quarterly maintenance months. The quarterly schedule setting at the family is inherited by all the environments in the family. Monthly patching is an optional offering that you can choose. When you select monthly patching, your environments receive bug fixes every month. Enabling it at the family level will enable it for all environments in the family. You can modify this setting at a later point in time as well for individual environments or for all the family level.
+    - Click on the **Maintenance** tab in the advanced options and notice the Quarterly schedule and Monthly patching. Oracle releases new features and major enhancements four times a year and applies them in the quarterly update. These updates are mandatory for all customers and are applied to your environments as per the quarterly maintenance months. The quarterly schedule setting in the family is inherited by all the environments in the family. Monthly patching is an optional offering that you can choose. When you select monthly patching, your environments receive bug fixes every month. Enabling it at the family level will enable it for all environments in the family. You can modify this setting at a later point in time as well for individual environments or for all the family level.
     - Click on "I want to choose quarterly maintenance months" to select the quarterly schedule. Make sure **April, July, October, January** cohort is selected.
     - Enable the monthly patching as shown.
     - Click **Next** to go to the 2nd step of the wizard to set up environments.
@@ -124,11 +124,11 @@ For more info refer to the [documentation](https://docs.oracle.com/en-us/iaas/Co
     
       ![Create environment step](images/create-env-step.png)
     
-    - Enter your application administrator credentials. Customers have a choice to enter different admins for each environment. We will enter one admin for all in the workshop. **Note**: Since this workshop is built on a special cloud account/tenancy, It is a simulation of the actual fusion environment provisioning, and the wizard will be able to create mock environments within minutes, instead of a few hours. You will also not be able to set up a password for the admin and cannot log in to the fusion application. We have another lab. where we will test it on an active Fusion Application.
+    - Enter your application administrator credentials. Customers have a choice to enter different admins for each environment. We will enter one admin for all in the workshop. **Note**: Since this workshop is built on a special cloud account/tenancy, It is a simulation of the actual fusion environment provisioning, and the wizard will be able to create mock environments within minutes, instead of a few hours. You will also not be able to set up a password for the admin and cannot log in to the Fusion application. We have another lab. where we will test it on an active Fusion Application.
     
       ![Configure admin](images/configure-admin.png)
     
-    - Click on the **Show advanced options** and enter a DNS prefix. The preview will append the fusion application urls with the provided text. Users can setup different DNS for the individual environments.
+    - Click on the **Show advanced options** and enter a DNS prefix. The preview will append the fusion application URLs with the provided text. Users can set up different DNS for individual environments.
     
       ![DNS Prefix](images/advanced-options-dns-prefix.png)
     
@@ -146,7 +146,7 @@ For more info refer to the [documentation](https://docs.oracle.com/en-us/iaas/Co
   ![Created resources - overview page](images/overview-page-created-resources.png)
 
 ## Task 3: Review Environment Details
-1. Scroll down in the Fusion Overview page to see the Guided Learning section. Click on the first tour **Start Tour** for the Environment detail page and follow the instructions. Notice some key details from the tour - Step 1: Environment information - Version indicated the current Fusion Application version installed.  Next maintenance date is the upcoming quarterly maintenance date. Health status shows the real-time status of the Fusion Application. Lifecycle state ensures that no 2 operations are performed on the environment at the same time. Users can still access the applications when some updates are occurring on the environment, even though modifications on the environment are disabled. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/manage-environment.htm) for more information. Since this is a simulation the environments wont have any integrations. Customers get auto-provisioned pre-configured Oracle SaaS/PaaS services based on type of environment and subscriptions available, such as -Oracle Digital Assistant, VB Studio, and Integration Cloud.
+1. Scroll down in the Fusion Overview page to see the Guided Learning section. Click on the first tour **Start Tour** for the Environment detail page and follow the instructions. Notice some key details from the tour - Step 1: Environment information - Version indicated the current Fusion Application version installed.  Next maintenance date is the upcoming quarterly maintenance date. Health status shows the real-time status of the Fusion Application. Lifecycle state ensures that no 2 operations are performed on the environment at the same time. Users can still access the applications when some updates are occurring on the environment, even though modifications on the environment are disabled. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/manage-environment.htm) for more information. Since this is a simulation the environments wont have any integrations. Customers get auto-provisioned pre-configured Oracle SaaS/PaaS services based on the type of environment and subscriptions available, such as -Oracle Digital Assistant, VB Studio, and Integration Cloud.
 
   ![FA guided tours](images/fa-guided-tours.png)
 

@@ -28,7 +28,7 @@ You will learn:
 - How to navigate the Cloud Console and the Applications interface, including how to manage your account, set Console preferences, and troubleshoot common issues.
 - Key concepts of Fusion Applications environment lifecycle management, including how to provision, run, and manage your environments.
 
-**Note**: To take this class, you must have an Oracle University login, which you can get with a free registration. You can register or confirm your login by going to this link https://mylearn.oracle.com/ou/home. Click the **Account** icon on the top right-hand side and then click **Sign in to my account** or **Sign up for an Oracle Account**.
+**Note**: To take this class, you must have an Oracle University login, which you can get with free registration. You can register or confirm your login by going to this link https://mylearn.oracle.com/ou/home. Click the **Account** icon on the top right-hand side and then click **Sign in to my account** or **Sign up for an Oracle Account**.
 
 ## Acknowledgements
 * **Author** - Ankit Kumar, Product Manager in FAaaS

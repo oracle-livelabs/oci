@@ -19,7 +19,7 @@ Estimated Time: 20+ minutes
 ## Task 1: Refresh Environment
 An environment refresh copies data from a source environment to a target environment, making a copy of the source environment onto the target environment. Environment refreshes ensure a predictable experience during testing activities by providing a comparable non-production environment for testing and validation, before applying changes to your production environment. For more info refer to [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/refresh-environment.htm).
 
-1. Click **ORACLE Cloud** (upper left-hand corner to goto the Applications tab) Open My Applications, Fusion Applications chevron, and click on test or dev environment. **Note**: You cannot refresh a production Environment, so make sure you are working on Test or development environment.
+1. Click **ORACLE Cloud** (upper left-hand corner to go to the Applications tab) Open My Applications, Fusion Applications chevron, and click on test or dev environment. **Note**: You cannot refresh a production Environment, so make sure you are working on Test or development environment.
 
   ![Select test or dev environment](images/select-test-dev-env.png)
 
@@ -38,17 +38,17 @@ An environment refresh copies data from a source environment to a target environ
 
 5. Refresh confirmation modal pops up. Enter the environment name and click **Refresh**
 
-  ![Confirm refresh now](images/refresh-confirm.png)
+  ![Confirm Refresh now](images/refresh-confirm.png)
 
 6. When the refresh task is successfully submitted, A refresh schedule is posted on the screen with the current timestamp.
 
   ![Refresh created](images/created-refresh.png)
 
-7. Click on **Work Request** in the left-hand resources section to see the Refreshing environment work request created with 0% completed state. **Note**: Since this is a simulation of refresh. The job will be completed within minutes. In actual environments Refresh can take a few hours to complete.
+7. Click on **Work Request** in the left-hand resources section to see the Refreshing environment work request created with a 0% completed state. **Note**: Since this is a simulation of a refresh. The job will be completed within minutes. In actual environments Refresh can take a few hours to complete.
 
   ![Created refresh work request](images/refresh-work-request.png)
 
-8. Go back to the Refresh resource and refresh the page. Notice the Last refresh date is stamped in the header and status in the details is Succeeded.
+8. Go back to the Refresh resource and refresh the page. Notice the Last refresh date is stamped in the header and the status in the details is Succeeded.
 
   ![Refresh now succeeded](images/refresh-succeeded.png)
 
@@ -77,23 +77,23 @@ An environment refresh copies data from a source environment to a target environ
 
   ![Reschedule refresh](images/reschedule-refresh-option.png)
 
-15. Enter the **New refresh date** and **environment name** to confirm re-schedule refresh. Click **Reschedule**.
+15. Enter the **New refresh date** and **environment name** to confirm the re-schedule refresh. Click **Reschedule**.
 
   ![Confirm reschedule refresh](images/confirm-reschedule-refresh.png)
 
-16. The refresh should now be scheduled to the new date.
+16. The refresh should now be scheduled the new date.
 
   ![Confirm reschedule refresh](images/rescheduled-refresh.png)
 
-17. In case a user forgets to mask data during refresh, or there is additional sources of data in the fusion environment that needs to be masked, users can run data masking as a standalone job. Go to the **Security** tab of the Resources section and then open the **Data Masking** tab
+17. In case a user forgets to mask data during refresh, or there are additional sources of data in the fusion environment that needs to be masked, users can run data masking as a standalone job. Go to the **Security** tab of the Resources section and then open the **Data Masking** tab
 
   ![Data masking tab](images/data-masking-tab.png)
 
-18. Click on Run data masking. Data masking confirmation modal pops up. Enter the environment name and click on Run data masking.
+18. Click on Run data masking. The data masking confirmation modal pops up. Enter the environment name and click on Run data masking.
 
   ![Confirm run data masking](images/run-data-masking.png)
 
-19. Data masking job will be seen in the tab with the status In progress, which will change to Succeeded in a few minutes. you might need to refresh the browser to see the updates. **Note**: Since this is a simulation of a data masking job, it will be completed within a few minutes. The actual job will take a few hours. Also, the environment is unavailable during this time.
+19. The data masking job will be seen in the tab with the status In progress, which will change to Succeeded in a few minutes. you might need to refresh the browser to see the updates. **Note**: Since this is a simulation of a data masking job, it will be completed within a few minutes. The actual job will take a few hours. Also, the environment is unavailable during this time.
 
   ![Data masking run added](images/data-masking-added.png)
 
@@ -101,7 +101,7 @@ An environment refresh copies data from a source environment to a target environ
 
   ![Data masking work request](images/data-masking-work-request.png)
 
-21. Click on the **Bell-Announcement** icon on the top right-hand corner to go to the announcements page. Click on the **Announcements** and make sure your compartment is selected. You will see the announcement for the fusion environments you created. Notice the **Environment Refresh Completed** announcement.
+21. Click on the **Bell-Announcement** icon in the top right-hand corner to go to the announcements page. Click on the **Announcements** and make sure your compartment is selected. You will see the announcement for the fusion environments you created. Notice the **Environment Refresh Completed** announcement.
 
   ![Refresh completed announcement](images/env-refresh-completed-announcement.png)
 
@@ -112,7 +112,7 @@ An environment refresh copies data from a source environment to a target environ
 ## Task 2: Edit Language Pack
 You can add language packs to an environment. For more information about language packs, see [Understanding Language Packs](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/plan-environment.htm#about-language-packs). Note that you can't remove a language pack.
 
-1. Navigate to the environment details page: Click on the **Oracle Cloud icon** to go to the **Applications Homepage**, click **Fusion Applications**. On the **Overview** page, find the environment family for the environment, and then click on any environment name to go to the details page.
+1. Navigate to the environment details page: Click on the **Oracle Cloud icon** to go to the **Applications Homepage**, and click **Fusion Applications**. On the **Overview** page, find the environment family for the environment, and then click on any environment name to go to the details page.
 2. Under **Resources**, click **Language packs**.
 3. Click **Install**.
     - Select the check box for the language to include. You can add two language packs at a time.
@@ -120,7 +120,7 @@ You can add language packs to an environment. For more information about languag
     
       ![Language packs panel](images/language-packs-panel.png)
     
-    - Follow the confirmation prompts, enter 1 or 2 based on number of language selected. Click **Install**
+    - Follow the confirmation prompts, and enter 1 or 2 based on the number of languages selected. Click **Install**
     
       ![Confirm install language](images/confirm-install-language.png)
 
@@ -165,7 +165,7 @@ Users can allow access to Fusion Application only from selected public IPs. You 
   ![Custom environment maintenance](images/select-custom-maintenance.png)
 
 6. Note the change in Next maintenance date for the environment, it would have moved 2 weeks ahead. Maintenance can be performed in the first week of the month (non-production cadence) or in the third week of the month (production cadence). Typically, for test and development environments you would choose non-production and for production environments, you would choose production. See [Types of Maintenance and Schedules](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/plan-environment-family.htm#maint-types) for more details.
-7. Check the Work request for Updating environment.
+7. Check the Work request for **Updating environment**.
 
 ## Task 5: Edit Encryption
 By default, your Fusion Applications environments are protected by Oracle-managed encryption keys. By subscribing to the Oracle Break Glass and Database Vault service, you are offered the customer-managed keys feature that allows you to provide and manage the encryption keys that protect your environments. Fusion Applications leverages the OCI Vault service to enable you to create and manage encryption keys to secure the data stored at rest in your production and non-production environments. You can set up keys on your environment either during environment creation or you can add the key to an existing environment. Before you assign the Vault and Keys to the Environment, you need to create Vault and AES-256 type Key in your account and assign permissions by writing policies for the same For more info please refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/manage-security-key-management.htm).

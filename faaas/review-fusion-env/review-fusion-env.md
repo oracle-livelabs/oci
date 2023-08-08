@@ -1,7 +1,7 @@
 # Review Fusion Environment
 
 ## Introduction
-In this lab we will log into another cloud account and look at an actual environment. We will see metrics, integration, encryption and lockbox features. We will also log into Fusion, ODA, and VBCS applications.
+In this lab, we will log into another cloud account and look at an actual environment. We will see metrics, integration, encryption and lockbox features. We will also log into Fusion, ODA, and VBCS applications.
 
 ### Objective
 * Review subscription service
@@ -15,14 +15,14 @@ Estimated Time: 20+ minutes
 * This lab requires login to a new cloud account with the credentials provided.
 
 ## Task 1: Get Started
-1. If you are logged-in, then log out of your workshop account. Click on the Profile icon at the top right-hand corner of the screen. Click on **Sign out** to logout of the account.
+1. If you are logged in, then log out of your workshop account. Click on the Profile icon at the top right-hand corner of the screen. Click on **Sign out** to log out of the account.
 
   ![Cloud account signout](images/cloud-account-signout.png)
 
 2. Navigate to https://cloud.oracle.com
-3. Use **Faaasproduction33** tenancy to login to cloud portal.
+3. Use **Faaasproduction33** tenancy to log in to the cloud portal.
 4. Select **Default** identity domain.
-5. Enter the Username/password (will be provided in the lab) and click **Sign In**.
+5. Enter the Username/password (which will be provided in the lab) and click **Sign In**.
 
 ## Task 2: Subscription
 1. Goto the **Quick Actions** under **Applications** tab and click on **View subscriptions**
@@ -33,7 +33,7 @@ Estimated Time: 20+ minutes
 
   ![Subscriptions page](images/subscriptions-page.png)
 
-3. Take a look at the Subscription services. Click on 1st product quantity for HCM Base product **500**.
+3. Take a look at the Subscription Services. Click on 1st product quantity for HCM Base product **500**.
 
   ![Subscription services](images/subscription-services.png)
 
@@ -52,7 +52,7 @@ For more info please refer to the [documentation](https://docs.oracle.com/en-us/
 
   ![Applications homepage](images/apps-homepage.png)
 
-2. Go to Metrics section of Resources for the environment
+2. Go to the Metrics section of Resources for the environment
 
   ![Metrics chart view](images/metrics-chart-view.png)
 
@@ -75,13 +75,13 @@ The 4 integrations we will be testing are:
 
 For more info please refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/manage-integrations.htm).
 
-1. Login to Fusion Application for the production environment, by clicking on **View Application** or **Application URL**. Username/password will be provided in the lab.
+1. Login to Fusion Application for the production environment, by clicking on **View Application** or **Application URL**. username/password will be provided in the lab.
  
   ![View application](images/view-application.png)
   ![Application login](images/application-login.png)
   ![Application welcome page](images/application-welcome-page.png)
 
-2. Go to **Integrations** resources for the production fusion environment and click on the **Application URL** for all 4 services - Fusion Analytics Warehouse, Application Integration, Visual Builder, and Digital Assistant. The 4 Integration Applications will open in new tabs. Notice that you are able to login to all integrations with Single Sign on from Fusion Application Identity.
+2. Go to **Integrations** resources for the production fusion environment and click on the **Application URL** for all 4 services - Fusion Analytics Warehouse, Application Integration, Visual Builder, and Digital Assistant. The 4 Integration Applications will open in new tabs. Notice that you are able to log in to all integrations with Single Sign-on from Fusion Application Identity.
 
   ![Integrations](images/integrations-section.png)
   ![Fusion analytics warehouse](images/fusion-analytics-warehouse.png)
@@ -100,7 +100,7 @@ For more info please refer to the [documentation](https://docs.oracle.com/en-us/
 In case when Oracle-authorized personnel needs to access resources to troubleshoot or help resolve an issue with your applications environment. Break Glass provides you with the ability to temporarily grant access to Oracle Support using a securely administered workflow.
 
 Key features of Break Glass with Oracle Managed Access include:
-- Provides the operator temporary user credentials for a specific duration.
+- Provides the operator with temporary user credentials for a specific duration.
 - Specifies the access level for the representative.
 - Creates logs of all actions, providing an audit trail.
 
