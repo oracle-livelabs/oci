@@ -26,10 +26,16 @@ It is entirely driven by REST APIs, giving you easy integration with application
 
 The diagram below provides an overview of the OCI Data Flow Service, its features, components, and some of the other OCI services it integrates with.
 
-![Data Flow Architecture](images/df-overview.png " ")
+   ![Data Flow Architecture](images/df-overview.png " ")
 
 ### Objectives
 In this workshop, you will:
+* Ingest raw data from Object Store to the Bronze Zone of OCI Data Lake using OCI Data Integration Service
+* Prepare data between the Bronze Zone and Silver Zone using the OCI Data Flow ETL leveraging the Data Flow Pools
+* Explore data interactively between Silver Zone & Gold Zone using OCI Data Flow Studio Jupyter Notebooks managed by OCI Data Science.
+* Use OCI Data Flow SQL Endpoint to query data in securely Gold Zone in OCI Data Lake with Column Level Security in place
+* Write data between the Delta Lake in Gold Zone and the ADW using the OCI Data Flow Spark Oracle Data Source
+* (Optional): Schedule the OCI Data Flow ETL jobs using the OCI Data Integration Service
 
 ### Prerequisites
 
