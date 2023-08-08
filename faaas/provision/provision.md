@@ -98,7 +98,7 @@ For more info refer to the [documentation](https://docs.oracle.com/en-us/iaas/Co
 
   ![Change compartment](images/change-comp-overview-page.png)
 
-5. Step 1: The first step of the wizard will set up the Fusion environment family.
+5. The first step of the wizard will set up the Fusion environment family.
     - Environment Family is a group for environments and is set up to facilitate the management of the related environments that share the same subscription. It also ensures that the applications on all your environments are maintained, upgraded, and patched at the same levels. You set up an environment family before you provision your environments.  Environment family is prefilled to the tenancy name. Choose the subscriptions as per the diagram below. You can select and add all 3 fusion pillar subscriptions to the family. CX = 111111111, ERP = FACP\_TEST\_DM_BG\_FEATURES, and HCM = 666666666. 
       
       ![Create family step](images/create-family-step.png)
@@ -119,7 +119,7 @@ For more info refer to the [documentation](https://docs.oracle.com/en-us/iaas/Co
     
       ![Advanced options - Maintenance](images/advanced-options-maintenance.png)
 
-6. Step 2: Setup environments 
+6. The second step of the wizard will set up the Fusion environments.
     - The wizard lets you create 3 environments. Notice the Environment name field is pre-filled with the cloud account name. The prod, test, and dev environments will have -prod. -test, -dev appended to it automatically when they are created. 
     
       ![Create environment step](images/create-env-step.png)
@@ -133,7 +133,7 @@ For more info refer to the [documentation](https://docs.oracle.com/en-us/iaas/Co
       ![DNS Prefix](images/advanced-options-dns-prefix.png)
     
     - Click on the **Encryption** tab in the advanced options and select any environment. Notice the wizard allows you to change the default Oracle-managed key to the Customer-managed key option since the subscription selected for the family has the service. We will change the key in the later lab. Keep it as Oracle-managed for now and click **Next**.
-7. Step 3: review the information and click **Submit**
+7. Review the family and environments information in the final step and click **Submit**
 
   ![Review step](images/review-step.png)
 
