@@ -30,6 +30,7 @@ This lab assumes:
 * You have an Oracle Cloud account with OCI and IDCS administration privileges or
 * Your OCI and IDCS administrator can perform steps in this lab for you.
 
+
 ## Task 1: Get User's OCID
 
 1. After logging into cloud console, click on User Settings under top right navigation, this will take to **User Details** page,

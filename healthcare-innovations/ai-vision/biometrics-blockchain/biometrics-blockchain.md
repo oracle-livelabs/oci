@@ -2,10 +2,6 @@
 
 ## Introduction
 
-By combining biometrics and the blockchain, tech leaders can create solutions to keep a user’s identity inside a secure distributed ledger system, achieving complete human control. For example, biometrics like heartbeat and voice signals could prevent people from stealing someone’s identity in the financial sector. It could be quite easy to condition entry to the blockchain to the fail/pass test of being a human without the need for revealing one's identity in what is called a pseudonymous manner. In other words, inventors can simply create a condition test to validate users through physiology.
-
-[Source forbes.com](https://www.forbes.com/sites/forbestechcouncil/2019/01/16/how-to-combine-physiological-biometrics-and-blockchain-for-heightened-security)
-
 This lab walks you through preventing illicit insider changes to users' biometric data. Permits insert-only SQL operations, with no updates and other modifications allowed, and restricts deletions.
  
 Estimated time: 30 minutes
@@ -76,6 +72,8 @@ This lab assumes you have:
     </copy>
     ```
 
+    > **Note:** Biometric fingerprints or Iris images are not provided as a part of this lab. You can scan your fingerprint and upload it for testing purposes or bring your own biometric data.
+
 2. Review the table created from **Object Browser** under **SQL Workshop**, click on table name
 
     ![Blockchain for Biometrics](images/biometry-apex-03.png =50%x* " ")
@@ -95,7 +93,7 @@ This lab assumes you have:
  
     ![Blockchain for Biometrics](images/biometry-apex-06.png =50%x*  " ")
 
-5. Review and update SQL Query if required     
+5. Review and update SQL Query if required
 
     ![Blockchain for Biometrics](images/biometry-apex-08.png =50%x*  " ")
 

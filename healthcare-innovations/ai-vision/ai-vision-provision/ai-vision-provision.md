@@ -22,6 +22,8 @@ A compartment is a collection of cloud assets, like compute instances, load bala
 
 If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges to create a compartment and should skip this first task. Oracle LiveLabs has already created a compartment for you and you should use that one. Even though you can't create a compartment, you can review the steps below to see how it is done.
 
+> **Note:**  If you already have a compartment created, you can **optionally skip this Task**.
+
 
 1. Click the three-line menu on the top left of the console. Scroll down to the bottom of the menu, click **Identity & Security -> Compartments**.
 
@@ -184,4 +186,3 @@ You may now **proceed to the next lab**.
 - **Author** - Nilay Panchal, Oracle Autonomous Database Product Management
 - **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
 - **Last Updated By/Date** - Marty Gubar, ADB PM, July 2022
-- **Built with Blocks**

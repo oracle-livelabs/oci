@@ -1,34 +1,42 @@
-# Oracle Speech and OpenAI Chat GPTs Integration
+# OCI Speech with Cohere or OpenAI Integration
 
 ## Introduction
 
+In this Lab, we will see how to integrate [OCI AI Speech](https://www.oracle.com/artificial-intelligence/speech/) Input as prompts to various AI services such as [OpenAI](https://openai.com/about) and [Cohere](https://cohere.com/).
+
 The OpenAI API can be applied to virtually any task that requires understanding or generating natural language and code. The OpenAI API can also be used to generate and edit images or convert speech into text. OpenAI offer a range of models with different capabilities and price points, as well as the ability to fine-tune custom models.
-
-If you are planning to use [Cohere](https://cohere.com/) AI instead of OpenAI please refer [this LinkedIn article](https://www.linkedin.com/feed/update/urn:li:activity:7082361643715747840/)
-
+ 
 **GPTs**
 
 OpenAI's GPT (generative pre-trained transformer) models have been trained to understand natural language and code. GPTs provide text outputs in response to their inputs. The inputs to GPTs are also referred to as "prompts". Designing a prompt is essentially how you “program” a GPT model, usually by providing instructions or some examples of how to successfully complete a task. GPTs can be used across a great variety of tasks including content or code generation, summarization, conversation, creative writing, and more. Read more in OpenAI's introductory [GPT guide](https://platform.openai.com/docs/guides/gpt) 
 
 You can ask Questions like 
 
-**First Example**
+**OpenAI Example**
 
 *please help me with common cold curing*
 
-and OpenAI GPT engine would repond back as 
+and OpenAI would respond back as 
 
 *1. Get plenty of rest. 2. Drink lots of fluids, such as water, juice, and clear broth. 3. Use saline nose drops to relieve congestion. 4. Sip warm liquids such as broth, tea, or apple cider. 5. Take over-the-counter medications such as ibuprofen or acetaminophen to reduce fever and aches. 6. Use a humidifier or take a warm, steamy shower to help ease congestion. 7. Gargle with warm salt water to soothe a sore throat. 8. Avoid contact with people who have colds. 9. Avoid smoking and secondhand smoke. 10. Increase your vitamin C intake.*
 
-**Another Example**
+**Cohere Example**
 
-*help me detect breast cancer please*
+*Hello doctor, I have pain in my neck, please help me thank you*
 
-OpenAI would respond back as 
+Cohere would respond back as 
 
-*1. Make an appointment with your doctor for a physical exam. 2. Ask your doctor to perform a breast exam to check for lumps. 3. Get regular mammograms as recommended for your age. 4. Talk to your doctor about other possible tests, such as a breast MRI or ultrasound. 5. Pay attention to any changes in your breasts, such as a lump or thickening, discharge, or nipple inversion. 6. Consider genetic testing if you have a family history of breast cancer.*
+*There are a few things you can do to help reduce the pain in your neck. First, try to identify the cause of the pain. If it is due to a specific activity, such as typing or writing, try to take a break from that activity. Second, try to relax your neck muscles. You can do this by gently massaging them or by taking a warm bath. Third, try to ensure that your neck is properly supported when you are sitting or lying down. You can do this by using a pillow or by placing your head on a soft surface. Finally, if the pain is severe or persists for more than a few days, you should seek medical attention.*
  
-Estimated Time: 20 minutes.
+Estimated Time: 30 minutes.
+
+### [About Cohere](https://cohere.com/)
+
+Cohere is the leading AI platform for enterprise. Its world-class AI is uniquely suited to the needs of business, unlocking unprecedented ease-of-use, accessibility, and data privacy. Cohere’s platform is cloud-agnostic, accessible through API as a managed service, and can be deployed on virtual private cloud (VPC) or even on-site to meet companies where their data is, offering the highest levels of flexibility and control. Founded by Google Brain alumni and a co-author of the seminal Transformer research paper, Cohere is on a mission to transform enterprises and their products with AI that unlocks a more intuitive way to generate, search, and summarize information than ever before.
+
+### [About OpenAI](https://openai.com/about)
+
+OpenAI is an AI research and deployment company. OpenAI's mission is to ensure that artificial general intelligence benefits all of humanity and that artificial general intelligence—AI systems that are generally smarter than humans—benefits all of humanity. 
   
 ### Objectives
 
@@ -38,7 +46,6 @@ In this lab, you will:
 * Understand OpenAI Authentication  
 * Integrating Oracle Speech AI Output with OpenAI
 * OpenAI Integration with Oracle APEX without using OCI Speech AI
-
 
 ### Prerequisites
 
@@ -258,6 +265,115 @@ This lab assumes you have:
         END; 
         </copy>
         ```
+
+## Task 5: Create Cohere Key (Optional Tasks)
+
+1. Sign up and Sign in and [generate AI API Key](https://dashboard.cohere.ai/api-keys)  
+
+2. Generate Cohere API Key and read API key [limitations](https://docs.cohere.com/docs/going-live)
+
+    ![Generative AI](images/cohere-key.png) 
+
+## Task 6: Getting AI Response from Cohere (Optional Tasks)
+
+1. Review the request JSON, Call API end point at https://api.cohere.ai/v1/generate
+
+    ```json
+    <copy> 
+        {  
+            "model": "command",
+            "prompt": "Your input text here",
+            "max_tokens": 300,
+            "temperature": 0.9,
+            "k": 0,
+            "stop_sequences": [],
+            "return_likelihoods": "NONE"
+    }   
+    </copy>
+    ```
+
+2. Review the response JSON
+
+    ```json
+    <copy> 
+        {
+            "id": "2c5fd5d6-743c-4a52-****-*****",
+            "generations": [
+                {
+                    "id": "46907fbb-1d86-40fc-ba70-806d658ee901",
+                    "text": "\n your answer goes here  "
+                }
+            ],
+            "prompt": "your question goes here",
+            "meta": { "api_version": 
+                        { 
+                            "version": "1" 
+                        } 
+                    }
+    }
+    </copy>
+    ```
+
+3. PL/SQL Code to send request and get response back from Cohere, you can create an Oracle APEX Dynamic Region to display the results taking input from a page item after submitting the page. Construct PL/SQL Code block, Replace this code in the PL/SQL Dynamic content window, use [JSON_TABLE](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/JSON_TABLE.html) to create a PL/SQL cursor 
+
+
+    ![Cohere Page](images/cohere-page.png) 
+
+1. Response Dynamic PL/SQL block code
+
+    ```sql
+    <copy> 
+        DECLARE
+    
+        l_url    VARCHAR2(4000) := 'https://api.cohere.ai/v1/generate';  
+        l_input VARCHAR2(4000) := :P48_INPUT;
+        
+            l_body   VARCHAR2(4000) := '{
+                "model": "command",
+                "prompt": "'||l_input||'",
+                "max_tokens": 300,
+                "temperature": 0.9,
+                "k": 0,
+                "stop_sequences": [],
+                "return_likelihoods": "NONE"
+                }';
+            l_response_json CLOB;
+            l_text VARCHAR2(4000);
+
+        CURSOR C1  IS 
+            SELECT jt.* 
+            FROM   JSON_TABLE(l_response_json, '$' 
+                    COLUMNS (text VARCHAR2(2000)  PATH '$.generations[0].text' )) jt; 
+
+        BEGIN
+
+        if l_input is not null then
+
+        apex_web_service.g_request_headers(1).name := 'Content-Type';
+            apex_web_service.g_request_headers(1).value := 'application/json';
+            apex_web_service.g_request_headers(2).name := 'Authorization';
+            apex_web_service.g_request_headers(2).value := 'Bearer Your-cohere-API-Key';
+
+        l_response_json := apex_web_service.make_rest_request( 
+            p_url => l_url, 
+            p_http_method => 'POST', 
+            p_body => l_body  
+        );
+
+        --Htp.p(l_response_json ); 
+
+            For row_1 In C1 Loop
+                l_text := row_1.text;
+                    Htp.p(  l_text );  
+            End Loop;
+
+            end if;
+
+        END;     
+    </copy>
+    ```
+
+    ![Cohere Response](images/cohere-response.png) 
  
 This concludes this lab and you can **proceed to the next lab**.
 

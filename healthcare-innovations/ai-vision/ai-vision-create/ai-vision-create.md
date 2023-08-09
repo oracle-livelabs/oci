@@ -26,6 +26,8 @@ This lab assumes you have:
 
 * Completed **Setup environment** and **Setup OCI CLI** lab and already logged into OCI console
 
+> **Note:**  In this lab, we will use our local desktop or laptop terminal or command prompt to upload images directly to OCI object storage using OCI CLI. This lab does not show how to upload images to the OCI cloud shell and, from there, use OCI commands to upload images to OCI object storage. Using a local laptop gives us a finer edge in cleaning up the image data and preparing folders locally rather than doing the same on Cloud shell before uploading
+
 ## Task 1: Data Preparation by Classifying Images. 
 
 1. Create folder **XRayBreastCancer** under this, create two folders **NORMAL\_BREAST** and **BREAST\_WITH\_CANCER**, and place the files in their respective folder
@@ -38,16 +40,12 @@ This lab assumes you have:
 
     ![Raw Images Normal Breast](images/normal-breast.png " ")
 
-    > **Note:** From Google search, look for *Breast Cancer Detection Dataset* and download from any of your favourite data sources or bring your own data.
+    > **Note:** From Google search, look for *Breast Cancer Detection Dataset* and download from any of your favourite data sources or bring your own data. Please refer to the previous lab on how to differentiate between an XRay image with Breast cancer and one with Normal Breast Tissue.
  
 ## Task 2: Load images to Object Storage using OCI CLI
 
 1. Upload images from main folder into OCI Object storage, subfolders will be automatically created
-
-    ```text
-    <copy>oci os object bulk-upload --namespace < namespace > -bn < bucket_name > --src-dir < local folder > --overwrite --content-type 'image/*'</copy>
-    ```
-
+  
     > **Note :** if you have errors in data labelling ensure that you provide content type as *image/jpeg* or *image/png* .Check the OCI CLI [Command Reference](https://docs.oracle.com/en-us/iaas/tools/oci-cli/3.29.2/oci_cli_docs/cmdref/os/object/bulk-upload.html) 
 
     ```text

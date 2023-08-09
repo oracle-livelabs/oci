@@ -8,6 +8,8 @@ In this lab, we will set up the required policies to run through the workshop as
 
 If you're just trying out Oracle Cloud Infrastructure or doing a proof-of-concept project with infrastructure resources, you may not need more than a few administrators with full access to everything. In that case, you can simply create any new users you need and add them to the Administrators group. The users will be able to do anything with any kind of resource. And you can create all your resources directly in the tenancy (the root compartment). You don't need to create any compartments yet, or any other policies beyond the Tenant Admin Policy, which automatically comes with your tenancy and can't be changed.
 
+Please read more about [OCI Policies](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm) before creating or changing any OCI policies.
+
 Estimated time: 30 minutes
 
 ### Objectives
@@ -27,12 +29,15 @@ In this lab, you will:
 
 This lab assumes:
 
-* You have an Oracle Cloud account with OCI and IDCS administration privileges or
-* Your OCI and IDCS administrator can perform steps in this lab for you.
+* You have an Oracle Cloud account with OCI and Tenancy administration privileges to create policies and compartments. 
+
+    > **Note 1:**  Policies are only required if you cannot create or use a OCI resources. If you are a tenancy administrator, you will have access to all the resources, and you can **optionally skip policy creations in this lab**. 
  
-## Task 1: Log into OCI
+## Task 1: Log into OCI 
 
 1. Login into OCI
+
+    > **Note 2:**  Set up policies based only on the OCI Services that you want to use. For example, a policy on Anomaly Detection would not be required if you want to try a lab on OCI Speech AI.
 
     To setup environment, you need OCI administrator's privileges. If you've got these privileges, login into OCI at [cloud.oracle.com](https://www.oracle.com/cloud/sign-in.html). the below image indicates SSO Login as an administrative user. If you have administrative previleges and complete access over a tenancy then you need not create any of the policies below steps.
 
@@ -210,6 +215,8 @@ To find out which steps you need to perform, you can navigate to **Data Labeling
     allow dynamic-group AIDEMODynamicGroup to read objects in compartment aidemo
     allow dynamic-group AIDEMODynamicGroup to manage objects in compartment aidemo where any {request.permission='OBJECT_CREATE'}</copy>
     ```
+
+    Please refer [OCI Data Labeling Policies](https://docs.oracle.com/en-us/iaas/Content/data-labeling/using/about.htm) for more information
  
     You are now ready to start using Data Labeling service.
 
@@ -235,6 +242,8 @@ Similarly to Data Labeling service, you will require some privileges to use OCI 
     ``` 
 
     Click **Create**.
+
+    Please refer [OCI AI Vision Policies](https://docs.oracle.com/en-us/iaas/vision/vision/using/about_vision_policies.htm) for more information
 
 ## Task 7: Setup policies for OCI Document Understanding Service
 
@@ -286,6 +295,8 @@ Before you start using OCI Document Understanding, OCI policies should be setup 
     <copy>allow group <group_in_tenancy> to manage object-family in compartment <output_bucket_located_object_storage_compartment></copy>
     ```
 
+    Please refer [OCI Document Understanding Policies](https://docs.oracle.com/en-us/iaas/document-understanding/document-understanding/using/about_document-understanding_policies.htm#about_vision_policies) for more information
+
 ## Task 8: Setup policies for OCI Speech
 
 Before you start using OCI Speech, your tenancy administrator should set up the following policies by following below steps:
@@ -335,15 +346,27 @@ Before you start using OCI Speech, your tenancy administrator should set up the 
         ```
         ![Create policy for group information window](./images/group-name-policy.png " ") 
 
+    Please refer [OCI Speech Policies](https://docs.oracle.com/en-us/iaas/Content/speech/using/policies.htm) for more information
+
 ## Task 9: Setup policies for OCI Anomaly Detection
 
-1. Before you start using anonmaly detection service, your tenancy administrator should set up the following policies.
+1. Before you start using Anonmaly detection service, your tenancy administrator should set up the following policies.
 
     ```
-        <copy>
-        allow group-name to manage ai-service-anomaly-detection-family in tenancy 
-        </copy>
+    <copy>
+    allow any-user to manage ai-service-anomaly-detection-family in tenancy 
+    </copy>
         ```
+
+2. Policies at a Group level and compartment level (Optional)
+
+    ```
+    <copy>
+    allow group <group-name> to manage ai-service-anomaly-detection-family in compartment <compartment-ocid> 
+    </copy>
+        ```
+
+    Please refer [Anomaly Detection Policies](https://docs.oracle.com/en-us/iaas/Content/anomaly/using/policies.htm) for more information
 
 This concludes this lab. You can **proceed now to the next lab**.
   

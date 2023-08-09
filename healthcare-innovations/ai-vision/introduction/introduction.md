@@ -168,13 +168,15 @@ These Labs will guide you in creating medical transcription and consulting virtu
 
 *Oracle APEX and OpenAI Chat GPTs Integration - Lab 14*
 
-These labs will show how to integrate [**Oracle APEX**](https://apex.oracle.com/en/) Application with [**OpenAI**](https://openai.com/) REST APIs, [Cohere](https://cohere.com/).
+These labs will show how to integrate [**Oracle APEX**](https://apex.oracle.com/en/) Application with [**OpenAI**](https://openai.com/) REST APIs or [**Cohere**](https://cohere.com/).
 
 * Lab 14: Oracle Speech and OpenAI Integration
     * Create OpenAI Key
     * Understand OpenAI Authentication  
     * Integrating Oracle Speech AI Output with OpenAI
     * OpenAI Integration with Oracle APEX without using OCI Speech AI
+    * Create Cohere Key (Optional Tasks)
+    * Getting AI Response from Cohere (Optional Tasks)
 
 *Create Chatbot for Frequently Asked Medical Questions - Lab 15 - Lab 16*
 
@@ -303,23 +305,7 @@ Breast cancer cells usually form a tumour that can often be seen on an x-ray or 
 Researchers have identified hormonal, lifestyle and environmental factors that may increase the risk of breast cancer. But it is unclear why some women without risk factors develop cancer, yet others with risk factors never do. It is most likely that a complex interaction of genetic makeup and environmental factors causes breast cancer.
  
  ![Women's Cancer 2020](images/womens-cancer.png =50%x* )
-
-## About Lung Cancer
-
-Cancer is a disease in which cells in the body grow out of control. When cancer starts in the lungs, it is called lung cancer Worldwide, lung cancer is the second most commonly diagnosed cancer. NSCLC is the most common type of lung cancer in the United States, accounting for 81% of all lung cancer diagnoses.
-
-In 2023, an estimated [238,340 adults (117,550 men and 120,790 women)](https://www.cancer.net/cancer-types/lung-cancer-non-small-cell/statistics) in the United States will be diagnosed with lung cancer. Worldwide, an estimated 2,206,771 people were diagnosed with lung cancer in 2020. These statistics include both small cell lung cancer and NSCLC.
-
-Lung cancer begins in the lungs and may spread to lymph nodes or other organs in the body, such as the brain. Cancer from other organs also may spread to the lungs. When cancer cells spread from one organ to another, they are called metastases.
-
-Lung cancers usually are grouped into two main types called small cell and non-small cell (including adenocarcinoma and squamous cell carcinoma). These types of lung cancer grow differently and are treated differently. Non-small cell lung cancer is more common than small cell lung cancer. For more information, visit the National Cancer Institute’s
-
-Lung cancer includes two main types: non-small cell lung cancer and small cell lung cancer. Smoking causes most lung cancers, but nonsmokers can also develop lung cancer.  
-
-[Lung cancer and prostate cancer are the most common among men](https://www.uicc.org/news/globocan-2020-new-global-cancer-data), together accounting for nearly one-third of all male cancers.
-
-![Mens's Lung Cancer 2020](images/lungcancer.png =50%x* )
-
+ 
 ## Important
 
 This workshop provides a basic example of using OCI Vision and other AI services. This example is for illustration and demonstration purposes only and isn't intended to replace any medical imagery analysis tool or official diagnosis recommendation made by a professional. Users need to receive the proper regulated compliance and approvals before using for medical and diagnostic use.
@@ -330,4 +316,4 @@ You may now **proceed to the next lab**.
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
 * **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - July 31st, 2023
+* **Last Updated By/Date** - Aug 9th, 2023

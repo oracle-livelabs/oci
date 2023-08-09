@@ -20,7 +20,7 @@ In this lab, you will:
 This lab assumes you have:
 
 * Completed **Setup environment** and **Setup OCI CLI** lab and already logged into OCI console
-
+ 
 ## Task 1: Generate Audio File (.wav or .mp3 format)  
 
 1. Use tools such as [Audacity](https://www.audacityteam.org/download/) or Apple QuickTime Player to convert your Audio into .wav or .mp3 files; alternatively, you can also download Audio files from any external sources. 
