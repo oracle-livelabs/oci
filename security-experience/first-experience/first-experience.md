@@ -24,7 +24,7 @@ This lab assumes you have completed previous lab.
 ## Task 1: Download and run security assessment script
 
 1.	Download the [security assessment script.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/security_assessment.py)
-    Now you can run that security assessment script in the Oracle Cloud Shell. In order to do that, open the Oracle Cloud Shell by clicking in the Cloud Shell icon in the Console header:
+    In order to be able to run the script, you will need some specific permissions. Before continue, check the appendix and see the needed permissions. Once you ensure you have those permissions, you can run now that security assessment script in the Oracle Cloud Shell: open the Oracle Cloud Shell by clicking in the Cloud Shell icon in the Console header:
 
     ![Open Cloud Shell](images/cloud-shell-icon.png "Open Cloud Shell")
 
@@ -254,6 +254,22 @@ You may now **proceed to the next lab**.
 
 ## Appendix: How to use the Python script security_assessment.py
 Information provided in this Appendix is rather intended as guidance for workshop users using security_assessment.py script to execute an OCI security assessment.
+
+### Permissions needed
+
+If you are not admin, you will need to have specific permissions to be able to run the script. Please check with your admin to get the following required permissions:
+
+    ```
+    Allow group <your group> to inspect all-resources in tenancy
+    Allow group <your group> to read buckets in tenancy
+    Allow group <your group> to read file-family in tenancy
+    Allow group <your group> to read network-security-groups in tenancy
+    Allow group <your group> to read users in tenancy
+    Allow group <your group> to use cloud-shell in tenancy
+    Allow group <your group> to manage objects in tenancy
+    Allow group <your group> to read data-safe in tenancy
+    ```
+Where your group is the group in OCI that your user need to belong to.
 
 ### Script usage
 ```

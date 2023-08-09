@@ -47,10 +47,10 @@ In this task we will provide you with a link where you can download the Python s
     ```
 5. Run the script and save results in your bucket:
 
-    **Note**: You have been provided with a specific bucket for the purpose of this lab. To identify your bucket's name, it has the following format: ocw23-public-bucket-XXX, where XXX corresponds to your student number, provided to you by the trainers. For example, if your student number is 001, you need to run following command:
+    **Note**: You have been provided with a specific bucket for the purpose of this lab. To identify your bucket's name, it has the following format: ocw23-security-bucket-XXX, where XXX corresponds to your student number, provided to you by the trainers. For example, if your student number is 001, you need to run following command:
 
     ```
-    python3 security_assessment.py -dt --output-to-bucket ocw23-public-bucket-001
+    python3 security_assessment.py -dt --output-to-bucket ocw23-security-bucket-001
     ```
     
     After running the python script, you will see a similar output in Cloud Shell:
