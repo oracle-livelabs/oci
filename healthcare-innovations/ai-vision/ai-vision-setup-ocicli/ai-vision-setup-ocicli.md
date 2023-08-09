@@ -28,7 +28,9 @@ In this lab, you will:
 This lab assumes:
 
 * You have an Oracle Cloud account with OCI and IDCS administration privileges or
-* Your OCI and IDCS administrator can perform steps in this lab for you.
+* Your OCI tenancy administrator can perform steps in this lab for you.
+
+> **Note:** Please refer [Quickstart Installation guide on OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm) for various operating systems, you can **optionally skip this Lab** if you have already installed OCI CLI on your laptop or desktop machine.
 
 
 ## Task 1: Get User's OCID

@@ -174,6 +174,26 @@ If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges 
 
     ![Database complete message.](./images/adb-create-complete-message.png "Complete")
 
+## Task 4: Create an Oracle APEX Workspace
+
+1. Once the ADB has been fully provisioned, return to the *Autonomous Database* page, locate the instance's display name, and then click on it to view the ADB's details page. Click the *Tools* tab. 
+2. Click the *Copy* button to copy the URL to launch the Oracle APEX development environment. Open the link in a new browser window or tab.
+![Launch the Oracle APEX App Builder.](./images/launch-oracle-apex-app-builder.png)
+3. For new ADB instances, this should launch the *Administration Services* login screen. Enter the password for the *admin* user and click the *Sign In to Administration* button.
+![Login to the Oracle APEX Administration Services.](./images/login-to-oracle-apex-administration-services.png)
+4. Again, for new ADB instances, after a successful login, the browser will redirect to the page shown below. Click the *Create Workspace* button.
+![Click the Create Workspace button.](./images/create-a-new-workspace.png)
+5. Click and select the *New Schema* option.
+![Select to create a workspace using a new schema.](./images/create-workspace-using-a-new-schema.png)
+6. Enter the desired *Workspace Name* and *Workspace Username*. The latter will be used to create an Oracle Database user account. Also, provide a new *Workspace Password* that conforms to the same password policy described in *Task 1*. Click the *Create Workspace* button to create the workspace.
+![Provide the desired workspace name, and the administrator's username and password.](./images/provide-workspace-name-and-admin-credentials.png)
+7. After the workspace has been successfully provisioned, click the button on the top-right, and then click the *Sign out* button to return to the App Builder login screen.
+![Sign out of the Administration Services.](./images/sign-out-of-administration-services.png)
+8. Enter the workspace name, username, and password set earlier when creating the workspace. Click the *Sign In* button to access the newly created workspace.
+![Login to the new workspace.](./images/login-to-new-workspace.png)
+9. After successful authentication, the browser will redirect to the default App Builder landing page where workspace administrators and developers will have access to various functionalities to develop and manage APEX applications.
+![Once signed in, the workspace administrator and developers have access to the App Builder and a few other utilities.](./images/oracle-apex-development-environment-home-page.png)
+  
 You may now **proceed to the next lab**.
 
 ## Learn more
@@ -185,4 +205,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Nilay Panchal, Oracle Autonomous Database Product Management
 - **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
-- **Last Updated By/Date** - Marty Gubar, ADB PM, July 2022
+- **Last Updated By/Date** - Madhusudhan Rao on 9th Aug 2023
