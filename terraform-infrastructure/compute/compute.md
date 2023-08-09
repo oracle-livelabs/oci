@@ -2,12 +2,12 @@
 
 ## Introduction
 
-This lab walks you through how to set up Terraform to create a comoute instance in OCI. 
+This lab walks you through how to set up Terraform to define a comoute instance in OCI. 
 
 Estimated Time: 20 minutes
 
 ### About Compute Service
-Oracle Cloud Infrastructure Compute lets you provision and manage compute hosts, known as instances. You can create instances as needed to meet your compute and application requirements.
+Oracle Cloud Infrastructure Compute lets you provision and manage compute hosts, known as instances. You can define instances as needed to meet your compute and application requirements.
 
 ### Objectives
 
@@ -71,19 +71,21 @@ We will search for the Pheonix Region and find the Image OCID.
 
 ![image-ocid](images/image-ocid.png)
 
+We were able to find and implment our Image OCID needed to define out compute instances. Image OCIDs are software with configurations needed to launch our instances.
+
 After entering your Image OCID, you should have something similar to this. 
 
 ![image-ocid-tf](images/image-ocid-tf.png)
 
-## Task 2: Understanding the Bastion Variables
+## Task 2: Understanding The Bastion Variables
 
-**1. Create Bastion**
+**1. Define the Bastion**
 
   A Bastion is a way to provide secure and monitored access for authorised users while preventing unauthorised users access. It acts as a single point of entry to reduce attack surface and provide security.
 
-  We will use this bastion we create to access our webservers. 
+  We will use this bastion we define to access our webservers. 
 
-  In terraform.tfvars, we are going to edit the Bastion Host Specification. 
+  In terraform.tfvars, we are going to edit the Bastion Host Specifications. 
   ```
   <copy>
   compartment_data     = "comp-ocid"                     
@@ -101,33 +103,91 @@ After entering your Image OCID, you should have something similar to this.
   freeform_tags        = {}
   </copy>
   ```
-  Copy and paste the following in to your .tfvars file. 
-  
 
-**2. Edit Bastion Host Specifications**
+**2. Edit The Bastion Host Specifications**
 
-  We will be replacing the variables needed to create a compute instance. 
+  We will be replacing the variables needed to define a compute instance. 
+
+  Editing these varibales are the same as editing it the instance on the OCI console.
+
+  When you define an instance on the OCI Console you start by giving it a name (refered as "display_name" in terraform code).
 
   ```
   display_name         = "bastion"
+  ```
+
+  Next we determine its shape.
+
+  A shape of an instance is a predefined virtual machine (VM) configuration that has the number of CPUs, amount of memory, and other characteristics of the VM instance. In this case we will be using a Standard shape, which is suitable for our bastion host.
+
+  Here is a list of different [Shapes](https://docs.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm) in OCI.
+
+  ```
   shape                = "VM.Standard2.1"
+  ```
+
+  The Operating System or OS (refered as "version" in our code) is the software that is going to be running the instance. In Task 1, we sought our image already and we determined that an Image OCID is required for a specific region. Since we are provisioning in the pheonix region we will use our **'us-pheonix-oel7'** oracle linux image OCID.
+
+  Here is a list of different [Images](https://docs.oracle.com/en-us/iaas/images/).
+
+  ```
   version              = "us-phoenix-oel7"
+  ```
+  
+  Next we can decide which Availability Domain (AD) and Fault Domain (FD). 
+  
+  Availability Domains are Data centers within a region that are physically isolated from each other. These AD's have their own power, colling and networking. 
+  A Fault Domain is is a grouping of hardware and infrastructure within an availability domain. Each availability domain contains three fault domains.
+
+  All regions vary in how many Availability Domains they have to offer. For example the pheonix region has 3 Availiabilty Domains.<br>
+  Here we have the option to place it in the 1st, 2nd, or 3rd AD. If it was in another region like Sydney, there would only be one AD.
+
+  Here is a list of [Regions and Availability Domains](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm)
+
+  ```
   ad                   = 1
   fault_domain         = 1
+  ```
+
+  **Note**
+
+  If you set your ad to the 3rd Availability Domain and the region only supports 1. The instance will **NOT** be defined and Terraform will throw an error during execution. 
+
+  ```
+  ad = 3
+  ```
+
+  A Boot Volume contains the operating system and other files needed to boot the instance.
+
+  Here is more info on [Boot Volumes](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/bootvolumes.htm)
+
+  ```
   boot_volume_size     = 50
+  ```
+
+  The preserve status determines if the boot volume lives after the instance is terminated. If set to false it will deleted along with the instance. Else it will be retained which can be useful when keeping important data or configurations. 
+
+  ```
   preserve_boot_volume = false
+  ```
+  
+  Lastly we will determine if we assign the Bastion a public ip. In this case we will assign a public ip as we are going to be using the Bastion as a single point of entry to our webservers.
+  
+  ```
   assign_public_ip     = true
   ```
 
-  After editing you should have something similar to this.
+  After editing you should have something similar to this. 
 
   ![Image alt text](images/bastion.png)
 
-## Task 3: Understanding the Webserver Variables
+## Task 3: Understanding The Webserver Variables
 
-**1. Create Webservers**
+**1. Define The Webservers**
 
-In this section we will be editing the webservers. As we created our Bastion before we will create our webserver in similar fashion. However, we are **not** going to assign a public ip to our webservers. Hence we have the bastion to help us access them in a secure manner. 
+In this section we will be editing the webservers. As we defined our Bastion before. We will define our webserver in a similar fashion. However, we are **not** going to assign a public ip to our webservers. Hence we have the bastion to help us access them in a secure manner. 
+
+In terraform.tfvars, we are going to edit the Webserver Specifications.
 
 ```
 <copy>
@@ -148,24 +208,50 @@ freeform_tags        = {}
 </copy>
 ```
 
-Copy and paste this on each webserver under the Webserver specifications.
+**2. Edit The Webserver Specifications**
 
-**2. Edit Webserver Specifications**
+Similarly how we defined our Bastion we will define our webservers
 
-We will replace the variables needed to create our webservers. 
+We will give it a ```display_name```. For example ```webserver01``` is simple and easy to track.
 
 ```
-<copy>
-display_name         = "webserver01"                      
-shape                = "VM.Standard2.1"               
-version              = "us-phoenix-oel7"                     
+display_name         = "webserver01"                                       
+```
+
+we will determine the ```shape``` of the webserver. We will be using a ```VM.Standar2.1```.
+
+```                
+shape                = "VM.Standard2.1"                                       
+```
+
+Next is the ```version```. In this example we are provisioning in the Phoenix region, we will be using ```us-phoenix-oel7```.
+
+```            
+version              = "us-phoenix-oel7"                                              
+```
+
+For our Availability Domain and Fault Domain we will assign it to 1.
+
+```                     
 ad                   = 1                             
-fault_domain         = 1                              
-boot_volume_size     = 50                             
-preserve_boot_volume = false                          
-assign_public_ip     = false                            
-</copy>
+fault_domain         = 1                                                    
 ```
+
+Boot Volume size is set to 50 and we will not be perserving it.
+
+```                            
+boot_volume_size     = 50                             
+preserve_boot_volume = false                                                   
+```
+
+We will **not** be assinging our webservers a public ip.
+
+```                       
+assign_public_ip     = false                            
+```
+
+**Note**
+* As we mentioned to make our webservers secure, we will be using the Bastion as a single point of entry to our webservers
 
 After editing all three servers, you should have the following
 
@@ -180,11 +266,10 @@ After editing all three servers, you should have the following
 
 ## Learn More
 
-
-
 * [Compute Service](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/computeoverview.htm)
 * [Oracle + Terraform](https://docs.oracle.com/en-us/iaas/developer-tutorials/tutorials/tf-compute/01-summary.htm)
 * [Oracle Linux Image OCIDs](https://docs.oracle.com/en-us/iaas/images/image/266adc03-7428-41fc-b17d-2f88ea56dff0/)
+* [Physical Architecture Concepts](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts-physical.htm)
 
 ## Acknowledgements
 * **Author** - <Name, Title, Group>

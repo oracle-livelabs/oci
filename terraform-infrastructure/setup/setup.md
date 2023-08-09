@@ -95,9 +95,12 @@ If you already have an SSH key pair, you may use that to connect to your environ
     
     Click on Add.
 
+    This will add the new API Key. Copy the configuration as we will be referencing this later.
+
+    Make sure to keep your API Key secure as this key allows you to access OCI resources.
+
     ![api-config](images/api-config.png)
 
-    This will add the new API Key. Copy the configuration as we will be referencing this later.
 
 ## Task 3: Create Compartment
 
@@ -141,13 +144,13 @@ A compartment is a logical folder where you can organize your resources. For thi
 
 ## Task 4: Setting up Terraform
 
-  Terraform is used to automate the process of provisioning and managing resources.
+  Terraform is used to automate the process of provisioning and managing resources. We will install Terraform on to our local machine in this step. 
 
 1. **Terraform**
     
-    Download [Terraform](https://www.terraform.io/downloads.html/)
+  Download [Terraform](https://www.terraform.io/downloads.html/)
 
-    For macOS follow these steps: 
+  For macOS follow these steps: 
   ```
   brew tap hashicorp/tap <copy></copy>
   ```
@@ -155,6 +158,8 @@ A compartment is a logical folder where you can organize your resources. For thi
   brew install hashicorp/tap/terraform <copy></copy>
   ```
 
+  After Installing Terraform, please download our Terraform Template as we will be using this for the rest of the lab. 
+  
   Download the [Terraform template](files/starter-file.sql) Terraform template. 
 
 ## Learn More
