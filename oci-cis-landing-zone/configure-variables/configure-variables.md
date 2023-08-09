@@ -23,7 +23,7 @@ This section sets general environmental configurations for the Landing Zone. Inp
 
     ![The Environment Menu Options](images/environment-menu.png "Environment Menu Options")_Note that the invalid service label is triggering an error message_
 
-4. Check _Use an enclosing compartment_ box to show the _Existing enclosing compartment_ parameter.
+4. If not already selected, check _Use an enclosing compartment_ box to show the _Existing enclosing compartment_ parameter.
 5. Select the compartment from Lab 1 Task 1 from the drop down menu under _Existing enclosing compartment_. Selecting a compartment from the drop down menu will create the Landing Zone inside the selected compartment. This allows for multiple Landing Zones to be used in a tenancy. This is useful for use cases such as creating separate Dev/Test/Production environments in a single OCI tenant. Each Landing Zone will be able to support independent group memberships and permission structures via this mechanism.
 
     ![An Enclosing Compartment is Selected](images/enclosing-compartment.png "Enclosing Compartment Dropdown")
