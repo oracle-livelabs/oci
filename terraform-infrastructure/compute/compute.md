@@ -109,7 +109,6 @@ After entering your Image OCID, you should have something similar to this.
   We will be replacing the variables needed to create a compute instance. 
 
   ```
-  <copy>
   display_name         = "bastion"
   shape                = "VM.Standard2.1"
   version              = "us-phoenix-oel7"
@@ -118,7 +117,6 @@ After entering your Image OCID, you should have something similar to this.
   boot_volume_size     = 50
   preserve_boot_volume = false
   assign_public_ip     = true
-  </copy>
   ```
 
   After editing you should have something similar to this.
