@@ -28,7 +28,7 @@
 
     ```
     <copy>
-    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.16.1 TARGET_ARCH=x86_64 sh -
+    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.18.0 TARGET_ARCH=x86_64 sh -
     </copy>
     ```
 
@@ -36,7 +36,7 @@
 
     ```
     <copy>
-    cd istio-1.16.1
+    cd istio-1.18.0
     </copy>
     ```
 
@@ -75,8 +75,6 @@
     ✔ Ingress gateways installed
     ✔ Installation complete
     Making this installation the default for injection and validation.
-    
-    Thank you for installing Istio 1.16.  Please take a few minutes to tell us about your install/upgrade experience!  https://forms.gle/99uiMML96AmsXY5d6    
     ````    
 
 7. istio-system 네임스페이스에 설치가 된 것을 알 수 있습니다.
@@ -115,7 +113,7 @@
     </copy>
     ````
 
-    mushop 모든 Pod를 삭제하면 Self-Healing으로 재생성되면서 모든 Pod가 istio-proxy 컨테이너가 추가 되어 컨터이너 수가 하나씩 증가한 걸 볼 수 있습니다.
+    mushop 모든 Pod를 삭제하면 Self-Healing으로 재생성되면서 모든 Pod가 istio-proxy 컨테이너가 추가 되어 컨테이너 수가 하나씩 증가한 걸 볼 수 있습니다.
     ````
     <copy>
     kubectl get pod -n mushop
@@ -229,10 +227,10 @@
     ````
 
     ````
-    2023-01-22T06:56:31.597920Z     info    Readiness succeeded in 976.999595ms
-    2023-01-22T06:56:31.598603Z     info    Envoy proxy is ready
-    [2023-01-22T07:00:40.031Z] "GET / HTTP/1.1" 200 - via_upstream - "-" 0 4781 1 0 "10.244.1.0" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "06ccb914-3fa7-9d86-be7b-42f2e19961bb" "150.230.251.133" "10.244.0.23:8080" inbound|8080|| 127.0.0.6:51119 10.244.0.23:8080 10.244.1.0:0 outbound_.80_._.mushop-storefront.mushop.svc.cluster.local default
-    [2023-01-22T07:00:40.119Z] "GET /styles/uikit-436da10510.css HTTP/1.1" 200 - via_upstream - "-" 0 18653 3 2 "10.244.1.0" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "4c30c8b4-e2e1-98ec-8067-0c72c91aaf1b" "150.230.251.133" "10.244.0.23:8080" inbound|8080|| 127.0.0.6:51119 10.244.0.23:8080 10.244.1.0:0 outbound_.80_._.mushop-storefront.mushop.svc.cluster.local default
+    ...
+    2023-06-27T04:32:34.414218Z     info    Readiness succeeded in 1.933379266s
+    2023-06-27T04:32:34.414960Z     info    Envoy proxy is ready
+    [2023-06-27T04:33:23.030Z] "GET / HTTP/1.1" 304 - via_upstream - "-" 0 0 0 0 "10.179.86.108,10.244.0.0" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "da4cfeb8-f797-942e-922b-39cccc0b94a1" "144.24.66.90" "10.244.1.76:8080" inbound|8080|| 127.0.0.6:55673 10.244.1.76:8080 10.244.0.0:0 outbound_.80_._.mushop-storefront.mushop.svc.cluster.local default
     ...
     ````
 
@@ -247,8 +245,8 @@
     kiali를 위해 prometheus addon도 함께 설치합니다.
     ```
     <copy>
-    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.16/samples/addons/prometheus.yaml
-    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.16/samples/addons/kiali.yaml
+    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.18/samples/addons/prometheus.yaml   
+    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.18/samples/addons/kiali.yaml
     </copy>
     ```
 
@@ -461,18 +459,21 @@
     </copy>
     ````
 
-    세번은 pod/mushop-storefrontv2-7564d44775-ljc2t/storefront이고 나머지는 다른 pod/mushop-storefront-5fc76d68f-bmdw4/storefront 요청이 간 것을 알 수 있습니다.
+    세번은 pod/mushop-storefrontv2-7d9b59ccf6-dqxpd/storefront이고 나머지는 다른 pod/mushop-storefront-5688d8784f-zz6xr/storefront 요청이 간 것을 알 수 있습니다.
     ````    
-    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:33 +0000] "GET / HTTP/1.1" 200 4794 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.1.0"
-    [pod/mushop-storefrontv2-7564d44775-ljc2t/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:34 +0000] "GET / HTTP/1.1" 200 4593 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.1.0"
-    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:35 +0000] "GET / HTTP/1.1" 200 4794 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.0.1"
-    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:36 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.1.0"
-    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:38 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.0.1"
-    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:39 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.1.0"
-    [pod/mushop-storefrontv2-7564d44775-ljc2t/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:40 +0000] "GET / HTTP/1.1" 200 4593 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.0.1"
-    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:41 +0000] "GET / HTTP/1.1" 200 4794 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.0.1"
-    [pod/mushop-storefront-5fc76d68f-bmdw4/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:42 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.0.1"
-    [pod/mushop-storefrontv2-7564d44775-ljc2t/storefront] 127.0.0.6 - - [22/Jan/2023:07:24:43 +0000] "GET / HTTP/1.1" 200 4593 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "10.244.1.0"  
+    [pod/mushop-storefront-5688d8784f-zz6xr/storefront] 127.0.0.6 - - [27/Jun/2023:04:39:50 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.179.86.108,10.244.0.128"
+    [pod/mushop-storefront-5688d8784f-zz6xr/storefront] 127.0.0.6 - - [27/Jun/2023:04:39:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.179.86.108,10.244.0.128"
+    [pod/mushop-storefront-5688d8784f-zz6xr/storefront] 127.0.0.6 - - [27/Jun/2023:04:39:52 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.179.86.108,10.244.0.128"
+    [pod/mushop-storefront-5688d8784f-zz6xr/storefront] 127.0.0.6 - - [27/Jun/2023:04:39:53 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.179.86.108,10.244.0.0"
+    [pod/mushop-storefront-5688d8784f-zz6xr/storefront] 127.0.0.6 - - [27/Jun/2023:04:39:54 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.179.86.108,10.244.0.128"
+    [pod/mushop-storefront-5688d8784f-zz6xr/storefront] 127.0.0.6 - - [27/Jun/2023:04:39:55 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.179.86.108,10.244.0.128"
+    [pod/mushop-storefront-5688d8784f-zz6xr/storefront] 127.0.0.6 - - [27/Jun/2023:04:39:55 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.179.86.108,10.244.0.128"
+    [pod/mushop-storefrontv2-7d9b59ccf6-dqxpd/storefront] 127.0.0.6 - - [27/Jun/2023:04:39:56 +0000] "GET / HTTP/1.1" 200 4593 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.179.86.108,10.244.0.128"
+    [pod/mushop-storefront-5688d8784f-zz6xr/storefront] 2023/06/27 04:39:57 [error] 24#24: *97 open() "/usr/share/nginx/html/styles/uikit-a5125b8dee.css" failed (2: No such file or directory), client: 127.0.0.6, server: localhost, request: "GET /styles/uikit-a5125b8dee.css HTTP/1.1", host: "144.24.66.90", referrer: "http://144.24.66.90/"
+    [pod/mushop-storefront-5688d8784f-zz6xr/storefront] 127.0.0.6 - - [27/Jun/2023:04:39:57 +0000] "GET /styles/uikit-a5125b8dee.css HTTP/1.1" 404 4213 "http://144.24.66.90/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.179.86.108,10.244.0.0"
+    [pod/mushop-storefrontv2-7d9b59ccf6-dqxpd/storefront] 127.0.0.6 - - [27/Jun/2023:04:39:57 +0000] "GET /styles/shop-908645e1b8.css HTTP/1.1" 200 4975 "http://144.24.66.90/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.179.86.108,10.244.0.128"
+    [pod/mushop-storefrontv2-7d9b59ccf6-dqxpd/storefront] 127.0.0.6 - - [27/Jun/2023:04:39:57 +0000] "GET /scripts/uikit-573c427531.js HTTP/1.1" 200 61974 "http://144.24.66.90/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.179.86.108,10.244.0.129"
+    [pod/mushop-storefrontv2-7d9b59ccf6-dqxpd/storefront] 127.0.0.6 - - [27/Jun/2023:04:39:57 +0000] "GET /scripts/app-efb35b317b.js HTTP/1.1" 200 42828 "http://144.24.66.90/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.179.86.108,10.244.0.128"
     ```` 
 
 4. Service Mesh의 가중치 기반 라우팅 규칙을 통해 신규 서비스 전에 일부 부하만을 전달하여 테스트 할 수 있습니다.
@@ -484,4 +485,4 @@
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, January 2023
+- **Last Updated By/Date** - DongHee Lee, June 2023
