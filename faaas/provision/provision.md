@@ -7,7 +7,9 @@ Use the wizard and provision fusion environments. review the details of the envi
 
 Explore the Fusion overview page. Explore the audit trail security functionality in the console.
 
-### Objective
+Estimated Time: 20+ minutes
+
+### Objectives
 * Subscribe to notifications
 * Learn to provision Fusion Applications Environments
 * Review environment details
@@ -15,8 +17,6 @@ Explore the Fusion overview page. Explore the audit trail security functionality
 
 ### Prerequisites
 * This lab requires completion of the Get Started section in the Contents menu on the left.
-
-Estimated Time: 20+ minutes
 
 ## Task 1: Subscribe to Announcements
 By subscribing to announcements, Oracle automatically notifies you by email to let you know about maintenance-related activities, including the dates for the next scheduled maintenance. For more info refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/about-notifications.htm).
@@ -128,11 +128,10 @@ For more info refer to the [documentation](https://docs.oracle.com/en-us/iaas/Co
     
       ![Configure admin](images/configure-admin.png)
     
-    - Click on the **Show advanced options** and enter a DNS prefix. The preview will append the fusion application URLs with the provided text. Users can set up different DNS for individual environments.
-    
-      ![DNS Prefix](images/advanced-options-dns-prefix.png)
-    
-    - Click on the **Encryption** tab in the advanced options and select any environment. Notice the wizard allows you to change the default Oracle-managed key to the Customer-managed key option since the subscription selected for the family has the service. We will change the key in the later lab. Keep it as Oracle-managed for now and click **Next**.
+    - Click on **Show advanced options** and open the **Encryption** tab. Select any environment. Notice the wizard allows you to change the default Oracle-managed key to the Customer-managed key option since the subscription selected for the family has the service. We will change the key in the later lab. Keep it as Oracle-managed for now and click **Next**.
+
+      ![Advanced options - Encryption Tab](images/advanced-options-encryption-tab.png)
+
 7. Review the family and environments information in the final step and click **Submit**
 
   ![Review step](images/review-step.png)
