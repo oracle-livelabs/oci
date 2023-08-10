@@ -6,6 +6,7 @@ OCI Data Flow service is a fully managed serverless Spark as a service. OCI Data
 
 
 ### Workshop Architecture
+
   ![Workshop Architecture](images/manufacturing-app-architecture.png " ")
 
 Estimated Workshop Time: 120 minutes
@@ -40,6 +41,6 @@ In this workshop, you will:
 ### Prerequisites
 
 ## Acknowledgments
-- **Created By/Date** - 
-- **Contributors** - 
-- **Last Updated By/Date** - 
+- **Created By** -  Rohit Saha, Product Manager, OCI Data Lake
+- **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
+- **Last Updated By/Date** - Mario Miola, Solution Architect, OCI Data Integration
