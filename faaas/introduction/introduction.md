@@ -4,7 +4,7 @@
 
 The labs in this workshop walk you through all the steps to get started using the new experience of **Oracle Fusion Applications Environment Management**. First, you will provision Fusion environments in a simulator. Then, you will practice several methods for managing lifecycle operations for the environments that you create. You will also review and see how Oracle Infrastructure Services such as Subscriptions, Announcements, Oracle SaaS and PaaS products, Keys and Vaults, Managed Access, etc work with Fusion environments.
 
-Estimated Workshop Time: 1 hours 30 minutes
+Estimated Workshop Time: 1 hours 15 minutes
 
 ### Objective
 * Provision Fusion Applications Environments
