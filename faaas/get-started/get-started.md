@@ -8,7 +8,9 @@ The new experience for Oracle Fusion Applications Environment Management unifies
 * Self-service end-to-end lifecycle management of Fusion Apps environments via Oracle Cloud Console
 * Better Security, and highly available cloud experiences for our applications customers
 
-### Objective
+Estimated Time: 5+ minutes.
+
+### Objectives
 * Learn how to log in to your Oracle Cloud Account
 * Get to know the Oracle Cloud Console navigation
 
@@ -17,8 +19,6 @@ Below login details will be provided during the workshop:
 * Cloud Account Name
 * Username
 * Password
-
-Estimated Time: 5+ minutes.
 
 ## Task 1: Log in to Oracle Cloud Console
 1. Open the site by clicking https://cloud.oracle.com
