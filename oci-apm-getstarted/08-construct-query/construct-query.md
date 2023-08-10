@@ -331,6 +331,19 @@ With the information on the button click, you may want to get an understanding o
 4. Click **Run**. Verify that new columns are added, indicating how much time the user spent to reach the **“add to cart”** and **“time to check out”** steps.  Also, ensure that the results are sorted by the **Duration**.
     ![Oracle Cloud, Trace Explorer](images/8-6-2-final-traces.png " ")
 
+
+## Conclusion
+
+In this workshop, you have learned how to use various APM features to effectively identify performance issues, analyze the data, and drill down into the root cause of the problems.
+
+APM Home page and Alarm details page allow you to detect potential issues in your application. The Monitors dashboard page enables you to examine the gathered data, while the Monitor history page and the APM Trace Explorer help you investigate the cause of the problem.
+
+In addition, you can also create complex personalized queries, save them for reuse, and create widgets to visually represent the data within a custom dashboard.  
+
+
+  For more information on APM, refer to the OCI documentation, **[Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)**.
+
+
 ## Acknowledgements
 
 * **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability

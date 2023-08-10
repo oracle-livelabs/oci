@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will construct a custom dashboard, incorporating a custom APM Trace Table widget. This widget will be generated from a query that you run in the Trace Explorer, and be used for analysis and visualization.
+In this lab, you will construct a custom dashboard, incorporating a custom Trace Table widget. This widget will be generated from a query that you run in the Trace Explorer, and be used for analysis and visualization.
 
 Estimated time: 15 minutes
 
@@ -60,7 +60,7 @@ To begin, you need to define the specific query for which you want to create a d
     ![Oracle Cloud, Create Dashboards page](images/7-2-5-enter-title.png " ")
 7.	Type down **Trace** in the filter window. 
     ![Oracle Cloud, Create Dashboards page](images/7-2-6-enter-trace-search.png " ")
-8.	Drag and drop the **APM Trace Table** widget to the center screen
+8.	Drag and drop the **Trace Table** widget to the center screen
     ![Oracle Cloud, Create Dashboards page](images/7-2-8-drag-drop-widget.png " ")
 9.	 **Configure Compartment Input** window opens, as the widgets require a compartment. Leave the default and click **Save changes**.
     ![Oracle Cloud, Create Dashboards page](images/7-2-9-configure-compartment.png " ")
@@ -68,11 +68,11 @@ To begin, you need to define the specific query for which you want to create a d
     ![Oracle Cloud, Create Dashboards page](images/7-2-10-configure-domain.png " ")
 11.	**Configure Compartment Input** window opens, as the APM Domain requires a compartment. Leave the default and click **Save changes**.
     ![Oracle Cloud, Create Dashboards page](images/7-2-11-configure-compart-for-domain.png " ")
-12.	The APM Trace Table widget is created on the screen. In the **Compartment** filter, select **root/eStore/WineStore**.
+12.	The Trace Table widget is created on the screen. In the **Compartment** filter, select **root/eStore/WineStore**.
     ![Oracle Cloud, Create Dashboards page](images/7-2-12-select-compartment-winestore.png " ")
 14.	In the **APM Domain** filter, ensure **Prod** is selected
     ![Oracle Cloud, Create Dashboards page](images/7-2-13-select-domain-prod.png " ")
-15.	Resize the APM Trace table widget window by click-and-drag the edge of the window to make it larger.
+15.	Resize the Trace Table widget window by click-and-drag the edge of the window to make it larger.
     ![Oracle Cloud, Create Dashboards page](images/7-2-14-resize-widget-window.png " ")
 
 ## Task 3: Customize the Trace Table widget	
@@ -81,11 +81,11 @@ At present, the widget displays the default query. You can change the query depe
 
 1. In the **Widgets** tab, Click **Edit Widgets**.  
     ![Oracle Cloud, Create Dashboards page](images/7-3-1-edit-widget.png " ")
-2. Expand the **APM Trace Table** by clicking the **>** icon.
+2. Expand the **Trace Table** by clicking the **>** icon.
     ![Oracle Cloud, Create Dashboards page](images/7-3-2-widget-expand.png " ")
 2.	Under **Configured Widget input** section, click **"*" (asterisk)** showing next to the Trace Table Query. 
     ![Oracle Cloud, Create Dashboards page](images/7-3-3-click-asterisk.png " ")
-3. The **Configure Trace Table Query Input** window opens. Replace the text with the query from the Trace Explorer. Note that the query used in this example is the enhanced version.
+3. The **Configure Trace Table Query Input** window opens. Replace the text with the query from the Trace Explorer, then click **Save Changes**. Note that the query used in this example is the enhanced version.
 
 	``` bash
 	<copy>
@@ -94,10 +94,10 @@ At present, the widget displays the default query. You can change the query depe
 	```
 
     ![Oracle Cloud, Create Dashboards page](images/7-3-4-replace-query.png " ")
-6. Confirm the APM Trace Table widget now shows the data from the copied query. 
+6. Confirm the Trace Table widget now shows the data from the copied query. 
     ![Oracle Cloud, Create Dashboards page](images/7-3-5-load-query-in-widget.png " ")
 
-7. In the **Widgets** tab, change the **Widget label** from APM Trace Table to **Server Requests**. Verify that the widget title is updated to Server Requests.
+7. In the **Widgets** tab, change the **Widget label** from Trace Table to **Server Requests**. Verify that the widget title is updated to Server Requests.
     ![Oracle Cloud, Create Dashboards page](images/7-3-6-change-widget-name.png " ")
 ## Task 4: Add a filter to the widget
 

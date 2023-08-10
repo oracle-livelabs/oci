@@ -30,7 +30,7 @@ In this activity, you will:
 
   Here’s where you can visualize all the key accounts along with the KPIs that are most important to you. This screen also provides you a single place to visualize Intercompany Journals, Standard Journals and Period Statuses for all the Subledgers.	
 
-    > **Scroll from top of the screen** to visualize Account Monitor, Intercompany Journals, Standard Journals and Period Statuses. **Change the Period** to **‘11-21’** if it is not ‘**11-21’**. **Change the Ledger** to ‘**US Primary Ledger**’ if it is not already set.”
+    > **Scroll from top of the screen** to visualize Account Monitor, Intercompany Journals, Standard Journals and Period Statuses. **Change the Period** to **‘11-22’** if it is not ‘**11-22’**. **Change the Ledger** to ‘**US Primary Ledger**’ if it is not already set.”
 
     ![Home Page](images/image002.png)
 
@@ -87,19 +87,18 @@ In this activity, you will:
 
     > Click **‘Done’** Button 
 
-    ![Home Page](images/image011.png)
 
-10. 
+10.  
 
-  You can see all of the account balances configured for the “Key Accounts Budget Vs Actual” Account Group. You can quickly notice that the 60500 Acc has the largest variance from the budget.
+  You can see all of the account balances configured for the “Key Accounts Budget Vs Actual” Account Group. You can quickly notice that the 64000 Acc has the largest variance from the budget.
     
     ![Home Page](images/image012.png)
 
 11. 
 
-  You can now review the detailed balances of the 60500 summary account.
+  You can now review the detailed balances of the 64000 summary account.
 
-    > Click on Acc **‘60500’**  
+    > Click on Acc **‘64000’**  
 
     ![Home Page](images/image013.png)
 
@@ -121,13 +120,13 @@ In this activity, you will:
 
   Notice the account with the largest balance and variance.
 
-    > Hover over the graph for the **60512** Account  
+    > Hover over the graph for the **64510** Account  
 
     ![Home Page](images/image016.png)
 
 15. 
 
-  You can review what caused the increase in spending for Airfare 60512 account. Scroll the screen up to change the view from Account Monitor to Account Inspector.
+  You can review what caused the increase in spending for Communications Costs 64510 account. Scroll the screen up to change the view from Account Monitor to Account Inspector.
 
     > Select **“Account Inspector”** from the drop down where it currently shows Account Monitor  
 
@@ -141,7 +140,7 @@ In this activity, you will:
 
 17. 
 
-  You would like review the account balances. Expand the parent account of 60500.
+  You would like review the account balances. Expand the parent account of 64000.
 
     > Click on the ”>“ icon.  
 
@@ -149,15 +148,15 @@ In this activity, you will:
 
 18. 
 
-  This view shows the all the detail account balances of the Account 60500.
+  This view shows the all the detail account balances of the Account 64000.
 
     ![Home Page](images/image021.png)
 
 19. 
 
-  You would like to further analyze what cost center caused the variance for 60512.
+  You would like to further analyze what cost center caused the variance for 64510.
 
-    > Drag the “Cost Center 400 ” field to the section right inside the Actual row  
+    > Drag the “Cost Center 100 ” field to the section right inside the Actual row  
 
     ![Home Page](images/image022.png)
     ![Home Page](images/image023.png)
@@ -166,14 +165,14 @@ In this activity, you will:
 
   This breaks out the account balances in a grid view between the child account values and the child cost center values. 
 
-    > Drop the “Cost Center 400 ” field as shown in the image to the right. 
+    > Drop the “Cost Center 100 ” field as shown in the image to the right. 
 
     ![Home Page](images/image022.png)
     ![Home Page](images/image024.png)
 
 21. 
 
-    > Click on “>” before the 400 cost center value 
+    > Click on “>” before the 100 cost center value 
 
     ![Home Page](images/image026.png)
     
@@ -184,9 +183,9 @@ In this activity, you will:
     ![Home Page](images/image027.png)
     
 23. 
-  Review the data to see which account/cost center intersection has the largest account balance
+  Review the data to see which account under cost center 110 has the largest account balance, excluding the summary account 64000.
   
-    > Click on **“15,491.88”** to drilldown to the details 
+    > Click on **“15,344.24”** to drilldown to the details 
 
     ![Home Page](images/image028.png)
 
@@ -194,7 +193,7 @@ In this activity, you will:
 
   Review the Detail Balance drill down, showing the beginning balance, period activity and ending balance. 
     
-    > Click on **“15,491.88”**
+    > Click on **“15,344.24”**
     
     ![Home Page](images/image029.png)
 
@@ -202,7 +201,7 @@ In this activity, you will:
 
   Review the journal lines that made up the account balance. You are now reviewing the Journal batch/journal details in this drilldown. This batch has been posted from Payables. 
     
-    > Click on **“372.88”**
+    > Click on **“5,744.37”**
     
     ![Home Page](images/image030.png)
 
@@ -211,13 +210,13 @@ In this activity, you will:
 
   You can review the actual transaction and are looking at the subledger drilldown which holds the rich AP data in this case, while the GL Journal is summarized in GL. This provides you all the data you need to analyze while keeping the GL Thin. 
     
-    > Click on **“View Transaction”**
+    > For amount $5,246.00, click on **“View Transaction”**
     
     ![Home Page](images/image031.png)
 
 27. 
 
-  You can now review the AP Invoice, the lines that made up this AP Invoice even though we only drilled down on the Airfare which is line #6. 
+  You can now review the AP Invoice and the lines that made up this AP Invoice. We drilled down to Communications Costs line #1.
         
     ![Home Page](images/image032.png)
 
@@ -225,15 +224,24 @@ In this activity, you will:
 
   You are able to review and audit any attachments available in the transaction without having to call the AP department in a self service way. 
     
-    > Click on the Attachment named **“Air Travel Expense.pdf”**
+    > Click on the Attachment named **“AT&T.q.pdf”**
     
     ![Home Page](images/image033.png)
 
 29. 
 
-  You can review the attachment and validate that the receipt is right for the air travel and reasonable cost charged by the employee. 
+  You can review the attachment and validate he cost by comparing to the invoice received from the vendor.
         
     ![Home Page](images/image034.png)
+
+30. 
+
+    Adventure awaits, show what you know, and rise to the top of the leader board!!!
+    
+    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
+    
+    [Click here](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
+
 
 ## Summary
 
@@ -244,5 +252,5 @@ In this activity, you will:
 
 ## Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services
-* **Contributors** -  Harold Dickerman, Business Architect
-* **Last Updated By/Date** - Kevin Lazarz, September 2022
+* **Contributors** -  Neelima Bondelepati, Principal Sales Consultant
+* **Last Updated By/Date** - Kevin Lazarz, August 2023
