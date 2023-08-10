@@ -4,7 +4,9 @@
 
 Perform Lifecycle Management activities on the Fusion Applications environment
 
-### Objective
+Estimated Time: 20+ minutes
+
+### Objectives
 * Learn how to refresh and mask data on test or development environment
 * Learn how to edit a language pack
 * Learn how to enable network restrictions
@@ -13,8 +15,6 @@ Perform Lifecycle Management activities on the Fusion Applications environment
 
 ### Prerequisites
 * This lab requires completion of **Lab 1**, in the Contents menu on the left.
-
-Estimated Time: 20+ minutes
 
 ## Task 1: Refresh Environment
 An environment refresh copies data from a source environment to a target environment, making a copy of the source environment onto the target environment. Environment refreshes ensure a predictable experience during testing activities by providing a comparable non-production environment for testing and validation, before applying changes to your production environment. For more info refer to [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/refresh-environment.htm).
