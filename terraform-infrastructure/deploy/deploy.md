@@ -18,14 +18,12 @@ In this lab, you will:
 * Learn how to provision OCI resources through Terraform
 * Objective 3
 
-### Prerequisites (Optional)
-
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. Do NOT list each previous lab as a prerequisite.*
+### Prerequisites
 
 This lab assumes you have:
-* An Oracle Cloud account
+* An Oracle account
 * Familiarity with Networking is desirable, but not required
-* Some understanding of cloud, networking, Terraform terms is helpful
+* Some understanding of cloud, networking, and Terraform
 * Familiarity with Oracle Cloud Infrastructure (OCI) is helpful
 
 

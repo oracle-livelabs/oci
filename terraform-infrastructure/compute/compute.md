@@ -18,7 +18,7 @@ In this lab, you will:
 This lab assumes you have:
 * An Oracle Cloud account
 * Familiarity with Networking is desirable, but not required
-* Some understanding of cloud, networking, Terraform terms is helpful
+* Some understanding of cloud, networking, Terraform
 * Familiarity with Oracle Cloud Infrastructure (OCI) is helpful
 
 ## Task 1: SSH Keys and Image OCIDS
@@ -85,7 +85,7 @@ After entering your Image OCID, you should have something similar to this.
 
   We will use this bastion we define to access our webservers. 
 
-  In terraform.tfvars, we are going to edit the Bastion Host Specifications. 
+  In terraform.tfvars, we are going to edit the Bastion Host Specifications. Copy this code block into the bastion data structure in terraform.tfvars file.
   ```
   <copy>
   compartment_data     = "comp-ocid"                     
@@ -187,7 +187,7 @@ After entering your Image OCID, you should have something similar to this.
 
 In this section we will be editing the webservers. As we defined our Bastion before. We will define our webserver in a similar fashion. However, we are **not** going to assign a public ip to our webservers. Hence we have the bastion to help us access them in a secure manner. 
 
-In terraform.tfvars, we are going to edit the Webserver Specifications.
+In terraform.tfvars, we are going to edit the Webserver Specifications. Copy this code block into each webserver data structure in terraform.tfvars file.
 
 ```
 <copy>
@@ -263,6 +263,37 @@ After editing all three servers, you should have the following
 
 **Webserver03**
 ![webservers03](images/webservers03.png)
+
+## Understanding Modules
+
+Modules are a way to make your code more structured and modular. We have used this concept to help promote reusability with our code.<br>
+A module encapsulates a set of resources and variables within a defined namespace. 
+
+In the terraform code you have a folder called modules.
+
+![modules](images/modules.png)
+
+Here we can can see our Bastion Module contains a main.tf, output.tf, and variables.tf
+
+* The main.tf file is where you define the resources and configurations.
+* The variables.tf file is where you define input variables for the module.
+* The output.tf file is where you define the output values the module will produce after running.
+
+In the variables.tf file, we can see that it has a Data Structure with a Data Block mapping the parameters needed to provision a bastion.
+
+![bastion-params](images/bastion-params.png)
+
+In the main.tf file we see how to define the bastion instance using the defined bastion parameters. 
+
+![define-bastion](images/define-bastion.png)
+
+Take note at the end of the file we are using the provisioner to do some actions after the resource was created. There are different provisioner types for different tasks, in this example we use the file provisioner to copy a file on to the instance. We will be copying our SSH private key onto to the Bastion. This will allow us to access our webservers.
+
+![provisioner](images/provisioner.png)
+
+Following this we use the remote-execution type of provisioner. The remote-execution type lets us run scripts to run commands on a remote sournce. Here run some commands to modify the permissions onto the file for ease of use.
+
+![remote-execute](images/remote-execute.png)
 
 ## Learn More
 

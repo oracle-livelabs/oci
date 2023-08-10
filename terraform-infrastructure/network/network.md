@@ -10,6 +10,14 @@ Throughout the lab, you will be guided through multiple tasks that demonstrate h
 
 Estimated Time: 1 hour and 30 minutes
 
+### Prerequisites
+
+This lab assumes you have:
+* An Oracle account
+* Familiarity with Networking is desirable, but not required
+* Some understanding of cloud, networking, and Terraform
+* Familiarity with Oracle Cloud Infrastructure (OCI) is helpful
+
 ### Objectives
 
 In this lab, you will:
