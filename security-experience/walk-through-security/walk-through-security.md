@@ -4,16 +4,15 @@
 
 This lab will walk you through OCI Security, by having a look at main security services offered in OCI, their features and capabilities. 
 
-Estimated Time: 15 minutes
+Estimated Time: 25 minutes
 
 ### Objectives
 
 In this lab, you will:
-*  Get an overview of all security problems in the OCI tenant
-*  Use automatic remediation to solve security problems
-*  Discover new detected threats 
-*  Have an overview of database security service - Data Safe
-*  Find compliance documents provided in OCI
+*  Get familiar with Oracle Cloud Guard, the Cloud Security Posture Management solution native in Oracle Cloud Infrastructure. You will use Cloud Guard to perform automatic remediation for detected security problems in your tenant.
+*  Explore Oracle Threat Intelligence service and threat detector in Cloud Guard, to discover new detected threats. 
+*  Have an overview of Oracle Databases security service: Data Safe, and take a tour through the generated reports of few Oracle Databases.
+*  Find compliance documents provided in the Oracle Cloud Infrastructure tenant.
 
 
 ### Prerequisites
@@ -221,8 +220,13 @@ Cloud Guard examines your Oracle Cloud Infrastructure resources for security wea
 
 ### References
 
+* [Oracle Cloud Guard - OCI Security Posture Management solution](https://www.oracle.com/security/cloud-security/cloud-guard/)
 * [Video introduction to the Cloud Guard service](https://apexapps.oracle.com/pls/apex/f?p=44785:265:0:::265:P265_CONTENT_ID:31677)
+* [OCI Threat Intelligence service](https://blogs.oracle.com/cloudsecurity/post/threat-intelligence-available-in-oci)
+* [Oracle Data Safe](https://www.oracle.com/security/database-security/data-safe/)
+* [Oracle Cloud Security services](https://www.oracle.com/security/cloud-security/)
+* [Compliance in Oracle Cloud](https://www.oracle.com/corporate/cloud-compliance/)
 
 ## Acknowledgements
 * **Authors** - Sonia Yuste (OCI Security Specialist), Damien Rilliard (OCI Specialist Senior Director)
-* **Last Updated By/Date** - Sonia Yuste, July 2023
+* **Last Updated By/Date** - Sonia Yuste, August 2023
