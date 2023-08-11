@@ -1,4 +1,4 @@
-# Trigger the OCI Vision model creation and training
+# Create the OCI Vision custom model
 
 ## Introduction
 
