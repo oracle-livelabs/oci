@@ -3,13 +3,13 @@
 ## Introduction
 In this lab, we will log into another cloud account and look at an actual environment. We will see metrics, integration, encryption and lockbox features. We will also log into Fusion, ODA, and VBCS applications.
 
-### Objective
+Estimated Time: 20+ minutes
+
+### Objectives
 * Review subscription service
 * Learn about key metrics for the production environment 
 * Review integrations
 * Review lockbox
-
-Estimated Time: 20+ minutes
 
 ### Prerequisites
 * This lab requires login to a new cloud account with the credentials provided.
