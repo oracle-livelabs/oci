@@ -2,17 +2,14 @@
 
 ## Introduction
 
-In this lab, you will focus on labeling pictures of utility poles with rust using OCI Data Labeling. The OCI Vision service will later use these images to train a custom OCI Vision model.
+In this lab, you will focus on labeling images of utility poles with rust using OCI Data Labeling. The OCI Vision service will later use these images to train a custom OCI Vision model.
 
 Estimated Time: 20 minutes
-
-Watch the video below for a quick walk-through of the lab.
-[OCI Data Labeling](videohub:1_z2fhbhgk)
 
 ### Objectives
 
 - Get acquainted with the OCI Data Labeling service
-- Successfully label the model training images
+- Successfully label the training images
 
 ## Task 1: Download the model training images
 
@@ -65,4 +62,4 @@ Watch the video below for a quick walk-through of the lab.
 ## Acknowledgements
 
 * **Authors** - Mark Heffernan and Jason Monden
-* **Last Updated By/Date** - Mark Heffernan, May 2023
+* **Last Updated By/Date** - Mark Heffernan, August 2023

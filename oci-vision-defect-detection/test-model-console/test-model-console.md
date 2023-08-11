@@ -2,16 +2,13 @@
 
 ## Introduction
 
-In this lab, you will test the recently created OCI Vision model to recognize rust on utility poles in a test picture. You will do so by accessing the existing user interface for model testing in the Oracle Cloud Console.
+In this lab, you will test the OCI Vision custom model using the test interface in the OCI Console.
 
 Estimated Time: 10 minutes
 
-Watch the video below for a quick walk-through of the lab.
-[Test the model via Oracle Cloud Console](videohub:1_csn26fmf)
-
 ### Objectives
 
-- Test the model by uploading a test image in the Oracle Cloud Console UI
+- Test the OCI Vision custom model by uploading a test image to the OCI Console
 
 ## Task 1: Test the model via Oracle Cloud Console
 
@@ -34,4 +31,4 @@ Watch the video below for a quick walk-through of the lab.
 ## Acknowledgements
 
 * **Authors** - Mark Heffernan and Jason Monden
-* **Last Updated By/Date** - Mark Heffernan, May 2023
+* **Last Updated By/Date** - Mark Heffernan, August 2023
