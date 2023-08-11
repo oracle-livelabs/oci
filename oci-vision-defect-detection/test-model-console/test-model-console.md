@@ -24,9 +24,9 @@ Estimated Time: 10 minutes
 
 3. You can view the JSON response on the right side of the screen. The JSON response includes the confidence values for each instance of rust that was identified.
 
-   > **Note:** You may see in your test results that some objects were incorrectly labeled or some instances of rust were not labeled. This is because the dataset used to train the model in this lab is very small. The intent of this lab is to provide you with the knowledge of how to build a custom model with the OCI Vision service, not to build a production ready model. To build a production ready model, we recommend using a much larger dataset to train the model.
+      > **Note:** You may see in your test results that some objects were incorrectly labeled or some instances of rust were not labeled. This is because the dataset used to train the model in this lab is very small. The intent of this lab is to provide you with the knowledge of how to build a custom model with the OCI Vision service, not to build a production ready model. To build a production ready model, we recommend using a much larger dataset to train the model.
 
-   ![Test the OCI Vision model - 2](../images/test_model2.png)
+      ![Test the OCI Vision model - 2](../images/test_model2.png)
 
 ## Acknowledgements
 
