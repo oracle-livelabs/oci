@@ -2,21 +2,17 @@
 
 ## Introduction
 
-In this lab, you will set up your tenancy for the subsequent creation and operation of the OCI Vision model.
+In this lab, you will set up your tenancy for the subsequent creation and operation of the OCI Vision custom object detection model.
 
 Estimated Time: 20 minutes
 
-Watch the video below for a quick walk-through of the lab.
-[Prerequisites](videohub:1_slj4drbo)
-
 ### Objectives
 
-In this lab, you will:
 - Create a Compartment
 - Create a Group
 - Create Dynamic Group
 - Create a Policy
-- Confirm access to the Vision service
+- Confirm access to the OCI Vision service
 
 ## Task 1: Create compartment
 
@@ -42,7 +38,7 @@ In this task, you will create a dedicated compartment for this live lab.
 
    ![Select Domains](../images/oci_menu_domains.png)
    
-3. Select the domain listed as *Current domain*.
+3. Select the domain listed as *Default (Current domain)*.
 4. On the left menu, select **Groups**.
 5. Select **Create group**.
 6. Provide *vision-group* as **Name**, add a **Description** of your choice, and select your User to add your account to the Group.
@@ -113,4 +109,4 @@ In this task, you will create the required OCI IAM policy.
 ## Acknowledgements
 
 * **Authors** - Mark Heffernan and Jason Monden
-* **Last Updated By/Date** - Mark Heffernan, May 2023
+* **Last Updated By/Date** - Mark Heffernan, August 2023

@@ -8,12 +8,11 @@ Estimated Time: 90 minutes
 
 ## Objectives
 
-In this workshop, you will:
-- Understand the prerequisites and prepare your tenancy for the creation of an OCI Vision model
+- Learn how to use the OCI Vision service
 - Label images with OCI Data Labeling
 - Build a custom OCI Vision model
 
 ## Acknowledgements
 
 * **Authors** - Mark Heffernan and Jason Monden
-* **Last Updated By/Date** - Mark Heffernan, May 2023
+* **Last Updated By/Date** - Mark Heffernan, August 2023
