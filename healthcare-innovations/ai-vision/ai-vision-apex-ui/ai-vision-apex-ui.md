@@ -584,6 +584,16 @@ There are 3 main sections on this page
     ![Navigate to Vision](images/image-after-submit.png " ")
     
     > **Congratulations:** you have completed **Part 1** Labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
+
+## Troubleshooting steps for APEX Developers
+
+1. Comment the PL/SQL Package IMAGE\_AI\_PK code and run it stepwise to debug.
+2. Check if you are able to upload image into OCI Object storage (yes/no)
+3. Check if you are able to get JSON response from the Machine Learning Model (yes/no)
+4. Check if the data has been written into Transactional table VISION\_AI\_DOCS (yes/no)
+5. Check if the SQL queries are correct (yes/no)
+6. Check if the OCIDs are correct (yes/no)
+7. Print the Request JSON from APEX and see if it matches the Request JSON in cloud.oracle.com under Machine Learning Model Test page (yes/no)
   
 ## Learn More
 

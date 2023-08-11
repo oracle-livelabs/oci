@@ -29,82 +29,77 @@
     {
       "title": "Lab 3: Setup OCI CLI",
       "filename": "../../ai-vision-setup-ocicli/ai-vision-setup-ocicli.md"
-    },
+    }, 
     {
-      "title": "Lab 4: (Part 1) Detect Cancer with AI Vision",
-      "description": "Detect Cancer with AI Vision",
-      "filename": "../../ai-vision-detect-cancer/ai-vision-detect-cancer.md"
-    },
-    {
-      "title": "Lab 5: Create Image Library",
+      "title": "Lab 4: (Part 1) Create Image Library",
       "filename": "../../ai-vision-create/ai-vision-create.md"
     },
     {
-      "title": "Lab 6: Label Images",
+      "title": "Lab 5: Label Images",
       "filename": "../../ai-vision-label/ai-vision-label.md"
     },
     {
-      "title": "Lab 7: Train the model",
+      "title": "Lab 6: Train the model",
       "filename": "../../ai-vision-train/ai-vision-train-model.md"
     },
     {
-      "title": "Lab 8: Oracle APEX Application for Breast Cancer Detection",
+      "title": "Lab 7: Oracle APEX Application for Breast Cancer Detection",
       "filename": "../../ai-vision-apex-ui/ai-vision-apex-ui.md"
     },
     {
-      "title": "Lab 9: (Part 2) Document Understanding Features",
+      "title": "Lab 8: (Part 2) Document Understanding Features",
       "filename": "../../ai-document-docfeature/ai-document-docfeature.md"
     },
     {
-      "title": "Lab 10: Oracle APEX Application for Medical Receipt processing",
+      "title": "Lab 9: Oracle APEX Application for Medical Receipt processing",
       "filename": "../../ai-document-apex-ui/ai-document-apex-ui.md"
     }, 
     {
-      "title": "Lab 11: (Part 3) Create Speech Transcription Job",
+      "title": "Lab 10: (Part 3) Create Speech Transcription Job",
       "filename": "../../ai-speech-create/ai-speech-create.md"
     },
     {
-      "title": "Lab 12: Oracle APEX Application for Speech Transcription",
+      "title": "Lab 11: Oracle APEX Application for Speech Transcription",
       "filename": "../../ai-speech-apex-ui/ai-speech-apex-ui.md"
     },
     {
-      "title": "Lab 13: (Part 4) Oracle Speech and Cohere Integration",
+      "title": "Lab 12: (Part 4) Oracle Speech and Cohere Integration",
       "filename": "../../ai-speech-open-ai/ai-speech-open-ai.md"
     },
     {
-      "title": "Lab 14: (Part 5) Setup Oracle Digital Assistant",
+      "title": "Lab 13: (Part 5) Setup Oracle Digital Assistant",
       "filename": "../../ai-oda-create/ai-oda-create.md"
     },
     {
-      "title": "Lab 15: Oracle APEX Integration with ODA",
+      "title": "Lab 14: Oracle APEX Integration with ODA",
       "filename": "../../ai-oda-apex-ui/ai-oda-apex-ui.md"
     },
     {
-      "title": "Lab 16: (Part 6) Oracle APEX Maps and Spatial queries to Locate Hospitals",
+      "title": "Lab 15: (Part 6) Oracle APEX Maps and Spatial queries to Locate Hospitals",
       "filename": "../../apex-map/apex-map.md"
     },
     {
-      "title": "Lab 17: (Part 7) Oracle Analytics Cloud for Clinical Data Analysis",
+      "title": "Lab 16: (Part 7) Oracle Analytics Cloud for Clinical Data Analysis",
       "filename": "../../analytics-reports/analytics-reports.md"
     },
     {
-      "title": "Lab 18: (Part 8) Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection",
+      "title": "Lab 17: (Part 8) Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection",
       "filename": "../../ai-anomaly-detection/ai-anomaly-detection.md"
     },
     {
-      "title": "Lab 19: (Part 9) Get Patient Details Integration - OIC",
+      "title": "Lab 18: (Part 9) Get Patient Details Integration - OIC",
       "filename": "../../ai-oic-getpatientdata/getpatientdata.md"
     },
     {
-      "title": "Lab 20: Update Patient Details Integration - OIC",
+      "title": "Lab 19: Update Patient Details Integration - OIC",
       "filename": "../../ai-oic-updatepatientdata/updatepatientdata.md"
     },
     {
-      "title": "Lab 21: Process Automation - Patient Admission Process",
+      "title": "Lab 20: Process Automation - Patient Admission Process",
       "filename": "../../ai-opa/ai-opa.md"
     },
     {
-      "title": "Lab 22: (Part 10) Setup OCI Email Delivery Service",
+      "title": "Lab 21: (Part 10) Setup OCI Email Delivery Service",
       "filename": "../../oci-email/oci-email.md"
     },
     {
