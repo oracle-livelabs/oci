@@ -6,7 +6,7 @@ This lab walks you through the steps to train custom Image Classification model 
 
 [Youtube video on Create Image Library](youtube:Y3xsaFSwRmA:large)
 
-Estimated Time: 90 minutes.  
+Estimated Time: 30 minutes.  (Excluding Model Training)
 
 ### About OCI Vision
 
@@ -73,7 +73,7 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
   
 ## Task 3: Analyze and evaluate your Model
 
-1. Test you model using known images
+1. Test you model using few random test images from your previously downloaded X-Ray images 
  
     Click **Local File** and upload image
 
@@ -82,16 +82,17 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 2. Image will be uploaded and automatically analyzed. **Image** and prediction **Results** are displayed.  
 
      ![Upload NORMAL image](images/bc-review-2.png " ")
+
+    This is clearly showing **BREAST\-WITH\-CANCER** with **99% confidence**
   
-3. You can repeat and perform prediction for one image which is clearly showing **BREAST\_CANCER** with **99% confidence**. Repeat for any other images  
+3. You can repeat this for any other image upload 
 
     ![Upload NORMAL image](images/bc-review-3.png " ")
 
-    This is showing it is **NORMAL\_BREAST** with **76% confidence**.
+    This is showing it is **NORMAL\-BREAST** with **76% confidence**.
  
-    **Please Note:** As an alternative you can create a bucket upload the images to that bucket, get the par url and use **Object storage** radio button, this will also bring same result but request JSON will change for input source element.
+    **Please Note:** As an alternative you can create a bucket upload the testing images to that bucket, get the par url and use **Object storage** radio button, this will also bring same result but request JSON will change for input source element.
  
-
 ## Task 4: Review Request and Response JSON
 
 Review Request and Response JSON this will be essential for us while building Application front end
@@ -167,4 +168,4 @@ Review Request and Response JSON this will be essential for us while building Ap
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - May 23rd, 2023.
+* **Last Updated By/Date** - Aug 11th, 2023.
