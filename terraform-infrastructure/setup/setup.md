@@ -19,7 +19,10 @@ In this lab, you will:
 ### Prerequisites
 
 This lab assumes you have:
-* An Oracle Cloud account
+* An Oracle account
+* Familiarity with Networking is desirable, but not required
+* Some understanding of cloud, networking, and Terraform
+* Familiarity with Oracle Cloud Infrastructure (OCI) is helpful
 
 ## Task 1: Generate SSH Key
 

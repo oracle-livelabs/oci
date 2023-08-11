@@ -12,8 +12,6 @@ Estimated Workshop Time: 2 hours 00 minutes (This estimate is for the entire wor
 
 ### Objectives
 
-*List objectives for the workshop*
-
 In this workshop, you will learn how to:
 * Setup the foundation for Terraform and Gather Tenancy information
 * Edit Terraform provider to use OCI syntax
@@ -24,9 +22,8 @@ In this workshop, you will learn how to:
 
 This lab assumes you have:
 * An Oracle account
-* OCI CLI configured
 * Familiarity with Networking is desirable, but not required
-* Some understanding of cloud, networking, Terraform terms is helpful
+* Some understanding of cloud, networking, and Terraform
 * Familiarity with Oracle Cloud Infrastructure (OCI) is helpful
 
 ## Learn More
