@@ -32,7 +32,7 @@ This lab assumes:
 * You have an Oracle Cloud account with OCI and Tenancy administration privileges to create policies and compartments. 
 
     > **Note 1:**  Policies are only required if you cannot create or use a OCI resources. If you are a tenancy administrator, you will have access to all the resources, and you can **optionally skip policy creations in this lab**. 
- 
+  
 ## Task 1: Log into OCI 
 
 1. Login into OCI
@@ -92,11 +92,10 @@ You will use one compartment for all required objects in this workshop, hence yo
     Make note of compartment OCID
 
     ![Define a new Compartment](images/details.png)
-   
-
+    
 ## Task 4: Setup policies for Compartment management
 
-Finally, you need to create a **policy** which grants manage privileges in a new compartment to the new OCI group.
+You need to create a **policy** which grants manage privileges in a new compartment to the new OCI group.
 
 1. Navigate to **Policies** page
 
@@ -131,35 +130,33 @@ Finally, you need to create a **policy** which grants manage privileges in a new
     ```text
      <copy>Allow group AIDEMOGroup to manage all-resources in compartment aidemo</copy>
     ```
- 
+
 ## Task 5: Setup policies for OCI Data Labeling
 
 One of the tasks in this workshop will be data labeling. This is a process in which all images from your training image library will be assigned a single label that describe that specific image.  To be able to perform your data labeling process, you must perform the following prerequisite steps to:
 
-* create one new dynamic group and
-* set required policies for data labeling
+> **Note:** Please refer [OCI Data Labeling Policies](https://docs.oracle.com/en-us/iaas/Content/data-labeling/using/policies.htm) for more information related to this policy.
+ 
+* Create one new dynamic group and
+* Set required policies for data labeling
+ 
+1. To find policy details navigate to **Analytics & AI** > **Machine Learning** > **Data Labeling** Service page
+  
+    ![Navigate to Data Labeling](images/navigate-data-labeling.png " ")
 
-To find out which steps you need to perform, you can navigate to **Data Labeling** page. You will find detailed instructions there.
+2. Open Datasets sub-page
 
-1. (optional) Navigate to Data Labeling page
-
-    From the **Navigator** menu select **Analytics & AI** and then **Data Labeling**.
-
-    ![Navigate to Data Labeling](images/navigate-to-data-labeling.png " ")
-
-2. (optional) Open Datasets sub-page
-
-    Click on **Datasets** link under **Data Labeling** on the left side of the page. This will open **Dataset list** page in selected Compartment (you might need to change compartment to the one you've created for this workshop).
+    Click on **Datasets** link under **Data Labeling** on the left side of the page. This will open **Dataset list** page in selected Compartment (you might need to change compartment to the one you have created for this workshop).
 
     ![Open Datasets page](images/open-datasets-page.png " ")
 
-3. (optional) Verify data labeling prerequisites
+3. Verify data labeling prerequisites
 
     Expand **Show more information** to display what prerequisites have to be met before you can start your data labeling exercise. If these are not met, then Data Labeling might not run properly.
 
     ![Show more information for Data Labeling](images/show-more-for-data-labeling.png " ")
 
-    You have already created a new OCI group, hence creating a new OCI group is not needed. Continue with creating a new dynamic group.
+    If you have already created a new OCI group creating a new OCI group is not needed. Continue with creating a new dynamic group.
 
 4. Navigate to Dynamic Groups page
 
@@ -200,7 +197,7 @@ To find out which steps you need to perform, you can navigate to **Data Labeling
     allow group AIDEMOGroup to manage data-labeling-family in compartment aidemo</copy>
     ```
 
-    ![Define data labeling policy for non-administrative users](images/datalabel-policies.png " ")
+    ![Define data labeling policy for non-administrative users](images/datalabel-policies2.png " ")
  
 8. Create a new policy for dynamic group
 
@@ -215,107 +212,118 @@ To find out which steps you need to perform, you can navigate to **Data Labeling
     allow dynamic-group AIDEMODynamicGroup to read objects in compartment aidemo
     allow dynamic-group AIDEMODynamicGroup to manage objects in compartment aidemo where any {request.permission='OBJECT_CREATE'}</copy>
     ```
-
-    Please refer [OCI Data Labeling Policies](https://docs.oracle.com/en-us/iaas/Content/data-labeling/using/about.htm) for more information
  
     You are now ready to start using Data Labeling service.
-
+      
 ## Task 6: Setup policies for OCI Vision service
 
 Similarly to Data Labeling service, you will require some privileges to use OCI Vision service. 
 
-1. Set policies for Vision
+> **Note:** Please refer [OCI AI Vision Policies](https://docs.oracle.com/en-us/iaas/vision/vision/using/about_vision_policies.htm) for more information related to this policy.
 
-    From the **Navigator** menu select **Identity & Security** and then choose **Policies**. 
+1. Navigate to **Policies** page. In the **Navigator** to navigate to **Identity & Security** and now choose **Policies**.
+
+    ![Navigate to Policies](images/id-policies.png)
 
 2. Create a new policy
 
-    Click **Create Policy**.
+    In the **Policies** page click **Create Policy**.
+
+    ![Create a new policy](images/create-a-new-policy.png =30%x*)
   
 3. Define policies to access Vision service
 
-    Provide a name of a new policy and description in **Create Policy** dialog page. In the **Policy Builder** section enable **Show manual editor** and enter the following policy:
+    Provide a name of a new policy and description in **Create Policy** dialog page. In the **Policy Builder** section enable **Show manual editor** and enter the following policy, You can provide any name and description for this policy
 
+    Policy statement 
+ 
     ```text
     <copy>allow group AIDEMOGroup to manage ai-service-vision-family in tenancy
     allow group AIDEMOGroup to manage object-family in tenancy</copy>
     ``` 
 
-    Click **Create**.
+    ![OCI Create policy](./images/policyeditor.png)
 
-    Please refer [OCI AI Vision Policies](https://docs.oracle.com/en-us/iaas/vision/vision/using/about_vision_policies.htm) for more information
+    Click **Create**. 
 
+    You are now ready to start using OCI Vision service.
+  
 ## Task 7: Setup policies for OCI Document Understanding Service
 
 Before you start using OCI Document Understanding, OCI policies should be setup for allowing you to access OCI Document Understanding Service. Follow these steps to configure required policies.
 
-1. Navigate to Policies
+> **Note:** Please refer [OCI Document Understanding Policies](https://docs.oracle.com/en-us/iaas/document-understanding/document-understanding/using/about_document-understanding_policies.htm#about_vision_policies) for more information related to this policy.
 
-  Log into OCI Cloud Console. Using the Burger Menu on the top left corner, navigate to Identity & Security and click it, and then select Policies item under Identity. 
+1. Navigate to **Policies** page. In the **Navigator** to navigate to **Identity & Security** and now choose **Policies**.
 
-2. Create Policy
+    ![Navigate to Policies](images/id-policies.png)
 
-  Click Create Policy 
+2. Create a new policy
 
-3. Set compartment to your root compartment and toggle on the manual editor
-        
-  Configure as shown below: 
-    ![OCI Create policy](./images/policyeditor.png)
+    In the **Policies** page click **Create Policy**.
 
-4. Create Policy to grant users Document APIs access (Required)
+    ![Create a new policy](images/create-a-new-policy.png =30%x*)
 
-  Add the below statement to allow all the users in your tenancy to use document understanding:
+3. Create Policy to grant users Document APIs access. Add the below statement to allow all the users in your tenancy to use document understanding:
+
+    Policy statement -
+
     ```
     <copy>allow any-user to manage ai-service-document-family in tenancy</copy>
     ```
 
     ![OCI Create policy screen](./images/policycompleted.png)
 
-  If you want to limit access to a user group, create a policy with the below statement:
+    If you want to limit access to a user group, create a policy with the below statement:
+
     ```
     <copy>allow group <group-name> to use ai-service-document-family in tenancy</copy>
     ```
 
-5. Policy to access input document files in object storage (Recommended)
+4. Policy to access input document files in object storage 
 
   If your want to analyze documents stored in your tenancy's object storage bucket, add the below statement to grant object storage access permissions to the group:
+
     ```
     <copy>allow group <group_in_tenancy> to use object-family in tenancy</copy>
     ```
         
   If you want to restrict access to a specific compartment, you can use the following policy instead: 
+
     ```
-    <copy>allow group <group_in_tenancy> to use object-family in compartment <input_bucket_located_object_storage_compartment></copy>
+    <copy>allow group <group_in_tenancy> to use object-family in compartment <compartment-ocid></copy>
     ```
 
-6. Policy to access output location in object storage (Required)
+6. Policy to access output location in object storage 
 
   Document Understanding Service stores results in your tenancy's object store. Add the following policy to grant object storage access permissions to the user group who requested the analysis to documents:
-    ```
-    <copy>allow group <group_in_tenancy> to manage object-family in compartment <output_bucket_located_object_storage_compartment></copy>
-    ```
 
-    Please refer [OCI Document Understanding Policies](https://docs.oracle.com/en-us/iaas/document-understanding/document-understanding/using/about_document-understanding_policies.htm#about_vision_policies) for more information
-
+    ```
+    <copy>allow group <group_in_tenancy> to manage object-family in compartment <compartment-ocid></copy>
+    ```
+   
 ## Task 8: Setup policies for OCI Speech
 
 Before you start using OCI Speech, your tenancy administrator should set up the following policies by following below steps:
 
+> **Note:** Please refer [OCI Speech Policies](https://docs.oracle.com/en-us/iaas/Content/speech/using/policies.htm) for more information related to this policy.
+
 1. Create a new policy with the following statements:
 
     If you want to allow all the users in your tenancy to use speech service, create a new policy with the below statement:
-        ```
-        <copy>
-        allow any-user to manage ai-service-speech-family in tenancy
-        allow any-user to manage object-family in tenancy
-        allow any-user to read tag-namespaces in tenancy
-        allow any-user to use ons-family in tenancy
-        allow any-user to manage cloudevents-rules in tenancy
-        allow any-user to use virtual-network-family in tenancy
-        allow any-user to manage function-family in tenancy
-        </copy>
-        ```
-        ![create policy information window](./images/any-user-policy.png " ")
+
+    ```
+    <copy>
+    allow any-user to manage ai-service-speech-family in tenancy
+    allow any-user to manage object-family in tenancy
+    allow any-user to read tag-namespaces in tenancy
+    allow any-user to use ons-family in tenancy
+    allow any-user to manage cloudevents-rules in tenancy
+    allow any-user to use virtual-network-family in tenancy
+    allow any-user to manage function-family in tenancy
+    </copy>
+    ```
+    ![create policy information window](./images/any-user-policy.png " ")
 
     If you want to limit access to a user group, first create a group
 
@@ -331,26 +339,29 @@ Before you start using OCI Speech, your tenancy administrator should set up the 
     To add users click "Add User to Group" and select user from dialog
         ![Add users to group button](./images/add-users-to-group.png " ")
 
-    Create a new policy with the below statement:
+    Create a new policy with the below statement, replace  group-name with your group name
 
     ```
         <copy>
-        allow group group-name to manage ai-service-speech-family in tenancy
-        allow group group-name to manage object-family in tenancy
-        allow group group-name to read tag-namespaces in tenancy
-        allow group group-name to use ons-family in tenancy
-        allow group group-name to manage cloudevents-rules in tenancy
-        allow group group-name to use virtual-network-family in tenancy
-        allow group group-name to manage function-family in tenancy
+        allow group <group-name> to manage ai-service-speech-family in tenancy
+        allow group <group-name> to manage object-family in tenancy
+        allow group <group-name> to read tag-namespaces in tenancy
+        allow group <group-name> to use ons-family in tenancy
+        allow group <group-name> to manage cloudevents-rules in tenancy
+        allow group <group-name> to use virtual-network-family in tenancy
+        allow group <group-name> to manage function-family in tenancy
         </copy>
         ```
-        ![Create policy for group information window](./images/group-name-policy.png " ") 
 
-    Please refer [OCI Speech Policies](https://docs.oracle.com/en-us/iaas/Content/speech/using/policies.htm) for more information
-
+    ![Create policy for group information window](./images/group-name-policy.png " ") 
+  
 ## Task 9: Setup policies for OCI Anomaly Detection
 
-1. Before you start using Anonmaly detection service, your tenancy administrator should set up the following policies.
+Policy creation steps for this service is same as all other services defined in above tasks, only the statement would change
+
+> **Note:** Please refer [Anomaly Detection Policies](https://docs.oracle.com/en-us/iaas/Content/anomaly/using/policies.htm) for more information related to this policy.
+
+1. Before you start using Anomaly Detection service, your tenancy administrator should set up the following policies.
 
     ```
     <copy>
@@ -365,11 +376,10 @@ Before you start using OCI Speech, your tenancy administrator should set up the 
     allow group <group-name> to manage ai-service-anomaly-detection-family in compartment <compartment-ocid> 
     </copy>
         ```
-
-    Please refer [Anomaly Detection Policies](https://docs.oracle.com/en-us/iaas/Content/anomaly/using/policies.htm) for more information
+ 
 
 This concludes this lab. You can **proceed now to the next lab**.
-  
+   
 ## Learn More
 
 * [OCI Documentation](https://docs.oracle.com/en-us/iaas/Content/home.htm)
@@ -377,6 +387,7 @@ This concludes this lab. You can **proceed now to the next lab**.
 * [Configure OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliconfigure.htm)
 * [OCI Speech Policies](https://docs.oracle.com/en-us/iaas/Content/speech/using/policies.htm)
 * [OCI Object Storage](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm)
+* [Anomaly Detection Policies](https://docs.oracle.com/en-us/iaas/Content/anomaly/using/policies.htm)
  
 ## Acknowledgements
 
