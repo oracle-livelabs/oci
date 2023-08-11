@@ -47,7 +47,7 @@ Estimated Time: 20 minutes
 
 8. Click **Create**. It will take a few minutes to generate the records.
 
-## Task 4: Labeling data
+## Task 4: Label data
 
 1. In your dataset details page, you will see a table view of the uploaded images. Click each image to proceed to its labeling.
 
