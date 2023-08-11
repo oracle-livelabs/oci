@@ -13,18 +13,18 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Data Integration",
+            "title": "Lab 1: Data Ingestion",
             "description": "Data Integration Services",
             "filename": "../../01-data-ingestion/data-integration-service.md"
         },
 
         {
-            "title": "Lab 2: Data Flow",
+            "title": "Lab 2: Data Engineering",
             "description": "Data Flow Services",
             "filename": "../../02-data-engineering/data-flow-service.md"
          },
         {
-            "title": "Lab 3: Data Science",
+            "title": "Lab 3: Data Exploration Notebooks",
             "description": "Data Science Notebooks",
             "filename": "../../03-data-exploration-notebooks/data-science-notebook.md"
         },
