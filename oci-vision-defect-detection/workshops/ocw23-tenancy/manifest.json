@@ -28,11 +28,14 @@
             "filename": "../../test-model-console/test-model-console.md"
         },
         {
+<<<<<<< HEAD
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
         },
         {
+=======
+>>>>>>> c7426d1af1d1648f45f93135cd874d6ae770af0c
             "title": "Oracle CloudWorld 2023 - Support",
             "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
         }
