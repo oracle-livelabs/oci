@@ -599,8 +599,8 @@ Upload the file verify the document properties where image is converted into tex
 3. View response
 
     ![Navigate to Vision](images/medical-docs2.png " ")
-  
-This concludes this lab and you can **proceed to the next lab**.
+   
+    > **Congratulations:** you have completed **Part 2** Labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
 
 ## Learn More
 

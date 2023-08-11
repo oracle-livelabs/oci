@@ -1,30 +1,24 @@
-# OCI Speech with Cohere or OpenAI Integration
+# OCI Speech with Cohere Integration
 
 ## Introduction
 
-In this Lab, we will see how to integrate [OCI AI Speech](https://www.oracle.com/artificial-intelligence/speech/) Input as prompts to various AI services such as [OpenAI](https://openai.com/about) and [Cohere](https://cohere.com/).
-
-The OpenAI API can be applied to virtually any task that requires understanding or generating natural language and code. The OpenAI API can also be used to generate and edit images or convert speech into text. OpenAI offer a range of models with different capabilities and price points, as well as the ability to fine-tune custom models.
- 
-**GPTs**
-
-OpenAI's GPT (generative pre-trained transformer) models have been trained to understand natural language and code. GPTs provide text outputs in response to their inputs. The inputs to GPTs are also referred to as "prompts". Designing a prompt is essentially how you “program” a GPT model, usually by providing instructions or some examples of how to successfully complete a task. GPTs can be used across a great variety of tasks including content or code generation, summarization, conversation, creative writing, and more. Read more in OpenAI's introductory [GPT guide](https://platform.openai.com/docs/guides/gpt) 
-
+In this Lab, we will see how to integrate [OCI AI Speech](https://www.oracle.com/artificial-intelligence/speech/) Input as prompts to various AI services such as [Cohere](https://cohere.com/) and other GPTs.
+   
 You can ask Questions like 
 
-**OpenAI Example**
-
+Example 1
+  
 *please help me with common cold curing*
 
-and OpenAI would respond back as 
+Cohere would respond back as
 
 *1. Get plenty of rest. 2. Drink lots of fluids, such as water, juice, and clear broth. 3. Use saline nose drops to relieve congestion. 4. Sip warm liquids such as broth, tea, or apple cider. 5. Take over-the-counter medications such as ibuprofen or acetaminophen to reduce fever and aches. 6. Use a humidifier or take a warm, steamy shower to help ease congestion. 7. Gargle with warm salt water to soothe a sore throat. 8. Avoid contact with people who have colds. 9. Avoid smoking and secondhand smoke. 10. Increase your vitamin C intake.*
 
-**Cohere Example**
+Example 2
 
 *Hello doctor, I have pain in my neck, please help me thank you*
 
-Cohere would respond back as 
+Cohere would respond back as
 
 *There are a few things you can do to help reduce the pain in your neck. First, try to identify the cause of the pain. If it is due to a specific activity, such as typing or writing, try to take a break from that activity. Second, try to relax your neck muscles. You can do this by gently massaging them or by taking a warm bath. Third, try to ensure that your neck is properly supported when you are sitting or lying down. You can do this by using a pillow or by placing your head on a soft surface. Finally, if the pain is severe or persists for more than a few days, you should seek medical attention.*
  
@@ -33,26 +27,26 @@ Estimated Time: 30 minutes.
 ### [About Cohere](https://cohere.com/)
 
 Cohere is the leading AI platform for enterprise. Its world-class AI is uniquely suited to the needs of business, unlocking unprecedented ease-of-use, accessibility, and data privacy. Cohere’s platform is cloud-agnostic, accessible through API as a managed service, and can be deployed on virtual private cloud (VPC) or even on-site to meet companies where their data is, offering the highest levels of flexibility and control. Founded by Google Brain alumni and a co-author of the seminal Transformer research paper, Cohere is on a mission to transform enterprises and their products with AI that unlocks a more intuitive way to generate, search, and summarize information than ever before.
-
-### [About OpenAI](https://openai.com/about)
-
-OpenAI is an AI research and deployment company. OpenAI's mission is to ensure that artificial general intelligence benefits all of humanity and that artificial general intelligence—AI systems that are generally smarter than humans—benefits all of humanity. 
   
 ### Objectives
 
 In this lab, you will:
 
-* Create OpenAI Key
-* Understand OpenAI Authentication  
-* Integrating Oracle Speech AI Output with OpenAI
-* OpenAI Integration with Oracle APEX without using OCI Speech AI
+* Create Cohere Key
+* Understand Cohere Authentication  
+* Integrating Oracle Speech AI Output with Cohere
+* Cohere Integration with Oracle APEX without using OCI Speech AI
 
 ### Prerequisites
 
 This lab assumes you have:
 
 * Completed previous labs under Speech AI series. (Lab 11 to Lab 13)
+* Intermediate knowledge of Oracle APEX and PL/SQL
 
+> **Note:** You are at the beginning of **Part 4** Lab.
+  
+<!-- 
 ## Task 1: Create OpenAI Key
 
 1. Create an Account at OpenAI and Create a Key at [OpenAI](https://platform.openai.com/account/api-keys).
@@ -265,8 +259,8 @@ This lab assumes you have:
         END; 
         </copy>
         ```
-
-## Task 5: Create Cohere Key (Optional Tasks)
+-->
+## Task 1: Create Cohere Key  
 
 1. Sign up and Sign in and [generate AI API Key](https://dashboard.cohere.ai/api-keys)  
 
@@ -274,7 +268,7 @@ This lab assumes you have:
 
     ![Generative AI](images/cohere-key.png) 
 
-## Task 6: Getting AI Response from Cohere (Optional Tasks)
+## Task 2: Getting AI Response from Cohere 
 
 1. Review the request JSON, Call API end point at https://api.cohere.ai/v1/generate
 
@@ -375,12 +369,10 @@ This lab assumes you have:
 
     ![Cohere Response](images/cohere-response.png) 
  
-This concludes this lab and you can **proceed to the next lab**.
+    > **Congratulations:** you have completed **Part 4** Lab. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
 
 ## Learn More
-
-* [OpenAI Authentication](https://platform.openai.com/docs/plugins/authentication/oauth) 
-* [API Reference Guide](https://platform.openai.com/docs/api-reference)
+  
 * [JSON Developer Guide](https://docs.oracle.com/en/database/oracle/oracle-database/19/adjsn/function-JSON_TABLE.html#GUID-0172660F-CE29-4765-BF2C-C405BDE8369A)
 * [Oracle to Deliver Powerful and Secure Generative AI Services for Business](https://www.oracle.com/in/news/announcement/oracle-to-deliver-powerful-and-secure-generative-ai-service-for-business-2023-06-13/)
 

@@ -578,7 +578,7 @@ There are 4 main sections on this page
 
     ![Navigate to Vision](images/show-current-job.png " ")
 
-5. Once the Job execution has been completed, view the speech converted to text. You can also feed this response text as input to OpenAI (which we will about talk in next lab)
+5. Once the Job execution has been completed, view the speech converted to text. You can also feed this response text as input to AI (which we will about talk in next lab)
 
     ![Navigate to Vision](images/speech-ai-response.png " ")
 
@@ -653,7 +653,7 @@ There are 4 main sections on this page
     </copy>
     ```
 
-This concludes this lab and you can **proceed to the next lab**.
+    > **Congratulations:** you have completed **Part 3** Labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
 
 ## Learn More
 

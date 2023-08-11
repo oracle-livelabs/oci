@@ -36,6 +36,8 @@ This lab assumes you have:
 
 * No Prerequisites for this Lab 
 
+> **Note:** You are at the beginning of **Part 1** Labs.
+
 ## Task 1: What is a Mammogram?
 
  A mammogram is an X-ray picture of the breast. Doctors use a mammogram to look for early signs of breast cancer. Regular mammograms are the best tests doctors have to find breast cancer early, sometimes up to three years before it can be felt. Patients should continue to get mammograms according to recommended time intervals. Mammograms work best when they can be compared with previous ones. This allows the radiologist to compare them to look for changes in your breasts.

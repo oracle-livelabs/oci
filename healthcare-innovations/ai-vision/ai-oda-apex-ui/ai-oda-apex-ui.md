@@ -25,6 +25,7 @@ This lab assumes you have:
 
 * Completed previous labs of this workshop.
 * You have an Oracle APEX workspace already created.
+* Intermediate knowledge of Oracle APEX and PL/SQL
 
 ## Task 1: Download ODA Oracle Native Client SDK
  
@@ -281,7 +282,7 @@ This lab assumes you have:
 
     *You are welcome, have a great day*
  
-This concludes this lab and you can **proceed to the next lab**.
+    > **Congratulations:** you have completed **Part 5** Labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
 
 ## Learn More
 

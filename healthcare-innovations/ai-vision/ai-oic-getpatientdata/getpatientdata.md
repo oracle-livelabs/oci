@@ -2,38 +2,12 @@
 
 ## Introduction
 
-In this Lab, you will learn how to create Oracle Integration Cloud Integration Service and Process automation for the Patient Admission process.
+In this Lab, you will learn how to create Oracle Integration Cloud Integration Service and Process automation for the Patient Admission process. We will use Integration Cloud [OIC] Generation 2 and its Process flow in this Lab. 
 
-We use Integration Cloud [OIC] Generation 2 and its Process flow in this Lab. Optionally you can use Integration Cloud Generation 3, but the screenshots below will differ slightly. In Generation 3, You have to create Oracle Process Automation and Oracle Integration Cloud services separately or login to Integration cloud generation 3 service and enable Process Automation. OIC Generation 3 is not covered in this Lab.
-
-**Breast Cancer Patient Admission Use case and process flow** (with Integration Cloud and Process Automation):
-
-* The patient or medical consultant uploads an X-ray mammography image, and AI Vision detects that it can be a case of Breast cancer/ Lung cancer, Covid, or Pneumonia.
-* The patient consults a doctor by submitting the X-Ray report and basic information ( through AI for Healthcare portal).
-* The doctor gets a mail requesting a review of the patient's case with the patient's name and ID.
-* The doctor reviews the patient's details and recommends that the patient be admitted to the hospital for immediate care and treatment.
-* The hospital administrator gets a mail requesting patient admission.
-* They allocate Hospital beds and other joining formalities.
-* The patient gets notified and can view this detail in AI for the Healthcare portal.
-* The patient is asked to upload medical history and complete the joining formalities.
-* There is also a future scope to integrate with the billing system for doctor consultation fees and hospital admission charges. Lab testing process, for example, checking the patient blood sugar level, blood pressure, cardiovascular condition etc, is part of the initial joining formalities.
-* Oracle Analytics Cloud shows the Patient's Initial checkup history until the admission is completed. This report is also visible from the AI for Healthcare portal.
+Optionally you can use Integration Cloud Generation 3, but the screenshots below will differ slightly. In Generation 3, You have to create Oracle Process Automation and Oracle Integration Cloud services separately or login to Integration cloud generation 3 service and enable Process Automation. OIC Generation 3 is not covered in this Lab.
 
 Estimated time: 30 minutes
 
-### About Oracle Integration Generation 2
-
-Oracle Integration [OIC] is a fully managed, preconfigured environment that gives you the power to integrate your cloud and on-premises applications, automate business processes, gain insight into your business processes, develop visual applications, use an SFTP-compliant file server to store and retrieve files, and exchange business documents with a B2B trading partner.
-
-With Oracle Integration, you can:
-
-* Design integrations to monitor and manage connections between your applications, selecting from our portfolio of hundreds of prebuilt adapters and recipes to connect with Oracle and third-party applications.
-* Create process applications to automate and manage your business work flows, whether structured or dynamic.
-* Model and extract meaningful metrics for your business processes to achieve real-time visibility and react quickly to changing demands. 
-* Develop visual applications using the embedded Visual Builder feature.
-* Store and retrieve files in Oracle Integration using the embedded SFTP-compliant file server.
-* Create integrations that use B2B e-commerce to extend business processes to reach trading partners.
-  
 ### Objectives
 
 In this lab, you will:
@@ -48,7 +22,41 @@ This Lab assumes you have the following:
 
 * Completed **Setup environment** and **Created an Oracle Autonomous Database** lab and already logged into OCI console.
 * Integration Cloud Gen 2 has already been created.
-* AI Vision Model is ready and has an Application user interface to get details about patient user information such as XRay analysis data, xray image location, confidence scoring and basic patient data such as name, email, and date of birth (as in Lab 8).
+* AI Vision Model is ready and has an Application user interface to get details about patient user information such as XRay analysis data, xray image location, confidence scoring and basic patient data such as name, email, and date of birth.
+
+> **Note:** You are at the beginning of **Part 9** Labs.
+ 
+### Process flow
+
+**Breast Cancer Patient Admission Use case and process flow** (with Integration Cloud and Process Automation):
+
+* The patient or medical consultant uploads an X-ray mammography image, and AI Vision detects that it can be a case of Breast cancer/ Lung cancer, Covid, or Pneumonia.
+* The patient consults a doctor by submitting the X-Ray report and basic information ( through AI for Healthcare portal).
+* The doctor gets a mail requesting a review of the patient's case with the patient's name and ID.
+* The doctor reviews the patient's details and recommends that the patient be admitted to the hospital for immediate care and treatment.
+* The hospital administrator gets a mail requesting patient admission.
+* They allocate Hospital beds and other joining formalities.
+* The patient gets notified and can view this detail in AI for the Healthcare portal.
+* The patient is asked to upload medical history and complete the joining formalities.
+* There is also a future scope to integrate with the billing system for doctor consultation fees and hospital admission charges. Lab testing process, for example, checking the patient blood sugar level, blood pressure, cardiovascular condition etc, is part of the initial joining formalities.
+* Oracle Analytics Cloud shows the Patient's Initial checkup history until the admission is completed. This report is also visible from the AI for Healthcare portal.
+
+
+
+### About Oracle Integration Generation 2
+
+Oracle Integration [OIC] is a fully managed, preconfigured environment that gives you the power to integrate your cloud and on-premises applications, automate business processes, gain insight into your business processes, develop visual applications, use an SFTP-compliant file server to store and retrieve files, and exchange business documents with a B2B trading partner.
+
+With Oracle Integration, you can:
+
+* Design integrations to monitor and manage connections between your applications, selecting from our portfolio of hundreds of prebuilt adapters and recipes to connect with Oracle and third-party applications.
+* Create process applications to automate and manage your business work flows, whether structured or dynamic.
+* Model and extract meaningful metrics for your business processes to achieve real-time visibility and react quickly to changing demands. 
+* Develop visual applications using the embedded Visual Builder feature.
+* Store and retrieve files in Oracle Integration using the embedded SFTP-compliant file server.
+* Create integrations that use B2B e-commerce to extend business processes to reach trading partners.
+  
+
  
 ## Task 1: Access Autonomous Database Instance and Download Wallet
 

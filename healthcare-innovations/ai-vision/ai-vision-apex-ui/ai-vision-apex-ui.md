@@ -37,6 +37,7 @@ This lab assumes you have:
 
 * Completed previous labs of this workshop.
 * You have an Oracle APEX workspace already created.
+* Intermediate knowledge of Oracle APEX and PL/SQL
 
 ## Task 1: Setup Oracle APEX Web Credentials
 
@@ -581,10 +582,9 @@ There are 3 main sections on this page
 3. Review Results and uploaded image
 
     ![Navigate to Vision](images/image-after-submit.png " ")
-
-
-This concludes this lab and you can **proceed to the next lab**.
-
+    
+    > **Congratulations:** you have completed **Part 1** Labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
+  
 ## Learn More
 
 * [OCI Vision](https://docs.oracle.com/en-us/iaas/vision/vision/using/home.htm)

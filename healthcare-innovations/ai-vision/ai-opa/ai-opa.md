@@ -194,11 +194,10 @@ Lab testing process, for example, checking the patient blood sugar level, blood 
     
     ![Integration Cloud](images/enhanced-process.png =75%x* ) 
  
-This concludes AI for Healthcare EPIC workshop. Thank you, and Happy Learning! :-)
+    > **Congratulations:** you have completed **Part 9** Labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
 
 ## Learn More
-
-* [Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
+ 
 * [Oracle Integration Generation 2](https://docs.oracle.com/en/cloud/paas/integration-cloud/index.html)
 * [Oracle Cloud Infrastructure Process Automation](https://docs.oracle.com/en/cloud/paas/process-automation/index.html)
  

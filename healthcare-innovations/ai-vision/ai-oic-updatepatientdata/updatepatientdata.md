@@ -20,7 +20,7 @@ This lab assumes you have the following:
 
 * Completed Setup environment and Created an Oracle Autonomous Database lab and already logged into OCI console.
 * Integration Cloud Generation 2 has already been created.
-* AI Vision Model is ready and has an Application user interface to get details about patient user information such as XRay analysis data, xray image location, confidence scoring and basic patient data such as name, email, and date of birth (as in Lab 8).
+* AI Vision Model is ready and has an Application user interface to get details about patient user information such as XRay analysis data, xray image location, confidence scoring and basic patient data such as name, email, and date of birth.
      
  
 ## Task 1: Create Second Integration to Update Patient Details

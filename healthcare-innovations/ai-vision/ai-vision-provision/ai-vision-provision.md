@@ -73,12 +73,12 @@ If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges 
  
 1. Click **Create Autonomous Database** to start the instance creation process.
 
-    ![Click Create Autonomous Database.](images/adb-click-create-adb.png "Create ADB")
+    ![Click Create Autonomous Database.](images/adb-click-create-adb.png "Create Autonomous Database")
 
 2.  This brings up the **Create Autonomous Database** screen where you will specify the configuration of the instance.
 
 
-    ![Create Autonomous Database](images/adb-create-screen-freetier-default.png "Create ADB")
+    ![Create Autonomous Database](images/adb-create-screen-freetier-default.png "Create Autonomous Database")
 
 
 3. Give basic information for the autonomous database:
@@ -176,12 +176,12 @@ If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges 
 
 ## Task 4: Create an Oracle APEX Workspace
 
-1. Once the ADB has been fully provisioned, return to the *Autonomous Database* page, locate the instance's display name, and then click on it to view the ADB's details page. Click the *Tools* tab. 
+1. Once the Autonomous Database has been fully provisioned, return to the *Autonomous Database* page, locate the instance's display name, and then click on it to view the ADB's details page. Click the *Tools* tab. 
 2. Click the *Copy* button to copy the URL to launch the Oracle APEX development environment. Open the link in a new browser window or tab.
 ![Launch the Oracle APEX App Builder.](./images/launch-oracle-apex-app-builder.png)
-3. For new ADB instances, this should launch the *Administration Services* login screen. Enter the password for the *admin* user and click the *Sign In to Administration* button.
+3. For new Autonomous Database instances, this should launch the *Administration Services* login screen. Enter the password for the *admin* user and click the *Sign In to Administration* button.
 ![Login to the Oracle APEX Administration Services.](./images/login-to-oracle-apex-administration-services.png)
-4. Again, for new ADB instances, after a successful login, the browser will redirect to the page shown below. Click the *Create Workspace* button.
+4. Again, for new Autonomous Database instances, after a successful login, the browser will redirect to the page shown below. Click the *Create Workspace* button.
 ![Click the Create Workspace button.](./images/create-a-new-workspace.png)
 5. Click and select the *New Schema* option.
 ![Select to create a workspace using a new schema.](./images/create-workspace-using-a-new-schema.png)

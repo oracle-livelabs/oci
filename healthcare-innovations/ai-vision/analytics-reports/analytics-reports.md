@@ -29,6 +29,8 @@ This lab assumes you have:
 
 * Completed previous labs of this workshop: **Setup environment** and logged into **Oracle APEX workspace**
 
+> **Note:** You are at the beginning of **Part 7** Labs.
+
 ## Task 1: Create Oracle Analytics Cloud Instance
  
 1. Login to cloud.oracl.com from the top left navigation select **Analytics & AI** and then select **Analytics** Cloud under **Analytics**
@@ -177,7 +179,7 @@ This lab assumes you have:
 
     ![Analytics Cloud](images/analytics-reports-27.png " ")
 
-This concludes this lab and you can **proceed to the next lab**.
+    > **Congratulations:** you have completed **Part 7** Lab. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
 
 ## Learn More
 
