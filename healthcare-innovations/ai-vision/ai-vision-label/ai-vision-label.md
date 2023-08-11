@@ -42,27 +42,25 @@ But before you continue, you need to perform the first step, **Create Dataset** 
 
     ![Open Datasets page](images/open-datasets-page.png " ")
 
-3. Create a new dataset. This will open **Dataset list** page in selected compartment (make sure you are in correct compartment as you might need to change compartment to the one you've created for this workshop).
-
-    Make sure you've selected your compartment where your image library resides, click **Create dataset**.
-
-    First, **Name** your dataset and optionally add **Description** and provide **Labeling instructions**
+3. Create a new dataset. This will open **Dataset list** page in selected compartment (make sure you are in correct compartment as you might need to change compartment to the one you have created for this workshop).   
   
-    Click *Images* from **Dataset format** and *Single label* for **Annotation class**.
+    Select *Images* from **Dataset format** and *Single label* for **Annotation class**.
  
-    ![Create a new dataset](images/create-bc-dataset.png " ")
+    ![Create a new dataset](images/create-bc-dataset.png " ") 
 
-    First, **Name** your dataset and optionally add **Description** and provide **Labeling instructions**
+    Click **Next**
   
-4. Click *Images* from **Dataset format** and *Single label* for **Annotation class**.
+4. Click *Select from Object storage* and select *Object storage bucket location* where the Breast cancer images have been uploaded.
   
     ![Create a new dataset](images/create-bc-dataset-2.png " ")
-
-    Enter two labels: **BREAST\_WITH\_CANCER**, **NORMAL\_BREAST** in **Labels set** field.
-
-5. Click **Next** and Review the details provided and click **Create**
+  
+5. Add labels
 
     ![Create a new dataset](images/create-bc-dataset-3.png " ")
+
+    Enter two labels: **BREAST\-WITH\-CANCER**, **NORMAL\-BREAST** in **Labels set** field.
+
+    Click **Next** and Review the details provided and click **Create**
  
     ![Create a new dataset](images/create-bc-dataset-4.png " ")
  
@@ -74,19 +72,19 @@ But before you continue, you need to perform the first step, **Create Dataset** 
 
     ![Data labeling on Github](./images/data-labeling-examples.png " ")
 
-3. Download python code. [lab2.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/b1_vZe_9llVqw_oTDq-SQyRrkDshcuABTHc6QuUDG984jfUi0mbk5x7pOZ7mPDPh/n/c4u04/b/livelabsfiles/o/partner-solutions/oas-and-vision/lab2.zip) to your computer.
+3. Alternatively you can also download this python code. [data-labeling-python-code.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/b1_vZe_9llVqw_oTDq-SQyRrkDshcuABTHc6QuUDG984jfUi0mbk5x7pOZ7mPDPh/n/c4u04/b/livelabsfiles/o/partner-solutions/oas-and-vision/lab2.zip) to your computer.
 
 4. Extract the zip file, it creates a folder structure similar 
 
     ![extract structure](images/view-extraction.png =60%x*)
  
-5. Update config.py file with required configuration parameters
+5. Update *config.py* file with required configuration parameters
 
     In order to run the data labeling program properly, you need to make some changes in */data-labeling/config.py* and */.oci/config* files.
 
     Let's update and configure */data-labeling/config.py* first.
 
-    Pre-prepared *config.py* is basically empty at the beginning:
+    *config.py* is basically empty at the beginning which needs to be updated as per your OCIDs
 
     ```python
     <copy># for help, run:
@@ -160,11 +158,11 @@ But before you continue, you need to perform the first step, **Create Dataset** 
     <copy>python3 main.py</copy>
     ```
 
-    Program will run approx. 30 minutes.
+    Program will run approx. 20 minutes.
   
-## Task 3: Verify Bulk Data labelled images
+## Task 3: Verify Bulk Data labeled images
 
-1. Verify if all the files have been labelled by our python code.
+1. Verify if all the files have been labeled by our python code.
 
     ![Data Labeling is completed](images/verify-bulklabel.png " ")
 
