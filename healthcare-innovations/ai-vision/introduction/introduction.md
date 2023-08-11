@@ -122,7 +122,7 @@ These Labs will guide you in detecting Breast Cancer using [**OCI Vision**](http
     * Create Oracle APEX Page
     * Verify Oracle APEX File upload settings
     * Display results
-    * Troubleshooting steps for APEX Developers
+    * Troubleshooting Checklist for APEX Developers
 
 ***Part 2** - Create Medical Expenses - Lab 8 to Lab 9* 
 
