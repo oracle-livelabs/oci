@@ -15,23 +15,39 @@
         {
             "title": "Lab 1: Data Integration",
             "description": "Data Integration Services",
-            "filename": "../../01-data-integration/data-integration-service.md"
+            "filename": "../../01-data-ingestion/data-integration-service.md"
         },
 
         {
             "title": "Lab 2: Data Flow",
             "description": "Data Flow Services",
-            "filename": "../../02-data-flow/data-flow-service.md"
+            "filename": "../../02-data-engineering/data-flow-service.md"
          },
         {
             "title": "Lab 3: Data Science",
             "description": "Data Science Notebooks",
-            "filename": "../../03-data-science/data-science-notebook.md"
+            "filename": "../../03-data-exploration-notebooks/data-science-notebook.md"
+        },
+        {
+            "title": "Lab 4: Data Exploration SQL",
+            "description": "Data Flow SQL End Point",
+            "filename": "../../04-data-exploration-sql/data-flow-sql-endpoint.md"
+        },
+        {
+            "title": "Lab 5: Data Loading",
+            "description": "Curate and Load into Data Warehouse",
+            "filename": "../../05-data-loading/data-loading.md"
+        },
+        {
+            "title": "Lab 6: Scheduling and Orchestration",
+            "description": "Data Pipeline Orchestration",
+            "filename": "../../06-scheduling-orchestration/scheduling-orchestration.md"
         },
 
         {
-            "title": "Oracle CloudWorld 2022 - Get Help",
-            "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
         }
     ]
 }
