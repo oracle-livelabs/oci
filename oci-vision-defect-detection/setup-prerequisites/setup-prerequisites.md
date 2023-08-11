@@ -1,4 +1,4 @@
-# Prerequisites
+# Setup
 
 ## Introduction
 
@@ -33,7 +33,6 @@ In this task, you will create a dedicated compartment for this live lab.
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity & Security** and select **Domains**.
-   
    > **Note:** If you do not see **Domains** it means that your region has not been updated to support identity domains. If that's the case, select **Groups** and move to step 5 below.
 
    ![Select Domains](../images/oci_menu_domains.png)
@@ -48,7 +47,6 @@ In this task, you will create a dedicated compartment for this live lab.
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity & Security** and select **Domains**. 
-
    > **Note:** If you do not see **Domains** it means that your region has not been updated to support identity domains. If that's the case, select **Dynamic Groups** and move to step 5 below.
 
    ![Select Domains](../images/oci_menu_domains.png)
@@ -57,7 +55,6 @@ In this task, you will create a dedicated compartment for this live lab.
 4. On the left menu, select **Dynamic groups**.
 5. Select **Create dynamic group**.
 6. Provide *dls-dynamic-group* as **Name**, add a **Description** of your choice, and add the following matching rule:
-
    ```html
    <copy>ALL { resource.type = 'datalabelingdataset' }
    ```
@@ -79,7 +76,6 @@ In this task, you will create the required OCI IAM policy.
 4. Provide *vision-policy* as **Name** and add a **Description** of your choice.
 5. Set the **Compartment** to the root compartment.
 6. Click **Show manual editor** and paste the content below in the editor.
-
    ```html
    <copy>allow group vision-group to manage ai-service-vision-family in compartment vision-livelab
    allow group vision-group to manage object-family in compartment vision-livelab
