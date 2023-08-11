@@ -4,6 +4,8 @@
 
 In this section we will analyze the data stored in silver zone and try to draw some insights.
 
+Estimated time: 20 minutes
+
 ## Objective
 
 We will use an OCI Data Science notebook for this exercise and as you run the notebook you will learn:
@@ -76,6 +78,8 @@ For this section we have created a demo Autonomous Data warehouse to demonstrate
  ![Oracle Cloud console, Database](images/autonomous-database-query.png " ")
 
 This brings you to the end of Lab 5.
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgments
 - **Created By** -  Rohit Saha, Product Manager, OCI Data Lake

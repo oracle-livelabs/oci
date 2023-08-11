@@ -4,6 +4,8 @@
 
 In this lab we will introduce you to OCI Data Flow SQL End Point. We will use the JDBC/ODBC driver provided by OCI Data Flow SQL endpoint and configure DBeaver.
 
+Estimated time: 20 minutes
+
 ## Objective
 
 We will understand how to query data using SQL endpoint. We will also learn how to set up column level security in OCI Data Lake and lastly we will query the trips table and see column level security in action.
@@ -97,6 +99,8 @@ We will understand how to query data using SQL endpoint. We will also learn how 
    ![Oracle Cloud console, Data Flow](images/data-flow-query-2.png " ")
 
 This concludes this lab. In this section you learnt about Data Flow SQL endpoint, how to query data in OCI Data Lake and also enforced column level security on the lake.
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgments
 - **Created By** -  Rohit Saha, Product Manager, OCI Data Lake

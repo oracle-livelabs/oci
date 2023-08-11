@@ -4,6 +4,8 @@
 
 In this section we will analyze the data stored in silver zone and try to draw some insights.
 
+Estimated time: 20 minutes
+
 ## Objective
 
 We will use an OCI Data Science notebook for this exercise and as you run the notebook you will learn:
@@ -53,7 +55,8 @@ We have created a notebook session before hand for you. Once you are in the data
 4. In the last cell output observe the plots and note down your insights from the plot.
 With this, Lab 3 is complete.
 
- 
+You may now **proceed to the next lab**. 
+
 ## Acknowledgments
 - **Created By** -  Rohit Saha, Product Manager, OCI Data Lake
 - **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow

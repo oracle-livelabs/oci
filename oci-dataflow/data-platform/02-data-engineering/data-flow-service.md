@@ -3,6 +3,7 @@
 ## Introduction
 
 This workshop uses OCI Data Flow to cleanse raw data ingested into OCI Data Lake.
+
 Estimated time: 20 minutes
 
 ### Objectives
@@ -70,6 +71,8 @@ Estimated time: 20 minutes
 2. Verify the table has been created successfully.
 
    ![Oracle Cloud console, Data Flow](images/data-flow-silver-zone-table.png " ")
+
+You may now **proceed to the next lab**. 
 
 ## Acknowledgments
 - **Created By** -  Rohit Saha, Product Manager, OCI Data Lake

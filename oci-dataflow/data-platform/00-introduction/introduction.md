@@ -40,6 +40,19 @@ In this workshop, you will:
 
 ### Prerequisites
 
+This workshop has all the prerequisites provided for the workshop. Also:
+
+* Some understanding of Cloud, Database, Data Lake terms is helpful 
+* Familiarity with Oracle Cloud Infrastructure (OCI) is helpful 
+* Familiarity with ETL, Notebooks and SQL concepts is helpful
+
+##Login to OCI
+
+Login to OCI using the URL below and the tenancy and username/password provided;
+
+https://console.us-ashburn-1.oraclecloud.com/
+
+
 ## Acknowledgments
 - **Created By** -  Rohit Saha, Product Manager, OCI Data Lake
 - **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow

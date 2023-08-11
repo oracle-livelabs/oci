@@ -3,6 +3,7 @@
 ## Introduction
 
 This workshop uses OCI Data Integration to upload data into OCI Data Lake.
+
 Estimated time: 20 minutes
 
 ### Objectives
@@ -114,6 +115,8 @@ Estimated time: 20 minutes
 Keep this string handy it will be used in Lab 2. 
 
 6. With this you have completed the first section on data ingestion into Data Lake using OCI Data Integration's data loader task.
+
+You may now **proceed to the next lab**. 
 
 ## Acknowledgments
 - **Created By** -  Rohit Saha, Product Manager, OCI Data Lake
