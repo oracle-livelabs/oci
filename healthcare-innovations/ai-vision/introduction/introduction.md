@@ -84,6 +84,7 @@ These are common labs that are required for most of the other labs under this wo
     * Choose Autonomous Database from the OCI services menu
     * Create the Autonomous Database instance
     * Create an Oracle APEX Workspace
+    * How to run SQL queries in Oracle APEX
 * Lab 3: Setup OCI [**Command Line Interface (CLI)**](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
     * Get the User's OCID
     * Add User's API Key
@@ -232,11 +233,11 @@ These labs walk you through the steps of detecting Cardiovascular disease with E
     * Review Model and Data settings
     * Detect ECG Anomalies
    
-***Part 9** - Patient Admission Process after Breast Cancer Detection - Lab 18 to Lab 20*
+***Part 9** - Patient Admission Process after Breast Cancer Detection - Lab 18 to Lab 19*
 
 These labs walk you through the steps of creating Oracle Integration Cloud Integration Service and Process automation for the Patient Admission process.
 
-* Create Get Patient Details Integration - Oracle Integration Cloud 
+* Get and Updating Patient Details Integration Service - Oracle Integration Cloud 
     * Access Autonomous Database Instance and Download Wallet
     * Log in to Oracle Integration Cloud and Create an Oracle Autonomous Warehouse Database connection
     * Create First Integration to Get Patient Details
@@ -244,11 +245,7 @@ These labs walk you through the steps of creating Oracle Integration Cloud Integ
     * Add Mapper to Map JSON Payload
     * Add Email Notification
     * Activate the Integration and Test the Integration Service
-    * View Complete Integration Flow.
-
-In this lab, you will learn how to create Oracle Integration Cloud Integration Service for Updating the Patient Data.
-
-* Create Update Patient Details Integration - Oracle Integration Cloud 
+    * View Complete Integration Flow. 
     * Create Second Integration to Update Patient Details
     * Add Database Connection Adapter
     * Add Mapper
@@ -259,6 +256,7 @@ In this lab, you will learn how to create Oracle Integration Cloud Integration S
 In this lab you will create end to end patient admission process using Oracle Integration Cloud Generation 2 with Process Automation.
 
 * Complete Process Automation for Patient Admission Process 
+    * Simple - Patient Admission Process
     * Create Patient Admission Process Application.
     * Add Human Task as Doctor's Activity
     * Add Human Task as Hospital Administrator's Activity
@@ -266,9 +264,9 @@ In this lab you will create end to end patient admission process using Oracle In
     * The patient consults the Doctor based on the report received.
     * Running the Patient Admission Process in Process Player
     * Patient logs into AI for Healthcare portal to get the latest update
-    * Enhanced Patient Admission Process
+    * Enhanced - Patient Admission Process
 
-***Part 10** - Setup OCI Email Delivery Service - Lab 21*
+***Part 10** - Setup OCI Email Delivery Service - Lab 20*
 
 These labs walk you through the steps of setting up [**OCI Email Services**](https://www.oracle.com/in/cloud/networking/email-delivery/). This will help us email Doctors, Patients or any Health official with the required data. For example, we can email transcribed text to Doctor after the patient uploads an audio file or mail once the medical expenses have been approved or rejected
 
@@ -302,3 +300,4 @@ You may now **proceed to the next lab**.
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
 * **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Direct, Program Management, Oracle Database 
 * **Last Updated By/Date** - Aug 9th, 2023
+* **Document version number** - 1.2

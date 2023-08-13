@@ -87,19 +87,15 @@
       "filename": "../../ai-anomaly-detection/ai-anomaly-detection.md"
     },
     {
-      "title": "Lab 18: (Part 9) Get Patient Details Integration - OIC",
+      "title": "Lab 18: (Part 9) Get and Update Patient Details - OIC",
       "filename": "../../ai-oic-getpatientdata/getpatientdata.md"
-    },
+    }, 
     {
-      "title": "Lab 19: Update Patient Details Integration - OIC",
-      "filename": "../../ai-oic-updatepatientdata/updatepatientdata.md"
-    },
-    {
-      "title": "Lab 20: Process Automation - Patient Admission Process",
+      "title": "Lab 19: Process Automation - Patient Admission Process",
       "filename": "../../ai-opa/ai-opa.md"
     },
     {
-      "title": "Lab 21: (Part 10) Setup OCI Email Delivery Service",
+      "title": "Lab 20: (Part 10) Setup OCI Email Delivery Service",
       "filename": "../../oci-email/oci-email.md"
     },
     {

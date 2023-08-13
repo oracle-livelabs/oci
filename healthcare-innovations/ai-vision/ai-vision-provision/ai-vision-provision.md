@@ -193,6 +193,17 @@ If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges 
 ![Login to the new workspace.](./images/login-to-new-workspace.png)
 9. After successful authentication, the browser will redirect to the default App Builder landing page where workspace administrators and developers will have access to various functionalities to develop and manage APEX applications.
 ![Once signed in, the workspace administrator and developers have access to the App Builder and a few other utilities.](./images/oracle-apex-development-environment-home-page.png)
+
+## Task 5: How to run SQL queries in Oracle APEX
+
+1. You can run SQL commands in APEX Workspace under **SQL Workshop** in top navigation and select Option **SQL Commands**
+2. Copy paste SQL Commands in the editor window and click on **Run** button
+
+    ![SQL Commands](./images/apex-run-sql.png)
+
+3. Some times you might need to run SQL Commands within an APEX page, such SQL queries can be written in SQL Query Editor, this query executes during the page runtime. 
+
+    ![SQL Commands](./images/apex-collection.png)
   
 You may now **proceed to the next lab**.
 
@@ -203,6 +214,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Nilay Panchal, Oracle Autonomous Database Product Management
-- **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
-- **Last Updated By/Date** - Madhusudhan Rao on 9th Aug 2023
+- **Author** - Madhusudhan Rao, Oracle Database Product Manager 
+- **Last Updated By/Date** - Madhusudhan Rao on 11th Aug 2023
