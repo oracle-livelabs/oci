@@ -196,20 +196,26 @@ If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges 
 
 ## Task 5: How to run SQL queries in Oracle APEX
 
-1. You can run SQL commands in APEX Workspace under **SQL Workshop** in top navigation and select Option **SQL Commands**
-2. Copy paste SQL Commands in the editor window and click on **Run** button
+There are several ways to run SQL queries, few most frequently used techniques are listed below.
+
+1. You can run SQL queries in APEX Workspace under **SQL Workshop** in top navigation and select Option **SQL Commands**
+2. Copy paste SQL queries in the editor window and click on **Run** button
 
     ![SQL Commands](./images/apex-run-sql.png)
 
-3. Some times you might need to run SQL Commands within an APEX page, such SQL queries can be written in SQL Query Editor, this query executes during the page runtime. 
+3. Some times you might need to run SQL queries within an APEX page for example displaying data from a table, such SQL queries can be written in SQL Query Editor, this query executes during the page runtime. 
 
     ![SQL Commands](./images/apex-collection.png)
+
+4. Some times you might need to run SQL queries based on a button click, in that case create **Dynamic Action** under the button, and add **Execute server side code**
+
+    ![SQL Commands](./images/apex-sendmail-5.png)
   
 You may now **proceed to the next lab**.
 
 ## Learn more
 
-- See the [documentation](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-workflow.html#GUID-5780368D-6D40-475C-8DEB-DBA14BA675C3) on the typical workflow for using Autonomous Data Warehouse.
+- See the [Autonomous Database GetStarted Guide](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/getting-started.html)  for using Autonomous Data Warehouse.
 - Go to the [Data Warehousing Insider blog](https://blogs.oracle.com/datawarehousing/) for more information on network connectivity options mentioned in this workshop.
 
 ## Acknowledgements
