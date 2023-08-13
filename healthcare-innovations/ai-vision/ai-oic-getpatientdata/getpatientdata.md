@@ -1,4 +1,4 @@
-# Get Patient Details Integration - Oracle Integration Cloud 
+# Get and Update Patient Details with Integration Services - Oracle Integration Cloud 
 
 ## Introduction
 
