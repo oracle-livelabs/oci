@@ -10,6 +10,9 @@ Estimated time: 20 min
 - Install an Autonomous Database
 - Install the API Portal (APEX application) in it
 
+Watch the video below for a quick walk-through of the lab. 
+[Video][videohub:1_6v7eprbg]
+
 ### Prerequisites
 
 - Download the source code of the project:
