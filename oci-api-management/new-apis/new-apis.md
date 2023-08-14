@@ -11,7 +11,7 @@ Estimated time: 20 min
 - Add the APIs in the Portal 
 
 Watch the video below for a quick walk-through of the lab. 
-[Video][videohub:1_70svnfiw]
+[Video](videohub:1_70svnfiw)
 
 ### Prerequisites
 
@@ -79,7 +79,7 @@ When the Task 1 build is done.
 ## Task 4 - Optional - Same with Kubernetes
 
 Watch the video below for a quick walk-through of the lab. 
-[Video][videohub:1_ntjas0hn]
+[Video](videohub:1_ntjas0hn)
 
 1. Go to Oracle Cloud Home page
 2. Go to Cloud Editor.

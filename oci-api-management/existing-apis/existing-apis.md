@@ -16,7 +16,7 @@ Estimated time: 20 min
 - Add existing API from Oracle API Gateway
 
 Watch the video below for a quick walk-through of the lab. 
-[Video][videohub:1_b50dk8f7]
+[Video](videohub:1_b50dk8f7)
 
 ### Prerequisites
 
