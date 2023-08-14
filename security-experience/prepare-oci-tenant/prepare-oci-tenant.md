@@ -130,7 +130,7 @@ To do that, follow the next steps:
     *	Display Name: SecAssessments
     *	Database Name: SecAssessments
     *	Workload type: Transaction Processing
-    *	Deployment type: Shared Infrastructure
+    *	Deployment type: Serverless
     *	Configure the database: &lt;Leave it as default&gt; 
     *	Administrator credentials: &lt;your ADMIN password&gt; 
     *	Network access: Secure access from everywhere
@@ -148,7 +148,7 @@ Since the Autonomous Database ADMIN user is REST Enabled, this allows for REST S
 To be able to access the web SQL Developer provided in your Autonomous Database, follow the next steps:
 
 
-4.	Once the Autonomous Database status is set to green and ACTIVE, click on Database Actions.
+4.	Once the Autonomous Database status is set to green and ACTIVE, click on Database Actions and click SQL in the displayed menu.
 
     ![Database Actions](./images/database-actions-security.png "Database Actions")
 
@@ -156,9 +156,6 @@ To be able to access the web SQL Developer provided in your Autonomous Database,
 
     ![Log in as ADMIN](./images/admin-login.png "Log in as ADMIN")
 
-6.	Click on SQL box, under Development section.
-
-    ![Development-SQL](./images/sql.png "Development-SQL")
 
 7.	Web SQL Developer will launch, and you will be able to run SQL queries to create users and tables.
 
@@ -216,7 +213,7 @@ To be able to access the web SQL Developer provided in your Autonomous Database,
 
     ![Sign in as SECASSESSMENT user](./images/sign-in.png "Sign in as SECASSESSMENT user")
 
-14. Go to SQL under Development again, and now you are signed as SECASSESSMENT in Web SQL Developer. Right click on the OCISECURITYCENTER table and select REST --> Enable…
+14. Go to SQL under Development, and now you are signed as SECASSESSMENT in Web SQL Developer. Right click on the OCISECURITYCENTER table and select REST --> Enable…
 
     ![Enable...](./images/enable.png "Enable...")
 
