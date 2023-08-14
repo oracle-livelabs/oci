@@ -1,4 +1,4 @@
-# Setup OCI CLI (Required Steps)
+# Setup OCI CLI - Command Line Interface
 
 ## Introduction
 
