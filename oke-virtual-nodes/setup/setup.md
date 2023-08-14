@@ -99,11 +99,11 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
     * Destination Port Range: `30000-32767`
     * Description: `Allow traffic to worker nodes`
 
-    Click **Add Egress Rules** button
-
-    ![Add Egress Rules](images/oci-vcn-seclist-egress-add.png)
+    ![Add Egress Rule 1](images/oci-vcn-seclist-egress-add-1.png)
 
 1. Enter the **Egress Rule 2**.
+
+    Click **+Another Egress Rule** button
 
     * Destination Type: `CIDR`
     * Destination CIDR: `10.0.10.0/24`
@@ -111,6 +111,8 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
     * Source Port Range: `ALL`
     * Destination Port Range: `10256`
     * Description: `Allow OCI load balancer or network load balancer to communicate with kube-proxy on worker nodes.`
+
+    ![Add Egress Rule 2](images/oci-vcn-seclist-egress-add-2.png)
 
     Click **Add Egress Rules** button
 
@@ -131,11 +133,11 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
     * Destination Port Range: `80`
     * Description: `Allow inbound traffic to Load Balancer`
 
-    Click **Add Ingress Rules** button
-
-    ![Add Ingress Rules](images/oci-vcn-seclist-ingress-add.png)
+    ![Add Ingress Rule 1](images/oci-vcn-seclist-ingress-add-1.png)
 
 1. Enter the **Ingress Rule 2**.
+
+    Click **+Another Egress Rule** button
 
     * Source Type: `CIDR`
     * Source CIDR: `10.0.20.0/24`
@@ -144,15 +146,13 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
     * Destination Port Range: `10256`
     * Description: `Allow OCI load balancer or network load balancer to communicate with kube-proxy on worker nodes.`
 
+    ![Add Ingress Rule 2](images/oci-vcn-seclist-ingress-add-2.png)
+
     Click **Add Ingress Rules** button
 
 1. Your Ingress Rules should looks like this:
 
     ![Ingress Rules Completed](images/oci-vcn-seclist-ingress-list.png)
-
-1. Click **Save Security List Rules** button.
-
-    ![Save Security List Rules](images/oci-vcn-seclist-save.png)
 
 ## Task 3: Configure the Kubernetes Cluster access on the OCI Cloud Shell
 
