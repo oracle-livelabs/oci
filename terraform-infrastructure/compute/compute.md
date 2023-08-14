@@ -287,11 +287,27 @@ In the main.tf file we see how to define the bastion instance using the defined 
 
 ![define-bastion](images/define-bastion.png)
 
-Take note at the end of the file we are using the provisioner to do some actions after the resource was created. There are different provisioner types for different tasks, in this example we use the file provisioner to copy a file on to the instance. We will be copying our SSH private key onto to the Bastion. This will allow us to access our webservers.
+
+Throughout our code we make use of **each.value** and **for_each**. These are constructs that work together inside a resource, module and provider.
+
+The first construct, ```for_each``` is an argument used within a resource block to itereate over elements in a map or set. 
+We will use ```for_each``` to create multiple instances of a reasource, each with a unique configuartion we defined in terraform.tfvars file. Terraform will generate one instance of the resource for each key-value pair in the map or each element in the set. 
+
+The second construct, ```each.value``` is a reference used within a resource block to represent the value associated with the current iteration of ```for_each```. It's used to dynamically set attributes of resources or modules based on the vaules from the map or set. 
+
+In the picture below we are defining an OIC Compute Instance resource. In the resource block we see ```for_each``` being used. This will iterate over the var.```webservers_params``` map. Since we defined 3 webservers in terraform.tfvars under the ```webservers_params``` structure, it will only iterate through each webserver. 
+
+We also see ```each.value``` being used within the resource block to reference the attributes within each webserver i.e. shape, display_name etc.
+
+![for-each](images/for-each.png)
+
+Next is the provisioner. A provisioner executes scripts or commands on a resource after it has been created but before it's marked fully operational. Provisioners allow you to to install software, configuration management, and data setup on a rsource.
+
+Take note at the end of the main.tf file in the bastion module we are using the provisioner to do some actions after the resource was created. There are different provisioner types for different tasks, in this example we use the file provisioner to copy a file on to the instance. We will be copying our SSH private key onto to the Bastion. This will allow us to access our webservers.
 
 ![provisioner](images/provisioner.png)
 
-Following this we use the remote-execution type of provisioner. The remote-execution type lets us run scripts to run commands on a remote sournce. Here run some commands to modify the permissions onto the file for ease of use.
+Following this we use the remote-execution type of provisioner. The remote-execution type lets us run scripts to run commands on a remote source. Here run some commands to modify the permissions onto the file for ease of use.
 
 ![remote-execute](images/remote-execute.png)
 
