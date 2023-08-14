@@ -527,7 +527,7 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
 
 ## Task 6: Verify File upload settings 
 
-In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can also use the regular file upload page item.
+In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can also use the **default file upload** APEX page item. If you would like to know more about [Dropzone plugin installation](https://github.com/Dani3lSun/apex-plugin-dropzone) please follow the link. 
 
 1. In APEX Page. Onclick of submit button invoke Apex **Process** by name **process file**
 

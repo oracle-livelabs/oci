@@ -545,17 +545,21 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
 
 ## Task 6: Verify File upload settings
 
-In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can also use the regular file upload page item.
+In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can also use the regular file upload page item. If you would like to know more about [Dropzone plugin installation](https://github.com/Dani3lSun/apex-plugin-dropzone) please follow the link. 
 
 1. In APEX page add page item of type file upload. You can optionally use Block dropzone plugin for better look and feel.
 
     ![Navigate to Vision](images/apex-image-file.png " ")
 
-2. Add Process Image button
+2. Add a page item of type **Button** and label it as **Process Image**, The default action for this button will be page **submit**. 
 
     ![Navigate to Vision](images/process-image-button.png " ")
 
-3. This will invoke a process by name **Process File**
+3. Create a page process by name **Process File**. 
+
+    ![Navigate to Vision](images/page-process.png " ")
+
+4. Once the button is clicked this will invoke a process by name **Process File**
 
     ![Navigate to Vision](images/process-file-sql.png " ")
 
@@ -567,9 +571,31 @@ In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can 
     </copy>
     ```
 
+4. Query to show APEX Bar chart based on Confidence score. please update the table name to match your transactional data table name which contains Image AI JSON response data and confidence scores for an uploaded image file.
+5. Bar chart column Mapping will be as follows: 
+   
+   Label will be **Label1** and Value will be **Label1_score**, similarly there will be another bar with column mapping 
+   Label will be **Label2** and Value will be **Label2_score**
+
+    ![Navigate to Vision](images/bar-chart.png " ")
+
+    ```sql
+    <copy>
+    SELECT file_name 
+    , label1
+    , (label1_score * 100) label1_score
+    , label2
+    , (label2_score * 100) label2_score
+    FROM   vision_ai_docs
+    WHERE  document_id = :P2_DOCUMENT_ID 
+    </copy>
+    ```
+ 
 ## Task 7: Create Oracle APEX Page 
  
 There are 3 main sections on this page
+
+> **Note:** Please check the above video incase you have issues in creating this page. 
 
 1. File Upload
 
@@ -582,7 +608,7 @@ There are 3 main sections on this page
 3. Review Results and uploaded image
 
     ![Navigate to Vision](images/image-after-submit.png " ")
-    
+ 
     > **Congratulations:** you have completed **Part 1** Labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
 
 ## Troubleshooting Checklist for APEX Developers

@@ -197,8 +197,12 @@ The CLI is a small-footprint tool that you can use on its own or with the Consol
 1. We will be using this config file path and OCIDs here in later labs, please make a note of them  
 
     ```text
-    <copy>~/.oci/config</copy>
+    <copy>cat ~/.oci/config</copy>
     ```
+
+    In other operating systems you can open the file using text editor such as Notepad or Vi editor.
+
+    > **Congratulations:** You have now completed the **Common Labs**, which is required for most of the following parts and labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other.
 
 ## Troubleshooting
 
@@ -221,4 +225,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - 11th August, 2023.
+* **Last Updated By/Date** - 14th August, 2023.

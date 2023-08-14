@@ -210,7 +210,7 @@ There are several ways to run SQL queries, few most frequently used techniques a
 4. Some times you might need to run SQL queries based on a button click, in that case create **Dynamic Action** under the button, and add **Execute server side code**
 
     ![SQL Commands](./images/apex-sendmail-5.png)
-  
+ 
 You may now **proceed to the next lab**.
 
 ## Learn more
