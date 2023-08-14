@@ -1,12 +1,14 @@
 # Introduction
 
-The purpose of this workshop is to accompany you on your journey to security and compliance in Oracle Cloud Infrastructure (OCI). During this workshop, you will be able to discover and get familiar with all the security capabilities that Oracle Cloud offers natively, besides checking the CIS (Center Internet Security) compliance. This will make sure you can enjoy your first Oracle Unique Security Experience.
+The purpose of this workshop is to accompany you on your journey to assess the security and compliance in Oracle Cloud Infrastructure (OCI). You will be able to discover and get familiar with all the security capabilities that Oracle Cloud offers natively, besides checking the CIS (Center Internet Security) compliance. This will make you to enjoy your first Oracle Unique Security Experience.
 
 
 
 ### About this Workshop
 
-In this workshop, you will go through a first lab to take a tour of several very interesting integrated security services in an Oracle Cloud Infrastructure tenancy, where you will be able to explore and try the different native services for real such as Cloud Security Posture Management, Database security, etc. The next labs will show you how to identify at a glance if you are using those security services and how to make it simpler to assess your tenant security. For this purpose, those labs will walk you through the execution of your first security and compliance asssessments in OCI. Apart from that, you will check the assessments results in a provided User Interface: your Security and Compliance Center. Below you can see an example:
+You will go through three different labs in order to complete your journey. The first lab will take you in a tour of several very interesting integrated security services in an Oracle Cloud Infrastructure tenancy, where you will be able to explore and try the different native services for real such as Cloud Security Posture Management, Database security and Threat Intelligence. 
+
+The next two labs will walk you through the execution of your first security and compliance asssessments in Oracle Cloud Infrastructure, and will show you how to identify at a glance if you are using the security services you have seen in the first lab, and how to use them. Apart from that, you will be able to check your assessments in a business-user friendly User Interface: your Security and Compliance Center. Below you can see some examples of what you will see:
 
 ![Security Center dashboard](./images/security-assessment.png "Security Center dashboard")
 
