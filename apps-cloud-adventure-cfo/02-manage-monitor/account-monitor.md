@@ -47,8 +47,6 @@ In this activity, you will:
 
   Account Groups provide the ability to group accounts that you want monitor along with various  other options that you will see in the next sections
 
-    > Click on the ‘Actual Vs Budget’ row 
-
     ![Home Page](images/image006.png)
 
 5. 
@@ -148,7 +146,7 @@ In this activity, you will:
 
 18. 
 
-  This view shows the all the detail account balances of the Account 64000.
+  This view shows all the detail account balances of the Account 64000.
 
     ![Home Page](images/image021.png)
 
@@ -178,18 +176,18 @@ In this activity, you will:
     
 22. 
 
-  Now you can review the balances in an excel pivot view that the Finance team loves to see and analyze data. 
+  Now you can review the balances in an excel pivot view that the Finance team loves to see and analyze. 
 
     ![Home Page](images/image027.png)
     
-23. 
+23.  
   Review the data to see which account under cost center 110 has the largest account balance, excluding the summary account 64000.
   
     > Click on **“15,344.24”** to drilldown to the details 
 
     ![Home Page](images/image028.png)
 
-24. 
+24.  
 
   Review the Detail Balance drill down, showing the beginning balance, period activity and ending balance. 
     
@@ -230,7 +228,7 @@ In this activity, you will:
 
 29. 
 
-  You can review the attachment and validate he cost by comparing to the invoice received from the vendor.
+  You can review the attachment and validate the cost by comparing to the invoice received from the vendor.
         
     ![Home Page](images/image034.png)
 

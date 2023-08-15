@@ -105,6 +105,8 @@ In this activity, you will:
 
     > (3) Enter a number threshold limit in **Value** field (NOTE – Value should be less than 500,000)
 
+    > (4) Click OK
+
 
     ![Change condition](images/13-lab3-risk-management.png)
 

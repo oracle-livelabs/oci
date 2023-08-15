@@ -18,7 +18,7 @@ Estimated Lab Time: 20 minutes.
 
 - Oracle Cloud Infrastructure paid account credentials (User, Password, Tenant, and Compartment)
 
-## **Task 1: North-South Inbound Traffic**
+## Task 1: North-South Inbound Traffic
 
 1. Connect to **FortiGate1** instance public IP on your local machine's web browser: **https://public_ip** using **admin/fortinet** or **password** which you have setup in **Lab3**
 
@@ -71,7 +71,7 @@ Estimated Lab Time: 20 minutes.
 
 3. Do a sanity check to make sure **firewall policy** and **Virtual IPs** are created successfully. 
 
-   ![](../common/images/75-Verify-North-South-Inbound-Config.png " ")
+   ![North to South Inbound Traffic Required Policy](../common/images/verify-north-south-inbound-config.png " ")
 
 4. Connect to **Web APP1** and **DB APP1** using **FortiGate1 Untrust Interface Floating Public IP** over **SSH** unique port as per your configuration: 
 
@@ -82,13 +82,13 @@ Estimated Lab Time: 20 minutes.
 
 5. Below diagram validates that Inbound traffic is working towards your DB and Web Spoke VMs. 
 
-   ![](../common/images/76-Verify-North-South-Inbound-Traffic1.png " ")
+   ![North to South Inbound Traffic Validation](../common/images/verify-north-south-inbound-traffic1.png " ")
 
 6. You can also verify traffic from **Dashboard > FortiView Sessions** on your **FortiGate1** instance.
 
-   ![](../common/images/76-Verify-North-South-Inbound-Traffic2.png " ")
+   ![North to South Inbound Traffic Validation from Fortiview Sessions](../common/images/verify-north-south-inbound-traffic2.png " ")
 
-## **Task 2: North-South Outbound Traffic**
+## Task 2: North-South Outbound Traffic
 
 1. Connect to **FortiGate1** instance public IP on your local machine's web browser: **https://public_ip** using **admin/fortinet** or **password** which you have setup in **Lab3**
 
@@ -114,7 +114,7 @@ Estimated Lab Time: 20 minutes.
 
 3. Do a sanity check to make sure **firewall policy** is created successfully. 
 
-   ![](../common/images/77-Verify-North-South-Outbound-Config.png " ")
+   ![North to South Outbound Traffic Required Policy](../common/images/verify-north-south-outbound-config.png " ")
 
 4. Connect to **Web APP1** and **DB APP1** using **FortiGate1 Untrust Interface Floating Public IP** over **SSH** unique port as per your configuration: 
 
@@ -125,13 +125,13 @@ Estimated Lab Time: 20 minutes.
 
 5. Initiate a ping to **google.com** or publicly available site connection as per below diagram which validates that Outbound traffic from Web and DB spoke VMs is working fine.
 
-   ![](../common/images/78-Verify-North-South-Outbound-Traffic1.png " ")
+   ![North to South Outbound Traffic Validation](../common/images/verify-north-south-outbound-traffic1.png " ")
 
 6. You can also verify that from **Dashboard > FortiView Sessions** on your **FortiGate1** instance.
 
-   ![](../common/images/79-Verify-North-South-Inbound-Traffic2.png " ")
+   ![North to South Inbound Traffic Validation from Fortiview Sessions](../common/images/verify-north-south-inbound-traffic2.png " ")
 
-## **Task 3: East-West Traffic (Web to Database & Database to Web)**
+## Task 3: East-West Traffic (Web to Database & Database to Web)
 
 1. Connect to **FortiGate1** instance public IP on your local machine's web browser: **https://public_ip** using **admin/fortinet** or **password** which you have setup in **Lab3**
 
@@ -157,7 +157,7 @@ Estimated Lab Time: 20 minutes.
 
 3. Do a sanity check to make sure **firewall policy** is created successfully. 
 
-   ![](../common/images/80-Verify-East-West-Config.png " ")
+   ![East to West Traffic Required Policy](../common/images/verify-east-west-config.png " ")
 
 4. Connect to **Web APP1** and **DB APP1** using **FortiGate1 Untrust Interface Floating Public IP** over **SSH** unique port as per your configuration: 
 
@@ -168,17 +168,17 @@ Estimated Lab Time: 20 minutes.
 
 5. Initiate a ping to **google.com** or publicly available site connection as per below diagram which validates that Outbound traffic from Web and DB spoke VMs is working fine.
 
-   ![](../common/images/81-Verify-East-West-Traffic1.png " ")
+   ![East to West Traffic Validation](../common/images/verify-east-west-traffic1.png " ")
 
 6. You can also verify that from **Dashboard > FortiView Sessions** on your **FortiGate1** instance.
 
-   ![](../common/images/82-Verify-East-West-Traffic2.png " ")
+   ![East to West Traffic Validation from Fortiview Sessions](../common/images/verify-east-west-traffic2.png " ")
 
-## **Task 4: East-West Traffic (Web & DB Application to Oracle Services Network)**
+## Task 4: East-West Traffic (Web & DB Application to Oracle Services Network)
 
 1. From the OCI Services menu, click **Buckets** under **Storage**. Select your region on right part of the screen:
 
-   ![](../common/images/83-Bucket-Home.png " ")
+   ![Object Storage Home Page](../common/images/bucket-home.png " ")
 
 2. Below table represents what you will be creating. Click on **Create Bucket** icon to create new **Bucket**:
 
@@ -192,7 +192,7 @@ Estimated Lab Time: 20 minutes.
       - **COMPARTMENT**: Ensure your compartment is selected
       - **Bucket Type**: Standard
 
-   ![](../common/images/73-Create-Bucket.png " ")
+   ![Create Bucket Home Page](../common/images/create-bucket.png " ")
 
 4. Verify all the information and Click **Create**.
 
@@ -204,7 +204,7 @@ Estimated Lab Time: 20 minutes.
    
     - In your case you can upload an image object for test purpose.
 
-   ![](../common/images/84-Upload-Object-Pre-Auth-URL.png " ")
+   ![Create Object Storage Pre Authenticated URL](../common/images/upload-object-pre-auth-url.png " ")
 
 7. Once you complete **Pre-Authentication Request** a Details dialog box pops up, copy the URL which you will be using to access uploaded Object. 
 
@@ -230,9 +230,9 @@ Estimated Lab Time: 20 minutes.
     </copy>
     ```
 
-10. Do a sanity check to make sure **firewall policy** is created successfully. 
+10. Do a sanity check to make sure **firewall routes to Object Storage CIDRs** is created successfully. 
 
-   ![](../common/images/83-Verify-OSN-Config.png " ")
+   ![Create Object Storage Network Traffic Route](../common/images/verify-osn-config.png " ")
 
 11. Connect to **Web APP1** and **DB APP1** using **FortiGate1 Untrust Interface Floating Public IP** over **SSH** unique port as per your configuration: 
 
@@ -243,35 +243,35 @@ Estimated Lab Time: 20 minutes.
 
 12. Do a **wget** to **Pre-Authentication Request** which you created earlier from Web and DB spoke VMs and you should get a response back.
 
-   ![](../common/images/84-Verify-OSN-Traffic1.png " ")
+   ![East to West Traffic Validation for Object Storage Traffic](../common/images/verify-osn-traffic1.png " ")
 
 13. You can also verify that from **Dashboard > FortiView Sessions** on your **FortiGate1** instance.
 
-   ![](../common/images/82-Verify-East-West-Traffic2.png " ")
+   ![East to West Traffic Validation for Object Storage Traffic with FortiView Sessions](../common/images/verify-east-west-traffic2.png " ")
 
-## **Task 5: High Availability Failover Validation**
+## Task 5: High Availability Failover Validation
 
 1. Navigate to **FortiGate1** instance attached VNIC details page and verify that **Untrust** and/or **Trust** interface has floating secondary IPs are available on primary instance. 
 
-   ![](../common/images/86-FortiGate1-Untrust-Floating-IP.png " ")
+   ![Confirm Untrust Interface Secondary IP address on Primary Firewall](../common/images/fortigate1-untrust-floating-ip.png " ")
 
 2. Reboot primary **FortiGate1** instance which will trigger failover automatically to **FortiGate2** instance. 
 
-   ![](../common/images/87-Reboot-FortiGagte1.png " ")
+   ![Reboot Primary Firewall](../common/images/reboot-fortigagte1.png " ")
 
 3. Within few seconds **FortiGate2** instance should come up online/reachable and once you connect to **FortiGate2** GUI using **admin/fortinet** credentials or password which you had setup in **Lab3**. You should see it became primary instance. 
 
-   ![](../common/images/88-Failover-FortiGate2.png " ")
+   ![Validate Secondary Firewall](../common/images/failover-fortigate2.png " ")
 
 4. Navigate to **FortiGate2** instance attached VNIC details page and verify that **Untrust** and **Trust** interface floating IPs has moved from **FortiGate1** instance. 
 
-   ![](../common/images/90-Failover-Success-FortiGate2-Untrust.png " ")
+   ![Validate Secondary Firewall Untrust Interface](../common/images/failover-success-fortigate2-untrust.png " ")
 
-   ![](../common/images/91-Failover-Success-FortiGate2-trust.png " ")
+   ![Validate Secondary Firewall Trust Interface](../common/images/failover-success-fortigate2-trust.png " ")
 
 5. You can verify that **FortiGate2** is primary and **FortiGate1** is secondary in your HA cluster:
 
-   ![](../common/images/89-Failover-Success-FortiGate2.png " ")
+   ![Validate Secondary Firewall HA Sync](../common/images/failover-success-fortigate2.png " ")
 
 ***Congratulations! You have successfully completed the lab.***
 
@@ -291,4 +291,4 @@ You may now [proceed to the next lab](#next).
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** -  Fortinet
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023
