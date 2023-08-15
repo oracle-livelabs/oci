@@ -9,8 +9,7 @@ Estimated Time: 30 minutes.
 ### Objectives
 
 In this lab, you will:
-
-* Setup Oracle APEX Web Credentials
+ 
 * Create required schema - 
     * Tables: MACHINE LEARNING CONFIGS, SPEECH AI DOCS, SPEECH AI FIELDS
     * PL/SQL Procedure SPEECH\_AI\_PK, Triggers etc.
@@ -26,33 +25,8 @@ This lab assumes you have:
 
 * Completed previous labs of this workshop.
 * You have an Oracle APEX workspace already created.
-
-## Task 1: Setup Oracle APEX Web Credentials
-
-Oracle APEX Web Credentials provides a convenient and secure mechanism for storing the following types of credentials:
-
-* Basic Authentication (Username & password)
-* OAuth2 Client Credentials (Client ID & Client Secret)
-* OCI Native Authentication (Access Oracle Cloud Resources, e.g., Object Storage)
-* HTTP Header (The credential is added to the REST request as an HTTP Header)
-* URL Query String (The credential is added to the URL of the REST request as a Query String Parameter).
-
-We will be using OCI Native Authentication required to connect with Object Storage
-
-1. Create Web Credentials
-
-    ![Navigate to Vision](images/workspace-utilities.png " ")
-
-    ![Navigate to Vision](images/web-credentials.png " ")
-
-    ![Navigate to Vision](images/create-web-credentials.png " ")
-
-    Provide user OCID, tenancy OCID, fingerprint and authentication type as **Oracle Cloud Infrastructure**
-
-    ![Navigate to Vision](images/web-credentials-details.png " ")
-
  
-## Task 2: Create Table - MACHINE LEARNING CONFIGS
+## Task 1: Create Table - MACHINE LEARNING CONFIGS
 
 We can directly code Object storage bucket location, Web Credential Name, Request JSON etc. However, it is a good practice to store this in a database table so that we can easily update this and add more models in future, so we create a machine learning configuration table for this purpose.
 
@@ -124,7 +98,7 @@ We can directly code Object storage bucket location, Web Credential Name, Reques
     
     Your-Bucket-Name is the Bucket Name where Image will be temporarily uploaded.
 
-## Task 3: Create Table - DOCUMENT AI DOCS
+## Task 2: Create Table - DOCUMENT AI DOCS
  
 1. Create **DOCUMENT\_AI\_DOCS** Table.
 
@@ -182,7 +156,7 @@ We can directly code Object storage bucket location, Web Credential Name, Reques
     </copy>
     ```
 
-## Task 4: Create Table - DOCUMENT AI FIELDS
+## Task 3: Create Table - DOCUMENT AI FIELDS
 
 **DOCUMENT\_AI\_FIELDS** table is used to store the labels and corresponding scores. This is what we get after the parsing of the JSON response. You can also name this table as **SPEECH\_AI\_FIELDS** if you would like to create a seperate table just to handle Speech AI Data.
 
@@ -232,7 +206,7 @@ We can directly code Object storage bucket location, Web Credential Name, Reques
     </copy>
     ```
    
-## Task 5: Create PL/SQL Package
+## Task 4: Create PL/SQL Package
 
 You can login to Oracle APEX Workspace and select SQL worksheet to run any of the SQL commands or Create Tables or Packages.
 
@@ -534,7 +508,7 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     </copy>
     ```
 
-## Task 6: Verify File upload settings
+## Task 5: Verify File upload settings
 
 In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can also use the regular file upload page item.
 
@@ -558,7 +532,7 @@ In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can 
     </copy>
     ```
 
-## Task 7: Create Oracle Apex Page to Upload file and display results
+## Task 6: Create Oracle Apex Page to Upload file and display results
  
 There are 4 main sections on this page
 

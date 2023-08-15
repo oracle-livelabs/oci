@@ -85,6 +85,7 @@ These are common labs that are required for most of the other labs under this wo
     * Create the Autonomous Database instance
     * Create an Oracle APEX Workspace
     * How to run SQL queries in Oracle APEX
+    * How to Setup Oracle APEX Web Credentials
 * Lab 3: Setup OCI [**Command Line Interface (CLI)**](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
     * Get the User's OCID
     * Add User's API Key
@@ -116,7 +117,6 @@ These Labs will guide you in detecting Breast Cancer using [**OCI Vision**](http
     * Analyze and evaluate your model
     * Review Request and Response JSON
 * Lab 7: [**Oracle APEX**](https://apex.oracle.com/en/) Application for Breast Cancer Detection (Optional Lab)
-    * Setup Oracle APEX Web Credentials
     * Create required schema - 
         * Tables: MACHINE LEARNING CONFIGS, VISION AI DOCS, VISION AI FIELDS
         * PL/SQL Procedure IMAGE\_AI\_PK, Triggers etc.
@@ -135,8 +135,7 @@ These Labs will guide you in creating medical expenses using Oracle [**OCI Docum
     * Key Value Extraction
     * Document classification
     * Analyze the request and response JSON files
-* Lab 9: Oracle APEX Application for Medical Receipt Processing
-    * Setup Oracle APEX Web Credentials
+* Lab 9: Oracle APEX Application for Medical Receipt Processing 
     * Create required schema - 
         * Tables: MACHINE LEARNING CONFIGS, DOCUMENT AI DOCS, DOCUMENT AI FIELDS
         * PL/SQL Procedure DOCUMENT\_AI\_PK, Triggers etc.
@@ -154,8 +153,7 @@ These Labs will guide you in creating medical transcription and consulting virtu
     * Upload an Audio file to OCI Bucket
     * Create Speech Transcription Job
     * Review Transcription Job Output in JSON and .SRT files 
-* Lab 11: Oracle APEX Application for Speech Transcription
-    * Setup Oracle APEX Web Credentials
+* Lab 11: Oracle APEX Application for Speech Transcription 
     * Create required schema - 
         * Tables: MACHINE LEARNING CONFIGS, SPEECH AI DOCS, SPEECH AI FIELDS
         * PL/SQL Procedure SPEECH\_AI\_PK, Triggers etc.

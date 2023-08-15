@@ -210,6 +210,36 @@ There are several ways to run SQL queries, few most frequently used techniques a
 4. Some times you might need to run SQL queries based on a button click, in that case create **Dynamic Action** under the button, and add **Execute server side code**
 
     ![SQL Commands](./images/apex-sendmail-5.png)
+
+## Task 6: How to Setup Oracle APEX Web Credentials
+
+Oracle APEX Web Credentials provides a convenient and secure mechanism for storing the following types of credentials:
+
+* Basic Authentication (Username & password)
+* OAuth2 Client Credentials (Client ID & Client Secret)
+* OCI Native Authentication (Access Oracle Cloud Resources, e.g., Object Storage)
+* HTTP Header (The credential is added to the REST request as an HTTP Header)
+* URL Query String (The credential is added to the URL of the REST request as a Query String Parameter).
+
+We will be using OCI Native Authentication required to connect with Object Storage
+
+1. In the APEX top navigation Select **App Builder**, Click on **Workspace Utilities**   
+
+    ![Navigate to Vision](images/workspace-utilities.png " ")
+
+    Select **Web Credentials**
+
+    ![Navigate to Vision](images/web-credentials.png " ")
+
+    Click on **Create**
+
+    ![Navigate to Vision](images/create-web-credentials.png " ")
+
+    Provide **User OCID**, **Tenancy OCID**, **Fingerprint**, **Private Key** and authentication type as **Oracle Cloud Infrastructure**
+
+    ![Navigate to Vision](images/web-credentials-details.png " ")
+
+    > **Note:** If you are new to OCI, Information on how to get these OCIDs is provided in next Lab **Setup OCI CLI**.
  
 You may now **proceed to the next lab**.
 

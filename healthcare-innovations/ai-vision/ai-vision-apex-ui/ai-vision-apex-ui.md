@@ -22,8 +22,7 @@ Using APEX, developers can quickly develop and deploy compelling apps that solve
 ### Objectives
 
 In this lab, you will:
-
-* Setup Oracle APEX Web Credentials
+ 
 * Create required schema - 
     * Tables: MACHINE LEARNING CONFIGS, VISION AI DOCS, VISION AI FIELDS
     * PL/SQL Procedure IMAGE\_AI\_PK, Triggers etc.
@@ -38,32 +37,8 @@ This lab assumes you have:
 * Completed previous labs of this workshop.
 * You have an Oracle APEX workspace already created.
 * Intermediate or Advanced knowledge of Oracle APEX and PL/SQL
-
-## Task 1: Setup Oracle APEX Web Credentials
-
-Oracle APEX Web Credentials provides a convenient and secure mechanism for storing the following types of credentials:
-
-* Basic Authentication (Username & password)
-* OAuth2 Client Credentials (Client ID & Client Secret)
-* OCI Native Authentication (Access Oracle Cloud Resources, e.g., Object Storage)
-* HTTP Header (The credential is added to the REST request as an HTTP Header)
-* URL Query String (The credential is added to the URL of the REST request as a Query String Parameter).
-
-We will be using OCI Native Authentication required to connect with Object Storage
-
-1. Create Web Credentials
-
-    ![Navigate to Vision](images/workspace-utilities.png " ")
-
-    ![Navigate to Vision](images/web-credentials.png " ")
-
-    ![Navigate to Vision](images/create-web-credentials.png " ")
-
-2. Provide user OCID, tenancy OCID, fingerprint and authentication type as **Oracle Cloud Infrastructure**
-
-    ![Navigate to Vision](images/web-credentials-details.png " ")
-
-## Task 2: Create Table - MACHINE LEARNING CONFIGS
+   
+## Task 1: Create Table - MACHINE LEARNING CONFIGS
 
 We can directly code Object storage bucket location, Web Credential Name, Request JSON etc., directly in PL/SQL code to validate XRay Image. However, it is a good practice to store this in a database table so that we can easily update this and add more models in future, so we create a machine learning configuration table for this purpose.
 
@@ -119,7 +94,7 @@ We can directly code Object storage bucket location, Web Credential Name, Reques
     
     Your-Bucket-Name is the Bucket Name where Image will be temporarily uploaded.
 
-## Task 3: Create Table - VISION AI DOCS
+## Task 2: Create Table - VISION AI DOCS
  
 1. Create **VISION\_AI\_DOCS** Table. VISION\_AI\_DOCS table is primarily used to store the JSON response after uploading the image to object storage, querying the image against a trained OCI Vision model. The JSON response contains the OCI Labels and their corresponding confidence scores. 
 
@@ -173,7 +148,7 @@ We can directly code Object storage bucket location, Web Credential Name, Reques
     </copy>
     ```
 
-## Task 4: Create Table - VISION AI FIELDS
+## Task 3: Create Table - VISION AI FIELDS
 
 VISION\_AI\_FIELDS table is used to store the labels and corresponding scores. This is what we get after the parsing of the JSON response.
 
@@ -221,7 +196,7 @@ VISION\_AI\_FIELDS table is used to store the labels and corresponding scores. T
     </copy>
     ```
    
-## Task 5: Create PL/SQL Backend Procedure
+## Task 4: Create PL/SQL Backend Procedure
 
 You can login to Oracle APEX Workspace and select SQL worksheet to run any of the SQL commands or Create Tables or Packages.
 
@@ -543,7 +518,7 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     </copy>
     ```
 
-## Task 6: Verify File upload settings
+## Task 5: Verify File upload settings
 
 In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can also use the regular file upload page item. If you would like to know more about [Dropzone plugin installation](https://github.com/Dani3lSun/apex-plugin-dropzone) please follow the link. 
 
@@ -591,7 +566,7 @@ In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can 
     </copy>
     ```
  
-## Task 7: Create Oracle APEX Page 
+## Task 6: Create Oracle APEX Page 
  
 There are 3 main sections on this page
 

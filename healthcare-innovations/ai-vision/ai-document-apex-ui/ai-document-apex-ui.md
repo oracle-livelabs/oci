@@ -19,8 +19,7 @@ Using APEX, developers can quickly develop and deploy compelling apps that solve
 ### Objectives
 
 In this lab, you will:
-
-* Setup Oracle APEX Web Credentials
+ 
 * Create required schema - 
     * Tables: MACHINE LEARNING CONFIGS, DOCUMENT AI DOCS, DOCUMENT AI FIELDS
     * PL/SQL Procedure DOCUMENT\_AI\_PK, Triggers etc.
@@ -35,32 +34,8 @@ This lab assumes you have:
 
 * Completed previous labs of this workshop.
 * You have an Oracle APEX workspace already created.
-
-## Task 1: Setup Oracle APEX Web Credentials
-
-Oracle APEX Web Credentials provides a convenient and secure mechanism for storing the following types of credentials:
-
-* Basic Authentication (Username & password)
-* OAuth2 Client Credentials (Client ID & Client Secret)
-* OCI Native Authentication (Access Oracle Cloud Resources, e.g., Object Storage)
-* HTTP Header (The credential is added to the REST request as an HTTP Header)
-* URL Query String (The credential is added to the URL of the REST request as a Query String Parameter).
-
-We will be using OCI Native Authentication required to connect with Object Storage
-
-1. Create Web Credentials
-
-    ![Navigate to Vision](images/workspace-utilities.png " ")
-
-    ![Navigate to Vision](images/web-credentials.png " ")
-
-    ![Navigate to Vision](images/create-web-credentials.png " ")
-
-2. Provide user OCID, tenancy OCID, fingerprint and authentication type as **Oracle Cloud Infrastructure**
-
-    ![Navigate to Vision](images/web-credentials-details.png " ")
- 
-## Task 2: Create Table - DOCUMENT AI DOCS
+  
+## Task 1: Create Table - DOCUMENT AI DOCS
  
 1. Create **DOCUMENT\_AI\_DOCS** table.
 
@@ -124,7 +99,7 @@ We will be using OCI Native Authentication required to connect with Object Stora
     </copy>
     ```
 
-## Task 4: Create Table - DOCUMENT AI FIELDS
+## Task 2: Create Table - DOCUMENT AI FIELDS
 
 DOCUMENT\_AI\_FIELDS table is used to store the labels and corresponding scores. This is what we get after the parsing of the JSON response.
 
@@ -172,7 +147,7 @@ DOCUMENT\_AI\_FIELDS table is used to store the labels and corresponding scores.
     </copy>
     ```
    
-## Task 5: Create PL/SQL Package
+## Task 3: Create PL/SQL Package
 
 You can login to Oracle APEX Workspace and select SQL worksheet to run any of the SQL commands or Create Tables or Packages.
 
@@ -525,7 +500,7 @@ You can login to Oracle APEX Workspace and select SQL worksheet to run any of th
     </copy>
     ```
 
-## Task 6: Verify File upload settings 
+## Task 4: Verify File upload settings 
 
 In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can also use the **default file upload** APEX page item. If you would like to know more about [Dropzone plugin installation](https://github.com/Dani3lSun/apex-plugin-dropzone) please follow the link. 
 
@@ -547,7 +522,7 @@ In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can 
 
     ![Navigate to Vision](images/edit-page.png " ")
 
-## Task 7: Create Custom reports to display key value pairs and document features
+## Task 5: Create Custom reports to display key value pairs and document features
 
 1. From the JSON response received from Document Understanding AI service, this reponse is written into a table and JSON is parsed, create 2 custom reports with following queries to display the result of document processed.
 
@@ -584,7 +559,7 @@ In the Oracle APEX page, we will use the file upload Dropzone plugin, or we can 
 
     where P5\_DOCUMENT\_ID is page item of document id of uploaded document.
  
-## Task 8: Create Oracle Apex Page to Upload file and display results
+## Task 6: Create Oracle Apex Page to Upload file and display results
  
 Upload the file verify the document properties where image is converted into text
 
@@ -610,4 +585,4 @@ Upload the file verify the document properties where image is converted into tex
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - May 23rd, 2023
+* **Last Updated By/Date** - August 15th, 2023
