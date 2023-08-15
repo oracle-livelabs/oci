@@ -368,6 +368,106 @@ This lab assumes you have:
     ```
 
     ![Cohere Response](images/cohere-response.png) 
+
+## Task 3: Cohere Integration with OCI Speech AI
+ 
+1. Create PL/SQL Dynamic Content, This will open Speech AI Job file, Extract the Voice to text converted content from the JSON file. feed this as Input to Cohere prompt and display results back from cohere.
+
+    ![Cohere Key](images/dynamic-region.png " ")
+ 
+2. PL/SQL Code block
+   
+    ```sql
+        <copy>
+        DECLARE 
+            l_response clob;
+            l_http_status_code number;
+            l_inputaudio varchar2(2000) := :P22_OBJ;
+            l_filename varchar2(100) := :P22_FN;
+            -- please check this URL will vary in your object storage settings
+            l_spjob varchar2(2000) := 'https://objectstorage.us-phoenix-1.oraclecloud.com/n/tenancyname/b/bucketname/o/'||:P22_SPJOB||'bucketname_Input/'||:P22_FN||'.json';
+            
+            l_url    VARCHAR2(4000) := 'https://api.cohere.ai/v1/generate';  
+        
+            l_input varchar2(4000) := 'What is cancer?';
+            l_body   VARCHAR2(4000); 
+            l_response_json CLOB;
+            l_text varchar2(4000);
+            l_text2 varchar2(4000);
+
+            CURSOR C1  IS 
+                SELECT jt.* 
+                FROM   JSON_TABLE(l_response, '$' 
+                        COLUMNS (transcription VARCHAR2(2000)  PATH '$.transcriptions[0].transcription' )) jt; 
+            
+                CURSOR C2  IS 
+                SELECT jt.* 
+                FROM   JSON_TABLE(l_response_json, '$' 
+                        COLUMNS (text VARCHAR2(2000)  PATH '$.generations[0].text' )) jt; 
+            
+                BEGIN  
+                        apex_web_service.g_request_headers.delete(); 
+                        apex_web_service.g_request_headers(1).name  := 'Content-Type'; 
+                        apex_web_service.g_request_headers(1).value := 'application/json';  
+
+                        l_response := apex_web_service.make_rest_request(    
+                        p_url => l_spjob,
+                        p_http_method => 'GET' 
+                        ); 
+                
+                        l_http_status_code := apex_web_service.g_status_code; 
+                        if l_http_status_code = 200 then 
+                            apex_collection.create_or_truncate_collection( 'REST_COLLECTION' ); 
+                            apex_collection.add_member( 
+                                p_collection_name => 'REST_COLLECTION', 
+                                p_clob001 =>         l_response  ); 
+                        end if;     
+                
+                        For row_1 In C1 Loop
+                        l_text := row_1.transcription; 
+                        End Loop;
+                
+                    apex_web_service.g_request_headers(1).name := 'Content-Type';
+                    apex_web_service.g_request_headers(1).value := 'application/json';
+                    apex_web_service.g_request_headers(2).name := 'Authorization';
+                    apex_web_service.g_request_headers(2).value := 'Bearer Your-Cohere-API-Key';
+                
+                    l_body  := '{
+                        "model": "command",
+                        "prompt": "'||l_text||'",
+                        "max_tokens": 300,
+                        "temperature": 0.9,
+                        "k": 0,
+                        "stop_sequences": [],
+                        "return_likelihoods": "NONE"
+                        }';
+
+                    if l_text is not null then 
+
+                    l_response_json := apex_web_service.make_rest_request( 
+                        p_url => l_url, 
+                        p_http_method => 'POST', 
+                        p_body => l_body  
+                    );
+
+                    For row_2 In C2 Loop
+                            l_text2 := row_2.text;
+                            Htp.p(  '<b>AI Response </b>'|| l_text2 );  
+                        End Loop;
+
+                    end if; 
+
+                END; 
+        </copy>
+        ```
+
+3. 1st example of AI Input
+
+    ![Cohere Key](images/cohere-example-1.png " ")
+
+4. 2nd example of AI Input
+
+    ![Cohere Key](images/cohere-example-2.png " ")
  
     > **Congratulations:** you have completed **Part 4** Lab. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
 
