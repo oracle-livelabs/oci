@@ -1,4 +1,4 @@
-# Create an Oracle Autonomous Database 
+# Create an Oracle Autonomous Database and Oracle APEX How-to's
 
 ## Introduction
 
@@ -174,24 +174,24 @@ If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges 
 
     ![Database complete message.](./images/adb-create-complete-message.png "Complete")
 
-## Task 4: Create an Oracle APEX Workspace
+## Task 4: How to create an Oracle APEX Workspace
 
 1. Once the Autonomous Database has been fully provisioned, return to the *Autonomous Database* page, locate the instance's display name, and then click on it to view the ADB's details page. Click the *Tools* tab. 
 2. Click the *Copy* button to copy the URL to launch the Oracle APEX development environment. Open the link in a new browser window or tab.
 ![Launch the Oracle APEX App Builder.](./images/launch-oracle-apex-app-builder.png)
-3. For new Autonomous Database instances, this should launch the *Administration Services* login screen. Enter the password for the *admin* user and click the *Sign In to Administration* button.
+3. For new Autonomous Database instances, this should launch the **Administration Services** login screen. Enter the password for the *admin* user and click the **Sign In to Administration** button.
 ![Login to the Oracle APEX Administration Services.](./images/login-to-oracle-apex-administration-services.png)
-4. Again, for new Autonomous Database instances, after a successful login, the browser will redirect to the page shown below. Click the *Create Workspace* button.
+4. Again, for new Autonomous Database instances, after a successful login, the browser will redirect to the page shown below. Click the **Create Workspace** button.
 ![Click the Create Workspace button.](./images/create-a-new-workspace.png)
-5. Click and select the *New Schema* option.
+5. Click and select the **New Schema** option.
 ![Select to create a workspace using a new schema.](./images/create-workspace-using-a-new-schema.png)
-6. Enter the desired *Workspace Name* and *Workspace Username*. The latter will be used to create an Oracle Database user account. Also, provide a new *Workspace Password* that conforms to the same password policy described in *Task 1*. Click the *Create Workspace* button to create the workspace.
+1. Enter the desired **Workspace Name** and **Workspace Username**. The will be used to create an Oracle Database user account. Also, provide a new **Workspace Password** that conforms to the same password policy. Click the **Create Workspace** button to create the workspace.
 ![Provide the desired workspace name, and the administrator's username and password.](./images/provide-workspace-name-and-admin-credentials.png)
-7. After the workspace has been successfully provisioned, click the button on the top-right, and then click the *Sign out* button to return to the App Builder login screen.
+1. After the workspace has been successfully provisioned, click the button on the top-right, and then click the **Sign out** button to return to the App Builder login screen.
 ![Sign out of the Administration Services.](./images/sign-out-of-administration-services.png)
-8. Enter the workspace name, username, and password set earlier when creating the workspace. Click the *Sign In* button to access the newly created workspace.
+1. Enter the workspace name, username, and password set earlier when creating the workspace. Click the **Sign In** button to access the newly created workspace.
 ![Login to the new workspace.](./images/login-to-new-workspace.png)
-9. After successful authentication, the browser will redirect to the default App Builder landing page where workspace administrators and developers will have access to various functionalities to develop and manage APEX applications.
+1. After successful authentication, the browser will redirect to the default App Builder landing page where workspace administrators and developers will have access to various functionalities to develop and manage APEX applications.
 ![Once signed in, the workspace administrator and developers have access to the App Builder and a few other utilities.](./images/oracle-apex-development-environment-home-page.png)
 
 ## Task 5: How to run SQL queries in Oracle APEX
@@ -211,7 +211,7 @@ There are several ways to run SQL queries, few most frequently used techniques a
 
     ![SQL Commands](./images/apex-sendmail-5.png)
 
-## Task 6: How to Setup Oracle APEX Web Credentials
+## Task 6: How to setup Oracle APEX Web Credentials
 
 Oracle APEX Web Credentials provides a convenient and secure mechanism for storing the following types of credentials:
 
@@ -225,22 +225,130 @@ We will be using OCI Native Authentication required to connect with Object Stora
 
 1. In the APEX top navigation Select **App Builder**, Click on **Workspace Utilities**   
 
-    ![Navigate to Vision](images/workspace-utilities.png " ")
+    ![Web Credentials](images/workspace-utilities.png " ")
 
     Select **Web Credentials**
 
-    ![Navigate to Vision](images/web-credentials.png " ")
+    ![Web Credentials](images/web-credentials.png " ")
 
     Click on **Create**
 
-    ![Navigate to Vision](images/create-web-credentials.png " ")
+    ![Web Credentials](images/create-web-credentials.png " ")
 
     Provide **User OCID**, **Tenancy OCID**, **Fingerprint**, **Private Key** and authentication type as **Oracle Cloud Infrastructure**
 
-    ![Navigate to Vision](images/web-credentials-details.png " ")
+    ![Web Credentials](images/web-credentials-details.png " ")
 
     > **Note:** If you are new to OCI, Information on how to get these OCIDs is provided in next Lab **Setup OCI CLI**.
- 
+
+## Task 7: How to login to Oracle APEX
+
+We will see how to login to Oracle APEX environment
+
+1. Typically Oracle APEX Urls will be like this 
+   
+    ```text
+    <copy>
+    https://randomid-dbname.dbtype.regionid.oraclecloudapps.com/ords/f?p=appnumber:pagenumber:sessionid 
+    </copy>
+    ``` 
+
+    For example 
+
+    ```text
+    <copy>
+    https://doesnotmatter.adb.us-phoenix-1.oraclecloudapps.com/ords/f?p=4550:1:714943545900442
+    </copy>
+    ``` 
+
+3. Login with the Workspace name, Username and Password as provided by the Workspace Administrator
+
+    ![APEX how tos](images/apex-12.png " ")
+
+## Task 8: How to create Blank Oracle APEX page
+
+1. First you need to create Blank Application or Application that uses sample Apps, from there you can create APEX pages
+2. Click on the Application that has been created.
+3. Click **Create Page** button blank APEX page
+
+    ![APEX how tos](images/apex-01.png " ")
+
+    Select **Blank Page** and Click **Next**
+
+    ![APEX how tos](images/apex-02.png " ")
+
+    Provide page name and **Create Page**
+
+    ![APEX how tos](images/apex-03.png " ")
+
+## Task 9: How to Create Low-Code Data Driven APEX page with CRUD Operations
+
+Similarly, if you want to create a no-code data driven page that allows you to perform CRUD operations on a table, 
+
+1. Select **Interactive Grid** Template
+
+    ![APEX how tos](images/apex-04.png " ")
+
+    Provide page name, Include page form
+
+    ![APEX how tos](images/apex-05.png " ")
+
+    Page mode can be Drawer or Normal. Select the database table on which you would like to do CRUD Operations (Create, Read, Update and Delete records)
+
+    ![APEX how tos](images/apex-06.png " ")
+
+    This automatically picks up the primary key of that table.
+
+    ![APEX how tos](images/apex-07.png " ")
+
+    Two Pages are Automatically Generated, first one will display data and second one will be a record edit page. 
+
+    ![APEX how tos](images/apex-08.png " ")
+
+    Click on the Run button at top right with an arrow symbol. This will display page in run mode. 
+
+    ![APEX how tos](images/apex-10.png " ")
+
+    Click on the Edit Icon on extreme left of a record, this will open a popup
+
+    ![APEX how tos](images/apex-14.png " ")
+
+## Task 10: How to Create Dynamic Actions 
+
+Sometimes, you may want to create Dynamic Actions on a table data or on a button click, such as executing a server side code that invokes a PL/SQL procedure or runs a Javascript code or just submits a page.
+
+1. Select **Dynamic Actions**, Create a new Dynamic Action
+2. Select an Event type for example Click, Double Click, Selection Change etc..
+  
+    ![APEX how tos](images/apex-16.png " ")
+
+3. Create **True** Action, In this example we will select **Alert** if a record is selected.
+
+    ![APEX how tos](images/apex-15.png " ")
+
+## Task 11: How to Create APEX Chart
+
+Sometimes, you may want to display data in a chart for example Bar Chart or Pie Chart or Stacked Bar chart etc. for this the SQL Query should contain a Label and a Numeric Value 
+
+1. Create a new **Region**
+2. Drag and Drop **Chart** into that newly created region.
+  
+    ![APEX how tos](images/apex-17.png " ")
+
+3. Write a SQL Query and select Label and Value
+
+    ```sql
+    <copy>
+        Select ENAME, SAL from EMP;
+    </copy>
+    ``` 
+
+    ![APEX how tos](images/apex-18.png " ")
+
+4. Run the page (Pages are Automatically saved when you run them)
+
+    ![APEX how tos](images/apex-19.png " ")
+  
 You may now **proceed to the next lab**.
 
 ## Learn more
@@ -251,4 +359,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** - Madhusudhan Rao, Oracle Database Product Manager 
-- **Last Updated By/Date** - Madhusudhan Rao on 11th Aug 2023
+- **Last Updated By/Date** - Madhusudhan Rao on 15th Aug 2023

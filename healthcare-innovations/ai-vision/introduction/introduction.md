@@ -79,13 +79,18 @@ These are common labs that are required for most of the other labs under this wo
     * Setup policies for OCI Document Understanding Service
     * Setup policies for OCI Speech
     * Setup policies for OCI Anomaly Detection
-* Lab 2: Provision of an [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/)
+* Lab 2: Provision of an [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/) and [**APEX**](https://apex.oracle.com/en/) How-to's
     * Create or select a compartment
     * Choose Autonomous Database from the OCI services menu
     * Create the Autonomous Database instance
     * Create an Oracle APEX Workspace
     * How to run SQL queries in Oracle APEX
-    * How to Setup Oracle APEX Web Credentials
+    * How to Setup Oracle APEX Web Credentials 
+    * How to login to Oracle APEX
+    * How to create Blank Oracle APEX page
+    * How to Create Low-Code Data Driven APEX page with CRUD Operations
+    * How to Create Dynamic Actions
+    * How to Create an APEX Chart
 * Lab 3: Setup OCI [**Command Line Interface (CLI)**](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
     * Get the User's OCID
     * Add User's API Key
