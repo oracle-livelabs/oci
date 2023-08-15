@@ -8,11 +8,11 @@
         },
         {
             "title": "Get Started",
-            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for the Prerequisite lab. This lab is always second.",
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Prerequisites",
+            "title": "Lab 1: Setup",
             "filename": "../../setup-prerequisites/setup-prerequisites.md"
         },
         {
@@ -20,7 +20,7 @@
             "filename": "../../label-data/label-data.md"
         },     
         {
-            "title": "Lab 3: Trigger the OCI Vision model creation and training",
+            "title": "Lab 3: Create the OCI Vision custom model",
             "filename": "../../create-model/create-model.md"
         },             
         {
@@ -28,7 +28,12 @@
             "filename": "../../test-model-console/test-model-console.md"
         },
         {
-            "title": "Oracle CloudWorld 2022 - Get Help",
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        },
+        {
+            "title": "Oracle CloudWorld 2023 - Support",
             "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
         }
     ]
