@@ -6,7 +6,7 @@ In this section we will analyze the data stored in silver zone and try to draw s
 
 Estimated time: 20 minutes
 
-## Objective
+### Objective
 
 We will use an OCI Data Science notebook for this exercise and as you run the notebook you will learn:
 
@@ -14,7 +14,7 @@ We will use an OCI Data Science notebook for this exercise and as you run the no
 2. Write data into tables in the lake 
 3. Write data into tables in an Autonomous DB
 
-##  Task 1 - Curate Data
+##  Task 1: Curate Data
 
 1. Browse to Data Science service: Click on the hamburger menu, select "Analytics & AI", then click on Data Science as shown below.
 
@@ -48,7 +48,7 @@ We will use an OCI Data Science notebook for this exercise and as you run the no
 
  ![Oracle Cloud console, Data Science](images/data-science-run.png " ")
 
-## Task 2 - Save to Autonomous Data Warehouse
+## Task 2: Save to Autonomous Data Warehouse
 
 For this section we have created a demo Autonomous Data warehouse to demonstrate how we can write data into ADW from the notebook.
 
@@ -81,7 +81,7 @@ This brings you to the end of Lab 5.
 
 You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 - **Created By** -  Rohit Saha, Product Manager, OCI Data Lake
 - **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
 - **Last Updated By/Date** - Mario Miola, Solution Architect, OCI Data Integration

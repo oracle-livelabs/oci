@@ -1,4 +1,4 @@
-# Data Integration Service Lab 
+# Data Ingestion Lab 
 
 ## Introduction
 

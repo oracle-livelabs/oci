@@ -1,4 +1,4 @@
-# Data Science Notebook Lab
+# Data Exploration Notebooks Lab
 
 ## Introduction
 
@@ -6,7 +6,7 @@ In this section we will analyze the data stored in silver zone and try to draw s
 
 Estimated time: 20 minutes
 
-## Objective
+### Objective
 
 We will use an OCI Data Science notebook for this exercise and as you run the notebook you will learn:
 
@@ -15,7 +15,7 @@ We will use an OCI Data Science notebook for this exercise and as you run the no
 * Analyze data using OCI Data Science notebook
 
 
-##  Task 1 - Browse to Data Science service
+##  Task 1: Browse to Data Science service
 
 1. Click on the hamburger menu, select **Analytics & AI**, then click on **Data Science** as shown below.
 
@@ -25,7 +25,7 @@ We will use an OCI Data Science notebook for this exercise and as you run the no
 
  ![Oracle Cloud console, Data Science](images/data-science-project.png " ")
 
-##  Task 2 - Notebook sessions
+##  Task 2: Notebook sessions
 
 We have created a notebook session before hand for you. Once you are in the data science project assigned to you, look for a notebook session ending with the user number assigned to you.
 
@@ -37,7 +37,7 @@ We have created a notebook session before hand for you. Once you are in the data
 
  ![Oracle Cloud console, Data Science](images/data-science-notebook-session.png " ")
 
-##  Task 3 - Notebook data analysis
+##  Task 3: Notebook data analysis
 
 1. Click on the DataAnalysis.ipynb file on the left hand tree.
 
@@ -57,7 +57,7 @@ With this, Lab 3 is complete.
 
 You may now **proceed to the next lab**. 
 
-## Acknowledgments
+## Acknowledgements
 - **Created By** -  Rohit Saha, Product Manager, OCI Data Lake
 - **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
 - **Last Updated By/Date** - Mario Miola, Solution Architect, OCI Data Integration

@@ -1,4 +1,4 @@
-# Data Flow SQL End Point Lab
+# Data Exploration SQL Lab
 
 ## Introduction
 
@@ -6,17 +6,17 @@ In this lab we will introduce you to OCI Data Flow SQL End Point. We will use th
 
 Estimated time: 20 minutes
 
-## Objective
+### Objective
 
 We will understand how to query data using SQL endpoint. We will also learn how to set up column level security in OCI Data Lake and lastly we will query the trips table and see column level security in action.
 
-##  Task 1 - Install DBeaver
+##  Task 1: Install DBeaver
 
 1. Download the DBeaver client from its download site. You can use either Community or Enterprise versions, but they must be at least 22.x.
 
 2. Install DBeaver on your local. As DBeaver gets downloaded and installed we will proceed to the next steps.
 
-## Task 2 - Set up column level security
+## Task 2: Set up column level security
 
 1. Go to the data lake service
 
@@ -46,7 +46,7 @@ We will understand how to query data using SQL endpoint. We will also learn how 
 
  ![Oracle Cloud console, Data Lake](images/data-lake-manage-permissions.png " ")
 
-## Task SQL Endpoint
+## Task 4: SQL Endpoint
 
 1. Go to OCI Data Flow service.
 
@@ -102,7 +102,7 @@ This concludes this lab. In this section you learnt about Data Flow SQL endpoint
 
 You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 - **Created By** -  Rohit Saha, Product Manager, OCI Data Lake
 - **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
 - **Last Updated By/Date** - Mario Miola, Solution Architect, OCI Data Integration

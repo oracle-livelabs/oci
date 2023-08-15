@@ -53,7 +53,7 @@ Login to OCI using the URL below and the tenancy and username/password provided;
 https://console.us-ashburn-1.oraclecloud.com/
 
 
-## Acknowledgments
+## Acknowledgements
 - **Created By** -  Rohit Saha, Product Manager, OCI Data Lake
 - **Contributors** - Sujoy Chowdhury, Product Manager, OCI Data Flow
 - **Last Updated By/Date** - Mario Miola, Solution Architect, OCI Data Integration
