@@ -1,25 +1,24 @@
-# Setting up Highly Available and Secure Infrastructure with Terraform
+# Setting up Highly Available and Secure Infrastructure with Terraform on OCI
 
 ## Setting up your Tenancy
 
 This lab walks you through how to set up the OCI provider in the Terrafrom. 
 
-Estimated Time: 20 minutes
+Estimated Time: 30 minutes
 
-<!--- 
+### Prerequisites
+
+This lab assumes you have:
+* An Oracle account
+* Familiarity with Networking is desirable, but not required
+* Some understanding of cloud, networking, and Terraform
+* Familiarity with Oracle Cloud Infrastructure (OCI) is helpful
+
 ### Objectives
 
 In this lab, you will:
 * Learn how to use/setup Terraform
 
-### Prerequisites
-
-This lab assumes you have:
-* An Oracle Cloud account
-
-
-*Below, is the "fold"--where items are collapsed by default.*
--->
 ## Task 1: Terrafrom defining the OCI Provider in the Terraform
 The Terrafrom main.tf file is the main entry point for the Terraform configuration. It contains the core infrastructure definitions for the Terraform environment. 
 
@@ -51,6 +50,6 @@ Open the main.tf file. In the file we can see that there is a provider configura
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - David Ortega, Cloud Engineer
+* **Contributors** - Germain Vargas, Cloud Engineer
+* **Last Updated By/Date** - David Ortega, August 2023

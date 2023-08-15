@@ -6,28 +6,32 @@
   "tutorials": [
     {
       "title": "Introduction",
-      "description": "This lab walks you through how to set up Infrastruce as code using Terraform on OCI.",
+      "description": "This lab walks you through how to set up Infrastructure as code using Terraform on OCI.",
       "filename": "../../introduction/introduction.md"
     },
     {
       "title": "Lab 1: Setting up your Tenancy",
-      "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+      "description": "Setting up your Tenancy for Terraform",
       "filename": "../../setup/setup.md"
     },
     {
       "title": "Lab 2: Editing Terraform provider",
+      "description": "This Lab will enable Terraform to provision resources on your Tenancy",
       "filename": "../../terraform/terraform.md"
     },
     {
       "title": "Lab 3: Network Module",
+      "description": "This lab walks you through defining Networking resources needed for connectivity",
       "filename": "../../network/network.md"
     },
     {
       "title": "Lab 4: Bastion and Webserver Modules",
-      "filename": "../../compute/compute.md"
+      "description": "This lab walks you through defining Compute resources needed for a Bastion and 3 Web Servers",
+      "filename": "../../bastion-webserver/bastion-webserver.md"
     },
     {
       "title": "Lab 5: Terraform Deployment",
+      "description": "This lab walks you through deploying your Terraform code",
       "filename": "../../deploy/deploy.md"
     },
     {

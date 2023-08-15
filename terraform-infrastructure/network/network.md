@@ -1,4 +1,4 @@
-# Setting up Highly Available and Secure Infrastructure with Terraform
+# Setting up Highly Available and Secure Infrastructure with Terraform on OCI
 
 ## Working with Networking on Terraform
 
@@ -168,7 +168,7 @@ The data block also specifies the VCN in which the subnet will exist, making use
 
 Lastly, the subnets required the attachment of both a Security List and Route Table. These attachments are facilitated through the sl\_data variable for Security List and rl\_data variable for Route table. These atrributes serve as the backbone of the subnet configuration, providing Terraform with the required information needed to orchestrate and create the subnets on an OCI environment.You have now defined a VCN with private and public subnets in the Terraform environment.
 
-## Task 2: Creating Secuirty Lists in Terraform for Private and Public subnets.
+## Task 2: Defining Secuirty Lists in Terraform for Private and Public subnets.
 
 **1. Defining a Security List for the Private subnet hosting the Web servers** 
 
@@ -386,7 +386,7 @@ This egress rule is defined to allow all outbound traffic from public subnet hou
 
 
 
-## Task 3: Creating Route tables and Gateways in Terraform for Private and Public subnets.
+## Task 3: Defining Route tables and Gateways in Terraform for Private and Public Subnets.
 
 **1. Defining a Internet Gateway**
 
@@ -553,7 +553,7 @@ In the route rule, use\_igw is set as true which indicates that the route rule i
 
 ![picture14](images/ocipubrt.png)
 
-## Task 4: Creating a Loadbalancer in Terraform.
+## Task 4: Defining a Loadbalancer in Terraform.
 
 **1. Defining a Load Balancer**
 
@@ -741,7 +741,7 @@ Lastly, all the backend data blocks are attached to the Load Balancer defined in
 ![picture18](images/lbbackend.png)
 
 
-## Task 5: Creating a Network Security Group in Terraform.
+## Task 5: Defining a Network Security Group in Terraform.
 
 **1. Defining a Network Security Group**
 
@@ -811,6 +811,6 @@ Lastly, the nsg\_data variable attaches the Security Rule to the Network Securit
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - David Ortega, Cloud Engineer
+* **Contributors** -  Germain Vargas, Cloud Engineer
+* **Last Updated By/Date** - David Ortega, August 2023
