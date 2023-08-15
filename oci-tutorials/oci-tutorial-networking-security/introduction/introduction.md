@@ -2,7 +2,7 @@
 
 ## About this Workshop - Introduction to Oracle Cloud Networking and Security
 
-This session covers how security is built into your Oracle Cloud environment and the key services you can leverage to secure your Workloads. You will learn about Oracle's security principles, how Identity & Access Management (IAM) is used throughout your tenancy, as well as security features within networking. This will also include an introduction to the various networking components within Oracle Cloud Infrastructure (OCI) with the goal of understanding how to deploy the services and when/why to use them. 
+Learn about key services for networking and securing your workloads in Oracle Cloud Infrastructure (OCI). The session covers OCI security principals, how to use Identity & Access Management (IAM) throughout your tenancy, as well as security features available within networking. You will also be introduced to core OCI networking services, how to deploy them, and best practice considerations for when and why to use these services.
 
 ### **Duration: 2 Hours**
 
@@ -13,16 +13,16 @@ In this workshop, you will:
 * Explain Identity & Access Management concepts
 * Describe the core-the-edge security model
 * Compare the security services available in OCI and their use cases
-* Explain when and why to use important netwroking components
+* Explain when and why to use important networking components
 
 ### **Assets**
 
 Powerpoint
-* [OCI Networking and Security QuickStart](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4sNLcp8oFR0bVOnv2VMpxNiad2pWp65EHRMlYtdRCUrn91arPdrIxfnkmrfbmEUx/n/ociobtnas/b/OCW2022/o/TUT4112_OCI_Networking_and_Security_Quick_Start_Final.pdf) TBD
+* [OCI Networking and Security QuickStart](https://objectstorage.us-ashburn-1.oraclecloud.com/p/ZjhWuXHqBt8wWLigeWdOjINoxOgaKb1-i6_ooZi2mWOlc[…]ecurity/o/OCW%20Networking%20and%20Security.pdf)
 
 Video Recording
-* [Day One and Beyond: OCI Security Quick Start](https://www.youtube.com/watch?v=wFBDBNsxP7U&ab_channel=OracleLearning) TBD
-* [Day One and Beyond: OCI Networking Quick Start](https://www.youtube.com/watch?v=Kza0WSjfwiY&list=PLKCk3OyNwIzvbLEYL08MKJkR84NQLIIdg&index=5&ab_channel=OracleLearning) TBD
+* [Day One and Beyond: OCI Security Quick Start](https://www.youtube.com/watch?v=QQyN7fY_ZbQ&ab_channel=OracleLearning) 
+* [Day One and Beyond: OCI Networking Quick Start](https://www.youtube.com/watch?v=Eb3jDfyVe7U&ab_channel=OracleLearning) 
 
 
 ## Learn More
