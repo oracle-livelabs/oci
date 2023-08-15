@@ -20,7 +20,7 @@ In this workshop, you will learn how to:
 ### **Assets**
 
 Powerpoint
-* [Business Operations]() TBD
+* [Business Operations](https://objectstorage.us-ashburn-1.oraclecloud.com/p/N0DH1N7JGHk4J0rHw4mH9dmz_YmKSFnKV95wrz_0SAmBK[…]LwsWzWUk2/n/ociobtnas/b/Financial_Operations/o/)
 
 Video Recording
 * [Day One and Beyond: OCI Business Governance](https://www.youtube.com/watch?v=JPLF3h_BPWU&ab_channel=OracleLearning) 
