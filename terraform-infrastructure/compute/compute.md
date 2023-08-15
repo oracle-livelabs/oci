@@ -266,19 +266,39 @@ After editing all three servers, you should have the following
 
 ## Understanding Modules
 
-Modules are a way to make your code more structured and modular. We have used this concept to help promote reusability with our code.<br>
+In Terraform, modules are a way to organize and encapsulate related resources and configurations into reusable and shareable components. They allow you to break down your infrastructure code into smaller, manageable units, promoting code reusability, maintainability, and collaboration.
+
+A module in Terraform consists of a collection of Terraform configuration files grouped together in a directory. These configuration files define resources, variables, outputs, and other elements just like the main Terraform configuration files. However, modules are designed to represent a specific piece of functionality, such as a compute instance, a network setup, or an application deployment. We have used this concept to help promote reusability with our code.<br>
 A module encapsulates a set of resources and variables within a defined namespace. 
 
-In the terraform code you have a folder called modules.
+In the terraform environment you have a folder called modules.
 
 ![modules](images/modules.png)
 
-Here we can can see our Bastion Module contains a main.tf, output.tf, and variables.tf
+In the modules folder there are three modules being used to create resources on OCI. The network module creates all the networking resources such as the Virtual Cloud Network and the Load Balancer resources. Below is the list of resources created by the network module. While the bastion module creates resources needed to succefully create a Bastion instance that can access the Web servers being created through Terraform. Lastly, the webservers module creates compute instances and deploys Apache server for each instance.
 
-* The main.tf file is where you define the resources and configurations.
-* The variables.tf file is where you define input variables for the module.
-* The output.tf file is where you define the output values the module will produce after running.
+<!--
+The network module creates all the networking resources such as the Virtual Cloud Network and the Load Balancer resources. Below is the list of resources created by the network module.
+* Virtual Cloud Network (VCN)
+* Private and Public Subnets
+* Private and Public Security lists
+* Private and Public Route Tables
+* Internet Gateway
+* Nat Gateway
+* Service Gateway
+* Load Balancer
 
+The bastion module creates resources needed to succefully create a Bastion instance that can access the Web servers being created through Terraform.  Below is the list of resources created by the bastion module. 
+
+The webservers module creates compute instances and deploys Apache server for each instance. Below is the list of resources created by the webservers module.
+-->
+Every module contains a main.tf, output.tf, and variables.tf file.
+
+* The main.tf file is where resources and configurations are created based on the definitions provided in the terraform.tfvars file.
+* The variables.tf file is where input variables for the modules are defined.
+* The output.tf file defines output values that are outputed once Terraform is deployed.
+
+<!--
 In the variables.tf file, we can see that it has a Data Structure with a Data Block mapping the parameters needed to provision a bastion.
 
 ![bastion-params](images/bastion-params.png)
@@ -286,7 +306,29 @@ In the variables.tf file, we can see that it has a Data Structure with a Data Bl
 In the main.tf file we see how to define the bastion instance using the defined bastion parameters. 
 
 ![define-bastion](images/define-bastion.png)
+-->
 
+Within each module there are a set of data structures that declare resources using the Oracle Cloud Infrastructure provider. Lets break down the declaration of a resource structure.
+
+Navigate to the modules folder and open the main.tf folder located in the network module. In the main.tf folder navigate to the oci\_core\_virtual\_network resouce data structure. 
+
+![datastruct](images/datastruct.png)
+
+The following keywords are used to declare a resource within Terraform.
+
+1. resource: This keyword signifies a resource declaration data structure in Terraform. Resources are entities that Terraform manages and provisions in OCI. They can represent various components, such as virtual machines, networks, storage, and more.
+
+2. oci\_core\_virtual\_network: This keyword signifies the resource type in Terraform based the provider being used by the Terraform environment. The exact resource type corresponds to the OCI service and resource you want to manage using Terraform. In this case, the resource type is a OCI Virtual Cloud Network.
+
+3. vcn: This keyword signifies the local name or identifier assigned to the resource block. It's a reference that is used within the Terraform configuration to interact with or refer to this specific resource. This identifier helps distinguish multiple resources of the same resource type within the Terraform configuration.
+
+Putting it all together, the code line resource "oci\_core\_virtual\_network" "vcn" means that you're declaring a Terraform resource block to manage an OCI Virtual Cloud Network. 
+
+Within the curly brackets there are arguments for this virtual cloud network that are used to create the resource. The arguments are values that are provided to resources to configure and customize their behavior. Arguments allow Terrafrom to tailor the settings of each component to your specific requirements, making your infrastructure code more flexible, reusable, and maintainable.
+
+In the OCI VCN resource data structure there are four arguments that are defined based on the vaules provided in the pervious labs within the terraform.tfvars file.  
+
+![datastruct](images/combo.png)
 
 Throughout our code we make use of **each.value** and **for_each**. These are constructs that work together inside a resource, module and provider.
 
