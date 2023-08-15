@@ -56,13 +56,6 @@ This lab assumes you have:
 us-phoenix-oel7 = "replace-phoenix-oraclelinux7-image-ocid"
 </copy>
 ```
-
-For other regions
-```
-<copy>
-country-region-oel7 = "replace-region-oraclelinux7-image-ocid"
-</copy>
-```
 Copy and paste the following to the Image OCIDs section of the terraform.tfvars file.
 
 In this [Documentation](https://docs.oracle.com/en-us/iaas/images/image/266adc03-7428-41fc-b17d-2f88ea56dff0/), you will be able to find Image OCIDs for Oracle Enterprise Linux 7. 
@@ -73,7 +66,7 @@ We will search for the Pheonix Region and find the Image OCID.
 
 We were able to find and implment our Image OCID needed to define out compute instances. Image OCIDs are software with configurations needed to launch our instances.
 
-After entering your Image OCID, you should have something similar to this. 
+If you are going to change the region please make sure to change the name of the data block to the correct region identifier **(us-phoenix-1)**. Below is the example of how the Phoenix region would look like.
 
 ![image-ocid-tf](images/image-ocid-tf.png)
 
@@ -361,6 +354,6 @@ Following this we use the remote-execution type of provisioner. The remote-execu
 * [Physical Architecture Concepts](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts-physical.htm)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - Germain Vargas, Cloud Engineer
+* **Contributors** -  David Ortega, Cloud Engineer
+* **Last Updated By/Date** - Germain Vargas, August 2023

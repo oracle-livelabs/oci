@@ -2,21 +2,15 @@
 
 ## Introduction
 
-This lab walks you through how to set up Infrastruce as code using Terraform on OCI. 
+This lab will go through deploying your terraform code and watch its creation from the console.
 
 Estimated Time: 60 minutes
 
-### About <Product/Technology> (Optional)
-We will be using OCI's Virtual Cloud Network, Compute instances, and Load Balancers along side Terraform.
-
 ### Objectives
-
-*List objectives for this lab using the format below*
 
 In this lab, you will:
 * Learn how to use/setup Terraform
 * Learn how to provision OCI resources through Terraform
-* Objective 3
 
 ### Prerequisites
 
@@ -24,79 +18,98 @@ This lab assumes you have:
 * An Oracle account
 * Familiarity with Networking is desirable, but not required
 * Some understanding of cloud, networking, and Terraform
-* Familiarity with Oracle Cloud Infrastructure (OCI) is helpful
+* Familiarity with Oracle Cloud Infrastructure is helpful
 
 
-*Below, is the "fold"--where items are collapsed by default.*
+## Task 1: Deploy your Terraform
 
-## Task 1: Concise Task Description
+**Terraform Initialize**
 
-(optional) Task 1 opening paragraph.
+On your local terminal, navigate to your directory where the tf-provider is located in. Once in the directory run the init command.
+```
+<copy>
+terraform init
+</copy>
+```
 
-1. Step 1
+Example output:
 
-	![Image alt text](images/sample1.png)
+![terraform-init](images/terraform-init.png)
 
-  To create a link to local file you want the reader to download, use the following formats. _The filename must be in lowercase letters and CANNOT include any spaces._
+**Terraform Plan**
 
-	Download the [starter file](files/starter-file.sql) SQL code.
+Next we will create an execution plan to check whether the changes shown in the execution plan match your expectations, without changing the real resources. Run the Terraform plan command
 
-	When the file type is recognized by the browser, it will attempt to render it. So you can use the following format to force the download dialog box.
+```
+<copy>
+terraform plan
+</copy>
+```
+This will provide you the plan. 
 
-	Download the [sample JSON code](files/sample.json?download=1).
+Example output:
 
-  > Note: do not include zip files, CSV, PDF, PSD, JAR, WAR, EAR, bin, or exe files - you must have those objects stored somewhere else. We highly recommend using Oracle Cloud Object Store and creating a PAR URL instead. See [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/en-us/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
+![terraform-plan](images/terraform-plan.png)
+  
+**Terraform Apply** 
 
-2. Step 2
+Finally we will apply the plan, Run the terraform apply command. This command will take a couple of minutes to run. 
 
-  ![Image alt text](images/sample1.png)
+```
+<copy>
+terraform apply
+</copy>
+```
 
-4. Example with inline navigation icon ![Image alt text](images/sample2.png) click **Navigation**.
+Terraform will prompt you to enter yes when applying.
 
-5. Example with bold **text**.
+![terraform-apply-yes](images/terraform-apply-yes.png)
 
-   If you add another paragraph, add 3 spaces before the line.
+After running you will recieve outputs from the output.tf files. 
 
-## Task 2: Concise Task Description
+Example output:
 
-1. Step 1 - tables sample
+![terraform-apply](images/terraform-apply.png)
 
-  Use tables sparingly:
+In Addition if you have your console open you can see your resources get provisioned!
 
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
+![instances-console](images/instances-console.png)
 
-2. You can also include bulleted lists - make sure to indent 4 spaces:
+![loadbalancer-console](images/loadbalncer-console.png)
 
-    - List item 1
-    - List item 2
+## Task 2: Destroy your Terraform
 
-3. Code examples
+**Terraform Destroy**
 
-    ```
-    Adding code examples
-  	Indentation is important for the code example to appear inside the step
-    Multiple lines of code
-  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
-    ```
+On your local terminal, in the same directory as your tf-provider, we can tear down our infrastructure. Run the the terraform destroy command.
 
-4. Code examples that include variables
+```
+<copy>
+terraform destroy
+</copy>
+```
 
-	```
-  <copy>ssh -i <ssh-key-file></copy>
-  ```
+Terraform will prompt you to enter yes when destroying.
+
+![terraform-destroy-yes](images/terraform-destroy-yes.png)
+
+Example output:
+
+![terraform-destroy](images/terraform-destroy.png)
+
+Just like when you apply you can also watch your resources get destroyed on the console!
+
+![instances-console-destry](images/instances-console-destroy.png)
+
+Congratulations on finsihing this Livelab! Now you have a terraform template to use when provisioning resources on OCI!
 
 ## Learn More
 
 *(optional - include links to docs, white papers, blogs, etc)*
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [CLI + Terraform](https://developer.hashicorp.com/terraform/tutorials/cli)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - Germain Vargas, Cloud Engineer
+* **Contributors** -  David Ortega, Cloud Engineer
+* **Last Updated By/Date** - Germain Vargas, August 2023

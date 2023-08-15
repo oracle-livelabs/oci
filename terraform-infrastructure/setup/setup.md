@@ -163,7 +163,7 @@ A compartment is a logical folder where you can organize your resources. For thi
 
   After Installing Terraform, please download our Terraform Template as we will be using this for the rest of the lab. 
   
-  Download the [Terraform template](files/starter-file.sql) Terraform template. 
+  Download the [Terraform template](files/OCI_Terraform_LiveLab_Skeleton.zip).
 
 ## Learn More
 
@@ -171,8 +171,9 @@ A compartment is a logical folder where you can organize your resources. For thi
 * [Compartments](https://docs.oracle.com/en/cloud/foundation/cloud_architecture/governance/compartments.html#what-is-a-compartment)
 * [OCIDs](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/identifiers.htm)
 * [OCI Provider](https://registry.terraform.io/providers/oracle/oci/latest/docs)
+* [Terraform + OCI](https://developer.hashicorp.com/terraform/tutorials/oci-get-started)
 
 ## Acknowledgements
 * **Author** - Germain Vargas, Cloud Engineer
-* **Contributors** -  David Ortega, Cloud Engineer and Hoyoung Kim, Cloud Engineer
-* **Last Updated By/Date** - Germain Vargas, July 2023
+* **Contributors** -  David Ortega, Cloud Engineer
+* **Last Updated By/Date** - Germain Vargas, August 2023
