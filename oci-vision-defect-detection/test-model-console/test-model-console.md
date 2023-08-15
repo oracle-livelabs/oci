@@ -12,7 +12,7 @@ Estimated Time: 10 minutes
 
 ## Task 1: Test the model via Oracle Cloud Console
 
-1. Click [here](https://github.com/oracle-livelabs/oci/raw/main/oci-vision-inventory/images/model/utility_pole_test.jpg) to view the test image. Right click on the image and save it to your computer.
+1. Click [here](https://github.com/oracle-livelabs/oci/raw/main/oci-vision-defect-detection/images/model/test.jpg) to view the test image. Right click on the image and save it to your computer.
 
 2. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 3. Click **Analytics & AI** and then click **Vision**.
