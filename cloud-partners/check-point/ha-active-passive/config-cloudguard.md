@@ -121,7 +121,7 @@ Estimated Time: 20 minutes.
 
 6. Once host reboots you will be setting up **static Routes** to support Spoke VCNs traffic. Click on **Lock** icon to unlock configuration (If locked) changes and Navigate to **Network Management > IPv4 Static Routes**. Click on **Add** icon to add new static route:
 
-    ![Primary Firewall Static Routes Configuration](../common/images/cloudGuard1-initial-config-routes.png " ")
+    ![Primary Firewall Static Routes Configuration](../common/images/cloudGuard1-initial-configs-routes.png " ")
 
 7. You will be entering a static route entry as per below table:
 
@@ -170,7 +170,7 @@ Estimated Time: 20 minutes.
 
 6. Once host reboots you will be setting up **static Routes** to support Spoke VCNs traffic. Click on **Lock** icon to unlock configuration (If locked) changes and navigate to **Network Management > IPv4 Static Routes**. Click on **Add** icon to add new static route:
 
-    ![Secondary Firewall Static Routes Configuration](../common/images/cloudGuard1-initial-config-routes.png " ")
+    ![Secondary Firewall Static Routes Configuration](../common/images/cloudGuard1-initial-configs-routes.png " ")
 
 7. You will be entering a static route entry as per below table:
 
