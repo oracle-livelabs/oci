@@ -91,6 +91,10 @@ These are common labs that are required for most of the other labs under this wo
     * How to Create Low-Code Data Driven APEX page with CRUD Operations
     * How to Create Dynamic Actions
     * How to Create an APEX Chart
+    * How to Create a Page Process
+    * How to configuring Oracle APEX Applications to Send Email
+    * How to send mail in Plain Text format
+    * How to send mail in Text / HTML message
 * Lab 3: Setup OCI [**Command Line Interface (CLI)**](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
     * Get the User's OCID
     * Add User's API Key
@@ -277,9 +281,6 @@ These labs walk you through the steps of setting up [**OCI Email Services**](htt
     * Generate SMPT Credentials
     * EMAIL Delivery Configuration
     * Create Approved Sender  
-    * Configuring Oracle APEX to Send Email
-    * Plain Text only message
-    * Plain Text / HTML message
     * Sending Speech Transcription and Audio file link in an Email
  
 ## About Breast Cancer
