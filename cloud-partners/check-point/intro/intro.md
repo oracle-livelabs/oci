@@ -12,7 +12,7 @@ Oracle Cloud Infrastructure's partner Check Point's **CloudGuard** solution is a
 
 Attached below is a sample architecture of the solution:
 
-   ![](../common/images/arch.png " ")
+   ![OCI Network Topology Architecture with Check Point Solution](../common/images/arch.png " ")
 
 Estimated time: 120 minutes
 
@@ -45,10 +45,12 @@ Oracle Cloud Infrastructure now supports **Intra VCN routing capabilities** whic
 - **IGW/NATGW Ingress Routing**: Allows definition of routes for inbound public traffic to the VCN towards a user-selected next-hop.
 - **SGW Ingress Routing enhancement**: Allows you to define your own routes for SGW to route traffic from OCI services to destinations inside your VCN
 
-You can learn more about **Intra VCN Routing** [here](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingroutetables.htm#:~:text=Intra%2DVCN%20routing%20allows%20you,route%20for%20the%20VCN%20CIDR.), this workshop can be referred and implment your use-case as needed.
+You can learn more about **Intra VCN Routing** [here](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingroutetables.htm#:~:text=Intra%2DVCN%20routing%20allows%20you,route%20for%20the%20VCN%20CIDR.), this workshop can be referred and implement your use-case as needed.
 
 
-Let's get started!
+#### Let's get Started!
+
+You may now [proceed to the labs](#next).
 
 ## Learn More
 
@@ -63,4 +65,4 @@ Let's get started!
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Check Point
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023
