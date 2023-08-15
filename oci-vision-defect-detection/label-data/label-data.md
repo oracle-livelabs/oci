@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will focus on labeling images of utility poles with rust using OCI Data Labeling. The OCI Vision service will later use these images to train a custom OCI Vision model.
+In this lab, you will focus on labeling images of utility poles with rust using OCI Data Labeling. The OCI Vision service will later use these images to train an OCI Vision custom model.
 
 Estimated Time: 20 minutes
 
@@ -31,11 +31,11 @@ Estimated Time: 20 minutes
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Analytics & AI** and then click **Data Labeling**. Click **Datasets**.
 4. Click **Create dataset**.
-5. Provide *vision-livelab-dataset* as **Name**. Set **Dataset format** to *Images*. Select *Object Detection* in the Annotation mode section. Click **Next**.
+5. Provide *vision-livelab-dataset* as **Name**. Set **Dataset format** to *Images*. Select **Object Detection** in the Annotation class section. Click **Next**.
 
    ![Creation of Data Labeling dataset - 1](../images/create_dataset1.png)
 
-6. Select *Upload local files* at the top. Select bucket *vision-livelab-dataset*. Drag your images to **Selected files** on the screen. 
+6. Select *Upload local files* at the top. Select bucket *vision-livelab-dataset*. Drag the images you downloaded to **Selected files** on the screen.
 
    ![Creation of Data Labeling dataset - 2](../images/create_dataset2.png)
    
@@ -49,14 +49,14 @@ Estimated Time: 20 minutes
 
 ## Task 4: Label data
 
-1. In your dataset details page, you will see a table view of the uploaded images. Click each image to proceed to its labeling.
+1. In the **Data records** page, you will see a table view of the uploaded images. Select an image to start labeling.
 
    ![Creation of Data Labeling dataset - 1](../images/data_labeling_images_table.png)
 
-2. In the single image view, zoom in if necessary. Using the cursor, draw square bounding boxes around the circles. Do the same for the ones that only appear partially.
+2. Draw a square bounding box around the rust then select **Save & next** until all the images are labeled.
 
    ![Labeling an image](../images/labeling_an_image.png)
-   
+
 3. Once all the images are labeled, you may **proceed to the next lab**.
 
 ## Acknowledgements
