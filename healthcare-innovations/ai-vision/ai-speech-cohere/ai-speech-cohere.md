@@ -1,8 +1,8 @@
-# OCI Speech with Cohere Integration
+# OCI Speech with Cohere AI Integration
 
 ## Introduction
 
-In this Lab, we will see how to integrate [OCI AI Speech](https://www.oracle.com/artificial-intelligence/speech/) Input as prompts to various AI services such as [Cohere](https://cohere.com/) and other GPTs.
+In this Lab, we will see how to integrate [OCI AI Speech](https://www.oracle.com/artificial-intelligence/speech/) Input as prompts to [Cohere](https://cohere.com/) AI Service.
    
 You can ask Questions like 
 
@@ -43,9 +43,7 @@ This lab assumes you have:
 
 * Completed previous labs under Speech AI series. (Lab 11 to Lab 13)
 * Intermediate knowledge of Oracle APEX and PL/SQL
-
-> **Note:** You are at the beginning of **Part 4** Lab.
-  
+ 
 <!-- 
 ## Task 1: Create OpenAI Key
 
@@ -468,8 +466,8 @@ This lab assumes you have:
 4. 2nd example of AI Input
 
     ![Cohere Key](images/cohere-example-2.png " ")
- 
-    > **Congratulations:** you have completed **Part 4** Lab. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
+   
+    > **Congratulations**, you have completed **OCI Speech with Cohere AI Integration** Lab. The subsequent labs are optional, however, please proceed to the next lab to learn more about **Setup Oracle Digital Assistant**. 
 
 ## Learn More
   

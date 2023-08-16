@@ -23,8 +23,6 @@ This lab assumes you have:
 
 * Completed previous labs of this workshop: **Setup environment** and logged into **Oracle APEX workspace**
 
-> **Note:** You are at the beginning of **Part 6** Labs.
- 
 ### About Spatial Geometry Objects
 
 Spatial geometry objects are drawn on the background map based on data in a table. That table can be sourced from local table or a SQL query. Maps created using the Create Page Wizard or in Page Designer, support both local database tables, REST Enabled SQL, and from REST Data Sources. Maps support a rich set of built-in marker icons and shapes. Supported spatial geometry objects include:
@@ -189,7 +187,8 @@ The SDO_GEOMETRY type has the following general format:
         'distance=dist_var unit=km') = 'TRUE' 
     </copy>
     ```
-    for example 
+
+    Replace id\_var and dist\_var as per your requirement. where dist_var is the radius distance of hospital to patient location.  for example 
 
     ```sql
     <copy>
@@ -206,10 +205,9 @@ The SDO_GEOMETRY type has the following general format:
     ```
 
     ![Create Table](images/location-search.png " ")   
-
-    Replace id\_var and dist\_var as per your requirement. where dist_var is the radius distance of hospital to patient.  
  
-    > **Congratulations:** you have completed **Part 6** Labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
+ 
+    > **Congratulations**, you have completed **Oracle APEX Maps and Spatial queries to Locate Hospitals** Lab. The subsequent labs are optional, however, please proceed to the next lab to learn more about **Oracle Analytics Cloud for Clinical Data Analysis**. 
 
 ## Learn More
 

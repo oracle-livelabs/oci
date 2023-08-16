@@ -282,7 +282,7 @@ This lab assumes you have:
 
     *You are welcome, have a great day*
  
-    > **Congratulations:** you have completed **Part 5** Labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
+    > **Congratulations**, you have completed **Oracle APEX Integration with ODA** Lab. The subsequent labs are optional, however, please proceed to the next lab to learn more about **Oracle APEX Maps and Spatial queries to Locate Hospitals**.  
 
 ## Learn More
 

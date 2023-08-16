@@ -23,8 +23,6 @@ This Lab assumes you have the following:
 * Completed **Setup environment** and **Created an Oracle Autonomous Database** lab and already logged into OCI console.
 * Integration Cloud Gen 2 has already been created.
 * AI Vision Model is ready and has an Application user interface to get details about patient user information such as XRay analysis data, xray image location, confidence scoring and basic patient data such as name, email, and date of birth.
-
-> **Note:** You are at the beginning of **Part 9** Labs.
  
 ### Process flow
 
@@ -349,7 +347,7 @@ With Oracle Integration, you can:
 
     ![Integration Cloud](images/integration-01a.png =75%x* ) 
  
-    You can **proceed now to the next lab**.
+    > **Congratulations**, you have completed **Get and Update Patient Details with Integration Services - Oracle Integration Cloud** Lab. The subsequent labs are optional, however, please proceed to the next lab to learn more about **Get and Update Patient Details with Integration Services - Oracle Integration Cloud**. 
 
 ## Learn More
 

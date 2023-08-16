@@ -10,7 +10,7 @@ We will share how we trained our AI Machine learning models with X-Ray mammograp
  
 Estimated Workshop Time: 12 hours
 
-*Estimated Workshop Time can vary depending upon the Labs that you choose to do, and all ten parts are Optional.*
+*Estimated Workshop Time can vary depending upon the Labs that you choose to do, and all labs from lab 8 are Optional.*
 <!--  
 ### AI for Healthcare - Complete Demo and Architecture video
 
@@ -37,7 +37,7 @@ Running on top of the world's most powerful database, [**Oracle Autonomous Datab
 
 ### AI for Healthcare - Technology Architecture
 
-![Archiecture](images/architecture-v5.png " ")
+![Archiecture](images/architecture-v6.png " ")
 
 ### AI for Healthcare - Learning path
 
@@ -134,7 +134,7 @@ These Labs will guide you in detecting Breast Cancer using [**OCI Vision**](http
     * Display results
     * Troubleshooting Checklist for APEX Developers
 
-***Part 2** - Create Medical Expenses - Lab 8 to Lab 9* 
+***Part 2** - Create Medical Expenses - Lab 8 to Lab 9 (Optional labs)* 
 
 These Labs will guide you in creating medical expenses using Oracle [**OCI Document Understanding**](https://docs.oracle.com/en-us/iaas/document-understanding/document-understanding/using/home.htm) AI Service.
 
@@ -153,7 +153,7 @@ These Labs will guide you in creating medical expenses using Oracle [**OCI Docum
     * Create Custom Reports and Verify the results of the uploaded receipt file.
     * Create an Expense item from the uploaded receipt.
  
-***Part 3** - Create Medical Transcriptions - Lab 10 to Lab 11* 
+***Part 3** - Create Medical Transcriptions - Lab 10 to Lab 11 (Optional labs)* 
 
 These Labs will guide you in creating medical transcription and consulting virtual AI doctors using Oracle [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/) AI Service.
  
@@ -172,7 +172,7 @@ These Labs will guide you in creating medical transcription and consulting virtu
     * Create Speech Transcription Job
     * Review the audio file and Transcribed text content of the Audio file.
 
-***Part 4** - Oracle Speech AI and Cohere Integration - Lab 12*
+***Part 4** - Oracle Speech AI and Cohere Integration - Lab 12 (Optional labs)*
 
 These labs will show how to integrate [**Oracle APEX**](https://apex.oracle.com/en/) with [**Cohere**](https://cohere.com/).
 
@@ -181,7 +181,7 @@ These labs will show how to integrate [**Oracle APEX**](https://apex.oracle.com/
     * Getting AI Response from Cohere 
     * Cohere Integration with OCI Speech AI (Speech AI as Input Audio and Cohere as AI responder)
 
-***Part 5** - Create Chatbot for Frequently Asked Medical Questions - Lab 13 - Lab 14*
+***Part 5** - Create Chatbot for Frequently Asked Medical Questions - Lab 13 - Lab 14 (Optional labs)*
 
 These labs will show users to interact with [**Oracle Digital Assistant**](https://www.oracle.com/in/chatbots/) Chatbot with frequently asked questions related to cancer or COVID, Pneumonia or any other health issues and get medical advice on time.
 
@@ -204,7 +204,7 @@ These labs will show users to interact with [**Oracle Digital Assistant**](https
     * Update YAML flow in ODA
     * Demo of Chatbot in Oracle APEX Page
 
-***Part 6** - Oracle APEX Maps and Spatial queries to locate nearest Hospitals - Lab 15*
+***Part 6** - Oracle APEX Maps and Spatial queries to locate nearest Hospitals - Lab 15 (Optional labs)*
 
 These labs will walk you through the steps of locating Hospitals based on location and patient trauma 
 
@@ -216,7 +216,7 @@ These labs will walk you through the steps of locating Hospitals based on locati
     * Demo of finding Hospital on Map based on Location and Trauma selected.
     * Query to locate the nearest Hospital within a given radius
 
-***Part 7** - Oracle Analytics Cloud for Clinical Data Analysis - Lab 16*
+***Part 7** - Oracle Analytics Cloud for Clinical Data Analysis - Lab 16 (Optional labs)*
 
 These labs will walk you through the steps of creating an [**Oracle Analytics cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) instance, creating Analytics reports or Data Visualization and making these reports available in Oracle APEX Application. We will take the example of Analysing Clinical Data, but there are limitless opportunities to Analyse Healthcare Data using Oracle Analytics cloud
 
@@ -230,7 +230,7 @@ These labs will walk you through the steps of creating an [**Oracle Analytics cl
     * Copy Analytics Report Embed URLs
     * Embed Reports in APEX Application
 
-***Part 8** - Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection - Lab 17*
+***Part 8** - Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection - Lab 17 (Optional labs)*
 
 These labs walk you through the steps of detecting Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/).
 
@@ -241,7 +241,7 @@ These labs walk you through the steps of detecting Cardiovascular disease with E
     * Review Model and Data settings
     * Detect ECG Anomalies
    
-***Part 9** - Patient Admission Process after Breast Cancer Detection - Lab 18 to Lab 19*
+***Part 9** - Patient Admission Process after Breast Cancer Detection - Lab 18 to Lab 19 (Optional labs)*
 
 These labs walk you through the steps of creating Oracle Integration Cloud Integration Service and Process automation for the Patient Admission process.
 
@@ -274,7 +274,7 @@ In this lab you will create end to end patient admission process using Oracle In
     * Patient logs into AI for Healthcare portal to get the latest update
     * Enhanced - Patient Admission Process
 
-***Part 10** - Setup OCI Email Delivery Service - Lab 20*
+***Part 10** - Setup OCI Email Delivery Service - Lab 20 (Optional labs)*
 
 These labs walk you through the steps of setting up [**OCI Email Services**](https://www.oracle.com/in/cloud/networking/email-delivery/). This will help us email Doctors, Patients or any Health official with the required data. For example, we can email transcribed text to Doctor after the patient uploads an audio file or mail once the medical expenses have been approved or rejected
 
@@ -304,5 +304,5 @@ You may now **proceed to the next lab**.
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
 * **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - Aug 14th, 2023
-* **Document version number** - 1.2
+* **Last Updated By/Date** - Aug 16th, 2023
+* **Document version** - 1.2

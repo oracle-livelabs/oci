@@ -24,8 +24,6 @@ In this workshop, you will learn how to:
 This lab assumes you have:
 
 * Completed **Setup environment** and **Setup OCI CLI** lab and already logged into OCI console
-
-> **Note:** You are at the beginning of **Part 3** Labs.
  
 **AI Speech to Text or OCI Speech**.  
 
@@ -108,6 +106,8 @@ OCI Speech is a versatile service that can be called via REST APIs, different SD
 4. Rename the .srt to .txt file and open it in any text editor.
 
     ![Speech Transcription Job](images/speech-transcription-030.png " ")
+
+    > **Congratulations**, you have completed **Create Speech Transcription** Labs. The subsequent labs are optional, however, please proceed to the next lab to learn more about **Creating APEX Application for Speech Transcription**. 
    
 ## Learn More
 

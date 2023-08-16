@@ -31,7 +31,7 @@
       "filename": "../../ai-vision-setup-ocicli/ai-vision-setup-ocicli.md"
     }, 
     {
-      "title": "Lab 4: (Part 1) Create Image Library",
+      "title": "Lab 4: Create Image Library",
       "filename": "../../ai-vision-create/ai-vision-create.md"
     },
     {
@@ -43,59 +43,59 @@
       "filename": "../../ai-vision-train/ai-vision-train-model.md"
     },
     {
-      "title": "Lab 7: Oracle APEX Application for Breast Cancer Detection",
+      "title": "Lab 7: Oracle APEX Application for Breast Cancer Detection (Optional)",
       "filename": "../../ai-vision-apex-ui/ai-vision-apex-ui.md"
     },
     {
-      "title": "Lab 8: (Part 2) Document Understanding Features",
+      "title": "Lab 8: Document Understanding Features (Optional)",
       "filename": "../../ai-document-docfeature/ai-document-docfeature.md"
     },
     {
-      "title": "Lab 9: Oracle APEX Application for Medical Receipt processing",
+      "title": "Lab 9: Oracle APEX Application for Medical Receipt processing (Optional)",
       "filename": "../../ai-document-apex-ui/ai-document-apex-ui.md"
     }, 
     {
-      "title": "Lab 10: (Part 3) Create Speech Transcription Job",
+      "title": "Lab 10: Create Speech Transcription Job (Optional)",
       "filename": "../../ai-speech-create/ai-speech-create.md"
     },
     {
-      "title": "Lab 11: Oracle APEX Application for Speech Transcription",
+      "title": "Lab 11: Oracle APEX Application for Speech Transcription (Optional)",
       "filename": "../../ai-speech-apex-ui/ai-speech-apex-ui.md"
     },
     {
-      "title": "Lab 12: (Part 4) Oracle Speech and Cohere Integration",
+      "title": "Lab 12: Oracle Speech and Cohere Integration (Optional)",
       "filename": "../../ai-speech-cohere/ai-speech-cohere.md"
     },
     {
-      "title": "Lab 13: (Part 5) Setup Oracle Digital Assistant",
+      "title": "Lab 13: Setup Oracle Digital Assistant (Optional)",
       "filename": "../../ai-oda-create/ai-oda-create.md"
     },
     {
-      "title": "Lab 14: Oracle APEX Integration with ODA",
+      "title": "Lab 14: Oracle APEX Integration with ODA (Optional)",
       "filename": "../../ai-oda-apex-ui/ai-oda-apex-ui.md"
     },
     {
-      "title": "Lab 15: (Part 6) Oracle APEX Maps and Spatial queries to Locate Hospitals",
+      "title": "Lab 15: Oracle APEX Maps and Spatial queries to Locate Hospitals (Optional)",
       "filename": "../../apex-map/apex-map.md"
     },
     {
-      "title": "Lab 16: (Part 7) Oracle Analytics Cloud for Clinical Data Analysis",
+      "title": "Lab 16: Oracle Analytics Cloud for Clinical Data Analysis (Optional)",
       "filename": "../../analytics-reports/analytics-reports.md"
     },
     {
-      "title": "Lab 17: (Part 8) Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection",
+      "title": "Lab 17: Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection (Optional)",
       "filename": "../../ai-anomaly-detection/ai-anomaly-detection.md"
     },
     {
-      "title": "Lab 18: (Part 9) Get and Update Patient Details - OIC",
+      "title": "Lab 18: Get and Update Patient Details - OIC (Optional)",
       "filename": "../../ai-oic-getpatientdata/getpatientdata.md"
     }, 
     {
-      "title": "Lab 19: Process Automation - Patient Admission Process",
+      "title": "Lab 19: Create Patient Admission Process (Optional)",
       "filename": "../../ai-opa/ai-opa.md"
     },
     {
-      "title": "Lab 20: (Part 10) Setup OCI Email Delivery Service",
+      "title": "Lab 20: Setup OCI Email Delivery Service (Optional)",
       "filename": "../../oci-email/oci-email.md"
     },
     {

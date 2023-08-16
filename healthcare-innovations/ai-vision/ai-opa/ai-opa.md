@@ -1,4 +1,4 @@
-# Complete Process Automation for Patient Admission Process
+# Create Process Automation for Patient Admission Process
 
 ## Introduction
 
@@ -197,8 +197,8 @@ Lab testing process, for example, checking the patient blood sugar level, blood 
     
     ![Integration Cloud](images/enhanced-process.png =75%x* ) 
  
-    > **Congratulations:** you have completed **Part 9** Labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
-
+    > **Congratulations:**, you have completed **Create Process Automation for Patient Admission Process** Labs. The subsequent labs are optional, however, please proceed to the next lab to learn more about **Setup OCI Email**.  
+  
 ## Learn More
  
 * [Oracle Integration Generation 2](https://docs.oracle.com/en/cloud/paas/integration-cloud/index.html)

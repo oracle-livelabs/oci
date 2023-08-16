@@ -21,9 +21,7 @@ In this lab, you will:
 This lab assumes you have:
 
 * You have Completed **Get Started**, **Setup Policies** lab and have required access to Create OCI Anomaly Detection Models and OCI Object storage
-
-> **Note:** You are at the beginning of **Part 8** Labs.
-
+ 
 An **ECG** is a simple, non-invasive test that records the electrical activity of the heart. An ECG can help diagnose certain heart conditions, including **abnormal heart rhythms and coronary heart disease** (heart attack and angina).
 
 Electrocardiography is the process of producing an electrocardiogram (ECG or EKG ), a recording of the heart's electrical activity through repeated cardiac cycles. It is an electrogram of the heart, which is a graph of voltage versus time of the heart's electrical activity using electrodes placed on the skin.  
@@ -216,8 +214,8 @@ It is assumed that you have access to create OCI Bucket and Upload Objects to OC
     ![ECG Reading](images/ecg-reading-9.png " ") 
 
     ![ECG Reading](images/ecg-reading-10.png " ") 
- 
-    > **Congratulations:** you have completed **Part 8** Lab. Now you can proceed to any other Parts of this workshop. All parts are independent of each other. 
+  
+    > **Congratulations**, you have completed **Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection** Lab. The subsequent labs are optional, however, please proceed to the next lab to learn more about **Get and Update Patient Details with Integration Services - Oracle Integration Cloud**. 
 
 ## Important
 

@@ -19,9 +19,7 @@ In this lab, you will:
 This lab assumes you have:
 
 * Completed **Setup environment** and **Setup OCI CLI** lab and already logged into OCI console
-
-> **Note:** You are at the beginning of **Part 1** Labs.
-
+ 
 [Youtube video on Create Image Library](youtube:Y3xsaFSwRmA:large)
 
 > **Note:**  In this lab, we will use our local desktop or laptop terminal or command prompt to upload images directly to OCI object storage using OCI CLI. This lab does not show how to upload images to the OCI cloud shell and, from there, use OCI commands to upload images to OCI object storage. Using a local laptop gives us a finer edge in cleaning up the image data and preparing folders locally rather than doing the same on Cloud shell before uploading
