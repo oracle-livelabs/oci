@@ -14,6 +14,12 @@ We will use an OCI Data Science notebook for this exercise and as you run the no
 2. Write data into tables in the lake 
 3. Write data into tables in an Autonomous DB
 
+### Prerequisites
+
+* Completion of the preceding tasks in the Lab4
+* Some understanding of Cloud, Database, Data Lake terms is helpful 
+* Familiarity with ETL, Notebooks and SQL concepts is helpful
+
 ##  Task 1: Curate Data
 
 1. Browse to Data Science service: Click on the hamburger menu, select "Analytics & AI", then click on Data Science as shown below.

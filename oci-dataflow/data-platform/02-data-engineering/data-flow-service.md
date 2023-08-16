@@ -12,7 +12,9 @@ Estimated time: 20 minutes
 
 ### Prerequisites
 
-* Completion of the preceding tasks in this workshop introduction
+* Completion of the preceding tasks in the Lab1
+* Some understanding of Cloud, Database, Data Lake terms is helpful 
+* Familiarity with ETL, Notebooks and SQL concepts is helpful
 
 ## Task 1: Activate Data Flow Pools
 

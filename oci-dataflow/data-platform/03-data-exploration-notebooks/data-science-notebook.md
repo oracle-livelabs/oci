@@ -14,6 +14,10 @@ We will use an OCI Data Science notebook for this exercise and as you run the no
 * Read data from tables in the lake
 * Analyze data using OCI Data Science notebook
 
+### Prerequisites
+
+* Completion of the preceding tasks in the Lab2
+* Familiarity with ETL, Notebooks and SQL concepts is helpful
 
 ##  Task 1: Browse to Data Science service
 

@@ -18,6 +18,12 @@ You will schedule your Pipeline Task to run daily at 2PM.
 * Schedule the Pipeline Task
 * Run the Pipeline Task
 
+### Prerequisites
+
+* Completion of the preceding tasks in the Lab1
+* Some understanding of Cloud, Database, Data Lake terms is helpful 
+* Familiarity with ETL concepts is helpful
+
 ## Task 1: Run the Data Loader task
 
 In this step, you will do a **manual on-demand run** of your **Data Loader task**. However, you can run all the published tasks in your Application (Integration task, Data Loader task, SQL task, Pipeline task) in the same manner. The Tasks section of an Application details page shows the list of tasks you have published to the Application. You execute published tasks from the list.

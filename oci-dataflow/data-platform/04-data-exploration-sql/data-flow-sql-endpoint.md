@@ -10,6 +10,11 @@ Estimated time: 20 minutes
 
 We will understand how to query data using SQL endpoint. We will also learn how to set up column level security in OCI Data Lake and lastly we will query the trips table and see column level security in action.
 
+### Prerequisites
+
+* Completion of the preceding tasks in the Lab3
+* Familiarity with ETL, Notebooks and SQL concepts is helpful
+
 ##  Task 1: Install DBeaver
 
 1. Download the DBeaver client from its download site. You can use either Community or Enterprise versions, but they must be at least 22.x.
