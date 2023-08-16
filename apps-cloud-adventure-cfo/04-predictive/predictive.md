@@ -25,19 +25,19 @@ In this activity, you will:
 
     > **Click** on the **‘2nd Vertical’** tab (on left side of screen)
 
-    ![Home Page](images/image002.png)
+    ![Home Page](images/step-2.png)
 
 3. Here is where you can manually create a forecast based on both drivers and revenue using both percentages and adjustments.
 
     > **Click** on the **‘Predict Volume’** Horizontal Tab
 
-    ![forecast](images/image003.png)
+    ![forecast](images/step-3.png)
 
 4. Here you can see a revenue forecast for unit sales by products. Let’s look at how you can use predictive planning to help you generate or validate this forecast.
 
     > Click the **‘Actions’** dropdown button
 
-    ![revenue forecast](images/image004.png)
+    ![revenue forecast](images/step-4.png)
 
 5. > Select the **‘Predictive Planning’** dropdown item
 
@@ -47,7 +47,7 @@ In this activity, you will:
 
     > Click on the [] **‘expand’** Icon
 
-    ![predictive volume](images/image007.png)
+    ![predictive volume](images/step-7.png)
 
 7. Expanding on the details you can see insights on the historical data as well as the accuracy of the prediction and which of the 13 prediction methods was most accurate. Let’s look at how you can change the time periods.
 
@@ -72,7 +72,7 @@ In this activity, you will:
 
     > Click the **‘Paste’** Icon
 
-    ![prediction values](images/image013.png)
+    ![prediction values](images/step-10.png)
 
 11. You are presented with the ability to paste either the prediction, best case, or worst case into your forecast. You can paste an entire forecast or a range of dates. You can also apply this data for all products or just the currently selected member. Let’s paste this forecast.
 
@@ -84,21 +84,27 @@ In this activity, you will:
 
     > Click **‘Auto Predict Volume Horizontal Tab’**
 
-    ![ predictive planning](images/image015.png)
+    ![ predictive planning](images/step-12.png)
 
-13. The system is providing you with an error message letting you know you have unsaved changes. Let’s proceed.
+13. You can see all of the values that have been pasted highlighted in yellow. Let’s look at how predictive planning can be automatically provided to you.
+
+    > Click **‘Auto Predict Volume Horizontal Tab’**
+
+    ![ predictive planning](images/step-13.png)
+
+14. The system is providing you with an error message letting you know you have unsaved changes. Let’s proceed.
 
     > Click **‘OK’**
 
     ![error message](images/image016.png)
 
-14. Here you are automatically presented with a most likely, worst-case, and best-case scenario. This gives you the ability to validate and compare your sales volume forecast.  Let’s return to the home and watch the rest of the walk through.
+15. Here you are automatically presented with a most likely, worst-case, and best-case scenario. This gives you the ability to validate and compare your sales volume forecast.  Let’s return to the home and watch the rest of the walk through.
 
     > Click the **‘Home’** Icon
     
-    ![walk through](images/image018.png)
+    ![walk through](images/step-15.png)
 
-15. 
+16. 
 
   Adventure awaits, show what you know, and rise to the top of the leader board!!!
 

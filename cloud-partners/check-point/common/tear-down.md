@@ -37,11 +37,11 @@ When using Resource Manager to destroy the environment, you need to execute a **
 
 2. At the top of your page, click on Stack Details. Click the button, **Destroy**. This will destroy your instances and required configuration.
 
-    ![](./images/103-Terraform-Destroy.png " ")
+    ![Destroy Environment using Terraform](./images/terraform-destroy.png " ")
 
 3. Once this job succeeds, your environment is destroyed! Time to enjoy a cup of coffee now :)
 
-    ![](./images/104-Terraform-Destroy-Success.png " ")
+    ![Terraform Destroy Successful Window](./images/terraform-destroy-success.png " ")
 
 **Congratulations! You have successfully completed the labs.**
 
@@ -58,4 +58,4 @@ When using Resource Manager to destroy the environment, you need to execute a **
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Check Point
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023

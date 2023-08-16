@@ -2,9 +2,11 @@
 
 ## Introduction
 
-In this lab, you will create an OCI Vision project and an OCI Vision custom model. A custom model can be created with a minimum of 10 images, which we have provided. For production models though, we recommend using many more images for training.
+In this lab, you will create an OCI Vision project and an OCI Vision custom model. A custom model can be created with a minimum of 10 images, which we have provided. For production models, we recommend using a larger number of images for training.
 
 An OCI Vision custom model can be created using the quick mode (up to 1 hour), recommended mode (up to 24 hours), or custom mode training duration. In the lab steps, we will use the quick mode training duration. For production models, we suggest using recommended mode.
+
+Estimated Time: 30 minutes
 
 ### Objectives
 
@@ -23,10 +25,10 @@ An OCI Vision custom model can be created using the quick mode (up to 1 hour), r
 ## Task 2: Create the OCI Vision rust detection model
 
 1. Once the project status is *Active*, select *vision-project*.
-2. While on the OCI Vision project details page, click **Create Model**.
+2. Click **Create Model**.
    ![OCI Vision project details](../images/vision_project.png)
 2. Select *Object Detection* in model type.
-3. Select *Choose existing dataset*, *Data Labeling Service*, and select the *vision-livelab-dataset* bucket.
+3. Select *Choose existing dataset*, *Data labeling service*, and select the *vision-livelab-dataset* bucket.
    ![Creation of OCI Vision model - 1](../images/create_model1.png)
 4. Click **Next**.
 5. Name the model *vision-model*.

@@ -2,7 +2,7 @@
 
 ## About this Workshop - Navigating the Impact of Cloud on Your Organization
 
-In this session, you will learn about operational considerations when migrating to the cloud. Undertsand organizational alignment best practices for successful cloud adoption and execution. Hear how other companies have adapted their own practices, processes, tools, and teams.
+Learn about operational considerations when migrating to the cloud. Understand organizational alignment best practices for successful cloud adoption and execution. Hear how other companies have adapted their own practices, processes, tools, and teams
 
 ### **Duration: 2 Hours**
 
@@ -17,7 +17,7 @@ In this workshop, you will:
 ### **Assets**
 
 Powerpoint
-* [You're in the Cloud, Now What?](https://objectstorage.us-ashburn-1.oraclecloud.com/p/o2BmsaAOcE1YMkQLzyjI-zXjeG2W1lhxyendPWk8mVJCr30yA659oHep-GvCD12V/n/ociobtnas/b/OCW2022/o/TUT4116_%20You%27re_in_the_Cloud_Now_What_Final.pdf) TBD
+* [You're in the Cloud, Now What?]() TBD
 
 
 ## Learn More
