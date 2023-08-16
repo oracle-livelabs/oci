@@ -31,19 +31,23 @@ In this lab, you will:
 
 In Terraform, managing input variables is a critical aspect of building flexible and reusable infrastructure configurations. One of the ways to define resources in Terraform is by using the terraform.tfvars file. The .tfvars extension stands for Terraform Variables.
 
-The terrafrom.tfvars file allows you to define and assign values to variables separately from the resource module configuration files. This seperation helps keep sensitive information out of the module configuration files, making it easier to manage and share the code infrastructure. 
+The terraform.tfvars file allows you to define and assign values to variables separately from the resource module configuration files. This separation helps keep sensitive information out of the module configuration files, making it easier to manage and share the code infrastructure. 
 
-**1. Open terraform.tfvars**
+<!--**terraform.tfvars** -->
 
-Open the terrafrom.tfvars file in the Terraform environment provided in the prevoius lab.  
+1. Open the terraform.tfvars file in the Terraform environment provided in the previous lab.  
 
-![picute1](images/terrafromtfvars.png)
+![picture1](images/terrafromtfvars.png)
 
 The file contains maps of data structures containing several attributes for configuring resources on OCI. These maps, structured as data structures, facilitate the definition of complex configurations with ease. Each map corresponds to a specific OCI resource and contains a set of key-value pairs representing various resource properties.
 
-**2. Defining the Compartment OCID**
+<!--**Defining the Compartment OCID**-->
 
-In the terrafrom.tfvars file, navigate to the compartment\_ids variable block. Copy the comp-ocid variable string below and paste it into the compartment\_ids variable block. Replace the string value with the compartment OCID gathered in the previous lab. 
+2. In the terraform.tfvars file, navigate to the compartment\_ids variable block. 
+
+3. Copy the comp-ocid variable string below and paste it into the compartment\_ids variable block. 
+
+4. Replace the string value with the compartment OCID gathered in the previous lab. 
 
 ```
 <copy>
@@ -51,14 +55,16 @@ comp-ocid = "&lt;replace-compartment-ocid-here&gt;"
 </copy>
 ```
 
-The compartment\_ids block holds the compartment OCID in the Terrafrom Environment. This OCID serves as the compartment location in which all resources will be created on OCI. Each resource data structure reaches out for the compartment OCID, recognizing it by the identifier comp-ocid. This connection ensures that every resource being created will deploy within the intended compartment.
+The compartment\_ids block holds the compartment OCID in the Terraform Environment. This OCID serves as the compartment location in which all resources will be created on OCI. Each resource data structure reaches out for the compartment OCID, recognizing it by the identifier comp-ocid. This connection ensures that every resource being created will deploy within the intended compartment.
 
 ![picture2](images/compartmentocid.png)
 
 
-**3. Defining a VCN**
+<!--**Defining a VCN**-->
 
-In the terrafrom.tfvars file, navigate to the vcn\_params data structure. Copy the variable strings below and paste it into the oci-vcn data block. 
+5. In the terraform.tfvars file, navigate to the vcn\_params data structure. 
+
+6. Copy the variable strings below and paste it into the oci-vcn data block. 
 
 ```
 <copy>
@@ -69,7 +75,7 @@ dns_label        = "&lt;replace-vcn-dnslabel-here&gt"
 </copy>
 ```
 
-Replace the following string values to the respective variables in the oci-vcn data block.
+7. Replace the following string values to the respective variables in the oci-vcn data block.
 
 ```
 display_name = oci-WebApps-vcn
@@ -77,15 +83,19 @@ vcn_cidr     = 10.0.0.0/16
 dns_label    = ociwebappsvcn
 ```
 
-The display\_name variable provides the VCN with a name that will be displayed on the OCI console. The vcn\_cidr variable assigns a specific Classless Inter-Domain Routing (CIDR) block to the VCN, defining its IP address range and subnetting. While the dns\_label variable gives a DNS label to the VCN, which serves as a basis for generating the VNC's DNS Domain Name. In the VCN data block you can also find that the compartment\_data attribute calls upon the comp-ocid variable, housing the compartment OCID for the targeted OCI compartment where the VCN will be provisioned. These atrributes form the backbone of the VCN configuration, providing Terraform with the required information needed to orchestrate and create the VCN on an OCI environment.
+The display\_name variable provides the VCN with a name that will be displayed on the OCI console. The vcn\_cidr variable assigns a specific Classless Inter-Domain Routing (CIDR) block to the VCN, defining its IP address range and subnetting. While the dns\_label variable gives a DNS label to the VCN, which serves as a basis for generating the VNC's DNS Domain Name. In the VCN data block you can also find that the compartment\_data attribute calls upon the comp-ocid variable, housing the compartment OCID for the targeted OCI compartment where the VCN will be provisioned. These attributes form the backbone of the VCN configuration, providing Terraform with the required information needed to orchestrate and create the VCN on an OCI environment.
 
 ![picture3](images/vcnparams.png)
 
-**4. Defining Private and Public subnets**
+<!--**Defining Private and Public subnets**-->
 
-In the terrafrom.tfvars file, navigate to the subnet\_params data structure. In the data structure there are three different data blocks that are used to provide attributes to create subnets for the VCN. The next step consist of defining private and public subnets for the VCN being created in Terraform. For this VCN you will be defining one private subnet and two public subnets. 
+8. In the terraform.tfvars file, navigate to the subnet\_params data structure. 
 
-The first subnet being created defined is a Private subnet. In the subnet\_params data structure. Copy the variable strings below and paste it into the oci-priv-subnet data block. 
+In the data structure there are three different data blocks that are used to provide attributes to create subnets for the VCN. The next step consist of defining private and public subnets for the VCN being created in Terraform. For this VCN you will be defining one private subnet and two public subnets. 
+
+The first subnet being created defined is a Private subnet. 
+
+9. In the subnet\_params data structure. Copy the variable strings below and paste it into the oci-priv-subnet data block. 
 
 ```
 <copy>
@@ -98,7 +108,7 @@ dns_label         = "<replace-private-subnet-dnslabel-here>"
 </copy>
 ```
 
-Replace the following for each varaible in the oci-priv-subnet data block.
+10. Replace the following for each variable in the oci-priv-subnet data block.
 
 ```
 display_name = priv-subnet-oci-WebApps-vcn
@@ -106,11 +116,13 @@ cidr_block   = 10.0.1.0/24
 dns_label    = privsubdnsWeb
 ```
 
-This Private subnet serves as the designated subnet for hosting the Webserver instances, which will be created with the help of Terraform. By designating the Webserver instances to reside within the Private subnet, a security-conscious approach is adopted, ensuring that the web servers are shielded from direct exposure to the public internet.
+This Private subnet serves as the designated subnet for hosting the Web Server instances, which will be created with the help of Terraform. By designating the Web Server instances to reside within the Private subnet, a security-conscious approach is adopted, ensuring that the web servers are shielded from direct exposure to the public internet.
 
 ![picture4](images/privsub.png)
 
-The next subnet being defined is the first Public subnet associated with the VCN. In the subnet\_params data structure. Copy the variable strings below and paste it into the oci-pub-subnet-01 data block. 
+The next subnet being defined is the first Public subnet associated with the VCN. 
+
+11. In the subnet\_params data structure. Copy the variable strings below and paste it into the oci-pub-subnet-01 data block. 
 
 ```
 <copy>
@@ -123,7 +135,7 @@ dns_label         = "<replace-private01-subnet-dnslabel-here>"
 </copy>
 ```
 
-Replace the following for each varaible in the oci-pub-subnet-01 data block.
+12. Replace the following for each variable in the oci-pub-subnet-01 data block.
 
 ```
 display_name = pub-subnet-oci-WebLB-vcn
@@ -131,11 +143,13 @@ vcn_cidr     = 10.0.3.0/24
 dns_label    = pubsubdnsLB
 ```
 
-This Public subnet serves as the designated subnet for hosting the Load Balancer, which will be created with the help of Terraform. The Public subnet will be configured to have direct access to the internet through an associated Internet Gateway, facilitating seamless communication between the Load Balancer and clients accessing the Webservers.
+This Public subnet serves as the designated subnet for hosting the Load Balancer, which will be created with the help of Terraform. The Public subnet will be configured to have direct access to the internet through an associated Internet Gateway, facilitating seamless communication between the Load Balancer and clients accessing the Web Servers.
 
 ![picture5](images/pub01sub.png)
 
-The last subnet being defined is the second Public subnet associated with the VCN. In the subnet\_params data structure. Copy the variable strings below and paste it into the oci-pub-subnet-02 data block. 
+The last subnet being defined is the second Public subnet associated with the VCN. 
+
+13. In the subnet\_params data structure. Copy the variable strings below and paste it into the oci-pub-subnet-02 data block. 
 
 ```
 <copy>
@@ -148,7 +162,7 @@ dns_label         = "<replace-private02-subnet-dnslabel-here>"
 </copy>
 ```
 
-Replace the following for each varaible in the oci-pub-subnet-02 data block.
+14. Replace the following for each variable in the oci-pub-subnet-02 data block.
 
 ```
 display_name = pub-subnet-oci-WebBastion-vcn
@@ -156,27 +170,25 @@ vcn_cidr     = 10.0.2.0/24
 dns_label    = pubsubdnsBas
 ```
 
-This Public subnet serves as the designated subnet for hosting the Bastion instance, which will be created with the help of Terraform. The Public subnet will be configured to have direct access to the Private subnet, facilitating seamless communication between the Bastion and Webservers.The primary function of the Bastion instance existing in the Public subnet is to act as a secure gateway or jump host that provides privileged access to the Private subnet, allowing authorized addresses to establish secure remote connections from external networks, such as the internet, to the Bastion instance.
+This Public subnet serves as the designated subnet for hosting the Bastion instance, which will be created with the help of Terraform. The Public subnet will be configured to have direct access to the Private subnet, facilitating seamless communication between the Bastion and Web Servers.The primary function of the Bastion instance existing in the Public subnet is to act as a secure gateway or jump host that provides privileged access to the Private subnet, allowing authorized addresses to establish secure remote connections from external networks, such as the internet, to the Bastion instance.
 
 ![picture6](images/pub02sub.png)
 
-While defining the Subnets there were serveral attributes being called and defined. The display\_name variable was used to provide the Subnets with a user-defined name that will be displayed on the OCI console. The cidr\_block variable assigned a specific CIDR block to the Subnets, defining thier IP address range. Additionally, the dns\_label variable was utilized to assign a DNS label to the Subnets, which serves as a basis for generating the Subnet's DNS Domain Names. 
+While defining the Subnets there were several attributes being called and defined. The display\_name variable was used to provide the Subnets with a user-defined name that will be displayed on the OCI console. The cidr\_block variable assigned a specific CIDR block to the Subnets, defining their IP address range. Additionally, the dns\_label variable was utilized to assign a DNS label to the Subnets, which serves as a basis for generating the Subnet's DNS Domain Names. 
 
-Within each Subnet data block there are other attributes that help define the configuration of the Subnet. Amoung these attributes, the is\_subnet\_private value determined whether the Subnet defined is public or private. If the value is set to true, the subnet created will indeed be private. However if the value is set to false, the subnet created will be public.
+Within each Subnet data block there are other attributes that help define the configuration of the Subnet. Among these attributes, the is\_subnet\_private value determined whether the Subnet defined is public or private. If the value is set to true, the subnet created will indeed be private. However if the value is set to false, the subnet created will be public.
 
 The data block also specifies the VCN in which the subnet will exist, making use of the vcn\_data variable. By doing so, it established the association between the subnets and the parent VCN.
 
-Lastly, the subnets required the attachment of both a Security List and Route Table. These attachments are facilitated through the sl\_data variable for Security List and rl\_data variable for Route table. These atrributes serve as the backbone of the subnet configuration, providing Terraform with the required information needed to orchestrate and create the subnets on an OCI environment.You have now defined a VCN with private and public subnets in the Terraform environment.
+Lastly, the subnets required the attachment of both a Security List and Route Table. These attachments are facilitated through the sl\_data variable for Security List and rl\_data variable for Route table. These attributes serve as the backbone of the subnet configuration, providing Terraform with the required information needed to orchestrate and create the subnets on an OCI environment.You have now defined a VCN with private and public subnets in the Terraform environment.
 
-## Task 2: Defining Secuirty Lists in Terraform for Private and Public subnets.
+## Task 2: Defining Security Lists in Terraform for Private and Public subnets.
 
-**1. Defining a Security List for the Private subnet hosting the Web servers** 
-
-In the terrafrom.tfvars file, navigate to the sl\_params data structure. Within the sl\_params you will see that there is combination of data blocks which define ingress and egress rules for the private and public subnets defined in the previous task. 
+1. In the terraform.tfvars file, navigate to the sl\_params data structure. Within the sl\_params you will see that there is combination of data blocks which define ingress and egress rules for the private and public subnets defined in the previous task. 
 
 The first set of ingress and egress rules being defined are attached to the private subnet. This was achieved by utilizing the sl_data variable and specifying the oci-priv-sl data block as its value. This section encompasses the creation of the Security List along with defining the associated ingress and egress rules. 
 
-Copy the variable strings below and paste it into the first set of empty curly brackets within the ingress\_rules list of the oci-priv-sl data block.
+2. Copy the variable strings below and paste it into the first set of empty curly brackets within the ingress\_rules list of the oci-priv-sl data block.
 
 ```
 <copy>
@@ -195,7 +207,7 @@ icmp_options = []
 </copy>
 ```
 
-Replace the following for each varaible in the ingress\_rule data block.
+3. Replace the following for each variable in the ingress\_rule data block.
 
 ```
 stateless    = false                    
@@ -208,7 +220,7 @@ max          = 22
 
 This ingress rule is defined to enable secure SSH access from the public subnet, where the bastion instance resides, to the private subnet housing the web servers. The rule specifically permits SSH traffic, which operates on port 22, from the bastion instance's IP address or range to reach the web servers within the private subnet. This approach enhances the overall security posture of the infrastructure by limiting SSH access exclusively to the authorized bastion instance. As a result, potential attackers are effectively prevented from directly accessing the web servers, significantly reducing the risk of unauthorized logins or security breaches.
 
-Next, copy the variable strings below and paste it into the second set of empty curly brackets within the ingress_rules list of the oci-priv-sl data block.
+4. Copy the variable strings below and paste it into the second set of empty curly brackets within the ingress_rules list of the oci-priv-sl data block.
 
 ```
 <copy>
@@ -227,7 +239,7 @@ icmp_options = []
 </copy>
 ```
 
-Replace the following for each varaible in the second ingress\_rule data block.
+5. Replace the following for each variable in the second ingress\_rule data block.
 
 ```
 stateless    = false                    
@@ -240,7 +252,7 @@ max          = 80
 
 This ingress rule is defined to enable the public subnet, housing the Load Balancer, to gain controlled and secure internet access to the private subnet housing the web servers. The rule specifically permits HTTP traffic, which operates on port 80, from the Load Balancer IP address or range to reach the web servers within the private subnet. This approach optimizes the performance and availability of the web servers, as the Load Balancer effectively distributes incoming internet traffic across multiple backend instances, ensuring seamless scalability and efficient load distribution. Additionally, the private subnet's isolation from direct external exposure enhances security by reducing the attack surface and mitigating potential threats from the internet.
 
-Lastly, copy the variable strings below and paste it into the set of empty curly brackets within the egress_rules list of the oci-priv-sl data block.
+6. Copy the variable strings below and paste it into the set of empty curly brackets within the egress_rules list of the oci-priv-sl data block.
 
 ```
 <copy>
@@ -251,7 +263,7 @@ description = "<replace-rule-description-here>"
 </copy>
 ```
 
-Replace the following for each varaibles in the egress\_rule data block.
+7. Replace the following for each variables in the egress\_rule data block.
 
 ```
 stateless   = false                    
@@ -264,11 +276,10 @@ This egress rule is defined to allow all outbound traffic from private subnet ho
 
 ![picture7](images/privsl.png)
 
-**2. Defining a Security List for the Public subnet hosting the Load Balancer** 
 
 The second set of ingress and egress rules being defined are attached to the public subnet housing the Load Balancer. This was achieved by utilizing the sl_data variable and specifying the oci-pub-sl-01 data block as its value.
 
-Copy the variable strings below and paste it into the set of empty curly brackets within the ingress\_rules list of the oci-pub-sl-01 data block.
+8. Copy the variable strings below and paste it into the set of empty curly brackets within the ingress\_rules list of the oci-pub-sl-01 data block.
 
 ```
 <copy>
@@ -287,7 +298,7 @@ icmp_options = []
 </copy>
 ```
 
-Replace the following for each varaibles in the ingress\_rule data block.
+9. Replace the following for each variables in the ingress\_rule data block.
 
 ```
 stateless   = false                    
@@ -300,7 +311,7 @@ max = 22
 
 This ingress rule is defined to enable secure SSH access from the public subnet, where the bastion instance resides, to the public subnet housing the Load Balancer. The rule specifically permits SSH traffic, which operates on port 22, from the bastion instance's IP address or range to reach the Load Balancer and any other resources within the public subnet. This approach enhances the overall security posture of the infrastructure by limiting SSH access exclusively to the authorized bastion instance.
 
-Copy the variable strings below and paste it into the set of empty curly brackets within the egress_rules list of the oci-pub-sl-01 data block.
+10. Copy the variable strings below and paste it into the set of empty curly brackets within the egress_rules list of the oci-pub-sl-01 data block.
 
 ```
 <copy>
@@ -311,7 +322,7 @@ description = "<replace-rule-description-here>"
 </copy>
 ```
 
-Replace the following for each varaibles in the egress\_rule data block.
+11. Replace the following for each variables in the egress\_rule data block.
 
 ```
 stateless   = false                    
@@ -324,11 +335,11 @@ This egress rule is defined to allow all outbound traffic from public subnet hou
 
 ![picture8](images/pub01sl.png)
 
-**3. Defining a Security List for the Private subnet hosting the Bastion instance** 
+
 
 The last set of ingress and egress rules being defined are attached to the public subnet housing the Bastion instance. This was achieved by utilizing the sl_data variable and specifying the oci-pub-sl-02 data block as its value.
 
-Copy the variable strings below and paste it into the set of empty curly brackets within the ingress\_rules list of the oci-pub-sl-02 data block.
+12. Copy the variable strings below and paste it into the set of empty curly brackets within the ingress\_rules list of the oci-pub-sl-02 data block.
 
 ```
 <copy>
@@ -347,7 +358,7 @@ icmp_options = []
 </copy>
 ```
 
-Replace the following for each varaibles in the ingress\_rule data block.
+13. Replace the following for each variables in the ingress\_rule data block.
 
 ```
 stateless    = false                    
@@ -371,7 +382,7 @@ description = "<replace-rule-description-here>"
 </copy>
 ```
 
-Replace the following for each varaibles in the egress\_rule data block.
+14. Replace the following for each variables in the egress\_rule data block.
 
 ```
 stateless   = false                    
@@ -388,11 +399,9 @@ This egress rule is defined to allow all outbound traffic from public subnet hou
 
 ## Task 3: Defining Route tables and Gateways in Terraform for Private and Public Subnets.
 
-**1. Defining a Internet Gateway**
+1. In the terraform.tfvars file, navigate to the igw\_params data structure. Within the igw\_params you will see that there is an oci-ig data blocks that defines an Internet gateway.
 
-In the terrafrom.tfvars file, navigate to the igw\_params data structure. Within the igw\_params you will see that there is an oci-ig data blocks that defines an Internet gateway.
-
-Copy the variable strings below and paste it into the oci-ig data block.
+2. Copy the variable strings below and paste it into the oci-ig data block.
 
 ```
 <copy>
@@ -401,7 +410,7 @@ display_name = "<replace-igw-name-here>"
 </copy>
 ```
 
-Replace the following for the display\_name varaible in the oci-id data block.
+3. Replace the following for the display\_name variable in the oci-id data block.
 
 ```
 display_name = internet-gateway-oci-WebApps-vcn
@@ -411,11 +420,10 @@ The display\_name variable provides the Internet gateway with a name that will b
 
 ![picture10](images/ociig.png)
 
-**2. Defining a Nat Gateway**
 
-In the terrafrom.tfvars file, navigate to the ngw\_params data structure. Within the ngw\_params you will see that there is an oci-ngw data blocks that defines an Nat gateway.
+In the terraform.tfvars file, navigate to the ngw\_params data structure. Within the ngw\_params you will see that there is an oci-ngw data blocks that defines an Nat gateway.
 
-Copy the variable strings below and paste it into the oci-ngw data block.
+4. Copy the variable strings below and paste it into the oci-ngw data block.
 
 ```
 <copy>
@@ -424,7 +432,7 @@ display_name = "<replace-ngw-name-here>"
 </copy>
 ```
 
-Replace the following for the display\_name varaible in the oci-ngw data block.
+5. Replace the following for the display\_name variable in the oci-ngw data block.
 
 ```
 display_name = ngw-oci-WebApps-vcn
@@ -434,11 +442,9 @@ The display\_name variable provides the Nat gateway with a name that will be dis
 
 ![picture11](images/ocingw.png)
 
-**3. Defining a Service Gateway**
+6. In the terraform.tfvars file, navigate to the sgw\_params data structure. Within the sgw\_params you will see that there is an oci-sgw data blocks that defines an Service gateway.
 
-In the terrafrom.tfvars file, navigate to the sgw\_params data structure. Within the sgw\_params you will see that there is an oci-sgw data blocks that defines an Service gateway.
-
-Copy the variable strings below and paste it into the oci-sgw data block.
+7. Copy the variable strings below and paste it into the oci-sgw data block.
 
 ```
 <copy>
@@ -448,7 +454,7 @@ service_name = "<replace-sgw-region-service-here>"
 </copy>
 ```
 
-Replace the following varaible values in the oci-sgw data block.
+8. Replace the following variable values in the oci-sgw data block.
 
 ```
 display_name = service-gateway-oci-WebApps-vcn
@@ -459,13 +465,11 @@ The display\_name variable provides the Service gateway with a name that will be
 
 ![picture12](images/ocisgw.png)
 
-**4. Defining a Route Table with a Service Gateway for the Private Subnet**
-
-In the terrafrom.tfvars file, navigate to the rt\_params data structure. Within the rt\_params you will see that there is combination of data blocks that define route rules for the private and public route tables which will be attached to the subnets defined in the previous tasks.
+9. In the terraform.tfvars file, navigate to the rt\_params data structure. Within the rt\_params you will see that there is combination of data blocks that define route rules for the private and public route tables which will be attached to the subnets defined in the previous tasks.
 
 The first set of route rules being defined are attached to the private subnet. This was achieved by utilizing the rt\_data variable and specifying the oci-priv-rt data block as its value. This section encompasses the creation of the Route Tables along with defining the associated route rules.
 
-Copy the variable strings below and paste it into the first set of empty curly brackets within the route\_rules list of the oci-priv-rt data block.
+10. Copy the variable strings below and paste it into the first set of empty curly brackets within the route\_rules list of the oci-priv-rt data block.
 
 ```
 <copy>
@@ -478,7 +482,7 @@ ngw_data    = <replace-ngw-data-structure-here>
 </copy>
 ```
 
-Replace the following for each varaible in the route\_rules data block.
+11. Replace the following for each variable in the route\_rules data block.
 
 ```
 destination = null
@@ -489,11 +493,9 @@ sgw_data    = oci-sgw
 ngw_data    = null
 ```
 
-In the route rule, use\_sgw is set as true which indicates that the route rule is being used to attach a Service gateway. The sgw\_data is then used to target the Service gateway that was defined in the previous tasks. The rest of the variables are then sent to null and false since those values are not needed to indetify a Service gateway.
+In the route rule, use\_sgw is set as true which indicates that the route rule is being used to attach a Service gateway. The sgw\_data is then used to target the Service gateway that was defined in the previous tasks. The rest of the variables are then sent to null and false since those values are not needed to identify a Service gateway.
 
-**5. Defining a Route Table with a Nat Gateway for the Private Subnet**
-
-Copy the variable strings below and paste it into the second set of empty curly brackets within the route_rules list of the oci-priv-rt data block.
+12. Copy the variable strings below and paste it into the second set of empty curly brackets within the route_rules list of the oci-priv-rt data block.
 
 ```
 <copy>
@@ -506,7 +508,7 @@ ngw_data    = <replace-ngw-data-structure-here>
 </copy>
 ```
 
-Replace the following for each varaible in the route\_rules data block.
+13. Replace the following for each variable in the route\_rules data block.
 
 ```
 destination = "0.0.0.0/0"
@@ -517,15 +519,13 @@ sgw_data    = null
 ngw_data    = oci-ngw
 ```
 
-In the route rule, destination is set to 0.0.0.0/0 (allowing any IP address), which indicates that the route rule is being used to attach a NAT gateway. The ngw\_data is then used to target the Nat gateway that you defined in the previous tasks. The rest of the variables are then sent to null and false since those values are not needed to indetify a Nat gateway.
+In the route rule, destination is set to 0.0.0.0/0 (allowing any IP address), which indicates that the route rule is being used to attach a NAT gateway. The ngw\_data is then used to target the Nat gateway that you defined in the previous tasks. The rest of the variables are then sent to null and false since those values are not needed to identify a Nat gateway.
 
 ![picture13](images/ociprivrt.png)
 
-**6. Defining a Route Table with a Internet Gateway for the Public Subnets**
-
 The second set of route rules being defined are attached to the public subnets. This was achieved by utilizing the rt\_data variable and specifying the oci-pub-rt data block as its value.
 
-Copy the variable strings below and paste it into the set of empty curly brackets within the route\_rules list of the oci-pub-rt data block.
+14. Copy the variable strings below and paste it into the set of empty curly brackets within the route\_rules list of the oci-pub-rt data block.
 
 ```
 <copy>
@@ -538,7 +538,7 @@ ngw_data    = <replace-ngw-data-structure-here>
 </copy>
 ```
 
-Replace the following for each varaible in the route\_rules data block.
+15. Replace the following for each variable in the route\_rules data block.
 
 ```
 destination = "0.0.0.0/0"
@@ -549,17 +549,15 @@ sgw_data    = null
 ngw_data    = null
 ```
 
-In the route rule, use\_igw is set as true which indicates that the route rule is being used to attach a Internet gateway. The igw\_data is then used to target the Internet gateway that you defined in the previous tasks. The rest of the variables are then sent to null and false since those values are not needed to indetify a Internet gateway.
+In the route rule, use\_igw is set as true which indicates that the route rule is being used to attach a Internet gateway. The igw\_data is then used to target the Internet gateway that you defined in the previous tasks. The rest of the variables are then sent to null and false since those values are not needed to identify a Internet gateway.
 
 ![picture14](images/ocipubrt.png)
 
-## Task 4: Defining a Loadbalancer in Terraform.
+## Task 4: Defining a Load Balancer in Terraform.
 
-**1. Defining a Load Balancer**
+1. In the terraform.tfvars file, navigate to the lb\_params data structure. Within the lb\_params you will see that there is an oci-lb data block that defines a Load Balancer.
 
-In the terrafrom.tfvars file, navigate to the lb\_params data structure. Within the lb\_params you will see that there is an oci-lb data block that defines a Load Balancer.
-
-Copy the variable strings below and paste it into the oci-lb data block.
+2. Copy the variable strings below and paste it into the oci-lb data block.
 
 ```
 <copy>
@@ -573,7 +571,7 @@ defaultmin       = <replace-connection-min>
 </copy>
 ```
 
-Replace the following for each varaible in the oci-lb data block.
+3. Replace the following for each variable in the oci-lb data block.
 
 ```
 display_name = oci-WebApps-lb
@@ -582,19 +580,17 @@ defaultmax   = 100
 defaultmin   = 10
 ```
 
-While creating the Load Balancer there will be serveral attributes called by Terrafrom. The display\_name variable is used to provide the Load Balancer with a user-defined name that will be displayed on the OCI console. The shape variable specifies the shape of the Load Balancer in this case it will be flexible. The defaultmax and defaultmin variables define the maximum and minimum number of allowed connections per backend server. 
+While creating the Load Balancer there will be several attributes called by Terraform. The display\_name variable is used to provide the Load Balancer with a user-defined name that will be displayed on the OCI console. The shape variable specifies the shape of the Load Balancer in this case it will be flexible. The defaultmax and defaultmin variables define the maximum and minimum number of allowed connections per backend server. 
 
 In the Load Balancer data block you can also find that the compartment_data attribute calls upon the comp-ocid variable, housing the compartment OCID for the targeted OCI compartment where the Load Balancer will be provisioned. 
 
-Lastly, the Load Balancer contains both a Public subnet and Network Security Group attachement. These attachments are facilitated through the subnet\_data variable for the Public subnet and nsg\_data variable for Network Security Group. These attributes help link the Load Balancer with the appropriate configurations, providing Terraform with the required information needed to orchestrate and create the Load Balancer on an OCI environment.
+Lastly, the Load Balancer contains both a Public subnet and Network Security Group attachment. These attachments are facilitated through the subnet\_data variable for the Public subnet and nsg\_data variable for Network Security Group. These attributes help link the Load Balancer with the appropriate configurations, providing Terraform with the required information needed to orchestrate and create the Load Balancer on an OCI environment.
 
 ![picture15](images/lb.png)
 
-**2. Defining a Listener for the Load Balancer**
+4. In the terraform.tfvars file, navigate to the listener\_params data structure. Within the listener\_params you will see that there is an oci-lb-listener data block that defines a Listener for the Load Balancer.
 
-In the terrafrom.tfvars file, navigate to the listener\_params data structure. Within the listener\_params you will see that there is an oci-lb-listener data block that defines a Listener for the Load Balancer.
-
-Copy the variable strings below and paste it into the oci-lb-listener data block.
+5. Copy the variable strings below and paste it into the oci-lb-listener data block.
 
 ```
 <copy>
@@ -606,7 +602,7 @@ protocol     = "<replace-listener-protocol-here>"
 </copy>
 ```
 
-Replace the following for each varaible in the oci-lb-listener data block.
+6. Replace the following for each variable in the oci-lb-listener data block.
 
 ```
 display_name = oci-WebLB-listener
@@ -620,15 +616,13 @@ The port variable designates the port on which the Listener stands to intercept 
 
 Furthermore, the protocol variable establishes the communication protocol to be employed by the Listener. In this instance, it is attuned to the HTTP protocol, delineating the standardized method by which the Listener will interact with the backend servers. 
 
-Lastly, the Listener contains both a Load Balancer and Backend set attachement. The lb\_data assigns the Listener to the Load Balancer created in the pervious step. The backend\_data connects the backend set that will be defined in the next step. 
+Lastly, the Listener contains both a Load Balancer and Backend set attachment. The lb\_data assigns the Listener to the Load Balancer created in the pervious step. The backend\_data connects the backend set that will be defined in the next step. 
 
 ![picture16](images/lblisten.png)
 
-**3. Defining a Backendset for the Load Balancer**
+7. In the terraform.tfvars file, navigate to the backendset\_params data structure. Within the backendset\_params you will see that there is an oci-lb-backendset data block that defines a Backendset for the Load Balancer.
 
-In the terrafrom.tfvars file, navigate to the backendset\_params data structure. Within the backenset\_params you will see that there is an oci-lb-backendset data block that defines a Backendset for the Load Balancer.
-
-Copy the variable strings below and paste it into the oci-lb-backendset data block.
+8. Copy the variable strings below and paste it into the oci-lb-backendset data block.
 
 ```
 <copy>
@@ -638,7 +632,7 @@ policy       = "<replace-traffic-policy-here>"
 </copy>
 ```
 
-Replace the following for each varaible in the oci-lb-backendset data block.
+9. Replace the following for each variable in the oci-lb-backendset data block.
 
 ```
 display_name = oci-lb-backendset
@@ -651,11 +645,9 @@ Lastly, the Backendset gets attached to the Load Balancer defined in the previou
 
 ![picture17](images/lbbackendset.png)
 
-**4. Defining Backends for the Load Balancer**
+10. In the terraform.tfvars file, navigate to the backend\_params data structure. Within the backend\_params you will see that there are three data block that create the Backends for the Load Balancer. In this section, we will be creating three identical Backend server attachments. The distinguishing factor between these attachments lies in the distinct names attributed to each Web Server instance.
 
-In the terrafrom.tfvars file, navigate to the backend\_params data structure. Within the backen\_params you will see that there are three data block that create the Backends for the Load Balancer. In this section, we will be creating three identical Backend server attachements. The distinguishing factor between these attachments lies in the distinct names attributed to each Webserver instance.
-
-Copy the variable strings below and paste it into the oci-lb-backend01 data block.
+11. Copy the variable strings below and paste it into the oci-lb-backend01 data block.
 
 ```
 <copy>
@@ -670,7 +662,7 @@ weight       = "<replace-backend-weight-here>"
 </copy>
 ```
 
-Replace the following for each varaible in the oci-lb-backend01 data block.
+12. Replace the following for each variable in the oci-lb-backend01 data block.
 
 ```
 webserver_name = Webserver01
@@ -681,7 +673,7 @@ port           = 80
 weight         = 1     
 ```
 
-Copy the variable strings below and paste it into the oci-lb-backend02 data block.
+13. Copy the variable strings below and paste it into the oci-lb-backend02 data block.
 
 ```
 <copy>
@@ -696,7 +688,7 @@ weight       = "<replace-backend-weight-here>"
 </copy>
 ```
 
-Replace the following for each varaible in the oci-lb-backend02 data block.
+14. Replace the following for each variable in the oci-lb-backend02 data block.
 
 ```
 webserver_name = Webserver02
@@ -707,7 +699,7 @@ port           = 80
 weight         = 1
 ```
 
-Copy the variable strings below and paste it into the oci-lb-backend03 data block.
+15. Copy the variable strings below and paste it into the oci-lb-backend03 data block.
 
 ```
 <copy>
@@ -722,7 +714,7 @@ weight       = "<replace-backend-weight-here>"
 </copy>
 ```
 
-Replace the following for each varaible in the oci-lb-backend03 data block.
+16. Replace the following for each variable in the oci-lb-backend03 data block.
 
 ```
 webserver_name = Webserver03
@@ -743,11 +735,9 @@ Lastly, all the backend data blocks are attached to the Load Balancer defined in
 
 ## Task 5: Defining a Network Security Group in Terraform.
 
-**1. Defining a Network Security Group**
+1. In the terraform.tfvars file, navigate to the nsg\_params data structure. Within the nsg\_params you will see that there is an oci-nsg data block that defines a Network Security Group.
 
-In the terrafrom.tfvars file, navigate to the nsg\_params data structure. Within the nsg\_params you will see that there is an oci-nsg data block that defines a Network Security Group.
-
-Copy the variable strings below and paste it into the oci-nsg data block.
+2. Copy the variable strings below and paste it into the oci-nsg data block.
 
 ```
 <copy>
@@ -756,7 +746,7 @@ display_name = "<replace-nsg-name-here>"
 </copy>
 ```
 
-Replace the following for each varaible in the oci-nsg data block.
+3. Replace the following for each variable in the oci-nsg data block.
 
 ```
 display_name = nsg-oci-WebApps-vcn
@@ -766,11 +756,9 @@ The display_name variable is used to provide the Network Security Group with a u
 
 ![picture19](images/nsg.png)
 
-**2. Defining a Network Security Rule**
+4. In the terraform.tfvars file, navigate to the nsgsr\_params data structure. Within the nsgsr\_params you will see that there is an oci-nsg-sr data block that we will use to define a Security Rule for the Network Security Group defined in the previous step.
 
-In the terrafrom.tfvars file, navigate to the nsgsr\_params data structure. Within the nsgsr\_params you will see that there is an oci-nsg-sr data block that we will use to define a Security Rule for the Network Secuirty Group defined in the previous step.
-
-Copy the variable strings below and paste it into the oci-nsg-sr data block.
+5. Copy the variable strings below and paste it into the oci-nsg-sr data block.
 
 ```
 <copy>
@@ -784,7 +772,7 @@ source_type  = "<replace-source-type-here>"
 </copy>
 ```
 
-Replace the following for each varaible in the oci-nsg-sr data block.
+6. Replace the following for each variable in the oci-nsg-sr data block.
 
 ```
 direction = INGRESS             
