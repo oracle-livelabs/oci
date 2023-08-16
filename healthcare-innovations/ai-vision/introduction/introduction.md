@@ -38,25 +38,7 @@ Running on top of the world's most powerful database, [**Oracle Autonomous Datab
 ### AI for Healthcare - Technology Architecture
 
 ![Archiecture](images/architecture-v6.png " ")
-
-### AI for Healthcare - Learning path
-
-Learning paths are independent of each other, for example after completing common labs you can directly work on AI Vision or Document Understanding Labs. most of the labs are Optional and independent of each other.
-
-![Learning Path 1](images/learning-path-11.png " ")
-
-Learning path for creating a medical transcription or a chatbot are independent of each other.
-
-![Learning Path 2](images/learning-path-22.png " ")
-
-Learning path for APEX based Analytics are independent with Oracle Analytics cloud Data Visualization and Working with Blockchain or Anomaly Detection. Setting up email services is required if you plan to send emails from Oracle APEX application.
-
-![Learning Path 3](images/learning-path-32.png " ")
-
-Learning path for Patient Admission Process requires a completely working Breast cancer detection workshops to be completed. you can skip other labs and directly work on Oracle Integration cloud and Process Automation.
-
-![Learning Path 4](images/learning-path-4.png " ")
- 
+  
 ### AI for Healthcare - Table of Contents
  
 ***Common Labs** - Introduction Lab to Lab 3*
