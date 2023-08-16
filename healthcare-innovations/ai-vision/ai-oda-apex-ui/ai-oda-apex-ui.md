@@ -25,6 +25,7 @@ This lab assumes you have:
 
 * Completed previous labs of this workshop.
 * You have an Oracle APEX workspace already created.
+* Intermediate knowledge of Oracle APEX and PL/SQL
 
 ## Task 1: Download ODA Oracle Native Client SDK
  
@@ -281,7 +282,7 @@ This lab assumes you have:
 
     *You are welcome, have a great day*
  
-This concludes this lab and you can **proceed to the next lab**.
+    > **Congratulations**, you have completed **Oracle APEX Integration with ODA** Lab. The subsequent labs are optional, however, please proceed to the next lab to learn more about **Oracle APEX Maps and Spatial queries to Locate Hospitals**.  
 
 ## Learn More
 
