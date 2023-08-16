@@ -1,4 +1,4 @@
-# Setting up Highly Available and Secure Infrastructure with Terraform on OCI
+# Set up Highly Available and Secure Infrastructure with Terraform on OCI
 
 ## About this Workshop
 

@@ -1,4 +1,4 @@
-# Setting up Highly Available and Secure Infrastructure with Terraform on OCI
+# Set up Highly Available and Secure Infrastructure with Terraform on OCI
 
 ## Introduction
 
@@ -107,7 +107,7 @@ Example output:
 
 Just like when you apply you can also watch your resources get destroyed on the console!
 
-![instances-console-destry](images/instances-console-destroy.png)
+![instances-console-destroy](images/instances-console-destroy.png)
 
 Congratulations on finishing this Livelab! Now you have a terraform template to use when provisioning resources on OCI!
 

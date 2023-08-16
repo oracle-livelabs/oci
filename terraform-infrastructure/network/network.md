@@ -1,6 +1,6 @@
-# Setting up Highly Available and Secure Infrastructure with Terraform on OCI
+# Set up Highly Available and Secure Infrastructure with Terraform on OCI
 
-## Working with Networking on Terraform
+## Work with Networking on Terraform
 
 ### Introduction
 
@@ -620,7 +620,7 @@ Lastly, the Listener contains both a Load Balancer and Backend set attachment. T
 
 ![picture16](images/lblisten.png)
 
-7. In the terraform.tfvars file, navigate to the backendset\_params data structure. Within the backendset\_params you will see that there is an oci-lb-backendset data block that defines a Backendset for the Load Balancer.
+7. In the terraform.tfvars file, navigate to the backendset\_params data structure. Within the backendset\_params you will see that there is an oci-lb-backendset data block that defines a Backend set for the Load Balancer.
 
 8. Copy the variable strings below and paste it into the oci-lb-backendset data block.
 
@@ -639,9 +639,9 @@ display_name = oci-lb-backendset
 policy       = ROUND_ROBIN
 ```
 
-The display\_name variable is used to provide the Backendset with a user-defined name that will be displayed on the OCI console. The policy variable defines the policy for distributing incoming traffic among the backend servers. In this scenario, the Backendset is configured to adopt a ROUND_ROBIN policy, ensuring an equitable and balanced distribution of incoming requests across the available backend servers.
+The display\_name variable is used to provide the Backend set with a user-defined name that will be displayed on the OCI console. The policy variable defines the policy for distributing incoming traffic among the backend servers. In this scenario, the Backend set is configured to adopt a ROUND_ROBIN policy, ensuring an equitable and balanced distribution of incoming requests across the available backend servers.
 
-Lastly, the Backendset gets attached to the Load Balancer defined in the previous steps via the lb\_data variable.
+Lastly, the Backend set gets attached to the Load Balancer defined in the previous steps via the lb\_data variable.
 
 ![picture17](images/lbbackendset.png)
 
@@ -789,11 +789,9 @@ Lastly, the nsg\_data variable attaches the Security Rule to the Network Securit
 
 ![picture20](images/nsgsr.png)
 
-
+You may now **proceed to the next lab**
 
 ## Learn More
-
-*(optional - include links to docs, white papers, blogs, etc)*
 
 * [URL text 1](http://docs.oracle.com)
 * [URL text 2](http://docs.oracle.com)

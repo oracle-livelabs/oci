@@ -1,8 +1,8 @@
-# Setting up Highly Available and Secure Infrastructure with Terraform on OCI
+# Set up Highly Available and Secure Infrastructure with Terraform on OCI
 
 ## Introduction
 
-This lab walks you through how to set up Terraform to define a comoute instance in OCI. 
+This lab walks you through how to set up Terraform to define a compute instance in OCI. 
 
 Estimated Time: 60 minutes
 
@@ -51,9 +51,9 @@ ssh_private_key = "<replace-private-sshkeypath-here>"
 
   An Image OCID is how Oracle Identifies a specific image to a specific region. 
 
-  Dependent on where you are provisiong your resources you will identify the correct Image OCID. 
+  Dependent on where you are provisioning your resources you will identify the correct Image OCID. 
 
-  For this example we will use the US Pheonix Region. 
+  For this example we will use the US Phoenix Region. 
 
 1. Copy and paste the following to the Image OCIDs section of the terraform.tfvars file.
 
@@ -65,13 +65,13 @@ us-phoenix-oel7 = "replace-phoenix-oraclelinux7-image-ocid"
 
   In this [Documentation](https://docs.oracle.com/en-us/iaas/images/image/266adc03-7428-41fc-b17d-2f88ea56dff0/), you will be able to find Image OCIDs for Oracle Enterprise Linux 7. 
 
-2. Search for the Pheonix Region and find the Image OCID. 
+2. Search for the Phoenix Region and find the Image OCID. 
 
 ![image-ocid](images/image-ocid.png)
 
 3. Enter the image OCID into the data block.
 
-  We were able to find and implment our Image OCID needed to define out compute instances. Image OCIDs are software with configurations needed to launch our instances.
+  We were able to find and implement our Image OCID needed to define out compute instances. Image OCIDs are software with configurations needed to launch our instances.
 
 > **Note:** If you are going to change the region please make sure to change the name of the data block to the correct region identifier **(us-phoenix-1)**. 
 
@@ -174,7 +174,7 @@ boot_volume_size     = 50
 
 The preserve status determines if the boot volume lives after the instance is terminated. If set to false it will deleted along with the instance. Else it will be retained which can be useful when keeping important data or configurations. 
 
-8. Set the ```perserve_boot_volume``` to ```false```.
+8. Set the ```preserve_boot_volume``` to ```false```.
 
 ```
 preserve_boot_volume = false

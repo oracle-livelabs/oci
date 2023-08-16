@@ -1,6 +1,6 @@
-# Setting up Highly Available and Secure Infrastructure with Terraform on OCI
+# Set up Highly Available and Secure Infrastructure with Terraform on OCI
 
-## Setting up your Tenancy
+## Set up your Tenancy
 
 ### Introduction
 
