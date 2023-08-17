@@ -21,6 +21,9 @@ While most of what is covered in this workshop is consistent across all applicat
 
 Estimated time for this workshop: 60 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Exploring Oracle Cloud Infrastructure Stack Monitoring](videohub:1_s2r2iqec)
+
 ### About Oracle Cloud Infrastructure Stack Monitoring
 
 Stack Monitoring provides easy to use UI driven discovery and monitoring of applications (e.g. E-Business Suite and PeopleSoft) and application stack technologies (e.g. WebLogic, Tomcat, Oracle Database, SQL Server) running on OCI or on-premises. Obtain full-stack visibility into the health of applications such as Oracle E-Business Suite (EBS), and their underlying application servers, databases, and hosts – all viewable together using a single solution. Use one-click discovery to discover all components of applications such as Oracle E-Business Suite, PeopleSoft or application stack technologies such as Oracle WebLogic Domain and Oracle Database. For more information on Stack Monitoring please refer to Stack Monitoring > **[Getting Started](https://docs.oracle.com/en-us/iaas/stack-monitoring/index.html)** section in the OCI Documentation.
