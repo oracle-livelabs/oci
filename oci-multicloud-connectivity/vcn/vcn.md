@@ -1,4 +1,4 @@
-# Setup a Virtual Cloud Network
+# Virtual Cloud Network Deployment
 
 ## Introduction
 
@@ -6,17 +6,17 @@ Estimated Time: 10 minutes
 
 ### About Virtual Cloud Networks (VCNs)
 
-Oracle Cloud Infrastructure (OCI) Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables, and configuring stateful firewalls.
+Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables, and configuring stateful firewalls. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm) for more information on Virtual Cloud Networks.
 
 ### Objectives
 
 In this lab, you will:
 
-* Build a Virtual Cloud Network (VCN) using the VCN Wizard
+* Build a Virtual Cloud Network (VCN) using the VCN Wizard.
 
 ### Prerequisites
 
-* OCI console access with VCN deployment permissions
+* OCI console access with VCN deployment permissions.
 
 ### Video Walkthrough
 
@@ -24,21 +24,26 @@ In this lab, you will:
 
 ## Task 1: Deploy a VCN (Virtual Cloud Network)
 
-> **Note:** The VCN Wizard will automatically create the required dependencies for the VCN, such as route tables, subnets and gateways**
-
-1. On the Oracle Cloud Infrastructure Console Home page, under the Quick Actions header, click on Set up a network with a wizard.
+1. Log into the Oracle Cloud console and select the **Ashburn** region.
+  ![Ashburn Region Select](images/region-1.png)
+2. On the Oracle Cloud Infrastructure Console Home page, under the Quick Actions header, click on **Set up a network with a wizard**.
   ![Quick Actions Wizard](images/vcn-1.png)
-2. Select **VCN with Internet Connectivity**, and then click **Start VCN Wizard**.
+3. Select the compartment when you want the objects for this Hands on Lab to be deployed. This lab will deploy resources in the **MultiCloud_Connectivity** compartment.
+  ![Select Compartment for Deployment](images/compartment-1.png)
+
+    > **Note:** If you would deploy these lab resources in a new compartment you can follow the [Create an Oracle Cloud Infrastructure Compartment](https://docs.oracle.com/en/cloud/paas/integration-cloud/oracle-integration-oci/creating-oci-compartment.html#GUID-C0FA329C-7CB8-4727-9E68-2E6A214038CD) documentation.
+
+4. Select **VCN with Internet Connectivity**, and then select **Start VCN Wizard**.
   ![VCN with Internet Connectivity](images/vcn-2.png)
-3. The default parameters for the VCN quickstart will be used. Verify your configuration looks similar to the following, and press the **Next** button at the bottom of the screen :
+5. The default parameters for the VCN quickstart will be used. Verify your configuration looks similar to the following, and select **Next**.
   ![Create a VCN Configuration](images/vcn-3.png)
-4. Overview the configuration, then press the **Create** button at the bottom of the screen.
+6. Overview the configuration, then select **Create**.
     ![Review CV Configuration](images/vcn-4.png)
-5. When VCN creation is complete, click on **View VCN**.
+7. When VCN creation is complete, click on **View VCN**.
     ![Workflow](images/vcn-5.png)
-6. You may now **proceed to the next lab**.
+8. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
 * **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
-* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, July 2023
+* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, August 2023

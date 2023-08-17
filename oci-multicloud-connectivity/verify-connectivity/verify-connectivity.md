@@ -13,8 +13,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-* All tasks completed from Lab 1, 2, 3 and 4
-* Permissions to deploy modify the VCN route table
+* Tasks from the previous labs are completed.
 
 ### Video Walkthrough
 
@@ -39,15 +38,15 @@ In this lab, you will:
 
 1. Restore your Cloud Shell session that has an active SSH session to your Oracle Cloud virtual machine.
     ![Restore Cloud Shell](images/test-connectivity-1.png)
-2. Run the command **ping _ip address_**, where **_ip address_** is the IP address of your external cloud provider's virtual machine private IP address.
+2. Run the command **ping ipaddress**, where **ipaddress** is the IP address of your external cloud provider's virtual machine private IP address.
     ![Ping the VM](images/test-connectivity-2.png)
 3. Run the command **mtr ipaddress**, where **ipaddress** is the IP address of your external cloud provider's virtual machine private IP address. This command will show you all of the hops your traffic takes, confirms that you are going over the private connection and gives some basic packet statistic information.
-    > **Note:** **Click on the image below to explode the view.**
 
+    > **Note:** **Click on the image below to explode the view.**
     ![MTR to private IP](images/mtr-1.png)
 4. Congratulations! You've completed the lab. You can now destroy the objects created in this lab, such as the Virtual Machines, FastConnect, DRG and VCN.
 
 ## Acknowledgements
 
 * **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
-* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, July 2023
+* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, August 2023
