@@ -1,4 +1,4 @@
-# Scheduling and Orchestration Lab
+# Scheduling and Orchestration
 
 ## Introduction
 
@@ -10,7 +10,7 @@ To run a task automatically on a specific schedule, you must:
 
 You will schedule your Pipeline Task to run daily at 2PM.
 
-**Estimated Time**: 20 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 * Run the Data Loader task

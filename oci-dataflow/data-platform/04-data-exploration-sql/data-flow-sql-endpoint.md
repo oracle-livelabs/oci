@@ -1,4 +1,4 @@
-# Data Exploration SQL Lab
+# Data Exploration SQL
 
 ## Introduction
 
@@ -51,7 +51,7 @@ We will understand how to query data using SQL endpoint. We will also learn how 
 
  ![Oracle Cloud console, Data Lake](images/data-lake-manage-permissions.png " ")
 
-## Task 4: SQL Endpoint
+## Task 3: SQL Endpoint
 
 1. Go to OCI Data Flow service.
 

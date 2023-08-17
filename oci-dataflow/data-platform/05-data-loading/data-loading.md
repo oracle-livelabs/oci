@@ -1,4 +1,4 @@
-# Data Loading Lab
+# Data Loading
 
 ## Introduction
 
@@ -10,9 +10,9 @@ Estimated time: 20 minutes
 
 We will use an OCI Data Science notebook for this exercise and as you run the notebook you will learn:
 
-1. How to connect OCI Data Science notebook to a data lake
-2. Write data into tables in the lake 
-3. Write data into tables in an Autonomous DB
+* How to connect OCI Data Science notebook to a data lake
+* Write data into tables in the lake 
+* Write data into tables in an Autonomous DB
 
 ### Prerequisites
 

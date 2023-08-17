@@ -1,4 +1,4 @@
-# Data Exploration Notebooks Lab
+# Data Exploration Notebooks
 
 ## Introduction
 
