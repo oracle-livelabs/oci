@@ -1,4 +1,4 @@
-# Launch a Virtual Machine
+# Virtual Machine Deployment
 
 ## Introduction
 
@@ -15,14 +15,14 @@ In this lab, you will:
 
 ### Prerequisites
 
-* All tasks completed from Lab 1, 2 and 3
-* Permissions to deploy a Virtual Machine
+* Tasks from the previous labs are completed.
+* Appropriate permissions to deploy a Virtual Machine.
 
 ### Video Walkthrough
 
 [Quickstart Video](youtube:8WWpGHxvhw4:large)
 
-## Task 1: Prepare CloudShell
+## Task 1: Prepare Cloud Shell
 
 1. Go to the top right hand corner of the UI and click on **Developer Tools -> Cloud Shell**
     ![Start Cloud Shell](images/cloudshell-1.png)
@@ -57,11 +57,11 @@ In this lab, you will:
 
 1. In the bottom left corner of the UI, click on **Restore** to restore the Cloud Shell session.
     ![Restore Cloud Shell Session](images/login-1.png)
-2. Run the following command **ssh opc@_publicip_** where **_publicip_** is the public IP address of your Virtual Machine. Accept the ECDSA fingerprint. You are now connected to the Virtual Machine with SSH through Cloud Shell. In the next step we will verify connectivity with the 3rd party cloud provider.
+2. Run the following command **ssh opc@publicip** where **publicip** is the public IP address of your Virtual Machine. Accept the ECDSA fingerprint. You are now connected to the Virtual Machine with SSH through Cloud Shell.
     ![SSH to VM Via Cloud Shell](images/login-2.png)
 3. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
-* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, July 2023
+* **Author** - Jake Bloom, Principal Solution Architect, OCI Networking
+* **Last Updated By/Date** - Jake Bloom, August 2023
