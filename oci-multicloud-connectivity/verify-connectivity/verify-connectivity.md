@@ -41,7 +41,11 @@ In this lab, you will:
     ![Restore Cloud Shell](images/test-connectivity-1.png)
 2. Run the command **ping _ip address_**, where **_ip address_** is the IP address of your external cloud provider's virtual machine private IP address.
     ![Ping the VM](images/test-connectivity-2.png)
-3. Congratulations! You've completed the lab. The Virtual Machine, FastConnect, DRG and VCN can now be destroyed.
+3. Run the command **mtr ipaddress**, where **ipaddress** is the IP address of your external cloud provider's virtual machine private IP address. This command will show you all of the hops your traffic takes, confirms that you are going over the private connection and gives some basic packet statistic information.
+    > **Note:** **Click on the image below to explode the view.**
+
+    ![MTR to private IP](images/mtr-1.png)
+4. Congratulations! You've completed the lab. You can now destroy the objects created in this lab, such as the Virtual Machines, FastConnect, DRG and VCN.
 
 ## Acknowledgements
 
