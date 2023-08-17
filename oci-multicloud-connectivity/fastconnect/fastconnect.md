@@ -155,8 +155,8 @@ This lab assumes you have:
 
 ## Acknowledgements
 
-* **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
-* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, August 2023
+* **Author** - Jake Bloom, Principal Solution Architect, OCI Networking
+* **Last Updated By/Date** - Jake Bloom, August 2023
 
 </if>
 
@@ -252,8 +252,8 @@ This lab has the following prerequisites:
 
 ## Acknowledgements
 
-* **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
-* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, August 2023
+* **Author** - Jake Bloom, Principal Solution Architect, OCI Networking
+* **Last Updated By/Date** - Jake Bloom, August 2023
 
 </if>
 
@@ -392,7 +392,7 @@ This lab assumes you have:
 
 ## Acknowledgements
 
-* **Author** - <Name, Title, Group> Jake Bloom, Principal Solution Architect, OCI Networking
-* **Last Updated By/Date** - <Name, Month Year> Jake Bloom, August 2023
+* **Author** - Jake Bloom, Principal Solution Architect, OCI Networking
+* **Last Updated By/Date** - Jake Bloom, August 2023
 
 </if>
