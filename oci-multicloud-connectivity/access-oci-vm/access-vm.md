@@ -57,7 +57,7 @@ In this lab, you will:
 
 1. In the bottom left corner of the UI, click on **Restore** to restore the Cloud Shell session.
     ![Restore Cloud Shell Session](images/login-1.png)
-2. Run the following command **ssh opc@_publicip_** where **_publicip_** is the public IP address of your Virtual Machine. Accept the ECDSA fingerprint. You are now connected to the Virtual Machine with SSH through Cloud Shell.
+2. Run the following command **ssh opc@publicip** where **publicip** is the public IP address of your Virtual Machine. Accept the ECDSA fingerprint. You are now connected to the Virtual Machine with SSH through Cloud Shell.
     ![SSH to VM Via Cloud Shell](images/login-2.png)
 3. You may now **proceed to the next lab**.
 
