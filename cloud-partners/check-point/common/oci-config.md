@@ -22,7 +22,7 @@ Estimated Time: 30 minutes.
 
 1. From the OCI Services menu, click **Virtual Cloud Networks** under **Networking**. Select your region on right part of the screen:
 
-   ![](../common/images/1-VCN-Home.png " ")
+   ![Navigation window for Virtual Cloud Networks](../common/images/vcn-home.png " ")
 
 2. Below table represents what you will be creating. Click on **Create VCN** icon to create new **Virtual Cloud Network**:
 
@@ -30,7 +30,7 @@ Estimated Time: 30 minutes.
       |---------------------------------------|----------------|------------------------------------------------------------|
       | firewall-vcn                          | 192.168.0.0/16 | Hub Virtual Cloud Networks; Firewalls will be part of this |
 
-   ![](../common/images/2-VCN-Create.png " ")
+   ![Create Virtual Cloud Network Button](../common/images/vcn-create.png " ")
 
 3. Fill out the dialog box:
 
@@ -38,7 +38,7 @@ Estimated Time: 30 minutes.
       - **COMPARTMENT**: Ensure your compartment is selected
       - **VCN CIDR BLOCK**: Provide a CIDR block (192.168.0.0/16)
 
-   ![](../common/images/3-Create-Hub-VCN.png " ")
+   ![Create Firewall Virtual Cloud Network](../common/images/create-hub-vcn.png " ")
 
 4. Verify all the information and Click **Create VCN**.
 
@@ -65,7 +65,7 @@ Estimated Time: 30 minutes.
       - **DHCP Options**: Default DHCP Options in your case.
       - **Security List**: Default Security List in your case.
 
-   ![](../common/images/9-Create-Hub-Mgmt-Subnet.png " ")
+   ![Create Frontend Subnet in Firewall VCN](../common/images/create-hub-mgmt-subnet.png " ")
 
 9. Verify all the information and Click **Create Subnet**.
 
@@ -90,7 +90,7 @@ Estimated Time: 30 minutes.
       - **DHCP Options**: Default DHCP Options in your case.
       - **Security List**: Default Security List in your case.
 
-    ![](../common/images/10-Create-Hub-Trust-Subnet.png " ")
+    ![Create Backend Subnet in Firewall VCN](../common/images/create-hub-trust-subnet.png " ")
 
 13. Verify all the information and Click **Create Subnet**.
 
@@ -109,7 +109,7 @@ Estimated Time: 30 minutes.
       - **NAME**: Provide a name
       - **COMPARTMENT**: Ensure your compartment is selected
 
-    ![](../common/images/29-Create-Internet-Gateway-Hub-VCN.png " ")
+    ![Create Internet Gateway in Firewall VCN](../common/images/create-internet-gateway-hub-vcn.png " ")
 
 17. Verify all the information and Click **Create Internet Gateway**.
 
@@ -129,7 +129,7 @@ Estimated Time: 30 minutes.
       - **COMPARTMENT**: Ensure your compartment is selected
       - **Services**: Select appropriate services
 
-    ![](../common/images/30-Create-Service-Gateway-Hub-VCN.png " ")
+    ![Create Service Gateway in Firewall VCN](../common/images/create-service-gateway-hub-vcn.png " ")
 
 21. Verify all the information and Click **Create Service Gateway**.
 
@@ -141,7 +141,7 @@ Estimated Time: 30 minutes.
 
 1. From the OCI Services menu, click **Virtual Cloud Networks** under **Networking**. Select your region on right part of the screen:
 
-   ![](../common/images/1-VCN-Home.png " ")
+   ![Navigation window for Virtual Cloud Networks](../common/images/vcn-home.png " ")
 
 2. Below table represents what you will be creating. Click on **Create VCN** icon to create new **Virtual Cloud Network**:
 
@@ -149,7 +149,7 @@ Estimated Time: 30 minutes.
       |---------------------------------------|----------------|------------------------------------------------------------|
       | web-vcn                               | 10.0.0.0/24    | Web Virtual Cloud Networks; Web VMs will be present here   |
 
-   ![](../common/images/2-VCN-Create.png " ")
+   ![Create Web VCN](../common/images/vcn-create.png " ")
 
 3. Fill out the dialog box:
 
@@ -157,7 +157,7 @@ Estimated Time: 30 minutes.
       - **COMPARTMENT**: Ensure your compartment is selected
       - **VCN CIDR BLOCK**: Provide a CIDR block (10.0.0.0/24)
 
-   ![](../common/images/4-Create-Web-VCN.png " ")
+   ![Create Web VCN Details Page](../common/images/create-web-vcn.png " ")
 
 4. Verify all the information and Click **Create VCN**.
 
@@ -184,7 +184,7 @@ Estimated Time: 30 minutes.
       - **DHCP Options**: Default DHCP Options in your case.
       - **Security List**: Default Security List in your case.
 
-   ![](../common/images/6-Create-Web-Private-Subnet.png " ")
+   ![Create Application Private Subnet in Web VCN](../common/images/create-web-private-subnet.png " ")
 
 9. Verify all the information and Click **Create Subnet**.
 
@@ -196,7 +196,7 @@ Estimated Time: 30 minutes.
 
 1. From the OCI Services menu, click **Virtual Cloud Networks** under **Networking**. Select your region on right part of the screen:
 
-   ![](../common/images/1-VCN-Home.png " ")
+   ![Navigation window for Virtual Cloud Networks](../common/images/vcn-home.png " ")
 
 2. Below table represents what you will be creating. Click on **Create VCN** icon to create new **Virtual Cloud Network**:
 
@@ -204,7 +204,7 @@ Estimated Time: 30 minutes.
       |---------------------------------------|----------------|-----------------------------------------------------------------|
       | db-vcn                                | 10.0.1.0/24    | DB Virtual Cloud Networks; DB Systems/VMs will be present here  |
 
-   ![](../common/images/2-VCN-Create.png " ")
+   ![Create DB VCN](../common/images/vcn-create.png " ")
 
 3. Fill out the dialog box:
 
@@ -212,7 +212,7 @@ Estimated Time: 30 minutes.
       - **COMPARTMENT**: Ensure your compartment is selected
       - **VCN CIDR BLOCK**: Provide a CIDR block (10.0.1.0/24)
 
-   ![](../common/images/5-Create-DB-VCN.png " ")
+   ![Create DB VCN Details Page](../common/images/create-db-vcn.png " ")
 
 4. Verify all the information and Click **Create VCN**.
 
@@ -238,7 +238,7 @@ Estimated Time: 30 minutes.
       - **DHCP Options**: Default DHCP Options in your case.
       - **Security List**: Default Security List in your case.
 
-   ![](../common/images/7-Create-DB-Private-Subnet.png " ")
+   ![Create Database Private Subnet in Web VCN](../common/images/create-db-private-subnet.png " ")
 
 9. Verify all the information and Click **Create Subnet**.
 
@@ -250,7 +250,7 @@ Estimated Time: 30 minutes.
 
 1. From the OCI Services menu, click **Dynamic Routing Gateways** under **Networking**. Select your region on right part of the screen:
 
-   ![](../common/images/13-DRG-Home.png " ")
+   ![Navigation window for DRG](../common/images/drg-home.png " ")
 
 2. Below table represents what you will be creating. Click on **Create Dynamic Routing Gateway** icon to create new **Dynamic Routing Gateway**:
 
@@ -258,14 +258,14 @@ Estimated Time: 30 minutes.
       |--------------|
       | firewall-drg |
 
-   ![](../common/images/14-DRG-Create.png " ")
+   ![Create Firewall DRG](../common/images/drg-create.png " ")
 
 3. Fill out the dialog box:
 
       - **DRG NAME**: Provide a name
       - **COMPARTMENT**: Ensure your compartment is selected
 
-   ![](../common/images/15-Create-Hub-DRG.png " ")
+   ![Create Firewall DRG Details Page](../common/images/create-hub-drg.png " ")
 
 4. Verify all the information and Click **Create Dynamic Routing Gateway**.
 
@@ -287,7 +287,7 @@ Estimated Time: 30 minutes.
       - **COMPARTMENT**: Ensure your compartment is selected
       - **DRG Route Table**:  Select default value as you will be updating route table in this lab.
 
-   ![](../common/images/16-Create-Hub-VCN-DRG-Attachment.png " ")
+   ![Create Firewall VCN Attachment with Firewall VCN to DRG](../common/images/create-hub-vcn-drg-attachment.png " ")
 
 9. Verify all the information and Click **Create Virtual Cloud Network Attachment**.
 
@@ -307,7 +307,7 @@ Estimated Time: 30 minutes.
       - **COMPARTMENT**: Ensure your compartment is selected
       - **DRG Route Table**:  Select default value as you will be updating route table in this lab.
 
-    ![](../common/images/17-Create-Web-VCN-DRG-Attachment.png " ")
+    ![Create Web VCN Attachment with Web VCN to DRG](../common/images/create-web-vcn-drg-attachment.png " ")
 
 13. Verify all the information and Click **Create Virtual Cloud Network Attachment**.
 
@@ -327,7 +327,7 @@ Estimated Time: 30 minutes.
       - **COMPARTMENT**: Ensure your compartment is selected
       - **DRG Route Table**:  Select default value as you will be updating route table in this lab.
 
-    ![](../common/images/18-Create-DB-VCN-DRG-Attachment.png " ")
+    ![Create DB VCN Attachment with DB VCN to DRG](../common/images/create-db-vcn-drg-attachment.png " ")
 
 17. Verify all the information and Click **Create Virtual Cloud Network Attachment**.
 
@@ -349,7 +349,7 @@ Estimated Time: 30 minutes.
       - **Next Hop Attachment Type**:  Select Virtual Cloud Network type.
       - **Next Hop Attachment**:  Select Firewall_VCN attachment created earlier from drop-down
 
-   ![](../common/images/19-Create-DRG-To-Firewall-Route-Table.png " ")
+   ![Create To Firewall Route Table on DRG](../common/images/create-drg-to-firewall-route-table.png " ")
 
 21. Verify all the information and Click **Create DRG Route Table**.
 
@@ -368,7 +368,7 @@ Estimated Time: 30 minutes.
       - **Route Table NAME**: Provide a name
       - **COMPARTMENT**: Ensure your compartment is selected
 
-    ![](../common/images/20-Create-DRG-From-Firewall-Route-Table.png " ")
+    ![Create From Firewall Route Table on DRG](../common/images/create-drg-from-firewall-route-table.png " ")
 
 25. Verify all the information and Click **Create DRG Route Table**.
 
@@ -378,36 +378,36 @@ Estimated Time: 30 minutes.
 
 27. Attach **From-Firewall** route table to **Firewall VCN** attachment on Dynamic Routing Gateway. Click on **Firewall_VCN** and click **Edit** button to update route table.
 
-    ![](../common/images/25-Edit-Hub-VCN-Attachment-Route-Table.png " ")
+    ![Attach From-Firewall Route Table on DRG to Firewall-VCN Attachment](../common/images/edit-hub-vcn-attachment-route-table.png " ")
 
 28. Click on **Show Advanced Options** next to Edit Attachment Dialog box and select **From-Firewall** route table from **DRG Route Table** and **Save Changes**
 
-    ![](../common/images/26-Update-Hub-VCN-Attachment-Route-Table.png " ")
+    ![Attach From-Firewall Route Table on DRG to Firewall-VCN Attachment - Edit Attachment](../common/images/update-hub-vcn-attachment-route-table.png " ")
 
-27. Attach **To-Firewall** route table to **Web VCN** attachment on Dynamic Routing Gateway. Click on **Web_VCN** and click **Edit** button to update route table.
+29. Attach **To-Firewall** route table to **Web VCN** attachment on Dynamic Routing Gateway. Click on **Web_VCN** and click **Edit** button to update route table.
 
-    ![](../common/images/21-Edit-Web-VCN-Attachment-Route-Table.png " ")
+    ![Attach To-Firewall Route Table on DRG to Web-VCN Attachment](../common/images/edit-web-vcn-attachment-route-table.png " ")
 
-28. Click on **Show Advanced Options** next to Edit Attachment Dialog box and select **To-Firewall** route table from **DRG Route Table** and **Save Changes**
+30. Click on **Show Advanced Options** next to Edit Attachment Dialog box and select **To-Firewall** route table from **DRG Route Table** and **Save Changes**
 
-    ![](../common/images/22-Update-Web-VCN-Attachment-Route-Table.png " ")
+    ![Attach To-Firewall Route Table on DRG to Web-VCN Attachment - Edit Attachment Page](../common/images/update-web-vcn-attachment-route-table.png " ")
 
-27. Attach **To-Firewall** route table to **DB VCN** attachment on Dynamic Routing Gateway. Click on **DB_VCN** and click **Edit** button to update route table.
+31. Attach **To-Firewall** route table to **DB VCN** attachment on Dynamic Routing Gateway. Click on **DB_VCN** and click **Edit** button to update route table.
 
-    ![](../common/images/23-Edit-DB-VCN-Attachment-Route-Table.png " ")
+    ![Attach To-Firewall Route Table on DRG to DB-VCN Attachment](../common/images/edit-db-vcn-attachment-route-table.png " ")
 
-28. Click on **Show Advanced Options** next to Edit Attachment Dialog box and select **To-Firewall** route table from **DRG Route Table** and **Save Changes**
+32. Click on **Show Advanced Options** next to Edit Attachment Dialog box and select **To-Firewall** route table from **DRG Route Table** and **Save Changes**
 
-    ![](../common/images/24-Update-DB-VCN-Attachment-Route-Table.png " ")
+    ![Attach To-Firewall Route Table on DRG to DB-VCN Attachment - Edit Attachment Page](../common/images/update-db-vcn-attachment-route-table.png " ")
 
-29. Create **Import Route Distribution** for each DB and Web VCNs on Dynamic Routing Gateway. Below table represents what you will be creating on **Import Route Distribution Entries**:
+33. Create **Import Route Distribution** for each DB and Web VCNs on Dynamic Routing Gateway. Below table represents what you will be creating on **Import Route Distribution Entries**:
 
     | Priority | Match Type | Attachment Type Filter | DRG Attachment | Action |
     |----------|------------|------------------------|----------------|--------|
     | 1        | Attachment | Virtual Cloud Network  | Web_VCN        | ACCEPT |
     | 2        | Attachment | Virtual Cloud Network  | DB_VCN         | ACCEPT |
 
-30. Click on **Create Import Route Distribution** on **firewall-drg** Details/Import Route Distribution page and fill out the dialog box:
+34. Click on **Create Import Route Distribution** on **firewall-drg** Details/Import Route Distribution page and fill out the dialog box:
 
       - **Route Distribution NAME**: Provide a name
       - **COMPARTMENT**: Ensure your compartment is selected
@@ -425,27 +425,27 @@ Estimated Time: 30 minutes.
             - **VCN Attachment**: Select DB_VCN from dropdown
             - **Action**: Default Value as ACCEPT        
 
-    ![](../common/images/27-DRG-Import-Route-Distribution.png " ")
+    ![Add Import Route Distribution Rules with Web, DB VCN Attachment](../common/images/drg-import-route-distribution.png " ")
 
-31. Verify all the information and Click **Create Import Route Distribution**.
+35. Verify all the information and Click **Create Import Route Distribution**.
 
-32. This will create a Import Route Distribution to your Dynamic Routing Gateway with following components.
+36. This will create a Import Route Distribution to your Dynamic Routing Gateway with following components.
 
     *Transit-Spokes Import Route Distribution*
 
-33. Attach **Transit-Spokes** import route redistribution to **Firewall VCN** attachment on Dynamic Routing Gateway. Click on **From-Firewall** drg route table and click **Edit** button to update route table.
+37. Attach **Transit-Spokes** import route redistribution to **Firewall VCN** attachment on Dynamic Routing Gateway. Click on **From-Firewall** drg route table and click **Edit** button to update route table.
 
-34. Select **Enable Route Distribution** and from drop down in dialog box select **Transit Spokes** import route distribution. Complete your change by clicking **Save Changes**
+38. Select **Enable Route Distribution** and from drop down in dialog box select **Transit Spokes** import route distribution. Complete your change by clicking **Save Changes**
 
-    ![](../common/images/28-Update-Hub-VCN-Attachment-Route-Table-Distribution.png " ")
+    ![Add Import Route Distribution to From Firewall Route DRG Route Table](../common/images/update-hub-vcn-attachment-route-table-distribution.png " ")
 
-35. This will update import route distribution to **From-Firewall** route table attached to **Firewall VCN**
+39. This will update import route distribution to **From-Firewall** route table attached to **Firewall VCN**
 
 ## Task 5: Configure Route Tables in each VCNs
 
 1. From the OCI Services menu, click **Virtual Cloud Networks** under **Networking**. Select your region on right part of the screen:
 
-   ![](../common/images/1-VCN-Home.png " ")
+   ![Navigation window for Virtual Cloud Networks](../common/images/vcn-home.png " ")
 
 2. Select **web-vcn** which you created earlier. You will be updating default route table within this VCN. Make sure you choose right Compartment from drop down on your left screen **COMPARTMENT** section.
 
@@ -461,7 +461,7 @@ Estimated Time: 30 minutes.
       - **Destination CIDR Block**:  Enter Destination CIDR block which you want to inspect; 0.0.0.0/0 in our case.
       - **Description**:  Enter a user-Friendly Description
 
-   ![](../common/images/32-Update-Default-Route-Table-Web-VCN.png " ")
+   ![Update Default Route Table Attached to Web VCN via DRG](../common/images/update-default-route-table-web-vcn.png " ")
 
 5. Verify all the information and Click **Add Route Rules**.
 
@@ -482,7 +482,7 @@ Estimated Time: 30 minutes.
       - **IP Protocol**:  Enter a user-Friendly Description
       - **Description**:  Enter a user-Friendly Description
 
-   ![](../common/images/34-Update-Ingress-Rules-Security-List-Web-VCN.png " ")
+   ![Update Ingress Rules attached to Default Security List of Web VCN](../common/images/update-ingress-rules-security-list-web-vcn.png " ")
 
 9. Verify all the information and Click **Add Ingress Rules**.
 
@@ -504,7 +504,7 @@ Estimated Time: 30 minutes.
       - **Destination CIDR Block**:  Enter Destination CIDR block which you want to inspect; 0.0.0.0/0 in our case.
       - **Description**:  Enter a user-Friendly Description
 
-    ![](../common/images/33-Update-Default-Route-Table-DB-VCN.png " ")
+    ![Update Default Route Table Attached to DB VCN via DRG](../common/images/update-default-route-table-db-vcn.png " ")
 
 14. Verify all the information and Click **Add Route Rules**.
 
@@ -525,7 +525,7 @@ Estimated Time: 30 minutes.
       - **IP Protocol**:  Enter a user-Friendly Description
       - **Description**:  Enter a user-Friendly Description
 
-    ![](../common/images/35-Update-Ingress-Rules-Security-List-DB-VCN.png " ")
+    ![Update Ingress Rules attached to Default Security List of DB VCN](../common/images/update-ingress-rules-security-list-db-vcn.png " ")
 
 18. Verify all the information and Click **Add Ingress Rules**.
 
@@ -547,7 +547,7 @@ Estimated Time: 30 minutes.
       - **Destination CIDR Block**:  Enter Destination CIDR block which you want to inspect; 0.0.0.0/0 in our case.
       - **Description**:  Enter a user-Friendly Description
 
-    ![](../common/images/48-Update-Default-Route-Table-Firewall-VCN.png " ")
+    ![Update Default Route Table Attached to Firewall VCN](../common/images/update-default-route-table-firewall-vcn.png " ")
 
 23. Verify all the information and Click **Add Route Rules**.
 
@@ -560,7 +560,7 @@ Estimated Time: 30 minutes.
       - **NAME**: Provide a name; In your case **BackendRouteTable**
       - **COMPARTMENT**: Ensure your compartment is selected
 
-    ![](../common/images/50-Trust-Route-Table-Hub-VCN.png " ")
+    ![Create Backend Subnet Route Table Attached to Firewall VCN](../common/images/trust-route-table-hub-vcn.png " ")
 
 26. Verify all the information and Click **Create**.
 
@@ -573,7 +573,7 @@ Estimated Time: 30 minutes.
       - **NAME**: Provide a name; In your case **VCN-INGRESS**
       - **COMPARTMENT**: Ensure your compartment is selected
 
-    ![](../common/images/52-VCN-Ingress-Route-Table-Hub-VCN.png " ")
+    ![Create VCN Ingress Route Table Attached to Firewall VCN](../common/images/vcn-ingress-route-table-hub-vcn.png " ")
 
 29. Verify all the information and Click **Create**.
 
@@ -581,47 +581,47 @@ Estimated Time: 30 minutes.
 
     *Created VCN INGRESS Route table for firewall-vcn*
 
-28. Click on **Create Route Table** on **Route Tables** resources under **firewall-vcn** section. You will be creating a placeholder for service gateway route table. Fill out the dialog box:
+31. Click on **Create Route Table** on **Route Tables** resources under **firewall-vcn** section. You will be creating a placeholder for service gateway route table. Fill out the dialog box:
 
       - **NAME**: Provide a name; In your case **SGWRouteTable**
       - **COMPARTMENT**: Ensure your compartment is selected
 
-    ![](../common/images/52-SGW-Route-Table-Hub-VCN.png " ")
+    ![Create Service Gateway Route Table to Firewall VCN](../common/images/sgw-route-table-hub-vcn.png " ")
 
-29. Verify all the information and Click **Create**.
+32. Verify all the information and Click **Create**.
 
-30. This will create VCN-INGRESS Route Table for firewall-vcn with following components.
+33. This will create VCN-INGRESS Route Table for firewall-vcn with following components.
 
     *Created SGW Route table for firewall-vcn*
 
-31. Go back to **firewall-vcn** and select Security Lists under Resources section. Navigate to **Default Security Lists for firewall-vcn**. You will be updating ingress rules in your security list based on below table:
+34. Go back to **firewall-vcn** and select Security Lists under Resources section. Navigate to **Default Security Lists for firewall-vcn**. You will be updating ingress rules in your security list based on below table:
 
     | Source Type | Source CIDR | IP Protocol           | Description |
     |-------------|-------------|-----------------------|-------------|
     | CIDR        | 0.0.0.0/0   | All Protocols         | AllowAll    |
 
-32. Click on **Add Ingress Rules** on **Default Security Lists for firewall-vcn** and fill out the dialog box:
+35. Click on **Add Ingress Rules** on **Default Security Lists for firewall-vcn** and fill out the dialog box:
 
       - **Source Type**:  Select Type as **CIDR**
       - **Source CIDR**:  Enter Destination CIDR block which you want to inspect; 0.0.0.0/0 in our case.
       - **IP Protocol**:  Enter a user-Friendly Description
       - **Description**:  Enter a user-Friendly Description
 
-    ![](../common/images/47-Update-Ingress-Rules-Security-List-Firewall-VCN.png " ")
+    ![Update Default Security Lists on Firewall VCN](../common/images/update-ingress-rules-security-list-firewall-vcn.png " ")
 
-33. Verify all the information and Click **Add Ingress Rules**.
+36. Verify all the information and Click **Add Ingress Rules**.
 
-34. This will update Default Route Table for firewall-vcn with following components.
+37. This will update Default Route Table for firewall-vcn with following components.
 
     *Updated Default Security Lists for firewall-vcn with Allow All IP Protocols entry*
 
-35. Navigate to **firewall-drg** dynamic routing gateway's **Firewall_VCN** attachment to update VCN Route Table. Click on **Edit** icon to update **VCN Route Table** and select **VCN-INGRESS** roite table from drop-down.
+38. Navigate to **firewall-drg** dynamic routing gateway's **Firewall_VCN** attachment to update VCN Route Table. Click on **Edit** icon to update **VCN Route Table** and select **VCN-INGRESS** roite table from drop-down.
 
-    ![](../common/images/101-Update-Firewall-VCN-Attachment.png " ")
+    ![Update Firewall VCN attachment of DRG with VCN Ingress Route Table](../common/images/update-firewall-vcn-attachment.png " ")
 
-36. Verify all the information and Click **Save Changes**.
+39. Verify all the information and Click **Save Changes**.
 
-37. This will create add VCN-INGRESS Route Table for **Firewall_VCN** with following components.
+40. This will create add VCN-INGRESS Route Table for **Firewall_VCN** with following components.
 
     *Added VCN INGRESS Route table for Firewall_VCN attachment*
 
@@ -714,9 +714,11 @@ Estimated Time: 30 minutes.
 
 11. Verify that required instances in **Web** and **DB** VCNs are in **Running** state.
 
-    ![](../common/images/31-Running-Web-DB-Instances.png " ")
+    ![Successfully Launched Web and DB VCNs Instances](../common/images/running-web-db-instances.png " ")
 
 **Congratulations! You have successfully completed the lab.**
+
+You may now [proceed to the next lab](#next).
 
 ## Learn More
 1. [OCI Training](https://cloud.oracle.com/en_US/iaas/training)
@@ -730,4 +732,4 @@ Estimated Time: 30 minutes.
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Check Point
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023

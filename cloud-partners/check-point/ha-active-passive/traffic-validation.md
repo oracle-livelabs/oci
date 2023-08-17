@@ -32,7 +32,7 @@ Estimated Time: 20 minutes.
 
 3. Navigate to top right option **New > Host** to add a new Host.
 
-   ![](../common/images/Inbound-Support-Config-1.png " ")
+   ![North to South Inbound Traffic Required Access Host](../common/images/north-south-inbound-traffic-access-host.png " ")
 
 4. Fill out the dialog box and save configuration by clicking on **OK** button:
 
@@ -40,7 +40,7 @@ Estimated Time: 20 minutes.
        - **Name**: Enter a user-friendly name; Web-App1-VM
        - **IPv4 Address**: Enter Primary Interface Private IP address of **Web-App1** instance.
 
-   ![](../common/images/Inbound-Support-Config-2.png " ")
+   ![North to South Inbound Traffic Required New Host Entry](../common/images/north-south-inbound-traffic-new-host-entry.png " ")
 
 5. Search your created new host and click on **clone** button to have a network object or create a new host directly. Fill out the dialog box and save configuration by clicking on **OK** button:
 
@@ -48,9 +48,9 @@ Estimated Time: 20 minutes.
        - **Name**: Enter a user-friendly name; Frontend-Private-IP
        - **IPv4 Address**: Enter Primary Interface Secondary Private IP address of **CloudGuard1** instance.
 
-   ![](../common/images/Inbound-Support-Config-3.png " ")
+   ![North to South Inbound Traffic Required Clone Entry](../common/images/north-south-inbound-traffic-required-clone-entry.png " ")
 
-   ![](../common/images/Inbound-Support-Config-4.png " ")
+   ![North to South Inbound Traffic Required Frontend IP Address](../common/images/north-south-inbound-traffic-required-frontend-ip-address-entry.png " ")
 
 6. Search your created new host and click on **clone** button to have a network object or create a new host directly. Fill out the dialog box and save configuration by clicking on **OK** button:
 
@@ -58,7 +58,7 @@ Estimated Time: 20 minutes.
        - **Name**: Enter a user-friendly name; DB-App1-VM
        - **IPv4 Address**: Enter Primary Interface Private IP address of **DB-App1** instance.
 
-   ![](../common/images/Inbound-Support-Config-5.png " ")
+   ![North to South Inbound Traffic DB App VM Entry](../common/images/north-south-inbound-traffic-required-db-app-vm-entry.png " ")
 
 7. You will be creating **2** different TCP Service objects to support inbound connection to **Web App1 VM** and **DB App1 VM** on a certain port:
 
@@ -69,7 +69,7 @@ Estimated Time: 20 minutes.
 
 8. Navigate to top right option **New > More > Service > TCP Service** to add a new TCP Service.
 
-   ![](../common/images/Inbound-Support-Config-6.png " ")
+   ![North to South Inbound Traffic Service Entry Page](../common/images/north-south-inbound-traffic-required-service-entry.png " ")
 
 9. Fill out the dialog box and save configuration by clicking on **OK** button:
 
@@ -77,7 +77,7 @@ Estimated Time: 20 minutes.
        - **Name**: Enter a user-friendly name; Web-VM-1777
        - **Match By**: Enter Port value as 1777.
 
-   ![](../common/images/Inbound-Support-Config-7.png " ")
+   ![North to South Inbound Traffic Web VM Service Entry Page](../common/images/north-south-inbound-traffic-required-web-vm-service-entry.png " ")
 
 10. Search your created new TCP Service and click on **clone** button to have a network object or create a new TCP Service directly. Fill out the dialog box and save configuration by clicking on **OK** button:
 
@@ -85,25 +85,25 @@ Estimated Time: 20 minutes.
        - **Name**: Enter a user-friendly name; DB-VM-1778
        - **Match By**: Enter Port value as 1778.
 
-    ![](../common/images/Inbound-Support-Config-8.png " ")
+    ![North to South Inbound Traffic DB Service Entry Clone Page](../common/images/north-south-inbound-traffic-required-db-vm-service-entry-clone.png " ")
 
-    ![](../common/images/Inbound-Support-Config-9.png " ")
+    ![North to South Inbound Traffic DB Service Entry Page](../common/images/north-south-inbound-traffic-required-db-vm-service-entry.png " ")
 
-11. You will be adding **eth0** interface as part of **ExternalZone** to support **NAT** policy based on security zone. To do that navigate to **checkpoint-cluster**  properties which you created earlier and go to **Network Managment > Network eth0**. 
+11. You will be adding **eth0** interface as part of **ExternalZone** to support **NAT** policy based on security zone. To do that navigate to **checkpoint-cluster**  properties which you created earlier and go to **Network Management > Network eth0**. 
 
-12. Click on **Modify** button to specifiy Security Zone, you should select ExternalZone from drop-down and click on **OK** button so save configuration:
+12. Click on **Modify** button to specify Security Zone, you should select ExternalZone from drop-down and click on **OK** button so save configuration:
 
-    ![](../common/images/Inbound-Support-Config-11.png " ")
+    ![North to South Inbound Traffic modify Security Zone Eth0 Interface](../common/images/north-south-inbound-traffic-modify-security-zone.png " ")
 
-14. [Optional] If you see below window which you have not ignored select **Don't show this message again** and click **Yes**:
+13. [Optional] If you see below window which you have not ignored select **Don't show this message again** and click **Yes**:
 
-    ![](../common/images/Inbound-Support-Config-12.png " ")
+    ![Ignore the SmartDashboard Message](../common/images/north-south-inbound-traffic-smartdashboard-message.png " ")
 
-15. You must enable **Logging** on security Policy. Navigate to your security policy and update Track value from **None** to **Log**
+14. You must enable **Logging** on security Policy. Navigate to your security policy and update Track value from **None** to **Log**
 
-    ![](../common/images/Inbound-Support-Config-13.png " ")
+    ![Enable Logging to Security Policy](../common/images/north-south-inbound-traffic-enable-security-policy-logging.png " ")
 
-16. You will be creating **3** different NAT policies to support inbound connection from outside to ensure that they go to right VMs and management traffic is not impacted. You can follow below table to support the **NAT Policies** configuration:
+15. You will be creating **3** different NAT policies to support inbound connection from outside to ensure that they go to right VMs and management traffic is not impacted. You can follow below table to support the **NAT Policies** configuration:
 
     | Name                   | Original Source  | Original Destination | Original Services | Translated Source | Translated Destination | Translated Services | Install On     | Comment                                                      |
     |------------------------|------------------|----------------------|-------------------|-------------------|------------------------|---------------------|----------------|--------------------------------------------------------------|
@@ -111,46 +111,46 @@ Estimated Time: 20 minutes.
     | Traffic to Web App1 VM | ExternalZone     | Frontend-Private-IP  | Web-VM-1777       | Original          | Web-App1-VM            | ssh                 | Policy Targets | Ensure that Port 1777 inbound connection goes to Web APP1 VM |
     | Traffic to DB App1 VM  | ExternalZone     | Frontend-Private-IP  | DB-VM-1778        | Original          | DB-App1-VM             | ssh                 | Policy Targets | Ensure that Port 1778 inbound connection goes to DB APP1 VM  |
 
-17. Navigate to **SECURITY POLICIES > NAT** and click on **Rule** icon as below to add **NAT** policies on the top as per **Table** order:
+16. Navigate to **SECURITY POLICIES > NAT** and click on **Rule** icon as below to add **NAT** policies on the top as per **Table** order:
 
-    ![](../common/images/Inbound-Support-Config-23.png " ")
+    ![Create NAT Rule](../common/images/north-south-inbound-traffic-nat-rule.png " ")
 
-18. Your **NAT** policies should look like this as below:
+17. Your **NAT** policies should look like this as below:
 
-    ![](../common/images/Inbound-Support-Config-15.png " ")
+    ![Confirm NAT Rules](../common/images/north-south-inbound-traffic-nat-rules.png " ")
 
-19. Do a sanity check to make sure **TCP Services**, **Hosts**, **Security Policies** and **ExternalZones** are created/attached successfully. For example below images shows **TCP Services** and **Hosts**:
+18. Do a sanity check to make sure **TCP Services**, **Hosts**, **Security Policies** and **ExternalZones** are created/attached successfully. For example below images shows **TCP Services** and **Hosts**:
 
-    ![](../common/images/Inbound-Support-Config-10.png " ")
+    ![Confirm Web, DB VM TCP Services](../common/images/north-south-inbound-traffic-web-db-services.png " ")
 
-    ![](../common/images/Inbound-Support-Config-14.png " ")
+    ![Confirm Web, DB VMs Entries](../common/images/north-south-inbound-traffic-web-db-vms-entries.png " ")
 
-20. Public your changes by clicking on **Publish** icon present on SmartConsole application:
+19. Publish your changes by clicking on **Publish** icon present on SmartConsole application:
 
-    ![](../common/images/Inbound-Support-Config-20.png " ")
+    ![Publish Changes](../common/images/north-south-inbound-traffic-publish-changes.png " ")
 
-21. Install your policy on cluster target by Navigating to **SECURITY POLICIES > Policy** screen and make sure that policy gets applied successfully:
+20. Install your policy on cluster target by Navigating to **SECURITY POLICIES > Policy** screen and make sure that policy gets applied successfully:
 
-    ![](../common/images/Inbound-Support-Config-17.png " ")
+    ![Click on Install Policy](../common/images/install-traffic-policy.png " ")
 
-    ![](../common/images/Inbound-Support-Config-18.png " ")
+    ![Install Required Configuration and Policy Created](../common/images/north-south-inbound-traffic-policy-creation.png " ")
 
-    ![](../common/images/Inbound-Support-Config-19.png " ")
+    ![Policy Installation Successful](../common/images/north-south-inbound-traffic-policy-installation.png " ")
 
-22. Connect to **Web APP1** and **DB APP1** using **CloudGuard1 Frontend Primary Interface Floating Public IP** over **SSH** unique port as per your configuration:
+21. Connect to **Web APP1** and **DB APP1** using **CloudGuard1 Frontend Primary Interface Floating Public IP** over **SSH** unique port as per your configuration:
 
     | VM       | Port  | IP                                   | Example                       |
     |----------|-------|--------------------------------------|-------------------------------|
     | Web App1 | 1777  | Frontend Primary Interface Floating Public IP | ssh opc@129.159.79.108 -p 1777 |
     | DB App1  | 1778  | Frontend Primary Interface Floating Public IP | ssh opc@129.159.79.108 -p 1778 |
 
-23. Below diagram validates that Inbound traffic is working towards your DB and Web Spoke VMs.
+22. Below diagram validates that Inbound traffic is working towards your DB and Web Spoke VMs.
 
-   ![](../common/images/76-Verify-North-South-Inbound-Traffic1.png " ")
+   ![North South Inbound Traffic Validation](../common/images/verify-north-south-inbound-traffic.png " ")
 
-24. You can also verify traffic from **Policy** screen on your **SmartConsole** application. You can filter ports 1777 and/or 1778:
+23. You can also verify traffic from **Policy** screen on your **SmartConsole** application. You can filter ports 1777 and/or 1778:
 
-   ![](../common/images/76-Verify-North-South-Inbound-Traffic2.png " ")
+   ![North South Inbound Traffic Logs on SmartConsole](../common/images/verify-north-south-inbound-traffic-logs.png " ")
 
 ## Task 2: North-South Outbound Traffic
 
@@ -160,36 +160,36 @@ Estimated Time: 20 minutes.
 
 3. Click on **Web-App1-VM** host object which you can search on top right corner. Navigate to **NAT** dialog box and select **Add automatic address translation value** as per below:
 
-   ![](../common/images/Outbound-Support-Config-1.png " ")
+   ![North South Outbound Traffic Web APP VM NAT Config](../common/images/north-south-outbound-traffic-web-app-nat-config.png " ")
 
 4. Click on **DB-App1-VM** host object which you can search on top right corner. Navigate to **NAT** dialog box and select **Add automatic address translation value** as per below:
 
-   ![](../common/images/Outbound-Support-Config-2.png " ")
+   ![North South Outbound Traffic DB APP VM NAT Config](../common/images/north-south-outbound-traffic-db-app-nat-config.png " ")
 
 5. Do a sanity check to make sure **NAT Policies** are created successfully.
 
-   ![](../common/images/Outbound-Support-Config-3.png " ")
+   ![North South Outbound Traffic NAT Policies Reflected](../common/images/north-south-outbound-traffic-nat-policies.png " ")
 
 6. Publish and Install policies on your cluster:
 
-   ![](../common/images/Inbound-Support-Config-18.png " ")
+   ![Install Policy](../common/images/install-traffic-policy.png " ")
 
-   ![](../common/images/Inbound-Support-Config-19.png " ")
+   ![Policy Installed Successfully](../common/images/policy-installation-successful.png " ")
 
-4. Connect to **Web APP1** and **DB APP1** using **CloudGuard1 Frontend Primary Interface Floating Public IP** over **SSH** unique port as per your configuration:
+7. Connect to **Web APP1** and **DB APP1** using **CloudGuard1 Frontend Primary Interface Floating Public IP** over **SSH** unique port as per your configuration:
 
     | VM       | Port  | IP                                   | Example                       |
     |----------|-------|--------------------------------------|-------------------------------|
     | Web App1 | 1777  | Frontend Primary Interface Floating Public IP | ssh opc@129.159.79.108 -p 1777 |
     | DB App1  | 1778  | Frontend Primary Interface Floating Public IP | ssh opc@129.159.79.108 -p 1778 |
 
-5. Initiate a ping to **google.com** or publicly available site connection as per below diagram which validates that Outbound traffic from Web and DB spoke VMs is working fine.
+8. Initiate a ping to **google.com** or publicly available site connection as per below diagram which validates that Outbound traffic from Web and DB spoke VMs is working fine.
 
-   ![](../common/images/78-Verify-North-South-Outbound-Traffic1.png " ")
+   ![North South Outbound Traffic](../common/images/verify-north-south-outbound-traffic.png " ")
 
-6. You can also verify traffic from **Policy** screen on your **SmartConsole** application. You can filter using **icmp** service too:
+9. You can also verify traffic from **Policy** screen on your **SmartConsole** application. You can filter using **icmp** service too:
 
-   ![](../common/images/79-Verify-North-South-Inbound-Traffic2.png " ")
+   ![North South Outbound Traffic Logs Validation](../common/images/verify-north-south-outbound-traffic-logs.png " ")
 
 ## Task 3: East-West Traffic (Web to Database & Database to Web)
 
@@ -197,7 +197,7 @@ Estimated Time: 20 minutes.
 
 2. You have already created necessary **Security Policies** and **Routes** to support traffic. Do a sanity check to make sure **Security Policy** is present:
 
-   ![](../common/images/80-Verify-East-West-Config.png " ")
+   ![East West Traffic Required Security Policy](../common/images/verify-east-west-config.png " ")
 
 3. Connect to **Web APP1** and **DB APP1** using **CloudGuard1 Frontend Primary Interface Floating Public IP** over **SSH** unique port as per your configuration:
 
@@ -208,17 +208,17 @@ Estimated Time: 20 minutes.
 
 4. Initiate a ping between **Web App1** and **DB App1** VMs as per below diagram which validates that traffic between Web and DB spoke VMs (vice-versa) is working fine.
 
-   ![](../common/images/81-Verify-East-West-Traffic1.png " ")
+   ![East West Traffic](../common/images/verify-east-west-traffic.png " ")
 
 5. You can also verify traffic from **Policy** screen on your **SmartConsole** application. You can filter using **icmp** service too:
 
-   ![](../common/images/82-Verify-East-West-Traffic2.png " ")
+   ![East West Traffic Logs](../common/images/verify-east-west-traffic-logs.png " ")
 
 ## Task 4: East-West Traffic (Web & DB Application to Oracle Services Network)
 
 1. From the OCI Services menu, click **Buckets** under **Storage**. Select your region on right part of the screen:
 
-   ![](../common/images/83-Bucket-Home.png " ")
+   ![Object Storage Home Page](../common/images/bucket-home.png " ")
 
 2. Below table represents what you will be creating. Click on **Create Bucket** icon to create new **Bucket**:
 
@@ -232,7 +232,7 @@ Estimated Time: 20 minutes.
       - **COMPARTMENT**: Ensure your compartment is selected
       - **Bucket Type**: Standard
 
-   ![](../common/images/73-Create-Bucket.png " ")
+   ![Create Bucket Home Page](../common/images/create-bucket.png " ")
 
 4. Verify all the information and Click **Create**.
 
@@ -244,7 +244,7 @@ Estimated Time: 20 minutes.
 
    In your case you can upload an image object for test purpose.
 
-   ![](../common/images/84-Upload-Object-Pre-Auth-URL.png " ")
+   ![Create Object Storage Pre Authenticated URL](../common/images/upload-object-pre-auth-url.png " ")
 
 7. Once you complete **Pre-Authentication Request** a Details dialog box pops up, copy the URL which you will be using to access uploaded Object.
 
@@ -260,7 +260,7 @@ Estimated Time: 20 minutes.
 
 11. Enter values as per table and Click on **Save** icon to save route entry:
 
-    ![](../common/images/ObjectStorage-Support-Config-1.png " ")
+    ![Create Object Storage Network Traffic Route](../common/images/east-west-objectstorage-traffic-support-route.png " ")
 
 12. Connect to **CloudGuard2** instance public IP on your local machine's web browser: **https://public_ip** using **admin/Check@123** or **password** which you have setup in **Lab3**
 
@@ -274,13 +274,13 @@ Estimated Time: 20 minutes.
 
 15. Enter values as per table and Click on **Save** icon to save route entry:
 
-    ![](../common/images/ObjectStorage-Support-Config-1.png " ")
+    ![Create Object Storage Network Traffic Route](../common/images/east-west-objectstorage-traffic-support-route.png " ")
 
 16. You have already created necessary **Security Policies** and **Routes** to support traffic. Do a sanity check to make sure **Security Policy** is present on **Firewalls** and **BackendRouteTable** has an entry for Object Storage traffic via Service Gateway:
 
-    ![](../common/images/80-Verify-East-West-Config.png " ")
+    ![East West OSN Traffic Config](../common/images/verify-east-west-config.png " ")
 
-    ![](../common/images/ObjectStorage-Support-Config-2.png " ")
+    ![East West OSN Traffic Routes](../common/images/east-west-objectstorage-traffic-support-routes.png " ")
 
 17. Connect to **Web APP1** and **DB APP1** using **CloudGuard1 Frontend Primary Interface Floating Public IP** over **SSH** unique port as per your configuration:
 
@@ -291,17 +291,17 @@ Estimated Time: 20 minutes.
 
 18. Do a **wget** to **Pre-Authentication Request** which you created earlier from Web and DB spoke VMs and you should get a response back.
 
-    ![](../common/images/84-Verify-OSN-Traffic1.png " ")
+    ![East West OSN Traffic](../common/images/verify-east-west-osn-traffic.png " ")
 
 19. You can also verify traffic from **Policy** screen on your **SmartConsole** application. You can filter using **443** port too:
 
-   ![](../common/images/84-Verify-OSN-Traffic2.png " ")
+   ![East West OSN Traffic Logs](../common/images/verify-east-west-osn-traffic-logs.png " ")
 
 ## Task 5: High Availability Failover Validation
 
 1. Navigate to **CloudGuard1** instance attached VNIC details page and verify that **Frontend/Primary** and/or **Backend** interface has floating secondary IPs are available on primary instance.
 
-   ![](../common/images/86-CloudGuard1-Frontend-Floating-IP.png " ")
+   ![Primary Firewall Floating IP Address](../common/images/cloudguard1-frontend-floating-ip.png " ")
 
 2. Since you are using **R81** release there is an additional step which you need to ensure that HA failover happens successfully. Go to **expert** mode and run below commands on each **CloudGuard1** and **CloudGuard2** instances over SSH:
 
@@ -317,7 +317,7 @@ Estimated Time: 20 minutes.
 
    Below image shows an example of above script on **CloudGuard1** instance. You have to make sure that you run on both CloudGuard instances.
 
-      ![](../common/images/HA-Failover-Config-1.png " ")
+      ![Runing Bundle Shell Script from Firewalls](../common/images/ha-failover-config-bundle-script.png " ")
 
 4. You can manually trigger HA failover using provided commands as below: 
 
@@ -335,30 +335,32 @@ Estimated Time: 20 minutes.
 
    Example: Below image reflect HA failover from **CloudGuard1** instance to **CloudGuard2** instance: 
 
-   ![](../common/images/failover-validation.png " ")
+   ![Validate HA Failover](../common/images/failover-validation.png " ")
 
 
    Or you can also Reboot **CloudGuard1** instance from OCI console to trigger failover automatically to **CloudGuard2** instance.
 
-   ![](../common/images/87-Reboot-CloudGuard1.png " ")
+   ![Reboot Primary Firewall](../common/images/reboot-primary-cloudguard.png " ")
 
 5. Within few seconds **CloudGuard2** instance should become **Active** Firewall. You can also see on **SmartConsole** GUI where **CloudGuard2** instance became primary firewall.
 
-   ![](../common/images/88-Failover-CloudGuard2.png " ")
+   ![Failover Successful](../common/images/failover-secondary-cloudguard-successful.png " ")
 
 6. Navigate to **CloudGuard2** instance attached VNIC details page and verify that **Frontend/Primary** and/or **Backend** interface floating IPs has moved from **CloudGuard1** instance.
 
-   ![](../common/images/90-Failover-Success-CloudGuard2-frontend.png " ")
+   ![Secondary Firewall Successfully Got Floating Frontend IP](../common/images/secondary-firewall-successful-failover-frontend.png " ")
 
-   ![](../common/images/91-Failover-Success-CloudGuard2-backend.png " ")
+   ![Secondary Firewall Successfully Got Floating Backend IP](../common/images/secondary-firewall-successful-failover-backend.png " ")
 
 7. You can verify that **CloudGuard2** is primary and **CloudGuard1** is secondary in your cluster:
 
-   ![](../common/images/89-Failover-Success-CloudGuard1.png " ")
+   ![Primary Firewall Successfully failed Over to Secondary](../common/images/primary-firewall-successful-failover-smartconsole.png " ")
 
-   ![](../common/images/89-Failover-Success-CloudGuard2.png " ")
+   ![Secondary Firewall Successfully became Primary](../common/images/secondary-firewall-successful-failover-smartconsole.png " ")
 
 **Congratulations! You have successfully completed the lab.**
+
+You may now [proceed to the next lab](#next).
 
 ## Learn More
 
@@ -373,4 +375,4 @@ Estimated Time: 20 minutes.
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Check Point
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023
