@@ -3,7 +3,26 @@
 ## Introduction
 
 This workshop walks you through the steps of locating Hospitals based on location and patient trauma.
+
+Estimated Time: 20 minutes.  
  
+### Objectives
+
+In this lab, you will:
+ 
+* Create the required schema
+* Update SDO_GEOMETRY Column
+* Create Oracle APEX Faceted Search
+* Create Oracle APEX Map and Map Layer
+* Demo of finding Hospital on Map based on Location and Trauma selected.
+* Query to locate the nearest Hospital within a given radius
+  
+### Prerequisites
+
+This lab assumes you have:
+
+* Completed previous labs of this workshop: **Setup environment** and logged into **Oracle APEX workspace**
+
 ### About Spatial Geometry Objects
 
 Spatial geometry objects are drawn on the background map based on data in a table. That table can be sourced from local table or a SQL query. Maps created using the Create Page Wizard or in Page Designer, support both local database tables, REST Enabled SQL, and from REST Data Sources. Maps support a rich set of built-in marker icons and shapes. Supported spatial geometry objects include:
@@ -34,35 +53,7 @@ The SDO_GEOMETRY type has the following general format:
     )
 </copy>
 ```
-
-### About Oracle Application Express (APEX) and Oracle Spatial
-
-Oracle Application Express (APEX) and Oracle Spatial are features of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP) services.
-
-Oracle Application Express (APEX) is a low-code development platform that enables you to build scalable, secure enterprise apps, with world-class features, that can be deployed anywhere. More at [Oracle APEX Product homepage](https://apex.oracle.com/)
-
-Oracle Spatial is a set of geospatial data management, analysis, and processing capabilities within Oracle Database. With a native spatial data type and analysis operations, location-based analysis is mainstream and co-located with all other database operations. More at [Oracle Spatial Product homepage](https://www.oracle.com/database/spatial)
   
-Estimated Time: 20 minutes.  
- 
-### Objectives
-
-In this lab, you will:
- 
-* Create the required schema
-* Update SDO_GEOMETRY Column
-* Create Oracle APEX Faceted Search
-* Create Oracle APEX Map and Map Layer
-* Demo of finding Hospital on Map based on Location and Trauma selected.
-* Query to locate the nearest Hospital within a given radius
- 
-
-### Prerequisites
-
-This lab assumes you have:
-
-* Completed previous labs of this workshop: **Setup environment** and logged into **Oracle APEX workspace**
-
 ## Task 1: Create the required schema
 
 1. From **APEX workspace** select **SQL Workshop** and **SQL Commands** option.
@@ -196,7 +187,8 @@ This lab assumes you have:
         'distance=dist_var unit=km') = 'TRUE' 
     </copy>
     ```
-    for example 
+
+    Replace id\_var and dist\_var as per your requirement. where dist_var is the radius distance of hospital to patient location.  for example 
 
     ```sql
     <copy>
@@ -213,14 +205,15 @@ This lab assumes you have:
     ```
 
     ![Create Table](images/location-search.png " ")   
-
-    Replace id\_var and dist\_var as per your requirement. where dist_var is the radius distance of hospital to patient.  
  
-This concludes this lab and you can **proceed to the next lab**.
+ 
+    > **Congratulations**, you have completed **Oracle APEX Maps and Spatial queries to Locate Hospitals** Lab. The subsequent labs are optional, however, please proceed to the next lab to learn more about **Oracle Analytics Cloud for Clinical Data Analysis**. 
 
 ## Learn More
 
 * [Spatial queries involving lattitude and longitude](https://asktom.oracle.com/pls/apex/f?p=100:11:::::P11_QUESTION_ID:9539156000346599825)
+* [Oracle APEX Product homepage](https://apex.oracle.com/)
+* [Oracle Spatial Product homepage](https://www.oracle.com/database/spatial)
 
 ## Acknowledgements
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database

@@ -2,39 +2,9 @@
 
 ## Introduction
 
-This lab walks you through the steps detecting Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/).
-
-An **ECG** is a simple, non-invasive test that records the electrical activity of the heart. An ECG can help diagnose certain heart conditions, including **abnormal heart rhythms and coronary heart disease** (heart attack and angina).
-
-Electrocardiography is the process of producing an electrocardiogram (ECG or EKG ), a recording of the heart's electrical activity through repeated cardiac cycles. It is an electrogram of the heart, which is a graph of voltage versus time of the heart's electrical activity using electrodes placed on the skin. 
-
-These electrodes detect the small electrical changes that are a consequence of cardiac muscle depolarization followed by repolarization during each cardiac cycle (heartbeat). Changes in the normal ECG pattern occur in numerous cardiac abnormalities, including cardiac rhythm disturbances (such as atrial fibrillation[6] and ventricular tachycardia), inadequate coronary artery blood flow (such as myocardial ischemia and myocardial infarction), and electrolyte disturbances (such as hypokalemia and hyperkalemia).
-
-Identify normal v/s fast v/s slow v/s irregular heartbeats with ECG reports.
- 
-![ECG](images/ecg.png" ")
-
-Identifying normal versus abnormal ECG reports.
-
-![ECG](images/normal-ecg.png " ")
-
-**Important**
-
-This workshop provides a basic example of using OCI Vision, OCI Anomaly Detection and other AI services. This example is for illustration and demonstration purposes only and isn't intended to replace any medical imagery analysis tool or official diagnosis recommendation made by a professional. Users need to receive the proper regulated compliance and approvals before using for medical and diagnostic use.
+This lab walks you through the steps of detecting Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/).
 
 Estimated Time: 30 minutes.  
-
-### About OCI Anomaly Detection
-
-[**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/) is an AI service that provides real-time and batch anomaly detection for univariate and multivariate time series data. Through a simple user interface, organizations can create and train models to detect anomalies and identify unusual behavior, changes in trends, outliers, and more.
-
-**Proprietary anomaly detection algorithms**
-
-OCI Anomaly Detection algorithms, backed by more than 150 patents, detect anomalies earlier with fewer false alarms. These algorithms work together to ensure higher sensitivity and better false alarm avoidance than other machine learning (ML) approaches, such as neural nets and support vector machines.
-
-**Intelligent data preprocessing**
-
-OCI Anomaly Detection provides multiple data processing techniques that account for errors and imperfections in real-world input data, such as from low-resolution sensors. It automatically identifies and fixes data quality issues—resulting in fewer false alarms, better operations, and more accurate results.
  
 ### Objectives
 
@@ -50,11 +20,37 @@ In this lab, you will:
 
 This lab assumes you have:
 
-* You have Completed **Get Started**, **Setup Policies** lab and have required access to Create OCI Anomaly Detection
+* You have Completed **Get Started**, **Setup Policies** lab and have required access to Create OCI Anomaly Detection Models and OCI Object storage
+ 
+An **ECG** is a simple, non-invasive test that records the electrical activity of the heart. An ECG can help diagnose certain heart conditions, including **abnormal heart rhythms and coronary heart disease** (heart attack and angina).
 
+Electrocardiography is the process of producing an electrocardiogram (ECG or EKG ), a recording of the heart's electrical activity through repeated cardiac cycles. It is an electrogram of the heart, which is a graph of voltage versus time of the heart's electrical activity using electrodes placed on the skin.  
+
+Identify normal v/s fast v/s slow v/s irregular heartbeats with ECG reports.
+ 
+![ECG](images/ecg.png" ")
+
+Identifying normal versus abnormal ECG reports.
+
+![ECG](images/normal-ecg.png " ")
+ 
+### About OCI Anomaly Detection
+
+[**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/) is an AI service that provides real-time and batch anomaly detection for univariate and multivariate time series data. Through a simple user interface, organizations can create and train models to detect anomalies and identify unusual behavior, changes in trends, outliers, and more.
+
+**Proprietary anomaly detection algorithms**
+
+OCI Anomaly Detection algorithms, backed by more than 150 patents, detect anomalies earlier with fewer false alarms. These algorithms work together to ensure higher sensitivity and better false alarm avoidance than other machine learning (ML) approaches, such as neural nets and support vector machines.
+
+**Intelligent data preprocessing**
+
+OCI Anomaly Detection provides multiple data processing techniques that account for errors and imperfections in real-world input data, such as from low-resolution sensors. It automatically identifies and fixes data quality issues—resulting in fewer false alarms, better operations, and more accurate results.
+  
 ## Task 1: Approach to ECG Interpretation - ECG Data Preparation
  
 1. ECG Data Preparation in CSV format that contains timestamp and corresponding ECG reading, for the sake of simplicity we are calling this as **beat_measure**, save this file as *normal-ecg-training-data.csv*
+
+    > **Note:** From Google search, and look for *download normal ecg report in CSV format* and download from any of your favourite data sources or bring your own data.
 
     ![Beat Measurements](images/beat-measure.png " ")
 
@@ -64,7 +60,7 @@ This lab assumes you have:
 
     read more about it at an [*Approach to ECG Interpretation*](https://www.healio.com/cardiology/learn-the-heart/ecg-review/ecg-interpretation-tutorial/approach-to-ecg-interpretation)
 
-    > **Note 2:** From Google search, look for *download normal ecg report in CSV format* and download from any of your favourite data sources or bring your own data.
+    
 
 ## Task 2: Upload the ECG Training data to OCI Object storage
 
@@ -218,8 +214,12 @@ It is assumed that you have access to create OCI Bucket and Upload Objects to OC
     ![ECG Reading](images/ecg-reading-9.png " ") 
 
     ![ECG Reading](images/ecg-reading-10.png " ") 
- 
-    This concludes this lab and you can **proceed to the next lab**.
+  
+    > **Congratulations**, you have completed **Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection** Lab. The subsequent labs are optional, however, please proceed to the next lab to learn more about **Get and Update Patient Details with Integration Services - Oracle Integration Cloud**. 
+
+## Important
+
+This workshop provides a basic example of using OCI Vision, OCI Anomaly Detection and other AI services. These examples are for illustration and demonstration purposes only and isn't intended to replace any medical imagery analysis tool or official diagnosis recommendation made by a professional. Users need to receive the proper regulated compliance and approvals before using for medical and diagnostic use.
 
 ## Learn More
 
