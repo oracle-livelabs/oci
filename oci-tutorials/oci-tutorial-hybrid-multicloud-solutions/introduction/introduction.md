@@ -1,8 +1,8 @@
 # Workshop Overview
 
-## About this Workshop - Multicloud, Hybrid Cloud Deployment
+## About this Workshop - Understanding Multicloud and Hybrid Cloud Deployments
 
-This session on OCI Tutorial - Multicloud, Hybrid Cloud Deployment will help you understand how you can leverage Oracle Cloud solutions for both hybrid and multicloud environments. We will cover major considerations, use cases, benefits, and available Oracle solutions for each type of cloud deployment so that you have the proper foundation for deciding which option could be right for you. Learn how Oracle Cloud customers are using multicloud architectures and a wide range of hybrid cloud strategies to achieve cost savings, performance enhancements, infrastructure modernization, and faster time to insights.
+This session will help you understand how you can leverage Oracle Cloud Infrastructure (OCI) for hybrid and multicloud environments. Understand the considerations, use cases, and benefits to help you determine which deployment option could be right for you. Learn how OCI customers are using multicloud architectures across a wide range of hybrid cloud strategies to achieve cost savings, performance enhancements, infrastructure modernization, and applicaiton modernization.
 
 ### **Duration: 2 Hours**
 
@@ -17,7 +17,7 @@ In this workshop, you will:
 ### **Assets**
 
 Powerpoint
-* [Multicloud, Hybrid Cloud Deployment](https://objectstorage.us-ashburn-1.oraclecloud.com/p/PeWalDE9n0tXCfLFajwEdwzBndarIyelPBCDIDEI_PevBgQq8pxefvGWO5Y3PVXF/n/ociobtnas/b/OCW2022/o/TUT4117_Multicloud_Hybrid_Cloud%20Deployment_Final.pdf)
+* [Multicloud, Hybrid Cloud Deployment]() TBD
 
 
 ## Learn More
@@ -28,7 +28,8 @@ Resource Links for Reference
 * [Multicloud](https://www.oracle.com/cloud/multicloud/): Oracle Cloud Infrastructure (OCI) offers a comprehensive set of multicloud solutions in the form of specialized deployments, database services, extensive monitoring capabilities, and strategic partnerships to fit your organization's needs. 
 * [Oracle Interconnect for Azure](https://www.oracle.com/cloud/azure/interconnect/): provides organizations with a simple migation path to a multicloud environment that includes Oracle Database capabilities such as Oracle Exadata Database Service, Autonomous Database, and MySQL Heatwave
 
+
 ## Acknowledgements
-* **Authors** - Joey Hall, Staff Cloud Engineer; Sunil Jain, Associate Cloud Engineer; Anand Prasad, Master Principal Cloud Architect
-* **Speakers** -  Larry Beausoleil, Sr. Manager, Technical Program Management; Anand Prasad, Master Principal Cloud Architect
-* **Last Updated By/Date** - Taylor Zheng, September 2022
+* **Authors** - Joey Hall, Staff Cloud Engineer; Jason Cook, Master Principal Cloud Architect; Anand Prasad, Master Principal Cloud Architect
+* **Speakers** - Joey Hall, Staff Cloud Engineer; Jason Cook, Master Principal Cloud Architect; Anand Prasad, Master Principal Cloud Architect
+* **Last Updated By/Date** - Taylor Zheng, August 2023

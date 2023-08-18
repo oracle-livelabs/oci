@@ -19,7 +19,7 @@ Estimated Lab Time: 20 minutes.
 
 - Oracle Cloud Infrastructure paid account credentials (User, Password, Tenant, and Compartment)
 
-## **Task 1: North-South Inbound Traffic**
+## Task 1: North-South Inbound Traffic
 
 1. Connect to **FMC1** Firewall Management Center public IP on your local machine's web browser: **https://public_ip** using **admin/Cisco@123** or **password** which you have setup in **Lab3**
 
@@ -33,17 +33,17 @@ Estimated Lab Time: 20 minutes.
        - **Logging**: Enable Logging
          - Enable check marks to **Log at Beginning of Connection** and **Log at End of Connection**
 
-   ![](../common/images/Traffic-Policies-Support-Confg-3.png " ")
+   ![North South Inbound Traffic Security Policy](../common/images/traffic-policies-support-confg-3.png " ")
 
-   ![](../common/images/Traffic-Policies-Support-Confg-6.png " ")
+   ![North South Inbound Traffic Security Policy Log Enablement](../common/images/traffic-policies-support-confg-6.png " ")
 
 4. Click on **Save** button to save your policy configuration. 
 
-   ![](../common/images/Traffic-Policies-Support-Confg-4.png " ")
+   ![Saved Security Policy](../common/images/traffic-policies-support-confg-4.png " ")
 
 5. You will be creating **NAT Policy** to support traffic to do that navigate to **Devices > NAT**: 
 
-   ![](../common/images/Traffic-Policies-Support-Confg-1.png " ")
+   ![Create Network Policy](../common/images/traffic-policies-support-confg-1.png " ")
 
 6. Click on **New Policy > Threat Defense NAT** to add new policy. Fill out the dialog box and save configuration by clicking on **Save** button: 
 
@@ -52,7 +52,7 @@ Estimated Lab Time: 20 minutes.
        - **Description**: Enter a user-friendly value; For Inbound Traffic
        - **Selected Devices**: Select **SecureFirewall1** and **SecureFirewall2** from available devices.
 
-    ![](../common/images/Traffic-Policies-Support-Confg-5.png " ")                    
+    ![Create North South Inbound NAT Policy](../common/images/traffic-policies-support-confg-5.png " ")                    
 
 7. Click on **+ Add Rule** icon to add two **NAT** rules. Fill out the dialog box and save configuration by clicking on **OK** button: 
 
@@ -73,15 +73,15 @@ Estimated Lab Time: 20 minutes.
                - **Web-App1-VM**: Web-App-1 VM Private IP
          - **Translated Destination Port**: SSH 
 
-   ![](../common/images/Traffic-Policies-Support-Confg-10.png " ")
+   ![Add North South Inbound NAT Rule Window1](../common/images/traffic-policies-support-confg-10.png " ")
 
-   ![](../common/images/Traffic-Policies-Support-Confg-7.png " ")
+   ![Add North South Inbound NAT Rule Window2](../common/images/traffic-policies-support-confg-7.png " ")
 
-   ![](../common/images/Traffic-Policies-Support-Confg-8.png " ")
+   ![Add North South Inbound NAT Rule Window3](../common/images/traffic-policies-support-confg-8.png " ")
 
-   ![](../common/images/Traffic-Policies-Support-Confg-9.png " ")
+   ![Add North South Inbound NAT Rule Window4](../common/images/traffic-policies-support-confg-9.png " ")
 
-    Enter the following information and accept all the defaults for **Second** Rule: 
+8. Enter the following information and accept all the defaults for **Second** Rule: 
        - **Type**: Static
        - **Interface Objects**:
          - **Source Interface Objects**: Add outside Interface
@@ -98,32 +98,32 @@ Estimated Lab Time: 20 minutes.
                - **DB-App1-VM**: DB-App-1 VM Private IP
          - **Translated Destination Port**: SSH 
 
-   ![](../common/images/Traffic-Policies-Support-Confg-11.png " ")
+   ![Add North South Inbound NAT Second Rule](../common/images/traffic-policies-support-confg-11.png " ")
 
-8. Verify that **NAT Rules** are added successfully: 
+9. Verify that **NAT Rules** are added successfully: 
 
-   ![](../common/images/Traffic-Policies-Support-Confg-12.png " ")
+   ![Verify NAT Rules](../common/images/traffic-policies-support-confg-12.png " ")
 
-9. Do a sanity check to make sure **firewall policy** is present. 
+10. Do a sanity check to make sure **firewall policy** is present. 
 
-   ![](../common/images/75-Verify-North-South-Inbound-Config.png " ")
+   ![Sanity Check](../common/images/verify-north-south-inbound-config.png " ")
 
-10. Connect to **Web APP1** and **DB APP1** using **CiscoExternalPublicNLB Network Load Balancer Public IP** over **SSH** and unique port as per your configuration:
+11. Connect to **Web APP1** and **DB APP1** using **CiscoExternalPublicNLB Network Load Balancer Public IP** over **SSH** and unique port as per your configuration:
 
     | VM       | Port  | IP                                   | Example                       |
     |----------|-------|--------------------------------------|-------------------------------|
     | Web App1 | 1234  | CiscoExternalPublicNLB Network Load Balancer Public IP | ssh opc@150.136.64.143 -p 1234 |
     | DB App1  | 1235  | CiscoExternalPublicNLB Network Load Balancer Public IP | ssh opc@150.136.64.143 -p 1235 |
 
-11. Below diagram validates that Inbound traffic is working towards your DB and Web Spoke VMs. 
+12. Below diagram validates that Inbound traffic is working towards your DB and Web Spoke VMs. 
 
-   ![](../common/images/76-Verify-North-South-Inbound-Traffic1.png " ")
+   ![North South Inbound Traffic](../common/images/verify-north-south-inbound-traffic1.png " ")
 
-12. You can also verify that from **Analysis > Connections > Events** on your **FMC** instance.
+13. You can also verify that from **Analysis > Connections > Events** on your **FMC** instance.
 
-   ![](../common/images/76-Verify-North-South-Inbound-Traffic2.png " ")
+   ![North South Inbound Traffic Logs](../common/images/verify-north-south-inbound-traffic2.png " ")
 
-## **Task 2: North-South Outbound Traffic**
+## Task 2: North-South Outbound Traffic
 
 1. Connect to **Firewall Management Center** instance public IP on your local machine's web browser: **https://public_ip** using **admin/Cisco@123** or **password** which you have setup in **Lab3**
 
@@ -139,11 +139,11 @@ Estimated Lab Time: 20 minutes.
        - **Translated Packet**:
          - **Translated Source**: Destination Interface IP
 
-   ![](../common/images/75-Verify-North-South-Outbound-Config-2.png " ")
+   ![North South Outbound NAT Rule](../common/images/verify-north-south-outbound-config-2.png " ")
 
 3. Do a sanity check to make sure **firewall policy** is present. 
 
-   ![](../common/images/75-Verify-North-South-Outbound-Config-1.png " ")
+   ![North South Outbound NAT Rule Verification](../common/images/verify-north-south-outbound-config-1.png " ")
 
 4. Connect to **Web APP1** and **DB APP1** using **CiscoExternalPublicNLB Network Load Balancer Public IP** over **SSH** and unique port as per your configuration: 
 
@@ -154,19 +154,19 @@ Estimated Lab Time: 20 minutes.
 
 5. Initiate a ping to **google.com** or publicly available site connection as per below diagram which validates that Outbound traffic from Web and DB spoke VMs is working fine.
 
-   ![](../common/images/78-Verify-North-South-Outbound-Traffic1.png " ")
+   ![North South Outbound Traffic](../common/images/verify-north-south-outbound-traffic1.png " ")
 
 6. You can also verify that from **Analysis > Connections > Events** on your **FMC** instance.
 
-   ![](../common/images/79-Verify-North-South-Outbound-Traffic2.png " ")
+   ![North South Outbound Traffic Logs](../common/images/verify-north-south-outbound-traffic2.png " ")
 
-## **Task 3: East-West Traffic (Web to Database & Database to Web)**
+## Task 3: East-West Traffic (Web to Database & Database to Web)
 
 1. Connect to **Firewall Management Center** instance public IP on your local machine's web browser: **https://public_ip** using **admin/Cisco@123** or **password** which you have setup in **Lab3**
 
 2. Do a sanity check to make sure **firewall policy** is present. 
 
-   ![](../common/images/75-Verify-North-South-Inbound-Config.png " ")
+   ![East West Traffic Security Policy Verification](../common/images/verify-north-south-inbound-config.png " ")
 
 3. Connect to **Web APP1** and **DB APP1** using **CiscoExternalPublicNLB Network Load Balancer Public IP** over **SSH** and unique port as per your configuration: 
 
@@ -177,17 +177,17 @@ Estimated Lab Time: 20 minutes.
 
 4. Initiate a ping between **Web App1** and **DB App1** VM and vice-versa as per below diagram which validates that traffic between Web and DB spoke VMs is working fine.
 
-   ![](../common/images/81-Verify-East-West-Traffic1.png " ")
+   ![East West Traffic](../common/images/verify-east-west-traffic1.png " ")
 
 5. You can also verify that from **Analysis > Connections > Events** on your **FMC** instance.
 
-   ![](../common/images/82-Verify-East-West-Traffic2.png " ")
+   ![East West Traffic Logs](../common/images/verify-east-west-traffic2.png " ")
 
-## **Task 4: East-West Traffic (Web & DB Application to Oracle Services Network)**
+## Task 4: East-West Traffic (Web & DB Application to Oracle Services Network)
 
 1. From the OCI Services menu, click **Buckets** under **Storage**. Select your region on right part of the screen:
 
-   ![](../common/images/83-Bucket-Home.png " ")
+   ![Object Storage Home Page](../common/images/bucket-home.png " ")
 
 2. Below table represents what you will be creating. Click on **Create Bucket** icon to create new **Bucket**:
 
@@ -201,7 +201,7 @@ Estimated Lab Time: 20 minutes.
       - **COMPARTMENT**: Ensure your compartment is selected
       - **Bucket Type**: Standard
 
-   ![](../common/images/73-Create-Bucket.png " ")
+   ![Create Bucket Home Page](../common/images/create-bucket.png " ")
 
 4. Verify all the information and Click **Create**.
 
@@ -213,7 +213,7 @@ Estimated Lab Time: 20 minutes.
    
     - In your case you can upload an image object for test purpose.
 
-   ![](../common/images/84-Upload-Object-Pre-Auth-URL.png " ")
+   ![Create Object Storage Pre Authenticated URL](../common/images/upload-object-pre-auth-url.png " ")
 
 7. Once you complete **Pre-Authentication Request** a Details dialog box pops up, copy the URL which you will be using to access uploaded Object. 
 
@@ -227,15 +227,15 @@ Estimated Lab Time: 20 minutes.
 
 10. Below image shows value for **SecureFirewall1** instance: 
 
-   ![](../common/images/75-Verify-OSN-Config-1.png " ")
+   ![ONS Traffic Static Route Secure Firewall1](../common/images/verify-osn-config-1.png " ")
 
 11. Below image shows value for **SecureFirewall2** instance: 
 
-   ![](../common/images/75-Verify-OSN-Config-3.png " ")
+   ![ONS Traffic Static Route Secure Firewall2](../common/images/verify-osn-config-3.png " ")
 
 12. Do a sanity check to confirm routes are added successfully on both Secure Firewall instances: 
 
-   ![](../common/images/75-Verify-OSN-Config-2.png " ")
+   ![Route Check Validation](../common/images/verify-osn-config-2.png " ")
 
 13. Create a **NAT Rule** in your existing policy to ensure that traffic from inside towards Object Storage Networks gets **source NATed** to inside interface IP address. Click on **Add Rule** and add a rule at position **#2**. Fill out the dialog box: 
 
@@ -251,11 +251,11 @@ Estimated Lab Time: 20 minutes.
          - **Translated Source**: Destination Interface IP
          - **Translated Destination**: Use host object **object-storage-network** created earlier. 
 
-    ![](../common/images/75-Verify-OSN-Config-4.png " ")
+    ![East West ONS Traffic NAT Rule](../common/images/verify-osn-config-4.png " ")
 
 14. Do a sanity check to make sure **firewall policy** is present. 
 
-   ![](../common/images/75-Verify-North-South-Inbound-Config.png " ")
+   ![East West ONS Traffic Security Policy](../common/images/verify-north-south-inbound-config.png " ")
 
 15. Connect to **Web APP1** and **DB APP1** using **CiscoExternalPublicNLB Network Load Balancer Public IP** over **SSH** and unique port as per your configuration: 
 
@@ -266,11 +266,11 @@ Estimated Lab Time: 20 minutes.
 
 16. Do a **wget** to **Pre-Authentication Request** which you created earlier from Web and DB spoke VMs and you should get a response back.
 
-   ![](../common/images/84-Verify-OSN-Traffic1.png " ")
+   ![East West ONS Traffic](../common/images/verify-osn-traffic1.png " ")
 
 17. You can also verify that from **Analysis > Connections > Events** on your **FMC** instance.
 
-   ![](../common/images/84-Verify-OSN-Traffic2.png " ")
+   ![East West ONS Traffic Logs](../common/images/verify-osn-traffic2.png " ")
 
 ***Congratulations! You have successfully completed the lab.***
 
@@ -289,4 +289,4 @@ You may now [proceed to the next lab](#next).
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** -  Cisco
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023
