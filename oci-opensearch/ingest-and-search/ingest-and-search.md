@@ -26,25 +26,21 @@ Run the following commands from within your VM instance.
 2. Create mapping (optional). If you don't run this command or any variation of it, a default mapping will be automatically created.
 
    ```bash
-   <copy>curl -XPUT "https://mycluster.opensearch.us.example.com:9200/oci" -H 'Content-Type: application/json' -d'
-   {
-     "mappings": {
-       "properties": {
-       "id": {"type": "integer"},
-       "category": {"type": "keyword"},
-      "text": {"type": "text"},
-      "title": {"type": "text"},
-      "url": {"type": "text"}
-       }
-     }
-   }
-   '</copy>
+   <copy>curl -XPUT "https://<opensearch_private_IP>:9200/oci4" -H 'Content-Type: application/json' -k -u <USERID:PASSWORD> -d '{        "mappings": {
+    "properties": {
+      "id": {"type": "integer"},
+      "category": {"type": "keyword"},
+      "text": {"type": "text"},
+      "title": {"type": "text"},
+      "url": {"type": "text"}
+    }}}'
+   </copy>
    ```
 
 3. Push the data set.
 
    ```bash
-   <copy>curl -H 'Content-Type: application/x-ndjson' -XPOST "https://mycluster.opensearch.us.example.com:9200/oci/_bulk?pretty" --data-binary @OCI_services.json</copy>
+   <copy>curl -H 'Content-Type: application/x-ndjson' -XPOST "https:// <opensearch_private_IP>:9200/oci/_bulk?pretty" --data-binary @OCI_services.json -k -u <USERID:PASSWORD></copy>
    ```
 
 4. Check your indices.
@@ -60,7 +56,7 @@ The response should show you the index you created, named `oci`.
 Run the following command:
 
    ```bash
-   <copy>curl -X GET "https://mycluster.opensearch.us.example.com:9200/oci/_search?q=title:Kubernetes&pretty"</copy>
+   <copy>curl -X GET "https://<opensearch_private_IP>:9200/oci/_search?q=title:Kubernetes&pretty" --insecure -u <USERID:PASSWORD></copy>
    ```
 
 For more information about query syntax, see the OpenSearch or ElasticSearch tutorials.  
@@ -68,4 +64,4 @@ For more information about query syntax, see the OpenSearch or ElasticSearch tut
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, September 2022
+* **Last Updated By/Date** - Hassan Ajan, August 2023
