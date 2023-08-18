@@ -11,10 +11,6 @@ In this lab, you will:
 * Update the VCN Route Table
 * Verify private connectivity between Oracle Cloud and your external cloud provider.
 
-### Prerequisites
-
-* Tasks from the previous labs are completed.
-
 ### Video Walkthrough
 
 [Verify Connectivity Video](youtube:oTcQNfchMKc:large)
