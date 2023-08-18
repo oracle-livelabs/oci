@@ -2,12 +2,13 @@
 
 ## About this workshop
 
-OCI Data Flow service is a fully managed serverless Spark as a service. OCI Data Flow makes it easy to run Spark applications to process stream data and perform heavy-weight stream operations including machine learning. In today's workshop, we will cover a typical streaming-related use case from the manufacturing industry.
+
 
 
 ### Workshop Architecture
-data-platform-livelab.png
+OCI Data Platform
 ![Workshop Architecture](images/data-platform-livelab.png "Workshop architecture")  
+OCI Data Flow service is a fully managed Spark as a service. OCI Data Flow makes it easy to run Spark applications to process stream data and perform heavy-weight stream operations including machine learning. In today's workshop, we will use OCI Data Flow as a key data processing engine.
 ![Fully managed Spark from OCI Data FLow](images/manufacturing-app-architecture.png "Zooming into OCI Data Flow")
 
 Estimated Workshop Time: 120 minutes
