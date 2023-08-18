@@ -14,12 +14,6 @@ In this lab, you will:
 
 * Build a Virtual Cloud Network (VCN) using the VCN Wizard.
 
-### Prerequisites
-
-* OCI console access with VCN deployment permissions.
-
-### Video Walkthrough
-
 [VCN Quickstart Video](youtube:svGxVEifOe0:large)
 
 ## Task 1: Deploy a VCN (Virtual Cloud Network)
