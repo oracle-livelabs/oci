@@ -10,8 +10,13 @@ We will modernize the Citibike data platform to solve 3 problems:
 
 ### Workshop Architecture
 We will process the data incrementally in different zones. We will first ingest the data from the raw zone to the bronze zone, will perform data engineering between the bronze and the silver zones, and then finally push the enriched and aggregated data from the silver to the gold zone.
+* How to modernize a data platform using all the data, all kinds of data
+* How to implement bronze, silver gold zones in your modern data platform
+* How to modernize a data platform interactively, enabling all programming languages (SQL, Python, Scala), all data roles
+* How to leverage the power of Delta Lake in your Data Lake, along with Databases
+* How to leverage the deep integrations within Oracle Modern Data Platform (e.g. OCI Data Flow’s one-line-of-code integration with databases via Spark Oracle Data Source, pre-included Delta Lake libraries, OCI Data Flow Spark SQL endpoints within OCI Data Lake for column level security, managed Spark within managed Jupyter notebooks from OCI Data Science)
 ![Workshop Architecture](images/data-platform-livelab.png "Workshop architecture") 
-OCI Data Platform helps you drive advances outcomes using all your data. It comprises of managed open source engines like OCI Data Flow, side-by-side with best-in-class proprietary database engines like Autonomous Database, managed low-code engines like OCI Data Integration service, managed metadata from OCI Data Catalog and centralized storage and governance from OCI Data Lake. We will use all these services in today's hands-on-lab to provide you a complete picture of what an end-to-end Data-AI-ML pipeline will look like in OCI.    
+OCI Data Platform helps you drive advances outcomes using all your data. It comprises of managed open source engines like OCI Data Flow, side-by-side with best-in-class proprietary database engines like Autonomous Database, managed low-code data ingestion and orchestration engines like OCI Data Integration service, managed metadata from OCI Data Catalog and centralized storage and governance from OCI Data Lake. We will use all these services in today's hands-on-lab to provide you a complete picture of what an end-to-end Data-AI-ML pipeline will look like in OCI.    
 ![OCI Data Platform](images/oci-data-platform.png "OCI Data Platform")
 OCI Data Flow service is a fully managed Spark as a service. OCI Data Flow makes it easy to run Spark applications to process stream data and perform heavy-weight stream operations including machine learning. In today's workshop, we will use OCI Data Flow as a key data processing engine.
 ![Fully managed Spark from OCI Data FLow](images/manufacturing-app-architecture.png "Zooming into OCI Data Flow")
