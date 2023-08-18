@@ -1,12 +1,12 @@
 # Introduction
 
 ## About this workshop
-We will build a modern data platform on OCI leveraging OCI Data Flow, OCI Data Integration Service, OCI Data Catalog, Autonomous Database and OCI Data Lake services. We will use the Citibike trip histories datasetfrom https://citibikenyc.com/system-data).
+We will build a modern data platform on OCI leveraging OCI Data Flow, OCI Data Integration Service, OCI Data Catalog, Autonomous Database and OCI Data Lake services. We will use the Citibike trip histories datasetfrom https://citibikenyc.com/system-data.
 
 We will modernize the Citibike data platform to solve 3 problems:
 1. Capacity problem: How to store the right number of bikes in each station?
 2. Maintenance problem: How to ensure the bikes are serviced at the right time?
-3. Security: How to ensure the stakeholders have the right level of security and governance in place, defined at the data platform itself?
+3. Security problem: How to ensure that the users have the right level of security and access, defined and governed centrally at the data platform itself?
 
 ### Workshop Architecture
 
