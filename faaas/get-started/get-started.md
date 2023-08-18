@@ -10,6 +10,8 @@ The new experience for Oracle Fusion Applications Environment Management unifies
 
 Estimated Time: 5+ minutes.
 
+[Get Started](videohub:1_ouvfqnqc)
+
 ### Objectives
 * Learn how to log in to your Oracle Cloud Account
 * Get to know the Oracle Cloud Console navigation
