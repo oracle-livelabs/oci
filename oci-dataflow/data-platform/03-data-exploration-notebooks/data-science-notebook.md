@@ -3,6 +3,7 @@
 ## Introduction
 
 In this section we will analyze the data stored in silver zone and try to draw some insights.
+![OCI Data Flow and OCI Data Science integration](images/data-flow-data-science.png "OCI Data Flow and OCI Data Science integration")
 
 Estimated time: 20 minutes
 
