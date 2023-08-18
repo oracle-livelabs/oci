@@ -8,7 +8,7 @@ Estimated time: 20 minutes
 
 ### Objectives
 
-* The objective of this lab is to teach you how to create a pool in OCI Data Flow. To learn more about pools refer the documentation here. We will then use a data flow application to cleanse the raw data. This data flow application leverages the pool created before hand for your convenience. We will execute the spark application and store the cleansed data in the silver zone schema.
+* The objective of this lab is to teach you how to create a pool in OCI Data Flow. To learn more about pools refer the documentation here. We will then use a data flow application to cleanse the raw data. This data flow application leverages the pool created before hand for your convenience. We will execute the spark application and store the cleansed data in the silver zone schema. We will also understand how a Data Steward can browse Data Catalog to understand the entities in the Lake.
 
 ### Prerequisites
 
@@ -73,6 +73,36 @@ Estimated time: 20 minutes
 2. Verify the table has been created successfully.
 
    ![Oracle Cloud console, Data Flow](images/data-flow-silver-zone-table.png " ")
+
+## Task 4: Discover entities in the Data Catalog
+
+1. Go back to the Lake dashboard, click on the lake name in the breadcrumb as shown below.
+
+   ![Oracle Cloud console, Data Flow](images/data-flow-data-lake.png " ")
+
+2. Now let us understand how a data steward can explore, data entities in the lake. Click on the **Data Catalog** link in the left hand menu as shown below.
+
+   ![Oracle Cloud console, Data Catalog](images/data-catalog.png " ")
+
+3. Click on the data assets link as shown below to browse the data assets.
+
+   ![Oracle Cloud console, Data Catalog](images/data-catalog-data-assets.png " ")
+
+4. The above action will take you to the data assets listing page in the attached Data Catalog. Look for the OCI Data Lake type data assets. The name will follow the pattern: **"DataCatalog" + "Group number" + "_"** long alpha numeric string, where group number will **Grp1** for users from group 1, click on the data asset to browse the harvested entity.
+
+   ![Oracle Cloud console, Data Catalog](images/data-catalog-data-assets-group.png " ")
+
+5. A tab will open for the data asset, click on **Catalogs** and then **hive** as shown below.
+
+   ![Oracle Cloud console, Data Catalog](images/data-catalog-data-assets-hive.png " ")
+
+6. You will be in the Summary tab for the data asset, click on **Databases** to browse the databases.
+
+   ![Oracle Cloud console, Data Catalog](images/data-catalog-data-assets-database.png " ")
+
+7. Once in the databases tab explore the databases and entities to discover lake entities, click on the **silverZoneuser#** database to explore if the recently written trips entity has been harvested and what are the attributes for the same.
+
+   ![Oracle Cloud console, Data Catalog](images/data-catalog-data-assets-entity.png " ")
 
 You may now **proceed to the next lab**. 
 
