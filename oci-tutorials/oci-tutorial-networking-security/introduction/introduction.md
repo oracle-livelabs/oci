@@ -18,11 +18,11 @@ In this workshop, you will:
 ### **Assets**
 
 Powerpoint
-* [OCI Networking and Security QuickStart](https://objectstorage.us-ashburn-1.oraclecloud.com/p/ZjhWuXHqBt8wWLigeWdOjINoxOgaKb1-i6_ooZi2mWOlc[…]ecurity/o/OCW%20Networking%20and%20Security.pdf)
+* [Introduction to Oracle Cloud Networking and Security](https://objectstorage.us-ashburn-1.oraclecloud.com/p/RnzZKTBgclBTclJSojZ1VuZr48ofxS6A-lbUFIxu5cuISDTFEvwjSAHTV_A8xZKG/n/ociobtnas/b/Networking_And_Security/o/TUT2554%20Introduction%20to%20OCI%20Networking%20and%20Security.pdf)
 
 Video Recording
-* [Day One and Beyond: OCI Security Quick Start](https://www.youtube.com/watch?v=QQyN7fY_ZbQ&ab_channel=OracleLearning) 
-* [Day One and Beyond: OCI Networking Quick Start](https://www.youtube.com/watch?v=Eb3jDfyVe7U&ab_channel=OracleLearning) 
+* [Day One and Beyond - OCI Security Quick Start](https://www.youtube.com/watch?v=QQyN7fY_ZbQ&ab_channel=OracleLearning) 
+* [Day One and Beyond - OCI Networking Quick Start](https://www.youtube.com/watch?v=Eb3jDfyVe7U&ab_channel=OracleLearning) 
 
 
 ## Learn More
