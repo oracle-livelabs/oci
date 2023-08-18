@@ -42,7 +42,7 @@ This workshop has all the prerequisites provided for the workshop. Also:
 
 ## Login to OCI
 
-Login to OCI using the URL below and the tenancy and the username/password provded by your Hand-on-Lab instructor;
+Login to OCI using the URL below and the tenancy and the username/password provded by your Hand-on-Lab instructor:
 
 https://console.us-ashburn-1.oraclecloud.com/
 
