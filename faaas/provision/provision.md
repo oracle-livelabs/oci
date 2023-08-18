@@ -9,6 +9,8 @@ Explore the Fusion overview page. Explore the audit trail security functionality
 
 Estimated Time: 20+ minutes
 
+[Provision Fusion Environments](videohub:1_l1sucgqu)
+
 ### Objectives
 * Subscribe to notifications
 * Learn to provision Fusion Applications Environments

@@ -3,12 +3,12 @@
 ## Introduction
 
 Learn how to **run a Data Integration task**, create a **task schedule** in your OCI Data Integration application, and to **run it**.
+
 After publishing tasks to an Application, you can run a task **manually on-demand**, or you can use schedules and task schedules to **automate the execution** of your tasks.
 To run a task automatically on a specific schedule, you must:
 * **Create a schedule**: A schedule defines when and how frequently tasks should be run. A schedule can be used across tasks of any type.
 * **Create a task schedule for the task**: A task schedule is an automated run configuration for a specific task. You schedule a task to run automatically by creating a task schedule, and associating the task schedule with an existing schedule.
 
-Estimated Time: 20 minutes
 
 ### Objectives
 * Create and publish a Data Integration task
@@ -107,7 +107,7 @@ Estimated Time: 20 minutes
 
 You have successfully scheduled the task and the same will run at the selected frequency and time. 
 
-Congratulations!
+   **Congratulations!**
 
 ## Learn More
 

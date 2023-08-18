@@ -1,6 +1,7 @@
 # Introduction
 
 ## About this workshop
+
 We will build a modern intelligent data platform on OCI (Oracle Cloud Infrastructure) using the building blocks of OCI Data Flow, OCI Data Integration Service, OCI Data Catalog, Autonomous Database and OCI Data Lake services. This lab will focus on the 'Data' path of your Data-AI-ML-DL pipeline (Data - Artificial Intelligence - Machine Learning- Deep Learning pipeline).
 
 We will use the Citibike trip histories dataset from https://citibikenyc.com/system-data. The Citibike service (https://citibikenyc.com/) is based in New York city and is one of the leading bike-sharing services in the USA. For today's lab, we will assume that we are part of the Data Platform team of the Citibike service. We are tasked with modernizing the Citibike data platform, to solve the following three problems:
@@ -23,6 +24,24 @@ In today's workshop, we will use OCI Data Flow as a key distributed big data pro
 
 Estimated Workshop Time: 120 minutes
 
+### About Oracle Cloud Infrastructure Data Flow
+Data Flow is a cloud-based serverless platform with a rich user interface. It allows data engineers and data scientists
+to create, edit, and run Apache Spark workloads at any scale without the need for clusters, an operations team, or highly
+specialized Spark knowledge. Being serverless means there is no infrastructure for you to deploy or manage.
+It is entirely driven by REST APIs, giving you easy integration with applications or workflows. You can:
+
+* Connect to Apache Spark data sources.
+* Create reusable Apache Spark applications.
+* Launch Apache Spark jobs in seconds.
+* Create Apache Spark applications using SQL, Python, Java, Scala, or spark-submit.
+* Manage all Apache Spark applications from a single platform.
+* Process data in the Cloud or on-premises in your data center.
+* Create Big Data building blocks that you can easily assemble into advanced Big Data applications.
+
+The diagram below provides an overview of the OCI Data Flow Service, its features, components, and some of the other OCI services it integrates with.
+
+   ![Data Flow Architecture](images/df-overview.png " ")
+
 ### Objectives
 In this workshop, you will:
 * Ingest raw data from Object Store to the Bronze Zone of OCI Data Lake using OCI Data Integration Service
@@ -42,7 +61,7 @@ This workshop has all the prerequisites provided for the workshop. Also:
 
 ## Login to OCI
 
-Login to OCI using the URL below and the tenancy and the username/password provded by your Hand-on-Lab instructor:
+Login to OCI using the URL below and the tenancy and username/password provided;
 
 https://console.us-ashburn-1.oraclecloud.com/
 

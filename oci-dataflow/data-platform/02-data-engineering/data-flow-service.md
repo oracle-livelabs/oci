@@ -8,7 +8,7 @@ Estimated time: 20 minutes
 
 ### Objectives
 
-* The objective of this lab is to teach you how to create a pool in OCI Data Flow. To learn more about pools refer the documentation here. We will then use a data flow application to cleanse the raw data. This data flow application leverages the pool created before hand for your convenience. We will execute the spark application and store the cleansed data in the silver zone schema. We will also understand how a Data Steward can browse Data Catalog to understand the entities in the Lake.
+* The objective of this lab is to teach you how to create a pool in OCI Data Flow. To learn more about pools refer the documentation here. We will then use a data flow application to cleanse the raw data. This data flow application leverages the pool created before hand for your convenience. We will execute the spark application and store the cleansed data in the silver zone schema.
 
 ### Prerequisites
 

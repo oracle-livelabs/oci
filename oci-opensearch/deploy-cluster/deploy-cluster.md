@@ -44,7 +44,7 @@ In this lab, you will:
 2. Run the following command, after replacing mycluster.opensearch.us.example.com with your search API endpoint:
 
       ```bash
-      <copy>curl https://mycluster.opensearch.us.example.com:9200</copy>
+      <copy>curl -XGET "https://<opensearch_private_IP>:9200/_cluster/health?pretty" -k -u <USERID:PASSWORD></copy>
       ```
 
    If all the steps were performed correctly you should see a response as follows:  
@@ -72,4 +72,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, September 2022
+* **Last Updated By/Date** - Hassan Ajan, August 2023

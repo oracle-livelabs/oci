@@ -5,6 +5,8 @@ In this lab, we will log into another cloud account and look at an actual enviro
 
 Estimated Time: 20+ minutes
 
+[Review Fusion Environment](videohub:1_u22mzlk6)
+
 ### Objectives
 * Review subscription service
 * Learn about key metrics for the production environment 
