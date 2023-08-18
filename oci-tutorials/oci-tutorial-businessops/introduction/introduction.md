@@ -10,21 +10,21 @@ Learn about Oracle Cloud Infrastructure (OCI) tools used to keep track of cloud 
 
 In this workshop, you will learn how to:
 * Use compartments and why are they useful for organizing your cloud resources
-* Know the difference between freeform and defined tags. How to create tag namespaces, defined tags, and using tag defaults
-* Create compartment and cost tracking budgets in tenancy. Set up budget alert rules
-* Use the cost analysis dashboard to analyze costs and usage. Create and save different cost analysis reports.
+* Differentiate freeform and defined tags. How to create tag namespaces, defined tags, and using tag defaults
+* Create compartments and cost tracking budgets in tenancy. Set up budget alert rules
+* Use the cost analysis dashboard to analyze costs and usage. Create and save different cost analysis reports
 * Utilize cloud advisor to assess different recommendations and apply them to your cloud resources. Create overrides for recommendations and target them at different resources using tags and compartments
-* Understand the difference between quotas and service limits. How to create quotas in the console using quota policy language
+* Differentiate quotas and service limits. How to create quotas in the console using quota policy language
 
 
 ### **Assets**
 
-Powerpoint
-* [Business Operations](https://objectstorage.us-ashburn-1.oraclecloud.com/p/N0DH1N7JGHk4J0rHw4mH9dmz_YmKSFnKV95wrz_0SAmBK[…]LwsWzWUk2/n/ociobtnas/b/Financial_Operations/o/)
+Powerpoint 
+* [Introduction to OCI Financial Operations: Tracking Resources and Consumption](https://objectstorage.us-ashburn-1.oraclecloud.com/p/b8R6C3lJQ_WaSrBmM_lP1yujd0h4A55pFnr1O9lqo3F4ivahwTrjS52odRARg9G2/n/ociobtnas/b/Financial_Operations/o/TUT2553%20Intro%20to%20OCI%20Financial%20Operations.pdf)
 
 Video Recording
-* [Day One and Beyond: OCI Business Governance](https://www.youtube.com/watch?v=JPLF3h_BPWU&ab_channel=OracleLearning) 
-
+* [Day One and Beyond - OCI Business Operations Quickstart](https://www.youtube.com/watch?v=JPLF3h_BPWU&ab_channel=OracleLearning) 
+<br>Note: Youtube content covers same content as tutorial session, under different title
 
 ## Learn More
 
