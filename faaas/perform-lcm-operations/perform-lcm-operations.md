@@ -6,6 +6,8 @@ Perform Lifecycle Management activities on the Fusion Applications environment
 
 Estimated Time: 20+ minutes
 
+[Perform LCM operations](videohub:1_zc80s34q)
+
 ### Objectives
 * Learn how to refresh and mask data on test or development environment
 * Learn how to edit a language pack

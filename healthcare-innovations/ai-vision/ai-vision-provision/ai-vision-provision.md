@@ -1,4 +1,4 @@
-# Create an Oracle Autonomous Database 
+# Create an Oracle Autonomous Database and Oracle APEX How-to's
 
 ## Introduction
 
@@ -10,7 +10,8 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Learn how to provision a new OracleAutonomous Database
+- Learn how to provision a new Oracle Autonomous Database
+- Learn some of the important Oracle APEX How to's (This is Optional)
 
 ### Prerequisites
 
@@ -21,6 +22,8 @@ In this lab, you will:
 A compartment is a collection of cloud assets, like compute instances, load balancers, databases, and so on. By default, a root compartment was created for you when you created your tenancy (for example, when you registered for the trial account). It is possible to create everything in the root compartment, but Oracle recommends that you create sub-compartments to help manage your resources more efficiently.
 
 If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges to create a compartment and should skip this first task. Oracle LiveLabs has already created a compartment for you and you should use that one. Even though you can't create a compartment, you can review the steps below to see how it is done.
+
+> **Note:**  If you already have a compartment created, you can **optionally skip this Task**.
 
 
 1. Click the three-line menu on the top left of the console. Scroll down to the bottom of the menu, click **Identity & Security -> Compartments**.
@@ -71,12 +74,12 @@ If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges 
  
 1. Click **Create Autonomous Database** to start the instance creation process.
 
-    ![Click Create Autonomous Database.](images/adb-click-create-adb.png "Create ADB")
+    ![Click Create Autonomous Database.](images/adb-click-create-adb.png "Create Autonomous Database")
 
 2.  This brings up the **Create Autonomous Database** screen where you will specify the configuration of the instance.
 
 
-    ![Create Autonomous Database](images/adb-create-screen-freetier-default.png "Create ADB")
+    ![Create Autonomous Database](images/adb-create-screen-freetier-default.png "Create Autonomous Database")
 
 
 3. Give basic information for the autonomous database:
@@ -172,16 +175,300 @@ If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges 
 
     ![Database complete message.](./images/adb-create-complete-message.png "Complete")
 
+## Task 4: How to create an Oracle APEX Workspace
+
+1. Once the Autonomous Database has been fully provisioned, return to the *Autonomous Database* page, locate the instance's display name, and then click on it to view the ADB's details page. Click the *Tools* tab. 
+2. Click the *Copy* button to copy the URL to launch the Oracle APEX development environment. Open the link in a new browser window or tab.
+![Launch the Oracle APEX App Builder.](./images/launch-oracle-apex-app-builder.png)
+3. For new Autonomous Database instances, this should launch the **Administration Services** login screen. Enter the password for the *admin* user and click the **Sign In to Administration** button.
+![Login to the Oracle APEX Administration Services.](./images/login-to-oracle-apex-administration-services.png)
+4. Again, for new Autonomous Database instances, after a successful login, the browser will redirect to the page shown below. Click the **Create Workspace** button.
+![Click the Create Workspace button.](./images/create-a-new-workspace.png)
+5. Click and select the **New Schema** option.
+![Select to create a workspace using a new schema.](./images/create-workspace-using-a-new-schema.png)
+1. Enter the desired **Workspace Name** and **Workspace Username**. The will be used to create an Oracle Database user account. Also, provide a new **Workspace Password** that conforms to the same password policy. Click the **Create Workspace** button to create the workspace.
+![Provide the desired workspace name, and the administrator's username and password.](./images/provide-workspace-name-and-admin-credentials.png)
+1. After the workspace has been successfully provisioned, click the button on the top-right, and then click the **Sign out** button to return to the App Builder login screen.
+![Sign out of the Administration Services.](./images/sign-out-of-administration-services.png)
+1. Enter the workspace name, username, and password set earlier when creating the workspace. Click the **Sign In** button to access the newly created workspace.
+![Login to the new workspace.](./images/login-to-new-workspace.png)
+1. After successful authentication, the browser will redirect to the default App Builder landing page where workspace administrators and developers will have access to various functionalities to develop and manage APEX applications.
+![Once signed in, the workspace administrator and developers have access to the App Builder and a few other utilities.](./images/oracle-apex-development-environment-home-page.png)
+
+## Task 5: How to run SQL queries in Oracle APEX
+
+There are several ways to run SQL queries, few most frequently used techniques are listed below.
+
+1. You can run SQL queries in APEX Workspace under **SQL Workshop** in top navigation and select Option **SQL Commands**
+2. Copy paste SQL queries in the editor window and click on **Run** button
+
+    ![SQL Commands](./images/apex-run-sql.png)
+
+3. Some times you might need to run SQL queries within an APEX page for example displaying data from a table, such SQL queries can be written in SQL Query Editor, this query executes during the page runtime. 
+
+    ![SQL Commands](./images/apex-collection.png)
+
+4. Some times you might need to run SQL queries based on a button click, in that case create **Dynamic Action** under the button, and add **Execute server side code**
+
+    ![SQL Commands](./images/apex-sendmail-5.png)
+
+## Task 6: How to setup Oracle APEX Web Credentials
+
+Oracle APEX Web Credentials provides a convenient and secure mechanism for storing the following types of credentials:
+
+* Basic Authentication (Username & password)
+* OAuth2 Client Credentials (Client ID & Client Secret)
+* OCI Native Authentication (Access Oracle Cloud Resources, e.g., Object Storage)
+* HTTP Header (The credential is added to the REST request as an HTTP Header)
+* URL Query String (The credential is added to the URL of the REST request as a Query String Parameter).
+
+We will be using OCI Native Authentication required to connect with Object Storage
+
+1. In the APEX top navigation Select **App Builder**, Click on **Workspace Utilities**   
+
+    ![Web Credentials](images/workspace-utilities.png " ")
+
+    Select **Web Credentials**
+
+    ![Web Credentials](images/web-credentials.png " ")
+
+    Click on **Create**
+
+    ![Web Credentials](images/create-web-credentials.png " ")
+
+    Provide **User OCID**, **Tenancy OCID**, **Fingerprint**, **Private Key** and authentication type as **Oracle Cloud Infrastructure**
+
+    ![Web Credentials](images/web-credentials-details.png " ")
+
+    > **Note:** If you are new to OCI, Information on how to get these OCIDs is provided in next Lab **Setup OCI CLI**.
+
+## Task 7: How to login to Oracle APEX
+
+We will see how to login to Oracle APEX environment
+
+1. Typically Oracle APEX Urls will be like this 
+   
+    ```text
+    <copy>
+    https://randomid-dbname.dbtype.regionid.oraclecloudapps.com/ords/f?p=appnumber:pagenumber:sessionid 
+    </copy>
+    ``` 
+
+    For example 
+
+    ```text
+    <copy>
+    https://doesnotmatter.adb.us-phoenix-1.oraclecloudapps.com/ords/f?p=4550:1:714943545900442
+    </copy>
+    ``` 
+
+3. Login with the Workspace name, Username and Password as provided by the Workspace Administrator
+
+    ![APEX how tos](images/apex-12.png " ")
+
+## Task 8: How to create Blank Oracle APEX page
+
+1. First you need to create Blank Application or Application that uses sample Apps, from there you can create APEX pages
+2. Click on the Application that has been created.
+3. Click **Create Page** button blank APEX page
+
+    ![APEX how tos](images/apex-01.png " ")
+
+    Select **Blank Page** and Click **Next**
+
+    ![APEX how tos](images/apex-02.png " ")
+
+    Provide page name and **Create Page**
+
+    ![APEX how tos](images/apex-03.png " ")
+
+## Task 9: How to Create Low-Code Data Driven APEX page with CRUD Operations
+
+Similarly, if you want to create a no-code data driven page that allows you to perform CRUD operations on a table, 
+
+1. Select **Interactive Grid** Template
+
+    ![APEX how tos](images/apex-04.png " ")
+
+    Provide page name, Include page form
+
+    ![APEX how tos](images/apex-05.png " ")
+
+    Page mode can be Drawer or Normal. Select the database table on which you would like to do CRUD Operations (Create, Read, Update and Delete records)
+
+    ![APEX how tos](images/apex-06.png " ")
+
+    This automatically picks up the primary key of that table.
+
+    ![APEX how tos](images/apex-07.png " ")
+
+    Two Pages are Automatically Generated, first one will display data and second one will be a record edit page. 
+
+    ![APEX how tos](images/apex-08.png " ")
+
+    Click on the Run button at top right with an arrow symbol. This will display page in run mode. 
+
+    ![APEX how tos](images/apex-10.png " ")
+
+    Click on the Edit Icon on extreme left of a record, this will open a popup
+
+    ![APEX how tos](images/apex-14.png " ")
+
+## Task 10: How to Create Dynamic Actions 
+
+Sometimes, you may want to create Dynamic Actions on a table data or on a button click, such as executing a server side code that invokes a PL/SQL procedure or runs a Javascript code or just submits a page.
+
+1. Select **Dynamic Actions**, Create a new Dynamic Action
+2. Select an Event type for example Click, Double Click, Selection Change etc..
+  
+    ![APEX how tos](images/apex-16.png " ")
+
+3. Create **True** Action, In this example we will select **Alert** if a record is selected.
+
+    ![APEX how tos](images/apex-15.png " ")
+
+## Task 11: How to Create APEX Chart
+
+Sometimes, you may want to display data in a chart for example Bar Chart or Pie Chart or Stacked Bar chart etc. for this the SQL Query should contain a Label and a Numeric Value 
+
+1. Create a new **Region**
+2. Drag and Drop **Chart** into that newly created region.
+  
+    ![APEX how tos](images/apex-17.png " ")
+
+3. Write a SQL Query and select Label and Value
+
+    ```sql
+    <copy>
+        Select ENAME, SAL from EMP;
+    </copy>
+    ``` 
+
+    ![APEX how tos](images/apex-18.png " ")
+
+4. Run the page (Pages are Automatically saved when you run them)
+
+    ![APEX how tos](images/apex-19.png " ")
+
+## Task 12: How to Create a Page Process
+
+Sometimes, you may want to execute a PL/SQL code block immediately after a page has been submitted and before next page loads, This you can do by adding a process that invokes PL/SQL procedure on a button click or page submit
+
+1. Click on the 3rd Icon in top left navigation of the APEX page, Expand the process tree, Under Processes add a new process. On the right side.
+
+    ![APEX how tos](images/apex-20.png " ")
+
+    Sample PL/SQL Code block
+
+    ```sql
+    <copy>
+    BEGIN
+        IMAGE_AI_PK.process_file 
+            (p_apex_file_name => :P2_RECEIPT_FILE, 
+            v_id => :P2_MODEL_NAME, 
+            x_document_id => :P2_DOCUMENT_ID);
+    END;
+    </copy>
+    ``` 
+ 
+2. Apex Button that Submits page.
+
+    ![APEX how tos](images/apex-21.png " ")
+
+## Task 13: How to configuring Oracle APEX Applications to Send Email
+
+1. Before you can send email from an Application Builder application, you must:
+
+    * Log in to Oracle Application Express Administration Services and configure the email settings on the Instance Settings page. See [APEX Mail](https://docs.oracle.com/database/apex-5.1/AEAPI/APEX_MAIL.htm#AEAPI341)
+
+    The most efficient approach to sending email is to create a background job (using the DBMS\_JOB or DBMS\_SCHEDULER package) to periodically send all mail messages stored in the active mail queue. To call the APEX\_MAIL package from outside the context of an Application Express application, you must call apex\_util.set\_security\_group\_id as in the following example
+
+    ```sql
+    <copy>
+     for c1 in (
+            select workspace_id
+            from apex_applications
+            where application_id = p_app_id )
+        loop
+        apex_util.set_security_group_id(p_security_group_id => c1.workspace_id);
+        end loop;
+    </copy>
+    ```
+
+## Task 14: How to send mail in Plain Text format  
+
+1. In the APEX Page add following PL/SQL Dynamic Action on Button click to send mail.
+
+    ```sql
+    <copy>
+        DECLARE
+        l_body      CLOB;
+        BEGIN
+            l_body := 'Thank you for your interest in the APEX_MAIL 
+        package.'||utl_tcp.crlf||utl_tcp.crlf;
+            l_body := l_body ||'  Sincerely,'||utl_tcp.crlf;
+            l_body := l_body ||'  The Application Express Team'||utl_tcp.crlf;
+            apex_mail.send(
+                p_to       => 'some_user@somewhere.com',  
+                 -- change to your email address
+                p_from     => 'some_sender@somewhere.com', 
+                -- change to a real senders email address
+                p_body     => l_body,
+                p_subj     => 'APEX_MAIL Package - Plain Text message');
+        END;
+        / 
+    </copy>
+    ```
+
+## Task 15: How to send mail in Text / HTML message
+
+1. In the APEX Page add following PL/SQL Dynamic Action on Button click to send mail.
+
+    ```sql
+    <copy>
+        DECLARE
+        l_body      CLOB;
+        l_body_html CLOB;
+        BEGIN
+            l_body := 'To view the content of this message, please use an HTML enabled mail client.'||utl_tcp.crlf;
+
+            l_body_html := '<html>
+                <head>
+                    <style type="text/css">
+                        body{font-family: Arial, Helvetica, sans-serif;
+                            font-size:10pt;
+                            margin:30px;
+                            background-color:#ffffff;}
+
+                        span.sig{font-style:italic;
+                            font-weight:bold;
+                            color:#811919;}
+                    </style>
+                </head>
+                <body>'||utl_tcp.crlf;
+            l_body_html := l_body_html ||'<p>Thank you for your interest in the <strong>APEX_MAIL</strong> package.</p>'||utl_tcp.crlf;
+            l_body_html := l_body_html ||'  Sincerely,<br />'||utl_tcp.crlf;
+            l_body_html := l_body_html ||'  <span class="sig">The Application Express Dev Team</span><br />'||utl_tcp.crlf;
+            l_body_html := l_body_html ||'</body></html>'; 
+            apex_mail.send(
+            p_to   => 'some_user@somewhere.com',    
+            p_from => 'some_sender@somewhere.com',  
+            p_body      => l_body,
+            p_body_html => l_body_html,
+            p_subj      => 'APEX_MAIL Package - HTML formatted message');
+        END;
+        /  
+    </copy>
+    ```
+  
 You may now **proceed to the next lab**.
 
 ## Learn more
 
-- See the [documentation](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-workflow.html#GUID-5780368D-6D40-475C-8DEB-DBA14BA675C3) on the typical workflow for using Autonomous Data Warehouse.
+- See the [Autonomous Database GetStarted Guide](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/getting-started.html)  for using Autonomous Data Warehouse.
 - Go to the [Data Warehousing Insider blog](https://blogs.oracle.com/datawarehousing/) for more information on network connectivity options mentioned in this workshop.
 
 ## Acknowledgements
 
-- **Author** - Nilay Panchal, Oracle Autonomous Database Product Management
-- **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
-- **Last Updated By/Date** - Marty Gubar, ADB PM, July 2022
-- **Built with Blocks**
+- **Author** - Madhusudhan Rao, Oracle Database Product Manager 
+- **Last Updated By/Date** - Madhusudhan Rao on 15th Aug 2023

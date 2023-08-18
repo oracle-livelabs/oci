@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will set up your tenancy for the subsequent creation and operation of the OCI Vision custom object detection model.
+In this lab, you will set up your tenancy for the subsequent creation and use of the OCI Vision custom object detection model.
 
 Estimated Time: 20 minutes
 
@@ -16,13 +16,12 @@ Estimated Time: 20 minutes
 
 ## Task 1: Create compartment
 
-In this task, you will create a dedicated compartment for this live lab.
-
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity & Security** and select **Compartments**.
 
    ![Select Compartments](../images/oci_menu_compartments.png)
 
+3. At the top of the screen, ensure that you are using the region you want to use for this workshop.
 4. Click **Create Compartment**.
 5. Provide *vision-livelab* as **Name**, a **Description** of your choice, and leave the root level as Parent.
 6. Click **Create Compartment**.
@@ -34,15 +33,16 @@ In this task, you will create a dedicated compartment for this live lab.
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity & Security** and select **Domains**.
 
-      > **Note:** If you do not see **Domains** it means that your region has not been updated to support identity domains. If that's the case, select **Groups** and move to step 5 below.
+      > **Note:** If you do not see **Domains** it means that your region has not been updated to support identity domains. If that's the case, select **Groups** and move to step 6 below.
 
       ![Select Domains](../images/oci_menu_domains.png)
    
-3. Select the domain listed as *Default (Current domain)*.
-4. On the left menu, select **Groups**.
-5. Select **Create group**.
-6. Provide *vision-group* as **Name**, add a **Description** of your choice, and select your User to add your account to the Group.
-7. Click **Create**.
+3. Select the **Compartmant** *vision-livelab*.
+4. Select the domain listed as *Default (Current domain)*.
+5. On the left menu, select **Groups**.
+6. Select **Create group**.
+7. Provide *vision-group* as **Name**, add a **Description** of your choice, and select your User to add your account to the Group.
+8. Click **Create**.
 
 ## Task 3: Create dynamic group
 
@@ -53,7 +53,7 @@ In this task, you will create a dedicated compartment for this live lab.
 
       ![Select Domains](../images/oci_menu_domains.png)
 
-3. Select the domain listed as *Current domain*.
+3. Select the domain listed as *Default (Current domain)*.
 4. On the left menu, select **Dynamic groups**.
 5. Select **Create dynamic group**.
 6. Provide *dls-dynamic-group* as **Name**, add a **Description** of your choice, and add the following matching rule:
@@ -67,8 +67,6 @@ In this task, you will create a dedicated compartment for this live lab.
 7. Click **Create**.
 
 ## Task 4: Policy setup
-
-In this task, you will create the required OCI IAM policy.
 
 1. In the Oracle Cloud Console, click the main menu icon to open the side menu.
 2. Click **Identity & Security** and select **Policies**. 

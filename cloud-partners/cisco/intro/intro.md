@@ -12,7 +12,7 @@ Oracle Cloud Infrastructure's partner Cisco's **Secure Firewall** solution is av
 
 Attached below is a sample architecture of the solution:
 
-   ![](../common/images/arch.png " ")
+   ![OCI Network Topology Architecture with Cisco Secure Firewall Solution](../common/images/arch.png " ")
 
 Estimated time: 120 minutes
 

@@ -60,7 +60,7 @@ Estimated Time: 30 minutes.
     - The subnet created is populated: **frontend-subnet**
     - Enable Public IP Address assignment: **Assign a public IPv4 address**
 
-     ![](../common/images/105-Check-point-Manager.png " ")
+     ![Detailed Page of Creating Primary Firewall Compute Instance in Firewall Hub VCN](../common/images/check-point-manager.png " ")
 
 8. Ensure **PASTE PUBLIC KEYS** is selected under **Add SSH Keys**. Paste the public key copied earlier.
 
@@ -98,11 +98,11 @@ Estimated Time: 30 minutes.
 
     - **CloudGuard1** instance creation details:
 
-      ![](../common/images/36-CloudGuard1-Hub-VCN-Instance.png " ")
+      ![Detailed Page of Creating Primary Firewall Compute Instance Details in Firewall Hub VCN](../common/images/cloudguard1-hub-vcn-instance.png " ")
 
     - **CloudGuard2** instance creation details:
 
-      ![](../common/images/37-CloudGuard2-Hub-VCN-Instance.png " ")
+      ![Detailed Page of Creating Secondary Firewall Compute Instance Details in Firewall Hub VCN](../common/images/cloudguard2-hub-vcn-instance.png " ")
 
 ## Task 2: Add Interfaces on CloudGuard Instances
 
@@ -119,7 +119,7 @@ Estimated Time: 30 minutes.
     - **Network**:  Keep the default value as Normal Setup
     - **Subnet**: Select **backend-subnet** from drop down
     - **Skip source/destination check**: Select checkmark next to this option
-      ![](../common/images/38-CloudGuard1-Hub-VCN-Backend-Instance.png " ")
+      ![Detailed Page of Attaching Backend VNIC to Primary Firewall Instance in Firewall Hub VCN](../common/images/cloudguard1-hub-vcn-backend-instance.png " ")
 
 3. Verify all the information and Click **Save Changes**.
 
@@ -129,7 +129,7 @@ Estimated Time: 30 minutes.
 
 5. Navigate to primary interface of **CloudGuard1** instance and make sure that you have enabled **Skip source/destination check**:
 
-    ![](../common/images/37-CloudGuard1-Primary-Interface.png " ")
+    ![Backend VNIC Detailed Page of Primary Firewall Instance in Firewall Hub VCN](../common/images/cloudguard1-primary-interface.png " ")
 
 6. Click on **CloudGuard2** instance and navigate to **Attached VNIC** under Resources section of the instance details page. You will be adding **backend** interface:
 
@@ -145,7 +145,7 @@ Estimated Time: 30 minutes.
       - **Subnet**: Select **backend-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-    ![](../common/images/39-CloudGuard2-Hub-VCN-Backend-Instance.png " ")
+    ![Detailed Page of Attaching Backend VNIC to Primary Firewall Instance in Firewall Hub VCN](../common/images/cloudguard2-hub-vcn-backend-instance.png " ")
 
 8. Verify all the information and Click **Save Changes**.
 
@@ -155,7 +155,7 @@ Estimated Time: 30 minutes.
 
 10. Navigate to primary interface of **CloudGuard2** instance and make sure that you have enabled **Skip source/destination check**:
 
-    ![](../common/images/37-CloudGuard2-Primary-Interface.png " ")
+    ![Backend VNIC Detailed Page of Secondary Firewall Instance in Firewall Hub VCN](../common/images/cloudguard2-primary-interface.png " ")
 
 ## Task 3: Assign Secondary IP Addresses on Primary CloudGuard Instance
 
@@ -173,7 +173,7 @@ Estimated Time: 30 minutes.
       - **PublicIP Name**:  Enter a user-friendly name
       - **COMPARTMENT**: Ensure your compartment is selected
 
-    ![](../common/images/44-CloudGuard1-Hub-VCN-Frontend-Instance-Floating-IP.png " ")
+    ![Detailed Page of Adding Secondary IP address to Primary VNIC of Primary Firewall Instance in Firewall Hub VCN](../common/images/cloudguard1-hub-vcn-frontend-instance-floating-ip.png " ")
 
 3. Verify all the information and Click **Assign**.
 
@@ -186,7 +186,7 @@ Estimated Time: 30 minutes.
       - **Public IP Type**: No Public IP
       - **COMPARTMENT**: Ensure your compartment is selected
 
-    ![](../common/images/45-CloudGuard1-Hub-VCN-backend-Instance-Floating-IP.png " ")
+    ![Detailed Page of Adding Secondary IP address to Backend VNIC of Primary Firewall Instance in Firewall Hub VCN](../common/images/cloudguard1-hub-vcn-backend-instance-floating-ip.png " ")
 
 6. Verify all the information and Click **Assign**.
 
@@ -198,7 +198,7 @@ Estimated Time: 30 minutes.
 
 1. From the OCI Services menu, click **Dynamic Groups** under **Identity & Security**. Select your region on right part of the screen:
 
-    ![](../common/images/55-Create-Dynamic-Group.png " ")
+    ![Create Dynamic Group Home Page](../common/images/create-dynamic-group.png " ")
 
 2. You will be creating **Dynamic Group** which will include **CloudGuard** instances OCIDs which will support HA failover use-case. Based on below tables you will create Dynamic Group.
 
@@ -216,7 +216,7 @@ Estimated Time: 30 minutes.
         - **Instance OCID**:
             - **Value**: Enter CloudGuard2 Instance OCID
 
-    ![](../common/images/53-Dynamic-Group.png " ")
+    ![Create Dynamic Group](../common/images/dynamic-group.png " ")
 
 4. Verify all the information and Click **Add Rule** and Click **Create**:
 
@@ -226,7 +226,7 @@ Estimated Time: 30 minutes.
 
 6. From the OCI Services menu, click **Policies** under **Identity & Security**. Select your region on right part of the screen:
 
-    ![](../common/images/56-Create-Dynamic-Group-Policy.png " ")
+    ![Create IAM Policy with Dynamic Group](../common/images/create-dynamic-group-policy.png " ")
 
 7. You will be creating **Dynamic Group Policy** which will include **CloudGuard** instances OCIDs which will support HA failover use-case. Based on below tables you will create Dynamic Group Policy.
 
@@ -244,7 +244,7 @@ Estimated Time: 30 minutes.
       - **COMPARTMENT**: Ensure **resources** compartment is selected
         - In this lab environment you have created all resources in a single compartment for example: **livelabs**
 
-    ![](../common/images/54-Dynamic-Group-Policy-Root-Compartment.png " ")
+    ![Create IAM Policy associated with Dynamic Group](../common/images/dynamic-group-policy-root-compartment.png " ")
 
 9. Verify all the information and Click **Create**.
 
@@ -252,13 +252,13 @@ Estimated Time: 30 minutes.
 
     *New Policy Present in Instances compartment associated with dynamic group created earlier*
 
-7. Verify at this point you have required instances are running in your chosen compartment:
+11. Verify at this point you have required instances are running in your chosen compartment:
    - **One** Check Point Security Management in Firewall-VCN
    - **Two** CloudGuard Instances in Firewall-VCN
    - **Two** Linux VM Instances in Web-VCN
    - **Two** Linux VM Instances in DB-VCN
 
-    ![](../common/images/57-All-Instances.png " ")
+    ![Created Instances](../common/images/all-instances.png " ")
 
 ## Task 5: Update Route Tables on Firewall-VCN
 
@@ -274,7 +274,7 @@ Estimated Time: 30 minutes.
 
 5. Add **Description**.
 
-    ![](../common/images/68-VCN-Ingress-Route-Table-Entries.png " ")
+    ![Add required route table entries with VCN Ingress Route Table](../common/images/vcn-ingress-route-table-entries.png " ")
 
 6. Click **Add Route Rules** to finish.
 
@@ -291,7 +291,7 @@ Estimated Time: 30 minutes.
 
 11. Add **Description** for each entry.
 
-    ![](../common/images/69-Backend-Route-Table-Entries.png " ")
+    ![Add required route table entries with Backend Subnet Route Table](../common/images/backend-route-table-entries.png " ")
 
 12. Click **Add Route Rules** to finish.
 
@@ -312,7 +312,7 @@ Estimated Time: 30 minutes.
 
 16. Add **Description** for each entry.
 
-    ![](../common/images/70-Default-Route-Table-Entries.png" ")
+    ![Add required route table entries with Frontend Subnet Default Route Table](../common/images/default-route-table-entries.png " ")
 
 17. Click **Add Route Rules** to finish.
 
@@ -328,9 +328,9 @@ Estimated Time: 30 minutes.
 
 22. Add **Description** for each entry.
 
-    ![](../common/images/72-SGW-Route-Table-Entry.png " ")
+    ![Add required route table entries with Service Gateway](../common/images/sgw-route-table-entry.png " ")
 
-17. Click **Add Route Rules** to finish.
+23. Click **Add Route Rules** to finish.
 
 ## Task 6: Verify Route Tables associated to Subnets and Gateways
 
@@ -347,11 +347,11 @@ Estimated Time: 30 minutes.
 
 2. Below example reflects how to attach correct route table based on above table to one of the resource **Service Gateway**:
 
-    ![](../common/images/74-Create-Service-Gateway-Route-Table.png " ")
+    ![Associating Route Table to Service Gateway page](../common/images/create-service-gateway-route-table.png " ")
 
 3. Below example reflects how to attach correct route table based on above table to one of the resource **BackendRouteTable**:
 
-    ![](../common/images/102-Update-Backend-Route-Table.png " ")
+    ![Associating Route Table to Backend Subnet page](../common/images/update-backend-route-table.png " ")
 
 **Congratulations! You have successfully completed the lab.**
 
@@ -368,4 +368,4 @@ Estimated Time: 30 minutes.
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Check Point
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023
