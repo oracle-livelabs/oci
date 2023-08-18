@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "OCI Tutorial - Putting OCI best practices into practice",
+    "workshoptitle": "OCI Tutorial - Best Practices to Design and Operate OCI",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
