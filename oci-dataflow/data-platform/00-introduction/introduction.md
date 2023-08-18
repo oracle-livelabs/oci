@@ -40,9 +40,9 @@ This workshop has all the prerequisites provided for the workshop. Also:
 * Familiarity with Oracle Cloud Infrastructure (OCI) is helpful 
 * Familiarity with ETL, Notebooks and SQL concepts is helpful
 
-##Login to OCI
+## Login to OCI
 
-Login to OCI using the URL below and the tenancy and username/password provided;
+Login to OCI using the URL below and the tenancy and the username/password provded by your Hand-on-Lab instructor;
 
 https://console.us-ashburn-1.oraclecloud.com/
 
