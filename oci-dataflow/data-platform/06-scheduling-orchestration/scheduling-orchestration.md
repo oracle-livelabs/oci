@@ -2,21 +2,18 @@
 
 ## Introduction
 
-Learn how to **run a Data Loader task**, create a **task schedule** in your OCI Data Integration application, to **schedule the Pipeline task** and to **run it**.
+Learn how to **run a Data Integration task**, create a **task schedule** in your OCI Data Integration application, and to **run it**.
+
 After publishing tasks to an Application, you can run a task **manually on-demand**, or you can use schedules and task schedules to **automate the execution** of your tasks.
 To run a task automatically on a specific schedule, you must:
 * **Create a schedule**: A schedule defines when and how frequently tasks should be run. A schedule can be used across tasks of any type.
 * **Create a task schedule for the task**: A task schedule is an automated run configuration for a specific task. You schedule a task to run automatically by creating a task schedule, and associating the task schedule with an existing schedule.
 
-You will schedule your Pipeline Task to run daily at 2PM.
-
-Estimated Time: 20 minutes
 
 ### Objectives
-* Run the Data Loader task
+* Create and publish a Data Integration task
+* Manage Data Integration application tasks
 * Create a Schedule
-* Schedule the Pipeline Task
-* Run the Pipeline Task
 
 ### Prerequisites
 
@@ -24,156 +21,91 @@ Estimated Time: 20 minutes
 * Some understanding of Cloud, Database, Data Lake terms is helpful 
 * Familiarity with ETL concepts is helpful
 
-## Task 1: Run the Data Loader task
+## Task 1: Create and publish tasks
 
-In this step, you will do a **manual on-demand run** of your **Data Loader task**. However, you can run all the published tasks in your Application (Integration task, Data Loader task, SQL task, Pipeline task) in the same manner. The Tasks section of an Application details page shows the list of tasks you have published to the Application. You execute published tasks from the list.
+1. Once you are in the OCI console, click on the left hand top left menu, go to **Analytics & AI** and then click on **Data Lake**.
 
-1. In the Oracle Cloud Infrastructure Console navigation menu, navigate to **Analytics & AI**. Under Data Lake, click **Data Integration**.
+  ![Oracle Cloud Console, Data Integration](./images/data-lake.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/menu-di.png " ")
+2. Go to the Data Lake assigned to you.
 
-2. From the Workspaces page, make sure that you are in the compartment you created for data integration (`DI-compartment`). Click on your **Workspace** (`DI-workspace`).
+  ![Oracle Cloud Console, Data Integration](./images/data-lake-group.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/workspaces-click.png " ")
+3. Click on the **Data Integration** menu on the left hand menu.
 
-3. From your `DI_Workspace` homepage, click on **Applications**.
+  ![Oracle Cloud Console, Data Integration](./images/data-integration.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/workspace-homepage-applications.png " ")
+4. Click on the **Data Integration home** button as shown below.
 
-4. From the **list of Applications**, select the `Workshop Application`, which contains all the tasks that you created previously in this workshop.
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-home.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/applications-list.png " ")
+5. Click on the **Projects** menu as shown below.
 
-5. You now have the list of published task in `Workshop Application` displayed. From the list of tasks, select **Run** from the **Actions menu** (three dots) for the `Load Revenue Data into Data Warehouse` Data Loader task that you will run.
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-project.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/run-data-loader-task.png " ")
+6. Once in the project listing page, click on the project that is assigned to you, for example: **user 1** from **group 1** will work in **DataLakePrjUser1**.
 
-6. A **run entry** is created in the Runs section of the Application details page. You can monitor here the **status** and **duration** of your task run. Click on **Refresh** if you want to update the status.
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-project-datalake.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/data-loader-task-running.png " ")
+7. We will now create a OCI Data Flow task. Click on the **Tasks** menu in the left hand side, then click on **Create Task** and then select **OCI Data Flow** as shown below.
 
-7. After a short time, The **Data Loader task run ends successfully**. You can also check in the Autonomous Data Warehouse the inserted data.
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-task.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/data-loader-task-successful.png " ")
+8. In the name field input **DataPrepTask** and then click on Select in **OCI Data Flow Application** block as shown below.
 
-## Task 2: Create a Schedule
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-task-1.png " ")
 
-You will first create a **Schedule** in the Application that contains the tasks that can be scheduled for automated runs. Set up a schedule by selecting a time zone and configuring a frequency at which associated task schedules should run. You can automate task runs on an hourly schedule, or a daily or monthly schedule.
+9. In the following screen select the compartment **"CloudWorld_Shared"**, this will populate a table with all Data Flow applications in the compartment, select **DataPrepGrp1** based on the group number you belong to and then click on **Select** as shown below.
 
-1. In the Oracle Cloud Infrastructure Console navigation menu, navigate to **Analytics & AI**. Under Data Lake, click **Data Integration**.
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-application.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/menu-di.png " ")
+10. Then click on **Validate**, wait for successful validation, then click on **Create and close**.
 
-2. From the Workspaces page, make sure that you are in the compartment you created for data integration (`DI-compartment`). Click on your **Workspace** (`DI-workspace`).
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-task-validation.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/workspaces-click.png " ")
+11. This will take you to the Tasks page, click on the action menu on the right and then click on **Publish to application**.
 
-3. From your `DI_Workspace` homepage, click on **Applications**.
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-application-publish.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/workspace-homepage-applications.png " ")
+12. Select the application assigned to you, if you are from group 1 user 1, the application will end with the string User1.
 
-4. From the **list of Applications**, select the `Workshop Application`, which contains all the tasks that you created previously in this workshop.
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-application-publish1.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/applications-list.png " ")
+## Task 2: Manage Application tasks and Scheduling
 
-5. On the Application details page, click **Schedules tab** under Details.
+1. A notification will pop up on the right top corner click on **"View Application"**.
 
-  ![Oracle Cloud Console, Data Integration](./images/schedules-section.png " ")
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-application-view.png " ")
 
-6. Click **Create Schedule**.
+2. Make sure you are in the **Tasks** section and click on the action menu for the newly published task and click on **Schedule**.
 
-  ![Oracle Cloud Console, Data Integration](./images/create-schedule.png " ")
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-application-tasks.png " ")
 
-7. On the **Create Schedule** page:
+3. Now we will create a task schedule. In the slide in window for creating task schedule give the task schedule a name: **DataPrepTask_TaskSchedule**, then scroll down to the Schedule block and click on select as shown below.
 
-    - Enter a **Name**: `Daily Schedule 2PM`
-    - Enter a **Description** (optional)
-    - Select a **Time Zone** for this schedule: `For example, (UTC+01:00) Central European Time (CET)`
-    - From the **Frequency** drop-down, select `Daily`
-    - **Repeat Every**: Enter the number of days between scheduled runs. We want the schedule to repeat every single day, so leave the default option of `1`
-  For example, enter 2 if you want the schedule to run every two days
-    - **Time**: Enter the time in the 24-hour format. For example, enter `14:00` for 2PM
-    - **Review** the Summary of your schedule
-    - Click **Create**.
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-task-schedule.png " ")
 
-    ![Oracle Cloud Console, Data Integration](./images/create-schedule-options.png " ")
+4. Next we will create a schedule, click on **Create Schedule** button.
 
-8. You can now see the **new schedule** in the Schedules list from your application.
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-create-schedule.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/schedules-list.png " ")
+5. In the Create schedule page, give the schedule a name, select Time zone as per your preference, select the frequency and time and click on create as shown below.
 
-## Task 3: Schedule the Pipeline task
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-create-schedule1.png " ")
 
-You can create **task schedules** to schedule tasks to run on **specific days and times**, and at a **specific frequency**. You create a task schedule for each task that you want to run on an **automated schedule**. A task schedule must be associated with an existing schedule. You can enable or disable a task schedule at any time. In this step, you will schedule the Pipeline Task. However, scheduling process is the same for all tasks in OCI Data Integration.
+6. You will be redirected to the create schedule page, make sure the newly created schedule is selected and click on **Select**.
 
-1. From the `Workshop Application` you are currently in, click on **Tasks** under Details section.
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-select-schedule.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/tasks-section.png " ")
+7. Verify the schedule information and click on create and close.
 
-2. In the Tasks section, click on the **Actions menu** (three dots) from the `Load DWH Pipeline Task` and select **Schedule**.
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-verify-schedule.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/action-menu-pipeline-task.png " ")
+8. You will get a notification on the top right corner of the screen for successful creation of the schedule as shown below.
 
-4. On the **Create Task Schedule** page, enter a **Name** (`Load DWH Pipeline Task - Daily`) and **Description** (optional).
+  ![Oracle Cloud Console, Data Integration](./images/data-integration-schedule-success-message.png " ")
 
-  ![Oracle Cloud Console, Data Integration](./images/task-schedule-name.png " ")
-
-5. Select the **Enable Task Schedule check box** to allow this task schedule to trigger automated runs when schedule conditions are met.
-
-  ![Oracle Cloud Console, Data Integration](./images/enable-task-schedule.png " ")
-
-6. In the **Schedule** section:
-
-    - Click **Select** to associate this task schedule with a schedule
-    ![Oracle Cloud Console, Data Integration](./images/select-button-schedule.png " ")
-    - On the **Select Schedule** page, check the existing schedule (`Daily Schedule 2PM`) that you created in _Create a Schedule_, then click **Select**.
-    ![Oracle Cloud Console, Data Integration](./images/select-schedule.png " ")
-
-7. In the Configure Task Schedule section, click **Configure** to specify run options for this task schedule.
-
-  ![Oracle Cloud Console, Data Integration](./images/configure-task-schedule-button.png " ")
-
-8. In the **Configure Task Schedule** page:
-
-    - **Start Time** and **End Time** are optional. If you don't specify a Start Time, this task schedule takes effect immediately, and runs are triggered when conditions specified in the associated schedule are met. We will not define Start Time and End Time.
-    - Leave blank also the optional **Expected Time to Complete** field.
-    - For **Retry Count**, enter the number of times to retry executing the task when a run fails. For example, you can define a value of **1**.
-    - Enter a value in **Retry Delay Duration**, and then select a unit from the menu to specify the time interval between retries. You can specify a value in seconds, minutes, or hours. The value must be greater than 5 seconds. Leave the default of **30 seconds**.
-    - Click **Configure**.
-
-    ![Oracle Cloud Console, Data Integration](./images/configure-task-schedule.png " ")
-
-9. **Review** the options you defined and click **Save and Close**.
-
-  ![Oracle Cloud Console, Data Integration](./images/task-schedule-save-close.png " ")
-
-10. From the `Workshop Application` you are currently in, click on **Task Schedules** under Details section.
-
-  ![Oracle Cloud Console, Data Integration](./images/task-schedules-section.png " ")
-
-11. In the list of Task Schedules, you can find the one you have just defined. **Your pipeline task is now scheduled to run every day at 2PM**.
-
-  ![Oracle Cloud Console, Data Integration](./images/task-schedule.png " ")
-
-## Task 4: Run the Pipeline task
-
-In this step, you will now do a **manual on-demand run** of your pipeline task. However, you can run all the published tasks in your Application (Integration task, Data Loader task, SQL task, Pipeline task).
-
-1. From the `Workshop Application` you are currently in, click on **Tasks** under Details section.
-
-  ![Oracle Cloud Console, Data Integration](./images/tasks-section.png " ")
-
-2. From the list of tasks, select **Run** from the **Actions menu** (three dots) for the `Load DWH Pipeline Task` that you will run.
-
-  ![Oracle Cloud Console, Data Integration](./images/run-pipeline-task.png " ")
-
-3. A **run entry** is created in the Runs section of the Application details page. You can monitor here the **status** and **duration** of your task run. Click on **Refresh** if you want to update the status.
-
-  ![Oracle Cloud Console, Data Integration](./images/pipeline-running.png " ")
-
-4. The Pipeline task run has ended successfully. You can also check in the Autonomous Data Warehouse the inserted data.
-
-  ![Oracle Cloud Console, Data Integration](./images/pipeline-success.png " ")
+You have successfully scheduled the task and the same will run at the selected frequency and time. 
 
    **Congratulations!**
 
@@ -185,6 +117,5 @@ In this step, you will now do a **manual on-demand run** of your pipeline task. 
 
 ## Acknowledgements
 
-* **Author** - Theodora Cristea
-* **Contributors** -  Rohit Saha
+* **Author** - Rohit Saha
 * **Last Updated By/Date** - Mario Miola, August 2023
