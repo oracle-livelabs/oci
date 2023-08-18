@@ -3,7 +3,7 @@
 ## About this workshop
 We will build a modern intelligent data platform on OCI (Oracle Cloud Infrastructure) using the building blocks of OCI Data Flow, OCI Data Integration Service, OCI Data Catalog, Autonomous Database and OCI Data Lake services. This lab will focus on the 'Data' path of your Data-AI-ML-DL pipeline (Data - Artificial Intelligence - Machine Learning- Deep Learning pipeline).
 
-We will use the Citibike trip histories dataset from https://citibikenyc.com/system-data. The Citibike service (https://citibikenyc.com/) is based in New York city and is one of the leading bike-sharing services in the USA. For today's lab, we will assume that we are part of the Data Platform team of the citibike service. We are tasked with modernizing the Citibike data platform, to solve the following three problems:
+We will use the Citibike trip histories dataset from https://citibikenyc.com/system-data. The Citibike service (https://citibikenyc.com/) is based in New York city and is one of the leading bike-sharing services in the USA. For today's lab, we will assume that we are part of the Data Platform team of the Citibike service. We are tasked with modernizing the Citibike data platform, to solve the following three problems:
 1. Capacity problem: How to store the right number of bikes in each station?
 2. Maintenance problem: How to ensure the bikes are serviced at the right time?
 3. Security problem: How to ensure that the users have the right level of security and access, defined and governed centrally at the data platform itself?
