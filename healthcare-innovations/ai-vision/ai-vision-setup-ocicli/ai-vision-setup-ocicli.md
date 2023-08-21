@@ -1,4 +1,4 @@
-# Setup OCI CLI (Required Steps)
+# Setup OCI CLI - Command Line Interface
 
 ## Introduction
 
@@ -28,7 +28,10 @@ In this lab, you will:
 This lab assumes:
 
 * You have an Oracle Cloud account with OCI and IDCS administration privileges or
-* Your OCI and IDCS administrator can perform steps in this lab for you.
+* Your OCI tenancy administrator can perform steps in this lab for you.
+
+> **Note:** Please refer [Quickstart Installation guide on OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm) for various operating systems, you can **optionally skip this Lab** if you have already installed OCI CLI on your laptop or desktop machine.
+
 
 ## Task 1: Get User's OCID
 
@@ -65,30 +68,52 @@ The CLI is a small-footprint tool that you can use on its own or with the Consol
 
 1. **Install OCI CLI on MAC OS**
 
+2. If you have not installed brew on your MacOS please refer their official guide [Install Brew on Mac](https://docs.brew.sh/Installation)
+
+    ```text
+    <copy>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</copy>
+    ``` 
+
     ```text
     <copy>brew update && brew install oci-cli</copy>
     ``` 
-2. **Install OCI CLI on Windows OS**
+3. **Install OCI CLI on Windows OS**
+4. Open the PowerShell console using the Run as Administrator option. The installer enables auto-complete by installing and running a script. To allow this script to run, you must enable the RemoteSigned execution policy.
+
+    To configure the remote execution policy for PowerShell, run the following command.
 
     Download the installer script
 
     ```text
-    <copy>Invoke-WebRequest https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1 -OutFile install.ps1</copy>
+    <copy>Set-ExecutionPolicy RemoteSigned</copy>
     ```
 
-    To run the installer script without prompting the user, accepting the default settings, run the following command:
+5. Force PowerShell to use TLS 1.2 for Windows 2012 and Windows 2016:
 
     ```text
-    <copy>./install.ps1 -AcceptAllDefaults  </copy>
+    <copy>[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 </copy>
     ```
 
-3. **On Linux and Unix**
+6. Download the installer script:
+
+    ```text
+    <copy>Invoke-WebRequest https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1 -OutFile install.ps1
+    </copy>
+    ```
+
+7. To run the installer script without prompting the user, accepting the default settings, run the following command:
+8. ```text
+    <copy>./install.ps1 -AcceptAllDefaults  
+    </copy>
+    ```
+
+9. **On Linux and Unix**
 
     ```text
     <copy>bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"</copy>
     ```
 
-4. **Verifying the OCI CLI Installation**
+10. **Verifying the OCI CLI Installation**
 
     ```text
     <copy>oci --version</copy>
@@ -117,7 +142,7 @@ The CLI is a small-footprint tool that you can use on its own or with the Consol
     region=< region ></copy>
     ```
 
-    for example the completed file might look like this
+    for example the completed file might look like this, please replace the User OCID, fingerprint, Tenancy OCID, Home region, key_file as per your tenancy and local file path for the key file
 
     ```text
     <copy>[DEFAULT]
@@ -131,7 +156,7 @@ The CLI is a small-footprint tool that you can use on its own or with the Consol
 
 ## Task 6: List all Buckets in a Compartment using OCI CLI
 
-1. Reality check if we can list all buckets in a compartment to check if all configurations are correct.
+1. Reality check if we can list all buckets in a compartment to check if all configurations are correct. provide your compartment ocid where the OCI buckets have been created
 
     ```text
     <copy> 
@@ -172,8 +197,21 @@ The CLI is a small-footprint tool that you can use on its own or with the Consol
 1. We will be using this config file path and OCIDs here in later labs, please make a note of them  
 
     ```text
-    <copy>~/.oci/config</copy>
+    <copy>cat ~/.oci/config</copy>
     ```
+
+    In other operating systems you can open the file using text editor such as Notepad or Vi editor.
+
+    > **Congratulations:** You have now completed the **Common Labs**, which is required for most of the following parts and labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other.
+
+## Troubleshooting
+
+1. Unable to list OCI Buckets through OCI CLI
+   
+  Solution 1: Check for all the OCIDs and Fingerprint in the configuration file if it matches with the one in the tenancy settings.
+
+  Solution 2: Check if the buckets have been created in same compartment as the one that you are querying from OCI CLI
+
 
 You may now **proceed to the next lab**.
 
@@ -182,8 +220,9 @@ You may now **proceed to the next lab**.
 * [OCI Documentation](https://docs.oracle.com/en-us/iaas/Content/home.htm)
 * [Data Labeling Service](https://docs.oracle.com/en-us/iaas/data-labeling/data-labeling/using/about.htm)
 * [Configure OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliconfigure.htm)
+* [Install Brew on Mac](https://brew.sh/)
 
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - May 23rd, 2023.
+* **Last Updated By/Date** - 14th August, 2023.

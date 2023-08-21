@@ -39,12 +39,12 @@ To set up the Oracle Digital Assistant on the OCI tenancy, you will:
 ### Prerequisites
 
 * A user with access to provision & manage Core OCI services like Oracle Digital Assistant
-
+ 
 ## Task 1: Log into OCI
 
 1. Login into OCI
 
-    To setup environment, you need OCI administrator's privileges. If you've got these privileges, login into OCI at [cloud.oracle.com](https://www.oracle.com/cloud/sign-in.html). the below image indicates SSO Login as an administrative user. If you have administrative previleges and complete access over a tenancy then you need not create any of the policies below steps.
+    To setup environment, you need OCI administrator's privileges. If you've got these privileges, login into OCI at [cloud.oracle.com](https://www.oracle.com/cloud/sign-in.html). the below image indicates SSO Login as an administrative user. If you have administrative privileges and complete access over a tenancy then you need not create any of the policies below steps.
 
     ![SSO Login](images/sso-login.png)
 
@@ -176,7 +176,7 @@ To set up the Oracle Digital Assistant on the OCI tenancy, you will:
 
   ![ODA Channel](./images/create-channel-2.png " ")
  
-You may now **proceed to the next lab.**
+  > **Congratulations**, you have completed **Setup Oracle Digital Assistant** Lab. The subsequent labs are optional, however, please proceed to the next lab to learn more about **APEX Integration with Oracle Digital Assistant**.
 
 ## Acknowledgements
 

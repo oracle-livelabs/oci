@@ -19,7 +19,10 @@ In this workshop, you will:
 ### **Assets**
 
 Powerpoint
-* [Getting Started in Oracle Cloud Infrastructure](https://objectstorage.us-ashburn-1.oraclecloud.com/p/z5HTmQ10vY016CKRih4152UwpibN_pnElNgGbRMldyJvGklVl2LoMUPxzRA3oNLt/n/ociobtnas/b/OCW2022/o/TUT4113_Getting%20Started%20in%20OCI_Final.pdf)
+* 
+
+Resource Links for Reference 
+* 
 
 ## Learn More
 
