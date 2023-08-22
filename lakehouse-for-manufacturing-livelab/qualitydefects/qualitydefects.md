@@ -80,10 +80,10 @@ Follow these steps to create a Project in Vision.
 ## Task 2: Create Custom Model
 
 In Choose Model type to train Select **Object detection**.
-| Feature    | Description | Details on Console |
-| -------- |-------| -----|
-|Image classification| Categorizes object(s) within an image | Select "Image Classification." Labels and confidence scores will appear under the Results pane. [Reference](https://oracle.github.io/learning-library/oci-library/oci-hol/oci-artificial-intelligence/ai-vision/analyze-vision/images/image-classification.png) |
-|Object detection | Locates and identifies objects within an image | Select "Object Detection." Objects, confidence score, and highlighted bounding box will all appear under the Results pane. Clicking on one of the labels on the results pane will also highlight where on the image that object was detected. [Reference](https://oracle.github.io/learning-library/oci-library/oci-hol/oci-artificial-intelligence/ai-vision/analyze-vision/images/object-detection.png) |
+| Feature              | Description                                    | Details on Console                                                                                                                                                                                                                                                                                                                                                                         |
+| -------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Image classification | Categorizes object(s) within an image          | Select "Image Classification." Labels and confidence scores will appear under the Results pane. [Reference](https://oracle-livelabs.github.io/analytics-ai/oci-artificial-intelligence/ai-vision/analyze-vision/images/image-classification.png)                                                                                                                                           |
+| Object detection     | Locates and identifies objects within an image | Select "Object Detection." Objects, confidence score, and highlighted bounding box will all appear under the Results pane. Clicking on one of the labels on the results pane will also highlight where on the image that object was detected. [Reference](https://oracle-livelabs.github.io/analytics-ai/oci-artificial-intelligence/ai-vision/analyze-vision/images/object-detection.png) |
 
 
 ![Create vision model](images/create-vision-model.png)
