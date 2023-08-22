@@ -190,7 +190,7 @@ assign_public_ip     = true
 
 After editing you should have something similar to this. 
 
-![Image alt text](images/bastion.png)
+![bastion](images/bastion.png)
 
 ## Task 3: Understanding The Web Server Variables
 
@@ -271,7 +271,7 @@ assign_public_ip     = false
 After editing all three servers, you should have the following
 
 **Webserver01**
-![webservers](images/webservers.png)
+![webserver01](images/webservers.png)
 
 **Webserver02**
 ![webservers02](images/webservers02.png)
