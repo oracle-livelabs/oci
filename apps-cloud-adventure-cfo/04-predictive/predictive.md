@@ -102,13 +102,11 @@ In this activity, you will:
 
     ![walk through](images/step-15.png)
 
-16.
+16. Adventure awaits, show what you know, and rise to the top of the leader board!!!
 
-Adventure awaits, show what you know, and rise to the top of the leader board!!!
-
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:)
-
-    [Click here](https://apex.oracle.com/pls/apex/f?p=159406:10:)
+    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
+    
+    [Click here](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
 
 ## Acknowledgements
 
