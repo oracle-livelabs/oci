@@ -5,15 +5,13 @@ This lab will show you how to use the OCI Security Center dashboard.
 
 Estimated time: 25 minutes
 
+[Walk Through the Lab](videohub:1_txvp2x9p)
+
 ### Objectives
 In this lab, you will:
 
 - Post security reports in Autonomous Database via REST calls
 - Check those reports in Security Dashboard UI
-
-
-
-
 
 
 ### Prerequisites

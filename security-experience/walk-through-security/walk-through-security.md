@@ -6,7 +6,7 @@ This lab will walk you through OCI Security, by having a look at main security s
 
 Estimated Time: 25 minutes
 
-[](videhub:1_f7p6in14)
+[Walk Through the Lab](videohub:1_f7p6in14)
 
 ### Objectives
 

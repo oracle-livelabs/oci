@@ -5,6 +5,8 @@ This lab will show you how to start to automate the journey to security by using
 
 Estimated time: 20 minutes
 
+[Walk Through the Lab](videohub:1_2g98saxu)
+
 ### Objectives
 In this lab, you will:
 
