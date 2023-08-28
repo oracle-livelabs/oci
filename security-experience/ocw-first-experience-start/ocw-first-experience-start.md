@@ -45,9 +45,11 @@ In this task we will provide you with a link where you can download the Python s
     ```
     cd security_assessments
     ```
-5. Run the script and save results in your bucket:
+5. Run the script and save results in a specific bucket:
 
-    **Note**: You have been provided with a specific bucket for the purpose of this lab. To identify your bucket's name, it has the following format: ocw23-security-bucket-XXX, where XXX corresponds to your student number, provided to you by the trainers. For example, if your student number is 001, you need to run following command:
+    **Important**: You have been provided with a different bucket for the purpose of this lab. To identify your bucket's name, this time the bucket has the following format: ocw23-security-bucket-XXX, where XXX corresponds to your student number, provided to you by the trainers. 
+ 
+    For example, if your student number is 001, you need to run following command:
 
     ```
     python3 security_assessment.py -dt --output-to-bucket ocw23-security-bucket-001
@@ -114,7 +116,7 @@ In this task, similar process should be followed, but this time you will execute
     ```
     python3 cis_reports.py -dt --output-to-bucket ocw23-cis-bucket-001
     ```  
-6. This script is analyzing the CIS compliance of the current configuration in the tenancy. You can verify the new generated report in your bucket as you did in the previous steps with the security assessment report.
+6. This script is analyzing the CIS compliance of the current configuration in the tenancy. You can verify the new generated report in your bucket for CIS reports (ocw23-cis-bucket-XXX where XXX is your student number) as you did in the previous steps with the security assessment report.
 
 **This concludes this lab.**
 You may now **proceed to the next lab**.

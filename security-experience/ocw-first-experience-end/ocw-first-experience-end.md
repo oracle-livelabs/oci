@@ -49,11 +49,12 @@ Please check below the Autonomous Database details that you will need:
     
     ![Security assessment report](./images/files-displayed.png "Security assessment report")
     
-    Please locate into this directory by running:
+    Go into the oractdemeasec-&lt;date&gt; directory by running the following command (the date will be different depending on when you ran the script from Lab 2 / Task 1):
 
     ```
-    cd oractdemeasec-2023-08-03
+    cd oractdemeasec-<date>
     ``` 
+
     please ensure you replace the directory with yours.
 
     Now, run the command for the REST call to load the file into the Database table OCISECURITYCENTER:
@@ -85,10 +86,10 @@ Please check below the Autonomous Database details that you will need:
 
     ![CIS compliance report](./images/cis-report.png "CIS compliance report")
 
-    Please locate into this directory by running:
+    Go into the oractdemeasec-&lt;date&gt;_&lt;time&gt; directory by running the following command (the date will be different depending on when you ran the script from Lab 2 / Task 2):
 
     ```
-    cd oractdemeasec-2023-08-03_14-32-51
+    cd oractdemeasec-<date>_<time>
     ``` 
     please ensure you replace the directory with yours.
 
