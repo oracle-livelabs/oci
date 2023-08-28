@@ -6,6 +6,8 @@ On this lab, you will create the required IAM Policies for Using Virtual Nodes, 
 
 Estimated Time: 25 minutes
 
+[Video hosted on Oracle Video Hub](videohub:1_a11svh60)
+
 ### Objectives
 
 In this lab, you will:
@@ -72,7 +74,7 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
 
     ![Created Policy](images/oci_policy_for_virtual_nodes.png)
 
-## Task 2: Update Network Security List for LoadBalancer
+## Task 2: Update Network Security List for Nodes/Pods Subnet
 
 1. From the OCI Services menu, click **Networking** > **Virtual cloud networks**.
 
@@ -84,11 +86,46 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
 
 1. Click on the Security Lists and select something similar to **oke-svclbseclist-quick-cluster1-aaaaaaaaaa**.
 
-    ![Sec List](images/oci_vcn_security_lists.png)
+    ![Sec List](images/oci_vcn_security_lists_node.png)
+
+1. Click on the Ingress Rules and click **Add Ingress Rules** button.
+
+    ![Ingress Rules](images/oci_vcn_seclist_ingress_node.png)
+
+1. Enter the **Ingress Rule**.
+
+    * Source Type: `CIDR`
+    * Source CIDR: `10.0.20.0/24`
+    * IP Protocol: `TCP`
+    * Source Port Range: `All`
+    * Destination Port Range: `All`
+    * Description: `Allow inbound traffic from Load Balancer`
+
+    ![Add Ingress Rule 1](images/oci_vcn_node_seclist_ingress_add.png)
+
+    Click **Add Ingress Rules** button
+
+1. Your Ingress Rules should looks like this:
+
+    ![Ingress Rules Completed](images/oci_vcn_node_seclist_ingress_list.png)
+
+## Task 3: Update Network Security List for LoadBalancer Subnet
+
+1. From the OCI Services menu, click **Networking** > **Virtual cloud networks**.
+
+    ![VCN Menu](images/oci_vcn_menu.png)
+
+1. Under **List Scope**, select the same compartment used to create a cluster. Click on the vcn created for the OKE Cluster
+
+    ![VCN List](images/oci_vcn_landing.png)
+
+1. Click on the Security Lists and select something similar to **oke-svclbseclist-quick-cluster1-aaaaaaaaaa**.
+
+    ![Sec List](images/oci_vcn_security_lists_lb.png)
 
 1. Click on the Egress Rules and click **Add Egress Rules** button.
 
-    ![Egress Rules](images/oci-vcn-seclist-lb-egress.png)
+    ![Egress Rules](images/oci_vcn_lb_seclist_egress.png)
 
 1. Enter the **Egress Rule 1**.
 
@@ -99,7 +136,7 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
     * Destination Port Range: `30000-32767`
     * Description: `Allow traffic to worker nodes`
 
-    ![Add Egress Rule 1](images/oci-vcn-seclist-egress-add-1.png)
+    ![Add Egress Rule 1](images/oci_vcn_lb_seclist_egress_add_1.png)
 
 1. Enter the **Egress Rule 2**.
 
@@ -112,17 +149,17 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
     * Destination Port Range: `10256`
     * Description: `Allow OCI load balancer or network load balancer to communicate with kube-proxy on worker nodes.`
 
-    ![Add Egress Rule 2](images/oci-vcn-seclist-egress-add-2.png)
+    ![Add Egress Rule 2](images/oci_vcn_lb_seclist_egress_add_2.png)
 
     Click **Add Egress Rules** button
 
 1. Your Egress Rules should looks like this:
 
-    ![Egress Rules Completed](images/oci-vcn-seclist-egress-list.png)
+    ![Egress Rules Completed](images/oci_vcn_lb_seclist_egress_list.png)
 
 1. Click on the Ingress Rules and click **Add Ingress Rules** button.
 
-    ![Ingress Rules](images/oci-vcn-seclist-ingress.png)
+    ![Ingress Rules](images/oci_vcn_lb_seclist_ingress.png)
 
 1. Enter the **Ingress Rule 1**.
 
@@ -133,7 +170,7 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
     * Destination Port Range: `80`
     * Description: `Allow inbound traffic to Load Balancer`
 
-    ![Add Ingress Rule 1](images/oci-vcn-seclist-ingress-add-1.png)
+    ![Add Ingress Rule 1](images/oci_vcn_lb_seclist_ingress_add_1.png)
 
 1. Enter the **Ingress Rule 2**.
 
@@ -146,13 +183,13 @@ To create and use clusters with virtual nodes and virtual node pools, you must e
     * Destination Port Range: `10256`
     * Description: `Allow OCI load balancer or network load balancer to communicate with kube-proxy on worker nodes.`
 
-    ![Add Ingress Rule 2](images/oci-vcn-seclist-ingress-add-2.png)
+    ![Add Ingress Rule 2](images/oci_vcn_lb_seclist_ingress_add_2.png)
 
     Click **Add Ingress Rules** button
 
 1. Your Ingress Rules should looks like this:
 
-    ![Ingress Rules Completed](images/oci-vcn-seclist-ingress-list.png)
+    ![Ingress Rules Completed](images/oci_vcn_lb_seclist_ingress_list.png)
 
 ## Task 3: Configure the Kubernetes Cluster access on the OCI Cloud Shell
 

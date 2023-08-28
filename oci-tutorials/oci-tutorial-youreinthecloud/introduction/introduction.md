@@ -2,7 +2,7 @@
 
 ## About this Workshop - Navigating the Impact of Cloud on Your Organization
 
-Learn about operational considerations when migrating to the cloud. Understand organizational alignment best practices for successful cloud adoption and execution. Hear how other companies have adapted their own practices, processes, tools, and teams
+Learn about operational considerations when migrating to the cloud. Understand organizational alignment best practices for successful cloud adoption and execution. Hear how other companies have adapted their own practices, processes, tools, and teams.
 
 ### **Duration: 2 Hours**
 
@@ -17,15 +17,17 @@ In this workshop, you will:
 ### **Assets**
 
 Powerpoint
-* [You're in the Cloud, Now What?]() TBD
+* [Navigating the Impact of Cloud on your Organization](https://objectstorage.us-ashburn-1.oraclecloud.com/p/YyZAWyVXKXRU_0tHqpMgmvIcemXMvIrhWbi3X2T-fPvcuuRHsxZakv3HYiRu2IRo/n/ociobtnas/b/Navigating_Impact/o/TUT2556%20Navigating%20the%20Impact%20of%20Cloud%20on%20your%20Org.pdf) 
 
+Video Recording
+* [Day One and Beyond - You're in the cloud, Now what?](https://www.youtube.com/watch?v=8fMIz1spRxQ&ab_channel=OracleLearning) 
+<br>Note: Youtube content covers same content as tutorial session, under different title
 
 ## Learn More
 
-### Labs
-* [How do I enable Oracle Cloud Guard?](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3264&session=112989464471480)
-* [Low Code Development Oracle APEX on Autonomous Database](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=554&clear=RR,180&session=15189513665305)
-* [Creating a Resource Manager Stack](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=611&clear=RR,180&session=102259980745948)
+Labs
+* [Lab for Enabling Cloud Guard](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3264&session=112989464471480)
+* [Creating a Resource Manager Stack](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=611&clear=RR,180&session=112989464471480)
 
 Resource Links for Reference 
 * [OCI Cloud Advisor](https://www.oracle.com/manageability/cloud-advisor/): Cloud Advisor finds potential inefficiencies in your tenancy and offers guided solutions that explain how to address them. The recommendation help you maximize cost savings and improve that security of your tenancy. 

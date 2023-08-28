@@ -52,14 +52,13 @@ You will use one compartment for all required objects in this workshop, hence yo
 
     Additionally, for better management and administration of your OCI environment you can optionally add Tags.
 
-    Finally, click **Create Compartment**. 
+    click **Create Compartment**. 
 
     ![Define a new Compartment](./images/define-a-new-compartment.png =50%x*)
    
+## Task 4: Create a new policy for compartment management
 
-## Task 7: Create a new policy for compartment management
-
-Finally, you need to create a **policy** which grants manage privileges in a new compartment to the new OCI group.
+You need to create a **policy** which grants manage privileges in a new compartment to the new OCI group.
 
 1. Navigate to **Policies** page
 
@@ -103,8 +102,8 @@ Finally, you need to create a **policy** which grants manage privileges in a new
 
 One of the tasks in this workshop will be data labeling. This is a process in which all images from your training image library will be assigned a single label that describe that specific image.  To be able to perform your data labeling process, you must perform the following prerequisite steps to:
 
-* create one new dynamic group and
-* set required policies for data labeling
+* Create one new dynamic group and
+* Set required policies for data labeling
 
 To find out which steps you need to perform, you can navigate to **Data Labeling** page. You will find detailed instructions there.
 

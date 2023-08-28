@@ -6,8 +6,12 @@ Machine Learning and Artificial Intelligence tools are unprecedentedly changing 
 
 In this workshop, we will show how Artificial Intelligence (AI) and Machine Learning (ML) are helping identify breast cancer using Oracle APEX, Oracle AI Vision Service, and Oracle Autonomous Database.  
 
-We’ll share how we trained our AI Machine learning models with X-Ray mammography images to identify breast cancers and even incorporated many other features, such as helping doctors or patients dictate medical symptoms and diagnoses quickly by sending an email of the audio message and the medical transcription text. 
-  
+We will share how we trained our AI Machine learning models with X-Ray mammography images to identify breast cancers and even incorporated many other features, such as helping doctors or patients dictate medical symptoms and diagnoses quickly by sending an email of the audio message and the medical transcription text. 
+ 
+Estimated Workshop Time: 12 hours
+
+*Estimated Workshop Time can vary depending upon the Labs that you choose to do, and all labs from lab 8 are Optional.*
+<!--  
 ### AI for Healthcare - Complete Demo and Architecture video
 
 [Youtube video on AI for Healthcare Demo](youtube:iBV76Upi1VM:large)
@@ -15,49 +19,29 @@ We’ll share how we trained our AI Machine learning models with X-Ray mammograp
 ### AI for Healthcare Demo - with Patient Admission Process (extended demo)
 
 [Youtube video on AI for Healthcare Demo](youtube:ok-fYO0CV2I:large)
-
+  
 ### Introduction video
 
 [Youtube video on AI for Healthcare Demo](youtube:VjeoHU4I6SI:large)
-
-*Estimated Workshop Time: 16 hours (Approximately)*
-
+--> 
 ### Prerequisites 
  
-This lab assumes you have:
+This lab assumes you have the following:
 
 * An Oracle account
-* Basic Developer Knowledge of Oracle APEX and Oracle PL/SQL
+* Intermediate Developer Knowledge of Oracle APEX and Oracle PL/SQL ( if you plan to build APEX Application)
  
-[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations in Healthcare, Detect Breast Cancer and Lung Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) at an early stage. Detect Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/). Use the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/), ask a doctor about specific medical symptoms and get a response from a virtual Doctor leveraging the power of [**OpenAI**](https://openai.com/). Chat with a virtual doctor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/), asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate the nearest Hospital with [**Oracle Spatial and Maps**](https://www.oracle.com/in/database/spatial/) and contact them.[**Oracle Blockchain**](https://www.oracle.com/blockchain/) for Biometric data security by preventing illicit insider data changes. and much more. 
+[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations in Healthcare, Detect Breast Cancer and Lung Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) at an early stage. Detect Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/). Use the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/), ask a doctor about specific medical symptoms and get a response from a virtual Doctor leveraging the power of [**Cohere**](https://cohere.com/). Chat with a virtual doctor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/), asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate the nearest Hospital with [**Oracle Spatial and Maps**](https://www.oracle.com/in/database/spatial/) and contact them.[**Oracle Process Automation**](https://docs.oracle.com/en/cloud/paas/process-automation/index.html) and [**Oracle Integration Cloud**](https://www.oracle.com/in/integration/application-integration/) for Patient Admission Process. and much more. 
 
 Running on top of the world's most powerful database, [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/) and Low Code development platform [**Oracle APEX**](https://apex.oracle.com/en/)
 
 ### AI for Healthcare - Technology Architecture
 
-![Archiecture](images/architecture-v4.png " ")
-
-### AI for Healthcare - Learning path
-
-Learning paths are independent of each other, for example after completing common labs you can directly work on AI Vision or Document Understanding Labs. most of the labs are Optional and independent of each other.
-
-![Learning Path 1](images/learning-path-1.png " ")
-
-Learning path for creating a medical transcription or a chatbot are independent of each other.
-
-![Learning Path 2](images/learning-path-2.png " ")
-
-Learning path for APEX based Analytics are independent with Oracle Analytics cloud Data Visualization and Working with Blockchain or Anomaly Detection. Setting up email services is required if you plan to send emails from Oracle APEX application.
-
-![Learning Path 32](images/learning-path-3.png " ")
-
-Learning path for Patient Admission Process requires a completely working Breast cancer detection workshops to be completed. you can skip other labs and directly work on Oracle Integration cloud and Process Automation.
-
-![Learning Path 4](images/learning-path-4.png " ")
- 
+![Archiecture](images/architecture-v6.png " ")
+  
 ### AI for Healthcare - Table of Contents
  
-*Common Labs - Introduction Lab to Lab 3*
+***Common Labs** - Introduction Lab to Lab 3*
 
 These are common labs that are required for most of the other labs under this workshop.
 
@@ -66,11 +50,9 @@ These are common labs that are required for most of the other labs under this wo
     * Table of Contents
     * About Breast Cancer
 * Get Started
-    * Sign-in to Oracle [cloud web console](cloud.oracl.com)
+    * Sign-in to Oracle [cloud console](https://cloud.oracle.com)
 * Lab 1: Setup [**OCI Policies**](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Identity/access/manage-accessresources.htm) 
-
- *Setting up Policies is required if you need administrative access in your tenancy.*
-
+  
     * Create OCI Bucket
     * Create a new compartment
     * Setup policies for Compartment management
@@ -79,10 +61,22 @@ These are common labs that are required for most of the other labs under this wo
     * Setup policies for OCI Document Understanding Service
     * Setup policies for OCI Speech
     * Setup policies for OCI Anomaly Detection
-* Lab 2: Provision of an [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/)
+* Lab 2: Provision of an [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/) and [**APEX**](https://apex.oracle.com/en/) How-to's
     * Create or select a compartment
     * Choose Autonomous Database from the OCI services menu
     * Create the Autonomous Database instance
+    * Create an Oracle APEX Workspace
+    * How to run SQL queries in Oracle APEX
+    * How to Setup Oracle APEX Web Credentials 
+    * How to login to Oracle APEX
+    * How to create Blank Oracle APEX page
+    * How to Create Low-Code Data Driven APEX page with CRUD Operations
+    * How to Create Dynamic Actions
+    * How to Create an APEX Chart
+    * How to Create a Page Process
+    * How to configuring Oracle APEX Applications to Send Email
+    * How to send mail in Plain Text format
+    * How to send mail in Text / HTML message
 * Lab 3: Setup OCI [**Command Line Interface (CLI)**](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
     * Get the User's OCID
     * Add User's API Key
@@ -91,50 +85,48 @@ These are common labs that are required for most of the other labs under this wo
     * Update OCI Configuration file
     * List all Buckets in a Compartment using OCI CLI
 
-*Detect Breast Cancer - Lab 4 to Lab 8*
+***Part 1** - Detect Breast Cancer - Lab 4 to Lab 7*
 
 These Labs will guide you in detecting Breast Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) AI Service.
-
-* Lab 4: Understanding Mammography and Breast Cancer (<u>Optional Lab</u>)
+ 
+* Lab 4: Create an Image Library to Detect Breast Cancer
     * What is a Mammogram?
     * What does Breast Cancer look like on a Mammogram?
     * Other Breast abnormalities
     * Normal Breast Mammogram 
     * Breast Cancer Mammogram
-* Lab 5: Create an Image Library to Detect Breast Cancer
     * Data Preparation by Classifying Images. 
     * Load images to Object Storage using OCI CLI
     * Verify images are correctly loaded
-* Lab 6: Label Images
+* Lab 5: Label Images
     * Generate dataset records using [**OCI Data Labeling**](https://www.oracle.com/in/artificial-intelligence/data-labeling/) for Breast Cancer
     * Bulk image labelling
     * Verify Bulk Data labelled images
-* Lab 7: Train the model using the **Image Classification** AI model
+* Lab 6: Train the model using the Image Classification AI model
     * Create OCI Vision Project
     * Create and Train OCI AI vision model
     * Analyze and evaluate your model
     * Review Request and Response JSON
-* Lab 8: [**Oracle APEX**](https://apex.oracle.com/en/) Application for Breast Cancer Detection
-    * Setup Oracle APEX Web Credentials
+* Lab 7: [**Oracle APEX**](https://apex.oracle.com/en/) Application for Breast Cancer Detection (Optional Lab)
     * Create required schema - 
         * Tables: MACHINE LEARNING CONFIGS, VISION AI DOCS, VISION AI FIELDS
         * PL/SQL Procedure IMAGE\_AI\_PK, Triggers etc.
     * Create Oracle APEX Page
     * Verify Oracle APEX File upload settings
     * Display results
+    * Troubleshooting Checklist for APEX Developers
 
-*Create Medical Expenses - Lab 9 to Lab 10* 
+***Part 2** - Create Medical Expenses - Lab 8 to Lab 9 (Optional labs)* 
 
 These Labs will guide you in creating medical expenses using Oracle [**OCI Document Understanding**](https://docs.oracle.com/en-us/iaas/document-understanding/document-understanding/using/home.htm) AI Service.
 
-* Lab 9: Introduction to Pretrained Oracle Document AI Models
+* Lab 8: Introduction to Pretrained Oracle Document AI Models
     * Text Extraction
     * Table Extraction
     * Key Value Extraction
     * Document classification
     * Analyze the request and response JSON files
-* Lab 10: Oracle APEX Application for Medical Receipt Processing
-    * Setup Oracle APEX Web Credentials
+* Lab 9: Oracle APEX Application for Medical Receipt Processing 
     * Create required schema - 
         * Tables: MACHINE LEARNING CONFIGS, DOCUMENT AI DOCS, DOCUMENT AI FIELDS
         * PL/SQL Procedure DOCUMENT\_AI\_PK, Triggers etc.
@@ -143,20 +135,16 @@ These Labs will guide you in creating medical expenses using Oracle [**OCI Docum
     * Create Custom Reports and Verify the results of the uploaded receipt file.
     * Create an Expense item from the uploaded receipt.
  
-*Create Medical Transcriptions - Lab 11 to Lab 13* 
+***Part 3** - Create Medical Transcriptions - Lab 10 to Lab 11 (Optional labs)* 
 
 These Labs will guide you in creating medical transcription and consulting virtual AI doctors using Oracle [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/) AI Service.
-
-* Lab 11: Introduction - Speech AI
-    * AI Speech to Text or OCI Speech.
-    * Analyze data from audio and video files.
-* Lab 12: Create Speech Transcription Job
+ 
+* Lab 10: Create Speech Transcription Job
     * Generate Audio File
     * Upload an Audio file to OCI Bucket
     * Create Speech Transcription Job
     * Review Transcription Job Output in JSON and .SRT files 
-* Lab 13: Oracle APEX Application for Speech Transcription
-    * Setup Oracle APEX Web Credentials
+* Lab 11: Oracle APEX Application for Speech Transcription 
     * Create required schema - 
         * Tables: MACHINE LEARNING CONFIGS, SPEECH AI DOCS, SPEECH AI FIELDS
         * PL/SQL Procedure SPEECH\_AI\_PK, Triggers etc.
@@ -166,22 +154,21 @@ These Labs will guide you in creating medical transcription and consulting virtu
     * Create Speech Transcription Job
     * Review the audio file and Transcribed text content of the Audio file.
 
-*Oracle APEX and OpenAI Chat GPTs Integration - Lab 14*
+***Part 4** - Oracle Speech AI and Cohere Integration - Lab 12 (Optional labs)*
 
-These labs will show how to integrate [**Oracle APEX**](https://apex.oracle.com/en/) Application with [**OpenAI**](https://openai.com/) REST APIs, [Cohere](https://cohere.com/).
+These labs will show how to integrate [**Oracle APEX**](https://apex.oracle.com/en/) with [**Cohere**](https://cohere.com/).
 
-* Lab 14: Oracle Speech and OpenAI Integration
-    * Create OpenAI Key
-    * Understand OpenAI Authentication  
-    * Integrating Oracle Speech AI Output with OpenAI
-    * OpenAI Integration with Oracle APEX without using OCI Speech AI
+* Lab 12: Oracle Speech and Cohere Integration 
+    * Create Cohere Key (Optional Tasks)
+    * Getting AI Response from Cohere 
+    * Cohere Integration with OCI Speech AI (Speech AI as Input Audio and Cohere as AI responder)
 
-*Create Chatbot for Frequently Asked Medical Questions - Lab 15 - Lab 16*
+***Part 5** - Create Chatbot for Frequently Asked Medical Questions - Lab 13 - Lab 14 (Optional labs)*
 
 These labs will show users to interact with [**Oracle Digital Assistant**](https://www.oracle.com/in/chatbots/) Chatbot with frequently asked questions related to cancer or COVID, Pneumonia or any other health issues and get medical advice on time.
 
-* Lab 15: Setup Oracle Digital Assistant
-    * Oracle Digital Assistant for [**natural language processing(NLP)**](https://en.wikipedia.org/wiki/Natural_language_processing), [**natural language understanding**](https://en.wikipedia.org/wiki/Natural-language_understanding) (NLU) 
+* Lab 13: Setup Oracle Digital Assistant
+    * Oracle Digital Assistant Introduction. 
     * Provision Oracle Digital Assistant from OCI services
     * Create Oracle Digital Assistant Skill 
     * Adding Knowledge documents for Frequently asked questions (FAQs)
@@ -189,7 +176,7 @@ These labs will show users to interact with [**Oracle Digital Assistant**](https
     * Preview the Model and Skill
     * Add AutoComplete Suggestion and Utterances.
     * Create a Web Channel for a Skill
-* Lab 16: Oracle APEX Integration with ODA
+* Lab 14: Oracle APEX Integration with ODA
     * Download ODA Oracle Native Client SDK
     * Get channel id from the ODA console
     * Configure settings.js file
@@ -199,7 +186,7 @@ These labs will show users to interact with [**Oracle Digital Assistant**](https
     * Update YAML flow in ODA
     * Demo of Chatbot in Oracle APEX Page
 
-*Oracle APEX Maps and Spatial queries to locate nearest Hospitals - Lab 17*
+***Part 6** - Oracle APEX Maps and Spatial queries to locate nearest Hospitals - Lab 15 (Optional labs)*
 
 These labs will walk you through the steps of locating Hospitals based on location and patient trauma 
 
@@ -211,7 +198,7 @@ These labs will walk you through the steps of locating Hospitals based on locati
     * Demo of finding Hospital on Map based on Location and Trauma selected.
     * Query to locate the nearest Hospital within a given radius
 
-*Oracle Analytics Cloud for Clinical Data Analysis - Lab 18*
+***Part 7** - Oracle Analytics Cloud for Clinical Data Analysis - Lab 16 (Optional labs)*
 
 These labs will walk you through the steps of creating an [**Oracle Analytics cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) instance, creating Analytics reports or Data Visualization and making these reports available in Oracle APEX Application. We will take the example of Analysing Clinical Data, but there are limitless opportunities to Analyse Healthcare Data using Oracle Analytics cloud
 
@@ -225,7 +212,7 @@ These labs will walk you through the steps of creating an [**Oracle Analytics cl
     * Copy Analytics Report Embed URLs
     * Embed Reports in APEX Application
 
-*Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection - Lab 19*
+***Part 8** - Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection - Lab 17 (Optional labs)*
 
 These labs walk you through the steps of detecting Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/).
 
@@ -235,34 +222,12 @@ These labs walk you through the steps of detecting Cardiovascular disease with E
     * Create and Train the ECG Model
     * Review Model and Data settings
     * Detect ECG Anomalies
-
-*Biometrics with Blockchain - Lab 20*
-
-These labs walk you through preventing illicit insider changes to users' biometric data using [**Oracle Blockchain**](https://www.oracle.com/blockchain/). It Permits insert-only SQL operations, with no updates and other modifications allowed, and restricts deletions.
-
-* Biometrics with Blockchain
-    * Create a Blockchain table.
-    * Insert Biometric data into the blockchain table.
-    * Demonstrate Blockchain Data Security. 
-
-*Setup OCI Email Delivery Service - Lab 21*
-
-These labs walk you through the steps of setting up [**OCI Email Services**](https://www.oracle.com/in/cloud/networking/email-delivery/). This will help us email Doctors, Patients or any Health official with the required data. For example, we can email transcribed text to Doctor after the patient uploads an audio file or mail once the medical expenses have been approved or rejected
-
-* Setup OCI Email Delivery Service 
-    * Generate SMPT Credentials
-    * EMAIL Delivery Configuration
-    * Create Approved Sender  
-    * Configuring Oracle APEX to Send Email
-    * Plain Text only message
-    * Plain Text / HTML message
-    * Sending Speech Transcription and Audio file link in an Email
-
-*Patient Admission Process after Breast Cancer Detection - Lab 22 to Lab 24*
+   
+***Part 9** - Patient Admission Process after Breast Cancer Detection - Lab 18 to Lab 19 (Optional labs)*
 
 These labs walk you through the steps of creating Oracle Integration Cloud Integration Service and Process automation for the Patient Admission process.
 
-* Create Get Patient Details Integration - Oracle Integration Cloud 
+* Get and Updating Patient Details Integration Service - Oracle Integration Cloud 
     * Access Autonomous Database Instance and Download Wallet
     * Log in to Oracle Integration Cloud and Create an Oracle Autonomous Warehouse Database connection
     * Create First Integration to Get Patient Details
@@ -270,11 +235,7 @@ These labs walk you through the steps of creating Oracle Integration Cloud Integ
     * Add Mapper to Map JSON Payload
     * Add Email Notification
     * Activate the Integration and Test the Integration Service
-    * View Complete Integration Flow.
-
-In this lab, you will learn how to create Oracle Integration Cloud Integration Service for Updating the Patient Data.
-
-* Create Update Patient Details Integration - Oracle Integration Cloud 
+    * View Complete Integration Flow. 
     * Create Second Integration to Update Patient Details
     * Add Database Connection Adapter
     * Add Mapper
@@ -285,6 +246,7 @@ In this lab, you will learn how to create Oracle Integration Cloud Integration S
 In this lab you will create end to end patient admission process using Oracle Integration Cloud Generation 2 with Process Automation.
 
 * Complete Process Automation for Patient Admission Process 
+    * Simple - Patient Admission Process
     * Create Patient Admission Process Application.
     * Add Human Task as Doctor's Activity
     * Add Human Task as Hospital Administrator's Activity
@@ -292,7 +254,17 @@ In this lab you will create end to end patient admission process using Oracle In
     * The patient consults the Doctor based on the report received.
     * Running the Patient Admission Process in Process Player
     * Patient logs into AI for Healthcare portal to get the latest update
-    * Enhanced Patient Admission Process
+    * Enhanced - Patient Admission Process
+
+***Part 10** - Setup OCI Email Delivery Service - Lab 20 (Optional labs)*
+
+These labs walk you through the steps of setting up [**OCI Email Services**](https://www.oracle.com/in/cloud/networking/email-delivery/). This will help us email Doctors, Patients or any Health official with the required data. For example, we can email transcribed text to Doctor after the patient uploads an audio file or mail once the medical expenses have been approved or rejected
+
+* Setup OCI Email Delivery Service 
+    * Generate SMPT Credentials
+    * EMAIL Delivery Configuration
+    * Create Approved Sender  
+    * Sending Speech Transcription and Audio file link in an Email
  
 ## About Breast Cancer
 
@@ -303,23 +275,7 @@ Breast cancer cells usually form a tumour that can often be seen on an x-ray or 
 Researchers have identified hormonal, lifestyle and environmental factors that may increase the risk of breast cancer. But it is unclear why some women without risk factors develop cancer, yet others with risk factors never do. It is most likely that a complex interaction of genetic makeup and environmental factors causes breast cancer.
  
  ![Women's Cancer 2020](images/womens-cancer.png =50%x* )
-
-## About Lung Cancer
-
-Cancer is a disease in which cells in the body grow out of control. When cancer starts in the lungs, it is called lung cancer Worldwide, lung cancer is the second most commonly diagnosed cancer. NSCLC is the most common type of lung cancer in the United States, accounting for 81% of all lung cancer diagnoses.
-
-In 2023, an estimated [238,340 adults (117,550 men and 120,790 women)](https://www.cancer.net/cancer-types/lung-cancer-non-small-cell/statistics) in the United States will be diagnosed with lung cancer. Worldwide, an estimated 2,206,771 people were diagnosed with lung cancer in 2020. These statistics include both small cell lung cancer and NSCLC.
-
-Lung cancer begins in the lungs and may spread to lymph nodes or other organs in the body, such as the brain. Cancer from other organs also may spread to the lungs. When cancer cells spread from one organ to another, they are called metastases.
-
-Lung cancers usually are grouped into two main types called small cell and non-small cell (including adenocarcinoma and squamous cell carcinoma). These types of lung cancer grow differently and are treated differently. Non-small cell lung cancer is more common than small cell lung cancer. For more information, visit the National Cancer Institute’s
-
-Lung cancer includes two main types: non-small cell lung cancer and small cell lung cancer. Smoking causes most lung cancers, but nonsmokers can also develop lung cancer.  
-
-[Lung cancer and prostate cancer are the most common among men](https://www.uicc.org/news/globocan-2020-new-global-cancer-data), together accounting for nearly one-third of all male cancers.
-
-![Mens's Lung Cancer 2020](images/lungcancer.png =50%x* )
-
+ 
 ## Important
 
 This workshop provides a basic example of using OCI Vision and other AI services. This example is for illustration and demonstration purposes only and isn't intended to replace any medical imagery analysis tool or official diagnosis recommendation made by a professional. Users need to receive the proper regulated compliance and approvals before using for medical and diagnostic use.
@@ -330,4 +286,5 @@ You may now **proceed to the next lab**.
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
 * **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - July 31st, 2023
+* **Last Updated By/Date** - Aug 16th, 2023
+* **Document version** - 1.2
