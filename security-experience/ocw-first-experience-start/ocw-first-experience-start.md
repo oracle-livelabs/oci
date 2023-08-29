@@ -91,10 +91,14 @@ In this task, similar process should be followed, but this time you will execute
 
 1. Download the [CIS reports script](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/cis_reports.py) and save it locally.
 
-2. Upload the script in the Cloud Shell terminal by doing drag and drop as you did with the security assessment script in previous task. Before going to the next step, please make sure you are on your home directory. If you are coming from previous step, just run the following command to go back to your home directory:
+2. Upload the script in the Cloud Shell terminal by doing drag and drop as you did with the security assessment script in previous task. 
+
+    ![Drag and drop into Cloud Shell](images/drag-cloud-shell-cis.png "Drag and drop into Cloud Shell")
+
+3. Before going to the next step, please make sure you are on your home directory. Run the following command that will take you to your home directory:
 
     ```
-    cd ..
+    cd ~
     ```
 
 3. Now, create a dedicated folder for the CIS reports by running the following command in the Cloud Shell: 

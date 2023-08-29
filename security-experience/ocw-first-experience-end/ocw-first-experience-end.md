@@ -114,7 +114,7 @@ Please check below the Autonomous Database details that you will need:
 
     ![Database Actions](images/database-actions-security.png "Database Actions")
 
-7. Log in first as ADMIN, with the provided password supplied by the trainers:
+7. It is needed to log in first as ADMIN, with the provided password supplied by the trainers:
 
     ![Log in as ADMIN](images/database-actions-login-admin.png "Log in as ADMIN")
 
@@ -122,7 +122,7 @@ Please check below the Autonomous Database details that you will need:
 
     ![Log out](images/admin-sign-out.png "Log out")
 
-9. Log in as SECASSESSMENT, with the provided password supplied by the trainers:
+9. Now you can log in as SECASSESSMENT, with the provided password supplied by the trainers:
 
     ![Log in as SECASSESSMENT](images/database-actions-login.png "Log in as SECASSESSMENT")
 
