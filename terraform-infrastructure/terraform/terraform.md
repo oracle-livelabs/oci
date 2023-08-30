@@ -38,11 +38,6 @@ The first definition in this file is the provider. In Terraform, a "provider" is
 
 You may now **proceed to the next lab**
 
-## Learn More
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
-
 ## Acknowledgements
 * **Author** - David Ortega, Cloud Engineer
 * **Contributors** - Germain Vargas, Cloud Engineer

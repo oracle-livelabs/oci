@@ -32,18 +32,18 @@ In terraform.tfvars, at the top of the file we have set the location of our SSH 
 
 1. Copy and paste the following in the ssh_keys data structure. 
 
-```
-<copy>
-ssh_public_key  = "<replace-public-sshkeypath-here>"
-ssh_private_key = "<replace-private-sshkeypath-here>"
-</copy>
-```
+    ```
+    <copy>
+    ssh_public_key  = "<replace-public-sshkeypath-here>"
+    ssh_private_key = "<replace-private-sshkeypath-here>"
+    </copy>
+    ```
 
 2. Provide the path to your SSH keys.
   
   After editing, it would be similar to this. 
 
-![ssh-path](images/ssh-path.png)
+  ![ssh-path](images/ssh-path.png)
 
 **Image OCIDs**
 
@@ -57,27 +57,27 @@ ssh_private_key = "<replace-private-sshkeypath-here>"
 
 1. Copy and paste the following to the Image OCIDs section of the terraform.tfvars file.
 
-```
-<copy>
-us-phoenix-oel7 = "replace-phoenix-oraclelinux7-image-ocid"
-</copy>
-```
+    ```
+    <copy>
+    us-phoenix-oel7 = "replace-phoenix-oraclelinux7-image-ocid"
+    </copy>
+    ```
 
   In this [Documentation](https://docs.oracle.com/en-us/iaas/images/image/266adc03-7428-41fc-b17d-2f88ea56dff0/), you will be able to find Image OCIDs for Oracle Enterprise Linux 7. 
 
 2. Search for the Phoenix Region and find the Image OCID. 
 
-![image-ocid](images/image-ocid.png)
+  ![image-ocid](images/image-ocid.png)
 
 3. Enter the image OCID into the data block.
 
   We were able to find and implement our Image OCID needed to define out compute instances. Image OCIDs are software with configurations needed to launch our instances.
 
-> **Note:** If you are going to change the region please make sure to change the name of the data block to the correct region identifier **(us-phoenix-1)**. 
+  > **Note:** If you are going to change the region please make sure to change the name of the data block to the correct region identifier **(us-phoenix-1)**. 
 
   Below is the example of how the Phoenix region would look like.
 
-![image-ocid-tf](images/image-ocid-tf.png)
+  ![image-ocid-tf](images/image-ocid-tf.png)
 
 ## Task 2: Understanding The Bastion Variables
 
@@ -88,23 +88,23 @@ A Bastion is a way to provide secure and monitored access for authorized users w
 We will use this bastion to access our web servers. 
 
   1. In terraform.tfvars, we are going to edit the Bastion Host Specifications. Copy this code block into the bastion data structure in terraform.tfvars file.
-  ```
-  <copy>
-  compartment_data     = "comp-ocid"                     
-  subnet_name          = "pub-subnet-oci-WebBastion-vcn" 
-  ssh_public_key       = "ssh_public_key"                
-  ssh_private_key      = "ssh_private_key"               
-  display_name         = "replace-bastion-name-here"                      
-  shape                = "replace-bastion-shape-here"               
-  version              = "replace-bastion-version-here"                     
-  ad                   = replace-ad-here                              
-  fault_domain         = replace-fd-here                              
-  boot_volume_size     = replace-bv-size-here                             
-  preserve_boot_volume = replace-bv-preserve-true-or-false-here                         
-  assign_public_ip     = replace-public-assign-true-or-false-here                            
-  freeform_tags        = {}
-  </copy>
-  ```
+    ```
+    <copy>
+    compartment_data     = "comp-ocid"                     
+    subnet_name          = "pub-subnet-oci-WebBastion-vcn" 
+    ssh_public_key       = "ssh_public_key"                
+    ssh_private_key      = "ssh_private_key"               
+    display_name         = "replace-bastion-name-here"                      
+    shape                = "replace-bastion-shape-here"               
+    version              = "replace-bastion-version-here"                     
+    ad                   = replace-ad-here                              
+    fault_domain         = replace-fd-here                              
+    boot_volume_size     = replace-bv-size-here                             
+    preserve_boot_volume = replace-bv-preserve-true-or-false-here                         
+    assign_public_ip     = replace-public-assign-true-or-false-here                            
+    freeform_tags        = {}
+    </copy>
+    ```
 
 **Edit The Bastion Host Specifications**
 
@@ -116,9 +116,9 @@ When you define an instance on the OCI Console you start by giving it a name (re
 
 2. Set the ```display_name``` to ```bastion```.
 
-```
-display_name         = "bastion"
-```
+    ```
+    display_name         = "bastion"
+    ```
 
 Next we determine its shape.
 
@@ -128,19 +128,19 @@ Here is a list of different [Shapes](https://docs.oracle.com/en-us/iaas/Content/
 
 3. Set the ```shape``` to ```VM.Standard2.1```.
 
-```
-shape                = "VM.Standard2.1"
-```
+    ```
+    shape                = "VM.Standard2.1"
+    ```
 
-The Operating System or OS (referred as "version" in our code) is the software that is going to be running the instance. In Task 1, we sought our image already and we determined that an Image OCID is required for a specific region. Since we are provisioning in the phoenix region we will use our **'us-phoenix-oel7'** oracle linux image OCID.
+  The Operating System or OS (referred as "version" in our code) is the software that is going to be running the instance. In Task 1, we sought our image already and we determined that an Image OCID is required for a specific region. Since we are provisioning in the phoenix region we will use our **'us-phoenix-oel7'** oracle linux image OCID.
 
-Here is a list of different [Images](https://docs.oracle.com/en-us/iaas/images/).
+  Here is a list of different [Images](https://docs.oracle.com/en-us/iaas/images/).
 
 4. Set the ```version``` to ```us-phoenix-oel7```.
 
-```
-version              = "us-phoenix-oel7"
-```
+    ```
+    version              = "us-phoenix-oel7"
+    ```
 
 Next we can decide which Availability Domain (AD) and Fault Domain (FD). 
 
@@ -155,12 +155,12 @@ Here is a list of [Regions and Availability Domains](https://docs.oracle.com/en-
 5. Set the ```ad``` to 1.
 6. Set the ```fault_domain``` to 1.
 
-```
-ad                   = 1
-fault_domain         = 1
-```
+    ```
+    ad                   = 1
+    fault_domain         = 1
+    ```
 
-> **Note:** If you set your ad to the 3rd Availability Domain and the region only supports 1. The instance will **NOT** be defined and Terraform will throw an error during execution. 
+  > **Note:** If you set your ad to the 3rd Availability Domain and the region only supports 1. The instance will **NOT** be defined and Terraform will throw an error during execution. 
 
 A Boot Volume contains the operating system and other files needed to boot the instance.
 
@@ -168,29 +168,29 @@ Here is more info on [Boot Volumes](https://docs.oracle.com/en-us/iaas/Content/B
 
 7. set the ```boot_volume_size``` to 50.
 
-```
-boot_volume_size     = 50
-```
+    ```
+    boot_volume_size     = 50
+    ```
 
 The preserve status determines if the boot volume lives after the instance is terminated. If set to false it will deleted along with the instance. Else it will be retained which can be useful when keeping important data or configurations. 
 
 8. Set the ```preserve_boot_volume``` to ```false```.
 
-```
-preserve_boot_volume = false
-```
+    ```
+    preserve_boot_volume = false
+    ```
 
 Lastly we will determine if we assign the Bastion a public ip. In this case we will assign a public ip as we are going to be using the Bastion as a single point of entry to our web servers.
 
 9. Set the ```assign_public_ip``` to ```true```.
   
-```
-assign_public_ip     = true
-```
+    ```
+    assign_public_ip     = true
+    ```
 
-After editing you should have something similar to this. 
+  After editing you should have something similar to this. 
 
-![bastion](images/bastion.png)
+  ![bastion](images/bastion.png)
 
 ## Task 3: Understanding The Web Server Variables
 
@@ -202,24 +202,24 @@ In terraform.tfvars, we are going to edit the web server Specifications.
 
 1. Copy this code block into each web server data structure in terraform.tfvars file.
 
-```
-<copy>
-compartment_data     = "comp-ocid"                     
-subnet_name          = "pub-subnet-oci-WebBastion-vcn" 
-ssh_public_key       = "ssh_public_key"                
-ssh_private_key      = "ssh_private_key"
-webserver_data       = "webserver01"           
-display_name         = "replace-webserver1-name-here"                      
-shape                = "replace-webserver1-shape-here"               
-version              = "replace-webserver1-version-here"                     
-ad                   = replace-ad-here                             
-fault_domain         = replace-fd-here                              
-boot_volume_size     = replace-bv-size-here                             
-preserve_boot_volume = replace-bv-preserve-true-or-false-here                          
-assign_public_ip     = replace-public-assign-true-or-false-here                            
-freeform_tags        = {}
-</copy>
-```
+    ```
+    <copy>
+    compartment_data     = "comp-ocid"                     
+    subnet_name          = "pub-subnet-oci-WebBastion-vcn" 
+    ssh_public_key       = "ssh_public_key"                
+    ssh_private_key      = "ssh_private_key"
+    webserver_data       = "webserver01"           
+    display_name         = "replace-webserver1-name-here"                      
+    shape                = "replace-webserver1-shape-here"               
+    version              = "replace-webserver1-version-here"                     
+    ad                   = replace-ad-here                             
+    fault_domain         = replace-fd-here                              
+    boot_volume_size     = replace-bv-size-here                             
+    preserve_boot_volume = replace-bv-preserve-true-or-false-here                          
+    assign_public_ip     = replace-public-assign-true-or-false-here                            
+    freeform_tags        = {}
+    </copy>
+    ```
 
 **Edit The Web Server Specifications**
 
@@ -227,57 +227,57 @@ Similarly how we defined our Bastion we will define our web servers
 
 2. Set the ```display_name``` to ```webserver01```.
 
-```
-display_name         = "webserver01"                                       
-```
+    ```
+    display_name         = "webserver01"                                       
+    ```
 
 3. Set the ```shape``` to ```VM.Standard2.1```.
-```                
-shape                = "VM.Standard2.1"                                       
-```
+    ```                
+    shape                = "VM.Standard2.1"                                       
+    ```
 
 4. Set the ```version``` to ```us-phoenix-oel7```.
 
-```            
-version              = "us-phoenix-oel7"                                              
-```
+    ```            
+    version              = "us-phoenix-oel7"                                              
+    ```
 
 5. Set the ```ad``` to 1.
 6. Set the ```fault_domain``` to 1.
 
-```                     
-ad                   = 1                             
-fault_domain         = 1                                                    
-```
+    ```                     
+    ad                   = 1                             
+    fault_domain         = 1                                                    
+    ```
 
 7. Set the ```boot_volume_size``` to 50.
 8. Set the ```preserve_boot_volume``` to ```false```.
 
-```                            
-boot_volume_size     = 50                             
-preserve_boot_volume = false                                                   
-```
+    ```                            
+    boot_volume_size     = 50                             
+    preserve_boot_volume = false                                                   
+    ```
 
 9. Set the ```assign_public_ip``` to ```false```
 
-```                       
-assign_public_ip     = false                            
-```
+    ```                       
+    assign_public_ip     = false                            
+    ```
 
-> **Note:** As we mentioned to make our web servers secure. We will **NOT** be assigning our web servers a public ip and will be using the Bastion as a single point of entry to our web servers.
+  > **Note:** As we mentioned to make our web servers secure. We will **NOT** be assigning our web servers a public ip and will be using the Bastion as a single point of entry to our web servers.
 
 10. Edit the remainder of the servers
 
-After editing all three servers, you should have the following
+  After editing all three servers, you should have the following
 
-**Webserver01**
-![webserver01](images/webservers.png)
+  **Webserver01**
+  ![webserver01](images/webservers.png)
 
-**Webserver02**
-![webservers02](images/webservers02.png)
+  **Webserver02**
+  ![webservers02](images/webservers02.png)
 
-**Webserver03**
-![webservers03](images/webservers03.png)
+  **Webserver03**
+  ![webservers03](images/webservers03.png)
 
 ## Understanding Terraform Modules
 
@@ -288,7 +288,7 @@ A module encapsulates a set of resources and variables within a defined namespac
 
 In the terraform environment you have a folder called modules.
 
-![modules](images/modules.png)
+  ![modules](images/modules.png)
 
 In the modules folder there are three modules being used to create resources on OCI. The network module creates all the networking resources such as the Virtual Cloud Network and the Load Balancer resources. Below is the list of resources created by the network module. While the bastion module creates resources needed to successfully create a Bastion instance that can access the Web servers being created through Terraform. Lastly, the web servers module creates compute instances and deploys Apache server for each instance.
 
@@ -314,18 +314,18 @@ Every module contains a main.tf, output.tf, and variables.tf file.
 
 In the variables.tf file, we can see that it has a Data Structure with a Data Block mapping the parameters needed to provision a bastion.
 
-![bastion-params](images/bastion-params.png)
+  ![bastion-params](images/bastion-params.png)
 
 In the main.tf file we see how to define the bastion instance using the defined bastion parameters. 
 
-![define-bastion](images/define-bastion.png)
+  ![define-bastion](images/define-bastion.png)
 
 
 Within each module there are a set of data structures that declare resources using the Oracle Cloud Infrastructure provider. Lets break down the declaration of a resource structure.
 
 Navigate to the modules folder and open the main.tf folder located in the network module. In the main.tf folder navigate to the oci\_core\_virtual\_network resouce data structure. 
 
-![datastruct](images/datastruct.png)
+  ![datastruct](images/datastruct.png)
 
 The following keywords are used to declare a resource within Terraform.
 
@@ -341,7 +341,7 @@ Within the curly brackets there are arguments for this virtual cloud network tha
 
 In the OCI VCN resource data structure there are four arguments that are defined based on the values provided in the pervious labs within the terraform.tfvars file.  
 
-![datastruct](images/combo.png)
+  ![datastruct](images/combo.png)
 
 Throughout our code we make use of **each.value** and **for_each**. These are constructs that work together inside a resource, module and provider.
 
@@ -354,17 +354,17 @@ In the picture below we are defining an OIC Compute Instance resource. In the re
 
 We also see ```each.value``` being used within the resource block to reference the attributes within each webserver i.e. shape, display_name etc.
 
-![for-each](images/for-each.png)
+  ![for-each](images/for-each.png)
 
 Next is the provisioner. A provisioner executes scripts or commands on a resource after it has been created but before it's marked fully operational. Provisioners allow you to to install software, configuration management, and data setup on a resource.
 
 Take note at the end of the main.tf file in the bastion module we are using the provisioner to do some actions after the resource was created. There are different provisioner types for different tasks, in this example we use the file provisioner to copy a file on to the instance. We will be copying our SSH private key onto to the Bastion. This will allow us to access our webservers.
 
-![provisioner](images/provisioner.png)
+  ![provisioner](images/provisioner.png)
 
 Following this we use the remote-execution type of provisioner. The remote-execution type lets us run scripts to run commands on a remote source. Here run some commands to modify the permissions onto the file for ease of use.
 
-![remote-execute](images/remote-execute.png)
+  ![remote-execute](images/remote-execute.png)
 
 You may now **proceed to the next lab**
 

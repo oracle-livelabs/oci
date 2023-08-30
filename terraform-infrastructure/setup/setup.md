@@ -39,49 +39,49 @@ If you already have an SSH key pair, you may use that to connect to your environ
 
 	![ssh-keygen](images/ssh-keygen.png)
 
-  ```
-  <copy>
-  ssh-keygen
-  </copy>
-  ```
+    ```
+    <copy>
+    ssh-keygen
+    </copy>
+    ```
 
 ### **On Windows 10**
 
 1. Open a Powershell command window on your Windows 10 system by clicking it’s icon/tile or by typing ‘powershell’ in the search field in the Start bar.
 
-![ssh-keygen-windows](images/ssh-keygen-windows.png)
+  ![ssh-keygen-windows](images/ssh-keygen-windows.png)
 
 2. Once in the terminal type ssh-keygen or copy and paste the command into the terminal, press enter. You will prompted to enter file to save your key. pressing enter will select default in your .ssh folder. Press enter twice for no passphrase. Remember where it is saved as we will reference this later when creating instances.
 
-```
-<copy>
-ssh-keygen
-</copy>
-```
+    ```
+    <copy>
+    ssh-keygen
+    </copy>
+    ```
 
-![verify-keygen-windows](images/verify-keygen-windows.png)
+  ![verify-keygen-windows](images/verify-keygen-windows.png)
 
 3. Verify that your keys exist, You can use these commands to verify.
 
-```
-<copy>
-cd .ssh
-</copy>
-```
+    ```
+    <copy>
+    cd .ssh
+    </copy>
+    ```
 
-```
-<copy>
-ls
-</copy>
-```
+    ```
+    <copy>
+    ls
+    </copy>
+    ```
 
-```
-<copy>
-cat id_rsa.pub
-</copy>
-```
+    ```
+    <copy>
+    cat id_rsa.pub
+    </copy>
+    ```
 
-![confirm-keygen-windows](images/confirm-keygen-windows.png)
+  ![confirm-keygen-windows](images/confirm-keygen-windows.png)
 
 ## Task 2: Generate an API Key on the OCI Console
 
@@ -98,7 +98,7 @@ cat id_rsa.pub
 
 3. Next, click on Add API key.
 
-![api](images/api.png)
+  ![api](images/api.png)
 
 **Add API key**
 
@@ -110,13 +110,13 @@ cat id_rsa.pub
     
 7. Click on Add.
 
-![api-gen](images/api-gen.png)
+  ![api-gen](images/api-gen.png)
 
 This will add the new API Key. Copy the configuration as we will be referencing this later.
 
 Make sure to keep your API Key secure as this key allows you to access OCI resources.
 
-![api-config](images/api-config.png)
+  ![api-config](images/api-config.png)
 
 
 ## Task 3: Create Compartment
@@ -127,17 +127,15 @@ A compartment is a logical folder where you can organize your resources. For thi
 
 1. Click on the Navigation menu on the top left of the console.
 
-![navigation-menu](images/navigation-menu.png)
+  ![navigation-menu](images/navigation-menu.png)
 
 **Compartments**
 
 2. Click on Identity & Security and then compartments under Identity
 
-![navigation-compartment](images/navigation-compartment.png)
+  ![navigation-compartment](images/navigation-compartment.png)
 
 **Create Compartment**
-
-![compartment](images/compartment.png)
 
 3. Click on create compartment, Give it a name like terraform and a description (optional). 
 
@@ -145,7 +143,9 @@ A compartment is a logical folder where you can organize your resources. For thi
 
 5. Click Create Compartment.
 
-![create-compartment](images/create-compartment.png)
+  ![compartment](images/compartment.png)
+
+  ![create-compartment](images/create-compartment.png)
 
 **Compartment OCID**
 
@@ -157,31 +157,29 @@ The last piece of information needed from the compartment is the OCID.
 
 We will be referencing the OCID on the next Task. 
 
-![compartment-ocid](images/compartment-ocid.png)
+  ![compartment-ocid](images/compartment-ocid.png)
 
 ## Task 4: Setting up Terraform
 
-  Terraform is used to automate the process of provisioning and managing resources. We will install Terraform on to our local machine in this step. 
+Terraform is used to automate the process of provisioning and managing resources. We will install Terraform on to our local machine in this step. 
 
 **Terraform**
     
 1. Download [Terraform](https://www.terraform.io/downloads.html/)
 
-  For macOS follow these steps: 
-  ```
-  <copy>
-  brew tap hashicorp/tap
-  </copy>
-  ```
-  ```
-  <copy>
-  brew install hashicorp/tap/terraform
-  </copy>
-  ```
-
-  After Installing Terraform, please download our Terraform Template as we will be using this for the rest of the lab. 
+    For macOS follow these steps: 
+    ```
+    <copy>
+    brew tap hashicorp/tap
+    </copy>
+    ```
+    ```
+    <copy>
+    brew install hashicorp/tap/terraform
+    </copy>
+    ```
   
-2. Download the [Terraform template](files/skeleton.zip).
+2. Download the [Terraform template](files/skeleton.zip). We will be using this for the rest of the lab. 
 
 You may now **proceed to the next lab** 
 
