@@ -6,7 +6,7 @@ This lab walks you through the steps to train custom Image Classification model 
 
 [Youtube video on Create Image Library](youtube:Y3xsaFSwRmA:large)
 
-Estimated Time: 90 minutes.  
+Estimated Time: 30 minutes.  (Excluding Model Training)
 
 ### About OCI Vision
 
@@ -40,6 +40,10 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 2. Continue with AI Vision project setup. Click **Projects** on the left side menu list, confirm you are in correct **Compartment** and click **Create Project** provide project name and description.
 
     ![Create a new project in Vision](images/create-bc-project.png " ")
+
+3. Verify that the Project Status is **Active**
+
+    ![Create a new Vision Project Live](images/project-live.png " ")
  
 ## Task 2: Create and Train Vision Model
  
@@ -53,7 +57,7 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 
 3. Train model. Provide the Model display name and description, training duration can be **Recommended mode**. 
     
-    *Note: higher the number of images & higher the training duration better the AI model. Typically 2000+ images would create a good model. recommended mode completes in less than a few hours, around 2 to 3 hours for approx 2000 images*
+    > **Note:** Higher the number of images & higher the training duration better the AI model. Typically 2000+ images under same folder would create a good model. I would recommend minimum of 100 images in a folder, Also the recommended mode completes in less than a few hours, between 2 to 3 hours for approximately 2500 images of 1024 × 1024 pixel resolution.  
 
     ![Create a new Vision model](images/train-model-bc.png " ")
 
@@ -66,14 +70,14 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
     This will create a work request which you can monitor for percentage completed.
     
     You can also monitor the progress by reviewing **Log Messages**.
- 
-5. Evaluate your model
 
-    When model training is completed - **State** is *Succeeded* and **% Complete** is *100%*.
-  
-## Task 3: Analyze and evaluate your Model
+5. Click on the Project to Verify if the Model Status is **Active**
 
-1. Test you model using known images
+    ![Create a new Vision Model Active](images/model-live-active.png " ")
+   
+## Task 3: Analyze and Evaluate your Model
+
+1. Test you model using few random test images from your previously downloaded X-Ray images 
  
     Click **Local File** and upload image
 
@@ -82,16 +86,17 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 2. Image will be uploaded and automatically analyzed. **Image** and prediction **Results** are displayed.  
 
      ![Upload NORMAL image](images/bc-review-2.png " ")
+
+    This is clearly showing **BREAST\-WITH\-CANCER** with **99% confidence**
   
-3. You can repeat and perform prediction for one image which is clearly showing **BREAST\_CANCER** with **99% confidence**. Repeat for any other images  
+3. You can repeat this for any other image upload 
 
     ![Upload NORMAL image](images/bc-review-3.png " ")
 
-    This is showing it is **NORMAL\_BREAST** with **76% confidence**.
+    This is showing it is **NORMAL\-BREAST** with **76% confidence**.
  
-    **Please Note:** As an alternative you can create a bucket upload the images to that bucket, get the par url and use **Object storage** radio button, this will also bring same result but request JSON will change for input source element.
+    > **Note:**  As an alternative you can create a bucket upload the testing images to that bucket, get the par url and use **Object storage** radio button, this will also bring same result but request JSON will change for input source element.
  
-
 ## Task 4: Review Request and Response JSON
 
 Review Request and Response JSON this will be essential for us while building Application front end
@@ -167,4 +172,4 @@ Review Request and Response JSON this will be essential for us while building Ap
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - May 23rd, 2023.
+* **Last Updated By/Date** - Aug 11th, 2023.

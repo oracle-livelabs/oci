@@ -22,7 +22,7 @@ Estimated Lab Time: 30 minutes.
      - **Cisco Firepower Management Center (FMCv)**
      - **Cisco Firepower NGFW virtual firewall (NGFWv)**
 
-## **Task 1: Launch Firewall Management Center Instance**
+## Task 1: Launch Firewall Management Center Instance
 
 1. Launch **Cloud Shell** by clicking the icon next to region name on top right of OCI console. ('<=' icon)
 
@@ -56,7 +56,7 @@ Estimated Lab Time: 30 minutes.
       - The subnet created is populated: **mgmt-subnet**
       - Enable Public IP Address assignment: **Assign a public IPv4 address**
 
-   ![](../common/images/106-FMC1-Hub-VCN-Instance.png " ")
+   ![Detailed Page of Creating Cisco FMC in Hub VCN](../common/images/fmc1-hub-vcn-instance.png " ")
 
 8. Ensure **PASTE PUBLIC KEYS** is selected under **Add SSH Keys**. Paste the public key copied earlier.
  
@@ -66,7 +66,7 @@ Estimated Lab Time: 30 minutes.
 
 9. Click **Create** and wait for Instance to be in **Running** state. 
 
-## **Task 2: Launch Secure Firewall Instances**
+## Task 2: Launch Secure Firewall Instances
 
 1. Launch **Cloud Shell** by clicking the icon next to region name on top right of OCI console. ('<=' icon)
 
@@ -101,7 +101,7 @@ Estimated Lab Time: 30 minutes.
       - The subnet created is populated: **mgmt-subnet**
       - Enable Public IP Address assignment: **Assign a public IPv4 address**
 
-   ![](../common/images/36-SecureFirewall1-Hub-VCN-Instance.png " ")
+   ![Detailed Page of Creating Secure Firewall1 in Hub VCN](../common/images/securefirewall1-hub-vcn-instance.png " ")
 
 8. Ensure **PASTE PUBLIC KEYS** is selected under **Add SSH Keys**. Paste the public key copied earlier.
  
@@ -159,9 +159,9 @@ Estimated Lab Time: 30 minutes.
       </copy>
       ```
 
-   ![](../common/images/37-SecureFirewall2-Hub-VCN-Instance.png " ")
+   ![Detailed Page of Creating Secure Firewall2 in Hub VCN](../common/images/securefirewall2-hub-vcn-instance.png " ")
 
-## **Task 3: Add Interfaces on Secure Firewall Instances**
+## Task 3: Add Interfaces on Secure Firewall Instances
 
 1. Click on **secureFirewall1** instance and navigate to **Attached VNIC** under Resources section of the instance details page. You will be adding **diag**, **inside** and **outside** interfaces respectively which is very **important** here:
 
@@ -178,7 +178,7 @@ Estimated Lab Time: 30 minutes.
       - **Network**:  Keep the default value as Normal Setup
       - **Subnet**: Select **diag-subnet** from drop down
 
-   ![](../common/images/38-SecureFirewall1-Hub-VCN-Diag-Instance.png " ")
+   ![Detailed Page of Attaching Diag VNIC to Primary Secure Firewall in Firewall Hub VCN](../common/images/securefirewall1-hub-vcn-diag-instance.png " ")
 
 3. Verify all the information and Click **Save Changes**.
 
@@ -194,7 +194,7 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**: Select **inside-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-   ![](../common/images/39-SecureFirewall1-Hub-VCN-inside-Instance.png " ")
+   ![Detailed Page of Attaching Inside VNIC to Primary Secure Firewall in Firewall Hub VCN](../common/images/securefirewall1-hub-vcn-inside-instance.png " ")
 
 6. Verify all the information and Click **Save Changes**.
 
@@ -211,7 +211,7 @@ Estimated Lab Time: 30 minutes.
       - **Skip source/destination check**: Select checkmark next to this option
       - **Assign a public IPv4 address**: Select this option to assign a public to interface.
 
-   ![](../common/images/40-SecureFirewall1-Hub-VCN-outside-Instance.png " ")
+   ![Detailed Page of Attaching Outside VNIC to Primary Secure Firewall in Firewall Hub VCN](../common/images/securefirewall1-hub-vcn-outside-instance.png " ")
 
 9. Verify all the information and Click **Save Changes**.
 
@@ -234,7 +234,7 @@ Estimated Lab Time: 30 minutes.
       - **Network**:  Keep the default value as Normal Setup
       - **Subnet**: Select **diag-subnet** from drop down
 
-   ![](../common/images/41-SecureFirewall2-Hub-VCN-Diag-Instance.png " ")
+   ![Detailed Page of Attaching Diag VNIC to Secondary Secure Firewall in Firewall Hub VCN](../common/images/securefirewall2-hub-vcn-diag-instance.png " ")
 
 13. Verify all the information and Click **Save Changes**.
 
@@ -250,7 +250,7 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**: Select **inside-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-   ![](../common/images/42-SecureFirewall2-Hub-VCN-inside-Instance.png " ")
+   ![Detailed Page of Attaching Inside VNIC to Secondary Secure Firewall in Firewall Hub VCN](../common/images/securefirewall2-hub-vcn-inside-instance.png " ")
 
 16. Verify all the information and Click **Save Changes**.
 
@@ -267,7 +267,7 @@ Estimated Lab Time: 30 minutes.
       - **Skip source/destination check**: Select checkmark next to this option
       - **Assign a public IPv4 address**: Select this option to assign a public to interface.
 
-   ![](../common/images/43-SecureFirewall2-Hub-VCN-outside-Instance.png" ")
+   ![Detailed Page of Attaching Outside VNIC to Secondary Secure Firewall in Firewall Hub VCN](../common/images/securefirewall2-hub-vcn-outside-instance.png " ")
 
 19. Verify all the information and Click **Save Changes**.
 
@@ -275,11 +275,11 @@ Estimated Lab Time: 30 minutes.
 
     *outside interface on secureFirewall2 instance*
 
-## **Task 4: Create Flexible Network Load Balancers**
+## Task 4: Create Flexible Network Load Balancers
 
 1. From the OCI Services menu, click **Load Balancers** under **Networking**. Select your region on right part of the screen:
 
-   ![](../common/images/107-Load-Balancer.png " ")
+   ![Create Network Load Balancer Navigation](../common/images/load-balancer.png " ")
 
 2. Below table represents what you will be creating. Click on **Create Load Balancer** icon to create new **Flexible Network Load Balancer**:
 
@@ -297,13 +297,13 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**:  Select subnet as per table
       - **COMPARTMENT**: Ensure your compartment is selected
 
-   ![](../common/images/54-Create-Load-Balancer.png " ")
+   ![Create Load Balancer Console Page](../common/images/create-load-balancer.png " ")
 
-   ![](../common/images/44-SecureFirewall-Hub-VCN-Create-Network-Load-Balancer-Instance-Outside-IPs.png " ")
+   ![Create Network Load Balancer Console Page](../common/images/securefirewall-hub-vcn-create-network-load-balancer-instance-outside-ips.png " ")
 
 4. Click on **Next** to add listener **Name** and select Type of Traffic as **UDP/TCP** as per the table values. 
 
-   ![](../common/images/45-SecureFirewall-Hub-VCN-Create-Network-Load-Balancer-Instance-Outside-IPs-Listener.png " ")
+   ![Add Listener to NLB](../common/images/securefirewall-hub-vcn-create-network-load-balancer-instance-outside-ips-listener.png " ")
 
 5. Click on **Next** 
 
@@ -313,9 +313,9 @@ Estimated Lab Time: 30 minutes.
       - **Specify Health Check Policy**:  
         - Select **Protocol** and enter **Port** as per the table values.
 
-   ![](../common/images/46-SecureFirewall-Hub-VCN-Create-Network-Load-Balancer-Instance-Outside-IPs-Backends.png " ")
+   ![Add Backend Sets with Secure Firewall1 to NLB](../common/images/securefirewall-hub-vcn-create-network-load-balancer-instance-outside-ips-backends.png " ")
 
-   ![](../common/images/43-SecureFirewall-Hub-VCN-Create-Network-Load-Balancer-Instance-Outside-IPs-HealthCheck.png " ")
+   ![Add Backend Sets with Secure Firewall2 to NLB](../common/images/securefirewall-hub-vcn-create-network-load-balancer-instance-outside-ips-healthcheck.png " ")
 
 6. Click on **Create Network Load Balancer** to create **Flexible Network Load Balancer**
 
@@ -327,9 +327,9 @@ Estimated Lab Time: 30 minutes.
 
 9. At this point you should have **3** flexible network load balancer configured. Their health check will turn okay when you configure **Secure Firewall** in next lab.
 
-   ![](../common/images/53-Create-Network-Load-Balancers.png " ")
+   ![Successfully Created NLBs](../common/images/create-network-load-balancers.png " ")
 
-## **Task 5: Update Route Tables on Firewall-VCN**
+## Task 5: Update Route Tables on Firewall-VCN
 
 1. Navigate to the **firewall-vcn** and select **VCN-INGRESS** route table. 
 
@@ -343,7 +343,7 @@ Estimated Lab Time: 30 minutes.
 
 5. Add **Description**.
 
-   ![](../common/images/68-VCN-Ingress-Route-Table-Entries.png " ")
+   ![Add required route table entries with VCN Ingress Route Table](../common/images/vcn-ingress-route-table-entries.png " ")
 
 6. Click **Add Route Rules** to finish.
 
@@ -360,7 +360,7 @@ Estimated Lab Time: 30 minutes.
 
 11. Add **Description** for each entry.
 
-   ![](../common/images/69-Inside-Route-Table-Entries.png " ")
+   ![Add required route table entries with Inside Subnet Route Table](../common/images/inside-route-table-entries.png " ")
 
 12. Click **Add Route Rules** to finish.
 
@@ -385,7 +385,7 @@ Estimated Lab Time: 30 minutes.
 
 16. Add **Description** for each entry.
 
-   ![](../common/images/70-Outside-Route-Table-Entries.png " ")
+   ![Add required route table entries with Untrust Subnet Route Table](../common/images/outside-route-table-entries.png " ")
 
 17. Click **Add Route Rules** to finish.
 
@@ -401,7 +401,7 @@ Estimated Lab Time: 30 minutes.
 
 22. Add **Description** for each entry.
 
-   ![](../common/images/72-SGW-Route-Table-Entry.png " ")
+   ![Add required route table entries with Service Gateway](../common/images/sgw-route-table-entry.png " ")
 
 23. Click **Add Route Rules** to finish.
 
@@ -430,13 +430,13 @@ Estimated Lab Time: 30 minutes.
 
 27. Add **Description** for each entry as needed.
 
-   ![](../common/images/72-NLB-Route-Table-Entry.png " ")
+   ![NLB Route Table Created](../common/images/nlb-route-table-entry.png " ")
 
 28. Click **Add Route Rules** to finish.
 
-## **Task 6: Verify Route Tables associated to Subnets and Gateways**
+## Task 6: Verify Route Tables associated to Subnets and Gateways
 
-1. Below table includes neccessary subnets in each **VCNs** and make sure **Route Table** are attached to right subnets and service gateway. 
+1. Below table includes necessary subnets in each **VCNs** and make sure **Route Table** are attached to right subnets and service gateway. 
 
     | VCN          | Resource Name/Type                       | Route Table Name                |
     |--------------|------------------------------------------|---------------------------------|
@@ -452,11 +452,11 @@ Estimated Lab Time: 30 minutes.
 
 2. Below example reflects how to attach correct route table based on above table to one of the resource **Service Gateway**:
 
-   ![](../common/images/74-Create-Service-Gateway-Route-Table.png " ")
+   ![Associating Route Table to Service Gateway page](../common/images/create-service-gateway-route-table.png " ")
 
 3. Below example reflects how to attach correct route table based on above table to one of the resource **OutsideRouteTable**:
 
-   ![](../common/images/102-Update-Untrust-Route-Table.png " ")
+   ![Associating Route Table to Outside Subnet page](../common/images/update-untrust-route-table.png " ")
 
 ***Congratulations! You have successfully completed the lab.***
 
@@ -475,4 +475,4 @@ You may now [proceed to the next lab](#next).
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** -  Cisco
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023

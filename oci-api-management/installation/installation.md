@@ -10,13 +10,19 @@ Estimated time: 20 min
 - Install an Autonomous Database
 - Install the API Portal (APEX application) in it
 
+Watch the video below for a quick walk-through of the lab. 
+
+[Video](videohub:1_6v7eprbg)
+
 ### Prerequisites
 
-- Open the Oracle Cloud Shell and clone this repository on your laptop first.
+- Download the source code of the project:
 
-    ```
-    <copy>git clone https://github.com/mgueury/oci-api-portal.git</copy>
-    ```
+    - Download and unzip the file: https://github.com/mgueury/oci-api-portal/archive/refs/heads/main.zip
+    - Or clone the git repository
+        ```
+        <copy>git clone https://github.com/mgueury/oci-api-portal.git</copy>
+        ```
 
 - Create a file on your Laptop to take your notes
 
@@ -43,7 +49,27 @@ Estimated time: 20 min
     </copy>
     ````
 
-## Task 1: Create an Autonomous database
+## Task 1: Create a Compartment
+
+The compartment will be used to contains all the components of the lab.
+
+You can
+- Use an existing compartment to run the lab. 
+- Or create a new one.
+
+To create a new compartment:
+1. Go the menu
+2. Identity & Security
+3. Choose Compartment
+    ![Menu Compartment](images/apim-compartment1.png =40%x*)
+4. Click ***Create Compartment***
+5. Give a name: ***oci-starter***
+6. Then again: ***Create Compartment***
+    ![Create Compartment](images/apim-compartment2.png =40%x*)
+7. After creating the compartment, copy the OCID in your text editor. ***##COMPARTMENT\_OCID##***. We will need it later.
+    ![Details Compartment](images/apim-compartment3.png)
+
+## Task 2: Create an Autonomous database
 
 First, let's create an Autonomous database.
 
@@ -53,11 +79,11 @@ First, let's create an Autonomous database.
         ![ATP1](images/apim-atp.png)
 
 2. Click *Create Autonomous Database*
-    - Compartment : *Your Favorite Compartment*
+    - Compartment : *Your Favorite Compartment* 
     - Display Name: *APIDB*
     - Database Name: *APIDB* 
     - Workload: *Transaction Processing*
-    - Deployment: *Shared Infrastructure*
+    - Deployment: *Serverless* (Shared Infrastructure)
     - Password: ex: *LiveLab\_\_123* (Take note of it: ##DB\_PASSWORD##)
     - Network: Keep *Secure Access from Everywhere*
     - Licence: *BYOL or Licence Included*
@@ -69,18 +95,18 @@ First, let's create an Autonomous database.
 
         ![ATP2](images/apim-atp3.png)
 
-## Task 2: Create the Database User
+## Task 3: Create the Database User
 
 1. Go to the SQL interface
     In the page of the Autonomous Database,
-    - Click on *Database Actions*
+    - Click on *Database Actions* / *View all database Actions*
     - If you get a prompt asking for an user/password, enter ADMIN/##DB\_PASSWORD##
     - Then *SQL*
 
         ![Database Actions](images/apim-sql0.png)
 
 2. Run the following SQL to create the user API.
-    - Replace the password in the schema creation to your own (to make it easy, let's use the same than ADMIN ##DB_PASSWORD##) 
+    - Replace the password in the schema creation to your own (to make it easy, let's use the same ADMIN user password by reusing ##DB_PASSWORD##) 
 
         ```
         <copy>
@@ -115,7 +141,7 @@ First, let's create an Autonomous database.
 
         ![APEX Installation](images/apim-sql1.png)
 
-## Task 3: Create a Dynamic Group and Policy
+## Task 4: Create a Dynamic Group and Policy
 
 Here I assume that the tenant is using the new Identity Domains. If it is not the case, the Dynamic group, Policy are about at the same place in the menu.
 
@@ -127,7 +153,7 @@ Here I assume that the tenant is using the new Identity Domains. If it is not th
     - Click the button *Create Dynamic Group*
     - Name *API\_MANAGEMENT\_DYN\_GROUP*
     - Description *API\_MANAGEMENT\_DYN\_GROUP*
-    - In the Rule, you need to use the DB_OCID from the notes. 
+    - In the Rule, you need to use the ##DB\_OCID## from the notes. 
         ```
         <copy>
         resource.id = '##DB_OCID##'
@@ -141,27 +167,31 @@ Here I assume that the tenant is using the new Identity Domains. If it is not th
     - Click *Create Policy*
     - Name *API\_MANAGEMENT\_POLICY*
     - Description *API\_MANAGEMENT\_POLICY*
-    - Compartment: Choose the *root* compartment
+    - Compartment: Choose your compartment
     - Policy, click *Show manual editor*
+    - You need the ##COMPARTMENT\_OCID## from the notes.
     
         ```
         <copy>
-        Allow dynamic-group API_MANAGEMENT_DYN_GROUP to manage api-gateway-family in tenancy
+        Allow dynamic-group API_MANAGEMENT_DYN_GROUP to manage api-gateway-family in compartment id ##COMPARTMENT_OCID##
         </copy>
         ```
 
 
     ![Policies](images/apim-policy.png)
 
-## Task 4: Install the APEX program
+## Task 5: Install the APEX program
 
 Back to page of the Autonomous Database,
-1. Go to APEX. Click again on *Database Actions*
+1. Go to APEX. Click again on *Database Actions* / *View all database Actions*
 
     ![APEX Installation](images/apim-apex0.png)
 
     - Click *APEX*
 2. Note the URL of APEX, we need the Apex Host Name (##APEX_HOST##) later in the lab (Ex: abcdefghijk-db123.adb.eu-frankfurt-1.oraclecloudapps.com) 
+
+    ![APEX URL](images/apim-apex-url.png)
+
 3. In Administration Service, enter the DB password (##DB_PASSWORD##)
     - Click *Sign In to Administration*
 
@@ -184,6 +214,7 @@ Back to page of the Autonomous Database,
         ![APEX Create Workspace](images/apim-apex4.png)
 
     - Click on your top right icon. Then *Sign-out*
+    - Click *Return to Sign in page*
 
 4. In the APEX login page
     - Workspace: *API*
@@ -196,7 +227,8 @@ Back to page of the Autonomous Database,
  
     ![APEX Installation](images/apim-apex5.png)
 
-    - Go in the files that you have downloaded from Git
+    - Go in the files that you have downloaded from Github
+    - Uncompress the .zip if not done yet.
     - Choose *apex/apex_apim.sql*
     - Click *Next*
     - Click *Next*
@@ -207,7 +239,7 @@ Back to page of the Autonomous Database,
 We have now a running API Management Portal but it is empty.
 - Click *Run Application*
 
-## Task 5: Test the empty installation
+## Task 6: Test the empty installation
 
 We have now a running API Management Portal but it is empty.
 1. Login *API* / Password - See ##DB_PASSWORD##
