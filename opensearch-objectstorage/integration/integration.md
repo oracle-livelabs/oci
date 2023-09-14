@@ -162,7 +162,7 @@ proxy_NON_PROXY_HOSTS=
 EOT
 
 # Install JDK 11
-sudo yum install java-11-openjdk-devel -y
+sudo yum install java-17-openjdk-devel -y
 
 # Get the SSL certificate of OpenSearch since it is invalid
 echo -n | openssl s_client -connect $OPENSEARCH_HOST:9200 -servername $OPENSEARCH_HOST | openssl x509 > /tmp/opensearch.cert
