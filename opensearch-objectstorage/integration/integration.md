@@ -161,7 +161,7 @@ proxy_PASSWORD=
 proxy_NON_PROXY_HOSTS=
 EOT
 
-# Install JDK 11
+# Install JDK 
 sudo yum install java-17-openjdk-devel -y
 
 # Get the SSL certificate of OpenSearch since it is invalid
