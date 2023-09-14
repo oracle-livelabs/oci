@@ -1,4 +1,4 @@
-# Access Stack Monitoring Workshop environment
+# Access the Workshop environment
 
 ## Introduction
 
@@ -13,7 +13,6 @@ Estimated time: 5 minutes
 ### Prerequisites
 
 * Internet access from a laptop/device with a chrome browser (preferred) and Oracle Single Sign On account to use a LiveLabs workshop. An Oracle LiveLabs Event code or Green Button assigned account and tenancy
-
 
 ## Task 1: Log in to the workshop tenancy
 
@@ -46,7 +45,6 @@ After you successfully log into the workshop tenancy using the View Login Info l
 
 ## Task 2: Access the Enterprise Summary page
 
-
 1. Navigate to Stack Monitoring
    
    Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console.
@@ -76,8 +74,8 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Aaron Rimel, Principal Product Manager, Enterprise and Cloud Manageability
-- **Contributors** - Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,
-- Steven Lemme, Senior Principal Product Manager,
-Anand Prabhu, Sr. Member of Technical Staff
-
-* **Last Updated By/Date** - Aaron Rimel, February 2023
+* **Contributors:** 
+   * Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
+   * Steven Lemme, Senior Principal Product Manager,  
+   * Anand Prabhu, Sr. Member of Technical Staff
+* **Last Updated By/Date** - Aaron Rimel, June 2023
