@@ -19,7 +19,7 @@ This lab assumes you have:
 In this lab, you will:
 * Learn how to use/setup Terraform
 
-## Task 1: Terraform defining the OCI Provider in the Terraform
+## Task 1: Defining the OCI Provider in the Terraform
 The Terraform main.tf file is the main entry point for the Terraform configuration. It contains the core infrastructure definitions for the Terraform environment. 
 
 The first definition in this file is the provider. In Terraform, a "provider" is a plugin that allows Terraform to interact with a specific cloud or infrastructure platform to create, manage, and delete resources. The provider is an essential component as it enables Terraform to abstract the underlying APIs of various cloud providers. In this lab we will be defining the provider using the main.tf and provider.auto.tfvars files. 

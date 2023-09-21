@@ -167,7 +167,12 @@ Terraform is used to automate the process of provisioning and managing resources
     
 1. Download [Terraform](https://www.terraform.io/downloads.html/)
 
-    For macOS follow these steps: 
+    For macOS follow these steps:
+
+    Follow the installation guide on how to install [Homebrew](https://brew.sh/)
+
+    Then run these commands, 
+
     ```
     <copy>
     brew tap hashicorp/tap
