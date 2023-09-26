@@ -24,7 +24,7 @@ In this lab, you will:
 
 2. Select __Variables__ from the left side-menu, then click the __Edit variables__ button. ![Navigate to Edit Variables](images/stack-variables.png "Stack variables menu")
 
-3. Wait a moment for the page to populate, then enter `172.16.0.0/20` for the Exadata VCN CIDR.
+3. Wait a moment for the page to populate, then enter `172.16.0.0/20` for the _Exadata VCNs CIDR Blocks_.
 
 4. Check the __Advanced Options__ box, and then check __Create Compartment for Exadata Infrastructure__ box. ![Exadata Configurations](images/exadata-config.png "Checked Advanced Options and Create Compartment for Exadata Infrastructure checkboxes")
 

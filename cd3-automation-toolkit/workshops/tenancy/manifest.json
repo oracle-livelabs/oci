@@ -1,8 +1,17 @@
 {
-    "workshoptitle": "Deploy Compute, Block Volume and ATP using CD3 Automation Toolkit",
+    "workshoptitle": "Deploy a Web Application infrastructure using CD3 Automation Toolkit",
     "help": "livelabs-help-oci_us@oracle.com",
 	"tutorials": [
         {
+            "title": "Introduction",
+            "filename": "./../../introduction/introduction.md"
+        },
+         {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+	    {
             "title": "Lab 1: Get started with CD3 Automation Toolkit setup",
             "filename": "./../../setup-the-toolkit/setup-the-toolkit.md"
         },
@@ -15,7 +24,7 @@
             "filename": "./../../create-eventalarm/create-eventalarm.md"
         },
         {
-            "title": "Lab 4: Uploading stack to OCI Resource Manager",
+            "title": "Lab 4: Upload stack to OCI Resource Manager",
             "filename": "./../../upload-resourcemanager/upload-resourcemanager.md"
         },
          {

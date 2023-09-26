@@ -15,26 +15,26 @@ Estimated Lab Time: 20 minutes.
 
 - Oracle Cloud Infrastructure paid account credentials (User, Password, Tenant, and Compartment)  
 
-## **Task 1: Initial Configuration on Primary FortiGate**
+## Task 1: Initial Configuration on Primary FortiGate
 
 1. Connect to **FortiGate1** instance public IP on your local machine's web browser: **https://public_ip**. It will ask you to use instance OCID to login the first time as below. 
 
-   ![](../common/images/58-First-Time-FortiGate-Login-Page.png " ")
+   ![Primary Fortigate Login Page](../common/images/first-time-fortigate-login-page.png " ")
 
 2. Update default old password with new password value:
     - For example in your case you can chose **fortinet** as password so next time you login to FortiGate GUI, you will be using **admin/fortinet** to login. 
 
 3. Re-Login to **FortiGate1** GUI using new password and update initial configuration: 
 
-   ![](../common/images/59-FortGate1-Initial-Config.png " ")
+   ![Primary Fortigate Initial Setup Page](../common/images/fortgate1-initial-config.png " ")
 
-   ![](../common/images/60-FortGate-Initial-Config-Hostname.png " ")
+   ![Primary Fortigate Initial Hostname setup](../common/images/fortgate-initial-config-hostname.png " ")
 
-   ![](../common/images/61-FortGate1-Initial-Config-Optimal.png " ")
+   ![Primary Fortigate Initial Dashboard setup](../common/images/fortgate1-initial-config-optimal.png " ")
 
 4. Connect to **CLI** on your initial login to **FortiGate1** Instance by clicking to terminal icon as below, this will prompt a CLI window where you will be adding configuration in your next steps: 
 
-   ![](../common/images/62-FortiGate-CLI-Access.png " ")
+   ![Primary Fortigate CLI Access Page](../common/images/fortigate-cli-access.png " ")
 
 5. Copy below configuration and paste in **CLI Console** to update **FortiGate1** hostname:
 
@@ -47,7 +47,7 @@ Estimated Lab Time: 20 minutes.
       </copy>
       ```
 
-   ![](../common/images/63-FortiGate-CLI-Console.png " ")
+   ![Primary Fortigate System Global setting window](../common/images/fortigate-cli-console.png " ")
 
 6. Update below configuration based on your **FortiGate1** instance value and paste in **CLI Console** for **FortiGate1** interfaces:
 
@@ -188,33 +188,33 @@ Estimated Lab Time: 20 minutes.
 
 8. Do a sanity check and verify that configuration which you pushed are there on **FortiGate1** instance:
 
-   ![](../common/images/64-FortiGate1-Interfaces.png " ")
+   ![Primary Fortigate Interfaces Page](../common/images/fortigate1-interfaces.png " ")
 
-   ![](../common/images/66-FortiGate1-HA-Config.png " ")
+   ![Primary Fortigate HA Page](../common/images/fortigate1-ha-config.png " ")
 
-   ![](../common/images/65-FortiGate1-SDN-Connector.png " ")
+   ![Primary Fortigate SDN Connector Page](../common/images/fortigate1-sdn-connector.png " ")
 
 
-## **Task 2: Initial Configuration on Secondary FortiGate**
+## Task 2: Initial Configuration on Secondary FortiGate
 
 1. Connect to **FortiGate2** instance public IP on your local machine's web browser: **https://public_ip**. It will ask you to use instance OCID to login the first time as below. 
 
-   ![](../common/images/58-First-Time-FortiGate-Login-Page.png " ")
+   ![Secondary Fortigate Login Page](../common/images/first-time-fortigate-login-page.png " ")
 
 2. Update default old password with new password value:
     - For example, in your case you can chose **fortinet** as password so next time you login to FortiGate GUI, you will be using **admin/fortinet** to login. 
 
 3. Re-Login to **FortiGate2** GUI using new password and update initial configuration: 
 
-   ![](../common/images/59-FortGate1-Initial-Config.png " ")
+   ![Secondary Fortigate Initial Setup Page](../common/images/fortgate1-initial-config.png " ")
 
-   ![](../common/images/60-FortGate-Initial-Config-Hostname.png " ")
+   ![Secondary Fortigate Hostname Page](../common/images/fortgate-initial-config-hostname.png " ")
 
-   ![](../common/images/61-FortGate1-Initial-Config-Optimal.png " ")
+   ![Secondary Fortigate Dashboard Page](../common/images/fortgate1-initial-config-optimal.png " ")
 
 4. Connect to **CLI** on your initial login to **FortiGate2** Instance by clicking to terminal icon as below, this will prompt a CLI window where you will be adding configuration in your next steps: 
 
-   ![](../common/images/62-FortiGate-CLI-Access.png " ")
+   ![Secondary Fortigate Global Setting Page](../common/images/fortigate-cli-access.png " ")
 
 5. Copy below configuration and paste in **CLI Console** to update **FortiGate2** hostname:
 
@@ -299,7 +299,7 @@ Estimated Lab Time: 20 minutes.
 
 8. Connect to **FortiGate1** instance's GUI and validate that HA configuration sync is complete, it might take few minutes to reflect that. 
 
-   ![](../common/images/67-FortiGate-HA-Sync.png " ")
+   ![Secondary Fortigate HA Sync Page](../common/images/fortigate-ha-sync.png " ")
 
 ***Congratulations! You have successfully completed the lab.***
 
@@ -319,4 +319,4 @@ You may now [proceed to the next lab](#next).
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** -  Fortinet
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023

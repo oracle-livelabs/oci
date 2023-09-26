@@ -22,7 +22,7 @@ Estimated Lab Time: 30 minutes.
     - **VM Series Firewall** paid listing or BOYL access required for this **Lab**
         - You would need a valid license from Palo Alto Networks if you want to monitor traffic using BOYL image and utilize advanced features.
 
-## **Task 1: Launch VM Series Firewall Instances**
+## Task 1: Launch VM Series Firewall Instances**
 
 1. Launch **Cloud Shell** by clicking the icon next to region name on top right of OCI console. ('<=' icon)
 
@@ -59,7 +59,7 @@ Estimated Lab Time: 30 minutes.
       - The subnet created is populated: **mgmt-subnet**
       - Enable Public IP Address assignment: **Assign a public IPv4 address**
 
-   ![](../common/images/36-Firewall1-Hub-VCN-Instance.png " ")
+   ![Detailed Page of Creating Primary Firewall Instance in Firewall Hub VCN](../common/images/firewall1-hub-vcn-instance.png " ")
 
 8. Ensure **PASTE PUBLIC KEYS** is selected under **Add SSH Keys**. Paste the public key copied earlier.
  
@@ -71,9 +71,9 @@ Estimated Lab Time: 30 minutes.
 
 10. Repeat step 5 to 9 based on the **table** provided in **step 4** for another VM Series Firewall **vm-series-firewall-2** instance.
 
-   ![](../common/images/37-Firewall2-Hub-VCN-Instance.png " ")
+   ![Detailed Page of Creating Secondary Firewall Instance in Firewall Hub VCN](../common/images/firewall2-hub-vcn-instance.png " ")
 
-## **Task 2: Add Interfaces on VM Series Firewall Instances**
+## Task 2: Add Interfaces on VM Series Firewall Instances**
 
 1. Click on **forgiate1** instance and navigate to **Attached VNIC** under Resources section of the instance details page. You will be adding **untrust**, **trust** and **ha** interfaces respectively:
 
@@ -91,7 +91,7 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**: Select **untrust-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-   ![](../common/images/38-Firewall1-Hub-VCN-Untrust-Instance.png " ")
+   ![Detailed Page of Attaching Untrust VNIC to Primary Firewall Instance in Firewall Hub VCN](../common/images/firewall1-hub-vcn-untrust-instance.png " ")
 
 3. Verify all the information and Click **Save Changes**.
 
@@ -107,7 +107,7 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**: Select **trust-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-   ![](../common/images/39-Firewall1-Hub-VCN-trust-Instance.png " ")
+   ![Detailed Page of Attaching Trust VNIC to Primary Firewall Instance in Firewall Hub VCN](../common/images/firewall1-hub-vcn-trust-instance.png " ")
 
 6. Verify all the information and Click **Save Changes**.
 
@@ -123,7 +123,7 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**: Select **ha-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-   ![](../common/images/40-Firewall1-Hub-VCN-ha-Instance.png " ")
+   ![Detailed Page of Attaching HA VNIC to Primary Firewall Instance in Firewall Hub VCN](../common/images/firewall1-hub-vcn-ha-instance.png " ")
 
 9. Verify all the information and Click **Save Changes**.
 
@@ -147,7 +147,7 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**: Select **untrust-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-   ![](../common/images/41-Firewall2-Hub-VCN-Untrust-Instance.png " ")
+   ![Detailed Page of Attaching Untrust VNIC to Secondary Firewall Instance in Firewall Hub VCN](../common/images/firewall2-hub-vcn-untrust-instance.png " ")
 
 13. Verify all the information and Click **Save Changes**.
 
@@ -163,7 +163,7 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**: Select **trust-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-   ![](../common/images/42-Firewall2-Hub-VCN-trust-Instance.png " ")
+   ![Detailed Page of Attaching Trust VNIC to Secondary Firewall Instance in Firewall Hub VCN](../common/images/firewall2-hub-vcn-trust-instance.png " ")
 
 16. Verify all the information and Click **Save Changes**.
 
@@ -179,7 +179,7 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**: Select **ha-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-   ![](../common/images/43-Firewall2-Hub-VCN-ha-Instance.png " ")
+   ![Detailed Page of Attaching HA VNIC to Secondary Firewall Instance in Firewall Hub VCN](../common/images/firewall2-hub-vcn-ha-instance.png " ")
 
 19. Verify all the information and Click **Save Changes**.
 
@@ -187,9 +187,9 @@ Estimated Lab Time: 30 minutes.
 
     *ha interface on VM Series Firewall 2 instance*
 
-## **Task 3: Assign Secondary IP Addresses on Primary VM Series Firewall Instance**
+## Task 3: Assign Secondary IP Addresses on Primary VM Series Firewall Instance**
 
-1. Click on **forgiate1** instance and navigate to **Attached VNIC** under Resources section of the instance details page. You will be assigning additional IP addresses to **untrust** and **trust** interfaces of **vm-series-firewall-1** VM. You will be using them to route traffic to/from firewall:
+1. Click on **vm-series-firewall-1** instance and navigate to **Attached VNIC** under Resources section of the instance details page. You will be assigning additional IP addresses to **untrust** and **trust** interfaces of **vm-series-firewall-1** VM. You will be using them to route traffic to/from firewall:
 
     | Interface | Public IP Address         | Public IP Assignment            | PublicIP Name     |
     |-----------|---------------------------|---------------------------------|-------------------|
@@ -203,7 +203,7 @@ Estimated Lab Time: 30 minutes.
       - **PublicIP Name**:  Enter a user-friendly name
       - **COMPARTMENT**: Ensure your compartment is selected
 
-   ![](../common/images/44-Firewall1-Hub-VCN-Untrust-Instance-Floating-IP.png " ")
+   ![Detailed Page of Adding Secondary IP address to Untrust VNIC of Primary Firewall Instance in Firewall Hub VCN](../common/images/firewall1-hub-vcn-untrust-instance-floating-ip.png " ")
 
 3. Verify all the information and Click **Assign**.
 
@@ -218,7 +218,7 @@ Estimated Lab Time: 30 minutes.
       - **PublicIP Name**:  Enter a user-friendly name
       - **COMPARTMENT**: Ensure your compartment is selected
 
-   ![](../common/images/45-Firewall1-Hub-VCN-trust-Instance-Floating-IP.png " ")
+   ![Detailed Page of Adding Secondary IP address to Trust VNIC of Primary Firewall Instance in Firewall Hub VCN](../common/images/firewall1-hub-vcn-trust-instance-floating-ip.png " ")
 
 6. Verify all the information and Click **Assign**.
 
@@ -226,11 +226,11 @@ Estimated Lab Time: 30 minutes.
 
     *assign secondary IP address to trust interface on VM-Series-Firewall-1 instance*
 
-## **Task 4: Configure Dynamic Groups and Required Policies**
+## Task 4: Configure Dynamic Groups and Required Policies**
 
 1. From the OCI Services menu, click **Dynamic Groups** under **Identity & Security**. Select your region on right part of the screen:
 
-   ![](../common/images/55-Create-Dynamic-Group.png " ")
+   ![Create Dynamic Group Home Page](../common/images/create-dynamic-group.png " ")
 
 2. You will be creating **Dynamic Group** which will include **VM Series Firewall** instances OCIDs which will support HA failover use-case. Based on below tables you will create Dynamic Group. 
 
@@ -248,51 +248,51 @@ Estimated Lab Time: 30 minutes.
         - **Instance OCID**: 
             - **Value**: Enter VM-Series-Firewall-2 Instance OCID
 
-   ![](../common/images/53-Dynamic-Group.png " ")
+   ![Create Dynamic Group](../common/images/dynamic-group.png " ")
 
-   ![](../common/images/53-Dynamic-Group-Any-Of-The-Following.png " ")
+   ![Add Compartment OCIDs to Dynamic Group](../common/images/dynamic-group-any-of-the-following.png " ")
 
-6. Verify all the information and Click **Add Rule** and Click **Create**:
+4. Verify all the information and Click **Add Rule** and Click **Create**:
 
-7. This will create a new dynamic group with VM Series Firewall Instance OCIDs with following components.
+5. This will create a new dynamic group with VM Series Firewall Instance OCIDs with following components.
 
     *new dynamic group with VM Series Firewall Instances OCID*
 
-3. From the OCI Services menu, click **Policies** under **Identity & Security**. Select your region on right part of the screen:
+6. From the OCI Services menu, click **Policies** under **Identity & Security**. Select your region on right part of the screen:
 
-   ![](../common/images/56-Create-Dynamic-Group-Policy.png " ")
+   ![Create IAM Policy with Dynamic Group](../common/images/create-dynamic-group-policy.png " ")
 
-2. You will be creating **Dynamic Group** which will include **VM Series Firewall** instances OCIDs which will support HA failover use-case. Based on below tables you will create Dynamic Group. 
+7. You will be creating **Dynamic Group** which will include **VM Series Firewall** instances OCIDs which will support HA failover use-case. Based on below tables you will create Dynamic Group. 
 
     | Name                | Description                              | Policy                                                                                                                                                                                                                                     | Comment                                                             |
     |---------------------|------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
     | palo-alto-ha-policy | VM Series Firewall HA Policy             | Allow dynamic-group vm-series-firewall-high-availability to use instance-family in compartment enter-compartment-name Allow dynamic-group vm-series-firewall-high-availability to use virtual-network-family in enter-compartment-name | Open for All Resources with Instances OCID present in dynamic group |
 
-3. Select **Create Dynamic Group** and fill out the dialog box for creating dynamic group: 
+8. Select **Create Dynamic Group** and fill out the dialog box for creating dynamic group: 
 
       - **Name**: Enter Policy Name
       - **Description**:  Enter Policy Description
-      - **Polic Builder**:  Enter policy
+      - **Policy Builder**:  Enter policy
         - **Open Policy**: Allow dynamic-group <dynamic_group_name> to manage all-resources in TENANCY
             - **Dynamic Group**: Ensure you enter correct dynamic group name in out case it’s **vm-series-firewall-high-availability**
       - **COMPARTMENT**: Ensure **Root** compartment is selected
 
-   ![](../common/images/54-Dynamic-Group-Policy-Root-Compartment.png " ")
+   ![Create IAM Policy associated with Dynamic Group](../common/images/dynamic-group-policy-root-compartment.png " ")
 
-6. Verify all the information and Click **Create**.
+9. Verify all the information and Click **Create**.
 
-7. This will create policy with following components.
+10. This will create policy with following components.
 
-    *New Policy Present in Root comparment associated with dynamic group created earlier*
+    *New Policy Present in Root compartment associated with dynamic group created earlier*
 
-7. Verify at this point you have required instances are running in your chosen compartment: 
+11. Verify at this point you have required instances are running in your chosen compartment: 
    - **Two** VM Series Firewall Instances in Firewall-VCN
    - **Two** Linux VM Instances in Web-VCN
    - **Two** Linux VM Instances in DB-VCN
 
-   ![](../common/images/57-All-Instances.png " ")
+   ![Created Instances](../common/images/all-instances.png " ")
 
-## **Task 5: Update Route Tables on Firewall-VCN**
+## Task 5: Update Route Tables on Firewall-VCN
 
 1. Navigate to the **firewall-vcn** and select **VCN-INGRESS** route table. 
 
@@ -306,7 +306,7 @@ Estimated Lab Time: 30 minutes.
 
 5. Add **Description**.
 
-   ![](../common/images/68-VCN-Ingress-Route-Table-Entries.png " ")
+   ![Add required route table entries with VCN Ingress Route Table](../common/images/vcn-ingress-route-table-entries.png " ")
 
 6. Click **Add Route Rules** to finish.
 
@@ -322,7 +322,7 @@ Estimated Lab Time: 30 minutes.
 
 11. Add **Description** for each entry.
 
-   ![](../common/images/69-Trust-Route-Table-Entries.png " ")
+   ![Add required route table entries with Trust Subnet Route Table](../common/images/trust-route-table-entries.png " ")
 
 12. Click **Add Route Rules** to finish.
 
@@ -347,7 +347,7 @@ Estimated Lab Time: 30 minutes.
 
 16. Add **Description** for each entry.
 
-   ![](../common/images/70-Untrust-Route-Table-Entries.png " ")
+   ![Add required route table entries with Untrust Subnet Route Table](../common/images/untrust-route-table-entries.png " ")
 
 17. Click **Add Route Rules** to finish.
 
@@ -363,13 +363,13 @@ Estimated Lab Time: 30 minutes.
 
 22. Add **Description** for each entry.
 
-   ![](../common/images/72-SGW-Route-Table-Entry.png " ")
+   ![Add required route table entries with Service Gateway](../common/images/sgw-route-table-entry.png " ")
 
 17. Click **Add Route Rules** to finish.
 
-## **Task 6: Verify Route Tables associated to Subnets and Gateways**
+## Task 6: Verify Route Tables associated to Subnets and Gateways
 
-1. Below table includes neccessary subnets in each **VCNs** and make sure **Route Table** are attached to right subnets and service gateway. 
+1. Below table includes necessary subnets in each **VCNs** and make sure **Route Table** are attached to right subnets and service gateway. 
 
     | VCN          | Resource Name/Type                       | Route Table Name                |
     |--------------|------------------------------------------|---------------------------------|
@@ -384,11 +384,11 @@ Estimated Lab Time: 30 minutes.
 
 2. Below example reflects how to attach correct route table based on above table to one of the resource **Service Gateway**:
 
-   ![](../common/images/74-Create-Service-Gateway-Route-Table.png " ")
+   ![Associating Route Table to Service Gateway page](../common/images/create-service-gateway-route-table.png " ")
 
 3. Below example reflects how to attach correct route table based on above table to one of the resource **UntrustRouteTable**:
 
-   ![](../common/images/102-Update-Untrust-Route-Table.png " ")
+   ![Associating Route Table to Untrust Subnet page](../common/images/update-untrust-route-table.png " ")
 
 ***Congratulations! You have successfully completed the lab.***
 

@@ -29,7 +29,7 @@ In this lab, you will use Document Understanding AI services for the following:
 This lab assumes you have:
 
 * Completed previous labs of this workshop: **Setup environment**, you have access to create OCI Bucket and Oracle Document Understanding AI services.
-
+ 
 ## Task 1: Create OCI Bucket
 
 1. Login to cloud.oracle.com from the top left navigation and select bucket under the storage menu.
@@ -315,7 +315,7 @@ This lab assumes you have:
 
     ![Navigate to Vision](images/doc-classification.png " ")
   
-This concludes this lab and you can **proceed to the next lab**.
+    > **Congratulations**, you have completed **Document Understanding Features** Labs. The subsequent labs are optional, however, please proceed to the next lab to learn more about **Oracle APEX Application for Medical Receipt processing**.  
 
 ## Learn More
 
@@ -324,4 +324,4 @@ This concludes this lab and you can **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - May 26th, 2023
+* **Last Updated By/Date** - August 11th, 2023

@@ -1,19 +1,16 @@
-# Trigger the OCI Vision model creation and training
+# Create the OCI Vision custom model
 
 ## Introduction
 
-In this lab, you will create an OCI Vision project and an OCI Vision custom model. A custom model can be created with a minimum of 10 images, which we have provided. For production models though, we recommend using many more images for training.
+In this lab, you will create an OCI Vision project and an OCI Vision custom model. A custom model can be created with a minimum of 10 images, which we have provided. For production models, we recommend using a larger number of images for training.
 
-An OCI Vision custom model can be created in quick mode (up to 1 hour), regular mode (up to 24 hours), or custom mode. In the lab steps, we will use quick mode training since we're limited on time.
+An OCI Vision custom model can be created using the quick mode (up to 1 hour), recommended mode (up to 24 hours), or custom mode training duration. In the lab steps, we will use the quick mode training duration. For production models, we suggest using recommended mode.
 
-Watch the video below for a quick walk-through of the lab.
-[Trigger the OCI Vision model creation and training](videohub:1_jcsjr351)
+Estimated Time: 30 minutes
 
 ### Objectives
 
-- Become familiar with OCI Vision
-- Understand the OCI Vision resource hierarchy
-- Create an OCI Vision custom model for Object Detection 
+- Create an OCI Vision custom object detection model
 
 ## Task 1: Create an OCI Vision project
 
@@ -28,10 +25,10 @@ Watch the video below for a quick walk-through of the lab.
 ## Task 2: Create the OCI Vision rust detection model
 
 1. Once the project status is *Active*, select *vision-project*.
-2. While on the OCI Vision project details page, click **Create Model**.
+2. Click **Create Model**.
    ![OCI Vision project details](../images/vision_project.png)
 2. Select *Object Detection* in model type.
-3. Select *Choose existing dataset*, *Data Labeling Service*, and select the *vision-livelab-dataset* bucket.
+3. Select *Choose existing dataset*, *Data labeling service*, and select the *vision-livelab-dataset* bucket.
    ![Creation of OCI Vision model - 1](../images/create_model1.png)
 4. Click **Next**.
 5. Name the model *vision-model*.
@@ -43,4 +40,4 @@ Watch the video below for a quick walk-through of the lab.
 ## Acknowledgements
 
 * **Authors** - Mark Heffernan and Jason Monden
-* **Last Updated By/Date** - Mark Heffernan, May 2023
+* **Last Updated By/Date** - Mark Heffernan, August 2023
