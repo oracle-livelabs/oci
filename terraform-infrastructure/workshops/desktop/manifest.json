@@ -1,8 +1,7 @@
 {
   "workshoptitle": "Set up Highly Available and Secure Infrastructure with Terraform",
   "help": "livelabs-help-oci_us@oracle.com",
-  "variables": ["../../variables/variables.json",
-    "../../variables/variables-in-another-file.json"],
+
   "tutorials": [
     {
       "title": "Introduction",
