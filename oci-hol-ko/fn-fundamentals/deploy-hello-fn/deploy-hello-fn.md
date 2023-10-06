@@ -30,10 +30,13 @@ Oracle Functions을 실행하는 데에 대한 기본 사항을 알아봅니다.
     - **Name**: oci-hol-fn-app
     - **VCN** : 사용할 VCN 선택
     - **Subnets** : 사용할 *Public* 서브넷 선택
+    - **Shape** : *GENERIC_X86을 선택*
+    
+        * CloudShell상의 fn cli 버전이 아직 0.6.24로 낮아 CloudShell에서 작업하는 경우 *GENERIC_X86*을 꼭 선택합니다.
 
     ![Create Application](images/fn-create-application.png =50%x*)
 
-3. 아래로 스크롤하여 **Resources** >> **Getting started**로 이동합니다.
+4. 아래로 스크롤하여 **Resources** >> **Getting started**로 이동합니다.
 
     - 두 가지 환경에서 시작하는 방법이 있는데, 여기서는 Cloud Shell에서 진행하도록 하겠습니다.
     
@@ -53,7 +56,8 @@ Oracle Functions을 실행하는 데에 대한 기본 사항을 알아봅니다.
 
 2. fn CLI의 컨텍스트를 현재 작업중인 Region으로 설정합니다.
 
-    - Cloud Shell에는 아래 명령 결과에서 보듯이 fn cli가 사전에 설치되어 있고, Cloud Shell 시작시의 Region이 fn CLI에서 사용할 수 있게 context가 자동으로 설정되어 있습니다.
+    - Cloud Shell에는 아래 명령 결과에서 보듯이 fn cli가 사전에 설치되어 있습니다.
+    - fn cli의 context는 Cloud Shell 시작시점의 클라우드 콘솔에서 선택된 Region으로 기본 설정되어 있습니다. 필요하면 변경합니다.
 
     ```
     <copy>
@@ -187,9 +191,9 @@ Oracle Functions을 실행하는 데에 대한 기본 사항을 알아봅니다.
         name: hello-java
         version: 0.0.1
         runtime: java
-        build_image: fnproject/fn-java-fdk-build:jdk17-1.0.174
-        run_image: fnproject/fn-java-fdk:jre17-1.0.174
-        cmd: com.example.fn.HelloFunction::handleRequest        
+        build_image: fnproject/fn-java-fdk-build:jdk17-1.0.179
+        run_image: fnproject/fn-java-fdk:jre17-1.0.179
+        cmd: com.example.fn.HelloFunction::handleRequest     
         ```
 
 10. Function을 배포합니다.
@@ -294,7 +298,7 @@ Function에서 많이 사용하는 Python으로 동일한 과정을 수행해 �
         * requirements.txt: func.py에서 추가적으로 사용되는 패키지 의존성을 여기에 추가합니다.
         ```
         $ cat requirements.txt 
-        fdk>=0.1.57
+        fdk>=0.1.61
         ```
 
         * func.yaml: Function 정의 파일입니다. 자바때와 동일한 형식입니다.
@@ -365,11 +369,11 @@ Function에서 많이 사용하는 Python으로 동일한 과정을 수행해 �
     {"message": "Hello World"}
     ```    
 
-6. 로그 화면에서 우측 **Actions**에서 **Wrap lines**를 클릭합니다.
-
-7. 아래와 같이 Function이 실행된 로그를 볼 수 있습니다.
+6. 아래와 같이 Function이 실행된 로그를 볼 수 있습니다.
 
     *Function 코드에서 발생하는 로그는 OCI Logging에 보이기 까지 약간의 시간차가 발생할 수 있습니다.*
+
+    - 필요하면, 로그 화면에서 우측 **Actions**에서 **Wrap lines**를 클릭하여 로그 메시지를 다 보일 수 있게 합니다.
 
     ![Function Logs](images/fn-app-logs.png)
 
@@ -419,4 +423,4 @@ Function에서 많이 사용하는 Python으로 동일한 과정을 수행해 �
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, May 2023
+* **Last Updated By/Date** - DongHee Lee, October 2023
