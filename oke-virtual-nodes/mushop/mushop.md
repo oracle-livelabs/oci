@@ -13,6 +13,8 @@ Designing in microservices offers excellent separation concerns and provides dev
 
 Estimated Time: 10 minutes
 
+[Video hosted on Oracle Video Hub](videohub:1_w0leolil)
+
 ### Objectives
 
 In this lab, you will:

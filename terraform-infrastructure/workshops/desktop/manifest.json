@@ -1,0 +1,47 @@
+{
+  "workshoptitle": "Set up Highly Available and Secure Infrastructure with Terraform",
+  "help": "livelabs-help-oci_us@oracle.com",
+
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "This lab walks you through how to set up Infrastructure as code using Terraform on OCI.",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Lab 1: Set up your Tenancy",
+      "description": "Set up your Tenancy for Terraform",
+      "filename": "../../setup/setup.md"
+    },
+    {
+      "title": "Lab 2: Edit Terraform provider",
+      "description": "This Lab will enable Terraform to provision resources on your Tenancy",
+      "filename": "../../terraform/terraform.md"
+    },
+    {
+      "title": "Lab 3: Network Module",
+      "description": "This lab walks you through defining Networking resources needed for connectivity",
+      "filename": "../../network/network.md"
+    },
+    {
+      "title": "Lab 4: Bastion and Webserver Modules",
+      "description": "This lab walks you through defining Compute resources needed for a Bastion and 3 Web Servers",
+      "filename": "../../bastion-webserver/bastion-webserver.md"
+    },
+    {
+      "title": "Lab 5: Terraform Deployment",
+      "description": "This lab walks you through deploying your Terraform code",
+      "filename": "../../deploy/deploy.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
