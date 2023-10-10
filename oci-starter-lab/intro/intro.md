@@ -30,7 +30,7 @@ a working sample for most combinations of the above choices.
 
 It works like this:
 - We will go to the Website https://www.ocistarter.com/ to get a zip file with all the code that we need
-- Check what it contains
+- Check what it contains: readme.md, LICENCE (Apache 2 License), source files
 - Run ./build.sh
 
 ## Labs
@@ -51,12 +51,12 @@ Whatever choices that you do, you will get a working sample with terraform to cr
     - Container Instance - [Container Instance](https://docs.oracle.com/en-us/iaas/Content/container-instances/home.htm)
     - Function - [Functions](https://docs.oracle.com/en-us/iaas/Content/Functions/home.htm)
 2. User Interface 
-    - HTML 5 
-    - ReactJS 
-    - Angular
-    - JET
-    - PHP
-    - APEX
+    - HTML 5 - [HTML](https://html.spec.whatwg.org/multipage/)
+    - ReactJS - [React](https://react.dev/)
+    - Angular - [Angular](https://angular.io/)
+    - JET - [JET](https://www.oracle.com/webfolder/technetwork/jet/index.html)
+    - PHP - [PHP](https://www.php.net/)
+    - APEX - [APEX](https://apex.oracle.com)
 3. Backend
     - Java (Default) - [Java](https://dev.java/)
     - NodeJS - [NodeJS](https://nodejs.org/)
