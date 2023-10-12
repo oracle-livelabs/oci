@@ -8,6 +8,10 @@ We will show how to set up a VCN, Load Balancer, Bastion, and 2 Compute Instance
 
 We will provide the Terraform environment and give a step by step guide on how to set it up on a Tenancy.
 
+Here is the Architecture Diagram of our infrastructure we will be provisioning on OCI.
+
+![arch-diag](images/arch-diag.png)
+
 Estimated Workshop Time: 4 hours 00 minutes (This estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
 
 ### Prerequisites
