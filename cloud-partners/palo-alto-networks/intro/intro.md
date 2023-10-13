@@ -12,7 +12,7 @@ Oracle Cloud Infrastructure's partner Palo Alto Networks's **VM Series Firewall*
 
 Attached below is a sample architecture of the solution:
 
-   ![](../common/images/arch.png " ")
+   ![OCI Network Topology Architecture with Palo Alto Networks Solution](../common/images/arch.png " ")
 
 Estimated time: 120 minutes
 
@@ -62,4 +62,4 @@ You may now [proceed to the labs](#next).
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Palo Alto Networks
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab you will be configuring VM Series Firewall firewalls initial configuration, hostnames, interfaces, high availability, external OCI connector and route tables to support traffic between VCNs.
+In this lab you will be configuring VM Series Firewall firewalls initial configuration, hostname, interfaces, high availability, external OCI connector and route tables to support traffic between VCNs.
 
 Estimated Lab Time: 20 minutes.
 
@@ -15,7 +15,7 @@ Estimated Lab Time: 20 minutes.
 
 - Oracle Cloud Infrastructure paid account credentials (User, Password, Tenant, and Compartment)  
 
-## **Task 1: Initial Configuration on Primary VM Series Firewall**
+## Task 1: Initial Configuration on Primary VM Series Firewall
 
 1. Setup initial **admin** user password using **CLI**. Connect to **vm-series-firewall-1** instance using your ssh private key which you used earlier via **admin** user:  
 
@@ -35,15 +35,15 @@ Estimated Lab Time: 20 minutes.
       ```
 3. Once you confirm password, make sure to commit your change using **commit** command on the same shell prompt. Below snippet shows an **example** of setting initial password. 
 
-   ![](../common/images/59-Firewall1-Initial-Config.png " ")
+   ![Primary Firewall Mgmt Password Configuration](../common/images/firewall1-initial-config.png " ")
 
 4. Connect to **VM-Series-Firewall-1** instance public IP on your local machine's web browser: **https://public_ip**. It will ask you to enter username/password so enter **admin/PaloAlto@1234** or the password which you picked in **step2** earlier. 
 
-   ![](../common/images/58-First-Time-Firewall-Login-Page.png " ")
+   ![Primary Firewall Login Page](../common/images/first-time-firewall-login-page.png " ")
 
 5. Close the initial dialog box and select **Remind Me Later** option as below: 
 
-   ![](../common/images/60-Firewall-Initial-Config-Telemtry.png " ")
+   ![Primary Firewall Telemetry Configuration Page](../common/images/firewall-initial-config-telemtry.png " ")
 
 6. Click on the link below to open the **xml** configuration file which you need to setup initial configuration on Firewall.  
 
@@ -82,63 +82,63 @@ Estimated Lab Time: 20 minutes.
     - **NAT** policies 
     - **HA Communication** 
 
-10. Navigate to **Device > Operations > Import named configuration snapshot** as per below. 
+11. Navigate to **Device > Operations > Import named configuration snapshot** as per below. 
 
-   ![](../common/images/105-Firewall-Device-Import-Config-1.png " ")
+   ![Primary Firewall Import Configuration Navigation Window1](../common/images/firewall-device-import-config-1.png " ")
 
-   ![](../common/images/106-Firewall-Device-Import-Config-2.png " ")
+   ![Primary Firewall Import Configuration Navigation Window2](../common/images/firewall-device-import-config-2.png " ")
 
-11. Click on **Import named configuration snapshot** and browse your local file which you just updated with required variable. 
+12. Click on **Import named configuration snapshot** and browse your local file which you just updated with required variable. 
 
-   ![](../common/images/107-Firewall-Local-Xml-File.png " ")
+   ![Primary Firewall Import Configuration Navigation Window3](../common/images/firewall-local-xml-file.png " ")
 
-12. Click on **Load named configuration snapshot** and select the file which you just imported. 
+13. Click on **Load named configuration snapshot** and select the file which you just imported. 
 
-   ![](../common/images/108-Firewall-Local-Load-Xml-File.png " ")
+   ![Primary Firewall Load Configuration Navigation Window](../common/images/firewall-local-load-xml-file.png " ")
 
 13. Do a sanity check and verify that configuration which you are trying to push to Firewall is correct: 
 
     - **Interfaces**
       
-      ![](../common/images/109-Firewall-Initial-Push-Sanity-Check1.png " ")
+      ![Primary Firewall Interfaces](../common/images/firewall-initial-push-sanity-check1.png " ")
 
     - **Security Policies**
 
-      ![](../common/images/111-Firewall-Initial-Push-Sanity-Check3.png " ")
+      ![Primary Firewall Security Policies](../common/images/firewall-initial-push-sanity-check3.png " ")
 
     - **NAT Policies**
 
-      ![](../common/images/112-Firewall-Initial-Push-Sanity-Check4.png " ")
+      ![Primary Firewall NAT Policies](../common/images/firewall-initial-push-sanity-check4.png " ")
 
     - **Address Objects**
    
-       ![](../common/images/110-Firewall-Initial-Push-Sanity-Check2.png " ")
+       ![Primary Firewall Address Objects](../common/images/firewall-initial-push-sanity-check2.png " ")
 
     - **HA Communication**
 
-       ![](../common/images/113-Firewall-Initial-Push-Sanity-Check5.png " ")
+       ![Primary Firewall HA Configuration](../common/images/firewall-initial-push-sanity-check5.png " ")
 
 14. Commit your changes to **vm-series-firewall-1** instance and it should be successful: 
 
-   ![](../common/images/114-Firewall-Initial-Commit.png " ")
+   ![Primary Firewall Initial Commit](../common/images/firewall-initial-commit.png " ")
 
-   ![](../common/images/115-Firewall-Initial-Commit-Success.png " ")
+   ![Primary Firewall Initial Commit Success](../common/images/firewall-initial-commit-success.png " ")
 
 15. You can verify configuration by navigating to **interfaces**, **policies** etc section. For example, below image shows interfaces are created successfully: 
 
-   ![](../common/images/120-Firewall1-Hostname.png " ")
+   ![Primary Firewall Hostname Verification](../common/images/firewall1-hostname.png " ")
 
-   ![](../common/images/116-Firewall-Initial-Commit-Sanity-Check.png " ")
+   ![Primary Firewall Sanity Check](../common/images/firewall-initial-commit-sanity-check.png " ")
 
 16. You need to enable **Jumbo Frame** so to enable that navigate: **Device > Setup > Session** and check mark **Enable Jumbo Frame** option:
 
-   ![](../common/images/124-Enable-Jumbo-Frame.png " ")
+   ![Primary Firewall Enable Jumbo Frames](../common/images/enable-jumbo-frame.png " ")
 
 17. You must reboot the device to reflect jumbo frame changes. You can do that from OCI console or using **Operations > Reboot Device** option within your **vm-series-firewall-1** GUI. 
 
-   ![](../common/images/125-Reboot-Device.png " ")
+   ![Primary Firewall Enable Jumbo Frames Reboot Required](../common/images/reboot-device.png " ")
 
-## **Task 2: Initial Configuration on Secondary VM Series Firewall**
+## Task 2: Initial Configuration on Secondary VM Series Firewall**
 
 1. Setup initial **admin** user password using **CLI**. Connect to **vm-series-firewall-2** instance using your ssh private key which you used earlier via **admin** user:  
 
@@ -158,15 +158,15 @@ Estimated Lab Time: 20 minutes.
       ```
 3. Once you confirm password, make sure to commit your change using **commit** command on the same shell prompt. Below snippet shows an **example** of setting initial password. 
 
-   ![](../common/images/59-Firewall1-Initial-Config.png " ")
+   ![Secondary Firewall Mgmt Password Configuration](../common/images/firewall1-initial-config.png " ")
 
 4. Connect to **VM-Series-Firewall-2** instance public IP on your local machine's web browser: **https://public_ip**. It will ask you to enter username/password so enter **admin/PaloAlto@1234** or the password which you picked in **step2** earlier. 
 
-   ![](../common/images/58-First-Time-Firewall-Login-Page.png " ")
+   ![Secondary Firewall Login Page](../common/images/first-time-firewall-login-page.png " ")
 
 5. Close the initial dialog box and select **Remind Me Later** option as below: 
 
-   ![](../common/images/60-Firewall-Initial-Config-Telemtry.png " ")
+   ![Secondary Firewall Telemetry Configuration Page](../common/images/firewall-initial-config-telemtry.png " ")
 
 6. Click on the link below to open the **xml** configuration file which you need to setup initial configuration on Firewall.  
 
@@ -207,71 +207,71 @@ Estimated Lab Time: 20 minutes.
 
 10. Navigate to **Device > Operations > Import named configuration snapshot** as per below. 
 
-   ![](../common/images/105-Firewall-Device-Import-Config-1.png " ")
+   ![Secondary Firewall Import Configuration Navigation Window1](../common/images/firewall-device-import-config-1.png " ")
 
-   ![](../common/images/106-Firewall-Device-Import-Config-2.png " ")
+   ![Secondary Firewall Import Configuration Navigation Window2](../common/images/firewall-device-import-config-2.png " ")
 
 11. Click on **Import named configuration snapshot** and browse your local file which you just updated with required variable. 
 
-   ![](../common/images/117-Firewall-Local-Xml-File.png " ")
+   ![Secondary Firewall Import Configuration Navigation Window3](../common/images/firewall-local-xml-file.png " ")
 
 12. Click on **Load named configuration snapshot** and select the file which you just imported. 
 
-   ![](../common/images/118-Firewall-Local-Load-Xml-File.png " ")
+   ![Secondary Firewall Load Configuration Navigation Window](../common/images/firewall-local-load-xml-file.png " ")
 
 13. Do a sanity check and verify that configuration which you are trying to push to Firewall is correct: 
 
     - **Interfaces**
       
-      ![](../common/images/109-Firewall-Initial-Push-Sanity-Check1.png " ")
+      ![Secondary Firewall Interfaces](../common/images/firewall-initial-push-sanity-check1.png " ")
 
     - **Security Policies**
 
-      ![](../common/images/111-Firewall-Initial-Push-Sanity-Check3.png " ")
+      ![Secondary Firewall Security Policies](../common/images/firewall-initial-push-sanity-check3.png " ")
 
     - **NAT Policies**
 
-      ![](../common/images/112-Firewall-Initial-Push-Sanity-Check4.png " ")
+      ![Secondary Firewall NAT Policies](../common/images/firewall-initial-push-sanity-check4.png " ")
 
     - **Address Objects**
    
-       ![](../common/images/110-Firewall-Initial-Push-Sanity-Check2.png " ")
+       ![Secondary Firewall Address Objects](../common/images/firewall-initial-push-sanity-check2.png " ")
 
     - **HA Communication**
 
-       ![](../common/images/113-Firewall-Initial-Push-Sanity-Check5.png " ")
+       ![Secondary Firewall HA Configuration](../common/images/firewall-initial-push-sanity-check5.png " ")
 
 14. Commit your changes to **vm-series-firewall-2** instance and it should be successful: 
 
-   ![](../common/images/114-Firewall-Initial-Commit.png " ")
+   ![Secondary Firewall Initial Commit](../common/images/firewall-initial-commit.png " ")
 
-   ![](../common/images/115-Firewall-Initial-Commit-Success.png " ")
+   ![Secondary Firewall Initial Commit Success](../common/images/firewall-initial-commit-success.png " ")
 
 15. You can verify configuration by navigating to **interfaces**, **policies** etc section. For example, below image shows interfaces are created successfully: 
 
-   ![](../common/images/119-Firewall2-Hostname.png " ")
+   ![Secondary Firewall Hostname Verification](../common/images/firewall2-hostname.png " ")
 
-   ![](../common/images/116-Firewall-Initial-Commit-Sanity-Check.png " ")
+   ![Secondary Firewall Sanity Check](../common/images/firewall-initial-commit-sanity-check.png " ")
 
 16. Navigate to **Dashboard > Widgets > System > High Availability** to add a high availability widget on each **vm-series-firewall** instances.
 
-   ![](../common/images/121-High-Availability-Widget.png " ")
+   ![Check HA Validation](../common/images/high-availability-widget.png " ")
 
 17. Either you can wait for configuration to sync or you can force initial configuration sync. In this lab you will do that from **vm-series-firewall-1** instance. 
 
-   ![](../common/images/122-High-Availability-Sync.png " ")
+   ![Sync HA Configuration If Needed](../common/images/high-availability-sync.png " ")
 
-18. Successfull HA configuration should look like this on each firewall (primary or standby): 
+18. Successful HA configuration should look like this on each firewall (primary or standby): 
 
-   ![](../common/images/123-High-Availability-Sync-Success.png " ")
+   ![Successful HA Configuration](../common/images/high-availability-sync-success.png " ")
 
 19. You need to enable **Jumbo Frame** so to enable that navigate: **Device > Setup > Session** and check mark **Enable Jumbo Frame** option:
 
-   ![](../common/images/124-Enable-Jumbo-Frame.png " ")
+   ![Secondary Firewall Enable Jumbo Frames](../common/images/enable-jumbo-frame.png " ")
 
 20. You must reboot the device to reflect jumbo frame changes. You can do that from OCI console or using **Operations > Reboot Device** option within your **vm-series-firewall-2** GUI. 
 
-   ![](../common/images/125-Reboot-Device.png " ")
+   ![Secondary Firewall Enable Jumbo Frames Reboot Required](../common/images/reboot-device.png " ")
 
 ***Congratulations! You have successfully completed the lab.***
 
@@ -291,4 +291,4 @@ You may now [proceed to the next lab](#next).
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Palo Alto Networks
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023

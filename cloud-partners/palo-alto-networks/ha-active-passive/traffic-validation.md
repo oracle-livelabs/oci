@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab you will be creating required security policies on VM Series Firewalls to support different use-case and validate traffics between and from VCNs. In the end you will stop/reboot primary instance to ensure that floating IPs moves to Secondary **VM Sereis Firewall** instance.
+In this lab you will be creating required security policies on VM Series Firewalls to support different use-case and validate traffics between and from VCNs. In the end you will stop/reboot primary instance to ensure that floating IPs moves to Secondary **VM Series Firewall** instance.
 
 Estimated Lab Time: 20 minutes.
 
@@ -18,13 +18,13 @@ Estimated Lab Time: 20 minutes.
 
 - Oracle Cloud Infrastructure paid account credentials (User, Password, Tenant, and Compartment)  
 
-## **Task 1: North-South Inbound Traffic**
+## Task 1: North-South Inbound Traffic
 
 1. Connect to **VM-Series-Firewall-1** instance public IP on your local machine's web browser: **https://public_ip** using **admin/Pal0Alt0@123** since password has changed due to **xml** config push on **Lab3**
 
 2. You have already pushed the policy on your **firewall** instance as per below to support this traffic: 
 
-    ![](../common/images/111-Firewall-Initial-Push-Sanity-Check3.png " ")
+    ![North South Inbound Traffic Security Policy](../common/images/firewall-initial-push-sanity-check3.png " ")
 
 3. Connect to **Web APP1** and **DB APP1** using **VM-Series-Firewall-1 Untrust Interface Floating Public IP** over **SSH** and unique port as per below table: 
 
@@ -35,19 +35,19 @@ Estimated Lab Time: 20 minutes.
 
 4. Below diagram validates that Inbound traffic is working towards your DB and Web Spoke VMs. 
 
-   ![](../common/images/76-Verify-North-South-Inbound-Traffic1.png " ")
+   ![North South Inbound Traffic Validation](../common/images/verify-north-south-inbound-traffic1.png " ")
 
-6. You can also verify traffic from **Monitor** on your **VM-Series-Firewall-1** instance.
+5. You can also verify traffic from **Monitor** on your **VM-Series-Firewall-1** instance.
 
-   ![](../common/images/76-Verify-North-South-Inbound-Traffic2.png " ")
+   ![North South Inbound Traffic Logs](../common/images/verify-north-south-inbound-traffic2.png " ")
 
-## **Task 2: North-South Outbound Traffic**
+## Task 2: North-South Outbound Traffic
 
 1. Connect to **VM-Series-Firewall-1** instance public IP on your local machine's web browser: **https://public_ip** using **admin/Pal0Alt0@123** since password has changed due to **xml** config push on **Lab3**
 
 2. You have already pushed the policy on your **firewall** instance as per below to support this traffic: 
 
-    ![](../common/images/111-Firewall-Initial-Push-Sanity-Check3.png " ")
+    ![North South Outbound Traffic Security Policy](../common/images/firewall-initial-push-sanity-check3.png " ")
 
 3. Connect to **Web APP1** and **DB APP1** using **VM-Series-Firewall-1 Untrust Interface Floating Public IP** over **SSH** and unique port as per below table: 
 
@@ -58,19 +58,19 @@ Estimated Lab Time: 20 minutes.
 
 4. Initiate a ping to **google.com** or publicly available site connection as per below diagram which validates that Outbound traffic from Web and DB spoke VMs is working fine.
 
-   ![](../common/images/78-Verify-North-South-Outbound-Traffic1.png " ")
+   ![North South Outbound Traffic Validation](../common/images/verify-north-south-outbound-traffic1.png " ")
 
 5. You can also verify that from **Monitor** on your **VM-Series-Firewall-1** instance.
 
-   ![](../common/images/79-Verify-North-South-Outbound-Traffic2.png " ")
+   ![North South Outbound Traffic Logs](../common/images/verify-north-south-outbound-traffic2.png " ")
 
-## **Task 3: East-West Traffic (Web to Database & Database to Web)**
+## Task 3: East-West Traffic (Web to Database & Database to Web)
 
 1. Connect to **VM-Series-Firewall-1** instance public IP on your local machine's web browser: **https://public_ip** using **admin/Pal0Alt0@123** since password has changed due to **xml** config push on **Lab3**
 
 2. You have already pushed the policy on your **firewall** instance as per below to support this traffic: 
 
-    ![](../common/images/111-Firewall-Initial-Push-Sanity-Check3.png " ")
+    ![East West Intra Spoke VCNs Traffic Security Policy](../common/images/firewall-initial-push-sanity-check3.png " ")
 
 3. Connect to **Web APP1** and **DB APP1** using **VM-Series-Firewall-1 Untrust Interface Floating Public IP** over **SSH** and unique port as per below table: 
 
@@ -81,17 +81,17 @@ Estimated Lab Time: 20 minutes.
 
 4. Initiate a ping to **google.com** or publicly available site connection as per below diagram which validates that Outbound traffic from Web and DB spoke VMs is working fine.
 
-   ![](../common/images/81-Verify-East-West-Traffic1.png " ")
+   ![East West Intra Spoke VCNs Traffic Validation](../common/images/verify-east-west-traffic1.png " ")
 
 5. You can also verify that from **Monitor** on your **VM-Series-Firewall-1** instance.
 
-   ![](../common/images/82-Verify-East-West-Traffic2.png " ")
+   ![East West Intra Spoke VCNs Traffic Logs](../common/images/verify-east-west-traffic2.png " ")
 
-## **Task 4: East-West Traffic (Web & DB Application to Oracle Services Network)**
+## Task 4: East-West Traffic (Web & DB Application to Oracle Services Network)
 
 1. From the OCI Services menu, click **Buckets** under **Storage**. Select your region on right part of the screen:
 
-   ![](../common/images/83-Bucket-Home.png " ")
+   ![Object Storage Home Page](../common/images/bucket-home.png " ")
 
 2. Below table represents what you will be creating. Click on **Create Bucket** icon to create new **Bucket**:
 
@@ -105,7 +105,7 @@ Estimated Lab Time: 20 minutes.
       - **COMPARTMENT**: Ensure your compartment is selected
       - **Bucket Type**: Standard
 
-   ![](../common/images/73-Create-Bucket.png " ")
+   ![Create Bucket Home Page](../common/images/create-bucket.png " ")
 
 4. Verify all the information and Click **Create**.
 
@@ -117,7 +117,7 @@ Estimated Lab Time: 20 minutes.
    
     - In your case you can upload an image object for test purpose.
 
-   ![](../common/images/84-Upload-Object-Pre-Auth-URL.png " ")
+   ![Create Object Storage Pre Authenticated URL](../common/images/upload-object-pre-auth-url.png " ")
 
 7. Once you complete **Pre-Authentication Request** a Details dialog box pops up, copy the URL which you will be using to access uploaded Object. 
 
@@ -125,7 +125,7 @@ Estimated Lab Time: 20 minutes.
 
 9. You have already pushed the policy and route on your **firewall** instance as per below to support this traffic: based on below blob create a static route for your **Object Storage Networks** within your **region**: 
 
-    ![](../common/images/111-Firewall-Initial-Push-Sanity-Check3.png " ")
+    ![East West Object Storage Networks Traffic Security Policy](../common/images/firewall-initial-push-sanity-check3.png " ")
 
 10. Connect to **Web APP1** and **DB APP1** using **VM-Series-Firewall-1 Untrust Interface Floating Public IP** over **SSH** and unique port as per below table: 
 
@@ -134,37 +134,37 @@ Estimated Lab Time: 20 minutes.
     | Web App1 | 1234  | Untrust Interface Floating Public IP | ssh opc@129.159.93.97 -p 1234 |
     | DB App1  | 1235  | Untrust Interface Floating Public IP | ssh opc@129.159.93.97 -p 1235 |
 
-12. Do a **wget** to **Pre-Authentication Request** which you created earlier from Web and DB spoke VMs and you should get a response back.
+11. Do a **wget** to **Pre-Authentication Request** which you created earlier from Web and DB spoke VMs and you should get a response back.
 
-   ![](../common/images/84-Verify-OSN-Traffic1.png " ")
+   ![East West Object Storage Networks Traffic Validation](../common/images/verify-osn-traffic1.png " ")
 
-13. You can also verify that from **Monitor** on your **VM-Series-Firewall-1** instance.
+12. You can also verify that from **Monitor** on your **VM-Series-Firewall-1** instance.
 
-   ![](../common/images/84-Verify-East-West-OSN-Traffic.png " ")
+   ![East West Object Storage Networks Traffic Logs](../common/images/verify-east-west-osn-traffic.png " ")
 
-## **Task 5: High Availability Failover Validation**
+## Task 5: High Availability Failover Validation
 
 1. Navigate to **VM-Series-Firewall-1** instance attached VNIC details page and verify that **Untrust** and/or **Trust** interface has floating secondary IPs are available on primary instance. 
 
-   ![](../common/images/86-Firewall1-Untrust-Floating-IP.png " ")
+   ![Confirm Untrust Interface Secondary IP address on Primary Firewall](../common/images/firewall1-untrust-floating-ip.png " ")
 
 2. Reboot primary **VM-Series-Firewall-1** instance which will trigger failover automatically to **VM-Series-Firewall-2** instance. 
 
-   ![](../common/images/87-Reboot-Firewall1.png " ")
+   ![Reboot Primary Firewall](../common/images/reboot-firewall1.png " ")
 
 3. You should see on **VM-Series-Firewall-2** GUI that it became primary instance.
 
-   ![](../common/images/88-Failover-Firewall2.png " ")
+   ![Validate Secondary Firewall](../common/images/failover-firewall2.png " ")
 
 4. Navigate to **VM-Series-Firewall-2** instance attached VNIC details page and verify that **Untrust** and **Trust** interface floating IPs has moved from **VM-Series-Firewall-1** instance. 
 
-   ![](../common/images/90-Failover-Success-Firewall2-Untrust.png " ")
+   ![Validate Secondary Firewall Untrust Interface](../common/images/failover-success-firewall2-untrust.png " ")
 
-   ![](../common/images/91-Failover-Success-Firewall2-trust.png " ")
+   ![Validate Secondary Firewall Trust Interface](../common/images/failover-success-firewall2-trust.png " ")
 
 5. You can verify that **VM-Series-Firewall-2** is primary and **VM-Series-Firewall-1** is secondary in your HA cluster:
 
-   ![](../common/images/89-Failover-Success-Firewall2.png " ")
+   ![Validate Secondary Firewall HA Sync](../common/images/failover-success-firewall2.png " ")
 
 ***Congratulations! You have successfully completed the lab.***
 
@@ -184,4 +184,4 @@ You may now [proceed to the next lab](#next).
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** - Palo Alto Networks
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023
