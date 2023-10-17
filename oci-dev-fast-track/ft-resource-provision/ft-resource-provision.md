@@ -77,13 +77,13 @@ Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório d
 
 4. Selecione a opção "Zip file", clique em "browse" e arraste o arquivo (.zip), que contém os arquivos .tf. O Resource Manager irá preencher todos os campos.
 
-![imagem stack ](./images/configure-stack-archive-zip.PNG)
+![imagem stack ](./images/configure-stack-archivezip.PNG)
 
 5. Clique em **Next**, para podermos configurar alguns parâmetros sobre os recursos a serem provisionados.
 
 6. Nesta nova tela, lembre-se de selecionar o compartment criado, como abaixo.
 
-![tela seleção compartment](./images/configure-stack-compartment.PNG)
+![tela seleção compartment](./images/create-stack-compartment.PNG)
 
 7. Clique em **Next**.
 
