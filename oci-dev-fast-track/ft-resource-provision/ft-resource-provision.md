@@ -38,15 +38,15 @@ Como pré-requisito, é uma boa ideia criarmos um compartimento isolado para pod
 
 2. No 🍔 menu de hambúrguer, acesse: **Identity & Security** → **Identity** → **Compartments**.
 
-![menu identity security compartments](./images/create-compartments-console.PNG)
+![menu identity security compartments](./images/create-compartment-console.png)
 
 3. Na nova janela, clique em **Create Compartment**.
 
-![botao create compartment](./images/create-compartment-button.PNG)
+![botao create compartment](./images/create-compartments-button.png)
 
 4. Insira um nome para o compartimento e também uma descrição. Feito isto, clique em **Create Compartment**.
 
-![campo nome e descricao compartment](./images/create-compartment-descrition.PNG)
+![campo nome e descricao compartment](./images/create-compartment-description.png)
 
 Excelente!!! Podemos agora iniciar com os passos do nosso lab!
 
@@ -59,7 +59,7 @@ Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório d
  1. Para isso, acesse o [repositório](https://github.com/CeInnovationTeam/terraform-dev-ft) e clique em **Download ZIP**.
 
 
-![imagem git hub repositorio](./images/github-repository.PNG)
+![imagem git hub repositorio](./images/git-repository.png)
 
 - - -
 
@@ -69,27 +69,27 @@ Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório d
 
 2. No 🍔 menu de hambúrguer, acesse: **Developer Services** → **Resource Manager** → **Stacks**.
 
-![menu developer services stacks](./images/resource-manager-console.PNG)
+![menu developer services stacks](./images/resource-managerconsole.png)
 
 3. Nesta nova janela, certifique que está no compartment "root" e clique em **Create Stack**.
 
-![imagem compartment botao create stack](./images/create-stack.PNG)
+![imagem compartment botao create stack](./images/create-stack-manager.png)
 
 4. Selecione a opção "Zip file", clique em "browse" e arraste o arquivo (.zip), que contém os arquivos .tf. O Resource Manager irá preencher todos os campos.
 
-![imagem stack ](./images/configure-stack-archivezip.PNG)
+![imagem stack ](./images/configure-stack-archivezip.png)
 
 5. Clique em **Next**, para podermos configurar alguns parâmetros sobre os recursos a serem provisionados.
 
 6. Nesta nova tela, lembre-se de selecionar o compartment criado, como abaixo.
 
-![tela seleção compartment](./images/create-stack-compartment.PNG)
+![tela seleção compartment](./images/create-stack-compartments.png)
 
 7. Clique em **Next**.
 
 8. Criada nossa stack, clique em **Apply** e confirme a ação.
 
-![imagem botao apply](./images/confirm-action-create-stack.PNG)
+![imagem botao apply](./images/confirmaction-create-stack.png)
 
 9. O provisionamento dos recursos deverá durar em torno de 25 minutos.
 
