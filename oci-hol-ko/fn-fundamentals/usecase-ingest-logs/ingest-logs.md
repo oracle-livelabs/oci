@@ -2,7 +2,9 @@
 
 ## Introduction
 
-OCI Functions의 사용사례로 Logging 서비스와 연동하여, OCI 자원의 로그를 Function을 호출하여 타 시스템으로 전달하는 패턴을 실습합니다. **Logging > Service Connector Hub > Function > Dummy System - 3rd Party 시스템** 구성을 통해 OCI 로그를 사용자가 원하는 시스템으로 전달하는 내용을 실습합니다. 3rd Party 시스템을 대신해 인터넷에 개방되어 있는 REST API기반 서비스를 호출하는 것으로 대체합니다. 
+OCI Functions의 사용사례로 Logging 서비스와 연동하여, OCI 자원의 로그를 Function을 호출하여 타 시스템으로 전달하는 패턴을 실습합니다.
+
+**Logging > Service Connector Hub > Function > Dummy System - 3rd Party 시스템** 구성을 통해 OCI 로그를 사용자가 원하는 시스템으로 전달하는 내용을 실습합니다. 3rd Party 시스템을 대신해 인터넷에 개방되어 있는 REST API기반 서비스를 호출하는 것으로 대체합니다. 
 
 ![Introduction](images/usecase-ingest-logs.png =75%x*)
 
@@ -25,7 +27,9 @@ OCI Functions의 사용사례로 Logging 서비스와 연동하여, OCI 자원�
 
 ## Task 1. 테스트용 Compute 인스턴스 준비
 
-Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴스를 준비하는 과정입니다. Service Log 중에서 VCN Flow Logs에 대해서는 Function으로 인한 발생하는 로그와 혼선을 방지하기 위해서 Compute 인스턴스용 **Public Subnet**을 추가로 하나 더 만들어 사용합니다. (Function이 사용하는 Subnet을 함께 사용하는 경우, 로그 발생과 Function 호출의 무한 반복이 발생할 소지가 있습니다.)
+Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴스를 준비하는 과정입니다. 
+
+Service Log 중 VCN Flow Logs에 대해서 Function으로 인한 발생하는 Flow Log와 Compute 인스턴스에서 발생하는 Flow Log와의 혼선을 방지하기 위해서 Compute 인스턴스용 **Public Subnet**을 별도로 하나 더 만들어 사용합니다. (Function이 사용하는 Subnet을 함께 사용하는 경우, 로그 발생과 Function 호출의 무한 반복이 발생할 소지가 있습니다.)
 
 1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Compute**으로 이동한 다음 **Instances** 을 선택합니다.
 
@@ -39,7 +43,7 @@ Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴�
     - **Create new public subnet** 선택
     - New subnet name: 예, public-subnet-for-compute
     - CIDR block: 예, 10.0.2.0/24
-    - Public IPv4 address: Assign a public IPv4 address 선택
+    - Public IPv4 address: Automatically assign public IPv4 address 기본 선택
 
     ![Networking](images/create-compute-instance.png =60%x*)
     
@@ -163,7 +167,7 @@ Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴�
     - requirements.txt을 아래와 같이 변경합니다.
     ```
     <copy>
-    fdk>=0.1.57
+    fdk>=0.1.61
     requests    
     </copy>
     ```
@@ -356,9 +360,10 @@ Service Log를 활성화하는 기능을 제공합니다. 그 중에서 보안�
 
 3. Cloud Shell을 실행합니다.
 
-4. Cloud Shell 세션의 Public IP를 확인합니다. (Cloud Shell에서 나갈 때 쓰는 NAT Gateway 주소입니다. Cloud Shell VM의 Public IP가 아닙니다.)
+4. Cloud Shell 세션의 Public IP를 확인합니다. 
 
-    - [Getting the Public IP Address for a Cloud Shell Session](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/devcloudshellgettingstarted.htm#cloudshellgettingstarted_topic_getting_public_ip_address)
+    - 참고문서: [Getting the Public IP Address for a Cloud Shell Session](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/devcloudshellgettingstarted.htm#cloudshellgettingstarted_topic_getting_public_ip_address)
+    - 아래 주소는 Cloud Shell에서 나갈 때 쓰는 NAT Gateway 주소입니다. Cloud Shell VM의 Public IP가 아닙니다.
 
     ```
     $ <copy>curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'</copy>
@@ -433,5 +438,5 @@ Service Log를 활성화하는 기능을 제공합니다. 그 중에서 보안�
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, May 2023
+* **Last Updated By/Date** - DongHee Lee, October 2023
 
