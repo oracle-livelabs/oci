@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Generative AI for Travel",
+  "workshoptitle": "Generative AI for Travel with Oracle APEX and DB",
   "include": {  
     "iam-compartment-create-body.md": "https://raw.githubusercontent.com/oracle-livelabs/common/main/building-blocks/tasks/iam/compartment-create-body.md",
     "adb-goto-service-body.md": "https://raw.githubusercontent.com/oracle-livelabs/common/main/building-blocks/tasks/adb/goto-service-body.md",
