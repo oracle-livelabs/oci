@@ -6,6 +6,8 @@ On this lab, you will provision the infrastructure needed to run the Oracle Mana
 
 Estimated Time: 5 minutes
 
+[Video hosted on Oracle Video Hub](videohub:1_0ikxjob4)
+
 ### About OKE Virtual Nodes
 
 Virtual nodes provide a serverless Kubernetes experience, enabling you to run containerized applications at scale without the operational overhead of managing, scaling, upgrading, and troubleshooting the node infrastructure. Virtual nodes provide granular pod-level elasticity and pay-per-use pricing. As a result, you can scale deployments without taking into consideration the cluster's capacity, simplifying the execution of scalable workloads such as high-traffic web applications and data-processing jobs. You create virtual nodes by creating virtual node pools in enhanced clusters.
