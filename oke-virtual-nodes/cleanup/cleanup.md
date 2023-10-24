@@ -6,6 +6,8 @@ The following steps represents cleanup operations, which may vary depending on t
 
 Estimated Time: 10 minutes
 
+[Video hosted on Oracle Video Hub](videohub:1_cql67dte)
+
 ### Objectives
 
 * Log into OCI Tenancy.
