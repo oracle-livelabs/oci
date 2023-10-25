@@ -10,7 +10,7 @@ Estimated Lab Time: 45 minutes
 
 In this lab, you will:
 
-- Generate AI Text using Cohere or OpenAI REST APIs. 
+- Generate AI Text using Cohere REST APIs. 
 
 ### Prerequisites:
 
@@ -27,27 +27,9 @@ Cohere is the leading AI platform for enterprise. Its world-class AI is uniquely
 It’s never been easier to add AI to your products. Cohere’s models power interactive chat features, generate text for product descriptions, blog posts, and articles, and capture the meaning of text for search, content moderation, and intent recognition.
 
 Using Cohere’s powerful embeddings models, you can make your applications understand the meaning of text data at massive scale, unlocking powerful semantic search, classification, and rerank capabilities.
-
-### [About OpenAI](https://openai.com/about)
-
-OpenAI is an AI research and deployment company. OpenAI's mission is to ensure that artificial general intelligence benefits all of humanity and that artificial general intelligence—AI systems that are generally smarter than humans—benefits all of humanity. 
-
-
-### Comparing OpenAI responses with Cohere responses. 
-
-These results might vary based on tokens supplied or other JSON inputs during requesting AI response.
-
+ 
 ### **Question 1:** *Things to Do at the Statue of Liberty, USA?*
-
-### **OpenAI Response** 
-
-  * Take a Guided Tour: Take a guided tour of the Statue of Liberty and learn all about its history and the important role it plays in the U.S. 
-  * Visit the Pedestal and Museum: Make sure to take a tour of the pedestal and museum on Liberty Island to learn all about the Statue of Liberty and its history. 
-  * Climb to the Top of the Crown: If you're feeling adventurous, you can climb to the top of the Statue of Liberty's crown and get an amazing view of the New York City skyline. 
-  * Take a Ferry Ride: Don't forget to take a ferry ride to Liberty Island to get there. It's a great way to experience the Statue of Liberty up close and personal. 
-  * Take a Photo: Don't forget to take a few photos to capture the beauty and majesty of the Statue of Liberty for your scrapbook. 
-  * Shop for Souvenirs: Be sure to pick up a few souvenirs from the gift shop to commemorate your visit.
-
+  
 ### **Cohere Response**
 
   * Take a tour of the pedestal and crown. 
@@ -56,15 +38,7 @@ These results might vary based on tokens supplied or other JSON inputs during re
   * See the statue from the water on a guided tour.
  
 ### **Question 2:** *What are the top 5 things to do in new york on vacation with family?*
-
-### **OpenAI Response**
-
-  * Take a tour of the Statue of Liberty and Ellis Island. 
-  * Visit the top of the Empire State Building for a breathtaking view of New York City. 
-  * Spend an entire day exploring the many attractions at the American Museum of Natural History. 
-  * Take a ride on the world-famous Staten Island Ferry. 
-  * Enjoy a Broadway show at one of the many renowned theatres in the city.
-
+ 
 ### **Cohere Response**
 
   * Visit the Empire State Building 
@@ -179,92 +153,8 @@ These results might vary based on tokens supplied or other JSON inputs during re
         END;     
     </copy>
     ```
-
-
-## Task 3: Sign up at OpenAI
-
-1. Sign up, Sing in and Get OpenAI API key from [API keys - OpenAI API](https://platform.openai.com/account/api-keys) 
-2. Learn more in the rate limits documentation, or reference the default [rate limits](https://platform.openai.com/docs/guides/rate-limits/overview) for OpenAI's models. 
-3. ![Generative AI OpenAI Key](images/openai-key.png) 
-
-## Task 4: Getting Response from OpenAI
-
-1. Review the JSON response from OpenAI 
-
-    ```json
-    <copy> 
-        {
-            "id": "cmpl-7fslfpfg*******",
-            "object": "text_completion",
-            "created": 169----331,
-            "model": "text-davinci-003",
-            "choices": [
-                {
-                "text": "\n\n1. Take a Guided Tour: Take an official tour of the Statue of Liberty and learn about its history, symbolism, and legacy. **** -- ",
-                "index": 0,
-                "logprobs": null,
-                "finish_reason": "length"
-                }
-            ],
-            "usage": {
-                "prompt_tokens": 11,
-                "completion_tokens": 256,
-                "total_tokens": 267
-            }
-    } 
-    </copy>
-    ```
-2. PL/SQL Code to send request and get response back from OpenAI, you can create an Oracle APEX Dynamic Region to display the results taking input from a page item after submitting the page. Construct PL/SQL Code block, Replace this code in the PL/SQL Dynamic content window, use [JSON_TABLE](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/JSON_TABLE.html) to create a PL/SQL cursor 
-
-    ```sql
-    <copy> 
-         DECLARE 
-            l_url   VARCHAR2(4000) := 'https://api.openai.com/v1/completions';  
-            l_input VARCHAR2(4000) := :P38_INPUT;
-            l_body  VARCHAR2(4000) := '{
-                        "model": "text-davinci-003",
-                        "prompt": "'||l_input||'",
-                        "temperature": 0.7,
-                        "max_tokens": 256,
-                        "top_p": 1,
-                        "frequency_penalty": 0,
-                        "presence_penalty": 0
-                        }'; 
-            l_response_json CLOB;
-            l_text VARCHAR2(4000); 
-            CURSOR C1  IS 
-                SELECT jt.* 
-                FROM   JSON_TABLE(l_response_json, '$' 
-                        COLUMNS (text VARCHAR2(2000)  PATH '$.choices[0].text' )) jt; 
-
-            BEGIN
-
-            if l_input is not null then
-
-            apex_web_service.g_request_headers(1).name := 'Content-Type';
-            apex_web_service.g_request_headers(1).value := 'application/json';
-            apex_web_service.g_request_headers(2).name := 'Authorization';
-            apex_web_service.g_request_headers(2).value := 'Bearer sk-your-openai-key';
-
-            l_response_json := apex_web_service.make_rest_request( 
-                p_url => l_url, 
-                p_http_method => 'POST', 
-                p_body => l_body  
-            );
-
-            --Htp.p(l_response_json );  
-            For row_1 In C1 Loop
-                l_text := row_1.text;
-                Htp.p(  l_text );  
-            End Loop;
-
-            end if;
-
-        END;
-    </copy>
-    ```
  
-## Task 5: Demo
+## Task 3: Demo
 
 1. Login into **AI for Travel** Oracle APEX Application, Select UNESCO Site or Airport or Accommodation and Ask AI about it. 
  
@@ -286,8 +176,7 @@ Congratulations on completing this lab!, You may now **proceed to the next lab**
 
 ## Learn More
 
-* [JSON_TABLE](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/JSON_TABLE.html)
-* [About OpenAI](https://openai.com/about)
+* [JSON_TABLE](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/JSON_TABLE.html) 
 * [About Cohere](https://cohere.com/)
 
 ## Acknowledgements

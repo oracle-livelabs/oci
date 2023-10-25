@@ -33,7 +33,7 @@
 
 ## Task 2: 기본 OCI 인프라 설정
 
-1. 왼쪽 상단 의 **Navigation Menu**를 클릭하고 **Identity & Security**으로 이동한 다음 **Compartments** 을 선택합니다.
+1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Identity & Security**으로 이동한 다음 **Compartments** 을 선택합니다.
 
    ![Compartment](images/id-compartment.png " ")
 
@@ -49,14 +49,77 @@
 
       ![AppDev Compartment](images/compartment-create.png =50%x*)
 
-1. 콘솔 상단에서 Cloud Shell 아이콘을 클릭합니다. Cloud Shell에서 실행되는 OCI CLI는 Cloud Shell이 ​​시작될 때 콘솔의 Region 선택 메뉴에서 선택한 Region에 대해 명령을 실행합니다.
 
-  ![CloudShell](images/cloudshell-1.png =30%x*)
+## Task 3: 실습을 위한 Policy 생성
 
-  ![CloudShell](images/cloudshell-2.png " ")
+*서비스를 사용하기 위한 권한을 설정합니다. 테넌시 기준의 Policy를 포함하고 있기 때문에 관리자로 로그인하여 수행하여야 합니다.*
+
+> Policy 구문은 유저가 아닌 그룹에 대해 적용할 수 있습니다. 원하는 사용자가 속한 그룹이 없는 경우 [Create a group](https://docs.cloud.oracle.com/en-us/iaas/Content/Identity/Tasks/managinggroups.htm#To)을 참조하여 먼저 그룹을 만들어 유저를 할당합니다.
+
+1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Identity & Security**으로 이동한 다음 **Identity** > **Policies** 을 선택합니다.
+
+     ![Policy](images/id-policies.png " ")
+
+2. **Create Policy** 클릭
+
+3. 이후 실습을 위해 다음 Policy를 추가합니다.
+
+     - Name: oke-lab-policy*-xx* 입력합니다.
+     - Description: Policy for OKE Labs for oci-hol-*xx* compartment
+     - Compartment: **root compartment**를 선택
+     - Policy:
+     ```
+     # OKE
+     Allow group <group-name> to manage instance-family in  compartment <compartment-name>
+     Allow group <group-name> to use subnets in  compartment <compartment-name>
+     Allow group <group-name> to manage virtual-network-family in  compartment <compartment-name>
+     Allow group <group-name> to inspect compartments in  compartment <compartment-name>
+     Allow group <group-name> to use vnics in  compartment <compartment-name>
+     Allow group <group-name> to use network-security-groups  in  compartment <compartment-name>
+     Allow group <group-name> to use private-ips  in  compartment <compartment-name>
+     Allow group <group-name> to manage public-ips  in  compartment  <compartment-name>
+     Allow group <group-name> to manage cluster-family in compartment <compartment-name>
+     
+     # OCIR 
+     Allow group <group-name> to manage repos in tenancy where ANY {request.permission = 'REPOSITORY_INSPECT', request.permission = 'REPOSITORY_READ', request.permission = 'REPOSITORY_CREATE', request.permission = 'REPOSITORY_UPDATE'}
+     
+     # Monitoring
+     Allow group <group-name> to read metrics in compartment <compartment-name>
+     
+     # Logging
+     Allow group <group-name> to manage log-groups in compartment <compartment-name>
+     Allow group <group-name> to use log-content in compartment <compartment-name>
+     Allow group <group-name> to read audit-events in compartment <compartment-name>
+     Allow group <group-name> to manage unified-configuration in compartment <compartment-name>
+     Allow group <group-name> to inspect dynamic-groups in tenancy
+
+     # Resource Manager
+     Allow group <group-name> to manage orm-family in compartment <compartment-name>
+     Allow group <group-name> to read orm-family in tenancy
+     Allow group <group-name> to inspect announcements in tenancy
+     Allow group <group-name> to inspect tenancies in tenancy
+
+     # OCI Kubernetes Monitoring Solution
+     Allow group <group-name> to manage loganalytics-features-family in <compartment-name>
+     Allow group <group-name> to manage loganalytics-resources-family in <compartment-name>
+     Allow group <group-name> to manage management-dashboard-family in <compartment-name>
+     Allow group <group-name> to manage management-agent-install-keys in compartment <compartment-name>
+     Allow group <group-name> to manage dynamic-groups in tenancy
+     Allow group <group-name> to manage loganalytics-query in tenancy
+     Allow group <group-name> to inspect loganalytics-field in tenancy
+     Allow group <group-name> to read management-agents in compartment <compartment-name>
+     Allow group <group-name> to read alarms in compartment <compartment-name>
+     Allow group <group-name> to manage policy in compartment <compartment-name>
+
+     # DevOps
+     Allow group <group-name> to manage devops-family in compartment <compartment-name>
+     Allow group <group-name> to manage ons-family in compartment <compartment-name>
+     ```
+
+4. **Create**를 클릭하여 생성합니다.
 
 
-## Task 3: OKE Kubernetes 클러스터 생성
+## Task 4: OKE Kubernetes 클러스터 생성
 
 1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Developer Services**로 이동한 다음 **Kubernetes Clusters (OKE)**를 선택 합니다.
 
@@ -72,17 +135,25 @@
 
 1. 생성 정보를 아래와 같이 입력합니다.
     - Name: 예, **oke-cluster-1**
-    - Kubernetes version: 예, v1.25.4을 선택
-        * *뒷부분에 있는 업그레이드 실습을 위해, 여기서는 최신 버전 하나 아래 버전을 선택합니다.*
-        * 2023년 6월 기준, v1.26.2, *v1.25.4*, v1.24.1 중 v1.25.4 선택
+    - Kubernetes version:
+        * *이후 업그레이드 실습을 위해, 중간 버전인 1.26.x을 선택합니다.*
+        * 2023년 10월 기준, 1.25, 1.26, 1.27 중 *1.26.x* 선택
 
-    - Image: *동일한 버전 선택*, 예, 1.25.4
+    - Image:
+        * 클러스터와 동일한 버전 선택, 예, 1.26.x
+        * *Oracle Linux 7* 선택
+
     - 다른 값들은 기본값으로 유지합니다.
-    - Node type: 선택하지 않는 경우 기본값은 Managed 타입입니다.
-        * Managed는 Worker Node에 접근이 가능한 일반적인 쿠버네티스트 노드이며, Virtual은 Serverless로 가상 노드를 사용하며, OCI가 관리합니다. 여기서는 Managed를 사용합니다.
+    - Node type: Managed 선택
+        * **Managed**: Worker Node가 Compute 인스턴스로 생성되며, SSH로 접근이 가능한 일반적인 쿠버네티스트 노드입니다.
+        * **Virtual**: Serverless로 가상 노드를 사용하며, OCI가 관리합니다.
     - Show advanced options: 필요시, Worker Node의 Boot Volume 사이즈, Node 접속용 SSH Key 등록 등을 할 수 있습니다.
     
-    ![Cluster Details](images/oke-create-cluster-details.png " ")
+    ![Cluster Details](images/oke-create-cluster-details.png =70%x*)
+
+    - *기본 선택되는 OCI VCN-Native Pod Networking CNI에서 Istio를 사용하기 위해서는 작성일 기준으로 Kubernetes 1.26 이상, Oracle Linux 7 이어야만 합니다. Lab 9를 실습하기 위해서 해당 조건으로 클러스터를 생성합니다.*
+
+        * [Installing Istio Service Mesh on OKE](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengistio-intro-topic.htm)
 
 1. 클러스터 생성 정보를 모두 입력하였습니다. 아래 Next를 클릭
 
@@ -117,19 +188,25 @@ OKE 클러스터를 만들때 두 가지 클러스터 타입중에서 선택해�
 
 > Basic Cluster는 Cluster에 대한 비용, Control Plane Nodes에 대한 비용이 발생하지 않습니다. Enhanced Cluster는 Cluster 당 비용이 발생합니다. Enhanced Cluster의 Kubernetes API Server(on Control Plane)에 대한 SLA에 제공과 추가 기능 제공에 대한 비용으로 생각할 수 있습니다.
 
-## Task 4: OKE Kubernetes 클러스터 접근을 위한 Cloud Shell 설정
+## Task 5: OKE Kubernetes 클러스터 접근을 위한 Cloud Shell 설정
 
-1. **Clusters** 목록에서 방금 생성한 클러스터를 선택한 다음 **Access Cluster** 버튼을 클릭합니다.
+1. 콘솔 상단에서 Cloud Shell 아이콘을 클릭합니다. Cloud Shell에서 실행되는 OCI CLI는 Cloud Shell이 ​​시작될 때 콘솔의 Region 선택 메뉴에서 선택한 Region에 대해 명령을 실행합니다.
+
+  ![CloudShell](images/cloudshell-1.png =30%x*)
+
+  ![CloudShell](images/cloudshell-2.png " ")
+
+2. **Clusters** 목록에서 방금 생성한 클러스터를 선택한 다음 **Access Cluster** 버튼을 클릭합니다.
 
    ![Access Cluster](images/oke-access-cluster.png " ")
 
-1. Cloud Shell이 ​​아직 열려 있지 않으면 Cloud Shell을 시작하고 복사한 명령을 Cloud Shell 터미널에 붙여 실행하여 kubeconfig을 만듭니다.
+3. 복사한 명령을 Cloud Shell 터미널에 붙여 실행하여 kubeconfig을 만듭니다.
 
-   ![Access Cluster](images/oke-access-cluster-cli.png =60%x*)
+   ![Access Cluster](images/oke-access-cluster-cli.png =50%x*)
 
    ![Access Cluster](images/oke-cloud-shell-create-kubeconfig.png " ")
 
-1. 다음 `kubectl` 명령을 사용하여 kubectl 클라이언트 및 kubernetes 서버의 버전을 확인하십시오.
+4. 다음 `kubectl` 명령을 사용하여 kubectl 클라이언트 및 kubernetes 서버의 버전을 확인하십시오.
 
     ````shell
     <copy>
@@ -137,7 +214,7 @@ OKE 클러스터를 만들때 두 가지 클러스터 타입중에서 선택해�
     </copy>
     ````
 
-1. 다음 `kubectl` 명령을 사용하여 Worker 노드 정보를 조회하고 _Ready_ 상태인지 확인하십시오..
+5. 다음 `kubectl` 명령을 사용하여 Worker 노드 정보를 조회하고 _Ready_ 상태인지 확인하십시오..
 
     ````shell
     <copy>
@@ -147,9 +224,9 @@ OKE 클러스터를 만들때 두 가지 클러스터 타입중에서 선택해�
 
     ````shell
     NAME          STATUS   ROLES   AGE     VERSION
-    10.0.10.149   Ready    node    8m17s   v1.25.4
-    10.0.10.184   Ready    node    8m9s    v1.25.4
-    10.0.10.81    Ready    node    8m23s   v1.25.4
+    10.0.10.121   Ready    node    5m3s    v1.26.7
+    10.0.10.229   Ready    node    4m40s   v1.26.7
+    10.0.10.23    Ready    node    5m11s   v1.26.7
     ````
 
 이제 **다음 실습을 진행**하시면 됩니다.
@@ -157,4 +234,4 @@ OKE 클러스터를 만들때 두 가지 클러스터 타입중에서 선택해�
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, June 2023
+- **Last Updated By/Date** - DongHee Lee, October 2023

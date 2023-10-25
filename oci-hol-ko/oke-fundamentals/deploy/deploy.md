@@ -47,9 +47,9 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
     remote: Enumerating objects: 23680, done.
     remote: Counting objects: 100% (480/480), done.
     remote: Compressing objects: 100% (242/242), done.
-    remote: Total 23680 (delta 286), reused 415 (delta 235), pack-reused 23200
-    Receiving objects: 100% (23680/23680), 28.27 MiB | 9.24 MiB/s, done.
-    Resolving deltas: 100% (14484/14484), done.
+    remote: Total 23680 (delta 287), reused 417 (delta 235), pack-reused 23200
+    Receiving objects: 100% (23680/23680), 27.59 MiB | 15.77 MiB/s, done.
+    Resolving deltas: 100% (14485/14485), done.
     ````
 
 1. mushop 폴더로 이동합니다.
@@ -159,12 +159,13 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     ````shell
     Getting updates for unmanaged Helm repositories...
     ...Successfully got an update from the "https://kubernetes.github.io/ingress-nginx" chart repository
-    ...Successfully got an update from the "https://kubernetes-sigs.github.io/metrics-server" chart repository
-    ...Successfully got an update from the "https://charts.jetstack.io" chart repository
     ...Successfully got an update from the "https://charts.jenkins.io" chart repository
-    ...Successfully got an update from the "https://grafana.github.io/helm-charts" chart repository
+    ...Successfully got an update from the "https://kubernetes-sigs.github.io/metrics-server" chart repository
     ...Successfully got an update from the "https://prometheus-community.github.io/helm-charts" chart repository
+    ...Successfully got an update from the "https://grafana.github.io/helm-charts" chart repository
+    ...Successfully got an update from the "https://charts.jetstack.io" chart repository
     Hang tight while we grab the latest from your chart repositories...
+    ...Successfully got an update from the "fluent" chart repository
     ...Successfully got an update from the "bitnami" chart repository
     Update Complete. ⎈Happy Helming!⎈
     Saving 6 charts
@@ -188,7 +189,7 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
 
 ## Task 3: Ingress IP 주소 확인
 
-1. mushop-utilities에 배포된 전체 애플리케이션 확인합니다. 모든 Pod가 READY가 될때까지 기다립니다.
+1. mushop-utilities에 배포된 전체 애플리케이션 확인합니다. 모든 Deployment가 READY가 될때까지 기다립니다.
 
     ````shell
     <copy>
@@ -200,16 +201,15 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
 
     ````shell
     NAME                                    READY   UP-TO-DATE   AVAILABLE   AGE
-    mushop-utils-cert-manager               1/1     1            1           3m23s
-    mushop-utils-cert-manager-cainjector    1/1     1            1           3m23s
-    mushop-utils-cert-manager-webhook       1/1     1            1           3m23s
-    mushop-utils-grafana                    1/1     1            1           3m23s
-    mushop-utils-ingress-nginx-controller   1/1     1            1           3m23s
-    mushop-utils-kube-state-metrics         1/1     1            1           3m23s
-    mushop-utils-metrics-server             1/1     1            1           3m23s
-    mushop-utils-prometheus-alertmanager    1/1     1            1           3m23s
-    mushop-utils-prometheus-pushgateway     1/1     1            1           3m23s
-    mushop-utils-prometheus-server          1/1     1            1           3m23s
+    mushop-utils-cert-manager               1/1     1            1           2m49s
+    mushop-utils-cert-manager-cainjector    1/1     1            1           2m49s
+    mushop-utils-cert-manager-webhook       1/1     1            1           2m49s
+    mushop-utils-grafana                    1/1     1            1           2m49s
+    mushop-utils-ingress-nginx-controller   1/1     1            1           2m49s
+    mushop-utils-kube-state-metrics         1/1     1            1           2m49s
+    mushop-utils-metrics-server             1/1     1            1           2m49s
+    mushop-utils-prometheus-pushgateway     1/1     1            1           2m49s
+    mushop-utils-prometheus-server          1/1     1            1           2m49s
     ````
 
 2. Ingress Controller의 EXTERNAL-IP 확인:
@@ -230,7 +230,7 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
 
 ## Task 4: Helm을 사용하여 MuShop 애플리케이션 배포
 
-helm이 구성 가능한 차트를 패키징하고 배포하는 방법을 제공한다는 것을 앞서 알아 봤습니다. 이제 MuShop 애플리케이션을 **Mock Mode**로 배포하겠습니다.클라우드 서비스와 연동하도록 애플리케이션은 준비되어 있지만, 여기서는 MuShop 애플리케이션에 집중하기 위해 애플리케이션에서 클라우드 서비스를 목업 모드(Mock Mode)로 처리하도록 하겠습니다.
+이제 MuShop 애플리케이션을 **Mock Mode**로 배포하겠습니다. 목업 모드(Mock Mode)는 MuShop 다이어그램상에서 보이는 OCI ATP Database 같은 OCI 서비스들을 실제로 만들지 않고, Mock Mode로 처리하여 OKE에 배포되는 MuShop 애플리케이션가 동작하도록 처리하는 MuShop 애플리케이션 배포 방식입니다.
 
 1. "mock mode"로 MuShop 애플리케이션 배포
 
@@ -250,15 +250,13 @@ helm이 구성 가능한 차트를 패키징하고 배포하는 방법을 제공
 
     *Note:* _watch_ 모드를 중지하려면 언제든 `CTRL-C`를 사용합니다. 단순히 Pod 리스트만 조회하려면 `kubectl get pods`을 사용합니다.
 
-1. Helm 차트 설치가 완료되고, 모든 Pod가 기동(Running)되면, 다시 한번 Nginx Ingress Controller의 **EXTERNAL-IP**를 확인합니다.
+1. Helm 차트 설치가 완료되고, 모든 Pod가 기동(Running) 또는 완료(Completed)가 되면, 다시 한번 Nginx Ingress Controller의 **EXTERNAL-IP**를 확인하고, 브라우저로 http://< EXTERNAL-IP > 로 접속하여 MuShop Storefront로 이동합니다.
 
     ````shell
     <copy>
     kubectl get svc mushop-utils-ingress-nginx-controller --namespace mushop-utilities
     </copy>
     ````
-
-1. 브라우저로 http://< EXTERNAL-IP > 로 접속하여 MuShop Storefront로 이동합니다.
 
     ![MuShop Storefront](images/mushop-storefront.png)
 
@@ -386,4 +384,4 @@ helm이 구성 가능한 차트를 패키징하고 배포하는 방법을 제공
 * **Author** - Adao Junior
 * **Contributors** -  Kay Malcolm (DB Product Management), Adao Junior
 * **Last Updated By/Date** - Adao Junior, October 2020
-* **Korean Translator & Contributors** - DongHee Lee, June 2023
+* **Korean Translator & Contributors** - DongHee Lee, October 2023
