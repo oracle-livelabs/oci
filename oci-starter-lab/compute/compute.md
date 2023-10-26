@@ -96,14 +96,18 @@ In the code editor,
 - in the menu *Terminal / New Terminal*. 
 - then run:
 ```
+<copy>
 ./build.sh
+</copy>
 ```
 
 It will build all and at the end you will see:
 ```
+<copy>
 - User Interface : http://123.123.123.123/
 - Rest DB API : http://123.123.123.123/app/dept
 - Rest Info API : http://123.123.123.123/app/info
+</copy>
 ```
 
 Click on the URL or go to the link to check that it works.
@@ -128,7 +132,9 @@ During the build, it has generated 2 files:
 
 You can login to the compute by running:
 ```
+<copy>
 bin/ssh_compute.sh
+</copy>
 ```
 
 The interesting directories are:

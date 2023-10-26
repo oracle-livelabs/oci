@@ -4,7 +4,7 @@
 When you enable the *Advanced* option, you can do additional things:
 ![Advanced](images/starter-advanced.png =100%x*)
 
-## Resource Manager
+## Task 1 - Resource Manager
 
 Instead of using the command line Terraform, you can use Resource Manager (a Terraform Managed Service on OCI) to create the infrastructure
 
@@ -12,7 +12,7 @@ Instead of using the command line Terraform, you can use Resource Manager (a Ter
 
 ![Advanced](images/starter-advanced-resource-manager.png =30%x*)
 
-## Existing Resources
+## Task 2 - Existing Resources
 
 To use resources that are already existing in your OCI Tenant (Database, OKE, Network)
 - Network VCN, Subnet
@@ -26,7 +26,7 @@ Please do this:
 
 ![Advanced](images/starter-advanced-existing.png =30%x*)
 
-## Java VM - JDK / GraalVM JIT / GraalVM Native
+## Task 3- Java VM - JDK / GraalVM JIT / GraalVM Native
 
 You can choose other Java VM to run your program:
 

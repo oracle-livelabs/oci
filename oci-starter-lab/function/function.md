@@ -108,14 +108,18 @@ In the code editor,
 - in the menu *Terminal / New Terminal*. 
 - then run:
 ```
+<copy>
 ./build.sh
+</copy>
 ```
 
 It will build all and at the end you will see:
 ```
+<copy>
 - User Interface : https://xxxxxx.apigateway.eu-xxxx.oci.customer-oci.com/starter/
 - Rest DB API : https://xxxxxx.apigateway.eu-xxxx.oci.customer-oci.com/starter/dept
 - Rest Info API : https://xxxxxx.apigateway.eu-xxxx.oci.customer-oci.com/starter/info
+</copy>
 ```
 
 In cold start, the first function call with take about 40 secs to run. If you want instant response, you need to configure the [Provisioned Concurrency](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsusingprovisionedconcurrency.htm].

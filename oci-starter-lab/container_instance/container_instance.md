@@ -24,7 +24,7 @@ Please read the chapter: Introduction and Get Started.
 Using your browser:
 - Go to https://www.ocistarter.com/
 - Choose 
-  - Compute
+  - Container Instance
   - Angular
   - .NET
   - Autonomous database
@@ -97,14 +97,18 @@ In the code editor,
 - in the menu *Terminal / New Terminal*. 
 - then run:
 ```
+<copy>
 ./build.sh
+</copy>
 ```
 
 It will build all and at the end you will see:
 ```
-- User Interface : http://123.123.123.123/
-- Rest DB API : http://123.123.123.123/app/dept
-- Rest Info API : http://123.123.123.123/app/info
+<copy>
+- User Interface : https://xxxx.apigateway.eu-xxxx.oci.customer-oci.com/starter/
+- Rest DB API : https://xxxx.apigateway.eu-xxxx.oci.customer-oci.com/starter/app/dept
+- Rest Info API : https://xxxx.apigateway.eu-xxxx.oci.customer-oci.com/starter/app/info
+</copy>
 ```
 
 Click on the URL or go to the link to check that it works.

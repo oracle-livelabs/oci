@@ -107,14 +107,18 @@ In the code editor,
 - in the menu *Terminal / New Terminal*. 
 - then run:
 ```
+<copy>
 ./build.sh
+</copy>
 ```
 
 It will build all and at the end you will see:
 ```
+<copy>
 - User Interface : http://123.123.123.123/
 - Rest DB API : http://123.123.123.123/app/dept
 - Rest Info API : http://123.123.123.123/app/info
+</copy>
 ```
 
 Click on the URL or go to the link to check that it works.
@@ -135,17 +139,26 @@ Please also check the  "Lab 5 - How to Customize" to see how to customize this s
 
 During the build, it will generate an Kubernetes cluster, do this to access it:
 
-````
+```
+<copy>
 . ./env.sh
 kubectl get pods
+</copy>
+```
 
+```
+<copy>
 NAME                                     READY   STATUS    RESTARTS   AGE
 starter-app                              1/1     Running   0          86s
 starter-ui                               1/1     Running   0          83s
-
+</copy>
+```
+```
+<copy>
 kubectl get service
 kubectl get ingress
-````
+</copy>
+```
 
 By default, the pods for the User Interface and Application are generated in the default namespace.
 

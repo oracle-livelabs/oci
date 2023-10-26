@@ -3,7 +3,7 @@
 
 How to customize it a *Starter Application*?
 
-## Directory: src 
+## Task 1 - Check Directory: src 
 
 The files to modify are all in the *src* directory. The src directory contains all the source code. 
 
@@ -15,11 +15,13 @@ The principle is identical for all deployments type, (compute, kubernetes, conta
 Let's say that we deploy a Java / SpringBoot on a Compute with an Database.
 
 ````
+<copy>
 curl "https://www.ocistarter.com/app/zip?prefix=starter&deploy=compute&ui=html&language=java&database=atp" --output starter.zip
 unzip starter.zip
 cd starter
 cat README.md
 # ./build.sh
+</copy>
 ````
 
 When you run the build.sh script, the program will:
@@ -38,11 +40,13 @@ When you run the build.sh script, the program will:
 
 Let's go inside each directory to see what it contains.
 
-## Terraform Directory: src/terraform 
+## Task 2 - Check Terraform Directory: src/terraform 
 
 ````
-> cd src/terraform/
-> ls
+<copy>
+cd src/terraform/
+ls
+</copy>
 apply.sh  atp.tf  bastion.tf  compute.tf  datasource.tf  destroy.sh  network.tf  output.tf  plan.sh  terraform_local.tf  variable.tf
 ````
 
@@ -65,12 +69,18 @@ Take a look at the documentation to see how they work:
 - Examples: https://github.com/oracle/terraform-provider-oci/tree/master/examples
 
 
-## Database: src/db
+## Task 3 - Check Database: src/db
 
 ````
-> cd src/db/
-> ls
+<copy>
+cd src/db/
+ls
+</copy>
+````
+````
+<copy>
 db_init.sh  oracle.sql
+</copy>
 ````
 
 There are 2 files. 
@@ -79,12 +89,18 @@ There are 2 files.
 
 You may customize all these files to your needs. For example, create another tables....
 
-## Application Directory: src/app
+## Task 4 - Check Application Directory: src/app
 
 ````
-> cd src/app/
-> ls
+<copy>
+cd src/app/
+ls
+</copy>
+````
+````
+<copy>
 app.yaml  build_app.sh  Dockerfile  openapi_spec.yaml  pom.xml  src  start.sh  target
+</copy>
 ````
 We see 2 types of files:
 1. The files to build the application
@@ -103,12 +119,18 @@ You may customize all these files to your needs. For example, to use your own Sp
 - change the start.sh
 - and rerun $STARTER_HOME/build.sh
 
-## User Interface Directory: src/ui
+## Task 5 - Check User Interface Directory: src/ui
 
 ````
-> cd src/ui/
-> ls
+<copy>
+cd src/ui/
+ls
+</copy>
+````
+````
+<copy>
 build_ui.sh  Dockerfile  ui  ui.yaml
+</copy>
 ````
 
 We see 2 types of files:
