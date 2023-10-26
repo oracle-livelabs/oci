@@ -13,8 +13,6 @@ In this sample, using terraform, we will create a Container Instance (with a Jav
 
 The steps are identical for all other user interfaces, backends or database.
 
-(!!!!) Beta: it works only from a Oracle Linux machine withe OCI CLI installed (!!!!!)
-
 ### Prerequisites
 
 Please read the chapter: Introduction and Get Started.
