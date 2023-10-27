@@ -15,6 +15,10 @@
 ### 전제 조건
 
 * **Lab 4: Deploy the MuShop Application** 완료하고 현재 앱이 실행 중일 것
+* OKE Cluster *1.26 이상*, *Oracle Linux 7*
+    - OCI VCN-Native Pod Networking CNI에서 Istio를 사용하기 위해서는 작성일 기준으로 Kubernetes 1.26 이상, Oracle Linux 7 이어야만 합니다.
+    - [Installing Istio Service Mesh on OKE](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengistio-intro-topic.htm)
+
 
 ### 실습 비디오
 
@@ -28,7 +32,7 @@
 
     ```
     <copy>
-    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.18.0 TARGET_ARCH=x86_64 sh -
+    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.19.3 TARGET_ARCH=x86_64 sh -
     </copy>
     ```
 
@@ -36,7 +40,7 @@
 
     ```
     <copy>
-    cd istio-1.18.0
+    cd istio-1.19.3
     </copy>
     ```
 
@@ -97,7 +101,7 @@
 
 ## Task 2: MuShop에 Istio 활성화하기
 
-1. 레이블 달기
+1. mushop 네임스페이스에 있는 Pod들은 Istio를 사용하겠다고 레이블 달기
 
     ````
     <copy>
@@ -228,9 +232,9 @@
 
     ````
     ...
-    2023-06-27T04:32:34.414218Z     info    Readiness succeeded in 1.933379266s
-    2023-06-27T04:32:34.414960Z     info    Envoy proxy is ready
-    [2023-06-27T04:33:23.030Z] "GET / HTTP/1.1" 304 - via_upstream - "-" 0 0 0 0 "10.179.86.108,10.244.0.0" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "da4cfeb8-f797-942e-922b-39cccc0b94a1" "144.24.66.90" "10.244.1.76:8080" inbound|8080|| 127.0.0.6:55673 10.244.1.76:8080 10.244.0.0:0 outbound_.80_._.mushop-storefront.mushop.svc.cluster.local default
+    2023-10-17T09:38:18.049153Z     info    Readiness succeeded in 1.125258011s
+    2023-10-17T09:38:18.049635Z     info    Envoy proxy is ready
+    [2023-10-17T09:40:08.391Z] "GET / HTTP/1.1" 304 - via_upstream - "-" 0 0 1 0 "10.0.10.229, 127.0.0.6" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" "a56a65c75c9b8bae80c8fdec523045d3" "mushop-storefront" "10.0.10.157:8080" inbound|8080|| 127.0.0.6:53137 10.0.10.157:8080 127.0.0.6:0 outbound_.80_._.mushop-storefront.mushop.svc.cluster.local default
     ...
     ````
 
@@ -245,8 +249,8 @@
     kiali를 위해 prometheus addon도 함께 설치합니다.
     ```
     <copy>
-    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.18/samples/addons/prometheus.yaml   
-    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.18/samples/addons/kiali.yaml
+    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.19/samples/addons/prometheus.yaml   
+    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.19/samples/addons/kiali.yaml
     </copy>
     ```
 
@@ -485,4 +489,4 @@
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, June 2023
+- **Last Updated By/Date** - DongHee Lee, October 2023
