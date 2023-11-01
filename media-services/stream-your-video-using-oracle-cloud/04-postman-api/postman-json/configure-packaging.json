@@ -1,9 +1,0 @@
-{
-    "distributionChannelId": "<< Distribution Channel ID>> ",
-    "displayName": "UnEncrypted Packaging Config via Postman",
-    "streamPackagingFormat": "HLS",
-    "segmentTimeInSeconds": 6,
-    "encryption": {
-      "algorithm": "NONE"
-    }
-  }
