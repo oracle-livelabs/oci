@@ -1,0 +1,57 @@
+{
+  "workshoptitle": "Build an intelligent Data Lake for your Enterprise Data Platform",
+	"help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Data Ingestion",
+            "description": "Data Integration Services",
+            "filename": "../../01-data-ingestion/data-integration-service.md"
+        },
+
+        {
+            "title": "Lab 2: Data Engineering",
+            "description": "Data Flow Services",
+            "filename": "../../02-data-engineering/data-flow-service.md"
+         },
+        {
+            "title": "Lab 3: Data Exploration Notebooks",
+            "description": "Data Science Notebooks",
+            "filename": "../../03-data-exploration-notebooks/data-science-notebook.md"
+        },
+        {
+            "title": "Lab 4: Data Exploration SQL",
+            "description": "Data Flow SQL End Point",
+            "filename": "../../04-data-exploration-sql/data-flow-sql-endpoint.md"
+        },
+        {
+            "title": "Lab 5: Data Loading",
+            "description": "Curate and Load into Data Warehouse",
+            "filename": "../../05-data-loading/data-loading.md"
+        },
+        {
+            "title": "Lab 6: Scheduling and Orchestration",
+            "description": "Data Pipeline Orchestration",
+            "filename": "../../06-scheduling-orchestration/scheduling-orchestration.md"
+        },
+
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }, 
+	{
+	     "title": "Oracle CloudWorld 2023 - Support",
+	     "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
+	}
+    ]
+}
