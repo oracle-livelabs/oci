@@ -1,0 +1,10 @@
+.DS_Store
+**/*.rpm
+**/*.jar
+**/*.bin
+*.patch
+env.sh
+.vscode
+.idea
+.github
+.gitignore
