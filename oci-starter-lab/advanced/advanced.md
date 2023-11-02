@@ -44,8 +44,7 @@ You can choose other Java VM to run your program:
     - [More info: see https://www.graalvm.org/22.0/reference-manual/native-image/](https://www.graalvm.org/22.0/reference-manual/native-image/)
 
 ## Acknowledgements 
-- **Author**
-    - Marc Gueury
-    - Ewan Slater 
 
-- **History** - Creation - 30 nov 2022
+* Author - Marc Gueury
+* Contributors - Ewan Slater 
+* Last Updated - Nov, 2th 2023

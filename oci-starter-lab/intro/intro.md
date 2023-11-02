@@ -81,8 +81,6 @@ For Advanced Features, check the Lab - Advanced. For things like Resource Manage
 
 ## Acknowledgements 
 
-- **Author**
-    - Marc Gueury
-    - Ewan Slater 
-
-- **History** - Creation - 30 nov 2022
+* Author - Marc Gueury
+* Contributors - Ewan Slater 
+* Last Updated - Nov, 2th 2023

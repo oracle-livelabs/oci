@@ -147,8 +147,7 @@ You may customize all these files to your needs. For example, to use your own HT
 - and rerun $STARTER_HOME/build.sh
 
 ## Acknowledgements 
-- **Author**
-    - Marc Gueury
-    - Ewan Slater 
 
-- **History** - Creation - 10 feb 2023
+* Author - Marc Gueury
+* Contributors - Ewan Slater 
+* Last Updated - Nov, 2th 2023
