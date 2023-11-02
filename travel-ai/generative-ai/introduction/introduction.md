@@ -48,7 +48,7 @@ Source: [Gartner.com](https://www.gartner.com/en/topics/generative-ai)
 
 Technology Architecture of Generative AI for Travel Application
 
-![Near by Sites](images/architecture.png " ")
+![Near by Sites](images/architecture1.png " ")
  
 ### Generative AI for Travel - Table of Contents
 
@@ -79,9 +79,7 @@ These are common labs that are required for most of the other labs under this wo
 * Lab 4: Generate AI Text
     * Text AI Generative Platform - what, why and how we choose
     * Sign up at Cohere
-    * Getting Response from Cohere
-    * Sign up at OpenAI
-    * Getting Response from OpenAI
+    * Getting Response from Cohere 
     * Generative AI Text Generation Demo
 * Lab 5: Top 10 UNESCO Sites
     * Panorama Viewer for the Web
@@ -130,4 +128,4 @@ You may now **proceed to the next lab**.
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
 * **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Director, Database Developer Relations
-* **Last Updated By/Date** - July 28th, 2023
+* **Last Updated By/Date** - Oct 18th, 2023
