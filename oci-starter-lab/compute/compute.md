@@ -9,7 +9,11 @@ Estimated time: 10 min
 
 ![Architecture Compute](images/architecture_compute.png =50%x*)
 
-In this sample, using terraform, we will create a compute (with a Java program, NGINX, HTML pages) and an Autonomous Database. 
+In this sample, using terraform, we will create:
+- a compute (VM)
+- with a Java program, 
+- HTML pages (on NGINX)
+- and an Autonomous Database. 
 
 The steps are identical for all other user interfaces, backends or database.
 

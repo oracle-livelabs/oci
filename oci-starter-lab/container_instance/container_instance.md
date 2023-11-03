@@ -9,7 +9,11 @@ Estimated time: 10 min
 
 ![Architecture Container Instance](images/architecture_container_instance.png =50%x*)
 
-In this sample, using terraform, we will create a Container Instance (with a Java program, NGINX, HTML pages) and an Autonomous Database. 
+In this sample, using terraform, we will create:
+- a Container Instance running 2 docker containers
+- 1 container with a Java program
+- 1 container with HTML pages on NGINX
+- and an Autonomous Database. 
 
 The steps are identical for all other user interfaces, backends or database.
 

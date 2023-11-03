@@ -9,7 +9,11 @@ Estimated time: 10 min
 
 ![Architecture Kubernetes](images/architecture_kubernetes.png =50%x*)
 
-In this sample, using terraform, we will create a Kubernetes cluster (with 2 pods, one for NGINX and ReactJS, one with NodeJS) and a MySQL Database. 
+In this sample, using terraform, we will create:
+- a Kubernetes cluster with 2 pods
+- one pod for NGINX and ReactJS
+- one with NodeJS
+- and a MySQL Database. 
 
 The steps are identical for all other user interfaces, backends or database.
 
