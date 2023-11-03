@@ -36,16 +36,6 @@ In this lab, you will:
 
    The bucket gets created in a few seconds. The next task describes how to view the bucket details.
 
-<!-- 5. Alternatively, create a bucket using the OCI CLI with Instance Principals Auth.
-
-   Run the following OCI CLI command to create the Object Storage bucket in your workshop compartment.
-
-	``` bash
-	<copy>
-	oci os bucket create --compartment-id $COMPARTMENT_ID --name $OBJECT_STORAGE_BUCKET --auth instance_principal
-	</copy>
-	``` -->
-
 ## Task 2: View the Bucket Details
 
 1. You will see your bucket in the **Buckets** list. Click the bucket name hyperlink to go to the bucket details screen.
