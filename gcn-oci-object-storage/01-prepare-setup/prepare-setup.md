@@ -10,6 +10,7 @@ This lab will show you how to download the Oracle Resource Manager (ORM) stack z
 
 * Download ORM stack
 * (*Optional*) Configure an existing Virtual Cloud Network (VCN)
+* Select a Compartment for the workshop
 
 ### Prerequisites
 
@@ -35,7 +36,7 @@ This workshop requires a certain number of ports to be available, a requirement 
 
 However, if you would rather use an existing VCN/subnet, follow these steps to add the following rules to the network security list.
 
-1. Go to **Networking >> Virtual Cloud Networks**.
+1. From the Oracle Cloud Console navigation menu, go to **Networking >> Virtual Cloud Networks**.
 2. Choose your network.
 3. Under **Resources**, select **Security Lists**.
 4. Click on **Default Security Lists** under the **Create Security List** button.
@@ -58,17 +59,27 @@ However, if you would rather use an existing VCN/subnet, follow these steps to a
     |No (unchecked)  |CIDR           |0.0.0.0/0          |TCP            |All                |443                    |Outbound HTTPS access      |
     {: title="Network Egress Security Rules"}
 
-## Task 3: Setup Compute
+## Task 3: Select a Compartment for the Workshop
 
-Using the details from the above Tasks, proceed to the **Environment Setup** lab to set up your workshop environment using Oracle Resource Manager (ORM) and one of the following options:
+We recommend you use a single compartment for the workshop. We will refer to this as your workshop compartment. This is the compartment where you will provision all the resources - Oracle Resource Manager (ORM) Stack, Compute Instance, VCN/Subnet, Instance Principals, Policies, Object Storage Buckets - needed for the workshop.
+
+1. From the Oracle Cloud Console navigation menu, go to **Identity & Security >> Identity >> Compartments**.
+2. Go to your workshop compartment.
+3. Make a note of the compartment name and OCID. You will need this information in subsequent labs.
+
+## Task 4: Setup Compute
+
+Using the details from the above Tasks, proceed to the **Environment Setup** lab to set up your workshop environment using Oracle Resource Manager (ORM) with one of the following options:
 
 * (*Recommended*) Create Stack: **Compute + Networking**
 * Create Stack: **Compute only** with an existing VCN where security lists have been updated as per **Task 2** above
+
+The ORM stack will provision a compute instance with 4 OCPUs, 64 GB RAM and a Remote Desktop environment.
 
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author** - Rene Fontcha, LiveLabs Platform Lead, NA Technology
-* **Contributors** - Meghana Banka
-* **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, December 2022
+* **Author** - [](var:author)
+* **Contributors** - [](var:contributors)
+* **Last Updated By/Date** - [](var:last_updated)

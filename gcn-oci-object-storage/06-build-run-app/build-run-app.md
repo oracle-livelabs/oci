@@ -14,6 +14,7 @@ In this lab, you will:
 * Upload a picture
 * Download the picture
 * Delete the picture
+* Stop the application
 
 ## Task 1: Build and run the application
 

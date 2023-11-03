@@ -20,6 +20,8 @@ In this lab, you will:
 * Upload a picture
 * Download the picture
 * Delete the picture
+* Stop the application
+* Cleanup
 
 ## Task 1: Build and run a native executable for the application
 
@@ -101,17 +103,19 @@ In this lab, you will:
 
 1. In the first terminal in VS Code, use `CTRL+C` to stop the application.
 
-Congratulations! You've successfully completed this lab. Your Java application native executable can successfully upload, download and delete pictures from the OCI Object Storage bucket.
-
 ## Task 6: Cleanup
 
-From the Oracle Cloud Console, clean up the resources provisioned for this lab:
+From the Oracle Cloud Console, clean up the resources provisioned for this workshop:
 
-1. Delete the Object Storage Bucket.
+1. From **Storage >> Object Storage & Archive Storage >> Buckets**, delete the **Bucket**.
 
-2. From **Resource Manager >> Stacks >> Stack Details** screen, run **Destroy** to delete VCN and Compute instance. Delete the Stack.
+2. From **Resource Manager >> Stacks >> Stack Details** screen, first run **Destroy** to delete VCN and Compute instance. Next, delete the **Stack**.
 
-3. Delete the Instance Principals policy and dynamic group (in any).
+<if type="tenancy">
+3. From **Identity & Security >> Identity >> Policies**, delete the Instance Principals **Policy**.
+</if>
+
+Congratulations! You've successfully completed this lab. Your Java application native executable can successfully upload, download and delete pictures from the OCI Object Storage bucket.
 
 You may now **proceed to the next lab**.
 

@@ -23,11 +23,13 @@
     },
     {
       "title": "Lab 3: Provision an Object Storage Bucket",
-      "filename": "../../04-provision-bucket/provision-bucket.md"
+      "filename": "../../04-provision-bucket/provision-bucket.md",
+      "type": "desktop"
     },
     {
       "title": "Lab 4: Configure the Application",
-      "filename": "../../05-configure-app/configure-app.md"
+      "filename": "../../05-configure-app/configure-app.md",
+      "type": "desktop"
     },
     {
       "title": "Lab 5: Build and Run the Application",
@@ -39,7 +41,8 @@
     },
     {
       "title": "Lab 6: Build and Run a Native Executable",
-      "filename": "../../07-build-run-native/build-run-native.md"
+      "filename": "../../07-build-run-native/build-run-native.md",
+      "type": "desktop"
     },
     {
       "title": "Conclusion",
