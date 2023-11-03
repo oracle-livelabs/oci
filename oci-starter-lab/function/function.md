@@ -9,7 +9,10 @@ Estimated time: 10 min
 
 ![Architecture Function](images/architecture_function.png =50%x*)
 
-In this sample, using terraform, we will create a Function with Python, an Object Storage for the HTML and an Autonomous Database. 
+In this sample, using terraform, we will create: 
+- a Serverless Function with Python
+- an Object Storage for the HTML
+- and an Autonomous Database. 
 
 The steps are identical for all other user interfaces, backends or database.
 
