@@ -1,6 +1,8 @@
 
 # Advanced Topics
 
+## Introduction
+
 When you enable the *Advanced* option, you can do additional things:
 ![Advanced](images/starter-advanced.png =100%x*)
 
