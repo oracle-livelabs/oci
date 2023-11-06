@@ -1,9 +1,13 @@
 
 # How to customize
 
+## Introduction
+
 How to customize it a *Starter Application* ?
 
-All the files to change are in the *src* directory. Let's look how this works.
+All the files to change are in the *src* directory.
+- Let's look how this works. 
+- And how you can modify an OCI Starter sample to include your own code.  
 
 ## Task 1 - Example - Compute, Java, SpringBoot, Database
 
