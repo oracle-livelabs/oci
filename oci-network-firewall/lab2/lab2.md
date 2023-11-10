@@ -1,10 +1,10 @@
-# OCI Network Firewall deployment
+# East-West Traffic Inspection
 
 ## Introduction
 
 Estimated Time: 10 minutes
 
-### Bla bla bla
+### blablabla
 
 Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables, and configuring stateful firewalls. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm) for more information on Virtual Cloud Networks.
 
@@ -14,7 +14,7 @@ In this lab, you will:
 
 * Build a Virtual Cloud Network (VCN) using the VCN Wizard.
 
-![lab1](images/lab1.png)
+![lab2](images/lab2.png)
 
 ## Task 1: Deploy a VCN (Virtual Cloud Network)
 
