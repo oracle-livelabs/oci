@@ -16,7 +16,16 @@ In this lab, you will:
 
 ![lab2](images/lab2.png)
 
+
+
+
+
+
+
 ## Task 1: Deploy a VCN (Virtual Cloud Network)
+
+
+![lab2-2](images/lab2-2.png)
 
 1. Log into the Oracle Cloud console and select the **Ashburn** region.
   ![Ashburn Region Select](images/region-1.png)
