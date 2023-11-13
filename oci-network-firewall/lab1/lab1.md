@@ -2,17 +2,21 @@
 
 ## Introduction
 
-Estimated Time: 10 minutes
+Estimated Time: 60 minutes
 
-### Bla bla bla
+### About Virtual Cloud Networks and the OCI Network Firewall
 
 Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables, and configuring stateful firewalls. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm) for more information on Virtual Cloud Networks.
+OCI Network Firewall is a next-generation managed network firewall and intrusion detection and prevention service for your Oracle Cloud Infrastructure virtual cloud network (VCN), powered by Palo Alto Networks®. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/network-firewall/home.htm) for more information on the Network Firewall service.
 
 ### Objectives
 
 In this lab, you will:
 
-* Build a Virtual Cloud Network (VCN) using the VCN Wizard.
+* Build a Virtual Cloud Network (VCN) and a firewall dedicated subnet.
+* Create a Route table and a Security List for the firewall dedicated subnet.
+* Create a basic OCI Network firewall policy.
+* Deploy an OCI Network Firewall.
 
 ![lab1](images/lab1.png)
 
