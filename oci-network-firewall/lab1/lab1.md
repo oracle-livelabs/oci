@@ -20,26 +20,25 @@ In this lab, you will:
 
 ![lab1](images/lab1.png)
 
-## Task 1: Deploy a VCN (Virtual Cloud Network)
+## Task 1: Deploy a VCN (Virtual Cloud Network) and a dedicated firewall subnet (private)
 
-1. Log into the Oracle Cloud console and select the **Ashburn** region.
-  ![Ashburn Region Select](images/region-1.png)
-2. On the Oracle Cloud Infrastructure Console Home page, under the Quick Actions header, click on **Set up a network with a wizard**.
-  ![Quick Actions Wizard](images/vcn-1.png)
-3. Select the compartment when you want the objects for this Hands on Lab to be deployed. This lab will deploy resources in the **MultiCloud_Connectivity** compartment.
-  ![Select Compartment for Deployment](images/compartment-1.png)
+We will start with a basic VCN deployment. One of the goals of this livelab is also to provide an understanding of OCI routing and gateways, in relation to the OCI Network Firewall service. For this reason, we will not use the VCN Wizard which deploys all OCI Gateways and creates basic routing rules. Instead, we will manually create each artifact as needed.
 
-    > **Note:** If you would deploy these lab resources in a new compartment you can follow the [Create an Oracle Cloud Infrastructure Compartment](https://docs.oracle.com/en/cloud/paas/integration-cloud/oracle-integration-oci/creating-oci-compartment.html#GUID-C0FA329C-7CB8-4727-9E68-2E6A214038CD) documentation.
+1. Log into the Oracle Cloud console and select the **HOME** region.
+  ![Ashburn Region Select](images/home.png)
+  Note: This Lab can be completed in any OCI region. However, as explained in the **Get Started** chapter, we will use OCI CLI to connect to deployed private Compute Instances. That functionality is only available in the Home Region. If you want to use a different region, make sure you have connectivity to the private instances.
+2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Press **Create VCN**, making sure you have the correct Compartment selected. Give the VCN a name and assign an IPv4 CIDR Block. For this LiveLab, I will use the LAB Compartment and the VCN CIDR 10.0.0.0/16. Leave everything else on default settings and press **Create VCN**.
+  ![Create VCN](images/createvcn.png)
+3. After you press **Create VCN**, you will be redirected to the VCN Overview page, with the Subnets menu selected. Press **Create Subnet**. In the subnet creation menu, give it a name, assign a CIDR (I will use 10.0.0.0/27) and make it a **Private** subnet. Leave everything else with default settings.
+  ![Create Subnet](images/createsubnet.png)
 
-4. Select **VCN with Internet Connectivity**, and then select **Start VCN Wizard**.
-  ![VCN with Internet Connectivity](images/vcn-2.png)
-5. The default parameters for the VCN quickstart will be used. Verify your configuration looks similar to the following, and select **Next**.
-  ![Create a VCN Configuration](images/vcn-3.png)
-6. Overview the configuration, then select **Create**.
-    ![Review CV Configuration](images/vcn-4.png)
-7. When VCN creation is complete, click on **View VCN**.
-    ![Workflow](images/vcn-5.png)
-8. You may now **proceed to the next lab**.
+4. You may now **proceed to the next task**.
+
+## Task 2: VCN Route table and Subnet Security List
+
+## Task 3: Create a basic OCI Network firewall policy
+
+## Task 4: Deploy an OCI Network Firewall
 
 ## Acknowledgements
 
