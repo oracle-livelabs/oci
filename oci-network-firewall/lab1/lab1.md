@@ -42,13 +42,18 @@ Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Secu
   ![Create route table1](images/creatert1.png)
 
 On the menu that opens, give this route table a name and press **Create**. No routes are needed at this step of the Lab.
-  ![Create route table2](images/creatert2.png)
+   ![Create route table2](images/creatert2.png)
 
 2. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
-  ![Click subnet](images/clicksubnet.png)
+   ![Click subnet](images/clicksubnet.png)
 
 On the menu that opens (subnet details) , click **Edit**. In the new menu, replace the default Route Table with the one previously created and save the changes.
-  ![Replace Route Table](images/subnetrt.png)
+   ![Replace Route Table](images/subnetrt.png)
+
+3.  
+
+
+
 ## Task 3: Create a basic OCI Network firewall policy
 
 ## Task 4: Deploy an OCI Network Firewall
