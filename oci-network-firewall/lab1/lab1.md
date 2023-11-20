@@ -7,6 +7,7 @@ Estimated Time: 60 minutes
 ### About Virtual Cloud Networks and the OCI Network Firewall
 
 Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables, and configuring stateful firewalls. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm) for more information on Virtual Cloud Networks.
+
 OCI Network Firewall is a next-generation managed network firewall and intrusion detection and prevention service for your Oracle Cloud Infrastructure virtual cloud network (VCN), powered by Palo Alto Networks®. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/network-firewall/home.htm) for more information on the Network Firewall service.
 
 ### Objectives
@@ -15,7 +16,6 @@ In this lab, you will:
 
 * Build a Virtual Cloud Network (VCN) and a firewall dedicated subnet.
 * Create a Route table and a Security List for the firewall dedicated subnet.
-* Create a basic OCI Network firewall policy.
 * Deploy an OCI Network Firewall.
 
 ![lab1](images/lab1.png)
@@ -73,11 +73,32 @@ Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Secu
 
 5. You may now **proceed to the next task**.
 
-## Task 3: Create a basic OCI Network firewall policy
+## Task 3: Deploy an OCI Network Firewall
 
-## Task 4: Deploy an OCI Network Firewall
+Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Network Firewall. To deploy a Firewall we need to give it a policy. We will start by deploying an empty Firewall Policy and then use it to deploy an OCI Network Firewall.
+
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**.
+  ![Click firewall policy](images/clickpol.png)
+
+   On the menu that opens, click **Create network firewall policy**. In the next menu, give it a name and press Create...
+  ![Empty firewall policy](images/polempty.png)
+
+   The Firewall policy that gets created will be empty of any configuration but we can use it to deploy a Network Firewall.
+
+2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click **Create Network firewall**.
+  ![Create firewall1](images/createfw1.png)
+
+   In the menu that opens, give the firewall a name, select the empty policy we previously created and select the correct VCN and subnet, created earlier in this lab. Then press Create.
+  ![Create firewall2](images/createfw2.png)
+
+   Wait for the Firewall to become **ACTIVE** before moving on to the next step.
+
+3. Once the firewall is **ACTIVE**, click on the left hand menu on **Logs** and enable both Traffic and Threat Logs by using the toggle.
+  ![Firewall Logs](images/fwlogs.png)
+
+**Congratulations!** You have successfully deployed an OCI Network Firewall.
 
 ## Acknowledgements
 
-* **Author** - Jake Bloom, Principal Solution Architect, OCI Networking
-* **Last Updated By/Date** - Jake Bloom, August 2023
+* **Author** - Radu Nistor, Principal Cloud Architect, OCI Networking
+* **Last Updated By/Date** - Radu Nistor, November 2023
