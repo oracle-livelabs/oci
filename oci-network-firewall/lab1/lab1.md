@@ -41,18 +41,37 @@ Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Secu
 1. On the VCN Details page, on the left menu, click **Route Tables** and then click on **Create Route Table**.
   ![Create route table1](images/creatert1.png)
 
-On the menu that opens, give this route table a name and press **Create**. No routes are needed at this step of the Lab.
-   ![Create route table2](images/creatert2.png)
+   On the menu that opens, give this route table a name and press **Create**. No routes are needed at this step of the Lab.
+  ![Create route table2](images/creatert2.png)
 
 2. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
-   ![Click subnet](images/clicksubnet.png)
+  ![Click subnet](images/clicksubnet.png)
 
-On the menu that opens (subnet details) , click **Edit**. In the new menu, replace the default Route Table with the one previously created and save the changes.
-   ![Replace Route Table](images/subnetrt.png)
+   On the menu that opens (subnet details), click **Edit**. In the new menu, replace the default Route Table with the one previously created and save the changes.
+  ![Replace Route Table](images/subnetrt.png)
 
-3.  
+3. On the VCN Details page, on the left menu, click **Security Lists** and then click on **Create Security List**.
+  ![Create sec list1](images/createsl.png)
 
+   On the menu that opens, give it a name and press **+Another Ingress Rule** and **+Another Egress Rule**.
+  ![Create sec list2](images/addrule1.png)
 
+   In the rule menus that open, create an entry that allows **0.0.0.0/0** on Ingress and Egress, respectively. 
+  ![Create sec list3](images/ingressrule.png)
+  ![Create sec list4](images/egressrule.png)
+  
+  Press **Create Security List**. 
+
+4. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
+  ![Click subnet2](images/clicksubnet.png)
+
+   On the menu that opens (subnet details), click **Add Security List** and add the new one we created.
+  ![Add sec list](images/addsl.png)
+
+   Next, remove the Default Security List by clicking on the 3 **dots** at the end of the row, and clicking **Remove**.
+  ![Remove sec list](images/removesl.png)
+
+5. You may now **proceed to the next task**.
 
 ## Task 3: Create a basic OCI Network firewall policy
 
