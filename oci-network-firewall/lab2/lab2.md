@@ -2,17 +2,22 @@
 
 ## Introduction
 
-Estimated Time: 10 minutes
+Estimated Time: 30 minutes
 
-### blablabla
+### About East-West Traffic Inspection
 
-Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables, and configuring stateful firewalls. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm) for more information on Virtual Cloud Networks.
+East-West Traffic Inspection is done when two or more hosts from the same environment(in our case, OCI) communicate with each other and there is a Network Firewall on the path that is policing the traffic. 
 
 ### Objectives
 
 In this lab, you will:
 
-* Build a Virtual Cloud Network (VCN) using the VCN Wizard.
+* Configure OCI CLI for management access to private Compute Instances.
+* Deploy two application subnets in the same VCN as the OCI Network Firewall
+* Deploy two private OCI Compute Instaces, one in each application subnet.
+* Adjust VCN routing so the traffic between the two Instances passes through the OCI Network Firewall.
+* Modify the OCI Firewall policy to allow some connectivity between the two hosts.
+* Test both allowed and denied traffic and observe the Firewall Traffic Log. 
 
 ![lab2](images/lab2.png)
 
@@ -25,7 +30,7 @@ In this lab, you will:
 ## Task 1: Deploy a VCN (Virtual Cloud Network)
 
 
-![lab2-2](images/lab2-2.png)
+
 
 1. Log into the Oracle Cloud console and select the **Ashburn** region.
   ![Ashburn Region Select](images/region-1.png)

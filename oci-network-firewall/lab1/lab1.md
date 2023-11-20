@@ -41,19 +41,19 @@ Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Secu
 1. On the VCN Details page, on the left menu, click **Route Tables** and then click on **Create Route Table**.
   ![Create route table1](images/creatert1.png)
 
-   On the menu that opens, give this route table a name and press **Create**. No routes are needed at this step of the Lab.
+   In the menu that opens, give this route table a name and press **Create**. No routes are needed at this step of the Lab.
   ![Create route table2](images/creatert2.png)
 
 2. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
   ![Click subnet](images/clicksubnet.png)
 
-   On the menu that opens (subnet details), click **Edit**. In the new menu, replace the default Route Table with the one previously created and save the changes.
+   In the menu that opens (subnet details), click **Edit**. In the new menu, replace the default Route Table with the one previously created and save the changes.
   ![Replace Route Table](images/subnetrt.png)
 
 3. On the VCN Details page, on the left menu, click **Security Lists** and then click on **Create Security List**.
   ![Create sec list1](images/createsl.png)
 
-   On the menu that opens, give it a name and press **+Another Ingress Rule** and **+Another Egress Rule**.
+   In the menu that opens, give it a name and press **+Another Ingress Rule** and **+Another Egress Rule**.
   ![Create sec list2](images/addrule1.png)
 
    In the rule menus that open, create an entry that allows **0.0.0.0/0** on Ingress and Egress, respectively. 
@@ -65,7 +65,7 @@ Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Secu
 4. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
   ![Click subnet2](images/clicksubnet.png)
 
-   On the menu that opens (subnet details), click **Add Security List** and add the new one we created.
+   In the menu that opens (subnet details), click **Add Security List** and add the new one we created.
   ![Add sec list](images/addsl.png)
 
    Next, remove the Default Security List by clicking on the 3 **dots** at the end of the row, and clicking **Remove**.
@@ -80,7 +80,7 @@ Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Netw
 1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**.
   ![Click firewall policy](images/clickpol.png)
 
-   On the menu that opens, click **Create network firewall policy**. In the next menu, give it a name and press Create...
+   In the menu that opens, click **Create network firewall policy**. In the next menu, give it a name and press Create...
   ![Empty firewall policy](images/polempty.png)
 
    The Firewall policy that gets created will be empty of any configuration but we can use it to deploy a Network Firewall.
