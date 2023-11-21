@@ -32,8 +32,6 @@ We will start with a basic VCN deployment. One of the goals of this livelab is a
 3. After you press **Create VCN**, you will be redirected to the VCN Details page, with the Subnets menu selected. Press **Create Subnet**. In the subnet creation menu, give it a name, assign a CIDR (I will use 10.0.0.0/27) and make it a **Private** subnet. Leave everything else with default settings.
   ![Create Subnet](images/createsubnet.png)
 
-4. You may now **proceed to the next task**.
-
 ## Task 2: VCN Route table and Subnet Security List
 
 Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Security List to that subnet. While the default ones, deployed automatically by OCI, can be used, it is recommended to have dedicated ones.
@@ -70,8 +68,6 @@ Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Secu
 
    Next, remove the Default Security List by clicking on the 3 **dots** at the end of the row, and clicking **Remove**.
   ![Remove sec list](images/removesl.png)
-
-5. You may now **proceed to the next task**.
 
 ## Task 3: Deploy an OCI Network Firewall
 
