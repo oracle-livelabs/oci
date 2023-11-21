@@ -127,6 +127,38 @@ And that's it! Communication between the two Application Subnets will now be for
 
 ## Task 5: Modify the OCI Firewall policy
 
+In a previous **LAB** we deployed a Network Firewall with an empty Firewall Policy. As we've create the new subnets and Compute Instances, we need to adjust the Firewall Policy to allow traffic between those subnets. 
+Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the usual procedure follows this workstream: we clone the existing Policy that is in use -> we add or remove any configuration from the new, cloned Policy -> we modify the OCI Network Firewall to use the Cloned Policy. 
+
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous LAB. In the details page that opens, click the Policy that is in use.
+  ![Click Policy](images/clickpolicy.png)
+
+2. In the menu that opens, click **Clone Policy** and give the new Policy a name. I will name it **network_firewall_policy_1**.
+  ![Clone Policy](images/clonepolicy.png)
+
+3. Go back to the **Network Firewall policies** and click on the newly cloned policy called **network_firewall_policy_1**.
+  ![Click Policy2](images/clickpolicy2.png)
+
+In the Network Firewall Policy we will create the following constructs:
+* One Application that defines PING
+* One Application List that contains the Application above
+* One Service that defines SSH
+* One Service List that contains the SSH Service
+* One Address list that contains the two application subnets CIDRs
+* One Firewall Security Rule that allows PING and SSH between the Application subnets.
+
+4. In the **Network firewall policy details** menu, click on **Applications** on the left menu and click **Create application**. Create an application that allows **Echo requests**.
+  ![Create application](images/createapp.png)
+
+5. In the **Network firewall policy details** menu, click on **Application lists** on the left menu and click **Create application list**. Create an application list that contains the Application created at the previous step.
+  ![Create application list](images/createapplist.png)
+
+6. In the **Network firewall policy details** menu, click on **Services** on the left menu and click **Create service**. Create a service that allows **SSH / TCP on port 22**.
+  ![Create service](images/createsrv.png)
+
+7. In the **Network firewall policy details** menu, click on **Service lists** on the left menu and click **Create service list**. Create a service list that contains the SSH service created at the previous step.
+  ![Create service](images/createsvclist.png)
+
 ## Task 6: Test traffic and observe logs
 
 ## Acknowledgements
