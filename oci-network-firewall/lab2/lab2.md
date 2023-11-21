@@ -145,7 +145,8 @@ In the Network Firewall Policy we will create the following constructs:
 * One Service that defines SSH
 * One Service List that contains the SSH Service
 * One Address list that contains the two application subnets CIDRs
-* One Firewall Security Rule that allows PING and SSH between the Application subnets.
+* One Firewall Security Rule that allows PING between the Application subnets.
+* One Firewall Security Rule that allows SSH between the Application subnets.
 
 4. In the **Network firewall policy details** menu, click on **Applications** on the left menu and click **Create application**. Create an application that allows **Echo requests**.
   ![Create application](images/createapp.png)
@@ -158,6 +159,17 @@ In the Network Firewall Policy we will create the following constructs:
 
 7. In the **Network firewall policy details** menu, click on **Service lists** on the left menu and click **Create service list**. Create a service list that contains the SSH service created at the previous step.
   ![Create service](images/createsvclist.png)
+
+8. In the **Network firewall policy details** menu, click on **Address lists** on the left menu and click **Create address list**. Create an address list that contains the CIDRs of the two application subnets.
+  ![Create address list](images/createaddrlist.png)
+
+**NEXT** let's create our first firewall rules.
+
+9. In the **Network firewall policy details** menu, click on **Security rules** on the left menu and click **Create security rule**. 
+  ![Create security rule](images/createsecrule.png)
+
+10. In the menu that opens, give the rule a name -> **Allow-SSH-inside-the-VCN**. In the **Match condition**, under Source addresses,  
+
 
 ## Task 6: Test traffic and observe logs
 
