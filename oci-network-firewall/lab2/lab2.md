@@ -109,6 +109,22 @@ Now that we have the subnets, we can go ahead and deploy Compute Instances.
 
 ## Task 4: Adjust VCN routing
 
+With VCN Default Routing, any Compute Instance in the VCN will be routed directly to any other Compute Instance from the same VCN. To change that and add the Network Firewall on the path, we will need to modify the subnet Route Tables.
+
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous LAB. In the details page that opens, note the Firewall's Private IP.
+  ![Firewall details](images/firewalldetails.png)
+
+2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Next, click the VCN named **LiveLab-OCIFW-VCN**. On the VCN Details page, on the left menu, click **Route Tables**. We will modify the APP-Subnet Route tables.
+  ![VCN Route tables](images/vcnroutetables.png)
+
+3. Click on the Route table named **App-Subnet1-RT**. In the menu that opens, click **Add Route Rules**. We will add a route for APP-Subnet2 (10.0.0.64/27) with next hop the Firewall.
+  ![Static route1](images/staticroute1.png)
+
+4. Go back to the Route Tables overview and click on the route table named **App-Subnet2-RT**. In the menu that opens, click **Add Route Rules**. We will add a route for APP-Subnet1 (10.0.0.32/27) with next hop the Firewall.
+  ![Static route2](images/staticroute2.png)
+
+And that's it! Communication between the two Application Subnets will now be forced through the OCI Network Firewall.   
+
 ## Task 5: Modify the OCI Firewall policy
 
 ## Task 6: Test traffic and observe logs
