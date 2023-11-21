@@ -80,6 +80,33 @@ We are now ready to deploy two application subnets, in the Firewall VCN deployed
 
 ## Task 3: Deploy two private OCI Compute Instances
 
+Now that we have the subnets, we can go ahead and deploy Compute Instances.
+
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Compute and click on **Instances**. In the menu that opens, click **Create Instance**
+  ![Instance overview](images/createinstance1.png)
+
+2. In the menu that opens, we need to input data into multiple fields. Unless specified otherwise in this tutorial, leave the fields with the **Default** input.
+
+* Compute Name: APP-VM1
+* Everything else until **Primary VNIC information** remains on default
+* Network details: select the VCN and the APP-Subnet1 subnet
+
+  ![Deploy VM subnet](images/createinstance2.png)
+
+* In the **Add SSH keys** menu, select **Paste Public Keys** and paste the paste the Public SSH Key created at **Task 1**, in the Cloud Shell instance.
+  ![Deploy VM keys](images/createinstance3.png)
+
+* Leave everything else on **Default** and press **Create**.
+
+* Wait for the Instance to go into the **Running** state and note the private IP it was assigned.
+  ![Deploy VM first](images/createinstance4.png)
+
+3. **Repeat** the procedure and deploy a second Compute Instance. Name it **APP-VM2** and make sure you select **APP-Subnet2** as the target.
+  ![Deploy VM second](images/createinstance5.png)
+
+4. Start the **Cloud Shell** instance and try to SSH to both Compute Instances. The user is **opc**.
+  ![Connect vms](images/connectvms.png)
+
 ## Task 4: Adjust VCN routing
 
 ## Task 5: Modify the OCI Firewall policy
