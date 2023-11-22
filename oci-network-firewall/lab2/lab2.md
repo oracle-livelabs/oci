@@ -168,8 +168,28 @@ In the Network Firewall Policy we will create the following constructs:
 9. In the **Network firewall policy details** menu, click on **Security rules** on the left menu and click **Create security rule**. 
   ![Create security rule](images/createsecrule.png)
 
-10. In the menu that opens, give the rule a name -> **Allow-SSH-inside-the-VCN**. In the **Match condition**, under Source addresses,  
+10. In the menu that opens, give the rule a name -> **Allow-SSH-inside-the-VCN**. In the **Match condition**, under Source addresses, click **Select address lists** and add the previously created address list.
+  ![Security rule source](images/secrule1.png)
 
+  For this rule we will use the same address list for both source and destination so **repeat** the procedure above to add the same address ist as a destination. In the end, the source and destination fields should look like this:
+  ![Security rule sd](images/secrule2.png)
+
+  For applications we will leave it with **Any application** but for service we will add the service list created at step 7, named **Service-list1**. For URL, we will let **Any URL**.
+  ![Security rule srv](images/secrule3.png)
+
+  Last, for the **Rule action**, we will select **Allow traffic**. Press **Create Security Rule**.
+  ![Security rule create](images/secrule4.png)
+
+11. Next, repeat the procedure above to create a second firewall rule, called **Allow-PING-inside-the-VCN**. The Source, Destination, URLs will be the same as before but the Application will be the **Application list** created at step 5 while the **Services** will remain with **Any service**. 
+  ![Security rule create2](images/secrule5.png)
+
+  The reason we create two security rules is because it is not supported to have both Applications and Services inside the same rule. In the end, you should have two **Security Rules** in the Policy, one that allows **SSH** inside the VCN and the other one that allows **PING**.
+  ![Security rules](images/secrule6.png)
+
+12. Now that we have finished configuring the policy, it is time to modify the firewall to use this new policy. Go to **Identity and Security** and click on **Network firewalls**. Next, click on the Network Firewall we deployed. Click **Edit** and configure it to use the new policy, called **network_firewall_policy_1**.
+  ![Modify firewall](images/modifyfw.png)  
+
+  The firewall will change from the **ACTIVE** state to **UPDATING**. Wait for it to become **ACTIVE** again before moving to the next task.
 
 ## Task 6: Test traffic and observe logs
 
