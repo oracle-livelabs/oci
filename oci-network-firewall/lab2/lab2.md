@@ -174,13 +174,13 @@ In the Network Firewall Policy we will create the following constructs:
   For this rule we will use the same address list for both source and destination so **repeat** the procedure above to add the same address ist as a destination. In the end, the source and destination fields should look like this:
   ![Security rule sd](images/secrule2.png)
 
-  For applications we will leave it with **Any application** but for service we will add the service list created at step 7, named **Service-list1**. For URL, we will let **Any URL**.
+  For applications we will click **Select application lists** but we will leave it empty and for service we will add the service list created at step 7, named **Service-list1**. For URL, we will let **Any URL**.
   ![Security rule srv](images/secrule3.png)
 
   Last, for the **Rule action**, we will select **Allow traffic**. Press **Create Security Rule**.
   ![Security rule create](images/secrule4.png)
 
-11. Next, repeat the procedure above to create a second firewall rule, called **Allow-PING-inside-the-VCN**. The Source, Destination, URLs will be the same as before but the Application will be the **Application list** created at step 5 while the **Services** will remain with **Any service**. 
+11. Next, repeat the procedure above to create a second firewall rule, called **Allow-PING-inside-the-VCN**. The Source, Destination, URLs will be the same as before but the Application will be the **Application list** created at step 5 while the **Services** will remain with **Empty**. 
   ![Security rule create2](images/secrule5.png)
 
   The reason we create two security rules is because it is not supported to have both Applications and Services inside the same rule. In the end, you should have two **Security Rules** in the Policy, one that allows **SSH** inside the VCN and the other one that allows **PING**.
@@ -192,6 +192,32 @@ In the Network Firewall Policy we will create the following constructs:
   The firewall will change from the **ACTIVE** state to **UPDATING**. Wait for it to become **ACTIVE** again before moving to the next task.
 
 ## Task 6: Test traffic and observe logs
+
+  With the configuration created within this **LAB**, in the previous tasks, between the two private Compute Instances deployed in the VCN we allowed **PING** and **SSH**. Lets test this and observe the firewall logs. We will connect to one of the Instances and:
+  * **PING** the other Compute to test the Ping Rule.
+  * Test TCP port 22 to see that it is allowed
+  * Test TCP port 443 to see that it is **not** allowed.
+  ![Lab2 flow](images/lab2flow.png)
+
+1. Start the **Cloud Shell** Instance from the top-right menu. Make sure it starts with the **Private Network** configured under task 1 of this LAB.
+  ![Lab2 cloudshell](images/lab2cs.png)
+
+2. The two Compute Instances I deployed in the previous taks have the following IP address:
+* APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
+* APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
+
+Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
+
+From the Cloud Shell Instance, issue the following commands:
+* ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
+* ping 10.0.0.80  -> this will test ping between APP-VM1 and APP-VM2 and it should work.
+* nc -zv 10.0.0.80 22  -> this will test connectivity to port 22 between APP-VM1 and APP-VM2 and it should work.
+* nc -zv 10.0.0.80 443  -> this will test connectivity to port 443 between APP-VM1 and APP-VM2 and it should **not** work.
+  ![Lab2 tests](images/lab2tests.png)
+
+3. Now let's check the firewall **Traffic** Log. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log.
+  ![Firewall log1](images/lab2fwlog1.png)
+
 
 ## Acknowledgements
 
