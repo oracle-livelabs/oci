@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "MultiCloud Network Connectivity",
+    "workshoptitle": "OCI Network Firewall Use Cases",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -20,21 +20,16 @@
             "filename": "../../lab2/lab2.md"
         },
         {
-            "title": "Lab 3: Virtual Machine Deployment",
-            "filename": "../../access-oci-vm/access-vm.md"
+            "title": "Lab 3: Inspecting outbound Internet traffic",
+            "filename": "../../lab3/lab3.md"
         },
         {
-            "title": "Lab 4: FastConnect Deployment",
-            "filename": "../../fastconnect/fastconnect.md",
-            "type": {
-                "Interconnect" : "Azure Interconnect",
-                "Equinix" : "Equinix (Network Edge)",
-                "Megaport" : "Megaport (MCR)"
-            }
+            "title": "Lab 4: Inspecting inbound Internet traffic",
+            "filename": "../../lab4/lab4.md"
         },
         {
-            "title": "Lab 5: MultiCloud Connectivity Verification",
-            "filename": "../../verify-connectivity/verify-connectivity.md"
+            "title": "Lab 5: SSL Decryption and Intrusion Detection",
+            "filename": "../../lab5/lab5.md"
         },
         {
             "title": "Need Help?",

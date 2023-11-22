@@ -145,8 +145,8 @@ In the Network Firewall Policy we will create the following constructs:
 * One Service that defines SSH
 * One Service List that contains the SSH Service
 * One Address list that contains the two application subnets CIDRs
-* One Firewall Security Rule that allows PING between the Application subnets.
 * One Firewall Security Rule that allows SSH between the Application subnets.
+* One Firewall Security Rule that allows PING between the Application subnets.
 
 4. In the **Network firewall policy details** menu, click on **Applications** on the left menu and click **Create application**. Create an application that allows **Echo requests**.
   ![Create application](images/createapp.png)
