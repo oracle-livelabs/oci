@@ -31,7 +31,7 @@
     
 1. (Option #1) [Spring Initializr](https://start.spring.io)를 사용하여 기본 프로젝트 소스파일을 만듭니다.
 
-    1) 아래 그림과 같이 프로젝트 정보(Spring Boot 2.7.x, Java 11)를 입력하고 **Generate**를 클릭하여 소스파일을 생성합니다.
+    1) 아래 그림과 같이 프로젝트 정보(Spring Boot 3.x, Java 17)를 입력하고 **Generate**를 클릭하여 소스파일을 생성합니다.
     ![Spring Initializr](images/spring-initializr.png)
 
     2) 다운로드 받은 파일을 Cloud Shell에 업로드 합니다.
@@ -46,7 +46,7 @@
 
     ````
     <copy>
-    curl https://start.spring.io/starter.tgz -d type=maven-project -d bootVersion=2.7.11.RELEASE -d baseDir=rest-service -d name=rest-service -d artifactId=rest-service -d javaVersion=11 -d dependencies=web,actuator | tar -xzvf -
+    curl https://start.spring.io/starter.tgz -d type=maven-project -d bootVersion=3.1.4 -d baseDir=rest-service -d name=rest-service -d artifactId=rest-service -d javaVersion=17 -d dependencies=web,actuator | tar -xzvf -
     </copy>
     ````
 
@@ -96,7 +96,7 @@
 
     ![Code Editor - Greeting.java](images/code-editor-greeting.png)
 
-6. 같은 위치(src/main/java/com/example/restservice/GreetingController.java)에 GreetingController.java 파일을 작성합니다. /greeting URL로 HTTP Get 요청에 대한 처리 결과, 여기서는 응답 메시지 전달을 위한 RestController 코드입니다.
+6. /greeting URL로 요청을 보내면, 앞서 본 JSON 메시지 응답하도록 코드를 src/main/java/com/example/restservice/GreetingController.java 위치에 작성합니다.
 
     ````
     <copy>
@@ -135,7 +135,27 @@
     ![Code Editor - Terminal](images/code-editor-terminal.png)
     ![Code Editor - Terminal](images/code-editor-terminal-tab.png)
 
-9. Terminal에서 실행을 위해 코드를 빌드합니다.
+9. CloudShell 상의 현재 JDK 버전을 확인하고, csruntimectl을 통해 생성한 Spring Boot 설정에 맞게 JDK 17로 변경합니다.
+
+    ````
+    $ <copy>csruntimectl java list</copy>
+       graalvmeejdk-17                                               /usr/lib64/graalvm/graalvm22-ee-java17
+     * oraclejdk-11                                                                   /usr/java/jdk-11.0.17
+       oraclejdk-1.8                                                        /usr/lib/jvm/jdk-1.8-oracle-x64
+    ````
+10. JDK 17로 변경합니다
+
+    ````
+    $ <copy>csruntimectl java set graalvmeejdk-17</copy>
+    The current managed java version is set to graalvmeejdk-17.
+
+    $ java -version
+    java version "17.0.8" 2023-07-18 LTS
+    Java(TM) SE Runtime Environment GraalVM EE 22.3.3 (build 17.0.8+9-LTS-jvmci-22.3-b21)
+    Java HotSpot(TM) 64-Bit Server VM GraalVM EE 22.3.3 (build 17.0.8+9-LTS-jvmci-22.3-b21, mixed mode, sharing)
+    ````
+
+11. Terminal에서 실행을 위해 코드를 빌드합니다.
 
     ````
     <copy>
@@ -143,7 +163,7 @@
     </copy>
     ````
 
-10. Terminal에서 빌드된 JAR 파일을 실행합니다.
+12. Terminal에서 빌드된 JAR 파일을 실행합니다.
 
     ````
     <copy>
@@ -162,18 +182,18 @@
      \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
       '  |____| .__|_| |_|_| |_\__, | / / / /
      =========|_|==============|___/=/_/_/_/
-     :: Spring Boot ::               (v2.7.13)
+     :: Spring Boot ::                (v3.1.4)
     
-    2023-06-26 07:42:34.639  INFO 5332 --- [           main] c.e.restservice.RestServiceApplication   : Starting RestServiceApplication v0.0.1-SNAPSHOT using Java 11.0.17 on eff504e32675 with PID 5332 (/home/winter/rest-service/target/rest-service-0.0.1-SNAPSHOT.jar started by winter in /home/winter/rest-service)
-    2023-06-26 07:42:34.659  INFO 5332 --- [           main] c.e.restservice.RestServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-    2023-06-26 07:42:37.114  INFO 5332 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-    2023-06-26 07:42:37.130  INFO 5332 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-    2023-06-26 07:42:37.132  INFO 5332 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.76]
-    2023-06-26 07:42:37.311  INFO 5332 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-    2023-06-26 07:42:37.312  INFO 5332 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2444 ms
-    2023-06-26 07:42:38.392  INFO 5332 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-    2023-06-26 07:42:38.465  INFO 5332 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-    2023-06-26 07:42:38.494  INFO 5332 --- [           main] c.e.restservice.RestServiceApplication   : Started RestServiceApplication in 4.986 seconds (JVM running for 5.906)
+    2023-10-12T02:32:09.681Z  INFO 4558 --- [           main] c.e.restservice.RestServiceApplication   : Starting RestServiceApplication v0.0.1-SNAPSHOT using Java 17.0.8 with PID 4558 (/home/winter/rest-service/target/rest-service-0.0.1-SNAPSHOT.jar started by winter in /home/winter/rest-service)
+    2023-10-12T02:32:09.689Z  INFO 4558 --- [           main] c.e.restservice.RestServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+    2023-10-12T02:32:12.423Z  INFO 4558 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+    2023-10-12T02:32:12.441Z  INFO 4558 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+    2023-10-12T02:32:12.442Z  INFO 4558 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+    2023-10-12T02:32:12.586Z  INFO 4558 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+    2023-10-12T02:32:12.590Z  INFO 4558 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2679 ms
+    2023-10-12T02:32:13.636Z  INFO 4558 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+    2023-10-12T02:32:13.781Z  INFO 4558 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+    2023-10-12T02:32:13.817Z  INFO 4558 --- [           main] c.e.restservice.RestServiceApplication   : Started RestServiceApplication in 5.096 seconds (process running for 6.12)
     ````
 
 11. Code Editor 메뉴에서 **Terminal** &gt; **New Terminal**을 클릭하여 Terminal을 하나 더 실행합니다.
@@ -198,14 +218,15 @@
 
 쿠버네티스에서 실행하기 위해서는 구동할 서비스 애플리케이션을 컨테이너화 하여야 합니다. Docker 클라이언트를 통해 컨테이너 이미지를 만듭니다.
 
-1. 프로젝트 폴더에 Dockerfile을 아래와 같이 만듭니다. eclipse-temurin:11-jdk-alpine 베이스 이미지를 사용하여 빌드된 JAR 파일을 이미지 내부로 복사하고 java -jar로 실행하게 하는 예시입니다.
+1. 프로젝트 폴더에 Dockerfile을 아래와 같이 만듭니다. 여기서는 [Oracle Container Registry (OCR)](https://container-registry.oracle.com/) 에서 제공하는 Oracle GraalVM Container Image을 베이스 이미지로 사용합니다.
 
     ````
     <copy>
-    FROM eclipse-temurin:11-jdk-alpine
+    FROM container-registry.oracle.com/graalvm/jdk:17
+    WORKDIR /app
     ARG JAR_FILE=target/*.jar
     COPY ${JAR_FILE} app.jar
-    ENTRYPOINT ["java","-jar","/app.jar"]
+    ENTRYPOINT ["java","-jar","/app/app.jar"]    
     </copy>
     ````
 
@@ -219,28 +240,31 @@
 
     ````
     $ docker build -t spring-boot-greeting:1.0 .
-    Sending build context to Docker daemon  20.01MB
-    Step 1/4 : FROM eclipse-temurin:11-jdk-alpine
-    Trying to pull repository docker.io/library/eclipse-temurin ... 
-    11-jdk-alpine: Pulling from docker.io/library/eclipse-temurin
-    31e352740f53: Pull complete 
-    8aadc9aaa732: Pull complete 
-    ebf3b64fad21: Pull complete 
-    73befd8a0f35: Pull complete 
-    Digest: sha256:71ea4bc5fef8a26253490d79b52bafc165a36ce2d1419ffcbf86c115b8532bae
-    Status: Downloaded newer image for eclipse-temurin:11-jdk-alpine
-     ---> 1bfe29d6175f
-    Step 2/4 : ARG JAR_FILE=target/*.jar
-     ---> Running in 676a75cc8521
-    Removing intermediate container 676a75cc8521
-     ---> ca789ab88c0c
-    Step 3/4 : COPY ${JAR_FILE} app.jar
-     ---> b15d18ced4a0
-    Step 4/4 : ENTRYPOINT ["java","-jar","/app.jar"]
-     ---> Running in e24a1cfee1d6
-    Removing intermediate container e24a1cfee1d6
-     ---> d80c787e4182
-    Successfully built d80c787e4182
+    Sending build context to Docker daemon  21.63MB
+    Step 1/5 : FROM container-registry.oracle.com/graalvm/jdk:17
+    Trying to pull repository container-registry.oracle.com/graalvm/jdk ... 
+    17: Pulling from container-registry.oracle.com/graalvm/jdk
+    4539c583cc6b: Pull complete 
+    a07d690a2a78: Pull complete 
+    39ea200a20b8: Pull complete 
+    Digest: sha256:61cc91cb3551640cf7750fffc669c60534eb6eae720b1c0fc127601c5ba5fd2a
+    Status: Downloaded newer image for container-registry.oracle.com/graalvm/jdk:17
+     ---> ba31190ec464
+    Step 2/5 : WORKDIR /app
+     ---> Running in c865d50fd672
+    Removing intermediate container c865d50fd672
+     ---> 5da8c382afdf
+    Step 3/5 : ARG JAR_FILE=target/*.jar
+     ---> Running in b8b1e33d77b1
+    Removing intermediate container b8b1e33d77b1
+     ---> 91375602a7f2
+    Step 4/5 : COPY ${JAR_FILE} app.jar
+     ---> bfeb80d634ad
+    Step 5/5 : ENTRYPOINT ["java","-jar","/app/app.jar"]
+     ---> Running in 34f9110d322a
+    Removing intermediate container 34f9110d322a
+     ---> d3f1057f4db1
+    Successfully built d3f1057f4db1
     Successfully tagged spring-boot-greeting:1.0
     ````    
 
@@ -248,9 +272,9 @@
 
     ````    
     $ <copy>docker images</copy>
-    REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
-    spring-boot-greeting   1.0                 d80c787e4182        32 seconds ago      363MB
-    eclipse-temurin        11-jdk-alpine       1bfe29d6175f        11 days ago         344MB
+    REPOSITORY                                  TAG                 IMAGE ID            CREATED             SIZE
+    spring-boot-greeting                        1.0                 d3f1057f4db1        3 minutes ago       658MB
+    container-registry.oracle.com/graalvm/jdk   17                  ba31190ec464        5 weeks ago         637MB    
     ````    
 
 ## Task 3: OCIR에 이미지 등록하기
@@ -299,9 +323,9 @@
         $ docker tag spring-boot-greeting:1.0 $OCI_REGION.ocir.io/$TENANCY_NAMESPACE/oci-hol-xx/spring-boot-greeting:1.0
         $ docker images
         REPOSITORY                                                            TAG                 IMAGE ID            CREATED             SIZE
-        ap-chuncheon-1.ocir.io/axjowrxaexxx/oci-hol-xx/spring-boot-greeting   1.0                 d80c787e4182        4 minutes ago       363MB
-        spring-boot-greeting                                                  1.0                 d80c787e4182        4 minutes ago       363MB
-        eclipse-temurin                                                       11-jdk-alpine       1bfe29d6175f        11 days ago         344MB        
+        ap-chuncheon-1.ocir.io/axjowrxaexxx/oci-hol-xx/spring-boot-greeting   1.0                 d3f1057f4db1        6 minutes ago       658MB
+        spring-boot-greeting                                                  1.0                 d3f1057f4db1        6 minutes ago       658MB
+        container-registry.oracle.com/graalvm/jdk                             17                  ba31190ec464        5 weeks ago         637MB             
         ````    
 
 3. OCIR에 이미지를 Push 하기 위해서는 Docker CLI로 OCIR에 로그인이 필요합니다. Username 및 Password는 다음과 같습니다.
@@ -361,7 +385,7 @@
 
 ## Task 4: OKE에 마이크로 서비스 배포하기
 
-1. OCIR에 이미지를 사용하여 OKE에 컨테이너를 기동하기 위해서는 OKE에서 OCIR 이미지에 접근하는 권한이 필요합니다. OCIR Private Repository로 등록했기 때문에 OKE에 접속을 위한 secret를 생성합니다. 이미 Cloud Shell에서 Docker CLI로 OCI에 로그인 했으므로 해당 정보를 이용하여 생성합니다.
+1. OCIR에 이미지를 사용하여 OKE에 컨테이너를 기동하기 위해서는 OKE에서 OCIR 이미지에 접근하는 권한이 필요합니다. OCIR *Private* Repository로 등록했기 때문에 OKE에 접속을 위한 secret를 생성합니다. 이미 Cloud Shell에서 Docker CLI로 OCIR에 이미 로그인 했으므로 해당 정보를 이용하여 생성합니다.
 
     ````
     <copy>
@@ -436,17 +460,17 @@
     ````
     $ kubectl get all
     NAME                                                   READY   STATUS    RESTARTS   AGE
-    pod/spring-boot-greeting-deployment-5d5f6c6677-r9s45   1/1     Running   0          3m41s
+    pod/spring-boot-greeting-deployment-5d5f6c6677-xr9db   1/1     Running   0          39s
     
-    NAME                                   TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)             AGE
-    service/kubernetes                     ClusterIP      10.96.0.1      <none>           443/TCP,12250/TCP   56m
-    service/spring-boot-greeting-service   LoadBalancer   10.96.152.59   150.xx.xxx.xxx   80:30152/TCP        3m41s
+    NAME                                   TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)             AGE
+    service/kubernetes                     ClusterIP      10.96.0.1       <none>           443/TCP,12250/TCP   64m
+    service/spring-boot-greeting-service   LoadBalancer   10.96.243.130   150.xx.xxx.xxx   80:31359/TCP        39s
     
     NAME                                              READY   UP-TO-DATE   AVAILABLE   AGE
-    deployment.apps/spring-boot-greeting-deployment   1/1     1            1           3m41s
+    deployment.apps/spring-boot-greeting-deployment   1/1     1            1           39s
     
     NAME                                                         DESIRED   CURRENT   READY   AGE
-    replicaset.apps/spring-boot-greeting-deployment-5d5f6c6677   1         1         1       3m41s    
+    replicaset.apps/spring-boot-greeting-deployment-5d5f6c6677   1         1         1       39s     
     ````
 
 5. Pod가 정상적으로 기동하였습니다. LoadBalancer의 EXTERNAL-IP를 통해 서비스를 요청합니다.
@@ -481,4 +505,4 @@
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, June 2023
+- **Last Updated By/Date** - DongHee Lee, October 2023

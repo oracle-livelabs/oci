@@ -113,7 +113,7 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
 
     - Name: 예, oci-hol-*xx*-devops-topic
 
-3. Notification을 위해 생성한 Topic 이벤트를 가져갈 Subscrition을 일단 생략합니다. 필요시 구성하시면 됩니다.
+3. Notification을 위해 생성한 Topic 이벤트를 가져갈 Subscription을 일단 생략합니다. 필요시 구성하시면 됩니다.
 
 ### DevOps 프로젝트 만들기
 
@@ -126,26 +126,26 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
     - **Project name**: 예, oci-hol-*xx*-devops-project
     - **Notification Topic**: 앞서 생성한 Topic 선택
 
-    ![New DevOps Project](images/new-devops-project.png =50%x*)
+    ![New DevOps Project](images/new-devops-project.png =45%x*)
 
 5. 프로젝트 생성완료
 
 ### Enable Logging
 
-> 프로젝트 생성 직후 Enable Logging 관련 정보가 보이는 것을 볼 수 있습니다. 설명문에서 보는 것 처럼 Logging을 활성화하지 않을 경우, 파이프라인 실행 화면에서 오른쪽에 보이는 실행 로그가 안보입니다. 그래서 Enable Logging은 필수입니다. 
+> 프로젝트 생성 직후 Enable Logging 관련 정보 문구가 보이는 것을 볼 수 있습니다. 설명에서 보는 것 처럼 Logging을 활성화하지 않을 경우, 파이프라인 실행 화면에서 오른쪽에 보이는 실행 로그가 안보입니다. 그래서 Enable Logging은 필수입니다. 
     ![Build Run Result](images/build-run-result.png)
 
 1. Project Overview에서 Enable Log을 클릭하거나 왼쪽 메뉴에서 Logs를 클릭합니다.
 
-    ![Enable Logging](images/enable-logging.png)
+    ![Enable Logging](images/enable-logging.png =60%x*)
 
 2. 로그를 활성화 버튼을 토글합니다.
 
-    ![Enable Logging](images/enable-logging-2.png)
+    ![Enable Logging](images/enable-logging-2.png =60%x*)
 
 3. 대상 Compartment에 이미 Log Group이 있는 경우 나열된 것 중에 선택이 가능합니다. 앞선 실습에서 만든 Default_Group을 선택합니다. (미리 생성된 Log Group이 없는 경우 **Create New Group**을 클릭하여 새 그룹도 함께 만듭니다.) 기본 생성 정보를 확인후 **Enable Log** 버튼을 클릭합니다.
 
-    ![Enable Log](images/devops-enable-log.png =60%x*)
+    ![Enable Log](images/devops-enable-log.png =50%x*)
 
 
 ## Task 3: Code Repository를 사용하여 애플리케이션 코드 관리하기
@@ -160,7 +160,7 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
 
 3. 생성된 코드 저장소 입니다. 일반적인 Git Repository입니다.
 
-4. Git URL을 확인합니다.
+4. 생성된 코드 저장소로 이동하여, Git URL을 확인합니다.
 
     ![GIT URL](images/git-url-1.png =30%x*)
     ![GIT URL](images/git-url-2.png =50%x*)
@@ -180,7 +180,7 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
  
     - AuthToken: OCIR때 사용한 AuthToken 또는 유저 프로파일에서 생성한 AuthToken을 그대로 사용합니다.
 
-6. 이미 개발된 Storefront 소스를 가져와 Clone한 저장소로 옮깁니다.
+6. 편의상 개발이 완료했다고 가정하고, 이미 개발된 Storefront 소스를 가져와 Clone한 저장소로 옮깁니다.
 
     ````
     <copy>
@@ -212,7 +212,7 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
     </copy>
     ````
 
-9. GIT URL을 HTTPS로 사용하는 경우 매번 인증이 필요합니다. 이를 줄이기 위해 아래처럼 저장 또는 캐쉬를 설정합니다.
+9. GIT URL을 HTTPS로 사용하는 경우 매번 인증이 필요합니다. 이를 줄이기 위해 아래처럼 인증 정보를 저장 또는 캐쉬하도록 설정합니다.
 
     - 방법 #1
     ````
@@ -231,7 +231,7 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
     </copy>
     ````
 
-10. 코드를 Code Repository에 Push 합니다.
+10. 개발된 코드를 Code Repository에 Push 합니다.
 
     ````
     <copy>    
@@ -245,7 +245,7 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
 
     ![MuShop Storefront Code Repository](images/mushop-storefront-code-repo.png)
 
-12. 이후 실습에서 CI/CD 파이프라인을 생성한후 아래 코드를 변경하면, 파이프라인이 실행되어 Storefront UI 컨테이너 앱이 재배포 될 것입니다.
+12. 이후 실습에서 개발 코드를 변경하여 Code Repository에 반영하면, Storefront UI 컨테이너 앱이 재배포 되도록 CI/CD 파이프라인을 생성할 예정입니다.
 
 
 ## Task 4: Build Pipeline 만들기
@@ -254,17 +254,15 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
 
 CI/CD 중에 코드를 빌드하여 배포 산출물을 만드는 CI 과정에 해당되는 부분을 Build Pipeline을 통해 구성이 가능합니다.
 
-1. **DevOps 프로젝트 페이지**로 이동하여 왼쪽 메뉴의 **Build Pipelines**로 이동합니다.
+1. **DevOps 프로젝트 페이지**로 이동하여 왼쪽 메뉴의 **Build Pipelines**으로 이동합니다.
 
 2. **Create build pipeline**을 클릭하여 파이프라인을 생성합니다.
 
     - Name: 예, mushop-storefront-build-pipeline
 
-3. 생성된 파이프라인을 클릭합니다.
+3. 생성된 파이프라인에서 Stage를 추가하여 파이프라인 흐름을 구성할 수 있습니다. 캔버스에서 **Add Stage**를 클릭합니다.
 
-4. 그림과 같이 Stage를 추가하여 파이프라인 흐름을 구성할 수 있습니다. **Add Stage**를 클릭합니다.
-
-5. 제공 Stage
+4. 제공 Stage
 
     - **Managed Build**: 빌드스펙에 정의된 내용에 따라 빌드 과정을 실행합니다.
     - **Delivery Artifacts**: 빌드 산출물(예, 컨테이너 이미지)를 Artifact Repository에 저장합니다.
@@ -288,7 +286,7 @@ CI/CD 중에 코드를 빌드하여 배포 산출물을 만드는 CI 과정에 �
 
 3. 설정된 Stage를 **Add**를 클릭하여 추가합니다.
 
-4. 아래 예시와 같이 소스 코드 변경시 빌드 파이프라인은 수행하기 위해서는 Build Spec의 정의가 필요합니다.
+4. 아래 예시와 같이 소스 코드 변경시 빌드 파이프라인은 수행하기 위해서는 Build Spec 정의가 필요합니다.
 
     - Cloud Shell로 돌아갑니다.
 
@@ -388,19 +386,20 @@ CI/CD 중에 코드를 빌드하여 배포 산출물을 만드는 CI 과정에 �
 6. **Parameters** 탭으로 이동하여, 아래 값을 입력합니다. build_spec에서 사용하는 디폴트값을 아래와 같이 입력할 수 있습니다.
 
     - `COMPARTMENT_ID`: 사용하고 있는 Compartment OCID 입력
-    - `REPO_NAME_PREFIX`:
-        * OCIR Repository 형식, $`REPO_NAME_PREFIX`/$`APP_NAM`E 예, `oci-hol-xx/mushop-storefront`
-        * 다른 사람과 충돌되지 않게 할당받은 Compartment Name 사용
+    - `REPO_NAME_PREFIX`: 예, `oci-hol-xx`
+
+        * 다른 사람과 충돌되지 않게 할당받은 Compartment Name을 입력합니다.
+        * 그러면, build_spec.yaml 상에서 사용하는 OCIR Repository 이름은 $`REPO_NAME_PREFIX`/$`APP_NAME`이 됩니다. 예, `oci-hol-xx/mushop-storefront`
 
     ![Build Spec Parameters](images/build-pipeline-parameters.png)
 
-7. **Build pipeline** 탭으로 이동하여 오른쪽 위 **Start Manual Run**을 통해 다시 실행하면 아래와 같이 스크립트가 수행되는 것을 볼 수 있습니다.
+7. **Build pipeline** 탭으로 이동하여 오른쪽 위 **Start Manual Run** 버튼을 클릭하여 파이프라인을 실행하면 아래와 같이 스크립트가 수행됩니다.
 
     ![Build Run Result](images/build-run-result-2.png)
 
-8. ExportVariables 확인
+8. ExportedVariables 확인
 
-    실행 결과 화면에서 오른쪽 위쪽 점3개를 클릭하여 상세 화면으로 이동하면 Build Output에서 실행결과로 나온 변수값을 볼 수 있습니다. 이 변수들은 이후 Stage 또는 연결되어 호출된 Deployment Pipeline으로 전달되어 사용할 수 있게 됩니다.
+    실행 결과 화면에서 오른쪽 위 점3개를 클릭하여 상세 화면으로 이동합니다. Build Output 탭에서 실행결과로 나온 변수값을 볼 수 있습니다. 이 변수들은 이후 Stage 또는 연결되어 호출된 Deployment Pipeline으로 전달되어 사용할 수 있습니다.
 
     ![ExportVariables](images/build-output.png =60%x*)
 
@@ -420,24 +419,25 @@ CI/CD 중에 코드를 빌드하여 배포 산출물을 만드는 CI 과정에 �
 
    ![OCIR Stage](images/ocir-stage-2.png)
 
-5. Container image 유형으로 Artifact 추가합니다.
+5. Container Image Repository 유형의 Artifact를 추가하는 과정입니다.
 
-    - 이미지 경로: docker tag를 달때 사용하는 이미지 경로입니다. 직접 입력해도 되지만 여기서는 build-stage에서 넘어온 exportedVariable을 사용합니다
     - Name: `generated_image_with_tag`
-    - Image Path: `${OCIR_PATH}:${TAG}`
+    - Artifact source: `${OCIR_PATH}:${TAG}`
+
+        * docker push 명령으로 이미지를 푸쉬할 경로를 지정하는 것으로 생각하면 됩니다. 하드 코딩해도 되지만 여기서는 build-stage에서 넘어온 exportedVariable들을 사용합니다.
 
     ![Add Artifact](images/add-artifact-1.png)
 
 6. 같은 방식으로 하나 더 추가 합니다.
 
     - Name: `generated_image_with_latest`
-    - Image Path: ${OCIR_PATH}:latest
+    - Artifact source: ${OCIR_PATH}:latest
 
         ![Associate Artifacts](images/associate-artifacts-1.png =70%x*)    
 
 7. Artifact 매핑
 
-    - Associate Artifact에서 방금 추가한 2개의 Artifact에 실제 컨테이너 이미지 파일을 매핑해 줍니다. 앞서 build-stage에서 build_spec.yaml에서 정의한 outputArtifacts의 이름을 입력합니다.
+    - Associate Artifact에서 방금 추가한 2개의 Artifact에 실제 컨테이너 이미지 파일을 매핑해 줍니다. 앞서 build-stage에서 build_spec.yaml에서 정의한 outputArtifacts 상의 이름을 입력합니다.
 
         ```
         outputArtifacts:
@@ -448,9 +448,11 @@ CI/CD 중에 코드를 빌드하여 배포 산출물을 만드는 CI 과정에 �
 
         ![Associate Artifacts](images/associate-artifacts-2.png =70%x*)
 
-8. 이제 delivery stage까지 추가하였습니다.
+8. 아래쪽 **Add** 버튼을 클릭하여, 이제 delivery stage을 추가 완료합니다.
 
-9. 파이프라인을 다시 실행해 봅니다. 실제 소스코드로 빌드된 컨테이너 이미지가 OCIR에 자동으로 등록됩니다.
+9. 파이프라인을 다시 실행해 봅니다. 
+
+10. 이제 실제 소스코드로 빌드된 컨테이너 이미지가 OCIR에 자동으로 등록됩니다.
 
     ![Pushed Image](images/pushed-image.png)
 
@@ -468,19 +470,17 @@ CI/CD 중에 빌드된 산출물을 가지고 실제 서버에 배포하는 CD �
 
     - Name: 예, mushop-storefront-deployment-pipeline
 
-3. 생성된 파이프라인을 클릭합니다.
+3. 생성된 파이프라인에서 **Add Stage**를 클릭하여 Stage를 추가합니다.
 
-4. **Add Stage**를 클릭하여 Stage를 추가합니다.
-
-5. 제공 Stage
+4. 제공 Stage
 
     - **Deploy**: OKE, Compute 인스턴스 배포, Oracle Function에 배포 기능을 제공합니다.
     - **Control**: 승인 대기, 트래픽 변경, 대기 등을 지원합니다.
-    - **Integration**: 커스텀 로직 수행을 위한 Oracle Function 실행을 지원합니다.
+    - **Integration**: 커스텀 로직 수행을 위한 Oracle Function 또는 쉘스크립트 실행을 지원합니다.
 
     ![Deployment Add Stage](images/deployment-add-stage.png)
 
-6. 배포할 manifest 파일가 필요합니다. 취소하고 다음으로 넘어갑니다.
+5. 배포할 manifest 파일을 먼저 생성해야 합니다. 취소하고 다음으로 넘어갑니다.
 
 ### Kubernetes에 배포할 manifest 파일 준비
 
@@ -490,29 +490,28 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 2. Artifacts로 앞서 빌드 파이프라인 만들때 등록한 2개가 있는 것을 볼수 있습니다. 여기에 등록된 Artifact는 재사용이 가능합니다.
 
-    ![Arifacts](images/artifacts.png)
+    ![Artifacts](images/artifacts.png)
 
 3. manifest 파일을 등록하기 위해 Add artifact를 클릭합니다.
 
-4. 4 가지 등록 유형을 제공합니다. 이중에 **Kubernetes manifest**를 선택합니다.
+4. 등록 유형 중에서 **Kubernetes manifest**를 선택합니다.
 
     ![Kubernetes Manifest Type](images/k8s-manifest-type.png)
 
 5. Kubernetes manifest 유형에는 Artifact Source로 2가지 유형을 지원합니다.
 
-    - Artifact Registry Repository: Container Registry로 OCIR을 제공하고 있듯시 Artifact Registry를 서비스로 제공하고 있습니다. 그곳에 있는 자원을 참조할 경우에 선택합니다.
+    - Artifact Registry Repository: OCI Artifact Registry를 서비스에 있는 자원을 참조할 경우에 선택합니다.
     - Inline: 인라인은 현재 DevOps 프로젝트에 있는 여기 Artifact에 직접 입력하는 것을 말합니다.
 
 6. Artifact Source로 Inline 유형으로 다음과 같이 등록합니다.
 
     - Name: 예, `k8s_mushop_storefront_deploy_template`
 
-        ![K8S Deployment Manifest](images/k8s-deployment-template.png =70%x*)
+        ![K8S Deployment Manifest](images/k8s-deployment-template.png =45%x*)
 
     - Value
 
-        앞 서와 같이 build-stage에서 export한 변수값들을 사용할 수 있습니다. 아래 값은 `kubectl get deploy mushop-storefront -o yaml' 명령을 실행하여 가져온 값에서 일부 항목(managed-field)만 제외한 값입니다.
-        추가로 OCIR 접속을 위한 사전에 약속된 image secret과, image url에 build-stage에서의 결과값을 사용하도록 수정된 내용으로 아래 내용을 복사해 그대로 사용하면 됩니다.
+        build-stage 실행결과 중에서 exportedVariables를 사용하도록, Storefront 기존 Manifest Yaml 파일에서 image secret과, image url에 build-stage에서의 결과값을 사용하도록 수정된 내용입니다. 아래 내용을 복사해 그대로 사용하면 됩니다.
 
         ```
         <copy>
@@ -629,7 +628,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
         </copy>        
         ```
 
-7. Cloud Shell로 돌아가 배포될 mushop namespace에 ocir-secret을 이전과 같은 방법으로 만듭니다.
+7. Cloud Shell로 돌아가 배포될 mushop namespace에 ocir-secret을 이전 실습에서 한 것 방업으로 다시 만듭니다.
 
     ````
     <copy>
@@ -641,13 +640,13 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 ### Kubernetes Environment 등록하기
 
-1. **DevOps 프로젝트 페이지**로 이동하여 왼쪽 메뉴의 **Enviroments**로 이동하여 배포할 OKE 환경을 등록합니다.
+1. **DevOps 프로젝트 페이지**로 이동하여 왼쪽 메뉴의 **Environments**로 이동하여 배포할 OKE 환경을 등록합니다.
 
 2. OKE 유형을 선택합니다.
 
     - Name: 클러스터 이름 예, oke-cluster-1
 
-    ![Create Environment](images/create-environment.png)
+    ![Create Environment](images/create-environment.png =70%x*)
 
 3. 배포할 클러스터를 선택합니다.
 
@@ -666,7 +665,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
     - Name: 예, apply-manifest-to-oke-stage
 
-    ![Select Manifest](images/deploy-to-oke-1.png)
+    ![Select Manifest](images/deploy-to-oke-1.png =70%x*)
 
 5. 파이프라인 완성
 
@@ -676,7 +675,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 ### Build Pipeline에서 Deployment Pipeline 호출하기
 
-앞서 만든 Build Pipeline에서 컨테이너 이미지 까지 OCIR에 등록하고 나면, OKE에 배포할 Deployment Pipeline을 기동되어야 전체 빌드에서 배포까지가 완료됩니다. 이제 Deployment Pipeline을 등록하였으므로, Build Pipeline에서 호출할 수 있습니다.
+앞서 만든 Build Pipeline에서 컨테이너 이미지 까지 OCIR에 등록하고 나면, OKE에 배포할 Deployment Pipeline을 기동되어야 빌드에서 배포까지가 완료됩니다. 이제 Deployment Pipeline을 등록하였으므로, Build Pipeline에서 호출할 수 있습니다.
 
 1. 앞서 만든 **Build Pipelines**으로 이동합니다.
 
@@ -706,7 +705,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 3. Trigger를 설정합니다.
 
     - **Name**: 예, mushop-storefront-trigger
-    - **Source Code Repository**: OCI Code Repository, GitHub, GitLab 연동을 지원하며, 예제에서는 앞서 만든 OCI Code Repository상의 mushop-storefront-repo를 선택합니다.
+    - **Source Code Repository**: OCI Code Repository를 포함하여, 여러 유형의 Git Repository 연동을 지원합니다. 예제에서는 앞서 만든 OCI Code Repository상의 mushop-storefront-repo를 선택합니다.
     - **Actions**: 트리거링 되었을 때 호출하는 액션으로 작성한 빌드 파이프라인인 mushop-storefront-build-pipeline을 선택합니다.
  
         ![Create Trigger](images/create-trigger.png =60%x*)
@@ -714,7 +713,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 4. 설정이 완료되었습니다.
 
 
-## Task 6: 작성한 전체 CI/CD 테스트하기
+## Task 6: 작성한 전체 CI/CD 파이프라인 테스트하기
 
 ### 방법 #1. Cloud Shell에서 코드변경하기
 
@@ -817,8 +816,8 @@ Trigger에서 지정한 소스 코드에 임의의 변경사항을 발생시키�
     mushop-storefront-5fc76d68f-rkgjb     1/1     Running   0          9m6s
     ...
     $ kubectl describe pod mushop-storefront-5fc76d68f-rkgjb | grep image
-      Normal  Pulling    9m38s  kubelet            Pulling image "ap-chuncheon-1.ocir.io/cn8wdnkejjgq/oci-hol-xx/mushop-storefront:4bb9420"
-      Normal  Pulled     9m35s  kubelet            Successfully pulled image "ap-chuncheon-1.ocir.io/cn8wdnkejjgq/oci-hol-xx/mushop-storefront:4bb9420" in 3.119739427s
+      Normal  Pulling    9m38s  kubelet            Pulling image "ap-chuncheon-1.ocir.io/axjowrxaexxx/oci-hol-xx/mushop-storefront:4bb9420"
+      Normal  Pulled     9m35s  kubelet            Successfully pulled image "ap-chuncheon-1.ocir.io/axjowrxaexxx/oci-hol-xx/mushop-storefront:4bb9420" in 3.119739427s
     ```
 
 8. 서비스 주소로 접속시 정상 동작을 확인할 수 있습니다.
@@ -835,4 +834,4 @@ Trigger에서 지정한 소스 코드에 임의의 변경사항을 발생시키�
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, January 2023
+- **Last Updated By/Date** - DongHee Lee, October 2023
