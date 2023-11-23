@@ -202,7 +202,7 @@ In the Network Firewall Policy we will create the following constructs:
 1. Start the **Cloud Shell** Instance from the top-right menu. Make sure it starts with the **Private Network** configured under task 1 of this LAB.
   ![Lab2 cloudshell](images/lab2cs.png)
 
-2. The two Compute Instances I deployed in the previous taks have the following IP address:
+2. The two Compute Instances I deployed in the previous tasks have the following IP address:
 * APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
 * APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
 

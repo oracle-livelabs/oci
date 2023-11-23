@@ -13,7 +13,7 @@ The OCI Network firewall can be used to filter traffic initiated inside OCI with
 In this lab, you will:
 
 * Deploy a VCN NAT Gateway for outbound Internet connectivity
-* Adjust VCN routing so the traffic so the traffic to the Internet goes through the OCI Network Firewall.
+* Adjust VCN routing so the traffic to the Internet goes through the OCI Network Firewall and the NAT Gateway.
 * Modify the OCI Firewall policy to allow outbound Internet traffic and filter URLs.
 * Test both allowed and denied traffic and observe the Firewall Traffic Log. 
 
@@ -26,7 +26,7 @@ In OCI, private Compute Instances need a NAT Gateway to exit to the Public Inter
 1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Next, click the VCN named **LiveLab-OCIFW-VCN**. On the VCN Details page, on the left menu, click **Route Tables**. Press **Create Route Table**. In the menu that opens, give it a name - **NAT-GW-RT**. No entries for the moment, we will do that at a later step.
   ![NAT GW1](images/natgw1.png)
  
-  Next, in the VCN Details page, click **NAT Gateways** on the left menu then click **Create NAT Gateway**. In the menu that opens, give it a name and attach the Route table previously created.
+2. In the VCN Details page, click **NAT Gateways** on the left menu then click **Create NAT Gateway**. In the menu that opens, give it a name and attach the Route table previously created.
   ![NAT GW2](images/natgw2.png)
 
 ## Task 2: Adjust VCN routing
@@ -116,10 +116,10 @@ With the configuration created within this **LAB**, in the previous tasks, we ar
   
   ![Lab3 flow](images/lab3flow.png)
 
-1. Start the **Cloud Shell** Instance from the top-right menu. Make sure it starts with the **Private Network** configured under task 1 of this LAB.
+1. Start the **Cloud Shell** Instance from the top-right menu. Make sure it starts with the **Private Network** configured under task 1 of LAB2.
   ![Lab2 cloudshell](images/lab2cs.png)
 
-2. The two Compute Instances I deployed in the previous taks have the following IP address:
+2. The two Compute Instances I deployed in the previous LAB have the following IP address:
 * APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
 * APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
 
@@ -150,7 +150,7 @@ From the Cloud Shell Instance, issue the following commands:
   ![Firewall log3](images/lab3fwlogallow.png)
 
   ![Firewall log4](images/lab3fwlogdeny.png)
-  
+
 
 **Congratulations!** You have successfully completed this LAB.
 
