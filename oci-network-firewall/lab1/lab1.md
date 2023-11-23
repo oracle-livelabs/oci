@@ -92,7 +92,7 @@ Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Netw
 3. Once the firewall is **ACTIVE**, click on the left hand menu on **Logs** and enable both Traffic and Threat Logs by using the toggle.
   ![Firewall Logs](images/fwlogs.png)
 
-**Congratulations!** You have successfully deployed an OCI Network Firewall.
+**Congratulations!** You have successfully deployed an OCI Network Firewall and completed this LAB.
 
 ## Acknowledgements
 

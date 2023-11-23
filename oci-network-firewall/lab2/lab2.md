@@ -218,6 +218,19 @@ From the Cloud Shell Instance, issue the following commands:
 3. Now let's check the firewall **Traffic** Log. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log.
   ![Firewall log1](images/lab2fwlog1.png)
 
+  You will be directed to OCI's Logging service. Wait for ~5 minutes for the log to be updated and refresh the page. You should see the tests performed recently as 3 lines in the log. Click on the most right arrow to expand them.
+   ![Firewall log2](images/lab2fwlog2.png)
+
+  One of the log lines shows the Ping allowed by the dedicated rule.
+  ![Firewall log3](images/lab2fwlogping.png)
+
+  One of the log lines shows the SSH allowed by the dedicated rule.
+  ![Firewall log4](images/lab2fwlogssh.png)
+
+  One of the log lines shows the HTTPS denied by the **default deny all** rule.
+  ![Firewall log5](images/lab2fwloghttps.png)
+
+**Congratulations!** You have completed this LAB. 
 
 ## Acknowledgements
 
