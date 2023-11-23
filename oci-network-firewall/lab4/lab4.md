@@ -12,71 +12,101 @@ This LAB is very similar to the previous one. Instead of the NAT Gateway we used
 
 In this lab, you will:
 
-* Deploy a VCN Service Gateway for outbound connectivity to Services.
+* Deploy a VCN Service Gateway for outbound connectivity to Oracle Services.
 * Adjust VCN routing so the traffic to Services goes through the Service Gateway.
-* Modify the OCI Firewall policy to allow outbound traffic to Oracle Cloud Object Storage.
+* Modify the OCI Firewall policy to allow outbound traffic to the Oracle Cloud Object Storage.
 * Test the new Firewall Rule and observe the Firewall Traffic Log. 
 
 ![lab4](images/lab4.png)
 
 ## Task 1: Deploy a Service Gateway with a dedicated Route Table
 
-In OCI, private Compute Instances need a NAT Gateway to exit to the Public Internet. Since we will add the Network Firewall on the path, we need to add a Route Table to the NAT Gateway so we can reroute the traffic. 
+In OCI, private Compute Instances can use a Service Gateway to connect to Oracle Services such as Object Storage. Since we will add the Network Firewall on the path, we need to add a Route Table to the Service Gateway so we can reroute the traffic. 
 
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Next, click the VCN named **LiveLab-OCIFW-VCN**. On the VCN Details page, on the left menu, click **Route Tables**. Press **Create Route Table**. In the menu that opens, give it a name - **NAT-GW-RT**. No entries for the moment, we will do that at a later step.
-  ![NAT GW1](images/natgw1.png)
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Next, click the VCN named **LiveLab-OCIFW-VCN**. On the VCN Details page, on the left menu, click **Route Tables**. Press **Create Route Table**. In the menu that opens, give it a name - **SGW-RT**. No entries for the moment, we will do that at a later step.
+  ![Service GW1](images/sgw1.png)
  
-  Next, in the VCN Details page, click **NAT Gateways** on the left menu then click **Create NAT Gateway**. In the menu that opens, give it a name and attach the Route table previously created.
-  ![NAT GW2](images/natgw2.png)
+2. In the VCN Details page, click **Service Gateways** on the left menu then click **Create Service Gateway**. In the menu that opens, give it a name and attach the Route table previously created. 
+  ![Service GW2](images/sgw2.png)
 
 ## Task 2: Adjust VCN routing
 
-  Now that we have a **NAT Gateway**, we need to adjust VCN routing to use it. 
+  Now that we have a **Service Gateway**, we need to adjust VCN routing to use it. 
   ![VCN Routetables](images/vcnrt.png)
 
-  We will modify all **Route Tables** in the VCN, that we deployed in the previous LABs, with the following rules:
+  We will modify only two of the **Route Tables** in the VCN, that we deployed in the previous LABs.
 
-* The Application Subnets route tables, called **App-Subnet1-RT** and **App-Subnet2-RT**, will each get the default route (0.0.0.0/0) next-hop the firewall's IP (10.0.0.12).
-* The Network Firewall route table, called **Firewall-Subnet-Private-RT**, will get the default 0.0.0.0/0 route next-hop the NAT Gateway.
-* Finally, the NAT Gateway Route table will need return routes for 10.0.0.32/27 (App-Subnet1) and 10.0.0.64/27 (App-Subnet2) next-hop the firewall's IP (10.0.0.12).
+* The Application Subnets route tables, called **App-Subnet1-RT** and **App-Subnet2-RT**, **remain unchanged** because they already have the default route (0.0.0.0/0) to the next-hop the firewall's IP (10.0.0.12). The default route will also cover Oracle Services.
+* The Network Firewall route table, called **Firewall-Subnet-Private-RT**, will get **ALL Services** route next-hop the Service Gateway.
+* Finally, the Service Gateway Route table will need return routes for 10.0.0.32/27 (App-Subnet1) and 10.0.0.64/27 (App-Subnet2) next-hop the firewall's IP (10.0.0.12).
 
-1. On the VCN Details page, on the left menu, click **Route Tables** and then click on **App-Subnet1-RT**. In the menu that opens, click on **Add Route Rules** and add 0.0.0.0/0 with next-hop the firewall's IP.
-  ![Default app1rt](images/defapp1rt.png)
+1. On the VCN Details page, on the left menu, click **Route Tables** and then click on **Firewall-Subnet-Private-RT** and add the **All Services** route with next-hop the Service Gateway.
+  ![Firewall services](images/fwservrt.png)
 
-2. **Repeat** the procedure and add the same route rule to **App-Subnet2-RT**
-  
-3. Next, click on **Firewall-Subnet-Private-RT** and add the default route with next-hop the NAT Gateway.
-  ![Default fwrt](images/deffwrt.png)
-
-4. Next, click on **NAT-GW-RT** and add routes for 10.0.0.32/27 (App-Subnet1) and 10.0.0.64/27 (App-Subnet2) next-hop the firewall's IP (10.0.0.12)
-  ![NAT Routes](images/natgwroutes.png)
+4. Next, click on **SGW-RT** and add routes for 10.0.0.32/27 (App-Subnet1) and 10.0.0.64/27 (App-Subnet2) next-hop the firewall's IP (10.0.0.12)
+  ![SGW Routes](images/sgwroutes.png)
 
   Note: the image shows the route for 10.0.0.32/27. Repeat the procedure and add 10.0.0.64/27 too.
 
-## Task 3: Deploy an OCI Network Firewall
+## Task 3: Modify the OCI Firewall policy
 
-Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Network Firewall. To deploy a Firewall we need to give it a policy. We will start by deploying an empty Firewall Policy and then use it to deploy an OCI Network Firewall.
+In a previous **LAB** we created a Firewall Policy that inspects traffic destined for the World Wide Web. We also enabled **URL Filtering** and are allowing only certain domains to be reached. Since this new traffic to Oracle Services will match the same Rule (Source: VCN Subnets, Destination: Any, HTTPS), we will simply modify the URL Lists to allow Oracle Services FQDNs. Most Oracle Services are deployed under the **oraclecloud.com** domain so we will add this domain, as a **wildcard** to the URL List.
 
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**.
-  ![Click firewall policy](images/clickpol.png)
+Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the usual procedure follows this workstream: we clone the existing Policy that is in use -> we add or remove any configuration from the new, cloned Policy -> we modify the OCI Network Firewall to use the Cloned Policy. 
 
-   In the menu that opens, click **Create network firewall policy**. In the next menu, give it a name and press Create...
-  ![Empty firewall policy](images/polempty.png)
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous LAB. In the details page that opens, click the Policy that is in use.
+  ![Click Policy](images/clickpolicy.png)
 
-   The Firewall policy that gets created will be empty of any configuration but we can use it to deploy a Network Firewall.
+2. In the menu that opens, click **Clone Policy** and give the new Policy a name. I will name it **network_firewall_policy_3**.
+  ![Clone Policy](images/clonepolicy.png)
 
-2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click **Create Network firewall**.
-  ![Create firewall1](images/createfw1.png)
+3. Go back to the **Network Firewall policies** and click on the newly cloned policy called **network_firewall_policy_3**.
+  ![Click Policy2](images/clickpolicy2.png)
 
-   In the menu that opens, give the firewall a name, select the empty policy we previously created and select the correct VCN and subnet, created earlier in this lab. Then press Create.
-  ![Create firewall2](images/createfw2.png)
+In the new Network Firewall Policy we will simply modify the URL list to allow Oracle Services:
 
-   Wait for the Firewall to become **ACTIVE** before moving on to the next step.
+4. In the **Network firewall policy details** menu, click on **URL Lists** on the left menu and edit the list **Allowed-FQDNs** by adding *.oraclecloud.com.
+  ![Modify url list](images/modifyurl1.png)
 
-3. Once the firewall is **ACTIVE**, click on the left hand menu on **Logs** and enable both Traffic and Threat Logs by using the toggle.
-  ![Firewall Logs](images/fwlogs.png)
+  ![Modify url2](images/modifyurl2.png)
 
-**Congratulations!** You have successfully deployed an OCI Network Firewall.
+  No other change is needed to the policy. VCN routing will make sure Services flows are being sent to the Service Gateway.
+
+5. Now that we have finished configuring the policy, it is time to modify the firewall to use this new policy. Go to **Identity and Security** and click on **Network firewalls**. Next, click on the Network Firewall we deployed. Click **Edit** and configure it to use the new policy, called **network_firewall_policy_3**.
+  ![Modify firewall](images/modifyfw.png)  
+
+  The firewall will change from the **ACTIVE** state to **UPDATING**. Wait for it to become **ACTIVE** again before moving to the next task.
+
+## Task 4: Test traffic and observe logs
+
+  To test the new policy I will try to connect to a Public Object Storage Bucket deployed in the same OCI Region. The URL for an item in the bucket is https://objectstorage.us-ashburn-1.oraclecloud.com/n/ociateam/b/LAB/o/102623.dmp. The firewall should allow the traffic, which will take the Service Gateway path. 
+  ![Lab4 flow](images/lab4flow.png)
+
+1. Start the **Cloud Shell** Instance from the top-right menu. Make sure it starts with the **Private Network** configured under task 1 of LAB2.
+  ![Lab2 cloudshell](images/lab2cs.png)
+
+2. The two Compute Instances I deployed in the previous LAB have the following IP address:
+* APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
+* APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
+
+Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
+
+From the Cloud Shell Instance, issue the following commands:
+* ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
+* host objectstorage.us-ashburn-1.oraclecloud.com -> this show us the IP of the website.
+* curl -kI https://objectstorage.us-ashburn-1.oraclecloud.com/n/ociateam/b/LAB/o/102623.dmp  -> we will attempt to get the headers.
+  ![Lab4 test](images/lab4test.png)
+
+3. Now let's check the firewall **Traffic** Log. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log.
+  ![Firewall log1](images/lab2fwlog1.png)
+
+  You will be directed to OCI's Logging service. Wait for ~5 minutes for the log to be updated and refresh the page. You should see the tests performed recently as lines in the log. Click on the most right arrow to expand them.
+  We should be seeing traffic **Allowed** to one of the IPs of the Object Storage Service.
+  
+  ![Firewall log3](images/lab4fwlogallow.png)
+
+ 
+**Congratulations!** You have successfully completed this LAB.
 
 ## Acknowledgements
 
