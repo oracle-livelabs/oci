@@ -19,54 +19,39 @@ In this lab, you will:
 
 ## Task 1: Deploy a VCN NAT Gateway with a dedicated Route Table
 
-We will start with a basic VCN deployment. One of the goals of this livelab is also to provide an understanding of OCI routing and gateways, in relation to the OCI Network Firewall service. For this reason, we will not use the VCN Wizard which deploys all OCI Gateways and creates basic routing rules. Instead, we will manually create each artifact as needed.
+In OCI, private Compute Instances need a NAT Gateway to exit to the Public Internet. Since we will add the Network Firewall on the path, we need to add a Route Table to the NAT Gateway so we can reroute the traffic. 
 
-1. Log into the Oracle Cloud console and select the **HOME** region.
-  ![Ashburn Region Select](images/home.png)
-  Note: This Lab can be completed in any OCI region. However, as explained in the **Get Started** chapter, we will use OCI CLI to connect to deployed private Compute Instances. That functionality is only available in the Home Region. If you want to use a different region, make sure you have connectivity to the private instances.
-2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Press **Create VCN**, making sure you have the correct Compartment selected. Give the VCN a name and assign an IPv4 CIDR Block. For this LiveLab, I will use the LAB Compartment and the VCN CIDR 10.0.0.0/16. Leave everything else on default settings and press **Create VCN**.
-  ![Create VCN](images/createvcn.png)
-3. After you press **Create VCN**, you will be redirected to the VCN Details page, with the Subnets menu selected. Press **Create Subnet**. In the subnet creation menu, give it a name, assign a CIDR (I will use 10.0.0.0/27) and make it a **Private** subnet. Leave everything else with default settings.
-  ![Create Subnet](images/createsubnet.png)
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Next, click the VCN named **LiveLab-OCIFW-VCN**. On the VCN Details page, on the left menu, click **Route Tables**. Press **Create Route Table**. In the menu that opens, give it a name - **NAT-GW-RT**. No entries for the moment, we will do that at a later step.
+  ![NAT GW1](images/natgw1.png)
+ 
+  Next, in the VCN Details page, click **NAT Gateways** on the left menu then click **Create NAT Gateway**. In the menu that opens, give it a name and attach the Route table previously created.
+  ![NAT GW2](images/natgw2.png)
 
-## Task 2: VCN Route table and Subnet Security List
+## Task 2: Adjust VCN routing
 
-Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Security List to that subnet. While the default ones, deployed automatically by OCI, can be used, it is recommended to have dedicated ones.
+  Now that we have a **NAT Gateway**, we need to adjust VCN routing to use it. 
+  ![VCN Routetables](images/vcnrt.png)
 
-1. On the VCN Details page, on the left menu, click **Route Tables** and then click on **Create Route Table**.
-  ![Create route table1](images/creatert1.png)
+  We will modify all **Route Tables** in the VCN, that we deployed in the previous LABs, with the following rules:
 
-   In the menu that opens, give this route table a name and press **Create**. No routes are needed at this step of the Lab.
-  ![Create route table2](images/creatert2.png)
+* The Application Subnets route tables, called **App-Subnet1-RT** and **App-Subnet2-RT**, will each get the default route (0.0.0.0/0) next-hop the firewall's IP (10.0.0.12).
+* The Network Firewall route table, called **Firewall-Subnet-Private-RT**, will get the default 0.0.0.0/0 route next-hop the NAT Gateway.
+* Finally, the NAT Gateway Route table will need return routes for 10.0.0.32/27 (App-Subnet1) and 10.0.0.64/27 (App-Subnet2) next-hop the firewall's IP (10.0.0.12).
 
-2. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
-  ![Click subnet](images/clicksubnet.png)
+1. On the VCN Details page, on the left menu, click **Route Tables** and then click on **App-Subnet1-RT**. In the menu that opens, click on **Add Route Rules** and add 0.0.0.0/0 with next-hop the firewall's IP.
+  ![Default app1rt](images/defapp1rt.png)
 
-   In the menu that opens (subnet details), click **Edit**. In the new menu, replace the default Route Table with the one previously created and save the changes.
-  ![Replace Route Table](images/subnetrt.png)
-
-3. On the VCN Details page, on the left menu, click **Security Lists** and then click on **Create Security List**.
-  ![Create sec list1](images/createsl.png)
-
-   In the menu that opens, give it a name and press **+Another Ingress Rule** and **+Another Egress Rule**.
-  ![Create sec list2](images/addrule1.png)
-
-   In the rule menus that open, create an entry that allows **0.0.0.0/0** on Ingress and Egress, respectively. 
-  ![Create sec list3](images/ingressrule.png)
-  ![Create sec list4](images/egressrule.png)
+2. **Repeat** the procedure and add the same route rule to **App-Subnet2-RT**
   
-  Press **Create Security List**. 
+3. Next, click on **Firewall-Subnet-Private-RT** and add the default route with next-hop the NAT Gateway.
+  ![Default fwrt](images/deffwrt.png)
 
-4. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
-  ![Click subnet2](images/clicksubnet.png)
+4. Next, click on **NAT-GW-RT** and add routes for 10.0.0.32/27 (App-Subnet1) and 10.0.0.64/27 (App-Subnet2) next-hop the firewall's IP (10.0.0.12)
+  ![NAT Routes](images/natgwroutes.png)
 
-   In the menu that opens (subnet details), click **Add Security List** and add the new one we created.
-  ![Add sec list](images/addsl.png)
+  Note: the image shows the route for 10.0.0.32/27. Repeat the procedure and add 10.0.0.64/27 too.
 
-   Next, remove the Default Security List by clicking on the 3 **dots** at the end of the row, and clicking **Remove**.
-  ![Remove sec list](images/removesl.png)
-
-## Task 3: Deploy an OCI Network Firewall
+## Task 3: Modify the OCI Firewall policy
 
 Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Network Firewall. To deploy a Firewall we need to give it a policy. We will start by deploying an empty Firewall Policy and then use it to deploy an OCI Network Firewall.
 
@@ -89,7 +74,9 @@ Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Netw
 3. Once the firewall is **ACTIVE**, click on the left hand menu on **Logs** and enable both Traffic and Threat Logs by using the toggle.
   ![Firewall Logs](images/fwlogs.png)
 
-**Congratulations!** You have successfully deployed an OCI Network Firewall.
+## Task 4: Test traffic and observe logs
+
+**Congratulations!** You have successfully completed this LAB.
 
 ## Acknowledgements
 
