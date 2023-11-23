@@ -24,7 +24,7 @@ This lab assumes you have completed previous lab.
 ## Task 1: Download and run security assessment script
 
 1.	Download the [security assessment script.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/security_assessment.py)
-    Now you can run that security assessment script in the Oracle Cloud Shell. In order to do that, open the Oracle Cloud Shell by clicking in the Cloud Shell icon in the Console header:
+    In order to be able to run the script, you will need some specific permissions. Before continue, check the appendix and see the needed permissions. Once you ensure you have those permissions, you can run now that security assessment script in the Oracle Cloud Shell: open the Oracle Cloud Shell by clicking in the Cloud Shell icon in the Console header:
 
     ![Open Cloud Shell](images/cloud-shell-icon.png "Open Cloud Shell")
 
@@ -126,13 +126,13 @@ This lab assumes you have completed previous lab.
 
 3. (Optional) As a verification step, you can go back in the SQL tools by clicking Database Actions on your Autonomous Database, and log in as SECASSESSMENT user:  
 
-    ![Database Actions](images/database-actions.png "Database Actions")
+    ![Database Actions](images/database-actions-security.png "Database Actions")
 
 **Note:** You may need to log in first as ADMIN, then Click Sign Out, and log in as SECASSESSMENT user.
 
 Once you are logged in as SECASSESSMENT user, click SQL under Development:
 
-   ![Click SQL](images/click-sql.png "Click SQL")
+   ![Click SQL](images/sql.png "Click SQL")
 
 Enter the following command in the SQL Web Developer (logged in as SECASSESSMENT user):
 
@@ -155,7 +155,7 @@ After the script is completely executed, and you loaded the CSV file in your Aut
 
 1.	On the Autonomous Database dashboard, click on SecAssessments under Instance Name on APEX Instance section:
 
-    ![Click Instance Name](images/click-instance-name.png "Click Instance Name")
+    ![Click Instance Name](images/apex.png "Click Instance Name")
 
 2.	Click Launch APEX.
 
@@ -163,7 +163,7 @@ After the script is completely executed, and you loaded the CSV file in your Aut
 
 3. The log in page for APEX will be prompted and you need to log in as SECASSESSMENT user.
 
-    ![Log in as SECASSESSMENT](images/log-in-as-secassessment.png "Log in as SECASSESSMENT")
+    ![Log in as SECASSESSMENT](images/sign-in-apex.png "Log in as SECASSESSMENT")
 
 4. Once you are logged in, click App Builder and the Security Dashboard application that you installed earlier. Click Run Application.
 
@@ -188,7 +188,7 @@ After the script is completely executed, and you loaded the CSV file in your Aut
 
     As an example, if all services are enabled, you will see something similar to:
   
-    ![Security assessment results](images/results-table.png "Security assessment results")
+    ![Security assessment results](images/security-assessment.png "Security assessment results")
 
     As well, at the bottom of the page you can see a button to be redirected to Oracle contacts page, in case you want to request an Oracle Security Workshop.
     
@@ -255,21 +255,60 @@ You may now **proceed to the next lab**.
 ## Appendix: How to use the Python script security_assessment.py
 Information provided in this Appendix is rather intended as guidance for workshop users using security_assessment.py script to execute an OCI security assessment.
 
-## Script usage
+### Permissions needed
+
+If you are not admin, you will need to have specific permissions to be able to run the script. Please check with your admin to get the following required permissions:
+
+    ```
+    Allow group <your group> to inspect all-resources in tenancy
+    Allow group <your group> to read buckets in tenancy
+    Allow group <your group> to read file-family in tenancy
+    Allow group <your group> to read network-security-groups in tenancy
+    Allow group <your group> to read users in tenancy
+    Allow group <your group> to use cloud-shell in tenancy
+    Allow group <your group> to manage objects in tenancy
+    Allow group <your group> to read data-safe in tenancy
+    ```
+Where your group is the group in OCI that your user need to belong to.
+
+### Script usage
 ```
 security_assessment.py  	[-h][-t CONFIG_PROFILE][-p PROXY]
-                                              	[--output-to-bucket OUTPUT_BUCKET]
-                                              	[--report-directory REPORT_DIRECTORY]
-                                              	[print-to-screen PRINT_TO_SCREEN][-ip][-dt]
+                            [--output-to-bucket OUTPUT_BUCKET]
+                            [--report-directory REPORT_DIRECTORY]
+                            [print-to-screen PRINT_TO_SCREEN][-ip][-dt]
 
 ```
+### Input parameters
+
+
+
+|   Input variable       |     Default value    |   Allowed values/example        |   Description      |
+|------------------------|------------------------|------------------------|------------------------|   
+|  -t  |  ""      |        Tenancy profile      |    Config file section to use    |
+|  -p  |  ""      |        ww-proxy-server.com:80  |  Set proxy  |
+|  --output-to-bucket    |   ""    |   my-reporting-bucket    |    Set output bucket name   |
+|   --report-directory   |      /&lt;tenancy name&gt;-&lt;start date&gt;   |   /my/path/  |  Set output report directory  |
+|   --print-to-screen    |   True   |    True/False    |   Set to false if you want to see only non-enabled security services   |
+|   -ip   |   False   |    -    |  Use instance principals for authentication  |
+|   -dt  |   False   |    -    |  Use delegation token for authentication  |
+
+As you can see, the script has three options for authentication:  
+* **Instance Principals**  
+A security token is used for an instance principal.  Using the metadata endpoint for the instance (http://169.254.169.254/opc/v2) we can discover the region the instance is in, its leaf certificate and any intermediate certificates (for requesting the token) and the tenancy (as) that is in the leaf certificate. To do that, X509FederationClient is leveraged, so it can also refresh the security token and also get the private key needed to sign requests (via the client’s session\_key\_supplier).  
+* **Delegation Token**  
+A delegation token allows the instance to assume the privileges of the user for which the token was created.  
+* **Config file**  
+Using the default configuration location \~/.oci/config you can load any profile. By default, the DEFAULT profile is used.
+
 
 ## Learn More
 * [CIS compliance script](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/compliance-script.md)
 * [Using cURL with REST-Enabled SQL Service](https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/22.3/orddg/rest-enabled-sql-service.html#GUID-E44BF01E-7F11-44B4-B9AF-2755267D9D62)
 * [SQL Developer Web for Oracle Autonomous Database](https://blogs.oracle.com/developers/post/sql-developer-web-now-available-for-oracle-autonomous-database)
 * [CIS](https://www.cisecurity.org/ )
+* [OCI SDK and CLI configuration file](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm)
 
 ## Acknowledgements
 * **Authors** - Sonia Yuste (OCI Security Specialist), Damien Rilliard (OCI Security Senior Director) 
-* **Last Updated By/Date** - Sonia Yuste, January 2023
+* **Last Updated By/Date** - Sonia Yuste, April 2023

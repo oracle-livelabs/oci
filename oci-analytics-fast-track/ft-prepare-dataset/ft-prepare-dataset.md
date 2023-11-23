@@ -4,6 +4,8 @@
 
 Após a conexão com o banco e seleção das tabelas, neste lab você vai aprender a preparar seu Conjunto de Dados (Dataset) no Oracle Analytics Cloud, trazendo dados externos, enriquecendo a análise e realizando transformações preliminares à criação dos gráficos e visualizações
 
+[Oracle Video Hub video scaled to Large size](videohub:1_87a9ge7u:large)
+
 *Tempo estimado para o Lab:* 45 Minutos
 
 ### Objetivos

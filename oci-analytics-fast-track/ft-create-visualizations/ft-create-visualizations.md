@@ -2,7 +2,9 @@
 
 ## Introdução
 
-Nesse Lab você vai aprender a criar visualizações no Oracle Analytics Cloud.
+Neste Lab você vai aprender a criar visualizações no Oracle Analytics Cloud.
+
+[Oracle Video Hub video scaled to Large size](videohub:1_6xkzayss:large)
 
 *Tempo estimado para o Lab:* 30 Minutos
 

@@ -60,7 +60,7 @@
 
 1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Compute**으로 이동한 다음 **Instances** 을 선택합니다.
 
-2. 만든 인스턴스를 삭제합니다.
+2. 만든 인스턴스를 삭제합니다. Boot Volume도 함께 삭제합니다.
 
 ## Task 8: VCN 정리
 
@@ -71,4 +71,4 @@
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, February 2023
+* **Last Updated By/Date** - DongHee Lee, May 2023

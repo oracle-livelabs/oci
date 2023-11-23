@@ -4,6 +4,8 @@
 
 Neste Lab você vai aprender a utilizar o modo de apresentação do Oracle Analytics Cloud e vai aprender a exportar seus dashboards podendo escolher entre os formatos oferecidos pela ferramenta.
 
+[Oracle Video Hub video scaled to Large size](videohub:1_k7t0njfr:large)
+
 *Tempo estimado para o Lab:* 15 Minutos
 
 ### Objetivos

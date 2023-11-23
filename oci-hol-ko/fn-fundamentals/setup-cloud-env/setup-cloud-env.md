@@ -67,7 +67,7 @@ OCI 대시보드에 로그인하여 리소스 생성에 필요한 정보를 확�
     - Policy Builder:
 
         * **Policy Use Cases**에서 사전 정의된 Policy 중에서 **Functions**으로 선택
-        * **Common policy templates**는 기본값인 `Let users create, deploy and manage functions and applications using Cloud Shell` 선택
+        * **Common policy templates**는 기본값인 `Let users create, deploy and manage functions and applications` 선택
         * Policy를 적용할 사용자 그룹을 선택합니다. 예) `oci-group`
         * Policy가 적용될 Compartment를 앞서 만든 Compartment로 선택합니다. 예) oci-hol*-xx*
 
@@ -90,6 +90,23 @@ OCI 대시보드에 로그인하여 리소스 생성에 필요한 정보를 확�
       ![Revised Policy](images/revised-policies.png)
 
 6. **Create**를 클릭하여 생성합니다.
+
+7. 이후 실습을 위해 다음 Policy를 추가합니다.
+
+    - Name: fn-lab-policy*-xx* 입력합니다.
+    - Description: Policy for Functions Labs for oci-hol-*xx* compartment
+    - Compartment: **root compartment**를 선택
+    - Policy:
+    ```
+    Allow group <group-name> to manage policies in compartment <compartment-name>
+
+    Allow group <group-name> to manage instance-family in compartment <compartment-name>
+    Allow group <group-name> to manage volume-family in compartment <compartment-name>
+    Allow group <group-name> to manage virtual-network-family in compartment <compartment-name>
+    Allow group <group-name> to manage serviceconnectors in compartment <compartment-name>
+    Allow group <group-name> to read audit-events in compartment <compartment-name>
+    Allow group <group-name> to manage api-gateway-family in compartment <compartment-name>
+    ```
 
 
 ## Task 4: VCN 및 서브넷 생성
@@ -124,4 +141,4 @@ OCI 대시보드에 로그인하여 리소스 생성에 필요한 정보를 확�
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, January 2023
+* **Last Updated By/Date** - DongHee Lee, October 2023
