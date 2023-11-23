@@ -109,6 +109,49 @@ In the new Network Firewall Policy we will use the existing constructs but we wi
 
 ## Task 4: Test traffic and observe logs
 
+With the configuration created within this **LAB**, in the previous tasks, we are providing Internet access to the hosts inside the VCN, only for certain domains. Lets test this and observe the firewall logs. We will connect to one of the Instances and:
+  
+  * Connect with HTTPS to **www.oracle.com** and **www.ateam-oracle.com** and observe that is allowed.
+  * Connect with HTTPS to **www.wikipedia.org** and observe that it is **not** allowed.
+  
+  ![Lab3 flow](images/lab3flow.png)
+
+1. Start the **Cloud Shell** Instance from the top-right menu. Make sure it starts with the **Private Network** configured under task 1 of this LAB.
+  ![Lab2 cloudshell](images/lab2cs.png)
+
+2. The two Compute Instances I deployed in the previous taks have the following IP address:
+* APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
+* APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
+
+Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
+
+From the Cloud Shell Instance, issue the following commands:
+* ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
+* host www.oracle.com  -> this show us the IP of the website.
+* curl -kI https://www.oracle.com/  -> we will attempt to get the headers of www.oracle.com.
+  ![Lab3 tests1](images/lab3tests1.png)
+
+* host www.ateam-oracle.com  -> this show us the IP of the website.
+* curl -kI https://www.ateam-oracle.com/  -> we will attempt to get the headers of www.ateam-oracle.com.
+  ![Lab3 tests2](images/lab3tests2.png)
+
+* host www.wikipedia.org  -> this show us the IP of the website.
+* curl -kI https://www.wikipedia.org/  -> we will attempt to get the headers of www.wikipedia.org.
+  ![Lab3 tests3](images/lab3tests3.png)
+
+3. Now let's check the firewall **Traffic** Log. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log.
+  ![Firewall log1](images/lab2fwlog1.png)
+
+  You will be directed to OCI's Logging service. Wait for ~5 minutes for the log to be updated and refresh the page. You should see the tests performed recently as lines in the log. Click on the most right arrow to expand them.
+  ![Firewall log2](images/lab3fwlog2.png)
+
+  We should be seeing traffic **Allowed** to **23.46.235.95** for **www.oracle.com** and **www.ateam-oracle.com** by the new firewall rule we created and traffic denied to **208.80.154.224** for **www.wikipedia.org** by the default deny rule.
+  
+  ![Firewall log3](images/lab3fwlogallow.png)
+
+  ![Firewall log4](images/lab3fwlogdeny.png)
+  
+
 **Congratulations!** You have successfully completed this LAB.
 
 ## Acknowledgements

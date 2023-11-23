@@ -1,24 +1,23 @@
-# OCI Network Firewall deployment
+# Inspecting outbound traffic to OCI Services
 
 ## Introduction
 
-Estimated Time: 60 minutes
+Estimated Time: 30-45 minutes
 
-### About Virtual Cloud Networks and the OCI Network Firewall
+### About Outbound Internet Traffic Inspection
 
-Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables, and configuring stateful firewalls. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm) for more information on Virtual Cloud Networks.
-
-OCI Network Firewall is a next-generation managed network firewall and intrusion detection and prevention service for your Oracle Cloud Infrastructure virtual cloud network (VCN), powered by Palo Alto Networks®. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/network-firewall/home.htm) for more information on the Network Firewall service.
+The OCI Network firewall can be used to filter traffic initiated inside OCI with target the Internet. With the native URL filtering capabilities, the Network Firewall will look into the Server Name Identifier part of the HTTPS header and decide if the traffic can pass.
 
 ### Objectives
 
 In this lab, you will:
 
-* Build a Virtual Cloud Network (VCN) and a firewall dedicated subnet.
-* Create a Route table and a Security List for the firewall dedicated subnet.
-* Deploy an OCI Network Firewall.
+* Deploy a VCN NAT Gateway for outbound Internet connectivity
+* Adjust VCN routing so the traffic so the traffic to the Internet goes through the OCI Network Firewall.
+* Modify the OCI Firewall policy to allow outbound Internet traffic and filter URLs.
+* Test both allowed and denied traffic and observe the Firewall Traffic Log. 
 
-![lab1](images/lab1.png)
+![lab3](images/lab3.png)
 
 ## Task 1: Deploy a VCN (Virtual Cloud Network) and a dedicated firewall subnet (private)
 
