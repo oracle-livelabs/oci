@@ -174,13 +174,13 @@ In the Network Firewall Policy we will create the following constructs:
   For this rule we will use the same address list for both source and destination so **repeat** the procedure above to add the same address ist as a destination. In the end, the source and destination fields should look like this:
   ![Security rule sd](images/secrule2.png)
 
-  For applications we will click **Select application lists** but we will leave it empty and for service we will add the service list created at step 7, named **Service-list1**. For URL, we will let **Any URL**.
+  For applications we will click **Any application** and for service we will add the service list created at step 7, named **Service-list1**. For URL, we will let **Any URL**.
   ![Security rule srv](images/secrule3.png)
 
   Last, for the **Rule action**, we will select **Allow traffic**. Press **Create Security Rule**.
   ![Security rule create](images/secrule4.png)
 
-11. Next, repeat the procedure above to create a second firewall rule, called **Allow-PING-inside-the-VCN**. The Source, Destination, URLs will be the same as before but the Application will be the **Application list** created at step 5 while the **Services** will remain with **Empty**. 
+11. Next, repeat the procedure above to create a second firewall rule, called **Allow-PING-inside-the-VCN**. The Source, Destination, URLs will be the same as before but the Application will be the **Application list** created at step 5 while the **Services** will remain with **Any service**. 
   ![Security rule create2](images/secrule5.png)
 
   The reason we create two security rules is because it is not supported to have both Applications and Services inside the same rule. In the end, you should have two **Security Rules** in the Policy, one that allows **SSH** inside the VCN and the other one that allows **PING**.

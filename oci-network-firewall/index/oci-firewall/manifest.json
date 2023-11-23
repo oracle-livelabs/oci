@@ -24,12 +24,16 @@
             "filename": "../../lab3/lab3.md"
         },
         {
-            "title": "Lab 4: Inspecting inbound Internet traffic",
+            "title": "Lab 4: Inspecting outbound traffic to OCI Services",
             "filename": "../../lab4/lab4.md"
         },
         {
-            "title": "Lab 5: SSL Decryption and Intrusion Detection",
+            "title": "Lab 5: Inspecting inbound Internet traffic",
             "filename": "../../lab5/lab5.md"
+        },
+        {
+            "title": "Lab 6: SSL Decryption and Intrusion Detection",
+            "filename": "../../lab6/lab6.md"
         },
         {
             "title": "Need Help?",

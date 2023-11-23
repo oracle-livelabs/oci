@@ -2,11 +2,13 @@
 
 ## Introduction
 
-Estimated Time: 30 minutes
+Estimated Time: 30-45 minutes
+
+### About Outbound Internet Traffic Inspection
+
+The OCI Network firewall can be used to filter traffic initiated inside OCI with target the Internet. With the native URL filtering capabilities, the Network Firewall will look into the Server Name Identifier part of the HTTPS header and decide if the traffic can pass.
 
 ### Objectives
-
-In this lab, you will:
 
 In this lab, you will:
 
@@ -53,26 +55,57 @@ In OCI, private Compute Instances need a NAT Gateway to exit to the Public Inter
 
 ## Task 3: Modify the OCI Firewall policy
 
-Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Network Firewall. To deploy a Firewall we need to give it a policy. We will start by deploying an empty Firewall Policy and then use it to deploy an OCI Network Firewall.
+In a previous **LAB** we created a Firewall Policy that inspects traffic between subnets inside the VCN. Now we want to add a **Security Rule** that inspects traffic destined for the World Wide Web. 
+Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the usual procedure follows this workstream: we clone the existing Policy that is in use -> we add or remove any configuration from the new, cloned Policy -> we modify the OCI Network Firewall to use the Cloned Policy. 
 
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**.
-  ![Click firewall policy](images/clickpol.png)
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous LAB. In the details page that opens, click the Policy that is in use.
+  ![Click Policy](images/clickpolicy.png)
 
-   In the menu that opens, click **Create network firewall policy**. In the next menu, give it a name and press Create...
-  ![Empty firewall policy](images/polempty.png)
+2. In the menu that opens, click **Clone Policy** and give the new Policy a name. I will name it **network_firewall_policy_2**.
+  ![Clone Policy](images/clonepolicy.png)
 
-   The Firewall policy that gets created will be empty of any configuration but we can use it to deploy a Network Firewall.
+3. Go back to the **Network Firewall policies** and click on the newly cloned policy called **network_firewall_policy_2**.
+  ![Click Policy2](images/clickpolicy2.png)
 
-2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click **Create Network firewall**.
-  ![Create firewall1](images/createfw1.png)
+In the new Network Firewall Policy we will use the existing constructs but we will also create the following constructs:
 
-   In the menu that opens, give the firewall a name, select the empty policy we previously created and select the correct VCN and subnet, created earlier in this lab. Then press Create.
-  ![Create firewall2](images/createfw2.png)
+* One Service that defines HTTPS
+* One Service List that contains the HTTPS Service
+* One URL list that contains allowed destinations. We will only allow traffic to **www.oracle.com** and **www.ateam-oracle.com**.
+* One Firewall Security Rule that allows HTTPS traffic to any target with the URL filter **ON**.
 
-   Wait for the Firewall to become **ACTIVE** before moving on to the next step.
+4. In the **Network firewall policy details** menu, click on **Services** on the left menu and click **Create service**. Create a service that allows **HTTPS / TCP on port 443**.
+  ![Create service](images/createsrv.png)
 
-3. Once the firewall is **ACTIVE**, click on the left hand menu on **Logs** and enable both Traffic and Threat Logs by using the toggle.
-  ![Firewall Logs](images/fwlogs.png)
+5. In the **Network firewall policy details** menu, click on **Service lists** on the left menu and click **Create service list**. Create a service list named **Service-list-https** that contains the HTTPS service created at the previous step.
+  ![Create service](images/createsvclist.png)
+
+  ![Create service2](images/createsvclist2.png)
+
+6. In the **Network firewall policy details** menu, click on **URL Lists** on the left menu and click **Create URL List**. In the menu that opens, name it **Allowed-FQDNs** and add **www.oracle.com** and **www.ateam-oracle.com**.
+  ![Create url list](images/createurllist.png)
+
+**NEXT** let's create the firewall rule.
+
+7. In the **Network firewall policy details** menu, click on **Security rules** on the left menu and click **Create security rule**. 
+  ![Create security rule](images/createsecrule.png)
+
+8. In the menu that opens, give the rule a name -> **Allow-Internet-OUT**. In the **Match condition**, under Source addresses, click **Select address lists** and add the previously created address list.
+  ![Security rule source](images/secrule1.png)
+
+  For destination we will allow **Any**.
+  ![Security rule sd](images/secrule2.png)
+
+  For applications we will allow **Any applications** and for service we will add the service list created at step 5, named **Service-list-https**. For URL, we will add the URL List created at step 6 **Allowed-FQDNs**.
+  ![Security rule srv](images/secrule3.png)
+
+  Last, for the **Rule action**, we will select **Allow traffic**. Press **Create Security Rule**.
+  ![Security rule create](images/secrule4.png)
+
+11. Now that we have finished configuring the policy, it is time to modify the firewall to use this new policy. Go to **Identity and Security** and click on **Network firewalls**. Next, click on the Network Firewall we deployed. Click **Edit** and configure it to use the new policy, called **network_firewall_policy_2**.
+  ![Modify firewall](images/modifyfw.png)  
+
+  The firewall will change from the **ACTIVE** state to **UPDATING**. Wait for it to become **ACTIVE** again before moving to the next task.
 
 ## Task 4: Test traffic and observe logs
 
