@@ -114,9 +114,9 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 * APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
 * APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
 
-Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
+  Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
 
-From the Cloud Shell Instance, issue the following commands:
+  From the Cloud Shell Instance, issue the following commands:
 * ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
 * wget https://objectstorage.us-ashburn-1.oraclecloud.com/n/ociateam/b/LAB/o/lab.txt --> this will attempt to download the file.
   ![Lab4 test](images/lab4test.png)
