@@ -14,7 +14,8 @@ In this lab, you will:
 
 * Deploy a VCN Service Gateway for outbound connectivity to Oracle Services.
 * Adjust VCN routing so the traffic to Services goes through the Service Gateway.
-* Modify the OCI Firewall policy to allow outbound traffic to the Oracle Cloud Object Storage.
+* Deploy a Public Object Storage Bucket with a simple test file inside.
+* Modify the OCI Firewall policy to allow outbound traffic to Oracle Cloud Object Storage.
 * Test the new Firewall Rule and observe the Firewall Traffic Log. 
 
 ![lab4](images/lab4.png)
@@ -48,9 +49,33 @@ In OCI, private Compute Instances can use a Service Gateway to connect to Oracle
 
   Note: the image shows the route for 10.0.0.32/27. Repeat the procedure and add 10.0.0.64/27 too.
 
-## Task 3: Modify the OCI Firewall policy
+## Task 3: Deploy a Public Object Storage Bucket
+  In order to test reachability to an OCI Service we will deploy a Public Bucket in the Object Storage Service. Then we will add an empty test file and try to retrieve it from an OCI private Compute Instance.
 
-In a previous **LAB** we created a Firewall Policy that inspects traffic destined for the World Wide Web. We also enabled **URL Filtering** and are allowing only certain domains to be reached. Since this new traffic to Oracle Services will match the same Rule (Source: VCN Subnets, Destination: Any, HTTPS), we will simply modify the URL Lists to allow Oracle Services FQDNs. Most Oracle Services are deployed under the **oraclecloud.com** domain so we will add this domain, as a **wildcard** to the URL List.
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Storage and click on **Buckets** under **Object Storage & Archive Storage**.
+  ![Click Buckets](images/clickbuckets.png)
+
+2. In the menu that opens, click **Create Bucket** and, in the next menu, give it a name - **LAB** - and press Create. Leave everything else on default.
+  ![Create Bucket](images/createbucket.png)
+
+3. Next, click the 3 dots at the end of the row and change the visibility of the bucket.
+  ![Edit Bucket1](images/editbucket1.png).
+
+  ![Edit Bucket2](images/editbucket2.png)
+
+4. Next, click on the Bucket. In the Bucket Details Page, click Upload. In the menu that opens, drag a test file. I created an empty file called **lab.txt** which I will use.
+  ![Upload File](images/uploadfile.png)
+
+5. Once you have a file there, click on the 3 dots at the end of the row and click **View Object Details**.
+  ![View Obj1](images/viewobj1.png)
+
+  ![View Obj2](images/viewobj2.png)
+
+  Take note of the Object's URL, that is what we will use in our test, later in this LAB. For this file, the URL is **https://objectstorage.us-ashburn-1.oraclecloud.com/n/ociateam/b/LAB/o/lab.txt**.
+
+## Task 4: Modify the OCI Firewall policy
+
+In a previous **LAB** we created a Firewall Policy that inspects traffic destined for the World Wide Web. We also enabled **URL Filtering** and are allowing only certain domains to be reached. Since this new traffic to Oracle Services will match the same Rule (Source: VCN Subnets, Destination: Any, HTTPS), we will simply modify the URL Lists to allow an Oracle Services FQDN. Most Oracle Services are deployed under the **oraclecloud.com** domain, including Object Storage so we will add an entry in the existing URL List for **objectstorage.us-ashburn-1.oraclecloud.com**.
 
 Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the usual procedure follows this workstream: we clone the existing Policy that is in use -> we add or remove any configuration from the new, cloned Policy -> we modify the OCI Network Firewall to use the Cloned Policy. 
 
@@ -63,9 +88,9 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 3. Go back to the **Network Firewall policies** and click on the newly cloned policy called **network_firewall_policy_3**.
   ![Click Policy2](images/clickpolicy2.png)
 
-In the new Network Firewall Policy we will simply modify the URL list to allow Oracle Services:
+  In the new Network Firewall Policy we will simply modify the URL list to allow Oracle Services:
 
-4. In the **Network firewall policy details** menu, click on **URL Lists** on the left menu and edit the list **Allowed-FQDNs** by adding *.oraclecloud.com.
+4. In the **Network firewall policy details** menu, click on **URL Lists** on the left menu and edit the list **Allowed-FQDNs** by adding **objectstorage.us-ashburn-1.oraclecloud.com**.
   ![Modify url list](images/modifyurl1.png)
 
   ![Modify url2](images/modifyurl2.png)
@@ -79,7 +104,7 @@ In the new Network Firewall Policy we will simply modify the URL list to allow O
 
 ## Task 4: Test traffic and observe logs
 
-  To test the new policy I will try to connect to a Public Object Storage Bucket deployed in the same OCI Region. The URL for an item in the bucket is https://objectstorage.us-ashburn-1.oraclecloud.com/n/ociateam/b/LAB/o/102623.dmp. The firewall should allow the traffic, which will take the Service Gateway path. 
+  To test the new policy I will try to download the **lab.txt** file I uploaded to the Public Object Storage Bucket. The URL for the item is https://objectstorage.us-ashburn-1.oraclecloud.com/n/ociateam/b/LAB/o/lab.txt. The firewall should allow the traffic, which will take the Service Gateway path. 
   ![Lab4 flow](images/lab4flow.png)
 
 1. Start the **Cloud Shell** Instance from the top-right menu. Make sure it starts with the **Private Network** configured under task 1 of LAB2.
@@ -93,8 +118,7 @@ Note: When running your lab, you will probably get different IPs for your hosts.
 
 From the Cloud Shell Instance, issue the following commands:
 * ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
-* host objectstorage.us-ashburn-1.oraclecloud.com -> this show us the IP of the website.
-* curl -kI https://objectstorage.us-ashburn-1.oraclecloud.com/n/ociateam/b/LAB/o/102623.dmp  -> we will attempt to get the headers.
+* wget https://objectstorage.us-ashburn-1.oraclecloud.com/n/ociateam/b/LAB/o/lab.txt --> this will attempt to download the file.
   ![Lab4 test](images/lab4test.png)
 
 3. Now let's check the firewall **Traffic** Log. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log.
