@@ -1,38 +1,55 @@
-# OCI Network Firewall deployment
+# Inspecting inbound Internet traffic
 
 ## Introduction
 
-Estimated Time: 60 minutes
+Estimated Time: 60-90 minutes
 
-### About Virtual Cloud Networks and the OCI Network Firewall
+### About this lab
 
-Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables, and configuring stateful firewalls. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm) for more information on Virtual Cloud Networks.
-
-OCI Network Firewall is a next-generation managed network firewall and intrusion detection and prevention service for your Oracle Cloud Infrastructure virtual cloud network (VCN), powered by Palo Alto Networks®. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/network-firewall/home.htm) for more information on the Network Firewall service.
+In the previous LABs we looked into how we can inspect east-west (subnet to subnet) traffic inside an OCI VCN and how we can inspect **oubound** traffic to either the Internet or Oracle Services with various VCN Gateways. In this lab we will focus on **Inbound** traffic from the Internet. As the most common Internet service is **web** we will deploy a Public Web Load Balancer which will use one of the previously deployed Compute Instances as the backend. To inspect this traffic we need a new OCI Network Firewall, deployed in a Public Subnet. 
 
 ### Objectives
 
 In this lab, you will:
 
-* Build a Virtual Cloud Network (VCN) and a firewall dedicated subnet.
-* Create a Route table and a Security List for the firewall dedicated subnet.
-* Deploy an OCI Network Firewall.
+* Deploy new subnets inside the existing VCN, for a new Network Firewall and a Load Balancer.
+* Deploy a new Network Firewall, dedicated to inspecting inbound Internet traffic
+* Deploy an Application Load balancer. 
+* Configure and start a webserver on one of the private Compute Instances. 
+* Deploy a VCN Internet Gateway with a dedicated route table.
+* Adjust VCN routing to enable the new flows.
+* Configure the new OCI Network Firewall to inspect inbound traffic.
+* Test the new Firewall and observe the Firewall Traffic Log
 
-![lab1](images/lab1.png)
+![lab5](images/lab5.png)
 
-## Task 1: Deploy a VCN (Virtual Cloud Network) and a dedicated firewall subnet (private)
+## Task 1: Deploy new VCN subnets
 
-We will start with a basic VCN deployment. One of the goals of this livelab is also to provide an understanding of OCI routing and gateways, in relation to the OCI Network Firewall service. For this reason, we will not use the VCN Wizard which deploys all OCI Gateways and creates basic routing rules. Instead, we will manually create each artifact as needed.
+  We will start by preparing the VCN for the new deployments. We need to:
+* deploy a new firewall subnet with a dedicated route table and security list
+* deploy a new load balancer subnet with a dedicated route table and security list
 
-1. Log into the Oracle Cloud console and select the **HOME** region.
-  ![Ashburn Region Select](images/home.png)
-  Note: This Lab can be completed in any OCI region. However, as explained in the **Get Started** chapter, we will use OCI CLI to connect to deployed private Compute Instances. That functionality is only available in the Home Region. If you want to use a different region, make sure you have connectivity to the private instances.
-2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Press **Create VCN**, making sure you have the correct Compartment selected. Give the VCN a name and assign an IPv4 CIDR Block. For this LiveLab, I will use the LAB Compartment and the VCN CIDR 10.0.0.0/16. Leave everything else on default settings and press **Create VCN**.
-  ![Create VCN](images/createvcn.png)
-3. After you press **Create VCN**, you will be redirected to the VCN Details page, with the Subnets menu selected. Press **Create Subnet**. In the subnet creation menu, give it a name, assign a CIDR (I will use 10.0.0.0/27) and make it a **Private** subnet. Leave everything else with default settings.
-  ![Create Subnet](images/createsubnet.png)
+  The exact procedure to do this is detailed under **LAB 1** so I will not repeat it here. In the end, you should have:
+* Firewall Subnet:
+    - name: FW-Subnet-Public
+    - Subnet Access: Public
+    - CIDR: 10.0.0.96/27
+    - Route table: FW-Subnet-Public-RT with no entries
+    - Security List: FW-Subnet-Public-SL with allow 0.0.0.0/0 on both ingress and egress
+* Load balancer Subnet:
+    - name: LB-Subnet-Public
+    - Subnet Access: Public
+    - CIDR: 10.0.0.128/27
+    - Route table: LB-Subnet-Public-RT with no entries
+    - Security List: LB-Subnet-Public-SL with allow 0.0.0.0/0 on both ingress and egress
 
-## Task 2: VCN Route table and Subnet Security List
+  ![VCN Subnets](images/vcnsubnets.png)
+
+  ![VCN Subnets1](images/vcnsubnets1.png)
+ 
+  ![VCN Subnets2](images/vcnsubnets2.png)
+
+## Task 2: Deploy a new Network Firewall - TO DO
 
 Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Security List to that subnet. While the default ones, deployed automatically by OCI, can be used, it is recommended to have dedicated ones.
 
@@ -48,49 +65,55 @@ Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Secu
    In the menu that opens (subnet details), click **Edit**. In the new menu, replace the default Route Table with the one previously created and save the changes.
   ![Replace Route Table](images/subnetrt.png)
 
-3. On the VCN Details page, on the left menu, click **Security Lists** and then click on **Create Security List**.
-  ![Create sec list1](images/createsl.png)
 
-   In the menu that opens, give it a name and press **+Another Ingress Rule** and **+Another Egress Rule**.
-  ![Create sec list2](images/addrule1.png)
+## Task 3: Deploy an Application Load balancer.
 
-   In the rule menus that open, create an entry that allows **0.0.0.0/0** on Ingress and Egress, respectively. 
-  ![Create sec list3](images/ingressrule.png)
-  ![Create sec list4](images/egressrule.png)
-  
-  Press **Create Security List**. 
+We will deploy an Application Load Balancer with a basic HTTP listener and with APP-VM2 as a backend.
 
-4. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
-  ![Click subnet2](images/clicksubnet.png)
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Networking** and click on **Load balancer**.
+  ![Click LoadBalancer](images/clicklb.png)
 
-   In the menu that opens (subnet details), click **Add Security List** and add the new one we created.
-  ![Add sec list](images/addsl.png)
+   In the menu that opens, click **Create load balancer**. 
+  ![Click LoadBalancer](images/clickcreatelb.png)
 
-   Next, remove the Default Security List by clicking on the 3 **dots** at the end of the row, and clicking **Remove**.
-  ![Remove sec list](images/removesl.png)
+2. The Load Balaner creation wizard starts. Give it a name - **LAB-Public-LB** and make it Public. 
+  ![Create lb1](images/createlb1.png)
 
-## Task 3: Deploy an OCI Network Firewall
+   Leave everything else on defaults and scrool down until the networking details menu. There, input the correct VCN and Subnet and press Next.
+  ![Create lb2](images/createlb2.png)
 
-Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Network Firewall. To deploy a Firewall we need to give it a policy. We will start by deploying an empty Firewall Policy and then use it to deploy an OCI Network Firewall.
+3. In the next menu, press **Add backends** and add one of the existing Compute Instances.
+  ![Add backend](images/lbaddbackend.png)
 
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**.
-  ![Click firewall policy](images/clickpol.png)
+  In the same tab, configure the health checks to use TCP and press Next.
+  ![Configure hc](images/confhc.png)
 
-   In the menu that opens, click **Create network firewall policy**. In the next menu, give it a name and press Create...
-  ![Empty firewall policy](images/polempty.png)
+4. In the next menu, select an HTTP listener and press Next.
+  ![Configure listener](images/conflsn.png)
 
-   The Firewall policy that gets created will be empty of any configuration but we can use it to deploy a Network Firewall.
+5. In the next menu, select **Default Group** for the logs and press Submit.
+  ![Configure log](images/conflog.png)
 
-2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click **Create Network firewall**.
-  ![Create firewall1](images/createfw1.png)
+  After the LB finishes the deployment, you will the the Public IP assigned to it. Take a note of it as we will use it for tests in the upcoming tasks and labs.
+  ![LB PublicIP](images/lbpubip.png)
 
-   In the menu that opens, give the firewall a name, select the empty policy we previously created and select the correct VCN and subnet, created earlier in this lab. Then press Create.
-  ![Create firewall2](images/createfw2.png)
+For the moment, the LB will remain in an **unhealthy** state as the backend does not have the web service enabled. We will fix that in the next task.
 
-   Wait for the Firewall to become **ACTIVE** before moving on to the next step.
+## Task 4: Configure and start a webserver on one of the private Compute Instances. - TO DO
 
-3. Once the firewall is **ACTIVE**, click on the left hand menu on **Logs** and enable both Traffic and Threat Logs by using the toggle.
-  ![Firewall Logs](images/fwlogs.png)
+## Task 5: Deploy a VCN Internet Gateway with a dedicated route table.
+
+In OCI, Public resources (such as Load Balancers or Compute Instances) need an **Internet Gateway** to exchange packets with the Internet. Since we will add the Network Firewall on the path, we need to add a Route Table to the Internet Gateway so we can reroute the traffic. 
+
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Next, click the VCN named **LiveLab-OCIFW-VCN**. On the VCN Details page, on the left menu, click **Route Tables**. Press **Create Route Table**. In the menu that opens, give it a name - **IGW-RT**. No entries for the moment, we will do that at a later step.
+  ![Internet GW1](images/igw1.png)
+ 
+2. In the VCN Details page, click **Internet Gateways** on the left menu then click **Create Internet Gateway**. In the menu that opens, give it a name and attach the Route table previously created.
+  ![Internet GW2](images/igw2.png)
+
+## Task 6: Adjust VCN routing to enable the new flows. - TO DO
+## Task 7: Configure the new OCI Network Firewall to inspect inbound traffic. - TO DO
+## Task 8: Test the new Firewall and observe the Firewall Traffic Log - TO DO
 
 **Congratulations!** You have successfully deployed an OCI Network Firewall.
 
