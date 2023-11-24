@@ -88,7 +88,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 3. Go back to the **Network Firewall policies** and click on the newly cloned policy called **network_firewall_policy_3**.
   ![Click Policy2](images/clickpolicy2.png)
 
-  In the new Network Firewall Policy we will simply modify the URL list to allow Oracle Services:
+  In the new Network Firewall Policy we will simply modify the URL list to allow Oracle Services.
 
 4. In the **Network firewall policy details** menu, click on **URL Lists** on the left menu and edit the list **Allowed-FQDNs** by adding **objectstorage.us-ashburn-1.oraclecloud.com**.
   ![Modify url list](images/modifyurl1.png)
