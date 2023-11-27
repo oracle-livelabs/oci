@@ -25,9 +25,9 @@ In this lab, you will:
 
 ![lab6](images/lab6.png)
 
-## Task 1: Deploy and configure the OCI Vault - TO DO
+## Task 1: Deploy and configure the OCI Vault TO DO
 
-We will start with a basic VCN deployment. One of the goals of this livelab is also to provide an understanding of OCI routing and gateways, in relation to the OCI Network Firewall service. For this reason, we will not use the VCN Wizard which deploys all OCI Gateways and creates basic routing rules. Instead, we will manually create each artifact as needed.
+  The OCI Network Firewall can decrypt incoming SSL traffic. For that, it needs a copy of the SSL certificates and the only place it can store them is the OCI Vault.
 
 1. Log into the Oracle Cloud console and select the **HOME** region.
   ![Ashburn Region Select](images/home.png)

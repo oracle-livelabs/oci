@@ -25,7 +25,8 @@ This lab assumes you have:
 
 ### Workflow
 
-This Workshop contains six LABs, each with their own dedicated tasks. Any LAB relies on constructs deployed in previous LABs so **do not skip** any LAB or task or you will not get the intended result.  
+This Workshop contains six LABs, each with their own dedicated tasks. Any LAB relies on constructs deployed in previous LABs so **do not skip** any LAB or task or you will not get the intended result. 
+For deploying resources of any kind, OCI asks for an IAM Compartment. Every resource deployed in this Workshop will be deployed in the same **LAB** Compartment. Make sure you are admin or have suficient privileges to deploy resources in the Compartment you plan to use.  
 
 ## Acknowledgements
 
