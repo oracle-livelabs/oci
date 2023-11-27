@@ -102,7 +102,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 
   The firewall will change from the **ACTIVE** state to **UPDATING**. Wait for it to become **ACTIVE** again before moving to the next task.
 
-## Task 4: Test traffic and observe logs
+## Task 5: Test traffic and observe logs
 
   To test the new policy I will try to download the **lab.txt** file I uploaded to the Public Object Storage Bucket. The URL for the item is https://objectstorage.us-ashburn-1.oraclecloud.com/n/ociateam/b/LAB/o/lab.txt. The firewall should allow the traffic, which will take the Service Gateway path. 
   ![Lab4 flow](images/lab4flow.png)
