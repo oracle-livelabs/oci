@@ -21,9 +21,7 @@ The steps are identical for all other user interfaces, backends or database.
 
 Please read the chapter: Introduction and Get Started.
 
-You followed the previous lab. You are logged in OCI LiveLabs Reservation in the right compartment.
-
-The LiveLabs Reservation version of the lab is limited only to Compute and Autonomous Database due the limits of the LiveLabs Reservations
+You are in the Green Button version of the lab. The lab is limited only to Compute and Autonomous Database due the limits of the green button 
 cloud account. 
 
   ![OCI Starter Green Button Limit](images/starter-compute-green-button-limits.png =50%x*)
