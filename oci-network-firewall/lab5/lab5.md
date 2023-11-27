@@ -92,6 +92,9 @@ In this lab, you will:
   It might take up to 30 minutes for the Firewall to get created. Make sure you note down the Firewall's Private IP, we will need it for routing adjustments in the VCN.
   ![Create firewall3](images/createfw3.png)
 
+  After the firewall is **ACTIVE**, enable LOGS.
+  ![Enable logs](images/enablelogs.png)
+
 ## Task 3: Deploy an Application Load balancer.
 
 We will deploy an Application Load Balancer with a basic HTTP listener and with APP-VM2 as a backend.
@@ -169,7 +172,7 @@ The firewall will go into the **Updating** state. Wait for it to become **ACTIVE
 
 ## Task 5: Deploy a VCN Internet Gateway with a dedicated route table.
 
-In OCI, Public resources (such as Load Balancers or Compute Instances) need an **Internet Gateway** to exchange packets with the Internet. Since we will add the Network Firewall on the path, we need to add a Route Table to the Internet Gateway so we can reroute the traffic. 
+  In OCI, Public resources (such as Load Balancers or Compute Instances) need an **Internet Gateway** to exchange packets with the Internet. Since we will add the Network Firewall on the path, we need to add a Route Table to the Internet Gateway so we can reroute the traffic. 
 
 1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Next, click the VCN named **LiveLab-OCIFW-VCN**. On the VCN Details page, on the left menu, click **Route Tables**. Press **Create Route Table**. In the menu that opens, give it a name - **IGW-RT**. No entries for the moment, we will do that at a later step.
   ![Internet GW1](images/igw1.png)
@@ -177,12 +180,40 @@ In OCI, Public resources (such as Load Balancers or Compute Instances) need an *
 2. In the VCN Details page, click **Internet Gateways** on the left menu then click **Create Internet Gateway**. In the menu that opens, give it a name and attach the Route table previously created.
   ![Internet GW2](images/igw2.png)
 
-## Task 6: Adjust VCN routing to enable the new flows. - TO DO
+## Task 6: Adjust VCN routing to enable the new flows.
 
+  We are almost ready with testing. The last piece is to modify some routing tables, for Internet traffic.
 
-## Task 7: Test the new Firewall and observe the Firewall Traffic Log - TO DO
+1. On the VCN Details page, on the left menu, click **Route Tables**. We will modify:
 
-**Congratulations!** You have successfully deployed an OCI Network Firewall.
+* LB-Subnet-Public-RT
+* FW-Subnet-Public-RT
+* IGW-RT
+
+![Route tables](images/routetables.png)
+
+2. Click on **LB-Subnet-Public-RT**. In the menu that opens, click **Add Route Rules**. Add the Default (0.0.0.0/0) route with next-hop the Internet Firewall IP, deployed at task 2. In my case, the IP is 10.0.0.117.
+  ![LB route](images/lbroute.png)
+
+3. Back at the Route tables list, click on **FW-Subnet-Public-RT**. Add the 0.0.0.0/0 route with next-hop the Internet Gateway.
+  ![FW route](images/fwroute.png)
+
+4. Back at the Route tables list, click on **IGW-RT**. Add a route for the Public Load Balancer subnet (10.0.0.128/27) with next-hop the Firewall's IP 10.0.0.117.
+  ![IGW route](images/igwroute.png)
+
+  And that's it, we can now move to testing.
+
+## Task 7: Test the new Firewall and observe the Firewall Traffic Log
+
+1. The test is very simple. From any browser on your computer just try a HTTP request to the Load Balancer's Public IP. For the LB I deployed, the public IP is 129.80.19.55. (http://129.80.19.55/)
+  ![Http test](images/HTTPtest.png)
+
+  **SUCCESS**, the traffic is working. Let's observe the Firewall Log.
+
+2. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log. Because the Public IP of the Load balancer is exposed to the Internet you should see a lot of traffic in the Log, mostly denied. Look for a log entry that contains your source IP. 
+  ![Http log](images/fwloghttp.png)
+
+**Congratulations!** You have successfully completed this LAB. The next LAB will deal with HTTPS, decrypting and Intrusion Detection.
 
 ## Acknowledgements
 
