@@ -49,22 +49,48 @@ In this lab, you will:
  
   ![VCN Subnets2](images/vcnsubnets2.png)
 
-## Task 2: Deploy a new Network Firewall - TO DO
+## Task 2: Deploy a new Network Firewall for Inbound Internet traffic
 
-Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Security List to that subnet. While the default ones, deployed automatically by OCI, can be used, it is recommended to have dedicated ones.
+  The existing Network Firewall (used in the previous labs) can only be used for Egress traffic to Internet via the NAT Gateway. For **Inbound** traffic we need a new Firewall, deployed in the Public Subnet we created in the previous task. We will also need a new Firewall Policy.
 
-1. On the VCN Details page, on the left menu, click **Route Tables** and then click on **Create Route Table**.
-  ![Create route table1](images/creatert1.png)
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**. You should see the list of the Policies we used in the previous labs. Let's create a new policy, dedicated to Ingress traffic. Name it **network_firewall_policy_ingress**.
+  ![Policy create](images/createpol.png)
 
-   In the menu that opens, give this route table a name and press **Create**. No routes are needed at this step of the Lab.
-  ![Create route table2](images/creatert2.png)
+2. After you press create, you will be directed to the policy configuration menu. Let's start by creating two services, one for HTTP and one for HTTPS. Click on **Services** and click on **Create service**. Add a **TCP 80** service for HTTP. 
+  ![Create HTTP](images/createhttp.png)
 
-2. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
-  ![Click subnet](images/clicksubnet.png)
+  Repeat the procedure to create the hTTPS service (TCP 443).
+  ![Create HTTPS](images/createhttps.png)
 
-   In the menu that opens (subnet details), click **Edit**. In the new menu, replace the default Route Table with the one previously created and save the changes.
-  ![Replace Route Table](images/subnetrt.png)
+3. Next, go to **Service lists** and press **Create Service List**.
+  ![Create SVCLIST](images/createsrvlist.png)
 
+  In the menu that opens, add both HTTP and HTTPS to the **Selected** Services.
+  ![Create SVCLIST2](images/createsrvlist2.png)
+
+4. Next, go to **Address lists** and press **Create Address List**. Add the Public Load Balancer subnet created at task 1.
+  ![Create addrlist](images/createaddrlist.png)
+
+5. Now we are ready for the **Security Rule**. Go to **Security rules** and press **Create security rule**.
+  ![Create secrule](images/createsecrule.png)
+
+6. The menu for Security Rule creation opens. Give it a name - **Inbound-Web-Services**. Source will be **ANY**, destination will be the Load Balancer subnet.
+  ![Create secrule1](images/secrule1.png)
+
+  Further down, select the Service list we created earlier but leave **Applications** and **URLs** with **ANY**. 
+  ![Create secrule2](images/secrule2.png)
+
+  Finally, **Allow** the traffic and press Create.
+  ![Create secrule3](images/secrule3.png)
+
+7. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click **Create Network firewall**. Select the Policy we created in the previous task.
+  ![Create firewall1](images/createfw1.png)
+
+  Under **Enforcement point**, make sure you select the new **public** subnet.
+  ![Create firewall2](images/createfw2.png)
+
+  It might take up to 30 minutes for the Firewall to get created. Make sure you note down the Firewall's Private IP, we will need it for routing adjustments in the VCN.
+  ![Create firewall3](images/createfw3.png)
 
 ## Task 3: Deploy an Application Load balancer.
 
@@ -99,7 +125,15 @@ We will deploy an Application Load Balancer with a basic HTTP listener and with 
 
 For the moment, the LB will remain in an **unhealthy** state as the backend does not have the web service enabled. We will fix that in the next task.
 
-## Task 4: Configure and start a webserver on one of the private Compute Instances. - TO DO
+## Task 4: Configure and start a webserver on one of the private Compute Instances. 
+
+In the previous LABs we deployed two private Compute Instances to generate various traffic and observe firewall logs. Now we will use one of them (I chose APP-VM2) as a backend for the Load Balancer. In order to install a Web server on the compute we will first need to modify the Firewall Policy that inspects its outbound connectivity to the Internet. We will allow unrestricted URL access so we can connect to the Yum Repositories and install Apache.
+
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Select **OCI Firewall1** which is the firewall inspecting outbound traffic for the private instances. There, click on its running Policy - **network_firewall_policy_3**.
+  ![Click policy](images/clickpol.png)
+
+2. In the Policy details page, click **Clone** and give the clone a new name - **network_firewall_policy_4**.
+  ![Clone policy](images/clonepol.png)
 
 ## Task 5: Deploy a VCN Internet Gateway with a dedicated route table.
 
