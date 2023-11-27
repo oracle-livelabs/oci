@@ -228,7 +228,7 @@ From the Cloud Shell Instance, issue the following commands:
   ![Firewall log4](images/lab2fwlogssh.png)
 
   One of the log lines shows the HTTPS denied by the **default deny all** rule.
-  ![Firewall https](images/lab2fwloghttps.png)
+  ![Firewall https](images/fwloghttps.png)
 
 **Congratulations!** You have completed this LAB. 
 
