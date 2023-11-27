@@ -21,7 +21,9 @@ The steps are identical for all other user interfaces, backends or database.
 
 Please read the chapter: Introduction and Get Started.
 
-You are in the Green Button version of the lab. The lab is limited only to Compute and Autonomous Database due the limits of the green button 
+You followed the previous lab. You are logged in OCI LiveLabs Reservation in the right compartment.
+
+The LiveLabs Reservation version of the lab is limited only to Compute and Autonomous Database due the limits of the LiveLabs Reservations
 cloud account. 
 
   ![OCI Starter Green Button Limit](images/starter-compute-green-button-limits.png =50%x*)
@@ -30,15 +32,20 @@ If later, you want to try the full version of the lab for ex with Kubernetes or 
 
 ## Task 1: Create the Application
 
-1. Using your browser, go to https://www.ocistarter.com/
-2. Choose 
+We will use to Advanced tab to work with the limits of the LiveLab sandbox. (Existing network, ...)
+
+1. In your browser, go to https://www.ocistarter.com/
+2. Choose:
     - Advanced
-    - Existing VCN (This is needed to use the VCN created by the Green Button) 
-    - Compute
-    - HTML
-    - Java
-    - SpringBoot
-    - Autonomous database
+    - Existing VCN 
+    - Shared Compute 
+    - Keep:
+        - Compute
+        - HTML
+        - Java
+        - SpringBoot
+        - GraalVM
+        - Autonomous database
 3. Click *Cloud Shell*
     - You will see the commands to use.
   ![OCI Starter Compute Java](images/starter-compute-green-button-java.png)
@@ -48,7 +55,7 @@ If later, you want to try the full version of the lab for ex with Kubernetes or 
     - Copy paste the command below. And check the README.md
     ```
     <copy>
-    curl -k "https://www.ocistarter.com/app/zip?prefix=starter&deploy=compute&ui=html&language=java&database=atp&vcn_strategy=existing" --output starter.zip
+    curl -k "https://www.ocistarter.com/app/zip?prefix=starter&deploy=compute&ui=html&language=java&db_install=shared_compute&database=atp&vcn_strategy=existing" --output starter.zip
     unzip starter.zip
     cd starter
     cat README.md
@@ -78,23 +85,18 @@ If later, you want to try the full version of the lab for ex with Kubernetes or 
         - bin           : with some helper commands
             - bin/ssh\_compute.sh (to ssh to the Compute)
             - bin/ssh\_bastion.sh (to ssh to the Bastion)
-3. Edit the env.sh file:
+3. Check the env.sh file:
     - Choose the env.sh file.
-    - Look for \_\_TO_FILL\_\_ in the file
-        - XXXXXXXXXXXXXXXX
-        - export TF\_VAR\_vcn\_ocid="\_\_TO_FILL\_\_"
-        - export TF\_VAR\_public\_subnet\_ocid="\_\_TO_FILL\_\_"
-        - export TF\_VAR\_private\_subnet\_ocid="\_\_TO_FILL\_\_"
-        - XXXXXXXXXXXXXXXX
-    - You may leave the database password. If not filled, the "db password" will be randomly generated.
-    - Ideally, you can also use an existing compartment if you have one. 
-        - If not, the script will create a "oci-starter" compartment
+    - Since we are in LiveLasbs installation, all the settings will be found automatically.
+          - TF_VAR_compartment_ocid, TF_VAR_vcn_ocid / TF_VAR_public_subnet_ocid, TF_VAR_private_subnet_ocid will be found automatically.
+          - The database password, if not filled, will be randomly generated.
     ![Editor env.sh](images/starter-compute-env.png)
 
 ## Task 3: Build.sh
 
-During the build, Terraform will create:
+During the build, Terraform will reuse the 
 - Network resources: VCN, Subnet
+Then create: 
 - A database
 - A compute instance to run NGINX + the Java App
 - A bastion used mostly to populate the database with the table
@@ -124,9 +126,13 @@ During the build, Terraform will create:
 
 ## Task 4: More info
 
+OCI Starter running in your own tenancy or not has a lot more options like Kubernetes or Container Instances.
+
+You can also check how it works and how to customize what you built.
+
 ### Customize
 
-Please also check the  "Lab 5 - How to Customize" to see how to customize this sample to your needs
+Please also check the  "Lab 3 - How to Customize" to see how to customize this sample to your needs
 
 ### SSH
 
