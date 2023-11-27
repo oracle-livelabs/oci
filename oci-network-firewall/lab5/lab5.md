@@ -135,6 +135,38 @@ In the previous LABs we deployed two private Compute Instances to generate vario
 2. In the Policy details page, click **Clone** and give the clone a new name - **network_firewall_policy_4**.
   ![Clone policy](images/clonepol.png)
 
+3. Now go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**. Click on **network_firewall_policy_4**. Make sure it is in **ACTIVE** state. 
+  ![Click policy2](images/clickpol2.png)
+
+4. In the Policy details menu, click on **Security Rules**. You should have three security rules. Edit the one called **Allow-Internet-OUT**.
+  ![Edit policy](images/editpol.png)
+
+  Under **URLs**, switch to **Any URL**. No other change is needed so click **Save changes**.
+  ![Any url](images/anyurl.png)
+
+5. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Click **OCI Firewall1** which controls outbound Internet and click **Edit**. Make it use the new policy called **network_firewall_policy_4**.
+  ![Edit fw](images/editfw.png)
+
+The firewall will go into the **Updating** state. Wait for it to become **ACTIVE** before moving on.
+
+6. Now that we have unrestricted Internet outbound access, let's install Apache. Open **Cloud shell** and connect to the VM that is used as a Load Balancer backend. In my case, that is APP-VM2 with the IP 10.0.0.80.
+  ![Connect vm](images/connectvm.png)
+
+7. We will do a series of commands to install and start a basic Apache Web Server.
+
+* sudo yum install -y httpd
+* sudo systemctl enable --now httpd.service
+* sudo firewall-cmd --add-service=http --permanent
+* sudo firewall-cmd --reload
+* sudo systemctl status httpd
+  
+  ![Install Apache](images/installapache.png)
+
+  Note: All subsequent tasks on this LAB rely on Apache running on the Compute. Do not move further if you encountered any issues.
+
+8. Now go to **Networking** -> **Load balancers** and make sure the Load Balancer deployed under task 3 is in a **good** state.
+   ![LB State](images/lbstate.png)
+
 ## Task 5: Deploy a VCN Internet Gateway with a dedicated route table.
 
 In OCI, Public resources (such as Load Balancers or Compute Instances) need an **Internet Gateway** to exchange packets with the Internet. Since we will add the Network Firewall on the path, we need to add a Route Table to the Internet Gateway so we can reroute the traffic. 
@@ -146,8 +178,9 @@ In OCI, Public resources (such as Load Balancers or Compute Instances) need an *
   ![Internet GW2](images/igw2.png)
 
 ## Task 6: Adjust VCN routing to enable the new flows. - TO DO
-## Task 7: Configure the new OCI Network Firewall to inspect inbound traffic. - TO DO
-## Task 8: Test the new Firewall and observe the Firewall Traffic Log - TO DO
+
+
+## Task 7: Test the new Firewall and observe the Firewall Traffic Log - TO DO
 
 **Congratulations!** You have successfully deployed an OCI Network Firewall.
 
