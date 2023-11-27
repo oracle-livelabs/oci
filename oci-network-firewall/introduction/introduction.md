@@ -2,9 +2,9 @@
 
 ## About this Workshop
 
-Estimated Time: 60 - 90 minutes
+Estimated Time: 3 - 5 hours
 
-Oracle Cloud Infrastructure (OCI) Networking is a core tenet of a MultiCloud architecture. This Hands On Lab will walk through the steps required to connect Oracle Cloud to 3rd party cloud infrastructure by utilizing an Oracle Cloud private connectivity offering. After the networking dependencies are met, you will test connectivity between cloud providers to verify the configuration.
+OCI Network Firewall is a next-generation managed network firewall and intrusion detection and prevention service for your Oracle Cloud Infrastructure virtual cloud network (VCN), powered by Palo Alto Networks®. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/network-firewall/home.htm) for more information on the Network Firewall service. We will explore various, common, use-cases and look into step-by-step guides on implementing each one of them.
 
 To gain more familiarity with Oracle Cloud's networking concepts, I would recommend watching our introductory [Oracle Cloud Networking YouTube series](https://youtu.be/mIYSgeX5FkM) as well as the [Oracle Cloud Networking Overview Documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm) to become more familiar with Oracle Cloud's networking components and their relationships.
 
@@ -12,21 +12,22 @@ To gain more familiarity with Oracle Cloud's networking concepts, I would recomm
 
 In this workshop, you will learn how to:
 
-* Deploy a Virtual Cloud Network (VCN).
-* Deploy a Dynamic Routing Gateway (DRG).
-* Deploy a Virtual Machine.
-* Setup a FastConnect Connection.
-* Verify MultiCloud Connectivity.
+* Deploy a Virtual Cloud Network (VCN), Subnets, Route tables, Security Lists.
+* Deploy OCI Network Firewalls and use different configuration items in the Firewall Security Policy.
+* Adjust routing inside the OCI VCN so we introduce a Network Firewall on the path.
 
 ### Prerequisites
 
 This lab assumes you have:
 
-* Administrative Oracle Cloud Access to provision networking and compute resources and are subscribed to the Ashburn region.
-* Administrative 3rd party cloud provider (Azure, GCP, AWS, etc) to provision networking and compute resources.
-* Access to the Megaport or Equinix portal **OR** access to an [Azure Interconnect region](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
+* Administrative Oracle Cloud Access to provision networking and compute resources.
+* Basic knowledge of OCI Networking components and networking, in general.
+
+### Workflow
+
+This Workshop contains six LABs, each with their own dedicated tasks. Any LAB relies on constructs deployed in previous LABs so **do not skip** any LAB or task or you will not get the intended result.  
 
 ## Acknowledgements
 
-* **Author** - Jake Bloom, Principal Solution Architect, OCI Networking
-* **Last Updated By/Date** - Jake Bloom, August 2023
+* **Author** - Radu Nistor, Principal Cloud Architect, OCI Networking
+* **Last Updated By/Date** - Radu Nistor, November 2023

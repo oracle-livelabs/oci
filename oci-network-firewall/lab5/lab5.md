@@ -205,13 +205,13 @@ The firewall will go into the **Updating** state. Wait for it to become **ACTIVE
 
 ## Task 7: Test the new Firewall and observe the Firewall Traffic Log
 
-1. The test is very simple. From any browser on your computer just try a HTTP request to the Load Balancer's Public IP. For the LB I deployed, the public IP is 129.80.19.55. (http://129.80.19.55/)
+1. The test is very simple. From any browser on your computer just try an HTTP request to the Load Balancer's Public IP. For the LB I deployed, the public IP is 129.80.19.55. (http://129.80.19.55/)
   ![Http test](images/HTTPtest.png)
 
   **SUCCESS**, the traffic is working. Let's observe the Firewall Log.
 
 2. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log. Because the Public IP of the Load balancer is exposed to the Internet you should see a lot of traffic in the Log, mostly denied. Look for a log entry that contains your source IP. 
-  ![Http log](images/fwloghttp.png)
+  ![Http log](images/loghttp.png)
 
 **Congratulations!** You have successfully completed this LAB. The next LAB will deal with HTTPS, decrypting and Intrusion Detection.
 
