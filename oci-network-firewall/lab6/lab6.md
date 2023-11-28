@@ -97,39 +97,37 @@ In this lab, you will:
   Under **Rule action** switch from Allow to Intrusion Detection.
   ![Edit secrule2](images/editsecrule2.png)
 
-Note: Enabling Intrusion Detection will make the firewall send a log entry to the **Threat Log** each time an attack is detected.
+Note: Enabling Intrusion Detection will make the firewall send a log entry to the **Threat Log** each time an attack is detected. However, the attack will not be stopped, only logged. If you want to stop the attack, select **Intrusion Prevention** instead.
 
 7. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Click **OCI Firewall2** which is the firewall inspecting **Inbound** traffic from the Internet and click **Edit**. Make it use the new policy called **network_firewall_policy_ingress_decrypt**.
   ![Edit fw](images/editfw.png)
 
 The firewall will go into the **Updating** state. Wait for it to become **ACTIVE** before moving on.
 
-
 ## Task 3: Enable SSL Offloading on the Load Balancer
 
-Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Network Firewall. To deploy a Firewall we need to give it a policy. We will start by deploying an empty Firewall Policy and then use it to deploy an OCI Network Firewall.
+  After we enabled HTTPS and Inbound Decryption on the Firewall, let's enable HTTPS on the Load Balancer. 
 
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**.
-  ![Click firewall policy](images/clickpol.png)
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Networking** and click on **Load balancer**. Click on the LB we deployed in the previous LAB.
+  ![Click lb](images/clicklb.png)
 
-   In the menu that opens, click **Create network firewall policy**. In the next menu, give it a name and press Create...
-  ![Empty firewall policy](images/polempty.png)
+2. In the menu that opens, scroll down and click **Certificates**, on the left side menu. Next, select **Load Balancer Managed Certificate** and click **Add certificate**. In the menu that opens, add the three certificate files ( certificate, chain and private key).
+  ![Create certificate](images/createcert.png)
 
-   The Firewall policy that gets created will be empty of any configuration but we can use it to deploy a Network Firewall.
+  Note: the Firewall certificate used in the OCI Vault and the LB certificate must be the same or decryption will fail.
 
-2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click **Create Network firewall**.
-  ![Create firewall1](images/createfw1.png)
+3. Next, go to **Listeners** on the left and press **Create Listener**. Use HTTPS, add the certificate created earlier and use the same backend set as the HTTP Listener (most likely there will be only one backend set configured)
+  ![Create listener](images/createlsn.png)
 
-   In the menu that opens, give the firewall a name, select the empty policy we previously created and select the correct VCN and subnet, created earlier in this lab. Then press Create.
-  ![Create firewall2](images/createfw2.png)
+## Task 4: Tests and Logs
 
-   Wait for the Firewall to become **ACTIVE** before moving on to the next step.
+  1. To test, do a simple HTTPS request to the Load Balancer's Public IP. Note that, depending on the certificate type, you may need a DNS entry to match the hostname. The firewall should allow the traffic and you should see it in the **Traffic Log**.
+  ![Traffic Log](images/trafficlog.png)
 
-3. Once the firewall is **ACTIVE**, click on the left hand menu on **Logs** and enable both Traffic and Threat Logs by using the toggle.
-  ![Firewall Logs](images/fwlogs.png)
+  2. There is no easy way to see if the traffic was decrypted by the firewall. However, once decryption is in-place and Intrusion Detection/Prevention is enabled, we will start to see entries in the **Threat Log**.
+   ![Threat Log](images/threatlog.png)
 
-
-## Task 4: Tests and Logs. - TO DO
+   
 
 **Congratulations!** You have successfully completed this LAB and this **Workshop**. 
 
