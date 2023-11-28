@@ -91,7 +91,18 @@ In this lab, you will:
 
   ![Create decrule5](images/createdecrule5.png)
 
-6. 
+6. In the Policy details menu, on the left, click on **Security rules**. There should be only one. Click Edit.
+  ![Edit secrule](images/editsecrule.png)
+
+  Under **Rule action** switch from Allow to Intrusion Detection.
+  ![Edit secrule2](images/editsecrule2.png)
+
+Note: Enabling Intrusion Detection will make the firewall send a log entry to the **Threat Log** each time an attack is detected.
+
+7. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Click **OCI Firewall2** which is the firewall inspecting **Inbound** traffic from the Internet and click **Edit**. Make it use the new policy called **network_firewall_policy_ingress_decrypt**.
+  ![Edit fw](images/editfw.png)
+
+The firewall will go into the **Updating** state. Wait for it to become **ACTIVE** before moving on.
 
 
 ## Task 3: Enable SSL Offloading on the Load Balancer
