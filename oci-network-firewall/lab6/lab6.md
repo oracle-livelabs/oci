@@ -63,40 +63,36 @@ In this lab, you will:
 
 ## Task 2: OCI Network Firewall - enable inbound SSL decryption and Intrusion Detection 
 
-Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Security List to that subnet. While the default ones, deployed automatically by OCI, can be used, it is recommended to have dedicated ones.
+  After we prepared the Vault, we need to modify the Firewall Policy to add Decryption.
 
-1. On the VCN Details page, on the left menu, click **Route Tables** and then click on **Create Route Table**.
-  ![Create route table1](images/creatert1.png)
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Select **OCI Firewall2** which is the firewall inspecting **Inbound** traffic from the Internet. There, click on its running Policy - **network_firewall_policy_ingress**.
+  ![click fwpol](images/clickfwpol.png)
 
-   In the menu that opens, give this route table a name and press **Create**. No routes are needed at this step of the Lab.
-  ![Create route table2](images/creatert2.png)
+2. In the Policy details page, click **Clone** and give the clone a new name - **network_firewall_policy_ingress_decrypt**.
+  ![Clone fwpol](images/fwclonepol.png)
 
-2. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
-  ![Click subnet](images/clicksubnet.png)
-
-   In the menu that opens (subnet details), click **Edit**. In the new menu, replace the default Route Table with the one previously created and save the changes.
-  ![Replace Route Table](images/subnetrt.png)
-
-3. On the VCN Details page, on the left menu, click **Security Lists** and then click on **Create Security List**.
-  ![Create sec list1](images/createsl.png)
-
-   In the menu that opens, give it a name and press **+Another Ingress Rule** and **+Another Egress Rule**.
-  ![Create sec list2](images/addrule1.png)
-
-   In the rule menus that open, create an entry that allows **0.0.0.0/0** on Ingress and Egress, respectively. 
-  ![Create sec list3](images/ingressrule.png)
-  ![Create sec list4](images/egressrule.png)
+3. Now go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**. Click on **network_firewall_policy_ingress_decrypt**. Make sure it is in **ACTIVE** state. 
+  ![Click policy2](images/clickpol2.png)
   
-  Press **Create Security List**. 
+4. In the Policy details menu, on the left, click on **Decryption profiles**. Click **Create decryption profile** and create an **SSL Inbound Inspection** profile.
+  ![Create decrypt](images/createdecrypt.png)
+ 
+5. In the Policy details menu, on the left, click on **Decryption rules**. Click **Create decryption rule**.
+  ![Create decrule1](images/createdecrule1.png)
 
-4. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
-  ![Click subnet2](images/clicksubnet.png)
+  In the menu that opens, for Source select **Any** and for Destination select the Load Balancer subnet address list.
+  ![Create decrule2](images/createdecrule2.png)
 
-   In the menu that opens (subnet details), click **Add Security List** and add the new one we created.
-  ![Add sec list](images/addsl.png)
+  Next, under **Rule action**, select SSL Inbound Inspection, select the Profile created at point 4 and press Create Secret.
+  ![Create decrule3](images/createdecrule3.png)
 
-   Next, remove the Default Security List by clicking on the 3 **dots** at the end of the row, and clicking **Remove**.
-  ![Remove sec list](images/removesl.png)
+  In the Secret creation menu, make sure you choose the Vault, the Secret and the correct **Secret Version**. Secret Version will increase if you edit the Secret.
+  ![Create decrule4](images/createdecrule4.png)
+
+  ![Create decrule5](images/createdecrule5.png)
+
+6. 
+
 
 ## Task 3: Enable SSL Offloading on the Load Balancer
 
@@ -124,7 +120,7 @@ Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Netw
 
 ## Task 4: Tests and Logs. - TO DO
 
-**Congratulations!** You have successfully deployed an OCI Network Firewall.
+**Congratulations!** You have successfully completed this LAB and this **Workshop**. 
 
 ## Acknowledgements
 
