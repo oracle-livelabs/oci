@@ -29,13 +29,27 @@ In this lab, you will:
 
   The OCI Network Firewall can decrypt incoming SSL traffic. For that, it needs a copy of the SSL certificates and the only place it can store them is the OCI Vault.
 
-1. Log into the Oracle Cloud console and select the **HOME** region.
-  ![Ashburn Region Select](images/home.png)
-  Note: This Lab can be completed in any OCI region. However, as explained in the **Get Started** chapter, we will use OCI CLI to connect to deployed private Compute Instances. That functionality is only available in the Home Region. If you want to use a different region, make sure you have connectivity to the private instances.
-2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Press **Create VCN**, making sure you have the correct Compartment selected. Give the VCN a name and assign an IPv4 CIDR Block. For this LiveLab, I will use the LAB Compartment and the VCN CIDR 10.0.0.0/16. Leave everything else on default settings and press **Create VCN**.
-  ![Create VCN](images/createvcn.png)
-3. After you press **Create VCN**, you will be redirected to the VCN Details page, with the Subnets menu selected. Press **Create Subnet**. In the subnet creation menu, give it a name, assign a CIDR (I will use 10.0.0.0/27) and make it a **Private** subnet. Leave everything else with default settings.
-  ![Create Subnet](images/createsubnet.png)
+1. Log into the Oracle Cloud console and go to the Burger menu (on top left), select **Identity and Security** and click on **Vault**
+  ![Click Vault](images/clickvault.png)
+  
+2. In the menu that opens, click **Create Vault** and, in the next menu, give it a name and press Create.
+  ![Create VCN](images/createvault.png)
+
+3. You will be redirected to the Vault Details Page. Select **Master Encryption Keys** on the left and click **Create Key**. In the new menu, give it a name (LAB-Master-Key) and make sure you select the **symmetric**  algorithm. Any protection mode is fine.
+  ![Create Masterkey](images/createmasterkey.png)
+
+4. The next step is to create a Vault **Secret** using the Certificate, Certificate Chain and Certificate Private Key. The Vault Secret has a very specific format that you need to follow in order for the firewall to be able to read it.
+  ![Secret Format](images/secretformat.png)
+
+  Open any text editor, such as Notepad, and create the Secret in the specified format. Use the following links for reference:
+  [Official documentation](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/network-firewall/setting-up-certificate-authentication.htm#network-firewall-setting-up-certificate-authentication) 
+  [Oracle ATEAM Blog Post](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/network-firewall/setting-up-certificate-authentication.htm#network-firewall-setting-up-certificate-authentication)
+  [Example Secret](images/vault_secret_example.txt)
+
+
+
+
+
 
 ## Task 2: OCI Network Firewall - enable inbound SSL decryption and Intrusion Detection - TO DO
 
