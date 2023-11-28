@@ -25,7 +25,7 @@ In this lab, you will:
 
 ![lab6](images/lab6.png)
 
-## Task 1: Deploy and configure the OCI Vault TO DO
+## Task 1: Deploy and configure the OCI Vault
 
   The OCI Network Firewall can decrypt incoming SSL traffic. For that, it needs a copy of the SSL certificates and the only place it can store them is the OCI Vault.
 
@@ -42,16 +42,26 @@ In this lab, you will:
   ![Secret Format](images/secretformat.png)
 
   Open any text editor, such as Notepad, and create the Secret in the specified format. Use the following links for reference:
+
   [Official documentation](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/network-firewall/setting-up-certificate-authentication.htm#network-firewall-setting-up-certificate-authentication) 
-  [Oracle ATEAM Blog Post](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/network-firewall/setting-up-certificate-authentication.htm#network-firewall-setting-up-certificate-authentication)
+
   [Example Secret](images/vault_secret_example.txt)
 
+  After you prepared the **text** file with the proper format, go to the OCI Vault, click **Secrets** and click **Create Secret**. In the new menu, add the contents of the text file. 
+  ![Create secret](images/createsecret.png)
+
+5. As a final step, we need an **IAM Policy** to allow the OCI Network Firewall access to the OCI Vault. On the Oracle Cloud console, go to the Burger menu (on top left), select **Identity and Security** and click on **Policies** under the **Indentity** service.
+  ![Click policy](images/clickpolicy.png)
+
+  In the menu that opens, click **Create Policy**. In the new menu, select "**Show manual editor** and input the following IAM rule: 
+
+  *allow service ngfw-sp-prod to read secret-family in compartment LAB*
+
+  Note: **LAB** is the Compartment I worked with in this Workshop. Change that policy to the Compartment you used.
+  ![Create policy](images/createpolicy.png)
 
 
-
-
-
-## Task 2: OCI Network Firewall - enable inbound SSL decryption and Intrusion Detection - TO DO
+## Task 2: OCI Network Firewall - enable inbound SSL decryption and Intrusion Detection 
 
 Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Security List to that subnet. While the default ones, deployed automatically by OCI, can be used, it is recommended to have dedicated ones.
 
