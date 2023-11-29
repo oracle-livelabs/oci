@@ -91,6 +91,8 @@ We will start with a basic VCN deployment. One of the goals of this livelab is a
 
    Wait for the Firewall to become **ACTIVE** before moving on to the next step.
 
+  Note: OCI Network Firewall creation can take up to 30 minutes. Consider taking a break!
+
 3. Once the firewall is **ACTIVE**, click on the left hand menu on **Logs** and enable both Traffic and Threat Logs by using the toggle.
   ![Firewall Logs](images/fwlogs.png)
 

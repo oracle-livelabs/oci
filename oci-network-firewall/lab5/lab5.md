@@ -57,10 +57,10 @@ In this lab, you will:
   ![Policy create](images/createpol.png)
 
 2. After you press create, you will be directed to the policy configuration menu. Let's start by creating two services, one for HTTP and one for HTTPS. Click on **Services** and click on **Create service**. Add a **TCP 80** service for HTTP. 
-  ![Create HTTP](images/createhttp.png)
+  ![Create HTTP](images/httpservice.png)
 
   Repeat the procedure to create the HTTPS service (TCP 443).
-  ![Create HTTPS](images/createhttps.png)
+  ![Create HTTPS](images/httpsservice.png)
 
 3. Next, go to **Service lists** and press **Create Service List**.
   ![Create SVCLIST](images/createsrvlist.png)
@@ -212,12 +212,7 @@ In this lab, you will:
 
 2. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log. Because the Public IP of the Load balancer is exposed to the Internet you should see a lot of traffic in the Log, mostly denied. Look for a log entry that contains your source IP. 
 
-  ![Log htytp](images/httplog.png)
-  
-  ![Http log](images/httplog.png)
-
-  
-  
+  ![Http log](images/log4http.png)
 
 **Congratulations!** You have successfully completed this LAB. The next LAB will deal with HTTPS, decrypting and Intrusion Detection.
 

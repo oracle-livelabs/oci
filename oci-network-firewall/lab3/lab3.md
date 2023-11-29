@@ -74,6 +74,8 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 * One URL list that contains allowed destinations. We will only allow traffic to **www.oracle.com** and **www.ateam-oracle.com**.
 * One Firewall Security Rule that allows HTTPS traffic to any target with the URL filter **ON**.
 
+  Note: Any Firewall Policy contains an implicit **deny-any** rule, not seen in the Console. Traffic not specifically allowed will be denied.
+
 4. In the **Network firewall policy details** menu, click on **Services** on the left menu and click **Create service**. Create a service that allows **HTTPS / TCP on port 443**.
   ![Create service](images/createsrv.png)
 
