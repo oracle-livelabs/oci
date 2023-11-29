@@ -228,12 +228,16 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
   One of the log lines shows the SSH allowed by the dedicated rule.
   ![Firewall log4](images/lab2fwlogssh.png)
 
+  ![hola amigos](images/testpng.png)
+
   One of the log lines shows the HTTPS denied by the **default deny all** rule.
 
   ![Https Log](images/fwloghttps.png)
 
   ![Firewall https](images/fwloghttps.png)
 
+ ![blabla hytp](images/testpng.png) 
+ 
 **Congratulations!** You have completed this LAB. 
 
 ## Acknowledgements
