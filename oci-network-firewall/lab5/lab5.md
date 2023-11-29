@@ -57,10 +57,10 @@ In this lab, you will:
   ![Policy create](images/createpol.png)
 
 2. After you press create, you will be directed to the policy configuration menu. Let's start by creating two services, one for HTTP and one for HTTPS. Click on **Services** and click on **Create service**. Add a **TCP 80** service for HTTP. 
-  ![Create HTTP](images/httpservice.png)
+  ![Create HTTP](images/screenhttp.png)
 
   Repeat the procedure to create the HTTPS service (TCP 443).
-  ![Create HTTPS](images/httpsservice.png)
+  ![Create HasttpS](images/httpsscreen.png)
 
 3. Next, go to **Service lists** and press **Create Service List**.
   ![Create SVCLIST](images/createsrvlist.png)
