@@ -50,7 +50,7 @@ In this lab, you will:
   After you prepared the **text** file with the proper format, go to the OCI Vault, click **Secrets** and click **Create Secret**. In the new menu, add the contents of the text file. 
   ![Create secret](images/createsecret.png)
 
-5. As a final step, we need an **IAM Policy** to allow the OCI Network Firewall access to the OCI Vault. On the Oracle Cloud console, go to the Burger menu (on top left), select **Identity and Security** and click on **Policies** under the **Indentity** service.
+5. As a final step, we need an **IAM Policy** to allow the OCI Network Firewall access to the OCI Vault. On the Oracle Cloud console, go to the Burger menu (on top left), select **Identity and Security** and click on **Policies** under the **Identity** service.
   ![Click policy](images/clickpolicy.png)
 
   In the menu that opens, click **Create Policy**. In the new menu, select "**Show manual editor** and input the following IAM rule: 
@@ -63,12 +63,12 @@ In this lab, you will:
 
 ## Task 2: OCI Network Firewall - enable inbound SSL decryption and Intrusion Detection 
 
-  After we prepared the Vault, we need to modify the Firewall Policy to add Decryption.
+  We finished preparing the Vault so we now need to modify the Firewall Policy to add Decryption.
 
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Select **OCI Firewall2** which is the firewall inspecting **Inbound** traffic from the Internet. There, click on its running Policy - **network_firewall_policy_ingress**.
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Select **OCI Firewall2** which is the firewall inspecting **Inbound** traffic from the Internet. There, click on its running Policy - *network_firewall_policy_ingress*.
   ![click fwpol](images/clickfwpol.png)
 
-2. In the Policy details page, click **Clone** and give the clone a new name - **network_firewall_policy_ingress_decrypt**.
+2. In the Policy details page, click **Clone** and give the clone a new name - *network_firewall_policy_ingress_decrypt*.
   ![Clone fwpol](images/fwclonepol.png)
 
 3. Now go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**. Click on **network_firewall_policy_ingress_decrypt**. Make sure it is in **ACTIVE** state. 
@@ -86,7 +86,7 @@ In this lab, you will:
   Next, under **Rule action**, select SSL Inbound Inspection, select the Profile created at point 4 and press Create Secret.
   ![Create decrule3](images/createdecrule3.png)
 
-  In the Secret creation menu, make sure you choose the Vault, the Secret and the correct **Secret Version**. Secret Version will increase if you edit the Secret.
+  In the Secret creation menu, make sure you choose the Vault, the Secret and the correct **Secret Version**. The Secret Version will increase if you edit the Secret.
   ![Create decrule4](images/createdecrule4.png)
 
   ![Create decrule5](images/createdecrule5.png)
@@ -97,12 +97,12 @@ In this lab, you will:
   Under **Rule action** switch from Allow to Intrusion Detection.
   ![Edit secrule2](images/editsecrule2.png)
 
-Note: Enabling Intrusion Detection will make the firewall send a log entry to the **Threat Log** each time an attack is detected. However, the attack will not be stopped, only logged. If you want to stop the attack, select **Intrusion Prevention** instead.
+  Note: Enabling Intrusion Detection will make the firewall send a log entry to the **Threat Log** each time an attack is detected. However, the attack will not be stopped, only logged. If you want to stop the attack, select **Intrusion Prevention** instead.
 
 7. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Click **OCI Firewall2** which is the firewall inspecting **Inbound** traffic from the Internet and click **Edit**. Make it use the new policy called **network_firewall_policy_ingress_decrypt**.
   ![Edit fw](images/editfw.png)
 
-The firewall will go into the **Updating** state. Wait for it to become **ACTIVE** before moving on.
+  The firewall will go into the **Updating** state. Wait for it to become **ACTIVE** before moving on.
 
 ## Task 3: Enable SSL Offloading on the Load Balancer
 
@@ -124,7 +124,7 @@ The firewall will go into the **Updating** state. Wait for it to become **ACTIVE
   1. To test, do a simple HTTPS request to the Load Balancer's Public IP. Note that, depending on the certificate type, you may need a DNS entry to match the hostname. The firewall should allow the traffic and you should see it in the **Traffic Log**.
   ![Traffic Log](images/trafficlog.png)
 
-  2. There is no easy way to see if the traffic was decrypted by the firewall. However, once decryption is in-place and Intrusion Detection/Prevention is enabled, we will start to see entries in the **Threat Log**.
+  2. There is no easy way to see if the traffic was decrypted by the firewall. However, once decryption is in place and Intrusion Detection/Prevention is enabled, we will start to see entries in the **Threat Log**.
    ![Threat Log](images/threatlog.png)
 
    

@@ -21,7 +21,7 @@ In this lab, you will:
 
 ## Task 1: Deploy a VCN NAT Gateway with a dedicated Route Table
 
-In OCI, private Compute Instances need a NAT Gateway to exit to the Public Internet. Since we will add the Network Firewall on the path, we need to add a Route Table to the NAT Gateway so we can reroute the traffic. 
+  In OCI, private Compute Instances need a NAT Gateway to exit to the Public Internet. Since we will add the Network Firewall on the path, we need to add a Route Table to the NAT Gateway so we can reroute the traffic. 
 
 1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Next, click the VCN named **LiveLab-OCIFW-VCN**. On the VCN Details page, on the left menu, click **Route Tables**. Press **Create Route Table**. In the menu that opens, give it a name - **NAT-GW-RT**. No entries for the moment, we will do that at a later step.
   ![NAT GW1](images/natgw1.png)
@@ -55,7 +55,7 @@ In OCI, private Compute Instances need a NAT Gateway to exit to the Public Inter
 
 ## Task 3: Modify the OCI Firewall policy
 
-In a previous **LAB** we created a Firewall Policy that inspects traffic between subnets inside the VCN. Now we want to add a **Security Rule** that inspects traffic destined for the World Wide Web. 
+  In a previous **LAB** we created a Firewall Policy that inspects traffic between subnets inside the VCN. Now we want to add a **Security Rule** that inspects traffic destined for the World Wide Web. 
 Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the usual procedure follows this workstream: we clone the existing Policy that is in use -> we add or remove any configuration from the new, cloned Policy -> we modify the OCI Network Firewall to use the Cloned Policy. 
 
 1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous LAB. In the details page that opens, click the Policy that is in use.
@@ -67,7 +67,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 3. Go back to the **Network Firewall policies** and click on the newly cloned policy called **network_firewall_policy_2**.
   ![Click Policy2](images/clickpolicy2.png)
 
-In the new Network Firewall Policy we will use the existing constructs but we will also create the following constructs:
+  In the new Network Firewall Policy we will use the existing constructs but we will also create the following constructs:
 
 * One Service that defines HTTPS
 * One Service List that contains the HTTPS Service
@@ -77,7 +77,7 @@ In the new Network Firewall Policy we will use the existing constructs but we wi
 4. In the **Network firewall policy details** menu, click on **Services** on the left menu and click **Create service**. Create a service that allows **HTTPS / TCP on port 443**.
   ![Create service](images/createsrv.png)
 
-5. In the **Network firewall policy details** menu, click on **Service lists** on the left menu and click **Create service list**. Create a service list named **Service-list-https** that contains the HTTPS service created at the previous step.
+5. In the **Network firewall policy details** menu, click on **Service lists** on the left menu and click **Create service list**. Create a service list named **Service-list-https** that contains the HTTPS service created in the previous step.
   ![Create service](images/createsvclist.png)
 
   ![Create service2](images/createsvclist2.png)
@@ -85,7 +85,7 @@ In the new Network Firewall Policy we will use the existing constructs but we wi
 6. In the **Network firewall policy details** menu, click on **URL Lists** on the left menu and click **Create URL List**. In the menu that opens, name it **Allowed-FQDNs** and add **www.oracle.com** and **www.ateam-oracle.com**.
   ![Create url list](images/createurllist.png)
 
-**NEXT** let's create the firewall rule.
+  **NEXT,** let's create the firewall rule.
 
 7. In the **Network firewall policy details** menu, click on **Security rules** on the left menu and click **Create security rule**. 
   ![Create security rule](images/createsecrule.png)
@@ -93,10 +93,10 @@ In the new Network Firewall Policy we will use the existing constructs but we wi
 8. In the menu that opens, give the rule a name -> **Allow-Internet-OUT**. In the **Match condition**, under Source addresses, click **Select address lists** and add the previously created address list.
   ![Security rule source](images/secrule1.png)
 
-  For destination we will allow **Any**.
+  For destination, we will allow **Any**.
   ![Security rule sd](images/secrule2.png)
 
-  For applications we will allow **Any applications** and for service we will add the service list created at step 5, named **Service-list-https**. For URL, we will add the URL List created at step 6 **Allowed-FQDNs**.
+  For applications we will allow **Any applications** and for service, we will add the service list created in step 5, named **Service-list-https**. For URL, we will add the URL List created at step 6 **Allowed-FQDNs**.
   ![Security rule srv](images/secrule3.png)
 
   Last, for the **Rule action**, we will select **Allow traffic**. Press **Create Security Rule**.
@@ -109,7 +109,7 @@ In the new Network Firewall Policy we will use the existing constructs but we wi
 
 ## Task 4: Test traffic and observe logs
 
-With the configuration created within this **LAB**, in the previous tasks, we are providing Internet access to the hosts inside the VCN, only for certain domains. Lets test this and observe the firewall logs. We will connect to one of the Instances and:
+  With the configuration created within this **LAB**, in the previous tasks, we are providing Internet access to the hosts inside the VCN, only for certain domains. Let's test this and observe the firewall logs. We will connect to one of the Instances and:
   
   * Connect with HTTPS to **www.oracle.com** and **www.ateam-oracle.com** and observe that is allowed.
   * Connect with HTTPS to **www.wikipedia.org** and observe that it is **not** allowed.
@@ -123,19 +123,19 @@ With the configuration created within this **LAB**, in the previous tasks, we ar
 * APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
 * APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
 
-Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
+  Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
 
-From the Cloud Shell Instance, issue the following commands:
+  From the Cloud Shell Instance, issue the following commands:
 * ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
-* host www.oracle.com  -> this show us the IP of the website.
+* host www.oracle.com  -> this shows us the IP of the website.
 * curl -kI https://www.oracle.com/  -> we will attempt to get the headers of www.oracle.com.
   ![Lab3 tests1](images/lab3tests1.png)
 
-* host www.ateam-oracle.com  -> this show us the IP of the website.
+* host www.ateam-oracle.com  -> this shows us the IP of the website.
 * curl -kI https://www.ateam-oracle.com/  -> we will attempt to get the headers of www.ateam-oracle.com.
   ![Lab3 tests2](images/lab3tests2.png)
 
-* host www.wikipedia.org  -> this show us the IP of the website.
+* host www.wikipedia.org  -> this shows us the IP of the website.
 * curl -kI https://www.wikipedia.org/  -> we will attempt to get the headers of www.wikipedia.org.
   ![Lab3 tests3](images/lab3tests3.png)
 

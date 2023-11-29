@@ -15,7 +15,7 @@ OCI Network Firewall is a next-generation managed network firewall and intrusion
 In this lab, you will:
 
 * Build a Virtual Cloud Network (VCN) and a firewall dedicated subnet.
-* Create a Route table and a Security List for the firewall dedicated subnet.
+* Create a Route table and a Security List for the firewall-dedicated subnet.
 * Deploy an OCI Network Firewall.
 
 ![lab1](images/lab1.png)
@@ -36,7 +36,7 @@ We will start with a basic VCN deployment. One of the goals of this livelab is a
 
 ## Task 2: VCN Route table and Subnet Security List
 
-Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Security List to that subnet. While the default ones, deployed automatically by OCI, can be used, it is recommended to have dedicated ones.
+  Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Security List to that subnet. While the default ones, deployed automatically by OCI, can be used, it is recommended to have dedicated ones.
 
 1. On the VCN Details page, on the left menu, click **Route Tables** and then click on **Create Route Table**.
   ![Create route table1](images/creatert1.png)
@@ -73,7 +73,7 @@ Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Secu
 
 ## Task 3: Deploy an OCI Network Firewall
 
-Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Network Firewall. To deploy a Firewall we need to give it a policy. We will start by deploying an empty Firewall Policy and then use it to deploy an OCI Network Firewall.
+  Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Network Firewall. To deploy a Firewall we need to give it a policy. We will start by deploying an empty Firewall Policy and then use it to deploy an OCI Network Firewall.
 
 1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**.
   ![Click firewall policy](images/clickpol.png)

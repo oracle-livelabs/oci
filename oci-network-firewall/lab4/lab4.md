@@ -22,7 +22,7 @@ In this lab, you will:
 
 ## Task 1: Deploy a Service Gateway with a dedicated Route Table
 
-In OCI, private Compute Instances can use a Service Gateway to connect to Oracle Services such as Object Storage. Since we will add the Network Firewall on the path, we need to add a Route Table to the Service Gateway so we can reroute the traffic. 
+  In OCI, private Compute Instances can use a Service Gateway to connect to Oracle Services such as Object Storage. Since we will add the Network Firewall on the path, we need to add a Route Table to the Service Gateway so we can reroute the traffic. 
 
 1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Next, click the VCN named **LiveLab-OCIFW-VCN**. On the VCN Details page, on the left menu, click **Route Tables**. Press **Create Route Table**. In the menu that opens, give it a name - **SGW-RT**. No entries for the moment, we will do that at a later step.
   ![Service GW1](images/sgw1.png)
@@ -63,7 +63,7 @@ In OCI, private Compute Instances can use a Service Gateway to connect to Oracle
 
   ![Edit Bucket2](images/editbucket2.png)
 
-4. Next, click on the Bucket. In the Bucket Details Page, click Upload. In the menu that opens, drag a test file. I created an empty file called **lab.txt** which I will use.
+4. Next, click on the Bucket. On the Bucket Details Page, click Upload. In the menu that opens, drag a test file. I created an empty file called **lab.txt** which I will use.
   ![Upload File](images/uploadfile.png)
 
 5. Once you have a file there, click on the 3 dots at the end of the row and click **View Object Details**.
@@ -75,9 +75,9 @@ In OCI, private Compute Instances can use a Service Gateway to connect to Oracle
 
 ## Task 4: Modify the OCI Firewall policy
 
-In a previous **LAB** we created a Firewall Policy that inspects traffic destined for the World Wide Web. We also enabled **URL Filtering** and are allowing only certain domains to be reached. Since this new traffic to Oracle Services will match the same Rule (Source: VCN Subnets, Destination: Any, HTTPS), we will simply modify the URL Lists to allow an Oracle Services FQDN. Most Oracle Services are deployed under the **oraclecloud.com** domain, including Object Storage so we will add an entry in the existing URL List for **objectstorage.us-ashburn-1.oraclecloud.com**.
+  In a previous **LAB** we created a Firewall Policy that inspects traffic destined for the World Wide Web. We also enabled **URL Filtering** and are allowing only certain domains to be reached. Since this new traffic to Oracle Services will match the same Rule (Source: VCN Subnets, Destination: Any, HTTPS), we will simply modify the URL Lists to allow an Oracle Services FQDN. Most Oracle Services are deployed under the **oraclecloud.com** domain, including Object Storage so we will add an entry in the existing URL List for **objectstorage.us-ashburn-1.oraclecloud.com**.
 
-Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the usual procedure follows this workstream: we clone the existing Policy that is in use -> we add or remove any configuration from the new, cloned Policy -> we modify the OCI Network Firewall to use the Cloned Policy. 
+  Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the usual procedure follows this workstream: we clone the existing Policy that is in use -> we add or remove any configuration from the new, cloned Policy -> we modify the OCI Network Firewall to use the Cloned Policy. 
 
 1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous LAB. In the details page that opens, click the Policy that is in use.
   ![Click Policy](images/clickpolicy.png)

@@ -6,7 +6,7 @@ Estimated Time: 60-90 minutes
 
 ### About this lab
 
-In the previous LABs we looked into how we can inspect east-west (subnet to subnet) traffic inside an OCI VCN and how we can inspect **oubound** traffic to either the Internet or Oracle Services with various VCN Gateways. In this lab we will focus on **Inbound** traffic from the Internet. As the most common Internet service is **web** we will deploy a Public Web Load Balancer which will use one of the previously deployed Compute Instances as the backend. To inspect this traffic we need a new OCI Network Firewall, deployed in a Public Subnet. 
+In the previous LABs, we looked into how we can inspect east-west (subnet to subnet) traffic inside an OCI VCN and how we can inspect **oubound** traffic to either the Internet or Oracle Services with various VCN Gateways. In this lab, we will focus on **Inbound** traffic from the Internet. As the most common Internet service is **web** we will deploy a Public Web Load Balancer which will use one of the previously deployed Compute Instances as the backend. To inspect this traffic we need a new OCI Network Firewall, deployed in a Public Subnet. 
 
 ### Objectives
 
@@ -53,7 +53,7 @@ In this lab, you will:
 
   The existing Network Firewall (used in the previous labs) can only be used for Egress traffic to Internet via the NAT Gateway. For **Inbound** traffic we need a new Firewall, deployed in the Public Subnet we created in the previous task. We will also need a new Firewall Policy.
 
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**. You should see the list of the Policies we used in the previous labs. Let's create a new policy, dedicated to Ingress traffic. Name it **network_firewall_policy_ingress**.
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**. You should see the list of the Policies we used in the previous labs. Let's create a new policy, dedicated to Ingress traffic. Name it *network_firewall_policy_ingress*.
   ![Policy create](images/createpol.png)
 
 2. After you press create, you will be directed to the policy configuration menu. Let's start by creating two services, one for HTTP and one for HTTPS. Click on **Services** and click on **Create service**. Add a **TCP 80** service for HTTP. 
@@ -97,7 +97,7 @@ In this lab, you will:
 
 ## Task 3: Deploy an Application Load balancer.
 
-We will deploy an Application Load Balancer with a basic HTTP listener and with APP-VM2 as a backend.
+  We will deploy an Application Load Balancer with a basic HTTP listener and with APP-VM2 as a backend.
 
 1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Networking** and click on **Load balancer**.
   ![Click LoadBalancer](images/clicklb.png)
@@ -105,10 +105,10 @@ We will deploy an Application Load Balancer with a basic HTTP listener and with 
    In the menu that opens, click **Create load balancer**. 
   ![Click LoadBalancer](images/clickcreatelb.png)
 
-2. The Load Balaner creation wizard starts. Give it a name - **LAB-Public-LB** and make it Public. 
+2. The Load Balancer creation wizard starts. Give it a name - **LAB-Public-LB** and make it Public. 
   ![Create lb1](images/createlb1.png)
 
-   Leave everything else on defaults and scrool down until the networking details menu. There, input the correct VCN and Subnet and press Next.
+   Leave everything else on defaults and scroll down until the networking details menu. There, input the correct VCN and Subnet and press Next.
   ![Create lb2](images/createlb2.png)
 
 3. In the next menu, press **Add backends** and add one of the existing Compute Instances.
@@ -123,14 +123,14 @@ We will deploy an Application Load Balancer with a basic HTTP listener and with 
 5. In the next menu, select **Default Group** for the logs and press Submit.
   ![Configure log](images/conflog.png)
 
-  After the LB finishes the deployment, you will the the Public IP assigned to it. Take a note of it as we will use it for tests in the upcoming tasks and labs.
+  After the LB finishes the deployment, you will see the Public IP assigned to it. Take a note of it as we will use it for tests in the upcoming tasks and labs.
   ![LB PublicIP](images/lbpubip.png)
 
-For the moment, the LB will remain in an **unhealthy** state as the backend does not have the web service enabled. We will fix that in the next task.
+  For the moment, the LB will remain in an **unhealthy** state as the backend does not have the web service enabled. We will fix that in the next task.
 
 ## Task 4: Configure and start a webserver on one of the private Compute Instances. 
 
-In the previous LABs we deployed two private Compute Instances to generate various traffic and observe firewall logs. Now we will use one of them (I chose APP-VM2) as a backend for the Load Balancer. In order to install a Web server on the compute we will first need to modify the Firewall Policy that inspects its outbound connectivity to the Internet. We will allow unrestricted URL access so we can connect to the Yum Repositories and install Apache.
+  In the previous LABs we deployed two private Compute Instances to generate various traffic and observe firewall logs. Now we will use one of them (I chose APP-VM2) as a backend for the Load Balancer. In order to install a Web server on the compute we will first need to modify the Firewall Policy that inspects its outbound connectivity to the Internet. We will allow unrestricted URL access so we can connect to the Yum Repositories and install Apache.
 
 1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Select **OCI Firewall1** which is the firewall inspecting outbound traffic for the private instances. There, click on its running Policy - **network_firewall_policy_3**.
   ![Click policy](images/clickpol.png)
@@ -150,7 +150,7 @@ In the previous LABs we deployed two private Compute Instances to generate vario
 5. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Click **OCI Firewall1** which controls outbound Internet and click **Edit**. Make it use the new policy called **network_firewall_policy_4**.
   ![Edit fw](images/editfw.png)
 
-The firewall will go into the **Updating** state. Wait for it to become **ACTIVE** before moving on.
+  The firewall will go into the **Updating** state. Wait for it to become **ACTIVE** before moving on.
 
 6. Now that we have unrestricted Internet outbound access, let's install Apache. Open **Cloud shell** and connect to the VM that is used as a Load Balancer backend. In my case, that is APP-VM2 with the IP 10.0.0.80.
   ![Connect vm](images/connectvm.png)
@@ -165,7 +165,7 @@ The firewall will go into the **Updating** state. Wait for it to become **ACTIVE
   
   ![Install Apache](images/installapache.png)
 
-  Note: All subsequent tasks on this LAB rely on Apache running on the Compute. Do not move further if you encountered any issues.
+  Note: All subsequent tasks on this LAB rely on Apache running on the Compute. Do not move further if you encounter any issues.
 
 8. Now go to **Networking** -> **Load balancers** and make sure the Load Balancer deployed under task 3 is in a **good** state.
    ![LB State](images/lbstate.png)
@@ -212,7 +212,7 @@ The firewall will go into the **Updating** state. Wait for it to become **ACTIVE
 
 2. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log. Because the Public IP of the Load balancer is exposed to the Internet you should see a lot of traffic in the Log, mostly denied. Look for a log entry that contains your source IP. 
 
-  ![Http log](images/loghttp.png)
+  ![Http log](images/httplog.png)
 
 **Congratulations!** You have successfully completed this LAB. The next LAB will deal with HTTPS, decrypting and Intrusion Detection.
 
