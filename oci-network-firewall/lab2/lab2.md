@@ -147,6 +147,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 * One Address list that contains the two application subnets CIDRs
 * One Firewall Security Rule that allows SSH between the Application subnets.
 * One Firewall Security Rule that allows PING between the Application subnets.
+* Note: Any Firewall Policy contains an implicit **deny-any** rule, not seen in the Console. Traffic not specifically allowed will be denied.
 
 4. In the **Network firewall policy details** menu, click on **Applications** on the left menu and click **Create application**. Create an application that allows **Echo requests**.
   ![Create application](images/createapp.png)
@@ -228,6 +229,9 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
   ![Firewall log4](images/lab2fwlogssh.png)
 
   One of the log lines shows the HTTPS denied by the **default deny all** rule.
+
+  ![Https Log](images/fwloghttps.png)
+
   ![Firewall https](images/fwloghttps.png)
 
 **Congratulations!** You have completed this LAB. 

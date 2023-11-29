@@ -212,7 +212,10 @@ In this lab, you will:
 
 2. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log. Because the Public IP of the Load balancer is exposed to the Internet you should see a lot of traffic in the Log, mostly denied. Look for a log entry that contains your source IP. 
 
+  ![Log htytp](images/httplog.png)
+  
   ![Http log](images/httplog.png)
+  
 
 **Congratulations!** You have successfully completed this LAB. The next LAB will deal with HTTPS, decrypting and Intrusion Detection.
 
