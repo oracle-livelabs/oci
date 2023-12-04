@@ -97,8 +97,8 @@ Lab 4에서 Helm Chart를 활용하여 Prometheus/Grafana를 이미 설치하였
 
     ````shell
     NAME            NAMESPACE               REVISION        UPDATED                                 STATUS          CHART                   APP VERSION
-    mushop          mushop                  1               2023-06-26 08:22:16.734411354 +0000 UTC deployed        mushop-0.2.1            2.0        
-    mushop-utils    mushop-utilities        1               2023-06-26 08:18:08.724959532 +0000 UTC deployed        mushop-setup-0.0.2      1.0    
+    mushop          mushop                  1               2023-10-12 03:41:38.593653781 +0000 UTC deployed        mushop-0.2.1            2.0        
+    mushop-utils    mushop-utilities        1               2023-10-12 03:32:10.88419933 +0000 UTC  deployed        mushop-setup-0.0.2      1.0 
     ````
 
 3. **mushop-utils** 에서 Grafana 설치 정보 확인합니다. 다음에서 하는 접속 주소와 관리자암호를 찾는 방법을 확인할 수 있습니다.
@@ -138,7 +138,7 @@ Lab 4에서 Helm Chart를 활용하여 Prometheus/Grafana를 이미 설치하였
 
 9. `Kubernetes Cluster` 대시보드를 선택합니다.
 
-    *Note:* Mushop은 mushop-utils 차트의 일부로 대시보드를 미리 로드합니다.
+    *Note:* mushop-utils helm 차트는 관련 Grafana 대쉬보드를 함께 배포하도록 설정되어 있습니다.
 
     ![Grafana Select Dashboards](images/grafana-loaded-dashboards.png =50%x*)
 
@@ -181,4 +181,4 @@ Lab 4에서 Helm Chart를 활용하여 Prometheus/Grafana를 이미 설치하였
 
 * **Author** - DongHee Lee, Adao Junior
 * **Korean Translator & Contributors** - DongHee Lee, February 2022
-- **Last Updated By/Date** - DongHee Lee, June 2023
+- **Last Updated By/Date** - DongHee Lee, October 2023

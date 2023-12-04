@@ -154,20 +154,21 @@ Helm은 복잡한 쿠버네티스 애플리케이션을 배포하기 위한 쿠�
     ````
     $ helm list
     NAME    NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
-    mychart default         1               2023-06-26 08:07:41.327055597 +0000 UTC deployed        mychart-0.1.0   1.16.0     
+    mychart default         1               2023-10-12 03:24:30.059732685 +0000 UTC deployed        mychart-0.1.0   1.16.0     
+    
     $ kubectl get all
     NAME                           READY   STATUS    RESTARTS   AGE
-    pod/mychart-57c5f84846-xhdd5   1/1     Running   0          47s
+    pod/mychart-57c5f84846-9qbtt   1/1     Running   0          34s
     
-    NAME                 TYPE           CLUSTER-IP    EXTERNAL-IP     PORT(S)             AGE
-    service/kubernetes   ClusterIP      10.96.0.1     <none>          443/TCP,12250/TCP   64m
-    service/mychart      LoadBalancer   10.96.77.21   150.x.xxx.xxx   80:31057/TCP        47s
+    NAME                 TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)             AGE
+    service/kubernetes   ClusterIP      10.96.0.1       <none>          443/TCP,12250/TCP   86m
+    service/mychart      LoadBalancer   10.96.208.248   150.x.xxx.xxx   80:30923/TCP        34s
     
     NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
-    deployment.apps/mychart   1/1     1            1           47s
+    deployment.apps/mychart   1/1     1            1           34s
     
     NAME                                 DESIRED   CURRENT   READY   AGE
-    replicaset.apps/mychart-57c5f84846   1         1         1       47s
+    replicaset.apps/mychart-57c5f84846   1         1         1       34s    
     ````
 
 3. Pod가 정상적으로 기동하였습니다. service/mychart의 LoadBalancer의 EXTERNAL-IP를 통해 서비스를 요청합니다.
@@ -197,4 +198,4 @@ Helm은 복잡한 쿠버네티스 애플리케이션을 배포하기 위한 쿠�
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, June 2023
+- **Last Updated By/Date** - DongHee Lee, October 2023
