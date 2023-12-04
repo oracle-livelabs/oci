@@ -15,11 +15,12 @@ In this lab, you will:
 ### Prerequisites:
 
 - Completed Previous Labs and have access to Oracle APEX application.
-- Intermediate Knowledge of Oracle APEX and PL/SQL 
+- Knowledge of Oracle APEX and PL/SQL.
+- Cohere API Key access.
 
-### [About Cohere](https://cohere.com/)
+### About Cohere
 
-Cohere is the leading AI platform for enterprise. Its world-class AI is uniquely suited to the needs of business, unlocking unprecedented ease-of-use, accessibility, and data privacy. Cohere’s platform is cloud-agnostic, accessible through API as a managed service, and can be deployed on virtual private cloud (VPC) or even on-site to meet companies where their data is, offering the highest levels of flexibility and control. Founded by Google Brain alumni and a co-author of the seminal Transformer research paper, Cohere is on a mission to transform enterprises and their products with AI that unlocks a more intuitive way to generate, search, and summarize information than ever before..
+Please read about [Cohere](https://cohere.com/) and their usage terms and conditions.
 
 
 ### Transform your products with LLMs
@@ -182,6 +183,6 @@ Congratulations on completing this lab!, You may now **proceed to the next lab**
 ## Acknowledgements
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - July 28th, 2023.
+* **Last Updated By/Date** - Dec 4th, 2023.
 
  

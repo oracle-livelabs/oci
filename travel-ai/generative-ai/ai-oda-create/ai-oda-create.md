@@ -67,10 +67,7 @@ Gain customer insights through built-in analytics that identify conversational b
 
 
 3.	Select the  compartment where you want to create the digital assistant, provide a name,  description for the digital assistant and select development as the shape and click **Create** button.
- 
-  ![Fill in the desired name, description, compartment and shape for ODA](./images/create-oda-options.png " ")
-
-
+  
 4.  The Oracle Digital Assistant is being provisioned and below screen shows the current status and the final status of the ODA provision.
  
      The Oracle Digital Assistant is provisioned, click on **Service console** button.
@@ -162,5 +159,5 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
  
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - July 28th, 2023.
+* **Last Updated By/Date** - Dec 4th, 2023.
  
