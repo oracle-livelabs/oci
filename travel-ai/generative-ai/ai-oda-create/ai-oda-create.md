@@ -14,7 +14,7 @@ To set up the Oracle Digital Assistant on the OCI tenancy, you will:
 * Provision Oracle Digital Assistant from OCI services
 * Create Oracle Digital Assistant Skill 
 * Adding Knowledge document for Frequently asked questions (FAQs)
-* Train the ODA Model
+* Train the Oracle Digital Assistant Model
 * Preview the Model and Skill
 * Add Auto Complete Suggestion and Utterances.
 * Create Web Channel for a Skill
@@ -79,7 +79,7 @@ Gain customer insights through built-in analytics that identify conversational b
 
 ## Task 3:  Create Oracle Digital Assistant Skill
 
-1. After Logging into ODA, click on left navigation, select Development, 
+1. After Logging into Oracle Digital Assistant, click on left navigation, select Development, 
 
   ![ODA provisioned status](./images/create-skill-1.png " ")
 
@@ -115,7 +115,7 @@ Gain customer insights through built-in analytics that identify conversational b
 
 1. Click on **Yes** button.
  
-## Task 5:  Train the ODA Model
+## Task 5:  Train the Oracle Digital Assistant Model
  
 1. Click on **Train** button, 
 
@@ -160,4 +160,3 @@ You may now **proceed to the next lab.**
  
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
 * **Last Updated By/Date** - Dec 4th, 2023.
- 
