@@ -63,21 +63,21 @@ These are common labs that are required for most of the other labs under this wo
     * Display Top 10 UNESCO Sites.
     * Demo
  
-*Locate Nearby Airports and Other UNESCO Sites*
+*Locate nearby airports and other UNESCO sites*
 
 * Lab 6: Introduction
     * Locate Nearest Airport
     * Locate Nearest UNESCO Site
     * Plot the Map
 
-*Integrations*
+*Find low price flight tickets*
 
 * Lab 7: Low Price Flight Tickets
     * Sign up and Sign in to Amadeus (Please read their terms and conditions)
     * Create Web Credentials
     * Create APEX Page to display flight prices, flight available dates and current price
 
-*Oracle Digital Assistant Chatbot*
+*Oracle Digital Assistant chatbot*
 
 * Lab 8: Create Travel Advisor Chatbot
     * Provision Oracle Digital Assistant from OCI services
