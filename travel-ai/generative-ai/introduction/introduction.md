@@ -21,11 +21,11 @@ This lab assumes you have:
 * An Oracle cloud account
 * Knowledge of Oracle APEX and Oracle PL/SQL
 * Access to any 3rd party APIs used in this workshop, such as Cohere, Blockade Labs, and Amadeus (please read their corresponding terms and conditions)
-
+<!-- 
 ### AI for Healthcare - Complete Demo and Architecture video
 
 [Demo video on Generative AI for Travel with Oracle APEX and DB](youtube:5yMBsb6-Ejs:large)
- 
+ -->
 ### Generative AI for Travel - Table of Contents
 
 *Common Labs - Introduction Lab to Lab 2*
