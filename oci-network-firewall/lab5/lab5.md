@@ -57,10 +57,10 @@ In this lab, you will:
   ![Policy create](images/createpol.png)
 
 2. After you press create, you will be directed to the policy configuration menu. Let's start by creating two services, one for HTTP and one for HTTPS. Click on **Services** and click on **Create service**. Add a **TCP 80** service for HTTP. 
-  ![Create ttph](./lab5/images/screenhttp2.png)
+  ![Create srvh](images/createsrvh.png)
 
   Repeat the procedure to create the HTTPS service (TCP 443).
-  ![Create tppshas](./lab5/images/createhttpscopy.png)
+  ![Create srvhs](images/createsrvhs.png)
 
 3. Next, go to **Service lists** and press **Create Service List**.
   ![Create SVCLIST](images/createsrvlist.png)
@@ -206,13 +206,13 @@ In this lab, you will:
 ## Task 7: Test the new Firewall and observe the Firewall Traffic Log
 
 1. The test is very simple. From any browser on your computer just try an HTTP request to the Load Balancer's Public IP. For the LB I deployed, the public IP is 129.80.19.55. (http://129.80.19.55/)
-  ![Http test](images/HTTPtest.png)
+  ![Apache welcome](images/apachewelcome.png)
 
   **SUCCESS**, the traffic is working. Let's observe the Firewall Log.
 
 2. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log. Because the Public IP of the Load balancer is exposed to the Internet you should see a lot of traffic in the Log, mostly denied. Look for a log entry that contains your source IP. 
 
-  ![FW loght](images/log4httpcopy.png)
+  ![FW loght](images/fwlogh.png)
 
 **Congratulations!** You have successfully completed this LAB. The next LAB will deal with HTTPS, decrypting and Intrusion Detection.
 
