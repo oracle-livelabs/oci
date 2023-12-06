@@ -116,7 +116,7 @@ En este tutorial, crearemos una instancia de la herramienta Oracle Analytics Clo
 
 En este paso mostraremos como accedemos a la instancia de Oracle Analytics Cloud.
 - Haga clic en el nombre de la instancia creada "Nombre elegido";
-![ver base de datos disponible](./images/instanceoac.png)
+![ver base de datos disponible](./images/instance_oac.png)
 
 - Haga clic en **Página de inicio de Analytics**.
 ![ver base de datos disponible](./images/analytics_access.png)

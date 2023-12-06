@@ -29,7 +29,7 @@ Oracle Analytics Cloud (OAC) le ofrece una forma muy sencilla de agregar estadí
 
 3. Ingrese el nombre **"Avanzados"** y haga clic en el signo de verificación para confirmar.
 
-![Renombrar pantalla a Avanzado](./images/rename-advanced-3.png)
+![Renombrar pantalla a Avanzado](./images/rename-canva-3.png)
 
 4. Mantenga presionada la tecla Control (CTRL) y seleccione los campos **Ventas** y **Fecha de pedido (mes)** dentro de la tabla "Ventas", arrástrelos y suéltelos en el centro de la pantalla.
 
