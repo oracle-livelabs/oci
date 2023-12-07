@@ -3,7 +3,7 @@
 
 Estimated time: 30 minutes
 
-## Goal: OCI Starter: Create a Cloud Native Application in 5 mins
+## Goal: OCI Starter: Create a Cloud Native Sample in 5 mins
 
 ![Introduction Usecase](images/starter-website.png =100%x*)
 
