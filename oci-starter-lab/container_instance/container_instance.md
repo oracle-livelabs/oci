@@ -1,5 +1,5 @@
 
-# Create Cloud Native Applications on Container Instance
+# Create Cloud Native Container Instances
 
 ## Introduction
 
