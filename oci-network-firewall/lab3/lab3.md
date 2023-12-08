@@ -1,4 +1,4 @@
-# Inspecting outbound Internet traffic
+# Inspect outbound Internet traffic
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Inspecting outbound traffic to OCI Services
+# Inspect outbound traffic to OCI Services
 
 ## Introduction
 
