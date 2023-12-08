@@ -1,6 +1,6 @@
 # Inspect outbound traffic to OCI Services
 
-## Introduction
+### Introduction
 
 Estimated Time: 30-45 minutes
 

@@ -1,6 +1,6 @@
 # SSL Decryption and Intrusion Detection
 
-## Introduction
+### Introduction
 
 Estimated Time: 60 minutes
 

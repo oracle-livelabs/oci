@@ -1,6 +1,6 @@
 # OCI Network Firewall deployment
 
-## Introduction
+### Introduction
 
 Estimated Time: 60 minutes
 

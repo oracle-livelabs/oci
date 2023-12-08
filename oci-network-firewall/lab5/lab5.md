@@ -1,6 +1,6 @@
 # Inspect inbound Internet traffic
 
-## Introduction
+### Introduction
 
 Estimated Time: 60-90 minutes
 
