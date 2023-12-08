@@ -53,7 +53,7 @@ In this lab, you will:
 
 ## Task 2: Deploy two application subnets with Route Tables and Security Lists
 
-  We are now ready to deploy two application subnets, in the Firewall VCN deployed in the previous lab. The procedure is identical to the one described in **LAB 1 - Tasks 1 and 2**. 
+  We are now ready to deploy two application subnets, in the Firewall VCN deployed in the previous lab. The procedure is identical to the one described in **Lab 1 - Tasks 1 and 2**. 
 
 1. Application subnet1 will have the following configuration:
 
@@ -111,7 +111,7 @@ In this lab, you will:
 
   With VCN Default Routing, any Compute Instance in the VCN will be routed directly to any other Compute Instance from the same VCN. To change that and add the Network Firewall on the path, we will need to modify the subnet Route Tables.
 
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous LAB. In the details page that opens, note the Firewall's Private IP.
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous lab. In the details page that opens, note the Firewall's Private IP.
   ![Firewall details](images/firewalldetails.png)
 
 2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Next, click the VCN named **LiveLab-OCIFW-VCN**. On the VCN Details page, on the left menu, click **Route Tables**. We will modify the APP-Subnet Route tables.
@@ -127,10 +127,10 @@ In this lab, you will:
 
 ## Task 5: Modify the OCI Firewall policy
 
-  In a previous **LAB** we deployed a Network Firewall with an empty Firewall Policy. As we've create the new subnets and Compute Instances, we need to adjust the Firewall Policy to allow traffic between those subnets. 
+  In a previous **Lab** we deployed a Network Firewall with an empty Firewall Policy. As we've create the new subnets and Compute Instances, we need to adjust the Firewall Policy to allow traffic between those subnets. 
 Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the usual procedure follows this workstream: we clone the existing Policy that is in use -> we add or remove any configuration from the new, cloned Policy -> we modify the OCI Network Firewall to use the Cloned Policy. 
 
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous LAB. In the details page that opens, click the Policy that is in use.
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous lab. In the details page that opens, click the Policy that is in use.
   ![Click Policy](images/clickpolicy.png)
 
 2. In the menu that opens, click **Clone Policy** and give the new Policy a name. I will name it **network_firewall_policy_1**.
@@ -139,7 +139,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 3. Go back to the **Network Firewall policies** and click on the newly cloned policy called **network_firewall_policy_1**.
   ![Click Policy2](images/clickpolicy2.png)
 
-  In the Network Firewall Policy we will create the following constructs:
+  In the Network Firewall Policy we will create the following:
 * One Application that defines PING
 * One Application List that contains the Application above
 * One Service that defines SSH
@@ -195,13 +195,13 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 
 ## Task 6: Test traffic and observe logs
 
-  With the configuration created within this **LAB**, in the previous tasks, between the two private Compute Instances deployed in the VCN we allowed **PING** and **SSH**. Let's test this and observe the firewall logs. We will connect to one of the Instances and:
+  With the configuration created within this *Lab**, in the previous tasks, between the two private Compute Instances deployed in the VCN we allowed **PING** and **SSH**. Let's test this and observe the firewall logs. We will connect to one of the Instances and:
   * **PING** the other Compute to test the Ping Rule.
   * Test TCP port 22 to see that it is allowed
   * Test TCP port 443 to see that it is **not** allowed.
   ![Lab2 flow](images/lab2flow.png)
 
-1. Start the **Cloud Shell** Instance from the top-right menu. Make sure it starts with the **Private Network** configured under task 1 of this LAB.
+1. Start the **Cloud Shell** Instance from the top-right menu. Make sure it starts with the **Private Network** configured under task 1 of this lab.
   ![Lab2 cloudshell](images/lab2cs.png)
 
 2. The two Compute Instances I deployed in the previous tasks have the following IP address:
@@ -233,7 +233,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 
   ![test hytp](images/testpng.png) 
 
-**Congratulations!** You have completed this LAB. 
+**Congratulations!** You have completed this lab. 
 
 ## Acknowledgements
 

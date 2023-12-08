@@ -6,12 +6,12 @@ Estimated Time: 60 minutes
 
 ### About this lab
 
-  In this LAB we will focus on HTTPS, as this is the most common way to expose **web** services. To be able to complete this lab you will need the following:
+  In this lab we will focus on HTTPS, as this is the most common way to expose **web** services. To be able to complete this lab you will need the following:
   * SSL Certificate
   * SSL Certificate Chain
   * SSL Private Key for the certificate
 
-  This lab will not cover the procedure to obtain these items. If you own a DNS Domain, you may be able to get them from the Registrar or you can use **openssl** on any Linux system and create a self-signed certificate. Regardless of the method, proceed with this LAB only after you have the three components.
+  This lab will not cover the procedure to obtain these items. If you own a DNS Domain, you may be able to get them from the Registrar or you can use **openssl** on any Linux system and create a self-signed certificate. Regardless of the method, proceed with this lab only after you have the three components.
 
 ### Objectives
 
@@ -35,7 +35,7 @@ In this lab, you will:
 2. In the menu that opens, click **Create Vault** and, in the next menu, give it a name and press Create.
   ![Create VCN](images/createvault.png)
 
-3. You will be redirected to the Vault Details Page. Select **Master Encryption Keys** on the left and click **Create Key**. In the new menu, give it a name (LAB-Master-Key) and make sure you select the **symmetric**  algorithm. Any protection mode is fine.
+3. You will be redirected to the Vault Details Page. Select **Master Encryption Keys** on the left and click **Create Key**. In the new menu, give it a name (lab-Master-Key) and make sure you select the **symmetric**  algorithm. Any protection mode is fine.
   ![Create Masterkey](images/createmasterkey.png)
 
 4. The next step is to create a Vault **Secret** using the Certificate, Certificate Chain and Certificate Private Key. The Vault Secret has a very specific format that you need to follow in order for the firewall to be able to read it.
@@ -55,9 +55,9 @@ In this lab, you will:
 
   In the menu that opens, click **Create Policy**. In the new menu, select "**Show manual editor** and input the following IAM rule: 
 
-  *allow service ngfw-sp-prod to read secret-family in compartment LAB*
+  *allow service ngfw-sp-prod to read secret-family in compartment lab*
 
-  Note: **LAB** is the Compartment I worked with in this Workshop. Change that policy to the Compartment you used.
+  Note: **lab** is the Compartment I worked with in this Workshop. Change that policy to the Compartment you used.
   ![Create policy](images/createpolicy.png)
 
 
@@ -108,7 +108,7 @@ In this lab, you will:
 
   After we enabled HTTPS and Inbound Decryption on the Firewall, let's enable HTTPS on the Load Balancer. 
 
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Networking** and click on **Load balancer**. Click on the LB we deployed in the previous LAB.
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Networking** and click on **Load balancer**. Click on the LB we deployed in the previous lab.
   ![Click lb](images/clicklb.png)
 
 2. In the menu that opens, scroll down and click **Certificates**, on the left side menu. Next, select **Load Balancer Managed Certificate** and click **Add certificate**. In the menu that opens, add the three certificate files ( certificate, chain and private key).
@@ -129,7 +129,7 @@ In this lab, you will:
 
    
 
-**Congratulations!** You have successfully completed this LAB and this **Workshop**. 
+**Congratulations!** You have successfully completed this lab and this **Workshop**. 
 
 ## Acknowledgements
 

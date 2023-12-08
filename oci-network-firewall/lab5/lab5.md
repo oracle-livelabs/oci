@@ -6,7 +6,7 @@ Estimated Time: 60-90 minutes
 
 ### About this lab
 
-In the previous LABs, we looked into how we can inspect east-west (subnet to subnet) traffic inside an OCI VCN and how we can inspect **oubound** traffic to either the Internet or Oracle Services with various VCN Gateways. In this lab, we will focus on **Inbound** traffic from the Internet. As the most common Internet service is **web** we will deploy a Public Web Load Balancer which will use one of the previously deployed Compute Instances as the backend. To inspect this traffic we need a new OCI Network Firewall, deployed in a Public Subnet. 
+In the previous labs, we looked into how we can inspect east-west (subnet to subnet) traffic inside an OCI VCN and how we can inspect **oubound** traffic to either the Internet or Oracle Services with various VCN Gateways. In this lab, we will focus on **Inbound** traffic from the Internet. As the most common Internet service is **web** we will deploy a Public Web Load Balancer which will use one of the previously deployed Compute Instances as the backend. To inspect this traffic we need a new OCI Network Firewall, deployed in a Public Subnet. 
 
 ### Objectives
 
@@ -29,7 +29,7 @@ In this lab, you will:
 * deploy a new firewall subnet with a dedicated route table and security list
 * deploy a new load balancer subnet with a dedicated route table and security list
 
-  The exact procedure to do this is detailed under **LAB 1** so I will not repeat it here. In the end, you should have:
+  The exact procedure to do this is detailed under **lab 1** so I will not repeat it here. In the end, you should have:
 * Firewall Subnet:
     - name: FW-Subnet-Public
     - Subnet Access: Public
@@ -105,7 +105,7 @@ In this lab, you will:
    In the menu that opens, click **Create load balancer**. 
   ![Click LoadBalancer](images/clickcreatelb.png)
 
-2. The Load Balancer creation wizard starts. Give it a name - **LAB-Public-LB** and make it Public. 
+2. The Load Balancer creation wizard starts. Give it a name - **lab-Public-LB** and make it Public. 
   ![Create lb1](images/createlb1.png)
 
    Leave everything else on defaults and scroll down until the networking details menu. There, input the correct VCN and Subnet and press Next.
@@ -130,7 +130,7 @@ In this lab, you will:
 
 ## Task 4: Configure and start a webserver on one of the private Compute Instances. 
 
-  In the previous LABs we deployed two private Compute Instances to generate various traffic and observe firewall logs. Now we will use one of them (I chose APP-VM2) as a backend for the Load Balancer. In order to install a Web server on the compute we will first need to modify the Firewall Policy that inspects its outbound connectivity to the Internet. We will allow unrestricted URL access so we can connect to the Yum Repositories and install Apache.
+  In the previous labs we deployed two private Compute Instances to generate various traffic and observe firewall logs. Now we will use one of them (I chose APP-VM2) as a backend for the Load Balancer. In order to install a Web server on the compute we will first need to modify the Firewall Policy that inspects its outbound connectivity to the Internet. We will allow unrestricted URL access so we can connect to the Yum Repositories and install Apache.
 
 1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Select **OCI Firewall1** which is the firewall inspecting outbound traffic for the private instances. There, click on its running Policy - **network_firewall_policy_3**.
   ![Click policy](images/clickpol.png)
@@ -165,7 +165,7 @@ In this lab, you will:
   
   ![Install Apache](images/installapache.png)
 
-  Note: All subsequent tasks on this LAB rely on Apache running on the Compute. Do not move further if you encounter any issues.
+  Note: All subsequent tasks on this lab rely on Apache running on the Compute. Do not move further if you encounter any issues.
 
 8. Now go to **Networking** -> **Load balancers** and make sure the Load Balancer deployed under task 3 is in a **good** state.
    ![LB State](images/lbstate.png)
@@ -214,7 +214,7 @@ In this lab, you will:
 
   ![FW loght](images/fwlogh.png)
 
-**Congratulations!** You have successfully completed this LAB. The next LAB will deal with HTTPS, decrypting and Intrusion Detection.
+**Congratulations!** You have successfully completed this lab. The next lab will deal with HTTPS, decrypting and Intrusion Detection.
 
 ## Acknowledgements
 

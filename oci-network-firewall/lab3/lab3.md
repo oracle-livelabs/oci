@@ -34,7 +34,7 @@ In this lab, you will:
   Now that we have a **NAT Gateway**, we need to adjust VCN routing to use it. 
   ![VCN Routetables](images/vcnrt.png)
 
-  We will modify all **Route Tables** in the VCN, that we deployed in the previous LABs, with the following rules:
+  We will modify all **Route Tables** in the VCN, that we deployed in the previous labs, with the following rules:
 
 * The Application Subnets route tables, called **App-Subnet1-RT** and **App-Subnet2-RT**, will each get the default route (0.0.0.0/0) next-hop the firewall's IP (10.0.0.12).
 * The Network Firewall route table, called **Firewall-Subnet-Private-RT**, will get the default 0.0.0.0/0 route next-hop the NAT Gateway.
@@ -55,10 +55,10 @@ In this lab, you will:
 
 ## Task 3: Modify the OCI Firewall policy
 
-  In a previous **LAB** we created a Firewall Policy that inspects traffic between subnets inside the VCN. Now we want to add a **Security Rule** that inspects traffic destined for the World Wide Web. 
+  In a previous **lab** we created a Firewall Policy that inspects traffic between subnets inside the VCN. Now we want to add a **Security Rule** that inspects traffic destined for the World Wide Web. 
 Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the usual procedure follows this workstream: we clone the existing Policy that is in use -> we add or remove any configuration from the new, cloned Policy -> we modify the OCI Network Firewall to use the Cloned Policy. 
 
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous LAB. In the details page that opens, click the Policy that is in use.
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous lab. In the details page that opens, click the Policy that is in use.
   ![Click Policy](images/clickpolicy.png)
 
 2. In the menu that opens, click **Clone Policy** and give the new Policy a name. I will name it **network_firewall_policy_2**.
@@ -67,7 +67,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 3. Go back to the **Network Firewall policies** and click on the newly cloned policy called **network_firewall_policy_2**.
   ![Click Policy2](images/clickpolicy2.png)
 
-  In the new Network Firewall Policy we will use the existing constructs but we will also create the following constructs:
+  In the new Network Firewall Policy we will use the existing configuration but we will also add the following:
 
 * One Service that defines HTTPS
 * One Service List that contains the HTTPS Service
@@ -111,17 +111,17 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 
 ## Task 4: Test traffic and observe logs
 
-  With the configuration created within this **LAB**, in the previous tasks, we are providing Internet access to the hosts inside the VCN, only for certain domains. Let's test this and observe the firewall logs. We will connect to one of the Instances and:
+  With the configuration created within this **lab**, in the previous tasks, we are providing Internet access to the hosts inside the VCN, only for certain domains. Let's test this and observe the firewall logs. We will connect to one of the Instances and:
   
   * Connect with HTTPS to **www.oracle.com** and **www.ateam-oracle.com** and observe that is allowed.
   * Connect with HTTPS to **www.wikipedia.org** and observe that it is **not** allowed.
   
   ![Lab3 flow](images/lab3flow.png)
 
-1. Start the **Cloud Shell** Instance from the top-right menu. Make sure it starts with the **Private Network** configured under task 1 of LAB2.
+1. Start the **Cloud Shell** Instance from the top-right menu. Make sure it starts with the **Private Network** configured under task 1 of lab 2.
   ![Lab2 cloudshell](images/lab2cs.png)
 
-2. The two Compute Instances I deployed in the previous LAB have the following IP address:
+2. The two Compute Instances I deployed in the previous lab have the following IP address:
 * APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
 * APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
 
@@ -154,7 +154,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
   ![Firewall log4](images/lab3fwlogdeny.png)
 
 
-**Congratulations!** You have successfully completed this LAB.
+**Congratulations!** You have successfully completed this lab.
 
 ## Acknowledgements
 
