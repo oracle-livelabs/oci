@@ -132,7 +132,7 @@ In this lab, you will:
   ![Firewall log3](images/lab4fwlogallow.png)
 
  
-**Congratulations!** You have successfully completed this lab.
+**Congratulations!** You have successfully completed this lab. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

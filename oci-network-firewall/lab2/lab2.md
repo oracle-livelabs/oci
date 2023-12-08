@@ -233,7 +233,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 
   ![test hytp](images/testpng.png) 
 
-**Congratulations!** You have completed this lab. 
+**Congratulations!** You have completed this lab. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

@@ -214,7 +214,7 @@ In this lab, you will:
 
   ![FW loght](images/fwlogh.png)
 
-**Congratulations!** You have successfully completed this lab. The next lab will deal with HTTPS, decrypting and Intrusion Detection.
+**Congratulations!** You have successfully completed this lab. You may now **proceed to the next lab**. The next lab will deal with HTTPS, decrypting and Intrusion Detection.
 
 ## Acknowledgements
 

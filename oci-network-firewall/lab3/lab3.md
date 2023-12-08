@@ -154,7 +154,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
   ![Firewall log4](images/lab3fwlogdeny.png)
 
 
-**Congratulations!** You have successfully completed this lab.
+**Congratulations!** You have successfully completed this lab. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
