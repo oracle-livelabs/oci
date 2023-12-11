@@ -1,6 +1,6 @@
 # Introduction
 
-## About this Workshop
+### About this Workshop
 
 Estimated Time: 3 - 5 hours
 
