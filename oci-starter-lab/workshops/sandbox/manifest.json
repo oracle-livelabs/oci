@@ -11,32 +11,16 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Compute",
-            "filename": "./../../compute/compute.md"
+            "title": "Lab 1: LiveLabs Reservation",
+            "filename": "./../../green_button/green_button.md"
         },
         {
-            "title": "Lab 2: Kubernetes",
-            "filename": "./../../kubernetes/kubernetes.md"
-        },
-        {
-            "title": "Lab 3: Container Instances",
-            "filename": "./../../container_instance/container_instance.md"
+            "title": "Lab 2: Compute",
+            "filename": "./../../compute/compute_green.md"
         },        
         {
-            "title": "Lab 4: Functions",
-            "filename": "./../../function/function.md"
-        },
-        {
-            "title": "Lab 5: How to Customize",
+            "title": "Lab 3: How to Customize",
             "filename": "./../../customize/customize.md"
-        },         
-        {
-            "title": "Lab 6: Groups",
-            "filename": "./../../group/group.md"
-        },           
-        {
-            "title": "Lab 7: Advanced",
-            "filename": "./../../advanced/advanced.md"
         },        
         {
             "title": "Need Help?",
