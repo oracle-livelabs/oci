@@ -7,7 +7,9 @@ This workshop guides you through the steps to set up the PeopleSoft PICASO Chatb
 After completing this workshop, you will have a better insight and understanding of OCI Digital Assistant and the ability to configure and integrate a PeopleSoft environment, whether it exists on OCI or on-premises.
 
 Watch the video below for an Introduction To PeopleSoft PICASO Digital Assistant.
-[Lab overview](youtube:HCF482DDcrM)
+
+[Lab overview](youtube:HCF482DDcrM:large)
+
 
 The below image provides a high-level overview of PeopleSoft Chatbot Integration with Oracle Digital Assistant.
 

@@ -2,9 +2,9 @@
 
 ## Introduction
 
-Ten must-visit UNESCO World Heritage Sites. There are 1157 UNESCO World Heritage Sites (January 2023) across 167 countries. Among these, 900 are cultural, 218 are natural, and 39 are mixed properties. Here is a look at 10 of UNESCO's must-visit world heritage sites you'd love to visit.
+Ten must-visit UNESCO World Heritage Sites. There are 1157 UNESCO World Heritage Sites (January 2023) across 167 countries. Among these, 900 are cultural, 218 are natural, and 39 are mixed properties. Here, we look at the Top 10 of UNESCO's must-visit world heritage sites one would love to visit.
 
-In this lab, you will learn how to Generate AI images of these sites and help travelers decide on where they would like to visit this time.
+In this lab, you will learn how to generate AI images of these sites and help travelers decide where they would like to visit this time.
 
 Estimated Time: 30 minutes.  
   
@@ -23,7 +23,7 @@ This lab assumes you have:
  
 ## Task 1: Panorama Viewer for the Web 
 
-1. Getting [Pannellum Lightweight Panorama Viewer for the Web](https://pannellum.org/) on your Oracle APEX Web page is simple, just create a static region with following code. 
+1. Get [Panorama Viewer for the Web](https://pannellum.org/) on your Oracle APEX Web page is simple, just create a static region with following code. 
 2. Add the following html code in static APEX region
 3. APEX page static regions
    ![Generative AI](images/page-header.png)
