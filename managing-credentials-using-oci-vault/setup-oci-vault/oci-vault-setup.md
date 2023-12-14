@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In Lab 3, return as a developer persona to discover the secure realm of OCI Vault. Learn the importance of proper key management as we guide you through leveraging OCI Vault to securely store and access credentials, ensuring a robust and resilient approach to security.
+In Lab 3, return as a developer persona to discover the secure realm of OCI Vault. Learn the importance of proper credentials management as we guide you through leveraging OCI Vault to securely store and access credentials, ensuring a robust and resilient approach to security.
 
-Estimated Time: 1 hour
+Estimated Time: 1 hour 30 minutes
 
 ### Objectives
 
@@ -19,7 +19,7 @@ In this lab, you will:
 This lab assumes you have:
 
 - Some understanding of cloud terms
-- Familiarity with Oracle Cloud Infrastructure (OCI) would be helpful
+- Familiarity with Oracle Cloud Infrastructure OCI would be helpful.
 
 ## Task 1: Oracle Cloud Infrastructure Vault - Overview
 
@@ -28,7 +28,7 @@ Oracle Cloud Infrastructure Vault is a management service that stores and manage
 The below video gives an overview of OCI key management service and its key concepts.
 
    [
-      ![Watch the video](../3-setup-oci-vault/images/oci-vault-demonstration-thumbnail.jpeg)
+      ![Watch the video](../setup-oci-vault/images/oci-vault-demonstration-thumbnail.jpeg)
    ](https://www.youtube.com/watch?v=Yhm9eCP_SOA)
 
 By utilizing OCI Vault, you can effectively manage and control access to secrets within your OCI environment. The Vault service offers robust security features, including encryption at rest and in transit, access controls, auditing capabilities, and integration with other OCI services.
@@ -39,39 +39,41 @@ A Dynamic Group is a group that dynamically grant access to resources based on a
 
 Use the following steps to create a dynamic group.
 
+> Note: Keep in mind that the Dynamic Group is already created for you withing the Sandbox environment, so you wouldn't need to create it.
+
 1. Login to the OCI Console
-2. Go to Menu > Identity > Dynamic Groups
+2. Go to Menu > Identity & Security > Dynamic Groups
 3. Click the Create Dynamic Group button
-![Create Dynamic]( ./images/dg-1.png "Create Dynamic")
-4. Enter the following:
+![Create Dynamic](../setup-oci-vault/images/dg-1.png "Create Dynamic")
+1. Enter the following:
     - Name: `my-secret-group`
     - Description: `My Secret Dynamic Group`
     - Rule: `any {instance.compartment.id = '<ocid_compartment>'}`
     - NOTE: Where `<ocid_compartment>` is the ocid of the target compartment.
-5. Click the Create Dynamic Group button to save
-![Create Dynamic]( ./images/dg-2.png "Create Dynamic")
+2. Click the Create Dynamic Group button to save
+![Create Dynamic](../setup-oci-vault/images/dg-2.png "Create Dynamic")
 
 ## Task 3: Create a Vault
 
 We will now create a Vault in the target compartment, then add a key that will be used to encrypt a new secret. The secret could be anything, but for our example we will store a API-token. Note that you could add multiple secrets if needed. Using the following steps to create a vault, a key, and a secret.
 
 1. Login to the OCI Console
-2. Go to Menu > Security > Vault
-![Create Vault]( ./images/v-1.png "Create Vault")
+2. Go to Menu > Security & Security > Vault
+![Create Vault](../setup-oci-vault/images/v-1.png "Create Vault")
 3. Select the target compartment
 4. Click the Create Vault button
 5. Enter the following:
     - Name:  `my-vault`
 6. Click Create Vault button to save
-![Create Vault]( ./images/v-2.png "Create Vault")
+![Create Vault](../setup-oci-vault/images/v-2.png "Create Vault")
 7. Click on the `my-vault` that was just created
 8. Click on the Keys link under Resources
-![Create Vault]( ./images/v-3.png "Create Vault")
+![Create Vault](../setup-oci-vault/images/v-3.png "Create Key")
 9. Click Create Key button
 10. Enter a Name for the key (e.g. `my-vault-key`)
 11. Select 256 bits from the Key Shape
 12. Click Create Key button to save
-![Create Vault]( ./images/v-4.png "Create Vault")
+![Create Vault](../setup-oci-vault/images/v-4.png "Create Key")
 13. Click on the Secrets link under Resources
 14. Click Create Secret button
 15. Enter the following:
@@ -80,9 +82,9 @@ We will now create a Vault in the target compartment, then add a key that will b
       - Encryption Key: select `my-vault-key` created earlier
       - Secret Contents: `<my secret here>`
 16. Click Create Secret button
-![Create Vault]( ./images/v-5.png "Create Vault")
+![Create Vault](../setup-oci-vault/images/v-5.png "Create Secret")
 17. Click on the secret `my-secret`
-![Create Vault]( ./images/v-6.png "Create Vault")
+![Create Vault](../setup-oci-vault/images/v-6.png "Create Secret")
 
 18. Copy the secret OCID to be used next.
 
@@ -100,31 +102,36 @@ allow dynamic-group my-secret-group to read secret-family in compartment my-comp
 
 Use the following steps to create a the policy:
 
+> Note: Keep in mind that the Policy is already created for you, in the Sandbox environment, so you wouldn't need to create it.
+
 1. Login to the OCI Console
-2. Go to Menu > Identity > Policies
-![Create Policy]( ./images/p-1.png "Create Policy")
+2. Go to Menu > Identity & Security> Policies
+![Create Policy](../setup-oci-vault/images/p-1.png "Create Policy")
 
 3. Click the Create Policy button
-![Create Policy]( ./images/p-2.png "Create Policy")
+![Create Policy](../setup-oci-vault/images/p-2.png "Create Policy")
 4. Enter the following:
     - Name: `my-secret-policy`
     - Description: `My Secret Policy`
     - Statements :
         - `allow dynamic-group my-secret-group to read secret-family in compartment my-compartment where target.secret.name = 'my-secret'`
 5. Click the Create button to save
-![Create Policy]( ./images/p-3.png "Create Policy")
+![Create Policy](../setup-oci-vault/images/p-3.png "Create Policy")
 
 ## Task 5: Retrieve the secret from the Compute Instance
 
 Finally, we can create a script to retrieve our secret. The following steps creates a Python script that you can use as a framework to build on, but this could also be done in other languages that are supported such as Java, Ruby, and Go — [Software Development Kits and Command Line Interface](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm). Use the following steps to create a Python script with the given example.
 
-1. Terminal into the `instance-for-automation-demo` instance and create a file.
+1. SSH into the `instance-for-automation-demo` instance, you can get the Public IP from Console.
+![Create Policy](../setup-oci-vault/images/i-1.png "Create Policy")
+
+2. Create a file.
 
     ``` bash
     vim get-secret.py
     ```
 
-2. Press `i` and paste in the following Python script.
+3. Press `i` and paste in the following Python script.
 
     ``` python
     #!/usr/bin/python3
@@ -161,15 +168,15 @@ Finally, we can create a script to retrieve our secret. The following steps crea
     print(format(secret_contents))
     ```
 
-3. Be sure to change the `secret_id` ocid in the `get-secret.py` script with your secret, then save and exit.
+4. Be sure to change the `secret_id` ocid in the `get-secret.py` script with your secret, then save and exit.
 
-4. Make the `get-secret.py` script executable.
+5. Make the `get-secret.py` script executable.
 
     ``` bash
     chmod +x get-secret.py
     ```
 
-5. Run the following command to magically return the secret.  
+6. Run the following command to magically return the secret.  
 
     ``` bash
     ./get-secret.py
@@ -180,14 +187,16 @@ Finally, we can create a script to retrieve our secret. The following steps crea
 ## Learn More
 
 - [OCI Vault](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm)
+- [Managing Dynamic Groups](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingdynamicgroups.htm)
+- [Policy](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
 
 ## Acknowledgements
 
 - **Author**
-  - Andrea Romano, Senior Research Manager, Oracle Labs
+    - Andrea Romano, Senior Research Manager, Oracle Labs
 - **Contributors**
-  - Rhicheek Patra, Research Director, Oracle Labs
-  - El Houcine Es Sanhaji, Member of Technical Staff, Oracle Labs
-  - Robin Vaaler, Senior Member of Technical Staff,  Oracle Labs
+    - Rhicheek Patra, Research Director, Oracle Labs
+    - El Houcine Es Sanhaji, Member of Technical Staff, Oracle Labs
+    - Robin Vaaler, Senior Member of Technical Staff,  Oracle Labs
 - **Last Updated By/Date**
-  - El Houcine Es Sanhaji, 11 2023
+    - El Houcine Es Sanhaji, 12 2023
