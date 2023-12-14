@@ -115,7 +115,7 @@ In this part of the lab, we begin with creating a Web channel for the Skills and
   ![Channel complete information ](./images/oda-channel-important.png " ")
     Client authentication is disabled in the above screen
 
-  **Important:** To configure PeopleSoft, take note of the channel ID and ODA URL from the above page.
+  **Important:** To configure PeopleSoft, take note of the channel ID and ODA URL (copy only oda-xxx.digitalassistant.oci.oraclecloud.com, not the complete url and not even https://) from the above page.
     
      
 
