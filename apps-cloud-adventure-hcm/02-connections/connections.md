@@ -18,17 +18,13 @@ In this activity, you will:
 ## Task 1: Explore Connections
 
 
-1. 
-
-  Search for “Curtis Feitty” or any other user provided in the handouts and explore their public profile.
+1. Search for “Curtis Feitty” or any other user provided in the handouts and explore their public profile.
 
 
     ![Home Page](images/connections.png)
 
 
-2. 
-
-    Adventure awaits, show what you know, and rise to the top of the leader board!!!
+2. Adventure awaits, show what you know, and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
     
@@ -48,6 +44,8 @@ Enable workers to share personal interests and create connections and community,
 **Build networks**
 Allow workers to promote their personal brand by highlighting their skills, accomplishments, and career experience.
 
+
+
   > Click the **‘Home’** Icon
 
 
@@ -55,3 +53,4 @@ Allow workers to promote their personal brand by highlighting their skills, acco
 * **Author** - Dorcas Conyers, Principal Sales Consultant
 * **Contributors** -  Dorcas Conyers, Principal Sales Consultant
 * **Last Updated By/Date** - Kerilyn Derkasch, December 2023
+

@@ -6,6 +6,7 @@ Welcome to Oracle Cloud Adventure for Human Capital Management.  This hands-on e
 
 We hope you will enjoy today’s adventure exploring a complete and unified solution for HR Professionals.  
 
+
 Estimated Adventure Time: 21 minutes
 
 ### Objectives
@@ -20,3 +21,4 @@ This Activity Guide will lead you along the way through a set of Adventure Labs,
 * **Author** - Kerilyn Derkasch, Senior Manager, Oracle Cloud HCM
 * **Contributors** -  Dorcas Conyers, Principal Sales Consultant, HCM
 * **Last Updated By/Date** - Kerilyn Derkasch, December 2023
+
