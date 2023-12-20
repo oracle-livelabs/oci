@@ -144,6 +144,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
   ![Click Policy2](images/clickpolicy2.png)
 
   In the Network Firewall Policy we will create the following:
+
     * One Application that defines PING
     * One Application List that contains the Application above
     * One Service that defines SSH
@@ -151,7 +152,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
     * One Address list that contains the two application subnets CIDRs
     * One Firewall Security Rule that allows SSH between the Application subnets.
     * One Firewall Security Rule that allows PING between the Application subnets.
-  
+ 
   Note: Any Firewall Policy contains an implicit **deny-any** rule, not seen in the Console. Traffic not specifically allowed will be denied.
 
 4. In the **Network firewall policy details** menu, click on **Applications** on the left menu and click **Create application**. Create an application that allows **Echo requests**.
@@ -210,12 +211,14 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
   ![Lab2 cloudshell](images/lab2cs.png)
 
 2. The two Compute Instances I deployed in the previous tasks have the following IP address:
+
     * APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
     * APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
 
   Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
 
   From the Cloud Shell Instance, issue the following commands:
+
     * ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
     * ping 10.0.0.80  -> this will test ping between APP-VM1 and APP-VM2 and it should work.
     * nc -zv 10.0.0.80 22  -> this will test connectivity to port 22 between APP-VM1 and APP-VM2 and it should work.

@@ -162,7 +162,7 @@ In this lab, you will:
     * sudo firewall-cmd --add-service=http --permanent
     * sudo firewall-cmd --reload
     * sudo systemctl status httpd
-  
+
   ![Install Apache](images/installapache.png)
 
   Note: All subsequent tasks on this lab rely on Apache running on the Compute. Do not move further if you encounter any issues.

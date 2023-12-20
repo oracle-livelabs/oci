@@ -113,7 +113,7 @@ During the build, Terraform will create:
 
 ### Customize
 
-Please also check the  "Lab 5 - How to Customize" to see how to customize this sample to your needs
+Please also check the  "Lab 6 - How to Customize" to see how to customize this sample to your needs
 
 ### SSH
 

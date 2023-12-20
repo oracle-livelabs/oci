@@ -47,6 +47,7 @@ In this lab, you will:
   ![Firewall services](images/fwservrt.png)
 
 2. Next, click on **SGW-RT** and add routes for 10.0.0.32/27 (App-Subnet1) and 10.0.0.64/27 (App-Subnet2) next-hop the firewall's IP (10.0.0.12)
+
   ![SGW Routes](images/sgwroutes.png)
 
   Note: the image shows the route for 10.0.0.32/27. Repeat the procedure and add 10.0.0.64/27 too.
@@ -113,15 +114,17 @@ In this lab, you will:
   ![Lab2 cloudshell](images/lab2cs.png)
 
 2. The two Compute Instances I deployed in the previous lab have the following IP address:
+
     * APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
     * APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
 
   Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
 
   From the Cloud Shell Instance, issue the following commands:
+
     * ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
     * wget https://objectstorage.us-ashburn-1.oraclecloud.com/n/ociateam/b/lab/o/lab.txt --> this will attempt to download the file.
-    
+
   ![Lab4 test](images/lab4test.png)
 
 3. Now let's check the firewall **Traffic** Log. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log.

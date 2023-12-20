@@ -10,14 +10,16 @@ Estimated time: 30 minutes
 In this tutorial, we will create custom Cloud Native applications using:
 
 - Terraform scripts (or Resource Manager)
-- A Compute or Kubernetes, Serverless (Function)
+- A Compute, Instance Pool, Kubernetes, Container Instance, Serverless Function
 - An user interface in HTML or ReactJS, Angular, JET, JSP, PHP, APEX
 - A backend using Java or Node, Python, .NET, Go, ORDS
     - For Java: 
         - Framework: SpringBoot or Helidon, Tomcat, Micronaut
         - VM: JDK or GraalVM JIT, GraalVM Native
-- An Oracle Autonomous Database or Oracle Database System, Pluggable Database, Oracle Database Free, MySQL
+- An Oracle Autonomous Database or Oracle Database System, Pluggable Database, Oracle Database Free, MySQL, PostgreSQL
 - Using new or existing infrastructure resources
+
+*See "Labs" below for a link to the documentation of each of these technologies*
 
 We will use OCI Starter. It is an open source project that allow to start from 
 a working sample for most combinations of the above choices.
@@ -37,7 +39,7 @@ It works like this:
 
 If you have no idea on which type of infrastructure to deploy your program, please use: 
 - Lab 1 - Compute (Virtual Machine)
-- Then check the "Lab 5 - How to Customize" to see how to customize this sample to your needs
+- Then check the "Lab 6 - How to Customize" to see how to customize this sample to your needs
 
 If you have other requirements, please do other choice of labs based on requirements and the list of components. (See below)
 
@@ -47,9 +49,10 @@ Whatever choices that you do, you will get a working sample with terraform to cr
 
 1. Infrastructure
     - Lab 1 - Compute (Default) - [Virtual Machine](https://docs.oracle.com/en-us/iaas/Content/Compute/home.htm)
-    - Lab 2 - Kubernetes - [OCI Container Engine for Kubernetes](https://docs.oracle.com/en-us/iaas/Content/ContEng/home.htm)
-    - Lab 3 - Container Instance - [Container Instance](https://docs.oracle.com/en-us/iaas/Content/container-instances/home.htm)
-    - Lab 4 - Function - [Functions](https://docs.oracle.com/en-us/iaas/Content/Functions/home.htm)
+    - Lab 2 - Instance Pool - [Instance Pools](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/instancemanagement.htm)
+    - Lab 3 - Kubernetes - [OCI Container Engine for Kubernetes](https://docs.oracle.com/en-us/iaas/Content/ContEng/home.htm)
+    - Lab 4 - Container Instance - [Container Instance](https://docs.oracle.com/en-us/iaas/Content/container-instances/home.htm)
+    - Lab 5 - Function - [Functions](https://docs.oracle.com/en-us/iaas/Content/Functions/home.htm)
 2. User Interface 
     - HTML 5 - [HTML](https://html.spec.whatwg.org/multipage/)
     - ReactJS - [React](https://react.dev/)
@@ -75,6 +78,7 @@ Whatever choices that you do, you will get a working sample with terraform to cr
     - Pluggable Database - [PDB on top of an existing Oracle Database](https://docs.oracle.com/en-us/iaas/dbcs/doc/pluggable-databases.html)
     - Oracle DB 23c Free (running on a Compute) - [Database Free ](https://www.oracle.com/be/database/free/)
     - MySQL - [MySQL](https://docs.oracle.com/en-us/iaas/mysql-database/index.html)
+    - PostgreSQL - [PostgreSQL](https://docs.oracle.com/en-us/iaas/Content/postgresql/home.htm)
 
 For Advanced Features, check the Lab - Advanced. For things like Resource Manager, GraalVM Native and so on... 
 

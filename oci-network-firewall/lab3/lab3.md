@@ -122,12 +122,14 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
   ![Lab2 cloudshell](images/lab2cs.png)
 
 2. The two Compute Instances I deployed in the previous lab have the following IP address:
+
     * APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
     * APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
 
   Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
 
   From the Cloud Shell Instance, issue the following commands:
+
     * ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
     * host www.oracle.com  -> this shows us the IP of the website.
     * curl -kI https://www.oracle.com/  -> we will attempt to get the headers of www.oracle.com.
