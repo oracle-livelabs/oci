@@ -65,7 +65,7 @@ In this lab, you will:
 
   ![Application subnet1](images/appsubnet1.png)
 
-1. Application subnet2 will have the following configuration:
+2. Application subnet2 will have the following configuration:
 
 * Name: App-Subnet2
 * CIDR: 10.0.0.64/27
@@ -87,24 +87,28 @@ In this lab, you will:
 
 2. In the menu that opens, we need to input data into multiple fields. Unless specified otherwise in this tutorial, leave the fields with the **Default** input.
 
-* Compute Name: APP-VM1
-* Everything else until **Primary VNIC information** remains on default
-* Network details: select the VCN and the APP-Subnet1 subnet
+  * Compute Name: APP-VM1
+  * Everything else until **Primary VNIC information** remains on default
+  * Network details: select the VCN and the APP-Subnet1 subnet
 
   ![Deploy VM subnet](images/createinstance2.png)
 
-* In the **Add SSH keys** menu, select **Paste Public Keys** and paste the Public SSH Key created at **Task 1**, in the Cloud Shell instance.
+  * In the **Add SSH keys** menu, select **Paste Public Keys** and paste the Public SSH Key created at **Task 1**, in the Cloud Shell instance.
+
   ![Deploy VM keys](images/createinstance3.png)
 
-* Leave everything else on **Default** and press **Create**.
+  * Leave everything else on **Default** and press **Create**.
 
-* Wait for the Instance to go into the **Running** state and note the private IP it was assigned.
+  * Wait for the Instance to go into the **Running** state and note the private IP it was assigned.
+
   ![Deploy VM first](images/createinstance4.png)
 
-3. **Repeat** the procedure and deploy a second Compute Instance. Name it **APP-VM2** and make sure you select **APP-Subnet2** as the target.
+3. Repeat the procedure and deploy a second Compute Instance. Name it **APP-VM2** and make sure you select **APP-Subnet2** as the target.
+
   ![Deploy VM second](images/createinstance5.png)
 
 4. Start the **Cloud Shell** instance and try to SSH to both Compute Instances. The user is **opc**.
+
   ![Connect vms](images/connectvms.png)
 
 ## Task 4: Adjust VCN routing
@@ -140,17 +144,18 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
   ![Click Policy2](images/clickpolicy2.png)
 
   In the Network Firewall Policy we will create the following:
-* One Application that defines PING
-* One Application List that contains the Application above
-* One Service that defines SSH
-* One Service List that contains the SSH Service
-* One Address list that contains the two application subnets CIDRs
-* One Firewall Security Rule that allows SSH between the Application subnets.
-* One Firewall Security Rule that allows PING between the Application subnets.
+  * One Application that defines PING
+  * One Application List that contains the Application above
+  * One Service that defines SSH
+  * One Service List that contains the SSH Service
+  * One Address list that contains the two application subnets CIDRs
+  * One Firewall Security Rule that allows SSH between the Application subnets.
+  * One Firewall Security Rule that allows PING between the Application subnets.
   
   Note: Any Firewall Policy contains an implicit **deny-any** rule, not seen in the Console. Traffic not specifically allowed will be denied.
 
 4. In the **Network firewall policy details** menu, click on **Applications** on the left menu and click **Create application**. Create an application that allows **Echo requests**.
+
   ![Create application](images/createapp.png)
 
 5. In the **Network firewall policy details** menu, click on **Application lists** on the left menu and click **Create application list**. Create an application list that contains the Application created in the previous step.
@@ -205,16 +210,17 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
   ![Lab2 cloudshell](images/lab2cs.png)
 
 2. The two Compute Instances I deployed in the previous tasks have the following IP address:
-* APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
-* APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
+  * APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
+  * APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
 
   Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
 
   From the Cloud Shell Instance, issue the following commands:
-* ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
-* ping 10.0.0.80  -> this will test ping between APP-VM1 and APP-VM2 and it should work.
-* nc -zv 10.0.0.80 22  -> this will test connectivity to port 22 between APP-VM1 and APP-VM2 and it should work.
-* nc -zv 10.0.0.80 443  -> this will test connectivity to port 443 between APP-VM1 and APP-VM2 and it should **not** work.
+  * ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
+  * ping 10.0.0.80  -> this will test ping between APP-VM1 and APP-VM2 and it should work.
+  * nc -zv 10.0.0.80 22  -> this will test connectivity to port 22 between APP-VM1 and APP-VM2 and it should work.
+  * nc -zv 10.0.0.80 443  -> this will test connectivity to port 443 between APP-VM1 and APP-VM2 and it should **not** work.
+  
   ![Lab2 tests](images/lab2tests.png)
 
 3. Now let's check the firewall **Traffic** Log. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log.
