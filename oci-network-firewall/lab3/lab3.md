@@ -69,10 +69,10 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
 
   In the new Network Firewall Policy we will use the existing configuration but we will also add the following:
 
-  * One Service that defines HTTPS
-  * One Service List that contains the HTTPS Service
-  * One URL list that contains allowed destinations. We will only allow traffic to **www.oracle.com** and **www.ateam-oracle.com**.
-  * One Firewall Security Rule that allows HTTPS traffic to any target with the URL filter **ON**.
+    * One Service that defines HTTPS
+    * One Service List that contains the HTTPS Service
+    * One URL list that contains allowed destinations. We will only allow traffic to **www.oracle.com** and **www.ateam-oracle.com**.
+    * One Firewall Security Rule that allows HTTPS traffic to any target with the URL filter **ON**.
 
   Note: Any Firewall Policy contains an implicit **deny-any** rule, not seen in the Console. Traffic not specifically allowed will be denied.
 
@@ -122,23 +122,26 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
   ![Lab2 cloudshell](images/lab2cs.png)
 
 2. The two Compute Instances I deployed in the previous lab have the following IP address:
-  * APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
-  * APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
+    * APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
+    * APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
 
   Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
 
   From the Cloud Shell Instance, issue the following commands:
-  * ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
-  * host www.oracle.com  -> this shows us the IP of the website.
-  * curl -kI https://www.oracle.com/  -> we will attempt to get the headers of www.oracle.com.
+    * ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
+    * host www.oracle.com  -> this shows us the IP of the website.
+    * curl -kI https://www.oracle.com/  -> we will attempt to get the headers of www.oracle.com.
+    
   ![Lab3 tests1](images/lab3tests1.png)
 
-  * host www.ateam-oracle.com  -> this shows us the IP of the website.
-  * curl -kI https://www.ateam-oracle.com/  -> we will attempt to get the headers of www.ateam-oracle.com.
+    * host www.ateam-oracle.com  -> this shows us the IP of the website.
+    * curl -kI https://www.ateam-oracle.com/  -> we will attempt to get the headers of www.ateam-oracle.com.
+
   ![Lab3 tests2](images/lab3tests2.png)
 
-  * host www.wikipedia.org  -> this shows us the IP of the website.
-  * curl -kI https://www.wikipedia.org/  -> we will attempt to get the headers of www.wikipedia.org.
+    * host www.wikipedia.org  -> this shows us the IP of the website.
+    * curl -kI https://www.wikipedia.org/  -> we will attempt to get the headers of www.wikipedia.org.
+    
   ![Lab3 tests3](images/lab3tests3.png)
 
 3. Now let's check the firewall **Traffic** Log. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log.
