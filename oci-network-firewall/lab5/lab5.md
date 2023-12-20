@@ -157,12 +157,12 @@ In this lab, you will:
 
 7. We will do a series of commands to install and start a basic Apache Web Server.
 
-* sudo yum install -y httpd
-* sudo systemctl enable --now httpd.service
-* sudo firewall-cmd --add-service=http --permanent
-* sudo firewall-cmd --reload
-* sudo systemctl status httpd
-  
+    * sudo yum install -y httpd
+    * sudo systemctl enable --now httpd.service
+    * sudo firewall-cmd --add-service=http --permanent
+    * sudo firewall-cmd --reload
+    * sudo systemctl status httpd
+
   ![Install Apache](images/installapache.png)
 
   Note: All subsequent tasks on this lab rely on Apache running on the Compute. Do not move further if you encounter any issues.
@@ -186,9 +186,9 @@ In this lab, you will:
 
 1. On the VCN Details page, on the left menu, click **Route Tables**. We will modify:
 
-* LB-Subnet-Public-RT
-* FW-Subnet-Public-RT
-* IGW-RT
+    * LB-Subnet-Public-RT
+    * FW-Subnet-Public-RT
+    * IGW-RT
 
   ![Route tables](images/routetables.png)
 
