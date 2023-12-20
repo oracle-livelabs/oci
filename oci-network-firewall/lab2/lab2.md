@@ -57,21 +57,21 @@ In this lab, you will:
 
 1. Application subnet1 will have the following configuration:
 
-* Name: App-Subnet1
-* CIDR: 10.0.0.32/27
-* Subnet Access: Private
-* Route table: new Route Table called "App-Subnet1-RT" with no entries
-* Security List: new Security List called "App-Subnet1-SL" with a single "Allow all-0.0.0.0/0" rule on both Ingress and Egress.
+  * Name: App-Subnet1
+  * CIDR: 10.0.0.32/27
+  * Subnet Access: Private
+  * Route table: new Route Table called "App-Subnet1-RT" with no entries
+  * Security List: new Security List called "App-Subnet1-SL" with a single "Allow all-0.0.0.0/0" rule on both Ingress and Egress.
 
   ![Application subnet1](images/appsubnet1.png)
 
 2. Application subnet2 will have the following configuration:
 
-* Name: App-Subnet2
-* CIDR: 10.0.0.64/27
-* Subnet Access: Private
-* Route table: new Route Table called "App-Subnet2-RT" with no entries
-* Security List: new Security List called "App-Subnet2-SL" with a single "Allow all-0.0.0.0/0" rule on both Ingress and Egress.
+  * Name: App-Subnet2
+  * CIDR: 10.0.0.64/27
+  * Subnet Access: Private
+  * Route table: new Route Table called "App-Subnet2-RT" with no entries
+  * Security List: new Security List called "App-Subnet2-SL" with a single "Allow all-0.0.0.0/0" rule on both Ingress and Egress.
 
   ![Application subnet2](images/appsubnet2.png)
 
@@ -220,7 +220,7 @@ Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the u
   * ping 10.0.0.80  -> this will test ping between APP-VM1 and APP-VM2 and it should work.
   * nc -zv 10.0.0.80 22  -> this will test connectivity to port 22 between APP-VM1 and APP-VM2 and it should work.
   * nc -zv 10.0.0.80 443  -> this will test connectivity to port 443 between APP-VM1 and APP-VM2 and it should **not** work.
-  
+
   ![Lab2 tests](images/lab2tests.png)
 
 3. Now let's check the firewall **Traffic** Log. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log.
