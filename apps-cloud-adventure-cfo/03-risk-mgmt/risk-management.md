@@ -24,14 +24,14 @@ In this activity, you will:
 
     > Go to **Risk Management Cloud tab**, then click **‘Advanced Controls’**
 
-    ![isk Management Cloud](images/image001.png)
+    ![Risk Management Cloud](images/image001.png)
 
 
 2. 
 
-      > **Click** on the **‘Models’** icon on left side of screen (NOTE – ‘Models’ is the 2nd icon)
+      > **Click** on the ‘**Models**’ icon on left side of screen (NOTE – ‘Models’ is the 2nd icon)
 
-    ![‘Models’](images/image002.png)
+    ![‘Models’](images/2-lab3-risk-management.png)
 
 3. 
 
@@ -41,15 +41,15 @@ In this activity, you will:
 
 4. 
 
-      > **Select** Results Count **‘51’** – to see results. Take note the number of results.
+      > **Select** Results Count **‘75’** (or whatever # is displayed) – to see results. Take note the number of results displayed.
 
-    ![Results Count](images/image004.png)
+    ![Results Count](images/4-lab3-risk-management.png)
 
 5. 
 
-      > Review the results.  See Payables Invoice.Number column to see potential duplicates
+      > Review the results. See Payables Invoice.Number column to see potential duplicates
 
-    ![Review the results](images/image005.png)
+    ![Review the results](images/5-lab3-risk-management.png)
 
 6. 
 
@@ -69,9 +69,9 @@ In this activity, you will:
 
 8. 
  
-    > Next, **click** the **‘Actions’** drop-down menu, then **select ‘Copy’**
+    > Next, **click** the ‘**Actions**’ drop-down menu, then **select ‘Copy’**
 
-    ![drop-down menu](images/image008.png)
+    ![drop-down menu](images/8-lab3-risk-management.png)
 
 9. 
   
@@ -81,7 +81,7 @@ In this activity, you will:
 
 10. 
   
-    > **Click Edit**
+    > **Click Edit** in upper right corner
 
     ![Home Page](images/image010.png)
 
@@ -99,11 +99,16 @@ In this activity, you will:
 
 13. 
 
-    > **•	Enter the name as ‘Amount’**
-    > **•	Change condition to ‘Greater than’ or ‘Greater than or equal to’**
-    > **•	Enter a material limit in Value field** (NOTE – Value should be less than 9,000) **
+    > (1) Enter Filter Name as ‘**Amount**’  <br>
 
-    ![Change condition](images/image013.png)
+    > (2) Change condition to ‘**Greater than or equal to**’  <br>
+
+    > (3) Enter a number threshold limit in **Value** field (NOTE – Value should be less than 500,000)
+
+    > (4) Click OK
+
+
+    ![Change condition](images/13-lab3-risk-management.png)
 
 14. 
   
@@ -138,7 +143,8 @@ In this activity, you will:
 
 19. 
   
-    > Note: Resulting Screen shows Duplicate Invoice advanced control results – above the materiality threshold selected 
+    > Note: Results Screen shows Duplicate Invoice advanced control results – above the materiality threshold you selected in step 13.  **Click the carrot** ‘<’ to go back  <br>
+
     > **Click the carrot ‘<’** to go back
 
     ![Home Page](images/image019.png)
@@ -148,8 +154,15 @@ In this activity, you will:
 
     ![Home Page](images/image020.png)
 
+21. 
+
+    Adventure awaits, show what you know, and rise to the top of the leader board!!!
+
+    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:)
+
+    [Click here](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
 
 ## Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services
-* **Contributors** -  Harold Dickerman, Business Architect
-* **Last Updated By/Date** - Kevin Lazarz, September 2022
+* **Contributors** -  Steve Quinton, Team Lead – Risk Solutions 
+* **Last Updated By/Date** - Kevin Lazarz, August 2023

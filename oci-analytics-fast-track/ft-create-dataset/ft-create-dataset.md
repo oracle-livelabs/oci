@@ -4,6 +4,8 @@
 
 Neste Lab você vai aprender a criar um Conjunto de Dados (Dataset) no Oracle Analytics Cloud.
 
+[Oracle Video Hub video scaled to Large size](videohub:1_1ei28osm:large)
+
 **Conjuntos de Dados** podem ser criados usando uma ou mais tabelas, que podem ser de uma mesma conexão ou de conexões diferentes (inclusive podemos usar arquivos CSV ou XLSX). Você pode unir todas essa tabelas dentro do "Diagrama de Junções" (Join).
 
 *Tempo estimado para o Lab:* 15 Minutos
@@ -42,7 +44,7 @@ O Oracle Analytics Cloud (OAC) vai criar o Join de forma automática para você,
 
 ![Seleciona a tabelas Vendas](./images/join-auto-5.png)
 
-> **Note:** Existem dois tipos de colunas no Oracle Analytics Cloud: Atributo ou Medida
+> **Nota:** Existem dois tipos de colunas no Oracle Analytics Cloud: Atributo ou Medida
 
 As colunas do tipo ***Medida*** aceitam valores numéricos e poderemos executar operações matemáticas e agregações com os dados dessa coluna.
 
@@ -54,6 +56,14 @@ As colunas do tipo ***Atributo*** aceitam qualquer tipo de dados descritivo, que
 
 ![Tipos de Dados](./images/data-type-6.png)
 
+3. Clique com o botão direto do mouse na tabela **"Vendas"** dentro do Diagrama de Junção e selecione a opção **Preservar Granularidade**.
+
+![Preservar Granularidade da tabela](./images/grain.png)
+
+4. Após isso você verá uma barra verde na parte superior da caixa que representa a tabela **"Vendas"** indicando que a granularidade da tabela está preservada.
+
+![Barra verde na tabela vendas](./images/grain-bar.png)
+
 ## Tarefa 3: Salvar o Conjunto de Dados
 
 1. Verifique se você está na aba do Diagrama de Junção e clique no botão de salvar no topo direito da tela (ícone de um disquete).
@@ -62,7 +72,7 @@ As colunas do tipo ***Atributo*** aceitam qualquer tipo de dados descritivo, que
 
 2. Dê um nome e uma descrição para o Conjunto de dados:
 
-*Nome:* DADOS\_MIAU\_CORP  
+*Nome:* DADOS\_MIAU\_CORP
 *Descrição:* Conjunto de Dados para Análise de Dados de vendas da MIAU CORP
 
 ![Preencha os campos](./images/salve-data-11.png)
@@ -95,6 +105,9 @@ Imagine que o Oracle Analytics Cloud não criou o Join entre a tabela "Pedidos" 
 
 ![Seleciona a coluna ID DO PEDIDO](./images/select-join-column-9.png)
 
+Parabéns, você terminou esse laboratório!
+Você pode **seguir para o próximo Lab**.
+
 ## Conclusão
 
 Nesta sessão você aprendeu criar um Conjunto de Dados no Oracle Analytics Cloud usando mais de uma tabela e aprendeu a utilizar o "Diagrama de Junção".
@@ -102,4 +115,4 @@ Nesta sessão você aprendeu criar um Conjunto de Dados no Oracle Analytics Clou
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Thais Henrique, Nov/2022
+- **Último Update Por/Date** - Isabelle Dias, Maio/2023

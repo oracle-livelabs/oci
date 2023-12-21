@@ -480,15 +480,15 @@ Main Function that needs to be updated with the variable values.
             System.out.print(".");
             Thread.sleep(3000);
             //System.out.println(ingestCurrentStatus);
-            if ((ingestValue == "SUCCEEDED") || (ingestValue == "FAILED")){
+            if ((ingestValue.equals("SUCCEEDED")) || (ingestValue.equals("FAILED"))){
                 break;
             }
         }
         String ingestOutcome = MediastreamsDemoApp.jobLifecycleState(mediaClient,ingestStatus);
         MediastreamsDemoApp.printString("\nIngest Completed with status", ingestOutcome);
 
-        if (ingestOutcome == "SUCCEEDED") {
-            // Create media Streams Client with distribution cahnnel 
+        if (ingestOutcome.equals("SUCCEEDED")) {
+            // Create media Streams Client with distribution channel 
             MediaStreamClient mediaStreamsClient = MediastreamsDemoApp.connectMediaStreams(distributionChannel);
             // Generate session token for the master playlist.
             SessionToken sessionToken = MediastreamsDemoApp.generateSessionToken(mediaStreamsClient, streamPackageConfig, mediaAsset);

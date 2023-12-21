@@ -42,14 +42,14 @@ Go the menu
 
 First, we need data about your tenancy and user.
 - On the top, right, click *Tenancy: name*
-- Copy the tenancy OCID *##TENANCY_OCID##*
+- Copy the tenancy OCID *##TENANCY\_OCID##*
 
 ![Tenancy](images/opensearch-tenancy.png)
 
 Then, we need data about the user
 - On the top, right, click *Your username*
 - Copy the username *##USERNAME##* (without oracleidentitycloudservice )
-- Copy the user OCID *##USER OCID##*
+- Copy the user OCID *##USER\_OCID##*
 - Click on *API Keys*
 
 ![User](images/opensearch-user.png)
@@ -61,14 +61,22 @@ Then, we need data about the user
 
 ![User API Keys](images/opensearch-user2.png)
 
-In your computer or in cloud shell, you need to convert the PEM key to RSA format:
+In your computer (NOT in cloud shell), you need to convert the PEM key to RSA format:
 - Run the below command 
-- And keep the ##PRIVATE_KEY_RSA_FORMAT##
+- And keep the ##PRIVATE\_KEY\_RSA\_FORMAT##
 
 ```
 openssl rsa -in ##PRIVATE_KEY## -out ##PRIVATE_KEY_RSA_FORMAT##
 ex: openssl rsa -in private_key.pem -out private_key_rsa_format.pem
 ````
+
+Double-check that the private\_key\_rsa_format.pem is really in RSA format like this:
+
+```
+-----BEGIN RSA PRIVATE KEY-----
+...
+-----END RSA PRIVATE KEY-----
+```
 
 ## Task 3: Create an Agent Group
 
@@ -153,8 +161,8 @@ proxy_PASSWORD=
 proxy_NON_PROXY_HOSTS=
 EOT
 
-# Install JDK 11
-sudo yum install java-11-openjdk-devel -y
+# Install JDK 
+sudo yum install java-17-openjdk-devel -y
 
 # Get the SSL certificate of OpenSearch since it is invalid
 echo -n | openssl s_client -connect $OPENSEARCH_HOST:9200 -servername $OPENSEARCH_HOST | openssl x509 > /tmp/opensearch.cert
@@ -246,6 +254,9 @@ Fill the Connection details:
 Fill the Connection details:
 - Connection URL = *##OPENSEARCH\_API\_ENDPOINT##*
     - ex: https://xxxx.eu-frankfurt-1.functions.oci.oraclecloud.com/20181201/functions/ocid1.fnfunc.oc1.eu-frankfurt-1.aaaaaaabbbbb
+- Security Policy: *Basic Authentication*
+- Username:  *##OPENSEARCH\_USER##* (ex: opensearch-user)
+- Password:  *##OPENSEARCH\_PWD##* (ex: LiveLab--123)
 - Agent Group: *OPENSEARCH\_AGENT\_GROUP*
 - *Save / Test / Save* until 100%
 

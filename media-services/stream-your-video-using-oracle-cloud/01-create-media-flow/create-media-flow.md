@@ -78,12 +78,12 @@ Working with the security or identity team is strongly advised for production OC
 - Allow Media Services to integrate and work with other OCI services. 
 Object Storage is mandatory as the files are managed from object storage.
 
-The below policies are required for the Media Flows tasks to perform its duties. 
+The below policies are required for the Media Flows tasks to interact with other required services. 
     ```
-      <copy>Allow service media services to use object-family in compartment {videoCompartment}
-      Allow service media services to use keys in compartment {videoCompartment}
-      Allow service media services to read media-family in compartment {videoCompartment}
-      Allow service media services to manage ai-service-speech-family in compartment {videoCompartment}</copy>
+      <copy>Allow service mediaservices to use object-family in compartment {videoCompartment}
+      Allow service mediaservices to use keys in compartment {videoCompartment}
+      Allow service mediaservices to read media-family in compartment {videoCompartment}
+      Allow service mediaservices to manage ai-service-speech-family in compartment {videoCompartment}</copy>
     ```
   
   ![IAM 03](images/iam-add-policy-all.png " ")

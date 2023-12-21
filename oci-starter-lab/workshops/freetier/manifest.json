@@ -1,0 +1,51 @@
+{
+    "workshoptitle": "OCI Starter: Create a Cloud Native Sample in 5 mins",
+    "help": "livelabs-help-oci_us@oracle.com",
+	"tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "./../../intro/intro.md"
+        },
+        {
+            "title": "Get Started",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Compute",
+            "filename": "./../../compute/compute.md"
+        },
+        {
+            "title": "Lab 2: Instance Pool",
+            "filename": "./../../instance_pool/instance_pool.md"
+        },        
+        {
+            "title": "Lab 3: Kubernetes",
+            "filename": "./../../kubernetes/kubernetes.md"
+        },
+        {
+            "title": "Lab 4: Container Instances",
+            "filename": "./../../container_instance/container_instance.md"
+        },        
+        {
+            "title": "Lab 5: Functions",
+            "filename": "./../../function/function.md"
+        },
+        {
+            "title": "Lab 6: How to Customize",
+            "filename": "./../../customize/customize.md"
+        },         
+        {
+            "title": "Lab 7: Groups",
+            "filename": "./../../group/group.md"
+        },           
+        {
+            "title": "Lab 8: Advanced",
+            "filename": "./../../advanced/advanced.md"
+        },        
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

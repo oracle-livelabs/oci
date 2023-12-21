@@ -1,0 +1,47 @@
+{
+  "workshoptitle": "OCI Dev Fast Track",
+    "help": "livelabs-help-oci_us@oracle.com",
+	"tutorials": [
+        {
+            "title": "Introdução",
+            "description": "Oracle Cloud Infrastructure Fast Track - Workshop ao vivo!",
+            "filename": "../../intro/intro.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Pré Requisito - Provisionar Recursos",
+            "description": "Acessar e explorar a console da Oracle Cloud e aprender a criar um compartimento com recursos.",
+            "filename": "../../ft-resource-provision/ft-resource-provision.md"
+        },
+        {
+            "title": "Lab 1: Desenvolver Aplicações Nativas - Parte 1",
+            "description": "Conhecer o funcionamento das ferramentas de desenvolvimento em OCI.",
+            "filename": "../../ft-dev-app-cloud-native/ft-dev-app-cloud-native.md"
+        },
+        {
+            "title": "Lab 2: Desenvolver Aplicações Cloud Native - Parte 2",
+            "description": "Entender a orquestração da infraestrutura baseada em eventos.",
+            "filename": "../../ft-kub-cloud-native/ft-kub-cloud-native.md"
+        },
+
+        {
+            "title": "Lab 3: Implantação Automatizada",
+            "description": "Conhecer o funcionamento da esteira de desenvolvimento.",
+            "filename": "../../ft-automate-deployment/ft-automate-deployment.md"
+        },
+        {
+            "title": "Lab 4: Operar Aplicações Nativas em Nuvem",
+            "description": "Aprender a operar as Aplicações Nativas.",
+            "filename": "../../ft-operate-cloud-native/ft-operate-cloud-native.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
