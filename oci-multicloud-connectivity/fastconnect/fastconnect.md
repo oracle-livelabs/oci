@@ -401,7 +401,7 @@ This lab assumes you have:
 
 ![Deployment Diagram](images/topology-equinix-network-edge.png)
 
-# Equinix (Network Edge) Deployment
+# PacketFabric (Network Edge) Deployment
 
 ## Introduction
 
