@@ -23,10 +23,11 @@ This lab assumes you have:
 
 ## Task 1: Developer persona and credentials misuse
 
-<!--- TODO: add Lab-1 video -->
+    The below video gives an overview of challenges a DevOp persona will face for storing credentials in a bucket.
+
    [
-      ![Watch the video](https://i.stack.imgur.com/Vp2cE.png)
-   ](https://youtu.be/vt5fpE0bzSY)
+      ![Lab 1 video](../credentials-in-bucket/images/lab-1.png)
+   ](../credentials-in-bucket/file/lab-1.mp4)
 
 ## Learn More
 

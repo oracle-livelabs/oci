@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This worksop shows what are the common pitfalls in handling credentials in OCI. In particular it provides an example of a user storing credentials in a public bucket and how an unauthorised person could exploit that. Finally it showcases how to properly manage credentials in OCI Vault
+This workshop shows common pitfalls in handling credentials in OCI. In particular, it provides an example of a user storing credentials in a public bucket and how an unauthorised person could exploit that. Finally, it showcases how to properly manage credentials in OCI Vault.
 
 Estimated Workshop Time: 2 hours
 
