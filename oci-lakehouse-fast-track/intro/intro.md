@@ -112,10 +112,10 @@ Português:
 - [Documentação do Oracle Cloud Infrastructure Data Flow](https://docs.oracle.com/pt-br/iaas/data-flow/using/home.htm)
 
 Inglês:
-- [Documentação do Oracle Cloud Infrastructure Data Flow](https://docs.oracle.com/pt-br/iaas/data-flow/using/home.htm)
-- [Saiba mais sobre o Data Flow - Vídeo](https://docs.oracle.com/pt-br/iaas/data-flow/using/home.htm)
+- [Documentação do Oracle Cloud Infrastructure Data Flow](https://docs.oracle.com/en-us/iaas/data-flow/using/home.htm)
+- [Saiba mais sobre o Data Flow - Vídeo](https://www.oracle.com/br/big-data/data-flow/?ytid=U-8TRHD_UOc)
 - [O que há de novo](https://docs.oracle.com/en-us/iaas/releasenotes/services/data-flow/)
-- [Arquiteturas de referência](https://www.oracle.com/br/cloud/architecture-center/)
+- [Arquiteturas de referência](https://docs.oracle.com/en/solutions/oci-big-data-flow/index.html#GUID-D84476CE-4063-4884-B2EC-793A921A4638)
 
 ## Autoria
 

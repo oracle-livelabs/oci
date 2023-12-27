@@ -131,6 +131,10 @@ Nesta célula, demonstramos o resultado em uma consulta SQL que recupera as prim
 
 Os códigos abaixo demostram uma série de instruções SQL para criar tabelas externas no metastore e inserir dados nelas a partir de uma visualização enriquecida.
 
+Mas antes vammos entender *`O que é uma tabela externa?`*
+
+Uma tabela externa em arquitetura de lakehouse refere-se a dados armazenados externamente ao sistema de gerenciamento de dados, como em um data lake. Essa abordagem permite a análise de dados heterogêneos sem a necessidade de movê-los para um armazenamento interno, promovendo flexibilidade e eficiência na gestão de grandes volumes de dados.
+
 Este código está configurando variáveis no ambiente Spark para que possam ser utilizadas posteriormente. Ao definir *`bucket_ouro`* e *`namespace`*, você está dizendo ao Spark onde armazenar ou buscar dados e como identificar esse conjunto de dados específico. Pense nisso como definir endereços de armazenamento e etiquetas de identificação que serão usados em consultas SQL dentro do Spark. Isso é necessário para que, quando você executar consultas SQL que referenciam essas configurações, o Spark saiba exatamente onde encontrar os dados que você está pedindo.
 
 ![SQL Spark Variáveis](.\images\15-variables-spark-sql.png)
