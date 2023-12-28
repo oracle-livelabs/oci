@@ -39,7 +39,7 @@ Neste laboratório você aprenderá a transformar dados brutos em informações 
 | Ouro   | Dados Otimizados    | • Inclusão de informações externas para fornecer mais contexto aos dados. <br> • Combinação de dados para criar resumos claros e práticos. <br> • Análise de dados aplicando métodos avançados para geração de insights. |
 
 
-# *Vantagens da Arquitetura Medalhão*
+## *Vantagens da Arquitetura Medalhão*
 
 Em suma, a arquitetura medalhão viabiliza um ecossistema de dados robusto, confiável e escalável, essencial para alavancar o potencial de tecnologias avançadas de inteligência artificial e análise de dados, permitindo uma vantagem competitiva no mercado orientado por dados. Nesse contexto, a implementação da arquitetura medalhão apresenta as seguintes vantagens:
 

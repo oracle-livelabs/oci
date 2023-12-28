@@ -13,6 +13,10 @@
             "filename": "../../intro/intro.md"
         },
         {
+            "title": "Get Started",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
             "title": "Lab 1: Configuração do ambiente Conda no OCI Data Science",
             "description": "Aprenda a configurar o ambiente de desenvolvimento no OCI Data Science",
             "filename": "../../ft-ds-config-1/ft-ds-config-1.md"

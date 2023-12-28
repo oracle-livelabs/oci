@@ -209,8 +209,10 @@ Com essa estrutura, é possível realizar uma variedade de análises, como tend�
 ![Query DBeaver](.\images\44-query-dbeaver.png)
 
 ```sql
+<copy>
 SELECT COUNT(*) AS Total_Registros_Produtos
 FROM livelabs_ouro.dim_product;
+</copy>
 ```
 
 ## Conclusão

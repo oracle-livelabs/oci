@@ -73,36 +73,8 @@ Converter dados aninhados JSON para um formato tabular é útil porque a maioria
 
 Por exemplo, considere uma parte do JSON que iremos utilizar antes do achatamento:
 
-```json
-{
-    "data": [
-        {
-            "CO_PAIS": "0",
-            "CO_PAIS_ISON3": "898",
-            "CO_PAIS_ISOA3": "ZZZ",
-            "NO_PAIS": "Não Definido",
-            "NO_PAIS_ING": "Not defined",
-            "NO_PAIS_ESP": "No definido"
-        },
-        {
-            "CO_PAIS": "13",
-            "CO_PAIS_ISON3": "4",
-            "CO_PAIS_ISOA3": "AFG",
-            "NO_PAIS": "Afeganistão",
-            "NO_PAIS_ING": "Afghanistan",
-            "NO_PAIS_ESP": "Afganistan"
-        },
-        {
-            "CO_PAIS": "15",
-            "CO_PAIS_ISON3": "248",
-            "CO_PAIS_ISOA3": "ALA",
-            "NO_PAIS": "Aland",
-            "NO_PAIS_ING": "",
-            "NO_PAIS_ESP": ""
-        }
-    ]
-}
-```
+![Exemplo de arquivo json](.\images\json-print.png)
+
 
 Este JSON contém dados aninhados sob a chave "data". Após achatá-lo, você terá um formato tabular onde cada campo aninhado se torna uma coluna separada:
 
