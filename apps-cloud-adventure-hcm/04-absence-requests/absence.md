@@ -28,7 +28,7 @@ In this activity, you will:
 3. Choose **Vacation** and fill out a Start and End Date and submit your request.
 
 
-   > You can also follow the **Guide Me** instructions.
+   > You can also follow the **Guide Me** instructions for additional support.
 
 
 4. Adventure awaits, show what you know, and rise to the top of the leader board!!!
