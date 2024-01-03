@@ -1,4 +1,4 @@
-# Manage Journals
+# Manage Candidates
 
 ## Introduction
 
