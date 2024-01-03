@@ -43,4 +43,4 @@ The below video gives an overview of challenges a DevOp persona will face for st
     * El Houcine Es Sanhaji, Member of Technical Staff, Oracle Labs
     * Robin Vaaler, Senior Member of Technical Staff,  Oracle Labs
 * **Last Updated By/Date**
-    * El Houcine Es Sanhaji, 12 2023
+    * El Houcine Es Sanhaji, 1 2024

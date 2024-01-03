@@ -143,7 +143,7 @@ Finally, we can create a script to retrieve our secret. The following steps crea
     ``` python
     #!/usr/bin/python3
     # coding: utf-8
-    # COPYRIGHT (c) 2023 ORACLE
+    # COPYRIGHT (c) 2024 ORACLE
 
     import oci
     import base64
@@ -205,4 +205,4 @@ Finally, we can create a script to retrieve our secret. The following steps crea
     - El Houcine Es Sanhaji, Member of Technical Staff, Oracle Labs
     - Robin Vaaler, Senior Member of Technical Staff,  Oracle Labs
 - **Last Updated By/Date**
-    - El Houcine Es Sanhaji, 12 2023
+    - El Houcine Es Sanhaji, 3 2024
