@@ -23,7 +23,7 @@ This lab assumes you have:
 
 ## Task 1: Attacker persona and public bucket access
 
-    The below video show the risks involved when managing credentials in publicly accessible storage.
+The below video show the risks involved when managing credentials in publicly accessible storage.
 
    [
       ![Lab 2 video](../unauthorised-access/images/lab-2.png)
