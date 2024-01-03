@@ -36,7 +36,7 @@ In this activity, you will:
 
     ![My Tasks](images\managerjourneystasks.png)
 
-4. Review the task assigned to you as a manager for the **CommonSpirit New Hire Journey**.
+4. Review the task assigned to you as a manager for the **New Hire Journey**.
 
 
 5. Adventure awaits, show what you know, and rise to the top of the leader board!!!

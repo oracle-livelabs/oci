@@ -37,21 +37,19 @@ In this lab, you will:
 4. Need Help? Choose Review Requisition Guide and follow the guided flow to complete the tasks. Getting Started with Recruiting learning is also available.
    
 
-5. Close the pop up window to return to the XXXXXX
+5. Close the pop up window to return to the main screen.
 
     > **Click ‘Done’**
 
-    ![close window](images/image018.png)
-
 6. You are back at the Home Page
+ 
 
-    ![back to home page](images/image021.png)  
+Adventure awaits, show what you know, and rise to the top of the leader board!!!
 
-## Learn More
-
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)
+(http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
+    
+[Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
 
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant, Cloud HCM
