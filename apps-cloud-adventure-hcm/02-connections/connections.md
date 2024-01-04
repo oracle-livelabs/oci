@@ -48,6 +48,7 @@ Allow workers to promote their personal brand by highlighting their skills, acco
 
   > Click the **‘Home’** Icon
 
+**You may now proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant

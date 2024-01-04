@@ -16,6 +16,13 @@ This Activity Guide will lead you along the way through a set of Adventure Labs,
 2.	Power in Connection and Anytime Feedback
 3.  Visibility and Simplicity Managing Your Team
 
+Adventure awaits, show what you know, and rise to the top of the leader board!!! Let's create your team name!
+
+![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)
+    
+[Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE)
+
+**You may now proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Kerilyn Derkasch, Senior Manager, Oracle Cloud HCM
