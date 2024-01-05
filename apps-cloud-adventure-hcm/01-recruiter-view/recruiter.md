@@ -47,7 +47,7 @@ In this lab, you will:
 Adventure awaits, show what you know, and rise to the top of the leader board!!!
 
 ![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)
-(http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
+
     
 [Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
 
