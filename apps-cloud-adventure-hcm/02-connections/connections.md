@@ -26,9 +26,9 @@ In this activity, you will:
 
 2. Adventure awaits, show what you know, and rise to the top of the leader board!!!
     
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
+    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
     
-    [Click here](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
+    [Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
 
 
 ## Summary
@@ -48,6 +48,7 @@ Allow workers to promote their personal brand by highlighting their skills, acco
 
   > Click the **‘Home’** Icon
 
+**You may now proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant
