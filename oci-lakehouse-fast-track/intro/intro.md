@@ -120,4 +120,4 @@ Inglês:
 ## Autoria
 
 - **Autores** - Thais Henrique, Heloisa Escobar, Isabelle Anjos
-- **Último Update Por/Date** - Isabelle Anjos, Nov/2023
+- **Último Update Por/Date** - Isabelle Anjos, Jan/2024
