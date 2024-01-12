@@ -49,7 +49,7 @@ A compartment is a logical container to organize and control access to OCI resou
     ![Create Compartment](../setup-oci-vault/images/com-2.png "Create Compartment")
 6. Go into the new Compartment and copy the OCID; this will be used next.
 
-## Task 2: Create a Dynamic Group
+## Task 3: Create a Dynamic Group
 
 A Dynamic Group is a group that dynamically grant access to resources based on a rule. Our Dynamic Group will be used with a matching rule to determine which instances we want to allow API calls against the service we are going to use.
 
@@ -67,7 +67,7 @@ Use the following steps to create a dynamic group.
 5. Click the Create Dynamic Group button to save
     ![Create Dynamic](../setup-oci-vault/images/dg-2.png "Create Dynamic")
 
-## Task 3: Create a Vault
+## Task 4: Create a Vault
 
 We will now create a Vault in the target compartment, then add a key that will be used to encrypt a new secret. The secret could be anything, but for our example we will store a API-token. Note that you could add multiple secrets if needed. Using the following steps to create a vault, a key, and a secret.
 
@@ -101,7 +101,7 @@ We will now create a Vault in the target compartment, then add a key that will b
     ![Create Vault](../setup-oci-vault/images/v-6.png "Create Secret")
 18. Copy the secret OCID to be used next.
 
-## Task 4: Create a Policy using the Dynamic Group
+## Task 5: Create a Policy using the Dynamic Group
 
 After you have created a dynamic group, you need to create policy to permit the dynamic groups to access OCI services.
 
@@ -128,7 +128,7 @@ Use the following steps to create a the policy:
 5. Click the Create button to save
     ![Create Policy](../setup-oci-vault/images/p-3.png "Create Policy")
 
-## Task 5: Retrieve the secret from the Compute Instance
+## Task 6: Retrieve the secret from the Compute Instance
 
 Finally, we can create a script to retrieve our secret. The following steps creates a Python script that you can use as a framework to build on, but this could also be done in other languages that are supported such as Java, Ruby, and Go — [Software Development Kits and Command Line Interface](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm). Use the following steps to create a Python script with the given example.
 
