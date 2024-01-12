@@ -42,6 +42,7 @@ In this activity, you will:
 
     [Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
 
+**You may now proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant
