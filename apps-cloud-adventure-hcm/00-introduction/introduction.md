@@ -7,7 +7,7 @@ Welcome to Oracle Cloud Adventure for Human Capital Management.  This hands-on e
 We hope you will enjoy today’s adventure exploring a complete and unified solution for HR Professionals.  
 
 
-Estimated Adventure Time: 21 minutes
+Estimated Adventure Time: 36 minutes
 
 ### Objectives
 
