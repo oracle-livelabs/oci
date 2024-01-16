@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Neste laboratório, você irá aprender a manipular um conjunto de dados seguindo o modelo da estrutura medalhão (bronze, prata e ouro) através do Data Flow Studio, que foi configurado anteriormente dentro do OCI Data Science. 
+Neste laboratório, você irá aprender a manipular um conjunto de dados seguindo o modelo da estrutura medalhão (bronze, prata e ouro) através do Data Flow Studio, que foi configurado anteriormente dentro do OCI Data Science.
 
 Ao final de cada etapa desta arquitetura medalhão, será importante armazenar as tabelas modificadas em buckets. Isso é necessário devido à natureza do processamento em memória do Data Flow, onde os dados são temporários e se perdem após o encerramento da sessão, tornando essencial a persistência dos dados processados em um armazenamento durável como os buckets.
 
@@ -87,11 +87,11 @@ Quando você insere o magic command *`%%spark`* em uma célula do notebook e exe
 
 1. Se você executar o comando como indicado na imagem abaixo, ele será executado localmente no Jupyter Notebook.
 
-![Spark Comandos](.\images\1-print-local.png)
+   ![Spark Comandos](.\images\1-print-local.png)
 
 2. Agora se você executar o comando como indicado nesta outra imagem abaixo, ele será executado no Cluster Spark do OCI Data Flow.
 
-![Spark Comandos](.\images\2-print-flow.png)
+   ![Spark Comandos](.\images\2-print-flow.png)
 
 
 Portanto, o comando *`%%spark`* funciona como uma ponte entre o seu notebook Jupyter e o cluster Spark remoto do Data Flow. Ele permite que você escreva código Spark no notebook e tenha esse código executado no cluster Spark.  Uma vez que o código é processado no cluster Spark, os resultados são então enviados de volta e exibidos no seu ambiente OCI Data Science.
@@ -108,9 +108,9 @@ Conforme o código no laboratório anterior, a autenticação é realizada para 
 
 Além de preparar o ambiente para trabalhar com Apache Spark na Oracle Cloud Infrastructure (OCI) e configura a autenticação necessária para acessar outros serviços da OCI, como buckets do Object Storage. Ele também garante que versões mais recentes e seguras de bibliotecas de criptografia sejam utilizadas.
 
-**1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
 
-![Autenticação Spark](.\images\2-authentication-spark.png)
+   ![Autenticação Spark](.\images\2-authentication-spark.png)
 
 ### *Criação de Variáveis do Ambiente*
 
@@ -118,9 +118,9 @@ Além de preparar o ambiente para trabalhar com Apache Spark na Oracle Cloud Inf
 
 O código abaixo tem como objetivo buscar o ID do compartimento na Oracle Cloud Infrastructure (OCI). No entanto, ao contrário do que foi feito no laboratório 2, onde uma variável de ambiente disponível no ambiente do Data Science da OCI foi utilizada para obter essa informação, neste contexto atual não temos acesso a essa variável de ambiente para realizar a mesma operação. Portanto, o código precisa de um método alternativo para obter o ID do compartimento, que neste caso é feito através da listagem de todos os compartimentos acessíveis e buscando Data Flows em cada um para encontrar o ID desejado.
 
-**2. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+2. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
 
-![Criação Variáveis Identificadores](.\images\3-compartment-id.png)
+   ![Criação Variáveis Identificadores](.\images\3-compartment-id.png)
 
 > **Porque devo declarar novamente as variáveis?** Como mencionado anteriormente, existe uma distinção importante entre as células executadas com `%%spark` e aquelas sem ele no nosso ambiente. As células com `%%spark` são processadas dentro do Data Flow Studio, ao passo que as células sem ele são executadas no OCI Data Science. Essa é a razão pela qual precisamos declarar a informação do namespace do bucket mais uma vez – pois nosso contexto mudou do Data Science para o Data Flow Studio, onde a informação será utilizada novamente.
 
@@ -128,9 +128,9 @@ Em seguida, executaremos o código abaixo, que apresenta como objetivo buscar o 
 
 Os buckets obtidos serão utilizados para armazenamento dos dados na arquitetura medalhão em cada etapa durante o processo.
 
-**3. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+3. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
 
-![Spark Variáveis](.\images\4-spark-variables.png)
+   ![Spark Variáveis](.\images\4-spark-variables.png)
 
 ## Tarefa 3: Importando Dados do Bucket 
 
@@ -138,21 +138,21 @@ Neste passo, estamos definindo a variável *`csv_file_path`* para armazenar o ca
 
 Estamos buscando os arquivo em um bucket BRONZE, chamado *`oci://+bucket_bronze+@+namespace+`*, cujas variáveis foram definidas acima. Em seguida, estamos utilizando o Spark para ler o arquivo CSV e em seguida, JSON. 
 
-**1. Selecione A célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+1. Selecione A célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
 
-![Importanto Bucket CSV](.\images\5-import-csv.png)
+   ![Importanto Bucket CSV](.\images\5-import-csv.png)
 
 O primeiro arquivo, identificado como *`EXPORTACAO_BRASIL_LIVELABS`* será nosso dataset principal, com as informações listadas em "Visão Geral do Conjunto de Dados", primeira etapa deste laboratório. O segundo arquivo *`CODIGO_PAISES_LIVELABS.json`* contém informações sobre códigos de países, incluindo os nomes dos países codificados numericamente em nosso dataset original. O terceiro e quarto arquivos, *`CODIGO_NCM.xlsx`* e *`CODIGO_VIA.csv`*, contém códigos NCM, que são usados para classificar mercadorias em categorias para fins de comércio e tarifação, e o nome das vias de exportação (marítima, fluvial, etc.), informação esta que está codificada no dataset original.
 
 > O comando *`printSchema()`* é usado para detalhar as colunas, tipos de dados e se as colunas aceitam valores nulos em cada DataFrame. 
 
-**2. Selecione cada célula e execute-as com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+2. Selecione cada célula e execute-as com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
 
-![Importanto Bucket JSON Código Paises](.\images\6-country-code.png)
+   ![Importanto Bucket JSON Código Paises](.\images\6-country-code.png)
 
-![Importanto Bucket CSV VIA](.\images\7-import-csv-via.png)
+   ![Importanto Bucket CSV VIA](.\images\7-import-csv-via.png)
 
-![Importanto Bucket CSV NCM](.\images\8-ncm-code.png)
+   ![Importanto Bucket CSV NCM](.\images\8-ncm-code.png)
 
 O primeiro arquivo, identificado como *`CODIGO_PAISES_LIVELABS.json`*, contém informações sobre códigos de países, incluindo os nomes dos países codificados numericamente em nosso dataframe original. O segundo arquivo, *`CODIGO_NCM.xlsx`*, contém códigos NCM, que são usados para classificar mercadorias em categorias para fins de comércio e tarifação.
 
@@ -181,9 +181,9 @@ Este é o nome do arquivo específico localizado dentro do bucket bronze. No con
 
 Neste código, estamos utilizando o Apache Spark para salvar um DataFrame derivado de um arquivo CSV e outros de arquivos JSON no formato *Delta Lake* em um bucket, usando caminhos específicos para cada tipo de dado.
 
-**1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+   1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
 
-![Save Delta Bronze](.\images\9-save-delta-bronze.png)
+   ![Save Delta Bronze](.\images\9-save-delta-bronze.png)
 
 ### *O que é um Arquivo Delta?*
 
@@ -211,4 +211,4 @@ Nesta sessão, você aprendeu a manipular dados nas camadas bronze, prata e ouro
 ## Autoria
 
 - **Autores** - Thais Henrique, Heloisa Escobar, Isabelle Anjos
-- **Último Update Por/Date** - Isabelle Anjos, Nov/2023
+- **Último Update Por/Date** - Isabelle Anjos, Jan/2024
