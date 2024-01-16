@@ -26,13 +26,15 @@ This lab assumes you have:
 The below video gives an overview of challenges a DevOp persona will face for storing credentials in a bucket.
 
    [
-      ![Lab 1 video](../credentials-in-bucket/images/lab-1.png)
-   ](../credentials-in-bucket/file/lab-1.mp4)
+      ![Lab 1 video](../credentials-in-bucket/images/lab-1-image.png)
+   ](../credentials-in-bucket/file/lab-1-video.mp4)
 
 ## Learn More
 
 * [OCI Bucket](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/managingbuckets.htm)
 * [OCI DevOps](https://www.oracle.com/devops/devops-service/)
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

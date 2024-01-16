@@ -10,20 +10,23 @@ Estimated Workshop Time: 2 hours
 
 In this workshop, you will learn how to:
 
-- **Lab 1:**
-    - Understand the challenges associated with storing credentials in OCI buckets for automation purposes.
-    - Recognize the potential risks and security implications of mishandling credentials within an OCI setup.
-    - Experience the consequences of unauthorized access resulting from the misuse of credentials.
+#### Lab 1
 
-- **Lab 2:**
-    - Comprehend the risks associated with publicly accessible buckets in OCI.
-    - Explore the perspective of an attacker gaining unauthorized access to a public bucket.
-    - Analyze the potential exploits and risks involved when managing credentials in publicly accessible storage.
+- Understand the challenges associated with storing credentials in OCI buckets for automation purposes.
+- Recognize the potential risks and security implications of mishandling credentials within an OCI setup.
+- Experience the consequences of unauthorized access resulting from the misuse of credentials.
 
-- **Lab 3:**
-    - Learn the importance of secure credential management in OCI.
-    - Utilize OCI Vault to securely store and manage credentials.
-    - Understand the proper workflow of accessing credentials from OCI Vault and applying them to interact with REST APIs.
+#### Lab 2
+
+- Comprehend the risks associated with publicly accessible buckets in OCI.
+- Explore the perspective of an attacker gaining unauthorized access to a public bucket.
+- Analyze the potential exploits and risks involved when managing credentials in publicly accessible storage.
+
+#### Lab 3
+
+- Learn the importance of secure credential management in OCI.
+- Utilize OCI Vault to securely store and manage credentials.
+- Understand the proper workflow of accessing credentials from OCI Vault and applying them to interact with REST APIs.
 
 ### Prerequisites
 
@@ -36,6 +39,8 @@ This lab assumes you have:
 
 - [OCI Bucket](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/managingbuckets.htm)
 - [OCI Key Management](https://www.oracle.com/security/cloud-security/key-management/#protect-enterprise)
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

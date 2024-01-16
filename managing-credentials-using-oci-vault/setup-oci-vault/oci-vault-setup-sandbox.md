@@ -44,14 +44,14 @@ Use the following steps to create a dynamic group.
 1. Login to the OCI Console
 2. Go to Menu > Identity & Security > Dynamic Groups
 3. Click the Create Dynamic Group button
-    ![Create Dynamic](../setup-oci-vault/images/dg-1.png "Create Dynamic")
+    ![Console Menu](../setup-oci-vault/images/dynamic-group-image-1.png "Console Menu")
 4. Enter the following:
     - Name: `my-secret-group`
     - Description: `My Secret Dynamic Group`
     - Rule: `any {instance.compartment.id = '<ocid_compartment>'}`
     - NOTE: Where `<ocid_compartment>` is the ocid of the target compartment.
 5. Click the Create Dynamic Group button to save
-    ![Create Dynamic](../setup-oci-vault/images/dg-2.png "Create Dynamic")
+    ![Create Dynamic Group](../setup-oci-vault/images/dynamic-group-image-2.png "Create Dynamic Group")
 
 ## Task 3: Create a Vault
 
@@ -59,21 +59,21 @@ We will now create a Vault in the target compartment, then add a key that will b
 
 1. Login to the OCI Console
 2. Go to Menu > Identity & Security > Vault
-    ![Create Vault](../setup-oci-vault/images/v-1.png "Create Vault")
+    ![Console Menu](../setup-oci-vault/images/vault-image-1.png "Console Menu")
 3. Select the target compartment
 4. Click the Create Vault button
 5. Enter the following:
     - Name:  `my-vault`
 6. Click Create Vault button to save
-    ![Create Vault](../setup-oci-vault/images/v-2.png "Create Vault")
+    ![Create Vault Form](../setup-oci-vault/images/vault-image-2.png "Create Vault Form")
 7. Click on the `my-vault` that was just created
 8. Click on the Keys link under Resources
-    ![Create Vault](../setup-oci-vault/images/v-3.png "Create Key")
+    ![Details of Vault](../setup-oci-vault/images/vault-image-3.png "Details of Vault")
 9. Click Create Key button
 10. Enter a Name for the key (e.g. `my-vault-key`)
 11. Select 256 bits from the Key Shape
 12. Click Create Key button to save
-    ![Create Vault](../setup-oci-vault/images/v-4.png "Create Key")
+    ![Create Key Form](../setup-oci-vault/images/vault-image-4.png "Create Key Form")
 13. Click on the Secrets link under Resources
 14. Click Create Secret button
 15. Enter the following:
@@ -82,9 +82,9 @@ We will now create a Vault in the target compartment, then add a key that will b
       - Encryption Key: select `my-vault-key` created earlier
       - Secret Contents: `<my secret here>`
 16. Click Create Secret button
-    ![Create Vault](../setup-oci-vault/images/v-5.png "Create Secret")
+    ![Create Secret Interface ](../setup-oci-vault/images/vault-image-5.png "Create Secret Interface")
 17. Click on the secret `my-secret`
-    ![Create Vault](../setup-oci-vault/images/v-6.png "Create Secret")
+    ![Create Secret Form](../setup-oci-vault/images/vault-image-6.png "Create Secret Form")
 18. Copy the secret OCID to be used next.
 
 ## Task 4: Create a Policy using the Dynamic Group
@@ -96,7 +96,7 @@ The below policy statement allows all instances in the dynamic group `my-secret-
 > Note: Better policy to only access a specific secret
 
 ``` txt
-allow dynamic-group my-secret-group to read secret-family in compartment my-compartment where target.secret.name = 'my-secret'
+<copy> allow dynamic-group my-secret-group to read secret-family in compartment my-compartment where target.secret.name = 'my-secret' </copy>
 ```
 
 Use the following steps to create a the policy:
@@ -105,16 +105,16 @@ Use the following steps to create a the policy:
 
 1. Login to the OCI Console
 2. Go to Menu > Identity & Security> Policies
-    ![Create Policy](../setup-oci-vault/images/p-1.png "Create Policy")
+    ![Console Menu](../setup-oci-vault/images/policy-image-1.png "Console Menu")
 3. Click the Create Policy button
-    ![Create Policy](../setup-oci-vault/images/p-2.png "Create Policy")
+    ![Create Policy Interface](../setup-oci-vault/images/policy-image-2.png "Create Policy Interface")
 4. Enter the following:
     - Name: `my-secret-policy`
     - Description: `My Secret Policy`
     - Statements :
         - `allow dynamic-group my-secret-group to read secret-family in compartment my-compartment where target.secret.name = 'my-secret'`
 5. Click the Create button to save
-    ![Create Policy](../setup-oci-vault/images/p-3.png "Create Policy")
+    ![Create Policy Form](../setup-oci-vault/images/policy-image-3.png "Create Policy Form")
 
 ## Task 5: Retrieve the secret from the Compute Instance
 
@@ -122,25 +122,30 @@ Finally, we can create a script to retrieve our secret. The following steps crea
 
 1. Login to the OCI Console
 2. Go to Menu > Computes > Instances
-    ![Access the instance](../setup-oci-vault/images/i-1.png "Access the instance")
+    ![Console Menu](../setup-oci-vault/images/instance-image-1.png "Console Menu")
 3. Select the correct compartment
 4. Copy the public IP
-    ![Access the instance](../setup-oci-vault/images/i-2.png "Access the instance")
+    ![Access Instance Public IP](../setup-oci-vault/images/instance-image-2.png "Access Instance Public IP")
 5. Open a Shell session and run the below command
 
     ``` bash
+    <copy>
     ssh opc@<instance-public-ip>
+    </copy>
     ```
 
 6. Create a file.
 
     ``` bash
+    <copy>
     vim get-secret.py
+    </copy>
     ```
 
 7. Press `i` and paste in the following Python script.
 
     ``` python
+    <copy>
     #!/usr/bin/python3
     # coding: utf-8
     # COPYRIGHT (c) 2024 ORACLE
@@ -173,21 +178,26 @@ Finally, we can create a script to retrieve our secret. The following steps crea
     # Print secret
     secret_contents = read_secret_value(secret_client, secret_id)
     print(format(secret_contents))
+    </copy>
     ```
 
 8. Be sure to change the `secret_id` ocid in the `get-secret.py` script with your secret, then save and exit.
 9. Make the `get-secret.py` script executable.
 
     ``` bash
+    <copy>
     chmod +x get-secret.py
+    </copy>
     ```
 
 10. Run the following command to magically return the secret.  
 
     ``` bash
+    <copy>
     ./get-secret.py
 
     <my secret here>
+    </copy>
     ```
 
 ## Learn More

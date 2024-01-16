@@ -1,6 +1,6 @@
 {
     "workshoptitle": "Manage properly credentials in Oracle Cloud Infrastructure with OCI Vault",
-    "help": "livelabs-help-oci_us@oracle.com",
+    "help": "andrea.romano@oracle.com",
     "variables": [],
     "tutorials": [
         {

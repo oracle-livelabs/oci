@@ -26,13 +26,15 @@ This lab assumes you have:
 The below video show the risks involved when managing credentials in publicly accessible storage.
 
    [
-      ![Lab 2 video](../unauthorised-access/images/lab-2.png)
-   ](../unauthorised-access/file/lab-2.mp4)
+      ![Lab 2 video](../unauthorised-access/images/lab-2-image.png)
+   ](../unauthorised-access/file/lab-2-video.mp4)
 
 ## Learn More
 
 - [OCI Bucket](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/managingbuckets.htm)
 - [OCI DevOps](https://www.oracle.com/devops/devops-service/)
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
