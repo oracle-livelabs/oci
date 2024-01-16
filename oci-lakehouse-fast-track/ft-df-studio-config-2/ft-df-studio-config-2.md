@@ -115,7 +115,7 @@ Segue uma relação de comandos disponíveis no ambiente do OCI Data Science. Pa
 | `Esc` e depois `I`, `I`         | Interromper a execução da célula           |
 
 
-## Tarefa 2: Autenticação
+## Tarefa 1: Autenticação
 
 Para garantir um processo de análise de dados suave e eficiente no Data Flow Studio, é essencial estabelecer corretamente os métodos de autenticação. Nesta seção focaremos no *Tópico 1*, que é dedicado a este processo.
 
@@ -123,24 +123,24 @@ O Oracle Accelerated Data Science SDK (ADS) controla o mecanismo de autenticaç�
 
 O parâmetro *`resource_principal`* indica que está sendo utilizado um método de autenticação específico, associado a recursos e políticas de segurança dentro da infraestrutura da Oracle Cloud. Assim, o código está preparando o ambiente para que o usuário possa interagir de forma segura com o Spark, garantindo que todas as operações realizadas estejam autenticadas e autorizadas de acordo com as configurações do OCI Data Science.
 
-**1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
 
-![Realizando Autenticação](.\images\1-authentication.png)
+    ![Realizando Autenticação](.\images\1-authentication.png)
 
 O código abaixo realiza a autenticação para usar serviços da Oracle Cloud Infrastructure, especialmente o Data Flow Studio. Ele importa bibliotecas necessárias, incluindo o SDK da OCI, e configura um assinante de princípios de recursos, que permite fazer solicitações autenticadas aos serviços da OCI sem gerenciar manualmente as credenciais.
 
-**2. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+2. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
 
-![Realizando Autenticação](.\images\2-authentication-df.png)
+    ![Realizando Autenticação](.\images\2-authentication-df.png)
 
 
-## Tarefa 3: Criação de Variáveis
+## Tarefa 2: Criação de Variáveis
 
 Este código está configurando algumas variáveis importantes para serem utilizadas durante a *criação da sessão Spark*. 
 
-**1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
 
-![Variáveies Notebook](.\images\2-variables.png)
+    ![Variáveies Notebook](.\images\2-variables.png)
 
 ### *Informação sobre o compartment ID*
 
@@ -158,7 +158,7 @@ O código lista todos os buckets em um namespace e compartimento específicos da
 
 Esta etapa do código configura um cliente para o Data Catalog da OCI, lista os metastores em um compartimento especificado e extrai o ID do primeiro metastore encontrado, armazenando-o em uma variável.
 
-## Tarefa 4: Data Flow Spark Magic
+## Tarefa 3: Data Flow Spark Magic
 
 ### *Apache Spark e Data Flow*
 
@@ -176,9 +176,9 @@ O Apache Spark é especialmente conhecido por sua capacidade de processar rapida
 
 O código apresentado define uma função auxiliar chamada `prepare_command`. uma ferramenta de conveniência para transformar argumentos que são armazenados em variáveis Python ou estruturas de dados em uma forma que pode ser utilizada pelos comandos mágicos do Spark, que muitas vezes esperam argumentos em formato de string.
 
-**1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
 
-![Código Helpers](.\images\3-helpers.png)
+    ![Código Helpers](.\images\3-helpers.png)
 
 Esses comandos mágicos permitem interagir de maneira eficiente com o Spark, facilitando a execução de operações complexas de processamento de dados de forma mais simplificada e integrada dentro do ambiente do notebook Jupyter. 
 
@@ -192,30 +192,30 @@ O Data Flow Spark Magic refere-se a uma coleção de "comandos mágicos" especia
 
 Você precisa ativar o  Data Flow Spark Magic em seu notebook usando o comando mágico *`%load_ext dataflow.magics.`*
 
-**2. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+2. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
 
-![Código Data Flow Magic](.\images\4-load-spark-magic.png)
+    ![Código Data Flow Magic](.\images\4-load-spark-magic.png)
 
 Após a ativação da extensão, o comando *`%help`* pode ser usado para obter a lista de todos os comandos disponíveis, juntamente com uma lista de seus argumentos e exemplos de chamadas.
 
-**3. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+3. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
 
-![Código Helpers](.\images\5-help.png)
+    ![Código Helpers](.\images\5-help.png)
 
 > **[OPCIONAL] Doctring**: Para entender o propósito e os argumentos de um comando mágico no Jupyter Notebook, você pode adicionar um *`?`* ao final do comando, o que exibirá a docstring, um texto explicativo incorporado no código que fornece detalhes sobre sua funcionalidade. ![Código Docstring](.\images\1-callout-docstring.png)
 
-## Tarefa 5: Criando uma Sessão
+## Tarefa 4: Criando uma Sessão
 
 Neste momento do tutorial, vamos reutilizar algumas variáveis que foram criadas anteriormente na **Tarefa 3**. Vamos integrá-las na criação da sessão do Data Flow Studio.
 
 Para criar uma nova sessão de cluster do Data Flow, vamos utilizar o comando mágico *`%create_session`*.
 De forma geral, este comando está configurando e iniciando uma nova sessão de cluster do Data Flow no OCI Data Science, especificando detalhes como o tipo de máquina virtual, configurações de CPU e memória, versão do Spark, e onde armazenar os logs. 
 
-**1. Selecione cada uma das células e execute-as com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+1. Selecione cada uma das células e execute-as com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
 
-![Criando sessão](.\images\6-create-session.png)
+    ![Criando sessão](.\images\6-create-session.png)
 
-![Criando sessão comando](.\images\7-create-session-command.png)
+    ![Criando sessão comando](.\images\7-create-session-command.png)
 
 Vamos decompor cada parte para uma explicação mais simples:
 
@@ -245,20 +245,19 @@ Opções do Comando:
 - *"configuration":* Configurações adicionais, como a localização do ambiente do Spark e outras opções de configuração.
 - *"metastoreId":* Um identificador para o metastore de dados usado. Um metastore é um repositório central para armazenar metadados sobre as estruturas de dados, como tabelas e esquemas, dentro do ambiente Spark.
 
+2. Depois de executar a célula que contém o comando mágico, aguarde a criação da sessão Spark.**
 
-**2. Depois de executar a célula que contém o comando mágico, aguarde a criação da sessão Spark.**
-
-![Progresso Cluster](.\images\8-progress-cluster.png)
+    ![Progresso Cluster](.\images\8-progress-cluster.png)
 
 A sessão do Spark estará pronta para ser utilizada assim que a seguinte mensagem for exibida.
 
 Cada vez que você cria uma nova sessão, um novo "Session ID" é atribuído a essa sessão, permitindo que o ambiente de cluster diferencie entre múltiplas sessões que podem estar ocorrendo simultaneamente. Esse ID pode ser utilizado para retomar, gerenciar ou encerrar a sessão específica a qualquer momento.
 
-![Cluster Pronto](.\images\9-cluster-ready.png)
+    ![Cluster Pronto](.\images\9-cluster-ready.png)
 
-**3. Utilize o comando mágico *`%status`* para verificar o status da sessão atual.**
+3. Utilize o comando mágico *`%status`* para verificar o status da sessão atual.**
 
-![Status Cluster](.\images\10-status-cluster.png)
+    ![Status Cluster](.\images\10-status-cluster.png)
 
 > **Nota:** Os clusters da Sessão do OCI Data Flow ficam ativos por 24 horas (1440 minutos) por padrão, porém você pode customizar esse período para criar sessões que permanecerão ativas por até 7 dias (10,080 minutos)(maxDurationInMinutes).
 
@@ -273,4 +272,4 @@ Nesta laboratório, você aprendeu como utilizar notebooks Jupyter no OCI Data S
 ## Autoria
 
 - **Autores** - Thais Henrique, Heloisa Escobar, Isabelle Anjos
-- **Último Update Por/Date** - Isabelle Anjos, Nov/2023
+- **Último Update Por/Date** - Isabelle Anjos, Jan/2024
