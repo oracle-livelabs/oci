@@ -249,9 +249,9 @@ Opções do Comando:
 
     ![Progresso Cluster](.\images\8-progress-cluster.png)
 
-A sessão do Spark estará pronta para ser utilizada assim que a seguinte mensagem for exibida.
+    A sessão do Spark estará pronta para ser utilizada assim que a seguinte mensagem for exibida.
 
-Cada vez que você cria uma nova sessão, um novo "Session ID" é atribuído a essa sessão, permitindo que o ambiente de cluster diferencie entre múltiplas sessões que podem estar ocorrendo simultaneamente. Esse ID pode ser utilizado para retomar, gerenciar ou encerrar a sessão específica a qualquer momento.
+    Cada vez que você cria uma nova sessão, um novo "Session ID" é atribuído a essa sessão, permitindo que o ambiente de cluster diferencie entre múltiplas sessões que podem estar ocorrendo simultaneamente. Esse ID pode ser utilizado para retomar, gerenciar ou encerrar a sessão específica a qualquer momento.
 
     ![Cluster Pronto](.\images\9-cluster-ready.png)
 
