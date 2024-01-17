@@ -10,9 +10,9 @@
             "filename": "../../intro/intro.md"
         },
         {
-            "title": "Setup Ambiente",
-            "description": "Aprenda a Rodar o Terraform em OCI para preparação do ambiente",
-            "filename": "../../ft-resource-provision/ft-resource-provision.md"            
+            "title": "Pré Requisito - Provisionar Recursos",
+            "description": "Aprenda a Rodar o Terraform em OCI criação dos pré-requisitos do ambiente",
+            "filename": "../../ft-resource-provision/ft-resource-provision.md"
         },
         {
             "title": "Lab 1: Configuração do ambiente Conda no OCI Data Science",
