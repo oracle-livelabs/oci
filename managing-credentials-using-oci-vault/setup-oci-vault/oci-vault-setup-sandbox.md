@@ -30,7 +30,7 @@ This lab assumes you have:
 
 ## Task 1: Create a Dynamic Group (Already in Place)
 
-> Note: Keep in mind that the Dynamic Group is already created for you in the Sandbox environment, so you wouldn't need to create it.
+> **Note**: Keep in mind that the Dynamic Group is already created for you in the Sandbox environment, so you wouldn't need to create it.
 
 A Dynamic Group is a group that dynamically grant access to resources based on a rule. Our Dynamic Group will be used with a matching rule to determine which instances we want to allow API calls against the service we are going to use.
 
@@ -82,13 +82,13 @@ We will now create a Vault in the target compartment, then add a key that will b
 
 ## Task 3: Create a Policy using the Dynamic Group (Already in Place)
 
-> Note: Keep in mind that the Policy is already created for you, in the Sandbox environment, so you wouldn't need to create it.
+> **Note**: Keep in mind that the Policy is already created for you, in the Sandbox environment, so you wouldn't need to create it.
 
 The policy will permit the dynamic groups to access OCI services.
 
 The below policy statement allows all instances in the dynamic group `my-secret-group` to access the secret `my-secret`.
 
-> Note: Better policy to only access a specific secret
+> **Note**: Better policy to only access a specific secret
 
 ``` txt
 <copy> allow dynamic-group my-secret-group to read secret-family in compartment my-compartment where target.secret.name = 'my-secret' </copy>

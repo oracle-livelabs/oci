@@ -102,7 +102,7 @@ After you have created a dynamic group, you need to create policy to permit the 
 
 The below policy statement allows all instances in the dynamic group `my-secret-group` to access the secret `my-secret`.
 
-> Note: Better policy to only access a specific secret
+> **Note**: Better policy to only access a specific secret
 
 ``` txt
 <copy> allow dynamic-group my-secret-group to read secret-family in compartment my-compartment where target.secret.name = 'my-secret' </copy>
