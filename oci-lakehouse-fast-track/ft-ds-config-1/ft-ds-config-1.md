@@ -49,7 +49,7 @@ Um kernel atua como o coração do seu projeto Jupyter, equipado com todas as fe
 
     ![Verificar Compartment](.\images\4-compartment-data-science.png)
 
-Se não estiver, clique no menu suspenso e escolha essa opção específica.
+    Se não estiver, clique no menu suspenso e escolha essa opção específica.
 
     ![Selecionar Compartment](.\images\5-compartment-selection.png)
 
