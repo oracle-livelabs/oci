@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "OCI Network Firewall Common Use Cases",
+    "workshoptitle": "OCI DNS Traffic Management Policies",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -12,28 +12,32 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: OCI Network Firewall deployment",
+            "title": "Lab 1: Deploy the Web Services in OCI",
             "filename": "../../lab1/lab1.md"
         },
         {
-            "title": "Lab 2: East-West Traffic Inspection",
+            "title": "Lab 2: DNS Zone and OCI Health Checks",
             "filename": "../../lab2/lab2.md"
         },
         {
-            "title": "Lab 3: Inspect outbound Internet traffic",
+            "title": "Lab 3: Load balancer steering policy",
             "filename": "../../lab3/lab3.md"
         },
         {
-            "title": "Lab 4: Inspect outbound traffic to OCI Services",
+            "title": "Lab 4: Failover steering policy",
             "filename": "../../lab4/lab4.md"
         },
         {
-            "title": "Lab 5: Inspect inbound Internet traffic",
+            "title": "Lab 5: Geolocation steering policy",
             "filename": "../../lab5/lab5.md"
         },
         {
-            "title": "Lab 6: SSL Decryption and Intrusion Detection",
+            "title": "Lab 6: ASN steering policy",
             "filename": "../../lab6/lab6.md"
+        },
+        {
+            "title": "Lab 7: IP prefix steering policy",
+            "filename": "../../lab6/lab7.md"
         },
         {
             "title": "Need Help?",

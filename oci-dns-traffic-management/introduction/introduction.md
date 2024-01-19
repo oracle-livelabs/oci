@@ -4,24 +4,28 @@
 
 Estimated Time: 3 - 5 hours
 
-OCI Network Firewall is a next-generation managed network firewall and intrusion detection and prevention service for your Oracle Cloud Infrastructure virtual cloud network (VCN), powered by Palo Alto Networks®. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/network-firewall/home.htm) for more information on the Network Firewall service. We will explore various, common, use-cases and look into step-by-step guides on implementing each one of them.
+Traffic Management helps you guide traffic to endpoints based on various conditions, including endpoint health and the geographic origins of DNS requests. Use Traffic Management steering policies to serve intelligent responses to DNS queries, meaning different answers (endpoints) might be served for the query depending on the logic defined in the policy. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/DNS/home.htm) for more information on the Public DNS service. 
 
 To gain more familiarity with Oracle Cloud's networking concepts, I would recommend watching our introductory [Oracle Cloud Networking YouTube series](https://youtu.be/mIYSgeX5FkM) as well as the [Oracle Cloud Networking Overview Documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm).
+
+In this workshop we will do a step-by-step implementation for each type of DNS Traffic Management steering policy. 
 
 ### Objectives
 
 In this workshop, you will learn how to:
 
 * Deploy a Virtual Cloud Network (VCN), Subnets, Route tables, Security Lists.
-* Deploy OCI Network Firewalls and use different configuration items in the Firewall Security Policy.
-* Adjust routing inside the OCI VCN so we introduce a Network Firewall on the path.
+* Delegate Public DNS Zones to OCI.
+* Configure each type of DNS Traffic Management steering policy.
 
 ### Prerequisites
 
-This lab assumes you have:
+This lab requires that you have:
 
 * Administrative Oracle Cloud Access to provision networking and compute resources.
-* Basic knowledge of OCI Networking components and networking.
+* Basic knowledge of OCI Networking components, DNS and networking.
+* A DNS Domain/Zone that you own or manage. This workshop will use the domain **oci-lab.cloud** however you will need to use your own domain to complete the workshop's labs.
+* SSL/TLS Certificates and private keys for the domain that you will use.  
 
 ### Workflow
 
@@ -31,4 +35,4 @@ For deploying resources of any kind, OCI asks for an IAM Compartment. Every reso
 ## Acknowledgements
 
 * **Author** - Radu Nistor, Principal Cloud Architect, OCI Networking
-* **Last Updated By/Date** - Radu Nistor, November 2023
+* **Last Updated By/Date** - Radu Nistor, February 2024
