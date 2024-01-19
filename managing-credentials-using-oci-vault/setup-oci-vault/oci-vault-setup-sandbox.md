@@ -67,7 +67,9 @@ We will now create a Vault in the target compartment, then add a key that will b
 11. Select 256 bits from the Key Shape
 12. Click Create Key button to save
     ![Create Key Form](../setup-oci-vault/images/vault-image-4.png "Create Key Form")
+
     > **Note**: You may face an error saying `Cannot read properties of undefined (reading 'toString')`, just give it 5 minutes and try again.
+
 13. Click on the Secrets link under Resources
 14. Click Create Secret button
 15. Enter the following:
