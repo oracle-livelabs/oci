@@ -48,7 +48,7 @@ A Dynamic Group is a group that dynamically grant access to resources based on a
 
 ## Task 2: Create a Vault
 
-We will now create a Vault in the target compartment, then add a key that will be used to encrypt a new secret. The secret could be anything, but for our example we will store a API-token. Note that you could add multiple secrets if needed. Using the following steps to create a vault, a key, and a secret.
+We will now create a Vault in the target compartment, then add a key that will be used to encrypt a new secret. The secret could be anything, but for our example we will store an API-token. Note that you could add multiple secrets if needed. Using the following steps to create a vault, a key, and a secret.
 
 1. Login to the OCI Console
 2. Go to Menu > Identity & Security > Vault
@@ -82,6 +82,7 @@ We will now create a Vault in the target compartment, then add a key that will b
 17. Click on the secret `my-secret`
     ![Create Secret Form](../setup-oci-vault/images/vault-image-6.png "Create Secret Form")
 18. Copy the secret OCID to be used next.
+    ![Secret OCID](../setup-oci-vault/images/vault-image-7.png "Secret OCID")
 
 ## Task 3: Create a Policy using the Dynamic Group (Already in Place)
 
@@ -107,8 +108,9 @@ The below policy statement allows all instances in the dynamic group `my-secret-
     - Description: `My Secret Policy`
     - Statements :
         - `allow dynamic-group my-secret-group to read secret-family in compartment my-compartment where target.secret.name = 'my-secret'`
+    ![Activate Policy Builder](../setup-oci-vault/images/policy-image-3.png "Activate Policy Builder")
 5. Click the Create button to save
-    ![Create Policy Form](../setup-oci-vault/images/policy-image-3.png "Create Policy Form")
+    ![Create Policy Form](../setup-oci-vault/images/policy-image-4.png "Create Policy Form")
 
 ## Task 4: Retrieve the secret from the Compute Instance
 
@@ -124,7 +126,7 @@ Finally, we can create a script to retrieve our secret. The following steps crea
 
     ``` bash
     <copy>
-    ssh opc@<instance-public-ip>
+    ssh -i <private-key-path> opc@<instance-public-ip>
     </copy>
     ```
 
