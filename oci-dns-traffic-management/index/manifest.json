@@ -4,7 +4,7 @@
     "tutorials": [
         {
             "title": "Introduction",
-            "filename": "../../introduction/introduction.md"
+            "filename": "../introduction/introduction.md"
         },
         {
             "title": "Get Started",
@@ -13,31 +13,31 @@
         },
         {
             "title": "Lab 1: Deploy the Web Services in OCI",
-            "filename": "../../lab1/lab1.md"
+            "filename": "../lab1/lab1.md"
         },
         {
             "title": "Lab 2: DNS Zone and OCI Health Checks",
-            "filename": "../../lab2/lab2.md"
+            "filename": "../lab2/lab2.md"
         },
         {
             "title": "Lab 3: Load balancer steering policy",
-            "filename": "../../lab3/lab3.md"
+            "filename": "../lab3/lab3.md"
         },
         {
             "title": "Lab 4: Failover steering policy",
-            "filename": "../../lab4/lab4.md"
+            "filename": "../lab4/lab4.md"
         },
         {
             "title": "Lab 5: Geolocation steering policy",
-            "filename": "../../lab5/lab5.md"
+            "filename": "../lab5/lab5.md"
         },
         {
             "title": "Lab 6: ASN steering policy",
-            "filename": "../../lab6/lab6.md"
+            "filename": "../lab6/lab6.md"
         },
         {
             "title": "Lab 7: IP prefix steering policy",
-            "filename": "../../lab6/lab7.md"
+            "filename": "../lab6/lab7.md"
         },
         {
             "title": "Need Help?",
