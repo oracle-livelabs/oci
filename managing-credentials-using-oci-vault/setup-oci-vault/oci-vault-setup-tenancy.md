@@ -143,6 +143,9 @@ Finally, we can create a script to retrieve our secret. The following steps crea
     </copy>
     ```
 
+    - The private-key-path: private key pair of the public key you provided at the reservation stage (~/.ssh/id_rsa).
+    - The instance-public-ip: instance public IP from previous step \(4).
+
 6. Create a file.
 
     ``` bash

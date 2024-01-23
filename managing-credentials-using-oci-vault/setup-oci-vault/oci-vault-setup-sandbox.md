@@ -28,9 +28,9 @@ This lab assumes you have:
 - Some understanding of cloud terms
 - Familiarity with Oracle Cloud Infrastructure OCI would be helpful.
 
-## Task 1: Create a Dynamic Group (Already in Place)
+## Task 1: Create a Dynamic Group (**Already in Place**)
 
-> **Note**: Keep in mind that the Dynamic Group is already created for you in the Sandbox environment, so you wouldn't need to create it.
+> **Note**: Reassuringly, the Dynamic Group has already been seamlessly set up for you in the Sandbox environment, eliminating the need for creation and visualization on your part.
 
 A Dynamic Group is a group that dynamically grant access to resources based on a rule. Our Dynamic Group will be used with a matching rule to determine which instances we want to allow API calls against the service we are going to use.
 
@@ -84,9 +84,9 @@ We will now create a Vault in the target compartment, then add a key that will b
 18. Copy the secret OCID to be used next.
     ![Secret OCID](../setup-oci-vault/images/vault-image-7.png "Secret OCID")
 
-## Task 3: Create a Policy using the Dynamic Group (Already in Place)
+## Task 3: Create a Policy using the Dynamic Group (**Already in Place**)
 
-> **Note**: Keep in mind that the Policy is already created for you, in the Sandbox environment, so you wouldn't need to create it.
+> **Note**: Reassuringly, the Policy has already been seamlessly set up for you in the Sandbox environment, eliminating the need for creation and visualization on your part.
 
 The policy will permit the dynamic groups to access OCI services.
 
@@ -123,12 +123,16 @@ Finally, we can create a script to retrieve our secret. The following steps crea
 4. Copy the public IP
     ![Access Instance Public IP](../setup-oci-vault/images/instance-image-2.png "Access Instance Public IP")
 5. Open a Shell session and run the below command
+    > **Note**: Embrace the local Shell session, as the cloud shell won't be at your disposal, ensuring a seamless and efficient experience.
 
     ``` bash
     <copy>
     ssh -i <private-key-path> opc@<instance-public-ip>
     </copy>
     ```
+
+    - The private-key-path: private key pair of the public key you provided at the reservation stage (e.g. `~/.ssh/id_rsa`).
+    - The instance-public-ip: instance public IP from previous step \(**4**).
 
 6. Create a file.
 
@@ -211,4 +215,4 @@ Finally, we can create a script to retrieve our secret. The following steps crea
     - El Houcine Es Sanhaji, Member of Technical Staff, Oracle Labs
     - Robin Vaaler, Senior Member of Technical Staff,  Oracle Labs
 - **Last Updated By/Date**
-    - El Houcine Es Sanhaji, 3 2024
+    - El Houcine Es Sanhaji, 1 2024
