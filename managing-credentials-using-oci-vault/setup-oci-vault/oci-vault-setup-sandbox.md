@@ -215,4 +215,4 @@ Finally, we can create a script to retrieve our secret. The following steps crea
     - El Houcine Es Sanhaji, Member of Technical Staff, Oracle Labs
     - Robin Vaaler, Senior Member of Technical Staff,  Oracle Labs
 - **Last Updated By/Date**
-    - El Houcine Es Sanhaji, 1 2024
+    - El Houcine Es Sanhaji - January, 2024
