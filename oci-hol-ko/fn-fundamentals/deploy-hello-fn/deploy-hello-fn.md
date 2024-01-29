@@ -135,10 +135,10 @@ Oracle Functions을 실행하는 데에 대한 기본 사항을 알아봅니다.
             | FDK Language | Default | Supported          | Deprecated |
             | :----------- | :------ | :----------------- | :--------- |
             | Java         | 17      | 17, 11, 8          | n/a        |
-            | Python       | 3.9     | 3.9, 3.8, 3.7, 3.6 | n/a        |
-            | Ruby         | 2.7     | 2.7                | 2.5        |
-            | Go           | 1.15    | 1.15               | 1.11       |
-            | Node.js      | 14      | 14                 | 11         |
+            | Python       | 3.11    | 3.9, 3.8, 3.7      | 3.7, 3.6   |
+            | Ruby         | 3.1     | 3.1, 2.7           | 2.5        |
+            | Go           | 1.19    | 1.19, 1.18         | 1.15, 1.11 |
+            | Node.js      | 18      | 18, 16, 14         | 11         |
             | C# (.NET)    | 6.0     | 6.0, 3.1           | n/a        |
             {: title="Languages Supported by OCI Functions"}
 
@@ -189,11 +189,11 @@ Oracle Functions을 실행하는 데에 대한 기본 사항을 알아봅니다.
         $ cat func.yaml 
         schema_version: 20180708
         name: hello-java
-        version: 0.0.1
+        version: 0.0.2
         runtime: java
-        build_image: fnproject/fn-java-fdk-build:jdk17-1.0.179
-        run_image: fnproject/fn-java-fdk:jre17-1.0.179
-        cmd: com.example.fn.HelloFunction::handleRequest     
+        build_image: fnproject/fn-java-fdk-build:jdk17-1.0.182
+        run_image: fnproject/fn-java-fdk:jre17-1.0.182
+        cmd: com.example.fn.HelloFunction::handleRequest  
         ```
 
 10. Function을 배포합니다.
@@ -298,7 +298,7 @@ Function에서 많이 사용하는 Python으로 동일한 과정을 수행해 �
         * requirements.txt: func.py에서 추가적으로 사용되는 패키지 의존성을 여기에 추가합니다.
         ```
         $ cat requirements.txt 
-        fdk>=0.1.61
+        fdk>=0.1.66
         ```
 
         * func.yaml: Function 정의 파일입니다. 자바때와 동일한 형식입니다.
@@ -308,10 +308,10 @@ Function에서 많이 사용하는 Python으로 동일한 과정을 수행해 �
         name: hello-python
         version: 0.0.1
         runtime: python
-        build_image: fnproject/python:3.9-dev
-        run_image: fnproject/python:3.9
+        build_image: fnproject/python:3.11-dev
+        run_image: fnproject/python:3.11
         entrypoint: /python/bin/fdk /function/func.py handler
-        memory: 256        
+        memory: 256   
         ```
 
 3. Function을 배포합니다.
@@ -357,7 +357,7 @@ Function에서 많이 사용하는 Python으로 동일한 과정을 수행해 �
 
 3. 창이 뜨면 기본 설정값으로 로그를 활성화합니다.
 
-    ![Enable Log](images/fn-app-enable-log.png =60%x*) 
+    ![Enable Log](images/fn-app-enable-log.png =50%x*) 
 
 4. 로그가 활성이 완료되면, 로그 이름을 클릭합니다.
 
@@ -386,7 +386,7 @@ Function에서 많이 사용하는 Python으로 동일한 과정을 수행해 �
 
 2. 왼쪽 메뉴에서 Explorer를 선택하면, 기본 설정된 사용자의 워크스페이스로 홈 디렉토리가 등록되어 있습니다.
 
-3. 개발툴에서 제공하는 기본 기능을 통해 생성된 Function을 개발하면 됩니다. Code Editor는 Cloud Shell과 동일한 환경이므로 JDK 등 기본툴을 사전에 설치되어 있습니다.
+3. 개발툴에서 제공하는 기본 기능을 통해 생성된 Function을 개발하면 됩니다. Code Editor는 Cloud Shell과 동일한 환경이므로 JDK 등 기본툴이 이미 설치되어 있습니다.
 
     ![Workspace](images/code-editor-workspace.png)
 
@@ -423,4 +423,4 @@ Function에서 많이 사용하는 Python으로 동일한 과정을 수행해 �
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, October 2023
+* **Last Updated By/Date** - DongHee Lee, January 2024
