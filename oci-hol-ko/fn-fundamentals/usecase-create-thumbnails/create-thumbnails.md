@@ -22,7 +22,53 @@ OCI Functions의 사용사례로 Events 서비스와 연동하여, OCI 자원에
 - Lab 2 실습 완료
 
 
-## Task 1. Object Storage 버킷 만들기
+## Task 1. 실습을 위한 Policy 설정하기
+
+Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서는 권한이 필요합니다. 권한을 설정하기 위해 Function이 속한 compartment id를 확인하고 관련권한을 설정합니다.
+
+1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Identity & Security**으로 이동한 다음 **Identity** > **Policies** 을 선택합니다.
+
+2. **Create Policy** 클릭
+
+3. 아래 값으로 개발할 Functions에 오브젝트 스토리지 버킷 2개에 대한 권한을 부여합니다.
+
+    - Name: `functions-buckets-policy`
+    - Description: `Policy that allows functions dynamic group to manage objects in the bucket`.
+    - Compartment: 계속 사용하던 Compartment 선택, **oci-hol-xx**를 선택
+    - Policy Builder: **Show manual editor** 슬라이딩 버튼을 클릭하여 직접 입력합니다.
+
+        * [compartment-name]은 오브젝트 스토리지 버킷이 있는 Compartment 이름으로 대체합니다. 예, oci-hol-xx
+        * Object Storage Bucket 2개는 이후 만들 예정으로 Policy 먼저 설정합니다.
+    ```
+    <copy> 
+    Allow any-user to manage objects in compartment [compartment-name] where all {request.principal.type='fnfunc', request.principal.compartment.id=target.compartment.id, target.bucket.name='image-source-bucket'}
+    Allow any-user to manage objects in compartment [compartment-name] where all {request.principal.type='fnfunc', request.principal.compartment.id=target.compartment.id, target.bucket.name='image-source-resized-bucket'}
+    </copy> 
+    ``` 
+
+4. 이후 실습을 위해 다음 Policy를 추가합니다.
+
+    - Name: fn-lab3-policy*-xx* 입력합니다.
+    - Description: Policy for Lab3
+    - Compartment: 계속 사용하던 Compartment 선택, **oci-hol-xx**를 선택
+    - Policy:
+    
+        1. Object Storage 사용을 위한 설정
+        ```
+        Allow group <group-name> to manage buckets in compartment <compartment-name>
+        Allow group <group-name> to manage objects in compartment <compartment-name>
+        ```
+
+        2. Event Service를 통해 Function을 호출하는 규칙을 설정하기 위해 필요한 정책
+        ```
+        Allow group <group-name> to manage cloudevents-rules in compartment <compartment-name>
+        Allow group <group-name> to inspect compartments in compartment <compartment-name>
+        Allow group <group-name> to use tag-namespaces in compartment <compartment-name>
+        Allow group <group-name> to use virtual-network-family in compartment <compartment-name>
+        Allow group <group-name> to manage function-family in compartment <compartment-name>
+        ```
+
+## Task 2. Object Storage 버킷 만들기
 
 1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Storage**에서 **Object Storage & Archive Storage** 하위메뉴인 **Bucket**을 선택합니다.
 
@@ -30,57 +76,16 @@ OCI Functions의 사용사례로 Events 서비스와 연동하여, OCI 자원에
 
 3. **Create Bucket**을 클릭하여, 원본 이미지를 업로드할 때 사용할 source 버킷을 생성합니다. 
 
-    - Bucket Name: image-source-bucket
+    - Bucket Name: *image-source-bucket*
     - **Emit Object Events**: OCI Event 서비스에서 발생한 오브젝트 이벤트를 수신할 수 있도록 반드시 체크합니다. 이 이벤트를 수신하여, Function을 호출하여 원하는 작업을 수행할 수 있도록 할 예정입니다.
     - 나머지 항목은 디폴트 설정 사용
 
-    ![image-source-bucket](images/image-source-bucket.png =60%x*)
+    ![image-source-bucket](images/image-source-bucket.png =50%x*)
 
 4. 처리된 이미지를 업로드할 때 사용할 버킷을 생성합니다. 
 
-    - Bucket Name: image-source-resized-bucket
+    - Bucket Name: *image-source-resized-bucket*
     - 나머지 항목은 디폴트 설정 사용
-
-## Task 2. Function을 위한 Policy 설정하기
-
-Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서는 권한이 필요합니다. 권한을 설정하기 위해 Function이 속한 compartment id를 확인하고 관련권한을 설정합니다.
-
-1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Identity & Security**으로 이동한 다음 **Compartments** 을 선택합니다.
-
-2. Function이 속한 Compartment의 OCID를 복사해 둡니다.
-
-    ![Compartment OCID](images/compartment-ocid-2.png =70%x*)
-
-3. 왼쪽 메뉴에서 **Identity** > **Policies** 을 선택합니다.
-
-4. **Create Policy** 클릭
-
-5. 아래 값으로 개발할 Functions에 오브젝트 스토리지 버킷 2개에 대한 권한을 부여합니다.
-
-    - Name: `functions-buckets-policy`.
-    - Description: `Policy that allows functions dynamic group to manage objects in the bucket`.
-    - Compartment: 계속 사용하던 Compartment 선택, **oci-hol-xx**를 선택
-    - Policy Builder: **Show manual editor** 슬라이딩 버튼을 클릭하여 직접 입력합니다.
-        * [compartment-name]은 오브젝트 스토리지 버킷이 있는 Compartment 이름으로 대체합니다. 예, oci-hol
-        * [compartment-id]는 방금 복사해둔 Function이 속한 Compartment의 OCID
-    ```
-    <copy> 
-    Allow any-user to manage objects in compartment [compartment-name] where all {request.principal.type='fnfunc', request.principal.compartment.id='[compartment-id]', target.bucket.name='image-source-bucket'}
-    Allow any-user to manage objects in compartment [compartment-name] where all {request.principal.type='fnfunc', request.principal.compartment.id='[compartment-id]', target.bucket.name='image-source-resized-bucket'}
-    </copy> 
-    ``` 
-
-6. 이후 실습을 위해 다음 Policy를 추가합니다.
-
-    - Name: fn-lab2-policy*-xx* 입력합니다.
-    - Description: Policy for Lab2
-    - Compartment: 계속 사용하던 Compartment 선택, **oci-hol-xx**를 선택
-    - Policy:
-    ```
-    Allow group <group-name> to manage buckets in compartment <compartment-name>
-    Allow group <group-name> to manage objects in compartment <compartment-name>
-    Allow group <group-name> to manage cloudevents-rules in compartment <compartment-name>
-    ```
 
 ## Task 3. Function 개발
 
@@ -417,7 +422,7 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
 
     ```
     <copy>
-    fdk>=0.1.61
+    fdk>=0.1.66
     oci
     pillow    
     </copy> 
@@ -506,4 +511,4 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, October 2023
+* **Last Updated By/Date** - DongHee Lee, January 2024

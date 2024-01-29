@@ -4,6 +4,13 @@
 
 In Lab 3, return as a developer persona to discover the secure realm of OCI Vault. Learn the importance of proper credentials management as we guide you through leveraging OCI Vault to securely store and access credentials, ensuring a robust and resilient approach to security.
 
+Oracle Cloud Infrastructure Vault is a management service that stores and manages master encryption keys and secrets for secure access to resources.
+
+The below video gives an overview of OCI key management service and its key concepts.
+    [oracle cloud infrastructure vault video](youtube:Yhm9eCP_SOA)
+
+By utilizing OCI Vault, you can effectively manage and control access to secrets within your OCI environment. The Vault service offers robust security features, including encryption at rest and in transit, access controls, auditing capabilities, and integration with other OCI services.
+
 Estimated Time: 1 hour 30 minutes
 
 ### Objectives
@@ -21,25 +28,11 @@ This lab assumes you have:
 - Some understanding of cloud terms
 - Familiarity with Oracle Cloud Infrastructure OCI would be helpful.
 
-## Task 1: Oracle Cloud Infrastructure Vault - Overview
+## Task 1: Create a Dynamic Group (**Already in Place**)
 
-Oracle Cloud Infrastructure Vault is a management service that stores and manages master encryption keys and secrets for secure access to resources.
-
-The below video gives an overview of OCI key management service and its key concepts.
-
-   [
-      ![OCI Vault video](../setup-oci-vault/images/oci-vault-demonstration-thumbnail.jpeg)
-   ](https://www.youtube.com/watch?v=Yhm9eCP_SOA)
-
-By utilizing OCI Vault, you can effectively manage and control access to secrets within your OCI environment. The Vault service offers robust security features, including encryption at rest and in transit, access controls, auditing capabilities, and integration with other OCI services.
-
-## Task 2: Create a Dynamic Group
+> **Note**: Reassuringly, the Dynamic Group has already been seamlessly set up for you in the Sandbox environment, eliminating the need for creation and visualization on your part.
 
 A Dynamic Group is a group that dynamically grant access to resources based on a rule. Our Dynamic Group will be used with a matching rule to determine which instances we want to allow API calls against the service we are going to use.
-
-Use the following steps to create a dynamic group.
-
-> Note: Keep in mind that the Dynamic Group is already created for you in the Sandbox environment, so you wouldn't need to create it.
 
 1. Login to the OCI Console
 2. Go to Menu > Identity & Security > Dynamic Groups
@@ -53,9 +46,9 @@ Use the following steps to create a dynamic group.
 5. Click the Create Dynamic Group button to save
     ![Create Dynamic Group](../setup-oci-vault/images/dynamic-group-image-2.png "Create Dynamic Group")
 
-## Task 3: Create a Vault
+## Task 2: Create a Vault
 
-We will now create a Vault in the target compartment, then add a key that will be used to encrypt a new secret. The secret could be anything, but for our example we will store a API-token. Note that you could add multiple secrets if needed. Using the following steps to create a vault, a key, and a secret.
+We will now create a Vault in the target compartment, then add a key that will be used to encrypt a new secret. The secret could be anything, but for our example we will store an API-token. Note that you could add multiple secrets if needed. Using the following steps to create a vault, a key, and a secret.
 
 1. Login to the OCI Console
 2. Go to Menu > Identity & Security > Vault
@@ -74,6 +67,9 @@ We will now create a Vault in the target compartment, then add a key that will b
 11. Select 256 bits from the Key Shape
 12. Click Create Key button to save
     ![Create Key Form](../setup-oci-vault/images/vault-image-4.png "Create Key Form")
+
+    > **Note**: You may face an error saying `Cannot read properties of undefined (reading 'toString')`, just give it 5 minutes and try again.
+
 13. Click on the Secrets link under Resources
 14. Click Create Secret button
 15. Enter the following:
@@ -86,22 +82,21 @@ We will now create a Vault in the target compartment, then add a key that will b
 17. Click on the secret `my-secret`
     ![Create Secret Form](../setup-oci-vault/images/vault-image-6.png "Create Secret Form")
 18. Copy the secret OCID to be used next.
+    ![Secret OCID](../setup-oci-vault/images/vault-image-7.png "Secret OCID")
 
-## Task 4: Create a Policy using the Dynamic Group
+## Task 3: Create a Policy using the Dynamic Group (**Already in Place**)
 
-After you have created a dynamic group, you need to create policy to permit the dynamic groups to access OCI services.
+> **Note**: Reassuringly, the Policy has already been seamlessly set up for you in the Sandbox environment, eliminating the need for creation and visualization on your part.
+
+The policy will permit the dynamic groups to access OCI services.
 
 The below policy statement allows all instances in the dynamic group `my-secret-group` to access the secret `my-secret`.
 
-> Note: Better policy to only access a specific secret
+> **Note**: Better policy to only access a specific secret
 
 ``` txt
 <copy> allow dynamic-group my-secret-group to read secret-family in compartment my-compartment where target.secret.name = 'my-secret' </copy>
 ```
-
-Use the following steps to create a the policy:
-
-> Note: Keep in mind that the Policy is already created for you, in the Sandbox environment, so you wouldn't need to create it.
 
 1. Login to the OCI Console
 2. Go to Menu > Identity & Security> Policies
@@ -113,10 +108,11 @@ Use the following steps to create a the policy:
     - Description: `My Secret Policy`
     - Statements :
         - `allow dynamic-group my-secret-group to read secret-family in compartment my-compartment where target.secret.name = 'my-secret'`
+    ![Activate Policy Builder](../setup-oci-vault/images/policy-image-3.png "Activate Policy Builder")
 5. Click the Create button to save
-    ![Create Policy Form](../setup-oci-vault/images/policy-image-3.png "Create Policy Form")
+    ![Create Policy Form](../setup-oci-vault/images/policy-image-4.png "Create Policy Form")
 
-## Task 5: Retrieve the secret from the Compute Instance
+## Task 4: Retrieve the secret from the Compute Instance
 
 Finally, we can create a script to retrieve our secret. The following steps creates a Python script that you can use as a framework to build on, but this could also be done in other languages that are supported such as Java, Ruby, and Go — [Software Development Kits and Command Line Interface](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm). Use the following steps to create a Python script with the given example.
 
@@ -127,12 +123,16 @@ Finally, we can create a script to retrieve our secret. The following steps crea
 4. Copy the public IP
     ![Access Instance Public IP](../setup-oci-vault/images/instance-image-2.png "Access Instance Public IP")
 5. Open a Shell session and run the below command
+    > **Note**: Embrace the local Shell session, as the cloud shell won't be at your disposal, ensuring a seamless and efficient experience.
 
     ``` bash
     <copy>
-    ssh opc@<instance-public-ip>
+    ssh -i <private-key-path> opc@<instance-public-ip>
     </copy>
     ```
+
+    - The private-key-path: private key pair of the public key you provided at the reservation stage (e.g. `~/.ssh/id_rsa`).
+    - The instance-public-ip: instance public IP from previous step \(**4**).
 
 6. Create a file.
 
@@ -215,4 +215,4 @@ Finally, we can create a script to retrieve our secret. The following steps crea
     - El Houcine Es Sanhaji, Member of Technical Staff, Oracle Labs
     - Robin Vaaler, Senior Member of Technical Staff,  Oracle Labs
 - **Last Updated By/Date**
-    - El Houcine Es Sanhaji, 3 2024
+    - El Houcine Es Sanhaji - January, 2024
