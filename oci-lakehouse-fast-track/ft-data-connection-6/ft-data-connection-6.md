@@ -16,7 +16,7 @@ O DBeaver é uma ferramenta open source para o gerenciamento de banco de dados d
 
 O SQL Endpoint do Data Flow é uma ferramenta muito útil para acessarmos dados que estão no OCI Object Storage. Ele oferece um ponto de acesso para executar consultas SQL diretamente em seus conjuntos de dados. Isso significa que você poderá realizar consultas SQL, aplicar transformações, executar análises e obter insights valiosos de seus dados.
 
-Neste laboratório, você explorará o SQL Endpoint do Data Flow que criamos no Lab 0 e como configura o DBeaver para realizar consultas SQL específicas em sua camada de ouro. Isso permitirá que você aplique filtros, agregações e análises para extrair informações significativas de seus dados e tomar decisões informadas. 
+Neste laboratório, você explorará o SQL Endpoint do Data Flow que criamos no Lab 2 e como configura o DBeaver para realizar consultas SQL específicas em sua camada de ouro. Isso permitirá que você aplique filtros, agregações e análises para extrair informações significativas de seus dados e tomar decisões informadas. 
 
 *Tempo estimado para o Lab:* 15 Minutos
 
@@ -93,7 +93,7 @@ Agora vamos fazer o download dos drivers necessários para configurarmos o DBeav
 
     ![Selecionar New](.\images\16-new-driver.png)
 
-5. Dê o nome "Data Flow Livelabs" no campo Driver Name. EM seguida clique em Libraries
+5. Dê o nome "Data Flow Livelabs" no campo Driver Name. Em seguida clique em Libraries.
 
     ![Driver Name](.\images\17-libraries.png)
 
@@ -105,7 +105,7 @@ Agora vamos fazer o download dos drivers necessários para configurarmos o DBeav
 
     ![Descompactar Arquivo](.\images\19-find-class.png)
 
-8. Em seguida busque pelo drive na barra de buscas, como indicado na imagem abaixo
+8. Em seguida busque pelo drive na barra de buscas, como indicado na imagem abaixo.
 
     ![Buscar Driver](.\images\20-search-driver.png)
 
@@ -139,7 +139,7 @@ Agora vamos fazer o download dos drivers necessários para configurarmos o DBeav
 
     ![Novo Database](.\images\28-new-database.png)
 
-2. Busque por **Data Flow Livelabs**, clique na Conexão e em seguida clique me **Next**
+2. Busque por **Data Flow Livelabs**, clique na Conexão e em seguida clique me **Next**.
 
     ![Driver conexão](.\images\30-next-database.png)
 
@@ -155,11 +155,11 @@ Agora vamos fazer o download dos drivers necessários para configurarmos o DBeav
 
     ![JDBC Url](.\images\32-jdbc-url.png)
 
-6. Cole a URL no DBeaver e em seguida clique em **Test Connection**
+6. Cole a URL no DBeaver e em seguida clique em **Test Connection**.
 
     ![Testar Conexão](.\images\33-test-connection.png)
 
-7. Você será direcionado para seu navegador padrão para fazer login novamente na Oracle Cloud, para autenticar a conexão com o SQL Endpoint
+7. Você será direcionado para seu navegador padrão para fazer login novamente na Oracle Cloud, para autenticar a conexão com o SQL Endpoint.
 
     ![Login OCI](.\images\35-login-oci.png)
 
@@ -171,7 +171,7 @@ Agora vamos fazer o download dos drivers necessários para configurarmos o DBeav
 
 ## Tarefa 4: Análise e Exploração de Dados
 
-Após finalizar a configuração do DBeaver com o SQL Endpoint vamos nos conectar a base de dados no Bucket Ouro e iniciar nossa exploração nos dados usando SQL
+Após finalizar a configuração do DBeaver com o SQL Endpoint vamos nos conectar a base de dados no Bucket Ouro e iniciar nossa exploração nos dados usando SQL.
 
 1. Clique na conexão Data Flow para expandir as opções e fazer uma nova autenticação para a exploração dos dados de fato
 
@@ -221,5 +221,5 @@ Durante este laboratório, foi estabelecida uma conexão entre a camada de ouro 
 
 ## Autoria
 
-- **Autores** - Thais Henrique, Heloisa Escobar, Isabelle Anjos
-- **Último Update Por/Date** - Isabelle Anjos, Jan/2024
+- *Created By/Date* - Thais Henrique, Heloisa Escobar, Isabelle Anjos, Janeiro 2024
+- *Last Updated By* - Isabelle Anjos, Janeiro 2024

@@ -1,9 +1,13 @@
 {
     "workshoptitle": "OCI Data & AI Fast Track - For Data Engineering",
-    "help": "thais.henrique@oracle.com",
+    "help": "thais.henrique@oracle.com, heloisa.freire@oracle.com",
     "variables": ["../../variables/variables.json",
         "../../variables/variables-in-another-file.json"],
     "tutorials": [
+        {
+            "title": "Get Started",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
         {
             "title": "Introdução",
             "description": "Bem-vindo ao OCI Data & AI Live Labs - for Data Engineering",

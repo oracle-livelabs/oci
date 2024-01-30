@@ -58,7 +58,7 @@ O dicionário de dados está disponibilizado abaixo.
 | **CO_ANO**                       | Ano (1997 a 2021) |
 | **CO_MES**                       | Códigos de mês (1: janeiro, 12: dezembro) |
 | **CO_NCM**                       | Código da Nomenclatura Comum do Mercosul - Utilizado para controlar e identificar mercadorias comercializadas no Brasil e nos demais países do Mercosul (cada NCM representa um produto diferente) |
-| **Países do Mercosul**           | O Mercado Comum do Sul, conhecido pelas abreviaturas Mercosul (português) e Mercosur (espanhol), é um bloco comercial sul-americano estabelecido pelo Tratado de Assunção em 1991 e pelo Protocolo de Ouro Preto em 1994, com membros plenos Argentina, Brasil, Paraguai e Uruguai. Fonte: Wikipédia |
+| **Países do Mercosul**           | O Mercado Comum do Sul, conhecido pelas abreviaturas Mercosul (português) e Mercosur (espanhol), é um bloco comercial sul-americano estabelecido pelo Tratado de Assunção em 1991 e pelo Protocolo de Ouro Preto em 1994, com membros plenos Argentina, Brasil, Paraguai e Uruguai. |
 | **CO_UNID**                      | Código da Unidade de Medida Estatística, uma unidade de medida padrão para cada NCM, incluindo valores como quilograma, metro, litro, pares, tonelada, entre outros. |
 | **CO_PAIS**                      | Código do nome do país com o qual foi realizada a operação comercial (importação ou exportação) |
 | **SG\_UF\_NCM**                    | Código da Unidade Federativa (estado) de origem (exportação) ou destino (importação) da mercadoria. |
@@ -108,7 +108,7 @@ Conforme o código no laboratório anterior, a autenticação é realizada para 
 
 Além de preparar o ambiente para trabalhar com Apache Spark na Oracle Cloud Infrastructure (OCI) e configura a autenticação necessária para acessar outros serviços da OCI, como buckets do Object Storage. Ele também garante que versões mais recentes e seguras de bibliotecas de criptografia sejam utilizadas.
 
-1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
    ![Autenticação Spark](.\images\2-authentication-spark.png)
 
@@ -118,7 +118,7 @@ Além de preparar o ambiente para trabalhar com Apache Spark na Oracle Cloud Inf
 
 O código abaixo tem como objetivo buscar o ID do compartimento na Oracle Cloud Infrastructure (OCI). No entanto, ao contrário do que foi feito no laboratório 2, onde uma variável de ambiente disponível no ambiente do Data Science da OCI foi utilizada para obter essa informação, neste contexto atual não temos acesso a essa variável de ambiente para realizar a mesma operação. Portanto, o código precisa de um método alternativo para obter o ID do compartimento, que neste caso é feito através da listagem de todos os compartimentos acessíveis e buscando Data Flows em cada um para encontrar o ID desejado.
 
-2. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+2. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
    ![Criação Variáveis Identificadores](.\images\3-compartment-id.png)
 
@@ -128,17 +128,17 @@ Em seguida, executaremos o código abaixo, que apresenta como objetivo buscar o 
 
 Os buckets obtidos serão utilizados para armazenamento dos dados na arquitetura medalhão em cada etapa durante o processo.
 
-3. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+3. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
    ![Spark Variáveis](.\images\4-spark-variables.png)
 
 ## Tarefa 3: Importando Dados do Bucket 
 
-Neste passo, estamos definindo a variável *`csv_file_path`* para armazenar o caminho do arquivo CSV e a variável *`json_file_path_paises` para o caminho do arquivo JSON que queremos importar. 
+Neste passo, estamos definindo a variável *`csv_file_path`* para armazenar o caminho do arquivo CSV e a variável *`json_file_path_paises`* para o caminho do arquivo JSON que queremos importar. 
 
 Estamos buscando os arquivo em um bucket BRONZE, chamado *`oci://+bucket_bronze+@+namespace+`*, cujas variáveis foram definidas acima. Em seguida, estamos utilizando o Spark para ler o arquivo CSV e em seguida, JSON. 
 
-1. Selecione A célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
    ![Importanto Bucket CSV](.\images\5-import-csv.png)
 
@@ -181,7 +181,7 @@ Este é o nome do arquivo específico localizado dentro do bucket bronze. No con
 
 Neste código, estamos utilizando o Apache Spark para salvar um DataFrame derivado de um arquivo CSV e outros de arquivos JSON no formato *Delta Lake* em um bucket, usando caminhos específicos para cada tipo de dado.
 
-   1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+   1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
    ![Save Delta Bronze](.\images\9-save-delta-bronze.png)
 
@@ -210,5 +210,5 @@ Nesta sessão, você aprendeu a manipular dados nas camadas bronze, prata e ouro
 
 ## Autoria
 
-- **Autores** - Thais Henrique, Heloisa Escobar, Isabelle Anjos
-- **Último Update Por/Date** - Isabelle Anjos, Jan/2024
+- *Created By/Date* - Thais Henrique, Heloisa Escobar, Isabelle Anjos, Janeiro 2024
+- *Last Updated By* - Isabelle Anjos, Janeiro 2024
