@@ -158,10 +158,11 @@ These Labs will guide you in creating medical transcription and consulting virtu
 
 These labs will show how to integrate [**Oracle APEX**](https://apex.oracle.com/en/) with [**Cohere**](https://cohere.com/).
 
-* Lab 12: Oracle Speech and Cohere Integration 
+* Lab 12: Oracle Speech and AI Integration 
     * Create Cohere Key (Optional Tasks)
     * Getting AI Response from Cohere 
     * Cohere Integration with OCI Speech AI (Speech AI as Input Audio and Cohere as AI responder)
+    * Working with Oracle Generative AI
 
 ***Part 5** - Create Chatbot for Frequently Asked Medical Questions - Lab 13 - Lab 14 (Optional labs)*
 
