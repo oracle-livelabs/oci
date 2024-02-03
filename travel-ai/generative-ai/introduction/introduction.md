@@ -109,4 +109,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database 
-* **Last Updated By/Date** - 4th Dec, 2023
+* **Last Updated By/Date** - Jan 16th, 2024
