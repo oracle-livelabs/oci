@@ -11,19 +11,7 @@ We will share how we trained our AI Machine learning models with X-Ray mammograp
 Estimated Workshop Time: 12 hours
 
 *Estimated Workshop Time can vary depending upon the Labs that you choose to do, and all labs from lab 8 are Optional.*
-<!--  
-### AI for Healthcare - Complete Demo and Architecture video
 
-[Youtube video on AI for Healthcare Demo](youtube:f6Bn9_Bsi6o:large)
-
-### AI for Healthcare Demo - with Patient Admission Process (extended demo)
-
-[Youtube video on AI for Healthcare Demo](youtube:ok-fYO0CV2I:large)
-  
-### Introduction video
-
-[Youtube video on AI for Healthcare Demo](youtube:VjeoHU4I6SI:large)
---> 
 ### Prerequisites 
  
 This lab assumes you have the following:
@@ -31,7 +19,7 @@ This lab assumes you have the following:
 * An Oracle account
 * Intermediate Developer Knowledge of Oracle APEX and Oracle PL/SQL ( if you plan to build APEX Application)
  
-[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations in Healthcare, Detect Breast Cancer and Lung Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) at an early stage. Detect Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/). Use the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/), ask a doctor about specific medical symptoms and get a response from a virtual Doctor leveraging the power of [**Cohere**](https://cohere.com/). Chat with a virtual doctor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/), asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate the nearest Hospital with [**Oracle Spatial and Maps**](https://www.oracle.com/in/database/spatial/) and contact them.[**Oracle Process Automation**](https://docs.oracle.com/en/cloud/paas/process-automation/index.html) and [**Oracle Integration Cloud**](https://www.oracle.com/in/integration/application-integration/) for Patient Admission Process. and much more. 
+[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations in Healthcare, Detect Breast Cancer and Lung Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) at an early stage. Detect Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/). Use the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/), ask a doctor about specific medical symptoms and get a response from a virtual Doctor leveraging the power of [**Cohere**](https://cohere.com/) or [**Oracle Generative AI Service**](https://www.oracle.com/in/artificial-intelligence/generative-ai/large-language-models/). Chat with a virtual doctor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/), asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate the nearest Hospital with [**Oracle Spatial and Maps**](https://www.oracle.com/in/database/spatial/) and contact them.[**Oracle Process Automation**](https://docs.oracle.com/en/cloud/paas/process-automation/index.html) and [**Oracle Integration Cloud**](https://www.oracle.com/in/integration/application-integration/) for Patient Admission Process. and much more. 
 
 Running on top of the world's most powerful database, [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/) and Low Code development platform [**Oracle APEX**](https://apex.oracle.com/en/)
 
@@ -158,13 +146,13 @@ These Labs will guide you in creating medical transcription and consulting virtu
 
 ***Part 4** - Oracle Speech AI and Cohere Integration - Lab 12 (Optional labs)*
 
-These labs will show how to integrate [**Oracle APEX**](https://apex.oracle.com/en/) with [**Cohere**](https://cohere.com/).
+These labs will show how to integrate [**Oracle APEX**](https://apex.oracle.com/en/) with [**Cohere**](https://cohere.com/) or [**Oracle Generative AI**](https://www.oracle.com/in/artificial-intelligence/generative-ai/large-language-models/).
 
 * Lab 12: Oracle Speech and AI Integration 
     * Create Cohere Key (Optional Tasks)
     * Getting AI Response from Cohere 
     * Cohere Integration with OCI Speech AI (Speech AI as Input Audio and Cohere as AI responder)
-    * Working with Oracle Generative AI
+    * Working with Oracle Generative AI (Optional)
 
 ***Part 5** - Create Chatbot for Frequently Asked Medical Questions - Lab 13 - Lab 14 (Optional labs)*
 
