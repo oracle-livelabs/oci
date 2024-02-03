@@ -466,4 +466,4 @@ If you have already created web credentials then you can ignore this step, Oracl
 
 ## Acknowledgements
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - May 23rd, 2023.
+* **Last Updated By/Date** - Jan 16th, 2024
