@@ -183,14 +183,14 @@ Please read about [Cohere](https://cohere.com/) and their usage terms and condit
   
 ## Task 4: Oracle Generative AI - Playground
 
-Optionally if you would like to use Oracle Generative AI instead of Cohere, please follow the tasks below. This is a 3 step process.
+Optionally if you would like to use Oracle Generative AI instead of Cohere, please follow the tasks below.
 
 1. Log in to Oracle Cloud at cloud.oracle.com, change region to US Midwest Chicago
 Under left navigation select Analytics and AI, under AI Services select Generative AI.
 
     ![Generative AI Accommodation](images/navigation.png)
 
-2. Click on playground in the left navigation and select the default settings ( Cohere model cohere.command v15.6), you can change the settings if required.
+1. Click on playground in the left navigation and select the default settings ( Cohere model cohere.command v15.6), you can change the settings if required.
 
     ![Generative AI Accommodation](images/playground-1.png)
     ![Generative AI Accommodation](images/playground-2.png)
