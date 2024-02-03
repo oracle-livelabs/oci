@@ -37,7 +37,9 @@ Running on top of the world's most powerful database, [**Oracle Autonomous Datab
 
 ### AI for Healthcare - Technology Architecture
 
-![Archiecture](images/architecture-v6.png " ")
+![Architecture](images/architecture-v7.png " ")
+
+[Demo video on AI for Healthcare](youtube:_hOWWR1TKN8:large)
   
 ### AI for Healthcare - Table of Contents
  

@@ -20,7 +20,7 @@ This lab assumes you have:
 
 * An Oracle cloud account
 * Knowledge of Oracle APEX and Oracle PL/SQL
-* Access to any 3rd party APIs used in this workshop, such as Cohere, Blockade Labs, and Amadeus (please read their corresponding terms and conditions)
+* Access to any 3rd party APIs used in this workshop, such as Cohere or Oracle Generative AI, Blockade Labs, and Amadeus (please read their corresponding terms and conditions)
  
 ### Generative AI for Travel - Complete Demo and Architecture video
 
