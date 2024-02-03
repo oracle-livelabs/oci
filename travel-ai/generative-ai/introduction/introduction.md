@@ -21,82 +21,88 @@ This lab assumes you have:
 * An Oracle cloud account
 * Knowledge of Oracle APEX and Oracle PL/SQL
 * Access to any 3rd party APIs used in this workshop, such as Cohere, Blockade Labs, and Amadeus (please read their corresponding terms and conditions)
-<!-- 
-### AI for Healthcare - Complete Demo and Architecture video
+ 
+### Generative AI for Travel - Complete Demo and Architecture video
 
 [Demo video on Generative AI for Travel with Oracle APEX and DB](youtube:5yMBsb6-Ejs:large)
- -->
+ 
 ### Generative AI for Travel - Table of Contents
 
-*Common Labs - Introduction Lab to Lab 2*
-
+Common Labs - Introduction Lab to Lab 2
 These are common labs that are required for most of the other labs under this workshop.
 
-*   Introduction
-    * About the workshop
-    * Table of Contents
-    * Get Started
-    * Sign-in to Oracle [cloud web console](https://cloud.oracle.com) 
+* Introduction
+  * About the workshop
+  * Table of Contents
+  * Get Started
+  * Sign-in to Oracle [cloud web console](https://cloud.oracle.com) 
+  
 * Lab 1: Provision of an [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/)
-    * Create or select a compartment
-    * Choose Autonomous Database from the OCI services menu
-    * Create the Autonomous Database instance
+  * Create or select a compartment
+  * Choose Autonomous Database from the OCI services menu
+  * Create the Autonomous Database instance
 
-*Generative AI Labs*
+Text Generative AI Lab with Cohere AI or Oracle Generative AI
 
-* Lab 3: Generate AI Image
-    * AI image generation platforms, decision-making process, answering what, why and how.
-    * Sign up and Sign in to your AI API service provider (Please read their terms and conditions)
-    * Understand Requests and Responses from a web client
-    * Create an APEX Page
-    * Getting Pannellum Lightweight Panorama Viewer for the Web
-    * PL/SQL code to bring Generative AI Image into your Application.
-    * Generative AI Image Generation Demo
-* Lab 4: Generate AI Text
-    * Text AI Generative Platform - what, why and how we choose
-    * Sign up and Sign in at Cohere (Please read their terms and conditions)
-    * Getting a Response from Cohere 
-    * Generative AI Text Generation Demo
+* Lab 3: Generate AI Text - This lab requires Cohere API Keys or access to Oracle Generative AI
+  * Text AI Generative Platform - what, why and how we choose
+  * Sign up and Sign in at Cohere (Please read their terms and conditions)
+  * Getting a Response from Cohere 
+  * Generative AI Text Generation Demo
+  
+Image Generative AI Lab
+
+* Lab 4: Generate AI Image (Optional) - This lab requires Blockade Labs API Keys
+  * AI image generation platforms, decision-making process, answering what, why and how.
+  * Sign up and Sign in to your AI API service provider (Please read their terms and conditions)
+  * Understand Requests and Responses from a web client
+  * Create an APEX Page
+  * Getting Pannellum Lightweight Panorama Viewer for the Web
+  * PL/SQL code to bring Generative AI Image into your Application.
+  * Generative AI Image Generation Demo 
+
+Unesco Sites
+
 * Lab 5: Top 10 UNESCO Sites
-    * Getting Panorama Viewer for the web
-    * Upload Pre-generated AI Images to Shared Application files.
-    * Display Top 10 UNESCO Sites.
-    * Demo
+  * Getting Panorama Viewer for the web
+  * Upload Pre-generated AI Images to Shared Application files.
+  * Display Top 10 UNESCO Sites.
+  * Demo
  
-*Locate nearby airports and other UNESCO sites*
+Locate nearby airports and other UNESCO sites
 
 * Lab 6: Introduction
-    * Locate Nearest Airport
-    * Locate Nearest UNESCO Site
-    * Plot the Map
+  * Locate Nearest Airport
+  * Locate Nearest UNESCO Site
+  * Plot the Map
 
-*Find low price flight tickets*
+Find low price flight tickets
 
 * Lab 7: Low Price Flight Tickets
-    * Sign up and Sign in to Amadeus (Please read their terms and conditions)
-    * Create Web Credentials
-    * Create APEX Page to display flight prices, flight available dates and current price
+  * Sign up and Sign in to Amadeus (Please read their terms and conditions)
+  * Create Web Credentials
+  * Create APEX Page to display flight prices, flight available dates and current price
 
-*Oracle Digital Assistant chatbot*
+Oracle Digital Assistant chatbot
 
 * Lab 8: Create Travel Advisor Chatbot
-    * Provision Oracle Digital Assistant from OCI services
-    * Create Oracle Digital Assistant Skill
-    * Adding Knowledge documents for Frequently asked questions (FAQs)
-    * Train the Oracle Digital Assistant Model
-    * Preview the Model and Skill
-    * Add an auto-complete suggestion and utterances.
-    * Create a Web Channel for a skill
+  * Provision Oracle Digital Assistant from OCI services
+  * Create Oracle Digital Assistant Skill
+  * Adding Knowledge documents for Frequently asked questions (FAQs)
+  * Train the Oracle Digital Assistant Model
+  * Preview the Model and Skill
+  * Add an auto-complete suggestion and utterances.
+  * Create a Web Channel for a skill
  
 * Lab 9: Adding Oracle Digital Assistant Chatbot
-    * Download Oracle Digital Assistant Oracle Native Client SDK
-    * Get channel id from Oracle Digital Assistant console.
-    * Configure settings.js file
-    * Upload CSS, Image and JS files to Oracle APEX
-    * HTML Code to add Oracle Digital Assistant chatbot on APEX page.
-    * Bot Initiated Conversation (Optional step).
-    * Update YAML flow in Oracle Digital Assistant (Optional step)
-    * Demo of Chatbot in Oracle APEX Page
+  * Download Oracle Digital Assistant Oracle Native Client SDK
+  * Get channel id from Oracle Digital Assistant console.
+  * Configure settings.js file
+  * Upload CSS, Image and JS files to Oracle APEX
+  * HTML Code to add Oracle Digital Assistant chatbot on APEX page.
+  * Bot Initiated Conversation (Optional step).
+  * Update YAML flow in Oracle Digital Assistant (Optional step)
+  * Demo of Chatbot in Oracle APEX Page
    
 You may now **proceed to the next lab**.
     

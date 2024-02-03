@@ -14,7 +14,7 @@ Estimated Workshop Time: 12 hours
 <!--  
 ### AI for Healthcare - Complete Demo and Architecture video
 
-[Youtube video on AI for Healthcare Demo](youtube:iBV76Upi1VM:large)
+[Youtube video on AI for Healthcare Demo](youtube:f6Bn9_Bsi6o:large)
 
 ### AI for Healthcare Demo - with Patient Admission Process (extended demo)
 
