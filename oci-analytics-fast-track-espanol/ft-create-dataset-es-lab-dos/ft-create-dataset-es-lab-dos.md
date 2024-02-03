@@ -38,7 +38,7 @@
 
 Oracle Analytics Cloud (OAC) creará automáticamente la Unión para usted, siempre que las dos tablas tengan el mismo nombre de columna y las dos columnas sean del mismo **"Tipo"**.
 
-![Seleccione la tabla de Ventas](./images/id_pedidos_lab_dos.png)
+![Seleccione la tabla de Ventas](./images/id_pedidos_labdos.png)
 
 > **Nota:** Hay dos tipos de columnas en Oracle Analytics Cloud: Atributo o Medida
 

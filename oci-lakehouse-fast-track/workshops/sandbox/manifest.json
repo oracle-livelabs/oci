@@ -1,0 +1,57 @@
+{
+    "workshoptitle": "OCI Data & AI Fast Track - For Data Engineering",
+    "help": "thais.henrique@oracle.com, heloisa.freire@oracle.com",
+    "variables": ["../../variables/variables.json",
+        "../../variables/variables-in-another-file.json"],
+    "tutorials": [
+        {
+            "title": "Get Started",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Introdução",
+            "description": "Bem-vindo ao OCI Data & AI Live Labs - for Data Engineering",
+            "filename": "../../intro/intro.md"
+        },
+        {
+            "title": "Pré Requisito - Provisionar Recursos",
+            "description": "Aprenda a Rodar o Terraform em OCI criação dos pré-requisitos do ambiente",
+            "filename": "../../ft-resource-provision/ft-resource-provision.md"
+        },
+        {
+            "title": "Lab 1: Configuração do ambiente Conda no OCI Data Science",
+            "description": "Aprenda a configurar o ambiente de desenvolvimento no OCI Data Science",
+            "filename": "../../ft-ds-config-1/ft-ds-config-1.md"
+        },
+        {
+            "title": "Lab 2: Configuração do Data Flow Studio no OCI Data Science ",
+            "description": "Aprenda a criar uma sessão de desenvolvimento no Data Flow Studio",
+            "filename": "../../ft-df-studio-config-2/ft-df-studio-config-2.md"
+        },
+        {
+            "title": "Lab 3: Manipulação de dados - Bronze",
+            "description": "Aprenda a criar um conjunto de dados a partir de 2 tabelas em um Banco de Dados",
+            "filename": "../../ft-data-manipulation-bronze-3/ft-data-manipulation-bronze-3.md"
+        },
+        {
+            "title": "Lab 4: Manipulação de dados - Prata",
+            "description": "Enriqueça seus dados através de transformações no Analytics Cloud",
+            "filename": "../../ft-data-manipulation-silver-4/ft-data-manipulation-silver-4.md"
+        },
+        {
+            "title": "Lab 5: Manipulação de dados - Ouro",
+            "description": "Enriqueça seus dados através de transformações no Analytics Cloud",
+            "filename": "../../ft-data-manipulation-gold-5/ft-data-manipulation-gold-5.md"
+        },
+        {
+            "title": "Lab 6: Conexão DBeaver e Consultas SQL",
+            "description": "Explore os recursos do Oracle Analytics Cloud para criar visualizações",
+            "filename": "../../ft-data-connection-6/ft-data-connection-6.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

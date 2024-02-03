@@ -121,7 +121,7 @@ Before to run the build. Notice that the build will create:
 ## Task 4: More info
 
 ### Customize
-Please also check the  "Lab 5 - How to Customize" to see how to customize this sample to your needs
+Please also check the  "Lab 6 - How to Customize" to see how to customize this sample to your needs
 
 ### Object Storage
 During the build, it will generate an Object Storage to store the HTML file.
