@@ -25,6 +25,8 @@ This lab assumes you have:
 ### Generative AI for Travel - Complete Demo and Architecture video
 
 [Demo video on Generative AI for Travel with Oracle APEX and DB](youtube:5yMBsb6-Ejs:large)
+
+![Architecture](images/travel-architecture.png " ")
  
 ### Generative AI for Travel - Table of Contents
 

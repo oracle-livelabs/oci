@@ -90,7 +90,7 @@ Please read about [Cohere](https://cohere.com/) and their usage terms and condit
             "id": "2c5fd5d6-743c-4a52-****-*****",
             "generations": [
                 {
-                    "id": "46907fbb-1d86-40fc-ba70-806d658ee901",
+                    "id": "46907fbb-1d86-40fc-****-*****",
                     "text": "\n your answer goes here  "
                 }
             ],
@@ -267,8 +267,7 @@ If you have already created web credentials then you can ignore this step, Oracl
    
     ```
     <copy> 
-        -- PL/SQL code block to Generate AI Text from Oracle Generative AI service
-        -- Author: Madhusudhan Rao
+        -- PL/SQL code block to Generate AI Text from Oracle Generative AI service 
         -- Replace Compartment OCID, Web credentials and page number for APEX page items P91_AI_INPUT, P91_AI_OUTPUT
         ----------------------
 
