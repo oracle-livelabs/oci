@@ -1,38 +1,37 @@
-# OCI Network Firewall deployment
+# Deploy the Web Services in OCI
 
 ### Introduction
 
 Estimated Time: 60 minutes
 
-### About Virtual Cloud Networks and the OCI Network Firewall
+### About this lab
 
-Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables, and configuring stateful firewalls. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm) for more information on Virtual Cloud Networks.
-
-OCI Network Firewall is a next-generation managed network firewall and intrusion detection and prevention service for your Oracle Cloud Infrastructure virtual cloud network (VCN), powered by Palo Alto Networks®. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/network-firewall/home.htm) for more information on the Network Firewall service.
+We will start the workshop with the environment setup. For the entire workshop we will use the same deployment ( VCNs, Web Servers) and only change configuration related to the DNS Policies. Also, we will use two Oracle Cloud regions, Chicago and Franfurt, to host the Web Servers which the DNS records will point to. When you do this workshop in your tenancy you can choose any two regions in the Oracle Cloud.
 
 ### Objectives
 
 In this lab, you will:
 
-* Build a Virtual Cloud Network (VCN) and a firewall dedicated subnet.
-* Create a Route table and a Security List for the firewall-dedicated subnet.
-* Deploy an OCI Network Firewall.
+* Build a Virtual Cloud Network (VCN), with the needed subcomponents, in two OCI regions.
+* Deploy and configure two public OCI Compute instances with a WEB server
+
 
 ![lab1](images/lab1.png)
 
-## Task 1: Deploy a VCN (Virtual Cloud Network) and a dedicated firewall subnet (private)
+## Task 1: Deploy a VCN (Virtual Cloud Network) 
 
-We will start with a basic VCN deployment. One of the goals of this livelab is also to provide an understanding of OCI routing and gateways, in relation to the OCI Network Firewall service. For this reason, we will not use the VCN Wizard which deploys all OCI Gateways and creates basic routing rules. Instead, we will manually create each artifact as needed.
+We will start with a basic VCN deployment. Since the main goal is to have a publicly accesible web server we will not get into many details and we will use the VCN Creation Wizard which OCI provides.  
 
-1. Log into the Oracle Cloud console and select the **HOME** region.
-  ![Ashburn Region Select](images/home.png)
-  Note: This lab can be completed in any OCI region. However, as you'll see in lab 2, we will use OCI CLI to connect to deployed private Compute Instances. That functionality is only available in the Home Region. If you want to use a different region, make sure you have connectivity to the private instances via other means.
+1. Log into the Oracle Cloud console and select the **Chicago** region. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Press **Start VCN Wizard**.
+  ![Create VCN1](images/createvcn1.png)
 
-2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Press **Create VCN**, making sure you have the correct Compartment selected. Give the VCN a name and assign an IPv4 CIDR Block. For this LiveLab, I will use the LAB Compartment and the VCN CIDR 10.0.0.0/16. Leave everything else on default settings and press **Create VCN**.
-  ![Create VCN](images/createvcn.png)
-  
-3. After you press **Create VCN**, you will be redirected to the VCN Details page, with the Subnets menu selected. Press **Create Subnet**. In the subnet creation menu, give it a name, assign a CIDR (I will use 10.0.0.0/27) and make it a **Private** subnet. Leave everything else with default settings.
-  ![Create Subnet](images/createsubnet.png)
+2. In the menu that opens leave option 1 selected and press **Start VCN Wizard**.
+  ![Create VCN2](images/createvcn2.png)
+
+3. In the next menu, give the VCN a name, leave everything else as it is and press **Next**. In the new menu, simply press **Create** and wait for the VCN to be created. After it is done, press **View VCN**.
+  ![Create VCN3](images/createvcn3.png)
+
+  ![Create VCN4](images/createvcn4.png)
 
 ## Task 2: VCN Route table and Subnet Security List
 
