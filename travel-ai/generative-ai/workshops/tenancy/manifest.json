@@ -25,14 +25,14 @@
     {
       "title": "Lab 2: Create Schema and Load Data",
       "filename": "../../load-schema/load-schema.md"
-    },
+    }, 
     {
-      "title": "Lab 3: Generative AI (Image)",
-      "filename": "../../generative-ai-image/generative-ai-image.md"
-    },
-    {
-      "title": "Lab 4: Generative AI (Text)",
+      "title": "Lab 3: Oracle Generative AI and Cohere (Text)",
       "filename": "../../generative-ai-text/generative-ai-text.md"
+    },
+    {
+      "title": "Lab 4: Generative AI (Image)",
+      "filename": "../../generative-ai-image/generative-ai-image.md"
     },
     {
       "title": "Lab 5: Top 10 UNESCO Sites",
