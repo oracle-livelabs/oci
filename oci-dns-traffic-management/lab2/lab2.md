@@ -1,32 +1,30 @@
-# East-West Traffic Inspection
+# DNS Zone and OCI Health Checks
 
 ### Introduction
 
-Estimated Time: 30-45 minutes
+Estimated Time: 15 minutes
 
-### About East-West Traffic Inspection
+### About this lab
 
-East-West Traffic Inspection is done when two or more hosts from the same environment (in our case, OCI) communicate with each other and there is a Network Firewall on the path that is policing the traffic. 
+OCI DNS Traffic Steering can work only on DNS Zones managed by the OCI Public DNS service. You can:
+* Buy a DNS domain from a Registrar and configure the Registrar's DNS menu to point to the OCI Name Servers.
+* If you already own a domain (ex: customer.com) but is managed by another DNS service you can delegate a subdomain (ex: oci.customer.com) to the OCI Name Servers. 
+In this lab we will cover the steps to add a public zone/domain to OCI. Note that without an OCI managed DNS Zone you cannot use the DNS Traffic Steering Policies.
+
+We will also add, in task 2, an OCI [Health Check](https://docs.oracle.com/en-us/iaas/Content/HealthChecks/Concepts/healthchecks.htm) Monitor. The OCI Traffic Steering service uses this monitoring service to decide, based on the policy, what to respond to the DNS query.
 
 ### Objectives
 
 In this lab, you will:
 
-* Configure OCI Cloud Shell for management access to private Compute Instances.
-* Deploy two application subnets in the same VCN as the OCI Network Firewall
-* Deploy two private OCI Compute Instances, one in each application subnet.
-* Adjust VCN routing so the traffic between the two Instances passes through the OCI Network Firewall.
-* Modify the OCI Firewall policy to allow some connectivity between the two hosts.
-* Test both allowed and denied traffic and observe the Firewall Traffic Log. 
+* Onboard a Public DNS Zone in OCI.
+* Create an OCI Health Check instance to monitor the Web servers deployed in the previous lab.
 
 ![lab2](images/lab2.png)
 
+## Task 1: Onboard a public DNS Zone
 
-## Task 1: Configure the OCI Cloud Shell
-
-  In this lab and the next ones, we will need to connect to test Compute Instances to generate traffic and test connectivity. While this can be accomplished in any way, one of the easiest is to use the **Cloud Shell** embedded in the OCI Console. We will configure the service to run in a **private** mode so that we can use it to connect to private resources. In private mode we will have to give it a VCN and Subnet to be deployed in so we will use the Firewall Subnet created in the previous lab. This functionality is only available in the **HOME** region of your account.
-
-1. Log into the Oracle Cloud console. Make sure you are in the **HOME** region of the tenancy. On the top right side, start **Cloud Shell**.
+1. Log into the Oracle Cloud console. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Press **Start VCN Wizard**.
   ![Start Cloud Shell](images/startcs.png)
 
    If you have never used Cloud Shell before, Oracle will start the Instance with a **Public** network.
