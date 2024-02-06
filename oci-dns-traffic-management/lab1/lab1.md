@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Estimated Time: 60 minutes
+Estimated Time: 20 minutes
 
 ### About this lab
 
@@ -33,44 +33,49 @@ We will start with a basic VCN deployment. Since the main goal is to have a publ
 
   ![Create VCN4](images/createvcn4.png)
 
-## Task 2: VCN Route table and Subnet Security List
+4. On the VCN Details page we can see that the VCN was deployed with subnets, gateways, route tables and so on. The only thing we need to add is a security list entry that allows HTTP from Internet. Go to the **Security Lists** menu on the left and click the **Default** Security List.
+  ![Click SLs](images/clicksls.png)
 
-  Now that we have a VCN and a Subnet, we need to add a VCN Route Table and a Security List to that subnet. While the default ones, deployed automatically by OCI, can be used, it is recommended to have dedicated ones.
+  In the menu that opens you should see there is a rule to allow SSH from Internet which we will use to connect to the compute hosts. We also need an ingress rule to allow HTTP. 
+  ![Allow Webin](images/allowwebin.png)
 
-1. On the VCN Details page, on the left menu, click **Route Tables** and then click on **Create Route Table**.
-  ![Create route table1](images/creatert1.png)
+Note: this workshop is focused on the DNS Traffic Steering Policies product so the security configuration for the VCN is very basic as we are allowing unrestricted SSH and HTTP connections from the Internet. 
 
-   In the menu that opens, give this route table a name and press **Create**. No routes are needed at this step of the lab.
-  ![Create route table2](images/creatert2.png)
+5. **REPEAT** step 1 to 4 and deploy a VCN in the Frankfurt Region.
 
-2. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
-  ![Click subnet](images/clicksubnet.png)
+## Task 2: Deploy a Compute Instance with a Public IP
 
-   In the menu that opens (subnet details), click **Edit**. In the new menu, replace the default Route Table with the one previously created and save the changes.
-  ![Replace Route Table](images/subnetrt.png)
+  Now that we have a VCN and a Public Subnet, we will deploy a Compute Instance with a public IP. We will use that public to manage it (SSH) and to serve WEB traffic.
 
-3. On the VCN Details page, on the left menu, click **Security Lists** and then click on **Create Security List**.
-  ![Create sec list1](images/createsl.png)
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Compute and click on **Instances**. In the menu that opens, click **Create Instance**
+  ![Instance overview](images/createinstance1.png)
 
-   In the menu that opens, give it a name and press **+Another Ingress Rule** and **+Another Egress Rule**.
-  ![Create sec list2](images/addrule1.png)
+2. In the menu that opens, we need to input data into multiple fields. Unless specified otherwise in this tutorial, leave the fields with the **Default** input.
 
-   In the rule menus that open, create an entry that allows **0.0.0.0/0** on Ingress and Egress, respectively. 
-  ![Create sec list3](images/ingressrule.png)
-  ![Create sec list4](images/egressrule.png)
-  
-  Press **Create Security List**. 
+    * Compute Name: Chicago-Web-Server
+    * Everything else until **Primary VNIC information** remains on default
+    * Network details: the previously deployed VCN and the **Public** subnet should already be selected. If they are not, select them. Make sure a Public IP will be assigned.
 
-4. On the VCN Details page, on the left menu, click **Subnets** and then click on the Firewall subnet created earlier.
-  ![Click subnet2](images/clicksubnet.png)
+  ![Deploy VMsubnet](images/createinstance2.png)
 
-   In the menu that opens (subnet details), click **Add Security List** and add the new one we created.
-  ![Add sec list](images/addsl.png)
+  In the **Add SSH keys** menu, let OCI generate SSH Keys by downloading both the private and the public keys. Then click **Create**.
 
-   Next, remove the Default Security List by clicking on the 3 **dots** at the end of the row, and clicking **Remove**.
-  ![Remove sec list](images/removesl.png)
+  ![Deploy VMkeys](images/createinstance3.png)
 
-## Task 3: Deploy an OCI Network Firewall
+  Wait for the Instance to go into the **Running** state and note the **public** IP it was assigned.
+
+  ![Deploy VMfirst](images/createinstance4.png)
+
+4. **REPEAT** steps 1 and 2 and deploy a public compute instance in Frankfurt in the VCN deployed in Task 1, step 5.
+  ![Fra VM](images/createinstance5.png)
+
+  Before moving on, note the Public IPs of both Instances as we will need them for management and the DNS configuration. They are:
+    * Chicago Web Server: 207.211.176.26
+    * Frankfurt Web Server: 141.147.5.4
+
+  **Note that the Public IPs are randomly allocated so you will get different IPs when doing this workshop in your tenancy. Throughout this workshop I will use the IPs above in various configuration pages so you need to remember to use the ones you got in your tenancy and not the ones above.**
+
+## Task 3: Configure the web services
 
   Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Network Firewall. To deploy a Firewall we need to give it a policy. We will start by deploying an empty Firewall Policy and then use it to deploy an OCI Network Firewall.
 
