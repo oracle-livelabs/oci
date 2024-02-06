@@ -13,8 +13,7 @@ We will start the workshop with the environment setup. For the entire workshop w
 In this lab, you will:
 
 * Build a Virtual Cloud Network (VCN), with the needed subcomponents, in two OCI regions.
-* Deploy and configure two public OCI Compute instances with a WEB server
-
+* Deploy and configure two public OCI Compute instances with a WEB server.
 
 ![lab1](images/lab1.png)
 
@@ -77,32 +76,34 @@ Note: this workshop is focused on the DNS Traffic Steering Policies product so t
 
 ## Task 3: Configure the web services
 
-  Now that we prepared the VCN and the Subnet, it is time to focus on the OCI Network Firewall. To deploy a Firewall we need to give it a policy. We will start by deploying an empty Firewall Policy and then use it to deploy an OCI Network Firewall.
+  To setup a basic web server we will use **Apache** following this [tutorial](https://docs.oracle.com/en/learn/apache-install/#introduction).
 
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**.
-  ![Click firewall policy](images/clickpol.png)
+1. Connect to the Chicago Compute Instance Public IP with a SSH client. There are many SSH clients available, I will use [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/). Download and open Putty. In the sessions menu input the public IP of the Compute in Chicago and in the connections menu, under SSH, select the **private** SSH key you saved when you deployed the instance. 
+   ![Putty details](images/putty.png)
 
-   In the menu that opens, click **Create network firewall policy**. In the next menu, give it a name and press Create...
-  ![Empty firewall policy](images/polempty.png)
+  Click **Open**, input user **opc** and you should see the Linux CLI of the Compute.
 
-   The Firewall policy that gets created will be empty of any configuration but we can use it to deploy a Network Firewall.
+2. Input these commands in the console, one by one:
 
-2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click **Create Network firewall**.
-  ![Create firewall1](images/createfw1.png)
+    * sudo yum install -y httpd
+    * sudo systemctl enable --now httpd.service
+    * sudo firewall-cmd --add-service=http --permanent
+    * sudo firewall-cmd --reload
+    * sudo systemctl status httpd
 
-   In the menu that opens, give the firewall a name, select the empty policy we previously created and select the correct VCN and subnet, created earlier in this lab. Then press Create.
-  ![Create firewall2](images/createfw2.png)
+  ![Apache status](images/apache.png)
 
-   Wait for the Firewall to become **ACTIVE** before moving on to the next step.
+  If everything looks fine, we should be able to connect to the Compute with a Web Browser. Let's try *http://207.211.176.26* (don't forget to use your actual Chicago IP). 
+  ![Chicago apache](images/apache_chicago.png)
 
-  Note: OCI Network Firewall creation can take up to 30 minutes. Consider taking a break!
+  **Success!** The Chicago Compute is running Apache!
+ 
+3. **Repeat** steps 1 and 2 and deploy Apache on the Frankfurt Compute. When done, test with *http://141.147.5.4* (don't forget to use your actual Frankfurt IP). 
+  ![Frankfurt Apache](images/apache_fra.png)
 
-3. Once the firewall is **ACTIVE**, click on the left hand menu on **Logs** and enable both Traffic and Threat Logs by using the toggle.
-  ![Firewall Logs](images/fwlogs.png)
-
-**Congratulations!** You have successfully deployed an OCI Network Firewall and completed this lab. You may now **proceed to the next lab**.
+**Congratulations!** You have successfully  completed this lab. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
 * **Author** - Radu Nistor, Principal Cloud Architect, OCI Networking
-* **Last Updated By/Date** - Radu Nistor, November 2023
+* **Last Updated By/Date** - Radu Nistor, February 2024
