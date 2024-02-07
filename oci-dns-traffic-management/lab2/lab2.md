@@ -22,36 +22,25 @@ In this lab, you will:
 
 ![lab2](images/lab2.png)
 
-## Task 1: Onboard a public DNS Zone
+## Task 1: Onboard a public DNS Zone into OCI
 
-1. Log into the Oracle Cloud console. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Press **Start VCN Wizard**.
-  ![Start Cloud Shell](images/startcs.png)
+1. Log into the Oracle Cloud console. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Zones**, under **DNS Management**. Press **Create zone**. 
+  ![Create zone](images/createzone.png)
 
-   If you have never used Cloud Shell before, Oracle will start the Instance with a **Public** network.
-  ![Public Cloud Shell](images/publiccs.png)
+  Make sure **Primary** is selected and input the DNS Zone/domain you bought at a registrar or a subdomain which you intend to delegate to OCI. For this workshop I will use the zone **oci-lab.cloud**.
+  ![Create zone2](images/createzone2.png)
 
-  **Note:**This tutorial works on the assumption that you don't have a custom setup for your Cloud Shell deployment. If you do, adjust the guide below to not interfere with your existing setup.
+2. In zone's details page you will see the Name Servers OCI allocated to your zone. There should be four of them.
+  ![OCI nameservers](images/nameservers.png)
 
-2. On the Cloud Shell deployment, click on the down arrow next to **Network:Public** and click **Private network definition list**.
-  ![Define private network](images/privatecs1.png)
+3. Go to your registrar's management console and point the domain you own to the OCI Name Servers. This step varies from registrar to registrar as each have their own management console. Here is how it looks on the registrar I use.
+  ![Registrar namesv](images/regnamesv.png)
 
-3. In the menu that opens, click **Create private network definition** and, in the next menu, give it a name and select the existing Firewall VCN and subnet.
-  ![Deploy private network](images/privatecs2.png)
+  Note that this change can take up to two days to propagate.
+   
+## Task 2: Create a Health Check HTTP Monitor
 
-  Next, select it as the default network for Cloud Shell.
-  ![Default private network](images/privatecs3.png). 
-
-  Next, **close** the Cloud Shell and **open** it again. It should now show the Cloud Shell instance deployed in the private firewall subnet.
-  ![Private network cloudshell](images/privatecs4.png). 
-
-4. With the Cloud Shell instance deployed in the private subnet, we will now need to generate **SSH keys** that we will use to connect to private Instances. Just issue the **ssh-keygen** command and press **Enter** until the keys are generated. Next, view the public key that was generated. We will use that **Public Key** on each private Compute instance that we will deploy.
-  ![Generate ssh keys](images/keygencs.png)
-
-  **Note:** Even if you close Cloud Shell and log out of the OCI Console, the files on the Instance (like the SSH keys) are kept and will be available next time you start Cloud Shell.
-
-## Task 2: Deploy two application subnets with Route Tables and Security Lists
-
-  We are now ready to deploy two application subnets, in the Firewall VCN deployed in the previous lab. The procedure is identical to the one described in **Lab 1 - Tasks 1 and 2**. 
+We are now ready to deploy two application subnets, in the Firewall VCN deployed in the previous lab. The procedure is identical to the one described in **Lab 1 - Tasks 1 and 2**. 
 
 1. Application subnet1 will have the following configuration:
 
