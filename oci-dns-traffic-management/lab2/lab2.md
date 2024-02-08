@@ -18,7 +18,7 @@ We will also add, in task 2, an OCI [Health Check](https://docs.oracle.com/en-us
 In this lab, you will:
 
 * Onboard a Public DNS Zone in OCI.
-* Create an OCI Health Check instance to monitor the Web servers deployed in the previous lab.
+* Create an OCI Health Check instance to monitor the web servers deployed in the previous lab.
 
 ![lab2](images/lab2.png)
 
@@ -40,195 +40,33 @@ In this lab, you will:
    
 ## Task 2: Create a Health Check HTTP Monitor
 
-We are now ready to deploy two application subnets, in the Firewall VCN deployed in the previous lab. The procedure is identical to the one described in **Lab 1 - Tasks 1 and 2**. 
+The last piece oh environment setup is the Heatlh Check. You should create it in one of the two regions you selected for your lab. I will create it in Chicago.
 
-1. Application subnet1 will have the following configuration:
+1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Observability & Management and click on **Health Checks**, under **Monitoring**. Press **Create health check**.
+  ![Create hc1](images/createhc1.png)
 
-    * Name: App-Subnet1
-    * CIDR: 10.0.0.32/27
-    * Subnet Access: Private
-    * Route table: new Route Table called "App-Subnet1-RT" with no entries
-    * Security List: new Security List called "App-Subnet1-SL" with a single "Allow all-0.0.0.0/0" rule on both Ingress and Egress.
+2. In the new menu, enter the following:
 
-  ![Application subnet1](images/appsubnet1.png)
+    * Name: any name, I will name it HTTP_Monitor.
+    * Compartment: I will use my LAB Compartment.
+    * Targets: enter the Public IPs of the two Web servers, Chicago and Frankfurt.
+    * Vantage points: these are remote systems owned by Oracle which will be used to source the health checks. I typicaly choose 3 (you can have more), somewhat close to the OCI regions where I deployed the web servers.
+    * Request type: it is mandatory that we use an HTTP type monitor. 
+    * Protocol and port: in normal, production, environments this would be HTTPS with port 443 but, for this workshop, I have not enabled HTTPS on the Webservers so I will go with HTTP and port 80. 
+    * Target path and headers: these are used to customise your health check to match your deployed application. For this Workshop, I will leave them on the default settings. 
+    * Method: you can choose between **HEAD** and **GET**. I typically use the HEAD method.
+    * Timeout and interval: these you can customise as you wish; more aggresive health checks will consume more resources on your web servers but will notice an issue much faster.
 
-2. Application subnet2 will have the following configuration:
+  ![Create hc2](images/createhc2.png)
 
-    * Name: App-Subnet2
-    * CIDR: 10.0.0.64/27
-    * Subnet Access: Private
-    * Route table: new Route Table called "App-Subnet2-RT" with no entries
-    * Security List: new Security List called "App-Subnet2-SL" with a single "Allow all-0.0.0.0/0" rule on both Ingress and Egress.
+  ![Create hc3](images/createhc3.png)
 
-  ![Application subnet2](images/appsubnet2.png)
-
-   In the end, on the VCN Details page, you should see three subnets.
-  ![Subnet overview](images/subnetov.png)
-
-## Task 3: Deploy two private OCI Compute Instances
-
-  Now that we have the subnets, we can go ahead and deploy Compute Instances.
-
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Compute and click on **Instances**. In the menu that opens, click **Create Instance**
-  ![Instance overview](images/createinstance1.png)
-
-2. In the menu that opens, we need to input data into multiple fields. Unless specified otherwise in this tutorial, leave the fields with the **Default** input.
-
-    * Compute Name: APP-VM1
-    * Everything else until **Primary VNIC information** remains on default
-    * Network details: select the VCN and the APP-Subnet1 subnet
-
-  ![Deploy VM subnet](images/createinstance2.png)
-
-  In the **Add SSH keys** menu, select **Paste Public Keys** and paste the Public SSH Key created at **Task 1**, in the Cloud Shell instance.
-
-  ![Deploy VM keys](images/createinstance3.png)
-
-  Leave everything else on **Default** and press **Create**.
-
-  Wait for the Instance to go into the **Running** state and note the private IP it was assigned.
-
-  ![Deploy VM first](images/createinstance4.png)
-
-3. Repeat the procedure and deploy a second Compute Instance. Name it **APP-VM2** and make sure you select **APP-Subnet2** as the target.
-
-  ![Deploy VM second](images/createinstance5.png)
-
-4. Start the **Cloud Shell** instance and try to SSH to both Compute Instances. The user is **opc**.
-
-  ![Connect vms](images/connectvms.png)
-
-## Task 4: Adjust VCN routing
-
-  With VCN Default Routing, any Compute Instance in the VCN will be routed directly to any other Compute Instance from the same VCN. To change that and add the Network Firewall on the path, we will need to modify the subnet Route Tables.
-
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous lab. In the details page that opens, note the Firewall's Private IP.
-  ![Firewall details](images/firewalldetails.png)
-
-2. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Next, click the VCN named **LiveLab-OCIFW-VCN**. On the VCN Details page, on the left menu, click **Route Tables**. We will modify the APP-Subnet Route tables.
-  ![VCN Route tables](images/vcnroutetables.png)
-
-3. Click on the Route table named **App-Subnet1-RT**. In the menu that opens, click **Add Route Rules**. We will add a route for APP-Subnet2 (10.0.0.64/27) with next hop the Firewall.
-  ![Static route1](images/staticroute1.png)
-
-4. Go back to the Route Tables overview and click on the route table named **App-Subnet2-RT**. In the menu that opens, click **Add Route Rules**. We will add a route for APP-Subnet1 (10.0.0.32/27) with the next hop as the Firewall.
-  ![Static route2](images/staticroute2.png)
-
-  And that's it! Communication between the two Application Subnets will now be forced through the OCI Network Firewall.   
-
-## Task 5: Modify the OCI Firewall policy
-
-  In a previous **Lab** we deployed a Network Firewall with an empty Firewall Policy. As we've create the new subnets and Compute Instances, we need to adjust the Firewall Policy to allow traffic between those subnets. 
-Since we cannot modify a Firewall Policy that is **IN-USE** by a Firewall, the usual procedure follows this workstream: we clone the existing Policy that is in use -> we add or remove any configuration from the new, cloned Policy -> we modify the OCI Network Firewall to use the Cloned Policy. 
-
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. In the menu that opens, click on the Network firewall deployed in the previous lab. In the details page that opens, click the Policy that is in use.
-  ![Click Policy](images/clickpolicy.png)
-
-2. In the menu that opens, click **Clone Policy** and give the new Policy a name. I will name it **network_firewall_policy_1**.
-  ![Clone Policy](images/clonepolicy.png)
-
-3. Go back to the **Network Firewall policies** and click on the newly cloned policy called **network_firewall_policy_1**.
-  ![Click Policy2](images/clickpolicy2.png)
-
-  In the Network Firewall Policy we will create the following:
-    * One Application that defines PING
-    * One Application List that contains the Application above
-    * One Service that defines SSH
-    * One Service List that contains the SSH Service
-    * One Address list that contains the two application subnets CIDRs
-    * One Firewall Security Rule that allows SSH between the Application subnets.
-    * One Firewall Security Rule that allows PING between the Application subnets.
-  
-  Note: Any Firewall Policy contains an implicit **deny-any** rule, not seen in the Console. Traffic not specifically allowed will be denied.
-
-4. In the **Network firewall policy details** menu, click on **Applications** on the left menu and click **Create application**. Create an application that allows **Echo requests**.
-
-  ![Create application](images/createapp.png)
-
-5. In the **Network firewall policy details** menu, click on **Application lists** on the left menu and click **Create application list**. Create an application list that contains the Application created in the previous step.
-  ![Create application list](images/createapplist.png)
-
-6. In the **Network firewall policy details** menu, click on **Services** on the left menu and click **Create service**. Create a service that allows **SSH / TCP on port 22**.
-  ![Create service](images/createsrv.png)
-
-7. In the **Network firewall policy details** menu, click on **Service lists** on the left menu and click **Create service list**. Create a service list that contains the SSH service created at the previous step.
-  ![Create service](images/createsvclist.png)
-
-8. In the **Network firewall policy details** menu, click on **Address lists** on the left menu and click **Create address list**. Create an address list that contains the CIDRs of the two application subnets.
-  ![Create address list](images/createaddrlist.png)
-
-  **NEXT**, let's create our first firewall rules.
-
-9. In the **Network firewall policy details** menu, click on **Security rules** on the left menu and click **Create security rule**. 
-  ![Create security rule](images/createsecrule.png)
-
-10. In the menu that opens, give the rule a name -> **Allow-SSH-inside-the-VCN**. In the **Match condition**, under Source addresses, click **Select address lists** and add the previously created address list.
-  ![Security rule source](images/secrule1.png)
-
-  For this rule we will use the same address list for both source and destination so **repeat** the procedure above to add the same address list as a destination. In the end, the source and destination fields should look like this:
-  ![Security rule sd](images/secrule2.png)
-
-  For applications we will click **Any application** and for service, we will add the service list created in step 7, named **Service-list1**. For URL, we will let **Any URL**.
-  ![Security rule srv](images/secrule3.png)
-
-  Last, for the **Rule action**, we will select **Allow traffic**. Press **Create Security Rule**.
-  ![Security rule create](images/secrule4.png)
-
-11. Next, repeat the procedure above to create a second firewall rule, called **Allow-PING-inside-the-VCN**. The Source, Destination, and URLs will be the same as before but the Application will be the **Application list** created at step 5 while the **Services** will remain with **Any service**. 
-  ![Security rule create2](images/secrule5.png)
-
-  The reason we create two security rules is because it is not supported to have both Applications and Services inside the same rule. In the end, you should have two **Security Rules** in the Policy, one that allows **SSH** inside the VCN and the other one that allows **PING**.
-  ![Security rules](images/secrule6.png)
-
-12. Now that we have finished configuring the policy, it is time to modify the firewall to use this new policy. Go to **Identity and Security** and click on **Network firewalls**. Next, click on the Network Firewall we deployed. Click **Edit** and configure it to use the new policy, called **network_firewall_policy_1**.
-  ![Modify firewall](images/modifyfw.png)  
-
-  The firewall will change from the **ACTIVE** state to **UPDATING**. Wait for it to become **ACTIVE** again before moving to the next task.
-
-## Task 6: Test traffic and observe logs
-
-  With the configuration created within this *Lab**, in the previous tasks, between the two private Compute Instances deployed in the VCN we allowed **PING** and **SSH**. Let's test this and observe the firewall logs. We will connect to one of the Instances and:
-  * **PING** the other Compute to test the Ping Rule.
-  * Test TCP port 22 to see that it is allowed
-  * Test TCP port 443 to see that it is **not** allowed.
-  ![Lab2 flow](images/lab2flow.png)
-
-1. Start the **Cloud Shell** Instance from the top-right menu. Make sure it starts with the **Private Network** configured under task 1 of this lab.
-  ![Lab2 cloudshell](images/lab2cs.png)
-
-2. The two Compute Instances I deployed in the previous tasks have the following IP address:
-    * APP-VM1 : 10.0.0.47, in subnet App-Subnet1 (10.0.0.32/27).
-    * APP-VM2 : 10.0.0.80, in subnet App-Subnet2 (10.0.0.64/27).
-
-  Note: When running your lab, you will probably get different IPs for your hosts. Adapt the commands below to reflect that. 
-
-  From the Cloud Shell Instance, issue the following commands:
-    * ssh opc@10.0.0.47  -> this will connect you to APP-VM1.
-    * ping 10.0.0.80  -> this will test ping between APP-VM1 and APP-VM2 and it should work.
-    * nc -zv 10.0.0.80 22  -> this will test connectivity to port 22 between APP-VM1 and APP-VM2 and it should work.
-    * nc -zv 10.0.0.80 443  -> this will test connectivity to port 443 between APP-VM1 and APP-VM2 and it should **not** work.
-
-  ![Lab2 tests](images/lab2tests.png)
-
-3. Now let's check the firewall **Traffic** Log. Go to the Firewall Detail page and click on **Logs** on the left side menu. In the menu that opens, click on the Traffic Log.
-  ![Firewall log1](images/lab2fwlog1.png)
-
-  You will be directed to OCI's Logging service. Wait for ~5 minutes for the log to be updated and refresh the page. You should see the tests performed recently as 3 lines in the log. Click on the most right arrow to expand them.
-  ![Firewall log2](images/lab2fwlog2.png)
-
-  One of the log lines shows the Ping allowed by the dedicated rule.
-  ![Firewall log3](images/lab2fwlogping.png)
-
-  One of the log lines shows the SSH allowed by the dedicated rule.
-  ![Firewall log4](images/lab2fwlogssh.png)
-
-  One of the log lines shows the HTTPS denied by the **default deny all** rule.
-
-  ![test hytp](images/testpng.png) 
+  Press Create and wait a few minutes for the monitor to gather data. Make sure the monitor reports both web servers as healthy before moving on. 
+  ![Create hc4](images/createhc4.png)
 
 **Congratulations!** You have completed this lab. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
 * **Author** - Radu Nistor, Principal Cloud Architect, OCI Networking
-* **Last Updated By/Date** - Radu Nistor, November 2023
+* **Last Updated By/Date** - Radu Nistor, February 2024

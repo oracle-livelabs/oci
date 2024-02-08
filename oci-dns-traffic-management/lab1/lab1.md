@@ -85,18 +85,21 @@ Note: this workshop is focused on the DNS Traffic Steering Policies product so t
 
 2. Input these commands in the console, one by one:
 
-    * sudo yum install -y httpd
-    * sudo systemctl enable --now httpd.service
-    * sudo firewall-cmd --add-service=http --permanent
-    * sudo firewall-cmd --reload
-    * sudo systemctl status httpd
+    * sudo su -
+    * yum install -y httpd
+    * systemctl enable --now httpd.service
+    * firewall-cmd --add-service=http --permanent
+    * firewall-cmd --reload
+    * echo "<head><title>Sample Web Page</title></head><body>This is the Chicago Web Server</body></html>" > /var/www/html/index.html
+    * systemctl restart httpd
+    * systemctl status httpd
 
   ![Apache status](images/apache.png)
 
   If everything looks fine, we should be able to connect to the Compute with a Web Browser. Let's try *http://207.211.176.26* (don't forget to use your actual Chicago IP). 
   ![Chicago apache](images/apache_chicago.png)
 
-  **Success!** The Chicago Compute is running Apache!
+  **Success!** The Chicago Compute is running an Apache web server!
  
 3. **Repeat** steps 1 and 2 and deploy Apache on the Frankfurt Compute. When done, test with *http://141.147.5.4* (don't forget to use your actual Frankfurt IP). 
   ![Frankfurt Apache](images/apache_fra.png)
