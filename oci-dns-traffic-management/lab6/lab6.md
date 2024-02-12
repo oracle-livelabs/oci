@@ -1,137 +1,71 @@
-# SSL Decryption and Intrusion Detection
+# ASN steering policy
 
 ### Introduction
 
-Estimated Time: 60 minutes
+Estimated Time: 15 minutes
 
-### About this lab
+### About the ASN steering policy
 
-  In this lab we will focus on HTTPS, as this is the most common way to expose **web** services. To be able to complete this lab you will need the following:
-  * SSL Certificate
-  * SSL Certificate Chain
-  * SSL Private Key for the certificate
-
-  This lab will not cover the procedure to obtain these items. If you own a DNS Domain, you may be able to get them from the Registrar or you can use **openssl** on any Linux system and create a self-signed certificate. Regardless of the method, proceed with this lab only after you have the three components.
+The geolocation steering policy will direct users to a site based on the user location. Each geolocation rule alows for a backup site so users are redirected in case the main site goes down. In this lab I will create a rule with the following:
+* users in Europe will go to the Frankfurt site. If Frankfurt goes down, they will be redirected to Chicago.
+* users in North America will go to the Chicago site. If Chicago goes down, they will be redirected to Frankfurt.
+* no *global catch-all rule* which means that users outside of Europe or North America will get a random DNS answer, either the Frankfurt or the Chicago site.
 
 ### Objectives
 
 In this lab, you will:
 
-* Deploy an OCI Vault Service to store the SSL Certificate.
-* Enable an Inbound SSL Decryption policy on the OCI Network Firewall.
-* Enable Intrusion Detection in the OCI Network Firewall.
-* Enable SSL Offloading in the OCI Load Balancer.
-* Test and observe Firewall Logs.
+* Deploy a Geolocation DNS policy
+* Test the Geolocation DNS policy
 
-![lab6](images/lab6.png)
+![lab5](images/lab5.png)
 
-## Task 1: Deploy and configure the OCI Vault
+## Task 1: Deploy a geolocation steering policy
 
-  The OCI Network Firewall can decrypt incoming SSL traffic. For that, it needs a copy of the SSL certificates and the only place it can store them is the OCI Vault.
-
-1. Log into the Oracle Cloud console and go to the Burger menu (on top left), select **Identity and Security** and click on **Vault**
-  ![Click Vault](images/clickvault.png)
-  
-2. In the menu that opens, click **Create Vault** and, in the next menu, give it a name and press Create.
-  ![Create VCN](images/createvault.png)
-
-3. You will be redirected to the Vault Details Page. Select **Master Encryption Keys** on the left and click **Create Key**. In the new menu, give it a name (lab-Master-Key) and make sure you select the **symmetric**  algorithm. Any protection mode is fine.
-  ![Create Masterkey](images/createmasterkey.png)
-
-4. The next step is to create a Vault **Secret** using the Certificate, Certificate Chain and Certificate Private Key. The Vault Secret has a very specific format that you need to follow in order for the firewall to be able to read it.
-  ![Secret Format](images/secretformat.png)
-
-  Open any text editor, such as Notepad, and create the Secret in the specified format. Use the following links for reference:
-
-  [Official documentation](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/network-firewall/setting-up-certificate-authentication.htm#network-firewall-setting-up-certificate-authentication) 
-
-  [Example Secret](images/vault_secret_example.txt)
-
-  After you prepared the **text** file with the proper format, go to the OCI Vault, click **Secrets** and click **Create Secret**. In the new menu, add the contents of the text file. 
-  ![Create secret](images/createsecret.png)
-
-5. As a final step, we need an **IAM Policy** to allow the OCI Network Firewall access to the OCI Vault. On the Oracle Cloud console, go to the Burger menu (on top left), select **Identity and Security** and click on **Policies** under the **Identity** service.
-  ![Click policy](images/clickpolicy.png)
-
-  In the menu that opens, click **Create Policy**. In the new menu, select "**Show manual editor** and input the following IAM rule: 
-
-  *allow service ngfw-sp-prod to read secret-family in compartment lab*
-
-  Note: **lab** is the Compartment I worked with in this Workshop. Change that policy to the Compartment you used.
-  ![Create policy](images/createpolicy.png)
-
-
-## Task 2: OCI Network Firewall - enable inbound SSL decryption and Intrusion Detection 
-
-  We finished preparing the Vault so we now need to modify the Firewall Policy to add Decryption.
-
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Select **OCI Firewall2** which is the firewall inspecting **Inbound** traffic from the Internet. There, click on its running Policy - *network_firewall_policy_ingress*.
-  ![click fwpol](images/clickfwpol.png)
-
-2. In the Policy details page, click **Clone** and give the clone a new name - *network_firewall_policy_ingress_decrypt*.
-  ![Clone fwpol](images/fwclonepol.png)
-
-3. Now go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewall policies**. Click on **network_firewall_policy_ingress_decrypt**. Make sure it is in **ACTIVE** state. 
-  ![Click policy2](images/clickpol2.png)
-  
-4. In the Policy details menu, on the left, click on **Decryption profiles**. Click **Create decryption profile** and create an **SSL Inbound Inspection** profile.
-  ![Create decrypt](images/createdecrypt.png)
+1. Log into the Oracle Cloud console. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Traffic management steering policies**, under **DNS Management**. Press **Create Traffic management steering policy**. 
+  ![Create dnspol](images/dnspol.png)
  
-5. In the Policy details menu, on the left, click on **Decryption rules**. Click **Create decryption rule**.
-  ![Create decrule1](images/createdecrule1.png)
+2. In the policy creation menu we need to input various information.
 
-  In the menu that opens, for Source select **Any** and for Destination select the Load Balancer subnet address list.
-  ![Create decrule2](images/createdecrule2.png)
+    * Type is: Geolocation steering.
+    * Give it a name.
+    * Policy TTL: you can choose any value you like; with a high TTL value there will be less DNS traffic but more time to fail over in case a server has issues.
+    * Maximum answer count: this type will always have one.
+    * Answer pools: create a pool for Chicago with the Web Server there as an answer and one for Frankfurt.
+    * Geolocation steering rules: add a rule for Europe with Pool 1 Frankfurt and Pool 2 Chicago and a rule for North America with Pool 1 Chicago and Pool 2 Frankfurt. 
+    * Attach the HTTP health check created in lab 2.
+    * Attach the subdomain of the DNS Zone. In my case I will use **web-geo** from **oci-lab.cloud** so the final FQDN is **web-geo.oci-lab.cloud**.
+    
+  ![Create dnspolgeo2](images/dnspolgeo2.png)
+  ![Create dnspolgeo3](images/dnspolgeo3.png)
+  ![Create dnspolgeo4](images/dnspolgeo4.png)
+  ![Create dnspolgeo5](images/dnspolgeo5.png)
+  
+## Task 2: Test the geolocation policy
 
-  Next, under **Rule action**, select SSL Inbound Inspection, select the Profile created at point 4 and press Create Secret.
-  ![Create decrule3](images/createdecrule3.png)
+1. After the policy is deployed you should see a status page, like below:
+  ![Policy statusgeo](images/policystatusgeo.png)
 
-  In the Secret creation menu, make sure you choose the Vault, the Secret and the correct **Secret Version**. The Secret Version will increase if you edit the Secret.
-  ![Create decrule4](images/createdecrule4.png)
+2. Now let's test the policy. If I try to connect to *http://web-geo.oci-lab.cloud* while having a public IP from Europe I should be redirected to Frankfurt. Similarly, ff I try to connect to *http://web-geo.oci-lab.cloud* while having a public IP from North America I should be redirected to Chicago.
 
-  ![Create decrule5](images/createdecrule5.png)
+  ![Web responsegeo1](images/webresponsegeo1.png)
 
-6. In the Policy details menu, on the left, click on **Security rules**. There should be only one. Click Edit.
-  ![Edit secrule](images/editsecrule.png)
+  ![Web responsegeo2](images/webresponsegeo2.png)
+  
+3. Let's see what happens if the Chicago web server stops responding to health checks. Go to the Chicago compute management page. Shut down the web server.
+  ![Stop chicagogeo](images/stopchicgeo.png)
 
-  Under **Rule action** switch from Allow to Intrusion Detection.
-  ![Edit secrule2](images/editsecrule2.png)
+  Now go back to the traffic steering policy details page and check the status. 
+  ![Policy status2geo](images/policystatus2geo.png)
 
-  Note: Enabling Intrusion Detection will make the firewall send a log entry to the **Threat Log** each time an attack is detected. However, the attack will not be stopped, only logged. If you want to stop the attack, select **Intrusion Prevention** instead.
+  Now, even though I have an IP from North America, I will get directed to the Frankfurt Web Server. 
+  ![Policy status3geo](images/policystatus3geo.png)
 
-7. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Identity and Security** and click on **Network firewalls**. Click **OCI Firewall2** which is the firewall inspecting **Inbound** traffic from the Internet and click **Edit**. Make it use the new policy called **network_firewall_policy_ingress_decrypt**.
-  ![Edit fw](images/editfw.png)
+  Before moving on, start the Chicago Web Server as we will need it in the other labs.
 
-  The firewall will go into the **Updating** state. Wait for it to become **ACTIVE** before moving on.
-
-## Task 3: Enable SSL Offloading on the Load Balancer
-
-  After we enabled HTTPS and Inbound Decryption on the Firewall, let's enable HTTPS on the Load Balancer. 
-
-1. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select **Networking** and click on **Load balancer**. Click on the LB we deployed in the previous lab.
-  ![Click lb](images/clicklb.png)
-
-2. In the menu that opens, scroll down and click **Certificates**, on the left side menu. Next, select **Load Balancer Managed Certificate** and click **Add certificate**. In the menu that opens, add the three certificate files ( certificate, chain and private key).
-  ![Create certificate](images/createcert.png)
-
-  Note: the Firewall certificate used in the OCI Vault and the LB certificate must be the same or decryption will fail.
-
-3. Next, go to **Listeners** on the left and press **Create Listener**. Use HTTPS, add the certificate created earlier and use the same backend set as the HTTP Listener (most likely there will be only one backend set configured)
-  ![Create listener](images/createlsn.png)
-
-## Task 4: Tests and Logs
-
-  1. To test, do a simple HTTPS request to the Load Balancer's Public IP. Note that, depending on the certificate type, you may need a DNS entry to match the hostname. The firewall should allow the traffic and you should see it in the **Traffic Log**.
-  ![Traffic Log](images/trafficlog.png)
-
-  2. There is no easy way to see if the traffic was decrypted by the firewall. However, once decryption is in place and Intrusion Detection/Prevention is enabled, we will start to see entries in the **Threat Log**.
-   ![Threat Log](images/threatlog.png)
-
-   
-
-**Congratulations!** You have successfully completed this lab and this **Workshop**. 
+**Congratulations!** You have successfully completed this lab. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
 * **Author** - Radu Nistor, Principal Cloud Architect, OCI Networking
-* **Last Updated By/Date** - Radu Nistor, November 2023
+* **Last Updated By/Date** - Radu Nistor, February 2024
