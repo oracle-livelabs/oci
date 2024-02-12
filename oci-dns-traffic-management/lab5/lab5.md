@@ -11,6 +11,8 @@ The geolocation steering policy will direct users to a site based on the user lo
 * users in North America will go to the Chicago site. If Chicago goes down, they will be redirected to Frankfurt.
 * no *global catch-all rule* which means that users outside of Europe or North America will get a random DNS answer, either the Frankfurt or the Chicago site.
 
+Note that the evaluation is done on the Local DNS server IP not the actual IP of the user trying to connect to the site. This can be important in some scenarios, for example when the user is using the Corporate DNS server via a VPN.
+
 ### Objectives
 
 In this lab, you will:
@@ -46,7 +48,7 @@ In this lab, you will:
 1. After the policy is deployed you should see a status page, like below:
   ![Policy statusgeo](images/policystatusgeo.png)
 
-2. Now let's test the policy. If I try to connect to *http://web-geo.oci-lab.cloud* while having a public IP from Europe I should be redirected to Frankfurt. Similarly, ff I try to connect to *http://web-geo.oci-lab.cloud* while having a public IP from North America I should be redirected to Chicago.
+2. Now let's test the policy. If I try to connect to *http://web-geo.oci-lab.cloud* while having a public IP from Europe I should be redirected to Frankfurt. Similarly, if I try to connect to *http://web-geo.oci-lab.cloud* while having a public IP from North America I should be redirected to Chicago.
 
   ![Web responsegeo1](images/webresponsegeo1.png)
 
