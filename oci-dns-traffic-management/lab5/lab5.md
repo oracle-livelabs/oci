@@ -6,7 +6,7 @@ Estimated Time: 15 minutes
 
 ### About the geolocation steering policy
 
-The geolocation steering policy will direct users to a site based on the user location. Each geolocation rule alows for a backup site so users are redirected in case the main site goes down. In this lab I will create a rule with the following:
+The geolocation steering policy will direct users to a site based on the user location. Each geolocation rule allows for a backup site so users are redirected in case the main site goes down. In this lab I will create a rule with the following:
 * users in Europe will go to the Frankfurt site. If Frankfurt goes down, they will be redirected to Chicago.
 * users in North America will go to the Chicago site. If Chicago goes down, they will be redirected to Frankfurt.
 * no *global catch-all rule* which means that users outside of Europe or North America will get a random DNS answer, either the Frankfurt or the Chicago site.

@@ -6,18 +6,19 @@ Estimated Time: 15 minutes
 
 ### About the IP prefix steering policy
 
-The ASN steering policy will direct users to a site based on the user's DNS server IP and the public records that match that IP to a BGP ASN. Each ASN rule alows for a backup site so users are redirected in case the main site goes down. In this lab I will create a rule with the following:
-* users using a DNS server in AS 13335 (the Cloudflare 1.1.1.1 DNS) will go to the Chicago site. If Chicago goes down, they will be redirected to Frankfurt.
-* any other user in the world, outside AS 13335, will go to Frankfurt. If Frankfurt goes down, they will be redirected to Chicago. We will do this using a *global catch-all* rule.
+The IP prefix steering policy will direct users to a site based on the user's DNS server IP. Each rule allows for a backup site so users are redirected in case the main site goes down. In this lab I will create a rule with the following:
+* users using Cloudflare's recursive DNS server (1.1.1.1) will go to the Chicago site. If Chicago goes down, they will be redirected to Frankfurt.
+* users using Oracle Cloud's recursive DNS server (216.146.35.35) will go to the Frankfurt site. If Frankfurt goes down, they will be redirected to Chicago.
+* no *global catch-all rule* which means that users using any other DNS server will get a random response.
 
 ### Objectives
 
 In this lab, you will:
 
-* Deploy an ASN DNS steering policy
-* Test the ASN DNS steering policy
+* Deploy an IP prefix DNS steering policy
+* Test the IP prefix DNS steering policy
 
-![lab6](images/lab6.png)
+![lab7](images/lab7.png)
 
 ## Task 1: Deploy an ASN steering policy
 
