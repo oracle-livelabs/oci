@@ -17,13 +17,12 @@ In this lab, you will:
 This lab assumes you have:
 
 * You have Completed **Get Started**
-* Autonomous Database has been created and Data has been loaded  
+* Autonomous Database has been created.
+* You would need access to Amadeus API Keys, please read their terms and conditions from their website.  
 
 ### About Amadeus APIs
 
-Amadeus provides access to APIs solutions that unlock travel content and services, as well as to all resources developers that may need to take full advantage of those APIs. 
-
-Amadeus was the first Global Distribution System to introduce a structured API, back in 2000. Since then, we have published new version based on XML and Web Services in 2006.
+[Amadeus](https://amadeus.com/) provides access to APIs solutions that unlock travel content and services, as well as to all resources developers that may need to take full advantage of those APIs. 
 
 [Amadeus Web Services](https://amadeus.com/en/topic/api) is a unique point of access for all Amadeus content and has been built on scalable Open System architecture and XML formatting to ensure that you always remain at the cutting-edge of architecture and technology.
 
@@ -33,8 +32,6 @@ The Amadeus Flight Inspiration Search API returns a list of the cheapest destina
 
 To call the API, we just need to provide the IATA airport code of our city of departure. We can further customize our request using optional parameters like departure date range, maximum price or trip duration.  
 
-
- 
 ## Task 1: Sign Up and Sign In to Amadeus
  
 1. Sign up and Sign into [Amadeus Developer site](https://developers.amadeus.com/my-apps) and create your App.
@@ -151,4 +148,4 @@ To call the API, we just need to provide the IATA airport code of our city of de
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - June 24th, 2023.
+* **Last Updated By/Date** - Dec 4th, 2023.

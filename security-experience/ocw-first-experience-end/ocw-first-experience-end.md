@@ -5,15 +5,13 @@ This lab will show you how to use the OCI Security Center dashboard.
 
 Estimated time: 25 minutes
 
+[Walk Through the Lab](videohub:1_txvp2x9p)
+
 ### Objectives
 In this lab, you will:
 
 - Post security reports in Autonomous Database via REST calls
 - Check those reports in Security Dashboard UI
-
-
-
-
 
 
 ### Prerequisites
@@ -49,11 +47,12 @@ Please check below the Autonomous Database details that you will need:
     
     ![Security assessment report](./images/files-displayed.png "Security assessment report")
     
-    Please locate into this directory by running:
+    Go into the oractdemeasec-&lt;date&gt; directory by running the following command (the date will be different depending on when you ran the script from Lab 2 / Task 1):
 
     ```
-    cd oractdemeasec-2023-08-03
+    cd oractdemeasec-<date>
     ``` 
+
     please ensure you replace the directory with yours.
 
     Now, run the command for the REST call to load the file into the Database table OCISECURITYCENTER:
@@ -85,10 +84,10 @@ Please check below the Autonomous Database details that you will need:
 
     ![CIS compliance report](./images/cis-report.png "CIS compliance report")
 
-    Please locate into this directory by running:
+    Go into the oractdemeasec-&lt;date&gt;_&lt;time&gt; directory by running the following command (the date will be different depending on when you ran the script from Lab 2 / Task 2):
 
     ```
-    cd oractdemeasec-2023-08-03_14-32-51
+    cd oractdemeasec-<date>_<time>
     ``` 
     please ensure you replace the directory with yours.
 
@@ -115,7 +114,7 @@ Please check below the Autonomous Database details that you will need:
 
     ![Database Actions](images/database-actions-security.png "Database Actions")
 
-7. Log in first as ADMIN, with the provided password supplied by the trainers:
+7. It is needed to log in first as ADMIN, with the provided password supplied by the trainers:
 
     ![Log in as ADMIN](images/database-actions-login-admin.png "Log in as ADMIN")
 
@@ -123,7 +122,7 @@ Please check below the Autonomous Database details that you will need:
 
     ![Log out](images/admin-sign-out.png "Log out")
 
-9. Log in as SECASSESSMENT, with the provided password supplied by the trainers:
+9. Now you can log in as SECASSESSMENT, with the provided password supplied by the trainers:
 
     ![Log in as SECASSESSMENT](images/database-actions-login.png "Log in as SECASSESSMENT")
 

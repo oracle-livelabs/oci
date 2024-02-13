@@ -1,0 +1,10 @@
+{
+    "compartment_id" : "<COMPARTMENT-OCID>",
+    "input_objects" : [
+        {
+            "namespace" : "<NAMESPACE>",
+            "bucket" : "<BUCKET-NAME>",
+            "objects" : ["car.jpg", "bees.jpg"]
+        }
+    ]
+}

@@ -2,7 +2,9 @@
 
 ## Introduction
 
-OCI Functions의 사용사례로 Events 서비스와 연동하여, OCI 자원에 이벤트가 발생시 Function을 호출하여 처리하는 패턴을 실습합니다. **Object Storage > Event > Function > Object Storage - 썸네일 이미지 만들기** 구성으로 Object Storage에 이미지가 될때 발생하는 이벤트를 기반으로, Function으로 해당 이미지의 썸네일 이미지를 만들어 Object Storage에 다시 업로드하는 사례를 실습합니다.
+OCI Functions의 사용사례로 Events 서비스와 연동하여, OCI 자원에 이벤트가 발생시 Function을 호출하여 처리하는 패턴을 실습합니다.
+
+**Object Storage > Event > Function > Object Storage - 썸네일 이미지 만들기** 구성으로 Object Storage에 이미지가 될때 발생하는 이벤트를 기반으로, Function으로 해당 이미지의 썸네일 이미지를 만들어 Object Storage에 다시 업로드하는 사례를 실습합니다.
 
 ![Introduction](images/usecase-create-thumbnail.png =75%x*)
 
@@ -20,7 +22,53 @@ OCI Functions의 사용사례로 Events 서비스와 연동하여, OCI 자원에
 - Lab 2 실습 완료
 
 
-## Task 1. Object Storage 버킷 만들기
+## Task 1. 실습을 위한 Policy 설정하기
+
+Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서는 권한이 필요합니다. 권한을 설정하기 위해 Function이 속한 compartment id를 확인하고 관련권한을 설정합니다.
+
+1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Identity & Security**으로 이동한 다음 **Identity** > **Policies** 을 선택합니다.
+
+2. **Create Policy** 클릭
+
+3. 아래 값으로 개발할 Functions에 오브젝트 스토리지 버킷 2개에 대한 권한을 부여합니다.
+
+    - Name: `functions-buckets-policy`
+    - Description: `Policy that allows functions dynamic group to manage objects in the bucket`.
+    - Compartment: 계속 사용하던 Compartment 선택, **oci-hol-xx**를 선택
+    - Policy Builder: **Show manual editor** 슬라이딩 버튼을 클릭하여 직접 입력합니다.
+
+        * [compartment-name]은 오브젝트 스토리지 버킷이 있는 Compartment 이름으로 대체합니다. 예, oci-hol-xx
+        * Object Storage Bucket 2개는 이후 만들 예정으로 Policy 먼저 설정합니다.
+    ```
+    <copy> 
+    Allow any-user to manage objects in compartment [compartment-name] where all {request.principal.type='fnfunc', request.principal.compartment.id=target.compartment.id, target.bucket.name='image-source-bucket'}
+    Allow any-user to manage objects in compartment [compartment-name] where all {request.principal.type='fnfunc', request.principal.compartment.id=target.compartment.id, target.bucket.name='image-source-resized-bucket'}
+    </copy> 
+    ``` 
+
+4. 이후 실습을 위해 다음 Policy를 추가합니다.
+
+    - Name: fn-lab3-policy*-xx* 입력합니다.
+    - Description: Policy for Lab3
+    - Compartment: 계속 사용하던 Compartment 선택, **oci-hol-xx**를 선택
+    - Policy:
+    
+        1. Object Storage 사용을 위한 설정
+        ```
+        Allow group <group-name> to manage buckets in compartment <compartment-name>
+        Allow group <group-name> to manage objects in compartment <compartment-name>
+        ```
+
+        2. Event Service를 통해 Function을 호출하는 규칙을 설정하기 위해 필요한 정책
+        ```
+        Allow group <group-name> to manage cloudevents-rules in compartment <compartment-name>
+        Allow group <group-name> to inspect compartments in compartment <compartment-name>
+        Allow group <group-name> to use tag-namespaces in compartment <compartment-name>
+        Allow group <group-name> to use virtual-network-family in compartment <compartment-name>
+        Allow group <group-name> to manage function-family in compartment <compartment-name>
+        ```
+
+## Task 2. Object Storage 버킷 만들기
 
 1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Storage**에서 **Object Storage & Archive Storage** 하위메뉴인 **Bucket**을 선택합니다.
 
@@ -28,46 +76,16 @@ OCI Functions의 사용사례로 Events 서비스와 연동하여, OCI 자원에
 
 3. **Create Bucket**을 클릭하여, 원본 이미지를 업로드할 때 사용할 source 버킷을 생성합니다. 
 
-    - Bucket Name: image-source-bucket
+    - Bucket Name: *image-source-bucket*
     - **Emit Object Events**: OCI Event 서비스에서 발생한 오브젝트 이벤트를 수신할 수 있도록 반드시 체크합니다. 이 이벤트를 수신하여, Function을 호출하여 원하는 작업을 수행할 수 있도록 할 예정입니다.
     - 나머지 항목은 디폴트 설정 사용
 
-    ![image-source-bucket](images/image-source-bucket.png =60%x*)
+    ![image-source-bucket](images/image-source-bucket.png =50%x*)
 
 4. 처리된 이미지를 업로드할 때 사용할 버킷을 생성합니다. 
 
-    - Bucket Name: image-source-resized-bucket
+    - Bucket Name: *image-source-resized-bucket*
     - 나머지 항목은 디폴트 설정 사용
-
-## Task 2. Function을 위한 Policy 설정하기
-
-Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서는 권한이 필요합니다. 권한을 설정하기 위해 Function이 속한 compartment id를 확인하고 관련권한을 설정합니다.
-
-1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Identity & Security**으로 이동한 다음 **Compartments** 을 선택합니다.
-
-2. Function이 속한 Compartment의 OCID를 복사해 둡니다.
-
-    ![Compartment OCID](images/compartment-ocid-2.png =70%x*)
-
-3. 왼쪽 메뉴에서 **Identity** > **Policies** 을 선택합니다.
-
-4. **Create Policy** 클릭
-
-5. 아래 값으로 개발할 Functions에 오브젝트 스토리지 버킷 2개에 대한 권한을 부여합니다.
-
-    - Name: `functions-buckets-policy`.
-    - Description: `Policy that allows functions dynamic group to manage objects in the bucket`.
-    - Compartment: 계속 사용하던 Compartment 선택, **oci-hol-xx**를 선택
-    - Policy Builder: **Show manual editor** 슬라이딩 버튼을 클릭하여 직접 입력합니다.
-        * [compartment-name]은 오브젝트 스토리지 버킷이 있는 Compartment 이름으로 대체합니다. 예, oci-hol
-        * [compartment-id]는 방금 복사해둔 Function이 속한 Compartment의 OCID
-    ```
-    <copy> 
-    Allow any-user to manage objects in compartment [compartment-name] where all {request.principal.type='fnfunc', request.principal.compartment.id='[compartment-id]', target.bucket.name='image-source-bucket'}
-    Allow any-user to manage objects in compartment [compartment-name] where all {request.principal.type='fnfunc', request.principal.compartment.id='[compartment-id]', target.bucket.name='image-source-resized-bucket'}
-    </copy> 
-    ``` 
-
 
 ## Task 3. Function 개발
 
@@ -157,7 +175,7 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
     | Condition Type      | Service/Attribute Name | Event Type / Attribute Value | 
     | ------------------- | ---------------------- | ---------------------------- | 
     | Event Type          | Object Storage         | Object - Create              |
-    | Attribute           | compartmentName        | *oci-hol-xx*                    |
+    | Attribute           | compartmentName        | *oci-hol-xx*                 |
     | Attribute           | bucketName             | *image-source-bucket*        |
     {: title="Rule Conditions"}
 
@@ -214,9 +232,6 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
 2. 파이썬에서 다른 파이썬 파일에 있는 메서드를 호출할 수 있습니다. 개발 테스트의 편의를 위해 func.py외에 추가 파이썬 파일에 OCI SDK 관련 부분을 따로 만들고, func.py에서 호출하는 방법을 사용해 보겠습니다.
 
 3. 아래 코드를 복사하여 sub_func.py 파일을 생성합니다.
-
-    - `create_thumbnail()` : Object Storage에 있는 `resource_name`의 이미지 파일을 다운로드 받아, 썸네일 파일을 만든후 다시 업로드하는 메서드입니다.
-    - main() : 로컬 환경에서 create_thumbnail()을 테스트하기 위해 만든 메인 함수입니다.
 
     ```
     <copy>
@@ -290,30 +305,14 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
     </copy>    
     ```    
 
-    - 간단한 설명
-    
-        * Object Storage에 있는 `resource_name`의 이미지 파일을 다운로드 받아, 썸네일 파일을 만든후 다시 업로드하는 메서드입니다. 이후 func.py에서 이 메서드를 호출합니다.   
-        ```
-        def create_thumbnail(object_storage_client, namespace, bucket_name, resource_name, target_bucket_name):     
-        ```
-    
-        * 빠른 테스트를 위해 로컬(Cloud Shell)에 직접 테스트를 위해 만든 main() 메서드입니다. Function 호출시에는 실행되지 않습니다.
-        * Cloud Shell 및 OCI CLI를 설치한 작업환경에서는 OCI CLI가 사용하는 config 파일을 사용하여 인증합니다. 그것을 사용해 OCI SDK Client을 만듭니다. config 상의 유저의 권한으로 OCI에 접근합니다.
-        ```
-        def main():
-            logging.basicConfig(level=logging.INFO)
-        
-            # Default config file and profile
-            config = oci.config.from_file()        
-            # Non-Home Region
-            config['region'] = 'ap-chuncheon-1'
-        
-            object_storage_client = oci.object_storage.ObjectStorageClient(config)     
-            ...
-        
-        if __name__ == "__main__":
-            main()     
-        ```
+    - `create_thumbnail()` : Object Storage에 있는 `resource_name`의 이미지 파일을 다운로드 받아, 썸네일 파일을 만든후 다시 업로드하는 메서드입니다.
+
+        * 이후 OCI Function의 func.py에서 이 메서드를 호출합니다.   
+
+    - main() : 로컬 환경에서 create_thumbnail()을 테스트하기 위해 만든 메인 함수입니다.
+
+        * OCI Function 호출시에는 실행되지 않습니다.
+        * Cloud Shell 및 OCI CLI를 설치한 작업환경에서는 OCI CLI가 사용하는 config 파일을 사용하여 인증합니다. config 상의 유저의 권한으로 OCI에 접근합니다.
 
 4. `sub_func.py`을 Cloud Shell에서 직접 실행하기 위해 sub_func.py에서 추가 사용하는 이미지 처리용 패키지인 pillow를 설치합니다.
 
@@ -348,7 +347,7 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
     </copy>
     ```
 
-    실행예시
+    실행예시) 테스트 후 image-source-resized-bucket 버킷을 확인합니다.
 
     ![Run sub_func.py](images/run-sub-func-in-cloud-shell.png =70%x*)
 
@@ -400,30 +399,30 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
         )
     </copy>
     ```
+   
+    - 호출을 위해 `sub_func.py`에 있는 메서드 임포트
+    ```
+    from sub_func import create_thumbnail
+    ```
 
-    - 간단한 설명
-    
-        * 호출을 위해 `sub_func.py`에 있는 메서드 임포트
-        ```
-        from sub_func import create_thumbnail
-        ```
-    
-        * OCI Function에서 컨테이너로 실행되는 Function은 Resource Principals로 자동 인증되며, 앞서 Policy를 통해 fnfunc에 부여한 권한을 사용합니다. 그것을 사용해 OCI SDK Client을 만듭니다.
-        ```   
-            signer = oci.auth.signers.get_resource_principals_signer()
-            object_storage_client = oci.object_storage.ObjectStorageClient(config={}, signer=signer)
-        ```
-    
-        * Events에서 파싱된 이미지 오브젝트에 대한 정보를 가지고 썸네인 생성 메서드 호출 
-        ```    
-                new_resource_name = create_thumbnail(object_storage_client, namespace, bucket_name, resource_name, target_bucket_name)
-        ```   
+    - OCI Function에서는 편의를 위해 자원 기반인 Resource Principal을 사용하는 것이 편리합니다.
+        * OCI 자원에 접근하기 위한 인증 방식은 유저기반, 인스턴스 기반, 자원 기반 등의 인증 방식이 있습니다. 
+        * 런타임시 실행되는 Function 컨테이너 자원을 fnfunc로 지칭하여 Resource에 권한을 부여하고 사용합니다. 해당 인증으로 OCI SDK Client을 만듭니다.
+    ```   
+        signer = oci.auth.signers.get_resource_principals_signer()
+        object_storage_client = oci.object_storage.ObjectStorageClient(config={}, signer=signer)
+    ```
+
+    - Events에서 파싱된 이미지 오브젝트에 대한 정보를 가지고 썸네인 생성 메서드 호출 
+    ```    
+            new_resource_name = create_thumbnail(object_storage_client, namespace, bucket_name, resource_name, target_bucket_name)
+    ```   
 
 8. requirements.txt 파일을 업데이트 합니다. 추가로 사용 oci, pillow 라이브러리가 OCI Function이 컨테이너 이미지를 만들때 함께 설치되도록 알려줍니다.
 
     ```
     <copy>
-    fdk>=0.1.57
+    fdk>=0.1.66
     oci
     pillow    
     </copy> 
@@ -490,15 +489,17 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
 
 ## Task 7. Object Storage 이벤트기반 테스트
 
-1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Storage**에서 **Object Storage & Archive Storage** 하위메뉴인 **Bucket**을 선택합니다.
+1. 모든 구현이 완료되었습니다. 이미지 업로드부터 전체 테스트를 수행합니다.
 
-2. 소스로 사용하는 image-source-bucket으로 이동합니다.
+2. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Storage**에서 **Object Storage & Archive Storage** 하위메뉴인 **Bucket**을 선택합니다.
 
-3. 아래쪽으로 스크롤하여 **Upload** 버튼을 클릭하여, 이미지 파일을 업로드 합니다.
+3. 소스로 사용하는 image-source-bucket으로 이동합니다.
+
+4. 아래쪽으로 스크롤하여 **Upload** 버튼을 클릭하여, 이미지 파일을 업로드 합니다.
 
     ![Upload Image](images/final-test-upload-image.png =50%x*)
 
-4. 썸네일 파일이 생성되는 버킷(image-source-resized-bucket)으로 이동하여, 썸네일이 만들어졌는지 확인합니다. 파일 사이즈가 줄어든 것을 볼수 있으면, 실제 다운로드 받아 보면, Function에 의해 이미지가 줄어든것을 확인할 수 있습니다.
+5. 썸네일 파일이 생성되는 버킷(image-source-resized-bucket)으로 이동하여, 썸네일이 만들어졌는지 확인합니다. 파일 사이즈가 줄어든 것을 볼수 있으면, 실제 다운로드 받아 보면, Function에 의해 이미지가 줄어든것을 확인할 수 있습니다.
 
     ![Thumbnail Image](images/final-test-thumbnail-image.png =50%x*)
 
@@ -510,4 +511,4 @@ Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서�
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, May 2023
+* **Last Updated By/Date** - DongHee Lee, January 2024

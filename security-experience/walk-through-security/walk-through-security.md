@@ -6,6 +6,8 @@ This lab will walk you through OCI Security, by having a look at main security s
 
 Estimated Time: 25 minutes
 
+[Walk Through the Lab](videohub:1_f7p6in14)
+
 ### Objectives
 
 In this lab, you will:
@@ -46,20 +48,22 @@ In this task you will have a look at detected security problems in your OCI tena
 
     You will test now the automatic remediation provided in Cloud Guard to solve that security problem.  
 
-5. Identify the security problem corresponding to the public bucket that you used in lab 1 to store your security assessment reports. Look at the **Resource** column, and check the termination of the bucket name:
+5. Identify the security problem corresponding to the public bucket with your student number (ocw23-OCI-public-bucket-XXX, where XXX is your student number). Look at the **Resource** column, and check the termination of the bucket name:
     
     ![Public bucket name](./images/public-bucket-termination.png "Public bucket name")
-    
-    Just as a reminder, the public bucket has a name corresponding to your student name, such as ocw23-OCI-public-bucket-XXX, where XXX is your student number. 
 
 
 6. Once you identified the problem associated to your bucket, click on it and review the details, recommendations and all the info that Cloud Guard reports about the problem:
 
     ![Problem details](./images/problem-bucket.png "Problem details")
 
-7. After you reviewed, you can click on **Remediate** and the visibility of the bucket will be made private:
+7. After you reviewed, you can click on **Remediate** to change the visibility of the bucket to private:
 
     ![Click Remediate](./images/remediate-bucket.png "Click Remediate")
+
+8. Once you click on **Remediate**, you will be prompted to a window with few options. Click on **Remediate** again:
+
+     ![Click Remediate again](./images/remediate.png "Click Remediate again")
 
 8. Refresh the list of problems in Cloud Guard and make sure that the problem associated to your bucket is not listed there anymore. To verify deeper, navigate to the hamburger menu and click *"Storage"*, then click *"Buckets"* under *"Object Storage"*:
 
@@ -85,13 +89,23 @@ For example, let's investigate threats in your OCI tenant:
 
     ![Threat Monitoring](./images/threat-monitoring-menu.png "Threat Monitoring")
 
-2. Have an overview of the Threat Monitoring page. On this page, you can see resource profiles and their key attributes to quickly identify the highest priority events. To view information for a particular resource profile, click the link in the **Resource profile** column:
+2. Have an overview of the Threat Monitoring page. On this page, you can see resource profiles generated for each OCI user and their key attributes to quickly identify the highest priority events. Ensure you are in root compartment to have global visibility. You will see something similar to:
+
+    ![Threat Monitoring Profiles](./images/threat-monitoring.png "Threat Monitoring Profiles")
+
+    Take into account that the collected data and corresponding graphics will be different in your case, as this is being updated with the time and correlated with users' activity in the tenant. 
+
+    To view information for a particular resource profile, click one of the links in the **Resource profile** column, which corresponds to one of the OCI users:
+
+    ![Resource Profile](./images/resource-profile.png "Resource Profile")
+
+
     * The **General Information** tab summarizes the threat.
     * The **30-day Risk Score Trend** chart shows **Risk Score** changes over time for this particular resource profile.
     * The **Sightings** section lists the sightings that factor into the risk score.
     * Under **Resources**, in the lower left corner, select another resource to display different information:
-        *   Impacted Resources shows information on the resources involved.
-        *   Endpoints shows the IP addresses involved.
+        * Impacted Resources shows information on the resources involved.
+        * Endpoints shows the IP addresses involved.
     * If the **Risk Score** for this **Resource Profile** on the **Threat Monitoring** page is 80 or greater, a problem has been triggered. For guidance on processing problems, see [Processing and Resolving Problems on the Problems Page](https://docs.oracle.com/en-us/iaas/cloud-guard/using/problems-page.htm#problems-page).
 
 3. After you review the Threat Monitoring page, let's have a look to OCI Threat Intelligence Service. OCI Threat Intelligence aggregates threat intelligence data across many different sources and manages this data to provide actionable guidance for threat detection and prevention in Oracle Cloud Guard and other Oracle Cloud Infrastructure services. This service provides insights from Oracle security researchers, our own unique telemetry, open source feeds such as abuse.ch and Tor exit relays, and third-party partners such as CrowdStrike, a cybersecurity company that correlates trillions of security events per day to deliver actionable insights to secure endpoints, workloads, identities, and data. To have a look at the service, open the navigation menu, click *"Identity & Security"* and *"Threat Intelligence"*:

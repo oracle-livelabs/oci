@@ -2,7 +2,9 @@
 
 ## Introduction
 
-OCI Functions의 사용사례로 Logging 서비스와 연동하여, OCI 자원의 로그를 Function을 호출하여 타 시스템으로 전달하는 패턴을 실습합니다. **Logging > Service Connector Hub > Function > Dummy System - 3rd Party 시스템** 구성을 통해 OCI 로그를 사용자가 원하는 시스템으로 전달하는 내용을 실습합니다. 3rd Party 시스템을 대신해 인터넷에 개방되어 있는 REST API기반 서비스를 호출하는 것으로 대체합니다. 
+OCI Functions의 사용사례로 Logging 서비스와 연동하여, OCI 자원의 로그를 Function을 호출하여 타 시스템으로 전달하는 패턴을 실습합니다.
+
+**Logging > Service Connector Hub > Function > Dummy System - 3rd Party 시스템** 구성을 통해 OCI 로그를 사용자가 원하는 시스템으로 전달하는 내용을 실습합니다. 3rd Party 시스템을 대신해 인터넷에 개방되어 있는 REST API기반 서비스를 호출하는 것으로 대체합니다. 
 
 ![Introduction](images/usecase-ingest-logs.png =75%x*)
 
@@ -18,14 +20,40 @@ OCI Functions의 사용사례로 Logging 서비스와 연동하여, OCI 자원�
 - Oracle Cloud Trial Account 또는 Paid Account
 - Lab 2 실습 완료
 
-### Service Connector Hub 소개
+### Connector Hub 소개
 
 [](youtube:KlJphPGpQQk)
 
 
-## Task 1. 테스트용 Compute 인스턴스 준비
+## Task 1. 실습을 위한 Policy 설정하기
 
-Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴스를 준비하는 과정입니다. Service Log 중에서 VCN Flow Logs에 대해서는 Function으로 인한 발생하는 로그와 혼선을 방지하기 위해서 Compute 인스턴스용 **Public Subnet**을 추가로 하나 더 만들어 사용합니다. (Function이 사용하는 Subnet을 함께 사용하는 경우, 로그 발생과 Function 호출의 무한 반복이 발생할 소지가 있습니다.)
+Function에서 Object Storage에 있는 오브젝트에 접근하기 위해서는 권한이 필요합니다. 권한을 설정하기 위해 Function이 속한 compartment id를 확인하고 관련권한을 설정합니다.
+
+1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Identity & Security**으로 이동한 다음 **Identity** > **Policies** 을 선택합니다.
+
+2. **Create Policy** 클릭
+
+3. 이후 실습을 위해 다음 Policy를 추가합니다.
+
+    - Name: fn-lab4-policy*-xx* 입력합니다.
+    - Description: Policy for Lab4
+    - Compartment: 계속 사용하던 Compartment 선택, **oci-hol-xx**를 선택
+    - Policy:
+    
+        ```
+        Allow group <group-name> to manage instance-family in compartment <compartment-name>
+        Allow group <group-name> to manage volume-family in compartment <compartment-name>
+        Allow group <group-name> to manage virtual-network-family in compartment <compartment-name>
+        Allow group <group-name> to manage serviceconnectors in compartment <compartment-name>
+        Allow group <group-name> to read audit-events in compartment <compartment-name>
+        ```
+
+
+## Task 2. 테스트용 Compute 인스턴스 준비
+
+Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴스를 준비하는 과정입니다. 
+
+Service Log 중 VCN Flow Logs에 대해서 Function으로 인한 발생하는 Flow Log와 Compute 인스턴스에서 발생하는 Flow Log와의 혼선을 방지하기 위해서 Compute 인스턴스용 **Public Subnet**을 별도로 하나 더 만들어 사용합니다. (Function이 사용하는 Subnet을 함께 사용하는 경우, 로그 발생과 Function 호출의 무한 반복이 발생할 소지가 있습니다.)
 
 1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Compute**으로 이동한 다음 **Instances** 을 선택합니다.
 
@@ -39,13 +67,13 @@ Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴�
     - **Create new public subnet** 선택
     - New subnet name: 예, public-subnet-for-compute
     - CIDR block: 예, 10.0.2.0/24
-    - Public IPv4 address: Assign a public IPv4 address 선택
+    - Public IPv4 address: Automatically assign public IPv4 address 기본 선택
 
     ![Networking](images/create-compute-instance.png =60%x*)
     
 5. 다른 항목들은 기본값을 이용해 최소 사이즈하고 인스턴스를 생성합니다.
 
-## Task 2. Function 개발 - 외부 시스템에 로그 전달용
+## Task 3. Function 개발 - 외부 시스템에 로그 전달용
 
 1. Cloud Shell을 실행합니다.
 
@@ -163,7 +191,7 @@ Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴�
     - requirements.txt을 아래와 같이 변경합니다.
     ```
     <copy>
-    fdk>=0.1.57
+    fdk>=0.1.66
     requests    
     </copy>
     ```
@@ -176,17 +204,17 @@ Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴�
     </copy>        
     ```
 
-## Task 3. Audit Log -> Service Connector -> Function 구성하기
+## Task 4. Audit Log -> Service Connector -> Function 구성하기
 
-1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Observability & Management**에서 **Logging** 하위메뉴인 **Service Connectors**를 선택합니다.
+1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Observability & Management**에서 **Logging** 하위메뉴인 **Connectors**를 선택합니다.
 
-2. **Create Service Connector**를 클릭합니다.
+2. **Create Connector**를 클릭합니다.
 
 3. 이름을 입력하고, Audit Log -> Function의 구성을 위해 Source를 Logging, Target을 Function으로 선택합니다.
 
-    - Name: 예, svc-connector-audit-logs-to-function
+    - Name: 예, connector-from-audit-logs-to-function
 
-    ![Create Service Connector](images/create-service-connector.png)
+    ![Create Service Connector](images/create-connector.png)
 
 4. Source에서 Log Group을 앞서 생성한 Compute 인스턴스가 있는 Compartment의 _Audit로 선택합니다. Compartment내 많은 Audit 로그 중 걸러내기 위해 Compute 인스턴스의 이름을 source Attribute로 추가합니다.
 
@@ -202,10 +230,10 @@ Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴�
     ![Create Service Connector](images/create-service-connector-policy-created.png)
     ![Create Service Connector](images/create-service-connector-policy-details.png =60%x*)
 
-7. Service Connector 생성화면에서 **Create**를 클릭하여 생성합니다.
+7. Connector 생성화면으로 돌아가 **Create**를 클릭하여 생성합니다.
 
 
-## Task 4. Audit Log 전달 테스트
+## Task 5. Audit Log 전달 테스트
 
 1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Compute**으로 이동한 다음 **Instances** 을 선택합니다.
 
@@ -221,7 +249,7 @@ Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴�
 
      ![Audit Log](images/audit-log.png)
 
-6. 만든 Service Connector(svc-connector-audit-logs-to-function) 화면으로 돌아갑니다.
+6. 만든 Connector(connector-from-audit-logs-to-function) 화면으로 돌아갑니다.
 
 7. 잠시후, Metric 정보를 통해 실행된 것을 볼 수 있습니다.
 
@@ -237,33 +265,48 @@ Audit Log, Service Log를 발생시킬 대상으로 편의상 Compute 인스턴�
 
     ![Function Logs](images/fn-app-logs-from-audit-log.png)    
 
-## Task 5. VCN Flow Log 활성화 하기
+## Task 6. OCI 서비스 로그 - VCN Flow Log 활성화 하기
 
 Service Log를 활성화하는 기능을 제공합니다. 그 중에서 보안관련사항이 있는 VCN Flow Log를 가지고 실습을 진행해봅니다.
 
-1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Observability & Management**에서 **Logging** 하위메뉴인 **Log Groups**를 선택합니다.
+Flow Log를 활성화하기 전에 먼저 캡쳐 필터를 만듭니다.
 
-2. Default_Group을 선택합니다.
+1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Networking**에서 **Network Command Center** 하위메뉴인 **Capture filters**를 선택합니다.
 
-3. **Resources** >> **Logs**로 이동합니다.
+2. **Create capture filter**를 클릭합니다. 아래 내용으로 생성합니다.
 
-4. **Enable service log**를 클릭합니다.
+    - Name: 예, all-flow-log-caputer-filter
+    - Filter type: Flow log capture filter
+    - Sample rate: 100%
+    - Rules: 기본값을 선택하여 모두 캡쳐합니다.
+
+    ![Capture Filter](images/create-capture-filter.png =50%x*)
+
+3. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Observability & Management**에서 **Logging** 하위메뉴인 **Log Groups**를 선택합니다.
+
+4. Default_Group을 선택합니다.
+
+5. **Resources** >> **Logs**로 이동합니다.
+
+6. **Enable service log**를 클릭합니다.
 
     ![Enable Service Log](images/enable-service-log.png)
 
-5. 서비스 수준에서 로그를 활성화할 수 있는 서비스 중에서 VCN - subnet을 선택합니다.
+7. 서비스 수준에서 로그를 활성화할 수 있는 서비스 중에서 Virtual Cloud Network - Flowlogs를 선택합니다.
 
     ![VCN - Subnet](images/enable-service-log-service-list.png =40%x*)
 
-6. 대상 Compute 인스턴스가 있는 서브넷을 선택합니다. 예, public-subnet-for-compute
+8. 레벨을 서브넷으로 선택하고, 대상 Compute 인스턴스가 있는 서브넷을 선택합니다. 예, public-subnet-for-compute
 
-7. Flow Logs 유형을 선택하고, Log 이름을 입력합니다. 예, public-subnet-for-compute-flow-logs
+9. Flow Logs 유형을 선택하고, 앞서 만든 Capture Filter를 선택합니다.
 
-    ![Flow Log](images/enable-service-log-configured.png =40%x*)
+    ![Flow Log](images/enable-service-log-configured.png =50%x*)
 
-8. Enable Log를 클릭합니다.
+10. Log 이름을 입력합니다. 예, public-subnet-for-compute-flow-logs    
 
-## Task 6. Function 수정 - Flow Logs 파싱 예시를 위한 수정
+11. Enable Log를 클릭하여 서비스 로그를 활성화합니다.
+
+## Task 7. Function 수정 - Flow Logs 파싱 예시를 위한 수정
 
 1. Cloud Shell을 실행합니다.
 
@@ -326,7 +369,7 @@ Service Log를 활성화하는 기능을 제공합니다. 그 중에서 보안�
     </copy>        
     ```
 
-## Task 7. Flow Log -> Service Connector -> Function 구성하기
+## Task 8. Flow Log -> Connector -> Function 구성하기
 
 1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Observability & Management**에서 **Logging** 하위메뉴인 **Service Connectors**를 선택합니다.
 
@@ -334,9 +377,9 @@ Service Log를 활성화하는 기능을 제공합니다. 그 중에서 보안�
 
 3. 이름을 입력하고, Audit Log -> Function을 위해 Source를 Logging, Target을 Function으로 선택합니다.
 
-    - Name: 예, svc-connector-flow-logs-to-function
+    - Name: 예, connector-from-flow-logs-to-function
 
-    ![Create Service Connector](images/create-service-connector-2.png)
+    ![Create Service Connector](images/create-connector-2.png)
 
 4. Source에서 Log를 Default Group내의 public-subnet-for-compute-flow-logs를 선택합니다.
 
@@ -348,7 +391,7 @@ Service Log를 활성화하는 기능을 제공합니다. 그 중에서 보안�
 
 6. **Create**를 클릭하여 생성합니다.
 
-## Task 8. Flow Log 전달 테스트
+## Task 9. Flow Log 전달 테스트
 
 1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Compute**으로 이동한 다음 **Instances** 을 선택합니다.
 
@@ -356,9 +399,10 @@ Service Log를 활성화하는 기능을 제공합니다. 그 중에서 보안�
 
 3. Cloud Shell을 실행합니다.
 
-4. Cloud Shell 세션의 Public IP를 확인합니다. (Cloud Shell에서 나갈 때 쓰는 NAT Gateway 주소입니다. Cloud Shell VM의 Public IP가 아닙니다.)
+4. Cloud Shell 세션의 Public IP를 확인합니다. 
 
-    - [Getting the Public IP Address for a Cloud Shell Session](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/devcloudshellgettingstarted.htm#cloudshellgettingstarted_topic_getting_public_ip_address)
+    - 참고문서: [Getting the Public IP Address for a Cloud Shell Session](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/devcloudshellgettingstarted.htm#cloudshellgettingstarted_topic_getting_public_ip_address)
+    - 아래 주소는 Cloud Shell에서 나갈 때 쓰는 NAT Gateway 주소입니다. Cloud Shell VM의 Public IP가 아닙니다.
 
     ```
     $ <copy>curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'</copy>
@@ -375,39 +419,47 @@ Service Log를 활성화하는 기능을 제공합니다. 그 중에서 보안�
 
 7. public-subnet-for-compute-flow-logs 로그를 클릭합니다.
 
-8. *Flow Log*에서 아래와 같이 접속시도한 로그를 확인할 수 있습니다.
+8. 오른쪽 Actions 메뉴에서 Explore with Log Search를 클릭합니다.
+
+    ![Explore with Log Search](images/explorer-with-log-search.png)
+
+9. Cloud Shell의 IP을 sourceAddress로 검색합니다.
+
+    ![Explore with Log Search](images/log-search-custom-filter-source-address.png =60%x*)
+
+10. *Flow Log*에서 아래와 같이 접속시도한 로그를 확인할 수 있습니다.
 
     - Cloud Shell 세션의 Public IP: 132.145.x.x
-    - Compute 인스턴스의 Private IP(10.0.2.121)의 Port 22로 접속
+    - Compute 인스턴스의 Private IP(10.0.2.100)의 Port 22로 접속
 
-    ![Flow Logs](images/flow-logs.png)
+    ![Flow Logs](images/flow-logs.png =70%x*)
 
-9. 만든 Service Connector(svc-connector-flow-logs-to-function) 화면으로 돌아갑니다.
+11. 만든 Connector(connector-from-flow-logs-to-function) 화면으로 돌아갑니다.
 
-10. Metric 정보를 통해 실행된 것을 볼 수 있습니다.
+12. Metric 정보를 통해 실행된 것을 볼 수 있습니다.
 
-    ![Service Connector Metrics](images/service-connector-metrics-flow-logs.png)
+    ![Service Connector Metrics](images/service-connector-metrics-flow-logs.png =60%x*)
 
-11. Function Application 화면으로 이동합니다. **Resources** >> **Logs**로 이동합니다. 로그 이름을 클릭합니다. (로그가 활성화되지 않은 경우 활성화합니다.)
+13. Function Application 화면으로 이동합니다. **Resources** >> **Logs**로 이동합니다. 로그 이름을 클릭합니다. (로그가 활성화되지 않은 경우 활성화합니다.)
 
     ![Function Logs](images/click-fn-app-logs.png)
 
-12. 로그 검색을 위해서 로그 화면에서 우측 **Actions**에서 **Explore with Log Search**를 하여 이동합니다.
+14. 로그 검색을 위해서 로그 화면에서 우측 **Actions**에서 **Explore with Log Search**를 하여 이동합니다.
 
     ![Log Search](images/explorer-with-log-search.png)
 
-13. Custom filters에 조회할 Cloud Shell의 Public IP를 입력합니다. 필요하면 조회 시간을 늘립니다.
+15. Custom filters에 조회할 Cloud Shell의 Public IP를 입력합니다. 필요하면 조회 시간을 늘립니다.
 
     ![Custom Filter](images/log-search-custom-filter.png)
 
-14. 로그 화면에서 우측 **Actions**에서 **Wrap lines**를 클릭합니다.
+16. 로그 화면에서 우측 **Actions**에서 **Wrap lines**를 클릭합니다.
 
-15. 아래와 같이 *Function이 실행된 로그*를 볼 수 있습니다. Compute 인스턴스가 속한 서브넷의 Flow Logs가 외부 시스템에 전달된 것을 볼 수 있습니다.
+17. 아래와 같이 *Function이 실행된 로그*를 볼 수 있습니다. Compute 인스턴스가 속한 서브넷의 Flow Logs가 외부 시스템에 전달된 것을 볼 수 있습니다.
 
     ![Function Logs](images/log-search-results.png)  
 
 
-## Task 9. Service Connector 중지
+## Task 10. Connector 중지
 
 *Audit Log와 Flow Log는 지속적으로 발생하여, 이로 인해 Function 들이 지속적으로 실행됩니다. 다른 Usecase 실습을 위해 만든 Service Connector들을 비활성화하여 중지시킵니다.*
 
@@ -433,5 +485,4 @@ Service Log를 활성화하는 기능을 제공합니다. 그 중에서 보안�
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, May 2023
-
+* **Last Updated By/Date** - DongHee Lee, January 2024
