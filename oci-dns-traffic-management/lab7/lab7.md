@@ -20,63 +20,59 @@ In this lab, you will:
 
 ![lab7](images/lab7.png)
 
-## Task 1: Deploy an ASN steering policy
+## Task 1: Deploy an IP prefix steering policy
 
 1. Log into the Oracle Cloud console. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Traffic management steering policies**, under **DNS Management**. Press **Create Traffic management steering policy**. 
   ![Create dnspol](images/dnspol.png)
  
 2. In the policy creation menu we need to input various information.
 
-    * Type is: ASN steering.
+    * Type is: IP prefix steering.
     * Give it a name.
     * Policy TTL: you can choose any value you like; with a high TTL value there will be less DNS traffic but more time to fail over in case a server has issues.
     * Maximum answer count: this type will always have one.
     * Answer pools: create a pool for Chicago with the Web Server there as an answer and one for Frankfurt.
-    * ASN steering rules: add a rule for ASN 13335 with Pool 1 Chicago and Pool 2 Frankfurt. Add a global catch-all rule with Frankfurt as Primary and Chicago as a Secondary.
+    * ASN steering rules: I will create a rule that directs clients that use the Cloudflare recursive DNS 1.1.1.1 (I will use the full BGP advertised subnet 1.1.1.0/24) to Chicago and a rule that directs clients that use the Oracle recursive DNS 216.146.35.35 (I will use the full BGP advertised subnet 216.146.35.0/24) to Frankfurt.
     * Attach the HTTP health check created in lab 2.
-    * Attach the subdomain of the DNS Zone. In my case I will use **web-asn** from **oci-lab.cloud** so the final FQDN is **web-asn.oci-lab.cloud**.
+    * Attach the subdomain of the DNS Zone. In my case I will use **web-ip** from **oci-lab.cloud** so the final FQDN is **web-ip.oci-lab.cloud**.
     
-  ![Create dnspolasn2](images/dnspolasn2.png)
-  ![Create dnspolasn3](images/dnspolasn3.png)
-  ![Create dnspolasn4](images/dnspolasn4.png)
-  ![Create dnspolasn5](images/dnspolasn5.png)
+  ![Create dnspolip2](images/dnspolip2.png)
+  ![Create dnspolip3](images/dnspolip3.png)
+  ![Create dnspolip4](images/dnspolip4.png)
+  ![Create dnspolip5](images/dnspolip5.png)
   
-## Task 2: Test the asn steering policy
+## Task 2: Test the ip steering policy
 
 1. After the policy is deployed you should see a status page, like below:
-  ![Policy statusasn](images/policystatusasn.png)
+  ![Policy statusip](images/policystatusip.png)
 
-2. Now let's test the policy. If I try to connect to *http://web-asn.oci-lab.cloud* while using a DNS server from ASN 13335, such as 1.1.1.1, I should be redirected to Chicago. 
+2. Now let's test the policy. If I try to connect to *http://web-ip.oci-lab.cloud* while using a DNS server 1.1.1.1, I should be redirected to Chicago. 
 
   ![local dns1](images/localdns1.png)
 
-  ![dns1 bgp](images/dns1bgp.png)
+  ![Web responseip1](images/webresponseip1.png)
 
-  ![Web responseasn1](images/webresponseasn1.png)
-
-  Similarly, if I try to connect to *http://web-asn.oci-lab.cloud* while using Google's 8.8.8.8 DNS, which is outside of ASN 13335, I should be redirected to Frankfurt.
+  Similarly, if I try to connect to *http://web-ip.oci-lab.cloud* while using Oracle's recursive DNS 216.146.35.35, I should be redirected to Frankfurt.
 
   ![local dns2](images/localdns2.png)
 
-  ![dns2 bgp](images/dns2bgp.png)
-
-  ![Web responseasn2](images/webresponseasn2.png)
+  ![Web responseip2](images/webresponseip2.png)
   
 3. Let's see what happens if the Chicago web server stops responding to health checks. Go to the Chicago compute management page. Shut down the web server.
-  ![Stop chicagoasn](images/stopchicasn.png)
+  ![Stop chicagoip](images/stopchicip.png)
 
   Now go back to the traffic steering policy details page and check the status. 
-  ![Policy status2asn](images/policystatus2asn.png)
+  ![Policy status2ip](images/policystatus2ip.png)
 
   Now, while using the 1.1.1.1 DNS server, I will get directed to the Frankfurt Web Server instead of Chicago. 
 
   ![local dns3](images/localdns1.png)
 
-  ![Policy status3asn](images/policystatus3asn.png)
+  ![Policy status3ip](images/policystatus3ip.png)
 
   Before moving on, start the Chicago Web Server as we will need it in the other labs.
 
-**Congratulations!** You have successfully completed this lab. You may now **proceed to the next lab**.
+**Congratulations!** You have successfully completed this lab and this workshop.
 
 ## Acknowledgements
 
