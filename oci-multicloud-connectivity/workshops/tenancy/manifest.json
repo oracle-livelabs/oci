@@ -1,11 +1,6 @@
 {
     "workshoptitle": "MultiCloud Network Connectivity",
     "help": "livelabs-help-oci_us@oracle.com",
-    "include": {
-        "azure_interconnect": "../../fastconnect/azure_interconnect.md",
-        "equinix_network_edge": "../../fastconnect/equinix_network_edge.md",
-        "megaport_mcr": "../../fastconnect/megaport_mcr.md"
-    },
     "tutorials": [
         {
             "title": "Introduction",
@@ -30,11 +25,11 @@
         },
         {
             "title": "Lab 4: FastConnect Deployment",
-            "filename": "../../fastconnect/_main_fastconnect.md",
+            "filename": "../../fastconnect/fastconnect.md",
             "type": {
-                "Azure_Interconnect" : "Azure Interconnect",
-                "Megaport_MCR" : "Megaport (Cloud Router)",
-                "Equinix_NE" : "Equinix (Network Edge)"
+                "Interconnect" : "Azure Interconnect",
+                "Equinix" : "Equinix (Network Edge)",
+                "Megaport" : "Megaport (MCR)"
             }
         },
         {
