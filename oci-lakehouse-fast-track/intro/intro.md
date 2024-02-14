@@ -1,6 +1,6 @@
 # Oracle Cloud Infrastructure Fast Track - For Data Engineering
 
-## *Arquitetura Medalhão*
+## Arquitetura Medalhão
 
 Na era atual, onde dados são um dos ativos mais valiosos para as empresas, a capacidade de aproveitar uma vasta e diversificada gama de fontes de dados tornou-se crucial para o sucesso nos negócios. Organizar os dados em uma arquitetura de medalhão é essencial para maximizar a eficácia e eficiência dos processos de tomada de decisão e operações baseadas em dados em uma determinada empresa. 
 
@@ -39,7 +39,7 @@ Neste laboratório você aprenderá a transformar dados brutos em informações 
 | Ouro   | Dados Otimizados    | • Inclusão de informações externas para fornecer mais contexto aos dados. <br> • Combinação de dados para criar resumos claros e práticos. <br> • Análise de dados aplicando métodos avançados para geração de insights. |
 
 
-## *Vantagens da Arquitetura Medalhão*
+## Vantagens da Arquitetura Medalhão
 
 Em suma, a arquitetura medalhão viabiliza um ecossistema de dados robusto, confiável e escalável, essencial para alavancar o potencial de tecnologias avançadas de inteligência artificial e análise de dados, permitindo uma vantagem competitiva no mercado orientado por dados. Nesse contexto, a implementação da arquitetura medalhão apresenta as seguintes vantagens:
 
@@ -69,9 +69,9 @@ O OCI Data Flow é uma plataforma de análise de dados na nuvem que simplifica p
 O OCI Data Flow é construído para executar tarefas de processamento de dados em paralelo, aproveitando a infraestrutura distribuída do Apache Spark. Além disso, sua usabilidade do Data Flow é reforçada por uma interface de usuário intuitiva e a possibilidade de integração via API, o que facilita a inclusão da plataforma em fluxos de trabalho já existentes. Com suporte a Spark Streaming, o serviço oferece também a capacidade de processar dados em tempo real, permitindo operações de transformação de dados contínuas e atualizadas, e impulsionando a eficiência e a integração de processos analíticos.
 
 
-### ***Arquitetura dp Workshop***
+### ***Arquitetura do Workshop***
 
-![Arquitetura usada nesse workshop.](./images/arquitetura-workshop.gif)
+![Arquitetura usada neste workshop.](./images/arquitetura-workshop.gif)
 
 
 ### *Resumo*
@@ -119,5 +119,5 @@ Inglês:
 
 ## Autoria
 
-- **Autores** - Thais Henrique, Heloisa Escobar, Isabelle Anjos
-- **Último Update Por/Date** - Isabelle Anjos, Nov/2023
+- *Created By/Date* - Thais Henrique, Heloisa Escobar, Isabelle Anjos, Janeiro 2024
+- *Last Updated By* - Isabelle Anjos, Janeiro 2024

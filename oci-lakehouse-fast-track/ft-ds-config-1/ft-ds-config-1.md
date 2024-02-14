@@ -35,53 +35,53 @@ Um kernel atua como o coração do seu projeto Jupyter, equipado com todas as fe
 
 1.	Após realizar a autenticação, estará na página principal do Oracle Cloud. Nesta página, selecione o menu na região superior esquerda.
 
-![Acesso Inicial OCI](.\images\1-acess-oci.png)
+    ![Acesso Inicial OCI](.\images\1-acess-oci.png)
 
 2.	Em seguida, selecione a opção **Analytics & AI**:
 
-![Selecione Analytics & AI](.\images\2-select-analytics-ai.png)
+    ![Selecione Analytics & AI](.\images\2-select-analytics-ai.png)
 
-2.	Neste menu, selecione a opção **Data Science**:
+3.	Neste menu, selecione a opção **Data Science**:
 
-![Selecione Data Science](.\images\3-acess-data-science.png)
+    ![Selecione Data Science](.\images\3-acess-data-science.png)
 
-3.	Na parte inferior esquerda da tela, você verá a seção **compartments**. Certifique-se de que o compartimento **LiveLabs-DataEng** está selecionado. 
+4.	Na parte inferior esquerda da tela, você verá a seção **compartments**. Certifique-se de que o compartimento **LiveLabs-DataEng** está selecionado. 
 
-![Verificar Compartment](.\images\4-compartment-data-science.png)
+    ![Verificar Compartment](.\images\4-compartment-data-science.png)
 
-Se não estiver, clique no menu suspenso e escolha essa opção específica.
+    Se não estiver, clique no menu suspenso e escolha essa opção específica.
 
-![Selecionar Compartment](.\images\5-compartment-selection.png)
+    ![Selecionar Compartment](.\images\5-compartment-selection.png)
 
-4. Para abrir o projeto que contém o notebook de data science, escolha a opção **Project\_LiveLabs\_Eng**.
+5. Para abrir o projeto que contém o notebook de data science, escolha a opção **Project\_LiveLabs\_Eng**.
 
-![Selecionar Projeto](.\images\6-selection-data-science.png)
+    ![Selecionar Projeto](.\images\6-selection-data-science.png)
 
-5. Nesta página, escolha a opção **Notebook\_LiveLabs\_Eng**.
+6. Nesta página, escolha a opção **Notebook\_LiveLabs\_Eng**.
 
-![Selecionar Notebook](.\images\7-selection-notebook.png)
+    ![Selecionar Notebook](.\images\7-selection-notebook.png)
 
-6. Em seguida, para abrir o notebook de data science, selecione **Open**.
+7. Em seguida, para abrir o notebook de data science, selecione **Open**.
 
-![Abrir Notebook](.\images\8-open-notebook.png)
+    ![Abrir Notebook](.\images\8-open-notebook.png)
 
 ## Tarefa 2: Instalação do ambiente Conda
 
 1.	Na página inicial do Data Science, clique em **Environment Explorer**.
 
-![Selecione Environment Explorer](.\images\9-select-environment-explorer.png)
+    ![Selecione Environment Explorer](.\images\9-select-environment-explorer.png)
 
 2.	Selecione os três pontos ao lado direito do ambiente Conda chamado **PySpark 3.2 and Data Flow** na Environment Version 3.0.
 
-![Selecione o ambiente Conda](.\images\10-select-pyspark-data-flow.png)
+    ![Selecione o ambiente Conda](.\images\10-select-pyspark-data-flow.png)
 
-1. Clique em **Install**.
+3. Clique em **Install**.
 
-![Clicar em instalar](.\images\11-install-pyspark-data-flow.png)
+    ![Clicar em instalar](.\images\11-install-pyspark-data-flow.png)
 
 4. Uma janela do terminal irá abrir, apresentando o progresso da instalação. Aguarde a finalização da instalação indicado pela mensagem **"INFO:ODSC:Conda environment has been successfully installed."** 
 
-![Aguarde a finalização da instalação](.\images\12-conda-install-complete.png)
+    ![Aguarde a finalização da instalação](.\images\12-conda-install-complete.png)
 
 
 ## Tarefa 3: Publicação do ambiente Conda
@@ -98,62 +98,63 @@ Desta forma, vamos iniciar com o processo de publicação:
 
 1. Para publicar este ambiente, retorne para a janela do launcher ou utilize o atalho **CTRL + SHIFT + L** para abrir um novo launcher.
 
-![Retorne ao Launcher](.\images\13-return-launcher.png)
+    ![Retorne ao Launcher](.\images\13-return-launcher.png)
 
-2. No launcher, selecione **Settings**, na área de Extensions
+2. No launcher, selecione **Settings**, na área de Extensions.
 
-![Selecione Settings](.\images\14-configure-bucket-publish.png)
+    ![Selecione Settings](.\images\14-configure-bucket-publish.png)
 
 3. Para prosseguir, será necessário obter informações específicas sobre o bucket, ou seja, a pasta de arquivos onde o ambiente será hospedado.
 
-![Informações Settings](.\images\15-settings-conda-environment.png)
+    ![Informações Settings](.\images\15-settings-conda-environment.png)
 
 4. Para encontrar estas informações, clique no **nome do notebook** na área superior esquerda da página para retornar para o ambiente da Oracle Cloud.
 
-![Retornar Oracle Cloud](.\images\16-return-cloud.png)
+    ![Retornar Oracle Cloud](.\images\16-return-cloud.png)
 
 5. Na página das informações do notebook, clique no menu na área superior esquerda da página.
 
-![Acessar menu Cloud](.\images\17-select-menu-cloud.png)
+    ![Acessar menu Cloud](.\images\17-select-menu-cloud.png)
 
 
 6. Use o menu suspenso do console web OCI para acessar **Storage** e, em seguida, **Buckets**.
 
-![Retornar Oracle Cloud](.\images\18-cloud-bucket.png)
+    ![Retornar Oracle Cloud](.\images\18-cloud-bucket.png)
 
 
 7. Certifique-se de que estamos usando o compartimento **LiveLabs-DataEng** para o bucket que iremos acessar. Use o menu suspenso **Compartments** no lado esquerdo da página para selecionar livelabs.
 
-![Certificar Compartment](.\images\19-compartment-bucket.png)
+    ![Certificar Compartment](.\images\19-compartment-bucket.png)
 
 
 8. Em seguida, selecione o **bucket-conda-environment**. 
 
-![Selecionar Bucket](.\images\20-bucket-acess.png)
+    ![Selecionar Bucket](.\images\20-bucket-acess.png)
 
 9. Nesta página, você encontrará o **namespace** e o **Nome do Bucket** que são requisitados na página de configurações do Oracle Data Science.
 
-![Acessar Bucket Name e Namespace](.\images\21-bucket-name.png)
+    ![Acessar Bucket Name e Namespace](.\images\21-bucket-name.png)
 
 10. Retorne para a guia do navegador no qual o Data Science está aberto e insira as informações solicitadas. Em seguida, clique em **Save**.
 
-![Preencher Settings](.\images\22-fill-settings.png)
+    ![Preencher Settings](.\images\22-fill-settings.png)
 
-> Se o procedimento for finalizado corretamente, uma mensagem de sucesso será exibida. ![Preencher Settings](.\images\callout-2-sucess-fill-settings.png)
+> Se o procedimento for finalizado corretamente, uma mensagem de sucesso será exibida. 
+    ![Preencher Settings](.\images\callout-2-sucess-fill-settings.png)
 
 11. Em settings, selecione o botão **X** para retornar para a página principal do Launcher.
 
-![Retornar Launcher Settings](.\images\23-return-launch-settings.png)
+    ![Retornar Launcher Settings](.\images\23-return-launch-settings.png)
 
 12. O ambiente instalado **PySpark 3.2 and Data Flow** estará presente na área **Kernels**. Selecione-o com o botão esquerdo e em seguida, clique na opção **Publish**.
 
-![Publique o ambiente Conda](.\images\24-publish-conda.png)
+    ![Publique o ambiente Conda](.\images\24-publish-conda.png)
 
 ---
 
 13. Uma janela do terminal irá abrir, apresentando o progresso da publicação. Aguarde até aparecer a mensagem: **INFO:ODSC:/home/datascience/conda/tmp/pyspark32\_p38\_cpu\_v3.tar.gz uploaded successfully.**
 
-![Publicação Conda](.\images\25-publish-conda-sucess.png)
+    ![Publicação Conda](.\images\25-publish-conda-sucess.png)
 
 ---
 
@@ -161,15 +162,15 @@ Desta forma, vamos iniciar com o processo de publicação:
 
 1. Realize o download do Notebook Data Science 
 
-* [Notebook Data Science.ipynb](https://objectstorage.us-ashburn-1.oraclecloud.com/p/l1iL35F6oY5CUqNVqqttHZrRZqszS3XKI0ZEePCFf8nLE3zLfVtg2t3EUMRrba7c/n/id3kyspkytmr/b/bucket-fast-track/o/LiveLabs_DataEng.ipynb)
+[Notebook Data Science.ipynb](https://objectstorage.us-ashburn-1.oraclecloud.com/p/l1iL35F6oY5CUqNVqqttHZrRZqszS3XKI0ZEePCFf8nLE3zLfVtg2t3EUMRrba7c/n/id3kyspkytmr/b/bucket-fast-track/o/LiveLabs_DataEng.ipynb)
 
 2. Para realizar o upload do notebook no ambiente Data Science, clique no ícone de upload na região superior esquerda da página e selecione o arquivo **LiveLabs.ipynb** em sua pasta local.
 
-![Upload Notebook](.\images\26-upload-data-science.png)
+    ![Upload Notebook](.\images\26-upload-data-science.png)
 
 3. Em seguida, dê dois cliques no nome do arquivo para acessar o notebook.
 
-![Upload Notebook](.\images\27-click-notebook.png)
+    ![Upload Notebook](.\images\27-click-notebook.png)
 
 ## Tarefa 5: Upload dos dados brutos no bucket Bronze
 
@@ -179,31 +180,33 @@ Desta forma, vamos iniciar com o processo de publicação:
 * [EXPORTACAO\_BRASIL\_LIVELABS.csv](https://objectstorage.us-ashburn-1.oraclecloud.com/p/MjEyV61y5B-92n4MQdrK26cwy4kLmnHrPSW6y0YMSdER_3iekE9XCAVLpjHA9bPf/n/id3kyspkytmr/b/bucket-fast-track/o/EXPORTACAO_BRASIL_LIVELABS.csv)
 * [CODIGO\_PAISES\_LIVELABS.json](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ht0IGcAYX0Hoj7R6iMvx-0FJM2UzjtCjqbs5mNBpkkb7mi4AYzH3cFJ6WG_jFBsI/n/id3kyspkytmr/b/bucket-fast-track/o/CODIGO_PAISES_LIVELABS.json)
 
+**ATENÇÃO:** Ao abrir a página com o conteúdo do arquivo CODIGO\_PAISES\_LIVELABS, clique com o botão direito e selecione "Save As" para salvar o arquivo em seu computador.
+
 
 1. Selecione o menu na região superior esquerda, em seguida clique em storage e selecione Buckets.
 
 
-![Acessar o bucket](.\images\28-menu-bucket.png)
+    ![Acessar o bucket](.\images\28-menu-bucket.png)
 
 2. Acesse o bucket chamado **bucket-bronze**.
 
-![Selecione o bucket chamado bronze](.\images\29-bucket-bronze.png)
+    ![Selecione o bucket chamado bronze](.\images\29-bucket-bronze.png)
 
 3. Na parte inferior da tela clique no botão **Upload**. Em seguida clique em **Select Files**.
 
-![Upload dos arquivos no bucket](.\images\30-upload-bucket-files.png)
+    ![Upload dos arquivos no bucket](.\images\30-upload-bucket-files.png)
 
 4. Selecione os arquivos que você baixou no inicio dessa tarefa.
 
-![Upload dos arquivos no bucket](.\images\31-select-files.png)
+    ![Upload dos arquivos no bucket](.\images\31-select-files.png)
 
 5. Após selecionar os arquivos clique em **Upload**.
 
-![Upload dos arquivos no bucket](.\images\32-confirm-upload.png)
+    ![Upload dos arquivos no bucket](.\images\32-confirm-upload.png)
 
 6. Verifique se os 4 arquivos estão em seu bucket:
 
-![Upload dos arquivos no bucket](.\images\33-check-files.png)
+    ![Upload dos arquivos no bucket](.\images\33-check-files.png)
 
 
 Parabéns, você terminou esse laboratório! 🎉
@@ -216,5 +219,5 @@ Neste laboratório, você aprendeu a instalar e publicar um ambiente Conda, alé
 
 ## Autoria
 
-- **Autores** - Thais Henrique, Heloisa Escobar, Isabelle Anjos
-- **Último Update Por/Date** - Isabelle Anjos, Nov/2023
+- *Created By/Date* - Thais Henrique, Heloisa Escobar, Isabelle Anjos, Janeiro 2024
+- *Last Updated By* - Isabelle Anjos, Janeiro 2024
