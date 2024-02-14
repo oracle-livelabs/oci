@@ -1,4 +1,4 @@
-# Failover steering policy
+# Deploy a failover steering policy
 
 ### Introduction
 

@@ -2,7 +2,7 @@
 
 ### About this Workshop
 
-Estimated Time: 3 - 5 hours
+Estimated Time: 2 - 3 hours
 
 Traffic Management helps you guide traffic to endpoints based on various conditions, including endpoint health and the geographic origins of DNS requests. Use Traffic Management steering policies to serve intelligent responses to DNS queries, meaning different answers (endpoints) might be served for the query depending on the logic defined in the policy. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/DNS/home.htm) for more information on the Public DNS service. 
 
@@ -31,7 +31,7 @@ This lab requires that you have:
 This workshop contains seven labs, two for environment setup and five for each DNS policy type. You must complete the first two labs and then you can do labs 3 - 7 in whichever order you like. 
 For deploying resources of any kind, OCI asks for an IAM Compartment. Every resource deployed in this workshop will be deployed in the same **LAB** Compartment. Make sure you are the admin of your environment or have sufficient privileges to deploy resources in the Compartment you plan to use.
 
-## Acknowledgments
+## Acknowledgements
 
 * **Author** - Radu Nistor, Principal Cloud Architect, OCI Networking
 * **Last Updated By/Date** - Radu Nistor, February 2024

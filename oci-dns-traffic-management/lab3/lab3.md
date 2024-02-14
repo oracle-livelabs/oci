@@ -1,4 +1,4 @@
-# Load balancer steering policy
+# Deploy a load balancer steering policy
 
 ### Introduction
 

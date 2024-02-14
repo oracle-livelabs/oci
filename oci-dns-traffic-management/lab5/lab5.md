@@ -1,4 +1,4 @@
-# Geolocation steering policy
+# Deploy a geolocation steering policy
 
 ### Introduction
 

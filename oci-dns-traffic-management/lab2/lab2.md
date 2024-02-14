@@ -1,4 +1,4 @@
-# DNS Zone and OCI Health Checks
+# Deploy a DNS Zone and OCI Health Checks
 
 ### Introduction
 

@@ -1,4 +1,4 @@
-# IP prefix steering policy
+# Deploy an IP prefix steering policy
 
 ### Introduction
 
