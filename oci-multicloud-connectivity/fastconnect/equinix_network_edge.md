@@ -1,4 +1,4 @@
-![Deployment Diagram](images_equinix_network_edge/topology-equinix-network-edge.png)
+![Deployment Diagram](images/equinix_network_edge/topology-equinix-network-edge.png)
 
 # Equinix (Network Edge) Deployment
 
@@ -34,54 +34,54 @@ This lab assumes you have:
 ## Task 1: Deploy an Equinix Network Edge
 
 1. Log into the Equinix portal. Navigate to **Network Edge** and click **Create Virtual Device**.
-    ![Create Virtual Device](images_equinix_network_edge/network-edge-1.png)
+    ![Create Virtual Device](images/equinix_network_edge/network-edge-1.png)
 2. Under **Add New Edge Device**, scroll to the bottom of the page to find the **VyOS** virtual router. Click **Select and Continue**.
-    ![Add New Edge Device](images_equinix_network_edge/network-edge-2.png)
+    ![Add New Edge Device](images/equinix_network_edge/network-edge-2.png)
 3. Under **Select Device Type**, select **Single Device** and click **Begin Creating Edge Devices**.
-    ![Select Device Type](images_equinix_network_edge/network-edge-3.png)
+    ![Select Device Type](images/equinix_network_edge/network-edge-3.png)
 4. Under **Select Edge Device Location**, select **Ashburn**. Scroll down to **Select Billing Account** and verify the correct billing account is used. Afterwards, click **Next: Device Details**.
-    ![Select Edge Location](images_equinix_network_edge/network-edge-4.png)
+    ![Select Edge Location](images/equinix_network_edge/network-edge-4.png)
 5. Under **Device Details**, fill in a **Device Name** and **Host Name Prefix**. Afterwards, click **Next: Additional Services Details**.
-    ![Device Details](images_equinix_network_edge/network-edge-5.png)
+    ![Device Details](images/equinix_network_edge/network-edge-5.png)
 6. Under **Add Users**, create a memorable username under **Username** and add your public SSH RSA key under **SSH RSA Public Keys**. Under **Access Control List Templates** select your existing template. Make sure that your public IP address is allowed on the Access Control Template, and that TCP port 22 is allowed. Click **Next: Review**.
-    ![Add Users](images_equinix_network_edge/network-edge-6.png)
+    ![Add Users](images/equinix_network_edge/network-edge-6.png)
 7. Review the device configuration. Review and Access the Order Terms, and then click **Create Virtual Device**.
-    ![Create Virtual Device](images_equinix_network_edge/network-edge-7.png)
+    ![Create Virtual Device](images/equinix_network_edge/network-edge-7.png)
 8. Under **See your device in your dashboard**, click **Go to the device**.
-    ![Go To Device](images_equinix_network_edge/network-edge-8.png)
+    ![Go To Device](images/equinix_network_edge/network-edge-8.png)
 9. Continue to the next task when the green indicator is on the VyOS Virtual Router.
-    ![Wait for Provisioning to Finish](images_equinix_network_edge/network-edge-9.png)
+    ![Wait for Provisioning to Finish](images/equinix_network_edge/network-edge-9.png)
 
 ## Task 2: Create a FastConnect Connection
 
 1. From the Oracle Cloud Console, go to the navigation menu and click on **Networking -> Customer Connectivity -> FastConnect**.
-    ![Navigate to FastConnect](images_equinix_network_edge/eq_fastconnect-1.png)
+    ![Navigate to FastConnect](images/equinix_network_edge/eq_fastconnect-1.png)
 2. Under **FastConnect Connections**, verify you are in the correct compartment for this lab and click **Create FastConnect**.
-    ![Create FastConnect](images_equinix_network_edge/eq_fastconnect-2.png)
+    ![Create FastConnect](images/equinix_network_edge/eq_fastconnect-2.png)
 3. Under **Connection Type**, select **FastConnect Partner**. Under **Partner**, select **Equinix: Fabric**.
-    ![Partner Equinix](images_equinix_network_edge/eq_fastconnect-3.png)
+    ![Partner Equinix](images/equinix_network_edge/eq_fastconnect-3.png)
 4. Set the FastConnect Parameters as seen below.
-    ![FastConnect Parameters](images_equinix_network_edge/eq_fastconnect-4.png)
+    ![FastConnect Parameters](images/equinix_network_edge/eq_fastconnect-4.png)
 5. Copy the OCID of the Virtual Circuit and move to the next task.
-    ![Virtual Circuit OCID](images_equinix_network_edge/eq_fastconnect-5.png)
+    ![Virtual Circuit OCID](images/equinix_network_edge/eq_fastconnect-5.png)
 
 ## Task 3: Create a Connection to the Equinix Network Edge
 
 1. Go back to the Network Edge in the Equinix console. Under **Virtual Device Details -> Connections** the **Virtual Connections** list should be empty. Click **Create Connection** to establish a private connection from Oracle Cloud to VyOS. 
-    ![Private Connection](images_equinix_network_edge/connections-1.png)
+    ![Private Connection](images/equinix_network_edge/connections-1.png)
 2. Scroll down to **Oracle Cloud** and click **Select Service**. Scroll down again and click **Create Connection**.
-    ![Select Service](images_equinix_network_edge/connections-2.png)
-    ![Create Connection](images_equinix_network_edge/connections-3.png)
+    ![Select Service](images/equinix_network_edge/connections-2.png)
+    ![Create Connection](images/equinix_network_edge/connections-3.png)
 3. Select the parameters indicated below and move to the next step.
-    ![Private Connection Parameters](images_equinix_network_edge/connections-4.png)
+    ![Private Connection Parameters](images/equinix_network_edge/connections-4.png)
 4. Under **Connection Information -> Virtual Circuit Name** create a unique name for this connection to OCI. Under **Virtual Circuit OCID**, add the OCID of the Virtual Circuit you created in Task 2. 
-    ![FastConnect OCID](images_equinix_network_edge/connections-5.png)
+    ![FastConnect OCID](images/equinix_network_edge/connections-5.png)
 5. Click **Submit Order** on the next page.
-    ![Submit Order](images_equinix_network_edge/connections-6.png)
+    ![Submit Order](images/equinix_network_edge/connections-6.png)
 6. Navigate to **See this Connection in your Inventory -> Go to My Inventory**!
-    ![Go to My Inventory](images_equinix_network_edge/connections-7.png)
+    ![Go to My Inventory](images/equinix_network_edge/connections-7.png)
 7. Verify the connection has been added to the Equinix portal and then proceed to the next task.
-    ![OCI Config Complete](images_equinix_network_edge/connections-8.png)
+    ![OCI Config Complete](images/equinix_network_edge/connections-8.png)
 
 ## Task 4: Establish Connectivity with Additional Cloud Providers
 
@@ -98,14 +98,14 @@ This lab assumes you have:
 ## Task 5: Configure VyOS Virtual Router (Network Edge)
 
 1. Navigate to your Network Edge and verify there is a connection for OCI and for your additional cloud provider.
-    ![Multiple Cloud Providers](images_equinix_network_edge/vyos-setup-1.png)
+    ![Multiple Cloud Providers](images/equinix_network_edge/vyos-setup-1.png)
 2. Navigate to **Details**, and then scroll down to **IP Address** to get the public IP address of the network edge.
-    ![Navigation - Details](images_equinix_network_edge/vyos-setup-2.png)
-    ![Public IP address](images_equinix_network_edge/vyos-setup-3.png)
+    ![Navigation - Details](images/equinix_network_edge/vyos-setup-2.png)
+    ![Public IP address](images/equinix_network_edge/vyos-setup-3.png)
 3. Navigate back to the Oracle Cloud console and go back to the Cloud Shell instance.
-    ![CloudShell](images_equinix_network_edge/cloudshell-1.png)
+    ![CloudShell](images/equinix_network_edge/cloudshell-1.png)
 4. With the username created in Task 1 of the lab, ssh into the VyOS Network Edge. The command will look something like this. **ssh username@vyos\_public\_ip**. The SSH RSA keypair is used to authenticate the session, so no password will be needed to connect to the appliance.
-    ![VyOS SSH](images_equinix_network_edge/vyos-setup-4.png)
+    ![VyOS SSH](images/equinix_network_edge/vyos-setup-4.png)
 5. Copy the configuration below to your clipboard, and paste in into the SSH session. This will start the BGP process on the VyOS router and setup connections from the Network Edge to the cloud providers. This configuration assumes the additional cloud provider's AS is 64512 and the remote IP address is 169.254.1.1.
         ```text
         <copy>
@@ -123,9 +123,9 @@ This lab assumes you have:
 
     > **Note:** If your BGP connection requires a password, add this to the BGP neighbor configuration. **set protocols bgp 65001 neighbor 169.254.1.1 password 'passwordgoeshere'**
 
-    ![VyOS Configuration](images_equinix_network_edge/vyos-setup-5.png)
+    ![VyOS Configuration](images/equinix_network_edge/vyos-setup-5.png)
 6. Run the command **show ip bgp sum** in the VyOS router. You can confirm the configuration is working if the **Up/Down** status of each neighbor has a timer indicating it's uptime, and **PrxRcd** has a number greater than zero.
-    ![Verify Route Exchange](images_equinix_network_edge/vyos-setup-6.png)
+    ![Verify Route Exchange](images/equinix_network_edge/vyos-setup-6.png)
 
 7. If you've gone this far, congratulations! This is a major mile stone in this lab. Go ahead and proceed to the next lab.
 

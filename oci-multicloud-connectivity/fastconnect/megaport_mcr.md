@@ -1,4 +1,4 @@
-![Megaport Architecture](images_megaport_mcr/topology-megaport-mcr.png)
+![Megaport Architecture](images/megaport_mcr/topology-megaport-mcr.png)
 
 # Megaport (MCR) Deployment
 
@@ -37,11 +37,11 @@ This lab has the following prerequisites:
 ## Task 1: Configure Oracle Cloud FastConnect
 
 1. From the Navigation Menu, navigate to **Networking -> Customer Connectivity -> FastConnect**. Click on **Create FastConnect**.
-  ![Create FastConnect](images_megaport_mcr/mp_fc_1.png)
+  ![Create FastConnect](images/megaport_mcr/mp_fc_1.png)
 2. Select **Create FastConnect**.
-  ![Create FastConnect](images_megaport_mcr/mp_fc_2.png)
+  ![Create FastConnect](images/megaport_mcr/mp_fc_2.png)
 3. Make sure **FastConnect Partner** is selected, and the click on the **Partner** Dropdown menu. Select **Megaport: Service** and click **Next**.
-  ![Select Megaport FastConnect partner](images_megaport_mcr/mp_fc_3.png)
+  ![Select Megaport FastConnect partner](images/megaport_mcr/mp_fc_3.png)
 4. Complete the following fields:
 
     |                  **Field**              |    **Value**  |
@@ -56,33 +56,33 @@ This lab has the following prerequisites:
     |Customer BGP ASN|    133937    |
 
 5. Verify your configuration matches the following, and then click **Create**.
-  ![Verify configuration](images_megaport_mcr/mp_fc_4.png)
+  ![Verify configuration](images/megaport_mcr/mp_fc_4.png)
 
 ## Task 2: Add Oracle Cloud FastConnect to Megaport MCR
 
 1. Under **Next Steps**, click **Complete connection**
-  ![Complete Connection](images_megaport_mcr/mp_mcr_1.png)
+  ![Complete Connection](images/megaport_mcr/mp_mcr_1.png)
 2. Use your Megaport credentials to authenticate with Megaport within the Oracle Cloud console. Click **Login to Megaport**.
-  ![Authenticate with Megaport](images_megaport_mcr/mp_mcr_2.png)
+  ![Authenticate with Megaport](images/megaport_mcr/mp_mcr_2.png)
 3. Under **Configure connection** and select **Megaport Cloud Router**. Your configuration should look similar to the example below.
-  ![Megaport Cloud Router Selection](images_megaport_mcr/mp_mcr_3.png)
+  ![Megaport Cloud Router Selection](images/megaport_mcr/mp_mcr_3.png)
 4. Under **Oracle virtual cross connect details** set a name, location and rate limit for the connection similar to the configuration below.
-  ![Oracle VXC](images_megaport_mcr/mp_mcr_4.png)
+  ![Oracle VXC](images/megaport_mcr/mp_mcr_4.png)
 5. Review the configuration, accept the agreement and then click **Complete connection**.
-  ![Accept Agreement and continue](images_megaport_mcr/mp_mcr_5.png)
+  ![Accept Agreement and continue](images/megaport_mcr/mp_mcr_5.png)
 6. When the provisioning process is complete, the BGP state will be UP. **This process takes ~15 minutes.**
-  ![Wait for BGP status UP](images_megaport_mcr/mp_mcr_6.png)
+  ![Wait for BGP status UP](images/megaport_mcr/mp_mcr_6.png)
 
 ## Task 3: Establish Connectivity with Additional Cloud Providers
 
 1. Navigate to <https://portal.megaport.com> and login.
-  ![Navigate to Megaport](images_megaport_mcr/mp_portal_1.png)
+  ![Navigate to Megaport](images/megaport_mcr/mp_portal_1.png)
 2. Under **Services**, find the new Cloud Router that was provisioned in the previous task. Verify that the status of the CloudRouter and VXC to Oracle Cloud are in a healthy status as indicated by the green icons. Afterwards, click **Connection** to add an additional cloud provider to the CloudRouter.
-  ![Verify health of the CloudRouter](images_megaport_mcr/mp_portal_2.png)
+  ![Verify health of the CloudRouter](images/megaport_mcr/mp_portal_2.png)
 3. Under **Chose Destination Type** select **Cloud**.
-  ![Add another cloud](images_megaport_mcr/mp_portal_3.png)
+  ![Add another cloud](images/megaport_mcr/mp_portal_3.png)
 4. Under **Select Provider**, search for the additional cloud provider you would like to establish connectivity with. Follow the steps on the screen to set up the additional cloud provider. (The example below is looking to connect with Azure). It is also recommended to follow the steps in the [MCR documentation](https://docs.megaport.com/cloud/mcr/) to properly set up the other cloud provider.
-  ![Select Provider](images_megaport_mcr/mp_portal_4.png).
+  ![Select Provider](images/megaport_mcr/mp_portal_4.png).
 5. Verify the 3rd party cloud is properly connected to the Megaport Cloud Router.
 6. You may now **proceed to the next lab**.
 
