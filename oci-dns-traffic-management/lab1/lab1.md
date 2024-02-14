@@ -6,7 +6,7 @@ Estimated Time: 20 minutes
 
 ### About this lab
 
-We will start the workshop with the environment setup. For the entire workshop we will use the same deployment ( VCNs, Web Servers) and only change configuration related to the DNS Policies. Also, we will use two Oracle Cloud regions, Chicago and Franfurt, to host the Web Servers which the DNS records will point to. When you do this workshop in your tenancy you can choose any two regions in the Oracle Cloud.
+We will start the workshop with the environment setup. For the entire workshop, we will use the same deployment (VCNs, Web Servers) and only change configuration related to the DNS Policies. Also, we will use two Oracle Cloud regions, Chicago and Frankfurt, to host the Web Servers which the DNS records will point to. When you do this workshop in your tenancy you can choose any two regions in the Oracle Cloud.
 
 ### Objectives
 
@@ -19,7 +19,7 @@ In this lab, you will:
 
 ## Task 1: Deploy a VCN (Virtual Cloud Network) 
 
-We will start with a basic VCN deployment. Since the main goal is to have a publicly accesible web server we will not get into many details and we will use the VCN Creation Wizard which OCI provides.  
+We will start with a basic VCN deployment. Since the main goal is to have a publicly accessible web server we will not get into many details and we will use the VCN Creation Wizard which OCI provides.  
 
 1. Log into the Oracle Cloud console and select the **Chicago** region. On the Oracle Cloud Infrastructure Console Home page, go to the Burger menu (on top left), select Networking and click on **Virtual cloud networks**. Press **Start VCN Wizard**.
   ![Create VCN1](images/createvcn1.png)
@@ -27,12 +27,12 @@ We will start with a basic VCN deployment. Since the main goal is to have a publ
 2. In the menu that opens leave option 1 selected and press **Start VCN Wizard**.
   ![Create VCN2](images/createvcn2.png)
 
-3. In the next menu, give the VCN a name, leave everything else as it is and press **Next**. In the new menu, simply press **Create** and wait for the VCN to be created. After it is done, press **View VCN**.
+3. In the next menu, give the VCN a name, leave everything else as it is, and press **Next**. In the new menu, simply press **Create** and wait for the VCN to be created. After it is done, press **View VCN**.
   ![Create VCN3](images/createvcn3.png)
 
   ![Create VCN4](images/createvcn4.png)
 
-4. On the VCN Details page we can see that the VCN was deployed with subnets, gateways, route tables and so on. The only thing we need to add is a security list entry that allows HTTP from Internet. Go to the **Security Lists** menu on the left and click the **Default** Security List.
+4. On the VCN Details page we can see that the VCN was deployed with subnets, gateways, route tables, and so on. The only thing we need to add is a security list entry that allows HTTP from the Internet. Go to the **Security Lists** menu on the left and click the **Default** Security List.
   ![Click SLs](images/clicksls.png)
 
   In the menu that opens you should see there is a rule to allow SSH from Internet which we will use to connect to the compute hosts. We also need an ingress rule to allow HTTP. 
@@ -40,7 +40,7 @@ We will start with a basic VCN deployment. Since the main goal is to have a publ
 
 Note: this workshop is focused on the DNS Traffic Steering Policies product so the security configuration for the VCN is very basic as we are allowing unrestricted SSH and HTTP connections from the Internet. 
 
-5. **REPEAT** step 1 to 4 and deploy a VCN in the Frankfurt Region.
+5. **REPEAT** steps 1 to 4 and deploy a VCN in the Frankfurt Region.
 
 ## Task 2: Deploy a Compute Instance with a Public IP
 
@@ -76,9 +76,9 @@ Note: this workshop is focused on the DNS Traffic Steering Policies product so t
 
 ## Task 3: Configure the web services
 
-  To setup a basic web server we will use **Apache** following this [tutorial](https://docs.oracle.com/en/learn/apache-install/#introduction).
+  To set up a basic web server we will use **Apache** following this [tutorial](https://docs.oracle.com/en/learn/apache-install/#introduction).
 
-1. Connect to the Chicago Compute Instance Public IP with a SSH client. There are many SSH clients available, I will use [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/). Download and open Putty. In the sessions menu input the public IP of the Compute in Chicago and in the connections menu, under SSH, select the **private** SSH key you saved when you deployed the instance. 
+1. Connect to the Chicago Compute Instance Public IP with an SSH client. There are many SSH clients available, I will use [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/). Download and open Putty. In the sessions menu input the public IP of the Compute in Chicago and in the connections menu, under SSH, select the **private** SSH key you saved when you deployed the instance. 
    ![Putty details](images/putty.png)
 
   Click **Open**, input user **opc** and you should see the Linux CLI of the Compute.
@@ -104,7 +104,7 @@ Note: this workshop is focused on the DNS Traffic Steering Policies product so t
 3. **Repeat** steps 1 and 2 and deploy Apache on the Frankfurt Compute. When done, test with *http://141.147.5.4* (don't forget to use your actual Frankfurt IP). 
   ![Frankfurt Apache](images/apache_fra.png)
 
-**Congratulations!** You have successfully  completed this lab. You may now **proceed to the next lab**.
+**Congratulations!** You have successfully completed this lab. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

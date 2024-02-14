@@ -6,12 +6,12 @@ Estimated Time: 15 minutes
 
 ### About the geolocation steering policy
 
-The geolocation steering policy will direct users to a site based on the user location. Each geolocation rule allows for a backup site so users are redirected in case the main site goes down. In this lab I will create a rule with the following:
+The geolocation steering policy will direct users to a site based on the user's location. Each geolocation rule allows for a backup site so users are redirected in case the main site goes down. In this lab, I will create a rule with the following:
 * users in Europe will go to the Frankfurt site. If Frankfurt goes down, they will be redirected to Chicago.
 * users in North America will go to the Chicago site. If Chicago goes down, they will be redirected to Frankfurt.
 * no *global catch-all rule* which means that users outside of Europe or North America will get a random DNS answer, either the Frankfurt or the Chicago site.
 
-Note that the evaluation is done on the Local DNS server IP not the actual IP of the user trying to connect to the site. This can be important in some scenarios, for example when the user is using the Corporate DNS server via a VPN.
+**Note that the evaluation is actually done on the user's Local DNS server IP not the IP of the user trying to connect to the site. This can be important in some scenarios, for example when the user is using the Corporate DNS server via a VPN.**
 
 ### Objectives
 
@@ -31,7 +31,7 @@ In this lab, you will:
 
     * Type is: Geolocation steering.
     * Give it a name.
-    * Policy TTL: you can choose any value you like; with a high TTL value there will be less DNS traffic but more time to fail over in case a server has issues.
+    * Policy TTL: you can choose any value you like; with a high TTL value there will be less DNS traffic but more time to failover in case a server has issues.
     * Maximum answer count: this type will always have one.
     * Answer pools: create a pool for Chicago with the Web Server there as an answer and one for Frankfurt.
     * Geolocation steering rules: add a rule for Europe with Pool 1 Frankfurt and Pool 2 Chicago and a rule for North America with Pool 1 Chicago and Pool 2 Frankfurt. 

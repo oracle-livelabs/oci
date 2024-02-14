@@ -6,7 +6,7 @@ Estimated Time: 15 minutes
 
 ### About the failover steering policy
 
-The failover steering policy will direct users to the primary pool. If the primary pool stops responding to the health check created in lab 2, OCI will redirect the users to a site with a lower priority. Each pool can have one or more webservers. For this demo, each pool will have only one eligible server.
+The failover steering policy will direct users to the primary pool. If the primary pool stops responding to the health check created in lab 2, OCI will redirect the users to a site with a lower priority. Each pool can have one or more web servers. For this demo, each pool will have only one eligible server.
 
 ### Objectives
 
@@ -24,9 +24,9 @@ In this lab, you will:
  
 2. In the policy creation menu we need to input various information.
 
-    * type is: Failover
-    * give it a name
-    * Policy TTL: you can choose any value you like; with a high TTL value there will be less DNS traffic but more time to fail over in case a server has issues.
+    * Type is: Failover
+    * Give it a name
+    * Policy TTL: you can choose any value you like; with a high TTL value there will be less DNS traffic but more time to failover in case a server has issues.
     * Maximum answer count: this type will always have one.
     * Answer pools: create a pool for Chicago with the Web Server there as an answer and one for Frankfurt.
     * Pool priority: I will choose Chicago as the primary pool (priority 1) and Frankfurt as the backup pool (priority 2).

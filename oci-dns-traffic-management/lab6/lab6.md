@@ -6,7 +6,7 @@ Estimated Time: 15 minutes
 
 ### About the ASN steering policy
 
-The ASN steering policy will direct users to a site based on the user's DNS server IP and the public records that match that IP to a BGP ASN. Each ASN rule allows for a backup site so users are redirected in case the main site goes down. In this lab I will create a rule with the following:
+The ASN steering policy will direct users to a site based on the user's DNS server IP and the public records that match that IP to a BGP ASN. Each ASN rule allows for a backup site so users are redirected in case the main site goes down. In this lab, I will create a rule with the following:
 * users using a DNS server in AS 13335 (the Cloudflare 1.1.1.1 DNS) will go to the Chicago site. If Chicago goes down, they will be redirected to Frankfurt.
 * any other user in the world, outside AS 13335, will go to Frankfurt. If Frankfurt goes down, they will be redirected to Chicago. We will do this using a *global catch-all* rule.
 
@@ -28,7 +28,7 @@ In this lab, you will:
 
     * Type is: ASN steering.
     * Give it a name.
-    * Policy TTL: you can choose any value you like; with a high TTL value there will be less DNS traffic but more time to fail over in case a server has issues.
+    * Policy TTL: you can choose any value you like; with a high TTL value there will be less DNS traffic but more time to failover in case a server has issues.
     * Maximum answer count: this type will always have one.
     * Answer pools: create a pool for Chicago with the Web Server there as an answer and one for Frankfurt.
     * ASN steering rules: add a rule for ASN 13335 with Pool 1 Chicago and Pool 2 Frankfurt. Add a global catch-all rule with Frankfurt as Primary and Chicago as a Secondary.
@@ -40,7 +40,7 @@ In this lab, you will:
   ![Create dnspolasn4](images/dnspolasn4.png)
   ![Create dnspolasn5](images/dnspolasn5.png)
   
-## Task 2: Test the asn steering policy
+## Task 2: Test the ASN steering policy
 
 1. After the policy is deployed you should see a status page, like below:
   ![Policy statusasn](images/policystatusasn.png)

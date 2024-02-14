@@ -6,7 +6,7 @@ Estimated Time: 15 minutes
 
 ### About the IP prefix steering policy
 
-The IP prefix steering policy will direct users to a site based on the user's DNS server IP. Each rule allows for a backup site so users are redirected in case the main site goes down. In this lab I will create a rule with the following:
+The IP prefix steering policy will direct users to a site based on the user's DNS server IP. Each rule allows for a backup site so users are redirected in case the main site goes down. In this lab, I will create a rule with the following:
 * users using Cloudflare's recursive DNS server (1.1.1.1) will go to the Chicago site. If Chicago goes down, they will be redirected to Frankfurt.
 * users using Oracle Cloud's recursive DNS server (216.146.35.35) will go to the Frankfurt site. If Frankfurt goes down, they will be redirected to Chicago.
 * no *global catch-all rule* which means that users using any other DNS server will get a random response.
@@ -29,7 +29,7 @@ In this lab, you will:
 
     * Type is: IP prefix steering.
     * Give it a name.
-    * Policy TTL: you can choose any value you like; with a high TTL value there will be less DNS traffic but more time to fail over in case a server has issues.
+    * Policy TTL: you can choose any value you like; with a high TTL value there will be less DNS traffic but more time to failover in case a server has issues.
     * Maximum answer count: this type will always have one.
     * Answer pools: create a pool for Chicago with the Web Server there as an answer and one for Frankfurt.
     * ASN steering rules: I will create a rule that directs clients that use the Cloudflare recursive DNS 1.1.1.1 (I will use the full BGP advertised subnet 1.1.1.0/24) to Chicago and a rule that directs clients that use the Oracle recursive DNS 216.146.35.35 (I will use the full BGP advertised subnet 216.146.35.0/24) to Frankfurt.
@@ -72,7 +72,7 @@ In this lab, you will:
 
   Before moving on, start the Chicago Web Server as we will need it in the other labs.
 
-**Congratulations!** You have successfully completed this lab and this workshop.
+**Congratulations!** You have successfully completed this lab.
 
 ## Acknowledgements
 

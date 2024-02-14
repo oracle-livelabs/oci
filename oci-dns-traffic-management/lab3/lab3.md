@@ -6,7 +6,7 @@ Estimated Time: 15 minutes
 
 ### About the load balancer steering policy
 
-The load balancer steering policy will direct users to all eligible sites on a round robin method. If any of the configured targets stops responding to the health check created in lab 2, OCI will remove it from the eligible targets list.
+The load balancer steering policy will direct users to all eligible sites on a round-robin method. If any of the configured targets stop responding to the health check created in lab 2, OCI will remove it from the eligible targets list.
 
 ### Objectives
 
@@ -24,9 +24,9 @@ In this lab, you will:
  
 2. In the policy creation menu we need to input various information.
 
-    * type is: Load balancer
-    * give it a name
-    * Policy TTL: you can choose any value you like; with a high TTL value there will be less DNS traffic but more time to fail over in case a server has issues.
+    * Type is: Load balancer
+    * Give it a name
+    * Policy TTL: you can choose any value you like; with a high TTL value there will be less DNS traffic but more time to failover in case a server has issues.
     * Maximum answer count: we will go with one answer
     * Under the answer section we will add the IPs of the two web servers, as A records.
     * Attach the HTTP health check created in lab 2.
