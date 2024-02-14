@@ -30,7 +30,7 @@
         },
         {
             "title": "Lab 4: FastConnect Deployment",
-            "filename": "../../fastconnect/_fastconnect_main.md",
+            "filename": "../../fastconnect/_main_fastconnect.md",
             "type": {
                 "Azure_Interconnect" : "Azure Interconnect",
                 "Megaport_MCR" : "Megaport (Cloud Router)",
