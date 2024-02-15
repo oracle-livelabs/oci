@@ -4,6 +4,8 @@
 
 Neste Lab você vai aprender a navegar pela interface do Oracle Analytics Cloud e, conectar o OAC a dados. 
 
+[Oracle Video Hub video scaled to Large size](videohub:1_emf4ny76:large)
+
 ***Overview***
 
 O Oracle Analytics Cloud é um serviço de nuvem pública escalável e seguro que fornece um conjunto completo de recursos para explorar e executar análises colaborativas para você, seu grupo de trabalho e sua empresa. Com o Oracle Analytics Cloud, você também tem recursos flexíveis de gerenciamento de serviços, incluindo configuração rápida, dimensionamento e patches fáceis.
@@ -102,7 +104,7 @@ O  modelo de dados semânticos é uma abordagem que se baseia em princípios sem
 
 5.	Novamente, clique no **Menu Hambuguer**, abaixo de **Aprendizagem Por Máquina**, clique em **Modelos Semânticos** para acessar uma lista de modelos e scripts registrados:
 
-![Modelos Semanticos](./images/modelo_semantico_analytics.png)
+![Modelos Semanticos](./images/semantica.png)
 
 6.	Para rastrear o status de seus jobs e gerenciá-los, continue navegando no **Menu Hamburguer** e clique em **Jobs**. Você pode monitorar o número de jobs filtrando por **Tipo de Objeto** e o **Status** do mesmo.
 
@@ -223,5 +225,5 @@ Além disso, você aprendeu quais fontes de dados você pode usar em conjuntos d
 
 ## Autoria
 
-- **Autores** - Isabelle Dias,Thais Henrique, Isabella Alvarez, Breno Comin, Guilherme Galhardo
-- **Último Update Por/Data** - Thais Henrique, Fev/2023
+- **Autores** - Isabelle Dias
+- **Último Update Por/Data** - Thais Henrique, Dezembro/2022

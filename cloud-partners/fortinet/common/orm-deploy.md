@@ -20,7 +20,7 @@ Estimated Lab Time: 10 minutes.
 - Oracle Marketplace Listings Access
     - **FortiGate** paid listing access required for this **Lab0** 
 
-## **Task 1: Login and Create Stack using Resource Manager**
+## Task 1: Login and Create Stack using Resource Manager
 
 You will be using Terraform to create your lab environment.
 
@@ -36,15 +36,15 @@ You will be using Terraform to create your lab environment.
 
 3.  Open up the hamburger menu in the left-hand corner.  Choose **Developer Services > Stacks**. Click on **Stacks**: 
 
-    ![](./images/92-ORM-Home-Page.png " ")
+    ![Oracle Resource Manager Home Page](./images/orm-home-page.png " ")
 
 4. Choose the right compartment from left hand side drop-down and appropriate region from top right drop-down and click the **Create Stack** button
 
-    ![](./images/93-Create-Stack-Page.png " ")
+    ![Oracle Resource Manager Create Stack Page](./images/create-stack-page.png " ")
 
 5.  Select **My Configuration**, choose the **.ZIP FILE** button, click the **Browse** link and select the zip file (fortigate-live-labs.zip) that you downloaded. Click **Select**.
 
-    ![](./images/94-MyConfiguration-Step1.png " ")
+    ![Oracle Resource Manager Create Stack Workflow with Zip File Upload](./images/myconfiguration-step1.png " ")
 
     Enter the following information and accept all the defaults
 
@@ -58,7 +58,7 @@ You will be using Terraform to create your lab environment.
 
     **Please Read**: Partner now supports flex shapes so Update shapes as **VM.Standard.E3.Flex** for firewall Compute Shape and **VM.Standard.E4.Flex** for Spoke Compute Shape. 
 
-    ![](./images/96-MyConfiguration-Step3.png " ")
+    ![Oracle Resource Manager Create Stack Workflow with adding variables](./images/myconfiguration-step3.png " ")
 
     Enter/Select the following minimum information. Some information may already be pre-populated. Do not change the pre-populated info.
 
@@ -76,31 +76,31 @@ You will be using Terraform to create your lab environment.
 
 7. Click **Create** to create your stack. Now you can move next steps to create your environment.
 
-    ![](./images/97-Final-Create-Stack.png " ")
+    ![Oracle Resource Manager Create Stack Workflow with reviewing variables](./images/final-create-stack.png " ")
 
-## **Task 2: Terraform Plan and Apply**
+## Task 2: Terraform Plan and Apply
 
 When using Resource Manager to deploy an environment, you need to execute a terraform **plan** and **apply**. Let's do that now.
 
 1.  [OPTIONAL] Click **Plan** to validate your configuration. This takes about a minute, please be patient.
 
-    ![](./images/98-Terraform-Plan.png " ")
+    ![Terraform Plan Option](./images/terraform-plan.png " ")
 
 2.  At the top of your page, click on **Stack Details**.  Click the button, **Apply**. This will create your instances and required configuration.
 
-    ![](./images/99-Terraform-Apply.png " ")
+    ![Terraform Apply](./images/terraform-apply.png " ")
 
 3.  Once this job succeeds, your environment is created! Time to login to your instance to finish the configuration.
 
-    ![](./images/95-Terraform-Apply-Success.png " ")
+    ![Terraform Apply Successful Output](./images/terraform-apply-success.png " ")
 
     **Note**: Stack will deploy **FortiGate Next Gen Firewall (4 cores)** paid listing instances to support this use-case.
 
-## **Task 3: Connect to your instances**
+## Task 3: Connect to your instances
 
 1. Based on your laptop config, choose the appropriate steps to connect to your instances. 
 
-   ![](./images/100-Final-Instances.png " ")
+   ![Created Instances using Terraform](./images/final-instances.png " ")
 
 **NOTE**: It will take few minutes before you can connect to ssh-daemon becomes available. If you are unable to connect then make sure you have a valid key, wait a few minutes, and try again.
 
@@ -123,4 +123,4 @@ You may now [proceed to the next lab](#next).
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** -  Fortinet
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023

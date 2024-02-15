@@ -3,6 +3,8 @@
 ## Introduction
 This lab will show you how to use your Security Dashboard to activate Cloud Guard.
 
+Estimated time: 5 minutes.
+
 ### Objectives
 * Go to your Security Dashboard
 * Enable Cloud Guard
@@ -69,4 +71,4 @@ The Cloud Guard Cloud service is already enabled. You will have to wait just som
 
 ## Acknowledgements
 * **Authors** - Sonia Yuste, Damien Rilliard
-* **Last Updated By/Date** - Sonia Yuste, January 2023
+* **Last Updated By/Date** - Sonia Yuste, April 2023

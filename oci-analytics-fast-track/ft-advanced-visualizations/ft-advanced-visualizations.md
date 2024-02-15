@@ -4,6 +4,8 @@
 
 Neste Lab você vai dar um passo a mais no desenvolvimento de suas análises utilizando funcionalidades avançadas que o Oracle Analytics Cloud (OAC) oferece para você para enriquecer ainda mais seus insights.
 
+[Oracle Video Hub video scaled to Large size](videohub:1_6oeev9ax:large)
+
 *Tempo estimado para o Lab:* 25 Minutos
 
 ### Objetivos
@@ -149,12 +151,12 @@ Vamos utilizar as Ações de Dados para analisar mais profundamente os dados de 
 
 3. Preencha os campos com as informações abaixo e depois clique em **OK**:
 
-**Nome:** *Detalhes*  
-**Tipo:** *Link de Análise*  
-**Destino:** *Esta Pasta de Trabalho*  
-**Link para Tela:** *Detalhe*  
-**Informar valores:** *Tudo*  
-**Suportar Várias Seleções:** *Ativado*  
+**Nome:** *Detalhes*
+**Tipo:** *Link de Análise*
+**Destino:** *Esta Pasta de Trabalho*
+**Link para Tela:** *Detalhe*
+**Informar valores:** *Tudo*
+**Suportar Várias Seleções:** *Ativado*
 
 ![Preencha os campos - Data Actions](./images/data-actions-33.png)
 
@@ -198,8 +200,8 @@ Existe um outra maneira de se criar filtros no Oracle Analytics Cloud (OAC): ***
 
 6. Preencha os campos com as informações abaixo e clique em **Salvar**:
 
-**Nome:** *Modos de Envio*  
-**Descrição:** *Imagem representando os modos de envio disponíveis*  
+**Nome:** *Modos de Envio*
+**Descrição:** *Imagem representando os modos de envio disponíveis*
 
 ![Preencha as informações](./images/image-filter-29.png)
 
@@ -221,7 +223,7 @@ Agora será necessário mapear as áreas de imagem e vincular cada mapeamento a 
 
 ![Desenhe um retângulo em volta da imagem do segundo Avião](./images/image-filter-40.png)
 
-10.  Quando toda imagem estiver mapeada clique em salvar (Ícone de disquete no canto superior direito da tela). 
+10.  Quando toda imagem estiver mapeada clique em salvar (Ícone de disquete no canto superior direito da tela).
 
 ![Salve o mapeamento](./images/image-filter-41.png)
 
@@ -245,6 +247,9 @@ Pronto! Toda vez que você quiser ver seus dados de vendas com base no método d
 
 ![Clique na imagem e veja o filtro aplicado](./images/image-filter-46.gif)
 
+Parabéns, você terminou esse laboratório!
+Você pode **seguir para o próximo Lab**.
+
 ## Conclusão
 
 Nesta sessão você aprendeu a utilizar recursos avançados para criação de Dashboards no Oracle Analytics Cloud (OAC)
@@ -252,4 +257,4 @@ Nesta sessão você aprendeu a utilizar recursos avançados para criação de Da
 ## Autoria
 
 - **Autores** - Thais Henrique, Isabella Alvarez, Breno Comin, Isabelle Dias, Guilherme Galhardo
-- **Último Update Por/Date** - Guilherme Galhardo, Fev/2023
+- **Último Update Por/Date** - Guilherme Galhardo, Mar/2023

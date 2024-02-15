@@ -16,22 +16,22 @@ Estimated Lab Time: 20 minutes.
 
 - Oracle Cloud Infrastructure paid account credentials (User, Password, Tenant, and Compartment)  
 
-## **Task 1: Initial Configuration on Firewall Management Center**
+## Task 1: Initial Configuration on Firewall Management Center
 
 1. Connect to **FMC1** instance public IP over ssh. You will be creating initial password so you can connect to FMC over browser.
 
     - SSH to Firewall Management Center using **admin** user with your private key associated with this instance.
     - Enter password to manage Firewall Management Center using browser, In this case you have entered **Cisco@123** password. 
 
-      ![](../common/images/59-FMC-Initial-Config.png " ")
+      ![Cisco FMC Initial Configuration](../common/images/fmc-initial-config.png " ")
 
 2. Connect to **fmc1** instance public IP on your local machine's web browser: **https://public_ip**. It will ask you to enter **username/password**, enter **admin/Cisco@123** or your password which you have configured in **step#1**. 
 
-   ![](../common/images/60-FMC-Initial-Config-Login.png" ")
+   ![Cisco FMC Login Screen](../common/images/fmc-initial-config-login.png " ")
 
 3. Select **Start 90-Day evaluation period without registration** for the time being but at a later stage if you want to add a license you can do. For this lab you will use 90 days trial license. 
 
-   ![](../common/images/61-FMC-Initial-Config-License.png " ")
+   ![Cisco FMC Trail License Window](../common/images/fmc-initial-config-license.png " ")
 
 4. Click **Save** to apply 90 days license to your FMC. 
 
@@ -40,18 +40,18 @@ Estimated Lab Time: 20 minutes.
     - SSH to Secure Firewall using **admin** user with your private key associated with this instance.
     - Enter command **show managers** this should reflect manager which you added or populated during instance creation. Value should be **pending**:
 
-      ![](../common/images/62-First-Time-SecureFirewall-SSH-Login.png " ")
+      ![Secure Firewall1 FMC Connectivity](../common/images/first-time-securefirewall-ssh-login.png " ")
 
 6. [Optional] Connect to **secureFirewall2** instance public IP over ssh. Since you are using Firewall Management Center to manage Secure Firewalls. You can check firewall manager as below:
 
     - SSH to Secure Firewall using **admin** user with your private key associated with this instance.
     - Enter command **show managers** this should reflect manager which you added or populated during instance creation. Value should be **pending**:
 
-      ![](../common/images/58-First-Time-SecureFirewall-SSH-Login.png " ")
+      ![Secure Firewall2 FMC Connectivity](../common/images/first-time-securefirewall-ssh-login.png " ")
 
 7. Navigate to **Devices > Add > Device** to add your **secureFirewall1** instance. 
 
-      ![](../common/images/63-Device-Registration.png " ")
+      ![Add Secure Firewall Instance to FMC](../common/images/device-registration.png " ")
 
 8. Click on **Device** and fill out the dialog box for **Device Registration**:
 
@@ -65,13 +65,13 @@ Estimated Lab Time: 20 minutes.
         - Enable Check marks to Malware, Threat and URL Filtering
       - **Unique NAT ID**: Enter NAT ID associated with **secureFirewall1** instance which is used in **cloud-init** configuration; Example: **cisco123nat1**
 
-      ![](../common/images/64-SecureFirewall1-Policy-Initial.png " ")
+      ![Secure Firewall1 Device Registration to FMC](../common/images/securefirewall1-policy-initial.png " ")
 
-      ![](../common/images/64-SecureFirewall1-Policy-Initial-2.png " ")
+      ![Secure Firewall1 Device Registration to FMC - Contd](../common/images/securefirewall1-policy-initial-2.png " ")
 
 9. Click on **Register** button to add your device to FMC. 
 
-    ![](../common/images/64-SecureFirewall1-Policy-Initial-3.png " ")
+    ![Secure Firewall1 Device Registration Complete to FMC](../common/images/securefirewall1-policy-initial-3.png " ")
 
 10. [Optional] We have noticed sometimes while registering device if FMC is not fully up yet it might try to de-register device itself when you register device first time. So you can add manager again on each Secure Firewall instance using below command over SSH: 
 
@@ -95,7 +95,7 @@ Estimated Lab Time: 20 minutes.
 
 13. Click on **Register** button to add your device to FMC. 
 
-    ![](../common/images/64-SecureFirewall2-Policy-Initial-3.png " ")
+    ![Secure Firewall2 Device Registration Complete to FMC](../common/images/securefirewall2-policy-initial-3.png " ")
 
 14. [Optional] We have noticed sometimes while registering device if FMC is not fully up yet it might try to de-register device itself when you register device first time. So you can add manager again on each Secure Firewall instance using below command over SSH: 
 
@@ -108,15 +108,15 @@ Estimated Lab Time: 20 minutes.
 
 15. View Registered **Secure Firewalls** on your FMC. 
 
-    ![](../common/images/64-SecureFirewalls-on-FMC.png " ")
+    ![Verify Registered Secure Firewalls](../common/images/securefirewalls-on-fmc.png " ")
 
-## **Task 2: Initial Secure Firewall1 configuration using FMC**
+## Task 2: Initial Secure Firewall1 configuration using FMC
 
 1. Connect to **FMC** public IP over browser using **admin/Cisco@123** or password which you have configured for FMC in **Task 1**. 
 
 2. Naviagte to **Device** and select pencil icon next to **SecureFirewall1**. 
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall1.png " ")
+    ![Initial Configuration on Secure Firewall1](../common/images/add-configuration-securefirewall1.png " ")
 
 3. Below table represents how interfaces mapping are associated on your SecureFirewall instance: 
 
@@ -128,7 +128,7 @@ Estimated Lab Time: 20 minutes.
 
 4. Click on **GigabitEtherent0/0** edit icon to add details of inside interface. 
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall1-Interfaces.png " ")
+    ![Add Interfaces to Secure Firewall1](../common/images/add-configuration-securefirewall1-interfaces.png " ")
 
 5. Fill out the dialog box for **Edit Physical Interface** and Click **Ok**:
 
@@ -137,9 +137,9 @@ Estimated Lab Time: 20 minutes.
     - **Security Zone**: Click on **New** option to add a security zone named as **Inside**
     - **IPv4**: Enter **Inside** interface on **secureFirewall1** instance private IP.
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall1-Inside-Interface-1.png " ")
+    ![Create Inside Interface on Secure Firewall1](../common/images/add-configuration-securefirewall1-inside-interface-1.png " ")
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall1-Inside-Interface-2.png " ")
+    ![Create Inside Interface on Secure Firewall1 - IP Address](../common/images/add-configuration-securefirewall1-inside-interface-2.png " ")
 
 6. Click on **GigabitEtherent0/1** edit icon to add details of outside interface. 
 
@@ -150,17 +150,17 @@ Estimated Lab Time: 20 minutes.
     - **Security Zone**: Click on **New** option to add a security zone named as **Outside**
     - **IPv4**: Enter **Outside** interface on **secureFirewall1** instance private IP.
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall1-Outside-Interface-1.png " ")
+    ![Create Outside Interface on Secure Firewall1](../common/images/add-configuration-securefirewall1-outside-interface-1.png " ")
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall1-Outside-Interface-2.png " ")
+    ![Create Outside Interface on Secure Firewall1 - IP Address](../common/images/add-configuration-securefirewall1-outside-interface-2.png " ")
 
 8. Save your interfaces configuration by clicking on **Save** icon on your device. 
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall1-Save-Interfaces.png " ")
+    ![Save Interfaces Configuration on Secure Firewall1](../common/images/add-configuration-securefirewall1-save-interfaces.png " ")
 
 9. Navigate to **Routes > Static Routes** to add route entries to support VCNs traffic inbound as well as outbound. Click on **+Add Route** icon to add routes:
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall1-Static-Routes.png " ")
+    ![State Routes Window](../common/images/add-configuration-securefirewall1-static-routes.png " ")
 
 10. Click on **+Add Route** to add inside interface traffic
 
@@ -168,7 +168,7 @@ Estimated Lab Time: 20 minutes.
     - **Selected Network**: Add **IPv4-Private-10.0.0.0-8** from available network, You can also create a new network and be specific about it for Spoke VCNs CIDRs.
     - **Gateway**: Click on **New** and add a object named as **inside-subnet-gateway** with a value of first IP of your inside-subnet i.e. **192.168.3.1/24**
 
-   ![](../common/images/64-Add-Configuration-SecureFirewall1-Inside-Static-Routes.png " ")
+   ![Create Inside Interface Static Route on Firewall1](../common/images/add-configuration-securefirewall1-inside-static-routes.png " ")
 
 11. Fill out the dialog box for **Add Static Route Configuration** and Click **Save > Ok**:
 
@@ -176,19 +176,19 @@ Estimated Lab Time: 20 minutes.
     - **Selected Network**: Add **any-ipv4** from available network, You can also create a new network and be specific about it.
     - **Gateway**: Click on **New** and add a object named as **outside-subnet-gateway** with a value of first IP of your outside-subnet i.e. **192.168.4.1/24**
 
-   ![](../common/images/64-Add-Configuration-SecureFirewall1-Outside-Static-Routes.png " ")
+   ![Create Outside Interface Static Route on Firewall1](../common/images/add-configuration-securefirewall1-outside-static-routes.png " ")
 
 12. Save your routes configuration by clicking on **Save** icon on your device. 
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall1-Save-Interfaces.png " ")
+    ![Static Routes Created Successfully on Firewall1](../common/images/add-configuration-securefirewall1-save-interfaces.png " ")
 
-## **Task 3: Initial Secure Firewall2 configuration using FMC**
+## Task 3: Initial Secure Firewall2 configuration using FMC
 
 1. Connect to **FMC** public IP over browser using **admin/Cisco@123** or password which you have configured for FMC in **Task 1**. 
 
 2. Navigate to **Device** and select pencil icon next to **SecureFirewall2**. 
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall2.png " ")
+    ![Initial Configuration on Secure Firewall2](../common/images/add-configuration-securefirewall2.png " ")
 
 3. Below table represents how interfaces mapping are associated on your SecureFirewall instance: 
 
@@ -207,7 +207,7 @@ Estimated Lab Time: 20 minutes.
     - **Security Zone**: Select previously created **Inside** security zone.
     - **IPv4**: Enter **Inside** interface on **secureFirewall2** instance private IP.
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall2-Interfaces.png " ")
+    ![Create Inside Interface on Secure Firewall2](../common/images/add-configuration-securefirewall2-interfaces.png " ")
 
 6. Click on **GigabitEtherent0/1** edit icon to add details of outside interface. 
 
@@ -218,13 +218,13 @@ Estimated Lab Time: 20 minutes.
     - **Security Zone**: Select previously created **Outside** security zone.
     - **IPv4**: Enter **Outside** interface on **secureFirewall2** instance private IP.
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall2-Outside-Interface.png " ")
+    ![Create Outside Interface on Secure Firewall2](../common/images/add-configuration-securefirewall2-outside-interface.png " ")
 
 8. Save your interfaces configuration by clicking on **Save** icon on your device. 
 
 9. Navigate to **Routes > Static Routes** to add route entries to support VCNs traffic inbound as well as outbound. Click on **+Add Route** icon to add routes:
 
-    ![](../common/images/64-Add-Configuration-SecureFirewall1-Static-Routes.png " ")
+    ![Create Static Routes on Firewall2](../common/images/add-configuration-securefirewall1-static-routes.png " ")
 
 10. Click on **+Add Route** to add inside interface traffic
 
@@ -232,7 +232,7 @@ Estimated Lab Time: 20 minutes.
     - **Selected Network**: Add **IPv4-Private-10.0.0.0-8** from available network, You can also create a new network and be specific about it for Spoke VCNs CIDRs.
     - **Gateway**: Select **inside-subnet-gateway** which has a value of first IP of your inside-subnet i.e. **192.168.3.1/24**
 
-   ![](../common/images/64-Add-Configuration-SecureFirewall2-Inside-Static-Routes.png " ")
+   ![Create Static Routes on Firewall2 Inside Interface](../common/images/add-configuration-securefirewall2-inside-static-routes.png " ")
 
 11. Fill out the dialog box for **Add Static Route Configuration** and Click **Save > Ok**:
 
@@ -240,13 +240,13 @@ Estimated Lab Time: 20 minutes.
     - **Selected Network**: Add **any-ipv4** from available network, You can also create a new network and be specific about it.
     - **Gateway**: Select **outside-subnet-gateway** which has a value of first IP of your outside-subnet i.e. **192.168.4.1/24**
 
-   ![](../common/images/64-Add-Configuration-SecureFirewall2-Outside-Static-Routes.png " ")
+   ![Create Static Routes on Firewall2 Outside Interface](../common/images/add-configuration-securefirewall2-outside-static-routes.png " ")
 
 12. Save your routes configuration by clicking on **Save** icon on your device. 
 
 13. Navigate to **Devices > Platform Settings** and click on **New Policy > Threat Defense Settings** to enable **SSH** health check on Secure Firewalls inside and outside interfaces.
 
-   ![](../common/images/64-Add-SecureFirewalls-Interface-HealthCheck-SSH-1.png " ")
+   ![Create SSH Health Check on Secure Firewalls](../common/images/add-securefirewalls-interface-healthcheck-ssh-1.png " ")
 
 14. Fill out the dialog box for **New Policy** and Click **Save**:
 
@@ -254,7 +254,7 @@ Estimated Lab Time: 20 minutes.
     - **Description**: Enter a User-Friendly Description; Example: Health Checks for TCP 22 - NLBs
     - **Selected Devices**: Add **SecureFirewall1** and **SecureFirewall2** from Available Devices.
 
-    ![](../common/images/64-Add-SecureFirewalls-Interface-HealthCheck-SSH-2.png " ")
+    ![Create Inside Interface SSH Health Check on Secure Firewalls](../common/images/add-securefirewalls-interface-healthcheck-ssh-2.png " ")
 
 15. Click on **+ Add** icon to enable SSH Access to Secure Firewall Interfaces. 
 
@@ -263,29 +263,29 @@ Estimated Lab Time: 20 minutes.
     - **IP Address**: Choose any-ipv4 address.
     - **Selected Zones/Interfaces**: Add **inside** and **outside** zones which are associated with interfaces from available zones.
 
-   ![](../common/images/64-Add-SecureFirewalls-Interface-HealthCheck-SSH-3.png " ")
+   ![Secure Firewalls SSH Health Check Configuration Details](../common/images/add-securefirewalls-interface-healthcheck-ssh-3.png " ")
 
 17. Save your SSH Health Check configuration by clicking on **Save** icon on your device.  
 
-   ![](../common/images/64-Add-SecureFirewalls-Interface-HealthCheck-SSH-Save.png " ")
+   ![Save Secure Firewalls Health Check Required Configuration on FMC](../common/images/add-securefirewalls-interface-healthcheck-ssh-save.png " ")
 
 18. Now you will deploy both **SecureFirewall1** and **SecureFirewall2** configuration. 
 
 19. Navigate to **Device > Deployment**, select your **SecureFirewall1 and SecureFirewall2** devices and click on **Deploy** button:
 
-   ![](../common/images/64-Add-SecureFirewalls-Device-Deployment-1.png " ")
+   ![Deploy Configuration on Secure Firewalls](../common/images/add-securefirewalls-device-deployment-1.png " ")
 
-   ![](../common/images/64-Add-SecureFirewalls-Device-Deployment-2.png " ")
+   ![Deploy Configuration on Secure Firewalls - Pending](../common/images/add-securefirewalls-device-deployment-2.png " ")
 
-   ![](../common/images/64-Add-SecureFirewalls-Device-Deployment-3.png " ")
+   ![Deploy Configuration on Secure Firewalls - Completed](../common/images/add-securefirewalls-device-deployment-3.png " ")
 
 20. You can do a sanity check on Secure Firewalls devices to see interfaces, ssh health check and routes are there. 
 
-   ![](../common/images/64-SecureFirewalls-Sanity-Checks.png " ")
+   ![Successfully Created Interfaces, SSH Health Check and routes on Secure Firewalls](../common/images/securefirewalls-sanity-checks.png " ")
 
 21. If you navigate to your OCI Console's **Network Load Balancers** now you should see all Network Load Balancers are healthy. 
 
-   ![](../common/images/64-Network-Load-Balancers-Sanity-Checks.png " ")
+   ![Successfully Enabled Health Check on NLBs](../common/images/network-load-balancers-sanity-checks.png " ")
 
 ***Congratulations! You have successfully completed the lab.***
 
@@ -304,4 +304,4 @@ You may now [proceed to the next lab](#next).
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** -  Cisco
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023

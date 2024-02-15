@@ -36,7 +36,7 @@ Oracle Cloud Native 솔루션을 활용하여 클라우드 네이티브 마이�
 
 ## Acknowledgements
 
-* **Author** - Adao Junior
+* **Author** - DongHee Lee, Adao Junior
 * **Contributors** -  Kamryn Vinson, Adao Junior
-* **Last Updated By/Date** - Adao Junior, April 2021
-* **Korean Translator & Contributors** - DongHee Lee, February 2022
+* **Last Updated By/Date** - DongHee Lee, January 2023
+* **Korean Translator & Contributors** - DongHee Lee, January 2023
