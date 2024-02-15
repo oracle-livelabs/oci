@@ -1,0 +1,46 @@
+{
+  "workshoptitle": "Get Started with OCI Stack Monitoring for PeopleSoft",
+  "help": "deepak.d.m@oracle.com",
+  "tutorials": [
+      {
+          "title": "Introduction",
+          "description": "Explanation of the Workshop and Goals",
+          "filename": "../../0introduction/introduction.md"
+      },
+      {
+          "title": "Get Started",
+          "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable).",
+          "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+      },
+      {
+        "title": "Lab 1: Setup OCI User, Policies, Groups",
+        "description": "In this lab, the recently provisioned OCI Trial tenancy will used for provision of Oracle Digital Assistant",
+        "filename": "../../1setup-profile/setup-profile.md"
+      },
+      {
+          "title": "Lab 2: Configure PeopleSoft Application for Stack Monitoring",
+          "description": "In this lab, you will configure PeopleSoft for OCI Stack Monitoring",
+          "filename": "../../2configure-psft/configure-psft.md"
+      },
+      {
+          "title": "Lab 3: Agent setup & deployment",
+          "description": "In this lab, you will setup agent for both on-premises & OCI",
+          "filename": "../../3agent-setup/agent-setup.md"
+      },
+      {
+          "title": "Lab 4: PSFT Stack Monitoring OCI setup",
+          "description": "Setup Stack Monitoring for PSFT on OCI",
+          "filename": "../../4stack-discovery/stack-discovery.md"
+      },
+      {
+        "title": "Lab 5: Data Visualization using OOB Dashboards ",
+        "description": "Visualize the PSFT Application data using OOB dashboard",
+        "filename": "../../5data-visualize/data-visualize.md"
+      },
+      {
+          "title": "Need Help?",
+          "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+          "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      }
+  ]
+}
