@@ -1,4 +1,4 @@
-![Deployment Diagram](/oci-multicloud-connectivity/fastconnect/images_azure_interconnect/topology-interconnect.png)
+![Deployment Diagram](../oci-multicloud-connectivity/fastconnect/images_azure_interconnect/topology-interconnect.png)
 
 # Azure Interconnect Deployment
 
