@@ -1,23 +1,27 @@
-# Set Up OCI for Oracle Digital Assistant
+# Set Up OCI User, Policies, Groups
 
 ## Introduction
 
-In this lab, we'll provision the Oracle Digital Assistant from Oracle Cloud Infrastructure services utilizing the freshly created OCI Trial tenancy.
+In this lab, we'll provision the required OCI service requirements as part of resource discovery and monitoring. We will create a user, groups, policies and also add dynamic groups.
 
-Estimated Time: 30 minutes
+
+Estimated Time: 15 minutes
 
 
 ### Objectives
 
-To set up the Oracle Digital Assistant on the OCI tenancy, you will:
-*   Provision Oracle Digital Assistant from OCI services
-*   Deploy PeopleSoft PICASO from Oracle Digital Store
-*   Clone and create a new digital assistant
-*   Create the channel for the skills
+To set up the required profile on the OCI tenancy, you will:
+
+*  Create a local user
+*  Create a group
+*  Create policies
+*  Create dynamic groups
+
+
 
 ### Prerequisites
 
-* A user with access to provision & manage Core OCI services like Oracle Digital Assistant
+* A user with administrator access to create, add new user profiles and assign the required policies, groups.
 
 
 
