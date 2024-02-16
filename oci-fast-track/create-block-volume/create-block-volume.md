@@ -22,16 +22,15 @@ Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Clou
 2. Então, clique em **Create Block Volume**, preencha o formulário como abaixo e clique em **Create Block Volume**.
 
 - **Name**: block_vol500GB
-- **Create in Compartment**: `<seu-compartment>`
+- **Create in Compartment**: Compartiment-Trial
 - **Availability Domain**: AD 1
 - **Size**: 500 GB
-- **Backup Policy**: Bronze
 - **Volume Performance**: Balanced
 
 *Selecione o Availability Domain (AD) do block volume como sendo o mesmo da instância.*
 
 ![preencha os parametros](./images/block-volume-config-2.png)
-
+![preencha os parametros](./images/block-volume-config-3.png)
 ![clique em "Criar"](./images/block-volume-create-3.png)
 
 ## Task 2: Conectar o block volume a uma instância de computação
@@ -39,10 +38,12 @@ Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Clou
 1.	No menu principal, clique em **Compute** e em **Instances** para acessar sua instância previamente provisionada.
 
 ![menu de compute](./images/block-volume-compute-4.png)
+![menu de compute](./images/block-volume-compute-5.png)
 
 2. Uma vez clicando na instância correspondente, desça a página e, no menu 'Resources', clique em **Attached block volumes** e **Attach block volume**.
 
 ![clique em attach block volumes](./images/block-volume-attach-5.png)
+![clique em attach block volumes](./images/block-volume-attach-6.png)
 
 3. Preencha o formulário como abaixo e clique em **Attach**.
 
@@ -50,6 +51,8 @@ Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Clou
 - **Attachment type**: ISCSI
 
 ![clique em attach](./images/block-volume-attach-config-6.png)
+![clique em attach](./images/block-volume-attach-config-7.png)
+![clique em attach](./images/block-volume-attach-config-8.png)
 
 4. No lado direito, clique no ícone de três pontos e em **iSCSI Commands & Information**.
 
@@ -59,7 +62,7 @@ Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Clou
 
 ![clique em copy](./images/block-volume-iscsi-copy-8.png)
 
-6. No Cloud Shell, inicialmente, se conecte à instância de computação e execute o comando copiado.
+6. No Cloud Shell, inicialmente, se conecte à instância de computação **(VM-OracleLinux-AD1)** e execute o comando copiado.
 
 ``` shell
 <copy>
@@ -117,4 +120,4 @@ Nesta sessão você aprendeu sobre Block Volumes na prática.
 ## Autoria
 
 - **Autores** - Arthur Vianna, Lucas de Almeida, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Date** - Arthur Vianna, Jun/2022
+- **Último Update Por/Date** - Arthur Vianna, Fev/2024
