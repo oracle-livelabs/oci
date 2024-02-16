@@ -30,7 +30,7 @@
         },
         {
             "title": "Lab 4: FastConnect Deployment",
-            "filename": "../../fastconnect/fastconnect.md",
+            "filename": "../../fastconnect/fastconnect_main.md",
             "type": {
                 "azure_interconnect" : "Azure Interconnect",
                 "equinix_network_edge" : "Equinix (Network Edge)",
