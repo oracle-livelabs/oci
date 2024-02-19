@@ -73,7 +73,7 @@ Estimated Time: 45 minutes
 
 1. On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select Observability & Management, and then click Downloads and Keys under Management Agent.
 
-   ![From OCI home page, under O&M, click on Stack Monitoring](./images/oci-onm-agent1.png " ")
+   ![From OCI home page, under O&M, click on Stack Monitoring](./images/oci-stack-monitor.png " ")
 
 ## Summary
 
