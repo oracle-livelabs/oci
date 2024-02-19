@@ -1,18 +1,20 @@
-# Set Up OCI User, Policies, Groups
+# Set Up OCI User, Policies, Groups 
 
 ## Introduction
+
+This process is followed when customers want to setup their own group,policy,dynamic group.
 
 In this lab, we'll provision the required OCI service requirements as part of resource discovery and monitoring. We will create a user, groups, policies and also add dynamic groups.
 
 
-Estimated Time: 15 minutes
+Estimated Time: 20 minutes
 
 
 ### Objectives
 
 To set up the required profile on the OCI tenancy, you will:
 
-*  Create a local user
+*  Create a local user account
 *  Create a group
 *  Create policies
 *  Create dynamic groups
@@ -25,101 +27,112 @@ To set up the required profile on the OCI tenancy, you will:
 
 
 
-## Task 1: Provision Oracle Digital Assistant from OCI services
+## Task 1: Create a local user account & group
 
-In this part of the lab, we begin with provision of Oracle Digital Assistant or ODA on OCI.
+In this part of the lab, we begin with creating a local user account
 
 When your tenancy is provisioned, a root compartment is created for you. Your root compartment holds ***all*** of your cloud resources
 
-1.  If you haven't already, log into your OCI tenancy by clicking the button below. Using Ashburn as an example, go to https://console.us-ashburn-1.oraclecloud.com/.
+1.  If you haven't already, log into your OCI tenancy by clicking the button below. Using Phoenix as an example, go to https://console.us-phoenix-1.oraclecloud.com.
 
-2.  On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select Analytics & AI, and then select Digital Assistant.
+2.  On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select Identity & Security, and then select Users.
 
-  ![In the OCI console, select Analytics & AI, and then Digital Assistant, from right-hand side of the screen](./images/oci-services.png" ")
+  ![In the OCI console, select Identity & Security, and then Users, from right-hand side of the screen](./images/oci-services.png" ")
 
-3.  On the OCI Digital Assistants page,  click on the create digital assistant instance button
+3.  On the OCI Users page,  click on the create user button
 
     
-    ![Click click on the create digital assistant instance button near the center of the screen](./images/oci-digital-assistant.png " ")
+    ![Click click on the create user button near the center of the screen](./images/oci-user.png " ")
 
 
-4.	Select the  compartment where you want to create the digital assistant, provide a name,  description for the digital assistant and select development as the shape and click create.
+4.	Give a name for the user and also add description about the user.
 
   
-  ![Fill in the desired name, description, compartment and shape for ODA](./images/fill-oda-details.png " ")
+  ![Fill in the desired name, description for user](./images/oci-user-detail.png " ")
 
 
-5.  The Oracle Digital Assistant is being provisioned and below screen shows the current status and the final status of the ODA provision.
+5.  On the same Identity page, click on groups and then click create groups.
 
-  ![ODA provisioning status](./images/oda-provisioning.png " ")
+  ![Create an OCI group](./images/oci-group.png " ")
 
-     The Oracle Digital Assistant is provisioned
-  ![ODA provisioned status](./images/oda-provisioned.png " ")
+6.  Give a name for the group and also add description about the group.
+
+  ![create group page](./images/oci-group-create.png " ")
 
 
 
 
-## Task 2:  Deploy PeopleSoft PICASO from Oracle Digital Store
+## Task 2:  Create a dynamic user group & policies
 
-In this part of the lab, we begin by deploying PeopleSoft PICASO from the Oracle Digital Assistant Store. 
+In this part of the lab, we will add a dynamic group and create policies which will be assigned to both dynamic group and group created as part of the Task1.
 
-1.  From the previous task, once the digital assistant is provisioned, click on the service console and launch the Oracle Digital Assistant service homepage.
+1.  On the same Identity page, click on dynamic group and then click create dynamic group.
 
-  ![Select the service console from the ODA page](./images/oda-service-console.png " ")
+  ![Select dynamic group and click create dynamic group button](./images/oci-dynamic-group.png " ")
 
-    On the Oracle Digital Assistants Service Console Home page, click the Navigation Menu in the upper-left corner, select development, and then select the skill store option
+    Give a name and description for the dynamic group and a matching rule is required to be added to the dynamic group.The rule is added as per the screenshot. The compartment id needs to be specified, where we are actually going to enable the stack monitoring.
 
-  ![Select the Skill Store option from the ODA Service console Menu](./images/oda-homepage.png " ")
 
-2.  On the Digital Skill Store page, search with PICASO
 
-  ![Search with PICASO](./images/oda-storepage.png " ")
-
-    Click the three dots at the bottom of the PICASO skill and perform the pull
-  
-  ![Pull the PICASO skill](./images/oda-skill-pull.png " ")
+  ![Add name, description and provide a matching rule](./images/dynamic-rule.png " ")
     
-    Once the pull request is completed, the PICASO digital assistant will be added to your list of digital assistants.
-  ![Pull the PICASO skill](./images/oda-pulled-request.png " ")
+    Code snippet of the matching rule:
+    
+      ```
+      <copy>
+      ALL {resource.type='managementagent', resource.compartment.id='ocid1.compartment.oc1.examplecompartmentid'}
+      </copy>
+      ```
+
+2.  On the same Identity page, click on Policies, select the root compartment and click create policy button
+
+   ![Create new policy by clicking on the create policies button](./images/oci-policy.png " ")
+
+    Give a name and description for the Policy, select the root compartment and select show manual editor and paste the policies and hit create button.
+  
+  ![Create the policy and add the policies using manual editor](./images/oci-policy-edit.png " ")
+    
+    Complete list of policies added including dynamic group policies
+
+      ```
+      <copy>
+      ALLOW GROUP stackmongrp TO MANAGE stack-monitoring-family IN COMPARTMENT 'compartment-name'
+      ALLOW GROUP stackmongrp TO MANAGE stack-monitoring-family IN COMPARTMENT 'compartment-name'
+      ALLOW GROUP stackmongrp TO {MGMT_AGENT_DEPLOY_PLUGIN_CREATE, MGMT_AGENT_INSPECT, MGMT_AGENT_READ} IN COMPARTMENT 'compartment-name'
+      ALLOW GROUP stackmongrp TO READ metrics IN COMPARTMENT 'compartment-name'
+      ALLOW GROUP stackmongrp to READ instances IN COMPARTMENT 'compartment-name'
+      ALLOW GROUP stackmongrp to MANAGE external-database-family IN COMPARTMENT 'compartment-name'
+      ALLOW GROUP stackmongrp to MANAGE alarms IN COMPARTMENT 'compartment-name'
+      ALLOW GROUP stackmongrp TO READ ALARMS IN COMPARTMENT 'compartment-name'
+      ALLOW GROUP stackmongrp TO READ USERS IN COMPARTMENT 'compartment-name'
+      ALLOW GROUP stackmongrp to USE ons-topics IN COMPARTMENT 'compartment-name'
+      ALLOW GROUP stackmongrp TO MANAGE tag-namespaces in tenancy
+      ALLOW GROUP stackmongrp TO MANAGE tag-defaults in tenancy
+      ALLOW GROUP stackmongrp TO {STACK_MONITORING_DISCOVERY_JOB_CREATE, STACK_MONITORING_DISCOVERY_JOB_READ,STACK_MONITORING_DISCOVERY_JOB_DELETE, STACK_MONITORING_DISCOVERY_JOB_INSPECT, STACK_MONITORING_DISCOVERY_JOB_RESULT_SUBMIT} IN COMPARTMENT 'compartment-name'
+      ALLOW GROUP stackmongrp  TO READ instance-agent-plugins IN COMPARTMENT 'compartment-name'
+      ALLOW GROUP stackmongrp TO MANAGE appmgmt-family IN TENANCY
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO USE METRICS IN COMPARTMENT 'compartment-name' where target.metrics.namespace = 'oracle_appmgmt'
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO {STACK_MONITORING_DISCOVERY_JOB_RESULT_SUBMIT} IN COMPARTMENT 'compartment-name'
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO USE METRICS IN COMPARTMENT 'compartment-name' where target.metrics.namespace = 'oci_oracle_database_cluster'
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO {STACK_MONITORING_DISCOVERY_JOB_CREATE,STACK_MONITORING_DISCOVERY_JOB_READ,STACK_MONITORING_DISCOVERY_JOB_DELETE,STACK_MONITORING_DISCOVERY_JOB_INSPECT,STACK_MONITORING_DISCOVERY_JOB_RESULT_SUBMIT} IN COMPARTMENT 'compartment-name'
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO MANAGE management-agents IN COMPARTMENT 'compartment-name'
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO USE METRICS IN COMPARTMENT 'compartment-name'
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO MANAGE stack-monitoring-family IN COMPARTMENT 'compartment-name'
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO MANAGE appmgmt-family IN COMPARTMENT 'compartment-name'
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO MANAGE management-dashboard-family IN COMPARTMENT 'compartment-name'
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO READ all-resources in COMPARTMENT 'compartment-name'
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO MANAGE object-family in COMPARTMENT 'compartment-name'
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO MANAGE buckets IN COMPARTMENT 'compartment-name' where request.principal.type ='managementagent'
+      ALLOW DYNAMIC-GROUP stackmondyngrp TO MANAGE appmgmt-family in TENANCY
+      </copy>
+      ```
 
 
 
-## Task 3:  Extend and create a new digital assistant
+  **Important:** For this workshop, for the sake of simplicity, we have created a single user,group, dynamic group and  policies. For actual Production implementation, customers can segregrate into multiple groups assgined for different set of users managaing the infrastructue. Refer to link [here]( https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/service-requirements.html) for more details.
+  
+  
 
-In this lab, we start by extending the existing PICASO digital assistant and building a new digital assistant specifically for this task.
-
-1.  From the previous task, once the PICASO digital assistant pull request is completed, navigate to the digital assistants' tab under development and click on the extend to begin the cloning process.
-
-  ![Select the three dots and begin the extend process](./images/oda-assistant-extend.png " ")
-
-    From the dialog box, click extend to begin the process
-
-  ![Extend processes started](./images/oda-assistant-extend-start.png " ")
-
-    PeopleSoft PICASO digital assistant is created
-  ![Extend processes started](./images/oda-assistant-extend-complete.png " ")
-
-## Task 4:  Create the channel for the skills
-
-In this part of the lab, we begin with creating a Web channel for the Skills and routing this to the extended PeopleSoft PICASO digital assistants'
-
-1.  On the Oracle Digital Assistants Service Console Home page, click the Navigation Menu in the upper-left corner, select development, and then select the Channels option and create a new channel
-
-  ![Select Channel from the Menu options](./images/oda-channels-page.png " ")
-
-    From the channel create dialog box, enter the data as shown below and begin with the create process
-
-  ![channel create process](./images/oda-channel-create.png " ")
-
-  ![channel create process continued](./images/oda-channel-create-continue.png " ")
-
-    From the route to option drop down, select the cloned PeopleSoft PICASO and continue
-  ![channel is created ](./images/oda-channel-created.png " ")
-
-  ![Channel complete information ](./images/oda-channel-important.png " ")
-    Client authentication is disabled in the above screen
-
-  **Important:** To configure PeopleSoft, take note of the channel ID and ODA URL (copy only oda-xxx.digitalassistant.oci.oraclecloud.com, not the complete url and not even https://) from the above page.
     
      
 
@@ -128,13 +141,19 @@ In this part of the lab, we begin with creating a Web channel for the Skills and
 
 ## Summary
 
-In this lab, Oracle Digital assistant was provisioned, cloned the existing PeopleSoft PICASO assistant, and created a Web channel for interaction with PeopleSoft.
+  In this lab, profile creation of OCI user along with polices, groups and dynamic groups were created and configured.
 
 You may now **proceed to the next lab.**
 
 ## Acknowledgements
+
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
-* **Contributors** - Deepak Kumar M, Principal Cloud Architect
-* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, March 2023
+* **Contributors** -
+
+    * Aaron Rimel, Principal Product Manager
+    * Devashish Bhargava, Principal Cloud Architect
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, February 2024
+
+
 
 

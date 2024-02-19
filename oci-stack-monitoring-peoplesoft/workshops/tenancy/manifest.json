@@ -13,12 +13,12 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-          "title": "Lab 1: Setup OCI User, Policies, Groups",
+          "title": "Lab 1: Setup OCI User, Policies, Groups ",
           "description": "In this lab, the recently provisioned OCI Trial tenancy will used for provision of Oracle Digital Assistant",
           "filename": "../../1setup-profile/setup-profile.md"
         },
         {
-            "title": "Lab 2: Configure PeopleSoft Application for Stack Monitoring",
+            "title": "Lab 2: Prerequisites for Configuring PeopleSoft Application",
             "description": "In this lab, you will configure PeopleSoft for OCI Stack Monitoring",
             "filename": "../../2configure-psft/configure-psft.md"
         },
@@ -28,7 +28,7 @@
             "filename": "../../3agent-setup/agent-setup.md"
         },
         {
-            "title": "Lab 4: PSFT Stack Monitoring OCI setup",
+            "title": "Lab 4: Resource discovery using Stack Monitoring",
             "description": "Setup Stack Monitoring for PSFT on OCI",
             "filename": "../../4stack-discovery/stack-discovery.md"
         },

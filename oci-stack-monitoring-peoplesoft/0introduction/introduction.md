@@ -67,8 +67,10 @@ The following terms are commonly employed in PeopleSoft cloud operations and are
 
 
 ## Acknowledgements
+
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
 * **Contributors** -
+
     * Aaron Rimel, Principal Product Manager
     * Devashish Bhargava, Principal Cloud Architect
 * **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, February 2024

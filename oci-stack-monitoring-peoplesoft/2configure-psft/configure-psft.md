@@ -1,152 +1,230 @@
-# Configure PeopleSoft for Oracle Digital Assistant
+# Prerequisites for Configuring PeopleSoft Application
 
 ## Introduction
 
-You will set up PeopleSoft for Oracle Digital Assistant integration in this lab to operate the PICASO chatbot.
+You will configure PeopleSoft application for easy discovery using Stack Monitoring.
 
 Estimated Time: 1 hour
 
 ### Objectives
 
-To configure PeopleSoft with Oracle Digital Assistant, you will:
-*  Create a PROXY User
-*  Uncheck Restricted Services
-*  Disable SSL Check for Service Operation
-*  Update Application Services Security
-*  Global Chatbot Configuration
+To configure PeopleSoft with Stack Monitoring, you will:
+
+* DB Grant Privileges for PeopleSoft Monitoring
+* Configure Application Server
+* Configure Process Scheduler Server
+* Configure WebServer
+
 
 
 
 ### Prerequisites
-*  A PeopleSoft PIA Admin user to create and configure chatbot on PeopleSoft side
+
+*  PeopleSoft admin user to configure application server &  process scheduler server.
+*  PeopleSoft database monitoring user with read only access to PeopleSoft schema tables.
+*  PeopleSoft Weblogic monitor user profile enabled for PIA weblogic configuration.
 .
 
-### Assumptions:
-*  PeopleSoft Application Service is accessible on the open internet for the ODA Cloud instance to consume.
-*  PeopleSoft holds a certificate signed by a valid CA and not a self-signed certificate
-*  Integration Broker is configured, up and running
-*  For the ease of documentation, we have taken “HCM” as the PeopleSoft application. However it can be extended for other pillars as well.
-*  A user to authenticate PeopleSoft web services “PSFTPROXY” is created. Administrator may use appropriate user id and password based on your preference.
 
 
-## Task 1:  Create a Proxy User
 
-1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Security >> User Profiles
+## Task 1:  DB Grant Privileges for PeopleSoft Monitoring
 
-  ![Click the navbar at the top right corner ](./images/psft-web-login.png " ")
+As part of this workshop, we will be using the standard DBSNMP user profile within Oracle Database for monitoring of the PeopleSoft application. Customers can choose to create a new monitoring user profile and assign necessary privileges.
 
-   Add a new user profile - PSFTPROXY, click on the Add button
+1. Login to PeopleSoft server and connect to the Oracle Database, we need to connect to either the PDB or the CDB where the the application schema resides and provide the necessary privileges to the DBSNP user. 
+Using SYS user, execute the below sql commands to grant necessary priviliges to the DBSNP user.
 
-  ![Type in the user name - PSFTPROXY and click add ](./images/user-add.png " ")
 
-   Select the Symbolic ID as SYSADM1, type your new password and confirm the password.
+      ```
+      <copy>
+        
+      GRANT SELECT ON SYSADM.PSSTATUS TO dbsnmp;
+      GRANT SELECT ON SYSADM.PSRELEASE TO dbsnmp;
+      GRANT SELECT ON SYSADM.PSPMAGENT TO dbsnmp;
+      GRANT SELECT ON SYSADM.PS_PTPMJMXUSER TO dbsnmp;
+      GRANT SELECT ON SYSADM.PSIBWSDLDFN TO dbsnmp;
+      GRANT SELECT ON SYSADM.PSIBSVCSETUP TO dbsnmp;
+      GRANT SELECT ON SYSADM.PS_PTSF_SRCH_ENGN TO dbsnmp;
+      GRANT SELECT ON SYSADM.PSPRCSRQST TO dbsnmp; 
+      GRANT SELECT ON SYSADM.PSXLATITEM TO dbsnmp; 
+      CREATE OR REPLACE SYNONYM dbsnmp.PSSTATUS FOR SYSADM.PSSTATUS;
+      CREATE OR REPLACE SYNONYM dbsnmp.PSRELEASE FOR SYSADM.PSRELEASE;
+      CREATE OR REPLACE SYNONYM dbsnmp.PSPMAGENT FOR SYSADM.PSPMAGENT;
+      CREATE OR REPLACE SYNONYM dbsnmp.PS_PTPMJMXUSER FOR SYSADM.PS_PTPMJMXUSER;
+      CREATE OR REPLACE SYNONYM dbsnmp.PSIBWSDLDFN FOR SYSADM.PSIBWSDLDFN;
+      CREATE OR REPLACE SYNONYM dbsnmp.PSIBSVCSETUP FOR SYSADM.PSIBSVCSETUP;
+      CREATE OR REPLACE SYNONYM dbsnmp.PS_PTSF_SRCH_ENGN FOR SYSADM.PS_PTSF_SRCH_ENGN;
+      CREATE OR REPLACE SYNONYM dbsnmp.PSPRCSRQST FOR SYSADM.PSPRCSRQST; 
+      CREATE OR REPLACE SYNONYM dbsnmp.PSXLATITEM FOR SYSADM.PSXLATITEM;
+      
+      </copy>
+      ```
 
-  ![Type in the user name - PSFTPROXY and click add ](./images/user-config.png " ")
-   
-   On the ID tab, Update the ID type as "None"
-  ![Update ID type as None ](./images/id-type.png " ")
 
-   On the Roles tab, Update it with below roles and click save
-  ![Add the roles as per the screen ](./images/update-roles.png " ")
 
-   For PeopleSoft Financial environment, add the below roles to the VP1 user or user working on the chatbot setup.
 
-   EOCB Client User
 
-   EXCB\_EXPENSE\_INQ
+## Task 2: Configure Application Server
 
-   PTCB\_USER
+1. Login to PeopleSoft server as psadm2 or application domain user and edit the psappsrv.cfg configuration file. or type psadmin and follow the below process to edit the psappsrv.cfg file and change the necessary parameters.
 
-   PeopleSoft User  
-   
-   ePro Requester Inquiry Bot
-## Task 2: Uncheck Restricted Services
+  Type psadmin and follow the screen prompt.
 
-1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Service Configuration. 
+  ![Type psadmin and follow the command process ](./images/psadmin.png " ")
 
-  ![Click the navbar at the top right corner ](./images/service-configuration.png " ")
 
-  Click on the Restricted services tab and search with "PTCB"
+  Type 1 and select Application server
+
+    ![Type psadmin and follow the command process ](./images/psadmin1.png " ")
+
+  Type 1 again and select Administer a domain
+
+    ![Type psadmin and follow the command process ](./images/psadmin2.png " ")
+
+  Select the application server domain for which  configuration has to be done, in this case we are selecting APPDOM.
+
+    ![Type psadmin and follow the command process ](./images/psadmin3.png " ")
+
+
+  Type 4 - Configure this domain and select  Y for  domain shutdown. This will shutdown the Application server domain.
+
+    ![Type psadmin and follow the command process ](./images/psadmin4.png " ")
+
+
+  Once the application server is down and the quick configuration menu shows up, 
   
-  ![Click on the Restricted services tab ](./images/restricted-service.png " ")
+  Type 10 to enable the Performance Collator Property and then select option 15 - Custom configuration and hit enter
 
-  Uncheck Restricted services  and save
-  ![Uncheck Restricted services ](./images/unrestricted-service.png " ")
+  This option will shutdown Application server.Do you want to continue, hit Y
 
+    ![Type psadmin and follow the command process ](./images/psadmin5.png " ")
 
-## Task 3: Disable SSL Check for Service Operation
-
-   **Important:** This setting is for configuring a non-SSL URL for a DEMO environment; in actual production environments, it is advised to use SSL certificates for configuration as opposed to disabling SSL.
-
-1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Integration Setup >> Service Operation Definitions. 
-
-  ![Click the navbar at the top right corner ](./images/psft-service-operation.png " ")
-
-  Search with Service Operation "PTCB\_APPL\_SVC"
-
-    ![Search with Service Operation  ](./images/psft-service-operation-page.png " ")
   
-  Update the req. verification field as "Basic Authentication" instead of "SSL" for both Service Operations "PTCB\_APPL\_SVC_GET" and "PTCB\_APPL\_SVC\_POST"
+  Keep hitting enter  button and look for the section   **Values for config section - PSTOOLS**
 
-    ![Search with Service Operation  ](./images/psft-service-operation-update.png " ")
+  Select y and modify the current configuration and update the below values
 
-    *Note:* Make a note of the masked REST Base URL as this would be required to update the ODA skill configuration page
+      ```
+      <copy>
 
-## Task 4: Update Application Services Security
+      Enable Remote Administration=1
+      Remote Administration Port=10100
+      Remote Administration RMI Server Port=10101  
+      Remote Administration UserId={V2.1}X5ZvjQn1Xz+geI
+      Remote Administration Password=*****
+      EnablePPM Agent=1
 
-1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Application Services >> Application Services Security
+      ```
+      </copy>
 
-  ![Click the navbar at the top right corner ](./images/psft-application-service.png " ")
+      Remote Administration RMI Server Port=10101  (**Available from PSFT version 8.60+)
 
-  Click on the Token required tab, expand chatbot token type and change from oAuth2 to PSFT and click save
+  Make sure to provide a username and password as the current configuration already has a default username/password set. 
 
-    ![Search with Service Operation  ](./images/psft-application-token-update.png " ")
+  Once the changes are done, keep hitting enter  button and this will bring back to the domain administration page, now type 1 and start the application server domain.
 
 
-## Task 5: Global Chatbot Configuration
+    ![Type psadmin and follow the command process ](./images/psadmin6.png " ")
 
-1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to Menu >> Enterprise Components >> Global Chatbot Configuration
 
-  ![Click on the menu for global chatbot configuration ](./images/psft-global-chatbot.png " ")
 
-  Copy the ODA server URI from the lab1 and paste it under general configurations and save it
 
-    ![ODA server URI comes from earlier lab ](./images/psft-global-chatbot-config.png " ")
+
+## Task 3: Configure Process Scheduler Server
+
+1. Login to PeopleSoft server as psadm2 or application domain user and edit the psprcs.cfg configuration file. or type psadmin and follow the below process to edit the psprcs.cfg file and change the necessary parameters.
+
+  Type psadmin and follow the screen prompt.
+
+  ![Type psadmin and follow the command process ](./images/psadmin.png " ")
+
+
+  Type 2 and select  Process Scheduler
+
+    ![Type psadmin and follow the command process ](./images/psadmin-prcs.png " ")
+
+  Type 1 again and select Administer a domain
+
+    ![Type psadmin and follow the command process ](./images/psadmin-prcs1.png " ")
+
+  Select the process scheduler server domain for which configuration has to be done, in this case we are selecting PRCSDOM.
+
+    ![Type psadmin and follow the command process ](./images/psadmin-prcs2.png " ")
+
+
+  Type 4 - Configure this domain and select  Y for  domain shutdown. This will shutdown the process scheduler server domain.
+
+    ![Type psadmin and follow the command process ](./images/psadmin-prcs3.png " ")
+
+
+  Once the process scheduler server is down and the quick configuration menu shows up, 
   
-  Click Add under Global Configurations for Skills and Digital Assistants
+  Type 3 to enable the Performance Collator Property and then select option 8 - Custom configuration and hit enter.
+  This option will shutdown Process Scheduler.Do you want to continue, hit Y
 
-    ![Click Add and follow the screen ](./images/psft-bot-add.png " ")
+    ![Type psadmin and follow the command process ](./images/psadmin-prcs4.png " ")
+
   
-  Click add from Bot Definitions and fill it with below details (the bot channel id comes from ODA page which was noted earlier), click done
+  Keep hitting enter  button and look for the section   **Values for config section - PSTOOLS**
 
-    ![Click add and enter bot channel id from ODA channel ](./images/psft-bot-config.png " ")
+  Select y and modify the current configuration and update the below values
 
-    click next
-    ![Follow the configuration screen ](./images/psft-bot-config1.png " ")
+      ```
+      <copy>
 
-    Fill the information as per the screen and click next
-    ![Follow the configuration screen ](./images/psft-bot-config2.png " ")
+      Enable Remote Administration=1
+      Remote Administration Port=10200
+      Remote Administration RMI Server Port=10201  
+      Remote Administration UserId={V2.1}X5ZvjQn1Xz+geI
+      Remote Administration Password=*****
+      EnablePPM Agent=1
 
-    click submit
-    ![Once the details are filled, click submit ](./images/psft-bot-config-complete.png " ")
+      ```
+      </copy>
 
-    Enable the PSFT-ODA bot from this screen and save it
-    ![Enable the bot and save it ](./images/psft-bot-enable.png " ")
+      Remote Administration RMI Server Port=10201  (**Available from PSFT version 8.60+)
 
-    The chatbot should now appear on the home screen
-    ![Home screen shows chatbot icon ](./images/psft-bot-homepage.png " ")
+  Make sure to provide a username and password as the current configuration already has a default username/password set. 
+
+  Once the changes are done, keep hitting enter  button and this will bring back to the domain administration page, now type 1 and start the process scheduler server domain.
+
+
+    ![Type psadmin and follow the command process ](./images/psadmin-prcs5.png " ")
+
+
+## Task 4: Configure WebServer
+
+
+1. Enable PeopleSoft Performance Monitor for PIA by navigating to the following PIA link
+
+ Navigate to PeopleTools > Web Profile > Web Profile Configuration > Open the default WebProfile. Under General Tab make sure Enable PPM Agent check box is selected. Restart all the PIA domains.
+
+
+2. Enable Tunneling from Oracle Weblogic console
+
+  Using PeopleSoft system weblogic user or admin user, login and navifate to the following weblogic console link
+
+ Login with admin user, expand Environment > Servers > Click PIA(admin), Go to Protocol tab > HTTP > enable the Enable Tunneling checkbox and save.
+
 
 
 
 ## Summary
 
-In this lab, you have configured PeopleSoft for Oracle Digital Assistant integration to run the PICASO chatbot.
+In this lab, you have configured PeopleSoft server domains for discovery within Stack Monitoring.
 
 You may now **proceed to the next lab.**
 
 
 ## Acknowledgements
+
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
-* **Contributors** - Deepak Kumar M, Principal Cloud Architect
-* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, March 2023
+* **Contributors** -
+
+    * Aaron Rimel, Principal Product Manager
+    * Devashish Bhargava, Principal Cloud Architect
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, February 2024
+
+
 

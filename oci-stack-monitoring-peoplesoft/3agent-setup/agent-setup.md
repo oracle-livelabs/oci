@@ -1,66 +1,152 @@
-# Update Skill Configuration in Oracle Digital Assistant
+# Agent setup & deployment
 
 ## Introduction
 
-In this lab, you will update the skill configuration in Oracle Digital Assistant using the PeopleSoft application web service URL
-Estimated Time: 15 minutes
+In this lab, we will setup and configure agent deployment for both on-premises and OCI compute VMs. Oracle Management agent is used for agent deployment on on-premises compute systems.
+
+
+Estimated Time: 20 minutes
 
 
 ### Objectives
 
-*  Update the skill configuration for all the deployed PeopleSoft skills in Oracle Digital Assistant using the PeopleSoft application web service URL
+*  Setup and configure agent for OCI compute VMs.
+*  Setup and configure agent for on-premises compute systems.
 
 
 
 
 ### Prerequisites
 
-*  A user with access to provision & manage Core OCI services like Oracle Digital Assistant
-*  A PeopleSoft PIA Admin user to create and configure chatbot on PeopleSoft side
+*  A user with access to OCI tenancy to download management agent.
+*  A user with access to OCI compute VMs.
 
-## Task 1: Update the skill configuration in ODA
 
-1.  On the Oracle Digital Assistants Service Console Home page, click the Navigation Menu in the upper-left corner, select development, and then select the Digital Assistant option and open the PeopleSoft PICASO cloned digital assistant
+## Task 1: Setup and configure agent for OCI compute VMs
 
-  ![Select Digital Assistant from the Menu options](./images/oda-config.png " ")
+1.  As part of the OCI compute VMs, we could either setup/configure oracle cloud agent or oracle management agent to enable discovery of the compute VM. For OCI compute VM, we would be using oracle cloud agent to discover the VM.
 
-   Click on Go to Skill and navigate to the PeopleSoft Absence Assistant Skill
-  ![click on go to skill](./images/oda-skill-check.png " ")
+  On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select Compute, and then instances.
 
-   Click settings on the Absence skills page and click on the configurations tab
+  ![Select compute from OCI Menu](./images/oci-compute.png " ")
 
-  ![click on go to skill](./images/absence-skill.png " ") 
+   Under the instances, click on the compute, where the PeopleSoft application systems are hosted and click on Oracle Cloud Agent tab.
+  
+   ![Click on Compute, cloud agent tab](./images/oci-cloud-agent.png " ")
+
+   Enable the management agent option by moving button over right
+
+   ![Select compute from OCI Menu](./images/oci-cloud-agent-enable.png " ")
+
+   The management agent is enabled for the compute.
+
+   ![Mgmt agent enabled for the compute](./images/oci-cloud-agent-enabled.png " ")
+
+2. On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select Observability & Management, and then click Agents under Management Agent.
+
+   ![Select O&M from OCI Menu](./images/oci-onm-agent.png " ")
+
+   Since the management agent was enabled from step 1, we now need to deploy the stack monitoring plug for the compute system.
+
+   ![Select Agent home from OCI Menu](./images/oci-agent-home.png " ")
+
+   Click on the three dots at the right side of the agent and then click Deploy plug-ins
+
+   ![Select Agent deploy from OCI Menu](./images/agent-deploy.png " ")
+  
+   Select Stack Monitoring check box and click update.
+
+   ![Select stack monitoring option](./images/oci-stack.png " ")
+
+   ![Select stack monitoring option](./images/oci-stack1.png " ")
+
+   Now let's check the plugin deployment is completed or not.
+
+   Click on the agent and then click on the work requests
+
+   ![Select stack monitoring option](./images/oci-stack2.png " ")
+
+   Plugin deployment is successful
+
+   ![Select stack monitoring option](./images/oci-stack3.png " ")
+
+
+   **Important:** Similarly, all the OCI compute VMs, where the application middle tier is hosted, has to have the agent enabled for discovery within stack monitoring and the Stack Monitoring plugin enabled for all the compute VMs.
+
+
+## Task 2: Setup and configure agent for on-premises compute systems
+
+1. On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select Observability & Management, and then click Downloads and Keys under Management Agent.
+
+   ![From OCI home page, under O&M, click on Downloads & Keys](./images/oci-onm-agent1.png " ")
+
+   Click create key and provide a name for the key and then click create.
+
+   ![Create a new key for the setup](./images/oci-agent-keys.png " ")
+
+   Once the key is created, click on the three dot at the right side and download the key file.
+
+   ![Download the key file](./images/agent-key-file.png " ")
+
    
-   Scroll to the bottom of the screen, click on edit and set the following values for:
+   Update the key file with the password for **CredentialWalletPassword**.
 
-  ![click on go to skill](./images/skill-update.png " ")
 
-   PSHCMbaseurl: It denotes the base url of application service, this need to be replaced with the Masked REST Base URL from Lab 2, Task3. Also, ODA cannot resolve the hostname, so IP address to be used in place of servername. Below is an example.
+2. On the same page, download the management agent to the target on-premises compute systems which has PeopleSoft application installed. In this case, we are on linux system with 64bit, so downloading  Agent for Linux (X86_64) as RPM file to all the PeopleSoft systems, which are to be discovered.
+
+
+   ![Download the mgmt agent ](./images/agent-download.png " ")
+
+
+    Before installing the agent RPM, we also need to download the jdk 1.8.361 + release for  successful agent installation
+
+    Downloading and installing JDK as root or sudo
 
       ```
       <copy>
-    http://IP address:port/PSIGW/RESTListeningConnector/HCM_EMHBVUSZIWE/PTCB_APPL_SVC.v1 
+    sudo rpm -ivh jdk-8u361-linux-x64.rpm
       </copy>
       ```
-   PSHCMuserid: Set the peoplesoft proxy user who has access to invoke application services. To start with, Let us leave it, as it is (PSFTPROXY).
 
-   PSHCMpassword: It denotes the password for Proxy user. To start with, Let us leave it, as it is (PSFTPROXY).If you have created PSFTPROXY user with a different password, enter the new password in PSHCMpassword field
+    Installing the Management agent
 
-   Now go back and repeat the above steps for configuration of all the other skills.
+      ```
+      <copy>
+      export JAVA_HOME=/usr/java/jdk1.8.0_361-amd64
 
+      cd /home/opc
+      sudo rpm -ivh oracle.mgmt_agent.230207.1529.Linux-x86_64.rpm
 
-
-
+      </copy>
+      ```
     
+    
+    Configure the management agent by running the setup.sh script using a response file created using the key file
+
+      ```
+      <copy>
+      sudo /opt/oracle/mgmt_agent/agent_inst/bin/setup.sh opts=/tmp/psft_agent.rsp
+      </copy>
+      ```
+
+  The agent is started automatically, once the configuration is completed.
+
+ For any additional queries on management agent, refer to link [here](https://docs.oracle.com/en-us/iaas/management-agents/index.html).
+
 ## Summary
 
-In this lab, you have updated the skill configuration in Oracle Digital Assistant using the PeopleSoft application web service URL
+In this lab, you have setup and configured agent for both on-premises and cloud deployment of the PeopleSoft application.
 
 You may now **proceed to the next lab.**
 
+
 ## Acknowledgements
+
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
-* **Contributors** - Deepak Kumar M, Principal Cloud Architect
-* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, March 2023
+* **Contributors** -
+
+    * Aaron Rimel, Principal Product Manager
+    * Devashish Bhargava, Principal Cloud Architect
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, February 2024
 
 
