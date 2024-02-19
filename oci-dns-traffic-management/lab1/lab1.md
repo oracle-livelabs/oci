@@ -85,6 +85,7 @@ Note: this workshop is focused on the DNS Traffic Steering Policies product so t
 
 2. Input these commands in the console, one by one:
 
+{% comment %} 
     * sudo su -
     * yum install -y httpd
     * systemctl enable --now httpd.service
@@ -93,6 +94,7 @@ Note: this workshop is focused on the DNS Traffic Steering Policies product so t
     * echo "<html><head><title>Sample Web Page</title></head><body>This is the Chicago Web Server</body></html>" > /var/www/html/index.html
     * systemctl restart httpd
     * systemctl status httpd
+{% endcomment %}
 
   ![Apache status](images/apache.png)
 
