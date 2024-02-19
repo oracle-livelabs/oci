@@ -75,6 +75,16 @@ Estimated Time: 45 minutes
 
    ![From OCI home page, under O&M, click on Stack Monitoring](./images/oci-stack-monitor.png " ")
 
+ On the OCI Stack Monitoring page, click on Resource discovery.
+
+   ![From OCI home page, under Stack Monitoring, click resource discovery](./images/oci-stack-resource.png " ")
+
+ On the resource discovery page, click on discover new resource.
+
+   ![From OCI home page, under Stack Monitoring, click resource discovery](./images/oci-stack-resource-new.png " ")
+
+ As part of the discovery, we will first discover the Oracle database and then followed by the PeopleSoft application. Within Oracle database, we will first discover CDB database (if there is a multi-tenant architecture) and then followed by the PDB database.
+
 ## Summary
 
 In this lab, we discovered the PeopleSoft application components using stack monitoring.
