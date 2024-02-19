@@ -165,7 +165,9 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
     ![GIT URL](images/git-url-1.png =30%x*)
     ![GIT URL](images/git-url-2.png =50%x*)
 
-5. Cloud Shell에서 복사한 주소를 사용해 git clone 명령어를 통해 복제합니다.
+5. Cloud Shell을 실행합니다.
+
+6. 복사한 주소를 사용해 git clone 명령어를 통해 복제합니다.
 
     ````
     git clone <YourClonewithHTTPS URL>
@@ -180,7 +182,7 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
  
     - AuthToken: OCIR때 사용한 AuthToken 또는 유저 프로파일에서 생성한 AuthToken을 그대로 사용합니다.
 
-6. 편의상 개발이 완료했다고 가정하고, 이미 개발된 Storefront 소스를 가져와 Clone한 저장소로 옮깁니다.
+7. 편의상 개발이 완료했다고 가정하고, 이미 개발된 Storefront 소스를 가져와 Clone한 저장소로 옮깁니다.
 
     ````
     <copy>
@@ -189,7 +191,7 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
     </copy>
     ````
 
-7. Cloud Shell에서 처음 Git을 사용하는 경우 push 하기 전이 아래처럼 사용자정보를 설정합니다.
+8. Cloud Shell에서 처음 Git을 사용하는 경우 push 하기 전이 아래처럼 사용자정보를 설정합니다.
 
     ````
     <copy>
@@ -204,7 +206,7 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
     git config --global user.name "winter"
     ````    
 
-8. 소스 플더로 이동합니다.
+9. 소스 플더로 이동합니다.
 
     ````
     <copy>
@@ -212,7 +214,7 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
     </copy>
     ````
 
-9. GIT URL을 HTTPS로 사용하는 경우 매번 인증이 필요합니다. 이를 줄이기 위해 아래처럼 인증 정보를 저장 또는 캐쉬하도록 설정합니다.
+10. GIT URL을 HTTPS로 사용하는 경우 매번 인증이 필요합니다. 이를 줄이기 위해 아래처럼 인증 정보를 저장 또는 캐쉬하도록 설정합니다.
 
     - 방법 #1
     ````
@@ -231,7 +233,7 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
     </copy>
     ````
 
-10. 개발된 코드를 Code Repository에 Push 합니다.
+11. 개발된 코드를 Code Repository에 Push 합니다.
 
     ````
     <copy>    
@@ -241,11 +243,11 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
     </copy>
     ````
 
-11. Push가 완료되면 아래와 같이 Code Repository에 코드가 반영되어 있습니다. 
+12. Push가 완료되면 아래와 같이 Code Repository에 코드가 반영되어 있습니다. 
 
     ![MuShop Storefront Code Repository](images/mushop-storefront-code-repo.png)
 
-12. 이후 실습에서 개발 코드를 변경하여 Code Repository에 반영하면, Storefront UI 컨테이너 앱이 재배포 되도록 CI/CD 파이프라인을 생성할 예정입니다.
+13. 이후 실습에서 개발 코드를 변경하여 Code Repository에 반영하면, Storefront UI 컨테이너 앱이 재배포 되도록 CI/CD 파이프라인을 생성할 예정입니다.
 
 
 ## Task 4: Build Pipeline 만들기
@@ -393,13 +395,15 @@ CI/CD 중에 코드를 빌드하여 배포 산출물을 만드는 CI 과정에 �
 
     ![Build Spec Parameters](images/build-pipeline-parameters.png)
 
-7. **Build pipeline** 탭으로 이동하여 오른쪽 위 **Start Manual Run** 버튼을 클릭하여 파이프라인을 실행하면 아래와 같이 스크립트가 수행됩니다.
+7. **Build pipeline** 탭으로 이동하여 오른쪽 위 **Start Manual Run** 버튼을 클릭하여 파이프라인을 실행합니다.
+
+8. **Build run** 탭에서 실행 결과를 확인합니다. 아래와 같이 build_spec.yaml에 정의한 스크립트가 수행됩니다.
 
     ![Build Run Result](images/build-run-result-2.png)
 
-8. ExportedVariables 확인
+9. ExportedVariables 확인
 
-    실행 결과 화면에서 오른쪽 위 점3개를 클릭하여 상세 화면으로 이동합니다. Build Output 탭에서 실행결과로 나온 변수값을 볼 수 있습니다. 이 변수들은 이후 Stage 또는 연결되어 호출된 Deployment Pipeline으로 전달되어 사용할 수 있습니다.
+    실행 결과 화면에서 오른쪽 위 점3개를 클릭하여 상세 화면(View details)으로 이동합니다. Build Output 탭에서 실행결과로 나온 변수값을 볼 수 있습니다. 이 변수들은 이후 Stage 또는 연결되어 호출된 Deployment Pipeline으로 전달되어 사용할 수 있습니다.
 
     ![ExportVariables](images/build-output.png =60%x*)
 
@@ -698,7 +702,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 지금 까지는 테스트를 하기 위해 Build Pipeline에서 Start Manual Run을 통해 시작하였습니다. 실제로는 개발자가 코드를 코드 저장소에 반영이 될 때 자동으로 빌드, 배포 파이프라인이 동작할 필요가 있습니다. Trigger는 코드 저장소에 발생한 이벤트를 통해 빌드 파이프라인을 시작하게 하는 역할을 하게 됩니다.
 
-1. **DevOps 프로젝트 페이지**로 이동하여 왼쪽 메뉴의 **Trigger**로 이동합니다.
+1. **DevOps 프로젝트 페이지**로 이동하여 왼쪽 메뉴의 **Triggers**로 이동합니다.
 
 2. **Create trigger**을 클릭합니다.
 
@@ -710,7 +714,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
  
         ![Create Trigger](images/create-trigger.png =60%x*)
 
-4. 설정이 완료되었습니다.
+4. 설정된 내용으로 Trigger를 생성합니다.
 
 
 ## Task 6: 작성한 전체 CI/CD 파이프라인 테스트하기
@@ -834,4 +838,4 @@ Trigger에서 지정한 소스 코드에 임의의 변경사항을 발생시키�
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, October 2023
+- **Last Updated By/Date** - DongHee Lee, November 2023
