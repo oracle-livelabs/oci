@@ -32,4 +32,4 @@ Por meio deste guia, iremos fornecer laboratórios práticos de:
 ## Autoria
 
 - **Autores**- Raphael Campelo, Luiz de Oliveira, Arthur Vianna e Thais Henrique
-- **Último Updated Por/Data** - Thais Henrique, Jun/2022
+- **Último Updated Por/Data** - Arthur Vianna, Fev/2024

@@ -94,7 +94,6 @@ Note: this workshop is focused on the DNS Traffic Steering Policies product so t
     * systemctl restart httpd
     * systemctl status httpd
 
-
   ![Apache status](images/apache.png)
 
   If everything looks fine, we should be able to connect to the Compute with a Web Browser. Let's try *http://207.211.176.26* (don't forget to use your actual Chicago IP). 
