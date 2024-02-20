@@ -27,13 +27,12 @@ Neste Lab você vai aprender a trabalhar com Object Storage dentro da Oracle Clo
 
 - **Bucket Name**: bucket-site
 - **Default Storage Tier**: Standard
-- **Enable Object Versioning**: Checado
 
 ![configure os parametros do bucket](./images/bucket-config-3.png)
 
 ## Task 2: Configurar o bucket
 
-1.	Para o seu bucket, clique no ícone dos três pontos e em **Edit**.
+1.	Para o seu bucket, clique no ícone dos três pontos e em **Edit Visibility**.
 
 ![editar visibilidade do bucket](./images/bucket-edit-4.png)
 
@@ -47,6 +46,7 @@ Neste Lab você vai aprender a trabalhar com Object Storage dentro da Oracle Clo
 
 2. Clique em **Objects**, no menu do lado esquerdo, e em **Upload**.
 
+![clique em "Upload"](./images/bucket-upload-5.png)
 ![clique em "Upload"](./images/bucket-upload-6.png)
 
 3. Copie o html abaixo e crie o arquivo index.html através de algum editor de texto (notepad)
@@ -94,4 +94,4 @@ Nesta sessão você aprendeu sobre Object Storage na prática.
 ## Autoria
 
 - **Autores** - Arthur Vianna, Lucas de Almeida, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Date** - Arthur Vianna, Jun/2022
+- **Último Update Por/Date** - Arthur Vianna, Fev/2024
