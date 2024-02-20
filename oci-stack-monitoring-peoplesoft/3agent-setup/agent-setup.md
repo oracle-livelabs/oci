@@ -36,8 +36,6 @@ Estimated Time: 20 minutes
 
    Enable the management agent option by moving button over right
 
-   ![Select compute from OCI Menu](./images/oci-cloud-agent-enable.png " ")
-
    The management agent is enabled for the compute.
 
    ![Mgmt agent enabled for the compute](./images/oci-cloud-agent-enabled.png " ")
