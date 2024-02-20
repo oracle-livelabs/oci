@@ -71,7 +71,7 @@ Estimated Time: 45 minutes
 
 ## Task 3: Resource discovery of PSFT components
 
-1. On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select Observability & Management, and then click Downloads and Keys under Management Agent.
+1. On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select Observability & Management, and then click on Stack Monitoring.
 
    ![From OCI home page, under O&M, click on Stack Monitoring](./images/oci-stack-monitor.png " ")
 
@@ -173,7 +173,7 @@ Estimated Time: 45 minutes
 
 In this lab, we discovered the PeopleSoft application components using stack monitoring.
 
-
+You may now **proceed to the next lab.**
 
 
 ## Acknowledgements

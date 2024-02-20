@@ -1,19 +1,22 @@
-# Test the PeopleSoft PICASO chatbot
+# Monitor the PeopleSoft Application resources
 
 ## Introduction
 
-In this lab, you will test the PeopleSoft PICASO chatbot configured using Oracle Digital Assistant
+In this lab, you will monitor the PeopleSoft application resources  from the Enterprise UI summary page.
 
 Estimated Time: 15 minutes
 
 
 ### Objectives
-* Test the PeopleSoft PICASO chatbot
+
+* Monitor the PeopleSoft Application resources
 
 ### Prerequisites
-*  A PeopleSoft PIA Admin user to create and configure chatbot on PeopleSoft side
 
-## Task 1: Test the PeopleSoft PICASO chatbot
+
+*  Access to OCI Stack Monitoring page for the user.
+
+## Task 1: Monitor the PeopleSoft Application resources
 
 1. On the PeopleSoft Homepage, click on the PICASO chatbot
 
@@ -61,14 +64,18 @@ Estimated Time: 15 minutes
     
 ## Summary
 
-In this lab, you tested the PeopleSoft PICASO chatbot configured using Oracle Digital Assistant
+In this lab, you monitored the PeopleSoft application using Enterprise Summary & the Out of Box dashboards.
 
 
 
 
 ## Acknowledgements
+
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
-* **Contributors** - Deepak Kumar M, Principal Cloud Architect
-* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, March 2023
+* **Contributors** -
+
+    * Aaron Rimel, Principal Product Manager
+    * Devashish Bhargava, Principal Cloud Architect
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, February 2024
 
 
