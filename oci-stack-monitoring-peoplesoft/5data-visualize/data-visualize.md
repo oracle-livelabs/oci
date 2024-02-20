@@ -18,50 +18,20 @@ Estimated Time: 15 minutes
 
 ## Task 1: Monitor the PeopleSoft Application resources
 
-1. On the PeopleSoft Homepage, click on the PICASO chatbot
+1. On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select Observability & Management, and then click on Stack Monitoring.
 
-    ![click on chatbot at the bottom right of the screen](./images/psft-bot-homepage.png " ")
-
-    PeopleSoft PICASO screen pops up with a welcome note for the user
-
-    ![PICASO welcome greet](./images/picaso-example.png " ") 
+   ![From OCI home page, under O&M, click on Stack Monitoring](./images/oci-stack-monitor.png " ")
 
 
-    Let's check Absence Assistant
-    Either select the options shown for Absence or type in any absence related query
+   The Stack Monitoring Enterprise Summary page provides an overall health and performance of your entire enterprise.
 
-    ![PICASO screen dialog](./images/picaso-example1.png " ") 
-    
-    How many leaves will I accrue
-    ![PICASO screen dialog](./images/picaso-example2.png " ") 
+   ![On Stack Monitoring, ENterprise summary page](./images/enterprise-summary.png " ")
 
-    Show me the absence balance
-    ![PICASO screen dialog](./images/picaso-example3.png " ") 
- 
-    Now moving to Benefits Assistant
-
-    Click on any of the benefits options to check the status
-    ![PICASO screen dialog](./images/picaso-example4.png " ") 
-
-    Show my Dependents/Beneficiaries
-    ![PICASO screen dialog](./images/picaso-example5.png " ") 
-
-    Moving on to Employee Directory
-
-    Either select the options shown for Employee or type in, in this case we search with " who is my boss"
-
-    ![PICASO screen dialog](./images/picaso-example6.png " ") 
-
-    Moving on to Payroll Asisstant
-    
-    Either select the options shown for Payroll or type in show me my payslip
-
-    ![PICASO screen dialog](./images/picaso-example7.png " ") 
-    ![PICASO screen dialog](./images/picaso-example8.png " ") 
+   The newly discovered PeopleSoft application resources show up on the dashboard, let's dive into each application resources
 
 
 
-    
+
 ## Summary
 
 In this lab, you monitored the PeopleSoft application using Enterprise Summary & the Out of Box dashboards.
