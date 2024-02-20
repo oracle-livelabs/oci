@@ -85,6 +85,33 @@ Estimated Time: 45 minutes
 
  As part of the discovery, we will first discover the Oracle database and then followed by the PeopleSoft application. Within Oracle database, we will first discover CDB database (if there is a multi-tenant architecture) and then followed by the PDB database.
 
+2. Select Oracle Database from the resource type and provide the required information for discovery of the CDB database.
+
+
+   ![Fill the CDB database information](./images/cdb-discovery.png " ")
+
+   The management agent information, will be fetched automatically from the list.
+
+   ![Fill the CDB database information](./images/cdb-discovery1.png " ")
+
+   Enter the database credentials for monitoring
+
+   ![Fill the CDB database information](./images/cdb-discovery2.png " ")
+
+   For this workshop, we are not using ASM and disable the option. For discovery, we are selecting Stack Monitoring only, License option as Standard and click on discover new resource.
+
+   ![Fill the CDB database information](./images/cdb-discovery3.png " ")
+
+
+    The CDB resource discovery is started.
+
+   ![CDB discovery in progress](./images/cdb-discovery4.png " ")
+
+
+
+
+
+
 ## Summary
 
 In this lab, we discovered the PeopleSoft application components using stack monitoring.
