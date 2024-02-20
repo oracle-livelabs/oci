@@ -27,7 +27,7 @@ In this lab, you will:
 * Configure PeopleSoft Application for Stack Monitoring
 * Setup & configure OCI management agent and oracle cloud agent
 * Discover PeopleSoft using OCI Stack Monitoring
-* Visualize PeopleSoft data using Out of Box dashboards
+* Monitor the PeopleSoft Application resources
 
 
 ### Prerequisites
