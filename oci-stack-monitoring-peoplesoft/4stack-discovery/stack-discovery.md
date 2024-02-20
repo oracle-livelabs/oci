@@ -107,9 +107,66 @@ Estimated Time: 45 minutes
 
    ![CDB discovery in progress](./images/cdb-discovery4.png " ")
 
+    The CDB resource discovery is completed.
+
+   ![CDB discovery in completed](./images/cdb-discovery5.png " ")
 
 
+3. Select Oracle PDB Database from the resource type and provide the required information for discovery of the PDB database.
 
+   Give a name for the PDB and the CDB information is retrieved from the earlier discovery
+   
+   ![Fill the PDB database information](./images/pdb-discovery.png " ")
+
+   The management agent information, will be fetched automatically from the list.
+
+   ![Fill the PDB database information](./images/pdb-discovery1.png " ")
+
+   Enter the database credentials for monitoring
+
+   ![Fill the PDB database information](./images/pdb-discovery2.png " ")
+
+   For discovery, we are selecting Stack Monitoring only, License option as Standard and click on discover new resource.
+
+    The PDB resource discovery is started.
+
+   ![PDB discovery in progress](./images/pdb-discovery3.png " ")
+
+    The PDB resource discovery is completed.
+
+   ![PDB discovery in completed](./images/pdb-discovery4.png " ")
+
+
+4. Select PSFT Application from the resource type and provide the required information for discovery of the PeopleSoft application.
+
+   The management agent information, will be fetched automatically from the list. Discover Process Monitor and select Yes as part of the discovery
+
+   ![Fill the PSFT Application information](./images/app-discovery.png " ")
+
+   Enter the Database host, service name, port and protocol
+   
+   ![Fill the PSFT Application information](./images/app-discovery1.png " ")
+
+   Enter the database credentials for monitoring
+
+   ![Fill the PSFT Application information](./images/app-discovery2.png " ")
+
+
+   Provide the Application server, Process scheduler and webserver user credentials configured as part of previous lab (Lab 2)
+
+   ![Fill the PSFT Application information](./images/app-discovery3.png " ")
+   
+   For discovery, we are selecting Stack Monitoring only, License option as Standard and click on discover new resource.
+
+   ![Fill the PSFT Application information](./images/app-discovery4.png " ")
+
+    The PSFT Application resource discovery is started.
+
+   ![PSFT Application discovery in progress](./images/app-discovery5.png " ")
+
+    The PSFT Application resource discovery is completed.
+
+   ![PSFT Application discovery in completed](./images/app-discovery6.png " ")
 
 
 ## Summary
