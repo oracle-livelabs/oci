@@ -25,12 +25,43 @@ Estimated Time: 15 minutes
 
    The Stack Monitoring Enterprise Summary page provides an overall health and performance of your entire enterprise.
 
-   ![On Stack Monitoring, ENterprise summary page](./images/enterprise-summary.png " ")
+   ![On Stack Monitoring, Enterprise summary page](./images/enterprise-summary.png " ")
 
-   The newly discovered PeopleSoft application resources show up on the dashboard, let's dive into each application resources
+   The newly discovered PeopleSoft application resources show up on the dashboard, let's dive into each application resources. Click on the PSFT-HCM application 
+
+   ![On Stack Monitoring, Enterprise summary page](./images/enterprise-summary1.png " ")
+
+    Within the PSFT-HCM application, four application resources report as Up and available
+
+   ![On Stack Monitoring, Enterprise summary page](./images/stack-resource.png " ")
+
+    Click on Stack View tab, to monitor the current status of each of the application components
+    
+    ![On Stack Monitoring, Enterprise summary page](./images/stack-view.png " ")
+
+    Application Server domain current status
+
+    ![On Stack Monitoring, Enterprise summary page](./images/stack-view-app.png " ")
+
+    Process Scheduler Server domain current status
+
+    ![On Stack Monitoring, Enterprise summary page](./images/stack-view-prcs.png " ")
+
+    PIA domain and Process Monitor current status
+
+    ![On Stack Monitoring, Enterprise summary page](./images/stack-view-pia.png " ")
+
+    Weblogic Server current status
+
+    ![On Stack Monitoring, Enterprise summary page](./images/stack-view-web.png " ")
 
 
+    Database Server current status
 
+    ![On Stack Monitoring, Enterprise summary page](./images/stack-view-db.png " ")
+
+
+    This is just a  preview of the current monitoring status page for the PSFT application.  For detailed monitoring of the application and to get better insights on the resources usage, refer to the stack monitoring document for more information, link  [here](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/using-stack-monitoring.html).
 
 ## Summary
 
