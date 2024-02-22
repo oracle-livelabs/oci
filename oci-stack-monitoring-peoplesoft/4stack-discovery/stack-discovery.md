@@ -90,7 +90,7 @@ Estimated Time: 45 minutes
 
    ![Fill the CDB database information](./images/cdb-discovery.png " ")
 
-   The management agent information, will be fetched automatically from the list.
+   We need to select the management agent from the dropdown list.
 
    ![Fill the CDB database information](./images/cdb-discovery1.png " ")
 
@@ -118,7 +118,7 @@ Estimated Time: 45 minutes
    
    ![Fill the PDB database information](./images/pdb-discovery.png " ")
 
-   The management agent information, will be fetched automatically from the list.
+   We need to select the management agent from the dropdown list.
 
    ![Fill the PDB database information](./images/pdb-discovery1.png " ")
 
@@ -139,7 +139,7 @@ Estimated Time: 45 minutes
 
 4. Select PSFT Application from the resource type and provide the required information for discovery of the PeopleSoft application.
 
-   The management agent information, will be fetched automatically from the list. Discover Process Monitor and select Yes as part of the discovery
+   We need to select the management agent from the dropdown list. Discover Process Monitor and select Yes as part of the discovery
 
    ![Fill the PSFT Application information](./images/app-discovery.png " ")
 

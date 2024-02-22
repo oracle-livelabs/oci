@@ -32,6 +32,10 @@ To configure PeopleSoft with Stack Monitoring, you will:
 
 As part of this workshop, we will be using the standard DBSNMP user profile within Oracle Database for monitoring of the PeopleSoft application. Customers can choose to create a new monitoring user profile and assign necessary privileges.
 
+*Important*: To verify the monitoring user has the necessary grants, and apply any missing grants, execute the following PeopleSoft Scripts [here](https://www.oracle.com/webfolder/technetwork/manageability/stackmon/Stack_Monitoring_PeopleSoft_Scripts.zip). This approach is recommended as it checks for permissions and missing grants.
+
+In case, customers want to manually apply all the grants, they can follow the below process, copy the scripts and execute.
+
 1. Login to PeopleSoft server and connect to the Oracle Database, we need to connect to either the PDB or the CDB where the the application schema resides and provide the necessary privileges to the DBSNP user. 
 Using SYS user, execute the below sql commands to grant necessary priviliges to the DBSNP user.
 
@@ -111,8 +115,8 @@ Using SYS user, execute the below sql commands to grant necessary priviliges to 
       Enable Remote Administration=1
       Remote Administration Port=10100
       Remote Administration RMI Server Port=10101  
-      Remote Administration UserId={V2.1}X5ZvjQn1Xz+geI
-      Remote Administration Password=*****
+      Remote Administration UserId=<username>
+      Remote Administration Password=<password>
       EnablePPM Agent=1
 
       ```
@@ -120,7 +124,7 @@ Using SYS user, execute the below sql commands to grant necessary priviliges to 
 
       Remote Administration RMI Server Port=10101  (**Available from PSFT version 8.60+)
 
-  Make sure to provide a username and password as the current configuration already has a default username/password set. 
+  Make sure to provide a username and password as the current configuration already has a default username/password set. Keep in mind to update the same user credentials on all the application server domains configured for the environment.RMI port & RMI Server port are to be unique across the domains for the environment.
 
   Once the changes are done, keep hitting enter  button and this will bring back to the domain administration page, now type 1 and start the application server domain.
 
@@ -176,8 +180,8 @@ Using SYS user, execute the below sql commands to grant necessary priviliges to 
       Enable Remote Administration=1
       Remote Administration Port=10200
       Remote Administration RMI Server Port=10201  
-      Remote Administration UserId={V2.1}X5ZvjQn1Xz+geI
-      Remote Administration Password=*****
+      Remote Administration UserId=<username>
+      Remote Administration Password=<password>
       EnablePPM Agent=1
 
       ```
@@ -185,7 +189,7 @@ Using SYS user, execute the below sql commands to grant necessary priviliges to 
 
       Remote Administration RMI Server Port=10201  (**Available from PSFT version 8.60+)
 
-  Make sure to provide a username and password as the current configuration already has a default username/password set. 
+  Make sure to provide a username and password as the current configuration already has a default username/password set. Keep in mind to update the same user credentials on all the process scheduler server domains configured for the environment. RMI port & RMI Server port are to be unique across the domains for the environment.
 
   Once the changes are done, keep hitting enter  button and this will bring back to the domain administration page, now type 1 and start the process scheduler server domain.
 

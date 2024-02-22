@@ -40,36 +40,9 @@ Estimated Time: 20 minutes
 
    ![Mgmt agent enabled for the compute](./images/oci-cloud-agent-enabled.png " ")
 
-2. On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select Observability & Management, and then click Agents under Management Agent.
-
-   ![Select O&M from OCI Menu](./images/oci-onm-agent.png " ")
-
-   Since the management agent was enabled from step 1, we now need to deploy the stack monitoring plug for the compute system.
-
-   ![Select Agent home from OCI Menu](./images/oci-agent-home.png " ")
-
-   Click on the three dots at the right side of the agent and then click Deploy plug-ins
-
-   ![Select Agent deploy from OCI Menu](./images/agent-deploy.png " ")
-  
-   Select Stack Monitoring check box and click update.
-
-   ![Select stack monitoring option](./images/oci-stack.png " ")
-
-   ![Select stack monitoring option](./images/oci-stack1.png " ")
-
-   Now let's check the plugin deployment is completed or not.
-
-   Click on the agent and then click on the work requests
-
-   ![Select stack monitoring option](./images/oci-stack2.png " ")
-
-   Plugin deployment is successful
-
-   ![Select stack monitoring option](./images/oci-stack3.png " ")
 
 
-   **Important:** Similarly, all the OCI compute VMs, where the application middle tier is hosted, has to have the agent enabled for discovery within stack monitoring and the Stack Monitoring plugin enabled for all the compute VMs.
+   **Important:** Similarly, all the OCI compute VMs, where the application middle tier is hosted, needs to have the agent enabled for successful discovery.
 
 
 ## Task 2: Setup and configure agent for on-premises compute systems
