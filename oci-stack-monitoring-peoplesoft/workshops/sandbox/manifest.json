@@ -20,27 +20,27 @@
       {
         "title": "Lab 2: Setup OCI User, Policies, Groups ",
         "description": "In this lab, the recently provisioned OCI Trial tenancy will used for provision of OCI user profile, groups, policies",
-        "filename": "../../1setup-profile/setup-profile.md"
+        "filename": "../../2setup-profile/setup-profile.md"
       },
       {
           "title": "Lab 3: Prerequisites for Configuring PeopleSoft Application",
           "description": "In this lab, you will configure PeopleSoft for OCI Stack Monitoring",
-          "filename": "../../2configure-psft/configure-psft.md"
+          "filename": "../../3configure-psft/configure-psft.md"
       },
       {
           "title": "Lab 4: Agent setup & deployment",
           "description": "In this lab, you will setup agent for both on-premises & OCI",
-          "filename": "../../3agent-setup/agent-setup.md"
+          "filename": "../../4agent-setup/agent-setup.md"
       },
       {
           "title": "Lab 5: Resource discovery using Stack Monitoring",
           "description": "Setup Stack Monitoring for PSFT on OCI",
-          "filename": "../../4stack-discovery/stack-discovery.md"
+          "filename": "../../5stack-discovery/stack-discovery.md"
       },
       {
         "title": "Lab 6: Monitor the PeopleSoft Application resources ",
         "description": "Visualize the PSFT Application data using OOB dashboard",
-        "filename": "../../5data-visualize/data-visualize.md"
+        "filename": "../../6monitor-data/monitor-data.md"
       },
       {
           "title": "Need Help?",
