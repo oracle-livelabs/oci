@@ -13,27 +13,32 @@
           "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
       },
       {
-        "title": "Lab 1: Setup OCI User, Policies, Groups ",
-        "description": "In this lab, the recently provisioned OCI Trial tenancy will used for provision of Oracle Digital Assistant",
+        "title": "Lab 1: Easy Onboarding ",
+        "description": "In this lab, the recently provisioned OCI Trial tenancy will used for provision of OCI user profile, groups, policies",
+        "filename": "../../11easy-onboard/easy-onboard.md"
+      },
+      {
+        "title": "Lab 2: Setup OCI User, Policies, Groups ",
+        "description": "In this lab, the recently provisioned OCI Trial tenancy will used for provision of OCI user profile, groups, policies",
         "filename": "../../1setup-profile/setup-profile.md"
       },
       {
-          "title": "Lab 2: Prerequisites for Configuring PeopleSoft Application",
+          "title": "Lab 3: Prerequisites for Configuring PeopleSoft Application",
           "description": "In this lab, you will configure PeopleSoft for OCI Stack Monitoring",
           "filename": "../../2configure-psft/configure-psft.md"
       },
       {
-          "title": "Lab 3: Agent setup & deployment",
+          "title": "Lab 4: Agent setup & deployment",
           "description": "In this lab, you will setup agent for both on-premises & OCI",
           "filename": "../../3agent-setup/agent-setup.md"
       },
       {
-          "title": "Lab 4: Resource discovery using Stack Monitoring",
+          "title": "Lab 5: Resource discovery using Stack Monitoring",
           "description": "Setup Stack Monitoring for PSFT on OCI",
           "filename": "../../4stack-discovery/stack-discovery.md"
       },
       {
-        "title": "Lab 5: Monitor the PeopleSoft Application resources ",
+        "title": "Lab 6: Monitor the PeopleSoft Application resources ",
         "description": "Visualize the PSFT Application data using OOB dashboard",
         "filename": "../../5data-visualize/data-visualize.md"
       },

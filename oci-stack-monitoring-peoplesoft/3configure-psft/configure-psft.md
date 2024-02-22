@@ -36,7 +36,7 @@ As part of this workshop, we will be using the standard DBSNMP user profile with
 
 In case, customers want to manually apply all the grants, they can follow the below process, copy the scripts and execute.
 
-1. Login to PeopleSoft server and connect to the Oracle Database, we need to connect to either the PDB or the CDB where the the application schema resides and provide the necessary privileges to the DBSNP user. 
+1. Login to PeopleSoft server and connect to the Oracle Database, we need to connect to either the PDB or the CDB where the the application schema resides and provide the necessary privileges to the DBSNP user.
 Using SYS user, execute the below sql commands to grant necessary priviliges to the DBSNP user.
 
 
