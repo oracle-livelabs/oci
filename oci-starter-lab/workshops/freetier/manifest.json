@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "OCI Starter: Create a Cloud Native Application in 5 mins",
+    "workshoptitle": "OCI Starter: Create a Cloud Native Sample in 5 mins",
     "help": "livelabs-help-oci_us@oracle.com",
 	"tutorials": [
         {
@@ -15,27 +15,31 @@
             "filename": "./../../compute/compute.md"
         },
         {
-            "title": "Lab 2: Kubernetes",
+            "title": "Lab 2: Instance Pool",
+            "filename": "./../../instance_pool/instance_pool.md"
+        },        
+        {
+            "title": "Lab 3: Kubernetes",
             "filename": "./../../kubernetes/kubernetes.md"
         },
         {
-            "title": "Lab 3: Container Instances",
+            "title": "Lab 4: Container Instances",
             "filename": "./../../container_instance/container_instance.md"
         },        
         {
-            "title": "Lab 4: Functions",
+            "title": "Lab 5: Functions",
             "filename": "./../../function/function.md"
         },
         {
-            "title": "Lab 5: How to Customize",
+            "title": "Lab 6: How to Customize",
             "filename": "./../../customize/customize.md"
         },         
         {
-            "title": "Lab 6: Groups",
+            "title": "Lab 7: Groups",
             "filename": "./../../group/group.md"
         },           
         {
-            "title": "Lab 7: Advanced",
+            "title": "Lab 8: Advanced",
             "filename": "./../../advanced/advanced.md"
         },        
         {

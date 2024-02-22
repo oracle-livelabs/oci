@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "OCI Starter: Create a Cloud Native Application in 5 mins",
+    "workshoptitle": "OCI Starter: Create a Cloud Native Sample in 5 mins",
     "help": "livelabs-help-oci_us@oracle.com",
 	"tutorials": [
         {
@@ -11,11 +11,15 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Compute",
-            "filename": "./../../compute/compute_green.md"
+            "title": "Lab 1: LiveLabs Reservation",
+            "filename": "./../../green_button/green_button.md"
         },
         {
-            "title": "Lab 2: How to Customize",
+            "title": "Lab 2: Compute",
+            "filename": "./../../compute/compute_green.md"
+        },        
+        {
+            "title": "Lab 3: How to Customize",
             "filename": "./../../customize/customize.md"
         },        
         {
