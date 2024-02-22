@@ -1,6 +1,6 @@
 {
     "workshoptitle": "Get Started with OCI Stack Monitoring for PeopleSoft",
-    "help": "deepak.d.m@oracle.com",
+    "help": "livelabs-help-em_us_grp@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
@@ -23,7 +23,7 @@
           "filename": "../../2setup-profile/setup-profile.md"
         },
         {
-            "title": "Lab 3: Prerequisites for Configuring PeopleSoft Application",
+            "title": "Lab 3: Prerequisites to Configure PeopleSoft Application",
             "description": "In this lab, you will configure PeopleSoft for OCI Stack Monitoring",
             "filename": "../../3configure-psft/configure-psft.md"
         },

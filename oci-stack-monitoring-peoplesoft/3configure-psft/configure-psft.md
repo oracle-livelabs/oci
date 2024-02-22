@@ -1,4 +1,4 @@
-# Prerequisites for Configuring PeopleSoft Application
+# Prerequisites to Configure PeopleSoft Application
 
 ## Introduction
 
