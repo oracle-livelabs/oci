@@ -70,7 +70,7 @@ To set up the required profile on the OCI tenancy, you will use the Easy On-boar
 
 ## Summary
 
-  In this lab, profile creation of OCI user along with polices, groups and dynamic groups were created and configured.
+  In this lab, we used the easy on-boarding feature in stack monitoring to create all the required resources.
 
 You may now **proceed to the next lab.**
 
