@@ -16,15 +16,19 @@
             "filename": "./../../setup-the-toolkit/setup-the-toolkit.md"
         },
         {
-            "title": "Lab 2: Deploy OCI resources using CD3 Toolkit",
+            "title": "Lab 2: Add resource parameter values in Excel file",
+            "filename": "./../../add-resource-values-excel/add-resource.md"
+        },
+        {
+            "title": "Lab 3: Deploy OCI resources using CD3 Toolkit",
             "filename": "./../../deploy-compute/deploy-compute.md"
         },
         {
-            "title": "Lab 3: Create OCI Cloud Event Rules, Alarms and Notifications",
+            "title": "Lab 4: Create OCI Cloud Event Rules, Alarms and Notifications",
             "filename": "./../../create-eventalarm/create-eventalarm.md"
         },
         {
-            "title": "Lab 4: Upload stack to OCI Resource Manager",
+            "title": "Lab 5: Upload stack to OCI Resource Manager",
             "filename": "./../../upload-resourcemanager/upload-resourcemanager.md"
         },
          {
