@@ -28,17 +28,17 @@ In this lab, you will:
 2. **Click** on setUpOCI pipeline from Dashboard. 
 3. **Click** on **Build with Parameters** from left side menu.
 
-    <img alt="BUILDPARAM" src="./images/jen_cr_build_param.png" width="500">
+    ![BUILDPARAM](./images/jen_cr_build_param.png "Build Parameter")    
 
 4. **Upload** the filled Excel sheet in Excel_Template section.
     
-    <img alt="EXCELTEMP" src="./images/jen_cr_excel_temp.png" width="300">
+    ![EXCELTEMP](./images/jen_cr_excel_temp.png "Excel Template")    
 
 ## Task 2: Execute setUpOCI.py
 1. Select the workflow as Create Resources in OCI (Greenfield Workflow). Choose single or multiple MainOptions as required and then corresponding SubOptions.
     >**Note:** Please read while selcting multiple options simultaneously. Below screenshot shows example to create compartments and Tags.
 
-    <img alt="CREATRES" src="./images/jen_cr_res.png" width="300">
+    ![CREATRES](./images/jen_cr_res.png "Create Resource")  
 
 6. Click on Build at the bottom.
 
@@ -49,14 +49,14 @@ In this lab, you will:
 1. You could also navigate terraform-apply pipeline as example below.
     >**Note:** terraform_files » phoenix » tagging » terraform-apply
 
-    <img alt="CREATRES" src="./images/jen_cr_stage.png" width="500">
+    ![CREATSTG](./images/jen_cr_stage.png "Stage of Resources")    
 
 2. **Review Logs** for Terraform Plan and OPA stages by clicking on the stage and then **Logs**.
     
 3. Click **Proceed** to proceed with terraform apply or **Abort** to cancel the terraform apply for each services you selected.
     >**Note:** Get Approval stage has timeout of 24 hours, if no action is taken the pipeline will be aborted after 24 hours. 
 
-    <img alt="APPROVAL" src="./images/jen_approval.png" width="500">
+    ![APPROVAL](./images/jen_approval.png "Stage Approval")    
 
 4. **Login** to the OCI console and **verify** that resources got created as required.
 
