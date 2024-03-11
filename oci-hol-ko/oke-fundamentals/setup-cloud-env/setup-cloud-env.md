@@ -68,6 +68,10 @@
      - Description: Policy for OKE Labs for oci-hol-*xx* compartment
      - Compartment: **root compartment**를 선택
      - Policy:
+
+         * `<group-name>`: Policy를 적용할 사용자 그룹을 선택합니다. 예, 'Default'/'oci-group'
+         * `<compartment-name>`: Policy가 적용될 Compartment를 앞서 만든 Compartment로 선택합니다. 예) oci-hol-*xx*
+
      ```
      # OKE
      Allow group <group-name> to manage instance-family in  compartment <compartment-name>
@@ -100,9 +104,9 @@
      Allow group <group-name> to inspect tenancies in tenancy
 
      # OCI Kubernetes Monitoring Solution
-     Allow group <group-name> to manage loganalytics-features-family in <compartment-name>
-     Allow group <group-name> to manage loganalytics-resources-family in <compartment-name>
-     Allow group <group-name> to manage management-dashboard-family in <compartment-name>
+     Allow group <group-name> to manage loganalytics-features-family in compartment <compartment-name>
+     Allow group <group-name> to manage loganalytics-resources-family in compartment <compartment-name>
+     Allow group <group-name> to manage management-dashboard-family in compartment <compartment-name>
      Allow group <group-name> to manage management-agent-install-keys in compartment <compartment-name>
      Allow group <group-name> to manage dynamic-groups in tenancy
      Allow group <group-name> to manage loganalytics-query in tenancy
@@ -110,6 +114,12 @@
      Allow group <group-name> to read management-agents in compartment <compartment-name>
      Allow group <group-name> to read alarms in compartment <compartment-name>
      Allow group <group-name> to manage policy in compartment <compartment-name>
+     Allow group <group-name> to inspect compartments in tenancy
+     Allow group <group-name> to inspect loganalytics-ondemand-upload in tenancy
+     Allow group <group-name> to inspect loganalytics-lookup in tenancy
+     Allow group <group-name> to inspect loganalytics-label in tenancy
+     Allow group <group-name> to inspect loganalytics-parser in tenancy
+     Allow group <group-name> to inspect loganalytics-source in tenancy
 
      # DevOps
      Allow group <group-name> to manage devops-family in compartment <compartment-name>
@@ -125,7 +135,7 @@
 
     ![OKE](images/developer-oke.png " ")
 
-1. **oci-hol** Compartment에 있는지 확인 하고 **Create Cluster**을 클릭 합니다.
+1. **oci-hol**-*xx* Compartment에 있는지 확인 하고 **Create Cluster**을 클릭 합니다.
 
   ![Compartment](images/create-cluster.png " ")
 
@@ -133,27 +143,48 @@
 
    ![Quick Create Cluster](images/oke-create-cluster.png =50%x*)
 
+<if type="default">
+1. 생성 정보를 아래와 같이 입력합니다.
+    - Name: 예, **oke-cluster-1**
+    - Kubernetes version:
+        * *이후 업그레이드 실습을 위해, 1.26.x을 선택합니다.*
+        * 2024년 1월 기준, 1.26, 1.27, 1.28 중 *1.26.x* 선택
+
+    - Image:
+        * 클러스터와 동일한 버전 선택, 예, 1.26.x
+
+    - 다른 값들은 기본값으로 유지합니다.
+    - Node type: Managed 선택
+        * **Managed**: Worker Node가 Compute 인스턴스로 생성되며, SSH로 접근이 가능한 일반적인 쿠버네티스 노드입니다.
+        * **Virtual**: Serverless로 가상 Worker Node를 사용하며, OCI가 관리합니다.
+    - Show advanced options: 필요시, Worker Node의 Boot Volume 사이즈, Node 접속용 SSH Key 등록 등을 할 수 있습니다.
+    
+    ![Cluster Details](images/oke-create-cluster-details.png =70%x*)
+</if>
+<if type="for-istio">
 1. 생성 정보를 아래와 같이 입력합니다.
     - Name: 예, **oke-cluster-1**
     - Kubernetes version:
         * *이후 업그레이드 실습을 위해, 중간 버전인 1.26.x을 선택합니다.*
-        * 2023년 10월 기준, 1.25, 1.26, 1.27 중 *1.26.x* 선택
+        * 2024년 1월 기준, 1.26, 1.27, 1.28 중 *1.26.x* 선택
 
     - Image:
         * 클러스터와 동일한 버전 선택, 예, 1.26.x
-        * *Oracle Linux 7* 선택
+        * *Oracle Linux 7* 선택, 이미지 목록을 *제일 아래로 스크롤 후* 처음 만나는 7.x 버전 중에서 선택합니다.
 
     - 다른 값들은 기본값으로 유지합니다.
     - Node type: Managed 선택
-        * **Managed**: Worker Node가 Compute 인스턴스로 생성되며, SSH로 접근이 가능한 일반적인 쿠버네티스트 노드입니다.
-        * **Virtual**: Serverless로 가상 노드를 사용하며, OCI가 관리합니다.
+        * **Managed**: Worker Node가 Compute 인스턴스로 생성되며, SSH로 접근이 가능한 일반적인 쿠버네티스 노드입니다.
+        * **Virtual**: Serverless로 가상 Worker Node를 사용하며, OCI가 관리합니다.
     - Show advanced options: 필요시, Worker Node의 Boot Volume 사이즈, Node 접속용 SSH Key 등록 등을 할 수 있습니다.
     
-    ![Cluster Details](images/oke-create-cluster-details.png =70%x*)
+    ![Cluster Details](images/oke-create-cluster-details-ol-7.png =70%x*)
 
-    - *기본 선택되는 OCI VCN-Native Pod Networking CNI에서 Istio를 사용하기 위해서는 작성일 기준으로 Kubernetes 1.26 이상, Oracle Linux 7 이어야만 합니다. Lab 9를 실습하기 위해서 해당 조건으로 클러스터를 생성합니다.*
+    - *기본 선택되는 OCI VCN-Native Pod Networking CNI에서 Istio를 사용하기 위해서는 작성일 기준으로 Kubernetes 1.26 이상, Oracle Linux 7 이어야만 합니다. 이후 Service Mesh를 실습하기 위해서 해당 조건으로 클러스터를 생성합니다.*
 
         * [Installing Istio Service Mesh on OKE](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengistio-intro-topic.htm)
+
+</if>
 
 1. 클러스터 생성 정보를 모두 입력하였습니다. 아래 Next를 클릭
 
@@ -234,4 +265,4 @@ OKE 클러스터를 만들때 두 가지 클러스터 타입중에서 선택해�
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, October 2023
+- **Last Updated By/Date** - DongHee Lee, January 2024

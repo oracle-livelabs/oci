@@ -18,7 +18,7 @@
 아래와 같이 코드 개발을 위한 툴이 필요합니다. 간단한 앱 개발로 여기서는 편의상 사전에 툴들이 설치된 Cloud Shell에서 진행하겠습니다.
 
 * 선호하는 텍스트 편집기 또는 IDE 또는 Code Editor
-* JDK 1.8 or later
+* JDK 17 or later
 * Maven 3.3+
 
 ### 실습 비디오
@@ -46,7 +46,7 @@
 
     ````
     <copy>
-    curl https://start.spring.io/starter.tgz -d type=maven-project -d bootVersion=3.1.4 -d baseDir=rest-service -d name=rest-service -d artifactId=rest-service -d javaVersion=17 -d dependencies=web,actuator | tar -xzvf -
+    curl https://start.spring.io/starter.tgz -d type=maven-project -d bootVersion=3.2.2 -d baseDir=rest-service -d name=rest-service -d artifactId=rest-service -d javaVersion=17 -d dependencies=web,actuator | tar -xzvf -    
     </copy>
     ````
 
@@ -139,20 +139,20 @@
 
     ````
     $ <copy>csruntimectl java list</copy>
-       graalvmeejdk-17                                               /usr/lib64/graalvm/graalvm22-ee-java17
-     * oraclejdk-11                                                                   /usr/java/jdk-11.0.17
-       oraclejdk-1.8                                                        /usr/lib/jvm/jdk-1.8-oracle-x64
+       graalvmjdk-17                                          /usr/lib64/graalvm/graalvm-java17
+     * oraclejdk-11                                                       /usr/java/jdk-11.0.17
+       oraclejdk-1.8                                            /usr/lib/jvm/jdk-1.8-oracle-x64       
     ````
 10. JDK 17로 변경합니다
 
     ````
     $ <copy>csruntimectl java set graalvmeejdk-17</copy>
-    The current managed java version is set to graalvmeejdk-17.
+    The current managed java version is set to graalvmjdk-17.
 
     $ java -version
-    java version "17.0.8" 2023-07-18 LTS
-    Java(TM) SE Runtime Environment GraalVM EE 22.3.3 (build 17.0.8+9-LTS-jvmci-22.3-b21)
-    Java HotSpot(TM) 64-Bit Server VM GraalVM EE 22.3.3 (build 17.0.8+9-LTS-jvmci-22.3-b21, mixed mode, sharing)
+    java version "17.0.10" 2024-01-16 LTS
+    Java(TM) SE Runtime Environment Oracle GraalVM 17.0.10+11.1 (build 17.0.10+11-LTS-jvmci-23.0-b27)
+    Java HotSpot(TM) 64-Bit Server VM Oracle GraalVM 17.0.10+11.1 (build 17.0.10+11-LTS-jvmci-23.0-b27, mixed mode, sharing)
     ````
 
 11. Terminal에서 실행을 위해 코드를 빌드합니다.
@@ -182,18 +182,18 @@
      \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
       '  |____| .__|_| |_|_| |_\__, | / / / /
      =========|_|==============|___/=/_/_/_/
-     :: Spring Boot ::                (v3.1.4)
+     :: Spring Boot ::                (v3.2.2)
     
-    2023-10-12T02:32:09.681Z  INFO 4558 --- [           main] c.e.restservice.RestServiceApplication   : Starting RestServiceApplication v0.0.1-SNAPSHOT using Java 17.0.8 with PID 4558 (/home/winter/rest-service/target/rest-service-0.0.1-SNAPSHOT.jar started by winter in /home/winter/rest-service)
-    2023-10-12T02:32:09.689Z  INFO 4558 --- [           main] c.e.restservice.RestServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-    2023-10-12T02:32:12.423Z  INFO 4558 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-    2023-10-12T02:32:12.441Z  INFO 4558 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-    2023-10-12T02:32:12.442Z  INFO 4558 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-    2023-10-12T02:32:12.586Z  INFO 4558 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-    2023-10-12T02:32:12.590Z  INFO 4558 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2679 ms
-    2023-10-12T02:32:13.636Z  INFO 4558 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-    2023-10-12T02:32:13.781Z  INFO 4558 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-    2023-10-12T02:32:13.817Z  INFO 4558 --- [           main] c.e.restservice.RestServiceApplication   : Started RestServiceApplication in 5.096 seconds (process running for 6.12)
+    2024-01-23T04:46:11.497Z  INFO 5279 --- [           main] c.e.restservice.RestServiceApplication   : Starting RestServiceApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 5279 (/home/winter/rest-service/target/rest-service-0.0.1-SNAPSHOT.jar started by winter in /home/winter/rest-service)
+    2024-01-23T04:46:11.501Z  INFO 5279 --- [           main] c.e.restservice.RestServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+    2024-01-23T04:46:13.046Z  INFO 5279 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+    2024-01-23T04:46:13.055Z  INFO 5279 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+    2024-01-23T04:46:13.055Z  INFO 5279 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+    2024-01-23T04:46:13.100Z  INFO 5279 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+    2024-01-23T04:46:13.101Z  INFO 5279 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1499 ms
+    2024-01-23T04:46:13.694Z  INFO 5279 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+    2024-01-23T04:46:13.767Z  INFO 5279 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+    2024-01-23T04:46:13.789Z  INFO 5279 --- [           main] c.e.restservice.RestServiceApplication   : Started RestServiceApplication in 2.898 seconds (process running for 3.507)
     ````
 
 11. Code Editor 메뉴에서 **Terminal** &gt; **New Terminal**을 클릭하여 Terminal을 하나 더 실행합니다.
@@ -218,7 +218,7 @@
 
 쿠버네티스에서 실행하기 위해서는 구동할 서비스 애플리케이션을 컨테이너화 하여야 합니다. Docker 클라이언트를 통해 컨테이너 이미지를 만듭니다.
 
-1. 프로젝트 폴더에 Dockerfile을 아래와 같이 만듭니다. 여기서는 [Oracle Container Registry (OCR)](https://container-registry.oracle.com/) 에서 제공하는 Oracle GraalVM Container Image을 베이스 이미지로 사용합니다.
+1. 프로젝트 폴더에 파일이름을 Dockerfile으로 하여 파일을 만들고 아래 내용으로 붙여 넣습니다.
 
     ````
     <copy>
@@ -230,6 +230,10 @@
     </copy>
     ````
 
+    -  여기서는 [Oracle Container Registry (OCR)](https://container-registry.oracle.com/) 에서 제공하는 Oracle GraalVM Container Image을 베이스 이미지로 사용합니다.
+
+
+
 2. 이미지를 빌드합니다.
 
     ````
@@ -240,31 +244,31 @@
 
     ````
     $ docker build -t spring-boot-greeting:1.0 .
-    Sending build context to Docker daemon  21.63MB
+    Sending build context to Docker daemon  22.39MB
     Step 1/5 : FROM container-registry.oracle.com/graalvm/jdk:17
     Trying to pull repository container-registry.oracle.com/graalvm/jdk ... 
     17: Pulling from container-registry.oracle.com/graalvm/jdk
-    4539c583cc6b: Pull complete 
-    a07d690a2a78: Pull complete 
-    39ea200a20b8: Pull complete 
-    Digest: sha256:61cc91cb3551640cf7750fffc669c60534eb6eae720b1c0fc127601c5ba5fd2a
+    dee01bd0a980: Pull complete 
+    c21fb77d433a: Pull complete 
+    1da5a1124ff0: Pull complete 
+    Digest: sha256:09031a9be6a706c8c74d8fdbc01f24be77693a9c1b0bb853dcf9f45d241b9563
     Status: Downloaded newer image for container-registry.oracle.com/graalvm/jdk:17
-     ---> ba31190ec464
+     ---> 1bd1c42de308
     Step 2/5 : WORKDIR /app
-     ---> Running in c865d50fd672
-    Removing intermediate container c865d50fd672
-     ---> 5da8c382afdf
+     ---> Running in 5bdc7a4d2534
+    Removing intermediate container 5bdc7a4d2534
+     ---> dc1a30ce028a
     Step 3/5 : ARG JAR_FILE=target/*.jar
-     ---> Running in b8b1e33d77b1
-    Removing intermediate container b8b1e33d77b1
-     ---> 91375602a7f2
+     ---> Running in 92cc2439cd84
+    Removing intermediate container 92cc2439cd84
+     ---> e9f36411b994
     Step 4/5 : COPY ${JAR_FILE} app.jar
-     ---> bfeb80d634ad
+     ---> fa19d30391e1
     Step 5/5 : ENTRYPOINT ["java","-jar","/app/app.jar"]
-     ---> Running in 34f9110d322a
-    Removing intermediate container 34f9110d322a
-     ---> d3f1057f4db1
-    Successfully built d3f1057f4db1
+     ---> Running in 8b18ee0b6ecc
+    Removing intermediate container 8b18ee0b6ecc
+     ---> ba7f0834c569
+    Successfully built ba7f0834c569
     Successfully tagged spring-boot-greeting:1.0
     ````    
 
@@ -272,9 +276,9 @@
 
     ````    
     $ <copy>docker images</copy>
-    REPOSITORY                                  TAG                 IMAGE ID            CREATED             SIZE
-    spring-boot-greeting                        1.0                 d3f1057f4db1        3 minutes ago       658MB
-    container-registry.oracle.com/graalvm/jdk   17                  ba31190ec464        5 weeks ago         637MB    
+    REPOSITORY                                  TAG     IMAGE ID         CREATED           SIZE
+    spring-boot-greeting                        1.0     ba7f0834c569     20 seconds ago    665MB
+    container-registry.oracle.com/graalvm/jdk   17      1bd1c42de308     7 days ago        643MB
     ````    
 
 ## Task 3: OCIR에 이미지 등록하기
@@ -322,10 +326,10 @@
         ap-chuncheon-1
         $ docker tag spring-boot-greeting:1.0 $OCI_REGION.ocir.io/$TENANCY_NAMESPACE/oci-hol-xx/spring-boot-greeting:1.0
         $ docker images
-        REPOSITORY                                                            TAG                 IMAGE ID            CREATED             SIZE
-        ap-chuncheon-1.ocir.io/axjowrxaexxx/oci-hol-xx/spring-boot-greeting   1.0                 d3f1057f4db1        6 minutes ago       658MB
-        spring-boot-greeting                                                  1.0                 d3f1057f4db1        6 minutes ago       658MB
-        container-registry.oracle.com/graalvm/jdk                             17                  ba31190ec464        5 weeks ago         637MB             
+        REPOSITORY                                                           TAG  IMAGE ID      CREATED        SIZE
+        spring-boot-greeting                                                 1.0  ba7f0834c569  4 minutes ago  665MB
+        ap-chuncheon-1.ocir.io/axjowrxaexxx/oci-hol-xx/spring-boot-greeting  1.0  ba7f0834c569  4 minutes ago  665MB
+        container-registry.oracle.com/graalvm/jdk                            17   1bd1c42de308  7 days ago     643MB      
         ````    
 
 3. OCIR에 이미지를 Push 하기 위해서는 Docker CLI로 OCIR에 로그인이 필요합니다. Username 및 Password는 다음과 같습니다.
@@ -462,9 +466,9 @@
     NAME                                                   READY   STATUS    RESTARTS   AGE
     pod/spring-boot-greeting-deployment-5d5f6c6677-xr9db   1/1     Running   0          39s
     
-    NAME                                   TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)             AGE
-    service/kubernetes                     ClusterIP      10.96.0.1       <none>           443/TCP,12250/TCP   64m
-    service/spring-boot-greeting-service   LoadBalancer   10.96.243.130   150.xx.xxx.xxx   80:31359/TCP        39s
+    NAME                                 TYPE         CLUSTER-IP    EXTERNAL-IP PORT(S)           AGE
+    service/kubernetes                   ClusterIP    10.96.0.1     <none>      443/TCP,12250/TCP 64m
+    service/spring-boot-greeting-service LoadBalancer 10.96.243.130 150.x.x.x   80:31359/TCP      39s
     
     NAME                                              READY   UP-TO-DATE   AVAILABLE   AGE
     deployment.apps/spring-boot-greeting-deployment   1/1     1            1           39s
@@ -505,4 +509,4 @@
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, October 2023
+- **Last Updated By/Date** - DongHee Lee, January 2024
