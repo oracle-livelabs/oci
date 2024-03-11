@@ -31,13 +31,14 @@ Please read the chapter: Introduction and Get Started.
 
 1. Using your browser, go to https://www.ocistarter.com/
 2. Choose 
+    - AMD (x86)
     - Instance Pool
     - HTML
     - PHP
     - Autonomous database
 3. Click *Cloud Shell*
     - You will see the commands to use.
-  ![OCI Starter Compute Java](images/starter-instance-pool-java.png)
+  ![OCI Starter Compute Java](images/starter-instance-pool-php.png)
 4. Login to your OCI account
     - Click *Code Editor*
     - Click *New Terminal*
