@@ -21,11 +21,11 @@
         },
         {
             "title": "Lab 3: Deploy OCI resources using CD3 Toolkit - Jenkins",
-            "filename": "./../../deploy-compute/deploy-compute.md"
+            "filename": "./../../deploy-compute-jenkins/deploy-compute-jenkins.md"
         },
         {
             "title": "Lab 4: Deploy OCI resources using CD3 Toolkit - OCI CLI",
-            "filename": "./../../deploy-compute/deploy-compute.md"
+            "filename": "./../../deploy-compute-cli/deploy-compute-cli.md"
         },
         {
             "title": "Lab 5: Create OCI Cloud Event Rules, Alarms and Notifications",
