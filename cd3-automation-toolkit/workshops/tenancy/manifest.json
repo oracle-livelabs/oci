@@ -20,15 +20,19 @@
             "filename": "./../../add-resource-values-excel/add-resource.md"
         },
         {
-            "title": "Lab 3: Deploy OCI resources using CD3 Toolkit",
+            "title": "Lab 3: Deploy OCI resources using CD3 Toolkit - Jenkins",
             "filename": "./../../deploy-compute/deploy-compute.md"
         },
         {
-            "title": "Lab 4: Create OCI Cloud Event Rules, Alarms and Notifications",
+            "title": "Lab 4: Deploy OCI resources using CD3 Toolkit - OCI CLI",
+            "filename": "./../../deploy-compute/deploy-compute.md"
+        },
+        {
+            "title": "Lab 5: Create OCI Cloud Event Rules, Alarms and Notifications",
             "filename": "./../../create-eventalarm/create-eventalarm.md"
         },
         {
-            "title": "Lab 5: Upload stack to OCI Resource Manager",
+            "title": "Lab 6: Upload stack to OCI Resource Manager",
             "filename": "./../../upload-resourcemanager/upload-resourcemanager.md"
         },
          {
