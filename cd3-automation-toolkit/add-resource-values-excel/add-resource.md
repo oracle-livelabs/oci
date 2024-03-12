@@ -6,7 +6,7 @@ This is a continuation of the lab 1 : [Setup the CD3 toolkit](/cd3-automation-to
 
 As a recap, in the previous lab we cloned the cd3 repo, built an image, executed the CD3 container and connected it to the OCI tenancy. 
 
-Estimated time: 20 minutes
+Estimated time: 10 minutes
 
 ### Objectives
 

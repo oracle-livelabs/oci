@@ -6,7 +6,7 @@ This is a continuation of the lab 2 : [Add resource parameters values in excel f
 
 As a recap, in the previous lab we added resource parameters values in excel file for Compartments, VCN, Subnets, Compute, Block Volume and ATP.
 
-Estimated time: 20 minutes
+Estimated time: 10 minutes
 
 ### Objectives
 
@@ -29,10 +29,10 @@ In this lab, you will:
     /cd3user/tenancies/<customer_name>_setUpOCI.properties
     ```
 
-2. Set below parameter to *false*, since we are creating new resources, and not modifying any existing ones.
+2. Set below parameter to *create_resources*, since we are creating new resources, and not modifying any existing ones.
 
     ```
-    non_gf_tenancy = false
+    workflow_type = create_resources
     ```
 
 3. Save the file.

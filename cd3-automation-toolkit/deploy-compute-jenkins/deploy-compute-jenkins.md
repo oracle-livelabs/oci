@@ -6,7 +6,7 @@ This is a continuation of the lab 2 : [Add resource parameters values in excel f
 
 As a recap, in the previous lab we added resource parameters values in excel file for Compartments, VCN, Subnets, Compute, Block Volume and ATP.
 
-Estimated time: 20 minutes
+Estimated time: 10 minutes
 
 ### Objectives
 
