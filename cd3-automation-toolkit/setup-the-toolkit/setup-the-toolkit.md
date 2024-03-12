@@ -30,13 +30,13 @@ The objectives of this lab are:
 
 2. **Accept** the terms and conditions, fill in the details like the Network, Compartment, VM name, shape etc., for the workVM to be created.  
 
-   >Important!:  It is recommended to refrain from using 0.0.0.0/0 as Source CIDR to access the VM to maintain a secure environment. Instead just provide the specific IP/CIDR from where you are going to access the VM.
+   >**Important:** It is recommended to refrain from using 0.0.0.0/0 as Source CIDR to access the VM to maintain a secure environment. Instead just provide the specific IP/CIDR from where you are going to access the VM.
 
 3. Check the **Run Apply** box at the bottom and click on **Create**.
 
 4. After the Apply job is successful, **Click** on the Job and scroll down to the end of logs.
 
-5. Find the details for the created VM and commands to be executed to login to the toolkit container.
+5. Find the details for the **created VM** and commands to be executed to login to the toolkit container.
 
    Below is a sample output:
 
@@ -51,71 +51,70 @@ Make sure the [prerequisites](#prerequisites) are met before proceeding.
 
 1. Clone the CD3 repository to a local folder from your terminal using below command.
 
-   ```bash
-   git clone https://github.com/oracle-devrel/cd3-automation-toolkit
-   ```
+    ```bash
+    git clone https://github.com/oracle-devrel/cd3-automation-toolkit
+    ```
 
 2. Change the directory to **cd3-automation-toolkit** (i.e. the cloned repo in your local) and execute.
 
-   ```bash
-   docker build --platform linux/amd64 -t cd3toolkit:$<image_tag> -f Dockerfile --pull --no-cache . 
-   ```
-   >**Note:** $<image_tag> should be replaced with suitable tag as per your requirements/standards. The period (.) at the end of the docker build command is required.
+    ```bash
+    docker build --platform linux/amd64 -t cd3toolkit:$<image_tag> -f Dockerfile --pull --no-cache . 
+    ```
+    >**Note:** $<image_tag> should be replaced with suitable tag as per your requirements/standards. The period (.) at the end of the docker build command is required.
 
 3. Run the CD3 container using below command.
 
-   ```bash
-   docker run --platform linux/amd64 -it -d -v <directory_in_local_system_where_the_files_must_be_generated>:/cd3user/tenancies <image_name>:<image_tag>
-   ```
+    ```bash
+    docker run --platform linux/amd64 -it -d -v <directory_in_local_system_where_the_files_must_be_generated>:/cd3user/tenancies <image_name>:<image_tag>
+    ```
 
 4. Verify the container using  ```docker ps```. Note down the container ID from the above command and execute.
 
-   ```bash
-   docker exec -it <container_id> bash
-   ```
+    ```bash
+    docker exec -it <container_id> bash
+    ```
 
 ## Task 3: Connect container to OCI tenancy
 
 1. For the scope of this tutorial, we will use API-Key authentication. Navigate to ```cd /cd3user/oci_tools/cd3_automation_toolkit/user-scripts/```
 
-   >**Note:** Check [Github documentation](https://github.com/oracle-devrel/cd3-automation-toolkit) to configure other methods.
+    >**Note:** Check [Github documentation](https://github.com/oracle-devrel/cd3-automation-toolkit) to configure other methods.
 
 
 2. Create RSA key pair by  executing ```createAPIKey.py``` under **user-scripts** folder.
 
-   ```
-   python createAPIKey.py 
-   ```
+    ```
+    python createAPIKey.py 
+    ```
 
-   >**Note:** It will generate the public & private key pair at ```/cd3user/tenancies/keys/``` folder.
-
-   ```
+    >**Note:** It will generate the public & private key pair at ```/cd3user/tenancies/keys/``` folder.
+    
+    ```
     oci_api_public.pem
     oci_api_private.pem
-   ```
+    ```
 
-   In case you already have the keys, you should copy the private key file inside the container and rename it to ```oci_api_private.pem```.
+    In case you already have the keys, you should copy the private key file inside the container and rename it to ```oci_api_private.pem```.
 
 3. **Upload** the Public key to **APIkeys** under user settings in OCI Console.
 
-   -  Open the **Console**, and sign in as the user.
+    -  Open the **Console**, and sign in as the user.
 
-   -  View the details for the user who will be calling the API with the **key pair**.
+    -  View the details for the user who will be calling the API with the **key pair**.
 
-   -  Open the Profile menu (User menu icon) and click **User Settings**.
+    -  Open the Profile menu (User menu icon) and click **User Settings**.
 
-   -  Click **Add Public Key**.
+    -  Click **Add Public Key**.
 
-   -  Paste the contents of the **PEM public key** in the dialog box and click **Add**.
+    -  Paste the contents of the **PEM public key** in the dialog box and click **Add**.
 
 3. Open *tenancyconfig.properties* file and fill the details in **Required parameters** and **Auth Details Parameters** sections. 
 
    Below are the sample values for **API_Key Auth mechanism**. 
-
  
-   ```bash
-   # tenancyconfig.properties
-   ##################################################################################################################
+    ```bash
+    # tenancyconfig.properties
+    ##################################################################################################################
                             ## Required Parameters ##
     ##################################################################################################################
 
@@ -143,29 +142,29 @@ Make sure the [prerequisites](#prerequisites) are met before proceeding.
     key_path=
     fingerprint= 9d:20:...:45:c8
    
-   ```
+    ```
 
-   >**Note:**  If you selected Instance Principal or session token method for authentication, follow the commented guidelines in the *tenancyconfig.properties* file or [Auth Mechanisms documentation](https://github.com/oracle-devrel/cd3-automation-toolkit) and proceed accordingly.
+    >**Note:**  If you selected Instance Principal or session token method for authentication, follow the commented guidelines in the *tenancyconfig.properties* file or [Auth Mechanisms documentation](https://github.com/oracle-devrel/cd3-automation-toolkit) and proceed accordingly.
 
 
 4. Under **Deployment Parameters** section in tenancyconfig.properties file, Leave the default value for **outdir structure file** parameter to group your generated terraform auto.tfvars files for each service.
 
-   >**Note:** To place all the generated terraform auto.tfvars files directly under the region folder, comment the parameter with the default outdirectory structure file path and uncomment the one above it.
+    >**Note:** To place all the generated terraform auto.tfvars files directly under the region folder, comment the parameter with the default outdirectory structure file path and uncomment the one above it.
 
 
 5. Under **Advanced parameters for DevOps** section in tenancyconfig.properties file set the parameter   ```use_oci_devops_git=yes``` to use the toolkit with **Jenkins**.
    
-   >**Note:** If you plan to use the toolkit with CLI, skip this section. Since we are using API-key Auth mechanism, the **User details** section can be skipped.
+    >**Note:** If you plan to use the toolkit with CLI, skip this section. Since we are using API-key Auth mechanism, the **User details** section can be skipped.
 
 6. **Initialise** your environment to use the Automation Toolkit.
 
-   ```bash
-   python createTenancyConfig.py tenancyconfig.properties
-   ```
+    ```bash
+    python createTenancyConfig.py tenancyconfig.properties
+    ```
 
 7. You should see an output similar to below:
 
-   ![tenancyconfigoutput](./images/tenancyconfigoutput.png)
+    ![tenancyconfigoutput](./images/tenancyconfigoutput.png)
 
 8. After the createTenancyConfig.py script is successfully executed, customer specific files are created under ```/cd3user/tenancies/<customer_name>```.
   
