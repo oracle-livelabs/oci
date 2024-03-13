@@ -6,7 +6,7 @@ Resource Manager allows you to share and manage infrastructure configurations an
 
 Stack is a the collection of OCI resources corresponding to a given Terraform configuration. Each stack resides in the compartment you specify, in a single region; however, resources on a given stack can be deployed across multiple regions.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
