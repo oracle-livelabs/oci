@@ -14,20 +14,16 @@
             "title": "Lab 2: Connections",
             "filename": "../../02-connections/connections.md"
         },
-        {
-            "title": "Lab 3: Anytime Feedback",
-            "filename": "../../03-anytime-feedback/anytimefeedback.md"
-        },
-        {
-            "title": "Lab 4: Absence Requests",
-            "filename": "../../04-absence-requests/absence.md"
+                {
+            "title": "Lab 3: Absence Requests",
+            "filename": "../../03-absence-requests/absence.md"
         }, 
         {
-            "title": "Lab 5: Manager Journeys",
-            "filename": "../../05-manager-journeys/managerjourneys.md"
+            "title": "Lab 4: Manager Journeys",
+            "filename": "../../04-manager-journeys/managerjourneys.md"
         },  {
-            "title": "Lab 6: Your Team Page",
-            "filename": "../../06-your-team-page/your-team.md"
+            "title": "Lab 5: Your Team Page",
+            "filename": "../../05-your-team-page/your-team.md"
         },
         {
             "title": "Need Help?",
