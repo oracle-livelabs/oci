@@ -12,8 +12,8 @@ Estimated time: 10 minutes
 
 In this lab, you will:
 
-- Execute the *setUpOCI.py* script to generate terraform files.
-- Execute terraform commands from the respective service folders. 
+- Execute setUpOCI and terraform pipelines from jenkins.
+- Review terraform plan, OPA output and approve terraform apply stage.
 
 ### Prerequisites
 
@@ -30,7 +30,7 @@ In this lab, you will:
 
     ![BUILDPARAM](./images/jen_cr_build_param.png "Build Parameter")    
 
-4. **Upload** the filled Excel sheet in Excel_Template section.
+4. **Upload** the filled [Excel sheet](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/ExcelTemplates.md) in Excel_Template section.
     
     ![EXCELTEMP](./images/jen_cr_excel_temp.png "Excel Template")    
 
