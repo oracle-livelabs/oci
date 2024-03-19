@@ -14,32 +14,29 @@ In this activity, you will:
 
 ## Task 1: Absence Request
 
-1. **Oracle Cloud HCM** can handle any type of absence with specific/local rules for assignation, accruals, and entitlements.
+1. Oracle Cloud HCM can handle any type of absence with specific/local rules for assignation, accruals, and entitlements.
 
 
-   > You can request for an absence using the digital assistant or the quick action “Add Absence”. 
-
+   > Under the **‘Me’** tab and **‘Quick Actions’** column on the left, click **‘Add Absence’** (you can also use the digital assistant to request an absence).
 
    ![Submit Absence](images\absencerequest.png)
 
-2. Click **Continue Without Journey**.
 
 
-3. Choose **Vacation** and fill out a Start and End Date and submit your request.
+2. Choose **Vacation** and fill out a Start & End Date, and then submit your request.
 
 
-   > You can also follow the **Guide Me** instructions for additional support.
+   > You can also follow the Guide Me instructions for additional support.
 
 
-4. Adventure awaits, show what you know, and rise to the top of the leader board!!!
+3. Adventure awaits, show what you know, and rise to the top of the leader board!!!
 
     [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
     
     [Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
 
-**You may now proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant
 * **Contributors** -  Dorcas Conyers, Principal Sales Consultant
-* **Last Updated By/Date** - Kerilyn Derkasch, December 2023
+* **Last Updated By/Date** - Dorcas Conyers, March 2024
