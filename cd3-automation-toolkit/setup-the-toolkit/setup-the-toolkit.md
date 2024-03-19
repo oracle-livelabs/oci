@@ -26,7 +26,7 @@ The objectives of this lab are:
 
 1. **Click** on the below button to launch the Resource Manager Stack that creates the CD3 WorkVM.
 
-   [![Deploy_To_OCI](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-devrel/cd3-automation-toolkit/archive/refs/heads/develop.zip)
+   [![Deploy_To_OCI](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-devrel/cd3-automation-toolkit/archive/refs/heads/main.zip)
 
 2. **Accept** the terms and conditions, fill in the details like the Network, Compartment, VM name, shape etc., for the workVM to be created.  
 
