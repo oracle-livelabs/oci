@@ -27,14 +27,16 @@ In this activity, you will:
 
 3. Alternatively, you can create your own journey based on library tasks by clicking the 3 dots in the top right. **Do not create a journey at this time.**
 
-4.  Now, check tasks assigned to you. 
+4.  Now, review tasks assigned to you. 
     > Select **My Tasks** at the bottom of the screen to review. Here you are presented with a list of open task that require your attention.
 
 
     ![My Tasks](images\managerjourneystasks.png)
 
 5. Review the task **Request a Badge for your New Hire** assigned to you 
-    > Click the caret to expand. Click thedrop down for **More Actions** and then click Start. Click **Done** to return to your task list. 
+    > Click the caret to expand. Click the drop down, select **More Actions** and then click Start. Your request is processing. Click **Done** to return to your task list. 
+
+    ![My Tasks](images\managerjourneystasks2.png)
 
 
 6. Adventure awaits, show what you know, and rise to the top of the leader board!!!
