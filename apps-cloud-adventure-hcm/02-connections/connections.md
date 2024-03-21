@@ -18,7 +18,7 @@ In this activity, you will:
 ## Task 1: Explore Connections
 
 
-1. Click the **Me** tab, then the **‘Connections’** tile, and search for **‘Curtis Feitty’** to explore his public profile *(tip: scroll across to view their entire profile)*. 
+1. Click the **Me** tab, then the **‘Connections’** tile, and search for **‘Curtis Feitty’** to explore his public profile *tip: scroll across to view their entire profile*. 
 
 
     ![Home Page](images/connections.png)
