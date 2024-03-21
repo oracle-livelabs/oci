@@ -22,7 +22,7 @@ In this lab, you will:
 
 ### 1. **Identity**
 
-1. Choose CD3-CIS-template from [CD3 Excel templates](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/RunningAutomationToolkit.md#excel-sheet-templates). 
+1. Choose CD3-CIS-template from [CD3 Excel templates](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/ExcelTemplates.md). 
 
     >**Note:** Any template other than *CD3-CIS-ManagementServices-template* can be used to provision these services.
 

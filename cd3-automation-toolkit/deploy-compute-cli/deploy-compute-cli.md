@@ -1,4 +1,4 @@
-# Deploy OCI resources using CD3 Toolkit - OCI CLI
+# Deploy OCI resources using CD3 Toolkit - CLI
 
 ## Introduction
 

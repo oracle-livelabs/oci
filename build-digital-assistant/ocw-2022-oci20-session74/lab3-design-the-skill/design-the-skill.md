@@ -20,7 +20,7 @@ In this lab you will perform the following tasks:
 
 ## Prerequisites
 
-- Download the Skill template - <a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/CareClinics_Template.zip">download</a> 
+- Download the Skill template - <a href="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/CareClinics_Template.zip">download</a> 
 
 ## Task 1: Create a Digital Assistant Instance and Import the Skill
 1. Once you are logged into Oracle Cloud, you are taken to the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top-level navigation choices.
