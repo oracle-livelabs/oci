@@ -33,6 +33,6 @@ You will learn:
 **Note**: To take this class, you must have an Oracle University login, which you can get with free registration. You can register or confirm your login by going to this link https://mylearn.oracle.com/ou/home. Click the **Account** icon on the top right-hand side and then click **Sign in to my account** or **Sign up for an Oracle Account**.
 
 ## Acknowledgements
-* **Author** - Paul Karam, Product Manager in OIPA FSGBU
+* **Author** - Paul Karam, Functional SME
 * **Contributors** -  Sharad Chopra, Amar Pahwa
 * **Last Updated By/Date** - Amar Pahwa - Janurary 2024
