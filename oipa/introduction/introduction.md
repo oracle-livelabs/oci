@@ -15,8 +15,7 @@ You may now [proceed to the next lab](#next).
 ## Learn More
 
 ###  Documentation
-- Oracle Inurance Policy Adminstration - [documentation](https://www.oracle.com/financial-services/insurance/life-annuity/
-)
+- Oracle Inurance Policy Adminstration - [documentation](https://www.oracle.com/financial-services/insurance/life-annuity)
 - Oracle Infrastructure Services - [documentation](https://docs.oracle.com/en-us/iaas/Content/services.htm)
 
 ### Oracle University training

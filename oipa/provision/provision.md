@@ -34,9 +34,9 @@ Estimated Time: 20+ minutes
 
 
 ## Learn More
-* See the [documentation](https://docs.oracle.com/en-us/iaas/Content/fusion-applications/overview.htm) on overview of Oracle Fusion Applications Environment Management.
+* See the [documentation](https://www.oracle.com/financial-services/insurance/life-annuity) on overview of Oracle Insurance Administration Policy (OIPA)
 
 ## Acknowledgements
-* **Author** - Paul Karam, Product Manager in OIPA FSGBU
+* **Author** - Paul Karam, Functional SME
 * **Contributors** -  Sharad Chopra, Amar Pahwa
 * **Last Updated By/Date** - Amar Pahwa - Janurary 2024
