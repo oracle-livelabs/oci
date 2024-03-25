@@ -1,0 +1,36 @@
+{
+    "workshoptitle": "Cloud Adventure Activity Guide – for SCM",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Global Order Promising",
+            "filename": "../../01-global-order-promising/promising.md"
+        },
+        {
+            "title": "Lab 2: Source to Settle - Sourcing",
+            "filename": "../../02-s2s-sourcing/sourcing.md"
+        },
+                {
+            "title": "Lab 3: Source to Settle - Supplier Qualification",
+            "filename": "../../03-s2s-sqm/sqm.md"
+        }, 
+        {
+            "title": "Lab 4: Source to Settle - Self Service Procurement",
+            "filename": "../../04-s2s-self-procurement/selfprocurement.md"
+
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+        
+    ]
+}
+
+
+
