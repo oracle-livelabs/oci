@@ -1,9 +1,7 @@
 import json
+import oci
 import pandas as pd
-from vision_service_python_client.models.object_list_inline_input_location import \
-    ObjectListInlineInputLocation
-from vision_service_python_client.models.object_location import ObjectLocation
-from vision_service_python_client.models.output_location import OutputLocation
+
 
 def load_input_object_locations(input_objects_json_file):
     '''
@@ -24,13 +22,13 @@ def load_input_object_locations(input_objects_json_file):
                 continue
                 
             for location in input_object["objects"]:
-                object_location = ObjectLocation()
+                object_location = oci.ai_vision.models.ObjectLocation()
                 object_location.namespace_name = input_object["namespace"]
                 object_location.bucket_name = input_object["bucket"]
                 object_location.object_name = location
                 object_locations.append(object_location)
 
-        input_location = ObjectListInlineInputLocation()
+        input_location = oci.ai_vision.models.ObjectListInlineInputLocation()
         input_location.object_locations = object_locations
         compartment_id = data["compartment_id"]
 
@@ -44,7 +42,7 @@ def load_output_object_location(output_object_json_file):
     with open(output_object_json_file, "rb") as output_objects:
         data = json.load(output_objects)
 
-    output_location = OutputLocation()
+    output_location = oci.ai_vision.models.OutputLocation()
     output_location.namespace_name = data["namespace"]
     output_location.bucket_name = data["bucket"]
     output_location.prefix = data["prefix"]
