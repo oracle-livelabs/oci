@@ -157,7 +157,7 @@ Streamline processes and shorten cycle times with established and configurable a
 **You may now proceed to the next lab.**
 
 ## Acknowledgements
-* **Author** - Dorcas Conyers, Principal Sales Consultant
-* **Contributors** -  Dorcas Conyers, Principal Sales Consultant
-* **Last Updated By/Date** - Kerilyn Derkasch, December 2023
+* **Author** - Matt Bailey, Staff Solution Engineer
+* **Contributors** -  Betty Jane Madden, Principal Solution Engineer
+* **Last Updated By/Date** - Matt Bailey, March 2024
 
