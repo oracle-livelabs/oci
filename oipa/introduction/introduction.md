@@ -9,8 +9,33 @@ Estimated Workshop Time: 3 hours
 ### Objective
 * Provision OIPA Sandbox Environment
 
+OIPA LiveLabs - What is it
+* Try Oracle Cloud free of charge while exploring the life insurance applications
+* Learn a technical skill to deploy OIPA on OCI
+* Create a sandbox for test-driving OIPA without creating an account or Oracle Cloud tenancy. 
+* Each LiveLabs reservation provides a self-contained environment to run the workshop. 
+* The environment is removed once the reservation time expires.
 
-You may now [proceed to the next lab](#next).
+OIPA LiveLabs Technical Workflows
+
+* Potential users launch workshop from Oracle LiveLabs
+* Live Lab workflow will create a reservation ID and generate an email indicating the Workshop request has been accepted
+* The process for creating the infrastructure is created using Teraform scripts and includes:
+1. Virtual Network
+2. Firewall rules
+3. Security Policies
+4. Application Tier
+5. Autonomous Database Tier
+* Once the infrastructure has been created email is sent to the user indicating the workshop/infrastructure has been created.
+* The user logs back to Live Labs, OIPA URL is created which they will use to launch the OIPA application.
+
+
+
+## Functional Architecture
+
+![Functional Architecture](./images/FunctionalArchitecture.png)
+
+
 
 ## Learn More
 
