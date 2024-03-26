@@ -22,10 +22,4 @@ Adventure awaits, show what you know, and rise to the top of the leader board!!!
     
 [Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE)
 
-**You may now proceed to the next lab.**
-
-## Acknowledgements
-* **Author** - Kerilyn Derkasch, Senior Manager, Oracle Cloud HCM
-* **Contributors** -  Dorcas Conyers, Principal Sales Consultant, HCM
-* **Last Updated By/Date** - Kerilyn Derkasch, December 2023
 

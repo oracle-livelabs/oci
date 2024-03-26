@@ -120,7 +120,7 @@ In this example, we used Oracle Global Order Promising’s robust profitable to 
 **You may now proceed to the next lab.**
 
 ## Acknowledgements
-* **Author** - Dorcas Conyers, Principal Sales Consultant
-* **Contributors** -  Dorcas Conyers, Principal Sales Consultant
-* **Last Updated By/Date** - Kerilyn Derkasch, December 2023
+* **Author** - Dan Vedral, Master Principal Solution Engineer
+* **Contributors** -  Betty Jane Madden, Principal Solution Engineer and Ben Chromik, Senior Solution Engineer
+* **Last Updated By/Date** - Dan Vedral, March 2024
 
