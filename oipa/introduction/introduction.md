@@ -2,14 +2,16 @@
 
 ## About this Workshop
 
-The labs in this workshop walk you through all the steps to get started using the new experience of **Oracle Insurance Policy Adminstration (OIPA)**. First, you will provision OIPA sandbox environments with a simulated data. Then, you will practice several methods for managing lifecycle operations for the environments that you create.
 
-Estimated Workshop Time: 3 hours 
+**Oracle Insurance Policy Adminstration (OIPA)** LiveLab. This workshop enables you to get a hands-on experience of the OIPA platform.  Users' persona can range from insurance business analysts to actuaries, customer service representatives, and configuration analysts configuring the OIPA platform.  This live lab provides an automated provisioning of an OIPA sandbox environment with simulated data. Users can expect to practice several use cases using our platform ranging from creating new insurance policies, issuing pending policies, analyzing account values, and more.  More information regarding the OIPA platform can be found at this link : https://www.oracle.com/financial-services/insurance/policy-administration/
+
+
 
 ### Objective
 * Provision OIPA Sandbox Environment
 
 OIPA LiveLabs - What is it
+* Access an  OIPA instance to experience first hand the platform with insurance specific use cases
 * Try Oracle Cloud free of charge while exploring the life insurance applications
 * Learn a technical skill to deploy OIPA on OCI
 * Create a sandbox for test-driving OIPA without creating an account or Oracle Cloud tenancy. 
@@ -21,19 +23,20 @@ OIPA LiveLabs Technical Workflows
 * Potential users launch workshop from Oracle LiveLabs
 * Live Lab workflow will create a reservation ID and generate an email indicating the Workshop request has been accepted
 * The process for creating the infrastructure is created using Teraform scripts and includes:
-1. Virtual Network
-2. Firewall rules
-3. Security Policies
-4. Application Tier
-5. Autonomous Database Tier
+
+    * Virtual Network
+    * Firewall rules
+    * Security Policies
+    * Application Tier
+    * Autonomous Database Tier
 * Once the infrastructure has been created email is sent to the user indicating the workshop/infrastructure has been created.
 * The user logs back to Live Labs, OIPA URL is created which they will use to launch the OIPA application.
 
 
 
-## Functional Architecture
+## Technical Architecture
 
-![Functional Architecture](./images/FunctionalArchitecture.png)
+![Technical Architecture](./images/FunctionalArchitecture.png)
 
 
 
@@ -41,6 +44,7 @@ OIPA LiveLabs Technical Workflows
 
 ###  Documentation
 - Oracle Inurance Policy Adminstration - [documentation](https://www.oracle.com/financial-services/insurance/life-annuity)
+- OIPA v12 release notes - [documentation](https://docs.oracle.com/cd/F56930_01/index.html)
 - Oracle Infrastructure Services - [documentation](https://docs.oracle.com/en-us/iaas/Content/services.htm)
 
 ### Oracle University training
@@ -57,6 +61,6 @@ You will learn:
 **Note**: To take this class, you must have an Oracle University login, which you can get with free registration. You can register or confirm your login by going to this link https://mylearn.oracle.com/ou/home. Click the **Account** icon on the top right-hand side and then click **Sign in to my account** or **Sign up for an Oracle Account**.
 
 ## Acknowledgements
-* **Author** - Paul Karam, Functional SME
-* **Contributors** -  Sharad Chopra, Amar Pahwa
+* **Author** - Paul Karam - Master Solution Architect
+* **Contributors** -  Sharad Chopra - Solution Architect, Amar Pahwa - Enterprise Cloud Architect
 * **Last Updated By/Date** - Amar Pahwa - March 2024

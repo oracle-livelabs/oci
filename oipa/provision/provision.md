@@ -29,6 +29,6 @@ Estimated Time: 20+ minutes
 * See the [documentation](https://www.oracle.com/financial-services/insurance/life-annuity) on overview of Oracle Insurance Administration Policy (OIPA)
 
 ## Acknowledgements
-* **Author** - Paul Karam, Functional SME
-* **Contributors** -  Sharad Chopra, Amar Pahwa
+* **Author** - Paul Karam - Master Solution Architect
+* **Contributors** -  Sharad Chopra - Solution Architect, Amar Pahwa - Enterprise Cloud Architect
 * **Last Updated By/Date** - Amar Pahwa - March 2024
