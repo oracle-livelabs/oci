@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, we shall first create a new compartment to organize all our lab-related cloud resources. Later, we shall deploy the Siebel Cloud Manager stack to provision a virtual machine that will have the Siebel Cloud Manager application pre-installed.
+In this lab, we will first create a new compartment to organize all our lab-related cloud resources. Later, we'll deploy the Siebel Cloud Manager stack to provision a virtual machine that has the Siebel Cloud Manager application pre-installed.
 
 Estimated Time: 20 minutes
 
@@ -22,13 +22,13 @@ In this lab, you will:
 
 ## Task 1: Create a compartment
 
-1. Log in to the Oracle Cloud Infrastructure Tenancy and in the console, click the **hamburger icon** and navigate to **Identity and Security** then **Compartments**
+1. Log in to the Oracle Cloud Infrastructure Tenancy and in the console, click the icon at the top left, sometimes referred to as the **hamburger icon**, and navigate to **Identity and Security** then **Compartments**
 
-   ![Navigate to Compartment](./images/navigate-compartment.png)
+   ![Navigate to OCI's Compartments page](./images/navigate-compartment.png)
 
-2. On the compartments page, click **Create Compartment**
+2. On the Compartments page, click **Create Compartment**
 
-3. Give the **Name** and **Description** as below. In the **Parent Compartment** field choose either the root compartment or any other compartment to which the one we are creating now will be a child.
+3. Give a **Name** and **Description**; an example is given below. In the **Parent Compartment** field choose either the root compartment or the compartment your OCI administrator has indicated should be the parent.
 
     **Name**
 
@@ -38,21 +38,21 @@ In this lab, you will:
 
         <copy>Compartment for all Siebel Cloud Manager resources</copy>
 
-   ![Create Compartment](./images/create-compartment.png)
+   ![Create a Compartment with the example values just given](./images/create-compartment.png)
 
-4. Click ***Create Compartment*** and the compartment will be created.
+4. Click **Create Compartment** and the compartment will be created.
 
-5. Note the **OCID** of this compartment.
+5. Note the **OCID** of this compartment. You many want to copy this to a digital notepad for use later.
 
-   ![Copy the Compartment OCID](./images/copy-the-ocid.png)
+   ![Copy the allocated Compartment's OCID value](./images/copy-the-ocid.png)
 
 ## Task 2: Create a Siebel Cloud Manager instance from the Marketplace image
 
-Siebel Cloud Manager stack will create the following resources,
+The Siebel Cloud Manager Stack will create the following resources,
 
-   - A subcompartment
-   - Network resources like VCN, public/private subnets, security lists, route table and rules, dynamic group, policies, etc.
-   - A compute instance with the Siebel Cloud Manager application pre-installed
+   - A Sub-Compartment
+   - Network resources; i.e. VCN, public/private subnets, security lists, route table and rules, dynamic group, policies, etc.
+   - A compute instance with the Siebel Cloud Manager application pre-installed as a container on a Linux Operating System.
 
 
 1. In the Oracle Cloud Console, click the ***hamburger icon***
