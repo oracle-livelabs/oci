@@ -100,7 +100,7 @@ Desta forma, vamos iniciar com o processo de publicação:
 
     ![Retorne ao Launcher](.\images\13-return-launcher.png)
 
-2. No launcher, selecione **Settings**, na área de Extensions
+2. No launcher, selecione **Settings**, na área de Extensions.
 
     ![Selecione Settings](.\images\14-configure-bucket-publish.png)
 
@@ -180,6 +180,8 @@ Desta forma, vamos iniciar com o processo de publicação:
 * [EXPORTACAO\_BRASIL\_LIVELABS.csv](https://objectstorage.us-ashburn-1.oraclecloud.com/p/MjEyV61y5B-92n4MQdrK26cwy4kLmnHrPSW6y0YMSdER_3iekE9XCAVLpjHA9bPf/n/id3kyspkytmr/b/bucket-fast-track/o/EXPORTACAO_BRASIL_LIVELABS.csv)
 * [CODIGO\_PAISES\_LIVELABS.json](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ht0IGcAYX0Hoj7R6iMvx-0FJM2UzjtCjqbs5mNBpkkb7mi4AYzH3cFJ6WG_jFBsI/n/id3kyspkytmr/b/bucket-fast-track/o/CODIGO_PAISES_LIVELABS.json)
 
+**ATENÇÃO:** Ao abrir a página com o conteúdo do arquivo CODIGO\_PAISES\_LIVELABS, clique com o botão direito e selecione "Save As" para salvar o arquivo em seu computador.
+
 
 1. Selecione o menu na região superior esquerda, em seguida clique em storage e selecione Buckets.
 
@@ -217,5 +219,5 @@ Neste laboratório, você aprendeu a instalar e publicar um ambiente Conda, alé
 
 ## Autoria
 
-- **Autores** - Thais Henrique, Heloisa Escobar, Isabelle Anjos
-- **Último Update Por/Date** - Isabelle Anjos, Jan/2024
+- *Created By/Date* - Thais Henrique, Heloisa Escobar, Isabelle Anjos, Janeiro 2024
+- *Last Updated By* - Isabelle Anjos, Janeiro 2024

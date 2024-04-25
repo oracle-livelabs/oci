@@ -49,7 +49,7 @@ Como primeiro passo, devemos fazer o download do arquivo (zip).
 
 6. Clique em **Next**.
 
-7. Selecione a opção "Run apply" e clieque em "Create"
+7. Selecione a opção "Run apply" e clique em "Create"
 
 ![imagem stack ](./images/configure-stack-archivezip_3.png)
 
@@ -59,9 +59,9 @@ Como primeiro passo, devemos fazer o download do arquivo (zip).
 
 ## Conclusão
 
-### Ambientes provisionados com sucesso! Você provisionou recursos usando Terraform na OCI! Você terminou os pré-requisitos! Você pode seguir para o próximo Lab.
+Ambientes provisionados com sucesso! Você provisionou recursos usando Terraform na OCI e terminou os pré-requisitos! Você pode seguir para o próximo Lab.
 
 ##  Autoria
 
-- **Autores** - Thais Henrique, Heloisa Escobar, Isabelle Anjos
-- **Último Update Por/Date** - Isabelle Anjos, Dez/2023
+- *Created By/Date* - Thais Henrique, Heloisa Escobar, Isabelle Anjos, Janeiro 2024
+- *Last Updated By* - Isabelle Anjos, Janeiro 2024

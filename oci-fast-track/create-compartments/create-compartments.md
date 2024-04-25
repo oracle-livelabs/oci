@@ -54,13 +54,13 @@ Neste Lab você vai aprender a criar um Compartimento dentro da Oracle Cloud Inf
 
 ![acesse a pagina de login da oci](./images/compartment-cloud-access-1.png)
 
-3.	Clique em "Continue" e depois insira seu usuário e senha.
+3.	Clique em "Next" e depois insira seu usuário e senha.
 
 ![clique em "Continue"](./images/compartment-idcs-2.png)
 
 ![faça login](./images/compartment-user-login-3.png)
 
-4.  Depois de autenticado explore a tela inicial da Oracle Cloud e também nosso "Menu principal", onde você pode encontrar todos os serviços disponíveis em nosso console
+4.  Depois de autenticado explore a tela inicial da Oracle Cloud e também nosso "Menu Principal", onde você pode encontrar todos os serviços disponíveis em nossa console.
 
 ![console da oracle cloud](./images/compartment-console-4.png)
 
@@ -92,4 +92,4 @@ Nesta sessão você aprendeu a acessar a console da Oracle Cloud, explorar a tel
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Updated Por/Data** - Arthur Vianna, Jun/2022
+- **Último Updated Por/Data** - Arthur Vianna, Fev/2024

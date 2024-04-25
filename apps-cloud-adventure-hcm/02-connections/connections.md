@@ -18,7 +18,7 @@ In this activity, you will:
 ## Task 1: Explore Connections
 
 
-1. Search for “Curtis Feitty” or any other user provided in the handouts and explore their public profile.
+1. Click the **Me** tab, then the **‘Connections’** tile, and search for **‘Curtis Feitty’** to explore his public profile *tip: scroll across to view their entire profile*. 
 
 
     ![Home Page](images/connections.png)
@@ -53,5 +53,5 @@ Allow workers to promote their personal brand by highlighting their skills, acco
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant
 * **Contributors** -  Dorcas Conyers, Principal Sales Consultant
-* **Last Updated By/Date** - Kerilyn Derkasch, December 2023
+* **Last Updated By/Date** - Dorcas Conyers, March 2024
 

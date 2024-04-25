@@ -32,7 +32,7 @@
 
     ```
     <copy>
-    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.19.3 TARGET_ARCH=x86_64 sh -
+    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.20.2 TARGET_ARCH=x86_64 sh -
     </copy>
     ```
 
@@ -40,7 +40,7 @@
 
     ```
     <copy>
-    cd istio-1.19.3
+    cd istio-1.20.2/
     </copy>
     ```
 
@@ -72,13 +72,13 @@
 
     ````
     $ istioctl install --set profile=demo --set components.cni.enabled=true -y
-    ✔ Istio core installed 
-    ✔ Istiod installed
-    ✔ CNI installed
+    ✔ Istio core installed
+    ✔ Istiod installed 
     ✔ Egress gateways installed
     ✔ Ingress gateways installed
+    ✔ CNI installed    
     ✔ Installation complete
-    Making this installation the default for injection and validation.
+    Made this installation the default for injection and validation.
     ````    
 
 7. istio-system 네임스페이스에 설치가 된 것을 알 수 있습니다.
@@ -217,7 +217,7 @@
 
     ````
     NAME                   TYPE           CLUSTER-IP      EXTERNAL-IP       PORT(S)                                                                      AGE
-    istio-ingressgateway   LoadBalancer   10.96.100.111   150.xxx.xxx.xxx   15021:30958/TCP,80:30070/TCP,443:30722/TCP,31400:30445/TCP,15443:32466/TCP   7m54s 
+    istio-ingressgateway   LoadBalancer   10.96.100.111   158.xxx.xxx.xxx   15021:30958/TCP,80:30070/TCP,443:30722/TCP,31400:30445/TCP,15443:32466/TCP   7m54s 
     ````    
 
 6. 브라우저로 확인된 EXTERNAL-IP로 접속합니다.
@@ -232,9 +232,10 @@
 
     ````
     ...
-    2023-10-17T09:38:18.049153Z     info    Readiness succeeded in 1.125258011s
-    2023-10-17T09:38:18.049635Z     info    Envoy proxy is ready
-    [2023-10-17T09:40:08.391Z] "GET / HTTP/1.1" 304 - via_upstream - "-" 0 0 1 0 "10.0.10.229, 127.0.0.6" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" "a56a65c75c9b8bae80c8fdec523045d3" "mushop-storefront" "10.0.10.157:8080" inbound|8080|| 127.0.0.6:53137 10.0.10.157:8080 127.0.0.6:0 outbound_.80_._.mushop-storefront.mushop.svc.cluster.local default
+    2024-01-24T03:19:17.093906Z     info    Readiness succeeded in 996.413318ms
+    2024-01-24T03:19:17.094266Z     info    Envoy proxy is ready
+    ...
+    [2024-01-24T03:22:19.347Z] "GET / HTTP/1.1" 304 - via_upstream - "-" 0 0 0 0 "10.0.10.139" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" "0aaca574-0a58-9dd7-b8ad-84a529cdf7bb" "158.xxx.xxx.xxx" "10.0.10.157:8080" inbound|8080|| 127.0.0.6:34331 10.0.10.157:8080 10.0.10.139:0 outbound_.80_._.mushop-storefront.mushop.svc.cluster.local default
     ...
     ````
 
@@ -489,4 +490,4 @@
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, October 2023
+- **Last Updated By/Date** - DongHee Lee, January 2024

@@ -31,13 +31,14 @@ Please read the chapter: Introduction and Get Started.
 
 1. Using your browser, go to https://www.ocistarter.com/
 2. Choose 
+    - AMD (x86)
     - Instance Pool
     - HTML
     - PHP
     - Autonomous database
 3. Click *Cloud Shell*
     - You will see the commands to use.
-  ![OCI Starter Compute Java](images/starter-instance-pool-java.png)
+  ![OCI Starter Compute Java](images/starter-instance-pool-php.png)
 4. Login to your OCI account
     - Click *Code Editor*
     - Click *New Terminal*
@@ -90,8 +91,8 @@ During the build, Terraform will create:
 2. A database
 3. A compute instance to run NGINX + the PHP App
 4. A bastion used mostly to populate the database with the table
-5. A custom image of that compute instance (3)
-6. A Instance Pool with 2 VMs using that custom image (5)
+5. A custom image of the compute instance (3)
+6. A Instance Pool with 2 VMs using the custom image (5)
 7. A load-balancer in front of the instance pool
 
 1. In the code editor, 

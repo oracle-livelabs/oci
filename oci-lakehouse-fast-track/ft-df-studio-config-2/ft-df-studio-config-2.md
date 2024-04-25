@@ -79,7 +79,7 @@ O coração de um notebook Jupyter são as "células", que são blocos onde voc�
 
 - *Células de Código:* Onde você escreve e executa códigos em linguagens como Python, R, Pyspark, etc. Quando você executa uma célula de código (geralmente usando o comando Shift + Enter), o notebook processa o código e exibe o resultado logo abaixo da célula.
 
-- *Células de Markdown:* Usadas para adicionar texto explicativo, imagens, links e formatação, como títulos e listas, para documentar o que o código está fazendo. Markdown é uma linguagem de marcação leve que permite formatações básicas (como negrito, itálico) e avançadas (como listas, tabelas e código HTML).Essas células não são "executadas" como as células de código, mas sim "renderizadas" para exibir o texto formatado.
+- *Células de Markdown:* Usadas para adicionar texto explicativo, imagens, links e formatação, como títulos e listas, para documentar o que o código está fazendo. Markdown é uma linguagem de marcação leve que permite formatações básicas (como negrito, itálico) e avançadas (como listas, tabelas e código HTML). Essas células não são "executadas" como as células de código, mas sim "renderizadas" para exibir o texto formatado.
 
 ### **Execução Interativa**
 O que torna os notebooks Jupyter atraentes é a capacidade de executar o código de maneira interativa. Você pode modificar o código, executá-lo e ver os resultados imediatamente. As células podem ser executadas em qualquer ordem, o que permite testar pequenos trechos de código rapidamente sem ter que executar todo o notebook.
@@ -123,13 +123,13 @@ O Oracle Accelerated Data Science SDK (ADS) controla o mecanismo de autenticaç�
 
 O parâmetro *`resource_principal`* indica que está sendo utilizado um método de autenticação específico, associado a recursos e políticas de segurança dentro da infraestrutura da Oracle Cloud. Assim, o código está preparando o ambiente para que o usuário possa interagir de forma segura com o Spark, garantindo que todas as operações realizadas estejam autenticadas e autorizadas de acordo com as configurações do OCI Data Science.
 
-1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Realizando Autenticação](.\images\1-authentication.png)
 
 O código abaixo realiza a autenticação para usar serviços da Oracle Cloud Infrastructure, especialmente o Data Flow Studio. Ele importa bibliotecas necessárias, incluindo o SDK da OCI, e configura um assinante de princípios de recursos, que permite fazer solicitações autenticadas aos serviços da OCI sem gerenciar manualmente as credenciais.
 
-2. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+2. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Realizando Autenticação](.\images\2-authentication-df.png)
 
@@ -138,7 +138,7 @@ O código abaixo realiza a autenticação para usar serviços da Oracle Cloud In
 
 Este código está configurando algumas variáveis importantes para serem utilizadas durante a *criação da sessão Spark*. 
 
-1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Variáveies Notebook](.\images\2-variables.png)
 
@@ -174,9 +174,9 @@ O Apache Spark é especialmente conhecido por sua capacidade de processar rapida
 
 ---
 
-O código apresentado define uma função auxiliar chamada `prepare_command`. uma ferramenta de conveniência para transformar argumentos que são armazenados em variáveis Python ou estruturas de dados em uma forma que pode ser utilizada pelos comandos mágicos do Spark, que muitas vezes esperam argumentos em formato de string.
+O código apresentado define uma função auxiliar chamada `prepare_command`, uma ferramenta de conveniência para transformar argumentos que são armazenados em variáveis Python ou estruturas de dados em uma forma que pode ser utilizada pelos comandos mágicos do Spark, que muitas vezes esperam argumentos em formato de string.
 
-1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Código Helpers](.\images\3-helpers.png)
 
@@ -192,13 +192,13 @@ O Data Flow Spark Magic refere-se a uma coleção de "comandos mágicos" especia
 
 Você precisa ativar o  Data Flow Spark Magic em seu notebook usando o comando mágico *`%load_ext dataflow.magics.`*
 
-2. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+2. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Código Data Flow Magic](.\images\4-load-spark-magic.png)
 
 Após a ativação da extensão, o comando *`%help`* pode ser usado para obter a lista de todos os comandos disponíveis, juntamente com uma lista de seus argumentos e exemplos de chamadas.
 
-3. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+3. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
 
     ![Código Helpers](.\images\5-help.png)
 
@@ -211,7 +211,7 @@ Neste momento do tutorial, vamos reutilizar algumas variáveis que foram criadas
 Para criar uma nova sessão de cluster do Data Flow, vamos utilizar o comando mágico *`%create_session`*.
 De forma geral, este comando está configurando e iniciando uma nova sessão de cluster do Data Flow no OCI Data Science, especificando detalhes como o tipo de máquina virtual, configurações de CPU e memória, versão do Spark, e onde armazenar os logs. 
 
-1. Selecione cada uma das células e execute-as com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
+1. **Selecione cada uma das células e execute-as com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook**.
 
     ![Criando sessão](.\images\6-create-session.png)
 
@@ -245,7 +245,7 @@ Opções do Comando:
 - *"configuration":* Configurações adicionais, como a localização do ambiente do Spark e outras opções de configuração.
 - *"metastoreId":* Um identificador para o metastore de dados usado. Um metastore é um repositório central para armazenar metadados sobre as estruturas de dados, como tabelas e esquemas, dentro do ambiente Spark.
 
-2. Depois de executar a célula que contém o comando mágico, aguarde a criação da sessão Spark.**
+2. **Depois de executar a célula que contém o comando mágico, aguarde a criação da sessão Spark.**
 
     ![Progresso Cluster](.\images\8-progress-cluster.png)
 
@@ -255,11 +255,11 @@ Opções do Comando:
 
     ![Cluster Pronto](.\images\9-cluster-ready.png)
 
-3. Utilize o comando mágico *`%status`* para verificar o status da sessão atual.**
+3. **Utilize o comando mágico *`%status`* para verificar o status da sessão atual.**
 
     ![Status Cluster](.\images\10-status-cluster.png)
 
-> **Nota:** Os clusters da Sessão do OCI Data Flow ficam ativos por 24 horas (1440 minutos) por padrão, porém você pode customizar esse período para criar sessões que permanecerão ativas por até 7 dias (10,080 minutos)(maxDurationInMinutes).
+> **Nota:** Os clusters da Sessão do OCI Data Flow ficam ativos por 24 horas (1440 minutos) por padrão, porém você pode customizar esse período para criar sessões que permanecerão ativas por até 7 dias (10,080 minutos) (maxDurationInMinutes).
 
 Parabéns, você terminou esse laboratório! 🎉
 
@@ -271,5 +271,5 @@ Nesta laboratório, você aprendeu como utilizar notebooks Jupyter no OCI Data S
 
 ## Autoria
 
-- **Autores** - Thais Henrique, Heloisa Escobar, Isabelle Anjos
-- **Último Update Por/Date** - Isabelle Anjos, Jan/2024
+- *Created By/Date* - Thais Henrique, Heloisa Escobar, Isabelle Anjos, Janeiro 2024
+- *Last Updated By* - Isabelle Anjos, Janeiro 2024
