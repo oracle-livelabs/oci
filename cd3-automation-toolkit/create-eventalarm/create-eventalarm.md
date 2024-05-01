@@ -13,7 +13,7 @@ Some examples of how you might use Events and Notifications:
 - Send a Notification to a DevOps team when a database backup completes.
 - Convert files of one format to another when files are uploaded to an Object Storage bucket.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 

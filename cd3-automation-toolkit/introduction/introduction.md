@@ -11,7 +11,6 @@ Estimated Workshop Time: 60 Minutes
 In this workshop, you will learn how to:
 - Get Started with CD3 Automation Toolkit
 - Build OCI infrastructure using CD3 Automation Toolkit
-- Group the generated Terraform files
 - Produce and Inspect Terraform Plan
 - Apply Plan to OCI tenancy
 - OCI Resource Manager Upload
@@ -45,19 +44,20 @@ This generated Terraform code can be used by the OCI Resource Manager or leverag
 
 All resources deployed by the Automation Toolkit are OCI native services, meaning it may have cost impact based on tenancy billing plan.
 
-### Architecture Components
+### Services supported
 
 The Automation Toolkit will deploy a full set of resources suitable for a production cloud, including:
 
 - Identity and Access Management (IAM) Controls
-- One or More Virtual Cloud Networks (VCNs)
+- Virtual Cloud Networks (VCNs)
 - Compute Service
-- Block Volume
+- Block Volumes
 - Autonomous Transaction Processing Database
 - Cloud Events Rules
 - Alarms
 - OCI Notifications 
 - Budget Controls
+
 
 Most of the resources in OCI can be provisioned with Terraform. While beyond the scope of this lab, more information on using Terraform with OCI can be found [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraform.htm).
 

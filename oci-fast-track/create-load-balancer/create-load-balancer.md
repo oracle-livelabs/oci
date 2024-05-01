@@ -53,18 +53,23 @@ Antes de começarmos a criar o serviço Load Balancer, observe que há algumas t
 
 
 1. Instalar Apache Application Server em cada servidor
-	1.  Conecte-se no host Linux usando o usuário opc  
+	1.  Conecte-se no host Linux **(VM-OracleLinux-AD1)** usando o usuário opc  
+	````
+<copy>
+ssh opc@<ip publico da VM>
+</copy>
+````
 	2. Uma vez conectado, mude seu usuário para **ROOT** com o comando: ***`"sudo su – "`***
-	3. Instale o pacote Apache no sistema operacional: ***`"sudo yum install httpd -y"`***
-	4. Inicie o aplicativo Apache : ***`"sudo apachectl start"`***
+	3. Instale o pacote Apache no sistema operacional: ***`"yum install httpd -y"`***
+	4. Inicie o aplicativo Apache : ***`"apachectl start"`***
 	5. Configure o firewall do host local para permitir o tráfego do Apache, para isso use os comandos abaixo no Linux:
-		- ***`sudo systemctl enable httpd`***
-		- ***`sudo apachectl configtest`***
-		- ***`sudo firewall-cmd --permanent --zone=public --add-service=http`***
-		- ***`sudo firewall-cmd --reload`***
+		- ***`systemctl enable httpd`***
+		- ***`apachectl configtest`***
+		- ***`firewall-cmd --permanent --zone=public --add-service=http`***
+		- ***`firewall-cmd --reload`***
 
 
-	6. Para identificar **a primeira instância** de computação usada na interface web (Linux -  AD2), personalize o arquivo ***“index.html”*** Use o seguinte comando como usuário **ROOT**:
+	6. Para identificar **a primeira instância** de computação usada na interface web **(VM-OracleLinux-AD1)**, personalize o arquivo ***“index.html”*** Use o seguinte comando como usuário **ROOT**:
 
 > **Note:** Primeiro copie a 1ª linha do código e cole. Depois copie o corpo do código até < / html> e cole. Por último copie a última linha e cole.
 
@@ -90,7 +95,9 @@ EOF
 </copy>
 ```
 
-2. Na **segunda instância** você repetirá as etapas acima, de **1** a **5**, para identificarmos a segunda instância de computação (Linux – AD3) personalize o arquivo **“index.html”** usando o seguinte comando com usuário **ROOT**:
+2. Na **segunda instância** **(VM-OracleLinux-AD2)** você repetirá as etapas acima, de **1** a **5**, e para identificarmos a segunda instância de computação **(VM-OracleLinux-AD2)** personalize o arquivo **“index.html”** usando o seguinte comando com usuário **ROOT**:
+
+> **Note:** Para desconectar da VM e voltar ao CloudShell utilize o comando **logout**.
 
 > **Note:** Primeiro copie a 1ª linha do código e cole. Depois copie o corpo do código até < / html> e cole. Por último copie a última linha e cole.	
 
@@ -116,27 +123,27 @@ EOF
 </copy>
 ```
 
-3. Teste o comportamento do Apache, tudo que você precisa fazer, é usar o **IP público da instância** do Compute no seu navegador web para verificar se a página principal do Apache aparecerá.
+3. **ATENÇÃO**: Antes de testar o Apache em seu navegador web, certifique-se de já ter criado uma regra de entrada (ingress) na **Security List da VCN**, para que a porta **80** seja liberada para tráfego.
+
+
+![entre na security list](images/vm-vcn-access-21.png)
+![entre na security list](images/load-balancer-sl-4.png)
+![entre na security list](images/vm-ingress-rules-23.png)
+![escreva a regra para abrir a porta 80](images/load-balancer-port-5.png)
+
+Teste o comportamento do Apache, tudo que você precisa fazer, é usar o **IP público da instância** do Compute (VM-OracleLinux-AD1 e VM-OracleLinux-AD2) no seu navegador web para verificar se a página principal do Apache aparecerá.
 
 ![copie o IP público](images/load-balancer-ip-2.png)
 ![cole no navegador](images/load-balancer-navegador-3.png)
+![cole no navegador](images/load-balancer-apache.png)
 
-**ATENÇÃO**: Antes de testar o Apache em seu navegador web, certifique-se de já ter criado uma regra de entrada (ingress) na **Security List do VCN**, para que a porta **80** seja liberada para tráfego.
-
-![entre na security list](images/load-balancer-sl-4.png)
-![escreva a regra para abrir a porta 80](images/load-balancer-port-5.png)
-
-Se tudo estiver OK, você pode testar a instalação do Apache. Tudo o que você precisa fazer é usar o endereço IP da instância pública em seu navegador preferido e provavelmente obterá esta saída:
-
-![teste do servidor web](images/load-balancer-test-6.png)
-
-**IMPORTANTE:** Certifique-se de iniciar a criação do Load Balancer somente depois que ambas as chamadas no apache estiverem funcionando.
+**IMPORTANTE:** Certifique-se de iniciar a criação do Load Balancer somente depois que ambas as chamadas no apache estiverem funcionando **(VM-OracleLinux-AD1 e VM-OracleLinux-AD2)**.
 
 Isso é importante porque se você criar o Load Balancer sem um serviço disponível, o balanceador de carga será criado no estado de “Erro”.
 
 O Load Balancer geralmente leva 5 minutos para "calibrar" seu status.
 
-Nosso objetivo é criar o serviço de Load Balancer somente depois que os dois servidores Apache estiverem em execução, para que o serviço Load Balancer tenha o estado "pronto" e esteja pronto para ser testado.
+Nosso objetivo é criar o serviço de Load Balancer somente depois que os dois servidores Apache estiverem em execução, para que o serviço Load Balancer tenha o estado "pronto" e possa ser testado.
 
 ## Task 2: Criar uma aplicação em Alta Disponibilidade (HA) com Load Balancer e 2 Webservers
 
@@ -146,7 +153,6 @@ Nosso objetivo é criar o serviço de Load Balancer somente depois que os dois s
 
 Clique no botão “Create Load Balancer”:
 ![clique em "Create Load Balancer"](images/load-balancer-create-8.png)
-![selecione o tipo](images/load-balancer-type-9.png)
 
 2. A tela de criação do Load Balancer é um modelo baseado em assistente, onde você será guiado no processo pela interface. Na tela principal, você fornecerá as informações abaixo:
 - Name: **lb-apache**
@@ -154,19 +160,20 @@ Clique no botão “Create Load Balancer”:
 - Bandwidth: **10 Mbps**
 - VCN: **< Selecione sua VCN >**
 - Subnet: **< Selecione sua sub-rede pública >**
-- (escolha 2 sub-redes, mesmas sub-redes onde suas instâncias de computação foram criadas)
 
 ![configure o Load Balancer](images/load-balancer-config-10.png)
+![configure o Load Balancer](images/load-balancer-config-11.png)
 ![selecione o shape do Load Balancer](images/load-balancer-shape-11.png)
 
 3. Defina a política do Load Balancer e adicione os servidores de back-end. 
-Para adicionar servidores de back-end, clique no botão azul “Add Backends”
+Para adicionar servidores de back-end, clique no botão “Add Backends”
 
 ![clique em "Add Backends"](images/load-balancer-backends-12.png)
 
 4. Insira os Backend Set servers (suas duas VM’s Linux):
 
 ![selecione os servidores](images/load-balancer-add-backends-13.png)
+![selecione os servidores](images/load-balancer-backends-14.png)
 
 5. Como última etapa, defina o tipo de tráfego que será tratado
 
@@ -174,17 +181,16 @@ Para adicionar servidores de back-end, clique no botão azul “Add Backends”
 
 Assim que o processo de criação for concluído, você terá as seguintes informações:
 
+![visualize o Load Balancer](images/load-balancer-logs-15.png)
 ![visualize o Load Balancer](images/load-balancer-done-15.png)
 
 **Testando o Load Balancer**
 
-6. Para simular um ambiente de aplicativo, precisamos iniciar um serviço da web em ambas as instâncias de Computação.
+6. Para simular um ambiente de aplicação, vamos chamar o IP Público do Load Balancer e então o mesmo irá direcionar o tráfego para as 2 VMs Linux criadas anteriormentes e adicionadas como backends do Load Balancer.
 
-Para obter saídas diferentes nas chamadas do Load Balancer, adicione conteúdos diferentes ao arquivo Index.html em cada cálculo.
+![teste o Load Balancer](images/load-balancer-apache-2.png)
 
-![teste o Load Balancer](images/load-balancer-test-16.png)
-
-6. Utilize o IP Público do Load Balancer para visualizar sua aplicação sendo direcionada para os 2 servidores com respostas diferentes no arquivo Index.html
+7. Utilize o IP Público do Load Balancer e aperte F5 algumas vezes para visualizar sua aplicação sendo direcionada para os 2 servidores com respostas diferentes no arquivo Index.html
 
 ## Conclusão
 
@@ -193,4 +199,4 @@ Nesta sessão você aprendeu a criar uma aplicação em Alta Disponibilidade (HA
 ## Autoria
 
 - **Autores** - Arthur Vianna, Gustavo Sant'ana, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Date** - Arthur Vianna, Jun/2022
+- **Último Update Por/Date** - Arthur Vianna, Fev/2024

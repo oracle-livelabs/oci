@@ -8,7 +8,7 @@
         },
         {
             "title": "Get Started",
-            "filename": "../../cloud-login/cloud-login.md"
+            "filename": "../../../oci-core-fundamentals/cloud-login/cloud-login.md"
         },
         {
             "title": "Lab 1: Setup Cloud Environment",

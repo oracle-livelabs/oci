@@ -21,6 +21,7 @@ Nesse Lab você vai aprender a criar 2 máquinas virtuais Linux e uma máquina v
 1.	Acesse o OCI Cloud Shell clicando no botão do menu superior direito. A OCI irá provisionar um terminal Linux no web browser
 
 ![abra o cloud shell](./images/vm-open-shell-1.png)
+![abra o cloud shell](./images/vm-open-shell-2.png)
 
 2.	Crie um par de chaves RSA com o comando:
 
@@ -30,6 +31,7 @@ ssh-keygen -t rsa
 
 * Mantenha o nome original (id_rsa) apertando enter
 * O campo “Key Passphrase” é opcional
+* Aperte "ENTER" novamente até finalizar a criação
 
 ![criar chave ssh](./images/vm-ssh-key-2.png)
 
@@ -39,7 +41,7 @@ ssh-keygen -t rsa
 cat ~/.ssh/id_rsa.pub
 ```
 
-* Selecione e Copie o conteúdo dessa chave, pois a usaremos para a criação das máquinas virtuais Linux
+* Selecione e Copie o conteúdo dessa chave, pois a usaremos para a criação das máquinas virtuais Linux. Guarde em um bloco de notas se possível, para uso posterior.
 
 ![copiar texto da chave](./images/vm-copy-key-3.png)
 
@@ -61,7 +63,7 @@ Para isso, basta clicar no menu do Cloud Shell e solicitar o Download:
 
 ## Task 2: Criar 2 máquinas virtuais Oracle Linux
 
-1.	No Menu Principal, clique em : Compute > Instances, então “Create Instance” (Botão Azul) :
+1.	No Menu Principal, clique em : Compute > Instances, então “Create Instance”:
 
 ![acesse compute no menu principal](./images/vm-access-compute-7.png)
 
@@ -69,9 +71,9 @@ Para isso, basta clicar no menu do Cloud Shell e solicitar o Download:
 
 * Name of your instance: VM-OracleLinux-AD1
 * Availability Domain: AD 1
-* Operating System: Oracle Linux 7.9
+* Operating System: Oracle Linux 8
 * Instance Type: Virtual Machine
-* Instance Shape: AMD VM.Standard.E3.Flex
+* Instance Shape: AMD VM.Standard.E3.Flex (Caso necessitar usar outro shape, procure utilizar os shapes AMD ou Intel. Ex: VM.Standard.E4.Flex ou VM.Standard3.Flex)
 * Choose SSH Key File: Insira a chave SSH pública (.pub)
 * Virtual Cloud Network Compartment: "Compartimento-Trial"
 * Virtual Cloud Network: "VCN-TRIAL"
@@ -93,22 +95,25 @@ Para isso, basta clicar no menu do Cloud Shell e solicitar o Download:
 3. Ao inserir as informações de rede, lembre-se de escolher a opção “Assign a Public IP address” para Atribuir um endereço IP público à instância de computação.
 
 ![Configurações de rede para VM](./images/vm-network-config-13.png)
+![Configurações de rede para VM](./images/vm-network-config-14.png)
 
-4. Cole a chave pública SSH criada por você no exercício 3A e clique no botão “Create”.
+4. Clique em PASTE Public Key e cole a chave pública SSH criada por você no passo 3 da Task 1. Após isso clique no botão “Create”.
 
 ![cole a chave publica](./images/vm-paste-priv-key-14.png)
+![confira a maquina virtual criada](./images/vm-create-15.png)
 
 Você provavelmente terá a nova instância devidamente criada em alguns minutos. Depois de terminar o processo de criação, a tela principal ficará assim:
 
+![confira a maquina virtual criada](./images/vm-creating-15.png)
 ![confira a maquina virtual criada](./images/vm-created-15.png)
 
 5. Repita os passos acima para criar a Máquina Virtual (VM) Linux 2, porém desta vez com os dados abaixo:
 
 * Name of your instance: VM-OracleLinux-AD2
 * Availability Domain: AD 2
-* Operating System: Oracle Linux 7.9
+* Operating System: Oracle Linux 8
 * Instance Type: Virtual Machine
-* Instance Shape: AMD VM.Standard.E3.Flex
+* Instance Shape: AMD VM.Standard.E3.Flex (Caso necessitar usar outro shape, procure utilizar os shapes AMD ou Intel. Ex: VM.Standard.E4.Flex ou VM.Standard3.Flex)
 * Choose SSH Key File: Insira a chave SSH pública (.pub)
 * Virtual Cloud Network Compartment: "Compartimento-Trial"
 * Virtual Cloud Network: "VCN-TRIAL"
@@ -116,10 +121,13 @@ Você provavelmente terá a nova instância devidamente criada em alguns minutos
 * Subnet: Public Subnet
 * Assign Public IP Address
 
+> **Note:** Utilize a MESMA chave pública da VM-OracleLinux-AD1 para a VM-OracleLinux-AD2.
+
 ## Task 3: Acessar a VM Linux pelo OCI Cloud Shell
 
-1. Pegue o IP público da instância
+1. Navegue até Compute -> Instances e colete o IP público da instância
 
+![localize o IP publico da vm](./images/vm-access-compute-7.png)
 ![localize o IP publico da vm](./images/vm-public-ip-16.png)
 
 2. No OCI Cloud Shell, faça conexão com a máquina criada com o comando:
@@ -146,10 +154,9 @@ Dados para criação da VM Windows:
 
 * Name of your instance: VM-Windows-AD3
 * Availability Domain: AD 3
-* Operating System: Windows Server 2016 Standard
+* Operating System: Windows Server 2022 Standard
 * Instance Type: Virtual Machine
-* Instance Shape: AMD VM.Standard.E3.Flex
-* Choose SSH Key File: Insira a chave SSH pública (.pub)
+* Instance Shape: AMD VM.Standard.E3.Flex (Caso necessitar usar outro shape, procure utilizar os shapes AMD ou Intel. Ex: VM.Standard.E4.Flex ou VM.Standard3.Flex)
 * Virtual Cloud Network Compartment: "Compartimento-Trial"
 * Virtual Cloud Network: "VCN-TRIAL"
 * Subnet Compartment: "Compartimento-Trial"
@@ -157,6 +164,9 @@ Dados para criação da VM Windows:
 * Assign Public IP Address
 
 ![selecione AD, shape e imagem windows](./images/vm-shape-windows-18.png)
+![selecione AD, shape e imagem windows](./images/vm-shape-windows-19.png)
+![selecione AD, shape e imagem windows](./images/vm-shape-windows-20.png)
+![selecione AD, shape e imagem windows](./images/vm-shape-windows-21.png)
 
 2. Ao inserir as informações de rede, lembre-se de escolher a opção “Assign a Public IP address” para Atribuir um endereço IP público à instância de computação.
 
@@ -229,4 +239,4 @@ Nesta sessão você aprendeu a criar Máquina Virtuais Linux e Windows e aprende
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Updated Por/Data** - Arthur Vianna, Jun/2022
+- **Último Updated Por/Data** - Arthur Vianna, Fev/2024
