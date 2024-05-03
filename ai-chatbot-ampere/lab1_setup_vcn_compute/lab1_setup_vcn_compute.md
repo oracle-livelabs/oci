@@ -37,8 +37,8 @@ In this lab, you will:
       - **PRIVATE SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.1.0/24)
       - Click **Next**
 
-    ![](images/Custom_Image_006.PNG " ")
-    ![](images/Custom_Image_016.PNG " ")
+    ![](images/custom_image_006.PNG " ")
+    ![](images/custom_image_016.PNG " ")
 
 5. Verify all the information and  Click **Create**.
 
@@ -54,15 +54,15 @@ In this lab, you will:
 
 7. Inside your VCN click **subnets** on the left panel under resources and select your **public subnet**.
 
-    ![](images/Custom_Image_017.png " ")
+    ![](images/custom_image_017.png " ")
 
 8. Click **Default Security List** for your public subnet. The default Ingress Rules for your VCN are displayed.
 
-    ![](images/Custom_Image_018.png " ")
+    ![](images/custom_image_018.png " ")
 
 9. Click **Add Ingress Rules**. An Add Ingress Rules dialog is displayed.
 
-    ![](images/Custom_Image_019.png " ")
+    ![](images/custom_image_019.png " ")
 
 10. Fill in the ingress rule with the following information:
         
@@ -75,7 +75,7 @@ In this lab, you will:
     - **Description**: (leave-blank)
     - Click **Add Ingress Rule**
 
-    ![](images/Custom_Image_020.png " ")
+    ![](images/custom_image_020.png " ")
 
     *Verify the ports added to the VCN. Now we have a VCN with required ingress ports.*  
 
@@ -159,11 +159,11 @@ appear.
 
 4. Locate the first compute instance, click the Action icon and then **Terminate**.
 
-     ![](images/Custom_Image_0013.png " ")
+     ![](images/custom_image_0013.png " ")
 
 5. Make sure Permanently delete the attached Boot Volume is checked, Click **Terminate Instance**. Wait for instance to fully Terminate.
 
-     ![](images/Custom_Image_0014.png " ")
+     ![](images/custom_image_0014.png " ")
 
 *Congratulations! You have successfully completed the lab.*<br/>
 You may now **proceed to the next lab**.

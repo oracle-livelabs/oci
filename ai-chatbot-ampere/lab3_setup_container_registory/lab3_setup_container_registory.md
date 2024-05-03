@@ -146,7 +146,7 @@ appear.
 
 4. Navigate to your registry (**Container Registry** under **Developer Services**), Click Registry Name, Under **Actions** Click **Delete Repository**, Click **Delete** in confirmation window.
 
-     ![](images/OCIR_HOL0042.png " ")
+     ![](images/ocir_hol42.png " ")
 
 *Congratulations! You have successfully completed the lab.*
 
