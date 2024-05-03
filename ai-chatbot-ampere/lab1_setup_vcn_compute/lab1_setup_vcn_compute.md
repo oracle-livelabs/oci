@@ -37,8 +37,9 @@ In this lab, you will:
       - **PRIVATE SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.1.0/24)
       - Click **Next**
 
-    ![](images/custom_image_006.PNG " ")
-    ![](images/custom_image_016.PNG " ")
+    ![](images/custom_image_006.png " ")
+    
+    ![](images/custom_image_016.png " ")
 
 5. Verify all the information and  Click **Create**.
 
