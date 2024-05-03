@@ -4,6 +4,8 @@
 
 In this lab we use the deployed application to run LLama models.
 
+Estimated Time: 10 minutes
+
 ## Task 1: Re-access the serge-ai chat application
 
 1. Re-access the application on your browser, open a browser windows and enter following URL:
@@ -33,7 +35,6 @@ In this lab we use the deployed application to run LLama models.
     Play around with the models and their parameters to generate different results.
 
 *Congratulations! You have successfully completed the lab.*<br/>
-You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Animesh Sahay and Francis Regalado, Enterprise Cloud Architect, OCI Cloud Venture

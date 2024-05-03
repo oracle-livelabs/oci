@@ -4,6 +4,8 @@
 
 Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables you to simplify your development to production workflow. Oracle Cloud Infrastructure Registry makes it easy for you as a developer to store, share, and manage development artifacts like Docker images. And the highly available and scalable architecture of Oracle Cloud Infrastructure ensures you can reliably deploy your applications.
 
+Estimated Time: 10 minutes
+
 ## Task 1: Create Auth token and a OCIR repository
 
 1. Sign into your OCI console and click the user icon (top right)  then **My Profile**. Under Resources Click **Auth Token**, then **Generate Token**. In pop up window provide a description then Click **Generate Token**
@@ -149,8 +151,9 @@ appear.
      ![](images/ocir_hol42.png " ")
 
 *Congratulations! You have successfully completed the lab.*
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
-* **Author** - <Animesh Sahay and Francis Regalado, Enterprise Cloud Architect, OCI Cloud Venture>
-* **Contributors** -  <Andrew Lynch, Director Cloud Engineering, OCI Cloud Venture>
-* **Last Updated By/Date** - <Animesh Sahay, April 2024>
+* **Author** - Animesh Sahay and Francis Regalado, Enterprise Cloud Architect, OCI Cloud Venture
+* **Contributors** -  Andrew Lynch, Director Cloud Engineering, OCI Cloud Venture
+* **Last Updated By/Date** - Animesh Sahay, April 2024
