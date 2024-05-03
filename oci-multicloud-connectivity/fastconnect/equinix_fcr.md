@@ -23,15 +23,13 @@ In this lab, you will:
 This lab assumes you have:
 
 * Tasks from the previous labs are completed.
-* Access to the Equinix Fabric portal with permissions to create new connections and deploy a Network Edge.
-* A [Public SSH RSA Key](https://deploy.equinix.com/developers/docs/metal/accounts/ssh-keys/) uploaded to the Equinix console. The SSH Keypair from the previous lab can be used.
-* An [Access Control List Template](https://docs.equinix.com/en-us/MicroContent/Interconnection/NE/microcontent/NE-access-control-list/how-to-create-access-control-list.htm) allowing your public IP address and allows SSH (TCP port 22) in the Equinix Console.
+* Access to the Equinix Fabric portal with permissions to create new connections and deploy a Fabric Cloud Router.
 
 ### Video Walkthrough
 
-[Equinix Fabric Cloud Router Quickstart Video](youtube:2A5jZrqhK9I:large)
+[Equinix Fabric Cloud Router Quickstart Video](youtube:2A5jZrqhK9I:large) @@UPDATE LINK
 
-## Task 1: Deploy an Equinix Network Edge
+## Task 1: Deploy an Equinix Fabric Cloud Router
 
 1. Log into the Equinix portal. Navigate to **Network Edge** and click **Create Virtual Device**.
     ![Create Virtual Device](../oci-multicloud-connectivity/fastconnect/images/equinix_network_edge/network-edge-1.png)
@@ -65,7 +63,7 @@ This lab assumes you have:
 5. Copy the OCID of the Virtual Circuit and move to the next task.
     ![Virtual Circuit OCID](../oci-multicloud-connectivity/fastconnect/images/equinix_network_edge/eq_fastconnect-5.png)
 
-## Task 3: Create a Connection to the Equinix Network Edge
+## Task 3: Create a Connection to the Equinix Fabric Cloud Router
 
 1. Go back to the Network Edge in the Equinix console. Under **Virtual Device Details -> Connections** the **Virtual Connections** list should be empty. Click **Create Connection** to establish a private connection from Oracle Cloud to VyOS. 
     ![Private Connection](../oci-multicloud-connectivity/fastconnect/images/equinix_network_edge/connections-1.png)
@@ -85,7 +83,7 @@ This lab assumes you have:
 
 ## Task 4: Establish Connectivity with Additional Cloud Providers
 
-1. An additional private connection will need to be made between your Network Edge and additional cloud provider that you choose. For most cloud providers, you will be able to click **Create Connection** and follow the steps within the Equinix portal to connect to your additional cloud provider. You can also follow the [Equinix Network Edge Documentation](https://docs.equinix.com/en-us/Content/Interconnection/NE/landing-pages/NE-landing-main.htm) for further guidance on this connectivity.
+1. An additional private connection will need to be made between your Fabric Cloud Router and additional cloud provider that you choose. For most cloud providers, you will be able to click **Create Connection** and follow the steps within the Equinix portal to connect to your additional cloud provider. You can also follow the [Equinix Network Edge Documentation](https://docs.equinix.com/en-us/Content/Interconnection/NE/landing-pages/NE-landing-main.htm) for further guidance on this connectivity.
 
     The lab assumes you made the following setup on the additional cloud provider. See the **Azure Interconnect** section if you need an example how to do this configuration on the other cloud providers.
 
@@ -95,7 +93,7 @@ This lab assumes you have:
     * A virtual machine is deployed in the private IP space, and ICMP (ping) is allowed.
     * Proper routing is configured to get traffic from the virtual machine to the private connection service.
 
-## Task 5: Configure VyOS Virtual Router (Network Edge)
+## Task 5: Confirm BGP Routes are Received and Advertised from both Cloud Providers
 
 1. Navigate to your Network Edge and verify there is a connection for OCI and for your additional cloud provider.
     ![Multiple Cloud Providers](../oci-multicloud-connectivity/fastconnect/images/equinix_network_edge/vyos-setup-1.png)
