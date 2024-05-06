@@ -31,13 +31,13 @@ This lab assumes you have:
 
 ## Task 1: Deploy an Equinix Fabric Cloud Router
 
-1. Log into the Equinix portal. Navigate to **Cloud Routers** and click **Create a Fabric Cloud Router**.
+1. Log into the Equinix portal. Navigate to **Cloud Routers** under the **Fabric and Network Edge** menu, click **Create a Fabric Cloud Router**.
     ![Create Fabric Cloud Router](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task1-step1-click-create-fabric-cloud-router.png)
 2. Under **Select Location**, Select the Equinix data center location to deploy the Fabric Cloud Router. Under the **Billing Account** drop-down, pick the appropriate account. Click **Next: Fabric Cloud Router Details**.
     ![Select Location](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task1-step2-select-fcr-location.png)
 3. Under **Fabric Cloud Router Name**, enter in a name for your Fabric Cloud Router. Select the **Lab** package under **Select Package**. Click **Next: Review**
     ![Fabric Cloud Router Details](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task1-step3-fcr-details.png)
-4. Review **Fabric Cloud Router Details**, **Pricing Overview** and optionally setup email notifications under **Notifications**. Once finished scroll down and select **Submit Order**.
+4. Review **Fabric Cloud Router Details**, **Pricing Overview** and optionally setup email notifications under **Notifications**. Once finished scroll down and select **Submit Order**. **Note:** Copy the Autonomous System Number (ASN) provided. This will be added to the FastConnect Parameters in OCI.
     ![Review Fabric Cloud Router Details](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task1-step4-fcr-review.png)
 
 ## Task 2: Create a FastConnect Connection
@@ -45,13 +45,14 @@ This lab assumes you have:
 1. From the Oracle Cloud Console, go to the navigation menu and click on **Networking -> Customer Connectivity -> FastConnect**.
     ![Navigate to FastConnect](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/eq_fastconnect-1.png)
 2. Under **FastConnect Connections**, verify you are in the correct compartment for this lab and click **Create FastConnect**.
-    ![Create FastConnect](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/eq_fastconnect-2.png)
+    ![Create FastConnect](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task2-step1-create-fc.png)
 3. Under **Connection Type**, select **FastConnect Partner**. Under **Partner**, select **Equinix: Fabric**.
-    ![Partner Equinix](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/eq_fastconnect-3.png)
-4. Set the FastConnect Parameters as seen below.
-    ![FastConnect Parameters](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/eq_fastconnect-4.png)
+    ![Partner Equinix](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task2-step2-fc-partner.png)
+4. Set the FastConnect Parameters as seen below. **Note:** The Customer BGP ASN should be set the ASN provided by Equinix
+    ![FastConnect Parameters](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task2-step3-1-fc-config.png)
+    ![FastConnect Parameters2](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task2-step3-2-fc-config.png)
 5. Copy the OCID of the Virtual Circuit and move to the next task.
-    ![Virtual Circuit OCID](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/eq_fastconnect-5.png)
+    ![Virtual Circuit OCID](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task2-step4-copy-fc-ocid.png)
 
 ## Task 3: Create a Connection to the Equinix Fabric Cloud Router
 
