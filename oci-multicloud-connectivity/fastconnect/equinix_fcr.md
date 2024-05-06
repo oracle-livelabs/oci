@@ -1,4 +1,4 @@
-![Deployment Diagram](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/topology-equinix-network-edge.png)
+![Deployment Diagram](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/topology-equinix-fcr.png) @@UPDATE LINK
 
 # Equinix (Fabric Cloud Router) Deployment
 
