@@ -1,4 +1,4 @@
-![Deployment Diagram](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/topology-equinix-fcr.png) @@UPDATE LINK
+![Deployment Diagram](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/topology-equinix-fcr.png)
 
 # Equinix (Fabric Cloud Router) Deployment
 
@@ -72,17 +72,14 @@ This lab assumes you have:
 
 ## Task 4: Configure Routing Details
 
-1. An additional private connection will need to be made between your Fabric Cloud Router and additional cloud provider that you choose. For most cloud providers, you will be able to click **Create Connection** and follow the steps within the Equinix portal to connect to your additional cloud provider. You can also follow the [Equinix Network Edge Documentation](https://docs.equinix.com/en-us/Content/Interconnection/NE/landing-pages/NE-landing-main.htm) for further guidance on this connectivity.
+1. In the **Connections -> Routing Details** section select **Configure Routing**.
+    ![Configure Routing](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task4-step1-fcr-configure-routing.png)
+2. Under **Configure Routing Details**, Set the FastConnect Parameters as seen below. Once finished click **Apply Changes**. You will then be redirected back to the **Routing Details** page.
+    ![Configure Routing Details](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task4-step2-fcr-configure-routing-details.png)
+3.  **Configure Routing Details**, After a few minutes, confirm that both the **Direct Status** and **BGP Status** displays a green **Provisioned** status.
+    ![Configure Routing Details](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task4-step3-fcr-routing-details.png)
 
-    The lab assumes you made the following setup on the additional cloud provider. See the **Azure Interconnect** section if you need an example how to do this configuration on the other cloud providers.
-
-    * A BGP interface with the IP address of 169.254.1.1/30.
-    * The BGP ASN number is 64512.
-    * The private IP address space is 10.100.0.0/16
-    * A virtual machine is deployed in the private IP space, and ICMP (ping) is allowed.
-    * Proper routing is configured to get traffic from the virtual machine to the private connection service.
-
-## Task 5: Confirm BGP Routes are Received and Advertised from both Cloud Providers
+## Task 5: Verify Active Routes on the Fabric Cloud Router
 
 1. Navigate to your Network Edge and verify there is a connection for OCI and for your additional cloud provider.
     ![Multiple Cloud Providers](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/vyos-setup-1.png)
