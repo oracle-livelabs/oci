@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Estimated Time: 30 minutes
+Estimated Time: 60 minutes
 
 ### About FastConnect
 
@@ -90,28 +90,8 @@ This lab assumes you have:
     ![CloudShell](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/cloudshell-1.png)
 4. With the username created in Task 1 of the lab, ssh into the VyOS Network Edge. The command will look something like this. **ssh username@vyos\_public\_ip**. The SSH RSA keypair is used to authenticate the session, so no password will be needed to connect to the appliance.
     ![VyOS SSH](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/vyos-setup-4.png)
-5. Copy the configuration below to your clipboard, and paste in into the SSH session. This will start the BGP process on the VyOS router and setup connections from the Network Edge to the cloud providers. This configuration assumes the additional cloud provider's AS is 64512 and the remote IP address is 169.254.1.1.
-        ```text
-        <copy>
-        config
-        set interfaces ethernet eth2 address 169.254.0.2/30
-        set protocols bgp 65001 address-family ipv4-unicast
-        set protocols bgp 65001 neighbor 169.254.0.1 address-family ipv4-unicast
-        set protocols bgp 65001 neighbor 169.254.0.1 remote-as 31898
-        set interfaces ethernet eth3 address 169.254.1.2/30
-        set protocols bgp 65001 neighbor 169.254.1.1 address-family ipv4-unicast
-        set protocols bgp 65001 neighbor 169.254.1.1 remote-as 64512
-        commit;save;exit
-        </copy>
-        ```
 
-    > **Note:** If your BGP connection requires a password, add this to the BGP neighbor configuration. **set protocols bgp 65001 neighbor 169.254.1.1 password 'passwordgoeshere'**
-
-    ![VyOS Configuration](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/vyos-setup-5.png)
-6. Run the command **show ip bgp sum** in the VyOS router. You can confirm the configuration is working if the **Up/Down** status of each neighbor has a timer indicating it's uptime, and **PrxRcd** has a number greater than zero.
-    ![Verify Route Exchange](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/vyos-setup-6.png)
-
-7. If you've gone this far, congratulations! This is a major mile stone in this lab. Go ahead and proceed to the next lab.
+5. If you've gone this far, congratulations! This is a major mile stone in this lab. Go ahead and proceed to the next lab.
 
 ## Acknowledgements
 
