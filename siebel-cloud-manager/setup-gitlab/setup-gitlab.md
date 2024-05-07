@@ -27,17 +27,25 @@ In this task, we will visit the Oracle Architecture Center to deploy the GitLab 
 
 During the stack creation, review all default values displayed. Confirm each value or enter a new value as appropriate for our task.
 
-1. Go to this document about deploying GitLab - [https://docs.oracle.com/en/solutions/deploy-gitlab-ci-cd-oci/index.html](https://docs.oracle.com/en/solutions/deploy-gitlab-ci-cd-oci/index.html)
+1. Click the following link to review documentation about deploying GitLab - [https://docs.oracle.com/en/solutions/deploy-gitlab-ci-cd-oci/index.html](https://docs.oracle.com/en/solutions/deploy-gitlab-ci-cd-oci/index.html)
 
 2. In the Deploy section of this page, click the **Deploy to Oracle Cloud** link.
 
     ![In the Deploy section, click the Deploy to Oracle Cloud link](./images/deploy-to-oracle-cloud.png " ")
 
-3. In the stack information section, specify the compartment in which to create the GitLab stack and leave the default values for **Working Directory**, **Name**, **and Description** . Click ***Next***
+3. Check the region if necessary in case the deploy link changed it.
+
+    ![Change deployment region](./images/deployment-region.png " ")
+
+4. In the **Stack information** section, specify the **Compartment** in which to create the GitLab stack. In the SCM provisioning lab, a new sub-compartment was automatically provisioned as part of Task 2. To keep everything together, specify that compartment here.
 
     ![GitLab Stack Information](./images/gitlab-stack-information.png " ")
 
-4. In **Compute Configuration** section, specify the new compartment **scm-siebel-cm** (created by the Siebel Cloud Manager stack) and the rest of the options such as **Availability Domain, Instance name, DNS Hostname Label, Flex Shape OCPUs, and Compute Image** as shown below. Leave the default values for **External URL, Tag key name, and Tag value**
+
+5. Leave the default values for **Working Directory**, **Name**, **and Description**. Click ***Next***
+
+
+6. In **Compute Configuration** section, specify the same compartment again for **Compute Compartment**. Complete the remaining options as shown below. Leave the default values for **External URL, Tag key name, and Tag value**
 
     **Availability Domain:**
 
@@ -51,20 +59,29 @@ During the stack creation, review all default values displayed. Confirm each val
 
         <copy>gitlabserver</copy>
 
-    **Flex Shape OCPUs:**
+    **Compute Shape:**
 
-        <copy>1</copy>
+        VM.Standard.E3.Flex
+
     **Flex Shape Memory:**
 
-        <copy>6</copy>
+        6
+
+    **Flex Shape OCPUs:**
+
+        1
 
     **Compute Image**
 
-        (Choose any image from the list)
+        (Choose the most recent image from the list)
+
+    **Public SSH Key string**
+
+        (Paste in (or choose) the SSH public key you used in the previous lab)
 
     **Network Compartment**
 
-        <copy>scm-siebel-cm</copy>
+        (Copy the compartment you selected for the Compute Compartment above)
 
     **Network Strategy**
 
@@ -72,7 +89,7 @@ During the stack creation, review all default values displayed. Confirm each val
 
     **Existing VCN**
 
-        (Choose the VCN that was previously created by the Siebel Cloud Manager stack)
+        (Choose the VCN that was previously created by the Siebel Cloud Manager stack - it should be the only option for the selected compartment)
 
     **Subnet Type**
 
@@ -86,33 +103,43 @@ During the stack creation, review all default values displayed. Confirm each val
 
         Use Recommended Configuration
 
-5. Click ***Next***
+7. Click ***Next***
 
-6. Verify the configuration variables. To immediately provision the resources defined in the Terraform configuration, check **Run Apply**
+8. Verify the configuration variables. To immediately provision the resources defined in the Terraform configuration, check that **Run Apply** is ticked
    
-7. Click ***Create***
+9. Click ***Create***
 
-     The GitLab stack **apply** job will run successfully.
+     The GitLab stack **apply** job should run successfully.
 
 ## Task 2: Configure HTTPS for GitLab
 
 1. On the Oracle Cloud Console page, navigate to **Compute** and **Instances**.
 
-2. In the **List Scope** section on the left side panel, choose our compartment **scm-siebel-cm**.
+2. In the **List Scope** section on the left side panel, choose the compartment used for the lab **scm-siebel\<date\>-cm**.
 
-3. Drill down on the instance name **gitlab-server** and note the Public IP address.
+3. Note the Public IP address.
 
-   ![Drilldown on GitLab server](./images/drilldown-on-gitlab-server.png " ")
+   ![Note public IP](./images/note-public-ip-address.png " ")
 
-4. Connect to this instance through an ssh client such as PuTTY using the ssh private key that we had created in Lab 1. Enter the username as **opc**
+4. Connect to this instance via ssh or through an ssh client such as PuTTY using the ssh private key that we had created in Lab 1 and a username of **opc**
 
-5. After successful login, execute the following command to change to root user.
+   ```
+   $ <copy>ssh -i cloudshellkey opc@{Public IP of GitLab instance}</copy>
+   ```
+
+5. You can check the version of Gitlab installed as follows
+
+   ```
+   $ <copy>sudo gitlab-rake gitlab:env:info</copy>
+   ```
+
+6. After successful login, execute the following command to change to root user.
 
    ```
    $ <copy>sudo su</copy>
    ```
 
-6. In the **/etc/gitlab/gitlab.rb** file, edit the **external_url** parameter as shown below using the vi editor.
+7. In the **/etc/gitlab/gitlab.rb** file, edit the **external_url** parameter as shown below using the vi editor, then save your changes and close the file.
 
    ```
    $ <copy>vi /etc/gitlab/gitlab.rb</copy>
@@ -120,22 +147,15 @@ During the stack creation, review all default values displayed. Confirm each val
    external_url 'https://{Public IP of the GitLab Instance}'
    ```
 
-7. In the same file, disable the **letsencrypt** feature by setting its value to **false**
+8. Create a self-signed certificates using OpenSSL. Run the following commands one by one to begin the process.
+
+    > **Note:** Self-signed certificates are only suggested for this lab. Typically you will use Certificate Authority (CA) signed certificates. Follow [Gitlab's documentation to troubleshoot SSL issues](https://docs.gitlab.com/omnibus/settings/ssl/ssl_troubleshooting.html)
 
    ```
-   $ <copy>vi /etc/gitlab/gitlab.rb</copy>
-
-   letsencrypt['enable'] = false
-   ```
-8. Create the self-signed certificates using OpenSSL. Run the following commands one by one.
-
-    > **Note:** The self-signed certificates are only for this lab. For a real-world implementation, use Certificate Authority (CA) signed certificates for security reasons.
-
-   ```
-   $ <copy>sudo mkdir -p /etc/gitlab/ssl</copy>
+   $ <copy>mkdir -p /etc/gitlab/ssl</copy>
    ```
    ```
-   $ <copy>sudo chmod 755 /etc/gitlab/ssl</copy>
+   $ <copy>chmod 755 /etc/gitlab/ssl</copy>
    ```
    ```
    $ <copy>cd /etc/gitlab/ssl</copy>
@@ -152,13 +172,20 @@ During the stack creation, review all default values displayed. Confirm each val
    ```
    $ <copy>openssl req -new -key {Public IP of GitLab instance}.key -out {Public IP of GitLab instance}.csr -subj "/CN=localhost"</copy>
    ```
-9. Create a configuration file named **device-csr.conf** under **/etc/gitlab/ssl** directory with the following content.
+9. Create a configuration file named **device-csr.conf**
+
+   ```
+   $ <copy>vi device-csr.conf</copy>
+   ```
+
+10. Populate this file with the following the save and close the file
 
    ```
    <copy>[req]
    distinguished_name = req_distinguished_name
    req_extensions = v3_req
    prompt = no
+
    [req_distinguished_name]
    C = US
    ST = UT
@@ -166,41 +193,53 @@ During the stack creation, review all default values displayed. Confirm each val
    O = Oracle
    OU = Corp
    CN = localhost
+
    [v3_req]
    keyUsage = nonRepudiation, digitalSignature, keyEncipherment
    extendedKeyUsage = serverAuth
    subjectAltName = @alt_names
+
    [alt_names]
    IP.1 = {Public IP of GitLab instance}</copy>
    ```
-10. After the file **device-csr.conf** is created, run the following command.
+
+11. Run the following command to finally create a self-signed certificate
 
    ```
    $ <copy>openssl x509 -req -in {Public IP of GitLab instance}.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out {Public IP of GitLab instance}.crt -extfile device-csr.conf -extensions v3_req -days 365</copy>
    ```
-11. Reconfigure GitLab by running the below command.
+
+12. Reconfigure GitLab by running the below command.
 
    ```
-   $ <copy>sudo gitlab-ctl reconfigure</copy>
-   ```
-12. Copy the **rootCA.crt** from **/etc/gitlab/ssl** folder to the Siebel Cloud Manager instance's **/home/opc/certs** folder.
-
-## Task 3:  Upgrade GitLab for enhanced security
-
-To avoid **CVE-2021-22205** vulnerability, we shall now upgrade GitLab.
-
-
-1. In the GitLab instance's terminal, run the following command.
-
-   ```
-   $ <copy>sudo yum install -y gitlab-ee-13.8.8-ee.0.el8</copy>
+   $ <copy>gitlab-ctl reconfigure</copy>
    ```
 
-2. Once the above command finishes upgrading GitLab, restart GitLab by executing the below command.
+13. Prepare to copy **rootCA.crt** from Gitlab machine to SCM machine by creating a file on the Gitlab machine containing the SSH key.
 
    ```
-   $ <copy>sudo gitlab-ctl restart</copy>
+   $ <copy>vi ~/cloudshellkey</copy>
    ```
+
+14. Paste in the private key you created earlier then save the file and close it.
+
+15. Change the permission of the private key so that it's not visible to other users
+
+   ```
+   $ <copy>chmod 600 ~/cloudshellkey</copy>
+   ```
+
+13. Copy the **rootCA.crt** from **/etc/gitlab/ssl** folder to the Siebel Cloud Manager instance's **/home/opc/certs** folder.
+
+   ```
+   $ <copy>scp -i ~/cloudshellkey rootCA.crt opc@{Public IP address for SCM instance}:/home/opc/certs</copy>
+   ```
+
+## Task 3:  Plan to keep your Gitlab instance up to date
+
+1. Review [Gitlab's documentation for updating](https://docs.gitlab.com/ee/update/)
+
+2. Keep an eye on [Gitlab's release page](https://about.gitlab.com/releases/categories/releases/) to be aware of new releases, the issues they fix, and the features they offer
 
 ## Task 4:  Generate a GitLab Access Token
 
@@ -211,28 +250,35 @@ We need to generate a GitLab Access Token that will be used in Lab 4 where we de
    ```
    <copy>https://{Public IP of GitLab Instance}</copy>
    ```
+
    > **Note:** Sometimes, we might encounter the **502 Error** upon launching the GitLab URL and refreshing the page at the time should display the right content.
 
-   
-2. Give a new password for the **root** user per the prompt, confirm the password, and click ***Change your password***.
+   > **Note:** As we're using a self-signed certificate, your browser is expected to complain and ask for your explicit permission to access the security risk entailed.
 
-   ![GitLab New Password](./images/gitlab-new-password.png)
+2. Obtain the initial root user password, randomly generated during installation from the gitlab machine.
 
-3. We will be prompted to log in to GitLab. Enter the following credentials and click ***Sign in***.
+   ```
+   $ <copy>ssh -i cloudshellkey opc@{Public IP of GitLab instance}</copy>
+   ```
+   ```
+   $ <copy>sudo more /etc/gitlab/initial_root_password</copy>
+   ```
 
-    **Username**
+2. Log in as root with the initial root password..
 
-        <copy>root</copy>
+   ![GitLab Login](./images/gitlab-initial-login.png)
 
-    **Password**
+3. If you wish to change, the root password from the default, now is a good time. The file above will be deleted 24 hours after initial setup. Click on the user icon on the right hand side at the top left, and select **Edit Profile**
 
-        {The new password that was set earlier}
+   ![GitLab Edit Profile](./images/gitlab-edit-profile.png)
 
-4. After logging in, click the ***Profile Icon*** in the right-hand top corner and click ***Settings***.
+4. Now click the **Password** option on the left menu, and fill in the form to change the password, then click **Save password**.
 
-   ![GitLab Profile Icon](./images/gitlab-profile-icon.png)
+   ![GitLab Edit Profile](./images/gitlab-change-password.png)
 
-5. In the left side panel, navigate to ***Access Tokens*** page.
+5. In the left side panel, navigate to ***Access Tokens*** and then click **Add new token** on the right hand side.
+
+   ![GitLab Profile Icon](./images/gitlab-add-new-token.png)
 
 6. Give the following values for the respective fields.
 
@@ -242,7 +288,7 @@ We need to generate a GitLab Access Token that will be used in Lab 4 where we de
 
     **Expires at:**
 
-        {Give a distant future date}
+        {Give a future date not more than a year away}
 
     **Scope:**
 
@@ -250,9 +296,9 @@ We need to generate a GitLab Access Token that will be used in Lab 4 where we de
 
    ![GitLab Access Token](./images/gitlab-access-token.png)
 
-7. Click ***Create Personal Access Token***.
+7. Scroll down and click ***Create Personal Access Token***.
 
-8. Note the token displayed in the **Your new personal access token** field.
+8. Note the token displayed in the **Your new personal access token** field (click the eye icon to see, or the copy icon to copy to the clipboard).
 
    ![Access Token Generated](./images/access-token-generated.png)
 
@@ -264,6 +310,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author:** Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
+* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
-* **Last Updated By/Date** - Sampath Nandha, Principal Cloud Architect, March 2023
+* **Last Updated By/Date** - Duncan Ford, Software Engineer, May 2024

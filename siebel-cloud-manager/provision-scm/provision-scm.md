@@ -107,7 +107,7 @@ The Siebel Cloud Manager Stack will create the following resources,
 
    ![Select instance resource options](./images/select-scm-instance-resources.png)
 
-    f. Ensure you click to assign a public ip address initially. This will allow easy initial access for SSH. No other ports will be exposed by default, and you can constrain access to SCM's web interface to your specific IP address or set of addresses later on, or configure a bastion service, VPN access and so on.
+    f. Ensure you click to assign a public ip address initially. This will allow easy initial access for SSH and the SCM UI. No other ports will be exposed by default, and you can constrain access to SCM's web interface to your specific IP address or set of addresses later on, or configure a bastion service, VPN access and so on.
 
    ![Assign public ip address](./images/assign-public-ip-address.png)
 
