@@ -81,15 +81,14 @@ This lab assumes you have:
 
 ## Task 5: Verify Active Routes on the Fabric Cloud Router
 
-1. Navigate to your Network Edge and verify there is a connection for OCI and for your additional cloud provider.
-    ![Multiple Cloud Providers](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/vyos-setup-1.png)
-2. Navigate to **Details**, and then scroll down to **IP Address** to get the public IP address of the network edge.
-    ![Navigation - Details](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/vyos-setup-2.png)
-    ![Public IP address](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/vyos-setup-3.png)
-3. Navigate back to the Oracle Cloud console and go back to the Cloud Shell instance.
-    ![CloudShell](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/cloudshell-1.png)
-4. With the username created in Task 1 of the lab, ssh into the VyOS Network Edge. The command will look something like this. **ssh username@vyos\_public\_ip**. The SSH RSA keypair is used to authenticate the session, so no password will be needed to connect to the appliance.
-    ![VyOS SSH](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/vyos-setup-4.png)
+1. Navigate to **Cloud Routers** under the **Fabric and Network Edge** menu, click **Fabric Cloud Router Inventory**.
+    ![Fabric Router Inventory](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task5-step1-fcr-inventory.pngg)
+2. Under the **Fabric Cloud Router Name** section find and click the Fabric Cloud Router created for this lab.
+    ![Fabric Cloud Router Name](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task5-step2-click-fcr-name.png)
+3. Select the **Active Routes** menu and then click the **Load Active Routes** button.
+    ![Load Active Routes](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task5-step3-fcr-click-active-routes.png)
+4. Scroll down to the **Active Routes** section and confirm that you're receiving expected network routes from both cloud providers. The **Next Hop** and the **Connection Name** should match up with the appropriate cloud provider.
+    ![Active Routes](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task5-step4-fcr-active-routes.png)
 
 5. If you've gone this far, congratulations! This is a major mile stone in this lab. Go ahead and proceed to the next lab.
 
