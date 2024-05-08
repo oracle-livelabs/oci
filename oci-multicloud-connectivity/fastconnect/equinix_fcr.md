@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Estimated Time: 60 minutes
+Estimated Time: 30 minutes
 
 ### About FastConnect
 
