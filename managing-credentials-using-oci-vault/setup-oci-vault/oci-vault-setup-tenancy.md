@@ -90,10 +90,11 @@ We will now create a Vault in the target compartment, then add a key that will b
       - Description: `My Secret`
       - Encryption Key: select `my-vault-key` created earlier
       - Secret Contents: `<my secret here>`
-16. Click Create Secret button
+        - You can use the Automatic Secret Generation option, which would suggest a strong secret.
+16. Click Create Secret button and fill out the form
     ![Create Secret Interface](../setup-oci-vault/images/vault-image-5.png "Create Secret Interface")
-17. Click on the secret `my-secret`
     ![Create Secret Form](../setup-oci-vault/images/vault-image-6.png "Create Secret Form")
+17. Click on the secret `my-secret`
 18. Copy the secret OCID to be used next.
     ![Secret OCID](../setup-oci-vault/images/vault-image-7.png "Secret OCID")
 
