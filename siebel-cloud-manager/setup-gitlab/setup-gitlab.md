@@ -4,7 +4,7 @@
 
 In this lab, we will install and configure a GitLab instance.
  
-Siebel Cloud Manager uses GitLab to store the configuration of each deployment that it performs. Then, it will access the configuration files from GitLab to do the actual deployment.
+Siebel Cloud Manager uses GitLab to store the configuration of each deployment that it performs. Changes made to Gitlab content are automatically reflected in the deployed deployment.
 
 Estimated Time: 40 minutes
 
@@ -13,13 +13,12 @@ Estimated Time: 40 minutes
 In this lab, you will:
 *   Deploy the GitLab stack
 *   Configure HTTPS for GitLab
-*   Upgrade GitLab for enhanced security
 *   Generate a GitLab Access Token
 
 ### Prerequisites
 
 * Oracle Cloud Infrastructure tenancy access
-* PuTTY Client and SSH Key
+* SSH Client and SSH Key
 
 ## Task 1: Deploy the GitLab stack
 
