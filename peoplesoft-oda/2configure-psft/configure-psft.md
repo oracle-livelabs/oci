@@ -48,18 +48,29 @@ To configure PeopleSoft with Oracle Digital Assistant, you will:
 
    On the Roles tab, Update it with below roles and click save
   ![Add the roles as per the screen ](./images/update-roles.png " ")
+   
+   Make sure to add all additional roles
+   PTCB\_USER
+   EOCB Service User
+   EOCB Admin User
+   EOCB Client User
+   Absence Chatbot Employee	
+   Benefit Chatbot Employee	
+   Employee Directory Chatbot	
+   NA Payroll Chatbot User	
 
    For PeopleSoft Financial environment, add the below roles to the VP1 user or user working on the chatbot setup.
 
    EOCB Client User
-
    EXCB\_EXPENSE\_INQ
-
    PTCB\_USER
-
+   EOCB Service User
+   EOCB Admin User
+   Employee Directory Chatbot	
    PeopleSoft User  
-   
    ePro Requester Inquiry Bot
+
+   
 ## Task 2: Uncheck Restricted Services
 
 1. Login to PeopleSoft as an admin user and click on the navigation at the top right corner and then go to PeopleTools >> Integration Broker >> Service Configuration. 
