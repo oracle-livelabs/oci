@@ -52,28 +52,44 @@ To configure PeopleSoft with Oracle Digital Assistant, you will:
    Make sure to add all additional roles
 
    EOCB Admin User
+
    EOCB Client User
 
    
    For PeopleSoft HCM environment, add the below roles to the PS user or user working on the chatbot setup.
-  PTCB\_USER
+
+   PTCB\_USER
+
    EOCB Service User
+
    EOCB Admin User
+
    EOCB Client User
+
    Absence Chatbot Employee	
+
    Benefit Chatbot Employee	
+
    Employee Directory Chatbot	
+
    NA Payroll Chatbot User	
    
    For PeopleSoft Financial environment, add the below roles to the VP1 user or user working on the chatbot setup.
 
    EOCB Client User
+
    EXCB\_EXPENSE\_INQ
+
    PTCB\_USER
+
    EOCB Service User
+
    EOCB Admin User
+
    Employee Directory Chatbot	
+
    PeopleSoft User  
+   
    ePro Requester Inquiry Bot
 
 
