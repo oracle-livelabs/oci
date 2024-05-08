@@ -27,14 +27,14 @@ In this lab you will create a dialog flow by performing the following tasks:
 
   ![Navigate Dialog Flow](images/navigate-dialog-flow.png " ")
 
-    | Legend | Description |
-    | ----------- | ----------- |
-    | 1 | Validate - Click Validate as you write your dialog flow to check for syntax errors and to apply best practices.|
-    | 2 | Findings - Review all the errors and warnings raised| 
-    | 3 | Train - Allow the skill to recognize user input |
-    | 4 | Preview - Test the bot | 
-    | 5 | Variables - Declare variables within the dialog flow |
-    | 6 | States - Each state executes a function: rendering a skill response message, authenticating a user, branching the conversation when certain conditions are met, etc| 
+    | Legend | Description                                                                                                                                                         |
+    | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | 1      | Validate - Click Validate as you write your dialog flow to check for syntax errors and to apply best practices.                                                     |
+    | 2      | Findings - Review all the errors and warnings raised                                                                                                                |
+    | 3      | Train - Allow the skill to recognize user input                                                                                                                     |
+    | 4      | Preview - Test the bot                                                                                                                                              |
+    | 5      | Variables - Declare variables within the dialog flow                                                                                                                |
+    | 6      | States - Each state executes a function: rendering a skill response message, authenticating a user, branching the conversation when certain conditions are met, etc |
   
 3. Go ahead and click the preview button to test the current flow.
 
@@ -101,7 +101,7 @@ component which
 
 </copy>
 ```
-> **Note**: Verify your dialog flow here (<a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/cI_mPijn2drXYV6ETvC-erJ4RPuhe2aEzhTd5IiKp1-UvPEcJ-SwKDKhpinXkHp4/n/c4u04/b/livelabsfiles/o/labfiles/dialogflow_task2.txt">Link</a>).
+> **Note**: Verify your dialog flow here (<a href="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/dialogflow_task2.txt">Link</a>).
 
 3. We will add the dialog flow for *Positive Health* intent. Here we are going to display a card carousel with images, text, and links to redirect to different videos.
 
@@ -153,7 +153,7 @@ component which
         startTheraphy: "startTheraphy"
 </copy>
 ```
-> **Note**: Verify your dialog flow (<a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_step2.txt">Link</a>) and ignore the "The state with the name 'findPatientDetails' was not found." error.
+> **Note**: Verify your dialog flow (<a href="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_step2.txt">Link</a>) and ignore the "The state with the name 'findPatientDetails' was not found." error.
 
 - Go ahead and test the flow. 
 
@@ -262,7 +262,7 @@ RegisterPatientBag: "RegisterPatientBag"
 </copy>
 ```
 
-> **Note**: Verify your dialog flow (<a href = "https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_task3.txt">Link</a>) and You should still be able to test even though you see there are errors in your validation
+> **Note**: Verify your dialog flow (<a href = "https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_task3.txt">Link</a>) and You should still be able to test even though you see there are errors in your validation
 
 
   ![Conversation Tester](images/conversation-tester.png)
@@ -477,17 +477,17 @@ npm pack
 
 - Update the component as follows:
 
-|Replace| Value|
-|-----|--------|
-| resolveCompositeBagEntity | chooseProvider | 
-| variable: | variable: "Provider" | 
-| nlpResultVariable: | nlpResultVariable: "iResult"  |
-| useFullEntityMatches: true  | *Delete value* |
-| cancelPolicy:|  cancelPolicy: "immediate" |
-| headerText: | *Delete value* |
-| footerText: |  *Delete value* |
-|next: |next: scheduleDate|
-| textReceived: | textReceived: intent|
+| Replace                    | Value                        |
+| -------------------------- | ---------------------------- |
+| resolveCompositeBagEntity  | chooseProvider               |
+| variable:                  | variable: "Provider"         |
+| nlpResultVariable:         | nlpResultVariable: "iResult" |
+| useFullEntityMatches: true | *Delete value*               |
+| cancelPolicy:              | cancelPolicy: "immediate"    |
+| headerText:                | *Delete value*               |
+| footerText:                | *Delete value*               |
+| next:                      | next: scheduleDate           |
+| textReceived:              | textReceived: intent         |
 
 The code should look like:
 
@@ -645,7 +645,7 @@ Add the *findDoctor* dialog after the *selectTime* component.
 
 </copy>
 ```
-> **Note**: Verify your end-to-end dialog flow (<a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_lab4.txt">Link</a>) and ignore the warnings.
+> **Note**: Verify your end-to-end dialog flow (<a href="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_lab4.txt">Link</a>) and ignore the warnings.
 
 
 ## Summary

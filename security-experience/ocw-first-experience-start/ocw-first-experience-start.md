@@ -22,7 +22,7 @@ In this task we will provide you with a link where you can download the Python s
 
 1. Log in to OCI as states in previous section "Getting Started".
 
-1.	Download the [security assessment script.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/security_assessment.py)
+1.	Download the [security assessment script.](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/security_assessment.py)
     Now you can run that security assessment script in the Oracle Cloud Shell. In order to do that, open the Oracle Cloud Shell by clicking in the Cloud Shell icon in the Console header:
 
     ![Open Cloud Shell](images/cloud-shell-icon.png "Open Cloud Shell")
@@ -89,7 +89,7 @@ In this task we will provide you with a link where you can download the Python s
 
 In this task, similar process should be followed, but this time you will execute the compliance assessment.
 
-1. Download the [CIS reports script](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/cis_reports.py) and save it locally.
+1. Download the [CIS reports script](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/cis_reports.py) and save it locally.
 
 2. Upload the script in the Cloud Shell terminal by doing drag and drop as you did with the security assessment script in previous task. 
 
@@ -142,15 +142,15 @@ security_assessment.py  	[-h][-t CONFIG_PROFILE][-p PROXY]
 
 
 
-|   Input variable       |     Default value    |   Allowed values/example        |   Description      |
-|------------------------|------------------------|------------------------|------------------------|   
-|  -t  |  ""      |        Tenancy profile      |    Config file section to use    |
-|  -p  |  ""      |        ww-proxy-server.com:80  |  Set proxy  |
-|  --output-to-bucket    |   ""    |   my-reporting-bucket    |    Set output bucket name   |
-|   --report-directory   |      /&lt;tenancy name&gt;-&lt;start date&gt;   |   /my/path/  |  Set output report directory  |
-|   --print-to-screen    |   True   |    True/False    |   Set to false if you want to see only non-enabled security services   |
-|   -ip   |   False   |    -    |  Use instance principals for authentication  |
-|   -dt  |   False   |    -    |  Use delegation token for authentication  |
+| Input variable     | Default value                            | Allowed values/example | Description                                                        |
+| ------------------ | ---------------------------------------- | ---------------------- | ------------------------------------------------------------------ |
+| -t                 | ""                                       | Tenancy profile        | Config file section to use                                         |
+| -p                 | ""                                       | ww-proxy-server.com:80 | Set proxy                                                          |
+| --output-to-bucket | ""                                       | my-reporting-bucket    | Set output bucket name                                             |
+| --report-directory | /&lt;tenancy name&gt;-&lt;start date&gt; | /my/path/              | Set output report directory                                        |
+| --print-to-screen  | True                                     | True/False             | Set to false if you want to see only non-enabled security services |
+| -ip                | False                                    | -                      | Use instance principals for authentication                         |
+| -dt                | False                                    | -                      | Use delegation token for authentication                            |
 
 As you can see, the script has three options for authentication:  
 * **Instance Principals**  

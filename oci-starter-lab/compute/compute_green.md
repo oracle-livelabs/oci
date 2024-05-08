@@ -86,7 +86,7 @@ We will use to Advanced tab to work with the limits of the LiveLab sandbox. (Exi
 3. Check the env.sh file:
     - Choose the env.sh file.
     - Since we are in LiveLasbs installation, all the settings will be found automatically.
-          - TF_VAR_compartment_ocid, TF_VAR_vcn_ocid / TF_VAR_public_subnet_ocid, TF_VAR_private_subnet_ocid will be found automatically.
+          - TF_VAR\_compartment\_ocid, TF\_VAR\_vcn\_ocid / TF\_VAR\_public\_subnet\_ocid, TF\_VAR\_private\_subnet\_ocid will be found automatically.
           - The database password, if not filled, will be randomly generated.
     ![Editor env.sh](images/starter-compute-env.png)
 
