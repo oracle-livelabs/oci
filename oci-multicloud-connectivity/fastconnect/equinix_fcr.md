@@ -27,7 +27,7 @@ This lab assumes you have:
 
 ### Video Walkthrough
 
-[Equinix Fabric Cloud Router Quickstart Video](youtube:2A5jZrqhK9I:large) @@UPDATE LINK
+[Equinix Fabric Cloud Router Quickstart Video](youtube:SMiex3xO4hE:large)
 
 ## Task 1: Deploy an Equinix Fabric Cloud Router
 
