@@ -55,7 +55,7 @@ This lab assumes you have:
 ## Task 2: Create a FastConnect Connection
 
 1. From the Oracle Cloud Console, go to the navigation menu and click on **Networking -> Customer Connectivity -> FastConnect**.
-    ![Navigate to FastConnect](../oci-multicloud-connectivity/fastconnect/images/equinix_network_edge/eq_fastconnect-1.png)
+    ![Navigate to FastConnect](../oci-multicloud-connectivity/fastconnect/images/equinix_network_edge/mp_fc_1.png)
 2. Under **FastConnect Connections**, verify you are in the correct compartment for this lab and click **Create FastConnect**.
     ![Create FastConnect](../oci-multicloud-connectivity/fastconnect/images/equinix_network_edge/eq_fastconnect-2.png)
 3. Under **Connection Type**, select **FastConnect Partner**. Under **Partner**, select **Equinix: Fabric**.

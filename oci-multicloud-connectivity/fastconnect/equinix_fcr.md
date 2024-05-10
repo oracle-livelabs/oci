@@ -34,7 +34,7 @@ This lab assumes you have:
 1. Log into the Equinix portal. Navigate to **Cloud Routers** under the **Fabric and Network Edge** menu, click **Create a Fabric Cloud Router**.
     ![Create Fabric Cloud Router](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task1-step1-click-create-fabric-cloud-router.png)
 2. Under **Select Location**, Select the Equinix data center location to deploy the Fabric Cloud Router. Under the **Billing Account** drop-down, pick the appropriate account. Click **Next: Fabric Cloud Router Details**.
-    ![Select Location](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task1-step2-select-fcr-location.png)
+    ![Select Location](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/mp_fc_1.png)
 3. Under **Fabric Cloud Router Name**, enter in a name for your Fabric Cloud Router. Select the **Lab** package under **Select Package**. Click **Next: Review**
     ![Fabric Cloud Router Details](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task1-step3-fcr-details.png)
 4. Review **Fabric Cloud Router Details**, **Pricing Overview** and optionally setup email notifications under **Notifications**. Once finished scroll down and select **Submit Order**. **Note:** Copy the Autonomous System Number (ASN) provided. This will be added to the FastConnect Parameters in OCI.
