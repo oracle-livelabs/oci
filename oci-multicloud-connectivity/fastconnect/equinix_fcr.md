@@ -8,7 +8,7 @@ Estimated Time: 30 minutes
 
 ### About FastConnect
 
-FastConnect allows customers to connect directly external environments such as 3rd party cloud providers and on-premise data centers to their Oracle Cloud Infrastructure (OCI) virtual cloud network via dedicated, private, high-bandwidth connections. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm) for more information on FastConnects.
+FastConnect allows customers to connect directly to external environments such as 3rd party cloud providers and on-premise data centers to their Oracle Cloud Infrastructure (OCI) virtual cloud network via dedicated, private, high-bandwidth connections. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm) for more information on FastConnects.
 
 ### Objectives
 
@@ -63,7 +63,7 @@ This lab assumes you have:
     ![Quick COnnect](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task3-step3-oci-quick-connect.png)
 3. Under **Oracle Configuration -> Redundancy** select **Single Connection**. Enter in the Virtual Circuit Oracle Cloud ID (OCID) copied from the OCI console. Select the OCI Region location for the FastConnect in the **Oracle Destination** drop-down, then click **Next**.
     ![Oracle Configuration](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task3-step4-oci-configuration.png)
-4. Under **Equinix Information -> Origin Asset Type** select Cloud Router. In the **Cloud Router** drop-down select the Fabric Cloud Router created in Task 1. Select Primary for the **Connection**, add a description of the connection under the **Connection Name** section. Click **Next**. 
+4. Under **Equinix Configuration -> Origin Asset Type** select Cloud Router. In the **Cloud Router** drop-down select the Fabric Cloud Router created in **Task 1**. Select Primary for the **Connection**, add a description of the connection under the **Connection Name** section. Click **Next**. 
     ![Equinix Information](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task3-step5-equinix-configuration.png)
 5. In the **Contact Information** section, enter in any necessary email notification receipients, Purchase Order Number, or Purchase Reference IDs. Click **Create Connection** once finished.
     ![Submit Order](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task3-step6-contact-information.png)
@@ -82,7 +82,7 @@ This lab assumes you have:
 ## Task 5: Verify Active Routes on the Fabric Cloud Router
 
 1. Navigate to **Cloud Routers** under the **Fabric and Network Edge** menu, click **Fabric Cloud Router Inventory**.
-    ![Fabric Router Inventory](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task5-step1-fcr-inventory.pngg)
+    ![Fabric Router Inventory](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task5-step1-fcr-inventory.png)
 2. Under the **Fabric Cloud Router Name** section find and click the Fabric Cloud Router created for this lab.
     ![Fabric Cloud Router Name](../oci-multicloud-connectivity/fastconnect/images/equinix_fcr/task5-step2-click-fcr-name.png)
 3. Select the **Active Routes** menu and then click the **Load Active Routes** button.
