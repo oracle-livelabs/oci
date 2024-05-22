@@ -22,7 +22,7 @@ This lab assumes you have:
 
 1. Click on the link below to download the Resource Manager zip file you need to build your environment:
 
-    * [ll-gcn-orm-mkplc-freetier.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/ll-gcn-orm-mkplc-freetier.zip)
+    * [ll-gcn-orm-mkplc-freetier.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/ll-gcn-orm-mkplc-freetier.zip)
 
 2. Save it in your downloads folder.
 
@@ -43,20 +43,20 @@ However, if you would rather use an existing VCN/subnet, follow these steps to a
 5. Click **Add Ingress Rules** button.
 6. Create a rule for each row in the *Ingress* table below:
 
-    |Stateless          |Source Type	|Source CIDR	|IP Protocol	|Source Port Range	|Destination Port Range	|Description                |
-    | :-----------      |  :--------:   |  :--------:   | :----------:  | :------------:    | :-----------------:   | :------------------------ |
-    |No (unchecked)  |CIDR           |0.0.0.0/0      |TCP            |All                |80                     |Remote Desktop using noVNC |
-    |No (unchecked)  |CIDR           |0.0.0.0/0      |TCP            |All                |6080                   |Remote Desktop using noVNC |
+    | Stateless      | Source Type | Source CIDR | IP Protocol | Source Port Range | Destination Port Range | Description                |
+    | :------------- | :---------: | :---------: | :---------: | :---------------: | :--------------------: | :------------------------- |
+    | No (unchecked) |    CIDR     |  0.0.0.0/0  |     TCP     |        All        |           80           | Remote Desktop using noVNC |
+    | No (unchecked) |    CIDR     |  0.0.0.0/0  |     TCP     |        All        |          6080          | Remote Desktop using noVNC |
     {: title="Network Ingress Security Rules"}
 
 7. Select **Egress Rule** from the left panel.
 8. Click **Add Egress Rule** button
 9. Create a rule for each row in the *Egress* table below:
 
-    |Stateless          |Source Type	|Destination CIDR	|IP Protocol	|Source Port Range	|Destination Port Range	|Description                |
-    | :-----------      |  :--------:   |  :--------:       | :----------:  | :------------:    | :-----------------:   | :------------------------ |
-    |No (unchecked)  |CIDR           |0.0.0.0/0          |TCP            |All                |80                     |Outbound HTTP access       |
-    |No (unchecked)  |CIDR           |0.0.0.0/0          |TCP            |All                |443                    |Outbound HTTPS access      |
+    | Stateless      | Source Type | Destination CIDR | IP Protocol | Source Port Range | Destination Port Range | Description           |
+    | :------------- | :---------: | :--------------: | :---------: | :---------------: | :--------------------: | :-------------------- |
+    | No (unchecked) |    CIDR     |    0.0.0.0/0     |     TCP     |        All        |           80           | Outbound HTTP access  |
+    | No (unchecked) |    CIDR     |    0.0.0.0/0     |     TCP     |        All        |          443           | Outbound HTTPS access |
     {: title="Network Egress Security Rules"}
 
 ## Task 3: Select a Compartment for the Workshop

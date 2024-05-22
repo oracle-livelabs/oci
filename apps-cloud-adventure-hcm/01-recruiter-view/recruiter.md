@@ -16,32 +16,32 @@ In this lab, you will:
 ## Task 1: View the Requisition and Job Application
 
 
-1. To see how you can easily manage and review candidates
+1. Easily manage and view candidates in your hiring/recruiting area.
 
-    > Go to **Home Page**, then click on top right corner before the bell icon
+    > From the **Home Page**, click the **My Team** tab, and then the **Hiring** tile.
 
     ![Home Page](images/candidate-my-client-groups.png)
 
-2. Search for the Senior HR Analyst-801-requisition you applied to.
+2. Search for the requisition you applied to.
 
-    > To Search- remove the current filters by clicking the "X" and type "801" in the search bar
+    > To Search- remove the current filters by clicking the **"X"** next to each assigned filter, type **801** in the search bar, and then select the **Senior HR Analyst 801** requisition. 
 
-    ![watchlist items](images/candidate-applicant-count.png)
+    
+3. Find the application you submitted
 
-3. Here you can see the application you just submitted
-
-    > Click on the hyperlink above ‘**New- To Be Reviewed’** to review the application
+    > Click on the hyperlink above **‘New- To Be Reviewed’** and then click on the name of the applicant you submitted.
 
     ![journal view](images/candidate-title-highlighted.png)  
 
-4. Need Help? Choose Review Requisition Guide and follow the guided flow to complete the tasks. Getting Started with Recruiting learning is also available.
+4. Review different elements of your application.
    
+    > Click on **‘Questions’** link in the left column.
 
-5. Close the pop up window to return to the main screen.
+5. Need Help? Choose Review Requisition Guide and follow the guided flow to complete the tasks. Getting Started with Recruiting learning is also available.
 
-    > **Click ‘Done’**
+6. Complete the Cloud Adventure Checkpoint below
 
-6. You are back at the Home Page
+7. Follow along with the speaker to schedule an interview and submit an offer!
  
 
 Adventure awaits, show what you know, and rise to the top of the leader board!!!
@@ -56,4 +56,4 @@ Adventure awaits, show what you know, and rise to the top of the leader board!!!
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant, Cloud HCM
 * **Contributors** -  Kerilyn Derkasch, Sr. Manager, Cloud HCM
-* **Last Updated By/Date** - Kerilyn Derkasch, December 2023
+* **Last Updated By/Date** - Dorcas Conyers, March 2024
