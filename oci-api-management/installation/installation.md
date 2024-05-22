@@ -99,11 +99,8 @@ First, let's create an Autonomous database.
 
 1. Go to the SQL interface
     In the page of the Autonomous Database,
-    - Click on *Database Actions* / *View all database Actions*
+    - Click on *Database Actions* / *SQL*
     - If you get a prompt asking for an user/password, enter ADMIN/##DB\_PASSWORD##
-    - Then *SQL*
-
-        ![Database Actions](images/apim-sql0.png)
 
 2. Run the following SQL to create the user API.
     - Replace the password in the schema creation to your own (to make it easy, let's use the same ADMIN user password by reusing ##DB_PASSWORD##) 
