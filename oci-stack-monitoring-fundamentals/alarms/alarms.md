@@ -36,15 +36,15 @@ Estimated time: 10 minutes
 
  	![Enterprise Summary Alarms chart, highlighting the count of all open alarms](images/2-1-alarms.png " ")
 
-	The alarm slide-out provides details of open alarms. These details include Alarm name, Severity, and Triggered time. The results can be ordered by selecting the column title.
+	The alarm slide-out provides details of open alarms. These details include alarm name, resource name, metric name, time the alarm fired, and even the CURRENT value. The results can be ordered by selecting the column title. Operations can use this information to help prioritize their work, for example they would likely address the JDEdwards host root filesystem that is 97% utilized before investigating the siebel host 93% utilized filesystem. Clicking the resource name will take you to that resource's home page to investigate further, while clicking the alarm name will open a new tab to provide more details of the open alarm.
 
  	![Alarms chart slide-out, showing details of all open alarms](images/2-2-alarms.png " ")
 
 3. Refine a list of open alarms
 
- 	Next, filter the list to focus on only the **Warning** alarms. Using the **Severity filter**, change the severity from **All** to **Warning**. The table now displays only the open alarms with a severity of **Warning**. 
+ 	Next, filter the list to focus on only the **Critical** alarms. Using the **Severity filter**, change the severity from **All** to **Critical**. The table now displays only the open alarms with a severity of **Critical**. 
 
- 	Select the alarm **Filesystem / Utilization > 70%**. Clicking the alarm name opens a new tab in your browser to further investigate and work the alarm within Oracle Cloud Infrastructure's Monitoring Service.
+ 	Select the alarm **Filesystem / Utilization > 90%**. Clicking the alarm name opens a new tab in your browser to further investigate and work the alarm within Oracle Cloud Infrastructure's Monitoring Service.
 
  	![Alarms chart slide-out, showing only warning alarms, and highlighting a filesystem utilization alarm](images/2-3-alarms.png " ")
 
@@ -54,11 +54,11 @@ With the new browser tab open, let's review this example alarm. The OCI Monitori
  	
 1. Review an open alarm
 	
-	At the top of the page, we can see the name of the alarm, **Filesystem / Utilization > 70%**, you can identify the severity as **warning**. The alarm body is brief and contains information on where to begin the alarm investigation and a link to source controlled troubleshooting steps. The OCI Monitoring Service provides the ability to suppress the alarm, allowing you to stop sending notifications for a period of time. When working an issue, it may be necessary to suppress the alarm to reduce notification noise while resolving or during a known maintenance period.
+	At the top of the page, we can see the name of the alarm, **Filesystem / Utilization > 90%**, you can identify the severity as **Critical**. The alarm body is brief and contains information on where to begin the alarm investigation and a link to source controlled troubleshooting steps. The OCI Monitoring Service provides the ability to suppress the alarm, allowing you to stop sending notifications for a period of time. When working an issue, it may be necessary to suppress the alarm to reduce notification noise while resolving or during a known maintenance period.
  	
  	![OCI Monitoring Service, showing the Filesystem / Utilization > 70% alarm in a firing state](images/2-4-alarms.png " ")
 
- 	Moving down the page, we can identify the compartment where the alarming resource resides, **OracleApps**. The OCID of the resource is provided to help identify the offending resource. Next we see the Namespace **oracle\_appmgmt**. Stack Monitoring places all metric data into the **oracle\_appmgmt** namespace. This is true for all resource types except Oracle Database. Oracle Database metrics are stored in the **oracle\_oci\_database** namespace. Stack Monitoring utilizes **Resource groups** to organize the large number of metrics provided out-of-the-box. Examples of Resource groups include: host, apache\_tomcat, weblogic\_j2eeserver, and elastic_search to name a few. In this alarm, the Resource group is **host**. 
+ 	Moving down the page, we can identify the compartment where the alarming resource resides, **OracleApps**. The OCID of the resource is provided to help identify the offending resource. Next we see the Namespace **oracle\_appmgmt**. Stack Monitoring places all metric data into the following namespaces, **oracle\_appmgmt** (primary namespace for out-of-the-box resource types), **oracle\_oci\_database** (Oracle Database), **oracle\_oci\_database\_cluster** (Oracle Database system, ASM, Cluster, etc), **oracle\_metric\_extensions\_appmgmt namespace** (Stack Monitoring Metric Extensions), and **oracle\_appmgmt\_prometheus (Stack Monitoring Prometheus). Stack Monitoring utilizes **Resource groups** to organize the large number of metrics provided out-of-the-box. Examples of Resource groups include: host, apache\_tomcat, weblogic\_j2eeserver, elastic_search, and ASM to name a few. In this alarm, the Resource group is **host**. 
  	
  	![OCI Monitoring Service, highlighting the Compartment, OCID, Namespace, and Resource group fields](images/2-5-alarms.png " ")
  	
