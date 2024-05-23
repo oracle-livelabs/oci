@@ -132,4 +132,4 @@ This lab assumes you have:
 ## Acknowledgements
 
 * **Author** - Jake Bloom, Principal Solution Architect, OCI Networking
-* **Last Updated By/Date** - Jake Bloom, August 2023
+* **Last Updated By/Date** - Shawn Moore, May 2024
