@@ -33,13 +33,13 @@ Estimated time: 10 minutes
 
 	![Enterprise Summary highlighting the Concurrent Manager](images/1-1-home.png " ")
 
-	With the slide-out open, you can review the percentage of successful completed requests over time. Now lets take a closer look at this concurrent manager by clicking its name **PROD\_EBS\_04\_ConcurrentProcessing** at the top of the page. This will navigate you to that concurrent manager's homepage.
+	With the slide-out open, you can review the percentage of successful completed requests over time. Now lets take a closer look at this concurrent manager by clicking its name **EBS04a\_ConcurrentProcessing** at the top of the page. This will navigate you to that concurrent manager's homepage.
 
 	![Concurrent Manager performance chart slide-out](images/1-2-home.png " ")
 
 3. Application specific key resource homepages
 
-	On the Concurrent Manager homepage, you can easily review the health and performance of this resource. Each resource in Stack Monitoring has a homepage that provides a central place to review status, performance alarms, configuration and topology. At the top of the page, Stack Monitoring reports the current status, (Up, Down, Not Reporting). The color and shape of the status indicator will update depending on the resource status and type. Should you find a resource in a down state, the homepage will display a large **red** box with the status of **Down**. Stack Monitoring also provides a **Current Status** date and time. For example, if this Concurrent Manager goes down, Stack Monitoring will provide a timestamp of when the status switched from **Up** to **Down**.
+	From the Concurrent Manager homepage, you can easily review the health and performance of this resource. Each resource in Stack Monitoring has a homepage that provides a central place to review status, performance, alarms, configuration and topology. At the top of the page, Stack Monitoring reports the current status, (Up, Down, Not Reporting). The color and shape of the status indicator will update depending on the resource status and type. Should you find a resource in a down state, the homepage will display a large **red** box with the status of **Down**. Stack Monitoring also provides a **Current Status** date and time. For example, if this Concurrent Manager goes down, Stack Monitoring will provide a timestamp of when the status switched from **Up** to **Down**.
 
 	We can see a count of open alarms by severity. Clicking an alarm count will open the Alarms tab below. We'll cover the **Alarms** tab in more detail later.
 
@@ -51,7 +51,7 @@ Estimated time: 10 minutes
 
 	A Concurrent Manager homepage provides a list of charts curated for the EBS Concurrent Manger. Stack Monitoring provides a large set of metrics out-of-the-box and are collected immediately after the discovery completes. The performance charts by default display the **Last 60 Minutes**. When investigating issues, it helps to review the performance change over a longer period of time. To extend the time frame click the drop-down and choose **Last 24 Hours**. All charts will now display data from the last 24 hours.
 
-	Imagine that you have identified a spike in the number of concurrent requests that have been completed with errors. Using the **Completed Concurrent Requests**, hover over a point in time within that chart. Stack Monitoring will display the metric, dimension, timestamp, and value. Stack Monitoring will also show metric details of every other chart on the page during that timestamp. Should you identify another area of concern, highlighting the metric will display the value of all other metrics on the page at the same time. For example, when you need to troubleshoot and correlate two metrics like a spike in errors using **Completed Concurrent Requests** and **Capacity Utilization of Concurrent Managers** to determine if the concurrent manager has reached 100% capacity and related to the errors observed.
+	Imagine that you have identified a spike in the number of concurrent requests that have been completed with errors. Using the **Completed Concurrent Requests**, hover over a point in time within that chart. Stack Monitoring will display the metric, dimension, timestamp, and value. If the metric has anomaly detection enabled, Stack Monitoring will display the upper and lower boundary and if the current value is anomalous. Stack Monitoring will also show metric details of every other chart on the page during that timestamp. Should you identify another area of concern, highlighting the metric will display the value of all other metrics on the page at the same time. For example, when you need to troubleshoot and correlate two metrics like a spike in errors using **Completed Concurrent Requests** and **Capacity Utilization of Concurrent Managers** to determine if the concurrent manager has reached 100% capacity and related to the errors observed.
 
 	![Concurrent Manager performance charts, highlighting % of requests completed with errors](images/2-1-home.png " ")
 
@@ -71,15 +71,15 @@ Estimated time: 10 minutes
 
 1. Locate **Configuration** in the left menu of the homepage.
 
-	Using data provided within **Configuration** you can easily identify a resource's installation location. This can be helpful to quickly identify where to find log files. Stack Monitoring **Configuration** provides quick access to both general OCI properties and resource-specific properties. Using this Concurrent Manager as an example, the **Resource-specific** properties such as database service_name and the application schema name can help you quickly identify the database and schema that contains the EBS data.
+	Using data provided within **Configuration** you can easily identify a resource's installation location. This can be helpful to quickly identify where to find log files. Stack Monitoring **Configuration** provides quick access to both general OCI properties and resource-specific properties. Using this Concurrent Manager as an example, the **Resource-specific properties** such as database service_name and the application schema name can help you quickly identify the database and schema that contains the EBS data.
 
 	![Concurrent manager resource-specific properties](images/3-1-home.png " ")
 
 ## Task 4: Review application topology
 
-1. Locate **Related Resources** under the Resources menu on the left side of the homepage.
+1. Locate **Topology** under the Resources menu on the left side of the homepage.
 
-	Now let's learn about the application topology capability within Stack Monitoring. From the left side menu, locate **Related Resources**. **Related Resource** provides quick access to all resources associated with this Concurrent Manager. This capability makes it easy to identify which EBS Application the Concurrent Manager belongs to. Additionally, you can identify which management agent monitors this concurrent manager. Identifying the monitoring agent is useful if the status of the resource is Not Reporting. Typically, if a resource has a status of Not reporting, the Management Agent is not uploading data.
+	Now let's learn about the application topology capability within Stack Monitoring. From the left side menu, locate **Topology**. **Topology** provides quick access to all resources associated with this Concurrent Manager. This capability makes it easy to identify which EBS Application the Concurrent Manager belongs to. Additionally, you can identify which management agent monitors this concurrent manager. Identifying the monitoring agent is useful if the status of the resource is Not Reporting. Typically, if a resource has a status of Not reporting, the Management Agent is not uploading data.
 
 	![Concurrent Manager related resources](images/4-1-home.png " ")
 
@@ -92,4 +92,4 @@ Estimated time: 10 minutes
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, June 2023
+* **Last Updated By/Date** - Aaron Rimel, May 2024

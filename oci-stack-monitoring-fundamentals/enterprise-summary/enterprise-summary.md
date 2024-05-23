@@ -30,7 +30,7 @@ Estimated time: 20 minutes
 
 2. Identify resources in a **Down** state
 
-	The Stack Monitoring Enterprise Summary page provides an overall health and performance of your entire enterprise. The top tier enables you to quickly see, identify, and triage resources that are **Down** to help remediate outages. Locate the **Status Summary** doughnut chart on the upper left side of the page. You can see a count of resources by each status across the enterprise. This chart provides a quick visualization of how many resources are in a **Down** or **Not Reporting** state across your enterprise. Let's investigate any resources that are **Down**. 
+	The Stack Monitoring Enterprise Summary page provides an overall health and performance of your entire enterprise. The top tier enables you to quickly see, identify, and triage resources that are **Down** to help remediate outages. Locate the **Status summary** doughnut chart on the upper left side of the page. You can see a count of resources by each status across the enterprise. This chart provides a quick visualization of how many resources are in a **Down** or **Not reporting** state across your enterprise. Let's investigate any resources that are **Down**. 
 
 	Find the **Down** label in the Status summary chart. Clicking **Down** opens a slide-out reporting all of the resources in a down state. 
 
@@ -40,9 +40,9 @@ Estimated time: 20 minutes
 
 	![Stack Monitoring alarm slide-out filtered by resources that are down](images/1-2-ent-sum.png " ")
 
-3. Review all resources that are **Not Reporting**
+3. Review all resources that are **Not reporting**
 
-	Now that we have identified resources in a down state, let's identify those that are **Not Reporting**. Not Reporting generally indicates the agent is no longer uploading data. Stack Monitoring updates the status of monitored resources to Not Reporting to inform you there is an issue obtaining the resource's status. A single availability alarms can be configured to notify you when the resource is either Down or Not Reporting. An alarm such as this and others are outlined in the [Setting Up Alarm](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/setting-alarms.html) section of the documentation.
+	Now that we have identified resources in a down state, let's identify those that are **Not reporting**. Not reporting generally indicates the agent is no longer uploading data. Stack Monitoring updates the status of monitored resources to Not Reporting to inform you there is an issue obtaining the resource's status. A single availability alarms can be configured to notify you when the resource is either Down or Not reporting. An alarm such as this and others are outlined in the [Setting Up Alarm](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/setting-alarms.html) section of the documentation.
 
 	Using the Status filter located in the center of the slide-out, update the Status filter from **Down** to **Not reporting**. The table now displays all the resources in a Not Reporting state. Clicking a resource name will navigate you to that resource's homepage, where you can leverage the Stack Monitoring resource associations to identify the agent monitoring the resource and navigate to the agent's homepage to troubleshoot. We'll cover navigating to related resources in a later lab. For now, let's return to the Enterprise Summary. Click the **Close** button in the lower-left corner of the slide-out.
 
@@ -54,11 +54,11 @@ Estimated time: 20 minutes
 
  	![Enterprise Summary status by resource type chart](images/2-1-ent-sum.png " ")
 
-	The **Status by resource type** chart enables you to easily identify what tier of your application has availability issues. Each bar represents each tier of the application stack, (e.g., host, database, application server). Using the status colors, you can quickly assess if all resources within that tier are up or identify the tier that has a resource outage. Reporting of an application stack, such as E-Business Suite and PeopleSoft, is unique. Each bar represents an application and its components, this allows you to identify if any individual component of an application is down or not reporting. Should you identify an area of concern with an application, clicking the bar will navigate you to that resource's homepage. We'll review homepages in the next lab activity.
+	The **Status by resource type** chart enables you to easily identify what tier of your application has availability issues. Each bar represents each tier of the application stack, (e.g., host, database, application server). Using the status colors, you can quickly assess if all resources within that tier are up or identify the tier that has a resource outage. Reporting of an application stack, such as E-Business Suite, PeopleSoft, and Oracle Database systems are unique. Each bar represents an application and its components, this allows you to identify if any individual component of an application is down or not reporting. Should you identify an area of concern with an application, clicking the bar will navigate you to that resource's homepage. We'll review homepages in the next lab activity.
 
-2. Identify resources by resource type that are **Not Reporting**
+2. Identify resources by resource type that are **Not reporting**
 
- 	Identifying which resources are down or not reporting by type across an enterprise is easy using Stack Monitoring. Simply locate the chart legend at the top right of the **Status by resource type** chart and select **Not Reporting**. This will filter the chart to only show the count of resources by type in a **Not Reporting** state.
+ 	Identifying which resources are down or not reporting by type across an enterprise is easy using Stack Monitoring. Simply locate the chart legend at the top right of the **Status by resource type** chart and select **Not reporting**. This will filter the chart to only show the count of resources by type in a **Not reporting** state.
 
  	If we wish to see a more detailed list of hosts that are not reporting, click the **host** bar on the left side of the chart. 
 
@@ -82,7 +82,7 @@ Estimated time: 20 minutes
 
  	![Enterprise Summary Alarms chart, highlighting the count of all open alarms](images/3-1-ent-sum.png " ")
 
-	The alarm slide-out provides details of open alarms. These details include Alarm name, Severity and Triggered time. The results can be ordered by selecting the column title. 
+	The alarm slide-out provides details of open alarms. These details include the severity, trigger time, resource name, metric name, dimension of the metric in a firing state, current value, and alarm name. The current value can help DevOps teams prioritze the order the open alerts should be triaged. The table can be ordered by selecting the column title. 
 
  	Let's return to the Enterprise Summary by clicking **Close**.
 
@@ -106,11 +106,11 @@ Estimated time: 20 minutes
 
  	![Enterprise Summary, scatter plot charts](images/4-3-ent-sum.png " ")
 
-	Let's review memory and swap utilization of all hosts within this enterprise. Navigate to the **Memory and Swap** chart located under the **Host** tier at the bottom center of the Enterprise Summary. Every monitored host within Stack Monitoring is represented in this chart. You can assess the overall usage of memory and swap across all hosts. You can identify which host is utilizing the most memory and swap and see the majority of hosts are using very little to no swap. If troubleshooting an issue, you can **hover over** a plot point and see the value of the metrics.
+	Let's review memory and swap utilization of all hosts within this enterprise. Navigate to the **Memory and Swap** chart located under the **Host** tier at the bottom center of the Enterprise Summary. Every monitored host within Stack Monitoring is represented in this chart. You can assess the overall usage of memory and swap across all hosts. Again, scatterplot charts help you monitor by exception. You can identify if any host performing differently than its peers. Here we can see while all hosts are consuming memory, only a few are consuming swap, and one host in paticular is consuming almost 100% of both memory and swap. To understand the exact metric values **hover over** any plot point to see the latest value of the metric.
 
  	![Host tier, highlighting the metric values of a PeopleSoft host memory utilization and swap utilization](images/4-4-ent-sum.png " ")
 
-	Clicking a plot point will activate a slide-out allowing you to see the performance over time. Using the drop-down update the time selector from **Last 60 minutes** to **Last 90 Days**. Extending the time period allows you to easily identify if the increase in memory load is recent and a contributing factor to a new performance problem that may be occurring. Having reviewed the memory over the last 90 days, lets return to the Enterprise Summary by clicking **Close** in the bottom left.
+	Clicking a plot point will activate a slide-out allowing you to see the performance over time. Using the drop-down update the time selector from **Last 60 minutes** to **Last 7 Days**. Extending the time period allows you to easily identify if the current memory load is recent and a contributing factor to a new performance problem, or if the current load has persisted for some time. Metrics with a '+' have anomaly detection enabled. Anomalous performance is indicated by an orange dot on the line chart. Having reviewed the memory over the last 7 days, lets return to the Enterprise Summary by clicking **Close** in the bottom left.
 
  	![Enterprise Summary scatter-plot slide-out, showing memory and swap utilization over the past 90 days](images/4-5-ent-sum.png " ")
 
@@ -120,7 +120,7 @@ Estimated time: 20 minutes
 
  	![Host filesystem table edit screen, highlighting the count of records to display in the table](images/4-6-ent-sum.png " ")
 
- 	You can now view a list of up to the top **20 hosts** with the most heavily utilized filesystems. Should one of the hosts filesystems cause concern, clicking any of the resource names will navigate you to that resource's homepage for further investigation. For example, when investigating filesystem utilization, it is good to review the growth over time to understand if more space should be added, and if so how much. From a Stack Monitoring host homepage, you can chart the growth of the filesystem over time using the **Filesystem Utilization** chart.
+ 	You can now view a list of up to the top **20 hosts** with the most heavily utilized filesystems. Should one of the hosts filesystems cause concern, clicking any of the resource names will navigate you to that resource's homepage for further investigation. From a Stack Monitoring host homepage, you can chart the growth of the filesystem over time using the **Filesystem Utilization** chart. Alternatively, you can click the filesystem value to review the growth over time to understand if more space should be added, and if so how much. 
 
  	![Host tier, highlighting the chart filesystem utilization with more than four records displayed](images/4-7-ent-sum.png " ")
 
@@ -157,4 +157,4 @@ Estimated time: 20 minutes
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, June 2023
+* **Last Updated By/Date** - Aaron Rimel, May 2024
