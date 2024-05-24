@@ -36,19 +36,19 @@ Estimated time: 10 minutes
 
 	![Enterprise Summary, highlighting the total count of open alarms](images/2-1-together.png " ")
 
-	Within the alarms slide-out, you can see the open alarm, **EBS Concurrent Manager Down in Last 60 Min DEMO**. This is a demonstration alarm that represents a Concurrent Manager that has been down in the last 60 minutes. From within this slide-out we can see the alarm severity is **Critical**, as well as the latest trigger time. In the screenshot, the alarm triggered on May 8th 2023, at 14:49 UTC. Lets click the alarm name, **EBS Concurrent Manager Down in Last 60 Min DEMO**, this will open a new browser tab for you to review more details regarding the alarm in the OCI Monitoring Service.
+	Within the alarms slide-out, you can see the open alarm, **EBS Concurrent Manager Down in Last 60 Min DEMO**. This is a demonstration alarm that represents a Concurrent Manager that has been down in the last 60 minutes. From within this slide-out we can see the alarm severity is **Critical**, as well as the latest trigger time. In the screenshot, the alarm triggered on May 7th 2023, at 14:49 UTC. Lets click the alarm name, **EBS Concurrent Manager Down in Last 60 Min DEMO**, this will open a new browser tab for you to review more details regarding the alarm in the OCI Monitoring Service.
 
 	![Enterprise Summary alarm slide-out, highlighting the alarm, EBS Concurrent Manager Down is Last 60 Min DEMO](images/2-2-together.png " ")
 
-	The OCI Monitoring Service provides details of the alarm. From this page, you can identify the severity as critical. The alarm body is brief and contains information on where to begin the alarm investigation and a link to source controlled troubleshooting steps. The dimensions of this alarm, provide context to which Concurrent Manager is alarming, **PROD\_EBS04\_ConcurrentProcessing**.
+	The OCI Monitoring Service provides additional details of the alarm. From this page, you can identify the severity as critical. The alarm body is brief and contains information on where to begin the alarm investigation and a link to source controlled troubleshooting steps. The dimensions of this alarm, provide context to which Concurrent Manager is alarming, **PROD\_EBS04\_ConcurrentProcessing**.
 
 	![OCI Monitoring Service alarm details page, highlighting the severity, alarm body, and dimensions](images/2-3-together.png " ")
 
-	The alarm history provides context to the alarm state. From here you can see if the alarm recently began to fire or if the alarm is flapping. The table provides the exact time the alarm moved between states. Once you are done reviewing the alarm details, close the tab to return to Stack Monitoring.
+	The alarm history provides context to the alarm state. From here you can see if the alarm recently began to fire or if the alarm is flapping. The table provides the exact time the alarm moved between states. Once you are done reviewing the alarm details, **close the browser tab** to return to the Stack Monitoring.
 
 	![OCI Monitoring Service alarm details page, highlighting a chart depicting the timeline when the alarm began and a table providing the exact time the alarm began firing](images/2-4-together.png " ")
 
-	Lets review this Concurrent Manager's homepage. Close the slide-out and return to Stack Monitoring. 
+	Lets review this Concurrent Manager's homepage. **Close** the slide-out and return to Enterprise Summary. 
 
 	![Enterprise Summary alarm slide-out, highlighting the Close button](images/2-5-together.png " ")
 
@@ -60,7 +60,7 @@ Estimated time: 10 minutes
 
 	![Enterprise Summary, highlighting the EBS Concurrent Manager chart](images/3-1-together.png " ")	
 
-	Clicking the plot point invokes a slide-out showing more details of the performance over the last hour for this Concurrent Manager. Update the charts to show the **Last 24 hours**. In the screenshot below, we can see a small spike in the number of pending requests. We can also see 100% of the completed requests were successful. Now let's click the resource name to continue our investigation by navigating to the resources homepage.
+	Clicking the plot point invokes a slide-out showing more details of the performance over the last hour for this Concurrent Manager. Update the charts to show the **Last 24 hours**. In the screenshot below, we can see a small dip in the number of concurrent requests by status. We can also see that while the majority of completed requests were successful, some completed with errors. Now let's click the resource name **EBS04a\_ConcurrentProcessing** to continue our investigation by navigating to the resources homepage.
 
 	![Enterprise Summary Concurrent Manager chart slide-out, highlighting the Concurrent Manager resource name hyperlink](images/3-2-together.png " ")	
 
@@ -134,4 +134,4 @@ For more information and full range of capabilities of the Stack Monitoring solu
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, June 2023
+* **Last Updated By/Date** - Aaron Rimel, May 2024
