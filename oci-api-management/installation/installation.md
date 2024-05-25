@@ -260,6 +260,5 @@ In case you make a mistake and need to restart the installation, most of the tim
 3. Restart again from Task 2 - Create the database user.
 
 ## Acknowledgements
-
-- **Authors**
-    - Marc Gueury / Phil Wilkins /  Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+* **Author** - Marc Gueury / Phil Wilkins /  Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+* **Last Updated By/Date** - Marc Gueury, May 2024
