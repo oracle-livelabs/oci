@@ -43,6 +43,16 @@
             "filename": "../../together/together.md"
         },
         {
+            "title": "Lab 7: Metric Extensions",
+            "description": "Get to know Stack Monitoring's Extensibility: Metric Extextensions",
+            "filename": "../../metric-extensions/metric-extensions.md"
+        }, 
+        {
+            "title": "Lab 8: Importing OCI Services",
+            "description": "Get to know Stack Monitoring's Extensibility: Import OCI Services",
+            "filename": "../../metric-extensions/metric-extensions.md"
+        }, 
+        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
