@@ -6,6 +6,8 @@ In this lab, we will do the Disaster Recovery setup with warm standby (non-movin
 
 Estimated Time: 15 Minutes
 
+![JDE DR Non-Moving Architecture](./images/Non-Movable.png) Above picture demonstrates a JDE Non-Moving instance approach before switchover
+
 ### Objectives
 
 - Create DRPG in Ashburn and Phoenix regions.

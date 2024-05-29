@@ -3,11 +3,9 @@ Protect your JD Edwards EnterpriseOne Application using Oracle Full Stack Disast
 
 ## About this Workshop
 
-This workshop will show how Full Stack DR can help to orchestrate DR Switchover and Failover operations for a JDE Application deployed in Oracle Cloud Infrastructure (OCI) across two regions using both Moving and Non-moving instance approach.
-
-Moving and Non-moving instances are terminologies used with Full Sack DR for the Compute instances (VMs), and those VMs are deployed depending on the application and business requirements.
+This workshop will show how Full Stack DR can help to orchestrate DR Switchover and Failover operations for a JDE Application deployed in Oracle Cloud Infrastructure (OCI) across two regions using both Moving and Non-moving instance approach. Moving and Non-moving instances are terminologies used with Full Sack DR for the Compute instances (VMs), and those VMs are deployed depending on the application and business requirements. Database is deployed in both primary and standby and are in sync using Oracle Data Guard. 
  
-**Moving instances**- In general terminologies, moving instances are called Cold VM / Pilot light DR topology. Application VMs are deployed only in the Primary region. During DR runtime, VMs will be created at the standby region.
+**Moving instances** - In general terminologies, moving instances are called Cold VM / Pilot light DR topology. Application VMs are deployed only in the Primary region. During DR runtime, VMs will be created at the standby region. 
  
 **Non-moving instances** - In general terminologies, non-moving instances are called a Warm Standby topology. Application VMs are deployed in both primary and standby regions.
 
@@ -18,9 +16,6 @@ Estimated Workshop Time: Approximately 5 hours
 In this workshop, you will learn to leverage Full Stack DR and implement Disaster Recovery for JDEdwards EnterpriseOne.
 * How to create a Movable Compute instance for cold VM DR or Pilot light setup.
 * How to create a Non-Movable Compute instance for Hot Standby or Active/Passive setup. 
-* How to Switchover and Test the JDE E1 application for a Planned DR Testing.
-* How to Failover and test the JDE E1 application for an actual DR scenario.
-* How to Rollback the JDE E1 application after a DR Switchover or Failover.
 
 ### Prerequisites
 
@@ -103,6 +98,8 @@ Below is the architecture of JD Edwards EnterpriseOne environment running on Ora
     * [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/)
     * [LearnJDE](https://docs.oracle.com/cd/E84502_01/learnjde/cloud_overview.html)
     * [Full Stack DR Overview](https://docs.oracle.com/en-us/iaas/disaster-recovery/index.html)
+    * [JDE One-Click Provisioning](https://apexapps.oracle.com/pls/apex/f?p=44785:50:4934867288064:::50:P50_COURSE_ID,P50_EVENT_ID:347,6081)
+    * [JDE Reference Architecture with DR](https://docs.oracle.com/en/solutions/learn-architecture-deploy-jd-edwards/index.html#GUID-70720E0B-0A03-4784-8DF6-4BF58445C15E)
 
 ## Disclaimer
 

@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Protect your business using OCI Full Stack Disaster Recovery",
+  "workshoptitle": "Protect your JDE Application using OCI Full Stack Disaster Recovery",
   "help": "livelabs-help-oci_us@oracle.com",
   "tutorials": [
     {
@@ -28,7 +28,7 @@
       "filename": "../../drpg-members/drpg-members.md"
     },
     {
-      "title": "Lab 1.2 (Moving): Create Switchover Plan",
+      "title": "Lab 1.2 (Moving): Create and Customize Switchover Plan",
       "description": "Create Switchover Plan",
       "filename": "../../switchover-plan/switchover-plan.md"
     },
@@ -58,12 +58,12 @@
       "filename": "../../drpg-members/nm-drpg-members.md"
     },
     {
-      "title": "Lab 2.2 (Non-Moving): Create Switchover Plan",
+      "title": "Lab 2.2 (Non-Moving): Create and Customize Switchover Plan",
       "description": "Create Switchover Plan",
       "filename": "../../switchover-plan/nm-switchover-plan.md"
     },
     {
-      "title": "Lab 2.3 (Non-Moving): Perform Pre-check",
+      "title": "Lab 2.3 (Non-Moving): Perform Switchover Pre-check",
       "description": "Perform Pre-check",
       "filename": "../../switchover-prechecks/nm-switchover-prechecks.md"
     },
