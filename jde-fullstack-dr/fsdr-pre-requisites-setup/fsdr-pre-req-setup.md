@@ -4,7 +4,7 @@
 
 In this lab, we will complete the pre-requisites setup work for Full Stack Disaster Recovery. Note that this is applicable for both Moving and Non-Moving scenarios.
 
-Estimated Time: 60 Minutes
+Estimated Time: 40 Minutes
 
 ### **Objectives**
 

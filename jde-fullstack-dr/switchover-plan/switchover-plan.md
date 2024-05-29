@@ -13,7 +13,7 @@ This lab will focus on how to create a Switchover plan and customize the plan as
 
 **DR Plan *must* be created in the standby region (Phoenix)**. It is because, in the case of the worst-case scenario, the entire primary region outside the FSDR will not be accessible from the primary region.
 
-Estimated Time: 0 Minutes
+Estimated Time: 40 Minutes
 
 ### Objectives
 

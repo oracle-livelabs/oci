@@ -11,7 +11,7 @@ Moving and Non-moving instances are terminologies used with Full Sack DR for the
  
 **Non-moving instances** - In general terminologies, non-moving instances are called a Warm Standby topology. Application VMs are deployed in both primary and standby regions.
 
-Estimated Workshop Time: Approximately 6 hours
+Estimated Workshop Time: Approximately 5 hours
 
 ### Workshop Objectives
 
