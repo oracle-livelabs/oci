@@ -48,9 +48,13 @@ Estimated Time: 15 Minutes
      ![phoenix-orch-login](./images/phoenix-orch-login.png)
 
 
-We have now achieved the switching over of the JDE application (Full Stack) from Ashburn region to Phoenix region with using FSDR.
+We have now achieved the switching over of the JDE application (Full Stack) from Ashburn region to Phoenix region with using FSDR Moving Instance approach.
+
+*Note:* For rolling back to the Ashburn region after the DR situation is over, setup the pre-requisites in the current primary region (Phoenix) following the Pre-requisite Setup section and then execute the tasks in Lab 1 to 1.5 considering Phoenix as primary and Ashburn as the standby.
+
+Now proceed to the next lab for the Non-Moving instance approach.
 
 ## Acknowledgements
 
-- **Author:** Tarani Meher, Senior JDE Specialist
-- **Last Updated By/Date:** Tarani Meher, Senior JDE Specialist, 02/2024
+* **Author:** Tarani Meher, Principal Cloud Architect
+* **Last Updated By/Date:** Tarani Meher, Principal Cloud Architect, May-2024

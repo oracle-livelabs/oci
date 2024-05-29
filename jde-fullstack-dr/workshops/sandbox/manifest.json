@@ -18,72 +18,62 @@
       "filename": "../../fsdr-pre-requisites-setup/fsdr-pre-req-setup.md"
     },
     {
-      "title": "Lab 1: DR with Moving Instance (Pilot Light)",
+      "title": "Lab 1 (Moving): DR with MOVING INSTANCE (Pilot Light)",
       "description": "Moving Instance",
       "filename": "../../drpg-setup/drpg-setup.md"
     },
     {
-      "title": "Lab 1.1: Add members to DRPG",
+      "title": "Lab 1.1 (Moving): Add members to DRPG",
       "description": "Add members to DRPG",
       "filename": "../../drpg-members/drpg-members.md"
     },
     {
-      "title": "Lab 1.2: Create Switchover Plan",
+      "title": "Lab 1.2 (Moving): Create Switchover Plan",
       "description": "Create Switchover Plan",
       "filename": "../../switchover-plan/switchover-plan.md"
     },
     {
-      "title": "Lab 1.3: Perform Pre-check",
+      "title": "Lab 1.3 (Moving): Perform Switchover Pre-check",
       "description": "Perform Pre-check",
       "filename": "../../switchover-prechecks/switchover-prechecks.md"
     },
     {
-      "title": "Lab 1.4: Perform Switchover",
+      "title": "Lab 1.4 (Moving): Perform Switchover",
       "description": "Perform Switchover",
       "filename": "../../switchover-execute/switchover-execute.md"
     },
     {
-      "title": "Lab 1.5: Post Switchover tasks",
+      "title": "Lab 1.5 (Moving): Post Switchover tasks",
       "description": "Post Switchover tasks",
       "filename": "../../post-switchover/post-switchover.md"
     },
     {
-      "title": "Lab 1.6: Create and Perform Switchover Rollback",
-      "description": "Create and Perform Rollback",
-      "filename": "../../switchback-plan/switchback-plan.md"
-    },
-    {
-      "title": "Lab 1.7: Post Switchover Rollback tasks",
-      "description": "Validate the JDE application after rollback",
-      "filename": "../../post-switchback/post-switchback.md"
-    },
-    {
-      "title": "Lab 2: DR with Non-Moving Instance (Active-Passive)",
+      "title": "Lab 2 (Non-Moving): DR with NON-MOVING INSTANCE (Warm Standby)",
       "description": "Non-Moving Instance",
       "filename": "../../drpg-setup/nm-drpg-setup.md"
     },
     {
-      "title": "Lab 2.1: Add members to DRPG",
+      "title": "Lab 2.1 (Non-Moving): Add members to DRPG",
       "description": "Add members to DRPG",
       "filename": "../../drpg-members/nm-drpg-members.md"
     },
     {
-      "title": "Lab 2.2: Create Switchover Plan",
+      "title": "Lab 2.2 (Non-Moving): Create Switchover Plan",
       "description": "Create Switchover Plan",
       "filename": "../../switchover-plan/nm-switchover-plan.md"
     },
     {
-      "title": "Lab 2.3: Perform Pre-check",
+      "title": "Lab 2.3 (Non-Moving): Perform Pre-check",
       "description": "Perform Pre-check",
       "filename": "../../switchover-prechecks/nm-switchover-prechecks.md"
     },
     {
-      "title": "Lab 2.4: Perform Switchover",
+      "title": "Lab 2.4 (Non-Moving): Perform Switchover",
       "description": "Perform Switchover",
       "filename": "../../switchover-execute/nm-switchover-execute.md"
     },
     {
-      "title": "Lab 2.5: Post Switchover tasks",
+      "title": "Lab 2.5 (Non-Moving): Post Switchover tasks",
       "description": "Post Switchover tasks",
       "filename": "../../post-switchover/nm-post-switchover.md"
     },

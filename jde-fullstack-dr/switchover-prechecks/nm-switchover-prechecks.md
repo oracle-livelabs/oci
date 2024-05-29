@@ -49,5 +49,5 @@ Estimated Time: 15 Minutes
 
 ## Acknowledgements
 
-- **Author:** Tarani Meher, Senior JDE Specialist
-- **Last Updated By/Date:** Tarani Meher, Senior JDE Specialist, 02/2024
+* **Author:** Tarani Meher, Principal Cloud Architect
+* **Last Updated By/Date:** Tarani Meher, Principal Cloud Architect, May-2024

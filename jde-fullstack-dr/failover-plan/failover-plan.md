@@ -2,312 +2,156 @@
 
 ## Introduction
 
-In this lab, we will create a DR Failover plan and customize the plan with the additional steps. Ashburn is the primary region and Phoenix is the standby region. FSDR provides two types of plan
+In this lab, we will create a DR Failover plan and customize the plan with the additional steps. Ashburn is the primary region and Phoenix is the standby region.
 
-- Switchover (Maintenance/Planned Disaster Recovery)
-- Failover   (Actual Disaster Recovery/Unplanned)
-
-Failover is the process of transferring mission-critical workloads from the primary production center and recovering the system at an off-site location (DR region). The main goal of failover is to mitigate the negative impact of a disaster or service disruption on business services and customers. Hence all of the tasks as part of this failover lab will be executed in the DR region which is Phoenix.
-
-This lab will focus on how to create a Failover plan and customize the plan as per PeopleSoft application requirements. 
-
-**DR Plan *must* be created in the standby region (Phoenix)**. It is because, in the case of the worst-case scenario, the entire primary region outside the FSDR will not be accessible from the primary region.
+**DR Plan *must* be created in the standby region (Phoenix)**. It is because, in the case of the worst-case scenario, the entire primary region might not be accessible from the outside world.
 
 Estimated Time: 60 Minutes
 
 ### Objectives
 
 - Create a Failover plan
-- Customize the Failover plan - Add DNS Record Update Script
-- Customize the Failover plan - Add PeopleSoft Application boot up group in Phoenix
-- Customize the Failover plan - Add Elastic Search Service boot up group in Phoenix
-- Customize the Failover plan - Add Kibana Service boot up group in Phoenix
-- Customize the Failover plan - Enable files synchronization (rsync) jobs in Phoenix 
-- Customize the Failover plan - DR Plan Re-Ordering
+- Customize the Failover plan - Update Logic Server Configuration
+- Customize the Failover plan - Add updates for all other servers similar to Lab 1.2
+
 
 ## Task 1: Create a Failover plan
 
+*Note:* Check if you have all the members present in the DRPG. If not, follow Lab 1.1 and add all the members to the DR Protection Groups before proceeding with the plan creation. 
+
 1. Login into OCI Console. Select region as **Phoenix**.
 
-  ![phoenix region](./images/phoenix-region1.png)
+   ![phoenix region](./images/phoenix-region1.png)
 
 2. Select Migration and Disaster Recovery from the Hamburger menu, then **Disaster Recovery** -> **DR Protection Groups**. Verify the region is **Phoenix**
 
-  ![phoenix region drpg](./images/phoenix-drpgpage.png)
+    ![phoenix region drpg](./images/phoenix-drpgpage.png)
 
 3. You will land on the Disaster Recovery Protection group home page; make sure you have selected the Phoenix region. **DR Plans always be created in the Standby DRPG (Phoenix region)**
 
-  ![drpg home](./images/phoenix-drpg.png)
+    ![drpg home](./images/phoenix-drpg.png)
 
-4. Select the **FSCM92-FSDR-Group-Phoenix** DRPG and navigate to Plans under the resources section. Click on Create Plan.
+4. Select the **FSDR\_Moving\_Ash\_to\_Phx\_DB\_with\_All Steps\_Standby** DRPG and navigate to Plans under the resources section. Click on Create Plan.
 
   ![drpg dr plan](./images/phoenix-drplan.png)
 
   Provide a name for the Failover Plan.
 
-  Select Plan type as **Failover (planned)**.
+  Select Plan type as **Failover (unplanned)**.
 
   ![drpg create plan](./images/phoenix-create-drplan.png)
-
-  The plan will start creating.
-
-  ![drpg creating plan](./images/phoenix-drplan-creating.png)
 
   Refresh the DR Plan page if required. You can monitor the request's status in the **Work requests** section under Resources. Within few minutes, the plan will get created, and it should be in *active* State.
 
   ![drpg plan created](./images/phoenix-drplan-created.png)
 
-  Select the **FSCM92\_FSDR\_Failover\_From\_Ashburn\_To\_Phoenix** plan, and you should be able to see the built-in plan groups.
+  Select the **JDE\_FSDR\_Failover\_Ashburn\_to\_Phoenix** plan, and you should be able to see the built-in plan groups.
 
   ![drpg plan details](./images/phoenix-drplan-details.png)
 
   Based on the members we added in both primary and standby DRPG, FSDR created these built-in plans.
-
-- **Built-in Prechecks** - These are the prechecks for the DB Failover.
-- **Failover Databases (Standby)** - Database Failover.
-
-  ![drpg plan details](./images/phoenix-drplan-detail.png)
-
-## Task 2: Customize the Failover plan - Add DNS Record Update Script
-
-1. Click on Add group.
-
-    ![add plan group](./images/phoenix-plangroup-add.png)
-
-2. Add "DNS Record Update" User defined group. Click on Add Step.
-
-    ![phoenix-add-dns-update-script](./images/phoenix-add-dns-update-script1.png)
-
-    ![phoenix-add-dns-update-script](./images/phoenix-add-dns-update-script.png)
-
-  - Add *Update DNS Record* in Step name
-  - Leave the Enable Step as ticked
-  - Select Error mode as "Stop on error"
-  - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
-  - Select the "Run local script" option
-  - Select the server instance in "Target instance in compartment" where you have placed the DNS record update script
-  - In the script parameters, add the location of the DNS Record update script.
-  - Run as user will be the username who has access to update DNS records.
-
-  Click on Add Step.
- 
-  Click on Add.
-
-  ![phoenix-add-dns-update-group](./images/phoenix-add-dns-update-group.png)
-
-## Task 3: Customize the Failover plan - Add PeopleSoft Application Boot-up Group in Phoenix
-
-1. Click on Add group.
-
-  ![add plan group](./images/phoenix-plangroup-add1.png)
-
-2. Add "Start Application Server Domains" User defined group. We will now add PeopleSoft Application Server boot up step. Click on Add Step.
-
-    ![add-app-boot-script](./images/phoenix-add-app-boot-script.png)
-
-    ![add-app-boot-script](./images/phoenix-add-app-boot-script2.png)
-
-  - Add *Start PeopleSoft Application in Phoenix* in Group name
-  - Add *Boot of Application Server Domains* in Step name
-  - Leave the Enable Step as ticked
-  - Select Error mode as "Stop on error"
-  - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
-  - Select the "Run local script" option
-  - Select application server instance in "Target instance in compartment"
-  - In script parameters, add the location of the application server domain start-up script.
-  - Run as user will be the username who has access to boot Application Server domain
-
-Click on Add Step.
- 
-3. We will now add PeopleSoft Process Scheduler (Linux) boot up step.
-
-    ![add-prcs-boot-script](./images/phoenix-add-prcs-boot-script.png)
-
-    ![phoenix-add-prcs-linux-boot-script](./images/phoenix-add-prcs-linux-boot-script.png)
-
-  - Add *Boot up Process Scheduler Domains (Linux)* in Step name
-  - Leave the Enable Step as ticked
-  - Select Error mode as "Stop on error"
-  - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
-  - Select the "Run local script" option
-  - Select process scheduler server instance in "Target instance in compartment"
-  - In script parameters, add the location of the process scheduler server domain start-up script.
-  - Run as user will be the username who has access to boot Process Scheduler Server domain.
-
-Click on Add Step.
- 
-4. We will now add PeopleSoft Process Scheduler (Windows) boot up step. Click on Add Step.
-
-    ![phoenix-add-prcs-windows-boot-script](./images/phoenix-add-prcs-windows-boot-script.png)
-
-    ![phoenix-add-prcs-windows-boot-script](./images/phoenix-add-prcs-windows-boot-script2.png)
-
-  - Add *Boot up Process Scheduler Domains (Windows)* in Step name
-  - Leave the Enable Step as ticked
-  - Select Error mode as "Stop on error"
-  - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
-  - Select the "Run local script" option
-  - Select process scheduler server instance in "Target instance in compartment"
-  - In script parameters, add the location of the process scheduler server domain start-up script
-  - Run as user will be blank for Windows compute instance
-
-Click on Add Step.
- 
-Click on Add.
-
-5. We will now add Web Server Boot up step. Click on Add Step.
-
-    ![phoenix-add-web-boot-script](./images/phoenix-add-web-boot-script.png)
-
-    ![phoenix-add-web-boot-script](./images/phoenix-add-web-boot-script2.png)
-
-  - Add *Boot up Web Server Domains* in Step name
-  - Leave the Enable Step as ticked
-  - Select Error mode as "Stop on error"
-  - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
-  - Select the "Run local script" option
-  - Select web server instance in "Target instance in compartment"
-  - In script parameters, add the location of the web server domain start-up script
-  - Run as user will be the username who has access to boot Web Server domain
-
-  Click on Add Step.
-
-  Click on Add.
-
-      ![phoenix-add-app-boot-group2](./images/phoenix-add-app-boot-group2.png)
-
-## Task 4: Customize the Failover plan - Add Elastic Search Services Boot-up Scripts in Phoenix
-    
-1. Click on Add group. Provide a name to the group as Start Elastic Search Services.
-
-    ![add plan group](./images/phoenix-plangroup-add_els.png)
-
-2. We will now add Elastic Search boot up script. Click on Add Step.
-
-    ![phoenix-add-elk-boot-script](./images/phoenix-add-elk-boot-script.png)
-
-    ![phoenix-add-elk-boot-script](./images/phoenix-add-elk-boot-script2.png)
-
-  - Add *Start Elastic Search Services* in group name
-  - Add *Boot up Elastic Search Services* in Step name
-  - Leave the Enable Step as ticked
-  - Select Error mode as "Stop on error"
-  - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
-  - Select the "Run local script" option
-  - Select Elastic Search server instance in "Target instance in compartment"
-  - In the script parameters, add the location of the Elastic Search services start-up script
-  - Run as user will be the username who has access to boot Elastic Search services
-
-  Click on Add.
-
-    ![phoenix-add-elk-boot-group](./images/phoenix-add-elk-boot-group.png)
-
-## Task 5: Customize the Failover plan - Add Kibana Services Boot-up Scripts in Phoenix
-
-1. Click on Add group. Provide a name to the group as Start Kibana Services.
-
-    ![add plan group](./images/phoenix-plangroup-add-kib.png)
-
-2. We will now add Kibana Services boot up script. Click on Add Step.
-
-    ![phoenix-add-kibana-boot-script](./images/phoenix-add-kibana-boot-script.png)
- 
-    ![phoenix-add-kibana-boot-script](./images/phoenix-add-kibana-boot-script2.png)
-
-  - Add *Start Kibana Services* in group name
-  - Add *Boot up Kibana Services* in Step name
-  - Leave the Enable Step as ticked
-  - Select Error mode as "Stop on error"
-  - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US West (Phoenix)"
-  - Select the "Run local script" option
-  - Select Kibana server instance in "Target instance in compartment"
-  - In the script parameters, add the location of the Kibana services start-up script
-  - Run as user will be the username who has access to boot Kibana services
-
-  Click on Add.
-
-    ![phoenix-add-kibana-boot-group](./images/phoenix-add-kibana-boot-group3.png)
-
-## Task 6: Customize the Failover plan - Enable files synchronization (rsync) jobs in Phoenix
-
- As part of this task, we will enable synchronization (rsync) jobs in Phoenix to reverse the sync from Phoenix to Ashburn post Failover as the roles (priamry and standby) will be reversed.
-
- 1. Click on Add group.
-
-    ![add plan group](./images/phoenix-plangroup-add_rsync.png)
-
-2. We will enable cronjob (rsync) in Application Server. Add "Enable\_rsync\_in\_Phoenix" User defined group. Click on Add Step.
-
-    ![phoenix-add-sync-start-script](./images/phoenix-add-sync-start-script.png)
-
-    ![phoenix-add-app-sync-start-script](./images/phoenix-add-app-sync-start-script.png)    
-
-    - Add *Enable-rsync-in-Phoenix-App* in Step name
-    - Leave the Enable Step as ticked
-    - Select Error mode as "Stop on error"
-    - Leave the default "3600" seconds in Timeout in seconds
-    - In the region, select "US West (Phoenix)"
-    - Select the "Run local script" option
-    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
-    - In the script parameters, add the location of the cronjob (rsync) enable script
-    - Run as user will be the user who has access to enable cronjobs
   
-    Click on Add Step.
+  ![phoenix-precheck-builtin](./images/phoenix-precheck-builtin.png)
 
-3. We will now enable cronjob (rsync) in Process Scheduler Server. Click on Add Step.
+  - **Built-in Prechecks** - These are the prechecks for the plan with all servers and database. Expand to see all steps and details.
 
-    ![phoenix-add-sync-stop-script](./images/phoenix-add-sync-start-script2.png)
+  - **Failover Volume Groups** - Restore volume group failover.
 
-    ![phoenix-add-prcs-sync-stop-script](./images/phoenix-add-prcs-sync-start-script.png)    
+  - **Failover Databases** - Database Failover to standby using dataguard.
 
-    - Add *Enable-rsync-in-Phoenix-PRCS* in Step name
-    - Leave the Enable Step as ticked
-    - Select Error mode as "Stop on error"
-    - Leave the default "3600" seconds in Timeout in seconds
-    - In the region, select "US West (Phoenix)"
-    - Select the "Run local script" option
-    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
-    - In the script parameters, add the location of the cronjob (rsync) enable script
-    - Run as user will be the user who has access to enable cronjobs
+  - **Launch Compute Instances** - Launch the compute instances at the standby region as a part of moving instance.
 
-    Click on Add Step.
+  *Note:* To create a DR Plan using CLI, please follow the link [Automate FSDR with CLI](https://docs.oracle.com/en/learn/full-stack-dr-oci-cli-command/#introduction)
 
-4. We will now enable cronjob (rsync) in Web Server. Click on Add Step.
+## Task 2: Customize the Failover plan - Add a group to update Logic Server configuration
 
-    ![phoenix-add-sync-stop-script](./images/phoenix-add-sync-start-script3.png)
+We need to add the custom update groups after the "**Launch Compute Instances**" pre-built group so that the scripts will run in the newly launched instances.
 
-    ![phoenix-add-web-sync-stop-script](./images/phoenix-add-web-sync-start-script.png)    
+  1. Click on **Add group**.
 
-    - Add *Enable-rsync-in-Phoenix-WEB* in Step name
-    - Leave the Enable Step as ticked
-    - Select Error mode as "Stop on error"
-    - Leave the default "3600" seconds in Timeout in seconds
-    - In the region, select "US West (Phoenix)"
-    - Select the "Run local script" option
-    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
-    - In the script parameters, add the location of the cronjob (rsync) enable script
-    - Run as user will be the user who has access to enable cronjobs
+    ![add plan group](./images/phoenix-group-add_logic.png)
+      In "Add plan group" page, enter a suitable **Group name**
 
-  Click on Add Step.
+      Select the **Add after** button to add the group after a particular group.
+      
+      Select the **Group** after which you want to add this custom group.
 
-  Click on Add.
+      Click **Add step** to add the scripts parameters. 
 
-      ![phoenix-add-sync-stop-script](./images/phoenix-add-sync-start-script4.png)
+    ![phoenix-step-add-logic-tns](./images/phoenix-step-add-logic-tns.png)
+      In "Add plan group step" page, enter a suitable **Step name**
 
-DR Failover plan is now updated with customized steps.
+      Select the **primary region** from the **Region** drop down to run the scripts in the standby after instance launch. *This is intentional as we do not have the instance available in the stand-by region for a movable instance setup*.
 
-   ![phoenix-add-sync-stop-script](./images/phoenix-dr-plan-done.png)
+      Select the **Run local script** button.
 
-   You may now **proceed to the next lab**.
+      Select the logic server as **Target instance** from the drop down.
+
+      Add below parameters in the **Script parameters**. This is based on where you have your script and the configuration file present.
+
+      Enter the user with which you want to run the script in the **Run as user** field. 
+
+      Select **Stop on error** on the **Error mode**
+
+      Keep default 3600 as the **Timeout in seconds** and tick the **Enable step** option.
+
+      Click **Add Step** to proceed. 
+
+  2. Click **Add Step** to add another step in the group. 
+    ![phoenix-step-add-logic-jde](./images/phoenix-step-add-logic-jde.png)
+    In "Add plan group step" page, enter a suitable **Step name**
+
+      Select the **primary region** from the **Region** drop down to run the scripts in the standby after instance launch.
+
+      Select the **Run local script** button.
+
+      Select the logic server as **Target instance** from the drop down.
+
+      Add below parameters in the **Script parameters**. This is based on where you have your script and the configuration file present. Refer to the Pre-requisites Setup section for details.
+
+      Enter the user with which you want to run the script in the **Run as user** field.
+
+      Select **Stop on error** on the **Error mode**
+
+      Keep default 3600 as the **Timeout in seconds** and tick the **Enable step** option.
+
+      Click **Add Step** to proceed.
+
+  3. Click **Add Step** to add another step in the group. 
+    ![phoenix-step-add-logic-host](./images/phoenix-step-add-logic-host.png)
+    In "Add plan group step" page, enter a suitable **Step name**
+
+      Select the **primary region** from the **Region** drop down to run the scripts in the standby after instance launch.
+
+      Select the **Run local script** button.
+
+      Select the logic server as **Target instance** from the drop down.
+
+      Add below parameters in the **Script parameters**. This is based on where you have your script and the configuration file present. Refer to the Pre-requisites Setup section for details.
+
+      Enter the user with which you want to run the script in the **Run as user** field.
+
+      Select **Stop on error** on the **Error mode**
+
+      Keep default 3600 as the **Timeout in seconds** and tick the **Enable step** option.
+
+      Click **Add Step** to proceed.
+
+  4. Validate that all three steps are added and click **Add** to proceed.
+  ![phoenix-step-add-logic-all](./images/phoenix-step-add-logic-all.png)
+
+
+## Task 3: Customize the Failover plan - Create the remaining groups and steps
+  
+  1. Create the same groups and steps for all other servers in the Failover Plan **JDE\_FSDR\_Failover\_Ashburn\_to\_Phoenix** following similar steps from Task-3 to task-11 in Lab 1.2.
+
+  2. Validate that all the groups and steps are added in the plan following the tasks from lab 1.2
+
+  ![add plan group](./images/phoenix-group-add_all.png)
+      
+  You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** -  Vinay Shivanna, Principal Cloud Architect
-- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023
+- **Author:** Tarani Meher, Senior JDE Specialist
+- **Last Updated By/Date:** Tarani Meher, Senior JDE Specialist, 03/2024

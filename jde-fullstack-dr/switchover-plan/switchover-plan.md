@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, we will create a DR Switchover plan and customize the plan with the additional steps. Ashburn is the primary region and Phoenix is the standby region. FSDR provides two types of plan
+In this lab, we will create a DR Switchover plan and customize the plan with the additional steps. Ashburn is the primary region and Phoenix is the standby region. FSDR provides below types of plans.
 
 - Switchover (Maintenance/Planned Disaster Recovery)
 - Failover   (Actual Disaster Recovery/Unplanned)
@@ -13,7 +13,7 @@ This lab will focus on how to create a Switchover plan and customize the plan as
 
 **DR Plan *must* be created in the standby region (Phoenix)**. It is because, in the case of the worst-case scenario, the entire primary region outside the FSDR will not be accessible from the primary region.
 
-Estimated Time: 180 Minutes
+Estimated Time: 0 Minutes
 
 ### Objectives
 
@@ -86,7 +86,7 @@ Estimated Time: 180 Minutes
 
   - **Terminate Volume Groups** - Terminate volume group.
 
-  - **StepsRemove Volume Groups from DR Protection Group** - StepsRemove Volume Groups from DR Protection Group.
+  - **Remove Volume Groups from DR Protection Group** - StepsRemove Volume Groups from DR Protection Group.
 
   *Note:* To create a DR Plan using CLI, please follow the link [Automate FSDR with CLI](https://docs.oracle.com/en/learn/full-stack-dr-oci-cli-command/#introduction)
 
@@ -1002,7 +1002,6 @@ Add this custom update group after the "**Stop E1 Services and Agents**" group t
       Click **Add Step** to proceed.
 
   6. Validate that all the steps are added and click **Add** to continue.
-    ![phoenix-group-add-agent-nm-start-all](./images/phoenix-group-add-service-wlservice-nm-all.png)
 
 ## Task 11: Customize the Switchover plan - Add a group to Start WebLogic on Web Servers and SM Server
 
@@ -1085,5 +1084,5 @@ Add this custom update group after the "**Stop E1 Services and Agents**" group t
 
 ## Acknowledgements
 
-- **Author:** Tarani Meher, Senior JDE Specialist
-- **Last Updated By/Date:** Tarani Meher, Senior JDE Specialist, 02/2024
+* **Author:** Tarani Meher, Principal Cloud Architect
+* **Last Updated By/Date:** Tarani Meher, Principal Cloud Architect, May-2024

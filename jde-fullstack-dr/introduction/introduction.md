@@ -3,13 +3,19 @@ Protect your JD Edwards EnterpriseOne Application using Oracle Full Stack Disast
 
 ## About this Workshop
 
-This workshop will show how Full Stack Disaster Recovery can help to orchestrate DR Switchover and Failover operations for a JDE Application deployed in Oracle Cloud Infrastructure (OCI) across two regions.
+This workshop will show how Full Stack DR can help to orchestrate DR Switchover and Failover operations for a JDE Application deployed in Oracle Cloud Infrastructure (OCI) across two regions using both Moving and Non-moving instance approach.
+
+Moving and Non-moving instances are terminologies used with Full Sack DR for the Compute instances (VMs), and those VMs are deployed depending on the application and business requirements.
+ 
+**Moving instances**- In general terminologies, moving instances are called Cold VM / Pilot light DR topology. Application VMs are deployed only in the Primary region. During DR runtime, VMs will be created at the standby region.
+ 
+**Non-moving instances** - In general terminologies, non-moving instances are called a Warm Standby topology. Application VMs are deployed in both primary and standby regions.
 
 Estimated Workshop Time: Approximately 6 hours
 
 ### Workshop Objectives
 
-In this workshop, you will learn to leverage FSDR and implement Disaster Recovery for JDEdwards EnterpriseOne.
+In this workshop, you will learn to leverage Full Stack DR and implement Disaster Recovery for JDEdwards EnterpriseOne.
 * How to create a Movable Compute instance for cold VM DR or Pilot light setup.
 * How to create a Non-Movable Compute instance for Hot Standby or Active/Passive setup. 
 * How to Switchover and Test the JDE E1 application for a Planned DR Testing.
@@ -18,7 +24,7 @@ In this workshop, you will learn to leverage FSDR and implement Disaster Recover
 
 ### Prerequisites
 
-For Movable Compute instance -
+For Moving instance -
 * An active copy of the Database at the standby region.
 * DataGuard setup and enabled between the primary and stand-by Databases.
 * Custom script to update configuration files in JDE Servers.
@@ -29,7 +35,7 @@ For Movable Compute instance -
 * Basic understanding of JDE Administration is required. 
 * Basic understanding of OCI Networking is expected. 
 
-For Non-Movable Compute instance -
+For Non-Moving instance -
 * An active JDE Setup installed using JDE One-Click Provisioning with Disaster Recovery.
 * DataGuard setup and enabled between the primary and stand-by Databases.
 * Custom script to update configuration files in JDE Servers.
@@ -96,7 +102,7 @@ Below is the architecture of JD Edwards EnterpriseOne environment running on Ora
 * It is highly recommended that you review the extensive collateral information at the below mentioned sites:
     * [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/)
     * [LearnJDE](https://docs.oracle.com/cd/E84502_01/learnjde/cloud_overview.html)
-    * [FSDR Overview](https://docs.oracle.com/en-us/iaas/disaster-recovery/index.html)
+    * [Full Stack DR Overview](https://docs.oracle.com/en-us/iaas/disaster-recovery/index.html)
 
 ## Disclaimer
 
@@ -105,4 +111,4 @@ The following is intended to outline our general product direction. It is intend
 ## Acknowledgements
 
 * **Author:** Tarani Meher, Senior JDE Specialist
-* **Last Updated By/Date:** Tarani Meher, Senior JDE Specialist, 01/2024
+* **Last Updated By/Date:** Tarani Meher, Senior JDE Specialist, 03/2024

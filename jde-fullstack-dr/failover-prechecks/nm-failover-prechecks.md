@@ -1,4 +1,4 @@
-# Perform pre-checks for the DR Failover Plan and Execute the plan
+# Perform pre-checks for the DR Failover plan and Execute
 
 ## Introduction
 
@@ -30,7 +30,7 @@ Estimated Time: 25 Minutes
 
   ![drpg landing page](./images/phoenix-drpg.png)
 
-4. Select the **FSDR\_Moving\_Ash\_to\_Phx\_DB\_with\_All Steps\_Standby** DRPG and select **JDE\_FSDR\_Failover\_Ashburn\_to\_Phoenix** plan
+4. Select the **FSDR\_Non-Moving\_Ash\_to\_Phx\_DB\_with\_All Steps** DRPG and select **JDE\_FSDR\_Failover\_Ashburn\_to\_Phoenix** plan
 
   ![drpg Failover plan](./images/phoenix-fo-plan.png)
 
@@ -83,7 +83,7 @@ Estimated Time: 25 Minutes
 
   ![drpg landing page](./images/phoenix-drpg.png)
 
-4. Select the **FSDR\_Moving\_Ash\_to\_Phx\_DB\_with\_All Steps\_Standby** DRPG and select plan **JDE\_FSDR\_Failover\_Ashburn\_to\_Phoenix**
+4. Select the **FSDR\_Non-Moving\_Ash\_to\_Phx\_DB\_with\_All Steps** DRPG and select plan **JDE\_FSDR\_Failover\_Ashburn\_to\_Phoenix**
 
   ![drpg failover plan](./images/phoenix-fo-plan.png)
 

@@ -40,7 +40,7 @@ Estimated Time: 15 Minutes
 
     - Provide a name for the Full Stack Disaster Recovery Protection Group
     - Select the right compartment
-    - Select the object storage bucket created in Lab 1 which is **fsdr\_pg\_logs\_ash**
+    - Select the object storage bucket created earlier which is **fsdr\_pg\_logs\_ash**
     - Ignore Role and leave as **Not Configured**
     - Ignore Add member 
 
@@ -52,7 +52,7 @@ Estimated Time: 15 Minutes
 
     - Provide a name for the Full Stack Disaster Recovery Protection Group
     - Select the right compartment
-    - Select the object storage bucket created in Lab 1 which is **fsdr\_pg\_logs\_phx**
+    - Select the object storage bucket created earlier which is **fsdr\_pg\_logs\_phx**
     - Ignore Role and leave as **Not Configured**
     - Ignore Add member
 
@@ -83,5 +83,5 @@ Estimated Time: 15 Minutes
 
 ## Acknowledgements
 
-* **Author:** Tarani Meher, Senior JDE Specialist
-* **Last Updated By/Date:** Tarani Meher, Senior JDE Specialist, 01/2024
+* **Author:** Tarani Meher, Principal Cloud Architect
+* **Last Updated By/Date:** Tarani Meher, Principal Cloud Architect, May-2024

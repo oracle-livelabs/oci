@@ -4,7 +4,7 @@
 
 In this lab, we will execute the actual switchover plan **FSDR\_Non-Moving\_Ash\_to\_Phx\_DB\_with\_All Steps**. The switchover plan will execute the series of steps as per the order.
 
-Estimated Time: 25 Minutes
+Estimated Time: 20 Minutes
 
 ### Objectives
 
@@ -12,7 +12,7 @@ Estimated Time: 25 Minutes
 - Execute the switchover plan
 - Monitor the executed switchover plan
 
-## Task 1: Check and verify JDE application status in Ashburn
+## Task 1: Verify JDE application status in Ashburn
 
 As the JDE VMs are on private subnet, the links will not be directly accessible from public internet. You need to login to the bastion host on the Ashburn region and access the links. Or you can configure SSH tunneling via bastion host to access the links from your local machine. 
 
@@ -69,6 +69,6 @@ As the JDE VMs are on private subnet, the links will not be directly accessible 
 
 ## Acknowledgements
 
-- **Author:** Tarani Meher, Senior JDE Specialist
-- **Last Updated By/Date:** Tarani Meher, Senior JDE Specialist, 02/2024
+* **Author:** Tarani Meher, Principal Cloud Architect
+* **Last Updated By/Date:** Tarani Meher, Principal Cloud Architect, May-2024
 

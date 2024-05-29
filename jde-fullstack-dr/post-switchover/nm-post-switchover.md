@@ -49,9 +49,9 @@ Estimated Time: 15 Minutes
 
 We have now achieved the switching over of the JDE application (Full Stack) from Ashburn region to Phoenix region using FSDR Non-Moving Instance.
 
-Rollback is same for both movable compute and non-movable compute, please **follow Labs 1.6 and 1.7 for the Rollback** execution and verification.
+*Note:* For rolling back to the Ashburn region after the DR situation is over, setup the pre-requisites in the current primary region (Phoenix) following the Pre-requisite Setup section and then execute the tasks in Lab 2 to 2.5 considering Phoenix as primary and Ashburn as the standby.
 
 ## Acknowledgements
 
-- **Author:** Tarani Meher, Senior JDE Specialist
-- **Last Updated By/Date:** Tarani Meher, Senior JDE Specialist, 02/2024
+* **Author:** Tarani Meher, Principal Cloud Architect
+* **Last Updated By/Date:** Tarani Meher, Principal Cloud Architect, May-2024

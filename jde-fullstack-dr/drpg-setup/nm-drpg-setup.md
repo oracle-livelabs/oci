@@ -2,9 +2,7 @@
 
 ## Introduction
 
-In this lab, we will Create and Associate Disaster Recovery Protection Groups (DRPG). Ashburn is the primary region and Phoenix is the standby region.
-
-What is DRPG – A resource type used by Full Stack Disaster Recovery.  A DR Protection Group represents a consistency grouping defined for the purposes of disaster recovery.  It is a collection of different OCI resources that comprise an application and must be treated as a combined group when performing disaster recovery operations.  For example, a DR Protection Group may consist of application servers (compute instances), associated block storage (grouped as volume groups) and databases.
+In this lab, we will do the Disaster Recovery setup with warm standby (non-moving) where a JDE instance is already present at the standby region. The standby JDE instance was created by the One-Click Provisioning as a part of disaster recovery environment at phoenix region. We are starting with Ashburn as the primary region and Phoenix as the standby region. Note that the earlier labs for moving instance does not have any impact on this.
 
 Estimated Time: 15 Minutes
 
@@ -83,5 +81,5 @@ Estimated Time: 15 Minutes
 
 ## Acknowledgements
 
-* **Author:** Tarani Meher, Senior JDE Specialist
-* **Last Updated By/Date:** Tarani Meher, Senior JDE Specialist, 01/2024
+* **Author:** Tarani Meher, Principal Cloud Architect
+* **Last Updated By/Date:** Tarani Meher, Principal Cloud Architect, May-2024

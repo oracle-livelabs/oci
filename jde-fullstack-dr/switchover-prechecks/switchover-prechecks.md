@@ -10,9 +10,8 @@ Estimated Time: 15 Minutes
 
 ### Objectives
 
-- Perform Run prechecks for the FSDR_Moving\_Ash\_to\_Phx\_DB\_with\_All Steps\_Standby plan
-- Monitor the executed prechecks plan
-- Verify the executed prechecks plan
+- Perform Run prechecks for the plan
+- Monitor the executed prechecks
 
 ## Task 1: Perform Run prechecks for the Switchover plan
 
@@ -40,7 +39,7 @@ Estimated Time: 15 Minutes
 
   ![drpg execute prechecks](./images/phoenix-execute-prechecks.png)
 
-## Task 2: Monitor the executed prechecks plan
+## Task 2: Monitor the executed prechecks
 
 1. Navigate to **Plan executions** section under **Resources** and select the **Precheck_1** plan execution. Initially, it will show the status as **ACTIVE** all the **Built-in Prechecks** as *Queued*
 
@@ -58,5 +57,5 @@ Estimated Time: 15 Minutes
 
 ## Acknowledgements
 
-- **Author:** Tarani Meher, Senior JDE Specialist
-- **Last Updated By/Date:** Tarani Meher, Senior JDE Specialist, 02/2024
+* **Author:** Tarani Meher, Principal Cloud Architect
+* **Last Updated By/Date:** Tarani Meher, Principal Cloud Architect, May-2024

@@ -4,7 +4,7 @@
 
 In our previous lab, we have switched over JDE application from *Ashburn* to *Phoenix* region.
 
-In this lab, we will create a DR Switchover (Rollback) plan (from *Phoenix* to *Ashburn*) once the primary region is up and ready. We just need to switchover the database server using DataGuard and use all other JDE servers from the Ashburn region itself. Standby is created for business continuity during DR where we are not doing any application/tools upgrade or patching that needs to be switched back to the primary region. Any local files saved in the standby JDE servers will be lost, all the required JDE data are present in the database. 
+In this lab, we will create a Switchover plan (from *Phoenix* to *Ashburn*) only for the database to use for further labs. As this is a planned switchover, we have our primary servers available without any impact. For actual DR scenarios where we will have no access to servers in our primary region, we will be using Failover plans which is explained in subsequent labs. Now we just need to switchover the database server using DataGuard and use all other JDE servers from the Ashburn region itself. 
 Please note that *Phoenix* is the primary region and *Ashburn* is the standby region as of now.  
 
 **DR Plan *must* be created in the standby region (Ashburn)**. 
@@ -18,6 +18,9 @@ Estimated Time: 20 Minutes
 - Create the default Switchover plan
 - Run Precheck for the Rollback plan from Ashburn region
 - Execute Switchover for the Rollback plan from Ashburn region
+- Verify the DRPG status
+- Access the Server Manager from Ashburn region
+- Verify login to JDE application from Ashburn region
 
 ## Task 1: Prepare DRPG for Database Rollback
 
@@ -104,6 +107,43 @@ As part of this task, we will only switchover the Database from Phoenix back to 
 
     ![plan executions](./images/ashburn-db-role.png)
     ![plan executions](./images/phoenix-db-role.png) 
+
+## Task 6: Verify the DRPG status
+
+1. Go to the **DR Protection Groups** page for both primary and standby regions, notice that the *Role* of DRPG at Phoenix has changed to *standby*, and the new *primary* region is Ashburn. 
+
+  ![drpg navigation page](./images/ashburn-drpgpage1.png)
+
+  ![ashburn drpg status](./images/phoenix-drpgpage1.png)
+
+## Task 7: Access the Server Manager from Ashburn region
+
+1. Open the link to the WebLogic Admin Console for the Server Manager at the standby region. The links are only accessible from public internet via SSH tunneling using the bastion host, please configure the same before accessing the links.
+  
+     ![phoenix weblogic admin](./images/phoenix-weblogic-admin.png)
+
+  Start the SMC Management Console from the WebLogic server, then open the link for the Server Manager console.  
+
+     ![ashburn-servermanager-console](./images/ashburn-servermanager-console1.png)
+
+## Task 8: Verify login to JDE application from Ashburn region
+
+1. Access the JDE application from the browser after doing the required changes for bastion host tunnelling. You should be able to see that the application is working as expected from the Ashburn region.
+
+      ![phoenix-jde-app-verify](./images/phoenix-jde-app-verify.png)
+     **JDE is now accessible from the new primary region (Ashburn)**
+
+2. Enter the JDE credentials and validate the login is successful, submit a report to validate the batch server is running fine.
+
+     ![phoenix-jde-app-login](./images/phoenix-jde-app-login.png)
+
+     ![phoenix-jde-app-batch](./images/phoenix-jde-app-batch.png)
+
+3. Open the link for the Orchestrator Studio and make sure its accessible. 
+
+     ![phoenix-orch-login](./images/phoenix-orch-login.png)
+
+We have now rolled back the database to Ashburn from Phoenix region so that we can again use the our original JDE setup for further labs.
 
    You may now **proceed to the next lab**.
 
