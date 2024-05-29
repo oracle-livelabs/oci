@@ -110,5 +110,5 @@ The following is intended to outline our general product direction. It is intend
 
 ## Acknowledgements
 
-* **Author:** Tarani Meher, Senior JDE Specialist
-* **Last Updated By/Date:** Tarani Meher, Senior JDE Specialist, 03/2024
+* **Author:** Tarani Meher, Principal Cloud Architect
+* **Last Updated By/Date:** Tarani Meher, Principal Cloud Architect, May-2024
