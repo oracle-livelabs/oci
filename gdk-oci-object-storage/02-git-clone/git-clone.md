@@ -20,7 +20,7 @@ In this lab, you will:
 
 	```bash
 	<copy>
-	git clone https://github.com/sachin-pikle/gcn-oci-object-store-mvn.git lab
+	git clone https://github.com/sachin-pikle/gdk-oci-object-store-mvn.git lab
 	</copy>
 	```
 

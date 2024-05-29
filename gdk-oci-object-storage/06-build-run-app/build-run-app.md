@@ -25,7 +25,7 @@ In this lab, you will:
 
 	``` bash
 	<copy>
-	./mvnw install -pl lib -am && ./mvnw mn:run -pl oci
+	./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw mn:run -pl oci
 	</copy>
 	```
 </if>
@@ -37,7 +37,7 @@ In this lab, you will:
 	<copy>
 	./mvnw clean && ./mvnw install -pl lib -am && ./mvnw package -pl oci
 
-	java -jar oci/target/oci-1.0-SNAPSHOT.jar
+	MICRONAUT_ENVIRONMENTS=oraclecloud java -jar oci/target/oci-1.0-SNAPSHOT.jar
 	</copy>
 	```
 </if>
