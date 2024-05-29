@@ -50,7 +50,7 @@
         {
             "title": "Lab 8: Importing OCI Services",
             "description": "Get to know Stack Monitoring's Extensibility: Import OCI Services",
-            "filename": "../../oci-services/oci-services.md"
+            "filename": "../../import-oci-services/import-oci-services.md"
         }, 
         {
             "title": "Need Help?",
