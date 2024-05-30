@@ -10,7 +10,7 @@ Estimated Workshop Time: 1 hour
 
 ### What is Graal Development Kit for Micronaut?
 
-The [Graal Development Kit for Micronaut (GDK)](https://www.graal.cloud/gdk) is an Oracle build of the open source Micronaut® framework. The GDK provides a curated set of Micronaut framework modules that simplify cloud application development, are designed for ahead-of-time compilation with GraalVM Native Image, and are fully supported by Oracle. The GDK also provides project creation utilities, VS Code and IntelliJ extensions for application development and deployment.
+The [Graal Development Kit for Micronaut (GDK)](https://graal.cloud/gdk) is an Oracle build of the open source Micronaut® framework. The GDK provides a curated set of Micronaut framework modules that simplify cloud application development, are designed for ahead-of-time compilation with GraalVM Native Image, and are fully supported by Oracle. The GDK also provides project creation utilities, VS Code and IntelliJ extensions for application development and deployment.
 
 ### What is Micronaut?
 
@@ -52,7 +52,7 @@ This workshop assumes you have:
 
 ## Learn More
 
-* [Graal Development Kit for Micronaut](https://www.graal.cloud/gdk/)
+* [Graal Development Kit for Micronaut](https://graal.cloud/gdk/)
 
 ## Acknowledgements
 
