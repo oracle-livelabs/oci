@@ -397,6 +397,7 @@ fi</copy>
      ````**vcnfsdr** = VCN for the primary region, 
         **vcndr**   = VCN for the standby region. Update the same for your own VCN details.
 
+    You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

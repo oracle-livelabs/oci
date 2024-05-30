@@ -52,7 +52,7 @@ We have now achieved the switching over of the JDE application (Full Stack) from
 
 *Note:* For rolling back to the Ashburn region after the DR situation is over, setup the pre-requisites in the current primary region (Phoenix) following the Pre-requisite Setup section and then execute the tasks in Lab 1 to 1.5 considering Phoenix as primary and Ashburn as the standby.
 
-Now proceed to the next lab for the Non-Moving instance approach.
+You may now **proceed to the next lab** for the Non-Moving instance approach.
 
 ## Acknowledgements
 
