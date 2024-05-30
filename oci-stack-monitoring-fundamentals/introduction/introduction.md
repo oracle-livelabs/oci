@@ -13,9 +13,11 @@ In this workshop learn how to:
 In this workshop you will get familiar with:
 * Stack Monitoring's **home pages** and how to triage open alarms and view metric performance over time. 
 * Review Stack Monitoring's **UI driven discovery process**. 
-* **Review an open alarm notification**, then review the steps to **configure an alarm**. 
+* **Review an open alarm notification**, then review the steps to **configure an alarm**. (**Optional**)
 * Utilize Stack Monitoring's **application topology** to identify and troubleshoot issues across an application stack. 
-* Leverage Stack Monitoring's **Stack View** to get a holistic perspective of key performance metrics across an entire application. 
+* Leverage Stack Monitoring's **Stack View** to get a holistic perspective of key performance metrics across an entire application.
+* Review the process of creating a Metric Extension to monitor the memory usage of each user on a host. (**Optional**)
+* Review the process of importing a load balancer in to Stack Monitoring, to complete an EBS application's topology. (**Optional**)
 
 While most of what is covered in this workshop is consistent across all applications such as PeopleSoft, the workshop will focus on an E-Business Suite application. 
 
@@ -56,7 +58,13 @@ In this workshop, the following topics will be covered:
     - Review performance of resource
     - Navigate within the applications topology
     - Review an application's performance using Stack View
-
+* **Metric Extensions**
+    - Review the process of creating a Metric Extension
+    - Review the memory usage of all users on a host
+* **Importing OCI Services**
+    - Review the process of importing a load balancer in to Stack Monitoring
+    - Review a load balancer home page in Stack Monitoring
+    - Review the process of relating a load balancer to a WebLogic cluster to complete the topology
 ### Prerequisites
 
 * An Oracle event account, which you can use to sign into the workshop tenancy.

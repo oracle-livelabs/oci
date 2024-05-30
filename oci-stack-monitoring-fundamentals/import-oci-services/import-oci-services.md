@@ -11,10 +11,9 @@ Estimated time: 10 minutes
 
 ### Objectives
 
-* Navigate to Stack MOnitoring Import Resources
-* Review the process of importing an OCI Load Balancer
-* Review the load balancer Stack Monitoring home page
-* Review the process of relating the load balancer to a WebLogic cluster
+* Review the process of importing a load balancer in to Stack Monitoring
+* Review a load balancer home page in Stack Monitoring
+* Review the process of relating a load balancer to a WebLogic cluster to complete the topology
 
 ### Prerequisites
 
@@ -30,7 +29,7 @@ Estimated time: 10 minutes
 
 	![OCI Compartment list, highlighting the OracleApps compartment](images/1-2-console.png " ")
 
-## Task 2: Review the process of importing OCI Service in to Stack Monitoring
+## Task 2: Review the process of importing a load balancer in to Stack Monitoring.
 
 1. From the Enterprise Summary, select **Import resource**.
 
@@ -60,7 +59,7 @@ Estimated time: 10 minutes
 
 	![Import resources, highlighting the cancel button](images/2-7-import.png " ")
 
-## Task 3: Review an imported load balancer Stack Monitoring home page
+## Task 3: Review a load balancer home page in Stack Monitoring.
 
 1. To navigate to the load balancer Stack Monitoring home page, begin by selecting **All resources**.
 
@@ -78,7 +77,7 @@ Estimated time: 10 minutes
 
 	![Load balancer home page, highlighting the link to the OCI service home page](images/3-3-import.png " ")
 
-## Task 4: Review the process of completing a WebLogic cluster's topology
+## Task 4: Review the process of relating a load balancer to a WebLogic cluster to complete the topology.
 
 1. To complete the E-Business Suite application's topology, select **Topology**, then select **Add association**.
 

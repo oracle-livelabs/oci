@@ -9,9 +9,7 @@ Estimated time: 5 minutes
 ### Objectives
 
 * Review the process of creating a Metric Extension
-* Review the process of testing a Metric Extension
-* Review the process of publishing a Metric Extension
-* Navigate to a host home page to review the memory usage by user on a host
+* Review the memory usage of all users on a host
 
 ### Prerequisites
 
@@ -27,7 +25,7 @@ Estimated time: 5 minutes
 
 	![OCI Compartment list, highlighting the OracleApps compartment](images/1-2-console.png " ")
 
-## Task 2: Create a Metric Extension
+## Task 2: Review the process of creating a Metric Extension.
 
 1. Navigate to Stack Monitoring Metric Extension Page
 
@@ -82,7 +80,7 @@ Estimated time: 5 minutes
 
 	![Metric Extension page, highlighting the action button commands](images/2-7-me.png " ")
 
-## Task 3: Identify and navigate to the host where the Metric Extension is enabled.
+## Task 3: Review the memory usage of all users on a host.
 
 1. Identify the host where the Metric Extension has been enabled.
 
