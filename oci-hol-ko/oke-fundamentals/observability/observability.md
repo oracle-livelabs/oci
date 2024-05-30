@@ -81,7 +81,7 @@ Observability는 로그와 매트릭, 트레이스(추적)를 조합하여 현�
 
 ## Task 2: OSS Grafana 모니터링
 
-Lab 4에서 Helm Chart를 활용하여 Prometheus/Grafana를 이미 설치하였습니다. OKE에 설치된 Grafana 대시보드에 접속해 보겠습니다.
+이전 실습에서 mushop-utilities를 배포하면서 Prometheus/Grafana를 이미 설치하였습니다. OKE에 설치된 Grafana 대시보드에 접속해 보겠습니다.
 
 1. 우측 상단의 Cloud Shell 아이콘을 클릭하여 Cloud Shell로 들어갑니다.
 
@@ -148,15 +148,9 @@ Lab 4에서 Helm Chart를 활용하여 Prometheus/Grafana를 이미 설치하였
 
 11. Kubernetes Cluster 외 다른 대시보드도 선택해서 확인해 봅니다.
 
-### 대쉬보드 임포트
+### 대쉬보드 임포트 (참고사항)
 
 > *Note:* [Grafana 커뮤니티](https://grafana.com/grafana/dashboards?dataSource=prometheus)에서 다른 대시보드를 설치하거나 직접 만들 수 있습니다.
-
-- 쿠버네티스 업그레이드로 인한 일부 메트릭 변경 되었습니다. 수정된 다음 대쉬보드를 임포트하면 정상적으로 보입니다.
-
-    * [Kubernetes Cluster (Prometheus) - OKE](https://raw.githubusercontent.com/TheKoguryo/grafana-dashboard/main/mushop/kubernetes-cluster-prometheus-oke.json)
-    * [Kubernetes Pods (Prometheus) - OKE](https://raw.githubusercontent.com/TheKoguryo/grafana-dashboard/main/mushop/kubernetes-pods-prometheus-oke.json)
-    * [Spring Boot Statistics - OKE](https://raw.githubusercontent.com/TheKoguryo/grafana-dashboard/main/mushop/spring-boot-statistics-oke.json)
 
 1. **Dashboard** > **Browse** 를 클릭합니다.
 
@@ -181,4 +175,4 @@ Lab 4에서 Helm Chart를 활용하여 Prometheus/Grafana를 이미 설치하였
 
 * **Author** - DongHee Lee, Adao Junior
 * **Korean Translator & Contributors** - DongHee Lee, February 2022
-- **Last Updated By/Date** - DongHee Lee, October 2023
+- **Last Updated By/Date** - DongHee Lee, November 2023

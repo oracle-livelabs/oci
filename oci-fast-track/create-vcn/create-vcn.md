@@ -42,23 +42,33 @@ Neste Lab você vai aprender a provisiona uma Virtual Cloud Network (VCN) com ac
 * Sub-rede Pública (Public Subnet): 10.0.0.0/24 
 * Sub-rede Privada (Private Subnet): 10.0.1.0/24
 
-![preencha os campos](./images/vcn-fields-5.png)
+![preencha os campos](./images/vcn-wizard-5.png)
+![preencha os campos](./images/vcn-wizard-6.png)
+![preencha os campos](./images/vcn-wizard-7.png)
 
 6. Revise os componentes de rede que serão criados e clique em "Create"
 
-![revise os recursos que serão criados](./images/vcn-review-6.png)
+![revise os recursos que serão criados](./images/vcn-review-8.png)
 
-7. Acompanhe o status dos recursos sendo criados e depois clique em "View Virtual Cloud Network":
+7. Acompanhe o status dos recursos sendo criados e depois clique em "View VCN":
 
-![confira os recursos criados](./images/vcn-view-resources-7.png)
+![confira os recursos criados](./images/vcn-details-page-9.png)
 
 8. Veja que sua VCN foi criada muito rapidamente. Aproveite agora para explorar sua VCN e conferir os recursos que foram criados.
 
-![vcn listada na tela](./images/vcn-listed-8.png)
+![vcn listada na tela](./images/vcn-details-page-10.png)
+
+9. Volte um nível para também ver sua VCN em "Virtual Cloud Networks".
+
+![vcn listada na tela](./images/vcn-details-page-11.png)
+
+10. Acesse novamente sua VCN.
+
+![vcn listada na tela](./images/vcn-details-page-12.png)
 
 Ao final você deve ter: 1 VCN, 2 sub-redes regionais (pública e privada), 1 Internet Gateway, 1 NAT Gateway e 1 Service Gateway, todos prontos para uso.
 
-![página de detalhes da vcn](./images/vcn-details-page-9.png)
+![página de detalhes da vcn](./images/vcn-details-page-13.png)
 
 Você pode **seguir para o próximo Lab**.
 
@@ -69,4 +79,4 @@ Nesta sessão você aprendeu a criar uma Virtual Cloud Network (VCN) na prática
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Updated Por/Data** - Arthur Vianna, Jun/2022
+- **Último Updated Por/Data** - Arthur Vianna, Fev/2024

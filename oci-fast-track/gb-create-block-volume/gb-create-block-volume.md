@@ -27,11 +27,19 @@ Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Clou
 - **Size**: 500 GB
 - **Volume Performance**: Balanced
 
-*Selecione o Availability Domain (AD) do block volume como sendo o mesmo da instância.*
+*Selecione o Availability Domain (AD) do block volume como sendo o mesmo da instância **VM-OracleLinux-1***
+
+Relembre como verificar o AD das VMs.
+
+![lista de instancias criadas](./images/vm-listed-26.png)
+
+![preencha os parametros](./images/block-volume-config-1.png)
 
 ![preencha os parametros](./images/block-volume-config-2.png)
 
 ![clique em "Criar"](./images/block-volume-create-3.png)
+
+![clique em "Criar"](./images/block-volume-create-4.png)
 
 ## Task 2: Conectar o block volume a uma instância de computação
 
@@ -41,7 +49,9 @@ Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Clou
 
 2. Uma vez clicando na instância correspondente, desça a página e, no menu 'Resources', clique em **Attached block volumes** e **Attach block volume**.
 
+![clique em attach block volumes](./images/block-volume-vm-5.png)
 ![clique em attach block volumes](./images/block-volume-attach-5.png)
+![clique em attach block volumes](./images/block-volume-attach-6.png)
 
 3. Preencha o formulário como abaixo e clique em **Attach**.
 
@@ -49,6 +59,8 @@ Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Clou
 - **Attachment type**: ISCSI
 
 ![clique em attach](./images/block-volume-attach-config-6.png)
+![clique em attach](./images/block-volume-attach-config-7.png)
+![clique em attach](./images/block-volume-attach-config-8.png)
 
 4. No lado direito, clique no ícone de três pontos e em **iSCSI Commands & Information**.
 
@@ -58,17 +70,25 @@ Neste Lab você vai aprender a trabalhar com Block Storage dentro da Oracle Clou
 
 ![clique em copy](./images/block-volume-iscsi-copy-8.png)
 
-6. No Terminal, inicialmente, se conecte à instância de computação e execute o comando copiado.
+6. No Terminal, inicialmente, se conecte à instância de computação utilizando o **IP PRIVADO** **(VM-OracleLinux-1)** e execute o comando copiado.
+
+**Relembre como encontrar o IP privado.**
+
+![localize o IP publico da vm](./images/vm-private-ip-1.png)
 
 ``` shell
 <copy>
-ssh opc@<ip-da-máquina>
+ssh opc@<ip-privado-da-máquina>
 sudo su -
 <comando-connect>
 </copy>
 ```
 
 *Neste ponto, estamos acessando a máquina, utilizando o usuário root e executando o comando de 'attach'.*
+
+![cole o comando](./images/block-volume-iscsi-paste-8.png)
+
+Apenas mais um exemplo do comando ISCSI com zoom.
 
 ![cole o comando](./images/block-volume-iscsi-paste-9.png)
 
@@ -82,7 +102,7 @@ fdisk -l
 
 ## Task 3: Formatar block volume e montar na instância
 
-1. Formate o disco com o comando abaixo:
+1. Ainda conectado na máquina VM-OracleLinux-1, agora formate o disco com o comando abaixo:
 
 ``` shell
 mkfs /dev/sdb
@@ -116,4 +136,4 @@ Nesta sessão você aprendeu sobre Block Volumes na prática.
 ## Autoria
 
 - **Autores** - Arthur Vianna, Lucas de Almeida, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Date** - Arthur Vianna, Jun/2022
+- **Último Update Por/Date** - Arthur Vianna, Fev/2024

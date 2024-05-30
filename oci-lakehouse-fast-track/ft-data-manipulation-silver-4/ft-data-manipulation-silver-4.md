@@ -43,7 +43,7 @@ Na etapa anterior, armazenamos nossos DataFrames no formato Parquet. Este script
 
  A opção *`header=True`* indica que a primeira linha dos arquivos Parquet contém os cabeçalhos das colunas, e *`inferSchema=True`* permite que o Spark infira automaticamente o esquema dos dados (tipos de colunas) com base nos dados.
 
-1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Leitura Parquet Bronze](.\images\1-read-parquet.png)
 
@@ -55,13 +55,13 @@ Na etapa anterior, armazenamos nossos DataFrames no formato Parquet. Este script
 
 Este código em Spark contém duas funções definida para lidar com DataFrames que têm colunas estruturadas de forma complexa, como arrays aninhados e estruturas (structs).
 
-1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Flatten Function](.\images\2-function-flatten.png)
 
 Em resumo, estas funções estão transformando um DataFrame com colunas complexas e aninhadas em um formato mais simples e tabular, onde cada dado aninhado é trazido para uma coluna própria de nível superior, facilitando a análise e o processamento dos dados.
 
-2. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+2. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Execução Flatten Function](.\images\3-execute-flatten.png)
 
@@ -147,5 +147,5 @@ Nesta sessão você aprendeu a aprimorar a qualidade dos dados na camada prata d
 
 ## Autoria
 
-- **Autores** - Thais Henrique, Heloisa Escobar, Isabelle Anjos
-- **Último Update Por/Date** - Isabelle Anjos, Jan/2024
+- *Created By/Date* - Thais Henrique, Heloisa Escobar, Isabelle Anjos, Janeiro 2024
+- *Last Updated By* - Isabelle Anjos, Janeiro 2024

@@ -47,39 +47,43 @@ OCI Logging Analytics에서 지원하는 방법에 맞춰 컨테이너 로그도
 
 ### OCI Kubernetes Monitoring Solution 설치
 
-OCI 마켓플레이스를 통해 설치하거나, GitHub 리파지토리 소스를 통해 Resource Manager, Terraform, Helm 등으로 설치할 수 있습니다. 최신 소스로 한번에 설치를 위해 [GitHub - OCI Kubernetes Monitoring Solution](https://github.com/oracle-quickstart/oci-kubernetes-monitoring) 에서 바로 설치합니다.
+OCI 마켓플레이스를 통해 설치하거나, GitHub 리파지토리 소스를 통해 Resource Manager, Terraform, Helm 등으로 설치할 수 있습니다. 
 
 *설치전에 대상 Region에 OCI Logging Analytics가 활성화되어 있어야 합니다. 내비게이션 메뉴에서 **Observability & Management** > **Logging Analytics** 화면으로 이동하여, 활성화되었는지 확인합니다. 활성화되지 않은 경우 먼저 활성화합니다.*
 
-1. GitHub Repository 아래 버튼을 클릭하여 최신 소스로 설치를 시작합니다.
+1. [GitHub - OCI Kubernetes Monitoring Solution](https://github.com/oracle-quickstart/oci-kubernetes-monitoring) 으로 이동합니다.
+
+2. GitHub Repository 아래 버튼을 클릭하여 최신 소스로 설치를 시작합니다.
 
     ![Deploy to Oracle Cloud](images/deploy-to-oracle-cloud.png)
 
-2. 설치를 시작하면 Resource Manager의 Stack 생성화면으로 이동됩니다.
+3. 설치를 시작하면 Resource Manager의 Stack 생성화면으로 이동됩니다.
 
-3. 작성일 기준으로 V3.0.2 버전을 사용하였습니다.
+4. 작성일 기준으로 V3.2.0 버전을 사용하였습니다.
 
-4. 설치 기본 정보를 입력합니다.
+5. 설치 기본 정보를 입력합니다.
 
      - Create in compartment: Resource Manager Stack이 설치될 위치입니다.
 
      ![Create Stack](images/k8s-oke-monitoring-create-stack-1.png)
 
-5. 변수값을 입력합니다.
+6. 변수값을 입력합니다.
 
      - OKE Cluster: OKE Cluster가 위치한 Compartment와 대상 클러스터를 선택합니다.
      - OCI Observability & Management Service Configuration: Logging Analytics 대쉬보드와 LogGroup의 위치하는 Compartment를 선택하고, 만들 Logging Analytics LogGroup을 이름을 입력합니다.
          * Enable Metric Server Installation: mushop-utilities에서 이미 metric-server를 OKE에 설치한 상태이므로 여기서는 *체크하지 않습니다.*
-         * OCI Logging Analytics Log Group Name: MyOKELogGroup-xx
+         * OCI Logging Analytics Log Group Name: MyOKELogGroup-*xx*
      - OCI IAM Policies and Dynamic Groups: 모니터링할 OKE 클러스터에 대한 접근을 위해 자동으로 Dynamic Group과 Policy가 만들어집니다. 자동설치가 싫거나, 권한이 없는 경우, 사전에 별도로 권한에 설정합니다.
 
      ![Create Stack](images/k8s-oke-monitoring-create-stack-2.png)
 
-6. 결과를 리뷰하고, **Create**를 클릭하여, 설치 및 적용합니다.
+7. Next를 클릭합니다.
 
-7. 설치가 완료할 때 까지 기다립니다. 실패한 경우, Logs를 확인하여 문제를 해결하고 재시도합니다.
+8. 결과를 리뷰하고, **Create**를 클릭하여, 설치 및 적용합니다.
 
-8. 아래 Dynamic Group 및 Policy이 만들어집니다. Log & Object Collection Pods가 있는 Worker Nodes들에 OCI Logging Analytics에 로그를 업로드할 권한을 부여하고 있습니다
+9. 설치가 완료할 때 까지 기다립니다. 실패한 경우, Logs를 확인하여 문제를 해결하고 재시도합니다.
+
+10. 아래 Dynamic Group 및 Policy이 만들어집니다. Log & Object Collection Pods가 있는 Worker Nodes들에 OCI Logging Analytics에 로그를 업로드할 권한을 부여하고 있습니다
 
      - Dynamic Group: oci-kubernetes-monitoring-xxx...
 
@@ -102,17 +106,17 @@ OCI 마켓플레이스를 통해 설치하거나, GitHub 리파지토리 소스�
          Allow dynamic-group oci-kubernetes-monitoring-xxx... to use METRICS in compartment oci-hol WHERE target.metrics.namespace = 'mgmtagent_kubernetes_metrics'
          ```
 
-9. 왼쪽 위 내비게이션 메뉴에서 **Observability & Management** > **Logging Analytics** > **Administration**으로 이동합니다.
+11. 왼쪽 위 내비게이션 메뉴에서 **Observability & Management** > **Logging Analytics** > **Administration**으로 이동합니다.
 
-10. Resources > Log Groups에 보면 설치시 생성된 LogGroup를 확인할 수 있습니다.
+12. Resources > Log Groups에 보면 설치시 생성된 LogGroup를 확인할 수 있습니다.
 
      ![Log Group](images/k8s-oke-monitoring-log-group.png)
 
-11. Dashboard 메뉴를 클릭하면, Kubernetes 대쉬보드가 추가된 것을 확인할 수 있습니다.
+13. Dashboard 메뉴를 클릭하면, Kubernetes 대쉬보드가 추가된 것을 확인할 수 있습니다.
 
      ![OKE Monitoring Dashboard](images/k8s-oke-monitoring-dashboards.png)
 
-12. 대상으로 지정된 OKE 클러스터 설치된 자원을 확인합니다.
+14. 대상으로 지정된 OKE 클러스터 설치된 자원을 확인합니다.
 
     - helm chart로 설치된 것을 확인할 수 있습니다.
 
@@ -330,7 +334,7 @@ OCI Kubernetes Monitoring Solution 버전이 올라가면서 OCI Kubernetes Moni
 
     ```
     <copy>    
-    helm install elasticsearch -f values.yaml bitnami/elasticsearch --version 19.13.4 -n logging
+    helm install elasticsearch -f values.yaml bitnami/elasticsearch --version 19.16.3 -n logging
     </copy>
     ```
 
@@ -339,7 +343,7 @@ OCI Kubernetes Monitoring Solution 버전이 올라가면서 OCI Kubernetes Moni
     아래와 같이 설치되며, 실제 컨테이너가 기동하는 데 까지 약간의 시간이 걸립니다.
  
     ```
-    $ helm install elasticsearch -f values.yaml bitnami/elasticsearch --version 19.13.4 -n logging
+    $ helm install elasticsearch -f values.yaml bitnami/elasticsearch --version 19.16.3 -n logging
     NAME: elasticsearch
     ...
       Elasticsearch can be accessed within the cluster on port 9200 at elasticsearch.logging.svc.cluster.local
@@ -470,16 +474,16 @@ OCI Kubernetes Monitoring Solution 버전이 올라가면서 OCI Kubernetes Moni
 
 7. 생성한 인덱스 패턴을 통해 수집된 로그를 확인할 수 있습니다.
 
-8. 테스트를 위해 MuShop을 접속합니다.
+8. 테스트를 위해 MuShop 웹페이지를 다음과 같이 접속합니다.
 
     - 예, http://138.xxx.xxx.xxx/?efk-test
 
 9. 로그 확인
 
     ````
-    $ kubectl logs -lapp=storefront -f --tail=10
+    $ <copy>kubectl logs -lapp=storefront -f --tail=10</copy>
     ...
-    10.244.0.57 - - [27/Jun/2023:02:58:10 +0000] "GET /?efk-test HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" "10.244.1.0, 10.244.0.133"       
+    10.0.10.61 - - [24/Jan/2024:03:00:25 +0000] "GET /?efk-test HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" "10.0.10.43, 10.0.10.201"        
     ...
     ````
 
@@ -680,4 +684,4 @@ Agent Configuration는 로그를 수집하는 agent를 설정하는 부분입니
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, October 2023
+- **Last Updated By/Date** - DongHee Lee, January 2024

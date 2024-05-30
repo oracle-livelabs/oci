@@ -1,20 +1,22 @@
 {
     "workshoptitle": "OCI Data & AI Fast Track - For Data Engineering",
-    "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
-                "sample.json":"../../data-load/files/sample.json",
-                "step2.md":"../../data-load/files/step2.md"},
+    "help": "thais.henrique@oracle.com, heloisa.freire@oracle.com",
     "variables": ["../../variables/variables.json",
-                 "../../variables/variables-in-another-file.json"],
-    "help": "isabella.alvarez@oracle.com, breno.comin@oracle.com, thais.henrique@oracle.com",
+        "../../variables/variables-in-another-file.json"],
     "tutorials": [
+        {
+            "title": "Get Started",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
         {
             "title": "Introdução",
             "description": "Bem-vindo ao OCI Data & AI Live Labs - for Data Engineering",
             "filename": "../../intro/intro.md"
         },
         {
-            "title": "Get Started",
-            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+            "title": "Pré Requisito - Provisionar Recursos",
+            "description": "Aprenda a Rodar o Terraform em OCI criação dos pré-requisitos do ambiente",
+            "filename": "../../ft-resource-provision/ft-resource-provision.md"
         },
         {
             "title": "Lab 1: Configuração do ambiente Conda no OCI Data Science",
