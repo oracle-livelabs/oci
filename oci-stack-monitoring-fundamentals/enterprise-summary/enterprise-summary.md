@@ -30,7 +30,7 @@ Estimated time: 20 minutes
 
 2. Identify resources in a **Down** state
 
-	The Stack Monitoring Enterprise Summary page provides an overall health and performance of your entire enterprise. The top tier enables you to quickly see, identify, and triage resources that are **Down** to help remediate outages. Locate the **Status summary** doughnut chart on the upper left side of the page. You can see a count of resources by each status across the enterprise. This chart provides a quick visualization of how many resources are in a **Down** or **Not reporting** state across your enterprise. Let's investigate any resources that are **Down**. 
+	The Stack Monitoring Enterprise Summary page provides an overall health and performance of your entire enterprise. The top tier enables you to quickly identify then triage resources that are **Down** to help remediate outages. Locate the **Status summary** doughnut chart on the upper left side of the page. You can see a count of resources by each status across the enterprise. This chart provides a quick visualization of how many resources are in a **Down** or **Not reporting** state across your enterprise. Let's investigate any resources that are **Down**. 
 
 	Find the **Down** label in the Status summary chart. Clicking **Down** opens a slide-out reporting all of the resources in a down state. 
 
@@ -40,9 +40,11 @@ Estimated time: 20 minutes
 
 	![Stack Monitoring alarm slide-out filtered by resources that are down](images/1-2-ent-sum.png " ")
 
+	Once you are done reviewing resources by status, click **Close**.
+
 3. Review all resources that are **Not reporting**
 
-	Now that we have identified resources in a down state, let's identify those that are **Not reporting**. Not reporting generally indicates the agent is no longer uploading data. Stack Monitoring updates the status of monitored resources to Not Reporting to inform you there is an issue obtaining the resource's status. A single availability alarms can be configured to notify you when the resource is either Down or Not reporting. An alarm such as this and others are outlined in the [Setting Up Alarm](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/setting-alarms.html) section of the documentation.
+	Now that we have identified resources in a down state, let's identify those that are **Not reporting**. Not reporting generally indicates the agent is no longer uploading data. Stack Monitoring updates the status of monitored resources to Not Reporting to inform you there is an issue obtaining the resource's status. Availability alarms can be configured to notify you when the resource is either Down or Not reporting. Stack Monitoring provides alarm best pracitices to help you get started for all of the out-of-the-box resource types. For more information see [Setting Up Alarms](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/setting-alarms.html).
 
 	Using the Status filter located in the center of the slide-out, update the Status filter from **Down** to **Not reporting**. The table now displays all the resources in a Not Reporting state. Clicking a resource name will navigate you to that resource's homepage, where you can leverage the Stack Monitoring resource associations to identify the agent monitoring the resource and navigate to the agent's homepage to troubleshoot. We'll cover navigating to related resources in a later lab. For now, let's return to the Enterprise Summary. Click the **Close** button in the lower-left corner of the slide-out.
 
@@ -56,9 +58,9 @@ Estimated time: 20 minutes
 
 	The **Status by resource type** chart enables you to easily identify what tier of your application has availability issues. Each bar represents each tier of the application stack, (e.g., host, database, application server). Using the status colors, you can quickly assess if all resources within that tier are up or identify the tier that has a resource outage. Reporting of an application stack, such as E-Business Suite, PeopleSoft, and Oracle Database systems are unique. Each bar represents an application and its components, this allows you to identify if any individual component of an application is down or not reporting. Should you identify an area of concern with an application, clicking the bar will navigate you to that resource's homepage. We'll review homepages in the next lab activity.
 
-2. Identify resources by resource type that are **Not reporting**
+2. Identify resources by type that are **Not reporting**.
 
- 	Identifying which resources are down or not reporting by type across an enterprise is easy using Stack Monitoring. Simply locate the chart legend at the top right of the **Status by resource type** chart and select **Not reporting**. This will filter the chart to only show the count of resources by type in a **Not reporting** state.
+ 	Identifying which resources are down or not reporting by type across all of your monitoered resources is easy using the Enterprise Summary. Simply locate the chart legend at the top right of the **Status by resource type** chart and select **Not reporting**. This will filter the chart to only show the count of resources by type in a **Not reporting** state.
 
  	If we wish to see a more detailed list of hosts that are not reporting, click the **host** bar on the left side of the chart. 
 
@@ -78,11 +80,11 @@ Estimated time: 20 minutes
 
 1. Locate the **Alarms** region at the top right of the Enterprise Summary. 
 
-	Stack Monitoring provides quick access to all open alarms on your monitored resources. The **Alarms** region provides a total count of open alarms, as well as a count of alarms by severity. Clicking on a count of alarms invokes a slide-out. The slide-out provides greater details of the open alarms and is filtered by the severity count selected. Select the **total** count of open alarms.
+	For all of your monitored resources, Stack Monitoring provides quick access to all open alarms. The **Alarms** region provides a total count of open alarms, as well as a count of alarms by severity. Clicking on a count of alarms invokes a slide-out. The slide-out provides greater details of the open alarms and is filtered by the severity count selected. Select the **total** count of open alarms.
 
  	![Enterprise Summary Alarms chart, highlighting the count of all open alarms](images/3-1-ent-sum.png " ")
 
-	The alarm slide-out provides details of open alarms. These details include the severity, trigger time, resource name, metric name, dimension of the metric in a firing state, current value, and alarm name. The current value can help DevOps teams prioritze the order the open alerts should be triaged. The table can be ordered by selecting the column title. 
+	The alarm slide-out provides details of open alarms. These details include the severity, trigger time, resource name, metric name, dimension of the metric in a firing state, **current value**, and alarm name. The current value can help DevOps teams prioritze the order the open alerts should be triaged. The table can be ordered by selecting the column title. 
 
  	Let's return to the Enterprise Summary by clicking **Close**.
 
@@ -96,7 +98,7 @@ Estimated time: 20 minutes
 
  	![Enterprise Summary tiers including E-Business Suite, WebLogic Cluster, and Oracle Database](images/4-1-ent-sum.png " ")
 
-	Stack Monitoring makes it easy to troubleshoot any resource type and any metric at any time. All performance charts and tables can be modified or replaced to help identify problems or troubleshoot a specific performance problem. The Enterprise Summary allows you to update a chart to display any two metrics. If you have concerns regarding network storage latency you can update a scatter plot to Disk Activity and Network Activity to correlate the performance of network read and writes. The changes to any scatter-plot or table can be saved as your default when viewing the Enterprise Summary, by clicking **Save as default**. 
+	Stack Monitoring makes it easy to troubleshoot any resource type and any metric at any time. All performance charts and tables can be modified or replaced to help identify problems, troubleshoot a specific performance problem, or keep a close eye on known issues until such a time a remedy can be implemented. The Enterprise Summary allows you to update a chart to display any two metrics. If you have concerns regarding network storage latency you can update a scatter plot to Disk Activity and Network Activity to correlate the performance of network read and writes. The changes to any scatter-plot or table can be saved as your default when viewing the Enterprise Summary, by clicking **Save as default**. 
 
  	![Enterprise Summary, highlighting the button to save as default](images/4-2-ent-sum.png " ")
 
@@ -106,21 +108,23 @@ Estimated time: 20 minutes
 
  	![Enterprise Summary, scatter plot charts](images/4-3-ent-sum.png " ")
 
-	Let's review memory and swap utilization of all hosts within this enterprise. Navigate to the **Memory and Swap** chart located under the **Host** tier at the bottom center of the Enterprise Summary. Every monitored host within Stack Monitoring is represented in this chart. You can assess the overall usage of memory and swap across all hosts. Again, scatterplot charts help you monitor by exception. You can identify if any host performing differently than its peers. Here we can see while all hosts are consuming memory, only a few are consuming swap, and one host in paticular is consuming almost 100% of both memory and swap. To understand the exact metric values **hover over** any plot point to see the latest value of the metric.
+	Let's review memory and swap utilization of all hosts within this enterprise. Navigate to the **Memory and Swap** chart located under the **Host** tier at the bottom center of the Enterprise Summary. Every monitored host within Stack Monitoring is represented in this chart. You can assess the overall usage of memory and swap across all hosts. Scatterplot charts help you monitor by exception. You can identify if any host is performing differently than its peers. Here we can see while all hosts are consuming memory, only a few are consuming swap, and one host in paticular is consuming almost 100% of both memory and swap. To understand the exact metric values **hover over** any plot point to see the latest value of the metric. 
+	
+	**Note:** Stack Monitoring's **Host Dashboard** makes it easy monitor hosts at scale. For more information on Stack Monitoring dashboards navigate to **Dashboards** located under **Obersability and Management**. 
 
  	![Host tier, highlighting the metric values of a PeopleSoft host memory utilization and swap utilization](images/4-4-ent-sum.png " ")
 
-	Clicking a plot point will activate a slide-out allowing you to see the performance over time. Using the drop-down update the time selector from **Last 60 minutes** to **Last 7 Days**. Extending the time period allows you to easily identify if the current memory load is recent and a contributing factor to a new performance problem, or if the current load has persisted for some time. Metrics with a '+' have anomaly detection enabled. Anomalous performance is indicated by an orange dot on the line chart. Having reviewed the memory over the last 7 days, lets return to the Enterprise Summary by clicking **Close** in the bottom left.
+	Clicking a plot point will activate a slide-out allowing you to see the performance over time. Using the drop-down update the time selector from **Last 60 minutes** to **Last 7 Days**. Extending the time period allows you to easily identify if the current memory utilization is recent and contributing to a new performance problem, or if the current load has persisted for some time. Metrics with a '+' have anomaly detection enabled. Anomalous performance is indicated by an orange dot on the line chart. Having reviewed the memory over the last 7 days, lets return to the Enterprise Summary by clicking **Close** in the bottom left.
 
  	![Enterprise Summary scatter-plot slide-out, showing memory and swap utilization over the past 90 days](images/4-5-ent-sum.png " ")
 
 2. Tables
 
- 	Located on the right-hand side of the page, **Tables** enable you to quickly identify which hosts or databases have the highest filesystem utilization or tablespace utilization. By default, Tables provide up to the **four** highest utilized or consumed resources of a given metric. The number of rows displayed can be updated from **4 to 10, 20, or all**. Let's review the top **20** most heavily utilized filesystems within the enterprise. Locate the **Filesystem Utilization** chart on the right side under the **Hosts** tier. Click the pencil icon in the top right of the chart. After clicking the pencil, enable the **Advanced** menu items by updating the **Advanced** flag. Enabling the Advanced menu provides access to optional features of a table or chart. Click **Display records** to change the value of rows displayed from 4 to **20**. With the value updated to 20, click **Apply** in the lower left of the slide-out to return to the Enterprise Summary. 
+ 	Located on the right-hand side of the page, **Tables** enable you to quickly identify which hosts or databases have the highest filesystem utilization or tablespace utilization. By default, Tables provide up to the **four** highest utilized or consumed resources of a given metric. The number of rows displayed can be updated from **4 to 10, 20, or all**. Let's review the top **20** most heavily utilized filesystems within the enterprise. Locate the **Filesystem Utilization** chart on the right side under the **Host** tier. Click the pencil icon in the top right of the chart. After clicking the pencil, enable the **Advanced** menu items by updating the **Advanced** flag. Enabling the Advanced menu provides access to optional features of a table or chart. Click **Display records** to change the value of rows displayed from 4 to **20**. With the value updated to 20, click **Apply** in the lower left of the slide-out to return to the Enterprise Summary. 
 
  	![Host filesystem table edit screen, highlighting the count of records to display in the table](images/4-6-ent-sum.png " ")
 
- 	You can now view a list of up to the top **20 hosts** with the most heavily utilized filesystems. Should one of the hosts filesystems cause concern, clicking any of the resource names will navigate you to that resource's homepage for further investigation. From a Stack Monitoring host homepage, you can chart the growth of the filesystem over time using the **Filesystem Utilization** chart. Alternatively, you can click the filesystem value to review the growth over time to understand if more space should be added, and if so how much. 
+ 	You can now view a list of up to the top **20 hosts** with the most heavily utilized filesystems. Should one of the filesystems cause concern, clicking the name of the resource will navigate you to that resource's homepage for further investigation. From a Stack Monitoring host homepage, you can chart the growth of the top five most heavily used filesystems over time using the **Filesystem Utilization** chart. 
 
  	![Host tier, highlighting the chart filesystem utilization with more than four records displayed](images/4-7-ent-sum.png " ")
 
@@ -130,17 +134,17 @@ Estimated time: 20 minutes
 
 	Stack Monitoring has leveraged Oracle's years of experience to provide a curated set of out-of-the-box charts and tables to highlight helpful metrics that include load, response, utilization, and errors within each respective tier of an application stack. 
 
-	Understanding that each organization and user is unique, and monitoring is a dynamic activity, Enterprise Summary charts, tables, and tier names are customizable to meet the individual needs of the user at any given time. 
+	Understanding that each organization and user is unique, and monitoring is a dynamic activity the Enterprise Summary charts, tables, and tier names are customizable to meet the individual needs of the user at any given time. 
 
-	Investigating health and performance issues are easy using the interactive features of the Enterprise Summary. You can easily swap out any performance charts or tables with another. This enables you the capability to quickly and easily view necessary metrics when troubleshooting issues. Using the Enterprise Summary, you can review and correlate the performance of the JVM's heap utilization with any other WebLogic metric. From within the **WebLogic Server** tier, locate the chart **CPU and Memory Utilization**. Begin by clicking the pencil icon in the top right of the chart to invoke the slide-out. With the slide-out loaded, enable the **Advanced** features. Under the **X-Axis** replace Memory Utilization with **JVM Memory Utilization** and add a dimension name of **Type**, and dimension value of **Heap**. Finally, select **Apply** in the lower left of the slide-out. 
+	Investigating health and performance issues are easy using the interactive features of the Enterprise Summary. You can easily swap out any performance charts with a tables. This enables you the capability to quickly and easily view necessary metrics when troubleshooting issues. Using the Enterprise Summary, you can review and correlate the performance of the JVM's heap utilization with any other WebLogic metric. From within the **App Server** tier, locate the chart **CPU and Memory Utilization**. Begin by clicking the pencil icon in the top right of the chart to invoke the slide-out. With the slide-out loaded, enable the **Advanced** features. Under the **X-Axis** replace Memory Utilization with **JVM Memory Utilization** and add a dimension name of **Type**, and dimension value of **Heap**. Finally, select **Apply** in the lower left of the slide-out. 
 
  	![WebLogic server tier, updating the X-axis of the scatter-plot to show JVM heap utilization](images/5-1-ent-sum.png " ")
 
-	You can now see all the JVM Heap Memory utilization values across all monitored resources. Using the data provided in the chart we can now correlate the performance of the WebLogic server's heap utilization with the WebLogic server's CPU performance.
+	You can now see the JVM Heap Memory utilization values across all monitored resources. Using the data provided in the chart we can now correlate the performance of the WebLogic server's heap utilization with the WebLogic server's CPU performance.
 
  	![WebLogic server tier, CPU and Memory Utilization chart highlighting the dimension of heap](images/5-2-ent-sum.png " ")
 
-	If you update or replace what chart or table is displayed on the Enterprise Summary, you can save your changes permanently as your default. This can be especially helpful if you need to troubleshoot several different resource types and metrics while investigating an incident.
+	If you update or replace charts or tables on the Enterprise Summary, you can save your changes permanently as your default. This can be especially helpful if you need to troubleshoot several different resource types and metrics while investigating an incident.
 
 	Saving the configuration allows you to leave the Enterprise Summary and return later to the page with your updated view intact. Once you complete your investigation, simply click **Restore default** to return the Enterprise Summary to the out-of-the-box configuration.
 
