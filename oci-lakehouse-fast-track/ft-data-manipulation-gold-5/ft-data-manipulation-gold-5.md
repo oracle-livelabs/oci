@@ -38,11 +38,11 @@ O motivo pelo qual se utiliza o Star Schema é sua simplicidade e eficiência. A
 
 Inicialmente, iremos obter as tabelas da camada prata salvas no bucket para prosseguir com nossas análises.
 
-1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Leitura Parquet Prata](.\images\2-read-parquet-silver.png)
 
-2. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+2. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
 No código abaixo, criamos uma de uma nova coluna denominada *`CO_NCM_2_DIG`*. Esta nova coluna é criada pela extração dos dois primeiros caracteres da coluna *`CO_NCM`* e será utilizada para a união do dataset principal *`df_exp`* e o dataset *`df_ncm`* que apresenta o nome dos produtos que estão codificados.
 
@@ -74,7 +74,7 @@ Posteriormente, salvamos as tabelas Delta para a camada Gold, pois esses dados s
 
 O código abaixo gera uma visualização temporária para cada tabela que iremos utilizar. Essas visualizações temporárias funcionam como tabelas virtuais que permitem a execução de consultas SQL sobre os DataFrames. Elas são úteis para realizar análises de dados e manipulações complexas usando a linguagem SQL, em vez de métodos específicos de DataFrame do Spark.
 
-1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
 ![Visualização temporária](.\images\9-temp-view.png)
 
@@ -82,7 +82,7 @@ O código abaixo gera uma visualização temporária para cada tabela que iremos
 
 O código em seguida mostra a execução de uma consulta SQL para descrever a estrutura de uma visualização ou DataFrame chamado *`df_exp`*. O comando *`DESCRIBE df_exp`*; é usado para exibir informações sobre as colunas da visualização ou DataFrame, como o nome da coluna (col\_name) e o tipo de dados (data\_type) de cada coluna.
 
-1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Visualização Estrutura](.\images\10-describe-exp.png)
 
@@ -92,7 +92,7 @@ No primeiro comando, *`CREATE DATABASE LIVELABS_OURO`*, está sendo criada uma n
 
 No segundo comando, *`USE LIVELABS_OURO`*, o sistema está sendo instruído a utilizar a base de dados *`LIVELABS_OURO`* que acabou de ser criada. Este comando é utilizado para definir o contexto de banco de dados para as operações subsequentes, ou seja, qualquer comando SQL executado após este comando será aplicado dentro da base de dados *`LIVELABS_OURO`*, até que outro comando *`USE`* seja emitido para mudar o contexto para outra base de dados.
 
-1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Criação de Database](.\images\11-create-database.png)
 
@@ -100,7 +100,7 @@ No segundo comando, *`USE LIVELABS_OURO`*, o sistema está sendo instruído a ut
 
 O código abaixo cria ou atualiza uma visualização temporária chamada *`df_exp_ncm`*. A visualização é definida para incluir todas as colunas do DataFrame original *`df_exp`*, além de uma nova coluna denominada *`CO_NCM_2_DIG`*. Esta nova coluna é criada pela extração dos dois primeiros caracteres da coluna *`CO_NCM`*. Esta nova coluna será utilizada para a união do dataset principal *`df_exp`* e o dataset *`df_ncm`* que apresenta o nome dos produtos que estão codificados.
 
-1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Criação de Coluna](.\images\12-ncm-substring.png)
 
@@ -117,13 +117,13 @@ As junções entre as tabelas são realizadas da seguinte forma:
 A visualização resultante *`df_exp_enriched`* proporciona uma visão enriquecida dos dados, combinando informações de múltiplas fontes para análises mais complexas dos dados de exportação.
 
 
-2. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+2. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![União de Tabelas](.\images\13-join-tables.png)
 
 Nesta célula, demonstramos o resultado em uma consulta SQL que recupera as primeiras três linhas da visualização *`df_exp_enriched`*. Esta visualização é o produto da união das tabelas ou DataFrames, conforme detalhado em comandos anteriores.
 
-3. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebookS.
+3. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Visualizar União](.\images\14-visualize-join.png)
 
@@ -131,7 +131,7 @@ Nesta célula, demonstramos o resultado em uma consulta SQL que recupera as prim
 
 Os códigos abaixo demostram uma série de instruções SQL para criar tabelas externas no metastore e inserir dados nelas a partir de uma visualização enriquecida.
 
-Mas antes vammos entender *`O que é uma tabela externa?`*
+Mas antes vammos entender: *`O que é uma tabela externa?`*
 
 Uma tabela externa em arquitetura de lakehouse refere-se a dados armazenados externamente ao sistema de gerenciamento de dados, como em um data lake. Essa abordagem permite a análise de dados heterogêneos sem a necessidade de movê-los para um armazenamento interno, promovendo flexibilidade e eficiência na gestão de grandes volumes de dados.
 
@@ -141,7 +141,7 @@ Este código está configurando variáveis no ambiente Spark para que possam ser
 
 Para a tabela *`Fato_Exportacao`*, é criada uma tabela externa com várias colunas de tipos de dados específicos, como STRING e FLOAT. A localização da tabela é especificada através de um caminho em um bucket, indicando onde os dados da tabela serão armazenados fisicamente.
 
-1. Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+1. **Selecione a célula e execute-a com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Tabela Externa Exportação](.\images\16-external-table-fato.png)
 
@@ -149,7 +149,7 @@ O mesmo processo é aplicado para as tabelas *`Dim_Pais`*, *`Dim_Via`* e *`Dim_P
 
 > Perceba que estamos utilizando as variáveis *`bucket_ouro`* e *`namespace`*, que foram configuradas na célula anterior.
 
-2. Selecione cada célula e execute-as com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.
+2. **Selecione cada célula e execute-as com o comando SHIFT + ENTER, ou clique no botão de execução (ícone de 'play') no notebook.**
 
     ![Tabela Externa País](.\images\17-external-table-dim-pais.png)
 
@@ -201,7 +201,8 @@ Este código usa Matplotlib para criar um gráfico de barras do valor total de i
 ## Conclusão
 
 Neste laboratório, utilizamos visualizações temporárias no Spark para realizar análises avançadas de dados de exportação e importação do Brasil, utilizando SQL e PySpark para manipular e enriquecer os DataFrames. Implementamos o Star Schema para estruturar as tabelas de forma eficiente, permitindo análises complexas e intuitivas. Criamos tabelas Delta na camada Gold para análise em ferramentas de banco de dados, como o DBeaver, e exploramos relações comerciais com países do Mercosul, identificando os principais produtos negociados e os estados brasileiros com o maior volume de exportações nos últimos seis meses de 2023. Finalmente, visualizamos nossos resultados utilizando a biblioteca Matplotlib, criando gráficos claros e informativos para apresentar nossas descobertas.
+
 ## Autoria
 
-- **Autores** - Thais Henrique, Heloisa Escobar, Isabelle Anjos
-- **Último Update Por/Date** - Isabelle Anjos, Jan/2024
+- *Created By/Date* - Thais Henrique, Heloisa Escobar, Isabelle Anjos, Janeiro 2024
+- *Last Updated By* - Isabelle Anjos, Janeiro 2024
