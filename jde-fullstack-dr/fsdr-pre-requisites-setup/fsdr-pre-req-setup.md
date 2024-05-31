@@ -145,27 +145,27 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     From the Phoenix region OCI console, select **Identity & Security** from the Hamburger menu then **Vault**.
 
-    ![ashburn-vault-home](./images/phoenix-vault-page.png)
+    ![phoenix-vault-home](./images/phoenix-vault-page.png)
 
 2. Click on Create Vault. Select the right compartment and provide a name for the Vault. Click on Create Vault. Vault will now be created.
 
-    ![ashburn-create-vault](./images/phoenix-create-vault.png)
+    ![phoenix-create-vault](./images/phoenix-create-vault.png)
 
 3. Click on newly created Vault and Under Resources, click on Master Encryption Keys and click on Create Key.
 
-    ![ashburn-click-key-vault](./images/phoenix-vault-key.png)
+    ![phoenix-click-key-vault](./images/phoenix-vault-key.png)
 
 4. Select the right compartment, Protection Mode as **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Length as **256** bits. Click on Create Key.
 
-    ![ashburn-create-key](./images/phoenix-create-key.png)
+    ![phoenix-create-key](./images/phoenix-create-key.png)
 
 5. Under Resources, click on Secrets and click on Create Secrets.
 
-    ![ashburn-create-secrets](./images/phoenix-create-secrets.png)
+    ![phoenix-create-secrets](./images/phoenix-create-secrets.png)
 
 6. Select the right compartment, provide a name for the secret, a description for the secret, select the Master Encryption Key created in the previous task from the drop down, Secret Type Template as **Plain-Text**, provide the DB SYS user password in plain text format in the Secret Contents.
 
-    ![ashburn-create-secrets2](./images/phoenix-create-secrets2.png)
+    ![phoenix-create-secrets2](./images/phoenix-create-secrets2.png)
 
 7. Change the region to Ashburn. Create the the Vault, Master Encryption Key and Secret same as done in Phoenix region following the above steps 1 to 6.
 
