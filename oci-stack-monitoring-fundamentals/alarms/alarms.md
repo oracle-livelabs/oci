@@ -36,13 +36,13 @@ Estimated time: 10 minutes
 
  	![Enterprise Summary Alarms chart, highlighting the count of all open alarms](images/1-1-alarms.png " ")
 
-	The slide-out provides greater details of the open alarms and is filtered by the severity count selected. These details include alarm name, resource name, metric name, time the alarm fired, and the **current** value. The results can be ordered by selecting the column title. DevOps teams can use this information to help prioritize their work, for example they would likely address the JD Edwards host root filesystem that is 97% utilized before investigating the siebel host 93% utilized filesystem. Clicking the resource name will take you to that resource's home page to investigate further, while clicking the alarm name will open a new tab to provide more details of the open alarm.
+	The slide-out provides greater details of the open alarms and is filtered by the severity count selected. As we reviewed earlier, these details include severity, trigger time, resource name, metric name, dimension, current value, and alarm name. The results can be ordered by selecting the column title. DevOps teams can use this information to help prioritize their work, for example they would likely address the JD Edwards host root filesystem that is 97% utilized before investigating the siebel host 93% utilized filesystem. Clicking the resource name will take you to that resource's home page to investigate further, while clicking the alarm name will open a new tab to provide more details of the open alarm.
 	
 	![Alarms chart slide-out, showing details of all open alarms](images/1-2-alarms.png " ")
 
 3. Refine a list of open alarms
 
- 	Next, filter the list to focus on only the **Critical** alarms. Using the **Severity filter**, change the severity from **All** to **Critical**. The table now displays only the open alarms with a severity of **Critical**. 
+ 	Next, filter the list to focus on only the **Critical** alarms. Using the **Severity** filter, change the severity from **All** to **Critical**. The table now displays only the open alarms with a severity of **Critical**. 
 
  	Select the alarm **Filesystem / Utilization > 90%**. Clicking the alarm name opens a new tab in your browser to further investigate and work the alarm within Oracle Cloud Infrastructure's Monitoring Service.
 
@@ -56,13 +56,13 @@ With the new browser tab open, let's review this example alarm. The OCI Monitori
 	
 	At the top of the page, we can see the name of the alarm, **Filesystem / Utilization > 90%**. Reviewing the **Alarm state** we can see the alarm is in a firing state with the severity of **Warning**. 
 	
-	OCI Monitoring allows each alarm definition to have up to two **trigger rules**, or thresholds. A trigger rule can be used to define an alarm defition such as filesystem > 80 as warning, and filesystem > 90 as critical. Each trigger rule can have it's own alarm body defined. Ana alarm body should be brief and contain information on where to begin the alarm investigation and a link to source controlled troubleshooting steps. Since each trigger rule can have its own alarm body, you can define unique troubleshooting steps for warning and critical. 
+	OCI Monitoring allows each alarm definition to have up to two **trigger rules**, or thresholds. A trigger rule can be used to define an alarm defition such as filesystem > 80 as warning, and filesystem > 90 as critical. Each trigger rule can have it's own alarm body defined. An alarm body should be brief and contain information on the alarm and a link to source controlled troubleshooting steps. Since each trigger rule can have its own alarm body, you can define unique troubleshooting steps for warning and critical thresholds. 
 	
-	The OCI Monitoring Service provides the ability to **suppress** an alarm, allowing you to stop sending notifications for a period of time. When working an issue, it may be necessary to suppress the alarm to reduce notification noise while resolving an incident or during a known maintenance period.
+	The OCI Monitoring Service provides the ability to **suppress** an alarm. Suppressing an alarm allows you to stop sending notifications for a period of time. When working an issue, it may be necessary to suppress the alarm to reduce notification noise while resolving an incident or during a known maintenance period.
  	
  	![OCI Monitoring Service, showing the Filesystem / Utilization > 90% alarm in a firing state](images/2-1-alarms.png " ")
 
- 	Also included within the Alarm details, we can identify the compartment where the alarming resource resides, **OracleApps**. The OCID of the resource is provided to help identify the offending resource. Next we see the Namespace **oracle\_appmgmt**. Stack Monitoring places all metric data into the following namespaces, **oracle\_appmgmt** (primary namespace for out-of-the-box resource types), **oracle\_oci\_database** (Oracle Database), **oracle\_oci\_database\_cluster** (Oracle Database system, ASM, Cluster, etc), **oracle\_metric\_extensions\_appmgmt** (Prometheus based resources imported into Stack Monitoring), and **oracle\_appmgmt\_prometheus** (Stack Monitoring Prometheus). Stack Monitoring utilizes **Resource groups** to organize the large number of metrics provided out-of-the-box. Examples of Resource groups include: host, apache\_tomcat, weblogic\_j2eeserver, elastic_search, and ASM to name a few. In this alarm, the Resource group is **host**. 
+ 	Additional details inlcuded in the Alarm details section, the compartment where the alarming resource resides, **OracleApps**, the OCID of the resource, and the namespace **oracle\_appmgmt**. Stack Monitoring places all metric data into the following namespaces, **oracle\_appmgmt** (primary namespace for out-of-the-box resource types), **oracle\_oci\_database** (Oracle Database), **oracle\_oci\_database\_cluster** (Oracle Database system, ASM, Cluster, etc), **oracle\_appmgmt\_prometheus** (*Prometheus based resources imported into Stack Monitoring), and **oracle\_metric\_extensions\_appmgmt** (custom metrics created using **Metric Extensions**. For more information on Metric Extensions see **Lab 7: Metric Extensions**). Stack Monitoring utilizes **Resource groups** to organize the large number of metrics provided out-of-the-box. Examples of Resource groups include: host, apache\_tomcat, weblogic\_j2eeserver, elastic_search, and ASM to name a few. In this alarm, the Resource group is **host**. 
  	
  	![OCI Monitoring Service, highlighting the Compartment, OCID, Namespace, and Resource group fields](images/2-2-alarms.png " ")
  	
@@ -72,17 +72,17 @@ With the new browser tab open, let's review this example alarm. The OCI Monitori
 
 	![OCI Monitoring Service, highlighting an alarm notification settings](images/2-3-alarms.png " ")
 
-	By default when the **Alarm Definition** browser tab opens, the last hour of firing history will be displayed. The time period can easily be adjusted using the drop-down. Using the **Quick selects** drop-down, choose **Last 7 days**. The status timeline now shows the historical violations over the last 7 days. Additionally, the table view provides details of the metric moving between states, such as Firing, Reset and OK, as well as the date and time the metric transitioned between states. However in this example, the alarm has 
+	By default when the **Alarm Definition** browser tab opens, the last hour of firing history will be displayed. The time period can easily be adjusted using the drop-down. Using the **Quick selects** drop-down, choose **Last 7 days**. The status timeline now shows the historical violations over the last 7 days. Additionally, the table view provides details of the metric moving between states, such as Firing, Reset and OK, as well as the date and time the metric transitioned between states.
  	
  	![Oracle Cloud Monitoring Service, showing details of the filesystem alarm over the last 7 days](images/2-4-alarms.png " ")
 
- 	Once you are done reviewing the alarm details, close your browser tab displaying the OCI Monitoring Service to return to Stack Monitoring. Once you have returned to Stack Monitoring, close the Alarms slide-out.
+ 	Once you are done reviewing the alarm details, close your browser tab displaying the OCI Monitoring Service to return to Stack Monitoring. Once you have returned to Stack Monitoring, click **Close** to return to the Enterprise Summary.
 
  	![Alarms chart slide-out, showing only warning alarms, and highlighting the close button](images/2-5-alarms.png " ")
  	
  	Now let's understand how an alarm is created.
 
-For more information on monitoring Prometheus-based resources see [**Importing Prometheus-based resource**.](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/expand-monitoring-capability-custom-resources.html#GUID-FC195BED-DA68-4EBD-92F0-54E358C0A8B2)
+\* For more information on monitoring Prometheus-based resources see [**Importing Prometheus-based resource**.](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/expand-monitoring-capability-custom-resources.html#GUID-FC195BED-DA68-4EBD-92F0-54E358C0A8B2)
 
 ## Task 3: Review the alarm creation process
 
@@ -110,7 +110,7 @@ For more information on monitoring Prometheus-based resources see [**Importing P
 
 	![OCI Monitoring Service Create Alarm page, highlighting the alarm name, severity, and body](images/3-4-alarms.png " ")
 
-	We discussed earlier **trigger rules** alow you to define the thresholds the metrics will be evaluated against. Stack Monitoring provides alarm best practices for all of the out-of-the-box resource types. For more information on best practices see [**Setting alarms**.](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/setting-alarms.html) In OCI monitoring, the equivalent of a resource state of up is 1. To alarm when the concurrent manager is down, choose the operator **equal to**, the value **0**, and trigger delay minutes to **3**. The trigger delay can help protect from false alarms by setting to a higher value. However in doing so will postpone the notification. You must choose a period that will not cause false alarms, while also generating timely alarms that allow your organization to meet your defined SLAs.
+	We discussed earlier how **trigger rules** allow you to define the thresholds the metrics will be evaluated against. Stack Monitoring provides alarm best practices for all of the out-of-the-box resource types. For more information on best practices see [**Setting alarms**.](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/setting-alarms.html) In OCI monitoring, the equivalent of a resource state of up is 1. To alarm when the concurrent manager is down, choose the operator **equal to**, the value **0**, and trigger delay minutes to **3**.
 	
 	The alarm severity should match the criticality and state of the resource. This alarm will notify if the concurrent manager is down, select the severity of **Critical** from the drop-down. The alarm body should contain details of the alarm or possibly a link to your source controlled alarm documentation and resolution. An example alarm body message is: EBS Concurrent Manager is DOWN. See https://an-example-company/on-call/ebs-alarm-resolution.md for helpful information and steps on restarting the Concurrent Manager.
 
@@ -118,7 +118,7 @@ For more information on monitoring Prometheus-based resources see [**Importing P
 
 	![OCI Monitoring Service Create Alarm page, highlighting creation of a trigger rule and additional trigger rule button](images/3-5-alarms.png " ")
 
-	Moving down the page, the chart, you can see valleys, when the monitoring status value drops from 1, available, to 0, down. If you were to create an alarm with an interval of 1, the valleys shown on the chart represent a period when the alarm would have fired. Using the information in the graph, we know this alarm would be noisy as this demo environment resource is expected to go down once an hour. The chart shows the Concurrent Manager is generally down for 10 minutes. 
+	Moving down the page, reviewing the MonitoringStatus chart, you can see valleys when the monitoring status value drops from 1 (available) to 0 (down). If you were to create an alarm with an interval of 1, this alarm would fire every hour. This is a demo environment, and we expect the Concurrent Manager to shut down once an hour and reviewing this data we can see when the Concurrent Manager went down and we know this alarm will be noisy.
 
 	![OCI Monitoring Service Create Alarm page, highlighting an interval of 5 minutes, creates valleys where alarm will fire hourly](images/3-6-alarms.png " ")
 
@@ -151,4 +151,4 @@ For more information on monitoring Prometheus-based resources see [**Importing P
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, May 2024
+* **Last Updated By/Date** - Aaron Rimel, June 2024
