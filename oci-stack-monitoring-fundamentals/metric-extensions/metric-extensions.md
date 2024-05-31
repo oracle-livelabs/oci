@@ -2,9 +2,11 @@
 
 ## Introduction
 
-Stack Monitoring Metric Extensions extend the out-of-the-box metric set provided by Stack Monitoring to meet the use cases required when monitoring unique IT environments. Metric Extensions leverage the collection methods by resource type, for example SQL for Oracle Database or JMX for WebLogic. Metric Extensions provide the ability to create, test, publish, and enable a Metric Extension on a single resource or all the resources of a given type, such as hots, within a compartment. In this lab we will review the process of creating a Metric Extension that monitors the memory usage of all users on a host. This can be useful to identify the user on the host who is consuming the most memory. 
+Metric Extensions extend the out-of-the-box metric set provided by Stack Monitoring to meet the use cases required when monitoring unique IT environments. Metric Extensions leverage the collection methods by resource type, for example SQL for Oracle Database or JMX for WebLogic. Metric Extensions provide the ability to create, test, publish, and enable a Metric Extension on a single resource or all the resources of a given type, such as hosts, within a compartment. 
 
-Estimated time: 5 minutes
+In this lab we will review the process of creating a Metric Extension that monitors the memory usage of all users on a host. This can be useful to identify the user on the host who is consuming the most memory. 
+
+Estimated time: 10 minutes
 
 ### Objectives
 
@@ -43,9 +45,7 @@ Estimated time: 5 minutes
 
 	Next we will provide the collection method properties. By default, Stack Monitoring has already selected the resource type of **host** and the collection method of **OS Command**. Now let's update the collection frequency from **15 minutes** to **5 minutes**.
 
-	You may either enter an OS command or upload a script. In the image below, we have uploaded a script **user_mem_usage.sh**.
-	
-	The script contains the following command:
+	In the image below, we have uploaded a script **user_mem_usage.sh**. The script contains the following command:
 
 		ps hax -o rss,user | awk '{a[$2]+=$1;}END{for(i in a)print i";"int(a[i]/1024+0.5);}' | sort -rnk2
 
@@ -53,18 +53,13 @@ Estimated time: 5 minutes
 
 	The next step is to define the **Dimensions** and **Metrics**.
 	
-	The output of a Metric Extension is organized into Dimensions and Metrics, a dimension is a qualifier of a metric.
-	Let’s use File System Utilization to describe Dimensions and Metrics.
-	The dimension is the filesystem name, such as /u01, and the metric is the utilization, such as 90% utilized. A metric must be numeric.
-	Metric extensions leverage the monitoring credentials that were provided when the resource was first discovered. For example, when discovering an Oracle Container DB, if the DBNSMP user was provided, then DBSNMP will be used when collecting the Metric Extension.
-	The metric data collected is stored in OCI Monitoring, this allows Alarms to be created against these metrics.
-	Metric Extension charts will automatically be added to any resource home page once it is enabled. Metric Extensions can also be added to the Enterprise Summary and Dashboards.
+	The output of a Metric Extension is organized into Dimensions and Metrics, a dimension is a qualifier of a metric. Let’s use File System Utilization to describe Dimensions and Metrics. The **dimension** is the filesystem name, such as **/u01**, and the **metric** is the **utilization**, such as **90% utilized**. A metric must be numeric. Metric extensions leverage the monitoring credentials that were provided when the resource was first discovered. For example, when discovering an Oracle Container DB, if the DBNSMP user was provided, then DBSNMP will be used when collecting the Metric Extension. The metric data collected is stored in OCI Monitoring, this allows Alarms to be created against these metrics. Metric Extension charts will automatically be added to any resource home page once it is enabled. Metric Extensions can also be added to the Enterprise Summary and Dashboards.
 
 	The script above, **user_mem_usage.sh**, returns two dimensions, **Memory Use** and **User**. The dimensions and metrics must be defined in Stack MOnitoring in the same order they return when executing the script or sql provided.
 
-	Let's begin by defining the first column, **User**. User **is** a dimension with the value type of **String**. 
+	Let's begin by defining the first column, **User**. User is a dimension with the value type of **String**. 
 
-	Now let's define the second column that is returned, **Memory Use**. Memory use is **not** a dimension and the usage that is returned is in MB. At this time you can optionally include the Category. Here we have entered **Load**.
+	Now let's define the second column that is returned, **Memory Use**. Memory use is **not** a dimension. The memory usage returned in the script is MB, so we will enter **MB**** under **Unit**. Additionally, you can include the Category, from the drop-down, select **Load**.
 	
 	![Metric Extension page, highlighting the Metrics / Dimensions>](images/2-4-me.png " ")
 	
@@ -72,7 +67,9 @@ Estimated time: 5 minutes
 	
 	![Metric Extension page, Example output of Metric Extension test](images/2-5-me.png " ")
 
-	Reviewing the metric output, if the metric needs to be revised, simply update the script and re-test the metric. Once the testing is complete, the Metric Extension is ready to be published. Once a Metric Extension has been published it **cannot** be edited. A published Metric Extension can be enabled on one or many resources at a time. When a Metric Extension is enabled on a resource, metric collection will begin, and DevOps teams will be able to create alarms on user memory usage and review the usage on the host home page.
+	Reviewing the metric output, if the metric needs to be revised, simply update the script and re-test the metric. Once the testing is complete, the Metric Extension is ready to be **published**. Once a Metric Extension has been published it **cannot** be edited. A published Metric Extension can be enabled on one or many resources at a time. When a Metric Extension is enabled on a resource, metric collection will begin, and DevOps teams will be able to create alarms on user memory usage and review the usage on the host home page.
+
+	In this example, if you had clicked **Publish**, you would be returned to the Metric Extension page.
 
 	![Metric Extension page, highlighting the confirmation to publish a Metric Extension](images/2-6-me.png " ")
 
@@ -84,13 +81,13 @@ Estimated time: 5 minutes
 
 1. Identify the host where the Metric Extension has been enabled.
 
-	The Metric Extension page can also be used to identify what resources a Metric Extension has been enabled on. Here we can see that the Metric Extension we created **ME_MemoryUsageByUser** has been enabled on **1** resource. 
+	The Metric Extension page can also be used to identify what resources a Metric Extension has been enabled on. Here we can see that the Metric Extension we created **ME_MemoryUsageByUser** has been enabled on **1** resource. Click the count, **1**, to identify the list of resource where this metric has been enabled. 
 	
 	![Metric Extension page, highlighting the count of resources a Metric Extension has been enabled on](images/2-8-me.png " ")
 
 2. Review memory usage by user.
 
-	Click the count, **1**, to identify the list of resource where this metric has been enabled. Here we can see this Metric Extension has been enabled on the host **ebs04-a**. 
+	Here we can see this Metric Extension has been enabled on the host **ebs04-a**. 
 
 	Let's navigate to EBS04-a, click the host's name to navigate to the host home page to review the memory usage of each user on this host. 
 
@@ -104,7 +101,9 @@ Estimated time: 5 minutes
 
 	![Metric Extension page, highlighting the Memory Use Metric Extension](images/2-11-me.png " ")
 
-	Alarms can be configured on Metric Extensions using what you have learned in Lab 6. For example, DevOps teams can configure alarms on Metric Extensions to notify users if a threshold has been breached. In this example, an alarm could be created to notify DevOps teams, that a user such as **oracle** is consuming more memory than expected. 
+	Alarms can be configured on Metric Extensions using what you have learned in **Lab 5: View and Create Alarms**.
+	
+	For example, DevOps teams can configure alarms on Metric Extensions to notify users if a threshold has been breached. In this example, an alarm could be created to notify DevOps teams, that a user such as **oracle** is consuming more memory than expected. 
 
 For more information on Metric Extensions, see **[Metric Extensions](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/metric-extensions.html)**
 
@@ -115,4 +114,4 @@ For more information on Metric Extensions, see **[Metric Extensions](https://doc
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, May 2024
+* **Last Updated By/Date** - Aaron Rimel, June 2024

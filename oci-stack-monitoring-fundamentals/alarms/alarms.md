@@ -56,13 +56,13 @@ With the new browser tab open, let's review this example alarm. The OCI Monitori
 	
 	At the top of the page, we can see the name of the alarm, **Filesystem / Utilization > 90%**. Reviewing the **Alarm state** we can see the alarm is in a firing state with the severity of **Warning**. 
 	
-	OCI Monitoring allows each alarm definition to have up to two **trigger rules**, or thresholds. A trigger rule can be used to define an alarm defition such as filesystem > 80 as warning, and filesystem > 90 as critical. Each trigger rule can have it's own alarm body defined. An alarm body should be brief and contain information on the alarm and a link to source controlled troubleshooting steps. Since each trigger rule can have its own alarm body, you can define unique troubleshooting steps for warning and critical thresholds. 
+	OCI Monitoring allows each alarm definition to have up to two **trigger rules**, or thresholds. A trigger rule can be used to define an alarm definition such as filesystem > 80 as warning, and filesystem > 90 as critical. Each trigger rule can have it's own alarm body defined. An alarm body should be brief and contain information on the alarm and a link to source controlled troubleshooting steps. Since each trigger rule can have its own alarm body, you can define unique troubleshooting steps for warning and critical thresholds. 
 	
 	The OCI Monitoring Service provides the ability to **suppress** an alarm. Suppressing an alarm allows you to stop sending notifications for a period of time. When working an issue, it may be necessary to suppress the alarm to reduce notification noise while resolving an incident or during a known maintenance period.
  	
  	![OCI Monitoring Service, showing the Filesystem / Utilization > 90% alarm in a firing state](images/2-1-alarms.png " ")
 
- 	Additional details inlcuded in the Alarm details section, the compartment where the alarming resource resides, **OracleApps**, the OCID of the resource, and the namespace **oracle\_appmgmt**. Stack Monitoring places all metric data into the following namespaces, **oracle\_appmgmt** (primary namespace for out-of-the-box resource types), **oracle\_oci\_database** (Oracle Database), **oracle\_oci\_database\_cluster** (Oracle Database system, ASM, Cluster, etc), **oracle\_appmgmt\_prometheus** (*Prometheus based resources imported into Stack Monitoring), and **oracle\_metric\_extensions\_appmgmt** (custom metrics created using **Metric Extensions**. For more information on Metric Extensions see **Lab 7: Metric Extensions**). Stack Monitoring utilizes **Resource groups** to organize the large number of metrics provided out-of-the-box. Examples of Resource groups include: host, apache\_tomcat, weblogic\_j2eeserver, elastic_search, and ASM to name a few. In this alarm, the Resource group is **host**. 
+ 	Additional details included in the Alarm details section, the compartment where the alarming resource resides, **OracleApps**, the OCID of the resource, and the namespace **oracle\_appmgmt**. Stack Monitoring places all metric data into the following namespaces, **oracle\_appmgmt** (primary namespace for out-of-the-box resource types), **oracle\_oci\_database** (Oracle Database), **oracle\_oci\_database\_cluster** (Oracle Database system, ASM, Cluster, etc), **oracle\_appmgmt\_prometheus** (*Prometheus based resources imported into Stack Monitoring), and **oracle\_metric\_extensions\_appmgmt** (custom metrics created using **Metric Extensions**. For more information on Metric Extensions see **Lab 7: Metric Extensions**). Stack Monitoring utilizes **Resource groups** to organize the large number of metrics provided out-of-the-box. Examples of Resource groups include: host, apache\_tomcat, weblogic\_j2eeserver, elastic_search, and ASM to name a few. In this alarm, the Resource group is **host**. 
  	
  	![OCI Monitoring Service, highlighting the Compartment, OCID, Namespace, and Resource group fields](images/2-2-alarms.png " ")
  	
@@ -114,7 +114,7 @@ With the new browser tab open, let's review this example alarm. The OCI Monitori
 	
 	The alarm severity should match the criticality and state of the resource. This alarm will notify if the concurrent manager is down, select the severity of **Critical** from the drop-down. The alarm body should contain details of the alarm or possibly a link to your source controlled alarm documentation and resolution. An example alarm body message is: EBS Concurrent Manager is DOWN. See https://an-example-company/on-call/ebs-alarm-resolution.md for helpful information and steps on restarting the Concurrent Manager.
 
-	If you had additional trigger rules, or thresholds, you would select **Addiditional trigger rule**.
+	If you had additional trigger rules, or thresholds, you would select **Additional trigger rule**.
 
 	![OCI Monitoring Service Create Alarm page, highlighting creation of a trigger rule and additional trigger rule button](images/3-5-alarms.png " ")
 

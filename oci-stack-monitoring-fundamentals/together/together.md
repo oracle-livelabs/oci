@@ -60,7 +60,7 @@ Estimated time: 10 minutes
 
 	![Enterprise Summary, highlighting the EBS Concurrent Manager chart](images/3-1-together.png " ")	
 
-	Clicking the plot point invokes a slide-out showing more details of the performance over the last hour for this Concurrent Manager. Update the charts to show the **Last 24 hours**. In the screenshot below, we can see a small dip in the number of concurrent requests by status, which Stack Monitoring has identifiedy as anomalous. We can also see that while the majority of completed requests were successful, some completed with errors. Now let's click the resource name **EBS04a\_ConcurrentProcessing** to continue our investigation by navigating to the resources homepage.
+	Clicking the plot point invokes a slide-out showing more details of the performance over the last hour for this Concurrent Manager. Update the charts to show the **Last 24 hours**. In the screenshot below, we can see a small dip in the number of concurrent requests by status, which Stack Monitoring has identified as anomalous. We can also see that while the majority of completed requests were successful, some completed with errors. Now let's click the resource name **EBS04a\_ConcurrentProcessing** to continue our investigation by navigating to the resources homepage.
 
 	![Enterprise Summary Concurrent Manager chart slide-out, highlighting the Concurrent Manager resource name hyperlink](images/3-2-together.png " ")	
 
@@ -88,7 +88,7 @@ Estimated time: 10 minutes
 
 	Clicking **Charts** provides quick visibility into the health of the EBS application. Let's begin by expanding the chart time displayed from the **Last 60 Minutes** to **Last 24 Hours**.
 
-	Using the chart **Executed Programs by Running Time** you can easily gain insight into the five longest-running programs. In the screenshot below, we can see the job execution times have remained steady, outside of a small jump. Should you see any long running dspikes, an admin can use their domain knowledge to pinpoint a job that is running longer than expected. Again using the screenshot below, the **Completed Requests by Application** chart illustrates how busy a job is to the overall jobs running. The chart **Active User Sessions By Responsibility** in the screenshot below, shows a spike in active user **NULL_KEY** and should be investigated.
+	Using the chart **Executed Programs by Running Time** you can easily gain insight into the five longest-running programs. In the screenshot below, we can see the job execution times have remained steady, outside of a small jump. Should you see any long running spikes, an admin can use their domain knowledge to pinpoint a job that is running longer than expected. Again using the screenshot below, the **Completed Requests by Application** chart illustrates how busy a job is to the overall jobs running. The chart **Active User Sessions By Responsibility** in the screenshot below, shows a spike in active user **NULL_KEY** and should be investigated.
 
 	![EBS specific performance charts](images/4-3-together.png " ")
 
@@ -111,7 +111,7 @@ Estimated time: 10 minutes
 	
 	Finally, you can review the health of the underlying hosts using the **Host tier**. In this screenshot you can see a spike in cpu and a small drop in memory.
 
-	Reviewing the database tier in context with the host tier, we can see the transactions in the database dropped then immediatley spiked. At the same time, the host CPU jumped and the memory utilization dropped. This is a great example of provide performance context across the application stack.
+	Reviewing the database tier in context with the host tier, we can see the transactions in the database dropped then immediately spiked. At the same time, the host CPU jumped and the memory utilization dropped. This is a great example of provide performance context across the application stack.
 
 	![EBS Stack View, highlighting the database and host technology tiers](images/4-6-together.png " ")
 	
@@ -136,4 +136,4 @@ For more information and full range of capabilities of the Stack Monitoring solu
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, May 2024
+* **Last Updated By/Date** - Aaron Rimel, June 2024

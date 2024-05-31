@@ -39,7 +39,7 @@ In this workshop, the following topics will be covered:
     - Review open alarms across an enterprise
     - Review the performance of resources across each application tier
     - Dynamically investigate other performance metrics
-* **Homepages**
+* **Home pages**
     - Review a resource home page
     - Review Performance menu including, alarms, charts, tables, and Stack View
     - Review application topology
@@ -76,4 +76,4 @@ In this workshop, the following topics will be covered:
     * Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
     * Steven Lemme, Senior Principal Product Manager,  
     * Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, July 2023
+* **Last Updated By/Date** - Aaron Rimel, June 2024

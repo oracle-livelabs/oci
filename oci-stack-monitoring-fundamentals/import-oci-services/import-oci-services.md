@@ -2,8 +2,7 @@
 
 ## Introduction
 
-Stack Monitoring’s Extensibility feature allows for monitoring from other OCI services to be consolidated by importing resources into Stack Monitoring. 
-Importing resources into Stack Monitoring allows for the application’s topology to be completed by creating associations between the imported resource and existing Stack Monitoring resources. This reduces troubleshooting time by providing access to all resources and their availability and performance metrics of an entire application stack, including the load balancer, applications servers, databases, and even storage in a single place. Once a resource has been imported, Stack Monitoring will create a home page with availability and performance metrics, and configuration details, and report any open alarms.
+Stack Monitoring’s Extensibility feature allows for monitoring from other OCI services to be consolidated by importing those resources in to Stack Monitoring. Importing resources into Stack Monitoring allows for the application’s topology to be completed by creating associations between the imported resource and existing Stack Monitoring resources. This reduces troubleshooting time by providing access to all resources and their availability and performance metrics of an entire application stack, including the load balancer, applications servers, databases, and even storage in a single place. Once a resource has been imported, Stack Monitoring will create a home page with availability and performance metrics, and configuration details, and report any open alarms.
 
 In this lab we will review the process of importing an OCI Load balancer to complete an E-Business Suite application's topology by relating the load balancer to the WebLogic cluster the load balancers services.
 
@@ -39,15 +38,15 @@ Estimated time: 10 minutes
 
 	![Import resources, highlighting the Import resources button](images/2-2-import.png " ")
 
-	This slide-out will help guide us through the process of importing resources into Stack Monitoring. Importing resources is easy, simply select the OCI monitoring namespace that contains the resource you wish to import. This is a list of all OCI resources that can be imported into Stack Monitoring.
+	This slide-out will help guide us through the process of importing resources into Stack Monitoring. Importing resources is easy, simply select the OCI monitoring namespace that contains the resource you wish to import.
 
 	![Import resources, highlighting the list of available namespaces that can be imported in to Stack Monitoring](images/2-3-import.png " ")
 
-	To import the OCI load balancer, from this list we'll select oci_lbaas.
+	To import an OCI load balancer, from this list we'll select oci_lbaas.
 
 	![Import resources, highlighting the oci_lbaas namespaces](images/2-4-import.png " ")
 
-	Once the namespace has been chosen, **oci_lbaas**, Stack Monitoring will populate the **Request name**. The request name can be used to help track the job progress and provide details of past import jobs.
+	Once the namespace has been chosen, **oci\_lbaas**, Stack Monitoring will populate the **Request name**. However, if you prefer to rename the work request simply replace the pre-populated text. The request name can be used to help track the job progress and provide details of past import jobs.
 
 	![Import resources, highlighting the advanced options specifically tags](images/2-5-import.png " ")
 
@@ -55,7 +54,7 @@ Estimated time: 10 minutes
 
 	![Import resources, highlighting the request name](images/2-6-import.png " ")
 
-	For this exercise, your lab account does not have sufficient privileges to import resources. Instead of clicking **Import resources**, we will select **Cancel**. Once an import job completes, Stack Monitoring will create a homepage, that provides details into the health and performance of the load balancer. Let's take a look at the load balancer home page.
+	Once an import job completes, Stack Monitoring will create a homepage, that provides details into the health and performance of the load balancer. Let's take a look at the load balancer home page. For this exercise, your lab account does not have sufficient privileges to import resources. Instead of clicking **Import resources**, we will select **Cancel**. 
 
 	![Import resources, highlighting the cancel button](images/2-7-import.png " ")
 
@@ -65,15 +64,15 @@ Estimated time: 10 minutes
 
 	![Import resources, highlighting the All resources link](images/3-1-import.png " ")
 
-	Using the **Type** filter, select **oci_lbaas**, then select **ebs_prod_slb**.
+	Using the **Type** filter, select **oci\_lbaas**, then select **ebs\_prod\_slb**.
 
 	![Import resources, highlighting the type filter and ebs_prod_slb load balancer](images/3-2-import.png " ")
 
-	The **ebs_prod_slb** home page provides access to open alarms and health and performance metrics. Scrolling down the page we see the performance charts for all metrics collected for this load balancer.
+	The **ebs\_prod\_slb** home page provides access to open alarms, and health and performance metrics as we reviewed in **Lab 3 Resource Home pages**. Scrolling down the page we see the performance charts for all metrics collected for this load balancer.
 	
 	![Load balancer home page, highlighting the availability, alarms, and performance metrics](images/3-3-import.png " ")
 	
-	A helpful feature when triaging issues is the link to the OCI resource home page. This link allows you to quickly navigate back to the load balancer's OCI page where you can alter the resource pool or restart a service. In this example using Stack Monitoring's topology, if we witness no activity on our EBS, we could quickly identify the WebLogic cluster that services EBS, then identify the load balancer in front of the cluster. With a click navigate to the load balancer OCI resource page and update the route configuration. All of this can be done without every typing or searching for a resource, simply follow the troubleshooting workflow.
+	A helpful feature when triaging issues is the link to the OCI resource home page. This link allows you to quickly navigate back to the load balancer's OCI page where you can alter the resource pool or restart a service. In this example using Stack Monitoring's topology, if we witness no activity on our EBS, we could quickly identify the WebLogic cluster that services EBS, then identify the load balancer in front of the cluster. Using the topology, simply click to navigate to the load balancer OCI resource page and update the route configuration. All of this can be done without every typing or searching for a resource, simply follow the troubleshooting workflow.
 
 	![Load balancer home page, highlighting the link to the OCI service home page](images/3-3-import.png " ")
 
@@ -83,7 +82,7 @@ Estimated time: 10 minutes
 
 	![Load balancer home page, highlighting the Import resources page and Import resources button](images/4-1-import.png " ")
 
-	This slide-out will help guide us through the process of relating this load balancer to the WebLogic OAFM cluster that uses it. Let's begin by updating the **Relation** field from **Uses** to **Used by**. Next we will select the **Resource type** of **weblogic_cluster**. And finally we will select **EBS04a_Domain_oafm_cluster1**.
+	This slide-out will help guide us through the process of relating this load balancer to the WebLogic OAFM cluster that uses it. Let's begin by updating the **Relation** field from **Uses** to **Used by**. Next we will select the **Resource type** of **weblogic\_cluster**. And finally we will select **EBS04a\_Domain\_oafm\_cluster1**.
 
 	With the fields completed, we would at this point select **Add resources**. However, the account provisioned for this lab does not have sufficient privileges to perform this action. In lieu of Add resources, we will select **Cancel**.
 
@@ -95,7 +94,7 @@ Estimated time: 10 minutes
 
 	![Load balancer topology page, highlighting the used by relationship with the WebLogic cluster](images/4-3-import.png " ")
 
-	Using what you have learned in this lab on how to navigate Stack Monitoring, when you review the topology of **EBS04a**, you can see the load balancer that the WebLogic cluster uses within the overall topology.
+	If you so choose, using what you have learned in this lab on how to navigate Stack Monitoring, if you review the topology of **EBS04a**, you can now see the load balancer that the WebLogic cluster uses within the overall topology.
 
 	![EBS home page, highlighting the topology that includes the load balancer we imported and the relationship we created](images/4-4-import.png " ")
 
@@ -111,4 +110,4 @@ For more information on importing OCI Services, see **[Importing OCI Services](h
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, May 2024
+* **Last Updated By/Date** - Aaron Rimel, June 2024
