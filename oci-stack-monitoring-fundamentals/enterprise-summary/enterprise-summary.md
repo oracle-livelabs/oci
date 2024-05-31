@@ -44,7 +44,7 @@ Estimated time: 20 minutes
 
 3. Review all resources that are **Not reporting**
 
-	Now that we have identified resources in a down state, let's identify those that are **Not reporting**. Not reporting generally indicates the agent is no longer uploading data. Stack Monitoring updates the status of monitored resources to Not Reporting to inform you there is an issue obtaining the resource's status. Availability alarms can be configured to notify you when the resource is either Down or Not reporting. Stack Monitoring provides alarm best pracitices to help you get started for all of the out-of-the-box resource types. For more information see [Setting Up Alarms](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/setting-alarms.html).
+	Now that we have identified resources in a down state, let's identify those that are **Not reporting**. Not reporting generally indicates the agent is no longer uploading data. Stack Monitoring updates the status of monitored resources to Not Reporting to inform you there is an issue obtaining the resource's status. Availability alarms can be configured to notify you when the resource is either Down or Not reporting. Stack Monitoring provides alarm best practices to help you get started for all of the out-of-the-box resource types. For more information see [Setting Up Alarms](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/setting-alarms.html).
 
 	Using the Status filter located in the center of the slide-out, update the Status filter from **Down** to **Not reporting**. The table now displays all the resources in a Not Reporting state. Clicking a resource name will navigate you to that resource's homepage, where you can leverage the Stack Monitoring resource associations to identify the agent monitoring the resource and navigate to the agent's homepage to troubleshoot. We'll cover navigating to related resources in a later lab. For now, let's return to the Enterprise Summary. Click the **Close** button in the lower-left corner of the slide-out.
 
@@ -60,7 +60,7 @@ Estimated time: 20 minutes
 
 2. Identify resources by type that are **Not reporting**.
 
- 	Identifying which resources are down or not reporting by type across all of your monitoered resources is easy using the Enterprise Summary. Simply locate the chart legend at the top right of the **Status by resource type** chart and select **Not reporting**. This will filter the chart to only show the count of resources by type in a **Not reporting** state.
+ 	Identifying which resources are down or not reporting by type across all of your monitored resources is easy using the Enterprise Summary. Simply locate the chart legend at the top right of the **Status by resource type** chart and select **Not reporting**. This will filter the chart to only show the count of resources by type in a **Not reporting** state.
 
  	If we wish to see a more detailed list of hosts that are not reporting, click the **host** bar on the left side of the chart. 
 
@@ -84,7 +84,7 @@ Estimated time: 20 minutes
 
  	![Enterprise Summary Alarms chart, highlighting the count of all open alarms](images/3-1-ent-sum.png " ")
 
-	The alarm slide-out provides details of open alarms. These details include the severity, trigger time, resource name, metric name, dimension of the metric in a firing state, **current value**, and alarm name. The current value can help DevOps teams prioritze the order the open alerts should be triaged. The table can be ordered by selecting the column title. 
+	The alarm slide-out provides details of open alarms. These details include the severity, trigger time, resource name, metric name, dimension of the metric in a firing state, **current value**, and alarm name. The current value can help DevOps teams prioritize the order the open alerts should be triaged. The table can be ordered by selecting the column title. 
 
  	Let's return to the Enterprise Summary by clicking **Close**.
 
@@ -108,9 +108,9 @@ Estimated time: 20 minutes
 
  	![Enterprise Summary, scatter plot charts](images/4-3-ent-sum.png " ")
 
-	Let's review memory and swap utilization of all hosts within this enterprise. Navigate to the **Memory and Swap** chart located under the **Host** tier at the bottom center of the Enterprise Summary. Every monitored host within Stack Monitoring is represented in this chart. You can assess the overall usage of memory and swap across all hosts. Scatterplot charts help you monitor by exception. You can identify if any host is performing differently than its peers. Here we can see while all hosts are consuming memory, only a few are consuming swap, and one host in paticular is consuming almost 100% of both memory and swap. To understand the exact metric values **hover over** any plot point to see the latest value of the metric. 
+	Let's review memory and swap utilization of all hosts within this enterprise. Navigate to the **Memory and Swap** chart located under the **Host** tier at the bottom center of the Enterprise Summary. Every monitored host within Stack Monitoring is represented in this chart. You can assess the overall usage of memory and swap across all hosts. Scatter-plot charts help you monitor by exception. You can identify if any host is performing differently than its peers. Here we can see while all hosts are consuming memory, only a few are consuming swap, and one host in particular is consuming almost 100% of both memory and swap. To understand the exact metric values **hover over** any plot point to see the latest value of the metric. 
 	
-	**Note:** Stack Monitoring's **Host Dashboard** makes it easy monitor hosts at scale. For more information on Stack Monitoring dashboards navigate to **Dashboards** located under **Obersability and Management**. 
+	**Note:** Stack Monitoring's **Host Dashboard** makes it easy monitor hosts at scale. For more information on Stack Monitoring dashboards navigate to **Dashboards** located under **Observability and Management**. 
 
  	![Host tier, highlighting the metric values of a PeopleSoft host memory utilization and swap utilization](images/4-4-ent-sum.png " ")
 
@@ -161,4 +161,4 @@ Estimated time: 20 minutes
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, May 2024
+* **Last Updated By/Date** - Aaron Rimel, June 2024

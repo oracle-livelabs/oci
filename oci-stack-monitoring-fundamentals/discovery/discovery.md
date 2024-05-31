@@ -39,10 +39,10 @@ Estimated time: 15 minutes
 
 ## Task 2: Review the manual promotion process of an OCI Compute
 
-Stack Monitoring can automatically monitor all hosts using **host auto-promotion**. Host auto-promotion will automatically promote a host to full monitoring once a Management Agent is installed. This includes an OCI Compute, or a host running on-premises or another cloud provider. For more information on host auto-promotion see **[host auto-promotion.](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/promotion-and-discovery.html#GUID-B98A3300-97AE-4029-9D05-1CCE4E922B25__P_DQB_VBB_YYB)**
+Stack Monitoring can automatically monitor all hosts using **host auto-promotion**. Host auto-promotion will automatically promote a host to full monitoring once a Management Agent is installed. This includes an OCI Compute, or a host running on-premises or another cloud provider. For more information see **[host auto-promotion.](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/promotion-and-discovery.html#GUID-B98A3300-97AE-4029-9D05-1CCE4E922B25__P_DQB_VBB_YYB)**
 
 
-1. Navigate to Stack Monitoring Promotion Page
+1. Navigate to Stack Monitoring Promote to full monitoring page.
 	
 	Open the navigation menu in the Oracle Cloud console, and select **Observability & Management** > **Stack Monitoring** under **Application Performance Monitoring**.
 
@@ -62,13 +62,13 @@ Stack Monitoring can automatically monitor all hosts using **host auto-promotion
 
 	![Promote to full monitoring page, highlighting the host to promote, and the promote link](images/2-2-discovery.png " ")
 
-	Clicking promote invokes a slide-out. From within the slide-out panel, validate that the **Resource Name** is the host's fully qualified domain name (FQDN) (i.e., hostname). **Management Agent**, Stack Monitoring automatically identifies the local Management Agent running on the host, no action is required. Once the Resource Name has been validated, and the monitoring agent has been selected, in your own environment you would click Promote Resource. However, in this lab you will click **Cancel**. Clicking **Promote Resource** will submit the promotion job, and within minutes Stack Monitoring would begin collecting a richer set of metrics than is available out-of-the-box.
+	Clicking promote invokes a slide-out. From within the slide-out panel, verify the **Resource Name** is the host's fully qualified domain name (FQDN) (i.e., host name). Stack Monitoring automatically identifies the local **Management Agent** running on the host, no action is required. Once the Resource Name has been validated, and the monitoring agent has been selected, in your own environment you would click **Promote Resource**. However, in this lab you will click **Cancel**. Clicking **Promote Resource** will submit the promotion job, and within minutes Stack Monitoring would begin collecting a richer set of metrics than is available out-of-the-box.
 
-	![Host resource promotion slide-out, with fields pre-filled](images/2-3-discovery.png " ")
+	![Host resource promotion slide-out, with fields pre-populated](images/2-3-discovery.png " ")
 
 	Once you submit the promotion job, the status and results of the promotion job can be found by navigating to the **Resource discovery** page. 
 
-	Let's review the process of discovering an Oracle Database. We'll begin by navigating to **Resource Discovery**.
+	Now let's review the process of discovering an Oracle Database. We'll begin by navigating to **Resource Discovery**.
 
 	![Host resource promotion page, highlighting Resource discovery menu link](images/2-4-discovery.png " ")
 
@@ -76,7 +76,7 @@ Stack Monitoring can automatically monitor all hosts using **host auto-promotion
 
 1. Discover the database that contains the EBS application schema
 
-	With all of the hosts promoted that your EBS application runs has completed, including the Oracle Database hosts, the next step is to discover the database where the EBS schema resides.
+	Stack Monitoring discovery best practices suggests discover all the hosts where your application is running. Next discover the database the application uses. And finally discover the application (EBS, PeopleSoft, etc) or application server (WebLogic, Tomcat, etc). Discovering in this order allows Stack Monitoring to create the topology. Following in this order, with all of the hosts promoted that your EBS application runs has completed, including the Oracle Database hosts, the next step is to discover the database where the EBS schema resides.
 
 	Let's begin by invoking the discovery slide-out, by selecting **Discover New Resource**.
 
@@ -90,27 +90,23 @@ Stack Monitoring can automatically monitor all hosts using **host auto-promotion
 
 	![Resource discovery page drop-down menu items, highlighting Oracle Database resource type](images/3-2-discovery.png " ")
 
-	We begin by assigning the database a name. When discovering a resource within Stack Monitoring that is not ephemeral, it is important to provide the resource a meaningful name. Here we will enter **ebs\_prod\_db**. Next provide the DNS hostname or SCAN name depending on your listener configuration, we will enter **ebsproddb1.myacme.com**. Now provide a port, here we will use **1521** and the service name of **ebscdb**. From the drop-down, you can select all agents that monitor your database system that are responsible for monitoring your database. In this example select the agent ebs04a. 
+	We begin by assigning the database a name. When discovering a resource within Stack Monitoring that is not ephemeral, it is important to provide the resource a meaningful name. Here we will enter **ebs\_prod\_db**. Next provide the DNS host name or SCAN name depending on your listener configuration, we will enter **ebsproddb1.myacme.com**. Now provide a port, here we will use **1521** and the service name of **ebscdb**. From the drop-down, you can select all of the Management Agents that monitor your database system. In this example, our Oracle Database is a single instance, we will select only the Management Agent **ebs04a**. 
 	
 	![Oracle Database discovery slide-out, with fields completed](images/3-3-discovery.png " ")
 		
-	Next, provide the database monitoring user's credentials enter the username **monuser**. Next, since this is a demo enter any value for the password. In this example the EBS application uses ASM. Enter the DNS of your ASM host, we will enter **ebsproddb1.myacme.com**. Next we will enter the port of **1521**, and finally the service name, **ebsasm**.
+	Next, provide the database monitoring user's credentials, here we will enter the username **monuser**. Next, since this is a demo enter any value for the password. In this demo our EBS application leverages ASM. Enter the DNS of your ASM host, we will enter **ebsproddb1.myacme.com**. Next we will enter the port of **1521**, and finally the service name, **ebsasm**.
 
 	![Oracle Database discovery slide-out, with DB credential fields completed](images/3-4-discovery.png " ")
 
-	The next step is to provide the monitoring credentials for ASM, enter the username **sysasm**. ASM secrets are stored in OCI Vault. Select the ASM the secret from the drop-down list.
+	The next step is to provide the monitoring credentials for ASM, enter the username **sysasm**. ASM secrets are stored in OCI Vault. Select the secret associated with this ASM instance from the drop-down list.
 
-	When discovering a resource, you have the ability to discover in both Stack Monitoring and Logging Analytics at the same time. When performing a dual discovery, the results are sent to both Observability services that streamlines the onboard steps. Alternatively discovery can be performed only for Stack Monitoring or Logging Analytics. 
-
-	Stack Monitoring has the option of Enterprise or Standard license. Standard Edition includes essential monitoring. This includes, discovery, home pages, Enterprise Summary, metric collection, and the creation of alarms to name a few. Enterprise Edition includes advanced monitoring features that includes baselines and anomaly detection, Metric Extensions, Process Set monitoring, Prometheus support and others. 
+	When discovering a resource, you have the ability to discover in **both** **Stack Monitoring** and **Logging Analytics** at the same time. When performing a dual discovery, the results are sent to both Observability services and streamlines the monitoring on-boarding steps. Alternatively discovery can be performed only for Stack Monitoring or Logging Analytics.
 
 	![Oracle Database discovery slide-out, with ASM fields completed](images/3-5-discovery.png " ")
 
 Once all of the fields are completed, once again click **Cancel**. 
 
-For more information on licensing see **[Configuring Licensing.](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/configure-licensing.html)**
-
-Stack Monitoring provides a script to create a least privileges user for monitoring an Oracle Database. For more information see **[MOS Doc ID 2857604.1.](https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=205057312345893&id=2857604.1&_adf.ctrl-state=12dl4mzuds_52)**
+Stack Monitoring provides a script to create a user with a reduced set of for monitoring an Oracle Database. For more information see **[MOS Doc ID 2857604.1.](https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=205057312345893&id=2857604.1&_adf.ctrl-state=12dl4mzuds_52)**
 
 ## Task 4: Discover an E-Business Suite Application
 
@@ -140,7 +136,7 @@ Stack Monitoring provides a script to create a least privileges user for monitor
 
 	![EBS discovery slide-out, with lower fields completed, highlighting the cancel link](images/4-3-discovery.png " ")
 
-	* Next enter your WebLogic admin server credentils beginning with the username, here you will enter **wlsadmin**, then enter the any value for the user's password. 
+	* Next enter your WebLogic admin server credentials beginning with the username, here you will enter **wlsadmin**, then enter the any value for the user's password. 
 	* When selecting the Management Agent field, a drop-down list of all known agents within your compartment are shown. EBS can be monitored either by a locally installed agent, or an agent installed on another host. Here you can select any agent in the list.
 	* Ensure the radio button is selected to discovery in both Stack Monitoring and Logging Analytics. 
 	* To gain access to advanced monitoring features, we will select Enterprise Edition.
@@ -162,4 +158,4 @@ You may now **proceed to the next lab**.
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, May 2024
+* **Last Updated By/Date** - Aaron Rimel, June 2024
