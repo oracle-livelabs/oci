@@ -1,0 +1,87 @@
+{
+  "workshoptitle": "Protect your JDE Application with OCI Full Stack Disaster Recovery",
+  "help": "livelabs-help-oci_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to OCI Full Stack Disaster Recovery and workshop",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable).",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Pre-requisites Setup",
+      "description": "FSDR Pre-requisites Setup",
+      "filename": "../../fsdr-pre-requisites-setup/fsdr-pre-req-setup.md"
+    },
+    {
+      "title": "Lab 1 (Moving): DR with MOVING INSTANCE (Pilot Light)",
+      "description": "Moving Instance",
+      "filename": "../../drpg-setup/drpg-setup.md"
+    },
+    {
+      "title": "Lab 1.1 (Moving): Add members to DRPG",
+      "description": "Add members to DRPG",
+      "filename": "../../drpg-members/drpg-members.md"
+    },
+    {
+      "title": "Lab 1.2 (Moving): Create and Customize Switchover Plan",
+      "description": "Create Switchover Plan",
+      "filename": "../../switchover-plan/switchover-plan.md"
+    },
+    {
+      "title": "Lab 1.3 (Moving): Perform Switchover Pre-check",
+      "description": "Perform Pre-check",
+      "filename": "../../switchover-prechecks/switchover-prechecks.md"
+    },
+    {
+      "title": "Lab 1.4 (Moving): Perform Switchover",
+      "description": "Perform Switchover",
+      "filename": "../../switchover-execute/switchover-execute.md"
+    },
+    {
+      "title": "Lab 1.5 (Moving): Post Switchover tasks",
+      "description": "Post Switchover tasks",
+      "filename": "../../post-switchover/post-switchover.md"
+    },
+    {
+      "title": "Lab 2 (Non-Moving): DR with NON-MOVING INSTANCE (Warm Standby)",
+      "description": "Non-Moving Instance",
+      "filename": "../../drpg-setup/nm-drpg-setup.md"
+    },
+    {
+      "title": "Lab 2.1 (Non-Moving): Add members to DRPG",
+      "description": "Add members to DRPG",
+      "filename": "../../drpg-members/nm-drpg-members.md"
+    },
+    {
+      "title": "Lab 2.2 (Non-Moving): Create and Customize Switchover Plan",
+      "description": "Create Switchover Plan",
+      "filename": "../../switchover-plan/nm-switchover-plan.md"
+    },
+    {
+      "title": "Lab 2.3 (Non-Moving): Perform Switchover Pre-check",
+      "description": "Perform Pre-check",
+      "filename": "../../switchover-prechecks/nm-switchover-prechecks.md"
+    },
+    {
+      "title": "Lab 2.4 (Non-Moving): Perform Switchover",
+      "description": "Perform Switchover",
+      "filename": "../../switchover-execute/nm-switchover-execute.md"
+    },
+    {
+      "title": "Lab 2.5 (Non-Moving): Post Switchover tasks",
+      "description": "Post Switchover tasks",
+      "filename": "../../post-switchover/nm-post-switchover.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}
+
