@@ -13,31 +13,37 @@ Estimated Time: 20 minutes
 
 ### Prerequisites
 * Oracle Cloud Infrastructure tenancy access
-* User with 'manage' access to **SiebelCloudManager** and **scm-siebel-cm** compartments
+* User with 'manage' access to **SiebelCloudManager** and **scm{date}-siebel-cm** compartments
 
 ## Task 1: Destroy Siebel CRM environment Stack
 
 1. From the Oracle Cloud Console, navigate to **Developer Services** and **Stacks**.
 
-2. In the **List Scope** section on the left side panel, choose **siebellab_compartment**.
+   ![OCI Menu - Stacks](./images/oci-developer-services-stacks.png)
 
-3. From the **Stack List**, drill down on the stack name. The stack name would be of the below format.
+2. In the **List Scope** section on the left side panel, find and select **scm{date}-siebel-cm**.
+
+   ![SCM Deployment - Stacks](./images/scm-deployment-stacks.png)
+
+3. From the list, drill down on the **SiebelLab** stack name. The stack name would be of the below format.
 
    ```
    Siebel_siebellab_{timestamp}
    ```
 
-   ![Stack Drilldown](./images/stack-drilldown.png)
-
 4. On the **Stack Details** page, click ***Destroy***.
 
-5. On the **Destroy** page, leave the default **Job** name and click ***Destroy***. The Destroy job will run for a while and succeed.
+   ![SCM Stack - Destroy](./images/oci-stack-destroy.png)
+
+5. On the **Destroy** pane, leave the default **Job** name and click ***Destroy***. The Destroy job will run for a while and should succeed.
+
+   ![SCM Stack Destroy - Pane](./images/oci-stack-destroy-pane.png)
 
 ## Task 2: Destroy GitLab instance
 
 1. From the Oracle Cloud Console, navigate to **Developer Services** and **Stacks**.
 
-2. In the **List Scope** section on the left side panel, choose **scm-siebel-cm**.
+2. In the **List Scope** section on the left side panel, choose **scm{date}-siebel-cm**.
 
 3. From the **Stack List**, drill down on the GitLab stack name.
 
@@ -53,12 +59,13 @@ Estimated Time: 20 minutes
 
 4. Run **Destroy** job for this stack too as done earlier. This job will run for a while and succeed.
 
+
 ## Summary
 
-In this lab, we have destroyed all the resources that were created for this workshop.
+In this lab, we have destroyed nearly all the resources that were created for this workshop. You could also delete the compartment and the vault, but you may wish to reuse these if you are going to repeat the lab straight away to gain some more confort with the processes.
 
 ## Acknowledgements
 
-* **Author:** Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
+* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
-* **Last Updated By/Date** - Sampath Nandha, Principal Cloud Architect, March 2023
+* **Last Updated By/Date** - Duncan Ford, Software Engineer, May 2024
