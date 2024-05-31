@@ -58,63 +58,63 @@ We're now ready to use SCM to deploy Siebel CRM on OCI. To do this, we shall fir
 
 1. Consider the sample payload below. Substitute parameter values inside **{}** as required.
 
-```
+   ```
    <copy>
-{
-  "name": "SiebelLab",
-  "siebel": {
-    "registry_url": " {Available_Registry_Endpoint_In_Your_Region},
-    "registry_user": "{User_Id_To_Connect_To_Container_Registry}",
-    "registry_password": "{User_Auth_Token}",
-    "database_type": "Vanilla",
-    "industry": "Financial Services"
-  },
-  "infrastructure": {
-    "gitlab_url": "https://{Public IP of Gitlab Instance}",
-    "gitlab_accesstoken": "{Gitlab_Access_Token}",
-    "gitlab_user": "root",
-    "gitlab_selfsigned_cacert": "/home/opc/certs/rootCA.crt"
-  },
-  "database": {
-    "db_type": "ATP",
-    "atp": {
-      "admin_password": "{OCID_For_Vault_Secret_For_Admin_Password}",
-      "storage_in_tbs": "1",
-      "cpu_cores": "2",
-      "wallet_password": "{OCID_For_Vault_Secret_For_Wallet_Password}"
-    },
-    "auth_info": {
-      "table_owner_password": "{OCID_For_Vault_Secret_For_TBLO_Password}",
-      "table_owner_user": "SIEBEL",
-      "default_user_password": "{OCID_For_Vault_Secret_For_Default_User}",
-      "anonymous_user_password": "{OCID_For_Vault_Secret_For_Anonymous_User_Password}",
-      "siebel_admin_password": "{OCID_For_Vault_Secret_For_Admin_Password}",
-      "siebel_admin_username": "SADMIN"
-    }
-  },
-  "size": {
-    "kubernetes_node_shape": "VM.Standard.E4.Flex",
-    "kubernetes_node_count": 3,
-    "node_shape_config": {
-      "memory_in_gbs": 20,
-      "ocpus": 2
-    },
-    "ses_resource_limits": {
-      "cpu": "2",
-      "memory": "15Gi"
-    },
-    "cgw_resource_limits": {
-      "cpu": "2",
-      "memory": "15Gi"
-    },
-    "sai_resource_limits": {
-      "cpu": "1",
-      "memory": "15Gi"
-    }
-  }
-}
-</copy>
-```
+   {
+   "name": "SiebelLab",
+   "siebel": {
+         "registry_url": "{Available_Registry_Endpoint_In_Your_Region}",
+         "registry_user": "{User_Id_To_Connect_To_Container_Registry}",
+         "registry_password": "{User_Auth_Token}",
+         "database_type": "Vanilla",
+         "industry": "Financial Services"
+      },
+      "infrastructure": {
+         "gitlab_url": "https://{Public IP of Gitlab Instance}",
+         "gitlab_accesstoken": "{Gitlab_Access_Token}",
+         "gitlab_user": "root",
+         "gitlab_selfsigned_cacert": "/home/opc/certs/rootCA.crt"
+      },
+      "database": {
+         "db_type": "ATP",
+         "atp": {
+            "admin_password": "{OCID_For_Vault_Secret_For_Admin_Password}",
+            "storage_in_tbs": "1",
+            "cpu_cores": "2",
+            "wallet_password": "{OCID_For_Vault_Secret_For_Wallet_Password}"
+         },
+         "auth_info": {
+            "table_owner_password": "{OCID_For_Vault_Secret_For_TBLO_Password}",
+            "table_owner_user": "SIEBEL",
+            "default_user_password": "{OCID_For_Vault_Secret_For_Default_User}",
+            "anonymous_user_password": "{OCID_For_Vault_Secret_For_Anonymous_User_Password}",
+            "siebel_admin_password": "{OCID_For_Vault_Secret_For_Admin_Password}",
+            "siebel_admin_username": "SADMIN"
+         }
+      },
+      "size": {
+         "kubernetes_node_shape": "VM.Standard.E4.Flex",
+         "kubernetes_node_count": 3,
+         "node_shape_config": {
+            "memory_in_gbs": 20,
+            "ocpus": 2
+         },
+         "ses_resource_limits": {
+            "cpu": "2",
+            "memory": "15Gi"
+         },
+         "cgw_resource_limits": {
+            "cpu": "2",
+            "memory": "15Gi"
+         },
+         "sai_resource_limits": {
+            "cpu": "1",
+            "memory": "15Gi"
+         }
+      }
+   }
+   </copy>
+   ```
 
 ### Payload Parameter Options
 
@@ -358,6 +358,6 @@ In the next lab, you can view and manage the Siebel's Kubernetes Cluster to conn
 
 ## Acknowledgements
 
-* **Author:** Duncan Ford, Software Engineer, Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
+* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
 * **Last Updated By/Date** - Duncan Ford, Software Engineer, May 2024
