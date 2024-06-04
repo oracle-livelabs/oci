@@ -7,10 +7,10 @@ In this workshop, you will become familiar with Oracle's Stack Monitoring soluti
 In this workshop learn how to:
 * Identify application outages across your enterprise at a glance utilizing Stack Monitoring's **Enterprise Summary**. 
 * Understand how to identify, review and triage any open alarms. 
-* See how you can leverage Stack Monitoring's **tier-organized Key Performance Metrics (KPI's)** to review performance outliers. 
+* See how you can leverage Stack Monitoring's **tier-organized Key Performance Indicators (KPI's)** to review performance outliers. 
 * Learn how to dynamically configure the Enterprise Summary to help identify performance problems. The dynamic Enterprise Summary is very useful when you need to swap a metric chart or table with another to troubleshoot an alarm that is not displayed by default.
 
-In this workshop you will get familiar with:
+In this workshop you will learn how to:
 * Stack Monitoring's **home pages** and how to triage open alarms and view metric performance over time. 
 * Review Stack Monitoring's **UI driven discovery process**. 
 * **Review an open alarm notification**, then review the steps to **configure an alarm**. (**Optional**)

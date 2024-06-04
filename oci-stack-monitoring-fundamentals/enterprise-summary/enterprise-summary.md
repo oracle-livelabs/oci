@@ -84,7 +84,7 @@ Estimated time: 20 minutes
 
  	![Enterprise Summary Alarms chart, highlighting the count of all open alarms](images/3-1-ent-sum.png " ")
 
-	The alarm slide-out provides details of open alarms. These details include the severity, trigger time, resource name, metric name, dimension of the metric in a firing state, **current value**, and alarm name. The current value can help DevOps teams prioritize the order the open alerts should be triaged. The table can be ordered by selecting the column title. 
+	The alarm slide-out provides details of open alarms. These details include the severity, trigger time, resource name, metric name, dimension of the metric in a firing state, **current value**, and alarm name. The current value and severity can help DevOps teams prioritize the order the open alerts should be triaged. The table can be ordered by selecting the column title. 
 
  	Let's return to the Enterprise Summary by clicking **Close**.
 
@@ -118,7 +118,7 @@ Estimated time: 20 minutes
 
  	![Enterprise Summary scatter-plot slide-out, showing memory and swap utilization over the past 90 days](images/4-5-ent-sum.png " ")
 
-2. Tables
+3. Tables
 
  	Located on the right-hand side of the page, **Tables** enable you to quickly identify which hosts or databases have the highest filesystem utilization or tablespace utilization. By default, Tables provide up to the **four** highest utilized or consumed resources of a given metric. The number of rows displayed can be updated from **4 to 10, 20, or all**. Let's review the top **20** most heavily utilized filesystems within the enterprise. Locate the **Filesystem Utilization** chart on the right side under the **Host** tier. Click the pencil icon in the top right of the chart. After clicking the pencil, enable the **Advanced** menu items by updating the **Advanced** flag. Enabling the Advanced menu provides access to optional features of a table or chart. Click **Display records** to change the value of rows displayed from 4 to **20**. With the value updated to 20, click **Apply** in the lower left of the slide-out to return to the Enterprise Summary. 
 
@@ -136,13 +136,17 @@ Estimated time: 20 minutes
 
 	Understanding that each organization and user is unique, and monitoring is a dynamic activity the Enterprise Summary charts, tables, and tier names are customizable to meet the individual needs of the user at any given time. 
 
-	Investigating health and performance issues are easy using the interactive features of the Enterprise Summary. You can easily swap out any performance charts with a tables. This enables you the capability to quickly and easily view necessary metrics when troubleshooting issues. Using the Enterprise Summary, you can review and correlate the performance of the JVM's heap utilization with any other WebLogic metric. From within the **App Server** tier, locate the chart **CPU and Memory Utilization**. Begin by clicking the pencil icon in the top right of the chart to invoke the slide-out. With the slide-out loaded, enable the **Advanced** features. Under the **X-Axis** replace Memory Utilization with **JVM Memory Utilization** and add a dimension name of **Type**, and dimension value of **Heap**. Finally, select **Apply** in the lower left of the slide-out. 
+	Investigating health and performance issues are easy using the interactive features of the Enterprise Summary. You can easily swap out any performance charts with a tables. This enables you the capability to quickly and easily view necessary metrics when troubleshooting issues. Using the Enterprise Summary, you can review and correlate the performance of the JVM's heap utilization with any other WebLogic metric. From within the **App Server** tier, locate the chart **CPU and Memory Utilization**. Begin by clicking the pencil icon in the top right of the chart to invoke the slide-out. 
+	
+	![WebLogic server tier, highlighting the CPU and memory chart pencil edit](images/5-1-ent-sum.png " ")
+	
+	With the slide-out loaded, enable the **Advanced** features. Under the **X-Axis** replace Memory Utilization with **JVM Memory Utilization** and add a dimension name of **Type**, and dimension value of **Heap**. Finally, select **Apply** in the lower left of the slide-out. 
 
- 	![WebLogic server tier, updating the X-axis of the scatter-plot to show JVM heap utilization](images/5-1-ent-sum.png " ")
+ 	![WebLogic server tier, updating the X-axis of the scatter-plot to show JVM heap utilization](images/5-2-ent-sum.png " ")
 
 	You can now see the JVM Heap Memory utilization values across all monitored resources. Using the data provided in the chart we can now correlate the performance of the WebLogic server's heap utilization with the WebLogic server's CPU performance.
 
- 	![WebLogic server tier, CPU and Memory Utilization chart highlighting the dimension of heap](images/5-2-ent-sum.png " ")
+ 	![WebLogic server tier, CPU and Memory Utilization chart highlighting the dimension of heap](images/5-3-ent-sum.png " ")
 
 	If you update or replace charts or tables on the Enterprise Summary, you can save your changes permanently as your default. This can be especially helpful if you need to troubleshoot several different resource types and metrics while investigating an incident.
 
@@ -150,7 +154,7 @@ Estimated time: 20 minutes
 
 	Once you are done reviewing JVM heap utilization, let's reset the Enterprise Summary to the default configuration. To reset the page, locate the **Restore default** link within the menu on the left side of the page. Once clicked, the page will reset to the out-of-the-box configuration. 
 
- 	![Enterprise Summary, highlighting the restore default button](images/5-3-ent-sum.png " ")
+ 	![Enterprise Summary, highlighting the restore default button](images/5-4-ent-sum.png " ")
 
 	You may now **proceed to the next lab**.
 

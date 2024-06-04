@@ -1,8 +1,8 @@
-# Discovery and Promotion in Stack Monitoring
+# Importing OCI Services in to Stack Monitoring
 
 ## Introduction
 
-Stack Monitoring’s Extensibility feature allows for monitoring from other OCI services to be consolidated by importing those resources in to Stack Monitoring. Importing resources into Stack Monitoring allows for the application’s topology to be completed by creating associations between the imported resource and existing Stack Monitoring resources. This reduces troubleshooting time by providing access to all resources and their availability and performance metrics of an entire application stack, including the load balancer, applications servers, databases, and even storage in a single place. Once a resource has been imported, Stack Monitoring will create a home page with availability and performance metrics, and configuration details, and report any open alarms.
+Stack Monitoring’s Extensibility feature allows for monitoring from other OCI services to be consolidated by importing resources in to Stack Monitoring. Importing resources into Stack Monitoring allows for the application’s topology to be completed by creating associations between the imported resource and existing Stack Monitoring resources. This reduces troubleshooting time by providing access to all resources and their availability and performance metrics of an entire application stack, including the load balancer, applications servers, databases, and even storage in a single place. Once a resource has been imported, Stack Monitoring will create a home page with availability and performance metrics, and configuration details, and report any open alarms.
 
 In this lab we will review the process of importing an OCI Load balancer to complete an E-Business Suite application's topology by relating the load balancer to the WebLogic cluster the load balancers services.
 
@@ -72,7 +72,7 @@ Estimated time: 10 minutes
 	
 	![Load balancer home page, highlighting the availability, alarms, and performance metrics](images/3-3-import.png " ")
 	
-	A helpful feature when triaging issues is the link to the OCI resource home page. This link allows you to quickly navigate back to the load balancer's OCI page where you can alter the resource pool or restart a service. In this example using Stack Monitoring's topology, if we witness no activity on our EBS, we could quickly identify the WebLogic cluster that services EBS, then identify the load balancer in front of the cluster. Using the topology, simply click to navigate to the load balancer OCI resource page and update the route configuration. All of this can be done without every typing or searching for a resource, simply follow the troubleshooting workflow.
+	A helpful feature when triaging issues is the link to the OCI service resource home page. This link allows you to quickly navigate back to the load balancer's OCI page where you can alter the resource pool or restart a service. In this example using Stack Monitoring's topology, if we witness no activity on our EBS, we could quickly identify the WebLogic cluster that services EBS, then identify the load balancer in front of the cluster. Using the topology, simply click to navigate to the load balancer OCI service resource page and update the route configuration. All of this can be done without every typing or searching for a resource, simply follow the troubleshooting workflow.
 
 	![Load balancer home page, highlighting the link to the OCI service home page](images/3-3-import.png " ")
 
