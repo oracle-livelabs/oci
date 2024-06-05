@@ -52,4 +52,4 @@ OIPA LiveLabs Technical Workflows
 ## Acknowledgements
 * **Author** - Paul Karam - Master Solution Architect
 * **Contributors** -  Sharad Chopra - Solution Architect, Amar Pahwa - Enterprise Cloud Architect
-* **Last Updated By/Date** - Amar Pahwa - April 2024
+* **Last Updated By/Date** - Amar Pahwa - June 2024
