@@ -288,7 +288,7 @@ The following example request uses a Boolean query to combine a filter clause an
               "neural": {
                 "passage_embedding": {
                   "query_text": "Espionage Act",
-                  "model_id": "1SHouI0BGNXEoV9oPHXs",
+                  "model_id": "Model_id",
                   "k": 2
                 }
               }
