@@ -13,8 +13,9 @@ In this workshop, you will:
 - Create an OpenSearch cluster, connect to the cluster and ingest data
 - Run sample search commands
 - Visualize data in OpenSearch Dashboards
+- Perform sematic search and create RAG pipeline for conversational search
 
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, September 2022
+* **Last Updated By/Date** - George Csaba, June 2024

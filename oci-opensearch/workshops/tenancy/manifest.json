@@ -20,12 +20,16 @@
             "filename": "../../deploy-cluster/deploy-cluster.md"
         },     
         {
-            "title": "Lab 3: Ingest data and search",
+            "title": "Lab 3: Ingest data and search (Optional)",
             "filename": "../../ingest-and-search/ingest-and-search.md"
         },             
         {
             "title": "Lab 4: Visualize data with OpenSearch Dashboards",
             "filename": "../../visualize/visualize.md"
+        },
+        {
+            "title": "Lab 5: Semantic search with RAG and conversational search",
+            "filename": "../../Semantic-RAG-conv/Semantic-RAG-Conv.md"
         },
         {
             "title": "Need Help?",
