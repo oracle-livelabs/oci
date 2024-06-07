@@ -52,36 +52,42 @@ Now go to **Discover** and select the following index **apache_accesslogs**  in 
 Analyze the fields in the docoument.
 
 
-## Step 3: Review the Logs section in Observability 
-In the OpenSearch Dashboard  go to **Observabilityr** \ **Logs**. You will see the default list of Queries and Visualizations. Select 
-"Show all hosts with errors aggregated by response, count of ips and tags"
- You will see the query details on this page.Analyze the qury written in PPL.  
-   ![OpenSearch Dashboards - Document Details](../images/image-observability2.png)
-
-In the PPL query section add:
+## Step 3: Create Detectorsin Security Analytics (SIEM) 
+In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. Most likely there will be no detectors created yet. 
+Click on **Create Detector** and fill in:
 ```html
-   <copy>source=opensearch_dashboards_sample_data_logs |  where match(request,'filebeat')</copy>
+Name
+Descriptio
+Data Source Index =apache_accesslogs
+Detction = apache_access
+Both Rules can remain chekced
    ```
- You will see the results with filebeat in the request field.  
-   ![OpenSearch Dashboards - Document Details](../images/image-observability3.png)
-You can save this Query buy specifying a name and clicking on **Save** in the right upper corner.
 
-In the PPL query section add:
-```html
-   <copy>source=opensearch_dashboards_sample_data_logs |  where response='503' or response='404' |  stats count() by span(timestamp,1d)</copy>
-   ```
-Also click on visualizations and the follwing grpah will show.
- ![OpenSearch Dashboards - Document Details](../images/image-observability4.png)
-You can save this as a Visualization.
+   ![OpenSearch Dashboards - Document Details](../images/image-siem2.png)
 
-## Step 4: Review Dashboards
-First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Observability** \ **Dashboards**. Click on **[Logs] Web traffic Panel** (this is a default dashboard). 
+Click on **Next**
+Fill out the page the following way
 
-   ![OpenSearch Dashboards - Document Details](../images/image-observability5.png)
-This dashboard can be used for dev-ops.YOu can **Add Visualization** in the right upper corner. This can be an exisitng visualization, or you can create a new one.
-   ![OpenSearch Dashboards - Document Details](../images/image-observability6.png)
+   ![OpenSearch Dashboards - Document Details](../images/image-siem3.png)
 
-The added viualization will appear in the Dashboard.
+Click **Create Detector** and the detector will show up in the detectors page.
+
+
+Still in Security Analytics, fileter on Apache, clikc on **Detection rules** under **Detectors** and click on one of the Rules
+   ![OpenSearch Dashboards - Document Details](../images/image-siem4.png)
+You can also create detection rules, by clicking on **Create detection rule**
+
+
+## Step 4: Create Log types in Security analytics
+In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. And clik on **Log types**, you will see a list of default log types in OpneSearch.
+If you click on a log type you can see the deatils and the Detection Rules assiciated with the log type:
+  ![OpenSearch Dashboards - Document Details](../images/image-siem5.png)
+You can also create your onw log type, by clicking on **Create Log type**
+
+
+  ![OpenSearch Dashboards - Document Details](../images/image-siem6.png)
+
+The new log type will appear on the list of log types.
 
 ## Acknowledgements
 
