@@ -1,55 +1,58 @@
-# Visualize data with OpenSearch Dashboards
+# Learn about the Observabiity module in OpenSearch 
 
 ## Introduction
 
-In this lab, you will explore OpenSearch Dashboards, the OpenSearch visualization platform.
+In this lab, you will explore the Observability function in OpenSearch.
 
 Estimated Time: 15 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Establish port forwarding to ensure connectivity to the OpenSearch Dashboards from your local machine
+- Connect to the OpenSearch Dashboard
 - Search data using the Discover interface
 - Create a simple pie chart for the sample data
 
-## Task 1: Connect to OpenSearch Dashboards
+## Step1: Prerequisites
+Confirm that the OpenSearch cluster is version 2.11 or higher.  This is the latest version. To create a cluster, see Creating an OpenSearch Cluster (LABs 1,2). You will have to connect to the OpenSearch Dashboard.
+Please refer to **LAB4** **Task1** on how to connect to the OpenSearch Dashboard.
 
-1. From your local machine, establish port forwarding. You can find more information on how to connect to a cluster/dahboard [here] (https://docs.oracle.com/en-us/iaas/Content/search-opensearch/Tasks/ingestingociopensearchdata.htm)
+## Task 1: Review the strucure of the logs
+First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Discover** and select the following index **opensearch_dashboards_sample_data_logs** (this is a default set) in the right upper corner. Make sure to specify the time correctly on the top of the screen. Click on the document deaatils in one of the rows.  
+   ![OpenSearch Dashboards - Document Details](../images/image-observability1.png)
+Analyze the fields in the docoument.
 
 
-      ```bash
-      <copy>ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 opc@<your_instance_public_ip> -i <path_to_your_private_key></copy>
-      ```
+## Task 2: Review the Logs section in Observability 
+In the OpenSearch Dashboard  go to **Observabilityr** \ **Logs**. You will see the default list of Queries and Visualizations. Select 
+"Show all hosts with errors aggregated by response, count of ips and tags"
+ You will see the query details on this page.Analyze the qury written in PPL.  
+   ![OpenSearch Dashboards - Document Details](../images/image-observability2.png)
 
-2. Access https://localhost:5601 in your browser.  
-   > **Note:** Currently, depending on the browser, a warning message similar to "Your connection is not private" is displayed. Choose the option which allows you to proceed. The following screen is then displayed:  
+In the PPL query section add:
+```html
+   <copy>source=opensearch_dashboards_sample_data_logs |  where match(request,'filebeat')</copy>
+   ```
+ You will see the results with filebeat in the request field.  
+   ![OpenSearch Dashboards - Document Details](../images/image-observability3.png)
+You can save this Query buy specifying a name and clicking on **Save** in the right upper corner.
 
-   ![OpenSearch Dashboards landing page](../images/image7.png)
+In the PPL query section add:
+```html
+   <copy>source=opensearch_dashboards_sample_data_logs |  where response='503' or response='404' |  stats count() by span(timestamp,1d)</copy>
+   ```
+Also click on visualizations and the follwing grpah will show.
+ ![OpenSearch Dashboards - Document Details](../images/image-observability4.png)
+You can save this as a Visualization.
 
-## Task 2: Search and visualize data in OpenSearch Dashboards
+## Task 3: Review Dashboards
+First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Observability** \ **Dashboards**. Click on **[Logs] Web traffic Panel** (this is a default dashboard). 
 
-1. With the port forwarding connection in place, access https://localhost:5601 in your browser.
-2. Open the OpenSearch Dashboards navigation menu.
-3. Click **Management**, then click **Dashboard Management**, and then click **Index Patterns**. Create an index pattern, with name = `oci`.
+   ![OpenSearch Dashboards - Document Details](../images/image-observability5.png)
+This dashboard can be used for dev-ops.YOu can **Add Visualization** in the right upper corner. This can be an exisitng visualization, or you can create a new one.
+   ![OpenSearch Dashboards - Document Details](../images/image-observability6.png)
 
-   ![OpenSearch Dashboards - Create index pattern](../images/image9.png)
-
-4. Open the OpenSearch Dashboards menu, and then click **Discover** to use the OpenSearch Dashboards UI to search your data. Make sure to specify the right index in the right upper corner. Also pay attention to the timeline on the top. Enter a sample keyword, such as `kubernetes`, and click **Refresh**.
-
-   ![OpenSearch Dashboards - Discover](../images/image10.png)
-
-5. Open the OpenSearch Dashboards menu, click **Dashboards** and follow these steps to create a sample pie chart.
-
-      1. Click **Create new**, then click **New Visualization**, and then click **Pie**.
-
-      ![OpenSearch Dashboards - New Visualization](../images/image11.png)
-
-      2. Choose `oci` as source.
-
-      3. In **Buckets**, click **Add**, and then click **Split slices**. Provide the parameters as shown in the following image and click **Update**.
-
-      ![OpenSearch Dashboards - Sample pie chart](../images/image12.png)
+The added viualization will appear in the Dashboard.
 
 ## Acknowledgements
 
