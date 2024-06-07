@@ -49,9 +49,9 @@ In this task, you will create the required OCI IAM policy.
 4. Click **Show manual editor** and paste the content below in the editor.
 
    ```html
-   <copy>Allow group opensearch_cloudworld to manage opensearch-family in compartment os_compartment
-   Allow group openSearch_cloudworld to manage subnets in compartment os_compartment
-   Allow group openSearch_cloudworld to manage vcns in compartment os_compartment
+   <copy>Allow group opensearch-group to manage opensearch-family in compartment os_compartment
+   Allow group opensearch-group to manage subnets in compartment os_compartment
+   Allow group opensearch-group to manage vcns in compartment os_compartment
    Allow service opensearch to manage vcns in compartment os_compartment
    Allow service opensearch to manage vnics in compartment os_compartment
    Allow service opensearch to use subnets in compartment os_compartment

@@ -14,24 +14,31 @@ In this lab, you will:
 
 ## Task 1: Create an OCI Search Service cluster
 
-1. Open the Oracle Cloud Console navigation menu. Click **Databases**, **OCI Search Service**, and then click **Clusters**. Then, click **Create cluster**. Provide *opensearch-cluster* as name and select *opensearch-livelab* as the compartment where you want to create the cluster.
+1. Open the Oracle Cloud Console navigation menu. Click **Databases**, **OpenSearch**, and then click **Clusters**. Then, click **Create cluster**. Provide *opensearch-cluster* as name and select *opensearch-livelab* as the compartment where you want to create the cluster.
 
    ![Oracle Cloud Console screen - Configure cluster](../images/image1.png)
 
 2. Click **Next**.
-3. Choose the cluster sizing, and then click **Next**.
+3. Specify Security information, and then click **Next**.
+
+   ![Oracle Cloud Console screen - Security](../images/image1-5.png)
+4. Choose the cluster sizing, and then click **Next**.
 
    ![Oracle Cloud Console screen - Configure nodes](../images/image2.png)
 
-4. Select the VCN you created and then select the private subnet.
+5. Select the VCN you created and then select the private subnet.
 
    ![Oracle Cloud Console screen - Configure networking](../images/image3.png)
 
-5. Click **Next**, and then **Create**. You will be redirected to the OpenSearch cluster details page.
+6. Review the summary and click **Create cluster**
+
+   ![Oracle Cloud Console screen - Configure networking](../images/image3-5.png)
+
+7. Click **Next**, and then **Create**. You will be redirected to the OpenSearch cluster details page.
 
    ![Oracle Cloud Console screen - Configure cluster details page, after cluster creation](../images/image4.png)
 
-6. Copy your API Endpoint, as found in the cluster details page, in the Cluster information section. It will be needed in the following labs.
+8. Copy your API Endpoint, as found in the cluster details page, in the Cluster information section. It will be needed in the following labs.
 
 ## Task 2: OCI OpenSearch cluster health check
 
