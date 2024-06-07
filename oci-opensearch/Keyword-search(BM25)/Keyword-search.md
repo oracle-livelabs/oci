@@ -16,9 +16,13 @@ Use the steps in this walkthrough to create an index and use the search keyword 
 ## Step1: Prerequisites
 
 Confirm that the OpenSearch cluster is version 2.11 or higher.  This is the latest version. To create a cluster, see Creating an OpenSearch Cluster (LABs 1,2)
+First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Management** and click on **Dev Tools**. You wil be able to type the commands in the Console.
+Please refer to **LAB4** **Task1** on how to connect to the OpenSearch Dashboard.
 
 ## Step2: Create Search Index without the k-NN plugin
+Connect to the Dashboard and go to **Management** and click on **Dev Tools**. You wil be able to type the commands in the Console.
 - Create Search Index without the k-NN plugin
+
 
 This section describes the steps to create an index without using an ingestion pipeline.
 1. Create a search index, as shown in the following example:

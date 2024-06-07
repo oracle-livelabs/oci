@@ -40,6 +40,14 @@
             "filename": "../../Conversational-with-RAG/Conversational-with-RAG.md"
         },
         {
+            "title": "Lab 8: Observability in OpenSearch",
+            "filename": "../../Observability/observability.md"
+        },
+        {
+            "title": "Lab 9: SIEM in OpenSearch",
+            "filename": "../../SIEM/siem.md"
+        },
+        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
