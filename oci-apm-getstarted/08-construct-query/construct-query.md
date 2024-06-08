@@ -352,4 +352,4 @@ Anand Prabhu, Sr. Member of Technical Staff,
 Robert Brouwer, Consulting Member of Technical Staff,  
 Jurgen Leijer, Senior Product Strategy Director, Management Cloud,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, May 2023
+* **Last Updated By/Date** - Yutaka Takatsu, June 2024

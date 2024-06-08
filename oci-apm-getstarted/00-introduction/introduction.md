@@ -49,4 +49,4 @@ In this workshop, you will:
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, May 2023
+- **Last Updated By/Date** - Yutaka Takatsu, June 2024
