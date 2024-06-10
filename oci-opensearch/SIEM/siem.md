@@ -1,8 +1,8 @@
-# Learn about the Observabiity module in OpenSearch 
+# Learn about Security Analytics (SIEM) in OpenSearch
 
 ## Introduction
 
-In this lab, you will explore the Observability function in OpenSearch.
+In this lab, you will explore the SIEM functionality in OpenSearch.
 
 Estimated Time: 15 minutes
 
@@ -18,7 +18,7 @@ Confirm that the OpenSearch cluster is version 2.11 or higher.  This is the late
 Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard.
 
 ## Step 2: Review the strucure of the Apache access logs
-First connect to the OpenSearch Dashboard (you have to provide the username/password.Go to the **Management**\**Dev Tools** section.
+First connect to the OpenSearch Dashboard (you have to provide the username/password).Go to the **Management** **Dev Tools** section.
 Upload the Apache access logs data ulizing the command:
 ```html
    <copy>POST apache_accesslogs/_bulk
