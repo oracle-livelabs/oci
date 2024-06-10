@@ -1,6 +1,6 @@
 # OCI Network VTAPs and Flow Logs
 
-### Introduction
+## Introduction
 
 Estimated Time: 20 minutes
 
@@ -23,6 +23,10 @@ In this lab, you will:
 * Use the VTAP monitor and Flow Logs to identify the client/server network flows
 
   ![L3.1](images/vtapsandflowlogs.png)
+
+### Prerequisites
+
+* Basic knowledge of OCI Networking components and networking.
 
 ## Task 1: Create NLB
 

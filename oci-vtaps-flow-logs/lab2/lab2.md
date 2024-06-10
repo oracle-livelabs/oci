@@ -1,6 +1,6 @@
 # OCI Network Compute
 
-### Introduction
+## Introduction
 
 Estimated Time: 15 minutes
 
@@ -20,6 +20,10 @@ In this lab, you will:
 
     ![L2.1](images/compute.png)
 
+
+### Prerequisites
+
+* Basic knowledge of OCI Networking components and networking.
 
 ## Task 1: Launch the Cloud Shell and Generate SSH Keys
 

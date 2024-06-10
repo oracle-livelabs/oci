@@ -1,6 +1,6 @@
 # OCI Network VCN and Subnets
 
-### Introduction
+## Introduction
 
 Estimated Time: 10 minutes
 
@@ -25,6 +25,9 @@ When you complete the exercise, the network topology will look like the followin
 
 ![L1.1](images/vcnsubnetoverview.png)
 
+### Prerequisites
+
+* Basic knowledge of OCI Networking components and networking.
 
 ## Task 1: Create Log Group
 
