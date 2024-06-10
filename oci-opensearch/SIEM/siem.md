@@ -52,7 +52,7 @@ Now go to **Discover** and select the following index **apache_accesslogs**  in 
 Analyze the fields in the docoument.
 
 
-## Step 3: Create Detectorsin Security Analytics (SIEM) 
+## Step 3: Create Detectors in Security Analytics (SIEM) 
 In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. Most likely there will be no detectors created yet. 
 Click on **Create Detector** and fill in:
 ```html
@@ -78,7 +78,7 @@ Still in Security Analytics, fileter on Apache, clikc on **Detection rules** und
 You can also create detection rules, by clicking on **Create detection rule**
 
 
-## Step 4: Create Log types in Security analytics
+## Step 4: Create new Log types in Security analytics
 In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. And clik on **Log types**, you will see a list of default log types in OpneSearch.
 If you click on a log type you can see the deatils and the Detection Rules assiciated with the log type:
   ![OpenSearch Dashboards - Document Details](../images/image-siem5.png)
