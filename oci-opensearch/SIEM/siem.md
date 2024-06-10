@@ -15,7 +15,7 @@ In this lab, you will:
 
 ## Step1: Prerequisites
 Confirm that the OpenSearch cluster is version 2.11 or higher.  This is the latest version. To create a cluster, see Creating an OpenSearch Cluster (LABs 1,2). You will have to connect to the OpenSearch Dashboard.
-Please refer to **LAB4** **Task1** on how to connect to the OpenSearch Dashboard.
+Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard.
 
 ## Step 2: Review the strucure of the Apache access logs
 First connect to the OpenSearch Dashboard (you have to provide the username/password.Go to the **Management**\**Dev Tools** section.
@@ -91,5 +91,5 @@ The new log type will appear on the list of log types.
 
 ## Acknowledgements
 
-* **Author** - Nuno Gonçalves
+* **Author** - Nirav Kalyani
 * **Last Updated By/Date** - George Csaba, June 2024
