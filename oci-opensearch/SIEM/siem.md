@@ -78,7 +78,7 @@ Still in Security Analytics, fileter on Apache, clikc on **Detection rules** und
 You can also create detection rules, by clicking on **Create detection rule**
 
 
-## Step 4: Create new Log types in Security analytics
+## Step 4: Create new Log types in Security Analytics
 In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. And clik on **Log types**, you will see a list of default log types in OpneSearch.
 If you click on a log type you can see the deatils and the Detection Rules assiciated with the log type:
   ![OpenSearch Dashboards - Document Details](../images/image-siem5.png)

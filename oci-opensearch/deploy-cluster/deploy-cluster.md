@@ -81,6 +81,20 @@ You can find more information [here] (https://docs.oracle.com/en-us/iaas/Content
 }
       ```
 
+## Task 3: Connect to OpenSearch Dashboards
+
+1. From your local machine, establish port forwarding. You can find more information on how to connect to a cluster/dahboard [here] (https://docs.oracle.com/en-us/iaas/Content/search-opensearch/Tasks/ingestingociopensearchdata.htm)
+
+
+      ```bash
+      <copy>ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 opc@<your_instance_public_ip> -i <path_to_your_private_key></copy>
+      ```
+
+2. Access https://localhost:5601 in your browser.  
+   > **Note:** Currently, depending on the browser, a warning message similar to "Your connection is not private" is displayed. Choose the option which allows you to proceed. The following screen is then displayed:  
+
+   ![OpenSearch Dashboards landing page](../images/image7.png)
+
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
