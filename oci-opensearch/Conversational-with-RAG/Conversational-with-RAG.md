@@ -49,7 +49,120 @@ If you're new to policies, see Getting Started with Policies and Common Policies
    ```
 
 
-## Step 2 Create/Reister/Depoly a model for kNN
+
+## Step 2: Register Model Group For RAG
+Steps 2-6 will guide you to create a RAG pipeline.
+
+Register a model group using the register operation in the Model Group APIs, as shown in the following example:
+```html
+   <copy>POST /_plugins/_ml/model_groups/_register
+{
+   "name": "public OCI GenAI model group",
+   "description": "OCI GenAI group for remote models"
+}</copy>
+```
+Make note of the model_group_id returned in the response:
+```html
+   {
+  "model_group_id": "<model_group_ID>",
+  "status": "CREATED"
+}
+```
+
+## Step 3: Create the Connector for RAG
+
+Create the Generative AI connector as shown in one of the following examples.
+
+Cohere model:
+ ```html
+   <copy>POST _plugins/_ml/connectors/_create
+{
+     "name": "OpenAI Chat Connector",
+     "description": "when did us pass espio",
+     "version": 2,
+     "protocol": "oci_sigv1",
+     "parameters": {
+         "endpoint": "inference.generativeai.us-chicago-1.oci.oraclecloud.com",
+         "auth_type": "resource_principal"
+     },
+     "credential": {
+     },
+     "actions": [
+         {
+             "action_type": "predict",
+             "method": "POST",
+             "url": "https://${parameters.endpoint}/20231130/actions/generateText",
+             "request_body": "{\"compartmentId\":\"<cluster_compartment_id>\",\"servingMode\":{\"modelId\":\"cohere.command\",\"servingType\":\"ON_DEMAND\"},\"inferenceRequest\":{\"prompt\":\"${parameters.prompt}\",\"maxTokens\":600,\"temperature\":1,\"frequencyPenalty\":0,\"presencePenalty\":0,\"topP\":0.75,\"topK\":0,\"returnLikelihoods\":\"GENERATION\",\"isStream\":false ,\"stopSequences\":[],\"runtimeType\":\"COHERE\"}}"
+         }
+     ]
+ }</copy>
+   ```
+
+Authentication is done using a resource principal. Specify the cluster's compartment ID in request_body.
+
+Make note of the connector_id returned in the response:
+```html
+{
+  "connector_id": "<connector_ID>",
+}
+```
+
+
+## Step 4: Register the Model for RAG
+
+Register the remote model using the Generative AI connector with the connector ID and model group ID from the previous steps, as shown in the following example:
+
+```html
+   <copy>POST /_plugins/_ml/models/_register
+{
+   "name": "oci-genai-conversation",
+   "function_name": "remote",
+   "model_group_id": "<model_group_ID>",
+   "description": "test semantic",
+   "connector_id": "<connector_ID>"
+ }</copy>
+   ```
+Make note of the model_id returned in the response:
+```html
+{
+  "task_id": "<task_ID>",
+  "status": "CREATED",
+  "model_id": "<model_ID>"
+}
+```
+## Step 5: Deploy the Model fro RAG
+Use the model ID from the previous step to deploy the model to the cluster so it can be used in any pipeline, as shown in the following example:
+```html
+   <copy>POST /_plugins/_ml/models/<model_ID>/_deploy</copy>
+```
+A response similar to the following is returned:
+```html
+{
+  "task_id": "<task_ID>",
+  "task_type": "DEPLOY_MODEL",
+  "status": "COMPLETED"
+}
+```
+## Step 6: Create a RAG Pipeline
+Create a RAG pipeline using the model_id from the previous step, as shown in the following example:
+```html
+   <copy>PUT /_search/pipeline/demo_rag_pipeline
+{
+  "response_processors": [
+    {
+      "retrieval_augmented_generation": {
+        "tag": "genai_conversational_search_demo",
+        "description": "Demo pipeline for conversational search Using Genai Connector",
+        "model_id": "<model_ID>",
+        "context_field_list": ["text"],
+        "system_prompt":"hepfull assistant",
+        "user_instructions":"generate concise answer"
+      }
+    }
+  ]
+}</copy>
+```
+## Step 7: Create/Reister/Depoly a model for kNN
 
 Confirm that the OpenSearch cluster is version 2.11. To use an OCI Generative AI connector with OCI Search with OpenSearch, you need a cluster configured to use OpenSearch version 2.11. By default, new clusters are configured to use version 2.11. To create a cluster, see Creating an OpenSearch Cluster.
 
@@ -149,117 +262,6 @@ A response similar to the following is returned:
   "task_type": "DEPLOY_MODEL",
   "status": "COMPLETED"
 }
-```
-## Step 3: Register Model Group For RAG
-
-Register a model group using the register operation in the Model Group APIs, as shown in the following example:
-```html
-   <copy>POST /_plugins/_ml/model_groups/_register
-{
-   "name": "public OCI GenAI model group",
-   "description": "OCI GenAI group for remote models"
-}</copy>
-```
-Make note of the model_group_id returned in the response:
-```html
-   {
-  "model_group_id": "<model_group_ID>",
-  "status": "CREATED"
-}
-```
-
-## Step 4: Create the Connector for RAG
-
-Create the Generative AI connector as shown in one of the following examples.
-
-Cohere model:
- ```html
-   <copy>POST _plugins/_ml/connectors/_create
-{
-     "name": "OpenAI Chat Connector",
-     "description": "when did us pass espio",
-     "version": 2,
-     "protocol": "oci_sigv1",
-     "parameters": {
-         "endpoint": "inference.generativeai.us-chicago-1.oci.oraclecloud.com",
-         "auth_type": "resource_principal"
-     },
-     "credential": {
-     },
-     "actions": [
-         {
-             "action_type": "predict",
-             "method": "POST",
-             "url": "https://${parameters.endpoint}/20231130/actions/generateText",
-             "request_body": "{\"compartmentId\":\"<cluster_compartment_id>\",\"servingMode\":{\"modelId\":\"cohere.command\",\"servingType\":\"ON_DEMAND\"},\"inferenceRequest\":{\"prompt\":\"${parameters.prompt}\",\"maxTokens\":600,\"temperature\":1,\"frequencyPenalty\":0,\"presencePenalty\":0,\"topP\":0.75,\"topK\":0,\"returnLikelihoods\":\"GENERATION\",\"isStream\":false ,\"stopSequences\":[],\"runtimeType\":\"COHERE\"}}"
-         }
-     ]
- }</copy>
-   ```
-
-Authentication is done using a resource principal. Specify the cluster's compartment ID in request_body.
-
-Make note of the connector_id returned in the response:
-```html
-{
-  "connector_id": "<connector_ID>",
-}
-```
-
-
-## Step 5: Register the Model for RAG
-
-Register the remote model using the Generative AI connector with the connector ID and model group ID from the previous steps, as shown in the following example:
-
-```html
-   <copy>POST /_plugins/_ml/models/_register
-{
-   "name": "oci-genai-conversation",
-   "function_name": "remote",
-   "model_group_id": "<model_group_ID>",
-   "description": "test semantic",
-   "connector_id": "<connector_ID>"
- }</copy>
-   ```
-Make note of the model_id returned in the response:
-```html
-{
-  "task_id": "<task_ID>",
-  "status": "CREATED",
-  "model_id": "<model_ID>"
-}
-```
-## Step 6: Deploy the Model fro RAG
-Use the model ID from the previous step to deploy the model to the cluster so it can be used in any pipeline, as shown in the following example:
-```html
-   <copy>POST /_plugins/_ml/models/<model_ID>/_deploy</copy>
-```
-A response similar to the following is returned:
-```html
-{
-  "task_id": "<task_ID>",
-  "task_type": "DEPLOY_MODEL",
-  "status": "COMPLETED"
-}
-```
-## Step 7: Create a RAG Pipeline
-Create a RAG pipeline using the model_id from the previous step, as shown in the following example:
-```html
-   <copy>PUT /_search/pipeline/demo_rag_pipeline
-{
-  "response_processors": [
-    {
-      "retrieval_augmented_generation": {
-        "tag": "genai_conversational_search_demo",
-        "description": "Demo pipeline for conversational search Using Genai Connector",
-        "model_id": "<model_ID>",
-        "context_field_list": ["text"],
-        "system_prompt":"hepfull assistant",
-        "user_instructions":"generate concise answer"
-      }
-    }
-  ]
-}</copy>
 ```
 ## Step 8: Create Search Index
 After the RAG pipeline is created, you can perform RAG plus conversational search on any index.
