@@ -2,7 +2,7 @@
 You have to have an existing OpenSearch cluster and have to be able to connect to the Dashboard, to perform all of the steps.
 ## Introduction
 
-In this lab, you will perform semaatic search and conversational search utilizing a RAG pipeline.
+In this lab, you will perform semantic search and conversational search utilizing a RAG pipeline.
 Estimated Time: 30 minutes
 
 ### Objectives
@@ -15,7 +15,9 @@ The connector uses the Cohere embed model hosted by Generative AI.
 ## Step1: Prerequisites
 
 Confirm that the OpenSearch cluster is version 2.11. To use an OCI Generative AI connector with OCI Search with OpenSearch, you need a cluster configured to use OpenSearch version 2.11. By default, new clusters are configured to use version 2.11. To create a cluster, see Creating an OpenSearch Cluster.
-Please refer to **LAB4** **Task1** on how to connect to the OpenSearch Dashboard.
+Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard.
+
+You will also need a subscription to the Chicago region, which hosts the OCI GenAI infrastructure.
 
 First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Management** and click on **Dev Tools**. You wil be able to type the commands in the Console.
 
@@ -595,5 +597,5 @@ You can control how many previous conversation contexts to consider using the in
 
 ## Acknowledgements
 
-* **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, September 2022
+* **Author** - Landry Kezebou Yankam
+* **Last Updated By/Date** - George Csaba, June 2024

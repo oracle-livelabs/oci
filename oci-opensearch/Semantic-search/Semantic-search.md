@@ -2,21 +2,24 @@
 You have to have an existing OpenSearch cluster and have to be able to connect to the Dashboard, to perform all of the steps.
 ## Introduction
 
-In this lab, you will perform semaatic search and conversational search utilizing a RAG pipeline.
-Estimated Time: 30 minutes
+In this lab, you will perform semantic search
+Estimated Time: 20 minutes
 
 ### Objectives
 
 In this lab, you will:
 -Use an existing Cluster
 
-Use the steps in this walkthrough to set up and use an end-to-end Retrieval-Augmented Generation (RAG) pipeline in OCI Search with OpenSearch, using an OCI Generative AI connector.
-The connector uses the Cohere embed model hosted by Generative AI. Generative AI also supports the Llma2 model which you can experiment with as well.
+Use the steps in this walkthrough to set up semantic search(without RAG), using an OCI Generative AI connector.
+The connector uses the Cohere embed model hosted by Generative AI.
 
 ## Step1: Prerequisites
 
 Confirm that the OpenSearch cluster is version 2.11. To use an OCI Generative AI connector with OCI Search with OpenSearch, you need a cluster configured to use OpenSearch version 2.11. By default, new clusters are configured to use version 2.11. To create a cluster, see Creating an OpenSearch Cluster.
-Please refer to **LAB4** **Task1** on how to connect to the OpenSearch Dashboard.
+
+You will also need a subscription to the Chicago region, which hosts the GenAI infrastructure. 
+
+Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard.
 
 First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Management** and click on **Dev Tools**. You wil be able to type the commands in the Console.
 
@@ -492,5 +495,5 @@ Alternatively, you can use the _predict endpoint, as shown in the following exam
 
 ## Acknowledgements
 
-* **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, September 2022
+* **Author** - Landry Kezebou Yankam
+* **Last Updated By/Date** - George Csaba, June 2022

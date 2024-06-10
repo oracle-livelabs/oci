@@ -104,4 +104,4 @@ In this task, you will create an OCI Compute instance in the public subnet of th
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, September 2022
+* **Last Updated By/Date** - George Csaba, June 2024

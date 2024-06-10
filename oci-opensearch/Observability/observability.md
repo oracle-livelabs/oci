@@ -15,7 +15,7 @@ In this lab, you will:
 
 ## Step 1: Prerequisites
 Confirm that the OpenSearch cluster is version 2.11 or higher.  This is the latest version. To create a cluster, see Creating an OpenSearch Cluster (LABs 1,2). You will have to connect to the OpenSearch Dashboard.
-Please refer to **LAB4** **Task1** on how to connect to the OpenSearch Dashboard.
+Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard.
 
 ## Step 2: Review the strucure of the logs
 First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Discover** and select the following index **opensearch_dashboards_sample_data_logs** (this is a default set) in the right upper corner. Make sure to specify the time correctly on the top of the screen. Click on the document deaatils in one of the rows.  
@@ -56,5 +56,5 @@ The added viualization will appear in the Dashboard.
 
 ## Acknowledgements
 
-* **Author** - Nuno Gonçalves
+* **Author** - Nirav Kalyani
 * **Last Updated By/Date** - George Csaba, June 2024
