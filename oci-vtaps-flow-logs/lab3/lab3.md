@@ -6,11 +6,11 @@ Estimated Time: 20 minutes
 
 ### About VTAPs
 
-VTAP functionality is sometimes referred to as traffic mirroring. It copies traffic that traverses a specific point in the network and sends the mirrored traffic to a network packet collector or network analytics tool for further analysis. A VTAP is like a virtual version of port mirroring except, instead of mirroring a port, we mirror traffic at a specific Oracle resource, such as OCI Database service, Exadata virtual machine (VM) cluster, instance virtual network interface cards (VNICs), load balancer as a service (LBaaS), or Autonomous Data Warehouse. Mirrored traffic generated at the VTAP source counts against the total available bandwidth of the VNIC. If congestion occurs, OCI prioritizes production traffic, and mirrored traffic is dropped first.
+Virtual Test Access Point, VTAP, functionality is sometimes referred to as traffic mirroring. It copies traffic that traverses a specific point in the network and sends the mirrored traffic to a network packet collector or network analytics tool for further analysis. A VTAP is like a virtual version of port mirroring except, instead of mirroring a port, we mirror traffic at a specific Oracle resource, such as OCI Database service, Exadata virtual machine (VM) cluster, instance virtual network interface cards (VNICs), load balancer as a service (LBaaS), or Autonomous Data Warehouse. Mirrored traffic generated at the VTAP source counts against the total available bandwidth of the VNIC. If congestion occurs, OCI prioritizes production traffic, and mirrored traffic is dropped first. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/vtap.htm) for more information on VTAPs.
 
-Network Load Balancer provides the benefits of flow high availability, source and destination IP addresses, and port preservation. It is designed to handle volatile traffic patterns and millions of flows, offering high throughput while maintaining ultra low latency. The Network Load Balancer will be used by the VTAP for receiving VTAP flows and distributing output for monitoring.
+Network Load Balancer provides the benefits of flow high availability, source and destination IP addresses, and port preservation. It is designed to handle volatile traffic patterns and millions of flows, offering high throughput while maintaining ultra low latency. The Network Load Balancer will be used by the VTAP for receiving VTAP flows and distributing output for monitoring. [https://docs.oracle.com/en-us/iaas/compute-cloud-at-customer/topics/nlb/network-load-balancing.htm) for more information on NLBs.
 
-A security list acts as a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. The default security list will be updated to allow the VTAP traffic to flow within the VCN.
+A security list acts as a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. The default security list will be updated to allow the VTAP traffic to flow within the VCN. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/securitylists.htm) for more information on Security Lists.
 
 ### Objectives
 
@@ -237,6 +237,52 @@ In this lab, you will:
       * Command: **"sudo tcpdump -i enp0s6 udp port 4789"**
 
         ![L3.26](images/developertools-sshvtaptcpdump.png)
+
+        <details>
+        <summary><b>Additional information: TCPDUMP</b></summary>
+
+            Filtering hosts:
+            Match any traffic involving 192.168.1.1 as destination or source:
+            - tcpdump host 192.168.1.1
+
+            As source only:
+            - tcpdump src host 192.168.1.1
+
+            As destination only:
+            - tcpdump dst host 192.168.1.1
+
+            Ports filtering:
+            Match any traffic involving port 25 as source or destination:
+            - tcpdump port 25
+
+            As source only:
+            - tcpdump src port 25
+
+            As destination only:
+            - tcpdump dst port 25
+
+            Network filtering
+            - tcpdump net 192.168
+            - tcpdump src net 192.168
+            - tcpdump dst net 192.168
+
+            Protocol filtering
+            - tcpdump ip
+            - tcpdump tcp
+            - tcpdump udp
+            - tcpdump icmp
+
+            Combine expressions:
+            For example the following rule will match any TCP traffic on port 80 (web) with 192.168.1.254 or 192.168.1.200 as destination host:
+            - tcpdump '((tcp) and (port 80) and ((dst host 192.168.1.254) or (dst host 192.168.1.200)))'
+
+            This one will match any ICMP traffic involving the destination with physical/MAC address 00:01:02:03:04:05:
+            - tcpdump '((icmp) and ((ether dst host 00:01:02:03:04:05)))'
+
+            This will match any traffic for the destination network 192.168 except destination host 192.168.1.200:
+            - tcpdump '((tcp) and ((dst net 192.168) and (not dst host 192.168.1.200)))'
+
+        </details>
 
 4. In a new window/tab, log into the client to initiate traffic. Using a separate window/tab will allow us to have an SSH session open to each compute instance.
 
