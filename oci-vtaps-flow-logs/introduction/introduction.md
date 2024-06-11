@@ -13,8 +13,8 @@ To gain more familiarity with Oracle Cloud's networking concepts, I would recomm
 In this workshop, you will learn how to:
 
 * Deploy a Virtual Cloud Network (VCN), Subnets, and associated Security Lists.
-* Deploy Internet Gateway and Compute Instances for client/server communication and traffic monitoring
-* Deploy a VTAP and enable Flow Logs to investigate the client/server communication.
+* Deploy Compute Instances for client/server communication and traffic monitoring
+* Deploy a VTAP along with an NLB and enable Flow Logs to investigate the client/server communication.
 
 ### Prerequisites
 
