@@ -281,7 +281,6 @@ In this lab, you will:
 
       ![L3.31](images/flowlog-searchssh.png)
 
-
 **Congratulations!** You have completed this lab.
 
 ## Acknowledgements
