@@ -1,6 +1,6 @@
 # Getting Started
 
-### Introduction
+## Introduction
 
 Estimated Time: 5 minutes
 
