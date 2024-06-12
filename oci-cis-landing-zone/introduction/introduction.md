@@ -4,7 +4,7 @@
 
 ![OCI CIS Landing Zone Logo](images/landing-zone-icon.png "OCI CIS Landing Zone Logo of helicopter approaching Oracle shaped landing pad")
 
-This set of labs will walk you through deploying a secure cloud architecture, compliant with the [CIS OCI Foundations Benchmark v1.2](https://www.cisecurity.org/benchmark/oracle_cloud/). Upon completion of the labs, a full set of OCI resources will be created as a base to build a secure enterprise workload.
+This set of labs will walk you through deploying a secure cloud architecture, compliant with the [CIS OCI Foundations Benchmark v2.0](https://www.cisecurity.org/benchmark/oracle_cloud/). Upon completion of the labs, a full set of OCI resources will be created as a base to build a secure enterprise workload.
 
 Estimated Workshop Time: 1 Hour 30 Minutes
 
@@ -104,7 +104,7 @@ An effort has been made to provide a default set of useful groups to carry out c
 
 ## A Note About Terraform
 
-The CIS OCI Landing Zone uses [Terraform](https://developer.hashicorp.com/terraform/intro) to deploy all resources into a tenancy. Terraform is an Infrastructure as Code tool used for provisioning cloud objects in an automated manner. This simplifies the setup of the Landing Zone and shortens the time to production in OCI.
+The CIS OCI Landing Zone uses [Terraform](https://developer.hashicorp.com/terraform/intro) to deploy all resources into a tenancy. Terraform is an Infrastructure as Code tool used for provisioning cloud objects via automation. This simplifies the setup of the Landing Zone and shortens the time to production in OCI.
 
 Terraform can be used with a variety of clients to fit different deployment methods. For this lab, we will leverage [OCI Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) to simplify the use of Terraform in OCI. The OCI Resource Manager is an Oracle-managed Terraform service that uses configuration files to automate deployment and operations for resources using Terraform. It reduces the complexity of using Terraform in OCI as well as storing state in the cloud instead of on a developer laptop.
 

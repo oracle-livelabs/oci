@@ -53,18 +53,27 @@ Antes de começarmos a criar o serviço Load Balancer, observe que há algumas t
 
 
 1. Instalar Apache Application Server em cada servidor
-	1. Conecte-se no host Linux usando o usuário opc  
+	1.  Conecte-se no host Linux **(VM-OracleLinux-1)**, **caso não esteja mais conectado**, usando o usuário opc através do NoVNC como feito nos Labs anteriores. 
+	**Relembre como encontrar o IP privado.**
+![localize o IP publico da vm](./images/vm-private-ip-1.png)
+	
+	
+	````
+<copy>
+ssh opc@<ip privado da VM>
+</copy>
+````
 	2. Uma vez conectado, mude seu usuário para **ROOT** com o comando: ***`"sudo su – "`***
-	3. Instale o pacote Apache no sistema operacional: ***`"sudo yum install httpd -y"`***
-	4. Inicie o aplicativo Apache : ***`"sudo apachectl start"`***
+	3. Instale o pacote Apache no sistema operacional: ***`"yum install httpd -y"`***
+	4. Inicie o aplicativo Apache : ***`"apachectl start"`***
 	5. Configure o firewall do host local para permitir o tráfego do Apache, para isso use os comandos abaixo no Linux:
-		- ***`sudo systemctl enable httpd`***
-		- ***`sudo apachectl configtest`***
-		- ***`sudo firewall-cmd --permanent --zone=public --add-service=http`***
-		- ***`sudo firewall-cmd --reload`***
+		- ***`systemctl enable httpd`***
+		- ***`apachectl configtest`***
+		- ***`firewall-cmd --permanent --zone=public --add-service=http`***
+		- ***`firewall-cmd --reload`***
 
 
-	6. Para identificar **a primeira instância** de computação usada na interface web (Linux -  AD1), personalize o arquivo ***“index.html”*** Use o seguinte comando como usuário **ROOT**:
+	6. Para identificar **a primeira instância** de computação usada na interface web **(VM-OracleLinux-1)**, personalize o arquivo ***“index.html”*** Use o seguinte comando como usuário **ROOT**:
 
 > **Note:** Primeiro copie a 1ª linha do código e cole. Depois copie o corpo do código até < / html> e cole. Por último copie a última linha e cole.
 
@@ -90,7 +99,9 @@ EOF
 </copy>
 ```
 
-2. Na **segunda instância** você repetirá as etapas acima, de **1** a **5**, para identificarmos a segunda instância de computação (Linux – AD2) personalize o arquivo **“index.html”** usando o seguinte comando com usuário **ROOT**:
+> **Note:** Para desconectar da VM e voltar ao terminal do NoVNC utilize o comando **logout**, se necessário algumas vezes.
+
+2. Na **segunda instância** **(VM-OracleLinux-2)** você repetirá as etapas acima, de **1** a **5**, e para identificarmos a segunda instância de computação **(VM-OracleLinux-2)** personalize o arquivo **“index.html”** usando o seguinte comando com usuário **ROOT**:
 
 > **Note:** Primeiro copie a 1ª linha do código e cole. Depois copie o corpo do código até < / html> e cole. Por último copie a última linha e cole.	
 
@@ -116,12 +127,21 @@ EOF
 </copy>
 ```
 
-3. Teste o comportamento do Apache, tudo que você precisa fazer, é usar o **IP privado da instância** (VM-OracleLinux-AD1) do Compute no navegador web do noVNC para verificar se a página principal do Apache aparecerá.
+3. Teste o comportamento do Apache, tudo que você precisa fazer, é usar o **IP privado da instância** (VM-OracleLinux-1) do Compute no navegador web do NoVNC para verificar se a página principal do Apache aparecerá.
 
-![copie o IP privado](images/load-balancer-private-ip.png)
+Abra o navegador do NoVNC.
+
+![copie o IP privado](images/load-balancer-browser.png)
+
+Copie os IPs Privados das máquinas VM-OracleLinux-1 e VM-OracleLinux-2.
+
+![copie o IP privado](images/load-balancer-private-ip2.png)
+
+Cole no navegador do NoVNC e veja o resultado:
+
 ![cole no navegador](images/load-balancer-novnc.png)
 
-Se tudo estiver OK, você pode testar a instalação do Apache na segunda VM (VM-OracleLinux-AD2). Tudo o que você precisa fazer é usar o endereço IP privado da segunda instância no navegador do noVNC e provavelmente obterá uma saída semelhante a da imagem anterior.
+Se tudo estiver OK, você pode testar a instalação do Apache na segunda VM (VM-OracleLinux-2). Tudo o que você precisa fazer é usar o endereço IP privado da segunda instância no navegador do noVNC e provavelmente obterá uma saída semelhante a da imagem anterior.
 
 **IMPORTANTE:** Certifique-se de iniciar a criação do Load Balancer somente depois que ambas as chamadas no apache estiverem funcionando.
 
@@ -129,7 +149,7 @@ Isso é importante porque se você criar o Load Balancer sem um serviço dispon�
 
 O Load Balancer geralmente leva 5 minutos para "calibrar" seu status.
 
-Nosso objetivo é criar o serviço de Load Balancer somente depois que os dois servidores Apache estiverem em execução, para que o serviço Load Balancer tenha o estado "pronto" e esteja pronto para ser testado.
+Nosso objetivo é criar o serviço de Load Balancer somente depois que os dois servidores Apache estiverem em execução, para que o serviço Load Balancer tenha o estado "pronto" e possa ser testado.
 
 ## Task 2: Criar uma aplicação em Alta Disponibilidade (HA) com Load Balancer e 2 Webservers
 
@@ -139,45 +159,46 @@ Nosso objetivo é criar o serviço de Load Balancer somente depois que os dois s
 
 Clique no botão “Create Load Balancer”:
 ![clique em "Create Load Balancer"](images/load-balancer-create-8.png)
-![selecione o tipo](images/load-balancer-type-9.png)
 
 2. A tela de criação do Load Balancer é um modelo baseado em assistente, onde você será guiado no processo pela interface. Na tela principal, você fornecerá as informações abaixo:
 - Name: **lb-apache**
 - Visibility Type: **Private** 
 - Bandwidth: **10 Mbps**
 - VCN: **< Selecione sua VCN >**
-- Subnet: **< Selecione sua sub-rede privada >**
+- Subnet: **< Selecione sua sub-rede >**
 - (escolha a sub-rede, mesma sub-rede onde suas instâncias de computação foram criadas)
 
 ![configure o Load Balancer](images/load-balancer-private.png)
-![selecione o shape do Load Balancer](images/load-balancer-vcn.png)
+![selecione o shape do Load Balancer](images/load-balancer-config-11.png)
+![selecione o shape do Load Balancer](images/load-balancer-config-12.png)
 
 3. Defina a política do Load Balancer e adicione os servidores de back-end. 
-Para adicionar servidores de back-end, clique no botão azul “Add Backends”
+Para adicionar servidores de back-end, clique no botão “Add Backends”
+
+![clique em "Add Backends"](images/load-balancer-backends-13.png)
+
+4. Insira os Backend Set servers (suas duas VM’s Linux) e depois clique em "Next":
 
 ![clique em "Add Backends"](images/load-balancer-backends-12.png)
+![clique em "Add Backends"](images/load-balancer-backends-14.png)
 
-4. Insira os Backend Set servers (suas duas VM’s Linux):
-
-![selecione os servidores](images/load-balancer-add-backends-13.png)
-
-5. Como última etapa, defina o tipo de tráfego que será tratado
+5. Como última etapa, defina o tipo de tráfego que será tratado e depois clique em "Submit"
 
 ![selecione o tipo de tráfego](images/load-balancer-14.png)
 
+![visualize o Load Balancer](images/load-balancer-logs-15.png)
+
 Assim que o processo de criação for concluído, você terá as seguintes informações:
 
-![visualize o Load Balancer](images/load-balancer-ip-private.png)
+![visualize o Load Balancer](images/load-balancer-private-ip-1.png)
 
 **Testando o Load Balancer**
 
-6. Para simular um ambiente de aplicativo, precisamos iniciar um serviço da web em ambas as instâncias de Computação.
+6. Para simular um ambiente de aplicação, vamos chamar o IP Privado do Load Balancer (para encontrar o IP privado veja o exemplo na imagem anterior) no navegador do NoVNC e então o mesmo irá direcionar o tráfego para as 2 VMs Linux criadas anteriormentes e adicionadas como backends do Load Balancer.
 
-Para obter saídas diferentes nas chamadas do Load Balancer, adicione conteúdos diferentes ao arquivo Index.html em cada cálculo.
+![teste o Load Balancer](images/load-balancer-private-ip-2.png)
 
-![teste o Load Balancer](images/load-balancer-test-16.png)
-
-7. Utilize o IP Privado do Load Balancer no navegador do noVNC para visualizar sua aplicação sendo direcionada para os 2 servidores com respostas diferentes no arquivo Index.html
+7. Utilize o IP Privado do Load Balancer e aperte F5 algumas vezes no navegador do NoVNC para visualizar sua aplicação sendo direcionada para os 2 servidores com respostas diferentes no arquivo Index.html
 
 ## Conclusão
 
@@ -186,4 +207,4 @@ Nesta sessão você aprendeu a criar uma aplicação em Alta Disponibilidade (HA
 ## Autoria
 
 - **Autores** - Arthur Vianna, Gustavo Sant'ana, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Date** - Arthur Vianna, Jun/2022
+- **Último Update Por/Date** - Arthur Vianna, Fev/2024

@@ -27,7 +27,7 @@ Autonomous Database oferece três tipos de workloads:
 Neste Laboratório você vai:
 * Provisionar um Autonomous Database (Oracle Autonomous Data Warehouse)
 * Explorar os recursos disponíveis de forma nativa dentro do Banco de Dados (Data Tools)
-* Conhecer OCPU scaling
+* Conhecer ECPU scaling
 * Explorar o Performance Hub
 
 
@@ -50,15 +50,13 @@ Para iniciar o processo de criação do Autonomous Database:
 * Display Name: **Dê um nome para seu banco**
 * Database name: **Dê um nome para seu banco**
 * Choose a workload type : Para este Workshop, por favor selecione **Data Warehouse**
-* Choose a deployment type: **Shared Infrastructure**
+* Choose a deployment type: **Serverless**
 
 ![configure o Autonomous Database](./images/autonomous-database-config-4.png)
 
 * Choose database version: **19c**
-* OCPU count: **1**
+* ECPU count: **2**
 * Storage (TB): **1**
-
-*Observação: Você pode escolher entre 1 e 128 OCPUs e 1 e 128 TBs para armazenamento.* 
 
 ![configure as credenciais e tipo de acesso](./images/autonomous-database-credentials-5.png)
 
@@ -68,9 +66,11 @@ Para iniciar o processo de criação do Autonomous Database:
 > **Note:** Password must be 12 to 30 characters and contain at least one uppercase letter, one lowercase letter, and one number. The password cannot contain the double quote (") character or the username "admin".*
 
 ![escolha a licença e clique em "Create Autonomous Database"](./images/autonomous-database-license-6.png)
+![escolha a licença e clique em "Create Autonomous Database"](./images/autonomous-database-license-7.png)
 
 * Choose License and Oracle Database Edition: **Bring Your Own License (BYOL)**
 * Choose an Oracle Database Edition: **Oracle Database Enterprise Edition (EE)**
+* Coloque um e-mail para contato: **Seu e-mail**
 * Agora finalize a criação clicando no  botão **"Create Autonomous Database"**
 
 Agora basta aguardar alguns minutos e em seguida você verá a tela:
@@ -85,13 +85,11 @@ A maioria das operações do banco de dados autônomo podem ser feitas nos botõ
 
 ![veja as operações que podem ser utilizadas no Autonomous Database](./images/autonomous-database-ops-8.png)
 
-Esta nova versão do Autonomous, traz uma versão já carregada do SQL Developer que pode ser acessada a partir de:
-
-1.	Clique no botão **“Database Actions”**. Você será redirecionado para uma nova aba
+1.	Clique no botão **“Database Actions”** e depois em **"View all database actions"**. Você será redirecionado para uma nova aba
 
 ![Clque em Database Actions](./images/autonomous-database-console-9.png)
 
-2. Faça login no banco com o usuário ADMIN e a senha que você criou na Task 1
+2. Faça login **(se necessário)** no banco com o usuário ADMIN e a senha que você criou na Task 1
 
 ![Clique em Development e em seguida em Database Actions](./images/autonomous-database-login-11.png)
 
@@ -101,25 +99,36 @@ Esta nova versão do Autonomous, traz uma versão já carregada do SQL Developer
 
 Use a página Catalog para obter informações sobre as entidades disponíveis no Oracle Autonomous Database. Você pode ver os dados em uma entidade, as fontes desses dados, os objetos derivados da entidade e o impacto nos objetos derivados das alterações nas fontes.
 
-4. Selecione o schema SH digitando: **owner=SH AND type=TABLE** e selecione a tabela **SALES**
-
-*Atenação: Verifique se a opção **All Local Objects** está selecionada*
+*Atenção: Verifique se a opção **Tudo** está selecionada*
 
 ![Clique em Development e em seguida em Database Actions](./images/autonomous-database-sales-13.png)
+
+4. Selecione o schema SH digitando: **owner=SH AND type=TABLE** e selecione a tabela **SALES**
+
+![Clique em Development e em seguida em Database Actions](./images/autonomous-database-sales-14.png)
 
 5. Explore os campos de visualização, linhagem, impacto e estatísticas. Quando finalizar a exploração clique no botão **Close**
 
 ![ADW - Catalog](./images/autonomous-database-explore-14.png)
+![ADW - Catalog](./images/autonomous-database-explore-15.png)
 
-## Task 3: Scaling de OCPUs e Monitoramento de SQL Statements
+6. Clique no logo da Oracle no topo da página para voltar a tela principal.
 
-1. Volte para a tela principal clicando no logo Oracle no topo da página e em seguida selecione **SQL**
+![ADW - Catalog](./images/autonomous-database-explore-16.png)
+
+## Task 3: Scaling de ECPUs e Monitoramento de SQL Statements
+
+1. Na tela principal selecione **SQL**
 
 ![SQL](./images/autonomous-database-sql-15.png)
 
+Clique no "X" para fechar a **Advertência** e novamente no "X" para fechar a janela da **"Carga de Dados"**
+
+![SQL](./images/autonomous-database-sql-156.png)
+
 Execute queries e scripts, e crie objetos no Banco de dados através do SQL Worksheet
 
-2. Seleciona o schema SH, copie o comando abaixo e cole no SQL Worksheet e em seguida clique no botão 'Run Script'
+2. Selecione o schema SH, copie o comando abaixo e cole no SQL Worksheet e em seguida clique no botão 'Run Script'
 
 ```
 select count(*) from dba_tables, dba_source;
@@ -127,17 +136,17 @@ select a.cust_first_name, count(a.country_id), sum(b.amount_sold) from sh.sales 
 ```
 
 ![SQL](./images/autonomous-database-sql-16.png)
+![SQL](./images/autonomous-database-sql-17.png)
 
 
-3.  Volte para a tela de 'Autonomous Database Details', clique no botão **More Actions** e selecione **Managing Scaling**
-
+3.  Volte para a tela de 'Autonomous Database Details', clique no botão **Manage resource allocation**
 ![clique em "Manage Scaling"](./images/autonomous-database-scaling-17.png)
 
-4. Aumente para **2** OCPUs e clique no botão **Apply**
+4. Aumente para **4** ECPUs e clique no botão **Apply**
 
 ![clique em "Apply"](./images/autonomous-database-apply-18.png)
 
-5. Após confirmar o scale a figura ADW na console mostrará frase **"SCALING IN PROGRESS"** e o banco continuará online.
+5. Após confirmar o scale, o ADW na console mostrará a frase **"SCALING IN PROGRESS"** e o banco continuará online.
 
 ![Scaling em progresso](./images/autonomous-database-progress-19.png)
 
@@ -146,12 +155,13 @@ select a.cust_first_name, count(a.country_id), sum(b.amount_sold) from sh.sales 
 select count(*) from (select * from dba_source, v$sqltext);
 ```
 
-5. Volte para a tela principal clicando no logo Oracle no topo da página e em seguida selecione **PERFORMANCE HUB**
+5. Volte para a tela principal clicando no logo Oracle no topo da página e em seguida selecione **HUB DE DESEMPENHO**
 
 ![clique em "Performance Hub"](./images/autonomous-database-performance-20.png)
+![clique em "Performance Hub"](./images/autonomous-database-performance-21.png)
 
-Use a ferramenta Performance Hub para analisar e ajustar o desempenho de um Autonomous Database selecionado.
-Com esta ferramenta, você pode visualizar dados de desempenho históricos e em tempo real. Ao visualizar dados históricos no Performance Hub, você está visualizando estatísticas coletadas como parte dos instantâneos de hora em hora de seu banco de dados.
+Use a ferramenta Hub de Desempenho para analisar e ajustar o desempenho de um Autonomous Database selecionado.
+Com esta ferramenta, você pode visualizar dados de desempenho históricos e em tempo real. Ao visualizar dados históricos no Hub de Desempenho, você está visualizando estatísticas coletadas como parte dos instantâneos de hora em hora de seu banco de dados.
 
 6.  Selecione **SQL Monitoring** e você verá a lista dos SQl Statements
 
@@ -161,20 +171,20 @@ Com esta ferramenta, você pode visualizar dados de desempenho históricos e em 
 7. Clique no **SQL ID** da Query que você quer explorar:
 
 ![clique no SQL ID](./images/autonomous-database-id-22.png)
+![clique no SQL ID](./images/autonomous-database-id-23.png)
 
 8. Explore as outras abas como SQL Text, Atividades e Métricas. Podemos obter informações muito importantes como CPU utilizada ou quanto de memória estamos utilizando para determinada execução.
 
-![explore as outras abas](./images/autonomous-database-explore-23.png)
 ![explore as outras abas](./images/autonomous-database-explore-24.png)
 
 
 Outra maneira de consultar as atividades do banco de dados é durante a execução de comandos, você pode mudar para a visualização de atividades em Database Dashboard dentro de Database Actions na console do OCI e acompanhar a atividade do banco de dados.
 
-9.  Volte para a tela de 'Autonomous Database Details' e clique no botão **Database Actions**
+9.  Volte para a tela de 'Autonomous Database Details' e clique no botão **Database Actions** e depois em **"View all database actions"**
 
 ![clique em "Database Actions"](./images/autonomous-database-console-9.png)
 
-10.  Selecione **Database Dashboard**
+10.  Selecione **Painel do Banco de Dados**
 
 ![selecione "Database Dashboard"](./images/autonomous-database-service-25.png) 
 
@@ -190,4 +200,4 @@ Nesta sessão você aprendeu a provisionar um Oracle Autonomous Data Warehouse. 
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Data** - Arthur Vianna, Jun/2022
+- **Último Update Por/Data** - Arthur Vianna, Fev/2024
