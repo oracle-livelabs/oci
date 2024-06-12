@@ -24,6 +24,7 @@ Please read the chapter: Introduction and Get Started.
 
 1. Using your browser, go to https://www.ocistarter.com/
 2. Choose 
+    - AMD (x86)
     - Function
     - HTML
     - Python

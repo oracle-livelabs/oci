@@ -45,20 +45,49 @@ Neste Lab você vai explorar o recurso Compartimento dentro da Oracle Cloud Infr
 * Familiarize-se com a interface OCI
 * Explore o Compartimento
 
+## Task 0: Conheça os recursos do LiveLabs
 
-## Task 1: Acesse a Console da Oracle Cloud
+1.	Clique em "View Login Info" para conhecermos cada uma das informações.
 
-1.	Caso ainda não esteja logado, pode-se fazer como mostrado anteriormente. Clique no botão "Launch OCI" na parte de "View Login Info" para a abrir a console da OCI.
+![acesse a pagina de login da oci](./images/compartment-cloud-access-0.png)
+
+2.	Vamos explorar cada informação/botões:
+
+* **Launch Remote Desktop**: Você será direcionado para uma máquina virtual pronta (NoVNC) para realizar os próximos Labs a partir desta máquina. A URL **Remote Desktop URL** leva você para o mesmo lugar.
+* **Tenancy Name**: Nome do tenancy onde serão executados os Labs.
+* **Region**: Região do tenancy onde serão feitos os Labs.
+* **Launch OCI**: Você será direcionado para a console da OCI, onde os Labs serão executados em conjunto com a máquina NoVNC do **Launch Remote Desktop**.
+* **Username**: Usuário utilizado para fazer o login na OCI.
+* **Password**: Senha utilizada para o login na OCI. **SERÁ NECESSÁRIO ALTERAR A SENHA NO PRIMEIRO LOGIN**.
+* **Compartment**: Compartimento exclusivo do usuário onde serão criados os recursos. Perceba que: o usuário **LL75527-USER** possui o compartimento **LL75527-COMPARTMENT**, ou seja, o usuário só consegue criar/gerenciar recursos em seu próprio compartimento. Caso tente acessar outro, uma mensagem será exibida informando que a permissão não existe.
+
+![acesse a pagina de login da oci](./images/compartment-cloud-access-01.png)
+
+## Task 1: Acesse a Console da Oracle Cloud e a máquina NoVNC
+
+1.	Primeiro clique no botão **Launch Remote Desktop** para abrir a máquina NoVNC.
 
 ![acesse a pagina de login da oci](./images/compartment-cloud-access-1.png)
 
-2.	Clique em "Next":
+Fazendo isso, uma página irá abrir em seu navegador com a máquina NoVNC. Apenas abra o **Terminal** e siga para o próximo passo.
 
-![clique em "Continue"](./images/compartment-idcs-2.png)
+![acesse a pagina de login da oci](./images/compartment-cloud-access-12.png)
 
-3.	Insira seu usuário e senha (que fica na parte de View Login Info) e clique em "Acessar".
+2.	Agora clique em **Launch OCI**:
 
+![clique em "Continue"](./images/compartment-cloud-access-13.png)
+
+3.	Clique em **Next** e insira seu usuário e senha **(que fica na parte de View Login Info)** e clique em "Acessar".
+
+![faça login](./images/compartment-idcs-2.png)
 ![faça login](./images/compartment-user-login-3.png)
+
+**Será necessário trocar a senha no primeiro login. Para facilitar você pode usar a mesma senha com apenas um caracter diferente na frente e depois clique em "Redefinir Senha". Ex (adicionando um "!"):**
+
+* Senha antiga: scw0EXMk$
+* Senha nova: scw0EXMk$**!**
+
+![faça login](./images/compartment-user-login-4.png)
 
 4.  Depois de autenticado explore a tela inicial da Oracle Cloud e também nosso "Menu principal", onde você pode encontrar todos os serviços disponíveis em nosso console
 
@@ -72,7 +101,7 @@ Neste Lab você vai explorar o recurso Compartimento dentro da Oracle Cloud Infr
 
 ![navegue até "compartiments"](./images/compartment-access-6.png)
 
-2.	Visualize os Compartments disponíveis:
+2.	Visualize os Compartments disponíveis.
 
 ![navegue até "compartiments"](./images/compartment-explore.png)
 
@@ -80,9 +109,19 @@ Neste Lab você vai explorar o recurso Compartimento dentro da Oracle Cloud Infr
 
 ![navegue até "compute"](./images/compartment-compute.png)
 
-4.	Veja em um menu de um serviço como identificar e alterar o compartimento se necessário:
+4.	Identifique seu usuário e seu compartimento novamente em **View Login Info**:
 
-![navegue até "compartiments"](./images/compartment-list.png)
+![navegue até "compartiments"](./images/compartment-user-login-compartment.png)
+
+Copie o nome de seu compartimento e se necessário utilize o atalho **CTRL + F** em seu teclado para encontrá-lo após abrir a lista de compartimentos. Após isso clique em seu compartimento.
+
+![navegue até "compartiments"](./images/compartment-user-login-ctrlf.png)
+
+Após clicar em seu compartimento você verá uma Instância criada conforme imagem abaixo. Essa Instância nada mais é do que a máquina do NoVNC que será utilizada ao longo do Workshop e que foi acessada no Passo 1 da Task 1 .
+
+![navegue até "compartiments"](./images/compartment-novnc.png)
+
+> **Note:** **ESSA INSTÂNCIA NÃO DEVE SER APAGADA EM NENHUM MOMENTO. CASO ISSO SEJA FEITO, SUA EXPERIÊNCIA EM NOSSO WORKSHOP ESTARÁ PREJUDICADA.**
 
 Você pode **seguir para o próximo Lab**.
 
@@ -93,4 +132,4 @@ Nesta sessão você aprendeu a acessar a console da Oracle Cloud, explorar a tel
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Updated Por/Data** - Arthur Vianna, Jun/2022
+- **Último Updated Por/Data** - Arthur Vianna, Fev/2024
