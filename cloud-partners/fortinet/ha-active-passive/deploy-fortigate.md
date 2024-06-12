@@ -22,7 +22,7 @@ Estimated Lab Time: 30 minutes.
     - **FortiGate** paid listing or BOYL access required for this **Lab**
         - You would need a valid license from Fortinet if you chose BOYL image.
 
-## **Task 1: Launch FortiGate Instances**
+## Task 1: Launch FortiGate Instances
 
 1. Launch **Cloud Shell** by clicking the icon next to region name on top right of OCI console. ('<=' icon)
 
@@ -59,7 +59,7 @@ Estimated Lab Time: 30 minutes.
       - The subnet created is populated: **mgmt-subnet**
       - Enable Public IP Address assignment: **Assign a public IPv4 address**
 
-   ![](../common/images/36-FortiGate1-Hub-VCN-Instance.png " ")
+   ![Detailed Page of Creating FortiGate Compute Primary Instance in Firewall Hub VCN](../common/images/fortigate1-hub-vcn-instance.png " ")
 
 8. Ensure **PASTE PUBLIC KEYS** is selected under **Add SSH Keys**. Paste the public key copied earlier.
  
@@ -71,9 +71,9 @@ Estimated Lab Time: 30 minutes.
 
 10. Repeat step 5 to 9 based on the **table** provided in **step 4** for another FortiGate **fortigat2** instance.
 
-   ![](../common/images/37-FortiGate2-Hub-VCN-Instance.png " ")
+   ![Detailed Page of Creating FortiGate Compute Secondary Instance in Firewall Hub VCN](../common/images/fortigate2-hub-vcn-instance.png " ")
 
-## **Task 2: Add Interfaces on FortiGate Instances**
+## Task 2: Add Interfaces on FortiGate Instances
 
 1. Click on **forgiate1** instance and navigate to **Attached VNIC** under Resources section of the instance details page. You will be adding **untrust**, **trust** and **ha** interfaces respectively:
 
@@ -91,7 +91,7 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**: Select **untrust-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-   ![](../common/images/38-FortiGate1-Hub-VCN-Untrust-Instance.png " ")
+   ![Detailed Page of Attaching Untrust VNIC to FortiGate Primary Instance in Firewall Hub VCN](../common/images/fortigate1-hub-vcn-untrust-instance.png " ")
 
 3. Verify all the information and Click **Save Changes**.
 
@@ -107,7 +107,7 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**: Select **trust-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-   ![](../common/images/39-FortiGate1-Hub-VCN-trust-Instance.png " ")
+   ![Detailed Page of Attaching Trust VNIC to FortiGate Primary Instance in Firewall Hub VCN](../common/images/fortigate1-hub-vcn-trust-instance.png " ")
 
 6. Verify all the information and Click **Save Changes**.
 
@@ -122,7 +122,7 @@ Estimated Lab Time: 30 minutes.
       - **Network**:  Keep the default value as Normal Setup
       - **Subnet**: Select **ha-subnet** from drop down
 
-   ![](../common/images/40-FortiGate1-Hub-VCN-ha-Instance.png " ")
+   ![Detailed Page of Attaching HA VNIC to FortiGate Primary Instance in Firewall Hub VCN](../common/images/fortigate1-hub-vcn-ha-instance.png " ")
 
 9. Verify all the information and Click **Save Changes**.
 
@@ -146,7 +146,7 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**: Select **untrust-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-   ![](../common/images/41-FortiGate2-Hub-VCN-Untrust-Instance.png " ")
+   ![Detailed Page of Attaching Untrust VNIC to FortiGate Secondary Instance in Firewall Hub VCN](../common/images/fortigate2-hub-vcn-untrust-instance.png " ")
 
 13. Verify all the information and Click **Save Changes**.
 
@@ -162,7 +162,7 @@ Estimated Lab Time: 30 minutes.
       - **Subnet**: Select **trust-subnet** from drop down
       - **Skip source/destination check**: Select checkmark next to this option
 
-   ![](../common/images/42-FortiGate2-Hub-VCN-trust-Instance.png " ")
+   ![Detailed Page of Attaching Trust VNIC to FortiGate Secondary Instance in Firewall Hub VCN](../common/images/fortigate2-hub-vcn-trust-instance.png " ")
 
 16. Verify all the information and Click **Save Changes**.
 
@@ -177,7 +177,7 @@ Estimated Lab Time: 30 minutes.
       - **Network**:  Keep the default value as Normal Setup
       - **Subnet**: Select **ha-subnet** from drop down
 
-   ![](../common/images/43-FortiGate2-Hub-VCN-ha-Instance.png " ")
+   ![Detailed Page of Attaching HA VNIC to FortiGate Secondary Instance in Firewall Hub VCN](../common/images/fortigate2-hub-vcn-ha-instance.png " ")
 
 19. Verify all the information and Click **Save Changes**.
 
@@ -185,7 +185,7 @@ Estimated Lab Time: 30 minutes.
 
     *ha interface on Fortigate2 instance*
 
-## **Task 3: Assign Secondary IP Addresses on Primary FortiGate Instance**
+## Task 3: Assign Secondary IP Addresses on Primary FortiGate Instance
 
 1. Click on **forgiate1** instance and navigate to **Attached VNIC** under Resources section of the instance details page. You will be assigning additional IP addresses to **untrust** and **trust** interfaces of **fortigate1** VM. You will be using them to route traffic to/from firewall:
 
@@ -201,7 +201,7 @@ Estimated Lab Time: 30 minutes.
       - **PublicIP Name**:  Enter a user-friendly name
       - **COMPARTMENT**: Ensure your compartment is selected
 
-   ![](../common/images/44-FortiGate1-Hub-VCN-Untrust-Instance-Floating-IP.png " ")
+   ![Detailed Page of Adding Secondary IP address to Untrust VNIC of FortiGate Primary Instance in Firewall Hub VCN](../common/images/fortigate1-hub-vcn-untrust-instance-floating-ip.png " ")
 
 3. Verify all the information and Click **Assign**.
 
@@ -216,7 +216,7 @@ Estimated Lab Time: 30 minutes.
       - **PublicIP Name**:  Enter a user-friendly name
       - **COMPARTMENT**: Ensure your compartment is selected
 
-   ![](../common/images/45-FortiGate1-Hub-VCN-trust-Instance-Floating-IP.png " ")
+   ![Detailed Page of Adding Secondary IP address to Trust VNIC of FortiGate Primary Instance in Firewall Hub VCN](../common/images/fortigate1-hub-vcn-trust-instance-floating-ip.png " ")
 
 6. Verify all the information and Click **Assign**.
 
@@ -224,11 +224,11 @@ Estimated Lab Time: 30 minutes.
 
     *assign secondary IP address to trust interface on Fortigate1 instance*
 
-## **Task 4: Configure Dynamic Groups and Required Policies**
+## Task 4: Configure Dynamic Groups and Required Policies
 
 1. From the OCI Services menu, click **Dynamic Groups** under **Identity & Security**. Select your region on right part of the screen:
 
-   ![](../common/images/55-Create-Dynamic-Group.png " ")
+   ![Create Dynamic Group Home Page](../common/images/create-dynamic-group.png " ")
 
 2. You will be creating **Dynamic Group** which will include **FortiGate** instances OCIDs which will support HA failover use-case. Based on below tables you will create Dynamic Group. 
 
@@ -246,27 +246,27 @@ Estimated Lab Time: 30 minutes.
         - **Instance OCID**: 
             - **Value**: Enter FortiGate2 Instance OCID
 
-   ![](../common/images/53-Dynamic-Group.png " ")
+   ![Create Dynamic Group](../common/images/dynamic-group.png " ")
 
-   ![](../common/images/53-Dynamic-Group-Any-Of-The-Following.png " ")
+   ![Add Compartment OCIDs to Dynamic Group](../common/images/dynamic-group-any-of-the-following.png " ")
 
-6. Verify all the information and Click **Add Rule** and Click **Create**:
+4. Verify all the information and Click **Add Rule** and Click **Create**:
 
-7. This will create a new dynamic group with FortiGate Instance OCIDs with following components.
+5. This will create a new dynamic group with FortiGate Instance OCIDs with following components.
 
     *new dynamic group with FortiGate Instances OCID*
 
-3. From the OCI Services menu, click **Policies** under **Identity & Security**. Select your region on right part of the screen:
+6. From the OCI Services menu, click **Policies** under **Identity & Security**. Select your region on right part of the screen:
 
-   ![](../common/images/56-Create-Dynamic-Group-Policy.png " ")
+   ![Create IAM Policy with Dynamic Group](../common/images/create-dynamic-group-policy.png " ")
 
-2. You will be creating **Dynamic Group** which will include **FortiGate** instances OCIDs which will support HA failover use-case. Based on below tables you will create Dynamic Group. 
+7. You will be creating **Dynamic Group** which will include **FortiGate** instances OCIDs which will support HA failover use-case. Based on below tables you will create Dynamic Group. 
 
     | Name                | Description         | Policy                                                                             | Comment                                    |
     |---------------------|---------------------|------------------------------------------------------------------------------------|--------------------------------------------|
     | fortigate-ha-policy | FortiGate HA Policy | Allow dynamic-group fortigate-high-availability to manage all-resources in TENANCY | Open for All Resources with Instances OCID |
 
-3. Select **Create Dynamic Group** and fill out the dialog box for creating dynamic group: 
+8. Select **Create Policy** and fill out the dialog box for creating dynamic group policy: 
 
       - **Name**: Enter Policy Name
       - **Description**:  Enter Policy Description
@@ -275,22 +275,22 @@ Estimated Lab Time: 30 minutes.
             - **Dynamic Group**: Ensure you enter correct dynamic group name in out case it’s **fortigate-high-availability**
       - **COMPARTMENT**: Ensure **Root** compartment is selected
 
-   ![](../common/images/54-Dynamic-Group-Policy-Root-Compartment.png " ")
+   ![Create IAM Policy associated with Dynamic Group](../common/images/dynamic-group-policy-root-compartment.png " ")
 
-6. Verify all the information and Click **Create**.
+9. Verify all the information and Click **Create**.
 
-7. This will create policy with following components.
+10. This will create policy with following components.
 
-    *New Policy Present in Root comparment associated with dynamic group created earlier*
+    *New Policy Present in Root compartment associated with dynamic group created earlier*
 
-7. Verify at this point you have required instances are running in your chosen compartment: 
+11. Verify at this point you have required instances are running in your chosen compartment: 
    - **Two** FortiGate Instances in Firewall-VCN
    - **Two** Linux VM Instances in Web-VCN
    - **Two** Linux VM Instances in DB-VCN
 
-   ![](../common/images/57-All-Instances.png " ")
+   ![Created Instances](../common/images/all-instances.png " ")
 
-## **Task 5: Update Route Tables on Firewall-VCN**
+## Task 5: Update Route Tables on Firewall-VCN
 
 1. Navigate to the **firewall-vcn** and select **VCN-INGRESS** route table. 
 
@@ -304,7 +304,7 @@ Estimated Lab Time: 30 minutes.
 
 5. Add **Description**.
 
-   ![](../common/images/68-VCN-Ingress-Route-Table-Entries.png " ")
+   ![Add required route table entries with VCN Ingress Route Table](../common/images/vcn-ingress-route-table-entries.png " ")
 
 6. Click **Add Route Rules** to finish.
 
@@ -320,7 +320,7 @@ Estimated Lab Time: 30 minutes.
 
 11. Add **Description** for each entry.
 
-   ![](../common/images/69-Trust-Route-Table-Entries.png " ")
+   ![Add required route table entries with Trust Subnet Route Table](../common/images/trust-route-table-entries.png " ")
 
 12. Click **Add Route Rules** to finish.
 
@@ -345,7 +345,7 @@ Estimated Lab Time: 30 minutes.
 
 16. Add **Description** for each entry.
 
-   ![](../common/images/70-Untrust-Route-Table-Entries.png " ")
+   ![Add required route table entries with Untrust Subnet Route Table](../common/images/untrust-route-table-entries.png " ")
 
 17. Click **Add Route Rules** to finish.
 
@@ -361,13 +361,13 @@ Estimated Lab Time: 30 minutes.
 
 22. Add **Description** for each entry.
 
-   ![](../common/images/72-SGW-Route-Table-Entry.png " ")
+   ![Add required route table entries with Service Gateway](../common/images/sgw-route-table-entry.png " ")
 
 17. Click **Add Route Rules** to finish.
 
-## **Task 6: Verify Route Tables associated to Subnets and Gateways**
+## Task 6: Verify Route Tables associated to Subnets and Gateways
 
-1. Below table includes neccessary subnets in each **VCNs** and make sure **Route Table** are attached to right subnets and service gateway. 
+1. Below table includes necessary subnets in each **VCNs** and make sure **Route Table** are attached to right subnets and service gateway. 
 
     | VCN          | Resource Name/Type                       | Route Table Name                |
     |--------------|------------------------------------------|---------------------------------|
@@ -382,11 +382,11 @@ Estimated Lab Time: 30 minutes.
 
 2. Below example reflects how to attach correct route table based on above table to one of the resource **Service Gateway**:
 
-   ![](../common/images/74-Create-Service-Gateway-Route-Table.png " ")
+   ![Associating Route Table to Service Gateway page](../common/images/create-service-gateway-route-table.png " ")
 
 3. Below example reflects how to attach correct route table based on above table to one of the resource **UntrustRouteTable**:
 
-   ![](../common/images/102-Update-Untrust-Route-Table.png " ")
+   ![Associating Route Table to Untrust Subnet page](../common/images/update-untrust-route-table.png " ")
 
 ***Congratulations! You have successfully completed the lab.***
 
@@ -406,4 +406,4 @@ You may now [proceed to the next lab](#next).
 - **Author** - Arun Poonia, Principal Solutions Architect
 - **Adapted by** -  Fortinet
 - **Contributors** - N/A
-- **Last Updated By/Date** - Arun Poonia, Oct 2022
+- **Last Updated By/Date** - Arun Poonia, Aug 2023

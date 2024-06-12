@@ -132,24 +132,24 @@ Queries can be also modified by adding a filter, to narrow down the traces to me
 	```
 
 2. Click **Run** to see the results. The query returns the following columns:
-* **User Name**: A username used in the session
-* **Page Views**: Total number of page views in the session
-* **Traces**: Numbers of traces per username
-* **Duration**: Duration of the session, measured as the time between the **first span start time** and the **last span end time**
+    * **User Name**: A username used in the session
+    * **Page Views**: Total number of page views in the session
+    * **Traces**: Numbers of traces per username
+    * **Duration**: Duration of the session, measured as the time between the **first span start time** and the **last span end time**
 
     ![Oracle Cloud, Trace Explorer](images/8-3-1-session-simplified.png " ")
 
-In the web-based shopping cart application that is monitored by APM, users are expected to run a transaction having a series of steps to complete the purchase. In this environment, the buying process is covered through Journey data. The customer journey steps are defined as the following.
+    In the web-based shopping cart application that is monitored by APM, users are expected to run a transaction having a series of steps to complete the purchase. In this environment, the buying process is covered through Journey data. The customer journey steps are defined as the following.
 
-	* 0-search
-	* 1-logged-in
-	* 2-addToCart
-	* 3-checkedOut
-	* 4-orderConfirmed
+    	* 0-search
+    	* 1-logged-in
+    	* 2-addToCart
+    	* 3-checkedOut
+    	* 4-orderConfirmed
 
-At present, the query retrieves all session data regardless of whether the user completed the transaction or aborted it. 
+    At present, the query retrieves all session data regardless of whether the user completed the transaction or aborted it. 
 
-The query can be adapted by adding a **WHERE** clause that limits the sessions to only those sessions that did generate revenue or purchased a product.  To view traces that successfully completed the transaction, you can add a filter in the **WHERE** clause to select only the tracers that reached the final journey phase, **“4-orderConfirmed”**. Next, let’s proceed with adding this condition to the query. 
+    The query can be adapted by adding a **WHERE** clause that limits the sessions to only those sessions that did generate revenue or purchased a product.  To view traces that successfully completed the transaction, you can add a filter in the **WHERE** clause to select only the tracers that reached the final journey phase, **“4-orderConfirmed”**. Next, let’s proceed with adding this condition to the query. 
 
 3. In the **Attributes** pane, in the **Search** field, type **“journey”**. This will filter the list of attributes.
 

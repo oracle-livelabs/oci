@@ -1,8 +1,8 @@
 # Workshop Overview
 
-## About this Workshop - OCI Networking and Security Quick Start
+## About this Workshop - Introduction to Oracle Cloud Networking and Security
 
-This session on OCI Tutorial - OCI Networking and Security Quick Start will discuss how security is built into each area of your Oracle Cloud environment and provide overviews of several key services you can leverage to secure your Oracle Cloud Workloads. We will cover Oracle's security principles, how Identity & Access Management (IAM) is used throughout your tenancy, as well as security features within networking. This will also include an introduction to the various networking components within Oracle Cloud Infrastructure (OCI) with the goal of understanding how to deploy the services and when/why to use them. 
+Learn about key services for networking and securing your workloads in Oracle Cloud Infrastructure (OCI). The session covers OCI security principals, how to use Identity & Access Management (IAM) throughout your tenancy, as well as security features available within networking. You will also be introduced to core OCI networking services, how to deploy them, and best practice considerations for when and why to use these services.
 
 ### **Duration: 2 Hours**
 
@@ -13,16 +13,16 @@ In this workshop, you will:
 * Explain Identity & Access Management concepts
 * Describe the core-the-edge security model
 * Compare the security services available in OCI and their use cases
-* Explain when and why to use important netwroking components
+* Explain when and why to use important networking components
 
 ### **Assets**
 
 Powerpoint
-* [OCI Networking and Security QuickStart](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4sNLcp8oFR0bVOnv2VMpxNiad2pWp65EHRMlYtdRCUrn91arPdrIxfnkmrfbmEUx/n/ociobtnas/b/OCW2022/o/TUT4112_OCI_Networking_and_Security_Quick_Start_Final.pdf)
+* [Introduction to Oracle Cloud Networking and Security](https://objectstorage.us-ashburn-1.oraclecloud.com/p/RnzZKTBgclBTclJSojZ1VuZr48ofxS6A-lbUFIxu5cuISDTFEvwjSAHTV_A8xZKG/n/ociobtnas/b/Networking_And_Security/o/TUT2554%20Introduction%20to%20OCI%20Networking%20and%20Security.pdf)
 
 Video Recording
-* [Day One and Beyond: OCI Security Quick Start](https://www.youtube.com/watch?v=wFBDBNsxP7U&ab_channel=OracleLearning)
-* [Day One and Beyond: OCI Networking Quick Start](https://www.youtube.com/watch?v=Kza0WSjfwiY&list=PLKCk3OyNwIzvbLEYL08MKJkR84NQLIIdg&index=5&ab_channel=OracleLearning)
+* [Day One and Beyond - OCI Security Quick Start](https://www.youtube.com/watch?v=QQyN7fY_ZbQ&ab_channel=OracleLearning) 
+* [Day One and Beyond - OCI Networking Quick Start](https://www.youtube.com/watch?v=Eb3jDfyVe7U&ab_channel=OracleLearning) 
 
 
 ## Learn More
@@ -38,13 +38,13 @@ Resource Links for Reference
 
 * [Web Application Firewall](https://docs.oracle.com/en-us/iaas/Content/WAF/home.htm): A cloud-based, Payment Card Industry (PCI) compliant, global security service that protects applications from malicious and unwanted internet traffic.
 * [Networking](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/landing.htm): helps you set up virtual versions of traditional network components.
-* [Cloud Guard](https://docs.oracle.com/en-us/iaas/cloud-guard/using/index.htm): Infrastructure service that helps customers monitors, identify, achieve, and maintain a strong security posture on Oracle Cloud.
+* [Cloud Guard](https://docs.oracle.com/en-us/iaas/cloud-guard/home.htm): Infrastructure service that helps customers monitors, identify, achieve, and maintain a strong security posture on Oracle Cloud.
 * [Best Practices for Identity and Access Management OCI Security](https://docs.oracle.com/en-us/iaas/Content/Resources/Assets/whitepapers/best-practices-for-iam-on-oci.pdf)
 * [OCI Security Architecture](https://www.oracle.com/a/ocom/docs/oracle-cloud-infrastructure-security-architecture.pdf)
 
 
 ## Acknowledgements
-* **Authors** - Brandon Alarie, Staff Cloud Engineer; Joey Hall, Staff Cloud Engineer
-* **Speakers** -  Joey Hall, Staff Cloud Engineer; Larry Beausoleil, Sr. Manager, Technical Program Management
-* **Last Updated By/Date** - Taylor Zheng, September 2022
+* **Authors** - Brandon Alarie, Staff Cloud Engineer; Joey Hall, Staff Cloud Engineer; Lynn Lewis, Senior Cloud Engineer
+* **Speakers** -  Brandon Alarie, Staff Cloud Engineer; Joey Hall, Staff Cloud Engineer; Lynn Lewis, Senior Cloud Engineer
+* **Last Updated By/Date** - Taylor Zheng, August 2023
 

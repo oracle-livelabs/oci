@@ -1,4 +1,4 @@
-# Complete Process Automation for Patient Admission Process
+# Create Process Automation for Patient Admission Process
 
 ## Introduction
 
@@ -18,7 +18,7 @@ This lab assumes you have the following:
 
 * Completed Setup environment and Created an Oracle Autonomous Database lab and already logged into OCI console
 * You have created Integration services as in the last two labs using Oracle Integration Cloud.
-
+<!-- 
 ### AI for Healthcare - Complete Demo and Architecture video
 
 [Youtube video on AI for Healthcare Demo](youtube:iBV76Upi1VM:large)
@@ -28,6 +28,9 @@ This lab assumes you have the following:
 [Youtube video on AI for Healthcare Demo](youtube:ok-fYO0CV2I:large)
  
 ### Breast Cancer Patient Admission Use case and process flow (with Integration Cloud and Process Automation) 
+-->
+
+## Simple - Patient Admission Process
 
 - The patient or medical consultant uploads an X-ray mammography image, and AI Vision detects that it can be a case of Breast cancer/ Lung cancer, Covid, or Pneumonia.
 - The patient consults a doctor by submitting the X-Ray report and basic information ( through AI for Healthcare portal).
@@ -188,21 +191,20 @@ Lab testing process, for example, checking the patient blood sugar level, blood 
 4. View the doctor's information.
    ![Integration Cloud](images/test-process-06.png =50%x* ) 
 
-## Task 8: Enhanced Patient Admission Process
+## Task 8: Enhanced - Patient Admission Process
 
 1. Enhanced Patient Admission Process
     
     ![Integration Cloud](images/enhanced-process.png =75%x* ) 
  
-This concludes AI for Healthcare EPIC workshop. Thank you, and Happy Learning! :-)
-
+    > **Congratulations:**, you have completed **Create Process Automation for Patient Admission Process** Labs. The subsequent labs are optional, however, please proceed to the next lab to learn more about **Setup OCI Email**.  
+  
 ## Learn More
-
-* [Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
+ 
 * [Oracle Integration Generation 2](https://docs.oracle.com/en/cloud/paas/integration-cloud/index.html)
 * [Oracle Cloud Infrastructure Process Automation](https://docs.oracle.com/en/cloud/paas/process-automation/index.html)
  
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - 1st Aug, 2023.
+* **Last Updated By/Date** - 11th August, 2023.

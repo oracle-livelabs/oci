@@ -15,44 +15,17 @@ In this lab, you will:
 ### Prerequisites:
 
 - Completed Previous Labs and have access to Oracle APEX application.
-- Intermediate Knowledge of Oracle APEX and PL/SQL
-- We will not be showing how to create Oracle APEX workspace or an Application.
+- Knowledge of Oracle APEX and PL/SQL 
+- Blockade Labs API Key Access (please read their terms and conditions for using API Keys)
 
 ### About Blockade Labs 
 
-Their mission to **Bring out the world-building technowizard in everyone**
-
-Read more about [Blockadelabs](https://www.blockadelabs.com/index.html). You can view their Image Generation AI at [SkyBox AI](https://skybox.blockadelabs.com/).
-
-We will use [Pannellum Lightweight Panorama Viewer for the Web](https://pannellum.org/) to display image in Panoramic view. I will not explain the details of how to use this viewer it is available in their official website. 
-
-### Other AI Image Generation Options
-
-To Generate AI Images there are many other options for example to name a few.
-
-* [DALL·E 2](https://labs.openai.com/) is an AI system that can create realistic images and art from a description in natural language. You can view their [API Documentation](https://platform.openai.com/docs/guides/images/image-generation-beta)  
-* [Microsoft Bing](https://www.bing.com/images/create) can also generate images which is powered by [DALL·E 2](https://labs.openai.com/)
-* [Blockade Labs](https://www.blockadelabs.com/index.html) [Skybox AI](https://skybox.blockadelabs.com/) Image Generator
-* [Pixlr](https://pixlr.com/ai/ai-image-generator/) AI image generator
-* [DeepAI](https://deepai.org/) AI image generator
-* [Picsart](https://picsart.com/create) AI image generator
-* [Google Bard](https://bard.google.com/) is an AI chatbot that uses a large language model to converse with users. It was launched by Google in early 2023 as an experiment that is based on a conversational large language model. this not only generates image based on the prompt but also AI text content related to the generated image. read more about [Bard updates](https://bard.google.com/updates)
-* [Fotor](https://www.fotor.com/images/create) AI image generator and many more.. 
-
-My choice was based on following factors
-
-* Ability to Generate AI images in different styles, preferably Realistic style
-* No water marks on the generated images
-* Availability of REST APIs to programmatically create these images
-* POSTMAN support for initial testing
-* Speed of Image Generation after Image creation Job has been triggered
-* Ability to get previously generated images through APIs so that we do not need to regenerate the same images
-* Cost factor (free v/s paid options)
-
+Please read more about [Blockadelabs](https://www.blockadelabs.com/). You can view their Image Generation AI at [SkyBox AI](https://skybox.blockadelabs.com/).
+  
 ## Task 1: Sign up and Sign in to Blockade Labs 
 
 1. Sign up, Sign in and Get API Keys from Blockade Labs, read their [API documentation](https://api-documentation.blockadelabs.com/api/skybox.html)
-2. Please follow their terms and conditions
+2. Please read their terms and conditions
 
 ## Task 2: Understand Request and Response from POSTMAN client
 
@@ -335,33 +308,34 @@ My choice was based on following factors
 
 ## Task 6: Demo
 
-1. Search for an UNESCO Site based on region and Generate AI image.
+1. Generative Text AI or Ask AI will be covered in next lab. 
+2. Search for an UNESCO Site based on region and Generate AI image.
 
     ![Generative AI](images/generative-ai-01.png)
 
-2. Ask AI about the UNESCO Site  
+3. Ask AI about the UNESCO Site  
 
     >**Note:** We will talk about how to Generate AI text in our next lab
 
     ![Generative AI](images/generative-ai-02.png)
 
-3. Search for another UNESCO Site based on region and Generate AI image.
+4. Search for another UNESCO Site based on region and Generate AI image.
 
     ![Generative AI](images/generative-ai-03.png)
 
-4. Search for another UNESCO Site based on region and Generate AI image
+5. Search for another UNESCO Site based on region and Generate AI image
 
     ![Generative AI](images/generative-ai-04.png)
 
-5. Ask AI about the UNESCO Site 
+6. Ask AI about the UNESCO Site 
 
     ![Generative AI](images/generative-ai-05.png)
 
-6. Generate AI image about accommodations available at the selected site.
+7. Generate AI image about accommodations available at the selected site.
 
     ![Generative AI](images/generative-ai-06.png)
 
-7. Ask AI about Accommodations available at the selected site.
+8. Ask AI about Accommodations available at the selected site.
 
     ![Generative AI](images/generative-ai-07.png)
  

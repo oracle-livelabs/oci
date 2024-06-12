@@ -9,6 +9,9 @@ You will examine performance alarms on the APM Home dashboard, monitor activitie
 
 Estimated Time: 80 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Exploring Oracle Cloud Infrastructure Application Performance Management](videohub:1_4814a932)
+
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 
 The diagram below provides an overview of the OCI APM Service, its features, components, and some of the other OCI services it integrates with.

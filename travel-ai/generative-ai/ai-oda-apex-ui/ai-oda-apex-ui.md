@@ -1,4 +1,4 @@
-# Oracle APEX Integration with ODA
+# Oracle APEX Integration with Oracle Digital Assistant
 
 ## Introduction
 
@@ -10,13 +10,13 @@ Estimated Time: 30 minutes.
 
 In this lab, you will:
 
-* Download ODA Oracle Native Client SDK
-* Get channel id from ODA console
+* Download Oracle Digital Assistant Oracle Native Client SDK
+* Get channel id from Oracle Digital Assistant console
 * Configure settings.js file
 * Upload CSS, Image and JS files to Oracle APEX 
-* HTML Code to add ODA chatbot on APEX page
+* HTML Code to add Oracle Digital Assistant chatbot on APEX page
 * Bot Initiated Conversation
-* Update YAML flow in ODA
+* Update YAML flow in Oracle Digital Assistant
 * Demo of Chatbot in Oracle APEX Page
 
 ### Prerequisites
@@ -26,9 +26,9 @@ This lab assumes you have:
 * Completed previous labs of this workshop.
 * You have an Oracle APEX workspace already created.
 
-## Task 1: Download ODA Oracle Native Client SDK
+## Task 1: Download Oracle Digital Assistant Oracle Native Client SDK
  
-1. From Oracle Digital Assistant (ODA) and Oracle Mobile Cloud (OMC) Downloads [Downloads](https://www.oracle.com/downloads/cloud/amce-downloads.html) Under **Web SDK** download latest client **Oracle Web SDK 23.04 - Latest**
+1. From Oracle Digital Assistant (Oracle Digital Assistant) and Oracle Mobile Cloud (OMC) Downloads [Downloads](https://www.oracle.com/downloads/cloud/amce-downloads.html) Under **Web SDK** download latest client **Oracle Web SDK 23.04 - Latest**
 
     Extract **Oracle Digital Assistant - Oracle Native Client SDK 23.4.1** zip file, please note version number might change
 
@@ -38,7 +38,7 @@ This lab assumes you have:
 
     ![ODA Setup Disconnected status](images/oda-setup-3.png " ")
 
-## Task 2: Get channel id from ODA console. 
+## Task 2: Get channel id from Oracle Digital Assistant console. 
 
 1. Login to ODA and under Channels, copy the channel id
   
@@ -126,7 +126,7 @@ This lab assumes you have:
     </copy>
     ```
 
-## Task 5: HTML Code to add ODA chatbot on APEX page. 
+## Task 5: HTML Code to add Oracle Digital Assistant chatbot on APEX page. 
 
 1. Add **Static Content** under APEX Body region
 
@@ -162,7 +162,7 @@ This lab assumes you have:
         </copy>
     ```
 
-## Task 7: Update YAML flow in ODA (Optional step)
+## Task 7: Update YAML flow in Oracle Digital Assistant (Optional step)
 
 1. If you want bot initiated conversation instead of user initiated conversation, then the bot should send message to the client browser once it is connected, this we can acheive by updating YAML flow in ODA as shown below.
 
@@ -266,4 +266,4 @@ This concludes this lab and you can **proceed to the next lab**.
 ## Acknowledgements
  
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - July 28th, 2023.
+* **Last Updated By/Date** - Dec4th, 2023.

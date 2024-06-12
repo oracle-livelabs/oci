@@ -15,6 +15,9 @@ Estimated time: 20 min
     - Collect the APIs
 - Add existing API from Oracle API Gateway
 
+Watch the video below for a quick walk-through of the lab. 
+[Video](videohub:1_b50dk8f7)
+
 ### Prerequisites
 
 - Follow previous labs.
@@ -158,6 +161,5 @@ It will allow the database to call the OIC URLs
     - Work-around: Wait 2/5 mins and it works.
    
 ## Acknowledgements
-
-- **Authors**
-    - Marc Gueury / Phil Wilkins / Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+* **Author** - Marc Gueury / Phil Wilkins /  Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+* **Last Updated By/Date** - Marc Gueury, May 2024

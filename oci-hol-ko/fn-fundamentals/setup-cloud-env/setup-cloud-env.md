@@ -85,11 +85,39 @@ OCI 대시보드에 로그인하여 리소스 생성에 필요한 정보를 확�
       <copy>
       Allow group <group-name> to manage repos in tenancy where ANY {request.permission = 'REPOSITORY_INSPECT', request.permission = 'REPOSITORY_READ', request.permission = 'REPOSITORY_CREATE', request.permission = 'REPOSITORY_UPDATE'}
       </copy>
-    ```
+      ```
 
       ![Revised Policy](images/revised-policies.png)
 
 6. **Create**를 클릭하여 생성합니다.
+
+7. 이후 실습을 위해 다음 Policy를 추가합니다.
+
+    - Name: fn-lab-policy*-xx* 입력합니다.
+    - Description: Policy for Functions Labs for oci-hol-*xx* compartment
+    - Compartment: **root compartment**를 선택
+    - Policy:
+
+        * `<group-name>`을 이전규칙을 참고하여 적용할 사용자 그룹으로 변경합니다. 예, 'Default'/'oci-group'
+        * `<compartment-name>`은 대상 Compartment로 변경합니다. 예, oci-hol-xx
+
+    ```
+    <copy>
+    Allow group <group-name> to manage policies in compartment <compartment-name>
+    Allow group <group-name> to manage virtual-network-family in compartment <compartment-name>
+    </copy>
+    ```
+
+    ```
+    <copy> 
+    Allow group <group-name> to manage buckets in compartment <compartment-name>
+    Allow group <group-name> to manage instance-family in compartment <compartment-name>
+    Allow group <group-name> to manage volume-family in compartment <compartment-name>
+    Allow group <group-name> to manage serviceconnectors in compartment <compartment-name>
+    Allow group <group-name> to read audit-events in compartment <compartment-name>
+    Allow group <group-name> to manage api-gateway-family in compartment <compartment-name>
+    </copy>
+    ```
 
 
 ## Task 4: VCN 및 서브넷 생성
@@ -110,13 +138,13 @@ OCI 대시보드에 로그인하여 리소스 생성에 필요한 정보를 확�
 
 5. 새 VCN의 이름(예, oci-hol-vcn)하고, **Next**을 클릭합니다.
 
-  ![Create VCN](images/create-oci-hol-vcn.png " ")
+  ![Create VCN](images/create-oci-hol-vcn.png =70%x*)
 
 6. 생성될 VCN과 관련 네트워크 자원들을 리뷰하고, **Create**을 클릭합니다.
 
 7. 인터넷 연결이 되는 관련 자원들을 포함하여 VCN이 만들어지게 됩니다.
 
-  ![Created VCN](images/created-oci-hol-vcn.png =70%x*)
+  ![Created VCN](images/created-oci-hol-vcn.png =60%x*)
 
 
 이제 **다음 실습을 진행**하시면 됩니다.
@@ -124,4 +152,4 @@ OCI 대시보드에 로그인하여 리소스 생성에 필요한 정보를 확�
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, May 2023
+* **Last Updated By/Date** - DongHee Lee, January 2024

@@ -105,6 +105,8 @@ In this activity, you will:
 
     > (3) Enter a number threshold limit in **Value** field (NOTE – Value should be less than 500,000)
 
+    > (4) Click OK
+
 
     ![Change condition](images/13-lab3-risk-management.png)
 
@@ -157,6 +159,8 @@ In this activity, you will:
     Adventure awaits, show what you know, and rise to the top of the leader board!!!
 
     [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:)
+
+    [Click here](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
 
 ## Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services

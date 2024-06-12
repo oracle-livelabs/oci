@@ -10,6 +10,9 @@ Estimated time: 20 min
 - Create several Cloud Native (Java/Node/Dotnet/Python/...) APIs with the help of Terraform
 - Add the APIs in the Portal 
 
+Watch the video below for a quick walk-through of the lab. 
+[Video](videohub:1_70svnfiw)
+
 ### Prerequisites
 
 - Follow previous labs.
@@ -75,6 +78,9 @@ When the Task 1 build is done.
 
 ## Task 4 - Optional - Same with Kubernetes
 
+Watch the video below for a quick walk-through of the lab. 
+[Video](videohub:1_ntjas0hn)
+
 1. Go to Oracle Cloud Home page
 2. Go to Cloud Editor.
 3. When the editor is started, open a terminal
@@ -103,7 +109,6 @@ When the Task 1 build is done.
     ```
 
 ## Acknowledgements
-
-- **Authors**
-    - Marc Gueury / Phil Wilkins /  Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+* **Author** - Marc Gueury / Phil Wilkins /  Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+* **Last Updated By/Date** - Marc Gueury, May 2024
 

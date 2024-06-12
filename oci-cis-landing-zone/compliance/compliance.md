@@ -38,7 +38,15 @@ The compliance script can be run anywhere with the correct permissions and optio
     </copy>
     ```
 
-3. Run the script by entering the following command, then wait a moment while the script collects data.
+3. Enter the following command to download a supported version of libraries the script depends on.
+
+    ```text
+    <copy>
+    pip install --upgrade "urllib3<=2" --user
+    </copy>
+    ```
+
+4. Run the script by entering the following command, then wait a moment while the script collects data.
 
     ```text
     <copy>

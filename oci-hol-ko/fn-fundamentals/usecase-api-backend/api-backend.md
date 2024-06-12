@@ -2,7 +2,9 @@
 
 ## Introduction
 
-OCI Functions의 사용사례로 API Backend로 사용하는 사례입니다. 모바일 클라이언트 등에서 사용할 API로 오픈하는 것이라, 보안 등을 위해 API Gateway를 거치도록 구성하여, *Client > API Gateway > Function - API Backend* 로 구성합니다. 실제 Function에서는 요건에 따라 대상시스템(예, OCI API 또는 ADB, MySQL)에 대한 API를 구현하게 됩니다. 해당 사항은 개발 영역으로 여기서는 API Gateway를 통한 API 노출시 Function 쪽에서 알아야 하는 꼭 알아야 항목에 대해서만 다룹니다.
+OCI Functions의 사용사례로 API Backend로 사용하는 사례입니다. 
+
+모바일 클라이언트 등에서 사용할 API로 오픈하는 것이라, 보안 등을 위해 API Gateway를 거치도록 구성하여, *Client > API Gateway > Function - API Backend* 로 구성합니다. 실제 Function에서는 요건에 따라 대상시스템(예, OCI API 또는 ADB, MySQL)에 대한 API를 구현하게 됩니다. 해당 사항은 개발 영역으로 여기서는 API Gateway를 통한 API 노출시 Function 쪽에서 알아야 하는 꼭 알아야 항목에 대해서만 다룹니다.
 
 ![Introduction](images/usecase-api-backend.png =75%x*)
 
@@ -19,7 +21,41 @@ OCI Functions의 사용사례로 API Backend로 사용하는 사례입니다. �
 - Lab 2 실습 완료
 
 
-## Task 1. API Backend용 Function 만들기
+## Task 1. 실습을 위한 Policy 설정하기
+
+런타임에 API Gateway가 Function 호출시 할 수 있도록 권한이 필요합니다. 이를 위해 아래와 같이 Policy를 설정합니다.
+
+1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Identity & Security**으로 이동한 다음, **Identity** > **Policies** 을 선택합니다.
+
+2. **Create Policy** 클릭
+
+3. 아래 값으로 Policy를 설정하고 생성합니다.
+
+    - Name: `api-gateway-policy`
+    - Description: `Policy for API Gateway`
+    - Compartment: 계속 사용하던 Compartment 선택, **oci-hol-xx**를 선택
+    - Policy Builder: **Show manual editor** 슬라이딩 버튼을 클릭하여 직접 입력합니다.
+
+        1. API Gateway 사용을 위한 설정
+            * `<compartment-name>`은 오브젝트 스토리지 버킷이 있는 Compartment 이름으로 대체합니다. 예, oci-hol-xx
+            * `<group-name>`을 적용할 사용자 그룹으로 변경합니다. 예, 'Default'/'oci-group'
+
+            ```
+            <copy>
+            Allow group <group-name> to manage api-gateway-family in compartment <compartment-name>
+            </copy>
+            ```
+
+        2. API Gateway에서 Function을 호출하는 규칙을 설정하기 위해 필요한 정책
+            * `<compartment-name>`은 오브젝트 스토리지 버킷이 있는 Compartment 이름으로 대체합니다. 예, oci-hol-xx
+
+            ```
+            <copy>
+            allow any-user to use functions-family in compartment <compartment-name> where all {request.principal.type='ApiGateway', request.resource.compartment.id=target.compartment.id}
+            </copy>
+            ```
+
+## Task 2. API Backend용 Function 만들기
 
 Backend API로서 Function이 역할을 수행할때, 코드 구현시 사용할 수 있는 메타 정보를 먼저 알아봅니다. 즉 HTTP로 호출되었을 때 호출 정보들을 가져오는 부분에 우선 살펴봅니다. 일단은 hello-world 버전을 그대로 사용합니다.
 API의 내부 로직은 이후 요건에 따라 각 개발언어로 구현하면 될 것입니다.
@@ -59,7 +95,7 @@ API의 내부 로직은 이후 요건에 따라 각 개발언어로 구현하면
     {"message": "Hello KilDong"}
     ```
 
-## Task 2. API Gateway 생성
+## Task 3. API Gateway 생성
 
 1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Developer Services**으로 이동한 다음 **API Management** 하위의 **Gateway** 를 선택합니다.
 
@@ -124,7 +160,7 @@ API의 내부 로직은 이후 요건에 따라 각 개발언어로 구현하면
 14. 배포한 규칙은 {Endpoint}/http-info로 요청이 오면, oci-http-info-python로 라우팅하는 간단한 설정이었습니다.
 
 
-## Task 3. Security Rule 추가
+## Task 4. Security Rule 추가
 
 Deployment의 Endpoint로 요청을 수신하기 위해 보안규칙에서 https(443 포트) 개방이 필요합니다.
 
@@ -140,40 +176,7 @@ Deployment의 Endpoint로 요청을 수신하기 위해 보안규칙에서 https
    ![Added Result](images/add-ingress-rule-result.png =60%x*)
 
 
-## Task 4. API Gateway를 위한 Policy 추가
 
-API Gateway로 요청이 오면, Functions을 호출하는 것은 앞선 Task에서 설정하였습니다. API Gateway가 Function 호출시 할 수 있도록 아래와 같이 Policy를 설정합니다.
-본 실습에서는 동일한 Compartment를 계속 사용하고 있으며, 아래 정책은 API Gateway가 속한 compartment id와 Function이 속한 compartment name이 필요합니다.
-
-1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Identity & Security**으로 이동한 다음 **Compartments** 을 선택합니다.
-
-2. API Gateway가 속한 Compartment의 OCID를 복사해 둡니다.
-
-    ![Compartment OCID](images/compartment-ocid.png =70%x*)
-
-3. 왼쪽 메뉴에서 **Identity** > **Policies** 을 선택합니다.
-
-4. **Create Policy** 클릭
-
-5. 아래 값으로 Policy를 설정하고 생성합니다.
-
-    - Name: `api-gateway-policy`
-    - Description: `Policy for API Gateway`
-    - Compartment: 계속 사용하던 Compartment 선택, **oci-hol**를 선택
-    - Policy Builder: **Show manual editor** 슬라이딩 버튼을 클릭하여 직접 입력합니다.
-        * *[compartment-name]는 Function이 있는 Compartment 이름으로 대체합니다.*
-        * *[compartment-id]는 API Gateway가 있는 Compartment OCID로 대체합니다.*        
-
-    ```
-    <copy>
-    allow any-user to use functions-family in compartment [compartment-name] where all {request.principal.type='ApiGateway', request.resource.compartment.id='[compartment-id]'}
-    </copy>
-    ```
-
-    예시
-    ```
-    allow any-user to use functions-family in compartment oci-hol-xx where all {request.principal.type='ApiGateway', request.resource.compartment.id='ocid1.compartment.oc1..aaaaaaaaxxxxxxxxxxxxxxxxxxxxxxxxxxxoasgnfgbgs4jk2ltpgqnnna'}
-    ```
 
 ## Task 5. API Gateway를 통한 호출 테스트
 
@@ -204,9 +207,8 @@ HTTP 기반 Web API(REST API)를 사용하는 경우, HTTP Body 전문외에 Req
 
 1. Function 초기화후 만들어지는 handler 함수의 기본 파라미터를 보면, ctx, data 두 변수가 있습니다.
 
-    - data: Request Body가 들어있습니다
     - ctx: Function의 Context 정보가 들어 있고, HTTP 요청의 경우, HTTP 관련 추가 데이터가 들어 있게 됩니다
-
+    - data: Request Body가 들어있습니다
 
     ```
     # Ex) Python Function
@@ -407,7 +409,7 @@ HTTP 기반 Web API(REST API)를 사용하는 경우, HTTP Body 전문외에 Req
 
 ## Task 7. Provisioned Concurrency - 콜드 스타드(Cold Start) 줄이기
 
-> Cold Start: 함수를 배포후 처음으로 호출하거나 일정 시간 동안 사용하지 않을 때, 또는 더 많은 동시 호출을 얻거나 함수를 업데이트할 때 Function 서비스는 새로운 인프라를 프로비저닝합니다. 이 새로운 인프라 프로비저닝은 풀에서 Runner VM 가져오기, 고객 네트워크에 연결, 함수 이미지 다운로드 및 함수 컨테이너 시작과 같은 여러 단계가 포함됩니다. 이러한 단계에서 소요되는 시간으로 응답지연이 발생하며, 이것을 Cold Start라고 합니다.<br>
+> Cold Start: 함수를 배포후 처음으로 호출하거나 일정 시간 동안 사용하지 않았을 때, 또는 더 많이 동시 호출될때 Function 서비스는 새로운 인프라를 프로비저닝합니다. 이 새로운 인프라 프로비저닝은 풀에서 Runner VM 가져오기, 고객 네트워크에 연결, 함수 이미지 다운로드 및 함수 컨테이너 시작과 같은 여러 단계가 포함됩니다. 이러한 단계에서 소요되는 시간으로 응답지연이 발생하며, 이것을 Cold Start라고 합니다.<br>
 
 *하나의 Application내의 Function들은 Runner VM을 공유합니다. 테스트를 위한 완전한 Cold Start 환경을 만들기 위해 Usecase #2의 Service Connector이 Active 상태인 경우, 실행중인 Service Connector들을 비활성화하고 이번 Task를 진행합니다.*
 
@@ -511,4 +513,4 @@ HTTP 기반 Web API(REST API)를 사용하는 경우, HTTP Body 전문외에 Req
 ## Acknowledgements
 
 * **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, May 2023
+* **Last Updated By/Date** - DongHee Lee, January 2024

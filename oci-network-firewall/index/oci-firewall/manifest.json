@@ -1,0 +1,44 @@
+{
+    "workshoptitle": "OCI Network Firewall Common Use Cases",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisite for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable).",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: OCI Network Firewall deployment",
+            "filename": "../../lab1/lab1.md"
+        },
+        {
+            "title": "Lab 2: East-West Traffic Inspection",
+            "filename": "../../lab2/lab2.md"
+        },
+        {
+            "title": "Lab 3: Inspect outbound Internet traffic",
+            "filename": "../../lab3/lab3.md"
+        },
+        {
+            "title": "Lab 4: Inspect outbound traffic to OCI Services",
+            "filename": "../../lab4/lab4.md"
+        },
+        {
+            "title": "Lab 5: Inspect inbound Internet traffic",
+            "filename": "../../lab5/lab5.md"
+        },
+        {
+            "title": "Lab 6: SSL Decryption and Intrusion Detection",
+            "filename": "../../lab6/lab6.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}
