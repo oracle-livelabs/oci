@@ -57,7 +57,7 @@ Let's process a promotion for the employee. Continue working from the Employment
 ![Compensation](images\myteamcompensationpage2.png)
 
 
-6. In the Section labeled 2 Promoton, of the transaction, do not change any information.  Please click the Continue Button to move forward with the transaction.  
+6. In the next section of the transaction labeled *2 Promotion*, do not change any information. Please click the Continue Button to move forward with the transaction.  
 
 7. Enter a salary adjustment amount or adjustment percent *(to see an example of the guardrails for entry - enter a salary adjustment greater than 60%)*
 
@@ -70,9 +70,9 @@ Let's process a promotion for the employee. Continue working from the Employment
 
 Adventure awaits, show what you know, and rise to the top of the leader board!!!
 
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE)
+[![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE)
 
-    [Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
+[Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
 
 
 

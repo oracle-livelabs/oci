@@ -23,8 +23,8 @@
             "filename": "../../enterprise-summary/enterprise-summary.md"
          },
         {
-            "title": "Lab 3: Resource Homepages",
-            "description": "Get to know Stack Monitoring's Resource Homepages",
+            "title": "Lab 3: Resource Home pages",
+            "description": "Get to know Stack Monitoring's Resource Home pages",
             "filename": "../../homepages/homepages.md"
         },
         {
@@ -42,6 +42,16 @@
             "description": "Apply lessons learned in previous labs to troubleshoot a Concurrent Manager",
             "filename": "../../together/together.md"
         },
+        {
+            "title": "Lab 7: Metric Extensions",
+            "description": "Get to know Stack Monitoring's Extensibility: Metric Extextensions",
+            "filename": "../../metric-extensions/metric-extensions.md"
+        }, 
+        {
+            "title": "Lab 8: Importing OCI Services",
+            "description": "Get to know Stack Monitoring's Extensibility: Import OCI Services",
+            "filename": "../../import-oci-services/import-oci-services.md"
+        }, 
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
