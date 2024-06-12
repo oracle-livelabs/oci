@@ -38,4 +38,4 @@ Estimated Time: 3+ hours
 * **Author** - Paul Karam - Master Solution Architect
 * **Contributors** -  Sharad Chopra - Solution Architect, Amar Pahwa - Enterprise Cloud Architect
 
-* **Last Updated By/Date** - Amar Pahwa - June 202
+* **Last Updated By/Date** - Amar Pahwa - June 2024
