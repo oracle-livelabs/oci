@@ -10,8 +10,8 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 - Connect to the OpenSearch Dashboard
-- Search data using the Discover interface
-- Create a simple pie chart for the sample data
+- Create Detectors, and Detection rules in Security Analytics
+- Generate fidnigs and alerst based on new logs uploaded into OpenSearch
 
 ## Step1: Prerequisites
 Confirm that the OpenSearch cluster is version 2.11 or higher.  This is the latest version. To create a cluster, see Creating an OpenSearch Cluster (LABs 1,2). You will have to connect to the OpenSearch Dashboard.
@@ -19,6 +19,7 @@ Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard
 
 ## Step 2: Review the strucure of the Apache access logs
 First connect to the OpenSearch Dashboard (you have to provide the username/password).Go to the **Management** **Dev Tools** section.
+
 Upload the Apache access logs data ulizing the command:
 ```html
    <copy>POST apache_accesslogs/_bulk
@@ -51,8 +52,60 @@ Now go to **Discover** and select the following index **apache_accesslogs**  in 
    ![OpenSearch Dashboards - Document Details](../images/image-siem1.png)
 Analyze the fields in the docoument.
 
+## Step 3: Create new Log types in Security Analytics
+In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. And clik on **Log types**, you will see a list of default log types in OpneSearch.
+If you click on a log type you can see the deatils and the Detection Rules assiciated with the log type:
+  ![OpenSearch Dashboards - Document Details](../images/image-siem5.png)
+You can also create your onw log type, by clicking on **Create Log type**
 
-## Step 3: Create Detectors in Security Analytics (SIEM) 
+
+  ![OpenSearch Dashboards - Document Details](../images/image-siem6.png)
+
+The new log type will appear on the list of log types.
+
+
+## Step 4: Create Detectors in Security Analytics (SIEM) 
+In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. Most likely there will be no detectors created yet. 
+
+First let's create **Detection Rules**
+On the ame page click on Dettection Rules and Create:
+
+  ![OpenSearch Dashboards - Document Details](../images/image-siem7.png)
+
+Fill out the Detedtion section - specifying two potektially malicious IPs in the clientIP field.
+
+   ![OpenSearch Dashboards - Document Details](../images/image-siem8.png)
+
+CLick on **Create Detection Rule**
+
+   The rule will be created and will appear on the list of detection rules.you can review other rules:
+
+   Still in Security Analytics, fileter on Apache, clikc on **Detection rules** under **Detectors** and click on one of the Rules
+   ![OpenSearch Dashboards - Document Details](../images/image-siem4.png)
+
+Now let't create a ** Detector**  Click on **Create Detector** and fill in:
+```html
+Name: test1_detector
+Descriptio: Detect access from malicious IPs
+Data Source Index: apache_accesslogs
+Detction Log type: test1_logtype 
+Detection rule: Test1_test1_logtype
+
+   ```
+
+   ![OpenSearch Dashboards - Document Details](../images/image-siem2.png)
+
+Click on **Next**
+Fill out the page the following way
+
+   ![OpenSearch Dashboards - Document Details](../images/image-siem3.png)
+
+Click **Create Detector** and the detector will show up in the detectors page.
+
+
+
+
+## Step 5: Generate finfings and alarms using sample data 
 In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. Most likely there will be no detectors created yet. 
 Click on **Create Detector** and fill in:
 ```html
@@ -73,21 +126,6 @@ Fill out the page the following way
 Click **Create Detector** and the detector will show up in the detectors page.
 
 
-Still in Security Analytics, fileter on Apache, clikc on **Detection rules** under **Detectors** and click on one of the Rules
-   ![OpenSearch Dashboards - Document Details](../images/image-siem4.png)
-You can also create detection rules, by clicking on **Create detection rule**
-
-
-## Step 4: Create new Log types in Security Analytics
-In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. And clik on **Log types**, you will see a list of default log types in OpneSearch.
-If you click on a log type you can see the deatils and the Detection Rules assiciated with the log type:
-  ![OpenSearch Dashboards - Document Details](../images/image-siem5.png)
-You can also create your onw log type, by clicking on **Create Log type**
-
-
-  ![OpenSearch Dashboards - Document Details](../images/image-siem6.png)
-
-The new log type will appear on the list of log types.
 
 ## Acknowledgements
 
