@@ -65,25 +65,27 @@ The new log type will appear on the list of log types.
 
 
 ## Step 4: Create Detectors in Security Analytics (SIEM) 
-In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. Most likely there will be no detectors created yet. 
+In the OpenSearch Dashboard go to **Security Analytics** \ **Detectors** \ **Detection Rules**
 
 First let's create **Detection Rules**
-On the ame page click on Dettection Rules and Create:
+On the page click on Detection Rules and Create:
 
   ![OpenSearch Dashboards - Document Details](../images/image-siem7.png)
 
-Fill out the Detedtion section - specifying two potektially malicious IPs in the clientIP field.
+Fill out the Detection section - specifying two potentially malicious IPs in the clientIP field.
 
    ![OpenSearch Dashboards - Document Details](../images/image-siem8.png)
 
 CLick on **Create Detection Rule**
 
-   The rule will be created and will appear on the list of detection rules.you can review other rules:
-
+The rule will be created and will appear on the list of detection rules.
+You can also review other rules:
    Still in Security Analytics, fileter on Apache, clikc on **Detection rules** under **Detectors** and click on one of the Rules
    ![OpenSearch Dashboards - Document Details](../images/image-siem4.png)
 
-Now let't create a ** Detector**  Click on **Create Detector** and fill in:
+Under **Security Analytics** \ **Detectors** now let't create a ** Detector**.
+
+ Click on **Create Detector** and fill in:
 ```html
 Name: test1_detector
 Descriptio: Detect access from malicious IPs
@@ -104,28 +106,37 @@ Click **Create Detector** and the detector will show up in the detectors page.
 
 
 
-
 ## Step 5: Generate finfings and alarms using sample data 
-In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. Most likely there will be no detectors created yet. 
-Click on **Create Detector** and fill in:
+Given that we created the Dector with Detection rules, now we can add sample apache access log data to trigger findings and alerts.
+Go to **Management** \ **Dev tools**  in the dashboard:
+Upload the Apache access logs data ulizing the command:
 ```html
-Name
-Descriptio
-Data Source Index =apache_accesslogs
-Detction = apache_access
-Both Rules can remain chekced
-   ```
+   <copy>POST apache_accesslogs/_bulk
+{ "create" : {} }
+{"clientIp": "248.50.227.223", "agent": "Mozilla/5.0 (Linux; U; Android 4.1.2; en-gb; GT-S6310 Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30", "geoip": {"latitude": -33.418581069654735, "longitude": -172.95534758140695}, "browser": "Mobile Safari", "os": "Android", "message": "248.50.227.223 - - [2024-05-09T09:59:49.491495Z] \"HEAD /accounts/360 HTTP/1.1\" 502 5983 -  - Mozilla/5.0 (Linux; U; Android 4.1.2; en-gb; GT-S6310 Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30", "@timestamp": "2024-05-09T09:59:49.491495Z"}
+{ "create" : {} }
+{"clientIp": "137.245.250.228", "agent": "Mozilla/5.0 (Linux; U; Android 4.1.2; en-gb; GT-S6310 Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30", "geoip": {"latitude": -33.418581069654735, "longitude": -172.95534758140695}, "browser": "Mobile Safari", "os": "Android", "message": "137.245.250.228 - - [2024-05-09T09:59:49.491495Z] \"HEAD /accounts/360 HTTP/1.1\" 502 5983 -  - Mozilla/5.0 (Linux; U; Android 4.1.2; en-gb; GT-S6310 Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30", "@timestamp": "2024-05-09T09:59:49.491495Z"}
+{ "create" : {} }
+{"clientIp": "137.245.250.229","agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A466 Safari/9537.53", "geoip": {"latitude": 50.919954279324,"longitude": -21.190578406461327}, "browser": "Safari","os": "iPhone",    "message": "137.245.250.229 - - [2024-05-09T09:59:49.491152Z] \"HEAD /dummy/814 HTTP/1.1\" 404 1806 -  - Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A466 Safari/9537.53","@timestamp": "2024-05-09T09:59:49.491152Z" }
+{ "create" : {} }
+{"clientIp": "3.5.104.253", "agent": "CCBot","geoip": {"latitude": 74.64804375619079,"longitude": 13.626794374087439},"browser": "Unknown",     "os": "Unknown", "message": "3.5.104.253 - - [2024-05-09T09:59:49.491122Z] \"GET /accounts/811 HTTP/1.1\" 200 1257 -  - CCBot",     "@timestamp": "2024-05-09T09:59:49.491122Z" }
+{ "create" : {} }
+</copy>
+```
 
-   ![OpenSearch Dashboards - Document Details](../images/image-siem2.png)
-
-Click on **Next**
-Fill out the page the following way
-
-   ![OpenSearch Dashboards - Document Details](../images/image-siem3.png)
-
-Click **Create Detector** and the detector will show up in the detectors page.
+In the OpenSearch Dashboard  go to **Security Analytics** \ **Findings**. and you should be able to see the Findings and Alerts based on the last logs uploaded
+   
 
 
+   ![OpenSearch Dashboards - Document Details](../images/image-siem9.png)
+
+And also more details in:
+
+
+   ![OpenSearch Dashboards - Document Details](../images/image-siem10.png)
+
+
+YOu can see all the deatils about the Findings and Alerts, time, which detectors triggerd them etc.
 
 ## Acknowledgements
 
