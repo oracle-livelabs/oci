@@ -209,7 +209,7 @@ Cohere model:
          {
              "action_type": "predict",
              "method": "POST",
-             "url": "https://${parameters.endpoint}/20231130/actions/generateText",
+             "url": "https://${parameters.endpoint}/20231130/actions/embedText",
              "request_body": "{\"compartmentId\":\"<cluster_compartment_id>\",\"servingMode\":{\"modelId\":\"cohere.command\",\"servingType\":\"ON_DEMAND\"},\"inferenceRequest\":{\"prompt\":\"${parameters.prompt}\",\"maxTokens\":600,\"temperature\":1,\"frequencyPenalty\":0,\"presencePenalty\":0,\"topP\":0.75,\"topK\":0,\"returnLikelihoods\":\"GENERATION\",\"isStream\":false ,\"stopSequences\":[],\"runtimeType\":\"COHERE\"}}"
          }
      ]
