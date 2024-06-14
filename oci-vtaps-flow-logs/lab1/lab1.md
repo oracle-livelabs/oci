@@ -29,7 +29,7 @@ When you complete the exercise, the network topology will look like the followin
 
 * Basic knowledge of OCI Networking components and networking.
 
-## Task 1: Create Log Group
+## Task 1: Select a Home Region
 
 1. To begin the lab exercise, ensure you are logged into the Oracle Cloud console and select the desired **Home Region** region. The region can be accessed on the menu bar located at top right of the screen.
 
@@ -39,7 +39,9 @@ When you complete the exercise, the network topology will look like the followin
 
         **Note**: This lab can be completed in any OCI region you have access to with the required resources. Based on your account, select the desired region to complete the exercise. For the purpose of this lab we will use the **"US East (Ashburn)"** region.
 
-2. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Observability and Management** and click on **Log Groups**.
+## Task 1: Create Log Group
+
+1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Observability and Management** and click on **Log Groups**.
 
     * Click the Navigation Menu (top left corner)
     * Click **"Observability and Management"**
@@ -47,7 +49,7 @@ When you complete the exercise, the network topology will look like the followin
 
         ![L1.3](images/loggroup-navigation.png)
 
-3. In the Log Group tables, click **Create Log Group** to create the log group.
+2. In the Log Group tables, click **Create Log Group** to create the log group.
 
     * Click **"Create Log Group"**
 
@@ -60,7 +62,7 @@ When you complete the exercise, the network topology will look like the followin
 
         ![L1.5](images/loggroup-create.png)
 
-4. The **Log Group** is created, you can now move forward to the **Next Task**.
+3. The **Log Group** is created, you can now move forward to the **Next Task**.
 
     ![L1.6](images/loggroup-list.png)
 
