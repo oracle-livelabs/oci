@@ -23,7 +23,7 @@ In this lab, you will:
 
 When you complete the exercise, the network topology will look like the following, one VCN and three subnets.
 
-![L1.1](images/vcnsubnetoverview.png)
+![vcnsubnetoverview-slide](images/vcnsubnetoverview.png)
 
 ### Prerequisites
 
@@ -35,7 +35,7 @@ When you complete the exercise, the network topology will look like the followin
 
     * Click **"US East (Ashburn)"**
 
-        ![L1.2](images/region-home.png)
+        ![region-home](images/region-home.png)
 
         **Note**: This lab can be completed in any OCI region you have access to with the required resources. Based on your account, select the desired region to complete the exercise. For the purpose of this lab we will use the **"US East (Ashburn)"** region.
 
@@ -47,24 +47,24 @@ When you complete the exercise, the network topology will look like the followin
     * Click **"Observability and Management"**
     * Click **"Log Groups"**
 
-        ![L1.3](images/loggroup-navigation.png)
+        ![loggroup-navigation](images/loggroup-navigation.png)
 
 2. In the Log Group tables, click **Create Log Group** to create the log group.
 
     * Click **"Create Log Group"**
 
-        ![L1.4](images/loggroup-createloggroups.png)
+        ![loggroup-createloggroups](images/loggroup-createloggroups.png)
 
     In the log group configuration window, use the data below to create the log group:
 
     * Name: **"cw-log-grp"**
     * Click **"Create"**
 
-        ![L1.5](images/loggroup-create.png)
+        ![loggroup-create](images/loggroup-create.png)
 
 3. The **Log Group** is created, you can now move forward to the **Next Task**.
 
-    ![L1.6](images/loggroup-list.png)
+    ![loggroup-list](images/loggroup-list.png)
 
 ## Task 2: Create a VCN (Virtual Cloud Network)
 
@@ -76,7 +76,7 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * Click **"Networking"**
     * Click **"Virtual cloud networks"**
 
-        ![L1.7](images/vcn-navigation.png)
+        ![vcn-navigation](images/vcn-navigation.png)
 
 2. Make sure you have the correct Compartment selected and click **Create VCN** in the **Virtual Cloud Networks** table. The VCN will provide the network foundation for all the components related to the compute instances and required network monitoring.
 
@@ -85,13 +85,13 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * IPv4 CIDR: **"10.1.0.0/16"** (Press enter)
     * Click **"Create VCN"**
 
-        ![L1.8](images/vcn-createvcn.png)
+        ![vcn-createvcn](images/vcn-createvcn.png)
 
         **Note**: If not directed to update/change a field, leave everything else as default.
 
 3. The **VCN** is created, you can now move forward to the **Next Task**.
 
-    ![L1.9](images/vcn-list.png)
+    ![vcn-list](images/vcn-list.png)
 
     **Note**: Upon creating the **VCN** the workflow will take you directly to the subnet creation page.
 
@@ -107,7 +107,7 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * IPv4 CIDR: **"10.1.1.0/24"**
     * Click **"Create Subnet"**
 
-        ![L1.10](images/subnet-createsubnet1.png)
+        ![subnet-createsubnet1](images/subnet-createsubnet1.png)
 
         **Note**: We will repeat this step for the additional subnets.
 
@@ -119,7 +119,7 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * IPv4 CIDR: **"10.1.2.0/24"**
     * Click **"Create Subnet"**
 
-        ![L1.11](images/subnet-createsubnet2.png)
+        ![subnet-createsubnet2](images/subnet-createsubnet2.png)
 
 3. In the **Subnets table**, Click **Create Subnet** to create the third subnet. The third subnet will provide network access for the compute instance representing the vtap monitoring host.
 
@@ -129,11 +129,11 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * IPv4 CIDR: **"10.1.3.0/24"**
     * Click **"Create Subnet"**
 
-        ![L1.12](images/subnet-createsubnet3.png)
+        ![subnet-createsubnet3](images/subnet-createsubnet3.png)
 
 4. The **subnets** are created, you can now move forward to the **Next Task**.
 
-    ![L1.13](images/subnet-list.png)
+    ![subnet-list](images/subnet-list.png)
 
 ## Task 4: Enable Flow Logging
 
@@ -143,25 +143,25 @@ Now that we have created the three subnets for use within the lab, let's proceed
 
     * Click **"lab-vcn-snet1"**
 
-        ![L1.14](images/subnet-snet1.png)
+        ![subnet-snet1](images/subnet-snet1.png)
 
 2. In the **Subnets** details view, select **Logs** under Resources and in the Enable Log Column for the **subnet** click on **Not enabled**. Once selected the status for the subnet will then transition to **Enabled**.
 
     * Click **"Logs"**
     * Click radio button next to **"Not Enabled"**
 
-        ![L1.15](images/subnet-logs.png)
+        ![subnet-logs](images/subnet-logs.png)
 
 3. In the Enable Log configuration leave all defaults and click **Enable Log**.
 
     * Confirm the Log Group: **"cw-log-grp"**
     * Click **"Enable Log**
 
-        ![L1.16](images/subnet-enablelog.png)
+        ![subnet-enablelog](images/subnet-enablelog.png)
 
 4. In the navigation path below the top menu bar, click **hol-vcn** and repeat the steps 1, 2 and 3 for the second subnet.
 
-    ![L1.17](images/subnet-navigationholvcn.png)
+    ![subnet-navigationholvcn](images/subnet-navigationholvcn.png)
 
     * Click **"hol-vcn-sbnet2"**
     * Click **"Logs"**
@@ -171,7 +171,7 @@ Now that we have created the three subnets for use within the lab, let's proceed
 
 5. In the navigation path below the top menu bar, click **hol-vcn** and repeat the steps 1, 2 and 3 for the third subnet.
 
-    ![L1.18](images/subnet-navigationholvcn.png)
+    ![subnet-navigationholvcn](images/subnet-navigationholvcn.png)
 
     * Click **"hole-vcn-sbnet3"**
     * Click **"Logs"**
@@ -183,7 +183,7 @@ Now that we have created the three subnets for use within the lab, let's proceed
 
     * Click **"Oracle CLoud"**
 
-        ![L1.19](images/oraclecloud-home.png)
+        ![oraclecloud-home](images/oraclecloud-home.png)
 
 **Congratulations!** You have successfully created a VCN and the associated three Subnets with logging enabled. You may now **proceed to the next lab**.
 

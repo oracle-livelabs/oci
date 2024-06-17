@@ -19,7 +19,7 @@ In this lab, you will:
 * Evaluate Network Visualizer to visualize your OCI network
 * Evaluate Network Path Analyzer to validate the path between your client and server
 
-  ![lab2](images/visualierandpathanalyzer.png)
+  ![visualierandpathanalyzer-slide](images/visualierandpathanalyzer.png)
 
 ## Task 1: Network Visualizer
 
@@ -31,36 +31,36 @@ In this lab, you will:
     * Click **"Networking"**
     * Click **"Network Visualizer"**
 
-      ![2.2](images/nv-navigation.png)
+      ![nv-navigation](images/nv-navigation.png)
 
 2. On the visual canvas, users can easily customize the desired view. Click on the **details** icon to view the legend.
 
     * Click **"details"**
 
-      ![2.2](images/nv-maplegend.png)
+      ![nv-maplegend](images/nv-maplegend.png)
 
 3. As denoted below, Click on the DRG to see the associated status and additional details.
 
     * Click **"hol-drg"**
 
-      ![2.2](images/nv-drgdetails.png)
+      ![nv-drgdetails](images/nv-drgdetails.png)
 
     * Click **"View additional resource details"**
     * Click **"Close"**
 
-      ![2.2](images/nv-drgadditionaldetails.png)
+      ![nv-drgadditionaldetails](images/nv-drgadditionaldetails.png)
 
 4. As denoted below, Click on the DRG VCN Attachment
 
     * Click **"hol-vcn1-drgattach"**
 
-      ![2.2](images/nv-drgvcnattachment.png)
+      ![nv-drgvcnattachment](images/nv-drgvcnattachment.png)
 
 5. As denoted below, Click on the DRG VCN Attachment
 
     * Click **"hol-vcn1-drgattach"**
 
-      ![2.2](images/nv-vcndetails.png)
+      ![nv-vcndetails](images/nv-vcndetails.png)
 
 6. The **Network Visualizer** is complete, you can now move forward to the **Next Task**
 
@@ -74,13 +74,13 @@ In this lab, you will:
     * Click **"Networking"**
     * Click **"Network Path Analyzer"**
 
-      ![2.2](images/npa-navigation.png)
+      ![npa-navigation](images/npa-navigation.png)
 
 2. To begin, click **"Create path analysis"**.
 
     * Click **"Create path analysis"**
 
-      ![2.2](images/npa-createpathanalysis.png)
+      ![npa-createpathanalysis](images/npa-createpathanalysis.png)
 
     In the configuration window provide a name for the path analyzer along with the source and destination.
 
@@ -88,7 +88,7 @@ In this lab, you will:
 
     * Name: **"hol-npa"**
 
-      ![2.2](images/npa-name.png)
+      ![npa-name](images/npa-name.png)
 
     Source
 
@@ -97,7 +97,7 @@ In this lab, you will:
     * Compute Instance (VNIC): **"client"**
     * Source IPv4 address: **"10.1.1.11"**
 
-      ![2.2](images/npa-source.png)
+      ![npa-source](images/npa-source.png)
 
     Destination
 
@@ -108,7 +108,7 @@ In this lab, you will:
     * Destination Port: **"80"**
     * Click **"Run analysis"**
 
-      ![2.2](images/npa-destination.png)
+      ![npa-destination](images/npa-destination.png)
 
         **Note:** Loading may take a minute to generate the results.
 
@@ -116,11 +116,11 @@ In this lab, you will:
 
     * Analysis Output
 
-        ![2.2](images/npa-output.png)
+        ![npa-output](images/npa-output.png)
 
     * Click on the **red triangle with the exclamation point** to further understand the potential issue.
 
-        ![2.2](images/npa-outputissuedetail.png)
+        ![npa-outputissuedetail](images/npa-outputissuedetail.png)
 
     From the analysis, we can see that the issue with connectivity is related to the security list entry for port 80 in server VCN, **hol-vcn2**.
 
@@ -128,7 +128,7 @@ In this lab, you will:
 
     * Click **"Default Security List for hol-vcn2"**
 
-        ![2.2](images/npa-defaultsecuritylist.png)
+        ![npa-defaultsecuritylist](images/npa-defaultsecuritylist.png)
 
 5. On the Security List page add the ingress route.
 
@@ -137,15 +137,15 @@ In this lab, you will:
     * Destination Port Range: **"80"**
     * Click **"Add Ingress Rules"**
 
-        ![2.2](images/npa-sladdingressroute.png)
+        ![npa-sladdingressroute](images/npa-sladdingressroute.png)
 
     * Click **"Analyze"** (Scroll to the top of the previous page)
 
-        ![2.2](images/npa-analyze.png)
+        ![npa-analyze](images/npa-analyze.png)
 
 6. On the Security List page add the ingress route.
 
-    ![2.2](images/npa-successful.png)
+    ![npa-successful](images/npa-successful.png)
 
 **Congratulations!** You have completed this lab.
 

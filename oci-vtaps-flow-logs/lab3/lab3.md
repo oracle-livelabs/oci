@@ -22,7 +22,7 @@ In this lab, you will:
 * Generate network traffic from the client to the server
 * Use the VTAP monitor and Flow Logs to identify the client/server network flows
 
-  ![L3.1](images/vtapsandflowlogs.png)
+  ![vtapsandflowlogs-slide](images/vtapsandflowlogs.png)
 
 ### Prerequisites
 
@@ -38,11 +38,11 @@ In this lab, you will:
     * Click **"Networking"**
     * Click **"Network load balancer"**
 
-      ![L3.2](images/nlb-navigation.png)
+      ![nlb-navigation](images/nlb-navigation.png)
 
     * Click **"Create network load balancer"**
 
-      ![L3.3](images/nlb-createnlb.png)
+      ![nlb-createnlb](images/nlb-createnlb.png)
 
 2. In the Network load balancer **Add details** screen, update the **Load balancer name** and scroll down to **Choose networking** section to update the subnet then click **Next**.
 
@@ -50,7 +50,7 @@ In this lab, you will:
     * Subnet: **hol-vcn-snet3**
     * Click **"Next"**
 
-      ![L3.4](images/nlb-adddetails.png)
+      ![nlb-adddetails](images/nlb-adddetails.png)
 
 3. In the Network load balancer **Configure listener** screen, update the name and select **Specify the port** and provide the UDP port number then click **Next**.
 
@@ -58,7 +58,7 @@ In this lab, you will:
     * Specify the port: **4789**
     * Click **"Next"**
 
-      ![L3.5](images/nlb-configurelistener.png)
+      ![nlb-configurelistener](images/nlb-configurelistener.png)
 
 4. In the Network load balancer **Choose backends** screen, update the name and select **Add backends** and update the **Specify the health check** then click ** **Next**.
 
@@ -67,27 +67,27 @@ In this lab, you will:
     * Name: **backendset**
     * Click **"Add backends"**
 
-      ![L3.6](images/nlb-listenerbackends.png)
+      ![nlb-listenerbackends](images/nlb-listenerbackends.png)
 
     Add Backends
 
     * Select Instance: **vtap**
     * Click **"Add backends"**
 
-      ![L3.7](images/nlb-listeneraddbackends.png)
+      ![nlb-listeneraddbackends](images/nlb-listeneraddbackends.png)
 
     Specify Health check policy
     * Protocol: **"Protocol"**
     * Port: **"TCP Port 22"**
     * Click **"Next"**
 
-      ![L3.8](images/nlb-listenerbackendshealthcheck.png)
+      ![nlb-listenerbackendshealthcheck](images/nlb-listenerbackendshealthcheck.png)
 
 5. In the Network load balancer **Review and create** screen, review the configuration and click ** **Create network load balancer**.
 
     * Click **"Create network load balancer"**
 
-      ![L3.9](images/nlb-createnetworkloadbalancer.png)
+      ![nlb-createnetworkloadbalancer](images/nlb-createnetworkloadbalancer.png)
 
 6. The **NLB** is configured, you can now move forward to the **Next Task**
 
@@ -101,13 +101,13 @@ In this lab, you will:
     * Click **"Networking"**
     * Click **"VTAPs"**
 
-      ![L3.10](images/vtap-navigation.png)
+      ![vtap-navigation](images/vtap-navigation.png)
 
 2. In the menu that opens, we need to input data into multiple fields. Unless specified otherwise in this tutorial, leave the fields with the **Default** input.
 
     * Click **"Create VTAP"**
 
-      ![L3.9](images/vtap-createvtap.png)
+      ![vtap-createvtap](images/vtap-createvtap.png)
 
 3. In the Create VTAP configuration window, provide the details to complete the configuration of the desired VTAP: Name, select the desired VCN, define the Source, Target and Capture filter.
 
@@ -116,7 +116,7 @@ In this lab, you will:
     * Name: **vtap**
     * VCN: **vcn-lab**
 
-      ![L3.10](images/vtap-nameandvcn.png)
+      ![vtap-nameandvcn](images/vtap-nameandvcn.png)
 
     Source
 
@@ -124,30 +124,30 @@ In this lab, you will:
     * Subnet: **hol-vcn-snet1**
     * VCN Instance: **client (client) 10.1.1.11**
 
-      ![L3.11](images/vtap-source.png)
+      ![vtap-source](images/vtap-source.png)
 
     Target
 
     * Subnet: **hol-vcn-snet3**
     * Network Load balancer: **nlb (10.1.3.x)**
 
-      ![L3.12](images/vtap-target.png)
+      ![vtap-target](images/vtap-target.png)
 
     Capture Filter
     * Select **"Create Capture Filter"**
 
-      ![L3.13](images/vtap-capturefilter.png)
+      ![vtap-capturefilter.](images/vtap-capturefilter.png)
 
     * Click **"Create capture filter"**
     * Click **"Create VTAP"**
 
-        ![L3.14](images/vtap-createvtapfinish.png)
+        ![vtap-createvtapfinish](images/vtap-createvtapfinish.png)
 
     Start VTAP
 
     * Click **"Start"**
 
-        ![L3.15](images/vtap-start.png)
+        ![vtap-start](images/vtap-start.png)
 
 4. The **VTAP** is configured, you can now move forward to the **Next Task**.
 
@@ -161,31 +161,31 @@ In this lab, you will:
     * Click **"Networking"**
     * Click **"Virtual cloud networks"**
 
-      ![L3.16](images/vcn-navigation.png)
+      ![vcn-navigation](images/vcn-navigation.png)
 
 2. Select the VCN.
 
     * Select VCN **"hol-vcn"**
 
-      ![L3.17](images/vcn-vcn.png)
+      ![cn-vcn](images/vcn-vcn.png)
 
 3. On the VCN page, under **Resources** click **Security List**.
 
     * Click **"Security Lists"**
 
-      ![L3.18](images/vcn-securitylists.png)
+      ![vcn-securitylists](images/vcn-securitylists.png)
 
 4. On the Security list page, click **Default Security List**
 
     * Click **"Default Security Lists for vcn-lab"**
 
-      ![L3.19](images/vcn-selectdefaultsl.png)
+      ![vcn-selectdefaultsl](images/vcn-selectdefaultsl.png)
 
 5. On the Default Security Lists page under **Ingress Rules** click **Add Ingress Rules**.
 
     * Click **"Add Ingress Rules"**
 
-      ![L3.20](images/vcn-addingressrulessl.png)
+      ![vcn-addingressrulessl](images/vcn-addingressrulessl.png)
 
 6. On the Add Ingress Rules page configure the rule.
 
@@ -194,7 +194,7 @@ In this lab, you will:
     * Destination Port Range: **4789**
     * Click **"Add Ingress Rules"**
 
-      ![L3.21](images/vcn-addingressrulesslfinish.png)
+      ![vcn-addingressrulesslfinish](images/vcn-addingressrulesslfinish.png)
 
 7. The **Security List** is updated, you can now move forward to the **Next Task**
 
@@ -210,14 +210,14 @@ In this lab, you will:
     * Click **"Compute"**
     * Click **"Instances"**
 
-        ![L3.22](images/compute-navigation.png)
+        ![compute-navigation](images/compute-navigation.png)
 
 2. Click Developer Tools then Cloud Shell to open the cloud shell.
 
     * Click **"Developer Tools"**
     * Click **"Cloud Shell"**
 
-      ![L3.23](images/developertools-cloudshell.png)
+      ![developertools-cloudshell](images/developertools-cloudshell.png)
 
 3. Log into the VTAP server to enable tcpdump. TCPDUMP is powerful command-line packet analyzer that is part of the compute instances that will allow us to capture the client/server traffic and display the output via the command line.
 
@@ -225,18 +225,18 @@ In this lab, you will:
 
       * Note the **"Private IP"** of the **"vtap"** instance
 
-        ![L3.24](images/developertools-sshvtapip.png)
+        ![developertools-sshvtapip](images/developertools-sshvtapip.png)
 
       * Command: SSH to the client: **"ssh -i .ssh/id_rsa opc@10.1.3.11"**
       * When prompted, "Are you sure you want to continue connecting (yes/no)? **"yes"**
 
-        ![L3.25](images/developertools-sshvtapyes.png)
+        ![developertools-sshvtapyes](images/developertools-sshvtapyes.png)
 
     In the command shell issue the command to enable the TCPDUMP for the interface while listening on the VTAP port, UDP 4789.
 
       * Command: **"sudo tcpdump -i enp0s6 udp port 4789"**
 
-        ![L3.26](images/developertools-sshvtaptcpdump.png)
+        ![developertools-sshvtaptcpdump](images/developertools-sshvtaptcpdump.png)
 
         <details>
         <summary><b>Additional information: TCPDUMP</b></summary>
@@ -290,7 +290,7 @@ In this lab, you will:
 
       * Note the **"Private IP"** of the **"client"** instance
 
-        ![L3.27](images/developertools-sshclient.png)
+        ![developertools-sshclient](images/developertools-sshclient.png)
 
       * Command: SSH to the client: **"ssh -i .ssh/id_rsa opc@10.1.1.11"**
       * When prompted, "Are you sure you want to continue connecting (yes/no)? **"yes"**
@@ -299,11 +299,11 @@ In this lab, you will:
 
       * Command: **"ssh 10.1.2.11"**
 
-        ![L3.28](images/developertools-sshclientserver.png)
+        ![developertools-sshclientserver](images/developertools-sshclientserver.png)
 
 5. Now switch back to the VTAP console and view the output on the VTAP compute instance.
 
-    ![L3.29](images/developertools-vtapoutput.png)
+    ![developertools-vtapoutput](images/developertools-vtapoutput.png)
 
     **Note**: The mirrored traffic in the output window can be saved and downloaded for further analysis.
 
@@ -317,7 +317,7 @@ In this lab, you will:
     * Click **"Observability and Management"**
     * Click **"Logs"**
 
-      ![L3.30](images/flowlog-navigation.png)
+      ![flowlog-navigation](images/flowlog-navigation.png)
 
 2. Under **Logging** click **Search**
 
@@ -325,7 +325,7 @@ In this lab, you will:
     * Custom filters: **"data.destinationAddress = 10.1.2.11"**
     * Custom filters: **"data.destinationPort = 22"**
 
-      ![L3.31](images/flowlog-searchssh.png)
+      ![flowlog-searchssh](images/flowlog-searchssh.png)
 
 **Congratulations!** You have completed this lab.
 

@@ -22,7 +22,7 @@ In this lab, you will:
 
 When you complete the exercise, the network topology will look like the following, one VCN and two subnets.
 
-![2.2](images/vcnsubnetoverview.png)
+![vcnsubnetoverview-slide](images/vcnsubnetoverview.png)
 
 ## Task 1: Select a Home Region
 
@@ -30,7 +30,7 @@ When you complete the exercise, the network topology will look like the followin
 
     * Click **"US East (Ashburn)"**
 
-        ![L1.2](images/region-home.png)
+        ![home-region](images/region-home.png)
 
         **Note**: This lab can be completed in any OCI region you have access to with the required resources. Based on your account, select the desired region to complete the exercise. For the purpose of this lab we will use the **"US East (Ashburn)"** region.
 
@@ -42,7 +42,7 @@ When you complete the exercise, the network topology will look like the followin
     * Click **"Networking"**
     * Click **"Dynamic routing gateway"**
 
-        ![L1.3](images/drg-navigation.png)
+        ![drg-navigation](images/drg-navigation.png)
 
 2. In the Dynamic routing gateways table, Click **Create dynamic routing gateway** to create the DRG. The DRG will provide connectivity between the VCN's that will be created in the following tasks.
 
@@ -50,7 +50,7 @@ When you complete the exercise, the network topology will look like the followin
     * Name: **"hol-drg"**
     * Click **"Create dynamic routing gateway"**
 
-        ![2.2](images/drg-create.png)
+        ![drg-create](images/drg-create.png)
 
 ## Task 3: Create VCN (Virtual Cloud Network) #1
 
@@ -62,7 +62,7 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * Click **"Networking"**
     * Click **"Virtual cloud networks"**
 
-        ![2.2](images/vcn-navigation.png)
+        ![vcn-navigation](images/vcn-navigation.png)
 
 2. Make sure you have the correct Compartment selected and click **Create VCN** in the **Virtual Cloud Networks** table. The VCN will provide the network foundation for all the components related to the compute instances and required network monitoring.
 
@@ -71,7 +71,7 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * IPv4 CIDR: **"10.1.0.0/16"** (Press enter)
     * Click **"Create VCN"**
 
-        ![2.2](images/vcn1-createvcn.png)
+        ![vcn1-createvcn](images/vcn1-createvcn.png)
 
         **Note**: If not directed to update/change a field, leave everything else as default.
 
@@ -83,13 +83,13 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * IPv4 CIDR: **"10.1.1.0/24"**
     * Click **"Create Subnet"**
 
-        ![2.2](images/vcn1-subnet.png)
+        ![vcn1-subnet](images/vcn1-subnet.png)
 
 4. On the VCN page under **Resources**, click **Dynamic Routing Gateways Attachments**
 
     * Click **Dynamic Routing Gateways Attachments**
 
-        ![2.2](images/vcn1-drgattachments.png)
+        ![vcn1-drgattachments](images/vcn1-drgattachments.png)
 
 5. In the Dynamic Routing Gateways Attachments list, click **Create DRG Attachment**
 
@@ -98,19 +98,19 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * Select **"hol-drg"**
     * Click **"Create DRG Attachment"**
 
-        ![2.2](images/vcn1-createdrgattachments.png)
+        ![vcn1-createdrgattachments](images/vcn1-createdrgattachments.png)
 
 6. On the VCN page under **Resources**, click **Security Lists**
 
     * Click **"Security Lists"**
 
-        ![2.2](images/vcn1-securitylists.png)
+        ![vcn1-securitylists](images/vcn1-securitylists.png)
 
 7. In the Security Lists list, click **Default Security List for hol-vnc1**
 
     * Click **"Default Security List for hol-vnc1"**
 
-        ![2.2](images/vcn1-defaultsecuritylists.png)
+        ![vcn1-defaultsecuritylists](images/vcn1-defaultsecuritylists.png)
 
 8. In the Ingress Rules list, click **Add Ingress Rules**
 
@@ -119,7 +119,7 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * Destination Port Range: **"80"**
     * Click **"Add Ingress Rules"**
 
-        ![2.2](images/vcn1-addingressrule.png)
+        ![vcn1-addingressrule](images/vcn1-addingressrule.png)
 
 ## Task 4: Create VCN (Virtual Cloud Network) #2
 
@@ -127,7 +127,7 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
 
     * Click **"Virtual cloud networks"**
 
-        ![2.2](images/vcn-navigationpath.png)
+        ![vcn-navigationpath](images/vcn-navigationpath.png)
 
 2. In the Virtual Cloud Networks list, click **Create VCN** in the **Virtual Cloud Networks** table.
 
@@ -136,7 +136,7 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * IPv4 CIDR: **"10.2.0.0/16"** (Press enter)
     * Click **"Create VCN"**
 
-        ![2.2](images/vcn2-createvcn.png)
+        ![vcn2-createvcn](images/vcn2-createvcn.png)
 
         **Note**: If not directed to update/change a field, leave everything else as default.
 
@@ -148,13 +148,13 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * IPv4 CIDR: **"10.2.1.0/24"**
     * Click **"Create Subnet"**
 
-        ![2.2](images/vcn2-subnet.png)
+        ![vcn2-subnet](images/vcn2-subnet.png)
 
 4. On the VCN page under **Resources**, click **Dynamic Routing Gateways Attachments**
 
     * Click **Dynamic Routing Gateways Attachments**
 
-        ![2.2](images/vcn2-drgattachments.png)
+        ![vcn2-drgattachments](images/vcn2-drgattachments.png)
 
 5. In the Dynamic Routing Gateways Attachments list, click **Create DRG Attachment**
 
@@ -163,7 +163,7 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * Select **"hol-drg"**
     * Click **"Create DRG Attachment"**
 
-        ![2.2](images/vcn2-createdrgattachments.png)
+        ![vcn2-createdrgattachments](images/vcn2-createdrgattachments.png)
 
 ## Task 5: Update VCN Route Tables
 
@@ -171,13 +171,13 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
 
     * Click **Route Tables**
 
-        ![2.2](images/vcn2-routetables.png)
+        ![vcn2-routetables](images/vcn2-routetables.png)
 
 2. In the Route Tables list, click **Default Route Table for hol-vnc2**
 
     * Click **Default Route Table for hol-vnc2**
 
-        ![2.2](images/vcn2-defaultroutetables.png)
+        ![vcn2-defaultroutetables](images/vcn2-defaultroutetables.png)
 
 3. In the Route Rules list, click **Add Route Rules**
 
@@ -186,31 +186,31 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * Destination CIDR Block: **10.1.1.0/24**
     * Click **Add Route Rules**
 
-        ![2.2](images/vcn2-addrouterules.png)
+        ![vcn2-addrouterules](images/vcn2-addrouterules.png)
 
 4. In the Navigation Path, click **Virtual cloud networks**
 
     * Click **"Virtual cloud networks"**
 
-        ![2.2](images/vcn2-addrouterules.png)
+        ![vcn2-addrouterules](images/vcn2-addrouterules.png)
 
 5. In the Virtual Cloud Networks list, click **hol-vcn1**
 
     * Click **"hol-vcn1"**
 
-        ![2.2](images/vcn-holvcn1.png)
+        ![vcn-holvcn1](images/vcn-holvcn1.png)
 
 6. On the VCN page under **Resources**, click **Route Tables**
 
     * Click **"Route Tables"**
 
-        ![2.2](images/vcn1-routetables.png)
+        ![vcn1-routetables](images/vcn1-routetables.png)
 
 7. In the Route Tables list, click **Default Route Table for hol-vnc1**
 
     * Click **Default Route Table for hol-vnc1**
 
-        ![2.2](images/vcn1-defaultroutetables.png)
+        ![vcn1-defaultroutetables](images/vcn1-defaultroutetables.png)
 
 8. In the Route Rules list, click **Add Route Rules**
 
@@ -219,13 +219,13 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
     * Destination CIDR Block: **10.2.1.0/24**
     * Click **Add Route Rules**
 
-        ![2.2](images/vcn1-addrouterules.png)
+        ![vcn1-addrouterules](images/vcn1-addrouterules.png)
 
 9. Click **Oracle Cloud** in the top left of the menu bar to return to the home page.
 
     * Click **"Oracle CLoud"**
 
-        ![L1.19](images/oraclecloud-home.png)
+        ![oraclecloud-home](images/oraclecloud-home.png)
 
 **Congratulations!** You have successfully created the VCNs, Subnets and the DRG. You may now **proceed to the next lab**.
 
