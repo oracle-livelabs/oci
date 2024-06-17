@@ -12,9 +12,9 @@ To gain more familiarity with Oracle Cloud's networking concepts, I would recomm
 
 In this workshop, you will learn how to:
 
-* Deploy a Virtual Cloud Network (VCN), Subnets, DRG and associated Security Lists.
-* Deploy Compute Instances for client/server communications.
-* Utilize the Network Visualizer and Path Analyzer to troubleshoot network connectivity.
+* Deploy a Virtual Cloud Network (VCN), Subnets, DRG and associated Security Lists
+* Deploy Compute Instances for client/server communications
+* Utilize the Network Visualizer and Path Analyzer to troubleshoot network connectivity
 
 ### Prerequisites
 
