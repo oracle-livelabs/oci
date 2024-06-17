@@ -17,7 +17,7 @@ The connector uses the Cohere embed model hosted by Generative AI.
 Confirm that the OpenSearch cluster is version 2.11. To use an OCI Generative AI connector with OCI Search with OpenSearch, you need a cluster configured to use OpenSearch version 2.11. By default, new clusters are configured to use version 2.11. To create a cluster, see Creating an OpenSearch Cluster.
 Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard.
 
-You will also need a subscription to the Chicago region, which hosts the OCI GenAI infrastructure.
+You will also need a subscription to the Chicago or Frankfurtregions, which host the OCI GenAI infrastructure.
 
 First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Management** and click on **Dev Tools**. You will be able to type the commands in the Console.
 
@@ -74,6 +74,8 @@ Make note of the model_group_id returned in the response:
 ## Step 3: Create the Connector for RAG
 
 Create the Generative AI connector as shown in one of the following examples.
+To use the Frankfurt region, simply change "endpoint": **"inference.generativeai.us-chicago-1.oci.oraclecloud.com"** to 
+**"endpoint": "inference.generativeai.eu-frankfurt-1.oci.oraclecloud.com"** in payload below.
 
 Cohere model:
  ```html
@@ -99,6 +101,102 @@ Cohere model:
      ]
  }</copy>
    ```
+
+
+
+cohere.command-r-16k  payload
+
+(The API end-point is actions/chat) 
+ ```html
+   <copy>POST _plugins/_ml/connectors/_create
+{
+     "name": "Cohere Chat Connector",
+     "description": "Check errors in logs",
+     "version": 2,
+     "protocol": "oci_sigv1",
+     "parameters": {
+         "endpoint": "inference.generativeai.us-chicago-1.oci.oraclecloud.com",
+         "auth_type": "resource_principal"
+     },
+     "credential": {
+     },
+     "actions": [
+         {
+             "action_type": "predict",
+             "method": "POST",
+             "url": "https://${parameters.endpoint}/20231130/actions/chat",
+             "request_body": "{\"compartmentId\":\"<YOUR_COMPARTMENT_OCID>\",\"servingMode\":{\"modelId\":\"cohere.command-r-16k\",\"servingType\":\"ON_DEMAND\"},\"chatRequest\":{\"message\":\"${parameters.prompt}\",\"apiFormat\":\"COHERE\"}}",
+             "post_process_function": "def text = params['chatResponse']['text'].replace('\n', '\\\\n');\n return '{\"name\":\"response\",\"dataAsMap\":{\"inferenceResponse\":{\"generatedTexts\":[{\"text\":\"' + text + '\"}]}}}'"
+ 
+         }
+     ]
+ }</copy>
+  ```
+
+
+
+Llama model:
+```html
+  <copy>POST _plugins/_ml/connectors/_create
+{
+     "name": "OpenAI Chat Connector",
+     "description": "testing genAI connector",
+     "version": 2,
+     "protocol": "oci_sigv1",
+     "parameters": {
+         "endpoint": "inference.generativeai.us-chicago-1.oci.oraclecloud.com",
+         "auth_type": "resource_principal"
+     },
+     "credential": {
+     },
+     "actions": [
+         {
+             "action_type": "predict",
+             "method": "POST",
+             "url": "https://${parameters.endpoint}/20231130/actions/generateText",
+             "request_body": "{\"compartmentId\":\"<cluster_compartment_id>\",\"servingMode\":{\"modelId\":\"meta.llama-2-70b-chat\",\"servingType\":\"ON_DEMAND\"},\"inferenceRequest\":{\"prompt\":\"${parameters.prompt}\",\"maxTokens\":600,\"temperature\":1,\"frequencyPenalty\":0,\"presencePenalty\":0,\"topP\":0.75,\"topK\":-1,\"isStream\":false,\"numGenerations\":1,\"stop\":[],\"runtimeType\":\"LLAMA\"}}",
+            "post_process_function": "def text = params['inferenceResponse']['choices'][0]['text'].replace('\n', '\\\\n');\n return '{\"name\":\"response\",\"dataAsMap\":{\"inferenceResponse\":{\"generatedTexts\":[{\"text\":\"' + text + '\"}]}}}'"
+                          
+               }
+     ]
+ }</copy>
+  ```
+
+
+
+meta.llama-3-70b-instruct  payload
+
+(The API end-point is actions/chat)  
+```html
+  <copy>POST _plugins/_ml/connectors/_create
+{
+     "name": "Llama3 Chat Connector",
+     "description": "Check errors in logs",
+     "version": 2,
+     "protocol": "oci_sigv1",
+     "parameters": {
+         "endpoint": "inference.generativeai.us-chicago-1.oci.oraclecloud.com",
+         "auth_type": "resource_principal"
+     },
+     "credential": {
+     },
+     "actions": [
+         {
+             "action_type": "predict",
+             "method": "POST",
+             "url": "https://${parameters.endpoint}/20231130/actions/chat",
+             "request_body": "{\"compartmentId\":\<YOUR_COMPARTMENT_OCID>\",\"servingMode\":{\"modelId\":\"meta.llama-3-70b-instruct\",\"servingType\":\"ON_DEMAND\"},\"chatRequest\":{\"maxTokens\":600,\"temperature\":1,\"frequencyPenalty\":0,\"presencePenalty\":0,\"topP\":0.75,\"topK\":-1,\"isStream\":false,\"apiFormat\":\"GENERIC\",\"messages\":[{\"role\":\"USER\",\"content\":[{\"type\":\"TEXT\",\"text\":\"${parameters.prompt}\"}]}]}}",
+             
+              "post_process_function": "def text = params['chatResponse']['choices'][0]['message']['content'][0]['text'].replace('\n', '\\\\n');\n return '{\"name\":\"response\",\"dataAsMap\":{\"inferenceResponse\":{\"generatedTexts\":[{\"text\":\"' + text + '\"}]}}}'"
+
+
+
+         }
+     ]
+ }</copy>
+  ```
+
+
 
 Authentication is done using a resource principal. Specify the cluster's compartment ID in request_body.
 
@@ -193,24 +291,50 @@ Create the Generative AI connector as shown in one of the following examples.
 
 Cohere model:
  ```html
-   <copy>POST _plugins/_ml/connectors/_create
+<copy>POST /_plugins/_ml/connectors/_create
 {
-     "name": "OpenAI Chat Connector",
-     "description": "when did us pass espio",
-     "version": 2,
-     "protocol": "oci_sigv1",
-     "parameters": {
-         "endpoint": "inference.generativeai.us-chicago-1.oci.oraclecloud.com",
-         "auth_type": "resource_principal"
-     },
+  "name": "OCI GenAI Chat Connector cohere-embed-v5",
+  "description": "The connector to public Cohere model service for embed",
+  "version": "2",
+  "protocol": "oci_sigv1",
+ 
+    "parameters": {
+      "endpoint": "inference.generativeai.us-chicago-1.oci.oraclecloud.com",
+      "auth_type": "resource_principal", 
+      "model": "cohere.embed-english-v3.0",
+      "input_type":"search_document",
+      "truncate": "END"
+    },
+ 
      "credential": {
      },
      "actions": [
          {
              "action_type": "predict",
-             "method": "POST",
+             "method":"POST",
              "url": "https://${parameters.endpoint}/20231130/actions/embedText",
-             "request_body": "{\"compartmentId\":\"<cluster_compartment_id>\",\"servingMode\":{\"modelId\":\"cohere.command\",\"servingType\":\"ON_DEMAND\"},\"inferenceRequest\":{\"prompt\":\"${parameters.prompt}\",\"maxTokens\":600,\"temperature\":1,\"frequencyPenalty\":0,\"presencePenalty\":0,\"topP\":0.75,\"topK\":0,\"returnLikelihoods\":\"GENERATION\",\"isStream\":false ,\"stopSequences\":[],\"runtimeType\":\"COHERE\"}}"
+             "request_body": "{ \"inputs\":[\"${parameters.passage_text}\"], \"truncate\": \"${parameters.truncate}\" ,\"compartmentId\": \"ocid1.compartment.oc1..aaaaaaaa7yyrmroctukjrejues34onvauhswq7z7j7si2yqnomgkwzou2hoq\", \"servingMode\": { \"modelId\": \"${parameters.model}\", \"servingType\": \"ON_DEMAND\" } }",
+             "pre_process_function": """
+                StringBuilder builder = new StringBuilder();
+                builder.append("\"");
+                String first = params.text_docs[0];
+                if (first.contains("\"")) {
+                  first = first.replace("\"", "\\\"");
+                }
+                if (first.contains("\\t")) {
+                  first = first.replace("\\t", "\\\\\\t");
+                }
+                if (first.contains('
+            ')) {
+                  first = first.replace('
+            ', '\\n');
+                }
+                builder.append(first);
+                builder.append("\"");
+                def parameters = "{" +"\"passage_text\":" + builder + "}";
+                return "{" +"\"parameters\":" + parameters + "}";
+                """,
+              "post_process_function": "connector.post_process.cohere.embedding"
          }
      ]
  }</copy>

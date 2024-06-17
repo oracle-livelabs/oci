@@ -4,7 +4,7 @@
 
 In this lab, you will create an OCI OpenSearch cluster using the Oracle Cloud Console. 
 
-Estimated Time: 15 minutes
+Estimated Time: 30 minutes
 
 ### Objectives
 
