@@ -71,7 +71,9 @@ Make note of the model_group_id returned in the response:
 
 ## Step 3: Create the Connector
 
-Create the Generative AI connector as shown in one of the following examples.
+Create the Generative AI connector as shown in the following example.
+To use the Frankfurt region, simply change "endpoint": **"inference.generativeai.us-chicago-1.oci.oraclecloud.com"** to 
+**"endpoint": "inference.generativeai.eu-frankfurt-1.oci.oraclecloud.com"** in the payload below.
 
 Cohere model:
  ```html
