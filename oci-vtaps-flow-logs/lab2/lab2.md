@@ -70,8 +70,8 @@ In this lab, you will:
     * Name: **"hol-pn-access"**
     * Select VCN: **"hol-vcn"**
     * Select Subnet: **"hol-vcn-snet1"**
-    * Click **"Create"**
     * Select **"Use as active network"**
+    * Click **"Create"**
 
         ![L2.7](images/cloudshell-privatenetworkdef.png)
 
