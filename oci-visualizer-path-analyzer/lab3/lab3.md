@@ -36,10 +36,11 @@ In this lab, you will:
 2. On the visual canvas, users can easily customize the desired view. Click on the **details** icon to view the legend.
 
     * Click **"details"**
+    * Click on the **"X"** to close the window.
 
       ![nv-maplegend](images/nv-maplegend.png)
 
-3. As denoted below, Click on the DRG to see the associated status and additional details.
+3. As shown below, Click on the **DRG** orange circle icon to see the associated status and additional details. Once clicked the details will appear in the right window pane.
 
     * Click **"hol-drg"**
 
@@ -50,19 +51,33 @@ In this lab, you will:
 
       ![nv-drgadditionaldetails](images/nv-drgadditionaldetails.png)
 
-4. As denoted below, Click on the DRG VCN Attachment
+        **Note**: The additional details allows for direct access to view attachments, DRG route tables and teh import and export route tables accordingly.
+
+4. As shown below, Click on the **DRG VCN Attachment** chain link icon.
 
     * Click **"hol-vcn1-drgattach"**
 
       ![nv-drgvcnattachment](images/nv-drgvcnattachment.png)
 
-5. As denoted below, Click on the DRG VCN Attachment
+5. As denoted below, Click on the **VCN** blue hexagon icon to see the associated details.
 
-    * Click **"hol-vcn1-drgattach"**
+    * Click **"hol-vcn1"**
 
       ![nv-vcndetails](images/nv-vcndetails.png)
 
+      **Note**: The VCN details such as the associated compartment, IPv6/IPv6, default route and DNS name are highlighted in the right window pane.
+
 6. The **Network Visualizer** is complete, you can now move forward to the **Next Task**
+
+    See the following options to manipulate the image.
+
+    * Export Image - click the downward facing arrow icon to initiate the export modal.
+
+        ![nv-vcndetails](images/nv-imageexport.png)
+
+    * Resize Image - click the symbols in the bottom right corner of the image canvas to resize and center the image.
+
+        ![nv-vcndetails](images/nv-imageresize.png)
 
 ## Task 2: Network Path Analyzer
 
