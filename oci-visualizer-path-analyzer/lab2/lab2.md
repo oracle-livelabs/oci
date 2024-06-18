@@ -21,7 +21,7 @@ In this lab, you will:
 
 ## Task 1: Launch the Cloud Shell and Generate SSH Keys
 
-In this lab and subsequent ones, we will utilize the cloud shell to access the various compute instances to establish communication between the client and server and monitor the VTAP flows. While this can be accomplished in multiple ways, one of the easiest is to use the **Cloud Shell** embedded in the OCI Console. This functionality is only available in the **HOME** region of your account.
+In this lab and subsequent ones, we can utilize the cloud shell to access the various compute instances. While this can be accomplished in multiple ways, one of the easiest is to use the **Cloud Shell** embedded in the OCI Console. This functionality is only available in the **HOME** region of your account.
 
 Let's begin.
 
@@ -47,13 +47,13 @@ Let's begin.
 
     ![cloudshell-n](images/cloudshell-n.png)
 
-4. If you have never used Cloud Shell before, Oracle will start the Instance with a Public network.
+4. If you have never used Cloud Shell before, Oracle will start the Instance with a Public network. We will update the access to the private network to establish reachability from the cloud console to the private ip addresses of each compute instance.
 
     * Default access
 
         ![cloudshell-public](images/cloudshell-public.png)
 
-        **Note**: This tutorial works on the assumption that you don't have a custom setup for your Cloud Shell deployment. If you do, adjust the guide below to not interfere with your existing setup.
+        **Note**: This tutorial works on the assumption that you do not have a custom setup for your Cloud Shell deployment. If you do, adjust the guide below to not interfere with your existing setup.
 
 5. On the Cloud Shell deployment, click on the down arrow next to **Network:Public** and click **Private network definition list**.
 
@@ -62,7 +62,7 @@ Let's begin.
 
         ![cloudshell-privatenetwork](images/cloudshell-privatenetwork.png)
 
-6. In the menu that opens, click Create private network definition and, in the next menu, give it a name and select the existing VCN and subnet1.
+6. In the menu that opens, click Create private network definition. In the next menu, give it a name and select the existing VCN1 and subnet1.
 
     * Click **"Create private network definition list"**
     * Name: **"hol-pn-access"**
@@ -89,7 +89,7 @@ Let's begin.
 
         **Note:** Even if you close Cloud Shell and log out of the OCI Console, the files on the Instance (like the SSH keys) are kept and will be available next time you start Cloud Shell.
 
-9. Copy the **ssh key** output from above to a notebook. The **ssh key** above will be used in the next section.
+9. Copy the **ssh key** output from above to a notebook. The **ssh key** above will be used in the next sections to build the compute hosts and access the resources.
 
     * Copy the output to the command: **cat ~/.ssh/id_rsa.pub**
 
@@ -99,7 +99,9 @@ Let's begin.
 
 ## Task 2: Create Compute Instances
 
-  In this lab we will create three compute instances needed for generating traffic and viewing the output for the VTAP. We will use the **Free Tier** shape that is available as part of the always free-eligible category. Each instance will be deployed into a separate subnet within the single VCN.
+In this lab we will create two compute instances. We will use the **Free Tier** shape that is available as part of the always free-eligible category. Each instance will be deployed into a separate subnet within the single VCN.
+
+Let's begin.
 
 1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Compute** and under Compute select **Instances**.
 

@@ -135,24 +135,21 @@ Let's begin.
     In the configuration window provide a name for the path analyzer along with the source and destination.
 
     Name:
-
     * Name: **"hol-npa"**
 
       ![npa-name](images/npa-name.png)
 
     Source:
-
     * Source: **"Find OCI resource"**
-    * Source type: **"Compute instyance (VNIC)"**
+    * Source type: **"Compute instance (VNIC)"**
     * Compute Instance (VNIC): **"client"**
     * Source IPv4 address: **"10.1.1.11"**
 
       ![npa-source](images/npa-source.png)
 
     Destination:
-
     * Source: **"Find OCI resource"**
-    * Source type: **"Compute instyance (VNIC)"**
+    * Source type: **"Compute instance (VNIC)"**
     * Compute Instance (VNIC): **"client"**
     * Source IPv4 address: **"10.1.1.11"**
     * Destination Port: **"80"**
@@ -164,7 +161,7 @@ Let's begin.
 
 3. As noted in the output, the stats of the forward path is **Unreachable**.
 
-    * Analysis Output
+    * Analysis Output:
 
         ![npa-output](images/npa-output.png)
 

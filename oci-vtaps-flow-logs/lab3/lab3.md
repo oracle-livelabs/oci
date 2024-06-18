@@ -30,7 +30,9 @@ In this lab, you will:
 
 ## Task 1: Create NLB
 
-  We are now ready to deploy the **Network Load Balancer**, NLB, that will be used by the VTAP in the subsequent steps.
+We are now ready to deploy the **Network Load Balancer**, NLB, that will be used by the VTAP in the subsequent steps.
+
+Let's begin.
 
 1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and under Load Balancers select **Network load balancer**, then **Create network load balancer**.
 
@@ -93,7 +95,9 @@ In this lab, you will:
 
 ## Task 2: Create VTAP
 
-  Now that we have the network load balancer deployed, let's proceed with the VTAP.
+Now that we have the network load balancer deployed, let's proceed with the VTAP. The VTAP will forward matching traffic to the network load balancer for distribution to the compute instances.
+
+Let's begin.
 
 1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and under Network Command Center select **VTAPs**, then in the VTAP list **Create VTAP**.
 
@@ -153,7 +157,9 @@ In this lab, you will:
 
 ## Task 3: Update Security List
 
-  Unlike other security lists, the default security list comes with an initial set of stateful rules, which should in most cases be changed to only allow inbound traffic from authorized subnets relevant to the region that homes that VCN or subnet. For this exercise we will modify the default security list to include the VTAP port UDP 4789. VTAP uses this port/protocol to send collected flows to the desired monitor.
+Unlike other security lists, the default security list comes with an initial set of stateful rules, which should in most cases be changed to only allow inbound traffic from authorized subnets relevant to the region that homes that VCN or subnet. For this exercise we will modify the default security list to include the VTAP port UDP 4789. VTAP uses this port/protocol to send collected flows to the desired monitor.
+
+Let's begin.
 
 1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and click on **Virtual cloud networks**.
 
@@ -200,9 +206,11 @@ In this lab, you will:
 
 ## Task 4: VTAP Monitoring
 
-  We now have the environment complete with networking and compute resources. As mentioned previously, the VCN is the foundation for the infrastructure and has three subnets simulating the client/server network and the networking monitoring segment. In this exercise, we will now utilize the cloud shell (deployed earlier) to access the client compute instance and generate ssh traffic to the server compute instance.
+We now have the environment complete with networking and compute resources. As mentioned previously, the VCN is the foundation for the infrastructure and has three subnets simulating the client/server network and the networking monitoring segment. In this exercise, we will now utilize the cloud shell (deployed earlier) to access the client compute instance and generate ssh traffic to the server compute instance.
 
-  Once we have attempted an SSH session between the client and server, we will then access the vtap compute instance to view the network flows between the client and server. The vtap compute instance receive a mirror of all traffic on the client interface VNIC.
+Once we have attempted an SSH session between the client and server, we will then access the vtap compute instance to view the network flows between the client and server. The vtap compute instance receive a mirror of all traffic on the client interface VNIC.
+
+Let's begin.
 
 1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Compute** and under Compute select **Instances**. This view will articulate the compute instances and the associated ip addresses for each. We will use this data for accessing the compute instances via ssh.
 
@@ -309,7 +317,9 @@ In this lab, you will:
 
 ## Task 4: Flow Log Search
 
-  Now that we have explored the mirrored client/server communication using VTAP, let's proceed with inspecting the network traffic using the Flow Logs. Flow search provides a full view into the Flow Logs to evaluate flows to and from compute instances. The Flow Search capabilities gives you various ways to search for specific traffic. For this exercise we will use the destination ip address and the destination port.
+Now that we have explored the mirrored client/server communication using VTAP, let's proceed with inspecting the network traffic using the Flow Logs. Flow search provides a full view into the Flow Logs to evaluate flows to and from compute instances. The Flow Search capabilities gives you various ways to search for specific traffic. For this exercise we will use the destination ip address and the destination port.
+
+Let's begin.
 
 1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Observability and Management** and click on **Logs**.
 
@@ -319,13 +329,17 @@ In this lab, you will:
 
       ![flowlog-navigation](images/flowlog-navigation.png)
 
-2. Under **Logging** click **Search**
+2. Under **Logging** click **Search** to begin the process of identifying matching traffic in the flow logs stored in the designated log group.
+
+    We are interested in identifying the Flow Logs associated with the client and server connectivity, specifically on traffic destined for port 22.
 
     * Click **"Search"**
     * Custom filters: **"data.destinationAddress = 10.1.2.11"**
     * Custom filters: **"data.destinationPort = 22"**
 
       ![flowlog-searchssh](images/flowlog-searchssh.png)
+
+    There are many use cases that can be addressed by collecting Flow Logs. As such the filters created can be complex and creative.
 
 **Congratulations!** You have completed this lab.
 

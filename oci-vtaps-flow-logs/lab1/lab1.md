@@ -31,6 +31,8 @@ When you complete the exercise, the network topology will look like the followin
 
 ## Task 1: Select a Home Region
 
+Let's begin.
+
 1. To begin the lab exercise, ensure you are logged into the Oracle Cloud console and select the desired **Home Region** region. The region can be accessed on the menu bar located at top right of the screen.
 
     * Click **"US East (Ashburn)"**
@@ -40,6 +42,10 @@ When you complete the exercise, the network topology will look like the followin
         **Note**: This lab can be completed in any OCI region you have access to with the required resources. Based on your account, select the desired region to complete the exercise. For the purpose of this lab we will use the **"US East (Ashburn)"** region.
 
 ## Task 1: Create Log Group
+
+With log groups, you do not have to rely on complex compartment hierarchies to secure your logs. We will create a log group to facilitate the flow logs in the section to come.
+
+Let's begin.
 
 1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Observability and Management** and click on **Log Groups**.
 
@@ -70,6 +76,8 @@ When you complete the exercise, the network topology will look like the followin
 
 We will start with a basic VCN deployment. One of the goals of this **livelab** is also to provide an understanding of OCI constructs needed for deploying the compute instances and creating connections to view the VTAP and Flow Logs. For this reason, we will not use the VCN Wizard which deploys all OCI Gateways and creates basic routing rules. Instead, we will manually create each artifact as needed.
 
+Let's begin.
+
 1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and click on **Virtual cloud networks**.
 
     * Click the Navigation Menu (top left corner)
@@ -97,7 +105,9 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
 
 ## Task 3: Create VCN Subnets
 
-  Now that we have a VCN created, we will create three subnets for the compute and network resources.
+Now that we have a VCN created, we will create three subnets for the compute and network resources.
+
+Let's begin.
 
 1. In the Subnets table, Click **Create Subnet** to create the first subnet. The first subnet will provide network access for the compute instance representing the client.
 
@@ -138,6 +148,8 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
 ## Task 4: Enable Flow Logging
 
 Now that we have created the three subnets for use within the lab, let's proceed with enabling Flow Logging for each subnet. There are many options for enabling Flow Logs, for the purpose of this exercise we will enable VCN Flow Logs for Subnets.
+
+Let's begin.
 
 1. In the **Subnets** table, click the first subnet.
 

@@ -25,7 +25,9 @@ In this lab, you will:
 
 ## Task 1: Launch the Cloud Shell and Generate SSH Keys
 
-  In this lab and subsequent ones, we will utilize the cloud shell to access the various compute instances to establish communication between the client and server and monitor the VTAP flows. While this can be accomplished in multiple ways, one of the easiest is to use the **Cloud Shell** embedded in the OCI Console. This functionality is only available in the **HOME** region of your account.
+In this lab and subsequent ones, we will utilize the cloud shell to access the various compute instances to establish communication between the client and server and monitor the VTAP flows. While this can be accomplished in multiple ways, one of the easiest is to use the **Cloud Shell** embedded in the OCI Console. This functionality is only available in the **HOME** region of your account.
+
+Let's begin.
 
 1. To begin the lab exercise, ensure you are logged into the Oracle Cloud console and select the desired **Home Region** region. The region can be accessed on the menu bar located at top right of the screen. Once the home region is confirmed, we will then access the **Developer tools** as described below.
 
@@ -101,7 +103,9 @@ In this lab, you will:
 
 ## Task 2: Create Compute Instances
 
-  In this lab we will create three compute instances needed for generating traffic and viewing the output for the VTAP. We will use the **Free Tier** shape that is available as part of the always free-eligible category. Each instance will be deployed into a separate subnet within the single VCN.
+In this lab we will create three compute instances needed for generating traffic and viewing the output for the VTAP. We will use the **Free Tier** shape that is available as part of the always free-eligible category. Each instance will be deployed into a separate subnet within the single VCN.
+
+Let's begin.
 
 1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Compute** and under Compute select **Instances**.
 
