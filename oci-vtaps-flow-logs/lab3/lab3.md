@@ -46,16 +46,16 @@ In this lab, you will:
 
 2. In the Network load balancer **Add details** screen, update the **Load balancer name** and scroll down to **Choose networking** section to update the subnet then click **Next**.
 
-    * Load balancer name: **nlb**
-    * Subnet: **hol-vcn-snet3**
+    * Load balancer name: **"nlb"**
+    * Subnet: **"hol-vcn-snet3"**
     * Click **"Next"**
 
       ![nlb-adddetails](images/nlb-adddetails.png)
 
 3. In the Network load balancer **Configure listener** screen, update the name and select **Specify the port** and provide the UDP port number then click **Next**.
 
-    * Listener name: **listener**
-    * Specify the port: **4789**
+    * Listener name: **"listener"**
+    * Specify the port: **"4789"**
     * Click **"Next"**
 
       ![nlb-configurelistener](images/nlb-configurelistener.png)
@@ -64,14 +64,14 @@ In this lab, you will:
 
     Select backends
 
-    * Name: **backendset**
+    * Name: **"backendset"**
     * Click **"Add backends"**
 
       ![nlb-listenerbackends](images/nlb-listenerbackends.png)
 
     Add Backends
 
-    * Select Instance: **vtap**
+    * Select Instance: **"vtap"**
     * Click **"Add backends"**
 
       ![nlb-listeneraddbackends](images/nlb-listeneraddbackends.png)
@@ -113,23 +113,23 @@ In this lab, you will:
 
     Name and VCN
 
-    * Name: **vtap**
-    * VCN: **vcn-lab**
+    * Name: **"vtap"**
+    * VCN: **"vcn-lab"**
 
       ![vtap-nameandvcn](images/vtap-nameandvcn.png)
 
     Source
 
-    * Source Type: **Instance VNIC**
-    * Subnet: **hol-vcn-snet1**
-    * VCN Instance: **client (client) 10.1.1.11**
+    * Source Type: **"Instance VNIC"**
+    * Subnet: **"hol-vcn-snet1"**
+    * VCN Instance: **"client (client) 10.1.1.11"**
 
       ![vtap-source](images/vtap-source.png)
 
     Target
 
-    * Subnet: **hol-vcn-snet3**
-    * Network Load balancer: **nlb (10.1.3.x)**
+    * Subnet: **"hol-vcn-snet3"**
+    * Network Load balancer: **"nlb (10.1.3.x)"**
 
       ![vtap-target](images/vtap-target.png)
 
@@ -189,9 +189,9 @@ In this lab, you will:
 
 6. On the Add Ingress Rules page configure the rule.
 
-    * Source CIDR: **0.0.0.0/0**
-    * Select IP Protocol: **UDP**
-    * Destination Port Range: **4789**
+    * Source CIDR: **"0.0.0.0/0"**
+    * Select IP Protocol: **"UDP"**
+    * Destination Port Range: **"4789"**
     * Click **"Add Ingress Rules"**
 
       ![vcn-addingressrulesslfinish](images/vcn-addingressrulesslfinish.png)

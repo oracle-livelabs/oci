@@ -10,8 +10,6 @@ An Oracle virtual network is composed of virtual cloud networks (VCNs), subnets,
 
 Network Path Analyzer (NPA) provides a unified and intuitive capability you can use to identify virtual network configuration issues that impact connectivity. NPA collects and analyzes the network configuration to determine how the paths between the source and the destination function or fail. No actual traffic is sent, instead the configuration is examined and used to confirm reachability.
 
-NPA carefully examines routing and security configurations and identifies the potential network path your defined traffic traverses, along with information about virtual networking entities in the path. In addition to the path information, output of these checks includes how routing rules and network access lists (security lists, NSGs, and so on) allow or deny traffic. The sources and destinations could be within OCI, or across OCI and on-premises, or OCI and internet. NPA analyzes all the standard OCI networking elements with their associated configuration
-
 ### Objectives
 
 In this lab, you will:
@@ -23,7 +21,24 @@ In this lab, you will:
 
 ## Task 1: Network Visualizer
 
-  We are now ready to use the **Network Visualizer** to further understand our network and the associated components.
+We are now ready to use the **Network Visualizer** to further understand our network and the associated components.
+
+The Network Visualizer tool diagram helps you view a high-level structure of network configuration and helps quick navigation between its core components. It provides a view of all resources in a particular combination of region and compartment.
+
+You can view and understand the following from this diagram:
+
+* How VCNs are interconnected
+* How on-premises networks are connected (using FastConnect or Site-to-Site VPN)
+* Which routing entities (DRGs and so on) control traffic routing
+* How transit routing is configured
+
+When you open a diagram for a compartment, it shows resources for all compartments nested underneath. You can also filter out objects from the compartments that you don't want to see.
+
+You can see cross-region connections between network resources and you can also quickly change regions in the Console and see the VCNs in another region.
+
+**Note**: No traffic is needed to provide the topology, the Network Visualizer is built out using the various configuration elements.
+
+Let's begin.
 
 1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and under Load Balancers select **Network Command Center**, then **Network visualizer**.
 
@@ -40,7 +55,7 @@ In this lab, you will:
 
       ![nv-maplegend](images/nv-maplegend.png)
 
-3. As shown below, Click on the **DRG** orange circle icon to see the associated status and additional details. Once clicked the details will appear in the right window pane.
+3. As shown below, Click on the **DRG** orange circle icon to see the associated status and additional details. Once selected the details will appear in the right window pane.
 
     * Click **"hol-drg"**
 
@@ -53,13 +68,13 @@ In this lab, you will:
 
         **Note**: The additional details allows for direct access to view attachments, DRG route tables and teh import and export route tables accordingly.
 
-4. As shown below, Click on the **DRG VCN Attachment** chain link icon.
+4. As shown below, Click on the **DRG VCN Attachment** chain link icon. Once selected the details will appear in the right window pane.
 
     * Click **"hol-vcn1-drgattach"**
 
       ![nv-drgvcnattachment](images/nv-drgvcnattachment.png)
 
-5. As denoted below, Click on the **VCN** blue hexagon icon to see the associated details.
+5. As shown below, Click on the **VCN** blue hexagon icon. Once selected the details will appear in the right window pane.
 
     * Click **"hol-vcn1"**
 
@@ -81,7 +96,27 @@ In this lab, you will:
 
 ## Task 2: Network Path Analyzer
 
-  Now that we have the network and compute deployed, let's proceed with the **Network Visualizer**..
+Now that we have the network and compute deployed, let's proceed with the **Network Visualizer**.
+
+NPA carefully examines routing and security configurations and identifies the potential network path your defined traffic traverses, along with information about virtual networking entities in the path. In addition to the path information, output of these checks includes how routing rules and network access lists (security lists, NSGs, and so on) allow or deny traffic. The sources and destinations could be within OCI, or across OCI and on-premises, or OCI and internet. NPA analyzes all the standard OCI networking elements with their associated configuration.
+
+Using NPA, you can:
+
+* Troubleshoot routing and security misconfigurations that are causing connectivity issues
+* Validate that the logical network paths match your intent
+* Verify that the virtual network connectivity setup works as expected before starting to send traffic
+
+To achieve any of these objectives, create a test that you think should work and then run the test. You can also save this test definition to run it again later. Saved tests are displayed in the Network Path Analyzer page for you to select.
+
+The following source and destination scenarios are supported:
+
+* OCI to OCI
+* OCI to on-premises
+* On-premises to OCI
+* Internet to OCI
+* OCI to internet
+
+Let's begin.
 
 1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and under Load Balancers select **Network Command Center**, then **Network Path Analyzer**.
 
@@ -99,13 +134,13 @@ In this lab, you will:
 
     In the configuration window provide a name for the path analyzer along with the source and destination.
 
-    Name
+    Name:
 
     * Name: **"hol-npa"**
 
       ![npa-name](images/npa-name.png)
 
-    Source
+    Source:
 
     * Source: **"Find OCI resource"**
     * Source type: **"Compute instyance (VNIC)"**
@@ -114,7 +149,7 @@ In this lab, you will:
 
       ![npa-source](images/npa-source.png)
 
-    Destination
+    Destination:
 
     * Source: **"Find OCI resource"**
     * Source type: **"Compute instyance (VNIC)"**

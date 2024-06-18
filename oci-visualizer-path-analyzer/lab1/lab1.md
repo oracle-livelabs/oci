@@ -152,7 +152,7 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
 
 4. On the VCN page under **Resources**, click **Dynamic Routing Gateways Attachments**
 
-    * Click **Dynamic Routing Gateways Attachments**
+    * Click **"Dynamic Routing Gateways Attachments"**
 
         ![vcn2-drgattachments](images/vcn2-drgattachments.png)
 
@@ -169,7 +169,7 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
 
 1. On the VCN page under **Resources**, click **Route Tables**
 
-    * Click **Route Tables**
+    * Click **"Route Tables"**
 
         ![vcn2-routetables](images/vcn2-routetables.png)
 
@@ -181,10 +181,10 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
 
 3. In the Route Rules list, click **Add Route Rules**
 
-    * Click **Add Route Rules**
-    * Target Type: Select **Dynamic Route Gateway**
-    * Destination CIDR Block: **10.1.1.0/24**
-    * Click **Add Route Rules**
+    * Click **"Add Route Rules"**
+    * Target Type: Select **"Dynamic Route Gateway"**
+    * Destination CIDR Block: **"10.1.1.0/24"**
+    * Click **"Add Route Rules"**
 
         ![vcn2-addrouterules](images/vcn2-addrouterules.png)
 
@@ -208,16 +208,16 @@ We will start with a basic VCN deployment. One of the goals of this **livelab** 
 
 7. In the Route Tables list, click **Default Route Table for hol-vnc1**
 
-    * Click **Default Route Table for hol-vnc1**
+    * Click **"Default Route Table for hol-vnc1"**
 
         ![vcn1-defaultroutetables](images/vcn1-defaultroutetables.png)
 
 8. In the Route Rules list, click **Add Route Rules**
 
-    * Click **Add Route Rules**
-    * Target Type: Select **Dynamic Route Gateway**
-    * Destination CIDR Block: **10.2.1.0/24**
-    * Click **Add Route Rules**
+    * Click **"Add Route Rules"**
+    * Target Type: Select **"Dynamic Route Gateway"**
+    * Destination CIDR Block: **"10.2.1.0/24"**
+    * Click **"Add Route Rules"**
 
         ![vcn1-addrouterules](images/vcn1-addrouterules.png)
 
