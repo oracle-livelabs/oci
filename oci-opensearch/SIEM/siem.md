@@ -11,16 +11,16 @@ Estimated Time: 15 minutes
 In this lab, you will:
 - Connect to the OpenSearch Dashboard
 - Create Detectors, and Detection rules in Security Analytics
-- Generate fidnigs and alerst based on new logs uploaded into OpenSearch
+- Generate findings and alerts based on new logs uploaded into OpenSearch
 
 ## Step1: Prerequisites
 Confirm that the OpenSearch cluster is version 2.11 or higher.  This is the latest version. To create a cluster, see Creating an OpenSearch Cluster (LABs 1,2). You will have to connect to the OpenSearch Dashboard.
 Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard.
 
-## Step 2: Review the strucure of the Apache access logs
-First connect to the OpenSearch Dashboard (you have to provide the username/password).Go to the **Management** **Dev Tools** section.
+## Step 2: Review the structure of the Apache access logs
+First, connect to the OpenSearch Dashboard (you have to provide the username/password). Go to the **Management** **Dev Tools** section.
 
-Upload the Apache access logs data ulizing the command:
+Upload the Apache access logs data utilizing the following command:
 ```html
    <copy>POST apache_accesslogs/_bulk
 { "create" : {} }
@@ -48,15 +48,15 @@ Upload the Apache access logs data ulizing the command:
 </copy>
 ```
 
-Now go to **Discover** and select the following index **apache_accesslogs**  in the right upper corner. Make sure to specify the time correctly on the top of the screen. Click on the document deatails in one of the rows.  
+Now go to **Discover** and select the following index **apache_accesslogs**  in the right upper corner. Make sure to specify the time correctly on the top of the screen. Click on the document details in one of the rows.  
    ![OpenSearch Dashboards - Document Details](../images/image-siem1.png)
-Analyze the fields in the docoument.
+Analyze the fields in the document.
 
 ## Step 3: Create new Log types in Security Analytics
-In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. And clik on **Log types**, you will see a list of default log types in OpneSearch.
-If you click on a log type you can see the deatils and the Detection Rules assiciated with the log type:
+In the OpenSearch Dashboard  go to **Security Analytics** \ **Detectors**. And clik on **Log types**, you will see a list of default log types in OpenSearch.
+If you click on a log type, you can see the details and the Detection Rules associated with the log type:
   ![OpenSearch Dashboards - Document Details](../images/image-siem5.png)
-You can also create your onw log type, by clicking on **Create Log type**
+You can also create your own log type by clicking on **Create Log type**
 
 
   ![OpenSearch Dashboards - Document Details](../images/image-siem6.png)
@@ -67,8 +67,8 @@ The new log type will appear on the list of log types.
 ## Step 4: Create Detectors in Security Analytics (SIEM) 
 In the OpenSearch Dashboard go to **Security Analytics** \ **Detectors** \ **Detection Rules**
 
-First let's create **Detection Rules**
-On the page click on Detection Rules and Create:
+First, let's create **Detection Rules**
+On the page, click on Detection Rules and Create:
 
   ![OpenSearch Dashboards - Document Details](../images/image-siem7.png)
 
@@ -76,21 +76,21 @@ Fill out the Detection section - specifying two potentially malicious IPs in the
 
    ![OpenSearch Dashboards - Document Details](../images/image-siem8.png)
 
-CLick on **Create Detection Rule**
+Click on **Create Detection Rule**
 
 The rule will be created and will appear on the list of detection rules.
 You can also review other rules:
-   Still in Security Analytics, fileter on Apache, clikc on **Detection rules** under **Detectors** and click on one of the Rules
+   Still in Security Analytics, filter on Apache, click on **Detection rules** under **Detectors** and click on one of the Rules
    ![OpenSearch Dashboards - Document Details](../images/image-siem4.png)
 
-Under **Security Analytics** \ **Detectors** now let't create a ** Detector**.
+Under **Security Analytics** \ **Detectors** now let's create a ** Detector**.
 
  Click on **Create Detector** and fill in:
 ```html
 Name: test1_detector
-Descriptio: Detect access from malicious IPs
+Description: Detect access from malicious IPs
 Data Source Index: apache_accesslogs
-Detction Log type: test1_logtype 
+Detection Log type: test1_logtype 
 Detection rule: Test1_test1_logtype
 
    ```
@@ -98,7 +98,7 @@ Detection rule: Test1_test1_logtype
    ![OpenSearch Dashboards - Document Details](../images/image-siem2.png)
 
 Click on **Next**
-Fill out the page the following way
+Fill out the page the following way:
 
    ![OpenSearch Dashboards - Document Details](../images/image-siem3.png)
 
@@ -106,10 +106,10 @@ Click **Create Detector** and the detector will show up in the detectors page.
 
 
 
-## Step 5: Generate finfings and alarms using sample data 
-Given that we created the Dector with Detection rules, now we can add sample apache access log data to trigger findings and alerts.
+## Step 5: Generate Findings and Alarms using sample data 
+Given that we created the Detector with Detection rules, now we can add sample Apache access log data to trigger findings and alerts.
 Go to **Management** \ **Dev tools**  in the dashboard:
-Upload the Apache access logs data ulizing the command:
+Upload the Apache access logs data utilizing the following command:
 ```html
    <copy>POST apache_accesslogs/_bulk
 { "create" : {} }
@@ -136,7 +136,7 @@ And also more details in:
    ![OpenSearch Dashboards - Document Details](../images/image-siem10.png)
 
 
-You can see all the deatils about the Findings and Alerts, time, which detectors triggerd them etc.
+You can see all the details about the Findings and Alerts, time, which detectors triggered them etc.
 
 ## Acknowledgements
 
