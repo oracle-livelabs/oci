@@ -304,6 +304,7 @@ Let's begin.
     In the command shell issue the command to ssh from the client to the server. This traffic will be mirrored to the VTAP compute instance for analysis.
 
       * Command: **"ssh 10.1.2.11"**
+      ''' **"ssh 10.1.2.11"** '''
 
         ![developertools-sshclientserver](images/developertools-sshclientserver.png)
 
