@@ -12,6 +12,7 @@ In this lab, you will:
 - Connect to the OpenSearch Dashboard
 - Search data using the Discover interface
 - Create a simple pie chart for the sample data
+- Create a notebook which you can share with others
 
 ## Step 1: Prerequisites
 Confirm that the OpenSearch cluster is version 2.11 or higher.  This is the latest version. To create a cluster, see Creating an OpenSearch Cluster (LABs 1,2). You will have to connect to the OpenSearch Dashboard.
@@ -45,14 +46,42 @@ Also click on visualizations and the following graph will show.
  ![OpenSearch Dashboards - Document Details](../images/image-observability4.png)
 You can save this as a Visualization.
 
-## Step 4: Review Dashboards
-First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Observability** \ **Dashboards**. Click on **[Logs] Web traffic Panel** (this is a default dashboard). 
 
-   ![OpenSearch Dashboards - Document Details](../images/image-observability5.png)
-This dashboard can be used for dev-ops. You can **Add Visualization** in the right upper corner. This can be an existing visualization, or you can create a new one.
-   ![OpenSearch Dashboards - Document Details](../images/image-observability6.png)
+## Step 5: Create a notebook
+An OpenSearch Dashboards notebook is an interface that lets you easily combine code snippets, live visualizations, and narrative text in a single notebook interface. Notebooks let you interactively explore data by running different visualizations that you can share with team members to collaborate on a project.
 
-The added visualization will appear in the Dashboard.
+
+First, connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Observability** \ **Notebooks**. 
+Click on **Create notebook** and provide a name. 
+Click on "Add Code block", afterwards you will be able to add additional Paragraphs, which can be Code blocks or visualizations. 
+
+Enter the following code to retrieve the latest logs:
+
+```html
+   <copy>%ppl source=opensearch_dashboards_sample_data_logs | head 20</copy>
+```
+You can run the code by clicking on "Run Input". The result will be something like the following:
+
+ ![OpenSearch Dashboards - Document Details](../images/image-observability7.png)
+
+Click on Add Paragraph, to add a new Code blocks. 
+
+Enter the following code:
+
+```html
+   <copy>%ppl source=opensearch_dashboards_sample_data_logs | where response='503' or response='404' | stats count() as ip_count, sum(bytes) as sum_bytes by host, response |rename response as resp_code |sort - ip_count, + sum_bytes |eval per_ip_bytes=sum_bytes/ip_count, double_per_ip_bytes = 2 * per_ip_bytes</copy>
+```
+You can run the code by clicking on "Run Input". The result will be something like the following:
+
+ ![OpenSearch Dashboards - Document Details](../images/image-observability8.png)
+
+Click on "Add Paragraph", to add a new Visualization. Specify the following **[Logs]Visitors by OS**
+Make sure that the time range is correct.
+You should see a graph similar to the following one.
+   ![OpenSearch Dashboards - Document Details](../images/image-observability9.png)
+
+You can add more Code blocks and visualizations to the notebook.
+
 
 ## Acknowledgements
 
