@@ -47,7 +47,7 @@ Also click on visualizations and the following graph will show.
 You can save this as a Visualization.
 
 
-## Step 5: Create a notebook
+## Step 4: Create a notebook
 An OpenSearch Dashboards notebook is an interface that lets you easily combine code snippets, live visualizations, and narrative text in a single notebook interface. Notebooks let you interactively explore data by running different visualizations that you can share with team members to collaborate on a project.
 
 
