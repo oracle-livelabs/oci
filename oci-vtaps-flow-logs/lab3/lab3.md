@@ -294,11 +294,9 @@ Let's begin.
 
 4. In a new window/tab, log into the client to initiate traffic. Using a separate window/tab will allow us to have an SSH session open to each compute instance.
 
-    In the command shell ssh to the client compute instance.
+    In the command shell ssh to the client compute instance. Take note of the **"Private IP"** of the **"client"** instance
 
-      * Note the **"Private IP"** of the **"client"** instance
-
-        ![developertools-sshclient](images/developertools-sshclient.png)
+    ![developertools-sshclient](images/developertools-sshclient.png)
 
       * Command: SSH to the client: **"ssh -i .ssh/id_rsa opc@10.1.1.11"**
       * When prompted, "Are you sure you want to continue connecting (yes/no)? **"yes"**
