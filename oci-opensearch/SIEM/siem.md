@@ -124,19 +124,22 @@ Upload the Apache access logs data utilizing the following command:
 </copy>
 ```
 
-In the OpenSearch Dashboard  go to **Security Analytics** \ **Findings**. and you should be able to see the Findings and Alerts based on the last logs uploaded.
+In the OpenSearch Dashboard  go to **Security Analytics** \ **Overview**. and you should be able to see the Findings and Alerts based on the last logs uploaded.
    
 
 
-   ![OpenSearch Dashboards - Document Details](../images/image-siem9.png)
-
-And also more details in:
-
-
-   ![OpenSearch Dashboards - Document Details](../images/image-siem10.png)
-
+   ![OpenSearch Dashboards - Document Details](../images/image-siem11.png)
 
 You can see all the details about the Findings and Alerts, time, which detectors triggered them etc.
+
+
+   ![OpenSearch Dashboards - Document Details](../images/image-siem12.png)
+
+
+In the OpenSearch Dashboard  go to **Security Analytics** \ **Findings**. and you should be able to see the Findings based on the last logs uploaded.
+
+
+   ![OpenSearch Dashboards - Document Details](../images/image-siem13.png)
 
 ## Acknowledgements
 
