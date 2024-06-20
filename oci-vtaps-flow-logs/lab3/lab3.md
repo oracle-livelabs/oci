@@ -299,7 +299,7 @@ Let's begin.
     ![developertools-sshclient](images/developertools-sshclient.png)
 
       * Command: SSH to the client: **"ssh -i .ssh/id_rsa opc@10.1.1.11"**
-      * When prompted, "Are you sure you want to continue connecting (yes/no)? **"yes"**
+      * When prompted, "Are you sure you want to continue connecting (yes/no)?" **"yes"**
 
     In the command shell issue the command to ssh from the client to the server. This traffic will be mirrored to the VTAP compute instance for analysis.
 
