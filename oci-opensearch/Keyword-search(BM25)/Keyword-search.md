@@ -18,7 +18,7 @@ Confirm that the OpenSearch cluster is version 2.11 or higher. To create a clust
 First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Management** and click on **Dev Tools**. You will be able to type the commands in the Console.
 Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard.
 
-## Step2: Create a Search Index without the k-NN plugin
+## Step 2: Create a Search Index without the k-NN plugin
 Connect to the Dashboard and go to **Management** and click on **Dev Tools**. You will be able to type the commands in the Console.
 - Create a Search Index without the k-NN plugin
 
@@ -107,7 +107,7 @@ Response:
   }
 }   
 ```
-## Step3: Run a keyword search
+## Step 3: Run a keyword search
 The following example query searches for the words antibiotics in the conversation-demo-index:
 
 ```html
