@@ -9,7 +9,7 @@ Estimated Time: 20 minutes
 
 In this lab, you will:
 Use an existing Cluster.
-Use the steps in this walkthrough to set up semantic search(without RAG), using an OCI Generative AI connector.
+Use the steps in this walkthrough to set up semantic search (without RAG), using an OCI Generative AI connector.
 The connector uses the Cohere embed model hosted by Generative AI.
 
 ## Step1: Prerequisites
@@ -20,7 +20,7 @@ You will also need a subscription to the Chicago or Frankfurt regions, which hos
 
 Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard.
 
-First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Management** and click on **Dev Tools**. You wil be able to type the commands in the Console.
+First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Management** and click on **Dev Tools**. You will be able to type the commands in the Console.
 
 1. Create a policy to grant access to Generative AI resources. The following policy example includes the required permission:
  ```html
