@@ -12,7 +12,7 @@ In this lab, you will use an existing Cluster.
 Use the steps in this walkthrough to create an index and use the keyword search capabilities of OCI Search with OpenSearch.
 
 
-## Step1: Prerequisites
+## Step 1: Prerequisites
 
 Confirm that the OpenSearch cluster is version 2.11 or higher. To create a cluster, see Creating an OpenSearch Cluster (LABs 1,2).
 First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Management** and click on **Dev Tools**. You will be able to type the commands in the Console.

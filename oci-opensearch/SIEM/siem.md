@@ -13,7 +13,7 @@ In this lab, you will:
 - Create Detectors, and Detection rules in Security Analytics
 - Generate findings and alerts based on new logs uploaded into OpenSearch
 
-## Step1: Prerequisites
+## Step 1: Prerequisites
 Confirm that the OpenSearch cluster is version 2.11 or higher.  This is the latest version. To create a cluster, see Creating an OpenSearch Cluster (LABs 1,2). You will have to connect to the OpenSearch Dashboard.
 Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard.
 

@@ -12,7 +12,7 @@ In this lab, you will:
 
 Use the steps in this walkthrough to set up and use an end-to-end Retrieval-Augmented Generation (RAG) pipeline in OCI Search with OpenSearch, using an OCI Generative AI connector.
 The connector uses the Cohere embed model hosted by Generative AI. 
-## Step1: Prerequisites
+## Step 1: Prerequisites
 
 Confirm that the OpenSearch cluster is version 2.11. To use an OCI Generative AI connector with OCI Search with OpenSearch, you need a cluster configured to use OpenSearch version 2.11. By default, new clusters are configured to use version 2.11. To create a cluster, see Creating an OpenSearch Cluster.
 Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard.
