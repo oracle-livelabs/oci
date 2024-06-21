@@ -4,7 +4,7 @@
 
 OCI Search Service with OpenSearch is an insight engine offered as an Oracle-managed service. OpenSearch latest version introduces enhanced AI capabilities through retrieval-augmented generation (RAG) pipelines, conversational and semantic search functionalities, and advanced security analytics and observability features. Oracle automates, without any downtime, activities that include patching, updating, upgrading, backing-up, and resizing of the service.
 
-Estimated Time: 90 minutes
+Estimated Time: 120 minutes
 
 ### Objectives
 
