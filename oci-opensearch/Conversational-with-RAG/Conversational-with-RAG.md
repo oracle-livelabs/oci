@@ -17,7 +17,7 @@ The connector uses the Cohere embed model hosted by Generative AI.
 Confirm that the OpenSearch cluster is version 2.11. To use an OCI Generative AI connector with OCI Search with OpenSearch, you need a cluster configured to use OpenSearch version 2.11. By default, new clusters are configured to use version 2.11. To create a cluster, see Creating an OpenSearch Cluster.
 Please refer to **LAB2** **Task3** on how to connect to the OpenSearch Dashboard.
 
-You will also need a subscription to the Chicago or Frankfurtregions, which host the OCI GenAI infrastructure.
+You will also need a subscription to the Chicago or Frankfurt regions, which host the OCI GenAI infrastructure.
 
 First connect to the OpenSearch Dashboard (you have to provide the username/password) and go to **Management** and click on **Dev Tools**. You will be able to type the commands in the Console.
 
@@ -52,7 +52,7 @@ If you're new to policies, see Getting Started with Policies and Common Policies
 
 
 
-## Step 2: Register Model Group For RAG
+## Step 2: Register Model Group for RAG
 Steps 2-6 will guide you to create a RAG pipeline.
 
 Register a model group using the register operation in the Model Group APIs, as shown in the following example:
@@ -230,7 +230,7 @@ Make note of the model_id returned in the response:
   "model_id": "<model_ID>"
 }
 ```
-## Step 5: Deploy the Model fro RAG
+## Step 5: Deploy the Model for RAG
 Use the model ID from the previous step to deploy the model to the cluster so it can be used in any pipeline, as shown in the following example:
 ```html
    <copy>POST /_plugins/_ml/models/<model_ID>/_deploy</copy>
@@ -262,7 +262,7 @@ Create a RAG pipeline using the model_id from the previous step, as shown in the
   ]
 }</copy>
 ```
-## Step 7: Create/Reister/Depoly a model for kNN
+## Step 7: Create/Register/Deploy a model for kNN
 
 Confirm that the OpenSearch cluster is version 2.11. To use an OCI Generative AI connector with OCI Search with OpenSearch, you need a cluster configured to use OpenSearch version 2.11. By default, new clusters are configured to use version 2.11. To create a cluster, see Creating an OpenSearch Cluster.
 
@@ -524,7 +524,7 @@ Response:
 
 ## Step 9: Perform RAG with Hybrid Search
 
-You can  perform RAG with hybrid search as the retriever. Using hybrid search instead of BM25 can significantly improve the quality of the retriever. This is because the hybrid search retriever uses a deployed model to embed the user query into the same hyperspace as the indexed documents and then performs a pure semantic search to retrieve the most relevant documents to augment the LLM knowledge. If the retriever doesn't do a good job at retrieving and supplying the most relevant context to the LLM, the LLM model response isn't as accurate.
+You can perform RAG with hybrid search as the retriever. Using hybrid search instead of BM25 can significantly improve the quality of the retriever. This is because the hybrid search retriever uses a deployed model to embed the user query into the same hyperspace as the indexed documents and then performs a pure semantic search to retrieve the most relevant documents to augment the LLM knowledge. If the retriever doesn't do a good job at retrieving and supplying the most relevant context to the LLM, the LLM model response isn't as accurate.
 
 Using the conversation-demo-index-knn index from Create Search Index with KNN plugin,which already uses an ingestion pipeline with a deployed pretrained sentence transformer model, the RAG query uses hybrid search instead of BM5 search, as shown in the following example(use the kNN model_id):
 ```html
@@ -670,7 +670,7 @@ Response:
 ```
 
 - Conversational Search with Hybrid Search Retriever
-Try the following(use the kNN model_id):
+Try the following (use the kNN model_id):
 ```html
    <copy>GET /conversation-demo-index-knn/_search?search_pipeline=demo_rag_pipeline
 {
