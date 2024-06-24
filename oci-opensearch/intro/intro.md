@@ -19,5 +19,5 @@ In this workshop, you will:
 
 ## Acknowledgements
 
-* **Author** - OpenSearch Team
+* **Author** - George Csaba
 * **Last Updated By/Date** - George Csaba, June 2024
