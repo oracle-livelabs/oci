@@ -211,7 +211,7 @@ Make note of the model ID returned when you register and deploy the model.
         "properties": {
             "passage_embedding": {
                 "type": "knn_vector",
-                "dimension": 384,
+                "dimension": 1024,
                 "method": {
                     "name":"hnsw",
                     "engine":"lucene",
