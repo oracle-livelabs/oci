@@ -175,7 +175,7 @@ A response similar to the following is returned:
 
 - Create Search Index with KNN plugin
 
-To utilize hybrid search instead of BM25 to enrich the retriever part of the RAG pipeline, you need to setup an ingestion pipeline and use an imported pretrained model so that documents embeddings are created at ingestion time.
+To leverage hybrid search instead of BM25 to enrich the retriever part of the RAG pipeline, you need to setup an ingestion pipeline and use an imported pretrained model so that documents embeddings are created at ingestion time.
 
 1. For the purposes of this walkthrough, import, register and deploy an OpenSearch pretrained model using the steps described in Custom Models. This includes uploading the model file to an Object Storage bucket, and then specifying the model file's Object Storage URL when you register the model.
 
