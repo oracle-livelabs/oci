@@ -10,7 +10,7 @@ Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in
 
 A Subnet is a subdivision of a VCN. Each subnet in a VCN consists of a contiguous range of IPv4 addresses and optionally IPv6 addresses that do not overlap with other subnets in the VCN.
 
-Logs contain critical diagnostic information that tells you how your resources are performing and being accessed. Log groups are logical containers for organizing logs. Logs must always be associated with log groups and you must create a log group to enable the desired log. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Logging/home.htm) for more information on Logging.
+Logs contain critical diagnostic information that tells you how your resources are performing and being accessed. Log groups are logical containers for organizing logs. Logs must always be associated with log groups and you must create a log group to enable the desired log. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Logging/home.htm) for more information on Logging or [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/vcn-flow-logs.htm#vcn_flow_logs) for more details on VCN Flow Logs.
 
 ### Objectives
 
@@ -40,37 +40,6 @@ Let's begin.
         ![region-home](images/region-home.png)
 
         **Note**: This lab can be completed in any OCI region you have access to with the required resources. Based on your account, select the desired region to complete the exercise. For the purpose of this lab we will use the **"US East (Ashburn)"** region.
-
-## Task 1: Create Log Group
-
-With log groups, you do not have to rely on complex compartment hierarchies to secure your logs. We will create a log group to facilitate the flow logs in the section to come.
-
-Let's begin.
-
-1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Observability and Management** and click on **Log Groups**.
-
-    * Click the Navigation Menu (top left corner)
-    * Click **"Observability and Management"**
-    * Click **"Log Groups"**
-
-        ![loggroup-navigation](images/loggroup-navigation.png)
-
-2. In the Log Group tables, click **Create Log Group** to create the log group.
-
-    * Click **"Create Log Group"**
-
-        ![loggroup-createloggroups](images/loggroup-createloggroups.png)
-
-    In the log group configuration window, use the data below to create the log group:
-
-    * Name: **"cw-log-grp"**
-    * Click **"Create"**
-
-        ![loggroup-create](images/loggroup-create.png)
-
-3. The **Log Group** is created, you can now move forward to the **Next Task**.
-
-    ![loggroup-list](images/loggroup-list.png)
 
 ## Task 2: Create a VCN (Virtual Cloud Network)
 
@@ -145,53 +114,101 @@ Let's begin.
 
     ![subnet-list](images/subnet-list.png)
 
-## Task 4: Enable Flow Logging
+## Task 4: Create Log Group
 
-Now that we have created the three subnets for use within the lab, let's proceed with enabling Flow Logging for each subnet. There are many options for enabling Flow Logs, for the purpose of this exercise we will enable VCN Flow Logs for Subnets.
+With log groups, you do not have to rely on complex compartment hierarchies to secure your logs. We will create a log group to facilitate the flow logs in the section to come.
 
 Let's begin.
 
-1. In the **Subnets** table, click the first subnet.
+1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Observability and Management** and click on **Log Groups**.
 
-    * Click **"lab-vcn-snet1"**
+    * Click the Navigation Menu (top left corner)
+    * Click **"Observability and Management"**
+    * Click **"Log Groups"**
 
-        ![subnet-snet1](images/subnet-snet1.png)
+        ![loggroup-navigation](images/loggroup-navigation.png)
 
-2. In the **Subnets** details view, select **Logs** under Resources and in the Enable Log Column for the **subnet** click on **Not enabled**. Once selected the status for the subnet will then transition to **Enabled**.
+2. In the Log Group tables, click **Create Log Group** to create the log group.
 
-    * Click **"Logs"**
-    * Click radio button next to **"Not Enabled"**
+    * Click **"Create Log Group"**
 
-        ![subnet-logs](images/subnet-logs.png)
+        ![loggroup-createloggroups](images/loggroup-createloggroups.png)
 
-3. In the Enable Log configuration leave all defaults and click **Enable Log**.
+    In the log group configuration window, use the data below to create the log group:
 
-    * Confirm the Log Group: **"cw-log-grp"**
-    * Click **"Enable Log**
+    * Name: **"hol-log-grp"**
+    * Click **"Create"**
 
-        ![subnet-enablelog](images/subnet-enablelog.png)
+        ![loggroup-create](images/loggroup-create.png)
 
-4. In the navigation path below the top menu bar, click **hol-vcn** and repeat the steps 1, 2 and 3 for the second subnet.
+3. The **Log Group** is created, you can now move forward to the **Next Task**.
 
-    ![subnet-navigationholvcn](images/subnet-navigationholvcn.png)
+    ![loggroup-list](images/loggroup-list.png)
 
-    * Click **"hol-vcn-sbnet2"**
-    * Click **"Logs"**
-    * Click radio button next to **"Not Enabled"**
-    * Confirm the Log Group: **"cw-log-grp"**
-    * Click **"Enable Log**
+## Task 4: Create VCN Flow Log
 
-5. In the navigation path below the top menu bar, click **hol-vcn** and repeat the steps 1, 2 and 3 for the third subnet.
+With VCN Flow Logs, you can capture network traffic information to support monitoring and security needs. We will enable the flow logs in the section below.
 
-    ![subnet-navigationholvcn](images/subnet-navigationholvcn.png)
+Let's begin.
 
-    * Click **"hole-vcn-sbnet3"**
-    * Click **"Logs"**
-    * Click radio button next to **"Not Enabled"**
-    * Confirm the Log Group: **"cw-log-grp"**
-    * Click **"Enable Log"**
+1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and click on **Flow logs**.
 
-6. Click **Oracle Cloud** in the top left of the menu bar to return to the home page.
+    * Click the Navigation Menu (top left corner)
+    * Click **"Networking"**
+    * Click **"Flow logs"**
+
+        ![loggroup-navigation](images/flowlogs-navigation.png)
+
+2. In the Flow log configurations tables, click **Enable flow logs** to create the log group.
+
+    * Click **"Enable flow logs"**
+
+        ![loggroup-createloggroups](images/flowlogs-enableflowlogs.png)
+
+3. In the Enable flow logs **"Basic information"** window, use the data below:
+
+    Name and Flow log destination
+
+    * File name prefix: **"hol-flow-log"**
+    * Select **"hol-log-grp"**
+
+        ![loggroup-create](images/flowlogs-loggroup.png)
+
+    Capture filter
+
+    * Select **"Select a capture filter"**
+    * Select **"Create new capture filter"**
+    * Select Sampling rate: **"100%"**
+
+        ![loggroup-create](images/flowlogs-capturefilter.png)
+
+4. In the Enable flow logs **"Enablement points"** window, use the data below:
+
+    * Click **"Add enablement points"**
+    * Select **"Virtual cloud network"**
+    * Click **"Continue"**
+
+        ![loggroup-create](images/flowlogs-vcn.png
+
+    * Virtual cloud network: **"hol-vcn"**
+    * Click **"Add enablement points"**
+    * Click **"Next"**
+
+        ![loggroup-create](images/flowlogs-enablementpoints.png
+
+5. In the Enable flow logs **"Review and create"** window, use the data below:
+
+    * Click **"Enable flow logs"**
+
+        ![loggroup-create](images/flowlogs-enable.png
+
+6. **Flow Logs** are now enabled, you can now move forward to the **Next Task**.
+
+    ![loggroup-list](images/flowlogs-active.png)
+
+    **Note**: It may take a minutes to transition to active.
+
+7. Click **Oracle Cloud** in the top left of the menu bar to return to the home page.
 
     * Click **"Oracle CLoud"**
 

@@ -49,6 +49,7 @@ Let's begin.
 2. In the Network load balancer **Add details** screen, update the **Load balancer name** and scroll down to **Choose networking** section to update the subnet then click **Next**.
 
     * Load balancer name: **"nlb"**
+    * Virtual cloud network: **"hol-vcn"**
     * Subnet: **"hol-vcn-snet3"**
     * Click **"Next"**
 
@@ -118,7 +119,7 @@ Let's begin.
     Name and VCN
 
     * Name: **"vtap"**
-    * VCN: **"vcn-lab"**
+    * VCN: **"hol-vcn"**
 
       ![vtap-nameandvcn](images/vtap-nameandvcn.png)
 
