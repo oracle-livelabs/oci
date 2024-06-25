@@ -125,7 +125,7 @@ cohere.command-r-16k  payload
              "action_type": "predict",
              "method": "POST",
              "url": "https://${parameters.endpoint}/20231130/actions/chat",
-             "request_body": "{\"compartmentId\":\"<YOUR_COMPARTMENT_OCID>\",\"servingMode\":{\"modelId\":\"cohere.command-r-16k\",\"servingType\":\"ON_DEMAND\"},\"chatRequest\":{\"message\":\"${parameters.prompt}\",\"apiFormat\":\"COHERE\"}}",
+             "request_body": "{\"compartmentId\":\"<YOUR_COMPARTMENT_OCID>\",\"servingMode\":{\"modelId\":\"cohere.command-r-16k\",\"servingType\":\"ON_DEMAND\"},\"chatRequest\":{\"message\":\"${parameters.prompt}\",\"maxTokens\":600,\"temperature\":1,\"frequencyPenalty\":0,\"presencePenalty\":0,\"topP\":0.75,\"topK\":0,\"isStream\":false,\"chatHistory\":[],\"apiFormat\":\"COHERE\"}}",
              "post_process_function": "def text = params['chatResponse']['text'].replace('\n', '\\\\n');\n return '{\"name\":\"response\",\"dataAsMap\":{\"inferenceResponse\":{\"generatedTexts\":[{\"text\":\"' + text + '\"}]}}}'"
  
          }
