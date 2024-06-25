@@ -151,7 +151,7 @@ Let's begin.
     * Source: **"Find OCI resource"**
     * Source type: **"Compute instance (VNIC)"**
     * Compute Instance (VNIC): **"client"**
-    * Source IPv4 address: **"10.1.1.11"**
+    * Source IPv4 address: **"10.2.1.11"**
     * Destination Port: **"80"**
     * Click **"Run analysis"**
 
