@@ -131,7 +131,7 @@ Let's begin.
 
     Primary VNIC Information:
     * VCN: **"hol-vcn1"**
-    * Subnet: **"hol-vcn1-snet1"**
+    * Subnet: **"hol-vcn1-snet"**
 
         ![compute-vnicinformation](images/compute-vnicinformation.png)
 
@@ -160,7 +160,7 @@ Let's begin.
     * Name: **"server"**
     * Shape: **"VM.Standard.A1.Flex (Always Free-Tier)"** or desired shape
     * VCN: **"hol-vcn2"**
-    * Subnet: **"hol-vcn-snet2"**
+    * Subnet: **"hol-vcn2-snet"**
     * Private IPv4 Address: **"Manually assign private IPv4 address"**
     * IPv4 address: **"10.2.1.11"**
     * Select **"Paste public keys"**
