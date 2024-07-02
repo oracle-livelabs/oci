@@ -1,0 +1,1 @@
+This is an image of the flow traversal in the Conversation tester. This flow, which branches off from the main flow, has the following states: GenerateEmail, GetCompanyDetails, GenerateEmail, and showLLMError.

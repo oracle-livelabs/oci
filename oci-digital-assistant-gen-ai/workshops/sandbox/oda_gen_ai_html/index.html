@@ -1,0 +1,623 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" class="letter-style">
+<head>
+	<!-- Template date: January 2023 -->
+	<!-- If applicable, enter the OLL content entry ID of your tutorial for the callback feature for 'content' below -->
+	<meta name="contentid" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Enter a title for your tutorial. Use sentence casing and imperative verb, not gerund (E.g., Create a virtual cloud network) -->
+	<!-- The title is shown in the browser tab, search results, and in search history. -->
+	<title>Access OCI Generative AI from Your Skill</title>
+	<!-- Enter a description for your tutorial. The description is shown in search results. -->
+	<meta name="description" content="Learn how connect your skill to the Cohere LLM (Large Language Model) and engineer an AI prompt.">
+	
+	<meta name="generator" content="HTML Tutorial">
+    <meta name="robots" content="INDEX, FOLLOW">
+
+    <!-- Additional metadata for Learn 
+    <meta name="dcterms.extent" content="[Duration]">
+    <meta name="dcterms.educationLevel" content="[Level]">
+    <meta name="dcterms.audience" content="Application Administrator,Application DBA,Application Developer,Business Analyst,Business Owner,Business User,Data Scientist,DevOps Engineer,Developer,IT,Low Code Developer,Power User,Systems DBA,Technology Manager ">
+    <meta name="keywords" content="APIs REST/SOAP,Ansible,Big Data,Blockchain,CI/CD,Chatbots,Cloud Native,Data Integration,Data Warehouse,Database,HPC,IAM,IoT,Java,JavaScript,Kubernetes,Microservices,Migration,Mobile,Node.js,PL/SQL,Python,SOA,Security,Serverless,Storage,Terraform">
+	<meta name="dcterms.product" content="[Products]">  -->
+
+	<link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+	<link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+	<script>
+	document.write('<style type="text/css">');
+	document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+	document.write('</style>');
+	</script>
+	<script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+	<script>
+	if(window.require === undefined) {
+		document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+		document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+	}
+	</script>
+</head>
+
+<body>
+	<div class="noscript alert alert-danger text-center" role="alert"> <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content </div>
+	<article>
+		<div class="letterstyle">
+			<section>			  
+			  <h2 id="introduction">Introduction</h2>
+
+			  <p>This 45-minute tutorial shows you how to integrate generative AI into your skill by connecting it to a large language model, or LLM. An LLM is an AI system that has been trained on vast amounts of text data. These models can be trained on various domains to perform a variety of tasks, including audience-specific text summarization and sentiment analysis of chat histories.</p>
+				<p>By integrating your skill with an LLM, you enable it to not only field a range of user input, but also to respond with context-appropriate answers in a human-like tone. To help the LLM predict the most likely words or phrases for its responses, you send it the appropriate context and instructions in a block of text known as a prompt. In response, the LLM generates a completion, a sequence of words or phrases that it believes are the most probable continuation of the prompt. </p>
+				<h3>Scenario</h3>
+				<p>For this tutorial, the LLM that you're going to integrate a skill with is the <code>cohere.command</code> model that's accessed through <a href = "https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm">Oracle Cloud Infrastructure (OCI) Generative AI</a>.  The skill will use this model to generate [[ ]].</p>
+				
+				<h3 id="objectives">Objectives</h3>
+				
+				<ul>
+					<li>Create a service that provides access to the <code>cohere.command</code> model via Generative AI to your Oracle Digital Assistant instance.</li>
+					<li>Create an event handler that transforms the REST payloads to and from the format used by Oracle Digital Assistant.</li>
+					<li>Add a state to the dialog flow that connects users to the Generative AI service.</li>
+					<li>Add the  prompt that describes the email to the  model.</li>
+					<li>Test the prompt.</li>
+				</ul>
+<!-- ==================== Task 1 Begin ==================== --> 				<section>
+
+ <h2 id="task_one">Task 1: Explore the Sample Skill</h2>
+ <p>First, you'll need to create your own working copy of the skill:
+ <ol>
+			    <li>With the Oracle Digital Assistant UI open in your browser, click <img src="images/menu.png" alt="main menu icon"> to open the side menu.</li>
+			    <li>Click <strong>Development</strong> and then select <strong>Skills</strong>.</li>
+				
+			    <img src="images/left_menu_skills.png" alt="A description of this image follows.">
+				 
+							  <li>Click <img src="images/menu.png" alt="main menu icon"> again to collapse the side menu.</li>
+		  <li>Within the tile for [[]], click the Options menu icon <img src="images/tile_menu.png" alt="The tile menu icon">.</li>
+							  <li>Select <strong>Clone</strong>.</li>
+							  <li>In the Display Name field, enter &lt;YourInitials&gt;[[ ]]. </li>
+							  <li>Select <strong>Open cloned skill afterwards</strong>. Then click <strong>Clone</strong>.</li>
+ </ol>
+<h3>Review the Artifacts</h3>
+If it's not already open, you can open your skill by clicking the tile. Then take a look at the following artifacts:
+ <ul>
+							    <li>Intents <img src="images/intent_icon.png" alt="The Intents icon"> -- The [[ ]] intent.</li>
+							    <li>Entities <img src="images/entities_icon.png" alt="The Entities icon"> -- The [[ ]] composite bag that contains [[ ]]. 
+							    </li>
+							    <li>Flows <img src="images/flows_inline.png" alt="The Flows icon"> -- The starter flow, [[ ]], which is mapped to the [[ ]] intent. This flow has two states: [[ ]], which resolves the [[ ]] composite bag entity, and the  [[ ]] state, which returns the payloads from the  [[ ]] REST service. The flow also has the following flow-scoped variables:
+							      <table width="200" border="1">
+							        <tr>
+							          <th scope="col">Variable Name</th>
+							          <th scope="col">Value</th>
+						            </tr>
+							        <tr>
+							          <td>Variable</td>
+							          <td>Value </td>
+						            </tr>
+							        <tr>
+							          <td>Variable</td>
+							          <td>Value</td>
+						            </tr>
+							        <tr>
+							          <td>Variable</td>
+							          <td>Value</td>
+						            </tr>
+						          </table><div class="infoboxnote">
+                    <p class="notep1">Note:</p>
+                    Check the status of the <strong>Train</strong> button to make sure that training has started. </div>
+	      </li>
+	    </ul> 
+							 
+		    </li></ol>
+		  </section>
+<!-- ==================== Task 1 End ======================= -->          
+			<!-- ==================== Task 2 Begin ==================== --> 				<section>
+				<h2 id="task_two">Task 2: Connect the Skill to the Generative AI <code>cohere.command</code> Model</h2>
+				<p>We're now going to enable the skill to access the Generative AI <code>cohere.command</code> LLM service by creating a custom component with an event handler that transforms the REST payloads into formats that are accepted by both Cohere's provider and Oracle Digital Assistant. </p>
+			  <p>Complete the following steps:</p>
+				<ol>
+					<li>Click <strong>Components</strong> <img src="images/components_icon_inline.png" alt="The Components icon"> in the left navbar.</li><img src="images/components_leftnavbar.png" alt="The Components icon in the left navbar">
+					<li>Click <strong>Add Service</strong>.</li>
+					<li>In the Create Service dialog:
+                    <ul>
+                      <li> Name the service  <code>GenAI</code>.</li>
+                      <li>Accept the default setting, <strong>Embedded Container</strong>.</li>
+                      <li>Select <strong>New Component</strong>.</li>
+                      <li>Enter <code>GenAI</code> as the component name</li>
+                      <li>Select <strong>LLM Transformation</strong> from the Component Type drop down list.</li>
+                      <img src="images/component_type_dropdown.png"images/component_type_dropdown.png" alt="The Component Type dropdown menu in the Create Service dialog">
+                      
+                      
+                      
+                      <li>Select <strong>Cohere</strong> (located under <strong>Oracle Generative AI</strong> &gt; <strong>Generate Text</strong>).</li><img src="images/transformation_handler_template_dropdown.png" alt="The Template drop down menu in the Creaate Service dialog.">
+                    </ul>
+					</li>
+					<li>Click <strong>Create</strong>.</li>
+                    <figure><img src="images/create_rest_service_event_handler_dialog.png" alt="The Create Service Dialog"> 
+							<figcaption><a href="files/create-vcn-dialog.txt">Description
+							of the illustration</a></figcaption>
+				  </figure> <br>
+						The Edit Component page opens after the service has been deployed, displaying the template generated for the Cohere Command model as accessed through Generative AI.<figure><img src="images/handler_template.png" alt="The Edit Component Code page"> 
+							<figcaption><a href="files/handler_template.txt">Description
+							of the illustration</a></figcaption>
+						</figure><br>
+ Its transformation handlers call the following methods that  map the model-specific payload format to the interface used by Oracle Digital Assistant, which is known as Common LLM Interface (CLMI). 
+                        <ul>
+      <li><code>transformRequestPayload</code></li><li><code>transformResponsePayload</code></li>
+                  <li><code>transformErrorResponsePayload</code></li></ul>  
+                        <p>Because you selected the Generative AI Cohere template for text generation, these handlers already include the <code>cohere.command</code>-specific transformation code. No editing is required. If your skill calls a non-Cohere model, then  you'll need to manually update the handlers.</p>
+                        <li>Click <strong>Close</strong> (located at the upper right) to return to the Components page.</li><img src="images/close_editor.png" alt="The deployment status indicator message."></li><li>Ensure that <strong>Service Enabled</strong> (the default setting) is switched on.
+					</li><figure><img src="images/services_page.png" alt="The Create Service Dialog"> 
+							<figcaption><a href="files/services_page.txt">Description
+							of the illustration</a></figcaption>
+						</figure>
+				</ol>
+			</section>
+			<!-- ==================== Task 4 Begin ==================== --> 
+			<!-- <section>			
+				<h2 id="task_four">Task 4: Map the LLM Service Provider and Oracle Digital Assistant Requests and Responses</h2>
+                <p>The skill's requests to the LLM Service provider need to be transformed from the interface used by Oracle Digital Assistant, which is known as Common LLM Interface (CLMI) into the format that's accepted by the LLM Service provider. Likewise, the results returned from the LLM Service provider also need to be transformed into CLMI. To enable this mapping, the following REST service event handler  methods must have  provider-specific code:
+                <ul>
+                  <li><code>transformRequestPayload</code></li><li><code>transformResponsePayload</code></li>
+                  <li><code>transformErrorResponsePayload</code></li></ul><div class="infoboxnote">
+					<!--<p class="notep1">Note:</p>
+							Each provider has its own specific format, but for this tutorial, we're using the Cohere-specific handler code that we provide.</div> -->
+                  <!--<p>In this step, we're going add these transformation methods by updating the placeholder code in the event handler code editor. 
+              <figure><img src="images/handler_template.png" alt="The Event Handler Template"> 
+							<figcaption><a href="files/handler_template.txt">Description
+							of the illustration handler_template.png</a></figcaption>
+			  </figure></p>
+				<p>To open the event handler code editor and update the transformation code (in this case, for Azure OpenAI): <ol>
+					<li>Expand the service. Then select the event handler.</li><img src="images/select_handler.png" alt="The component service, expanded">
+					<li>Click <strong>Edit</strong> <img src="images/edit_icon_inline.png" alt="The Edit Component code icon"> (located at the upper right) to open the editor. </li>
+					<li>Replace the <code>transformRequestPayload</code> handler event method code (around Lines 23-25) with the following:
+					 <!-- <pre>transformRequestPayload: async (event, context) => {
+  let messages = event.payload.messages;
+  let contentString = '';
+ 
+  if (messages.length > 1) {
+ 
+    const message = messages[messages.length - 2];
+    contentString += `Previous message : ${message.content}\n`;
+ 
+    const refinement = messages[messages.length - 1];
+    contentString += `${refinement.content}`;
+ 
+  } else if (messages.length === 1) {
+    const message = messages[0];
+    contentString = message.content;
+  }
+ 
+  let payload = {
+    "model_name": "command",
+    "input": contentString,
+    "config": {
+      "max_tokens": 512,
+      "presence_penalty": 0.01,
+      "temperature": 0.01,
+      "top_p": 0.95,
+      "top_k": 50
+    }
+  };
+ 
+ 
+ 
+  return payload;
+},</pre><pre>    transformRequestPayload: async (event, context) => {
+      const payload = {
+        "max_tokens": event.payload.maxTokens,
+        "truncate": "NONE",
+        "return_likelihoods": "NONE",
+        "prompt": event.payload.messages.reduce((acc, cur) => `${acc}\n${cur.role}: ${cur.content}` , ''),
+        "model": "command",
+        "temperature": event.payload.temperature,
+        "stream": event.payload.streamResponse
+      };
+      return payload;
+    },</pre></li>
+				  <li>Replace the <code>transformResponsePayload</code> event method (around Lines 33-35) with the following:
+		            <pre>transformResponsePayload: async (event, context) => {
+  let llmPayload = {};
+ 
+  // 'error' field here is a stringified json object.
+  // TODO: Decode it to extract more details.
+  if (event.payload.error) {
+    llmPayload.errorCode = 'unknown';
+    llmPayload.errorMessage = event.payload.error;
+    return llmPayload;
+  }
+ 
+  // non-streaming case
+  llmPayload.candidates = [];
+  const content = event.payload.output ? event.payload.output : "";
+  llmPayload.candidates.push({
+    content: content
+  });
+ 
+ 
+  return llmPayload;
+},</pre><pre>    transformResponsePayload: async (event, context) => {
+      let llmPayload = {};
+      if (event.payload.responseItems) {
+        // streaming case
+        llmPayload.responseItems = [];
+        event.payload.responseItems.forEach(item => {
+          llmPayload.responseItems.push({"candidates": [{"content": item.text || "" }]});
+        });
+      } else {
+        // non-streaming
+        llmPayload.candidates = event.payload.generations.map( item => {return {"content": item.text || "" };});
+      }
+      return llmPayload;
+    },</pre></li>
+				  <li>Replace the <code>transformErrorResponsePayload</code> event method (around Lines 44-46) with the following:
+			      <pre>transformErrorResponsePayload: async (event, context) => {
+  let errorCode = 'unknown';
+  if (event.payload.error) {
+    if ('context_length_exceeded' === event.payload.error.code) {
+      errorCode = 'modelLengthExceeded';
+    } else if ('content_filter' === event.payload.error.code) {
+      errorCode = 'flagged';
+    }
+    return { "errorCode": errorCode, "errorMessage": event.payload.error.message };
+  } else {
+    return { "errorCode": errorCode, "errorMessage": JSON.stringify(event.payload) };
+  }
+}</pre><pre>    transformErrorResponsePayload: async (event, context) => {
+      return {"errorCode" : "unknown", "errorMessage": event.payload.message || 'unkown error'};
+    }</pre></li>
+				  <li>Check the code syntax by clicking <strong>Validate</strong>. You can find the complete code <a href="files/event_handler_code.txt">here</code></a>. Use it to replace the code in the editor if you're encountering syntax errors that you can't fix.
+
+                    <div class="infoboxnote">
+			<p class="notep1">Note:</p>
+			If you use this code, be sure to replace the <code>name</code> property in the <code>metadata</code> section with the component name that you added in <a href="#task_3">Task 3: Connect the Skill to the LLM REST Service</a>.
+				  </div> </li>
+				  <li>Click <strong>Save</strong>, then <strong>Close</strong>. Wait for the deployment to complete. When Ready displays, you can move on to the next step.</li>
+				<img src="images/service_ready.png" alt="The deployment status indicator message."></ol>
+			</section> --> 
+<!-- ==================== Task 2 End ======================= -->            
+		  <!-- ==================== Task 3 Begin ==================== --> 
+			<section>
+				<h2 id="task_three">Task 3: Define the Generative AI <code>cohere.command</code> LLM Service for the Skill</h2>
+				<p>To enable the skill to connect users to the <code>cohere.command</code> model through the dialog flow, you need to create an LLM Service. This is a skill-level service that combines one of the the instance-wide Cohere REST services with the Cohere_Command or GenAI transformation event handler that you created in the previous step. </p>
+				<ol>
+				  <li>Click <strong>Settings</strong> <img src="images/settings_icon_inline.png" alt="The Settings icon"> in the left navbar.</li><img src="images/settings_icon_left_navbar.png" alt="The Settings icon in the left navbar">
+				  <li>Open the Configuration page.</li><img src="images/settings_configuration_tab.png" alt="The Configuration tab in Settings">
+				  <li>In the Large Language Models Services section (located near the bottom of the page), click <strong>+New LLM Service</strong>.</li><figure><img src="images/large_language_models_settings_page.png" alt="The Large Language Model Section of the Configuration page."> 
+							<figcaption><a href="files/large_language_models_settings_page.txt">Description
+							of the illustration</a></figcaption>
+						</figure>
+				  <li>Complete the following fields:
+				    <ul>
+				    <li><strong>Name</strong>: Enter <code>GenAIService</code>. You'll reference on of these names when you build the dialog flow in the next step.</li>
+				    <li><strong>LLM Provider</strong>: Select the name of the LLM service. </li>
+				    <li><strong>Transformation Handler</strong>: Select <code>GenAI</code>.</li>
+				    <li>Leave the remaining properties in their default settings. Note that <strong>Default</strong> is switched on.
+                      <div class="infoboxnote">
+				<p class="notep1">Important:</p>
+				Be sure that <strong>Mock</strong> is switched off (<code>false</code>). </div></li>
+				    </ul><li> Click  the <strong>Save</strong> icon (located at the right in the Action column).  <br>
+                <img src="images/create_llm_service.png" alt="The Save service icon"></li><figure><img src="images/llm_service_completed.png" alt="The Large Language Models section of the Settings page with values. "> 
+							<figcaption><a href="files/llm_service_completed.txt">Description
+							of the illustration</a></figcaption>
+			  </figure></ol>
+		  </section>
+<!-- ==================== Task 3 End ==================== -->	          
+
+			<!-- ==================== Task 4 Begin ==================== --> 
+		  <section>			
+				<h2 id="task_four">Task 4: Integrate the Generative AI <code>cohere.command</code> Model with the Skill</h2>
+				<p>Now that the skill is connected to the LLM service, you're now going to connect your skill's users  to the model by creating a dialog flow component that can call the model and tell it what to do.  The component conveys these instructions using a prompt, which is a block of human-readable text. </p>
+				
+			  <ol>
+				  <li>Click <strong>Flows</strong> <img src="images/flows_inline.png" alt="The Flows icon"> in the left navbar.</li><img src="images/flows_leftnavbar.png" alt="The Flows icon in the left navbar">
+				  <li>Select the <strong>[[ ]]</strong> flow.</li>
+				  <img src="images/starter_flow_no_errors.png" alt="The GenerateEmail Flow">
+			    
+				  <li>In the [[ ]] state, click <img src="images/inline_component_menu_icon.png" alt="The menu icon"> and  then select <strong>Add State</strong> from the menu.</li>
+				  <img src="images/add_state.png" alt="The Add State option">
+				  <li>Select <strong>Service Integration</strong>.</li><figure><img src="images/add_state_dialog_service_integration.png" alt="The Add State dialog with Service Integration selected"> 
+							<figcaption><a href="files/add_state_dialog_service_integration.txt">Description
+					of the illustration</a></figcaption>
+						</figure>
+				  <li>Select <strong>Invoke Large Language Model</strong>.</li>
+				  <li>Enter [[ ]] in the Name field. Then click <strong>Insert</strong>.</li><figure><img src="images/add_state_dialog.png" alt="The Add State dialog with Invoke Large Language Model selected"> 
+							<figcaption><a href="files/add_state_dialog_invoke_large_language_model.txt">Description
+					of the illustration</a></figcaption>
+						</figure>
+				  The the dialog flow now includes the [[ ]] and the  [[ ]] states. 
+				  <figure><img src="images/invokeLLM_state_in_flow.png" alt="The invokeLLM state with the showError state in the dialog flow"> 
+					  <figcaption><a href="files/invokeLLM_state_in_flow.txt">Description
+					of the illustration</a></figcaption>
+</figure>
+				  <li>Click the [[ ]] state.</li>
+				  <li>In the Component tab, select <code>GenAIService</code> for the LLM Service field.<br>
+				    <figure><img src="images/llm_component_select_service.png" alt="The LLM Service field"> 
+							<figcaption><a href="files/llm_component_select_service.txt">Description
+							of the illustration</a></figcaption>
+					</figure> 
+<div class="infoboxnote">
+	  <p class="notep1">Note:</p>
+	  Select <strong>Default</strong> if you've created a single LLM Service (CohereService or GenAIService).
+</div>							 
+			    </li></ol><section>
+			      <h3>Add the Prompt and Prompt Parameters</h3><p>In this step, you're going to add the prompt that describes the type of email expected from the model.</p>
+				  <ol>
+				    <li>Click <strong>Build Prompt</strong> to open the Prompt Builder, a tool that enables you to iterate, or engineer, your prompt. </li><figure><img src="images/build_prompt_button.png" alt="The Prompt Builder"> 
+							<figcaption><a href="files/.txt">Description of the illustration
+							</a></figcaption>
+						</figure>
+			    <li>Paste the <a href="files/prompt_text.txt" target="_blank">prompt text</a> into the Prompt field. Then click <strong>Save Settings</strong> (located at the bottom right).</li><figure><img src="images/prompt_text_entered.png" alt="The Prompt Builder"> 
+							<figcaption><a href="files/.txt">Description of the illustration
+							</a></figcaption>
+						</figure>
+				  <li>The prompt text references the the variable values that are passed in for the [[ ]], [[ ]], [[ ]], and [[ ]] parameters. For example:
+				    <pre>Example text here.
+</pre>
+				    For the LLM to incorporate these parameters, they need values. Because these values are missing, the editor notes errors.
+                    
+			    You will add these values in the next step.</li>
+				  <figure><img src="images/undefined_parameters.png" alt="Errors for undefined parameter values."> 
+							<figcaption><a href="files/undefined_parameters..txt">Description of the illustration
+							</a></figcaption>
+				</figure>
+				  To provide the LLM with the parameter values it needs to generate the email, you need to provide FreeMarker expressions for each parameter. Because the parameters provide the LLM with values from various sources (composite bag entity items and the OpportunityDetails REST service), the FreeMarker syntax will vary. To add these parameters:
+				  <ul>
+				    <li>Click <strong>Add</strong> <img src="images/add_icon.png" alt="The Add icon"> next to Prompt Parameters.</li><img src="images/prompt_parameters.png"prompt_parameters.png" alt="The Prompt Parameters label">
+				    <li>Enter the parameter name in the Name field.
+				    <li>Enter the static value or FreeMarker iterator expression in the Value field.</li>
+				    <li>Click <strong>Save</strong> <img src="images/apply_icon_inline.png" alt="The Apply icon">.<br><figure><img src="images/add_prompt_parameters.png" alt="The Prompt Parameters section fo the Component page"> 
+							<figcaption><a href="files/add_prompt_parameters.txt">Description of the illustration
+							</a></figcaption>
+				</figure>Add the following parameters and expressions.
+				      <table width="200" border="1">
+				        <tr>
+				          <th scope="col">Parameter</th>
+				          <th scope="col">FreeMarker Expression</th>
+				          <th scope="col">Variable Value Source</th>
+				          </tr>
+				        <tr>
+				          <td><code>Name</code></td>
+				          <td><pre>${cb.value.listItem.value}</pre>                          </td>
+				          <td>Entity Name</td>
+				          </tr>
+				        <tr>
+				          <td><code>Name</code></td>
+				          <td><pre>${cb.value.string_nonEntityListItem}</pre></td>
+				          <td>Entity Name</td>
+				          </tr>
+				        <tr>
+				          <td><code>Name</code></td>
+				          <td><pre>${variable_name}</pre></td>
+				          <td>Flow Variable Name</td>
+				          </tr>
+				        <tr>
+				          <td><code>Name</code></td>
+				          <td><pre>${variable_name}</pre></td>
+				          <td>Flow  Variable Name</td>
+				          </tr>
+			          </table>The error messages will disappear as you define the parameters. When you're finished, all of the error messages should be gone.
+			        </li>
+				  </ul>
+				  <li>Click <img src="images/expand.png""expand alt="The expand icon"> to expand the <strong>User Messaging</strong> section of the Component tab.</li><figure><img src="images/user_messaging.png"user_messaging.png" alt="The User Messaging section of the Component page"> 
+							<figcaption><a href="files/user_messaging.txt">Description of the illustration
+							</a></figcaption>
+				</figure>
+				  <li>Set <strong>Use Streaming</strong> is set to <strong>False</strong> so that the message is delivered in its entirety, not incrementally. We recommend that you disable streaming for Cohere models.</li>
+				  <img src="images/use_streaming.png" alt="The Enable Streaming option">
+				  
+ <li>For the <strong>Standard Actions</strong>, remove all of the actions except  for <strong>Undo</strong>.</li><figure><img src="images/standard_actions.png" alt="The Undo action"> 
+							<figcaption><a href="files/.txt">Description of the illustration
+							</a></figcaption>
+				</figure>
+							
+
+
+
+				  
+              </ol>
+			</section>
+<!-- ==================== Task 4 End ==================== -->	            
+            
+			<!-- ==================== Task 5 Begin ==================== --> 
+<section>			
+				<h2 id="task_five">Task 5: Test the Prompt with the Prompt Builder</h2>
+				<p>Before we  test the prompt that you added in the previous step, let's take a quick look at it. </p>
+  <p>This prompt reflects good prompt design because:
+  <ul>
+	<li>It assigns a persona to the LLM that is use case-specific:
+    <pre class="nocopybutton">Example.</pre></li>
+    <li>It provides brief and concise instructions:<pre class="nocopybutton">Example</pre>
+    <li>It defines clear acceptance criteria:<pre class="nocopybutton">- Example
+- Example
+- Example
+
+...		 </pre> 
+    <p>
+				  Writing prompts is an iterative process. In fact, continually refining your prompt is a best practice. It may take several revisions before a prompt returns the results that you expect. To help you through this revision cycle, you can use the  Prompt Builder to incrementally test and modify your prompt until it functions properly. </p><figure><img src="images/test_prompt_llm_prompt_tester.png" alt="The Prompt Builder">
+				    <figcaption><a href="files/test_prompt_llm_prompt_tester.txt">Description
+				  of the illustration</a></figcaption></figure></li></ul>
+    <p>To test the prompt, you need to add mock values for the referenced parameters. The tone and content of the model's output is based on these values. You can have the model generate random values by clicking <strong>Generate Mock Values</strong>, but to control the output, you need to add your own. To add these values:
+    <ol>
+      <li>In the Component tab, scroll back to the top and click <strong>Build Prompt</strong> to open the Prompt Builder. </li>
+      <img src="images/test_prompt_button.png" alt="The Build Prompt button">
+    <li>Click <strong>Edit</strong> <img src="images/edit_icon_inline.png" alt="the Edit icon">.</li>
+    <li>Enter   value for the parameter in the Mock Value field. When you're done, click <strong>Apply</strong> <img src="images/apply_icon_inline.png"" alt="the Edit icon">.<br>
+      <figure><img src="images/enter_mock_values.png"enter_mock_values.png" alt="The Prompt Parameters dialog"> 
+        <figcaption><a href="files/enter_mock_values.txt">Description of the illustration
+          </a></figcaption>
+      </figure> 
+      Here are the example values:
+      <table width="200" border="1">
+        <tr>
+          <th scope="col">Parameter</th>
+          <th scope="col">Mock Value</th>
+        </tr>
+        <tr>
+          <td><code>Name</code></td>
+          <td>Value</td>
+        </tr>
+        <tr>
+          <td><code>Name</code></td>
+          <td>Value</td>
+        </tr>
+        <tr>
+          <td><code>Name</code></td>
+          <td>Value</td>
+        </tr>
+        <tr>
+          <td><code>Name</code></td>
+          <td>Value</td>
+        </tr>
+  </table>
+</li>
+				  </ul>
+				  </li>
+				  
+  <li>After you've completed the mock values, click <strong>Generate Output</strong>.</li>
+  <img src="images/generate_output_button.png" alt="The Generate Output button">
+				  
+	    <li>Verify that the LLM output in the LLM Output field is an email that both adheres to the prompt guidelines and incorporates the parameter values. For example, the output may be like this:<br>
+	      <code>Example</code></li>
+	    <figure><img src="images/prompt_builder_llm_output.png" alt="The Prompt Builder"> 
+				  <figcaption><a href="files/prompt_builder_llm_output.txt">Description
+				  of the illustration</a></figcaption>
+	  </figure>
+	    </li>
+	    <li>Optional step -- Here are a couple of things for you to experiment with before you click <strong>Close</strong> <img src="images/close_button.png" alt="The Close button"> to return to the Component tab: 
+	      <ul>
+	        <li>Step:
+	          <pre>- Text</pre>
+	      with
+	      <pre>- Text</pre>
+	      Then click <strong>Generate Output</strong>. Your results may differ, but here's an example:<br> 
+	      <code>Example</code></li>
+	        <li>Allow the model to generate more creative responses by changing the <strong>Temperature</strong> from 0 (straightforward responses) to 1 (more randomized responses).<br><img src="images/temperature_setting.png" alt="The Temperature option"><br>
+	           Click <strong>Generate Output</strong>. Here's an example (your results may again differ):<br>
+            <code>Example</code></li>
+          </ul>
+	    
+
+<li>Click <strong>Close</strong> <img src="images/close_button.png" alt="The Close button">. Do not click <strong>Save Settings</strong> as this will overwrite the original prompt text.</li>
+ </ol></ul>
+<!-- ==================== Task 5 End ==================== -->	 
+ 
+<!-- ==================== Task 6 Begin ==================== -->			
+</section>
+    <h2 id="task_six">Task 6: Test the Prompt with the Skill Tester</h2>
+<p>Now that you've verified that the LLM can receive the skill's input, you're ready to interact with it in the Skill Tester.</p><ol>
+  <li>Open the Skill Tester by clicking <strong>Preview</strong> (located at the upper right).</li><br><img src="images/preview.png"preview.png" alt="The Preview button">
+      <li>Enter the following request:
+        <pre>Example</pre>The output may look something like this.</li><figure><img src="images/conversation.png" alt="The skill Tester"> 
+							<figcaption><a href="files/conversation.txt">Description of the illustration
+							</a></figcaption>
+				</figure>
+      <li>In the Conversation pane, notice that the conversation remains in the [[ ]] state.<br>
+        <figure><img src="images/conversation_dialog_flow_multi_turn.png" alt="The Conversatino view in the Skill Tester"> 
+							<figcaption><a href="files/conversation_dialog_flow_multi_turn.txt">Description of the illustration
+							</a></figcaption>
+	  </figure>
+      </li>
+      <li>To get a look at the outcome the [[ ]] state processing, open the <strong>LLM Interaction</strong> tab. </li>
+      <img src="images/llm_interaction_tab.png" preview.png" alt="The Preview button"><br>
+      This view renders when the dialog flow lands on an LLM component state like [[ ]]. From it, you can compare the outcome of the state's processing at each turn of the conversation with the result that's sent to skill users. You can also  can review the prompt populated with variable values. In our case, we want to find out which values were sent for the <code>[[ ]]</code><code></code>, <code>[[ ]]</code>, and <code>[[ ]]</code> variables. To access the prompt in this form, hover over the text in the Initial Prompt/Refinement column, right-click, then choose <strong>Show Full Text</strong>.<br><figure><img src="images/tester_show_full_text.png" alt="The Conversation view in the Skill Tester"> 
+							<figcaption><a href="files/tester_show_full_text.txt">Description of the illustration
+							</a></figcaption>
+	  </figure>
+      By scrolling along the Prompt window, note, for example, that <code>[[${}]]</code> and <code>[[${}]]</code> in the original prompt text have been replaced [[ ]]. <br><img src="images/processed_prompt.png" alt="The Prompt view.">
+      <li>Click <strong>Close</strong> <img src="images/close_button.png" alt="The Close button"> to exit the Prompt window.</li>
+      <li>To compare the model's processing to the result that's output by the skill, hover over the text in the Outcome field, right-click, then select <strong>Show Full Text</strong>.<br><img src="images/outcome_show_full_text.png" alt="Show Full Text option."><br> 
+        Because the model processed an error-free and valid response, the contents in the Outcome field match those in the Result field. The two may not always match, as you'll find out in <a href="#task_six">Task 6: Extra Credit - Validate the LLM Output</a>.</li>
+      <br><img src="images/outcome_window.png" alt="Show Full Text option.">
+      <li>Click <strong>Close</strong> <img src="images/close_button.png" alt="The Close button"> to exit the Outcome window.</li> 
+      <li>Try refining the output by entering the following:<pre>Example</pre>The LLM should incorporate this feedback into its response. For example, it might include something like the following:<br><code>Example</code></li><figure><img src="images/conversation_refinement.png" alt="The Skill Tester"></figure>
+      <li>This new iteration of the message now includes the <strong>Undo</strong> button. Click it to revert to the previous response. 
+							
+    Note that the conversation remains in the [[ ]] state.</li>
+      <li>Click <strong>Reset</strong>, then close the Skill Tester.</li><img src="images/reset_button.png"../../F85141_04/html/images/" alt="The Reset button">
+</ol></section>
+<!-- ==================== Task 6 End ==================== -->	
+<!-- ==================== Task 7 Begin ==================== -->	
+      <h2 id="task_seven">Task 7: Extra Credit: Validate the LLM Output</h2>
+      In this step, you're going to use the declarative validation functions of the InvokeLLM component to test the LLM output for the presence (or absence) of one of the values defined for the CustomerRequirement such as competitive pricing, customizable design, etc.
+      <ol>
+        <li>Open the [[ ]] state and select the Component tab.</li>
+        <li>Expand <strong>User Messaging</strong> again. Note the <strong>Use Streaming</strong> setting, which you set to <strong>False</strong> in <a href="#task_six">Task 6: Test the Prompt with the Skill Tester</a> to accommodate the Cohere model. Despite the model, you must always disable user streaming when validating the LLM output because messages can't be validated in chunks. They can only be validated when they're complete. If you enable both user streaming and validation, users may see multiple streams of output, which may confuse them.</li>
+        <figure><img src="images/use_streaming_false.png"use_streaming_false.png" alt="The Use Streaming field"> 
+							<figcaption><a href="files/.txt">Description of the illustration
+							</a></figcaption>
+				</figure>
+        <li>Click <img src="images/expand.png""expand alt="The expand icon"> to expand <strong>Response Validation</strong>.</li><figure><img src="images/response_validation.png" alt="The Response Validation field"> 
+							<figcaption><a href="files/response_validation.txt">Description of the illustration
+							</a></figcaption>
+				</figure>
+        <li>In the Validation Entities field, select <strong>[[ ]]</strong>.</li><figure><img src="images/validation_entity_list.png" alt="The validation entity list."> 
+							<figcaption><a href="files/validation_entity_list.txt">Description of the illustration
+							</a></figcaption>
+				</figure>
+      <li>Open  the Skill Tester.</li>
+      
+      <li>Enter the following request:<pre>Example</pre>
+      The skill will reply with an "Enhancing the response. One moment, please..." message.<br><figure><img src="images/valid_response.png" alt="The Skill Tester"> 
+							<figcaption><a href="files/valid_response.txt">Description of the illustration
+							</a></figcaption>
+						</figure>
+       The message that follows it may be valid because [[ ]], or it may not be valid because these values are missing. When the message is not valid, the dialog flow transitions to the showLLMError state, which outputs an error message that names the missing entity (<code>CustomerRequirement</code>, the HTTP status code returned by the call to the LLM (<code>200</code>) and the CLMI (Common LLM Interface) error code noting that output failed validation (<code>responseInvalid</code>):<br> 
+       <code>An unexpected error occurred while invoking the Large Language Model: {&quot;errorMessage&quot;:&quot;The [[ ]] is not specified in the response.&quot;,&quot;errorStatus&quot;:200,&quot;errorCode&quot;:&quot;responseInvalid&quot;}</code><br>
+       <figure><img src="images/error_dialog_flow.png" alt="The dialog flow in the error state."> 
+							<figcaption><a href="files/error_dialog_flow.txt">Description of the illustration
+							</a></figcaption>
+						</figure><br>
+Here's an example of valid output:<br>
+<code>Example</code> </p></li>
+      </ol>
+    </section>
+
+<!-- ==================== Task 7 End ==================== -->	                
+			<!-- ==================== Next Steps ==================== 
+			<section>
+			<h2 id="next_steps">Next Steps</h2>
+			<p>Include this section only in a lab series or tutorial series.</p>
+			<p>Don't include this section if you plan to use the tutorials in an OLL learning path.</p>
+			</section> -->
+            <!-- ==================== Related Links ==================== 
+            <section>
+                <h2 id="related_links">Related Links</h2>
+                <p>Provide links to additional resources. This section is optional; delete if not needed.</p>
+                <ul>
+                    <li><a href=".html" target="_blank">More information link here</a></li>
+                    <li><a href=".html" target="_blank">More information link here</a></li>
+                    <li><a href=".html" target="_blank">More information link here</a></li>
+                </ul>
+            </section> -->
+            <!-- ==================== Acknowledgements ==================== 
+			<section>
+				<h2 id="acknowledgements">Acknowledgements</h2>
+                <p>List the names and title of authors and contributors. This section is optional; delete if not needed.</p>
+                <ul>
+                  <li><strong>Authors</strong> - Name (Title), Name (Title)</li>
+                  <li><strong>Contributors</strong> - Name (Title), Name (Title)</li>
+                </ul>
+			</section> -->
+			<!-- ==================== More Learning Resources ==================== 
+			<!-- Always include this section. 
+			<section>
+				<h2 id="more_learning_resources">More Learning Resources</h2>
+                <p>Explore other labs on <a href="https://docs.oracle.com/learn">docs.oracle.com/learn</a> or access more free learning content on the <a href="https://www.youtube.com/user/OracleLearning">Oracle Learning YouTube channel</a>. Additionally, visit <a href="https://education.oracle.com/learning-explorer">education.oracle.com/learning-explorer</a> to become an Oracle Learning Explorer.</p>
+                <p>For product documentation, visit <a href="https://docs.oracle.com">Oracle Help Center</a>.</p>
+			</section> -->
+		</div>
+		<!-- ==================== FOOTER ==================== -->
+		<!-- DO NOT ALTER THE CODE BELOW EXCEPT FOR THE METADATA SECTION -->
+		<hr>
+        <div class="notices">
+            <div><a href="#copyright-information" role="button" data-toggle="collapse" aria-expanded="false" class="collapsed" aria-controls="copyright-information" id="copyright-information-btn">Title and Copyright Information</a></div>
+            <div class="collapse" id="copyright-information" aria-expanded="false">
+                <p>Access OCI Generative AI from Your Skill</p>
+                <!-- <p>[PDB part number]</p>
+                <p>[Month year]</p> -->
+                <p><a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/legal&id=cpyr">Copyright &copy;</a> 2024, Oracle and/or its affiliates.</p>
+            </div>
+        </div>
+	</article>
+</body>
+</html>

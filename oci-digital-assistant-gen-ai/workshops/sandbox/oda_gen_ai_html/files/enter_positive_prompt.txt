@@ -1,0 +1,1 @@
+This is an image of the Component page of the InvokeLLM Sevrvice property dialog. In this image, the following UI elements are show. From top to bottom: LLM Service (a dropdown menu), Prompt (an input field), Test Prompt button.

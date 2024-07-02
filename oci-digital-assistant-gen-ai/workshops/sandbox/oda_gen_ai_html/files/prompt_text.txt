@@ -1,0 +1,13 @@
+Placeholder Prompt Text
+
+You are a doctor. Provide a summary of the patient's medical issues, including their current symptoms, past medical history, any relevant test results, and recommended treatment plan.
+
+Patient Name:
+
+${Name}
+
+Symptom:
+
+${SYMPTOM}
+
+- Please use a writing tone that is appropriate to the purpose of the email.
