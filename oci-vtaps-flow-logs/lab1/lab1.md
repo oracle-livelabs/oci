@@ -188,7 +188,7 @@ Let's begin.
     * Select **"Virtual cloud network"**
     * Click **"Continue"**
 
-        ![loggroup-create](images/flowlogs-vcn.png
+        ![loggroup-create](images/flowlogs-vcn.png)
 
     * Virtual cloud network: **"hol-vcn"**
     * Click **"Add enablement points"**
