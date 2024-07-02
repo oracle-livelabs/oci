@@ -212,7 +212,7 @@ Let's begin.
 
     * Click **"Virtual cloud networks"**
 
-        ![vcn2-addrouterules](images/vcn2-addrouterules.png)
+        ![vcn2-addrouterules](images/vcn2-navigatetovcn1.png)
 
 5. In the Virtual Cloud Networks list, click **hol-vcn1**.
 

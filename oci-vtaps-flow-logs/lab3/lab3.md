@@ -139,7 +139,7 @@ Let's begin.
       ![vtap-target](images/vtap-target.png)
 
     Capture Filter
-    * Select **"Create Capture Filter"**
+    * Select **"Create new capture filter"**
 
       ![vtap-capturefilter.](images/vtap-capturefilter.png)
 
