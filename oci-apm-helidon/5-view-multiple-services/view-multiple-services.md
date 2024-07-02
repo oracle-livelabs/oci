@@ -25,19 +25,10 @@ Watch the video below for a quick walk-through of the lab.
 
 1. Launch OCI Cloud Shell if not opened already.
 
-2. Ensure the Java version in the path is 11.0.7.
+2. Ensure the Maven version in the path is 3.6.1.
 	``` bash
 	<copy>
-	java -version
-	</copy>
-	```
-
-	if you completed Lab1 in this workshop, but the Java version returned from the command is not 11.0.7, you may need to reset the JAVA_HOME environment variable. Run the following commands.
-
-	``` bash
-	<copy>
-	export JAVA_HOME=~/graalvm-ce-java11-20.1.0
-	export PATH="$JAVA_HOME/bin:$PATH"
+	mvn -version
 	</copy>
 	```
 
@@ -89,19 +80,14 @@ Watch the video below for a quick walk-through of the lab.
    </copy>
    ```
 
-3.  Create a new file and name it **GreetService.java**.
-	``` bash
-  <copy>
-  touch GreetService.java
-  </copy>
-  ```
-4. Open the **GreetService.java** file you just created.
+3.  Create and open a new file, **GreetService.java**.
+
 	``` bash
   <copy>
   vi GreetService.java
   </copy>
   ```
-5. Copy the code below and paste it into the file.
+4. Copy the code below and paste it into the file. 
 	``` bash
 	<copy>
 
@@ -208,19 +194,11 @@ Watch the video below for a quick walk-through of the lab.
 		}
 		</copy>
 		```
-
+   	>**Note:** Scroll to the top of the file and make sure the entire text is copied into the file.
 
 ## Task 4: Build and start the application
-
-1. Ensure the JAVA_HOME environment variable is set.
-
-	``` bash
-	<copy>
-	export JAVA_HOME=~/graalvm-ce-java11-20.1.0
-	export PATH="$JAVA_HOME/bin:$PATH"
-	</copy>
-	```
-2.	Kill the existing session using port 8080.
+ 
+1.	Kill the existing session using port 8080.
 
 	``` bash
 	<copy>
@@ -242,7 +220,8 @@ Watch the video below for a quick walk-through of the lab.
 	nohup java -jar target/helidon-quickstart-se.jar&
 	</copy>
 ```
-4.	Test the application by running the following command
+
+4.  Test the application by running the following command
 
 	``` bash
 	<copy>
@@ -280,11 +259,10 @@ Watch the video below for a quick walk-through of the lab.
 
 	``` bash
 	<copy>
-	cd ~/; rm -rf helidon* graalvm*
+	cd ~/; rm -rf helidon* apache-maven*
 	</copy>
 	```
 
-	![Cloud Shell](images/6-2-cloudshell.png " ")
 
 
 ## Conclusions

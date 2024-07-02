@@ -26,22 +26,12 @@ Watch the video below for a quick walk-through of the lab.
 
 1. Launch OCI Cloud Shell if not opened already.
 
-2. Ensure the Java version in the path is 11.0.7.
+2. Ensure the Maven version in the path is 3.6.1.
 	``` bash
 	<copy>
-	java -version
+	mvn -version
 	</copy>
 	```
-
-	if you completed Lab1 in this workshop, but the Java version returned from the command is not 11.0.7, you may need to reset the JAVA_HOME environment variable. Run the following commands.
-
-	``` bash
-	<copy>
-	export JAVA_HOME=~/graalvm-ce-java11-20.1.0
-	export PATH="$JAVA_HOME/bin:$PATH"
-	</copy>
-	```
-
 
 3. Change to **helidon-quickstart-se** directory, and open the **pom.xml** file with an editor tool (e.g., vi editor)
 	``` bash
@@ -161,9 +151,6 @@ Refer to the sample image below:
 
 	![Cloud Shell](images/4-1-mvn.png " ")
 
-
-	  >**Note:** If your build fails with an error, run the java -version and make sure it points to JDK 11. If the command does not return OpenJDK version"11.0.7", go back to task 1 in this Lab and re-run the export commands to set the environment variable. This can happen when a session is interrupted during the lab exercise. Confirm the java version returns 11.0.7 and re-execute the mvn package command.
-		![Cloud Shell](images/4-1-error-mvn.png " ")
 
 3.	Start the application by running the application jar file.
 	``` bash

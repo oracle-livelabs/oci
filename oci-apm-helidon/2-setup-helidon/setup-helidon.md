@@ -31,7 +31,7 @@ Watch the video below for a quick walk-through of the lab.
 
  ![Cloud Shell menu](https://oracle-livelabs.github.io/common/images/console/cloud-shell.png " ")
 
-3. Helidon requires Java 11 (or newer) and Maven 3.6.1. Verify the versions by running the following commands.
+2. Helidon requires Java 11 (or newer) and Maven 3.6.1. Verify the versions by running the following commands.
 
 	``` bash
 	<copy>
@@ -46,59 +46,55 @@ Watch the video below for a quick walk-through of the lab.
 
   	![Cloud Shell](images/1-2-cloudshell-check-versions.png " ")
 
-	If you do not have the required version of Java, you can install GraalVM in the Cloud Shell to run Java 11, in the next Task.
+	If the Maven version is not 3.6.1, you can install it in the next task.
 
-    >**Note:** By default, OCI Free comes with Maven 3.6.1 (August, 2022), which can be used to complete this lab. If you wish to re-install or install a different version of Maven, you can download it from the following URL: http://maven.apache.org/
+	>**Note:** Paid tier users can switch the Cloud shell architecture from the default ARM to **X64\_64**, with Maven 3.6.1 and Java 11 preinstalled. Select **Actions** from the menu, then select **Architecture**.
+![Cloud Shell](images/1-3-cloudshell-menu.png " ")
+Select **x86_64** and click **Confirm and Restart**
+![Cloud Shell](images/1-4-cloudshell-switch-architecture.png " ")
+Vefify the Java and Maven versions. 
+![Cloud Shell](images/1-5-cloudshell-switch-confirm.png " ")
+You can skip the Task 2 and go to the Task 3.
+	
 
 
-## Task 2: Install Java
+## Task 2: Install Maven 3.6.1
 
-1.	Install GraalVM for building a Helidon image
+As of June 2024, ARM Cloud Shell has Maven 3.5.0, and Java 11. Free tier users can install Maven 3.6.1 manually to complete this workshop.
 
-
+1. Download Maven 3.6.1
 	``` bash
 	<copy>
-	curl -sLO https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.1.0/graalvm-ce-java11-linux-amd64-20.1.0.tar.gz
+	curl -sLO https://archive.apache.org/dist/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
 	</copy>
 	```
+2. Unzip the file
 	``` bash
 	<copy>
-	gunzip graalvm-ce-java11-linux-amd64-20.1.0.tar.gz
+	gunzip apache-maven-3.6.1-bin.tar.gz
 	</copy>
 	```
+3. Install Maven
 	``` bash
 	<copy>
-	tar xvf graalvm-ce-java11-linux-amd64-20.1.0.tar
+	tar xvf apache-maven-3.6.1-bin.tar
 	</copy>
 	```
+4. Add to the Path  
 	``` bash
 	<copy>
-	rm graalvm-ce-java11-linux-amd64-20.1.0.tar
+	export MVN_HOME=~/apache-maven-3.6.1 
+    export PATH="$MVN_HOME/bin:$PATH"
 	</copy>
 	```
-2. Move the directory under the home directory, if extracted at a different location.
-	``` bash
-	<copy>
-	mv graalvm-ce-java11-20.1.0 ~/
-	</copy>
-	```
-3. Set the JAVA_HOME environment variable.
-	``` bash
-	<copy>
-	export JAVA_HOME=~/graalvm-ce-java11-20.1.0
-	export PATH="$JAVA_HOME/bin:$PATH"
-	</copy>
-	```
+	e.g., export PATH="/home/labuser/apache-maven-3.6.1/bin:$PATH". 
 
-2. Verify the Java version, and ensure that it is updated to “11.0.7”
-
+5. Check the maven version to ensure it is 3.6.1.
 	``` bash
 	<copy>
-	java -version
+	mvn -v
 	</copy>
 	```
-	![Cloud Shell](images/2-1-java.png " ")
-
 
 ## Task 3:  Build a Helidon SE application
 

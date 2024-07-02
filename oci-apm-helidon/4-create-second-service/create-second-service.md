@@ -21,22 +21,13 @@ Watch the video below for a quick walk-through of the lab.
 
 1. Launch OCI Cloud Shell, if not opened already.
 
-2. Ensure the Java version in the path is 11.0.7.
+2. Ensure the Maven version in the path is 3.6.1.
 	``` bash
 	<copy>
-	java -version
+	mvn -version
 	</copy>
 	```
-	![Cloud Shell](images/1-1-java.png " ")
 
-	If you completed Lab1 in a different Cloud Shell session, you will need to reset the JAVA_HOME environment variable, by running run the followings.
-
-	``` bash
-	<copy>
-	export JAVA_HOME=~/graalvm-ce-java11-20.1.0
-	export PATH="$JAVA_HOME/bin:$PATH"
-	</copy>
-	```
 
 2.	From the home directory, run the Maven archetype:
 
@@ -199,8 +190,8 @@ Refer to the sample image below:
 
  	 ![Cloud Shell](images/6-1-mvn.png " ")
 
-	>**Note:** If your build fails with an error, run the java -version and make sure it points to JDK 11. If it does not return OpenJDK version"11.0.7", go back to task 1 in this Lab and re-run the export commands to set the environment variable. This can happen when a session is interrupted during the lab exercise. Confirm the java version returns 11.0.7 and re-execute the mvn package command.  
-  ![Cloud Shell](images/4-1-error-mvn.png " ")
+	>**Note:** If your build fails with an error, run the mvn -version and make sure it points to maven 3.6.1. If it does not, go back to Lab 2, Task 2 and re-run the commands to install the required Maven version. This can happen when a session is interrupted during the lab exercise.
+
 
 2.	Start the application by running the application jar file
 
