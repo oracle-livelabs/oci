@@ -17,6 +17,8 @@ Estimated time: 5 minutes
 
 ## Task 1: Log in to the workshop tenancy
 
+If you signed into the OCI console, skip this task and move to Task 2.
+
 1. Click **View Login info** on **Get Started with Oracle Cloud Application Performance Monitoring** landing page to log in to the workshop tenancy in the Oracle Cloud.
 
    ![Oracle LiveLabs, Workshop page](images/1-0-login-info.png " ")
@@ -39,11 +41,8 @@ Estimated time: 5 minutes
 
    ![Oracle LiveLabs, Workshop page](images/1-4-change-pwd.png " ")
 
-6. Follow the screen to enable secure verification. In this example, Mobile App is selected. Complete the steps and click **Done**.
-![Oracle LiveLabs, Workshop page](images/1-6-two-factor-auth.png " ")
 
-
-7. **Oracle Cloud Get started** page opens. You can proceed to the next task to begin the workshop.
+6. **Oracle Cloud Get started** page opens. You can proceed to the next task to begin the workshop.
 
    ![Oracle LiveLabs, Workshop page](images/1-5-oci-console.png " ")
 
