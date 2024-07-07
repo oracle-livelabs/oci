@@ -4,7 +4,7 @@
 
 In this lab, you will create an OCI OpenSearch cluster using the Oracle Cloud Console. 
 
-Estimated Time: 15 minutes
+Estimated Time: 30 minutes
 
 ### Objectives
 
@@ -14,28 +14,38 @@ In this lab, you will:
 
 ## Task 1: Create an OCI Search Service cluster
 
-1. Open the Oracle Cloud Console navigation menu. Click **Databases**, **OCI Search Service**, and then click **Clusters**. Then, click **Create cluster**. Provide *opensearch-cluster* as name and select *opensearch-livelab* as the compartment where you want to create the cluster.
+1. Open the Oracle Cloud Console navigation menu. Click **Databases**, **OpenSearch**, and then click **Clusters**. Then, click **Create cluster**. Provide *opensearch-cluster* as name and select *opensearch-livelab* as the compartment where you want to create the cluster.
 
    ![Oracle Cloud Console screen - Configure cluster](../images/image1.png)
 
 2. Click **Next**.
-3. Choose the cluster sizing, and then click **Next**.
+3. Specify Security information, and then click **Next**.
+
+   ![Oracle Cloud Console screen - Security](../images/image1-5.png)
+4. Choose the cluster sizing, and then click **Next**.
 
    ![Oracle Cloud Console screen - Configure nodes](../images/image2.png)
 
-4. Select the VCN you created and then select the private subnet.
+5. Select the VCN you created and then select the private subnet.
 
    ![Oracle Cloud Console screen - Configure networking](../images/image3.png)
 
-5. Click **Next**, and then **Create**. You will be redirected to the OpenSearch cluster details page.
+6. Review the summary and click **Create cluster**
+
+   ![Oracle Cloud Console screen - Configure networking](../images/image3-5.png)
+
+7. Click **Next**, and then **Create**. You will be redirected to the OpenSearch cluster details page.
 
    ![Oracle Cloud Console screen - Configure cluster details page, after cluster creation](../images/image4.png)
 
-6. Copy your API Endpoint, as found in the cluster details page, in the Cluster information section. It will be needed in the following labs.
+8. Copy your API Endpoint, as found in the cluster details page, in the Cluster information section. It will be needed in the following labs.
 
 ## Task 2: OCI OpenSearch cluster health check
 
-1. Connect to the instance via SSH:  
+1. Connect to the instance via SSH:
+In oder to connec to the OpenSearch cluster, we have to crete an instance on the same subnet as the cluster and SSH to that instance first.
+
+You can find more information [here] (https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/testingconnection.htm)
 
       ```bash
       <copy>ssh -i ~/.ssh/<your_ssh_key> opc@<your_VM_instance_public_IP></copy>
@@ -50,26 +60,42 @@ In this lab, you will:
    If all the steps were performed correctly you should see a response as follows:  
 
       ```json
-      {
-      "name" : "opensearch-master-0",
-      "cluster_name" : "opensearch-cluster",
-      "cluster_uuid" : "ABCDEFT",
-      "version" : {
-         "distribution" : "opensearch",
-         "number" : "1.2.4-SNAPSHOT",
-         "build_type" : "tar",
-         "build_hash" : "eae8d26d675172402f2f2144ef0f",
-         "build_date" : "2022-02-08T16:44:39.596468Z",
-         "build_snapshot" : true,
-         "lucene_version" : "8.10.1",
-         "minimum_wire_compatibility_version" : "6.8.0",
-         "minimum_index_compatibility_version" : "6.0.0-beta1"
-      },
-      "tagline" : "The OpenSearch Project: https://opensearch.org/"
-      }
+{
+  "cluster_name": "amaaaaaallb34niam4xh6njgo6bxsbj7qxbu6k6ojx5a73mu4mrrkz6rhkva",
+  "status": "yellow",
+  "timed_out": false,
+  "number_of_nodes": 2,
+  "number_of_data_nodes": 1,
+  "discovered_master": true,
+  "discovered_cluster_manager": true,
+  "active_primary_shards": 41,
+  "active_shards": 41,
+  "relocating_shards": 0,
+  "initializing_shards": 0,
+  "unassigned_shards": 20,
+  "delayed_unassigned_shards": 0,
+  "number_of_pending_tasks": 0,
+  "number_of_in_flight_fetch": 0,
+  "task_max_waiting_in_queue_millis": 0,
+  "active_shards_percent_as_number": 67.21311475409836
+}
       ```
+
+## Task 3: Connect to OpenSearch Dashboards
+
+1. From your local machine, establish port forwarding. You can find more information on how to connect to a cluster/dahboard [here] (https://docs.oracle.com/en-us/iaas/Content/search-opensearch/Tasks/ingestingociopensearchdata.htm)
+
+
+      ```bash
+      <copy>ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 opc@<your_instance_public_ip> -i <path_to_your_private_key></copy>
+      ```
+
+2. Access https://localhost:5601 in your browser.  
+   > **Note:** Currently, depending on the browser, a warning message similar to "Your connection is not private" is displayed. Choose the option which allows you to proceed. The following screen is then displayed:  
+
+   ![OpenSearch Dashboards landing page](../images/image7.png)
 
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Hassan Ajan, August 2023
+* **Last Updated By/Date** - George Csaba, June 2024
