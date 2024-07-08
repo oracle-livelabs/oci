@@ -40,8 +40,7 @@ This lab assumes you have the following:
 ## Learn More
 
 * [Oracle APEX](https://apex.oracle.com/en/)
-* [Autonomous Database](https://www.oracle.com/in/autonomous-database/)  
-* [Process Automation](https://www.oracle.com/in/integration/process-automation/) 
+* [Autonomous Database](https://www.oracle.com/in/autonomous-database/)   
 
 ## Acknowledgements
 
