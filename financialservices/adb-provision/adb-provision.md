@@ -15,14 +15,8 @@ In this lab, you will:
  
 ### Prerequisites
 
-* This lab requires completion of the Get Started section in the Contents menu on the left.
-* Ensure that the schema associated with the APEX application workspace, where the Graph Visualization plug-in is imported, is a graph-enabled schema. 
-* To enable graph for a schema: Access Database Actions as an ADMIN user.
-
-Alternatively, you can also select Edit, turn on the Graph toggle on the Edit User page, and click Apply Changes.
-
-The target application into which you want to import the plug-in exists in your APEX instance.
-
+* This lab requires completion of the Get Started section in the Contents menu on the left. 
+  
 ## Task 1: Create or select a compartment
  
 A compartment is a collection of cloud assets, like compute instances, load balancers, databases, and so on. By default, a root compartment was created for you when you created your tenancy (for example, when you registered for the trial account). It is possible to create everything in the root compartment, but Oracle recommends that you create sub-compartments to help manage your resources more efficiently.
