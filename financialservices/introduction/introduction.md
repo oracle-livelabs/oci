@@ -29,7 +29,7 @@ This lab assumes you have the following:
 * Familiarity with Oracle APEX and PL/SQL.  
 * Familiarity with Database is desirable  
 * Familiarity with Oracle Property Graph is helpful
-* Familiarity with cloud and database terms is helpful
+* Familiarity with Cloud and Database terms is helpful
  
 <!-- ### AI for Financial Services - Complete Demo and Architecture video
 
