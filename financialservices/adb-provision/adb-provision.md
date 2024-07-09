@@ -15,7 +15,13 @@ In this lab, you will:
  
 ### Prerequisites
 
-- This lab requires completion of the Get Started section in the Contents menu on the left.
+* This lab requires completion of the Get Started section in the Contents menu on the left.
+* Ensure that the schema associated with the APEX application workspace, where the Graph Visualization plug-in is imported, is a graph-enabled schema. 
+* To enable graph for a schema: Access Database Actions as an ADMIN user.
+
+Alternatively, you can also select Edit, turn on the Graph toggle on the Edit User page, and click Apply Changes.
+
+The target application into which you want to import the plug-in exists in your APEX instance.
 
 ## Task 1: Create or select a compartment
  
@@ -177,6 +183,27 @@ There are several ways to run SQL queries, few most frequently used techniques a
 3. Some times you might need to run SQL queries within an APEX page for example displaying data from a table, such SQL queries can be written in SQL Query Editor, this query executes during the page runtime. 
 
     ![SQL Commands](./images/apex-collection.png)
+
+## Task 7: APEX Graph Visualization Plug-in
+
+The plug-in mainly allows you to:
+
+- Construct a property graph for visualization from the graph data in your Autonomous Database instance.
+- Explore the graph vertices and edges. You can also select and visualize these graph elements individually or in groups.
+- Interact with the graph visualization by performing various actions such as changing the graph layouts, grouping or ungrouping selected vertices, removing selected vertices or edges, and so on.
+- Style the vertices and edges in the graph by configuring the style settings such as size, color, icon, label values, and so on.
+- Visualize and study the evolution of the graph over time.
+
+Download [Graph Visualization Plug-In (Preview)] (https://github.com/oracle/apex/tree/23.2/plugins/region/graph-visualization) and Install in Oracle APEX workspace
+
+Installation Steps
+
+- Download the region\_type\_plugin\_graphviz.sql file in this directory
+- Navigate to App Builder -> Import
+- Drag and drop the plugin.sql file
+- Choose File Type -> Plug-in
+- Click Next
+- Continue through the remaining steps in the wizard to finish installing the application
   
 You may now **proceed to the next lab**.
 

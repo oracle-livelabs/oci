@@ -566,6 +566,8 @@ This is where graphs and spatial can help. With graph technology, users can take
 ## Learn More
 
 * [Getting Started with Oracle Property Graphs](https://docs.oracle.com/en/database/oracle/property-graph/21.2/spgdg/getting-started-oracle-property-graphs.html) 
+* [Apps and Plug-ins](https://oracle.github.io/apex/)
+* [Interactive Graph Visualization in Oracle APEX Applications](https://docs.oracle.com/en/cloud/paas/autonomous-database/csgru/apex-graph-visualization-plug.html)
 
 ## Acknowledgements
 
