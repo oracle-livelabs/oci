@@ -204,6 +204,8 @@ Installation Steps
 - Choose File Type -> Plug-in
 - Click Next
 - Continue through the remaining steps in the wizard to finish installing the application
+
+Please check [Sample Graph Visualizations](https://github.com/oracle/apex/tree/23.2/sample-apps/sample-graph-visualizations) to test sample Graph queries and installation
   
 You may now **proceed to the next lab**.
 

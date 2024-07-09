@@ -22,6 +22,7 @@ This lab assumes you have:
 * Some understanding of cloud and database terms is helpful
 * Familiarity with SQL is helpful
 * Familiarity with Oracle Property Graph is helpful
+* Graph plugin has already been installed
 
 ### About Spatial Geometry Objects
 
