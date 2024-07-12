@@ -26,7 +26,7 @@ Run the following commands from within your VM instance.
 2. Create mapping (optional). If you don't run this command or any variation of it, a default mapping will be automatically created.
 
    ```bash
-   <copy>curl -XPUT "https://<opensearch_private_IP>:9200/oci4" -H 'Content-Type: application/json' -k -u <USERID:PASSWORD> -d '{        "mappings": {
+   <copy>curl -XPUT "https://<opensearch_private_IP>:9200/oci" -H 'Content-Type: application/json' -k -u <USERID:PASSWORD> -d '{        "mappings": {
     "properties": {
       "id": {"type": "integer"},
       "category": {"type": "keyword"},

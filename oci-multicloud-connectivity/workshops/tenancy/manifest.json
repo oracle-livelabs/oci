@@ -4,6 +4,7 @@
     "include" : {
         "azure_interconnect": "../../fastconnect/azure_interconnect.md",
         "equinix_network_edge": "../../fastconnect/equinix_network_edge.md",
+        "equinix_fcr": "../../fastconnect/equinix_fcr.md",
         "megaport_mcr": "../../fastconnect/megaport_mcr.md"
     },
     "tutorials": [
@@ -34,6 +35,7 @@
             "type": {
                 "azure_interconnect" : "Azure Interconnect",
                 "equinix_network_edge" : "Equinix (Network Edge)",
+                "equinix_fcr" : "Equinix (FCR)",
                 "megaport_mcr" : "Megaport (MCR)"
             }
         },
