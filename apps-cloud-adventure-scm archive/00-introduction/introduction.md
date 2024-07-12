@@ -7,7 +7,7 @@ Welcome to Oracle Cloud Adventure for Supply Chain Management (SCM).  This hands
 We hope you will enjoy today’s adventure exploring a complete and unified solution for SCM Professionals.  
 
 
-Estimated Adventure Time: 45 minutes
+Estimated Adventure Time: 40 minutes
 
 ### Objectives
 
