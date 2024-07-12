@@ -1,0 +1,42 @@
+{
+    "workshoptitle": "OCI Data & AI Fast Track - For Data Analysts",
+    "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
+                "sample.json":"../../data-load/files/sample.json",
+                "step2.md":"../../data-load/files/step2.md"},
+    "variables": ["../../variables/variables.json",
+                 "../../variables/variables-in-another-file.json"],
+    "help": "isabella.alvarez@oracle.com, breno.comin@oracle.com, thais.henrique@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introdução",
+            "description": "Bem-vindo ao OCI Data & AI Fast Track - for Analytics",
+            "filename": "../../intro/intro.md"
+        
+        },
+        {
+            "title": "Pré-requisito: Criar o Oracle Analytics Cloud",
+            "description": "Criar a Instância do Oracle Analytics Cloud",
+            "filename": "../../ft-create-oac/ft-create-oac.md"
+        },
+        {
+            "title": "Lab 1: Primeiros passos no Oracle Analytics Cloud",
+            "description": "Navega pelo Oracle Analytics Cloud",
+            "filename": "../../ft-first-steps-bt/ft-first-steps-bt.md"
+        },
+        {
+            "title": "Lab 2: Criar um Conjunto de Dados",
+            "description": "Aprenda a criar um conjunto de dados a partir de 2 tabelas em um Banco de Dados",
+            "filename": "../../ft-create-dataset-bt/ft-create-dataset-bt.md"
+        },
+                {
+            "title": "Lab 3: Crie Visualizações - Primeiros Passos",
+            "description": "Explore os recursos do Oracle Analytics Cloud para criar visualizações",
+            "filename": "../../ft-create-visualizations/ft-create-visualizations.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
