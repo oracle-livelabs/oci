@@ -62,7 +62,7 @@ Before to start, you need 2 common attributes:
 2. A DNS name for you website
     - In env.sh, define TF\_VAR\_dns\_name (ex: www.mydomain.com)
 
-There are 3 ways to have a TLS certificate:
+There are 4 ways to have a TLS certificate:
 1. Existing Certificate.
     - You have already a existing TLS (SSL) certificate 
     - Or your administrator manage centrally all TLS certificates from OCI Certificate. 
@@ -71,20 +71,30 @@ There are 3 ways to have a TLS certificate:
             - In env.sh, define TF\_VAR\_certificate\_ocid=OCID of certificate OCID
         - in a directory (files cert.pem, privkey.pem, chain.pem)
             - In env.sh, define TF\_VAR\_certificate\_dir=Directory where the 3 files resides
-2. Let's Encrypt - DNS-O1
+2. Let's Encrypt - DNS-01
     - Due that DNS is enabled, let's encrypt can create a TLS Certificate using DNS-01 protocol.
     - In env.sh, define TF\_VAR\_certificate\_email to the email that will receive certificate updates from Let's encrypt.
-3. Let's Encrypt - HTTP-O1 (Compute Only)
+3. Let's Encrypt - HTTP-01 (Compute Only)
     - In a compute, it is possible to generate a certificate using the HTTP-01 protocol . 
     - In env.sh, define TF\_VAR\_certificate\_email to the email that will receive certificate updates from Let's encrypt.
+4. Cert-Manager (Kubernetes Only)
+    - In Kubernetes, you can generate certificates using the HTTP-01 protocol with a combination of 4 tools
+        - Cert-manager
+        - External DNS
+        - Let's Encrypt (HTTP-01)
+        - NgInx Ingress Controller 
+    - In env.sh, define TF\_VAR\_certificate\_email to the email that will receive certificate updates from Let's encrypt.
 
-| Method    | To define                     | Advantages                         |
-| --------  | ---------                     | ----------                         | 
-| Existing  | TF\_VAR\_certificate\_ocid or TF\_VAR\_certificate\_dir   | Certificate managed centrally (*)  |
-|           |                               | Private key not exposed            |
-| DNS-01    | TF\_VAR\_certificate\_email   | Works for all deployment types     |
-| HTTP-01   | TF\_VAR\_certificate\_email   | Works for Compute only             |
-|           |                               | No LoadBalancer or API GW needed   |
+
+| Method       | To define                     | Advantages                         |
+| --------     | ---------                     | ----------                         | 
+| Existing     | TF\_VAR\_certificate\_ocid or TF\_VAR\_certificate\_dir   | Certificate managed centrally (*)  |
+|              |                               | Private key not exposed            |
+| DNS-01       | TF\_VAR\_certificate\_email   | Works for all deployment types     |
+| HTTP-01      | TF\_VAR\_certificate\_email   | Works for Compute only             |
+|              |                               | No LoadBalancer or API GW needed   |
+| Cert-Manager | TF\_VAR\_certificate\_email   | Works for Kubernetes only          |
+|              |                               | Create Certificate few lines in a .yaml file |
 {: title="Summary of the advantages"}
 
 ## Acknowledgements 
