@@ -18,7 +18,7 @@ In this activity, you will:
 
 
 
-## Task 1: figure out why the Automatic Award Recommendation has elected not to award EIP Inc. in this negotiation. 
+## Task 1: Determine why the Automatic Award Recommendation has elected not to award EIP Inc. in this negotiation. 
 
 1. You will need to go to the negotiations page.
 
