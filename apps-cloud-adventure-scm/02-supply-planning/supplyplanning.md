@@ -19,7 +19,7 @@ In this activity, you will:
  
 
 
-## Task 1: ESG Dashboards and Analytics
+## Task 1: Use Lead Time Advisor.
 
 1. You recently noticed your suppliers do not always ship according to their provided Lead Times. 
 
