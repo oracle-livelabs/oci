@@ -161,7 +161,7 @@ In this activity, you will:
 
 3. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
+    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:22) 
 
 
 
@@ -173,7 +173,7 @@ In the old days, Casey would have had to review each of the outbound shipments, 
 **You have successfully completed the Activity!**
 
 
-
+  > Click the **‘Home’** Icon
 
 
 **You may now proceed to the next lab.**

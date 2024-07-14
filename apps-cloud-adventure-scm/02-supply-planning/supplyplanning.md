@@ -99,7 +99,7 @@ In this activity, you will:
 
 9. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
+    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:10) 
 
 
 
@@ -125,6 +125,10 @@ In this example, we used Oracle Supply Planning’s “Planning Advisor” to re
 **You have successfully completed the Activity!**
 
 **For extra credit (and possibly some Oracle swag) please make sure you record the information regarding the Item with highest Lead Time Variance Percentage in the review Item Category Set.**
+
+
+
+  > Click the **‘Home’** Icon
 
 
 

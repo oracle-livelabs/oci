@@ -113,7 +113,7 @@ In this activity, you will:
 
 11. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
+    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:5) 
 
 
 
@@ -130,6 +130,12 @@ In this example, we used Oracle Global Order Promising’s robust profitable to 
 
 **For extra credit (and possibly some Oracle swag) please make sure you record the information regarding the option GOP selected, and be prepared to discuss what variables were considered by GOP in making the decision.**
 
+
+
+
+
+
+  > Click the **‘Home’** Icon
 
 
 
