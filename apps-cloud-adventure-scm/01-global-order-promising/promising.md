@@ -39,11 +39,13 @@ In this activity, you will:
     > Click on **Mobile App** Link to open the app.
 
 
+
 3. Clicking on a sales order will allow you to drill down into the details of the order and interact with it.
 
     > Click on order number **98431** in the Search Results area.
 
     ![image003](images/image003.png)
+
 
 
 4. All information regarding a Sales Order can be accessed via this screen, including its current state, and all fulfillment details.
@@ -53,11 +55,13 @@ In this activity, you will:
     ![image004](images/image004.png)
 
 
+
 5. The Fulfillment View provides all the relevant details for each line such as inventory details, promising dates, scheduling details, and shipping parameters. Real-time availability checking and order scheduling allows users to quickly investigate delivery exceptions.  
 
     > Click on **Check Availability**.
 
     ![image005](images/image005.png)
+
 
 
 6. The Availability Status indicates the sales order will be delivered on-time!  Oracle Cloud Global Order Promising has found sufficient supply to fulfill the order.
@@ -67,11 +71,13 @@ In this activity, you will:
     ![image006](images/image006.png)
 
 
+
 7. The Availability Options shows multiple options based on different shipping methods. However, Oracle Cloud Global Order Promising using Profitable to Promise considered the default option with lowest fulfillment cost. 
 
     > **Review the options, and record the cost, shipping date, and shipping method for the most profitable selection.**
 
     ![image007](images/image007.png)
+
 
 
 8. Availability Details will give you a full view into the specifics of the fulfillment process, including all purchases, manufacturing, and transfers that are required.
@@ -81,11 +87,13 @@ In this activity, you will:
     ![image008](images/image008.png)
 
 
+
 9. The Availability Details pegging information helps Natalie understand how the order can be promised on time. In this example, Global Order Promising reviewed the profitable supply chain network to promise the order. 
 
     > Note that item **ECM37004** was sourced from Liberty Electric, which is not the primary source of the item, but a secondary lest costly option GOP identified based on using Profitable to Promise.  
-    
-    GOP can be configured to consider several variables when considering profitability.
+
+    .
+    > GOP can be configured to consider several variables when considering profitability.
 
     ![image009](images/image009.png)
 
@@ -94,11 +102,20 @@ In this activity, you will:
     ![image010](images/image010.png)
 
 
+
 10. Our Order Management environment is configured to require that orders be manually scheduled.   This process can be automated as well, with full confidence that GOP will select the most profitable fulfillment option based on your company’s specific needs.
 
     > Click on the **Home** button to return to your landing page.
 
     ![image011](images/image011.png)
+
+
+
+11. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+
+    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
+
+
 
 
 

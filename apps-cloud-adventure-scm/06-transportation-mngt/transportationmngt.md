@@ -51,11 +51,13 @@ In this activity, you will:
     ![image003](images/image003.png)
 
 
+
 4. **Every group will be provided the name of their order query**
 
     > **Group XX...** Users will need to use the drop down to change to their query set.
 
     ![image004](images/image004.png)
+
 
 
 5. Casey reviews the new orders listed in the order releases tab.
@@ -69,6 +71,7 @@ In this activity, you will:
 
 
     ![image005](images/image005.png)
+
 
 
 6. Casey notices one of the orders has a red flashing exclamation point.  She reviews the notes that were entered by customer service in ERP, which automatically updated the order in OTM 
@@ -111,6 +114,8 @@ In this activity, you will:
 
     ![image010](images/image010.png)
 
+
+
 2. Casey quickly reviews the other bulk plan tabs to ensure all looks good.
 
     > Click on the Metrics tab and review the results.
@@ -123,6 +128,8 @@ In this activity, you will:
 
 ## Task 3: View Shipment with Load Configuration
 
+
+
 1. Back on the workbench, Casey can view the assigned carrier is **SCNN**.  She can also view the planned route on the map.
 
     > **Select** the **Map tab** on the top right panel.
@@ -134,6 +141,7 @@ In this activity, you will:
     **Select the check box** in the mapping column to add the shipment to the map.
 
     ![image013](images/image013.png)
+
 
 
 2. Casey also knows that based on their configuration in OTM, the application will automatically ensure that high priority orders will be positioned based on their importance.  The optimization creates a 3D visual representation of the load that allows the warehouse to efficiently load the truck based on the order priority.   Casey reviews the visualization and is happy to see that OTM recognized that the high priority order is placed closest to the door – ready for the customer to easily unload the critical item that confirms Casey’s customer can continue production without interruption.
@@ -150,6 +158,10 @@ In this activity, you will:
     Users have the ability edit the configuration by clicking on the pencil. 
 
     ![image015](images/image015.png)
+
+3. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+
+    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
 
 
 

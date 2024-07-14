@@ -46,6 +46,7 @@ In this activity, you will:
     ![image003](images/image003.png)
 
 
+
 4. Displayed is a graphical summary of the lead time variances in a Treemap view which show the variances color-coded with in a High to Low significance for the Supplier and Category combination nodes.
 
     > Hover over the **Documentation & Packing** rectangle to view supplier, category, item count, and average variance percentage.
@@ -57,6 +58,7 @@ In this activity, you will:
     ![image005](images/image005.png)
 
 
+
 5. Supply Variances are visible in a table summary of Items with their Supplier, Supplier Site details showing the delivery performance with statistics about the planned vs historical lead time, min and max range of variance, and variance percentage as well as Suggested Lead Time for review. 
 
     > Review the details and **note the item with highest variance percentage.** Select **all items checkbox** and click **View Order Details.**
@@ -64,11 +66,13 @@ In this activity, you will:
     ![image006](images/image006.png)
 
 
+
 6. Order Details screen provides historical information of purchase orders for the selected item(s) with Order, Shipping, and Receipt dates, etc.
 
     > Click on **View Chart**. 
 
     ![image007](images/image007.png)
+
 
 
 7. The chart gives a graphical representation and more insights into the distribution of orders to understand the shipments that were on time or delayed.
@@ -83,11 +87,19 @@ In this activity, you will:
 
     ![image009](images/image009.png)
 
+
+
 8. The “Planning Advisor” in Supply Planning allows users to review Purchasing Lead Time Variances and gain Insights into supplier performance based on historical shipments. Suggested Lead Time changes can be added to simulation sets for further impact analysis before accepting and making changes accordingly.
 
     > Click on the **Home** button to return to your landing page.
 
     ![image010](images/image010.png)
+
+
+
+9. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+
+    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
 
 
 

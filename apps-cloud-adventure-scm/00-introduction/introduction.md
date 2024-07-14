@@ -16,10 +16,11 @@ This Activity Guide will lead you along the way through a set of Adventure Labs,
 2.	Comprehensive capabilities of an inter-connected procurement system.
 3.  Simplicity and scalability of creating and managing procurement processes.
 
-Adventure awaits, show what you know, and rise to the top of the leader board!!! Let's create your team name!
+Adventure awaits, click on the picture, show what you know, and rise to the top of the leader board!!! 
 
-[![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::CC:SCMCLOUDADVENTURE) 
+Let's create your team name!
+
+[![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
     
-[Click here](https://apex.oracle.com/pls/apex/f?p=159406:20:::::CC:SCMCLOUDADVENTURE) 
 
 
