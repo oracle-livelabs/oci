@@ -173,10 +173,9 @@ In the old days, Casey would have had to review each of the outbound shipments, 
 **You have successfully completed the Activity!**
 
 
-  > Click the **‘Home’** Icon
 
 
-**You may now proceed to the next lab.**
+
 
 ## Acknowledgements
 * **Author** - Rebecca Hoffman, Principal Solution Engineer

@@ -126,12 +126,8 @@ Monitor vendor data constantly and quickly identify and rectify any issues.
 
 Seamlessly add and manage an ever-changing set of business requirements to ensure you are doing business with the right people.
 
+**You have successfully completed the Activity!**
 
-
-
-  > Click the **‘Home’** Icon
-
-**You may now proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Matt Bailey, Staff Solution Engineer

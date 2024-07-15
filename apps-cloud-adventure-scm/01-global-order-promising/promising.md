@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to Oracle’s Cloud Adventure.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered Supply Chain Management. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the COO.
+This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered Supply Chain Management. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the COO.
 
 As you follow along, do not forget to answer the Adventure Check Point questions! 
 
@@ -134,14 +134,6 @@ In this example, we used Oracle Global Order Promising’s robust profitable to 
 
 
 
-
-  > Click the **‘Home’** Icon
-
-
-
-
-
-**You may now proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Ben Chromilk, Principal Solution Engineer

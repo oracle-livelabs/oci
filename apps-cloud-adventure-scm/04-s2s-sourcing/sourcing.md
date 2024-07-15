@@ -127,9 +127,7 @@ Drive better savings by increasing competition between your vendors.
 Shorten cycle times with easy-to-use tools and AI and machine learning built into the process.
 
 
-  > Click the **‘Home’** Icon
-
-**You may now proceed to the next lab.**
+**You have successfully completed the Activity!**
 
 ## Acknowledgements
 * **Author** - Matt Bailey, Staff Solution Engineer

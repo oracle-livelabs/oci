@@ -111,11 +111,7 @@ In this example, we used Oracle Warehouse Management’s embedded Mobile App to 
 **You have successfully completed the Activity!**
 
 
-p
 
-
-
-**You may now proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Tracy Mengyan, Master Principal Solution Engineer

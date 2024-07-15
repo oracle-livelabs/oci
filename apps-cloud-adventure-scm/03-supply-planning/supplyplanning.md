@@ -128,15 +128,6 @@ In this example, we used Oracle Supply Planning’s “Planning Advisor” to re
 
 
 
-  > Click the **‘Home’** Icon
-
-
-
-
-
-
-**You may now proceed to the next lab.**
-
 ## Acknowledgements
 * **Author** - Ben Chromilk, Principal Solution Engineer
 * **Contributors** -  Betty Jane Madden, Principal Solution Engineer
