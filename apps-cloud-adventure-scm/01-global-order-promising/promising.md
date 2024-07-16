@@ -36,8 +36,6 @@ In this activity, you will:
 
     ![image002](images/image002.png)
 
-    > Click on **Mobile App** Link to open the app.
-
 
 
 3. Clicking on a sales order will allow you to drill down into the details of the order and interact with it.
