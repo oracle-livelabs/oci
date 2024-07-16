@@ -77,8 +77,6 @@ In this activity, you will:
 
 7. The chart gives a graphical representation and more insights into the distribution of orders to understand the shipments that were on time or delayed.
 
-    > Select the **Current Option** row under Availability Option, click on **Actions**, and then select **Availability Details**.
-
     ![image008](images/image008.png)
 
     > Examine the variance details of the shipments by **hovering over the plotted chart.**  
