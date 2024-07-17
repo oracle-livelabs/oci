@@ -12,12 +12,11 @@ This session will cover how to use common migration tools to migrate data into O
 In this workshop, you will learn how to:
 * How to migrate data from on-prem or other cloud vendors into OCI Object Storage
 * How to migrate data from on-prem local or NAS storage into OCI File Storage
-* How to migrate data between OCI File Storage and OCI Object Storage
 * Learn hands-on how to use Rclone, fpsync, rsync, OCI Object Storage Sync, and s5cmd
 
 ### Prerequisites
 * Familiar with basic Linux commands and administration; installing software packages, using common editors (vim), running commands
-* Familiarity with Oracle Cloud Infrastructure (OCI) and IAM access to OCI Console, OCI Object Storage, OCI File Storage, and ability to launch instances
+* Helpful to have familiarity with Oracle Cloud Infrastructure (OCI)
 * Experience with OCI CLI and setting up on configuration file helpful
 * Familiarity with S3 helpful 
 
@@ -41,6 +40,6 @@ Resource Links for Reference
 
 
 ## Acknowledgements
-* **Authors** - Vinoth Krishnamurthy, Principal Member of Technical Staff; Melinda Centeno, Senior Principal Product Manager
+* **Authors** - Melinda Centeno, Senior Principal Product Manager
 * **Speakers** - Jonathan Bensen, Director of Product Management; Melinda Centeno, Senior Principal Product Manager
 * **Last Updated By/Date** - Melinda Centeno, <DATE>

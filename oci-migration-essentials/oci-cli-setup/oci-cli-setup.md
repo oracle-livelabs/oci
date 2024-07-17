@@ -19,16 +19,15 @@ In this lab, you will:
 * Get User's OCID
 * Add User's API Key
 * Generate and Download RSA Key Pair in PEM format
-* Install OCI Command Line Interface
+* Install OCI Command Line Interface on the compute instance launched in the previous lab
 * Update OCI Configuration file
 * List all Buckets in a Compartment using OCI CLI
 
 ### Prerequisites
 
 This lab assumes:
-
-* You have an Oracle Cloud account with OCI and IDCS administration privileges or
-* Your OCI tenancy administrator can perform steps in this lab for you.
+* You have completed all the previous labs
+* You can use an Linux editor such as `vi`
 
 > **Note:** Please refer [Quickstart Installation guide on OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm) for various operating systems, you can **optionally skip this Lab** if you have already installed OCI CLI on your laptop or desktop machine.
 
@@ -52,6 +51,8 @@ Copy the OCID into a text file we will need this later.
 
   ![Navigate to Data Labeling](images/gen-key-pair.png " ") 
 
+> **Note:** Please do not use a key with a passphrase for this lab series, tools such as Rclone does not currently support API keys with a passphrase..
+
 2. You should now be able to see the Configuration file, copy paste this into a file we will need it later in Task 5 below.
 
   ![Navigate to Data Labeling](images/config-preview.png " ") 
@@ -62,156 +63,199 @@ Click on **Close** button
 
   ![Navigate to Data Labeling](images/fingerprint.png " ") 
 
-## Task 4: Install OCI Command Line Interface (CLI)
+## Task 4: Login to Compute Instance with Cloud Shell
+
+You are assumed to have generated your SSH Keys in the *Cloud Shell* from the earlier lab.
+
+1. Return to your Cloud Shell window, if you disconnected from the compute instance created in the previous lab, `ssh` to the instance again
+
+   ```
+   ssh -i <SSH_Key_Name> opc@<PUBLIC_IP_OF_COMPUTE>
+   ```
+
+    *Hint: If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command.*
+
+2.  Enter 'yes' when prompted for security message.
+
+   ![Using ssh keys in cloud shell to login to compute instance](images/connect-instance.png " ")
+
+3.  Verify opc@COMPUTE\_INSTANCE\_NAME appears on the prompt.
+
+## Task 5: Install OCI Command Line Interface (CLI)
 
 The CLI is a small-footprint tool that you can use on its own or with the Console to complete Oracle Cloud Infrastructure tasks. The CLI provides the same core functionality as the Console, plus additional commands. Some of these, such as the ability to run scripts, extend Console functionality.
 
-1. **Install OCI CLI on MAC OS**
+1. Install OCI CLI on the Oracle Linux 9 compute instance where file storage mount is setup:
 
-2. If you have not installed brew on your MacOS please refer their official guide [Install Brew on Mac](https://docs.brew.sh/Installation)
+   ```
+   <copy>
+   sudo dnf -y install oraclelinux-developer-release-el9
+   sudo dnf install python39-oci-cli
+   </copy>
+   ```
+> **Note:** The directions above will for for Oracle Linux 9 installs in general.
 
-    ```text
-    <copy>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</copy>
-    ``` 
+### Optional task: Install the OCI Command Line on Your Laptop or Workstation
 
-    ```text
-    <copy>brew update && brew install oci-cli</copy>
-    ``` 
-3. **Install OCI CLI on Windows OS**
-4. Open the PowerShell console using the Run as Administrator option. The installer enables auto-complete by installing and running a script. To allow this script to run, you must enable the RemoteSigned execution policy.
+#### For Linux and Unix
 
-    To configure the remote execution policy for PowerShell, run the following command.
+Open a terminal.
 
-    Download the installer script
+To run the installer script, run the following command.
+  ```
+  <copy>
+  bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+  </copy>
+  ```
+Respond to the Installation Script prompts.
 
-    ```text
-    <copy>Set-ExecutionPolicy RemoteSigned</copy>
-    ```
+#### For Oracle Linux 8
 
-5. Force PowerShell to use TLS 1.2 for Windows 2012 and Windows 2016:
+Use dnf to install the CLI.
+  ```
+  <copy>
+  sudo dnf -y install oraclelinux-developer-release-el8
+  sudo dnf install python36-oci-cli
+  </copy>
+  ```
+#### For Oracle Linux 7
 
-    ```text
-    <copy>[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 </copy>
-    ```
+Use yum to install the CLI.
+  ```
+  <copy>
+  sudo yum install python36-oci-cli
+  </copy>
+  ```
 
-6. Download the installer script:
+#### Mac OS X
+To install the CLI on Mac OS X with [Homebrew](https://docs.brew.sh/Installation):
 
-    ```text
-    <copy>Invoke-WebRequest https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1 -OutFile install.ps1
-    </copy>
-    ```
+  ```
+  <copy>
+  brew update && brew install oci-cli
+  </copy>
+  ```
+#### Windows
+Open the PowerShell console using the **Run as Administrator** option.
 
-7. To run the installer script without prompting the user, accepting the default settings, run the following command:
-8. ```text
-    <copy>./install.ps1 -AcceptAllDefaults  
-    </copy>
-    ```
+The installer enables auto-complete by installing and running a script. To allow this script to run, you must enable the RemoteSigned execution policy.
 
-9. **On Linux and Unix**
+To configure the remote execution policy for PowerShell, run the following command.
 
-    ```text
-    <copy>bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"</copy>
-    ```
+  ```
+  <copy>
+  Set-ExecutionPolicy RemoteSigned
+  </copy>
+  ```
 
-10. **Verifying the OCI CLI Installation**
+Force PowerShell to use TLS 1.2 for Windows 2012 and Windows 2016: [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-    ```text
-    <copy>oci --version</copy>
-    ```
+Download the installer script:
 
-    Output will be similar to this version number might vary
+  ```
+  <copy>
+  Invoke-WebRequest https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1 -OutFile install.ps1
+  </copy>
+  ```
 
-    ```text
-    <copy>3.23.4</copy>
-    ```
+Run the installer script with or without prompts:
+To run the installer script with prompts, run the following command:
 
-## Task 5: Update OCI Configuration file
+  ```
+  <copy>
+  iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1'))
+  </copy>
+  ```
+To run the installer script without prompting the user, accepting the default settings, run the following command:
+
+  ```
+  <copy>
+  install.ps1 -AcceptAllDefaults
+  </copy>
+  ```
+
+2. Verifying the OCI CLI Installation
+
+   ```
+   <copy>oci --version</copy>
+   ```
+
+Output will be similar to this version number might vary
+
+   ```
+   <copy>3.23.4</copy>
+   ```
+
+## Task 6: Update OCI Configuration file
 
 1. Update DEFAULT values as per your OCI parameters
 
-    ```text
+   ```
     <copy>vi ~/.oci/config</copy>
     ```
     
-    ```text
+    ```
     <copy>[DEFAULT]
     user=< user OCID >
     fingerprint=< finger print >
     key_file=< Path to .pem Private Key file generated from Task 3>
     tenancy=< Tenancy OCID >
-    region=< region ></copy>
-    ```
-
-    for example the completed file might look like this, please replace the User OCID, fingerprint, Tenancy OCID, Home region, key_file as per your tenancy and local file path for the key file
-
-    ```text
-    <copy>[DEFAULT]
-    user=ocid1.user.oc1..aaaaaaaaompu-user-ocid-x63smy6knndy5q
-    fingerprint=ad:a7:73:a2:23:-user-fingerprint-:0c:a9:22:bb
-    tenancy=ocid1.tenancy.oc1..aaaaaaaa6v-tenancy-ocid-sdd6ahdouq
-    region=us-ashburn-1
-    key_file=/Users/-user-name-/.oci/oci_api_key.pem
+    region=< region >
     </copy>
     ```
+> **Note:** Feel free to use a different editor such as `vim` , `pico`, or `nano`, etc.
 
-## Task 6: List all Buckets in a Compartment using OCI CLI
+The completed file should look similar to the example below, please replace the User OCID, fingerprint, Tenancy OCID, Home region, key_file as per your tenancy and local file path for the key file
 
-1. Reality check if we can list all buckets in a compartment to check if all configurations are correct. provide your compartment ocid where the OCI buckets have been created
+   ```
+   <copy>[DEFAULT]
+   user=ocid1.user.oc1..aaaaaaaaompu-user-ocid-x63smy6knndy5q
+   fingerprint=ad:a7:73:a2:23:-user-fingerprint-:0c:a9:22:bb
+   tenancy=ocid1.tenancy.oc1..aaaaaaaa6v-tenancy-ocid-sdd6ahdouq
+   region=us-ashburn-1
+   key_file=/Users/-user-name-/.oci/oci_api_key.pem
+   </copy>
+   ```
 
-    ```text
-    <copy> 
-    oci os bucket list --compartment-id ocid1.compartment.oc1..aaaaaaaaud6t-compartment-ocid-xs6n4hgg</copy>
-    ```
+## Task 7: List all Buckets in a Compartment using OCI CLI
 
-    The Output will be something like this
+1. Check if we can get the object storage namespace for the tenancy to verify the configuration file setup: 
 
-    ```text
-    <copy>{
-      "data": [
-        {
-          "compartment-id": "ocid1.compartment.oc1..aaaaaaaaud6tkdyourcompartmentocidxs6n4hgg",
-          "created-by": "ocid1.saml2idp.oc1..aaaaaaaaiq5whocreated3y2l5hw3a/username@mail.com",
-          "defined-tags": null,
-          "etag": "fbd9e9e7-abc5-425c-9e10-d8009eb72662",
-          "freeform-tags": null,
-          "name": "Bucket1",
-          "namespace": "yournamespace",
-          "time-created": "2023-03-16T08:39:35.619000+00:00"
-        },
-        {
-          "compartment-id": "ocid1.compartment.oc1..aaaaaaaaud6tkdyourcompartmentocidxs6n4hgg",
-          "created-by": "ocid1.saml2idp.oc1..aaaaaaaaiq5whocreated3y2l5hw3a/username@mail.com",
-          "defined-tags": null,
-          "etag": "509b095f-3b9d-4f1f-a2b5-3490a3a8b1fb",
-          "freeform-tags": null,
-          "name": "Bucket2",
-          "namespace": "yournamespace",
-          "time-created": "2023-03-15T13:34:40.356000+00:00"
-        }
-      ]
-    }</copy>
-    ```
+   ```
+   <copy> 
+   oci os ns get
+   </copy>
+   ```
 
-## Task 7: Make note of OCI CLI configuration file
+If successful, the following will be returned, with xx as your unique namespace.
+
+  ```
+  <copy>
+  {
+    "data": "xx"
+  }
+  </copy>
+  ```
+
+## Task 8: Make note of OCI CLI configuration file
 
 1. We will be using this config file path and OCIDs here in later labs, please make a note of them  
 
-    ```text
-    <copy>cat ~/.oci/config</copy>
-    ```
+  ```
+  <copy>
+  cat ~/.oci/config
+  </copy>
+  ```
 
-    In other operating systems you can open the file using text editor such as Notepad or Vi editor.
+In other operating systems you can open the file using text editor such as Notepad or `vi` editor.
 
-    > **Congratulations:** You have now completed the **Common Labs**, which is required for most of the following parts and labs. Now you can proceed to any other Parts of this workshop. All parts are independent of each other.
+    > **Congratulations:** You have now completed the setup for the **OCI Command Line Interface**, which is required for following parts and labs. Now you can proceed to any other Parts of this workshop. 
 
 ## Troubleshooting
 
-1. Unable to list OCI Buckets through OCI CLI
+1. Unable to get object storage namespace for the OCI tenancy through OCI CLI
    
-  Solution 1: Check for all the OCIDs and Fingerprint in the configuration file if it matches with the one in the tenancy settings.
-
-  Solution 2: Check if the buckets have been created in same compartment as the one that you are querying from OCI CLI
-
+Check for all the OCIDs and Fingerprint in the configuration file if it matches with the one in the tenancy settings.
 
 You may now **proceed to the next lab**.
 
@@ -224,5 +268,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - 14th August, 2023.
+* **Authors** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database; Melinda Centeno, Senior Principal Product Manager
+* **Last Updated By/Date** - 17 July 2024

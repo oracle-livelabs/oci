@@ -11,40 +11,37 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
-            "title":"Lab 1: Setup OCI CLI - Command Line Interface",
+            "title": "Lab 1: Migration Setup", 
+            "description": "Generating SSH Keys, Creating a bucket,Creating basic networking and launching a Compute Instance",
+            "filename": "../migration-setup/migration-setup.md"
+        },
+        {
+            "title":"Lab 2: Setup OCI CLI - Command Line Interface",
             "description": "Setup OCI CLI",
-            "filename": "https://oracle-livelabs.github.io/developer/java-management-oci-services-integration/access-and-utilise-rest-api-via-oci-cli/access-and-utilise-rest-api-via-oci-cli.md"
+            "filename": "../oci-cli-setup/oci-cli-setup.md"
         },
         {
-            "title": "Lab 2: Generate SSH Keys",
-            "description": "Generate SSH Key",
-            "filename": "https://oracle-livelabs.github.io/common/labs/generate-ssh-key-cloud-shell/generate-ssh-keys-cloud-shell.md"
-        },
-        {
-            "title": "Lab 3: Configure File System Storage",
-            "description": "Configure File System Storage",
-            "filename": "https://oracle-livelabs.github.io/oci-core/file-storage-service/file-storage-service.md"
-        },
-        {
-            "title": "Lab 4: Create a Bucket in Object Storage Service",
-            "description": "Creating Object Storage bucket",
+            "title": "Lab 4: Create a Bucket and PAR in Object Storage Service",
+            "description": "Learning to work with the Object Storage Service",
              "filename": "https:///oracle-livelabs.github.io/oci-core/object-storage/object-storage/object-storage.md"
         },
         {
-            "title": "Lab 5: Installing Rclone",
+            "title": "Lab 3: Installing Rclone",
             "description": "Installing and Using Rclone",
             "filename": "../../rclone/rclone.md"
         },
         {
-            "title": "Object Storage Sync",
+            "title": "Lab 4: Object Storage Sync",
             "description": "OCI Command Line Object Storage Sync",
             "filename": "../../os-sync/os-sync.md"
         },
         {
-            "title": "Other Migration Tools",
+            "title": "Lab 5: Other Migration Tools",
             "description": "Using Other Tools for Migration",
             "filename": "../../other-tools/other-tools.md"
         },
+
+        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
