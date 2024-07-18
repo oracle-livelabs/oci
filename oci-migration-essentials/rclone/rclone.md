@@ -8,51 +8,24 @@ Estimated time: 30 min
 ### Objectives
 
 In this lab you will:
-- Install Rclone on an Oracle Linux compute instance
+- Install Rclone on your laptop or workstation
 - Configure Rclone with OCI Object Storage
 - Use Rclone to create test files for migration
-- Migrate test files from local laptop to OCI Object Storage and OCI File Storage destinations 
+- Migrate test files from local laptop to OCI Object Storage
 
 ### Prerequisites
 
 This lab assumes you have:
-* Successfully created all previous labs
+* You have OCI Command Line installed with a working configuration file
 * Ability to create files and directories, edit files, and move to different directories on Linux
 
-## Task 1: Login to Your Compute Instance with Cloud Shell
+## Task 1: Install Rclone
 
-You are assumed to have created an instance in the file system storage service lab and generated your SSH Keys in the *Cloud Shell* from the earlier lab.
-
-1. Return to your Cloud Shell window, if you disconnected from the compute instance created in the previous lab, `ssh` to the instance again
-
-  ```
-  ssh -i <SSH_Key_Name> opc@<PUBLIC_IP_OF_COMPUTE>
-  ```
-
- *Hint: If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command.*
-
-2.  Enter 'yes' when prompted for security message.
-
-   ![Using ssh keys in cloud shell to login to compute instance](images/connect-instance.png " ")
-
-3.  Verify opc@COMPUTE\_INSTANCE\_NAME appears on the prompt.
-
-## Task 2: Install Rclone
-
-1. Install Rclone on the Oracle Linux compute instance you have logged into via `ssh`
-
-  ```
-  <copy>
-  sudo -v ; curl https://rclone.org/install.sh | sudo bash
-  </copy>
-  ```
-
-> **Note:** These directions can also be used to install Rclone on Linux and BSD systems.
-
-2. **Optional** Install Rclone on your laptop or workstation
+1. Install Rclone on your laptop or workstation
 
 #### For Mac OS X
-Install Rclone on Mac OS X with [Homebrew](https://docs.brew.sh/Installation):
+
+Open a terminal window and install Rclone on Mac OS X with [Homebrew](https://docs.brew.sh/Installation):
 
   ```
   <copy>
@@ -61,6 +34,7 @@ Install Rclone on Mac OS X with [Homebrew](https://docs.brew.sh/Installation):
   ```
 
 #### For Windows
+
 Download the correct binary for your processor type by clicking on the links below.
 
   [Intel/AMD - 64 Bit](https://downloads.rclone.org/rclone-current-windows-amd64.zip)
@@ -69,12 +43,20 @@ Download the correct binary for your processor type by clicking on the links bel
 
 Extract the file and add the extracted file to Windows system PATH environment variable for easy command line access.
 
-## Task 3: Configure Rclone
+#### For Linux and BSD Systems
+
+Open a terminal
+  ```
+  <copy>
+  sudo -v ; curl https://rclone.org/install.sh | sudo bash
+  </copy>
+  ```
+
+## Task 2: Configure Rclone
 
 1. Gather the following information from items created in the previous labs:
 
-  * The name of the bucket you created in the previous object storage lab
-  * The full path to your OCI Command Line configuration file, usually in your home directory or folder under `.oci` called `config`. For example: `/home/opc/.oci/config`
+  * The full path to your OCI Command Line (CLI) configuration file, usually in your home directory or folder under `.oci` called `config`. For example: `/home/opc/.oci/config`
   * View the file with the editor of your choice and take note of the region name and the tenancy ocid
  
    ![Image of OCI configuration file](images/config_file.png)
@@ -95,7 +77,7 @@ Extract the file and add the extracted file to Windows system PATH environment v
   </copy>
   ```
 
-5. Create the Rclone configuration file:
+4. Create the Rclone configuration file:
 
 Change to the rclone directory created above:
 
@@ -105,7 +87,7 @@ Change to the rclone directory created above:
   </copy>
   ```
 
-Using the editor of your choice, create a rclone.conf file, this example uses the Vi imporved editor
+Using the editor of your choice, create a rclone.conf file, this example uses the Vi improved editor
 
   ```
   <copy>
@@ -146,23 +128,35 @@ The Rclone configuration file should look something like this:
 
    ![Image of Rclone configuration file](images/rclone_conf.png)
 
-6. Verify you can see the bucket created in the previous object storage lab, run:
-    ```
-    <copy>
-    rclone lsd oci:
-    </copy>
-    ```
+5. Create a new bucket using rclone:
 
-> **Note:** If you cannot see the bucket, take another look at your `rclone.conf` file and make sure all the parameters are setup correctly for your tenancy and your OCI Command Line configuration file path.
+  ```
+  <copy>
+  rclone mkdir oci:migration-lab
+  </copy>
+  ```
 
-## Task 4:
-2. Use Rclone to create some test files to migrate into OCI Object Storage
+Verify you can see the bucket created in the previous step, run:
+  ```
+  <copy>
+  rclone lsd oci:
+  </copy>
+  ```
+Successful output should look like this:
+  ```
+   rclone lsd oci:
+    -1 2024-07-17 19:49:12        -1 migration-lab
+  ```
 
-## Task 5: More info
+> **Note:** If you could not create or list the bucket, take another look at your `rclone.conf` file and make sure all the parameters are setup correctly for your tenancy and your OCI Command Line configuration file path.
+
+## Task 3:
+1. Use Rclone to create some test files to migrate into OCI Object Storage
+
+## Task 4: More info
 
 ## Acknowledgements
 
-* Author - 
-* Contributors - Ewan Slater 
-* Last Updated - Nov, 2th 2023
+* **Author** - Melinda Centeno, Senior Principal Product Manager
+* **Last Updated** - 17 July 2024
 

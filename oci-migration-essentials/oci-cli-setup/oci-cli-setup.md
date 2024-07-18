@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this Lab, we will set up the OCI command line interface. This will help us upload images to the Object storage bucket. Later, we will use details such as User OCID, Fingerprint and others in the Oracle APEX front-end development lab.  
+In this Lab, we will set up the OCI command line interface (CLI). We will use the OCI CLI configuration file with Rclone and OCI CLI to synchronize data into an object storage bucket. 
 
 [Youtube video on Installing OCI CLI](youtube:nqMAXuqtlW8:large)
 
@@ -19,15 +19,15 @@ In this lab, you will:
 * Get User's OCID
 * Add User's API Key
 * Generate and Download RSA Key Pair in PEM format
-* Install OCI Command Line Interface on the compute instance launched in the previous lab
-* Update OCI Configuration file
-* List all Buckets in a Compartment using OCI CLI
+* Install OCI Command Line Interface on your laptop or workstation
+* Update the OCI Configuration file
+* Use the OCI CLI to determine the OCI tenancy object storage namespace
 
 ### Prerequisites
 
 This lab assumes:
 * You have completed all the previous labs
-* You can use an Linux editor such as `vi`
+* You can change directories/ folders, create/edit files, create directories/folder , run commands, and install software on your laptop or workstaion.
 
 > **Note:** Please refer [Quickstart Installation guide on OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm) for various operating systems, you can **optionally skip this Lab** if you have already installed OCI CLI on your laptop or desktop machine.
 
@@ -51,7 +51,10 @@ Copy the OCID into a text file we will need this later.
 
   ![Navigate to Data Labeling](images/gen-key-pair.png " ") 
 
+After downloading the key to your home directory/ folder or a path you can remember and where it won't be deleted. Note the path of the private API key, you will need it later in Task 5 below.x
+
 > **Note:** Please do not use a key with a passphrase for this lab series, tools such as Rclone does not currently support API keys with a passphrase..
+
 
 2. You should now be able to see the Configuration file, copy paste this into a file we will need it later in Task 5 below.
 
@@ -63,45 +66,61 @@ Click on **Close** button
 
   ![Navigate to Data Labeling](images/fingerprint.png " ") 
 
-## Task 4: Login to Compute Instance with Cloud Shell
 
-You are assumed to have generated your SSH Keys in the *Cloud Shell* from the earlier lab.
-
-1. Return to your Cloud Shell window, if you disconnected from the compute instance created in the previous lab, `ssh` to the instance again
-
-   ```
-   ssh -i <SSH_Key_Name> opc@<PUBLIC_IP_OF_COMPUTE>
-   ```
-
-    *Hint: If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command.*
-
-2.  Enter 'yes' when prompted for security message.
-
-   ![Using ssh keys in cloud shell to login to compute instance](images/connect-instance.png " ")
-
-3.  Verify opc@COMPUTE\_INSTANCE\_NAME appears on the prompt.
-
-## Task 5: Install OCI Command Line Interface (CLI)
+## Task 4: Install OCI Command Line Interface (CLI)
 
 The CLI is a small-footprint tool that you can use on its own or with the Console to complete Oracle Cloud Infrastructure tasks. The CLI provides the same core functionality as the Console, plus additional commands. Some of these, such as the ability to run scripts, extend Console functionality.
 
-1. Install OCI CLI on the Oracle Linux 9 compute instance where file storage mount is setup:
+1. Install OCI CLI on Your Laptop or Workstation
 
-   ```
-   <copy>
-   sudo dnf -y install oraclelinux-developer-release-el9
-   sudo dnf install python39-oci-cli
+#### For Mac OS
+If you have not installed brew on your MacOS please refer their official guide [Install Brew on Mac](https://docs.brew.sh/Installation)
+
+Open a terminal.
+
+  ```
+  <copy>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</copy>
+  ```
+
+  ```
+  <copy>brew update && brew install oci-cli</copy>
+  ```
+
+#### Windows
+Open the PowerShell console using the Run as Administrator option. The installer enables auto-complete by installing and running a script. To allow this script to run, you must enable the RemoteSigned
+
+To configure the remote execution policy for PowerShell, run the following command.
+
+Download the installer script
+
+  ```
+  <copy>Set-ExecutionPolicy RemoteSigned</copy>
+  ```
+
+Force PowerShell to use TLS 1.2 for Windows 2012 and Windows 2016:
+
+  ```
+  <copy>[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 </copy>
+  ```
+
+Download the installer script:
+
+  ```text
+   <copy>Invoke-WebRequest https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1 -OutFile install.ps1
    </copy>
    ```
-> **Note:** The directions above will for for Oracle Linux 9 installs in general.
 
-### Optional task: Install the OCI Command Line on Your Laptop or Workstation
+To run the installer script without prompting the user, accepting the default settings, run the following command:
+  ```text
+  <copy>./install.ps1 -AcceptAllDefaults
+  </copy>
+  ```
 
 #### For Linux and Unix
 
 Open a terminal.
 
-To run the installer script, run the following command.
+Run the installer script with the following command:
   ```
   <copy>
   bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
@@ -109,6 +128,13 @@ To run the installer script, run the following command.
   ```
 Respond to the Installation Script prompts.
 
+#### For Oracle Linux 9
+   ```
+   <copy>
+   sudo dnf -y install oraclelinux-developer-release-el9
+   sudo dnf install python39-oci-cli
+   </copy>
+   ```
 #### For Oracle Linux 8
 
 Use dnf to install the CLI.
@@ -127,53 +153,6 @@ Use yum to install the CLI.
   </copy>
   ```
 
-#### Mac OS X
-To install the CLI on Mac OS X with [Homebrew](https://docs.brew.sh/Installation):
-
-  ```
-  <copy>
-  brew update && brew install oci-cli
-  </copy>
-  ```
-#### Windows
-Open the PowerShell console using the **Run as Administrator** option.
-
-The installer enables auto-complete by installing and running a script. To allow this script to run, you must enable the RemoteSigned execution policy.
-
-To configure the remote execution policy for PowerShell, run the following command.
-
-  ```
-  <copy>
-  Set-ExecutionPolicy RemoteSigned
-  </copy>
-  ```
-
-Force PowerShell to use TLS 1.2 for Windows 2012 and Windows 2016: [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-
-Download the installer script:
-
-  ```
-  <copy>
-  Invoke-WebRequest https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1 -OutFile install.ps1
-  </copy>
-  ```
-
-Run the installer script with or without prompts:
-To run the installer script with prompts, run the following command:
-
-  ```
-  <copy>
-  iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1'))
-  </copy>
-  ```
-To run the installer script without prompting the user, accepting the default settings, run the following command:
-
-  ```
-  <copy>
-  install.ps1 -AcceptAllDefaults
-  </copy>
-  ```
-
 2. Verifying the OCI CLI Installation
 
    ```
@@ -186,16 +165,32 @@ Output will be similar to this version number might vary
    <copy>3.23.4</copy>
    ```
 
-## Task 6: Update OCI Configuration file
+## Task 5: Update OCI Configuration file
 
 1. Update DEFAULT values as per your OCI parameters
 
-   ```
-    <copy>vi ~/.oci/config</copy>
-    ```
+Run the following command on all laptops and workstation types:
+
+  ```
+  <copy> oci setup config </copy>
+  ```
+Accept the default location for the config file then answer the prompts for the user OCID, tenancy OCID, home region, and API private pem key path using the information collected in Task 3.
+
+Or manually create a file, start by creating a directory /folder in your home directory/folder called `.oci`, then use to create a file in that directory/ folder named `config`:
+
+  ```
+  <copy>
+  vi config
+  </copy>
+  ```
+
+> **Note:** Use the editor which works best for your environment such as `vim` , `pico`, `nano`, `Notepad`, etc.
+
+Copy and paste the information from Task 3 which should have the following information:
     
     ```
-    <copy>[DEFAULT]
+    <copy>
+    [DEFAULT]
     user=< user OCID >
     fingerprint=< finger print >
     key_file=< Path to .pem Private Key file generated from Task 3>
@@ -203,7 +198,6 @@ Output will be similar to this version number might vary
     region=< region >
     </copy>
     ```
-> **Note:** Feel free to use a different editor such as `vim` , `pico`, or `nano`, etc.
 
 The completed file should look similar to the example below, please replace the User OCID, fingerprint, Tenancy OCID, Home region, key_file as per your tenancy and local file path for the key file
 
@@ -217,7 +211,7 @@ The completed file should look similar to the example below, please replace the 
    </copy>
    ```
 
-## Task 7: List all Buckets in a Compartment using OCI CLI
+## Task 7: Get the OCI tenancy object storage namespace with the OCI CLI:
 
 1. Check if we can get the object storage namespace for the tenancy to verify the configuration file setup: 
 
@@ -269,4 +263,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Authors** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database; Melinda Centeno, Senior Principal Product Manager
-* **Last Updated By/Date** - 17 July 2024
+* **Last Updated By/Date** - Melinda Centeno, 17 July 2024
