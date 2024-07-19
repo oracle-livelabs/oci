@@ -14,147 +14,15 @@ In this lab you will:
 ### Prerequisites
 
 This lab assumes you have:
+* Completed all previous labs
 * You have OCI Command Line installed with a working configuration file
 * Ability to create files and directories, edit files, and move to different directories on Linux
 * Have at least 1 GiB of free space on your laptop or workstation to create test files
 
 
-## Task 1: Install Rclone
+## Task 1: Create Test Files 
 
-1. Install Rclone on your laptop or workstation
-
-> **Note:** If you already have a networking environment set up in your tenancy with VCN and networks and can launch compute intances, you can run this lab on an OCI compute instance. Oracle Linux would be recommended, follow relevant directions below.
- 
-#### For Mac OS X
-
-Open a terminal window and install Rclone on Mac OS X with [Homebrew](https://docs.brew.sh/Installation):
-
-  ```
-  <copy>
-  brew update && brew install rclone
-  </copy>
-  ```
-
-#### For Windows
-
-Download the correct binary for your processor type by clicking on the links below.
-
-  [Intel/AMD - 64 Bit](https://downloads.rclone.org/rclone-current-windows-amd64.zip)
-  [Intel/AMD - 32 Bit](https://downloads.rclone.org/rclone-current-windows-386.zip)
-  [ARM - 64 Bit](https://downloads.rclone.org/rclone-current-windows-arm64.zip)
-
-Extract the file and add the extracted file to Windows system PATH environment variable for easy command line access.
-
-#### For Linux and BSD Systems
-
-Open a terminal
-  ```
-  <copy>
-  sudo -v ; curl https://rclone.org/install.sh | sudo bash
-  </copy>
-  ```
-
-## Task 2: Configure Rclone
-
-1. Gather the following information from items created in the previous labs:
-
-  * The full path to your OCI Command Line (CLI) configuration file, usually in your home directory or folder under `.oci` called `config`. For example: `/home/opc/.oci/config`
-  * View the file with the editor of your choice and take note of the region name and the tenancy ocid
- 
-   ![Image of OCI configuration file](images/config_file.png)
-
-2. Use the OCI CLI to get tenancy namespace name:
-
-  ```
-  <copy>
-  oci os ns get
-  </copy>
-  ```
-
-3. Create the directories where the Rclone configuration file will be created
-
-  ```
-  <copy>
-  mkdir -p $HOME/.config/rclone/
-  </copy>
-  ```
-
-4. Create the Rclone configuration file:
-
-Change to the rclone directory created above:
-
-  ```
-  <copy>
-  cd $HOME/.config/rclone
-  </copy>
-  ```
-
-Using the editor of your choice, create a rclone.conf file, this example uses the Vi improved editor
-
-  ```
-  <copy>
-  vim rclone.conf
-  </copy>
-  ```
-
-Add the following contents to the file:
-
-  ```
-  <copy>
-  [oci]
-  type = oracleobjectstorage
-  provider = user_principal_auth
-  namespace = <namespace>
-  compartment = <tenancy or compartment OCID>
-  region = <region>
-  config_file = < Full path to OCI Command Line Configuration file>
-  </copy>
-  ```
-> **Note:** The first line in square brackets is the name of remote, in this case we used oci to identify we are using a remote that is in Oracle Cloud Infrastructure. You reference the remote name when making Rclone commands.
-
-A completed file would look similar to the example below. Please replace the namespace, compartment or tenancy OCID, home region, and OCI Command Line Configuration path to match your tenancy and environment:
-
-  ```
-  <copy>
-  [oci]
-  type = oracleobjectstorage
-  provider = user_principal_auth
-  namespace = namespace
-  compartment = ocid1.tenancy.oc1..aaaaaaaa6v-tenancy-ocid-sdd6ahdouq
-  region = us-ashburn-1
-  config_file = /home/opc/.oci/config
-  </copy>
-  ```
-
-The Rclone configuration file should look something like this:
-
-   ![Image of Rclone configuration file](images/rclone_conf.png)
-
-5. Create a new bucket using rclone:
-
-  ```
-  <copy>
-  rclone mkdir oci:migration-lab
-  </copy>
-  ```
-
-Verify you can see the bucket created in the previous step, run:
-  ```
-  <copy>
-  rclone lsd oci:
-  </copy>
-  ```
-Successful output should look like this:
-  ```
-   rclone lsd oci:
-    -1 2024-07-17 19:49:12        -1 migration-lab
-  ```
-
-> **Note:** If you could not create or list the bucket, take another look at your `rclone.conf` file and make sure all the parameters are setup correctly for your tenancy and your OCI Command Line configuration file path.
-
-## Task 3: Use Rclone to create some test files to migrate into OCI Object Storage
-
-1. Create a test directory or folder to stage the test files on your laptop or workstation
+1. Create a directory or folder on your laptop or workstation
 
   ```
   <copy>
@@ -162,101 +30,14 @@ Successful output should look like this:
   </copy>
   ```
 
-2. Use the `test makefiles` Rclone command to create test files
-
-Create 6 test files using Rclone
-
-  ```
-  <copy>
-  rclone test makefiles migration-files --files 6 --files-per-directory 2 --max-depth 2 --max-file-size 250M --min-file-size 1K
-  </copy>
-  ```
-The above command will create 6 random files and a few directories in the migration-files directory/ folder spread across 3 directories, it should consume less than 1GiB of space.
-
-> **Note:** If you have closer to 15-20GiB of free  space on your laptop or workstation, you can use the following command to create more files and some larger files:
-
-  ```
-  <copy>
-  rclone test makefiles files --files 12 --files-per-directory 4 --max-depth 2 --max-file-size 2G --min-file-size 1K 
-  </copy>
- ```
-
-Change into the `migration-files` directory/ folder and familiarize yourself with the contents.
-
-  ```
-  <copy>
-  cd <path to migration-files>
-  ls
-  </copy>
-  ```
-Change the path to the full path of the directory for your command, example:
-
-  ```
-  cd /home/username/migration-files
-  ls
-  ```
-
-4. Check the size of files in the `migration-files` directory
-
-  ```
-  <copy>
-  $ rclone size migration-files/
-  </copy>
- ```
-
-Your output should show you how many files and directories total and the total size of the directory/ folder. It should look something like the output below:
-
-  ```
-  Total objects: 6
-  Total size: 698.654 MiB (732591655 Byte)
-  ```
-
-> **Note:** Since file generation is random, the size of your directory/ folder will vary from the output above.
-
-## Task 4: Migrating Data into an OCI Object Storage Bucket Using Rclone
-
-1. Copy the data from the local file system directory `migration-files` into the OCI Object Storage bucket created in Task 2 named `migration-lab` 
-
-  ```
-  <copy>
-  rclone copy --progress --transfers=20 migration-files oci:migration-lab
-  </copy>
-  ```
-
-* The `progress` flag displays the progress of the copy
-* The `transfer` flag is the number of file transfers to run in parallel, on larger systems you can push a higher number of files in parallel
-  
-> **Note:** This same command can be used on an OCI compute instance with OCI File System Storage NFS mounts to move data from OCI File System Storage into an OCI Object Storage Bucket
-
-Command output should look similar to this:
-
-  ```
-  Transferred:   	  698.654 MiB / 698.654 MiB, 100%, 2.384 MiB/s, ETA 0s
-  Transferred:            6 / 6, 100%
-  Elapsed time:      4m45.8s
-  ```
-
-2. Check that the files in the `migration-files` directory are now in the bucket `migration-lab`
-
-Use the OCI CLI to list the objects in the `migration-lab` bucket
-
-  ```
-  <copy>
-  oci os object list --bucket-name migration-lab --fields name --output table
-  </copy>
-  ```
-  
-Successful output should show the same files listed in the `migration-files` directory/ folder in Task 3
-
-3. Add files to the `migration-files` directory/ folder
-   
-Use an editor or command  of your choice and add 1-2 files to the `migration-files` directory/ folder. Example command:
+2. Create some test files
 
   ```
   <copy>
   cd <path to migration-files>
   echo  test1 > file1.txt
   echo test2 > file2.txt
+  echo test3 > file3.txt
   </copy>
  ```
 
@@ -266,41 +47,159 @@ Change the path to the `migration-files` directory/ folder, example:
   cd /home/username/migration-files
   echo test1 > file1.txt
   echo test2 > file2.txt
+  echo test3 > file3.txt
  ```
 
-4. Re-run the Rclone copy command to sync the local directory to the OCI Object Storage bucket
+## Task 2: Create an OCI Object Storage Bucket
+
+Use the OCI CLI to create an OCI Object Storage Bucket. 
 
   ```
   <copy>
-  rclone copy --progress --transfers=20 migration-files oci:migration-lab
+  oci os bucket create --name migration-ossync --compartment-id <compartment or tenancy OCID>
   </copy>
   ```
+If you do not have a compartment created in your tenancy, use the tenancy OCID for the `compartment-id` flag
 
-5. Check that the new files have been copied into the `migration-lab` buckete
+> **Note:** You can find your tenancy OCID in your OCI CLI configuration file. The OCI CLI configuration file is usually in your home directory/ folder in sub-directory/folder .oci named config, for example: `/home/username/.oci/config`
 
-Re-run the OCI CLI command from Step 2 above, or use Rclone.
+## Task 3: Synchronize Local File System Data into OCI Object Storage
+
+1. Use the OCI CLI `os object sync` command to synchronize the files from the `migration-files` directory into the `migration-ossync` bucket
 
   ```
   <copy>
-  rclone ls oci:migration-lab
+  oci os object sync --src-dir <path to migration-files> --bucket-name migration-ossync
   </copy>
-  ```
-
-You should now see `file1.txt` and `file2.txt` with the previously migrated files. It should look something like this:
-
-  ```
-  rclone ls oci:migration-lab
-  121617779 duhatam2fif
-          6 file1.txt
-          6 file2.txt
-  105135531 kacak/josi
-   62519776 kozemof/wulonug3raq
-  168538372 riboqex6taf
-  178765140 wocojom9ra
-   96015057 zeloj
   ```
   
-## Task 5 Migrate Data from OCI Object Storage to a Local File System
+Use the full or relative path to the `migration-files` directory
+
+Example with expected output:
+
+  ```
+  oci os object sync --src-dir /home/username/migration-files --bucket-name migration-ossync
+  Uploaded file1.txt  [####################################]  100%
+  Uploaded file2.txt  [####################################]  100%
+  Uploaded file3.txt  [####################################]  100%
+
+  {
+    "skipped-objects": [],
+    "upload-failures": {},
+    "uploaded-objects": {
+      "file1.txt": {
+        "etag": "1fde12b9-a12e-4f9a-bbe8-7bf55bb517c9",
+        "last-modified": "Fri, 19 Jul 2024 02:42:15 GMT",
+        "opc-content-md5": "PncFSY6L5gUghBQJ68abwQ=="
+      },
+      "file2.txt": {
+        "etag": "b536b1f4-94e5-418a-8070-8c08bc7a4fce",
+        "last-modified": "Fri, 19 Jul 2024 02:42:16 GMT",
+        "opc-content-md5": "EmqKUbnRu9B/3cZYGaVCww=="
+      },
+      "file3.txt": {
+        "etag": "05368ab5-759c-4c64-82d1-2442905fcccc",
+        "last-modified": "Fri, 19 Jul 2024 02:42:16 GMT",
+        "opc-content-md5": "O8O+EU+2MjrcWwrXQi0ZOg=="
+      }
+    }
+  }
+  ```
+
+> **Note:** This same command can be used for on-prem local file systems, on-prem NFS file systems, and on an OCI compute instance with OCI File System Storage NFS mounts to move data from OCI File System Storage into an OCI Object Storage Bucket
+
+2. Verify the Files are in bucket
+
+  ```
+  <copy>
+  oci os object list --bucket-name migration-ossync --fields name --output table
+  </copy>
+  ```
+  
+Successful output should show the created files in the `migration-ossync` bucket like this:
+
+  ```
+  oci os object list --bucket-name migration-ossync --fields name --output table
+  +----------------+------+------+-----------+------+--------------+--------------+---------------+
+  | archival-state | etag | md5  | name      | size | storage-tier | time-created | time-modified |
+  +----------------+------+------+-----------+------+--------------+--------------+---------------+
+  | None           | None | None | file1.txt | None | None         | None         | None          |
+  | None           | None | None | file2.txt | None | None         | None         | None          |
+  | None           | None | None | file3.txt | None | None         | None         | None          |
+  +----------------+------+------+-----------+------+--------------+--------------+---------------+
+  ```
+
+3. Add files to the `migration-files` directory/ folder
+   
+Use an editor or command  of your choice and add 1-2 files to the `migration-files` directory/ folder. Example command:
+
+  ```
+  <copy>
+  cd <path to migration-files>
+  echo  test4 > file4.txt
+  echo test5 > file5.txt
+  </copy>
+ ```
+
+Change the path to the `migration-files` directory/ folder, example:
+
+  ```
+  cd /home/username/migration-files
+  echo test1 > file4.txt
+  echo test2 > file5.txt
+ ```
+
+4. Re-run the `os object sync` command
+
+  ```
+  <copy>
+  oci os object sync --src-dir <path to migration-files> --bucket-name migration-ossync
+  </copy>
+  ```
+Use the full or relative path to the `migration-files` directory
+
+Example with expected output:
+  ```
+  oci os object sync --src-dir /home/username/migration-files --bucket-name migration-ossync
+  Uploaded file5.txt  [####################################]  100%
+  Uploaded file4.txt  [####################################]  100%
+
+  {
+    "skipped-objects": [
+      "file2.txt",
+      "file3.txt",
+      "file1.txt"
+    ],
+    "upload-failures": {},
+    "uploaded-objects": {
+      "file4.txt": {
+        "etag": "d8566bce-31a5-4a20-9c26-a69f8144e9cb",
+        "last-modified": "Fri, 19 Jul 2024 02:55:53 GMT",
+        "opc-content-md5": "tRY88nCj+6w0gnxKJxPu9A=="
+      },
+      "file5.txt": {
+        "etag": "23eda846-c740-4229-be55-d37a99710cef",
+        "last-modified": "Fri, 19 Jul 2024 02:55:53 GMT",
+        "opc-content-md5": "u02hKQecEtTdruZLp5oD/w=="
+      }
+    }
+  }
+  ```
+
+5. Check that the new files have been copied into the `migration-ossync` bucket
+
+Re-run the OCI CLI command from Step 2 above
+
+```
+  <copy>
+  oci os object list --bucket-name migration-ossync --fields name --output table
+  </copy>
+  ```
+
+You should now see `file4.txt` and `file5.txt` with the previously migrated files. 
+
+  
+## Task 4 Migrate Data from OCI Object Storage to a Local File System
 
 1. Create a new directory/ folder on your laptop or workstation
 
@@ -310,25 +209,41 @@ You should now see `file1.txt` and `file2.txt` with the previously migrated file
   </copy>
   ```
 
-2. Use Rclone to move the data from the `migration-lab` bucket to the `migration-target` directory/ folder
+2. Use `os object sync` to move the data from the `migration-ossync` bucket to the `migration-target` directory/ folder
 
   ```
   <copy>
-  rclone copy --progress --transfers=20 oci:migration-lab migration-target
+  oci os object sync --dest-dir <path to migration-target directory> --bucket-name migration-ossync
   </copy>
   ```
+Use the full or relative path to the `migration-target` directory
 
-> **Note:** The command above can be used on an OCI compute instance with an OCI File System Storage NFS mount to move the data from OCI File System Storage Service into an OCI Object Storage bucket
-
-Output should look similar to the following:
-
+Example command with expected output:
   ```
-  Transferred:   	  698.654 MiB / 698.654 MiB, 100%, 3.302 MiB/s, ETA 0s
-  Transferred:            8 / 8, 100%
-  Elapsed time:      2m51.5s
+  oci os object sync --dest-dir /Users/mlgraham/migration-target --bucket-name migration-ossync
+  Downloaded file2.txt  [####################################]  100%
+  Downloaded file1.txt  [####################################]  100%
+  Downloaded file5.txt  [####################################]  100%
+  Downloaded file4.txt  [####################################]  100%
+  Downloaded file3.txt  [####################################]  100%
+
+  {
+    "download-failures": {},
+    "downloaded-objects": [
+      "file2.txt",
+      "file1.txt",
+      "file5.txt",
+      "file4.txt",
+      "file3.txt"
+    ],
+    "skipped-objects": []
+  }
   ```
 
-3. List the files in the `migration-target` directory/ folder and see that the contents match Task 4, Step 5
+> **Note:** The command above can be used for on-prem local file systems, on-prem NFS file systems, and on an OCI compute instance with an OCI File System Storage NFS mount to move the data from OCI File System Storage Service into an OCI Object Storage bucket
+
+
+3. List the files in the `migration-target` directory/ folder and see that the contents match Task 3, Step 5
 
   ```
   <copy>
@@ -337,21 +252,95 @@ Output should look similar to the following:
   <copy>
   ```
 
-Example:
+Example with expected output:
   ```
   cd /home/username/migration-target
   ls
+  file1.txt	file2.txt	file3.txt	file4.txt	file5.txt
   ```
 
 You should now see the bucket objects in the local file system directory.
    
+
+## Task 5: Lab Clean Up
+
+This is an optional lab to clean up all created items.
+
+1. Remove Objects
+
+Delete all the objects in the `migration-ossync` bucket using the OCI CLI
+
+  ```
+  <copy>
+  oci os object bulk-delete --bucket-name migration-ossync
+  </copy>
+  ```
+
+When prompted, answer `y`. Example and expected output:
+
+  ```
+  oci os object bulk-delete --bucket-name migration-ossync 
+  WARNING: This command will delete at least 5 objects. Are you sure you wish to continue? [y/N]: y
+  Deleted object file4.txt  [####################################]  100%
+  Deleted object file3.txt  [####################################]  100%
+  Deleted object file5.txt  [####################################]  100%
+  Deleted object file1.txt  [####################################]  100%
+  Deleted object file2.txt  [####################################]  100%
+
+  {
+    "delete-failures": {},
+    "deleted-objects": [
+      "file4.txt",
+      "file3.txt",
+      "file5.txt",
+      "file1.txt",
+      "file2.txt"
+    ]
+  }
+  ```
+
+2. Delete the Bucket
+
+Use the OCI CLI to delete the bucket
+
+  ```
+  oci os bucket delete --name migration-ossync
+  ```
+
+When prompted, answer `y` to delete the bucket. Example and expected output:
+
+  ```
+  oci os bucket delete --name migration-ossync
+  Are you sure you want to delete this bucket? [y/N]: y
+  ```
+
+3. Remove the Test Migration Files and Directories
+
+ #### Mac OS, Linux, and BSD Systems
+
+  ```
+  <copy>
+  rm -rf <path to migration-files>
+  rm -rf <path to migration-target>
+  </copy>
+  ```
+
+Example:
+
+  ```
+  rm -rf /home/username/migration-files
+  rm -rf /home/username/migration-target
+  ```
+
+#### Windows
+
+Drag and drop the `migration-files` and `migration-target` folders to the trash
+
+
 ## Learn More
 
 * [OCI Object Storage](https://docs.oracle.com/en/learn/migrate-data-to-oci-object-storage/index.html#introduction)
-* [Rclone website](https://rclone.org/)
-* [Rclone and OCI Object Storage](https://rclone.org/oracleobjectstorage/)
-* [Move data to object storage in the cloud using Rclone](https://docs.oracle.com/en/solutions/move-data-to-cloud-storage-using-rclone/configure-rclone-object-storage.html)
-* [Migrate Data to Oracle Cloud Infrastructure Object Storage Using Rclone](https://docs.oracle.com/en/learn/migrate-data-to-oci-object-storage/index.html#introduction)
+* [OCI Command Line Object Storage Sync](https://docs.oracle.com/en-us/iaas/tools/oci-cli/3.44.2/oci_cli_docs/cmdref/os/object/sync.html)
 
 ## Acknowledgements
 

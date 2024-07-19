@@ -16,6 +16,7 @@ In this lab you will:
 ### Prerequisites
 
 This lab assumes you have:
+* Completed all previous labs
 * You have OCI Command Line installed with a working configuration file
 * Ability to create files and directories, edit files, and move to different directories on Linux
 * Have at least 1 GiB of free space on your laptop or workstation to create test files
@@ -228,7 +229,7 @@ Your output should show you how many files and directories total and the total s
 * The `progress` flag displays the progress of the copy
 * The `transfer` flag is the number of file transfers to run in parallel, on larger systems you can push a higher number of files in parallel
   
-> **Note:** This same command can be used on an OCI compute instance with OCI File System Storage NFS mounts to move data from OCI File System Storage into an OCI Object Storage Bucket
+> **Note:** This same command can be used for on-prem local file systems, on-prem NFS file systems, and on an OCI compute instance with OCI File System Storage NFS mounts to move data from OCI File System Storage into an OCI Object Storage Bucket
 
 Command output should look similar to this:
 
@@ -278,7 +279,7 @@ Change the path to the `migration-files` directory/ folder, example:
   </copy>
   ```
 
-5. Check that the new files have been copied into the `migration-lab` buckete
+5. Check that the new files have been copied into the `migration-lab` bucket
 
 Re-run the OCI CLI command from Step 2 above, or use Rclone.
 
@@ -320,7 +321,7 @@ You should now see `file1.txt` and `file2.txt` with the previously migrated file
   </copy>
   ```
 
-> **Note:** The command above can be used on an OCI compute instance with an OCI File System Storage NFS mount to move the data from OCI File System Storage Service into an OCI Object Storage bucket
+> **Note:** The command above can be used for on-prem local file systems, on-prem NFS file systems, and on an OCI compute instance with an OCI File System Storage NFS mount to move the data from OCI File System Storage Service into an OCI Object Storage bucket
 
 Output should look similar to the following:
 
@@ -347,6 +348,52 @@ Example:
 
 You should now see the bucket objects in the local file system directory.
    
+## Task 6: Lab Clean Up
+
+This is an optional lab to clean up all created items.
+
+1. Remove Objects 
+
+Use Rclone to remove all objets in the `migration-lab` bucket
+
+  ```
+  <copy>
+  rclone delete oci:migration-lab
+  </copy>
+ ```
+
+2. Delete the Bucket
+
+Use Rclone to delete the `migration-lab` bucket
+
+  ```
+  <copy>
+  rclone rmdir oci:migration-lab
+  </copy>
+  ```
+
+3. Remove the Test Migration Files and Directories
+
+ #### Mac OS, Linux, and BSD Systems
+
+  ```
+  <copy>
+  rm -rf <path to migration-files>
+  rm -rf <path to migration-target>
+  </copy>
+  ```
+
+Example:
+
+  ```
+  rm -rf /home/username/migration-files
+  rm -rf /home/username/migration-target
+  ```
+
+#### Windows
+
+Drag and drop the `migration-files` and `migration-target` folders to the trash
+
 ## Learn More
 
 * [OCI Object Storage](https://docs.oracle.com/en/learn/migrate-data-to-oci-object-storage/index.html#introduction)
