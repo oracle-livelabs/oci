@@ -1,17 +1,15 @@
-# Installing and Using Rclone
+# Migrating Data with OCI Object Storage Sync
 
 ## Introduction
-Rclone is a versatile command line program that synchronizes files and directories to and from various cloud storage providers or between on-premises to cloud. Rclone is an effective tool for migrating data to OCI Object Storage. It is known for its simplicity, efficiency, and wide support for numerous cloud services, including OCI Object Storage. 
+OCI Object Storage Sync (os sync) is part of the OCI Command Line Interface (CLI) which ynchronizes a filesystem directory with objects in a bucket. The command traverses sub-directories copying new and modified files or objects from the source to the destination and optionally deleting those that are not present in the sourc.
 
-Estimated time: 30 min
+Estimated time: 20 min
 
 ### Objectives
 
 In this lab you will:
-- Install Rclone on your laptop or workstation
-- Configure Rclone with OCI Object Storage
-- Use Rclone to create test files for migration
-- Migrate test files from local laptop to OCI Object Storage
+- Use OCI os sync to synchronize data from a local file system to an OCI Object Storage bucket
+- Use OCI os sync to synchronize data from an OCI Object Storage bucket to a local file system
 
 ### Prerequisites
 

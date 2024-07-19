@@ -11,17 +11,12 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
-            "title": "Lab 1: Migration Setup", 
-            "description": "Generating SSH Keys, Creating a bucket,Creating basic networking and launching a Compute Instance",
-            "filename": "../migration-setup/migration-setup.md"
-        },
-        {
-            "title":"Lab 2: Setup OCI CLI - Command Line Interface",
+            "title":"Lab 1: Setup OCI CLI - Command Line Interface",
             "description": "Setup OCI CLI",
             "filename": "../oci-cli-setup/oci-cli-setup.md"
         },
         {
-            "title": "Lab 4: Create a Bucket and PAR in Object Storage Service",
+            "title": "Lab 2: Create a Bucket and PAR in Object Storage Service",
             "description": "Learning to work with the Object Storage Service",
              "filename": "https:///oracle-livelabs.github.io/oci-core/object-storage/object-storage/object-storage.md"
         },
