@@ -16,7 +16,7 @@
             "filename": "../../oci-cli-setup/oci-cli-setup.md"
         },
         {
-            "title": "Lab 2: Create a Bucket and PAR in Object Storage Service",
+            "title": "Lab 2: Getting Familiar with OCI Object Storage Service, Optional Lab",
             "description": "Learning to work with the Object Storage Service",
              "filename": "https:///oracle-livelabs.github.io/oci-core/object-storage/object-storage/object-storage.md"
         },
@@ -31,7 +31,7 @@
             "filename": "../../os-sync/os-sync.md"
         },
         {
-            "title": "Lab 5: Other Migration Tools",
+            "title": "Lab 5: Other Migration Tools, Optional Lab",
             "description": "Using Other Tools for Migration",
             "filename": "../../other-tools/other-tools.md"
         },

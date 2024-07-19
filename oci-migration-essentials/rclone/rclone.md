@@ -18,7 +18,7 @@ In this lab you will:
 This lab assumes you have:
 * Completed all previous labs
 * You have OCI Command Line installed with a working configuration file
-* Ability to create files and directories, edit files, and move to different directories on Linux
+* You can change directories/ folders, create/edit files, create directories/folder , run commands, and install software on your laptop or workstaion
 * Have at least 1 GiB of free space on your laptop or workstation to create test files
 
 
@@ -405,5 +405,5 @@ Drag and drop the `migration-files` and `migration-target` folders to the trash
 ## Acknowledgements
 
 * **Author** - Melinda Centeno, Senior Principal Product Manager
-* **Last Updated** - 18 July 2024
+* **Last Updated** - Melinda Centeno, 19 July 2024
 
