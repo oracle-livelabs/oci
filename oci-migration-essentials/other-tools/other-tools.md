@@ -81,7 +81,7 @@ Copy the `id` and `key` strings to another file to use in the next step.
   ```
   <copy>
   cd .aws
-  vim credentals
+  vim credentials
   </copy>
   ```
 
@@ -258,7 +258,7 @@ Create a bucket with each command
 
   ```
   <copy>
-   ls $HOME/migration/files
+   ls $HOME/migration-files
   </copy>
   ```
 
