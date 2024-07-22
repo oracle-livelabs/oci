@@ -4,7 +4,6 @@
 
 In this Lab, we will set up the OCI command line interface (CLI). We will use the OCI CLI configuration file with Rclone and OCI CLI to synchronize data into an object storage bucket. 
 
-[Youtube video on Installing OCI CLI](youtube:nqMAXuqtlW8:large)
 
 ### About OCI CLI
 
@@ -256,11 +255,11 @@ You may now **proceed to the next lab**.
 ## Learn More
  
 * [OCI Documentation](https://docs.oracle.com/en-us/iaas/Content/home.htm)
-* [Data Labeling Service](https://docs.oracle.com/en-us/iaas/data-labeling/data-labeling/using/about.htm)
 * [Configure OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliconfigure.htm)
 * [Install Brew on Mac](https://brew.sh/)
+* [OCI Command CLI Playground](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=650)
 
 ## Acknowledgements
 
 * **Authors** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database; Melinda Centeno, Senior Principal Product Manager
-* **Last Updated By/Date** - Melinda Centeno, 17 July 2024
+* **Last Updated By/Date** - Melinda Centeno, 21 July 2024

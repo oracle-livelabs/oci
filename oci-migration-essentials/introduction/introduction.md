@@ -1,8 +1,8 @@
 # Workshop Overview
 
-## About this Workshop - Migration Essentials for Moving Data into OCI Object Storage 
+## About this Workshop - Migration Essentials for Moving Data into OCI Cloud Storage 
 
-This session will cover how to use common migration tools to migrate data into OCI Object Storage.
+Oracle supports online data transfer with Rclone and OCI Command Line Object Storage Sync, customers can also use other migration tools that support Amazon S3 Compatibility API. This session will cover the foundations on installing, configuring, and using common migration tools for online data transfer. The workshop should cover the basics to dig further into various online migration tools to move data into OCI Cloud Storage.
 
 
 ### **Duration: 2 Hours, 5 minutes**
@@ -10,7 +10,7 @@ This session will cover how to use common migration tools to migrate data into O
 ### Objectives
 
 In this workshop, you will learn how to:
-* How to migrate data from on-prem local or NAS storage into OCI File Storage
+* How to migrate data from on-prem local or NAS storage into OCI Cloud Storage
 * Learn hands-on how to use Rclone, OCI Object Storage Sync, and other migration tools
 
 ### Prerequisites
@@ -30,9 +30,11 @@ Resource Links for Reference
 * [Oracle Object Storage and Rclone](https://rclone.org/oracleobjectstorage/)
 * [Rclone website](https://rclone.org/)
 * [OCI Command Line Object Storage Sync](https://docs.oracle.com/en-us/iaas/tools/oci-cli/3.44.2/oci_cli_docs/cmdref/os/object/sync.html)
+* [S3cmd](https://s3tools.org/s3cmd)
+* [S5cmd](https://github.com/peak/s5cmd)
 
 
 ## Acknowledgements
 * **Authors** - Melinda Centeno, Senior Principal Product Manager
 * **Speakers** - Jonathan Bensen, Director of Product Management; Melinda Centeno, Senior Principal Product Manager
-* **Last Updated By/Date** - Melinda Centeno, 19 July 2024
+* **Last Updated By/Date** - Melinda Centeno, 21 July 2024

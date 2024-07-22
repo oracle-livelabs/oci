@@ -1,7 +1,7 @@
 # Migrating Data with OCI Object Storage Sync
 
 ## Introduction
-OCI Object Storage Sync (os sync) is part of the OCI Command Line Interface (CLI) which ynchronizes a filesystem directory with objects in a bucket. The command traverses sub-directories copying new and modified files or objects from the source to the destination and optionally deleting those that are not present in the sourc.
+OCI Object Storage Sync (os sync) is part of the OCI Command Line Interface (CLI) which synchronizes a filesystem directory with objects in a bucket. The command traverses sub-directories copying new and modified files or objects from the source to the destination and optionally deleting those that are not present in the sourc.
 
 Estimated time: 20 min
 
@@ -30,7 +30,7 @@ This lab assumes you have:
   </copy>
   ```
 
-2. Create some test files
+2. Create some test files, then move up 1 directory
 
   ```
   <copy>
@@ -38,6 +38,8 @@ This lab assumes you have:
   echo  test1 > file1.txt
   echo test2 > file2.txt
   echo test3 > file3.txt
+  ls
+  cd ..
   </copy>
  ```
 
@@ -48,6 +50,9 @@ Change the path to the `migration-files` directory/ folder, example:
   echo test1 > file1.txt
   echo test2 > file2.txt
   echo test3 > file3.txt
+  ls
+  file1.txt  file2.txt  file3.txt
+  cd $HOME
  ```
 
 ## Task 2: Create an OCI Object Storage Bucket
@@ -145,8 +150,8 @@ Change the path to the `migration-files` directory/ folder, example:
 
   ```
   cd /home/username/migration-files
-  echo test1 > file4.txt
-  echo test2 > file5.txt
+  echo test4 > file4.txt
+  echo test5 > file5.txt
  ```
 
 4. Re-run the `os object sync` command
@@ -249,7 +254,7 @@ Example command with expected output:
   <copy>
   cd <path to migration-target>
   ls
-  <copy>
+  </copy>
   ```
 
 Example with expected output:

@@ -184,12 +184,13 @@ The above command will create 6 random files and a few directories in the migrat
   </copy>
  ```
 
-Change into the `migration-files` directory/ folder and familiarize yourself with the contents.
+Change into the `migration-files` directory/ folder and familiarize yourself with the contents then move up 1 directory
 
   ```
   <copy>
   cd <path to migration-files>
   ls
+  cd ..
   </copy>
   ```
 Change the path to the full path of the directory for your command, example:
@@ -197,13 +198,14 @@ Change the path to the full path of the directory for your command, example:
   ```
   cd /home/username/migration-files
   ls
+  cd ..
   ```
 
 4. Check the size of files in the `migration-files` directory
 
   ```
   <copy>
-  $ rclone size migration-files/
+  rclone size migration-files/
   </copy>
  ```
 
@@ -260,6 +262,7 @@ Use an editor or command  of your choice and add 1-2 files to the `migration-fil
   cd <path to migration-files>
   echo  test1 > file1.txt
   echo test2 > file2.txt
+  cd ..
   </copy>
  ```
 
@@ -269,6 +272,7 @@ Change the path to the `migration-files` directory/ folder, example:
   cd /home/username/migration-files
   echo test1 > file1.txt
   echo test2 > file2.txt
+  cd ..
  ```
 
 4. Re-run the Rclone copy command to sync the local directory to the OCI Object Storage bucket
@@ -337,7 +341,7 @@ Output should look similar to the following:
   <copy>
   cd <path to migration-target>
   ls
-  <copy>
+  </copy>
   ```
 
 Example:
@@ -397,6 +401,7 @@ Drag and drop the `migration-files` and `migration-target` folders to the trash
 ## Learn More
 
 * [OCI Object Storage](https://docs.oracle.com/en/learn/migrate-data-to-oci-object-storage/index.html#introduction)
+* [Install Brew on Mac](https://brew.sh/))
 * [Rclone website](https://rclone.org/)
 * [Rclone and OCI Object Storage](https://rclone.org/oracleobjectstorage/)
 * [Move data to object storage in the cloud using Rclone](https://docs.oracle.com/en/solutions/move-data-to-cloud-storage-using-rclone/configure-rclone-object-storage.html)
@@ -405,5 +410,5 @@ Drag and drop the `migration-files` and `migration-target` folders to the trash
 ## Acknowledgements
 
 * **Author** - Melinda Centeno, Senior Principal Product Manager
-* **Last Updated** - Melinda Centeno, 19 July 2024
+* **Last Updated** - Melinda Centeno, 21 July 2024
 
