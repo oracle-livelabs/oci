@@ -183,7 +183,7 @@ Let's begin.
 
 ## Task 5: Update VCN Route Tables
 
-With the VCN's and the assocaited subnets created, we will not proceed to add routes for each of the configured networks. This is accomplished by adding route rules for the desired traffic.
+With the VCN's and the associated subnets created, we will not proceed to add routes for each of the configured networks. This is accomplished by adding route rules for the desired traffic.
 
 Let's begin.
 
