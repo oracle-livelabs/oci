@@ -81,6 +81,10 @@ Estimated time: 5 minutes
 2. This will open the **Trace Explorer**. In the next lab, you will examine the trace details of this monitor run.
 
     ![Oracle Cloud console, Monitor details](images/1-12-tx-page.png " ")
+
+
+   >**Note:** If this is the first time you open the Trace Explorer, you may see the Tour Guide window open. The Oracle Guided Learning (OGL) interactive guides provide step-by-step guidance through APM features, smart tips, or guided configuration tasks. You can take a tour for a few minutes, or click **Exit** to close to continue the workshop.     ![Oracle Cloud console, Monitor details](images/1-13-ogl-window.png " ")
+
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
@@ -89,4 +93,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, May 2023
+* **Last Updated By/Date** - Yutaka Takatsu, June 2024
