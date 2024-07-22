@@ -17,31 +17,39 @@ Estimated time: 5 minutes
 
 ## Task 1: Log in to the workshop tenancy
 
+If you signed into the OCI console, skip this task and move to Task 2.
+
 1. Click **View Login info** on **Get Started with Oracle Cloud Application Performance Monitoring** landing page to log in to the workshop tenancy in the Oracle Cloud.
 
    ![Oracle LiveLabs, Workshop page](images/1-0-login-info.png " ")
 
-2. Reservation Information pane opens. Click the **Launch OCI** button.
+2. Reservation Information pane opens. Click the **Launch OCI** button. Click **Next**. 
 
    ![Oracle LiveLabs, Workshop page](images/1-1-launch-oci.png " ")
+   ![Oracle LiveLabs, Workshop page](images/1-1-2-click-default.png " ")
 
 3. A new browser tab opens and loads the Oracle Cloud Infrastructure Sign-In page. Copy the Password from the Reservation Information pane on the LiveLab screen.
 
   ![Oracle LiveLabs, Workshop page](images/1-2-copy-pwd.png " ")
   >***Note:*** In the example image, two browser screens are opened side by side.
 
-4. Paste the copied password onto the OCI Sign-In screen. Note that your user name is already pre-set in the **Direct Sign-In** section.
+4. Paste the copied password onto the OCI Sign-In screen. Note that your user name is already pre-set in the **Oracle Cloud Account Sign In** screen. Click **Sign In**.
 
    ![Oracle LiveLabs, Workshop page](images/1-3-enter-pwd.png " ")
 
-5. **Change Password** screen opens. Enter the new password that you can use to re-sign-in to the workshop tenancy, in case you closed your browser during the workshop reservation time.
+5. **Reset your password** screen opens. Enter the new password that you can use to re-sign-in to the workshop tenancy, in case you closed your browser during the workshop reservation time. Click **Reset Password**.
 
    ![Oracle LiveLabs, Workshop page](images/1-4-change-pwd.png " ")
+
 
 6. **Oracle Cloud Get started** page opens. You can proceed to the next task to begin the workshop.
 
    ![Oracle LiveLabs, Workshop page](images/1-5-oci-console.png " ")
 
+
+
+
+ 
 ## Task 2: Access APM home dashboard
 
 
@@ -72,4 +80,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, May 2023
+* **Last Updated By/Date** - Yutaka Takatsu, June 2024
