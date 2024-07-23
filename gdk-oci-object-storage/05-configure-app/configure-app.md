@@ -60,29 +60,13 @@ In this lab, you will:
 	_oci/src/main/resources/application-oraclecloud.properties_
 
 	``` properties
-	micronaut.object-storage.oracle-cloud.default.namespace=${OBJECT_STORAGE_NAMESPACE}
 	micronaut.object-storage.oracle-cloud.default.bucket=${OBJECT_STORAGE_BUCKET}
+	micronaut.object-storage.oracle-cloud.default.namespace=${OBJECT_STORAGE_NAMESPACE}
 	```
 
 2. Open a new terminal in VS Code using the **Terminal > New Terminal** menu.
 
-3. Run the following command to set the environment variable `OBJECT_STORAGE_NAMESPACE`:
-
-	``` bash
-	<copy>
-	export OBJECT_STORAGE_NAMESPACE=$(oci os ns get --auth instance_principal --query "data" --raw-output)
-	</copy>
-	```
-
-4. Confirm the value set by running the following command:
-
-	``` bash
-	<copy>
-	echo $OBJECT_STORAGE_NAMESPACE
-	</copy>
-	```
-
-5. Set the environment variable `OBJECT_STORAGE_BUCKET` using the bucket name from the previous lab.
+3. Set the environment variable `OBJECT_STORAGE_BUCKET` using the bucket name from the previous lab.
 
 	``` bash
 	<copy>
@@ -90,11 +74,27 @@ In this lab, you will:
 	</copy>
 	```
 
-6. Confirm the value set by running the following command:
+4. Confirm the value set by running the following command:
 
 	``` bash
 	<copy>
 	echo $OBJECT_STORAGE_BUCKET
+	</copy>
+	```
+
+5. Run the following command to set the environment variable `OBJECT_STORAGE_NAMESPACE`:
+
+	``` bash
+	<copy>
+	export OBJECT_STORAGE_NAMESPACE=$(oci os ns get --auth instance_principal --query "data" --raw-output)
+	</copy>
+	```
+
+6. Confirm the value set by running the following command:
+
+	``` bash
+	<copy>
+	echo $OBJECT_STORAGE_NAMESPACE
 	</copy>
 	```
 
