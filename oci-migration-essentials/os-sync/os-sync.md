@@ -309,7 +309,9 @@ When prompted, answer `y`. Example and expected output:
 Use the OCI CLI to delete the bucket
 
   ```
+  <copy>
   oci os bucket delete --name migration-ossync
+  </copy>
   ```
 
 When prompted, answer `y` to delete the bucket. Example and expected output:
