@@ -42,9 +42,9 @@ Open a terminal window and install Rclone on Mac OS X with [Homebrew](https://do
 
 Download the correct binary for your processor type by clicking on the links below.
 
-  [Intel/AMD - 64 Bit](https://downloads.rclone.org/rclone-current-windows-amd64.zip)
-  [Intel/AMD - 32 Bit](https://downloads.rclone.org/rclone-current-windows-386.zip)
-  [ARM - 64 Bit](https://downloads.rclone.org/rclone-current-windows-arm64.zip)
+  * [Intel/AMD - 64 Bit](https://downloads.rclone.org/rclone-current-windows-amd64.zip)
+  * [Intel/AMD - 32 Bit](https://downloads.rclone.org/rclone-current-windows-386.zip)
+  * [ARM - 64 Bit](https://downloads.rclone.org/rclone-current-windows-arm64.zip)
 
 Extract the file and add the extracted file to Windows system PATH environment variable for easy command line access.
 
