@@ -161,6 +161,7 @@ Successful output should look like this:
 
   ```
   <copy>
+  cd $HOME
   mkdir migration-files
   </copy>
   ```
