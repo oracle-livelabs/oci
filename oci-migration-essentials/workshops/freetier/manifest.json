@@ -21,7 +21,7 @@
              "filename": "https:///oracle-livelabs.github.io/oci-core/object-storage/object-storage/object-storage.md"
         },
         {
-            "title": "Lab 3: Installing Rclone",
+            "title": "Lab 3: Rclone",
             "description": "Installing and Using Rclone",
             "filename": "../../rclone/rclone.md"
         },
