@@ -608,6 +608,7 @@ Example commands and output:
 ## Learn More
 
 * [OCI Object Storage](https://docs.oracle.com/en/learn/migrate-data-to-oci-object-storage/index.html#introduction)
+* [Install Brew on Mac](https://brew.sh/)
 * [S3cmd](https://s3tools.org/s3cmd)
 * [S5cmd](https://github.com/peak/s5cmd)
 
