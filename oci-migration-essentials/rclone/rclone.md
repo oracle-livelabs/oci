@@ -155,7 +155,7 @@ Successful output should look like this:
 
 > **Note:** If you could not create or list the bucket, take another look at your `rclone.conf` file and make sure all the parameters are setup correctly for your tenancy and your OCI Command Line configuration file path.
 
-## Task 3: Use Rclone to create some test files to migrate into OCI Object Storage
+## Task 3: Use Rclone to Create Some Test Files to Migrate into OCI Object Storage
 
 1. Create a test directory or folder to stage the test files on your laptop or workstation
 
@@ -398,6 +398,8 @@ Example:
 #### Windows
 
 Drag and drop the `migration-files` and `migration-target` folders to the trash
+
+You may now **proceed to the next lab**.
 
 ## Learn More
 

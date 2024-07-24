@@ -343,6 +343,7 @@ Example:
 
 Drag and drop the `migration-files` and `migration-target` folders to the trash
 
+You may now **proceed to the next lab**.
 
 ## Learn More
 

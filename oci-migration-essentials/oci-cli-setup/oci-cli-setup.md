@@ -44,7 +44,7 @@ Copy the OCID into a text file we will need this later.
 
   ![Navigate to Data Labeling](images/add-api-keys.png " ") 
 
-## Task 3: Generate and Download RSA Key Pair in PEM format
+## Task 3: Generate and Download RSA Key Pair in PEM Format
 
 1. Choose an Option to Generate a new key pair, if you already have keys generated you can upload them here, most important is when you generate the key pair download both of them, Click **Add** button
 
@@ -164,7 +164,7 @@ Output will be similar to this version number might vary
    <copy>3.23.4</copy>
    ```
 
-## Task 5: Update OCI Configuration file
+## Task 5: Update OCI Configuration File
 
 1. Update DEFAULT values as per your OCI parameters
 
@@ -210,7 +210,7 @@ The completed file should look similar to the example below, please replace the 
    </copy>
    ```
 
-## Task 7: Get the OCI tenancy object storage namespace with the OCI CLI:
+## Task 7: Get the OCI Tenancy Object Storage Namespace with the OCI CLI:
 
 1. Check if we can get the object storage namespace for the tenancy to verify the configuration file setup: 
 
@@ -230,7 +230,7 @@ If successful, the following will be returned, with xx as your unique namespace.
   </copy>
   ```
 
-## Task 8: Make note of OCI CLI configuration file
+## Task 8: Make Note of OCI CLI Configuration File
 
 1. We will be using this config file path and OCIDs here in later labs, please make a note of them  
 
@@ -262,4 +262,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Authors** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database; Melinda Centeno, Senior Principal Product Manager
-* **Last Updated By/Date** - Melinda Centeno, 21 July 2024
+* **Last Updated By/Date** - Melinda Centeno, 24 July 2024

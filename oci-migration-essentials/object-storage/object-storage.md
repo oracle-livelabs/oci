@@ -107,6 +107,7 @@ In this lab, you will:
 
 11. As this is a text file, it will open in your browser page.
 
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
