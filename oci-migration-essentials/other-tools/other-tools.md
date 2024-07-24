@@ -501,6 +501,8 @@ You can re-run the `s3cmd ls s3://s3cmd-bucket/migration=files/` and `ls $HOME/s
   </copy>
   ```
 
+> **Note:** If you are on Mac OS and have odd issues with this command, try switching to a bash shell
+
 Output should look something like this:  
 
   ```
