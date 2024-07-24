@@ -401,7 +401,7 @@ Drag and drop the `migration-files` and `migration-target` folders to the trash
 ## Learn More
 
 * [OCI Object Storage](https://docs.oracle.com/en/learn/migrate-data-to-oci-object-storage/index.html#introduction)
-* [Install Brew on Mac](https://brew.sh/))
+* [Install Brew on Mac](https://brew.sh/)
 * [Rclone website](https://rclone.org/)
 * [Rclone and OCI Object Storage](https://rclone.org/oracleobjectstorage/)
 * [Move data to object storage in the cloud using Rclone](https://docs.oracle.com/en/solutions/move-data-to-cloud-storage-using-rclone/configure-rclone-object-storage.html)
