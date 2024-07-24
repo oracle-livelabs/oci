@@ -36,17 +36,22 @@ This lab assumes:
 1. After logging into cloud console, click on User Settings under top right navigation, this will take to **User Details** page,
 Copy the OCID into a text file we will need this later.
 
+The **User Details** page shows the user name and information, such as the OCID for the user.
+
   ![Navigate to Data Labeling](images/user-ocid.png " ") 
 
 ## Task 2: Add User's API Key
 
 1. Under the same page click on **Add API Key** button
 
+The **Add API Key** button GUI shows a button for  users to download and generate API keys
   ![Navigate to Data Labeling](images/add-api-keys.png " ") 
 
 ## Task 3: Generate and Download RSA Key Pair in PEM Format
 
 1. Choose an Option to Generate a new key pair, if you already have keys generated you can upload them here, most important is when you generate the key pair download both of them, Click **Add** button
+
+In the **Add API Key** interface there are various button choices, this shows the selection of the "Generate API Key Pair" button
 
   ![Navigate to Data Labeling](images/gen-key-pair.png " ") 
 
@@ -57,11 +62,15 @@ After downloading the key to your home directory/ folder or a path you can remem
 
 2. You should now be able to see the Configuration file, copy paste this into a file we will need it later in Task 5 below.
 
+A configuration file box is displayed, there is a "Copy" link in the lower right hand corner to copy contentys for the OCI CLI configuration file
+
   ![Navigate to Data Labeling](images/config-preview.png " ") 
 
 Click on **Close** button
 
 3. We can now see our newly created fingerprint
+
+The API Key fingerprint is now displayed in the API Keys section for the user profile
 
   ![Navigate to Data Labeling](images/fingerprint.png " ") 
 
