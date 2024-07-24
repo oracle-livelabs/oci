@@ -64,6 +64,8 @@ Open a terminal
   * The full path to your OCI Command Line (CLI) configuration file, usually in your home directory or folder under `.oci` called `config`. For example: `/home/opc/.oci/config`
   * View the file with the editor of your choice and take note of the region name and the tenancy ocid
  
+This image is an example of how the OCI CLI configration file should look with the user OCID, API Key fingerprint, tenancy OCID, home region, and the private API Key_file path.
+
    ![Image of OCI configuration file](images/config_file.png)
 
 2. Use the OCI CLI to get tenancy namespace name:
@@ -130,6 +132,8 @@ A completed file would look similar to the example below. Please replace the nam
   ```
 
 The Rclone configuration file should look something like this:
+
+The image shows the Rclone configuration file listing the remote name on the first line, provider type, OCI tenancy namespace, the compartment or tenancy OCID, home region, and OCI CLI configuration file location.
 
    ![Image of Rclone configuration file](images/rclone_conf.png)
 
