@@ -164,7 +164,7 @@ Run the following command to setup a `.s3config` file for the S3cmd
   </copy>
   ```
 
-Answer the prompts as they come up, the command will read the `Access Key` and `Secret Key` from the `credentials` file set up in Task 2. When prompted for the region, use you tenancy home region in the OCI CLI configuration file, use the string used for the `S3_ENDPOINT_URL` in Task 2 when prompted for the `S3 Endpoint` and `DNS-style bucket+hostname:port template for accessing a bucket`. You can usually accept the defaults after those settings. 
+Answer the prompts as they come up, the command will read the `Access Key` and `Secret Key` from the `credentials` file set up in Task 2, if not use the output from task 1. When prompted for the region, use you tenancy home region in the OCI CLI configuration file, use the string used for the `S3_ENDPOINT_URL` in Task 2 when prompted for the `S3 Endpoint` and `DNS-style bucket+hostname:port template for accessing a bucket`. You can usually accept the defaults after those settings. 
 
 The command run should look like this:
 
