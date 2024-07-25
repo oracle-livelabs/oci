@@ -20,7 +20,7 @@ In this lab, you will:
 
 	```bash
 	<copy>
-	git clone https://github.com/sachin-pikle/gdk-oci-object-store-mvn.git lab
+	git clone https://github.com/sachin-pikle/gdk-oci-samples/tree/main/gdk-oci-email-mvn#git-clone-this-sample lab
 	</copy>
 	```
 
@@ -28,7 +28,7 @@ In this lab, you will:
 
 	```bash
 	<copy>
-	code lab
+	code gdk-oci-email-mvn
 	</copy>
 	```
 

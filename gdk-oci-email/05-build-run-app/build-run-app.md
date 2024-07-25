@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab takes you through the steps to build and run the sample application, and use it to upload, download, and delete pictures from the OCI Object Storage bucket.
+This section of the lab takes you through the steps to build and run the sample application and then send emails.
 
 Estimated Lab Time: 10 minutes
 
@@ -11,9 +11,9 @@ Estimated Lab Time: 10 minutes
 In this lab, you will:
 
 * Build and run the application
-* Upload a picture
-* Download the picture
-* Delete the picture
+* Send a simple plain-text email
+* Send a templated email
+* Send an email with an attachment
 * Stop the application
 
 ## Task 1: Build and run the application
@@ -25,7 +25,7 @@ In this lab, you will:
 
 	``` bash
 	<copy>
-	./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw mn:run -pl oci
+	./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw mn:run -pl oci &
 	</copy>
 	```
 </if>
@@ -35,14 +35,54 @@ In this lab, you will:
 
 	``` bash
 	<copy>
-	./mvnw clean && ./mvnw install -pl lib -am && ./mvnw package -pl oci
+	./mvnw install -pl lib -am && ./mvnw package -pl oci
 
-	MICRONAUT_ENVIRONMENTS=oraclecloud java -jar oci/target/oci-1.0-SNAPSHOT.jar
+	MICRONAUT_ENVIRONMENTS=oraclecloud java -jar oci/target/oci-email-demo-oci-1.0-SNAPSHOT.jar &
 	</copy>
 	```
 </if>
 
-## Task 2: Upload a picture
+2. Press the enter (return) key. Send a simple plain-text email using the following command:
+
+   ```
+	<copy>
+	curl -X POST localhost:8080/email/basic
+	</copy>
+	```
+    Check the personal email you provided in step **3.4**. You should see the basic email in your Inbox or Spam folder.
+
+3. Send a templated email using the following command:
+
+	```
+	<copy>
+	curl -X POST localhost:8080/email/template/test
+	</copy>
+	```
+
+	Check the personal email you provided in step **3.4**. You should see the templated email in your Inbox or Spam folder.
+
+4. Send an email with an attachment using the following command: 
+
+	```
+	<copy>
+	curl -X POST \
+		-H "Content-Type: multipart/form-data" \
+		-F "file=@ README.md" \
+		localhost:8080/email/attachment
+	</copy>
+	```
+
+	Check the personal email you provided in step **3.4**. You should see the attachment email in your Inbox or Spam folder.
+
+5. Bring the running application to the foreground:
+
+	``` bash
+	fg
+	```
+
+6. Once the application is running in the foreground, press `CTRL+C` to stop it.
+
+## Task 2: Send a simple plain-text email
 
 1. Open a second terminal in VS Code using the **Terminal** >> **New Terminal** menu.
 

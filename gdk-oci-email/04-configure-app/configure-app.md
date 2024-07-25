@@ -11,8 +11,8 @@ Estimated Lab Time: 05 minutes
 In this lab, you will:
 
 * <if type="desktop">Use</if><if type="tenancy">Configure</if> OCI Instance Principal Authentication
-* Set environment variables
 * Create SMTP Credentials
+* Set environment variables
 * Create an Approved Sender
 * Change the "to" Email Address
 
@@ -31,8 +31,7 @@ In this lab, you will:
 </if>
 
 <if type="tenancy">
-2. The following steps show you how to set up an `Instance Principal` using a `Dynamic Group`-less `Policy` in OCI to allow the application in a Compute Instance to manage (upload, list, download, and delete) emails in the OCI Email Delivery service
-.
+2. The following steps show you how to set up an `Instance Principal` using a `Dynamic Group`-less `Policy` in OCI to allow the application in a Compute Instance to manage (upload, list, download, and delete) emails in the OCI Email Delivery service.
 
 3. From the Oracle Cloud Console navigation menu, go to **Identity & Security >> Identity >> Policies**.
 
@@ -57,182 +56,152 @@ In this lab, you will:
 
 	To learn more about about the supported authentication options, see [Micronaut Oracle Cloud Authentication](https://micronaut-projects.github.io/micronaut-oracle-cloud/snapshot/guide/#authentication).
 
-
-## Task 2: Set Environment Variables
-
-1. In VS Code, open `application-oraclecloud.properties`. The application configuration uses two environment variables `OBJECT_STORAGE_NAMESPACE` and `OBJECT_STORAGE_BUCKET`.
-
-	_oci/src/main/resources/application-oraclecloud.properties_
-
-	``` properties
-	micronaut.object-storage.oracle-cloud.default.namespace=${OBJECT_STORAGE_NAMESPACE}
-	micronaut.object-storage.oracle-cloud.default.bucket=${OBJECT_STORAGE_BUCKET}
-	```
-
-2. Open a new terminal in VS Code using the **Terminal > New Terminal** menu.
-
-3. Run the following command to set the environment variable `OBJECT_STORAGE_NAMESPACE`:
-
-	``` bash
-	<copy>
-	export OBJECT_STORAGE_NAMESPACE=$(oci os ns get --auth instance_principal --query "data" --raw-output)
-	</copy>
-	```
-
-4. Confirm the value set by running the following command:
-
-	``` bash
-	<copy>
-	echo $OBJECT_STORAGE_NAMESPACE
-	</copy>
-	```
-
-5. Set the environment variable `OBJECT_STORAGE_BUCKET` using the bucket name from the previous lab.
-
-	``` bash
-	<copy>
-	export OBJECT_STORAGE_BUCKET=<name-of-the-bucket-you-created>
-	</copy>
-	```
-
-6. Confirm the value set by running the following command:
-
-	``` bash
-	<copy>
-	echo $OBJECT_STORAGE_BUCKET
-	</copy>
-	```
-
-## Task 3: Create SMTP Credentials
+## Task 2: Create SMTP Credentials
 
 1. From the Oracle Cloud Console, click the **Profile** icon on the top right. Then click on **My profile**.
 	![Profile icon](images/profile-icon.jpg#input)
 
-<if type="desktop">
-2. The workshop environment includes a preconfigured `Instance Principal` using a `Dynamic Group` and a `Policy` in OCI to allow the application to manage (upload, list, download, and delete) objects in the OCI Object Storage bucket.
-</if>
-
-<if type="tenancy">
-2. The following steps show you how to set up an `Instance Principal` using a `Dynamic Group`-less `Policy` in OCI to allow the application in a Compute Instance to manage (upload, list, download, and delete) objects in the OCI Object Storage bucket.
 
 3. From the **Profile details** screen, click **SMTP credentials** under **Resources**. Click **Generate credentials**.
 
-    ![Generate SMTP Credentials Button](images/generate-smtp-creds.jpg#input)
+	![Generate SMTP Credentials Button](images/generate-smtp-creds.jpg#input)
 
 4. From the **Generate credentials** panel, enter a description and click the **Generate credentials** button.
 
-    ![Generate Credentials Panel](images/generate-creds.jpg#input)
+	![Generate Credentials Panel](images/generate-creds.jpg#input)
 
 5. The generated SMTP credentials information are displayed. Copy the generated `Username` and `Password` values.
 
-    ![Generated SMTP User and Password](images/generated-smtp-creds.jpg#input)
+	![Generated SMTP User and Password](images/generated-smtp-creds.jpg#input)
 
-6. Open a new terminal in VS Code using the **Terminal>New Terminal** menu.
+6. Open a new terminal in VS Code using the **Terminal > New Terminal** menu.
 
 7. Use the environment variable `SMTP_USER` to store the value of the generated `Username`.
 
-   Replace `...me.com` with the actual value. Enclose the value in single quotes `' '` (instead of double quotes `" "`) as shown below to handle special characters.
+	Replace `...me.com` with the actual value. Enclose the value in single quotes `' '` (instead of double quotes `" "`) as shown below to handle special characters.
 
-   ``` 
-   export SMTP_USER='...me.com'
-   ```
+	```
+	<copy>
+	export SMTP_USER='...me.com'
+	</copy>
+	```
 
-   Confirm the value of the environment variable `SMTP_USER` by running the following command:
+	Confirm the value of the environment variable `SMTP_USER` by running the following command:
 
-   ```
-   echo $SMTP_USER
-   ```
+	```
+	<copy>
+	echo $SMTP_USER
+	</copy>
+	```
 
 8. Use the environment variable `SMTP_PASSWORD` to store the value of the generated `Password`.
 
-   Replace `nB..` with the actual value. Enclose the value in single quotes `' '` (instead of double quotes `" "`) as shown below to handle special characters.
+	Replace `nB..` with the actual value. Enclose the value in single quotes `' '` (instead of double quotes `" "`) as shown below to handle special characters.
 
-   ``` 
-   export SMTP_PASSWORD='nB..'
-   ```
+	```
+	<copy>
+	export SMTP_PASSWORD='nB..'
+	</copy>
+	```
 
-   Confirm the value of the environment variable `SMTP_PASSWORD` by running the following command:
+	Confirm the value of the environment variable `SMTP_PASSWORD` by running the following command:
 
-   ```
-   echo $SMTP_PASSWORD
-   ```
+	```
+	<copy>
+	echo $SMTP_PASSWORD
+	</copy>
+	```
+
 **Note:** In this example, you've used environment variables to store the SMTP user and password values for simplicity. Note that storing secrets in a vault provides greater security than you might achieve by storing secrets elsewhere, such as in configuration files or environment variables.
+
+## Task 3: Set the SMTP server as the public endpoint
+
+Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SMTP server address. Follow the steps to configure the SMTP connection for your region and save the public endpoint, for example, `smtp.email.us-ashburn-1.oci.oraclecloud.com`.
+
+1.  From the Oracle Cloud Console navigation menu, go to **Developer Services**. Under **Application Integration**, click **Email Delivery**.
+	![Developer Services Button](images/developer-services-icon.jpg#input)
+
+2.	Under **Email Delivery**, click **Configuration**. In **SMTP Sending Information** panel copy **Public Endpoint**.
+	![SMTP Sending information Panel](images/smtp-sending-informatiom.jpg#input)
+
+3.	Set the `SMTP_HOST` variable:
+
+	Replace `your-public-endpoint` with the actual value.
+
+	```
+	<copy>
+	export SMTP_HOST=<your-public-endpoint>
+	</copy>
+	```
+
+	Confirm the value of the environment variable `SMTP_HOST` by running the following command:
+	```
+	<copy>
+	echo $SMTP_HOST
+	</copy>
+	```
+
+4. Set `FROM_EMAIL` and `FROM_NAME` values:
+
+    Replace `...me.com` with the actual value
+	```
+	<copy>
+	export FROM_EMAIL=gdk@gdk.example
+	export FROM_NAME=gdk
+	</copy>
+	```
 
 ## Task 4: Create an Approved Sender
 
-1. In VS Code, open `application-oraclecloud.properties`. The application configuration uses two environment variables `OBJECT_STORAGE_NAMESPACE` and `OBJECT_STORAGE_BUCKET`.
+In this step, you will create an approved sender who can send emails using the OCI Email Delivery service.
 
-	_oci/src/main/resources/application-oraclecloud.properties_
+1. From the Oracle Cloud Console navigation menu, go to the **Developer Services >> Application Integration >> Email Delivery**.
 
-	``` properties
-	micronaut.object-storage.oracle-cloud.default.namespace=${OBJECT_STORAGE_NAMESPACE}
-	micronaut.object-storage.oracle-cloud.default.bucket=${OBJECT_STORAGE_BUCKET}
-	```
+	![Developer Services Button](images/developer-services-icon.jpg#input)
 
-2. Open a new terminal in VS Code using the **Terminal > New Terminal** menu.
+2.	Under **Email Delivery**, click **Approved Senders**. Ensure that you are in the correct compartment. Your user must be in a group with permissions to manage approved-senders in this compartment.
 
-3. Run the following command to set the environment variable `OBJECT_STORAGE_NAMESPACE`:
+	![Approved Sender Button](images/approved-senders-button.jpg#input)
 
-	``` bash
-	<copy>
-	export OBJECT_STORAGE_NAMESPACE=$(oci os ns get --auth instance_principal --query "data" --raw-output)
-	</copy>
-	```
+2.	Click **Create Approved Sender** within the **Approved Senders** view.
 
-4. Confirm the value set by running the following command:
+	![Create Approved Sender Panel](images/create-approved-senders.jpg#input)
 
-	``` bash
-	<copy>
-	echo $OBJECT_STORAGE_NAMESPACE
-	</copy>
-	```
+3.	Enter the email address that you want to list as an approved sender in the **Add Sender** dialog box. Click **Add**.
 
-5. Set the environment variable `OBJECT_STORAGE_BUCKET` using the bucket name from the previous lab.
+	The email address is added to your approved senders list.
 
-	``` bash
-	<copy>
-	export OBJECT_STORAGE_BUCKET=<name-of-the-bucket-you-created>
-	</copy>
-	```
-
-6. Confirm the value set by running the following command:
-
-	``` bash
-	<copy>
-	echo $OBJECT_STORAGE_BUCKET
-	</copy>
-	```
 
 ## Task 5: Change the "to" Email Address
 
 In this step, you'll change the "to" email address to your personal email address so that you can verify the emails sent by the application in subsequent steps.
 
-1. Go to `EmailController.java` and replace `recipient@gdk.example` with your personal email address. Specify a valid personal email address so you can see the emails sent by this application in the next section.
+1.	Go to `EmailController.java` and replace `recipient@gdk.example` with your personal email address. Specify a valid personal email address so you can see the emails sent by this application in the next section.
 
    _oci/src/main/java/com/example/EmailController.java_
 
-   ``` java
-   class EmailController { 
+	``` java
+	class EmailController { 
 
-      private final String toEmail = "recipient@gdk.example";
-   ```
+		private final String toEmail = "recipient@gdk.example";
+	```
 
 2. Save (`CTRL+S`) the file.
 
 3. Go to `EmailControllerTest.java` and replace `recipient@gdk.example` with your personal email address. Use the same email address you entered in `EmailController.java` above.
 
-   _oci/src/test/java/com/example/EmailControllerTest.java_
+	_oci/src/test/java/com/example/EmailControllerTest.java_
 
-   ``` java
-   class EmailControllerTest {
+	``` java
+	class EmailControllerTest {
 
-      ...
+		...
 
-      private final String toEmail = "recipient@gdk.example";
-      List<Email> emails = new ArrayList<>();
+		private final String toEmail = "recipient@gdk.example";
+		List<Email> emails = new ArrayList<>();
 
-      ...
-   ```
+		...
+	```
 
 4. Save (`CTRL+S`) the file.
 
