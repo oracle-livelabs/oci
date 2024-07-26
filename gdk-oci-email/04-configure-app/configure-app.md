@@ -62,21 +62,21 @@ In this lab, you will:
 	![Profile icon](images/profile-icon.jpg#input)
 
 
-3. From the **Profile details** screen, click **SMTP credentials** under **Resources**. Click **Generate credentials**.
+2. From the **Profile details** screen, click **SMTP credentials** under **Resources**. Click **Generate credentials**.
 
 	![Generate SMTP Credentials Button](images/generate-smtp-creds.jpg#input)
 
-4. From the **Generate credentials** panel, enter a description and click the **Generate credentials** button.
+3. From the **Generate credentials** panel, enter a description and click the **Generate credentials** button.
 
 	![Generate Credentials Panel](images/generate-creds.jpg#input)
 
-5. The generated SMTP credentials information are displayed. Copy the generated `Username` and `Password` values.
+4. The generated SMTP credentials information are displayed. Copy the generated `Username` and `Password` values.
 
 	![Generated SMTP User and Password](images/generated-smtp-creds.jpg#input)
 
-6. Open a new terminal in VS Code using the **Terminal > New Terminal** menu.
+5. Open a new terminal in VS Code using the **Terminal > New Terminal** menu.
 
-7. Use the environment variable `SMTP_USER` to store the value of the generated `Username`.
+6. Use the environment variable `SMTP_USER` to store the value of the generated `Username`.
 
 	Replace `...me.com` with the actual value. Enclose the value in single quotes `' '` (instead of double quotes `" "`) as shown below to handle special characters.
 
@@ -94,7 +94,7 @@ In this lab, you will:
 	</copy>
 	```
 
-8. Use the environment variable `SMTP_PASSWORD` to store the value of the generated `Password`.
+7. Use the environment variable `SMTP_PASSWORD` to store the value of the generated `Password`.
 
 	Replace `nB..` with the actual value. Enclose the value in single quotes `' '` (instead of double quotes `" "`) as shown below to handle special characters.
 
@@ -141,16 +141,6 @@ Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SM
 	</copy>
 	```
 
-4. Set `FROM_EMAIL` and `FROM_NAME` values:
-
-    Replace `...me.com` with the actual value
-	```
-	<copy>
-	export FROM_EMAIL=gdk@gdk.example
-	export FROM_NAME=gdk
-	</copy>
-	```
-
 ## Task 4: Create an Approved Sender
 
 In this step, you will create an approved sender who can send emails using the OCI Email Delivery service.
@@ -163,14 +153,25 @@ In this step, you will create an approved sender who can send emails using the O
 
 	![Approved Sender Button](images/approved-senders-button.jpg#input)
 
-2.	Click **Create Approved Sender** within the **Approved Senders** view.
+3.	Click **Create Approved Sender** within the **Approved Senders** view.
 
 	![Create Approved Sender Panel](images/create-approved-senders.jpg#input)
 
-3.	Enter the email address that you want to list as an approved sender in the **Add Sender** dialog box. Click **Add**.
+4.	Enter the **gdk@gdk.example** as an approved sender in the **Add Sender** dialog box. Click **Add**.
 
 	The email address is added to your approved senders list.
 
+5. Set `FROM_EMAIL` and `FROM_NAME` values:
+
+    Replace `...me.com` with the actual value
+	```
+	<copy>
+	export FROM_EMAIL=gdk@gdk.example
+	export FROM_NAME=gdk
+	</copy>
+	```
+
+**Note:** Approved senders are unique to tenancies. If you try to create a duplicate approved sender within a tenancy, a 409 Conflict error is displayed.
 
 ## Task 5: Change the "to" Email Address
 
