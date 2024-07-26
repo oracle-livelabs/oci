@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab describes how to build and run a native executable for the application, and use it to upload, download, and delete pictures from the OCI Object Storage bucket.
+This lab describes how to build and run a native executable for the application, and then send emails using OCI Email Delivery.
 
 You will use [GraalVM Native Image](https://docs.oracle.com/en/graalvm/jdk/17/docs/overview/)’s ahead-of-time compilation to build a native executable for the application.
 
@@ -17,11 +17,11 @@ Estimated Lab Time: 15 minutes
 In this lab, you will:
 
 * Build and run a native executable for the application
-* Upload a picture
-* Download the picture
-* Delete the picture
-* Stop the application
-* Cleanup
+* Send the emails
+	* Send a simple plain-text email
+	* Send a templated email
+	* Send an email with an attachment
+* Cleanup ???
 
 ## Task 1: Build and run a native executable for the application
 
@@ -63,61 +63,56 @@ In this lab, you will:
 
 	``` bash
 	<copy>
-	MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci
+	MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci-email-demo-oci &
 	</copy>
 	```
 
    The native executable starts instantaneously.
 
-## Task 2: Upload a picture
+## Task 2: Send the emails
 
-1. From the second terminal in VS Code, send an HTTP POST request to the `/pictures/{userId}` endpoint to upload a picture to the bucket:
+1.	In the same terminal in VS Code, press the enter (return) key.
 
-	``` bash
-	<copy>
-	curl -i -F 'fileUpload=@test-data/pic2.jpg' http://localhost:8080/pictures/user2
-	</copy>
-	```
-
-2. Check the bucket contents. Go to the **OCI Console** >> **Storage** >> **Object Storage & Archive Storage** >> **Buckets** >> **Bucket Details** screen opened in the browser.
-
-   Refresh the screen and scroll down to the **Objects** list. You should see an object named _user2.jpg_.
-
-   ![Objects List](./images/objects-list-user2.jpg)
-
-## Task 3: Download the picture
-
-1. From the second terminal in VS Code, send an HTTP GET request to the `/pictures/{userId}` endpoint to download the picture from the bucket:
+2.	Send a simple plain-text email using the following command:
 
 	``` bash
 	<copy>
-	curl http://localhost:8080/pictures/user2 -O -J
+	curl -X POST localhost:8080/email/basic
 	</copy>
 	```
 
-2. You should see the profile picture _user2.jpg_ downloaded in the _LAB_ directory in VS Code. Click the picture to view it.
+	Check your email as before.
 
-   ![View Picture](./images/view-pic-user2.jpg)
-
-## Task 4: Delete the picture
-
-1. From the second terminal in VS Code, send an HTTP DELETE request to the `/pictures/{userId}` endpoint to delete the picture from the bucket:
+3.	Send a templated email using the following command:
 
 	``` bash
 	<copy>
-	curl -X DELETE http://localhost:8080/pictures/user2
+	curl -X POST localhost:8080/email/template/native
 	</copy>
 	```
 
-2. Check the bucket contents. Go to the **OCI Console** >> **Storage** >> **Object Storage & Archive Storage** >> **Buckets** >> **Bucket Details** screen opened in the browser.
+	Check your email as before.
 
-   Refresh the screen and scroll down to the **Objects** list. The object _user2.jpg_ has been deleted from the bucket.
+4.	Send an email with an attachment using the following command:
 
-   ![Objects List](./images/objects-list-empty.jpg)
+	``` bash
+	<copy>
+	curl -X POST \
+		-H "Content-Type: multipart/form-data" \
+		-F "file=@ README.md" \
+		localhost:8080/email/attachment
+	</copy>
+	```
 
-## Task 5: Stop the application
+	Check your email as before.
 
-1. In the first terminal in VS Code, use `CTRL+C` to stop the application.
+7.	Bring the running application to the foreground:
+
+	``` bash
+	fg
+	```
+
+8.	Once the application is running in the foreground, press `CTRL+C` to stop it.
 
 ## Task 6: Cleanup
 

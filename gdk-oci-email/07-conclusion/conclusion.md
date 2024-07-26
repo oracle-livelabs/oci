@@ -1,6 +1,6 @@
 # Conclusion
 
-In this workshop, you've learnt how to build a Java application to upload, download and delete files from OCI Object Storage using the GDK.
+In this workshop, you've learnt how to build a Java application to send emails with OCI Email Delivery using the GDK.
 
 Application developers can use the Graal Development Kit for Micronaut (GDK) to build cloud-portable Java applications on Oracle Cloud Infrastructure with Micronaut and GraalVM Native Image.
 
