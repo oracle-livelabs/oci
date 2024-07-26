@@ -119,16 +119,19 @@ In this step, you will create an approved sender who can send emails using the O
 
 	The email address is added to your approved senders list.
 
+	**Note:** Approved senders are unique to tenancies. If you try to create a duplicate approved sender within a tenancy, a 409 Conflict error is displayed.
+
+	![Duplicate Approved Sender](images/duplicate-approved-sender.jpg#input)
+
 5. Set `FROM_EMAIL` and `FROM_NAME` values:
 
 	```
 	<copy>
-	export FROM_EMAIL=gdk@gdk.example
+	export FROM_EMAIL=<email-from-the-previous-step>
 	export FROM_NAME=gdk
 	</copy>
 	```
-
-**Note:** Approved senders are unique to tenancies. If you try to create a duplicate approved sender within a tenancy, a 409 Conflict error is displayed.
+	![Duplicate Approved Sender](images/duplicate-approved-sender.jpg#input) !!!!!
 
 ## Task 4: Change the "to" Email Address
 

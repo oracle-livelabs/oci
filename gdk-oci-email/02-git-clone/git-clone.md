@@ -16,19 +16,12 @@ In this lab, you will:
 
 1. From the **Activities** menu, start a new **Terminal** window.
 
-2. Create and navigate to the _lab_ directory.
+2. Clone the sample application source code.
 
 	```bash
 	<copy>
 	git init lab
 	cd lab
-	</copy>
-	```
-
-3.	Clone the sample application source code into the _lab_ directory.
-
-	```bash
-	<copy>
 	git remote add origin https://github.com/sachin-pikle/gdk-oci-samples.git
 	git config core.sparsecheckout true
 	echo "gdk-oci-email-mvn/*">>.git/info/sparse-checkout
@@ -36,7 +29,7 @@ In this lab, you will:
 	</copy>
 	```
 
-4.	Open the sample application source code from the _gdk-oci-email-mvn_ directory in **Visual Studio Code**.
+3.	Open the sample application source code from the _gdk-oci-email-mvn_ directory in **Visual Studio Code**.
 
 	```bash
 	<copy>
@@ -44,9 +37,9 @@ In this lab, you will:
 	</copy>
 	```
 
-5. VS Code may show a dialog box with the message "Do you trust the authors of the files in this folder?". Select **Trust the authors of all files in the parent folder 'oracle'** and click **Yes, I trust the authors**.
+4. VS Code may show a dialog box with the message "Do you trust the authors of the files in this folder?". Select **Trust the authors of all files in the parent folder 'oracle'** and click **Yes, I trust the authors**.
 
-6. VS Code may ask you to choose a password for new keyring. Press **Cancel** twice to close the prompt.
+5. VS Code may ask you to choose a password for new keyring. Press **Cancel** twice to close the prompt.
 
 You may now **proceed to the next lab**.
 
