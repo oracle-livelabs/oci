@@ -16,7 +16,6 @@ In this lab, you will:
 	* Send a templated email
 	* Send an email with an attachment
 
-
 ## Task 1: Build and run the application
 
 1. In the same terminal in VS Code, run the following command(s).
@@ -55,7 +54,7 @@ In this lab, you will:
 	</copy>
 	```
 
-	Check the personal email you provided in Lab **4** Task **5**. You should see the basic email in your Inbox or Spam folder.
+	Check the email you provided in Lab **3** Task **4**. You should see the basic email in your Inbox or Spam folder.
 
 3. Send a templated email using the following command:
 
@@ -65,7 +64,7 @@ In this lab, you will:
 	</copy>
 	```
 
-	Check the personal email you provided in Lab **4** Task **5**. You should see the templated email in your Inbox or Spam folder.
+	Check the email you provided in Lab **3** Task **4**. You should see the templated email in your Inbox or Spam folder.
 
 4. Send an email with an attachment using the following command:
 
@@ -78,12 +77,14 @@ In this lab, you will:
 	</copy>
 	```
 
-	Check the personal email you provided in Lab **4** Task **5**. You should see the attachment email in your Inbox or Spam folder.
+	Check the email you provided in Lab **3** Task **4**. You should see the attachment email in your Inbox or Spam folder.
 
 5. Bring the running application to the foreground:
 
-	``` bash
+	```
+	<copy>
 	fg
+	</copy>
 	```
 
 6. Once the application is running in the foreground, press `CTRL+C` to stop it.

@@ -10,57 +10,15 @@ Estimated Lab Time: 05 minutes
 
 In this lab, you will:
 
-* <if type="desktop">Use</if><if type="tenancy">Configure</if> OCI Instance Principal Authentication
 * Create SMTP Credentials
-* Set environment variables
+* Set the SMTP server as the public endpoint
 * Create an Approved Sender
 * Change the "to" Email Address
 
-## Task 1: <if type="desktop">Use</if><if type="tenancy">Configure</if> OCI Instance Principal Authentication
-
-1. In VS Code, open `application-oraclecloud.properties`. The application is configured to use `OCI Instance Principal Authentication` when it is running on an OCI Compute Instance.
-
-	_oci/src/main/resources/application-oraclecloud.properties_
-
-	``` properties
-	oci.config.instance-principal.enabled=true
-	```
-
-<if type="desktop">
-2. The workshop environment includes a preconfigured `Instance Principal` using a `Dynamic Group` and a `Policy` in OCI to allow the application to manage (upload, list, download, and delete) emails in the OCI Email Delivery service
-</if>
-
-<if type="tenancy">
-2. The following steps show you how to set up an `Instance Principal` using a `Dynamic Group`-less `Policy` in OCI to allow the application in a Compute Instance to manage (upload, list, download, and delete) emails in the OCI Email Delivery service.
-
-3. From the Oracle Cloud Console navigation menu, go to **Identity & Security >> Identity >> Policies**.
-
-4. Go to your workshop compartment.
-
-5. Click  **Create Policy**.
-
-6. Enter a name and description.
-
-7. Select your workshop compartment.
-
-8. In the **Policy Builder** section, click **Show manual editor**.
-
-9. Enter the following policy statement in the text area. Replace the placeholders `WORKSHOP_COMPARTMENT_NAME` with your workshop compartment name, and `WORKSHOP_COMPARTMENT_OCID` with your workshop compartment OCID.
-
-	``` text
-	<copy>
-	Allow any-user to manage email-family in compartment WORKSHOP_COMPARTMENT_NAME where ALL {request.principal.type='instance', request.principal.compartment.id='WORKSHOP_COMPARTMENT_OCID'}
-	</copy>
-	```
-</if>
-
-	To learn more about about the supported authentication options, see [Micronaut Oracle Cloud Authentication](https://micronaut-projects.github.io/micronaut-oracle-cloud/snapshot/guide/#authentication).
-
-## Task 2: Create SMTP Credentials
+## Task 1: Create SMTP Credentials
 
 1. From the Oracle Cloud Console, click the **Profile** icon on the top right. Then click on **My profile**.
 	![Profile icon](images/profile-icon.jpg#input)
-
 
 2. From the **Profile details** screen, click **SMTP credentials** under **Resources**. Click **Generate credentials**.
 
@@ -114,7 +72,7 @@ In this lab, you will:
 
 **Note:** In this example, you've used environment variables to store the SMTP user and password values for simplicity. Note that storing secrets in a vault provides greater security than you might achieve by storing secrets elsewhere, such as in configuration files or environment variables.
 
-## Task 3: Set the SMTP server as the public endpoint
+## Task 2: Set the SMTP server as the public endpoint
 
 Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SMTP server address. Follow the steps to configure the SMTP connection for your region and save the public endpoint, for example, `smtp.email.us-ashburn-1.oci.oraclecloud.com`.
 
@@ -141,7 +99,7 @@ Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SM
 	</copy>
 	```
 
-## Task 4: Create an Approved Sender
+## Task 3: Create an Approved Sender
 
 In this step, you will create an approved sender who can send emails using the OCI Email Delivery service.
 
@@ -173,7 +131,7 @@ In this step, you will create an approved sender who can send emails using the O
 
 **Note:** Approved senders are unique to tenancies. If you try to create a duplicate approved sender within a tenancy, a 409 Conflict error is displayed.
 
-## Task 5: Change the "to" Email Address
+## Task 4: Change the "to" Email Address
 
 In this step, you'll change the "to" email address to your personal email address so that you can verify the emails sent by the application in subsequent steps.
 

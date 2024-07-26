@@ -55,6 +55,11 @@
       "type": "tenancy"
     },
     {
+      "title": "Lab 6: Cleanup",
+      "filename": "../../07-cleanup/cleanup.md",
+      "type": "tenancy"
+    },
+    {
       "title": "Conclusion",
       "filename": "../../07-conclusion/conclusion.md"
     },

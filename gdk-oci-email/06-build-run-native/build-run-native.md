@@ -21,25 +21,8 @@ In this lab, you will:
 	* Send a simple plain-text email
 	* Send a templated email
 	* Send an email with an attachment
-* Cleanup ???
 
 ## Task 1: Build and run a native executable for the application
-
-<!-- TEMPORARY WORKAROUND FOR https://ol-jira.us.oracle.com/browse/GCN-4388 -->
-0. Uncomment the following in the _oci/pom.xml_:
-
-   _oci/pom.xml_
-
-   ``` xml
-   <copy>
-      <plugin>
-        <artifactId>maven-shade-plugin</artifactId>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
-      </plugin>
-   </copy>
-   ```
 
 1. In the first terminal in VS Code, check the version of the GraalVM native-image utility:
 
@@ -53,7 +36,7 @@ In this lab, you will:
 
 	``` bash
 	<copy>
-	./mvnw install -pl lib -am && ./mvnw package -pl oci -Dpackaging=native-image
+	./mvnw install -pl lib -am && ./mvnw clean package -pl oci -Dpackaging=native-image
 	</copy>
 	```
 
@@ -106,25 +89,15 @@ In this lab, you will:
 
 	Check your email as before.
 
-7.	Bring the running application to the foreground:
+5.	Bring the running application to the foreground:
 
-	``` bash
+	```
+	<copy>
 	fg
+	</copy>
 	```
 
-8.	Once the application is running in the foreground, press `CTRL+C` to stop it.
-
-## Task 6: Cleanup
-
-From the Oracle Cloud Console, clean up the resources provisioned for this workshop:
-
-1. From **Storage >> Object Storage & Archive Storage >> Buckets**, delete the **Bucket**.
-
-2. From **Resource Manager >> Stacks >> Stack Details** screen, first run **Destroy** to delete VCN and Compute instance. Next, delete the **Stack**.
-
-<if type="tenancy">
-3. From **Identity & Security >> Identity >> Policies**, delete the Instance Principals **Policy**.
-</if>
+6.	Once the application is running in the foreground, press `CTRL+C` to stop it.
 
 Congratulations! You've successfully completed this lab. Your Java application native executable can successfully upload, download and delete pictures from the OCI Object Storage bucket.
 
