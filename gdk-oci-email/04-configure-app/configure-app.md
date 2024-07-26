@@ -121,7 +121,6 @@ In this step, you will create an approved sender who can send emails using the O
 
 5. Set `FROM_EMAIL` and `FROM_NAME` values:
 
-    Replace `...me.com` with the actual value
 	```
 	<copy>
 	export FROM_EMAIL=gdk@gdk.example
