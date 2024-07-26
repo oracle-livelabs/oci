@@ -36,11 +36,11 @@ In this lab, you will:
 	</copy>
 	```
 
-4.	Open the sample application source code from the _lab_ directory in **Visual Studio Code**.
+4.	Open the sample application source code from the _gdk-oci-email-mvn_ directory in **Visual Studio Code**.
 
 	```bash
 	<copy>
-	code lab
+	code gdk-oci-email-mvn
 	</copy>
 	```
 
