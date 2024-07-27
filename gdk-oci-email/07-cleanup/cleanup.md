@@ -2,10 +2,20 @@
 
 From the Oracle Cloud Console, clean up the resources provisioned for this workshop:
 
-1. From **Storage >> Object Storage & Archive Storage >> Buckets**, delete the **Bucket**.
+1. From **Developer Services >> Application Integration >> Email Delivery >> Approved Senders**, delete the **Approved Sender Email**.
 
-2. From **Resource Manager >> Stacks >> Stack Details** screen, first run **Destroy** to delete VCN and Compute instance. Next, delete the **Stack**.
+    ![Delete Approved Sender Button](images/delete-approved-sender.jpg#input)
 
-<if type="tenancy">
-3. From **Identity & Security >> Identity >> Policies**, delete the Instance Principals **Policy**.
-</if>
+2. From the **Profile Icon >> Profile details >> Resources >> SMTP credentials**, delete created credential.
+
+    ![Delete SMTP Credential Button](images/delete-smtp-credentials.jpg#input)
+
+Congratulations! You've successfully completed this lab.
+
+You may now **proceed to the next lab**.
+
+## Acknowledgements
+
+* **Author** - [](var:author)
+* **Contributors** - [](var:contributors)
+* **Last Updated By/Date** - [](var:last_updated)

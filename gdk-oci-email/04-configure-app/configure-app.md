@@ -80,6 +80,7 @@ Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SM
 	![Developer Services Button](images/developer-services-icon.jpg#input)
 
 2.	Under **Email Delivery**, click **Configuration**. In **SMTP Sending Information** panel copy **Public Endpoint**.
+
 	![SMTP Sending information Panel](images/smtp-sending-informatiom.jpg#input)
 
 3.	Set the `SMTP_HOST` variable:
@@ -115,7 +116,9 @@ In this step, you will create an approved sender who can send emails using the O
 
 	![Create Approved Sender Panel](images/create-approved-senders.jpg#input)
 
-4.	Enter the **gdk@gdk.example** as an approved sender in the **Add Sender** dialog box. Click **Add**.
+4.	Enter the **gdk@gdk.example** as an approved sender in the **Add Sender** dialog box. Click **Create Approved Sender**.
+
+	![Add Approved Sender Panel](images/add-approved-sender.jpg#input)
 
 	The email address is added to your approved senders list.
 
@@ -123,7 +126,7 @@ In this step, you will create an approved sender who can send emails using the O
 
 	![Duplicate Approved Sender](images/duplicate-approved-sender.jpg#input)
 
-5. Set `FROM_EMAIL` and `FROM_NAME` values:
+5.	Set `FROM_EMAIL` and `FROM_NAME` values:
 
 	```
 	<copy>
@@ -131,7 +134,10 @@ In this step, you will create an approved sender who can send emails using the O
 	export FROM_NAME=gdk
 	</copy>
 	```
-	![Duplicate Approved Sender](images/duplicate-approved-sender.jpg#input) !!!!!
+
+	A dialog box will ask **Are you sure you want to paste 2 lines of text in to the terminal?**. Select **Do not ask me again** and click **Paste** to proceed.
+
+	![VS Code Paste Icon](images/vs-code-paste-icon.jpg#input)
 
 ## Task 4: Change the "to" Email Address
 
@@ -142,7 +148,7 @@ In this step, you'll change the "to" email address to your personal email addres
    _oci/src/main/java/com/example/EmailController.java_
 
 	``` java
-	class EmailController { 
+	class EmailController {
 
 		private final String toEmail = "recipient@gdk.example";
 	```

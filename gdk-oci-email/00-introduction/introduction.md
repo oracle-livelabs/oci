@@ -34,9 +34,10 @@ In this workshop, you will:
 * Use Visual Studio Code (VS Code) from a remote desktop running in an OCI Compute Instance
 * Review the application source code developed with the Graal Development Kit for Micronaut
 * Configure OCI Email Delivery:
-    * Generate SMTP credentials
-    * Add an Approved Sender
-    * Use the SMTP Endpoint for your OCI region
+    * Generate SMTP Credentials
+    * Set the SMTP server as the public endpoint
+    * Create an Approved Sender
+    * Change the "to" Email Address
 * Build a native executable for the application using GraalVM Native Image
 * Send emails from your application using OCI Email Delivery
 

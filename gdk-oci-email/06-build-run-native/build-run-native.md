@@ -99,7 +99,7 @@ In this lab, you will:
 
 6.	Once the application is running in the foreground, press `CTRL+C` to stop it.
 
-Congratulations! You've successfully completed this lab. Your Java application native executable can successfully upload, download and delete pictures from the OCI Object Storage bucket.
+Congratulations! You've successfully completed this lab. Your Java application native executable can successfully send emails using OCI Email Delivery.
 
 You may now **proceed to the next lab**.
 
