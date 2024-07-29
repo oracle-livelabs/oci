@@ -37,11 +37,6 @@ In this lab, you will:
 	</copy>
 	```
 
-	A dialog box will ask **Are you sure you want to paste 2 lines of text in to the terminal?**. Select **Do not ask me again** and click **Paste** to proceed.
-
-	![VS Code Paste Icon](images/vs-code-paste-icon.jpg#input)
-
-
 4. VS Code may show a dialog box with the message "Do you trust the authors of the files in this folder?". Select **Trust the authors of all files in the parent folder 'oracle'** and click **Yes, I trust the authors**.
 
 5. VS Code may ask you to choose a password for new keyring. Press **Cancel** twice to close the prompt.

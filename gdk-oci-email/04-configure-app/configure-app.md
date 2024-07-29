@@ -135,7 +135,7 @@ In this step, you will create an approved sender who can send emails using the O
 	</copy>
 	```
 
-	A dialog box will ask **Are you sure you want to paste 2 lines of text in to the terminal?**. Select **Do not ask me again** and click **Paste** to proceed.
+	A dialog box will ask **Are you sure you want to paste 2 lines of text into the terminal?**. Select **Do not ask me again** and click **Paste** to proceed.
 
 	![VS Code Paste Icon](images/vs-code-paste-icon.jpg#input)
 

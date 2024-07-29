@@ -45,41 +45,41 @@ Micronaut Email requires a bean of type `SessionProvider` when using JavaMail to
 
 _oci/src/main/java/com/example/SessionProviderImpl.java_
 
-	``` java
-	@Singleton // <1>
-	class SessionProviderImpl implements SessionProvider {
-	```
+``` java
+@Singleton // <1>
+class SessionProviderImpl implements SessionProvider {
+```
 
 1.	Use `jakarta.inject.Singleton` to designate a class as a singleton.
 
-	``` java
-	private final Properties properties;
-	private final String user;
-	private final String password;
+``` java
+private final Properties properties;
+private final String user;
+private final String password;
 
-	SessionProviderImpl(MailPropertiesProvider provider,
-					@Property(name = "smtp.user") String user, // <2>
-					@Property(name = "smtp.password") String password) { // <2>
-		this.properties = provider.mailProperties();
-		this.user = user;
-		this.password = password;
-	}
-	```
+SessionProviderImpl(MailPropertiesProvider provider,
+				@Property(name = "smtp.user") String user, // <2>
+				@Property(name = "smtp.password") String password) { // <2>
+	this.properties = provider.mailProperties();
+	this.user = user;
+	this.password = password;
+}
+```
 
 2.	Annotate a constructor parameter with `@Property` to inject a configuration value. The SMTP configuration is injected via constructor parameters annotated with `@Property`. Alternatively, use a POJO annotated with `@ConfigurationProperties`.
 
-	``` java
+``` java
+@Override
+@NonNull
+public Session session() {
+return Session.getInstance(properties, new Authenticator() {
 	@Override
-	@NonNull
-	public Session session() {
-	return Session.getInstance(properties, new Authenticator() {
-		@Override
-		protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication(user, password); // <3>
-		}
-	});
+	protected PasswordAuthentication getPasswordAuthentication() {
+			return new PasswordAuthentication(user, password); // <3>
 	}
-	```
+});
+}
+```
 
 3. Use `user` and `password` to create the `Session`.
 
@@ -89,72 +89,71 @@ The controller class `EmailController` uses the Micronaut `EmailSender` to send 
 
 _oci/src/main/java/com/example/EmailController.java_
 
-	``` java
-	@ExecuteOn(TaskExecutors.IO) // <1>
-	@Controller("/email") // <2>
-	class EmailController {
-	```
+``` java
+@ExecuteOn(TaskExecutors.IO) // <1>
+@Controller("/email") // <2>
+class EmailController {
+```
 
 1. It is critical that any blocking I/O operations (such as fetching the data from the database) are offloaded to a separate thread pool that does not block the Event loop.
 
 2. The class is defined as a controller with the `@Controller` annotation mapped to the path `/email`.
 
-	``` java
-	private final EmailSender<?, ?> emailSender;
+``` java
+private final EmailSender<?, ?> emailSender;
 
-	EmailController(EmailSender<?, ?> emailSender) { // <3>
-	this.emailSender = emailSender;
-	}
-	```
+EmailController(EmailSender<?, ?> emailSender) { // <3>
+this.emailSender = emailSender;
+}
+```
 
 3. Use constructor injection to inject a bean of type `EmailSender`.
 
-	``` java
-	@Post(uri = "/basic", produces = TEXT_PLAIN) // <4>
-	String index() {
-	emailSender.send(Email.builder()
-				.to(toEmail)
-				.subject("Micronaut Email Basic Test: " + LocalDateTime.now())
-				.body("Basic email")); // <5>
-	return "Email sent.";
-	}
-	```
+``` java
+@Post(uri = "/basic", produces = TEXT_PLAIN) // <4>
+String index() {
+emailSender.send(Email.builder()
+			.to(toEmail)
+			.subject("Micronaut Email Basic Test: " + LocalDateTime.now())
+			.body("Basic email")); // <5>
+return "Email sent.";
+}
+```
 
 4. By default, a Micronaut response uses `application/json` as `Content-Type`. In this case, the method returns a String, not a JSON object, so it is set to `text/plain`.
 
 5. The method sends a plain-text email.
 
-	``` java
-	@Post(uri = "/template/{name}", produces = TEXT_PLAIN) // <4>
-	String template(String name) {
-	emailSender.send(Email.builder()
-				.to(toEmail)
-				.subject("Micronaut Email Template Test: " + LocalDateTime.now())
-				.body(new TemplateBody<>(HTML,
-					new ModelAndView<>("email", singletonMap("name", name))))); // <6>
-	return "Email sent.";
-	}
-	```
+``` java
+@Post(uri = "/template/{name}", produces = TEXT_PLAIN) // <4>
+String template(String name) {
+emailSender.send(Email.builder()
+			.to(toEmail)
+			.subject("Micronaut Email Template Test: " + LocalDateTime.now())
+			.body(new TemplateBody<>(HTML,
+				new ModelAndView<>("email", singletonMap("name", name))))); // <6>
+return "Email sent.";
+}
+```
 
 6. To send an HTML email, the method leverages Micronaut's template rendering capabilities.
 
-
-	``` java
-	@Post(uri = "/attachment", produces = TEXT_PLAIN, consumes = MULTIPART_FORM_DATA) // <7>
-	String attachment(CompletedFileUpload file) throws IOException {
-	emailSender.send(Email.builder()
-				.to(toEmail)
-				.subject("Micronaut Email Attachment Test: " + LocalDateTime.now())
-				.body("Attachment email")
-				.attachment(Attachment.builder()
-					.filename(file.getFilename())
-					.contentType(file.getContentType().orElse(APPLICATION_OCTET_STREAM_TYPE).toString())
-					.content(file.getBytes())
-					.build()
-				)); // <8>
-	return "Email sent.";
-	}
-	```
+``` java
+@Post(uri = "/attachment", produces = TEXT_PLAIN, consumes = MULTIPART_FORM_DATA) // <7>
+String attachment(CompletedFileUpload file) throws IOException {
+emailSender.send(Email.builder()
+			.to(toEmail)
+			.subject("Micronaut Email Attachment Test: " + LocalDateTime.now())
+			.body("Attachment email")
+			.attachment(Attachment.builder()
+				.filename(file.getFilename())
+				.contentType(file.getContentType().orElse(APPLICATION_OCTET_STREAM_TYPE).toString())
+				.content(file.getBytes())
+				.build()
+			)); // <8>
+return "Email sent.";
+}
+```
 
 7. A Micronaut controller action consumes `application/json` by default. Consuming other content types is supported with the `@Consumes` annotation or the `consumes` member of any HTTP method annotation.
 
