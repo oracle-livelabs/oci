@@ -1,45 +1,34 @@
-# Introduction
+# Getting Started with OCI Email Delivery with Postfix
 
 ## About this Workshop
 
-This introduction covers the complete "parent" workshop. Use this text to set up the story for the workshop. Be engaging - what will the learner get from spending their time on this workshop?
+This workshop will walk you through the setup of OCI Email Delivery. Postfix and Mailx will be used in the last lab to test the setup. Email Delivery can be used throughout OCI so you may choose to test it elsewhere and use the last lab as optional. This workshop is a good starting point to get a basic configuration of OCI Email Delivery that you can later customize for your specific needs. The lab will utilize OCI Email Delivery, OCI DNS Management and OCI Compute for the Postfix components.
 
-Estimated Workshop Time: -- hours -- minutes (This estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
+Estimated Workshop Time: 1 hour
 
-*You may add an option video, using this format: [](youtube:YouTube video id)*
-
-  [](youtube:zNKxJjkq0Pw)
+![Simple Architecture of OCI Services Used in Email Delivery Lab](images/architecture.png)
 
 ### Objectives
 
-*List objectives for the workshop*
-
 In this workshop, you will learn how to:
-* Provision
-* Setup
-* Load
-* Query
+* Set up a domain in OCI Email Delivery Services
+* Configure DNS for your Email Delivery domain using OCI DNS Management
+* Create an approved sender to be used with emails sent from OCI
+* Install and configure Postfix to work with OCI Email Delivery. Test setup with Mailx.
 
-### Prerequisites (Optional)
-
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. **Do NOT list** each previous lab as a prerequisite.*
+### Prerequisites
 
 This lab assumes you have:
-* An Oracle account
-* All previous labs successfully completed
-
-*This is the "fold" - below items are collapsed by default*
-
-In general, the Introduction does not have Steps.
+* Oracle Cloud tenancy
+* A domain you have access to DNS Management
+* OCI Compute Instance for the Postfix Portion
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [Overview of Email Delivery](https://docs.oracle.com/en-us/iaas/Content/Email/Concepts/overview.htm)
+* [Email Delivery FAQ](https://www.oracle.com/application-development/email-delivery/faq/)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - Kevin McCoy, Cloud Architect
+* **Contributors** -  Germain Vargas, Cloud Architect
+* **Last Updated By/Date** - Kevin McCoy, July 2024

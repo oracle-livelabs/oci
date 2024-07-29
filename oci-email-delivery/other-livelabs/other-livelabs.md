@@ -1,8 +1,7 @@
 # Other LiveLabs you might like
 
+- [Get Started with Oracle Cloud Infrastructure Core Services](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648&clear=RR,180&session=2622896980161)
 
-- [Autonomous Database Dedicated](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=677)
+- [OCI Fast Track](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3313&clear=RR,180&session=2622896980161)
 
-- [Manage and Monitor Autonomous Database](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=553)
-
-- [Scaling and Performance in the Autonomous Database](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=608)
+- [Kick off your Oracle Cloud Part 1](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3613&clear=RR,180&session=2622896980161)
