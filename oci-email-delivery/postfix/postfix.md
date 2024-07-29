@@ -126,7 +126,7 @@ Enter the relay host:port number username:password and then *save* the sasl_pass
     ```
     <copy>echo "This is a test message." | mailx -s "Test" -r APPROVEDSENDER@YOURDOMAIN.com RECEPIENTEMAIL@DOMAIN.com</copy>
     ```
-7. If you need to troubleshoot, please check the Postfix logs to see what may have gone wrong. You are complete the workshop when you successfully receive an email.
+7. If you need to troubleshoot, please check the Postfix logs to see what may have gone wrong. You have completed the workshop when you successfully receive your test email.
     ```
     <copy>sudo tail -f /var/log/maillog</copy>
     ```
