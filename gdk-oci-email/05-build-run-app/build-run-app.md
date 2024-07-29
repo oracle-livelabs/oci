@@ -48,7 +48,7 @@ In this lab, you will:
 
 2. Send a simple plain-text email using the following command:
 
-	```
+	``` bash
 	<copy>
 	curl -X POST localhost:8080/email/basic
 	</copy>
@@ -58,7 +58,7 @@ In this lab, you will:
 
 3. Send a templated email using the following command:
 
-	```
+	``` bash
 	<copy>
 	curl -X POST localhost:8080/email/template/test
 	</copy>
@@ -68,7 +68,7 @@ In this lab, you will:
 
 4. Send an email with an attachment using the following command:
 
-	```
+	``` bash
 	<copy>
 	curl -X POST \
 		-H "Content-Type: multipart/form-data" \
@@ -79,17 +79,19 @@ In this lab, you will:
 
 	Check the email you provided in Lab **3** Task **4**. You should see the attachment email in your Inbox or Spam folder.
 
-5. Bring the running application to the foreground:
+## Task 3: Stop the application
 
-	```
+1. Bring the running application to the foreground:
+
+	``` bash
 	<copy>
 	fg
 	</copy>
 	```
 
-6. Once the application is running in the foreground, press `CTRL+C` to stop it.
+2. Once the application is running in the foreground, press `CTRL+C` to stop it.
 
-Congratulations! You've successfully completed this lab. Your Java application can successfully upload, download and delete pictures from the OCI Object Storage bucket.
+Congratulations! You've successfully completed this lab. Your Java application can successfully send emails using OCI Email Delivery.
 
 You may now **proceed to the next lab**.
 

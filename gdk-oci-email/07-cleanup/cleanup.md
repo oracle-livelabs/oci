@@ -10,7 +10,9 @@ From the Oracle Cloud Console, clean up the resources provisioned for this works
 
     ![Delete SMTP Credential Button](images/delete-smtp-credentials.jpg#input)
 
-3. From **Resource Manager >> Stacks >> Stack Details** screen, first run **Destroy** to delete VCN and Compute instance. Next, delete the **Stack**.
+3. From **Resource Manager >> Stacks >> Stack Details** screen, run **Destroy** to delete VCN and Compute instance.
+
+4. From **Resource Manager >> Stacks >> Stack Details** screen, **Delete** the **Stack**.
 
 Congratulations! You've successfully completed this lab.
 

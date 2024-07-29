@@ -38,7 +38,7 @@ In this lab, you will:
 
 	Replace `...me.com` with the actual value. Enclose the value in single quotes `' '` (instead of double quotes `" "`) as shown below to handle special characters.
 
-	```
+	``` bash
 	<copy>
 	export SMTP_USER='...me.com'
 	</copy>
@@ -46,7 +46,7 @@ In this lab, you will:
 
 	Confirm the value of the environment variable `SMTP_USER` by running the following command:
 
-	```
+	``` bash
 	<copy>
 	echo $SMTP_USER
 	</copy>
@@ -56,7 +56,7 @@ In this lab, you will:
 
 	Replace `nB..` with the actual value. Enclose the value in single quotes `' '` (instead of double quotes `" "`) as shown below to handle special characters.
 
-	```
+	``` bash
 	<copy>
 	export SMTP_PASSWORD='nB..'
 	</copy>
@@ -64,7 +64,7 @@ In this lab, you will:
 
 	Confirm the value of the environment variable `SMTP_PASSWORD` by running the following command:
 
-	```
+	``` bash
 	<copy>
 	echo $SMTP_PASSWORD
 	</copy>
@@ -87,14 +87,15 @@ Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SM
 
 	Replace `your-public-endpoint` with the actual value.
 
-	```
+	``` bash
 	<copy>
 	export SMTP_HOST=<your-public-endpoint>
 	</copy>
 	```
 
 	Confirm the value of the environment variable `SMTP_HOST` by running the following command:
-	```
+
+	``` bash
 	<copy>
 	echo $SMTP_HOST
 	</copy>
@@ -128,7 +129,7 @@ In this step, you will create an approved sender who can send emails using the O
 
 5.	Set `FROM_EMAIL` and `FROM_NAME` values:
 
-	```
+	``` bash
 	<copy>
 	export FROM_EMAIL=<email-from-the-previous-step>
 	export FROM_NAME=gdk
@@ -175,10 +176,6 @@ In this step, you'll change the "to" email address to your personal email addres
 Congratulations! In this lab, you configured the application to use the OCI Object Storage bucket created earlier.
 
 You may now **proceed to the next lab**.
-
-## Learn More
-
-* [Micronaut Oracle Cloud Authentication](https://micronaut-projects.github.io/micronaut-oracle-cloud/snapshot/guide/#authentication)
 
 ## Acknowledgements
 

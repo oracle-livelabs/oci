@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab reviews the sample Micronaut application code used in the workshop. The application source code and build scripts are available in the _lab_ directory in VS Code.
+This lab reviews the sample Micronaut application code used in the workshop. The application source code and build scripts are available for review in VS Code.
 
 You'll see how easy it is to configure a Micronaut application to send emails with OCI Email Delivery using the GDK.
 
@@ -16,7 +16,7 @@ In this lab, you will:
 
 ## Task 1: Review the Application Dependencies
 
-The build file contain the following dependencies to support OCI Email Delivery.
+The build file contains the following dependencies to enable email support:
 
 - `micronaut-email-javamail` is mandatory
 - `micronaut-email-template` and `micronaut-views-jte` are optional. These two libraries are required when using email templates.
@@ -176,7 +176,7 @@ _oci/src/main/jte/email.jte_
 	</body>
 	</html>
 
-## Task 6: Review the Email Sender Configuration
+## Task 5: Review the Email Sender Configuration
 
 The following snippet configures the default sender details. By using placeholder variables such as `FROM_EMAIL` and `FROM_NAME`, you can externalize the values via environment variables and avoid hard-coding.
 
@@ -192,7 +192,7 @@ _oci/src/main/resources/application-oraclecloud.properties_
 
 **Note:** This way (`property=${<placeholder>:<default-value>}`) of defining properties enables you to externalize the configuration easily. For example, if a configuration placeholder (`<placeholder>`) such as `FROM_NAME` is not defined, the Micronaut framework will use the default value (`<default-value>`) specified. So, in this case, if `FROM_NAME` is not specified, the Micronaut framework sets the value of `name` to `Default Sender`.
 
-## Task 7: Review the SMTP configuration
+## Task 6: Review the SMTP configuration
 
 The following snippet configures the SMTP credentials. This approach lets you externalize the values via environment variables or secure storage such as OCI Vault. 
 
@@ -206,7 +206,7 @@ _oci/src/main/resources/application-oraclecloud.properties_
 3. SMTP password.
 4. SMTP username.
 
-## Task 8: Review the JavaMail Properties Configuration
+## Task 7: Review the JavaMail Properties Configuration
 
 The following snippet configures the JavaMail properties:
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab describes how to build and run a native executable for the application, and then send emails using OCI Email Delivery.
+This lab describes how to build and run a native executable for the application, and use it to send emails using OCI Email Delivery.
 
 You will use [GraalVM Native Image](https://docs.oracle.com/en/graalvm/jdk/17/docs/overview/)’s ahead-of-time compilation to build a native executable for the application.
 
@@ -54,9 +54,9 @@ In this lab, you will:
 
 ## Task 2: Send the emails
 
-1.	In the same terminal in VS Code, press the enter (return) key.
+1. In the same terminal in VS Code, press the enter (return) key.
 
-2.	Send a simple plain-text email using the following command:
+2. Send a simple plain-text email using the following command:
 
 	``` bash
 	<copy>
@@ -66,7 +66,7 @@ In this lab, you will:
 
 	Check your email as before.
 
-3.	Send a templated email using the following command:
+3. Send a templated email using the following command:
 
 	``` bash
 	<copy>
@@ -76,7 +76,7 @@ In this lab, you will:
 
 	Check your email as before.
 
-4.	Send an email with an attachment using the following command:
+4. Send an email with an attachment using the following command:
 
 	``` bash
 	<copy>
@@ -89,7 +89,9 @@ In this lab, you will:
 
 	Check your email as before.
 
-5.	Bring the running application to the foreground:
+## Task 3: Stop the application
+
+1. Bring the running application to the foreground:
 
 	```
 	<copy>
@@ -97,7 +99,7 @@ In this lab, you will:
 	</copy>
 	```
 
-6.	Once the application is running in the foreground, press `CTRL+C` to stop it.
+2. Once the application is running in the foreground, press `CTRL+C` to stop it.
 
 Congratulations! You've successfully completed this lab. Your Java application native executable can successfully send emails using OCI Email Delivery.
 

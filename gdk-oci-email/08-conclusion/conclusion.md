@@ -4,7 +4,7 @@ In this workshop, you've learnt how to build a Java application to send emails w
 
 You've seen how to use GraalVM Native Image to package and run the application as a native executable.
 
-Application developers can use the Graal Development Kit for Micronaut (GDK) to build cloud-portable Java applications with Micronaut and GraalVM Native Image.
+Application developers can use the Graal Development Kit for Micronaut (GDK) to build cloud-portable Java applications on Oracle Cloud Infrastructure with Micronaut and GraalVM Native Image.
 
 ## Learn More
 
