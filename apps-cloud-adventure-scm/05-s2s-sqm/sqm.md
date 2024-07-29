@@ -64,7 +64,7 @@ In this activity, you will:
 
     Then, select the **Areas and Outcomes** icon from the left margin.
 
-    ![Image005](images/image005.png)
+    ![Image005](images/image006.png)
 
 
 
@@ -72,7 +72,7 @@ In this activity, you will:
 
     > Once the Areas and Outcomes screen is open, click on the **Select and Add** icon to add new qualifications to this model.
 
-    ![Image006](images/image006.png)
+    ![Image006](images/image005.png)
 
 
 
