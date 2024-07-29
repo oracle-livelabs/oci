@@ -34,7 +34,6 @@ In this activity, you will:
 
     ![image002](images/image002.png)
 
-    > Click on **Mobile App** Link to open the app.
 
 
 
