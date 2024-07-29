@@ -29,10 +29,6 @@ In this lab, you will:
 	</copy>
 	```
 
-	A dialog box will ask **Are you sure you want to paste 2 lines of text in to the terminal?**. Select **Do not ask me again** and click **Paste** to proceed.
-
-	![VS Code Paste Icon](images/vs-code-paste-icon.jpg#input)
-	
 3.	Open the sample application source code from the _gdk-oci-email-mvn_ directory in **Visual Studio Code**.
 
 	```bash
@@ -40,6 +36,11 @@ In this lab, you will:
 	code gdk-oci-email-mvn
 	</copy>
 	```
+
+	A dialog box will ask **Are you sure you want to paste 2 lines of text in to the terminal?**. Select **Do not ask me again** and click **Paste** to proceed.
+
+	![VS Code Paste Icon](images/vs-code-paste-icon.jpg#input)
+
 
 4. VS Code may show a dialog box with the message "Do you trust the authors of the files in this folder?". Select **Trust the authors of all files in the parent folder 'oracle'** and click **Yes, I trust the authors**.
 
