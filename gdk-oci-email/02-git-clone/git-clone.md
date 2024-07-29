@@ -29,6 +29,10 @@ In this lab, you will:
 	</copy>
 	```
 
+	A dialog box will ask **Are you sure you want to paste 2 lines of text in to the terminal?**. Select **Do not ask me again** and click **Paste** to proceed.
+
+	![VS Code Paste Icon](images/vs-code-paste-icon.jpg#input)
+	
 3.	Open the sample application source code from the _gdk-oci-email-mvn_ directory in **Visual Studio Code**.
 
 	```bash
