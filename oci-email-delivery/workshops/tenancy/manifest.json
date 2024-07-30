@@ -18,7 +18,7 @@
             "filename": "../../emaildomain/emaildomain.md"
         },
         {
-            "title": "Lab 2: Setting up an Approved Sender",
+            "title": "Lab 2: Create an Approved Sender",
             "description": "Setting up an approved sender for OCI Email Delivery",
             "filename": "../../approvedsender/approvedsender.md"
         },

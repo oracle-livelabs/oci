@@ -32,25 +32,25 @@ This lab assumes you have:
 ![Create Approved Sender Email](images/picture2.png)
 
 3. Enter the sender email address you plan to use for your domain. Then click the **Create Approved Sender** button.
-![Enter Approved Sender Email](images/picture3.png)
+![Enter Approved Sender Email Address](images/picture3.png)
 
 4. While on the Approved Senders screen, click on the **vertical ellipsis** on the right side of the approved sender email address. A menu will appear. Click on **View SPF**.
 ![Retrieve SPF Information](images/picture4.png)
 
 5. Copy the SPF information for your region and save it for use in the next task. Click the **Close** button when complete.
-![Manage SPF](images/picture5.png)
+![Retrieve SPF Information](images/picture5.png)
 
 ## Task 2: Add Sender Policy Framework(SPF) to DNS
 1. Return to your DNS Zone by clicking the **Navigation menu** in the upper left, navigate to **Networking** then select **DNS Management - Zones**.
 
 2. Open the zone that you created earlier and click on **Records**.
-![ADD CNAME Record](images/picture6.png)
+![Click on Records to access Zone Record](images/picture6.png)
 
 3. Click on the **Manage Records** button.
-![ADD CNAME Record](images/picture7.png)
+![Click on Manage Records Button](images/picture7.png)
 
 4. Click on the **Add Record** button.
-![ADD CNAME Record](images/picture8.png)
+![Add Record Button to Add TXT Record](images/picture8.png)
 
 5. Retrieve the DKIM Record information you saved from the previous lab.
    Update:
@@ -59,24 +59,24 @@ This lab assumes you have:
     - Update the RDATA/Answer Target with the SPF Information you saved earlier.
 
     When complete click the **Add Record**button
-![ADD CNAME Record](images/picture9.png)
+![Add Record Button to Add TXT Record](images/picture9.png)
 
 6. Stay on the Manage Records screen and move onto the next task when you are ready to publish your DNS Changes.
 
 ## Task 3: Publish DNS. Verify DKIM & SPF Configured Correctly
 
 1. While on the Manage Records screen for DNS Management within the OCI Console click on the **Publish Changes** button.
-![ADD CNAME Record](images/picture10.png)
+![Publish DNS Changes](images/picture10.png)
 
 2. Next, click on the **Confirm publish changes** button to publish your DNS Records.
-![ADD CNAME Record](images/picture11.png)
+![Confirm Publish of DNS Changes](images/picture11.png)
 
 3. As noted earlier, DNS updates may take time to take effect depending on your DNS Provider. When ready, confirm that email delivery and DNS are configured correctly. Click the **Navigation menu** in the upper left, navigate to **Developer Services** then select **Application Integration - Email Delivery**.
 
 4. Once in email delivery, click on the **Email Domains** link on the left-hand side of the screen. Then select the Email Domain you created.
 
-5. Within that email domain, you will now be able to see that DNS and DKIM are successfully configured as indicated by their *Active* Status. You also should see that SPF is configured. Move onto the next lab to test your setup once complete.
-![ADD CNAME Record](images/picture12.png)
+5. Within that email domain, you will now be able to see that DNS and DKIM are successfully configured as indicated by their *Active* Status. You also should see that SPF is configured. Proceed to the next lab when ready.
+![Check Active Status of Email Domain](images/picture12.png)
 
 ## Learn More
 

@@ -33,10 +33,10 @@ This lab assumes you have:
    Click on **Email Domains**.
  ![Enter Email Domain Information](images/picture2.png)
 3. Click the **Create Email Domain** button.
+  ![Create Email Button](images/picture3.png)
 
-  ![Enter Email Domain Information](images/picture3.png)
 4. Within email domain, verify you are in the correct compartment and specify an **Email Domain Name** and then click the **Create Email Domain** button.
- ![Create Email Domain](images/picture4.png)
+ ![Specify Name and Domain for Email Domain](images/picture4.png)
 
 5. After a brief time, your domain will become *active* and you may move onto the next task.
 
@@ -51,31 +51,31 @@ This lab assumes you have:
 
 2. Use your domain information, region and date in a similar fashion and enter in the **DKIM Selector** field and then click the **Generate DKIM Record** button.
 
-![Add DKIM Image](images/picture6.png)
+![Generate DKIM Record](images/picture6.png)
 
 3. Click the **Generate DKIM Record** button. This will create a CNAME Record and CNAME Value for DNS. Please *copy and save* for use in the next lab. Click the **Create DKIM** button when complete.
 
-![Add DKIM Image](images/picture7.png)
+![Copy DKIM Record](images/picture7.png)
 
 ## Task 3: Create DNS Zone and Add DKIM Record
 
 1. Click the **Navigation menu** in the upper left, navigate to **Networking** then select **DNS Management** then **Zones**.
-![DNS Management Zones](images/picture8.png)
+![Navigate to DNS Management Zones](images/picture8.png)
 
 2. Next click the **Create Zone** button under Public Zones.
-![Zones in Compartment](images/picture9.png)
+![Create Zones Button](images/picture9.png)
 
 3. Verify you are in the correct compartment and enter your domain name in the zone name field. Click the **Create** button when complete.
 ![Create Public Zone](images/picture10.png)
 
 4. Open your newly created zone and click on **Records**.
-![Manage Records](images/picture11.png)
+![Open DNS Records](images/picture11.png)
 
 5. Click on the **Manage Records** button.
-![Manage Records](images/picture12.png)
+![Manage Records Button](images/picture12.png)
 
 6. Click on the **Add Record** button
-![Manage Records](images/picture13.png)
+![Add Record Button](images/picture13.png)
 
 7. Retrieve the DKIM Record information you saved earlier.
 
@@ -85,15 +85,15 @@ This lab assumes you have:
     - Update the RDATA/Answer Target with the CNAME information from the DKIM Record created earlier.
 
   When complete click the **Add Record** Button.
-![Manage Records](images/picture14.png)
+![Add CNAME to DNS Record](images/picture14.png)
 
 8. While on the Manage Records screen for DNS Management, click on the **Publish Changes** button.
-![ADD CNAME Record](images/picture15.png)
+![Publish DNS Changes](images/picture15.png)
 
 9. Next, click on the **Confirm publish changes** button to publish your DNS Records.
-![ADD CNAME Record](images/picture16.png)
+![Confirm Publish DNS Changes](images/picture16.png)
 
-10. It may take some time for your DNS changes to take affect depending on your DNS provider. This may take as long as 24-72 hours. You will be making one more DNS change in the next lab so please move onto the next lab when ready.
+10. It may take some time for your DNS changes to take affect depending on your DNS provider. This may take as long as 24-72 hours. You will be making one more DNS change in the next lab. Please proceed to the next lab when ready.
 
 ## Learn More
 

@@ -29,7 +29,7 @@ This lab assumes you have:
 ## Task 1: Generate SMTP Credentials
 
 1. While in the OCI Console, Click on your **Profile** which can be found in the upper-right corner of any screen in the OCI console. Select **My Profile**.
-![Open Profile](images/picture1.png)
+![Open User Profile in Console](images/picture1.png)
 
 2. Click on **SMTP credentials** on the left-hand side of your profile under **Resources**.
 
@@ -42,10 +42,10 @@ This lab assumes you have:
 ![Copy SMTP Credentials](images/picture3.png)
 
 6. There is one more piece of information we need for our Postfix configuration. Before you leave the console, click the **Navigation menu** in the upper left, navigate to **Developer Services** then select **Application Integration - Email Delivery**. Click **Configuration** in the left-hand screen under Email delivery.
-![Email Delivery Configuration](images/picture4.png)
+![Email Delivery Configuration Navigation](images/picture4.png)
 
 6. Copy the Relay Host Public Endpoint and SMTP Ports for use in the next task. Save to a secure location.
-![Email Delivery Configuration](images/picture5.png)
+![Email Delivery Relay Host Configuration](images/picture5.png)
 
 ## Task 2: Install Postfix
 Log into an existing OCI virtual machine. If you do not have one already, please create one for your testing. If you are unfamiliar with the process of creating a virtual machine, there are several links in the "Other LiveLabs" section to take you through that process. Once you have a VM, please use SSH to connect to that VM and then begin the instructions below.
@@ -95,7 +95,7 @@ We will also need to add an entry for our relay host and port. Here's an example
     <copy>relayhost = smtp.email.us-ashburn-1.oci.oraclecloud.com:587</copy>
     ```
 This is what the entries look like in an example main.cf Postfix configuration file.
-![Relay Host in Config](images/picture6.png)
+![Postfix Configuration File Added Entries](images/picture6.png)
 
 ## Task 3: Configure Postfix
 1. The next step is to generate your sasl_passwd file. This file uses the relay host, SMTP Port, SMTP Username and SMTP Password information you saved in Task 1 of this lab. The SASL Passwd file uses this format.
