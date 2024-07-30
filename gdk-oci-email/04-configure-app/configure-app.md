@@ -140,6 +140,13 @@ In this step, you will create an approved sender who can send emails using the O
 
 	![VS Code Paste Icon](images/vs-code-paste-icon.jpg#input)
 
+	Confirm the values of the environment variables `FROM_EMAIL` and `FROM_NAME` by running the following command:
+
+	``` bash
+	<copy>
+	echo $FROM_EMAIL
+	echo $FROM_NAME
+	</copy>
 ## Task 4: Change the "to" Email Address
 
 In this step, you'll change the "to" email address to your personal email address so that you can verify the emails sent by the application in subsequent steps.
