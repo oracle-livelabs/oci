@@ -41,7 +41,7 @@ In this lab, you will:
 
 5. VS Code may ask you to choose a password for new keyring. Press **Cancel** twice to close the prompt.
 
-6. VS Code may show a dialog box with the message " A git repository was found in the patent folders of the workspace or the open file(s). Would you like to open the repository? ". Click **Never**.
+6. VS Code may show a dialog box with the message "A git repository was found in the patent folders of the workspace or the open file(s). Would you like to open the repository?". Click **Never**.
 
 	![VS Code Question Icon](images/vs-code-question-icon.jpg#input)
 
