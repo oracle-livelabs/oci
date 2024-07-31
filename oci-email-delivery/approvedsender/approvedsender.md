@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You must set up an approved sender for each email address you wish to send email from Oracle Cloud. In this lab, we will walk through the process of creating an approved sender and the necessary DNS changes to work with Sender Policy Framework(SPF). We will then publish the DNS changes from this lab and the next one to our DNS provider.
+You must set up an approved sender for each email address you wish to send email from Oracle Cloud Infrastructure. In this lab, you will walk through the process of creating an approved sender and the necessary DNS changes to work with Sender Policy Framework(SPF). The final step will be to publish the DNS changes.
 
 Estimated Time: 10 minutes
 
@@ -23,7 +23,7 @@ This lab assumes you have:
 * Domain you control and have access to DNS Management
 * Previous lab successfully completed
 
-## Task 1: Created Approved Sender
+## Task 1: Create Approved Sender
 
 1. Navigate to Email Delivery in the OCI Console. Select **Approved Senders**.
 ![Approved Sender Navigation](images/picture1.png)
@@ -34,7 +34,9 @@ This lab assumes you have:
 3. Enter the sender email address you plan to use for your domain. Then click the **Create Approved Sender** button.
 ![Enter Approved Sender Email Address](images/picture3.png)
 
-4. While on the Approved Senders screen, click on the **vertical ellipsis** on the right side of the approved sender email address. A menu will appear. Click on **View SPF**.
+4. While on the Approved Senders screen, click on the **vertical ellipsis** on the right side of the approved sender email address.
+
+ Click on **View SPF**.
 ![Retrieve SPF Information](images/picture4.png)
 
 5. Copy the SPF information for your region and save it for use in the next task. Click the **Close** button when complete.
@@ -58,20 +60,20 @@ This lab assumes you have:
     - Change the **Type** to **TXT**
     - Update the RDATA/Answer Target with the SPF Information you saved earlier.
 
-    When complete click the **Add Record**button
+    When complete click the **Add Record** button.
 ![Add Record Button to Add TXT Record](images/picture9.png)
 
-6. Stay on the Manage Records screen and move onto the next task when you are ready to publish your DNS Changes.
+6. Move onto the next task when you are ready to publish your DNS Changes.
 
-## Task 3: Publish DNS. Verify DKIM & SPF Configured Correctly
+## Task 3: Publish DNS Changes and Verify Configured Correctly
 
-1. While on the Manage Records screen for DNS Management within the OCI Console click on the **Publish Changes** button.
+1. While on the Manage Records screen for DNS Management click on the **Publish Changes** button.
 ![Publish DNS Changes](images/picture10.png)
 
 2. Next, click on the **Confirm publish changes** button to publish your DNS Records.
 ![Confirm Publish of DNS Changes](images/picture11.png)
 
-3. As noted earlier, DNS updates may take time to take effect depending on your DNS Provider. When ready, confirm that email delivery and DNS are configured correctly. Click the **Navigation menu** in the upper left, navigate to **Developer Services** then select **Application Integration - Email Delivery**.
+3. As noted earlier, DNS updates may take time to take effect depending on your DNS Provider. The status of Email Delivery and DNS will update in your email domain when it's complete. Click the **Navigation menu** in the upper left, navigate to **Developer Services** then select **Application Integration - Email Delivery**.
 
 4. Once in email delivery, click on the **Email Domains** link on the left-hand side of the screen. Then select the Email Domain you created.
 
