@@ -18,6 +18,7 @@ In this lab, you will:
 ## Task 1: Create SMTP Credentials
 
 1. From the Oracle Cloud Console, click the **Profile** icon on the top right. Then click on **My profile**.
+
 	![Profile icon](images/profile-icon.jpg#input)
 
 2. From the **Profile details** screen, click **SMTP credentials** under **Resources**. Click **Generate credentials**.
@@ -76,15 +77,15 @@ In this lab, you will:
 
 Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SMTP server address. Follow the steps to configure the SMTP connection for your region and save the public endpoint, for example, `smtp.email.us-ashburn-1.oci.oraclecloud.com`.
 
-1.  From the Oracle Cloud Console navigation menu, go to **Developer Services**. Under **Application Integration**, click **Email Delivery**.
+1. From the Oracle Cloud Console navigation menu, go to **Developer Services**. Under **Application Integration**, click **Email Delivery**.
 
 	![Email Delivery Menu](https://github.com/oracle-livelabs/common/blob/main/images/console/developer-application-emaildelivery.png)
 
-2.	Under **Email Delivery**, click **Configuration**. In **SMTP Sending Information** panel copy **Public Endpoint**.
+2. Under **Email Delivery**, click **Configuration**. In **SMTP Sending Information** panel copy **Public Endpoint**.
 
 	![SMTP Sending information Panel](images/smtp-sending-informatiom.jpg#input)
 
-3.	Set the `SMTP_HOST` variable:
+3. Set the `SMTP_HOST` variable:
 
 	Replace `your-public-endpoint` with the actual value.
 
@@ -108,17 +109,17 @@ In this step, you will create an approved sender who can send emails using the O
 
 1. From the Oracle Cloud Console navigation menu, go to the **Developer Services >> Application Integration >> Email Delivery**.
 
-	![Email Delivery Menu](https://github.com/oracle-livelabs/common/blob/main/images/console/developer-application-emaildelivery.png)
+   ![Email Delivery Menu](https://github.com/oracle-livelabs/common/blob/main/images/console/developer-application-emaildelivery.png)
 
-2.	Under **Email Delivery**, click **Approved Senders**. Ensure that you are in the correct compartment. Your user must be in a group with permissions to manage approved-senders in this compartment.
+2. Under **Email Delivery**, click **Approved Senders**. Ensure that you are in the correct compartment. Your user must be in a group with permissions to manage approved-senders in this compartment.
 
 	![Approved Sender Button](images/approved-senders-button.jpg#input)
 
-3.	Click **Create Approved Sender** within the **Approved Senders** view.
+3. Click **Create Approved Sender** within the **Approved Senders** view.
 
 	![Create Approved Sender Panel](images/create-approved-senders.jpg#input)
 
-4.	Enter the **gdk@gdk.example** as an approved sender in the **Add Sender** dialog box. Click **Create Approved Sender**.
+4. Enter the **gdk@gdk.example** as an approved sender in the **Add Sender** dialog box. Click **Create Approved Sender**.
 
 	![Add Approved Sender Panel](images/add-approved-sender.jpg#input)
 
@@ -128,7 +129,7 @@ In this step, you will create an approved sender who can send emails using the O
 
 	![Duplicate Approved Sender](images/duplicate-approved-sender.jpg#input)
 
-5.	Set `FROM_EMAIL` and `FROM_NAME` values:
+5. Set `FROM_EMAIL` and `FROM_NAME` values:
 
 	``` bash
 	<copy>
@@ -154,7 +155,7 @@ In this step, you will create an approved sender who can send emails using the O
 
 In this step, you'll change the "to" email address to your personal email address so that you can verify the emails sent by the application in subsequent steps.
 
-1.	Go to `EmailController.java` and replace `recipient@gdk.example` with your personal email address. Specify a valid personal email address so you can see the emails sent by this application in the next section.
+1. Go to `EmailController.java` and replace `recipient@gdk.example` with your personal email address. Specify a valid personal email address so you can see the emails sent by this application in the next section.
 
    _oci/src/main/java/com/example/EmailController.java_
 

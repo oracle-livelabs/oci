@@ -29,7 +29,7 @@ In this lab, you will:
 	</copy>
 	```
 
-3.	Open the sample application source code from the _gdk-oci-email-mvn_ directory in **Visual Studio Code**.
+3. Open the sample application source code from the _gdk-oci-email-mvn_ directory in **Visual Studio Code**.
 
 	```bash
 	<copy>

@@ -50,7 +50,7 @@ _oci/src/main/java/com/example/SessionProviderImpl.java_
 class SessionProviderImpl implements SessionProvider {
 ```
 
-1.	Use `jakarta.inject.Singleton` to designate a class as a singleton.
+1. Use `jakarta.inject.Singleton` to designate a class as a singleton.
 
 ``` java
 private final Properties properties;
@@ -66,7 +66,7 @@ SessionProviderImpl(MailPropertiesProvider provider,
 }
 ```
 
-2.	Annotate a constructor parameter with `@Property` to inject a configuration value. The SMTP configuration is injected via constructor parameters annotated with `@Property`. Alternatively, use a POJO annotated with `@ConfigurationProperties`.
+2. Annotate a constructor parameter with `@Property` to inject a configuration value. The SMTP configuration is injected via constructor parameters annotated with `@Property`. Alternatively, use a POJO annotated with `@ConfigurationProperties`.
 
 ``` java
 @Override
