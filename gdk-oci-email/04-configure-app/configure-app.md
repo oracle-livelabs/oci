@@ -77,7 +77,8 @@ In this lab, you will:
 Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SMTP server address. Follow the steps to configure the SMTP connection for your region and save the public endpoint, for example, `smtp.email.us-ashburn-1.oci.oraclecloud.com`.
 
 1.  From the Oracle Cloud Console navigation menu, go to **Developer Services**. Under **Application Integration**, click **Email Delivery**.
-	![Developer Services Button](images/developer-services-icon.jpg#input)
+
+	![Email Delivery Menu](https://github.com/oracle-livelabs/common/blob/main/images/console/developer-application-emaildelivery.png)
 
 2.	Under **Email Delivery**, click **Configuration**. In **SMTP Sending Information** panel copy **Public Endpoint**.
 
@@ -107,7 +108,7 @@ In this step, you will create an approved sender who can send emails using the O
 
 1. From the Oracle Cloud Console navigation menu, go to the **Developer Services >> Application Integration >> Email Delivery**.
 
-	![Developer Services Button](images/developer-services-icon.jpg#input)
+	![Email Delivery Menu](https://github.com/oracle-livelabs/common/blob/main/images/console/developer-application-emaildelivery.png)
 
 2.	Under **Email Delivery**, click **Approved Senders**. Ensure that you are in the correct compartment. Your user must be in a group with permissions to manage approved-senders in this compartment.
 
