@@ -6,7 +6,7 @@ This workshop takes you step by step through the process of building a Java appl
 
 It is aimed at application developers and DevOps engineers with a basic knowledge of Java.
 
-Estimated Workshop Time: 45 minutes
+Estimated Workshop Time: 75 minutes
 
 ### What is Graal Development Kit for Micronaut?
 
