@@ -72,12 +72,12 @@ SessionProviderImpl(MailPropertiesProvider provider,
 @Override
 @NonNull
 public Session session() {
-return Session.getInstance(properties, new Authenticator() {
-	@Override
-	protected PasswordAuthentication getPasswordAuthentication() {
-			return new PasswordAuthentication(user, password); // <3>
-	}
-});
+	return Session.getInstance(properties, new Authenticator() {
+		@Override
+		protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication(user, password); // <3>
+		}
+	});
 }
 ```
 
@@ -103,7 +103,7 @@ class EmailController {
 private final EmailSender<?, ?> emailSender;
 
 EmailController(EmailSender<?, ?> emailSender) { // <3>
-this.emailSender = emailSender;
+	this.emailSender = emailSender;
 }
 ```
 
@@ -112,11 +112,11 @@ this.emailSender = emailSender;
 ``` java
 @Post(uri = "/basic", produces = TEXT_PLAIN) // <4>
 String index() {
-emailSender.send(Email.builder()
+	emailSender.send(Email.builder()
 			.to(toEmail)
 			.subject("Micronaut Email Basic Test: " + LocalDateTime.now())
 			.body("Basic email")); // <5>
-return "Email sent.";
+	return "Email sent.";
 }
 ```
 
@@ -127,12 +127,12 @@ return "Email sent.";
 ``` java
 @Post(uri = "/template/{name}", produces = TEXT_PLAIN) // <4>
 String template(String name) {
-emailSender.send(Email.builder()
+	emailSender.send(Email.builder()
 			.to(toEmail)
 			.subject("Micronaut Email Template Test: " + LocalDateTime.now())
 			.body(new TemplateBody<>(HTML,
 				new ModelAndView<>("email", singletonMap("name", name))))); // <6>
-return "Email sent.";
+	return "Email sent.";
 }
 ```
 
@@ -141,7 +141,7 @@ return "Email sent.";
 ``` java
 @Post(uri = "/attachment", produces = TEXT_PLAIN, consumes = MULTIPART_FORM_DATA) // <7>
 String attachment(CompletedFileUpload file) throws IOException {
-emailSender.send(Email.builder()
+	emailSender.send(Email.builder()
 			.to(toEmail)
 			.subject("Micronaut Email Attachment Test: " + LocalDateTime.now())
 			.body("Attachment email")
@@ -151,7 +151,7 @@ emailSender.send(Email.builder()
 				.content(file.getBytes())
 				.build()
 			)); // <8>
-return "Email sent.";
+	return "Email sent.";
 }
 ```
 
