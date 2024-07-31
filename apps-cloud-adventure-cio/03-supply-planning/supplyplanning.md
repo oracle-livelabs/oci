@@ -129,5 +129,5 @@ In this example, we used Oracle Supply Planning’s “Planning Advisor” to re
 ## Acknowledgements
 * **Author** - Ben Chromilk, Principal Solution Engineer
 * **Contributors** -  Betty Jane Madden, Principal Solution Engineer
-* **Last Updated By/Date** - Ben Chromilk, August 2024
+* **Last Updated By/Date** - Ben Chromilk, July 2024
 

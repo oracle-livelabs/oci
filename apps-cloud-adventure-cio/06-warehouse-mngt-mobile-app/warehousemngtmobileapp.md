@@ -38,17 +38,22 @@ In this activity, you will:
 
     ![image003](images/image003.png)
 
+
+
 3. The inherent Mobile App allows end users to execute transactions using a mobile device with a graphical user interface.  Note the menu options the user can select.
 
     > Click on **Inventory.**
 
     ![image004](images/image004.png)
 
+
+
 4. Various options are presented to the user on the Mobile App including the ability to inquire on item information, LPN (license plate number) information, or execute a cycle count.
 
     > Click on Item **Inquiry Mobile.**
 
     ![image005](images/image005.png)
+
 
 
 5. Let’s enter the barcode of the item we want to search.  Note that this could also be done using a barcode to scan the item number. 
@@ -58,6 +63,7 @@ In this activity, you will:
     ![image006](images/image006.png)
 
 
+
 6. You can easily see what the item should look like as well as any alternate item numbers.
 
     > Click **Supremo Wearable Mk2, Black.**
@@ -65,11 +71,13 @@ In this activity, you will:
     ![image007](images/image007.png)
 
 
+
 7. We can use the Mobile App to view item details such as part relationships, dimensions, and flags that drive decisions.
 
     > Select drop downs for **Dimensions** and **Flags.**
 
     ![image008](images/image008.png)
+
 
 
 8. Dimensions help identify where an item can be put away.  Flags help to determine if items can be mixed with other items or if they can be packed with a wave.  Information that helps WMS drive directed movements. 
@@ -81,6 +89,12 @@ In this activity, you will:
     > Close the browser using the **X** icon to return to the Fusion landing page.
 
     ![image010](images/image010.png)
+
+
+
+9. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+
+    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:19) 
 
 
 
@@ -98,10 +112,6 @@ In this example, we used Oracle Warehouse Management’s embedded Mobile App to 
 
 
 
-
-
-
-**You may now proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Tracy Mengyan, Master Principal Solution Engineer

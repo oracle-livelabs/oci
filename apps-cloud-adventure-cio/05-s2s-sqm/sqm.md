@@ -2,7 +2,7 @@
  
 ## Introduction
  
-This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered in accounting and finance. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the CIO.
+This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered in accounting and finance. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the CFO.
 
 As you follow along, do not forget to answer the Adventure Check Point questions! 
 
@@ -12,7 +12,9 @@ Estimated Time: 7 minutes
 
 ### Objectives
 
-In this activity you’ll learn the different ways to manage user access and to secure your Oracle Fusion Cloud Applications.
+In this activity, you will:
+* Change the already existing comprehensive supplier assessment in Supplier Qualification Management (SQM) to make the gathering CSR scoring data from existing and new suppliers mandatory.
+ 
 
 
 
@@ -130,5 +132,5 @@ Seamlessly add and manage an ever-changing set of business requirements to ensur
 ## Acknowledgements
 * **Author** - Matt Bailey, Staff Solution Engineer
 * **Contributors** -  Betty Jane Madden, Principal Solution Engineer
-* **Last Updated By/Date** - Matt Bailey, August 2024
+* **Last Updated By/Date** - Matt Bailey, March 2024
 

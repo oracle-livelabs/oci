@@ -127,5 +127,5 @@ In this example, we used Oracle Warehouse Management’s embedded Mobile App to 
 ## Acknowledgements
 * **Author** - Tracy Mengyan, Master Principal Solution Engineer
 * **Contributors** -  Betty Jane Madden, Principal Solution Engineer
-* **Last Updated By/Date** - Tracy Mengyan, August 2024
+* **Last Updated By/Date** - Tracy Mengyan, July 2024
 
