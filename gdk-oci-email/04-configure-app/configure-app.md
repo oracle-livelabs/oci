@@ -79,11 +79,11 @@ Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SM
 
 1. From the Oracle Cloud Console navigation menu, go to **Developer Services**. Under **Application Integration**, click **Email Delivery**.
 
-	![Email Delivery Menu](https://github.com/oracle-livelabs/common/blob/main/images/console/developer-application-emaildelivery.png)
+   ![Email Delivery Menu](https://github.com/oracle-livelabs/common/blob/main/images/console/developer-application-emaildelivery.png)
 
 2. Under **Email Delivery**, click **Configuration**. In **SMTP Sending Information** panel copy **Public Endpoint**.
 
-	![SMTP Sending information Panel](images/smtp-sending-informatiom.jpg#input)
+   ![SMTP Sending information Panel](images/smtp-sending-informatiom.jpg#input)
 
 3. Set the `SMTP_HOST` variable:
 
@@ -113,21 +113,21 @@ In this step, you will create an approved sender who can send emails using the O
 
 2. Under **Email Delivery**, click **Approved Senders**. Ensure that you are in the correct compartment. Your user must be in a group with permissions to manage approved-senders in this compartment.
 
-	![Approved Sender Button](images/approved-senders-button.jpg#input)
+   ![Approved Sender Button](images/approved-senders-button.jpg#input)
 
 3. Click **Create Approved Sender** within the **Approved Senders** view.
 
-	![Create Approved Sender Panel](images/create-approved-senders.jpg#input)
+   ![Create Approved Sender Panel](images/create-approved-senders.jpg#input)
 
 4. Enter the **gdk@gdk.example** as an approved sender in the **Add Sender** dialog box. Click **Create Approved Sender**.
 
-	![Add Approved Sender Panel](images/add-approved-sender.jpg#input)
+   ![Add Approved Sender Panel](images/add-approved-sender.jpg#input)
 
-	The email address is added to your approved senders list.
+   The email address is added to your approved senders list.
 
-	**Note:** Approved senders are unique to tenancies. If you try to create a duplicate approved sender within a tenancy, a 409 Conflict error is displayed.
+   **Note:** Approved senders are unique to tenancies. If you try to create a duplicate approved sender within a tenancy, a 409 Conflict error is displayed.
 
-	![Duplicate Approved Sender](images/duplicate-approved-sender.jpg#input)
+   ![Duplicate Approved Sender](images/duplicate-approved-sender.jpg#input)
 
 5. Set `FROM_EMAIL` and `FROM_NAME` values:
 
@@ -138,11 +138,11 @@ In this step, you will create an approved sender who can send emails using the O
 	</copy>
 	```
 
-	A dialog box will ask **Are you sure you want to paste 2 lines of text into the terminal?**. Select **Do not ask me again** and click **Paste** to proceed.
+   A dialog box will ask **Are you sure you want to paste 2 lines of text into the terminal?**. Select **Do not ask me again** and click **Paste** to proceed.
 
-	![VS Code Paste Icon](images/vs-code-paste-icon.jpg#input)
+   ![VS Code Paste Icon](images/vs-code-paste-icon.jpg#input)
 
-	Confirm the values of the environment variables `FROM_EMAIL` and `FROM_NAME` by running the following command:
+   Confirm the values of the environment variables `FROM_EMAIL` and `FROM_NAME` by running the following command:
 
 	``` bash
 	<copy>
