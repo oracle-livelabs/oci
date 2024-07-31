@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Cloud Adventure Activity Guide – for SCM",
+    "workshoptitle": "Cloud Adventure Activity Guide – for Office of the CIO",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -7,8 +7,8 @@
             "filename": "../../00-introduction/introduction.md"
         },
         {
-            "title": "Lab 1: Global Order Promising",
-            "filename": "../../01-global-order-promising/promising.md"
+            "title": "Lab 1: Security",
+            "filename": "../../01-security/security.md"
         },
         {
             "title": "Lab 2: Subscription Management",
@@ -26,16 +26,7 @@
             "title": "Lab 5: Source to Settle -  Supplier Qualification Management",
             "filename": "../../05-s2s-sqm/sqm.md"
         }, 
-        {
-            "title": "Lab 6: Warehouse Management - Mobile App",
-            "filename": "../../06-warehouse-mngt-mobile-app/warehousemngtmobileapp.md"
-        }, 
-        {
-            "title": "Lab 7: Transportation Management",
-            "filename": "../../07-transportation-mngt/transportationmngt.md"
-
-
-        },
+     
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
