@@ -1,136 +1,205 @@
-# Connections
+# Analytics
  
-## Introduction
+## Introduction (MISSING)
  
-This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered in accounting and finance. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the CFO.
-
-As you follow along, do not forget to answer the Adventure Check Point questions! 
 
 
-Estimated Time: 7 minutes
+
+Estimated Time: 20 minutes
 
 
 ### Objectives
 
-In this activity, you will:
-* Change the already existing comprehensive supplier assessment in Supplier Qualification Management (SQM) to make the gathering CSR scoring data from existing and new suppliers mandatory.
+In this activity, you will Create analytics across different lines of business to derive better business insight
  
 
 
-
-## Task 1: Change the already existing comprehensive supplier assessment in Supplier Qualification Management.
-
-
-
-1. In efforts to improve the tracking of ESG data for suppliers, your company has decided to make it mandatory to gather CSR scoring data from existing and new suppliers. You will do this easily by changing the already existing comprehensive supplier assessment in Supplier Qualification Management.
-
-    > Navigate to the **Procurement** tab and select **Supplier Qualification**.
-
-    ![Image001](images/image001.png)
+## Task 1: Create analytics across different lines of business to derive better business insight
 
 
 
-2. You are now looking at the Supplier Qualification Management dashboard, where you can see anything going on with supplier initiatives at any given times. All the data on the dashboard is drillable but for now you are going to use the task menu to the right to access the necessary work area.
+1. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
 
-    > In the far-right side of the screen select the **Tasks** menu.
+    After a successful login, you will land on the Oracle Analytics home page. 
 
-    ![Image002](images/image002.png)
+    > (1) Login to your Fusion Data Intelligence Portal using the URL provided.  <br>
 
+    > (2) Open a web browser and enter the URL provided, then on the login screen, type in the Username and Password. Click Sign In.
 
-
-3. Corporate has already provided the questions and information suppliers will be required to provide so you just need to add this info to an existing qualification model. 
-
-    > Click the **Manage Qualification Models** hyperlink to access the management dashboard.
-
-    ![Image003](images/image003.png)
+    ![Login](images/image001.png)
 
 
+2. A finance Watchlist comprising several Tiles is available on the home page. 
 
-4. Using comprehensive search and sorting capabilities you can create and save inquiries to find any model you need to work on at any given moment. 
-    
-    At the bottom of the page are the suppliers. Four were invited, and three responded. You can see the details to the right. Once again you will notice EIP was ranked first but still wasn’t awarded so you must dive deeper.
+    One metric that draws my attention is Margin, which is trending low. 
 
-    > Select **Supplier Assessment Score** hyperlink under the Qualification Model column.
+    Two attributes that influence Margin are Revenue and Cost. Since revenue seems to be increasing, let's investigate Cost.
 
-    ![Image004](images/image004.png)
+    > On the Margin Tile locate the Open Workbook Icon    on the top right corner and click on it.
 
-    Now you need to change the Supplier Assessment Score model. This is the model used as part of the onboarding and/or spend authorization process.
-
+    ![Analytics home](images/image002.png)
 
 
-5. When you drill into the model you will be provided all the details of the selected model. This is where you can set up, manage, and change rules and attributes for the qualification model
+3.  This action expands the Tile and opens the workbook. 
 
-    > First, review the general information to ensure you are editing the correct model.
+    Let's now set the workbook to design mode so that we can add cost elements. 
 
-    Then, select the **Areas and Outcomes** icon from the left margin.
+    Instead of building manually, let's use the Auto Insights feature.
 
-    ![Image005](images/image006.png)
+    > (1) Click on the Edit Icon  as shown in the image.  <br>
 
+    > (2) Click on the Auto Insights Icon  as shown in the image.
 
-
-6. When you navigate to Areas and Outcomes, you can drill into the existing questions all the way down to scoring criteria and requalification rules for each. You will also notice this is where we will rate your supplier base depending on their responses and scores. All this information will also be reportable once collected. 
-
-    > Once the Areas and Outcomes screen is open, click on the **Select and Add** icon to add new qualifications to this model.
-
-    ![Image006](images/image005.png)
+    ![Workbook Design Mode](images/image003.png)
 
 
+4.  Next, let’s expand the Auto Insights pane for better observability. 
 
-7. In the Qualifications Areas tools, you can once again use comprehensive search tools to find the correct qualifications to add to your model. Corporate already provided the pre-approved qualification to help save all the various business units time, so you will simply need to locate and add the new section. Users can also create and add new sections ad-hoc given the correct permissions.
+    > Click on the Expand / Shrink Icon          as shown in the image.
 
-    > Under the search criteria look for the new **CSR Scoring** qualification area. 
-
-    ![Image007](images/image007.png)
-
-    > Select the new **CSR Scoring Qualification Area** and click **OK** to add it to the existing qualification model.
-
-    ![Image008](images/image008.png)
+    ![Workbook Design Mode](images/image004.png)
 
 
+5.  Auto insights can be tuned to provide information necessary for our analysis, for example, Cost Analysis
 
-8. Once the new Qualification Area is added to your model you can review and validate information. Users can also validate and preview what the new model will look like with the new section.
+    > Click the Settings Icon            as         shown in the image.
 
-    > Once the new section has been added to the qualification model, you can review all the questions and how they branch by selecting the **Actions** drop-down, then clicking on **View Question Branching**
-
-    ![Image009](images/image009.png)
-
+    ![Auto insights view](images/image005.png)
 
 
-9. When you review the question branching, you will notice that by adding the CSR Scoring section there are a couple questions that were added to the model. This will ensure that existing suppliers and any new suppliers will all be assessed for their CSR rating.
+6.  On the Settings tab, we will choose the attributes that are important to the analysis, which is cost-related information. 
 
-    After reviewing the questions you will need to go back to the landing page.
+    ***Sohel Jeelani, I recommend breaking this up into 2 slides due to Visual Studio Code formatting with bulleting inside click tracks**
 
-    > For our purposes today, click the **Home** button so you can navigate back to the Procurement landing page.
-
-    ![Image010](images/image010.png)
-
-    > You will be prompted to make sure you wish to exit without saving changes. Click **OK** to go back to the landing page without saving.
-
-    ![Image011](images/image011.png)
+    ![Auto insights view](images/image006.png)
 
 
+7.  Placeholder for recommended changes in step 6
 
-10. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+
+8.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories. 
+
+    > (1) Locate the “Top 10 Expense Categories by Expenses” insight and click the Add        Icon shown in the image. This will add the Insight to the Canvas.  <br>
+
+    > (2) Click on the **x** sign to close the Insights pane.
+
+    ![Auto insights view](images/image007.png)
+
+
+9.  Now, we can compare margin and cost side by side. 
+
+    Payroll expenses emerge as the highest cost. We will delve deeper into payroll expenses to identify their components. 
+
+    Our next step involves integrating Human Resources data into our analysis.
+
+    ![Analytics view 1](images/image008.png)
+
+
+10.  Combining datasets from multiple “Lines of Business” allows an individual to conduct a deep dive into the actual problems.
+
+    > (1) Expand the HCM Core transactions data set from the Data Panel on the left.  <br>
+
+    > (2) At the bottom of the Page, click the plus     icon to add another Canvas, **Canvas 2**. <br>
+
+    > (3) While holding “Shift,” multi-select the Amount and Account columns and drag them onto Canvas 2.
+
+    ![Analytics view 2](images/image009.png)
+
+    > (1) Change the chart to a “Stacked Bar” type to visualize the data better.  <br>
+
+    > (2) Follow steps 1 and 2 as shown in the picture 10.
+
+    ![Analytics view 3](images/image0010.png)
+
+
+11.  We need to perform trend analysis to understand when the expense anomaly started occurring and whether it is consistent across all expense types.
+
+    > Drag the **Accounts** column from the Categories section into the Color section.
+
+    ![Analytics view 4](images/image011.png)
+
+    > Next, expand the Fiscal Date folder in the Data Panel, locate the **Month** column, and drag and drop it into the Categories section.
+
+    ![Analytics view 5](images/image012.png)
+
+12.  We can now see expense amounts displayed across time and expense categories.
+
+    On analyzing the trend, it appears that while Base Salary and Wages have remained constant, overtime and contract labor have increased since May.
+
+    Let's explore and find out why overtime and contract labor have increased.  
+
+    ![Month by Month View](images/image013.png)
+
+13. Overtime and Contract labor are typically associated with Turnover. Let's see if it had any impact.
+
+    > (1) Expand the Fiscal Date folder in the Data Panel to locate the **Month** and **Turnover** columns.   <br>
+
+    > (2) While holding “Ctrl,” multi-select the **Month** and **Turnover** columns and drag them below the current visual. 
+
+    ![Analytics view 6](images/image0014.png)
+
+
+14.  Another factor that impacts Overtime and Contract labor is employee absences. 
+
+    > Drag the **Absences** column from the data panel and drop it in the values section below the **Turnover** column.
+
+    ![Analytics view 6](images/image015.png)
+
+15.  This brings all relevant columns onto the canvas. We can now co-relate several attributes and arrive at the correct conclusion. 
+
+    ![Analytics view 8](images/image016.png)
+
+
+
+16.  Let's change the chart type to understand trends and patterns better. 
+
+    > (1) Select the line chart as shown in the Picture.   <br>
+
+    > (2) Click on the inverted triangle  in the Properties panel and select Bar Chart.
+
+    ![Analytics view 9](images/image0017.png)
+
+
+17.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance. 
+
+    > (1) Now that we have understood the root cause of the margin decline let's share our findings with others.  <br>
+
+    > (2) Click on the Present button in the brown ribbon.
+
+    ![Analytics view 10](images/image0018.png)
+
+
+
+18.  Oracle Analytics provides the ability to share your findings and content in a PowerPoint presentation mode.
+
+    > (1) In the Workbook > Canvas Navigation toolbar on the left, click 'Style' and change from 'Bottom Tabs' to 'Navigation Bar'.  <br>
+
+    > (2) Next, click on the  Play Icon in the top right corner to activate Present Mode. 
+
+    ![Analytics view 11](images/image0019.png)
+
+
+19.  Once in Present mode, you can go forward or backward, add notes, filters, etc, to tell your story.
+
+    ![Analytics view 12](images/image020.png)
+
+
+
+
+20. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:16) 
 
 
 
-## Summary
+## Summary (MISSING)
 
-Supplier Qualification Management gives you everything you need to ensure compliance and manage vendor relationships.
 
-Identify and capture all compliance and demographic information you need from your vendors in one place.
-
-Monitor vendor data constantly and quickly identify and rectify any issues.
-
-Seamlessly add and manage an ever-changing set of business requirements to ensure you are doing business with the right people.
 
 **You have successfully completed the Activity!**
 
 
 ## Acknowledgements
-* **Author** - Matt Bailey, Staff Solution Engineer
-* **Contributors** -  Betty Jane Madden, Principal Solution Engineer
-* **Last Updated By/Date** - Matt Bailey, March 2024
-
+* **Author** - Sohel Jeelani, Analytics Solution Engineer, Advanced Technology Services
+* **Contributors** -  
+* **Last Updated By/Date** - Sohel Jeelani, August 2024

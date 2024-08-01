@@ -128,7 +128,7 @@ In this example, we used Oracle Supply Planning’s “Planning Advisor” to re
 
 ## Acknowledgements
 * **Author** - Casey Doody, Sales Consultant, Advanced Technology Services
-* **Contributors** -  Sajid Saleem, Master Principal Sales Consultant
+* **Contributors** -  Sajid Saleem, Master Principal Sales Consultant, Advanced Technology Services
 * **Last Updated By/Date** - Casey Doody, August 2024
 
 

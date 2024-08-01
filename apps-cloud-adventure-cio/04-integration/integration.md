@@ -1,6 +1,6 @@
-# 
+# Integration
 
-## Integration
+## Introduction
 
 We're delighted to take you on a journey that will uncover the incredible capabilities of Fusion Cloud's REST API integration tools for auditing supplier address changes. This adventure is designed to offer a holistic understanding of how these tools can streamline your supply chain security management, providing an efficient way to keep track of supplier information changes.
 
