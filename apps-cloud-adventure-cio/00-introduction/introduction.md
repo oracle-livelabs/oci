@@ -6,12 +6,13 @@ Are you a SaaS Application Administrator or Analyst? Are you tasked with setting
 
 Estimated Adventure Time: 2 hours
 
-### **Objectives (NEED CIO OBJECTIVES)**
+### **Objectives (DRAFT)**
 
 This Activity Guide will lead you along the way through a set of Adventure Labs, where you will experience the:
-1.	Ease of using Oracle Source to Settle solutions.
-2.	Comprehensive capabilities of an inter-connected procurement system.
-3.  Simplicity and scalability of creating and managing procurement processes.
+1.	How to easily carry out common application end-user administration tasks
+2.	The power and ease of configuring and extending your Fusion Cloud applications to meet your business requirements
+3.  The capabilities of Fusion Cloud to integrate with various systems and applications
+4.  How to easily create powerful analytics to drive better business insight
 
 Adventure awaits, click on the picture, show what you know, and rise to the top of the leader board!!! 
 
