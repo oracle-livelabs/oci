@@ -280,6 +280,6 @@ In this lab, you will:
 * [Extending Oracle Cloud Applications with Visual Builder Studio](https://docs.oracle.com/en/cloud/paas/visual-builder/visualbuilder-building-appui)
 
 ## Acknowledgements
-* **Author** - Charlie Moff, Distinguished Sales Consultant, Advanced Technology Services
+* **Author** - Charlie Moff, Distinguished Sales Consultant, Advanced Technology Services, Stephen Chung, Principal Sales Consultant, Advanced Technology Services
 * **Contributors** -  
 * **Last Updated By/Date** - Charlie Moff, August 2024
