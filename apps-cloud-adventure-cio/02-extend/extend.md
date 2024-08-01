@@ -14,7 +14,7 @@ In this lab, you will:
 * Use the embedded Visual Builder capabilities to build a new, simplified Supplier Screen.
 
 
-## Task 1: Guided Journeys with User Defined Content
+## Task 1: Guided Journeys with User Defined Content (WORK IN PROGRESS)
 
 
 1. To see how you can create Guided Journeys to provide additional information, including external information, to your users..
