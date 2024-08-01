@@ -6,7 +6,7 @@ Are you a SaaS Application Administrator or Analyst? Are you tasked with setting
 
 Estimated Adventure Time: 2 hours
 
-### **Objectives**
+### **Objectives (NEED CIO OBJECTIVES)**
 
 This Activity Guide will lead you along the way through a set of Adventure Labs, where you will experience the:
 1.	Ease of using Oracle Source to Settle solutions.
