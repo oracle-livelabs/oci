@@ -88,4 +88,4 @@ This lab assumes you have:
 ## Acknowledgements
 * **Author** - Kevin McCoy, Cloud Architect
 * **Contributors** -  Germain Vargas, Cloud Architect
-* **Last Updated By/Date** - Kevin McCoy, July 2024
+* **Last Updated By/Date** - Kevin McCoy, August 2024
