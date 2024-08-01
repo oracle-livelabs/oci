@@ -69,7 +69,7 @@ In this activity, you will Create analytics across different lines of business t
 
 6.  On the Settings tab, we will choose the attributes that are important to the analysis, which is cost-related information. 
 
-    ***Sohel Jeelani, I recommend breaking this up into 2 slides due to Visual Studio Code formatting with bulleting inside click tracks**
+    ***Sohel, I recommend breaking this up into 2 slides due to Visual Studio Code formatting with bulleting inside click tracks**
 
     ![Auto insights view](images/image006.png)
 
