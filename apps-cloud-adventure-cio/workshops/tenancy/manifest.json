@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Cloud Adventure Activity Guide – for Office of the CIO",
+    "workshoptitle": "Cloud Adventure Activity Guide – for the Office of the CIO",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -11,20 +11,20 @@
             "filename": "../../01-security/security.md"
         },
         {
-            "title": "Lab 2: Subscription Management",
-            "filename": "../../02-subscriptions-management/subscriptionmanagement.md"
+            "title": "Lab 2: Extend",
+            "filename": "../../02-extend/extend.md"
         },
         {
-            "title": "Lab 3: Supply Planning",
-            "filename": "../../03-supply-planning/supplyplanning.md"
+            "title": "Lab 3: Configure NOT UPLOADED",
+            "filename": "../../03-configure/configure.md"
         },
         {
-            "title": "Lab 4: Source to Settle - Sourcing",
-            "filename": "../../04-s2s-sourcing/sourcing.md"
+            "title": "Lab 4: Integration",
+            "filename": "../../04-integration/integration.md"
         }, 
         {
-            "title": "Lab 5: Source to Settle -  Supplier Qualification Management",
-            "filename": "../../05-s2s-sqm/sqm.md"
+            "title": "Lab 5: Analytics NOT UPLOADED",
+            "filename": "../../05-analytics/analytics.md"
         }, 
      
         {

@@ -1,140 +1,311 @@
-# Connections
+# Security
 
 ## Introduction
 
-This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered Supply Chain Management. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the COO.
+We're delighted to take you on a journey that will uncover the incredible capabilities of Fusion Cloud's REST API integration tools for auditing supplier address changes. This adventure is designed to offer a holistic understanding of how these tools can streamline your supply chain security management, providing an efficient way to keep track of supplier information changes.
 
-As you follow along, do not forget to answer the Adventure Check Point questions! 
+In the office of the Chief Information Officer (CIO), supply chain management is a complex web of interconnected processes. Our goal is to navigate this complexity and equip you with the skills to audit supplier address changes effectively. You'll learn how to leverage the power of Fusion Cloud's REST APIs, a game-changing solution that will revolutionize your operations.
+
+We've designed this journey to be interactive and engaging. Make sure to answer the Adventure Check Point questions along the way, ensuring you capture the full potential of this experience. These check points are your path to becoming a master auditor, so pay close attention!
+
+With your adventure hat on and a curious mind, prepare for an exhilarating exploration of Fusion Cloud's REST API integration features. Let's embark on this thrilling journey together!
 
 
-Estimated Time: 10 minutes
+Estimated Time: 15 minutes
 
 
 ### Objectives
 
-In this activity, you will:
-* Use Oracle Global Order Promising’s robust profitable to promise capabilities to commit to Steel Fitness’ request with confidence and successfully fulfill our customer’s needs with the lowest cost available.  
+In this activity you’ll learn the different ways to manage user access and to secure your Oracle Fusion Cloud Applications.
 
 
- 
+## Task 1: Log In
 
 
+1. Enjoy these opening minutes to get you acquainted with the Oracle solution
 
-## Task 1: Use Oracle Global Order Promising to determine most profitable to promise and on-time delivery options to satisfy customers' needs.  
+    Log in as your assigned user
 
-1. You have recently entered a new Sales Order for which manual scheduling is required.   Let’s review our options and ensure that GOP has selected the most cost-effective option.
+     > Click **Checkbox** next to the following fields.  Note that you may need to scroll the list of fields: <br>
+           - Select the url provided to you <br>
+           - User ID: Use assigned user name <br>
+           - Password: Provided Separately <br>
+           - Click Sign in <br>
 
-    > Click on the **Order Management** tab and select **Manage Orders** from the Quick Actions List.
+    ![Application login page](images/image001.png)
 
-    ![image001](images/image001.png)
 
+## Task 2: Audit Alert
 
 
-2. Manage Orders allows you to search orders based on a multitude of criteria.
+1. Our system administrator notices audit results showing failed logins from an employee.
 
-    > Enter order number **98431** in the order field and click **Search.**   Order 98431 will appear in the **Search Results.**  
+    > Your administrator will demonstrate the viewing of audit data collected in real time from the Oracle Cloud Applications and displayed in a simple dashboard.
 
-    ![image002](images/image002.png)
+    ![Audit Events](images/image002.png)
 
+2.  Most user management tasks are performed in a single set of screens using the Security Console.
 
+    > Your administrator will demonstrate accessing the Security Console from the Tools Menu
 
-3. Clicking on a sales order will allow you to drill down into the details of the order and interact with it.
+    ![Application Home](images/image003.png)
 
-    > Click on order number **98431** in the Search Results area.
 
-    ![image003](images/image003.png)
+3.  While the applications will automatically lock a user after too many failed login attempts, our user has not reached that limit.  But due to other suspicious activity on the network, our administrator uses the Cloud Console to lock the account
 
+   > Your administrator will demonstrate for to Find the user (Brian.Bell) and Lock the user from the Actions menu
+   
+    ![Audit Events](images/image004.png)
 
 
-4. All information regarding a Sales Order can be accessed via this screen, including its current state, and all fulfillment details.
 
-    > Click on **Actions**, and then **Switch to Fulfillment View.**
+## Task 3: Extending Privileges to a User
 
-    ![image004](images/image004.png)
+1. Oracle Cloud Applications are delivered with a complete set of roles which control access to application functions and data.  
 
+    To add a new privilege to a user, you will need to first copy an existing role.
 
 
-5. The Fulfillment View provides all the relevant details for each line such as inventory details, promising dates, scheduling details, and shipping parameters. Real-time availability checking and order scheduling allows users to quickly investigate delivery exceptions.  
+    > If not logged in, follow the steps provided to you for accessing your Oracle Cloud account
 
-    > Click on **Check Availability**.
+    ![Application Home](images/image005.png)  
 
-    ![image005](images/image005.png)
+    > Look to the upper right of your screen to find the Star which is your Favorites Menu
 
+    ![Application Home](images/image006.png) 
 
+2.  Accessing Security Console 
 
-6. The Availability Status indicates the sales order will be delivered on-time!  Oracle Cloud Global Order Promising has found sufficient supply to fulfill the order.
+    > From the Favorites Menu, click on **Security Console**
 
-    > Review the details and other available options by clicking on **View Availability Options**.
+    ![Application Home](images/image007.png)  
 
-    ![image006](images/image006.png)
 
+3. You’ll be working from this single console for most of the examples today.  By default, you are viewing the Roles tab of the console.
+   
+    > Security Console - Roles
 
+    ![Security Console - Roles](images/image008.png)  
 
-7. The Availability Options shows multiple options based on different shipping methods. However, Oracle Cloud Global Order Promising using Profitable to Promise considered the default option with lowest fulfillment cost. 
+4. Notice how the search is dynamic and offers available options as you type.
 
-    > **Review the options, and record the cost, shipping date, and shipping method for the most profitable selection.**
+    > (1) In the search field provided at the top, type **Accounts Payable Manager** <br>
 
-    ![image007](images/image007.png)
+    > (2) Click the **Finish** button.
 
+    ![Security Console - Roles](images/image009.png)  
 
 
-8. Availability Details will give you a full view into the specifics of the fulfillment process, including all purchases, manufacturing, and transfers that are required.
+5. You can now see a list of the roles which are granted to a user when they are provided with the Accounts Payable Manager.  
 
-    > Select the **Current Option** row under Availability Option, click on **Actions**, and then select **Availability Details**.
+    > (1) Notice that the table may be exported to Microsoft Excel using the button provided at the top right. <br>
 
-    ![image008](images/image008.png)
+    > (2) Clicking on the **Show Graph** icon will display the role privileges in a graphical display.
 
+    ![Security Console - Roles](images/image010.png)
 
+6.  This graphical view is a great way to understand how sets of privileges and roles are assigned in groups and hierarchies. 
 
-9. The Availability Details pegging information helps Natalie understand how the order can be promised on time. In this example, Global Order Promising reviewed the profitable supply chain network to promise the order. 
+    > Returning back to the table view is as easy as pressing the **View as Table** icon.
 
-    > Note that item **ECM37004** was sourced from Liberty Electric, which is not the primary source of the item, but a secondary lest costly option GOP identified based on using Profitable to Promise.  
+    ![graphical view](images/image011.png)
 
-    .
-    > GOP can be configured to consider several variables when considering profitability.
+7.  Always make changes to a copied role to ensure that your custom configurations are preserved on updates.
 
-    ![image009](images/image009.png)
+    > Tasks associated with the role are available from this pull-down menu.  Select **Copy Role**
 
-    > Click **Done** to return to the Check Availability screen.
+    ![Security Console - Roles](images/image012.png)
 
-    ![image010](images/image010.png)
+    > (1) Select **Copy top role** <br>
 
+    > (2) Press the **Copy Role** button.
 
+    ![Copy Role View](images/image013.png)
 
-10. Our Order Management environment is configured to require that orders be manually scheduled.   This process can be automated as well, with full confidence that GOP will select the most profitable fulfillment option based on your company’s specific needs.
 
-    > Click on the **Home** button to return to your landing page.
 
-    ![image011](images/image011.png)
+8.  Notice that you provided with a list of ordered steps at the top.  For this example we will only provide answers to steps 1, 2 and 7.
 
+    We start by giving our copied role a unique name.
 
+    > (1) User **your initials** to update the prefix of the role name and role code as shown. <br>
 
-11. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+    > (2) Press the **Next** button
 
-    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:5) 
+    ![Copy Role View](images/image014.png)
 
+9.  Using Function Security Policy, you will add the privileges Brian Bell needs
 
+    > Press the **Add Function Security Policy** button
 
+    ![Function Security Policy](images/image015.png)
 
+10.  You will now find the required policy using the search form.
+
+    > Type **Cancel Supplier Negotiation** in the search field then select the privilege with that name.
+
+    ![Function Security Policy](images/image016.png)
+
+    > Press the **Add Privilege** to Role button
+
+    ![Add Privilege](images/image017.png)
+
+
+
+11. Note that the search window did not automatically dismiss.  This is done so you can continue to add more policies in this process.
+
+    > Press the **Cancel** button to continue
+
+    ![Add Privilege](images/image018.png)
+
+
+9. Note that the new policy has been added
+
+    > Press the **Next** button
+
+    ![Audit Report REST Endpoints](images/image019.png)
+
+10.  You will skip the next three tasks.  
+
+    Each of these next screens illustrates how much granular control you have over access to application features and data.
+
+    No need to add a Data Security Policy
+
+    > Press the **Next** button
+
+    ![Next Button](images/image020.png)
+
+11. No need to add a role 
+
+    > Press the **Next** button
+
+    ![Next Button](images/image021.png)
+
+12.  You are skipping this step which examines role conflicts with segregation of duties.
+
+    > Press the **Next** button
+
+    ![Next Button](images/image022.png)   
+
+
+
+12. Using a similar search tool, you will now search for Brian Bell and provide him with this new role and its associated privileges.
+
+    > Press the Add User button
+
+    ![Add User button](images/image023.png)
+
+    > Type **Brian.Bell** in the search form then select his name below when found.  Be sure to use the period between the first and last name.
+
+    ![Integration Tab](images/image024.png)
+
+    > Press the **Add User to Role** button
+
+    ![API Application Administration](images/image025.png)
+
+    
+
+13. Again, the search box remains in case you want to add additional users.
+
+    > Press the **Cancel** button
+
+    ![cancel button ](images/image026.png)
+
+14. Brian Bell has been added to this new role
+
+    > Click the **Next** button
+
+    ![Next Button ](images/image027.png)
+
+15. Note confirmation that we have added one Security Policy and one user
+
+    > Press the Submit and Close button
+
+    ![close button](images/image028.png)
+
+
+16. Last screen confirms new role is added.
+
+    > Press the OK button
+
+    ![ok button](images/image029.png)
+
+
+## Task 4: Compare Roles 
+
+1.  Using the compare roles feature, you can quickly identify changes you’ve made compared to the out of the box roles provided by Oracle or other custom roles.
+
+    This section uses your newly created role to do exactly this.
+
+    > From the Security Console, press the **Compare Roles button**
+
+    ![Security Console](images/image030.png)
+
+2.  You will need to enter the name of your new role
+
+    > Press the **Search** icon for the First Role
+
+    ![Security Console](images/image031.png)
+
+    > Type in your **three initials** which you used to name your custom role
+
+    ![Security Console](images/image032.png)
+
+    > Select your custom role
+
+    ![Security Console](images/image033.png)
+
+    > Press the **OK** button
+
+    ![Security Console](images/image034.png)
+
+3.  Now you will repeat these steps for the original role
+
+    > Press the **Search** icon for the Second Role
+
+    ![Security Console - Compare Role](images/image035.png)
+
+    > (1) In the search field type **Accounts Payable Manager** <br>
+
+    > (2) Select the first entry
+
+    ![Security Console - Compare Role](images/image036.png)
+
+    > Press the **OK** button
+
+    ![Security Console - Compare Role](images/image037.png)
+
+    > Press the **Compare** button
+
+    ![Security Console - Compare Role](images/image038.png)
+
+4.  Immediately you see that Cancel Supplier Negotiation has been added to the first role and does not exist in the second role.
+
+    > Press the **Only** in first role toggle button
+
+    ![Security Console - Compare Role](images/image039.png)
+
+5.  With this new view, you see that two additional inherited roles were added to the custom role when you added Cancel Supplier Negotiation to the role.
+
+    ![Security Console - Compare Role](images/image040.png)
+
+    > Review the Demo Flow for the Audit History Audit REST API
+	
+
+16. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+    
+    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:13) 
 
 
 ## Summary
 
-Order Promising is a critical supply chain process that drives major costs and customer service levels. Every company’s reputation rests on their ability to provide the highest levels of customer service, while their financial viability depends on their ability to determine both reliable and profitable order fulfillment. 
+Security Console is used to quickly manage user access to the entire Fusion applications suite.
 
-In this example, we used Oracle Global Order Promising’s robust profitable to promise capabilities to commit to Steel Fitness’ request with confidence and successfully fulfill our customer’s needs with the lowest cost available.  
+To end this portion of the Cloud Adventure, your class administrator will activate Brian Bell’s account, and demonstrate the Simulate Navigator.
 
 **You have successfully completed the Activity!**
 
-**For extra credit (and possibly some Oracle swag) please make sure you record the information regarding the option GOP selected, and be prepared to discuss what variables were considered by GOP in making the decision.**
-
-
-
-
-
-
 ## Acknowledgements
-* **Author** - Ben Chromilk, Principal Solution Engineer
-* **Contributors** -  Betty Jane Madden, Principal Solution Engineer
-* **Last Updated By/Date** - Ben Chromilk, July 2024
-
+* **Author** - Nate Weinsaft, Sales Consultant, Advanced Technology Services
+* **Contributors** -  
+* **Last Updated By/Date** - Nate Weinsaft, August 2024

@@ -2,14 +2,11 @@
 
 ## About this Cloud Adventure
 
-Welcome to Oracle Cloud Adventure for Supply Chain Management (SCM).  This hands-on experience of highly differentiated and specifically curated content will guide you through numerous activities that are typically encountered across the suite of SCM functions. 
+Are you a SaaS Application Administrator or Analyst? Are you tasked with setting up users, configuring page layouts and approval workflows? Are you responsible for integrations or creating new reports & dashboards? Get hands-on experience to learn and become more efficient on these activities and more! Join us for a two-hour fun filled journey where you will leverage built in tools and capabilities to extend, configure, and integrate Oracle Fusion Cloud Applications. The experience includes application user security, UI configurations, creating integrations, and creating new reports/dashboards. 
 
-We hope you will enjoy today’s adventure exploring a complete and unified solution for SCM Professionals.  
+Estimated Adventure Time: 2 hours
 
-
-Estimated Adventure Time: 45 minutes
-
-### Objectives
+### **Objectives**
 
 This Activity Guide will lead you along the way through a set of Adventure Labs, where you will experience the:
 1.	Ease of using Oracle Source to Settle solutions.
