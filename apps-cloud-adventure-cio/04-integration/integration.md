@@ -76,7 +76,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 6. We’re going to add a Suite (999) to the Supplier’s address information that was missing before.
 
-    > Click in the 88Address Line 2** text entry field 
+    > Click in the **Address Line 2** text entry field 
 
     ![Edit Suppliers View](images/image010.png)
 
