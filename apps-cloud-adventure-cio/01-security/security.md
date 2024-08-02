@@ -19,7 +19,7 @@ Estimated Time: 15 minutes
 In this activity you’ll learn the different ways to manage user access and to secure your Oracle Fusion Cloud Applications.
 
 
-## Task 1: Log In
+## Task 1: Opening - Log In
 
 
 1. Enjoy these opening minutes to get you acquainted with the Oracle solution
@@ -40,13 +40,13 @@ In this activity you’ll learn the different ways to manage user access and to 
 
 1. Our system administrator notices audit results showing failed logins from an employee.
 
-    > Your administrator will demonstrate the viewing of audit data collected in real time from the Oracle Cloud Applications and displayed in a simple dashboard.
+    Your administrator will demonstrate the viewing of audit data collected in real time from the Oracle Cloud Applications and displayed in a simple dashboard.
 
     ![Audit Events](images/image002.png)
 
 2.  Most user management tasks are performed in a single set of screens using the Security Console.
 
-    > Your administrator will demonstrate accessing the Security Console from the Tools Menu
+    Your administrator will demonstrate accessing the Security Console from the Tools Menu
 
     ![Application Home](images/image003.png)
 
@@ -63,27 +63,23 @@ In this activity you’ll learn the different ways to manage user access and to 
 
     To add a new privilege to a user, you will need to first copy an existing role.
 
-
-    > If not logged in, follow the steps provided to you for accessing your Oracle Cloud account
+    This is the Springboard where you’ll access all features. 
 
     ![Application Home](images/image005.png)  
 
-    > Look to the upper right of your screen to find the Star which is your Favorites Menu
-
-    ![Application Home](images/image006.png) 
 
 2.  Accessing Security Console 
 
-    > From the Favorites Menu, click on **Security Console**
+    > Look to the upper left of your screen to find the **Navigator** icon.  From here, select **Tools** group, then **Security Console**
 
-    ![Application Home](images/image007.png)  
+    ![Application Home](images/image006.png)  
 
 
 3. You’ll be working from this single console for most of the examples today.  By default, you are viewing the Roles tab of the console.
    
     > Security Console - Roles
 
-    ![Security Console - Roles](images/image008.png)  
+    ![Security Console - Roles](images/image007.png)  
 
 4. Notice how the search is dynamic and offers available options as you type.
 
@@ -91,7 +87,7 @@ In this activity you’ll learn the different ways to manage user access and to 
 
     > (2) Click the **Finish** button.
 
-    ![Security Console - Roles](images/image009.png)  
+    ![Security Console - Roles](images/image008.png)  
 
 
 5. You can now see a list of the roles which are granted to a user when they are provided with the Accounts Payable Manager.  
@@ -100,25 +96,25 @@ In this activity you’ll learn the different ways to manage user access and to 
 
     > (2) Clicking on the **Show Graph** icon will display the role privileges in a graphical display.
 
-    ![Security Console - Roles](images/image010.png)
+    ![Security Console - Roles](images/image009.png)
 
 6.  This graphical view is a great way to understand how sets of privileges and roles are assigned in groups and hierarchies. 
 
     > Returning back to the table view is as easy as pressing the **View as Table** icon.
 
-    ![graphical view](images/image011.png)
+    ![graphical view](images/image010.png)
 
 7.  Always make changes to a copied role to ensure that your custom configurations are preserved on updates.
 
     > Tasks associated with the role are available from this pull-down menu.  Select **Copy Role**
 
-    ![Security Console - Roles](images/image012.png)
+    ![Security Console - Roles](images/image011.png)
 
     > (1) Select **Copy top role** <br>
 
     > (2) Press the **Copy Role** button.
 
-    ![Copy Role View](images/image013.png)
+    ![Copy Role View](images/image012.png)
 
 
 
@@ -126,27 +122,27 @@ In this activity you’ll learn the different ways to manage user access and to 
 
     We start by giving our copied role a unique name.
 
-    > (1) Add **your initials** to the end of the role name and role code as shown. <br>
+    > (1) To do that, add **your initials** to the name of the **role name** and **role code** as shown.  This will keep your version separate from each of the other participants, and it will help you find the new role later in this Cloud Journey. <br>
 
     > (2) Press the **Next** button
 
-    ![Copy Role View](images/image014.png)
+    ![Copy Role View](images/image013.png)
 
 9.  Using Function Security Policy, you will add the privileges Brian Bell needs
 
     > Press the **Add Function Security Policy** button
 
-    ![Function Security Policy](images/image015.png)
+    ![Function Security Policy](images/image014.png)
 
 10.  You will now find the required policy using the search form.
 
     > Type **Cancel Supplier Negotiation** in the search field then select the privilege with that name.
 
-    ![Function Security Policy](images/image016.png)
+    ![Function Security Policy](images/image015.png)
 
     > Press the **Add Privilege** to Role button
 
-    ![Add Privilege](images/image017.png)
+    ![Add Privilege](images/image016.png)
 
 
 
@@ -154,14 +150,14 @@ In this activity you’ll learn the different ways to manage user access and to 
 
     > Press the **Cancel** button to continue
 
-    ![Add Privilege](images/image018.png)
+    ![Add Privilege](images/image017.png)
 
 
 9. Note that the new policy has been added
 
     > Press the **Next** button
 
-    ![Audit Report REST Endpoints](images/image019.png)
+    ![Audit Report REST Endpoints](images/image018.png)
 
 10.  You will skip the next three tasks.  
 
@@ -171,19 +167,19 @@ In this activity you’ll learn the different ways to manage user access and to 
 
     > Press the **Next** button
 
-    ![Next Button](images/image020.png)
+    ![Next Button](images/image019.png)
 
 11. No need to add a role 
 
     > Press the **Next** button
 
-    ![Next Button](images/image021.png)
+    ![Next Button](images/image020.png)
 
 12.  You are skipping this step which examines role conflicts with segregation of duties.
 
     > Press the **Next** button
 
-    ![Next Button](images/image022.png)   
+    ![Next Button](images/image021.png)   
 
 
 
@@ -191,15 +187,15 @@ In this activity you’ll learn the different ways to manage user access and to 
 
     > Press the Add User button
 
-    ![Add User button](images/image023.png)
+    ![Add User button](images/image022.png)
 
     > Type **Brian.Bell** in the search form then select his name below when found.  Be sure to use the period between the first and last name.
 
-    ![Integration Tab](images/image024.png)
+    ![Integration Tab](images/image023.png)
 
     > Press the **Add User to Role** button
 
-    ![API Application Administration](images/image025.png)
+    ![API Application Administration](images/image024.png)
 
     
 
@@ -207,26 +203,26 @@ In this activity you’ll learn the different ways to manage user access and to 
 
     > Press the **Cancel** button
 
-    ![cancel button ](images/image026.png)
+    ![cancel button ](images/image025.png)
 
 14. Brian Bell has been added to this new role
 
     > Click the **Next** button
 
-    ![Next Button ](images/image027.png)
+    ![Next Button ](images/image026.png)
 
 15. Note confirmation that we have added one Security Policy and one user
 
     > Press the Submit and Close button
 
-    ![close button](images/image028.png)
+    ![close button](images/image027.png)
 
 
 16. Last screen confirms new role is added.
 
     > Press the OK button
 
-    ![ok button](images/image029.png)
+    ![ok button](images/image028.png)
 
 
 ## Task 4: Compare Roles 
@@ -237,55 +233,55 @@ In this activity you’ll learn the different ways to manage user access and to 
 
     > From the Security Console, press the **Compare Roles button**
 
-    ![Security Console](images/image030.png)
+    ![Security Console](images/image029.png)
 
 2.  You will need to enter the name of your new role
 
     > Press the **Search** icon for the First Role
 
-    ![Security Console](images/image031.png)
+    ![Security Console](images/image030.png)
 
     > Type in your **three initials** which you used to name your custom role
 
-    ![Security Console](images/image032.png)
+    ![Security Console](images/image031.png)
 
     > Select your custom role
 
-    ![Security Console](images/image033.png)
+    ![Security Console](images/image032.png)
 
     > Press the **OK** button
 
-    ![Security Console](images/image034.png)
+    ![Security Console](images/image033.png)
 
 3.  Now you will repeat these steps for the original role
 
     > Press the **Search** icon for the Second Role
 
-    ![Security Console - Compare Role](images/image035.png)
+    ![Security Console - Compare Role](images/image034.png)
 
     > (1) In the search field type **Accounts Payable Manager** <br>
 
     > (2) Select the first entry
 
-    ![Security Console - Compare Role](images/image036.png)
+    ![Security Console - Compare Role](images/image035.png)
 
     > Press the **OK** button
 
-    ![Security Console - Compare Role](images/image037.png)
+    ![Security Console - Compare Role](images/image036.png)
 
     > Press the **Compare** button
 
-    ![Security Console - Compare Role](images/image038.png)
+    ![Security Console - Compare Role](images/image037.png)
 
 4.  Immediately you see that Cancel Supplier Negotiation has been added to the first role and does not exist in the second role.
 
     > Press the **Only** in first role toggle button
 
-    ![Security Console - Compare Role](images/image039.png)
+    ![Security Console - Compare Role](images/image038.png)
 
 5.  With this new view, you see that two additional inherited roles were added to the custom role when you added Cancel Supplier Negotiation to the role.
 
-    ![Security Console - Compare Role](images/image040.png)
+    ![Security Console - Compare Role](images/image039.png)
 
     > Review the Demo Flow for the Audit History Audit REST API
 	
