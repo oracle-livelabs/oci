@@ -82,13 +82,13 @@ Estimated time: 10 minutes
 
 	![EBS homepage, highlighting overall availability and all open alarms](images/4-1-together.png " ")
 
-	In a previous lab you reviewed the **Alarms** tab. The alarms shown on the EBS homepage are a roll-up of all alarms for EBS and its components, including the concurrent manager, notification mailer, etc. This allows you to view all open alarms related to this EBS application without having to navigate to multiple homepages. Here we can see the same alarm you investigated related to the concurrent manager, **EBS Concurrent Manager Down in Last 60 Min DEMO**, as this alarm is rolled up to the application level. 
+	In a previous lab you reviewed the **Alarms** slide-out. The alarms shown on the EBS homepage are a roll-up of all alarms for EBS and its components, including the concurrent manager, notification mailer, etc. This allows you to view all open alarms related to this EBS application without having to navigate to multiple homepages. Here we can see the same alarm you investigated related to the concurrent manager, **EBS Concurrent Manager Down in Last 60 Min DEMO**, as this alarm is rolled up to the application level. 
 
 	![EBS homepage highlighting details of all open alarms of the EBS application](images/4-2-together.png " ")
 
-	Clicking **Charts** provides quick visibility into the health of the EBS application. Let's begin by expanding the chart time displayed from the **Last 60 Minutes** to **Last 24 Hours**.
+	Scrolling down to review **Key metrics** provides quick visibility into the health and performance of the EBS application. Let's begin by expanding the chart time displayed from the **Last 60 Minutes** to **Last 24 Hours**.
 
-	Using the chart **Executed Programs by Running Time** you can easily gain insight into the five longest-running programs. In the screenshot below, we can see the job execution times have remained steady, outside of a small jump. Should you see any long running spikes, an admin can use their domain knowledge to pinpoint a job that is running longer than expected. Again using the screenshot below, the **Completed Requests by Application** chart illustrates how busy a job is to the overall jobs running. The chart **Active User Sessions By Responsibility** in the screenshot below, shows a spike in active user **NULL_KEY** and should be investigated.
+	Using the chart **Executed Programs by Running Time** you can easily gain insight into the five longest-running programs. In the screenshot below, we can see the job execution times have remained steady, outside of one small jump. Should you see any long running spikes, an admin can use their domain knowledge to pinpoint a job that is running longer than expected. Again using the screenshot below, the **Completed Requests by Application** chart illustrates how busy a job is to the overall jobs running.
 
 	![EBS specific performance charts](images/4-3-together.png " ")
 
@@ -136,4 +136,4 @@ For more information and full range of capabilities of the Stack Monitoring solu
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, June 2024
+* **Last Updated By/Date** - Aaron Rimel, Aug 2024
