@@ -103,7 +103,7 @@ Estimated time: 10 minutes
 
 	![EBS Stack View, highlighting technology stack tiers](images/4-4-together.png " ")
 
-	As EBS is a Java application, Stack Monitoring provides visibility into the performance of the WebLogic (WLS) cluster, specifically OACORE, the heart of EBS. Using the chart **JVM Memory Utilization** you can identify if WLS is starved for memory. In the screenshot below, we can see the utilization of both heap and non-heap memory has remained consistent. During that same time using the chart **Thread Pool Threads** we can see a couple drops in the number of idle connections. Reviewing **JDBC Connections** we can see there is no significant change in the number of threads in use and no threads waiting.
+	As EBS is a Java application, Stack Monitoring provides visibility into the performance of the WebLogic (WLS) cluster, specifically **OACORE**, the heart of EBS. Using the chart **JVM Memory Utilization** you can identify if WLS is starved for memory. In the screenshot below, we can see the utilization of both heap and non-heap memory has remained consistent. During that same time using the chart **Thread Pool Threads** we can see a couple drops in the number of idle connections. Reviewing **JDBC Connections** we can see there is no significant change in the number of threads in use and no threads waiting.
 
 	![EBS Stack View, highlighting WebLogic Cluster oacore charts](images/4-5-together.png " ")
 

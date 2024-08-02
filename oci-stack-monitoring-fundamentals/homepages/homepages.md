@@ -39,13 +39,13 @@ Estimated time: 10 minutes
 
 3. Application specific key resource homepages
 
-	From the Concurrent Manager homepage, you can easily review the health and performance of this resource. Each resource in Stack Monitoring has a home page that provides a central place to review status, performance, alarms, configuration and topology. At the top of the page, Stack Monitoring reports the current status, (Up, Down, Not Reporting). The color and shape of the status indicator will update depending on the resource status and type. Should you find a resource in a down state, the homepage will display a large **red** box with the status of **Down**. Stack Monitoring also provides a **Current Status** date and time. For example, if this Concurrent Manager goes down, Stack Monitoring will provide a timestamp of when the status switched from **Down** to **Up**.
+	From the Concurrent Manager homepage, you can easily review the health and performance of this resource. Each resource in Stack Monitoring has a home page that provides a central place to review status, performance, alarms, configuration and topology. At the top of the page, Stack Monitoring reports the current status, (Up, Down, Not Reporting). The color and shape of the status indicator will update depending on the resource status and type. Should you find a resource in a down state, the homepage will display a large **red** box with the status of **Down**. Stack Monitoring also provides a **Current Status** date and time. For example, if this Concurrent Manager goes down, Stack Monitoring will provide a timestamp of when the status switched from **UP** to **Down**.
 
 	If a resource has a child resource, the Related resources widget will report the status of each of the children. In this example, two resources are up, and one resource, Concurrent Processing CPNode does not have a status.
 
-	We can see a count of open alarms by severity 1 Warning and 1 Critical. Clicking an alarm count will open the Alarms slide-out to give you more details including the latest value of the alarm breaching the threshold. We'll cover the **Alarms** slide-out in more detail later.
+	We can see a count of open alarms by severity **1 Warning** and **1 Critical**. Clicking an alarm count will open the Alarms slide-out to give you more details including the latest value of the alarm breaching the threshold. We'll cover the **Alarms** slide-out in more detail later.
 
-	Stack Monitoring also provides quick access to critical metrics, these metrics differ by resource type. Here we can see Completed Concurrent Requests with an Errored state occur at an average rate of .36, and that the Capacity Utilization of Concurrent Managers is 100%. 
+	Stack Monitoring also provides quick access to critical metrics, these metrics differ by resource type. Here we can see **Completed Concurrent Requests** with an Errored state occur at an average rate of .36, and that the Capacity Utilization of Concurrent Managers is 100%. 
 
 
 	![Concurrent Manager homepage, highlighting current status, open alarms, and top metrics](images/1-3-home.png " ")
@@ -54,15 +54,15 @@ Estimated time: 10 minutes
 
 1. Review key metric
 
-	A Concurrent Manager homepage provides a list of key metrics curated for each resource type, for example here the EBS Concurrent Manger. Stack Monitoring provides a large set of metrics out-of-the-box and are collected immediately after the discovery completes. The performance charts by default display the **Last 60 Minutes**. When investigating issues, it helps to review the performance change over a longer period of time. To extend the time frame click the drop-down and choose **Last 24 Hours**. The time period shown can be further adjusted by sliding the time picker throughout the time period shown to dive deeper into a performance problem. In the image below we can see the time period is the 24 hours, however, once we identified the anomaly we further reduced the time period to show only data between 5-6:45PM.
+	A Concurrent Manager homepage provides a list of **Key metrics** curated for each resource type, for example here the EBS Concurrent Manger. Stack Monitoring provides a large set of metrics out-of-the-box and are collected immediately once the discovery completes. The performance charts by default display the **Last 60 Minutes**. When investigating issues, it helps to review the performance change over a longer period of time. To extend the time frame click the drop-down and choose **Last 24 Hours**. The time period shown can be further adjusted by **sliding the time picker throughout the time period** shown to dive deeper into a performance problem. In the image below we can see the time period is the 24 hours, however, once we identified the anomaly we further reduced the time period to show only data between 5-6:45PM.
 
-	Additionally in the chart below we can identify anomalous performance of the Concurrent Requests by Status indicated by the orange dot. We can also see during that time there was a Long Active Concurrent Request. It may be necessary to dive deeper to understand why this request ran longer than expected. Also notice that each chart allows you to view the **Top 5** or **Bottom 5** dimensions. Additionally, since each chart only shows five dimensions, you can click the table icon in each chart to invoke a slide-out to show the most recent values of all dimensions of a metric.
+	Additionally in the chart below we can identify anomalous performance of the **Concurrent Requests by Status** indicated by the orange dot. We can also see during that time there was a **Long Active Concurrent Request**. It may be necessary to investigate further to understand why this request ran longer than expected. Also notice that each chart allows you to view the **Top 5** or **Bottom 5** dimensions. Additionally, since each chart only shows five dimensions, you can click the table icon in each chart to invoke a slide-out to show the most recent values of all dimensions of a metric.
 
-	The key metrics can be reordered to prioritize the metrics that are important to you. To reorder the charts, click **Configure charts**. 
+	The **Key metrics** can be reordered to prioritize the metrics that are important to you. To reorder the charts or hide a chart, click **Configure charts**. 
 
 	![Concurrent Manager key metric charts, highlighting anomalous performance](images/2-1-home.png " ")
 
-	This slide-out allows you to drag and drop the charts in the order you prefer. Here we will move **User With Most Pending Requests** to the top. Click on the row to highlight, then drag to the top. In addition to moving any chart, you can also hide/show charts. Lets un-check **Capacity Utilization of Concurrent Managers**, then click **Apply**.
+	This slide-out allows you to drag and drop the charts in the order you prefer. Here we will move **User With Most Pending Requests** to the top. Click on the row to highlight, then drag to the top. In addition to moving any chart, you can also hide/show charts. Lets un-check **Capacity Utilization of Concurrent Managers**. Once a metric has been unselected, the metric is moved to the left most column to easily identify which charts are not displayed on the home page. With the changes to the charts made, click **Apply**.
 
 	![Configure Key Metric Charts](images/2-2-home.png " ")
 
@@ -72,7 +72,7 @@ Estimated time: 10 minutes
 
 2. Review all metrics
 
-	Stack Monitoring uses **All metrics** to report all dimensions of a metric. Let's navigate to tables to view all of the data points. Select the **Tables** tab. Charts provide a metrics highest utilized metric dimension. **Tables** provide the latest collection value for every dimension of a metric. In this example let's review the **Concurrent Processing Component Status**. Click the **triangle** to expand the row and display the metrics table. Here we see the count all dimensions of the metric Concurrent Processing Component Status. The dimensions include: Scheduled, Running, PendingStandBy, PendingNormal, InactiveOnHold, and InactiveNoManager. 
+	Stack Monitoring uses **All metrics** to report all dimensions of a metric. Let's navigate to **All metrics** to view all of the data points. Select the **All metrics** tab. Key metrics provide either the top 5 or bottom 5 utilized metric dimensions. **All metrics** provide the latest collection value for every dimension of a metric. In this example let's review the **Concurrent Processing Component Status**. Click the **triangle** to expand the row and display the metrics table. Here we see the count all dimensions of the metric Concurrent Processing Component Status. The dimensions include: Scheduled, Running, PendingStandBy, PendingNormal, InactiveOnHold, and InactiveNoManager. 
 
 	Select the **Alarms** link in the left menu.
 

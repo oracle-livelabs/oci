@@ -93,7 +93,7 @@ Estimated time: 10 minutes
 
 	![Metric Extension page, highlighting the host ebs04-a](images/2-9-me.png " ")
 
-	Once you have navigated to the ebs04-a home page, scroll down to view the Metric Extension chart "Memory Use" as in the live example the Metric Extension was renamed.
+	Once you have navigated to the ebs04-a home page, scroll down to view the Metric Extension chart **Memory Use** as in the live example the Metric Extension was renamed.
 
 	![EBS04a home page](images/2-10-me.png " ")
 
@@ -101,7 +101,7 @@ Estimated time: 10 minutes
 
 	![Resource home page, highlighting the Memory Use Metric Extension](images/2-11-me.png " ")
 
-	Alarms can be configured on Metric Extensions using what you have learned in **Lab 5: View and Create Alarms**.
+	Alarms can be configured on Metric Extensions using the namespace **metric_extension_oracle_appmgmt** and applying what you have learned in **Lab 5: View and Create Alarms**.
 	
 	For example, DevOps teams can configure alarms on Metric Extensions to notify users if a threshold has been breached. In this example, an alarm could be created to notify DevOps teams, that a user such as **oracle** is consuming more memory than expected. 
 
