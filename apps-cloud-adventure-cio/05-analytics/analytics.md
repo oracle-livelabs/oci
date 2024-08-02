@@ -157,7 +157,7 @@ In this activity, you will Create analytics across different lines of business t
 
     > (2) Click on the inverted triangle  in the Properties panel and select Bar Chart.
 
-    ![Analytics view 9](images/image0017.png)
+    ![Analytics view 9](images/image017.png)
 
 
 17.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance. 
@@ -166,7 +166,7 @@ In this activity, you will Create analytics across different lines of business t
 
     > (2) Click on the Present button in the brown ribbon.
 
-    ![Analytics view 10](images/image0018.png)
+    ![Analytics view 10](images/image018.png)
 
 
 
@@ -176,8 +176,7 @@ In this activity, you will Create analytics across different lines of business t
 
     > (2) Next, click on the  Play Icon in the top right corner to activate Present Mode. 
 
-    ![Analytics view 11](images/image0019.png)
-
+    ![Analytics view 11](images/image019.png)
 
 19.  Once in Present mode, you can go forward or backward, add notes, filters, etc, to tell your story.
 

@@ -55,9 +55,7 @@ In this activity you’ll learn the different ways to manage user access and to 
 
    > Your administrator will demonstrate for to Find the user (Brian.Bell) and Lock the user from the Actions menu
    
-    ![Audit Events](images/image004.png)
-
-
+   ![Audit events](images/image004.png)
 
 ## Task 3: Extending Privileges to a User
 
