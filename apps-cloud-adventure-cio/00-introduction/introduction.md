@@ -9,14 +9,13 @@ Estimated Adventure Time: 2 hours
 ### **Objectives (DRAFT)**
 
 This Activity Guide will lead you along the way through a set of Adventure Labs, where you will experience the:
-1.	How to easily carry out common application end-user administration tasks
-2.	The power and ease of configuring and extending your Fusion Cloud applications to meet your business requirements
-3.  The capabilities of Fusion Cloud to integrate with various systems and applications
-4.  How to easily create powerful analytics to drive better business insight
+1.	Use Security Console to easily manage user access
+2.	Configure or Extend your Fusion Cloud Applications
+3.  Experience the power of the integration capabilities of Fusion Cloud
+4.  Create powerful analytics for business insight
 
-Adventure awaits, click on the picture, show what you know, and rise to the top of the leader board!!! 
 
-Let's create your team name!
+Let's create your team name for your cloud adventure!
 
 [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
     
