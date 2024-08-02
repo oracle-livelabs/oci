@@ -35,7 +35,7 @@ In this activity, you will Create analytics across different lines of business t
 
     Two attributes that influence Margin are Revenue and Cost. Since revenue seems to be increasing, let's investigate Cost.
 
-    > On the Margin Tile locate the Open Workbook Icon    on the top right corner and click on it.
+    > On the Margin Tile locate the Open Workbook Icon  ![Open Workbook Icon](images/icon001.png)  on the top right corner and click on it.
 
     ![Analytics home](images/image002.png)
 
@@ -46,23 +46,23 @@ In this activity, you will Create analytics across different lines of business t
 
     Instead of building manually, let's use the Auto Insights feature.
 
-    > (1) Click on the Edit Icon  as shown in the image.  <br>
+    > (1) Click on the Edit Icon  ![Edit Icon](images/icon002.png)  as shown in the image.  <br>
 
-    > (2) Click on the Auto Insights Icon  as shown in the image.
+    > (2) Click on the Auto Insights Icon  ![Auto Insights Icon](images/icon003.png)  as shown in the image.
 
     ![Workbook Design Mode](images/image003.png)
 
 
 4.  Next, let’s expand the Auto Insights pane for better observability. 
 
-    > Click on the Expand / Shrink Icon          as shown in the image.
+    > Click on the Expand / Shrink Icon  ![Expand / Shrink Icon ](images/icon004.png)  as shown in the image.
 
     ![Workbook Design Mode](images/image004.png)
 
 
 5.  Auto insights can be tuned to provide information necessary for our analysis, for example, Cost Analysis
 
-    > Click the Settings Icon            as         shown in the image.
+    > Click the Settings Icon  ![Settings Icon](images/icon005.png)  as shown in the image.
 
     ![Auto insights view](images/image005.png)
 
@@ -79,7 +79,7 @@ In this activity, you will Create analytics across different lines of business t
 
 8.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories. 
 
-    > (1) Locate the “Top 10 Expense Categories by Expenses” insight and click the Add        Icon shown in the image. This will add the Insight to the Canvas.  <br>
+    > (1) Locate the “Top 10 Expense Categories by Expenses” insight and click the Add Icon  ![Add Icon ](images/icon006.png)  shown in the image. This will add the Insight to the Canvas.  <br>
 
     > (2) Click on the **x** sign to close the Insights pane.
 
@@ -99,7 +99,7 @@ In this activity, you will Create analytics across different lines of business t
 
     > (1) Expand the HCM Core transactions data set from the Data Panel on the left.  <br>
 
-    > (2) At the bottom of the Page, click the plus     icon to add another Canvas, **Canvas 2**. <br>
+    > (2) At the bottom of the Page, click the plus icon  ![plus icon](images/icon007.png)  to add another Canvas, **Canvas 2**. <br>
 
     > (3) While holding “Shift,” multi-select the Amount and Account columns and drag them onto Canvas 2.
 
@@ -151,11 +151,12 @@ In this activity, you will Create analytics across different lines of business t
 
 
 
+
 16.  Let's change the chart type to understand trends and patterns better. 
 
     > (1) Select the line chart as shown in the Picture.   <br>
 
-    > (2) Click on the inverted triangle  in the Properties panel and select Bar Chart.
+    > (2) Click on the inverted triangle  ![inverted triangle](images/icon008.png)  in the Properties panel and select Bar Chart.
 
     ![Analytics view 9](images/image017.png)
 
@@ -174,7 +175,7 @@ In this activity, you will Create analytics across different lines of business t
 
     > (1) In the Workbook > Canvas Navigation toolbar on the left, click 'Style' and change from 'Bottom Tabs' to 'Navigation Bar'.  <br>
 
-    > (2) Next, click on the  Play Icon in the top right corner to activate Present Mode. 
+    > (2) Next, click on the  Play Icon  ![Play Icon](images/icon009.png)  in the top right corner to activate Present Mode. 
 
     ![Analytics view 11](images/image019.png)
 
