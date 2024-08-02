@@ -84,10 +84,8 @@ In this activity, you will Create analytics across different lines of business t
     ![Auto insights view](images/image006a.png)
 
 
-7.  Placeholder for recommended changes in step 6
 
-
-8.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories. 
+7.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories. 
 
     > (1) Locate the “Top 10 Expense Categories by Expenses” insight and click the Add Icon  ![Add Icon ](images/icon006.png)  shown in the image. This will add the Insight to the Canvas.  <br>
 
@@ -96,7 +94,7 @@ In this activity, you will Create analytics across different lines of business t
     ![Auto insights view](images/image007.png)
 
 
-9.  Now, we can compare margin and cost side by side. 
+8.  Now, we can compare margin and cost side by side. 
 
     Payroll expenses emerge as the highest cost. We will delve deeper into payroll expenses to identify their components. 
 
@@ -105,7 +103,7 @@ In this activity, you will Create analytics across different lines of business t
     ![Analytics view 1](images/image008.png)
 
 
-10.  Combining datasets from multiple “Lines of Business” allows an individual to conduct a deep dive into the actual problems.
+9.  Combining datasets from multiple “Lines of Business” allows an individual to conduct a deep dive into the actual problems.
 
     > (1) Expand the HCM Core transactions data set from the Data Panel on the left.  <br>
 
@@ -122,7 +120,7 @@ In this activity, you will Create analytics across different lines of business t
     ![Analytics view 3](images/image0010.png)
 
 
-11.  We need to perform trend analysis to understand when the expense anomaly started occurring and whether it is consistent across all expense types.
+10.  We need to perform trend analysis to understand when the expense anomaly started occurring and whether it is consistent across all expense types.
 
     > Drag the **Accounts** column from the Categories section into the Color section.
 
@@ -132,7 +130,7 @@ In this activity, you will Create analytics across different lines of business t
 
     ![Analytics view 5](images/image012.png)
 
-12.  We can now see expense amounts displayed across time and expense categories.
+11.  We can now see expense amounts displayed across time and expense categories.
 
     On analyzing the trend, it appears that while Base Salary and Wages have remained constant, overtime and contract labor have increased since May.
 
@@ -140,7 +138,7 @@ In this activity, you will Create analytics across different lines of business t
 
     ![Month by Month View](images/image013.png)
 
-13. Overtime and Contract labor are typically associated with Turnover. Let's see if it had any impact.
+12. Overtime and Contract labor are typically associated with Turnover. Let's see if it had any impact.
 
     > (1) Expand the Fiscal Date folder in the Data Panel to locate the **Month** and **Turnover** columns.   <br>
 
@@ -149,20 +147,20 @@ In this activity, you will Create analytics across different lines of business t
     ![Analytics view 6](images/image0014.png)
 
 
-14.  Another factor that impacts Overtime and Contract labor is employee absences. 
+13.  Another factor that impacts Overtime and Contract labor is employee absences. 
 
     > Drag the **Absences** column from the data panel and drop it in the values section below the **Turnover** column.
 
     ![Analytics view 6](images/image015.png)
 
-15.  This brings all relevant columns onto the canvas. We can now co-relate several attributes and arrive at the correct conclusion. 
+14.  This brings all relevant columns onto the canvas. We can now co-relate several attributes and arrive at the correct conclusion. 
 
     ![Analytics view 8](images/image016.png)
 
 
 
 
-16.  Let's change the chart type to understand trends and patterns better. 
+15.  Let's change the chart type to understand trends and patterns better. 
 
     > (1) Select the line chart as shown in the Picture.   <br>
 
@@ -171,7 +169,7 @@ In this activity, you will Create analytics across different lines of business t
     ![Analytics view 9](images/image017.png)
 
 
-17.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance. 
+16.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance. 
 
     > (1) Now that we have understood the root cause of the margin decline let's share our findings with others.  <br>
 
@@ -181,7 +179,7 @@ In this activity, you will Create analytics across different lines of business t
 
 
 
-18.  Oracle Analytics provides the ability to share your findings and content in a PowerPoint presentation mode.
+17.  Oracle Analytics provides the ability to share your findings and content in a PowerPoint presentation mode.
 
     > (1) In the Workbook > Canvas Navigation toolbar on the left, click 'Style' and change from 'Bottom Tabs' to 'Navigation Bar'.  <br>
 
@@ -189,14 +187,14 @@ In this activity, you will Create analytics across different lines of business t
 
     ![Analytics view 11](images/image019.png)
 
-19.  Once in Present mode, you can go forward or backward, add notes, filters, etc, to tell your story.
+18.  Once in Present mode, you can go forward or backward, add notes, filters, etc, to tell your story.
 
     ![Analytics view 12](images/image020.png)
 
 
 
 
-20. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+19. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:16) 
 
