@@ -78,7 +78,7 @@ Estimated time: 10 minutes
 
 ## Task 4: Review the process of relating a load balancer to a WebLogic cluster to complete the topology.
 
-1. To complete the E-Business Suite application's topology, select **Topology**, then select **Add association**.
+1. To complete the E-Business Suite application's topology, select **Topology**, then select **Add association**. Note: These relationships already exist, click Cancel in lieu of "Add resources" in the slide-out.
 
 	![Load balancer home page, highlighting the Import resources page and Import resources button](images/4-1-import.png " ")
 
@@ -94,7 +94,7 @@ Estimated time: 10 minutes
 
 	![Load balancer topology page, highlighting the used by relationship with the WebLogic cluster](images/4-3-import.png " ")
 
-	If you so choose, using what you have learned in this lab on how to navigate Stack Monitoring, if you review the topology of **EBS04a**, you can now see the load balancer that the WebLogic cluster uses within the overall topology.
+	If you so choose, using what you have learned in this lab on how to navigate within Stack Monitoring, if you review the topology of **EBS04a**, you can now see the load balancer that the WebLogic oafm cluster uses within the overall topology.
 
 	![EBS home page, highlighting the topology that includes the load balancer we imported and the relationship we created](images/4-4-import.png " ")
 
@@ -110,4 +110,4 @@ For more information on importing OCI Services, see **[Importing OCI Services](h
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, June 2024
+* **Last Updated By/Date** - Aaron Rimel, Aug 2024
