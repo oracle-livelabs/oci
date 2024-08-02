@@ -1,0 +1,43 @@
+{
+    "workshoptitle": "Secure SSH to OCI Bastion Host",
+    "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
+                "sample.json":"../../data-load/files/sample.json",
+                "step2.md":"../../data-load/files/step2.md"},
+    "variables": ["../../variables/variables.json",
+                 "../../variables/variables-in-another-file.json"],
+    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction to the workshop.",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "Get STarted using Oracle Cloud Infrastructure",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Generate SSH Keys",
+            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+            "filename": "../../generate-ssh/generate-ssh.md"
+        },
+        {
+            "title": "Lab 2: Create Virtual Cloud Network",
+            "filename": "../../vcn/vcn.md"
+        },
+        {
+            "title": "Lab 3: Create Compute Instances",
+            "filename": "../../compute/compute.md"
+        },
+        {
+            "title": "Lab 4: Access instance through SSH",
+            "filename": "../../bastion-ssh/bastion-ssh.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
