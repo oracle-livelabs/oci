@@ -77,7 +77,7 @@ In this activity, you will Create analytics across different lines of business t
 
     > (1) Expand **Medium Size Attributes**  <br>
     
-    > (2) Unselect **Department **  <br>
+    > (2) Unselect **Department**  <br>
 
     > (3) Select **Expense**
 
