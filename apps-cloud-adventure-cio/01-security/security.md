@@ -128,7 +128,7 @@ In this activity you’ll learn the different ways to manage user access and to 
 
     We start by giving our copied role a unique name.
 
-    > (1) User **your initials** to update the prefix of the role name and role code as shown. <br>
+    > (1) Add **your initials** to the end of the role name and role code as shown. <br>
 
     > (2) Press the **Next** button
 
