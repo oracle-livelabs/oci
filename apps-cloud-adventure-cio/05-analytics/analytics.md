@@ -69,9 +69,19 @@ In this activity, you will Create analytics across different lines of business t
 
 6.  On the Settings tab, we will choose the attributes that are important to the analysis, which is cost-related information. 
 
-    ***Sohel, I recommend breaking this up into 2 slides due to Visual Studio Code formatting with bulleting inside click tracks**
+    > (1) Expand **Measure**  <br>
+    
+    > (2) Unselect **Margin** and **Revenue**, then Select **Expense**
 
     ![Auto insights view](images/image006.png)
+
+    > (1) Expand **Medium Size Attributes**  <br>
+    
+    > (2) Unselect **Department **  <br>
+
+    > (3) Select **Expense**
+
+    ![Auto insights view](images/image006a.png)
 
 
 7.  Placeholder for recommended changes in step 6
