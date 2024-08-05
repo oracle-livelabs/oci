@@ -48,7 +48,7 @@ In this lab, you will:
 
 5. We'll name our new Extension.
 
-    > (1) **Enter** **‘QuickSupplier#’** in the "'Extension Name'" field.<br>
+    > (1) **Enter** **‘QuickSupplier’** in the "'Extension Name'" field.<br>
 
     > (2) **Click** the **‘Create’** button
 
@@ -119,14 +119,17 @@ In this lab, you will:
 
     > (2) Type **Panel** in the **‘filter’** field. <br>
 
-    > (3) Drag **Panel** to first blue section (4) of the page as shown.
+    > (3) Drag **Panel** to first blue section. <br> 
+    
+    > (4) of the page as shown.
 
     ![create supplier service](images/image115.png)
 
 16. We’ll now add a Table component to our new Panel.
 
     > (1) Type **Table** in the **‘filter’** field. <br>
-    > (2) Drag **Table** to first blue section (3) of the page as shown.
+    > (2) Drag **Table** to first blue section. <br> 
+    > (3) of the page as shown.
 
     ![add supplier service to screen](images/image116.png)
 
@@ -270,7 +273,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 3. 
 
-    > Click your **Checklist Template name** (e.g. **CA_##_HCM_GJ**) to open the checklist.
+    > Click your **Checklist Template name** (e.g. **CA 99 HCM GJ**) to open the checklist.
 
     ![Open Checklist Template](images/image203.png)  
 <br>
@@ -284,7 +287,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 5. You don’t have any tasks yet, so you can create one.  The task is where you will define the connection to the external LLM.
 
-    > (1) Click the **+** icon.
+    > (1) Click the **+** icon. <br>
     > (2) Click **Create Task** from the resulting popup.  
 
     ![Create Task](images/image205.png)  
@@ -294,7 +297,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 > (1) Enter **Compensation Benchmarking** in the **Name** field. <br>
    > (2) Select **User Defined Content** from the **Task Type** dropdown.<br>
-   > (3) Select **HCM_GJ_GenAI_OCILlama3_Endpoint** from the **Configuration** dropdown. <br>
+   > (3) Select **HCM GJ GenAI OCILlama3 Endpoint** from the **Configuration** dropdown. <br>
    > (4) Click the **Save and Close** button.
 
    ![Enter Task Info](images/image206.png)  
@@ -310,8 +313,10 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 8. The next step is the configuration the Compensation Info UI to leverage your Guided Journey. To do that, you can head back to the home page.
 
    > (1) Click on the **Home** icon on the top icon bar.
-    ![Enter Task Info](images/image208.png)  
-<br>
+   
+   ![Enter Task Info](images/image208.png)  
+    
+
 
 9. You can configure the Compensation Info page directly from within the application.
 
@@ -348,7 +353,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 13. You’re now in Visual Builder – Express Mode.  This allows you to easily configure application screens.  In this scenario, you’ll be referencing the Guided Journey/Task that you created earlier.
 
    > (1) Enter **Salary** in the **Page Properties Filter** field on the right.  This will narrow the list of Page Properties available. <br>    
-   > (2) Enter **CA_##_CM_GJ** in the **CompensationInfoSalaryGuidedJourneyCode** field and press the **Enter** key.  Be careful to enter this into the correct field as there are several similar fields available.  If you searched as described in Step 1, it’s likely the 1st field listed below the filter.
+   > (2) Enter **CA 99 CM GJ** in the **CompensationInfoSalaryGuidedJourneyCode** field and press the **Enter** key.  Be careful to enter this into the correct field as there are several similar fields available.  If you searched as described in Step 1, it’s likely the 1st field listed below the filter.
 
    ![Create Task](images/image213.png)  
 <br>
