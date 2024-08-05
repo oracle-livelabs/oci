@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In these activities, you will learn how to 1) build a new simplified user interface for specific user populations and (2) easily extend for Fusion SaaS application to include external content to guide users to better decisions.
+In these activities, you will learn how to (1) build a new simplified user interface for specific user populations and (2) easily extend for Fusion SaaS application to include external content to guide users to better decisions.
 
 Estimated Time: 15 minutes
 

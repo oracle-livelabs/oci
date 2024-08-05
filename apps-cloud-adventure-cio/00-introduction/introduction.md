@@ -6,7 +6,7 @@ Are you a SaaS Application Administrator or Analyst? Are you tasked with setting
 
 Estimated Adventure Time: 2 hours
 
-### **Objectives (DRAFT)**
+### **Objectives**
 
 This Activity Guide will lead you along the way through a set of Adventure Labs, where you will experience the:
 1.	Use Security Console to easily manage user access
