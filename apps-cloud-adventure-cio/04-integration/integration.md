@@ -10,6 +10,8 @@ We've designed this journey to be interactive and engaging. Make sure to answer 
 
 With your adventure hat on and a curious mind, prepare for an exhilarating exploration of Fusion Cloud's REST API integration features. Let's embark on this thrilling journey together!
 
+As you follow along, do not forget to ask questions if you get stuck and answer the Adventure Check Point questions! 
+
 
 Estimated Time: 15 minutes
 
@@ -28,6 +30,14 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
     > Navigate to your Oracle Cloud ERP Demo Environment Instance and sign in with the Username and Password provided
 
     ![Application login page](images/image001.png)
+
+    ![Stop](images/stop.png)
+
+    **Notice the Hybrid Login capabilities.** 
+
+    **Today, we will be logging in with username and password, but most customers elect to use SSO. You can also have hybrid setup.**
+
+
 
 2. Let’s navigate to the Suppliers work area to modify a supplier’s address information
 
@@ -120,6 +130,12 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Integrations View](images/image018.png)
 
+    ![Stop](images/STOP.png)
+
+    **This is an example of a configuration. This tile links out to an external website.**
+
+    **Take note of the detailed documentation. API endpoints, parameters, code examples, use cases, Oracle’s documentation is public and designed to be very useful.**
+
 
 9. Let’s review the REST API endpoints that we can use to review Auditable data that can be extracted from Fusion Cloud.
 
@@ -148,6 +164,12 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
     > In the Integration tab: Click on the **API Integration** tile 
 
     ![Integration Tab](images/image024.png)
+
+    ![Stop](images/STOP.png)
+
+    **This is another example of a configuration. This tile links out to an external application we’ve designed using Oracle APEX.**
+
+    **This API integration Application is designed to simulate any 3rd party application you might be integrating with.**
 
 
 
@@ -237,6 +259,12 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
     > Review a sample of the Audit History Audit REST API, including the endpoint, method, and sample response.
 
     ![API Details](images/image043.png)
+
+    ![Stop](images/STOP.png)
+
+    **Take a second to congratulate yourself. You’ve successfully used the included Fusion Integration toolset, specifically APIs, to get data out of Oracle Cloud and into a 3rd party system.**
+
+    **You can leverage vast, out of the box functionality to manage integrations without vendor assistance. Oracle Fusion Cloud Applications integrate and interoperate with other cloud and on-premises applications using built-in File-based Loader, Spreadsheet Loader, SOAP- and REST-based Web Services, and Data Extract features.**
 	
 
 15. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
