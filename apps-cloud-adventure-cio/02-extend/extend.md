@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In these activities, you will learn how to (1) easily extend for Fusion SaaS application to include external content to guide users to better decisions and (2) build a new simplified user interface for specific user populations
+In these activities, you will learn how to 1) build a new simplified user interface for specific user populations and (2) easily extend for Fusion SaaS application to include external content to guide users to better decisions.
 
 Estimated Time: 15 minutes
 
@@ -14,61 +14,29 @@ In this lab, you will:
 * Use the embedded Visual Builder capabilities to build a new, simplified Supplier Screen.
 
 
-## Task 1: Guided Journeys with User Defined Content (WORK IN PROGRESS)
 
-
-1. To see how you can create Guided Journeys to provide additional information, including external information, to your users..
-
-    > Go to **Home Page**, then click on top right corner before the bell icon
-
-    ![Home Page](images/image001.png)
-
-2. Here’s where you can visualize all the Watchlist items based on your role. The list shows all the saved searches like unapproved journals, journals requiring attention etc	
-
-    > Click on **‘Cloud Adventure JE Link’**
-
-    ![watchlist items](images/image031.png)
-
-3. Here you can see the Accrual Journal to review
-
-    > Click on the journal link ‘**XX CA-1121-ACCRUAL-01 Accrual’** to review the journal
-
-    ![journal view](images/image004.png)  
-
-4. This opens the journal that was posted for rent accrual. Notice the Attachment which is the audit backup for the accrual. 
-   
-    > **Click** on the attachments **‘Accrual JE Support Nvov-21’**.
-    **Click** on the file downloaded to the PC if it doesn’t open automatically
-
-    ![open journal](images/image005.png)  
-
-5. Here you can view the backup for the accrual and the associated calculation. This is important and will remain as an attachment to the journal for any future audit.
-
-    ![view backup](images/image006.png)  
-
-
-## Task 2: Create a simplified user interface using Redwood Design Patterns and Oracle Visual Builder.
+## Task 1: Create a simplified user interface using Redwood Design Patterns and Oracle Visual Builder.
 
 
 1. We will now create a new application screen to allow editing of specific supplier information.  Oracle Cloud Applications include an embedded tool called Visual Builder.  Visual Builder is the same tool that Oracle uses to develop application screens and it's available for you to create additional screens.  These screens can leverage both Oracle Cloud Application data and, if necessary, data from external systems.
 
-    > (1) **Click** on the **‘Configuration’** tab <br>
+    > (1) **Click** on the **‘Configuration’** tab 
 
-    > (2) **Click** on the **‘Visual Builder’** tab
+    > (2) **Click** on the **‘Visual Builder’** tile
 
-    ![Open Visual Builder](images/image001.png)
+    ![Open Visual Builder](images/image101.png)
 
 2. We have pre-defined a Project.  A project collects all the people, tools, and processes you need to complete a unit of work.  You can use a project to host source code files, track issues, collaborate on code, and build and deploy your applications. If your team is extending Oracle Cloud Applications, you’ll probably want to set things up so that you have a single project dedicated to work with a single repository for each Application. 
 
     > **Click** on the **‘SupplierModelExtension’** project
 
-    ![open project](images/image002.png)
+    ![open project](images/image102.png)
 
 3. Workspaces allow you to segregate units of work within a Project.
 
     > **Click** on the **‘Go to Workspaces’** button
 
-    ![workspace](images/image003.png)
+    ![workspace](images/image103.png)
 
 4. We'll create a new workspace for our simplified supplier screen
 
@@ -76,7 +44,7 @@ In this lab, you will:
 
     > (2) **Select** **‘New Application Extension’** from the resulting dropdown
 
-    ![workspace](images/image004.png)
+    ![workspace](images/image104.png)
 
 5. We'll name our new Extension.
 
@@ -84,31 +52,31 @@ In this lab, you will:
 
     > (2) **Click** the **‘Create’** button
 
-    ![create extension](images/image005.png)
+    ![create extension](images/image105.png)
 
 6. We're now at the Visual Builder homepage.  We can configure existing screens, create new ones, or build whole new applications.  We can also leverage REST APIs to access Fusion SaaS Data.  Supplier data from Oracle ERP/SCM Cloud, so we'll leverage the embedded integration via REST APIs.
 
     > (1) **Click** the **‘Services’** icon on the left menu.
 
-    ![add UI Screen](images/image006.png)
+    ![add UI Screen](images/image106.png)
 
 7. We can add services from Oracle Cloud Applications or other accessible data sources.
 
     > (1) **Click** on the **‘+ Service Connection’** button.
 
-    ![create UI](images/image007.png)
+    ![create UI](images/image107.png)
 
 8. There are multiple ways to reference a service.  We'll use the included catalog of Oracle Cloud Application services.
 
     > **Click** on the **‘Select from Catalog’** tile.
 
-    ![view default screen template](images/image008.png)
+    ![view default screen template](images/image108.png)
 
 9. Services are available for functionality across the Oracle Cloud Applications.
 
     > **Click** on the **‘‘Enterprise Resource Planning and Supply Chain’** tile.
 
-    ![manage services](images/image009.png)
+    ![manage services](images/image109.png)
 
 10. We'll use the Supplier Service from the ERP/SCM Catalog. 
 
@@ -117,19 +85,19 @@ In this lab, you will:
     > (3) Click the ‘Checkbox’ next to ‘Suppliers’. <br>
     > (4) Click the ‘Create’ button. <br>
 
-    ![create service connect](images/image010.png)
+    ![create service connect](images/image110.png)
 
 11. The resulting screen shows additional configuration options for our supplier service, but we'll just use the default settings.  Now we want to start creating our new screen.  
 
     > **Click** on the **‘App UIs’** icon in the left toolbar
 
-    ![select from catalog](images/image011.png)
+    ![select from catalog](images/image111.png)
 
 12. We're now at the Visual Builder APP UI Screen.  We can configure existing screens, create new ones, or build whole new applications.  We want to create a new UI screen.
 
     > **Click** on the **‘+ App UI’** button.
 
-    ![select ERP/SCM](images/image012.png)
+    ![select ERP/SCM](images/image112.png)
 
 13. 
 
@@ -137,13 +105,13 @@ In this lab, you will:
 
     > (2) **Click** the **‘Create’** button.
 
-    ![get supplier service](images/image013.png)
+    ![get supplier service](images/image113.png)
 
 14. Visual Builder has automatically created a default UI leveraging the Oracle provided Redwood template.  Redwood is Oracle's design methodology and pre-defined templates, and design patterns are included in Visual Builder to allow you to create applications that look and function just like Oracle delivered applications.
 
     > **Double-Click** the **‘main-start’** object.
 
-    ![create supplier service](images/image014.png)
+    ![create supplier service](images/image114.png)
 
 15. Here we see our blank template and a list of some of the provided Redwood design components.  We want to start by adding some components to the screen to hold our data.  We’ll first add a Panel component.
 
@@ -153,14 +121,14 @@ In this lab, you will:
 
     > (3) Drag **Panel** to first blue section (4) of the page as shown.
 
-    ![create supplier service](images/image015.png)
+    ![create supplier service](images/image115.png)
 
 16. We’ll now add a Table component to our new Panel.
 
     > (1) Type **Table** in the **‘filter’** field. <br>
     > (2) Drag **Table** to first blue section (3) of the page as shown.
 
-    ![add supplier service to screen](images/image016.png)
+    ![add supplier service to screen](images/image116.png)
 
 17. We now have a table to hold our data. Next, we’ll add the Supplier data from our REST API. We can use the Quick Start feature to help with this task.
 
@@ -168,7 +136,7 @@ In this lab, you will:
 
     > (2) You should now see the Table Properties region appear on the right.
 
-    ![table layout](images/image017.png)
+    ![table layout](images/image117.png)
 
 18. The Quick Start features simply common tasks.We can use the Add Data Quick Start feature to show data from our Supplier REST API.
 
@@ -176,7 +144,7 @@ In this lab, you will:
 
     > (2) Click the **'Add Data'** tile.
 
-    ![select supplier fields](images/image018.png)
+    ![select supplier fields](images/image118.png)
 
 19. We can see the various Supplier related data available from the Supplier REST API.  We’ll just use the Suppliers data for this scenario.
 
@@ -186,7 +154,7 @@ In this lab, you will:
 
     > (3) Click the **Next** button.
 
-    ![finish supplier fields](images/image019.png)
+    ![finish supplier fields](images/image119.png)
 
 20. We’ll select a few fields to display on our new screen.  We want to use this to allow for quick update of a few pieces of Supplier Data, including Taxpayer ID, Alternate Name and Alias.  We’ll select those fields in additional to Supplier and Supplier Number..
 
@@ -201,7 +169,7 @@ In this lab, you will:
 
     > (3) Click the **Next** button.
 
-    ![widen screen handle](images/image020.png)
+    ![widen screen handle](images/image120.png)
 
 21. We can optionally add additional filter criteria.
 
@@ -209,7 +177,7 @@ In this lab, you will:
 
     > (2) Click the **Finish** button.
 
-    ![widen screen](images/image021.png)
+    ![widen screen](images/image121.png)
 
 22. Notice that the screen auto-queried Supplier Information.  We can easily move between Design, Live and Code views of our application.  But next, we want the ability to edit data.  So, we’ll use the Quick Start again to add an edit page.  
 
@@ -217,7 +185,7 @@ In this lab, you will:
 
     > (2) Click the **Add Edit Page" tile.
 
-    ![edit page quick start](images/image022.png)
+    ![edit page quick start](images/image122.png)
 
 23. We can select the same or different fields for out Edit Page.  We’ll just select the same list..
 
@@ -232,20 +200,20 @@ In this lab, you will:
 
     > (3) Click the **Finish** button.
 
-    ![edit page quick start](images/image023.png)
+    ![edit page quick start](images/image123.png)
 
 24. Now that we've created our screen, we can test it.
 
     > Click the **Preview** icon on the top right of the screen.
 
-    ![select edit page fields](images/image024.png)
+    ![select edit page fields](images/image124.png)
 
 25. A new browser tab is launched showing our completed application.  We now have a fully functioning screen that supports query and update capabilities.
 
     > (1) Select a **Supplier** to highlight a row. <br>    
     > (2) Click the **Edit Supplier** button.   
 
-    ![finish edit page fields](images/image025.png)
+    ![finish edit page fields](images/image125.png)
 
 26. We'll update and save a field.  Out new screen leverages the security and business rules of the application via the standard REST API. .
 
@@ -253,33 +221,183 @@ In this lab, you will:
     > (2) Click the **Save** button.   
 
 
-    ![preview](images/image026.png)
+    ![preview](images/image126.png)
 
 
 27. Our Supplier record update is now saved.
 
     > Note the message that the supplier record was successfully updated.
 
-    ![selected supplier for edit](images/image027.png)	
-
-
-28. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-    
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:13) 
-
-
-## Summary (MISSING)
-
-**You have successfully completed the Activity!**
-
+    ![selected supplier for edit](images/image127.png)	
  
-## Learn More (Are we adding this to live labs?)
+## Task 2: Guided Journeys with User Defined Content
+
+
+The best organizations share common traits such as experience, dedication, teamwork, trust, and a desire for personal and team excellence. The competitive nature of F1 Racing makes it imperative that we continue to build and maintain the best teams. One key component is to ensure that our compensation matches or exceeds the competition, thus allowing us to continue to put forth the best crew in the business.
+
+To help meet this goal, Team Leadership wants to augment our existing compensation benchmarking information by leveraging data generated by 3rd party Generative AI models. But we need to do this efficiently. We don’t want separate reports, databases and tools. Instead, we want this information available to the appropriate staff during compensation planning and Compensation Info reviews.
+
+The great news is that you know Oracle Fusion HCM Cloud is built for this. By leveraging features such as HCM Guided Journey Tasks and User Defined Content, we can quickly and efficiently enable the Compensation Info Review process to access 3rd party Generative AI capabilities in real time.
+
+Guided Journeys allow you to configure business processes to support user tasks by providing guidance, such as additional information, tutorials, company policies, best practices and more. The User Defined Content feature of a Guided Journey Task User defined content allows users to define guided journey tasks and connect to a user defined REST API. The user defined REST API can internally retrieve data from an external source and any of the existing Gen AI LLM models or other content providers based on the context information passed from the calling user interface.
+
+As the Oracle SaaS Business Process and Configuration expert for your organization, you’re up to the task.
+
+Objectives
+In this activity you will use HCM Guided Journey Task with User Defined Content and Visual Builder Studio to <br>
+&emsp;  • Configure HCM Checklist Template with a Guided Journey Task with User Defined Content <br>
+&emsp;  • Link the Guided Journey Task with User Defined Content with a pre-configured Generative AI endpoint <br>
+&emsp;  • Configure HCM Compensation Info Page to include the configured Checklist Template <br>
+&emsp;  • Preview your changes <br>
+
+As you follow along, do not forget to answer the Adventure Check Point questions! 
+
+1. The first step to creating our Guided Gourney is to setup a Checklist Template, which defines the tasks related to our Guided Journey.
+
+    > (1) Enter **Checklist Templates** in the search field at the top of the home page.  <br>    
+    > (2) Select **Checklist Templates** from the resulting dropdown search results.  
+
+    ![Checklist Template](images/image201.png)
+<br>
+
+2. The first step is to configure a Checklist Template to include the Guided Journey Task. We’ve already setup Checklist Templates for each Cloud Adventure User, so you'll start by searching for your specific template.
+
+    > (1) Enter **CABCHCMGJ** in the **search** field, where ## is your assigned user number.
+    > (2) Click the **Magnifying Glass** icon or press the **Enter** key to execute the search.
+
+    ![View Checklist](images/image202.png)  
+<br>
+
+3. 
+
+    > Click your **Checklist Template name** (e.g. **CA_##_HCM_GJ**) to open the checklist.
+
+    ![Open Checklist Template](images/image203.png)  
+<br>
+
+4. You can see the general information for your Checklist.  You’re now ready to add a Task. 
+   
+    > **Click** on the **Tasks** tab.
+  
+    ![View Checklist](images/image204.png)  
+<br>
+
+5. You don’t have any tasks yet, so you can create one.  The task is where you will define the connection to the external LLM.
+
+    > (1) Click the **+** icon.
+    > (2) Click **Create Task** from the resulting popup.  
+
+    ![Create Task](images/image205.png)  
+<br>
+
+6. You can now define your new task and leverage the task type User Defined Content. This will allow you to reference the REST Integration that was discussed at the beginning of the adventure.  It will link to a pre-configured Generative AI (Llama3) LLM endpoint.
+
+> (1) Enter **Compensation Benchmarking** in the **Name** field. <br>
+   > (2) Select **User Defined Content** from the **Task Type** dropdown.<br>
+   > (3) Select **HCM_GJ_GenAI_OCILlama3_Endpoint** from the **Configuration** dropdown. <br>
+   > (4) Click the **Save and Close** button.
+
+   ![Enter Task Info](images/image206.png)  
+<br>
+
+7. You have successfully configured a new Guided Journey Task with User Defined Content. Now you are ready to include this new change to the Compensation Info UI.
+
+   > Click on **Save and Close** button again to finalize our Task setup.
+
+  ![Enter Task Info](images/image207.png)  
+<br>
+
+8. The next step is the configuration the Compensation Info UI to leverage your Guided Journey. To do that, you can head back to the home page.
+
+   > (1) Click on the **Home** icon on the top icon bar.
+    ![Enter Task Info](images/image208.png)  
+<br>
+
+9. You can configure the Compensation Info page directly from within the application.
+
+   > (1) Enter **Compensation Info** into the **search** field at the top of the page. <br>    
+   > (2) Select **Compensation Info** from the resulting **dropdown** list.
+
+   ![Create Task](images/image209.png)  
+<br>
+
+10. There are no matching workers, so you can unselect Direct reports to broaden our search.
+
+   > (1) Click the **X** next to Direct Reports under the search field.
+
+   ![Enter Task Info](images/image210.png)  
+<br>
+
+11. You can search for a worker and make the configuration directly from their Compensation Info page.  Note that even though you’re searching for a specific user, this will be a system-wide configuration.
+
+   > (1) Enter **Emily Heather** in the **Search** field. <br>    
+   > (2) Select **Emily Heather** from the resulting **dropdown** list. 
+
+   ![Create Task](images/image211.png)  
+<br>
+
+12. You will now use the embedded Visual Builder Studio tool to configure this page. The configuration will allow you to reference your previously defined Guided Journey and Task. Visual Builder is the tool that Oracle uses to develop Fusion Cloud Application screens.  Customers can use these same tools to perform configurations or, as we saw in other adventures, create new screens using the same look and feel as the delivered applications.
+
+
+   > (1) Click the **User Photo/User ID icon** on the top right corner of the screen. <br>    
+   > (2) Select **Edit Page in Visual Builder Studio** from the resulting dropdown list.
+
+   ![Create Task](images/image212.png)  
+<br>
+
+13. You’re now in Visual Builder – Express Mode.  This allows you to easily configure application screens.  In this scenario, you’ll be referencing the Guided Journey/Task that you created earlier.
+
+   > (1) Enter **Salary** in the **Page Properties Filter** field on the right.  This will narrow the list of Page Properties available. <br>    
+   > (2) Enter **CA_##_CM_GJ** in the **CompensationInfoSalaryGuidedJourneyCode** field and press the **Enter** key.  Be careful to enter this into the correct field as there are several similar fields available.  If you searched as described in Step 1, it’s likely the 1st field listed below the filter.
+
+   ![Create Task](images/image213.png)  
+<br>
+
+14. You will now see the Compensation Benchmarking link available on the screen.  If you recall, Compensation Benchmarking as the name of the Task we defined earlier and is your link to the User Defined Configuration call to the LLM.
+
+   > (1) Confirm that the **Compensation Benchmarking** link is now visible. <br>    
+   > (2) Click the **Preview** icon in the top right of the screen.
+
+   ![Create Task](images/image214.png)  
+<br>
+
+15. The Preview should open in a new browser tab.  You can now see our screen in Preview Mode.  It shows the standard screen layout, but also includes your Guided Journey configuration.  Please note that these configurations are automatically maintained during the Oracle Release Update process.  These are not Customizations.
+
+   > (1) Click the **Compensation Benchmarking** link. 
+
+   ![Create Task](images/image215.png)  
+<br>
+
+16. The Guided Journey Task has called your User Defined Content integration.  As discussed in the introduction to this adventure, it calls Oracle Integration to gather additional prompt information, such as Position and New York, prior to our Generative AI call to the external LLM.  The results are then formatted and displayed as shown.
+
+   > (1) When finished reviewing the result, you can close your browser tabs and exit the Oracle Cloud Application UI.
+
+   ![Create Task](images/image216.png)  
+
+17. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+
+    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:10) 
+
+## Summary
+
+The two tasks of this Extension adventure introduced you to a few of the capabilities that customers can leverage to extend Oracle Fusion SaaS applications.  These features allow you to fine tune your Oracle Fusion Cloud Applications for peak performance, business processes tailored to you requirements, and fast, efficient usage.
+
+You learned how to extend the applications using Oracle Visual Builder Studio to create new screens that leverage both Oracle and non-Oracle data. You also learned how to setup and defined a Guided Journey, which provies your users with the real-time, inline guidance and information required to complete their tasks.  
+
+You also learned how to leverage 3rd party Generative AI capabilities by leveraging external LLMs directly from the Guided Journey feature of Oracle Fusion Cloud Applications.  
+
+So, check your with you team, double-check your racing harness and get ready for our next Adventure.
+
+
+## Learn More
 
 
 * [Oracle Documentation](http://docs.oracle.com)
 * [Extending Oracle Cloud Applications with Visual Builder Studio](https://docs.oracle.com/en/cloud/paas/visual-builder/visualbuilder-building-appui)
+* [Overview of Guided Journeys](https://docs.oracle.com/en/cloud/saas/human-resources/24c/faijh/overview-of-guided-journeys.html)
+* [Configure User Defined Content Task Type for a Journey](https://docs.oracle.com/en/cloud/saas/human-resources/24c/faijh/configure-user-defined-content-task-type-for-a-journey.html)
 
 ## Acknowledgements
-* **Author** - Charlie Moff, Distinguished Sales Consultant, Advanced Technology Services, Stephen Chung, Principal Sales Consultant, Advanced Technology Services
-* **Contributors** -  
-* **Last Updated By/Date** - Charlie Moff, August 2024
+* **Author** - Charlie Moff, Distinguished Sales Consultant, Advanced Technology Services; Stephen Chung, Principal SaaS Cloud Technologist, Advanced Technology Services
+* **Contributors** - Sajid Saleem, Master Principal SaaS Cloud Technologist, Advanced Technology Services  
+* **Last Updated By/Date** Charlie Moff August 2024
