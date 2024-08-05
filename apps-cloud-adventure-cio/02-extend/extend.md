@@ -20,7 +20,7 @@ In this lab, you will:
 
 1. We will now create a new application screen to allow editing of specific supplier information.  Oracle Cloud Applications include an embedded tool called Visual Builder.  Visual Builder is the same tool that Oracle uses to develop application screens and it's available for you to create additional screens.  These screens can leverage both Oracle Cloud Application data and, if necessary, data from external systems.
 
-    > (1) **Click** on the **‘Configuration’** tab 
+    > (1) **Click** on the **‘Configuration’** tab <br>
 
     > (2) **Click** on the **‘Visual Builder’** tile
 
@@ -56,13 +56,13 @@ In this lab, you will:
 
 6. We're now at the Visual Builder homepage.  We can configure existing screens, create new ones, or build whole new applications.  We can also leverage REST APIs to access Fusion SaaS Data.  Supplier data from Oracle ERP/SCM Cloud, so we'll leverage the embedded integration via REST APIs.
 
-    > (1) **Click** the **‘Services’** icon on the left menu.
+    > **Click** the **‘Services’** icon on the left menu.
 
     ![add UI Screen](images/image106.png)
 
 7. We can add services from Oracle Cloud Applications or other accessible data sources.
 
-    > (1) **Click** on the **‘+ Service Connection’** button.
+    > **Click** on the **‘+ Service Connection’** button.
 
     ![create UI](images/image107.png)
 
@@ -265,7 +265,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 2. The first step is to configure a Checklist Template to include the Guided Journey Task. We’ve already setup Checklist Templates for each Cloud Adventure User, so you'll start by searching for your specific template.
 
-    > (1) Enter **CABCHCMGJ** in the **search** field, where ## is your assigned user number.
+    > (1) Enter **CABCHCMGJ** in the **search** field, where ## is your assigned user number.   <br>  
     > (2) Click the **Magnifying Glass** icon or press the **Enter** key to execute the search.
 
     ![View Checklist](images/image202.png)  
@@ -312,7 +312,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 8. The next step is the configuration the Compensation Info UI to leverage your Guided Journey. To do that, you can head back to the home page.
 
-   > (1) Click on the **Home** icon on the top icon bar.
+   > Click on the **Home** icon on the top icon bar.
    
    ![Enter Task Info](images/image208.png)  
     
@@ -328,7 +328,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 10. There are no matching workers, so you can unselect Direct reports to broaden our search.
 
-   > (1) Click the **X** next to Direct Reports under the search field.
+   > Click the **X** next to Direct Reports under the search field.
 
    ![Enter Task Info](images/image210.png)  
 <br>
@@ -368,14 +368,14 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 15. The Preview should open in a new browser tab.  You can now see our screen in Preview Mode.  It shows the standard screen layout, but also includes your Guided Journey configuration.  Please note that these configurations are automatically maintained during the Oracle Release Update process.  These are not Customizations.
 
-   > (1) Click the **Compensation Benchmarking** link. 
+   > Click the **Compensation Benchmarking** link. 
 
    ![Create Task](images/image215.png)  
 <br>
 
 16. The Guided Journey Task has called your User Defined Content integration.  As discussed in the introduction to this adventure, it calls Oracle Integration to gather additional prompt information, such as Position and New York, prior to our Generative AI call to the external LLM.  The results are then formatted and displayed as shown.
 
-   > (1) When finished reviewing the result, you can close your browser tabs and exit the Oracle Cloud Application UI.
+   > When finished reviewing the result, you can close your browser tabs and exit the Oracle Cloud Application UI.
 
    ![Create Task](images/image216.png)  
 

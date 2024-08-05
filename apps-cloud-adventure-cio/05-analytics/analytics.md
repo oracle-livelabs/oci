@@ -148,8 +148,9 @@ In this activity, you will Create analytics across different lines of business t
     > (1) Expand the Fiscal Date folder in the Data Panel to locate the **Month** and **Turnover** columns.   <br>
 
     > (2) While holding “Ctrl,” multi-select the **Month** and **Turnover** columns and drag them below the current visual. 
+    
+    ![Analytics view 6](images/image014.png)
 
-    ![Analytics view 6](images/image0014.png)
 
 
 13.  Another factor that impacts Overtime and Contract labor is employee absences. 
