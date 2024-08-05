@@ -121,8 +121,8 @@ In this activity, you will Create analytics across different lines of business t
     > (1) Change the chart to a “Stacked Bar” type to visualize the data better.  <br>
 
     > (2) Follow steps 1 and 2 as shown in the picture 10.
-
-    ![Analytics view 3](images/image0010.png)
+    
+    ![Analytics view 3](images/image010.png)
 
 
 10.  We need to perform trend analysis to understand when the expense anomaly started occurring and whether it is consistent across all expense types.
