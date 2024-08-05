@@ -184,7 +184,9 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     > (1) Click on the **middle box.**       <br>
 
-    > (2) Then select  **less than.**.
+    > (2) Then select  **greater than.**.
+
+    ![Create Validation](images/image021.png)
 
 
 14.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
@@ -193,17 +195,16 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     > (2) Then enter **enter The Adjustment Percentage cannot exceed 15%.**
 
-    ![Create Validation](images/image021.png)
+    ![Create Validation](images/image022.png)
 
     > (1) Click on the **Down Arrow.**      <br>
 
     > (2) Then select **Error.**
 
-    ![Create Validation](images/image022.png)
-
     The error configuration will not allow any user who entered incorrect data to submit the change without fixing the error
+
+    ![Create Validation](images/image023.png)
     
-    ![Extension Rules](images/image023.png)
 
 
 15.  Well done.  You have configured a new rule for HR personnel.
