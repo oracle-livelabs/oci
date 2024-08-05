@@ -28,7 +28,7 @@ In this lab, you will:
 	git pull --depth=1 origin main
 	</copy>
 	```
-
+	
 3. Open the sample application source code from the _gdk-oci-logging-mvn_ directory in **Visual Studio Code**.
 
 	```bash
