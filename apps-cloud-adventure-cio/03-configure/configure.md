@@ -1,6 +1,6 @@
-# Configure
+# Configure (Recreating due to VB Studio Update)
 
-## Introduction
+## Introduction (Recreating due to VB Studio Update)
 
 Oracle offers hundreds of prebuilt pages and workflows “out of the box” as part of the Oracle Fusion Suite of applications.  Many of our customers want to configure these pages and workflows to meet their specific business needs.  You can unify your experience in our applications by using Redwood.
 
@@ -14,13 +14,13 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 Estimated Time: 10 minutes
 
 
-### Objectives
+### Objectives (Recreating due to VB Studio Update)
 
 In this activity, you will use Redwood to incorporate rules and define content surfaced in the application to tailor the user experience. 
 
 
 
-## Task 1: Enhance the Change Salary Experience 
+## Task 1: Enhance the Change Salary Experience  (Recreating due to VB Studio Update)
 
 1. You are the Redwood expert for your organization.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently design a Change Salary Interface for Non-HR mangers.
 
