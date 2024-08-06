@@ -53,7 +53,7 @@ In this activity you’ll learn the different ways to manage user access and to 
 
 3.  While the applications will automatically lock a user after too many failed login attempts, our user has not reached that limit.  But due to other suspicious activity on the network, our administrator uses the Cloud Console to lock the account
 
-   > Your administrator will demonstrate for to Find the user (Brian.Bell) and Lock the user from the Actions menu
+   > Your administrator will demonstrate how to find the user (Brian.Bell) and Lock the user from the Actions menu
    
    ![Audit events](images/image004.png)
 
