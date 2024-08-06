@@ -10,24 +10,25 @@ Estimated Workshop Time: 05 minutes
 
 In this lab, you will:
 
-* Delete the Approved Sender
-* Delete SMTP Credentials
+* Delete the Custom Log
+* Delete Log Group
 * Destroy Stack
 * Delete Stack
+* Delete the Instance Principals Policy
 
 ## Task 1: Cleanup
 
-1. From **Developer Services >> Application Integration >> Email Delivery >> Approved Senders**, delete the **Approved Sender Email**.
+1. From **OCI Console >> Logging >> Log Groups >> MicronautLogGroup**, delete the **Custom Log (MicronautCustomLog)**.
 
-    ![Delete Approved Sender Button](images/delete-approved-sender.jpg#input)
-
-2. From the **Profile Icon >> Profile details >> Resources >> SMTP credentials**, delete the created credentials.
-
-    ![Delete SMTP Credentials Button](images/delete-smtp-credentials.jpg#input)
+2. From **OCI Console >> Logging >> Log Groups**, delete the **MicronautLogGroup**.
 
 3. From **Resource Manager >> Stacks >> Stack Details** screen, run **Destroy** to delete the VCN and the Compute instance.
 
 4. From **Resource Manager >> Stacks >> Stack Details** screen, **Delete** the **Stack**.
+
+<if type="tenancy">
+5. From **Identity & Security >> Identity >> Policies**, delete the Instance Principals **Policy**.
+</if>
 
 Congratulations! You've successfully completed this lab.
 

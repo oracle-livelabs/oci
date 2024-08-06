@@ -1,8 +1,8 @@
-# Build and Run the Application
+# Build and run the application and view the logs in OCI Logging
 
 ## Introduction
 
-This section of the lab takes you through the steps to build and run the sample application and then send emails.
+This section of the lab takes you through the steps to build and run the sample application and send application logs to OCI Logging.
 
 Estimated Lab Time: 10 minutes
 
@@ -11,87 +11,66 @@ Estimated Lab Time: 10 minutes
 In this lab, you will:
 
 * Build and run the application
-* Send the emails
-	* Send a simple plain-text email
-	* Send a templated email
-	* Send an email with an attachment
+* Send an HTTP POST request
+* View the application logs in OCI Logging
 
 ## Task 1: Build and run the application
 
-1. In the same terminal in VS Code, run the following command(s).
+1. Open a new terminal in VS Code using the **Terminal > New Terminal** menu.
+
+2. Run the following command to build application:
 
 <if type="mn_run">
-   Use `mn:run` to build and start the application on port 8080.
+Use `mn:run` to build and start the application on port 8080.
 
 	``` bash
 	<copy>
-	./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw mn:run -pl oci &
+	./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw mn:run -pl oci
 	</copy>
 	```
 </if>
 
 <if type="jar">
-   Build an executable JAR file and then use `java -jar` to run it.
+Build an executable JAR file and then use `java -jar` to run it.
 
 	``` bash
 	<copy>
 	./mvnw install -pl lib -am && ./mvnw package -pl oci
 
-	MICRONAUT_ENVIRONMENTS=oraclecloud java -jar oci/target/oci-email-demo-oci-1.0-SNAPSHOT.jar &
+	MICRONAUT_ENVIRONMENTS=oraclecloud java -jar oci/target/oci-logging-demo-oci-1.0-SNAPSHOT.jar
 	</copy>
 	```
 </if>
 
-## Task 2: Send the emails
+## Task 2: Send an HTTP POST request
 
-1. In the same terminal in VS Code, press the enter (return) key.
+1. Open a second terminal in VS Code using the **Terminal>New Terminal** menu.
 
-2. Send a simple plain-text email using the following command:
+2. From the second terminal, send an HTTP POST request to the `/greet` endpoint:
 
-	``` bash
+	```bash
 	<copy>
-	curl -X POST localhost:8080/email/basic
+	curl -X POST -H "Content-Type: application/json" -id '{"message":"Hello GCN Logging!"}' http://localhost:8080/greet
 	</copy>
 	```
 
-	Check the email you provided in Lab **3** Task **4**. You should see the basic email in your Inbox or Spam folder.
+	VS Code may prompt you to open the URL in a browser as shown below. Just click the **Configure Notifications** gear icon and then click **Don't Show Again**.
 
-3. Send a templated email using the following command:
+   ![VS Code ](images/vscode-paste-urls.png)
 
-	``` bash
-	<copy>
-	curl -X POST localhost:8080/email/template/test
-	</copy>
-	```
+   ![VS Code ](images/vscode-dont-show-again.png)
 
-	Check the email you provided in Lab **3** Task **4**. You should see the templated email in your Inbox or Spam folder.
+## Task 3: View the application logs in OCI Logging
 
-4. Send an email with an attachment using the following command:
+1. Go to the **OCI Console >> Logging >> Log Groups >> MicronautLogGroup >> MicronautCustomLog >> Custom Log (MicronautCustomLog) Details** screen opened in the browser. The application logs should appear in the **Explore Log** section. (If necessary, refresh the browser.)
 
-	``` bash
-	<copy>
-	curl -X POST \
-		-H "Content-Type: multipart/form-data" \
-		-F "file=@ README.md" \
-		localhost:8080/email/attachment
-	</copy>
-	```
+	You can select a different value such as "Past 15 minutes" or "Past hour" in the **Filter by time** drop down list to refresh the logs table view.
 
-	Check the email you provided in Lab **3** Task **4**. You should see the attachment email in your Inbox or Spam folder.
+   ![Application Logs](./images/application-logs-jvm.jpg)
 
-## Task 3: Stop the application
+2. In the first terminal in VS Code, use `CTRL+C` to stop the application.
 
-1. Bring the running application to the foreground:
-
-	``` bash
-	<copy>
-	fg
-	</copy>
-	```
-
-2. Once the application is running in the foreground, press `CTRL+C` to stop it.
-
-Congratulations! You've successfully completed this lab. Your Java application can successfully send emails using OCI Email Delivery.
+Congratulations! You've successfully completed this lab. Your Java application native executable can successfully send logs to OCI Logging.
 
 You may now **proceed to the next lab**.
 

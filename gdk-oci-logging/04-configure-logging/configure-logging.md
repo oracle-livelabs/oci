@@ -52,7 +52,7 @@ In this lab, you will:
 
     ![Copy MicronautCustomLog OCID](images/micronaut-custom-log-copy-ocid.jpg#input)
 
-Congratulations! In this lab, you configured the application to use the OCI Object Storage bucket created earlier.
+Congratulations! In this lab, you configured OCI Logging by creating a Log Group and a Custom Log object.
 
 You may now **proceed to the next lab**.
 

@@ -61,7 +61,6 @@ The Logback configuration has been modified by adding the `OracleCloudAppender` 
 
 _oci/src/main/resources/logback.xml_
 
-```
 <configuration debug='false'>
 
 	<appender name='STDOUT' class='ch.qos.logback.core.ConsoleAppender'>
@@ -85,7 +84,6 @@ _oci/src/main/resources/logback.xml_
 	</root>
 
 </configuration>
-```
 
 In the next section, you will configure OCI Logging and include the OCI Log OCID in the _logback.xml_ file.
 

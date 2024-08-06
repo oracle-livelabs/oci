@@ -15,21 +15,21 @@ In this lab, you will:
 
 ## Task 1: Configure the Application to Use the OCI Logging
 
-1. 1. In VS Code, open _oci/src/main/resources/logback.xml_.
+1. In VS Code, open _oci/src/main/resources/logback.xml_.
 
 2. Go to the `<logId>` element and paste the Log OCID that you copied earlier.
 
-   ``` xml
-   <logId><!-- TODO set the value of the Oracle Cloud log OCID here --></logId>
-   ```
+	```xml
+	<logId><!-- TODO set the value of the Oracle Cloud log OCID here --></logId>
+	```
 
    Replace `ocid1.log.oc1.iad.ama...` with the actual value.
 
-   ``` 
-   <copy>
-   <logId>ocid1.log.oc1.iad.ama...</logId>
-   </copy>
-   ```
+	```
+	<copy>
+	<logId>ocid1.log.oc1.iad.ama...</logId>
+	</copy>
+	```
 
 3. Save the file.
 
@@ -76,7 +76,7 @@ In this lab, you will:
 
 	To learn more about about the supported authentication options, see [Micronaut Oracle Cloud Authentication](https://micronaut-projects.github.io/micronaut-oracle-cloud/snapshot/guide/#authentication).
 
-Congratulations! In this lab, you configured the application to use the OCI Object Storage bucket created earlier.
+Congratulations! In this lab, you configured the application to use OCI Logging.
 
 You may now **proceed to the next lab**.
 

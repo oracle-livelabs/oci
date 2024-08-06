@@ -1,8 +1,8 @@
-# Build and Run a Native Executable
+# Build and run a native executable and view the logs in OCI Logging
 
 ## Introduction
 
-This lab describes how to build and run a native executable for the application, and use it to send emails using OCI Email Delivery.
+This lab describes how to build and run a native executable for the application, and send logs to OCI Logging.
 
 You will use [GraalVM Native Image](https://docs.oracle.com/en/graalvm/jdk/17/docs/overview/)’s ahead-of-time compilation to build a native executable for the application.
 
@@ -17,10 +17,8 @@ Estimated Lab Time: 15 minutes
 In this lab, you will:
 
 * Build and run a native executable for the application
-* Send the emails
-	* Send a simple plain-text email
-	* Send a templated email
-	* Send an email with an attachment
+* Send an HTTP POST request
+* View the application logs in OCI Logging
 
 ## Task 1: Build and run a native executable for the application
 
@@ -46,62 +44,33 @@ In this lab, you will:
 
 	``` bash
 	<copy>
-	MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci-email-demo-oci &
+	MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci-logging-demo-oci
 	</copy>
 	```
 
    The native executable starts instantaneously.
 
-## Task 2: Send the emails
+## Task 2: Send an HTTP POST request
 
-1. In the same terminal in VS Code, press the enter (return) key.
-
-2. Send a simple plain-text email using the following command:
+1. From the second terminal, send an HTTP POST request to the `/greet` endpoint:
 
 	``` bash
 	<copy>
-	curl -X POST localhost:8080/email/basic
+	curl -X POST -H "Content-Type: application/json" -id '{"message":"Hello GCN Logging native executable!"}' http://localhost:8080/greet
 	</copy>
 	```
 
-	Check your email as before.
+## Task 3: View the application logs in OCI Logging
 
-3. Send a templated email using the following command:
+1. Go to the **OCI Console >> Logging >> Log Groups >> MicronautLogGroup >> MicronautCustomLog >> Custom Log (MicronautCustomLog) Details** screen opened in the browser. The application logs should appear in the **Explore Log** section. (If necessary, refresh the browser.)
 
-	``` bash
-	<copy>
-	curl -X POST localhost:8080/email/template/native
-	</copy>
-	```
+	You can select a different value such as "Past 15 minutes" or "Past hour" in the **Filter by time** drop down list to refresh the logs table view.
 
-	Check your email as before.
+	![Application Logs](./images/application-logs-native.jpg)
 
-4. Send an email with an attachment using the following command:
+2. In the first terminal in VS Code, use `CTRL+C` to stop the application.
 
-	``` bash
-	<copy>
-	curl -X POST \
-		-H "Content-Type: multipart/form-data" \
-		-F "file=@ README.md" \
-		localhost:8080/email/attachment
-	</copy>
-	```
-
-	Check your email as before.
-
-## Task 3: Stop the application
-
-1. Bring the running application to the foreground:
-
-	```
-	<copy>
-	fg
-	</copy>
-	```
-
-2. Once the application is running in the foreground, press `CTRL+C` to stop it.
-
-Congratulations! You've successfully completed this lab. Your Java application native executable can successfully send emails using OCI Email Delivery.
+Congratulations! You've successfully completed this lab. Your Java application native executable can successfully send logs to OCI Logging.
 
 You may now **proceed to the next lab**.
 
