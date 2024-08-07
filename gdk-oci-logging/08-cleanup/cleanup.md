@@ -18,17 +18,15 @@ In this lab, you will:
 
 ## Task 1: Cleanup
 
-1. From **OCI Console >> Logging >> Log Groups >> MicronautLogGroup**, delete the **Custom Log (MicronautCustomLog)**.
+* From **Observability & Management >> Logging >> Log Groups >> MicronautLogGroup**, delete the **Custom Log (MicronautCustomLog)**.
 
-2. From **OCI Console >> Logging >> Log Groups**, delete the **MicronautLogGroup**.
+* From **Observability & Management >> Logging >> Log Groups**, delete the **MicronautLogGroup**.
 
-3. From **Resource Manager >> Stacks >> Stack Details** screen, run **Destroy** to delete the VCN and the Compute instance.
+* From **Resource Manager >> Stacks >> Stack Details** screen, run **Destroy** to delete the VCN and the Compute instance.
 
-4. From **Resource Manager >> Stacks >> Stack Details** screen, **Delete** the **Stack**.
+* From **Resource Manager >> Stacks >> Stack Details** screen, **Delete** the **Stack**.
 
-<if type="tenancy">
-5. From **Identity & Security >> Identity >> Policies**, delete the Instance Principals **Policy**.
-</if>
+* From **Identity & Security >> Identity >> Policies**, delete the Instance Principals **Policy**.
 
 Congratulations! You've successfully completed this lab.
 

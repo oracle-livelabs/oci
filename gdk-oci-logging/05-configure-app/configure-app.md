@@ -69,7 +69,7 @@ In this lab, you will:
 
 	``` text
 	<copy>
-	Allow any-user to manage logs in compartment WORKSHOP_COMPARTMENT_NAME where ALL {request.principal.type='instance', request.principal.compartment.id='WORKSHOP_COMPARTMENT_OCID'}
+	Allow any-user to use log-content in compartment WORKSHOP_COMPARTMENT_NAME where ALL {request.principal.type='instance', request.principal.compartment.id='WORKSHOP_COMPARTMENT_OCID'}
 	</copy>
 	```
 </if>
