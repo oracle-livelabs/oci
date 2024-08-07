@@ -68,17 +68,17 @@ Estimated time: 10 minutes
 
 	![Import resources, highlighting the type filter and ebs_prod_slb load balancer](images/3-2-import.png " ")
 
-	The **ebs\_prod\_slb** resource home page provides access to health and performance of the load balancer including any open alarms, as we reviewed in **Lab 3 Resource Home pages**. Scrolling down the page we see the Key metrics for this load balancer.
+	The **ebs\_prod\_slb** home page provides access to open alarms, and health and performance metrics as we reviewed in **Lab 3 Resource Home pages**. Scrolling down the page we see the performance charts for all metrics collected for this load balancer.
 	
 	![Load balancer home page, highlighting the availability, alarms, and performance metrics](images/3-3-import.png " ")
 	
-	A helpful feature when triaging issues is the link to the **OCI service** resource home page. This link allows you to quickly navigate back to the load balancer's OCI page where you can alter the resource pool or restart the load balancer. In this example using Stack Monitoring's topology, if we witness no activity on our EBS, we could quickly identify the WebLogic cluster that services EBS, then identify the load balancer in front of the cluster. Using the topology, simply click to navigate to the load balancer OCI service resource page and update the route configuration. All of this can be done without every typing or searching for a resource, simply follow the troubleshooting workflow.
+	A helpful feature when triaging issues is the link to the OCI service resource home page. This link allows you to quickly navigate back to the load balancer's OCI page where you can alter the resource pool or restart a service. In this example using Stack Monitoring's topology, if we witness no activity on our EBS, we could quickly identify the WebLogic cluster that services EBS, then identify the load balancer in front of the cluster. Using the topology, simply click to navigate to the load balancer OCI service resource page and update the route configuration. All of this can be done without every typing or searching for a resource, simply follow the troubleshooting workflow.
 
 	![Load balancer home page, highlighting the link to the OCI service home page](images/3-3-import.png " ")
 
 ## Task 4: Review the process of relating a load balancer to a WebLogic cluster to complete the topology.
 
-1. To complete the E-Business Suite application's topology, select **Topology**, then select **Add association**. Note: These relationships already exist, click Cancel in lieu of **Add resources** in the slide-out.
+1. To complete the E-Business Suite application's topology, select **Topology**, then select **Add association**.
 
 	![Load balancer home page, highlighting the Import resources page and Import resources button](images/4-1-import.png " ")
 
@@ -94,7 +94,7 @@ Estimated time: 10 minutes
 
 	![Load balancer topology page, highlighting the used by relationship with the WebLogic cluster](images/4-3-import.png " ")
 
-	If you so choose, using what you have learned on navigating within Stack Monitoring, navigate to the EBS Application **EBS04a** and review the topology. From the EBS home page, you can see the load balancer that the WebLogic OAFM cluster uses within the overall topology.
+	If you so choose, using what you have learned in this lab on how to navigate Stack Monitoring, if you review the topology of **EBS04a**, you can now see the load balancer that the WebLogic cluster uses within the overall topology.
 
 	![EBS home page, highlighting the topology that includes the load balancer we imported and the relationship we created](images/4-4-import.png " ")
 
@@ -110,4 +110,4 @@ For more information on importing OCI Services, see **[Importing OCI Services](h
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, Aug 2024
+* **Last Updated By/Date** - Aaron Rimel, June 2024

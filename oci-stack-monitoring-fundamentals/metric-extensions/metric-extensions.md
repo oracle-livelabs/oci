@@ -93,15 +93,15 @@ Estimated time: 10 minutes
 
 	![Metric Extension page, highlighting the host ebs04-a](images/2-9-me.png " ")
 
-	Once you have navigated to the ebs04-a home page, scroll down to view the Metric Extension chart **Memory Use** as in the live example the Metric Extension was renamed.
+	Once you have navigated to the ebs04-a home page, click **Charts** to view the Metric Extension. With the charts tab loaded, navigate to page 2 by clicking **2**.
 
-	![EBS04a home page](images/2-10-me.png " ")
+	![Metric Extension page, highlighting the chart tab and second page navigation](images/2-10-me.png " ")
 
-	Having scrolled down, we can see the newly created Metric Extension **Memory Use**. Metric Extension charts are identified by an **'*'**. Reviewing the chart in the image below, we can see that oracle is consuming the most memory indicated by a purple line.
+	With the second page of charts loaded, scroll to the bottom of the page. Here we can the newly created Metric Extension **Memory Use**. Metric Extension charts are identified by an **'*'**. Reviewing the chart in the image below, we can see that root is consuming the most memory indicated by a purple line.
 
-	![Resource home page, highlighting the Memory Use Metric Extension](images/2-11-me.png " ")
+	![Metric Extension page, highlighting the Memory Use Metric Extension](images/2-11-me.png " ")
 
-	Alarms can be configured on Metric Extensions using the namespace **metric_extension_oracle_appmgmt** and applying what you have learned in **Lab 5: View and Create Alarms**.
+	Alarms can be configured on Metric Extensions using what you have learned in **Lab 5: View and Create Alarms**.
 	
 	For example, DevOps teams can configure alarms on Metric Extensions to notify users if a threshold has been breached. In this example, an alarm could be created to notify DevOps teams, that a user such as **oracle** is consuming more memory than expected. 
 
@@ -114,4 +114,4 @@ For more information on Metric Extensions, see **[Metric Extensions](https://doc
 	* Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
 	* Steven Lemme, Senior Principal Product Manager,  
 	* Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, Aug 2024
+* **Last Updated By/Date** - Aaron Rimel, June 2024
