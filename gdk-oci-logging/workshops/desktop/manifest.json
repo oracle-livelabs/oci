@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Build a Java application with the Graal Development Kit for Micronaut (GDK), and Oracle Cloud Infrastructure Email Delivery",
+  "workshoptitle": "Build a Java application with the Graal Development Kit for Micronaut (GDK), and Oracle Cloud Infrastructure Logging",
   "variables": ["../../variables/variables.json"],
   "help": "livelabs-help-oci_us@oracle.com",
   "tutorials": [
@@ -27,31 +27,36 @@
       "filename": "../../03-review-code/review-code.md"
     },
     {
-      "title": "Lab 3: Configure OCI Email Delivery",
-      "filename": "../../04-configure-app/configure-app.md",
+      "title": "Lab 3: Configure OCI Logging",
+      "filename": "../../04-configure-logging/configure-logging.md",
       "type": "desktop"
     },
     {
-      "title": "Lab 4: Build and Run the Application",
-      "filename": "../../05-build-run-app/build-run-app.md",
+      "title": "Lab 4: Configure the application to use OCI Logging",
+      "filename": "../../05-configure-app/configure-app.md",
+      "type": "desktop"
+    },
+    {
+      "title": "Lab 5: Build and Run the Application",
+      "filename": "../../06-build-run-app/build-run-app.md",
       "type" : {
         "mn_run" : "mn:run",
         "jar" : "JAR"
       }
     },
     {
-      "title": "Lab 5: Build and Run a Native Executable",
-      "filename": "../../06-build-run-native/build-run-native.md",
+      "title": "Lab 6: Build and Run a Native Executable",
+      "filename": "../../07-build-run-native/build-run-native.md",
       "type": "desktop"
     },
     {
-      "title": "Lab 6: Cleanup",
-      "filename": "../../07-cleanup/cleanup.md",
+      "title": "Lab 7: Cleanup",
+      "filename": "../../08-cleanup/cleanup.md",
       "type": "desktop"
     },
     {
       "title": "Conclusion",
-      "filename": "../../08-conclusion/conclusion.md"
+      "filename": "../../09-conclusion/conclusion.md"
     },
     {
       "title": "Need Help?",

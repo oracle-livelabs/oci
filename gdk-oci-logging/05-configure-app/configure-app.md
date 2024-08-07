@@ -45,11 +45,11 @@ In this lab, you will:
 	```
 
 <if type="desktop">
-2. The workshop environment includes a preconfigured `Instance Principal` using a `Dynamic Group` and a `Policy` in OCI to allow the application to manage (upload, list, download, and delete) objects in the OCI Object Storage bucket.
+2. The workshop environment includes a preconfigured `Instance Principal` using a `Dynamic Group` and a `Policy` in OCI to allow the application to send logs to OCI Logging.
 </if>
 
 <if type="tenancy">
-2. The following steps show you how to set up an `Instance Principal` using a `Dynamic Group`-less `Policy` in OCI to allow the application in a Compute Instance to manage (upload, list, download, and delete) objects in the OCI Object Storage bucket.
+2. The following steps show you how to set up an `Instance Principal` using a `Dynamic Group`-less `Policy`in OCI to allow the application to send logs to OCI Logging.
 
 3. From the Oracle Cloud Console navigation menu, go to **Identity & Security >> Identity >> Policies**.
 
