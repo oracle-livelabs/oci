@@ -18,15 +18,17 @@ In this lab, you will:
 
 ## Task 1: Cleanup
 
-* From **Observability & Management >> Logging >> Log Groups >> MicronautLogGroup**, delete the **Custom Log (MicronautCustomLog)**.
+From the Oracle Cloud Console, clean up the resources provisioned for this workshop:
 
-* From **Observability & Management >> Logging >> Log Groups**, delete the **MicronautLogGroup**.
+1. From **Observability & Management >> Logging >> Log Groups >> MicronautLogGroup**, delete the **Custom Log (MicronautCustomLog)**.
 
-* From **Resource Manager >> Stacks >> Stack Details** screen, run **Destroy** to delete the VCN and the Compute instance.
+2. From **Observability & Management >> Logging >> Log Groups**, delete the **MicronautLogGroup**.
 
-* From **Resource Manager >> Stacks >> Stack Details** screen, **Delete** the **Stack**.
+3. From **Resource Manager >> Stacks >> Stack Details** screen, run **Destroy** to delete the VCN and the Compute instance.
 
-* From **Identity & Security >> Identity >> Policies**, delete the Instance Principals **Policy**.
+4. From **Resource Manager >> Stacks >> Stack Details** screen, **Delete** the **Stack**.
+
+5. From **Identity & Security >> Identity >> Policies**, delete the Instance Principals **Policy**.
 
 Congratulations! You've successfully completed this lab.
 

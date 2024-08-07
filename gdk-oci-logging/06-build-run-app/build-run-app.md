@@ -21,17 +21,19 @@ In this lab, you will:
 2. Run the following command to build application:
 
 <if type="mn_run">
-Use `mn:run` to build and start the application on port 8080.
+
+	Use `mn:run` to build and start the application on port 8080.
 
 	``` bash
 	<copy>
 	./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw mn:run -pl oci
 	</copy>
-	```
+		```
 </if>
 
 <if type="jar">
-Build an executable JAR file and then use `java -jar` to run it.
+
+	Build an executable JAR file and then use `java -jar` to run it.
 
 	``` bash
 	<copy>
