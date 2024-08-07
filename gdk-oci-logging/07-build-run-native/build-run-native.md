@@ -60,15 +60,17 @@ In this lab, you will:
 	</copy>
 	```
 
-## Task 3: View the application logs in OCI Logging
+## Task 3: Stop the application
+
+1. In the first terminal in VS Code, use `CTRL+C` to stop the application.
+
+## Task 4: View the application logs in OCI Logging
 
 1. Go to the **OCI Console >> Logging >> Log Groups >> MicronautLogGroup >> MicronautCustomLog >> Custom Log (MicronautCustomLog) Details** screen opened in the browser. The application logs should appear in the **Explore Log** section. (If necessary, refresh the browser.)
 
 	You can select a different value such as "Past 15 minutes" or "Past hour" in the **Filter by time** drop down list to refresh the logs table view.
 
 	![Application Logs](./images/application-logs-native.jpg)
-
-2. In the first terminal in VS Code, use `CTRL+C` to stop the application.
 
 Congratulations! You've successfully completed this lab. Your Java application native executable can successfully send logs to OCI Logging.
 

@@ -6,10 +6,10 @@ You've seen how to use GraalVM Native Image to package and run the application a
 
 Application developers can use the Graal Development Kit for Micronaut (GDK) to build cloud-portable Java applications on Oracle Cloud Infrastructure with Micronaut and GraalVM Native Image.
 
-### Learn more
+## Learn More
 
 - [Publish Application Logs to OCI Logging](https://graal.cloud/gdk/gdk-modules/logging/micronaut-oci-logging/?buildTool=maven&lang=java)
-- [GDK Logging Module](https://graal.cloud/gdk/modules/#logging)
+- [GDK Logging](https://graal.cloud/gdk/modules/#logging)
 - [Micronaut Oracle Cloud Logging](https://micronaut-projects.github.io/micronaut-oracle-cloud/snapshot/guide/#logging)
 - [Micronaut Oracle Cloud Authentication](https://micronaut-projects.github.io/micronaut-oracle-cloud/snapshot/guide/#authentication)
 

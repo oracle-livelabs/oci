@@ -11,7 +11,7 @@ Estimated Workshop Time: 05 minutes
 In this lab, you will:
 
 * Delete the Custom Log
-* Delete Log Group
+* Delete the Log Group
 * Destroy Stack
 * Delete Stack
 * Delete the Instance Principals Policy

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab provides instructions to update the application configuration _logback.xml_ to point to OCI Logging.
+This lab provides instructions to configure the application to point to OCI Logging.
 
 Estimated Lab Time: 05 minutes
 
@@ -26,9 +26,7 @@ In this lab, you will:
    Replace `ocid1.log.oc1.iad.ama...` with the actual value.
 
 	```
-	<copy>
 	<logId>ocid1.log.oc1.iad.ama...</logId>
-	</copy>
 	```
 
 3. Save the file.
@@ -49,7 +47,7 @@ In this lab, you will:
 </if>
 
 <if type="tenancy">
-2. The following steps show you how to set up an `Instance Principal` using a `Dynamic Group`-less `Policy`in OCI to allow the application to send logs to OCI Logging.
+2. The following steps show you how to set up an `Instance Principal` using a `Dynamic Group`-less `Policy` in OCI to allow the application to send logs to OCI Logging.
 
 3. From the Oracle Cloud Console navigation menu, go to **Identity & Security >> Identity >> Policies**.
 
@@ -72,9 +70,12 @@ In this lab, you will:
 	Allow any-user to use log-content in compartment WORKSHOP_COMPARTMENT_NAME where ALL {request.principal.type='instance', request.principal.compartment.id='WORKSHOP_COMPARTMENT_OCID'}
 	</copy>
 	```
+
+	To learn more about policies to control access to OCI Logging, see [Policy Reference - Details for Logging](https://docs.oracle.com/en-us/iaas/Content/Identity/Reference/loggingpolicyreference.htm).
+
 </if>
 
-	To learn more about about the supported authentication options, see [Micronaut Oracle Cloud Authentication](https://micronaut-projects.github.io/micronaut-oracle-cloud/snapshot/guide/#authentication).
+	To learn more about the supported authentication options, see [Micronaut Oracle Cloud Authentication](https://micronaut-projects.github.io/micronaut-oracle-cloud/snapshot/guide/#authentication).
 
 Congratulations! In this lab, you configured the application to use OCI Logging.
 

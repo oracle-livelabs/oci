@@ -61,29 +61,29 @@ The Logback configuration has been modified by adding the `OracleCloudAppender` 
 
 _oci/src/main/resources/logback.xml_
 
-<configuration debug='false'>
+	<configuration debug='false'>
 
-	<appender name='STDOUT' class='ch.qos.logback.core.ConsoleAppender'>
-		<encoder>
-			<pattern>%cyan(%d{HH:mm:ss.SSS}) %gray([%thread]) %highlight(%-5level) %magenta(%logger{36}) - %msg%n</pattern>
-		</encoder>
-	</appender>
-	<appender name='ORACLE' class='io.micronaut.oraclecloud.logging.OracleCloudAppender'>
-		<!-- <appender-ref ref='STDOUT'/> -->
-		<logId><!-- TODO set the value of the Oracle Cloud log OCID here --></logId>
-		<encoder class='ch.qos.logback.core.encoder.LayoutWrappingEncoder'>
-			<layout class='ch.qos.logback.contrib.json.classic.JsonLayout'>
-				<jsonFormatter class='ch.qos.logback.contrib.jackson.JacksonJsonFormatter'/>
-			</layout>
-		</encoder>
-	</appender>
+		<appender name='STDOUT' class='ch.qos.logback.core.ConsoleAppender'>
+			<encoder>
+				<pattern>%cyan(%d{HH:mm:ss.SSS}) %gray([%thread]) %highlight(%-5level) %magenta(%logger{36}) - %msg%n</pattern>
+			</encoder>
+		</appender>
+		<appender name='ORACLE' class='io.micronaut.oraclecloud.logging.OracleCloudAppender'>
+			<!-- <appender-ref ref='STDOUT'/> -->
+			<logId><!-- TODO set the value of the Oracle Cloud log OCID here --></logId>
+			<encoder class='ch.qos.logback.core.encoder.LayoutWrappingEncoder'>
+				<layout class='ch.qos.logback.contrib.json.classic.JsonLayout'>
+					<jsonFormatter class='ch.qos.logback.contrib.jackson.JacksonJsonFormatter'/>
+				</layout>
+			</encoder>
+		</appender>
 
-	<root level='INFO'>
-		<appender-ref ref='ORACLE'/>
-		<appender-ref ref='STDOUT'/>
-	</root>
+		<root level='INFO'>
+			<appender-ref ref='ORACLE'/>
+			<appender-ref ref='STDOUT'/>
+		</root>
 
-</configuration>
+	</configuration>
 
 In the next section, you will configure OCI Logging and include the OCI Log OCID in the _logback.xml_ file.
 

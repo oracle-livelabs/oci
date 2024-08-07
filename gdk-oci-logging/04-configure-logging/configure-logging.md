@@ -11,6 +11,7 @@ Estimated Lab Time: 05 minutes
 In this lab, you will:
 
 * Create a Log Group
+* Create a Custom Log
 
 ## Task 1: Create a Log Group
 
@@ -18,9 +19,9 @@ In this lab, you will:
 
    ![Logging Menu](images/logging-menu.jpg)
 
-2. Under **List scope**, select a compartment you have permission to work in.
+2. Under **List scope**, select your workshop compartment.
 
-	![Select Compartment Button](images/select-compartment-button.jpg)
+    ![Select Compartment Button](images/select-compartment-button.jpg)
 
 3. Click **Create Log Group**.
 
@@ -30,7 +31,7 @@ In this lab, you will:
 
     ![Create Log Group Screen](images/log-group-create-screen.jpg#input)
 
-## Task 2: Create the Custom Log
+## Task 2: Create a Custom Log
 
 1. From the **MicronautLogGroup** details screen, click **Logs** under **Resources**. Click **Create custom log**.
 
