@@ -17,7 +17,7 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console navigation menu, go to **Observability & Management**. Under **Logging**, click **Log Groups**.
 
-   ![Logging Menu](images/logging-menu.jpg)
+   ![Logging Menu](https://oracle-livelabs.github.io//common/images/console/logging.png)
 
 2. Under **List scope**, select your workshop compartment.
 
