@@ -2,82 +2,89 @@
 
 ## Introduction
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
+This lab walks you through connecting to the Bastion Host and then using that host as a jump server to acces the private instance. 
 
-Estimated Lab Time: -- minutes
+Estimated Lab Time: 10 minutes
 
-### About <Product/Technology> (Optional)
-Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than two sections/paragraphs, please utilize the "Learn More" section.
+### About Bastion Host
+
+In this lab we will see how the BastionHost acts as a jump host. Once connected to the Bastion Host you will upload the SSH keys to be able to access the private insance created in the previous lab. 
 
 ### Objectives
 
-*List objectives for this lab using the format below*
 
 In this lab, you will:
-* Objective 1
-* Objective 2
-* Objective 3
+* SSH into bastion host compute instance 
+* SSH into private compute instance through bastion host instance
 
-### Prerequisites (Optional)
 
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is necessary to complete the lab. Do NOT list each previous lab as a prerequisite.*
+### Prerequisites 
 
 This lab assumes you have:
 * An Oracle Cloud account
 * All previous labs successfully completed
+* Have saved private SSH key generated in Lab 1
 
 
-*This is the "fold" - below items are collapsed by default*
-
-## Task 1: Concise Task Description
+## Task 1: SSH into instances
 
 (optional) Task 1 opening paragraph.
 
-1. Step 1
+1. Open Cloud Shell
 
-	![Image alt text](images/sample1.png)
+	![Image alt text](images/cloud-shell.png)
 
-2. Step 2
+2. Navigate to ssh folder within Cloud Shell 
 
-  ![Image alt text](images/sample1.png)
+```
+cd .ssh
+```
 
-4. Example with inline navigation icon ![Image alt text](images/sample2.png) click **Navigation**.
+3. SSH into Bastion Host to ensure connection.  
 
-5. Example with bold **text**.
+```
+ssh -i <private_ssh_key> opc@<BastionHost_public_ip_address> 
+```
 
-   If you add another paragraph, add 3 spaces before the line.
+  ![Image alt text](images/ssh.png)
+4. Update SSH key for BastionHost 
 
-## Task 2: Concise Task Description
+Navigate to SSH files
 
-1. Step 1 - tables sample
+```
+cd .ssh
+```
 
-  Use tables sparingly:
+Create a new file called private_key
 
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
+```
+vim private_key
+```
 
-2. You can also include bulleted lists - make sure to indent 4 spaces:
+Paste the private key generated in Lab 1
 
-    - List item 1
-    - List item 2
+Save the changes made to private_key file 
+hit escapte followed by the command bellow. 
 
-3. Code examples
+```
+:wq!
+```
+hit Enter.
 
-    ```
-    Adding code examples
-  	Indentation is important for the code example to appear inside the step
-    Multiple lines of code
-  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
-    ```
+You can use the command ls to check to make sure the new file exists. 
 
-4. Code examples that include variables
+![Image alt text](images/vim.png)
 
-	```
-  <copy>ssh -i <ssh-key-file></copy>
-  ```
+5. SSH into private instance through Bation Host 
+
+```
+ssh -i private_key opc@<private-1_private_ip_address> 
+```
+
+You should now see that you have successfully navigated to the instnace private-1 
+
+
+![Image alt text](images/private.png)
 
 ## Learn More
 
@@ -87,6 +94,5 @@ This lab assumes you have:
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Authors** - Olivia Maxwell, Cloud Enginner; Taylor Rees, Cloud Engineer
+* **Last Updated By/Date** - Taylor Rees, August 2024
