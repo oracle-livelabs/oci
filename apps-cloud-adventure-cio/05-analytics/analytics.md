@@ -25,10 +25,9 @@ In this activity, you will Create analytics across different lines of business t
 
 1. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
 
+    Login to your Fusion Data Intelligence Portal using the URL provided.
 
-    > (1) Login to your Fusion Data Intelligence Portal using the URL provided.  <br>
-
-    > (2) Open a web browser and enter the URL provided, then on the login screen, type in the Username and Password. Click Sign In.
+    > Open a web browser and enter the URL provided, then on the login screen, type in the Username and Password. Click Sign In.
 
     ![Login](images/image001.png)
 
