@@ -25,13 +25,14 @@ In this activity, you will Create analytics across different lines of business t
 
 1. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
 
-    After a successful login, you will land on the Oracle Analytics home page. 
 
     > (1) Login to your Fusion Data Intelligence Portal using the URL provided.  <br>
 
     > (2) Open a web browser and enter the URL provided, then on the login screen, type in the Username and Password. Click Sign In.
 
     ![Login](images/image001.png)
+
+    After a successful login, you will land on the Oracle Analytics home page. 
 
 
 2. A finance Watchlist comprising several Tiles is available on the home page. 
@@ -49,11 +50,12 @@ In this activity, you will Create analytics across different lines of business t
 
     Let's now set the workbook to design mode so that we can add cost elements. 
 
+    > Click on the Edit Icon  ![Edit Icon](images/icon002.png)  as shown in the image.  <br>
+
     Instead of building manually, let's use the Auto Insights feature.
 
-    > (1) Click on the Edit Icon  ![Edit Icon](images/icon002.png)  as shown in the image.  <br>
 
-    > (2) Click on the Auto Insights Icon  ![Auto Insights Icon](images/icon003.png)  as shown in the image.
+    > Click on the Auto Insights Icon  ![Auto Insights Icon](images/icon003.png)  as shown in the image.
 
     ![Workbook Design Mode](images/image003.png)
 
@@ -84,7 +86,10 @@ In this activity, you will Create analytics across different lines of business t
     
     > (2) Unselect **Department**  <br>
 
-    > (3) Select **Expense**
+    > (3) Select **Expense**<br>
+
+    > (4) Click **Apply**
+
 
     ![Auto insights view](images/image006a.png)
 
