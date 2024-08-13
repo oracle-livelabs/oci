@@ -11,12 +11,12 @@
             "filename": "../../01-security/security.md"
         },
         {
-            "title": "Lab 2: Extend",
-            "filename": "../../02-extend/extend.md"
+            "title": "Lab 2: Configure",
+            "filename": "../../02-configure/configure.md"
         },
         {
-            "title": "Lab 3: Configure",
-            "filename": "../../03-configure/configure.md"
+            "title": "Lab 3: Extend",
+            "filename": "../../03-extend/extend.md"
         },
         {
             "title": "Lab 4: Integration",
