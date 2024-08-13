@@ -157,7 +157,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 10. Let’s now return to Fusion Cloud so we can audit the supplier address change we made previously using the Audit REST APIs we’ve just learned about.
 
-    > Press **Ctrl + Tab** in your web browser to navigate back to the Fusion Cloud ERP browser tab.
+    > Navigate back to the Fusion Cloud ERP browser tab.
 
     ![Application Home](images/image023.png)
 
