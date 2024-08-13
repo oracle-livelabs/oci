@@ -129,8 +129,8 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
     > Click on **Audit Report REST Endpoints**
 
     ![Integrations View](images/image018.png)
-
-    ![Stop](images/STOP.png)
+    
+    ![Stop](images/stop.png)
 
     **This is an example of a configuration. This tile links out to an external website.**
 
@@ -164,8 +164,8 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
     > In the Integration tab: Click on the **API Integration** tile 
 
     ![Integration Tab](images/image024.png)
-
-    ![Stop](images/STOP.png)
+    
+    ![Stop](images/stop.png)
 
     **This is another example of a configuration. This tile links out to an external application we’ve designed using Oracle APEX.**
 
