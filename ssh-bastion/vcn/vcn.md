@@ -2,7 +2,6 @@
 
 ## Introduction
 
-Oracle Cloud Infrastructure (OCI) Compute lets you create multiple Virtual Cloud Networks (VCNs). These VCNs will contain security lists, compute instances, load balancers and many other types of network assets
 
 Estimated Lab Time: 15 minutes
 
