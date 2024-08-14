@@ -208,4 +208,4 @@ In this activity, you will:
 # Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services
 * **Contributors** -  Steve Quinton, Team Lead – Risk Solutions 
-* **Last Updated By/Date** - Kevin Lazarz, August 2023
+* **Last Updated By/Date** - Ramona Magadan, Technical Program Manager, Database Product Management, August 2024
