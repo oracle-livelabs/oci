@@ -265,7 +265,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 2. The first step is to configure a Checklist Template to include the Guided Journey Task. We’ve already setup Checklist Templates for each Cloud Adventure User, so you'll start by searching for your specific template.
 
-    > (1) Enter **CABCHCMGJ** in the **search** field, where ## is your assigned user number.   <br>  
+    > (1) Enter **CA&#95;##&#95;HCM_GJ** in the **search** field, where ## is your assigned user number.   <br>  
     > (2) Click the **Magnifying Glass** icon or press the **Enter** key to execute the search.
 
     ![View Checklist](images/image202.png)  
