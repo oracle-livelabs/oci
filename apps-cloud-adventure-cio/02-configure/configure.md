@@ -210,7 +210,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     
 
 
-15.  Well done.  You have configured a new rule for HR personnel.
+15.  Well done.  You have configured a new rule for Non-HR personnel.
 
     Redwood offers a quick way to review your changes as they appear in the application.
 
@@ -220,7 +220,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Create Validation](images/image024.png)
 
-16.  You have reentered the Change Salary Screen.  Let’s review the changes.
+16.  You have reentered the Change Salary Form.  Let’s review the changes.
 
     You need to enter the required information before you can move to the next screen.
 
