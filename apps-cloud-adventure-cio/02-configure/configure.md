@@ -43,7 +43,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 2. Now you will enter the Change Salary process so we can make the required changes using Visual Builder Studio.  Now you will select a person so you can enter the Change Salary form.
 
-    > (1) Enter **Barrett Reed** in the box. <br>
+    > (1) Enter **Barrett Reed** in the box under **Change Salary**. <br>
 
     > (2) Select **Barrett Reed** in the drop down. <br>
 
