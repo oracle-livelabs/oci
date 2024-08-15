@@ -77,7 +77,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 5. A project has already been created for this exercise.
 
-    > (1) Click on the **Create Change Salary for HR** project.  <br>
+    > (1) Click on the **Create Change Salary for Non-HR** project.  <br>
 
     > (2) Then click **Select**.
 
