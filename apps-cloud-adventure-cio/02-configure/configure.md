@@ -36,14 +36,17 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![My Team Page](images/image002.png)
 
-    > Click on the **X** ![X](images/icon_X.png) to remove the Direct Reports Filter because Casey Brown does not have any direct reports.  This action allows us to see other people.
+    > Click on the **X Icon** ![X](images/icon_X.png) to remove the Direct Reports Filter because Casey Brown does not have any direct reports.  This action allows us to see other people.
 
     ![My Team Page](images/image003.png)
 
 
 2. Now you will enter the Change Salary process so we can make the required changes using Visual Builder Studio.
 
-    > Click on **Barrett Reed**
+    > (1) Enter **Barrett Reed** in the box. <br>
+
+    > (2) Select **Barrett Reed** in the drop down. <br>
+
 
     ![Change Salary Page](images/image004.png)
 
