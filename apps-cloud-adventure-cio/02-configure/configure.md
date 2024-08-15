@@ -51,7 +51,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Change Salary Page](images/image004.png)
 
 
-3. You have entered the Change Salary form.  Now you will quickly review the current configuration of Change form.
+3. You have entered the Change Salary Form.  Now you will quickly review the current configuration of Change Salary Form.
 
     You need to enter the required information before you can move to the next screen.
 
