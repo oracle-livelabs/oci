@@ -24,7 +24,7 @@ In this lab, you will:
 
 2. Search for the requisition you applied to.
 
-    > To Search- remove the current filters by clicking the **"X"** next to each assigned filter, type **801** in the search bar, and then select the **Senior HR Analyst 801** requisition. 
+    > To Search- remove the current filters by clicking the **"X"** next to each assigned filter, type **966** in the search bar, and then select the **Senior HR Analyst CA 966** requisition. 
 
     
 3. Find the application you submitted
@@ -56,4 +56,4 @@ Adventure awaits, show what you know, and rise to the top of the leader board!!!
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant, Cloud HCM
 * **Contributors** -  Kerilyn Derkasch, Sr. Manager, Cloud HCM
-* **Last Updated By/Date** - Dorcas Conyers, March 2024
+* **Last Updated By/Date** - Dorcas Conyers, August 2024
