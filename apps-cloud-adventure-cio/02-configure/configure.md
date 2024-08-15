@@ -36,7 +36,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![My Team Page](images/image002.png)
 
-    > Click on the **X** to remove the Direct Reports Filter because Casey Brown does not have any direct reports.  This action allows us to see other people.
+    > Click on the **X** ![X](images/icon_X.png) to remove the Direct Reports Filter because Casey Brown does not have any direct reports.  This action allows us to see other people.
 
     ![My Team Page](images/image003.png)
 
