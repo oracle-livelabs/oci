@@ -58,9 +58,9 @@ Let's process a promotion for the employee. Continue working from the Team Activ
 
 7. In the Assignment section **DO NOT MAKE ANY CHANGES**  Click **Continue**.
 
+    ![Compensation](images\myteamcompensationpage2.png)
 
-![Compensation](images\myteamcompensationpage2.png)
-
+8. In the next section of the transaction labeled *2 Promotion*, do not change any information. Please click the Continue Button to move forward with the transaction.  
 
 9. In the Salary secion Enter a salary adjustment amount or adjustment percent *(to see an example of the guardrails for entry - enter a salary adjustment greater than 60%)*
 
