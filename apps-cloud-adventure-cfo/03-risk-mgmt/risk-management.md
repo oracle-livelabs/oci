@@ -99,7 +99,7 @@ In this activity, you will:
 
     > (3) Change condition to ‘**Greater than or equal to**’  <br>
 
-    > (4) Enter a dollar limit in **Value** field (NOTE – Value should be less than 500,000) <br>
+    > (4) Enter a amount limit in **Value** field (NOTE – Value should be less than 500,000) <br>
 
     > (5) Click **OK**
 
@@ -142,12 +142,15 @@ In this activity, you will:
 
     ![Home Page](images/19-task1-risk-management.jpg)
 
-20. 
+18. 
+
+    Congratulations!  You’ve completed this part of the Adventure!
+
     > **Select > Save and Close**.
 
     ![Home Page](images/image020.png)
 
-21. 
+19. 
 
     Adventure awaits, show what you know, and rise to the top of the leader board!!!
 
