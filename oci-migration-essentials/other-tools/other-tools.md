@@ -180,6 +180,7 @@ The command run should look like this:
   Default Region [US]: us-ashburn-1
 
   Use "s3.amazonaws.com" for S3 Endpoint and not modify it to the target Amazon S3.
+
   S3 Endpoint [namespace.compat.objectstorage.us-ashburn-1.oraclecloud.com]: 
 
   Use "%(bucket)s.s3.amazonaws.com" to the target Amazon S3. "%(bucket)s" and "%(location)s" vars can be used

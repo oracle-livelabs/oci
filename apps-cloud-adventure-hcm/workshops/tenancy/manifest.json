@@ -11,18 +11,14 @@
             "filename": "../../01-recruiter-view/recruiter.md"
         },
         {
-            "title": "Lab 2: Connections",
+            "title": "Lab 2: Employee View",
             "filename": "../../02-connections/connections.md"
         },
-                {
-            "title": "Lab 3: Absence Requests",
-            "filename": "../../03-absence-requests/absence.md"
-        }, 
         {
-            "title": "Lab 4: Manager Journeys",
+            "title": "Lab 3: Manager Journeys",
             "filename": "../../04-manager-journeys/managerjourneys.md"
         },  {
-            "title": "Lab 5: Your Team Page",
+            "title": "Lab 4: Your Team Page",
             "filename": "../../05-your-team-page/your-team.md"
         },
         {
