@@ -40,7 +40,7 @@ In this activity, you will:
 ## Task 2:  Absence Request
 
 
-1. Oracle Cloud HCM can handle any type pf absence, to include automating which absences different employees can request/view, based on specific/local rules. This logic also includes accruals and entitlements.
+1. Oracle Cloud HCM can handle any type of absence, to include automating which absences different employees can request/view, based on specific/local rules. This logic also includes accruals and entitlements.
 
 ![Home Page](images/connections4.png)
 
