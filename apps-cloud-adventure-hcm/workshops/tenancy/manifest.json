@@ -14,11 +14,8 @@
             "title": "Lab 2: Employee View",
             "filename": "../../02-connections/connections.md"
         },
-        {
-            "title": "Lab 3: Manager Journeys",
-            "filename": "../../04-manager-journeys/managerjourneys.md"
-        },  {
-            "title": "Lab 4: Your Team Page",
+        { 
+            "title": "Lab 3: Your Team Page",
             "filename": "../../05-your-team-page/your-team.md"
         },
         {
