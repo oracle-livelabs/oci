@@ -146,8 +146,6 @@ In this activity, you will:
 
     Congratulations!  You’ve completed this part of the Adventure!
 
-    > **Select > Save and Close**.
-
     ![Home Page](images/image020.png)
 
 19. 
