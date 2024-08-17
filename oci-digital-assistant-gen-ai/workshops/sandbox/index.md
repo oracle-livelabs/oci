@@ -463,7 +463,7 @@ To test the prompt, you need to add mock values for the referenced parameters. T
 
 [Description of the illustration](files/prompt_builder_llm_output.txt)
 
-
+Hope you enjoyed this lab!
 * * *
 
 [Title and Copyright Information](#copyright-information)
