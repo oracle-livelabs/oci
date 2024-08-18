@@ -16,13 +16,14 @@ As you follow along, do not forget to ask questions if you get stuck and answer 
 Estimated Time: 15 minutes
 
 
-### Objectives
+### **Objectives**
 
 In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
 
+![Integration OBJs](images/Integration_OBJs.png)
 
 
-## Task 1: Use REST API to pull Fusion SaaS Application audit data for use in any external system
+## **Task 1: Use REST API to pull Fusion SaaS Application audit data for use in any external system**
 
 
 1. We’re going to login to Fusion Cloud ERP

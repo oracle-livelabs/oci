@@ -8,15 +8,17 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 
 In this exercise, you are the Redwood expert for your organization.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently design a Change Salary Interface for Non-HR mangers.
 
-As you follow along, do not forget to answer the Adventure Check Point questions! 
+Do not forget to answer the Adventure Check Point questions at the end of the exercise! 
 
 
-Estimated Time: 10 minutes
+Estimated Time: 15 minutes
 
 
 ### Objectives
 
 In this activity, you will use Redwood to incorporate rules and define content surfaced in the application to tailor the user experience. 
+
+![Congigure OBJs](images/Configure_OBJs.png).
 
 
 
@@ -43,21 +45,23 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 2. Now you will enter the Change Salary process so we can make the required changes using Visual Builder Studio.  Now you will select a person so you can enter the Change Salary form.
 
-    > (1) Enter **Barrett Reed** in the box under **Change Salary**. <br>
+    > (1) Search for **Barrett Reed** in the search box. (add 1 and 2) <br>
 
-    > (2) Select **Barrett Reed** in the drop down. <br>
+    > (2) Select **Barrett Reed** in the drop down (add new picture). <br>
 
 
     ![Change Salary Page](images/image004.png)
 
+3. Click continue (Journy)
 
-3. You have entered the Change Salary Form.  Now you will quickly review the current configuration of Change Salary Form.
+
+3. You have entered the Change Salary Form.  Now you will quickly review the current configuration of the Change Salary Form.
 
     You need to enter the required information before you can move to the next screen.
 
-    > (1) Pick a **future date** for when the salary will start. <br>
+    > (1) Pick a **future date** for when the salary will start. CHANGE TO FIELD NAMES ALL 4 STEPS <br>
 
-    > (2) Select **Salary Change** under Action Name. <br>
+    > (2) Select **Change Salary** under Action Name. <br>
 
     > (3) Select **Career Progression** for why you are changing the salary. <br>
 
@@ -68,14 +72,14 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 4. You will now create new rule that hides Annualized Full-Time Salary because it is repetitive.  You will also hide Compa-Raito since this is mainly used by HR.  
 
-    > (1) Click on **Casey’s image**.  <br>
+    > (1) Click on **top right corner CHANGE**.  <br>
 
     > (2) Then select **Edit Page in Visual Builder Studio**.
 
     ![Change Salary Page 2nd page](images/image006.png)
 
 
-5. A project has already been created for this exercise.
+5. A project has already been created for this exercise (GET RID OF STEP 5)
 
     > (1) Click on the **Create Change Salary for Non-HR** project.  <br>
 
@@ -93,7 +97,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![VB Studio](images/image008.png)
 
 
-7. First we will create a new form rule for change salary. 
+7. First we will create a new form rule for change salary ENCASE BOX FOR ALL RULES
 
     > (1) Click on the **+ icon** to add a new form rule    <br>
 
@@ -124,7 +128,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 9.  Now you want to add and hide fields.
 
-    > Click on the **Play Icon** to the left of Salary
+    > Click on the **Expnd Icon** to the left of Salary to expand the salary section.
 
     ![Fields and Regions, Conditions](images/image012.png)
 
@@ -132,7 +136,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 10.  First you want to show the Action Reason from the First Screen in the 2nd screen with all the detailed Salary Data
 
-    > (1) Click on the **Hidden Box** to the right of Action Reason.       <br>
+    > (1) Click on the **Hidden** Box to the right of **Action Reason**.       <br>
 
     > (2) Then select **Visible**.
 
@@ -196,7 +200,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     > (1) Enter **Adjustment Percentage** in Summary.    <br>
 
-    > (2) Then enter **enter The Adjustment Percentage cannot exceed 15%.**
+    > (2) Then enter enter **The Adjustment Percentage cannot exceed 15%.**
 
     ![Create Validation](images/image022.png)
 
@@ -214,7 +218,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     Redwood offers a quick way to review your changes as they appear in the application.
 
-    > (1) Click on the **play icon** in the upper right of  the screen.   <br>
+    > (1) Click on the **Review icon** in the upper right of  the screen.   <br>
 
     > (2) A new window will pop up.
 
@@ -226,7 +230,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     > (1) Pick a **future date** for when the salary will start. <br>
 
-    > (2) Select **Salary Change** under Action Name. <br>
+    > (2) Select **Change Salary** under Action Name. <br>
 
     > (3) Select **Career Progression** for why you are changing the salary. <br>
 
@@ -236,7 +240,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 17.  Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible while Action Reason is now Visible.
 
-    Now we will test the validation for the Next Salary Review Date.
+    Now we will test the validation for the Adjustment Amount Percentage.
 
     > Enter an Adjustment salary that is greater than 15%.
 
