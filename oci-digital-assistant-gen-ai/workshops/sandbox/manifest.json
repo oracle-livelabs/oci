@@ -1,15 +1,11 @@
 {
-    "workshoptitle": "The Title of the Workshop is Defined in the Manifest File",
+    "workshoptitle": "Learn how to add Generative AI as a Skill in Oracle Digital Assistant",
     "help": "william.r.jones@oracle.com",
     "tutorials": [
         {
-            "title": "Introduction",
-            "description": "The Introduction is always first. The title and contents menu title match for the Introduction.",
-            "filename": "../../introduction/introduction.md"
-        },
-          {
-            "title": "Lab 1: Setup the Environment",
-            "filename": "../../setup/setup.md"
+            "title": "Learn how to add Generative AI as a Skill in Oracle Digital Assistant",
+            "description": "Integrate generative AI into your skill by connecting it to a large language model.",
+            "filename": "index.md"
         },
         {
             "title": "Need Help?",
