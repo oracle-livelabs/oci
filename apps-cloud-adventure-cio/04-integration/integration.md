@@ -28,7 +28,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 1. We’re going to login to Fusion Cloud ERP
 
-    > Navigate to your Oracle Cloud ERP Demo Environment Instance and sign in with the Username and Password provided
+    > Navigate to your Oracle Fusion Cloud Demo Environment Instance and sign in with the Username and Password provided
 
     ![Application login page](images/image001.png)
 
@@ -61,7 +61,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Manage Suppliers View](images/image005.png)  
 
-    > (1) Type the name of your assigned supplier, **e.g. “a1…”** <br>
+    > (1) **Search** for a supplier using the user id number (e.g. 01, 02).  <br>
 
     > (2) Click the **Search** button
 
@@ -72,26 +72,26 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
     ![Search Results](images/image007.png)  
 
 
-4. We’re going to navigate to the Supplier’s addresses tab and edit that information 
+4. We’re going to navigate to the Supplier’s addresses tab.
    
     > Click the **Addresses** tab
 
     ![Suppliers View](images/image008.png)  
-
-5. **Note:** If a supplier has multiple addresses, select an address that has "Address Name" filled in.
 
     > Click **Edit** to edit the Supplier’s address
 
     ![Edit Suppliers View](images/image009.png)  
 
 
-6. We’re going to add a Suite (999) to the Supplier’s address information that was missing before.
+5.   **Note:** We’ll only edit the Supplier’s second line of address information, i.e. ‘Address Line 2’ text entry field. 
+
+    We’re going to add a Suite (e.g. 123) to the Supplier’s address information that was missing before.
 
     > Click in the **Address Line 2** text entry field 
 
     ![Edit Suppliers View](images/image010.png)
 
-    > Type new information into **Address Line 2**, e.g. ‘Suite 999’
+    > Type new address information into **Address Line 2**, e.g. ‘Suite 123’
 
     ![Edit Suppliers View](images/image011.png)
 
@@ -103,6 +103,8 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Edit Suppliers View](images/image013.png)
 
+6.  **Note:** We’ve modified our demo environment’s approval workflow for internal supplier profile changes to be automatically approved for            demonstration purposes, however this can be configured based on each customer’s business requirements
+
     > Click **OK** on the resulting confirmation box. 
 
     ![Suppliers View](images/image014.png)
@@ -113,7 +115,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 
 
-7. Let’s navigate back to the Fusion Cloud home screen.
+7. Let’s navigate back to the Oracle Fusion Cloud home screen.
 
     > Click the **Home** button
 
@@ -123,7 +125,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 8. Now, we’re going to discover how we can audit several pieces of information that’s relevant to our cloud adventure today: user access (sign in / sign out) as well as supplier address information changes via REST API integrations.
 
-    > At the home screen, navigate to **Integration** tab
+    > At the home screen, Navigate to **Integration** tab
 
     ![Home](images/image017.png)
 
@@ -146,7 +148,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Audit Report REST Endpoints](images/image020.png)    
 
-    > Click **Jump to** and select **Examples**
+    > **Click** the drop-down menu icon **‘Jump to’** and select the **‘Examples’** menu option
 
     ![Get an audit report](images/image021.png)   
 
@@ -156,7 +158,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 
 
-10. Let’s now return to Fusion Cloud so we can audit the supplier address change we made previously using the Audit REST APIs we’ve just learned about.
+10. Let’s now return to Oracle Fusion Cloud so we can audit the supplier address change we made previously using the Audit REST APIs we’ve just learned about.
 
     > Navigate back to the Fusion Cloud ERP browser tab.
 
@@ -174,18 +176,35 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 
 
-11. Now we’re going to use the Audit REST API we just reviewed to extract auditable information from Fusion Cloud via a custom Oracle APEX application integrated with our demo environment
+11. Now we’re going to use the Audit REST API we just reviewed to extract auditable information from Oracle Fusion Cloud via a custom Oracle APEX application that has been configured to be pre-integrated with our demo environment via Audit REST APIs.
 
     > Click on **Administration** 
 
     ![API Application Administration](images/image025.png)
+
+    ![Stop](images/stop.png)
+
+    **Notice the embedded link in the Administration screen ‘Cloud Adventure Welcome Site’.**
+    
+    **Click this link.  Then, Copy the “ERP Instance” text and past in the API Integration Application** 
     
 
 12. We’re going to authenticate our integration APEX application with the same ERP instance name and password we used to login into Fusion Cloud
 
-    > Type in the provided **ERP Instance** and **ERP Password** credentials on your Cloud Adventure note card 
+    > Click the embedded link **‘Cloud Adventure Welcome Site’** below ‘Credentials’
 
     ![credentials ](images/image026.png)
+
+    > **Scroll down**, and Copy the **‘ERP Instance’** text from the new browser tab **‘Cloud Adventure: Office of the CIO’ Section 4 Integration’**
+
+    ![credentials ](images/image100.png)
+
+    > **Return** to the API Integration Application browser tab<br>
+    
+    > **Type in** or **Paste** the provided **‘ERP Instance’** and **‘ERP Password’** credentials you just copied from the new browser tab **‘Cloud Adventure: Office of the CIO’ Section ‘4 Integration’**
+
+
+    ![credentials ](images/image101.png)
 
     > Click the **Save** button
 
@@ -237,6 +256,14 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Audit History](images/image037.png)
 
+    > **Click** the **‘Business Object’** drop-down menu icon.
+
+    ![Audit History](images/image102.png)
+
+    > **Click** the **‘Supplier Address’** down-down menu option
+
+    ![Audit History](images/image103.png)
+
     > Click the **Get Audit History** button
 
     ![Audit History](images/image038.png)
@@ -245,7 +272,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Audit History Results](images/image039.png)
 
-    > Scroll down, Click / Expand the ‘Demo Flow’ drop-down tab
+    > Scroll down, Click / Expand the **‘Demo Flow’ drop-down tab**
 
     ![Audit History Results](images/image040.png)
 
@@ -263,7 +290,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Stop](images/STOP.png)
 
-    **Take a second to congratulate yourself. You’ve successfully used the included Fusion Integration toolset, specifically APIs, to get data out of Oracle Cloud and into a 3rd party system.**
+    **Take a second to congratulate yourself. You’ve successfully used the included Oracle Fusion Cloud Integration toolset, specifically REST APIs, to get audit data out of Oracle Cloud and into a 3rd party system.**
 
     **You can leverage vast, out of the box functionality to manage integrations without vendor assistance. Oracle Fusion Cloud Applications integrate and interoperate with other cloud and on-premises applications using built-in File-based Loader, Spreadsheet Loader, SOAP- and REST-based Web Services, and Data Extract features.**
 	
