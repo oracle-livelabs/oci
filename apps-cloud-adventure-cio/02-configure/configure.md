@@ -61,27 +61,31 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     You need to enter the required information before you can move to the next screen.
 
-    > (1) Enter a **future date** for **when does the salary will start.** <br>
+    > (1) Enter a **duture date** for **When does the salary will start.** <br>
 
     > (2) Select **Change Salary** for **What is the action name.** <br>
 
-    > (3) Select **Career Progression** for why you are changing the salary. <br>
+    > (3) Select **Career Progression** for **why you are changing the salary for Barrett Reed?** <br>
 
     > (4) Click **Continue** once complete.
 
     ![Change Salary Page 2nd page](images/image006.png)
 
 
-4. You will now create new rule that hides Annualized Full-Time Salary because it is repetitive.  You will also hide Compa-Raito since this is mainly used by HR.  
+4. You will now create new rule that hides Annualized Full-Time Salary because it is repetitive.  You will also hide Compa-Raito since this is mainly used by HR.  You also want to show the action reason in this sction of the Change Salary Form.
 
-    > (1) Click on **top right corner CHANGE**.  <br>
+    ![Change Salary Page 2nd page](images/image007.png)
+
+5. Now you will enter the Visual Builder Studio.
+
+    > (1) Click on **The CO Image** ![CO Image](images/Icon02_CO.png).  <br>
 
     > (2) Then select **Edit Page in Visual Builder Studio**.
 
-    ![Change Salary Page 2nd page](images/image006.png)
+    ![Change Salary Page 2nd page](images/image008.png)
 
 
-5. A project has already been created for this exercise (GET RID OF STEP 5)
+6. A project has already been created for this exercise (GET RID OF STEP 5)
 
     > (1) Click on the **Create Change Salary for Non-HR** project.  <br>
 
@@ -90,7 +94,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Select Project](images/image007.png)
 
 
-6.  Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the app dev lifecycle: design, build, test, and deploy.
+7.  Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the app dev lifecycle: design, build, test, and deploy.
 
     Now we will use VB Studio to make the required changes.
 
@@ -99,7 +103,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![VB Studio](images/image008.png)
 
 
-7. First we will create a new form rule for change salary ENCASE BOX FOR ALL RULES
+8. First we will create a new form rule for change salary ENCASE BOX FOR ALL RULES
 
     > (1) Click on the **+ icon** to add a new form rule    <br>
 
@@ -108,7 +112,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Fields and Regions](images/image009.png)
 
 
-8.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
+9.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
 
     Now we will add the conditions that applies this rule to all non-HR personnel
 
@@ -128,7 +132,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Fields and Regions](images/image011.png)
 
 
-9.  Now you want to add and hide fields.
+10.  Now you want to add and hide fields.
 
     > Click on the **Expnd Icon** to the left of Salary to expand the salary section.
 
@@ -136,7 +140,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-10.  First you want to show the Action Reason from the First Screen in the 2nd screen with all the detailed Salary Data
+11.  First you want to show the Action Reason from the First Screen in the 2nd screen with all the detailed Salary Data
 
     > (1) Click on the **Hidden** Box to the right of **Action Reason**.       <br>
 
@@ -146,7 +150,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-11. Now you will hide Annualized Full-Time Salary and Compa-Ratio
+12. Now you will hide Annualized Full-Time Salary and Compa-Ratio
 
     > (1) Click on the **Box** next to Annualized Full-Time Salary <br>
 
@@ -158,7 +162,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-12. Now you will add a validation step for the Adjustment Percentage.  We do not want users to enter in a Salary Percentage Greater than 15%
+13. Now you will add a validation step for the Adjustment Percentage.  We do not want users to enter in a Salary Percentage Greater than 15%
 
     > Click on **Validate Field Values**
 
@@ -175,7 +179,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Validation](images/image017.png)
 
 
-13.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
+14.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
 
     > Click on the **Edit Icon.**
 
@@ -198,7 +202,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Create Validation](images/image021.png)
 
 
-14.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
+15.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
 
     > (1) Enter **Adjustment Percentage** in Summary.    <br>
 
@@ -216,7 +220,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     
 
 
-15.  Well done.  You have configured a new rule for Non-HR personnel.
+16.  Well done.  You have configured a new rule for Non-HR personnel.
 
     Redwood offers a quick way to review your changes as they appear in the application.
 
@@ -226,7 +230,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Create Validation](images/image024.png)
 
-16.  You have reentered the Change Salary Form.  Let’s review the changes.
+17.  You have reentered the Change Salary Form.  Let’s review the changes.
 
     You need to enter the required information before you can move to the next screen.
 
@@ -240,7 +244,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Change Salary Screen 1](images/image025.png)
 
-17.  Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible while Action Reason is now Visible.
+18.  Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible while Action Reason is now Visible.
 
     Now we will test the validation for the Adjustment Amount Percentage.
 
@@ -248,18 +252,18 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Change Salary Screen 1](images/image026.png)
 
-18.  The system gives us a warning that the increase in salary is outside the worker’s salary range.  You will ignore this warning.
+19.  The system gives us a warning that the increase in salary is outside the worker’s salary range.  You will ignore this warning.
 
     > Click **Continue.**
 
     ![Change Salary Screen 2](images/image027.png)
 
-19.  The system will not allow the user to continue because the Adjustment Salary percentage exceeds 15%
+20.  The system will not allow the user to continue because the Adjustment Salary percentage exceeds 15%
 
     ![Change Salary Screen 2 error message](images/image028.png)
 
 
-20. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+21. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:10) 
 
