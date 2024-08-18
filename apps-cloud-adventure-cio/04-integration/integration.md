@@ -55,7 +55,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
     ![Show More View](images/image004.png)
 
 
-3. Next, we’re going to search for the Supplier you’ve been assigned, e.g. “A1…”
+3. Next, we’re going to search for the Supplier you’ve been assigned, e.g. “01…”
 
     > Click in the **Keywords** search bar
 
