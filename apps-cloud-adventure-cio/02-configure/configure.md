@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Oracle offers hundreds of prebuilt pages, workflows and forms “out of the box” as part of the Oracle Fusion Suite of applications.  Many of our customers want to configure these pages and workflows to meet their specific business needs.  You can unify your experience in our applications by using Redwood.
+Oracle offers hundreds of prebuilt pages, workflows and forms “out of the box” as part of the Oracle Fusion Cloud.  Many of our customers want to configure these pages and workflows to meet their specific business needs.  You can unify your experience in our applications by using Redwood.
 
 Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.   
 
@@ -38,12 +38,12 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![My Team Page](images/image002.png)
 
-    > Click on the **X Icon** ![X](images/icon_X.png) to remove the Direct Reports Filter because Casey Brown does not have any direct reports.  This action allows us to see other people.
+    > Click on the **X Icon** ![X](images/Icon01_X.png) to remove the Direct Reports Filter because your user does not have any direct reports.  This action allows us to see other people.
 
     ![My Team Page](images/image003.png)
 
 
-2. Now you will enter the Change Salary process so we can make the required changes using Visual Builder Studio.  Now you will select a person so you can enter the Change Salary form.
+2. Now you will enter the Change Salary Form so we can make the required changes using Visual Builder Studio.  Now you will select a person so you can enter the Change Salary form.
 
     > (1) Search for **Barrett Reed** in the search box. (add 1 and 2) <br>
 
@@ -52,22 +52,24 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Change Salary Page](images/image004.png)
 
-3. Click continue (Journy)
-
 
 3. You have entered the Change Salary Form.  Now you will quickly review the current configuration of the Change Salary Form.
 
+   > Click Continue
+
+    ![Change Salary Page 1st page](images/image005.png)
+
     You need to enter the required information before you can move to the next screen.
 
-    > (1) Pick a **future date** for when the salary will start. CHANGE TO FIELD NAMES ALL 4 STEPS <br>
+    > (1) Enter a **future date** for **when does the salary will start.** <br>
 
-    > (2) Select **Change Salary** under Action Name. <br>
+    > (2) Select **Change Salary** for **What is the action name.** <br>
 
     > (3) Select **Career Progression** for why you are changing the salary. <br>
 
     > (4) Click **Continue** once complete.
 
-    ![Change Salary Page 1st page](images/image005.png)
+    ![Change Salary Page 2nd page](images/image006.png)
 
 
 4. You will now create new rule that hides Annualized Full-Time Salary because it is repetitive.  You will also hide Compa-Raito since this is mainly used by HR.  
