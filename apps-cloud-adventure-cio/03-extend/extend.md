@@ -264,7 +264,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
     > (1) Enter **CA&#95;##&#95;HCM_GJ** in the **search** field, **where ## is your assigned user number**. <br>
     ![View Caution](images/CautionAboutUserNumbers.png)
 
-    > (2) Click the **Magnifying Glass** icon or press the **Enter** key to execute the search.
+    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/Icon01_search.png) icon or press the **Enter** key to execute the search.
 
     ![View Checklist](images/image202.png)  
 <br>
@@ -285,7 +285,8 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 5. You don’t have any tasks yet, so you can create one.  The task is where you will define the connection to the external LLM.
 
-    > (1) Click the **+** icon.
+    > (1) Click the **+** ![Plus Icon](images/Icon02_Plus.png) icon. <br>
+
     > (2) Click **Create Task** from the resulting popup.  
 
     ![Create Task](images/image205.png)  
@@ -311,7 +312,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 8. The next step is the configuration the Compensation Info UI to leverage your Guided Journey. To do that, you can head back to the home page.
 
-   > (1) Click on the **Home** icon on the top icon bar.
+   > (1) Click on the **Home** ![Home Icon](images/Icon03_home.png)  icon on the top icon bar.
     ![Enter Task Info](images/image208.png)  
 <br>
 
@@ -325,7 +326,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 10. There are no matching workers, so you can unselect Direct reports to broaden our search.
 
-   > (1) Click the **X** next to Direct Reports under the search field.
+   > (1) Click the **X** ![X Icon](images/Icon04_X.png) next to Direct Reports under the search field.
 
    ![Enter Task Info](images/image210.png)  
 <br>
@@ -358,7 +359,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 14. You will now see the Compensation Benchmarking link available on the screen.  If you recall, Compensation Benchmarking as the name of the Task we defined earlier and is your link to the User Defined Configuration call to the LLM.
 
    > (1) Confirm that the **Compensation Benchmarking** link is now visible. <br>    
-   > (2) Click the **Preview** icon in the top right of the screen.
+   > (2) Click the **Preview** ![Preview](images/Icon06_preview.png) icon in the top right of the screen.
 
    ![Create Task](images/image214.png)  
 <br>

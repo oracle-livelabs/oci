@@ -67,7 +67,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Keywords search bar](images/image006.png)  
 
-    > Click the **Edit** button in the ‘Search Results’ area
+    > Click the **Edit** ![Edit Icon](images/Icon01_edit.png)  button in the ‘Search Results’ area
 
     ![Search Results](images/image007.png)  
 
@@ -78,7 +78,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Suppliers View](images/image008.png)  
 
-    > Click **Edit** to edit the Supplier’s address
+    > Click **Edit** ![Edit Icon](images/Icon01_edit.png) to edit the Supplier’s address
 
     ![Edit Suppliers View](images/image009.png)  
 
@@ -117,7 +117,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 7. Let’s navigate back to the Oracle Fusion Cloud home screen.
 
-    > Click the **Home** button
+    > Click the **Home** ![Home Icon](images/Icon02_home.png) button
 
     ![Suppliers View](images/image016.png)
 
@@ -217,7 +217,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 13. After authenticating, we’ll navigate to the Sign on Audit area to review which users have been accessing Fusion Cloud, along with other pertinent audit details.
 
-    > Click the **Hamburger, or triple bar** menu button
+    > Click the **Hamburger, or triple bar** ![Hamburger Icon](images/Icon03_hamburger.png) menu button
 
     ![credentials](images/image029.png)
 
@@ -256,7 +256,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Audit History](images/image037.png)
 
-    > **Click** the **‘Business Object’** drop-down menu icon.
+    > **Click** the **‘Business Object’** ![Business OBJ drop down](images/Icon04_downarrow.png) drop-down menu icon.
 
     ![Audit History](images/image102.png)
 
