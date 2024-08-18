@@ -2,7 +2,7 @@
 
 ## Introduction
 
-We're delighted to take you on a journey that will uncover the incredible capabilities of Fusion Cloud's REST API integration tools for auditing supplier address changes. This adventure is designed to offer a holistic understanding of how these tools can streamline your supply chain security management, providing an efficient way to keep track of supplier information changes.
+We're delighted to take you on a journey that will uncover the incredible capabilities of Fusion Cloud's REST API integration tools for auditing supplier address changes. This adventure is designed to offer a holistic understanding of how these integration tools can facilitate your Oracle Fusion Cloud integration requirements and access to business object data via REST APIs.
 
 In the office of the Chief Information Officer (CIO), supply chain management is a complex web of interconnected processes. Our goal is to navigate this complexity and equip you with the skills to audit supplier address changes effectively. You'll learn how to leverage the power of Fusion Cloud's REST APIs, a game-changing solution that will revolutionize your operations.
 
@@ -78,7 +78,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Suppliers View](images/image008.png)  
 
-    > Click **Edit** ![Edit Icon](images/Icon01_edit.png) to edit the Supplier’s address
+    > Click the **Edit** ![Edit Icon](images/Icon01_edit.png) icon to edit the Supplier’s address
 
     ![Edit Suppliers View](images/image009.png)  
 
