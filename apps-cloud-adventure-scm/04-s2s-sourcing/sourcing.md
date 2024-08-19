@@ -56,7 +56,7 @@ In this activity, you will:
 
 5. In order to see more information about this negotiation you need to utilize the analytical tools available through Cloud Procurement. To do this, select analyze negotiation from the menu options.  
 
-    > First, click **Analyze**.
+    > First, click **Analyze**. 
 
      Then, select **Analyze Negotiation** from the drop-down menu.
 
