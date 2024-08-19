@@ -13,7 +13,8 @@ In this lab, you will:
 
 * Use Visual Builder to build a new Supplier Screen.
 
-**ADD PROCESS FLOW IMAGE FROM CHARLIE**
+![New Screen Process Flow](images/SupplierScreenOBJs.png)
+
 
 * Create a Guided Journey that leverages an external LLM
 
