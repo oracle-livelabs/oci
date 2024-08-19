@@ -20,12 +20,32 @@
             "filename": "../../deploy-cluster/deploy-cluster.md"
         },     
         {
-            "title": "Lab 3: Ingest data and search",
+            "title": "Lab 3: Ingest data and search (Optional)",
             "filename": "../../ingest-and-search/ingest-and-search.md"
         },             
         {
             "title": "Lab 4: Visualize data with OpenSearch Dashboards",
             "filename": "../../visualize/visualize.md"
+        },
+        {
+            "title": "Lab 5: Keyword Search(BM25)",
+            "filename": "../../Keyword-search(BM25)/keyword-search.md"
+        },
+        {
+            "title": "Lab 6: Semantic Search",
+            "filename": "../../Semantic-search/semantic-search.md"
+        },
+        {
+            "title": "Lab 7: Conversational search with RAG",
+            "filename": "../../Conversational-with-RAG/conversational-with-RAG.md"
+        },
+        {
+            "title": "Lab 8: Observability in OpenSearch",
+            "filename": "../../Observability/observability.md"
+        },
+        {
+            "title": "Lab 9: SIEM in OpenSearch",
+            "filename": "../../SIEM/siem.md"
         },
         {
             "title": "Need Help?",

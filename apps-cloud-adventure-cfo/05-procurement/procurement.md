@@ -22,25 +22,25 @@ In this activity, you will:
 
   You need to figure out why the Automatic Award Recommendation has elected not to award EIP Inc. this negotiation. You will need to go to the negotiations page.
 
-    > Navigate to the **Procurement** tab and select **Negotiations**
+    > Navigate to the **Procurement** tab and select **Negotiations**.
 
-    ![Award](images/1-strategic-procurement.png)
+    ![Award](images/1-task1-strategic-procurement-negotiations-sourcing.png)
 
 2. 
 
   This is the negotiations dashboard that has Infolets with insights into sourcing programs and activity. This information is drillable to give the user an intuitive experience. You need to drill into Award Completed to analyze the recent sourcing negotiation.
 
-    > In the **‘My Negotiations’** Infolet select the **‘Award Completed’** piece of the pie chart (Purple)
+    > In the **‘My Negotiations’** Infolet select the **‘Award Completed’** piece of the pie chart (Purple).
 
-    ![negotiations](images/2-strategic-procurement.png)
+    ![negotiations](images/2-task1-strategic-procurement-negotiations-sourcing.png)
 
 3. 
 
   You could drill into the negotiation details by clicking the hyperlink. However, you need to analyze the individual supplier responses, so you need to click the monitor icon.
 
-    > Click the **‘Monitor’** icon for Negotiation **31796**
+    > Click the **‘Monitor’** icon for Negotiation **31803**.
 
-    ![drill](images/3-strategic-procurement.png)
+    ![drill](images/3-task1-strategic-procurement-negotiations-sourcing.png)
 
 4. 
 
@@ -48,59 +48,48 @@ In this activity, you will:
   Notice EIP was ranked first, but wasn’t awarded.  Let’s dive deeper to find why.  
   We can use the analytical tools available through Cloud Procurement to analyze further.
   
-    > Select **Actions** drop-down menu, then click **Analyze**, select **Analyze Negotiation** from the drop-down menu
+    > Select **Actions** drop-down menu, then click **Analyze**, select **Analyze Negotiation** from the drop-down menu.
     
-      ![change](images/4-strategic-procurement.png)
+      ![change](images/4-task1-strategic-procurement-negotiations-sourcing.png)
 
-1. 
+5. 
 
-  With analytics built into the sourcing process, we see awards by supplier, total savings, and savings by line item.  
-  At the bottom of the page are supplier response information where we can pull in response details to see why EIP Inc wasn’t awarded this negotiation despite the highest savings potential.
+  With analytics built into the sourcing process, we see awards details, savings analysis, and supplier response information. 
 
-    > Click **Scroll-bar** down to bottom of page
+    > Click **Scroll-bar** down to bottom of page.
 
-    ![Scroll bar](images/5-strategic-procurement.png)
+    ![Scroll bar](images/5-task1-strategic-procurement-negotiations-sourcing.png)
 
 
 6. 
 
-     > Click the **white space next to ‘Supplier’** as indicated (in blue).
+    Notice EIP is ranked first, but has lowest score.  
 
-     > Click **Analyze**
+     > Click the **score ‘45’** to access EIP’s response details.
    
-    ![Scroll bar](images/6-strategic-procurement.png)
+    ![Scroll bar](images/6-task1-strategic-procurement-negotiations-sourcing.png)
 
 7. 
 
-  Additional built-in analytics provide further insights about savings and response scores.  
-  As you scroll down you see a summary of response elements.  
-  To drill deeper and find out specifically why EIP was not awarded, we can evaluate the response details.  
-  To do this:
+  Now we see how the Procurement system AI scored a zero and automatically disqualified EIP because they are missing a required certification which was set as pre-built knockout criteria.
 
-    > Select the **Actions** drop-down and click “**Add or Remove Response Elements**”
-  
-    > Next, highlight “**Requirements: All Levels**” and click the single **right arrow icon**
-  
-    > Click OK
+    > Click the **attachment icon** to access the internal note left by the evaluator.
 
-    ![analysis](images/7a-strategic-procurement.png)
+    ![analysis](images/7-task1-strategic-procurement-negotiations-sourcing.png)
 
-    ![analysis](images/7b-strategic-procurement.png)
+    > Click **Done**.
+
+    ![analysis](images/8-task1-strategic-procurement-negotiations-sourcing.png)
 
 8. 
 
-  Now we can see how the Procurement system AI has automatically disqualified EIP because they are missing a required certification. 
-     
-    ![Procurement](images/8-strategic-procurement.png)
+  Congratulations!  You’ve completed this part of the Adventure!
+
+    > Click the **‘Home’** Icon to return to Procurement springboard.
+
+    ![Procurement](images/9-task1-strategic-procurement-negotiations-sourcing.png)
 
 9. 
-
-  Select the ‘Home’ icon in the top ribbon to navigate back to the Procurement springboard
-     
-    ![Procurement](images/9-strategic-procurement.png)
-
-
-10. 
     
   Adventure awaits, show what you know, and rise to the top of the leader board!!!
 
@@ -119,7 +108,7 @@ In this activity, you will:
 
     > Go to **Procurement**, then click **‘Purchase Requisitions’**
 
-    ![Procurement](images/1-task2-self-service.png)
+    ![Procurement](images/1-task2-startegic-procurement-self-service-procurement.png)
 
 2. 
 
@@ -219,4 +208,4 @@ In this activity, you will:
 # Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services
 * **Contributors** -  Steve Quinton, Team Lead – Risk Solutions 
-* **Last Updated By/Date** - Kevin Lazarz, August 2023
+* **Last Updated By/Date** - Ramona Magadan, Technical Program Manager, Database Product Management, August 2024

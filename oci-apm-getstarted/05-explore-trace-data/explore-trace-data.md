@@ -86,7 +86,7 @@ Estimated time: 15 minutes
 
 ## Task 3: Drill down to the trace Details
 
-1. Click the black triangle icon on the right side of the Query view. A list of queries used in the session will show in a pulldown. Select the previous query executed.
+1. Click the clock icon on the right side of the Query view. A list of queries used in the session will show in a pulldown. Select the previous query executed. Click **Run**.
 
 	![Oracle Cloud, Trace Explorer](images/1-12-select-past-query.png " ")
 
@@ -180,7 +180,7 @@ Estimated time: 15 minutes
 
 	``` bash
 	<copy>
-	show spans histogram(spanDuration, 2000,10000,10) as Bucket, min(spanDuration) as "Min", max(spanDuration) as "Max", count(*) as count, avg(spanDuration) as Avg  where operationName='/frontStore/checkout' group by histogram(spanDuration, 2000,10000,10) order by max(spanDuration) asc
+	show (spans) histogram (SpanDuration, 1, 20000, 9) as Bucket, count(*) as Count, min(spanDuration) as Min, max(spanDuration) as Max where dbOracleSqlId = '2t706pcc6jgbw'group by histogram (SpanDuration, 1, 20000, 9) order by min(spanDuration) asc
 	</copy>
 	```
 
@@ -220,4 +220,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, May 2023
+* **Last Updated By/Date** - Yutaka Takatsu, June 2024
