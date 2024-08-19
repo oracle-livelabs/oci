@@ -28,7 +28,7 @@ In this activity, you will:
 
 
 
-2. The negotiations dashboard has Infolets with insights into sourcing programs and activity. This information is drillable to give the user and intuitive experience. You need to drill into Award Completed to analyze the recent sourcing negotiation.
+2. The negotiations dashboard has Infolets with insights into sourcing programs and activity. This information is drillable to give the user an intuitive experience. You need to drill into Award Completed to analyze the recent sourcing negotiation.
 
     > In the **My Negotiations** Infolet select the **Award Completed** piece of the pie chart (Purple)
 
@@ -36,7 +36,7 @@ In this activity, you will:
 
 
 
-3. You could drill into the negotiation details by clicking the hyperlink. However, you need to analyze the individual supplier responses, so you need to click the monitor icon.
+3. You could drill into the negotiation details by clicking the hyperlink on the negotiation number. However, you need to analyze the individual supplier responses, so you need to click the monitor icon.
 
     > Click the **Monitor** icon for Negotiation 31796
 
@@ -46,7 +46,7 @@ In this activity, you will:
 
 4. Here is the initial monitor page. There is some analytical information available at the top of the page. This includes the current value, potential savings, and supplier response amounts.  
     
-    At the bottom of the page are the suppliers. Four were invited, and three responded. You can see the details to the right. Once again you will notice EIP was ranked first but still wasn’t awarded so you must dive deeper.
+    At the bottom of the page are the suppliers. Five were invited, and three responded. You can see the details to the right. You will notice EIP was ranked first but still wasn’t awarded so you must dive deeper.
 
     > Select **Actions** drop down in the top ribbon
 
@@ -69,7 +69,7 @@ In this activity, you will:
     ![Image006](images/image006.png)
     ![Image007](images/image007.png)
     
-    At the bottom of the page are the suppliers. Four were invited, and three responded. You can see the details to the right. Once again you will notice EIP was ranked first but still wasn’t awarded so you must dive deeper.
+    At the bottom of the page are the suppliers. Five were invited, and three responded. You can see the details to the right. Once again you will notice EIP was ranked first but still wasn’t awarded so you must dive deeper.
 
     > To highlight all the supplier responses, click the **white space** next to ‘Supplier’ as indicated.
 

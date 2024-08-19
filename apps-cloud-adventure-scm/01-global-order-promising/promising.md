@@ -48,7 +48,9 @@ In this activity, you will:
 
 4. All information regarding a Sales Order can be accessed via this screen, including its current state, and all fulfillment details.
 
-    > Click on **Actions**, and then **Switch to Fulfillment View.**
+    > (1) Click on **Actions.**=
+    
+    > (2) Then **Switch to Fulfillment View.**
 
     ![image004](images/image004.png)
 
@@ -111,7 +113,7 @@ In this activity, you will:
 
 11. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:5) 
+    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:3) 
 
 
 

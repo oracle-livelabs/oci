@@ -47,8 +47,6 @@ In this activity, you will:
 
 
 4. Using comprehensive search and sorting capabilities you can create and save inquiries to find any model you need to work on at any given moment. 
-    
-    At the bottom of the page are the suppliers. Four were invited, and three responded. You can see the details to the right. Once again you will notice EIP was ranked first but still wasn’t awarded so you must dive deeper.
 
     > Select **Supplier Assessment Score** hyperlink under the Qualification Model column.
 
@@ -60,9 +58,9 @@ In this activity, you will:
 
 5. When you drill into the model you will be provided all the details of the selected model. This is where you can set up, manage, and change rules and attributes for the qualification model
 
-    > First, review the general information to ensure you are editing the correct model.
+    > (1) First, review the general information to ensure you are editing the correct model. <br>
 
-    Then, select the **Areas and Outcomes** icon from the left margin.
+    > (2) Then, select the **Areas and Outcomes** icon from the left margin.
 
     ![Image005](images/image006.png)
 
