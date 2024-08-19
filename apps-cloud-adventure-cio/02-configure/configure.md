@@ -302,7 +302,7 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 
 Oracle Visual Builder Studio (or VB Studio, for short) is an integrated development platform that helps your team effectively plan and manage your work throughout the application's lifecycle. It combines the simplicity of a visual development environment with powerful management tools to streamline application development and deliver modern, innovative user experiences.
 
-In this example, you used Redwood, Oracle’s next-generation design system, to quickly and efficiently enhance the Change Salary Page
+In this example, you used Redwood, Oracle’s next-generation design system, to quickly and efficiently enhance the Change Salary Form.
 
 
 **You have successfully completed the Activity!**
