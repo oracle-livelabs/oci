@@ -24,9 +24,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 ## Task 1: Enhance the Change Salary Experience
 
-1. You are the Redwood expert for your organization.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently design a Change Salary Interface for Non-HR mangers.
-
-    Change Salary is a dynamic form that allow you to create pages with user information that appears based on conditions you configure.
+1. You are the Redwood expert for your organization.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently design a Change Salary Interface for Non-HR mangers.  Change Salary is a dynamic form that allow you to create pages with user information that appears based on conditions you configure.
 
     You will first navigate to the Change Salary Page.
 
@@ -58,7 +56,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
    ![Change Salary Page](images/image005.png)
 
-    > (1) Enter a **future date** for **When does the salary will start.** <br>
+    > (1) Enter a **future date** for **When does the salary will start?** <br>
 
     > (2) Select **Change Salary** for **What is the action name.** <br>
 
@@ -77,9 +75,9 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 5. Now you will enter the Visual Builder Studio.
 
-    > (1) Click on **The** ![CO Image](images/Icon02_CO.png) **Image** in the top right corner of the screen.  <br>
+    > (1) Click on the ![CO Image](images/Icon02_CO.png) **Image** in the top right corner of the screen.  <br>
 
-    > (2) Then select **Edit Page in Visual Builder Studio**.
+    > (2) Then select **Edit Page in Visual Builder Studio** from the drop down options.
 
     ![Change Salary Page 2nd page](images/image008.png)
 
@@ -132,7 +130,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
      **Note:** This configuration routes the this version of the Change Salary Form to all people who are not assigned to the Human Resource Manager Role
 
 
-10.  Now you want to add and hide fields.
+9.  Now you want to add and hide fields.
 
     > Click on the **Drop Down** ![Drop Down Icon](images/Icon03_dropdown.png) Icon to the left of Salary to expand the salary section.
 
@@ -140,7 +138,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-11.  First you want to the configure the form to hide Annualized Full-Time Salary Field.
+10.  First you want to the configure the form to hide the **Annualized Full-Time Salary** Field.
 
     > (1) Click in the Box in the **Hidden Column** for **Annualized Full-Time Salary Field** row.       <br>
 
@@ -149,7 +147,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Fields and Regions, Conditions](images/image017.png)
 
 
-12. Now you want to the configure the form to hide Compa-Ratio.
+11. Now you want to the configure the form to hide the **Compa-Ratio** field.
 
     > (1) Click in the Box in the **Hidden Column** for **Compa-Ratio** row.       <br>
 
@@ -157,7 +155,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Fields and Regions, Conditions](images/image018.png)
 
-12. Now you will configure the form to show action reason
+12. Now you will configure the form to show the **Action Reason** field.
 
     > (1) Click in the Box in the **Hidden Column** for **Action Reason** row.       <br>
 
@@ -253,7 +251,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     You need to enter the required information before you can move to the next screen.
 
-    > (1) Enter a **future date** for **When does the salary will start.** <br>
+    > (1) Enter a **future date** for **When does the salary will start?** <br>
 
     > (2) Select **Change Salary** for **What is the action name.** <br>
 
