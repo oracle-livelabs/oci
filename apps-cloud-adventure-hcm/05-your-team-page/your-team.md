@@ -25,6 +25,7 @@ The **Team Activity Center** provides managers with the most critical insights, 
 
 2. Choose an employee.
 
+
 3. Then click the **3 dots** located at the right of their name.
 
 4. Select **View more** to open the various tasks that a manager can orchestrate directly from this all in one page. Take a moment to explore the tasks that are available.
@@ -39,17 +40,21 @@ Process a promotion for an employee. Continue working from the Team Activity Cen
 
 1. Choose an employee.
 
+
 2. Then click the **3 dots** located at the right of their name.
+
 
 3. Select **View more** from the available list of actions.
 
     ![My Team](images\myteampage2.png)
+
 
 4. Type **Promote** in the search bar. Click **Promote**.
 
     ![My Team](images\myteampage3.png)
 
 5. Under the **‘Info to include’** section - Toggle the **Salary** button and then click **continue**.
+
 
     ![My Team](images\myteampage4.png)
 
