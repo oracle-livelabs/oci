@@ -18,7 +18,7 @@ Estimated Time: 15 minutes
 
 In this activity, you will use Redwood to incorporate rules and define content surfaced in the application to tailor the user experience. 
 
-![Congigure OBJs](images/Configure_OBJs.png).
+![Configure  OBJs](images/Configure_OBJs.png).
 
 
 
@@ -69,7 +69,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-4. You will now create new rule that hides Annualized Full-Time Salary because it is repetitive.  You will also hide Compa-Raito since this is mainly used by HR.  You also want to show the action reason in this sction of the Change Salary Form.
+4. You will now create new rule that hides Annualized Full-Time Salary because it is repetitive.  You will also hide Compa-Raito since this is mainly used by HR.  You also want to show the action reason in this section of the Change Salary Form.
 
     ![Change Salary Page 2nd page](images/image007.png)
 
@@ -159,7 +159,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     > (1) Click in the Box in the **Hidden Column** for **Action Reason** row.       <br>
 
-    > (2) Then select **Visable** from the options that appear.
+    > (2) Then select **Visible** from the options that appear.
 
     ![Fields and Regions, Conditions](images/image019.png)
 
@@ -217,7 +217,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     > (1) Under **Messages**, Enter **Adjustment Percentage is too high** in **Summary**.    <br>
 
-    > (2) Then enter enter **The Adjustment Percentage nust be lower than 15%** in **Detail**.
+    > (2) Then enter **The Adjustment Percentage must be lower than 15%** in **Detail**.
 
     ![Create Validation](images/image028.png)
 
@@ -225,7 +225,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Create Validation](images/image029.png)
 
-    > (2) Then select **Error** from the drop down options that appear.
+    > (2) Then select **Error** from the drop-down options that appear.
 
     The error configuration will not allow any user who entered incorrect data to submit the change without fixing the error
 
