@@ -38,30 +38,27 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![My Team Page](images/image002.png)
 
-    > Click on the **X Icon** ![X](images/Icon01_X.png) to remove the Direct Reports Filter because your user does not have any direct reports.  This action allows us to see other people.
+    > Click on the ![X](images/Icon01_X.png) **Icon** to remove the Direct Reports Filter because your user does not have any direct reports.  This action allows you to see other people.
 
     ![My Team Page](images/image003.png)
 
 
 2. Now you will enter the Change Salary Form so we can make the required changes using Visual Builder Studio.  Now you will select a person so you can enter the Change Salary form.
 
-    > (1) Search for **Barrett Reed** in the search box. (add 1 and 2) <br>
+    > (1) Search for **Barrett Reed** in the search box. <br>
 
     > (2) Select **Barrett Reed** in the drop down (add new picture). <br>
 
 
     ![Change Salary Page](images/image004.png)
 
+3.  You have entered the Change Salary Form.  Now you will quickly review the current configuration of the Change Salary Form.
 
-3. You have entered the Change Salary Form.  Now you will quickly review the current configuration of the Change Salary Form.
+    > Click **Continue**.
 
-   > Click Continue
+   ![Change Salary Page](images/image005.png)
 
-    ![Change Salary Page 1st page](images/image005.png)
-
-    You need to enter the required information before you can move to the next screen.
-
-    > (1) Enter a **duture date** for **When does the salary will start.** <br>
+    > (1) Enter a **future date** for **When does the salary will start.** <br>
 
     > (2) Select **Change Salary** for **What is the action name.** <br>
 
@@ -69,7 +66,9 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     > (4) Click **Continue** once complete.
 
-    ![Change Salary Page 2nd page](images/image006.png)
+    ![Change Salary Page](images/image006.png)
+
+
 
 
 4. You will now create new rule that hides Annualized Full-Time Salary because it is repetitive.  You will also hide Compa-Raito since this is mainly used by HR.  You also want to show the action reason in this sction of the Change Salary Form.
@@ -78,145 +77,161 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 5. Now you will enter the Visual Builder Studio.
 
-    > (1) Click on **The CO Image** ![CO Image](images/Icon02_CO.png).  <br>
+    > (1) Click on **The** ![CO Image](images/Icon02_CO.png) **Image** in the top right corner of the screen.  <br>
 
     > (2) Then select **Edit Page in Visual Builder Studio**.
 
     ![Change Salary Page 2nd page](images/image008.png)
 
+    The following image appears as Visual Builder Studio is loading.
 
-6. A project has already been created for this exercise (GET RID OF STEP 5)
-
-    > (1) Click on the **Create Change Salary for Non-HR** project.  <br>
-
-    > (2) Then click **Select**.
-
-    ![Select Project](images/image007.png)
+    ![Select Project](images/image009.png)
 
 
-7.  Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the app dev lifecycle: design, build, test, and deploy.
+6.  Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the app dev lifecycle: design, build, test, and deploy.
 
-    Now we will use VB Studio to make the required changes.
+    Now we will use VB Studio to make the required changes to the Change Salary Form.
 
     > Click on **Configure Fields and Regions**.
 
-    ![VB Studio](images/image008.png)
+    ![VB Studio](images/image010.png)
 
 
-8. First we will create a new form rule for change salary ENCASE BOX FOR ALL RULES
+7. First we will create a new form rule for change salary.
 
-    > (1) Click on the **+ icon** to add a new form rule    <br>
+    > Click on the ![+ Icon](images/Icon05_plus.png) **Icon** to add a new form rule.
 
-    > (2) Enter **Change Salary Non-HR** in label
+    ![Fields and Regions](images/image011.png)
 
-    ![Fields and Regions](images/image009.png)
+    > (1) Enter **Change Salary Non-HR** in label. <br>
+
+    > (2) Click on **Create**.
+
+    ![Fields and Regions](images/image012.png)
 
 
-9.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
+8.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
 
     Now we will add the conditions that applies this rule to all non-HR personnel
 
 
     > Click on the **Edit button.**
 
-    ![Fields and Regions](images/image010.png)
+    ![Fields and Regions](images/image013.png)
+    
+    > (1) Click on **contains** in the User Roles Row. <br>
 
+    > (2) Select **does not contain** from the drop down options.  
 
+    ![Fields and Regions](images/image014.png)
 
-    > (1) In conditions, change the box to the right of User Roles from **contains** to **does not contain.**     <br>
+    > Then enter the **Human Resource Manager** role in the right most box.
 
-    > (2) Then enter the **Human Resource Manager** role in the right most box.
+    ![Fields and Regions](images/image015.png)
 
-    This configuration routes the current configuration to all people who are not assigned to the Human Resource Manager Role
-
-    ![Fields and Regions](images/image011.png)
+     **Note:** This configuration routes the this version of the Change Salary Form to all people who are not assigned to the Human Resource Manager Role
 
 
 10.  Now you want to add and hide fields.
 
-    > Click on the **Expnd Icon** to the left of Salary to expand the salary section.
+    > Click on the **Drop Down** ![Drop Down Icon](images/Icon03_dropdown.png) Icon to the left of Salary to expand the salary section.
 
-    ![Fields and Regions, Conditions](images/image012.png)
-
-
-
-11.  First you want to show the Action Reason from the First Screen in the 2nd screen with all the detailed Salary Data
-
-    > (1) Click on the **Hidden** Box to the right of **Action Reason**.       <br>
-
-    > (2) Then select **Visible**.
-
-    ![Fields and Regions](images/image013.png)
+    ![Fields and Regions, Conditions](images/image016.png)
 
 
 
-12. Now you will hide Annualized Full-Time Salary and Compa-Ratio
+11.  First you want to the configure the form to hide Annualized Full-Time Salary Field.
 
-    > (1) Click on the **Box** next to Annualized Full-Time Salary <br>
+    > (1) Click in the Box in the **Hidden Column** for **Annualized Full-Time Salary Field** row.       <br>
 
-    > (2) Select **Hidden.**  <br>
+    > (2) Then select **Hidden** from the options that appear.
 
-    > (3) Do the same actions for **Compa-Ratio.**
-
-    ![Fields and Regions](images/image014.png)
+    ![Fields and Regions, Conditions](images/image017.png)
 
 
+12. Now you want to the configure the form to hide Compa-Ratio.
 
-13. Now you will add a validation step for the Adjustment Percentage.  We do not want users to enter in a Salary Percentage Greater than 15%
+    > (1) Click in the Box in the **Hidden Column** for **Compa-Ratio** row.       <br>
+
+    > (2) Then select **Hidden** from the options that appear.
+
+    ![Fields and Regions, Conditions](images/image018.png)
+
+12. Now you will configure the form to show action reason
+
+    > (1) Click in the Box in the **Hidden Column** for **Action Reason** row.       <br>
+
+    > (2) Then select **Visable** from the options that appear.
+
+    ![Fields and Regions, Conditions](images/image019.png)
+
+
+
+13. Please verify that Action Reason is **Visable**, and Annualized Full-Time Salary Field and Compa-Ratio are **Hidden**.
+
+    Now you will add a validation step for the Adjustment Percentage.  You do not want users to enter in a Salary Percentage Greater than 15%
 
     > Click on **Validate Field Values**
 
-    ![Fields and Regions](images/image015.png)
+    ![Fields and Regions](images/image020.png)
 
     > Click on **+ Validation**
 
-    ![Validation](images/image016.png)
+    ![Validation](images/image021.png)
 
-    > (1) Enter **Adjustment Percentage** in Label to name the validation.    <br>
+    > (1) Enter **Adjustment Percentage** in **Label** to name the validation.    <br>
 
     > (2) Then Click **Create**.
 
-    ![Validation](images/image017.png)
+    ![Validation](images/image022.png)
 
 
 14.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
 
-    > Click on the **Edit Icon.**
+    > Click on the **Edit**
 
-    ![Create Validation](images/image018.png)
+    ![Create Validation](images/image023.png)
 
     > Click on **+ Condition**.
 
-    ![Create Validation](images/image019.png)
+    ![Create Validation](images/image024.png)
 
     > (1) Start Typing **Adjustment Percentage.**     <br>
 
-    > (2) Then select the first **Adjustment Percentage.**.
+    > (2) Then select the first **Adjustment Percentage.** under **Salary Details**.
 
-    ![Create Validation](images/image020.png)
+    ![Create Validation](images/image025.png)
 
-    > (1) Click on the **middle box.**       <br>
+    > (1) In the new Adjustment Percentage row you just created, click the **middle box** that says **Equals**.       <br>
 
     > (2) Then select  **greater than.**.
 
-    ![Create Validation](images/image021.png)
+    ![Create Validation](images/image026.png)
+
+    > Enter **15** in the right most box in the Adjustment Percentage row.
+
+    ![Create Validation](images/image027.png)
+
+    The form will not allow any user to enter an adjustment percentage greater than 15%. 
 
 
 15.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
 
-    > (1) Enter **Adjustment Percentage** in Summary.    <br>
+    > (1) Under **Messages**, Enter **Adjustment Percentage is too high** in **Summary**.    <br>
 
-    > (2) Then enter enter **The Adjustment Percentage cannot exceed 15%.**
+    > (2) Then enter enter **The Adjustment Percentage nust be lower than 15%** in **Detail**.
 
-    ![Create Validation](images/image022.png)
+    ![Create Validation](images/image028.png)
 
-    > (1) Click on the **Down Arrow.**      <br>
+    > Click on **Warning** under **Severity**.
 
-    > (2) Then select **Error.**
+    ![Create Validation](images/image029.png)
+
+    > (2) Then select **Error** from the drop down options that appear.
 
     The error configuration will not allow any user who entered incorrect data to submit the change without fixing the error
 
-    ![Create Validation](images/image023.png)
+    ![Create Validation](images/image030.png)
     
 
 
@@ -228,21 +243,26 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     > (2) A new window will pop up.
 
-    ![Create Validation](images/image024.png)
+    ![Create Validation](images/image031.png)
 
 17.  You have reentered the Change Salary Form.  Let’s review the changes.
 
+    > Click **Continue**.
+
+    ![Change Salary 1](images/image032.png)
+
     You need to enter the required information before you can move to the next screen.
 
-    > (1) Pick a **future date** for when the salary will start. <br>
+    > (1) Enter a **future date** for **When does the salary will start.** <br>
 
-    > (2) Select **Change Salary** under Action Name. <br>
+    > (2) Select **Change Salary** for **What is the action name.** <br>
 
-    > (3) Select **Career Progression** for why you are changing the salary. <br>
+    > (3) Select **Career Progression** for **why you are changing the salary for Barrett Reed?** <br>
 
     > (4) Click **Continue** once complete.
 
-    ![Change Salary Screen 1](images/image025.png)
+    ![Change Salary Page 2nd page](images/image033.png)
+
 
 18.  Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible while Action Reason is now Visible.
 
@@ -250,17 +270,23 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     > Enter an Adjustment salary that is greater than 15%.
 
-    ![Change Salary Screen 1](images/image026.png)
+    ![Change Salary Screen 2](images/image034.png)
 
 19.  The system gives us a warning that the increase in salary is outside the worker’s salary range.  You will ignore this warning.
 
     > Click **Continue.**
 
-    ![Change Salary Screen 2](images/image027.png)
+    ![Change Salary Screen 2](images/image035.png)
 
 20.  The system will not allow the user to continue because the Adjustment Salary percentage exceeds 15%
 
-    ![Change Salary Screen 2 error message](images/image028.png)
+    ![Change Salary Screen 2 error message](images/image036.png)
+
+    > Click on the **Home** ![Home Icon](images/Icon07_home.png) Icon.
+
+    ![Change Salary Screen 2](images/image037.png)
+
+
 
 
 21. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
