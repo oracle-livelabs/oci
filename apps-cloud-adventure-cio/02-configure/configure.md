@@ -58,7 +58,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     > (1) Enter a **future date** for **When does the salary will start?** <br>
 
-    > (2) Select **Change Salary** for **What is the action name.** <br>
+    > (2) Select **Change Salary** for **What is the action name?** <br>
 
     > (3) Select **Career Progression** for **why you are changing the salary for Barrett Reed?** <br>
 
@@ -117,13 +117,15 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Fields and Regions](images/image013.png)
     
-    > (1) Click on **contains** in the User Roles Row. <br>
+    > (1) Click on the middle box that has **contains** in the User Roles Row. <br>
 
     > (2) Select **does not contain** from the drop down options.  
 
     ![Fields and Regions](images/image014.png)
 
-    > Then enter the **Human Resource Manager** role in the right most box.
+    > (1) Enter the **Human Resource Manager** role in the right most box of the **User Roles** row. <br>
+
+    > (2) Select the first **Human Resource Manager** role from the drop down options.  
 
     ![Fields and Regions](images/image015.png)
 
@@ -237,7 +239,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     Redwood offers a quick way to review your changes as they appear in the application.
 
-    > (1) Click on the **Review icon** in the upper right of  the screen.   <br>
+    > (1) Click on the **Preview** ![Preview Icon](images/Icon04_preview.png) icon in the upper right of  the screen.   <br>
 
     > (2) A new window will pop up.
 
@@ -253,7 +255,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     > (1) Enter a **future date** for **When does the salary will start?** <br>
 
-    > (2) Select **Change Salary** for **What is the action name.** <br>
+    > (2) Select **Change Salary** for **What is the action name?** <br>
 
     > (3) Select **Career Progression** for **why you are changing the salary for Barrett Reed?** <br>
 
@@ -304,8 +306,6 @@ In this example, you used Redwood, Oracle’s next-generation design system, to 
 
 
 **You have successfully completed the Activity!**
-
-**For extra credit (and possibly some Oracle swag) please make sure you record the information regarding the Item with highest Lead Time Variance Percentage in the review Item Category Set.**
 
 
 
