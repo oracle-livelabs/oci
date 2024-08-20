@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered Supply Chain Management. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the COO.
+Welcome to Oracle’s Cloud Adventure.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered Supply Chain Management. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the COO.
 
 As you follow along, do not forget to answer the Adventure Check Point questions! 
 
@@ -13,6 +13,7 @@ Estimated Time: 10 minutes
 ### Objectives
 
 In this activity, you will:
+
 * Use Oracle Global Order Promising’s robust profitable to promise capabilities to commit to Steel Fitness’ request with confidence and successfully fulfill our customer’s needs with the lowest cost available.  
 
 
@@ -32,7 +33,7 @@ In this activity, you will:
 
 2. Manage Orders allows you to search orders based on a multitude of criteria.
 
-    > Enter order number **98431** in the order field and click **Search.**   Order 98431 will appear in the **Search Results.**  
+    > Enter order number **98450** in the order field and click **Search.**   Order 98450 will appear in the **Search Results.**  
 
     ![image002](images/image002.png)
 
@@ -40,7 +41,7 @@ In this activity, you will:
 
 3. Clicking on a sales order will allow you to drill down into the details of the order and interact with it.
 
-    > Click on order number **98431** in the Search Results area.
+    > Click on order number **98450** in the Search Results area.
 
     ![image003](images/image003.png)
 
