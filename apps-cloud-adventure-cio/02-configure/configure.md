@@ -188,7 +188,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 14.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
 
-    > Click on the **Edit**
+    > Click on **Edit**. 
 
     ![Create Validation](images/image023.png)
 
