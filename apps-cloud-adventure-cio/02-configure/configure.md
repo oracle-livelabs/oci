@@ -227,7 +227,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Create Validation](images/image029.png)
 
-    > (2) Then select **Error** from the drop-down options that appear.
+    > Then select **Error** from the drop-down options that appear.
 
     The error configuration will not allow any user who entered incorrect data to submit the change without fixing the error
 
