@@ -106,21 +106,20 @@ In this lab, you will:
 
     ![select ERP/SCM](images/image112.png)
 
-13. 
-
     > (1) **Enter** **‘QuickSupplierUI’** in the "'App UI Name'" field.<br>
 
     > (2) **Click** the **‘Create’** button.
 
     ![get supplier service](images/image113.png)
 
-14. Visual Builder has automatically created a default UI leveraging the Oracle provided Redwood template.  Redwood is Oracle's design methodology and pre-defined templates, and design patterns are included in Visual Builder to allow you to create applications that look and function just like Oracle delivered applications.
+13. Visual Builder has automatically created a default UI leveraging the Oracle provided Redwood template.  Redwood is Oracle's design methodology and pre-defined templates, and design patterns are included in Visual Builder to allow you to create applications that look and function just like Oracle delivered applications.
 
     > **Double-Click** the **‘main-start’** object.
 
     ![create supplier service](images/image114.png)
 
-15. Here we see our blank template and a list of some of the provided Redwood design components.  We want to start by adding some components to the screen to hold our data.  We’ll first add a Panel component.
+
+14. Here we see our blank template and a list of some of the provided Redwood design components.  We want to start by adding some components to the screen to hold our data.  We’ll first add a Panel component.
 
     > (1) Confirm you’re in the **Components** tab. <br>
 
@@ -130,14 +129,14 @@ In this lab, you will:
 
     ![create supplier service](images/image115.png)
 
-16. We’ll now add a Table component to our new Panel.
+15. We’ll now add a Table component to our new Panel.
 
     > (1) Type **Table** in the **‘filter’** field. <br>
     > (2) Drag **Table** to first blue section (3) of the page as shown.
 
     ![add supplier service to screen](images/image116.png)
 
-17. We now have a table to hold our data. Next, we’ll add the Supplier data from our REST API. We can use the Quick Start feature to help with this task.
+16. We now have a table to hold our data. Next, we’ll add the Supplier data from our REST API. We can use the Quick Start feature to help with this task.
 
     > (1) Click the newly created **Table** region.<br>
 
@@ -145,7 +144,7 @@ In this lab, you will:
 
     ![table layout](images/image117.png)
 
-18. The Quick Start features simply common tasks.We can use the Add Data Quick Start feature to show data from our Supplier REST API.
+17. The Quick Start features simply common tasks.We can use the Add Data Quick Start feature to show data from our Supplier REST API.
 
     > (1) Click the **'Quick Start'** table in the Table Properties area. <br>
 
@@ -153,8 +152,7 @@ In this lab, you will:
 
     ![select supplier fields](images/image118.png)
 
-19. We can see the various Supplier related data available from the Supplier REST API.  We’ll just use the Suppliers data for this scenario.
-
+18. We can see the various Supplier related data available from the Supplier REST API.  We’ll just use the Suppliers data for this scenario.8
     > (1)  Click **'Suppliers'** to expand the Suppliers region. <br>
 
     > (2)  Click **'Suppliers'** tile. <br>
@@ -163,7 +161,7 @@ In this lab, you will:
 
     ![finish supplier fields](images/image119.png)
 
-20. We’ll select a few fields to display on our new screen.  We want to use this to allow for quick update of a few pieces of Supplier Data, including Taxpayer ID, Alternate Name and Alias.  We’ll select those fields in additional to Supplier and Supplier Number..
+19. We’ll select a few fields to display on our new screen.  We want to use this to allow for quick update of a few pieces of Supplier Data, including Taxpayer ID, Alternate Name and Alias.  We’ll select those fields in additional to Supplier and Supplier Number..
 
     > (1)  Click **'Checkbox'** next to the following fields.  You’ll need to scroll the Endpoint Structure for the last 3 fields: <br>
            - Alias <br>
@@ -178,7 +176,7 @@ In this lab, you will:
 
     ![widen screen handle](images/image120.png)
 
-21. We can optionally add additional filter criteria.
+20. We can optionally add additional filter criteria.
 
     > (1) Note the ability to add additional criteria. <br>
 
@@ -186,7 +184,7 @@ In this lab, you will:
 
     ![widen screen](images/image121.png)
 
-22. Notice that the screen auto-queried Supplier Information.  We can easily move between Design, Live and Code views of our application.  But next, we want the ability to edit data.  So, we’ll use the Quick Start again to add an edit page.  
+21. Notice that the screen auto-queried Supplier Information.  We can easily move between Design, Live and Code views of our application.  But next, we want the ability to edit data.  So, we’ll use the Quick Start again to add an edit page.  
 
     > (1) Confirm that you're on the **Quick Start** tab. <br>
 
@@ -194,7 +192,7 @@ In this lab, you will:
 
     ![edit page quick start](images/image122.png)
 
-23. We can select the same or different fields for out Edit Page.  We’ll just select the same list..
+22. We can select the same or different fields for out Edit Page.  We’ll just select the same list..
 
      > (1)  Click **'Checkbox'** next to the following fields.  Note that you may need to scroll the list of fields: <br>
            - Alias <br>
@@ -209,20 +207,20 @@ In this lab, you will:
 
     ![edit page quick start](images/image123.png)
 
-24. Now that we've created our screen, we can test it.
+23. Now that we've created our screen, we can test it.
 
     > Click the **Preview** icon on the top right of the screen.
 
     ![select edit page fields](images/image124.png)
 
-25. A new browser tab is launched showing our completed application.  We now have a fully functioning screen that supports query and update capabilities.
+24. A new browser tab is launched showing our completed application.  We now have a fully functioning screen that supports query and update capabilities.
 
     > (1) Select a **Supplier** to highlight a row. <br>    
     > (2) Click the **Edit Supplier** button.   
 
     ![finish edit page fields](images/image125.png)
 
-26. We'll update and save a field.  Out new screen leverages the security and business rules of the application via the standard REST API. .
+25. We'll update and save a field.  Out new screen leverages the security and business rules of the application via the standard REST API. .
 
     > (1) Enter a value in the **Alternate Name*** field. For example, enter "LeeSupp" as the Alternate Name for Lee Supplies.  <br>    
     > (2) Click the **Save** button.   
@@ -231,11 +229,16 @@ In this lab, you will:
     ![preview](images/image126.png)
 
 
-27. Our Supplier record update is now saved.
+26. Our Supplier record update is now saved.
 
     > Note the message that the supplier record was successfully updated.
 
     ![selected supplier for edit](images/image127.png)	
+
+
+27. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+    
+    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
  
 ## Task 2: Guided Journeys with User Defined Content
 
@@ -286,7 +289,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 5. You don’t have any tasks yet, so you can create one.  The task is where you will define the connection to the external LLM.
 
-    > (1) Click the **+** ![Plus Icon](images/Icon02_Plus.png) icon. <br>
+    > (1) Click the ![Plus Icon](images/Icon02_Plus.png) icon. <br>
 
     > (2) Click **Create Task** from the resulting popup.  
 
@@ -327,7 +330,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 10. There are no matching workers, so you can unselect Direct reports to broaden our search.
 
-   > (1) Click the **X** ![X Icon](images/Icon04_X.png) next to Direct Reports under the search field.
+   > (1) Click the ![X Icon](images/Icon04_X.png) next to Direct Reports under the search field.
 
    ![Enter Task Info](images/image210.png)  
 <br>

@@ -43,7 +43,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 2. Now you will enter the Change Salary Form so we can make the required changes using Visual Builder Studio.  Now you will select a person so you can enter the Change Salary form.
 
-    > (1) Search for **Barrett Reed** in the search box. <br>
+    > (1) Search for **Barrett Reed** in the search field. <br>
 
     > (2) Select **Barrett Reed** in the drop down (add new picture). <br>
 
@@ -196,9 +196,9 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Create Validation](images/image024.png)
 
-    > (1) Start Typing **Adjustment Percentage.**     <br>
+    > (1) Enter **Adjustment Percentage** in the box below Country.     <br>
 
-    > (2) Then select the first **Adjustment Percentage.** under **Salary Details**.
+    > (2) Then select the first **Adjustment Percentage** under **Salary Details**.
 
     ![Create Validation](images/image025.png)
 
