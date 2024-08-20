@@ -39,7 +39,7 @@ In this lab, you will:
 
     _oci/src/main/resources/bootstrap-oraclecloud.properties_
 
-    ``` properties
+    ```properties
     micronaut.config-client.enabled=true
     ```
 
@@ -47,7 +47,7 @@ In this lab, you will:
 
     _oci/src/main/resources/bootstrap-oraclecloud.properties_
 
-    ``` properties
+    ```properties
 	oci.vault.config.enabled=true
     ```
 
@@ -55,7 +55,7 @@ In this lab, you will:
 
     _oci/src/main/resources/bootstrap-oraclecloud.properties_
 
-    ``` properties
+    ```properties
 	#b
 	oci.vault.vaults[0].compartment-ocid=${COMPARTMENT_ID}
 	#c
@@ -104,7 +104,7 @@ In this lab, you will:
 
     _oci/src/main/resources/application-oraclecloud.properties_
 
-    ``` properties
+    ```properties
     # <2>
     datasources.default.walletPassword=${ADB_WALLET_PASSWORD}
     # <3>
@@ -138,7 +138,7 @@ Add the Autonomous Database instance ID to the application configuration.
 
 	_oci/src/main/resources/bootstrap-oraclecloud.properties_
 
-	``` properties
+	```properties
 	oci.config.instance-principal.enabled=true
 	```
 
@@ -165,7 +165,7 @@ Add the Autonomous Database instance ID to the application configuration.
 
 9. Enter the following policy statements in the text area. Replace the placeholders `WORKSHOP_COMPARTMENT_NAME` with your workshop compartment name, and `WORKSHOP_COMPARTMENT_OCID` with your workshop compartment OCID.
 
-	``` text
+	```text
 	<copy>
 	Allow any-user to read secret-family in compartment WORKSHOP_COMPARTMENT_NAME where ALL {request.principal.type='instance', request.principal.compartment.id='WORKSHOP_COMPARTMENT_OCID'}
 	Allow any-user to read autonomous-databases in compartment WORKSHOP_COMPARTMENT_NAME where ALL {request.principal.type='instance', request.principal.compartment.id='WORKSHOP_COMPARTMENT_OCID'}
