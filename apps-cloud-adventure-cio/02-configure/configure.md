@@ -167,7 +167,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-13. Please verify that Action Reason is **Visable**, and Annualized Full-Time Salary Field and Compa-Ratio are **Hidden**.
+13. Please verify that Action Reason is **Visible**, and Annualized Full-Time Salary Field and Compa-Ratio are **Hidden**.
 
     Now you will add a validation step for the Adjustment Percentage.  You do not want users to enter in a Salary Percentage Greater than 15%
 
