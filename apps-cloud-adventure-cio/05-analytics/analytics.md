@@ -204,10 +204,9 @@ In this activity, you will Create analytics across different lines of business t
 
 
 
-
 19. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
     
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:20:::::QN:16) 
+    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
 
 
