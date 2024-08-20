@@ -268,7 +268,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     Now we will test the validation for the Adjustment Amount Percentage.
 
-    > Enter an Adjustment salary that is greater than 15%.
+    > Enter an Adjustment Percentage that is greater than 15%.
 
     ![Change Salary Screen 2](images/image034.png)
 
