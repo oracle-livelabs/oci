@@ -278,7 +278,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Change Salary Screen 2](images/image035.png)
 
-20.  The system will not allow the user to continue because the Adjustment Salary percentage exceeds 15%
+20.  The system will not allow the user to continue because the Adjustment Percentage exceeds 15%
 
     ![Change Salary Screen 2 error message](images/image036.png)
 
