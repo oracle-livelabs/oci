@@ -316,7 +316,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 8. The next step is the configuration the Compensation Info UI to leverage your Guided Journey. To do that, you can head back to the home page.
 
-   > (1) Click on the **Home** ![Home Icon](images/Icon03_home.png)  icon on the top icon bar.
+   > Click on the **Home** ![Home Icon](images/Icon03_home.png)  icon on the top icon bar.
     ![Enter Task Info](images/image208.png)  
 <br>
 
@@ -330,7 +330,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 10. There are no matching workers, so you can unselect Direct reports to broaden our search.
 
-   > (1) Click the ![X Icon](images/Icon04_X.png) next to Direct Reports under the search field.
+   > Click the ![X Icon](images/Icon04_X.png) next to Direct Reports under the search field.
 
    ![Enter Task Info](images/image210.png)  
 <br>
