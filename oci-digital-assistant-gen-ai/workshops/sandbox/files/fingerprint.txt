@@ -1,0 +1,1 @@
+This image shows the fingerprint generated for a public key

@@ -1,0 +1,1 @@
+This is an image of the Prompt Builder. In this image, the generate email prompt has been entered in the Prompt field. Beneath the field, a list enumerates errors for prompt parameters that are declared in the prompt, but have not been defined with mock values.

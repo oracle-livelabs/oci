@@ -1,0 +1,107 @@
+'use strict';
+
+// Documentation for writing REST Service query event handlers: https://github.com/oracle/bots-node-sdk/blob/master/REST_SERVICE_EVENT_HANDLER.md
+
+// You can use your favorite http client package to make REST calls, however, the node fetch API is pre-installed with the bots-node-sdk.
+// Documentation can be found at https://www.npmjs.com/package/node-fetch
+// Un-comment the next line if you want to make REST calls using node-fetch.
+// const fetch = require("node-fetch");
+
+module.exports = {
+  metadata: {
+    name: 'Cohere_Command',
+    eventHandlerType: 'RestService'
+  },
+  handlers: {
+
+    /**
+    * Handler to transform the request payload
+    * @param {TransformPayloadEvent} event
+    * @param {RestServiceContext} context
+    * @returns {object} the transformed request payload
+    */
+transformRequestPayload: async (event, context) => {
+  let messages = event.payload.messages;
+  let contentString = '';
+ 
+  if (messages.length > 1) {
+ 
+    const message = messages[messages.length - 2];
+    contentString += `Previous message : ${message.content}\n`;
+ 
+    const refinement = messages[messages.length - 1];
+    contentString += `${refinement.content}`;
+ 
+  } else if (messages.length === 1) {
+    const message = messages[0];
+    contentString = message.content;
+  }
+ 
+  let payload = {
+    "model_name": "command",
+    "input": contentString,
+    "config": {
+      "max_tokens": 512,
+      "presence_penalty": 0.01,
+      "temperature": 0.01,
+      "top_p": 0.95,
+      "top_k": 50
+    }
+  };
+ 
+ 
+ 
+  return payload;
+},
+
+    /**
+    * Handler to transform the response payload
+    * @param {TransformPayloadEvent} event
+    * @param {RestServiceContext} context
+    * @returns {object} the transformed response payload
+    */
+transformResponsePayload: async (event, context) => {
+  let llmPayload = {};
+ 
+  // 'error' field here is a stringified json object.
+  // TODO: Decode it to extract more details.
+  if (event.payload.error) {
+    llmPayload.errorCode = 'unknown';
+    llmPayload.errorMessage = event.payload.error;
+    return llmPayload;
+  }
+ 
+  // non-streaming case
+  llmPayload.candidates = [];
+  const content = event.payload.output ? event.payload.output : "";
+  llmPayload.candidates.push({
+    content: content
+  });
+ 
+ 
+  return llmPayload;
+},
+
+    /**
+    * Handler to transform the error response payload, invoked when HTTP status code is 400 or higher and the error
+    * response body received is a JSON object
+    * @param {TransformPayloadEvent} event
+    * @param {RestServiceContext} context
+    * @returns {object} the transformed error response payload
+    */
+transformErrorResponsePayload: async (event, context) => {
+  let errorCode = 'unknown';
+  if (event.payload.error) {
+    if ( 'context_length_exceeded' === event.payload.error.code) {
+      errorCode = 'modelLengthExceeded';
+    }  else if ('content_filter' === event.payload.error.code) {
+      errorCode = 'flagged'; 
+    } 
+    return {"errorCode" : errorCode, "errorMessage": event.payload.error.message};
+  } else {
+    return {"errorCode" : errorCode, "errorMessage": JSON.stringify(event.payload)};
+  }   
+}
+
+  }
+};
