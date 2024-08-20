@@ -355,7 +355,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 13. You’re now in Visual Builder – Express Mode.  This allows you to easily configure application screens.  In this scenario, you’ll be referencing the Guided Journey/Task that you created earlier.
 
    > (1) Enter **Salary** in the **Page Properties Filter** field on the right.  This will narrow the list of Page Properties available. <br>    
-   > (2) Enter **CA&#95;##&#95;CM&#95;GJ** in the **CompensationInfoSalaryGuidedJourneyCode** field and press the **Enter** key.  Be careful to enter this into the correct field as there are several similar fields available.  If you searched as described in Step 1, it’s likely the 1st field listed below the filter.
+   > (2) Enter **CA&#95;##&#95;HCM&#95;GJ** in the **CompensationInfoSalaryGuidedJourneyCode** field and press the **Enter** key.  Be careful to enter this into the correct field as there are several similar fields available.  If you searched as described in Step 1, it’s likely the 1st field listed below the filter.
 
    ![Create Task](images/image213.png)  
 <br>
