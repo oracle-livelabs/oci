@@ -1,1 +1,0 @@
-function isIE(){return/msie\s|trident\/|edge\//i.test(window.navigator.userAgent)}requirejs([isIE()?"ie-init":"bundle"]);

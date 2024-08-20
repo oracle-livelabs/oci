@@ -1,1 +1,0 @@
-This is an image of the Edit Component Code editor. This editor has starter code and at the top right, the buttons Validate, Save, and Close.

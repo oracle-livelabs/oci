@@ -1,1 +1,0 @@
-This is an image of the Create Skill dialog. From top to bottom, this dialog has the following fields: Display Name, Name, Skill Version, Platform Version, Display Mode (Yaml and Visual radio buttons with the latter selected in this image), Language, and One-Sentence Description. The Create button is at the bottom right.

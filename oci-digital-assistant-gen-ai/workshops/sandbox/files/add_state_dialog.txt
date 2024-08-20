@@ -1,1 +1,0 @@
-This is an image of the Add State dialog. This dialog has two panels -- templates on the left and the details for the selected item on the right. In this image, Invoke Large Language Model is selected on the left and the detail, which includes a rendering of the invokLLM and showLLMError states, also has a Name field (populated with GenerateEmail) and a Description field.

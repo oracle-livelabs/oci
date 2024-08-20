@@ -1,1 +1,0 @@
-This image highlights the Add Public Key button in the web console

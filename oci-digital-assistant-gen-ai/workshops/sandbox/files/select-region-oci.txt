@@ -1,1 +1,0 @@
-This image highlights the REGION field in the web console of Oracle Cloud Infrastructure.
