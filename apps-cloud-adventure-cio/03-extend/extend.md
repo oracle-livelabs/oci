@@ -376,7 +376,11 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
    > (1) When finished reviewing the result, you can close your browser tabs and exit the Oracle Cloud Application UI.
 
-   ![Create Task](images/image216.png)  
+   ![Create Task](images/image216.png)
+
+17. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+    
+    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
 ## Summary
 
