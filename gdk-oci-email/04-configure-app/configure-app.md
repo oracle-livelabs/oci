@@ -79,7 +79,7 @@ Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SM
 
 1. From the Oracle Cloud Console navigation menu, go to **Developer Services**. Under **Application Integration**, click **Email Delivery**.
 
-   ![Email Delivery Menu](https://oracle-livelabs.github.io//common/images/console/developer-application-emaildelivery.png)
+   ![Email Delivery Menu](https://oracle-livelabs.github.io/common/images/console/developer-application-emaildelivery.png)
 
 2. Under **Email Delivery**, click **Configuration**. In **SMTP Sending Information** panel copy **Public Endpoint**.
 
@@ -184,7 +184,7 @@ In this step, you'll change the "to" email address to your personal email addres
 
 4. Save (`CTRL+S`) the file.
 
-Congratulations! In this lab, you configured the application to use the OCI Object Storage bucket created earlier.
+Congratulations! In this lab, you configured the application to use the OCI Email Delivery.
 
 You may now **proceed to the next lab**.
 

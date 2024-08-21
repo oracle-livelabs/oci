@@ -24,7 +24,7 @@ In this lab, you will:
 
 ## Task 1: Build and run a native executable for the application
 
-1. In the first terminal in VS Code, check the version of the GraalVM native-image utility:
+1. In the same terminal in VS Code, check the version of the GraalVM native-image utility:
 
 	``` bash
 	<copy>
