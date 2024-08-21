@@ -1,1 +1,0 @@
-This is a partial view of Component page of the GenerateEmail state. In this image the Build Prompt button, which is located in between the LLM Service and Prompt fields (also shown) is highlighted.

@@ -1,1 +1,0 @@
-This is an image of the Conversation Tester. In this image, this skill response, "Enhancing the response. One moment, please..." is generated before the next message, the enhanced response.

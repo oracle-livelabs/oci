@@ -1,1 +1,0 @@
-A view of the Conversation pane of the Bot Tester. In the rendered traversal, the GenerateEmail state is at the end.

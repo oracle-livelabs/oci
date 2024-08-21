@@ -1,1 +1,0 @@
-Thsi image shows the Generate Token button in the web console of Oracle Cloud Infrastructure

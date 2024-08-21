@@ -1,1 +1,0 @@
-This is view of the Skill Tester. In this image, the response from the LLM has been refined, which results in an Undo button getting rendered under the response.

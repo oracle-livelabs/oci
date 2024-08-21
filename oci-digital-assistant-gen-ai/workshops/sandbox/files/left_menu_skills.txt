@@ -1,1 +1,0 @@
-This is an image of the left menu. This menu is divided into the following sections, which include Home and  Development, which is expanded in this image. The Development section's Skills option is selected. 

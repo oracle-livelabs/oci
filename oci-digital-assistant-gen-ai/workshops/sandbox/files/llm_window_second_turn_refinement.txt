@@ -1,1 +1,0 @@
-This is an image of the LLM Call tab in the Skill Tester. This view has a table that describes the processing. It has fields called Turn, Request, Execution Time(s), Provider Request and Provider Response. In this view, a refinement request has been processed. This results in a second entry added to this table.   
