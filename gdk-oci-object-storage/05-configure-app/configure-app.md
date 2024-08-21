@@ -32,6 +32,8 @@ In this lab, you will:
 
 3. From the Oracle Cloud Console navigation menu, go to **Identity & Security >> Identity >> Policies**.
 
+	![Policies Menu](https://oracle-livelabs.github.io/common/images/console/id-policies.png)
+
 4. Go to your workshop compartment.
 
 5. Click  **Create Policy**.
@@ -49,6 +51,9 @@ In this lab, you will:
 	Allow any-user to manage object-family in compartment WORKSHOP_COMPARTMENT_NAME where ALL {request.principal.type='instance', request.principal.compartment.id='WORKSHOP_COMPARTMENT_OCID'}
 	</copy>
 	```
+
+	To learn more about policies to control access to OCI Object Storage, see [Policy Reference - Details for Object Storage](https://docs.oracle.com/en-us/iaas/Content/Identity/Reference/objectstoragepolicyreference.htm).
+
 </if>
 
 	To learn more about about the supported authentication options, see [Micronaut Oracle Cloud Authentication](https://micronaut-projects.github.io/micronaut-oracle-cloud/snapshot/guide/#authentication).
