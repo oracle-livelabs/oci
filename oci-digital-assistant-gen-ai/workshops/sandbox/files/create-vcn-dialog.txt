@@ -1,0 +1,1 @@
+This image shows the Create Virtual Cloud Network dialog box  in the web console of Oracle Cloud Infrastructure

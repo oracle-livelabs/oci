@@ -1,0 +1,1 @@
+This is an image of the Prompt Parameters section of the Component page. There are two fields, Name and Value. The Save and Cancel icons are at the bottom right of the dialog.

@@ -1,0 +1,1 @@
+The completed dialog flow. From left to right, the flow has the following states: GetEmailDetail, GetCompanyDetails, GenerateEmail and showLLMError.

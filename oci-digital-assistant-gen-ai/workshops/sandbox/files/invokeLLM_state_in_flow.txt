@@ -1,0 +1,1 @@
+This is an image of the visual dialog flow. The sequence of the state pictured in this flow are, from left to right, unresolvedMessage (start state), invokeLLM, and showLLMError. A  next transition connects unresolvedMessage to invokeLLM. An error transition connections invokeLLM to showLLMError.
