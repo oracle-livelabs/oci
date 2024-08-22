@@ -184,7 +184,7 @@ In this step, you'll change the "to" email address to your personal email addres
 
 4. Save (`CTRL+S`) the file.
 
-Congratulations! In this lab, you configured the application to use the OCI Email Delivery.
+Congratulations! In this lab, you configured the application to use OCI Email Delivery.
 
 You may now **proceed to the next lab**.
 
