@@ -74,7 +74,7 @@ In this activity you’ll learn the different ways to manage user access and to 
 
     > Look to the upper left of your screen to find the **Navigator** icon.  From here, select **Tools** group, then **Security Console**
 
-    ![Application Home](images/image006.png)  
+    (images/image006.png)  
 
 3.  You’ll be working from this single console for most of the examples today.  By default, you are viewing the Roles tab of the console.
 

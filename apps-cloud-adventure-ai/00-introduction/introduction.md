@@ -14,6 +14,11 @@ This Activity Guide will lead you along the way through a set of Adventure Labs,
 3.  Experience the power of the integration capabilities of Fusion Cloud
 4.  Create powerful analytics for business insight
 
+(https://www.youtube.com/watch?v=H-C5dH3w1Dg)
+
+
+
+
 
 Let's create your team name for your cloud adventure!
 
