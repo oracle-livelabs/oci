@@ -35,17 +35,17 @@ In this workshop, you will:
 
 * An Oracle Cloud Account
 *	Oracle Cloud Account Administrator role or manage apm-domains permission in the target compartment
-*	This lab uses My ToDo List Application that you can build with the [React+Java+ADB = Native Cloud App](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814) workshop. Complete the Tutorials 1 to 3 in the workshop and ensure the application runs on the OCI API Gateway. Note: Do not perform the Tutorial 4 as it is a cleanup lab that removes the application setup.
+*	This lab uses My ToDo List Application that you can build with the [React+Java+ADB = Native Cloud App](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814) workshop. Complete the Tutorials 1 to 3 in the workshop and ensure the application runs on the OCI API Gateway. Note: Do not perform the Tutorial 4 as it is a cleanup lab that removes the application setup.
 
   ![](images/1-1-todoapp.png " ")
 
 ### Reference
 
-*  Oracle LiveLabs **[React+Java+ADB = Native Cloud App](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814)** Workshop
+*  Oracle LiveLabs **[React+Java+ADB = Native Cloud App](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814)** Workshop
 
 ### More APM Workshops
--	**[Use OpenTracing for Microservices with Helidon Utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=917)**  Workshop
--	**[Monitor Traces for Oracle WebLogic Server on Kubernetes Using Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=932)** Workshop
+-	**[Use OpenTracing for Microservices with Helidon Utilizing Oracle Application Performance Monitoring](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=917)**  Workshop
+-	**[Monitor Traces for Oracle WebLogic Server on Kubernetes Using Oracle Application Performance Monitoring](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=932)** Workshop
 
 
 ### Learn More

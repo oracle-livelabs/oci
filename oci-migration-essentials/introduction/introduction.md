@@ -23,7 +23,7 @@ In this workshop, you will learn how to:
 ## Learn More
 
 Lab
-* [Getting Started with Oracle Cloud Infrastructure Core Services](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648&clear=RR,180&session=6361856240041)
+* [Getting Started with Oracle Cloud Infrastructure Core Services](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648&clear=RR,180&session=6361856240041)
 
 Resource Links for Reference
 * [OCI Object Storage](https://docs.oracle.com/en/learn/migrate-data-to-oci-object-storage/index.html#introduction)
