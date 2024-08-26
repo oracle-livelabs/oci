@@ -266,7 +266,7 @@ You may now **proceed to the next lab**.
 * [OCI Documentation](https://docs.oracle.com/en-us/iaas/Content/home.htm)
 * [Configure OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliconfigure.htm)
 * [Install Brew on Mac](https://brew.sh/)
-* [OCI Command CLI Playground](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=650)
+* [OCI Command CLI Playground](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=650)
 
 ## Acknowledgements
 
