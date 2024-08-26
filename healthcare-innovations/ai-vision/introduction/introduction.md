@@ -27,7 +27,7 @@ Running on top of the world's most powerful database, [**Oracle Autonomous Datab
 
 [Demo video on AI for Healthcare](youtube:_hOWWR1TKN8:large)
 
-![Architecture](images/ai-for-healthcare-architecture.png " ")
+![Architecture](images/ai-for-hc-reference-architecture.png " ")
   
 ### AI for Healthcare - Table of Contents
  
@@ -270,12 +270,13 @@ Researchers have identified hormonal, lifestyle and environmental factors that m
 ## Important
 
 This workshop provides a basic example of using OCI Vision and other AI services. This example is for illustration and demonstration purposes only and isn't intended to replace any medical imagery analysis tool or official diagnosis recommendation made by a professional. Users need to receive the proper regulated compliance and approvals before using for medical and diagnostic use.
-
+ 
 You may now **proceed to the next lab**.
     
 ## Acknowledgements
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
 * **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - Jan 16th, 2024
-* **Document version** - 1.2
+* **Last Updated By/Date** - June 12th, 2024
+* **Document version** - 1.4
+* **Updates** - Reference Architecture & Database Actions
