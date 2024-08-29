@@ -22,11 +22,12 @@ In this workshop, you will:
 
 ### Prerequisites
 
-1. An Oracle Free Tier(Trial), Paid or LiveLabs Cloud Account
-2. [Familiarity with OCI console](https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm)
-3. [Familiarity with the basics of Kubernetes](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
-4. [Get to know Pulumi](https://www.pulumi.com/)
-5. [Get to know Backstage](https://backstage.io/)
+1. A web browser (Google Chrome recommended)
+2. A means of establishing SSH connectivity to an OCI Compute Instance
+3. [Familiarity with OCI console](https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm)
+4. [Familiarity with the basics of Kubernetes](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
+5. [Get to know Pulumi](https://www.pulumi.com/)
+6. [Get to know Backstage](https://backstage.io/)
 
 
 ## Infrastructure as Code overview
