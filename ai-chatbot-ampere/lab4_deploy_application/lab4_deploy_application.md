@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab we deploy the opensource chat-bot image from OCIR and expose it on a public URL to use it via the internet.
+In this lab we will deploy the opensource chat-bot image from OCIR and expose it on a public URL to use it via the internet.
 
 Estimated Time: 30 minutes
 
@@ -13,10 +13,10 @@ Estimated Time: 30 minutes
     <copy>cd ~/path_to_saved_ssh_directory</copy>
     ```
     ```
-    <copy>ssh -i <private_sshkeyname> ubuntu@<PUBLIC_IP_OF_COMPUTE></copy>
+    <copy>ssh -i <private_sshkeyname> opc@<PUBLIC_IP_OF_COMPUTE></copy>
     ``` 
 
-2.  Start minikube on ports opened earlier 80, 443, 8008. Enter command:
+2.  Start minikube on the ports opened earlier which are 80, 443, 8008:
     ```
     <copy>
     minikube start --listen-address='0.0.0.0' --ports=80,443,8008
@@ -24,7 +24,7 @@ Estimated Time: 30 minutes
     ``` 
     ![](./images/minikube_start.png " ")
 
-    Verify minikube is running, enter command:
+    Verify that minikube is running:
     ```
     <copy>
     minikube status
@@ -32,7 +32,7 @@ Estimated Time: 30 minutes
     ``` 
     ![](./images/minikube_status.png " ")
      
-3. Create a new namespace **serge-ai** for application deployment, enter command:
+3. Create a new namespace named **serge-ai** for the application deployment:
     ```
     <copy>
     kubectl create namespace serge-ai
@@ -40,14 +40,14 @@ Estimated Time: 30 minutes
     ``` 
     The command returns **namespace/serge-ai created**.
 
-4. Set Kubernetes context to the new namespace created on above step, enter command:
+4. Set Kubernetes context to the new namespace created on above step:
     ```
     <copy>
     kubectl config set-context --current --namespace=serge-ai
     </copy>
     ```
 
-5. Download the sample YAML file to the compute instance, enter command:
+5. Download the sample YAML file into the compute instance:
     ```
     <copy>
     wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/xYj5NQPsTNTpAymaMqmIewWBUuJT2csonULFAYTDHKx1Qfk1XbTTBtgjY1ltWKPP/n/idpyvi2wwmdw/b/yaml_file_storage/o/serge_ai_minikube.yaml
@@ -56,7 +56,7 @@ Estimated Time: 30 minutes
 
     ![](./images/wget.png " ")
 
-    Update the image source in the YAML file, enter command:
+    Update the image source in the YAML file:
     ```
     <copy>
     nano serge_ai_minikube.yaml
@@ -74,7 +74,7 @@ Estimated Time: 30 minutes
     kubectl apply -f serge_ai_minikube.yaml
     </copy>
     ```
-    Verify the running deployment, enter command:
+    Verify that the deployment is running:
     ```
     <copy>
     kubectl get svc
@@ -82,13 +82,15 @@ Estimated Time: 30 minutes
     ```
     Notice that there is no external IP exposed(status **Pending**) for accessing the application.
 
-7. Run the minikube tunnel to create an external IP for this deployment, enter command:
+    ![](./images/lab4_task1_6.png)
+
+7. Run the minikube tunnel to create an external IP for this deployment:
      ```
     <copy>
     minikube tunnel > /dev/null &
     </copy>
     ```    
-    Verify the external IP is exposed for the deployment, enter command:
+    Verify the external IP is exposed for the deployment:
     ```
     <copy>
     kubectl get svc
@@ -96,9 +98,9 @@ Estimated Time: 30 minutes
     ```
     ![](./images/get_svc.png " ")
 
-    **Note**: Here commands *```&```* and **> /dev/null** makes sure the output of **minikube** command is hidden and it runs in the background.
+    **Note**: Here, the commands *```&```* and **> /dev/null** makes sure the output of **minikube** is hidden and it runs in the background.
 
-8. To expose this deployment to the external world, we need to forward it to the open ports on our VCN, enter command:
+8. To expose this deployment to the external world, we need to forward it to the open ports on our VCN:
      ```
     <copy>
     kubectl relay --address 0.0.0.0 --server.namespace=serge-ai svc/serge 5005:8008 2>/dev/null &
@@ -106,7 +108,7 @@ Estimated Time: 30 minutes
     ```
     **Note**: Here commands *```&```* and **2>/dev/null** makes sure the output of **kubectl** command is hidden and it runs in the background.
 
-9. Access the application on your browser, open a browser window and enter following URL:
+9. Now access the application on your browser, open a browser window and enter following URL:
     ```
     <copy>
     http://<compute_instance_public_ip>:5005
@@ -125,7 +127,7 @@ If the application is not up and running on the browser, it can be one of the fo
 
     ![](images/ingress_ports.png " ")
 
-2. Due to inactivity the SSH connection may break and you might get an error **```ubuntu@a1-instance:/$ client_loop: send disconnect: Broken pipe```**, SSH back into the instance again in that case. Enter command:
+2. Due to inactivity the SSH connection may break and you might get an error **```opc@a1-instance:/$ client_loop: send disconnect: Broken pipe```**, SSH back into the instance again in that case. Enter command:
     ```
     <copy>
     minikube status
@@ -157,21 +159,13 @@ If the application is not up and running on the browser, it can be one of the fo
     ```
     Copy the **```compute_instance_public_ip```** from OCI web console. Open **instances** from the top left corner and click on instance created in **Lab 1** to copy the **public ip address**.
 
-3. Ubuntu is blocking traffic, check iptable has correct ports allowed:
+3. Linux is blocking traffic, check iptable has correct ports allowed:
     ```
     <copy>
-    cd /etc/iptables
+    sudo iptables -L
     </copy>
     ```
-
-    ```
-    <copy>
-    sudo nano rules.v4
-    </copy>
-    ```
-    table should have following entries:
-
-    ![](images/rules.png " ") 
+    ![](images/ingress_ports.png " ")
 
 ## Task 2: Automating the deployment
 Now that all the steps have been completed and you application is running, we will be automating the process. We will be creating a script with all the steps used to deploy the application to that will run the app on reboot and exit. 
@@ -189,10 +183,10 @@ Now that all the steps have been completed and you application is running, we wi
     ```
     <copy>
     #!/bin/bash -x
-
+    export PATH=$PATH:/usr/sbin:/usr/bin:/home/opc/.krew/bin
     config_device()
     {
-        BASE_DIR=/home/ubuntu
+        BASE_DIR=/home/opc
         KUBE_PORTS="80,443,8008"
         KUBE_ADDR="0.0.0.0"
         PORT_EXPOSED=5005
@@ -202,16 +196,16 @@ Now that all the steps have been completed and you application is running, we wi
     init_actions()
     {
         # Start Minikube
-        minikube start --listen-address=${KUBE_ADDR} --ports=${KUBE_PORTS} 1>>$LOGFILE 2>&1
+        /usr/local/bin/minikube start --listen-address=${KUBE_ADDR} --ports=${KUBE_PORTS} 1>>$LOGFILE 2>&1
         # Create Kubernetes namespace
-        kubectl create namespace serge-ai  1>>$LOGFILE 2>&1
+        /usr/local/bin/kubectl create namespace serge-ai  1>>$LOGFILE 2>&1
         # Set Kubernetes context to the new namespace
-        kubectl config set-context --current --namespace=serge-ai  1>>$LOGFILE 2>&1
+        /usr/local/bin/kubectl config set-context --current --namespace=serge-ai  1>>$LOGFILE 2>&1
         # Start Minikube tunnel in the background
-        minikube tunnel 1>>$LOGFILE 2>&1 &
-        kubectl apply -f $BASE_DIR/serge_ai_minikube.yaml  1>>$LOGFILE 2>&1
+        /usr/local/bin/kubectl apply -f $BASE_DIR/serge_ai_minikube.yaml  1>>$LOGFILE 2>&1
+        /usr/local/bin/minikube tunnel 1>>$LOGFILE 2>&1 &
         # Forward port for the Serge deployment in the background
-        kubectl relay --address ${KUBE_ADDR} --server.namespace=serge-ai svc/serge ${PORT_EXPOSED}:8008 1>>$LOGFILE 2>&1 &
+        /usr/local/bin/kubectl relay --address ${KUBE_ADDR} --server.namespace=serge-ai svc/serge ${PORT_EXPOSED}:8008 1>>$LOGFILE 2>&1 &
     }
     config_device
     init_actions
@@ -227,14 +221,22 @@ Now that all the steps have been completed and you application is running, we wi
     chmod +x start-app.sh
     </copy>
     ```
+    Give write permissions to the script.
+    ```
+    <copy>
+    chmod u+w start-app.sh
+    </copy>
+    ```
     Execute the script, enter command:
     ```
     <copy>
     ./start-app.sh
     </copy>
     ```
-   
+   Give 2-3 minutes for the script to execute and deployment to run.
+
    **Note**: This script re-runs all the deployment commands listed above and is an convinent way to do a quick deployment.
+
 
 2. In order to make our deployment reboot and crash proof run a cronjob which will run the above script on every reboot. Enter command:
 
@@ -243,19 +245,26 @@ Now that all the steps have been completed and you application is running, we wi
     crontab -e
     </copy>
     ```
-    Press **1** when prompted. Now inside the crontab, append the following code to the bottom:
-
+    Press **i** to insert and type the following code.
     ```
     <copy>
-    @reboot /home/ubuntu/start-app.sh
+    @reboot /home/opc/start-app.sh
     </copy>
     ```
-    Save and exit your code editor. Now the deployment script runs on each reboot and exit making sure our application doesn't crash.
-    
+    Save and exit your code editor by pressing ```<esc_key>``` then typing ```:wq``` and hit enter.
+
+    Now the deployment script runs on each reboot and exit, making our application crash proof.
+
+3. Reboot the system to test the cronjob. Enter the command: 
+    ```
+    <copy>
+    sudo reboot
+    </copy>
+    ```
     
     **Note**: Wait about 2 - 5 mins after running the script to make sure the application is up and running.
 
-3. Re-access the application on your browser, open a browser windown and enter following URL:
+4. Re-access the application on your browser, open a browser windown and enter following URL:
     ```
     <copy>
     http://<compute_instance_public_ip>:5005
@@ -282,4 +291,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** - Animesh Sahay and Francis Regalado, Enterprise Cloud Architect, OCI Cloud Venture
 * **Contributors** -  Andrew Lynch, Director Cloud Engineering, OCI Cloud Venture
-* **Last Updated By/Date** - Animesh Sahay, April 2024
+* **Last Updated By/Date** - Animesh Sahay, August 2024

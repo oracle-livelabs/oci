@@ -1,4 +1,4 @@
-# Setup custom VCN and compute instance
+# Setup the custom VCN and the compute instance
 
 ## Introduction
 
@@ -11,8 +11,8 @@ Estimated Time: 20 minutes
 ### Objectives
 In this lab, you will:
 - Create a virtual cloud network 
-- Open ingress ports on public subnet
-- Create a compute instance inside that VCN
+- Open ingress ports on the public subnet
+- Create a compute instance inside of that VCN
 
 ## Task 1: Sign in to OCI Console and create VCN
 
@@ -41,7 +41,7 @@ In this lab, you will:
     
     ![](images/custom_image_0016.png " ")
 
-5. Verify all the information and  Click **Create**.
+5. Verify that all the information is correct and  click **Create**.
 
     ![](images/create_vcn.png " ")
 
@@ -92,23 +92,15 @@ In this lab, you will:
 
     ![](images/create_instance.png " ")
 
-3. Enter a name for your instance and select the compartment you used earlier to create your VCN. Select the **Edit** button in the Image and shape section.
+3. Enter a name for your instance and select the compartment you used earlier to create your VCN.
 
-    ![](images/create_instance1.png " ")  
+    ![](images/create_instance1.png " ")         
 
-4. Click **Change Image**.
-
-    ![](images/create_instance2.png " ")
-
-5. Select **Ubuntu** and then select **Canonical Ubuntu 22.04** from the list below. Click **Select Image**.
-
-    ![](images/create_instance2_1.png " ")       
-
-6. Click **Change Shape**.
+4. Scroll down on the page. Click **Change Shape**.
 
     ![](images/create_instance2_2.png " ")
 
-7. In the **Browse All Shapes** dialog:
+5. In the **Browse All Shapes** dialog:
 
       - **Instance Type**: Select Virtual Machine
       - **Shape Series**: Ampere
@@ -120,7 +112,7 @@ In this lab, you will:
 
       ![](images/create-compute-2.png)
 
-10. Scroll down to **Primary VNIC Information** section and edit the following:
+6. Scroll down to **Primary VNIC Information** section and edit the following:
 
       - **Virtual cloud network**: Choose the VCN you created in Task 1
       - **Subnet:** Choose the Public Subnet under **Public Subnets** (it should be named Public Subnet-NameOfVCN)
@@ -134,17 +126,17 @@ In this lab, you will:
       
       ![](images/ssh_key_2.png)   
 
-11. In **Boot Volume:** section, select **Specify a custom boot volume size** and enter the following:
+7. In **Boot Volume:** section, select **Specify a custom boot volume size** and enter the following:
     - **Boot volume size (GB)**: 120
     - **Boot volume performance**: 10
 
     ![](images/boot_volume_custom.png)
         
-12. Click **Create**.
+8. Click **Create**.
 
    **NOTE:** If 'Service limit' error is displayed decrease **Number of OCPUS and Memory** in **select shape** OR choose a different AD
 
-13.  Wait for the instance to have the **Running** status. Note down the Public IP of the instance. You will need this later.
+9.  Wait for the instance to have the **Running** status. Note down the Public IP of the instance. You will need this later.
     ![](images/public_ip.png)
 
 ## Task 3: Delete the resources(Optional)
@@ -172,4 +164,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** - Animesh Sahay and Francis Regalado, Enterprise Cloud Architect, OCI Cloud Venture
 * **Contributors** -  Andrew Lynch, Director Cloud Engineering, OCI Cloud Venture
-* **Last Updated By/Date** - Animesh Sahay, April 2024
+* **Last Updated By/Date** - Animesh Sahay, August 2024
