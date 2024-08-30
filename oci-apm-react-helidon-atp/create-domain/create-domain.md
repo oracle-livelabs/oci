@@ -26,7 +26,7 @@ Estimated time: 10 minutes
 
 3. Name your APM domain and select the compartment you created during the Native Cloud App Workshop.
 
-> **Note:** If you followed the instruction in the [Native Cloud App](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814) Workshop , the name of the compartment is ***“mtdrworkshop”***.
+> **Note:** If you followed the instruction in the [Native Cloud App](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814) Workshop , the name of the compartment is ***“mtdrworkshop”***.
 
 4. Add a check to the **Create as Always Free Domain**, then click **Create**.
   ![Oracle Cloud console, Create APM Domain](images/2-3-domain.png " ")

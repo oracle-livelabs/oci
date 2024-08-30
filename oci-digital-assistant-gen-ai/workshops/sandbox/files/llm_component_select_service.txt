@@ -1,0 +1,1 @@
+This is an image of a portion of the Component page for the invokeLLM template properties inspector. In this image, the LLM Sevice dropdown is expanded to reveal the Default Value item and an item for a configured LLM service.

@@ -26,8 +26,8 @@ Video Recording
 ## Learn More
 
 Labs
-* [Lab for Enabling Cloud Guard](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3264&session=112989464471480)
-* [Creating a Resource Manager Stack](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=611&clear=RR,180&session=112989464471480)
+* [Lab for Enabling Cloud Guard](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3264&session=112989464471480)
+* [Creating a Resource Manager Stack](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=611&clear=RR,180&session=112989464471480)
 
 Resource Links for Reference 
 * [OCI Cloud Advisor](https://www.oracle.com/manageability/cloud-advisor/): Cloud Advisor finds potential inefficiencies in your tenancy and offers guided solutions that explain how to address them. The recommendation help you maximize cost savings and improve that security of your tenancy. 

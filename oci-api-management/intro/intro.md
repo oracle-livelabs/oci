@@ -45,7 +45,6 @@ This lab assumes you have:
 - An Oracle account
 - Or that you will create one in *Get Started*
 
-## Acknowledgements 
-
-- **Authors**
-    - Marc Gueury / Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+## Acknowledgements
+* **Author** - Marc Gueury / Phil Wilkins /  Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+* **Last Updated By/Date** - Marc Gueury, May 2024

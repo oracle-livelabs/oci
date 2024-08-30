@@ -6,6 +6,8 @@ In this lab we will deploy the opensource chat-bot image from OCIR and expose it
 
 Estimated Time: 30 minutes
 
+Estimated Time: 30 minutes
+
 ## Task 1: Deploy chatbot app using minikube
 
 1. SSH into your compute instance if not already in, Enter command:

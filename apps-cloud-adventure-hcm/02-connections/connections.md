@@ -1,17 +1,18 @@
-# Connections
+# Employee View
 
 ## Introduction
 
-In this activity, you'll explore one of our Innovation features, **Connections**, which helps employees build better relationships, highlight their interests and skills, and share feedback on others’ profile. 
+In this activity, you’ll complete two tasks, the first is exploring one of our innovation features, *Connections*, which helps employees build better relationships, highlight their interests and skills, and share feedback on others’ profiles. The second task will showcase how Oracle Cloud HCM can handle various types of *absences* with a simple request process. 
 
 
-Estimated Time: 6 minutes
+Estimated Time: 11 minutes
 
 
 ### Objectives
 
 In this activity, you will:
 * Learn about the power of Oracle HCM Connections
+* Submit an absence request as an employee
 
 
 
@@ -23,6 +24,11 @@ In this activity, you will:
 
     ![Home Page](images/connections.png)
 
+    ![Home Page](images/connections2.png)
+
+    ![Home Page](images/connections3.png)
+
+
 
 2. Adventure awaits, show what you know, and rise to the top of the leader board!!!
     
@@ -31,27 +37,27 @@ In this activity, you will:
     [Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
 
 
-## Summary
-
-Connections is designed to help you and your employees:
-  
-**Easily connect with others**
-Help workers quickly find and connect with others who have specific skills, interests, or experiences.
-
-**Engage and build relationships**
-Enable workers to share personal interests and create connections and community, increasing opportunities for inclusion and belonging.
-
-**Build networks**
-Allow workers to promote their personal brand by highlighting their skills, accomplishments, and career experience.
+## Task 2:  Absence Request
 
 
+1. Oracle Cloud HCM can handle any type of absence, to include automating which absences different employees can request/view, based on specific/local rules. This logic also includes accruals and entitlements.
+
+![Home Page](images/connections4.png)
+
+> Under the **‘Me’** tab and **‘Quick Actions’** column to the left, click **‘Add Absence’** (you can also use the digital assistant to request an absence)
+
+2. Click **‘Continue Without Journey’**
+
+![Home Page](images/connections5.png)
+
+3. Choose the **‘Vacation’** absence type from the drop-down list. Select a Start & End Date, and then click submit at the top-right of the page to send your request.
+
+![Home Page](images/connections6.png)
 
   > Click the **‘Home’** Icon
-
-**You may now proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant
 * **Contributors** -  Dorcas Conyers, Principal Sales Consultant
-* **Last Updated By/Date** - Dorcas Conyers, March 2024
+* **Last Updated By/Date** - Dorcas Conyers, August 2024
 

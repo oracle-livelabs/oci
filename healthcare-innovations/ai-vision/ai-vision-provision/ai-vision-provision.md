@@ -40,142 +40,112 @@ If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges 
 
     The compartment is created and you can use it for your cloud services!
 
-## Task 2: Choose Autonomous Database from the OCI services menu
+## Task 2: Choose Autonomous Database from the services menu
+
+1. Log in to the Oracle Cloud.
+2. Once you log in, the cloud services dashboard shows all the services available to you. Click the **navigation menu** in the upper left to show top-level navigation choices.
+
+3. This lab shows the provisioning of an Autonomous Data Warehouse database. Click on **Oracle Database**, then select **Autonomous Data Warehouse**.
+
+    ![Click Autonomous Data Warehouse.](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
+
+
+4. Make sure your Workload Type is __Data Warehouse__ or __All__ to see your Autonomous Data Warehouse instances. Use the __List Scope__ drop-down menu to select a compartment. <if type="livelabs">Enter the first part of your user name, for example `LL185` in the Search Compartments field to quickly locate your compartment.
  
-1. Once logged into Oracle Cloud, click the navigation menu in the upper left to show top level navigation choices:
+    <if type="freetier">
+    ![Check the workload type on the left.](images/compartment-name.png " Check the workload type on the left.")
 
-    ![Click OCI navigation menu.](images/oci-navigation-invoke.png " ")
+    > **Note:** Avoid using the `ManagedCompartmentforPaaS` compartment, as this is an Oracle default used for Oracle Platform Services.
+   </if>
 
-    Then, select **Oracle Database -> [](var:db_workload_type)**:   
+5. This console shows that no databases yet exist. If there were a long list of databases, you could filter the list by the **State** of the databases (Available, Stopped, Terminated). You can also sort by __Workload Type__. In this example, __Data Warehouse__ is the workload type.
 
-    ![Click Autonomous Database (ATP or ADW).](images/oci-navigation-adb.png " ")
-
-2. You can use the List Scope fields on the left to control the list of Autonomous Databases that are displayed. This is useful when you are managing many Autonomous Databases:
-
-    ![Database list.](images/oci-adb-list.png " ")
-
-    - **Compartment**: OCI resources are organized into compartments. Select the compartment where you want to create your Autonomous Database. <if type="livelabs">To quickly locate the compartment that has been assigned to you for this workshop, enter the first part of your user name (e.g. `LL185`) in the Search Compartments field.</if>
-    - **Workload Type**: Filter the Autonomous Database list by selecting your workload type. Select *All* to view all databases
-    - **State**: View databases that are available, stopped, terminated and more.
+    ![Autonomous Databases console.](./images/no-adb-instances.png "Autonomous Databases console. ")
 
 <if type="freetier">
-
-   > **Note:** Avoid the use of the `ManagedCompartmentforPaaS` compartment as this is an Oracle default used for Oracle Platform Services.
-
+1. You can see your current default **region** in the top right-hand corner of the page.
+    ![Select region on the far upper-right corner of the page.](./images/region-select.png " ")
 </if>
 
-<if type="freetier">
-3. If you are using a Free Trial or Always Free account, and you want to use Always Free Resources, you need to be in a region where Always Free Resources are available. You can see your current default **region** in the top, right hand corner of the page.
+## Task 3: Create the Oracle Autonomous Database instance
 
-    ![Select region on the far upper-right corner of the page.](./images/oci-region-list.png " ")
-</if>
-
-## Task 3: Create the Autonomous Database instance
- 
 1. Click **Create Autonomous Database** to start the instance creation process.
 
-    ![Click Create Autonomous Database.](images/adb-click-create-adb.png "Create Autonomous Database")
+    ![Click Create Autonomous Database.](./images/create-autonomous-database.png "Click Create Autonomous Database. ")
 
-2.  This brings up the **Create Autonomous Database** screen where you will specify the configuration of the instance.
+2.  This brings up the __Create Autonomous Database__ screen, where you will specify the instance's configuration.
 
+3. Specify basic information for the Autonomous Database:
 
-    ![Create Autonomous Database](images/adb-create-screen-freetier-default.png "Create Autonomous Database")
+    - __Compartment__ - Leave the default compartment.
+    - __Display Name__ - Enter a memorable name for the database for display purposes. For example, use __DEMO\_ADW__.
+    - __Database Name__ - Use letters and numbers only, starting with a letter. The maximum length is 30 characters.  
+    <if type="freetier">
+        ![Create ADW screen](./images/adb-install-00.png "Create ADW screen ") 
+    </if>
+    - __Workload Type__ - For this lab, choose __Data Warehouse__ as the workload type.
+    - __Deployment Type__ - For this lab, choose __Serverless__ as the deployment type.
+    ![Create ADW screen](./images/adb-install-01.png "Create ADW screen ")  
+    - __Always Free__ - For this lab, we will leave Always Free **unchecked**.
+    - __Choose database version__ - Select a database version **19c** from the available versions.
+    - **Choose network access**: For this lab, accept the default, **Secure access from everywhere**.
+    ![Create ADW screen](./images/adb-install-04.png "Create ADW screen ")
 
+    <if type="freetier">
+    Choose a license type. For this lab, choose __License Included__. The two license types are:
+    </if> 
 
-3. Give basic information for the autonomous database:
+    - __Bring Your Own License (BYOL)__ - Select this type when your organization has existing database licenses. [learn more](https://www.oracle.com/cloud/pricing/)
+    - __License Included__ - Select this type when you want to subscribe to new database software licenses and the database cloud service.
+    - __Oracle Database Edition__ - Select __Oracle Database Enterprise Edition__. This option is available only if you have selected __Bring Your Own License (BYOL)__
 
-<if type="freetier">
-    - **Choose a compartment** - Select the compartment you just created.
-    - **Display Name** - Enter a memorable name for the database for display purposes. For this lab, use **[](var:db_display_name)**.
-    - **Database Name** - Use letters and numbers only, starting with a letter. Maximum length is 14 characters. (Underscores not supported.) For this lab, use **[](var:db_name)**.
+4. Configure the database:
+ 
+    - __ECPU count__ - Number of ECPU for your service. For this lab, specify __2 ECPU__.  
+    - __Storage (TB)__ - Select your storage capacity in terabytes. For this lab, specify __1 TB__ of storage.  
+    - __Auto Scaling__ - Auto Scaling - For this lab, keep auto-scaling **unchecked**. If autoscaling is enabled, the system will automatically use up to three times more CPU and IO resources to meet workload demand. learn more about [auto scaling](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/autonomous-auto-scale.html)
+ 
+        ![Create workload type](./images/adb-install-02.png "Create ADW screen ")
+  
+        Backup retention period, default to 60 days.
 
-    ![Enter the required details.](./images/adb-create-screen-names.png " ")
-</if>
-<if type="livelabs">
-    - **Choose a compartment** - Use the default compartment created for you.
-    - **Display Name** - Enter a memorable name for the database for display purposes. For this lab, use **[](var:db_display_name)**.
-    - **Database Name** - Use letters and numbers only, starting with a letter. Maximum length is 14 characters. (Underscores not supported.) For this lab, use **[](var:db_name_livelabs)**, for example, **[](var:db_name_livelabs_example)**.
+        Create administrator credentials:
 
-    ![Enter the required details.](./images/adb-create-screen-names.png " ")
-</if>
+        ![Create deployment type](./images/adb-install-03.png "deployment type ")
 
-4. Choose a workload type. Select the workload type for your database from the choices:
+    - __Password and Confirm Password__ - Specify the password for the **ADMIN** user of the service instance.  
+    - Autonomous Database requires strong passwords.
+  
+1. The **Contact Email** field allows you to list contacts to receive operational notices and announcements as well as unplanned maintenance notifications. This is optional.
 
-    - **Data Warehouse** - designed to support all standard SQL and business intelligence (BI) tools, and provides all of the performance of the market-leading Oracle Database in an environment that is tuned and optimized for data warehouse workloads
-    - **Transaction Processing** - provides all of the performance of the market-leading Oracle Database in an environment that is tuned and optimized to meet the demands of a variety of applications, including: mission-critical transaction processing, mixed transactions and analytics, IoT, and JSON document store
-    - **JSON Database** - is Oracle Autonomous Transaction Processing, but designed for developing NoSQL-style applications that use JavaScript Object Notation (JSON) documents. You can store up to 20 GB of data other than JSON document collections. There is no storage limit for JSON collections.
-    - **APEX** - is a low cost, Oracle Cloud service offering convenient access to the Oracle APEX platform for rapidly building and deploying low-code applications
+    ![Click Create ADW Button.](images/db-actions-05.png)
+ 
+    Click on __Create Autonomous Database__. button
 
-    For this workshop, choose **Data Warehouse**.
+    
 
-    ![Choose a workload type.](images/adb-create-screen-workload.png "Workload type")
+2.   Your instance will begin provisioning. In a few minutes, the State will turn from Provisioning to Available. At this point, your Autonomous Data Warehouse database is ready to use! Have a look at your instance's details here, including its name, database version, OCPU count, and storage size.
 
-5. Choose a deployment type. Select the deployment type for your database from the choices:
+    ![Database instance homepage.](./images/adb-install-05.png "Database instance homepage ")
 
-    - **Shared Infrastructure** - For this lab, choose **Shared Infrastructure** as the deployment type.
-    - **Dedicated Infrastructure**
+    ![Database instance homepage.](./images/adb-install-06.png "Database instance homepage ")
+ 
 
-    ![Choose a deployment type.](images/adb-create-screen-deployment-type.png "Deployment type")
+## Task 4: Access Database Actions run SQL queries 
 
-6. Configure the database:
+1. From Database Actions menu we can run common tasks such as running SQL queries, Data Modeler, REST API development etc.  
 
-    - **Always Free** - If your Cloud Account is an Always Free account, you can select this option to create an always free autonomous database. An always free database comes with 1 OCPU and 20 GB of storage. For this lab, we recommend you leave Always Free unchecked.
-    - **Choose database version** - Select **19c** as the database version.
-    - **OCPU count** - Number of OCPUs for your service. For this lab, specify **[](var:db_ocpu)**. If you choose an Always Free database, it comes with 1 OCPU.
-    - **Storage (TB)** - Select your storage capacity in terabytes. For this lab, specify **[](var:db_storage)** of storage. Or, if you choose an Always Free database, it comes with 20 GB of storage.
-    - **OCPU auto Scaling** - For this lab, keep auto scaling enabled, to enable the system to automatically use up to three times more OCPU and IO resources to meet workload demand.
-    - **Storage auto scaling** - For this lab, there is no need to enable storage auto scaling, which would allow the system to expand up to three times the reserved storage.
+    Click the **Database Actions** button.
 
-    > **Note:** You cannot scale up/down an Always Free autonomous database.
+    ![database actions](images/db-actions-01.png "database actions")
 
-    ![Choose the remaining parameters.](./images/adb-create-screen-configure-db.png "Configuration")
+    ![database actions](images/db-actions-00.png "database actions")
 
-7. Create administrator credentials:
+    Select the **SQL** tab to open the **SQL worksheet**.
 
-    - **Password and Confirm Password** - Specify the password for ADMIN user of the service instance. The password must meet the following requirements:
-    - The password must be between 12 and 30 characters long and must include at least one uppercase letter, one lowercase letter, and one numeric character.
-    - The password cannot contain the username.
-    - The password cannot contain the double quote (") character.
-    - The password must be different from the last 4 passwords used.
-    - The password must not be the same password that you set less than 24 hours ago.
-    - Re-enter the password to confirm it. Make a note of this password.
-
-    ![Enter password and confirm password.](./images/adb-create-screen-password.png "Admin password")
-
-8. Choose network access:
-    - For this lab, accept the default, **Secure access from everywhere**.
-    - If you want to allow traffic only from the IP addresses and VCNs you specify - where access to the database from all public IPs or VCNs is blocked, select **Secure access from allowed IPs and VCNs only** in the Choose network access area.
-    - If you want to restrict access to a private endpoint within an OCI VCN, select **Private endpoint access only** in the Choose network access area.
-    - If the **Require mutual TLS (mTLS) authentication** option is selected, mTLS will be required to authenticate connections to your Autonomous Database. TLS connections allow you to connect to your Autonomous Database without a wallet, if you use a JDBC thin driver with JDK8 or above. See the [documentation for network options](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/support-tls-mtls-authentication.html#GUID-3F3F1FA4-DD7D-4211-A1D3-A74ED35C0AF5) for options to allow TLS, or to require only mutual TLS (mTLS) authentication.
-
-    ![Choose the network access.](./images/adb-create-screen-choose-network.png "Networking options")
-
-9. Choose a license type. <if type="freetier">For this lab, choose **License Included**.</if><if type="livelabs">For this lab, choose **Bring Your Own License (BYOL)**.</if> The two license types are:
-    - **Bring Your Own License (BYOL)** - Select this type when your organization has existing database licenses.
-    - **License Included** - Select this type when you want to subscribe to new database software licenses and the database cloud service.
-
-<if type="freetier">
-    ![](./images/adb-create-screen-license.png "License type")
-</if>
-<if type="livelabs">
-    ![](images/adb-create-screen-byol.png "License type")
-</if>
-
-10. For this lab, do not provide a contact email address. The "Contact Email" field allows you to list contacts to receive operational notices and announcements as well as unplanned maintenance notifications.
-
-    ![Do not provide a contact email address.](images/adb-create-screen-contact-email.png "email")
-
-11. Click **Create Autonomous Database**.
-
-12.  Your instance will begin provisioning.
-
-    ![Database Provisioning message.](./images/adb-create-provisioning-message.png "Provisioning")
-
-    In a few minutes, the state will turn from Provisioning to Available. At this point, your Autonomous Database instance is ready to use! Have a look at your instance's details - including its name, database version, OCPU count, and storage size.
-
-    ![Database complete message.](./images/adb-create-complete-message.png "Complete")
-
-## Task 4: How to create an Oracle APEX Workspace
+    ![database actions](images/db-actions-04.png "database actions")
+     
+## Task 5: How to create an Oracle APEX Workspace
 
 1. Once the Autonomous Database has been fully provisioned, return to the *Autonomous Database* page, locate the instance's display name, and then click on it to view the ADB's details page. Click the *Tools* tab. 
 2. Click the *Copy* button to copy the URL to launch the Oracle APEX development environment. Open the link in a new browser window or tab.
@@ -195,7 +165,7 @@ If you are using an Oracle LiveLabs-provided sandbox, you don't have privileges 
 1. After successful authentication, the browser will redirect to the default App Builder landing page where workspace administrators and developers will have access to various functionalities to develop and manage APEX applications.
 ![Once signed in, the workspace administrator and developers have access to the App Builder and a few other utilities.](./images/oracle-apex-development-environment-home-page.png)
 
-## Task 5: How to run SQL queries in Oracle APEX
+## Task 6: How to run SQL queries in Oracle APEX
 
 There are several ways to run SQL queries, few most frequently used techniques are listed below.
 
@@ -212,7 +182,7 @@ There are several ways to run SQL queries, few most frequently used techniques a
 
     ![SQL Commands](./images/apex-sendmail-5.png)
 
-## Task 6: How to setup Oracle APEX Web Credentials
+## Task 7: How to setup Oracle APEX Web Credentials
 
 Oracle APEX Web Credentials provides a convenient and secure mechanism for storing the following types of credentials:
 
@@ -242,7 +212,7 @@ We will be using OCI Native Authentication required to connect with Object Stora
 
     > **Note:** If you are new to OCI, Information on how to get these OCIDs is provided in next Lab **Setup OCI CLI**.
 
-## Task 7: How to login to Oracle APEX
+## Task 8: How to login to Oracle APEX
 
 We will see how to login to Oracle APEX environment
 
@@ -266,7 +236,7 @@ We will see how to login to Oracle APEX environment
 
     ![APEX how tos](images/apex-12.png " ")
 
-## Task 8: How to create Blank Oracle APEX page
+## Task 9: How to create Blank Oracle APEX page
 
 1. First you need to create Blank Application or Application that uses sample Apps, from there you can create APEX pages
 2. Click on the Application that has been created.
@@ -282,7 +252,7 @@ We will see how to login to Oracle APEX environment
 
     ![APEX how tos](images/apex-03.png " ")
 
-## Task 9: How to Create Low-Code Data Driven APEX page with CRUD Operations
+## Task 10: How to Create Low-Code Data Driven APEX page with CRUD Operations
 
 Similarly, if you want to create a no-code data driven page that allows you to perform CRUD operations on a table, 
 
@@ -314,7 +284,7 @@ Similarly, if you want to create a no-code data driven page that allows you to p
 
     ![APEX how tos](images/apex-14.png " ")
 
-## Task 10: How to Create Dynamic Actions 
+## Task 11: How to Create Dynamic Actions 
 
 Sometimes, you may want to create Dynamic Actions on a table data or on a button click, such as executing a server side code that invokes a PL/SQL procedure or runs a Javascript code or just submits a page.
 
@@ -327,7 +297,7 @@ Sometimes, you may want to create Dynamic Actions on a table data or on a button
 
     ![APEX how tos](images/apex-15.png " ")
 
-## Task 11: How to Create APEX Chart
+## Task 12: How to Create APEX Chart
 
 Sometimes, you may want to display data in a chart for example Bar Chart or Pie Chart or Stacked Bar chart etc. for this the SQL Query should contain a Label and a Numeric Value 
 
@@ -350,7 +320,7 @@ Sometimes, you may want to display data in a chart for example Bar Chart or Pie 
 
     ![APEX how tos](images/apex-19.png " ")
 
-## Task 12: How to Create a Page Process
+## Task 13: How to Create a Page Process
 
 Sometimes, you may want to execute a PL/SQL code block immediately after a page has been submitted and before next page loads, This you can do by adding a process that invokes PL/SQL procedure on a button click or page submit
 
@@ -375,7 +345,7 @@ Sometimes, you may want to execute a PL/SQL code block immediately after a page 
 
     ![APEX how tos](images/apex-21.png " ")
 
-## Task 13: How to configuring Oracle APEX Applications to Send Email
+## Task 14: How to configuring Oracle APEX Applications to Send Email
 
 1. Before you can send email from an Application Builder application, you must:
 
@@ -395,7 +365,7 @@ Sometimes, you may want to execute a PL/SQL code block immediately after a page 
     </copy>
     ```
 
-## Task 14: How to send mail in Plain Text format  
+## Task 15: How to send mail in Plain Text format  
 
 1. In the APEX Page add following PL/SQL Dynamic Action on Button click to send mail.
 
@@ -420,7 +390,7 @@ Sometimes, you may want to execute a PL/SQL code block immediately after a page 
     </copy>
     ```
 
-## Task 15: How to send mail in Text / HTML message
+## Task 16: How to send mail in Text / HTML message
 
 1. In the APEX Page add following PL/SQL Dynamic Action on Button click to send mail.
 
@@ -471,4 +441,5 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** - Madhusudhan Rao, Oracle Database Product Manager 
-- **Last Updated By/Date** - Madhusudhan Rao on 15th Aug 2023
+* **Last Updated By/Date** - June 12th, 2024
+* **Updates** - Database Actions
