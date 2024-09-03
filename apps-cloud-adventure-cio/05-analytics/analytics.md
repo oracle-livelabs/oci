@@ -162,49 +162,28 @@ In this activity, you will Create analytics across different lines of business t
 
     > Drag the **Absences** column from the data panel and drop it in the values section below the **Turnover** column.
 
-    ![Analytics view 6](images/image015.png)
-
-14.  This brings all relevant columns onto the canvas. We can now co-relate several attributes and arrive at the correct conclusion. 
+    ![Analytics view 7](images/image015.png)
 
     ![Analytics view 8](images/image016.png)
+    
+
+14.  This brings all relevant columns onto the canvas. We can now co-relate several attributes and arrive at the correct conclusion.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance. 
 
 
 
+15.  Let’s understand how the trend looks like in the future. We will use the built in Statistical Analysis function like forecast to under the future 
 
-15.  Let's change the chart type to understand trends and patterns better. 
+    > Right click anywhere in the **Turnover**, **Absences** Chart choose **Add Statistics** then **Forecast**
 
-    > (1) Select the line chart as shown in the Picture.   <br>
+    ![Analytics view 11](images/image021.png)
 
-    > (2) Click on the inverted triangle  ![inverted triangle](images/icon008.png)  in the Properties panel and select Bar Chart.
+16.  With a few simple clicks, you were able to forecast and understand the future trend. 
 
-    ![Analytics view 9](images/image017.png)
-
-
-16.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance. 
-
-    > (1) Now that we have understood the root cause of the margin decline let's share our findings with others.  <br>
-
-    > (2) Click on the Present button in the brown ribbon.
-
-    ![Analytics view 10](images/image018.png)
+    ![Analytics view 12](images/image022.png)
 
 
 
-17.  Oracle Analytics provides the ability to share your findings and content in a PowerPoint presentation mode.
-
-    > (1) In the Workbook > Canvas Navigation toolbar on the left, click 'Style' and change from 'Bottom Tabs' to 'Navigation Bar'.  <br>
-
-    > (2) Next, click on the  Play Icon  ![Play Icon](images/icon009.png)  in the top right corner to activate Present Mode. 
-
-    ![Analytics view 11](images/image019.png)
-
-18.  Once in Present mode, you can go forward or backward, add notes, filters, etc, to tell your story.
-
-    ![Analytics view 12](images/image020.png)
-
-
-
-19. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+17. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
