@@ -303,4 +303,4 @@ To end this portion of the Cloud Adventure, your class administrator will activa
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Sales Consultant, Advanced Technology Services
 * **Contributors** -  
-* **Last Updated By/Date** - Nate Weinsaft, August 2024
+* **Last Updated By/Date** - Nate Weinsaft, September 2024
