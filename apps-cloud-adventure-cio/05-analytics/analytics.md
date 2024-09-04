@@ -19,7 +19,7 @@ In this activity, you will Create analytics across different lines of business t
  
 ![Analytics OBJs](images/analytics_objs.png)
 
-## Task 1: Create analytics across different lines of business to derive better business insight
+## Task : Create analytics across different lines of business to derive better business insight
 
 
 
