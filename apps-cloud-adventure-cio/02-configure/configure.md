@@ -239,7 +239,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     Redwood offers a quick way to review your changes as they appear in the application.
 
-    > (1) Click on the **Preview** ![Preview Icon](images/icon04_preview.png) in the upper right of  the screen.   <br>
+    > (1) Click on the **Preview** ![Preview Icon](images/icon04_preview.png) icon in the upper right of  the screen.   <br>
 
     > (2) A new window will pop up.
 
