@@ -21,7 +21,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
 1. Oracle Cloud Applications are delivered with a complete set of roles which control access to application functions and data.  
 
-  To add a new privilige to a user, you will need to first copy an existing role.
+  To add a new privilege  to a user, you will need to first copy an existing role.
 
    > This is the Springboard where you’ll access all features.
 
@@ -53,7 +53,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
 5. You can now see a list of the roles which are granted to a user when they are provided with the Accounts Payable Manager.
 
-  > Notice that the table may be exported to Microsoft Execl using the button provided at the top right. <br>
+  > Notice that the table may be exported to Microsoft Excel using the button provided at the top right. <br>
 
   > (Nothing to perform here)
 
@@ -63,7 +63,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
   > Tasks associated with the role are available from this pull-down menu.  Select **Copy Role**.
 
-  ![Copy Aventure Role a](images/image006.png)
+  ![Copy Adventure Role a](images/image006.png)
 
   > Select **Copy top role**. <br>
 
@@ -83,15 +83,15 @@ At this point, you should be logged into your environment with a username CIO.xx
 
   ![Copy Role a](images/image008.png)
 
-9. Using Function Secuirty Policy, you will add the privileges Brian Bell needs
+9. Using Function Security  Policy, you will add the privileges Brian Bell needs
 
-  > Press the **Add + Function Secuirty Policy** button.
+  > Press the **Add + Function Security  Policy** button.
 
   ![Copy Role 2a](images/image009.png)
 
 10. You will now find the required policy using the search form.	
 
-  > Type **Cancel Supplier Negotiation** in the seach field and select the policy.
+  > Type **Cancel Supplier Negotiation** in the search field and select the policy.
 
   ![Copy Role 2b](images/image010.png)
 
