@@ -217,9 +217,9 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 15.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
 
-    > (1) Under **Messages**, Enter **Adjustment Percentage is too high** in **Summary**.    <br>
+    > (1) Under **Messages**, type in **Adjustment Percentage is too high** in **Summary**.    <br>
 
-    > (2) Then enter **The Adjustment Percentage must be lower than 15%** in **Detail**.
+    > (2) Then type in **The Adjustment Percentage must be lower than 15%** in **Detail**.
 
     ![Create Validation](images/image028.png)
 
