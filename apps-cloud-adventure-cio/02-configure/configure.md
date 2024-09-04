@@ -45,7 +45,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     > (1) Search for **Barrett Reed** in the search field. <br>
 
-    > (2) Select **Barrett Reed** in the drop down (add new picture). <br>
+    > (2) Select **Barrett Reed** in the drop down. <br>
 
 
     ![Change Salary Page](images/image004.png)
