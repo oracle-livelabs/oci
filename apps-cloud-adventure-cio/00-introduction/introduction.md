@@ -6,7 +6,7 @@ Are you a SaaS Application Administrator or Analyst? Are you tasked with setting
 
 Estimated Adventure Time: 2 hours
 
-### **Objectives**
+### Objectives
 
 This Activity Guide will lead you along the way through a set of Adventure Labs, where you will experience the:
 1.	Use Security Console to easily manage user access
@@ -14,10 +14,16 @@ This Activity Guide will lead you along the way through a set of Adventure Labs,
 3.  Experience the power of the integration capabilities of Fusion Cloud
 4.  Create powerful analytics for business insight
 
+## Tasks
+
 
 Let's create your team name for your cloud adventure!
 
 [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
     
+## Acknowledgements
+* **Author** - Sajid Saleem, Master Principal Sales Consultant, Advanced Technology Services
+* **Contributors** -  
+* **Last Updated By/Date** - Sajid Saleem, September 2024
 
 

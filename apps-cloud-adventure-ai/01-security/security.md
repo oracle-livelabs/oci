@@ -18,7 +18,7 @@ Estimated Time: 15 minutes
 
 In this activity you’ll learn the different ways to manage user access and to secure your Oracle Fusion Cloud Applications.
 
-![Security Objectives](images/SEC_OBJs.png)
+![Security Objectives](images/sec_objs.png)
 
 
 ## Task 1: Opening - Log In

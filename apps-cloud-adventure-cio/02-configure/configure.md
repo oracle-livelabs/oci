@@ -18,7 +18,7 @@ Estimated Time: 15 minutes
 
 In this activity, you will use Redwood to incorporate rules and define content surfaced in the application to tailor the user experience. 
 
-![Configure  OBJs](images/Configure_OBJs.png).
+![Configure  OBJs](images/configure_objs.png).
 
 
 
@@ -36,7 +36,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![My Team Page](images/image002.png)
 
-    > Click on the ![X](images/Icon01_X.png) **Icon** to remove the Direct Reports Filter because your user does not have any direct reports.  This action allows you to see other people.
+    > Click on the ![X](images/icon01_x.png) **Icon** to remove the Direct Reports Filter because your user does not have any direct reports.  This action allows you to see other people.
 
     ![My Team Page](images/image003.png)
 
@@ -75,7 +75,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 5. Now you will enter the Visual Builder Studio.
 
-    > (1) Click on the ![CO Image](images/Icon02_CO.png) **Image** in the top right corner of the screen.  <br>
+    > (1) Click on the ![CO Image](images/i02_co.png) **Image** in the top right corner of the screen.  <br>
 
     > (2) Then select **Edit Page in Visual Builder Studio** from the drop down options.
 
@@ -97,7 +97,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 7. First we will create a new form rule for change salary.
 
-    > Click on the ![+ Icon](images/Icon05_plus.png) **Icon** to add a new form rule.
+    > Click on the ![+ Icon](images/icon05_plus.png) **Icon** to add a new form rule.
 
     ![Fields and Regions](images/image011.png)
 
@@ -134,7 +134,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 9.  Now you want to add and hide fields.
 
-    > Click on the **Drop Down** ![Drop Down Icon](images/Icon03_dropdown.png) Icon to the left of Salary to expand the salary section.
+    > Click on the **Drop Down** ![Drop Down Icon](images/icon03_dropdown.png) Icon to the left of Salary to expand the salary section.
 
     ![Fields and Regions, Conditions](images/image016.png)
 
@@ -239,7 +239,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     Redwood offers a quick way to review your changes as they appear in the application.
 
-    > (1) Click on the **Preview** ![Preview Icon](images/Icon04_preview.png) icon in the upper right of  the screen.   <br>
+    > (1) Click on the **Preview** ![Preview Icon](images/icon04_preview.png) icon in the upper right of  the screen.   <br>
 
     > (2) A new window will pop up.
 
@@ -282,7 +282,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Change Salary Screen 2 error message](images/image036.png)
 
-    > Click on the **Home** ![Home Icon](images/Icon07_home.png) Icon.
+    > Click on the **Home** ![Home Icon](images/icon07_home.png) Icon.
 
     ![Change Salary Screen 2](images/image037.png)
 

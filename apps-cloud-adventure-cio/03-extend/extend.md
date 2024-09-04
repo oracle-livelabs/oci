@@ -13,12 +13,12 @@ In this lab, you will:
 
 * Use Visual Builder to build a new Supplier Screen.
 
-![New Screen Process Flow](images/SupplierScreenOBJs.png)
+![New Screen Process Flow](images/supplierscreenobjs.png)
 
 
 * Create a Guided Journey that leverages an external LLM
 
-![Journey Process Flow](images/LLM%20OBJs.png)
+![Journey Process Flow](images/llmobjs.png)
 
 
 
@@ -266,9 +266,9 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 2. The first step is to configure a Checklist Template to include the Guided Journey Task. We’ve already setup Checklist Templates for each Cloud Adventure User, so you'll start by searching for your specific template.
 
     > (1) Enter **CA&#95;##&#95;HCM_GJ** in the **search** field, **where ## is your assigned user number**. <br>
-    ![View Caution](images/CautionAboutUserNumbers.png)
+    ![View Caution](images/cautionaboutusernumbers.png)
 
-    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/Icon01_search.png) icon or press the **Enter** key to execute the search.
+    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/icon01_search.png) icon or press the **Enter** key to execute the search.
 
     ![View Checklist](images/image202.png)  
 <br>
@@ -289,7 +289,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 5. You don’t have any tasks yet, so you can create one.  The task is where you will define the connection to the external LLM.
 
-    > (1) Click the ![Plus Icon](images/Icon02_Plus.png) icon. <br>
+    > (1) Click the ![Plus Icon](images/icon02_Plus.png) icon. <br>
 
     > (2) Click **Create Task** from the resulting popup.  
 
@@ -316,7 +316,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 8. The next step is the configuration the Compensation Info UI to leverage your Guided Journey. To do that, you can head back to the home page.
 
-   > Click on the **Home** ![Home Icon](images/Icon03_home.png)  icon on the top icon bar.
+   > Click on the **Home** ![Home Icon](images/icon03_home.png)  icon on the top icon bar.
     ![Enter Task Info](images/image208.png)  
 <br>
 
@@ -330,7 +330,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 10. There are no matching workers, so you can unselect Direct reports to broaden our search.
 
-   > Click the ![X Icon](images/Icon04_X.png) next to Direct Reports under the search field.
+   > Click the ![X Icon](images/icon04_x.png) next to Direct Reports under the search field.
 
    ![Enter Task Info](images/image210.png)  
 <br>
