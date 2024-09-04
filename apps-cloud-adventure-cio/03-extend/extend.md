@@ -407,4 +407,4 @@ So, check your with you team, double-check your racing harness and get ready for
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Sales Consultant, Advanced Technology Services; Stephen Chung, Principal SaaS Cloud Technologist, Advanced Technology Services
 * **Contributors** - Sajid Saleem, Master Principal SaaS Cloud Technologist, Advanced Technology Services  
-* **Last Updated By/Date** 
+* **Last Updated By/Date** - Charlie Moff, September 2024

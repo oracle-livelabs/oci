@@ -308,6 +308,6 @@ In this example, you used Redwood, Oracle’s next-generation design system, to 
 ## Acknowledgements
 * **Author** - Casey Doody, Sales Consultant, Advanced Technology Services
 * **Contributors** -  Sajid Saleem, Master Principal Sales Consultant, Advanced Technology Services
-* **Last Updated By/Date** - Casey Doody, August 2024
+* **Last Updated By/Date** - Casey Doody, September 2024
 
 
