@@ -41,7 +41,7 @@ In this lab, you will:
 
 4. We'll create a new workspace for our simplified supplier screen
 
-    > (1) **Click** on the **‘New’** dropdown <br>
+    > (1) **Click** on the **‘New’** ![New drop down](images/icon017_dropdown.png) dropdown <br>
 
     > (2) **Select** **‘New Application Extension’** from the resulting dropdown
 
@@ -57,7 +57,7 @@ In this lab, you will:
 
 6. We're now at the Visual Builder homepage.  We can configure existing screens, create new ones, or build whole new applications.  We can also leverage REST APIs to access Fusion SaaS Data.  Supplier data from Oracle ERP/SCM Cloud, so we'll leverage the embedded integration via REST APIs.
 
-    > (1) **Click** the **‘Services’** icon on the left menu.
+    > (1) **Click** the **‘Services’** ![Services Icon](images/icon018_services.png) icon on the left menu.
 
     ![add UI Screen](images/image106.png)
 
@@ -90,7 +90,7 @@ In this lab, you will:
 
 11. The resulting screen shows additional configuration options for our supplier service, but we'll just use the default settings.  Now we want to start creating our new screen.  
 
-    > **Click** on the **‘App UIs’** icon in the left toolbar
+    > **Click** on the **‘App UIs’** ![App UIs Icon](images/icon019_apps_uis.png) icon in the left toolbar
 
     ![select from catalog](images/image111.png)
 
