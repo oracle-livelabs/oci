@@ -11,9 +11,7 @@ Estimated Time: 15 minutes
 
 During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
 
-![Security Objectives](images/sec_objs.png)
-
-![Security Objectives](images/sec_objs.png)
+  ![Security Objectives](images/sec_objs.png)
 
 At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
 
