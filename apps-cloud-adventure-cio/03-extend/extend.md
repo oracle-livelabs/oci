@@ -203,7 +203,7 @@ In this lab, you will:
 
 23. Now that we've created our screen, we can test it.
 
-    > Click the **Preview** ![Preview Icon](images/icon06_preview.png) icon on the top right of the screen.
+    > Click the **Preview** ![Preview Icon](images/icon016_preview.png) icon on the top right of the screen.
 
     ![select edit page fields](images/image124.png)
 

@@ -17,7 +17,7 @@ Estimated Time: 15 minutes
 
 In this activity, you will Create analytics across different lines of business to derive better business insight
  
-![Analytics OBJs](images/analytics_objs.png)
+![Analytics OBJs](images/analytics_objs1.png)
 
 ## Task 1: Create analytics across different lines of business to derive better business insight
 
