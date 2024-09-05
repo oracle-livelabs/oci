@@ -13,7 +13,7 @@ In this lab, you will:
 
 * Create a Guided Journey that leverages an external LLM
 
-![Journey Process Flow](images/LLM%20OBJs.png)
+![Journey Process Flow](images/llm%20objs01.png)
 
 [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
   
@@ -45,9 +45,9 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 2. The first step is to configure a Checklist Template to include the Guided Journey Task. We’ve already setup Checklist Templates for each Cloud Adventure User, so you'll start by searching for your specific template.
 
     > (1) Enter **CA&#95;##** in the **search** field, **where ## is your assigned user number**. <br>
-    ![View Caution](images/CautionAboutUserNumbers.png)
+    ![View Caution](images/cautionaboutusernumbers1.png)
 
-    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/Icon01_search.png) icon or press the **Enter** key to execute the search.
+    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/icon011_search.png) icon or press the **Enter** key to execute the search.
 
     ![View Checklist](images/image102.png)  
 <br>
@@ -68,7 +68,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 5. You don’t have any tasks yet, so you can create one.  The task is where you will define the connection to the external LLM.
 
-    > (1) Click the ![Plus Icon](images/Icon02_Plus.png) icon. <br>
+    > (1) Click the ![Plus Icon](images/icon012_Plus.png) icon. <br>
 
     > (2) Click **Create Task** from the resulting popup.  
 
@@ -95,7 +95,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 8. The next step is the configuration the Compensation Info UI to leverage your Guided Journey. To do that, you can head back to the home page.
 
-   > Click on the **Home** ![Home Icon](images/Icon03_home.png)  icon on the top icon bar.
+   > Click on the **Home** ![Home Icon](images/icon013_home.png)  icon on the top icon bar.
     ![Enter Task Info](images/image108.png)  
 <br>
 
@@ -109,7 +109,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 
 10. There are no matching workers, so you can unselect Direct reports to broaden our search.
 
-   > Click the ![X Icon](images/Icon04_X.png) next to Direct Reports under the search field.
+   > Click the ![X Icon](images/icon014_X.png) next to Direct Reports under the search field.
 
    ![Enter Task Info](images/image110.png)  
 <br>
@@ -142,7 +142,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 14. You will now see the Compensation Benchmarking link available on the screen.  If you recall, Compensation Benchmarking as the name of the Task we defined earlier and is your link to the User Defined Configuration call to the LLM.
 
    > (1) Confirm that the **Compensation Benchmarking** link is now visible. <br>    
-   > (2) Click the **Preview** ![Preview](images/Icon06_preview.png) icon in the top right of the screen.
+   > (2) Click the **Preview** ![Preview](images/icon016_preview.png) icon in the top right of the screen.
 
    ![Create Task](images/image114.png)  
 <br>
