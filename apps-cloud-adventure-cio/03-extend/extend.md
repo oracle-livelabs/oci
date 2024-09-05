@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In these activities, you will learn how to 1 build a new simplified user interface for specific user populations and (2) easily extend for Fusion SaaS application to include external content to guide users to better decisions.
+In this activity, you will learn how to build a new simplified user interface for specific user populations.
 
 Estimated Time: 15 minutes
 
@@ -13,13 +13,7 @@ In this lab, you will:
 
 * Use Visual Builder to build a new Supplier Screen.
 
-![New Screen Process Flow](images/supplierscreenobjs.png)
-
-
-* Create a Guided Journey that leverages an external LLM
-
-![Journey Process Flow](images/llmobjs.png)
-
+![New Screen Process Flow](images/SupplierScreenOBJs.png)
 
 
 ## Task 1: Create a simplified user interface using Redwood Design Patterns and Oracle Visual Builder.
@@ -27,7 +21,7 @@ In this lab, you will:
 
 1. We will now create a new application screen to allow editing of specific supplier information.  Oracle Cloud Applications include an embedded tool called Visual Builder.  Visual Builder is the same tool that Oracle uses to develop application screens and it's available for you to create additional screens.  These screens can leverage both Oracle Cloud Application data and, if necessary, data from external systems.
 
-    > (1) **Click** on the **‘Configuration’** tab 
+    > (1) **Click** on the **‘Configuration’** tab. <br> 
 
     > (2) **Click** on the **‘Visual Builder’** tile
 
@@ -144,7 +138,7 @@ In this lab, you will:
 
     ![table layout](images/image117.png)
 
-17. The Quick Start features simply common tasks.We can use the Add Data Quick Start feature to show data from our Supplier REST API.
+17. The Quick Start features simply common tasks.  We can use the Add Data Quick Start feature to show data from our Supplier REST API.
 
     > (1) Click the **'Quick Start'** table in the Table Properties area. <br>
 
@@ -188,7 +182,7 @@ In this lab, you will:
 
     > (1) Confirm that you're on the **Quick Start** tab. <br>
 
-    > (2) Click the **Add Edit Page" tile.
+    > (2) Click the **Add Edit Page** tile.
 
     ![edit page quick start](images/image122.png)
 
@@ -209,7 +203,7 @@ In this lab, you will:
 
 23. Now that we've created our screen, we can test it.
 
-    > Click the **Preview** icon on the top right of the screen.
+    > Click the **Preview** ![Preview Icon](images/icon06_preview.png) icon on the top right of the screen.
 
     ![select edit page fields](images/image124.png)
 
@@ -222,7 +216,7 @@ In this lab, you will:
 
 25. We'll update and save a field.  Out new screen leverages the security and business rules of the application via the standard REST API. .
 
-    > (1) Enter a value in the **Alternate Name*** field. For example, enter "LeeSupp" as the Alternate Name for Lee Supplies.  <br>    
+    > (1) Enter a value in the **Alternate Name** field. For example, enter "LeeSupp" as the Alternate Name for Lee Supplies.  <br>    
     > (2) Click the **Save** button.   
 
 
@@ -240,156 +234,12 @@ In this lab, you will:
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
  
-## Task 2: Guided Journeys with User Defined Content
-
-Guided Journeys allow you to configure business processes to support user tasks by providing guidance, such as additional information, tutorials, company policies, best practices and more. The User Defined Content feature of a Guided Journey Task User defined content allows users to define guided journey tasks and connect to a user defined REST API. The user defined REST API can internally retrieve data from an external source and any of the existing Gen AI LLM models or other content providers based on the context information passed from the calling user interface.
-
-As a Pit Crew member and the Oracle SaaS Business Process and Configuration expert for your organization, you’re up to the task.
-
-**Objectives**<br>
-In this activity you will use HCM Guided Journey Task with User Defined Content and Visual Builder Studio to <br>
-&emsp;  • Configure HCM Checklist Template with a Guided Journey Task with User Defined Content <br>
-&emsp;  • Link the Guided Journey Task with User Defined Content with a pre-configured Generative AI endpoint <br>
-&emsp;  • Configure HCM Compensation Info Page to include the configured Checklist Template <br>
-&emsp;  • Preview your changes <br>
-
-As you follow along, do not forget to answer the Adventure Check Point questions! 
-
-1. The first step to creating our Guided Gourney is to setup a Checklist Template, which defines the tasks related to our Guided Journey.
-
-    > (1) Enter **Checklist Templates** in the search field at the top of the home page.  <br>    
-    > (2) Select **Checklist Templates** from the resulting dropdown search results.  
-
-    ![Checklist Template](images/image201.png)
-<br>
-
-2. The first step is to configure a Checklist Template to include the Guided Journey Task. We’ve already setup Checklist Templates for each Cloud Adventure User, so you'll start by searching for your specific template.
-
-    > (1) Enter **CA&#95;##&#95;HCM_GJ** in the **search** field, **where ## is your assigned user number**. <br>
-    ![View Caution](images/cautionaboutusernumbers.png)
-
-    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/icon01_search.png) icon or press the **Enter** key to execute the search.
-
-    ![View Checklist](images/image202.png)  
-<br>
-
-3. 
-
-    > Click your **Checklist Template name** (e.g. **CA&#95;##&#95;HCM&#95;GJ**) to open the checklist.
-
-    ![Open Checklist Template](images/image203.png)  
-<br>
-
-4. You can see the general information for your Checklist.  You’re now ready to add a Task. 
-   
-    > **Click** on the **Tasks** tab.
-  
-    ![View Checklist](images/image204.png)  
-<br>
-
-5. You don’t have any tasks yet, so you can create one.  The task is where you will define the connection to the external LLM.
-
-    > (1) Click the ![Plus Icon](images/icon02_Plus.png) icon. <br>
-
-    > (2) Click **Create Task** from the resulting popup.  
-
-    ![Create Task](images/image205.png)  
-<br>
-
-6. You can now define your new task and leverage the task type User Defined Content. This will allow you to reference the REST Integration that was discussed at the beginning of the adventure.  It will link to a pre-configured Generative AI LLM endpoint.
-
-   > Enter the following fields as shown: <br>
-   > &emsp;&#8226;&emsp;Name(1): **Compensation Benchmarking**<br>
-   > &emsp;&#8226;&emsp;Task Type(2): **User Defined Content**<br>
-   > &emsp;&#8226;&emsp;Configuration(3): **HCM&#95;GJ&#95;GenAI&#95;OCILlama3&#95;Endpoint** <br>
-   > (4) Click the **Save and Close** button.
-
-   ![Enter Task Info](images/image206.png)  
-<br>
-
-7. You have successfully configured a new Guided Journey Task with User Defined Content. Now you are ready to include this new change to the Compensation Info UI.
-
-   > Click on **Save and Close** button again to finalize our Task setup.
-
-  ![Enter Task Info](images/image207.png)  
-<br>
-
-8. The next step is the configuration the Compensation Info UI to leverage your Guided Journey. To do that, you can head back to the home page.
-
-   > Click on the **Home** ![Home Icon](images/icon03_home.png)  icon on the top icon bar.
-    ![Enter Task Info](images/image208.png)  
-<br>
-
-9. You can configure the Compensation Info page directly from within the application.
-
-   > (1) Enter **Compensation Info** into the **search** field at the top of the page. <br>    
-   > (2) Select **Compensation Info** from the resulting **dropdown** list.
-
-   ![Create Task](images/image209.png)  
-<br>
-
-10. There are no matching workers, so you can unselect Direct reports to broaden our search.
-
-   > Click the ![X Icon](images/icon04_x.png) next to Direct Reports under the search field.
-
-   ![Enter Task Info](images/image210.png)  
-<br>
-
-11. You can search for a worker and make the configuration directly from their Compensation Info page.  Note that even though you’re searching for a specific user, this will be a system-wide configuration.
-
-   > (1) Enter **Emily Heather** in the **Search** field. <br>    
-   > (2) Select **Emily Heather** from the resulting **dropdown** list. 
-
-   ![Create Task](images/image211.png)  
-<br>
-
-12. You will now use the embedded Visual Builder Studio tool to configure this page. The configuration will allow you to reference your previously defined Guided Journey and Task. Visual Builder is the tool that Oracle uses to develop Fusion Cloud Application screens.  Customers can use these same tools to perform configurations or, as we saw in other adventures, create new screens using the same look and feel as the delivered applications.
-
-
-   > (1) Click the **User Photo/User ID icon** on the top right corner of the screen. <br>    
-   > (2) Select **Edit Page in Visual Builder Studio** from the resulting dropdown list.
-
-   ![Create Task](images/image212.png)  
-<br>
-
-13. You’re now in Visual Builder – Express Mode.  This allows you to easily configure application screens.  In this scenario, you’ll be referencing the Guided Journey/Task that you created earlier.
-
-   > (1) Enter **Salary** in the **Page Properties Filter** field on the right.  This will narrow the list of Page Properties available. <br>    
-   > (2) Enter **CA&#95;##&#95;HCM&#95;GJ** in the **CompensationInfoSalaryGuidedJourneyCode** field and press the **Enter** key.  Be careful to enter this into the correct field as there are several similar fields available.  If you searched as described in Step 1, it’s likely the 1st field listed below the filter.
-
-   ![Create Task](images/image213.png)  
-<br>
-
-14. You will now see the Compensation Benchmarking link available on the screen.  If you recall, Compensation Benchmarking as the name of the Task we defined earlier and is your link to the User Defined Configuration call to the LLM.
-
-   > (1) Confirm that the **Compensation Benchmarking** link is now visible. <br>    
-   > (2) Click the **Preview** ![Preview](images/Icon06_preview.png) icon in the top right of the screen.
-
-   ![Create Task](images/image214.png)  
-<br>
-
-15. The Preview should open in a new browser tab.  You can now see our screen in Preview Mode.  It shows the standard screen layout, but also includes your Guided Journey configuration.  Please note that these configurations are automatically maintained during the Oracle Release Update process.  These are not Customizations.
-
-   > (1) Click the **Compensation Benchmarking** link. 
-
-   ![Create Task](images/image215.png)  
-<br>
-
-16. The Guided Journey Task has called your User Defined Content integration.  As discussed in the introduction to this adventure, it calls Oracle Integration to gather additional prompt information, such as Position and New York, prior to our Generative AI call to the external LLM.  The results are then formatted and displayed as shown.
-
-   > (1) When finished reviewing the result, you can close your browser tabs and exit the Oracle Cloud Application UI.
-
-   ![Create Task](images/image216.png)
-
-17. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
-    
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
 ## Summary
 
 The two tasks of this Extension adventure introduced you to a few of the capabilities that customers can leverage to extend Oracle Fusion Cloud applications.  These features allow you to fine tune your Oracle Fusion Cloud Applications for peak performance, business processes tailored to you requirements, and fast, efficient usage.
 
-You learned how to extend the applications using Oracle Visual Builder Studio to create new screens that leverage both Oracle and non-Oracle data. You also learned how to setup and defined a Guided Journey, which provies your users with the real-time, inline guidance and information required to complete their tasks.  
+You learned how to extend the applications using Oracle Visual Builder Studio to create new screens that leverage both Oracle and non-Oracle data. You also learned how to setup and defined a Guided Journey, which provides your users with the real-time, inline guidance and information required to complete their tasks.  
 
 You also learned how to leverage 3rd party Generative AI capabilities by leveraging external LLMs directly from the Guided Journey feature of Oracle Fusion Cloud Applications.  
 
@@ -407,4 +257,4 @@ So, check your with you team, double-check your racing harness and get ready for
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Sales Consultant, Advanced Technology Services; Stephen Chung, Principal SaaS Cloud Technologist, Advanced Technology Services
 * **Contributors** - Sajid Saleem, Master Principal SaaS Cloud Technologist, Advanced Technology Services  
-* **Last Updated By/Date** - Charlie Moff, September 2024
+* **Last Updated By/Date** - Charlie Moff, September 2024 
