@@ -73,7 +73,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 5. Now you will enter the Visual Builder Studio.
 
-    > (1) Click on the ![co image](images/icon02_co.png)  **Image** in the top right corner of the screen.  <br>
+    > (1) Click on the ![co image](images/icon012_co.png)  **Image** in the top right corner of the screen.  <br>
 
     > (2) Then select **Edit Page in Visual Builder Studio** from the drop down options.
 
