@@ -110,9 +110,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
   You will skip the next three tasks until you arrive at ‘Users (7)’ in the Copy Role process. 
 
-  > **Press the 7 (Users) task at the top of the screen**. <br>
-
-  > **(also new screenshot)**
+  > **Press the 7 (Users) task at the top of the screen**.
 
  ![Copy Role 2e](images/image013.png) 
 
