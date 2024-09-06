@@ -135,9 +135,9 @@ The dataset here consists of file events from object storage. Files were uploade
 You can ask questions like:
 
 - Tell me about the files that were deleted.
-- Who uploaded file xyz?
+- Who uploaded file patient_3905?
 - Who viewed it?
-- Who deleted file xyz?
+- Who deleted file patient_20926?
 - etc...
 
 ![App screen with content](../images/image-demo-app2.png)
