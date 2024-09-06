@@ -40,7 +40,7 @@ In this activity, you will Create analytics across different lines of business t
 
     Two attributes that influence Margin are Revenue and Cost. Since revenue seems to be increasing, let's investigate Cost.
 
-    > On the Margin Tile locate the Open Workbook Icon  ![Open Workbook Icon](images/icon001.png)  on the top right corner and click on it.
+    > On the Margin Tile locate the **Open Workbook** ![Open Workbook Icon](images/icon001.png) Icon on the top right corner and click on it.
 
     ![Analytics home](images/image002.png)
 

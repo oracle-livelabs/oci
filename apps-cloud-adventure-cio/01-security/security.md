@@ -170,7 +170,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
 2. You will need to enter the name of your new role 
 
-  > Press the **Search** icon for the First Role
+  > Press the **Search** ![Search Icon](images/icon01_search.png) icon for the First Role
 
  ![Compare Roles 1](images/image022.png)
 
