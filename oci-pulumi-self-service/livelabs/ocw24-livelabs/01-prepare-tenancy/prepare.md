@@ -164,13 +164,7 @@ To simplify the remaining steps in the workshop, we recommend using an OCI comup
 
     >Note: You can copy the entire block of commands and paste it in your terminal. You might be prompted a few times to press enter to accept the defaults, or type `Y` to agree.
 
-4. Restart the shell session.
-
-    ```bash
-    <copy>
-    source ~/.profile
-    </copy>
-    ```
+4. Part of the code block above alters the permissions for the Ubuntu user. To instantiate the changes, you must exit and reconnect to your SSH session.
 
     >Note: The best way to check permissions is to run `docker ps` - if you get an error, you'll need to disconnect from the server, then reconnect (to fully recycle your user session)
 

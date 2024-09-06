@@ -56,7 +56,6 @@ In this lab you will register additional templates from a Github repository, the
 
 2. Given the addition of two entities in the first task, we can now track component ownership. As you provision additional components related to particular groups, it is easy to explore the relationships between the different entities.
 
-3. 
 
 You may now **proceed to the next lab**.
 
