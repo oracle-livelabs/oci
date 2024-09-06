@@ -78,7 +78,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
 6. You can now define your new task and leverage the task type User Defined Content. This will allow you to reference the REST Integration that was discussed at the beginning of the adventure.  It will link to a pre-configured Generative AI LLM endpoint.
 
    > Complete the following fields as shown: <br>
-   > &emsp;&#8226;&emsp;Name(1): Type **Compensation Benchmarking**<br>
+   > &emsp;&#8226;&emsp;Name(1): Type **Get Additional Compensation Info**<br>
    > &emsp;&#8226;&emsp;Task Type(2): Select **User Defined Content** from the dropdown<br>
    > &emsp;&#8226;&emsp;Configuration(3): Select **HCM&#95;GJ&#95;GenAI&#95;OCILlama3&#95;Endpoint** from the dropdown <br>
    > (4) Click the **Save and Close** button.
@@ -139,17 +139,16 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    ![Create Task](images/image113.png)  
 <br>
 
-14. You will now see the Compensation Benchmarking link available on the screen.  If you recall, Compensation Benchmarking as the name of the Task we defined earlier and is your link to the User Defined Configuration call to the LLM.
-
-   > (1) Confirm that the **Compensation Benchmarking** link is now visible. <br>    
-   > (2) Click the **Preview** ![Preview](images/icon016_preview.png) icon in the top right of the screen.
+14. You will now see the Get Additional Compensation Info link available on the screen.  If you recall, this was the name of the Task we defined earlier and is your link to the User Defined Configuration call to the LLM.
+ 
+   > Click the **Preview** ![Preview](images/icon016_preview.png) icon in the top right of the screen.
 
    ![Create Task](images/image114.png)  
 <br>
 
 15. The Preview should open in a new browser tab.  You can now see our screen in Preview Mode.  It shows the standard screen layout, but also includes your Guided Journey configuration.  Please note that these configurations are automatically maintained during the Oracle Release Update process.  These are not Customizations.
 
-   > (1) Click the **Compensation Benchmarking** link. 
+   > (1) Click the **Get Additional Compensation Info** link. 
 
    ![Create Task](images/image115.png)  
 <br>
