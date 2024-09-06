@@ -13,7 +13,7 @@ In this lab, you will:
 
 - Deploy the Conversational Search Demo application via the Ressource Manager. 
 
-The stack deploys a new VCN (if needed) a new cluster (if needed), the application (in a container inastance), and a load balancer to 
+The stack deploys a new VCN (if needed) a new cluster (if needed), the application (in a container inastance), and a load balancer.
 
 ## Step 1: Prerequisites
 
@@ -33,7 +33,9 @@ You will also need a subscription to the Chicago or Frankfurt regions, which hos
 
 The stack consists in a terraform script launched via Ressource Manager.
 
-Click the following link to get started: <a href="https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://objectstorage.us-chicago-1.oraclecloud.com/p/pzndeC45z4x_hSvQXWbmHETsui97i7ihHYd0U-Uahhjb8UWjxpzGpzjk3iCAcJAv/n/idehhejtnbtc/b/opensearch-demo-code/o/opensearch-convo.zip">Conversation Search Demo App Stack</a>
+Click the following link to get started: 
+
+<a href="https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://objectstorage.us-chicago-1.oraclecloud.com/p/pzndeC45z4x_hSvQXWbmHETsui97i7ihHYd0U-Uahhjb8UWjxpzGpzjk3iCAcJAv/n/idehhejtnbtc/b/opensearch-demo-code/o/opensearch-convo.zip">Conversation Search Demo App Stack</a>
 
 ## Step 3: Acknowledge Terms and Conditions
 
