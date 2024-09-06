@@ -55,7 +55,7 @@ In this workshop, you will:
 
 Note – For In-depth knowledge of AI Vision service, please refer to the below Livelabs
 
-[https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=931&clear=180&session=953867760403](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=931&clear=180&session=953867760403)
+[https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=931&clear=180&session=953867760403](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=931&clear=180&session=953867760403)
 
 
 ## Task 1: Create a project

@@ -1,0 +1,1 @@
+This image highlights the User Settings menu option in the web console of Oracle Cloud Infrastructure.

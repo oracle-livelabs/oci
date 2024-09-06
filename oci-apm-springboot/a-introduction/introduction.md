@@ -50,7 +50,7 @@ If you are running the workshop in a Paid Cloud Account, ensure you have the per
 
 ### More APM Workshops
 
-* Please visit: **[APM LiveLabs workshops](https://apexapps.oracle.com/pls/apex/f?p=133:100:111996377805307::::SEARCH:application+Performance+monitoring)**.
+* Please visit: **[APM LiveLabs workshops](https://livelabs.oracle.com/pls/apex/f?p=133:100:111996377805307::::SEARCH:application+Performance+monitoring)**.
 
 
 ## Acknowledgements

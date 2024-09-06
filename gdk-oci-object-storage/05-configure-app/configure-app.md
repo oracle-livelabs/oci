@@ -32,6 +32,8 @@ In this lab, you will:
 
 3. From the Oracle Cloud Console navigation menu, go to **Identity & Security >> Identity >> Policies**.
 
+	![Policies Menu](https://oracle-livelabs.github.io/common/images/console/id-policies.png)
+
 4. Go to your workshop compartment.
 
 5. Click  **Create Policy**.
@@ -49,6 +51,9 @@ In this lab, you will:
 	Allow any-user to manage object-family in compartment WORKSHOP_COMPARTMENT_NAME where ALL {request.principal.type='instance', request.principal.compartment.id='WORKSHOP_COMPARTMENT_OCID'}
 	</copy>
 	```
+
+	To learn more about policies to control access to OCI Object Storage, see [Policy Reference - Details for Object Storage](https://docs.oracle.com/en-us/iaas/Content/Identity/Reference/objectstoragepolicyreference.htm).
+
 </if>
 
 	To learn more about about the supported authentication options, see [Micronaut Oracle Cloud Authentication](https://micronaut-projects.github.io/micronaut-oracle-cloud/snapshot/guide/#authentication).
@@ -60,29 +65,13 @@ In this lab, you will:
 	_oci/src/main/resources/application-oraclecloud.properties_
 
 	``` properties
-	micronaut.object-storage.oracle-cloud.default.namespace=${OBJECT_STORAGE_NAMESPACE}
 	micronaut.object-storage.oracle-cloud.default.bucket=${OBJECT_STORAGE_BUCKET}
+	micronaut.object-storage.oracle-cloud.default.namespace=${OBJECT_STORAGE_NAMESPACE}
 	```
 
 2. Open a new terminal in VS Code using the **Terminal > New Terminal** menu.
 
-3. Run the following command to set the environment variable `OBJECT_STORAGE_NAMESPACE`:
-
-	``` bash
-	<copy>
-	export OBJECT_STORAGE_NAMESPACE=$(oci os ns get --auth instance_principal --query "data" --raw-output)
-	</copy>
-	```
-
-4. Confirm the value set by running the following command:
-
-	``` bash
-	<copy>
-	echo $OBJECT_STORAGE_NAMESPACE
-	</copy>
-	```
-
-5. Set the environment variable `OBJECT_STORAGE_BUCKET` using the bucket name from the previous lab.
+3. Set the environment variable `OBJECT_STORAGE_BUCKET` using the bucket name from the previous lab.
 
 	``` bash
 	<copy>
@@ -90,11 +79,27 @@ In this lab, you will:
 	</copy>
 	```
 
-6. Confirm the value set by running the following command:
+4. Confirm the value set by running the following command:
 
 	``` bash
 	<copy>
 	echo $OBJECT_STORAGE_BUCKET
+	</copy>
+	```
+
+5. Run the following command to set the environment variable `OBJECT_STORAGE_NAMESPACE`:
+
+	``` bash
+	<copy>
+	export OBJECT_STORAGE_NAMESPACE=$(oci os ns get --auth instance_principal --query "data" --raw-output)
+	</copy>
+	```
+
+6. Confirm the value set by running the following command:
+
+	``` bash
+	<copy>
+	echo $OBJECT_STORAGE_NAMESPACE
 	</copy>
 	```
 

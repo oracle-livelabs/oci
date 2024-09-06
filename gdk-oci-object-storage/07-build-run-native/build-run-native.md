@@ -25,22 +25,6 @@ In this lab, you will:
 
 ## Task 1: Build and run a native executable for the application
 
-<!-- TEMPORARY WORKAROUND FOR https://ol-jira.us.oracle.com/browse/GCN-4388 -->
-0. Uncomment the following in the _oci/pom.xml_:
-
-   _oci/pom.xml_
-
-   ``` xml
-   <copy>
-      <plugin>
-        <artifactId>maven-shade-plugin</artifactId>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
-      </plugin>
-   </copy>
-   ```
-
 1. In the first terminal in VS Code, check the version of the GraalVM native-image utility:
 
 	``` bash
@@ -53,7 +37,7 @@ In this lab, you will:
 
 	``` bash
 	<copy>
-	./mvnw install -pl lib -am && ./mvnw package -pl oci -Dpackaging=native-image
+	./mvnw install -pl lib -am && ./mvnw clean package -pl oci -Dpackaging=native-image
 	</copy>
 	```
 
@@ -63,7 +47,7 @@ In this lab, you will:
 
 	``` bash
 	<copy>
-	MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci
+	MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci-storage-demo-oci
 	</copy>
 	```
 
