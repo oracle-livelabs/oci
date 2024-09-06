@@ -62,25 +62,25 @@ Here we will re-use the cluster.
 
 You will be prompted to enter the OCID of the OpenSearch cluster.
 
-![Select Existing Cluster](../images/image-demo-cluster-ocid.png)
+![Select Existing Cluster OCID](../images/image-demo-cluster-ocid.png)
 
 ## Step 6: Find the OpenSearch Cluster OCID
 
 - Duplicate your browser tab so you can easily return to the stack configuration, and in the new tab go to **Databases -> OpenSearch -> Clusters** to find the already deployed cluster
 
-![Select Existing Cluster](../images/image-demo-find-cluster1.png)
+![Find Cluster](../images/image-demo-find-cluster1.png)
 
 - **Select** the cluster `opensearch_cluster` created earlier.
 
-![Select Existing Cluster](../images/image-demo-select-cluster.png)
+![Select Cluster](../images/image-demo-select-cluster.png)
 
 - **Copy** the OCID of the cluster from the **Cluster Details**.
 
-![Select Existing Cluster](../images/image-demo-opensearch-ocid.png)
+![Copy OCID](../images/image-demo-opensearch-ocid.png)
 
 - **Paste** the OCID in the Demo Stack configuration tab
 
-![Select Existing Cluster](../images/image-demo-opensearch-ocid2.png)
+![Paste OCID](../images/image-demo-opensearch-ocid2.png)
 
 
 ## Step 7: Configure Networking Information
@@ -97,7 +97,7 @@ If you followed the labs from the start, you should only have 1 VCN in the compa
 
 - Select the **public** subnet for the load balancer.
 
-![Select Existing Cluster](../images/image-demo-network.png)
+![Select VCN, Private and Public Subnets](../images/image-demo-network.png)
 
 
 ## Step 8: Deploy
@@ -106,18 +106,18 @@ If you followed the labs from the start, you should only have 1 VCN in the compa
 
 The Stack will deploy and show logs
 
-![Select Existing Cluster](../images/image-demo-rmj-accepted.png)
+![Deploy Stack - Accepted](../images/image-demo-rmj-accepted.png)
 
 
 ## Step 9: Find the Application URL
 
 - Once done, the stack switches to green.
 
-![Select Existing Cluster](../images/image-demo-rmj-succeeded.png)
+![Stack switch to green](../images/image-demo-rmj-succeeded.png)
 
 - At this point, you can go look at the **outputs** to find the deployment URL
 
-![Select Existing Cluster](../images/image-demo-url.png)
+![Go to Outputs, find the URL](../images/image-demo-url.png)
 
 - Alternatively you can scroll all the way down the logs to find the URL, or look for the load balancer (under Network -> Load Balancers) to find the public IP.
 
@@ -128,7 +128,7 @@ The Stack will deploy and show logs
 You should see the application interface in your browser. If it doesn't show right away, wait a minute or two. The application loads and embeds data at start up, which can take a couple minutes.
 
 
-![Select Existing Cluster](../images/image-demo-app.png)
+![App screen](../images/image-demo-app.png)
 
 The dataset here consists of file events from object storage. Files were uploaded, viewed and/or deleted by various users. Use the search to find out what files were uploaded, viewed or deleted, when and by whom.
 
@@ -140,7 +140,7 @@ You can ask questions like:
 - Who deleted file xyz?
 - etc...
 
-![Select Existing Cluster](../images/image-demo-app2.png)
+![App screen with content](../images/image-demo-app2.png)
 
 To learn more about how this works, you can now proceed to the next lab, which guides you through the process the app uses step-by-step.
 
