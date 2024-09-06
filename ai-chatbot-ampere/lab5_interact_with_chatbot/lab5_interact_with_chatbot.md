@@ -39,4 +39,4 @@ Estimated Time: 10 minutes
 ## Acknowledgements
 * **Author** - Animesh Sahay and Francis Regalado, Enterprise Cloud Architect, OCI Cloud Venture
 * **Contributors** -  Andrew Lynch, Director Cloud Engineering, OCI Cloud Venture
-* **Last Updated By/Date** - Animesh Sahay, April 2024
+* **Last Updated By/Date** - Animesh Sahay, August 2024

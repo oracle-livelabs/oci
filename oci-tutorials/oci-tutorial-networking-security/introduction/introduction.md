@@ -28,11 +28,11 @@ Video Recording
 ## Learn More
 
 Labs
-* [How do I enable Cloud Guard?](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3264&session=7437272122500)
-* [How do I enable policies to run Cloud Guard?](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3267&session=9252560006987)
-* [How do I create user groups in Cloud Guard?](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3266&session=12518993926839)
-* [Identity and Access Management Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=624)
-* [Configure Virtual Cloud Network Peering](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=621)
+* [How do I enable Cloud Guard?](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3264&session=7437272122500)
+* [How do I enable policies to run Cloud Guard?](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3267&session=9252560006987)
+* [How do I create user groups in Cloud Guard?](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3266&session=12518993926839)
+* [Identity and Access Management Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=624)
+* [Configure Virtual Cloud Network Peering](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=621)
 
 Resource Links for Reference
 

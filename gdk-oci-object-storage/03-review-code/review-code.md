@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab reviews the sample Micronaut application code used in the workshop. The application source code and build scripts are available in the _lab_ directory in VS Code.
+This lab reviews the sample Micronaut application code used in the workshop. The application source code and build scripts are available for review in VS Code.
 
 The application is a simple "RESTful" microservice that can upload, download, and delete users' profile pictures.
 
