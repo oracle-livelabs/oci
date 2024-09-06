@@ -50,7 +50,7 @@ Estimated time: 20 minutes
     For more information, please visit the project page: https://www.pulumi.com/docs/
     ```
 
-## Create a Python virtual environment and install the Pulumi OCI provider
+## Task 2: Create a Python virtual environment and install the Pulumi OCI provider
 
 1. Create a new Python virtual environment with Python 3.10
 
@@ -105,7 +105,7 @@ Estimated time: 20 minutes
 
 4. Provide a name the stack (e.g. OCW-2024) and press enter.
 
-## Task 2: Build out your Pulumi project
+## Task 3: Build out your Pulumi project
 
 1. Now that you have a Pulumi stack, you'll need to provide some environment configuration details. Copy the commands below to a text file and replace the `<placeholder>` values with the data you gathered in lab 1.
 
@@ -180,7 +180,7 @@ Estimated time: 20 minutes
 
     ![View the Backstage dashboard](images/backstage-dashboard.png)
 
-## Task 3: Create a new Pulumi Environment
+## Task 4: Create a new Pulumi Environment
 Pulumi environments, secrets, and configuration - or ESC for short - enables teams to centralize secrets and configuration data in a central repository. ESC is intended to provide frictionless security, improve developer efficiency, enhance compliance, and mitigate sprawl. On top of that, ESC easiliy integrates with a variety of platforms, making it a cinch to add to your IaC efforts.
 
 1. Return to the app.pulumi.com portal, making sure you're logged in, and click **Environments** on the left navigation menu.
@@ -202,11 +202,11 @@ Pulumi environments, secrets, and configuration - or ESC for short - enables tea
       oracle:
         default:
           userOcid: <you user OCID here>>
-            fingerprint: <your API key fingerprint here>>
-            tenancyOcid: <your tenancy OCID here>
-            region: <your selected region here>
-            privateKey:
-              fn::secret: "<paste API private key contents here>"
+          fingerprint: <your API key fingerprint here>>
+          tenancyOcid: <your tenancy OCID here>
+          region: <your selected region here>
+          privateKey:
+            fn::secret: "<paste API private key contents here>"
       # Configuration nested under the "pulumiConfig" key will be available to Pulumi stacks that
       # reference this Environment during `pulumi up/preview/refresh/destroy`
       pulumiConfig:
@@ -218,7 +218,7 @@ Pulumi environments, secrets, and configuration - or ESC for short - enables tea
     </copy>
     ```
 
-    >Note: Your pasted values should look something like this:
+    >Note: Your pasted values should look something like the following. You may need to indent the contents of your API key to align with `fn::secret` as shown below:
 
     ```bash
     # values is a required top-level key
