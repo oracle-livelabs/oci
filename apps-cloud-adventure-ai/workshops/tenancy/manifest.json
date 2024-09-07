@@ -1,0 +1,40 @@
+{
+    "workshoptitle": "Cloud Adventure Activity Guide – for the Office of the CIO",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Demo 1: AI is cool",
+            "filename": "../../01-security/security.md"
+        },
+        {
+            "title": "Demo 2: Chat GPT showdown",
+            "filename": "../../02-configure/configure.md"
+        },
+        {
+            "title": "Demo 3: AI won't help me win Q1 deals",
+            "filename": "../../03-extend/extend.md"
+        },
+        {
+            "title": "Lab 4: If I say AI one more time I will kill myself",
+            "filename": "../../04-integration/integration.md"
+        }, 
+        {
+            "title": "Lab 5: When will AI write my RFPs?",
+            "filename": "../../05-analytics/analytics.md"
+        }, 
+     
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+        
+    ]
+}
+
+
+
