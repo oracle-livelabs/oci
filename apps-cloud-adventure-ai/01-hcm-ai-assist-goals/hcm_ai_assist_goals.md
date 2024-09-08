@@ -4,7 +4,7 @@
 
 Integrating generative AI features to streamline HR processes, automate routine tasks and enhance employee experience has become one of the main priorities for most organizations. In this demo, we will guide you through the process of enabling the embedded Gen AI features in Oracle HCM Cloud.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 
 ### Objectives
