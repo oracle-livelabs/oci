@@ -1,8 +1,8 @@
-# HCM AI Assist - Performance Reviews
+# SCM / ERP AI Assist - Product Description
 
 ## Introduction
 
-Integrating generative AI features to streamline HR processes, automate routine tasks and enhance employee experience has become one of the main priorities for most organizations. In this demo, we will guide you through the process of enabling the embedded Gen AI features in Oracle HCM Cloud.
+XXXXXXXXXXXXXXX
 
 Estimated Time: 10 minutes
 
@@ -58,7 +58,7 @@ Use the embedded Gen AI features in Oracle HCM Cloud to help create a performanc
 
 ## Summary
 
-By following these steps, you  successfully activated the AI capabilities to enhance efficiency, improve accuracy, and provide a more engaging experience for employees. Embrace the future of human capital management with the power of AI!
+XXXXXXXXXXXXXXXXXXXXXX
 
 **You have successfully completed the Activity!**
 
