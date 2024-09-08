@@ -2,7 +2,7 @@
 
 ## Introduction
 
-XXXXXXXXXXXXXXX
+Built on Oracle Cloud Infrastructure (OCI) and leveraging its leading AI services, Oracle supports over 50 generative AI use cases that are embedded within Oracle Fusion Applications and designed to respect customers’ enterprise data, privacy, and security. With OCI Generative AI Service, no customer data is shared with large language model (LLM) providers or seen by other customers. In addition, an individual customer is the only entity allowed to use custom models trained on its data. To further protect sensitive information, role-based security is embedded directly into Oracle Fusion Applications workflows that only recommends content that end users are entitled to view.
 
 Estimated Time: 10 minutes
 
@@ -65,11 +65,9 @@ Use the embedded Gen AI features in Oracle HCM Cloud to help create a performanc
 
 
 
-
-
 ## Summary
 
-XXXXXXXXXXXXXXXXXXXXXX
+Item description generation helps product specialists quickly generate standardized product descriptions that highlight SEO keywords. With generative AI support for item descriptions in Oracle Product Lifecycle Management, organizations can save time, reduce errors, and improve the overall quality of product descriptions to increase customer engagement and boost sales.
 
 **You have successfully completed the Activity!**
 
