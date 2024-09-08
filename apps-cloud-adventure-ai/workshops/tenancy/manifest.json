@@ -2,10 +2,7 @@
     "workshoptitle": "Cloud Adventure Activity Guide – for the Office of the CIO",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
-        {
-            "title": "Introduction",
-            "filename": "../../00-introduction/introduction.md"
-        },
+ 
         {
             "title": "Demo 1: HCM AI Assist Goals",
             "filename": "../../01-hcm-ai-assist-goals/hcm_ai_assist_goals.md"
