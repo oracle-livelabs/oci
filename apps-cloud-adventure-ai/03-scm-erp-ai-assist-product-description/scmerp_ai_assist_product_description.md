@@ -49,7 +49,7 @@ Use the embedded Gen AI features in Oracle HCM Cloud to help create a performanc
 
    > Select **Actions -> Commercialization View**
 
-   ![General Information](images/image0010.png)
+   ![General Information](images/image010.png)
 
 3.  Now you will use AI assist to create a new product description.
 
