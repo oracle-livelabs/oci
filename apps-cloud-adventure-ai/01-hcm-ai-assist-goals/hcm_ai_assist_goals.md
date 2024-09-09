@@ -62,10 +62,6 @@ Use the embedded Gen AI features in Oracle HCM Cloud to help create a new goal.
 
 
 
-
-
-
-
 ## Summary
 
 By following these steps, you  successfully activated the AI capabilities to enhance efficiency, improve accuracy, and provide a more engaging experience for employees. Embrace the future of human capital management with the power of AI!

@@ -35,7 +35,7 @@ Use the embedded Gen AI features in Oracle HCM Cloud to help create a performanc
    ![Manager Evaluation of Workers](images/image005.png)
 
 
-3. Now you will use AI assist to help create a new performace Review
+3. Now you will use AI assist to help create a new performance Review
 
    > Navigate “down” to Competencies and expand “Building Relationships” by clicking the down ![down arrow](images/image006.png) on the right-and side on the screen
 
