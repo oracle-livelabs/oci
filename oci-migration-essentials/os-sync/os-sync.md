@@ -1,7 +1,9 @@
 # Migrating Data with OCI Object Storage Sync
 
 ## Introduction
-OCI Object Storage Sync (os sync) is part of the OCI Command Line Interface (CLI) which synchronizes a filesystem directory with objects in a bucket. The command traverses sub-directories copying new and modified files or objects from the source to the destination and optionally deleting those that are not present in the sourc.
+
+OCI Object Storage Sync (os sync) is part of the OCI Command Line Interface (CLI) which synchronizes a filesystem directory with objects in a bucket. The command traverses sub-directories copying new and modified files or objects from the source to the destination and optionally deleting those that are not present in the source.
+
 
 Estimated time: 20 min
 

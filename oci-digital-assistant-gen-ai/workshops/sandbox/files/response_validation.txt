@@ -1,0 +1,1 @@
+This is an image of the Response Validation section of the invokeLLM component editor. From top to bottom, this section has the following fields and options: Validation Entities, Enforce JSON-formatted Response, Number of Retries, Retry Message, Validation and Customization Handler.

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This workshop uses **My Todo List** Demo app, which is a Helidon application that runs in a Kubernetes cluster. It is a prerequisite to complete the  **[React+Java+ADB = Native Cloud App](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814)** workshop, up to the Tutorial 3 to setup the app, before starting the labs in this workshop.
+This workshop uses **My Todo List** Demo app, which is a Helidon application that runs in a Kubernetes cluster. It is a prerequisite to complete the  **[React+Java+ADB = Native Cloud App](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814)** workshop, up to the Tutorial 3 to setup the app, before starting the labs in this workshop.
 
 In this lab, you will launch the application and make sure it is ready to configure the APM Tracers.
 
@@ -13,7 +13,7 @@ Estimated time: 5 minutes
 
 ### Prerequisites
 
-* Completion of the **[React+Java+ADB = Native Cloud App](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814)** workshop, Tutorial 1, 2 and 3.
+* Completion of the **[React+Java+ADB = Native Cloud App](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814)** workshop, Tutorial 1, 2 and 3.
 
 ## Task 1: Verify the application setup directory
 
@@ -30,7 +30,7 @@ Estimated time: 5 minutes
 
   ![Oracle Cloud console, Cloud Shell](images/1-2-cloudshell.png " ")
 
-	> **NOTE:** If you cannot find the directory, you may have it with a different name, or have not gone through the workshop yet. Please visit **[React+Java+ADB = Native Cloud App](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814)** workshop, and perform the Tutorials 1 to 3 to setup the demo application.
+	> **NOTE:** If you cannot find the directory, you may have it with a different name, or have not gone through the workshop yet. Please visit **[React+Java+ADB = Native Cloud App](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814)** workshop, and perform the Tutorials 1 to 3 to setup the demo application.
 
 ## Task 2: Verify the application in a browser
 
@@ -58,7 +58,7 @@ Estimated time: 5 minutes
 8.	 Make sure **My ToDo List** demo app launches in a browser without any errors.
   ![Oracle Cloud console, My Todo List App](images/1-1-app.png " ")
 
-If the application is not running, or if you see errors, review the steps in the tutorials in the **[React+Java+ADB = Native Cloud App](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814)** workshop to troubleshoot.
+If the application is not running, or if you see errors, review the steps in the tutorials in the **[React+Java+ADB = Native Cloud App](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814)** workshop to troubleshoot.
 
 > **NOTE:** The Native Cloud App workshop (Tutorial 3, Task 3) instructs to use **staci** utility to upload the build objects to the Object Storage. In case you have a problem using the **staci** tool, you can manually upload the objects. Please refer to the Lab 4, Task 3: **Build the frontend and upload to the OCI Object Storage** in this workshop, for the steps to manually upload the files to the object storage in Oracle Cloud.
 

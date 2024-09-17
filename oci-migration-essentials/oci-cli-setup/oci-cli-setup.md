@@ -57,7 +57,7 @@ In the **Add API Key** interface there are various button choices, this shows th
 
 After downloading the key to your home directory/ folder or a path you can remember and where it won't be deleted. Note the path of the private API key, you will need it later in Task 5 below.x
 
-> **Note:** Please do not use a key with a passphrase for this lab series, tools such as Rclone does not currently support API keys with a passphrase..
+> **Note:** Please do not use a key with a passphrase for this lab series, tools such as Rclone does not currently support API keys with a passphrase.
 
 
 2. You should now be able to see the Configuration file, copy paste this into a file we will need it later in Task 5 below.
@@ -266,7 +266,7 @@ You may now **proceed to the next lab**.
 * [OCI Documentation](https://docs.oracle.com/en-us/iaas/Content/home.htm)
 * [Configure OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliconfigure.htm)
 * [Install Brew on Mac](https://brew.sh/)
-* [OCI Command CLI Playground](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=650)
+* [OCI Command CLI Playground](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=650)
 
 ## Acknowledgements
 

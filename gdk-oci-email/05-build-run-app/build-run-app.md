@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This section of the lab takes you through the steps to build and run the sample application and then send emails.
+This lab takes you through the steps to build and run the sample application and then send emails.
 
 Estimated Lab Time: 10 minutes
 
@@ -18,7 +18,7 @@ In this lab, you will:
 
 ## Task 1: Build and run the application
 
-1. In the same terminal in VS Code, run the following command(s).
+1. In the same terminal in VS Code, run the following command(s):
 
 <if type="mn_run">
    Use `mn:run` to build and start the application on port 8080.

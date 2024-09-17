@@ -61,7 +61,7 @@ However, if you would rather use an existing VCN/subnet, follow these steps to a
 
 ## Task 3: Select a Compartment for the Workshop
 
-We recommend you use a single compartment for the workshop. We will refer to this as your workshop compartment. This is the compartment where you will provision all the resources - Oracle Resource Manager (ORM) Stack, Compute Instance, VCN/Subnet, Instance Principals, Policies, Object Storage Buckets - needed for the workshop.
+We recommend you use a single compartment for the workshop. We will refer to this as your workshop compartment. This is the compartment where you will provision all the resources - Oracle Resource Manager (ORM) Stack, Compute Instance, VCN/Subnet - needed for the workshop.
 
 1. From the Oracle Cloud Console navigation menu, go to **Identity & Security >> Identity >> Compartments**.
 2. Go to your workshop compartment.
