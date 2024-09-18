@@ -27,9 +27,10 @@ As a Pit Crew member and the Oracle SaaS Business Process and Configuration expe
 
 **Objectives**<br>
 In this activity you will use a Guided Journey Task with USer Defined Content and  and Visual Builder Studio.  You will:
-&emsp;  • Link the Guided Journey Task with User Defined Content with a pre-configured Generative AI endpoint <br>
-&emsp;  • Configure Self Service Procurement Shopping Cart to include the configured Checklist Template <br>
-&emsp;  • Preview your changes to see how you can now access real-time reviews from your cart. <br>
+
+   &emsp;  • Link the Guided Journey Task with User Defined Content with a pre-configured Generative AI endpoint <br>
+   &emsp;  • Configure Self Service Procurement Shopping Cart to include the configured Checklist Template <br>
+   &emsp;  • Preview your changes to see how you can now access real-time reviews from your cart.
 
 As you follow along, do not forget to answer the Adventure Check Point questions! 
 
@@ -80,7 +81,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    > &emsp;&#8226;&emsp;Name(1): Type **Product Items Review**<br>
    > &emsp;&#8226;&emsp;Task Type(2): Select **User Defined Content** from the dropdown<br>
    > &emsp;&#8226;&emsp;Configuration(3): Select **SCM&#95;GJ&#95;GenAI&#95;OCILlama3&#95;Endpoint** from the dropdown <br>
-   > (4) Click the **Save and Close** button.
+   > &emsp;&#8226;&emsp;(4) Click the **Save and Close** button.
 
    ![Enter Task Info](images/image106.png)  
 <br>
@@ -230,4 +231,4 @@ So, check your with you team, double-check your racing harness and get ready for
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Sales Consultant, Advanced Technology Services; Stephen Chung, Principal SaaS Cloud Technologist, Advanced Technology Services
 * **Contributors** - Sajid Saleem, Master Principal SaaS Cloud Technologist, Advanced Technology Services  
-* **Last Updated By/Date** 
+* **Last Updated By/Date** - Charlie Moff, September 2024 
