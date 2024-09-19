@@ -20,7 +20,7 @@ Estimated Time: 15 minutes
 
 In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
 
-![Integration OBJs](images/Integration_OBJs.png)
+![Integration Objectives](images/Integration_objs2.png)
 
 
 ## **Task 1: Use REST API to pull Fusion SaaS Application audit data for use in any external system**
@@ -67,7 +67,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Keywords search bar](images/image006.png)  
 
-    > Click the **Edit** ![Edit Icon](images/icon01_edit.png)  button in the ‘Search Results’ area
+    > Click the **Edit** ![Edit Icon](images/icon011_edit.png)  button in the ‘Search Results’ area
 
     ![Search Results](images/image007.png)  
 
@@ -78,7 +78,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Suppliers View](images/image008.png)  
 
-    > Click the **Edit** ![Edit Icon](images/icon01_edit.png) icon to edit the Supplier’s address
+    > Click the **Edit** ![Edit Icon](images/icon011_edit.png) icon to edit the Supplier’s address
 
     ![Edit Suppliers View](images/image009.png)  
 
@@ -117,7 +117,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 7. Let’s navigate back to the Oracle Fusion Cloud home screen.
 
-    > Click the **Home** ![Home Icon](images/icon02_home.png) button
+    > Click the **Home** ![Home Icon](images/icon012_home.png) button
 
     ![Suppliers View](images/image016.png)
 
@@ -148,7 +148,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Audit Report REST Endpoints](images/image020.png)    
 
-    > **Click** the drop-down menu icon **‘Jump to’** and select the **‘Examples’** menu option
+    > **Click** the drop-down menu icon [drop dowb icon](images/icon014_downarrow.png) **‘Jump to’** and select the **‘Examples’** menu option
 
     ![Get an audit report](images/image021.png)   
 
@@ -217,7 +217,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 13. After authenticating, we’ll navigate to the Sign on Audit area to review which users have been accessing Fusion Cloud, along with other pertinent audit details.
 
-    > Click the **Hamburger, or triple bar** ![Hamburger Icon](images/icon03_hamburger.png) menu button
+    > Click the **Hamburger, or triple bar** ![Hamburger Icon](images/icon013_hamburger.png) menu button
 
     ![credentials](images/image029.png)
 
@@ -256,7 +256,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Audit History](images/image037.png)
 
-    > **Click** the **‘Business Object’** ![Business OBJ drop down](images/icon04_downarrow.png) drop-down menu icon.
+    > **Click** the **‘Business Object’** ![Business OBJ drop down](images/icon014_downarrow.png) drop-down menu icon.
 
     ![Audit History](images/image102.png)
 
