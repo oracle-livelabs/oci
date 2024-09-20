@@ -141,9 +141,12 @@ Stack Monitoring provides a script to create a user with a reduced set of for mo
 	* Ensure the radio button is selected to discovery in both Stack Monitoring and Logging Analytics. 
 	* To gain access to advanced monitoring features, we will select Enterprise Edition.
 
+	Each EBS environment is unique in their requirements to monitor long running concurrent requests. To acoomodate this, Stack Monitoring allows for the threshold of a long running concurrent request to be configurable. Let's reduce the threshold from the default of **60 minutes** to **30 minutes**. Select **Show advanced options**, then update the threshold to **30**.
+
 	Once all fields are complete, we would typically click Discover. However, we will again select **Cancel**.
 
 	![EBS discovery slide-out, with lower fields completed, highlighting the cancel link](images/4-4-discovery.png " ")
+
 
 To review a list of resources Stack Monitoring supports, see **[Oracle Stack Monitoring Primary Note (Doc ID 2925632.1)](https://mosemp.us.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=399959770386069&id=2925632.1&_afrWindowMode=0&_adf.ctrl-state=5jd9c5nir_4)**
 
