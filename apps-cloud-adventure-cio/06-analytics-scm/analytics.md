@@ -25,17 +25,13 @@ In this activity, you will Create analytics across different lines of business t
 
 1. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
 
-After a successful login, you will land on the Oracle Analytics home page. 
+    Login to your Fusion Data Intelligence Portal using the URL provided.
 
+    > Open a web browser and enter the URL provided, then on the login screen, type in the Username and Password. Click Sign In.
 
-> Login to your Fusion Data Intelligence Portal using the URL provided. <br>
+    ![Login](images/image001.png)
 
-> Open a web browser and enter the URL provided, then on the login screen, type in the Username and Password. Click Sign In. <br>
-
-
-![Login](images/image001.png)
-
-
+    After a successful login, you will land on the Oracle Analytics home page. 
 
 
 2. A finance Watchlist comprising several Tiles is available on the home page. 
@@ -81,86 +77,80 @@ After a successful login, you will land on the Oracle Analytics home page.
     ![Auto insights view](images/image007.png)
 
 
-6.  Now, we can compare margin and cost side by side. 
+6. Let’s create a new Canvas to under the SCM issue
 
-    Payroll expenses emerge as the highest cost. We will delve deeper into payroll expenses to identify their components. 
+     > Locate the plus ![plus icon](images/cplus.png) icon at the bottom of the page and click it to create a new canvas. <br>
 
-    Our next step involves integrating Human Resources data into our analysis.
+![new canvas](images/scm-001.png)
 
-    ![Analytics view 1](images/image008.png)
+7. We will add Supply Chain data to the canvas
 
+     > Expand the SCM Dataset by clicking on the Triangle   icon.  Expand the Fiscal Data folder and locate Month Column. <br>
 
-7.  Combining datasets from multiple “Lines of Business” allows an individual to conduct a deep dive into the actual problems.
+     > Next locate Total Cost. While keeping the “CTRL ” key pressed drag and drop them on to the canvas.  <br>
 
-    > (1) Expand the HCM Core transactions data set from the Data Panel on the left.  <br>
+     > Your canvas should look like the image on the right.<br>
 
-    > (2) At the bottom of the Page, click the plus icon  ![plus icon](images/icon007.png)  to add another Canvas, **Canvas 2**. <br>
-
-    > (3) While holding “Shift,” multi-select the Amount and Account columns and drag them onto Canvas 2.
-
-    ![Analytics view 2](images/image009.png)
-
-    > (1) Change the chart to a “Stacked Bar” type to visualize the data better.  <br>
-
-    > (2) Follow steps 1 and 2 as shown in the picture 10.
-    
-    ![Analytics view 3](images/image010.png)
+    ![2 images](images/scm-002.png)
 
 
-8.  We need to perform trend analysis to understand when the expense anomaly started occurring and whether it is consistent across all expense types.
+8. Total cost has been varying over time. We need to understand what is causing the increase and decrease
 
-    > Drag the **Accounts** column from the Categories section into the Color section.
+     > Expand the Fiscal Data folder and locate Month Column. <br>
 
-    ![Analytics view 4](images/image011.png)
+     > Scroll down to locate Off Contract and Contract purchase columns. <br>
 
-    > Next, expand the Fiscal Date folder in the Data Panel, locate the **Month** column, and drag and drop it into the Categories section.
+     > While keeping the “CTRL ” key pressed drag and drop them on to the canvas under the existing chart. <br>
 
-    ![Analytics view 5](images/image012.png)
+     > Watch for the Green bar before you drop the columns. <br>
 
-9.  We can now see expense amounts displayed across time and expense categories.
+    ![expand Fiscal Data folder ](images/scm-003.png)
 
-    On analyzing the trend, it appears that while Base Salary and Wages have remained constant, overtime and contract labor have increased since May.
+9. Change the visualization type
 
-    Let's explore and find out why overtime and contract labor have increased.  
+     > In the Properties panel in the center. Click on the inverted triangle ![inverted triangle](images/invtriangle.png) to expand the Analytics Type panel and choose Bar Type.<br>
 
-    ![Month by Month View](images/image013.png)
+    ![Properties panel  ](images/scm-004.png)
 
-10. Overtime and Contract labor are typically associated with Turnover. Let's see if it had any impact.
+     > Move Contract Purchase from Color Section to Values section.<br>
 
-    > (1) Expand the Fiscal Date folder in the Data Panel to locate the **Month** and **Turnover** columns.   <br>
-
-    > (2) While holding “Ctrl,” multi-select the **Month** and **Turnover** columns and drag them below the current visual. 
-    
-    ![Analytics view 6](images/image014.png)
+    ![Properties panel  ](images/scm-005.png)
 
 
+10. We need to understand what is causing the off contract purchasing. 
 
-11.  Another factor that impacts Overtime and Contract labor is employee absences. 
+     > Expand the Fiscal Data folder and locate Month Column. <br>
 
-    > Drag the **Absences** column from the data panel and drop it in the values section below the **Turnover** column.
+     > Scroll down to locate Received Late Quantity columns. <br>
 
-    ![Analytics view 7](images/image015.png)
+     > While keeping the “CTRL ” key pressed drag and drop them on to the canvas under the existing chart.  <br>
 
-    ![Analytics view 8](images/image016.png)
-    
+     > Watch for the Green bar before you drop the columns.  <br>
 
-12.  This brings all relevant columns onto the canvas. We can now co-relate several attributes and arrive at the correct conclusion.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance. 
+    ![Fiscal Data folder ](images/scm-006.png)
+
+     > In the Properties panel in the center. Click on the inverted triangle ![inverted triangle](images/invtriangle.png) to expand the Analytics Type panel and choose Bar Type.<br>
+
+    ![Properties panel](images/scm-007.png)
+
+11. Lets find out which supplier is responsible for the issue.
+
+     > Locate supplier and drop it into the color section. <br>
+
+     > Next delete Fiscal Data (Month) column <br>
+
+    ![Supplier](images/scm-008.png)
+
+     > In the Properties panel in the center. Click on the inverted triangle   to expand the Analytics Type panel and choose Treemap Type. <br>
+
+    ![Properties panel](images/scm-009.png)
+
+12. Two suppliers are the cause of the issue. 
+
+    ![Analytics view](images/scm-009.png)
 
 
-
-13.  Let’s understand how the trend looks like in the future. We will use the built in Statistical Analysis function like forecast to under the future 
-
-    > Right click anywhere in the **Turnover**, **Absences** Chart choose **Add Statistics** then **Forecast**
-
-    ![Analytics view 11](images/image021.png)
-
-14.  With a few simple clicks, you were able to forecast and understand the future trend. 
-
-    ![Analytics view 12](images/image022.png)
-
-
-
-15. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+13. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 

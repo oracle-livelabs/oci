@@ -98,7 +98,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Fields and Regions](images/image011.png)
 
 
-8.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
+7.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
 
     > Click on the **Edit button.**
 
@@ -106,30 +106,30 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-9.  Now we will add the conditions that applies this rule to all administrators.
+8.  Now we will add the conditions that applies this rule to all administrators.
 
     > Click on the **Condition button**.
 
-![Fields and Regions, Conditions](images/image013.png)
+    ![Fields and Regions, Conditions](images/image013.png)
 
   In the first box, enter **Roles** and select **Roles** from the drop-down.
 
-![Fields and Regions, Conditions](images/image014.png)
+    ![Fields and Regions, Conditions](images/image014.png)
 
-> (1) Enter **Administrator** in the right most box of the **User Roles** row.       <br>
+    > (1) Enter **Administrator** in the right most box of the **User Roles** row.       <br>
 
-> (2) Select the first **Application Administrator** role from the drop-down list. .
+    > (2) Select the first **Application Administrator** role from the drop-down list. .
 
-![Fields and Regions, Conditions](images/image015.png)
+    ![Fields and Regions, Conditions](images/image015.png)
 
 
-10. Now you want to add and hide fields.
+9. Now you want to add and hide fields.
 
     > Click on the ![dropdown](images/)  Icon to the left of Supplier Details to expand the section.
 
     ![Fields and Regions](images/image016.png)
 
-11. First you want to the configure the page  to display the **Creation Source**. 
+10. First you want to the configure the page  to display the **Creation Source**. 
 
     > (1) Click in the Box in the **Hidden Column** for in **Creation Source Field** row.    <br>
 
@@ -138,7 +138,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Validation](images/image017.png)
 
 
-12.  Now you want to the repeat the above step and make Creation Date, Parent Supplier Number, Tax Payer Country Visible.
+11.  Now you want to the repeat the above step and make Creation Date, Parent Supplier Number, Tax Payer Country Visible.
 
     > (1) Click the Boxc in the **Hidden Column** for **each of these** rows.    <br>
 
@@ -147,7 +147,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 ![Validation 2](images/image018.png)
 
  
-13. Well done. You have configured a new role-based page layout for Administrators.Redwood offers a quick way to review your changes as they appear in the application.
+12. Well done. You have configured a new role-based page layout for Administrators.Redwood offers a quick way to review your changes as they appear in the application.
 
     > (1) Click on the **Preview** ![Fields and Regions, Conditions](images/icon04_preview.png) icon in the upper right of the screen<br>
 
@@ -155,37 +155,37 @@ In this activity, you will use Redwood to incorporate rules and define content s
     
     ![Validation 2](images/image019.png)
 
-14. You have reentered the Suppliers (New) page. Let’s review the changes.
+13. You have reentered the Suppliers (New) page. Let’s review the changes.
 
     Click on the **Supplier Type** to display the Filter and click into the Search box **Supplier Type**.
 
 ![Validation 2](images/image020.png)
    
-15.  You need to select the search filter Supplier (187) again. 
+14.  You need to select the search filter Supplier (187) again. 
 
     > Click and select **Supplier (187)** to display list of suppliers. 
 
 ![Validation 4](images/image021.png)
 
 
-16. 
+15. 
 
     >  Click anywhere in the page away from the search filter **Supplier (187)**
 
  ![Change Salary Screen 2](images/image022.png)
 
-17.  Now you will enter the Suppliers (New) Page that displays lists of suppliers.
+16.  Now you will enter the Suppliers (New) Page that displays lists of suppliers.
 
     > Click on **drop-down icon** to expand a specific supplier row
 
     ![Change Salary Screen 2](images/image023.png)
 
-18.  You can see all the changes we just configured for displaying additional fields to Administrators.
+17.  You can see all the changes we just configured for displaying additional fields to Administrators.
 
     > Click on the **Home** ![Home Icon](images/icon07_home.png) Icon.
 
 
-19. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+18. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
