@@ -51,9 +51,6 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-
-
-
 2. Now you will enter the Suppliers (New) Page that displays lists of suppliers. 
 
 
@@ -91,7 +88,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Fields and Regions](images/image010.png)
 
-    > (1) Enter **adminLayout** in label. <br>
+    > (1) Enter **procurementManagerLayout** in label. <br>
 
     > (2) Click on **Create**.
 
@@ -106,7 +103,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-8.  Now we will add the conditions that applies this rule to all administrators.
+8.  Now we will add the conditions that applies this rule to all Procurement Managers.
 
     > Click on the **Condition button**.
 
@@ -116,16 +113,16 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Fields and Regions, Conditions](images/image014.png)
 
-    > (1) Enter **Administrator** in the right most box of the **User Roles** row.       <br>
+    > (1) Enter **Procurement Manager** in the right most box of the **User Roles** row.       <br>
 
-    > (2) Select the first **Application Administrator** role from the drop-down list. .
+    > (2) Select the first **Procurement Manager** role from the drop-down list. .
 
     ![Fields and Regions, Conditions](images/image015.png)
 
 
 9. Now you want to add and hide fields.
 
-    > Click on the ![dropdown](images/)  Icon to the left of Supplier Details to expand the section.
+    > Click on the ![dropdown](images/icon03_dropdown.png)  Icon to the left of Supplier Details to expand the section.
 
     ![Fields and Regions](images/image016.png)
 
@@ -140,14 +137,14 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 11.  Now you want to the repeat the above step and make Creation Date, Parent Supplier Number, Tax Payer Country Visible.
 
-    > (1) Click the Boxc in the **Hidden Column** for **each of these** rows.    <br>
+    > (1) Click the Box in the **Hidden Column** for **each of these** rows.    <br>
 
     > (2) Then select **Visible** from the options that appear.
 
 ![Validation 2](images/image018.png)
 
  
-12. Well done. You have configured a new role-based page layout for Administrators.Redwood offers a quick way to review your changes as they appear in the application.
+12. Well done. You have configured a new role-based page layout for Procurement Managers.Redwood offers a quick way to review your changes as they appear in the application.
 
     > (1) Click on the **Preview** ![Fields and Regions, Conditions](images/icon04_preview.png) icon in the upper right of the screen<br>
 
