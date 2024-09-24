@@ -1,19 +1,18 @@
-# Integration
+# Audit
 
 ## Introduction
 
-We're delighted to take you on a journey that will uncover the incredible capabilities of Fusion Cloud's REST API integration tools for auditing supplier address changes. This adventure is designed to offer a holistic understanding of how these integration tools can facilitate your Oracle Fusion Cloud integration requirements and access to business object data via REST APIs.
+As you have seen in the previous Cloud Adventures, Oracle delivers a fine grained security model which allows companies to enforce tight controls over who has access to both application features and data. While these controls provide adminstrators with powerful tools, good corporate governance requires that application auditing is used to back up the security controls you implement.
 
-In the office of the Chief Information Officer (CIO), supply chain management is a complex web of interconnected processes. Our goal is to navigate this complexity and equip you with the skills to audit supplier address changes effectively. You'll learn how to leverage the power of Fusion Cloud's REST APIs, a game-changing solution that will revolutionize your operations.
+For this Cloud Adventure, we have already used audit profiles to enable auditing on select fields in the applications.
+You will begin the adventure by accessing the native application screens to update a supplier address. Each participant is assigned a supplier based on your login ID.
 
-We've designed this journey to be interactive and engaging. Make sure to answer the Adventure Check Point questions along the way, ensuring you capture the full potential of this experience. These check points are your path to becoming a master auditor, so pay close attention!
+Once you update the address, your Guide will display the results of the audit API so you can see how your actions were captured automatically, then accessed using a REST API.
+Included in your adventure is a quick tour of the REST API documentation. While this exercise is specific to extracting audit data, similar REST APIs were used in the previous Extend Cloud Adventure, and are available in every Oracle SaaS application.
 
-With your adventure hat on and a curious mind, prepare for an exhilarating exploration of Fusion Cloud's REST API integration features. Let's embark on this thrilling journey together!
+We've designed this journey to be interactive and engaging. Make sure to answer the Adventure Check Point questions at the end, ensuring you capture the full potential of this experience. These check points are your path to becoming a master auditor, so pay close attention!
 
-As you follow along, do not forget to ask questions if you get stuck and answer the Adventure Check Point questions! 
-
-
-Estimated Time: 15 minutes
+With your adventure hat on and a curious mind, prepare for an exhilarating exploration of Fusion Cloud data aduit and REST API integration features. Let's embark on this thrilling journey together!
 
 
 ### **Objectives**
@@ -23,7 +22,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 ![Integration Objectives](images/Integration_objs2.png)
 
 
-## **Task 1: Use REST API to pull Fusion SaaS Application audit data for use in any external system**
+## Task 1: Use REST API to pull Fusion SaaS Application audit data for use in any external system
 
 
 
@@ -185,6 +184,6 @@ curious cloud adventurers to seasoned Fusion Cloud auditors, equipped with the k
 **You have successfully completed the Activity!**
 
 ## Acknowledgements
-* **Author** - Jamil Orfali, Senior Sales Consultant, Advanced Technology Services, Kris Holmgren, Senior Sales Consultant, Advanced Technology Services
+* **Author** - Jamil Orfali, Senior Cloud Technologist, Advanced Technology Services, Kris Holmgren, Senior Cloud Technologist, Advanced Technology Services
 * **Contributors** -  
 * **Last Updated By/Date** - Jamil Orfali, September 2024
