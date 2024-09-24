@@ -32,7 +32,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Application Home Page](images/image001.png).
 
-    > Click on **Suppliers** under **Quick Actions**.
+    > Click on **Suppliers (New)** under **Quick Actions**.
 
     ![My Team Page](images/image002.png)
 
@@ -54,11 +54,11 @@ In this activity, you will use Redwood to incorporate rules and define content s
 2. Now you will enter the Suppliers (New) Page that displays lists of suppliers. 
 
 
-    > (1) Click on drop-down icon to expand a specific supplier row/
+    > (1) Click on drop-down icon to expand a specific supplier row.
     
     ![Change Salary Page](images/image006.png)
 
-3.  You can see the supplier information displayed is limited. We will update the page to display more fields for administrators. <br><br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
+3.  You can see the supplier information displayed is limited. We will update the page to display more fields for procurement managers. <br><br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
 
 
     > (1) Click on the ![picture image](images/icon02_co.png) **Image** in the top right corner of the screen.  <br>
@@ -128,14 +128,14 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 10. First you want to the configure the page  to display the **Creation Source**. 
 
-    > (1) Click in the Box in the **Hidden Column** for in **Creation Source Field** row.    <br>
+    > (1) Click in the Box in the **Hidden Column** for **Creation Source Field** row.    <br>
 
     > (2) Then select **Visble** from the options that appear.
 
     ![Validation](images/image017.png)
 
 
-11.  Now you want to the repeat the above step and make Creation Date, Parent Supplier Number, Tax Payer Country Visible.
+11.  Now repeat the above steps for fields Creation Date, Parent Supplier Number and Tax Payer Country to make them visible.
 
     > (1) Click the Box in the **Hidden Column** for **each of these** rows.    <br>
 
@@ -144,7 +144,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 ![Validation 2](images/image018.png)
 
  
-12. Well done. You have configured a new role-based page layout for Procurement Managers.Redwood offers a quick way to review your changes as they appear in the application.
+12. Well done. You have configured a new role-based page layout for Procurement Managers. Redwood offers a quick way to review your changes as they appear in the application.
 
     > (1) Click on the **Preview** ![Fields and Regions, Conditions](images/icon04_preview.png) icon in the upper right of the screen<br>
 
@@ -177,7 +177,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Change Salary Screen 2](images/image023.png)
 
-17.  You can see all the changes we just configured for displaying additional fields to Administrators.
+17.  You can see all the changes we just configured for displaying additional fields to Procurement Managers.
 
     > Click on the **Home** ![Home Icon](images/icon07_home.png) Icon.
 
@@ -203,9 +203,9 @@ In this example, you used Redwood, Oracle’s next-generation design system, to 
 
 
 ## Acknowledgements
-* **Author** - Casey Doody, Sales Consultant, Advanced Technology Services
-* **Contributors** -  Sajid Saleem, Master Principal Sales Consultant, Advanced Technology Services
-* **Last Updated By/Date** - Casey Doody, August 2024
+* **Author** - Casey Doody, Cloud Technologist, Advanced Technology Services
+* **Contributors** -  Sajid Saleem, Master Principal Cloud Technologist, Advanced Technology Services
+* **Last Updated By/Date** -Casey Doody, August 2024
 
 
 

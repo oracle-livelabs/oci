@@ -229,6 +229,6 @@ So, check your with you team, double-check your racing harness and get ready for
 * [Configure User Defined Content Task Type for a Journey](https://docs.oracle.com/en/cloud/saas/human-resources/24c/faijh/configure-user-defined-content-task-type-for-a-journey.html)
 
 ## Acknowledgements
-* **Author** - Charlie Moff, Distinguished Sales Consultant, Advanced Technology Services; Stephen Chung, Principal SaaS Cloud Technologist, Advanced Technology Services
+* **Author** - Charlie Moff, Distinguished Cloud Technologist, Advanced Technology Services; Stephen Chung, Principal Cloud Technologist, Advanced Technology Services
 * **Contributors** - Sajid Saleem, Master Principal SaaS Cloud Technologist, Advanced Technology Services  
 * **Last Updated By/Date** - Charlie Moff, September 2024 
