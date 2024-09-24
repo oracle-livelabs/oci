@@ -24,7 +24,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 ## Task 1: Update Suppliers (New) listing page
 
-1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update **Suppliers (New) listing page providing more visibility to administrators**. Suppliers (New) is a dynamic listing page that allows you to create role-based layouts based on configurable criteria.
+1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update **Suppliers (New) listing page providing more visibility to Procurement Managers**. Suppliers (New) is a dynamic listing page that allows you to create role-based layouts based on configurable criteria.
 
     You will first navigate to the Suppliers (New) Listing Page.
 
