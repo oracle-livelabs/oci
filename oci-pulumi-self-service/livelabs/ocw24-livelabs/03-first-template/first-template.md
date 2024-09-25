@@ -30,21 +30,9 @@ Estimated time: 20 minutes
 
 4. Click **`[NEXT]`** and fill in the Pulumi template details.
 
-    * **Organization** - Enter somethign like, "Workshop"
+    * **Organization** - This is your Pulumi organization name. More than likely, it is the same as your Pulumi ID
     * **Pulumi ESC** - **`oci-pulumi-self-service`**
-    * **Select stack** - Pick one [Development | QA | Production]
-    * **Website content** - Copy and paste the following: 
-
-        ```
-        <copy>
-        <html>
-        <head>
-        <title>OCI + Pulumi + Backstage = Self Service Portal</title>
-        <h1>Well done - your first template deployment!</h1>
-        </head>
-        </html>
-        </copy>
-        ```
+    * **Select stack** - Pick one [Oracle-CloudWorld2024 | Development | QA | Production]
 
 5.  Click **`[NEXT]`** and fill in the Repository Location (where Backstage will store your output code).
 
