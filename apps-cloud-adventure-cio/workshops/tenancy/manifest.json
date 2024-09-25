@@ -12,7 +12,7 @@
         },
         {
             "title": "Lab 2: Configure",
-            "filename": "../../02-configure/configure.md"
+            "filename": "../../02-configure-scm/configure-scm.md"
         },
         {
             "title": "Lab 3: Extend",
@@ -20,11 +20,16 @@
         },
         {
             "title": "Lab 4: Extend More",
-            "filename": "../../04-extend-more/extend-more.md"
+            "filename": "../../04-extend-scm-llm/extend-more-po.md"
         }, 
         {
-            "title": "Lab 5: Analytics",
-            "filename": "../../05-analytics/analytics.md"
+            "title": "Lab 5: Audit",
+            "filename": "../../05-integration/integration.md"
+        }, 
+
+        {
+            "title": "Lab 6: Analytics",
+            "filename": "../../06-analytics-scm/analytics.md"
         }, 
      
         {

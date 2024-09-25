@@ -18,9 +18,6 @@ In this activity, you will:
 
 
  
-
-
-
 ## Task 1: Use Oracle Global Order Promising to determine most profitable to promise and on-time delivery options to satisfy customers' needs.  
 
 1. You have recently entered a new Sales Order for which manual scheduling is required.   Let’s review our options and ensure that GOP has selected the most cost-effective option.
@@ -33,7 +30,7 @@ In this activity, you will:
 
 2. Manage Orders allows you to search orders based on a multitude of criteria.
 
-    > Enter order number **98450** in the order field and click **Search.**   Order 98450 will appear in the **Search Results.**  
+    > Enter order number **98456** in the order field and click **Search.**   Order 98456 will appear in the **Search Results.**  
 
     ![image002](images/image002.png)
 
@@ -41,7 +38,7 @@ In this activity, you will:
 
 3. Clicking on a sales order will allow you to drill down into the details of the order and interact with it.
 
-    > Click on order number **98450** in the Search Results area.
+    > Click on order number **98456** in the Search Results area.
 
     ![image003](images/image003.png)
 
@@ -49,9 +46,9 @@ In this activity, you will:
 
 4. All information regarding a Sales Order can be accessed via this screen, including its current state, and all fulfillment details.
 
-    > (1) Click on **Actions.**=
+    > (1) Click on **Actions.** <br>
     
-    > (2) Then **Switch to Fulfillment View.**
+    > (2) Then **Switch to Fulfillment View.** <br>
 
     ![image004](images/image004.png)
 
@@ -81,34 +78,43 @@ In this activity, you will:
 
 
 
-8. Availability Details will give you a full view into the specifics of the fulfillment process, including all purchases, manufacturing, and transfers that are required.
+8. If you want to see more options, you can run a “What If” scenario to determine what would happen if you make a change to the currently selected option.  
 
-    > Select the **Current Option** row under Availability Option, click on **Actions**, and then select **Availability Details**.
+    > Select the **Blank Box** next to the line highlighted.
 
     ![image008](images/image008.png)
 
 
 
-9. The Availability Details pegging information helps Natalie understand how the order can be promised on time. In this example, Global Order Promising reviewed the profitable supply chain network to promise the order. 
+9. Availability Details will give you a full view into the specifics of the fulfillment process, including all purchases, manufacturing, and transfers that are required.
 
-    > Note that item **ECM37004** was sourced from Liberty Electric, which is not the primary source of the item, but a secondary lest costly option GOP identified based on using Profitable to Promise.  
+    > Select the Actions icon and click Edit. <br>
 
-    .
     > GOP can be configured to consider several variables when considering profitability.
 
     ![image009](images/image009.png)
 
-    > Click **Done** to return to the Check Availability screen.
 
-    ![image010](images/image010.png)
+10. The “What If” scenario allows you to include substitute products, split the line into multiple shipments, and even ignore reservations for other customers.  
 
+    > Answer Yes to return to the first three questions. <br>
 
+    > (1) Allow Substitutions <br>
+    > (2) Allow Splits <br>
+    > (3) Ignore Reservations <br>
 
-10. Our Order Management environment is configured to require that orders be manually scheduled.   This process can be automated as well, with full confidence that GOP will select the most profitable fulfillment option based on your company’s specific needs.
+    ![image011](images/image010.png)
 
-    > Click on the **Home** button to return to your landing page.
+11. In this example, Global Order Promising reviewed the profitable supply chain network to promise the order. 
 
-    ![image011](images/image011.png)
+    > Click on the **Refresh Results** button to return to your landing page.
+
+    ![image008](images/image011.png)
+
+12. Our Order Management environment is configured to require that orders be manually scheduled.   This process can be automated as well, with full confidence that GOP will select the most profitable fulfillment option based on your company’s specific needs.
+
+    ![image008](images/image012.png)
+
 
 
 
