@@ -11,7 +11,7 @@ Estimated Workshop Time: 60 Minutes
 In this workshop, you will learn how to:
 - Get Started with CD3 Automation Toolkit
 - Build OCI infrastructure using CD3 Automation Toolkit
-- Produce and Inspect Terraform Plan
+- Produce and Inspect Terraform Plan (Both Terarform and Tofu are supported by the toolkit, we will use Terraform for this labs)
 - Apply Plan to OCI tenancy
 - OCI Resource Manager Upload
 - Terraform Destroy to reset
