@@ -47,14 +47,14 @@ Please follow the previous lab till the last step. Once you are able to provisio
 1. Place *CD3-CIS-ManagementServices-template.xlsx* Excel sheet at appropriate location in your container and provide the corresponding path in cd3file parameter at below path.
 
     ```
-    /cd3user/tenancies /<customer_name>/<customer_name>_setUpOCI.properties
+    /cd3user/tenancies /<prefix>/<prefix>_setUpOCI.properties
     e.g. cd3file=/cd3user/tenancies/usr1_livelab/CD3-CIS-ManagementServices-template.xlsx
     ```
 
 2. *Execute* the setUpOCI Script from below path:
 
     ```
-    python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
+    python setUpOCI.py /cd3user/tenancies/<prefix>/<prefix>_setUpOCI.properties
     e.g. cd3file=/cd3user/tenancies/usr1_livelab/CD3-CIS-ManagementServices-template.xlsx
     ```
 
@@ -63,7 +63,7 @@ Please follow the previous lab till the last step. Once you are able to provisio
 4. Once the execution is *successful*, tfvars file will be generated under below folder in that region.
 
     ```
-    <customer_name>_events.auto.tfvars file under /cd3user/tenancies/<customer_name>/terraform_files/<region_dir>
+    <prefix>_events.auto.tfvars file under /cd3user/tenancies/<prefix>/terraform_files/<region_dir>
     ```
 
 5. Navigate to the above path and *execute* the terraform commands:
