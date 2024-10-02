@@ -135,7 +135,7 @@ In this lab, you will:
     - Create bash file "web.sh" under below path and copy sample script to enable Apache on the instance.
     
     ```
-    /cd3user/tenancies/<customer_name>/terraform_files/<region_name>/compute/scripts
+    /cd3user/tenancies/<prefix>/terraform_files/<region_name>/compute/scripts
     ```
 
     ```
