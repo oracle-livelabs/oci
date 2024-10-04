@@ -31,7 +31,7 @@ In this lab, you will:
 
     ![BUILDPARAM](./images/jen_cr_build_param_v1.png "Build Parameter")    
 
-5. **Upload** the filled [Excel sheet](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/ExcelTemplates.md) in Excel_Template section.
+5. **Upload** the filled [Excel sheet](https://oracle-devrel.github.io/cd3-automation-toolkit/latest/excel-templates/) in Excel_Template section.
     
     ![EXCELTEMP](./images/jen_cr_excel_temp_v1.png "Excel Template")    
 
