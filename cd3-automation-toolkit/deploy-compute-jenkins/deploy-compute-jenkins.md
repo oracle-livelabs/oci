@@ -37,7 +37,7 @@ In this lab, you will:
 
 ## Task 2: Execute setUpOCI.py
 1. Select the workflow as Create Resources in OCI (Greenfield Workflow). Choose single or multiple MainOptions as required and then corresponding SubOptions.
-    >**Note:** Please read while selcting multiple options simultaneously. Below screenshot shows example to create compartments and Tags.
+    >**Note:** Please read while selecting multiple options simultaneously. Below screenshot shows example to create compartments.
 
     ![CREATRES](./images/jen_cr_res_v1.png "Create Resource")  
 
