@@ -212,7 +212,7 @@ Make sure the [prerequisites](#prerequisites) are met before proceeding.
    ```
 
 
-10. After the createTenancyConfig.py script is successfully executed, customer specific files are created under ```/cd3user/tenancies/prefix```.
+10. After the createTenancyConfig.py script is successfully executed, customer specific files are created under ```/cd3user/tenancies/<prefix>```.
   
 In this lab, we have learnt how to **setup CD3 toolkit container** and **connect** it to OCI tenancy.
 
