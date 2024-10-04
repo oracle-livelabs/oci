@@ -165,14 +165,8 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    ![Create Task](images/image117.png)  
 <br>
 
-18. OPTIONAL STEP!
 
-   > If presented with the **Select Repository** popup screen, click the   
-
-   ![Create Task](images/image118.png)  
-<br>
-
-19. You’re now in Visual Builder – Express Mode.  This allows you to easily configure application screens.  In this scenario, you’ll be referencing the Guided Journey/Task that you created earlier.
+198. You’re now in Visual Builder – Express Mode.  This allows you to easily configure application screens.  In this scenario, you’ll be referencing the Guided Journey/Task that you created earlier.
 
    > (1) Enter **Journey** in the **Page Properties Filter** field on the right.  This will narrow the list of Page Properties available. <br>    
    > (2) Enter **CA&#95;##** in the **Shopping Cart Guided Journey Code** field and press the **Enter** key.  Be careful to enter this into the correct field as there are several similar fields available.  If you searched as described in Step 1, it’s likely the 1st field listed below the filter.
@@ -180,33 +174,33 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    ![Create Task](images/image119.png)  
 <br>
 
-20. You will now see the Product Items Review graphic on the screen.  This was defined in the Category Template at the beginning of this adventure.  You will now test this by running the screen in Preview mode.
+19. You will now see the Product Items Review graphic on the screen.  This was defined in the Category Template at the beginning of this adventure.  You will now test this by running the screen in Preview mode.
 
    > Click the **Preview** ![Preview](images/Icon06_preview.png) icon in the top right of the screen.
 
    ![Create Task](images/image120.png)  
 
-21. You are now back in Self-Service Procurement and you can see that your 2 items are in the cart.  So, you will now open your cart.
+20. You are now back in Self-Service Procurement and you can see that your 2 items are in the cart.  So, you will now open your cart.
 
    > Click the **Cart** icon on the bottom of the screen. 
 
    ![Create Task](images/image121.png)  
 <br>
 
-22. The **Product Items Review** image is prominently displayed. Clicking it will call an external Gen AI Service to gather review information about the items in your cart.
+21. The **Product Items Review** image is prominently displayed. Clicking it will call an external Gen AI Service to gather review information about the items in your cart.
 
    > Click the **Product Items Review** image. 
 
    ![Create Task](images/image122.png)  
 <br>
 
-23. The Guided Journey Task has called your User Defined Content integration.  As discussed in the introduction to this adventure, it calls Oracle Integration to gather additional prompt information, such as Position and New York, prior to our Generative AI call to the external LLM.  The results are then formatted and displayed as shown.
+22. The Guided Journey Task has called your User Defined Content integration.  As discussed in the introduction to this adventure, it calls Oracle Integration to gather additional prompt information, such as Position and New York, prior to our Generative AI call to the external LLM.  The results are then formatted and displayed as shown.
 
    > (1) When finished reviewing the result, you can close your browser tabs and exit the Oracle Cloud Application UI.
 
    ![Create Task](images/image123.png)
 
-24. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+23. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
