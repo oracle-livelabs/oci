@@ -21,7 +21,7 @@ In this lab, you will:
 
 # Create Resources using CLI 
 
-## Task 1: Add Excel path to 'prefix_setUpoci.properties'
+## Task 1: Add Excel path to 'prefix_setUpOCI.properties'
     (Note: Please check the tenancyconfig.properties file for prefix information)
 
 1. Add the Excel file path for "cd3file" parameter. You can find a file in below location.
