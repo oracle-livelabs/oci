@@ -40,7 +40,7 @@ The objectives of this lab are:
 
    Below is a sample output:
 
-   ![rmstackoutput](./images/rmstackoutput.png)
+   ![rmstackoutput](./images/rmstackoutput_v1.png)
 
 
   After executing the container, jump to [Task 3](#task-3-connect-container-to-oci-tenancy) to connect this container to OCI tenancy.
