@@ -28,17 +28,17 @@ In this lab, you will:
 2. **Click** on setUpOCI pipeline from Dashboard. 
 3. **Click** on **Build with Parameters** from left side menu.
 
-    ![BUILDPARAM](./images/jen_cr_build_param.png "Build Parameter")    
+    ![BUILDPARAM](./images/jen_cr_build_param_v1.png "Build Parameter")    
 
 4. **Upload** the filled [Excel sheet](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/ExcelTemplates.md) in Excel_Template section.
     
-    ![EXCELTEMP](./images/jen_cr_excel_temp.png "Excel Template")    
+    ![EXCELTEMP](./images/jen_cr_excel_temp_v1.png "Excel Template")    
 
 ## Task 2: Execute setUpOCI.py
 1. Select the workflow as Create Resources in OCI (Greenfield Workflow). Choose single or multiple MainOptions as required and then corresponding SubOptions.
     >**Note:** Please read while selcting multiple options simultaneously. Below screenshot shows example to create compartments and Tags.
 
-    ![CREATRES](./images/jen_cr_res.png "Create Resource")  
+    ![CREATRES](./images/jen_cr_res_v1.png "Create Resource")  
 
 6. Click on **Build** at the bottom.
 
