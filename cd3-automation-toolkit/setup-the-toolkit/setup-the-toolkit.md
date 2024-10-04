@@ -121,7 +121,7 @@ Make sure the [prerequisites](#prerequisites) are met before proceeding.
 
     # Friendly name for the Customer Tenancy eg: demotenancy; The generated .auto.tfvars files will be prefixed with this
     # customer_name.
-    prefix=demo_tenancy
+    prefix=rg-sep
 
     tenancy_ocid=ocid1.tenancy.oc1.....niuea
 
