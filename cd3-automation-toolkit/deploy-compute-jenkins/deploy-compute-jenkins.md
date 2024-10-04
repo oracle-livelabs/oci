@@ -50,7 +50,7 @@ In this lab, you will:
 1. You could also navigate terraform-apply pipeline as example below.
     >**Note:** terraform_files » phoenix » tagging » terraform-apply
 
-    ![CREATSTG](./images/jen_cr_stage.png "Stage of Resources")    
+    ![CREATSTG](./images/jen_cr_stage_v1.png "Stage of Resources")    
 
 2. **Review Logs** for Terraform Plan and OPA stages by clicking on the stage and then **Logs**.
     
