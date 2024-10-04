@@ -23,7 +23,7 @@ In this lab, you will:
    
    >**Note:** Only one user at a time using the Jenkins setup is supported in the current release of the toolkit.
 
-## Task 1: Add Excel path to 'customername_setUpoci.properties'
+## Task 1: Add Excel path to 'prefix_setUpoci.properties'
 1. **Login** to Jenkins URL with the user created after initialization.
 2. **Click** on setUpOCI pipeline from Dashboard. 
 3. **Click** on **Build with Parameters** from left side menu.
