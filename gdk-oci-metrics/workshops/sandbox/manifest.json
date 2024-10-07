@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Publish standard and custom metrics to Oracle Cloud Infrastructure (OCI) Monitoring using the Graal Development Kit for Micronaut (GDK)",
+  "workshoptitle": "Publish standard and custom metrics to Oracle Cloud Infrastructure (OCI) Monitoring with the Graal Development Kit for Micronaut (GDK)",
   "variables": ["../../variables/variables.json"],
   "help": "livelabs-help-oci_us@oracle.com",
   "tutorials": [

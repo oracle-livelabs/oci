@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This workshop takes you step by step through the process of building a Java application to publish standard and custom metrics to Oracle Cloud Infrastructure (OCI) Monitoring using the Graal Development Kit for Micronaut (GDK). It shows you how to query and visualize the published metrics using the OCI Metrics Explorer. You'll use GraalVM Native Image to package and run the application as a native executable.
+This workshop takes you step by step through the process of building a Java application to Publish standard and custom metrics to Oracle Cloud Infrastructure (OCI) Monitoring with the Graal Development Kit for Micronaut (GDK). It shows you how to query and visualize the published metrics using the OCI Metrics Explorer. You'll use GraalVM Native Image to package and run the application as a native executable.
 
 It is aimed at application developers and DevOps engineers with a basic knowledge of Java.
 
