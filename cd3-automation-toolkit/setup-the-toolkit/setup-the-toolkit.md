@@ -165,7 +165,7 @@ Make sure the [prerequisites](#prerequisites) are met before proceeding.
 
 8. You should see an output similar to below:
 
-      ```
+      ```bash
       [cd3user@109c63ee4ec0 user-scripts]$ python createTenancyConfig.py tenancyconfig.properties
       =================================================================
       NOTE: Make sure the API Public Key is added to the OCI Console!!!
