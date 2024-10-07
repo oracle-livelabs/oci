@@ -165,51 +165,51 @@ Make sure the [prerequisites](#prerequisites) are met before proceeding.
 
 8. You should see an output similar to below:
 
-   ```
-   [cd3user@109c63ee4ec0 user-scripts]$ python createTenancyConfig.py tenancyconfig.properties
-   =================================================================
-   NOTE: Make sure the API Public Key is added to the OCI Console!!!
-   =================================================================
-
-   Using different directories for OCI services as per the input outdir_structure_file..........
-
-   Copying Private Key File..........
-
-   Creating Tenancy specific config.................
-   Updated OCI_Regions file !!!
-
-
-   Creating Tenancy specific remote tfstate Items - bucket, S3 credentials.................
-   Creating new customer secret key
-
-   Creating Tenancy specific setUpOCI.properties.................
-   Creating Tenancy specific region directories, terraform provider , variables files.................
-
-   Creating Tenancy specific DevOps Items - Topic, Project and Repository.................
-
-   The toolkit has been setup successfully. !!!
-
-   Customer Specific Working Directory Path: /cd3user/tenancies/rg-sep
-
-   Remote State Bucket Name: rg-sep-automation-toolkit-bucket in us-sanjose-1.
-   Common Jenkins Home: /cd3user/tenancies/jenkins_home
-   DevOps Project Name and Repo Name: rg-sep-automation-toolkit-project, rg-sep-automation-toolkit-repo in us-sanjose-1.
-   Folder configured for OCI DevOps GIT: /cd3user/tenancies/rg-sep/terraform_files/ Initial Commit ID from createTenancyConfig.py: df73e44
-
-   #########################################
-   Next Steps for using toolkit via Jenkins
-   #########################################
-   Start Jenkins using  - /usr/share/jenkins/jenkins.sh &
-   Access Jenkins using - https://<IP Address of the machine hosting docker container>:8443
-
-   ######################################
-   Next Steps for using toolkit via CLI
-   ######################################
-   Modify /cd3user/tenancies/rg-sep/rg-sep_setUpOCI.properties with input values for cd3file and workflow_type
-   cd /cd3user/oci_tools/cd3_automation_toolkit/
-   python setUpOCI.py /cd3user/tenancies/rg-sep/rg-sep_setUpOCI.properties
-   ==================================================================================================================================
-   ```
+      ```
+      [cd3user@109c63ee4ec0 user-scripts]$ python createTenancyConfig.py tenancyconfig.properties
+      =================================================================
+      NOTE: Make sure the API Public Key is added to the OCI Console!!!
+      =================================================================
+   
+      Using different directories for OCI services as per the input outdir_structure_file..........
+   
+      Copying Private Key File..........
+   
+      Creating Tenancy specific config.................
+      Updated OCI_Regions file !!!
+   
+   
+      Creating Tenancy specific remote tfstate Items - bucket, S3 credentials.................
+      Creating new customer secret key
+   
+      Creating Tenancy specific setUpOCI.properties.................
+      Creating Tenancy specific region directories, terraform provider , variables files.................
+   
+      Creating Tenancy specific DevOps Items - Topic, Project and Repository.................
+   
+      The toolkit has been setup successfully. !!!
+   
+      Customer Specific Working Directory Path: /cd3user/tenancies/rg-sep
+   
+      Remote State Bucket Name: rg-sep-automation-toolkit-bucket in us-sanjose-1.
+      Common Jenkins Home: /cd3user/tenancies/jenkins_home
+      DevOps Project Name and Repo Name: rg-sep-automation-toolkit-project, rg-sep-automation-toolkit-repo in us-sanjose-1.
+      Folder configured for OCI DevOps GIT: /cd3user/tenancies/rg-sep/terraform_files/ Initial Commit ID from createTenancyConfig.py: df73e44
+   
+      #########################################
+      Next Steps for using toolkit via Jenkins
+      #########################################
+      Start Jenkins using  - /usr/share/jenkins/jenkins.sh &
+      Access Jenkins using - https://<IP Address of the machine hosting docker container>:8443
+   
+      ######################################
+      Next Steps for using toolkit via CLI
+      ######################################
+      Modify /cd3user/tenancies/rg-sep/rg-sep_setUpOCI.properties with input values for cd3file and workflow_type
+      cd /cd3user/oci_tools/cd3_automation_toolkit/
+      python setUpOCI.py /cd3user/tenancies/rg-sep/rg-sep_setUpOCI.properties
+      ==================================================================================================================================
+      ```
 
 
 10. After the createTenancyConfig.py script is successfully executed, customer specific files are created under ```/cd3user/tenancies/<prefix>```.
