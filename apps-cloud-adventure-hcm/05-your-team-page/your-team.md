@@ -77,9 +77,7 @@ Process a promotion for an employee. Continue working from the Team Activity Cen
 > Click the **‘Home’** Icon
 
  
-
-
-Adventure awaits, show what you know, and rise to the top of the leader board!!!
+Adventure awaits, **click on the adventure checkpoint tab in your browser,** answer the Manager Experience **Questions 9 - 11,** and rise to the top of the leader board!!!
 
 [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE)
 
@@ -90,4 +88,4 @@ Adventure awaits, show what you know, and rise to the top of the leader board!!!
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant
 * **Contributors** -  Dorcas Conyers, Principal Sales Consultant
-* **Last Updated By/Date** - Dorcas Conyers, August 2024
+* **Last Updated By/Date** - Dorcas Conyers, October 2024
