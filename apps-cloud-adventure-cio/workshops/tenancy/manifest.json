@@ -1,0 +1,45 @@
+{
+    "workshoptitle": "Cloud Adventure Activity Guide – for the Office of the CIO",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Security",
+            "filename": "../../01-security/security.md"
+        },
+        {
+            "title": "Lab 2: Configure",
+            "filename": "../../02-configure-scm/configure-scm.md"
+        },
+        {
+            "title": "Lab 3: Extend",
+            "filename": "../../03-extend/extend.md"
+        },
+        {
+            "title": "Lab 4: Extend More",
+            "filename": "../../04-extend-scm-llm/extend-more-po.md"
+        }, 
+        {
+            "title": "Lab 5: Audit",
+            "filename": "../../05-integration/integration.md"
+        }, 
+
+        {
+            "title": "Lab 6: Analytics",
+            "filename": "../../06-analytics-scm/analytics.md"
+        }, 
+     
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+        
+    ]
+}
+
+
+

@@ -16,25 +16,34 @@ In this lab, you will:
 
 1. From the **Activities** menu, start a new **Terminal** window.
 
-2. Clone the sample application source code into the _lab_ directory.
+2. Clone the sample application source code.
 
-	```bash
+	``` bash
 	<copy>
-	git clone https://github.com/sachin-pikle/gdk-oci-object-store-mvn.git lab
+	git init lab
+	cd lab
+	git remote add origin https://github.com/sachin-pikle/gdk-oci-samples.git
+	git config core.sparsecheckout true
+	echo "gdk-oci-object-store-mvn/*">>.git/info/sparse-checkout
+	git pull --depth=1 origin main
 	</copy>
 	```
 
-3. Open the sample application source code from the _lab_ directory in **Visual Studio Code**.
+3. Open the sample application source code from the _gdk-oci-object-store-mvn_ directory in **Visual Studio Code**.
 
-	```bash
+	``` bash
 	<copy>
-	code lab
+	code gdk-oci-object-store-mvn
 	</copy>
 	```
 
 4. VS Code may show a dialog box with the message "Do you trust the authors of the files in this folder?". Select **Trust the authors of all files in the parent folder 'oracle'** and click **Yes, I trust the authors**.
 
 5. VS Code may ask you to choose a password for new keyring. Press **Cancel** twice to close the prompt.
+
+6. VS Code may show a dialog box with the message "A git repository was found in the parent folders of the workspace or the open file(s). Would you like to open the repository?". Click **Never**.
+
+	![VS Code Question Icon](images/vs-code-question-icon.jpg#input)
 
 You may now **proceed to the next lab**.
 
