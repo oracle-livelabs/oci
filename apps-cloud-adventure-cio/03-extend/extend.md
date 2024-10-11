@@ -13,7 +13,7 @@ In this lab, you will:
 
 * Use Visual Builder to build a new Supplier Screen.
 
-![New Screen Process Flow](images/supplierscreenobjs.png)
+![New Screen Process Flow](images/supplierscreenobjs2.png)
 
 
 ## Task 1: Create a simplified user interface using Redwood Design Patterns and Oracle Visual Builder.
@@ -33,7 +33,7 @@ In this lab, you will:
 
     > (2) **Click** on the **‘Visual Builder’** tile <br>
 
-    ![Open Visual Builder]
+    ![Open Visual Builder](images/image0101.png)
 
 2. We have pre-defined a Project.  A project collects all the people, tools, and processes you need to complete a unit of work.  You can use a project to host source code files, track issues, collaborate on code, and build and deploy your applications. If your team is extending Oracle Cloud Applications, you’ll probably want to set things up so that you have a single project dedicated to work with a single repository for each Application. 
 
