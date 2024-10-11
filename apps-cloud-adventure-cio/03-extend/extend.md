@@ -13,7 +13,7 @@ In this lab, you will:
 
 * Use Visual Builder to build a new Supplier Screen.
 
-![New Screen Process Flow](images/SupplierScreenOBJs.png)
+![New Screen Process Flow](images/supplierscreenobjs.png)
 
 
 ## Task 1: Create a simplified user interface using Redwood Design Patterns and Oracle Visual Builder.
@@ -25,19 +25,20 @@ In this lab, you will:
 
     > (2) **Click** on the **‘Visual Builder’** tile
 
-    ![Open Visual Builder](images/image101.png)
+    ![Open Visual Builder](images/image001.png)
 
 2. We have pre-defined a Project.  A project collects all the people, tools, and processes you need to complete a unit of work.  You can use a project to host source code files, track issues, collaborate on code, and build and deploy your applications. If your team is extending Oracle Cloud Applications, you’ll probably want to set things up so that you have a single project dedicated to work with a single repository for each Application. 
 
-    > **Click** on the **‘SupplierModelExtension’** project
+    > **Click** on the **‘CloudAdventure’** project
 
-    ![open project](images/image102.png)
+    ![open project](images/image002.png)
 
 3. Workspaces allow you to segregate units of work within a Project.
 
-    > **Click** on the **‘Go to Workspaces’** button
+    > **Click** on the **‘Manage Workspaces’** link.  If your Project has no pre-existing workspaces, you'll be presented with a **‘Go to Workspaces’** button to click instead.  The following screenshots show both potential screens.
 
-    ![workspace](images/image103.png)
+    ![workspace](images/image003.png) 
+    ![workspace](images/image003b.png) 
 
 4. We'll create a new workspace for our simplified supplier screen
 
@@ -45,7 +46,7 @@ In this lab, you will:
 
     > (2) **Select** **‘New Application Extension’** from the resulting dropdown
 
-    ![workspace](images/image104.png)
+    ![workspace](images/image004.png)
 
 5. We'll name our new Extension.
 
@@ -53,31 +54,31 @@ In this lab, you will:
 
     > (2) **Click** the **‘Create’** button
 
-    ![create extension](images/image105.png)
+    ![create extension](images/image005.png)
 
 6. We're now at the Visual Builder homepage.  We can configure existing screens, create new ones, or build whole new applications.  We can also leverage REST APIs to access Fusion SaaS Data.  Supplier data from Oracle ERP/SCM Cloud, so we'll leverage the embedded integration via REST APIs.
 
     > (1) **Click** the **‘Services’** ![Services Icon](images/icon018_services.png) icon on the left menu.
 
-    ![add UI Screen](images/image106.png)
+    ![add UI Screen](images/image006.png)
 
 7. We can add services from Oracle Cloud Applications or other accessible data sources.
 
     > (1) **Click** on the **‘+ Service Connection’** button.
 
-    ![create UI](images/image107.png)
+    ![create UI](images/image007.png)
 
 8. There are multiple ways to reference a service.  We'll use the included catalog of Oracle Cloud Application services.
 
     > **Click** on the **‘Select from Catalog’** tile.
 
-    ![view default screen template](images/image108.png)
+    ![view default screen template](images/image008.png)
 
 9. Services are available for functionality across the Oracle Cloud Applications.
 
     > **Click** on the **‘‘Enterprise Resource Planning and Supply Chain’** tile.
 
-    ![manage services](images/image109.png)
+    ![manage services](images/image009.png)
 
 10. We'll use the Supplier Service from the ERP/SCM Catalog. 
 
@@ -86,111 +87,172 @@ In this lab, you will:
     > (3) Click the ‘Checkbox’ next to ‘Suppliers’. <br>
     > (4) Click the ‘Create’ button. <br>
 
-    ![create service connect](images/image110.png)
+    ![create service connect](images/image010.png)
 
-11. The resulting screen shows additional configuration options for our supplier service, but we'll just use the default settings.  Now we want to start creating our new screen.  
+11. The resulting screen shows additional configuration options for our supplier service, but we'll just use the default settings.  We can also see the Endpoints details related to our Suppliers service.  
+
+    > **Click** on the **‘Endpoints’** tab as shown.
+
+    ![select from catalog](images/image011.png)
+
+12. Here we see the various operations and data objects available.  This includes Get, Post and Patch operations allowing for query, create and update actions  Scrolling this window we can see that other related information is also available, including addresses, attachments, contacts, descriptive flexfields and more. Now we want to start creating our new screen.  
 
     > **Click** on the **‘App UIs’** ![App UIs Icon](images/icon019_apps_uis.png) icon in the left toolbar
 
-    ![select from catalog](images/image111.png)
+    ![select from catalog](images/image012.png)
 
-12. We're now at the Visual Builder APP UI Screen.  We can configure existing screens, create new ones, or build whole new applications.  We want to create a new UI screen.
+13. You can now see the App UI panel on the left hand side.  This allows you to create you new page.
 
     > **Click** on the **‘+ App UI’** button.
 
-    ![select ERP/SCM](images/image112.png)
+    ![select ERP/SCM](images/image013.png)
+
+14. You can name your App UI.    
 
     > (1) **Enter** **‘QuickSupplierUI’** in the "'App UI Name'" field.<br>
 
     > (2) **Click** the **‘Create’** button.
 
-    ![get supplier service](images/image113.png)
+    ![get supplier service](images/image014.png)
 
-13. Visual Builder has automatically created a default UI leveraging the Oracle provided Redwood template.  Redwood is Oracle's design methodology and pre-defined templates, and design patterns are included in Visual Builder to allow you to create applications that look and function just like Oracle delivered applications.
+15. Visual Builder has automatically created a default UI leveraging the Oracle provided Redwood template.  Redwood is Oracle's design methodology and pre-defined templates, and design patterns are included in Visual Builder to allow you to create applications that look and function just like Oracle delivered applications.
 
     > **Double-Click** the **‘main-start’** object.
 
-    ![create supplier service](images/image114.png)
+    ![create supplier service](images/image015.png)
 
 
-14. Here we see our blank template and a list of some of the provided Redwood design components.  We want to start by adding some components to the screen to hold our data.  We’ll first add a Panel component.
+16. Here we see our blank template and a list of some of the provided Redwood design components.  We want to start by adding some components to the screen to hold our data.
 
     > (1) Confirm you’re in the **Components** tab. <br>
 
     > (2) Type **Panel** in the **‘filter’** field. <br>
 
-    > (3) Drag **Panel** to first blue section (4) of the page as shown.
+    > (3) Drag **Panel** to the dashed rectangle object and drop it in the blue columns that appear (4) shown.
 
-    ![create supplier service](images/image115.png)
+    ![create supplier service](images/image016.png)
 
-15. We’ll now add a Table component to our new Panel.
+17. Next, you'll add a component to the panel.  The first component we add with be an Input Text field to allow for searching.
 
-    > (1) Type **Table** in the **‘filter’** field. <br>
-    > (2) Drag **Table** to first blue section (3) of the page as shown.
+    > (1) Confirm you’re in the **Components** tab. <br>
 
-    ![add supplier service to screen](images/image116.png)
+    > (2) Type **text** in the **‘filter’** field. <br>
 
-16. We now have a table to hold our data. Next, we’ll add the Supplier data from our REST API. We can use the Quick Start feature to help with this task.
+    > (3) Drag **Input Text**  and drop in the blue section that appears when you drop into the Panel (4).
 
-    > (1) Click the newly created **Table** region.<br>
+    ![create supplier service](images/image017.png)
+
+18. In the next 2 steps, you'll add label to your search field and create a page variable.  You can start with the label.
+
+    > (1) Type **Enter Supplier Name Search** in the **Label Hint** field on the **General** tab of the **Properties** panel on the right. <br>
+
+    > (2) Click the **Data** tab in the **Properties** panel. <br>
+
+    ![create supplier service](images/image018.png)
+
+19. Create a page variable to save the contents of your new Input Text field
+
+    > (1) Click the (x) icon on the top right of the Value field.  If the (x) is not showing, move your cursor to the Value field and it will appear. <br>
+      
+    > (2) The **Variables** pop-up window will appear.  Click **Create** next to the **Page** option. 
+
+    ![create supplier service](images/image019.png)    
+
+20. Name your page variable.
+
+    > (1) Type **SupplierSearchString** in the ID Field.<br>
+      
+    > (2) Click the **Create** button. 
+
+    ![create supplier service](images/image020.png)   
+
+21. You’ll now add a Table component to the Panel.
+
+    > (1) Enter  **Table** in the **‘filter’** field. <br>
+
+    > (2) Drag **Table** Table to the white space below your text field.  Be sure that it’s in the white space just below the text field and not in the brown section further down.
+
+    ![add supplier service to screen](images/image021.png)
+
+22. You now have a table to hold the data. Next, you’ll add the Supplier data from our REST API. You can use the Quick Start feature to help with this task.
+
+    > (1) Click in the newly created **Table** region.<br>
 
     > (2) You should now see the Table Properties region appear on the right.
 
-    ![table layout](images/image117.png)
+    ![table layout](images/image022.png)
 
-17. The Quick Start features simply common tasks.  We can use the Add Data Quick Start feature to show data from our Supplier REST API.
+23. The Quick Start features simply common tasks.  You can use the Add Data Quick Start feature to show data from the Supplier REST API.
 
     > (1) Click the **'Quick Start'** table in the Table Properties area. <br>
 
     > (2) Click the **'Add Data'** tile.
 
-    ![select supplier fields](images/image118.png)
+    ![select supplier fields](images/image023.png)
 
-18. We can see the various Supplier related data available from the Supplier REST API.  We’ll just use the Suppliers data for this scenario.8
+24. You can see the various Supplier related data available from the Supplier REST API.  You’ll just use the Suppliers data for this scenario.
+
     > (1)  Click **'Suppliers'** to expand the Suppliers region. <br>
 
     > (2)  Click **'Suppliers'** tile. <br>
 
     > (3) Click the **Next** button.
 
-    ![finish supplier fields](images/image119.png)
+    ![finish supplier fields](images/image024.png)
 
-19. We’ll select a few fields to display on our new screen.  We want to use this to allow for quick update of a few pieces of Supplier Data, including Taxpayer ID, Alternate Name and Alias.  We’ll select those fields in additional to Supplier and Supplier Number..
+25. You’ll select a few fields to display on the new screen.  This screen will be used to search for Suppliers and allow for quick update of a few pieces of Supplier Data.  
 
-    > (1)  Click **'Checkbox'** next to the following fields.  You’ll need to scroll the Endpoint Structure for the last 3 fields: <br>
+    > (1)  Click **'Checkbox'** next to the following fields.  You’ll need to scroll the Endpoint Structure to see the Supplier field: <br>
            - Alias <br>
            - AlternateName<br>
            - Supplier<br>
-           - SupplierNumber<br>
-           - TaxpayerId<br><br>
 
-    > (2)  Confirm the list of selected fields. <br>
+    > (2) Confirm the list of selected fields. <br>
 
     > (3) Click the **Next** button.
 
-    ![widen screen handle](images/image120.png)
+    ![widen screen handle](images/image025.png)
 
-20. We can optionally add additional filter criteria.
+26. Here you can configure the search field.
 
-    > (1) Note the ability to add additional criteria. <br>
+    > (1) Click on the **filterCriterion** field in the Target section of the screen.  This will cause a **Click to add condition** option to appear at the bottom of the screen. <br>
 
-    > (2) Click the **Finish** button.
+    > (2) Click the **Click to add condition** link.
 
-    ![widen screen](images/image121.png)
+    ![widen screen](images/image026.png)
 
-21. Notice that the screen auto-queried Supplier Information.  We can easily move between Design, Live and Code views of our application.  But next, we want the ability to edit data.  So, we’ll use the Quick Start again to add an edit page.  
+27. The next 3 steps will configure the Condition for the filterCriterion.  
+
+    > (1) Type **Supplier** in the first field and pick **Supplier** from the resulting pop-up list (2).
+
+    ![widen screen](images/image027.png)    
+
+28. Next you'll select the Operator
+
+    > (1) Click in the **Operator** field and select **contains ($co)** from the resulting pop-up list (2).
+    
+    ![operator sselection](images/image028.png)    
+
+29. And now you'll reference the page variable that we created earlier.
+
+    > (1) Click in the **Attribute** field and select **$variables.SupplierSearchString** from the resulting pop-up list (2). <br>
+    > (3) Click in the **Finish** button.
+    
+    ![widen screen](images/image029.png)    
+
+
+30. Notice that the screen auto-queried Supplier Information.  You can easily move between Design, Live and Code views of our application.  But next, you want the ability to edit data.  So, you’ll use the Quick Start again to add an edit page.  
 
     > (1) Confirm that you're on the **Quick Start** tab. <br>
 
     > (2) Click the **Add Edit Page** tile.
 
-    ![edit page quick start](images/image122.png)
+    ![edit page quick start](images/image030.png)
 
-22. We can select the same or different fields for out Edit Page.  We’ll just select the same list..
+31. You can select the same or different fields for out Edit Page.  Since the request was to create a simple page, you'll just add a few fields.
 
-     > (1)  Click **'Checkbox'** next to the following fields.  Note that you may need to scroll the list of fields: <br>
-           - Alias <br>
-           - AlternateName<br>
+     > (1)  Click **'Checkbox'** next to the following fields.  Note that you will likely need to scroll the list of fields: <br>
+
            - Supplier<br>
            - SupplierNumber<br>
            - TaxpayerId<br><br>
@@ -199,38 +261,34 @@ In this lab, you will:
 
     > (3) Click the **Finish** button.
 
-    ![edit page quick start](images/image123.png)
+    ![edit page quick start](images/image031.png)
 
-23. Now that we've created our screen, we can test it.
+32. You're ready to try your new page.
 
     > Click the **Preview** ![Preview Icon](images/icon016_preview.png) icon on the top right of the screen.
 
-    ![select edit page fields](images/image124.png)
+    ![select edit page fields](images/image032.png)
 
-24. A new browser tab is launched showing our completed application.  We now have a fully functioning screen that supports query and update capabilities.
+33. A new browser tab is launched showing our completed application.  You now have a fully functioning screen that supports query and update capabilities.
 
-    > (1) Select a **Supplier** to highlight a row. <br>    
+    > (1) Enter your search criteria by entering a string in the **Enter Supplier Name Search** field.  You can use **Corp** like shown in the screenshot or enter your **user number (##)** to find the Supplier with your number included as part of the name.  <br>  
+
+    > (2) Select a Supplier record by clicking on it (the row will highlight) <br>
+
     > (2) Click the **Edit Supplier** button.   
 
-    ![finish edit page fields](images/image125.png)
+    ![finish edit page fields](images/image033.png)
 
-25. We'll update and save a field.  Out new screen leverages the security and business rules of the application via the standard REST API. .
+34. You Edit Supplier screen allows you to update the information and save. The new screen leverages the security and business rules of the application via the standard REST API.
 
-    > (1) Enter a value in the **Alternate Name** field. For example, enter "LeeSupp" as the Alternate Name for Lee Supplies.  <br>    
-    > (2) Click the **Save** button.   
-
-
-    ![preview](images/image126.png)
+    > (1) Note that the Supplier Number field is non-enterable.  That field is non-updateable and that condition automatically carries through to our new screen.  <br>    
+    > (2) The Taxpayer ID is enterable, but we’ll end here without doing the update.  
 
 
-26. Our Supplier record update is now saved.
-
-    > Note the message that the supplier record was successfully updated.
-
-    ![selected supplier for edit](images/image127.png)	
+    ![preview](images/image034.png)
 
 
-27. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+35. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
  
