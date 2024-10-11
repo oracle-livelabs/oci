@@ -23,9 +23,17 @@ In this lab, you will:
 
     > (1) **Click** on the **‘Configuration’** tab. <br> 
 
-    > (2) **Click** on the **‘Visual Builder’** tile
+    > (2) **Click** on the **‘Visual Builder’** tile <br>
 
     ![Open Visual Builder](images/image001.png)
+
+2. After a successful login, you will land on the Oracle Analytics home page. 
+
+    > (1) Enter assigned username and Fusion Analytics Password  <br> 
+
+    > (2) **Click** on the **‘Visual Builder’** tile <br>
+
+    ![Open Visual Builder]
 
 2. We have pre-defined a Project.  A project collects all the people, tools, and processes you need to complete a unit of work.  You can use a project to host source code files, track issues, collaborate on code, and build and deploy your applications. If your team is extending Oracle Cloud Applications, you’ll probably want to set things up so that you have a single project dedicated to work with a single repository for each Application. 
 
