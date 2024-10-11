@@ -44,7 +44,8 @@ In this activity, you will:
 
 
 
-4. Here is the initial monitor page. There is some analytical information available at the top of the page. This includes the current value, potential savings, and supplier response amounts.  
+4. Here is the initial monitor page with analytical information about responses. Notice EIP was ranked first, but wasn’t awarded. Let’s dive deeper to find why. We can use the analytical tools available through Cloud Procurement to analyze further.
+
     
     At the bottom of the page are the suppliers. Five were invited, and three responded. You can see the details to the right. You will notice EIP was ranked first but still wasn’t awarded so you must dive deeper.
 
@@ -71,39 +72,18 @@ In this activity, you will:
     
     At the bottom of the page are the suppliers. Five were invited, and three responded. You can see the details to the right. Once again you will notice EIP was ranked first but still wasn’t awarded so you must dive deeper.
 
-    > To highlight all the supplier responses, click the **white space** next to ‘Supplier’ as indicated.
+7. Notice EIP is ranked first but has lowest score.
 
-    ![Image008](images/image008.png)
+> Click the **score ‘50’** to access EIP’s response details.
 
-    > Once they are all highlighted in blue, click **Analyze**
+   ![Image0100](images/image100.png)
+   
+8. Now we see how the Procurement system AI scored a zero and automatically disqualified EIP because they are missing a required certification which was set as pre-built knockout criteria.
 
-    ![Image009](images/image009.png)
+    If this were manually scored we could add notes to the requirement scoring for review.
 
-
-
-7. The table will populate with some of the supplier response data. To see the requirements sections, you will need to expose more fields.
-    
-    To expose more fields, simply use the tools to add some response elements to the table.
-
-    > Click **Actions** drop-down, then select **Add or Remove Response Elements**
-
-    ![Image0010](images/image010.png)
-
-    > Click the **double right** icon to add all the requirement response elements to the table.
-
-    ![Image0011](images/image011.png)
-
-    > When all the desired response elements are in the right column click **OK** and the tool will update the table.
-
-    ![Image0012](images/image012.png)
-
-
-
-8. Once, the analysis has been run there will be more analytics provided at the top of the page. As you scroll down you will see comprehensive response details for each supplier including the requirement scoring. You will notice that EIP is missing a required certification and therefore they have not been awarded part of this negotiation. To ensure this doesn’t happen again or if you wish to let them re-bid this sourcing negotiation your team must communicate the need for this certification.
-
-    ![Image0013](images/image013.png)
-    ![Image0014](images/image014.png)
-
+   ![Image0101](images/image101.png)
+ 
     > Select the **Home** icon in the top ribbon to navigate back to the Procurement springboard.
 
    ![Image0015](images/image015.png)

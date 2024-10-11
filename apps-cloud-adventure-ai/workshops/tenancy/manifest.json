@@ -1,31 +1,23 @@
 {
-    "workshoptitle": "Cloud Adventure Activity Guide – for the Office of the CIO",
+    "workshoptitle": "Hands on demos for Oracle Fusion AI",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
+ 
         {
-            "title": "Introduction",
-            "filename": "../../00-introduction/introduction.md"
+            "title": "Demo 1: HCM AI Assist Goals",
+            "filename": "../../01-hcm-ai-assist-goals/hcm_ai_assist_goals.md"
         },
+
         {
-            "title": "Demo 1: AI is cool",
-            "filename": "../../01-security/security.md"
+            "title": "Demo 2: HCM AI Assist Performance Reviews",
+            "filename": "../../02-hcm-ai-assist-performace-reviews/hcm_ai_assist_performace_reviews.md"
         },
+       
         {
-            "title": "Demo 2: Chat GPT showdown",
-            "filename": "../../02-configure/configure.md"
+            "title": "Demo 3: SCM / ERP AI Assist Product Description",
+            "filename": "../../03-scm-erp-ai-assist-product-description/scmerp_ai_assist_product_description.md"
         },
-        {
-            "title": "Demo 3: AI won't help me win Q1 deals",
-            "filename": "../../03-extend/extend.md"
-        },
-        {
-            "title": "Lab 4: If I say AI one more time I will kill myself",
-            "filename": "../../04-integration/integration.md"
-        }, 
-        {
-            "title": "Lab 5: When will AI write my RFPs?",
-            "filename": "../../05-analytics/analytics.md"
-        }, 
+       
      
         {
             "title": "Need Help?",
