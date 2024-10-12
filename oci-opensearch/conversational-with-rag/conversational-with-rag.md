@@ -728,8 +728,8 @@ Instead of passing the user prompt to the RAG pipeline directly, we'll first do 
 
 In this case, the body of our request looks like:
 
-```
-{
+```json
+<copy>{
             "size" : 100,
             "query": {
                 "match": {
@@ -765,7 +765,7 @@ In this case, the body of our request looks like:
                     "timeout": 60
                 }
             }
-        }
+        }</copy>
 ```
 
 Note a few things:
