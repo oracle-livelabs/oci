@@ -71,7 +71,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
   ![Copy Adventure Role b](images/image007.png)
 
-8. Notice that you are provided with a list of ordered steps at the top.  For this example, we will only provide answers to steps 1, 2 and 7.
+7. Notice that you are provided with a list of ordered steps at the top.  For this example, we will only provide answers to steps 1, 2 and 7.
 
   We start by giving our copied role a unique name.
 
@@ -83,13 +83,13 @@ At this point, you should be logged into your environment with a username CIO.xx
 
   ![Copy Role a](images/image008.png)
 
-9. Using Function Security  Policy, you will add the privileges Brian Bell needs
+8. Using Function Security  Policy, you will add the privileges Brian Bell needs
 
   > Press the **Add + Function Security  Policy** button.
 
   ![Copy Role 2a](images/image009.png)
 
-10. You will now find the required policy using the search form.	
+9. You will now find the required policy using the search form.	
 
   > Type **Cancel Supplier Negotiation** in the search field and select the policy.
 
@@ -99,14 +99,14 @@ At this point, you should be logged into your environment with a username CIO.xx
 
   ![Copy Role 2c](images/image011.png)
 
-11. Note that the search window did not automatically dismiss.  This is done so you can continue to add more policies in this process.
+10. Note that the search window did not automatically dismiss.  This is done so you can continue to add more policies in this process.
 
   > Press the **Cancel** button to continue.
 
  ![Copy Role 2d](images/image012.png)
 
 
-12. Note that the new policy has been added.
+11. Note that the new policy has been added.
 
   You will skip the next three tasks until you arrive at ‘Users (7)’ in the Copy Role process. 
 
@@ -114,7 +114,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Copy Role 2e](images/image013.png) 
 
-13. Using a similar search tool, you will now search for Brian Bell and provide him with this new role and its associated privileges.
+12. Using a similar search tool, you will now search for Brian Bell and provide him with this new role and its associated privileges.
 
   > Press the **Add User** button.
 
@@ -131,25 +131,25 @@ At this point, you should be logged into your environment with a username CIO.xx
  ![Copy Role 7c](images/image016.png)
 
 
-14. Again, the search box remains in case you want to add additional users.
+13. Again, the search box remains in case you want to add additional users.
 
   > Press the **Cancel** button.
 
  ![Copy Role 7d](images/image017.png)
 
-15. Brian Bell has been added to this new role
+14. Brian Bell has been added to this new role
 
   > Press the **Next** button.
 
  ![Copy Role 7e](images/image018.png)
 
-16. Note confirmation that we have added one Security Policy and one user 
+15. Note confirmation that we have added one Security Policy and one user 
 
   > Press the **Submit and Close** button.
 
  ![Copy Role 7f](images/image019.png)
 
-17. Last screen confirms new role is added
+16. Last screen confirms new role is added
 
   Success!
 

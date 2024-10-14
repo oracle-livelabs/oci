@@ -52,21 +52,20 @@ As you follow along, do not forget to answer the Adventure Check Point questions
     ![View Checklist](images/image102.png)  
 <br>
 
-3. 
 
     > Click your **Checklist Template name** (e.g. **CA&#95;##**) to open the checklist.
 
     ![Open Checklist Template](images/image103.png)  
 <br>
 
-4. You can see the general information for your Checklist.  You’re now ready to add a Task. 
+3. You can see the general information for your Checklist.  You’re now ready to add a Task. 
    
     > **Click** on the **Tasks** tab.
   
     ![View Checklist](images/image104.png)  
 <br>
 
-5. You don’t have any tasks yet, so you can create one.  The task is where you will define the connection to the external LLM.
+4. You don’t have any tasks yet, so you can create one.  The task is where you will define the connection to the external LLM.
 
     > (1) Click the ![Plus Icon](images/icon012_Plus.png) icon. <br>
 
@@ -75,7 +74,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
     ![Create Task](images/image105.png)  
 <br>
 
-6. You can now define your new task and leverage the task type User Defined Content. This will allow you to reference the REST Integration that was discussed at the beginning of the adventure.  It will link to a pre-configured Generative AI LLM endpoint.
+5. You can now define your new task and leverage the task type User Defined Content. This will allow you to reference the REST Integration that was discussed at the beginning of the adventure.  It will link to a pre-configured Generative AI LLM endpoint.
 
    > Complete the following fields as shown: <br>
    > &emsp;&#8226;&emsp;Name(1): Type **Get Additional Compensation Info**<br>
@@ -86,20 +85,20 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    ![Enter Task Info](images/image106.png)  
 <br>
 
-7. You have successfully configured a new Guided Journey Task with User Defined Content. Now you are ready to include this new change to the Compensation Info UI.
+6. You have successfully configured a new Guided Journey Task with User Defined Content. Now you are ready to include this new change to the Compensation Info UI.
 
    > Click on **Save and Close** button again to finalize our Task setup.
 
   ![Enter Task Info](images/image107.png)  
 <br>
 
-8. The next step is the configuration the Compensation Info UI to leverage your Guided Journey. To do that, you can head back to the home page.
+7. The next step is the configuration the Compensation Info UI to leverage your Guided Journey. To do that, you can head back to the home page.
 
    > Click on the **Home** ![Home Icon](images/icon013_home.png)  icon on the top icon bar.
     ![Enter Task Info](images/image108.png)  
 <br>
 
-9. You can configure the Compensation Info page directly from within the application.
+8. You can configure the Compensation Info page directly from within the application.
 
    > (1) Enter **Compensation Info** into the **search** field at the top of the page. <br>    
    > (2) Select **Compensation Info** from the resulting **dropdown** list.
@@ -107,14 +106,14 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    ![Create Task](images/image109.png)  
 <br>
 
-10. There are no matching workers, so you can unselect Direct reports to broaden our search.
+9. There are no matching workers, so you can unselect Direct reports to broaden our search.
 
    > Click the ![X Icon](images/icon014_X.png) next to Direct Reports under the search field.
 
    ![Enter Task Info](images/image110.png)  
 <br>
 
-11. You can search for a worker and make the configuration directly from their Compensation Info page.  Note that even though you’re searching for a specific user, this will be a system-wide configuration.
+10. You can search for a worker and make the configuration directly from their Compensation Info page.  Note that even though you’re searching for a specific user, this will be a system-wide configuration.
 
    > (1) Enter **Emily Heather** in the **Search** field. <br>    
    > (2) Select **Emily Heather** from the resulting **dropdown** list. 
@@ -122,7 +121,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    ![Create Task](images/image111.png)  
 <br>
 
-12. You will now use the embedded Visual Builder Studio tool to configure this page. The configuration will allow you to reference your previously defined Guided Journey and Task. Visual Builder is the tool that Oracle uses to develop Fusion Cloud Application screens.  Customers can use these same tools to perform configurations or, as we saw in other adventures, create new screens using the same look and feel as the delivered applications.
+11. You will now use the embedded Visual Builder Studio tool to configure this page. The configuration will allow you to reference your previously defined Guided Journey and Task. Visual Builder is the tool that Oracle uses to develop Fusion Cloud Application screens.  Customers can use these same tools to perform configurations or, as we saw in other adventures, create new screens using the same look and feel as the delivered applications.
 
 
    > (1) Click the **User Photo/User ID icon** on the top right corner of the screen. <br>    
@@ -131,7 +130,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    ![Create Task](images/image112.png)  
 <br>
 
-13. You’re now in Visual Builder – Express Mode.  This allows you to easily configure application screens.  In this scenario, you’ll be referencing the Guided Journey/Task that you created earlier.
+12. You’re now in Visual Builder – Express Mode.  This allows you to easily configure application screens.  In this scenario, you’ll be referencing the Guided Journey/Task that you created earlier.
 
    > (1) Enter **Salary** in the **Page Properties Filter** field on the right.  This will narrow the list of Page Properties available. <br>    
    > (2) Enter **CA&#95;##** in the **CompensationInfoSalaryGuidedJourneyCode** field and press the **Enter** key.  Be careful to enter this into the correct field as there are several similar fields available.  If you searched as described in Step 1, it’s likely the 1st field listed below the filter.
@@ -139,27 +138,27 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    ![Create Task](images/image113.png)  
 <br>
 
-14. You will now see the Get Additional Compensation Info link available on the screen.  If you recall, this was the name of the Task we defined earlier and is your link to the User Defined Configuration call to the LLM.
+13. You will now see the Get Additional Compensation Info link available on the screen.  If you recall, this was the name of the Task we defined earlier and is your link to the User Defined Configuration call to the LLM.
  
    > Click the **Preview** ![Preview](images/icon016_preview.png) icon in the top right of the screen.
 
    ![Create Task](images/image114.png)  
 <br>
 
-15. The Preview should open in a new browser tab.  You can now see our screen in Preview Mode.  It shows the standard screen layout, but also includes your Guided Journey configuration.  Please note that these configurations are automatically maintained during the Oracle Release Update process.  These are not Customizations.
+14. The Preview should open in a new browser tab.  You can now see our screen in Preview Mode.  It shows the standard screen layout, but also includes your Guided Journey configuration.  Please note that these configurations are automatically maintained during the Oracle Release Update process.  These are not Customizations.
 
    > (1) Click the **Get Additional Compensation Info** link. 
 
    ![Create Task](images/image115.png)  
 <br>
 
-16. The Guided Journey Task has called your User Defined Content integration.  As discussed in the introduction to this adventure, it calls Oracle Integration to gather additional prompt information, such as Position and New York, prior to our Generative AI call to the external LLM.  The results are then formatted and displayed as shown.
+15. The Guided Journey Task has called your User Defined Content integration.  As discussed in the introduction to this adventure, it calls Oracle Integration to gather additional prompt information, such as Position and New York, prior to our Generative AI call to the external LLM.  The results are then formatted and displayed as shown.
 
    > (1) When finished reviewing the result, you can close your browser tabs and exit the Oracle Cloud Application UI.
 
    ![Create Task](images/image116.png)
 
-17. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+16. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 

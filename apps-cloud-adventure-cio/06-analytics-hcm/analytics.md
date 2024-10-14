@@ -25,16 +25,27 @@ In this activity, you will Create analytics across different lines of business t
 
 1. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
 
-    Login to your Fusion Data Intelligence Portal using the URL provided.
+    > (1) Click on the **‘Analytics’** tab <br>
 
-    > Open a web browser and enter the URL provided, then on the login screen, type in the Username and Password. Click Sign In.
+    > (2) Click on **‘Fusion – Analytics Data Intelligence’** icon <br>
 
     ![Login](images/image001.png)
 
-    After a successful login, you will land on the Oracle Analytics home page. 
 
 
-2. A finance Watchlist comprising several Tiles is available on the home page. 
+2. After a successful login, you will land on the Oracle Analytics home page. 
+
+    > (1) Enter assigned username and Fusion Analytics Password  <br>
+
+    > (2) Click on the ‘Sign In’ <br>
+
+    ![Login](images/image101.png)
+
+
+
+
+
+3. A finance Watchlist comprising several Tiles is available on the home page. 
 
     One metric that draws my attention is Margin, which is trending low. 
 
@@ -45,7 +56,7 @@ In this activity, you will Create analytics across different lines of business t
     ![Analytics home](images/image002.png)
 
 
-3.  This action expands the Tile and opens the workbook. 
+4.  This action expands the Tile and opens the workbook. 
 
     Let's now set the workbook to design mode so that we can add cost elements. 
 
@@ -59,7 +70,7 @@ In this activity, you will Create analytics across different lines of business t
     ![Workbook Design Mode](images/image003.png)
 
 
-4.  Next, let’s expand the Auto Insights pane for better observability. 
+5.  Next, let’s expand the Auto Insights pane for better observability. 
 
     > Click on the Expand / Shrink Icon  ![Expand / Shrink Icon ](images/icon004.png)  as shown in the image.
 
@@ -68,7 +79,7 @@ In this activity, you will Create analytics across different lines of business t
 
 
 
-5.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories. 
+6.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories. 
 
     > (1) Locate the “Top 10 Expense Categories by Expenses” insight and click the Add Icon  ![Add Icon ](images/icon006.png)  shown in the image. This will add the Insight to the Canvas.  <br>
 
@@ -77,7 +88,7 @@ In this activity, you will Create analytics across different lines of business t
     ![Auto insights view](images/image007.png)
 
 
-6.  Now, we can compare margin and cost side by side. 
+7.  Now, we can compare margin and cost side by side. 
 
     Payroll expenses emerge as the highest cost. We will delve deeper into payroll expenses to identify their components. 
 
@@ -86,7 +97,7 @@ In this activity, you will Create analytics across different lines of business t
     ![Analytics view 1](images/image008.png)
 
 
-7.  Combining datasets from multiple “Lines of Business” allows an individual to conduct a deep dive into the actual problems.
+8.  Combining datasets from multiple “Lines of Business” allows an individual to conduct a deep dive into the actual problems.
 
     > (1) Expand the HCM Core transactions data set from the Data Panel on the left.  <br>
 
@@ -103,7 +114,7 @@ In this activity, you will Create analytics across different lines of business t
     ![Analytics view 3](images/image010.png)
 
 
-8.  We need to perform trend analysis to understand when the expense anomaly started occurring and whether it is consistent across all expense types.
+9.  We need to perform trend analysis to understand when the expense anomaly started occurring and whether it is consistent across all expense types.
 
     > Drag the **Accounts** column from the Categories section into the Color section.
 
@@ -113,7 +124,7 @@ In this activity, you will Create analytics across different lines of business t
 
     ![Analytics view 5](images/image012.png)
 
-9.  We can now see expense amounts displayed across time and expense categories.
+10.  We can now see expense amounts displayed across time and expense categories.
 
     On analyzing the trend, it appears that while Base Salary and Wages have remained constant, overtime and contract labor have increased since May.
 
@@ -121,7 +132,7 @@ In this activity, you will Create analytics across different lines of business t
 
     ![Month by Month View](images/image013.png)
 
-10. Overtime and Contract labor are typically associated with Turnover. Let's see if it had any impact.
+11. Overtime and Contract labor are typically associated with Turnover. Let's see if it had any impact.
 
     > (1) Expand the Fiscal Date folder in the Data Panel to locate the **Month** and **Turnover** columns.   <br>
 
@@ -131,7 +142,7 @@ In this activity, you will Create analytics across different lines of business t
 
 
 
-11.  Another factor that impacts Overtime and Contract labor is employee absences. 
+12.  Another factor that impacts Overtime and Contract labor is employee absences. 
 
     > Drag the **Absences** column from the data panel and drop it in the values section below the **Turnover** column.
 
@@ -140,23 +151,23 @@ In this activity, you will Create analytics across different lines of business t
     ![Analytics view 8](images/image016.png)
     
 
-12.  This brings all relevant columns onto the canvas. We can now co-relate several attributes and arrive at the correct conclusion.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance. 
+13.  This brings all relevant columns onto the canvas. We can now co-relate several attributes and arrive at the correct conclusion.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance. 
 
 
 
-13.  Let’s understand how the trend looks like in the future. We will use the built in Statistical Analysis function like forecast to under the future 
+14.  Let’s understand how the trend looks like in the future. We will use the built in Statistical Analysis function like forecast to under the future 
 
     > Right click anywhere in the **Turnover**, **Absences** Chart choose **Add Statistics** then **Forecast**
 
     ![Analytics view 11](images/image021.png)
 
-14.  With a few simple clicks, you were able to forecast and understand the future trend. 
+15.  With a few simple clicks, you were able to forecast and understand the future trend. 
 
     ![Analytics view 12](images/image022.png)
 
 
 
-15. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+16. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 

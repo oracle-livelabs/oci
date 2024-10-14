@@ -132,7 +132,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Audit Report REST Endpoints](images/image020.png)    
 
-    > **Click** the drop-down menu icon [drop dowb icon](images/icon014_downarrow.png) **‘Jump to’** and select the **‘Examples’** menu option
+    > **Click** the drop-down menu icon [drop down icon](images/icon014_downarrow.png) **‘Jump to’** and select the **‘Examples’** menu option
 
     ![Get an audit report](images/image021.png)   
 
