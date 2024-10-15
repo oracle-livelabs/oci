@@ -52,21 +52,19 @@ As you follow along, do not forget to answer the Adventure Check Point questions
     ![View Checklist](images/image102.png)  
 <br>
 
-3. 
-
     > Click your **Checklist Template name** (e.g. **CA&#95;##**) to open the checklist.
 
     ![Open Checklist Template](images/image103.png)  
 <br>
 
-4. You can see the general information for your Checklist.  You’re now ready to add a Task. 
+3. You can see the general information for your Checklist.  You’re now ready to add a Task. 
    
     > **Click** on the **Tasks** tab.
   
     ![View Checklist](images/image104.png)  
 <br>
 
-5. You don’t have any tasks yet, so you can create one.  The task is where you will define the connection to the external LLM.
+4. You don’t have any tasks yet, so you can create one.  The task is where you will define the connection to the external LLM.
 
     > (1) Click the ![Plus Icon](images/Icon02_Plus.png) icon. <br>
 
@@ -75,7 +73,7 @@ As you follow along, do not forget to answer the Adventure Check Point questions
     ![Create Task](images/image105.png)  
 <br>
 
-6. You can now define your new task and leverage the task type User Defined Content. This will allow you to reference the REST Integration that was discussed at the beginning of the adventure.  It will link to a pre-configured Generative AI LLM endpoint.
+5. You can now define your new task and leverage the task type User Defined Content. This will allow you to reference the REST Integration that was discussed at the beginning of the adventure.  It will link to a pre-configured Generative AI LLM endpoint.
 
    > Complete the following fields as shown: <br>
    > &emsp;&#8226;&emsp;Name(1): Type **Product Items Review**<br>
@@ -86,20 +84,20 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    ![Enter Task Info](images/image106.png)  
 <br>
 
-7. You have successfully configured a new Guided Journey Task with User Defined Content. Now you are ready to include this new change in Self-Service Procurement.
+6. You have successfully configured a new Guided Journey Task with User Defined Content. Now you are ready to include this new change in Self-Service Procurement.
 
    > Click on **Save and Close** button again to finalize our Task setup.
 
   ![Enter Task Info](images/image107.png)  
 <br>
 
-8. The next step is to create a Requisition using Self-Service Procurement.  To start this you can head back to the home page.
+7. The next step is to create a Requisition using Self-Service Procurement.  To start this you can head back to the home page.
 
    > Click on the **Home** ![Home Icon](images/Icon03_home.png)  icon on the top icon bar.
     ![Enter Task Info](images/image108.png)  
 <br>
 
-9. To start creating a Purchase Requisition:
+8. To start creating a Purchase Requisition:
 
    > (1) Enter **Purchase Requisitions** into the **search** field at the top of the page. <br>    
    > (2) Select **Purchase Requisitions** from the resulting **dropdown** list.
@@ -107,56 +105,56 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    ![Create Task](images/image109.png)  
 <br>
 
-10. You're going to purchase a couple of pieces of equipment for our office space.  You need a headset for phonecalls and a new printer.  So, let's see what's available.
+9. You're going to purchase a couple of pieces of equipment for our office space.  You need a headset for phonecalls and a new printer.  So, let's see what's available.
 
    > Click the **OFfice Technology** tile on the bottom right.
 
    ![Enter Task Info](images/image110.png)  
 <br>
 
-11. You can see a variety of headsets available. Let's pick one.
+10. You can see a variety of headsets available. Let's pick one.
 
    > Click the **Add to Cart** button for the **Logitech Zone Wireless Bluetooth Headset** tile. <br>    
 
    ![Create Task](images/image111.png)  
 <br>
 
-12. You've now added that item to the cart.  You will receive a confirmation pop-up.  You have the option of waiting a few seconds for the confirmation pop-up to disappear or you can click the **X** icon on the **Confirmation** pop-up to close it.
+11. You've now added that item to the cart.  You will receive a confirmation pop-up.  You have the option of waiting a few seconds for the confirmation pop-up to disappear or you can click the **X** icon on the **Confirmation** pop-up to close it.
 
    > Either wait for the pop-up to disappear or click the **X** icon on the **Confirmation** pop-up to close it. 
 
    ![Create Task](images/image112.png)  
 <br>
 
-13. You want to add one more thing to this requisition.  This time you'll use the search feature.
+12. You want to add one more thing to this requisition.  This time you'll use the search feature.
 
    > Enter **LasetJet** in the **Search for items or services** field 
 
    ![Create Task](images/image113.png)  
 <br>
 
-14. You want to add one more thing to this requisition.  This time you'll use the search feature.
+13. You want to add one more thing to this requisition.  This time you'll use the search feature.
 
    > Click the **Add to Cart** button for the **LaserJet Pro 400 M401n Laser Printer** tile. <br>   
 
    ![Create Task](images/image114.png)  
 <br>
 
-15. You've now added that item to the cart.  You will receive a confirmation pop-up.  You have the option of waiting a few seconds for the confirmation pop-up to disappear or you can click the **X** icon on the **Confirmation** pop-up to close it.
+14. You've now added that item to the cart.  You will receive a confirmation pop-up.  You have the option of waiting a few seconds for the confirmation pop-up to disappear or you can click the **X** icon on the **Confirmation** pop-up to close it.
 
    > Either wait for the pop-up to disappear or click the **X** icon on the **Confirmation** pop-up to close it. 
 
    ![Create Task](images/image115.png)  
 <br>
 
-16. You're now ready to view your cart.  
+15. You're now ready to view your cart.  
 
    > Click the **Cart** icon on the bottom of the screen. 
 
    ![Create Task](images/image116.png)  
 <br>
 
-17. You will now use the embedded Visual Builder Studio tool to configure this page. The configuration will allow you to reference your previously defined Guided Journey and Task. Visual Builder is the tool that Oracle uses to develop Fusion Cloud Application screens.  Customers can use these same tools to perform configurations or, as we saw in other adventures, create new screens using the same look and feel as the delivered applications.
+16. You will now use the embedded Visual Builder Studio tool to configure this page. The configuration will allow you to reference your previously defined Guided Journey and Task. Visual Builder is the tool that Oracle uses to develop Fusion Cloud Application screens.  Customers can use these same tools to perform configurations or, as we saw in other adventures, create new screens using the same look and feel as the delivered applications.
 
 
    > (1) Click the **User Photo/User ID icon** on the top right corner of the screen. <br>    
@@ -165,14 +163,8 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    ![Create Task](images/image117.png)  
 <br>
 
-18. OPTIONAL STEP!
 
-   > If presented with the **Select Repository** popup screen, click the   
-
-   ![Create Task](images/image118.png)  
-<br>
-
-19. You’re now in Visual Builder – Express Mode.  This allows you to easily configure application screens.  In this scenario, you’ll be referencing the Guided Journey/Task that you created earlier.
+17. You’re now in Visual Builder – Express Mode.  This allows you to easily configure application screens.  In this scenario, you’ll be referencing the Guided Journey/Task that you created earlier.
 
    > (1) Enter **Journey** in the **Page Properties Filter** field on the right.  This will narrow the list of Page Properties available. <br>    
    > (2) Enter **CA&#95;##** in the **Shopping Cart Guided Journey Code** field and press the **Enter** key.  Be careful to enter this into the correct field as there are several similar fields available.  If you searched as described in Step 1, it’s likely the 1st field listed below the filter.
@@ -180,33 +172,33 @@ As you follow along, do not forget to answer the Adventure Check Point questions
    ![Create Task](images/image119.png)  
 <br>
 
-20. You will now see the Product Items Review graphic on the screen.  This was defined in the Category Template at the beginning of this adventure.  You will now test this by running the screen in Preview mode.
+18. You will now see the Product Items Review graphic on the screen.  This was defined in the Category Template at the beginning of this adventure.  You will now test this by running the screen in Preview mode.
 
    > Click the **Preview** ![Preview](images/Icon06_preview.png) icon in the top right of the screen.
 
    ![Create Task](images/image120.png)  
 
-21. You are now back in Self-Service Procurement and you can see that your 2 items are in the cart.  So, you will now open your cart.
+19. You are now back in Self-Service Procurement and you can see that your 2 items are in the cart.  So, you will now open your cart.
 
    > Click the **Cart** icon on the bottom of the screen. 
 
    ![Create Task](images/image121.png)  
 <br>
 
-22. The **Product Items Review** image is prominently displayed. Clicking it will call an external Gen AI Service to gather review information about the items in your cart.
+20. The **Product Items Review** image is prominently displayed. Clicking it will call an external Gen AI Service to gather review information about the items in your cart.
 
    > Click the **Product Items Review** image. 
 
    ![Create Task](images/image122.png)  
 <br>
 
-23. The Guided Journey Task has called your User Defined Content integration.  As discussed in the introduction to this adventure, it calls Oracle Integration to gather additional prompt information, such as Position and New York, prior to our Generative AI call to the external LLM.  The results are then formatted and displayed as shown.
+21. The Guided Journey Task has called your User Defined Content integration.  As discussed in the introduction to this adventure, it calls Oracle Integration to gather additional prompt information, such as Position and New York, prior to our Generative AI call to the external LLM.  The results are then formatted and displayed as shown.
 
    > (1) When finished reviewing the result, you can close your browser tabs and exit the Oracle Cloud Application UI.
 
    ![Create Task](images/image123.png)
 
-24. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+22. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
