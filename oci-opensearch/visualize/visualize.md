@@ -15,7 +15,8 @@ In this lab, you will:
 
 ## Task 1: Connect to OpenSearch Dashboards
 
-1. From your local machine, establish port forwarding.
+1. From your local machine, establish port forwarding. You can find more information on how to connect to a cluster/dahboard [here] (https://docs.oracle.com/en-us/iaas/Content/search-opensearch/Tasks/ingestingociopensearchdata.htm)
+
 
       ```bash
       <copy>ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 opc@<your_instance_public_ip> -i <path_to_your_private_key></copy>
@@ -30,11 +31,11 @@ In this lab, you will:
 
 1. With the port forwarding connection in place, access https://localhost:5601 in your browser.
 2. Open the OpenSearch Dashboards navigation menu.
-3. Click **Management**, then click **Stack Management**, and then click **Index Patterns**. Create an index pattern, with name = `oci`.
+3. Click **Management**, then click **Dashboard Management**, and then click **Index Patterns**. Create an index pattern, with name = `oci`.
 
    ![OpenSearch Dashboards - Create index pattern](../images/image9.png)
 
-4. Open the OpenSearch Dashboards menu, and then click **Discover** to use the OpenSearch Dashboards UI to search your data. Enter a sample keyword, such as `kubernetes`, and click **Refresh**.
+4. Open the OpenSearch Dashboards menu, and then click **Discover** to use the OpenSearch Dashboards UI to search your data. Make sure to specify the right index in the right upper corner. Also pay attention to the timeline on the top. Enter a sample keyword, such as `kubernetes`, and click **Refresh**.
 
    ![OpenSearch Dashboards - Discover](../images/image10.png)
 
@@ -53,4 +54,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - Nuno Gonçalves, September 2022
+* **Last Updated By/Date** - George Csaba, June 2024

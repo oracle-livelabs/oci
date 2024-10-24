@@ -32,11 +32,11 @@ Neste laboratório você aprenderá a transformar dados brutos em informações 
 **Processos:** Neste estágio, utiliza-se técnicas de mineração de dados - explorar grandes conjuntos de dados para encontrar padrões consistentes ou relações sistemáticas entre variáveis - assim como business intelligence e aprendizado de máquina para transformar os dados em conhecimento prático, prevendo tendências e orientando decisões estratégicas dentro de uma organização.
 
 
-| Camada | Nome        | Objetivo |
-|--------|-------------|----------|
-| Bronze | Dados Brutos         | • Recolhimento de dados em estado puro de múltiplas fontes. <br> • Armazenamento em sistemas robustos, mantendo a integridade original. <br> • Preservação da forma bruta para rastreabilidade e conformidade. |
-| Prata  | Dados Processados     | • Limpeza de anomalias e redundâncias nos dados. <br> • Transformação para estruturação e padronização. <br> • Organização com objetivo de facilitar o acesso e manipulação subsequente. |
-| Ouro   | Dados Otimizados    | • Inclusão de informações externas para fornecer mais contexto aos dados. <br> • Combinação de dados para criar resumos claros e práticos. <br> • Análise de dados aplicando métodos avançados para geração de insights. |
+| Camada | Nome              | Objetivo                                                                                                                                                                                                                 |
+| ------ | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Bronze | Dados Brutos      | • Recolhimento de dados em estado puro de múltiplas fontes. <br> • Armazenamento em sistemas robustos, mantendo a integridade original. <br> • Preservação da forma bruta para rastreabilidade e conformidade.           |
+| Prata  | Dados Processados | • Limpeza de anomalias e redundâncias nos dados. <br> • Transformação para estruturação e padronização. <br> • Organização com objetivo de facilitar o acesso e manipulação subsequente.                                 |
+| Ouro   | Dados Otimizados  | • Inclusão de informações externas para fornecer mais contexto aos dados. <br> • Combinação de dados para criar resumos claros e práticos. <br> • Análise de dados aplicando métodos avançados para geração de insights. |
 
 
 ## Vantagens da Arquitetura Medalhão
@@ -88,7 +88,7 @@ Adotando a estrutura de arquitetura medalhão, que se segmenta nas camadas **Bro
 
 **Todas as práticas estão descritas em detalhes e não necessitam de qualquer conhecimento prévio para serem executadas.**
 
-É importante citar que esse Fast Track faz parte de um conjunto de treinamentos mais amplo, que inclui o [Fast Track - For Data Analysts](https://apexapps.oracle.com/pls/apex/f?p=133:180:115710339199463::::wid:3519), presente no LiveLabs, e o Fast Track – For Data Scientists, que estará disponível em breve.
+É importante citar que esse Fast Track faz parte de um conjunto de treinamentos mais amplo, que inclui o [Fast Track - For Data Analysts](https://livelabs.oracle.com/pls/apex/f?p=133:180:115710339199463::::wid:3519), presente no LiveLabs, e o Fast Track – For Data Scientists, que estará disponível em breve.
 
 Em caso de dúvidas ou necessidade de suporte, os participantes poderão entrar em contato com a equipe responsável pela criação e edição dos laboratórios, com informações de contato disponíveis ao final de cada etapa.
 

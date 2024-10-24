@@ -1,0 +1,65 @@
+exportedRestServices:
+- endpoint: "https://www.opportunitysummary.com"
+  description: "REST Service to return company details from the CRM"
+  name: "Tutorial_OpportunityDetails"
+  authType: "noAuth"
+  restServiceMethods:
+  - restServiceMethodType: "GET"
+    contentType: "application/json"
+    statusCode: 200
+    methodIncrementId: 0
+    mockResponsePayload: "{\n    \"opportunity_id\": \"SO-12345\",\n    \"company_name\"\
+      : \"Elemental Design\",\n    \"contact_person\": {\n        \"name\": \"Connor\
+      \ Adams\",\n        \"title\": \"Director, IT\",\n        \"email\": \"elemental.design@averydennison.com\"\
+      ,\n        \"phone\": \"+1(555)123-4567\"\n    },\n    \"company_description\"\
+      : \"Elemental Design operates in the sports equipment and apparel industry,\
+      \ focusing on the manufacturing and retail of sports equipment, footwear, and\
+      \ apparel.The company's mission is to empower athletes and sports enthusiasts\
+      \ with high-quality products that enhance performance and comfort.Elemental\
+      \ Design envisions becoming a global leader in sports equipment and apparel,\
+      \ promoting a healthy and active lifestyle for all. The company currently employs\
+      \ 250 dedicated professionals.\",\n    \"products\": [\n        {\n        \
+      \    \"product_id\": \"SP-98765\",\n            \"product_name\": \"High-Performance\
+      \ Running Shoes\",\n            \"category\": \"Footwear\",\n            \"\
+      price\": 120,\n            \"currency\": \"USD\",\n            \"quantity\"\
+      : 500,\n            \"revenue\": 65000\n        },\n        {\n            \"\
+      product_id\": \"SP-98766\",\n            \"product_name\": \"Breathable Sports\
+      \ T-Shirt\",\n            \"category\": \"Apparel\",\n            \"price\"\
+      : 35,\n            \"currency\": \"USD\",\n            \"quantity\": 1000,\n\
+      \            \"revenue\": 35000\n        },\n        {\n            \"product_id\"\
+      : \"SP-98767\",\n            \"product_name\": \"Quick-Dry Athletic Shorts\"\
+      ,\n            \"category\": \"Apparel\",\n            \"price\": 45,\n    \
+      \        \"currency\": \"USD\",\n            \"quantity\": 800,\n          \
+      \  \"revenue\": 36000\n        }\n    ],\n    \"deal_value\": 60000,\n    \"\
+      sales_stage\": \"Proposal/Price Quote\",\n    \"win_probability\": 0.75,\n \
+      \   \"close_date\": \"2023-08-15\",\n    \"competitors\": [\n        {\n   \
+      \         \"name\": \"AthleticGear Co.\",\n            \"product\": \"AG-Runner\
+      \ Pro\",\n            \"price\": 110,\n            \"strengths\": [\n      \
+      \          \"Lower price\",\n                \"Established brand\"\n       \
+      \     ],\n            \"weaknesses\": [\n                \"Lower quality materials\"\
+      ,\n                \"Less comfortable\"\n            ]\n        },\n       \
+      \ {\n            \"name\": \"FitLife Inc.\",\n            \"product\": \"FL-Speedster\"\
+      ,\n            \"price\": 130,\n            \"strengths\": [\n             \
+      \   \"High-quality materials\",\n                \"Advanced cushioning technology\"\
+      \n            ],\n            \"weaknesses\": [\n                \"Higher price\"\
+      ,\n                \"Lesser-known brand\"\n            ]\n        }\n    ],\n\
+      \    \"next_steps\": [\n        {\n            \"activity\": \"Send product\
+      \ samples\",\n            \"due_date\": \"2023-06-10\",\n            \"owner\"\
+      : \"Jane Doe\"\n        },\n        {\n            \"activity\": \"Schedule\
+      \ product demo\",\n            \"due_date\": \"2023-06-15\",\n            \"\
+      owner\": \"Jane Doe\"\n        },\n        {\n            \"activity\": \"Meeting\
+      \ to negotiate pricing and terms\",\n            \"due_date\": \"2023-06-25\"\
+      ,\n            \"owner\": \"Jane Doe\"\n        }\n    ],\n    \"key_activities\"\
+      : [\n        {\n            \"activity\": \"Initial contact\",\n           \
+      \ \"date\": \"2023-05-10\",\n            \"outcome\": \"Positive response, interest\
+      \ in product\"\n        },\n        {\n            \"activity\": \"Product presentation\"\
+      ,\n            \"date\": \"2023-05-15\",\n            \"outcome\": \"Good feedback,\
+      \ requested samples and demo\"\n        }\n    ],\n    \"customer_needs\": [\n\
+      \        \"High-quality materials for durability and performance\",\n      \
+      \  \"Competitive pricing to fit within budget\",\n        \"Responsive customer\
+      \ support and after-sales service\",\n        \"Customizable design options\
+      \ for team branding\"\n    ]\n}"
+    restServiceParams:
+    - type: "query"
+      key: "company"
+      value: "ElementalDesign"

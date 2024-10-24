@@ -28,7 +28,7 @@ Video Recording
 ## Learn More
 
 Labs
-* [Disaster Recovery - Pilot Light](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=724&clear=RR,180&session=539954259682)
+* [Disaster Recovery - Pilot Light](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=724&clear=RR,180&session=539954259682)
 
 Resource Links for Reference
 * [Best Practices Framework for Oracle Cloud Infrastructure](https://docs.oracle.com/en/solutions/oci-best-practices/#GUID-5F2D2745-934E-409A-A7BA-D0976F727845)
