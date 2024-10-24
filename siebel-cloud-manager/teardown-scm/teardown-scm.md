@@ -68,4 +68,4 @@ In this lab, we have destroyed nearly all the resources that were created for th
 
 * **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
-* **Last Updated By/Date** - Duncan Ford, Software Engineer, May 2024
+* **Last Updated By/Date** - Duncan Ford, Software Engineer, October 2024
