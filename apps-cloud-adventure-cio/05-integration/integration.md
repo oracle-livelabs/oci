@@ -159,5 +159,4 @@ This Cloud Adventure also featued the importance of having open REST intefaces f
 
 ## Acknowledgements
 * **Author** - Jamil Orfali, Senior Cloud Technologist, Advanced Technology Services, Kris Holmgren, Senior Cloud Technologist, Advanced Technology Services
-* **Contributors** -  
 * **Last Updated By/Date** - Jamil Orfali, September 2024

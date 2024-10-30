@@ -283,7 +283,7 @@ In this lab, you will:
 
     > (2) Select a Supplier record by clicking on it (the row will highlight) <br>
 
-    > (2) Click the **Edit Supplier** button.   
+    > (3) Click the **Edit Supplier** button.   
 
     ![finish edit page fields](images/image033.png)
 
@@ -323,4 +323,4 @@ So, check your with you team, double-check your racing harness and get ready for
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist, Advanced Technology Services; Stephen Chung, Principal SaaS Cloud Technologist, Advanced Technology Services
 * **Contributors** - Sajid Saleem, Master Principal SaaS Cloud Technologist, Advanced Technology Services  
-* **Last Updated By/Date** - Charlie Moff, September 2024 
+* **Last Updated By/Date** - Ana Coman, October 2024

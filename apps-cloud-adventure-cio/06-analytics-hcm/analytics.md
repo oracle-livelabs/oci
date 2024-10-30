@@ -184,5 +184,4 @@ You discovered how effortlessly Fusion Analytics enables the creation of content
 
 ## Acknowledgements
 * **Author** - Sohel Jeelani, Analytics Solution Engineer, Advanced Technology Services
-* **Contributors** -  
 * **Last Updated By/Date** - Sohel Jeelani, September 2024

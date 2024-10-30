@@ -336,5 +336,4 @@ curious cloud adventurers to seasoned Fusion Cloud auditors, equipped with the k
 
 ## Acknowledgements
 * **Author** - Jamil Orfali, Senior Sales Consultant, Advanced Technology Services, Kris Holmgren, Senior Sales Consultant, Advanced Technology Services
-* **Contributors** -  
 * **Last Updated By/Date** - Jamil Orfali, September 2024

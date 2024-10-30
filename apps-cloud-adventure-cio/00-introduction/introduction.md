@@ -23,7 +23,6 @@ Let's create your team name for your cloud adventure!
     
 ## Acknowledgements
 * **Author** - Sajid Saleem, Master Principal Sales Consultant, Advanced Technology Services
-* **Contributors** -  
 * **Last Updated By/Date** - Sajid Saleem, September 2024
 
 
