@@ -27,7 +27,6 @@ In this lab, you will:
 
     ![Open Visual Builder](images/image001.png)
 
-
 2. We have pre-defined a Project.  A project collects all the people, tools, and processes you need to complete a unit of work.  You can use a project to host source code files, track issues, collaborate on code, and build and deploy your applications. If your team is extending Oracle Cloud Applications, you’ll probably want to set things up so that you have a single project dedicated to work with a single repository for each Application. 
 
     > **Click** on the **‘CloudAdventure’** project
@@ -316,4 +315,4 @@ So, check your with you team, double-check your racing harness and get ready for
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist, Advanced Technology Services; Stephen Chung, Principal SaaS Cloud Technologist, Advanced Technology Services
 * **Contributors** - Sajid Saleem, Master Principal SaaS Cloud Technologist, Advanced Technology Services  
-* **Last Updated By/Date** - Charlie Moff, September 2024 
+* **Last Updated By/Date** - Charlie Moff, November 2024 

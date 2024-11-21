@@ -12,7 +12,7 @@
         },
         {
             "title": "Lab 2: Configure",
-            "filename": "../../02-configure-hcm/configure.md"
+            "filename": "../../02-configure/configure.md"
         },
         {
             "title": "Lab 3: Extend",
@@ -29,7 +29,7 @@
 
         {
             "title": "Lab 6: Analytics",
-            "filename": "../../06-analytics-hcm/analytics.md"
+            "filename": "../../06-analytics/analytics.md"
         }, 
      
         {
