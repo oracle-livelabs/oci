@@ -6,23 +6,22 @@ Oracle offers hundreds of prebuilt pages, workflows and forms “out of the box�
 
 Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.   
 
-In this exercise, you are the Redwood expert for your organization.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently design a Change Salary Interface for Non-HR mangers.
+
+Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise! 
 
 
-Estimated Time: 15 minutes
-
-
 ### Objectives
 
-In this activity, you will use Redwood to incorporate rules and define content surfaced in the application to tailor the user experience. 
-
-![Configuration Objectives](images/configureobjs.png)
 
 ## HCM: Enhance the Change Salary Experience
 
-1. You are the Redwood expert for your organization.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently design a Change Salary Interface for Non-HR mangers.  Change Salary is a dynamic form that allow you to create pages with user information that appears based on conditions you configure.
+1.  In this exercise, you are the Redwood expert for your organization.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently design a Change Salary Interface for Non-HR mangers.
+
+![Configuration Objectives](images/configureobjs.png)
+
+2. You are the Redwood expert for your organization.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently design a Change Salary Interface for Non-HR mangers.  Change Salary is a dynamic form that allow you to create pages with user information that appears based on conditions you configure.
 
     You will first navigate to the Change Salary Page.
 
@@ -39,7 +38,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![My Team Page](images/image003.png)
 
 
-2. Now you will enter the Change Salary Form so we can make the required changes using Visual Builder Studio.  Now you will select a person so you can enter the Change Salary form.
+3. Now you will enter the Change Salary Form so we can make the required changes using Visual Builder Studio.  Now you will select a person so you can enter the Change Salary form.
 
     > (1) Search for **Barrett Reed** in the search field. <br>
 
@@ -48,7 +47,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Change Salary Page](images/image004.png)
 
-3.  You have entered the Change Salary Form.  Now you will quickly review the current configuration of the Change Salary Form.
+4.  You have entered the Change Salary Form.  Now you will quickly review the current configuration of the Change Salary Form.
 
     > Click **Continue**.
 
@@ -65,13 +64,11 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Change Salary Page](images/image006.png)
 
 
-
-
-4. You will now create new rule that hides Annualized Full-Time Salary because it is repetitive.  You will also hide Compa-Raito since this is mainly used by HR.  You also want to show the action reason in this section of the Change Salary Form.
+5. You will now create new rule that hides Annualized Full-Time Salary because it is repetitive.  You will also hide Compa-Raito since this is mainly used by HR.  You also want to show the action reason in this section of the Change Salary Form.
 
     ![Change Salary Page 2nd page](images/image007.png)
 
-5. Now you will enter the Visual Builder Studio.
+6. Now you will enter the Visual Builder Studio.
 
     > (1) Click on the ![co image](images/icon012_co.png)  **Image** in the top right corner of the screen.  <br>
 
@@ -84,7 +81,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Select Project](images/image009.png)
 
 
-6.  Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the app dev lifecycle: design, build, test, and deploy.
+7.  Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the app dev lifecycle: design, build, test, and deploy.
 
     Now we will use VB Studio to make the required changes to the Change Salary Form.
 
@@ -93,7 +90,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![VB Studio](images/image010.png)
 
 
-7. First we will create a new form rule for change salary.
+8. First we will create a new form rule for change salary.
 
     > Click on the ![plus icon](images/icon015_plus.png)  **Icon** to add a new form rule.
 
@@ -106,7 +103,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Fields and Regions](images/image012.png)
 
 
-8.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
+9.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
 
     Now we will add the conditions that applies this rule to all non-HR personnel
 
@@ -130,7 +127,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
      **Note:** This configuration displays this version of the Change Salary Form to all people who are not assigned to the Human Resource Manager Role
 
 
-9.  Now you want to add and hide fields.
+10.  Now you want to add and hide fields.
 
     > Click on the **Drop Down** ![drop down icon](images/icon013_dropdown.png)  Icon to the left of Salary to expand the salary section.
 
@@ -138,7 +135,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-10.  First you want to the configure the form to hide the **Annualized Full-Time Salary** Field.
+11.  First you want to the configure the form to hide the **Annualized Full-Time Salary** Field.
 
     > (1) Click in the Box in the **Hidden Column** for **Annualized Full-Time Salary Field** row.       <br>
 
@@ -147,7 +144,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Fields and Regions, Conditions](images/image017.png)
 
 
-11. Now you want to the configure the form to hide the **Compa-Ratio** field.
+12. Now you want to the configure the form to hide the **Compa-Ratio** field.
 
     > (1) Click in the Box in the **Hidden Column** for **Compa-Ratio** row.       <br>
 
@@ -155,7 +152,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Fields and Regions, Conditions](images/image018.png)
 
-12. Now you will configure the form to show the **Action Reason** field.
+13. Now you will configure the form to show the **Action Reason** field.
 
     > (1) Click in the Box in the **Hidden Column** for **Action Reason** row.       <br>
 
@@ -165,7 +162,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-13. Please verify that Action Reason is **Visible**, and Annualized Full-Time Salary Field and Compa-Ratio are **Hidden**.
+14. Please verify that Action Reason is **Visible**, and Annualized Full-Time Salary Field and Compa-Ratio are **Hidden**.
 
     Now you will add a validation step for the Adjustment Percentage.  You do not want users to enter in a Salary Percentage Greater than 15%
 
@@ -184,7 +181,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Validation](images/image022.png)
 
 
-14.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
+15.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
 
     > Click on **Edit**. 
 
@@ -213,7 +210,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     The form will not allow any user to enter an adjustment percentage greater than 15%. 
 
 
-15.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
+16.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
 
     > (1) Under **Messages**, type in **Adjustment Percentage is too high** in **Summary**.    <br>
 
@@ -231,7 +228,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     
 
 
-16.  Well done.  You have configured a new rule for Non-HR personnel.
+17.  Well done.  You have configured a new rule for Non-HR personnel.
 
     Redwood offers a quick way to review your changes as they appear in the application.
 
@@ -241,7 +238,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Create Validation](images/image031.png)
 
-17.  You have reentered the Change Salary Form.  Let’s review the changes.
+18.  You have reentered the Change Salary Form.  Let’s review the changes.
 
     > Click **Continue**.
 
@@ -260,7 +257,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Change Salary Page 2nd page](images/image033.png)
 
 
-18.  Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible while Action Reason is now Visible.
+19.  Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible while Action Reason is now Visible.
 
     Now we will test the validation for the Adjustment Amount Percentage.
 
@@ -268,13 +265,13 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
     ![Change Salary Screen 2](images/image034.png)
 
-19.  The system gives us a warning that the increase in salary is outside the worker’s salary range.  You will ignore this warning.
+20.  The system gives us a warning that the increase in salary is outside the worker’s salary range.  You will ignore this warning.
 
     > Click **Continue.**
 
     ![Change Salary Screen 2](images/image035.png)
 
-20.  The system will not allow the user to continue because the Adjustment Percentage exceeds 15% due to the field validation we configured.
+21.  The system will not allow the user to continue because the Adjustment Percentage exceeds 15% due to the field validation we configured.
 
     ![Change Salary Screen 2 error message](images/image036.png)
 
@@ -285,7 +282,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-21. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+22. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
@@ -293,7 +290,9 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update **Suppliers (New) listing page providing more visibility to Procurement Managers**. Suppliers (New) is a dynamic listing page that allows you to create role-based layouts based on configurable criteria.
 
-    You will first navigate to the Suppliers (New) Listing Page.
+    ![Configuration Objectives](images/configure_objs.png)
+
+2. You will first navigate to the Suppliers (New) Listing Page.
 
     > From the application home page, click on the **Procurement** tab.
 
@@ -318,14 +317,14 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-2. Now you will enter the Suppliers (New) Page that displays lists of suppliers. 
+3. Now you will enter the Suppliers (New) Page that displays lists of suppliers. 
 
 
     > (1) Click on drop-down icon to expand a specific supplier row.
     
     ![Change Salary Page](images/image106.png)
 
-3.  You can see the supplier information displayed is limited. We will update the page to display more fields for procurement managers. <br><br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
+4.  You can see the supplier information displayed is limited. We will update the page to display more fields for procurement managers. <br><br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
 
 
     > (1) Click on the ![picture image](images/icon102_co.png) **Image** in the top right corner of the screen.  <br>
@@ -336,11 +335,11 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Change Salary Page](images/image107.png)
 
 
-4. The following image appears as Visual Builder Studio is loading.
+5. The following image appears as Visual Builder Studio is loading.
 
     ![Change Salary Page 2nd page](images/image108.png)
 
-5. Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the application development lifecycle: design, build, test, and deploy. <br><br> Now we will use VB Studio to make the required changes to the Suppliers (New) page.
+6. Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the application development lifecycle: design, build, test, and deploy. <br><br> Now we will use VB Studio to make the required changes to the Suppliers (New) page.
 
 
     > Click on **Configure Fields and Regions**. <br>
@@ -349,7 +348,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-6.  First we will create a new role-based form rule for Suppliers (New) page
+7.  First we will create a new role-based form rule for Suppliers (New) page
 
     > Click on the ![+ Icon](images/icon105_plus.png) **Icon** to add a new form rule.
 
@@ -362,7 +361,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Fields and Regions](images/image111.png)
 
 
-7.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
+8.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
 
     > Click on the **Edit button.**
 
@@ -370,7 +369,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 
 
 
-8.  Now we will add the conditions that applies this rule to all Procurement Managers.
+9.  Now we will add the conditions that applies this rule to all Procurement Managers.
 
     > Click on the **Condition button**.
 
@@ -387,13 +386,13 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Fields and Regions, Conditions](images/image115.png)
 
 
-9. Now you want to add and hide fields.
+10. Now you want to add and hide fields.
 
     > Click on the ![dropdown](images/icon103_dropdown.png)  Icon to the left of Supplier Details to expand the section.
 
     ![Fields and Regions](images/image116.png)
 
-10. First you want to the configure the page  to display the **Creation Source**. 
+11. First you want to the configure the page  to display the **Creation Source**. 
 
     > (1) Click in the Box in the **Hidden Column** for **Creation Source Field** row.    <br>
 
@@ -402,7 +401,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
     ![Validation](images/image117.png)
 
 
-11.  Now repeat the above steps for fields Creation Date, Parent Supplier Number and Tax Payer Country to make them visible.
+12.  Now repeat the above steps for fields Creation Date, Parent Supplier Number and Tax Payer Country to make them visible.
 
     > (1) Click the Box in the **Hidden Column** for **each of these** rows.    <br>
 
@@ -411,7 +410,7 @@ In this activity, you will use Redwood to incorporate rules and define content s
 ![Validation 2](images/image118.png)
 
  
-12. Well done. You have configured a new role-based page layout for Procurement Managers. Redwood offers a quick way to review your changes as they appear in the application.
+13. Well done. You have configured a new role-based page layout for Procurement Managers. Redwood offers a quick way to review your changes as they appear in the application.
 
     > (1) Click on the **Preview** ![Fields and Regions, Conditions](images/icon104_preview.png) icon in the upper right of the screen<br>
 
@@ -419,20 +418,18 @@ In this activity, you will use Redwood to incorporate rules and define content s
     
     ![Validation 2](images/image119.png)
 
-13. You have reentered the Suppliers (New) page. Let’s review the changes.
+14. You have reentered the Suppliers (New) page. Let’s review the changes.
 
     Click on the **Supplier Type** to display the Filter and click into the Search box **Supplier Type**.
 
 ![Validation 2](images/image120.png)
    
-14.  You need to select the search filter Supplier (187) again. 
+15.  You need to select the search filter Supplier (187) again. 
 
     > Click and select **Supplier (187)** to display list of suppliers. 
 
 ![Validation 4](images/image121.png)
-
-
-15. 
+ 
 
     >  Click anywhere in the page away from the search filter **Supplier (187)**
 
@@ -464,11 +461,16 @@ In this example, you used Redwood, Oracle’s next-generation design system, to 
 
 **You have successfully completed the Activity!**
 
+## Learn More
+
+
+* [Oracle Documentation](http://docs.oracle.com)
+* [Overview of Redwood Application Extension](https://docs.oracle.com/en/cloud/saas/human-resources/24d/fauvb/overview-of-redwood-application-extensions.html)
 
 
 ## Acknowledgements
 * **Author** - Casey Doody, Cloud Technologist , Advanced Technology Services
 * **Contributors** -  Sajid Saleem, Master Principal Cloud Technologist, Advanced Technology Services
-* **Last Updated By/Date** - Casey Doody, September 2024
+* **Last Updated By/Date** - Casey Doody, November 2024
 
 
