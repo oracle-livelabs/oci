@@ -165,9 +165,9 @@ To learn more about how this works, you can now proceed to the next lab, which g
 
         There may be auth error 401 trying to authenticate to the cluster: this indicates that wrong credentials were provided. You can open the stack and look at variables. There you can choose to Edit variables and update the credentials, then re-apply the stack.
 
-        There may be 409 errors with rate limit exceeded. This is normal as long as the 500 dem data records get ingested. However if the startup process never finished, and the last logs don't indicate the app was started, something went wrong during ingestion.
+        There may be 409 errors with rate limit exceeded. This is normal as long as the 500 demo data records get ingested. However if the startup process never finishes, and the last logs don't indicate the app was started, something went wrong during ingestion.
 
-        Timeout during ingestion may indicate the VCN configuration is wrong. If the VN was created with the wizard, it should have a public nad private subnets, with an Internet Gateway on the public subnet, and a Service Gateway and NAT gateway in the private subnet. You should also have created a security list to open port 9200 for OpenSearch API.
+        Timeout during ingestion may indicate the VCN configuration is wrong. If the VN was created with the wizard, it should have a public and private subnets, with an Internet Gateway on the public subnet, and a Service Gateway and NAT gateway in the private subnet. You should also have created a security list to open port 9200 for OpenSearch API.
 
 If you can't figure what may be wrong, feel free to contact us with the contact button, and please provide the full app log in your email.
 
