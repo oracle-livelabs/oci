@@ -22,7 +22,7 @@ In this lab, you will:
 	<copy>
 	git init lab
 	cd lab
-	git remote add origin https://github.com/sachin-pikle/gdk-oci-samples.git
+	git remote add origin https://github.com/oracle-samples/gdk-micronaut-samples.git
 	git config core.sparsecheckout true
 	echo "gdk-oci-email-mvn/*">>.git/info/sparse-checkout
 	git pull --depth=1 origin main

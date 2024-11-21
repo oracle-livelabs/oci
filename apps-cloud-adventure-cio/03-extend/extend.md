@@ -177,6 +177,7 @@ In this lab, you will:
 
 22. You now have a table to hold the data. Next, you’ll add the Supplier data from our REST API. You can use the Quick Start feature to help with this task.
 
+
     > (1) Click in the newly created **Table** region.<br>
 
     > (2) You should now see the Table Properties region appear on the right.

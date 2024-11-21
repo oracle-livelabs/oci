@@ -716,10 +716,68 @@ The user's input query and prompt fine-tuning.
 The user's previous conversation history based on the specified conversation ID.
 You can control how many previous conversation contexts to consider using the interaction_size parameter in the API call. You can also use the context_size to control how many of the retrieved top documents you want to parse to the LLM as context to augment the knowledge.
 
+## Step 11: Further Improvements
 
+There is a caveat to using vector search from the user input in a conversation setting: if the user prompt is a follow-up question, the LLM may have the context from history, but if the retriever needs this context, it does not get it as it only receives the user prompt.
+
+In the demo app from Lab 7a, where we are querying about operations on files from object storage, the user may ask a question about a given file, and then follow up with a question like 'who deleted it?'. Without the context of what 'it' is, the retriever will focus on the 'delete' operation part of the query, and the chance of retrieving the document related to the file in question is equal to the number of documents retrieved over the total number of delete operations; The more files and the more operations, the least likely it is to retrieve the right context for the LLM to answer the user question.
+
+To get around this, an additional step can be inserted before the RAG pipeline.
+
+Instead of passing the user prompt to the RAG pipeline directly, we'll first do a simple LLM call passing the chat history as context, asking the LLM to rephrase the question, filling in the missing information (in the example, the file name). Then use the re-phrased question as the input prompt to the RAG pipeline.
+
+In this case, the body of our request looks like:
+
+```json
+<copy>{
+            "size" : 100,
+            "query": {
+                "match": {
+                    "text": "None"
+                }
+            },
+            "ext": {
+                "generative_qa_parameters": {
+                    "llm_model": "oci_genai/cohere.command-r-plus",
+                    "llm_question": f"""You are helpful entity extrator who extracts the entity from chat history when needed.
+                                    ## Instructions:
+                                     - If there is any ambiguity in the question regarding the context use chat history to resolve that ambiguity.
+                                     - If there is any reference to "it", "this", "that" in query, replace the word with relevant entity e.g. file name extracted from Chat History.
+                                     - If there is no ambiguity in subject or object of the question return the question as is
+                                     - return the question only with replaced entitity
+                                     - refined_question is the Question with word "it", "this", "that" replaced with extracted entity from last index of Chat History
+                                     - never add any extra sentences to refined_question
+                                     - If there is no ambiguity in subject or object of the Question then refined_question is same as Question
+                                     - The response should me in following format:
+                                    ### Response:
+                                    
+                                        refined_question                                        
+                                     
+                                    ## Question:
+                                       Who deleted it?
+                                    
+                                    ## Chat History:
+                                       When was file patient_1062 created?
+                                       File patient_1062 was create One August 20th 2023
+                                       """,
+                    "context_size": 100,
+                    "interaction_size": 2,
+                    "timeout": 60
+                }
+            }
+        }</copy>
+```
+
+Note a few things:
+
+- The query uses "None" for the text, meaning we're not matching documents, just running the LLM call.
+- The prompt is the user question, and chat history needs to be filled in. This is something you need to manage when writing your code with the SDK of your choice.
+- We do not pass the conversationId in this call, as it would add the exchange to the LLM conversation history and maybe confuse it. This is an extra call made outside of the conversation with the user.
+
+With this extra step, you now have a system much more robust to handling human-like interactions.
 
 
 ## Acknowledgements
 
-* **Author** - Landry Kezebou Yankam
-* **Last Updated By/Date** - George Csaba, June 2024
+* **Author** - Landry Kezebou Yankam, George Csaba, Emmanuel Leroy
+* **Last Updated By/Date** - Emmanuel Leroy, October 2024
