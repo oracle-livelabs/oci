@@ -16,13 +16,11 @@ In this lab, you will use Redwood to quickly and efficienty improve the user exp
 
 ## HCM: Enhance the Change Salary Experience
 
-1.  In this exercise, you are the Redwood expert for your organization.  You will use Redwood to quickly and efficiently design a Change Salary Interface for Non-HR mangers.
+1.  Redwood represents the future direction for Oracle Cloud HCM, with Oracle rolling out pages, forms and workflow that are highly configurable.  Dynamic forms hides or displays fields based on a user's response to other fields on the form and rules built into the form.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently design a Change Salary Interface for Non-HR mangers. 
 
 ![Configuration Objectives](images/configureobjs.png)
 
-2. You are the Redwood expert for your organization.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently design a Change Salary Interface for Non-HR mangers.  Change Salary is a dynamic form that allow you to create pages with user information that appears based on conditions you configure.
-
-    You will first navigate to the Change Salary Page.
+2. You will first navigate to the Change Salary Page.
 
     > From the application home page, click on the **My Team** tab.
 
