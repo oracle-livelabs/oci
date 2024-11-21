@@ -16,9 +16,9 @@ In this lab, you will use Redwood to quickly and efficienty improve the user exp
 
 ## HCM: Enhance the Change Salary Experience
 
-1.  Redwood represents the future direction for Oracle Cloud HCM, with Oracle rolling out pages, forms and workflow that are highly configurable.  Dynamic forms hides or displays fields based on a user's response to other fields on the form and rules built into the form.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently design a Change Salary Interface for Non-HR mangers. 
+1.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update Change Salary Page for Non-HR managers.
 
-![Configuration Objectives](images/configureobjs.png)
+![Configuration Objectives](images/configure_objs_hcm.png)
 
 2. You will first navigate to the Change Salary Page.
 
@@ -457,8 +457,9 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 ## Learn More
 
 
-* [Oracle Documentation](http://docs.oracle.com)
 * [Overview of Redwood Application Extension](https://docs.oracle.com/en/cloud/saas/human-resources/24d/fauvb/overview-of-redwood-application-extensions.html)
+* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/24d/oaext/overview-of-using-visual-builder-studio.html#s20072861)
+* [Oracle Documentation](http://docs.oracle.com)
 
 
 ## Acknowledgements
