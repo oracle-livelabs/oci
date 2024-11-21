@@ -6,18 +6,17 @@ Oracle offers hundreds of prebuilt pages, workflows and forms “out of the box�
 
 Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.   
 
-
 Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise! 
 
-
 ### Objectives
 
+In this lab, you will use Redwood to quickly and efficienty improve the user experience in Oracle Fusion Cloud. 
 
 ## HCM: Enhance the Change Salary Experience
 
-1.  In this exercise, you are the Redwood expert for your organization.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently design a Change Salary Interface for Non-HR mangers.
+1.  In this exercise, you are the Redwood expert for your organization.  You will use Redwood to quickly and efficiently design a Change Salary Interface for Non-HR mangers.
 
 ![Configuration Objectives](images/configureobjs.png)
 
@@ -453,8 +452,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 ## Summary
 
 Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.   
-
-In this example, you used Redwood, Oracle’s next-generation design system, to quickly and efficiently enhance the Change Salary Form.
 
 
 **You have successfully completed the Activity!**
