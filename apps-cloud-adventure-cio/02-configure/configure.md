@@ -285,7 +285,7 @@ In this lab, you will use Redwood to quickly and efficienty improve the user exp
 
 ## SCM: Update Suppliers (New) listing page
 
-1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update **Suppliers (New) listing page providing more visibility to Procurement Managers**. Suppliers (New) is a dynamic listing page that allows you to create role-based layouts based on configurable criteria.
+1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update the Suppliers (New) listing page providing more visibility to Procurement Managers. Suppliers (New) is a dynamic listing page that allows you to create role-based layouts based on configurable criteria.
 
     ![Configuration Objectives](images/configure_objs.png)
 
