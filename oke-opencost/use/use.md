@@ -4,7 +4,7 @@
 
 Discover how to use OpenCost for detailed insights into your Kubernetes cluster's cost structure. OpenCost offers visibility into resource usage and spending across Kubernetes resources such as namespaces, nodes, deployments, and others. This enables accurate analysis and optimized resource allocation. Dive in to better manage and control your Kubernetes costs!
 
-Estimated Lab Time: -- 30 minutes
+Estimated Lab Time: 20 minutes
 
 ### Objectives
 

@@ -4,7 +4,7 @@
 
 In this lab, you will set up OpenCost on your Oracle Kubernetes Engine (OKE) cluster to track and manage costs for Kubernetes workloads. You'll install the necessary components, and deploy OpenCost to monitor cost allocation.
 
-Estimated Lab Time: -- 30 minutes
+Estimated Lab Time: 20 minutes
 
 ### Objectives
 
