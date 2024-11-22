@@ -45,11 +45,11 @@ A Kubernetes cluster consists of master and worker nodes running applications. I
 
 	**Number of Nodes**: 1
 
-Click **Next**.
+5. Click **Next**.
 
-  ![Image alt text](images/sample4.png)
+	![Image alt text](images/sample5.png)
 
-5. Click **Create Cluster**.
+6. Click **Create Cluster**.
 
 	![Image alt text](images/sample5.png)
 
@@ -78,6 +78,8 @@ This section explains how to set up Cloud Shell to access and interact with your
 	```
 
 	![Image alt text](images/sample10.png)
+
+You may now proceed to the next lab.
 
 ## Acknowledgements
 

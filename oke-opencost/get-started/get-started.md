@@ -27,30 +27,32 @@ Follow these steps to log in if you've signed out:
 
 1. Navigate to [cloud.oracle.com](https://cloud.oracle.com) and enter your **Cloud Account Name** and click **Next**.
 
-![Image alt text](images/sample1.png)
+    ![Image alt text](images/sample1.png)
 
 2. Select your **Identity Domain** and click **Next**.
 
-![Image alt text](images/sample2.png)
+    ![Image alt text](images/sample2.png)
 
-![Image alt text](images/sample3.png)
+    ![Image alt text](images/sample3.png)
 
 3. Enter your Cloud Account credentials:
 
-- **Username:** Your email address.
-- **Password:** The one chosen during signup.
+    - **Username:** Your email address.
+    - **Password:** The one chosen during signup.
 
-![Image alt text](images/sample4.png)
+    ![Image alt text](images/sample4.png)
 
 4. Complete Multi-factor Authentication (MFA) based on your setup (e.g., approve in the app or enter a code).
 
-![Image alt text](images/sample5.png)
+    ![Image alt text](images/sample5.png)
 
-![Image alt text](images/sample6.png)
+    ![Image alt text](images/sample6.png)
 
-Once verified, you'll access the OCI Console Home Page and can continue your tasks!
+    Once verified, you'll access the OCI Console Home Page and can continue your tasks!
 
-![Image alt text](images/sample7.png)
+    ![Image alt text](images/sample7.png)
+
+You may now proceed to the next lab.
 
 ## Acknowledgements
 

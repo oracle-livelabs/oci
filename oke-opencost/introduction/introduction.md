@@ -36,6 +36,8 @@ Ensure the following are set up before beginning the lab:
 * [Oracle Kubernetes Engine Documentation](https://docs.oracle.com/en-us/iaas/Content/ContEng/Concepts/contengoverview.htm)
 * [OpenCost Documentation](https://opencost.io/docs)
 
+You may now proceed to the next lab.
+
 ## Acknowledgements
 
 * **Author** - JP Santana, Master Cloud Architect, Oracle
