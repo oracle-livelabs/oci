@@ -22,7 +22,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 ![Integration Objectives](images/Integration_objs2.png)
 
 
-## Task 1: Use REST API to pull Fusion SaaS Application audit data for use in any external system
+## SCM: Use REST API to pull Fusion SaaS Application audit data for use in any external system
 
 
 
@@ -156,6 +156,10 @@ As you have seen, the Oracle SaaS applications may be configured to capture who 
 This Cloud Adventure also featued the importance of having open REST intefaces for accessing and sharing data with external systems. In the case of audit data, you may want to send this data to a SIEM or data warehouse for analysis.
 
 **You have successfully completed the Activity!**
+
+* [Oracle Supply Chain & Manufacturing - APIs & Schema](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/24b/api.html)
+* [Set Up Auditing for Oracle Fusion Applications](https://docs.oracle.com/en/cloud/saas/applications-common/24d/facia/set-up-auditing-for-oracle-fusion-applications.html)
+* [Oracle Documentation](http://docs.oracle.com)O
 
 ## Acknowledgements
 * **Author** - Jamil Orfali, Senior Cloud Technologist, Advanced Technology Services, Kris Holmgren, Senior Cloud Technologist, Advanced Technology Services
