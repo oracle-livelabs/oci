@@ -464,8 +464,9 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 
 
 ## Acknowledgements
-* **Author** - Casey Doody, Cloud Technologist , Advanced Technology Services
+* **Author** - Charlie Moff, Distinguished Cloud Technologist, Advanced Technology Services; Casey Doody, Cloud Technologist , Advanced Technology Services
 * **Contributors** -  Sajid Saleem, Master Principal Cloud Technologist, Advanced Technology Services
 * **Last Updated By/Date** - Casey Doody, November 2024
+
 
 
