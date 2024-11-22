@@ -6,13 +6,14 @@ Oracle offers hundreds of prebuilt pages, workflows and forms “out of the box�
 
 Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.   
 
+### Objectives
+
+In this lab, you will use Redwood to quickly and efficienty improve the user experience in Oracle Fusion Cloud. 
+
 Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise! 
 
-### Objectives
-
-In this lab, you will use Redwood to quickly and efficienty improve the user experience in Oracle Fusion Cloud. 
 
 ## HCM: Enhance the Change Salary Experience
 
