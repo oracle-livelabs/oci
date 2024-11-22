@@ -16,7 +16,7 @@ During this adventure, you will perform a time sensitive task of granting permis
 At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
 
 
-## Task 1: Extending Privileges to a User
+## SCM: Extending Privileges to a User
 
 
 1. Oracle Cloud Applications are delivered with a complete set of roles which control access to application functions and data.  
@@ -219,6 +219,14 @@ At this point, you should be logged into your environment with a username CIO.xx
 Security Console is used to quickly manage user access to the entire Fusion applications suite.  
 
 **You have successfully completed the Activity!**
+
+
+## Learn More
+
+* [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/24d/secure.html)
+* [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/24b/secure.html)
+* [Oracle Documentation](http://docs.oracle.com)
+
 
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist, Advanced Technology Services
