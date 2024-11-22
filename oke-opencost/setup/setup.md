@@ -19,8 +19,6 @@ This lab assumes you have:
 * An Oracle Cloud account.
 * An OKE active cluster. All these steps are described in the previous labs.
 
-*This is the "fold" - below items are collapsed by default*
-
 ## Task 1: Install Prometheus
 
 Install Prometheus via Helm by running the following command:

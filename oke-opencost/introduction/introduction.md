@@ -24,7 +24,6 @@ This workshop assumes you have:
 * Familiarity with basic Kubernetes concepts
 * Access to the OCI Console and CLI configured on your workstation
 
-*Collapsed Details (optional):*
 Ensure the following are set up before beginning the lab:
 
 * An OKE cluster (if not, you will learn to provision one during the workshop)

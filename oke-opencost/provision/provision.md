@@ -15,8 +15,6 @@ A Kubernetes cluster consists of master and worker nodes running applications. I
 - OCI CLI installed
 - Basic understanding of Kubernetes
 
-*This is the "fold" - below items are collapsed by default*
-
 ## Task 1: Create Kubernetes Cluster
 
 1. From the OCI Services menu, click **Developer Services > Kubernetes Clusters (OKE)**.
