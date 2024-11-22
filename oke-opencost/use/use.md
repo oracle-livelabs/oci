@@ -1,4 +1,4 @@
-# Use OpenCost to Explore your Kubernetes Costs
+# Use OpenCost to explore your Kubernetes costs
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Get Started - Cloud Login
+# Get started
 
 ## Introduction
 

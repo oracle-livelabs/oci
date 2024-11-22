@@ -1,4 +1,4 @@
-# Setup OpenCost on your OKE Cluster
+# Setup OpenCost on your OKE cluster
 
 ## Introduction
 
