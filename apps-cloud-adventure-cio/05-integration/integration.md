@@ -19,15 +19,17 @@ With your adventure hat on and a curious mind, prepare for an exhilarating explo
 
 In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
 
-![Integration Objectives](images/Integration_objs2.png)
+Estimated Time: 15 minutes
 
+Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
 ## SCM: Use REST API to pull Fusion SaaS Application audit data for use in any external system
 
+1. In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
 
+    ![Integration Objectives](images/Integration_objs2.png)
 
-
-1. Let’s navigate to the Suppliers work area to modify a supplier’s address information
+2. Let’s navigate to the Suppliers work area to modify a supplier’s address information
 
     > Click the **Procurement** tab
 
@@ -39,7 +41,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
     ![Show More View](images/image004.png)
 
 
-2. Next, we’re going to search for the Supplier you’ve been assigned, e.g. “01…”
+3. Next, we’re going to search for the Supplier you’ve been assigned, e.g. “01…”
 
     > Click in the **Keywords** search bar
 
@@ -56,7 +58,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
     ![Search Results](images/image007.png)  
 
 
-3. We’re going to navigate to the Supplier’s addresses tab.
+4. We’re going to navigate to the Supplier’s addresses tab.
    
     > Click the **Addresses** tab
 
@@ -67,7 +69,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
     ![Edit Suppliers View](images/image009.png)  
 
 
-4.   **Note:** We’ll only edit the Supplier’s second line of address information, i.e. ‘Address Line 2’ text entry field. 
+5.   **Note:** We’ll only edit the Supplier’s second line of address information, i.e. ‘Address Line 2’ text entry field. 
 
     We’re going to add a Suite (e.g. 123) to the Supplier’s address information that was missing before.
 
@@ -87,7 +89,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
     ![Edit Suppliers View](images/image013.png)
 
-5.  **Note:** We’ve modified our demo environment’s approval workflow for internal supplier profile changes to be automatically approved for            demonstration purposes, however this can be configured based on each customer’s business requirements
+6.  **Note:** We’ve modified our demo environment’s approval workflow for internal supplier profile changes to be automatically approved for demonstration purposes, however this can be configured based on each customer’s business requirements
 
     > Click **OK** on the resulting confirmation box. 
 
@@ -99,7 +101,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 
 
-6. Let’s navigate back to the Oracle Fusion Cloud home screen.
+7. Let’s navigate back to the Oracle Fusion Cloud home screen.
 
     > Click the **Home** ![Home Icon](images/icon012_home.png) button
 
@@ -107,7 +109,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 
 
-7. Now, we’re going to discover how we can audit several pieces of information that’s relevant to our cloud adventure today: user access (sign in / sign out) as well as supplier address information changes via REST API integrations.
+8. Now, we’re going to discover how we can audit several pieces of information that’s relevant to our cloud adventure today: user access (sign in / sign out) as well as supplier address information changes via REST API integrations.
 
     > At the home screen, Navigate to **Integration** tab
 
@@ -124,7 +126,7 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
     **Take note of the detailed documentation. API endpoints, parameters, code examples, use cases, Oracle’s documentation is public and designed to be very useful.**
 
 
-8. Let’s review the REST API endpoints that we can use to review Auditable data that can be extracted from Fusion Cloud.
+9. Let’s review the REST API endpoints that we can use to review Auditable data that can be extracted from Fusion Cloud.
 
     ![Audit Report REST Endpoints](images/image019.png)
 
@@ -142,9 +144,8 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
 
 
 
-	
 
-14. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+10. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
