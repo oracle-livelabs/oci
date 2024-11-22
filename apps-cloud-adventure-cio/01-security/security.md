@@ -157,10 +157,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Copy Role 7g](images/image020.png)
 
-
-## Task 2: Compare Roles
-
-1. Using the compare roles feature, you can quickly identify changes you’ve made compared to the out of the box roles provided by Oracle or other custom roles.
+17. Using the compare roles feature, you can quickly identify changes you’ve made compared to the out of the box roles provided by Oracle or other custom roles.
 
   This section uses your newly created role to do exactly this.
 
@@ -168,7 +165,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Compare Roles Launch](images/image021.png)
 
-2. You will need to enter the name of your new role 
+18. You will need to enter the name of your new role 
 
   > Press the **Search** ![Search Icon](images/icon01_search.png) icon for the First Role
 
@@ -186,7 +183,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Compare Roles c](images/image025.png)
 
- 3. Now you will repeat these steps for the original role
+ 19. Now you will repeat these steps for the original role
 
   > Press the **Search** icon for the Second Role
 
@@ -206,13 +203,13 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Compare Roles F](images/image029.png)
 
-4. Immediately you see that Cancel Supplier Negotiation has been added to the first role and does not exist in the second role.
+20. Immediately you see that Cancel Supplier Negotiation has been added to the first role and does not exist in the second role.
 
  ![Compare Roles 6](images/image030.png)
 
 
 
-5. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+21. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 

@@ -314,6 +314,10 @@ You discovered how effortlessly Fusion Analytics enables the creation of content
 
 **You have successfully completed the Activity!**
 
+## Learn More
+
+* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/24r3/index.html)
+* [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 * **Author** - Sohel Jeelani, Analytics Solution Engineer, Advanced Technology Services
