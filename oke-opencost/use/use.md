@@ -51,8 +51,9 @@ Before starting this lab, ensure that you have completed all previous parts of t
 
   ![Image alt text](images/sample6.png)
 
-5. Identify cost patterns and explore areas for potential cost optimization across your cluster.
-Review the breakdown of costs per customer to assess cost efficiency.
+5. Identify cost patterns and explore areas for potential cost optimization across your cluster. For example, focus on the "Efficiency" column to review the cost breakdown per customer and assess resource utilization efficiency.
+
+
 
   ![Image alt text](images/sample7.png)
 
