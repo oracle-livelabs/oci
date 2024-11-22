@@ -19,15 +19,15 @@ A Kubernetes cluster consists of master and worker nodes running applications. I
 
 1. From the OCI Services menu, click **Developer Services > Kubernetes Clusters (OKE)**.
 
-	![Image alt text](images/sample1.png)
+	![Access to OKE](images/sample1.png)
 
 2. Under **List Scope**, select the compartment in which you would like to create a cluster. Click **Create Cluster**.
 
-	![Image alt text](images/sample2.png)
+	![Choose OKE compartment and create cluster](images/sample2.png)
 
 3. Choose **Quick Create** and click **Submit**.
 
-	![Image alt text](images/sample3.png)
+	![Quick Create cluster](images/sample3.png)
 
 4. Fill out the dialog box:
 
@@ -47,13 +47,13 @@ A Kubernetes cluster consists of master and worker nodes running applications. I
 
 5. Click **Next**.
 
-	![Image alt text](images/sample5.png)
+	![Create cluster](images/sample5.png)
 
 6. Click **Create Cluster**.
 
-	![Image alt text](images/sample5.png)
+	![Create cluster](images/sample5.png)
 
-	![Image alt text](images/sample6.png)
+	![View cluster](images/sample6.png)
 
 ## Task 2: Set Up Cloud Shell Access to Your Cluster
 
@@ -61,13 +61,13 @@ This section explains how to set up Cloud Shell to access and interact with your
 
 1. Open Cloud Shell by clicking its icon in the top-right corner of the Oracle Cloud Console.
 
-	![Image alt text](images/sample7.png)
+	![Open Cloud Shell](images/sample7.png)
 
 2. In the OKE console, click your cluster name. Then, click **Access Clusters** and select **Cloud Shell Access**. Copy the displayed command and paste it into Cloud Shell to run.
 
-	![Image alt text](images/sample8.png)
+	![Get code to configure Cloud Shell](images/sample8.png)
 
-	![Image alt text](images/sample9.png)
+	![Cloud Shell output](images/sample9.png)
 
 3. To test access to your cluster, list the worker nodes using the following command:
 
@@ -77,7 +77,7 @@ This section explains how to set up Cloud Shell to access and interact with your
 	<copy>
 	```
 
-	![Image alt text](images/sample10.png)
+	![List nodes](images/sample10.png)
 
 You may now proceed to the next lab.
 
