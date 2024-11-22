@@ -6,11 +6,11 @@ A Kubernetes cluster consists of master and worker nodes running applications. I
 
 **Estimated Time**: 45 minutes
 
-## Objectives
+### Objectives
 
 - Create a Kubernetes Cluster
 
-## Prerequisites
+### Prerequisites
 
 - OCI CLI installed
 - Basic understanding of Kubernetes
@@ -72,7 +72,9 @@ This section explains how to set up Cloud Shell to access and interact with your
 3. To test access to your cluster, list the worker nodes using the following command:
 
 	```bash
+	<copy>
 	kubectl get nodes
+	<copy>
 	```
 
 	![Image alt text](images/sample10.png)

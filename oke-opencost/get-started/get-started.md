@@ -6,16 +6,16 @@ Oracle Cloud is a leading, integrated cloud provider offering services across Sa
 
 **Estimated Time:** 5 minutes
 
-## Types of Cloud Accounts
+### Types of Cloud Accounts
 
 1. **Free Tier Accounts**: Details provided in a welcome email after signing up.
 2. **Paid Accounts**: Credentials sent to your company's default administrator, who assigns user access.
 
-## Objectives
+### Objectives
 
 - Learn to log in to your Oracle Cloud account.
 
-## Prerequisites
+### Prerequisites
 
 - **Cloud Account Name**: Provided by your administrator or welcome email.
 - **Username**: Your Oracle Cloud user ID.

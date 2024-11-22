@@ -1,14 +1,14 @@
 {
-    "workshoptitle": "Optimizing Kubernetes costs with Oracle Kubernetes Engine (OKE)",
+    "workshoptitle": "Optimize Kubernetes costs with Oracle Kubernetes Engine (OKE)",
     "help": "livelabs-help-**enterarea**_us@oracle.com",
     "tutorials": [
         {
-            "title": "Get started",
-            "filename": "../../get-started/get-started.md"
-        },
-        {
             "title": "Introduction",
             "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get started",
+            "filename": "../../get-started/get-started.md"
         },
         {
             "title": "Lab 1: Provision Oracle Container Engine for Kubernetes (OKE) cluster",
