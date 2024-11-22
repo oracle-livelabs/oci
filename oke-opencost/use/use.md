@@ -18,7 +18,7 @@ In this lab, you will:
 
 Before starting this lab, ensure that you have completed all previous parts of the workshop.
 
-### Task 1: Access OpenCost
+## Task 1: Access OpenCost
 
 1. From the OCI Console, navigate to **Networking > Load Balancers**.
 
