@@ -1,4 +1,4 @@
-# Deploying Oracle Container Engine for Kubernetes (OKE)
+# Provision Oracle Container Engine for Kubernetes (OKE)
 
 ## Introduction
 
