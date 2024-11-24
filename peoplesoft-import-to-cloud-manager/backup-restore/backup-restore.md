@@ -34,7 +34,7 @@ In this lab, you will backup the imported PeopleSoft Environment.
 
 Please refer to below **PeopleSoft Cloud Manager On OCI** workshop to learn more on lifecycle managment such as Patching an environment, Upgrading an environment, cloning an environment, refreshing an environment and selective adoption of PUM patching.
 
-https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=716&clear=RR,180&session=108710964343427
+https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=716&clear=RR,180&session=108710964343427
     
 In this lab, you have taken a full backup of the imported PeopleSoft Environment in PeopleSoft Cloud Manager.
 

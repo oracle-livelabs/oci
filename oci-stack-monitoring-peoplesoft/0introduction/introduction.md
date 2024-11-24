@@ -38,7 +38,7 @@ You will need the following to complete this workshop:
 * You must have subscribed to resources in OCI
 * Access to OCI Marketplace to deploy PeopleSoft if using OCI.
 * PeopleSoft application 9.2 with PeopleTools 8.58 or above already available on-premises or on Oracle Cloud Infrastructure.
-* In case of new PeopleSoft deployment on OCI using marketplace image, follow the PeopleSoft Rapid Provisioning Livelabs for instructions.Refer to link [here](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3208).
+* In case of new PeopleSoft deployment on OCI using marketplace image, follow the PeopleSoft Rapid Provisioning Livelabs for instructions.Refer to link [here](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3208).
 
 
 ## Appendix

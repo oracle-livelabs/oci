@@ -1,0 +1,1 @@
+This is an image of the Large Language Model Services section of the Settings page. From top to bottom: the +New LLM Service button, placeholders for Name, REST service, and RESt Service Handler. No service has been added, so the message "No LLM services are configured" appears.

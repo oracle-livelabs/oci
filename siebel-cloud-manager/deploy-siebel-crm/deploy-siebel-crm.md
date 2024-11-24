@@ -2,120 +2,200 @@
 
 ## Introduction
 
-In this lab, we will deploy the Siebel CRM. We shall prepare a JSON payload containing required environment details and send a **POST** request to the Siebel Cloud Manager API.
+In this lab, we will deploy Siebel CRM. We prepare a JSON payload containing required environment details and send a **POST** request to the Siebel Cloud Manager (**SCM**) API to activate the deployment process.
 
 Estimated Time: 1 hour
 
 ### Objectives
 
 In this lab, you will:
-*   Generate an Oracle Cloud Infrastructure user Auth Token
+
+*   Generate an Oracle Cloud Infrastructure (**OCI**) User Auth Token
 *   Prepare a payload to deploy Siebel CRM
 *   Install and set up Postman
-*   Execute the payload
+*   Submit the payload for processing
 *   Monitor the deployment
 *   Launch the Siebel Application
 
 ### Prerequisites
 
-* GitLab and Siebel Cloud Manager Instance
+* GitLab and SCM Instances
 * GitLab Access Token
 
-## Task 1: Generate an Oracle Cloud Infrastructure user Auth Token
+## Task 1: Generate an OCI User Auth Token
 
-We need to log in to the Oracle Cloud Infrastructure Tenancy and generate an auth token for our user. This token will be used as the **registry_password** in the payload.
+We need to log in to the OCI Tenancy and generate an [auth token for our user](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrygettingauthtoken.htm). When SCM comes to the point where it needs to store Siebel containers in the tenancy's container registry, this token will be used, supplied as the **registry_password** in the payload.
 
-1. Log in to the OCI tenancy. On the console, click the ***Profile Icon***
+1. Log in to the OCI tenancy.
 
-2. Click the first option that has the user id mentioned to reach the **User Details** page.
+2. Click the **Profile** icon at the top right and then click **My Profile**
 
    ![OCI Profile Icon](./images/oci-prof-icon.png)
 
 3. On the left side panel, in the **Resources** section, click ***Auth Tokens***
 
-4. Click ***Generate Token*** and give the **Description** as below.
+   ![OCI Profile Icon](./images/oci-prof-auth-tokens.png)
 
-   ```
-   <copy>Token for SiebelCM</copy>
-   ```
+4. Click **Generate Token**
 
    ![OCI Generate Token for User](./images/click-gen-token.png)
 
-5. Copy the auth token that got generated before closing the window as it will not be shown again.
+5. Populate the **Description** with a useful name, then click **Generate Token**.
+
+   ![OCI Generate Token for User](./images/oci-gen-token-dialog.png)
+
+   ```
+   <copy>SCM Registry Access</copy>
+   ```
+
+5. Copy the generated auth token and store it somewhere safe before closing the window as it will not be accessible again afterward. However, you can always delete the token and re-create a new one if required.
 
    ![OCI User Token Displayed](./images/oci-user-token-display.png)
 
 ## Task 2: Prepare a payload to deploy Siebel CRM
 
-After we have completed all the prior tasks, we can use Siebel Cloud Manager to deploy Siebel CRM
-on Oracle Cloud Infrastructure. To do this, we shall first prepare a suitable JSON payload and then execute this payload on Siebel Cloud
-Manager.
+We're now ready to use SCM to deploy Siebel CRM on OCI. To do this, we shall first prepare a suitable JSON payload and then **POST** this payload to SCM for processing.
 
-1. Consider a sample payload below. Substitute parameter values inside **{}** as required.
+1. Consider the sample payload below. Substitute parameter values inside **{}** as required.
 
    ```
-   <copy>{
+   <copy>
+   {
    "name": "SiebelLab",
    "siebel": {
-   "registry_url": "{Available_Endpoints_In_Your_Region}",
-   "registry_user": "{User_Id_To_Connect_To_Container_Registry}",
-   "registry_password": "{User_Auth_Token}",
-   "database_type": "Vanilla",
-   "industry": "Sales"
-   },
-   "infrastructure": {
-   "gitlab_url": "https://{Public IP of Gitlab Instance}",
-   "gitlab_accesstoken": "{Gitlab_Access_Token}",
-   "gitlab_user": "root",
-   "gitlab_selfsigned_cacert": "/home/opc/certs/rootCA.crt"
-   },
-   "database": {
-   "db_type": "ATP",
-   "atp": {
-   "admin_password": "WElcome123###",
-   "storage_in_tbs": 1,
-   "cpu_cores": 2
+         "registry_url": "{Available_Registry_Endpoint_In_Your_Region}",
+         "registry_user": "{User_Id_To_Connect_To_Container_Registry}",
+         "registry_password": "{User_Auth_Token}",
+         "database_type": "Vanilla",
+         "industry": "Financial Services"
+      },
+      "infrastructure": {
+         "gitlab_url": "https://{Public IP of Gitlab Instance}",
+         "gitlab_accesstoken": "{Gitlab_Access_Token}",
+         "gitlab_user": "root",
+         "gitlab_selfsigned_cacert": "/home/opc/certs/rootCA.crt"
+      },
+      "database": {
+         "db_type": "ATP",
+         "atp": {
+            "admin_password": "{OCID_For_Vault_Secret_For_Admin_Password}",
+            "storage_in_tbs": "1",
+            "cpu_cores": "2",
+            "wallet_password": "{OCID_For_Vault_Secret_For_Wallet_Password}"
+         },
+         "auth_info": {
+            "table_owner_password": "{OCID_For_Vault_Secret_For_TBLO_Password}",
+            "table_owner_user": "SIEBEL",
+            "default_user_password": "{OCID_For_Vault_Secret_For_Default_User}",
+            "anonymous_user_password": "{OCID_For_Vault_Secret_For_Anonymous_User_Password}",
+            "siebel_admin_password": "{OCID_For_Vault_Secret_For_Admin_Password}",
+            "siebel_admin_username": "SADMIN"
+         }
+      },
+      "size": {
+         "kubernetes_node_shape": "VM.Standard.E4.Flex",
+         "kubernetes_node_count": 3,
+         "node_shape_config": {
+            "memory_in_gbs": 20,
+            "ocpus": 2
+         },
+         "ses_resource_limits": {
+            "cpu": "2",
+            "memory": "15Gi"
+         },
+         "cgw_resource_limits": {
+            "cpu": "2",
+            "memory": "15Gi"
+         },
+         "sai_resource_limits": {
+            "cpu": "1",
+            "memory": "15Gi"
+         }
+      }
    }
-   },
-   "size": {
-   "kubernetes_node_shape": "VM.Standard.E4.Flex",
-   "kubernetes_node_count": 3,
-   "node_shape_config": {
-   "memory_in_gbs": 20,
-   "ocpus": 2
-   },
-   "ses_resource_limits": {
-   "cpu": 2,
-   "memory": "15Gi"
-   },
-   "cgw_resource_limits": {
-   "cpu": 2,
-   "memory": "15Gi"
-   },
-   "sai_resource_limits": {
-   "cpu": 1,
-   "memory": "15Gi"
-   }
-   }
-   }</copy>
+   </copy>
    ```
 
-   The below table describes certain important payload parameters. For the latest list of parameters, their description, and an example payload, please follow the Siebel Cloud Manager documentation attached to this Oracle Support article - **Using Siebel Cloud Manager to Deploy Siebel CRM on OCI (Doc ID 2828904.1).**   
+### Payload Parameter Options
+
+   The below table describes a couple of key payload parameters. For further details, please review the full SCM documentation in the [Siebel Bookshelf](https://www.oracle.com/documentation/siebel-crm-libraries.html) for the version you are deploying; e.g. [24.4](https://docs.oracle.com/cd/F26413_52/books/DeploySCM/c-deploying-siebel-crm-on-oci.html#Parameters-in-Payload-Content)
+
+   ![Payload parameter documentation for 24.4](./images/payload-parameter-documentation.png)
+
 
 | Payload Parameter | Description |
 |---|---|
 | registry_url | Specify the URL of the Docker container registry. If you are using the OCI registry in your tenancy, then use the container registry from the same region as the Siebel Cloud Manager instance. For example, for the Ashburn region, you might use iad.ocir.io. For other regions, see [https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm) |
 | registry_user | Specify the OCI user ID in either of the following formats,<br>Federated tenancies: {tenancy-namespace}/oracleidentitycloudservice/{username}<br>Non-Federated tenancies: {tenancy-namespace}/{username}<br>Refer to [https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionslogintoocir.htm](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionslogintoocir.htm) |
-| db_type | Specifies the database type |
-| registry_url | Refer to [https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm#regional-availability](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm#regional-availability) |
+| database_type | "Vanilla" or "Sample |
+| db_type | Specifies the database type. Options are "ATP", "DBCS_VM", "BYOD" |
+| industry | Provides a one-string method to deploy a given swathe of CRM functionality. Review the documentation for the version you are deploying. Valid values for 24.4 are "Automotive", Financial Services", "Life Sciences", "Sales", "Service", "Partner Relationship Management", "Public Sector", "Telecommunications", "Loyalty", "Consumer Goods", "Hospitality"
 
-## Task 3: Install and set up Postman
+## Task 3: Create vault secrets for passwords
 
-Postman is an API platform for building and using APIs. Postman can be either downloaded and installed in the local or we can also use its web version. For this lab, we shall use the web version.
+**Note:**
+
+The passwords you create in your vault for the auth_info section need to comply with the database password requirements, which are currently set to the most restrictive across all supported database types, namely DBCS. This means your actual password, as of the time of writing, needs to 9 to 30 characters long and contain at least 2 upper case characters, 2 lower case, 2 special, and 2 numbers. The special characters must be in the following set:
+
+   * underscore _
+   * hash #
+   * dash -
+
+Furthermore, don't include dictionary words in the password.
+
+1. Navigate to the OCI menu for **Vault** under **Identity & Security**
+
+   ![OCI Menu - Identity & Security - Vault](./images/oci-menu-vault.png)
+
+2. Ensure you've selected the correct compartment. This was created during Lab 2.
+
+   ![Compartment - Vaults](./images/oci-compartment-vaults.png)
+
+3. Click on name of the vault that was created. 
+
+   ![SiebelCM Vault - Encryption Keys](./images/siebelcm-vault-encryption-keys.png)
+
+4. Click **Create Key** to create a new master encryption key for the secrets we're about to create.
+
+   ![SiebelCM Vault - Encryption Keys](./images/siebelcm-vault-create-key.png)
+
+5. After a few moments, the state of the new encryption key will changes from **Creating** to **Enabled**, at which point you can proceed.
+
+   ![SiebelCM Vault - Encryption Keys](./images/siebelcm-vault-key-created.png)
+
+4. Now select **Secrets** at the bottom left of the screen.
+
+   ![SiebelCM Vault - Secrets](./images/oci-siebelcm-vault-secrets.png)
+
+4. Now create the secret, or secrets, you need using the **Create Secret** button. For simplicity in the live lab, we'll create a single secret and use that for all of the auth_info passwords. Give it a name and be sure to follow the note above to create a password that will be accepted. Select the Encryption Key we just created.
+
+   ![Create secret for auth_info section](./images/auth-info-secret.png)
+
+5. Click **Create Secret** to finalise the creation of the secret. Similarly with the encryption key creation, the secret is ready when the state changes from **Creating** to **Active**
+
+   ![Auth Info secret active](./images/auth-info-secret-active.png)
+
+6. Now click on the name of the secret, and copy the OCID of the newly created secret. It's this OCID value that is requried for the auth_info values.
+
+   ![Auth Info secret details](./images/auth-info-secret-details.png)
+
+7. Now repeat this process to create two additional secrets. One each for the ATP database password and wallet password.
+
+   ![All vault secrets](./images/all-vault-secrets.png)
+
+## Task 4: Login to Postman
+
+We need to submit the payload above to Siebel Cloud Manager in order to get things rolling. There are many options for this, but we'll use an application called Postman.
+
+Postman is an API platform for building and using APIs. Postman can be either downloaded and installed or used direcxtly from the web. For this lab, we shall use the web version, but for higher security you should install locally to your platform.
+
+**Note:**
+
+At the time of writing, these steps were taken using Google Chrome. Firefox seemed not to be able to correctly present the Postman user interface.
 
 1. Go to this website - [https://www.postman.com/downloads/](https://www.postman.com/downloads/)
 
-2. In the **Postman on the web** section, click ***Try the web version***
+2. In the **Postman on the web** section, click **Try the web version**
 
    ![Try the Web version](./images/try-web-version-postman.png)
 
@@ -123,21 +203,21 @@ Postman is an API platform for building and using APIs. Postman can be either do
 
    ![Create New Account](./images/create-new-account.png)
 
-4. Once the account has been successfully created, we will be directed to  [https://web.postman.co/home](https://web.postman.co/home)
+4. Once we complete the account onboarding process, we arrive at our new workspace. You can return here any time by visiting [https://web.postman.co/workspaces](https://web.postman.co/workspaces)
 
-5. Click ***Create New Workspace*** under the **Workspaces** menu. 
-
-6. Specify a **Name** of your choice and Choose **Personal** under **Visibility**. Click ***Create Workspace***.
-
-   ![Create New Workspace](./images/create-workspace.png)
+   ![Completed Onboarding](./images/postman-completed-onboarding.png)
 
 ## Task 4: Execute the payload
 
-1. Click ***New*** button and choose **HTTP Request**.
+1. Click **Send an API request**. This creates a new empty request for us to populate.
 
-   ![Create New Request](./images/create-new-req.png)   
+   ![Create New Request](./images/postman-new-request.png)
 
-2. In the horizontal menu, navigate to **Authorization**. Choose the Type **Basic Auth** from the drop-down. Give the **Username** and **Password** as below.
+2. In the horizontal menu, navigate to **Authorization**. Choose the Type **Basic Auth** from the drop-down.
+
+   ![Create New Request](./images/postman-request-basic-auth.png)
+
+3. Populate the **Username** and **Password** as follows.
 
     **Username**
 
@@ -145,17 +225,37 @@ Postman is an API platform for building and using APIs. Postman can be either do
 
     **Password**
 
-        <copy>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</copy>
+   The password is randomly generated at the time SCM is deployed. Obtain the value for your instance by using SSH (or Putty) to connect to the SCM instance. The admin password can be found in **/home/opc/config/api_creds.ini**
 
-   ![Give Authorization and credentials](./images/req_auth.png)   
+   ![Give Authorization and credentials](./images/req_auth.png)
 
-3. Navigate to **Body** menu and select the **raw** radio button. Change the format from **Text** to **JSON**.
+   e.g
+   ```
+   [opc@scm2024xxxx-siebel-cm config]$ pwd
+
+   /home/opc/config
+
+   [opc@scm2024xxxx-siebel-cm config]$ more api_creds.ini 
+
+   [basic_auth]
+
+   basic_auth_password = m4799g6z7d5DTp6l-oDUFifPl8FxOHtFv3UEMWmcOVgK34DxiWxxxx
+   ```
+
+   You may prefer to use Postman's capability to set the Authorization parameters for all requests in a collection.
+
+   ![Postman collection authorization settings](./images/postman-collection-auth.png) 
+
+   If you do this, set **Auth Type** for individual requests to **Inherit auth from parent**
+
+4. Navigate to **Body** menu and select the **raw** radio button. Verify that **JSON** is selected as the format.
 
    ![Choose Body and Format](./images/msg-body.png) 
 
-4. Paste the Payload in the body section.
 
-5. Set the following attributes for the request.
+5. Paste the populated Payload in the body section, indicated by the arrow above
+
+6. Set the following attributes for the request.
 
    **Method**
 
@@ -165,56 +265,32 @@ Postman is an API platform for building and using APIs. Postman can be either do
 
         <copy>http://{Public IP of the Siebel Cloud Manager Instance}:16690/scm/api/v1.0/environment</copy>
 
-6. Click ***Send***
+   ![POST and URL](./images/postman-post-and-url.png) 
 
-7. Save the response to a file as this has vital information on the Siebel environment that we are creating.
 
-8. Note the value of **env_id** from the response.
+7. Hopefully your request should look at little like this at this stage
+
+   ![Choose Body and Format](./images/postman-payload-ready.png) 
+
+8. Click **Save** to save your work. Give it a name and place it in a collection, creating a new collection if necessary.
+
+9. Click **Send**
+
+10. If you receive errors in the response and make changes to the payload, be sure to hit save each time. There's a lot of cut and pasting to generate the payload at present. You can validate the JSON using various online tools. Search for JSON Validator on Google for some ideas.
+
+11. Save the response to a file as this has vital information on the Siebel environment that we are creating.
+
+12. Note the value of **env_id** from the response
 
    ![Env ID from the log](./images/env-id.png)
 
-   **Note:**
-   
-   If you have selected "Advanced Network Configuration" in the Lab 2 - Task 2, then will encounter below error while submitting the Payload.
-
-   Schema validation error : 
-   {'infrastructure': {'_schema': [' Provide siebel environment subnet cidr ranges for advanced network configuration.']}
-
-   To Resolve this issue, you will need to correct the cidr blocks in the payload file.  The detailed update can be refered in Doc ID 2862505.1.
-
-       1. Modify your payload under the "infrastructure" section so that the subnet/CIDR range is added along with gitlab information.
-       
-          ```     
-       "infrastructure":
-         {
-         ...
-         "siebel_public_subnet_cidr" : "xx.x.x.x/xx",
-         "siebel_private_subnet_cidr" : "xx.x.x.x/xx",
-         "siebel_atp_subnet_cidr" : "xx.x.x.x/xx",
-         "siebel_cluster_subnet_cidr" : "xx.x.x.x/xx"
-         }
-          ```  
-      2. Once the above lines have been incorporated for subnet_cidr is added for public/private/atp/cluster, save the payload in Postman or the tool used for running payload.
-
-      3. Re-execute the payload now for the POST request.
-
-      4. Check to see if the payload creates the self-link and executes the stages for the OCI deployment of Siebel application for Lift & Shift or Greenfield.
-
-   **Important**
-   Starting from SCM Version 22.8, the parameter name changed from "siebel\_public\_subnet\_cidr" to "siebel\_lb\_subnet\_cidr"
-
-
-
-
-
-
-
-
 ## Task 5: Monitor the deployment
 
-After sending a post request with our payload, the Siebel Cloud Manager will prepare and deploy the Siebel CRM environment stack.
+After sending a post request with our payload, the Siebel Cloud Manager will prepare and deploy the Siebel CRM environment stack. This will take a while.
 
-1. With the **env_id** that we noted earlier, send a **GET** request to Siebel Cloud Manager from Postman as below.
+1. We can monitor the state of the deployment using the **env_id** that we noted earlier. To do this, create a **GET** request to Siebel Cloud Manager from Postman as below.
+
+   Start by creating a new request in Postman as follows:
 
    **Method**
 
@@ -224,83 +300,64 @@ After sending a post request with our payload, the Siebel Cloud Manager will pre
 
         <copy>http://{Public IP of the Siebel Cloud Manager Instance}:16690/scm/api/v1.0/environment/{env_id}</copy>
 
-    The log file will be returned as a response.
+   Ensure you populate the Authorization section with the user name **admin** and the password for your SCM deployment if you didn't setup Authorization already at the collection level.
+   
+   The log file generated during the deployment process will be returned as a response.
 
-    ![Deployment status log](./images/deploy-status-log.png) 
+   The response body will have a section named **stages** that indicates the particular stage of deployment. The **status** parameter in each stage can have values such as **passed, in-progress, failed**, etc.
 
-    The response body will have a section named **stages** that indicates the particular stage of deployment. The **status** parameter in each stage can have values such as **passed, in-progress, failed**, etc.
+   ![Deployment status log](./images/deploy-status-log.png) 
 
-    We can also monitor the **Oracle Resource Manager (ORM)** stack logs from the Oracle Cloud console to see the progress of the stack deployment.
+2. We can also monitor the **Oracle Resource Manager (ORM)** stack logs from the Oracle Cloud console to see the progress of the stack deployment.
 
-2. In the Oracle Cloud console, navigate to **Developer Services > Stacks**.
+   ![OCI Menu - Resource Manager Stacks](./images/oci-resource-manager-stacks.png) 
 
-3. In the list scope section on the left side panel, choose the compartment **scm-siebel-cm**.
+3. In the list scope section on the left side panel, choose the compartment **scm{date}-siebel-cm**.
 
-4. Drill down on the stack name and then drill down on the job name.
+   ![OCI Compartment Stacks](./images/oci-compartment-stacks.png) 
 
-      Monitor the logs here as it will be mentioning the resources' creation status.
+4. Click on the stack name (not the Gitlab one) and then drill down on the job name.
 
-      The ORM stack deployment is just one of the many **stages** of the overall Siebel CRM deployment. To check the other stages and their status regularly, send a **GET** request to the Siebel Cloud Manager API as mentioned earlier.
+   ![OCI Stack Job Progress](./images/oci-stack-job-progress.png) 
 
-      Each stage has its log and the path to it can be found in the respective section itself. In case required, login to the Siebel Cloud Manager instance using its public IP address and view the required log.
+   Monitor the logs to observe the resources' creation statii.
 
-5. (Optional) If the ORM stack deployment fails due to any of the following types of errors, then send a **PUT** request to rerun the job.
+   The ORM stack deployment is just one of the many **stages** of the overall Siebel CRM deployment. To check the other stages and their statii regularly, repeat step 1 above to send a **GET** request to the Siebel Cloud Manager API.
 
-      ```
-      Error: 400-InvalidParameter
+   Each stage has its own log and the path to it can be found in the respective section as **log_location**. If required, SSH to the Siebel Cloud Manager and view the specific log.
 
-      Provider version: 4.20.0, released on 2021-03-31. This provider is 36 updates behind to current.
+   ![SCM Deployment Stage Log](./images/scm-deployment-stage-log.png) 
 
-      Service: FileStorageFileSystem
-      Error Message: Ocid
-      'ocid1.compartment.oc1..aaaaaaaabwvdshyuwbyfpx72m4lq6yni673m2ewf7qrou7ha5dvaxrjeogfa' not found in Compartment Tree!
-
-      OPC request ID: a42cd5b1927359f403a56e8eabb378b8/47793109B015FB5F54CE70BC905ACF70/968A739323FC3A76967AD9E94862A1E2
-      Suggestion: Please update the parameter(s) in the Terraform config as per error message Ocid
-      'ocid1.compartment.oc1..aaaaaaaabwvdshyuwbyfpx72m4lq6yni673m2ewf7qrou7ha5dvaxrjeogfa' not found in Compartment Tree!
-
-      on modules/storage/main.tf line 1, in resource "oci_file_storage_file_system" "siebelCM_Fss"
-      1: resource "oci_file_storage_file_system" "siebelCM_Fss" {
-      ```
-
-6. (Optional) Send a **Put** request to rerun the stack as below in case any of the above errors were encountered.
-
-   **Method**
-
-        <copy>PUT</copy>
-
-   **Request URL**
-
-        <copy>http://{Public IP of the Siebel Cloud Manager Instance}:16690/api/v1/environments/{env_id}?rerun=true</copy>
-
-7. After all the **stages** have been completed successfully as **passed**, the list of relevant application URLs will be mentioned towards the end of the log as shown below.
+5. After all the **stages** have been completed successfully as **passed**, the list of application URLs for the deployed industry will be described at the end of the response.
 
    ![All Stages Passed](./images/appln-urls.png)
-
 
 ## Task 6: Launch the Siebel Application
 
 1. Launch the application URL in a new browser session and enter the below credentials.
 
+   ![Siebel Login](./images/sbl-login.png)
+
    **User Id**
 
-        <copy>sadmin</copy>
+        <copy>{siebel_admin_username}</copy>
 
    **Password**
 
-        <copy>SiebelAdmin123</copy>
+        <copy>[siebel_admin_password]</copy>
 
-    This password can be found in the log that was retrieved with the **GET** request and this can be found against the **userpassword** parameter under the **database** section.
+   These values correspond to those values you populated into the vault secrets, whose IDs were sent in the deployment payload.
 
-   ![Siebel Login](./images/sbl-login.png)
+   ![All Stages Passed](./images/scm-deployment-payload-database.png)
+
 
 ## Summary
 
-We have successfully deployed a new Siebel CRM environment using the Siebel Cloud Manager. Please follow the Siebel Cloud Manager documentation to understand the different payload parameters that can be customized while deploying the Siebel CRM.
+We have successfully deployed a new Siebel CRM environment using the Siebel Cloud Manager. Please follow the Siebel Cloud Manager documentation to understand the different payload parameters that can be customized while deploying Siebel CRM.
 In the next lab, you can view and manage the Siebel's Kubernetes Cluster to connect to the Siebel pods and perform administration and management.
 
 ## Acknowledgements
 
-* **Author:** Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
+* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
-* **Last Updated By/Date** - Sampath Nandha, Principal Cloud Architect, March 2023
+* **Last Updated By/Date** - Duncan Ford, Software Engineer, May 2024

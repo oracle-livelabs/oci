@@ -24,7 +24,7 @@ Video Recording
 ## Learn More
 
 Labs
-* [Creating a Resource Manager Stack](https://apexapps.oracle.com/pls/apex/f?p=133:180:17329166674129::::wid:611)
+* [Creating a Resource Manager Stack](https://livelabs.oracle.com/pls/apex/f?p=133:180:17329166674129::::wid:611)
 
 Resource Links for Reference
 * [Oracle Architecture Center](https://docs.oracle.com/solutions/?q=&cType=reference-architectures&sort=date-desc&lang=en)

@@ -10,8 +10,8 @@
           {
               "title": "Get Started",
               "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable).",
-              "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
-          },
+              "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+            },
           {
               "title": "Lab 1: Create SSH Keys Using Oracle Cloud Shell",
               "description": "Create SSH keys for use with this lab",

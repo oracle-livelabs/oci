@@ -36,8 +36,12 @@
             "filename": "../../Semantic-search/semantic-search.md"
         },
         {
-            "title": "Lab 7: Conversational search with RAG",
-            "filename": "../../Conversational-with-RAG/conversational-with-RAG.md"
+            "title": "Lab 7a: Conversational search Demo app",
+            "filename": "../../conversational-with-rag/conversational-with-rag-demo-stack.md"
+        },
+        {
+            "title": "Lab 7b: Conversational search DIY",
+            "filename": "../../conversational-with-rag/conversational-with-rag.md"
         },
         {
             "title": "Lab 8: Observability in OpenSearch",

@@ -37,7 +37,7 @@ In this lab, you will:
 	<copy>
 	./mvnw clean && ./mvnw install -pl lib -am && ./mvnw package -pl oci
 
-	MICRONAUT_ENVIRONMENTS=oraclecloud java -jar oci/target/oci-1.0-SNAPSHOT.jar
+	MICRONAUT_ENVIRONMENTS=oraclecloud java -jar oci/target/oci-storage-demo-oci-1.0-SNAPSHOT.jar
 	</copy>
 	```
 </if>

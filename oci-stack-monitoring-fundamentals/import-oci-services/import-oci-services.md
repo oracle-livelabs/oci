@@ -74,7 +74,7 @@ Estimated time: 10 minutes
 	
 	A helpful feature when triaging issues is the link to the OCI service resource home page. This link allows you to quickly navigate back to the load balancer's OCI page where you can alter the resource pool or restart a service. In this example using Stack Monitoring's topology, if we witness no activity on our EBS, we could quickly identify the WebLogic cluster that services EBS, then identify the load balancer in front of the cluster. Using the topology, simply click to navigate to the load balancer OCI service resource page and update the route configuration. All of this can be done without every typing or searching for a resource, simply follow the troubleshooting workflow.
 
-	![Load balancer home page, highlighting the link to the OCI service home page](images/3-3-import.png " ")
+	![Load balancer home page, highlighting the link to the OCI service home page](images/3-4-import.png " ")
 
 ## Task 4: Review the process of relating a load balancer to a WebLogic cluster to complete the topology.
 

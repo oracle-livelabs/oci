@@ -86,7 +86,7 @@ Estimated time: 10 minutes
 
 	![EBS homepage highlighting details of all open alarms of the EBS application](images/4-2-together.png " ")
 
-	Clicking **Charts** provides quick visibility into the health of the EBS application. Let's begin by expanding the chart time displayed from the **Last 60 Minutes** to **Last 24 Hours**.
+	Scrolling down to review **Key metrics** provides quick visibility into the health and performance of the EBS application. Let's begin by expanding the chart time displayed from the **Last 60 Minutes** to **Last 24 Hours**.
 
 	Using the chart **Executed Programs by Running Time** you can easily gain insight into the five longest-running programs. In the screenshot below, we can see the job execution times have remained steady, outside of a small jump. Should you see any long running spikes, an admin can use their domain knowledge to pinpoint a job that is running longer than expected. Again using the screenshot below, the **Completed Requests by Application** chart illustrates how busy a job is to the overall jobs running. The chart **Active User Sessions By Responsibility** in the screenshot below, shows a spike in active user **NULL_KEY** and should be investigated.
 

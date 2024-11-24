@@ -29,7 +29,7 @@ Video Recording
 ## Learn More
 
 Labs
-* [Oracle Cloud Budget and Cost Analysis](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=668&p210_wec=&session=110134051858977)
+* [Oracle Cloud Budget and Cost Analysis](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=668&p210_wec=&session=110134051858977)
 
 Resource Links for Reference 
 * [Billing and Budgeting](https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/billingoverview.htm): Various billing and payment tools that make it easy to manage your servive costs.
