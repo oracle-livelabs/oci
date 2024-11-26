@@ -47,7 +47,7 @@ A Kubernetes cluster consists of master and worker nodes running applications. I
 
 5. Click **Next**.
 
-	![Create cluster](images/sample5.png)
+	![Create cluster](images/sample4.png)
 
 6. Click **Create Cluster**.
 
