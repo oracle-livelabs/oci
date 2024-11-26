@@ -10,8 +10,6 @@ The OCI APM Java agent is designed to monitor Java applications and supports mul
 
 Estimated time: 10 minutes
 
-Watch the video below for a quick walk-through of the lab.
-[Instrument the server monitoring](videohub:1_2mpynh0j)
 
 ### Objectives
 
@@ -37,7 +35,7 @@ As a pre-requisite to automataically deploy APM Java agent in the Kuberenetes, c
     ```
    ![Oracle Cloud console, Cloud Shell](images/1-1-cert-manager.png " ")
 
-2. Then install the **[OpenTelemetry Operator](https://github.com/open-telemetry/opentelemetry-operator)** into the Kubernetes cluster.
+2. Once the command is complete, wait for 30 seconds to complete the configuration in the background. Then install the **[OpenTelemetry Operator](https://github.com/open-telemetry/opentelemetry-operator)** into the Kubernetes cluster by running the command below. 
 
     ``` bash
     <copy>
@@ -46,51 +44,40 @@ As a pre-requisite to automataically deploy APM Java agent in the Kuberenetes, c
     ```
    
    ![Oracle Cloud console, Cloud Shell](images/1-2-otel-operator.png " ")
+ 
+ >**Note:** if you see an error, **no endpoints available for service "cert-manager-webhook"**, re-run the command to install OpenTelemetry Operator.
 
-## Task 2: Create Kubernetes custom resource defiition file
+## Task 2: Create Kubernetes custom resource definition
 
 To manage automatic instrumentation, the operator must have information about the agent and its configuration.
 
 The first requirement is addressed using a Custom Resource Definition (CRD). The Custom Resource will be used by the operator to copy the agent into the pod with required configuration. The OpenTelemetry operator uses Kubernetes annotations to determine which pods should be automatically injected with the OCI APM Java agent.
 
-1. Use any editor to create a custom resource definition file.
+1. To create a custom resource definition, replace **Data Upload Endpoint**, and the **Private Data key** (copied from the APM domain adminstration page in the previous labs) in the command below, and then execute it.
 
     ``` bash
     <copy>
-    vi customapmresoruce.yaml
-    </copy>
-    ```
-
-2. Copy the below content, and past it into the file. Replace **Data Upload Endpoint**, and the **Private Data key**, which you copied from the APM domain adminstration page in the previous labs
-
-    ``` bash
-    <copy>
+    kubectl apply -f - <<EOF
     apiVersion: opentelemetry.io/v1alpha1
     kind: Instrumentation
     metadata:
-    name: inst-apm-java
-    namespace: opentelemetry-operator-system
+      name: inst-apm-java
+      namespace: opentelemetry-operator-system
     spec:
-    java:
-        image: us-ashburn-1.ocir.io/idpyjkbcc9tk/apm-java-agent-aio:latest
+      java:
+        image: container-registry.oracle.com/oci_observability_management/oci-apm-java-agent:latest
         env:
-        - name: OTEL_com_oracle_apm_agent_data_upload_endpoint
+          - name: OTEL_com_oracle_apm_agent_data_upload_endpoint
             value: <DATA UPLOAD END POINT>
-        - name: OTEL_com_oracle_apm_agent_private_data_key
+          - name: OTEL_com_oracle_apm_agent_private_data_key
             value: <PRIVATE DATA KEY>
+    EOF
     </copy>
     ```
 
-    ![Oracle Cloud console, Cloud Shell](images/2-1-create-cr.png " ")
-
-3. Apply the Custom Resource definition to the Kubernetes cluster. You can ignore the warning.
-
-    ``` bash
-    <copy>
-    kubectl apply -f ~/sb-hol/customapmresoruce.yaml
-    </copy>
-    ```
     ![Oracle Cloud console, Cloud Shell](images/2-2-apply-cr.png " ")
+
+ >**Note:** You can ignore the warning. 
 
 ## Task 3: Add an annotation to the namespace
 
@@ -107,37 +94,31 @@ Another requirement to manage automatic instrumentation is to specify which pods
     ``` bash
     <copy>
     annotations:
-      Instrumentation.opentelemetry.io/inject-java: "opentelemetry-operator-system/inst-apm-java"
+      instrumentation.opentelemetry.io/inject-java: "opentelemetry-operator-system/inst-apm-java"
     </copy>
     ```
      ![Oracle Cloud console, Cloud Shell](images/3-1-annotation.png " ")
 
 ## Task 4: Redeploy the application
 
-1. Redeploy the application to verity the data collection. First delete the application by running the command below.
+1.  Run the the command below to restart the stafulsets. This will redeploy the application.
 
     ``` bash
     <copy>
-    kubectl delete -f ~/sb-hol/wstore.yaml 
+    kubectl rollout restart statefulset 
     </copy>
     ```
-2. Wait for the command completes, then deploy the winestore applcation.
 
-    ``` bash
-    <copy>
-    kubectl apply -f ~/sb-hol/wstore.yaml --validate=false
-    </copy>
-    ```
      ![Oracle Cloud console, Cloud Shell](images/4-1-restart-app.png " ")
     
-3. Ensure the pods are in the running state. This may take a few minutes.  
+2. Ensure the pods are in the running state. This may take a few minutes.  
 
    ``` bash
     <copy>
     kubectl get pods
     </copy>
     ```
-4. Run the command below to obtain the application's external IP address. 
+3. Run the command below to obtain the application's external IP address. 
 
     ``` bash
     <copy>

@@ -88,11 +88,8 @@ Watch the video below for a quick walk-through of the lab.
     ```
   ![Oracle Cloud console, Cloud Shell](images/4-1-cloudshell.png " ")
 
-    >**Note:** Verify there are the following files in the folder.
-    - apmlab-fss.yaml
-    - wstore.yaml
-    - wstore-add-storage.yaml
-    - wstore-deploy-agent.yaml
+    >**Note:** Verify the **wstore.yaml** file is in the folder.
+    
 
 3. Execute the command below to deploy the application to the cluster.
     ``` bash
