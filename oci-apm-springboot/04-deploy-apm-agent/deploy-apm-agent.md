@@ -35,7 +35,7 @@ As a pre-requisite to automataically deploy APM Java agent in the Kuberenetes, c
     ```
    ![Oracle Cloud console, Cloud Shell](images/1-1-cert-manager.png " ")
 
-2. Once the command is complete, wait for 30 seconds to complete the configuration in the background. Then install the **[OpenTelemetry Operator](https://github.com/open-telemetry/opentelemetry-operator)** into the Kubernetes cluster by running the command below. 
+2. Once the command is complete, wait for 30 seconds to complete the configurations in the background. Then install the **[OpenTelemetry Operator](https://github.com/open-telemetry/opentelemetry-operator)** into the Kubernetes cluster by running the command below. 
 
     ``` bash
     <copy>

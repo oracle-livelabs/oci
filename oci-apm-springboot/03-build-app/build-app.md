@@ -56,81 +56,164 @@ Watch the video below for a quick walk-through of the lab.
 
   >**Note:** Save the command to a text file on your laptop, and execute it whenever you start a new Cloud Shell session while working in the labs in this workshop.
 
-## Task 3: Download configuration files
+## Task 3: Create a configuration file
 
-1. Download the zip file to the home directory in the Cloud Shell.
-
-    ``` bash
-    <copy>
-    cd ~; wget https://objectstorage.us-phoenix-1.oraclecloud.com/n/axfo51x8x2ap/b/apmocw-bucket-2022/o/sb-hol.zip
-    </copy>
-    ```
-    ![Oracle Cloud console, Cloud Shell](images/3-1-cloudshell.png " ")
-
-3. Unzip the file. This will create a directory **sb-hol**.
+1.  In the Cloud Shell, type down the command below to create a work directory.
 
     ``` bash
     <copy>
-    unzip ~/sb-hol.zip
+    mkdir ~/sb-hol;cd ~/sb-hol
     </copy>
     ```
 
-  ![Oracle Cloud console, Cloud Shell](images/3-2-cloudshell.png " ")
+      ![Oracle Cloud console, Cloud Shell](images/3-1-mkdir.png " ")
+
+2. Use text editor (such as the vi editor tool) to create a configuration file within the directory.
+
+    ``` bash
+    <copy>
+    vi wstore.yaml
+    </copy>
+    ```
+      ![Oracle Cloud console, Cloud Shell](images/3-2-wstore.png " ")
+      
+      >**Note**: If you are using the vi editor, type i to enter Insert mode, and make the text editable. Use allow keys to navigate the text and make changes to where you set the cursor. To save a file, press the Esc key, then type :wq to write and quit the file. If you do not wish a change, press Esc then type :q! to discard your changes. Please refer to the editor's references for more usage. 
+  
+
+3. Copy the content below and paste it into the configuration file. 
+
+    ``` bash
+    <copy>
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: wstore-frontend
+    spec:
+      type: LoadBalancer
+      selector:
+        app: wstore-front
+      ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 8080
+      externalTrafficPolicy: Local
+      topologyKeys:
+      - "kubernetes.io/hostname"
+      - "*"
+    ---
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: wstore-backend
+    spec:
+      type: NodePort
+      selector:
+        app: wstore-back
+      ports:
+        - protocol: TCP
+          port: 8080
+          targetPort: 8080
+    ---
+    apiVersion: apps/v1
+    kind: StatefulSet
+    metadata:
+      name: wstore-front
+    spec:
+      serviceName: "wstore-frontend"
+      replicas: 1
+      selector:
+        matchLabels:
+          app: wstore-front
+      template:
+        metadata:
+          labels:
+            app: wstore-front
+        spec:
+          containers:
+          - name: wstore
+            image: iad.ocir.io/axfo51x8x2ap/p-winestore:latest
+            command: ["java", "-jar", "./wineStore.jar", "--spring.config.location=file:/spring/wstore.properties"]
+            ports:
+            - containerPort: 8080
+          imagePullSecrets:
+              - name: ocirsecret
+    ---
+    apiVersion: apps/v1
+    kind: StatefulSet
+    metadata:
+      name: wstore-back
+    spec:
+      serviceName: "wstore-backend"
+      replicas: 2
+      selector:
+        matchLabels:
+          app: wstore-back
+      template:
+        metadata:
+          labels:
+            app: wstore-back
+        spec:
+          containers:
+          - name: wstore
+            image: iad.ocir.io/axfo51x8x2ap/p-winestore:latest
+            command: ["java", "-jar", "./wineStore.jar", "--spring.config.location=file:/spring/wstore.properties"]
+            ports:
+            - containerPort: 8080
+          imagePullSecrets:
+              - name: ocirsecret
+
+    </copy>
+    ```
+      ![Oracle Cloud console, Cloud Shell](images/3-3-wstore-content.png " ")
+
+      >**Note**:  Make sure to keep the same space indentation when pasting the code into the file.
+
+
 
 ## Task 4: Deploy the application
 
-1. Execute the following command from the Cloud Shell.
-
-    ``` bash
-    <copy>
-    cd ~/sb-hol;ls
-    </copy>
-    ```
-  ![Oracle Cloud console, Cloud Shell](images/4-1-cloudshell.png " ")
-
-    >**Note:** Verify the **wstore.yaml** file is in the folder.
-    
-
-3. Execute the command below to deploy the application to the cluster.
+1.  Execute the command below to deploy the application to the cluster.
     ``` bash
     <copy>
     kubectl apply -f ~/sb-hol/wstore.yaml --validate=false
     </copy>
     ```
 
-4. Verify the 2 services and 2 stateful sets are created.
+  Verify the 2 services and 2 stateful sets are created.
 
-  ![Oracle Cloud console, Cloud Shell](images/4-2-cloudshell.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/4-1-apply.png " ")
 
 
-5. Run the kubectl command below to display the status of the pod creation. Wait until the statuses become 'Running'. This may take a few minutes.
+2. Run the kubectl command below to display the status of the pod creation. Wait until the statuses become 'Running'. This may take a few minutes.
 
     ``` bash
     <copy>
     kubectl get pods
     </copy>
     ```
-  ![Oracle Cloud console, Cloud Shell](images/4-2-1-cloudshell.png " ")
 
-5. Run the kubectl command below to display the deployed services.
+   ![Oracle Cloud console, Cloud Shell](images/4-2-pods.png " ")
+
+3. Run the kubectl command below to display the deployed services.
 
     ``` bash
     <copy>
     kubectl get svc
     </copy>
     ```
-5. Copy the External IP of the wstore-frontend service
 
-  ![Oracle Cloud console, Cloud Shell](images/4-3-cloudshell.png " ")
+4. Copy the External IP of the wstore-frontend service
 
-6. Refer to the below example and construct a URL, and paste it into a browser's address bar. If you see the WineCellar content as in the below screenshot, the deployment was successful.
+    ![Oracle Cloud console, Cloud Shell](images/4-3-svc.png " ")
+
+5. Refer to the below example and construct a URL, and paste it into a browser's address bar. If you see the WineCellar content as in the below screenshot, the deployment was successful.
 
     ``` bash
     <copy>
     http://<IP of the wstore-frontend service>/winestore/
     </copy>
     ```
-  ![WineCellar Demo app](images/4-4-winestore.png " ")
+   ![Oracle Cloud console, Cloud Shell](images/4-4-app.png " ")
 
     >**Note:** It may take a few minutes to complete the deployment and start loading the page content on the screen for the first time.  
 
