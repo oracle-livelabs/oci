@@ -35,9 +35,9 @@
             "filename": "../../04-deploy-apm-agent/deploy-apm-agent.md"
         },
         {
-            "title": "Lab 5: Instrument browser monitoring",
-            "description": "Instrumentation for browser monitoring",
-            "filename": "../../05-configure-browser-agent/configure-browser-agent.md"
+            "title": "Lab 5: Verify APM Agent setup and data collection",
+            "description": "Verify APM Agent setup and data collection",
+            "filename": "../../05-verify-agent/verify-agent.md"
         },
         {
             "title": "Lab 6: View traces and spans in APM Trace Explorer",

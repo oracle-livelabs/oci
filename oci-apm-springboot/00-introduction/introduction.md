@@ -27,7 +27,7 @@ In the workshop, you will learn how to automatically instrument a Java microserv
 In this workshop, you will:
 * Create an APM domain, obtain Data Upload Endpoint and Data Keys
 *	Install OpenTelemetry Operator and deploy the APM Java agent
-*	Instrument APM Browser agent
+*	Configure Kubernetes custom resoruce to automatically inject APM Browser Agent
 *	Use APM Trace Explorer to view traces, spans, and span dimensions
 
 ### Prerequisites
