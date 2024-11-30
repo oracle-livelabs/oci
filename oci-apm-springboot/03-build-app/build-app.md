@@ -6,9 +6,6 @@ This workshop uses Spring Boot-based Java microservices as a target application 
 
 Estimated time: 10 minutes
 
-Watch the video below for a quick walk-through of the lab.
-[Build a microservices application](videohub:1_94bv1d35)
-
 ### Objectives
 
 * Build a microservices application for monitoring
@@ -97,9 +94,6 @@ Watch the video below for a quick walk-through of the lab.
           port: 80
           targetPort: 8080
       externalTrafficPolicy: Local
-      topologyKeys:
-      - "kubernetes.io/hostname"
-      - "*"
     ---
     apiVersion: v1
     kind: Service
@@ -175,7 +169,7 @@ Watch the video below for a quick walk-through of the lab.
 1.  Execute the command below to deploy the application to the cluster.
     ``` bash
     <copy>
-    kubectl apply -f ~/sb-hol/wstore.yaml --validate=false
+    kubectl apply -f ~/sb-hol/wstore.yaml
     </copy>
     ```
 
