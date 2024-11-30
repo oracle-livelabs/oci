@@ -39,7 +39,7 @@ As a pre-requisite to automataically deploy APM Java agent in the Kuberenetes, c
     ```
    ![Oracle Cloud console, Cloud Shell](images/1-1-cert-manager.png " ")
 
-2. Once the command is complete, wait for 30 seconds to complete the configurations in the background. Then install the **[OpenTelemetry Operator](https://github.com/open-telemetry/opentelemetry-operator)** into the Kubernetes cluster by running the command below. 
+2. Once the command is complete, wait for 20 seconds to complete the configurations in the background. Then install the **[OpenTelemetry Operator](https://github.com/open-telemetry/opentelemetry-operator)** into the Kubernetes cluster by running the command below. 
 
     ``` bash
     <copy>
@@ -59,11 +59,21 @@ The first requirement is addressed using a Custom Resource Definition (CRD). The
 
 In the custom resource, you can add parameters to enable APM Browser Agent Injection. This configures the APM Java Agent to automatically inject the browser agent, enabling real-time user session monitoring for the application.
 
-1. To create a custom resource definition, replace **Data Upload Endpoint**, **Private Data key** and the **Public Data key** (copied from the APM domain adminstration page in the previous labs) in the command below, and then execute it.
+
+
+1. To create a custom resource definition, use text editor (such as the vi editor tool) to create a configuration file within the workshop directory.
 
     ``` bash
     <copy>
-    kubectl apply -f - <<EOF
+     vi ~/sb-hol/customapmresource.yaml
+    </copy>
+    ```
+
+2. Copy the content below and paste it into the configuration file. Replace **Data Upload Endpoint**, **Private Data key** and the **Public Data key** (copied from the APM domain adminstration page in the previous labs) and save the file.
+
+
+    ``` bash
+    <copy>  
     apiVersion: opentelemetry.io/v1alpha1
     kind: Instrumentation
     metadata:
@@ -85,7 +95,16 @@ In the custom resource, you can add parameters to enable APM Browser Agent Injec
             value: wstore-web
           - name: OTEL_com_oracle_apm_agent_rum_web_application
             value: "Wstore WebApp"
-    EOF
+   
+    </copy>
+    ```
+  ![Oracle Cloud console, Cloud Shell](images/2-1-create-cr.png " ")
+
+    3. Execute the command below to create a custom resource to the cluster.
+
+    ``` bash
+    <copy>
+     kubectl apply -f ~/sb-hol/customapmresource.yaml
     </copy>
     ```
 
