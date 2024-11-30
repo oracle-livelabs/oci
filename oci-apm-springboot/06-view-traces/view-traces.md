@@ -107,7 +107,7 @@ Watch the video below for a quick walk-through of the lab.
 
 ## Conclusions
 
-In this workshop, you’ve learned how to use a file system by adding the APM Java agent to the microservices web application. You have also learned how to configure the APM Browser agent, and how to use APM Trace Explorer to view traces and spans. For more information on APM, refer to the OCI documentation, **[Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)**.
+In this workshop, you learned how to use the Kubernetes OpenTelemetry Operator to automatically deploy an APM Java agent to a microservices web application. You also explored how to configure the APM Browser agent within a custom resource definition and use the APM Trace Explorer to view traces and spans. For more information on APM, refer to the OCI documentation, **[Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)**.
 
 
 ## Acknowledgements
