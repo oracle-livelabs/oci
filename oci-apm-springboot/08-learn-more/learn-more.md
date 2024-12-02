@@ -25,12 +25,12 @@ In this workshop, you will learn how to use Oracle Cloud APM to examine critical
 
 ## Task 1: Access the workshop
 
-1. Click the link following URL to access the workshop: **[Get started with Oracle Cloud APM](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3350)** Workshop.
+1. Click the link following URL to access the workshop: **[Get started with Oracle Cloud APM](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3350)** Workshop.
 Alternatively, open a new browser tab, copy the following URL, paste it to the address bar, and hit enter.
 
    ``` bash
    <copy>
-   https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3350
+   https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3350
    </copy>
    ```
 

@@ -8,7 +8,7 @@ Estimated time: 5 minutes
 
 ### Objectives
 
-* Verify the APM Browser Agent injection in the WineCellar applicatin.
+* Verify the APM Browser Agent injection in the WineCellar application.
 * Generate workload on the application by navigating through the pages.
 * Verify data collection on APM Trace Explorer page.  
 

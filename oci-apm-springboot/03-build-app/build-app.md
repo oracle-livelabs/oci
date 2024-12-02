@@ -26,30 +26,30 @@ Estimated time: 10 minutes
 
 3. If the status of the cluster is **Active**, creation was successful. If it is still in a **Creating** status, it may take a few more minutes to complete. (Usually, it takes 7 to 10 minutes to finish the jobs to create a cluster).
 
-   ![Oracle Cloud console, Cluster details](images/1-9-OKE.png " ")
+   ![Oracle Cloud console, Cluster details](images/1-9-oke.png " ")
 
 ## Task 2: Access the OKE in the Oracle Cloud shell
 
 
 1. Click **Access Cluster** on the cluster details page.
 
-  ![Oracle Cloud console, Cluster details](images/2-1-OKE.png " ")
+  ![Oracle Cloud console, Cluster details](images/2-1-oke.png " ")
 
 2. Make sure the **Cloud Shell Access** is selected. Click the **Copy** link from the command to access kubeconfig for the cluster.
 
-  ![Oracle Cloud console, Cluster details](images/2-2-OKE.png " ")
+  ![Oracle Cloud console, Cluster details](images/2-2-oke.png " ")
 
 3. Then click **Launch Cloud Shell**.
 
-  ![Oracle Cloud console, Cluster details](images/2-2-2-OKE.png " ")
+  ![Oracle Cloud console, Cluster details](images/2-2-2-oke.png " ")
 
 4. Oracle Cloud Shell window opens at the lower side of the browser screen.
 
-  ![Oracle Cloud console, Cluster details](images/2-3-OKE.png " ")
+  ![Oracle Cloud console, Cluster details](images/2-3-oke.png " ")
 
 5. Paste the copied command to the command shell prompt. Then hit enter.   
 
-  ![Oracle Cloud console, Cluster details](images/2-4-OKE.png " ")
+  ![Oracle Cloud console, Cluster details](images/2-4-oke.png " ")
 
   >**Note:** Save the command to a text file on your laptop, and execute it whenever you start a new Cloud Shell session while working in the labs in this workshop.
 

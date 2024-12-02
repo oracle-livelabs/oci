@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will instrement the application using the OpenTelemetry (OTEL) Operator, which automatically inject and configure APM Java Agent to the Kuberenetes cluster.
+In this lab, you will instrument the application using the OpenTelemetry (OTEL) Operator, which automatically inject and configure APM Java Agent to the Kubernetes cluster.
 
 The OCI APM Java agent is designed to monitor Java applications and supports multiple deployment options across Kubernetes and other environments. The latest addition to these options is the OTEL operator, a Kubernetes operator that simplifies the automatic injection of Java agents into JVMs running in Kubernetes Pods.
 
@@ -17,7 +17,7 @@ Estimated time: 5 minutes
 ### Objectives
 
 * Install cert-manager and the OpenTelemetry Operator.
-* Use Kubernetes custom resouces and annotations to deploy the APM agent to the cluster.
+* Use Kubernetes custom resources and annotations to deploy the APM agent to the cluster.
 * Enable APM Browser Agent injection for real-time user session monitoring.
 
 
@@ -28,7 +28,7 @@ Estimated time: 5 minutes
 
 ## Task 1: Install cert-manager and OpenTelemetry Operator
 
-As a pre-requisite to automataically deploy APM Java agent in the Kuberenetes, cert-manager and OpenTelemetry Operator must to be installed.
+As a pre-requisite to automatically deploy APM Java agent in the Kubernetes, cert-manager and OpenTelemetry Operator must to be installed.
 
 1. Run the command below to install cert-manager.
 
@@ -69,7 +69,7 @@ In the custom resource, you can add parameters to enable APM Browser Agent Injec
     </copy>
     ```
 
-2. Copy the content below and paste it into the configuration file. Replace **Data Upload Endpoint**, **Private Data key** and the **Public Data key** (copied from the APM domain adminstration page in the previous labs) and save the file.
+2. Copy the content below and paste it into the configuration file. Replace **Data Upload Endpoint**, **Private Data key** and the **Public Data key** (copied from the APM domain administration page in the previous labs) and save the file.
 
 
     ``` bash
@@ -116,7 +116,7 @@ In the custom resource, you can add parameters to enable APM Browser Agent Injec
 
 Another requirement to manage automatic instrumentation is to specify which pods should be instrumented. This is handed by special annotations. Annotations can be added to a namespace to inject all pods within that namespace. Alternatively, annotations can be applied to individual PodSpec objects, such as those in Deployment, StatefulSet, and other resources. In this lab, annotation is applied to the entire namespace for the learning purposes.
 
-1. Open the namespage to edit.
+1. Open the namespace to edit.
 
     ``` bash
     <copy>
@@ -134,7 +134,7 @@ Another requirement to manage automatic instrumentation is to specify which pods
 
 ## Task 4: Redeploy the application
 
-1.  Run the the command below to restart the stafulsets. This will redeploy the application.
+1.  Run the command below to restart the stafulsets. This will redeploy the application.
 
     ``` bash
     <copy>
