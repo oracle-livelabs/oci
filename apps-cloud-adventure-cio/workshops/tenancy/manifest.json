@@ -33,11 +33,6 @@
         }, 
 
         {
-            "title": "Lab 7: Integration ***OLD***",
-            "filename": "../../05-integration/integration_old.md"
-        }, 
-     
-        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
