@@ -284,7 +284,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
-## 
+## ERP & SCM: Update Suppliers (New) Listing Page
 
 1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update the Suppliers (New) listing page providing more visibility to Procurement Managers. Suppliers (New) is a dynamic listing page that allows you to create role-based layouts based on configurable criteria.
 
