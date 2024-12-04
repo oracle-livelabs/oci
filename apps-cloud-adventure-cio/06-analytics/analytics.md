@@ -19,7 +19,7 @@ Estimated Time: 15 minutes
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
  
 
-## HCM: Create analytics across different lines of business to derive better business insight
+## HCM & ERP: Create analytics across different lines of business to derive better business insight
 
 
 
@@ -176,7 +176,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
 
-## SCM: Create analytics across different lines of business to derive better business insight
+## ERP & SCM: Create analytics across different lines of business to derive better business insight
 
 
 1. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
