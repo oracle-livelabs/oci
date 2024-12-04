@@ -4,15 +4,15 @@
 
 Welcome to Oracle’s Cloud Adventure.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered in accounting and finance. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the CIO.
 
-Estimated Time: 15 minutes
-
-
 ### Objectives
 
 During this adventure, you will perform a time sensitive task of granting permissions to a user.  
 
+Estimated Time: 15 minutes
 
-## SCM: Extending Privileges to a User
+Do not forget to answer the Adventure Check Point questions at the end of the exercise!
+
+## ERP
 
 1. During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
 
