@@ -23,7 +23,7 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-## SCM: Use REST API to pull Fusion SaaS Application audit data for use in any external system
+## ERP & SCM: Use REST API to pull Fusion SaaS Application audit data for use in any external system
 
 1. In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
 
