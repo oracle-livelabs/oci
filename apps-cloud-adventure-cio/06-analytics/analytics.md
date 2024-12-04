@@ -179,18 +179,30 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 ## ERP & SCM: Create analytics across different lines of business to derive better business insight
 
 
-1. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
+1. In this activity, you will Create analytics across different lines of business to derive better business insight
 
-    Login to your Fusion Data Intelligence Portal using the URL provided.
+    ![Analytics OBJs](images/analytics_objs1.png)
 
-    > Open a web browser and enter the URL provided, then on the login screen, type in the Username and Password. Click Sign In.
+2. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
 
-    ![Login](images/image101.png)
+    > (1) Click on the **‘Analytics’** tab <br>
 
-    After a successful login, you will land on the Oracle Analytics home page. 
+    > (2) Click on **‘Fusion – Analytics Data Intelligence’** icon <br>
+
+    ![Login](images/image001.png)
 
 
-2. A finance Watchlist comprising several Tiles is available on the home page. 
+
+3. After a successful login, you will land on the Oracle Analytics home page. 
+
+    > (1) Enter assigned username and Fusion Analytics Password  <br>
+
+    > (2) Click on the ‘Sign In’ <br>
+
+    ![Login](images/image023.png)
+
+
+4. A finance Watchlist comprising several Tiles is available on the home page. 
 
     One metric that draws my attention is Margin, which is trending low. 
 
@@ -201,7 +213,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     ![Analytics home](images/image102.png)
 
 
-3.  This action expands the Tile and opens the workbook. 
+5.  This action expands the Tile and opens the workbook. 
 
     Let's now set the workbook to design mode so that we can add cost elements. 
 
@@ -215,7 +227,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     ![Workbook Design Mode](images/image103.png)
 
 
-4.  Next, let’s expand the Auto Insights pane for better observability. 
+6.  Next, let’s expand the Auto Insights pane for better observability. 
 
     > Click on the Expand / Shrink Icon  ![Expand / Shrink Icon ](images/icon104.png)  as shown in the image.
 
@@ -224,7 +236,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 
 
-5.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories. 
+7.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories. 
 
     > (1) Locate the “Top 10 Expense Categories by Expenses” insight and click the Add Icon  ![Add Icon ](images/icon106.png)  shown in the image. This will add the Insight to the Canvas.  <br>
 
@@ -233,13 +245,13 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     ![Auto insights view](images/image107.png)
 
 
-6. Let’s create a new Canvas to under the SCM issue
+8. Let’s create a new Canvas to under the SCM issue
 
      > Locate the plus ![plus icon](images/cplus.png) icon at the bottom of the page and click it to create a new canvas. <br>
 
 ![new canvas](images/scm-001.png)
 
-7. We will add Supply Chain data to the canvas
+9. We will add Supply Chain data to the canvas
 
      > Expand the SCM Dataset by clicking on the Triangle   icon.  Expand the Fiscal Data folder and locate Month Column. <br>
 
@@ -250,7 +262,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     ![2 images](images/scm-002.png)
 
 
-8. Total cost has been varying over time. We need to understand what is causing the increase and decrease
+10. Total cost has been varying over time. We need to understand what is causing the increase and decrease
 
      > Expand the Fiscal Data folder and locate Month Column. <br>
 
@@ -262,7 +274,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![expand Fiscal Data folder ](images/scm-003.png)
 
-9. Change the visualization type
+11. Change the visualization type
 
      > In the Properties panel in the center. Click on the inverted triangle ![inverted triangle](images/invtriangle.png) to expand the Analytics Type panel and choose Bar Type.<br>
 
@@ -273,7 +285,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     ![Properties panel  ](images/scm-005.png)
 
 
-10. We need to understand what is causing the off contract purchasing. 
+12. We need to understand what is causing the off contract purchasing. 
 
      > Expand the Fiscal Data folder and locate Month Column. <br>
 
@@ -289,7 +301,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Properties panel](images/scm-007.png)
 
-11. Lets find out which supplier is responsible for the issue.
+13. Lets find out which supplier is responsible for the issue.
 
      > Locate supplier and drop it into the color section. <br>
 
@@ -301,12 +313,12 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Properties panel](images/scm-009.png)
 
-12. Two suppliers are the cause of the issue. 
+14. Two suppliers are the cause of the issue. 
 
     ![Analytics view](images/scm-009.png)
 
 
-13. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+15. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
