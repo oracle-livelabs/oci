@@ -4,15 +4,15 @@
 
 Oracle Cloud Applications include an embedded tool called Visual Builder.  Visual Builder is the same tool that Oracle uses to develop application screens and it's available for you to create additional screens.  These screens can leverage both Oracle Cloud Application data and, if necessary, data from external systems.
 
-Estimated Time: 15 minutes
-
-
 ### Objectives
 
 In this lab, you will use Visual Builder to create additional screens
 
+Estimated Time: 15 minutes
 
-## SCM: Create a simplified user interface using Redwood Design Patterns and Oracle Visual Builder.
+Do not forget to answer the Adventure Check Point questions at the end of the exercise! 
+
+## ERP & SCM: Create a simplified user interface using Redwood Design Patterns and Oracle Visual Builder.
 
 
 1. In this lab, you will Use Visual Builder to build a new Supplier Screen.
