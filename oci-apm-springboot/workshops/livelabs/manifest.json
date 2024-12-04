@@ -30,8 +30,8 @@
         },
 
         {
-            "title": "Lab 4: Instrument server monitoring with OTEL operator",
-            "description": "Instrumentation for server monitoring",
+            "title": "Lab 4: Instrument server with OTEL operator",
+            "description": "Instrument server with OTEL operator",
             "filename": "../../04-deploy-apm-agent/deploy-apm-agent.md"
         },
         {

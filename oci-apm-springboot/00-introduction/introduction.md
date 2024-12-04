@@ -1,15 +1,15 @@
 # Introduction
 
-## About this Workshop
-
+## About this workshop
 This workshop walks you through how to configure Spring Boot microservices deployed on Kubernetes for monitoring with the Oracle Application Performance Monitoring (APM) service. This enables automatic OpenTracing instrumentation and metrics collection that is used to provide full, end-to-end monitoring and diagnostics for the application.
 
 In this workshop, you will instrument the application using the OpenTelemetry (OTEL) Operator, which automatically inject and configure APM Java Agent to the Kubernetes cluster, instrument the APM Browser agent by inserting JavaScript code to a webpage and view traces and spans in APM Trace Explorer.
 
 >**Note:** The same approach demonstrated for Spring Boot Java microservices on Kubernetes can be used to configure other types of java application servers, such as WebLogic, deployed on Kubernetes.
 
-
 Estimated Time: 45 minutes
+
+## Task 1: Know before you run
 
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 
@@ -31,7 +31,6 @@ In this workshop, you will:
 *	Use APM Trace Explorer to view traces, spans, and span dimensions
 
 ### Prerequisites
-
 
 * An Oracle Free Tier with a 30-day free trial or Paid Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported.
 

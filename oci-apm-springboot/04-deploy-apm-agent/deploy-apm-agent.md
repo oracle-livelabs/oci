@@ -1,4 +1,4 @@
-# Instrument the server monitoring with OpenTelemetry Operator
+# Instrument the server with OpenTelemetry Operator
 
 ## Introduction
 
