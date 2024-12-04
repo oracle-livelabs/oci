@@ -12,7 +12,7 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-## ERP
+## ERP & SCM: Extending Privileges to a User
 
 1. During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
 
