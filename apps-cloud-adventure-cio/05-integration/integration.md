@@ -2,7 +2,7 @@
 
 ## Introduction
 
-As you have seen in the previous Cloud Adventures, Oracle delivers a fine grained security model which allows companies to enforce tight controls over who has access to both application features and data. While these controls provide adminstrators with powerful tools, good corporate governance requires that application auditing is used to back up the security controls you implement.
+As you have seen in the previous Cloud Adventures, Oracle delivers a fine grained security model which allows companies to enforce tight controls over who has access to both application features and data. While these controls provide administrators with powerful tools, good corporate governance requires that application auditing is used to back up the security controls you implement.
 
 For this Cloud Adventure, we have already used audit profiles to enable auditing on select fields in the applications.
 You will begin the adventure by accessing the native application screens to update a supplier address. Each participant is assigned a supplier based on your login ID.
@@ -12,7 +12,7 @@ Included in your adventure is a quick tour of the REST API documentation. While 
 
 We've designed this journey to be interactive and engaging. Make sure to answer the Adventure Check Point questions at the end, ensuring you capture the full potential of this experience. These check points are your path to becoming a master auditor, so pay close attention!
 
-With your adventure hat on and a curious mind, prepare for an exhilarating exploration of Fusion Cloud data aduit and REST API integration features. Let's embark on this thrilling journey together!
+With your adventure hat on and a curious mind, prepare for an exhilarating exploration of Fusion Cloud data audit and REST API integration features. Let's embark on this thrilling journey together!
 
 
 ### **Objectives**
@@ -154,7 +154,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 As you have seen, the Oracle SaaS applications may be configured to capture who updates select fields, when the update was performed, the previous value and the updated value. Having this level of auditing serves a critical role in providing governance and controls over your enterprise applications. As an administrator, you will implement the controls your company chooses to enforce. The combination of fine grained applications security and application data audit provide the end to end controls you will need.
 
-This Cloud Adventure also featued the importance of having open REST intefaces for accessing and sharing data with external systems. In the case of audit data, you may want to send this data to a SIEM or data warehouse for analysis.
+This Cloud Adventure also featured the importance of having open REST interfaces for accessing and sharing data with external systems. In the case of audit data, you may want to send this data to a SIEM or data warehouse for analysis.
 
 **You have successfully completed the Activity!**
 

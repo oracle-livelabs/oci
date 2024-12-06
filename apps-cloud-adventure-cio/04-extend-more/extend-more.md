@@ -134,7 +134,7 @@ In this activity you will use HCM Guided Journey Task with User Defined Content 
 
    > (1) Click the **Get Additional Compensation Info** link. 
 
-   ![Get ADditional Compensation Info](images/hcmimage013.jpg)  
+   ![Get Additional Compensation Info](images/hcmimage013.jpg)  
 <br>
 
 14. The Guided Journey Task has called your User Defined Content integration.  As discussed in the introduction to this adventure, it calls Oracle Integration to gather additional prompt information, such as Position and New York, prior to our Generative AI call to the external LLM.  The results are then formatted and displayed as shown.
@@ -220,7 +220,7 @@ In this activity you will use a Guided Journey Task with User Defined Content an
    ![Navigate to Procurement Self-Service Requisitions](images/poimage007.jpg)  
 <br>
 
-8. You're going to purchase a couple of pieces of equipment for your office space.  You need a headset for phonecalls and a new printer.  So, let's see what's available.
+8. You're going to purchase a couple of pieces of equipment for your office space.  You need a headset for phone calls and a new printer.  So, let's see what's available.
 
    > Click the **Office Technology** tile on the bottom right.
 
@@ -245,10 +245,10 @@ In this activity you will use a Guided Journey Task with User Defined Content an
 
    > Enter **LasetJet** in the **Search for items or services** field and hit Enter.
 
-   ![Searcth for stuff to buy](images/poimage011.jpg)  
+   ![Search for stuff to buy](images/poimage011.jpg)  
 <br>
 
-12. There are a lot of options, but you decide to go with the one ofhte LaserJet Pro printers.
+12. There are a lot of options, but you decide to go with the one of the LaserJet Pro printers.
 
    > Click the **Add to Cart** button for the **LaserJet Pro 400 M401n Laser Printer** tile. <br>   
 
@@ -323,7 +323,7 @@ In this activity you will use a Guided Journey Task with User Defined Content an
 
 This Extension adventure introduced you to a few of the capabilities that customers can leverage to extend Oracle Fusion Cloud applications.  These features allow you to fine tune your Oracle Fusion Cloud Applications for peak performance, business processes tailored to you requirements, and fast, efficient usage.
 
- You learned how to setup and defined a Guided Journey, which provies your users with the real-time, inline guidance and information required to complete their tasks.  
+ You learned how to setup and defined a Guided Journey, which provides your users with the real-time, inline guidance and information required to complete their tasks.  
 
 You also learned how to leverage 3rd party Generative AI capabilities by leveraging external LLMs directly from the Guided Journey feature of Oracle Fusion Cloud Applications.  
 
