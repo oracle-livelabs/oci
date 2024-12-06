@@ -23,11 +23,13 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 
 
-1. In this activity, you will Create analytics across different lines of business to derive better business insight
+1. In this activity, you will Create analytics across different lines of business to derive better business insights.
+
+    Cross-functional reporting analysis between ERP & HCM involves integrating data from core business operations finance with workforce-related data (such as employee performance, payroll, and workforce planning) providing comprehensive insights for decision-making, enabling organizations to align their human resource strategies with broader business objectives.
 
     ![Analytics OBJs](images/analytics_objs1.png)
 
-    Cross-functional reporting analysis between ERP & HCM involves integrating data from core business operations finance with workforce-related data (such as employee performance, payroll, and workforce planning) providing comprehensive insights for decision-making, enabling organizations to align their human resource strategies with broader business objectives.
+    
 
 2. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
 
@@ -181,11 +183,13 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 ## ERP & SCM: Unify finance and supply chain data to identify bottlenecks and optimize resource allocation
 
 
-1. In this activity, you will Create analytics across different lines of business to derive better business insight
+1. In this activity, you will Create analytics across different lines of business to derive better business insights.
+
+    ERP & SCM cross-functional reporting combines data from business processes like finance with supply chain operations. By providing a unified view of supply chain and enterprise operations, cross-functional reporting helps identify bottlenecks, optimize resource allocation, and improve supply chain resilience. Such insights are crucial for aligning supply chain strategies with overall business goals and achieving operational excellence.
 
     ![Analytics OBJs](images/analytics_objs1.png)
 
-    ERP & SCM cross-functional reporting combines data from business processes like finance with supply chain operations. By providing a unified view of supply chain and enterprise operations, cross-functional reporting helps identify bottlenecks, optimize resource allocation, and improve supply chain resilience. Such insights are crucial for aligning supply chain strategies with overall business goals and achieving operational excellence.
+
 
 2. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
 
