@@ -27,6 +27,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Open Visual Builder](images/image001.png)
 
+
 3. We have pre-defined a Project.  A project collects all the people, tools, and processes you need to complete a unit of work.  You can use a project to host source code files, track issues, collaborate on code, and build and deploy your applications. If your team is extending Oracle Cloud Applications, you’ll probably want to set things up so that you have a single project dedicated to work with a single repository for each Application. 
 
     > **Click** on the **‘CloudAdventure’** project
@@ -175,6 +176,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     ![add supplier service to screen](images/image021.png)
 
 23. You now have a table to hold the data. Next, you’ll add the Supplier data from our REST API. You can use the Quick Start feature to help with this task.
+
 
 
     > (1) Click in the newly created **Table** region.<br>
