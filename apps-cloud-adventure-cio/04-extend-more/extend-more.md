@@ -45,7 +45,7 @@ In this activity you will use HCM Guided Journey Task with User Defined Content 
     > (1) Enter **CA&#95;##** in the **search** field, **where ## is your assigned user number**. <br>
     ![View Caution](images/cautionaboutusernumbers.png)
 
-    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/icon11_search.png) icon or press the **Enter** key to execute the search.
+    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/icon10_searchdark.png) icon or press the **Enter** key to execute the search.
 
     ![Search Guided Journey](images/hcmimage002.jpg)  
 <br>
@@ -174,7 +174,7 @@ In this activity you will use a Guided Journey Task with User Defined Content an
     > (1) Enter **CA&#95;##** in the **search** field, **where ## is your assigned user number**. <br>
     ![View Caution](images/cautionaboutusernumbers.png)
 
-    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/icon11_search.png) icon or press the **Enter** key to execute the search.
+    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/icon10_searchdark.png) icon or press the **Enter** key to execute the search.
 
     ![Search Guided Journey](images/poimage002.jpg)  
 <br>
