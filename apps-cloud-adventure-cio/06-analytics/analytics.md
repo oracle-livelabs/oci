@@ -19,7 +19,7 @@ Estimated Time: 15 minutes
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
  
 
-## ERP & HCM: Create analytics across different lines of business to derive better business insight
+## ERP & HCM: Integrate data from core business operations finance with workforce-related data to gain comprehensive insights for decision-making.
 
 
 
@@ -178,7 +178,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
 
-## ERP & SCM: Create analytics across different lines of business to derive better business insight
+## ERP & SCM: Combine data from finance with supply chain operations to identify bottlenecks, optimize resource allocation, and improve supply chain resilience.
 
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insight
