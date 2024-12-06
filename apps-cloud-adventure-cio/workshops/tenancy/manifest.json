@@ -12,7 +12,7 @@
         },
         {
             "title": "Lab 2: Configure",
-            "filename": "../../02-configure-hcm/configure.md"
+            "filename": "../../02-configure/configure.md"
         },
         {
             "title": "Lab 3: Extend",
@@ -20,7 +20,7 @@
         },
         {
             "title": "Lab 4: Extend More",
-            "filename": "../../04-extend-scm-llm/extend-more-po.md"
+            "filename": "../../04-extend-more/extend-more.md"
         }, 
         {
             "title": "Lab 5: Audit",
@@ -29,9 +29,9 @@
 
         {
             "title": "Lab 6: Analytics",
-            "filename": "../../06-analytics-hcm/analytics.md"
+            "filename": "../../06-analytics/analytics.md"
         }, 
-     
+
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
