@@ -19,7 +19,7 @@ Estimated Time: 15 minutes
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
  
 
-## ERP & HCM: Integrate data from core business operations finance with workforce-related data to gain comprehensive insights for decision-making.
+## ERP & HCM: Integrate data from finance with workforce-related data to gain comprehensive insights for decision-making.
 
 
 
