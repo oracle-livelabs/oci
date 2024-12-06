@@ -148,7 +148,7 @@ In this activity you will use HCM Guided Journey Task with User Defined Content 
     
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
-## SCM: Guided Journey for PO Requisition Item Reviews
+## ERP & SCM: Guided Journey for PO Requisition Item Reviews
 
 
 **Objectives**<br>
