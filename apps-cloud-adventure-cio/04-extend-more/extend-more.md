@@ -45,7 +45,7 @@ In this activity you will use HCM Guided Journey Task with User Defined Content 
     > (1) Enter **CA&#95;##** in the **search** field, **where ## is your assigned user number**. <br>
     ![View Caution](images/cautionaboutusernumbers.png)
 
-    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon] icon or press the **Enter** key to execute the search.
+    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/icon11_search.png) icon or press the **Enter** key to execute the search.
 
     ![Search Guided Journey](images/hcmimage002.jpg)  
 <br>
@@ -77,7 +77,7 @@ In this activity you will use HCM Guided Journey Task with User Defined Content 
 
 6. The next step is the configuration the Compensation Info UI to leverage your Guided Journey. To do that, you can head back to the home page.
 
-   > Click on the **Home** ![Home Icon](images/Icon03_home.png)  icon on the top icon bar.
+   > Click on the **Home** ![Home Icon](images/icon13_home.png)  icon on the top icon bar.
 
    ![Go Home](images/hcmimage006.jpg)  
 <br>
@@ -92,7 +92,7 @@ In this activity you will use HCM Guided Journey Task with User Defined Content 
 
 8. There are no matching workers, so you can unselect Direct reports to broaden our search.
 
-   > Click the ![X Icon](images/icon014_X.png) next to Direct Reports under the search field.
+   > Click the ![X Icon](images/icon14_X.png) next to Direct Reports under the search field.
 
    ![Remove Direct Reports Filter](images/hcmimage008.jpg)  
 <br>
@@ -125,7 +125,7 @@ In this activity you will use HCM Guided Journey Task with User Defined Content 
 12. You will now see the Get Additional Compensation Info link available on the screen.  If you recall, this was the name of the Task we defined earlier and is your link to the User Defined Configuration call to the LLM.
  
    > (1) Confirm (don't click, just confirm) that the **Get Additional Compensation Info** link now appears on the bottom left of the screen.
-   > (2) Click the **Preview** ![Preview](images/icon016_preview.png) icon in the top right of the screen.
+   > (2) Click the **Preview** ![Preview](images/icon16_preview.png) icon in the top right of the screen.
 
    ![Preview](images/hcmimage012.jpg)  
 <br>
@@ -174,7 +174,7 @@ In this activity you will use a Guided Journey Task with User Defined Content an
     > (1) Enter **CA&#95;##** in the **search** field, **where ## is your assigned user number**. <br>
     ![View Caution](images/cautionaboutusernumbers.png)
 
-    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/Icon01_search.png) icon or press the **Enter** key to execute the search.
+    > (2) Click the **Magnifying Glass** ![Magnifying Glass Icon](images/icon11_search.png) icon or press the **Enter** key to execute the search.
 
     ![Search Guided Journey](images/poimage002.jpg)  
 <br>
@@ -206,7 +206,7 @@ In this activity you will use a Guided Journey Task with User Defined Content an
 
 6. You have successfully configured a new Guided Journey Task with User Defined Content. Now you are ready to include this new change in Self-Service Procurement.  The next step is to create a Requisition using Self-Service Procurement.  To start this you can head back to the home page.
 
-   > Click on the **Home** ![Home Icon](images/Icon03_home.png)  icon on the top icon bar.
+   > Click on the **Home** ![Home Icon](images/icon13_home.png)  icon on the top icon bar.
    ![Go Home](images/poimage006.jpg)  
    
 <br>
@@ -289,7 +289,7 @@ In this activity you will use a Guided Journey Task with User Defined Content an
 
 17. You will now see the Product Items Review graphic on the screen.  This was defined in the Category Template at the beginning of this adventure.  You will now test this by running the screen in Preview mode.
 
-   > Click the **Preview** ![Preview](images/Icon06_preview.png) icon in the top right of the screen.
+   > Click the **Preview** ![Preview](images/icon16_preview.png) icon in the top right of the screen.
 
    ![Go to Preview](images/poimage017.jpg)  
 <br>   
