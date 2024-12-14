@@ -141,11 +141,7 @@ Queries can be also modified by adding a filter, to narrow down the traces to me
 
     In the web-based shopping cart application that is monitored by APM, users are expected to run a transaction having a series of steps to complete the purchase. In this environment, the buying process is covered through Journey data. The customer journey steps are defined as the following.
 
-    	* 0-search
-    	* 1-logged-in
-    	* 2-addToCart
-    	* 3-checkedOut
-    	* 4-orderConfirmed
+    0-search,1-logged-in, 2-addToCart, 3-checkedOut and 4-orderConfirmed
 
     At present, the query retrieves all session data regardless of whether the user completed the transaction or aborted it. 
 
@@ -370,4 +366,4 @@ Anand Prabhu, Sr. Member of Technical Staff,
 Robert Brouwer, Consulting Member of Technical Staff,  
 Jurgen Leijer, Senior Product Strategy Director, Management Cloud,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, June 2024
+* **Last Updated By/Date** - Yutaka Takatsu, December 2024

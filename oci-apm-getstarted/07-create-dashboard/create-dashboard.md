@@ -321,4 +321,4 @@ At present, the widget displays the default query. You can change the query depe
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, June 2024
+* **Last Updated By/Date** - Yutaka Takatsu, December 2024
