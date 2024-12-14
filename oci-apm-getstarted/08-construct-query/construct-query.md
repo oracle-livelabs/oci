@@ -195,12 +195,14 @@ To fix the invalidated data in the query, we can move out the condition that was
 
 1. Update the query by inserting the below statement right before the **WHERE** clause.
 
-
+	``` bash
+	<copy>
 		,case when(
 			sum(case when (JourneyPhase = '4-orderConfirmed') 
 			then 1 else 0 end)
 			)>0 then 'reached' else '0' end as step4 
-
+	</copy>
+	```
 
 	Explanations:
 	* The **CASE** expression returns a value when the first condition is met.
@@ -213,7 +215,11 @@ To fix the invalidated data in the query, we can move out the condition that was
 
 2. Next, insert a **HAVING** clause right before the **ORDER BY** statement.
 
-		 having sum(case when (JourneyPhase = '4-orderConfirmed') then 1 else 0 end) >0 
+	``` bash
+	<copy>
+	 having sum(case when (JourneyPhase = '4-orderConfirmed') then 1 else 0 end) >0 
+	</copy>
+	```
 
 	Explanations:
 	* The **HAVING** statement filters the record from the group based on the specified condition.
@@ -251,9 +257,13 @@ In some cases, you may want to know whether a user made a click action on Web UI
 
 1.	Update the query by inserting the below statement right before the **WHERE** clause.
 
-		, case when(
-		sum(case when (ApmrumClickElementId='/html/body/app-root/app-prod-list/div/div[3]/div[4]/mat-card/mat-card-actions/button/span') then 1 else 0 end)
-		)>0 then 'clicked' else '-' end as Button 
+	``` bash
+	<copy>
+	, case when(
+	sum(case when (ApmrumClickElementId='/html/body/app-root/app-prod-list/div/div[3]/div[4]/mat-card/mat-card-actions/button/span') then 1 else 0 end)
+	)>0 then 'clicked' else '-' end as Button 
+	</copy>
+	```
 
 	Explanations:
 
@@ -288,13 +298,17 @@ With the information on the button click, you may want to get an understanding o
 
 1. Update the query by inserting the below statements right before the first **CASE** statement.
 
-		min(case when(JourneyPhase = '2-addToCart') 
-		then TraceLatestSpanEndTime end) - min(TraceFirstSpanStartTime) 
-		as "time to addToCart",
+	``` bash
+	<copy>
+	min(case when(JourneyPhase = '2-addToCart') 
+	then TraceLatestSpanEndTime end) - min(TraceFirstSpanStartTime) 
+	as "time to addToCart",
 
-		min(case when(JourneyPhase = '3-checkedOut') 
-		then TraceLatestSpanEndTime end) - min(TraceFirstSpanStartTime) 
-		as "time to checkOut", 
+	min(case when(JourneyPhase = '3-checkedOut') 
+	then TraceLatestSpanEndTime end) - min(TraceFirstSpanStartTime) 
+	as "time to checkOut", 
+	</copy>
+	```
 
 	Explanations:
 	* The **CASE** expression returns a value when the first condition is met.
@@ -303,7 +317,11 @@ With the information on the button click, you may want to get an understanding o
 
 2. Next, modify the **ORDER BY** statement as shown below, so that the results are sorted based on the **Duration**.
 
-		order by max(TraceLatestSpanEndTime) - min(TraceFirstSpanStartTime) desc
+	``` bash
+	<copy>
+	order by max(TraceLatestSpanEndTime) - min(TraceFirstSpanStartTime) desc
+	</copy>
+	```
 
 	Explanations:
 	* An expression **max(TraceLatestSpanEndTime) - min(TraceFirstSpanStartTime)** determines the duration of the session.
