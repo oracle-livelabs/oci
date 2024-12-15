@@ -23,7 +23,7 @@ Watch the video below for a quick walk-through of the lab.
 * An Oracle Free Tier, Always Free, or a Paid Cloud Account
 
 
-## Task 1: Launch the Cloud Shell and verify Helidon prerequisites
+## Task 1: Launch the Cloud Shell and install Helidon prerequisites
 
 1. Launch the Oracle Cloud Shell from the Oracle Cloud Console by selecting the **Developer tools** icon, then select **Cloud Shell**.
 
@@ -31,70 +31,77 @@ Watch the video below for a quick walk-through of the lab.
 
  ![Cloud Shell menu](https://oracle-livelabs.github.io/common/images/console/cloud-shell.png " ")
 
-2. Helidon requires Java 11 (or newer) and Maven 3.6.1. Verify the versions by running the following commands.
+2. Helidon 4.1.5 requires Java 21+ and Maven 3.8+. Verify the versions by running the following commands.
 
 	``` bash
 	<copy>
-	java -version
-	</copy>
-	```
-	``` bash
-	<copy>
-	mvn -version
+	java -version; mvn -v
 	</copy>
 	```
 
   	![Cloud Shell](images/1-2-cloudshell-check-versions.png " ")
 
-	If the Maven version is not 3.6.1, you can install it in the next task.
+	As of December 2024, ARM Cloud Shell has Maven 3.5.0, and Java 11. You can install required versions of Java and Maven manually to complete this workshop in the next task.
 
-	>**Note:** Paid tier users can switch the Cloud shell architecture from the default ARM to **X64\_64**, with Maven 3.6.1 and Java 11 preinstalled. Select **Actions** from the menu, then select **Architecture**.
-![Cloud Shell](images/1-3-cloudshell-menu.png " ")
-Select **x86_64** and click **Confirm and Restart**
-![Cloud Shell](images/1-4-cloudshell-switch-architecture.png " ")
-Vefify the Java and Maven versions. 
-![Cloud Shell](images/1-5-cloudshell-switch-confirm.png " ")
-You can skip the Task 2 and go to the Task 3.
-	
+## Task 2: Install Java 23
 
-
-## Task 2: Install Maven 3.6.1
-
-As of June 2024, ARM Cloud Shell has Maven 3.5.0, and Java 11. Free tier users can install Maven 3.6.1 manually to complete this workshop.
-
-1. Download Maven 3.6.1
+1. Download Java 23 (JDK Development Kit 23.01 for ARM 64)
 	``` bash
 	<copy>
-	curl -sLO https://archive.apache.org/dist/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
+	curl -sLO https://download.oracle.com/java/23/latest/jdk-23_linux-aarch64_bin.tar.gz
 	</copy>
 	```
-2. Unzip the file
+2. Unzip the file and install Java
 	``` bash
 	<copy>
-	gunzip apache-maven-3.6.1-bin.tar.gz
+	tar zxvf jdk-23_linux-aarch64_bin.tar.gz
 	</copy>
 	```
-3. Install Maven
+3. Add to the Path  
 	``` bash
 	<copy>
-	tar xvf apache-maven-3.6.1-bin.tar
+	export JAVA_HOME=~/jdk-23.0.1
+	export PATH="$JAVA_HOME/bin:$PATH"
 	</copy>
 	```
-4. Add to the Path  
+
+4. Check the Java version to ensure it is 23.
 	``` bash
 	<copy>
-	export MVN_HOME=~/apache-maven-3.6.1 
+	java -version
+	</copy>
+	```
+	![Cloud Shell](images/2-4-java-version.png " ")
+## Task 3: Install Maven 3.9.9
+
+1. Download Maven 3.9.9
+	``` bash
+	<copy>
+	curl -sLO https://archive.apache.org/dist/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+	</copy>
+	```
+2. Unzip the file and install Java
+	``` bash
+	<copy>
+	tar zxvf apache-maven-3.9.9-bin.tar.gz
+	</copy>
+	```
+3. Add to the Path  
+	``` bash
+	<copy>
+	export MVN_HOME=~/apache-maven-3.9.9
     export PATH="$MVN_HOME/bin:$PATH"
 	</copy>
 	```
-	e.g., export PATH="/home/labuser/apache-maven-3.6.1/bin:$PATH". 
 
-5. Check the maven version to ensure it is 3.6.1.
+4. Check the maven version to ensure it is 3.9.9.
 	``` bash
 	<copy>
 	mvn -v
 	</copy>
 	```
+
+	![Cloud Shell](images/3-4-maven-version.png " ")
 
 ## Task 3:  Build a Helidon SE application
 
@@ -105,13 +112,13 @@ As of June 2024, ARM Cloud Shell has Maven 3.5.0, and Java 11. Free tier users c
 	mvn -U archetype:generate -DinteractiveMode=false \
     -DarchetypeGroupId=io.helidon.archetypes \
     -DarchetypeArtifactId=helidon-quickstart-se \
-    -DarchetypeVersion=2.3.2 \
+    -DarchetypeVersion=4.1.5 \
     -DgroupId=io.helidon.examples \
     -DartifactId=helidon-quickstart-se \
     -Dpackage=io.helidon.examples.quickstart.se
 	</copy>
 	```
-	![Cloud Shell](images/3-1-helidon.png " ")
+	![Cloud Shell](images/3-1-generat-helidon.png " ")
 
 
 2.	The archetype generates a Maven project (helidon-quickstart-se) in your current directory. Change to this directory.
@@ -123,11 +130,11 @@ As of June 2024, ARM Cloud Shell has Maven 3.5.0, and Java 11. Free tier users c
 3.	Build the application by running the command below:
 	``` bash
 	<copy>
-	mvn package
+	mvn clean package
 	</copy>
 	```
 	The project builds an application jar for the example and saves all runtime dependencies in the target/libs directory.
-	![Cloud Shell](images/3-2-helidon.png " ")
+	![Cloud Shell](images/3-3-maven-package.png " ")
 
 4.	Start the application by running the application jar file.
 	``` bash
@@ -144,7 +151,7 @@ As of June 2024, ARM Cloud Shell has Maven 3.5.0, and Java 11. Free tier users c
 	more nohup.out
 	</copy>
 	```
-	![Cloud Shell](images/3-3-helidon.png " ")
+	![Cloud Shell](images/3-5-verify-message.png " ")
 
 
 ## Task 4: Verify the application
@@ -159,7 +166,7 @@ As of June 2024, ARM Cloud Shell has Maven 3.5.0, and Java 11. Free tier users c
 
 		{"message":"Hello Joe!"}
 
-	![Cloud Shell](images/4-1-helidon.png " ")
+	![Cloud Shell](images/4-1-hello-joe.png " ")
 
 >**Note:** For more information on Helidon prerequisites, application setup details, and test command examples, please see the Helidon Documentation, [Helidon QuickStart guide](https://helidon.io/docs/latest/#/se/guides/02_quickstart).
 
@@ -173,4 +180,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,    
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, July 2024
+- **Last Updated By/Date** - Yutaka Takatsu, December 2024

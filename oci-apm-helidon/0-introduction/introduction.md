@@ -4,9 +4,9 @@
 
 This workshop walks you through how to:
 
-* Enable OpenTracing for a Java microservice-based Helidon SE application using  Oracle Application Performance Monitoring (APM)
+* Enable OpenTracing for a Java microservice-based Helidon SE application using Oracle Application Performance Monitoring (APM)
 * Trace the workflow within a service and across multiple services
-* Use the Helidon SE application and its build instructions, described in the **[Helidon SE Tracing Guide](https://helidon.io/docs/latest/#/se/guides/06_tracing)**.
+* Use the Helidon SE application and its build instructions, described in the **[Helidon SE Tracing Guide](https://helidon.io/docs/v4/se/guides/tracing)**.
 
 Estimated Workshop Time: 60 minutes
 
@@ -36,17 +36,12 @@ In this workshop, you will:
 * An Oracle Cloud Account
 
 ### Reference
-*  Helidon SE Tracing Guide, Helidon Documentation Version:(2.3.3), URL: https://helidon.io/docs/latest/#/se/guides/06_tracing
+*  Helidon SE Tracing Guide, Helidon Documentation Version:(4.1.5), URL: https://helidon.io/docs/v4/se/guides/tracing
+
 
 ### More APM Workshops
+
 * Please visit: **[APM LiveLabs workshops](https://livelabs.oracle.com/pls/apex/f?p=133:100:111996377805307::::SEARCH:application+Performance+monitoring)**.
-
-### Learn More
--	**[Create an APM Domain](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/create-apm-domain.html)**
-- **[Obtain Data Upload Endpoint and Data Keys](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/obtain-data-upload-endpoint-and-data-keys.html)**
-- **[Configure Application Performance Monitoring Data Sources](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/configure-application-performance-monitoring-data-sources.html)**
-- **[Use Trace Explorer](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)**
-
 
 
 You may now **proceed to the next lab**.
@@ -57,4 +52,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,    
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, December, 2022
+- **Last Updated By/Date** - Yutaka Takatsu, December 2024
