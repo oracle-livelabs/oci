@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will use a Helidon tracing API to create a custom span, and view the span in the APM Trace Explorer. 
+Helidon automataically enables tracing and adds a trace each time you access the application's service endpoints. You can also add a custom trace by manually editing the Java code. In this lab, you will use a Helidon tracing API to create an additional child span, and view it in the APM Trace Explorer.
 
 Estimated time: 10 minutes
 
@@ -15,7 +15,7 @@ Estimated time: 10 minutes
 
 * This Lab requires the completion of Labs 1, 2 and 3
 
-## Task 1: Build another Maven project
+## Task 1: Verify the prerequisites
 
 1. Launch OCI Cloud Shell, if not opened already.
 

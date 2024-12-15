@@ -2,7 +2,9 @@
 
 ## Introduction
 
-In this lab, you will configure APM Tracer to monitor the Helidon SE application, which you created in Lab2.
+In this lab, you will configure APM Tracer to monitor the Helidon SE application, which you created in Lab2. 
+
+By default, Helidon automatically activates tracing when detects the feature is enabled in the class-path. In this lab, you will edit application's configuration files and enable tracing using APM Java Tracer. You can see the traces in the APM Trace Explorer without modifying the java code, once you re-build and access the application.  
 
 Estimated time: 10 minutes
 
@@ -11,9 +13,9 @@ Watch the video below for a quick walk-through of the lab.
 
 ### Objectives
 
-* Modify the pom.xml file in the Helidon application
-* Modify application.yaml file
-* Rebuild application with APM Tracer configurations
+* Modify pom.xml file in the Helidon application
+* Edit application.yaml file
+* Rebuild the application with APM Tracer configurations
 * View traces in the APM Trace Explorer
 
 
@@ -21,7 +23,7 @@ Watch the video below for a quick walk-through of the lab.
 
 * This lab requires the completion of Lab 1 and Lab 2
 
-## Task 1:Modify pom.xml file in the Helidon application
+## Task 1: Modify pom.xml
 
 1. Launch OCI Cloud Shell if not opened already.
 
@@ -72,7 +74,7 @@ Watch the video below for a quick walk-through of the lab.
 	  >**Note:** Alternatively, you can use a built-in code editor to edit files. To use the code editor, select the **Developer tools** icon from the toolbar>  select **Code Editor**.
 			![pom.xml](images/1-1-2-pomxml.png " ")
 
-## Task 2: Modify application.yaml file
+## Task 2: Edit application.yaml
 
 1.	Change to **src/main/resources** directory, then open the **application.yaml** file with an editor tool.
 
