@@ -164,7 +164,7 @@ Watch the video below for a quick walk-through of the lab.
 	```
 	It should return a greeting message as in the below image.
 
-		{"message":"Hello Joe!"}
+	{"message":"Hello Joe!"}
 
 	![Cloud Shell](images/4-1-hello-joe.png " ")
 
