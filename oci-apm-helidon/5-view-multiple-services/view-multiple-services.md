@@ -4,7 +4,7 @@
 
 In this lab, you will stop the running application and remove the files that are used in the workshop.
 
-Estimated time: 3 minutes
+Estimated time: 5 minutes
 
 
 ### Objectives
@@ -38,11 +38,10 @@ Estimated time: 3 minutes
 	```
 
 
-
 ## Acknowledgements
 
 - **Author** - Yutaka Takatsu, Product Manager, Enterprise and Cloud Manageability
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, December 2024
+- **Last Updated By/Date** - Yutaka Takatsu, July 2024

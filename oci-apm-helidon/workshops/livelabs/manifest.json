@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Use OpenTracing for Helidon Microservices with Oracle Application Performance Monitoring",
+    "workshoptitle": "Instrument Helidon Microservices with Oracle Application Performance Monitoring",
 	"help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {

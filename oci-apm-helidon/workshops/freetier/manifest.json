@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Use OpenTracing for Helidon Microservices with Oracle Application Performance Monitoring",
+    "workshoptitle": "Instrument Helidon Microservices with Oracle Application Performance Monitoring",
 	"help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {
@@ -38,7 +38,7 @@
             "filename": "../../5-clean-up-environment/clean-up-environment.md"
         },
         {
-            "title": "Lab 60: Learn more about APM (optional)",
+            "title": "Lab 6: Learn more about APM (optional)",
             "description": "Learn more about APM",
             "filename": "../../6-learn-more/learn-more.md"
         },

@@ -8,7 +8,9 @@ This workshop walks you through how to:
 * Trace the workflow within a service and across multiple services
 * Use the Helidon SE application and its build instructions, described in the **[Helidon SE Tracing Guide](https://helidon.io/docs/v4/se/guides/tracing)**.
 
-Estimated Workshop Time: 60 minutes
+Estimated Workshop Time: 40 minutes
+
+## Task 1: Know before you run
 
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 
