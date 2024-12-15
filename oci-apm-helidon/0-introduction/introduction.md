@@ -16,7 +16,7 @@ Estimated Workshop Time: 40 minutes
 
 The diagram below provides an overview of the OCI APM Service, its features, components, and some of the other OCI services it integrates with.
 
-  ![APM Architectuure](images/apm_diagram.png " ")
+  ![APM Architecture](images/apm_diagram.png " ")
 
 Among other capabilities, OCI APM includes an implementation of a Distributed Tracing system. It collects and processes transaction trace data (spans) from the monitored application and makes it available for viewing, dashboarding, exploration, alerts, etc. For more information on APM and Trace Explorer please refer to Application Performance Monitoring > **[Use Trace Explorer](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)** section in the OCI Documentation.
 
