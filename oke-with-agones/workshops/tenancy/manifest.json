@@ -8,9 +8,9 @@
             "filename": "../../0-workshop-introduction/0-workshop-introduction.md"
         },
         {
-            "title": "Labe 1: Install Prerequisites",
+            "title": "Labe 1: Get Started",
             "description": "This is the prerequisites for the Workshop to install the OCI CLI and Terraform",
-            "filename": "../../1-install-prerequisites/1-install-prerequisites.md"
+            "filename": "../../1-get-started/1-get-started.md"
         },
         {
             "title": "Lab 2: Create Infrastructure with Terraform",
@@ -31,7 +31,7 @@
         },
         {
             "title": "Lab 6: Teardown",
-            "filename": "../../6-teardown/6-teardown/md"
+            "filename": "../../6-teardown/6-teardown.md"
         },
         {
             "title": "Need Help?",

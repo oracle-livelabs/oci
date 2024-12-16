@@ -8,16 +8,18 @@ In this lab you will leverage the OKE cluster you created in previous labs and d
 
 Estimated Time: 25 minutes
 
-Objectives
+### Objectives
+
 In this lab, you will:
  - Deploy an Agones Fleet of Agones GameServers
  - Scale up the Fleet
  - Watch and troubleshoot scaling pods and nodes
 
-Prerequisites
+### Prerequisites
+
  - Completed the previous lab which deployed the Agones system pods
 
-## **Task 1**: Create an Agones Fleet
+## Task 1: Create an Agones Fleet
 
 You will deploy an Agones Fleet of dedicated game servers.
 
@@ -54,7 +56,7 @@ You will deploy an Agones Fleet of dedicated game servers.
 
 5. To actually use these game servers in production, the typical use case would be to have your match making server return to the game clients the IP and port of the game server for a connection and leverage the Agones Allocator to create new on demand game servers.
 
-## **Task 2**: Scale the Fleet and Node Pool
+## Task 2: Scale the Fleet and Node Pool
 
 You will now scale the Agones Fleet and watch the node pool auto scale.
 
@@ -122,6 +124,8 @@ You will now scale the Agones Fleet and watch the node pool auto scale.
     ````
 
 8. Lastly, it's important to keep in mind the custom work that is needed to coordinate user (game clients) demand of your game servers, the type of game servers you will run and the scaling of the fleet.  We manually scaled the fleet via the CLI, but, you should integrate that with on demand or predictable game server allocation.  When doing that the scaling of the nodes itself will be automatic just as you saw here.
+
+You may now **proceed to the next lab**
 
 ## **Summary**
 

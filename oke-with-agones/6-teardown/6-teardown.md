@@ -8,16 +8,18 @@ To make sure you dent leave infrastructure running that isn't being used you can
 
 Estimated Time: 10 minutes
 
-Objectives
+### Objectives
+
 In this lab, you will:
  - Delete the Agones Fleet
  - Delete the Agones System
  - Delete the Terraformed infrastructure
 
-Prerequisites
+### Prerequisites
+
  - Completed all the previous labs
 
-## **Task 1**: Delete The Fleet
+## Task 1: Delete The Fleet
 
 Here we will delete the Agones Fleet
 
@@ -36,7 +38,7 @@ Here we will delete the Agones Fleet
     </copy>
     ````
 
-## **Task 2**: Delete The Agones System
+## Task 2: Delete The Agones System
 
 Within your SSH session of Task 1, delete the Agones chart, using te same name when you created it, `my-release` in this workshop.
 
@@ -46,7 +48,7 @@ helm uninstall my-release --namespace agones-system
 </copy>
 ````
 
-## **Task 2**: Delete the Infrastructure
+## Task 3: Delete the Infrastructure
 
 Now Terraform destroy the infrastructure from the directory you created it in. This could take some time to complete.
 

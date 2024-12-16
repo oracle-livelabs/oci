@@ -1,4 +1,4 @@
-# Install Prerequisites
+# Get Started
 
 In this lab you will install the necessary components for this workshop.
 
@@ -10,14 +10,15 @@ You will be using Terraform to deploy to OCI and will also need the OCI CLI.
 
 Estimated Time: 15 minutes
 
-Objectives
+### Objectives
+
 In this lab, you will:
  - Install the OCI CLI
  - Install Terraform
  - Download the Terraform files
  - Initialize Terraform
 
-Prerequisites
+### Prerequisites
 
 Please ensure you have the following before continuing
 
@@ -37,9 +38,7 @@ Install the OCI CLI
 
 ## Task 2: Install Terraform
 
-Install  Terraform
-
-1.  Follow the [install steps form Hashicorp](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+Complete the [install steps form Hashicorp](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
 ## Task 3: Download the Terraform Files
 
@@ -50,6 +49,7 @@ Download the Terraform files
     ````shell
     <copy>
     mkdir infrastructure
+    cd infrastructure
     </copy>
     ````
 
@@ -59,7 +59,6 @@ Download the Terraform files
 
     ````shell
     <copy>
-    cd infrastructure
     tar -xvzf terraform.tar.gz
     </copy>
     ````
@@ -71,6 +70,8 @@ Download the Terraform files
     terraform init
     </copy>
     ````
+
+You may now **proceed to the next lab**
 
 ## Learn More - *Useful Links*
 

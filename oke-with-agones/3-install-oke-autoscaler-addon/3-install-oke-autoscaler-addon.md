@@ -11,16 +11,18 @@ The add-on itself is installed into its own node pool to isolate it from its own
 
 Estimated Time: 20 minutes
 
-Objectives
+### Objectives
+
 In this lab, you will:
  - Verify the installation of the Autoscaler
  - Create a config file for the Autoscaler Add-on
  - Install the Autoscaler Add-on
 
-Prerequisites
+### Prerequisites
+
  - Completed Lab 2 which walked through deploying the infrastructure
 
-## **Task 1**: Verify if the Autoscaler is already installed
+## Task 1: Verify if the Autoscaler is already installed
 
 Depending on the OKE Terraform module used and your connectivity when creating the infrastructure the OKE Terraform may have installed the addon for you.  Its configured to do so, but does not always work in some scenarios.
 
@@ -50,7 +52,7 @@ You should verify the current state of addons to see if the autoscaler was insta
 
    If `Autoscaler` is listed as one of the addons you can go to the next lab in this workshop.  If not, proceed with the remaining tasks here to install it.
 
-## **Task 2**: Install the Autoscaler Addon
+## Task 2: Install the Autoscaler Addon
 
 Assuming the task before this indicated the addon was not installed you can now install the addon.  You can also optionally do the following steps manually in the web console for OKE.
 
@@ -98,6 +100,8 @@ Assuming the task before this indicated the addon was not installed you can now 
     oci ce cluster get-addon --addon-name ClusterAutoscaler --cluster-id <ocid of cluster> | grep lifecycle-state
     </copy>
     ````
+
+You may now **proceed to the next lab**
 
 ## **Summary**
 

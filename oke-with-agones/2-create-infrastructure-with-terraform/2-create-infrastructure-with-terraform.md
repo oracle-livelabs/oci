@@ -15,23 +15,25 @@ This Terraform deployment creates the following resources
 
 Estimated Time: 30 minutes
 
-Objectives
+### Objectives
+
 In this lab, you will:
  - Configure your Terraform variables
  - Run a Terraform plan and apply changes
 
-Prerequisites
+### Prerequisites
+
  - Completed Lab 1 which walked through sourcing the Terraform files
 
-## **Task 1**: Update Terraform Variables
+## Task 1: Update Terraform Variables
 
 Customize the infrastructure to fit your tenancy and compartment.
 
-1. You will want to edit `infrastructre/terraform.tfvars` with relevant information to match your account OCID's and API Keys.  For a full description of each variable in that file refer to `infrasctucture/vvariables.tf`.
+1. You will want to edit `infrastructre/terraform.tfvars` with relevant information to match your account OCID's and API Keys.  For a full description of each variable in that file refer to `infrasctucture/variables.tf`.
 
 2. You can (optional) edit `infrastructure/module.tf` to tweak the OKE settings as needed for your deployment.  The current settings will work as is for the purpose of this lab. Its a good idea to have a look at these settings since the OKE Terraform module does a lot and is very customizable.
 
-## **Task 2**: Create a Terraform Plan
+## Task 2: Create a Terraform Plan
 
 Get a Terraform plan and check the output of that plan to make sure its what you expect.  After you validate the plan you can move onto the next task.
 
@@ -42,7 +44,7 @@ terraform plan
 </copy>
 ````
 
-## **Task 3**: Apply the Terraform Plan
+## Task 3: Apply the Terraform Plan
 
 You can now apply the plan and the infrastructure will get created. Wait some time for the apply to complete.
 
@@ -52,7 +54,7 @@ terraform apply
 </copy>
 ````
 
-## **Task 4**: Connect to the bastion
+## Task 4: Connect to the bastion
 
 Connect to the Bastion to ensure you have access to the OKE control plane.
 
@@ -69,6 +71,8 @@ Connect to the Bastion to ensure you have access to the OKE control plane.
     ````shell
     ssh -J opc@<bastion public IP> opc@<operator private ip>
     ````
+
+You may now **proceed to the next lab**
 
 ## **Summary**
 

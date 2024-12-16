@@ -2,17 +2,17 @@
 
 ## **What is OKE and Agones?**
 
-#### OKE Intro
+### OKE Intro
 
 Oracle Kubernetes Engine (OKE) is the runtime within OCI for the running and operations of enterprise-grade Kubernetes at scale. You can easily deploy and manage resource-intensive workloads such as dedicated game servers with automatic scaling, patching, and upgrades.
 
-#### Agones Intro
+### Agones Intro
 
 Agones is an open source platform, for deploying, hosting, scaling, and orchestrating dedicated game servers for large scale multiplayer games, built on top of the industry standard, distributed system platform Kubernetes.
 
 Agones replaces bespoke or proprietary cluster management and game server scaling solutions with an open source solution that can be utilized and communally developed - so that you can focus on the important aspects of building a multiplayer game, rather than developing the infrastructure to support it.
 
-### Workshop Objectives
+### Workshop Lab Objectives
 
 * Ensure you have installed the prerequisites
 * Create the OCI infrastructure
@@ -25,9 +25,9 @@ Agones replaces bespoke or proprietary cluster management and game server scalin
 ### Labs
 
 | Module | Est. Time |
-| --- | --- |
+| ------------- | :-----------: |
 | [Workshop Introduction](?lab=0-workshop-introduction) | 5 minutes |
-| [Install Prerequisites](?lab=1-install-prerequisites) | 15 minutes |
+| [Get Started](?lab=1-get-started) | 15 minutes |
 | [Creating OCI Resources With Terraform](?lab=2-create-infrastructure-with-terraform) | 30 minutes |
 | [Installing the OKE Autoscaler Addon](?lab=3-install-oke-autoscaler-addon) | 20 minutes |
 | [Create the Agones System Pods with Helm](?lab=4-create-agones-system) | 15 minutes |
@@ -38,7 +38,9 @@ Total estimated time: 120 minutes
 
 ### **Let's Get Started!**
 
-If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the upper-left corner of the page.
+Use the left navigation on this page to begin the labs in this workshop.
+
+You may now **proceed to the next lab**
 
 ## Learn More - *Useful Links*
 
