@@ -18,11 +18,16 @@ In this lab, you will:
  - Initialize Terraform
 
 Prerequisites
+
+Please ensure you have the following before continuing
+
  - An OCI Tenancy
- - A user in a group with Tenancy Admin
- - An API key for that user
+ - A Shell ([OCI Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm), Linux, MacOS, Windows with WSL)
+ - A user in a group with Tenancy Admin and downloaded API Key
 
 ## **Task 1**: Install the OCI CLI
+
+Install the OCI CLI
 
 1. Make sure you have the policy for Tenancy admin. This is required because the Terraform OKE module creates a dynamic group policy, other than that everything gets created in a OCI Compartment you specify in the `terraform.tfvars` file.
 
@@ -32,12 +37,29 @@ Prerequisites
 
 ## **Task 2**: Install Terraform
 
+Install  Terraform
+
 1.  Follow the [install steps form Hashicorp](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
 ## **Task 3**: Download the Terraform Files
 
+Download the Terraform files
+
 1. Create a directory called `infrastructure` in your system
-2. Download all the files in [files](files/) to `infrastructure`.
+
+    ```bash
+    mkdir infrastructure
+    ```
+
+2. Download the terraform files from [terraform.tar.gz](./files/terraform.tar.gz) to `infrastructure`.
+
+3. Untar the downloaded file
+
+    ```bash
+    cd infrastructure
+    tar -xvzf terraform.tar.gz
+    ```
+
 3. Initialize the Terraform
 
     ```bash

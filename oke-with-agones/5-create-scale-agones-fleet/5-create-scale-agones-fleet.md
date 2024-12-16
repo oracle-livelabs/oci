@@ -27,13 +27,13 @@ You will deploy an Agones Fleet of dedicated game servers.
     ssh -J opc@<bastion public IP> opc@<operator private ip>
     ```
 
-2. Create a file called `fleet.yaml` with the contents from `files/fleet.yaml`.  This was sourced from [Agones v1.45.0](https://raw.githubusercontent.com/googleforgames/agones/release-1.45.0/install/yaml/install.yaml). The changes made here ensure that game servers get deployed to the matching label on our node as defined in your `module.tf` file.
+2. Create a file called `fleet.yaml` with the contents from [fleet.yaml](./files/fleet.yaml).  This was sourced from [Agones v1.45.0](https://raw.githubusercontent.com/googleforgames/agones/release-1.45.0/install/yaml/install.yaml). The changes made in this file ensure that game servers get deployed to the matching label on our nodes as defined in your `module.tf` file.
 
     ```bash
     # using vim or nano
     vim fleet.yaml
 
-    # paste from files/fleet.json into this new file and save
+    # paste from the downloaded fleet.json into this new file and save
     ```
 
 3. Apply the fleet
@@ -48,7 +48,7 @@ You will deploy an Agones Fleet of dedicated game servers.
     kubectl get gameserver
     ```
 
-5. To actually use these game servers in production, the typical use case would be to have your match making server return to game clients the IP and port to connect to and leverage the Agones Allocator to create new on demand game servers.
+5. To actually use these game servers in production, the typical use case would be to have your match making server return to the game clients the IP and port of the game server for a connection and leverage the Agones Allocator to create new on demand game servers.
 
 ## **Task 2**: Scale the Fleet and Node Pool
 
@@ -60,7 +60,7 @@ You will now scale the Agones Fleet and watch the node pool auto scale.
     kubectl scale fleet simple-game-server --replicas=300
     ```
 
-2. After a few moments, get the `gameserver`'s and nodes, you should see a lot of `gameserver`'s in Starting or Pending state, and a new node starting up automatically for us.  Initially you will see the node pool in the console updating as well and new compute instances being added to the node pool before they start to show in `kubectl get nodes` results.
+2. After a few moments, get the `gameserver`'s and nodes, you should see a lot of `gameserver`'s in Starting or Pending state, and a new node starting up automatically.  Initially you will see the node pool in the console updating as well and new compute instances being added to the node pool before they start to show in `kubectl get nodes` results.
 
     ```bash
     # grep for pods that have 0 containers running
@@ -70,7 +70,7 @@ You will now scale the Agones Fleet and watch the node pool auto scale.
     kubectl get gameserver
     ```
 
-3. To troubleshoot, get the status of a given pod that is NOT running, ideally you should see an Event that says "pod triggered scale-up" and you can skip the next numbered step here.  If you don't see that event the next step should be looked at.
+3. To inspect, get the status of a given pod that is NOT running.  Ideally you should see an Event that says "pod triggered scale-up" and you can skip the next numbered step here.  If you don't see that event the next step should be looked at.
 
     ```bash
     kubectl describe pod <pod name>
@@ -78,13 +78,13 @@ You will now scale the Agones Fleet and watch the node pool auto scale.
 
 4. You may have issues with the pod not triggering autoscaling.  If so, make sure your addon was installed and configured to watch the correct node pool OCID (see previous lab) and that your `fleet.yaml` has the correct affinity settings (see steps above)
 
-5. After some time you should see new nodes listed with a much younger value for age.
+5. After some time you should see new nodes listed with a much younger value for age than the original nodes.
 
     ```bash
     kubectl get nodes
     ```
 
-6. Once the new nodes are fully running, we should see zero pods listed when we run our list and grep command again.
+6. Once the new nodes are fully running, we should see zero pods listed when we run our pod list and grep command again.
 
     ```bash
     # grep for pods that have 0 containers running
@@ -105,7 +105,7 @@ You will now scale the Agones Fleet and watch the node pool auto scale.
     kubectl get nodes
     ```
 
-8. Lastly, it's important to keep in mind the custom work that is needed to coordinate user demand of your game servers, the type of game servers you will run and the scaling of the fleet.  We manually scaled the fleet via the CLI, but, you should integrate that with on demand or predictable game server allocation.  When doing that the scaling of the nodes itself will be automatic.
+8. Lastly, it's important to keep in mind the custom work that is needed to coordinate user (game clients) demand of your game servers, the type of game servers you will run and the scaling of the fleet.  We manually scaled the fleet via the CLI, but, you should integrate that with on demand or predictable game server allocation.  When doing that the scaling of the nodes itself will be automatic just as you saw here.
 
 ## **Summary**
 

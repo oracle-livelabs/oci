@@ -62,15 +62,18 @@ Assuming the task before this indicated the addon was not installed you can now 
     kubectl get node -l oke.oraclecloud.com/pool.name=node_pool_workers -o json |grep node-pool-id
     ```
 
-3. The file `files/addon.json` will be used as an example. Its format is `<min nodes>:<max nodes>:<node pool id>`. Its very important here to remember that as your node pools change (renaming, changing terraform etc) their respective OCID's will change and you will need to update this config.
+   **This OCID is the Node Pool OCID that you will use in the next step.**
 
-   Create the config as `addon.json` and paste the contents from `files/addon.json`. Replace from the file `<NODE POOL OCID>` with the OCID from the previous step above.
+3. The file [addon.json](./files/addon.json) will be used as an example. It's format is `<min nodes>:<max nodes>:<node pool id>`. It's important to remember that as your node pools change (renaming, changing terraform etc) their respective OCID's will change and you will need to update this config.
+
+   Create the config as `addon.json` and paste the contents from [addon.json](./files/addon.json). Replace from the file `<NODE POOL OCID>` with the OCID from the previous step above.
 
     ```bash
     # using vim or nano
     vim addon.json
 
-    # paste from files/addon.json into this new file and save, # Paste in the correct Node Pool OCID
+    # paste from addon.json into this new file and save
+    # Paste in the correct Node Pool OCID
     ```
 
 4. Install the addon using the newly created config file.  This should run without error and a resulting work request ID will be displayed.

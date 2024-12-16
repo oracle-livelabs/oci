@@ -25,18 +25,20 @@ Prerequisites
 
 ## **Task 1**: Update Terraform Variables
 
-1. You will want to edit `infrastructe/terraform.tfvars` with relevant information to match your account OCID's and API Keys.  For a full description of each variable in that file refer to `infrascturure/vvariables.tf`.
+Customize the infrastructure to fit your tenancy and compartment.
+
+1. You will want to edit `infrastructre/terraform.tfvars` with relevant information to match your account OCID's and API Keys.  For a full description of each variable in that file refer to `infrasctucture/vvariables.tf`.
 
 2. You can (optional) edit `infrastructure/module.tf` to tweak the OKE settings as needed for your deployment.  The current settings will work as is for the purpose of this lab. Its a good idea to have a look at these settings since the OKE Terraform module does a lot and is very customizable.
 
 ## **Task 2**: Create a Terraform Plan
 
- Get a Terraform plan and check the output of that plan to make sure its what you expect.  After you validate the plan you can move onto the next task.
+Get a Terraform plan and check the output of that plan to make sure its what you expect.  After you validate the plan you can move onto the next task.
 
-   ```bash
-   cd infrastructure
-   terraform plan
-   ```
+```bash
+cd infrastructure
+terraform plan
+```
 
 ## **Task 3**: Apply the Terraform Plan
 
@@ -48,11 +50,13 @@ terraform apply
 
 ## **Task 4**: Connect to the bastion
 
+Connect to the Bastion to ensure you have access to the OKE control plane.
+
 1. Get the terraform output. It will give an example command that you can use to SSH to the bastion and jump to the operator.
 
-   ```bash
-   terraform output
-   ```
+    ```bash
+    terraform output
+    ```
 
 2. The operator has kubectl installed with connectivity to the OKE control plane.  **An example of that output is below**. You should test this command and make sure it works before proceeding to the next section of this workshop.
 

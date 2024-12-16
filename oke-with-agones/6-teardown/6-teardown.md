@@ -38,19 +38,19 @@ Here we will delete the Agones Fleet
 
 Within your SSH session of Task 1, delete the Agones chart, using te same name when you created it, `my-release` in this workshop.
 
-   ```bash
-   helm uninstall my-release --namespace agones-system
-   ```
+```bash
+helm uninstall my-release --namespace agones-system
+```
 
 ## **Task 2**: Delete the Infrastructure
 
 Now Terraform destroy the infrastructure from the directory you created it in. This could take some time to complete.
 
-   ```bash
-   cd infrastructure
+```bash
+cd infrastructure
 
-   terraform destroy
-   ```
+terraform destroy
+```
 
 ## **Summary**
 
