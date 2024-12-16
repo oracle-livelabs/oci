@@ -6,7 +6,7 @@ In this lab you will install the necessary components for this workshop.
 
 In order to complete this workshop you will need to have the necessary tooling to connect to and deploy OCI resources.
 
-You will be using Terraform to deploy OCI and will also need the OCI CLI.
+You will be using Terraform to deploy to OCI and will also need the OCI CLI.
 
 Estimated Time: 15 minutes
 
@@ -24,7 +24,7 @@ Prerequisites
 
 ## **Task 1**: Install the OCI CLI
 
-1. Make sure you have the policy for Tenancy admin. This is required because the Terraform OKE module creates a dynamic group policy, other than that everything gets created in a OCI Compartment you specific in the `terraform.tfvars` file.
+1. Make sure you have the policy for Tenancy admin. This is required because the Terraform OKE module creates a dynamic group policy, other than that everything gets created in a OCI Compartment you specify in the `terraform.tfvars` file.
 
 1. Follow the [install steps from Oracle](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm)
 
@@ -40,8 +40,16 @@ Prerequisites
 2. Download all the files in [files](files/) to `infrastructure`.
 3. Initialize the Terraform
 
-       cd infrastructure
-       terraform init
+    ```bash
+    cd infrastructure
+    terraform init
+    ```
+
+## Learn More - *Useful Links*
+
+- [Kubernetes](https://kubernetes.io/)
+- [OKE](https://www.oracle.com/cloud/cloud-native/kubernetes-engine/)
+- [OKE Terraform Module](https://oracle-terraform-modules.github.io/terraform-oci-oke/)
 
 ## **Summary**
 

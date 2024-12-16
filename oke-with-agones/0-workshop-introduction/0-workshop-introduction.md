@@ -12,14 +12,12 @@ Agones is an open source platform, for deploying, hosting, scaling, and orchestr
 
 Agones replaces bespoke or proprietary cluster management and game server scaling solutions with an open source solution that can be utilized and communally developed - so that you can focus on the important aspects of building a multiplayer game, rather than developing the infrastructure to support it.
 
-Estimated Time: 45 minutes
+### Workshop Objectives
 
-### Objectives
-
-* Ensure you have installed the pre-requisites
+* Ensure you have installed the prerequisites
 * Create the OCI infrastructure
 * Setup OKE Autoscaling
-* Setup Agones
+* Setup Agones system pods with Helm
 * Deploy an Agones Fleet (dedicated game servers)
 * Scale a Agones Fleet and OKE nodes
 * Teardown
@@ -29,14 +27,14 @@ Estimated Time: 45 minutes
 | Module | Est. Time |
 | --- | --- |
 | [Workshop Introduction](?lab=0-workshop-introduction) | 5 minutes |
-| [Install Prerequisites](?lab=1-install-prerequisites) | 5 minutes |
-| [Create Infrastructure With Terraform](?lab=2-create-infrastructure-with-terraform) | 5 minutes |
-| [Install OKE Autoscaler Addon](?lab=3-install-oke-autoscaler-addon) | 5 minutes |
-| [Create Agones System and Test](?lab=4-create-agones-system) | 5 minutes |
-| [Create and Scale an Agones Fleet](?lab=5-create-scale-agones-fleet) | 5 minutes |
-| [teardown](?lab=6-teardown) | 5 minutes |
+| [Install Prerequisites](?lab=1-install-prerequisites) | 15 minutes |
+| [Creating OCI Resources With Terraform](?lab=2-create-infrastructure-with-terraform) | 30 minutes |
+| [Installing the OKE Autoscaler Addon](?lab=3-install-oke-autoscaler-addon) | 20 minutes |
+| [Create the Agones System Pods with Helm](?lab=4-create-agones-system) | 15 minutes |
+| [Deploy an Agones Fleet and Autoscale OKE Nodes](?lab=5-create-scale-agones-fleet) | 25 minutes |
+| [Teardown](?lab=6-teardown) | 10 minutes |
 
-Total estimated time: 45 minutes
+Total estimated time: 120 minutes
 
 ### **Let's Get Started!**
 
@@ -44,10 +42,9 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ## Learn More - *Useful Links*
 
-- [Kubernetes]()
-- [OKE]()
-- [OKE Terraform]()
-- [OKE Autoscaler]()
+- [Kubernetes](https://kubernetes.io/)
+- [OKE](https://www.oracle.com/cloud/cloud-native/kubernetes-engine/)
+- [OKE Terraform Module](https://github.com/oracle-terraform-modules/terraform-oci-oke)
 - [Agones](https://agones.dev/site/docs/)
 
 ## **Acknowledgements**

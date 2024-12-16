@@ -23,35 +23,43 @@ In this task you will create Agones components and create LoadBalancer services 
 
 1. SSH to your Operater using the output from `terraform output`, example below.
 
-       ssh -J opc@<bastion public IP> opc@<operator private ip>
+    ```bash
+    ssh -J opc@<bastion public IP> opc@<operator private ip>
+    ```
 
 2. Deploy the Agones system using Helm
 
-       helm repo add agones https://agones.dev/chart/stable
-       helm repo update
+    ```bash
+    helm repo add agones https://agones.dev/chart/stable
+    helm repo update
 
-       helm install my-release --namespace agones-system --create-namespace agones/agones
+    helm install my-release --namespace agones-system --create-namespace agones/agones
 
-       helm test my-release -n agones-system
+    helm test my-release -n agones-system
+    ```
 
 3. Get the status of all the agones pods, they should all be running (allocator, controller, extensions, ping)
 
-       kubectl get pods --namespace agones-system
+    ```bash
+    kubectl get pods --namespace agones-system
+    ```
 
    Example output...
 
-       [opc@o-xiteaz ~]$ kubectl get pods --namespace agones-system
+    ```bash
+    [opc@o-xiteaz ~]$ kubectl get pods --namespace agones-system
 
-       NAME                                 READY   STATUS    RESTARTS   AGE
-       agones-allocator-79d8dbfcbb-r5k4j    1/1     Running   0          2m23s
-       agones-allocator-79d8dbfcbb-sf6bt    1/1     Running   0          2m23s
-       agones-allocator-79d8dbfcbb-xk4h5    1/1     Running   0          2m23s
-       agones-controller-657c48fdfd-bfl67   1/1     Running   0          2m23s
-       agones-controller-657c48fdfd-gvt2m   1/1     Running   0          2m23s
-       agones-extensions-7bbbf98956-bcjkk   1/1     Running   0          2m23s
-       agones-extensions-7bbbf98956-tbbrx   1/1     Running   0          2m23s
-       agones-ping-6848778bd7-7z76r         1/1     Running   0          2m23s
-       agones-ping-6848778bd7-dg5wp         1/1     Running   0          2m23s
+    NAME                                 READY   STATUS    RESTARTS   AGE
+    agones-allocator-79d8dbfcbb-r5k4j    1/1     Running   0          2m23s
+    agones-allocator-79d8dbfcbb-sf6bt    1/1     Running   0          2m23s
+    agones-allocator-79d8dbfcbb-xk4h5    1/1     Running   0          2m23s
+    agones-controller-657c48fdfd-bfl67   1/1     Running   0          2m23s
+    agones-controller-657c48fdfd-gvt2m   1/1     Running   0          2m23s
+    agones-extensions-7bbbf98956-bcjkk   1/1     Running   0          2m23s
+    agones-extensions-7bbbf98956-tbbrx   1/1     Running   0          2m23s
+    agones-ping-6848778bd7-7z76r         1/1     Running   0          2m23s
+    agones-ping-6848778bd7-dg5wp         1/1     Running   0          2m23s
+    ```
 
 ## **Task 2**: Test Agones with A Game Server and Client
 
@@ -61,24 +69,34 @@ The steps here follow the [guide built by Agones](https://agones.dev/site/docs/g
 
 1. From the Operator after you SSH create the game server (by default this will go into the `default` namespace and that namespace is using the `node_pool_workers` node pool)
 
-       kubectl create -f https://raw.githubusercontent.com/googleforgames/agones/release-1.45.0/examples/simple-game-server/gameserver.yaml
+    ```bash
+    kubectl create -f https://raw.githubusercontent.com/googleforgames/agones/release-1.45.0/examples/simple-game-server/gameserver.yaml
+    ```
 
 2. Get the IP of a `gameserver` for the next step
 
-       kubectl get gameserver
+    ```bash
+    kubectl get gameserver
+    ```
 
 3. Make a UDP connection and test.  You are testing this from the Operator, which is in the private subnet.  But, you should also test this in another shell that is on the internet and you should get the same results.
 
-       nc -u <IP of gameserver> 7043
+    ```bash
+    nc -u <IP of gameserver> 7043
+    ```
 
 4. Now type the following line and hit enter, you will see a response of `ACK: HELLO WORLD!`
 
-       HELLO WORLD!
+    ```bash
+    HELLO WORLD!
+    ```
 
 5. Delete the `gameserver` when done
 
-       kubectl get gameserver
-       kubectl delete gameserver <name of gameserver>
+    ```bash
+    kubectl get gameserver
+    kubectl delete gameserver <name of gameserver>
+    ```
 
 ## **Summary**
 

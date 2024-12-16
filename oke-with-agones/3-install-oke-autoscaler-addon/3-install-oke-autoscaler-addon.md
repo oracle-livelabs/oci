@@ -28,15 +28,21 @@ You should verify the current state of addons to see if the autoscaler was insta
 
 1. SSH to your Operater using the output from `terraform output`, example below.
 
-       ssh -J opc@<bastion public IP> opc@<operator private ip>
+    ```bash
+    ssh -J opc@<bastion public IP> opc@<operator private ip>
+    ```
 
 2. Get the OCID of your cluster by running this command and looking for the `id` (which is the OCID) of the cluster you just created.  This can also be obtained from the web console.
 
-       oci ce cluster list -c <OCID of Compartment you used in terraform.tfvars>
+    ```bash
+    oci ce cluster list -c <OCID of Compartment you used in terraform.tfvars>
+    ```
 
 3. Get the Addons installed on your cluster
 
-       oci ce cluster list-addons --cluster-id <OCID of your OKE Cluster from previous step>
+    ```bash
+    oci ce cluster list-addons --cluster-id <OCID of your OKE Cluster from previous step>
+    ```
 
    If `Autoscaler` is listed as one of the addons you can go to the next lab in this workshop.  If not, proceed with the remaining tasks here to install it.
 
@@ -46,28 +52,39 @@ Assuming the task before this indicated the addon was not installed you can now 
 
 1. SSH to your Operater using the output from `terraform output`, example below.
 
-       ssh -J opc@<bastion public IP> opc@<operator private ip>
+    ```bash
+    ssh -J opc@<bastion public IP> opc@<operator private ip>
+    ```
 
 2. Get the OCID of the `node_pool_workers` node pool. This is the pool that will run the Agones fleet in subsequent labs of this workshop.
 
-       kubectl get node -l oke.oraclecloud.com/pool.name=node_pool_workers -o json |grep node-pool-id
+    ```bash
+    kubectl get node -l oke.oraclecloud.com/pool.name=node_pool_workers -o json |grep node-pool-id
+    ```
 
 3. The file `files/addon.json` will be used as an example. Its format is `<min nodes>:<max nodes>:<node pool id>`. Its very important here to remember that as your node pools change (renaming, changing terraform etc) their respective OCID's will change and you will need to update this config.
 
    Create the config as `addon.json` and paste the contents from `files/addon.json`. Replace from the file `<NODE POOL OCID>` with the OCID from the previous step above.
 
-       # using vim or nano
-       vim addon.json
+    ```bash
+    # using vim or nano
+    vim addon.json
 
-       # paste from files/addon.json into this new file and save, # Paste in the correct Node Pool OCID
+    # paste from files/addon.json into this new file and save, # Paste in the correct Node Pool OCID
+    ```
 
 4. Install the addon using the newly created config file.  This should run without error and a resulting work request ID will be displayed.
 
-       oci ce cluster install-addon --addon-name ClusterAutoscaler --from-json file://addon.json --cluster-id <ocid of cluster>
+
+    ```bash
+    oci ce cluster install-addon --addon-name ClusterAutoscaler --from-json file://addon.json --cluster-id <ocid of cluster>
+    ```
 
 5. Verify there are no errors with the newly installed addon. The result should say `ACTIVE`.
 
-       oci ce cluster get-addon --addon-name ClusterAutoscaler --cluster-id <ocid of cluster> | grep lifecycle-state
+    ```bash
+    oci ce cluster get-addon --addon-name ClusterAutoscaler --cluster-id <ocid of cluster> | grep lifecycle-state
+    ```
 
 ## **Summary**
 
