@@ -33,24 +33,28 @@ Prerequisites
 
  Get a Terraform plan and check the output of that plan to make sure its what you expect.  After you validate the plan you can move onto the next task.
 
-    ```bash
-    cd infrastructure
-    terraform plan
-    ```
+   ```bash
+   cd infrastructure
+   terraform plan
+   ```
 
 ## **Task 3**: Apply the Terraform Plan
 
 You can now apply the plan and the infrastructure will get created. Wait some time for the apply to complete.
 
-    ```bash
-    terraform apply
-    ```
+```bash
+terraform apply
+```
 
 ## **Task 4**: Connect to the bastion
 
-The Terraform output will give an example command that you can use to SSH to the bastion and jump to the operator.  The operator has kubectl installed with connectivity to the OKE control plane.  An example of that output is below.
+1. Get the terraform output. It will give an example command that you can use to SSH to the bastion and jump to the operator.
 
-You should test that command and make sure it works before proceeding to the next section of this workshop.
+   ```bash
+   terraform output
+   ```
+
+2. The operator has kubectl installed with connectivity to the OKE control plane.  **An example of that output is below**. You should test this command and make sure it works before proceeding to the next section of this workshop.
 
     ```bash
     ssh -J opc@<bastion public IP> opc@<operator private ip>
