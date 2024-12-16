@@ -34,15 +34,19 @@ You should verify the current state of addons to see if the autoscaler was insta
 
 2. Get the OCID of your cluster by running this command and looking for the `id` (which is the OCID) of the cluster you just created.  This can also be obtained from the web console.
 
-    ```bash
+    ````shell
+    <copy>
     oci ce cluster list -c <OCID of Compartment you used in terraform.tfvars>
-    ```
+    </copy>
+    ````
 
 3. Get the Addons installed on your cluster
 
-    ```bash
+    ````shell
+    <copy>
     oci ce cluster list-addons --cluster-id <OCID of your OKE Cluster from previous step>
-    ```
+    </copy>
+    ````
 
    If `Autoscaler` is listed as one of the addons you can go to the next lab in this workshop.  If not, proceed with the remaining tasks here to install it.
 
@@ -58,9 +62,11 @@ Assuming the task before this indicated the addon was not installed you can now 
 
 2. Get the OCID of the `node_pool_workers` node pool. This is the pool that will run the Agones fleet in subsequent labs of this workshop.
 
-    ```bash
+    ````shell
+    <copy>
     kubectl get node -l oke.oraclecloud.com/pool.name=node_pool_workers -o json |grep node-pool-id
-    ```
+    </copy>
+    ````
 
    **This OCID is the Node Pool OCID that you will use in the next step.**
 
@@ -79,15 +85,19 @@ Assuming the task before this indicated the addon was not installed you can now 
 4. Install the addon using the newly created config file.  This should run without error and a resulting work request ID will be displayed.
 
 
-    ```bash
+    ````shell
+    <copy>
     oci ce cluster install-addon --addon-name ClusterAutoscaler --from-json file://addon.json --cluster-id <ocid of cluster>
-    ```
+    </copy>
+    ````
 
 5. Verify there are no errors with the newly installed addon. The result should say `ACTIVE`.
 
-    ```bash
+    ````shell
+    <copy>
     oci ce cluster get-addon --addon-name ClusterAutoscaler --cluster-id <ocid of cluster> | grep lifecycle-state
-    ```
+    </copy>
+    ````
 
 ## **Summary**
 

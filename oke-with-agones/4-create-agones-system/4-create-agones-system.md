@@ -29,20 +29,24 @@ In this task you will create Agones components and create LoadBalancer services 
 
 2. Deploy the Agones system using Helm
 
-    ```bash
+    ````shell
+    <copy>
     helm repo add agones https://agones.dev/chart/stable
     helm repo update
 
     helm install my-release --namespace agones-system --create-namespace agones/agones
 
     helm test my-release -n agones-system
-    ```
+    </copy>
+    ````
 
 3. Get the status of all the agones pods, they should all be running (allocator, controller, extensions, ping)
 
-    ```bash
+    ````shell
+    <copy>
     kubectl get pods --namespace agones-system
-    ```
+    </copy>
+    ````
 
    Example output...
 
@@ -69,21 +73,27 @@ The steps here follow the [guide built by Agones](https://agones.dev/site/docs/g
 
 1. From the Operator after you SSH create the game server (by default this will go into the `default` namespace and that namespace is using the `node_pool_workers` node pool)
 
-    ```bash
+    ````shell
+    <copy>
     kubectl create -f https://raw.githubusercontent.com/googleforgames/agones/release-1.45.0/examples/simple-game-server/gameserver.yaml
-    ```
+    </copy>
+    ````
 
 2. Get the IP of a `gameserver` for the next step
 
-    ```bash
+    ````shell
+    <copy>
     kubectl get gameserver
-    ```
+    </copy>
+    ````
 
 3. Make a UDP connection and test.  You are testing this from the Operator, which is in the private subnet.  But, you should also test this in another shell that is on the internet and you should get the same results.
 
-    ```bash
+    ````shell
+    <copy>
     nc -u <IP of gameserver> 7043
-    ```
+    </copy>
+    ````
 
 4. Now type the following line and hit enter, you will see a response of `ACK: HELLO WORLD!`
 
@@ -93,10 +103,12 @@ The steps here follow the [guide built by Agones](https://agones.dev/site/docs/g
 
 5. Delete the `gameserver` when done
 
-    ```bash
+    ````shell
+    <copy>
     kubectl get gameserver
     kubectl delete gameserver <name of gameserver>
-    ```
+    </copy>
+    ````
 
 ## **Summary**
 

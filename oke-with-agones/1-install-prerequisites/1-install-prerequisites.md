@@ -25,7 +25,7 @@ Please ensure you have the following before continuing
  - A Shell ([OCI Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm), Linux, MacOS, Windows with WSL)
  - A user in a group with Tenancy Admin and downloaded API Key
 
-## **Task 1**: Install the OCI CLI
+## Task 1: Install the OCI CLI
 
 Install the OCI CLI
 
@@ -35,37 +35,42 @@ Install the OCI CLI
 
 2. Make sure you followed the steps above and are fully setup with API Keys (this will be the case if you did `oci setup config`) for the user of the above mentioned Tenancy admin.
 
-## **Task 2**: Install Terraform
+## Task 2: Install Terraform
 
 Install  Terraform
 
 1.  Follow the [install steps form Hashicorp](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
-## **Task 3**: Download the Terraform Files
+## Task 3: Download the Terraform Files
 
 Download the Terraform files
 
 1. Create a directory called `infrastructure` in your system
 
-    ```bash
+    ````shell
+    <copy>
     mkdir infrastructure
-    ```
+    </copy>
+    ````
 
 2. Download the terraform files from [terraform.tar.gz](./files/terraform.tar.gz) to `infrastructure`.
 
 3. Untar the downloaded file
 
-    ```bash
+    ````shell
+    <copy>
     cd infrastructure
     tar -xvzf terraform.tar.gz
-    ```
+    </copy>
+    ````
 
-3. Initialize the Terraform
+3. From within the infrastructure folder, initialize the Terraform
 
-    ```bash
-    cd infrastructure
+    ````shell
+    <copy>
     terraform init
-    ```
+    </copy>
+    ````
 
 ## Learn More - *Useful Links*
 

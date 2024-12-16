@@ -35,18 +35,22 @@ Customize the infrastructure to fit your tenancy and compartment.
 
 Get a Terraform plan and check the output of that plan to make sure its what you expect.  After you validate the plan you can move onto the next task.
 
-```bash
+````shell
+<copy>
 cd infrastructure
 terraform plan
-```
+</copy>
+````
 
 ## **Task 3**: Apply the Terraform Plan
 
 You can now apply the plan and the infrastructure will get created. Wait some time for the apply to complete.
 
-```bash
+````shell
+<copy>
 terraform apply
-```
+</copy>
+````
 
 ## **Task 4**: Connect to the bastion
 
@@ -54,15 +58,17 @@ Connect to the Bastion to ensure you have access to the OKE control plane.
 
 1. Get the terraform output. It will give an example command that you can use to SSH to the bastion and jump to the operator.
 
-    ```bash
+    ````shell
+    <copy>
     terraform output
-    ```
+    </copy>
+    ````
 
 2. The operator has kubectl installed with connectivity to the OKE control plane.  **An example of that output is below**. You should test this command and make sure it works before proceeding to the next section of this workshop.
 
-    ```bash
+    ````shell
     ssh -J opc@<bastion public IP> opc@<operator private ip>
-    ```
+    ````
 
 ## **Summary**
 

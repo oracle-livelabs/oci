@@ -29,28 +29,33 @@ Here we will delete the Agones Fleet
 
 2. Delete the fleet
 
-    ```bash
+    ````shell
+    <copy>
     kubectl delete fleets --all --all-namespaces
     kubectl delete gameservers --all --all-namespaces
-    ```
+    </copy>
+    ````
 
 ## **Task 2**: Delete The Agones System
 
 Within your SSH session of Task 1, delete the Agones chart, using te same name when you created it, `my-release` in this workshop.
 
-```bash
+````shell
+<copy>
 helm uninstall my-release --namespace agones-system
-```
+</copy>
+````
 
 ## **Task 2**: Delete the Infrastructure
 
 Now Terraform destroy the infrastructure from the directory you created it in. This could take some time to complete.
 
-```bash
-cd infrastructure
-
+````shell
+<copy>
+exit
 terraform destroy
-```
+</copy>
+````
 
 ## **Summary**
 
