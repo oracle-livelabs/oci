@@ -26,7 +26,9 @@ Here we will delete the Agones Fleet
 1. SSH to your Operater using the output from `terraform output`, example below.
 
     ```bash
+    <copy>
     ssh -J opc@<bastion public IP> opc@<operator private ip>
+    </copy>
     ```
 
 2. Delete the fleet

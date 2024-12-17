@@ -26,16 +26,20 @@ You will deploy an Agones Fleet of dedicated game servers.
 1. SSH to your Operater using the output from `terraform output`, example below.
 
     ```bash
+    <copy>
     ssh -J opc@<bastion public IP> opc@<operator private ip>
+    </copy>
     ```
 
 2. Create a file called `fleet.yaml` with the contents from [fleet.yaml](./files/fleet.yaml).  This was sourced from [Agones v1.45.0](https://raw.githubusercontent.com/googleforgames/agones/release-1.45.0/install/yaml/install.yaml). The changes made in this file ensure that game servers get deployed to the matching label on our nodes as defined in your `module.tf` file.
 
     ```bash
+    <copy>
     # using vim or nano
     vim fleet.yaml
 
     # paste from the downloaded fleet.json into this new file and save
+    </copy>
     ```
 
 3. Apply the fleet
@@ -71,11 +75,13 @@ You will now scale the Agones Fleet and watch the node pool auto scale.
 2. After a few moments, get the `gameserver`'s and nodes, you should see a lot of `gameserver`'s in Starting or Pending state, and a new node starting up automatically.  Initially you will see the node pool in the console updating as well and new compute instances being added to the node pool before they start to show in `kubectl get nodes` results.
 
     ```bash
+    <copy>
     # grep for pods that have 0 containers running
     kubectl get pods |grep 0/2
 
     # similarly, view the gameserver ip's and status
     kubectl get gameserver
+    </copy>
     ```
 
 3. To inspect, get the status of a given pod that is NOT running.  Ideally you should see an Event that says "pod triggered scale-up" and you can skip the next numbered step here.  If you don't see that event the next step should be looked at.

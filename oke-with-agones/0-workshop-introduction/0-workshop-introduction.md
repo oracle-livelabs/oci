@@ -36,7 +36,7 @@ Agones replaces bespoke or proprietary cluster management and game server scalin
 
 Total estimated time: 120 minutes
 
-### **Let's Get Started!**
+## Task 1: Begin The Labs
 
 Use the left navigation on this page to begin the labs in this workshop.
 

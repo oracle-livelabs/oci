@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Autoscaling OKE Node Pools with Agones Game Servers and Fleets",
+    "workshoptitle": "Autoscale OKE Node Pools with Agones Game Servers and Fleets",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {

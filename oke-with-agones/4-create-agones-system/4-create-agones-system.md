@@ -26,7 +26,9 @@ In this task you will create Agones components and create LoadBalancer services 
 1. SSH to your Operater using the output from `terraform output`, example below.
 
     ```bash
+    <copy>
     ssh -J opc@<bastion public IP> opc@<operator private ip>
+    </copy>
     ```
 
 2. Deploy the Agones system using Helm
@@ -53,6 +55,7 @@ In this task you will create Agones components and create LoadBalancer services 
    Example output...
 
     ```bash
+    <copy>
     [opc@o-xiteaz ~]$ kubectl get pods --namespace agones-system
 
     NAME                                 READY   STATUS    RESTARTS   AGE
@@ -65,6 +68,7 @@ In this task you will create Agones components and create LoadBalancer services 
     agones-extensions-7bbbf98956-tbbrx   1/1     Running   0          2m23s
     agones-ping-6848778bd7-7z76r         1/1     Running   0          2m23s
     agones-ping-6848778bd7-dg5wp         1/1     Running   0          2m23s
+    </copy>
     ```
 
 ## Task 2: Test Agones with A Game Server and Client
@@ -100,7 +104,9 @@ The steps here follow the [guide built by Agones](https://agones.dev/site/docs/g
 4. Now type the following line and hit enter, you will see a response of `ACK: HELLO WORLD!`
 
     ```bash
+    <copy>
     HELLO WORLD!
+    </copy>
     ```
 
 5. Delete the `gameserver` when done

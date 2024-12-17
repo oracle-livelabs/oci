@@ -1,4 +1,4 @@
-# Creating OCI Resources With Terraform
+# Create OCI Resources With Terraform
 
 In this lab you will create the OCI Network, Bastion, Operator and OKE cluster using Terraform and the OKE Terraform module.  It's important to read through the [OKE Module documentation](https://oracle-terraform-modules.github.io/terraform-oci-oke/) as there are numerous options that can apply to your specific OCI deployment.
 
@@ -69,7 +69,9 @@ Connect to the Bastion to ensure you have access to the OKE control plane.
 2. The operator has kubectl installed with connectivity to the OKE control plane.  **An example of that output is below**. You should test this command and make sure it works before proceeding to the next section of this workshop.
 
     ````shell
+    <copy>
     ssh -J opc@<bastion public IP> opc@<operator private ip>
+    </copy>
     ````
 
 You may now **proceed to the next lab**

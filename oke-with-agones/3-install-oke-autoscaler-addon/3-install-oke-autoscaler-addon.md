@@ -1,4 +1,4 @@
-# Installing the OKE Autoscaler Addon
+# Install the OKE Autoscaler Addon
 
 In this lab you will install and verify the OKE Cluster Autoscaler Add-on.
 
@@ -31,7 +31,9 @@ You should verify the current state of addons to see if the autoscaler was insta
 1. SSH to your Operater using the output from `terraform output`, example below.
 
     ```bash
+    <copy>
     ssh -J opc@<bastion public IP> opc@<operator private ip>
+    </copy>
     ```
 
 2. Get the OCID of your cluster by running this command and looking for the `id` (which is the OCID) of the cluster you just created.  This can also be obtained from the web console.
@@ -59,7 +61,9 @@ Assuming the task before this indicated the addon was not installed you can now 
 1. SSH to your Operater using the output from `terraform output`, example below.
 
     ```bash
+    <copy>
     ssh -J opc@<bastion public IP> opc@<operator private ip>
+    </copy>
     ```
 
 2. Get the OCID of the `node_pool_workers` node pool. This is the pool that will run the Agones fleet in subsequent labs of this workshop.
@@ -77,11 +81,13 @@ Assuming the task before this indicated the addon was not installed you can now 
    Create the config as `addon.json` and paste the contents from [addon.json](./files/addon.json). Replace from the file `<NODE POOL OCID>` with the OCID from the previous step above.
 
     ```bash
+    <copy>
     # using vim or nano
     vim addon.json
 
     # paste from addon.json into this new file and save
     # Paste in the correct Node Pool OCID
+    </copy>
     ```
 
 4. Install the addon using the newly created config file.  This should run without error and a resulting work request ID will be displayed.
