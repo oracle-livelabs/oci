@@ -28,7 +28,7 @@
             "filename": "../../3-monitor-traces/monitor-traces.md"
         },
         {
-            "title": "Lab 4: Create a second child span",
+            "title": "Lab 4: Create a second child span (Optional)",
             "description": "Create a second child span",
             "filename": "../../4-create-second-childspan/create-second-childspan.md"
         },
@@ -38,7 +38,7 @@
             "filename": "../../5-clean-up-environment/clean-up-environment.md"
         },
         {
-            "title": "Lab 6: Learn more about APM (optional)",
+            "title": "Lab 6: Learn more about APM (Optional)",
             "description": "Learn more about APM",
             "filename": "../../6-learn-more/learn-more.md"
         },
