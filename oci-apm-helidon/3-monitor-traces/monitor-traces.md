@@ -94,7 +94,7 @@ Watch the video below for a quick walk-through of the lab.
 		  collect-metrics: true
 		  collect-resources: true
 		  path: /api/traces
-  		  enabled: true
+		  enabled: true
 		  properties:
 		    - key: com.oracle.apm.agent.log.level
 		      value: INFO
