@@ -97,7 +97,7 @@ The steps here follow the [guide built by Agones](https://agones.dev/site/docs/g
 
     ````shell
     <copy>
-    nc -u <IP of gameserver> 7043
+    nc -uv <IP of gameserver> 7043
     </copy>
     ````
 
