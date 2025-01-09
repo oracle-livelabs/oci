@@ -183,7 +183,8 @@ At present, the widget displays the default query. You can change the query depe
 	![Oracle Cloud, Edit Dashboards page](images/7-5-12-edit-widgets.png " ")
       > **Note:** You can change the widget layout by pressing and holding the two bars icon of a widget and dragging and dropping to the desired location. 	![Oracle Cloud, Edit Dashboards page](images/7-5-12-note-move-widgets.png " ")
 
-14. In the **Widgets** tab, **Widget label** field, change the label from CTDW Apdex to **Apdex**. Note that the Widget title also changes to Apdex.
+14. In the **Widgets** tab, expand **CTDW Apdex**, then in the **Widget label** field, change the label from CTDW Apdex to **Apdex**. Note that the Widget title also changes to Apdex.
+	![Oracle Cloud, Edit Dashboards page](images/7-5-13a-expand-ctdw-apdex.png " ")
 	![Oracle Cloud, Edit Dashboards page](images/7-5-13-change-widget-title.png " ")
 
 15. In the **Configured Widget inputs** section, locate the first query **Show traces count(apdexLevel)..**. Click the pencil icon next to the query to edit this query.
@@ -320,4 +321,4 @@ At present, the widget displays the default query. You can change the query depe
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, June 2024
+* **Last Updated By/Date** - Yutaka Takatsu, December 2024

@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Use OpenTracing for Helidon Microservices with Oracle Application Performance Monitoring",
+    "workshoptitle": "Instrument Helidon Microservices with Oracle Application Performance Monitoring",
 	"help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {
@@ -13,13 +13,13 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Create an APM Domain and obtain Data Upload Endpoint and Private Data Key ",
-            "description": "Create an APM Domain and obtain Data Upload Endpoint and Private Data Key ",
+            "title": "Lab 1: Create an APM Domain and obtain Data Upload Endpoint and Private Data Key",
+            "description": "Create an APM Domain and obtain Data Upload Endpoint and Private Data Key",
             "filename": "../../1-create-domain/create-domain.md"
         },
         {
-            "title": "Lab 2: Setup a Helidon SE Application ",
-            "description": "Setup a Helidon SE Application ",
+            "title": "Lab 2: Setup a Helidon SE Application",
+            "description": "Setup a Helidon SE Application",
             "filename": "../../2-setup-helidon/setup-helidon.md"
         },
         {
@@ -28,16 +28,20 @@
             "filename": "../../3-monitor-traces/monitor-traces.md"
         },
         {
-            "title": "Lab 4: Create a second Service",
-            "description": "Create a second Service",
-            "filename": "../../4-create-second-service/create-second-service.md"
+            "title": "Lab 4: Create a second child span (Optional)",
+            "description": "Create a second child span",
+            "filename": "../../4-create-second-childspan/create-second-childspan.md"
         },
         {
-            "title": "Lab 5: View the trace with multiple services",
-            "description": "View the trace with multiple services",
-            "filename": "../../5-view-multiple-services/view-multiple-services.md"
+            "title": "Lab 5: Clean up the workshop environment",
+            "description": "Clean up the workshop environment",
+            "filename": "../../5-clean-up-environment/clean-up-environment.md"
         },
-
+        {
+            "title": "Lab 6: Learn more about APM (Optional)",
+            "description": "Learn more about APM",
+            "filename": "../../6-learn-more/learn-more.md"
+        },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
