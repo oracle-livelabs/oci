@@ -26,19 +26,19 @@ Agones replaces bespoke or proprietary cluster management and game server scalin
 
 | Module | Est. Time |
 | ------------- | :-----------: |
-| [Workshop Introduction](?lab=0-workshop-introduction) | 5 minutes |
-| [Get Started](?lab=1-get-started) | 15 minutes |
-| [Creating OCI Resources With Terraform](?lab=2-create-infrastructure-with-terraform) | 30 minutes |
-| [Installing the OKE Autoscaler Addon](?lab=3-install-oke-autoscaler-addon) | 20 minutes |
-| [Create the Agones System Pods with Helm](?lab=4-create-agones-system) | 15 minutes |
-| [Deploy an Agones Fleet and Autoscale OKE Nodes](?lab=5-create-scale-agones-fleet) | 25 minutes |
-| [Teardown](?lab=6-teardown) | 10 minutes |
+| [Introduction](?lab=introduction) | 5 minutes |
+| [Get Started](?lab=get-started) | 15 minutes |
+| [Creating OCI Resources With Terraform](?lab=1-create-infrastructure-with-terraform) | 30 minutes |
+| [Installing the OKE Autoscaler Addon](?lab=2-install-oke-autoscaler-addon) | 20 minutes |
+| [Create the Agones System Pods with Helm](?lab=3-create-agones-system) | 15 minutes |
+| [Deploy an Agones Fleet and Autoscale OKE Nodes](?lab=4-create-scale-agones-fleet) | 25 minutes |
+| [Teardown](?lab=5-teardown) | 10 minutes |
 
 Total estimated time: 120 minutes
 
-## Task 1: Begin The Labs
+## Task 1: Complete the Get Started Section
 
-Use the left navigation on this page to begin the labs in this workshop.
+Use the left navigation on this page to go to *Get Started*.
 
 You may now **proceed to the next lab**
 

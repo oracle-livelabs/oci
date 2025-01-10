@@ -3,35 +3,35 @@
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
-            "title": "Lab 0: Workshop Introduction",
+            "title": "Introduction",
             "description": "The will introduce you to OKE and Agones and list all labs in this Workshop",
-            "filename": "../../0-workshop-introduction/0-workshop-introduction.md"
+            "filename": "../../introduction/introduction.md"
         },
         {
-            "title": "Labe 1: Get Started",
+            "title": "Get Started",
             "description": "This is the prerequisites for the Workshop to install the OCI CLI and Terraform",
-            "filename": "../../1-get-started/1-get-started.md"
+            "filename": "../../get-started/get-started.md"
         },
         {
-            "title": "Lab 2: Create Infrastructure with Terraform",
+            "title": "Lab 1: Create Infrastructure with Terraform",
             "description": "Provisioning Oracle Container Engine for Kubernetes (OKE) with Virtual Nodes",
-            "filename": "../../2-create-infrastructure-with-terraform/2-create-infrastructure-with-terraform.md"
+            "filename": "../../1-create-infrastructure-with-terraform/1-create-infrastructure-with-terraform.md"
         },
         {
-            "title": "Lab 3: Install OKE Autoscaler Addon",
-            "filename": "../../3-install-oke-autoscaler-addon/3-install-oke-autoscaler-addon.md"
+            "title": "Lab 2: Install OKE Autoscaler Addon",
+            "filename": "../../2-install-oke-autoscaler-addon/2-install-oke-autoscaler-addon.md"
         },
         {
-            "title": "Lab 4: Create the Agones System",
-            "filename": "../../4-create-agones-system/4-create-agones-system.md"
+            "title": "Lab 3: Create the Agones System",
+            "filename": "../../3-create-agones-system/3-create-agones-system.md"
         },
         {
-            "title": "Lab 5: Create and Scale an Agones Fleet",
-            "filename": "../../5-create-scale-agones-fleet/5-create-scale-agones-fleet.md"
+            "title": "Lab 4: Create and Scale an Agones Fleet",
+            "filename": "../../4-create-scale-agones-fleet/4-create-scale-agones-fleet.md"
         },
         {
-            "title": "Lab 6: Teardown",
-            "filename": "../../6-teardown/6-teardown.md"
+            "title": "Lab 5: Teardown",
+            "filename": "../../5-teardown/5-teardown.md"
         },
         {
             "title": "Need Help?",
