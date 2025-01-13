@@ -71,7 +71,7 @@ Download the Terraform files
     </copy>
     ````
 
-You may now **proceed to the next lab**
+You may now **proceed to Lab 1**
 
 ## Learn More - *Useful Links*
 
