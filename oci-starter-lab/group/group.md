@@ -94,15 +94,19 @@ In this case, this means that it will just create new PODS in Kubernetes.
 7. Click *Cloud Shell*
     ![Group App2](images/starter-group-app2.png =80%x*)
     ```
+    <copy>
     cd dev 
     curl "https://www.ocistarter.com/app/zip?prefix=starter2&deploy=compute&ui=html&language=java&database=atp" --output starter2.zip
     unzip starter2.zip
     cd starter2
     cat README.md
+    </copy>
     ```
-8. Run the build. Itt will take the environment variables from the group\_common\_env.sh created above.
+8. Run the build. It will take the environment variables from the group\_common\_env.sh created above.
     ```
-    ./build.sh
+    <copy>
+    ./starter.sh build
+    </copy>
     ```
 9. Test if it works. Notice, the first app is using Java, the second one NodeJS.
     ```

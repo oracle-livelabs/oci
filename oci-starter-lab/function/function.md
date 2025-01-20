@@ -54,18 +54,21 @@ Please read the chapter: Introduction and Get Started.
     - Click *Open*
     ![Editor File Open](images/starter-compute-dir.png)
 2. The main files are:
-    - Commands
-        - build.sh      : Build the whole program: Run Terraform, Configure the DB, Build the App, Build the UI
-        - destroy.sh    : Destroy the objects created by Terraform
-        - env.sh        : Contains the settings of your project
-    - Directories
-        - src           : Sources files
-            - app         : Source of the Backend Application (Command: build_app.sh)
-            - ui          : Source of the User Interface (Command: build_ui.sh)
-            - db          : SQL files of the database
-            - terraform   : Terraform scripts (Command: plan.sh / apply.sh)
-        - bin            : with some helper commands
-            - bin/ssh\_bastion.sh (to ssh to the Bastion)
+
+   |             |            |           | Description |
+   | ----------- | ---------- | --------- | ---|
+   | Commands    |            |           |  |
+   |             | starter.sh |           | Build or destroy a project. Show a menu with commands if not argument is given | 
+   |             | env.sh     |           | Settings of your project | 
+   | Directories |            |           | Commands used by starter.sh | 
+   |             | bin/       |           | Commands used by starter.sh | 
+   |             | src/       |           | Sources files | 
+   |             |            | app       | Backend Application (Command: build_app.sh) | 
+   |             |            | ui        | User Interface (Command: build_ui.sh) | 
+   |             |            | db        | Database initialisation files (SQL, ...) | 
+   |             |            | terraform | Terraform scripts  | 
+   |             | target/    |           | Output directory  | 
+
 3. We will need an AUTH Token to login to the Docker Container Registry. Let's create one:
     - Click on the top left icon
     - Click your username
@@ -85,7 +88,7 @@ Please read the chapter: Introduction and Get Started.
         - If not, the script will create a "oci-starter" compartment
     ![Editor env.sh](images/starter-function-env.png)
 
-## Task 3: Build.sh
+## Task 3: Starter.sh
 
 Before to run the build. Notice that the build will create:
 - Network resources: VCN, Subnet
@@ -100,11 +103,12 @@ Before to run the build. Notice that the build will create:
     - then run:
     ```
     <copy>
-    ./build.sh
+    ./starter.sh
     </copy>
     ```
-
-    It will build all and at the end you will see:
+    - Choose **Build**
+        ![Result](../compute/images/starter-starter-build.png)     
+    - It will build all and at the end you will see:
     ```
     <copy>
     - User Interface : https://xxxxxx.apigateway.eu-xxxx.oci.customer-oci.com/starter/
@@ -142,7 +146,7 @@ You will find a Application starter-fn-application
 1. To clean up, run 
     ```
     <copy>
-    ./destroy.sh
+    ./starter.sh destroy
     </copy>
     ```
 
@@ -157,5 +161,5 @@ You will find a Application starter-fn-application
 
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
-* Last Updated - Nov, 2th 2023
+* Last Updated - Jan, 20th 2025
 

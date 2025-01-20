@@ -34,7 +34,7 @@ a working sample for most combinations of the above choices.
 It works like this:
 - We will go to the Website https://www.ocistarter.com/ to get a zip file with all the code that we need
 - Check what it contains: readme.md, LICENCE (Apache 2 License), source files
-- Run ./build.sh
+- Run ./starter.sh
 
 ## Labs
 
@@ -68,7 +68,7 @@ Whatever choices that you do, you will get a working sample with terraform to cr
 4. Backend
     - Java (Default) - [Java](https://dev.java/)
     - NodeJS - [NodeJS](https://nodejs.org/)
-    - Python -[Python](https://www.python.org/)
+    - Python - [Python](https://www.python.org/)
     - .NET - [.NET](https://dotnet.microsoft.com/)
     - Go - [Go](https://go.dev/)
     - ORDS - [Oracle REST Data Services](https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/index.html)
@@ -88,9 +88,56 @@ Whatever choices that you do, you will get a working sample with terraform to cr
 
 For Advanced Features, check the Lab - Advanced. For things like Resource Manager, GraalVM Native and so on... 
 
+## Prerequisites - Cloud Shell with Public Network
+
+If you start Cloud Shell and that you see **Network: Public** on the top or that you may change to **Public Network**, there is nothing to do.
+For ex, OCI Administrator has that right. Or your administrator has added the right already.
+
+### Solution 1 - Add Policy
+
+If this is not the case, please ask your Administrator to follow this document.
+
+https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro_topic-Cloud_Shell_Networking.htm#cloudshellintro_topic-Cloud_Shell_Public_Network
+
+He/She just need to add a Policy to your tenancy :
+
+```
+allow group <GROUP-NAME> to use cloud-shell-public-network in tenancy
+```
+
+### Solution 2 - Use a compute to run the build
+
+If for some reasons, Cloud Shell access can be be granted. The another way is to have a Virtual Machine to run the build (via Internet or NAT Gateway).
+Internet access is needed for example to download libraries with Java/Maven, requirements.txt in Python and so on.
+
+In short, 
+- Create a VCN 
+    - Go to Menu / Networking / Virtual Cloud Network
+    - Click **Start VCN Wizard**
+    - Choose **Create VCN with Internet Connectivity**
+    - Follow the wizard
+- Create a VM
+    - Go to Menu / Compute / Instance
+    - Click **Create Instance**
+    - Name: dev
+    - Choose the shape. The shape can be an ARM or X86 based on what you want to build.
+    - Keep "Oracle Linux 8" 
+    - Use the VCN created above
+    - Follow the wizard
+- Log on the VM
+    - ssh opc@<public Build IP>
+    - Follow https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm#configfile
+        - oci setup config
+    - Install this script to install the needed tools:
+        ```
+        wget https://raw.githubusercontent.com/oracle-devrel/oci-starter/main/test_suite/install_dev.sh
+        bash install_dev.sh
+        ```
+        [Script: https://raw.githubusercontent.com/oracle-devrel/oci-starter/main/test_suite/install_dev.sh][https://raw.githubusercontent.com/oracle-devrel/oci-starter/main/test_suite/install_dev.sh]
+- Run the lab
 
 ## Acknowledgements 
 
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
-* Last Updated - Mar, 11th 2024
+* Last Updated - Jan, 20th 2025

@@ -56,20 +56,22 @@ Please read the chapter: Introduction and Get Started.
     - Click *Open*
     ![Editor File Open](images/starter-compute-dir.png)
 2. The main files are:
-    - Commands:
-        - build.sh      : Build the whole program: Run Terraform, Configure the DB, Build the App, Build the UI
-        - destroy.sh    : Destroy the objects created by Terraform
-        - env.sh        : Contains the settings of your project
-    - Directories:
-        - src           : Sources files
-            - app         : Source of the Backend Application (Command: build_app.sh)
-            - ui          : Source of the User Interface (Command: build_ui.sh)
-            - db          : SQL files of the database
-            - terraform   : Terraform scripts (Command: plan.sh / apply.sh)
-            - compute     : Contains the deployment files to Compute
-        - bin           : with some helper commands
-            - bin/ssh\_compute.sh (to ssh to the Compute)
-            - bin/ssh\_bastion.sh (to ssh to the Bastion)
+
+   |             |            |           | Description |
+   | ----------- | ---------- | --------- | ---|
+   | Commands    |            |           |  |
+   |             | starter.sh |           | Build or destroy a project. Show a menu with commands if not argument is given | 
+   |             | env.sh     |           | Settings of your project | 
+   | Directories |            |           | Commands used by starter.sh | 
+   |             | bin/       |           | Commands used by starter.sh | 
+   |             | src/       |           | Sources files | 
+   |             |            | app       | Backend Application (Command: build_app.sh) | 
+   |             |            | ui        | User Interface (Command: build_ui.sh) | 
+   |             |            | db        | Database initialisation files (SQL, ...) | 
+   |             |            | terraform | Terraform scripts  | 
+   |             |            | compute   | Deployment to Compute | 
+   |             | target/    |           | Output directory  | 
+
 3. Edit the env.sh file:
     - Choose the env.sh file.
     - Look for \_\_TO_FILL\_\_ in the file
@@ -79,7 +81,7 @@ Please read the chapter: Introduction and Get Started.
         - If not, the script will create a "oci-starter" compartment
     ![Editor env.sh](images/starter-compute-env.png)
 
-## Task 3: Build.sh
+## Task 3: Starter.sh
 
 During the build, Terraform will create:
 - Network resources: VCN, Subnet
@@ -92,9 +94,11 @@ During the build, Terraform will create:
     - then run:
     ```
     <copy>
-    ./build.sh
+    ./starter.sh
     </copy>
     ```
+    - Choose **Build**
+        ![Result](images/starter-starter-build.png)  
     - It will build all and at the end you will see:
     ```
     <copy>
@@ -119,13 +123,23 @@ Please also check the  "Lab 6 - How to Customize" to see how to customize this s
 ### SSH
 
 During the build, it has generated 2 files:
-- id\_starter\_rsa : a ssh private key to login to the compute and bastion
-- id\_starter\_rsa.pub : the public ssh private key installed in the compute and bastion
+- ssh\_key\_starter : a ssh private key to login to the compute and bastion
+- ssh\_key\_starter.pub : the public ssh private key installed in the compute and bastion
 
-You can login to the compute by running:
+You can login to the compute by
+- running:
+    ```
+    <copy>
+    ./starter.sh 
+    </copy>
+    ```
+- Choose **Advanced**
+- Then **SSH / Compute**
+
+It is identical to run this command:
 ```
 <copy>
-bin/ssh_compute.sh
+./starter.sh ssh compute
 </copy>
 ```
 
@@ -138,7 +152,7 @@ The interesting directories are:
 1. To clean up, run 
     ```
     <copy>
-    ./destroy.sh
+    ./starter.sh destroy
     </copy>
     ```
 
@@ -153,5 +167,5 @@ The interesting directories are:
 
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
-* Last Updated - Nov, 2th 2023
+* Last Updated - Jan, 20th 2025
 
