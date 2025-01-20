@@ -26,11 +26,11 @@ Video Recording
 ## Learn More
 
 Lab
-* [Getting Started with Oracle Cloud Infrastructure Core Services](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648&clear=RR,180&session=6361856240041)
+* [Getting Started with Oracle Cloud Infrastructure Core Services](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648&clear=RR,180&session=6361856240041)
 
 Resource Links for Reference
 * [Getting Started with OCI](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/baremetalintro.htm) 
-* [Getting Started with Oracle Cloud Infrastructure Core Services Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648) (Labs 2-4 only)
+* [Getting Started with Oracle Cloud Infrastructure Core Services Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648) (Labs 2-4 only)
 
 
 ## Acknowledgements

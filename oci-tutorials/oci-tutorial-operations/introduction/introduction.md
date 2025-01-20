@@ -28,8 +28,8 @@ Video Recording
 ## Learn More
 
 Labs
-* [Using Events and Notifications](https://apexapps.oracle.com/pls/apex/f?p=133:180:15347202241404::::wid:653)
-* [Creating a Resource Manager Stack](https://apexapps.oracle.com/pls/apex/f?p=133:180:17001920275258::::wid:611)
+* [Using Events and Notifications](https://livelabs.oracle.com/pls/apex/f?p=133:180:15347202241404::::wid:653)
+* [Creating a Resource Manager Stack](https://livelabs.oracle.com/pls/apex/f?p=133:180:17001920275258::::wid:611)
 
 Resource Links for Reference
 * [Terraform on OCI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraform.htm): An open-source tool that allows you to programatically manage, version, and persist infrastructure through the "infrastructure-as-code" model.

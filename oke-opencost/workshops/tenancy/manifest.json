@@ -1,0 +1,30 @@
+{
+    "workshoptitle": "Optimize Oracle Kubernetes Engine (OKE) costs with OpenCost",
+    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get started",
+            "filename": "../../get-started/get-started.md"
+        },
+        {
+            "title": "Lab 1: Provision Oracle Container Engine for Kubernetes (OKE) cluster",
+            "filename": "../../provision/provision.md"
+        },
+        {
+            "title": "Lab 2: Setup OpenCost on your OKE cluster",
+            "filename": "../../setup/setup.md"
+        },
+        {
+            "title": "Lab 3: Use OpenCost to explore your Kubernetes costs",
+            "filename": "../../use/use.md"
+        },
+        {
+            "title": "Need help?",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

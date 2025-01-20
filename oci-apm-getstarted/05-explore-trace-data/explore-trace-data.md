@@ -86,7 +86,7 @@ Estimated time: 15 minutes
 
 ## Task 3: Drill down to the trace Details
 
-1. Click the black triangle icon on the right side of the Query view. A list of queries used in the session will show in a pulldown. Select the previous query executed.
+1. Click the clock icon on the right side of the Query view. A list of queries used in the session will show in a pulldown. Select the previous query executed. Click **Run**.
 
 	![Oracle Cloud, Trace Explorer](images/1-12-select-past-query.png " ")
 
@@ -144,10 +144,10 @@ Estimated time: 15 minutes
 	 >**Note:** You can use in context drill down to the database services, by clicking the **OPSCI** or **PerfHub** buttons in the **Available Drill downs** section.
 	![Oracle Cloud, Trace Explorer](images/1-20-1-drilldown.png " ")
 
-9. Click **Close**, then click the **Trace Explorer** link from the breadcrumb to go back to the Trace Explorer main page.
+9. Click **Close** in the Span details view, then click another **Close** in the Trace details page to go back to the Trace Explorer main page.
 
 	![Oracle Cloud, Trace Explorer](images/1-21-spanpage-close.png " ")
-	![Oracle Cloud, Trace Explorer](images/1-22-click-tx-link.png " ")
+	![Oracle Cloud, Trace Explorer](images/1-22-tracedetails-close.png " ")
 
 
 ## Task 4: Inspect the SQL spans by executions
@@ -157,7 +157,7 @@ Estimated time: 15 minutes
 
 	![Oracle Cloud, Trace Explorer](images/1-23-click-sqls-tab.png " ")
 
-2. Verify that the SQL that comes at the top of the list, is the same SQL, which you found as a bottleneck in the previous steps. The view is sorted by the slowest average duration. Next, let's check whether the SQL is always slow or not. Click the **Count** column of the SQL on the top row.
+2. Verify that the SQL that comes at the top of the list, is the same update statement, which you found as a bottleneck in the previous steps. The view is sorted by the slowest average duration. Next, let's check whether the SQL is always slow or not. Click the **Count** column of the SQL on the top row.
 	![Oracle Cloud, Trace Explorer](images/1-24-click-count.png " ")
 
 3. 	You can see each of the individual executions of the SQL. Confirm that the SQL is not always slow when executed. Scroll down the list as needed.
@@ -180,7 +180,7 @@ Estimated time: 15 minutes
 
 	``` bash
 	<copy>
-	show spans histogram(spanDuration, 2000,10000,10) as Bucket, min(spanDuration) as "Min", max(spanDuration) as "Max", count(*) as count, avg(spanDuration) as Avg  where operationName='/frontStore/checkout' group by histogram(spanDuration, 2000,10000,10) order by max(spanDuration) asc
+	show (spans) histogram (SpanDuration, 1, 20000, 9) as Bucket, count(*) as Count, min(spanDuration) as Min, max(spanDuration) as Max where dbOracleSqlId = '2t706pcc6jgbw'group by histogram (SpanDuration, 1, 20000, 9) order by min(spanDuration) asc
 	</copy>
 	```
 
@@ -220,4 +220,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, May 2023
+* **Last Updated By/Date** - Yutaka Takatsu, December 2024

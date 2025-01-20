@@ -2,59 +2,40 @@
 
 ## Introduction
 
-In this lab, we shall access the Siebel Kubernetes Cluster that hosts the newly deployed Siebel CRM. In this way, we can see the various pods, services, and other Kubernetes resources running in the cluster and manage them as required.
+In this lab, we access the Siebel Kubernetes Cluster hosting our deployed Siebel CRM Enterprise. We'll see the various pods, services, and other Kubernetes resources running in the cluster.
 
-Estimated Time: 20 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
 In this lab, you will:
-*   Gather connection details of the Siebel Kubernetes Cluster
-*   Set up access to the Cluster from Siebel Cloud Manager instance
 *   View the Siebel CRM environment in Kubernetes
 
 ### Prerequisites
 
 * SSH Key
 
-## Task 1: Gather connection details of the Siebel Kubernetes Cluster
+## Task 1: View the Siebel CRM environment in Kubernetes
 
-1. Log in to Oracle Cloud Console and navigate to **Developer Services** and **Kubernetes Clusters (OKE)**
+1. First log in via SSH to the SCM machine.
 
-2. In the **List Scope** section on the left side panel, choose the compartment **SiebelLab**
-
-3. Drill down on the cluster name, **siebellab\_oke\_cluster**
-
-4. Click ***Access Cluster***
-
-5. Click ***Local Access*** and note the commands mentioned.
-
-## Task 2: Set up access to connect to the Cluster from Siebel Cloud Manager instance
-
-1. Connect to the Siebel Cloud Manager instance through PuTTY using the ssh private key that we had created in Lab 1. Enter the username as **opc**
-
-2. Execute the following command to enter the Siebel Cloud Manager container.
+2. Once logged in to the SCM via SSH, enter the following command
 
    ```
-   $ <copy>docker exec -it cloudmanager bash</copy>
+   <copy>docker exec -it cloudmanager bash</copy>
    ```
 
-3. Now, execute the commands mentioned in the **Local Access** page from Oracle Cloud Console one by one in the PuTTY session. The commands would look like this,
+   This drops us into a shell inside the cloudmanager container.
+
+3. In Lab 4, we deployed Siebel CRM and, via a REST API call, we received an environment ID, referred to as **env_id**, which we used to follow the progress of the deployment. 
+
+   Now we will want to interrogate the Kubernetes environment deployed for that environment. To begin, we can issue the following command for the environment.
 
    ```
-   $ <copy>mkdir -p $HOME/.kube</copy>
+   <copy>source /home/opc/siebel/{env_id}/k8sprofile</copy>
    ```
-   ```
-   $ <copy>oci ce cluster create-kubeconfig --cluster-id {OCID_of_the_Cluster} --file $HOME/.kube/config --region us-ashburn-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT</copy>
-   ```
-   ```
-   $ <copy>export KUBECONFIG=$HOME/.kube/config</copy>
-   ```
-4. The config information will be written to the **$HOME/.kube/config** file of the Siebel Cloud Manager container. We are now ready to access the cluster.
 
-## Task 3: View the Siebel CRM environment in Kubernetes
-
-1. To view all the resources that were created as part of the new Siebel CRM environment, execute the following command.
+4. To view all the resources that were created as part of the new Siebel CRM environment, execute the following command (assuming you stuck with the name 'SiebelLab' in your environment payload)
 
    ```
    $ <copy>kubectl -n siebellab get all</copy>
@@ -62,9 +43,22 @@ In this lab, you will:
 
    ![Siebel Cluster Details Screenshot](./images/sbl-cluster-details.png)
 
-In the above screenshot, the **siebelcgw-0** pod represents the Siebel Gateway, the **edge-0** pod represents the Siebel Server, and the **quantum-0** pod represents the Siebel Application Interface.
+   In the above screenshot, the **siebelcgw-0** pod represents the Siebel Gateway, the **edge-0** pod represents the Siebel Server, and the **quantum-0** pod represents the Siebel Application Interface.
 
-2. To enter a particular pod to execute commands or check services' status and so on, execute the following command.
+6. You can verify the version of the Siebel container in use as follows.
+
+    ```
+    $ <copy>kubectl -n siebellab describe edge-0 | grep -i version</copy>
+    ```
+
+   or
+
+    ```
+    $ <copy>kubectl -n siebellab describe edge-0 | grep -i image</copy>
+    ```
+
+
+5. To enter a particular pod to execute commands or check services' status and so on, execute the following command.
 
     ```
     $ <copy>kubectl -n siebellab exec -it {Pod_Name} -- /bin/bash</copy>
@@ -73,12 +67,32 @@ In the above screenshot, the **siebelcgw-0** pod represents the Siebel Gateway, 
     ```
     $ <copy>kubectl -n siebellab exec -it edge-0 -- /bin/bash</copy>
     ```
+
+6. From within the edge-0 pod, you can now connect to the database should you need to.
+
+   ```
+   $ <copy>sqlplus admin/{admin_password}@siebellab_tp</copy>
+   ```
+
+   When revisiting the vault secret for the password, ensure to click the radio button to show the decoded Base64 value if you aim to cut and paste the value you used.
+
+   ![Vault Secret](./images/plaintext-vault-secret.png)
+
+
+7. We could also view the typical siebel processes running within the container.
+
+   ```
+   $ <copy>ps -ef</copy>
+   ```
+
+   ![Edge-0 Processes](./images/edge-0-processes.png)
+
 ## Summary
 
-In this lab, we accessed the Siebel Kubernetes Cluster and viewed the various resources that support the Siebel CRM environment.
+In this lab, we accessed the Siebel Kubernetes Cluster,viewed the various resources that support the Siebel CRM environment, and delved briefly into the edge-0 container.
 
 ## Acknowledgements
 
-* **Author:** Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
+* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
-* **Last Updated By/Date** - Sampath Nandha, Principal Cloud Architect, March 2023
+* **Last Updated By/Date** - Duncan Ford, Software Engineer, May 2024

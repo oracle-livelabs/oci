@@ -81,7 +81,7 @@ Whatever choices that you do, you will get a working sample with terraform to cr
     - Oracle Autonomous Database - [Autonomous Database](https://docs.oracle.com/en/database/autonomous-database-cloud-services.html)
     - Oracle Database - [Base Database Service](https://docs.oracle.com/en/cloud/paas/base-database/index.html)
     - Pluggable Database - [PDB on top of an existing Oracle Database](https://docs.oracle.com/en-us/iaas/dbcs/doc/pluggable-databases.html)
-    - Oracle DB 23c Free (running on a Compute) - [Database Free ](https://www.oracle.com/be/database/free/)
+    - Oracle DB 23ai Free (running on a Compute) - [Database Free ](https://www.oracle.com/be/database/free/)
     - MySQL - [MySQL](https://docs.oracle.com/en-us/iaas/mysql-database/index.html)
     - PostgreSQL - [PostgreSQL](https://docs.oracle.com/en-us/iaas/Content/postgresql/home.htm)
     - OpenSearch - [OpenSearch](https://docs.oracle.com/en-us/iaas/Content/search-opensearch/home.htm)

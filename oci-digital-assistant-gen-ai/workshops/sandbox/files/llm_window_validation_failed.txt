@@ -1,0 +1,1 @@
+This is an image of the Bot Tester with the LLM Calls view open. In this image, the conversation has terminated because the LLM could not process the request. In the Bot Tester view, the final message in the conversation is from the skill. It begins with "An unexpected error occurred while invoking the Large Language Model..."

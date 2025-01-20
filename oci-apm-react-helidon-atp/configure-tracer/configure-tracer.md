@@ -15,7 +15,7 @@ Estimated time: 20 minutes
 ### Prerequisites
 
 * This lab requires completion of lab 1 and lab 2 of this workshop
-* This Lab also assumes you have completed the tutorials 1, 2 and 3 in the [React+Java+ADB = Native Cloud App](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814).
+* This Lab also assumes you have completed the tutorials 1, 2 and 3 in the [React+Java+ADB = Native Cloud App](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814).
 
 ## Task 1: Launch Cloud Shell
 1. Launch the Oracle Cloud Shell from the Oracle Cloud Console by selecting the **>..** icon.  <br/><br/>
@@ -370,7 +370,7 @@ Refer to the below screenshots of the ***TodoItemStorage.java*** where the chang
 
 ## Task 6: Rebuild application with the APM Tracer configuration
 
-1. if you completed the [React+Java+ADB = Native Cloud App](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814) Workshop in a different Cloud Shell session, you will need to do the followings :
+1. if you completed the [React+Java+ADB = Native Cloud App](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=814) Workshop in a different Cloud Shell session, you will need to do the followings :
 
   * Ensure the Java version in the path is 11.0.7.
 
