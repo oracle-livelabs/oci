@@ -1,0 +1,31 @@
+{
+    "workshoptitle": "OCI Queue : Decouple application components, message filtering and fairness using OCI Queue",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction to OCI Queue",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Deploy OCI Queue",
+            "filename": "../../lab1-deploy-queue/lab1-deploy-queue.md"
+        },
+        {
+            "title": "Lab 2: Decouple application components/ micro-services using OCI Queue SDK",
+            "filename": "../../lab2-decouple-application-oci-queue-sdk/lab2-decouple-application-oci-queue-sdk.md"
+        },
+        {
+            "title": "Lab 3: Queue Channels - Filter Messages and Messaging Fairness using OCI Queue SDK",
+            "filename": "../../lab3-message-filter-fairness-oci-queue-sdk/lab3-message-filter-fairness-oci-queue-sdk.md"
+        },
+        {
+            "title": "Lab 4: Decouple Application Components/Microservices Using Open-Source STOMP API",
+            "filename": "../../lab4-decouple-application-stomp/lab4-decouple-application-stomp.md"
+        },
+        {
+            "title": "Lab 5: Queue Channels - Filter Messages and Messaging Fairness using open source STOMP API",
+            "filename": "../../lab5-message-filter-fairness-stomp/lab5-message-filter-fairness-stomp.md"
+        }
+    ]
+}
