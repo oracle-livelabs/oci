@@ -8,6 +8,10 @@
             "filename": "../../introduction/introduction.md"
         },
         {
+            "title": "Get Started",
+            "filename": "../../cloud-login/cloud-login.md"
+          },
+        {
             "title": "Lab 1: Deploy OCI Queue",
             "filename": "../../lab1-deploy-queue/lab1-deploy-queue.md"
         },
@@ -26,6 +30,11 @@
         {
             "title": "Lab 5: Queue Channels - Filter Messages and Messaging Fairness using open source STOMP API",
             "filename": "../../lab5-message-filter-fairness-stomp/lab5-message-filter-fairness-stomp.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "../../need-help/need-help-livelabs.md"
         }
     ]
 }
