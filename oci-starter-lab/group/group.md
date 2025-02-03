@@ -18,11 +18,17 @@ But when you enable the *Advanced* option, you have 3 choices for Group: *None /
 
 ## Architecture
 
-### Compute
+### Public Virtual Machine
 
-Here is the architecture of a group of applications sharing common resources with Compute
+Here is the architecture of a group of applications sharing common resources with Public Virtual Machine
 
-![Group Compute](images/architecture_common_compute.png =80%x*)
+![Group Public Compute](images/architecture_common_public_compute.png =80%x*)
+
+### Private Virtual Machine
+
+Here is the architecture of a group of applications sharing common resources with Private Virtual Machine
+
+![Group Private Compute](images/architecture_common_public_compute.png =80%x*)
 
 ### Kubernetes
 
@@ -56,10 +62,12 @@ Let's create a group and a first application (micro-service).
    ![Group App1](images/starter-group-app1.png =80%x*)
 7. Copy the command 
     ```
+    <copy>
     curl "https://www.ocistarter.com/app/zip?prefix=starter&group_name=dev&group_common=atp,oke&deploy=kubernetes&ui=html&language=java&database=atp" --output dev.zip
     unzip dev.zip
     cd dev
     cat README.md
+    </copy>
     ```
 8. Notice that you have 2 directories:
     - group\_common for the common resources of the group (OKE, ATP)
@@ -70,12 +78,16 @@ Let's create a group and a first application (micro-service).
     ![Group App1 Env](images/starter-group-app1-env.png =80%x*)
 10. Run 
     ```
+    <copy>
     ./build_group.sh
+    </copy>
     ```
     The *build\_group.sh* will first build the directory *group\_common* and then the directory *starter*.
 11. When done, check if the application works:
     ```
+    <copy>
     http://123.123.123.123/starter/
+    </copy>
     ```
     It is also interesting to look at the created file: group\_common\_env.sh. It contains all the settings of the group.
     It is reused by all applications.
@@ -110,8 +122,10 @@ In this case, this means that it will just create new PODS in Kubernetes.
     ```
 9. Test if it works. Notice, the first app is using Java, the second one NodeJS.
     ```
+    <copy>
     http://123.123.123.123/starter/
     http://123.123.123.123/starter2/
+    </copy>
     ```
 
 Congratulation, if you reached this point, you created a group of 2 microservices using the same common resources !!
@@ -129,4 +143,4 @@ Congratulation, if you reached this point, you created a group of 2 microservice
 
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
-* Last Updated - Nov, 2th 2023
+* Last Updated - Jan, 20th 2025

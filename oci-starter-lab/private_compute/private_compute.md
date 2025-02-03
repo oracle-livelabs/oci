@@ -1,5 +1,5 @@
 
-# Create Cloud Native Containers using Kubernetes (OKE) 
+# Create Cloud Native Applications on Private Virtual Machine
 
 ## Introduction
 
@@ -7,13 +7,16 @@ Estimated time: 10 min
 
 ### Objectives
 
-![Architecture Kubernetes](images/architecture_kubernetes.png =50%x*)
+![Architecture Compute](images/architecture_private_compute.png =50%x*)
 
 In this sample, using terraform, we will create:
-- a Kubernetes cluster with 2 pods
-- one pod for NGINX and ReactJS
-- one with NodeJS
-- and a MySQL Database. 
+- an API Gateway, with a public IP
+- a Virtual Machine (compute) with a private IP with
+    - with a Java program, 
+    - HTML pages (on NGINX)
+- and an Autonomous Database. 
+
+To access the Virtual Machine (compute), a Bastion is also created.
 
 The steps are identical for all other user interfaces, backends or database.
 
@@ -26,34 +29,35 @@ Please read the chapter: Introduction and Get Started.
 1. Using your browser, go to https://www.ocistarter.com/
 2. Choose 
     - AMD (x86)
-    - Kubernetes
-    - ReactJS
-    - Node
-    - MySQL
+    - Private VM
+    - HTML
+    - Java
+    - SpringBoot
+    - Autonomous database
 3. Click *Cloud Shell*
     - You will see the commands to use.
-    ![OCI Starter Kubernetes Java](images/starter-kubernetes-node.png)
+  ![OCI Starter Compute Java](images/starter-private-compute-java.png)
 4. Login to your OCI account
     - Click *Code Editor*
     - Click *New Terminal*
     - Copy paste the command below. And check the README.md
     ```
     <copy>
-    curl "https://www.ocistarter.com/app/zip?prefix=starter&deploy=kubernetes&ui=reactjs&language=node&database=mysql" --output starter.zip
+    curl "https://www.ocistarter.com/app/zip?prefix=starter&deploy=private_compute&ui=html&language=java&database=atp" --output starter.zip
     unzip starter.zip
     cd starter
     cat README.md
     </copy>
     ```
-    ![OCI Starter Editor](images/starter-editor.png)
+    ![OCI Starter Editor](../public_compute/images/starter-editor.png)
 
 ## Task 2: Main files
 
 1. In the code editor:
-    - Click *File* /  *Open*
+    - Click *File* / *Open*
     - Choose the directory *starter*
     - Click *Open*
-    ![Editor File Open](images/starter-compute-dir.png)
+    ![Editor File Open](../public_compute/images/starter-compute-dir.png)
 2. The main files are:
 
    |             |            |           | Description |
@@ -68,34 +72,24 @@ Please read the chapter: Introduction and Get Started.
    |             |            | ui        | User Interface (Command: build_ui.sh) | 
    |             |            | db        | Database initialisation files (SQL, ...) | 
    |             |            | terraform | Terraform scripts  | 
-   |             |            | oke       | Deployment to Kubernetes | 
+   |             |            | compute   | Deployment to Compute | 
    |             | target/    |           | Output directory  | 
 
-3. We will need an AUTH Token to login to the Docker Container Registry. Let's create one:
-    - Click on the top left icon
-    - Click your username
-    - In the menu on the right, choose Auth Tokens
-    - Click *Generate Token*
-    - Give a name 
-    - Click *Generate Token*
-    - Then copy the value ##AUTH-TOKEN##
-    ![Auth Token](images/starter-auth-token.png)
-4. Edit the env.sh file:
+3. Edit the env.sh file:
     - Choose the env.sh file.
     - Look for \_\_TO_FILL\_\_ in the file
-    - For TF\_VAR\_auth\_token, use the ##AUTH-TOKEN## value that you just above. 
-    - For TF\_VAR\_database\_password, You may leave it like this.
+    - You may leave it like this.
         - If not filled, the "db password" will be randomly generated
     - Ideally, you can also use an existing compartment if you have one. 
         - If not, the script will create a "oci-starter" compartment
-    ![Editor env.sh](images/starter-kubernetes-env.png)
+    ![Editor env.sh](../public_compute/images/starter-compute-env.png)
 
 ## Task 3: Starter.sh
 
-Before to run the build. Notice that the build will create:
+During the build, Terraform will create:
 - Network resources: VCN, Subnet
-- A MySQL database
-- An Oracle Container Engine for Kubernetes (OKE) with 2 nodes.
+- A database
+- A compute instance to run NGINX + the Java App
 - A bastion used mostly to populate the database with the table
 
 1. In the code editor, 
@@ -107,21 +101,21 @@ Before to run the build. Notice that the build will create:
     </copy>
     ```
     - Choose **Build**
-        ![Result](../public_compute/images/starter-starter-build.png)     
+        ![Result](../public_compute/images/starter-starter-build.png)  
     - It will build all and at the end you will see:
     ```
     <copy>
-    - User Interface : http://123.123.123.123/
-    - Rest DB API : http://123.123.123.123/app/dept
-    - Rest Info API : http://123.123.123.123/app/info
+    - User Interface: https://xxxxx.apigateway.eu-frankfurt-1.oci.customer-oci.com/starter/
+    - Rest DB API: https://xxxxx.apigateway.eu-frankfurt-1.oci.customer-oci.com/starter/app/dept
+    - Rest Info API: https://xxxxx.apigateway.eu-frankfurt-1.oci.customer-oci.com/starter/app/info    
     </copy>
     ```
 2. Click on the URL or go to the link to check that it works:
-    - All running in a Kubernetes 
-    - You have ReactJS pages doing REST calls 
-    - To a NodeJS - Express backend
-    - That backend gets data from MySQL database
-    ![Result](images/starter-kubernetes-result.png =60%x*)
+    - All running in a Compute 
+    - You have HTML pages in NGINX doing REST calls 
+    - To a Java SpringBoot backend
+    - That backend gets data from the Autonomous database. 
+    ![Result](../public_compute/images/starter-compute-result.png)
 
 ## Task 4: More info
 
@@ -129,32 +123,32 @@ Before to run the build. Notice that the build will create:
 
 Please also check the  "Lab 7 - How to Customize" to see how to customize this sample to your needs
 
-### Kubernetes
+### SSH
 
-During the build, it will generate an Kubernetes cluster, do this to access it:
+During the build, it has generated 2 files:
+- ssh\_key\_starter : a ssh private key to login to the compute and bastion
+- ssh\_key\_starter.pub : the public ssh private key installed in the compute and bastion
 
+You can login to the compute by
+- running:
+    ```
+    <copy>
+    ./starter.sh 
+    </copy>
+    ```
+- Choose **Advanced**
+- Then **SSH / Compute**
+
+It is identical to run this command:
 ```
 <copy>
-./starter.sh env
-kubectl get pods
+./starter.sh ssh compute
 </copy>
 ```
 
-```
-<copy>
-NAME                                     READY   STATUS    RESTARTS   AGE
-starter-app                              1/1     Running   0          86s
-starter-ui                               1/1     Running   0          83s
-</copy>
-```
-```
-<copy>
-kubectl get service
-kubectl get ingress
-</copy>
-```
-
-By default, the pods for the User Interface and Application are generated in the default namespace.
+The interesting directories are:
+- $HOME/app with the application
+- /usr/share/nginx/html/ with the HTML pages
 
 ### Cleanup
 
@@ -177,3 +171,4 @@ By default, the pods for the User Interface and Application are generated in the
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
 * Last Updated - Jan, 20th 2025
+
