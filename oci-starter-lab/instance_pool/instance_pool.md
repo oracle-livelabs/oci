@@ -152,7 +152,7 @@ ui_url = "http://141.147.42.164"
 ````
 
 
-Please also check the  "Lab 6 - How to Customize" to see how to customize this sample to your needs
+Please also check the  "Lab 7 - How to Customize" to see how to customize this sample to your needs
 
 ### Cleanup
 

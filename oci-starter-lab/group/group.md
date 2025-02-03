@@ -18,11 +18,17 @@ But when you enable the *Advanced* option, you have 3 choices for Group: *None /
 
 ## Architecture
 
-### Compute
+### Public Virtual Machine
 
-Here is the architecture of a group of applications sharing common resources with Compute
+Here is the architecture of a group of applications sharing common resources with Public Virtual Machine
 
-![Group Compute](images/architecture_common_compute.png =80%x*)
+![Group Public Compute](images/architecture_common_public_compute.png =80%x*)
+
+### Private Virtual Machine
+
+Here is the architecture of a group of applications sharing common resources with Private Virtual Machine
+
+![Group Private Compute](images/architecture_common_public_compute.png =80%x*)
 
 ### Kubernetes
 
@@ -129,4 +135,4 @@ Congratulation, if you reached this point, you created a group of 2 microservice
 
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
-* Last Updated - Nov, 2th 2023
+* Last Updated - Jan, 20th 2025

@@ -1,5 +1,5 @@
 
-# Create Cloud Native Applications on Compute
+# Create Cloud Native Applications on Public Virtual Machine
 
 ## Introduction
 
@@ -7,12 +7,12 @@ Estimated time: 10 min
 
 ### Objectives
 
-![Architecture Compute](images/architecture_compute.png =50%x*)
+![Architecture Compute](images/architecture_public_compute.png =50%x*)
 
 In this sample, using terraform, we will create:
-- a compute (VM)
-- with a Java program, 
-- HTML pages (on NGINX)
+- a Virtual Machine (compute) with a public IP with:
+    - a Java program, 
+    - HTML pages (on NGINX)
 - and an Autonomous Database. 
 
 The steps are identical for all other user interfaces, backends or database.
@@ -36,7 +36,6 @@ We will use to Advanced tab to work with the limits of the LiveLab sandbox. (Exi
 2. Choose:
     - Advanced
     - Existing VCN 
-    - Shared Compute 
     - Keep:
         - Compute
         - HTML
@@ -53,7 +52,7 @@ We will use to Advanced tab to work with the limits of the LiveLab sandbox. (Exi
     - Copy paste the command below. And check the README.md
     ```
     <copy>
-    curl -k "https://www.ocistarter.com/app/zip?prefix=starter&deploy=compute&ui=html&language=java&db_install=shared_compute&database=atp&vcn_strategy=existing" --output starter.zip
+    curl -k "https://www.ocistarter.com/app/zip?prefix=starter&deploy=public_compute&ui=html&language=java&database=atp&vcn_strategy=existing" --output starter.zip
     unzip starter.zip
     cd starter
     cat README.md
@@ -87,7 +86,7 @@ We will use to Advanced tab to work with the limits of the LiveLab sandbox. (Exi
 
 3. Check the env.sh file:
     - Choose the env.sh file.
-    - Since we are in LiveLasbs installation, all the settings will be found automatically.
+    - Since we are in a LiveLabs installation, all the settings will be found automatically.
           - TF_VAR\_compartment\_ocid, TF\_VAR\_vcn\_ocid / TF\_VAR\_public\_subnet\_ocid, TF\_VAR\_private\_subnet\_ocid will be found automatically.
           - The database password, if not filled, will be randomly generated.
     ![Editor env.sh](images/starter-compute-env.png)

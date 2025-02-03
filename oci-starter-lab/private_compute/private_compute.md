@@ -1,5 +1,5 @@
 
-# Create Cloud Native Applications on Compute
+# Create Cloud Native Applications on Private Virtual Machine
 
 ## Introduction
 
@@ -7,13 +7,16 @@ Estimated time: 10 min
 
 ### Objectives
 
-![Architecture Compute](images/architecture_compute.png =50%x*)
+![Architecture Compute](images/architecture_private_compute.png =50%x*)
 
 In this sample, using terraform, we will create:
-- a compute (VM)
-- with a Java program, 
-- HTML pages (on NGINX)
+- an API Gateway, with a public IP
+- a Virtual Machine (compute) with a private IP with
+    - with a Java program, 
+    - HTML pages (on NGINX)
 - and an Autonomous Database. 
+
+To access the Virtual Machine (compute), a Bastion is also created.
 
 The steps are identical for all other user interfaces, backends or database.
 
@@ -26,27 +29,27 @@ Please read the chapter: Introduction and Get Started.
 1. Using your browser, go to https://www.ocistarter.com/
 2. Choose 
     - AMD (x86)
-    - Compute
+    - Private VM
     - HTML
     - Java
     - SpringBoot
     - Autonomous database
 3. Click *Cloud Shell*
     - You will see the commands to use.
-  ![OCI Starter Compute Java](images/starter-compute-java.png)
+  ![OCI Starter Compute Java](images/starter-private-compute-java.png)
 4. Login to your OCI account
     - Click *Code Editor*
     - Click *New Terminal*
     - Copy paste the command below. And check the README.md
     ```
     <copy>
-    curl "https://www.ocistarter.com/app/zip?prefix=starter&deploy=compute&ui=html&language=java&database=atp" --output starter.zip
+    curl "https://www.ocistarter.com/app/zip?prefix=starter&deploy=private_compute&ui=html&language=java&database=atp" --output starter.zip
     unzip starter.zip
     cd starter
     cat README.md
     </copy>
     ```
-    ![OCI Starter Editor](images/starter-editor.png)
+    ![OCI Starter Editor](../public_compute/images/starter-editor.png)
 
 ## Task 2: Main files
 
@@ -54,7 +57,7 @@ Please read the chapter: Introduction and Get Started.
     - Click *File* / *Open*
     - Choose the directory *starter*
     - Click *Open*
-    ![Editor File Open](images/starter-compute-dir.png)
+    ![Editor File Open](../public_compute/images/starter-compute-dir.png)
 2. The main files are:
 
    |             |            |           | Description |
@@ -79,7 +82,7 @@ Please read the chapter: Introduction and Get Started.
         - If not filled, the "db password" will be randomly generated
     - Ideally, you can also use an existing compartment if you have one. 
         - If not, the script will create a "oci-starter" compartment
-    ![Editor env.sh](images/starter-compute-env.png)
+    ![Editor env.sh](../public_compute/images/starter-compute-env.png)
 
 ## Task 3: Starter.sh
 
@@ -98,13 +101,13 @@ During the build, Terraform will create:
     </copy>
     ```
     - Choose **Build**
-        ![Result](images/starter-starter-build.png)  
+        ![Result](../public_compute/images/starter-starter-build.png)  
     - It will build all and at the end you will see:
     ```
     <copy>
-    - User Interface : http://123.123.123.123/
-    - Rest DB API : http://123.123.123.123/app/dept
-    - Rest Info API : http://123.123.123.123/app/info
+    - User Interface: https://xxxxx.apigateway.eu-frankfurt-1.oci.customer-oci.com/starter/
+    - Rest DB API: https://xxxxx.apigateway.eu-frankfurt-1.oci.customer-oci.com/starter/app/dept
+    - Rest Info API: https://xxxxx.apigateway.eu-frankfurt-1.oci.customer-oci.com/starter/app/info    
     </copy>
     ```
 2. Click on the URL or go to the link to check that it works:
@@ -112,13 +115,13 @@ During the build, Terraform will create:
     - You have HTML pages in NGINX doing REST calls 
     - To a Java SpringBoot backend
     - That backend gets data from the Autonomous database. 
-    ![Result](images/starter-compute-result.png)
+    ![Result](../public_compute/images/starter-compute-result.png)
 
 ## Task 4: More info
 
 ### Customize
 
-Please also check the  "Lab 6 - How to Customize" to see how to customize this sample to your needs
+Please also check the  "Lab 7 - How to Customize" to see how to customize this sample to your needs
 
 ### SSH
 
@@ -144,7 +147,7 @@ It is identical to run this command:
 ```
 
 The interesting directories are:
-- $HOME/app with the compiled application
+- $HOME/app with the application
 - /usr/share/nginx/html/ with the HTML pages
 
 ### Cleanup
