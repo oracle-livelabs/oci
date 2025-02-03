@@ -12,6 +12,8 @@ Estimated Time: 80 minutes
 Watch the video below for a quick walk-through of the lab.
 [Exploring Oracle Cloud Infrastructure Application Performance Management](videohub:1_4814a932)
 
+## Task 1: Know before you run
+
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 
 The diagram below provides an overview of the OCI APM Service, its features, components, and some of the other OCI services it integrates with.
@@ -43,7 +45,7 @@ In this workshop, you will:
 
 ### More APM Workshops
 
-* Please visit: **[APM LiveLabs workshops](https://apexapps.oracle.com/pls/apex/f?p=133:100:111996377805307::::SEARCH:application+Performance+monitoring)**.
+* Please visit: **[APM LiveLabs workshops](https://livelabs.oracle.com/pls/apex/f?p=133:100:111996377805307::::SEARCH:application+Performance+monitoring)**.
 
 
 ## Acknowledgements
@@ -52,4 +54,4 @@ In this workshop, you will:
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, May 2023
+- **Last Updated By/Date** - Yutaka Takatsu, December 2024

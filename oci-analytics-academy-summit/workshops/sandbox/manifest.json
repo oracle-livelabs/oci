@@ -1,0 +1,38 @@
+{
+    "workshoptitle": "OCI Data & AI Fast Track - For Data Analysts",
+    "help": "isabella.alvarez@oracle.com, breno.comin@oracle.com, thais.henrique@oracle.com",
+    "variables": ["../../variables/variables.json",
+        "../../variables/variables-in-another-file.json"],
+    "tutorials": [
+        {
+            "title": "Introdução",
+            "description": "Bem-vindo ao OCI Data & AI Fast Track - for Analytics",
+            "filename": "../../intro/intro.md"
+        },
+        {
+            "title": "Pré-requisito - Acessar o Oracle Analytics Cloud",
+            "description": "Acesse o ambiente pré-configurado para execução dos Labs práticos",
+            "filename": "../../get-started-pt/get-started-pt.md"
+        },
+        {
+            "title": "Lab 1: Primeiros passos no Oracle Analytics Cloud",
+            "description": "Navega pelo Oracle Analytics Cloud",
+            "filename": "../../ft-first-steps/ft-first-steps.md"
+        },
+        {
+            "title": "Lab 2: Criar um Conjunto de Dados",
+            "description": "Aprenda a criar um conjunto de dados a partir de 2 tabelas em um Banco de Dados",
+            "filename": "../../ft-create-dataset-bt/ft-create-dataset-bt.md"
+        },
+                {
+            "title": "Lab 3: Crie Visualizações - Primeiros Passos",
+            "description": "Explore os recursos do Oracle Analytics Cloud para criar visualizações",
+            "filename": "../../ft-create-visualizations/ft-create-visualizations.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

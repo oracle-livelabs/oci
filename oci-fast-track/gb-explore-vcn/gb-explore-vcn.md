@@ -20,9 +20,9 @@ Neste Lab você vai aprender a explorar uma Virtual Cloud Network (VCN) e seus r
 
 ![acesse o menu principal](./images/vcn-access-1.png)
 
-2.	Escolha o seu compartimento (que fica na parte de View Login Info):
+2.	Relembre seu compartimento (que fica na parte de **View Login Info**) e selecione (caso ainda não esteja selecionado) para visualizar sua VCN:
 
-![selecione seu compartimento](./images/vcn-compartment.png)
+![selecione seu compartimento](./images/compartment-user-login-compartment.png)
 
 ![selecione seu compartimento](./images/vcn-select-compartment-2.png)
 
@@ -30,7 +30,7 @@ Neste Lab você vai aprender a explorar uma Virtual Cloud Network (VCN) e seus r
 
 ![selecione sua vcn](./images/vcn-click.png)
 
-4. Explore os recursos de sua VCN"
+4. Explore os recursos de sua VCN
 
 ![explore os recursos](./images/vcn-explore.png)
 
@@ -43,4 +43,4 @@ Nesta sessão você aprendeu sobre os recursos de uma Virtual Cloud Network (VCN
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Updated Por/Data** - Arthur Vianna, Jun/2022
+- **Último Updated Por/Data** - Arthur Vianna, Fev/2024

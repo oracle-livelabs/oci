@@ -77,62 +77,44 @@ Estimated time: 15 minutes
 
 ## Task 3: Add the custom query to a quick bar
 
-Next, let's save the query to the query bar so that you can quickly pick it up and load it onto the Query view the next time.
+1. Click the **>** icon on the query bar to expand.
+	 ![Oracle Cloud, Trace Explorer](images/6-3-1-click-icon.png " ")
+2. Click the **+** icon at the end of the bar.
+	 ![Oracle Cloud, Trace Explorer](images/6-3-2-click-plus.png " ")
+3. You can either select to add a saved query or the current query. For learning purposes, select **Add Saved query**.
+	 ![Oracle Cloud, Trace Explorer](images/6-3-3-add-saved-query.png " ")
+4. Select your lab compartment, and type **Session** in the search field. Select **Session Analysis**. Click **Add**.
+	 ![Oracle Cloud, Trace Explorer](images/6-3-4-configure-add-query.png " ")
 
-1. Select the three dots icon at the right side of the **Query bar**, and select **Manage**.
-    ![Oracle Cloud, Trace Explorer](images/6-3-1-open-query-bar-options.png " ")
-2. This will open the APM administration page.
-    ![Oracle Cloud, Admin page](images/6-3-2-admin-page-quick-bar.png " ")
-3. Select your assigned compartment.
-    ![Oracle Cloud, Admin page](images/6-3-3-treeview-compartment.png " ")
 
-4. Select the three dots icon at the right side of the default **APM Query bar**. 
-	![Oracle Cloud, Admin page](images/6-3-4-select-compartment.png " ")
-5. Verify that the **Edit** option is disabled. This is because the default query bar is not editable. Click **Duplicate**.
-	![Oracle Cloud, Admin page](images/6-3-5-quickbar-option-dupe.png " ")
+5. Because the current query bar is a default query bar, it cannot be modified.  In the **Name** field, enter **My APM query bar** to create a custom query bar. Ensure your lab compartment is selected, and then click **Create**.
+	 ![Oracle Cloud, Trace Explorer](images/6-3-5-dupe-querybar.png " ")
+6. Verify that the **Session Analysis** query is added to the **My APM Query bar**.
+	 ![Oracle Cloud, Trace Explorer](images/6-3-6-verify-querybar.png " ")
 
-6. **Duplicate query bar** window opens.
-	* Select your assigned compartment in the LiveLabs session.
-	* Name the query bar. For example, **My APM lab Query Bar**.
-	* Click **Add query**.
-	![Oracle Cloud, Admin page](images/6-3-6-name-duplicated-qbar.png " ")
-7. **Add query** window opens.
-	* Ensure your assigned compartment is selected.
-	* Add a check to the query saved in the previous steps. This is the query you want to add to the query bar.
-	* Click **Add Query**
-	![Oracle Cloud, Admin page](images/6-3-7-add-query-to-qbar.png " ")
+## Task 4: Change the order of the queries
+1. You can change the order of the queries displayed in the query bar. Next, let's move up the Session Analysis query to the top of the list. Click **My APM query bar** > **Open query bar**.
+	 ![Oracle Cloud, Trace Explorer](images/6-4-1-open-menu-querybar.png " ")
+2. Click **Manage query bars**.
+	 ![Oracle Cloud, Trace Explorer](images/6-4-2-click-manage-querybar.png " ")
 
-8. Verify that the query was added to the bottom of the list.
-	![Oracle Cloud, Admin page](images/6-3-8-verify-query-added.png " ")
-9. You can change the order shown up in the query bar. Select the three lines on the right side of the box, and drag and drop it to bring it to the top.
-	![Oracle Cloud, Admin page](images/6-3-9-drag-drop-query.png " ")
-10. Click **Duplicate** 
-	![Oracle Cloud, Admin page](images/6-3-10-click-duplicate.png " ")
-
-11. A new query bar, **“APM Lab query bar”** is created. Click **Trace Explorer** from the menu under **APM** on the left side of the screen. 
-	![Oracle Cloud, Admin page](images/6-3-11-confirm-new-qbar.png " ")
-
-## Task 4: Enable the custom quick bar
-
-1. In the Trace Explorer, select the three dots icon at the end of the query bar. Click **Open**.
-	![Oracle Cloud, Trace Explorer](images/6-4-1-open-qbar-options.png " ")
-2. In the **Open query bar** window, select the custom query bar you created, then click **Open**.
-	![Oracle Cloud, Trace Explorer](images/6-4-2-open-qbar-compartment.png " ")
-
-     > **Note:** You can review the menu of queries saved in the query bar, by clicking the triangle icon.
+	 > **Note:** You can review the menu of queries saved in the query bar, by clicking the triangle icon.
 	![Oracle Cloud, Trace Explorer](images/6-4-3-review-saved-queries.png " ")
-3. Confirm that the **Session Analysis** is displayed as the first quick pick in the query bar menu. 
-	![Oracle Cloud, Trace Explorer](images/6-4-4-confirm-custom-qbar.png " ")
-
-4. As it is the first quick pick, the result is already loaded in the Traces view. Verify the columns and values.
-	![Oracle Cloud, Trace Explorer](images/6-4-5-confirm-traces.png " ")
+3. Ensure the lab compartment is selected. Locate **My APM query bar** from the table, and click the three dots. Select **Edit**.
+	 ![Oracle Cloud, APM Query bars](images/6-4-3-menu-edit-querybar.png " ")
+4. In the **Edit query bar** pane, scroll down and locate the **Session Analysis**. 
+	 ![Oracle Cloud, APM Query bars](images/6-4-4-drag-drop-query.png " ")
+5. Select the three lines on the right side of the box, and drag and drop it to bring it to the top. Click **Save**.
+	 ![Oracle Cloud, APM Query bars](images/6-4-5-move-query-to-top.png " ")
 
 ## Task 5: Set the custom quick bar as default
-
-1. In the **Query Bar** view, select three dots. In the menu opened, select **Save as default**.
-	![Oracle Cloud, Trace Explorer](images/6-5-1-open-qbar-options.png " ")
-2. In the confirmation dialog, click **Save**.
-	![Oracle Cloud, Trace Explorer](images/6-5-2-open-qbar-options.png " ")
+1. You can also set the custom query bar as default. On the **My APM query bar**, select three dots. In the menu opened, select **Save as default**.
+	 ![Oracle Cloud, APM Query bars](images/6-5-1-menu-save-default.png " ")
+2. In the confirmation dialog, click **Save**. Click **Trace Explorer**.
+	 ![Oracle Cloud, APM Query bars](images/6-5-2-confirm-defaut.png " ")
+	 ![Oracle Cloud, APM Query bars](images/6-5-3-click-te.png " ")
+3. In the **Trace Explorer** window, confirm that the custom query bar is loaded by default, and the **Session Analysis** is displayed as the first pick in the bar menu. As it is the first pick, the query result is already loaded in the Traces view. Verify the columns and values.
+	 ![Oracle Cloud, Trace Explorer](images/6-5-4-te-landing-querybar.png " ")
 
 You may now **proceed to the next lab**.
 
@@ -141,4 +123,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, May 2023
+* **Last Updated By/Date** - Yutaka Takatsu, December 2024

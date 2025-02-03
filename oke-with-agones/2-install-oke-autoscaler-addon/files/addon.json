@@ -1,0 +1,9 @@
+{
+  "addonName": "ClusterAutoscaler",
+  "configurations": [
+    {
+      "key": "nodes",
+      "value": "2:10:<NODE POOL OCID>"
+    }
+  ]
+}

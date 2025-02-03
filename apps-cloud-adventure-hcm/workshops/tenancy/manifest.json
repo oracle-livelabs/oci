@@ -11,23 +11,12 @@
             "filename": "../../01-recruiter-view/recruiter.md"
         },
         {
-            "title": "Lab 2: Connections",
+            "title": "Lab 2: Employee View",
             "filename": "../../02-connections/connections.md"
         },
-        {
-            "title": "Lab 3: Anytime Feedback",
-            "filename": "../../03-anytime-feedback/anytimefeedback.md"
-        },
-        {
-            "title": "Lab 4: Absence Requests",
-            "filename": "../../04-absence-requests/absence.md"
-        }, 
-        {
-            "title": "Lab 5: Manager Journeys",
-            "filename": "../../05-manager-journeys/managerjourneys.md"
-        },  {
-            "title": "Lab 6: Your Team Page",
-            "filename": "../../06-your-team-page/your-team.md"
+        { 
+            "title": "Lab 3: Manager View",
+            "filename": "../../05-your-team-page/your-team.md"
         },
         {
             "title": "Need Help?",

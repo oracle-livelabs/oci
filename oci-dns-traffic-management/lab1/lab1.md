@@ -90,7 +90,7 @@ Note: this workshop is focused on the DNS Traffic Steering Policies product so t
     * systemctl enable --now httpd.service
     * firewall-cmd --add-service=http --permanent
     * firewall-cmd --reload
-    * echo "<head><title>Sample Web Page</title></head><body>This is the Chicago Web Server</body></html>" > /var/www/html/index.html
+    * echo "```<html><head><title>Sample Web Page</title></head><body>This is the Chicago Web Server</body></html>```" > /var/www/html/index.html
     * systemctl restart httpd
     * systemctl status httpd
 

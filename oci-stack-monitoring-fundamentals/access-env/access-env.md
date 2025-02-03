@@ -16,8 +16,6 @@ Estimated time: 5 minutes
 
 ## Task 1: Log in to the workshop tenancy
 
-After you successfully log into the workshop tenancy using the View Login Info link located in the upper left of your LiveLabs workshop landing page, you will find the Stack Monitoring Enterprise Summary page using the Oracle Cloud console navigation icon (looks like a hamburger). It is located in the Observability and Management area, and in the Application Performance Monitoring section.
-
 1. Click **View Login info** on **Get Started with Oracle Cloud Stack Monitoring** landing page to log in to the workshop tenancy in the Oracle Cloud.
 
    ![Oracle LiveLabs, Workshop introduction page](images/1-0-liveLabs.png " ")
@@ -44,6 +42,8 @@ After you successfully log into the workshop tenancy using the View Login Info l
    ![Oracle LiveLabs, Workshop introduction page, highlighting view login info link](images/1-5-liveLabs.png " ")
 
 ## Task 2: Access the Enterprise Summary page
+
+After you successfully log into the workshop tenancy using the View Login Info link located in the upper left of your LiveLabs workshop landing page, you will find the Stack Monitoring Enterprise Summary page using the Oracle Cloud console navigation icon (looks like a hamburger). It is located in the Observability and Management area, and in the Application Performance Monitoring section.
 
 1. Navigate to Stack Monitoring
    
@@ -78,4 +78,4 @@ You may now **proceed to the next lab**.
    * Ana McCollum, Senior Director of Product Management, Enterprise and Cloud Manageability,  
    * Steven Lemme, Senior Principal Product Manager,  
    * Anand Prabhu, Sr. Member of Technical Staff
-* **Last Updated By/Date** - Aaron Rimel, June 2023
+* **Last Updated By/Date** - Aaron Rimel, May 2024
