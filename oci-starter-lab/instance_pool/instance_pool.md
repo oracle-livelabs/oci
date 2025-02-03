@@ -106,7 +106,7 @@ During the build, Terraform will create:
     </copy>
     ```
     - Choose **Build**
-        ![Result](../compute/images/starter-starter-build.png)         
+        ![Result](../public_compute/images/starter-starter-build.png)         
     - It will build all and at the end you will see:
     ```
     <copy>
@@ -119,7 +119,7 @@ During the build, Terraform will create:
     - All running in an Instance Pool with 2 VMs
     - On each VM, you have PHP pages 
     - That backend gets data from the Autonomous database. 
-    ![Result](images/starter-compute-result.png)
+    ![Result](../public_compute/images/starter-compute-result.png)
 
 ## Task 4: More info
 
@@ -130,6 +130,7 @@ Instance Pool is working in the same way than the "Compute". See the "Compute" l
 You can see the IP of the 2 VMs of the Instance Pool and of the Loab-Balancer at the end of the build:
 
 ````
+<copy>
 pooled_instances_hostname_labels = [
   [
     "starter-pool2",
@@ -149,8 +150,8 @@ pooled_instances_public_ips = [
   ],
 ]
 ui_url = "http://141.147.42.164"
+</copy>
 ````
-
 
 Please also check the  "Lab 7 - How to Customize" to see how to customize this sample to your needs
 

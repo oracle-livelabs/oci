@@ -107,7 +107,7 @@ Before to run the build. Notice that the build will create:
     </copy>
     ```
     - Choose **Build**
-        ![Result](../compute/images/starter-starter-build.png)     
+        ![Result](../public_compute/images/starter-starter-build.png)     
     - It will build all and at the end you will see:
     ```
     <copy>

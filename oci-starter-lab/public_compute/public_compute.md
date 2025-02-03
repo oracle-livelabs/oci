@@ -33,7 +33,7 @@ Please read the chapter: Introduction and Get Started.
     - Autonomous database
 3. Click *Cloud Shell*
     - You will see the commands to use.
-  ![OCI Starter Compute Java](images/starter-compute-java.png)
+  ![OCI Starter Compute Java](images/starter-public-compute-java.png)
 4. Login to your OCI account
     - Click *Code Editor*
     - Click *New Terminal*
