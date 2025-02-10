@@ -97,7 +97,7 @@ In this lab, you will:
       ```
       Name: ADB_USER_PASSWORD
 
-      Encryption Key: master-key (Select the master key created in the previous lab)
+      Encryption Key: master-key (Select the schema user password created in the previous task)
 
       Manual secret generation
 
