@@ -1,5 +1,5 @@
 
-# Create Cloud Native Applications on Compute
+# Create Cloud Native Applications on Public Virtual Machine
 
 ## Introduction
 
@@ -7,12 +7,12 @@ Estimated time: 10 min
 
 ### Objectives
 
-![Architecture Compute](images/architecture_compute.png =50%x*)
+![Architecture Compute](images/architecture_public_compute.png =50%x*)
 
 In this sample, using terraform, we will create:
-- a compute (VM)
-- with a Java program, 
-- HTML pages (on NGINX)
+- a Virtual Machine (compute) with a public IP with:
+    - a Java program, 
+    - HTML pages (on NGINX)
 - and an Autonomous Database. 
 
 The steps are identical for all other user interfaces, backends or database.
@@ -36,7 +36,6 @@ We will use to Advanced tab to work with the limits of the LiveLab sandbox. (Exi
 2. Choose:
     - Advanced
     - Existing VCN 
-    - Shared Compute 
     - Keep:
         - Compute
         - HTML
@@ -53,7 +52,7 @@ We will use to Advanced tab to work with the limits of the LiveLab sandbox. (Exi
     - Copy paste the command below. And check the README.md
     ```
     <copy>
-    curl -k "https://www.ocistarter.com/app/zip?prefix=starter&deploy=compute&ui=html&language=java&db_install=shared_compute&database=atp&vcn_strategy=existing" --output starter.zip
+    curl -k "https://www.ocistarter.com/app/zip?prefix=starter&deploy=public_compute&ui=html&language=java&database=atp&vcn_strategy=existing" --output starter.zip
     unzip starter.zip
     cd starter
     cat README.md
@@ -69,28 +68,30 @@ We will use to Advanced tab to work with the limits of the LiveLab sandbox. (Exi
     - Click *Open*
     ![Editor File Open](images/starter-compute-dir.png)
 2. The main files are:
-    - Commands:
-        - build.sh      : Build the whole program: Run Terraform, Configure the DB, Build the App, Build the UI
-        - destroy.sh    : Destroy the objects created by Terraform
-        - env.sh        : Contains the settings of your project
-    - Directories:
-        - src           : Sources files
-            - app         : Source of the Backend Application (Command: build_app.sh)
-            - ui          : Source of the User Interface (Command: build_ui.sh)
-            - db          : SQL files of the database
-            - terraform   : Terraform scripts (Command: plan.sh / apply.sh)
-            - compute     : Contains the deployment files to Compute
-        - bin           : with some helper commands
-            - bin/ssh\_compute.sh (to ssh to the Compute)
-            - bin/ssh\_bastion.sh (to ssh to the Bastion)
+
+   |             |            |           | Description |
+   | ----------- | ---------- | --------- | ---|
+   | Commands    |            |           |  |
+   |             | starter.sh |           | Build or destroy a project. Show a menu with commands if not argument is given | 
+   |             | env.sh     |           | Settings of your project | 
+   | Directories |            |           | Commands used by starter.sh | 
+   |             | bin/       |           | Commands used by starter.sh | 
+   |             | src/       |           | Sources files | 
+   |             |            | app       | Backend Application (Command: build_app.sh) | 
+   |             |            | ui        | User Interface (Command: build_ui.sh) | 
+   |             |            | db        | Database initialisation files (SQL, ...) | 
+   |             |            | terraform | Terraform scripts  | 
+   |             |            | compute   | Deployment to Compute | 
+   |             | target/    |           | Output directory  | 
+
 3. Check the env.sh file:
     - Choose the env.sh file.
-    - Since we are in LiveLasbs installation, all the settings will be found automatically.
+    - Since we are in a LiveLabs installation, all the settings will be found automatically.
           - TF_VAR\_compartment\_ocid, TF\_VAR\_vcn\_ocid / TF\_VAR\_public\_subnet\_ocid, TF\_VAR\_private\_subnet\_ocid will be found automatically.
           - The database password, if not filled, will be randomly generated.
     ![Editor env.sh](images/starter-compute-env.png)
 
-## Task 3: Build.sh
+## Task 3: Starter.sh
 
 During the build, Terraform will reuse the 
 - Network resources: VCN, Subnet
@@ -101,12 +102,12 @@ Then create:
 
 1. In the code editor, 
     - in the menu *Terminal / New Terminal*. 
-    - then run:
-    ```
+    - run 
     <copy>
-    ./build.sh
+    ./starter.sh
     </copy>
-    ```
+    - choose Build
+        ![Result](images/starter-starter-build.png)    
     - It will build all and at the end you will see:
     ```
     <copy>
@@ -124,7 +125,7 @@ Then create:
 
 ## Task 4: More info
 
-OCI Starter running in your own tenancy or not has a lot more options like Kubernetes or Container Instances.
+This livelab is limited to Compute. If you use your own tenancy, there are a lot more options like Kubernetes or Container Instances.
 
 You can also check how it works and how to customize what you built.
 
@@ -135,17 +136,17 @@ Please also check the  "Lab 3 - How to Customize" to see how to customize this s
 ### SSH
 
 During the build, it has generated 2 files:
-- id\_starter\_rsa : a ssh private key to login to the compute and bastion
-- id\_starter\_rsa.pub : the public ssh private key installed in the compute and bastion
+- ssh\_key\_starter : a ssh private key to login to the compute and bastion
+- ssh\_key\_starter.pub : the public ssh private key installed in the compute and bastion
 
 You can login to the compute by running:
 ```
 <copy>
-bin/ssh_compute.sh
+./starter.sh ssh compute
 </copy>
 ```
 
-The interesting directories are:
+When you are on the compute, the interesting directories are:
 - $HOME/app with the compiled application
 - /usr/share/nginx/html/ with the HTML pages
 
@@ -154,7 +155,7 @@ The interesting directories are:
 1. To clean up, run 
     ```
     <copy>
-    ./destroy.sh
+    ./starter.sh destroy
     </copy>
     ```
 
@@ -169,5 +170,5 @@ The interesting directories are:
 
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
-* Last Updated - Nov, 2th 2023
+* Last Updated - Jan, 20th 2025
 
