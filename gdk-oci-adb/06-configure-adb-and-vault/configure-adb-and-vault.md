@@ -97,13 +97,13 @@ In this lab, you will:
       ```
       Name: ADB_USER_PASSWORD
 
-      Encryption Key: master-key (Select the schema user password created in the previous task)
+      Encryption Key: master-key (Select the master key created in the previous lab)
 
       Manual secret generation
 
       Secret Type Template: Plain-Text
 
-      Secret Contents: (Paste the secret value created in the above task)
+      Secret Contents: (Select the schema user password created in the previous task)
 
       Show Base64 conversion: YES
       ```
