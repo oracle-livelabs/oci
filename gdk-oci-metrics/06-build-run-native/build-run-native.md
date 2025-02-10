@@ -48,7 +48,7 @@ In this lab, you will:
    Press the enter (return) key. The MySQL container starts in a few seconds. When MySQL is up and running, you will see a message in the terminal window similar to:
 
 	``` bash
-	... [Server] /usr/sbin/mysqld: ready for connections. Version: '9.0.1'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server - GPL.
+	... [Server] /usr/sbin/mysqld: ready for connections. Version: '9.2.0'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server - GPL.
 	```
 
 4. Uncomment the `url`, `username` and `password` under the `datasources.default` property in _oci/src/main/resources/application-oraclecloud.properties_:
