@@ -103,7 +103,7 @@ In this lab, you will:
 
       Secret Type Template: Plain-Text
 
-      Secret Contents: (Select the schema user password created in the previous task)
+      Secret Contents: (Enter the schema user password created in the previous task)
 
       Show Base64 conversion: YES
       ```
