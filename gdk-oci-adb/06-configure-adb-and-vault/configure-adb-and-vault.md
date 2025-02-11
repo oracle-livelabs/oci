@@ -25,7 +25,7 @@ In this lab, you will:
 
    ![ADB Database Actions Launch SQL](./images/adb-db-actions-dev-sql.jpg#input)
 
-3. From the **SQL** screen, close the `Warning` and the `SQL History` dialog boxes.
+3. From the **SQL** screen, close the `Warning` and the `Run Statement` dialog boxes.
 
    ![ADB Database Actions SQL](./images/adb-db-actions-sql.jpg#input)
 
@@ -103,7 +103,7 @@ In this lab, you will:
 
       Secret Type Template: Plain-Text
 
-      Secret Contents: (Paste the secret value created in the above task)
+      Secret Contents: (Enter the schema user password created in the previous task)
 
       Show Base64 conversion: YES
       ```

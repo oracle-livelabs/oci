@@ -40,27 +40,19 @@ In this lab, you will:
 
     ![Create ADB Deployment Type](images/create-adb-deployment-type.jpg#input)
 
-10. Under the **Configure the database** section, leave the default values unchanged.
+10. Under the **Configure the database** section, enable the **Developer mode**. In the **Choose database version** dropdown, select 19c.
 
-    ![Create ADB Configure DB](images/create-adb-configure-db.jpg#input)
+    ![Create ADB Configure DB](images/create-adb-configure-db.png)
 
-11. Under the **Backup retention** section, set the automatic backup retention period to 1 day.
-
-    ![Create ADB Backup retention](images/create-adb-backup-retention.jpg#input)
-
-12. Under the **Create administrator credentials** section, enter a password of your choice (must be at least 12 characters and contain a number and an uppercase letter).
+11. Under the **Create administrator credentials** section, enter a password of your choice (must be at least 12 characters and contain a number and an uppercase letter).
 
     ![Create ADB Admin Credentials](images/create-adb-admin-creds.jpg#input)
 
-13. Select the network access type as **Secure access from everywhere**.
+12. Select the network access type as **Secure access from everywhere**.
 
     ![Create ADB Network Access](images/create-adb-network-access.jpg#input)
 
-14. Leave the license type as **License included**.
-
-    ![Create ADB License Type](images/create-adb-license-edition.jpg#input)
-
-15. Leave the contact email blank, and click **Create Autonomous Database**.
+13. Leave the contact email blank, and click **Create Autonomous Database**.
 
     ![Create Autonomous Database](images/create-adb-contact-create.jpg#input)
 
