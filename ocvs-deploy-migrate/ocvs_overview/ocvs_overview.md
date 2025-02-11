@@ -14,6 +14,12 @@ Leverage OCVS to efforlessly migrate or extend you VMware-based workloads to the
 - **High Performance Networking** OCVS is deployed in your existing VCN with close proximity to native OCI Services, providing best in class performance by avoiding complex routing and reducing network hops. OCVS is also the only cloud VMware solution with native support for VLANs for applications that need layer 2 networking in the cloud.
 - **Flexible Billing Commitments** OCVS supports hourly, monthly, 1-Year and 3-Year commitment options to support different use cases ranging from seasonal workload demands, capacity expansions, Disaster Recovery to long-term steady workloads.
 
+## Architecutre
+
+Following is the logical architecture of OCVS SDDC in an OCI region. **Placeholder update after review.**
+
+![ocvs-arch](images/ocvs-arch.png)
+
 ## VMware Components
 
 Oracle Cloud VMware Solution (OCVS) bundles VMware components namely ESXi, vCenter, NSX-T, vSAN and HCX to support building a fully functional Software Defined Data Center (SDDC).
@@ -23,6 +29,28 @@ Oracle Cloud VMware Solution (OCVS) bundles VMware components namely ESXi, vCent
 - **NSX-T** provides virtual networking and security capabilities.
 - **vSAN** allows the ESXi hosts to share local disks from every participating host and create a shared datastore to host virtual machines.
 - **HCX** HCX is an application mobility platform which abstracts the underlying infrastructure complexisties and enables seamless workload migration between SDDCs.
+
+## Single Host SDDC
+
+OCVS offers single host SDDCs for testing and short-term development. A single hosts SDDC contains a single unified management cluster with a single ESXi host. Only BM.DenseIO Shapes are supported for single host deployments.
+
+Single host SDDC has similar technical capabilities as a multi host cluster and can be used for faster onboarding for testing, development and proof-of-concepts. All the management components share the same host and remaining capacity can be used for workload deployment.
+
+Single host SDDC has certain limitations as listed below;
+
+- Only supported on DenseIO shapes, Standard Shapes are not supported.
+- Not backed by any OCI SLA.
+- Oracle support is limited to commercially reasonable support, VMware support is available only for the first 60 days.
+- Billing options are limited to **Hourly** and **Monthly** billing options.
+- Production workload is not supported on single host SDDCs as these are not designed as long term solutions and are not backed up. If the host fails, the data is lost.
+- Features which depend on mutiple hosts ie DRS, HA, DRM etc do not work on single host SDDC.
+
+## Multi Host SDDC
+A multi host SDDC provides full range of VMware Solution features to migrate and support production workloads. Multi Host SDDC is backed by OCI Availability SLA. **<SLA Link here>**
+
+When creating a multi host SDDC, the first defined cluster is called **unified managment cluster**, this cluster hosts all VMware solution components and needs a minimum of 3 ESXi servers. Any cluster that you create after the unified management cluster does not have the management components and can be dedicated to workload VMs.
+
+You can create up to 15 clusters with up to 64 hosts in every cluster. Every cluster is deployed with its own networking resources to allow segregated workloads to run in the same SDDC with complete operational isolation.
 
 ## Billing Options
 
