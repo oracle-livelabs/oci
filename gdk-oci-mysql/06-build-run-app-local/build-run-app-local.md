@@ -46,7 +46,7 @@ In this lab, you will:
     Press the enter (return) key. The MySQL container starts in a few seconds. When MySQL is up and running, you will see a similar message in the terminal window:
 
     ``` bash
-    ... [Server] /usr/sbin/mysqld: ready for connections. Version: '8.4.3'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+    ... [Server] /usr/sbin/mysqld: ready for connections. Version: '8.4.4'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
     ```
 
 ## Task 2: Build and run the application
