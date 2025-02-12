@@ -1,5 +1,5 @@
 
-# Create Cloud Native Applications on Compute
+# Create Cloud Native Applications on Public Virtual Machine
 
 ## Introduction
 
@@ -7,12 +7,12 @@ Estimated time: 10 min
 
 ### Objectives
 
-![Architecture Compute](images/architecture_compute.png =50%x*)
+![Architecture Compute](images/architecture_public_compute.png =50%x*)
 
 In this sample, using terraform, we will create:
-- a compute (VM)
-- with a Java program, 
-- HTML pages (on NGINX)
+- a Virtual Machine (compute) with a public IP with:
+    - a Java program, 
+    - HTML pages (on NGINX)
 - and an Autonomous Database. 
 
 The steps are identical for all other user interfaces, backends or database.
@@ -21,26 +21,38 @@ The steps are identical for all other user interfaces, backends or database.
 
 Please read the chapter: Introduction and Get Started.
 
+You are in the Green Button version of the lab. The lab is limited only to Compute and Autonomous Database due the limits of the green button 
+cloud account. 
+
+  ![OCI Starter Green Button Limit](images/starter-compute-green-button-limits.png =50%x*)
+
+If later, you want to try the full version of the lab for ex with Kubernetes or Container engine, you will need your own tenancy.
+
 ## Task 1: Create the Application
 
-1. Using your browser, go to https://www.ocistarter.com/
-2. Choose 
-    - AMD (x86)
-    - Compute
-    - HTML
-    - Java
-    - SpringBoot
-    - Autonomous database
+We will use to Advanced tab to work with the limits of the LiveLab sandbox. (Existing network, ...)
+
+1. In your browser, go to https://www.ocistarter.com/
+2. Choose:
+    - Advanced
+    - Existing VCN 
+    - Keep:
+        - Compute
+        - HTML
+        - Java
+        - SpringBoot
+        - GraalVM
+        - Autonomous database
 3. Click *Cloud Shell*
     - You will see the commands to use.
-  ![OCI Starter Compute Java](images/starter-compute-java.png)
+  ![OCI Starter Compute Java](images/starter-compute-green-button-java.png)
 4. Login to your OCI account
     - Click *Code Editor*
     - Click *New Terminal*
     - Copy paste the command below. And check the README.md
     ```
     <copy>
-    curl "https://www.ocistarter.com/app/zip?prefix=starter&deploy=compute&ui=html&language=java&database=atp" --output starter.zip
+    curl -k "https://www.ocistarter.com/app/zip?prefix=starter&deploy=public_compute&ui=html&language=java&database=atp&vcn_strategy=existing" --output starter.zip
     unzip starter.zip
     cd starter
     cat README.md
@@ -72,33 +84,30 @@ Please read the chapter: Introduction and Get Started.
    |             |            | compute   | Deployment to Compute | 
    |             | target/    |           | Output directory  | 
 
-3. Edit the env.sh file:
+3. Check the env.sh file:
     - Choose the env.sh file.
-    - Look for \_\_TO_FILL\_\_ in the file
-    - You may leave it like this.
-        - If not filled, the "db password" will be randomly generated
-    - Ideally, you can also use an existing compartment if you have one. 
-        - If not, the script will create a "oci-starter" compartment
+    - Since we are in a LiveLabs installation, all the settings will be found automatically.
+          - TF_VAR\_compartment\_ocid, TF\_VAR\_vcn\_ocid / TF\_VAR\_public\_subnet\_ocid, TF\_VAR\_private\_subnet\_ocid will be found automatically.
+          - The database password, if not filled, will be randomly generated.
     ![Editor env.sh](images/starter-compute-env.png)
 
 ## Task 3: Starter.sh
 
-During the build, Terraform will create:
+During the build, Terraform will reuse the 
 - Network resources: VCN, Subnet
+Then create: 
 - A database
 - A compute instance to run NGINX + the Java App
 - A bastion used mostly to populate the database with the table
 
 1. In the code editor, 
     - in the menu *Terminal / New Terminal*. 
-    - then run:
-    ```
+    - run 
     <copy>
     ./starter.sh
     </copy>
-    ```
-    - Choose **Build**
-        ![Result](images/starter-starter-build.png)  
+    - choose Build
+        ![Result](images/starter-starter-build.png)    
     - It will build all and at the end you will see:
     ```
     <copy>
@@ -116,9 +125,13 @@ During the build, Terraform will create:
 
 ## Task 4: More info
 
+This livelab is limited to Compute. If you use your own tenancy, there are a lot more options like Kubernetes or Container Instances.
+
+You can also check how it works and how to customize what you built.
+
 ### Customize
 
-Please also check the  "Lab 6 - How to Customize" to see how to customize this sample to your needs
+Please also check the  "Lab 3 - How to Customize" to see how to customize this sample to your needs
 
 ### SSH
 
@@ -126,24 +139,14 @@ During the build, it has generated 2 files:
 - ssh\_key\_starter : a ssh private key to login to the compute and bastion
 - ssh\_key\_starter.pub : the public ssh private key installed in the compute and bastion
 
-You can login to the compute by
-- running:
-    ```
-    <copy>
-    ./starter.sh 
-    </copy>
-    ```
-- Choose **Advanced**
-- Then **SSH / Compute**
-
-It is identical to run this command:
+You can login to the compute by running:
 ```
 <copy>
 ./starter.sh ssh compute
 </copy>
 ```
 
-The interesting directories are:
+When you are on the compute, the interesting directories are:
 - $HOME/app with the compiled application
 - /usr/share/nginx/html/ with the HTML pages
 

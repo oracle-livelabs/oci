@@ -50,6 +50,14 @@ You can choose other Java VM to run your program:
         - These advantage come also with a long time to compile. So, it is better to first start first with JIT (JDK or GraalVM). Then to compile with GraalVM Native
         - [More info: see https://www.graalvm.org/22.0/reference-manual/native-image/](https://www.graalvm.org/22.0/reference-manual/native-image/)
 
+## Task 3 - Security 
+
+To enable login using OAuth / OpenID using your application, choose the Security / OpenID flag.
+
+It will add needed resources in your application to configure it:
+- an OCI Identity Domain Confidential App,
+- and login configuration for that Confidential App inside API Gateway.
+
 ## Task 4 - HTTPS = DNS + TLS
 
 It is nicer to have a website with a HTTPS protocol. Like https://www.ocistarter.com.
