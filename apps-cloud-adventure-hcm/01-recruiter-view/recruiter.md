@@ -16,44 +16,39 @@ In this lab, you will:
 ## Task 1: View the Requisition and Job Application
 
 
-1. To see how you can easily manage and review candidates
+1. Easily manage and view candidates in your hiring/recruiting area.
 
-    > Go to **Home Page**, then click on top right corner before the bell icon
+    > From the **Home Page**, click the **My Team** tab, and then the **Hiring** tile.
 
     ![Home Page](images/candidate-my-client-groups.png)
 
-2. Search for the Senior HR Analyst-801-requisition you applied to.
+2. Search for the requisition you applied to.
 
-    > To Search- remove the current filters by clicking the "X" and type "801" in the search bar
+    > To Search- type **966** in the search bar, and then select the **Senior HR Analyst CA 966** requisition. 
 
-    ![watchlist items](images/candidate-applicant-count.png)
+    *tip: if the requisition is not showing, try removing the current filters by clicking the **“X”** next to each assigned filter
 
-3. Here you can see the application you just submitted
+    
+3. Find the application you submitted
 
-    > Click on the hyperlink above ‘**New- To Be Reviewed’** to review the application
+    > Click on the hyperlink above **‘New- To Be Reviewed’** and then click on the name of the applicant you submitted. Clicking on the name of the applicant will bring you to the candidate profile, which looks like the screen below. 
 
     ![journal view](images/candidate-title-highlighted.png)  
 
-4. Need Help? Choose Review Requisition Guide and follow the guided flow to complete the tasks. Getting Started with Recruiting learning is also available.
+4. Review different elements of your application.
    
-
-5. Close the pop up window to return to the main screen.
-
-    > **Click ‘Done’**
-
-6. You are back at the Home Page
+    > Click on **‘Questions’** link in the left column.
  
-
-Adventure awaits, show what you know, and rise to the top of the leader board!!!
+Adventure awaits, **click on the adventure checkpoint tab in your browser**, answer the Recruiting **Questions 2 - 4**, and rise to the top of the leader board!
 
 ![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)
 
     
 [Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
 
-**You may now proceed to the next lab.**
+
 
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant, Cloud HCM
 * **Contributors** -  Kerilyn Derkasch, Sr. Manager, Cloud HCM
-* **Last Updated By/Date** - Kerilyn Derkasch, December 2023
+* **Last Updated By/Date** - Dorcas Conyers, October 2024

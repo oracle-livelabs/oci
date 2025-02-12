@@ -23,7 +23,7 @@ Watch the video below for a quick walk-through of the lab.
 * An Oracle Free Tier, Always Free, or a Paid Cloud Account
 
 
-## Task 1: Launch the Cloud Shell and verify Helidon prerequisites
+## Task 1: Launch the Cloud Shell and install Helidon prerequisites
 
 1. Launch the Oracle Cloud Shell from the Oracle Cloud Console by selecting the **Developer tools** icon, then select **Cloud Shell**.
 
@@ -31,74 +31,77 @@ Watch the video below for a quick walk-through of the lab.
 
  ![Cloud Shell menu](https://oracle-livelabs.github.io/common/images/console/cloud-shell.png " ")
 
-3. Helidon requires Java 11 (or newer) and Maven 3.6.1. Verify the versions by running the following commands.
+2. Helidon 4.1.5 requires Java 21+ and Maven 3.8+. Verify the versions by running the following commands.
 
 	``` bash
 	<copy>
-	java -version
-	</copy>
-	```
-	``` bash
-	<copy>
-	mvn -version
+	java -version; mvn -v
 	</copy>
 	```
 
   	![Cloud Shell](images/1-2-cloudshell-check-versions.png " ")
 
-	If you do not have the required version of Java, you can install GraalVM in the Cloud Shell to run Java 11, in the next Task.
+	As of December 2024, ARM Cloud Shell has Maven 3.5.0, and Java 11. You can install required versions of Java and Maven manually to complete this workshop in the next task.
 
-    >**Note:** By default, OCI Free comes with Maven 3.6.1 (August, 2022), which can be used to complete this lab. If you wish to re-install or install a different version of Maven, you can download it from the following URL: http://maven.apache.org/
+## Task 2: Install Java 23
 
-
-## Task 2: Install Java
-
-1.	Install GraalVM for building a Helidon image
-
-
+1. Download Java 23 (JDK Development Kit 23.01 for ARM 64)
 	``` bash
 	<copy>
-	curl -sLO https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.1.0/graalvm-ce-java11-linux-amd64-20.1.0.tar.gz
+	curl -sLO https://download.oracle.com/java/23/latest/jdk-23_linux-aarch64_bin.tar.gz
 	</copy>
 	```
+2. Unzip the file and install Java
 	``` bash
 	<copy>
-	gunzip graalvm-ce-java11-linux-amd64-20.1.0.tar.gz
+	tar zxvf jdk-23_linux-aarch64_bin.tar.gz
 	</copy>
 	```
+3. Add to the Path  
 	``` bash
 	<copy>
-	tar xvf graalvm-ce-java11-linux-amd64-20.1.0.tar
-	</copy>
-	```
-	``` bash
-	<copy>
-	rm graalvm-ce-java11-linux-amd64-20.1.0.tar
-	</copy>
-	```
-2. Move the directory under the home directory, if extracted at a different location.
-	``` bash
-	<copy>
-	mv graalvm-ce-java11-20.1.0 ~/
-	</copy>
-	```
-3. Set the JAVA_HOME environment variable.
-	``` bash
-	<copy>
-	export JAVA_HOME=~/graalvm-ce-java11-20.1.0
+	export JAVA_HOME=~/jdk-23.0.1
 	export PATH="$JAVA_HOME/bin:$PATH"
 	</copy>
 	```
 
-2. Verify the Java version, and ensure that it is updated to “11.0.7”
-
+4. Check the Java version to ensure it is 23.
 	``` bash
 	<copy>
 	java -version
 	</copy>
 	```
-	![Cloud Shell](images/2-1-java.png " ")
+	![Cloud Shell](images/2-4-java-version.png " ")
+## Task 3: Install Maven 3.9.9
 
+1. Download Maven 3.9.9
+	``` bash
+	<copy>
+	curl -sLO https://archive.apache.org/dist/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+	</copy>
+	```
+2. Unzip the file and install Java
+	``` bash
+	<copy>
+	tar zxvf apache-maven-3.9.9-bin.tar.gz
+	</copy>
+	```
+3. Add to the Path  
+	``` bash
+	<copy>
+	export MVN_HOME=~/apache-maven-3.9.9
+    export PATH="$MVN_HOME/bin:$PATH"
+	</copy>
+	```
+
+4. Check the maven version to ensure it is 3.9.9.
+	``` bash
+	<copy>
+	mvn -v
+	</copy>
+	```
+
+	![Cloud Shell](images/3-4-maven-version.png " ")
 
 ## Task 3:  Build a Helidon SE application
 
@@ -109,13 +112,13 @@ Watch the video below for a quick walk-through of the lab.
 	mvn -U archetype:generate -DinteractiveMode=false \
     -DarchetypeGroupId=io.helidon.archetypes \
     -DarchetypeArtifactId=helidon-quickstart-se \
-    -DarchetypeVersion=2.3.2 \
+    -DarchetypeVersion=4.1.5 \
     -DgroupId=io.helidon.examples \
     -DartifactId=helidon-quickstart-se \
     -Dpackage=io.helidon.examples.quickstart.se
 	</copy>
 	```
-	![Cloud Shell](images/3-1-helidon.png " ")
+	![Cloud Shell](images/3-1-generat-helidon.png " ")
 
 
 2.	The archetype generates a Maven project (helidon-quickstart-se) in your current directory. Change to this directory.
@@ -127,11 +130,11 @@ Watch the video below for a quick walk-through of the lab.
 3.	Build the application by running the command below:
 	``` bash
 	<copy>
-	mvn package
+	mvn clean package
 	</copy>
 	```
 	The project builds an application jar for the example and saves all runtime dependencies in the target/libs directory.
-	![Cloud Shell](images/3-2-helidon.png " ")
+	![Cloud Shell](images/3-3-maven-package.png " ")
 
 4.	Start the application by running the application jar file.
 	``` bash
@@ -148,7 +151,7 @@ Watch the video below for a quick walk-through of the lab.
 	more nohup.out
 	</copy>
 	```
-	![Cloud Shell](images/3-3-helidon.png " ")
+	![Cloud Shell](images/3-5-verify-message.png " ")
 
 
 ## Task 4: Verify the application
@@ -161,9 +164,9 @@ Watch the video below for a quick walk-through of the lab.
 	```
 	It should return a greeting message as in the below image.
 
-		{"message":"Hello Joe!"}
+	{"message":"Hello Joe!"}
 
-	![Cloud Shell](images/4-1-helidon.png " ")
+	![Cloud Shell](images/4-1-hello-joe.png " ")
 
 >**Note:** For more information on Helidon prerequisites, application setup details, and test command examples, please see the Helidon Documentation, [Helidon QuickStart guide](https://helidon.io/docs/latest/#/se/guides/02_quickstart).
 
@@ -177,4 +180,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,    
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, December 2022
+- **Last Updated By/Date** - Yutaka Takatsu, December 2024

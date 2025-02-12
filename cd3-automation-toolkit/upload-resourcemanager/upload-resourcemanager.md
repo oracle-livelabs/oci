@@ -6,7 +6,7 @@ Resource Manager allows you to share and manage infrastructure configurations an
 
 Stack is a the collection of OCI resources corresponding to a given Terraform configuration. Each stack resides in the compartment you specify, in a single region; however, resources on a given stack can be deployed across multiple regions.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -21,7 +21,7 @@ Please follow the previous lab till the last step. Once you are able to provisio
 
 1. Execute the *setUpOCI* Script:
     ```
-    python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
+    python setUpOCI.py /cd3user/tenancies/<prefix>/<prefix>_setUpOCI.properties
     e.g. python setUpOCI.py /cd3user/tenancies/usr1_livelab/usr1_livelab_setUpOCI.properties
     ```
 
@@ -30,7 +30,7 @@ Please follow the previous lab till the last step. Once you are able to provisio
 3. Once the *execution* is successful, you will see the below stack in resource manager and file will be generated under the folder.
 
     ```
-    <customer_name>-<region_dir>-stacks.zip file will be generated under the folder /cd3user/tenancies/<customer_name>/terraform_files/<region_dir>
+    <prefix>-<region_dir>-stacks.zip file will be generated under the folder /cd3user/tenancies/<prefix>/terraform_files/<region_dir>
     ```
 
 4. Go to *OCI console* under compartment which was selected for upload and take a few moments to explore the stack created.

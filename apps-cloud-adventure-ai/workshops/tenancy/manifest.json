@@ -1,0 +1,32 @@
+{
+    "workshoptitle": "Hands on demos for Oracle Fusion AI",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+ 
+        {
+            "title": "Demo 1: HCM AI Assist Goals",
+            "filename": "../../01-hcm-ai-assist-goals/hcm_ai_assist_goals.md"
+        },
+
+        {
+            "title": "Demo 2: HCM AI Assist Performance Reviews",
+            "filename": "../../02-hcm-ai-assist-performace-reviews/hcm_ai_assist_performace_reviews.md"
+        },
+       
+        {
+            "title": "Demo 3: SCM / ERP AI Assist Product Description",
+            "filename": "../../03-scm-erp-ai-assist-product-description/scmerp_ai_assist_product_description.md"
+        },
+       
+     
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+        
+    ]
+}
+
+
+

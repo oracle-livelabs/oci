@@ -61,7 +61,7 @@ You will need the following to complete this workshop:
 * You must have subscribed to resources in OCI to install and run Oracle Digital Assistant 
 * Access to OCI Marketplace to deploy PeopleSoft if using OCI
 * PeopleSoft HCM 9.2 Update Image 43 or PeopleSoft FSCM 9.2 Update Image 45 already available on-premise or on Oracle Cloud Infrastructure.
-* In case of new PeopleSoft deployment on OCI using marketplace image, follow the PeopleSoft Rapid Provisioning Livelabs for instructions.Refer to link [here](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3208) 
+* In case of new PeopleSoft deployment on OCI using marketplace image, follow the PeopleSoft Rapid Provisioning Livelabs for instructions.Refer to link [here](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3208) 
 
 **Important Note**: If you are planning to deploy PICASO and configure with on-premise PSFT application or PSFT application deployed using Cloud Manager, make sure to deploy Elastic Search as part of the build. Elastic search is required for Employee Directory Skill part of the Employee Digital Assistant, Company Directory index needs to be deployed/build as part of the process.
 ## Appendix

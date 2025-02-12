@@ -55,7 +55,7 @@ In this workshop, you will:
 
 Note – For In-depth knowledge of AI Vision service, please refer to the below Livelabs
 
-[https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=931&clear=180&session=953867760403](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=931&clear=180&session=953867760403)
+[https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=931&clear=180&session=953867760403](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=931&clear=180&session=953867760403)
 
 
 ## Task 1: Create a project
@@ -128,7 +128,7 @@ Once the model completes training, let's test the model.
 
 To test the model, you can choose an image from the local machine or an object Storage bucket.
 
-For this lab, you can download [Images](https://objectstorage.us-ashburn-1.oraclecloud.com/p/pIfMcMCar5YueWGr8U4k6E62syqJtCfz60x7P1AHjMerjIuSbH_FPsC3CTlwIv18/n/c4u04/b/livelabsfiles/o/labfiles/OCE-20220913.zip) and use any of these images for testing Vision model.
+For this lab, you can download [Images](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/OCE-20220913.zip) and use any of these images for testing Vision model.
 
 ![Select image](images/select-image.png)
 

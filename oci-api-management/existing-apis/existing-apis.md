@@ -161,6 +161,5 @@ It will allow the database to call the OIC URLs
     - Work-around: Wait 2/5 mins and it works.
    
 ## Acknowledgements
-
-- **Authors**
-    - Marc Gueury / Phil Wilkins / Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+* **Author** - Marc Gueury / Phil Wilkins /  Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
+* **Last Updated By/Date** - Marc Gueury, May 2024
