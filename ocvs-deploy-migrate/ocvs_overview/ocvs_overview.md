@@ -48,9 +48,17 @@ Single host SDDC has certain limitations as listed below;
 ## Multi Host SDDC
 A multi host SDDC provides full range of VMware Solution features to migrate and support production workloads. Multi Host SDDC is backed by OCI Availability SLA. **<SLA Link here>**
 
-When creating a multi host SDDC, the first defined cluster is called **unified managment cluster**, this cluster hosts all VMware solution components and needs a minimum of 3 ESXi servers. Any cluster that you create after the unified management cluster does not have the management components and can be dedicated to workload VMs.
+When creating a multi host SDDC, the first defined cluster is called **unified management cluster**, this cluster hosts all VMware solution components and needs a minimum of 3 ESXi servers. Any cluster that you create after the unified management cluster does not have the management components and can be dedicated to workload VMs.
 
 You can create up to 15 clusters with up to 64 hosts in every cluster. Every cluster is deployed with its own networking resources to allow segregated workloads to run in the same SDDC with complete operational isolation.
 
 ## Billing Options
 
+OCVS provides multiple pricing intervals to suite a wide range of use-case from short term capacity expansion to long term steady state workloads. Pricing interval is defined at the time of cluster creation and applies to all hosts added in the cluster at the time of cluster creation. Any host added in the cluster after the cluster has been created can have a shorter or longer pricing interval. Hosts with different pricing interval can be mixed in the same cluster.
+
+|**Pricing Interval**|**Required Commitment**|**Notes**|
+|--------------------|-----------------------|---------|
+|Hourly|Hourly pricing requires a minimum of 8 hours of committed host runtime|Use this interval for test projects or short-term high utilization events where extra capacity is required for a limited time. This is the default selection for standard shape hosts.|
+|Monthly|Monthly pricing requires a minimum of 1 month of committed host runtime.|This interval is a common option, and is the default selection for dense shapes.|
+|Yearly|One year pricing requires a minimum of 1 year of committed host runtime.|Use this interval for long-term projects such as workload or application migration to Oracle Cloud Infrastructure.|
+|Every Three Years|Three year pricing requires a minimum of 3 years of committed host runtime.|Use this interval for very long-term projects or mission-critical workloads that aren't easily migrated.|
