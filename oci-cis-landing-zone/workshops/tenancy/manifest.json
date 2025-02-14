@@ -28,12 +28,17 @@
             "filename": "../../apply-inspect/apply-inspect.md"
         },
         {
-            "title": "Lab 4: Create Compartment for Exadata",
-            "description": "Modify Configuration to Create Optional Exadata Compartment and IAM Resources",
-            "filename": "../../exadata-compartment/exadata-compartment.md"
+            "title": "Lab 4: Deploy a Three Tier Network",
+            "description": "Modify Configuration to Create a Network with Web, Application, and Database Tiers",
+            "filename": "../../deploy-network/deploy-network.md"
         },
         {
-            "title": "Lab 5: Run CIS Compliance Checker Script",
+            "title": "Lab 5: Extend With Hub & Spoke Network Topology",
+            "description": "Using Landing Zone Configuration, Extend the Network with a Hub & Spoke Topology",
+            "filename": "../../hub-spoke-network/hub-spoke-network.md"
+        },
+        {
+            "title": "Lab 6: Run CIS Compliance Checker Script",
             "description": "Run Provided CIS Compliance Checker Script in Cloud Shell",
             "filename": "../../compliance/compliance.md"
         },

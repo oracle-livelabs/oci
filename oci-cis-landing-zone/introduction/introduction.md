@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-![OCI CIS Landing Zone Logo](images/landing-zone-icon.png "OCI CIS Landing Zone Logo of helicopter approaching Oracle shaped landing pad")
+![OCI Core Landing Zone Logo](images/landing-zone-icon.png "OCI Core Landing Zone Logo of helicopter approaching Oracle shaped landing pad")
 
 This set of labs will walk you through deploying a secure cloud architecture, compliant with the [CIS OCI Foundations Benchmark v2.0](https://www.cisecurity.org/benchmark/oracle_cloud/). Upon completion of the labs, a full set of OCI resources will be created as a base to build a secure enterprise workload.
 
@@ -28,7 +28,7 @@ This lab has the following pre-requisites:
 
 ### Overview
 
-The CIS OCI Landing Zone is an architecture and related Terraform files [publicly hosted on GitHub](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart). The output can be modified by changing configurations in the [quickstart-input.tfvars](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/config/quickstart-input.tfvars) file, or as we will do, entering the Terraform code into the [OCI Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) and entering configurations in the provided GUI. This will provision a full set of resources as a secure baseline for development or production workloads in OCI.
+The OCI Core Landing Zone is an architecture and related Terraform files [publicly hosted on GitHub](https://github.com/oci-landing-zones/terraform-oci-core-landingzone). The output can be modified by changing configurations in a [variables.tfvars](https://github.com/oci-landing-zones/terraform-oci-core-landingzone/blob/main/VARIABLES.md) file, or as we will do, entering the Terraform code into the [OCI Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) and entering configurations in the provided GUI. This will provision a full set of resources as a secure baseline for development or production workloads in OCI.
 
 ### Cost
 
@@ -56,7 +56,7 @@ One of the best features of the Landing Zone is a pre-defined set of groups, pol
 
 #### Compartments
 
-[Compartments](https://www.ateam-oracle.com/post/oracle-cloud-infrastructure-compartments) are flexible, logical containers that hold different resources. In the Landing Zone, compartments are used to enable segregation of duties by separating resources based on administrative roles. Different groups will be granted permissions to these compartments based on their duties. An optional (but recommended) enclosing compartment is configurable so multiple Landing Zones can be deployed in a single cloud tenancy. A common use case for this is using enclosing compartments for environment type (Development, Testing, Production) with a different Landing Zone in each environment's enclosing compartment.
+[Compartments](https://www.ateam-oracle.com/post/oracle-cloud-infrastructure-compartments) are flexible, logical containers that hold different resources. In the Core Landing Zone, compartments are used to enable segregation of duties by separating resources based on administrative roles. Different groups will be granted permissions to these compartments based on their duties. An optional (but recommended) enclosing compartment is configurable so multiple Landing Zones can be deployed in a single cloud tenancy. A common use case for this is using enclosing compartments for environment type (Development, Testing, Production) with a different Landing Zone in each environment's enclosing compartment.
 
 Compartments include:
 
@@ -104,7 +104,7 @@ An effort has been made to provide a default set of useful groups to carry out c
 
 ## A Note About Terraform
 
-The CIS OCI Landing Zone uses [Terraform](https://developer.hashicorp.com/terraform/intro) to deploy all resources into a tenancy. Terraform is an Infrastructure as Code tool used for provisioning cloud objects via automation. This simplifies the setup of the Landing Zone and shortens the time to production in OCI.
+The OCI Core Landing Zone uses [Terraform](https://developer.hashicorp.com/terraform/intro) to deploy all resources into a tenancy. Terraform is an Infrastructure as Code tool used for provisioning cloud objects via automation. This simplifies the setup of the Landing Zone and shortens the time to production in OCI.
 
 Terraform can be used with a variety of clients to fit different deployment methods. For this lab, we will leverage [OCI Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) to simplify the use of Terraform in OCI. The OCI Resource Manager is an Oracle-managed Terraform service that uses configuration files to automate deployment and operations for resources using Terraform. It reduces the complexity of using Terraform in OCI as well as storing state in the cloud instead of on a developer laptop.
 
@@ -114,4 +114,4 @@ Most things in OCI can be provisioned with Terraform. While beyond the scope of 
 
 - __Author__ - KC Flynn
 - __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
-- __Last Updated By/Date__ - KC Flynn April 2023
+- __Last Updated By/Date__ - KC Flynn February 2025

@@ -43,23 +43,19 @@ The objectives of this lab are:
 
     - Network, AppDev, Database, and Security compartments
     - 3-tier Virtual Cloud Network (VCN)
-    - Network Security Groups for web, application, and database tier assets
-    - VCN Flow Logs
-    - Internet, NAT, and Service Gateways
     - IAM Groups
     - [Dynamic IAM Groups](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingdynamicgroups.htm)
     - [IAM Policies for assigning permissions to groups](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingpolicies.htm)
     - Event rules and notifications for IAM and Network changes
-    - Object Storage Logs
 
-    A diagram of what has been created would look something like this: ![Single VCN Landing Zone](images/architecture-single-vcn.png "Lab 3 Current State Diagram")
+    A diagram of what has been created would look something like this: ![Single VCN Landing Zone](images/arch-simple.png "Lab 3 Current State Diagram")
 
 2. Take a few moments to explore the resources created. Ask yourself how these resources will make your environment more secure. Think about how a generic workload would be deployed on top of this architecture. Where would your workload components go, and what roles would manage them?
 
-In the next lab, we will introduce another compartment, group, and supporting resources for Oracle Exadata.
+In the next lab, we will introduce another a Virtual Cloud Network to the architecture.
 
 ## Acknowledgements
 
 - __Author__ - KC Flynn
 - __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
-- __Last Updated By/Date__ - KC Flynn April 2023
+- __Last Updated By/Date__ - KC Flynn February 2025
