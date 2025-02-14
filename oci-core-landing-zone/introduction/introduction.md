@@ -24,7 +24,7 @@ This lab has the following pre-requisites:
 - A [free tier](https://www.oracle.com/cloud/free/) or paid OCI tenancy
 - An account in the Administrators group in OCI
 
-## The CIS OCI Landing Zone Architecture
+## The OCI Core Landing Zone Architecture
 
 ### Overview
 
@@ -48,7 +48,7 @@ The Landing Zone will deploy a full set of resources suitable for a production c
 - OCI Object Storage
 - Budget Controls
 
-The resulting architecture will look similar to this diagram: ![Single VCN Architecture](images/single-vcn-architecture.png "Single VCN Architecture")
+The resulting architecture will look similar to this diagram: ![Simple Architecture](images/arch-simple.svg "Simple Landing Zone architecture")
 
 ### IAM Components
 
@@ -65,7 +65,6 @@ Compartments include:
 - Application Development
 - Database
 - _Exadata (optional)_
-- _Enclosing (optional)_
 
 #### Groups
 
