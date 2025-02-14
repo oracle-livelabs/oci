@@ -62,3 +62,10 @@ OCVS provides multiple pricing intervals to suite a wide range of use-case from 
 |Monthly|Monthly pricing requires a minimum of 1 month of committed host runtime.|This interval is a common option, and is the default selection for dense shapes.|
 |Yearly|One year pricing requires a minimum of 1 year of committed host runtime.|Use this interval for long-term projects such as workload or application migration to Oracle Cloud Infrastructure.|
 |Every Three Years|Three year pricing requires a minimum of 3 years of committed host runtime.|Use this interval for very long-term projects or mission-critical workloads that aren't easily migrated.|
+
+## Learn More
+
+## Acknowledgements
+- **Authors** -
+- **Contributors** -
+- **Last Updated By/Date** -

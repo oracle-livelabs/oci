@@ -181,6 +181,31 @@ The page shows the provisioning status of each resource.
 
 ## Task 4: Review OCVS SDDC
 
+After OCVS deployment is complete, the SDDC overview page will show details related to the VMware components, Clusters, Hosts and Networking.
+
+### 1. SDDC Overveiw
+
+### 2. Retrieve Credentials for VMware Softwares
+
+### 3. Retrieve HCX License Keys
+
+### 4. Check Cluster and Host details
+
+
+## Task 5: Access SDDC Components
+
+### Setup SSH Tunnel from Bastion to Jump Host
+
+### Access Jump Host via RDP
+
+### Access VMware Components
+
+#### Access vCenter
+
+#### Access NSX-T
+
+#### Access HCX
+
 ## Learn More
 
 ## Acknowledgements
