@@ -39,7 +39,7 @@ In this lab, you will:
 	<copy>
 	export OCI_OS_NS=$(oci os ns get --auth instance_principal --query "data" --raw-output)
 	</copy>
-	```	
+	```
 
 	Alternatively, run the following command to set the value manually. Replace the placeholder `<your-tenancy-namespace>` with your value. To get the value, go to Oracle Cloud Console >> **Profile** icon on the top right >> Tenancy details >> Object Storage namespace.
 
@@ -48,7 +48,6 @@ In this lab, you will:
 	export OCI_OS_NS='<your-tenancy-namespace>'
 	</copy>
 	```
-
 
 3. Confirm the value set by running the following command:
 
@@ -241,7 +240,7 @@ In this lab, you will:
 	To learn more about OKE workloads access to OCI Resources, see [Granting Workloads Access to OCI Resources](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contenggrantingworkloadaccesstoresources.htm).
 
 10. Add a second policy statement to set up Instance Principal using a Dynamic Group-less policy to allow the OCI instance running the LiveLabs noVNC Remote Desktop access to the OKE cluster (for kubectl and oci cli). Replace the placeholders `WORKSHOP_COMPARTMENT_NAME` with your workshop compartment name, `WORKSHOP_COMPARTMENT_OCID` with your workshop compartment OCID.
-	
+
 	```text
 	<copy>
 	Allow any-user to manage cluster-family in compartment WORKSHOP_COMPARTMENT_NAME where ALL { request.principal.type='instance', request.principal.compartment.id='WORKSHOP_COMPARTMENT_OCID' }

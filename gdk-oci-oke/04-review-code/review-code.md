@@ -48,7 +48,6 @@ _oci/pom.xml_
         <artifactId>micronaut-oraclecloud-oke-workload-identity</artifactId>
     </dependency>
 
-
 3. The build file uses the `jib-maven-plugin` to build a container image with the application native executable:
 
 _oci/pom.xml_
@@ -84,8 +83,6 @@ _oci/pom.xml_
         <!-- Using the OCIR Repo to push the generated runtime image containing the native executable -->
         <jib.to.image>${env.OCI_OS_OKE_IMAGE}</jib.to.image>
     </properties>
-
-
 
 ## Task 2: Review the Controller API
 
@@ -218,7 +215,6 @@ _lib/src/main/java/com/example/ProfilePicturesController.java_
 		String key = buildKey(userId);
 		objectStorage.delete(key);
 	}
-
 
 ## Task 7: Review the Kubernetes API configuration files
 

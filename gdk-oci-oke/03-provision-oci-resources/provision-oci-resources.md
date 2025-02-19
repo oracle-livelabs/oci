@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The GDK microservice application exposes REST APIs to upload, download, and delete files from an OCI Object Storage bucket. The  application is packaged as a native executable inside a container image. The container image is pushed to an OCI Container Registry (OCIR) repository and is deployed to an OKE cluster. 
+The GDK microservice application exposes REST APIs to upload, download, and delete files from an OCI Object Storage bucket. The  application is packaged as a native executable inside a container image. The container image is pushed to an OCI Container Registry (OCIR) repository and is deployed to an OKE cluster.
 
 This lab describes the steps to create an OKE Cluster, an OCIR Repository, and an Object Storage bucket.
 
@@ -22,7 +22,7 @@ In this lab, you will:
 
    ![Oracle Kubernetes Clusters (OKE) menu](https://oracle-livelabs.github.io/common/images/console/developer-OKE.png)
 
-2. Select your workshop compartment from the **Compartment** drop down list on the left. 
+2. Select your workshop compartment from the **Compartment** drop down list on the left.
 
     ![Containers & Artifacts Landing Page](images/compartment-name-oke.png#input)
 
