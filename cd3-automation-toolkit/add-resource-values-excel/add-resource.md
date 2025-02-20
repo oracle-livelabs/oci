@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a continuation of the lab 1 : [Setup the CD3 toolkit](/cd3-automation-toolkit/Setup%20the%20Toolkit/setup_the_toolkit.md)
+This is a continuation of the lab 1 : **Get started with CD3 Automation Toolkit setup**
 
 As a recap, in the previous lab we cloned the cd3 repo, built an image, executed the CD3 container and connected it to the OCI tenancy. 
 
