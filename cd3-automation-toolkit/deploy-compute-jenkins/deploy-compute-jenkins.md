@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This is a continuation of the lab 2 : [Add resource parameters values in excel file](/cd3-automation-toolkit/add-resource-values-excel/add-resource.md)
+This is a continuation of the lab 2 : **Add resource parameter values in Excel file**
 
-As a recap, in the previous lab we added resource parameters values in excel file for Compartments, VCN, Subnets, Compute, Block Volume and ATP.
+As a recap, in the lab 2 we added resource parameters values in excel file for Compartments, VCN, Subnets, Compute, Block Volume and ATP.
 
 Estimated time: 10 minutes
 
