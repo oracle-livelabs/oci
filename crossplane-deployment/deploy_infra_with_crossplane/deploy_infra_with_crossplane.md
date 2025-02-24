@@ -1,4 +1,4 @@
-# Manage OCI infrastructure using OCI Crossplane provider
+# Manage OCI Infrastructure with the OCI Crossplane Provider
 
 ## Introduction
 

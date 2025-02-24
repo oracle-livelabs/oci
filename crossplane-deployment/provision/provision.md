@@ -1,4 +1,4 @@
-# Deploy OCI Crossplane provider on OCI using Resource Manager
+# Deploy the OCI Crossplane Provider on OCI with Resource Manager
 
 ## Introduction
 

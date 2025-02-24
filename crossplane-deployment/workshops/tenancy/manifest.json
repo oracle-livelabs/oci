@@ -13,13 +13,13 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Deploy OCI Crossplane provider on OCI using Resource Manager",
-            "description": "Deploy OCI Crossplane provider on OCI using Resource Manager",
+            "title": "Lab 1: Deploy the OCI Crossplane Provider on OCI with Resource Manager",
+            "description": "Deploy the OCI Crossplane Provider on OCI with Resource Manager",
             "filename": "../../provision/provision.md"
         },
         {
-            "title": "Lab 2: Manage OCI infrastructure using OCI Crossplane provider",
-            "description": "Manage OCI infrastructure using OCI Crossplane provider",
+            "title": "Lab 2: Manage OCI Infrastructure with the OCI Crossplane Provider",
+            "description": "Manage OCI Infrastructure with the OCI Crossplane Provider",
             "filename": "../../deploy_infra_with_crossplane/deploy_infra_with_crossplane.md"
         },
         {

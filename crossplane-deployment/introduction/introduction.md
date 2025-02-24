@@ -11,8 +11,8 @@ Estimated Workshop Time: 2 hours
 ### Objectives
 
 In this workshop, you will learn how to:
-* Deploy OCI Crossplane provider on OCI using Resource Manager
-* Manage OCI infrastructure using OCI Crossplane provider
+* Deploy the OCI Crossplane Provider on OCI with Resource Manager
+* Manage OCI Infrastructure with the OCI Crossplane Provider
 
 ### Prerequisites
 
@@ -21,7 +21,7 @@ This lab assumes you have:
 * Administrator permissions or the necessary permissions to manage the OCI tenancy
 
 
-## Learn More
+### Learn More
 
 * [OCI Crossplane provider](https://github.com/oracle-samples/crossplane-provider-oci/tree/main)
 * [A Sneak Peak Into the Upcoming OCI Crossplane Provider](https://blogs.oracle.com/developers/post/a-sneak-peak-into-the-upcoming-oci-crossplane-provider)
