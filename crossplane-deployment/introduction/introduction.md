@@ -21,11 +21,12 @@ This lab assumes you have:
 * Administrator permissions or the necessary permissions to manage the OCI tenancy
 
 
-### Learn More
+## Task 1: Learn More
 
 * [OCI Crossplane provider](https://github.com/oracle-samples/crossplane-provider-oci/tree/main)
 * [A Sneak Peak Into the Upcoming OCI Crossplane Provider](https://blogs.oracle.com/developers/post/a-sneak-peak-into-the-upcoming-oci-crossplane-provider)
 
+Proceed to the next section
 
 ## Acknowledgements
 **Author** 
