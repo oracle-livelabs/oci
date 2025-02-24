@@ -12,7 +12,7 @@ Estimated Workshop Time: 2 hours
 ### Objectives
 
 In this workshop, you will learn how to:
-* Deploy the OCI Crossplane provider on OCI using the automation
+* Deploy OCI Crossplane provider on OCI using Resource Manager
 * Manage OCI infrastructure using OCI Crossplane provider
 
 ### Prerequisites
