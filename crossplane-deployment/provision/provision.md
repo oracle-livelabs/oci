@@ -1,4 +1,4 @@
-# Title of the Lab
+# Deploy the OCI Crossplane provider on OCI using the automation
 
 ## Introduction
 

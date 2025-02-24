@@ -15,7 +15,7 @@ In this workshop, you will learn how to:
 * Deploy the OCI Crossplane provider on OCI using the automation
 * Manage OCI infrastructure using OCI Crossplane provider
 
-### Prerequisites (Optional)
+### Prerequisites
 
 This lab assumes you have:
 * An Oracle account
