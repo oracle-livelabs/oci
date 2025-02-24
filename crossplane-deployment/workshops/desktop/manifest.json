@@ -14,11 +14,12 @@
       },
       {
           "title": "Lab 1: Configure  and deploy Crossplane OCI provider automation",
-          "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+          "description": "Configure  and deploy Crossplane OCI provider automation",
           "filename": "../../provision/provision.md"
       },
       {
           "title": "Lab 2: Manage OCI infrastructure using OCI Crossplane provider",
+          "description": "Manage OCI infrastructure using OCI Crossplane provider",
           "filename": "../../deploy_infra_with_crossplane/deploy_infra_with_crossplane.md"
       },
       {
