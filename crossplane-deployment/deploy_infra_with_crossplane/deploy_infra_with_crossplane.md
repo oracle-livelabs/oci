@@ -30,12 +30,12 @@ This lab assumes you have:
 
 4. Change the `compartmentIdRef` and `name` with `compartmentId` and provide the ocid of the compartment where you want the bucket to be created:
   ```
-  compartmentId: "ocid1.compartment.oc1.."
+  <copy>compartmentId: "ocid1.compartment.oc1.."</copy>
   ```
 
 5. Change the namespace with your tenancy's Object Storage namespace.
   ```
-  namespace: tenancy_namespace
+  <copy>namespace: tenancy_namespace</copy>
   ```
 
 6. Run the **bucket.yaml** file using kubectl:

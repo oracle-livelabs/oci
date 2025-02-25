@@ -51,7 +51,7 @@ Before running the automation in Resource Manager, you need to gather details ab
 5. OCI Private key content
 - Run the following command on the environment where you have the OCI private key:
 ```
-awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' <same path to key file as your OCI CLI config>
+<copy>awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' <same path to key file as your OCI CLI config></copy>
 ```
 - Copy the resulting content which will be required to configure the `private_key_content` variable.
 - This is used for the crossplane provider login to OCI.
