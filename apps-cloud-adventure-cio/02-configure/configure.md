@@ -47,15 +47,12 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 4.  You have entered the Change Salary Form.  Now you will quickly review the current configuration of the Change Salary Form.
 
-    > Click **Continue**.
 
-   ![Change Salary Page](images/image005.png)
+    > (1) When does the salary will start?: Type a **future date** <br>
 
-    > (1) Enter a **future date** for **When does the salary will start?** <br>
+    > (2) What is the action name?: Select **Change Salary**. <br>
 
-    > (2) Select **Change Salary** for **What is the action name?** <br>
-
-    > (3) Select **Career Progression** for **why you are changing the salary for Barrett Reed?** <br>
+    > (3) Why you are changing the salary for Barrett Reed?: Select **Career Progression**. <br>
 
     > (4) Click **Continue** once complete.
 
@@ -94,7 +91,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Fields and Regions](images/image011.png)
 
-    > (1) Enter **Change Salary Non-HR** in label. <br>
+    > (1) Label: Type **Change Salary Non-HR**. <br>
 
     > (2) Click on **Create**.
 
@@ -110,59 +107,33 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Fields and Regions](images/image013.png)
     
-    > (1) Click on the middle box that has **contains** in the User Roles Row. <br>
+    > (1) Select **does not contain** from the drop down options.
 
-    > (2) Select **does not contain** from the drop down options.  
+    > (2) Type **Human Resources Manager** and select **Human Resources Manager**.
 
     ![Fields and Regions](images/image014.png)
 
-    > (1) Enter the **Human Resource Manager** role in the right most box of the **User Roles** row. <br>
-
-    > (2) Select the first **Human Resource Manager** role from the drop down options.  
-
-    ![Fields and Regions](images/image015.png)
 
      **Note:** This configuration displays this version of the Change Salary Form to all people who are not assigned to the Human Resource Manager Role
 
 
 10.  Now you want to add and hide fields.
 
-    > Click on the **Drop Down** ![drop down icon](images/icon013_dropdown.png)  Icon to the left of Salary to expand the salary section.
+     > Click on the **Drop Down** ![drop down icon](images/icon013_dropdown.png)  Icon to the left of Salary to expand the salary section.
 
-    ![Fields and Regions, Conditions](images/image016.png)
-
-
-
-11.  First you want to the configure the form to hide the **Annualized Full-Time Salary** Field.
-
-    > (1) Click in the Box in the **Hidden Column** for **Annualized Full-Time Salary Field** row.       <br>
-
-    > (2) Then select **Hidden** from the options that appear.
-
-    ![Fields and Regions, Conditions](images/image017.png)
+     ![Fields and Regions, Conditions](images/image016.png)
 
 
-12. Now you want to the configure the form to hide the **Compa-Ratio** field.
+        > (1) Action Reason: select **Visable**     <br>
 
-    > (1) Click in the Box in the **Hidden Column** for **Compa-Ratio** row.       <br>
+        > (2) Annualized Full-Time Salary: select **Hidden**   <br>
 
-    > (2) Then select **Hidden** from the options that appear.
+        > (3) Compa-Ratio: select **Hidden** 
 
-    ![Fields and Regions, Conditions](images/image018.png)
-
-13. Now you will configure the form to show the **Action Reason** field.
-
-    > (1) Click in the Box in the **Hidden Column** for **Action Reason** row.       <br>
-
-    > (2) Then select **Visible** from the options that appear.
-
-    ![Fields and Regions, Conditions](images/image019.png)
+     ![Salary Fields and Regions](images/image017.png)
 
 
-
-14. Please verify that Action Reason is **Visible**, and Annualized Full-Time Salary Field and Compa-Ratio are **Hidden**.
-
-    Now you will add a validation step for the Adjustment Percentage.  You do not want users to enter in a Salary Percentage Greater than 15%
+14. Now you will add a validation step for the Adjustment Percentage.  You do not want users to enter in a Salary Percentage Greater than 15%
 
     > Click on **Validate Field Values**
 
@@ -172,63 +143,52 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Validation](images/image021.png)
 
-    > (1) Enter **Adjustment Percentage** in **Label** to name the validation.    <br>
+    > (1) Label: type **Adjustment Percentage**.    <br>
 
-    > (2) Then Click **Create**.
+    > (2) Click **Create**.
 
     ![Validation](images/image022.png)
 
 
 15.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
 
-    > Click on **Edit**. 
+     > Click on **Edit**. 
 
-    ![Create Validation](images/image023.png)
+     ![Create Validation](images/image023.png)
 
-    > Click on **+ Condition**.
 
-    ![Create Validation](images/image024.png)
+        > (1) Type **Adjustment Percentage (Salary Details)** in the box    <br>
 
-    > (1) Enter **Adjustment Percentage** in the box below Country.     <br>
+        > (2) Select **greater than**    <br>
 
-    > (2) Then select the first **Adjustment Percentage** under **Salary Details**.
+        > (3) Type **15**
 
-    ![Create Validation](images/image025.png)
+        ![Create Validation](images/image026.png)
 
-    > (1) In the new Adjustment Percentage row you just created, click the **middle box** that says **Equals**.       <br>
 
-    > (2) Then select  **greater than.**.
-
-    ![Create Validation](images/image026.png)
-
-    > Enter **15** in the right most box in the Adjustment Percentage row.
-
-    ![Create Validation](images/image027.png)
-
-    The form will not allow any user to enter an adjustment percentage greater than 15%. 
+      The form will not allow any user to enter an adjustment percentage greater than 15%. 
 
 
 16.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
+  
+       > Click on **+ Message** 
+  
+     ![Create Validation](images/image027.png)
 
-    > (1) Under **Messages**, type in **Adjustment Percentage is too high** in **Summary**.    <br>
+        > (1) Summary: type **Adjustment Percentage is too high**.    <br>
 
-    > (2) Then type in **The Adjustment Percentage must be lower than 15%** in **Detail**.
+        > (2) Detail:  **The Adjustment Percentage must be lower than 15%** in **Detail**.
 
-    ![Create Validation](images/image028.png)
+        > (3) Detail:  type **The Adjustment Percentage must be lower than 15%**.
 
-    > Click on **Warning** under **Severity**.
+        ![Create Validation](images/image028.png)
 
-    > Then select **Error** from the drop-down options that appear.
-
-    The error configuration will not allow any user who entered incorrect data to submit the change without fixing the error
-
-    ![Create Validation](images/image030.png)
     
 
 
 17.  Well done.  You have configured a new rule for Non-HR personnel.
-
-    Redwood offers a quick way to review your changes as they appear in the application.
+   
+  Redwood offers a quick way to review your changes as they appear in the application.
 
     > (1) Click on the **Preview** ![preview icon](images/icon014_preview.png)  icon in the top right of the screen.   <br>
 
@@ -244,11 +204,11 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     You need to enter the required information before you can move to the next screen.
 
-    > (1) Enter a **future date** for **When does the salary will start?** <br>
+    > (1) When does the salary will start?: Type a **future date** <br>
 
-    > (2) Select **Change Salary** for **What is the action name?** <br>
+    > (2) What is the action name?: Select **Change Salary**. <br>
 
-    > (3) Select **Career Progression** for **why you are changing the salary for Barrett Reed?** <br>
+    > (3) Why you are changing the salary for Barrett Reed?: Select **Career Progression**. <br>
 
     > (4) Click **Continue** once complete.
 
@@ -275,7 +235,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > Click on the **Home** ![home icon](images/icon017_home.png)  Icon.
 
-    ![Change Salary Screen 2](images/image037.png)
+  
 
 
 
