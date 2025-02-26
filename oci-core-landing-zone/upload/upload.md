@@ -26,9 +26,9 @@ In this lab you will:
 
     - Set the _Name_ parameter to an appropriate name for the _Stack_. This will be what OCI uses as a display name for the Resource Manager Stack containing the Terraform files, configurations, and state going forward.
 
-    - Make sure that the Compartment from Task 1 is selected for the _Create in Compartment_ field before moving on. _Note: This defines which compartment will contain the Stack object itself, not where the Landing Zone will be deployed._
+    - Make sure that the correct compartment is selected for the _Create in Compartment_ field before moving on. _Note: This defines which compartment will contain the Stack object itself, not where the Landing Zone will be deployed._
 
-5. Once satisfied with the current settings for the stack, click the __Next__ button on the bottom-left corner of the UI and move onto _Lab 2: Configure Variables for Basic Deployment_.
+5. Once satisfied with the current settings for the stack, click the __Next__ button on the bottom-left corner and move onto _Lab 2: Configure Variables for Basic Deployment_.
 
 ## Acknowledgements
 

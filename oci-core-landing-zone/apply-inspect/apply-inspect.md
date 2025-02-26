@@ -42,7 +42,6 @@ The objectives of this lab are:
     To summarize, the stack will have deployed:
 
     - Network, AppDev, Database, and Security compartments
-    - 3-tier Virtual Cloud Network (VCN)
     - IAM Groups
     - [Dynamic IAM Groups](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingdynamicgroups.htm)
     - [IAM Policies for assigning permissions to groups](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingpolicies.htm)
@@ -52,7 +51,7 @@ The objectives of this lab are:
 
 2. Take a few moments to explore the resources created. Ask yourself how these resources will make your environment more secure. Think about how a generic workload would be deployed on top of this architecture. Where would your workload components go, and what roles would manage them?
 
-In the next lab, we will introduce another a Virtual Cloud Network to the architecture.
+In the next lab, we will introduce a Virtual Cloud Network to the architecture.
 
 ## Acknowledgements
 

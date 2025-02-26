@@ -81,6 +81,8 @@ Groups provisioned by the Landing Zone are:
 - Auditors
 - Cred Admins
 - Announcement Readers
+- Access Gov Admins
+- Storage Admins
 - _Exadata Admins (optional)_
 
 #### Policies
@@ -107,7 +109,7 @@ The OCI Core Landing Zone uses [Terraform](https://developer.hashicorp.com/terra
 
 Terraform can be used with a variety of clients to fit different deployment methods. For this lab, we will leverage [OCI Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) to simplify the use of Terraform in OCI. The OCI Resource Manager is an Oracle-managed Terraform service that uses configuration files to automate deployment and operations for resources using Terraform. It reduces the complexity of using Terraform in OCI as well as storing state in the cloud instead of on a developer laptop.
 
-Most things in OCI can be provisioned with Terraform. While beyond the scope of this lab, more information on using Terraform in OCI can be found [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraform.htm).
+Most things in OCI can be provisioned with Terraform. While beyond the scope of this lab, more information on [using Terraform in OCI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraform.htm).
 
 ## Acknowledgements
 

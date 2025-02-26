@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You should be on the __Configure Variables__ page as defined by the left side-menu. What this page does is allow us to define variables that would otherwise be defined in the [quickstart-input.tfvars](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/config/quickstart-input.tfvars) file in the main project. Resource Manager is translating the fields from the config file into a more friendly GUI for usability.
+You should be on the __Configure Variables__ page as defined by the left side-menu. What this page does is allow us to define variables that would otherwise be defined in the [quickstart-input.tfvars](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/config/quickstart-input.tfvars) file in the main project. Resource Manager is translating the fields from the config file into a more friendly interface for usability.
 
 Estimated Lab Time: 10 minutes
 
@@ -10,7 +10,7 @@ Estimated Lab Time: 10 minutes
 
 In this lab you will:
 
-- Use the Resource Manager GUI to enter variable values
+- Use the Resource Manager interface to enter variable values
 - Inspect available configuration options for the Landing Zone
 
 ## Task 1: Enter Environment Variables

@@ -14,7 +14,7 @@ We have created the skeleton of the Landing Zone we need to deploy our workload.
 
 We will need to return to the configurations that we used to define the Landing Zone. By modifying the configuration variables, we can declare a network that will be added to the Landing Zone.
 
-1. In the _Stacks_ menu for the _Resource Manager Stack_ we deployed in the previous lab, select __Variables__ under _Resources.
+1. In the _Stacks_ menu for the _Resource Manager Stack_ we deployed in the previous lab, select __Variables__ under _Resources_.
 1. Click the __Edit Variables__ button. Please note that it may take a moment for the variables form to populate.
 
     ![Edit variables on the stack menu](./images/edit-variables-btn.png "Select the Edit Variables button")
@@ -55,7 +55,7 @@ With our new configurations in place, we will go through the plan and apply proc
 
     ![VCN Subnets and Details](./images/subnets.png "Subnets and other details about the VCN")
 
-1. (_Optional_) From the main menu, go to _Networking_ > _Network Visualizer_ to see a visualization of the network. You should see three different gateways for resources on the network to communicate. An Internet Gateway (IGW) for the web tier, a NAT gateway for private internet access for the App and DB subnets, and finally a Service Gateway (SGW) for private communication with OCI internal services.
+1. (_Optional_) From the main menu, go to _Networking_ > _Network Visualizer_ to see a visualization of the network. If you do not see a network visualization, ensure that the network compartment is currently selected. You should see three different gateways for resources on the network to communicate. An Internet Gateway (IGW) for the web tier, a NAT gateway for private internet access for the App and DB subnets, and finally a Service Gateway (SGW) for private communication with OCI internal services.
 
     ![Network Visualizer Image](./images/visualizer-output.png "Output from the Network Visualizer")
 

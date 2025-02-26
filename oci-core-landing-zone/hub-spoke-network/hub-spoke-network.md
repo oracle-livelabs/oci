@@ -21,6 +21,8 @@ We will use the Landing Zone to connect our three tier network to a network for 
 
     Select __VCN or on-premises connectivity routing via DRG (DRG will be created)__.
 
+    _(Optional) Input `172.16.0.0/20` to represent the CIDR for an On-premises network_.
+
     ![DRG will be created](./images/hub-spoke-config.png "DRG will be created")
 
 1. In _Networking - Three Tier VCNs_ select the checkbox for __Attach this VCN to DRG (Dynamic Routing Gateway)?__. This will attach the network to the DRG. Select __OKE-VCN-1__ in _Routable VCNs_. This will make a route table entry to allow traffic to pass to _OKE-VCN-1_.
@@ -54,7 +56,9 @@ We will use the Landing Zone to connect our three tier network to a network for 
 
     ![Flow logs for each subnet](./images/flow-logs.png "Subnet flow logs")
 
-1. (_Optional_) From the main menu, go to _Networking_ > _Network Visualizer_ to see a visualization of the network. You should see three different gateways for resources on the network to communicate. An Internet Gateway (IGW) for the web tier, a NAT gateway for private internet access for the App and DB subnets, and finally a Service Gateway (SGW) for private communication with OCI internal services.
+1. (_Optional_) From the main menu, go to _Networking_ > _Network Visualizer_ to see a visualization of the network. If you do not see a network visualization, ensure that the network compartment is currently selected.
+
+    You should now see multiple networks as spokes with attachments to the DRG. This will facilitate cross-VCN communication, as well as enable scaling as more VCNs are brought online.
 
     ![Network Visualizer Image](./images/hub-spoke-net-visualization.png "Output from the Network Visualizer")
 
@@ -63,5 +67,5 @@ In our next lab, we will run a script to check the Landing Zone for compliance w
 ## Acknowledgements
 
 - __Author__ - KC Flynn
-- __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
+- __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger, Gregg MacKeigan
 - __Last Updated By/Date__ - KC Flynn February 2025
