@@ -102,6 +102,7 @@ Follow below steps to download the HCX connector and deploy it in the on-prem vC
 11. On the Select a compute resource page, select a cluster/host for deployment and click **Next**.
 12. on the Review details page, verify the OVA template details and click **Next**.
 13. On the License agreements page, read and accept the VMware End User License Agreement, and click Next.
+<<<<<<< Updated upstream
 14. On the Select storage page, select the virtual disk format, storage policy, storage name, and then click Next.
 15. On the Select networks page, select the destination network, and click Next.
 16. On the Customize Template page, set the appropriate deployment properties:

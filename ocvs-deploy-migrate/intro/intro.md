@@ -1,20 +1,7 @@
-
-# VMware Workload Migration to Oracle Cloud VMware Solution (OCVS)
 # VMware Workload Migration to Oracle Cloud VMware Solution (OCVS)
 
 Estimated time: 30 minutes
 
-## Workshop Introduction
-
-The workshop will showcase how to deploy Oracle Cloud VMware Solution in an OCI tenancy and how to effortlessly migrate On-Prem VMware workloads to the cloud without impacting the application stack.
-
-We will cover following topics as part of the upcoming labs.
-
-- Oracle Cloud VMware Solution (OCVS) Deployment prerequisites
-- Deploying Oracle Cloud VMware Solution (OCVS) and accessing OCVS components
-- Creating new Datastore with OCI Block Volume and deploying Workload VM's
-- Configuring connectivity with on-prem VMware Infrastructure
-- Migrating on-prem VMware workload with HCX
 ## Workshop Introduction
 
 The workshop will showcase how to deploy Oracle Cloud VMware Solution in an OCI tenancy and how to effortlessly migrate On-Prem VMware workloads to the cloud without impacting the application stack.
@@ -51,11 +38,7 @@ The lab makes following assumptions:
 * [OCVS Documentation](https://docs.oracle.com/en-us/iaas/Content/VMware/Concepts/ocvsoverview.htm)
 
 ## Acknowledgements
-## Acknowledgements
 
-- **Authors** - 
-- **Contributors** - 
-- **Last Updated By/Date** - 
 - **Authors** - 
 - **Contributors** - 
 - **Last Updated By/Date** - 
