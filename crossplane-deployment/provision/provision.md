@@ -25,36 +25,50 @@ This lab assumes you have:
 
 Before running the automation in Resource Manager, you need to gather details about your OCI tenancy such as the tenancy Namespace, OCI Registry Auth Token, OCI Registry Username, and the OCI authentication private key content.
 
-1. Tenancy Namespace
-- Navigate to Tenancy Details. Under Object Storage Settings, locate the Object Storage Namespace.
-- You will need the tenancy namespace in order to create an OCI Registry that will be used to start the crossplane and to be able to have a correct OCI Registry user.
+1. Tenancy Namespace 
+
+Navigate to Tenancy Details. Under Object Storage Settings, locate the Object Storage Namespace.
+
+You will need the tenancy namespace in order to create an OCI Registry that will be used to start the crossplane and to be able to have a correct OCI Registry user.
 
 
 2. Auth Token
-- In order to run the automation you will need to obtain an Auth token with at least five minutes before running it. 
-- To obtain the Auth Token navigate to the OCI Console and select your user profile. Click on Auth Token in the left-side column and generate token. 
-- You will need to provide the token to configure the `ocir_auth_token` variable. More details can be found [here](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrygettingauthtoken.htm).
 
+In order to run the automation you will need to obtain an Auth token with at least five minutes before running it. 
+
+To obtain the Auth Token navigate to the OCI Console and select your user profile. Click on Auth Token in the left-side column and generate token. 
+
+You will need to provide the token to configure the `ocir_auth_token` variable. More details can be found [here](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrygettingauthtoken.htm).
 
 
 3. OCI Registry user
-- Enter your username in the format <tenancy-namespace>/<username>, where <tenancy-namespace> is the auto-generated Object Storage namespace string of your tenancy (as shown on the Tenancy Information page). For example, ansh81vru1zp/jdoe@acme.com. If your tenancy is federated with Oracle Identity Cloud Service, use the format <tenancy-namespace>/oracleidentitycloudservice/<username>.
-- More details about how to correctly retrieve your OCI Registry user can be found [here](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrypushingimagesusingthedockercli.htm)
-- You will need to create this user to configure the `ocir_username` variable.
+
+Enter your username in the format <tenancy-namespace>/<username>, where <tenancy-namespace> is the auto-generated Object Storage namespace string of your tenancy (as shown on the Tenancy Information page). For example, ansh81vru1zp/jdoe@acme.com. If your tenancy is federated with Oracle Identity Cloud Service, use the format <tenancy-namespace>/oracleidentitycloudservice/<username>.
+
+More details about how to correctly retrieve your OCI Registry user can be found [here](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrypushingimagesusingthedockercli.htm)
+
+You will need to create this user to configure the `ocir_username` variable.
 
 
 4. OCI API Keys
-- If you do not already have an existing API public and private key pair, you can set them up by following the [RSA key pair in PEM format (minimum 2048 bits)](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm?utm_source=chatgpt.com)
-- Once you generate the keys, you can log in to OCI console -> Click on your profile (top-right corner) -> your user -> API Keys -> Add API Key.
-- Copy the fingerprint; you will need it later to complete the `fingerprint` variable
+
+If you do not already have an existing API public and private key pair, you can set them up by following the [RSA key pair in PEM format (minimum 2048 bits)](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm?utm_source=chatgpt.com)
+
+Once you generate the keys, you can log in to OCI console -> Click on your profile (top-right corner) -> your user -> API Keys -> Add API Key.
+
+Copy the fingerprint; you will need it later to complete the `fingerprint` variable
 
 5. OCI Private key content
-- Run the following command on the environment where you have the OCI private key:
+
+Run the following command on the environment where you have the OCI private key:
+
 ```
 <copy>awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' <same path to key file as your OCI CLI config></copy>
 ```
-- Copy the resulting content which will be required to configure the `private_key_content` variable.
-- This is used for the crossplane provider login to OCI.
+
+Copy the resulting content which will be required to configure the `private_key_content` variable.
+
+This is used for the crossplane provider login to OCI.
 
 
 ## Task 2: Provision resources
@@ -89,7 +103,7 @@ Before running the automation in Resource Manager, you need to gather details ab
 
 11. Wait for the job to complete successfully. This process may take 20–25 minutes as it deploys the OKE cluster and sets up all required dependencies for the OCI Crossplane provider.
 
-12. Once the job succeeds, go to Outputs and copy the **ssh_to_operator** command to access the instance managing the OKE cluster.
+12. Once the job succeeds, go to Outputs and copy the `ssh_to_operator` command to access the instance managing the OKE cluster.
     ![Output for SSH to Operator](images/output.png)
 
 Next, we will guide you through deploying resources in OCI using your newly deployed OCI Crossplane provider.
