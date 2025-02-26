@@ -2,9 +2,7 @@
 
 ## Introduction
 
-In this lab the Landing Zone should be successfully deployed. As time goes on and development or maintenance has been done to the Landing Zone environment, how do you ensure that compliance to CIS controls is still maintained? One way is to run the [CIS Compliance Script](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/compliance-script.md) included in the Landing Zone.
-
-_Note that the compliance script is included with the Landing Zone, but has no dependency on it. The script can be used in any OCI tenancy in this manner._
+In this lab the Landing Zone should be successfully deployed. As time goes on and development or maintenance has been done to the Landing Zone environment, how do you ensure that compliance to CIS controls is still maintained? One way is to run the [CIS Compliance Script](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/compliance-script.md).
 
 Estimated Lab Time: 10 minutes
 
@@ -30,7 +28,7 @@ The compliance script can be run anywhere with the correct permissions and optio
     ![Cloud Shell Setup](https://oracle-livelabs.github.io/common/images/console/cloud-shell-setup.png "Cloud Shell setup stage")
     ![Cloud Shell Open](https://oracle-livelabs.github.io/common/images/console/cloud-shell-open.png "Cloud Shell open and ready")
 
-2. Copy and run the following command in the Cloud Shell to download the script:
+1. Copy and run the following command in the Cloud Shell to download the script:
 
     ```text
     <copy>
@@ -38,15 +36,7 @@ The compliance script can be run anywhere with the correct permissions and optio
     </copy>
     ```
 
-3. Enter the following command to download a supported version of libraries the script depends on.
-
-    ```text
-    <copy>
-    pip install --upgrade "urllib3<=2" --user
-    </copy>
-    ```
-
-4. Run the script by entering the following command, then wait a moment while the script collects data.
+1. Run the script by entering the following command, then wait a moment while the script collects data.
 
     ```text
     <copy>
@@ -56,7 +46,7 @@ The compliance script can be run anywhere with the correct permissions and optio
 
 ## Task 2: Download Findings
 
-1. Once complete, there will be a directory named *compliance_report* in your home directory. Compress this directory by running the following command in the Cloud Shell.
+1. Once complete, there will be a directory named _compliance\_report_ in your home directory. Compress this directory by running the following command in the Cloud Shell.
 
     ```text
     <copy>
@@ -64,15 +54,15 @@ The compliance script can be run anywhere with the correct permissions and optio
     </copy>
     ```
 
-2. Download the file by opening the Cloud Shell menu in the top-right corner and selecting *Download*. ![Cloud Shell Menu](images/compliance-download-1.png "Cloud Shell Menu with Download & Upload Options")
+1. Download the file by opening the Cloud Shell menu in the top-right corner and selecting _Download_. ![Cloud Shell Menu](images/compliance-download-1.png "Cloud Shell Menu with Download & Upload Options")
 
-3. Enter `compliance_report.zip` into the input box and click *Download*. ![Cloud Shell Download File](images/compliance-download-2.png "Download compliance.zip in Cloud Shell")
+1. Enter `compliance_report.zip` into the input box and click _Download_. ![Cloud Shell Download File](images/compliance-download-2.png "Download compliance.zip in Cloud Shell")
 
-4. Unzip and peruse the report at your leisure.
+1. Unzip and peruse the report at your leisure.
 
 ## Task 3: Inspect Report Contents
 
-The report directory will contain a variable number of files depending on the state of your OCI tenancy. The summary file contains the list of checks and if they passed or failed. Open the *cis\_html\_summary\_report.html* file to view the contents in your web browser. Take a few moments to browse the contents.
+The report directory will contain a variable number of files depending on the state of your OCI tenancy. The summary file contains the list of checks and if they passed or failed. Open the _cis\_html\_summary\_report.html_ file to view the contents in your web browser. Take a few moments to browse the contents.
 
 ![Report Directory](images/report-contents.png "Report directory content")
 
