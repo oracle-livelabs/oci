@@ -20,6 +20,12 @@ Following is the logical architecture of OCVS SDDC in an OCI region. **Placehold
 
 ![ocvs-arch](images/ocvs-arch.png)
 
+## Architecutre
+
+Following is the logical architecture of OCVS SDDC in an OCI region. **Placeholder update after review.**
+
+![ocvs-arch](images/ocvs-arch.png)
+
 ## VMware Components
 
 Oracle Cloud VMware Solution (OCVS) bundles VMware components namely ESXi, vCenter, NSX-T, vSAN and HCX to support building a fully functional Software Defined Data Center (SDDC).
