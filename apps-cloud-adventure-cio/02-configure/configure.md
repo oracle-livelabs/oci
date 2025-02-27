@@ -133,7 +133,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
      ![Salary Fields and Regions](images/image017.png)
 
 
-14. Now you will add a validation step for the Adjustment Percentage.  You do not want users to enter in a Salary Percentage Greater than 15%
+11. Now you will add a validation step for the Adjustment Percentage.  You do not want users to enter in a Salary Percentage Greater than 15%
 
     > Click on **Validate Field Values**
 
@@ -150,7 +150,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     ![Validation](images/image022.png)
 
 
-15.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
+12.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
 
      > Click on **Edit**. 
 
@@ -169,7 +169,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
       The form will not allow any user to enter an adjustment percentage greater than 15%. 
 
 
-16.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
+13.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
   
        > Click on **+ Message** 
   
@@ -186,7 +186,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     
 
 
-17.  Well done.  You have configured a new rule for Non-HR personnel.
+14.  Well done.  You have configured a new rule for Non-HR personnel.
    
   Redwood offers a quick way to review your changes as they appear in the application.
 
@@ -196,7 +196,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Create Validation](images/image031.png)
 
-18.  You have reentered the Change Salary Form.  Let’s review the changes.
+15.  You have reentered the Change Salary Form.  Let’s review the changes.
 
     > Click **Continue**.
 
@@ -215,7 +215,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     ![Change Salary Page 2nd page](images/image033.png)
 
 
-19.  Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible while Action Reason is now Visible.
+16.  Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible while Action Reason is now Visible.
 
     Now we will test the validation for the Adjustment Amount Percentage.
 
@@ -223,13 +223,13 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Change Salary Screen 2](images/image034.png)
 
-20.  The system gives us a warning that the increase in salary is outside the worker’s salary range.  You will ignore this warning.
+17.  The system gives us a warning that the increase in salary is outside the worker’s salary range.  You will ignore this warning.
 
     > Click **Continue.**
 
     ![Change Salary Screen 2](images/image035.png)
 
-21.  The system will not allow the user to continue because the Adjustment Percentage exceeds 15% due to the field validation we configured.
+18.  The system will not allow the user to continue because the Adjustment Percentage exceeds 15% due to the field validation we configured.
 
     ![Change Salary Screen 2 error message](images/image036.png)
 
@@ -240,7 +240,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 
 
-22. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+19. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
 
