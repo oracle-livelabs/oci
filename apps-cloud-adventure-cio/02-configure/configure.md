@@ -163,7 +163,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      > (3) Type **15**
 
-        ![Create Validation](images/image026.png)
+     ![Create Validation](images/image026.png)
 
 
       The form will not allow any user to enter an adjustment percentage greater than 15%. 
