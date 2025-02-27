@@ -8,7 +8,7 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 
 ### Objectives
 
-In this lab, you will use Redwood to quickly and efficienty improve the user experience in Oracle Fusion Cloud. 
+In this lab, you will use Redwood to quickly and efficiently improve the user experience in Oracle Fusion Cloud. 
 
 Estimated Time: 15 minutes
 
@@ -45,7 +45,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Change Salary Page](images/image004.png)
 
-4.  You have entered the Change Salary Form.  Now you will quickly review the current configuration of the Change Salary Form.
+4.  You have entered the Change Salary Form.  Now you will quickly review the current configuration of the Change Salary Form.  You need to enter in some information to access the form
 
 
     > (1) When does the salary will start?: Type a **future date** <br>
@@ -124,7 +124,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
      ![Fields and Regions, Conditions](images/image016.png)
 
 
-     > (1) Action Reason: select **Visable**     <br>
+     > (1) Action Reason: select **Visible**     <br>
 
      > (2) Annualized Full-Time Salary: select **Hidden**   <br>
 
