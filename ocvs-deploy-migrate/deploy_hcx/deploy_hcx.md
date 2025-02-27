@@ -82,58 +82,127 @@ Oracle Cloud VMware Solution (OCVS) is a one-click fully automated deployment. A
 
 As part of the lab, we will not make any changes to the default HCX configurations. To ensure that both sites can communicate with each other using FQDN, ensure that both the primary and destination DNS servers have all the forward and reverse lookup entries for both sites' VMware components such as vCenter, NSX, Platform Service Controller (PSC).
 
-## Task 1: Install On-prem connector
+**NOTE:** Before you continue with the HCX Configuration, you need to install and configure the HCX On-Prem Connector in you existing vCenter. Installing the OVA and configuring the connector is not covered in the LAB. Please follow below links to download, install and configure the connector in on-prem using steps in the following links;
 
-Follow below steps to download the HCX connector and deploy it in the on-prem vCenter server.
-
-1. If you already do not have the RDP connection to the Jump server, then initiate an RDP connection to the jump server using the steps mentioned in [Lab-2 Task-5 - Access Jump Host via RDP](./../deploy_ocvs/deploy_ocvs.md)
-2. Once logged into the jump server, login to the HCX Manager with administrative credentials as mentioned in [Lab-2 Task-5 - Access HCX](./../deploy_ocvs/deploy_ocvs.md)
-3. In the **Administration** section, click **System Updates**.
-4. Click **Check for Updates** under Local HCX.
-5. Once the check completes, click **Request Download Link**.
-6. Download the HCX Connector OVA by clicking on **VMware HCX**.
-
-**NOTE:** Before moving to the next step, you will need to transfer the OVA file to a location which has access to the onprem vCenter server. This might be your local workstation or a different jump server. The lab does not cover the procedure to transfer the file to appropriate location as that might differ from one environment to another.
-
-7. Login to the on-prem vCenter Server with a user who has permissions to deploy appliances/virtual machines.
-8. Go to the Hosts and Cluster view, right click on the cluster/host/datacenter where you want to deploy the appliance and select **Deploy OVF Template**.
-9. On the **Select an OVF template** page, browse to the connector OVA that we had downloaded in Step 6.
-10. On the Select a name and folder page, provide a name and folder location for the appliance and click **Next**.
-11. On the Select a compute resource page, select a cluster/host for deployment and click **Next**.
-12. on the Review details page, verify the OVA template details and click **Next**.
-13. On the License agreements page, read and accept the VMware End User License Agreement, and click Next.
-<<<<<<< Updated upstream
-14. On the Select storage page, select the virtual disk format, storage policy, storage name, and then click Next.
-15. On the Select networks page, select the destination network, and click Next.
-16. On the Customize Template page, set the appropriate deployment properties:
-    1.  Passwords - Configure the CLI admin password and the root user password.
-    2.  Network Properties - Enter the network properties for the default gateway.
-    3.  Static Routes - Add a static route for a destination subnet or host.
-    4.  DNS
-    5.  DNS Server List - Enter the list of DNS servers for this virtual machine.
-    6.  Domain Search List - Domains that you enter are searched in the order you list them, and the search stops when a valid name is found.
-    7.  NTP Server List - Enter the list of NTP servers and ensure that the NTP server can be reached from the virtual machine. If the NTP time is out of sync, services fail to start.
-    8.  Deployment (Connector OVA installation only)
-    9.  Click Next.
-17. Review the deployment settings and click Finish.
-
-It will take ~10 Minutes for the OVA deployment to complete and the HCX Connector VM services to start. Once the services have started successfully, you can continue with Task 2.
-
-## Task 2: Activate and Configure HCX Connector
-
-Before you begin with task 2, you need to obtain the HCX license keys from the OCI console. If you haven't already retrieved the HCX activation key, follow 
+1. [Downloading the HCX Connector OVA](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/installing-the-hcx-manager-appliance/about-hcx-manager-ovas/downloading-the-hcx-connector-ova.html)
+2. [Deploying the HCX Controller OVA](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/installing-the-hcx-manager-appliance/deploying-the-hcx-ova-in-the-vsphere-client.html)
+3. [Activating and Configuring HCX Connector](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/installing-the-hcx-manager-appliance/activate-and-configure-hcx-connector.html)
+4. [Creating Network Profile](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/configuring-and-managing-the-hcx-interconnect/configuring-the-hcx-service-mesh/create-a-network-profile.html)
+5. [Creating Compute Profile](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/configuring-and-managing-the-hcx-interconnect/configuring-the-hcx-service-mesh/create-a-compute-profile.html)
 
 
-## Task 3: Create Compute Profile in HCX Connector
+## Task 1: Configure Site Pairing
 
+**NOTE:** Configuration parameters in the following steps are for reference only and actual parameters in your on-prem environment might be different.
 
+1. Access HCX Manager UI as Described in [Lab 2 - Task 5](./../deploy_ocvs/deploy_ocvs.md/)
+2. In the left-hand pane, click on **Site Pairs**, click on **NEW SITE PAIR**.
 
+![sitepaircreate](./images/sitepaircreatenew.png)
 
-## Task 4: Configure Site Pairing
+3. On the **Create Site Pair** page, provide following details
+      1. **Site Type:** VMware
+      2. **Remote HCX URL:** On-prem HCX Connector URL
+      3. **Username:** Connector administrator user
+      4. **Password:** Connector administrator user password
+4. Click **CREATE**
 
-## Task 5: Configure Service Mesh and Interconnect
+![sitepairdetails](./images/sitepaircreatedetails.png)
 
-## Task 6: (Optional) Configure Network Extension
+5. On the **Certificate Warning** pop up, Click **IMPORT CERTIFICATE**.
+
+![sitepaircert](./images/sitepaircertwarning.png)
+
+6. Wait for the Site Pair to complete and status to change to **Connected**.
+
+![sitepair](./images/sitepairdetails.png)
+
+## Task 2: Configure Service Mesh and Interconnect
+
+1. Access HCX Manager UI as Described in [Lab 2 - Task 5](./../deploy_ocvs/deploy_ocvs.md/)
+2. In the left-hand pane, click on **Interconnect**, click on **Service Mesh** and click on **CREATE SERVICE MESH**.
+
+![servicemeshceratenew](./images/servicemeshcreatenew.png)
+
+3. Select the Site Pair you had created in the last task as source and target and click on **CONTINUE**.
+
+![servicemeshsite](./images/servicemeshsitepair.png)
+
+4. Select the compute profile for **on-prem connector** and **OCVS HCX Manager** and click **CONTINUE**.
+
+![servicemeshcompute](./images/servicemeshcomputeprofile.png)
+
+5. Select the below services that would be activated as part of the Service Mesh:
+      1. **Hybrid Interconnect**
+      2. **WAN Optimization**
+      3. **Cross-cloud vMotion Migration**
+      4. **Bulk Migration**
+      5. **Network Extension**
+      6. **Disaster Recovery**
+6. Click **CONTINUE**.
+
+![servicemeshservice](./images/servicemeshservices.png)
+
+7. Select the uplink network profiles for **on-prem connector** and **OCVS HCX Manager** and click **CONTINUE**.
+
+![servicemeshnetwork](./images/servicemeshuplink.png)
+
+8. Select the network container for Network Extension.
+      1. It will be **overlay transport zone** for on-prem site.
+      2. It will be **Overlay-TZ** for **OCVS**.
+9.  Click **CONTINUE**
+
+![servicemeshcontainer](./images/servicemeshcontainer.png)
+
+10. Leave the **Advanced Configuration - Traffic Engineering** to defaults and click **CONTINUE**.
+
+![servicemeshadvanced](./images/servicemeshadvanced.png)
+
+11. Review the service mesh topology and click **CONTINUE**.
+
+![servicemeshreview](./images/servicemeshreview.png)
+
+12. Provide user friendly name for the service mesh **livelab-sm** and click **FINISH**.
+
+![servicemeshcreate](./images/servicemeshcreate.png)
+
+**NOTE:** Serice Mesh creation takes ~7 Minutes. Wait for the service mesh deployment to complete successfully before moving to the next step.
+
+## Task 3: (Optional) Configure Network Extension
+
+You can bridge networks between HCX-activated datacenters with HCX Network Extension.
+With VMware HCX Network Extension (HCX-NE), you can extend the Virtual Machine networks to a VMware HCX remote site. Virtual Machines that are migrated or created on the extended segment at the remote site behave as if on the same L2 segment as virtual machines in the source environment. With Network Extension, the default gateway for the extended network is only connected at the source site. Traffic from virtual machines in remote sites that must be routed to a different L3 network will flow through the source site gateway.
+Using VMware HCX Network Extension with VMware HCX Migration you can:
+
+- Retain the IP and MAC addresses of the Virtual Machine and honor existing network policies.
+- Extend VLAN-tagged networks from a VMware vSphere Distributed Switch.
+- Extend NSX segments.
+
+1. If you are not already logged in to HCX Manager, then Access HCX Manager UI as Described in [Lab 2 - Task 5](./../deploy_ocvs/deploy_ocvs.md/)
+2. In the left-hand pane, Under **Services** click on **Network Extension** and click on **CREATE NETWORK EXTENSION**.
+
+![necreatenew](./images/necreatenew.png)
+
+3. Select the **Service Mesh** that was created in the previous task, Select the on-prem **portgroup** to extend and click **NEXT**
+
+![nenetwork](./images/nenetwork.png)
+
+4. On the Extend Networks page, provide following details;
+      1. OCVS **Tier-1 gateway** as next hop.
+      2. **Gateway IP address** for the extended network in the format **192.168.1.1/24**.
+      3. Select the **Network Extension appliance** from source site.
+      4. Source **Tier-1 gateway**.
+      5. Click **Validate**.
+
+![nevalidate](./images/nevalidate.png)
+
+5. After the validation is successful, click **SUBMIT**.
+
+![nesubmit](./images/nesubmit.png)
+
+**NOTE:** It will take ~2 Minute for the extension operation to complete. Wait for the extension to complete successfully.
+
+![nesuccess](./images/nesuccess.png)
 
 ## Learn More
 
