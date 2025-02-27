@@ -197,9 +197,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Create Validation](images/image031.png)
 
-15.  You have reentered the Change Salary Form.  Let’s review the changes.
-  
-  1. You need to enter the required information before you can move to the next screen.
+15.  You have reentered the Change Salary Form.  Let’s review the changes.  You need to enter the required information before you can move to the next screen.
 
     > (1) When does the salary will start?: Type a **future date** <br>
 
