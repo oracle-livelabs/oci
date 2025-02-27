@@ -107,7 +107,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Fields and Regions](images/image013.png)
     
-    > (1) Select **does not contain** from the drop down options.
+    > (1) Select **does not contain** from the drop down options.  <br>
 
     > (2) Type **Human Resources Manager** and select **Human Resources Manager**.
 
@@ -124,11 +124,11 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
      ![Fields and Regions, Conditions](images/image016.png)
 
 
-        > (1) Action Reason: select **Visable**     <br>
+     > (1) Action Reason: select **Visable**     <br>
 
-        > (2) Annualized Full-Time Salary: select **Hidden**   <br>
+     > (2) Annualized Full-Time Salary: select **Hidden**   <br>
 
-        > (3) Compa-Ratio: select **Hidden** 
+     > (3) Compa-Ratio: select **Hidden** 
 
      ![Salary Fields and Regions](images/image017.png)
 
@@ -157,11 +157,11 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
      ![Create Validation](images/image023.png)
 
 
-        > (1) Type **Adjustment Percentage (Salary Details)** in the box    <br>
+     > (1) Type **Adjustment Percentage (Salary Details)** in the box    <br>
 
-        > (2) Select **greater than**    <br>
+     > (2) Select **greater than**    <br>
 
-        > (3) Type **15**
+     > (3) Type **15**
 
         ![Create Validation](images/image026.png)
 
@@ -175,11 +175,11 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
   
      ![Create Validation](images/image027.png)
 
-        > (1) Summary: type **Adjustment Percentage is too high**.    <br>
+     > (1) Summary: type **Adjustment Percentage is too high**.    <br>
 
-        > (2) Detail:  **The Adjustment Percentage must be lower than 15%** in **Detail**.
+     > (2) Detail:  **The Adjustment Percentage must be lower than 15%** in **Detail**.
 
-        > (3) Detail:  type **The Adjustment Percentage must be lower than 15%**.
+     > (3) Detail:  type **The Adjustment Percentage must be lower than 15%**.
 
         ![Create Validation](images/image028.png)
 
@@ -197,12 +197,8 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     ![Create Validation](images/image031.png)
 
 15.  You have reentered the Change Salary Form.  Let’s review the changes.
-
-    > Click **Continue**.
-
-    ![Change Salary 1](images/image032.png)
-
-    You need to enter the required information before you can move to the next screen.
+  
+  1. You need to enter the required information before you can move to the next screen.
 
     > (1) When does the salary will start?: Type a **future date** <br>
 
