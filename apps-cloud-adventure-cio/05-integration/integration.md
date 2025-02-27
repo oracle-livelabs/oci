@@ -27,7 +27,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 1. In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
 
-    ![Integration Objectives](images/Integration_objs2.png)
+    ![Integration Objectives](images/integration_objs3.png)
 
 2. Let’s navigate to the Suppliers work area to modify a supplier’s address information
 

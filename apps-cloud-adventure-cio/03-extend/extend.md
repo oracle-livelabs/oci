@@ -256,9 +256,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      > (1)  Click **'Checkbox'** next to the following fields.  Note that you will likely need to scroll the list of fields: <br>
 
-           - Supplier<br>
-           - SupplierNumber<br>
-           - TaxpayerId<br><br>
+      - Supplier<br>
+      - SupplierNumber<br>
+      - TaxpayerId<br><br>
 
     > (2)  Confirm the list of selected fields. <br>
 
