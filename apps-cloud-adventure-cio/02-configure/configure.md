@@ -52,7 +52,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (2) What is the action name?: Select **Change Salary**. <br>
 
-    > (3) Why you are changing the salary for Barrett Reed?: Select **Career Progression**. <br>
+    > (3) Why you are changing the salary?: Select **Career Progression**. <br>
 
     > (4) Click **Continue** once complete.
 
@@ -204,7 +204,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (2) What is the action name?: Select **Change Salary**. <br>
 
-    > (3) Why you are changing the salary for Barrett Reed?: Select **Career Progression**. <br>
+    > (3) Why you are changing the salary?: Select **Career Progression**. <br>
 
     > (4) Click **Continue** once complete.
 
