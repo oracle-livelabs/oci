@@ -173,10 +173,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 
 13.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
-  
-       > Click on **+ Message** 
-  
-     ![Create Validation](images/image027.png)
 
      > (1) Summary: type **Adjustment Percentage is too high**.    <br>
 
