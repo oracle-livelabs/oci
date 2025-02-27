@@ -375,12 +375,12 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
    
 15.  You need to select the search filter Supplier (187) again. 
 
-    > Click and select **Supplier (187)** to display list of suppliers. 
+> Click and select **Supplier (187)** to display list of suppliers. 
 
 ![Validation 4](images/image121.png)
  
 
-    >  Click anywhere in the page away from the search filter **Supplier (187)**
+>  Click anywhere in the page away from the search filter **Supplier (187)**
 
  ![Change Salary Screen 2](images/image122.png)
 
