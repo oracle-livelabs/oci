@@ -155,7 +155,10 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
      > Click on **Edit**. 
 
      ![Create Validation](images/image023.png)
+  
+     > Click on **+ Condition**. 
 
+     ![Create Validation](images/image024.png)
 
      > (1) Type **Adjustment Percentage (Salary Details)** in the box    <br>
 
