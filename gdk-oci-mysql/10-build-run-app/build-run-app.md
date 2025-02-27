@@ -45,11 +45,23 @@ In this lab, you will:
 
 1. Press the enter (return) key. From the same terminal, add a genre using the command below, and the `genre` table will now contain an entry.
 
+<if type="mn_run">
+
 	``` bash
 	<copy>
 	curl -X "POST" "http://localhost:8080/genres" -H 'Content-Type: application/json; charset=utf-8' -d '{ "name": "music" }' | jq
 	</copy>
 	```
+</if>
+
+<if type="jar">
+
+    ``` bash
+	<copy>
+	curl -X "POST" "http://localhost:8080/genres" -H 'Content-Type: application/json; charset=utf-8' -d '{ "name": "drama" }' | jq
+	</copy>
+	```
+</if>
 
 ## Task 3: Check the Genres present in the MySQL HeatWave Database
 
