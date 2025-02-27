@@ -2,9 +2,7 @@
 
 ## Introduction
 
-We have created the skeleton of the Landing Zone we need to deploy our workload*. We have all the IAM requirements met including compartments, groups, and policies. Now, our workload will need the ability to communicate with clients and components. One or more Virtual Cloud Networks will give us the ability to do so.
-
-*\*Workload not included*
+We have created the skeleton of the Landing Zone we need to deploy our workload (not included in this lab). We have all the IAM requirements met including compartments, groups, and policies. Now, our workload will need the ability to communicate with clients and components. One or more Virtual Cloud Networks will give us the ability to do so.
 
 ### Objectives
 

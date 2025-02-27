@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You should be on the __Configure Variables__ page as defined by the left side-menu. What this page does is allow us to define variables that would otherwise be defined in the [quickstart-input.tfvars](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/blob/main/config/quickstart-input.tfvars) file in the main project. Resource Manager is translating the fields from the config file into a more friendly interface for usability.
+You should be on the __Configure Variables__ page as defined by the left side-menu. What this page does is allow us to define variables that would otherwise be defined in the [variables file](https://github.com/oci-landing-zones/terraform-oci-core-landingzone/blob/main/templates/cis-basic/main.tf.template) in the main project templates. Resource Manager is translating the fields from the config file into a more friendly interface for usability.
 
 Estimated Lab Time: 10 minutes
 
