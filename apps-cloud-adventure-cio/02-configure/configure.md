@@ -109,7 +109,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     
     > (1) Select **does not contain** from the drop down options.  <br>
 
-    > (2) Type **Human Resources Manager** and select **Human Resources Manager**.
+    > (2) Type **Human Resource Manager** and select **Human Resource Manager**.
 
     ![Fields and Regions](images/image014.png)
 
