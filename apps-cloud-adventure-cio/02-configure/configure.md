@@ -181,10 +181,8 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      > (3) Detail:  type **The Adjustment Percentage must be lower than 15%**.
 
-        ![Create Validation](images/image028.png)
-
+     ![Create Validation](images/image028.png)
     
-
 
 14.  Well done.  You have configured a new rule for Non-HR personnel.
    
