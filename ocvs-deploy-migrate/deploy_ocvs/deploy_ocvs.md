@@ -108,8 +108,17 @@ To verify that your keys exist, You can use the following commands.
 
 ## Task 3: Deploy Single Node OCVS Cluster
 
-1. Open the **navigation** menu , select **Hybrid**, and then select **VMware Solution**.
+1. Open the **navigation** menu hamburger icon, select **Hybrid**, and then select **Software-Defined Data Centers** under **VMware Solution**.
+
+![Hamburger Menu](./images/hambuger.png)
+
+
+![SDDC](./images/hybridsddc.png)
+
 2. Click **Create SDDC**.
+
+![Create SDDC](./images/createsddc.png)
+
 3. Provide basic information for the SDDC:
 	- **SDDC name**
 		```
@@ -128,33 +137,52 @@ To verify that your keys exist, You can use the following commands.
 	- **Advanced Option**
   		Default
 4. **SSH key**
-   Provide the public key that we had created in the last section. 
+   Provide the public key that we had created in the last section.
 5. Click **Next** to advance to the **Define Clusters** page.
-6. Click **Define management cluster**, and provide following information for the cluster:
+
+![sddcbasic](./images/sddcbasicinfo.png)
+
+1. Click **Define management cluster**
+
+![Definemgmtcluster](./images/definemgmtcluster.png)
+
+7. Provide following information for the cluster:
 	- **Cluster name**
 		```
 		<copy>
 		livelab-cluster
 		</copy>
 		```
-	- **Availability domain**
-		Select the Availability domain in which to create the SDDC.
-	- **ESXi hosts**
-		Provide configuration information:
-	- **Host type**
-		Single Host SDDC
+	- **Availability domain**: Select the Availability domain in which to create the SDDC.
+	- **Host type**: Single Host SDDC
 	- **Prefix for ESXi hosts**
 		```
 		<copy>
 		livelab
 		</copy>
 		```
-	- **SDDC hardware type**
-		DenseIO.E4.32
-	- **Pricing interval commitment**
-		Hourly
-7. Click **Next** to advance to the cluster's **Networking** page.
-8. Select the **VCN** you had created in Lab 1 for OCVS.
+	- **Capacity type**: On-demand capacity
+
+![Definecluster](./images/definecluster.png)
+
+7. Click on Change shape and Select **AMD** **BM.DenseIO.E4.128** and click **Select shape**.
+
+![changeshape](./images/changeshape.png)
+
+![selectamdshape](./images/selectamdshape.png)
+
+8. Select 32 OCPU from the **Select number of OCPU cores** dropdown.
+
+![selectocpu](./images/selectocpu.png)
+
+9.  In the **Pricing interval commitment**, make sure to select **Hourly commitment** and confirm pricing with the checkbox.
+
+**NOTE:** Cluster pricing can not be changed after the deployment and you will be charged for the whole commitment period. Make sure to choose correct pricing interval on the step.
+
+![pricinginterval](./images/pricinginterval.png)
+
+10. Click **Next** to advance to the cluster's **Networking** page.
+11. Select the **VCN** you had created in Lab 1 for OCVS.
 	- Click **Create new subnet and VLANs**.
 	- Enter the subnet details as follows.
 		```
@@ -163,17 +191,23 @@ To verify that your keys exist, You can use the following commands.
 		</copy>
 		```
 		**Note**: If you had selected a different subnet in Task 1, enter that subnet detail.
-9.  Enter the **cluster workload CIDR** to create an initial logical segment for the VMs.
+12. Enter the **cluster workload CIDR** to create an initial logical segment for the VMs.
 		```
 		<copy>
 		192.168.1.0/24
 		</copy>
 		```
-10. Click **Next** to advance to the **Datastores** page.
-11. Click **Next** to review the **cluster configuration summary**.
-12. Click **Complete cluster definition**.
-13. Click **Review SDDC**.
-14. Click **Create SDDC**.
+
+![clusternetworking](./images/clusternetworking.png)
+
+13. Click **Next** to advance to the **Notifications** page.
+14. Click **Next** to review the **cluster configuration summary** and Click **Submit**.
+
+![clusterreview](./images/clusterreview.png)
+
+15. Click **Next** to move to **Review and Create page** and click **Create SDDC**.
+
+![sddcreview](./images/sddcreview.png)
 
 The page shows the provisioning status of each resource.
 
@@ -187,25 +221,47 @@ After OCVS deployment is complete, the SDDC overview page will show details rela
 
 If you are not already on the OCVS SDDC Details page;
 
-1. In the Upper left corner, click the hamburger menu icon.
-2. Navigate to Hybrid
-3. Select Software-Defined Data Centers under the VMware Solution section.
-4. Select the **livelab-sddc** that we had cerated in last task. Make sure that the state of the SDDC is **Active**.
-5. On the SDDC overview page, you can see following details about the SDDC;
+1. Open the **navigation** menu hamburger icon, select **Hybrid**, and then select **Software-Defined Data Centers** under **VMware Solution**.
+
+![Hamburger Menu](./images/hambuger.png)
+
+
+![SDDC](./images/hybridsddc.png)
+
+2. Select the **livelab-sddc** that we had cerated in last task. Make sure that the state of the SDDC is **Active**.
+
+![SDDC](./images/livelabsddc.png)
+
+3. On the SDDC overview page, you can see following details about the SDDC;
       - **vCenter information** - The vCenter information sections list the vCenter URL, IP Address, initial username and initial password.
       - **NSX manager information** - the NSX information sections list the NSX manager URL, IP Address, initial username and initial password.
       - **HCX Manager information** - this section lists the details about the HCX Manager including the URL, IP Address, initial username, password, license type and on-prem connector activation keys.
       - **vSphere Clsuters** - This section lists all the clusters withing the SDDC, including the management and workload clusters. You can manage existing clusters by selecting the cluster name from this section or use the **Add a workload cluster** button to define and create a new workload cluster.
-6. Click on the single management cluster **livelab-cluster** to view the cluster overview page.
-7. The cluster overview page list the details of the individual cluster in following sections;
+
+![SDDC](./images/ocvsoverview.png)
+
+4. Click on the single management cluster **livelab-cluster** to view the cluster overview page.
+
+![SDDC](./images/clusterlist.png)
+
+5. The cluster overview page list the details of the individual cluster in following sections;
       - **Cluster Information** - This section has the basic details of the cluster deployment including the **OCID**, **VMware software version**, **Availability domain** where the cluster is deployed, **Workload CIDR** and **timestamps**.
       - **ESXi Hosts** - This section provides details of the individual hosts which are part of this cluster and include the **host Name**, **State**, **Availability Domain**, **Current** and **Next Pricing Interval**.
-      - **Click** on the **Cluster Networks** option in the **Resources** section in the left hand pane.
+
+![SDDC](./images/clusteroverview.png)
+
+6. **Click** on the **Cluster Networks** option in the **Resources** section in the left hand pane.
       - In the **Cluster networks** section you can;
-           - View the details of SDDC **VLANs** including but not limited to **vSphere**, **vMotion**, **Management** and **vSAN** VLAN.
-           - View the details of the **provisioning subnet** under the subnet section.
-8. **Click** on the **ESXi Hosts** option in the **Resources** section in the left hand and **Click** on the **ESXi host name** to view the details about the ESXi host.
-9. On the **ESXi Host information** page, you can get detailed information about the ESXi Host instance, following information for the host is made available on the page;
+        - View the details of SDDC **VLANs** including but not limited to **vSphere**, **vMotion**, **Management** and **vSAN** VLAN.
+        - View the details of the **provisioning subnet** under the subnet section.
+
+![SDDC](./images/vlanlist.png)
+
+7. **Click** on the **ESXi Hosts** option in the **Resources** section in the left hand and **Click** on the **ESXi host name** to view the details about the ESXi host.
+
+![SDDC](./images/hostslist.png)
+
+8. On the **ESXi Host information** page, you can get detailed information about the ESXi Host instance, following information for the host is made available on the page;
       - Host OCID
       - Compartment
       - Availability Domain
@@ -215,20 +271,37 @@ If you are not already on the OCVS SDDC Details page;
       - Capacity Reservation (if any)
       - Billing information
 
+![SDDC](./images/hostdetails.png)
+
 ### 2. **Retrieve Credentials for VMware Softwares**
 
 If you are not already on the OCVS SDDC Details page;
 
-1. In the Upper left corner, click the **hamburger menu icon**.
-2. Navigate to **Hybrid**
-3. Select **Software-Defined Data Centers** under the **VMware Solution** section.
-4. Select the **livelab-sddc** that we had cerated in last task. Make sure that the state of the SDDC is **Active**.
-5. On the SDDC overview page, copy the following details and save these in a notepad. We will need these in the next section to access the SDDC components.
+1. Open the **navigation** menu hamburger icon, select **Hybrid**, and then select **Software-Defined Data Centers** under **VMware Solution**.
+
+![Hamburger Menu](./images/hambuger.png)
+
+
+![SDDC](./images/hybridsddc.png)
+
+2. Select the **livelab-sddc** that we had cerated in last task. Make sure that the state of the SDDC is **Active**.
+
+![SDDC](./images/livelabsddc.png)
+
+3. On the SDDC overview page, copy the following details and save these in a notepad. We will need these in the next section to access the SDDC components.
       - Copy the **vSphere client URL** by clicking on the associated **Copy** Link and paste it in a notepad file for easy retrieval.
       - Copy the **vcenter initial username** paste it in a notepad file for easy retrieval.
       - You can also retrieve the **vCenter initial password** by clicking the associated Show or Copy option.
-6. **Repeat step 5** to get **access URL** and **credentials** for **NSX-T Manager** and **HCX Manager**.
-7. Copy the **HCX on-premise connector activation keys** by clicking on the **View** button in the **HCX manager information** section.
+
+![SDDC](./images/vcentercreds.png)
+
+4. **Repeat step 5** to get **access URL** and **credentials** for **NSX-T Manager** and **HCX Manager**.
+
+![SDDC](./images/nsxcreds.png)
+
+5. Copy the **HCX on-premise connector activation keys** by clicking on the **View** button in the **HCX manager information** section.
+
+![SDDC](./images/hcxcreds.png)
 
 ## Task 5: Access SDDC Components
 
@@ -238,21 +311,40 @@ To access the SDDC component, we will use the Linux Bastion host deployed in the
 
 ### Setup SSH Tunnel from Bastion to Jump Host
 
-1. **Login** to the **OCI Cloud** console by opening the https://cloud.oracle.com url in a web browser of your choice.
-2. **Click** the **upper right corner** where you see your **home region** and ensure that you are in the correct region where you had deployed OCVS SDDC.
-3. In the upper left corner, click the **hamburger menu icon**
-4. Navigate to **Compute** ad click on **Instances**
-5. Verify that Applied filters shows the **SDDC compartment**.
-6. Locate the instance named - **<Bastion Host name will go here>**
-7. Copy the **Public IP** address of the bastion instance.
-8. Locate the instance named - <Jump Host name will go here>
-9. Copy the **Private IP** address of the jump host.
-10. Follow the instruction below to setup the SSH Tunnel based on your operating system.
+1. In the upper left corner, click the **hamburger menu icon**
+
+![hamburger](./images/hambuger.png)
+
+2. Navigate to **Compute** ad click on **Instances**
+
+![instancemenu](./images/instancemenu.png)
+
+3. Verify that Applied filters shows the **SDDC compartment**.
+
+![instancemenu](./images/compartment.png)
+
+1. Locate the instance named - **bastion-host**
+2. Copy the **Public IP** address of the bastion instance.
+3. Locate the instance named - **jump-host**
+4. Copy the **Private IP** address of the jump host.
+
+![instancemenu](./images/ipdetails.png)
+
+5. Click on the **jump-host** instance name.
+6. On the **Instance details** page, under **Instance access** section click on **...** and copy the **initial password** for the Windows jump host, this will be needed in next section to setup the RDP connection.
+
+![instancecreds](./images/instancecreds.png)
 
 **Mac Instructions**
 
 1. Click on the **Launchpad** icon in the **dock**.
+
+![SDDC](./images/mac-launcher.png)
+
 2. Search for **Termianl** app and open a new terminal window.
+
+![SDDC](./images/mac-terminal.png)
+
 3. **Change directory** to the location where you have saved the private SSH key from [Lab-1-Task-6](./../configure_networking/configure_networking.md/#task-6---deploy-bastion-instance).
 
 	```
@@ -260,9 +352,7 @@ To access the SDDC component, we will use the Linux Bastion host deployed in the
     cd <livelab_key_location>
     </copy>
     ```
-
 **Note:** Change the directory path to your actual directory location.
-
 4. Change the **file permission**
 
 	```
@@ -271,6 +361,8 @@ To access the SDDC component, we will use the Linux Bastion host deployed in the
     </copy>
     ```
 **Note:** Change the <bastion_private_key> to the actual private key file name that you had used when deploying the Bastion Host.
+
+![SDDC](./images/changepermission.png)
 
 5. Create the ssh tunnel by running the following command in the terminal.
    **Note:** Make sure to replace the <public_ip> address with the actual **public IP** of the bastion host and <private_ip> with the **private IP** of the Windows Jump server.
@@ -281,15 +373,20 @@ To access the SDDC component, we will use the Linux Bastion host deployed in the
     </copy>
     ```
 
+![SDDC](./images/tunnel.png)
+
 **Windows Instructions**
 
 Windows operating system by default does not have an SSH client built in, So we will need to Download and install an SSH client such as Putty. If you already do not have the SSH Client installed, Follow the instruction at [www.putty.org](https://www.putty.org/) to download and install the client on your workstation.
 
 Following instructions are only applicable if you are using PuTTY as the client. If you use a different SSH client, the instruction to setup SSH connection and remote port forwarding might be different. Refer to the documentation of your SSH Client to setup the connection and port forwarding.
 
-1. **Click** on the **Windows** Icon on the workstation and search for **PuTTY**.
-2. Open a new SSH connection window by clicking on the **PuTTY** icon.
-3. In **Host Name** box, enter the **public IP** address of the Bastion Host in the following format
+**NOTE:** Putty only accepts private keys in ppk format. If your key is not ppk format, use the steps in following link to convert the key to ppk format before proceeding.
+
+1. (Optional)[Private Key to PPK conversion](https://docs.oracle.com/en/cloud/paas/java-cloud/jscag/convert-private-key-putty.html)
+2. **Click** on the **Windows** Icon on the workstation and search for **PuTTY**.
+3. Open a new SSH connection window by clicking on the **PuTTY** icon.
+4. In **Host Name** box, enter the **public IP** address of the Bastion Host in the following format
    
 	```
 	<copy>
@@ -297,9 +394,14 @@ Following instructions are only applicable if you are using PuTTY as the client.
 	</copy>
 	```
 
+![sship](./images/sship.png)
+
 4. Confirm that the **Connection type** option is set to **SSH**.
 5. In the Category tree, expand SSH and then click **Auth**
-6. Click the **Browse** button next to the **Private key file for authentication** box and select the <bastion_private_key.ppk> file. **How to convert to ppk add steps here?**
+6. Click the **Browse** button next to the **Private key file for authentication** box and select the <bastion_private_key.ppk> file.
+
+![sshauth](./images/sshkey.png)
+
 7. In the Category tree, click **Tunnels**.
       - In the **Source Port** box, enter **5000**.
       - In the **Destination box**, enter the following IP and port combination.
@@ -310,13 +412,22 @@ Following instructions are only applicable if you are using PuTTY as the client.
 			```
       - Confirm that the **Local** and **Auto** options are set.
       - Click **Add** to forward the port.
+
+![sshtunnel](./images/sshtunnel.png)
+
 8. In the **Category** tree, click **Session**.
 9.  In the **Saved Sessions** box, enter a name for this connection configuration. Then, click **Save**.
 10. Click **Open** to open the connection.
 
+![sshsession](./images/sshsession.png)
+
 **NOTE** If this is the first time you are connecting to the Bastion, the PuTTY Security Alert window is displayed, prompting you to confirm the public key.
 
-11. Click **Yes** to continue connecting.
+11. Click **Accept** to continue connecting.
+
+![sshkeyaccept](./images/sshkeyaccept.png)
+
+![sshconnection](./images/sshconnection.png)
 
 ### **Access Jump Host via RDP**
 
@@ -325,10 +436,19 @@ Once you have the SSH tunnel setup, we can RDP to the jump host from the local w
 **Mac Instructions**
 
 1. If you do not have the **Windows App** already installed on the Workstation, then Go to the App Store and Install "**Windows App**" from Microsoft.
+
+![SDDC](./images/windowsapp.png)
+
 2. Click on the **Launchpad** icon in the **dock**.
-3. Search for **Windows App** and open the app by clicking on the app icon.
-4. Click the **+** symbol and select the **add PC** option.
-5. In **PC Name** field, enter the following **IP Address** and **Port**.
+
+![SDDC](./images/mac-launcher.png)
+
+1. Search for **Windows App** and open the app by clicking on the app icon.
+2. Click the **+** symbol and select the **add PC** option.
+
+![SDDC](./images/addpc.png)
+
+3. In **PC Name** field, enter the following **IP Address** and **Port**.
 
 	```
 	<copy>
@@ -336,19 +456,25 @@ Once you have the SSH tunnel setup, we can RDP to the jump host from the local w
     </copy>
 	```
 
+4. Click **Add** and launch the RDP connection by double-clicking on the RDP icon.
+
+![SDDC](./images/addpcconfig.png)
+
+![SDDC](./images/rdpicon.png)
+
 6. Click **Add**
-7. When asked for the **credentials** enter following details;
+7.  Launch the RDP Connection by **double clicking** on the RDP Instance icon.
+8.  When asked for the **credentials** enter following details;
    1. **Username**: opc
-   2. **Password**: Enter the password for opc user that you had created in Lab-1, Task-7
-8. Click **Add**
-9. Launch the RDP Connection by **double clicking** on the RDP Instance icon.
+   2. **Password**: Enter the password for opc user that you had collected in the last task for the jump server.
+
+![SDDC](./images/rdplogin.png)
 
 **Windows Instructions**
 
 1. Click on the **Windows** Icon on the workstation and search for **Remote Desktop Connection**.
 2. Open the **Remote Desktop Connection** windows by clicking on the application icon.
-3. Click on **Show Options** to view the authentication details.
-4. In the **Computer** field, enter the following **IP Address** and **Port**
+3. In the **Computer** field, enter the following **IP Address** and **Port**
 
 	```
 	<copy>
@@ -356,7 +482,10 @@ Once you have the SSH tunnel setup, we can RDP to the jump host from the local w
     </copy>
 	```
 
-5. In the **User Name** field, enter the following username.
+![SDDC](./images/winrdpwindows.png)
+
+3. Click on **Show Options** to view the authentication details.
+4. In the **User Name** field, enter the following username.
 
 	```
 	<copy>
@@ -364,9 +493,15 @@ Once you have the SSH tunnel setup, we can RDP to the jump host from the local w
     </copy>
 	```
 
-6. Click **Connect**
-7. When asked for the opc password, enter the password for opc user that you had created in Lab-1, Task-7.
-8. Press **Enter**
+5. Click **Connect**
+
+![SDDC](./images/winrdpdetails.png)
+
+6. When asked for the opc password, enter the password for opc user that you had collected in last task for jump server.
+
+![SDDC](./images/winrdplogin.png)
+
+7. Press **Enter**
 
 ### **Access VMware Components**
 
@@ -389,6 +524,9 @@ After you install the browser, open a new browser windows and follow the below s
 2. Paste the **vSphere Client URL** that you had captured in the [SDDC Overview Task](#access-vmware-components) in the **WebURL** field and press **Enter**.
 3. If you receive a warning that the connection is not private, ignore the warning and proceed.
 4. Click the **Launch vSphere Client** (HTML5) button.
+
+![vcenterurl](./images/vcenterurl.png)
+
 5. On the authentication page, enter the following details for the **username** and **password**.
       - **Username** :
 		```
@@ -398,9 +536,14 @@ After you install the browser, open a new browser windows and follow the below s
 		```
 	  - **Password**: vCenter initial password captured in [SDDC Overview Task](#access-vmware-components)
 6. Click **Login**
+
+![vcenterlogin](./images/vcenterlogin.png)
+
 7. On the vCenter Home page, select **Hosts and Clusters**.
 8. Expand the vCenter inventory in the left hand pane.
-9. Review the details of the **cluster**, **host** and **management virtual machines**.
+9.  Review the details of the **cluster**, **host** and **management virtual machines**.
+
+![vcenterinventory](./images/vcenterinventory.png)
 
 #### Access NSX-T
 
@@ -416,7 +559,20 @@ After you install the browser, open a new browser windows and follow the below s
 		```
 	  - **Password**: NSX Manager initial password captured in [SDDC Overview Task](#access-vmware-components)
 5. Click **Login**
-6. On the NSX-T Manager page, you can review the details of the **NSX Manager, Edges, Edge Cluster** and the **default segment**.
+
+![nsxlogin](./images/nsxlogin.png)
+
+6. If you logging in for the first time, you will get the EULA page, scroll to the bottom of the page and accept the License Terms.
+
+![nsxeula](./images/nsxeula.png)
+
+7. Next, Accept the CEIP offer.
+
+![nsxceip](./images/nsxceip.png)
+
+8. On the NSX-T Manager page, you can review the details of the **NSX Manager, Edges, Edge Cluster** and the **default segment**.
+
+![nsxinventory](./images/nsxinventory.png)
 
 #### Access HCX
 
@@ -433,8 +589,13 @@ After you install the browser, open a new browser windows and follow the below s
 	  - **Password**: HCX Manager initial password captured in [SDDC Overview Task](#access-vmware-components)
 
 5. Click **Login**
+
+![hcxlogin](./images/hcxlogin.png)
+
 6. On the HCX Manager page, you can review the details of the **Site pairings, vCenter integrations, compute profiles, service meshes** etc.
 7. At this stage, you will not see anything in the HCX Manager except the **vCenter integration** as we have not deployed the on-prem connector. We will deploy and configure the on-prem connector in the next lab.
+
+![hcxinventory](./images/hcxinventory.png)
 
 ## Learn More
 
