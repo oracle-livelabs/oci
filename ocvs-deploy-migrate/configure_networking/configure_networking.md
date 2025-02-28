@@ -1,3 +1,27 @@
+# Configure Networking and Access Components
+
+## Introduction
+
+In this lab we will be setting up the Virtual cloud network which will contain our two servers. The Bastion host to be able to access the Jump Server securely.
+
+Estimated Time: 30 minutes
+
+### About Compute Service
+Oracle Cloud Infrastructure Compute lets you provision and manage compute hosts, known as instances. You can define instances as needed to meet your compute and application requirements.
+
+### Prerequisites
+
+This lab assumes you have:
+* An Oracle account
+* Familiarity with Networking is desirable, but not required
+* Some understanding of cloud, networking
+* Familiarity with Oracle Cloud Infrastructure (OCI) is helpful
+
+### Objectives
+
+In this lab, you will:
+* Learn how to provision OCI resources.
+
 ## Task 1 - Create VCN
 
 To Create a VCN on Oracle Cloud Infrastructure:
@@ -102,7 +126,64 @@ To Create a VCN on Oracle Cloud Infrastructure:
 
     ![internetrules](images/internetrules.png)
 
-## Task 3 - Deploy Bastion and Jump Server Instance
+## Task 3: Generate SSH Key
+
+The SSH (Secure Shell) protocol is a method for secure remote login from one computer to another. SSH enables secure system administration and file transfers over insecure networks using encryption to secure the connections between endpoints. SSH keys are an important part of securely accessing Oracle Cloud Infrastructure compute instances in the cloud.
+
+If you already have an SSH key pair, you may use that to connect to your environment.
+
+### **On Mac**
+
+1. On Mac, start up the terminal by using cmd + space and typing terminal or cmd + shift + U and click on terminal
+
+  Once in the terminal type ssh-keygen or copy and paste the command into the terminal, press enter. You will prompted to enter file to save your key. pressing enter will select default in your .ssh folder. Press enter twice for no passphrase. Remember where it is saved as we will reference this later when creating instances.
+
+    ![ssh-keygen](images/ssh-keygen.png)
+
+    ```
+    <copy>
+    ssh-keygen
+    </copy>
+    ```
+
+### **On Windows 10**
+
+1. Open a Powershell command window on your Windows 10 system by clicking it’s icon/tile or by typing ‘powershell’ in the search field in the Start bar.
+
+  ![ssh-keygen-windows](images/ssh-keygen-windows.png)
+
+2. Once in the terminal type ssh-keygen or copy and paste the command into the terminal, press enter. You will prompted to enter file to save your key. pressing enter will select default in your .ssh folder. Press enter twice for no passphrase. Remember where it is saved as we will reference this later when creating instances.
+
+    ```
+    <copy>
+    ssh-keygen
+    </copy>
+    ```
+
+  ![verify-keygen-windows](images/verify-keygen-windows.png)
+
+### **Verifying the Keys**
+
+To verify that your keys exist, You can use the following commands.
+
+```
+    <copy>
+    cd .ssh
+    </copy>
+```
+```
+    <copy>
+    ls
+    </copy>
+```
+```
+    <copy>
+    cat id_rsa.pub
+    </copy>
+```
+![confirm-keygen-windows](images/confirm-keygen-windows.png)
+
+## Task 4 - Deploy Bastion and Jump Server Instance
 
 1. We will be deploying a Bastion first, a Bastion instance allows you to access to the private subnet we created in the last task. Lets start by going to the hamburger menu on the top left, click on **compute** and then **instances**.
 
@@ -168,7 +249,7 @@ To Create a VCN on Oracle Cloud Infrastructure:
 
     ![bastionip](images/bastionip.png)
 
-8. We will repeat the process for the jump server, however the difference is we will be using the **Windows Server 2022 Standard Core Image**,
+8. We will repeat the process for the jump server, however the difference is we will be using the **Windows Server 2022 Standard Core Image**, change to datacenter or enterprise
 
     ![windows](images/windows.png)
 
@@ -176,18 +257,21 @@ To Create a VCN on Oracle Cloud Infrastructure:
 
     ![windowssubnet](images/windowssubnet.png)
 
-# Congratulations!
-# You may procede to the next lab!
+**Congratulations!**
+**You may proceed to the next lab!**
 
 ## Learn More
-
+* [VCNs & Subnets](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm)
+* [SSH Keys](https://docs.oracle.com/en/learn/generate_ssh_keys/index.html)
+* [Compute Service](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/computeoverview.htm)
+* [Physical Architecture Concepts](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts-physical.htm)
 
 
 ## Acknowledgments
 
 * **Author:** Vijay Kumar
 , Cloud Engineering OCVS
-* **Contributors:** 
+* **Contributors:**
     - Chris Wegenek, Cloud Engineering
     - Karthik Meenakshi Sundaram, Cloud Engineering
     - Germain Vargas, Cloud Engineering
