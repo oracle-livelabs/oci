@@ -27,7 +27,7 @@ In this lab, you will:
 	``` properties
 	otel.exporter.zipkin.url=https\://<DataUploadEndpoint>
 	```
-3. From the  **gdk-apm-domain** details screen navigate to **Resources**, choose **Data Keys**. Click **Copy** to copy the value of the public data key ("auto_generated_public_datakey").
+3. From the  **gdk-apm-domain** details screen navigate to **Resources**, choose **Data Keys**. Click **Copy** to copy the value of the public data key (`auto_generated_public_datakey`).
 
     ![Copy Public Data Key](images/copy-public-datakey.png#input)
 

@@ -38,16 +38,23 @@ In short,
     - Choose the shape. The shape can be an ARM or X86 based on what you want to build.
     - Follow the wizard
 - Log on the VM
-    - ssh opc@<public Build IP>
+    - ssh opc@YOUR_DEVVM
     - Follow https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm#configfile
         - oci setup config
-    - Install Terraform
-        ````
-        # Terraform
-        sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
-        sudo dnf -y install terraform
-        ````
-- restart the lab
+    - Download this script to install the needed tools and check what it does:
+        ```
+        <copy>
+        wget https://raw.githubusercontent.com/oracle-devrel/oci-starter/main/test_suite/install_dev.sh
+        </copy>
+        ```
+    - Run it:
+        ```
+        <copy>
+        bash install_dev.sh
+        </copy>
+        ```
+        [Script: https://raw.githubusercontent.com/oracle-devrel/oci-starter/main/test_suite/install_dev.sh][https://raw.githubusercontent.com/oracle-devrel/oci-starter/main/test_suite/install_dev.sh]
+- Restart the lab
 
 ## Acknowledgements 
 

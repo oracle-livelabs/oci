@@ -11,35 +11,39 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Compute",
-            "filename": "./../../compute/compute.md"
+            "title": "Lab 1: Public Virtual Machine",
+            "filename": "./../../public_compute/public_compute.md"
         },
         {
-            "title": "Lab 2: Instance Pool",
+            "title": "Lab 2: Private Virtual Machine",
+            "filename": "./../../private_compute/private_compute.md"
+        },
+        {
+            "title": "Lab 3: Instance Pool",
             "filename": "./../../instance_pool/instance_pool.md"
         },        
         {
-            "title": "Lab 3: Kubernetes",
+            "title": "Lab 4: Kubernetes",
             "filename": "./../../kubernetes/kubernetes.md"
         },
         {
-            "title": "Lab 4: Container Instances",
+            "title": "Lab 5: Container Instances",
             "filename": "./../../container_instance/container_instance.md"
         },        
         {
-            "title": "Lab 5: Functions",
+            "title": "Lab 6: Functions",
             "filename": "./../../function/function.md"
         },
         {
-            "title": "Lab 6: How to Customize",
+            "title": "Lab 7: How to Customize",
             "filename": "./../../customize/customize.md"
         },         
         {
-            "title": "Lab 7: Groups",
+            "title": "Lab 8: Groups",
             "filename": "./../../group/group.md"
         },           
         {
-            "title": "Lab 8: Advanced",
+            "title": "Lab 9: Advanced",
             "filename": "./../../advanced/advanced.md"
         },        
         {
