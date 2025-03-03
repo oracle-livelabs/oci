@@ -49,7 +49,64 @@ For the lab deployment we will use the following subnet:
 
 **Note** If you have created the VCN in Lab 1 with a different CIDR range or want to use an existing VCN, you can update the OCVS subnet accordingly.
 
-## Task 2: Deploy Single Node OCVS Cluster
+## Task 2: Generate SSH Key
+
+The SSH (Secure Shell) protocol is a method for secure remote login from one computer to another. SSH enables secure system administration and file transfers over insecure networks using encryption to secure the connections between endpoints. SSH keys are an important part of securely accessing Oracle Cloud Infrastructure compute instances in the cloud.
+
+If you already have an SSH key pair, you may use that to connect to your environment.
+
+### **On Mac**
+
+1. On Mac, start up the terminal by using cmd + space and typing terminal or cmd + shift + U and click on terminal
+
+  Once in the terminal type ssh-keygen or copy and paste the command into the terminal, press enter. You will prompted to enter file to save your key. pressing enter will select default in your .ssh folder. Press enter twice for no passphrase. Remember where it is saved as we will reference this later when creating instances.
+
+    ![ssh-keygen](images/ssh-keygen.png)
+
+    ```
+    <copy>
+    ssh-keygen
+    </copy>
+    ```
+
+### **On Windows 10**
+
+1. Open a Powershell command window on your Windows 10 system by clicking it’s icon/tile or by typing ‘powershell’ in the search field in the Start bar.
+
+  ![ssh-keygen-windows](images/ssh-keygen-windows.png)
+
+2. Once in the terminal type ssh-keygen or copy and paste the command into the terminal, press enter. You will prompted to enter file to save your key. pressing enter will select default in your .ssh folder. Press enter twice for no passphrase. Remember where it is saved as we will reference this later when creating instances.
+
+    ```
+    <copy>
+    ssh-keygen
+    </copy>
+    ```
+
+  ![verify-keygen-windows](images/verify-keygen-windows.png)
+
+### **Verifying the Keys**
+
+To verify that your keys exist, You can use the following commands.
+
+```
+	<copy>
+	cd .ssh
+	</copy>
+```
+```
+	<copy>
+	ls
+	</copy>
+```
+```
+	<copy>
+	cat id_rsa.pub
+	</copy>
+```
+![confirm-keygen-windows](images/confirm-keygen-windows.png)
+
+## Task 3: Deploy Single Node OCVS Cluster
 
 1. Open the **navigation** menu hamburger icon, select **Hybrid**, and then select **Software-Defined Data Centers** under **VMware Solution**.
 
@@ -156,7 +213,7 @@ The page shows the provisioning status of each resource.
 
 **NOTE**: The deployment takes about 2.5 Hours to complete, you can monitor the status of the tasks in the work requests section.
 
-## Task 3: Review OCVS SDDC
+## Task 4: Review OCVS SDDC
 
 After OCVS deployment is complete, the SDDC overview page will show details related to the VMware components, Clusters, Hosts and Networking.
 
@@ -246,7 +303,7 @@ If you are not already on the OCVS SDDC Details page;
 
 ![SDDC](./images/hcxcreds.png)
 
-## Task 4: Access SDDC Components
+## Task 5: Access SDDC Components
 
 To build a secure and controlled environment and isolate the critical components from other workloads, we had deployed OCVS SDDC in a private subnet with limited access to the outside networks. We had also created a public subnet to allow access into the OCI environment from the public internet. Only SSH access is allowed in the public subnet to ensure complete control over network ingress.
 
