@@ -39,6 +39,12 @@ The lab makes following assumptions:
 
 ## Acknowledgements
 
-- **Authors** - 
-- **Contributors** - 
-- **Last Updated By/Date** - 
+* **Author:** Vijay Kumar
+, Cloud Engineering OCVS
+* **Contributors:**
+    - Chris Wegenek, Cloud Engineering
+    - Karthik Meenakshi Sundaram, Cloud Engineering
+    - Germain Vargas, Cloud Engineering
+    - Kelly Montgomery, Cloud Engineering
+
+* **Last Updated By/Date:** Vijay Kumar, Cloud Engineering OCVS, February 2025

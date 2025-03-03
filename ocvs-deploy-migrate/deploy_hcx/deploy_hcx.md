@@ -407,6 +407,10 @@ Using VMware HCX Network Extension with VMware HCX Migration you can:
 
 ![nesuccess](./images/nesuccess.png)
 
+# Congratulations!
+
+# You may procede to the next lab!
+
 ## Learn More
 
 - VMware HCX User Guide
@@ -421,3 +425,13 @@ Using VMware HCX Network Extension with VMware HCX Migration you can:
 - [OCVS Solution Brief](https://www.oracle.com/a/ocom/docs/understanding-oracle-cloud-vmware-solution.pdf)
 
 ## Acknowledgements
+
+* **Author:** Vijay Kumar
+, Cloud Engineering OCVS
+* **Contributors:**
+    - Chris Wegenek, Cloud Engineering
+    - Karthik Meenakshi Sundaram, Cloud Engineering
+    - Germain Vargas, Cloud Engineering
+    - Kelly Montgomery, Cloud Engineering
+
+* **Last Updated By/Date:** Vijay Kumar, Cloud Engineering OCVS, February 2025

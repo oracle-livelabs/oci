@@ -30,6 +30,8 @@ In this lab, you will:
 
 * It is assumed that the user possesses basic knowledge of HCX.
 
+* It is assumed that you have either [VPN Site to Site](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Network/Tasks/workingwithIPsec.htm) or [Fastconnect](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/fastconnect.htm) already set up in your environment.
+
 ### Important Information about the lab
 
 In the lab, both source and target SDDC's run in OCVS in different regions with one region standing in for on-prem SDDC. The screenshots used are for reference only. Actual VM's being migrated will have different name, OS and Network details.
@@ -156,9 +158,10 @@ In the web browser, open a new tab.
 
 * **Author:** Vijay Kumar
 , Cloud Engineering OCVS
-* **Contributors:** 
+* **Contributors:**
     - Chris Wegenek, Cloud Engineering
     - Karthik Meenakshi Sundaram, Cloud Engineering
     - Germain Vargas, Cloud Engineering
+	- Kelly Montgomery, Cloud Engineering
 
 * **Last Updated By/Date:** Chris Wegenek, Cloud Engineering, February 2025
