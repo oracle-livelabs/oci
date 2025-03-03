@@ -540,9 +540,7 @@ After you install the browser, open a new browser windows and follow the below s
 
 ![hcxinventory](./images/hcxinventory.png)
 
-# Congratulations!
-
-# You may procede to the next lab!
+**Congratulations! You may proceed to the next lab**
 
 ## Learn More
 

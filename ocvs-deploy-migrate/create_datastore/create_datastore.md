@@ -152,6 +152,8 @@ Once you configure the iSCSI Adapter, the block volume will be visible as an ext
 
 ![dslist](./images/datastorelist.png)
 
+**Congratulations! You may proceed to the next lab**
+
 ## Learn More
 
 - [Oracle Cloud VMware Solution (OCVS) Overview](https://www.oracle.com/in/cloud/compute/vmware/)

@@ -18,7 +18,7 @@ In this lab, you will:
 
 * Complete Lab 4: Deploy and Configure HCX
 
-* This lab environment does not include an actual on-premises environment. You Must provide your own.
+* This lab environment does not include an actual on-premises environment. You must provide your own.
 
 * It is assumed that the user possesses basic knowledge of HCX.
 
@@ -26,7 +26,7 @@ In this lab, you will:
 
 ### Important Information about the lab
 
-In the lab, both source and target SDDC's run in OCVS in different regions with one region standing in for on-prem SDDC. The screenshots used are for reference only. Actual VM's being migrated will have different name, OS and Network details.
+In the lab, both source and target SDDC's run in OCVS in different regions with one region standing in for on-premises SDDC. The screenshots used are for reference only. Actual VM's being migrated will have different name, OS and Network details.
 
 
 ## Task 1: Migrate Virtual Machine from On-prem to OCVS
@@ -67,7 +67,7 @@ In the lab, both source and target SDDC's run in OCVS in different regions with 
 
 ![](./images/selectvmlab13.png "Photo showing where to select the VM Lab")
 
-12. Click on **(Mandatory: Compute Container)**, navigate to the destination host cluster and click **SELECT.**
+12. Click on **(Mandatory: Compute Container)**, navigate to the destination host cluster and click **SELECT**
 
 ![](./images/destinationcomputecontainer14.png "Photo shoing where to find the Mandatory: Compute Container")
 
@@ -140,13 +140,13 @@ In the web browser, open a new tab.
 
 ![](./images/vsphereclientmainscreen24.png "Photo showing the vSphere Client main screen")
 
-# Congratulations!
+**Congratulations! You have completed this LiveLab!**
 
 ## Learn More
 
-[VPN Site to Site](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Network/Tasks/workingwithIPsec.htm)
+- [VPN Site to Site](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Network/Tasks/workingwithIPsec.htm)
 
-[Fastconnect](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/fastconnect.htm)
+- [Fastconnect](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/fastconnect.htm)
 
 ## Acknowledgments
 

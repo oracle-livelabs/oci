@@ -2,16 +2,18 @@
 
 ## Introduction
 
-In this lab we will be setting up the Virtual cloud network which will contain our two servers. The Bastion host to be able to access the Jump Server securely.
+In this lab we will be setting up the Virtual cloud network which will contain our two servers. The Bastion host will be used to access the Jump Server securely.
 
 Estimated Time: 30 minutes
 
 ### About Compute Service
+
 Oracle Cloud Infrastructure Compute lets you provision and manage compute hosts, known as instances. You can define instances as needed to meet your compute and application requirements.
 
 ### Prerequisites
 
 This lab assumes you have:
+
 * An Oracle account
 * Familiarity with Networking is desirable, but not required
 * Some understanding of cloud, networking
@@ -20,21 +22,20 @@ This lab assumes you have:
 ### Objectives
 
 In this lab, you will:
+
 * Learn how to provision OCI resources.
 
 ## Task 1 - Create VCN
 
 To Create a VCN on Oracle Cloud Infrastructure:
 
-1. On the Oracle Cloud Infrastrucutre Console homepage, on the top left you will find the hamburger menu.
+1. On the Oracle Cloud Infrastructure Console homepage, on the top left you will find the hamburger menu.
 
     ![hamburger menu](images/hambuger.png)
 
 2. Select **Networking**, and then **Virtual cloud networks**.
 
     ![Networking](images/networking.png)
-
-    Here!!!
 
 3. Select the **compartment** next to the **Applied filters**. Ensure you are in the correct compartment to deploy your VCN.
 
@@ -44,9 +45,9 @@ To Create a VCN on Oracle Cloud Infrastructure:
 
     ![VCNwizard](images/vcnwizard.png)
 
-5. The VCN Wizard will help provision, a VCN, a Public and Private Subnet, an Internet Gateway, NAT Gateway, and a Service Gateway. We will start by giving the VCN a name,
+5. The VCN Wizard will help provision a VCN, a Public and Private Subnet, an Internet Gateway, NAT Gateway, and a Service Gateway. We will start by giving the VCN a name,
 
-    ```
+    ```text
     <copy>
     ocvs-livelab
     </copy>
@@ -54,7 +55,7 @@ To Create a VCN on Oracle Cloud Infrastructure:
 
     next, you will provide the **IPv4 CIDR Blocks**,
 
-    ```
+    ```text
     <copy>
     172.16.0.0/16
     </copy>
@@ -64,13 +65,13 @@ To Create a VCN on Oracle Cloud Infrastructure:
 
 6. Add the **IPv4 CIDR Blocks** for the Public and Private subnets,
 
-    ```
+    ```text
     <copy>
     172.16.0.0/24
     </copy>
     ```
 
-    ```
+    ```text
     <copy>
     172.16.1.0/24
     </copy>
@@ -96,13 +97,13 @@ To Create a VCN on Oracle Cloud Infrastructure:
 
     Here we will add the **Source CIDR** and **Port** to allow access through TCP for the jump server.
 
-    ```
+    ```text
     <copy>
     172.16.0.0/16
     </copy>
     ```
 
-    ```
+    ```text
     <copy>
     3389
     </copy>
@@ -136,11 +137,11 @@ If you already have an SSH key pair, you may use that to connect to your environ
 
 1. On Mac, start up the terminal by using cmd + space and typing terminal or cmd + shift + U and click on terminal
 
-  Once in the terminal type ssh-keygen or copy and paste the command into the terminal, press enter. You will prompted to enter file to save your key. pressing enter will select default in your .ssh folder. Press enter twice for no passphrase. Remember where it is saved as we will reference this later when creating instances.
+  Once in the terminal type ssh-keygen or copy and paste the command into the terminal, press enter. You will prompted to enter a file to save your key. pressing enter will select default in your .ssh folder. Press enter twice for no passphrase. Remember where it is saved as we will reference this later when creating instances.
 
     ![ssh-keygen](images/ssh-keygen.png)
 
-    ```
+    ```text
     <copy>
     ssh-keygen
     </copy>
@@ -154,7 +155,7 @@ If you already have an SSH key pair, you may use that to connect to your environ
 
 2. Once in the terminal type ssh-keygen or copy and paste the command into the terminal, press enter. You will prompted to enter file to save your key. pressing enter will select default in your .ssh folder. Press enter twice for no passphrase. Remember where it is saved as we will reference this later when creating instances.
 
-    ```
+    ```text
     <copy>
     ssh-keygen
     </copy>
@@ -257,8 +258,7 @@ To verify that your keys exist, You can use the following commands.
 
     ![windowssubnet](images/windowssubnet.png)
 
-**Congratulations!**
-**You may proceed to the next lab!**
+**Congratulations! You may proceed to the next lab**
 
 ## Learn More
 * [VCNs & Subnets](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm)
