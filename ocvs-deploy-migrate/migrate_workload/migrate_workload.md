@@ -1,11 +1,3 @@
-## Task 1 : Onprem connectivity with fastconnect
-
-https://github.com/oracle-livelabs/oci/tree/main/oci-multicloud-connectivity
-
-## Task 2: Onprem connectivity with IPSec VPN
-
-https://www.ateam-oracle.com/post/libreswan-ipsec-bgp-frr
-
 # Migrating the Virtual Machine with HCX
 
 ## Introduction
@@ -150,9 +142,11 @@ In the web browser, open a new tab.
 
 # Congratulations!
 
-# You may procede to the next lab!
-
 ## Learn More
+
+[VPN Site to Site](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Network/Tasks/workingwithIPsec.htm)
+
+[Fastconnect](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/fastconnect.htm)
 
 ## Acknowledgments
 
