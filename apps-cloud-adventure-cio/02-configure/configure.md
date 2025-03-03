@@ -160,11 +160,11 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      ![Create Validation](images/image024.png)
 
-     > (1) Type **Adjustment Percentage** in the box and select ** # Adjustment Percentage** under **Salary Details**     <br>
+     > (1) Type **Adjustment Percentage** in the box and select **# Adjustment Percentage** under **Salary Details**     <br>
 
      > (2) Select **greater than**    <br>
 
-     > (3) Type **15**
+     > (3) Type **15**  <br>
 
      ![Create Validation](images/image026.png)
 
