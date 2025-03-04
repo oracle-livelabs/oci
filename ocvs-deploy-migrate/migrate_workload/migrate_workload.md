@@ -32,7 +32,7 @@ In the lab, both source and target SDDC's run in OCVS in different regions with 
 ## Task 1: Migrate Virtual Machine from On-prem to OCVS
 
 1. In the web browser, open a new tab.
-2. Paste the **vSphere Client URL** that you had captured in the [SDDC Overview Task](#access-vmware-components) in the **WebURL** field and press **Enter**.
+2. Paste the **vSphere Client URL** that you had captured in the [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC) in the **WebURL** field and press **Enter**.
 3. If you receive a warning that the connection is not private, ignore the warning and proceed.
 4. Click the **Launch vSphere Client** (HTML5) button.
 
@@ -45,7 +45,7 @@ In the lab, both source and target SDDC's run in OCVS in different regions with 
     	administrator@vsphere.local
     	</copy>
 		```
-	  - **Password**: vCenter initial password captured in [SDDC Overview Task](#access-vmware-components)
+	  - **Password**: vCenter initial password captured in [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC)
 6. Click **Login**
 
 ![vcenterlogin](./images/vcenterlogin.png)
@@ -118,7 +118,7 @@ To gain an understanding of the steps taken during the migration you can:
 Now that the migration has been reported as successful, you can verify that the machine has been relocated to the other cloud.
 
 In the web browser, open a new tab.
-1. Paste the **vSphere Client URL** that you had captured in the [SDDC Overview Task](#access-vmware-components) in the **WebURL** field and press **Enter**.
+1. Paste the **vSphere Client URL** that you had captured in the [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC) in the **WebURL** field and press **Enter**.
 2. If you receive a warning that the connection is not private, ignore the warning and proceed.
 3. Click the **Launch vSphere Client** (HTML5) button.
 
@@ -131,7 +131,7 @@ In the web browser, open a new tab.
     	administrator@vsphere.local
     	</copy>
 		```
-	  - **Password**: vCenter initial password captured in [SDDC Overview Task](#access-vmware-components)
+	  - **Password**: vCenter initial password captured in [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC)
 5. Click **Login**
 
 ![vcenterlogin](./images/vcenterlogin.png)

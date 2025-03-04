@@ -85,7 +85,7 @@ To Create a VCN on Oracle Cloud Infrastructure:
 
 1. After provisioning your VCN. Click **View VCN**.
 
-![provisioned](images/provisioned.png)
+    ![provisioned](images/provisioned.png)
 
 2. Click on **Security** on the VCN details page and click on **security list for private subnet-ocvs-livelab**. Here will configure the Security Rules.
 
@@ -206,11 +206,11 @@ To verify that your keys exist, You can use the following commands.
 
     ![linuximage](images/linuximage.png)
 
-4. Next, we will be selecting the shape for our bastion. Click on **Change shape**. 
+4. Next, we will be selecting the shape for our bastion. Click on **Change shape**.
 
     ![changeshape](images/changeshape.png)
 
-    Select the following; 
+    Select the following;
 
     **Instance type**
 
@@ -261,6 +261,7 @@ To verify that your keys exist, You can use the following commands.
 **Congratulations! You may proceed to the next lab**
 
 ## Learn More
+
 * [VCNs & Subnets](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm)
 * [SSH Keys](https://docs.oracle.com/en/learn/generate_ssh_keys/index.html)
 * [Compute Service](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/computeoverview.htm)
