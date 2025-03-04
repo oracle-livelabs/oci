@@ -23,7 +23,7 @@ It is assumed that you have access to or familiarity with following components:
 
 In this lab, you will;
 
-- Identify networking requirments for OCVS deployment
+- Identify networking requirements for OCVS deployment
 - Generate an SSH Key pair for ESXi access
 - Deploy an OCVS SDDC with single node cluster
 - Review the SDDC details in OCI Console
@@ -32,7 +32,7 @@ In this lab, you will;
 
 OCVS cluster is deployed in a VCN in your tenancy. This allows you complete control over IP addresses, subnets, routing and security lists. Building the cluster in you VCN also puts the workloads closest to other OCI Native Services such as Object Storage, Block Volumes, Autonomous Database etc. This leads to increased performance and better throughput when access native OCI Services from workloads running in OCVS.
 
-To start the deployment, you need an existing VCN with an IP address CIDR of /24 or larger available for running the cluster . The CIDR size depends on the number of nodes that you plan to add in the cluster. Following is an overview of CIDR sizes and number of nodes the CIDR can support. 
+To start the deployment, you need an existing VCN with an IP address CIDR of /24 or larger available for running the cluster . The CIDR size depends on the number of nodes that you plan to add in the cluster. Following is an overview of CIDR sizes and number of nodes the CIDR can support.
 
 - CIDR block size **/24**, segment size **/28**, number of nodes in cluster **3-12**.
 - CIDR block size **/23**, segment size **/27**, number of nodes in cluster **3-28**.
@@ -85,7 +85,7 @@ For the lab deployment we will use the following subnet:
 
 ![sddcbasic](./images/sddcbasicinfo.png)
 
-1. Click **Define management cluster**
+6. Click **Define management cluster**
 
 ![Definemgmtcluster](./images/definemgmtcluster.png)
 
@@ -108,24 +108,24 @@ For the lab deployment we will use the following subnet:
 
 ![Definecluster](./images/definecluster.png)
 
-7. Click on Change shape and Select **AMD** **BM.DenseIO.E4.128** and click **Select shape**.
+8. Click on Change shape and Select **AMD** **BM.DenseIO.E4.128** and click **Select shape**.
 
 ![changeshape](./images/changeshape.png)
 
 ![selectamdshape](./images/selectamdshape.png)
 
-8. Select 32 OCPU from the **Select number of OCPU cores** dropdown.
+9. Select 32 OCPU from the **Select number of OCPU cores** dropdown.
 
 ![selectocpu](./images/selectocpu.png)
 
-9.  In the **Pricing interval commitment**, make sure to select **Hourly commitment** and confirm pricing with the checkbox.
+10.  In the **Pricing interval commitment**, make sure to select **Hourly commitment** and confirm pricing with the checkbox.
 
-**NOTE:** Cluster pricing can not be changed after the deployment and you will be charged for the whole commitment period. Make sure to choose correct pricing interval on the step.
+**NOTE:** Cluster pricing cannot be changed after the deployment and you will be charged for the whole commitment period. Make sure to choose correct pricing interval on the step.
 
 ![pricinginterval](./images/pricinginterval.png)
 
-10. Click **Next** to advance to the cluster's **Networking** page.
-11. Select the **VCN** you had created in Lab 1 for OCVS.
+11. Click **Next** to advance to the cluster's **Networking** page.
+12. Select the **VCN** you had created in Lab 1 for OCVS.
 	- Click **Create new subnet and VLANs**.
 	- Enter the subnet details as follows.
 		```
@@ -134,7 +134,7 @@ For the lab deployment we will use the following subnet:
 		</copy>
 		```
 		**Note**: If you had selected a different subnet in Task 1, enter that subnet detail.
-12. Enter the **cluster workload CIDR** to create an initial logical segment for the VMs.
+13. Enter the **cluster workload CIDR** to create an initial logical segment for the VMs.
 		```
 		<copy>
 		192.168.1.0/24
@@ -143,12 +143,12 @@ For the lab deployment we will use the following subnet:
 
 ![clusternetworking](./images/clusternetworking.png)
 
-13. Click **Next** to advance to the **Notifications** page.
-14. Click **Next** to review the **cluster configuration summary** and Click **Submit**.
+14. Click **Next** to advance to the **Notifications** page.
+15. Click **Next** to review the **cluster configuration summary** and Click **Submit**.
 
 ![clusterreview](./images/clusterreview.png)
 
-15. Click **Next** to move to **Review and Create page** and click **Create SDDC**.
+16. Click **Next** to move to **Review and Create page** and click **Create SDDC**.
 
 ![sddcreview](./images/sddcreview.png)
 
@@ -160,7 +160,7 @@ The page shows the provisioning status of each resource.
 
 After OCVS deployment is complete, the SDDC overview page will show details related to the VMware components, Clusters, Hosts and Networking.
 
-### 1. **SDDC Overveiw**
+### 1. **SDDC Overview**
 
 If you are not already on the OCVS SDDC Details page;
 
@@ -171,7 +171,7 @@ If you are not already on the OCVS SDDC Details page;
 
 ![SDDC](./images/hybridsddc.png)
 
-2. Select the **livelab-sddc** that we had cerated in last task. Make sure that the state of the SDDC is **Active**.
+2. Select the **livelab-sddc** that we had created in last task. Make sure that the state of the SDDC is **Active**.
 
 ![SDDC](./images/livelabsddc.png)
 
@@ -179,7 +179,7 @@ If you are not already on the OCVS SDDC Details page;
       - **vCenter information** - The vCenter information sections list the vCenter URL, IP Address, initial username and initial password.
       - **NSX manager information** - the NSX information sections list the NSX manager URL, IP Address, initial username and initial password.
       - **HCX Manager information** - this section lists the details about the HCX Manager including the URL, IP Address, initial username, password, license type and on-prem connector activation keys.
-      - **vSphere Clsuters** - This section lists all the clusters withing the SDDC, including the management and workload clusters. You can manage existing clusters by selecting the cluster name from this section or use the **Add a workload cluster** button to define and create a new workload cluster.
+      - **vSphere Clusters** - This section lists all the clusters withing the SDDC, including the management and workload clusters. You can manage existing clusters by selecting the cluster name from this section or use the **Add a workload cluster** button to define and create a new workload cluster.
 
 ![SDDC](./images/ocvsoverview.png)
 
@@ -216,7 +216,7 @@ If you are not already on the OCVS SDDC Details page;
 
 ![SDDC](./images/hostdetails.png)
 
-### 2. **Retrieve Credentials for VMware Softwares**
+### 2. **Retrieve Credentials for VMware Software**
 
 If you are not already on the OCVS SDDC Details page;
 
@@ -227,13 +227,13 @@ If you are not already on the OCVS SDDC Details page;
 
 ![SDDC](./images/hybridsddc.png)
 
-2. Select the **livelab-sddc** that we had cerated in last task. Make sure that the state of the SDDC is **Active**.
+2. Select the **livelab-sddc** that we had created in last task. Make sure that the state of the SDDC is **Active**.
 
 ![SDDC](./images/livelabsddc.png)
 
 3. On the SDDC overview page, copy the following details and save these in a notepad. We will need these in the next section to access the SDDC components.
       - Copy the **vSphere client URL** by clicking on the associated **Copy** Link and paste it in a notepad file for easy retrieval.
-      - Copy the **vcenter initial username** paste it in a notepad file for easy retrieval.
+      - Copy the **vCenter initial username** paste it in a notepad file for easy retrieval.
       - You can also retrieve the **vCenter initial password** by clicking the associated Show or Copy option.
 
 ![SDDC](./images/vcentercreds.png)
@@ -242,7 +242,7 @@ If you are not already on the OCVS SDDC Details page;
 
 ![SDDC](./images/nsxcreds.png)
 
-5. Copy the **HCX on-premise connector activation keys** by clicking on the **View** button in the **HCX manager information** section.
+5. Copy the **HCX on-premises connector activation keys** by clicking on the **View** button in the **HCX manager information** section.
 
 ![SDDC](./images/hcxcreds.png)
 
@@ -266,15 +266,15 @@ To access the SDDC component, we will use the Linux Bastion host deployed in the
 
 ![instancemenu](./images/compartment.png)
 
-1. Locate the instance named - **bastion-host**
-2. Copy the **Public IP** address of the bastion instance.
-3. Locate the instance named - **jump-host**
-4. Copy the **Private IP** address of the jump host.
+4. Locate the instance named - **bastion-host**
+5. Copy the **Public IP** address of the bastion instance.
+6. Locate the instance named - **jump-host**
+7. Copy the **Private IP** address of the jump host.
 
 ![instancemenu](./images/ipdetails.png)
 
-5. Click on the **jump-host** instance name.
-6. On the **Instance details** page, under **Instance access** section click on **...** and copy the **initial password** for the Windows jump host, this will be needed in next section to setup the RDP connection.
+8. Click on the **jump-host** instance name.
+9. On the **Instance details** page, under **Instance access** section click on **...** and copy the **initial password** for the Windows jump host, this will be needed in next section to setup the RDP connection.
 
 ![instancecreds](./images/instancecreds.png)
 
@@ -284,7 +284,7 @@ To access the SDDC component, we will use the Linux Bastion host deployed in the
 
 ![SDDC](./images/mac-launcher.png)
 
-2. Search for **Termianl** app and open a new terminal window.
+2. Search for **Terminal** app and open a new terminal window.
 
 ![SDDC](./images/mac-terminal.png)
 
@@ -320,7 +320,7 @@ To access the SDDC component, we will use the Linux Bastion host deployed in the
 
 **Windows Instructions**
 
-Windows operating system by default does not have an SSH client built in, So we will need to Download and install an SSH client such as Putty. If you already do not have the SSH Client installed, Follow the instruction at [www.putty.org](https://www.putty.org/) to download and install the client on your workstation.
+Windows operating system by default does not have an SSH client built in, so we will need to Download and install an SSH client such as Putty. If you already do not have the SSH Client installed, Follow the instruction at [www.putty.org](https://www.putty.org/) to download and install the client on your workstation.
 
 Following instructions are only applicable if you are using PuTTY as the client. If you use a different SSH client, the instruction to setup SSH connection and remote port forwarding might be different. Refer to the documentation of your SSH Client to setup the connection and port forwarding.
 
@@ -339,13 +339,13 @@ Following instructions are only applicable if you are using PuTTY as the client.
 
 ![sship](./images/sship.png)
 
-4. Confirm that the **Connection type** option is set to **SSH**.
-5. In the Category tree, expand SSH and then click **Auth**
-6. Click the **Browse** button next to the **Private key file for authentication** box and select the <bastion_private_key.ppk> file.
+5. Confirm that the **Connection type** option is set to **SSH**.
+6. In the Category tree, expand SSH and then click **Auth**
+7. Click the **Browse** button next to the **Private key file for authentication** box and select the <bastion_private_key.ppk> file.
 
 ![sshauth](./images/sshkey.png)
 
-7. In the Category tree, click **Tunnels**.
+8. In the Category tree, click **Tunnels**.
       - In the **Source Port** box, enter **5000**.
       - In the **Destination box**, enter the following IP and port combination.
 			```
@@ -358,9 +358,9 @@ Following instructions are only applicable if you are using PuTTY as the client.
 
 ![sshtunnel](./images/sshtunnel.png)
 
-8. In the **Category** tree, click **Session**.
-9.  In the **Saved Sessions** box, enter a name for this connection configuration. Then, click **Save**.
-10. Click **Open** to open the connection.
+9. In the **Category** tree, click **Session**.
+10.  In the **Saved Sessions** box, enter a name for this connection configuration. Then, click **Save**.
+11. Click **Open** to open the connection.
 
 ![sshsession](./images/sshsession.png)
 
@@ -453,11 +453,11 @@ Once you have the RDP connection to the Jump Host, the first thing we need to do
 You can install any one of the following web browsers depending on your preference.
 
 - Google Chrome
-- Micorsoft Edge
+- Microsoft Edge
 - Mozilla Firefox
 - Apple Safari
 
-After you install the browser, open a new browser windows and follow the below steps to access the OCVS SDDC components.
+After you install the browser, open a new browser window and follow the below steps to access the OCVS SDDC components.
 
 **NOTE:** You will need the URLs and credentials for the SDDC components which we had captured in the [SDDC Overview Task](#access-vmware-components). If you have not captured the details. Please return to the [SDDC Overview Task](#access-vmware-components) and capture the mentioned details.
 
@@ -483,7 +483,7 @@ After you install the browser, open a new browser windows and follow the below s
 ![vcenterlogin](./images/vcenterlogin.png)
 
 7. On the vCenter Home page, select **Hosts and Clusters**.
-8. Expand the vCenter inventory in the left hand pane.
+8. Expand the vCenter inventory in the left-hand pane.
 9.  Review the details of the **cluster**, **host** and **management virtual machines**.
 
 ![vcenterinventory](./images/vcenterinventory.png)
@@ -505,7 +505,7 @@ After you install the browser, open a new browser windows and follow the below s
 
 ![nsxlogin](./images/nsxlogin.png)
 
-6. If you logging in for the first time, you will get the EULA page, scroll to the bottom of the page and accept the License Terms.
+6. If you are logging in for the first time, you will get the EULA page, scroll to the bottom of the page and accept the License Terms.
 
 ![nsxeula](./images/nsxeula.png)
 

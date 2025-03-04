@@ -10,7 +10,7 @@ We will cover following topics as part of the upcoming labs.
 
 - Oracle Cloud VMware Solution (OCVS) Deployment prerequisites
 - Deploying Oracle Cloud VMware Solution (OCVS) and accessing OCVS components
-- Creating new Datastore with OCI Block Volume and deploying Workload VM's
+- Creating new Datastore with OCI Block Volume and deploying Workload VMs
 - Configuring connectivity with on-prem VMware Infrastructure
 - Migrating on-prem VMware workload with HCX
 
@@ -34,7 +34,7 @@ The lab makes following assumptions:
 ## Learn More
 
 * [Oracle Cloud](https://www.oracle.com/cloud/)
-* [Oracle Cloud VMware Solution Overveiw](https://www.oracle.com/in/cloud/compute/vmware/)
+* [Oracle Cloud VMware Solution Overview](https://www.oracle.com/in/cloud/compute/vmware/)
 * [OCVS Documentation](https://docs.oracle.com/en-us/iaas/Content/VMware/Concepts/ocvsoverview.htm)
 
 ## Acknowledgements

@@ -66,8 +66,8 @@ Once the Block Volume is created, you can attach it to the ESXi Host instance. W
       1. Select **iSCSI**
       2. Select **Read/Write Shareable**
       3. Accept the warning
-      4. Click on **Select an Instance**
-      5. Under Instance, select the **ESXi host** in the drop-down menu, e.g., livelab-01
+      4. Click on **Select Instance**
+      5. Under Instance, select the **ESXi host** in the drop-down menu, e.g., livelab-1
       6. Click **Attach** (This action will take ~2 minutes)
 
 ![attachinstancedetails](./images/attachinstancedetails.png)
@@ -80,9 +80,9 @@ Once the Block Volume is created, you can attach it to the ESXi Host instance. W
 
 After you attach the block volume to the host instance, you need to get the iSCSI IP Address and Port, and configure this in the ESXi iSCSI adapter.
 
-1. On the **Block Volume overview** page, select **Attached instances**.
+1. On the **Block Volume overview** page, select **Attached Instances**.
 2. Open the **vertical 3 dot ellipsis** menu to the far right of the ESXi host name.
-3. Select **iSCSI Commands and Informaiton**.
+3. Select **iSCSI Commands and Information**.
 
 ![iscsicommand](./images/iscsicommand.png)
 
