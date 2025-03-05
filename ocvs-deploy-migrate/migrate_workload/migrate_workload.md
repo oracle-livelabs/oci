@@ -147,6 +147,7 @@ In the web browser, open a new tab.
 - [VPN Site to Site](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Network/Tasks/workingwithIPsec.htm)
 
 - [Fastconnect](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/fastconnect.htm)
+- [Migrating Virtual Machines](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/migrating-virtual-machines-with-vmware-hcx.html)
 
 ## Acknowledgments
 

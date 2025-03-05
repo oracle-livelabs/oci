@@ -18,7 +18,6 @@ We will cover following topics as part of the upcoming labs.
 
 As part of the workshop, we will be deploying a single node OCVS environment and connect it to an existing on-prem VMware environment. Following image showcases the logical architecture of the target lab.
 
-**Placeholder update after review.**
 ![ocvs-arch](images/ocvs-arch.png)
 
 ## Prerequisites

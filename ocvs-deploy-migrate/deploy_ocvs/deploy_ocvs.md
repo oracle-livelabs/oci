@@ -80,7 +80,7 @@ For the lab deployment we will use the following subnet:
 	- **Advanced Option**
   		Default
 4. **SSH key**
-   Provide the public key that we had created in the last section.
+   Provide the public key that we had created in [Lab-1 Task-3: Generate SSH Key](?lab=configure_networking#Task3:GenerateSSHKey).
 5. Click **Next** to advance to the **Define Clusters** page.
 
 ![sddcbasic](./images/sddcbasicinfo.png)
@@ -288,7 +288,7 @@ To access the SDDC component, we will use the Linux Bastion host deployed in the
 
 ![SDDC](./images/mac-terminal.png)
 
-3. **Change directory** to the location where you have saved the private SSH key from [Lab-1-Task-6](./../configure_networking/configure_networking.md/#task-6---deploy-bastion-instance).
+3. **Change directory** to the location where you have saved the private SSH key from [Lab-1 Task-3: Generate SSH Key](?lab=configure_networking#Task3:GenerateSSHKey).
 
 	```
     <copy>
@@ -459,12 +459,12 @@ You can install any one of the following web browsers depending on your preferen
 
 After you install the browser, open a new browser window and follow the below steps to access the OCVS SDDC components.
 
-**NOTE:** You will need the URLs and credentials for the SDDC components which we had captured in the [SDDC Overview Task](#access-vmware-components). If you have not captured the details. Please return to the [SDDC Overview Task](#access-vmware-components) and capture the mentioned details.
+**NOTE:** You will need the URLs and credentials for the SDDC components which we had captured in the [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC). If you have not captured the details. Please return to the [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC) and capture the mentioned details.
 
 #### Access vCenter
 
 1. In the web browser, open a new tab.
-2. Paste the **vSphere Client URL** that you had captured in the [SDDC Overview Task](#access-vmware-components) in the **WebURL** field and press **Enter**.
+2. Paste the **vSphere Client URL** that you had captured in the [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC) in the **WebURL** field and press **Enter**.
 3. If you receive a warning that the connection is not private, ignore the warning and proceed.
 4. Click the **Launch vSphere Client** (HTML5) button.
 
@@ -477,7 +477,7 @@ After you install the browser, open a new browser window and follow the below st
     	administrator@vsphere.local
     	</copy>
 		```
-	  - **Password**: vCenter initial password captured in [SDDC Overview Task](#access-vmware-components)
+	  - **Password**: vCenter initial password captured in [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC).
 6. Click **Login**
 
 ![vcenterlogin](./images/vcenterlogin.png)
@@ -491,7 +491,7 @@ After you install the browser, open a new browser window and follow the below st
 #### Access NSX-T
 
 1. In the web browser, open a new tab.
-2. Paste the **NSX Manager URL** that you had captured in the [SDDC Overview Task](#access-vmware-components) in the **WebURL** field and press **Enter**.
+2. Paste the **NSX Manager URL** that you had captured in the [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC) in the **WebURL** field and press **Enter**.
 3. If you receive a warning that the connection is not private, ignore the warning and proceed.
 4. On the **authentication page**, enter the following details for the **username** and **password**.
       - **Username** :
@@ -500,7 +500,7 @@ After you install the browser, open a new browser window and follow the below st
     	admin
     	</copy>
 		```
-	  - **Password**: NSX Manager initial password captured in [SDDC Overview Task](#access-vmware-components)
+	  - **Password**: NSX Manager initial password captured in [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC)
 5. Click **Login**
 
 ![nsxlogin](./images/nsxlogin.png)
@@ -520,7 +520,7 @@ After you install the browser, open a new browser window and follow the below st
 #### Access HCX
 
 1. In the web browser, open a new tab.
-2. Paste the **HCX Manager URL** that you had captured in the [SDDC Overview Task](#access-vmware-components) in the **WebURL field** and press **Enter**.
+2. Paste the **HCX Manager URL** that you had captured in the [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC) in the **WebURL field** and press **Enter**.
 3. If you receive a warning that the connection is not private, ignore the warning and proceed.
 4. On the **authentication** page, enter the following details for the **username** and **password**.
       - **Username** :
@@ -529,7 +529,7 @@ After you install the browser, open a new browser window and follow the below st
     	administrator@vsphere.local
     	</copy>
 		```
-	  - **Password**: HCX Manager initial password captured in [SDDC Overview Task](#access-vmware-components)
+	  - **Password**: HCX Manager initial password captured in [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC)
 
 5. Click **Login**
 

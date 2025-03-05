@@ -16,7 +16,7 @@ Leverage OCVS to effortlessly migrate or extend you VMware-based workloads to th
 
 ## Architecture
 
-Following is the logical architecture of OCVS SDDC in an OCI region. **Placeholder update after review.**
+Following is the logical architecture of OCVS SDDC in an OCI region.
 
 ![ocvs-arch](images/ocvs-arch.png)
 

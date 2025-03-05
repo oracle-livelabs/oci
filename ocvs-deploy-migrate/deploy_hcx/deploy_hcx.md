@@ -88,7 +88,7 @@ As part of the lab, we will not make any changes to the default HCX configuratio
 
 For public cloud deployments, you obtain the HCX Connector OVA from the System Updates selection in the HCX Cloud Manager UI.
 
-1. Access HCX Manager UI as Described in [Lab 2 - Task 5](./../deploy_ocvs/deploy_ocvs.md)
+1. Access HCX Manager UI as Described in [Access SDDC Components](?lab=deploy_ocvs#Task4:AccessSDDCComponents).
 2. In the left hand pane, under **Administrator**, Click on **System Updates**.
 3. Select **Current Version** and click on **Check for Updates**.
 4. Click **Request Download Link**.
@@ -101,7 +101,7 @@ For public cloud deployments, you obtain the HCX Connector OVA from the System U
 
 Once you have the OVA download, follow below procedure to deploy the connector OVA in the on-premises datacenter.
 
-1. Access vCenter vSphere Client as Described in [Lab 2 - Task 4](?lab=deploy_ocvs)
+1. Access on-premise vCenter vSphere Client.
 2. **Right-click** any inventory object that is a valid parent object of a virtual machine (such as a data center, folder, cluster, resource pool, or host) and select **Deploy OVF Template**.
 
 ![hcxdeploy](./images/hcxdeployselect.png)
@@ -130,7 +130,7 @@ Once you have the OVA download, follow below procedure to deploy the connector O
 
 ![hcxstorage](./images/hcxstorage.png)
 
-9.  On the Select networks page, select the destination network, and click Next.
+9.  On the **Select networks** page, select the **destination network**, and click **Next**.
 
 ![hcxnetwork](./images/hcxnetwork.png)
 
@@ -151,7 +151,7 @@ Once you have the OVA download, follow below procedure to deploy the connector O
 
 ## Task 3: Activating and Configuring HCX Connector
 
-**NOTE:** Before proceeding with the task, ensure that you have collected the HCX on-premises connector activation keys as described in [Lab-2 Task-4 Review OCVS SDDC](./../deploy_ocvs/deploy_ocvs.md)
+**NOTE:** Before proceeding with the task, ensure that you have collected the HCX on-premises connector activation keys as described in [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC)
 
 1. Once the HCX Connector VM is powered on, wait for few minutes to initialize the appliance.
 2. Open a new Browser tab and access the Connector UI at [https://<connector FQDN/IP Address>:9443](https://<connector FQDN/IP Address>:9443)
@@ -229,7 +229,7 @@ Create a Network Profile for each network you intend to use with the HCX service
 
 ## Task 5: Creating Compute Profile
 
-1. Login to the on-premises HCX Connector appliance by going to [https://<onprem connector fqdn/IP address>](https://<onprem connector fqdn/IP address>)
+1. Login to the on-premises HCX Connector appliance by opening the connector url; **https://connector-fqdn:9443**
 
 ![hcxurl](./images/hcxlogin.png)
 
@@ -295,7 +295,7 @@ Create a Network Profile for each network you intend to use with the HCX service
 
 **NOTE:** Configuration parameters in the following steps are for reference only and actual parameters in your on-premises environment might be different.
 
-1. Access HCX Manager UI as Described in [Lab 2 - Task 5](./../deploy_ocvs/deploy_ocvs.md/)
+1. Access HCX Manager UI as Described in [Access SDDC Components](?lab=deploy_ocvs#Task4:AccessSDDCComponents)
 2. In the left-hand pane, click on **Site Pairs**, click on **NEW SITE PAIR**.
 
 ![sitepaircreate](./images/sitepaircreatenew.png)
@@ -319,7 +319,7 @@ Create a Network Profile for each network you intend to use with the HCX service
 
 ## Task 7: Configure Service Mesh and Interconnect
 
-1. Access HCX Manager UI as Described in [Lab 2 - Task 5](./../deploy_ocvs/deploy_ocvs.md/)
+1. Access HCX Manager UI as Described in [Access SDDC Components](?lab=deploy_ocvs#Task4:AccessSDDCComponents).
 2. In the left-hand pane, click on **Interconnect**, click on **Service Mesh** and click on **CREATE SERVICE MESH**.
 
 ![servicemeshceratenew](./images/servicemeshcreatenew.png)
@@ -378,7 +378,7 @@ Using VMware HCX Network Extension with VMware HCX Migration you can:
 - Extend VLAN-tagged networks from a VMware vSphere Distributed Switch.
 - Extend NSX segments.
 
-1. If you are not already logged in to HCX Manager, then Access HCX Manager UI as Described in [Lab 2 - Task 5](./../deploy_ocvs/deploy_ocvs.md/)
+1. If you are not already logged in to HCX Manager, then Access HCX Manager UI as Described in [Access SDDC Components](?lab=deploy_ocvs#Task4:AccessSDDCComponents)
 2. In the left-hand pane, Under **Services** click on **Network Extension** and click on **CREATE NETWORK EXTENSION**.
 
 ![necreatenew](./images/necreatenew.png)
@@ -408,11 +408,10 @@ Using VMware HCX Network Extension with VMware HCX Migration you can:
 
 ## Learn More
 
-- VMware HCX User Guide
-- HCX Port Information
-- Activating and Configuring HCX
-- Creating a Compute Profile
-- Deploying the Installer OVA in the vSphere Client
+- [VMware HCX User Guide](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10.html)
+- [HCX Port Information](https://ports.broadcom.com/home/VMware-HCX)
+- [Activating and Configuring HCX](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/installing-the-hcx-manager-appliance/activate-and-configure-hcx-connector.html)
+- [Configuring and Managing HCX Interconnect](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/configuring-and-managing-the-hcx-interconnect.html)
 - [Oracle Cloud VMware Solution (OCVS) Overview](https://www.oracle.com/in/cloud/compute/vmware/)
 - [OCVS Networking - Getting Started](https://docs.oracle.com/en-us/iaas/Content/VMware/Tasks/ocvsmanagingl2net.htm)
 - [OCVS Networking Reference Architecture](https://blogs.vmware.com/cloud/2021/04/28/oracle-cloud-vmware-solution-networking-reference-architecture/)

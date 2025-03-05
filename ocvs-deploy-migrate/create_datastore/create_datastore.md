@@ -91,7 +91,7 @@ After you attach the block volume to the host instance, you need to get the iSCS
 
 ![iscsiip](./images/iscsiip.png)
 
-6. Access vCenter as Described in [Lab 2 - Task 5](./../deploy_ocvs/deploy_ocvs.md/)
+6. Access vCenter as Described in [Review OCVS SDDC](?lab=deploy_ocvs#Task3:ReviewOCVSSDDC)
 7. Expand the vCenter inventory and select the **ESXi host**, e.g., sddc-lab001-1
 8. Select **Configure**
 9.  Select **Storage Adapters**
@@ -119,7 +119,7 @@ After you attach the block volume to the host instance, you need to get the iSCS
 ## Task 4: Create VMFS Datastore
 Once you configure the iSCSI Adapter, the block volume will be visible as an external disk to the ESXi host. You can use this volume to create a new VMFS datastore.
 
-1. **Right click** the ESXi host e.g., esxi-lab001-1
+1. **Right click** the ESXi host e.g., livelab-1
 2. Select **Storage**
 3. Click **New Datastore**
 
