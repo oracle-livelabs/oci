@@ -1,12 +1,12 @@
-# Configure Networking and Access Components
+# Lab 1: Configure Network and Access Components
 
 ## Introduction
 
 In this lab we will be setting up the Virtual cloud network which will contain our two servers. The Bastion host will be used to access the Jump Server securely.
 
-Estimated Time: 30 minutes
+**Estimated Time:** 30 minutes
 
-### About Compute Service
+**About Compute Service**
 
 Oracle Cloud Infrastructure Compute lets you provision and manage compute hosts, known as instances. You can define instances as needed to meet your compute and application requirements.
 
@@ -210,31 +210,22 @@ To verify that your keys exist, You can use the following commands.
 
     ![changeshape](images/changeshape.png)
 
-    Select the following;
+    Select the following:
 
     **Instance type**
-
-    ```
-    Virtual machine
-    ```
+    - Virtual machine
 
     **Shape series**
-
-    ```
-    AMD
-    ```
+    - AMD
 
     **Shape name**
-
-    ```
-    VM.Standard.E4.Flex
-    ```
+    - VM.Standard.E4.Flex
 
     and click on **Select shape** when finished.
 
     ![linuxshape](images/linuxshape.png)
 
-5. Click **Next** to get to task 3 to set up networking for the bastion host. For the Primary networking we will be using the existing VCN we created in task 1. Ensure that you using the correct **compartment** were you created the VCN. We will also be using the existing public subnet we created in task 1.
+5. Click **Next** to get to Task 3 to set up networking for the bastion host. For the Primary networking we will be using the existing VCN we created in Task  1, ensure that you using the correct **compartment** were you created the VCN. We will also be using the existing public subnet we created in Task 1.
 
     ![bastionsubnet](images/bastionsubnet.png)
 
@@ -268,7 +259,7 @@ To verify that your keys exist, You can use the following commands.
 * [Physical Architecture Concepts](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts-physical.htm)
 
 
-## Acknowledgments
+## Acknowledgements
 
 * **Author:** Vijay Kumar
 , Cloud Engineering OCVS

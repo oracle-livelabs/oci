@@ -1,6 +1,6 @@
 # VMware Workload Migration to Oracle Cloud VMware Solution (OCVS)
 
-Estimated time: 30 minutes
+**Estimated time:** 30 minutes
 
 ## Workshop Introduction
 
@@ -20,7 +20,7 @@ As part of the workshop, we will be deploying a single node OCVS environment and
 
 ![ocvs-arch](images/ocvs-arch.png)
 
-## Prerequisites
+### Prerequisites
 
 The lab makes following assumptions:
 

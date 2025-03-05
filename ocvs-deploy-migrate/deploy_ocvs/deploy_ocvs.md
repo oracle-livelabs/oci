@@ -1,14 +1,14 @@
 # Lab 2: Deploy Oracle Cloud VMware Solution (OCVS)
 
-**Introduction**
+## Introduction
 
 In this lab you will deploy a single node OCVS SDDC Cluster.
 
-Estimated Time: 15 Minutes
+**Estimated Time:** 15 Minutes
 
 Note: Triggering the OCVS Deployment takes around 15 Minutes, However the actual infrastructure deployment takes around 3 Hours to complete.
 
-**Prerequisites**
+### Prerequisites
 
 It is assumed that you have access to or familiarity with following components:
 
@@ -19,7 +19,7 @@ It is assumed that you have access to or familiarity with following components:
 - Familiarity with Oracle Cloud Infrastructure (OCI) and VMware SDDC stack.
 - Familiarity with basic networking terminology such as Subnet, VLAN, CIDR etc.
 
-**Objectives**
+### Objectives
 
 In this lab, you will;
 
@@ -32,14 +32,14 @@ In this lab, you will;
 
 OCVS cluster is deployed in a VCN in your tenancy. This allows you complete control over IP addresses, subnets, routing and security lists. Building the cluster in you VCN also puts the workloads closest to other OCI Native Services such as Object Storage, Block Volumes, Autonomous Database etc. This leads to increased performance and better throughput when access native OCI Services from workloads running in OCVS.
 
-To start the deployment, you need an existing VCN with an IP address CIDR of /24 or larger available for running the cluster . The CIDR size depends on the number of nodes that you plan to add in the cluster. Following is an overview of CIDR sizes and number of nodes the CIDR can support.
+1. To start the deployment, you need an existing VCN with an IP address CIDR of /24 or larger available for running the cluster . The CIDR size depends on the number of nodes that you plan to add in the cluster. Following is an overview of CIDR sizes and number of nodes the CIDR can support.
 
-- CIDR block size **/24**, segment size **/28**, number of nodes in cluster **3-12**.
-- CIDR block size **/23**, segment size **/27**, number of nodes in cluster **3-28**.
-- CIDR block size **/22**, segment size **/26**, number of nodes in cluster **3-60**.
-- CIDR block size **/21**, segment size **/25**, number of nodes in cluster **3-64**.
+	- CIDR block size **/24**, segment size **/28**, number of nodes in cluster **3-12**.
+	- CIDR block size **/23**, segment size **/27**, number of nodes in cluster **3-28**.
+	- CIDR block size **/22**, segment size **/26**, number of nodes in cluster **3-60**.
+	- CIDR block size **/21**, segment size **/25**, number of nodes in cluster **3-64**.
 
-For the lab deployment we will use the following subnet:
+2. For the lab deployment we will use the following subnet:
 
 ```
 <copy>
@@ -160,7 +160,7 @@ The page shows the provisioning status of each resource.
 
 After OCVS deployment is complete, the SDDC overview page will show details related to the VMware components, Clusters, Hosts and Networking.
 
-### 1. **SDDC Overview**
+### **SDDC Overview**
 
 If you are not already on the OCVS SDDC Details page;
 
@@ -216,7 +216,7 @@ If you are not already on the OCVS SDDC Details page;
 
 ![SDDC](./images/hostdetails.png)
 
-### 2. **Retrieve Credentials for VMware Software**
+### **Retrieve Credentials for VMware Software**
 
 If you are not already on the OCVS SDDC Details page;
 
@@ -252,7 +252,7 @@ To build a secure and controlled environment and isolate the critical components
 
 To access the SDDC component, we will use the Linux Bastion host deployed in the public subnet and use port forwarding from the Bastion host to a Windows jump host in the private subnet. In the following sections we will create the SSH tunnel and RDP to the jump host.
 
-### Setup SSH Tunnel from Bastion to Jump Host
+### **Setup SSH Tunnel from Bastion to Jump Host**
 
 1. In the upper left corner, click the **hamburger menu icon**
 
@@ -366,7 +366,7 @@ Following instructions are only applicable if you are using PuTTY as the client.
 
 **NOTE** If this is the first time you are connecting to the Bastion, the PuTTY Security Alert window is displayed, prompting you to confirm the public key.
 
-11. Click **Accept** to continue connecting.
+12. Click **Accept** to continue connecting.
 
 ![sshkeyaccept](./images/sshkeyaccept.png)
 
@@ -386,12 +386,12 @@ Once you have the SSH tunnel setup, we can RDP to the jump host from the local w
 
 ![SDDC](./images/mac-launcher.png)
 
-1. Search for **Windows App** and open the app by clicking on the app icon.
-2. Click the **+** symbol and select the **add PC** option.
+3. Search for **Windows App** and open the app by clicking on the app icon.
+4. Click the **+** symbol and select the **add PC** option.
 
 ![SDDC](./images/addpc.png)
 
-3. In **PC Name** field, enter the following **IP Address** and **Port**.
+5. In **PC Name** field, enter the following **IP Address** and **Port**.
 
 	```
 	<copy>
@@ -399,17 +399,17 @@ Once you have the SSH tunnel setup, we can RDP to the jump host from the local w
     </copy>
 	```
 
-4. Click **Add** and launch the RDP connection by double-clicking on the RDP icon.
+6. Click **Add** and launch the RDP connection by double-clicking on the RDP icon.
 
 ![SDDC](./images/addpcconfig.png)
 
 ![SDDC](./images/rdpicon.png)
 
-6. Click **Add**
-7.  Launch the RDP Connection by **double clicking** on the RDP Instance icon.
-8.  When asked for the **credentials** enter following details;
-   1. **Username**: opc
-   2. **Password**: Enter the password for opc user that you had collected in the last task for the jump server.
+7. Click **Add**
+8.  Launch the RDP Connection by **double clicking** on the RDP Instance icon.
+9.  When asked for the **credentials** enter following details;
+   - **Username**: opc
+   - **Password**: Enter the password for opc user that you had collected in the last task for the jump server.
 
 ![SDDC](./images/rdplogin.png)
 
@@ -427,8 +427,8 @@ Once you have the SSH tunnel setup, we can RDP to the jump host from the local w
 
 ![SDDC](./images/winrdpwindows.png)
 
-3. Click on **Show Options** to view the authentication details.
-4. In the **User Name** field, enter the following username.
+4. Click on **Show Options** to view the authentication details.
+5. In the **User Name** field, enter the following username.
 
 	```
 	<copy>
@@ -436,15 +436,15 @@ Once you have the SSH tunnel setup, we can RDP to the jump host from the local w
     </copy>
 	```
 
-5. Click **Connect**
+6. Click **Connect**
 
 ![SDDC](./images/winrdpdetails.png)
 
-6. When asked for the opc password, enter the password for opc user that you had collected in last task for jump server.
+7. When asked for the opc password, enter the password for opc user that you had collected in last task for jump server.
 
 ![SDDC](./images/winrdplogin.png)
 
-7. Press **Enter**
+8. Press **Enter**
 
 ### **Access VMware Components**
 

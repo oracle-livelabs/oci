@@ -1,12 +1,12 @@
 # Lab 3: Create New Datastore with OCI Block Volume
 
-**Introduction**
+## Introduction
 
 In this lab you will create a new OCI Block Volume, attach the volume to ESXi hosts and create a new VMFS datastore on this Block Volume, this volume will then be used to host workload virtual machines.
 
 **Estimated Time:** 15 Minutes
 
-**Prerequisites**
+### Prerequisites
 
 It is assumed that you have access to or familiarity with following components:
 
@@ -16,7 +16,7 @@ It is assumed that you have access to or familiarity with following components:
 - Familiarity with Oracle Cloud Infrastructure (OCI) and VMware SDDC stack.
 - Familiarity with basic VMware Storage terminology will also be helpful.
 
-**Objectives**
+### Objectives
 
 In this lab, you will;
 

@@ -1,4 +1,4 @@
-# Migrating the Virtual Machine with HCX
+# Lab 5: Migrating the Virtual Machine with HCX
 
 ## Introduction
 
@@ -8,13 +8,13 @@ The Oracle Cloud VMware Solution offers VMware HCX advanced as part of the SDDC 
 
 **Estimated Lab Time:** 15 minutes
 
-### **Objectives**
+### Objectives
 
 In this lab, you will:
 
 * Migrate VMware workloads on-premises to OCVS.
 
-### **Prerequisites**
+### Prerequisites
 
 * Complete Lab 4: Deploy and Configure HCX
 
@@ -53,55 +53,55 @@ In the lab, both source and target SDDC's run in OCVS in different regions with 
 7. Select the hamburger menu in the vSphere web client.
 8. Click on the drop-down option for HCX.
 
-![](./images/vsphereclienthamburgerscreen10.png "Photo showing where to click in the vSphere Client")
+![vsphereclienthamburger](./images/vsphereclienthamburgerscreen10.png "Photo showing where to click in the vSphere Client")
 
 9. On the HCX UI, in the left pane, under **Services**, Click **Migration**.
 
-![](./images/migrationonvsphere11.png "Photo showing where to select Migration")
+![migrationvsphere](./images/migrationonvsphere11.png "Photo showing where to select Migration")
 
 10. Click on **Migrate**.
 
-![](./images/migratebutton12.png "Photo showing where to select the Migrate button")
+![migratebutton](./images/migratebutton12.png "Photo showing where to select the Migrate button")
 
 11.	From the left hand inventory, locate the VM parent and select the virtual machine for migration from the right hand list and click **ADD.**
 
-![](./images/selectvmlab13.png "Photo showing where to select the VM Lab")
+![selectvm](./images/selectvmlab13.png "Photo showing where to select the VM Lab")
 
 12. Click on **(Mandatory: Compute Container)**, navigate to the destination host cluster and click **SELECT**
 
-![](./images/destinationcomputecontainer14.png "Photo shoing where to find the Mandatory: Compute Container")
+![destinationcomputecontainer](./images/destinationcomputecontainer14.png "Photo shoing where to find the Mandatory: Compute Container")
 
 13.  Click on **(Mandatory: Storage) Option**, navigate to the target datastore/datastore cluster for the VM and click **SELECT**.
 
-![](./images/mandatorystorageoption15.png "Photo showing where to select the Mandatory Storage Option")
+![madatorystorageoption](./images/mandatorystorageoption15.png "Photo showing where to select the Mandatory Storage Option")
 
 
-![](./images/destinationstorage16.png "Photo showing the datastore/clusters")
+![destinationstorage](./images/destinationstorage16.png "Photo showing the datastore/clusters")
 
 
 14. Select **vMotion** as the Migration Profile.
 
-![](./images/migrationprofile17.png "Photo showing the migration profile location")
+![migrationprofile](./images/migrationprofile17.png "Photo showing the migration profile location")
 
 15.	Click on **Edit Extended Options**, Select **Migrate Custom Attributes**.
 
-![](./images/extendedoptions18.png "Photo showing all of the extended options")
+![extendedoptions](./images/extendedoptions18.png "Photo showing all of the extended options")
 
 16. Select **Apply Options** and click **SAVE**.
 
-![](./images/migratecustomattributes19.png "Photo showing the migrate custom attributes screen")
+![migrateattributes](./images/migratecustomattributes19.png "Photo showing the migrate custom attributes screen")
 
 17. Click **OK** on the confirmation screen.
 
-![](./images/extendedoptionsconfirm20.png "Photo showing the extended options confirmation screen")
+![extendedoptionsconfirm](./images/extendedoptionsconfirm20.png "Photo showing the extended options confirmation screen")
 
 18. Validate the configuration by selecting **VALIDATE** on the bottom right of the screen.
 
-![](./images/validatebutton21.png.png "Photo showing the main HCX screen with the validate button on the bottom right")
+![validatebutton](./images/validatebutton21.png "Photo showing the main HCX screen with the validate button on the bottom right")
 
 19.	Once the Validation is successful. Click on the green **GO** button to start the migration.
 
-![](./images/migrationcomplete22.png "Photo showing the migration comlete screen")
+![migrationcomplete](./images/migrationcomplete22.png "Photo showing the migration complete screen")
 
 The migration will take around 7-10 minutes. Once completed it will show Migration Complete in the Status column.
 
@@ -138,7 +138,7 @@ In the web browser, open a new tab.
 
 6. Expand the vCenter Inventory and locate the migrated virtual machine.
 
-![](./images/vsphereclientmainscreen24.png "Photo showing the vSphere Client main screen")
+![vsphereclient](./images/vsphereclientmainscreen24.png "Photo showing the vSphere Client main screen")
 
 **Congratulations! You have completed this LiveLab!**
 
@@ -147,9 +147,10 @@ In the web browser, open a new tab.
 - [VPN Site to Site](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Network/Tasks/workingwithIPsec.htm)
 
 - [Fastconnect](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/fastconnect.htm)
+
 - [Migrating Virtual Machines](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/migrating-virtual-machines-with-vmware-hcx.html)
 
-## Acknowledgments
+## Acknowledgements
 
 * **Author:** Vijay Kumar
 , Cloud Engineering OCVS

@@ -18,7 +18,7 @@ HCX supports following methods of migration;
 
 In this lab we will deploy HCX Connector appliance, configure HCX and perform a Virtual Machine live migration.
 
-Estimated Time: 30 Minutes
+**Estimated Time:** 30 Minutes
 
 ### Prerequisites
 
@@ -145,7 +145,7 @@ Once you have the OVA download, follow below procedure to deploy the connector O
 
 ![hcxcustomize](./images/hcxcustomize.png)
 
-1. Review the deployment settings and click **Finish**.
+11. Review the deployment settings and click **Finish**.
 
 ![hcxreview](./images/hcxdepfinish.png)
 

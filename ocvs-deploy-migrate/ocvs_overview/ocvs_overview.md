@@ -69,6 +69,7 @@ OCVS provides multiple pricing intervals to suit a wide range of use-case from s
 - [OCVS Documentation](https://docs.oracle.com/en-us/iaas/Content/VMware/Concepts/ocvsoverview.htm)
 - [OCVS Solution Brief](https://www.oracle.com/a/ocom/docs/understanding-oracle-cloud-vmware-solution.pdf)
 
+## Acknowledgements
 
 * **Author:** Vijay Kumar
 , Cloud Engineering OCVS
