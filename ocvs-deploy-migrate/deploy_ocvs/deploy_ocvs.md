@@ -262,19 +262,16 @@ To access the SDDC component, we will use the Linux Bastion host deployed in the
 
 ![instancemenu](./images/instancemenu.png)
 
-3. Verify that Applied filters shows the **SDDC compartment**.
-
-![instancemenu](./images/compartment.png)
-
+3. Verify that you are in the right compartment.
 4. Locate the instance named - **bastion-host**
 5. Copy the **Public IP** address of the bastion instance.
 6. Locate the instance named - **jump-host**
 7. Copy the **Private IP** address of the jump host.
 
-![instancemenu](./images/ipdetails.png)
+![ipdetails](./images/ipdetails.png)
 
 8. Click on the **jump-host** instance name.
-9. On the **Instance details** page, under **Instance access** section click on **...** and copy the **initial password** for the Windows jump host, this will be needed in next section to setup the RDP connection.
+9. On the **Instance details** page, under **Instance access** section, click **Copy** to copy the Windows instance initial password, keep this password sage this will be needed in next section to setup the RDP connection.
 
 ![instancecreds](./images/instancecreds.png)
 

@@ -37,11 +37,11 @@ To Create a VCN on Oracle Cloud Infrastructure:
 
     ![Networking](images/networking.png)
 
-3. Select the **compartment** next to the **Applied filters**. Ensure you are in the correct compartment to deploy your VCN.
+3. In the left hand pane, make sure you are in the right compartment and click on **Start VCN Wizard**.
 
     ![Compartment](images/compartment.png)
 
-4. Select the **Actions**, and then **Start VCN Wizard**. Select **Create VCN with Internet Connectivity** and **Start VCN Wizard**.
+4. Select **Create VCN with Internet Connectivity** and **Start VCN Wizard**.
 
     ![VCNwizard](images/vcnwizard.png)
 
@@ -77,9 +77,9 @@ To Create a VCN on Oracle Cloud Infrastructure:
     </copy>
     ```
 
-    click next to review and create.
-
     ![VCN](images/subnets.png)
+
+7. Click **Next** to review and create.
 
 ## Task 2 - Configure Security Rules and Routing
 
@@ -87,7 +87,7 @@ To Create a VCN on Oracle Cloud Infrastructure:
 
     ![provisioned](images/provisioned.png)
 
-2. Click on **Security** on the VCN details page and click on **security list for private subnet-ocvs-livelab**. Here will configure the Security Rules.
+2. In the left hand pane, under **Resources**, click on **Security Lists** and select **security list for private subnet-ocvs-livelab**.
 
     ![securitylist](images/securitylist.png)
 
@@ -111,7 +111,7 @@ To Create a VCN on Oracle Cloud Infrastructure:
 
     ![port3389](images/port3389.png)
 
-4. Next we'll verify that our routing rules are correct. Click on the **Routing** and then on **route table for private private subnet-ocvs-livelab**.
+4. Next we'll verify that our routing rules are correct. Return to the **VCN details** page, under the **Resources** list, Click on **Route Tables** and select **route table for private private subnet-ocvs-livelab**.
 
     ![routing](images/routing.png)
 
@@ -119,7 +119,7 @@ To Create a VCN on Oracle Cloud Infrastructure:
 
     ![gateways](images/gateways.png)
 
-5. Finally, verify the rules for the Internet Gateway. Click on the **Routing** and then on **default route table for ocvs-livelab**
+5. Finally, verify the rules for the Internet Gateway. Return to the Route tables list and Click on **default route table for ocvs-livelab**
 
     ![internetgateway](images/internetgateway.png)
 
@@ -194,15 +194,15 @@ To verify that your keys exist, You can use the following commands.
 
     ![bastioninfo](images/bastioninfo.png)
 
-3. Click on **change image**, select Oracle Linux
+3. Click on **change image**.
 
     ![changeimage](images/changeimage.png)
 
-    select **Oracle Linux**,
+    Select **Oracle Linux**,
 
     ![linux](images/linux.png)
 
-    select the Oracle linux 8 image and click **Select image**.
+    Select the **Oracle linux 8** image and click **Select image**.
 
     ![linuximage](images/linuximage.png)
 
@@ -221,27 +221,23 @@ To verify that your keys exist, You can use the following commands.
     **Shape name**
     - VM.Standard.E4.Flex
 
-    and click on **Select shape** when finished.
+    Click on **Select shape** when finished.
 
     ![linuxshape](images/linuxshape.png)
 
-5. Click **Next** to get to Task 3 to set up networking for the bastion host. For the Primary networking we will be using the existing VCN we created in Task  1, ensure that you using the correct **compartment** were you created the VCN. We will also be using the existing public subnet we created in Task 1.
+5. For **Primary VNIC information**, **Select existing virtual cloud network**. From the drop down select **ocvs-livelab** VCN. In the Subnet section, click **Select existing subnet**, from drop-down select **public subnet-ocvs-livelab**. Under Primary VNIC IP addresses, select **Automatically assign private IPv4 address**. 
 
     ![bastionsubnet](images/bastionsubnet.png)
 
-6. Next we will upload our SSH public key file, select **Upload public key file (.pub)**, drop your key inside the box and select **Next** to move on to storage, which we leave at default.
+6. In the **Add SSH keys** section, select **Upload public key file (.pub)**, drop your key inside the box and click **Create**.
 
     ![bastionssh](images/bastionssh.png)
 
-7. Review your compute instance and click **Create** after reviewing.
-
-    ![bastionreview](images/bastionreview.png)
-
-    After creation please take note of the **Public IP address** in the details page of the bastion host instance.
+7. After creation please take note of the **Public IP address** in the details page of the bastion host instance.
 
     ![bastionip](images/bastionip.png)
 
-8. We will repeat the process for the jump server, however the difference is we will be using the **Windows Server 2022 Datacenter**
+7. We will repeat the process for the jump server, however the difference is we will be using the **Windows Server 2022 Datacenter**
 
     ![windows](images/windows.png)
 
