@@ -4,15 +4,15 @@
 
 Oracle offers hundreds of prebuilt pages, workflows and forms “out of the box” as part of the Oracle Fusion Cloud.  Many of our customers want to configure these pages and workflows to meet their specific business needs.  You can unify your experience in our applications by using Redwood.
 
-Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.   
+Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.
 
 ### Objectives
 
-In this lab, you will use Redwood to quickly and efficiently improve the user experience in Oracle Fusion Cloud. 
+In this lab, you will use Redwood to quickly and efficiently improve the user experience in Oracle Fusion Cloud.
 
 Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise! 
+Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
 
 ## HCM: Enhance the Change Salary Experience
@@ -106,7 +106,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     > Click on the **Edit button.**
 
     ![Fields and Regions](images/image013.png)
-    
+
     > (1) For **User Roles**, select **does not contain** from the drop down options.  <br>
 
     > (2) For **User Roles**, type **Human Resource Manager** and select **Human Resource Manager**.
@@ -128,7 +128,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      > (2) Annualized Full-Time Salary: select **Hidden**   <br>
 
-     > (3) Compa-Ratio: select **Hidden** 
+     > (3) Compa-Ratio: select **Hidden**
 
      ![Salary Fields and Regions](images/image017.png)
 
@@ -152,11 +152,11 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 12.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
 
-     > Click on **Edit**. 
+     > Click on **Edit**.
 
      ![Create Validation](images/image023.png)
   
-     > Click on **+ Condition**. 
+     > Click on **+ Condition**.
 
      ![Create Validation](images/image024.png)
 
@@ -169,7 +169,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
      ![Create Validation](images/image026.png)
 
 
-      The form will not allow any user to enter an adjustment percentage greater than 15%. 
+      The form will not allow any user to enter an adjustment percentage greater than 15%.
 
 
 13.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
@@ -181,10 +181,10 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
      > (3) Detail:  type **The Adjustment Percentage must be lower than 15%**.
 
      ![Create Validation](images/image028.png)
-    
+
 
 14.  Well done.  You have configured a new rule for Non-HR personnel.
-   
+
   Redwood offers a quick way to review your changes as they appear in the application.
 
     > (1) Click on the **Preview** ![preview icon](images/icon014_preview.png)  icon in the top right of the screen.   <br>
@@ -226,14 +226,14 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > Click on the **Home** ![home icon](images/icon017_home.png)  Icon.
 
-  
+
 
 
 
 
 19. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
+    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ## ERP & SCM: Update Suppliers (New) Listing Page
 
@@ -259,18 +259,18 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![My Team Page](images/image104.png)
 
-    > Click anywhere in the page away from the search filter **Supplier (187)** 
+    > Click anywhere in the page away from the search filter **Supplier (187)**
 
     ![My Team Page](images/image105.png)
 
 
 
 
-3. Now you will enter the Suppliers (New) Page that displays lists of suppliers. 
+3. Now you will enter the Suppliers (New) Page that displays lists of suppliers.
 
 
     > (1) Click on drop-down icon to expand a specific supplier row.
-    
+
     ![Change Salary Page](images/image106.png)
 
 4.  You can see the supplier information displayed is limited. We will update the page to display more fields for procurement managers. <br><br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
@@ -330,7 +330,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (1) Enter **Procurement Manager** in the right most box of the **User Roles** row.       <br>
 
-    > (2) Select the first **Procurement Manager** role from the drop-down list. .
+    > (2) Select the first **Procurement Manager** role from the drop-down list.
 
     ![Fields and Regions, Conditions](images/image115.png)
 
@@ -341,7 +341,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Fields and Regions](images/image116.png)
 
-11. First you want to the configure the page  to display the **Creation Source**. 
+11. First you want to the configure the page  to display the **Creation Source**.
 
     > (1) Click in the Box in the **Hidden Column** for **Creation Source Field** row.    <br>
 
@@ -358,13 +358,13 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 ![Validation 2](images/image118.png)
 
- 
+
 13. Well done. You have configured a new role-based page layout for Procurement Managers. Redwood offers a quick way to review your changes as they appear in the application.
 
     > (1) Click on the **Preview** ![Fields and Regions, Conditions](images/icon104_preview.png) icon in the upper right of the screen<br>
 
     > (2) A new windows will pop up in a new browser tab.
-    
+
     ![Validation 2](images/image119.png)
 
 14. You have reentered the Suppliers (New) page. Let’s review the changes.
@@ -372,13 +372,13 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     Click on the **Supplier Type** to display the Filter and click into the Search box **Supplier Type**.
 
 ![Validation 2](images/image120.png)
-   
-15.  You need to select the search filter Supplier (187) again. 
 
-> Click and select **Supplier (187)** to display list of suppliers. 
+15.  You need to select the search filter Supplier (187) again.
+
+> Click and select **Supplier (187)** to display list of suppliers.
 
 ![Validation 4](images/image121.png)
- 
+
 
 >  Click anywhere in the page away from the search filter **Supplier (187)**
 
@@ -397,11 +397,11 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 18. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
+    [![Checkpoint](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ## Summary
 
-Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.   
+Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.
 
 
 **You have successfully completed the Activity!**
@@ -417,7 +417,7 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist, Advanced Technology Services; Casey Doody, Cloud Technologist , Advanced Technology Services
 * **Contributors** -  Sajid Saleem, Master Principal Cloud Technologist, Advanced Technology Services
-* **Last Updated By/Date** - Casey Doody, November 2024
+* **Last Updated By/Date** - Casey Doody, April 2025
 
 
 
