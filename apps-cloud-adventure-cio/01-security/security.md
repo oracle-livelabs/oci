@@ -50,7 +50,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
   > In the search field provided at the top, type: **Adventure**. <br>
 
-  > Then **click** on the first entry as shown.
+  > Then **click** on the **Adventure Accounts Payable Manager** role.
 
   ![Adventure Role Search](images/image004.png)
 
