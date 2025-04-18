@@ -107,9 +107,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Fields and Regions](images/image013.png)
     
-    > (1) Select **does not contain** from the drop down options.  <br>
+    > (1) For **User Roles**, select **does not contain** from the drop down options.  <br>
 
-    > (2) Type **Human Resource Manager** and select **Human Resource Manager**.
+    > (2) For **User Roles**, type **Human Resource Manager** and select **Human Resource Manager**.
 
     ![Fields and Regions](images/image014.png)
 
@@ -160,7 +160,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      ![Create Validation](images/image024.png)
 
-     > (1) Type **Adjustment Percentage** in the box and select **# Adjustment Percentage** under **Salary Details**     <br>
+     > (1) Type **Adjustment Percentage** in the box and select the 1st **# Adjustment Percentage** under **Salary Details**     <br>
 
      > (2) Select **greater than**    <br>
 
@@ -176,7 +176,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      > (1) Summary: type **Adjustment Percentage is too high**.    <br>
 
-     > (2) Detail:  **The Adjustment Percentage must be lower than 15%** in **Detail**.
+     > (2) Detail:  **The Adjustment Percentage must be lower than 15%** in **Detail**. <br>
 
      > (3) Detail:  type **The Adjustment Percentage must be lower than 15%**.
 
