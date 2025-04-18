@@ -79,8 +79,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     ![Workbook Design Mode](images/image004.png)
 
 
-
-
 7.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories.
 
     > (1) Locate the “Top 10 Expense Categories by Expenses” insight and click the Add Icon  ![Add Icon ](images/icon006.png)  shown in the image. This will add the Insight to the Canvas.  <br>
@@ -234,8 +232,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     ![Workbook Design Mode](images/image104.png)
 
 
-
-
 7.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories.
 
     > (1) Locate the “Top 10 Expense Categories by Expenses” insight and click the Add Icon  ![Add Icon ](images/icon106.png)  shown in the image. This will add the Insight to the Canvas.  <br>
@@ -325,8 +321,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 ## Summary
 
 You discovered how effortlessly Fusion Analytics enables the creation of content and analysis of data. By integrating diverse data sources, you were able to delve deeper from summary information to detailed analysis, uncovering root causes. You then shared your discoveries with a broader audience, making the insights accessible and impactful.
-
-
 
 **You have successfully completed the Activity!**
 

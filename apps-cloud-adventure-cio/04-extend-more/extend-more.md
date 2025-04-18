@@ -52,7 +52,7 @@ In this activity you will use HCM Guided Journey Task with User Defined Content 
 
 3.
 
-    > Click your **Guided Journey name** (e.g. **CA&#95;##**) to open the journey.
+   > Click your **Guided Journey name** (e.g. **CA&#95;##**) to open the journey.
 
    ![Open Guided Journey](images/hcmimage003.jpg)
 <br>

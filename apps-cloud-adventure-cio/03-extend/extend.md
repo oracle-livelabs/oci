@@ -234,11 +234,12 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (1) Click in the **Operator** field and select **contains ($co)** from the resulting pop-up list (2).
 
-    ![operator sselection](images/image028.png)
+    ![operator selection](images/image028.png)
 
 30. And now you'll reference the page variable that we created earlier.
 
-    > (1) Click in the **Attribute** field and select **$variables.SupplierSearchString** from the resulting pop-up list (2). <br>
+    > (1) Click in the **Attribute** field.<br>
+    > (2) Select **$variables.SupplierSearchString** from the resulting pop-up list. <br>
     > (3) Click in the **Finish** button.
 
     ![widen screen](images/image029.png)
@@ -258,7 +259,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
       - Supplier<br>
       - SupplierNumber<br>
-      - TaxpayerId<br><br>
+      - TaxpayerId<br>
 
     > (2)  Confirm the list of selected fields. <br>
 
