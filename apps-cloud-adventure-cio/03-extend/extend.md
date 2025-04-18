@@ -10,7 +10,7 @@ In this lab, you will use Visual Builder to create additional screens
 
 Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise! 
+Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
 ## ERP & SCM: Create a simplified user interface using Redwood Design Patterns and Oracle Visual Builder.
 
@@ -21,14 +21,14 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 2. We will now create a new application screen to allow editing of specific supplier information.  Oracle Cloud Applications include an embedded tool called Visual Builder.  Visual Builder is the same tool that Oracle uses to develop application screens and it's available for you to create additional screens.  These screens can leverage both Oracle Cloud Application data and, if necessary, data from external systems.
 
-    > (1) **Click** on the **‘Configuration’** tab. <br> 
+    > (1) **Click** on the **‘Configuration’** tab. <br>
 
     > (2) **Click** on the **‘Visual Builder’** tile <br>
 
     ![Open Visual Builder](images/image001.png)
 
 
-3. We have pre-defined a Project.  A project collects all the people, tools, and processes you need to complete a unit of work.  You can use a project to host source code files, track issues, collaborate on code, and build and deploy your applications. If your team is extending Oracle Cloud Applications, you’ll probably want to set things up so that you have a single project dedicated to work with a single repository for each Application. 
+3. We have pre-defined a Project.  A project collects all the people, tools, and processes you need to complete a unit of work.  You can use a project to host source code files, track issues, collaborate on code, and build and deploy your applications. If your team is extending Oracle Cloud Applications, you’ll probably want to set things up so that you have a single project dedicated to work with a single repository for each Application.
 
     > **Click** on the **‘CloudAdventure’** project
 
@@ -38,8 +38,8 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > **Click** on the **‘Manage Workspaces’** link.  If your Project has no pre-existing workspaces, you'll be presented with a **‘Go to Workspaces’** button to click instead.  The following screenshots show both potential screens.
 
-    ![workspace](images/image003.png) 
-    ![workspace](images/image003b.png) 
+    ![workspace](images/image003.png)
+    ![workspace](images/image003b.png)
 
 5. We'll create a new workspace for our simplified supplier screen
 
@@ -81,7 +81,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![manage services](images/image009.png)
 
-11. We'll use the Supplier Service from the ERP/SCM Catalog. 
+11. We'll use the Supplier Service from the ERP/SCM Catalog.
 
     > (1) **Enter** ‘Suppliers’ in the 'Supplier Name' field. <br>
     > (2) Enter ‘Suppliers’ in the ‘Filter Objects/Endpoints’ field. <br>
@@ -90,13 +90,13 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![create service connect](images/image010.png)
 
-12. The resulting screen shows additional configuration options for our supplier service, but we'll just use the default settings.  We can also see the Endpoints details related to our Suppliers service.  
+12. The resulting screen shows additional configuration options for our supplier service, but we'll just use the default settings.  We can also see the Endpoints details related to our Suppliers service.
 
     > **Click** on the **‘Endpoints’** tab as shown.
 
     ![select from catalog](images/image011.png)
 
-13. Here we see the various operations and data objects available.  This includes Get, Post and Patch operations allowing for query, create and update actions  Scrolling this window we can see that other related information is also available, including addresses, attachments, contacts, descriptive flexfields and more. Now we want to start creating our new screen.  
+13. Here we see the various operations and data objects available.  This includes Get, Post and Patch operations allowing for query, create and update actions  Scrolling this window we can see that other related information is also available, including addresses, attachments, contacts, descriptive flexfields and more. Now we want to start creating our new screen.
 
     > **Click** on the **‘App UIs’** ![App UIs Icon](images/icon019_apps_uis.png) icon in the left toolbar
 
@@ -108,7 +108,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![select ERP/SCM](images/image013.png)
 
-15. You can name your App UI.    
+15. You can name your App UI.
 
     > (1) **Enter** **‘QuickSupplierUI’** in the "'App UI Name'" field.<br>
 
@@ -154,18 +154,18 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 20. Create a page variable to save the contents of your new Input Text field
 
     > (1) Click the (x) icon on the top right of the Value field.  If the (x) is not showing, move your cursor to the Value field and it will appear. <br>
-      
+
     > (2) The **Variables** pop-up window will appear.  Click **Create** next to the **Page** option. 
 
-    ![create supplier service](images/image019.png)    
+    ![create supplier service](images/image019.png)
 
 21. Name your page variable.
 
     > (1) Type **SupplierSearchString** in the ID Field.<br>
-      
-    > (2) Click the **Create** button. 
 
-    ![create supplier service](images/image020.png)   
+    > (2) Click the **Create** button.
+
+    ![create supplier service](images/image020.png)
 
 22. You’ll now add a Table component to the Panel.
 
@@ -203,7 +203,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![finish supplier fields](images/image024.png)
 
-26. You’ll select a few fields to display on the new screen.  This screen will be used to search for Suppliers and allow for quick update of a few pieces of Supplier Data.  
+26. You’ll select a few fields to display on the new screen.  This screen will be used to search for Suppliers and allow for quick update of a few pieces of Supplier Data.
 
     > (1)  Click **'Checkbox'** next to the following fields.  You’ll need to scroll the Endpoint Structure to see the Supplier field: <br>
            - Alias <br>
@@ -224,27 +224,27 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![widen screen](images/image026.png)
 
-28. The next 3 steps will configure the Condition for the filterCriterion.  
+28. The next 3 steps will configure the Condition for the filterCriterion.
 
     > (1) Type **Supplier** in the first field and pick **Supplier** from the resulting pop-up list (2).
 
-    ![widen screen](images/image027.png)    
+    ![widen screen](images/image027.png)
 
 29. Next you'll select the Operator
 
     > (1) Click in the **Operator** field and select **contains ($co)** from the resulting pop-up list (2).
-    
-    ![operator sselection](images/image028.png)    
+
+    ![operator sselection](images/image028.png)
 
 30. And now you'll reference the page variable that we created earlier.
 
     > (1) Click in the **Attribute** field and select **$variables.SupplierSearchString** from the resulting pop-up list (2). <br>
     > (3) Click in the **Finish** button.
-    
-    ![widen screen](images/image029.png)    
+
+    ![widen screen](images/image029.png)
 
 
-31. Notice that the screen auto-queried Supplier Information.  You can easily move between Design, Live and Code views of our application.  But next, you want the ability to edit data.  So, you’ll use the Quick Start again to add an edit page.  
+31. Notice that the screen auto-queried Supplier Information.  You can easily move between Design, Live and Code views of our application.  But next, you want the ability to edit data.  So, you’ll use the Quick Start again to add an edit page.
 
     > (1) Confirm that you're on the **Quick Start** tab. <br>
 
@@ -274,36 +274,35 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 34. A new browser tab is launched showing our completed application.  You now have a fully functioning screen that supports query and update capabilities.
 
-    > (1) Enter your search criteria by entering a string in the **Enter Supplier Name Search** field.  You can use **Corp** like shown in the screenshot or enter your **user number (##)** to find the Supplier with your number included as part of the name.  <br>  
+    > (1) Enter your search criteria by entering a string in the **Enter Supplier Name Search** field.  You can use **Corp** like shown in the screenshot or enter your **user number (##)** to find the Supplier with your number included as part of the name.  <br>
 
     > (2) Select a Supplier record by clicking on it (the row will highlight) <br>
 
-    > (2) Click the **Edit Supplier** button.   
+    > (2) Click the **Edit Supplier** button.
 
     ![finish edit page fields](images/image033.png)
 
 35. You Edit Supplier screen allows you to update the information and save. The new screen leverages the security and business rules of the application via the standard REST API.
 
-    > (1) Note that the Supplier Number field is non-enterable.  That field is non-updateable and that condition automatically carries through to our new screen.  <br>    
-    > (2) The Taxpayer ID is enterable, but we’ll end here without doing the update.  
+    > (1) Note that the Supplier Number field is non-enterable.  That field is non-updateable and that condition automatically carries through to our new screen.  <br>
+    > (2) The Taxpayer ID is enterable, but we’ll end here without doing the update.
 
 
     ![preview](images/image034.png)
 
 
 36. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
-    
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
- 
+
+    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+
 
 ## Summary
 
 The two tasks of this Extension adventure introduced you to a few of the capabilities that customers can leverage to extend Oracle Fusion Cloud applications.  These features allow you to fine tune your Oracle Fusion Cloud Applications for peak performance, business processes tailored to you requirements, and fast, efficient usage.
 
-You learned how to extend the applications using Oracle Visual Builder Studio to create new screens that leverage both Oracle and non-Oracle data. You also learned how to setup and defined a Guided Journey, which provides your users with the real-time, inline guidance and information required to complete their tasks.  
+You learned how to extend the applications using Oracle Visual Builder Studio to create new screens that leverage both Oracle and non-Oracle data. You also learned how to setup and defined a Guided Journey, which provides your users with the real-time, inline guidance and information required to complete their tasks.
 
-You also learned how to leverage 3rd party Generative AI capabilities by leveraging external LLMs directly from the Guided Journey feature of Oracle Fusion Cloud Applications.  
-
+You also learned how to leverage 3rd party Generative AI capabilities by leveraging external LLMs directly from the Guided Journey feature of Oracle Fusion Cloud Applications.
 So, check your with you team, double-check your racing harness and get ready for our next Adventure.
 
 
@@ -318,5 +317,5 @@ So, check your with you team, double-check your racing harness and get ready for
 
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist, Advanced Technology Services; Stephen Chung, Principal SaaS Cloud Technologist, Advanced Technology Services
-* **Contributors** - Sajid Saleem, Master Principal SaaS Cloud Technologist, Advanced Technology Services  
-* **Last Updated By/Date** - Charlie Moff, November 2024 
+* **Contributors** - Sajid Saleem, Master Principal SaaS Cloud Technologist, Advanced Technology Services
+* **Last Updated By/Date** - Charlie Moff, April 2025

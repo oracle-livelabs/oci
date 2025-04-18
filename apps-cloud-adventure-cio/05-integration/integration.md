@@ -45,35 +45,35 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > Click in the **Keywords** search bar
 
-    ![Manage Suppliers View](images/image005.png)  
+    ![Manage Suppliers View](images/image005.png)
 
     > (1) **Search** for a supplier using the user id number (e.g. 01, 02).  <br>
 
     > (2) Click the **Search** button
 
-    ![Keywords search bar](images/image006.png)  
+    ![Keywords search bar](images/image006.png)
 
     > Click the **Edit** ![Edit Icon](images/icon011_edit.png)  button in the ‘Search Results’ area
 
-    ![Search Results](images/image007.png)  
+    ![Search Results](images/image007.png)
 
 
 4. We’re going to navigate to the Supplier’s addresses tab.
-   
+
     > Click the **Addresses** tab
 
-    ![Suppliers View](images/image008.png)  
+    ![Suppliers View](images/image008.png)
 
     > Click the **Edit** ![Edit Icon](images/icon011_edit.png) icon to edit the Supplier’s address
 
-    ![Edit Suppliers View](images/image009.png)  
+    ![Edit Suppliers View](images/image009.png)
 
 
-5.   **Note:** We’ll only edit the Supplier’s second line of address information, i.e. ‘Address Line 2’ text entry field. 
+5.   **Note:** We’ll only edit the Supplier’s second line of address information, i.e. ‘Address Line 2’ text entry field.
 
     We’re going to add a Suite (e.g. 123) to the Supplier’s address information that was missing before.
 
-    > Click in the **Address Line 2** text entry field 
+    > Click in the **Address Line 2** text entry field
 
     ![Edit Suppliers View](images/image010.png)
 
@@ -81,17 +81,17 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Edit Suppliers View](images/image011.png)
 
-    > Click **Save and Close** 
+    > Click **Save and Close**
 
     ![Edit Suppliers View](images/image012.png)
 
-    > Click **Submit** 
+    > Click **Submit**
 
     ![Edit Suppliers View](images/image013.png)
 
 6.  **Note:** We’ve modified our demo environment’s approval workflow for internal supplier profile changes to be automatically approved for demonstration purposes, however this can be configured based on each customer’s business requirements
 
-    > Click **OK** on the resulting confirmation box. 
+    > Click **OK** on the resulting confirmation box.
 
     ![Suppliers View](images/image014.png)
 
@@ -118,7 +118,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     > Click on **Audit Report REST Endpoints**
 
     ![Integrations View](images/image018.png)
-    
+
 
 
     **This is an example of a configuration. This tile links out to an external website.**
@@ -132,22 +132,22 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > Click on **Get an audit report** under **Audit Report**
 
-    ![Audit Report REST Endpoints](images/image020.png)    
+    ![Audit Report REST Endpoints](images/image020.png)
 
     > **Click** the drop-down menu icon [drop down icon](images/icon014_downarrow.png) **‘Jump to’** and select the **‘Examples’** menu option
 
-    ![Get an audit report](images/image021.png)   
+    ![Get an audit report](images/image021.png)
 
     > Scroll down the page, review the first **Example Request Payload** and **Example of Response Body**
 
-    ![API Examples](images/image022.png)   
+    ![API Examples](images/image022.png)
 
 
 
 
 10. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-    
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
+
+    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 
 ## Summary
@@ -164,5 +164,5 @@ This Cloud Adventure also featured the importance of having open REST interfaces
 
 ## Acknowledgements
 * **Author** - Jamil Orfali, Senior Cloud Technologist, Advanced Technology Services, Kris Holmgren, Senior Cloud Technologist, Advanced Technology Services
-* **Contributors** -  
-* **Last Updated By/Date** - Jamil Orfali, November 2024
+* **Contributors** -
+* **Last Updated By/Date** - Jamil Orfali, April 2025
