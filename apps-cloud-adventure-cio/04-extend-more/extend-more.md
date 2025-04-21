@@ -92,7 +92,7 @@ In this activity you will use HCM Guided Journey Task with User Defined Content 
 
 8. There are no matching workers, so you can unselect Direct reports to broaden our search.
 
-   > Click the ![X Icon](images/icon14_X.png) next to Direct Reports under the search field.
+   > Click the ![X Icon](images/icon14_x2.png) next to Direct Reports under the search field.
 
    ![Remove Direct Reports Filter](images/hcmimage008.jpg)
 <br>

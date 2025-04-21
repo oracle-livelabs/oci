@@ -8,8 +8,6 @@ It is a Cloud application that delivers best-practice Key Performance Indicators
 
 This activity guide helps business users to investigate and research data, ask relevant questions to understand Trends, Patterns and Outliers.
 
-
-
 ### Objectives
 
 In this activity, you will Create analytics across different lines of business to derive better business insight
@@ -18,10 +16,7 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-
-## ERP & HCM: Unify finance and workforce-related data to understand changing workforce dynamics and gain comprehensive insights.
-
-
+## ERP & HCM: Unify finance and workforce-related data to understand changing workforce dynamics and gain comprehensive insights
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insights.
 
@@ -29,12 +24,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Analytics OBJs](images/analytics_objs1.png)
 
-
-
 2. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making.
 
     > (1) Click on the **‘Analytics’** tab <br>
-
     > (2) Click on **‘Fusion – Analytics Data Intelligence’** icon <br>
 
     ![Login](images/image001.png)
@@ -43,7 +35,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (1) Enter assigned username and Fusion Analytics Password  <br>
 
-    > (2) Click on the ‘Sign In’ <br>
+ > (2) Click on the ‘Sign In’ <br>
 
     ![Login](images/image023.png)
 
@@ -56,7 +48,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     > On the Margin Tile locate the **Open Workbook** ![Open Workbook Icon](images/icon001.png) Icon on the top right corner and click on it.
 
     ![Analytics home](images/image002.png)
-
 
 5. This action expands the Tile and opens the workbook.
 
@@ -71,13 +62,11 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Workbook Design Mode](images/image003.png)
 
-
 6.  Next, let’s expand the Auto Insights pane for better observability.
 
     > Click on the Expand / Shrink Icon  ![Expand / Shrink Icon ](images/icon004.png)  as shown in the image.
 
     ![Workbook Design Mode](images/image004.png)
-
 
 7.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories.
 
@@ -87,7 +76,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Auto insights view](images/image007.png)
 
-
 8.  Now, we can compare margin and cost side by side.
 
     Payroll expenses emerge as the highest cost. We will delve deeper into payroll expenses to identify their components.
@@ -95,7 +83,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     Our next step involves integrating Human Resources data into our analysis.
 
     ![Analytics view 1](images/image008.png)
-
 
 9.  Combining datasets from multiple “Lines of Business” allows an individual to conduct a deep dive into the actual problems.
 
@@ -112,7 +99,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     > (2) Follow steps 1 and 2 as shown in the picture 10.
 
     ![Analytics view 3](images/image010.png)
-
 
 10.  We need to perform trend analysis to understand when the expense anomaly started occurring and whether it is consistent across all expense types.
 
@@ -148,30 +134,23 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Analytics view 8](images/image016.png)
 
-
 14.  This brings all relevant columns onto the canvas. We can now co-relate several attributes and arrive at the correct conclusion.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance.
 
-
-
-15.  Let’s understand how the trend looks like in the future. We will use the built in Statistical Analysis function like forecast to under the future
+15. Let’s understand how the trend looks like in the future. We will use the built in Statistical Analysis function like forecast to under the future
 
     > Right click anywhere in the **Turnover**, **Absences** Chart choose **Add Statistics** then **Forecast**
 
     ![Analytics view 11](images/image021.png)
 
-16.  With a few simple clicks, you were able to forecast and understand the future trend.
+16. With a few simple clicks, you were able to forecast and understand the future trend.
 
     ![Analytics view 12](images/image022.png)
-
-
 
 17. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
-
 ## ERP & SCM: Unify finance and supply chain data to identify bottlenecks and optimize resource allocation
-
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insights.
 
@@ -179,26 +158,19 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Analytics OBJs](images/analytics_objs1.png)
 
-
-
 2. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making.
 
     > (1) Click on the **‘Analytics’** tab <br>
-
     > (2) Click on **‘Fusion – Analytics Data Intelligence’** icon <br>
 
     ![Login](images/image001.png)
 
-
-
 3. After a successful login, you will land on the Oracle Analytics home page.
 
     > (1) Enter assigned username and Fusion Analytics Password  <br>
-
     > (2) Click on the ‘Sign In’ <br>
 
     ![Login](images/image023.png)
-
 
 4. A finance Watchlist comprising several Tiles is available on the home page.
 
@@ -210,8 +182,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Analytics home](images/image102.png)
 
-
-5.  This action expands the Tile and opens the workbook.
+5. This action expands the Tile and opens the workbook.
 
     Let's now set the workbook to design mode so that we can add cost elements.
 
@@ -219,27 +190,22 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     Instead of building manually, let's use the Auto Insights feature.
 
-
     > Click on the Auto Insights Icon  ![Auto Insights Icon](images/icon103.png)  as shown in the image.
 
     ![Workbook Design Mode](images/image103.png)
 
-
-6.  Next, let’s expand the Auto Insights pane for better observability.
+6. Next, let’s expand the Auto Insights pane for better observability.
 
     > Click on the Expand / Shrink Icon  ![Expand / Shrink Icon ](images/icon104.png)  as shown in the image.
 
     ![Workbook Design Mode](images/image104.png)
 
-
-7.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories.
+7. The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories.
 
     > (1) Locate the “Top 10 Expense Categories by Expenses” insight and click the Add Icon  ![Add Icon ](images/icon106.png)  shown in the image. This will add the Insight to the Canvas.  <br>
-
     > (2) Click on the **x** sign to close the Insights pane.
 
     ![Auto insights view](images/image107.png)
-
 
 8. Let’s create a new Canvas to under the SCM issue
 
@@ -250,22 +216,16 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 9. We will add Supply Chain data to the canvas
 
      > Expand the SCM Dataset by clicking on the Triangle   icon.  Expand the Fiscal Data folder and locate Month Column. <br>
-
      > Next locate Total Cost. While keeping the “CTRL ” key pressed drag and drop them on to the canvas.  <br>
-
      > Your canvas should look like the image on the right.<br>
 
     ![2 images](images/scm-002.png)
 
-
 10. Total cost has been varying over time. We need to understand what is causing the increase and decrease
 
      > Expand the Fiscal Data folder and locate Month Column. <br>
-
      > Scroll down to locate Off Contract and Contract purchase columns. <br>
-
      > While keeping the “CTRL ” key pressed drag and drop them on to the canvas under the existing chart. <br>
-
      > Watch for the Green bar before you drop the columns. <br>
 
     ![expand Fiscal Data folder ](images/scm-003.png)
@@ -280,15 +240,11 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Properties panel  ](images/scm-005.png)
 
-
 12. We need to understand what is causing the off contract purchasing.
 
      > Expand the Fiscal Data folder and locate Month Column. <br>
-
      > Scroll down to locate Received Late Quantity columns. <br>
-
      > While keeping the “CTRL ” key pressed drag and drop them on to the canvas under the existing chart.  <br>
-
      > Watch for the Green bar before you drop the columns.  <br>
 
     ![Fiscal Data folder ](images/scm-006.png)
@@ -300,7 +256,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 13. Lets find out which supplier is responsible for the issue.
 
      > Locate supplier and drop it into the color section. <br>
-
      > Next delete Fiscal Data (Month) column <br>
 
     ![Supplier](images/scm-008.png)
@@ -312,7 +267,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 14. Two suppliers are the cause of the issue.
 
     ![Analytics view](images/scm-009.png)
-
 
 15. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
 
