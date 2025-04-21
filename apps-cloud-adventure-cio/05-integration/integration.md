@@ -14,7 +14,6 @@ We've designed this journey to be interactive and engaging. Make sure to answer 
 
 With your adventure hat on and a curious mind, prepare for an exhilarating exploration of Fusion Cloud data audit and REST API integration features. Let's embark on this thrilling journey together!
 
-
 ### **Objectives**
 
 In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
@@ -35,11 +34,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Application Homepage](images/image002.png)
 
-
     > Click the **Manage Suppliers** button
 
     ![Show More View](images/image004.png)
-
 
 3. Next, we’re going to search for the Supplier you’ve been assigned, e.g. “01…”
 
@@ -48,7 +45,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     ![Manage Suppliers View](images/image005.png)
 
     > (1) **Search** for a supplier using the user id number (e.g. 01, 02).  <br>
-
     > (2) Click the **Search** button
 
     ![Keywords search bar](images/image006.png)
@@ -56,7 +52,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     > Click the **Edit** ![Edit Icon](images/icon011_edit.png)  button in the ‘Search Results’ area
 
     ![Search Results](images/image007.png)
-
 
 4. We’re going to navigate to the Supplier’s addresses tab.
 
@@ -68,8 +63,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Edit Suppliers View](images/image009.png)
 
-
-5.   **Note:** We’ll only edit the Supplier’s second line of address information, i.e. ‘Address Line 2’ text entry field.
+5. **Note:** We’ll only edit the Supplier’s second line of address information, i.e. ‘Address Line 2’ text entry field.
 
     We’re going to add a Suite (e.g. 123) to the Supplier’s address information that was missing before.
 
@@ -89,7 +83,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Edit Suppliers View](images/image013.png)
 
-6.  **Note:** We’ve modified our demo environment’s approval workflow for internal supplier profile changes to be automatically approved for demonstration purposes, however this can be configured based on each customer’s business requirements
+6. **Note:** We’ve modified our demo environment’s approval workflow for internal supplier profile changes to be automatically approved for demonstration purposes, however this can be configured based on each customer’s business requirements
 
     > Click **OK** on the resulting confirmation box.
 
@@ -99,15 +93,11 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Suppliers View](images/image015.png)
 
-
-
 7. Let’s navigate back to the Oracle Fusion Cloud home screen.
 
     > Click the **Home** ![Home Icon](images/icon012_home.png) button
 
     ![Suppliers View](images/image016.png)
-
-
 
 8. Now, we’re going to discover how we can audit several pieces of information that’s relevant to our cloud adventure today: user access (sign in / sign out) as well as supplier address information changes via REST API integrations.
 
@@ -119,12 +109,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Integrations View](images/image018.png)
 
-
-
     **This is an example of a configuration. This tile links out to an external website.**
 
     **Take note of the detailed documentation. API endpoints, parameters, code examples, use cases, Oracle’s documentation is public and designed to be very useful.**
-
 
 9. Let’s review the REST API endpoints that we can use to review Auditable data that can be extracted from Fusion Cloud.
 
@@ -142,13 +129,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![API Examples](images/image022.png)
 
-
-
-
 10. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
-
 
 ## Summary
 
@@ -163,6 +146,6 @@ This Cloud Adventure also featured the importance of having open REST interfaces
 * [Oracle Documentation](http://docs.oracle.com)O
 
 ## Acknowledgements
-* **Author** - Jamil Orfali, Senior Cloud Technologist, Advanced Technology Services, Kris Holmgren, Senior Cloud Technologist, Advanced Technology Services
+* **Author** - Jamil Orfali, Senior Cloud Technologist, Advanced Technology Services; Kris Holmgren, Senior Cloud Technologist, Advanced Technology Services.
 * **Contributors** -
 * **Last Updated By/Date** - Jamil Orfali, April 2025
