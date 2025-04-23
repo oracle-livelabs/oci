@@ -1,6 +1,6 @@
 # VMware Workload Migration to Oracle Cloud VMware Solution (OCVS)
 
-**Estimated time:** 30 minutes
+**Estimated time:** 2 Hours
 
 ## Workshop Introduction
 
