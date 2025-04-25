@@ -42,14 +42,7 @@
       color="#5bbad5"
     />
     <title><%= config.getOptionalString('app.title') ?? 'Backstage' %></title>
-      <script>
-        if (!window.location.hostname.includes("github.io")) {
-            var script = document.createElement("script");
-            script.src = "https://www.oracle.com/us/assets/metrics/ora_apex.js";
-            script.async = true;
-            document.head.appendChild(script);
-        }
-    </script>
+      
 </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
