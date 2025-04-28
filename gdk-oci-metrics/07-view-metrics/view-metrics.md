@@ -16,7 +16,7 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console, navigate to **OCI Console >> Observability & Management**. Under **Monitoring**, click **Metrics Explorer**.
 
-	![Metrics Explorer Menu](https://oracle-livelabs.github.io//common/images/console/metrics-explorer-icon.jpg)
+	![Metrics Explorer Menu](https://oracle-livelabs.github.io//common/images/console-2025/metrics-explorer-icon.jpg)
 
 2.  In the **Metrics Explorer**, scroll down to the **Query 1** section. Select your workshop compartment from the **Compartment** drop down list.
 
