@@ -175,7 +175,7 @@ In this lab, you will:
 
 	![Profile icon](images/profile-icon.jpg#input)
 
-2. From the **Profile details** screen, click **Tokens and keys** under **Auth tokens**. Click **Generate token**.
+2. From the **Profile details** screen, navigate to **Tokens and keys**. Under **Auth tokens** click **Generate token**.
 
 	![Generate token Button](images/generate-token.png)
 
