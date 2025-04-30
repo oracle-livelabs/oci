@@ -17,7 +17,7 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console, open the navigation menu, click **Storage**. Under **Object Storage & Archive Storage**, click **Buckets**.
 
-   ![Object Storage buckets menu](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png)
+   ![Object Storage buckets menu](https://oracle-livelabs.github.io/common/images/console-2025/storage-buckets.png)
 
 2. Select your workshop compartment from the **Compartment** drop down list on the left. <if type="desktop">To find the compartment name, return to the **Login Details** screen, then copy the value of the **Compartment Name**, paste it in the **Compartment** drop down list in the Oracle Cloud Console and select the filtered compartment.
 
