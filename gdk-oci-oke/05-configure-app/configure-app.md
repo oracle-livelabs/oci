@@ -175,7 +175,7 @@ In this lab, you will:
 
 	![Profile icon](images/profile-icon.jpg#input)
 
-2. From the **Profile details** screen, click **Auth tokens** under **Resources**. Click **Generate token**.
+2. From the **Profile details** screen, navigate to **Tokens and keys**. Under **Auth tokens** click **Generate token**.
 
 	![Generate token Button](images/generate-token.png)
 
@@ -217,7 +217,7 @@ In this lab, you will:
 
 3. From the Oracle Cloud Console navigation menu, go to **Identity & Security >> Identity >> Policies**.
 
-	![Policies Menu](https://oracle-livelabs.github.io/common/images/console/id-policies.png)
+	![Policies Menu](https://oracle-livelabs.github.io/common/images/console-2025/id-policies.png)
 
 4. Go to your workshop compartment.
 
