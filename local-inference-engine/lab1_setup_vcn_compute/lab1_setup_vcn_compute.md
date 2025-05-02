@@ -17,8 +17,8 @@ In this lab, you will:
 
 1. From the OCI Services menu, click **Networking** > **Virtual Cloud Networks**. 
 
+   
     ![alt text](images/vcnstep1.png)
-
 1. Look the lower right corner of your screen for a slider selection titled "Redwood Preview".
 **DISABLE** Redwood Preview. This entire lab assumes you are not using the Redwood Preview.  
 
