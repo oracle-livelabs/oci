@@ -141,6 +141,7 @@ Please note that the model is not fine-tuned or tailored to our use case yet so 
     ```
     Just for fun, try to get the model to hold context in a chat. Your results ~~may~~ will vary 😊
  . 
+T minus 2  
 
 *Congratulations! You have successfully completed the lab.*
 You may now **proceed to the next lab**.

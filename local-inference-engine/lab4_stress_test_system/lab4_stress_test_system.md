@@ -59,6 +59,7 @@ If you are on a non-GPU system, you could use the top command to see CPU utiliza
     - How high is GPU utilization going now?  
     Feel free to repeat the command in the first ssh session to see it happen again.  
 
+T minus 1!!  
 
 *Congratulations! You have successfully completed the lab.*<br/>
 You may now **proceed to the next lab**.

@@ -32,7 +32,7 @@ This lab assumes you have:
 * Familiarity with basic Linux commands and SSH usage.
 * Internet access from the instance to download software packages and the model (should be automatic).
 
-> **Note:** GPU shapes in OCI incur costs while running. Be sure to terminate your instance when the lab is complete to avoid unexpected charges.
+> **Note:** GPU shapes in OCI incur costs while running. Be sure to terminate your instance when the lab is complete to avoid unexpected charges. 💵 💵 
 
 ## Learn More
 

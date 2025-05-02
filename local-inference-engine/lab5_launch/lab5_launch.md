@@ -1,7 +1,7 @@
 # NovaSystems Launch!
 
 ## Introduction
-Great news! The manned mission to Mars was a success, but no time to celebrate now. The crew is well on their way to the Red Planet and are now far enough from earth that messages take between 12 to 25 minutes each way — making real-time communication impractical for urgent safety and technical questions.  
+Great news! The manned mission launch to Mars was a success, but no time to celebrate now. The crew is well on their way to the Red Planet and are now far enough from earth that messages take between 12 to 25 minutes each way — making real-time communication impractical for urgent safety and technical questions.  
 
 To assist the crew, you fine-tuned a custom language model using PyTorch, trained on spaceflight operations, human safety measures, EVA protocols, and engineering procedures. It has read 10,000 pages of NASA safety protocol guides. You then converted this model into GGUF format to run efficiently on local GPUs using llama.cpp.  
 

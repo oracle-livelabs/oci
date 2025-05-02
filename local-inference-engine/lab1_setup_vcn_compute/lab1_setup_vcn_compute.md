@@ -120,6 +120,7 @@ In this lab, you will:
 1.  Wait for the instance to have the **Running** status. Note down the Public IP of the instance. You will need this later.
     ![](images/public_ip.png)
 
+T minus 4  
 
 *Congratulations! You have successfully completed this lab.*<br/>
 You may now **proceed to the next lab**.

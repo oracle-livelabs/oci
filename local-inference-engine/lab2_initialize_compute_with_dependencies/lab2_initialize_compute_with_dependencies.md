@@ -215,6 +215,8 @@ Now we will execute some commands that assume we are inside the llama.cpp direct
 
 Funfact: cpp stands for C++ and there are plenty of other cpp models out there like whisper.cpp that allow you to input audio files and turn them into text.  
 
+T minus 3  
+
 *Congratulations! You have successfully completed the lab.*<br/>
 You may now **proceed to the next lab**.
 ## Acknowledgements
