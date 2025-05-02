@@ -17,7 +17,7 @@ In this lab, you will:
 
 1. From the OCI Services menu, click **Networking** > **Virtual Cloud Networks**. 
 
-    ![alt text](images/VCNStep1.png)
+    ![alt text](images/vcnstep1.png)
 
 1. Look the lower right corner of your screen for a slider selection titled "Redwood Preview".
 **DISABLE** Redwood Preview. This entire lab assumes you are not using the Redwood Preview.  
@@ -61,7 +61,7 @@ In this lab, you will:
 
 1. Go to the OCI console. From the OCI services menu, click **Compute** > **Instances**.
 
-    ![alt text](images/ComputeStep1.png)
+    ![alt text](images/computestep1.png)
 
 1. Click **Create Instance**. 
 
@@ -94,7 +94,7 @@ In this lab, you will:
       If you do not have BM.GPU shapes in your tenancy, you can still run the model using CPU only and the lab will call that out at the proper step.
       Pro Tip: If a shape is greyed out, cancel this dialog and select a different AD where the shape may be available. 
 
-      ![alt text](images/BMSelection.png)
+      ![alt text](images/bmselection.png)
       ![alt text](images/baremetalgpu.png)
 
 

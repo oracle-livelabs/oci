@@ -17,7 +17,7 @@ cd ~/llama.cpp
 cmake -S . -B build -DLLAMA_CUDA=on
 </copy>
 ```
-This process prepares the framework and creates the environment in a new directory called ‘build’ inside llama.cpp (~\llam.cpp\build)  
+This process prepares the framework and creates the environment in a new directory called ‘build’ inside llama.cpp (~\llama.cpp\build)  
 DLLAMA_CUDA=on is critical if you want to use the GPU instead of CPU  
 **If you do not have a GPU and want to run the model using CPU only, change this to:**  
 
@@ -68,7 +68,7 @@ ubuntu@ubuntua10-1:~/llama.cpp$ cmake --build build --config Release -j $(nproc)
 [  5%] Building CXX object examples/llava/CMakeFiles/llama-gemma3-cli.dir/depreca
 (output truncated)
 ```
-**Protip**: If you are the curious type who likes to tinker and have a system with a GP  
+**Protip**: If you are the curious type who likes to tinker and have a system with a GPU  
 you can easily see the difference in model performance when running on CPU-only vs GPU-assisted.  
 To do this, simply create two different build directories. In the last two steps above,  
 we created a directory structure in llamap.cpp called "build" and it was for GPU. But we could do something like this:  

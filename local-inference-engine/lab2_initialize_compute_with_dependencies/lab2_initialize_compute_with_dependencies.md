@@ -38,7 +38,7 @@ Estimated Time: 25 minutes
 1.   Navigate to the terminal.  
 We need to install the nvidia drivers and other components, but first a few best practices.  
 We first will refresh the package list with the versions available in the repos.  
-Then we will updgrade all installed packages & libraries.  
+Then we will upgrade all installed packages & libraries.  
 Enter the follow commands:
     ```
     <copy>
@@ -85,7 +85,7 @@ Get:2 http://iad-ad-3.clouds.archive.ubuntu.com/ubuntu noble-updates/main amd64 
 Get:3 http://iad-ad-3.clouds.archive.ubuntu.com/ubuntu noble-updates/main amd64 perl-base amd64 5.38.2-3.2ubuntu0.1 [1827 kB]
 (output  truncated)```
     Wait for the commands to complete.  
-    Now it's tim to install the Nvidia Driver package.  
+    Now it's time to install the Nvidia Driver package.  
     We are using the server version of the driver.  
     This has less bloat and is intended for headless operation. 
     ```

@@ -9,7 +9,7 @@ Estimated Time: 10 minutes
 
 ## Task 1: Setup a Monitoring Session
 
-1. Form your local workstation, open a new tab or window in your terminal application. Then, just as we did earlier, open a new ssh session to your host. 
+1. From your local workstation, open a new tab or window in your terminal application. Then, just as we did earlier, open a new ssh session to your host. 
 
     ```
     cd ~/path_to_saved_ssh_directory
