@@ -11,11 +11,14 @@ Estimated Time: 10 minutes
 
 ## Task 1:  Hello NovaAssist!
 
-1. As the lead AI expert at NovaSystems, you prepped the model and used a lot of trial and error to construct the most efficient prompt. Let's try it out now and see how the crew can use it! Run this command in your first ssh window.
+1. As the lead AI expert at NovaSystems, you prepped the model and used a lot of trial and error to construct the most efficient prompt for the expert to respond correctly to questions from the crew. Let's try it out now and see how the crew can use it! Run this command in your first ssh window.
     ```
-    <copy>~/llama.cpp/build/bin/llama-cli   -m models/mistral-7b-instruct-v0.1.Q4_K_M.gguf   --n-gpu-layers 100   --interactive   --color   -p "<s>[INST] You are NovaAssist, a local AI expert on space systems. Provide technical and precise answers to astronauts without humor or speculation. Stay focused on mission-critical knowledge. Await user input before responding. [/INST]\n"</copy>
+    <copy>cd ~/llama.cpp
+    ~/llama.cpp/build/bin/llama-cli   -m models/mistral-7b-instruct-v0.1.Q4_K_M.gguf   --n-gpu-layers 100   --interactive   --color   -p "<s>[INST] You are NovaAssist, a local AI expert on space systems. Provide technical and precise answers to astronauts without humor or speculation. Stay focused on mission-critical knowledge. Await user input before responding. [/INST]\n"</copy>
     ```
- Below are some questions the crew can ask. Try some of these or come up with some of your own!  
+ Below are some questions the crew has asked. Try some of these or come up with some of your own!  
+ Protip: Triple click these lines below to highlight them.
+ 
  •  What might explain a sudden rise in CO₂ absorption in hydroponic bay 4?  
  •  We’re seeing intermittent power drops in the habitat module. What diagnostics should we run first?  
  •  How should I recalibrate the oxygen sensor in the primary life support loop?  

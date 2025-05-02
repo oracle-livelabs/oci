@@ -203,7 +203,7 @@ The following NEW packages will be installed:
 Now we will execute some commands that assume we are inside the llama.cpp directory structure. 
     ```
     <copy>
-    cd llama.cpp
+    cd ~/llama.cpp
     </copy>
     ``` 
 

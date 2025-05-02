@@ -13,6 +13,7 @@ Make certain you are in the llama.cpp directory.
 Run the following commands to build the project environment:
 ```
 <copy>
+cd ~/llama.cpp
 cmake -S . -B build -DLLAMA_CUDA=on
 </copy>
 ```
@@ -44,6 +45,7 @@ ubuntu@ubuntua10-1:~/llama.cpp$ cmake -S . -B build -DLLAMA_CUDA=on
 Run the following command:
 ```
 <copy>
+cd ~/llama.cpp
 cmake --build build --config Release -j $(nproc)
 </copy>
 ```
@@ -66,6 +68,19 @@ ubuntu@ubuntua10-1:~/llama.cpp$ cmake --build build --config Release -j $(nproc)
 [  5%] Building CXX object examples/llava/CMakeFiles/llama-gemma3-cli.dir/depreca
 (output truncated)
 ```
+**Protip**: If you are the curious type who likes to tinker and have a system with a GP  
+you can easily see the difference in model performance when running on CPU-only vs GPU-assisted.  
+To do this, simply create two different build directories. In the last two steps above,  
+we created a directory structure in llamap.cpp called "build" and it was for GPU. But we could do something like this:  
+```
+cmake -S . -B build-cpu -DLLAMA_CUDA=off
+cmake --build build-cpu --config Release -j $(nproc)
+
+cmake -S . -B build-gpu -DLLAMA_CUDA=on
+cmake --build build-gpu --config Release -j $(nproc)
+```
+This would create two distinct build folders and you can execute the same model using either type of inference build.  
+All of the commands in the labs that follow will reference the build folder - BUT you can change it at execution time to use the -CPU or -GPU folders if you like. 
 
 ## Task 2: Downloading the model
 
@@ -98,7 +113,7 @@ ubuntu@ubuntua10-1:~/llama.cpp$ cmake --build build --config Release -j $(nproc)
 1.  Now lets test our model with the following command. Notice that the end of the command asks the model a question about the sun:
     ```
     <copy>
-    ./build/bin/llama-cli -m models/mistral-7b-instruct-v0.1.Q4_K_M.gguf --n-gpu-layers 100 -p "Briefly, Why is the sun yellow?"
+    ~/llama.cpp/build/bin/llama-cli -m models/mistral-7b-instruct-v0.1.Q4_K_M.gguf --n-gpu-layers 100 -p "Briefly, Why is the sun yellow?"
     </copy>
    ```
    Toward the bottom of the output, you should see the model answer the question, like this:
@@ -114,7 +129,7 @@ Please note that the model is not fine-tuned or tailored to our use case yet so 
   
     ```
     <copy>
-    ./build/bin/llama-cli -m models/mistral-7b-instruct-v0.1.Q4_K_M.gguf --n-gpu-layers 100 --interactive-first --color
+    ~/llama.cpp/build/bin/llama-cli -m models/mistral-7b-instruct-v0.1.Q4_K_M.gguf --n-gpu-layers 100 --interactive-first --color
     </copy>
     ```
     Just for fun, try to get the model to hold context in a chat. Your results ~~may~~ will vary 😊
