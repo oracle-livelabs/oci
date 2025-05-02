@@ -4,329 +4,214 @@
 
 In this lab we will use the compute instance created in the previous lab to install dependencies and software packages needed to deploy and run our application. 
 
-Estimated Time: 20 minutes
+Estimated Time: 25 minutes
 
-## Task 1: SSH into the compute instance
+## Task 1: Connect to Your Instance via SSH
 1. In cloud shell terminal or your machine's terminal, navigate to the directory where your SSH keys are stored. To get there, enter the command:
 
     ```
     <copy>cd ~/path_to_ssh_directory</copy>
     ```
-2.  Enter **ls** to view the files in this directroy and verify your SSH key file exists.
+2.  Enter **ls** to view the files in this directory and verify your SSH key file exists.
 
 3. Change the permissions of private key file, enter the command:
     ```
-    <copy>
     chmod 400 <private_sshkeyname>
-    </copy>
     ``` 
 
     ![](images/lab2_task1_4.png)
 
 4.  Now we will SSH into your compute instance, enter the command:
     ```
-    <copy>ssh -i <private_sshkeyname> opc@<PUBLIC_IP_OF_COMPUTE></copy>
+    ssh -i <private_sshkeyname> ubuntu@<PUBLIC_IP_OF_COMPUTE>
     ``` 
 
-    Check the details of your compute instance in the OCI web console to the **```PUBLIC_IP_ADDRESS```**
+      **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command.
 
-    ![](images/public_ip.png)
+5.  Enter 'yes' when prompted for the security message to permanently trust this host.
 
-    **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command.
+6.  Verify ubuntu@`<COMPUTE_INSTANCE_NAME>` appears on the prompt.
+       ![alt text](images/successfulssh.png)
 
-5.  Enter 'yes' when prompted for the security message.
+## Task 2: Install NVIDIA GPU Driver (535 Server)
 
-6.  Verify opc@`<COMPUTE_INSTANCE_NAME>` appears on the prompt.
-        ![](images/ssh.png " ")   
-
-## Task 2: Configure networking and enable ports
-
-1. Navigate to the terminal. First we will update existing libraries. Enter the follow:
+1.   Navigate to the terminal.  
+We need to install the nvidia drivers and other components, but first a few best practices.  
+We first will refresh the package list with the versions available in the repos.  
+Then we will updgrade all installed packages & libraries.  
+Enter the follow commands:
     ```
     <copy>
-    sudo dnf -y update
+    sudo apt update
+    sudo apt upgrade -y
     </copy>
     ```
-    The command prints done on terminal when finished.
+    Your output should be similar to this:
+    ```
+ubuntu@ubuntua10-1:~$ sudo apt -y update
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Get:2 http://iad-ad-3.clouds.archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:3 http://iad-ad-3.clouds.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:4 http://iad-ad-3.clouds.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Fetched 508 kB in 1s (583 kB/s)  
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+57 packages can be upgraded. Run 'apt list --upgradable' to see them.
+N: Missing Signed-By in the sources.list(5) entry for 'http://iad-ad-3.clouds.archive.ubuntu.com/ubuntu'
+N: Missing Signed-By in the sources.list(5) entry for 'http://iad-ad-3.clouds.archive.ubuntu.com/ubuntu'  
 
-2. Next we will disable the firewall to allow ICMP requests. Enter the command:
+ubuntu@ubuntua10-1:~$ sudo apt upgrade -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following NEW packages will be installed:
+  linux-headers-6.8.0-1024-oracle linux-image-6.8.0-1024-oracle linux-modules-6.8.0-1024-oracle linux-modules-extra-6.8.0-1024-oracle
+  linux-oracle-headers-6.8.0-1024 linux-oracle-tools-6.8.0-1024 linux-tools-6.8.0-1024-oracle
+The following upgrades have been deferred due to phasing:
+  grub-common grub-efi-amd64-bin grub-efi-amd64-signed grub-pc grub-pc-bin grub2-common ubuntu-pro-client ubuntu-pro-client-l10n
+The following packages will be upgraded:
+  apparmor cloud-init dirmngr distro-info-data fwupd gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpgconf gpgsm gpgv keyboxd libapparmor1
+  libarchive13t64 libexpat1 libfwupd2 liblzma5 libnetplan1 libperl5.38t64 libxml2 linux-base linux-headers-oracle linux-image-oracle linux-oracle
+  netplan-generator netplan.io openssh-client openssh-server openssh-sftp-server pci.ids perl perl-base perl-modules-5.38 python3-netplan
+  python3-software-properties rsyslog software-properties-common tzdata update-notifier-common vim vim-common vim-runtime vim-tiny xxd xz-utils
+48 upgraded, 7 newly installed, 0 to remove and 8 not upgraded.
+32 standard LTS security updates
+Need to get 221 MB of archives.
+After this operation, 299 MB of additional disk space will be used.
+Get:1 http://iad-ad-3.clouds.archive.ubuntu.com/ubuntu noble-updates/main amd64 libperl5.38t64 amd64 5.38.2-3.2ubuntu0.1 [4871 kB]
+Get:2 http://iad-ad-3.clouds.archive.ubuntu.com/ubuntu noble-updates/main amd64 perl amd64 5.38.2-3.2ubuntu0.1 [231 kB]
+Get:3 http://iad-ad-3.clouds.archive.ubuntu.com/ubuntu noble-updates/main amd64 perl-base amd64 5.38.2-3.2ubuntu0.1 [1827 kB]
+(output  truncated)```
+    Wait for the commands to complete.  
+    Now it's tim to install the Nvidia Driver package.  
+    We are using the server version of the driver.  
+    This has less bloat and is intended for headless operation. 
     ```
     <copy>
-    sudo systemctl stop firewalld
+    sudo apt install nvidia-driver-535-server -y
     </copy>
     ```
+    You should see output similar to this:
+    ```
+    ubuntu@ubuntua10-1:~$ sudo apt install nvidia-driver-535-server -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu dkms dpkg-dev fakeroot
+  (output  truncated)
+  ```
+    
+    nvidia-smi will not function until the system is rebooted. 
     ```
     <copy>
-    sudo systemctl disable firewalld
+    sudo reboot
     </copy>
     ```
-    ![](images/lab2_task2_2.png)
+    This reboot will take some time if using a BM instance
 
-    Check the status of stopped firewall:
+    After reboot, run:
     ```
     <copy>
-    systemctl status firewalld
+    nvidia-smi 
     </copy>
     ```
-    ![](images/rules.png " ") 
+    Observe the results which should be similar to this:
+    ```
+    ubuntu@ubuntua10-1:~$ nvidia-smi
+    Thu May  1 18:18:35 2025       
+    +---------------------------------------------------------------------------------------+
+    | NVIDIA-SMI 535.230.02             Driver Version: 535.230.02   CUDA Version: 12.2     |
+    |-----------------------------------------+----------------------+----------------------+
+    | GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+    | Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+    |                                         |                      |               MIG M. |
+    |=========================================+======================+======================|
+    |   0  NVIDIA A10                     Off | 00000000:00:04.0 Off |                    0 |
+    |  0%   34C    P0              53W / 150W |      0MiB / 23028MiB |     15%      Default |
+    |                                         |                      |                  N/A |
+    +-----------------------------------------+----------------------+----------------------+
+                                                                                            
+    +---------------------------------------------------------------------------------------+
+    | Processes:                                                                            |
+    |  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+    |        ID   ID                                                             Usage      |
+    |=======================================================================================|
+    |  No running processes found                                                           |
+    +---------------------------------------------------------------------------------------+
+    ```
+    
 
-    To exit from this screen, press `q`.
 
-3. Install the iptables-services packages and start/enable iptables service. Enter the commands:
-    ```
+## Task 3: Install NVIDIA CUDA Toolkit v12
+1. In the terminal window, run the following command:
+     ```
     <copy>
-    sudo yum install -y iptables-services.aarch64
-    </copy>
-    ```
-    ```
-    <copy>
-    sudo systemctl start iptables
-    </copy>
-    ```
-    ```
-    <copy>
-    sudo systemctl enable iptables
-    </copy>
-    ```
-    These commands do not return any output.
-
-4. Update the iptables to allow traffic on the deployment ports. Enter following commands:
-    ```
-    <copy>
-    sudo iptables -I INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT
-    </copy>
-    ```
-    ```
-    <copy>
-    sudo iptables -I INPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
-    </copy>
-    ```
-    ```
-    <copy>
-    sudo iptables -I INPUT -m state --state NEW -p tcp --dport 8008 -j ACCEPT
-    </copy>
-    ```
-    ```
-    <copy>
-    sudo iptables -I INPUT -m state --state NEW -p tcp --dport 5005 -j ACCEPT
-    </copy>
-    ```
-    The above commands don't return any values. Save the iptable using the following command. Enter the command: 
-    ```
-    <copy>
-    sudo service iptables save
-    </copy>
-    ```
-    ![](images/lab2_task2_4.png)
-
-    Verify the additions to iptable. Enter the command:
-    ```
-    <copy>
-    sudo cat /etc/sysconfig/iptables
-    </copy>
-    ```
-    ![](images/iptables.png " ")
-
-4. Now enable port forwarding at the OS level. Enter the command:
-    ```
-    <copy>
-    sudo sysctl -w net.ipv4.ip_forward=1 
-    </copy>
-    ```
-
-    This returns the value ```net.ipv4.ip_forward=1```.
-
-    **Note**: Due to inactivity the SSH connection may break and you might get an error **```opc@a1-instance:/$ client_loop: send disconnect: Broken pipe```**, SSH back into the instance again in that case.
-
-## Task 3: Install and configure Docker
-
-1. Now we will navigate to the home directory of the terminal. To do so, enter:
-    ```
-    <copy>
-    cd ~
-    </copy>
-    ```
-
-2. Let's install the required dependencies:
-    ```
-    <copy>
-    sudo dnf -y install yum-utils
-    </copy>
-    ```
-
-3. Add the Docker CE repository to your system, Enter the commands:
-    ```
-    <copy>
-    sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+    sudo apt install nvidia-cuda-toolkit -y
     </copy>
     ```
     
-    Install docker:
+    Note: You can also run sudo apt show nvidia-cuda-toolkit to see version options in your configured repo (which we have not altered).  
+    There are other ways to do perform this install, but this is the easiest.  
+    
+    After installation, you can run the following command to verify the installation succeeded and see the installed version:
     ```
     <copy>
-    sudo dnf install docker-ce docker-ce-cli containerd.io
+    nvcc --version 
     </copy>
     ```
-    Start the Docker service and enable it to start on boot. Enter the command:
+    
+
+
+## Task 4: Install required packages needed to build the inference engine
+
+1. Some steps in this lab have dependencies of specific packages. Let's install those now:
     ```
     <copy>
-    sudo systemctl start docker
-    sudo systemctl enable docker
+    sudo apt install git build-essential cmake libopenblas-dev libcurl4-openssl-dev -y
     </copy>
     ```
+    Your output should be similar to this:
+    ```
+    ubuntu@ubuntua10-1:~$ sudo apt install git build-essential cmake libopenblas-dev libcurl4-openssl-dev -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+git is already the newest version (1:2.43.0-1ubuntu7.2).
+git set to manually installed.
+build-essential is already the newest version (12.10ubuntu1).
+build-essential set to manually installed.
+The following additional packages will be installed:
+  cmake-data libgfortran5 libjsoncpp25 libopenblas-pthread-dev libopenblas0 libopenblas0-pthread librhash0
+Suggested packages:
+  cmake-doc cmake-format elpa-cmake-mode ninja-build libcurl4-doc libidn-dev libkrb5-dev libldap2-dev librtmp-dev libssh2-1-dev libssl-dev pkg-config zlib1g-dev
+The following NEW packages will be installed:
+  cmake cmake-data libcurl4-openssl-dev libgfortran5 libjsoncpp25 libopenblas-dev libopenblas-pthread-dev libopenblas0 libopenblas0-pthread librhash0
+  (output  truncated)
+  ```
 
-    Verify that Docker was installed correctly:
+## Task 5: Clone llama.cpp
+
+1. We need to clone the inference engine (llama.cpp) from github so we can execute it locally on our instance. 
     ```
     <copy>
-    sudo systemctl status docker
-    </copy>
-    ``` 
-
-    ![](images/lab2_task3_3_1.png " ")
-
-
-    **Hint**: For more information check [docker documentation](https://docs.docker.com/engine/install/ubuntu/).
-
-3. Verify that the Docker Engine installation is successful by running the **hello-world** image.
-     ```
-    <copy>
-    sudo docker run hello-world
-    </copy>
-    ```
-    This command downloads a test image and runs it in a container. When the container runs, it prints a confirmation message and exits.
-
-    ![](images/docker_success.png " ")
-
-4. Now let's add docker to the user group for Oracle Linux and restart, Enter:
-     ```
-    <copy>
-    sudo usermod -aG docker $USER && newgrp docker
-    </copy>
-    ```
-
-    Now we'll restart docker. Enter:
-    ```
-    <copy>
-    sudo systemctl restart docker
-    </copy>
-    ```
-
-    **Note**: Due to inactivity the SSH connection may break and you might get an error **```opc@a1-instance:/$ client_loop: send disconnect: Broken pipe```**, SSH back into the instance again in that case.
-
-## Task 4: Install and configure MiniKube
-
-1. Before installing minikube, install git. Enter the command:
-    ```
-    <copy>
-    sudo dnf install -y git
-    </copy>
-    ```
-
-2.  To install the latest minikube stable release on ARM64 Linux using binary download, enter the command:
-     ```
-    <copy>
-    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-arm64
-    </copy>
-    ```
-    ```
-    <copy>
-    sudo install minikube-linux-arm64 /usr/local/bin/minikube && rm minikube-linux-arm64
-    </copy>
-    ```
-
-3. Verify the minikube installation, enter the command:
-    ```
-    <copy>
-    minikube version
-    </copy>
-    ``` 
-    ![](images/minikube_version.png " ")
-
-    **Note**: For more information check [minikube documentation](https://minikube.sigs.k8s.io/docs/start/).
-
-4. Install kubectl if not already installed. Enter the command:
-    ```
-    <copy>
-    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl"
-    </copy>
-    ```
-    ```
-    <copy>
-    sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-    </copy>
-    ``` 
-    Verify kubectl installation:
-    ```
-    <copy>
-    kubectl version --client
+    git clone https://github.com/ggerganov/llama.cpp.git
     </copy>
     ```  
-    The output will be the latest version of kubectl, at the time of the creation of this lab that version is:
-
-    ![](images/lab2_task4_4.png " ")
-
-    **Note**: Due to inactivity the SSH connection may break and you might get an error **```opc@a1-instance:/$ client_loop: send disconnect: Broken pipe```**, SSH back into the instance again in that case.
-
-## Task 5: Install kubectl plugin relay using installer Krew
-
-1. Krew itself is a kubectl plugin that is installed and updated via Krew. To install Krew, we will enter the command:
+Now we will execute some commands that assume we are inside the llama.cpp directory structure. 
     ```
     <copy>
-    (
-        set -x; cd "$(mktemp -d)" &&
-        OS="$(uname | tr '[:upper:]' '[:lower:]')" &&
-        ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')" &&
-        KREW="krew-${OS}_${ARCH}" &&
-        curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/${KREW}.tar.gz" &&
-        tar zxvf "${KREW}.tar.gz" &&
-        ./"${KREW}" install krew
-    )
-    </copy>
-    ``` 
-2. Add the **$HOME/.krew/bin** directory to your PATH environment variable. To do this, update your **.bashrc** file:
-    ```
-    <copy>
-    nano ~/.bashrc
-    </copy>
-    ``` 
-    Append the following line at the end of the file:
-    ```
-    <copy>
-    export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+    cd llama.cpp
     </copy>
     ``` 
 
-    ![](images/lab2_task5_2.png)
-
-    Close the exit from editor and restart the **.bashrc** file to save, enter the command:
-    ```
-    <copy>
-    source ~/.bashrc
-    </copy>
-    ``` 
-3. Check the installation, enter the command:
-    ```
-    <copy>
-    kubectl krew version
-    </copy>
-    ``` 
-    ![](images/krew_version.png " ")
-
-4. Install kubectl plugin **relay** using **krew**, enter the command:
-    ```
-    <copy>
-    kubectl krew install relay
-    </copy>
-    ``` 
-    This returns with a warning which can be ignored.
-
-    ![](images/install_relay.png " ")
-
-     **Note**: For more information check [krew documentation](https://krew.sigs.k8s.io/docs/user-guide/setup/install/).
+Funfact: cpp stands for C++ and there are plenty of other cpp models out there like whisper.cpp that allow you to input audio files and turn them into text.  
 
 *Congratulations! You have successfully completed the lab.*<br/>
 You may now **proceed to the next lab**.
 ## Acknowledgements
-* **Author** - Animesh Sahay and Francis Regalado, Enterprise Cloud Architect, OCI Cloud Venture
-* **Contributors** -  Andrew Lynch, Director Cloud Engineering, OCI Cloud Venture
-* **Last Updated By/Date** - Animesh Sahay, August 2024
+* **Author** - Jeff Allen, Distinguished Cloud Architect, AI Accounts
+* **Contributors** -  Animesh Sahay, Enterprise Cloud Engineering
+* **Last Updated:** - May 2025

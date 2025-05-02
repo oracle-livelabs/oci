@@ -1,39 +1,40 @@
-# Deploy and expose chatbot app
+# Stress Test the System
 
 ## Introduction
 
-In this lab we will deploy the opensource chat-bot image from OCIR and expose it on a public URL to use it via the internet.
+In this lab we will work with the existing chatbot to see how the underlying system reacts to additional stress.
 
-Estimated Time: 30 minutes
+Estimated Time: 10 minutes
 
-Estimated Time: 30 minutes
+## Task 1: Setup a Monitoring Session
 
-## Task 1: Deploy chatbot app using minikube
-
-1. SSH into your compute instance if not already in, Enter command:
+1. Open a new tab or window in your terminal application:
     ```
-    <copy>cd ~/path_to_saved_ssh_directory</copy>
+    cd ~/path_to_saved_ssh_directory
+    
     ```
     ```
-    <copy>ssh -i <private_sshkeyname> opc@<PUBLIC_IP_OF_COMPUTE></copy>
+    ssh -i <private_sshkeyname> opc@<PUBLIC_IP_OF_COMPUTE>
     ``` 
+ If needed, reference the **```PUBLIC_IP_OF_COMPUTE```** from OCI web console.  
+Open **instances** from the top left corner and click on instance created in Lab 1 to copy the **public ip address**.
 
-2.  Start minikube on the ports opened earlier which are 80, 443, 8008:
+    You should now have two ssh sessions to your host. The interactive session should still be running on the initial session.  
+    If it is not, please restart it suing the last instructions in Lab 3. 
+
+2.  Begin Monitoring the System  
+With the interactive session still running, but not actively processing, we can see the toll it takes on the system.  
+**In the 2nd SSH session**, run the following command:
     ```
     <copy>
-    minikube start --listen-address='0.0.0.0' --ports=80,443,8008
+   watch -n 1 nvidia-smi
     </copy>
     ``` 
-    ![](./images/minikube_start.png " ")
+Note the difference in the output from when you first ran this command in lab 1. 
+- What Process is running?
+- How utilized is the GPU(s)?
 
-    Verify that minikube is running:
-    ```
-    <copy>
-    minikube status
-    </copy>
-    ``` 
-    ![](./images/minikube_status.png " ")
-     
+
 3. Create a new namespace named **serge-ai** for the application deployment:
     ```
     <copy>

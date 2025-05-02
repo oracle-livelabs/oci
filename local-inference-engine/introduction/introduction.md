@@ -1,35 +1,38 @@
 # Introduction
 
 ## About this Workshop
+Welcome to the NovaSystems Team! 🚀🚀 
 
-Generative AI inference using ARM-based CPUs has proven to be very effective, however we need more proof points to support this claim. Thus, we conducted extensive research to test popular open-source LLM models such as Llama 2, Mistral, and Orcas with Ampere Altra ARM-based CPUs on Oracle Cloud Infrastructure(OCI). 
 
-Ampere A1 compute shapes provide flexible VM shapes and bare metal options across numerous regions with competitive pricing while providing flexibility in choosing CPU and memory. This allowed us to run various sized open-source LLM models and derive a conclusion from our hypothesis.
+NovaSystems is a leader in deep space exploration. With dozens of satellites already launched to support their research initiatives, the team is now preparing for its most ambitious mission yet: the first crewed deep-space voyage to Mars. As the spacecraft ventures farther from Earth, real-time communication with mission control will become increasingly limited. To overcome this challenge, NovaSystems has developed a locally running large language model (LLM) — a virtual mission expert designed to assist the crew by answering critical questions that would normally require input from ground control.
 
-This guide will provide a thorough, step-by-step process for creating, provisioning, and deploying the necessary resources to access the lama.cpp, or an application of your choosing. 
+As NovaSystems' leading AI engineer, your task is to build and test a locally running large language model (LLM) capable of supporting the crew during deep-space operations. After evaluating various options, you’ve selected llama.cpp, paired with the latest Mistral 7B model, as the optimal solution due to its efficiency, local inference capability, and support for quantized (i.e. "compressed") models (which means lower-cost GPUs with less VRAM are a suitable option). 
 
-Estimated Workshop Time: 90 minutes
+Before deploying to physical flight hardware, you need to test this solution in a controlled environment. Since NovaSystems operates its infrastructure in Oracle Cloud Infrastructure (OCI) today, your testing will take place there.
+
+Estimated Workshop Time: 60 minutes
 
 ### Objectives
 
 In this workshop, you will learn how to:
-* Configure the VCN, with required NSG rules that allow and open public traffic on port 8008 and 5005.
-* Create a compute instance with Ampere A1 Flex Shape.
-* Install docker runtime, configure minikube to use docker engine.
-* Copy the container from Ampere GHCR repo to OCI Container Registry.
-* Deploy a llama.cpp – serge container from Ampere – on minikube. 
+* Provision an Ubuntu 24 compute instance with NVIDIA GPU acceleration in Oracle Cloud Infrastructure (OCI).
+* Configure the instance in a public subnet and establish SSH access using OCI networking.
+* Install and verify NVIDIA GPU drivers and CUDA Toolkit on the OCI instance.
+* Build and configure llama.cpp with CUDA support for GPU inference on OCI.
+* Download and run a quantized Mistral 7B LLM model on the OCI GPU instance.
+* Perform basic and interactive AI inference tasks using the deployed model on OCI infrastructure.
+* Monitor and interpret GPU utilization in real time using nvidia-smi.
+* Identify the effects of GPU acceleration versus CPU offloading during inference on OCI GPU shapes.
 
 ### Prerequisites
 
 This lab assumes you have:
-* An Oracle account.
-* Familiarity with Kubernetes and cloud native concepts of deployment and containerization is required.
-* Some understanding of Linux shell commands.
-* Familiarity with Oracle Cloud Infrastructure (OCI) components like OCI Compute, networking, OCIR.
-* Basic familiarity with open-source tools like GIT and GitHub.
+* Oracle Cloud Infrastructure (OCI) account with sufficient quota to launch VM or BM GPU shapes.
+* Basic understanding of OCI networking, including Virtual Cloud Networks (VCNs) and public subnets.
+* Familiarity with basic Linux commands and SSH usage.
+* Internet access from the instance to download software packages and the model (should be automatic).
 
-## Get Deployment Image from OCI Marketplace
-- [OCI Marketplace Image](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/169283589)
+> **Note:** GPU shapes in OCI incur costs while running. Be sure to terminate your instance when the lab is complete to avoid unexpected charges.
 
 ## Learn More
 
@@ -37,6 +40,6 @@ This lab assumes you have:
 
 
 ## Acknowledgements
-* **Author** - Animesh Sahay and Francis Regalado, Enterprise Cloud Architect, OCI Cloud Venture
-* **Contributors** - Andrew Lynch, Director Cloud Engineering, OCI Cloud Venture
-* **Last Updated By/Date** - Animesh Sahay, August 2024
+* **Author** - Jeff Allen, Distinguished Cloud Architect, AI Accounts
+* **Contributors** -  Animesh Sahay, Enterprise Cloud Engineering
+* **Last Updated:** - May 2025

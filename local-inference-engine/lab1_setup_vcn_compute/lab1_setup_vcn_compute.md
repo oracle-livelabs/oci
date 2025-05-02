@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Oracle Cloud Infrastructure (OCI) Compute lets you create multiple Virtual Cloud Networks (VCNs). These VCNs will contain security lists, compute instances, load balancers and many other types of network assets.
+Oracle Cloud Infrastructure (OCI) Compute lets you create multiple Virtual Cloud Networks (VCNs). The closest comparison to a VCN in the physical world is a Data Center. It can contain storage, routers, load balancers, subnets, firewalls, servers and many other types of network assets.
 
 Be sure to review [Overview of Networking](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm) to gain a full understanding of the network components.
 
@@ -11,27 +11,31 @@ Estimated Time: 20 minutes
 ### Objectives
 In this lab, you will:
 - Create a virtual cloud network 
-- Open ingress ports on the public subnet
 - Create a compute instance inside of that VCN
 
-## Task 1: Sign in to OCI Console and create VCN
+## Task 1: Sign in to OCI Console and Create VCN
 
 1. From the OCI Services menu, click **Networking** > **Virtual Cloud Networks**. 
 
-    ![](images/vcn.png " ")
+    ![alt text](images/VCNStep1.png)
 
-2. Select the compartment assigned to you from the drop down menu on the left part of the screen and click **Start VCN Wizard**.
+1. Look the lower right corner of your screen for a slider selection titled "Redwood Preview".
+**DISABLE** Redwood Preview. This entire lab assumes you are not using the Redwood Preview.  
+
+    ![alt text](images/redwooddisable.png)
+
+1. Select the compartment assigned to you from the drop down menu on the left part of the screen and click **Start VCN Wizard**.
 
     ![](images/start_vcn_wizard.png " ")
 
-3. Click **Create VCN with Internet Connectivity** and click **Start VCN Wizard**.
+1. Click **Create VCN with Internet Connectivity** and click **Start VCN Wizard**.
 
     ![](images/click_start_vcn_wizard.png " ")
 
-4. Fill out the dialog box:
+1. Fill out the dialog box:
 
-      - **VCN NAME**: Provide a name
-      - **COMPARTMENT**: Ensure your compartment is selected
+      - **VCN NAME**: Provide a name of your choosing (ex *Inference-VCN*)
+      - **COMPARTMENT**: Ensure your compartment is selected. If you have not defined a compartment, use the default.
       - **VCN CIDR BLOCK**: Provide a CIDR block (10.0.0.0/16)
       - **PUBLIC SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.0.0/24)
       - **PRIVATE SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.1.0/24)
@@ -41,7 +45,7 @@ In this lab, you will:
     
     ![](images/custom_image_0016.png " ")
 
-5. Verify that all the information is correct and  click **Create**.
+1. Verify that all the information is correct and  click **Create**.
 
     ![](images/create_vcn.png " ")
 
@@ -49,70 +53,54 @@ In this lab, you will:
 
     *VCN, Public subnet, Private subnet, Internet gateway (IG), NAT gateway (NAT), Service gateway (SG)*
 
-6. Click **View Virtual Cloud Network** to display your VCN details.
+1. Click **View Virtual Cloud Network** to display your VCN details.
 
     ![](images/view_vcn.png " ")
-
-7. Inside your VCN click **subnets** on the left panel under resources and select your **public subnet**.
-
-    ![](images/custom_image_0017.png " ")
-
-8. Click **Default Security List** for your public subnet. The default Ingress Rules for your VCN are displayed.
-
-    ![](images/custom_image_0018.png " ")
-
-9. Click **Add Ingress Rules**. An Add Ingress Rules dialog is displayed.
-
-    ![](images/custom_image_0019.png " ")
-
-10. Fill in the ingress rule with the following information:
-        
-    - **Stateless**: Unchecked
-    - **Source Type**: CIDR
-    - **Source CIDR**: 0.0.0.0/0
-    - **IP Protocol**: TCP
-    - **Source port range**: (leave-blank)
-    - **Destination Port Range**: 80,443,8008,5005
-    - **Description**: (leave-blank)
-    - Click **Add Ingress Rule**
-
-    ![](images/custom_image_0020.png " ")
-
-    *Verify the ports added to the VCN. Now we have a VCN with required ingress ports.*  
-
-    ![](images/ingress_ports.png " ")
 
 ## Task 2: Create a compute instance
 
 1. Go to the OCI console. From the OCI services menu, click **Compute** > **Instances**.
 
-    ![](images/compute.png " ")
+    ![alt text](images/ComputeStep1.png)
 
-2. Click **Create Instance**. 
+1. Click **Create Instance**. 
 
     ![](images/create_instance.png " ")
 
-3. Enter a name for your instance and select the compartment you used earlier to create your VCN.
+1. Enter a name for your instance and select the compartment you used earlier to create your VCN.
 
     ![](images/create_instance1.png " ")         
 
-4. Scroll down on the page. Click **Change Shape**.
+1. Scroll down on the page. Click **Change Image**
 
-    ![](images/create_instance2_2.png " ")
+1. Match the selections seen in the image below to the **Select an Image** dialog on your screen:
+    - **Image:** Ubuntu (as seen in the image above)
+    - **Image Name:** Select Canonical Ubuntu 24.04
+    - **Image Build:** Select the default
 
-5. In the **Browse All Shapes** dialog:
+    ![alt text](images/ubuntuimage.png)
 
-      - **Instance Type**: Select Virtual Machine
-      - **Shape Series**: Ampere
-      - **Instance Shape**: Select VM.Standard.A1.Flex
-      - **Number of OCPUS**: 64
-      - **Amount of Memory(GB)**: 360
+
+
+1. Scroll down on the page. Click **Change Shape**.
+
+   
+1. In the **Browse All Shapes** dialog:
+
+      - **Instance Type**: Select Bare Metal machine
+      - **Shape Series**: Specialty and previous generation
+      - **Instance Shape**: Select any BM.GPU.x shape (not the BM.GPU.MI300X.8 for this lab). 
+      **Important**: You can also use a Virtual Machine of type VM.GPU.A10.x and it will be faster.
+      If you do not have BM.GPU shapes in your tenancy, you can still run the model using CPU only and the lab will call that out at the proper step.
+      Pro Tip: If a shape is greyed out, cancel this dialog and select a different AD where the shape may be available. 
+
+      ![alt text](images/BMSelection.png)
+      ![alt text](images/baremetalgpu.png)
+
 
       Click **Select Shape**.
 
-      ![](images/create-compute-2.png)
-
-6. Scroll down to **Primary VNIC Information** section and edit the following:
+1. Scroll down to **Primary VNIC Information** section and edit the following:
 
       - **Virtual cloud network**: Choose the VCN you created in Task 1
       - **Subnet:** Choose the Public Subnet under **Public Subnets** (it should be named Public Subnet-NameOfVCN)
@@ -120,48 +108,23 @@ In this lab, you will:
 
       ![](images/create-compute-3.png) 
 
-      - **Add SSH Keys:** Choose **Generate a key pair for me** and save private and public keys. If you already have ssh keys, choose **Paste public keys** or upload public key saved.
+      - **Add SSH Keys:** Choose **Generate a key pair for me** and save private and public keys. If you already have ssh keys, choose **Paste public keys** or upload it here.
       
       ![](images/ssh_key_1.png)
       
       ![](images/ssh_key_2.png)   
 
-7. In **Boot Volume:** section, select **Specify a custom boot volume size** and enter the following:
-    - **Boot volume size (GB)**: 120
-    - **Boot volume performance**: 10
+1. Click **Create**.
 
-    ![](images/boot_volume_custom.png)
-        
-8. Click **Create**.
 
-   **NOTE:** If 'Service limit' error is displayed decrease **Number of OCPUS and Memory** in **select shape** OR choose a different AD
-
-9.  Wait for the instance to have the **Running** status. Note down the Public IP of the instance. You will need this later.
+1.  Wait for the instance to have the **Running** status. Note down the Public IP of the instance. You will need this later.
     ![](images/public_ip.png)
 
-## Task 3: Delete the resources(Optional)
 
-1. Switch to  OCI console window
-
-2. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will
-appear.
-
-3. Locate your VCN , Click Action icon and then **Terminate**. Click **Terminate All** in the Confirmation window. Click **Close** once VCN is deleted
-
-    ![](images/delete_vcn.png " ")
-
-4. Locate the first compute instance, click the Action icon and then **Terminate**.
-
-     ![](images/custom_image_00013.png " ")
-
-5. Make sure Permanently delete the attached Boot Volume is checked, Click **Terminate Instance**. Wait for instance to fully Terminate.
-
-     ![](images/custom_image_00014.png " ")
-
-*Congratulations! You have successfully completed the lab.*<br/>
+*Congratulations! You have successfully completed this lab.*<br/>
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
-* **Author** - Animesh Sahay and Francis Regalado, Enterprise Cloud Architect, OCI Cloud Venture
-* **Contributors** -  Andrew Lynch, Director Cloud Engineering, OCI Cloud Venture
-* **Last Updated By/Date** - Animesh Sahay, August 2024
+* **Author** - Jeff Allen, Distinguished Cloud Architect, AI Accounts
+* **Contributors** -  Animesh Sahay, Enterprise Cloud Engineering
+* **Last Updated:** - May 2025

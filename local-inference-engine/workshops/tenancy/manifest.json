@@ -1,8 +1,6 @@
 {
-    "workshoptitle": "Deploy an AI chat-bot app on an Ampere A1 instance using Minikube",
-    "include": {"serge_ai_minikube.yaml":"../../lab4_deploy_application/files/serge_ai_minikube.yaml",
-                "start-app.sh":"../../lab4_deploy_application/files/start-app.sh"},
-    "help": "livelabs-help-oci_us@oracle.com",
+    "workshoptitle": "Deploy and run an AI Inference Chatbot Engine locally on a node",
+        "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
@@ -24,12 +22,12 @@
             "filename": "../../lab2_initialize_compute_with_dependencies/lab2_initialize_compute_with_dependencies.md"
         },
         {
-            "title": "Lab 3: Setup OCIR repository with chatbot image",
-            "filename": "../../lab3_setup_container_registory/lab3_setup_container_registory.md"
+            "title": "Lab 3: Preparing the Model",
+            "filename": "../../lab3_preparing_the_model/lab3_preparing_the_model.md"
         },
         {
-            "title": "Lab 4: Deploy Chatbot Application",
-            "filename": "../../lab4_deploy_application/lab4_deploy_application.md"
+            "title": "Lab 4: Stress Test the System",
+            "filename": "../../lab4_stress_test_system/lab4_stress_test_system.md"
         },
         {
             "title": "Lab 5: Interact with serge-ai chatbot",

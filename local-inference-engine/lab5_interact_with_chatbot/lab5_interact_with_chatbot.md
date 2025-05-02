@@ -10,11 +10,9 @@ Estimated Time: 10 minutes
 
 1. Re-access the application on your browser, open a browser windows and enter following URL:
     ```
-    <copy>
-    http://<compute_instance_public_ip>:5005
-    </copy>
+    ssh -i <private_sshkeyname> ubuntu@<PUBLIC_IP_OF_COMPUTE>
     ```
-    Copy the **```compute_instance_public_ip```** from OCI web console. Open **instances** from the top left corner and click on instance created in Lab 1 to copy the **public ip address**.
+    Copy the **```PUBLIC_IP_OF_COMPUTE```** from OCI web console. Open **instances** from the top left corner and click on instance created in Lab 1 to copy the **public ip address**.
 
     **Note**: Using an incognito browser window helps not saving cache.
 
