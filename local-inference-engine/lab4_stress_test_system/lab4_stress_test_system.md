@@ -7,6 +7,11 @@ If you are on a non-GPU system, this lab will not produce output using nvidia-sm
 
 Estimated Time: 10 minutes
 
+
+### Objectives
+In this lab, you will:
+- Monitor System Performance
+
 ## Task 1: Setup a Monitoring Session
 
 1. From your local workstation, open a new tab or window in your terminal application. Then, just as we did earlier, open a new ssh session to your host. 

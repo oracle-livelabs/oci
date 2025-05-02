@@ -52,6 +52,6 @@ If you've signed out of the Oracle Cloud, use these steps to sign back in.
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
-* **Author** - Animesh Sahay and Francis Regalado, Enterprise Cloud Architect, OCI Cloud Venture
-* **Contributors** -  Andrew Lynch, Director Cloud Engineering, OCI Cloud Venture
-* **Last Updated By/Date** - Animesh Sahay, April 2024
+* **Author** - Jeff Allen, Distinguished Cloud Architect, AI Accounts
+* **Contributors** -  Animesh Sahay, Enterprise Cloud Engineering
+* **Last Updated:** - May 2025

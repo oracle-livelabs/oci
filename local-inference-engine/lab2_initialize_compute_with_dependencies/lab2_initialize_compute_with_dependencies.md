@@ -6,6 +6,12 @@ In this lab we will use the compute instance created in the previous lab to inst
 
 Estimated Time: 25 minutes
 
+
+### Objectives
+In this lab, you will:
+- Install all required drivers, utilities, and packages on the host
+- Clone llama.cpp for inference
+
 ## Task 1: Connect to Your Instance via SSH
 1. In cloud shell terminal or your machine's terminal, navigate to the directory where your SSH keys are stored. To get there, enter the command:
 

@@ -9,6 +9,11 @@ The result? A local AI assistant named **NovaAssist**, designed to provide insta
 
 Estimated Time: 10 minutes
 
+
+### Objectives
+In this lab, you will:
+- Test all of your work
+
 ## Task 1:  Hello NovaAssist!
 
 1. As the lead AI expert at NovaSystems, you prepped the model and used a lot of trial and error to construct the most efficient prompt for the expert to respond correctly to questions from the crew. Let's try it out now and see how the crew can use it! Run this command in your first ssh window.

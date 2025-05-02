@@ -6,6 +6,13 @@ We're getting to the fun part! We need to download the Mistral model now which i
 
 Estimated Time: 10 minutes
 
+
+### Objectives
+In this lab, you will:
+- Build the project environment
+- Build the project itself
+- Test the project
+
 ## Task 1: Build the project environment  
 
 1. Build the project environment:  
