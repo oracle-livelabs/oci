@@ -21,7 +21,7 @@ In this lab, you will:
 
 	![Profile icon](images/profile-icon.jpg#input)
 
-2. From the **Profile details** screen, click **SMTP credentials** under **Resources**. Click **Generate credentials**.
+2. From the **Profile details** screen, navigate to **Saved passwords** under **SMTP credentials**. Click **Generate credentials**.
 
 	![Generate SMTP Credentials Button](images/generate-smtp-creds.jpg#input)
 
@@ -79,7 +79,7 @@ Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SM
 
 1. From the Oracle Cloud Console navigation menu, go to **Developer Services**. Under **Application Integration**, click **Email Delivery**.
 
-   ![Email Delivery Menu](https://oracle-livelabs.github.io/common/images/console/developer-application-emaildelivery.png)
+   ![Email Delivery Menu](https://oracle-livelabs.github.io/common/images/console-2025/developer-application-emaildelivery.png)
 
 2. Under **Email Delivery**, click **Configuration**. In **SMTP Sending Information** panel copy **Public Endpoint**.
 
@@ -109,7 +109,7 @@ In this step, you will create an approved sender who can send emails using the O
 
 1. From the Oracle Cloud Console navigation menu, go to the **Developer Services >> Application Integration >> Email Delivery**.
 
-   ![Email Delivery Menu](https://oracle-livelabs.github.io/common/images/console/developer-application-emaildelivery.png)
+   ![Email Delivery Menu](https://oracle-livelabs.github.io/common/images/console-2025/developer-application-emaildelivery.png)
 
 2. Under **Email Delivery**, click **Approved Senders**. Ensure that you are in the correct compartment. Your user must be in a group with permissions to manage approved-senders in this compartment.
 
