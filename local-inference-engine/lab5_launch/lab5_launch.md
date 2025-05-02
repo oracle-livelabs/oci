@@ -15,17 +15,17 @@ Estimated Time: 10 minutes
     ```
     <copy>~/llama.cpp/build/bin/llama-cli   -m models/mistral-7b-instruct-v0.1.Q4_K_M.gguf   --n-gpu-layers 100   --interactive   --color   -p "<s>[INST] You are NovaAssist, a local AI expert on space systems. Provide technical and precise answers to astronauts without humor or speculation. Stay focused on mission-critical knowledge. Await user input before responding. [/INST]\n"</copy>
     ```
- Below are some questions the crew can ask. Try some of these or come up with some of your own!
- •  "What might explain a sudden rise in CO₂ absorption in hydroponic bay 4?"
- •  "We’re seeing intermittent power drops in the habitat module. What diagnostics should we run first?"
- •  "How should I recalibrate the oxygen sensor in the primary life support loop?"
- •  "What is the maximum safe radiation exposure for EVA crew on sol 17 of this mission?"
- •  "There’s a strange vibration in the centrifuge module. What are likely causes and mitigation steps?"
- •  "If nitrogen levels fall below 15%, what symptoms should we expect in the crew?"
- •  "How do we patch a micrometeoroid puncture in an inner habitat wall?"
- •  "The water reclamation system is returning less than 85% yield. What subsystems should we inspect?"
- •  "We’ve isolated a leak in coolant loop B. What’s the priority protocol for containment and rerouting?"
- •  "How do we safely repack a deployable solar panel that hasn’t fully extended?"
+ Below are some questions the crew can ask. Try some of these or come up with some of your own!  
+ •  What might explain a sudden rise in CO₂ absorption in hydroponic bay 4?  
+ •  We’re seeing intermittent power drops in the habitat module. What diagnostics should we run first?  
+ •  How should I recalibrate the oxygen sensor in the primary life support loop?  
+ •  What is the maximum safe radiation exposure for EVA crew on sol 17 of this mission?  
+ •  There’s a strange vibration in the centrifuge module. What are likely causes and mitigation steps?  
+ •  If nitrogen levels fall below 15%, what symptoms should we expect in the crew?  
+ •  How do we patch a micrometeoroid puncture in an inner habitat wall?  
+ •  The water reclamation system is returning less than 85% yield. What subsystems should we inspect?  
+ •  We’ve isolated a leak in coolant loop B. What’s the priority protocol for containment and rerouting?  
+ •  How do we safely repack a deployable solar panel that hasn’t fully extended?  
  
 
 *Congratulations! You have successfully completed the lab.*<br/>
