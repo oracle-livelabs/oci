@@ -79,11 +79,8 @@ Process a promotion for an employee. Continue working from the Team Activity Cen
  
 Adventure awaits, **click on the adventure checkpoint tab in your browser,** answer the Manager Experience **Questions 9 - 11,** and rise to the top of the leader board!!!
 
+[Click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
 [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE)
-
-[Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
-
-
 
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant
