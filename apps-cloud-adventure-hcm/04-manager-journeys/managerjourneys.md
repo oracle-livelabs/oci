@@ -39,16 +39,16 @@ In this activity, you will:
     ![My Tasks](images\managerjourneystasks2.png)
 
 
-6. Adventure awaits, show what you know, and rise to the top of the leader board!!!
+6. Adventure awaits, [click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Manager **Questions 9 - 11**, and rise to the top of the leader board!
 
     [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE)
 
-    [Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
+     
 
 
 
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant
-* **Contributors** -  Dorcas Conyers, Principal Sales Consultant
-* **Last Updated By/Date** - Dorcas Conyers, March 2024
+* **Contributors** -  Dorcas Conyers, Principal Sales Consultant & Mark Sarmiento, Sr. HCM Solution Engineer
+* **Last Updated By/Date** - Mark Sarmiento, May 2025
 

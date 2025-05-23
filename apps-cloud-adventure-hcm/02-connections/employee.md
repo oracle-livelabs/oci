@@ -16,7 +16,7 @@ In this lab, you will:
 
 ## Task 1: Explore Connections
 
-1. Click the **Me** tab, then the **‘Connections’** tile, and search for **‘Curtis Feitty’** to explore his public profile. You'll find various profile elements, such as his position in the org chart, who he reports to, his interest, skills, and feedback received. 
+1. Click the **Me** tab, then the **‘Connections’** tile, and search for **‘Curtis Feitty’** to explore his public profile. You'll find various profile elements, such as his position in the org chart, who he reports to, his interests, skills, and feedback received. 
     
     *tip: Scroll across to view their entire profile. 
 
@@ -46,9 +46,8 @@ Oracle Cloud HCM can handle any type of absence, to include automating which abs
 
 ![Submitting Absence](images/submitting-absence.png)
 
-Adventure awaits, **click on the adventure checkpoint tab in your browser,** answer the Employee **Questions 5 - 8**, and rise to the top of the leader board!
+Adventure awaits, [click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Employee **Questions 5 - 8**, and rise to the top of the leader board!
     
-[Click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
 ![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)
     
 ## Acknowledgements
