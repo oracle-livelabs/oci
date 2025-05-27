@@ -24,7 +24,7 @@ Easily manage and view candidates in your hiring/recruiting area.
     
     ![Home Page](images/recruiter-my-client-groups.png)
 
-2. You will now be in the Recruiting Activity Center where recruiters can see udpates and automated tasks regarding requisitions they are responsible for. Click the **Requisitions** tab towards the bottom-left of the page. 
+2. You will now be in the Recruiting Activity Center where recruiters can see updates and automated tasks regarding requisitions they are responsible for. Click the **Requisitions** tab towards the bottom-left of the page. 
 
     ![Recruiting Acvtivity Center](images/recruiter-activity-center.png)
 
@@ -48,9 +48,8 @@ Easily manage and view candidates in your hiring/recruiting area.
 
 7. Review different elements of your application. For example, click the **Screening** tab near the top of the page and then click the **down arrow** in the Questionnaires table.  
  
-Adventure awaits, **click on the adventure checkpoint tab in your browser**, answer the Recruiting **Questions 2 - 4**, and rise to the top of the leader board!
+Adventure awaits, [click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Recruiter **Questions 2 - 4**, and rise to the top of the leaderboard!
 
-[Click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
 ![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)
    
 ## Acknowledgements
