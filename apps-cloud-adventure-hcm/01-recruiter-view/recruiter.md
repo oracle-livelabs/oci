@@ -48,7 +48,7 @@ Easily manage and view candidates in your hiring/recruiting area.
 
 7. Review different elements of your application. For example, click the **Screening** tab near the top of the page and then click the **down arrow** in the Questionnaires table.  
  
-Adventure awaits, [click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Recruiter **Questions 2 - 4**, and rise to the top of the leader board!
+Adventure awaits, [click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Recruiter **Questions 2 - 4**, and rise to the top of the leaderboard!
 
 ![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)
    

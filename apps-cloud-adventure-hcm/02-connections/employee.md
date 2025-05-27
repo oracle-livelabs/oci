@@ -20,7 +20,6 @@ In this lab, you will:
     
     *tip: Scroll across to view their entire profile. 
 
-
     ![Accessing Connections](images/accessing-connections.png)
 
     ![Connections Search](images/connections-search.png)
@@ -28,7 +27,6 @@ In this lab, you will:
     ![Connections Profile](images/connections-profile.png)
 
 ## Task 2:  Absence Request
-
 
 Oracle Cloud HCM can handle any type of absence, to include automating which absences different employees can request/view, based on specific/local rules. This logic also includes accruals and entitlements.
 
@@ -46,7 +44,7 @@ Oracle Cloud HCM can handle any type of absence, to include automating which abs
 
 ![Submitting Absence](images/submitting-absence.png)
 
-Adventure awaits, [click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Employee **Questions 5 - 8**, and rise to the top of the leader board!
+Adventure awaits, [click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Employee **Questions 5 - 8**, and rise to the top of the leaderboard!
     
 ![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)
     
