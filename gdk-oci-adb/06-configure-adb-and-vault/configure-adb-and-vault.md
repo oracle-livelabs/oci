@@ -19,13 +19,13 @@ In this lab, you will:
 
 1. From the **Autonomous Database details** screen opened in the browser, click **Database actions**.
 
-   ![ADB Database Actions](./images/adb-db-actions.jpg#input)
+   ![ADB Database Actions](./images/adb-db-actions.png#input)
 
 2. From the **Database Actions** drop-down menu, click **SQL** to open the SQL web console.
 
-   ![ADB Database Actions Launch SQL](./images/adb-db-actions-dev-sql.jpg#input)
+   ![ADB Database Actions Launch SQL](./images/adb-db-actions-dev-sql.png#input)
 
-3. From the **SQL** screen, close the `Warning` and the `SQL History` dialog boxes.
+3. From the **SQL** screen, close the `Warning` and the `Run Statement` dialog boxes.
 
    ![ADB Database Actions SQL](./images/adb-db-actions-sql.jpg#input)
 
@@ -51,7 +51,9 @@ In this lab, you will:
 
 ## Task 2: Create secrets in the Vault for the wallet password, database schema user and password
 
-1. In the **Vault** you created, navigate to **Secrets**, click **Create Secret**.
+1. In the **Vault** you created, navigate to **Secrets**. Select your workshop compartment from the **Compartment** drop down list, click **Create Secret**.
+
+   ![Create Secrets button](./images/create-secrets-button.png)
 
 2. Created three secrets - `ADB_WALLET_PASSWORD`, `ADB_USER`, and `ADB_USER_PASSWORD` - in the your workshop compartment.
 
@@ -103,7 +105,7 @@ In this lab, you will:
 
       Secret Type Template: Plain-Text
 
-      Secret Contents: (Paste the secret value created in the above task)
+      Secret Contents: (Enter the schema user password created in the previous task)
 
       Show Base64 conversion: YES
       ```

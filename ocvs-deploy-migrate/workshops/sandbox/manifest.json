@@ -1,0 +1,44 @@
+{
+    "workshoptitle": "VMware Workload Migration to Oracle Cloud VMware Solution (OCVS)",
+    "help": "livelabs-help-oci_us@oracle.com",
+	"tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "./../../intro/intro.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "OCVS Overview",
+            "filename": "./../../ocvs_overview/ocvs_overview.md"
+        },
+        {
+            "title": "Lab 1: Configure Network and Access Components",
+            "filename": "./../../configure_networking/configure_networking.md"
+        },
+        {
+            "title": "Lab 2: Deploy OCVS",
+            "filename": "./../../deploy_ocvs/deploy_ocvs.md"
+        },
+        {
+            "title": "Lab 3: Create New Datastore",
+            "filename": "./../../create_datastore/create_datastore.md"
+        },
+        {
+            "title": "Lab 4: Deploy and Configure HCX",
+            "filename": "./../../deploy_hcx/deploy_hcx.md"
+        },
+        {
+            "title": "Lab 5: Migrate Workload from On-Prem",
+            "filename": "./../../migrate_workload/migrate_workload.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

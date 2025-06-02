@@ -46,7 +46,7 @@ In this lab, you will:
     Press the enter (return) key. The MySQL container starts in a few seconds. When MySQL is up and running, you will see a similar message in the terminal window:
 
     ``` bash
-    ... [Server] /usr/sbin/mysqld: ready for connections. Version: '8.4.3'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+    ... [Server] /usr/sbin/mysqld: ready for connections. Version: '8.4.4'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
     ```
 
 ## Task 2: Build and run the application
@@ -81,11 +81,23 @@ In this lab, you will:
 
 1. Press the enter (return) key. From the same terminal, add a genre using the command below, and the `genre` table will now contain an entry.
 
+<if type="mn_run">
+
 	``` bash
 	<copy>
 	curl -X "POST" "http://localhost:8080/genres" -H 'Content-Type: application/json; charset=utf-8' -d '{ "name": "music" }' | jq
 	</copy>
 	```
+</if>
+
+<if type="jar">
+
+    ``` bash
+	<copy>
+	curl -X "POST" "http://localhost:8080/genres" -H 'Content-Type: application/json; charset=utf-8' -d '{ "name": "drama" }' | jq
+	</copy>
+	```
+</if>
 
 ## Task 4: Check the Genres present in the MySQL database
 
