@@ -185,6 +185,14 @@ It will allow the database to call the OIC URLs
 
 - The right to call OCI API could probably be improved with OCI policies instead of encoding the user ocid, ...
 
+## Known Issues
+
+- When pressing Discover All, there is an *error: ORA-40441 - JSON Syntax Error*
+    - Symptoms: When running this command, it works 
+       ```
+       curl -k -u ##USER##:##PASSWORD## https://##OIC_HOST/ic/api/integration/v1/integrations | jq .  
+       ```
+    - Work-around: Wait 2/5 mins and it works.
 
 ## Acknowledgements
 
