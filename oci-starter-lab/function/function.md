@@ -44,7 +44,7 @@ Please read the chapter: Introduction and Get Started.
     cat README.md
     </copy>
     ```
-    ![OCI Starter Editor](images/starter-editor.png)
+    ![OCI Starter Editor](../public_compute/images/starter-editor.png)
 
 ## Task 2: Main files
 
@@ -52,40 +52,33 @@ Please read the chapter: Introduction and Get Started.
     - Click *File* /  *Open*
     - Choose the directory *starter*
     - Click *Open*
-    ![Editor File Open](images/starter-compute-dir.png)
+    ![Editor File Open](../public_compute/images/starter-compute-dir.png)
 2. The main files are:
-    - Commands
-        - build.sh      : Build the whole program: Run Terraform, Configure the DB, Build the App, Build the UI
-        - destroy.sh    : Destroy the objects created by Terraform
-        - env.sh        : Contains the settings of your project
-    - Directories
-        - src           : Sources files
-            - app         : Source of the Backend Application (Command: build_app.sh)
-            - ui          : Source of the User Interface (Command: build_ui.sh)
-            - db          : SQL files of the database
-            - terraform   : Terraform scripts (Command: plan.sh / apply.sh)
-        - bin            : with some helper commands
-            - bin/ssh\_bastion.sh (to ssh to the Bastion)
-3. We will need an AUTH Token to login to the Docker Container Registry. Let's create one:
-    - Click on the top left icon
-    - Click your username
-    - In the menu on the right, choose Auth Tokens
-    - Click *Generate Token*
-    - Give a name 
-    - Click *Generate Token*
-    - Then copy the value ##AUTH-TOKEN##
-    ![Auth Token](images/starter-auth-token.png)
-4. Edit the env.sh file:
+
+   |             |            |           | Description |
+   | ----------- | ---------- | --------- | ---|
+   | Commands    |            |           |  |
+   |             | starter.sh |           | Build or destroy a project. Show a menu with commands if not argument is given | 
+   |             | env.sh     |           | Settings of your project | 
+   | Directories |            |           | Commands used by starter.sh | 
+   |             | bin/       |           | Commands used by starter.sh | 
+   |             | src/       |           | Sources files | 
+   |             |            | app       | Backend Application (Command: build_app.sh) | 
+   |             |            | ui        | User Interface (Command: build_ui.sh) | 
+   |             |            | db        | Database initialisation files (SQL, ...) | 
+   |             |            | terraform | Terraform scripts  | 
+   |             | target/    |           | Output directory  | 
+
+3. Edit the env.sh file:
     - Choose the env.sh file.
     - Look for \_\_TO_FILL\_\_ in the file
-    - For TF\_VAR\_auth\_token, use the ##AUTH-TOKEN## value that you just above. 
     - For TF\_VAR\_database\_password, You may leave it like this.
         - If not filled, the "db password" will be randomly generated
     - Ideally, you can also use an existing compartment if you have one. 
         - If not, the script will create a "oci-starter" compartment
-    ![Editor env.sh](images/starter-function-env.png)
+    ![Editor env.sh](../public_compute/images/starter-compute-env.png)
 
-## Task 3: Build.sh
+## Task 3: Starter.sh
 
 Before to run the build. Notice that the build will create:
 - Network resources: VCN, Subnet
@@ -100,11 +93,12 @@ Before to run the build. Notice that the build will create:
     - then run:
     ```
     <copy>
-    ./build.sh
+    ./starter.sh
     </copy>
     ```
-
-    It will build all and at the end you will see:
+    - Choose **Build**
+        ![Result](../public_compute/images/starter-starter-build.png)     
+    - It will build all and at the end you will see:
     ```
     <copy>
     - User Interface : https://xxxxxx.apigateway.eu-xxxx.oci.customer-oci.com/starter/
@@ -122,7 +116,7 @@ Before to run the build. Notice that the build will create:
 ## Task 4: More info
 
 ### Customize
-Please also check the  "Lab 6 - How to Customize" to see how to customize this sample to your needs
+Please also check the  "Lab 7 - How to Customize" to see how to customize this sample to your needs
 
 ### Object Storage
 During the build, it will generate an Object Storage to store the HTML file.
@@ -142,7 +136,7 @@ You will find a Application starter-fn-application
 1. To clean up, run 
     ```
     <copy>
-    ./destroy.sh
+    ./starter.sh destroy
     </copy>
     ```
 
@@ -157,5 +151,5 @@ You will find a Application starter-fn-application
 
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
-* Last Updated - Nov, 2th 2023
+* Last Updated - Jan, 20th 2025
 

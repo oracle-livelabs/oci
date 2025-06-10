@@ -1,0 +1,35 @@
+apiVersion: agones.dev/v1
+kind: Fleet
+metadata:
+  name: simple-game-server
+spec:
+  replicas: 3
+  template:
+    spec:
+      ports:
+        - name: default
+          containerPort: 7654
+      template:
+        spec:
+          containers:
+            - name: simple-game-server
+              image: us-docker.pkg.dev/agones-images/examples/simple-game-server:0.35
+              resources:
+                requests:
+                  memory: 64Mi
+                  cpu: 20m
+                limits:
+                  memory: 64Mi
+                  cpu: 20m
+          # Affinity so that game servers get scheduler on the correct node pool
+          # The key agones.dev/agones-worker is not one created or managed by agones
+          # ...this key simply needs to match what is defined in module.tf for the worker node pool
+          affinity:
+            nodeAffinity:
+              requiredDuringSchedulingIgnoredDuringExecution:
+                nodeSelectorTerms:
+                - matchExpressions:
+                  - key: agones.dev/agones-worker
+                    operator: In
+                    values:
+                    - "true"

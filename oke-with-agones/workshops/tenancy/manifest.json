@@ -1,0 +1,42 @@
+{
+    "workshoptitle": "Autoscale OKE Node Pools with Agones Game Servers and Fleets",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "The will introduce you to OKE and Agones and list all labs in this Workshop",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for the Workshop to install the OCI CLI and Terraform",
+            "filename": "../../get-started/get-started.md"
+        },
+        {
+            "title": "Lab 1: Create Infrastructure with Terraform",
+            "description": "Provisioning Oracle Container Engine for Kubernetes (OKE) with Virtual Nodes",
+            "filename": "../../1-create-infrastructure-with-terraform/1-create-infrastructure-with-terraform.md"
+        },
+        {
+            "title": "Lab 2: Install OKE Autoscaler Addon",
+            "filename": "../../2-install-oke-autoscaler-addon/2-install-oke-autoscaler-addon.md"
+        },
+        {
+            "title": "Lab 3: Create the Agones System",
+            "filename": "../../3-create-agones-system/3-create-agones-system.md"
+        },
+        {
+            "title": "Lab 4: Create and Scale an Agones Fleet",
+            "filename": "../../4-create-scale-agones-fleet/4-create-scale-agones-fleet.md"
+        },
+        {
+            "title": "Lab 5: Teardown",
+            "filename": "../../5-teardown/5-teardown.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

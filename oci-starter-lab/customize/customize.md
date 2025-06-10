@@ -22,10 +22,10 @@ Let's say that we deploy a Java / SpringBoot on a Compute with an Database.
     unzip starter.zip
     cd starter
     cat README.md
-    # ./build.sh
+    # ./starter.sh build
     </copy>
     ````
-2. When you run the build.sh script, the program will:
+2. When you run the **./starter.sh build** script, the program will:
     1. Create resources (compute/database/....) with "Terraform" (src/terraform)
     2. Create tables in the database (src/db)
     3. Compile the "Backend Application (app)" (src/app) 
@@ -58,15 +58,10 @@ In the next task, we will go inside each directory to see what it contains.
     ````
     ````
     <copy>    
-    apply.sh  atp.tf  bastion.tf  compute.tf  datasource.tf  destroy.sh  network.tf  output.tf  plan.sh  terraform_local.tf  variable.tf
+    atp.tf  bastion.tf  compute.tf  datasource.tf  network.tf  output.tf  terraform_local.tf  variable.tf
     </copy>
     ````
-2. We see 2 type of files:
-    1. *.sh :  scripts to run terraform (normal or resource manager): 
-        - plan.sh: test the terraform resources to see if apply will work. But it does nothing.
-        - apply.sh: create the terraform resources
-        - destroy.sh: destroy the terrraform resources
-    2. *.tf : terraform files to create resources
+2. We see *.tf files. They are terraform files to create resources
         - compute.tf : create the compute
         - atp.tf: create an autonomous database
         - network.tf: create the network (VCN, subnets, security list)
@@ -123,7 +118,7 @@ In the next task, we will go inside each directory to see what it contains.
 3. You may customize all these files to your needs. For example, to use your own SpringBoot Application.
     - overwrite the pom.xml and src directory with your files.
     - change the start.sh
-    - and rerun $STARTER_HOME/build.sh
+    - and rerun $STARTER_HOME/starter.sh build
 
 ## Task 5 - Check User Interface Directory: src/ui
 
@@ -148,10 +143,10 @@ In the next task, we will go inside each directory to see what it contains.
         - directory ui: containing static HTML files
 3. You may customize all these files to your needs. For example, to use your own HTML files
    - overwrite the HTML files in the ui directory with your files.
-   - Then rerun $STARTER_HOME/build.sh to update the server
+   - Then rerun $STARTER_HOME/starter.sh build to update the server
 
 ## Acknowledgements 
 
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
-* Last Updated - Nov, 2th 2023
+* Last Updated - Jan, 20th 2025

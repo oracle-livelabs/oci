@@ -22,7 +22,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
 
 
-2. Oracle Cloud Applications are delivered with a complete set of roles which control access to application functions and data.  
+2. Oracle Cloud Applications are delivered with a complete set of roles which control access to application functions and data.
 
   To add a new privilege  to a user, you will need to first copy an existing role.
 
@@ -50,7 +50,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
   > In the search field provided at the top, type: **Adventure**. <br>
 
-  > Then **click** on the first entry as shown.
+  > Then **click** on the **Adventure Accounts Payable Manager** job role.
 
   ![Adventure Role Search](images/image004.png)
 
@@ -92,7 +92,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
   ![Copy Role 2a](images/image009.png)
 
-10. You will now find the required policy using the search form.	
+10. You will now find the required policy using the search form.
 
   > Type **Cancel Supplier Negotiation** in the search field and select the policy.
 
@@ -111,11 +111,11 @@ At this point, you should be logged into your environment with a username CIO.xx
 
 12. Note that the new policy has been added.
 
-  You will skip the next three tasks until you arrive at ‘Users (7)’ in the Copy Role process. 
+  You will skip the next three tasks until you arrive at ‘Users (7)’ in the Copy Role process.
 
   > **Press the 7 (Users) task at the top of the screen**.
 
- ![Copy Role 2e](images/image013.png) 
+ ![Copy Role 2e](images/image013.png)
 
 13. Using a similar search tool, you will now search for Brian Bell and provide him with this new role and its associated privileges.
 
@@ -146,7 +146,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Copy Role 7e](images/image018.png)
 
-16. Note confirmation that we have added one Security Policy and one user 
+16. Note confirmation that we have added one Security Policy and one user
 
   > Press the **Submit and Close** button.
 
@@ -168,7 +168,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Compare Roles Launch](images/image021.png)
 
-19. You will need to enter the name of your new role 
+19. You will need to enter the name of your new role
 
   > Press the **Search** ![Search Icon](images/icon01_search.png) icon for the First Role
 
@@ -213,13 +213,13 @@ At this point, you should be logged into your environment with a username CIO.xx
 
 
 22. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-    
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
+
+    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 
 ## Summary
 
-Security Console is used to quickly manage user access to the entire Fusion applications suite.  
+Security Console is used to quickly manage user access to the entire Fusion applications suite.
 
 **You have successfully completed the Activity!**
 
@@ -233,5 +233,5 @@ Security Console is used to quickly manage user access to the entire Fusion appl
 
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist, Advanced Technology Services
-* **Contributors** -  
-* **Last Updated By/Date** - Nate Weinsaft, November 2024
+* **Contributors** -
+* **Last Updated By/Date** - Nate Weinsaft, April 2025
