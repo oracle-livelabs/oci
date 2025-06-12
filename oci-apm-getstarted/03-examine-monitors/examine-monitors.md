@@ -19,8 +19,6 @@ Estimated time: 5 minutes
 
 1. Open the navigation menu in the Oracle Cloud console, select **Observability & Management** > **Home** under **Application Performance Management**.
 
-	![Oracle Cloud console Menu](images/1-0-menu-home.png " ")
-
 2. APM Home page opens. Locate the **Monitors** widget on the right side of the page. You can see the status of the synthetic monitors running for the last 24 hours, in this compartment.
 
 	![Oracle Cloud console, APM Home](images/1-1-apm-home.png " ")
@@ -74,4 +72,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, December 2024
+* **Last Updated By/Date** - Yutaka Takatsu, June 2025
