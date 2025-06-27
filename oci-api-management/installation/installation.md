@@ -10,10 +10,6 @@ Estimated time: 20 min
 - Install an Autonomous Database
 - Install the API Portal (APEX application) in it
 
-Watch the video below for a quick walk-through of the lab. 
-
-[Video](videohub:1_6v7eprbg)
-
 ### Prerequisites
 
 - Download the source code of the project:
@@ -83,6 +79,7 @@ First, let's create an Autonomous database.
     - Display Name: *APIDB*
     - Database Name: *APIDB* 
     - Workload: *Transaction Processing*
+    - Version: *23ai*
     - Deployment: *Serverless* (Shared Infrastructure)
     - Password: ex: *LiveLab\_\_123* (Take note of it: ##DB\_PASSWORD##)
     - Network: Keep *Secure Access from Everywhere*
@@ -187,8 +184,6 @@ Back to page of the Autonomous Database,
     - Click *APEX*
 2. Note the URL of APEX, we need the Apex Host Name (##APEX_HOST##) later in the lab (Ex: abcdefghijk-db123.adb.eu-frankfurt-1.oraclecloudapps.com) 
 
-    ![APEX URL](images/apim-apex-url.png)
-
 3. In Administration Service, enter the DB password (##DB_PASSWORD##)
     - Click *Sign In to Administration*
 
@@ -261,4 +256,4 @@ In case you make a mistake and need to restart the installation, most of the tim
 
 ## Acknowledgements
 * **Author** - Marc Gueury / Phil Wilkins /  Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
-* **Last Updated By/Date** - Marc Gueury, May 2024
+* **Last Updated By/Date** - Marc Gueury, June 2025

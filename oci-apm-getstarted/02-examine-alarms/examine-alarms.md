@@ -15,6 +15,30 @@ Estimated time: 5 minutes
 
 * Completion of the preceding labs in this workshop
 
+
+## Task 1: Access APM home dashboard
+
+
+1. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, select **Observability & Management** > **Home** under **Application Performance Monitoring**.
+
+   ![Oracle Cloud console, Home page](images/0-0-oci-home.png " ")
+
+
+   ![Oracle Cloud console, Navigation Menu](images/0-1-menu-home.png " ")
+
+   APM Home page opens.
+
+2. On the APM Home page, select the following from the pulldown menus:
+    - Compartment : **root/eStore/WineStore** (Type down **WineStore** and select an entry below eStore)
+    - APM Domain : **Prod**
+    - Time : Last **24 Hours**
+    - Region: **US East (Ashburn)** (set by default)
+   ![Oracle Cloud console, APM Home page](images/0-2-apm-home.png " ")
+Make sure the data is loaded onto the charts in the Home dashboard.
+
+
+
+
 ## Task 1: View critical alarms on the APM Home page
 
 1. At the top left side of the screen, locate the **Alarms** widget. You may see 2 or 3 alarms currently being fired. Click the link to the alarm **WineStore-E2E-ExecTime**.

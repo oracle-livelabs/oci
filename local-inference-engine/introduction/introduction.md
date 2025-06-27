@@ -33,8 +33,9 @@ This lab assumes you have:
 * Internet access from the instance to download software packages and the model (should be automatic).
 
 > **Note:** GPU shapes in OCI incur costs while running. Be sure to terminate your instance when the lab is complete to avoid unexpected charges. 💵 💵 
+## Task
 
-## Learn More
+### Learn More
 
 * [AI Datascience Blog](https://blogs.oracle.com/ai-and-datascience/post/democratizing-generative-ai-with-cpu-based-inference)
 

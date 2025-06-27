@@ -13,8 +13,8 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Access the APM workshop environment",
-            "description": "Access the APM workshop environment",
+            "title": "Lab 1: Analyze GenAI app with Inferencing app dashboard",
+            "description": "Analyze GenAI app with Inferencing app dashboard",
             "filename": "../../01-access-env/access-env.md"
         },
 
