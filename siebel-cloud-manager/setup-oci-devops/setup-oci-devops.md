@@ -17,7 +17,6 @@ In this lab, you will:
 ### Prerequisites
 
 * Oracle Cloud Infrastructure tenancy access
-* SSH Client and SSH Key
 
 ## Task 1: Configure OCI Devops project
 
