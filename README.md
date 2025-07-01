@@ -11,7 +11,7 @@ Visit [LiveLabs](https://livelabs.oracle.com) now to get started.  Workshops are
 
 ## 📂 Navigation
 
-- [access-siebel-oke.md](siebel-cloud-manager/access-siebel-oke.md)
+- [access-siebel-oke.md](siebel-cloud-manager/access-siebel-oke/access-siebel-oke.md)
 
 
 ## Contributing
