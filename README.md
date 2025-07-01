@@ -9,6 +9,9 @@ Visit [LiveLabs](https://livelabs.oracle.com) now to get started.  Workshops are
 
 [![](https://oracle-livelabs.github.io/common/images/livelabs-new-skin.png)](https://livelabs.oracle.com)
 
+## 📂 Navigation
+
+- [access-siebel-oke.md](oci/siebel-cloud-manager/access-siebel-oke.md)
 
 
 ## Contributing
