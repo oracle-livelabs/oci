@@ -1,5 +1,15 @@
 # Welcome
 
+## 📂 Navigation
+
+- [Lab 1: Create SSH keys using Oracle Cloud Shell](siebel-cloud-manager/introduction/introduction.md)
+- [Lab 2: Provision the Siebel Cloud Manager Instance](siebel-cloud-manager/provision-scm/provision-scm.md)
+- [Lab 3: Configure OCI Devops](siebel-cloud-manager/setup-oci-devops/setup-oci-devops.md)
+- [Lab 4: Deploy Siebel CRM](siebel-cloud-manager/deploy-siebel-crm/deploy-siebel-crm.md)
+- [Lab 5: Access the Siebel Kubernetes Cluster](siebel-cloud-manager/access-siebel-oke/access-siebel-oke.md)
+- [Lab 6: Teardown the Siebel Cloud Manager Lab Environment](siebel-cloud-manager/teardown-scm/teardown-scm.md)
+
+
 [![](https://oracle-livelabs.github.io/common/images/livelabs-banner-formarketplace.png)](https://livelabs.oracle.com)
 ---
 LiveLabs is the place to explore Oracle's products and services using workshops designed to enhance your experience building and deploying applications on the Cloud and On-Premises.   Our library of workshops cover everything from how to provision the world's first autonomous database to setting up a webserver on OCI, machine learning and much more.  Use your existing Oracle Cloud account, a Free Tier account, or a LiveLabs Sandbox Reservation to build, test, and deploy applications on Oracle's Cloud.
@@ -8,11 +18,6 @@ LiveLabs is the place to explore Oracle's products and services using workshops 
 Visit [LiveLabs](https://livelabs.oracle.com) now to get started.  Workshops are added weekly, please visit frequently for new content.
 
 [![](https://oracle-livelabs.github.io/common/images/livelabs-new-skin.png)](https://livelabs.oracle.com)
-
-## 📂 Navigation
-
-- [access-siebel-oke.md](siebel-cloud-manager/access-siebel-oke/access-siebel-oke.md)
-
 
 ## Contributing
 Pull requests are currently not being accepted. See [CONTRIBUTING](CONTRIBUTING.md) for details.
