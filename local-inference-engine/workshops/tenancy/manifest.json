@@ -1,0 +1,42 @@
+{
+    "workshoptitle": "Deploy and run an AI Inference Engine locally on a node (and chat with it!)",
+        "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "The Introduction is always first. The title and contents menu title match for the Introduction.",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "../../get_started/get_started.md"
+        },
+        {
+            "title": "Lab 1: Setup a VCN and Compute Instance",
+            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+            "filename": "../../lab1_setup_vcn_compute/lab1_setup_vcn_compute.md"
+        },
+        {
+            "title": "Lab 2: Initialize Compute with Dependencies",
+            "filename": "../../lab2_initialize_compute_with_dependencies/lab2_initialize_compute_with_dependencies.md"
+        },
+        {
+            "title": "Lab 3: Prepare the Model",
+            "filename": "../../lab3_prepare_the_model/lab3_prepare_the_model.md"
+        },
+        {
+            "title": "Lab 4: Stress Test the System",
+            "filename": "../../lab4_stress_test_system/lab4_stress_test_system.md"
+        },
+        {
+            "title": "Lab 5: Launch!",
+            "filename": "../../lab5_launch/lab5_launch.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

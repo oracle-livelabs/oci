@@ -48,44 +48,44 @@ Process a promotion for an employee. Continue working from the Team Activity Cen
 
     ![My Team](images\myteampage2.png)
 
-
-4. Type **Promote** in the search bar. Click **Promote**.
+4. Type **Promote** in the search bar. Hit **Enter** on your keyboard. Click **Promote**.
 
     ![My Team](images\myteampage3.png)
 
-5. Under the **‘Info to include’** section - Toggle the **Salary** button and then click **continue**.
+5. You are presented with a promotion journey. Like any business process, you can facilitate a promotion via a journey. For today, click **Continue Without Journey.**
+
+    ![My Team](images\ContinueWithoutJourneyMyTeam.png)
+
+6. Under the **‘Info to include’** section - Toggle the **Salary** button and then click **continue**.
 
 
     ![My Team](images\myteampage4.png)
 
-6. In the **‘When and why’** section enter **today's date** as the effective date for the promotion *(What's the way to promote will auto populate)*. Click **Continue**. 
+7. In the **‘When and why’** section enter **today's date** as the effective date for the promotion *(What's the way to promote will auto populate)*. Click **Continue**. 
 
     ![Compensation](images\myteamcompensationpage3.png)
 
-7. In the Position override section DO NOT MAKE ANY CHANGES.  Click **Continue**.
+8. In the Position override section DO NOT MAKE ANY CHANGES.  Click **Continue**.
 
-8. In the Assignment section DO NOT MAKE ANY CHANGES.  Click **Continue**.
+9. In the Assignment section DO NOT MAKE ANY CHANGES.  Click **Continue**.
 
-9. In the **‘Salary’** section enter a salary adjustment amount or adjustment percent *(to see an example of the guardrails for entry - enter a salary adjustment greater than 60%)*
+10. In the **‘Salary’** section enter a salary adjustment amount or adjustment percent.
 
    ![Compensation](images\myteamcompensationpage2.png)
 
-10. To complete the transaction Click **Submit**
+11. To complete the transaction click **Submit**. Now, click the **‘Home’** Icon.
 
 **Congratulations you just promoted your employee!**
 
-> Click the **‘Home’** Icon
+
 
  
-Adventure awaits, **click on the adventure checkpoint tab in your browser,** answer the Manager Experience **Questions 9 - 11,** and rise to the top of the leader board!!!
+Adventure awaits, [click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Manager **Questions 9 - 11**, and rise to the top of the leader board!
 
+[Click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
 [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE)
-
-[Click here](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) 
-
-
 
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant
-* **Contributors** -  Dorcas Conyers, Principal Sales Consultant
-* **Last Updated By/Date** - Dorcas Conyers, October 2024
+* **Contributors** -  Dorcas Conyers, Principal Sales Consultant, Zachary Sobeck, Principal Solution Engineer, Mark Sarmiento, Sr. HCM Solution Engineer
+* **Last Updated By/Date** - Zachary Sobeck & Mark Sarmiento, May 2025
