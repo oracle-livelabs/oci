@@ -182,6 +182,7 @@ Para adicionar servidores de back-end, clique no botão “Add Backends”
 Assim que o processo de criação for concluído, você terá as seguintes informações:
 
 ![visualize o Load Balancer](images/load-balancer-logs-15.png)
+![visualize o Load Balancer](images/load-balancer-logs-16.png)
 ![visualize o Load Balancer](images/load-balancer-done-15.png)
 
 **Testando o Load Balancer**

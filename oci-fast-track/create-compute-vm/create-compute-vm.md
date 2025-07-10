@@ -92,6 +92,10 @@ Para isso, basta clicar no menu do Cloud Shell e solicitar o Download:
 
 ![selecione o tamanho da virtual machine](./images/vm-size-12.png)
 
+![selecione o tamanho da virtual machine](./images/vm-size-13.png)
+
+![selecione o tamanho da virtual machine](./images/vm-size-14.png)
+
 3. Ao inserir as informações de rede, lembre-se de escolher a opção “Assign a Public IP address” para Atribuir um endereço IP público à instância de computação.
 
 ![Configurações de rede para VM](./images/vm-network-config-13.png)
@@ -167,6 +171,10 @@ Dados para criação da VM Windows:
 ![selecione AD, shape e imagem windows](./images/vm-shape-windows-19.png)
 ![selecione AD, shape e imagem windows](./images/vm-shape-windows-20.png)
 ![selecione AD, shape e imagem windows](./images/vm-shape-windows-21.png)
+
+![selecione o tamanho da virtual machine](./images/vm-size-13.png)
+
+![selecione o tamanho da virtual machine](./images/vm-size-14.png)
 
 2. Ao inserir as informações de rede, lembre-se de escolher a opção “Assign a Public IP address” para Atribuir um endereço IP público à instância de computação.
 
