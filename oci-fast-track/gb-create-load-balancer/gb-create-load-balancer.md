@@ -208,4 +208,4 @@ Nesta sessão você aprendeu a criar uma aplicação em Alta Disponibilidade (HA
 ## Autoria
 
 - **Autores** - Arthur Vianna, Gustavo Sant'ana, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Date** - Arthur Vianna, Fev/2024
+- **Último Update Por/Date** - Arthur Vianna, Jul/2025

@@ -193,4 +193,4 @@ Nesta sessão você aprendeu a provisionar um Oracle Autonomous Data Warehouse. 
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Data** - Arthur Vianna, Fev/2024
+- **Último Update Por/Data** - Arthur Vianna, Jul/2025

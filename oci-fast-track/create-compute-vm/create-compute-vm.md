@@ -247,4 +247,4 @@ Nesta sessão você aprendeu a criar Máquina Virtuais Linux e Windows e aprende
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Updated Por/Data** - Arthur Vianna, Fev/2024
+- **Último Updated Por/Data** - Arthur Vianna, Jul/2025
