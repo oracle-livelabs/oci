@@ -19,35 +19,39 @@ In this lab, you will:
 
    
     ![alt text](images/vcnstep1.png)
+<!--
 1. Look the lower right corner of your screen for a slider selection titled "Redwood Preview".
 **DISABLE** Redwood Preview. This entire lab assumes you are not using the Redwood Preview.  
 
     ![alt text](images/redwooddisable.png)
+-->
 
-1. Select the compartment assigned to you from the drop down menu on the left part of the screen and click **Start VCN Wizard**.
+1. Just above the Actions menu, the current compartment will be displayed. Make certain you are in the desired compartment (learn more about compartments here: https://docs.public.content.oci.oraclecloud.com/en-us/iaas/Content/Identity/compartments/Working_with_Compartments.htm).  
 
-    ![](images/start_vcn_wizard.png " ")
+   Select the Actions Menu and select **Start VCN Wizard**.
+
+  
 
 1. Click **Create VCN with Internet Connectivity** and click **Start VCN Wizard**.
 
-    ![](images/click_start_vcn_wizard.png " ")
+    ![](images/rw_start_vcn_wizard.png " ")
 
-1. Fill out the dialog box:
+1. Fill out the dialog boxes:
 
       - **VCN NAME**: Provide a name of your choosing (ex *Inference-VCN*)
       - **COMPARTMENT**: Ensure your compartment is selected. If you have not defined a compartment, use the default.
-      - **VCN CIDR BLOCK**: Provide a CIDR block (10.0.0.0/16)
-      - **PUBLIC SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.0.0/24)
-      - **PRIVATE SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.1.0/24)
+      - **VCN CIDR BLOCK**: Use the Default (10.0.0.0/16)
+      - **PUBLIC SUBNET CIDR BLOCK**: Use the Default (10.0.0.0/24)
+      - **PRIVATE SUBNET CIDR BLOCK**: Use the Default (10.0.1.0/24)
       - Click **Next**
 
-    ![](images/custom_image_006.png " ")
+    ![](images/rw_vcn_config.png " ")
     
-    ![](images/custom_image_0016.png " ")
+
 
 1. Verify that all the information is correct and  click **Create**.
 
-    ![](images/create_vcn.png " ")
+    ![](images/rw_vcn_confirm.png " ")
 
     This will create a VCN with the following components.
 
@@ -55,7 +59,7 @@ In this lab, you will:
 
 1. Click **View Virtual Cloud Network** to display your VCN details.
 
-    ![](images/view_vcn.png " ")
+    ![](images/rw_vcn_view.png " ")
 
 ## Task 2: Create a compute instance
 
@@ -89,30 +93,33 @@ In this lab, you will:
 
       - **Instance Type**: Select Bare Metal machine
       - **Shape Series**: Specialty and previous generation
-      - **Instance Shape**: Select any BM.GPU.x shape (not the BM.GPU.MI300X.8 for this lab). 
-      **Important**: You can also use a Virtual Machine of type VM.GPU.A10.x and it will be faster.
-      If you do not have BM.GPU shapes in your tenancy, you can still run the model using CPU only and the lab will call that out at the proper step.
+      - **Instance Shape**: Select any BM.GPU.x shape except for BM.GPU.MI300X.8 as this lab is written for NVIDIA libraries.  
+      **Important**: **You can also use a Virtual Machine of type VM.GPU.A10.x and it will be faster.**
+      If you do not have BM.GPU or VM.GPU.A10 shapes in your tenancy, you can still run the model using CPU only and the lab will call that out at the proper step.
       Pro Tip: If a shape is greyed out, cancel this dialog and select a different AD where the shape may be available. 
 
       ![alt text](images/bmselection.png)
       ![alt text](images/baremetalgpu.png)
 
 
-      Click **Select Shape**.
+      Click **Select Shape** (scroll down to first Check the required T&C box).
 
 1. Scroll down to **Primary VNIC Information** section and edit the following:
 
       - **Virtual cloud network**: Choose the VCN you created in Task 1
-      - **Subnet:** Choose the Public Subnet under **Public Subnets** (it should be named Public Subnet-NameOfVCN)
-      - **Assign a public IPv4 address**: Check this option
+      - **Subnet:** Choose the **Public Subnet** under Public Subnets (it should be named Public Subnet-NameOfVCN)
+      - **Assign a public IPv4 address**: Verify this option is selected
 
       ![](images/create-compute-3.png) 
 
+      Click Next to progress the wizard to the Security section. Make no changes and click Next again to progress to the Networking section.
       - **Add SSH Keys:** Choose **Generate a key pair for me** and save private and public keys. If you already have ssh keys, choose **Paste public keys** or upload it here.
       
       ![](images/ssh_key_1.png)
       
       ![](images/ssh_key_2.png)   
+
+      Click Next one more time to progress to the Review section.  
 
 1. Click **Create**.
 
@@ -120,7 +127,7 @@ In this lab, you will:
 1.  Wait for the instance to have the **Running** status. Note down the Public IP of the instance. You will need this later.
     ![](images/public_ip.png)
 
-T minus 4  
+T minus 4...  
 
 *Congratulations! You have successfully completed this lab.*<br/>
 You may now **proceed to the next lab**.
