@@ -100,6 +100,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author:** Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect; Rosmin Siby Cherickal, Software Engineer
-* **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
+* **Author:** Rosmin Siby Cherickal, Software Engineer
+* **Contributors** - Duncan Ford, Prabhu Dhanabalan
 * **Last Updated By/Date** - Rosmin Siby Cherickal, Software Engineer, July 2025
