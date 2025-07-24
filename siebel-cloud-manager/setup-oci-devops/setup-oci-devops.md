@@ -101,5 +101,5 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author:** Rosmin Siby Cherickal, Software Engineer
-* **Contributors** - Duncan Ford, Prabhu Dhanabalan
+* **Contributors** - Sayooj O, Prabhu Dhanabalan
 * **Last Updated By/Date** - Rosmin Siby Cherickal, Software Engineer, July 2025
