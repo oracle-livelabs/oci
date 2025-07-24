@@ -19,8 +19,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-* GitLab and SCM Instances
-* GitLab Access Token
+* OCI Devops and SCM Instances
 
 ## Task 1: Generate an OCI User Auth Token
 
@@ -70,10 +69,31 @@ We're now ready to use SCM to deploy Siebel CRM on OCI. To do this, we shall fir
          "industry": "Financial Services"
       },
       "infrastructure": {
-         "gitlab_url": "https://{Public IP of Gitlab Instance}",
-         "gitlab_accesstoken": "{Gitlab_Access_Token}",
-         "gitlab_user": "root",
-         "gitlab_selfsigned_cacert": "/home/opc/certs/rootCA.crt"
+        "git": {
+            "git_type": "byo_git",
+            "byo_git": {
+                "git_protocol_type": "http",
+                "git_scm_repo_url": "https://devops.scmservice.***.oci.oraclecloud.com/namespaces/***/repositories/livelabs-flux",
+                "git_scm_repo_branch": "main",
+                "git_scm_flux_folder": "scm-flux",
+                "git_helm_repo_url": "https://devops.scmservice.***.oci.oraclecloud.com/namespaces/***/repositories/livelabs-helm",
+                "git_helm_repo_branch": "main",
+                "git_accesstoken": "***",
+                "git_user": "{tenancy_name}/{username}"
+            }
+        },
+        "load_balancer_type": "public",
+        "kubernetes": {
+            "kubernetes_type": "OKE",
+            "oke": {
+                "oke_node_count": 3,
+                "oke_node_shape": "VM.Optimized3.Flex",
+                "oke_node_shape_config": {
+                    "memory_in_gbs": "60",
+                    "ocpus": "4"
+                }
+            }
+        }
       },
       "database": {
          "db_type": "ATP",
@@ -93,12 +113,6 @@ We're now ready to use SCM to deploy Siebel CRM on OCI. To do this, we shall fir
          }
       },
       "size": {
-         "kubernetes_node_shape": "VM.Standard.E4.Flex",
-         "kubernetes_node_count": 3,
-         "node_shape_config": {
-            "memory_in_gbs": 20,
-            "ocpus": 2
-         },
          "ses_resource_limits": {
             "cpu": "2",
             "memory": "15Gi"
@@ -316,7 +330,7 @@ After sending a post request with our payload, the Siebel Cloud Manager will pre
 
    ![OCI Compartment Stacks](./images/oci-compartment-stacks.png) 
 
-4. Click on the stack name (not the Gitlab one) and then drill down on the job name.
+4. Click on the stack name and then drill down on the job name.
 
    ![OCI Stack Job Progress](./images/oci-stack-job-progress.png) 
 
@@ -358,6 +372,6 @@ In the next lab, you can view and manage the Siebel's Kubernetes Cluster to conn
 
 ## Acknowledgements
 
-* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
+* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect;Rosmin Siby Cherickal, Software Engineer
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
-* **Last Updated By/Date** - Duncan Ford, Software Engineer, May 2024
+* **Last Updated By/Date** - Rosmin Siby Cherickal, Software Engineer, July 2025
