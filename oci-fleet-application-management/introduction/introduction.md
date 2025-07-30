@@ -7,6 +7,7 @@ Estimated Workshop Time: 2 hours
 ### Objectives
 
 In this workshop, you will learn how to:
+
 * Define and provision infrastructure resources (e.g, Compute, Networking, Storage) using Fleet Application Management catalog item, runbook and resource grouping strategies.
 * Patch a real-world Oracle Fusion Middleware deployment spanning web and application tiers using Fleet Application Management.
 
@@ -15,6 +16,7 @@ In this workshop, you will learn how to:
 OCI Fleet Application Management (FAM) simplifies and automates the management of application resources on Oracle Cloud Infrastructure. It streamlines key operations like provisioning, patching, and software compliance, helping teams manage large-scale environments with reduced manual effort and lower operational risk.
 
 In this workshop, you'll use core FAM components to define infrastructure and maintain middleware deployments efficiently:
+
 * **Catalog Items**: Reusable templates that define the configuration of OCI resources like compute instances, storage, and networking. These serve as blueprints for provisioning.
 * **Runbooks**: Workflows that automate lifecycle operations such as provisioning infrastructure or applying patches, using defined sequences of tasks and parameters.
 * **Fleets**: Logical groupings of similar resources (e.g., by environment or application type) that allow bulk operations, such as provisioning or patching, to be applied consistently.
@@ -30,5 +32,6 @@ With these components, FAM enables scalable, repeatable management of your appli
 * [Fleet Application Management Documentation and Tutorials](https://docs.oracle.com/en-us/iaas/Content/fleet-management/home.htm)
 
 ## Acknowledgements
+
 * **Author** - Bhumika Bhagia, Senior Member of Technical Staff, OCI
 * **Last Updated By/Date** - Bhumika Bhagia, July 2025

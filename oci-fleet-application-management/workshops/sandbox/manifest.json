@@ -15,9 +15,9 @@
             "filename": "../../introduction/introduction.md"
         },
         {
-            "title": "Lab 1: Provision infrastructure resources",
+            "title": "Lab 1: Provision Infrastructure Resources Using FAM",
             "description": "Labs that follow the introduction are numbered, starting with Lab 1",
-            "filename": "../../provision/provision.md"
+            "filename": "../../provisioning/provisioning.md"
         },
         {
             "title": "Lab 2: Patch a real-world Oracle Fusion Middleware deployment",
