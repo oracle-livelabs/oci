@@ -15,7 +15,7 @@
             "filename": "../../introduction/introduction.md"
         },
         {
-            "title": "Lab 1: Provision Infrastructure Resources Using FAM",
+            "title": "Lab 1: Provision Infrastructure Resources Using Fleet Application Management",
             "description": "Labs that follow the introduction are numbered, starting with Lab 1",
             "filename": "../../provisioning/provisioning.md"
         },
