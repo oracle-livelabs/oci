@@ -78,7 +78,7 @@ We're now ready to use SCM to deploy Siebel CRM on OCI. To do this, we shall fir
                 "git_scm_flux_folder": "scm-flux",
                 "git_helm_repo_url": "https://devops.scmservice.***.oci.oraclecloud.com/namespaces/***/repositories/livelabs-helm",
                 "git_helm_repo_branch": "main",
-                "git_accesstoken": "***",
+                "git_accesstoken": "{User_Auth_Token}",
                 "git_user": "{tenancy_name}/{username}"
             }
         },
@@ -149,11 +149,11 @@ We're now ready to use SCM to deploy Siebel CRM on OCI. To do this, we shall fir
 
 **Note:**
 
-The passwords you create in your vault for the auth_info section need to comply with the database password requirements, which are currently set to the most restrictive across all supported database types, namely DBCS. This means your actual password, as of the time of writing, needs to 9 to 30 characters long and contain at least 2 upper case characters, 2 lower case, 2 special, and 2 numbers. The special characters must be in the following set:
+When creating passwords in Oracle Cloud Infrastructure (OCI) vaults for Siebel deployment, please note the following requirements:
 
-   * underscore _
-   * hash #
-   * dash -
+   * ATP database administrator user passwords must have at least 12 to 30 characters, contain one upper case character, one lower case character, and one number, and not include double quotes or the word "admin".
+   * Table owner passwords in the auth_info section of your vault should be 9 to 30 characters long and meet the database password requirements, which include at least two upper case characters, two lower case characters, two special characters (#), and two numbers.
+   * Wallet passwords can have a length of 8 to 60 characters using only alphanumeric characters, with no special characters allowed.
 
 Furthermore, don't include dictionary words in the password.
 
