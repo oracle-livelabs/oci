@@ -35,7 +35,7 @@ This lab assumes you have:
 
 1. Step 1
 
-	![Image alt text](images/sample1.png)
+  ![Image alt text](images/sample1.png)
 
 2. Step 2
 

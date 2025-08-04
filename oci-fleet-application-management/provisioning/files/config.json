@@ -2,6 +2,6 @@
     "compartment_id": "<compartment_id>",
     "subnet_id": "<subnet_id>",
     "tenancy_id": "<tenancy_id>",
-    "availability_domain": 1,
+    "availability_domain": "<availability_domain>",
     "region": "<region>"
 }
