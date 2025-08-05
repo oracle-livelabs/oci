@@ -12,8 +12,8 @@ In this lab, you will:
 
 * Create private Catalog Items for Terraform configurations and parameters
 * Build a Runbook by adding Catalog Items as tasks to define provisioning steps
-* Create a Fleet to organize resources
-* Execute the Runbook on the Fleet and monitor the deployment
+* Create a Fleet to serve as the execution target for the runbook
+* Execute the Runbook on the Fleet and track the deployment progress
 
 ### Prerequisites
 
