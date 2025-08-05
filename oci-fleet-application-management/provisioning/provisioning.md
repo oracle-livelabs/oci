@@ -85,7 +85,7 @@ In this task, you will learn how to create a Private Configuration Catalog Item 
 
 6. Enter a **Name**, **Short description**, **Long description**, **Version** (e.g., 1.0.0), and **Version description**.
 
-    ![create-config-catalog-basic-info](images/create-terraform-catalog-basic-info.png " ")
+    ![create-config-catalog-basic-info](images/create-config-catalog-basic-info.png " ")
 
 7. For **Type**, select **Configuration file**, and ensure the **Create in compartment** field shows your assigned compartment.In the **Add resource** section, choose **Select from Object Storage bucket**.
 
