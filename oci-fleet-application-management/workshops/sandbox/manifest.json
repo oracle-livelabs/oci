@@ -20,10 +20,6 @@
             "filename": "../../provisioning/provisioning.md"
         },
         {
-            "title": "Lab 2: Patch a real-world Oracle Fusion Middleware deployment",
-            "filename": "../../setup/setup.md"
-        },
-        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
