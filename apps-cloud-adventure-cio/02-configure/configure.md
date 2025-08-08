@@ -17,7 +17,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 ## HCM: Enhance the Change Salary Experience
 
-1.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update Change Salary Page for Non-HR managers.
+1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update Change Salary Page for Non-HR managers.
 
 ![Configuration Objectives](images/configure_objs_hcm.png)
 

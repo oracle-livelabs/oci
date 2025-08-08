@@ -1,4 +1,4 @@
-# Risk Management
+# Security
 
 ## Introduction
 
@@ -6,7 +6,7 @@ Welcome to Oracle’s Cloud Adventure for Risk Management.  This is a fresh and 
 
 ### Objectives
 
-During this adventure, you will perform a time sensitive task of granting permissions to a user.  
+During this adventure, you will perform a time sensitive task of granting permissions to a user.
 
 Estimated Time: 15 minutes
 
