@@ -2,24 +2,28 @@
 
 ## Introduction
 
-In this activity you will learn how easily extend Fusion SaaS application to include external content to guide users to better decisions.
+In this activity you will use Oracle Fusion AI Agent Studio to
+•	Create a Document Tool to ingest company-specific procurement policy documents (PDF) 
+•	Create an Agent that uses the Document Tool to respond to user queries
+•	Create and assemble an Agent team that includes the created Agent and purchase requisition action agent.
+•	Test the Agent team 
 
-Guided Journeys allow you to configure business processes to support user tasks by providing guidance, such as additional information, tutorials, company policies, best practices and more. The User Defined Content feature of a Guided Journey Task allows users to define guided journey tasks and connect to a user defined REST API. The user defined REST API can retrieve data from external sources based on the context information passed from the calling user interface.
+Pre-requisites
+•	User needs to have access to AI Agent Studio to create and update agents
 
-As a Pit Crew member and the Oracle SaaS Business Process and Configuration expert for your organization, you’re up to the task.
 
 
 ### Objectives
 
 In this lab, you will:
 
-* Create a Guided Journey that leverages an external LLM
+* Use AI Agent Studio to create and test an agent
 
 Estimated Time: 15 minutes
 
 As you follow along, do not forget to think about the Adventure Check Point questions you'll answer at the end of this adventure!
 
-## HCM: Guided Journey for Compensation Info
+## PO: Requisition Agent
 
 **Objectives**<br>
 In this activity you will use HCM Guided Journey Task with User Defined Content and Visual Builder Studio to: <br>
@@ -32,12 +36,12 @@ In this activity you will use HCM Guided Journey Task with User Defined Content 
 ![Journey Process Flow](images/hcmllmobjs.jpg)
 
 
-1. You'll start by going to the Guided Journey screen.
+1. The first step is to navigate to AI Agent Studio. 
 
-    > (1) Enter **Guided Journey** in the search field at the top of the home page.  <br>
-    > (2) Select **Guided Journey** from the resulting dropdown search results.
+    > (1) Navigate to the **Tools** tab <br>
+    > (2) Select the **AI Agent Studio** Tile.
 
-    ![Guided Journey Navigate](images/hcmimage001.jpg)
+    ![Guided Journey Navigate](images/poaimage001.jpg)
 <br>
 
 2. The first step is to configure a Task for the Guided Journey. We’ve already setup Guided Journeys for each Cloud Adventure User, so you'll start by searching for your specific template.
