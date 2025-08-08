@@ -2,6 +2,7 @@
 
 ## Introduction
 This lab will show you how to use your Security Dashboard to activate Cloud Guard.
+
 Estimated time: 5 minutes.
 
 ### Objectives
