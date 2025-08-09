@@ -7,7 +7,7 @@
             "filename": "../../00-introduction/introduction.md"
         },
         {
-            "title": "Lab 1: Risk",
+            "title": "Lab 1: Security",
             "filename": "../../01-security/security.md"
         },
         {
@@ -19,11 +19,11 @@
             "filename": "../../03-extend/extend.md"
         },
         {
-            "title": "Lab 4: Extend with AI",
+            "title": "Lab 4: Extend with AI (Action Agent)",
             "filename": "../../04-extend-more/extend-more.md"
         }, 
         {
-            "title": "Lab 5: Audit",
+            "title": "Lab 5: Extend with AI (RAG Agent)",
             "filename": "../../05-integration/integration.md"
         }, 
 

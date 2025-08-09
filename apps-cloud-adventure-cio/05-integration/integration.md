@@ -2,31 +2,22 @@
 
 ## Introduction
 
-As you have seen in the previous Cloud Adventures, Oracle delivers a fine grained security model which allows companies to enforce tight controls over who has access to both application features and data. While these controls provide administrators with powerful tools, good corporate governance requires that application auditing is used to back up the security controls you implement.
-
-For this Cloud Adventure, we have already used audit profiles to enable auditing on select fields in the applications.
-You will begin the adventure by accessing the native application screens to update a supplier address. Each participant is assigned a supplier based on your login ID.
-
-Once you update the address, your Guide will display the results of the audit API so you can see how your actions were captured automatically, then accessed using a REST API.
-Included in your adventure is a quick tour of the REST API documentation. While this exercise is specific to extracting audit data, similar REST APIs were used in the previous Extend Cloud Adventure, and are available in every Oracle SaaS application.
-
-We've designed this journey to be interactive and engaging. Make sure to answer the Adventure Check Point questions at the end, ensuring you capture the full potential of this experience. These check points are your path to becoming a master auditor, so pay close attention!
-
-With your adventure hat on and a curious mind, prepare for an exhilarating exploration of Fusion Cloud data audit and REST API integration features. Let's embark on this thrilling journey together!
+AI Agent Studio is a design-time environment that empowers you to create, configure, validate, and deploy GenAI features and AI agents to meet your organization's needs. With AI Agent Studio, you can easily extend pre-configured agent templates, and even build new agents and multi-agent workflows from scratch. AI Agent Studio is fully integrated into Fusion Applications, providing secure and seamless access to the knowledge stores, tools, and APIs of Fusion Applications. This integration enables agents to be deployed directly into the workflow, ensuring an efficient process.
 
 ### **Objectives**
 
-In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
+In this activity you will use Oracle Fusion AI Agent Studio to
+•	Create a Document Tool to ingest company-specific procurement policy documents (PDF) 
+•	Create an Agent that uses the Document Tool to respond to user queries
+•	Create and assemble an Agent team that includes the created Agent and purchase requisition action agent.
+•	Test the Agent team 
 
-Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise!
+## Use AI Agent Studio to create/use Tools, Create an Agent, asseemble an Agent Team, and test it.
 
-## ERP & SCM: Use REST API to pull Fusion SaaS Application audit data for use in any external system
+1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio 
 
-1. In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
-
-    ![Integration Objectives](images/integration_objs3.png)
+    ![AI RAG Obectives](images/extendwithairag.jpg)
 
 2. Let’s navigate to the Suppliers work area to modify a supplier’s address information
 
