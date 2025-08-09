@@ -187,6 +187,7 @@ Para adicionar servidores de back-end, clique no botão “Add Backends”
 ![selecione o tipo de tráfego](images/load-balancer-14.png)
 
 ![visualize o Load Balancer](images/load-balancer-logs-15.png)
+![visualize o Load Balancer](images/load-balancer-logs-16.png)
 
 Assim que o processo de criação for concluído, você terá as seguintes informações:
 
@@ -207,4 +208,4 @@ Nesta sessão você aprendeu a criar uma aplicação em Alta Disponibilidade (HA
 ## Autoria
 
 - **Autores** - Arthur Vianna, Gustavo Sant'ana, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Date** - Arthur Vianna, Fev/2024
+- **Último Update Por/Date** - Arthur Vianna, Jul/2025
