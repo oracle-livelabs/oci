@@ -155,40 +155,40 @@ In this activity you will use Oracle Fusion AI Agent Studio to
       - Description: **Purchase Requisition Agent Team leverages worker agents Procurement Policy Advisory and Purchase Requisition Agent.** <br>
      > (2) Click the Questions tab <br>
     
-   ![Create Agent](images/poaimage018.jpg)
+       ![Create Agent](images/poaimage018.jpg)
 
 19. You can provide one or more starter questions to assist users in interacting with the Agent Team.
 
      > (1) In the Question 1 field, enter: **Hi, I can help you with questions related to purchases.  How can I help you today?**
      > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
     
-   ![Create Agent](images/poaimage019.jpg)
+       ![Create Agent](images/poaimage019.jpg)
 
 20. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
 
 
- > (1) Click the **Agents** icon ![Agent Icon](images/agenticon.jpg).
- > (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **New Supervisor Agent**.
+     > (1) Click the **Agents** icon ![Agent Icon](images/agenticon.jpg).
+     > (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **New Supervisor Agent**.
     
    ![Create Agent](images/poaimage020.jpg)
 
 21. Define Supervisor Agent Details.
 
- > (1) Enter the fields as described below:
+     > (1) Enter the fields as described below:
       - Agent Team Name: **CIO## Procurement Requisition Supervisor Agent** where ## is replaced with your user nnumber.<br>
       - Family: Select **PRC** from the dropown<br>
       - Product: Select  **Self Service Procurement** from the dropdown<br>
       - Maximum Interactions: **10** <br>
       - Description: **Cloud Adventure Purchase Requisitions Supervisor Agent** <br>
- > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
+     > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
     
-   ![Create Agent](images/poaimage021.jpg)
+       ![Create Agent](images/poaimage021.jpg)
 
 22. Next you'll add some worker agents.
 
- > Click the **+** icon ![Plus Icon](images/plusicon.jpg) next to **CIO## Procurement Policy Advisor Agent**, where ## is replaced with your user number.
+     > Click the **+** icon ![Plus Icon](images/plusicon.jpg) next to **CIO## Procurement Policy Advisor Agent**, where ## is replaced with your user number.
     
-   ![Create Agent](images/poaimage022.jpg)
+       ![Create Agent](images/poaimage022.jpg)
 
 23. You can review the deatils of the agent.
 
@@ -198,9 +198,9 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 24. You'll add one more worker agent.
 
- > Click the **+** icon ![Plus Icon](images/plusicon.jpg) next to predefined **CA Purchase Requisitions Agent**.  Note that this is a shared Agent and not one that you created specifically with your user number.
+     > Click the **+** icon ![Plus Icon](images/plusicon.jpg) next to predefined **CA Purchase Requisitions Agent**.  Note that this is a shared Agent and not one that you created specifically with your user number.
     
-   ![Create Agent](images/poaimage024.jpg)
+     ![Create Agent](images/poaimage024.jpg)
 
 25. You can review the deatils of the agent.
 
