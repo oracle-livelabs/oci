@@ -29,7 +29,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 3. Next, we're going to create a Tool
 
-    > Click the ![Tools](images/tools.jpg) icon at the bottom of the page
+    > Click the ![Tools](images/tools.jpg) button/tab at the bottom of the page
 
     ![Open tools](images/poaimage003.jpg)
 
@@ -43,11 +43,11 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 5. Here, you will define your first Tool, a Document Tool.  This will allow the Agent to use the content of the documents to respond to user questions.
 
     > (1) Enter the following fields:
-      - **Tool Type**: select **Document** from the dropdown<br>
-      - **Tool Name**: Enter **CIO## Procurement Policy Document Tool**, where **##** is replaced with your user number.<br>
-      - **Family**: select **PRC** from the dropdown<br>
-      - **Product**: select **Self Service Procurement** from the dropdown<br>
-      - **Description**: Enter **Cloud Adventure Procurement Policy Document Tool** <br>
+      - Tool Type: select **Document** from the dropdown<br>
+      - Tool Name: Enter **CIO## Procurement Policy Document Tool**, where **##** is replaced with your user number.<br>
+      - Family: select **PRC** from the dropdown<br>
+      - Product: select **Self Service Procurement** from the dropdown<br>
+      - Description: Enter **Cloud Adventure Procurement Policy Document Tool** <br>
 
     > (2) Click the ![Add button](images/addw.jpg) button under **Documents**
     
@@ -57,10 +57,10 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 6. **Note:** Now we’ll add the documents to our tool.  The documents you will add are located in the **Procurement Documents** folder on your laptop's Desktop.
 
     > (1) Enter the following fields:
-      - **Name**: Enter **Procurement Policy Documents** <br>
-      - **Status**: Select **Ready to publish** from the dropown<br>
-      - **Description**: Enter **Procurement Policy Documents**<br>
-    (2) Click on the ![Drag and Drop](images/dandd.jpg) region <br>
+      - Name: Enter **Procurement Policy Documents** <br>
+      - Status: Select **Ready to publish** from the dropown<br>
+      - Description: Enter **Procurement Policy Documents**<br>
+    > (2) Click on the ![Drag and Drop](images/dandd.jpg) region <br>
     Select all files from the **Procurement Documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.
 
     ![Add Documents](images/poaimage006.jpg)
@@ -82,21 +82,65 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     
 9. Now, you'll create your first Agent!  You'll do that from the Agent screen within the AI Agent Studio.
 
-    > Click the  **Agents** icon [Agent Image](images/agenticon.jpg) at the bottom of the page.
+    > Click the  **Agents** button/tab [Agent Image](images/agenticon.jpg) at the bottom of the page.
 
-    ![Get an audit report](images/poaimage009.jpg)
+    ![Agents Page](images/poaimage009.jpg)
 
 
 10. Here, you can see any existing agents.  But you want to create a new one.
 
     > Click the  **+ Add** button [Add Button Image](images/addw.jpg).
 
-    ![Get an audit report](images/poaimage010.jpg)
+    ![Add Agent](images/poaimage010.jpg)
 
+11. Define the Details of the Agent.
 
+    > (1) First, you'll enter the fields as described below:
+      - Agent Name: **CIO## Procurement Policy Advisor Agent** where ## is replaced with your user nnumber.<br>
+      - Family: Select **PRC** from the dropown<br>
+      - Product: Select  **Self Service Procurement** from the dropdown<br>
+      - Maximum Interactions: **10** <br>
+      - Description: **Cloud Adventure Procurement Policy Advisor Agent** <br>
 
+       ![Alert Flat](images/cautionflagsmalltransparent2.png)  Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.  To streamline this step, we've pre-created the prompt.  It's available as described below.
 
+      - Prompt: The value for the prompt field is available in the **Prompt – CA Procurement Policy Advisor.txt** file that is available in the **Procurement Prompt** folder on your desktop.  Please open this file and copy the contents into the Prompt field.  
 
+    > (2) Click the Create Button ![Create Button](images/createb.jpg) <br>
+
+    ![Create Agent](images/poaimage011.jpg)
+
+12. You’ve now created your first Agent.  Now you’ll add Tools to the Agent.  You'll add a mix of standard tools, tools created earlier in the Cloud Adventure, and tools that you've just created.
+
+    > Click the Tools icon ![Create Button](images/toolhammericon.jpg) on the left.
+    
+    ![Add Tools](images/poaimage012.jpg) <br>
+
+13. Find the appropriate tool and add it to your agent.
+
+    > (1) Enter **Procurement** in the Ask Oracle field and select **Procurement** from teh resulting dropdown.  This filters the list of tools for easier selection.
+
+    > (2) Click the ![Plus Icon](images/plusicon.jpg) next to the tool name **CA Procurement Policy Document Tool**<br>
+
+    ![Add tool](images/poaimage013.jpg)
+
+14. You can review teh details of the Tool, including the option to require human approval.
+
+    > Click the Add button ![Add Button](images/addb.jpg).
+    
+    ![Add Tools Complete](images/poaimage014.jpg) <br>
+
+15. That's it! Let's save this and continue.
+
+    > Click the **Create** button ![Create Button](images/createw.jpg) on the top right.
+    
+    ![Add Tools Create](images/poaimage015.jpg) <br>
+
+16. You’ve just created your first Agent, complete with added Tool(s).  Next, you’ll create an Agent Team with a Supervisory Agent and assign some worker agents.
+
+    > Click the **Agent Teams** button/tab ![Agent Teams](images/agentteams.jpg) on the button of the page.
+    
+    ![Add Tools Create](images/poaimage016.jpg) <br>
 
 
 
