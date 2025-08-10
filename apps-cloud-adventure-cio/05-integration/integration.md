@@ -13,7 +13,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 •	Test the Agent team 
 
 
-## Create Agents and an Agent Team using AI Agent Studio
+## Create Policy Advisor Agent (RAG) and an Agent Team using AI Agent Studio
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio 
 
