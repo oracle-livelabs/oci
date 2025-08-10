@@ -65,45 +65,48 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     ![Add Documents](images/poaimage006.jpg)
 
-7. Let’s navigate back to the Oracle Fusion Cloud home screen.
+7. After all 4 files/documents have been loaded, you can proceed with the Save.
 
-    > Click the **Home** ![Home Icon](images/icon012_home.png) button
+    > Click the **Save** ![Home Icon](images/save.jpg) button on the botton right
 
-    ![Suppliers View](images/image016.png)
+    ![Suppliers View](images/poaimage007.jpg)
 
-8. Now, we’re going to discover how we can audit several pieces of information that’s relevant to our cloud adventure today: user access (sign in / sign out) as well as supplier address information changes via REST API integrations.
+8. You're now ready to save your knew Document Tool.
 
-    > At the home screen, Navigate to **Integration** tab
+    > Click the **Create button** ![Craete Button](images/createw.jpg)  on the near to the of the screen.
 
-    ![Home](images/image017.png)
+    ![Craete Tool](images/poaimage008.jpg)
 
-    > Click on **Audit Report REST Endpoints**
+    **Congratulations!  You’ve completed your first step and created a Policy Document Tool.**
 
-    ![Integrations View](images/image018.png)
+    
+9. Now, you'll create your first Agent!  You'll do that from the Agent screen within the AI Agent Studio.
 
-    **This is an example of a configuration. This tile links out to an external website.**
+    > Click the  **Agents** icon [Agent Image](images/agenticon.jpg) at the bottom of the page.
 
-    **Take note of the detailed documentation. API endpoints, parameters, code examples, use cases, Oracle’s documentation is public and designed to be very useful.**
+    ![Get an audit report](images/poaimage009.jpg)
 
-9. Let’s review the REST API endpoints that we can use to review Auditable data that can be extracted from Fusion Cloud.
 
-    ![Audit Report REST Endpoints](images/image019.png)
+10. Here, you can see any existing agents.  But you want to create a new one.
 
-    > Click on **Get an audit report** under **Audit Report**
+    > Click the  **+ Add** button [Add Button Image](images/addw.jpg).
 
-    ![Audit Report REST Endpoints](images/image020.png)
+    ![Get an audit report](images/poaimage010.jpg)
 
-    > **Click** the drop-down menu icon [drop down icon](images/icon014_downarrow.png) **‘Jump to’** and select the **‘Examples’** menu option
 
-    ![Get an audit report](images/image021.png)
 
-    > Scroll down the page, review the first **Example Request Payload** and **Example of Response Body**
 
-    ![API Examples](images/image022.png)
 
-10. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+
+
+
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+
+
+
+
+
 
 ## Summary
 
