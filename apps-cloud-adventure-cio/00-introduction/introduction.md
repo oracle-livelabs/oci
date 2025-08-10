@@ -12,7 +12,7 @@ This Activity Guide will lead you along the way through a set of Adventure Labs,
 1.	Use Security Console to easily manage user access
 2.	Configure Fusion Cloud Applications (e.g. Role-based Page Layouts, Add Business Rules/Logic)
 3.  Extend Fusion Cloud Applications (e.g. Create New Extensions, Connect External Services)
-4.  Experience the power of the integration capabilities of Fusion Cloud
+4.  Use and Extend AI Capabilities via AI Agent Studio (e.g. Create Advisor/Answer Agents (RAG) and Action Agents)
 5.  Create powerful analytics for business insight
 
 ## Tasks
