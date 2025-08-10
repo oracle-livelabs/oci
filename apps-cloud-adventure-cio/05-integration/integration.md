@@ -142,8 +142,55 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     
     ![Add Tools Create](images/poaimage016.jpg) <br>
 
+16. Create an Agent Team.
 
+    > Click the **+ Add** button ![Add Button](images/addw.jpg).
+    
+    ![Add Tools Create](images/poaimage017.jpg) <br>
 
+17. Define the Agent Team.
+
+ > (1) Enter the fields as described below:
+
+      - Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user nnumber.<br>
+      - Family: Select **PRC** from the dropown<br>
+      - Product: Select  **Self Service Procurement** from the dropdown<br>
+      - Maximum Interactions: **20** <br>
+      - Description: **Purchase Requisition Agent Team leverages worker agents Procurement Policy Advisory and Purchase Requisition Agent.** <br>
+
+    > (2) Click the Questions tab <br>
+    
+   ![Create Agent](images/poaimage018.jpg)
+
+18. You can provide one or more starter questions to assist users in interacting with the Agent Team.
+
+ > (1) In the Question 1 field, enter: **Hi, I can help you with questions related to purchases.  How can I help you today?**
+
+ > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
+    
+   ![Create Agent](images/poaimage019.jpg)
+
+19. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
+
+ > (1) Click the **Agents** icon ![Agent Icon](images/agenticon.jpg).
+
+ > (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **New Supervisor Agent**.
+    
+   ![Create Agent](images/poaimage020.jpg)
+
+20. Define Supervisor Agent Details.
+
+ > (1) Enter the fields as described below:
+
+      - Agent Team Name: **CIO## Procurement Requisition Supervisor Agent** where ## is replaced with your user nnumber.<br>
+      - Family: Select **PRC** from the dropown<br>
+      - Product: Select  **Self Service Procurement** from the dropdown<br>
+      - Maximum Interactions: **10** <br>
+      - Description: **Cloud Adventure Purchase Requisitions Supervisor Agent** <br>
+
+ > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
+    
+   ![Create Agent](images/poaimage021.jpg)
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
