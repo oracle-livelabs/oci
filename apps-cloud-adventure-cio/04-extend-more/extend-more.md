@@ -7,14 +7,6 @@ AI Agent Studio is a design-time environment that empowers you to create, config
 
 ### Objectives
 
-Learn about AI Agent Studio and see an demo.
-
-Estimated Time: 15 minutes
-
-
-## AI Agent Studio Demo
-
-**Objectives**<br>
 In this activity you see your Oracle Cloud Adventure team demonstration AI Agent Studio and complete the following tasks
 
    &emsp;  • Review Business Objects that allows the AI Agent Studio with easy access to application objects and data <br>
@@ -22,10 +14,15 @@ In this activity you see your Oracle Cloud Adventure team demonstration AI Agent
    &emsp;  • Create Tools <br>
    &emsp;  • Create a new Action Agent<br>
 
+Estimated Time: 15 minutes
+
+
+## AI Agent Studio Demo
+
 
 1. So sit back, relax, and watch your Cloud Adventure team use AI Agent Studio to Create Tools and Agents.  But pay attention as you will use these artifacts when you work on your next Cloud Adventure lan where you'll build an Agent Team. 
 
- ![AI RAG Obectives](images/extendwithaiaction.jpg)
+    ![AI RAG Obectives](images/extendwithaiaction.jpg)
 
  
 
