@@ -223,8 +223,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 28. The Agent will response with information.  In this Debug mode, the Agent will also show you source and processing information (yellow boxes).  These will not be available to end-users once deployed.
 
     > The agent provides a response. But we need more information, so we'll ask additional questions.
-    
-    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What if I need to order a non-standard laptop ** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What if I need to order a non-standard laptop** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
     
     ![agent dialogue 2](images/poaimage028.jpg) <br>    
 
@@ -271,15 +270,9 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     ![agent dialogue 3](images/poaimage036.jpg) <br>      
 
 
-
-
-
+35. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
-
-
-
-
 
 
 ## Summary
@@ -291,7 +284,10 @@ AI Agent Studio is a design-time environment that provides a set of tools to cre
 
 Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
 
-**You have successfully completed the Activity!**
+**You have successfully completed the Activity!  
+
+
+## Learn More 
 
 * [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
 * [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
@@ -299,6 +295,7 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
+
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist, Sajid Saleem, Master Principal SaaS Cloud Technologist, Charlie Moff, Distinguished SaaS Cloud Technologist, and the rest of the Cloud Adventure Team
-* **Contributors** -
-* **Last Updated By/Date** - Charlie, July 2025
+* **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
+* **Last Updated By/Date** - Charlie Moff, July 2025
