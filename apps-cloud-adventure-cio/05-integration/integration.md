@@ -13,76 +13,57 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 •	Test the Agent team 
 
 
-## Use AI Agent Studio to create/use Tools, Create an Agent, asseemble an Agent Team, and test it.
+## Create Agents and an Agent Team using AI Agent Studio
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio 
 
     ![AI RAG Obectives](images/extendwithairag.jpg)
 
-2. Let’s navigate to the Suppliers work area to modify a supplier’s address information
+2. The first step is to navigate to AI Agent Studio. 
 
-    > Click the **Procurement** tab
+    > (1) Click on the **Tools** tab
 
-    ![Application Homepage](images/image002.png)
+    > (2) Select the **AI Agent Studio** tile
 
-    > Click the **Manage Suppliers** button
+    ![Navigate to AI Agent Studio](images/poaimage002.jpg)
 
-    ![Show More View](images/image004.png)
+3. Next, we're going to create a Tool
 
-3. Next, we’re going to search for the Supplier you’ve been assigned, e.g. “01…”
+    > Click the ![Tools](images/tools.jpg) icon at the bottom of the page
 
-    > Click in the **Keywords** search bar
+    ![Open tools](images/poaimage003.jpg)
 
-    ![Manage Suppliers View](images/image005.png)
 
-    > (1) **Search** for a supplier using the user id number (e.g. 01, 02).  <br>
-    > (2) Click the **Search** button
+4. Tool Creation
 
-    ![Keywords search bar](images/image006.png)
+    > Click the ![add tool](images/plusadd.jpg) button to create a new tool
 
-    > Click the **Edit** ![Edit Icon](images/icon011_edit.png)  button in the ‘Search Results’ area
+    ![Create Tool](images/poaimage004.jpg)
 
-    ![Search Results](images/image007.png)
+5. Here, you will define your first Tool, a Document Tool.  This will allow the Agent to use the content of the documents to respond to user questions.
 
-4. We’re going to navigate to the Supplier’s addresses tab.
+    > (1) Enter the following fields:
+      - **Tool Type**: select **Document** from the dropdown<br>
+      - **Tool Name**: Enter **CIO## Procurement Policy Document Tool**, where **##** is replaced with your user number.<br>
+      - **Family**: select **PRC** from the dropdown<br>
+      - **Product**: select **Self Service Procurement** from the dropdown<br>
+      - **Description**: Enter **Cloud Adventure Procurement Policy Document Tool** <br>
 
-    > Click the **Addresses** tab
+    > (2) Click the ![Add button](images/addw.jpg) button under **Documents**
+    
+    ![Edit Suppliers View](images/poaimage005.jpg)
 
-    ![Suppliers View](images/image008.png)
 
-    > Click the **Edit** ![Edit Icon](images/icon011_edit.png) icon to edit the Supplier’s address
+6. **Note:** Now we’ll add the documents to our tool.  The documents you will add are located in the **Procurement Documents** folder on your laptop's Desktop.
 
-    ![Edit Suppliers View](images/image009.png)
+    > (1) Enter the following fields:
+      - **Name**: Enter **Procurement Policy Documents** <br>
+      - **Status**: Select **Ready to publish** from the dropown<br>
+      - **Description**: Enter **Procurement Policy Documents**<br>
+    (2) Click on the ![Drag and Drop](images/dandd.jpg) region <br>
+    Select all files from the **Procurement Documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.
 
-5. **Note:** We’ll only edit the Supplier’s second line of address information, i.e. ‘Address Line 2’ text entry field.
-
-    We’re going to add a Suite (e.g. 123) to the Supplier’s address information that was missing before.
-
-    > Click in the **Address Line 2** text entry field
-
-    ![Edit Suppliers View](images/image010.png)
-
-    > Type new address information into **Address Line 2**, e.g. ‘Suite 123’
-
-    ![Edit Suppliers View](images/image011.png)
-
-    > Click **Save and Close**
-
-    ![Edit Suppliers View](images/image012.png)
-
-    > Click **Submit**
-
-    ![Edit Suppliers View](images/image013.png)
-
-6. **Note:** We’ve modified our demo environment’s approval workflow for internal supplier profile changes to be automatically approved for demonstration purposes, however this can be configured based on each customer’s business requirements
-
-    > Click **OK** on the resulting confirmation box.
-
-    ![Suppliers View](images/image014.png)
-
-    > Click **Done**
-
-    ![Suppliers View](images/image015.png)
+    ![Add Documents](images/poaimage006.jpg)
 
 7. Let’s navigate back to the Oracle Fusion Cloud home screen.
 
