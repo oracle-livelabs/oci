@@ -120,7 +120,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     ![Add tool](images/poaimage013.jpg)
 
-14. You can review teh details of the Tool, including the option to require human approval.
+14. You can review the details of the Tool, including the option to require human approval.
 
     > Click the Add button ![Add Button](images/addb.jpg).
     
@@ -174,7 +174,6 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 20. Define Supervisor Agent Details.
 
  > (1) Enter the fields as described below:
-
       - Agent Team Name: **CIO## Procurement Requisition Supervisor Agent** where ## is replaced with your user nnumber.<br>
       - Family: Select **PRC** from the dropown<br>
       - Product: Select  **Self Service Procurement** from the dropdown<br>
@@ -183,6 +182,97 @@ In this activity you will use Oracle Fusion AI Agent Studio to
  > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
     
    ![Create Agent](images/poaimage021.jpg)
+
+21. Next you'll add some worker agents.
+
+ > Click the **+** icon ![Plus Icon](images/plusicon.jpg) next to **CIO## Procurement Policy Advisor Agent**, where ## is replaced with your user number.
+    
+   ![Create Agent](images/poaimage022.jpg)
+
+22. You can review the deatils of the agent.
+
+    > Click the Add button ![Add Button](images/addb.jpg).
+    
+    ![Add Tools Complete](images/poaimage023.jpg) <br>
+
+24. You'll add one more worker agent.
+
+ > Click the **+** icon ![Plus Icon](images/plusicon.jpg) next to predefined **CA Purchase Requisitions Agent**.  Note that this is a shared Agent and not one that you created specifically with your user number.
+    
+   ![Create Agent](images/poaimage024.jpg)
+
+25. You can review the deatils of the agent.
+
+    > Click the **Add** button ![Add Button](images/addb.jpg).
+    
+    ![Add Tools Complete](images/poaimage025.jpg) <br>
+
+26. Your Agent Team, with a Supervisory Agent and two Worker Agents, is now ready to test.
+
+    > Click the **Debug** icon ![debug icon](images/debugarrow.jpg) on the top left of the screen.  It's the one that looks like the Play arrow.
+    
+    ![start debug](images/poaimage026.jpg) <br>
+
+27. You can now begin a dialog with the Agent.  
+
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What is the laptop policy** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
+    
+    ![agent dialogue 1](images/poaimage027.jpg) <br>
+
+28. The Agent will response with information.  In this Debug mode, the Agent will also show you source and processing information (yellow boxes).  These will not be available to end-users once deployed.
+
+    > The agent provides a response. But we need more information, so we'll ask additional questions.
+    
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What if I need to order a non-standard laptop ** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
+    
+    ![agent dialogue 2](images/poaimage028.jpg) <br>    
+
+29. You decide to not worry about requesting anything non-standard.  
+ 
+    > So, ask the agent to proceed with the laptop order by typing **I am ready to order a laptop** in the **Ask Oracle** dialog box on the bottom right of the screen and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
+    
+    ![agent dialogue 3](images/poaimage029.jpg) <br>      
+
+30. The Agent may notice that you have some incomplete PO Requisitions and will request your my input.  
+ 
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Show my existing requisitions** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg))
+    
+    ![agent dialogue 3](images/poaimage030.jpg) <br>  
+
+31. The agent will ask you to confirm.  
+ 
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Proceed with ordering a laptop** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg))
+    
+    ![agent dialogue 3](images/poaimage032.jpg) <br>  
+
+32. The agent needs a little more information.
+ 
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Requested delivery data is Aug 31st, 2025 and the quantity is 1** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg))
+    
+    ![agent dialogue 3](images/poaimage033.jpg) <br>  
+
+33. The agent has created your requisition.
+ 
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **TAke me to my requisition** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg))
+    
+    ![agent dialogue 3](images/poaimage034.jpg) <br>  
+
+34. The agent can link you directly to the Purchase Requisition screen.
+ 
+    > Click the **here** link in the agent response.
+    
+    ![agent dialogue 3](images/poaimage035.jpg) <br>      
+
+34. You’re now in Self-Service Procurement and can see the new Requisition that the Agent created.
+ 
+    > Congratulations on completing this Cloud Adventure!
+    
+    ![agent dialogue 3](images/poaimage036.jpg) <br>      
+
+
+
+
+
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
@@ -193,17 +283,21 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 ## Summary
 
-As you have seen, the Oracle SaaS applications may be configured to capture who updates select fields, when the update was performed, the previous value and the updated value. Having this level of auditing serves a critical role in providing governance and controls over your enterprise applications. As an administrator, you will implement the controls your company chooses to enforce. The combination of fine grained applications security and application data audit provide the end to end controls you will need.
+As you have seen, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they’re not permissioned to see.
 
-This Cloud Adventure also featured the importance of having open REST interfaces for accessing and sharing data with external systems. In the case of audit data, you may want to send this data to a SIEM or data warehouse for analysis.
+AI Agent Studio empowers enterprises to configure and build AI agents that extend their workforce and help achieve new levels of productivity. It allows you to harness the full potential of AI agents and transform the way work gets done in your organization.
+AI Agent Studio is a design-time environment that provides a set of tools to create, customize, validate, and deploy GenAI features and AI agents to meet the specific needs of the organization. It is the same unified environment Oracle uses to internally build agents, made available now to customers and partners to customize and extend agents from Oracle-provided preconfigured templates or to create new agents and multi-agent workflows.
+
+Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
 
 **You have successfully completed the Activity!**
 
-* [Oracle Supply Chain & Manufacturing - APIs & Schema](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/24b/api.html)
-* [Set Up Auditing for Oracle Fusion Applications](https://docs.oracle.com/en/cloud/saas/applications-common/24d/facia/set-up-auditing-for-oracle-fusion-applications.html)
-* [Oracle Documentation](http://docs.oracle.com)O
+* [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
+* [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
+* [AI for Fusion Applications](https://www.oracle.com/applications/fusion-ai/)
+* [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - Jamil Orfali, Senior Cloud Technologist, Advanced Technology Services; Kris Holmgren, Senior Cloud Technologist, Advanced Technology Services.
+* **Author** - Stephen Chung, Principal SaaS Cloud Technologist, Sajid Saleem, Master Principal SaaS Cloud Technologist, Charlie Moff, Distinguished SaaS Cloud Technologist, and the rest of the Cloud Adventure Team
 * **Contributors** -
-* **Last Updated By/Date** - Jamil Orfali, April 2025
+* **Last Updated By/Date** - Charlie, July 2025
