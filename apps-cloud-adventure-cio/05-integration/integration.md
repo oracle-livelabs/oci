@@ -147,10 +147,16 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 18. Define the Agent Team.
 
      > (1) Enter the fields as described below:
+<<<<<<< Updated upstream
 
         - Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user nnumber. <br>
         - Family: Select **PRC** from the dropown <br>
         - Product: Select  **Self Service Procurement** from the dropdown <br>
+=======
+        - Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user nnumber.<br>
+        - Family: Select **PRC** from the dropown<br>
+        - Product: Select  **Self Service Procurement** from the dropdown<br>
+>>>>>>> Stashed changes
         - Maximum Interactions: **20** <br>
         - Description: **Purchase Requisition Agent Team leverages worker agents Procurement Policy Advisory and Purchase Requisition Agent.** <br>
 
@@ -166,7 +172,6 @@ In this activity you will use Oracle Fusion AI Agent Studio to
        ![Create Agent](images/poaimage019.jpg)
 
 20. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
-
 
      > (1) Click the **Agents** icon ![Agent Icon](images/agenticon.jpg).
      > (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **New Supervisor Agent**.
