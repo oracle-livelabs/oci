@@ -99,9 +99,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
         - Product: Select  **Self Service Procurement** from the dropdown<br>
         - Maximum Interactions: **10** <br>
         - Description: **Cloud Adventure Procurement Policy Advisor Agent** <br>
-
     ![Alert Flat](images/cautionflagsmalltransparent2.png)  Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.  To streamline this step, we've pre-created the prompt.  It's available as described below.
-
         - Prompt: The value for the prompt field is available in the **Prompt – CA Procurement Policy Advisor.txt** file that is available in the **Procurement Prompt** folder on your desktop.  Please open this file and copy the contents into the Prompt field.  
     > (2) Click the Create Button ![Create Button](images/createb.jpg) <br>
 
@@ -147,22 +145,11 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 18. Define the Agent Team.
 
      > (1) Enter the fields as described below:
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
         - Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user nnumber. <br>
         - Family: Select **PRC** from the dropown <br>
         - Product: Select  **Self Service Procurement** from the dropdown <br>
-=======
-=======
->>>>>>> Stashed changes
-        - Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user nnumber.<br>
-        - Family: Select **PRC** from the dropown<br>
-        - Product: Select  **Self Service Procurement** from the dropdown<br>
->>>>>>> Stashed changes
         - Maximum Interactions: **20** <br>
         - Description: **Purchase Requisition Agent Team leverages worker agents Procurement Policy Advisory and Purchase Requisition Agent.** <br>
-
      > (2) Click the Questions tab <br>
     
        ![Create Agent](images/poaimage018.jpg)
