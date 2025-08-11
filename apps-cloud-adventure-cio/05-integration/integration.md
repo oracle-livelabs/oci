@@ -100,7 +100,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
         - Maximum Interactions: **10** <br>
         - Description: **Cloud Adventure Procurement Policy Advisor Agent** <br>
 
-        ![Alert Flat](images/cautionflagsmalltransparent2.png)  Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.  To streamline this step, we've pre-created the prompt.  It's available as described below.
+    ![Alert Flat](images/cautionflagsmalltransparent2.png)  Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.  To streamline this step, we've pre-created the prompt.  It's available as described below.
 
         - Prompt: The value for the prompt field is available in the **Prompt – CA Procurement Policy Advisor.txt** file that is available in the **Procurement Prompt** folder on your desktop.  Please open this file and copy the contents into the Prompt field.  
     > (2) Click the Create Button ![Create Button](images/createb.jpg) <br>
