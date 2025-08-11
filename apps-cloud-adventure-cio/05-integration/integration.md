@@ -148,11 +148,14 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
      > (1) Enter the fields as described below:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
         - Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user nnumber. <br>
         - Family: Select **PRC** from the dropown <br>
         - Product: Select  **Self Service Procurement** from the dropdown <br>
 =======
+=======
+>>>>>>> Stashed changes
         - Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user nnumber.<br>
         - Family: Select **PRC** from the dropown<br>
         - Product: Select  **Self Service Procurement** from the dropdown<br>
