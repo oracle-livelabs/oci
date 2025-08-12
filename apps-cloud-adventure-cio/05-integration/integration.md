@@ -165,7 +165,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 20. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
 
-     > (1) Click the **Agents** icon ![Agent Icon](images/agenticon.jpg).
+     > (1) Click the **Agents** Icon ![Agent Icon](images/agenticon.jpg)
      > (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **New Supervisor Agent**.
     
    ![Create Agent](images/poaimage020.jpg)
