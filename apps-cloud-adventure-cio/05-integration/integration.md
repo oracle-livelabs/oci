@@ -141,10 +141,14 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 17. Create an Agent Team.
 
-
     > Click the **+ Add** button ![Add Button](images/addw.jpg)
     
     ![Add Tools Create](images/poaimage017.jpg) <br>
+
+
+
+
+> CLick the **+ Add** button ![Add Button](images/addw.jpg)
 
 18. Define the Agent Team.
 
