@@ -144,7 +144,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     > Click the **+ Add** button ![Add Button](images/addw.jpg).
     ![Add Tools Create](images/poaimage017.jpg)
 
-     (images/addw.jpg).
+     [.](images/addw.jpg)
 
 
 18. Define the Agent Team.
@@ -161,7 +161,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 19. You can provide one or more starter questions to assist users in interacting with the Agent Team.
 
-     > (1) In the Question 1 field, enter: **Hi, I can help you with questions related to purchases.  How can I help you today?** <br> 
+     > (1) In the Question 1 field, enter: **Hi, I can help you with questions related to purchases.  How can I help you today?** <br>
      > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
 
        ![Create Agent](images/poaimage019.jpg)
