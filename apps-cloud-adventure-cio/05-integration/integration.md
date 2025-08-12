@@ -19,7 +19,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio 
 
-    ![AI RAG Obectives](images/extendwithairag.jpg)
+    ![AI RAG Objectives](images/extendwithairag.jpg)
 
 2. The first step is to navigate to AI Agent Studio. 
 
@@ -58,7 +58,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     > (1) Enter the following fields:
         - Name: Enter **Procurement Policy Documents** <br>
-        - Status: Select **Ready to publish** from the dropown<br>
+        - Status: Select **Ready to publish** from the dropdown<br>
         - Description: Enter **Procurement Policy Documents**<br>
     > (2) Click on the ![Drag and Drop](images/dandd.jpg) region <br>
     Select all files from the **Procurement Documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.
@@ -67,13 +67,13 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 7. After all 4 files/documents have been loaded, you can proceed with the Save.
 
-    > Click the **Save** ![Home Icon](images/save.jpg) button on the botton right
+    > Click the **Save** ![Home Icon](images/save.jpg) button on the bottom right
 
     ![Suppliers View](images/poaimage007.jpg)
 
 8. You're now ready to save your knew Document Tool.
 
-    > Click the **Create button** ![Craete Button](images/createw.jpg)  on the near to the of the screen.
+    > Click the **Create button** ![Create Button](images/createw.jpg)  on the near to the of the screen.
 
     ![Craete Tool](images/poaimage008.jpg)
 
@@ -97,8 +97,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 11. Define the Details of the Agent.
 
     > (1) First, you'll enter the fields as described below:
-        - Agent Name: **CIO## Procurement Policy Advisor Agent** where ## is replaced with your user nnumber.<br>
-        - Family: Select **PRC** from the dropown<br>
+        - Agent Name: **CIO## Procurement Policy Advisor Agent** where ## is replaced with your user number.<br>
+        - Family: Select **PRC** from the dropdown<br>
         - Product: Select  **Self Service Procurement** from the dropdown<br>
         - Maximum Interactions: **10** <br>
         - Description: **Cloud Adventure Procurement Policy Advisor Agent** <br>
@@ -116,7 +116,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 13. Find the appropriate tool and add it to your agent.
 
-    > (1) Enter **Procurement** in the Ask Oracle field and select **Procurement** from teh resulting dropdown.  This filters the list of tools for easier selection. <br>
+    > (1) Enter **Procurement** in the Ask Oracle field and select **Procurement** from the resulting dropdown.  This filters the list of tools for easier selection. <br>
     > (2) Click the ![Plus Icon](images/plusicon.jpg) next to the tool name **CA Procurement Policy Document Tool**<br>
 
     ![Add tool](images/poaimage013.jpg)
@@ -147,8 +147,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 18. Define the Agent Team.
 
      > (1) Enter the fields as described below:
-        - Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user nnumber. <br>
-        - Family: Select **PRC** from the dropown <br>
+        - Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user number. <br>
+        - Family: Select **PRC** from the dropdown <br>
         - Product: Select  **Self Service Procurement** from the dropdown <br>
         - Maximum Interactions: **20** <br>
         - Description: **Purchase Requisition Agent Team leverages worker agents Procurement Policy Advisory and Purchase Requisition Agent.** <br>
@@ -173,8 +173,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 21. Define Supervisor Agent Details.
 
      > (1) Enter the fields as described below:
-        - Agent Team Name: **CIO## Procurement Requisition Supervisor Agent** where ## is replaced with your user nnumber.<br>
-        - Family: Select **PRC** from the dropown<br>
+        - Agent Team Name: **CIO## Procurement Requisition Supervisor Agent** where ## is replaced with your user number.<br>
+        - Family: Select **PRC** from the dropdown<br>
         - Product: Select  **Self Service Procurement** from the dropdown<br>
         - Maximum Interactions: **10** <br>
         - Description: **Cloud Adventure Purchase Requisitions Supervisor Agent** <br>
@@ -188,7 +188,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     
        ![Create Agent](images/poaimage022.jpg)
 
-23. You can review the deatils of the agent.
+23. You can review the details of the agent.
 
     > Click the Add button ![Add Button](images/addb.jpg).
     
@@ -200,7 +200,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     
      ![Create Agent](images/poaimage024.jpg)
 
-25. You can review the deatils of the agent.
+25. You can review the details of the agent.
 
     > Click the **Add** button ![Add Button](images/addb.jpg).
     
@@ -214,20 +214,20 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 27. You can now begin a dialog with the Agent.  
 
-    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What is the laptop policy** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What is the laptop policy** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
     
     ![agent dialogue 1](images/poaimage027.jpg) <br>
 
 28. The Agent will response with information.  In this Debug mode, the Agent will also show you source and processing information (yellow boxes).  These will not be available to end-users once deployed.
 
     > The agent provides a response. But we need more information, so we'll ask additional questions.
-    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What if I need to order a non-standard laptop** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What if I need to order a non-standard laptop** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
     
     ![agent dialogue 2](images/poaimage028.jpg) <br>    
 
 29. You decide to not worry about requesting anything non-standard.  
  
-    > So, ask the agent to proceed with the laptop order by typing **I am ready to order a laptop** in the **Ask Oracle** dialog box on the bottom right of the screen and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
+    > So, ask the agent to proceed with the laptop order by typing **I am ready to order a laptop** in the **Ask Oracle** dialog box on the bottom right of the screen and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
     
     ![agent dialogue 3](images/poaimage029.jpg) <br>      
 
@@ -239,19 +239,19 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 31. The agent will ask you to confirm.  
  
-    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Proceed with ordering a laptop** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg))
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Proceed with ordering a laptop** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg))
     
     ![agent dialogue 3](images/poaimage032.jpg) <br>  
 
 32. The agent needs a little more information.
  
-    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Requested delivery data is Aug 31st, 2025 and the quantity is 1** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg))
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Requested delivery data is Aug 31st, 2025 and the quantity is 1** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg))
     
     ![agent dialogue 3](images/poaimage033.jpg) <br>  
 
 33. The agent has created your requisition.
  
-    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **TAke me to my requisition** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg))
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Take me to my requisition** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg))
     
     ![agent dialogue 3](images/poaimage034.jpg) <br>  
 
