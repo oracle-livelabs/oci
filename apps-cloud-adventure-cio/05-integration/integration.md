@@ -11,22 +11,7 @@ AI Agent Studio for Fusion Applications is a comprehensive platform for creating
 In this activity you will use Oracle Fusion AI Agent Studio to
 •	Create a Document Tool to ingest company-specific procurement policy documents (PDF)
 •	Create an Agent that uses the Document Tool to respond to user queries
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 •	Create and assemble an Agent team that includes the created Agent and purchase requisition action agent.
-•	Test the Agent team
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-•	Create and assemble an Agent team that incudes the created Agent and purchase requisition action agent.
-•	Test the Agent team 
->>>>>>> Stashed changes
 
 
 ## Create Policy Advisor Agent (RAG) and an Agent Team using AI Agent Studio
