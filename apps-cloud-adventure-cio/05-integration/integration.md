@@ -163,11 +163,12 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 18. Define the Agent Team.
 
      > (1) Enter the fields as described below:
-        - Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user number. <br>
-        - Family: Select **PRC** from the dropdown <br>
-        - Product: Select  **Self Service Procurement** from the dropdown <br>
-        - Maximum Interactions: **20** <br>
-        - Description: **Purchase Requisition Agent Team leverages worker agents Procurement Policy Advisory and Purchase Requisition Agent.** <br>
+     * Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user number. <br>
+     * Family: Select **PRC** from the dropdown <br>
+     * Product: Select  **Self Service Procurement** from the dropdown <br>
+     * Maximum Interactions: **20** <br>
+     * Description: **Purchase Requisition Agent Team leverages worker agents Procurement Policy Advisory and Purchase Requisition Agent.** <br>
+
      > (2) Click the Questions tab <br>
 
        ![Create Agent](images/poaimage018.jpg)
