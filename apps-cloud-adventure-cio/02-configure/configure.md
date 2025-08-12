@@ -345,7 +345,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (1) Click in the Box in the **Hidden Column** for **Creation Source Field** row.    <br>
 
-    > (2) Then select **Visble** from the options that appear.
+    > (2) Then select **Visible** from the options that appear.
 
     ![Validation](images/image117.png)
 
@@ -417,7 +417,7 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist, Advanced Technology Services; Casey Doody, Cloud Technologist , Advanced Technology Services
 * **Contributors** -  Sajid Saleem, Master Principal Cloud Technologist, Advanced Technology Services
-* **Last Updated By/Date** - Casey Doody, April 2025
+* **Last Updated By/Date** - Casey Doody, August 2025
 
 
 
