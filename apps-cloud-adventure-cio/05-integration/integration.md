@@ -11,8 +11,13 @@ AI Agent Studio for Fusion Applications is a comprehensive platform for creating
 In this activity you will use Oracle Fusion AI Agent Studio to
 •	Create a Document Tool to ingest company-specific procurement policy documents (PDF)
 •	Create an Agent that uses the Document Tool to respond to user queries
+<<<<<<< Updated upstream
 •	Create and assemble an Agent team that includes the created Agent and purchase requisition action agent.
 •	Test the Agent team
+=======
+•	Create and assemble an Agent team that incudes the created Agent and purchase requisition action agent.
+•	Test the Agent team 
+>>>>>>> Stashed changes
 
 
 ## Create Policy Advisor Agent (RAG) and an Agent Team using AI Agent Studio
@@ -96,6 +101,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 11. Define the Details of the Agent.
 
+<<<<<<< Updated upstream
     > (1) First, you'll enter the fields as described below:
         - Agent Name: **CIO## Procurement Policy Advisor Agent** where ## is replaced with your user number.<br>
         - Family: Select **PRC** from the dropdown<br>
@@ -104,6 +110,17 @@ In this activity you will use Oracle Fusion AI Agent Studio to
         - Description: **Cloud Adventure Procurement Policy Advisor Agent** <br>
         - Prompt: The value for the prompt field is available in the **Prompt – CA Procurement Policy Advisor.txt** file that is available in the **Procurement Prompt** folder on your desktop.  Please open this file and copy the contents into the Prompt field.  <br>
          ![Alert Flat](images/cautionflagextrasmalltransparent2.png)  Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.  To streamline this step, we've pre-created the prompt.  It's available as described below.
+=======
+    > (1) First, you'll enter the fields as described below:<br>
+    * Agent Name: **CIO## Procurement Policy Advisor Agent** where ## is replaced with your user nnumber.<br>
+    * Family: Select **PRC** from the dropown<br>
+    * Product: Select  **Self Service Procurement** from the dropdown<br>
+    * Maximum Interactions: **10** <br>
+    * Description: **Cloud Adventure Procurement Policy Advisor Agent** <br>
+    * Prompt: The value for the prompt field is available in the **Prompt – CA Procurement Policy Advisor.txt** file that is available in the **Procurement Prompt** folder on your desktop.  Please open this file and copy the contents into the Prompt field.  <br><br>
+         ![Alert Flat](images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt*** is a critical part of the Agent Definition as it provides guidance for the Agent.  To streamline this step, we've pre-created the prompt.  It's available as described below.<br>
+
+>>>>>>> Stashed changes
     > (2) Click the Create Button ![Create Button](images/createb.jpg) <br>
 
     ![Create Agent](images/poaimage011.jpg)
