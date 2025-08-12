@@ -115,7 +115,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 13. Find the appropriate tool and add it to your agent.
 
-    > (1) Enter **Procurement** in the Ask Oracle field and select **Procurement** from teh resulting dropdown.  This filters the list of tools for easier selection.
+    > (1) Enter **Procurement** in the Ask Oracle field and select **Procurement** from teh resulting dropdown.  This filters the list of tools for easier selection. <br>
     > (2) Click the ![Plus Icon](images/plusicon.jpg) next to the tool name **CA Procurement Policy Document Tool**<br>
 
     ![Add tool](images/poaimage013.jpg)
@@ -166,7 +166,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 20. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
 
-     > (1) Click the **Agents** Icon ![Agent Icon](images/agenticon.jpg)
+     > (1) Click the **Agents** Icon ![Agent Icon](images/agenticon.jpg) <br>
      > (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **New Supervisor Agent**.
     
    ![Create Agent](images/poaimage020.jpg)
