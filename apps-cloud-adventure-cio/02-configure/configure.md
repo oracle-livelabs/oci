@@ -135,7 +135,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 11. Now you will add a validation step for the Adjustment Percentage.  You do not want users to enter in a Salary Percentage Greater than 15%
 
-    > Click on **Validate Field Values**
+    > Click on **Configure Validations**
 
     ![Fields and Regions](images/image020.png)
 
