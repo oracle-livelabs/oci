@@ -14,9 +14,12 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 •	Create and assemble an Agent team that includes the created Agent and purchase requisition action agent.
 •	Test the Agent team
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -110,6 +113,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     > (1) First, you'll enter the fields as described below:
         - Agent Name: **CIO## Procurement Policy Advisor Agent** where ## is replaced with your user number.<br>
         - Family: Select **PRC** from the dropdown<br>
@@ -119,6 +123,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
         - Prompt: The value for the prompt field is available in the **Prompt – CA Procurement Policy Advisor.txt** file that is available in the **Procurement Prompt** folder on your desktop.  Please open this file and copy the contents into the Prompt field.  <br>
          ![Alert Flat](images/cautionflagextrasmalltransparent2.png)  Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.  To streamline this step, we've pre-created the prompt.  It's available as described below.
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -134,6 +140,9 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
