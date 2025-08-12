@@ -170,6 +170,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
      > (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **New Supervisor Agent**.
 
    ![Create Agent](images/poaimage020.jpg)
+   > ![l](images/agenticon.jpg)
 
 21. Define Supervisor Agent Details.
 
