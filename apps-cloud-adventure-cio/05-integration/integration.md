@@ -82,14 +82,14 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 9. Now, you'll create your first Agent!  You'll do that from the Agent screen within the AI Agent Studio.
 
-    > Click the  **Agents** button/tab [Agent Image](images/agenticon.jpg) at the bottom of the page.
+    > Click the  **Agents** button/tab ![Agent Image](images/agenticon.jpg) at the bottom of the page.
 
     ![Agents Page](images/poaimage009.jpg)
 
 
 10. Here, you can see any existing agents.  But you want to create a new one.
 
-    > Click the **+ Add** button [Add button Image](images/addw.jpg).
+    > Click the **+ Add** button ![Add button Image](images/addw.jpg).
 
 
     ![Add Agent](images/poaimage010.jpg)
