@@ -254,7 +254,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![My Team Page](images/image102.png)
 
-    > Click on the **Supplier Type** to display the Filter and click into the Search box **Supplier Type**.
+    > (1) Click on the **Supplier Type** to display the Filter.<br>
+
+    > (2) Click into the Search box **Supplier Type**.
 
     ![My Team Page](images/image103.png)
 
