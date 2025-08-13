@@ -38,7 +38,7 @@ In this lab, you will:
 
     ![MySQL Standalone or HA](images/mysql-standalone-ha.jpg#input)
 
-7. Select from the dropdown list *llw-net-2024-10-04-140858* for **VCN** and *LLW Public Subnet(Regional)* for **Subnet**.
+7. Select from the dropdown list *llw-net-* for **VCN** and *LLW Public Subnet(Regional)* for **Subnet**.
 
     ![MySQL Network and Placement](images/mysql-network-placement.png#input)
 
