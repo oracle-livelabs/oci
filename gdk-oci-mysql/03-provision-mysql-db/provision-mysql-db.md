@@ -16,7 +16,7 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console, open the navigation menu, click **Databases**. Under **HeatWave MySQL**, click **DB Systems**
 
-   ![Oracle Databases menu](https://oracle-livelabs.github.io/common/images/console-2025/database-mysql.png)
+   ![Oracle Databases menu](https://oracle-livelabs.github.io/common/images/console/database-mysql.png)
 
 2. Select your workshop compartment from the **Compartment** drop down list on the left
 
@@ -38,7 +38,7 @@ In this lab, you will:
 
     ![MySQL Standalone or HA](images/mysql-standalone-ha.jpg#input)
 
-7. Leave the default values in the **Network** and **Placement** sections unchanged.
+7. Select from the dropdown list *llw-net-2024-10-04-140858* for **VCN** and *LLW Public Subnet(Regional)* for **Subnet**.
 
     ![MySQL Network and Placement](images/mysql-network-placement.png#input)
 
