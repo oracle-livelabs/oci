@@ -48,6 +48,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     * Family: select **PRC** from the dropdown<br>
     * Product: select **Self Service Procurement** from the dropdown<br>
     * Description: Enter **Cloud Adventure Procurement Policy Document Tool** <br>
+
     > (2) Click the ![Add button](images/addw.jpg) button under **Documents**
 
     ![Edit Suppliers View](images/poaimage005.jpg)
@@ -59,6 +60,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     * Name: Enter **Procurement Policy Documents** <br>
     * Status: Select **Ready to publish** from the dropdown<br>
     * Description: Enter **Procurement Policy Documents**<br>
+
     > (2) Click on the ![Drag and Drop](images/dandd.jpg) region <br>
     Select all files from the **Procurement Documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.
 
@@ -179,6 +181,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     * Product: Select  **Self Service Procurement** from the dropdown<br>
     * Maximum Interactions: **10** <br>
     * Description: **Cloud Adventure Purchase Requisitions Supervisor Agent** <br>
+
      > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
 
        ![Create Agent](images/poaimage021.jpg)
