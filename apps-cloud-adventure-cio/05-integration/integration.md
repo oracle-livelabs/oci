@@ -143,7 +143,6 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     > Click the **+ Add** button ![Add Button](images/addw.jpg).
     > ![Add Tools Create](images/poaimage017.jpg)
-    > ![l](images/addw.jpg)
 
 18. Define the Agent Team.
 
@@ -171,7 +170,6 @@ In this activity you will use Oracle Fusion AI Agent Studio to
      > (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **New Supervisor Agent**.
 
    ![Create Agent](images/poaimage020.jpg)
-   > ![l](images/agenticon.jpg)
 
 21. Define Supervisor Agent Details.
 
