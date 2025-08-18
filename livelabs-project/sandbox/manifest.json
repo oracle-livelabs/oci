@@ -10,7 +10,7 @@
         {
             "title": "Lab0",
             "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
-            "filename": "../Lab0/setup.md"
+            "filename": "../Lab5/setup.md"
         },
         {
             "title": "Lab1",

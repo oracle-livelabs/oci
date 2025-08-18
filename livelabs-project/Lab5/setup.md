@@ -34,9 +34,8 @@ This lab assumes you have:
   
     - Paste the following code into a new .py file on your local machine. Reassign the variables towards the end (## test example) to match your data (paths and buckets)
     
-            ```
+        ```python
         import json
-        
         def generate_manifest(
             labels: list,
             dataset_bucket: str,
@@ -49,7 +48,6 @@ This lab assumes you have:
         ):
             """
             Generate a .jsonl file with a specified structure.
-            
             Parameters:
             - labels: list of label names (e.g., ["Invoice_date", "Invoice_Number"])
             - dataset_bucket: bucket name for dataset source
@@ -81,13 +79,9 @@ This lab assumes you have:
                     }
                 ]
             }
-        
             with open(output_path, "w") as f:
                 f.write(json.dumps(json_obj) + "\n")
-        
             print(f"JSONL file written to {output_path}")
-        
-        
         ## Test Example
         labels = ["Invoice_date", "Invoice_Number"] # Be careful, it's case sensitive
         generate_manifest(
@@ -100,6 +94,7 @@ This lab assumes you have:
             output_path="manifest.jsonl", # extension should be .jsonl 
             prefix="test_ls_integration/" #prefix always ends with /
         )
+
 
         ```
   
@@ -190,8 +185,6 @@ Export Annotations
         )
 
         ```  
-
-
 
 
 ## Acknowledgements
