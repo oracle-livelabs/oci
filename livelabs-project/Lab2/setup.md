@@ -4,7 +4,7 @@
 
 To streamline the annotation workflow and minimize manual effort, interactive pre-annotation can be enabled in Label Studio. This setup allows automatic generation of bounding boxes using OCR service. We have integrated OCI OCR as the ML backend to generate bounding boxes on images for key-value annotation. Please clone the repository below and install the required dependencies.
 
-***Estimated Lab Time*** 5 minutes
+***Estimated Lab Time*** 15 minutes
 
 
 ### Objectives:
@@ -34,10 +34,11 @@ This lab assumes you have:
 2. Install label-studio-ml-backend 
   </br>
       ```
+      <copy>
       git clone https://github.com/HumanSignal/label-studio-ml-backend.git 
       cd label-studio-ml-backend/ 
       pip install -e .  
-
+      </copy>
       ```
 
 3. 
@@ -47,25 +48,28 @@ This lab assumes you have:
 4. 
   Move to the examples folder: 
       ```
+      <copy>
       cd label_studio_ml/examples/ 
-
+      </copy>
       ``` 
 
-Inside that folder, configure the following to your COMPARTMENT_ID and SERVICE_ENDPOINT. To find which if your service endpoint, check the following list and copy your region: https://docs.oracle.com/en-us/iaas/api/#/en/document-understanding/20221109/  
+5. Navigate to `label_studio_ml/examples/ociocr` directory, open the .env file and configure the following to your `COMPARTMENT_ID` and `SERVICE_ENDPOINT`. To find which if your service endpoint, check the following list and copy your region: https://docs.oracle.com/en-us/iaas/api/#/en/document-understanding/20221109/ (make sure that the service endpoint region and the region your compartment is in are matching).  
 
-      ```
-      CONFIG_PROFILE = "DEFAULT" 
-      COMPARTMENT_ID = "ocid1.compartment.oc1.xxxxxxxxxxxxxxxxxxxxxxxx" 
-      SERVICE_ENDPOINT = "https://document-preprod.aiservice.xxxxxxxxxxxxxxxx" 
-      LANGUAGE="ENG"
-      ```
+        <copy>
+        CONFIG_PROFILE = "DEFAULT" 
+        COMPARTMENT_ID = "ocid1.compartment.oc1.xxxxxxxxxxxxxxxxxxxxxxxx" 
+        SERVICE_ENDPOINT = "https://document-preprod.aiservice.xxxxxxxxxxxxxxxx" 
+        LANGUAGE="ENG"
+        </copy>
 
-5. 
-  Start Text extraction service
-  Run the command below to start the OCR service inside the examples folder, for example with port 9001. 
+6. Run the command below to start the OCR service inside the examples folder, for example with port 9001. 
+    <br>
       ```
-      label-studio-ml start ./ociocr --port 9001 
+      <copy>
+      label-studio-ml start ./ociocr --port 9001
+ 
       ```
+    </br>
 
 ## Acknowledgements
 * **Authors** 

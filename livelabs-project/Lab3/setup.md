@@ -25,17 +25,22 @@ Since your files are stored locally, you need to export the following environmen
 </br>
 Reference link: https://labelstud.io/guide/start#Set-environment-variables 
 
-1. Enable local file serving on Mac:
+1. Run the following commands in your terminal to enable local file serving on Mac:
 
     ```
+    <copy>
     export LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true 
-    export LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT= <absolute path to the parent directory of folder where your documents are stored.> 
+    export LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT= absolute path to the parent directory of folder where your documents are stored.
+
     ```
 
-2. Enable local file serving on Windows
+2. Run the following commands in your terminal to enable local file serving on Windows
+
     ```
+    <copy>
     set LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true 
-    set LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT= <absolute path to the parent directory of folder where your documents are stored.> 
+    set LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT= absolute path to the parent directory of folder where your documents are stored.
+
     ```
 
 ## Task 2: Start Label Studio and create an account
@@ -89,25 +94,24 @@ Reference: https://labelstud.io/guide/setup_project
 
 - Copy and paste the following labelling configuration into the code template
   
-      ```
-    <View>
-      <Repeater on="$pages" indexFlag="{{idx}}" mode="pagination">
-        <View style="display:flex;align-items:start;gap:8px;flex-direction:row">
-          <Image name="page_{{idx}}" value="$pages[{{idx}}].page" inline="true"/>
-            <Labels name="labels_{{idx}}" toName="page_{{idx}}" showInline="false">
-              <Label value="ignore" background="#FFA39E"/>
-              <Label value="Invoice_Number" background="#a59eff"/>
-              <Label value="Invoice_Date" background="#0dd377"/>
-              <Label value="Total" background="#ffdf6b"/>
-            </Labels>
-        </View>
-        
-        <Rectangle name="bbox_{{idx}}" smart="true" toName="page_{{idx}}" strokeWidth="3"/>
-        <TextArea name="transcription_{{idx}}" toName="page_{{idx}}" editable="true" perRegion="true" required="true" maxSubmissions="1" rows="5" placeholder="Recognized Text" displayMode="region-list"/>
+    ```
+      <View>
+        <Repeater on="$pages" indexFlag="{{idx}}" mode="pagination">
+          <View style="display:flex;align-items:start;gap:8px;flex-direction:row">
+            <Image name="page_{{idx}}" value="$pages[{{idx}}].page" inline="true"/>
+              <Labels name="labels_{{idx}}" toName="page_{{idx}}" showInline="false">
+                <Label value="ignore" background="#FFA39E"/>
+                <Label value="Invoice_Number" background="#a59eff"/>
+                <Label value="Invoice_Date" background="#0dd377"/>
+                <Label value="Total" background="#ffdf6b"/>
+              </Labels>
+          </View>
+          <Rectangle name="bbox_{{idx}}" smart="true" toName="page_{{idx}}" strokeWidth="3"/>
+          <TextArea name="transcription_{{idx}}" toName="page_{{idx}}" editable="true" perRegion="true" required="true" maxSubmissions="1" rows="5" placeholder="Recognized Text" displayMode="region-list"/>
+        </Repeater>
+      </View> 
       
-      </Repeater>
-    </View> 
-      ```
+    ```
 
 - Click on save to update the configuration
   ![Save labelling configuration](images/save-configuration.png)

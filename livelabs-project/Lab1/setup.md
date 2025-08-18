@@ -3,7 +3,9 @@
 ## Introduction
 
 Label Studio does not natively support PDF annotation.
+</br>
 Ref: https://labelstud.io/blog/new-in-label-studio-1-15-fundamental-tools-for-pdf-labeling/.
+</br>
 If the files you plan to label are in the supported formats (jpg, jpeg, png, gif, bmp, svg, webp), you can import them directly into Label Studio and [Skip to Lab 2](../Lab2/setup.md) . Otherwise if you would like to label documents in PDF format proceed with this lab.
 
 ***Estimated Lab Time*** 5 minutes
@@ -33,17 +35,15 @@ Poppler is an open source Python Library for rendering and manipulating document
   Locate the bin/ directory in the installed package.
   </br>
   Identify the folder you want to add to your system’s PATH. For example, assume the full path to the bin directory is: C:\path\to\your\bin\folder.
-3. 
 
+3. 
   Open Environment Variables in your System
   - Right-click on “This PC” (or “My Computer” in older versions of Windows) and select “Properties”.
   - In the System window, click on “Advanced system settings” in the left-hand pane.
   - In the System Properties window, click on the “Environment Variables” button at the bottom.
   	![Environment variables screen on windows](images/environment_variables.png =50%x*)
 
-
-4. 
-  Edit the PATH variable
+4. Edit the PATH variable
   - In the Environment Variables window, under “System variables,” find the “Path” variable and select it.
   ![Path variable under system variables screen on windows](images/edit_path.png =50%x*)
   - Click the “Edit” button.
@@ -61,6 +61,7 @@ Poppler is an open source Python Library for rendering and manipulating document
      pdftoppm -h 
 
     ```
+    Your terminal should display the version of Poppler you have installed.
 
 ## Task 2: Installing and running Poppler on Mac
 
@@ -94,8 +95,7 @@ If the files you intend to label are in supported image formats (jpg, jpeg, png,
 
 2. Copy and paste the code below into a code editor of your choice 
 
-******need to test this code*****
-      ```
+    ```
 
       <copy>
       import os
@@ -207,7 +207,8 @@ If the files you intend to label are in supported image formats (jpg, jpeg, png,
           output_json="kv_tasks.json"
       )
       </copy>
-      ```  
+
+    ```  
 
 3. Next, open a new terminal window in Windows and navigate to the directory where your code is saved by running:
   
@@ -223,7 +224,6 @@ If the files you intend to label are in supported image formats (jpg, jpeg, png,
 
     If Python is properly installed, you will see the current version displayed (e.g., Python 3.11.13). If not, refer to the setup section ****Link to the first section***** to install Python on your machine.
 
-
 5. After confirming Python is installed, you’ll need to modify just three variables at the end of the code:
 
     - `ls_document_root` – Set this variable to the directory that contains the folder where your PDF files are stored.
@@ -232,7 +232,7 @@ If the files you intend to label are in supported image formats (jpg, jpeg, png,
 
 6. Once you’ve updated the variables to reflect your local file paths, run the following command to execute the script:
     ```
-    python generate_task_kv.py 
+    python file_name.py 
     ```
 
 7. If the script runs successfully, you should see the following message in your terminal (with X representing the number of PDF files converted):

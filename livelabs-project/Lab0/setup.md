@@ -3,7 +3,7 @@
 ## Introduction
 In this session we will focus on setting up the environment and downloading the dependencies needed in order to get Label studio running on your machine.
 
-***Estimated Lab Time*** 5 minutes
+***Estimated Lab Time*** 10 minutes
 
 
 ### Objectives:
@@ -18,29 +18,40 @@ This lab assumes you have:
 
 ## Task 1: Installation steps/Get started
 
-Install Python3.11.13 in your computer. If you have a newer version of Python, create a new virtual environment with the version 3.11.3. 
+Install Python 3.11.13 in your computer. If you have a newer version of Python, create a new virtual environment with the version 3.11.3. 
 
 1. 
 
-	Download the requirements.txt file below
-  [Requirements.txt file](Lab0/requriements.txt)
+	Download the <a href="files/requirements.txt" download>requirements.txt</a> file
 
 2. 
   Choose one of the following approaches (venv or conda) and run the corresponding commands in your terminal to set up your environment:
 
 | create virtual environment using virtual environment | create virtual environment using conda |
 | ------------- | ------------- |
-| python3 -m venv env_name   | conda create --name env_name  |
+| python3 -m venv env_name   | conda create --name env_name python=3.11.13 |
 | source env_name/bin/activate | conda activate env_name   |
-| brew install poppler | brew install poppler  |
 | pip install -r requirements.txt | pip install -r requirements.txt |
 
 
 ## Task 2: Token based authentication
 
-Follow the instructions in the link below in order to authenticate using the OCI CLI
+There are multiple ways to generate the session, they are explained in this [guide](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/clitoken.htm), one of the ways (using the browser is explained below). 
 
-https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/clitoken.htm 
+1. Ensure that the OCI CLI is set up on your local machine. If it's not already installed, follow this [guide](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm)
+
+2. In the CLI, run the following command
+</br> 
+    ```
+    OCI session authenticate
+    ```
+3. Select the same region where you have your tenancy running
+
+4. Once the browser opens, enter your credentials to sign in 
+
+5. After successful authentication, close the browser and follow interactive prompt on the terminal. A configuration file will be created.
+
+6. Your key files should now be updated and referenced in your .oci/config file.
 
 
 
