@@ -1,0 +1,133 @@
+# Setup and install Label Studio
+
+## Introduction
+
+This Lab will guide you through the process of setting up and runinng Label Studio on your machine.
+
+***Estimated Lab Time*** 20 minutes
+
+
+### Objectives:
+
+In this lab, you will:
+* Enable Local file serving and start Label Studio.
+* Create and configure a labelling project.
+
+### Prerequisites (Optional)
+
+This lab assumes you have:
+* All previous labs successfully completed.
+* Basic scripting skills in Python and Bash
+
+
+## Task 1: Enable local file serving
+Since your files are stored locally, you need to export the following environment variables as instructed to enable Label Studio to access and annotate them. 
+</br>
+Reference link: https://labelstud.io/guide/start#Set-environment-variables 
+
+1. Enable local file serving on Mac:
+
+    ```
+    export LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true 
+    export LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT= <absolute path to the parent directory of folder where your documents are stored.> 
+    ```
+
+2. Enable local file serving on Windows
+    ```
+    set LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true 
+    set LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT= <absolute path to the parent directory of folder where your documents are stored.> 
+    ```
+
+## Task 2: Start Label Studio and create an account
+
+
+1. By default, Label Studio runs on port 8080. If that port is already in use or if you want to specify a different port, start Label Studio with the following command:
+    ```
+    label-studio start --port <port> 
+    ```
+
+2. Create an account
+  - When you first start Label Studio, you see the sign-up screen. 
+  - Create an account with your email address and a password. 
+  - Log in to Label Studio. 
+
+
+## Task 3: Project creation and configuration
+
+1. Create New Project
+Reference: https://labelstud.io/guide/setup_project 
+
+  ![Create Project Image](images/create-project.png)
+  ![Save Project Image](images/save-project.png)
+
+
+2. Add source data storage
+- Add your local source storage by clicking on settings in the top right corner
+  ![Open project settings](images/settings-ls.png)
+- Navigate to Cloud Storage 
+  ![Open Cloud Storage](images/cloud-storage-ls.png)
+- Add source storage
+  ![Add source storage](images/source-storage.png)
+- Add link to input pdfs in source storage 
+  ![Add link to input pdf files](images/input-pdf-path.png)
+- Repeat the same steps to add another source storage - the output images file. So your Source Cloud storage 
+  are structured as follows
+  ![Local storage file structure](images/local-storage-files.png)
+
+  Reference: https://labelstud.io/guide/storage.html#Local-storage 
+  </br>
+  Add both the *`input_pdf`* folder and *`output_images`* folder in the source storage.
+
+
+3. Setup labelling config
+
+- Next, navigate to labelling interface 
+  ![Labelling interface](images/labeling-interface.png)
+
+- Navigate to the code template within the labelling interface
+  ![Labeling interface code](images/labelling-code.png)
+
+- Copy and paste the following labelling configuration into the code template
+  
+      ```
+    <View>
+      <Repeater on="$pages" indexFlag="{{idx}}" mode="pagination">
+        <View style="display:flex;align-items:start;gap:8px;flex-direction:row">
+          <Image name="page_{{idx}}" value="$pages[{{idx}}].page" inline="true"/>
+            <Labels name="labels_{{idx}}" toName="page_{{idx}}" showInline="false">
+              <Label value="ignore" background="#FFA39E"/>
+              <Label value="Invoice_Number" background="#a59eff"/>
+              <Label value="Invoice_Date" background="#0dd377"/>
+              <Label value="Total" background="#ffdf6b"/>
+            </Labels>
+        </View>
+        
+        <Rectangle name="bbox_{{idx}}" smart="true" toName="page_{{idx}}" strokeWidth="3"/>
+        <TextArea name="transcription_{{idx}}" toName="page_{{idx}}" editable="true" perRegion="true" required="true" maxSubmissions="1" rows="5" placeholder="Recognized Text" displayMode="region-list"/>
+      
+      </Repeater>
+    </View> 
+      ```
+
+- Click on save to update the configuration
+  ![Save labelling configuration](images/save-configuration.png)
+
+## Task 3: Enable interactive pre-annotation (call the OCI OCR model)
+
+1. Connect to the OCI OCR model 
+- Navigate to the "model" sub section in the settings tab 
+- Click on connect model 
+  ![Connect model](images/connect-model.png)
+
+- Copy and paste the URL of the server that the OCI model is running on and use it to fill in the required fields in the create model pop up window 
+  ![Link to model](images/url-connect-model.png)
+
+- Once connected, Label Studio will automatically send each uploaded document to the OCI OCR service and display the predicted bounding boxes as pre-annotations (refer ***** the first section where we setup and ran oci session authenticate)
+- Annotators can review, modify, or accept the pre-annotated results interactively. 
+
+
+## Acknowledgements
+* **Authors** 
+    - Cristina Granés, AI cloud services Black Belt
+    - David Attia, AI cloud services Black Belt
+* **Last Updated Date** - <08/2025>

@@ -1,0 +1,5 @@
+label-studio==1.19.0 
+pdf2image==1.17.0 
+oci==2.155.2 
+dotenv== 0.9.9 
+numpy<2 
