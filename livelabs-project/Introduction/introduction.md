@@ -1,36 +1,37 @@
-# Generating tasks list for labeling PDF files
+# Create custom models using OCI Document Understanding and Label Studio
 
-## Introduction 
-In machine learning, data labeling is the process of identifying and tagging raw data—such as images, text, or video—with meaningful labels that help models learn. These labels act as the "answers" or "ground truth" during training, allowing the model to learn how to recognize patterns or make predictions.
+## Introduction
 
-In this workshop we will walk you through the process of using Label Studio to label data to be then used to train custom AI models within OCI.
+Document Understanding is a serverless, multi-tenant service, accessible using the Console, REST APIs, SDK, or CLI. You can upload documents and images to extract text, key values, tables or elements, and classify them. Document Understanding service also allows to train custom models for key-value extraction and classification of documents.
 
-Note: If you face any issues during setup and installation, please refer to the 'common issues' section towards the end.
+Label Studio is an open-source labelling tool commonly used by data scientists and annotators within the AI community, to prepare datasets to train various types of models. You will see an example on how to use Label Studio to create a dataset for a custom AI model in Document Understanding, in specific for Key-Value extraction of invoices.
 
-***Estimated Lab Time*** 90 minutes
+You will find official documentation about how to use Label Studio [here](https://docs.oracle.com/en-us/iaas/Content/document-understanding/using/label-studio-top.htm).
+
+_Note: If you face any issues during setup and installation, please refer to the 'common issues' section._
+
+***Estimated Lab Time*** 120 minutes
 
 
 ### Objectives:
-In this workshop you will learn how to: 
-* Install and run Label studio.
-* Convert PDF documents into a format supported by Label Studio to enable labeling
+In this workshop you will learn how to:
+* Create a dataset from PDF documents in Label Studio for Key-Value extraction
 * Setup OCI OCR backend for pre-annotation
-* Export labelled files from Label Studio
-* Create a bucket in OCI and upload the labelled files to it.
-* Train a custom model on this data
+* Train a custom Key-Value model in OCI Document Understanding with this dataset
 
 
-### Prerequisites (Optional)
+### Prerequisites
 * An Oracle Free Tier, or Paid Cloud Account
-* Additional prerequisites (cloud services) are mentioned per lab
-* Familiar with OCI Policy and SDK/CLI setup.
-* Familiar with Python/Java programming for SDK usage is strongly recommended.
+* Familiarity with Python
+* Some familiarity with OCI policies and CLI is desirable
+* Some familiarity with OCI SDK is desirable, but not required
 
 
-You may now **proceed to the next lab**
+You may now **proceed to the next section**
 
 ## Acknowledgements
 * **Authors** 
-    - Cristina Granés, AI cloud services Black Belt
-    - David Attia, AI cloud services Black Belt
-* **Last Updated Date** - <08/2025>
+    - Cristina Granes - AI Cloud Services Black Belt
+    - David Attia - AI Cloud Services Black Belt
+* **Last Updated By/Date** 
+    - Cristina Granes - AI Cloud Services Black Belt, August 2025
