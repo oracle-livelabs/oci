@@ -20,6 +20,11 @@
             "filename": "../../provisioning/provisioning.md"
         },
         {
+            "title": "Lab 2: Patch a Oracle Fusion Middleware Deployment Using FAM",
+            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+            "filename": "../../patching/patching.md"
+        },
+        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"

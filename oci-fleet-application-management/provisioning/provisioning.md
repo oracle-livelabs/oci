@@ -191,10 +191,10 @@ A Fleet in Fleet Application Management is a logical group used to manage and mo
 
 ## Learn More
 
+* [Learn About Fleet Application Management](https://docs.oracle.com/en-us/iaas/Content/fleet-management/home.htm)
 * [Provisioning Resources Using Fleet Application Management](https://docs.oracle.com/en-us/iaas/Content/fleet-management/provision-resources.htm)
 
 ## Acknowledgements
 
 * **Author** - Bhumika Bhagia, Senior Member of Technical Staff, OCI
 * **Last Updated By/Date** - Bhumika Bhagia, August 2025
-
