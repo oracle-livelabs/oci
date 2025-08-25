@@ -1,4 +1,4 @@
-# Setup and install Label Studio
+# Setup Label Studio
 
 ## Introduction
 
@@ -25,7 +25,7 @@ Since your files are stored locally, you need to export the following environmen
 </br>
 Reference link: https://labelstud.io/guide/start#Set-environment-variables 
 
-1. Run the following commands in your terminal to enable local file serving on Mac:
+1. Run the following commands in your terminal to enable local file serving **on Mac**:
 
     ```
     <copy>
@@ -34,7 +34,7 @@ Reference link: https://labelstud.io/guide/start#Set-environment-variables
 
     ```
 
-2. Run the following commands in your terminal to enable local file serving on Windows
+2. Run the following commands in your terminal to enable local file serving **on Windows**
 
     ```
     <copy>
@@ -132,6 +132,7 @@ Reference: https://labelstud.io/guide/setup_project
 
 ## Acknowledgements
 * **Authors** 
-    - Cristina Granés, AI cloud services Black Belt
-    - David Attia, AI cloud services Black Belt
-* **Last Updated Date** - <08/2025>
+    - Cristina Granes, AI Cloud Services Black Belt
+    - David Attia, AI Cloud Services Black Belt
+* **Last Updated By/Date** 
+    - David Attia - AI Cloud Services Black Belt, August 2025

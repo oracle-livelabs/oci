@@ -73,6 +73,7 @@ This lab assumes you have:
 
 ## Acknowledgements
 * **Authors** 
-    - Cristina Granés, AI cloud services Black Belt
-    - David Attia, AI cloud services Black Belt
-* **Last Updated By/Date** - <Name, Month Year>
+    - Cristina Granes, AI Cloud Services Black Belt
+    - David Attia, AI Cloud Services Black Belt
+* **Last Updated By/Date** 
+    - David Attia - AI Cloud Services Black Belt, August 2025

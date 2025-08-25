@@ -1,7 +1,7 @@
-# Generating tasks list for labeling PDF files
+# Download and install Label Studio and dependencies
 
 ## Introduction
-In this session we will focus on setting up the environment and downloading the dependencies needed in order to get Label studio running on your machine.
+In this session we will focus on setting up the environment and downloading the dependencies needed in order to get Label Studio running on your machine.
 
 ***Estimated Lab Time*** 10 minutes
 
@@ -9,16 +9,18 @@ In this session we will focus on setting up the environment and downloading the 
 ### Objectives:
 
 In this lab, you will:
-* Download and setup Label Studio with the dependencies needed
+* Download Label Studio
+* Setup Label Studio and the dependencies needed
+* Setup OCI CLI Authentification
 
-### Prerequisites (Optional)
+### Prerequisites
 
 This lab assumes you have:
 * Basic scripting skills in Python and Bash
 
 ## Task 1: Installation steps/Get started
 
-Install Python 3.11.13 in your computer. If you have a newer version of Python, create a new virtual environment with the version 3.11.3. 
+Install Python 3.11.13 in your computer. If you have a newer version of Python, create a new virtual environment with the version 3.11.3.
 
 1. 
 
@@ -57,6 +59,7 @@ There are multiple ways to generate the session, they are explained in this [gui
 
 ## Acknowledgements
 * **Authors** 
-    - Cristina Granés, AI cloud services Black Belt
-    - David Attia, AI cloud services Black Belt
-* **Last Updated Date** - <08/2025>
+    - Cristina Granes - AI Cloud Services Black Belt
+    - David Attia - AI Cloud Services Black Belt
+* **Last Updated By/Date** 
+    - David Attia - AI Cloud Services Black Belt, August 2025
