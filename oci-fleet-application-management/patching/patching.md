@@ -6,7 +6,7 @@ This lab guides you through automating the patch management process for an Oracl
 
 Before you initiate patching, Fleet Application Management runs a series of preparation steps to ensure your resources and products are ready for automation:
 
-* Validation: Makes sure the FAMS plugin is active on each managed instance. If it isn’t enabled, FAMS automatically starts it, ensuring the instance is ready for fleet management operations.
+* Validation: Makes sure the Fleet Application Management Service (FAMS) plugin is active on each managed instance. If it isn’t enabled, FAM automatically starts it, ensuring the instance is ready for fleet management operations.
 * Discovery: Automatically detects eligible targets such as Oracle HTTP Server (OHS), WebLogic Server and Java installations on each instance and adds them to the fleet for centralized management.
 * Compliance Evaluation: Checks each target’s patch status against its baseline and identifies any updates needed to keep resources secure and up to date.
 
@@ -16,7 +16,7 @@ Estimated Lab Time: 1 hour 30 minutes
 
 In this lab, you will:
 
-* Create a fleet for Oracle Fusion Middleware resources
+* Create fleet to manage Oracle Fusion Middleware resources
 * Fix compliance issues using Oracle-defined runbooks
 * Monitor patch execution logs
 
@@ -40,7 +40,7 @@ In this lab, you will:
 
 In this task, you will create a Fleet for centralized grouping and management of middleware resources such as Oracle HTTP Server (OHS) and WebLogic Server. Fleets enable you to easily organize related resources and initiate all lifecycle operations, such as compliance checks, patching, and monitoring, from a single, unified view.
 
-1. Navigate to **Fleets** under **Fleet Application Management**, select your assigned compartment, and then click **Create fleet**.
+1. Navigate to **Fleets** under **Fleet Application Management**, select your assigned compartment  (refer to the sandbox **Reservation Information** page), and then click **Create fleet**.
 
 	![fleet-listing](images/fleet-listing.png " ")
 
@@ -92,7 +92,7 @@ In the previous task, you created a fleet to manage your middleware resources. A
 
 	>Note: When the FAMS plugin is successfully enabled (which can take up to **10 minutes** to reflect), validation completes successfully. However, validation may occasionally fail if the plugin is not enabled on the target instance. In such cases, first retry validation. If the issue persists, enable the FAMS plugin manually from the Compute Instance details page (Management tab) and then retry validation.
 
-3. After *Validation* completes successfully, the *Discovery* of middleware targets begins. Click View Details to monitor the discovery process and review its logs.
+3. After *Validation* completes successfully, the *Discovery* of middleware targets begins. Click **View Details** to monitor the discovery process and review its logs.
 
 	![middleware-fleet-target-discovery](images/middleware-fleet-target-discovery.png " ")
 
