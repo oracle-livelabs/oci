@@ -4,7 +4,7 @@
 
 In this session we will import the data into Label Studio and start labelling it.
 
-***Estimated Lab Time*** 20 minutes
+***Estimated Lab Time*** 60 minutes
 
 
 ### Objectives:
