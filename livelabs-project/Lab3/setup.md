@@ -101,9 +101,18 @@ Reference: https://labelstud.io/guide/setup_project
             <Image name="page_{{idx}}" value="$pages[{{idx}}].page" inline="true"/>
               <Labels name="labels_{{idx}}" toName="page_{{idx}}" showInline="false">
                 <Label value="ignore" background="#FFA39E"/>
-                <Label value="Invoice_Number" background="#a59eff"/>
-                <Label value="Invoice_Date" background="#0dd377"/>
-                <Label value="Total" background="#ffdf6b"/>
+                <Label value="Invoice_Number" background="#A59EFF"/>
+                <Label value="Date" background="#0DD377"/>
+                <Label value="Due_Date" background="#F9A825"/>
+                <Label value="Supplier_Address" background="#4DD0E1"/>
+                <Label value="Client_Address" background="#BA68C8"/>
+                <Label value="VAT_Number" background="#FF7043"/>
+                <Label value="SubTotal" background="#AED581"/>
+                <Label value="Tax" background="#7986CB"/>
+                <Label value="Total" background="#FFB74D"/>
+                <Label value="Bank_Name" background="#81D4FA"/>
+                <Label value="IBAN" background="#E57373"/>
+                <Label value="SWIFT" background="#CE93D8"/>
               </Labels>
           </View>
           <Rectangle name="bbox_{{idx}}" smart="true" toName="page_{{idx}}" strokeWidth="3"/>
