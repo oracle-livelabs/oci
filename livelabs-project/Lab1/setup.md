@@ -123,7 +123,7 @@ Download [zip file](dataset/synthetic_dataset_invoices.zip), which contains the 
     python --version
     ```
 
-    If Python is properly installed, you will see the current version displayed (e.g., Python 3.11.13). If not, refer to the setup section [Link to the first section]("../Lab2/setup.md") ****Link to the first section***** to install Python on your machine.
+    If Python is properly installed, you will see the current version displayed (e.g., Python 3.11.13). If not, refer to the setup section [Link to the first section]("../Lab0/setup.md") to install Python on your machine.
 
 6. Run the following command to execute the script:
     ```
