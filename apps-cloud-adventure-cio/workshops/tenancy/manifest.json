@@ -23,17 +23,16 @@
             "filename": "../../04-extend-more/extend-more.md"
         }, 
         {
-            "title": "Lab 5: Extend with AI (RAG Agent)",
-            "filename": "../../05-integration/integration.md"
+            "title": "Lab 5: Extend with AI (HCM Benefits RAG Agent)",
+            "filename": "../../05b-rag-hcm/rag-hcm.md"
         }, 
-
         {
             "title": "Lab 6: Analytics",
             "filename": "../../06-analytics/analytics.md"
         }, 
         {
-            "title": "Lab 7: Test",
-            "filename": "../../07-test/test.md"
+            "title": "Lab 7b: Extend with AI (PRC RAG Agent)",
+            "filename": "../../07b-rag-prc/rag-prc.md"
         },
         {
             "title": "Need Help?",

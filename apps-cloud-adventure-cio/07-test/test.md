@@ -49,6 +49,8 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Analytics home](images/poaimage004.jpg)
 
+    ![Analytics home](images/)
+
 5. This action expands the Tile and opens the workbook.
 
     Let's now set the workbook to design mode so that we can add cost elements.
