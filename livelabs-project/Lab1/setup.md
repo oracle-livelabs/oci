@@ -48,11 +48,11 @@ In this task, we will be installing Poppler and that requires different steps de
   - Right-click on “This PC” (or “My Computer” in older versions of Windows) and select “Properties”.
   - In the System window, click on “Advanced system settings” in the left-hand pane.
   - In the System Properties window, click on the “Environment Variables” button at the bottom.
-  	![Environment variables screen on windows](images/environment_variables.png =50%x*)
+  	![Environment variables screen on windows](images/environment_variables.png =30%x*)
 
 4. Edit the PATH variable
   - In the Environment Variables window, under “System variables,” find the “Path” variable and select it.
-  ![Path variable under system variables screen on windows](images/edit_path.png =50%x*)
+  ![Path variable under system variables screen on windows](images/edit_path.png =30%x*)
   - Click the “Edit” button.
 
 5. Add the bin/ folder to the PATH:
@@ -95,7 +95,7 @@ Download [zip file](dataset/synthetic_dataset_invoices.zip), which contains the 
 
 1. We will convert the required PDF files into PNG format to ensure compatibility with Label Studio. Each PDF file will be split into its own folder, and each page within the PDF will be saved as a separate PNG image. If the conversion is not needed, only a json will be created. The resulting file structure is shown below for PDFs:
 
-	![Converted PDF file structure](images/folder_structure.png)
+	![Converted PDF file structure](images/folder_structure.png =40%x*)
 
 2. Download [this Python code](code/generate_LS_tasks.py) and open it in a code editor of your choice (i.e. VSCode)
 
@@ -144,4 +144,4 @@ At this point, you have successfully generated a task list that includes links t
     - Cristina Granes, AI Cloud Services Black Belt
     - David Attia, AI Cloud Services Black Belt
 * **Last Updated By/Date**  
-    - David Attia, AI Cloud Services Black Belt - August 2025
+    - Cristina Granes, AI Cloud Services Black Belt - August 2025
