@@ -1,6 +1,6 @@
 {
     "workshoptitle": "Centralize Cloud Operations and Automation with OCI Fleet Application Management",
-    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "help": "bhumika.v.bhagia@oracle.com",
     "variables": ["../../variables/variables.json",
         "../../variables/variables-in-another-file.json"],
     "tutorials": [
@@ -15,12 +15,12 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Provision Infrastructure Resources Using Fleet Application Management",
+            "title": "Lab 1: Provision Infrastructure Resources with Fleet Application Management",
             "description": "Labs that follow the introduction are numbered, starting with Lab 1",
             "filename": "../../provisioning/provisioning.md"
         },
         {
-            "title": "Lab 2: Patch a Oracle Fusion Middleware Deployment Using FAM",
+            "title": "Lab 2: Patch an Oracle Fusion Middleware Deployment with FAM",
             "description": "Labs that follow the introduction are numbered, starting with Lab 1",
             "filename": "../../patching/patching.md"
         },
