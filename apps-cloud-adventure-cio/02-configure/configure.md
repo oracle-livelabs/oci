@@ -135,7 +135,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 11. Now you will add a validation step for the Adjustment Percentage.  You do not want users to enter in a Salary Percentage Greater than 15%
 
-    > Click on **Validate Field Values**
+    > Click on **Configure Validations**
 
     ![Fields and Regions](images/image020.png)
 
@@ -247,19 +247,24 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Application Home Page](images/image101.png).
 
-    > Click on **Suppliers (New)** under **Quick Actions**.
+    > Click on **Show More**.
+    ![Show More](images/image102a.png)
+
+    > Click on **Suppliers (New)**.
 
     ![My Team Page](images/image102.png)
 
-    > Click on the **Supplier Type** to display the Filter and click into the Search box **Supplier Type**.
+    > (1) Click on the **Supplier Type** to display the Filter.<br>
+
+    > (2) Click into the Search box **Supplier Type**.
 
     ![My Team Page](images/image103.png)
 
-    > Click and select **Supplier (187)** to display list of suppliers.
+    > Click and select **Supplier** to display list of suppliers.
 
     ![My Team Page](images/image104.png)
 
-    > Click anywhere in the page away from the search filter **Supplier (187)**
+    > Click anywhere in the page away from the search filter **Supplier**
 
     ![My Team Page](images/image105.png)
 
@@ -373,14 +378,14 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 ![Validation 2](images/image120.png)
 
-15.  You need to select the search filter Supplier (187) again.
+15.  You need to select the search filter Supplier again.
 
-> Click and select **Supplier (187)** to display list of suppliers.
+> Click and select **Supplier** to display list of suppliers.
 
 ![Validation 4](images/image121.png)
 
 
->  Click anywhere in the page away from the search filter **Supplier (187)**
+>  Click anywhere in the page away from the search filter **Supplier**
 
  ![Change Salary Screen 2](images/image122.png)
 
