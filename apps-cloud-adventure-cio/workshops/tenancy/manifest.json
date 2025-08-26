@@ -31,7 +31,10 @@
             "title": "Lab 6: Analytics",
             "filename": "../../06-analytics/analytics.md"
         }, 
-
+        {
+            "title": "Lab 7: Test",
+            "filename": "../../07-test/test.md"
+        },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
