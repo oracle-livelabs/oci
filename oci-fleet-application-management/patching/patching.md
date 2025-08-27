@@ -6,7 +6,7 @@ This lab guides you through automating the patch management process for an Oracl
 
 Before you initiate patching, Fleet Application Management runs a series of preparation steps to ensure your resources and products are ready for automation:
 
-* Validation: Makes sure the Fleet Application Management Service (FAMS) plugin is active on each managed instance. If it isn’t enabled, FAM automatically starts it, ensuring the instance is ready for Fleet management operations.
+* Validation: Makes sure the Fleet Application Management plugin is active on each managed instance. If it isn’t enabled, FAM automatically starts it, ensuring the instance is ready for Fleet management operations.
 * Discovery: Automatically detects eligible targets such as Oracle HTTP Server (OHS), WebLogic Server and Java installations on each instance and adds them to the Fleet for centralized management.
 * Compliance Evaluation: Checks each target’s patch status against its baseline and identifies any updates needed to keep resources secure and up to date.
 
@@ -28,13 +28,13 @@ In this lab, you will:
 
 1. Login to OCI Console (see **Get Started** section). Open the **Navigation menu** (hamburger icon).
 
-    ![OCI navigation menu](images/navigation-menu.png " ")
+    ![OCI navigation menu](../provisioning/images/navigation-menu.png " ")
 
 2. Under **Observability & Management**, click **Fleet Application Management**.
 
-    ![Fleet Application Management navigation](images/fleet-application-management-navigation.png " ")
+    ![Fleet Application Management navigation](../provisioning/images/fleet-application-management-navigation.png " ")
 
-    ![Fleet Application Management overview](images/fleet-application-management-overview.png " ")
+    ![Fleet Application Management overview](../provisioning/images/fleet-application-management-overview.png " ")
 
 ## Task 2: Create Fleet to Manage Oracle Fusion Middleware resources
 
@@ -42,7 +42,7 @@ In this task, you will create a Fleet for centralized grouping and management of
 
 1. Navigate to **Fleets** under **Fleet Application Management**, select your assigned compartment  (refer to the sandbox **Reservation Information** page), and then click **Create fleet**.
 
-    ![Fleet listing page](images/fleet-listing.png " ")
+    ![Fleet listing page](../provisioning/images/fleet-listing.png " ")
 
 2. Enter a **Name** and ensure the **Create in Compartment** field shows your assigned compartment.
 
@@ -90,7 +90,7 @@ In the previous task, you created a Fleet to manage your middleware resources. A
 
     ![Resource validation step details](images/middleware-fleet-resource-validation-details.png " ")
 
-    >Note: When the FAMS plugin is successfully enabled (which can take up to **10 minutes** to reflect), validation completes successfully. However, validation may occasionally fail if the plugin is not enabled on the target instance. In such cases, first retry validation. If the issue persists, enable the FAMS plugin manually from the Compute Instance details page (Management tab) and then retry validation.
+    >Note: When the FAM plugin is successfully enabled (which can take up to **10 minutes** to reflect), validation completes successfully. However, validation may occasionally fail if the plugin is not enabled on the target instance. In such cases, first retry validation. If the issue persists, enable the FAM plugin manually from the Compute Instance details page (Management tab) and then retry validation.
 
 3. After *Validation* completes successfully, the *Discovery* of middleware targets begins. Click **View Details** to monitor the discovery process and review its logs.
 
