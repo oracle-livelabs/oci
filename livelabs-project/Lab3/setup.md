@@ -62,22 +62,22 @@ Reference link: https://labelstud.io/guide/start#Set-environment-variables
 1. Create New Project
 Reference: https://labelstud.io/guide/setup_project 
 
-  ![Create Project Image](images/create-project.png)
-  ![Save Project Image](images/save-project.png)
+  ![Create Project Image](images/create-project.png =70%x*)
+  ![Save Project Image](images/save-project.png =70%x*)
 
 
 2. Add source data storage
 - Add your local source storage by clicking on settings in the top right corner
-  ![Open project settings](images/settings-ls.png)
+  ![Open project settings](images/settings-ls.png =70%x*)
 - Navigate to Cloud Storage 
-  ![Open Cloud Storage](images/cloud-storage-ls.png)
+  ![Open Cloud Storage](images/cloud-storage-ls.png =70%x*)
 - Add source storage
-  ![Add source storage](images/source-storage.png)
+  ![Add source storage](images/source-storage.png =70%x*)
 - Add link to input pdfs in source storage 
-  ![Add link to input pdf files](images/input-pdf-path.png)
+  ![Add link to input pdf files](images/input-pdf-path.png =50%x*)
 - Repeat the same steps to add another source storage - the output images file. So your Source Cloud storage 
   are structured as follows
-  ![Local storage file structure](images/local-storage-files.png)
+  ![Local storage file structure](images/local-storage-files.png =70%x*)
 
   Reference: https://labelstud.io/guide/storage.html#Local-storage 
   </br>
@@ -87,10 +87,10 @@ Reference: https://labelstud.io/guide/setup_project
 3. Setup labelling config
 
 - Next, navigate to labelling interface 
-  ![Labelling interface](images/labeling-interface.png)
+  ![Labelling interface](images/labeling-interface.png =30%x*)
 
 - Navigate to the code template within the labelling interface
-  ![Labeling interface code](images/labelling-code.png)
+  ![Labeling interface code](images/labelling-code.png =70%x*)
 
 - Copy and paste the following labelling configuration into the code template
   
@@ -125,15 +125,15 @@ Reference: https://labelstud.io/guide/setup_project
 - Click on save to update the configuration
   ![Save labelling configuration](images/save-configuration.png)
 
-## Task 3: Enable interactive pre-annotation (call the OCI OCR model)
+## Task 4: Enable interactive pre-annotation (call the OCI OCR model)
 
 1. Connect to the OCI OCR model 
 - Navigate to the "model" sub section in the settings tab 
 - Click on connect model 
-  ![Connect model](images/connect-model.png)
+  ![Connect model](images/connect-model.png =70%x*)
 
 - Copy and paste the URL of the server that the OCI model is running on and use it to fill in the required fields in the create model pop up window 
-  ![Link to model](images/url-connect-model.png)
+  ![Link to model](images/url-connect-model.png =50%x*)
 
 - Once connected, Label Studio will automatically send each uploaded document to the OCI OCR service and display the predicted bounding boxes as pre-annotations (refer ***** the first section where we setup and ran oci session authenticate)
 - Annotators can review, modify, or accept the pre-annotated results interactively. 
