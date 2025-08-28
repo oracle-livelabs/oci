@@ -1,194 +1,92 @@
-# Setup and install Label Studio
+# Export dataset from Label Studio to OCI Object Storage
 
 ## Introduction
 
-This Lab will guide you through the process of setting up and runinng Label Studio on your machine.
+Now that you finished creating your dataset, you can now prepare it for OCI Document Understanding. The main objective is to prepare the dataset in OCI for it to be fed into Document Understanding (in Lab6).
 
-***Estimated Lab Time*** 20 minutes
+***Estimated Lab Time*** 10 minutes
 
 
 ### Objectives:
 
 In this lab, you will:
-* Export the JSON from Label Studio and generate the manifest script
+* Export the labels in JSON format from Label Studio
+* Create an OCI Object Storage Bucket
+* Generate the manifest script
+* Upload the JSON and files into the Cloud
 
-### Prerequisites (Optional)
+### Prerequisites
 
 This lab assumes you have:
 * All previous labs successfully completed.
 * Basic scripting skills in Python and Bash
 
-## Task 1: Generate manifest file for Custom Key-Value extraction model
+## Task 1: Create an OCI Bucket for Object Storage
 
-1. Export Annotations 
+We will start this Lab by creating a Bucket in the Cloud.
+1. Select one region between the ones where Document Understanding is available. (You can check for the available regions in the ![official documentation](https://docs.oracle.com/en-us/iaas/Content/document-understanding/using/getting_started.htm))
 
-    - Click on the export button 
-        ![Export Labels button](images/export_labels_button.png)
+2. Go to Storage &rarr; Bucket
+![Bucket button](images/bucket_link.png)
 
-    - Export the labels into JSON-MIN format as shown below
-        ![Export in JSON-MIN format](images/JSON_MIN%20format.png)
+3. Create a Bucket
+![Create bucket](images/create_bucket.png)
+![Name bucket](images/name_bucket.png)
 
+4. Copy the following variables that will be used in task 2: namespace and bucket name
+![Variables Bucket](images/name_namespace.png)
 
-2. 
-  Generate Manifest file
-  
-    - Paste the following code into a new .py file on your local machine. Reassign the variables towards the end (## test example) to match your data (paths and buckets)
-    
-        ```python
-        import json
-        def generate_manifest(
-            labels: list,
-            dataset_bucket: str,
-            dataset_namespace: str,
-            record_bucket: str,
-            record_namespace: str,
-            record_path: str,
-            output_path: str = "manifest.jsonl",
-            prefix: str = ""
-        ):
-            """
-            Generate a .jsonl file with a specified structure.
-            Parameters:
-            - labels: list of label names (e.g., ["Invoice_date", "Invoice_Number"])
-            - dataset_bucket: bucket name for dataset source
-            - dataset_namespace: namespace for dataset source
-            - record_bucket: bucket name for record file
-            - record_namespace: namespace for record file
-            - record_path: path to record file (e.g., "records_image_ls.json")
-            - output_path: path to save .jsonl file
-            """
-            json_obj = {
-                "id": "dummy",
-                "compartmentId": "dummy",
-                "displayName": "training_data",
-                "labelsSet": [{"name": label} for label in labels],
-                "annotationFormat": "KEY_VALUE",
-                "datasetSourceDetails": {
-                    "namespace": dataset_namespace,
-                    "bucket": dataset_bucket,
-                    "prefix": prefix
-                },
-                "datasetFormatDetails": {
-                    "formatType": "DOCUMENT"
-                },
-                "recordFiles": [
-                    {
-                        "namespace": record_namespace,
-                        "bucket": record_bucket,
-                        "path": record_path
-                    }
-                ]
-            }
-            with open(output_path, "w") as f:
-                f.write(json.dumps(json_obj) + "\n")
-            print(f"JSONL file written to {output_path}")
-        ## Test Example
-        labels = ["Invoice_date", "Invoice_Number"] # Be careful, it's case sensitive
-        generate_manifest(
-            labels=labels,
-            dataset_bucket="raushan_bucket",
-            dataset_namespace="axylfvgphoea",
-            record_bucket="raushan_bucket",
-            record_namespace="axylfvgphoea",
-            record_path="test_ls_integration/records_converted_kv.json",
-            output_path="manifest.jsonl", # extension should be .jsonl 
-            prefix="test_ls_integration/" #prefix always ends with /
-        )
+## Task 2: Export Annotations from Label Studio
 
+To export the annotations:
 
-        ```
-  
-3.
-Upload your manifest file, record file and image/pdf documents in the bucket and path defined in the manifest. 
-
-
-## Task 2: Generate manifest file for Custom Document Classification model
-
-1. 
-Export Annotations 
-
-    - Click on the export button 
+1. Click on the export button 
     ![Export Labels button](images/export_labels_button.png)
 
-    - Export the labels into JSON format as shown below
-    ![Export in JSON-MIN format](images/JSON_format.png)
+2. Export the labels into JSON-MIN format as shown below
+    ![Export in JSON-MIN format](images/JSON_MIN%20format.png =40%x*)
 
-3. 
-    Generate manifest file
-    - Paste the following code into a new .py file on your local machine. 
+3. Move the exported json file to the dataset folder and rename it to `exported_records.json` (i.e. into datasets/exported_records.json)
 
-        ```
-        import json
-        
-        def generate_manifest(
-            labels: list,
-            dataset_bucket: str,
-            dataset_namespace: str,
-            record_bucket: str,
-            record_namespace: str,
-            record_path: str,
-            output_path: str = "manifest.jsonl",
-            prefix: str = ""
-        ):
-            """
-            Generate a .jsonl file with a specified structure.
-            
-            Parameters:
-            - labels: list of label names (e.g., ["Invoice_date", "Invoice_Number"])
-            - dataset_bucket: bucket name for dataset source
-            - dataset_namespace: namespace for dataset source
-            - record_bucket: bucket name for record file
-            - record_namespace: namespace for record file
-            - record_path: path to record file (e.g., "records_image_ls.json")
-            - output_path: path to save .jsonl file
-            """
-            json_obj = {
-                "id": "dummy",
-                "compartmentId": "dummy",
-                "displayName": "training_data",
-                "labelsSet": [{"name": label} for label in labels],
-                "annotationFormat": "KEY_VALUE",
-                "datasetSourceDetails": {
-                    "namespace": dataset_namespace,
-                    "bucket": dataset_bucket,
-                    "prefix": prefix
-                },
-                "datasetFormatDetails": {
-                    "formatType": "DOCUMENT"
-                },
-                "recordFiles": [
-                    {
-                        "namespace": record_namespace,
-                        "bucket": record_bucket,
-                        "path": record_path
-                    }
-                ]
-            }
-        
-            with open(output_path, "w") as f:
-                f.write(json.dumps(json_obj) + "\n")
-        
-            print(f"JSONL file written to {output_path}")
-        
-        
-        ## Test Example
-        labels = ["Invoice_date", "Invoice_Number"] # Be careful, it's case sensitive
-        generate_manifest(
-            labels=labels,
-            dataset_bucket="raushan_bucket",
-            dataset_namespace="axylfvgphoea",
-            record_bucket="raushan_bucket",
-            record_namespace="axylfvgphoea",
-            record_path="test_ls_integration/records_converted_kv.json",
-            output_path="manifest.jsonl", # extension should be .jsonl 
-            prefix="test_ls_integration/" #prefix always ends with /
-        )
 
-        ```  
+## Task 3: Generate manifest file for Custom Key-Value extraction model
+   
+1. Download [this Python code](code/generate_manifest_kv.py) and open it in a code editor of your choice (i.e. VSCode)
+
+2. Reassign the variables towards the end to match your data (paths and buckets)
+    - (optional) `labels`: the code should contain the same labels you used during tagging. ONLY change this variable if you added more apart from the ones in this LiveLab.
+    - `dataset_bucket`: the bucket name of the one you created in Task 1
+    - `dataset_namespace`: the namespace of the bucket you created in Task 1
+    - `record_bucket`: same as `dataset_bucket`
+    - `record_namespace`: same as `dataset_namespace`
+    - `record_path`: path to the json file you exported from Label Studio (i.e. datasets/exported_records.json)
+    - (optional) `output_path`: you can change the folder and name of the manifest jsonl that will be created by this python code
+    - `prefix`: document root directory**, ending with `/`
+    ![Variables Example](images/manifest_variables_example.png)
+
+3. Run the code, it will produce the manifest jsonl file named `output_path`
+
+** **Note:** The local `document_root` directory maps to `bucket_name/prefix` on the Cloud. Maintain the same folder structure as in the local storage. The training pipeline expects this structure and relies on it to find the files correctly.
+
+## Task 4: Upload dataset to the bucket
+Upload the manifest file, record file and pdf documents inside a folder to the bucket and path defined in the manifest.
+Make sure to maintain the same structure of the folders.
+
+To update files, click on the following button in the OCI Bucket that you created:
+![Upload button](images/upload_objects.png)
+
+- Upload the json files with the prefix `datasets/`
+![json upload](images/upload_json.png)
+- Upload the pdfs with the prefix `datasets/synthetic_dataset_invoices/`
+![pdfs upload](images/pdf_upload.png)
+
+In the end, you should have the following structure in the bucket:
+![Final Structure](images/final_upload.png)
 
 
 ## Acknowledgements
 * **Authors** 
-    - Cristina Granés, AI cloud services Black Belt
-    - David Attia, AI cloud services Black Belt
-* **Last Updated Date** - <08/2025>
+    - Cristina Granes, AI Cloud Services Black Belt
+    - David Attia, AI Cloud Services Black Belt
+* **Last Updated By/Date** 
+    - Cristina Granes - AI Cloud Services Black Belt, August 2025
