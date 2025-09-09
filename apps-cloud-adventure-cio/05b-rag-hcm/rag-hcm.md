@@ -30,14 +30,14 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 3. You’ve previously created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some worker agents.
 
-    > Click the ![Agent Teams](images/agentteams.jpg) button/tab at the bottom of the page
+    > 1. Click the ![Agent Teams](images/agentteams.jpg) button/tab at the bottom of the page
 
     ![Open tools](images/benimage003.jpg)
 
 
 4. Create an Agent Team.
 
-    > Click the ![add tool](images/plusadd.jpg) button to create a new Agent
+    > 1. Click the ![add tool](images/plusadd.jpg) button to create a new Agent
 
     ![Create Agent Team](images/benimage004.jpg)
 
@@ -87,7 +87,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 9. You can review the details of the agent before saving.
 
-    > Click the Add button ![Add Button](images/addb.jpg) on the bottom right of the screen.
+    > 1. Click the Add button ![Add Button](images/addb.jpg) on the bottom right of the screen.
 
     ![Add Tools Complete](images/benimage009.jpg) <br>
 
@@ -105,20 +105,20 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 11. You can review the details of the agent.
 
-    > Click the **Add** button ![Add Button](images/addb.jpg).
+    > 1. Click the **Add** button ![Add Button](images/addb.jpg).
 
     ![Add Tools Complete](images/benimage011.jpg) <br>
 
 12. Your Agent Team, with a Supervisory Agent and two Worker Agents is complete.  We can now hide the left Agents panel to see our full Agent Team..
 
-    > Click the **Agents** icon ![debug icon](images/agenticon.jpg) on the top left of the screen.  You can see that the left panel is now hidden and you can see the entire Agent Team
+    > 1. Click the **Agents** icon ![debug icon](images/agenticon.jpg) on the top left of the screen.  You can see that the left panel is now hidden and you can see the entire Agent Team
 
     ![start debug](images/benimage012.jpg) <br>
 
 
 13. Feel free to admire your newly created Agent Team. Time to test it and see how it responds to your requests.
 
-    > Click the **Debug** icon ![debug icon](images/debugarrow.jpg) on the top left of the screen.  It's the one that looks like the Play arrow.
+    > 1. Click the **Debug** icon ![debug icon](images/debugarrow.jpg) on the top left of the screen.  It's the one that looks like the Play arrow.
 
     ![start debug](images/benimage013.jpg) <br>
 
@@ -146,7 +146,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 17. The Agent reminds you that you need to provide start and end dates before the Agent can create the absence request.
 
-    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Start Date is 2025-08-28 End Date is 2025-08-29** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
+    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Start Date is 2025-08-28 End Date is 2025-08-29** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
 
     ![agent dialogue 3](images/benimage017.jpg) <br>
 
@@ -159,13 +159,13 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 19. Let’s go back to the homepage so we can confirm the creation of our absence.
 
-    > Click the Home  **Ask Oracle** icon ![up arrow icon](images/icon012_home.png) on the top right.
+    > 1. Click the Home  **Ask Oracle** icon ![up arrow icon](images/icon012_home.png) on the top right.
 
     ![agent dialogue 3](images/benimage019.jpg) <br>
 
 20. The agent has created your requisition and now we want to find it.
 
-    > In the Search field, type **existing absence** and select **Existing Absences - Me** from the resulting dropdown.
+    > 1. In the Search field, type **existing absence** and select **Existing Absences - Me** from the resulting dropdown.
 
     ![agent dialogue 3](images/benimage020.jpg) <br>
 
