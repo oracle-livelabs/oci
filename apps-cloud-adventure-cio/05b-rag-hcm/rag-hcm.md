@@ -23,7 +23,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 2. The first step is to navigate to AI Agent Studio.
 
-    > (1) Click on the **Tools** tab
+    > (1) Click on the **Tools** tab <br>
     > (2) Select the **AI Agent Studio** tile
 
     ![Navigate to AI Agent Studio](images/benimage002.jpg)
@@ -93,15 +93,15 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 10. You'll add one more worker agent.  First, you'll filter on something different.
 
- >  (1) Delete your previous Ask Oracle filter and enter **FMLA** in the Ask Oracle Filter and press the <enter> key or select **FMLA** from the resulting dropdown.<br><br>
+    >  (1) Delete your previous Ask Oracle filter and enter **FMLA** in the Ask Oracle Filter and press the <enter> key or select **FMLA** from the resulting dropdown.<br><br>
 
- >  ![Create Button](images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br><br>
+    >  ![Create Button](images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br><br>
 
- >  (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
+    >  (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
 
- >  (3) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
+    >  (3) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
 
-![Add Tool](images/benimage010.jpg)
+    ![Add Tool](images/benimage010.jpg)
 
 11. You can review the details of the agent.
 
