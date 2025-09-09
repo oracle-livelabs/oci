@@ -78,12 +78,9 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 8. Next you'll add some worker agents.  You can scroll through the list of available tools, or use the Ask Oracle field to filter the results.  You'll do the latter.
 
-    >  (1)  Enter **XX**, where XX is replaced with your user number, in the Ask Oracle field and press the **<enter>** key or select **XX** from the resulting dropdown.
-
-    >  (2)  Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.
-
-            Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CIOXX Benefits Advisor Agent**, where XX is replaced with your user number.
-
+    >  (1)  Enter **XX**, where XX is replaced with your user number, in the Ask Oracle field and press the **<enter>** key or select **XX** from the resulting dropdown.<br>
+    >  (2)  Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br><br>
+            Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CIOXX Benefits Advisor Agent**, where XX is replaced with your user number.<br><br>
     >  (3)  Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CIOXX Benefits Advisor Agent**, where XX is replaced with your user number.
 
     ![Add Tool](images/benimage008.jpg)
