@@ -15,7 +15,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 
 
-## Create Policy Advisor Agent (RAG) and an Agent Team using AI Agent Studio
+## Assemble and Test an Agent Team using AI Agent Studio
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
 
@@ -93,13 +93,13 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 10. You'll add one more worker agent.  First, you'll filter on something different.
 
- >  (1)  1.	Delete your previous Ask Oracle filter and enter **FMLA** in the Ask Oracle Filter and press the <enter> key or select **FMLA** from the resulting dropdown.<br><br>
+ >  (1) Delete your previous Ask Oracle filter and enter **FMLA** in the Ask Oracle Filter and press the <enter> key or select **FMLA** from the resulting dropdown.<br><br>
 
-    >  (2)  Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br>
+ >  (2) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br>
 
     - Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
 
-    >  (3)  Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
+ >  (3) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
 
 ![Add Tool](images/benimage010.jpg)
 
