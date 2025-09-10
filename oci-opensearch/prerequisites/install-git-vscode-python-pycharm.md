@@ -2,106 +2,269 @@
 
 ## Introduction
 
-In this lab, you will focus on understanding the pre-requisites and setting up your tenancy for the subsequent creation of an OCI OpenSearch cluster.
+In this lab, your focus is to install some IDE in your local machine so you can download sample code and execute to access your cluster and perform task such as data ingestion, data exploratory analysis, semantic search, visual search, conversational search, integration with Langchain, etc.
 
 Estimated Time: 15 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Create a Compartment
-- Create a (user) Group
-- Create a Policy
-- Create a VCN with internet connectivity and add Security List rules
-- Create an OCI Compute instance in order to later access the OCI OpenSearch cluster Search API and Dashboards
+1. Install Python on macOS and Windows
+2. Install/verify `pip`
+3. Install PyCharm and Jupyter Notebook
+4. Install Visual Studio Code (VS Code)
+5. Create & activate a virtual environment (venv)
+6. Configure PyCharm to use your venv
 
-## Task 1: Compartment creation
+<br/><br/>
 
-In this task, you will create a dedicated compartment for this live lab, if you haven't done so beforehand.
+## Task 1: Install python 3
 
-1. Click the main menu icon to open the side menu.
-2. Click **Identity** and select **Compartments**.
-3. Provide *opensearch-livelab* as **Name**, a **Description** of your choice, and leave the root level as Parent.
-4. Click **Create Compartment**.
+There are several options for you to install python 3 on you local machine:
 
-   ![Creation of opensearch-livelab compartment](../images/image20.png)
+1. **On Mac:** using package installer:
+   - For MacOS: navigate to the [python](https://www.python.org/downloads/macos/) and select what python 3 version you want to install. You choose the latest stable release
+   - Click on the installer package for your version to download the package installer. e.g:  [install python 3.13.7](https://www.python.org/ftp/python/3.13.7/python-3.13.7-macos11.pkg)
+   - Open your Download folder, locate the the **.pkg** installer file you just downloaded and double click on it to launch the installer. Follow the instructions to install python 3 on your machine.
+   - Confirm install:
+      ```bash
+      python3 --version
+      pip3 --version
+      ```
+   > Tip: On macOS, Python runs as `python3` and `pip3` by default.
 
-## Task 2: User group creation
+<br/><br/>
 
-In this task, you will create a dedicated user group.
+2. **On Windows:**
+   - Download the latest **Python 3** installer for Windows:
+      - [Python Releases for Windows](https://www.python.org/getit/windows/)
+   - **Important:** Check **“Add Python to PATH”** during setup.
+   - Choose “Install Now” and finish.
+   - Confirm install (Command Prompt / PowerShell):
+      ```powershell
+      py --version
+      py -m pip --version
 
-1. Click the main menu icon to open the side menu.
-2. Click **Identity** and select **Groups**.
-3. Provide *opensearch-group* as **Name**, a **Description** of your choice.
-4. Click **Create**.
-5. Open the group you've created and click **Add User to Group**.
-6. Select your current user and click **Add**.
 
-   ![Creation of opensearch-group user group](../images/image21.png)
+<br/><br/>
 
-## Task 3: Policy setup
+## Task 2: Install `pip`
 
-In this task, you will create the required OCI IAM policy.
-
-1. Click the main menu icon to open the side menu.
-2. Click **Identity** and select **Policies**.
-3. Provide *opensearch-policy* as **Name**, a **Description** of your choice, and choose *opensearch-livelab* as compartment.
-4. Click **Show manual editor** and paste the content below in the editor.
-
-   ```html
-   <copy>Allow group opensearch-group to manage opensearch-family in compartment os_compartment
-   Allow group opensearch-group to manage subnets in compartment os_compartment
-   Allow group opensearch-group to manage vcns in compartment os_compartment
-   Allow service opensearch to manage vcns in compartment os_compartment
-   Allow service opensearch to manage vnics in compartment os_compartment
-   Allow service opensearch to use subnets in compartment os_compartment
-   Allow service opensearch to use network-security-groups in compartment os_compartment</copy>
-   ```
-
-   ![Creation of opensearch-policy policy](../images/image22.png)
-
-## Task 4: Networking setup
-
-In this task, you will create a VCN with a public subnet and a private subnet.
-
-1. Open the Oracle Cloud Console navigation menu.
-2. Click **Networking**. and then click **Virtual Cloud Networks**.
-3. Click **Start VCN Wizard**, and then click **Create VCN with Internet Connectivity**.  
-4. Provide *opensearch-vcn* as VCN Name and select *opensearch-livelab* as compartment.
-5. Leave the default values in the remaining fields, click **Next**, and then click **Create** 
-This action will automatically take you to the VCN details page.
-
-   ![VCN details page](../images/image23.png)
-
-6. While on the VCN details page, click **Security Lists** on the left side of the screen.
-7. Click **Security List for Private Subnet-opensearch-vcn**
-8. Click **Add Ingress rules**
-9. In **Source CIDR**, add *10.0.0.0/16*, in **Destination Port Range**, type *9200,5601* and click **Add**.
-
-   ![Default Security List for opensearch-vcn - creation view](../images/image5.png)
-
-   You should see the following as result.
-   ![Default Security List for opensearch-vcn - table view](../images/image0.png)
-
-## Task 5: Compute instance setup
-
-In this task, you will create an OCI Compute instance in the public subnet of the previously created VCN, in order to access the OpenSearch Search API and Dashboards, which are to be created in the private subnet of the same VCN.
-
-1. Open the Oracle Cloud Console navigation menu.
-2. Click **Compute**, and then click **Instances**.
-3. Click **Create instance**.
-4. Provide *opensearch-instance* as **Name**, and select *opensearch-livelab* as compartment.
-5. In the **Image and shape** area, use the default values.
-6. In the **Networking** area, select *opensearch-vcn* and *Public Subnet-opensearch-vcn*, for VCN and Subnet, respectively.
-7. In the **Add SSH keys area**, decide whether you want to use an existing SSH key, or generate a new SSH key. If you choose to generate a new SSH key, remember to download the private key. 
-8. Leave the remaining options with the default values and click **Create**.
-
-> **Note:** Remember to run the following command or an equivalent one, to give proper permissions to your key.
+Most modern Python installers include `pip`. If it’s missing, use one of the options below.
+1. Quick check
 ```bash
-<copy>chmod 600 <your_key></copy>
+# macOS/Linux
+python3 -m pip --version
+
+# Windows
+py -m pip --version
+```
+
+2. Ensure with built-in `ensurepip`
+```bash
+# macOS/Linux
+python3 -m ensurepip --upgrade
+
+# Windows
+py -m ensurepip --upgrade
+```
+
+3. Fallback: `get-pip.py`
+   - Download `get-pip.py`: https://bootstrap.pypa.io/get-pip.py
+   - Run:
+      ```bash
+      # macOS/Linux
+      python3 get-pip.py
+
+      # Windows
+      py get-pip.py
+      ```
+
+<br/><br/>
+
+## Task 3: Install PyCharm & Jupyter Notebook
+
+1. **PyCharm (IDE)**
+   - **Download:**  [Community (free) or Professional](https://www.jetbrains.com/pycharm/download/)
+   - **Install:** Run the installer and accept defaults.
+
+   **Optional:** Install via JetBrains Toolbox (auto-updates & easy management).
+   - Toolbox info: https://www.jetbrains.com/help/pycharm/installation-guide.html
+
+2. **Jupyter Notebook:**
+You can install Jupyter with `pip` (works great for this lab):
+
+```bash
+# macOS/Linux
+python3 -m pip install --upgrade pip
+python3 -m pip install notebook
+
+# Windows
+py -m pip install --upgrade pip
+py -m pip install notebook
+```
+
+Run it:
+```bash
+jupyter notebook
+
+# Or
+
+jupyter-notebook
+```
+It will open your browser at `http://localhost:8888`.
+
+
+<br/><br/>
+
+## Task 4: Install Visual Studio Code (VS Code)
+
+
+1.  **Download and Install:** [Visual Studio](https://code.visualstudio.com/download). Be sure to select the installer that corresponds to your computer architecture e.g **Intel Chip** or **Apple Silicon**
+2. **Install the Python extension (inside VS Code):**
+  - Open VS Code → **Extensions** (⇧⌘X on macOS / Ctrl+Shift+X on Windows)
+  - Search **“Python”** by Microsoft → **Install**
+  - (Optional) Reload when prompted
+
+Useful docs:
+- Python in VS Code: https://code.visualstudio.com/docs/languages/python
+
+
+
+<br/><br/>
+
+## Task 5: Create & Activate a Virtual Environment (venv)
+
+> A virtual environment keeps project dependencies isolated.
+
+### macOS / Linux
+```bash
+# 1) Navigate to your project folder
+cd ~/Users/<YOU>/<PATH-TO-PROJECT-FOLDER>>
+
+# 2) Create a venv named .venv
+python3 -m venv .venv
+
+# 3) Activate it
+source .venv/bin/activate
+
+# 4) Verify
+python --version
+pip --version
+```
+
+To **deactivate** later:
+```bash
+deactivate
+```
+
+### Windows (CMD or PowerShell)
+```powershell
+# 1) Navigate to your project folder
+cd C:\Users\<YOU>\projects\my-app
+
+# 2) Create a venv named .venv
+py -m venv .venv
+
+# 3) Activate it
+# PowerShell:
+.venv\Scripts\Activate.ps1
+# (If execution policy blocks it: Set-ExecutionPolicy -Scope CurrentUser RemoteSigned)
+
+# CMD:
+.venv\Scripts\activate.bat
+
+# 4) Verify
+python --version
+pip --version
+```
+
+> Tip: Use a `.venv` folder at the project root so common tools (PyCharm, VS Code) auto-detect it.
+
+
+
+
+
+
+<br/><br/>
+
+## Task 6: Configure PyCharm to Use Your Virtual Environment
+
+You can either **create the venv from PyCharm** or **point PyCharm to an existing venv**.
+
+1. **Create venv from PyCharm**
+   - Open your project in PyCharm.
+   - Go to **Settings/Preferences → Python | Interpreter**.
+   - Click the gear icon → **Add…** → **Add Local Interpreter**.
+   - Choose **Virtualenv Environment** → **New**.
+   - Verify **Location** (ideally `<project>/.venv`) → **OK**.
+   - PyCharm will index and use this interpreter.
+
+2. **Use an existing venv (recommended if you created `.venv` via CLI)**
+   - **Settings/Preferences → Python | Interpreter**.
+   - Gear icon → **Add…** → **Add Local Interpreter**.
+   - Select **Virtualenv Environment** → **Existing**.
+   - Browse to your interpreter:
+      - **macOS/Linux:** `<project>/.venv/bin/python`
+      - **Windows:** `<project>\.venv\Scripts\python.exe`
+   - **OK** to apply.
+
+
+
+3. **Quick Smoke Test**
+
+With your venv active (terminal or PyCharm), run:
+
+```bash
+python -c "import sys; print(sys.executable)"
+python -m pip install requests
+python -c "import requests; print('OK', requests.__version__)"
+```
+
+Expected: prints the venv’s Python path and `OK <version>`.
+
+---
+
+<br/><br/>
+
+## Handy Links (official)
+
+- Python downloads: https://www.python.org/downloads/
+- pip docs: https://pip.pypa.io/en/stable/installation/
+- venv docs: https://docs.python.org/3/library/venv.html
+- Jupyter install: https://jupyter.org/install
+- PyCharm download: https://www.jetbrains.com/pycharm/download/
+- Configure interpreter in PyCharm: https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html
+- VS Code download: https://code.visualstudio.com/download
+- Python in VS Code: https://code.visualstudio.com/docs/languages/python
+
+---
+
+<br/><br/>
+
+### Appendix: Common Commands Cheat-Sheet
+
+```bash
+# Create venv
+python3 -m venv .venv           # macOS/Linux
+py -m venv .venv                # Windows
+
+# Activate venv
+source .venv/bin/activate       # macOS/Linux
+.venv\Scripts\Activate.ps1    # Windows PowerShell
+.venv\Scripts\activate.bat    # Windows CMD
+
+# Upgrade pip
+python -m pip install --upgrade pip
+
+# Install Jupyter
+python -m pip install notebook
+
+# Run Jupyter
+jupyter notebook
 ```
 
 ## Acknowledgements
 
-* **Author** - Nuno Gonçalves
-* **Last Updated By/Date** - George Csaba, June 2024
+* **Author** - Landry Kezebou
+* **Last Updated By/Date** - Landry Kezebou, September 2025

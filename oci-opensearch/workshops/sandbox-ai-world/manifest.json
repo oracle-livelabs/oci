@@ -20,7 +20,7 @@
             "filename": "../../prerequisites/create-and-access-opensearch.md"
         },
         {
-            "title": "Lab 3: Ingest data and search (Optional)",
+            "title": "Lab 3: Install Python3, PyCharm, Notebook, VS Code, and Git (Optional)",
             "filename": "../../ingest-and-search/ingest-and-search.md"
         },
         {
