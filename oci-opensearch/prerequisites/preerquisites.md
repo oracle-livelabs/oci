@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, Your goal is to create an OCI Opensearch cluster.
+In this lab, Your goal is to create an OCI Opensearch cluster  and  access the opensearch dashboard.
 
 **-If using the LiveLab tenancy, please verify what resources are already auto-provisioned to save time and skip to the next Lab if all resources already available. Otherwise, follow instructions to only provision the missing resources.**
 
@@ -18,14 +18,14 @@ In this lab, you will learn how to:
 - Create a Policy
 - Create a VCN with internet connectivity and add Security List rules
 - Create an Opensearch Cluster
-- Create ssh key pair 
+- Create ssh key pair
 - Create an OCI Compute instance in order to later access the OCI OpenSearch cluster Search API and Dashboards
 
 ## Task 1: Compartment creation
 
 In this task, you will create a dedicated compartment for this live lab, if you haven't done so beforehand.
 
-1. Login to tenancy 
+1. Login to tenancy
 2. Click the main menu icon to open the side menu.
 3. Click **Identity & Security** and select **Compartments** under the **Indenty** Group. Alternatively, just type **compartment** in the side menu search bar and click on **Compartment** option that apears.
 4. Provide your compartment  **Name**, and **Description** in the respective fields, and select the root-parent.
@@ -36,13 +36,14 @@ In this task, you will create a dedicated compartment for this live lab, if you 
 
 
 <br /><br /><br />
+
 ## Task 2: User group creation
 
 In this task, you will create a dedicated user group.
 
 1. Click the main menu icon to open the side menu.
 2. Click **Identity & Security** and select **Domains** under the **Identity** Group.
-3. In the page the opens, click select and exiting Domain or Create a new one. 
+3. In the page the opens, click select and exiting Domain or Create a new one.
 4. Under this Domain, navigate to the **User Management** Tab and Click **Create** to start creating a new User Group
 5. Provide the **Name**, a **Description** of your choice.
 6. Open the group you've created and click **Add User to Group**.
@@ -55,6 +56,7 @@ In this task, you will create a dedicated user group.
 
 
 <br /><br /><br />
+
 ## Task 3: Policy setup
 
 In this task, you will create the required OCI IAM policy.
@@ -78,6 +80,7 @@ In this task, you will create the required OCI IAM policy.
 
 
 <br /><br /><br />
+
 ## Task 4: Networking setup
 
 In this task, you will create a VCN with a public subnet and a private subnet.
@@ -104,7 +107,8 @@ This action will automatically take you to the VCN details page.
 
 
 <br /><br /><br />
-## Task 5: Create SSH-KEY Pair 
+
+## Task 5: Create SSH-KEY Pair
 In this task, you will create an ssh key pairs which you will need to create and access a compute instance from your local machine
 
 1. On MAC
@@ -113,7 +117,7 @@ In this task, you will create an ssh key pairs which you will need to create and
             ssh-keygen -b 2048 -t rsa
             ```
          ![Generate ssh key pair](images/generate-ssh-key.png)
-      2. Verify that the key has been generated 
+      2. Verify that the key has been generated
             ```
             cd .ssh
             ls
@@ -125,12 +129,12 @@ In this task, you will create an ssh key pairs which you will need to create and
 
 2. On Windows:
     Click on this link for a more comprehensive and detailed instruction on how to [configure ssh-key pair for both Windows and Mac computers](https://docs.oracle.com/en/learn/generate_ssh_keys/index.html#option-2--macos)
-    
 
 
 
 <br /><br /><br />
-## Task 5: Compute instance setup
+
+## Task 6: Compute instance setup
 
 In this task, you will create an OCI Compute instance in the public subnet of the previously created VCN, in order to access the OpenSearch Search API and Dashboards, which are to be created in the private subnet of the same VCN.
 
@@ -151,7 +155,7 @@ In this task, you will create an OCI Compute instance in the public subnet of th
 
 > **Note:** If you run into permission issue Remember to run the following command or an equivalent one, to give proper permissions to your key.
 ```bash
-chmod 600 ~/.ssh/id_rsa.pub
+chmod 600 ~/.ssh/id_rsa
 ```
 
 
@@ -160,9 +164,13 @@ chmod 600 ~/.ssh/id_rsa.pub
       - Navigate to your newly created compute instance and copy the public IP address
       - Open a terminal window and run the command below:
       ```
-      ssh opc@YOU_INSTANCE_PUBLIC_IP —i ~/.ssh/id_rsa.pub
+      ssh opc@YOU_INSTANCE_PUBLIC_IP —i ~/.ssh/id_rsa
       ```
 
+
+
+
+<br /><br /><br />
 ## Acknowledgements
 
 * **Author** - Landry Kezebou
