@@ -24,8 +24,8 @@
             "filename": "../../ingest-and-search/ingest-and-search.md"
         },
         {
-            "title": "Lab 4: Visualize data with OpenSearch Dashboards",
-            "filename": "../../visualize/visualize.md"
+            "title": "Lab 4: Load and Visualize Opensearch Sample data with OpenSearch Dashboards",
+            "filename": "../../load-opensearch-sample-data/load-opensearch-data-samples.md"
         },
         {
             "title": "Lab 5: Keyword Search(BM25)",
