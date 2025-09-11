@@ -28,8 +28,8 @@
             "filename": "../../load-opensearch-sample-data/load-opensearch-data-samples.md"
         },
         {
-            "title": "Lab 5: Keyword Search(BM25)",
-            "filename": "../../keyword-search-bm25/keyword-search.md"
+            "title": "Lab 5: Register and Deploy Pretrained and Remote Embedding and LLM models, and Create Ingestion Pipelines",
+            "filename": "../../deploy-models-and-ingestion-pipeline/deploy-models-and-setup-ingestion-pipelines.md"
         },
         {
             "title": "Lab 6: Semantic Search",
