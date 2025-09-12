@@ -40,6 +40,7 @@ Open the labelling interface, you will notice the automatic text recognition has
 When opening one task, you will see the following tagging interface after loading and producing the OCR using the OCI backend OCR:
 ![Interface Overview](images/interface_before_tagging.png)
 
+Do not edit the rectangles (bounding boxes), since they have a prepared structure for OCI Document Understanding, and editting them would change the format.
 Each rectangle will be assigned, by default, to the label "ignore". When you click at one rectangle (bounding box) you can then select which is the label for that rectangle, as in the following steps:
 _**Tip:** You can use ctrl (or command for Mac) to select multiple rectagles and tag them at the same time._
 ![Step 1 tagging](images/example_tag1.png)
