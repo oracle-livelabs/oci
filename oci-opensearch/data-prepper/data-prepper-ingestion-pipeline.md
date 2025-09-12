@@ -109,21 +109,24 @@ A vault can contain several secrets.
 Repeat step 3 above to create a secret for your opensearch password.
 
 
-
+<br/><br/>
 
 ## Task 4:  Create The Data Prepper Pipeline
 
 1. Navigate to your opensearch cluster, scroll down and click on **pipelines** in the left side bar
 2. Click on Create Pipeline
 
-![Navigate to Vault](images/data-pepper-1.png)
+![Data Prepper](images/data-pepper-1.png)
 
-- Choose a name for your pipeline
-![Navigate to Vault](images/data-pepper-2.png)
+<br/>
+
+3. Choose a name for your pipeline
+
+![Data Prepper](images/data-prepper-2.png)
 
 
-3. Scroll down and Select **Pull**, then select **Object Storage**
-4. Copy & paste the following yaml config into the  **Pipeline YaML**
+4. Scroll down and Select **Pull**, then select **Object Storage**
+5. Copy & paste the following yaml config into the  **Pipeline YaML**
     field. Be sure to edit the config with the values for your object storage bucket name, namespace, opensearch_password secret OCID, opensearch_usernane OCID etc. Use the Object storage bucket where you will be uploading the documents to ingest.
 
 <br/>
@@ -169,12 +172,17 @@ simple-sample-pipeline:
         index: <YOUR-INDEX-NAME>
 ```
 
-5. Create a second pipeline with the same yaml config as above. Only change the index name and the folder name. The first folder e.g **knowledge_base** 
+> Note: Make sure to use the same KNN index you configured in the previous lab.
+
+5.  Scroll down to the **Source Coordination YAML** section and copy paste the yaml config below. Be sure to edit values for bucket-name and namespace . Note that this should be for the second bucket.
 
 
-    - Scroll down to the **Source Coordination YAML** section and copy paste the yaml config below. Be sure to edit values for bucket-name and namespace . Not e that this should be for the second bucket.
 
-![Navigate to Vault](images/data-pepper-3.png)
+6. Create a second pipeline with the same yaml config as above. Only change the index name and the folder name. You can use first folder e.g **knowledge_base** for folder name in the Knolwdege_base pipeline and **app-logs** in the app-logs pipeline
+
+
+
+![Data Preper](images/data-prepper-3.png)
     <br/>
 
 ```bash
@@ -190,16 +198,44 @@ source_coordination:
 ## Task 5: Add data into your Object Storage Bucket.
 
 1. Navigate to your first object storage bucket
-2. Click on **Actions** and click on **Create Folder** 
-3. Type a name for your folder but make sure it matches the folder name you used in the pipeline. 
+2. Click on **Actions** and click on **Create Folder**
+3. Type a name for your folder but make sure it matches the folder name you used in the pipeline.
+
+> For this Lab you should create a folder called **knowledge_base** and another called **app-logs**. Make sure to use these names in your pipeline yaml file above.
+
+![Data Preper](images/bucket-folder-1.png)
+
+4. Download the [ai_app_error_kb.json](files/ai-app-live-logs.json) and the [ai-app-live-logs.json](files/ai-app-live-logs.json)
+
+5. Navigate to the **knowledge_base** folder, Click on **Upload Objects**  then drag and drop the *ai_app_error_kb.json*. Click **Next** to upload the json file in the folder.
+
+6. Navigate to the **app-logs** folder, Click on **Upload Objects**  then drag and drop the *ai-app-live-logs.json*. Click **Next** to upload the json file in the folder.
+
+7. Uploading these documents into the should trigger data ingestion into the index configured with respective pipelines.
 
 
 
-## Task 6:  Verify that the pipeline is automatically pulling data from your bucket and Ingesting in into opensearch
+<br/><br/>
 
+## Task 6:  Verify that the pipeline is automatically pulling data from your bucket and Ingesting it into opensearch
 
+1. Login to your Opensearch cluster dashboard
+2. Navigate to the **Dev Tools**
+3. Run command below
 
+```bash
+GET <YOUR_INDEX_NAME>/_search
+{ "_source": {"excludes": ["chunk_embedding.knn","embedding"]},
+  "size": 1000,
+  "query": {
+    "match_all": {}
+  }
+}
+```
 
+You should a response like the following
+
+![data-prepper index search response](images/index-response.png)
 
 
 
