@@ -19,7 +19,7 @@ In this lab, you will:
 
 ## Prerequisite:
 This lab assumes that you already created the opensearch index in which you will like to dump your logs.
-To use the Data Prepper pipeline creation feature, you need to setup some required policies. 
+To use the Data Prepper pipeline creation feature, you need to setup some required policies.
 
 If you're a non-administrator in your tenancy, contact your tenancy administrators to grant these permissions to you. The administrator must update the following users permission to allow non-administrator users to manage and CRUD operations the pipelines
 
@@ -49,7 +49,7 @@ Allow group <group> to manage objects in compartment <compartment> WHERE ALL {re
 
 ## Task 2:  Create Object Storage buckets
 
-Data prepper support both the **Pull** and the **Push** functionalities to pull/stream data from various sources into the opensearch cluster, and stream data from opensearch to other sinks.  For the **Pull** we currently support mutiple data sources including  Object Storage Bucket, and Kafka. Whereas for the Push we support HTTP, and OpenTelemetry.
+Data prepper supports both the **Pull** and the **Push** functionalities to pull/stream data from various sources into the opensearch cluster, and stream data from opensearch to other sinks.  For the **Pull** we currently support multiple data sources including  Object Storage Bucket, and Kafka. Whereas for the Push we support HTTP, and OpenTelemetry.
 
 In this Lab, we will focus the **Pull** from Object Storage bucket to stream data into our Opensearch cluster.
 
@@ -63,7 +63,7 @@ You need to create 2 buckets, 1 for dumping your application data, and another w
 
 <br/>
 
-3. Enter your bucket name, in the Wizard, leave everthing else default, then click **Create Bucket**. This should create the Object Storage bucket.
+3. Enter your bucket name, in the Wizard, leave everything else default, then click **Create Bucket**. This should create the Object Storage bucket.
 
 ![Create Bucket](images/create-bucket-2.png)
 
@@ -71,6 +71,39 @@ You need to create 2 buckets, 1 for dumping your application data, and another w
 
 4. Open the Bucket you just created and navigate to the **Details** tab to view the bucket namespace and OCID
 ![Create Bucket](images/create-bucket-3.png)
+
+
+
+<br/><br/>
+
+## Task 3:  Create Vault and Vault Secrets
+The data prepper needs to access your cluster to stream data into your indices. When creating the pipeline, you must supply the Opensearch Credentials i.e Username and password.
+These credentials need to be encrypted for security purposes. This is where the OCI Vault comes in! A vault allows your to create master encryption key to encrypt and store all your credentials which can be used by several consuming applications without compromising on security.
+A vault can contain several secrets.
+
+1. Create a Vault to store your secret credentials
+2. Create a master encryption Key to be used to encrypt your secret credentials
+3. Create a username secret for your opensearch username name
+4. Create a passwrod secret for your opensearch password
+
+
+
+
+## Task 4:  Create The Data Prepper Pipeline
+
+
+
+
+## Task 5: Add data into your Object Storage Bucket
+
+
+
+## Task 6:  Verify that the pipeline is automatically pulling data from your bucket and Ingesting in into opensearch
+
+
+
+
+
 
 
 

@@ -32,11 +32,11 @@
             "filename": "../../deploy-models-and-ingestion-pipeline/deploy-models-and-setup-ingestion-pipelines.md"
         },
         {
-            "title": "Lab 6: Semantic Search",
-            "filename": "../../semantic-search/semantic-search.md"
+            "title": "Lab 6: Automate Log data streaming and ingestion using Data Prepper ",
+            "filename": "../../data-prepper/data-prepper-ingestion-pipeline.md"
         },
         {
-            "title": "Lab 7a: Conversational search Demo app",
+            "title": "Lab 7a: Semantic Search & Conversational search",
             "filename": "../../conversational-with-rag/conversational-with-rag-demo-stack.md"
         },
         {
