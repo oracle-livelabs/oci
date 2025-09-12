@@ -113,10 +113,85 @@ Repeat step 3 above to create a secret for your opensearch password.
 
 ## Task 4:  Create The Data Prepper Pipeline
 
+1. Navigate to your opensearch cluster, scroll down and click on **pipelines** in the left side bar
+2. Click on Create Pipeline
+
+![Navigate to Vault](images/data-pepper-1.png)
+
+- Choose a name for your pipeline
+![Navigate to Vault](images/data-pepper-2.png)
 
 
+3. Scroll down and Select **Pull**, then select **Object Storage**
+4. Copy & paste the following yaml config into the  **Pipeline YaML**
+    field. Be sure to edit the config with the values for your object storage bucket name, namespace, opensearch_password secret OCID, opensearch_usernane OCID etc. Use the Object storage bucket where you will be uploading the documents to ingest.
 
-## Task 5: Add data into your Object Storage Bucket
+<br/>
+
+```bash
+version: 2
+pipeline_configurations:
+  oci:
+    secrets:
+      opensearch-username:
+        secret_id: <YOUR-OPENSERACH-USERNAME-SECRET-OCID>
+      opensearch-password:
+        secret_id: <YOUR-OPENSEARCH-PASSWORD-SECRET-OCID>
+simple-sample-pipeline:
+  source:
+    oci-object:
+      codec:
+        newline:
+      acknowledgments: true
+      compression: none
+      scan:
+        scheduling:
+          interval: "PT30S"
+        buckets:
+          - bucket:
+              namespace: <YOUR-FIRST-BUCKET-NAMESPACE>
+              name: <YOUR-FIRST-BUCKET-NAME>
+              region: <REGION-KEY>
+              filter:
+                include_prefix: ["<YOUR-FOLDER1-NAME>"]
+  processor:
+    - rename_keys:
+        entries:
+        - from_key: "message"
+          to_key: "text"
+          overwrite_if_to_key_exists: true
+  sink:
+    - opensearch:
+        hosts: [ <YOUR-OPENSEARCH-OCID> ]
+        username: ${{oci_secrets:opensearch-username}}
+        password: ${{oci_secrets:opensearch-password}}
+        insecure: false
+        index: <YOUR-INDEX-NAME>
+```
+
+5. Create a second pipeline with the same yaml config as above. Only change the index name and the folder name. The first folder e.g **knowledge_base** 
+
+
+    - Scroll down to the **Source Coordination YAML** section and copy paste the yaml config below. Be sure to edit values for bucket-name and namespace . Not e that this should be for the second bucket.
+
+![Navigate to Vault](images/data-pepper-3.png)
+    <br/>
+
+```bash
+source_coordination:
+  store:
+    oci-object-bucket:
+      name: <YOUR-SECOND-OBJECT-STORAGE-BUCKET>
+      namespace: <YOUR-BUCKET-NAMESPACE>
+```
+
+ <br/> <br/>
+
+## Task 5: Add data into your Object Storage Bucket.
+
+1. Navigate to your first object storage bucket
+2. Click on **Actions** and click on **Create Folder** 
+3. Type a name for your folder but make sure it matches the folder name you used in the pipeline. 
 
 
 
