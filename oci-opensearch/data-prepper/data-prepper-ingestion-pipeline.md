@@ -82,9 +82,31 @@ These credentials need to be encrypted for security purposes. This is where the 
 A vault can contain several secrets.
 
 1. Create a Vault to store your secret credentials
+    - Login to OCI console and navigate to **Vault** under **Key Management & Secret Management** service.
+    ![Navigate to Vault](images/vault-1.png)
+    - Click on **Create Vault**
+    - Enter a Vault name and Choose the compartment and Click **Create Vault**. Make sure to choose the same compartment the compartment where the resource you want to access lives.
+    ![Navigate to Vault](images/vault-2.png)
+
 2. Create a master encryption Key to be used to encrypt your secret credentials
+    - Open the Vault you just created and navigate to the  **Master Encryption Key File** and then click on **Create Key**
+    ![Navigate to Vault](images/vault-3.png)
+
+    - Enter the a name for your master encryption key and click **Create Key**
+    ![Navigate to Vault](images/vault-4.png)
+
 3. Create a username secret for your opensearch username name
+    - Open the Vault you create and navigate to the **Seceret** Tab
+    - Click on **Create Secret** to open the Wizard
+    ![Navigate to Vault](images/secret-1.png)
+    - Enter a name for your secret e.g: *opensearch_username*.
+    - Select **Manual Secret Generation**
+    - Type the actual username (e.g: admin1) in the **Secret Content** field. do not surround it content with any quotes.
+    - Click **Create**
+    ![Navigate to Vault](images/secret-2.png)
+
 4. Create a passwrod secret for your opensearch password
+Repeat step 3 above to create a secret for your opensearch password.
 
 
 
