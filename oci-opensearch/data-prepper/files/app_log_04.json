@@ -1,0 +1,40 @@
+{
+  "type": "app_log",
+  "@timestamp": "2025-09-11T19:25:15Z",
+  "log_id": "33be3c7dfc1246edb6124e423fa4401a",
+  "service": {
+    "name": "reporting-service",
+    "version": "1.8.2"
+  },
+  "component": "serialization",
+  "level": "WARN",
+  "message": "GEN-1003: Timeout contacting dependent service from reporting-service.serialization after 1558ms",
+  "error_code": "GEN-1003",
+  "http": {
+    "method": "DELETE",
+    "status": 429
+  },
+  "metrics": {
+    "latency_ms": 1558,
+    "cpu_pct": 54.6
+  },
+  "kubernetes": {
+    "namespace": "prod-apps",
+    "pod": {
+      "name": "rep-96bfac"
+    },
+    "node": {
+      "name": "ip-10-0-68-252"
+    }
+  },
+  "trace": {
+    "id": "bda79e90ba31454b9233bede7f035a14",
+    "span_id": "f8d8320b6e1a4e1b"
+  },
+  "tags": [
+    "log",
+    "app",
+    "rca-demo",
+    "extra"
+  ]
+}
