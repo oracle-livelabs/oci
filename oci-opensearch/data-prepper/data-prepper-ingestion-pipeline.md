@@ -17,7 +17,7 @@ In this lab, you will:
 
 <br/><br/>
 
-## Prerequisite:
+## Task 1: Create Policies:
 This lab assumes that you already created the opensearch index in which you will like to dump your logs.
 To use the Data Prepper pipeline creation feature, you need to setup some required policies.
 
@@ -43,6 +43,8 @@ Allow group <group> to manage objects in compartment <compartment> WHERE ALL {re
 ```
 
 > Note: Visit Our Documentation for more information about [data prepper policy configuration](https://docs.oracle.com/en-us/iaas/Content/search-opensearch/Concepts/ociopensearchpipelines.htm#required-policies)
+
+
 
 
 <br/><br/>
@@ -71,6 +73,18 @@ You need to create 2 buckets, 1 for dumping your application data, and another w
 
 4. Open the Bucket you just created and navigate to the **Details** tab to view the bucket namespace and OCID
 ![Create Bucket](images/create-bucket-3.png)
+
+<br/>
+
+5. Create 2 folders to the 2 pipelines we are going to be creating in the next task.
+
+    - Navigate to your first object storage bucket
+    - Click on **Actions** and click on **Create Folder**
+    - Type a name for your folder but make sure it matches the folder name you used in the pipeline.
+
+    > For this Lab you should create a folder called **knowledge_base** and another called **app-logs**. Make sure to use these names in your pipeline yaml file above.
+    ![Data Preper](images/create-bukect-folders.png)
+
 
 
 
@@ -111,7 +125,44 @@ Repeat step 3 above to create a secret for your opensearch password.
 
 <br/><br/>
 
-## Task 4:  Create The Data Prepper Pipeline
+## Task 4:  Create A KKN index to Stream data from the Data Prepper Pipeline into your cluster
+The Data Prepper requires you to specify an index into which data will be ingested. If you do not create an index, the pipeline will be default create an index with the name provided in the yaml config file. For this Lab and for our use case, we will be creating 2 pipelines, one to stream knowledge base for a given app, and another to stream logs generate by said app so we can perform Root Cause Analysis in the subsequent Labs.
+
+1. Create KNN index using the *chunking-pipeline* created in the previous lab. The index should be structured with automatic chunking to enable granular search.
+
+```bash
+PUT app_knowledge_base
+{
+  "settings": {
+    "index.knn": true,
+    "default_pipeline": "chunking-pipeline"
+  },
+  "mappings": {
+    "properties": {
+      "text": {
+        "type": "text"
+      },
+      "chunk_embedding": {
+        "type": "nested",
+        "properties": {
+          "knn": {
+            "type": "knn_vector",
+            "dimension": 384
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+Feel free to change the  index name . You also need to be sure that the *dimension* parameter matches that of the embedding model you deployed and used in the ingestion pipeline creation.
+For this Lab, we will be using the pre-trained **mini-L12** model deployed in the cluster.
+
+
+<br/><br/>
+
+## Task 5:  Create The Data Prepper Pipeline
 
 1. Navigate to your opensearch cluster, scroll down and click on **pipelines** in the left side bar
 2. Click on Create Pipeline
@@ -123,6 +174,7 @@ Repeat step 3 above to create a secret for your opensearch password.
 3. Choose a name for your pipeline
 
 ![Data Prepper](images/data-prepper-2.png)
+![Data Prepper](images/data-prepper-3.png)
 
 
 4. Scroll down and Select **Pull**, then select **Object Storage**
@@ -156,7 +208,7 @@ simple-sample-pipeline:
               name: <YOUR-FIRST-BUCKET-NAME>
               region: <REGION-KEY>
               filter:
-                include_prefix: ["<YOUR-FOLDER1-NAME>"]
+                include_prefix: ["knowledge_base"]
   processor:
     - rename_keys:
         entries:
@@ -169,21 +221,67 @@ simple-sample-pipeline:
         username: ${{oci_secrets:opensearch-username}}
         password: ${{oci_secrets:opensearch-password}}
         insecure: false
-        index: <YOUR-INDEX-NAME>
+        index: app_knowledge_base
 ```
 
-> Note: Make sure to use the same KNN index you configured in the previous lab.
+> Note: If you used a different index name in the previous step, make sure you use the same index name in the yaml config. 
 
 5.  Scroll down to the **Source Coordination YAML** section and copy paste the yaml config below. Be sure to edit values for bucket-name and namespace . Note that this should be for the second bucket.
 
+```bash
+source_coordination:
+  store:
+    oci-object-bucket:
+      name: <YOUR-SECOND-BUCKET-NAME>
+      namespace: <YOUR-SECOND-BUCKET-NAMESPACE>
+```
 
 
 6. Create a second pipeline with the same yaml config as above. Only change the index name and the folder name. You can use first folder e.g **knowledge_base** for folder name in the Knolwdege_base pipeline and **app-logs** in the app-logs pipeline
 
+```bash
+version: 2
+pipeline_configurations:
+  oci:
+    secrets:
+      opensearch-username:
+        secret_id: <YOUR-OPENSERACH-USERNAME-SECRET-OCID>
+      opensearch-password:
+        secret_id: <YOUR-OPENSEARCH-PASSWORD-SECRET-OCID>
+simple-sample-pipeline:
+  source:
+    oci-object:
+      codec:
+        newline:
+      acknowledgments: true
+      compression: none
+      scan:
+        scheduling:
+          interval: "PT30S"
+        buckets:
+          - bucket:
+              namespace: <YOUR-FIRST-BUCKET-NAMESPACE>
+              name: <YOUR-FIRST-BUCKET-NAME>
+              region: <REGION-KEY>
+              filter:
+                include_prefix: ["app-logs"]
+  processor:
+    - rename_keys:
+        entries:
+        - from_key: "message"
+          to_key: "text"
+          overwrite_if_to_key_exists: true
+  sink:
+    - opensearch:
+        hosts: [ <YOUR-OPENSEARCH-OCID> ]
+        username: ${{oci_secrets:opensearch-username}}
+        password: ${{oci_secrets:opensearch-password}}
+        insecure: false
+        index: app_live_logs
+```
 
 
-![Data Preper](images/data-prepper-3.png)
-    <br/>
+<br/>
 
 ```bash
 source_coordination:
@@ -195,19 +293,17 @@ source_coordination:
 
  <br/> <br/>
 
+ The pipeline will take about 20min to get provisioned. Once it is completed you can upload documents into your index to trigger the pipeline.
+
 ## Task 5: Add data into your Object Storage Bucket.
 
 1. Navigate to your first object storage bucket
-2. Click on **Actions** and click on **Create Folder**
-3. Type a name for your folder but make sure it matches the folder name you used in the pipeline.
-
-> For this Lab you should create a folder called **knowledge_base** and another called **app-logs**. Make sure to use these names in your pipeline yaml file above.
 
 ![Data Preper](images/bucket-folder-1.png)
 
-4. Download the [ai_app_error_kb.json](files/ai-app-live-logs.json) and the [ai-app-live-logs.json](files/ai-app-live-logs.json)
+4. Download the [ai_app_error_kb.json](files/ai_app_error_kb.json) and the [ai-app-live-logs.json](files/ai-app-live-logs.json)
 
-5. Navigate to the **knowledge_base** folder, Click on **Upload Objects**  then drag and drop the *ai_app_error_kb.json*. Click **Next** to upload the json file in the folder.
+5. Navigate to the **knowledge_base** folder, Click on **Upload Objects**  then drag and drop the *ai_app_error_kb.json*. Click **Next** to upload the json file in the folder. Then Click **Close** to return to the Folder.
 
 6. Navigate to the **app-logs** folder, Click on **Upload Objects**  then drag and drop the *ai-app-live-logs.json*. Click **Next** to upload the json file in the folder.
 
@@ -224,7 +320,7 @@ source_coordination:
 3. Run command below
 
 ```bash
-GET <YOUR_INDEX_NAME>/_search
+GET app_knowledge_base/_search
 { "_source": {"excludes": ["chunk_embedding.knn","embedding"]},
   "size": 1000,
   "query": {
@@ -238,6 +334,14 @@ You should a response like the following
 ![data-prepper index search response](images/index-response.png)
 
 
+If data is not getting pulled into your index, verify that the Data Prepper is done getting provisioned. You can also try deleting and re-uploading the documents into the respective folders to trigger the pipeline.
+Ideally the pipeline should be pulling the data at the frequency specified in the yaml config file. The command below indicates that the pipeline is scheduled to run every 30 Seconds.
+
+```bash
+scan:
+        scheduling:
+          interval: "PT30S"
+```
 
 
 ## Acknowledgements

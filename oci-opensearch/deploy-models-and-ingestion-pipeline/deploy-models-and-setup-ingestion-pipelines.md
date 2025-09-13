@@ -355,13 +355,14 @@ PUT _ingest/pipeline/simple-pipeline-name
       "text_embedding": {
         "model_id": "<model_ID>",
         "field_map": {
-           "text": "passage_embedding"
+           "text": "embedding"
         }
       }
     }
   ]
 }
 ```
+This will create a pipeline called *simple-pipeline-name*. For any KNN index using this pipeline, the pipeline will automatically generate vector embedding for the document's  **text** field and store the vector in a new field called **embeding** during ingestion.
 
 
 2. Create Ingestion pipeline for index with automated chunking:
@@ -396,8 +397,8 @@ PUT _ingest/pipeline/simple-pipeline-name
   ]
 }
 ```
-replace <model_ID> with either the pretrained modelId or the remote embedding modelID
-
+replace <model_ID> with either the pre-trained modelId or the remote embedding modelID
+This will create a pipeline called *chunking-pipeline* which you will use in the subsequent labs to create KNN index.
 
 
 ## Acknowledgements

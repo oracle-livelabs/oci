@@ -36,8 +36,8 @@
             "filename": "../../data-prepper/data-prepper-ingestion-pipeline.md"
         },
         {
-            "title": "Lab 7a: Semantic Search & Conversational search",
-            "filename": "../../conversational-with-rag/conversational-with-rag-demo-stack.md"
+            "title": "Lab 7: Semantic Search & Conversational search",
+            "filename": "../../semantic-search-and-rag/semantic-search-and-rag.md"
         },
         {
             "title": "Lab 7b: Conversational search DIY",
