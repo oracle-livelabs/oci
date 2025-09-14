@@ -40,15 +40,15 @@
             "filename": "../../semantic-search-and-rag/semantic-search-and-rag.md"
         },
         {
-            "title": "Lab 7b: Conversational search DIY",
-            "filename": "../../conversational-with-rag/conversational-with-rag.md"
+            "title": "Lab 8: AI Agents & Agent Tools",
+            "filename": "../../ai-agents/ai_agents.md"
         },
         {
-            "title": "Lab 8: Observability in OpenSearch",
+            "title": "Lab 9: Flow Agents FrameWork",
             "filename": "../../observability/observability.md"
         },
         {
-            "title": "Lab 9: SIEM in OpenSearch",
+            "title": "Lab 10: Perform Root Cause Analysis with Agentic Framework using MCP server",
             "filename": "../../siem/siem.md"
         },
         {
