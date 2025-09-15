@@ -8,172 +8,107 @@ AI Agent Studio for Fusion Applications is a comprehensive platform for creating
 
 ### **Objectives**
 
-In this activity you will use Oracle Fusion AI Agent Studio to
-* Create a Benefits Advisor Agent that leverages an existing Document Tool and its related Benefit Policy documents.
-* Create and assemble an Agent Team that includes the created Benefits Advisor Agent and an Absence Agent.
-* Test the Agent team 
+In this activity you will use enable your Agent Team in the application for use by end users.
+* Create a Guided Journey and Task, which will reference for Agent Team.
+* Configure the My Maintenance Work pave using Visual Builder Studio to reference your Guided Journey.
+* Use your Agent
 
 
 
-## Assemble and Test an Agent Team using AI Agent Studio
+## Create a Guided Journey and embed your Agent
 
-1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
+1. In this activity you will now embed your Agent with the application for use by end users.
 
-    ![AI RAG Objectives](images/extendwithairag.jpg)
+    ![AI Embed Objectives](images/scmimage001.jpg)
 
-2. The first step is to navigate to AI Agent Studio.
+2. The first step will involve created a Guided Journey.  A Guided Journey allows you to embed specific information in standard applications.  In addition to using a Guided Journey to embed a AI Agent (today's example), Guided Journeys can also embed documents, analytics, URLs, Learning, Videos and more.  And like all configurations, Guided Journey configurations are automatically maintained during the release update process.
 
-    > (1) Click on the **Tools** tab <br>
-    > (2) Select the **AI Agent Studio** tile
+    > (1) Enter **Guided Journey** in the search field<br>
+    > (2) Select the **Guided Journey** from the resulting dropdown.
 
-    ![Navigate to AI Agent Studio](images/benimage002.jpg)
+    ![Navigate to Guided Journeys](images/scmimage002.jpg)
 
-3. You’ve previously created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some worker agents.
+3. You'll create your Guided Journey here.  It's quite simple.
 
-    > 1. Click the ![Agent Teams](images/agentteams.jpg) button/tab at the bottom of the page
+    > 1. Click the ![Plus create button](images/plus-create.jpg) button.
 
-    ![Open tools](images/benimage003.jpg)
+    ![Open tools](images/scmimage003.jpg)
 
 
-4. Create an Agent Team.
+4. A Here, you just need to name it.
 
-    > 1. Click the ![add tool](images/plusadd.jpg) button to create a new Agent
+    > 1. Enter ![end journey name] **CIOXX Guided Journey** there **XX** is replaced with your user number.
+    > 2.  Click the ![create draft](images/create-draft.jpg) button.
 
-    ![Create Agent Team](images/benimage004.jpg)
+    ![Create Guided Journey Header](images/scmimage004.jpg)
 
-5. Define the Agent Team.
+5. Next, you'll add a Task to this Guided Journey.  This is where we specify a Task Type of Agent and reference the Maintenance Agent Team you've assembled.
 
-     > (1) Enter the fields as described below:
-     * Agent Team Name: **CIOXX Benefits Agent Team** where XX is replaced with your user number. <br>
-     * Family: Select **HCM** from the dropdown <br>
-     * Product: Select  **Benefits** from the dropdown <br>
-     * Maximum Interactions: **10** <br>
-     * Description: **This Agent Team leverages the Benefits Advisor Agent to respond to questions and the FMLA Absence Agent to view existing absences and submit a new FMLA absence request** <br>
+     > (1) Click the ![plus Add](images/plusadd.jpg) button under the **Tasks** section.  This will pop out the New Task panel from the right. <br><br>
 
-     > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
-     
-     ![Create Tool](images/benimage005.jpg)
+     > (2) Enter the fields as described below:
+     * Task Name: **Maintenance Guided Journey** <br>
+     * Task Description: **Maintenance Guided Journey Task** <br>
+     * Add Instructions: **Enables Maintenance Agent Team in Application UI**<br>
+     * Task Type:  **Agent** from the dropdown <br>
+     * Agent Type: **Workflow Agent** <br>
+     * Workflow Agent: **CIOXX Asset Maintenance Agent Team** where **XX** is your user number.<br>
 
+    > (3) Click the **Save** button ![Create Button](images/savedark.jpg) on the bottom right.
+     ![enter guided journey task information](images/scmimage005.jpg)
 
-6. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
 
-     > (1) Click the ![Agent Icon](images/agenticon.jpg) <br>
+6. You’re almost done with the Guided Journey creation.  The last step is to Activate it to make it available for use.
 
-     > (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **New Supervisor Agent**.
-     
-     ![Create Agent](images/benimage006.jpg)
+     > (1) Click the Activate button ![Activate button](images/activate.jpg) on the top right<br>
 
-7. Define Supervisor Agent Details.
+     > (2) Click the Home icon ![Home Button](images/home.jpg) in the top toolbar to return to the application home page and get ready for the next step.
 
-     > (1) Enter the fields as described below:
-    * Agent Team Name: **CIOXX Benefits Supervisor Agent** where XX is replaced with your user number.<br>
-    * Family: Select **HCM** from the dropdown<br>
-    * Product: Select  **Benefits** from the dropdown<br>
-    * Maximum Interactions: **10** <br>
-    * Description: **This agent supervises the Benefits Advisor and FMLA Absence agents** <br>
+     ![activate the journey and go home](images/scmimage006.jpg)
 
-     > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
+7. Now, you'll go to the screen where you want to embed the Agent.
 
-       ![Create Agent](images/benimage007.jpg)
+    > (1) Enter **My Maintenance Work** in the search field and select **My Maintenance Work** from the resulting dropdown.
 
-8. Next you'll add some worker agents.  You can scroll through the list of available tools, or use the Ask Oracle field to filter the results.  You'll do the latter.
+    ![search for my maintenance work](images/scmimage007.jpg)
 
-    >  (1)  Enter **XX**, where XX is replaced with your user number, in the Ask Oracle field and press the **<enter>** key or select **XX** from the resulting dropdown.<br><br>
-    >  ![Create Button](images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br><br>
-    >  (2)  Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CIOXX Benefits Advisor Agent**, where XX is replaced with your user number.<br><br>
-    >  (3)  Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CIOXX Benefits Advisor Agent**, where XX is replaced with your user number.
+8. You'll use Visual Builder to Edit the Page and enable the Guided Journey.
 
-    ![Add Tool](images/benimage008.jpg)
+    >  (1)  Click on the  **user picture** in the top right corner and then select **Edit Page in Visual Builder Studio** from the  resulting dropdown.<br>
 
-9. You can review the details of the agent before saving.
+    ![launch visual builder studio](images/scmimage008.jpg)
 
-    > 1. Click the Add button ![Add Button](images/addb.jpg) on the bottom right of the screen.
+9. You may see multiple projects available.  This allows you to use Visual Builder for various projects, each with their own team and development lifecycle.
 
-    ![Add Tools Complete](images/benimage009.jpg) <br>
+    > 1. If multiple projects are displayed, highlight the **Application Extensions** project and then click the Select button ![Select Button](images/select.jpg) on the bottom right of the screen.
 
-10. You'll add one more worker agent.  First, you'll filter on something different.
+    ![select project](images/scmimage009.jpg) <br>
 
-    >  (1) Delete your previous Ask Oracle filter and enter **FMLA** in the Ask Oracle Filter and press the <enter> key or select **FMLA** from the resulting dropdown.<br><br>
+10. You can now configure various aspects of the My Maintenance Work screen.  The Journey is simple as it's the first page property on the list. 
 
-    >  ![Create Button](images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br><br>
+    >  (1) Enter **CIOXX\_GUIDED\_JOURNEY** in the **journeycode** field on the right **Page Properties** panel.<br>
 
-    >  (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
+    >  (2) Click the **preview** icon ![Preview Button](images/preview.png) on the toolbar on the top right of teh page.  This will launch and new tab showing your newly configured screen in a full-functioning preview mode.<br>
 
-    >  (3) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
+    ![Configure Journey Property and Preview](images/scmimage010.jpg)
 
-    ![Add Tool](images/benimage010.jpg)
+11. You can see that the Guided Journey is displayed as an *Ask Oracle** banner.
 
-11. You can review the details of the agent.
+    > 1. Click the **Ask Oracle** button ![Ask Oracle Button](images/ask-oracle.jpg).
 
-    > 1. Click the **Add** button ![Add Button](images/addb.jpg).
+    ![Launch Ask Oracle](images/scmimage011.jpg) <br>
 
-    ![Add Tools Complete](images/benimage011.jpg) <br>
+12. The Agent appears in a panel pop-out from the right.  You can interact with your agent via the Ask Oracle field at the button of the pop-out panel.  Based on your defined agent, you can ask about Assets, Maintenance, Warranties and even have the Agent create a Maintenance Work Order for your asset.
 
-12. Your Agent Team, with a Supervisory Agent and two Worker Agents is complete.  We can now hide the left Agents panel to see our full Agent Team..
+    > 1. Interact with your agent via the **Ask Oracle**. 
 
-    > 1. Click the **Agents** icon ![debug icon](images/agenticon.jpg) on the top left of the screen.  You can see that the left panel is now hidden and you can see the entire Agent Team
+    ![start debug](images/scmimage012.jpg) <br>
 
-    ![start debug](images/benimage012.jpg) <br>
+13. Congratulations.  You've finished the creation and deployment of the Agent Team, making it easy for your users to leverage the power of Oracle AI capabilities.  ![checkered flag](images/checkeredflag.jpg)
 
+    
 
-13. Feel free to admire your newly created Agent Team. Time to test it and see how it responds to your requests.
-
-    > 1. Click the **Debug** icon ![debug icon](images/debugarrow.jpg) on the top left of the screen.  It's the one that looks like the Play arrow.
-
-    ![start debug](images/benimage013.jpg) <br>
-
-14. You can now begin a dialog with the Agent.  The Agent is now ready for your questions.
-
-    > 1. In the **Ask Oracle** dialog box at the bottom of the screen, type **Please summarize benefits available to me**and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg) 
-
-    ![agent dialogue 1](images/benimage014.jpg) <br>
-
-15. The Agent will respond with information.  In this Debug mode, the Agent will also show you source and processing information (yellow boxes).  These will not be available to end-users once deployed.
-
-    > The Agent responds with information, so we’ll ask an additional question.
-
-    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What about FMLA benefits** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
-
-    ![agent dialogue 2](images/benimage015.jpg) <br>
-
-16. The Agent  checks with HCM Cloud and confirms existing leave requests, if any.  It also offers to create a new request for you if you provide the requested start and end dates.
-
-    You decide to tell the Agent that you’re interested in creating an FMLA absence, but you do with without provided the requested dates.
-
-    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **I would like to create FMLA absence** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
-
-    ![agent dialogue 3](images/benimage016.jpg) <br>
-
-17. The Agent reminds you that you need to provide start and end dates before the Agent can create the absence request.
-
-    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Start Date is 2025-08-28 End Date is 2025-08-29** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
-
-    ![agent dialogue 3](images/benimage017.jpg) <br>
-
-18. The agent confirms that your request has been created.
-
-    > 1. Review Agent Response
-    > 2. Click the x icon in the upper right to close the debug screenIn the **Ask Oracle** dialog box on the bottom right of the screen, enter **Proceed with ordering a laptop** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
-
-    ![agent dialogue 3](images/benimage018.jpg) <br>
-
-19. Let’s go back to the homepage so we can confirm the creation of our absence.
-
-    > 1. Click the Home  **Ask Oracle** icon ![up arrow icon](images/icon012_home.png) on the top right.
-
-    ![agent dialogue 3](images/benimage019.jpg) <br>
-
-20. The agent has created your requisition and now we want to find it.
-
-    > 1. In the Search field, type **existing absence** and select **Existing Absences - Me** from the resulting dropdown.
-
-    ![agent dialogue 3](images/benimage020.jpg) <br>
-
-35. There it is!  ![up arrow icon](images/checkeredflag.jpg)
-
-    > ![agent dialogue 3](images/benimage021.jpg) <br>
-
-36. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+14. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
