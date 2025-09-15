@@ -23,8 +23,20 @@
             "filename": "../../04-extend-more/extend-more.md"
         }, 
         {
-            "title": "Lab 5: Extend with AI (HCM Benefits RAG Agent)",
-            "filename": "../../05b-rag-hcm/rag-hcm.md"
+            "title": "Lab 5a: Extend with AI (HCM Benefits RAG Aegnt)",
+            "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
+        }, 
+        {
+            "title": "Lab 5b: Extend with AI (HCM Benefits Agent Team)",
+            "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
+        }, 
+        {
+            "title": "Lab 6a: Extend with AI (SCM External Agent)",
+            "filename": "../../06a-external-agent-scm/external-agent-scm.md"
+        }, 
+        {
+            "title": "Lab 6b: Extend with AI (SCM Embed Agent)",
+            "filename": "../../06b-embed-agent-scm/embed-agent-scm.md"
         }, 
         {
             "title": "Lab 6: Analytics",
