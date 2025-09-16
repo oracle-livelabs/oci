@@ -584,10 +584,96 @@ Response:
 <br/><br/>
 
 ## Task 7:  Flow Agents
-The Agents that we have looked at so far have only each been endowned with a single tool only. However, Flow Agent is much more powerful than that!
+The Agents that we have looked at so far have only each been endowed with a single tool only. However, Flow Agent is much more powerful than that!
 A flow agent has the ability to run a sequence of Agent Tools to achieve the desired result.
-For example, we can create a flow agent tool that contains the [ListIndexTool, IndexMappingTool, SearchIndexTool, PPLTool, VectorDBTool, RAGTool]. With this configuration, when ever you execute the flow agent, it will use these tools in the sequence provided and return the answer from the last tool.  The workflow of a flow agent is fixed once defined, unless explicitly updated.
+For example, we can create a flow agent tool that has access to a set of tools e.g   **[ListIndexTool, IndexMappingTool, SearchIndexTool, PPLTool, VectorDBTool, RAGTool]**. Whenever you execute the flow agent, it will use these tools in the sequence provided and return the answer from the last tool.  The workflow of a flow agent is fixed once defined, unless explicitly updated.
 
+For example, we can combined the VectorDBTool and the MLModelTool to create a conversational flow agent
+
+1. Register the Conversational Flow Agent:
+```bash
+POST /_plugins/_ml/agents/_register
+{
+  "name": "App KB analysis Agent",
+  "type": "conversational_flow",
+  "description": "This is a demo agent Knowledge Base error analysis",
+  "app_type": "rag",
+  "memory": {
+    "type": "conversation_index"
+  },
+  "tools": [
+    {
+      "type": "VectorDBTool",
+      "parameters": {
+        "model_id": "-d2kFZkBwL_MpPtEZDes",
+        "index": "ai_app_knowledge_base_2",
+        "embedding_field": "chunk_embedding.knn",
+        "nested_path": "chunk_embedding",
+        "source_field": ["text", "text_chunk"],
+        "k": 10,
+        "doc_size": 3,
+        "input": "${parameters.question}"
+      }
+    },
+    {
+      "type": "MLModelTool",
+      "name": "bedrock_claude_model",
+      "description": "A general tool to answer any question",
+      "parameters": {
+        "model_id": "mt57RpkBwL_MpPtEXiNU",
+        "prompt": """
+
+Human:You are a professional data analyst. You will always answer question based on the given context first. If the answer is not directly shown in the context, you will analyze the data and find the answer. If you don't know the answer, just say don't know. 
+
+Context:
+${parameters.ai_app_knowledge_base_2.output:-}
+
+${parameters.chat_history:-}
+
+Human:${parameters.question}
+
+
+Your answer should be in the follow format:
+{
+  answer: final answer,
+  reasoning: What reasoning you used to derrive the answer,
+  evidence: the evidence from the contexts documents use to derive the final answer,
+  contexts: the context documents retrieve by the VectorDBTool,
+}
+Please format your response in plain text and add multiple lines between the answer, reasoning, evidence and contexts fields for easy readability in kibana.
+Assistant:"""
+      }
+    }
+  ]
+}
+
+```
+
+Response:
+
+```bash
+{
+  "agent_id": "dKdNS5kBs59-bmX6TNET"
+}
+```
+
+
+2. Execute the Agent:
+
+```bash
+POST /_plugins/_ml/agents/dKdNS5kBs59-bmX6TNET/_execute
+{
+  "parameters": {
+    "question": "how to resolve error_code: IO-0001"
+  }
+}
+```
+
+Response:
+
+```bash
+
+```
 
 
 <br/><br/>

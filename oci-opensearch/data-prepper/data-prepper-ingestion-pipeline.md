@@ -301,7 +301,7 @@ source_coordination:
 
 ![Data Preper](images/bucket-folder-1.png)
 
-4. Download the [ai_app_error_kb.json](files/ai_app_error_kb.json) and the [ai-app-live-logs.json](files/ai-app-live-logs.json)
+4. Download the [app_knowledge_based.json](files/app_knowledge_base.ndjson) and the [app-live-logs.json](files/app-live-logs.json). Optionally download the [sample-test-logs](files/sample_logs.ndjson)
 
 5. Navigate to the **knowledge_base** folder, Click on **Upload Objects**  then drag and drop the *ai_app_error_kb.json*. Click **Next** to upload the json file in the folder. Then Click **Close** to return to the Folder.
 
