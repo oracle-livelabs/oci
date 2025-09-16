@@ -64,8 +64,8 @@ Reference link: https://labelstud.io/guide/start#Set-environment-variables
 1. **Create New Project**
     Reference: https://labelstud.io/guide/setup_project 
 
-    ![Create Project Image](images/create-project.png =60%x*)
-    ![Save Project Image](images/save-project.png =60%x*)
+    ![Create Project Image](images/create-project.png =70%x*)
+    ![Save Project Image](images/save-project.png =70%x*)
 
 
 2. **Add source data storage**
@@ -91,7 +91,7 @@ Reference link: https://labelstud.io/guide/start#Set-environment-variables
     ![Labelling interface](images/labeling-interface.png =30%x*)
 
   - Navigate to the code template within the labelling interface
-    ![Labeling interface code](images/labelling-code.png =50%x*)
+    ![Labeling interface code](images/labelling-code.png =70%x*)
 
   - Copy and paste the following labelling configuration into the code template
     
@@ -137,7 +137,7 @@ Reference link: https://labelstud.io/guide/start#Set-environment-variables
   - Copy and paste the URL of the server that the OCI model is running on and use it to fill in the required fields in the create model pop up window 
     ![Link to model](images/url-connect-model.png =50%x*)
 
-  - Once connected, Label Studio will automatically send each uploaded document to the OCI OCR service and display the predicted bounding boxes as pre-annotations (refer ***** the first section where we setup and ran oci session authenticate)
+  - Once connected, Label Studio will automatically send each uploaded document to the OCI OCR service and display the predicted bounding boxes as   pre-annotations (refer ***** the first section where we setup and ran oci session authenticate)
   - Annotators can review, modify, or accept the pre-annotated results interactively. 
 
 
