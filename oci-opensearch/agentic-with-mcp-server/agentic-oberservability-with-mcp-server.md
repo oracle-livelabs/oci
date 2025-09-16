@@ -502,14 +502,158 @@ ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 -L 1
 
 <br/><br/>
 
-## Task 6: Perform Advanced Obervability on indices on your cluster
+## Task 6: Perform Advanced Observability on indices on your cluster you Agentic AI
+Now that you have have configured your MCP client (Cline) to talk to your OpenSearch MCP server, all exposed tools on your opensearch cluster are now discoverable by the Client which can use them in any order to plan, reflect and execute tasks using AI Agents.
+The main Agent orchestrators are the Plan and execute llm models defined on the client side.
+
+1. Click on the **+** icon on the Cline interface to start a new task/chat session.
+![install cline on VS Code](images/test-cline-0.png)
+
+<br/>
+
+
+2. Type your query and press Enter or Click send for the client to start working on your task.
+
+You can type in a question as plain as the following without specifying the indexname or what tool to use or even what model to use if it is a knn index.
+
+```bash
+ can you generate a comprehensive analysis of what are the most frequently ordered intems from my opensearch ecommerce index?
+```
+
+![install cline on VS Code](images/test-cline-1.png)
+
+
+
+3. The Agent Will **Plan, Reflect and Execute** the task:
+
+<br/>
+
+  - The client start by analyzing your query to understand the context
+  - Evaluate the list of tools to determine what tools to use for its next action. It most likely will start with the **ListIndexTool** and the **IndexMappingTool** to auto discover the relevant index to query and understand the structure of the index and how to formulate proper queries on that index to retrieve and processed data for the desired result or for the next steps
+  - Note that we did not even need to specify what index name or what data we want to query. The agent is able to understand the question and figure out what index to query and how to query it.
+  - Design and queries to query and analyze your data
+  - The agent can self correct if the query fails or throws an error.
+  - The agent can reflect at any step and re-plan the next sub-task accordingly.
+  - Be sure to approve or edit any action where the agent prompts you for human input or correction.
+
+<br/>
+
+![install cline on VS Code](images/test-cline-2.png)
+<br/>
+
+
+4. Once the agent completes execution of all self-planed sub-task? It will highlight the final output in green as shown in images below.
+
+![install cline on VS Code](images/test-cline-3.png)
+<br/>
+
+![install cline on VS Code](images/test-cline-4.png)
+<br/>
+
+![install cline on VS Code](images/test-cline-5.png)
+<br/>
+
+
+5. You can scroll back up to vew comprehensive step by step actions taken by the Agent to complete the task. See the [sample for Agent execution end-to-end flow](files/cline-output.json).
+<br/>
+
+
 
 
 
 <br/><br/>
 
-## Task 7: Perform RCA on your App which is streaming data from your bucket with data prepper pipeline
+## Task 7: Second Use Case of advance observability:
 
+1. Start a new chat and type in the following query or any other query:
+
+```bash
+Can you generate key oversavility insinght on my flight log data index? I want to know trips are planned, most common routes, busiest aairports, airlines with most cancelation, routes with most cancelation, airline with most on-time departure and landing, as well as any other observability insight you find usefull. Generate graphs where necessary
+```
+
+2. Let the Agent Plan and execute the task with an Agentic approach
+<br/>
+
+![install cline on VS Code](images/cline-observability-0.png)
+<br/>
+
+![install cline on VS Code](images/cline-observability-02.png)
+<br/>
+
+![install cline on VS Code](images/cline-observability-1.png)
+<br/>
+
+![install cline on VS Code](images/cline%20observability-2.png)
+
+
+<br/><br/>
+
+## Task 8: Perform RCA on your App which is streaming data from your bucket with data prepper pipeline
+We can also now perform Advanced RCA prediction on our AI app leveraging the knowledge base data stored in opensearch.
+
+1. Start a new chat session and type in your query
+
+```bash
+Could you perform Root Cause Analysis for the following error that just came in?  you can refer to and leverage our internal knowledge base index what each error code means and how pass engineer resolved.           {
+  "type": "app_log",
+  "@timestamp": "2025-09-11T19:23:45Z",
+  "log_id": "eb84ee2de7da4f17a7f5f6c1e0b9e585",
+  "service": {
+    "name": "orders-service",
+    "version": "3.15.1"
+  },
+  "component": "notifier",
+  "level": "CRITICAL",
+  "message": "GEN-1001: Timeout contacting dependent service from orders-service.notifier after 1714ms",
+  "error_code": "GEN-1001",
+  "http": {
+    "method": "DELETE",
+    "status": 500
+  },
+  "metrics": {
+    "latency_ms": 1714,
+    "cpu_pct": 78.3
+  },
+  "kubernetes": {
+    "namespace": "prod-apps",
+    "pod": {
+      "name": "ord-611d35"
+    },
+    "node": {
+      "name": "ip-10-0-133-170"
+    }
+  },
+  "trace": {
+    "id": "ec5c4f1dfb994c0280e1b71c278589ac",
+    "span_id": "2516899e290a48a7"
+  },
+  "tags": [
+    "log",
+    "app",
+    "rca-demo",
+    "extra"
+  ]
+}
+```
+
+2. The Agent understands that this is a knn index and is able to structure a knn query to retrieve the relevant documents. The Agent is also able to figure what knowledge base to query and how to find error log patterns and also how to retrieve the most relevant historical data from the knowledge to address the current error. It then proceeds to predict an RCA grounded in knowledge base and historical human RCA data from past tickets.
+
+<br/>
+
+![install cline on VS Code](images/cline-rca-1.png)
+<br/>
+
+![install cline on VS Code](images/cline-rca-2.png)
+<br/>
+
+![install cline on VS Code](images/cline-raca-3.png)
+<br/>
+
+
+You can view the full [ste-by-step detailed actions and output](files/cline-rca-output-02.json) taken by the agent autonomously to derive the final anser.
+
+
+<br/>
 
 ## Acknowledgements
 
