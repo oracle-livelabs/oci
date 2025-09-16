@@ -23,13 +23,29 @@ This lab assumes you have:
 ## Task 1: Policies
 These policies may be needed for users to access Document Understanding APIs. By default, only the users in the Administrators group have access to all Document Understanding resources.
 - Policy to grant users access to Document Understanding APIs:
-``` allow group <group_in_tenancy> to manage ai-service-document-family in tenancy ```
+
+``` 
+<copy> 
+allow group group_in_tenancy to manage ai-service-document-family in tenancy 
+<copy>
+```
+
 - Policy to access Object Storage:
-``` allow group <group_in_tenancy> to manage object-family in tenancy ```
+``` 
+<copy> 
+allow group group_in_tenancy to manage object-family in tenancy
+<copy>
+```
+
 - Policy to store results in Object Storage:
-``` allow group <group_in_tenancy> to manage object-family in compartment <output_bucket_located_object_storage_compartment> ```
+``` 
+<copy> 
+allow group group_in_tenancy to manage object-family in compartment output_bucket_located_object_storage_compartment
+<copy>
+```
 
 Look at [the policies](https://docs.oracle.com/en-us/iaas/Content/document-understanding/using/about_document-understanding_policies.htm) for more information.
+<br><br>
 
 ## Task 2: Train custom model for Key-Value extraction
 
@@ -38,28 +54,32 @@ Look at [the policies](https://docs.oracle.com/en-us/iaas/Content/document-under
 2. Create a key-value extraction model
 ![create model 0](images/create_model0.png)
 3. Select your bucket and ```manifest.json``` file
-![create model 1](images/create_model1.png)
+![create model 1](images/create_model1.png =70%x*)
 4. Select a desired name for the model and _English_ as language. Leaving the recommended training time is enough.
 ![create model 2](images/create_model2.png)
 5. Check the settings and train the model
-![create model 3](images/create_model3.png)
-
+![create model 3](images/create_model3.png =80%x*)
+<br><br>
 The training might take between 45 and 60 minutes. Once the training has finished, the state will change to "Succeeded" as below:
-![create model 4](images/create_model4.png)
+![create model 4](images/create_model4.png =30%x*)
+<br><br>
 
 ## Task 3: Test the trained model
-You can test the model by clicking on it:
-![open model](images/click_model.png)
-Select a bucket to save the results and test the model via one of the following methods (for Object Storage, the file needs to be uploaded inside an Object Storage first):
-![test model](images/test_model.png)
-
 For testing, you can download the [following examples](test_dataset/test_dataset.zip).
 
-Now this model is able to extract fields that the pretrained model is not able to: IBAN, SWIFT and Bank Name.
-![example 1](images/test1.png)
+1. Click on the model you want to test, inside the Project:
+![open model](images/click_model.png =30%x*)
+<br>
+2. Select a bucket to save the results and test the model via one of the following methods (for Object Storage, the file needs to be uploaded inside an Object Storage first):
+![test model](images/test_model.png =50%x*)
+
+<br>
+The model we trained in this Lab is able to extract fields that the pretrained model is not able to: IBAN, SWIFT and Bank Name.
+![example 1](images/test1.png =70%x*)
 
 In some cases, it can work partially (or completely) for invoices with similar layouts which can be extrapolated from the layouts in the training dataset, like the following example:
-![example 2](images/test2.png)
+![example 2](images/test2.png =70%x*)
+<br><br>
 
 ## Acknowledgements
 * **Authors** 

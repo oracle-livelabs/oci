@@ -64,8 +64,8 @@ Reference link: https://labelstud.io/guide/start#Set-environment-variables
 1. **Create New Project**
     Reference: https://labelstud.io/guide/setup_project 
 
-    ![Create Project Image](images/create-project.png =70%x*)
-    ![Save Project Image](images/save-project.png =70%x*)
+    ![Create Project Image](images/create-project.png =60%x*)
+    ![Save Project Image](images/save-project.png =60%x*)
 
 
 2. **Add source data storage**
@@ -91,7 +91,7 @@ Reference link: https://labelstud.io/guide/start#Set-environment-variables
     ![Labelling interface](images/labeling-interface.png =30%x*)
 
   - Navigate to the code template within the labelling interface
-    ![Labeling interface code](images/labelling-code.png =70%x*)
+    ![Labeling interface code](images/labelling-code.png =50%x*)
 
   - Copy and paste the following labelling configuration into the code template
     
