@@ -64,7 +64,7 @@ Set the MySQL Private IP Address value in an environment variable called `MYSQL_
 	</copy>
 	```
 
-2. Navigate to the **Compute >> Instances** section in the Oracle Cloud Console, find your compute instances in the list, open it, in the **Instance Details** section find **Primary VNIC**, copy the value of the **Private IPv4 address**.
+2. Navigate to the **Compute >> Instances** section in the Oracle Cloud Console, find your compute instances in the list, open it, from the **Instance Details >> Networking** tab, find **Primary VNIC**, copy the value of the **Private IPv4 address**.
 
    ![Copy Compute Instance Private IP](./images/compute-instance-private-ip.png)
 

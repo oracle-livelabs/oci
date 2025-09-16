@@ -20,7 +20,7 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console, open the navigation menu, click **Developer Services**. Under **Containers & Artifacts**, click **Kubernetes Clusters (OKE)**.
 
-   ![Oracle Kubernetes Clusters (OKE) menu](https://oracle-livelabs.github.io/common/images/console-2025/developer-OKE.png)
+   ![Oracle Kubernetes Clusters (OKE) menu](https://oracle-livelabs.github.io/common/images/console/developer-OKE.png)
 
 2. Select your workshop compartment from the **Compartment** drop down list on the left.
 
@@ -50,7 +50,7 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console, open the navigation menu, click **Developer Services**. Under **Containers & Artifacts**, click **Container Registry**.
 
-   ![Oracle Container Registry menu](https://oracle-livelabs.github.io/common/images/console-2025/developer-container-registry.png)
+   ![Oracle Container Registry menu](https://oracle-livelabs.github.io/common/images/console/developer-container-registry.png)
 
 2. Select your workshop compartment from the **Compartment** drop down list on the left.
 
@@ -68,7 +68,7 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console, open the navigation menu, click **Storage**. Under **Object Storage & Archive Storage**, click **Buckets**.
 
-   ![Object Storage buckets menu](https://oracle-livelabs.github.io/common/images/console-2025/storage-buckets.png)
+   ![Object Storage buckets menu](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png)
 
 2. Select your workshop compartment from the **Compartment** drop down list on the left.
 
