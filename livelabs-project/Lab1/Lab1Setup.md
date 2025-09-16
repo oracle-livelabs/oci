@@ -48,11 +48,11 @@ In this task, we will be installing Poppler and that requires different steps de
   - Press Windows key + R to open the Run dialog, type `sysdm.cpl` and click Enter.
   - Navigate to the 'Advanced' tab in the System properties pop up window.
   - In the System Properties window, click on the “Environment Variables” button at the bottom.
-  	![Environment variables screen on windows](images/environment_variables.png =30%x*)
+  	![Environment variables screen on windows](images/environment_variables.png =50%x*)
 
 4. Edit the PATH variable
   - In the Environment Variables window, under “System variables,” find the “Path” variable and select it.
-  ![Path variable under system variables screen on windows](images/edit_path.png =30%x*)
+  ![Path variable under system variables screen on windows](images/edit_path.png =50%x*)
   - Click the “Edit” button.
 
 5. Add the bin/ folder to the PATH:
