@@ -35,6 +35,7 @@ You should see the project folder full of tasks like in the following image:
 
 ## Task 2: Create the annotations
 Reference : https://labelstud.io/guide/setup
+</br>
 Open the labelling interface, you will notice the automatic text recognition has been done by the OCI backend OCR (Optical Character Recognition). Label the text by matching it to the labels you defined earlier seen on the right hand side of the page.
 
 When opening one task, you will see the following tagging interface after loading and producing the OCR using the OCI backend OCR:

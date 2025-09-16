@@ -14,7 +14,7 @@ In this lab, you will:
 
 ### Prerequisites (Optional)
 
-* Having Python3 installed and configured on your local machine (refer - ******add link to lab where setup is done*****)
+* Having Python3 installed and configured on your local machine (refer - Lab1)
 
 This lab assumes you have:
 * All previous labs successfully completed.

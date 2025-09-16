@@ -45,8 +45,8 @@ In this task, we will be installing Poppler and that requires different steps de
   Identify the folder you want to add to your system’s PATH. For example, assume the full path to the bin directory is: C:\path\to\your\bin\folder.
 
 3. Open Environment Variables in your System
-  - Right-click on “This PC” (or “My Computer” in older versions of Windows) and select “Properties”.
-  - In the System window, click on “Advanced system settings” in the left-hand pane.
+  - Press Windows key + R to open the Run dialog, type `sysdm.cpl` and click Enter.
+  - Navigate to the 'Advanced' tab in the System properties pop up window.
   - In the System Properties window, click on the “Environment Variables” button at the bottom.
   	![Environment variables screen on windows](images/environment_variables.png =30%x*)
 
@@ -123,7 +123,7 @@ Download [zip file](dataset/synthetic_dataset_invoices.zip), which contains the 
     python --version
     ```
 
-    If Python is properly installed, you will see the current version displayed (e.g., Python 3.11.13). If not, refer to the setup section [Link to the first section]("../Lab0/setup.md") to install Python on your machine.
+    If Python is properly installed, you will see the current version displayed (e.g., Python 3.11.13). If not, refer to the setup section to install Python on your machine.
 
 6. Run the following command to execute the script:
     ```
