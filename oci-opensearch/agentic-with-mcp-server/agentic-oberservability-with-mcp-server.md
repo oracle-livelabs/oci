@@ -1,0 +1,516 @@
+# Pre-requisites
+- You have an OpenSearch Cluster
+- You have added the dashboard sample data to your cluster
+- You have Create a data prepper pipeline and streamed app data into your cluster in a KNN index. Or simply have a KNN index with any type of test data of your choice.
+- You have installed VS CODE and oci-cli
+
+## Introduction
+Model Context Protocol (MCP) gives agents a single, consistent way to talk to external tools, eliminating bespoke glue code for each API’s endpoints, parameters, responses, and errors. By standardizing JSON payloads, discovery, validation, and error semantics, MCP turns integrations into simple plug-ins and dramatically reduces maintenance drag. Architecturally, the agent speaks MCP once and scales cleanly to many tools behind it. Unlike the earlier Agents and Flow Framework labs that focused on building and orchestrating resources, this section highlights the protocol layer that makes those systems interoperable and future-proof.
+
+In this lab, you will learn how to leverage OpenSearch MCP server to expose register and expose tools, and use these tools to interact with your data conversationally to derive advanced observability insights, as well as  perform Root Cause Analysis.
+
+Estimated Time: 30 minutes
+
+### Objectives
+
+In this lab, you will:
+
+- Understand the role of MCP Server in Agentic System
+- How to expose MCP tools to be used by external AI Agents or Agentic Frameworks
+- How to configure MCP Clients using the Cline Plugin in and VS Code
+- Learn how MCP can be used to speed up speed up developper productivity
+- Perform advanced observability tasks on your cluster
+- Perform  Root Cause Analysis on Your Application
+
+
+<br/><br/>
+
+## Task 1: Enable MCP Server in your Opensearch Cluster
+
+OpenSearch 3.0 includes an experimental, built-in MCP server (via ML Commons) that exposes first-class tools over a streaming SSE endpoint (/_plugins/_ml/mcp/sse). Any LLM agent (e.g., a LangChain ReAct agent) can discover and invoke these tools with plain JSON—no custom adapters, extra REST glue, or separate service to run—and it inherits OpenSearch authentication and access control. Because it lives inside the cluster, agents can query, summarize, and cross-reference any index (catalogs, logs, vector stores) in real time through one unified interface, and it plays nicely with frameworks like LangChain and Bedrock. Unlike the earlier Agents and Flow Framework labs that focused on provisioning and orchestration, this section highlights the embedded protocol gateway that crushes integration overhead to near zero.
+
+
+Quickstart (built-in MCP server)
+You can enable  the MCP server on your cluster  via a persistent cluster setting by executing the command below:
+
+```bash
+PUT /_cluster/settings
+{
+  "persistent": {
+    "plugins.ml_commons.mcp_server_enabled": "true"
+  }
+}
+```
+
+Response:
+```bash
+{
+  "acknowledged": true,
+  "persistent": {
+    "plugins": {
+      "ml_commons": {
+        "mcp_server_enabled": "true"
+      }
+    }
+  },
+  "transient": {}
+}
+```
+What’s different from the Agents/Flow Framework labs? Those focused on provisioning/orchestration; this is a minimal, cluster-level toggle that exposes a protocol endpoint—no extra services or custom adapters.
+
+<br/><br/>
+
+## Task 2: Register and Expose MCP Tools to External Agentic Client Frameworks:
+
+When the server first comes up, it publishes no tools. You choose what to expose by registering them explicitly. For example, the snippet below turns on a simple discovery tool and a keyword search tool:
+
+```bash
+POST /_plugins/_ml/mcp/tools/_register
+{
+  "tools": [
+    { "type": "ListIndexTool" },
+    {
+      "type": "SearchIndexTool",
+      "attributes": {
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "index": {
+                "type": "string",
+                "description": "Target OpenSearch index (e.g., index1)"
+              },
+              "query": {
+                "type": "object",
+                "description": "Query body for the search request",
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "required": ["input"],
+        "strict": false
+      }
+    }
+  ]
+}
+
+```
+After this call, ListIndexTool and SearchIndexTool are immediately available through the server.
+
+OpenSearch offers a broader set of tools you can register; see the official [Tools](https://docs.opensearch.org/latest/ml-commons-plugin/agents-tools/tools/index/) list for the full menu and details.
+
+To Expose a more detailed list of MCP tools for your opensearch server, execute the command below. Be sure to configure the ModelIs, text fields and embedding fields to match the settings for your own index:
+
+
+```bash
+POST /_plugins/_ml/mcp/tools/_register
+{
+  "tools": [
+    {
+      "type": "ListIndexTool",
+      "name": "ListIndexes",
+      "description": "List all indices in the cluster"
+    },
+    {
+      "type": "IndexMappingTool",
+      "name": "IndexMapping",
+      "description": "Return mappings/settings for a target index",
+      "attributes": {
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "type": "object",
+              "properties": {
+                "index": { "type": "string" },
+                "include_mappings": { "type": "boolean", "default": true },
+                "include_settings": { "type": "boolean", "default": false }
+              },
+              "required": ["index"]
+            }
+          },
+          "required": ["input"]
+        },
+        "strict": false
+      }
+    },
+    {
+      "type": "SearchIndexTool",
+      "name": "SearchIndex",
+      "description": "BM25/keyword search over a chosen index",
+      "attributes": {
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "type": "object",
+              "properties": {
+                "index": { "type": "string" },
+                "query": { "type": "object" },
+                "size": { "type": "integer", "default": 25 },
+                "source_includes": { "type": "array", "items": { "type": "string" } }
+              },
+              "required": ["index", "query"]
+            }
+          },
+          "required": ["input"]
+        },
+        "strict": false
+      }
+    },
+
+    {
+      "type": "PPLTool",
+      "name": "PPL",
+      "description": "Natural language → PPL (and/or direct PPL execution)",
+      "parameters": { "model_id": "cx-1T5kBi6TSXBeiL2Qb" },
+      "attributes": {
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "type": "object",
+              "properties": {
+                "question": { "type": "string", "nullable": true },
+                "statement": { "type": "string", "nullable": true },
+                "model_id": { "type": "string", "nullable": true }
+              }
+            }
+          },
+          "required": ["input"]
+        },
+        "strict": false
+      }
+    },
+    {
+      "type": "VectorDBTool",
+      "name": "VectorRetriever",
+      "description": "k-NN retrieval over an embedding index (supports nested vectors)",
+      "parameters": {
+        "model_id": "VaSmT5kBLyBOyptyHqop",
+        "index": "app_knowledge_base",
+        "embedding_field": "text",
+        "nested_path": "embedding",
+        "k": 8,
+        "source_field": ["text"]
+      },
+      "attributes": {
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "type": "object",
+              "properties": {
+                "query_text": { "type": "string" },
+                "model_id": { "type": "string", "nullable": true },
+                "index": { "type": "string", "nullable": true },
+                "embedding_field": { "type": "string", "nullable": true },
+                "nested_path": { "type": "string", "nullable": true },
+                "k": { "type": "integer", "nullable": true },
+                "source_field": { "type": "array", "items": { "type": "string" }, "nullable": true }
+              },
+              "required": ["query_text"]
+            }
+          },
+          "required": ["input"]
+        },
+        "strict": false
+      }
+    },
+    {
+      "type": "RAGTool",
+      "name": "RAG",
+      "description": "Retrieval-augmented generation over a KB/index",
+      "parameters": {
+        "embedding_model_id": "VaSmT5kBLyBOyptyHqop",
+        "inference_model_id": "cx-1T5kBi6TSXBeiL2Qb",
+        "index": "app_knowledge_base",
+        "embedding_field": "text",
+        "nested_path": "embedding",
+        "source_field": ["text"],
+        "k": 6,
+        "context_size": 3,
+        "prompt": "Answer using ONLY the provided context.\\n\\nContext:\\n${context}\\n\\nQuestion: ${question}\\n\\nAnswer:"
+      },
+      "attributes": {
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "type": "object",
+              "properties": {
+                "question": { "type": "string" },
+                "search_text": { "type": "string", "nullable": true },
+                "embedding_model_id": { "type": "string", "nullable": true },
+                "inference_model_id": { "type": "string", "nullable": true },
+                "index": { "type": "string", "nullable": true },
+                "embedding_field": { "type": "string", "nullable": true },
+                "nested_path": { "type": "string", "nullable": true },
+                "k": { "type": "integer", "nullable": true },
+                "context_size": { "type": "integer", "nullable": true },
+                "prompt": { "type": "string", "nullable": true }
+              },
+              "required": ["question"]
+            }
+          },
+          "required": ["input"]
+        },
+        "strict": false
+      }
+    },
+
+
+
+    {
+      "type": "LogPatternTool",
+      "name": "LogPatterns",
+      "description": "Mine frequent log patterns",
+      "attributes": {
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "type": "object",
+              "properties": {
+                "index": { "type": "string" },
+                "query": { "type": "object", "nullable": true },
+                "time_field": { "type": "string", "nullable": true },
+                "min_support": { "type": "number", "default": 0.001 },
+                "max_groups": { "type": "integer", "default": 20 }
+              },
+              "required": ["index"]
+            }
+          },
+          "required": ["input"]
+        },
+        "strict": false
+      }
+    },
+    {
+      "type": "VisualizationTool",
+      "name": "Visualize",
+      "description": "Return a visualization spec for data or a query result",
+      "attributes": {
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "type": "object",
+              "properties": {
+                "vis_type": { "type": "string" },
+                "index": { "type": "string", "nullable": true },
+                "query": { "type": "object", "nullable": true },
+                "data": { "type": "array", "items": { "type": "object" }, "nullable": true },
+                "spec": { "type": "object", "nullable": true }
+              },
+              "required": ["vis_type"]
+            }
+          },
+          "required": ["input"]
+        },
+        "strict": false
+      }
+    },
+    {
+      "type": "AgentTool",
+      "name": "AgentInvoke",
+      "description": "Invoke another registered agent with parameters",
+      "attributes": {
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "type": "object",
+              "properties": {
+                "agent_id": { "type": "string" },
+                "parameters": { "type": "object", "nullable": true },
+                "selected_tools": { "type": "array", "items": { "type": "string" }, "nullable": true }
+              },
+              "required": ["agent_id"]
+            }
+          },
+          "required": ["input"]
+        },
+        "strict": false
+      }
+    },
+    {
+      "type": "MLModelTool",
+      "name": "ModelInvoke",
+      "description": "Invoke a default LLM directly",
+      "parameters": { "model_id": "cx-1T5kBi6TSXBeiL2Qb" },
+      "attributes": {
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "type": "object",
+              "properties": {
+                "prompt": { "type": "string" },
+                "parameters": { "type": "object", "nullable": true },
+                "model_id": { "type": "string", "nullable": true }
+              },
+              "required": ["prompt"]
+            }
+          },
+          "required": ["input"]
+        },
+        "strict": false
+      }
+    }
+  ]
+}
+
+
+```
+
+If you encounter errors running the command above, you can just separate them and add the tools one API call at a time.
+
+<br/><br/>
+
+
+
+## Task 3: Install oci-cli and connect to your tenancy
+
+1. To use enable MCP clients such as Cline to Connect to Opensearch MCP server and also automatically connect to OCI GenAI available llm models, you need to create a and oci session to your OCI tenancy.
+To achieve this, you first have to install the **oci-cli** command line interface. You find more detailed instructions on installing and configuring oci-cli from this [oci-cli installation documentation](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm#InstallingCLI__macos_homebrew).
+
+You can use Homebrew to install, upgrade, and uninstall the CLI on Mac OS.
+
+To install the CLI on Mac OS with Homebrew:
+
+```bash
+brew update && brew install oci-cli
+```
+To upgrade your CLI install on Mac OS using Homebrew:
+```bash
+brew update && brew upgrade oci-cli
+
+```
+To uninstall the CLI on Mac OS using Homebrew:
+```bash
+brew uninstall oci-cli
+```
+
+
+2. Next, you have to setup the configuration file to allow you access OCI infra tenancy:
+Please follow this [documentation to setup your oci profile](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm#configfile) in your local machine.
+
+<br/><br/>
+
+
+
+
+## Task 4: Install Cline on VS Code
+
+Cline is available as a Plugin in VS Code and can easily be integrated into the IDE and configured to interact with OpenSearch Server.
+
+ If using Oracle Code Assist with Cline to configure cline and llm model, Please follow internal [instructions](https://confluence.oraclecorp.com/confluence/display/AICODE/Oracle+Code+Assist+via+Cline#OracleCodeAssistviaCline-Downloads) to Download and install the latest Cline version for OCI [ OCI Cline v3.20.2 ](https://confluence.oraclecorp.com/confluence/download/attachments/15551206529/oca-cline-3.20.2%20%281%29.vsix?version=1&modificationDate=1757607955000&api=v2) :
+
+
+1. Launch VS Code
+
+
+2. Navigate to the plugin installer and type **cline** and select the verified version by **Cline**
+
+![install cline on VS Code](images/install-cline-1.png)
+
+3. Click on **Install** to install Cline on your VS code.
+![install cline on VS Code](images/install-cline-2.png)
+
+
+
+
+
+
+<br/><br/>
+
+## Task 5: Configure Opensearch MCP Client and connect to MCP Server
+To configure Opensearch MCP Server and interact with data on your cluster, you will need to provide an llm that allow you query and interact with your opensearch data conversationally using Agentic approach where the model can plan and execute tasks indepently leveraging tools exposed on the MCP server.
+For internal use, please use Oracle Code Assist (OCA) to configure llm for your Cline following the [documentation](https://confluence.oraclecorp.com/confluence/display/AICODE/Oracle+Code+Assist+via+Cline#OracleCodeAssistviaCline-Downloads).
+
+OCI Opensearch MCP server easily integrates with all major MCP clients, including:*** Cline, Claude Desktop, Windsurf*** etc. To use it with your favorite Client IDE, you just need to provide the API token to connect to the model of choice (If using OCA, you will just have SSO to authenticate your user privileges)
+
+0. Port forward and expose port 9200 and 5601 on your local machine via the vm to connect to your cluster:
+
+```bash
+ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 -L 127.0.0.1:9200:<your_opensearch_private_IP>:9200 opc@<your_instance_public_ip> -i <path_to_your_private_key>
+```
+
+1. After Cline installation is complete, you should see a Cline icon on the sidebar of your IDE. Click on this Icon and Click on the **Config** icon in the Cline window that opens. Then click on the **Settings** icon
+
+![install cline on VS Code](images/configure-cline-4.png)
+
+2. In the new window that opens, click on the **Remote Servers** tab then click on **Edit configuration**
+![install cline on VS Code](images/configure-cline-5.png)
+
+
+
+3. Copy paste the config below in your cline configuration file:
+
+```bash
+{
+    "opensearch-mcp-server": {
+      "disabled": false,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "test-opensearch-mcp"
+      ],
+      "env": {
+        "OPENSEARCH_URL": "https://amaaaaaahngr..............ktv5r7i2rhq.tenancy-name.us-ashburn-1.oci.oraclecloud.com:9200",
+        "OPENSEARCH_USERNAME": "<YOUR_OPENSEARCH_USERNAME>",
+        "OPENSEARCH_PASSWORD": "<YOUR_OPENSEARCH_PASSWORD"
+      }
+    }
+  }
+
+}
+
+```
+> Note do not add the first and last curly bracket if you already have some json in the config file. If the config file is empty, copy everything, otherwise, just copy the opensearch-mcp-server config and add to your file, using comma to separate it from any other existing config.
+
+
+> Be sure to replace the OPENSEARCH_URL with you actual opensearch url. You can find this by login into your OCI console, navigate to you opensearch cluster and view details. The OPENSEARCH_USERNAME and OPENSEARCH_PASSWORD are the same credentials you've been using to log into your cluster.
+
+
+
+
+4. Save the cline configuration and Click on **Installed** tab to view what MCP servers are now accessible from your Cline environment. You make sure that the Opensearch MCP server is in Green and active state before proceeding to the next step. You can refresh or restart the server by using the knob on it's right.
+![install cline on VS Code](images/configure-cline-6.png)
+
+
+<br/>
+
+5. Next, return to the Cline home by click on it's icon on the sidebar.
+  - Click on  the default model shown to open the llm model config window.
+  - Select an llm model provider
+  - Provide the API token to authenticate and connect to your preferred provider (e.g: Claude, Amazon, OCI OCA, etc.). This will expose all the llm models vailable from that provider
+  - Select the specific llm model you want to use with Cline to Pkan and Execute in an Agentic fashion. You have the ability configure a different model for planning and execution.
+
+![install cline on VS Code](images/configure-cline-7.png)
+![install cline on VS Code](images/configure-cline-8.png)
+
+
+
+6. If using code Oracle Code Assist, you can select OCA which will prompt you to singon to authenticate with your user account using SSO. You will have to request individual access the various models. The default model for OCA is meta.llama model, but you can request OIM access to the GPT and GROK models via OIM portal.
+
+![install cline on VS Code](images/configure-cline-9.png)
+![install cline on VS Code](images/configure-cline-10.png)
+
+<br/><br/>
+
+## Task 6: Perform Advanced Obervability on indices on your cluster
+
+
+
+<br/><br/>
+
+## Task 7: Perform RCA on your App which is streaming data from your bucket with data prepper pipeline
+
+
+## Acknowledgements
+
+* **Author** - Landry Kezebou
