@@ -70,7 +70,7 @@ We will use to Advanced tab to work with the limits of the LiveLab sandbox. (Exi
 2. The main files are:
 
    |             |                  |           | Description |
-   | ----------- | ---------------- | --------- | ---|
+   | ----------- | ---------------- | --------- | ------------|
    | Commands    |                  |           |  |
    |             | starter.sh       |           | Build or destroy a project. Show a menu with commands if not argument is given | 
    |             | terraform.tfvars |           | Settings of your project | 
