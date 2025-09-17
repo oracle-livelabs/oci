@@ -1,10 +1,5 @@
 {
     "workshoptitle": "Centralize Cloud Operations and Automation with OCI Fleet Application Management",
-    "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
-                "sample.json":"../../data-load/files/sample.json",
-                "step2.md":"../../data-load/files/step2.md"},
-    "variables": ["../../variables/variables.json",
-                 "../../variables/variables-in-another-file.json"],
     "help": "bhumika.v.bhagia@oracle.com",
     "tutorials": [
         {
@@ -19,17 +14,17 @@
         },
         {
             "title": "Lab 1: Onboard to Fleet Application Management",
-            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+            "description": "Onboard to Fleet Application Management",
             "filename": "../../onboarding/onboarding.md"
         },
         {
-            "title": "Lab 1: Provision Infrastructure Resources with Fleet Application Management",
-            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+            "title": "Lab 2: Provision Infrastructure Resources with Fleet Application Management",
+            "description": "Provision Infrastructure Resources with Fleet Application Management",
             "filename": "../../provisioning-freetier/provisioning-freetier.md"
         },
         {
-            "title": "Lab 2: Patch an Oracle Fusion Middleware Deployment with FAM",
-            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+            "title": "Lab 3: Patch an Oracle Fusion Middleware Deployment with FAM",
+            "description": "Patch an Oracle Fusion Middleware Deployment with FAM",
             "filename": "../../patching-freetier/patching-freetier.md"
         },
         {
