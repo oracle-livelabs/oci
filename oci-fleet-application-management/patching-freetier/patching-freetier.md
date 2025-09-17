@@ -92,9 +92,11 @@ In this task, you will create a **Fleet** to centrally group and manage middlewa
 
     ![Create Fleet - Add products panel](images/create-fleet-add-products-panel.png " ")
 
-6. After the panel closes, the selected products appear in the table. Enable the **Auto confirm of targets** toggle, then click **Next**.
+6. After the panel closes, the selected products appear in the table. Click **Next**.
 
-    ![Create Fleet - Auto confirm of targets](images/create-fleet-auto-confirm-option.png " ")
+    >Note: For the purpose of this lab, keep the Auto confirm of targets toggle option **disabled**. We will manually confirm the targets later.
+
+    ![Create Fleet - products review](images/create-fleet-products-review.png " ")
 
 7. Skip the **Notifications** section by clicking **Next** until you reach the **Review** step. Review all the details, then click **Create**.
 
@@ -118,19 +120,21 @@ In the previous task, you created a Fleet to manage your middleware and platform
 
     >Note: When the FAM plugin is successfully enabled (which can take up to **10 minutes** to reflect), validation completes successfully. However, validation may occasionally fail if the plugin is not enabled on the target instance. In such cases, first retry validation. If the issue persists, enable the FAM plugin manually from the Compute Instance details page (Management tab) and then retry validation.
 
-3. After *Validation* completes successfully, the *Discovery* of middleware targets begins. Click **View Details** to monitor the discovery process and review its logs.
+3. After *Validation* completes successfully, the *Discovery* of targets begins. Click **View Details** to monitor the discovery process and review its logs.
 
     ![Target discovery step](images/fleet-target-discovery.png " ")
 
     ![Target discovery step in progress](images/fleet-target-discovery-progress.png " ")
 
-4. Once *Discovery* completes successfully, review the discovered targets and their compliance status on the **Targets** tab.
+4. Once *Discovery* completes successfully, go to the **Targets** tab and click **Add Targets**. When the panel opens, select the targets shown below and click **Add targets**. Alternatively, you can click on the **Confirm Targets** prompt to do the same.
 
-    > Note: Since the Auto confirm of targets option was enabled during Fleet creation, discovered targets are automatically added to the Fleet for management. Please remove the targets shown in the screenshot below before initiating patching to avoid "not found" errors due to additional sub-paths under the /usr directory.
+    >Note: For this lab, do not add the sub-paths under the /usr directory. This is to avoid potential "sub-path not found" errors during patching in this test instance.
 
     ![Target discovery step succeeded](images/fleet-target-discovery-success.png " ")
 
-    ![Fleet Details - Remove targets](images/remove-targets.png " ")
+    ![Fleet Details - Add targets option](images/add-targets-option.png " ")
+
+    ![Fleet Details - Add targets panel](images/add-targets-panel.png " ")
 
     ![Fleet Details - Discovered targets](images/fleet-confirmed-targets.png " ")
 
