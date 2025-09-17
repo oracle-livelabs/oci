@@ -69,8 +69,9 @@ This lab assumes you have:
 
     ![Edit matching rules](images/edit-matching-rules.png " ")
 
+
     ```
-    All {instance.compartement.id = 'ocid1.instance1.oc1.iad:sampleuniqueid1', instance.compartment.id ='ocid1.compartmentA.oc1:sampleuniqueid2'}
+    All {instance.compartment.id = 'ocid1.instance1.oc1.iad:sampleuniqueid1', instance.compartment.id ='ocid1.compartmentA.oc1:sampleuniqueid2'}
     ```
 
 9. Next, ensure that you add the appropriate policies to grant your tenancy users or groups to perform this workshop in the target compartment. Below are some sample policies for using FAM and other OCI resources. You can further refine these policies to suit your specific requirements.
@@ -81,6 +82,10 @@ This lab assumes you have:
     Allow group <user-group> to manage object-family in compartment <compartment-name>
     Allow group <user-group> to manage os-management-hub-family in compartment <compartment-name>
     ```
+
+Congratulations! You have successfully completed the lab.
+
+You may now **proceed to the next lab**.
 
 ## Learn More
 

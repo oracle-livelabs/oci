@@ -26,7 +26,7 @@ In this lab, you will:
 
 Create an Oracle Cloud Object Storage bucket. Upload your Terraform configuration *.zip* and *config.json* files containing variable values. Storing these files in Object Storage provides centralized, secure, and easily accessible storage, enabling streamlined and automated provisioning workflows.
 
-1. Download the [instance-provisioning-terraform.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/f0wj4qgVwL35d6cJ0yf7gyahY7VwnCh-5JmwgFIk-MLbyx18ROEGh2grpFR5RMQm/n/id7p26aijxt9/b/custom-images-livelabs/o/instance_provisioning_terraform_package.zip) file, which contains the Terraform code to create a compute instance.
+1. Download the [instance-provisioning-terraform.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Eiqge3q32aWGYeYK6HvjE7gxN6F6htiNNgkECi8sgBKSozs8h1cREkPZwGSKwzB1/n/id7p26aijxt9/b/custom-images-livelabs/o/instance_provisioning_terraform_package.zip) file, which contains the Terraform code to create a compute instance.
 
 2. Download the [config.json](../provisioning/files/config.json?download=1) file, update it with variable values specific to your environment, and save your changes.
 
@@ -46,7 +46,7 @@ Create an Oracle Cloud Object Storage bucket. Upload your Terraform configuratio
 
     ![Object Store Bucket details page](images/bucket-details-page.png " ")
 
-    ![Upload files](images/upload-files-page.png " ")
+    ![Upload files](images/upload-files.png " ")
 
     ![Review uploaded files](images/upload-files-review.png " ")
 
@@ -54,7 +54,7 @@ Create an Oracle Cloud Object Storage bucket. Upload your Terraform configuratio
 
 Create a Private Terraform Catalog Item in Fleet Application Management using your configurations stored in Object Storage. This enables you to securely standardize and automate resource provisioning across your cloud environment by reusing Terraform configurations.
 
-1. From the **Navigation menu**, go to **Observability & Management** &rarr; **Fleet Application Management** &rarr; **Provisioning** &rarr; **Catalogs** &rarr; **Private catalog**. Select your compartment and click **Add catalog item.
+1. From the **Navigation menu**, go to **Observability & Management** &rarr; **Fleet Application Management** &rarr; **Provisioning** &rarr; **Catalogs** &rarr; **Private catalog**. Select your compartment and click **Add catalog item**.
 
     ![Provisioning section navigation](images/provisioning-navigation-from-menu.png " ")
 
@@ -76,7 +76,7 @@ Create a Private Terraform Catalog Item in Fleet Application Management using yo
 
 ## Task 3: Create a Private Configuration Catalog Item
 
-Create a Private Configuration Catalog Item in Fleet Application Management by referencing your existing config.json stored in Object Storage. This approach allows you to provide variable values for your Terraform package while keeping configuration data separate from code, promoting flexibility and best practices in Terraform provisioning.
+Create a Private Configuration Catalog Item in Fleet Application Management by referencing your existing *config.json* stored in Object Storage. This approach allows you to provide variable values for your Terraform package while keeping configuration data separate from code, promoting flexibility and best practices in Terraform provisioning.
 
 1. Return to the **Private catalog** listing page and click **Add catalog item**.
 

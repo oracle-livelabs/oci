@@ -36,7 +36,7 @@ Fleet Application Management uses OS Management Hub (OSMH) to manage and monitor
 
     ![Software sources listing page](images/software-sources-listing.png " ")
 
-2. Select *Oracle* as the **OS vendor**, choose *Oracle Linux 9* for the **OS version**, and *aarch64* as the **Architecture**. Then select the **Available software sources** as per [Guidelines for Adding Vendor Sources](https://docs.oracle.com/en-us/iaas/osmh/doc/vendor-software-source.htm#guidelines) and click **Add**.
+2. Select *Oracle* as the **OS vendor**, choose *Oracle Linux 9* for the **OS version**, and *aarch64* as the **Architecture**. Then select the **Available software sources** as per [Guidelines for Adding Vendor Sources](https://docs.oracle.com/en-us/iaas/osmh/doc/vendor-software-source.htm) and click **Add**.
 
     >Note: Since all available software sources have already been added, the table in the screenshot below is empty.
 
@@ -102,7 +102,7 @@ In this task, you will create a **Fleet** to centrally group and manage middlewa
 
 ## Task 3: Validation, Discovery, and Compliance Evaluation of Targets
 
-In the previous task, you created a Fleet to manage your middleware resources. After the Fleet is created, the first step you’ll see is **Resource addition**. Once resources are added, FAM automatically triggers **Validation**, **Discovery**, and **Compliance Evaluation** in sequence. In this task, you will monitor these phases and verify that each completes successfully.
+In the previous task, you created a Fleet to manage your middleware and platform resources. After the Fleet is created, the first step you’ll see is **Resource addition**. Once resources are added, FAM automatically triggers **Validation**, **Discovery**, and **Compliance Evaluation** in sequence. In this task, you will monitor these phases and verify that each completes successfully.
 
 1. On the **Fleet Details** page, confirm that the Fleet reaches the *Active* state and shows the message *Resource addition in progress*. Once this phase completes, verify the added resources under the **Managed resources** tab.
 
@@ -142,7 +142,7 @@ Once validation, discovery, and compliance evaluation are complete, you can reme
 
     ![Fleet Details - Fix now option](images/fleet-fix-now-option.png " ")
 
-2. A panel opens for compliance fix. Ensure that your assigned compartment is selected.
+2. A panel opens for compliance fix. Ensure that your compartment is selected.
 
     ![Fix now - Basic info section](images/fleet-fix-now-basic-details.png " ")
 
