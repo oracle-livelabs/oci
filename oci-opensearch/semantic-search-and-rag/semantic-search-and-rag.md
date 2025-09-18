@@ -3,9 +3,9 @@
 
 ## Introduction
 
-In this lab, you will perform perform Semantic Search and Conversational Search on the app knowledge base index we created in the previous lab which should be streaming data from your data prepper pipeline already.
+In this lab, you will perform perform Semantic Search and Conversational Search on the app knowledge base index we created in the previous lab which should be streaming data from your object storage bucket already.
 
-Estimated Time: 10 minutes
+**Estimated Time: 10 minutes**
 
 ### Objectives
 In this lab, you will:
@@ -24,7 +24,7 @@ In this lab, you will:
 In one of the previous Labs, we deployed a pre-trained embedding model, a cohere embedding model, and an llm model.
 You will need the model ID for these models for the subsequent steps. If you forgot to note them down earlier, you can always Navigate to the **Machine Learning** Tab on Opensearch Dashboard  menu  to view what models are deployed, view the status of the model and copy the modelIds of interest.
 
-1. Login into the [https://localhost:5601](Opensearch dashboard)
+1. Login into the Opensearch dashboard [https://localhost:5601](https://localhost:5601) from your local browser.
 2. Click on the menu button then click on  **Machine Learning**
 3. Locate the model of interest and click on the little copy icon near the model ID on the Model ID column.
 <br/>
@@ -39,9 +39,10 @@ You will need the model ID for these models for the subsequent steps. If you for
 
 
 ## Task 2: Perform Hybrid Search (Keyword + Semantic Search)
-To perform Semantic Search on a given Index you can run the command below. The semantic search uses the engine specified in the index (luce, nmslib, faiss) as well as the ANN engine configurations to find the most relevant documents similar to the input query. Replace the *-d2kFZkBwL_MpPtEZDes* with the modelId for your pre-trained model.
+To perform Semantic Search on a given Index you can run the command below. The semantic search uses the engine specified in the index (luce, nmslib, faiss) as well as the ANN engine configurations to find the most relevant documents similar to the input query. Replace the **EMBEDDING_MODEL_ID** with the modelId for your pre-trained model.
 
-```bash
+```json
+<copy>
 GET app_knowledge_base/_search
 {
   "query": {
@@ -53,7 +54,7 @@ GET app_knowledge_base/_search
               "neural": {
                 "embedding": {
                   "query_text": "potential data delays; partial outage possible",
-                  "model_id": "<EMBEDDING_MODEL_ID>",
+                  "model_id": "EMBEDDING_MODEL_ID",
                   "k": 2
                 }
               }
@@ -71,11 +72,13 @@ GET app_knowledge_base/_search
   ],
   "_source": false
 }
+</copy>
 ```
 
 If you created an index that uses automated Chunking, run the command below instead:
 
-```bash
+```json
+<copy>
 GET app_knowledge_base/_search
 {
   "size": 10,
@@ -89,7 +92,7 @@ GET app_knowledge_base/_search
               "neural": {
                 "chunk_embedding.knn": {
                   "query_text": "potential data delays; partial outage possible",
-                  "model_id": "<EMBEDDING_MODEL_ID>",
+                  "model_id": "EMBEDDING_MODEL_ID",
                   "k": 2
                 }
               }
@@ -101,6 +104,7 @@ GET app_knowledge_base/_search
     }
   }
 }
+</copy>
 ```
 
 Example response:
@@ -111,7 +115,8 @@ Example response:
 
 Below is a more sophisticated hybrid search on KNN index with automated chunking:
 
-```bash
+```json
+<copy>
 GET app_knowledge_base/_search
 {
   "size": 10,
@@ -129,7 +134,7 @@ GET app_knowledge_base/_search
             "neural": {
               "chunk_embedding.knn": {
                 "query_text": "potential data delays; partial outage possible",
-                "model_id": "<EMBEDDING_MODEL_ID>",
+                "model_id": "EMBEDDING_MODEL_ID",
                 "k": 200
               }
             }
@@ -142,7 +147,7 @@ GET app_knowledge_base/_search
   },
   "highlight": { "fields": { "text": {} } }
 }
-
+</copy>
 ```
 
 > Note: You can refer to our [documentation](https://docs.oracle.com/en-us/iaas/Content/search-opensearch/Concepts/semanticsearch.htm#register-model) for more details on semantic search and hybrid search. You can follow the instructions on that page to create a  simple index and ingest a small sample data to play around with semantic search.
@@ -156,14 +161,19 @@ We already registered and deployed an llm model in the previous lab. We will be 
 
 1. Create Conversation ID for memory.
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/memory
 {
   "name": "rag-conversation"
 }
+</copy>
 ```
+
+
 Response:
-```bash
+
+```json
 {
   "memory_id": "<conversation_ID>"
 }
@@ -172,7 +182,9 @@ Response:
 
 2. Create a RAG pipeline using your deployed llm modelID, as shown in the following example. replace <llm_model_ID> with your llm ModelID, <conversation_ID> with your conversationID from previous step. Replace the field ["text"] with the list of fields in your index that you want to consider in the llm context to augment knowledge. Replace *demo_rag_pipeline* with any name you want to call your pipeline.
 
-```bash
+```json
+<copy>
+
 PUT /_search/pipeline/demo_rag_pipeline
 {
   "response_processors": [
@@ -188,11 +200,14 @@ PUT /_search/pipeline/demo_rag_pipeline
     }
   ]
 }
+</copy>
 ```
 
 3. Run the following query to perform RAG on your index:
 
-```bash
+```json
+<copy>
+
 GET app_knowledge_base/_search?search_pipeline=demo_rag_pipeline
 {
   "query": {
@@ -205,7 +220,7 @@ GET app_knowledge_base/_search?search_pipeline=demo_rag_pipeline
               "neural": {
                 "chunk_embedding.knn": {
                   "query_text": "please analyze potential data delays; partial outage possible",
-                  "model_id": "<EMBEDDING_MODEL_ID>",
+                  "model_id": "EMBEDDING_MODEL_ID",
                   "k": 2
                 }
               }
@@ -227,12 +242,15 @@ GET app_knowledge_base/_search?search_pipeline=demo_rag_pipeline
 }
 }
 
+</copy>
 ```
 
 
 If running on index with Chunking:
 
-```bash
+```json
+<copy>
+
 GET app_knowledge_base/_search?search_pipeline=demo_rag_pipeline
 {
   "query": {
@@ -245,7 +263,7 @@ GET app_knowledge_base/_search?search_pipeline=demo_rag_pipeline
               "neural": {
                 "chunk_embedding.knn": {
                   "query_text": "potential data delays; partial outage possible",
-                  "model_id": "-d2kFZkBwL_MpPtEZDes",
+                  "model_id": "EMBEDDING_MODEL_ID",
                   "k": 1
                 }
               }
@@ -267,6 +285,7 @@ GET app_knowledge_base/_search?search_pipeline=demo_rag_pipeline
     }
 }}
 
+</copy>
 ```
 
 Response:
