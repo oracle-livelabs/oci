@@ -28,7 +28,7 @@
             "filename": "../../load-opensearch-sample-data/load-opensearch-data-samples.md"
         },
         {
-            "title": "Lab 5: Register and Deploy Pretrained and Remote Embedding and LLM models, and Create Ingestion Pipelines",
+            "title": "Lab 5: Register and Deploy Pre-trained and Remote Embedding and LLM models, and Create Ingestion Pipelines",
             "filename": "../../deploy-models-and-ingestion-pipeline/deploy-models-and-setup-ingestion-pipelines.md"
         },
         {
