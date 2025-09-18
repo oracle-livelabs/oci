@@ -2,10 +2,13 @@
 
 ## Introduction
 
-In this lab, you will be creating a Data Prepper pipeline to automate data ingestion into you opensearch index.  You will be creating 2 pipelines. One for processing your app knowledge base, and another for streaming your app live logs. The Goal ultimate goal or the entire workshop is to be able to leverage Agentic framework to perform Root Cause Analysis (RCA) seamlessly without writing code. The RCA part will be demonstrated in the subsequent labs
+In this lab, you will be creating a Data Prepper pipeline to automate data ingestion into you opensearch index.
+ You will be creating 2 pipelines: one for processing a template app knowledge base, and another for streaming app live logs.
+ 
+ The ultimate goal of the workshop is to be able to leverage Agentic framework to perform Root Cause Analysis (RCA) seamlessly without writing code. The RCA part will be demonstrated in the subsequent labs.
 
-Estimated Time: 15 minutes
-
+**Estimated Time: 15 minutes
+**
 ### Objectives
 
 In this lab, you will:
@@ -23,22 +26,31 @@ To use the Data Prepper pipeline creation feature, you need to setup some requir
 If you're a non-administrator in your tenancy, contact your tenancy administrators to grant these permissions to you. The administrator must update the following users permission to allow non-administrator users to perform CRUD operations such as creating a Data Pepper pipeline.
 
 1. The following policy allows the administrator to grant permission for a group in a compartment (recommended)
-```bash
-Allow group <USER_GROUP> to manage opensearch-cluster-pipeline in compartment <TARGET_COMPARTMENT>
+
+```powershell
+<copy>
+Allow group USER_GROUP to manage opensearch-cluster-pipeline in compartment TARGET_COMPARTMENT
+</copy>
 ```
+
 This will grant access to all users assigned to the group <USER_GROUP> the permission to manage opensearch-cluster-pipeline resource in the specified target compartment.
 
 2. The following policy allows user's OpenSearch pipelines to read the secrets from the Oracle Cloud Infrastructure Vault.
 
-```bash
-Allow group <USER_GROUP> to read secret-bundles in compartment <TARGET_COMPARTMENT> WHERE ALL {request.principal.type='opensearchpipeline', target.secret.id = '<target-secret-ocid>' }' }
-Allow group <USER_GROUP> to read secrets in compartment <TARGET_COMPARTMENT> WHERE ALL {request.principal.type='opensearchpipeline', target.secret.id = '<target-secret-ocid>' }
+```powershell
+<copy>
+Allow group USER_GROUP to read secret-bundles in compartment TARGET_COMPARTMENT WHERE ALL {request.principal.type='opensearchpipeline', target.secret.id = 'TARGET_SECRET_OCID' }' }
+
+Allow group USER_GROUP to read secrets in compartment TARGET_COMPARTMENT WHERE ALL {request.principal.type='opensearchpipeline', target.secret.id = 'TARGET_SECRET_OCID' }
+</copy>
 ```
 
 3. The following policy allows OpenSearch pipelines to use a bucket from Object Storage as the source coordination persistence:
 
-```bash
-Allow group <USER_GROUP> to manage objects in compartment <TARGET_COMPARTMENT> WHERE ALL {request.principal.type='opensearchpipeline', target.bucket.name='<source-coordination-bucket-name>'}
+```powershell
+<copy>
+Allow group USER_GROUP to manage objects in compartment TARGET_COMPARTMENT WHERE ALL {request.principal.type='opensearchpipeline', target.bucket.name='SOUCE_COORDINATION_BUCKET_NAME'}
+</copy>
 ```
 
 > Note: Visit Our Documentation for more information about [data prepper policy configuration](https://docs.oracle.com/en-us/iaas/Content/search-opensearch/Concepts/ociopensearchpipelines.htm#required-policies)
@@ -50,11 +62,11 @@ Allow group <USER_GROUP> to manage objects in compartment <TARGET_COMPARTMENT> W
 
 ## Task 2:  Create Object Storage buckets
 
-Data prepper supports both the **Pull** and the **Push** functionalities to pull/stream data from various sources into the opensearch cluster, and to push data from opensearch to other data consumers, respectively.  For the **Pull** we currently support multiple data sources including  Object Storage Bucket, and Kafka. Whereas for the Push we support HTTP, and OpenTelemetry.
+Data prepper supports both the **Pull** and the **Push** functionalities to pull/stream data from various sources into the opensearch cluster, and to push data from opensearch to other data consumers, respectively.  For the **Pull** we currently support multiple data sources including  **Object Storage Bucket, and Kafka**. Whereas for the Push we support **HTTP**, and **OpenTelemetry**.
 
-In this Lab, we will focus the **Pull** from Object Storage bucket to stream data into our Opensearch cluster.
+In this Lab, we will focus the **Pull** from **Object Storage** bucket to stream data into our Opensearch cluster.
 
-You need to create 2 buckets, 1 for dumping your application data, and another which the pipeline will use to track unassigned, assigned, and completed tasks.
+You need to create 2 buckets, 1 for dumping data to be ingested, and another which the pipeline will use to track unassigned, assigned, and completed tasks.
 
 1. Navigate to OCI Console, Click on the main menu and type **bucket**, then click on **Bucket** This should open the Object Storage bucket page.
 ![Create Bucket](images/create-bucket-1.png)
@@ -90,7 +102,7 @@ You need to create 2 buckets, 1 for dumping your application data, and another w
 <br/><br/>
 
 ## Task 3:  Create Vault and Vault Secrets
-The data prepper needs to access your cluster to stream data into your indices. When creating the pipeline, you must supply the Opensearch Credentials i.e Username and password.
+The data prepper needs to access your cluster to stream data into your indices. When creating the pipeline, you must supply the Opensearch Credentials i.e **Username** and **password**.
 These credentials need to be encrypted for security purposes. This is where the OCI Vault comes in! A vault allows your to create master encryption key to encrypt and store all your credentials which can be used by several consuming applications without compromising on security.
 A vault can contain several secrets.
 
@@ -128,9 +140,10 @@ A vault can contain several secrets.
 
     <br/>
 
-    - Enter a name for your secret e.g: *opensearch_username*.
+    - Enter a name for your secret e.g: **opensearch_username**.
     - Select **Manual Secret Generation**
-    - Type your opensearch actual username (e.g: admin1) in the **Secret Content** field. do not surround it with any quotes. This is the same username that you've using to connect to opensearch dashboard.
+    - Type your Opensearch actual username (e.g: admin1) in the **Secret Content** field. do not surround it with any quotes. This is the same username that you've been using to connect to opensearch dashboard.
+
     - Click **Create**
 
     <br/>
@@ -149,9 +162,10 @@ The Data Prepper requires you to specify an index into which data will be ingest
 
  For this Lab and for our use case, we will be creating 2 pipelines, one to stream knowledge base for a given app, and another to stream logs generate by said app so we can perform Root Cause Analysis in the subsequent Labs.
 
-1. Create KNN index using the *simple-ingestion-pipeline* created in the previous lab. This KNN index will automatically generate embeddings for data at getting streamed from the Data Prepper Pipeline.
+1. Create KNN index using the *simple-ingestion-pipeline* created in the previous lab. This KNN index will automatically generate embeddings for data streamed from the Data Prepper Pipeline.
 
-```bash
+```json
+<copy>
 PUT /app_knowledge_base
 {
     "settings": {
@@ -179,11 +193,13 @@ PUT /app_knowledge_base
         }
     }
 }
+</copy>
 ```
 
-If in addition to automatically generating text embedding during ingestion you also want to automatically chunk your data for fine grain search, you should consider creating your index with the  *chunking-pipeline* created in the previous lab.
+If in addition to automatically generating text embedding during ingestion, if you also want to automatically chunk your data for fine grain search, you should consider creating your index with the  *chunking-pipeline* created in the previous lab.
 
-```bash
+```json
+<copy>
 PUT app_knowledge_base
 {
   "settings": {
@@ -207,6 +223,7 @@ PUT app_knowledge_base
     }
   }
 }
+</copy>
 ```
 
 Feel free to change the  index name . You also need to be sure that the *dimension* parameter matches that of the embedding model you deployed and used in the ingestion pipeline creation.
@@ -232,11 +249,14 @@ For this Lab, we will be using the pre-trained **mini-L12** model deployed in th
 
 4. Scroll down and Select **Pull**, then select **Object Storage**
 5. Copy & paste the following yaml config into the  **Pipeline YaML**
-    field. Be sure to edit the config with the values for your object storage bucket name, namespace, opensearch_password secret OCID, opensearch_usernane OCID etc. Use the Object storage bucket where you created the 2 folders earlier. This is where you will be uploading the documents to ingest later.
+    field. Be sure to edit the config with the values for your **object storage bucket name, namespace, opensearch_password secret OCID, opensearch_usernane OCID** etc.
+
+    Use the Object storage bucket where you created the 2 folders earlier. This is where you will be uploading the documents to ingest later.
 
 <br/>
 
 ```bash
+<copy>
 version: 2
 pipeline_configurations:
   oci:
@@ -257,9 +277,9 @@ simple-sample-pipeline:
           interval: "PT30S"
         buckets:
           - bucket:
-              namespace: <YOUR-FIRST-BUCKET-NAMESPACE>
-              name: <YOUR-FIRST-BUCKET-NAME>
-              region: <REGION-KEY>
+              namespace: YOUR-FIRST-BUCKET-NAMESPACE
+              name: YOUR-FIRST-BUCKET-NAME
+              region: REGION-KEY
               filter:
                 include_prefix: ["knowledge_base"]
   processor:
@@ -270,11 +290,13 @@ simple-sample-pipeline:
           overwrite_if_to_key_exists: true
   sink:
     - opensearch:
-        hosts: [ <YOUR-OPENSEARCH-OCID> ]
+        hosts: [ YOUR-OPENSEARCH-OCID ]
         username: ${{oci_secrets:opensearch-username}}
         password: ${{oci_secrets:opensearch-password}}
         insecure: false
         index: app_knowledge_base
+
+</copy>
 ```
 
 > Note: If you used a different index name in the previous step, make sure you use the same index name in the yaml config.
@@ -282,25 +304,28 @@ simple-sample-pipeline:
 5.  Scroll down to the **Source Coordination YAML** section and copy paste the yaml config below. Be sure to edit values for bucket-name and namespace . Note that this should be for the second bucket.
 
 ```bash
+<copy>
 source_coordination:
   store:
     oci-object-bucket:
-      name: <YOUR-SECOND-BUCKET-NAME>
-      namespace: <YOUR-SECOND-BUCKET-NAMESPACE>
+      name: YOUR-SECOND-BUCKET-NAME
+      namespace: YOUR-SECOND-BUCKET-NAMESPACE
+</copy>
 ```
 
 
 6. Create a second pipeline with the same yaml config as above. Only change the index name and the folder name. You can use first folder e.g **knowledge_base** for folder name in the Knolwdege_base pipeline and **app-logs** in the app-logs pipeline
 
 ```bash
+<copy>
 version: 2
 pipeline_configurations:
   oci:
     secrets:
       opensearch-username:
-        secret_id: <YOUR-OPENSERACH-USERNAME-SECRET-OCID>
+        secret_id: YOUR-OPENSERACH-USERNAME-SECRET-OCID
       opensearch-password:
-        secret_id: <YOUR-OPENSEARCH-PASSWORD-SECRET-OCID>
+        secret_id: YOUR-OPENSEARCH-PASSWORD-SECRET-OCID
 simple-sample-pipeline:
   source:
     oci-object:
@@ -313,9 +338,9 @@ simple-sample-pipeline:
           interval: "PT30S"
         buckets:
           - bucket:
-              namespace: <YOUR-FIRST-BUCKET-NAMESPACE>
-              name: <YOUR-FIRST-BUCKET-NAME>
-              region: <REGION-KEY>
+              namespace: YOUR-FIRST-BUCKET-NAMESPACE
+              name: YOUR-FIRST-BUCKET-NAME
+              region: REGION-KEY
               filter:
                 include_prefix: ["app-logs"]
   processor:
@@ -326,22 +351,25 @@ simple-sample-pipeline:
           overwrite_if_to_key_exists: true
   sink:
     - opensearch:
-        hosts: [ <YOUR-OPENSEARCH-OCID> ]
+        hosts: [ YOUR-OPENSEARCH-OCID ]
         username: ${{oci_secrets:opensearch-username}}
         password: ${{oci_secrets:opensearch-password}}
         insecure: false
         index: app_live_logs
+</copy>
 ```
 
 
 <br/>
 
 ```bash
+<copy>
 source_coordination:
   store:
     oci-object-bucket:
-      name: <YOUR-SECOND-OBJECT-STORAGE-BUCKET>
-      namespace: <YOUR-BUCKET-NAMESPACE>
+      name: YOUR-SECOND-OBJECT-STORAGE-BUCKET
+      namespace: YOUR-BUCKET-NAMESPACE
+</copy>
 ```
 
  <br/> <br/>
@@ -354,7 +382,7 @@ source_coordination:
 
 ![Data Preper](images/bucket-folder-1.png)
 
-4. Download the [app_knowledge_base.ndjson](files/app_knowledge_base.ndjson) and the [app-live-logs.json](files/app-live-logs.json). Optionally download the [sample_logs.ndjson](files/sample_logs.ndjson) for additional test data.
+4. Download the [app-knowledge-base.ndjson](files/app_knowledge_base.ndjson) and the [app-live-logs.json](files/app-live-logs.json). Optionally download the [sample-logs.ndjson](files/sample_logs.ndjson) for additional test data.
 
 5. Navigate to the **knowledge_base** folder in your object storage bucket, Click on **Upload Objects**  then drag and drop the *app_knowledge_base.ndjson*. Click **Next** to upload the json file in the folder. Then Click **Close** to return to the Folder.
 
@@ -372,7 +400,8 @@ source_coordination:
 2. Navigate to the **Dev Tools**
 3. Run command below
 
-```bash
+```json
+<copy>
 GET app_knowledge_base/_search
 { "_source": {"excludes": ["chunk_embedding.knn","embedding"]},
   "size": 1000,
@@ -380,6 +409,7 @@ GET app_knowledge_base/_search
     "match_all": {}
   }
 }
+</copy>
 ```
 
 You should a response like the following
@@ -400,4 +430,4 @@ scan:
 ## Acknowledgements
 
 * **Author** - **Landry Kezebou**, Lead AI/ML Engineer, OCI Opensearch
-* **Last Updated By/Date** - Landry Kezebou, September 2025
+* **Created** - September 2025
