@@ -6,7 +6,7 @@
 
 In this lab, you will learn how to leverage the flow framework to build AI agent in very simple steps with as minimal configurations as possible.
 
-Estimated Time: 15 minutes
+**Estimated Time: 15 minutes**
 
 ### Objectives
 
@@ -58,7 +58,8 @@ Every one of these steps has dozens of knobs (IDs, dimensions, index names, cred
 
 The Flow Framework reduces this to a single POST using a template. It supplies sensible defaults for a working end-to-end pipeline, while allowing you to override any field when needed.
 
-```bash
+```json
+<copy>
 POST /_plugins/_flow_framework/workflow?use_case=<USE_CASE_NAME>&provision=true
 {
   "<REQUIRED_FIELD_1>": "<VALUE>",
@@ -67,18 +68,21 @@ POST /_plugins/_flow_framework/workflow?use_case=<USE_CASE_NAME>&provision=true
   "<OVERRIDDEN_FIELD_1>": "<VALUE>",
   "<OVERRIDDEN_FIELD_2>": "<VALUE>"
 }
-
+</copy>
 ```
 
 For example, if you want your Cohere chat model to use 1000 max tokens instead of the default 600, just include:
 
-```bash
+```json
 "create_connector.parameters.max_tokens": 1000
 ```
 
 After invoking the workflow, track progress and outputs with the status API:
-```bash
+
+```json
+<copy>
 GET /_plugins/_flow_framework/workflow/<WORKFLOW_ID>/_status
+</copy>
 ```
 ![flow framework](images/flow-framework1.png)
 
@@ -115,20 +119,22 @@ The Agent calls the RAG Tool, which:
 
 #### Create the workflow:
 
-```bash
+```json
+<copy>
 POST /_plugins/_flow_framework/workflow?use_case=rag_agent_with_cohere_and_pretrained_model&provision=true
 {
   "create_connector.compartment_id": "<COMPARTMENT_ID>",
   "text_embedding.field_map.input": "<INPUT_FIELD>",
   "text_embedding.field_map.output": "<OUTPUT_FIELD>"
 }
-
+</copy>
 ```
+
 This provisions a minimal RAG Agent that searches the document input field and generates an answer grounded in the retrieved content.
 
 Response:
 
-```bash
+```json
 {
   "workflow_id": "Wh_NUJkBi6TSXBeiG2X8"
 }
@@ -136,13 +142,16 @@ Response:
 
 Get the Workflow Status
 
-```bash
+```json
+<copy>
 GET /_plugins/_flow_framework/workflow/Wh_NUJkBi6TSXBeiG2X8/_status
+</copy>
 ```
 
 Response:
 
-```bash
+```json
+<copy>
 {
   "workflow_id": "Wh_NUJkBi6TSXBeiG2X8",
   "state": "COMPLETED",
@@ -197,13 +206,15 @@ Response:
     }
   ]
 }
+</copy>
 ```
 
 
 #### Add data to the index
 Since you choose the **template without pre-existing index**, the workflow will automatically create a knn index for you and you can directly add data into that index. You will see the indexname in the output of the workflow. You can control what name to give your index and what field name to give your input text and output embedding vector field.
 
-```bash
+```json
+<copy>
 POST _bulk
 {"index": {"_index": "rag-search-index", "_id": "1"}}
 {"input": "Chart and table of population level and growth rate for the Ogden-Layton metro area from 1950 to 2023. United Nations population projections are also included through the year 2035.\nThe current metro area population of Ogden-Layton in 2023 is 750,000, a 1.63% increase from 2022.\nThe metro area population of Ogden-Layton in 2022 was 738,000, a 1.79% increase from 2021.\nThe metro area population of Ogden-Layton in 2021 was 725,000, a 1.97% increase from 2020.\nThe metro area population of Ogden-Layton in 2020 was 711,000, a 2.16% increase from 2019."}
@@ -217,7 +228,7 @@ POST _bulk
 {"input": "Chart and table of population level and growth rate for the Austin metro area from 1950 to 2023. United Nations population projections are also included through the year 2035.\\nThe current metro area population of Austin in 2023 is 2,228,000, a 2.39% increase from 2022.\\nThe metro area population of Austin in 2022 was 2,176,000, a 2.79% increase from 2021.\\nThe metro area population of Austin in 2021 was 2,117,000, a 3.12% increase from 2020.\\nThe metro area population of Austin in 2020 was 2,053,000, a 3.43% increase from 2019."}
 {"index": {"_index": "rag-search-index", "_id": "6"}}
 {"input": "Chart and table of population level and growth rate for the Seattle metro area from 1950 to 2023. United Nations population projections are also included through the year 2035.\\nThe current metro area population of Seattle in 2023 is 3,519,000, a 0.86% increase from 2022.\\nThe metro area population of Seattle in 2022 was 3,489,000, a 0.81% increase from 2021.\\nThe metro area population of Seattle in 2021 was 3,461,000, a 0.82% increase from 2020.\\nThe metro area population of Seattle in 2020 was 3,433,000, a 0.79% increase from 2019."}
-
+</copy>
 ```
 
 
@@ -227,7 +238,8 @@ POST _bulk
 
 The Agent_ID can be retrieved from the workflow by tracking the status using the WorkflowID as discussed above. Make sure to track the status of the workflow until it says **COMPLETE**.
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/Yh_NUJkBi6TSXBei4WVa/_execute
 {
   "parameters": {
@@ -235,11 +247,13 @@ POST /_plugins/_ml/agents/Yh_NUJkBi6TSXBei4WVa/_execute
     "question": "Can you analyze population growth data and provide evidence for population increase in 2023?"
   }
 }}
+</copy>
 ```
 
 Response:
 
-```bash
+```json
+<copy>
 {
   "inference_results": [
     {
@@ -254,6 +268,7 @@ Similarly, for Miami, the population data indicates a consistent growth trend. I
     }
   ]
 }}
+</copy>
 ```
 
 
@@ -263,7 +278,8 @@ Similarly, for Miami, the population data indicates a consistent growth trend. I
 
 If you want the Agent to search with one string but ask the LLM a different question, add this parameter to the workflow and then provide both at agent execution time:
 
-```bash
+```json
+<copy>
 POST /_plugins/_flow_framework/workflow?use_case=rag_agent_with_cohere_and_pretrained_model&provision=true
 {
   "create_connector.compartment_id": "<COMPARTMENT_ID>",
@@ -271,7 +287,7 @@ POST /_plugins/_flow_framework/workflow?use_case=rag_agent_with_cohere_and_pretr
   "text_embedding.field_map.output": "output",
   "rag_tool.parameters.input": "${parameters.search}"
 }
-
+</copy>
 ```
 
 
@@ -292,17 +308,18 @@ POST /_plugins/_flow_framework/workflow?use_case=rag_agent_with_cohere_and_pretr
 - Agent
 
 #### When to use:
-You already have a semantic/neural search index (with an embedding pipeline). This workflow layers a RAG Agent on top of it. In this use case you can use the *app_knowledge_base* knn index we created in the previous labs.
+You already have a semantic/neural search index (with an embedding pipeline). This workflow layers a RAG Agent on top of it. In this use case you can use the *app-knowledge-base* knn index we created in the previous labs.
 If using an existing KNN index, you should make sure that to pass the model embedding model ID that your used in the ingestion pipeline to ingest data into your index.
 The embedding field name should also map the index configuration.
 
 #### Required inputs (in addition to Case 1 fields):
-- **rag_tool.index_name**: the existing index name used for RAG search
-- **rag_tool.embedding_model_id**: the embedding model ID used by that index’s pipeline
+- **rag-tool.index-name**: the existing index name used for RAG search
+- **rag-tool.embedding-model-id**: the embedding model ID used by that index’s pipeline
 
 #### Create the workflow:
 
-```bash
+```json
+<copy>
 POST /_plugins/_flow_framework/workflow?use_case=rag_agent_with_cohere_and_existing_index&provision=true
 {
   "create_connector.compartment_id": "<COMPARTMENT_ID>",
@@ -311,12 +328,14 @@ POST /_plugins/_flow_framework/workflow?use_case=rag_agent_with_cohere_and_exist
   "rag_tool.index_name": "<INDEX_NAME>",
   "rag_tool.embedding_model_id": "<EMBEDDING_MODEL_ID>"
 }
+</copy>
 ```
 
 Example for indexname=*app_knowledge_base*, text field =*text*, and output embedding field =*embedding*:
 
 
-```bash
+```json
+<copy>
 POST /_plugins/_flow_framework/workflow?use_case=rag_agent_with_cohere_and_existing_index&provision=true
 {
   "create_connector.compartment_id": "<COMPARTMENT_ID>",
@@ -325,18 +344,24 @@ POST /_plugins/_flow_framework/workflow?use_case=rag_agent_with_cohere_and_exist
   "rag_tool.index_name": "app_knowledge_base",
   "rag_tool.embedding_model_id": "VaSmT5kBLyBOyptyHqop"
 }
+</copy>
 ```
+
 You can similarly configure this template to separate search from question (add rag_tool.parameters.input like in Case 1 and pass parameters.search at agent execution).
 
 
 Track the Workflow to make sure it completed successfully:
 
-```bash
+```json
+<copy>
 GET /_plugins/_flow_framework/workflow/vhD5UJkBvU0MbCzM3Qh0/_status
+</copy>
 ```
+
 Response:
 
-```bash
+```json
+
 {
   "workflow_id": "vhD5UJkBvU0MbCzM3Qh0",
   "state": "COMPLETED",
@@ -367,12 +392,14 @@ Response:
     }
   ]
 }
+
 ```
 
 
 Retrieve the AgentID from tracking the Workflow  and execute the Agent.
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/wxD5UJkBvU0MbCzM3ggM/_execute
 {
   "parameters": {
@@ -380,12 +407,13 @@ POST /_plugins/_ml/agents/wxD5UJkBvU0MbCzM3ggM/_execute
     "question": "I'm seeing the following error in logs in my app, how can I resolve them?"
   }
 }
+</copy>
 ```
 
 
 Response:
 
-```bash
+```json
 {
   "inference_results": [
     {
@@ -432,7 +460,6 @@ To resolve these errors, you should follow the provided resolution steps for eac
     }
   ]
 }
-
 ```
 
 
@@ -456,16 +483,18 @@ To resolve these errors, you should follow the provided resolution steps for eac
 Creates an Agent that can discover indices and run PPL queries to answer natural-language questions about data already in the cluster.
 Create the workflow (only needs the cluster compartment OCID):
 
-```bash
+```json
+<copy>
 POST /_plugins/_flow_framework/workflow?use_case=conversational_agent_with_cohere&provision=true
 {
   "create_connector.compartment_id": "<YOUR_COMPARTMENT_OCID>"
 }
+</copy>
 ```
 
 Response:
 
-```bash
+```json
 {
   "workflow_id": "Yx8DUZkBi6TSXBeij2Ur"
 }
@@ -474,7 +503,7 @@ Response:
 Track the workflow using the Workflow ID
 
 
-```bash
+```json
 {
   "workflow_id": "Yx8DUZkBi6TSXBeij2Ur",
   "state": "COMPLETED",
@@ -511,7 +540,8 @@ Track the workflow using the Workflow ID
 
 #### Execute the Agent:
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/<AGENT_ID>/_execute
 {
   "parameters": {
@@ -520,11 +550,12 @@ POST /_plugins/_ml/agents/<AGENT_ID>/_execute
     "selected_tools": ["PPLTool", "ListIndexTool"]
   }
 }
+</copy>
 ```
 
 Response:
 
-```bash
+```json
 {
   "inference_results": [
     {
@@ -565,35 +596,35 @@ In the templates, any placeholder like ${{input}} (or values referenced via ${pa
 Caution: Some fields are foundational and generally should not be changed, because they’re required for the underlying resources to interoperate correctly.
 Below is a list of fields you can configure in your Flow Framework Template:
 
-  1. create_connector.version
+  1. 'create_connector.version'
 
-  2. create_connector.protocol
+  2. 'create_connector.protocol'
 
-  3. create_connector.parameters.endpoint
+  3. 'create_connector.parameters.endpoint'
 
-  4. create_connector.actions.url
+  4. 'create_connector.actions.url'
 
-  5. create_connector.actions.request_body
+  5. 'create_connector.actions.request_body'
 
-  6. create_connector.actions.pre_process_function
+  6. 'create_connector.actions.pre_process_function'
 
-  7. create_connector.actions.post_process_function
+  7. 'create_connector.actions.post_process_function'
 
-  8. rag_tool.parameters.prompt
+  8. 'rag_tool.parameters.prompt'
 
-  9. rag_tool.parameters.tenant_id
+  9. 'rag_tool.parameters.tenant_id'
 
-  10. rag_agent.prompt
+  10. 'rag_agent.prompt'
 
-  11. register_conversational_agent.memory.type
+  11. 'register_conversational_agent.memory.type'
 
-  12. register_conversational_agent.type
+  12. 'register_conversational_agent.type'
 
-  13. register_conversational_agent.app_type
+  13. 'register_conversational_agent.app_type'
 
 
 
-If you need non-default behavior, prefer adding explicit override fields (e.g., max_tokens, temperature, index_name, embedding_field) rather than altering core wiring.
+If you need non-default behavior, prefer adding explicit override fields (e.g., max-tokens, temperature, index-name, embedding-field) rather than altering core wiring.
 
 
 Flow Framework Templates:
