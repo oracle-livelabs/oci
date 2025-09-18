@@ -100,15 +100,32 @@ In this activity you will use enable your Agent Team in the application for use 
 
 12. The Agent appears in a panel pop-out from the right.  You can interact with your agent via the Ask Oracle field at the button of the pop-out panel.  Based on your defined agent, you can ask about Assets, Maintenance, Warranties and even have the Agent create a Maintenance Work Order for your asset.
 
-    > 1. Interact with your agent via the **Ask Oracle**. 
+    > 1. Interact with your agent via the **Ask Oracle** field at the bottom.  Type **What is the manufacturers maintenance schedule for asset CA-RIDGELINE-001** and press enter or click the up arrow ![checkered flag](images/uparrow.jpg). 
 
     ![start debug](images/scmimage012.jpg) <br>
 
-13. Congratulations.  You've finished the creation and deployment of the Agent Team, making it easy for your users to leverage the power of Oracle AI capabilities.  ![checkered flag](images/checkeredflag.jpg)
+13. It looks like there's already a work order scheduled for preventive maintenance.  Why don't you check for any recalls?.
 
-    
+    > 1. Type **Are there any outstanding recalls** and press enter or click the up arrow ![checkered flag](images/uparrow.jpg). 
 
-14. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+    ![start debug](images/scmimage013.jpg) <br>
+
+14. There is a recall, so you should create a Maintenance Work order to take care of it.  Fortunately, the agent is going to help you with that.
+
+    > 1. Type **Yes, please create a maintenance work order for this recall** and press enter or click the up arrow ![checkered flag](images/uparrow.jpg). 
+
+    ![start debug](images/scmimage014.jpg) <br>
+
+15. The agent has created your Work Order, so you can query that to verify.
+
+    > 1. Click the **x** in the upper right.
+
+    ![start debug](images/scmimage015.jpg) <br>
+
+16. Congratulations. ![checkered flag](images/checkeredflag.jpg)  You've finished the creation and deployment of the Agent Team, making it easy for your users to leverage the power of Oracle AI capabilities.
+
+
+17. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
