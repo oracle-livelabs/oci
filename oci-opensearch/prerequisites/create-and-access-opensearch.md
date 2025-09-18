@@ -98,7 +98,7 @@ You can find more information in the [connection-to-oci-search-service--opensear
 
       ```powershell
       <copy>
-      <copy>curl -XGET "https://<YOUR_OPENSEARCH_PRIVATE_IP>:9200/_cluster/health?pretty" -k -u <USERID:PASSWORD></copy>
+      curl -XGET "https://<YOUR_OPENSEARCH_PRIVATE_IP>:9200/_cluster/health?pretty" -k -u <USERID:PASSWORD>
       </copy>
       ```
 

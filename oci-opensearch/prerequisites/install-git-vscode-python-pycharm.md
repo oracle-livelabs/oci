@@ -2,19 +2,19 @@
 
 ## Introduction
 
-In this lab, your focus is to install some IDE in your local machine so you can download sample code and execute to access your cluster and perform task such as data ingestion, data exploratory analysis, semantic search, visual search, conversational search, integration with LangChain, etc.
+In this lab, your focus is to install some IDEs in your local machine so you can download sample code and execute to access your cluster and perform task such as data ingestion, data exploratory analysis, semantic search, visual search, conversational search, integration with LangChain, etc.
 
 Estimated Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
-1. Install Python on macOS and Windows
-2. Install/verify ```pip```
-3. Install PyCharm and Jupyter Notebook
-4. Install Visual Studio Code (VS Code)
-5. Create & activate a virtual environment (venv)
-6. Configure PyCharm to use your venv
+1. Install *Python* on macOS and Windows
+2. Install/verify *pip*
+3. Install *PyCharm* and Jupyter Notebook
+4. Install *Visual Studio Code* (VS Code)
+5. Create & activate a virtual environment (*venv*)
+6. Configure PyCharm to use your *venv*
 
 <br/><br/>
 
@@ -28,9 +28,11 @@ There are several options for you to install python 3 on you local machine:
    - Open your Download folder, locate the the **.pkg** installer file you just downloaded and double click on it to launch the installer. Follow the instructions to install python 3 on your machine.
    - Confirm install:
 
-```bash
+```powershell
+<copy>
 python3 --version
 pip3 --version
+</copy>
 ```
 
 > Tip: On macOS, Python runs as `python3` and `pip3` by default.
@@ -43,9 +45,12 @@ pip3 --version
    - **Important:** Check **“Add Python to PATH”** during setup.
    - Choose “Install Now” and finish.
    - Confirm install (Command Prompt / PowerShell):
-```bash
+
+```powershell
+<copy>
 py --version
 py -m pip --version
+</copy>
 ```
 
 
@@ -56,34 +61,40 @@ py -m pip --version
 Most modern Python installers include ```pip```. If it’s missing, use one of the options below.
 1. Quick check
 
-```bash
+```powershell
+<copy>
 # macOS/Linux
 python3 -m pip --version
 
 # Windows
 py -m pip --version
+</copy>
 ```
 
 2. Ensure with built-in ```ensurepip```
 
-```bash
+```powershell
+<copy>
 # macOS/Linux
 python3 -m ensurepip --upgrade
 
 # Windows
 py -m ensurepip --upgrade
+</copy>
 ```
 
 3. Fallback: ```get-pip.py```
    - Download ```get-pip.py```: https://bootstrap.pypa.io/get-pip.py
    - Run:
 
-```bash
+```powershell
+<copy>
 # macOS/Linux
 python3 get-pip.py
 
 # Windows
 py get-pip.py
+</copy>
 ```
 
 <br/><br/>
@@ -100,7 +111,8 @@ py get-pip.py
 2. **Jupyter Notebook:**
 You can install Jupyter with `pip` (works great for this lab):
 
-```bash
+```powershell
+<copy>
 # macOS/Linux
 python3 -m pip install --upgrade pip
 python3 -m pip install notebook
@@ -108,15 +120,18 @@ python3 -m pip install notebook
 # Windows
 py -m pip install --upgrade pip
 py -m pip install notebook
+</copy>
 ```
 
 Run it:
 ```bash
+<copy>
 jupyter notebook
 
 # Or
 
 jupyter-notebook
+</copy>
 ```
 It will open your browser at `http://localhost:8888`.
 
@@ -145,7 +160,8 @@ Useful docs:
 
 ### macOS / Linux
 
-```bash
+```powershell
+<copy>
 # 1) Navigate to your project folder
 cd ~/Users/<YOU>/<PATH-TO-PROJECT-FOLDER>>
 
@@ -158,17 +174,21 @@ source .venv/bin/activate
 # 4) Verify
 python --version
 pip --version
+</copy>
 ```
 
 To **deactivate** later:
 
 ```bash
+<copy>
 deactivate
+</copy>
 ```
 
 ### Windows (CMD or PowerShell)
 
-```bash
+```powershell
+<copy>
 # 1) Navigate to your project folder
 cd C:\Users\<YOU>\projects\my-app
 
@@ -186,6 +206,7 @@ py -m venv .venv
 # 4) Verify
 python --version
 pip --version
+</copy>
 ```
 
 > Tip: Use a `.venv` folder at the project root so common tools (PyCharm, VS Code) auto-detect it.
@@ -224,10 +245,12 @@ You can either **create the venv from PyCharm** or **point PyCharm to an existin
 
 With your venv active (terminal or PyCharm), run:
 
-```bash
+```powershell
+<copy>
 python -c "import sys; print(sys.executable)"
 python -m pip install requests
 python -c "import requests; print('OK', requests.__version__)"
+</copy>
 ```
 
 Expected: prints the venv’s Python path and `OK <version>`.
@@ -253,7 +276,8 @@ Expected: prints the venv’s Python path and `OK <version>`.
 
 ### Appendix: Common Commands Cheat-Sheet
 
-```bash
+```powershell
+<copy>
 # Create venv
 python3 -m venv .venv           # macOS/Linux
 py -m venv .venv                # Windows
@@ -271,6 +295,7 @@ python -m pip install notebook
 
 # Run Jupyter
 jupyter notebook
+</copy>
 ```
 
 ## Acknowledgements
