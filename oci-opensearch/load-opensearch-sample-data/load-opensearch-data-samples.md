@@ -2,10 +2,10 @@
 
 ## Introduction
 
-In this lab you learn how to ingest Opensearch Sample data from the Opensearch dashboard and how to visualize the data.
-This data will also be used in subsequent labs to demonstrate other functionalities such as AI agents and Flow Agents and advanced observability.
+In this lab you will learn how to ingest Opensearch Sample data from the Opensearch dashboard into your cluster and how to visualize the your data.
+This data will also be used in subsequent labs to demonstrate other functionalities such as *Semantic Search*, *RAG*, *AI Agents*, *Flow Agents* and *advanced observability*.
 
-Estimated Time: 10 minutes
+**Estimated Time: 10 minutes**
 
 ### Objectives
 
@@ -20,15 +20,19 @@ In this lab, you will:
 1. From your local machine, establish port forwarding. Refer to the documentation on [how to connect to opensearch dashboard](https://docs.oracle.com/en/learn/oci-opensearch/index.html#task-3-test-the-connection-to-oci-search-service--opensearch-endpoint) for more information.
 
 
-      ```bash
-      ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 -L 127.0.0.1:9200:<your_opensearch_private_IP>:9200 opc@<your_VM_instance_public_IP> -i ~/.ssh/id_rsa
-      ```
+```powershell
+<copy>
+ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 -L 127.0.0.1:9200:<your_opensearch_private_IP>:9200 opc@<your_VM_instance_public_IP> -i ~/.ssh/id_rsa
+</copy>
+```
 <br />
 
-2. Access https://localhost:5601 in your browser.
+2. Access *https://localhost:5601* in your browser.
    > **Note:** Currently, depending on the browser, a warning message similar to "Your connection is not private" is displayed. Choose the option which allows you to proceed. The following screen is then displayed:
 
 <br /><br />
+
+
 
 ## Task 1: Ingest/Load the Sample data into your cluster
 
@@ -45,11 +49,14 @@ In this lab, you will:
 
 ![Add Opensearch Sample Data](images/add-opensearch-data-samples-1.png)
 
-3. To validate that your Index is successfully create in your cluster, click on the **menu** button, then scroll down and Click on **Dev Tools** to open the dev environment where you can run commands. Run the commands below to list the indices on your cluster and verify that the data sample name is present in the list of indices.
+3. To validate that the sample data indices you added are successfully created in your cluster, click on the **menu** button, then scroll down and Click on **Dev Tools** to open the dev environment where you can run commands. Run the commands below to list the indices on your cluster and verify that the data sample name is present in the list of indices.
 
-    ```bash
-    <copy>GET _cat/indices<copy/>
-    ```
+```bash
+<copy>
+GET _cat/indices
+<copy/>
+```
+
 ![access opensearch dev tool](images/opensearch-dashboard-access-dev-tools.png)
 ![access opensearch dev tool](images/opensearch-dashboard-access-dev-tools-2.png)
 
@@ -58,6 +65,7 @@ In this lab, you will:
 <br /><br />
 
 ## Task 2: Visualize your data
+
 To visualize the data
 1. Click on the **Home** button on your dashboard
 2. Click on **Add data**
@@ -74,9 +82,12 @@ To visualize the data
 
 ## Task 3: Query The data
 
-1. First view the Index mapping by running the command below. Feel free to replace *opensearch_dashboards_sample_data_ecommerce* with your index of choice
+1. First view the Index mapping by running the command below. Feel free to replace `opensearch_dashboards_sample_data_ecommerce` with your index of choice
+
 ```bash
+<copy>
 GET opensearch_dashboards_sample_data_ecommerce/_mapping
+</copy>
 ```
 
 
@@ -84,27 +95,32 @@ GET opensearch_dashboards_sample_data_ecommerce/_mapping
 
 <br />
 
-2. Perform a simple match all query on the data
+2. Perform a simple `match_all` query on the data
+
 ```bash
+<copy>
 GET opensearch_dashboards_sample_data_ecommerce/_search
     {
     "query": {
         "match_all": {}
     }
     }
+</copy>
 ```
 ![Simple Search match all query result](images/simple-search.png)
 
 
 3. Perform Keyword/BM25 Search:
-the BM25 Search allows you to perform keyword search on your data to retrieve relevant documents. BM25 can be configure to search on a single field/metadata or multiple fields concurrently.
-You can also apply **pre-filters** and **post-filters** to control the search output.
+the BM25 Search allows you to perform keyword search on your data to retrieve relevant documents. BM25 can be configured to search on a single or multiple fields/metadata concurrently.
+
+You can also apply *pre-filters* and *post-filters* to control the search output.
 
 Examples:
 
 - Simple BM25 query:
 
 ```bash
+<copy>
 GET opensearch_dashboards_sample_data_ecommerce/_search
 {
 "query": {
@@ -125,11 +141,13 @@ GET opensearch_dashboards_sample_data_ecommerce/_search
 }
 }
 }
+</copy>
 ```
 
 - Complex BM25 Query:
 
 ```bash
+<copy>
 GET opensearch_dashboards_sample_data_ecommerce/_search
 {
 "size": 10,
@@ -169,6 +187,7 @@ GET opensearch_dashboards_sample_data_ecommerce/_search
     }
 }
 }
+</copy>
 ```
 
 <br /><br />

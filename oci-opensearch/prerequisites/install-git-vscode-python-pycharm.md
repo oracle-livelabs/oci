@@ -4,7 +4,7 @@
 
 In this lab, your focus is to install some IDEs in your local machine so you can download sample code and execute to access your cluster and perform task such as data ingestion, data exploratory analysis, semantic search, visual search, conversational search, integration with LangChain, etc.
 
-Estimated Time: 10 minutes
+**Estimated Time: 10 minutes**
 
 ### Objectives
 
