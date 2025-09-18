@@ -4,11 +4,11 @@
 
 In this lab, you will be creating a Data Prepper pipeline to automate data ingestion into you opensearch index.
  You will be creating 2 pipelines: one for processing a template app knowledge base, and another for streaming app live logs.
- 
+
  The ultimate goal of the workshop is to be able to leverage Agentic framework to perform Root Cause Analysis (RCA) seamlessly without writing code. The RCA part will be demonstrated in the subsequent labs.
 
-**Estimated Time: 15 minutes
-**
+**Estimated Time: 15 minutes**
+
 ### Objectives
 
 In this lab, you will:
@@ -153,7 +153,7 @@ A vault can contain several secrets.
 4. Create a secret for your opensearch password
 Repeat step 3 above to create a secret for your opensearch password.
 
-5. Open **opensearch_username** and **opensearch_password** secrets you just created and take note of the respective secret OCID. You will need this in the next task to create the Data Prepper Pipeline.
+5. Open **opensearch-username** and **opensearch-password** secrets you just created and take note of the respective secret OCID. You will need this in the next task to create the Data Prepper Pipeline.
 
 <br/><br/>
 
@@ -249,7 +249,7 @@ For this Lab, we will be using the pre-trained **mini-L12** model deployed in th
 
 4. Scroll down and Select **Pull**, then select **Object Storage**
 5. Copy & paste the following yaml config into the  **Pipeline YaML**
-    field. Be sure to edit the config with the values for your **object storage bucket name, namespace, opensearch_password secret OCID, opensearch_usernane OCID** etc.
+    field. Be sure to edit the config with the values for your **object storage bucket name, namespace, opensearch-password secret OCID, opensearch-usernane OCID** etc.
 
     Use the Object storage bucket where you created the 2 folders earlier. This is where you will be uploading the documents to ingest later.
 
@@ -262,9 +262,9 @@ pipeline_configurations:
   oci:
     secrets:
       opensearch-username:
-        secret_id: <YOUR-OPENSERACH-USERNAME-SECRET-OCID>
+        secret_id: YOUR-OPENSERACH-USERNAME-SECRET-OCID
       opensearch-password:
-        secret_id: <YOUR-OPENSEARCH-PASSWORD-SECRET-OCID>
+        secret_id: YOUR-OPENSEARCH-PASSWORD-SECRET-OCID
 simple-sample-pipeline:
   source:
     oci-object:
@@ -314,7 +314,7 @@ source_coordination:
 ```
 
 
-6. Create a second pipeline with the same yaml config as above. Only change the index name and the folder name. You can use first folder e.g **knowledge_base** for folder name in the Knolwdege_base pipeline and **app-logs** in the app-logs pipeline
+6. Create a second pipeline with the same yaml config as above. Only change the index name and the folder name. You can use first folder e.g **knowledge-base** for folder name in the Knowledge base pipeline and **app-logs** in the app-logs pipeline
 
 ```bash
 <copy>
@@ -384,7 +384,7 @@ source_coordination:
 
 4. Download the [app-knowledge-base.ndjson](files/app_knowledge_base.ndjson) and the [app-live-logs.json](files/app-live-logs.json). Optionally download the [sample-logs.ndjson](files/sample_logs.ndjson) for additional test data.
 
-5. Navigate to the **knowledge_base** folder in your object storage bucket, Click on **Upload Objects**  then drag and drop the *app_knowledge_base.ndjson*. Click **Next** to upload the json file in the folder. Then Click **Close** to return to the Folder.
+5. Navigate to the **knowledge-base** folder in your object storage bucket, Click on **Upload Objects**  then drag and drop the *app-knowledge-base.ndjson*. Click **Next** to upload the json file in the folder. Then Click **Close** to return to the Folder.
 
 6. Navigate to the **app-logs** folder, Click on **Upload Objects**  then drag and drop the *app-live-logs.json*. Click **Next** to upload the json file in the folder.
 

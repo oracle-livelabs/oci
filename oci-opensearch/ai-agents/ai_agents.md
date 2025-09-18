@@ -8,6 +8,7 @@ The widespread adoption and success of Agentic AI systems has had a transformati
 With a mission to keep the AI momentum growing stronger while simplifying AI app development, Opensearch now has built-in support for  **AI Agents**,  **Agent Tools**—reusable, declarative capabilities like keyword search, aggregations, schema introspection, RAG, etc..
 
 An **agent** orchestrates perform a set of actions depending on tools configured. For a list of supported agents, see [Agents](https://docs.opensearch.org/latest/ml-commons-plugin/agents-tools/agents/index/).
+
 A tool provides support for the agent to perform specific tasks. Some examples of tools are the VectorDBTool, which supports vector search, and the ListIndexTool, which executes the List Indices API. For a list of supported tools, see [Tools](https://docs.opensearch.org/latest/ml-commons-plugin/agents-tools/tools/index/).
 
 A **flow agent** on the other hand, runs a sequence of tools in order a specific preset order and returns the last tool’s output.
@@ -36,69 +37,75 @@ This Lab assumes that you already:
 The **ListIndexTool** retrieves index information for the OpenSearch cluster
 
 1. Register a Flow Agent that will run the ListIndexTool
-    -
 
-```bash
-    POST /_plugins/_ml/agents/_register
-    {
-        "name": "Test_Agent_For_ListIndex_tool",
-        "type": "flow",
-        "description": "this is a test agent for the ListIndexTool",
-        "tools": [
-            {
-            "type": "ListIndexTool",
-            "name": "DemoListIndexTool",
-            "parameters": {
-                "input": "${parameters.question}"
-            }
-            }
-        ]
-    }
+```json
+<copy>
+POST /_plugins/_ml/agents/_register
+{
+    "name": "Test_Agent_For_ListIndex_tool",
+    "type": "flow",
+    "description": "this is a test agent for the ListIndexTool",
+    "tools": [
+        {
+        "type": "ListIndexTool",
+        "name": "DemoListIndexTool",
+        "parameters": {
+            "input": "${parameters.question}"
+        }
+        }
+    ]
+}
+</copy>
 ```
 
 Response :
-```bash
-    {
-    "agent_id": "wd71RZkBwL_MpPtE4iJ6"
-    }
+
+```json
+{
+"agent_id": "wd71RZkBwL_MpPtE4iJ6"
+}
 ```
 
 2. Run the Agent
 
-```bash
-    POST /_plugins/_ml/agents/wd71RZkBwL_MpPtE4iJ6/_execute
-    {
-    "parameters": {
-        "question": "How many indices do I have?"
-    }
-    }
+```json
+<copy>
+POST /_plugins/_ml/agents/wd71RZkBwL_MpPtE4iJ6/_execute
+{
+"parameters": {
+    "question": "How many indices do I have?"
+}
+}
+</copy>
 ```
 
 Response:
 
-```bash
+```json
+<copy>
+{
+"inference_results": [
+{
+"output": [
     {
-    "inference_results": [
-        {
-        "output": [
-            {
-            "name": "response",
-            "result": """row,health,status,index,uuid,pri(number of primary shards),rep(number of replica shards),docs.count(number of available documents),docs.deleted(number of deleted documents),store.size(store size of primary and replica shards),pri.store.size(store size of primary shards)
-            1,green,open,.plugins-ml-model-group,lSn5PV9VSf-AF1ep8bKOkQ,1,0,4,0,14.5kb,14.5kb
-            2,green,open,otel-v1-apm-service-map-sample,Rt43HqsrSQqbBEev2bx5rA,1,0,49,0,17.7kb,17.7kb
-            3,green,open,.plugins-ml-memory-meta,UuI6_-mPT0mDLn9xjGv4Yg,1,0,22,0,39.1kb,39.1kb
-            4,yellow,open,my_test_data-ch,xCvfAZ_3Q9S1kw4nANpMFw,1,1,30915,0,136.1mb,136.1mb
-            5,green,open,.ql-datasources,8rGWS9jFQgWEh0xkrLintQ,1,0,0,0,208b,208b
-            6,green,open,.plugins-ml-task,Y11w7fEWRJ6Ic11WVCDVkg,1,0,19,3,49kb,49kb
-            7,green,open,ss4o_metrics-otel-sample,KgYgrwoKQrqJ44iwo2Nesw,1,0,39923,0,4.4mb,4.4mb
-            8,green,open,top_queries-2025.09.08-00384,f-FFwDqeT4eJl22HZqa_pw,1,0,204,8,198.8kb,198.8kb
-            ...............
-            """
-                    }
-                ]
-                }
-            ]
+    "name": "response",
+    "result": """row,health,status,index,uuid,pri(number of primary shards),rep(number of replica shards),docs.count(number of available documents),docs.deleted(number of deleted documents),store.size(store size of primary and replica shards),pri.store.size(store size of primary shards)
+    1,green,open,.plugins-ml-model-group,lSn5PV9VSf-AF1ep8bKOkQ,1,0,4,0,14.5kb,14.5kb
+    2,green,open,otel-v1-apm-service-map-sample,Rt43HqsrSQqbBEev2bx5rA,1,0,49,0,17.7kb,17.7kb
+    3,green,open,.plugins-ml-memory-meta,UuI6_-mPT0mDLn9xjGv4Yg,1,0,22,0,39.1kb,39.1kb
+    4,yellow,open,my_test_data-ch,xCvfAZ_3Q9S1kw4nANpMFw,1,1,30915,0,136.1mb,136.1mb
+    5,green,open,.ql-datasources,8rGWS9jFQgWEh0xkrLintQ,1,0,0,0,208b,208b
+    6,green,open,.plugins-ml-task,Y11w7fEWRJ6Ic11WVCDVkg,1,0,19,3,49kb,49kb
+    7,green,open,ss4o_metrics-otel-sample,KgYgrwoKQrqJ44iwo2Nesw,1,0,39923,0,4.4mb,4.4mb
+    8,green,open,top_queries-2025.09.08-00384,f-FFwDqeT4eJl22HZqa_pw,1,0,204,8,198.8kb,198.8kb
+    ...............
+    """
+            }
+        ]
         }
+    ]
+}
+</copy>
 ```
 
 
@@ -109,7 +116,8 @@ The **IndexMappingTool** is used by the agent to retrieve index mapping and sett
 
 1. Register the agent with the **IndexMappingTool**
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/_register
 {
   "name": "Test_Agent_For_IndexMapping_tool",
@@ -126,11 +134,12 @@ POST /_plugins/_ml/agents/_register
     }
   ]
 }
+</copy>
 ```
 
 Response:
 
-```bash
+```json
 {
   "agent_id": "wt4dRpkBwL_MpPtEDyJ6"
 }
@@ -138,7 +147,8 @@ Response:
 
 2. Run the  Agent to test the Tool
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/wt4dRpkBwL_MpPtEDyJ6/_execute
 {
   "parameters": {
@@ -146,11 +156,13 @@ POST /_plugins/_ml/agents/wt4dRpkBwL_MpPtEDyJ6/_execute
     "question": "What fields are in the sample-ecommerce index?"
   }
 }
+</copy>
 ```
 
 Response:
 
-```bash
+```json
+<copy>
 {
   "inference_results": [
     {
@@ -180,7 +192,7 @@ index.version.created=137217827
     }
   ]
 }
-
+</copy>
 ```
 
 
@@ -195,7 +207,8 @@ The **SearchIndexTool** searches an index using a query written in query domain-
 
 1. Register the Agent to run to SearchIndex Tool
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/_register
 {
   "name": "Test_Agent_For_Search_Index_Tool",
@@ -210,12 +223,12 @@ POST /_plugins/_ml/agents/_register
     }
   ]
 }
-
+</copy>
 ```
 
 Response:
 
-```bash
+```json
 {
   "agent_id": "w94jRpkBwL_MpPtEYSJY"
 }
@@ -224,18 +237,21 @@ Response:
 
 2. Run the Flow Agent to test the SearchIndexTool
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/w94jRpkBwL_MpPtEYSJY/_execute
 {
   "parameters": {
     "input": "{\"index\": \"opensearch_dashboards_sample_data_ecommerce\", \"query\": {\"size\": 20,  \"_source\": \"email\"}}"
   }
 }
+</copy>
 ```
 
 Reponse:
 
-```bash
+```json
+<copy>
 {
   "inference_results": [
     {
@@ -268,7 +284,7 @@ Reponse:
     }
   ]
 }
-
+</copy>
 ```
 
 
@@ -286,7 +302,8 @@ Just navigate to you Opensearch Dashboard, and click on the  Machine Learning op
 
 be sure to replace the *-d2kFZkBwL_MpPtEZDes* with your *model_id* and replace *"chunking_embedding"* and *["text"]* with the correct vector embedding field name and corresponding text field name, in your index, respectively. Also provide the correct indexname to point the agent to focus on a specific index.
 
-```bash
+```json
+<copy>
 {
   "name": "Test_Agent_For_VectorDB",
   "type": "flow",
@@ -304,12 +321,13 @@ be sure to replace the *-d2kFZkBwL_MpPtEZDes* with your *model_id* and replace *
     }
   ]
 }
-
+</copy>
 ```
 
 If using you create an index with auto chunking use the command below instead:
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/_register
 {
   "name": "KB_Vector_Search",
@@ -331,10 +349,12 @@ POST /_plugins/_ml/agents/_register
     }
   ]
 }
+</copy>
 ```
 
 Response:
-```bash
+
+```json
 {
   "agent_id": "yN5URpkBwL_MpPtEYiJ-"
 }
@@ -342,14 +362,15 @@ Response:
 
 2. Execute the agent:
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/yN5URpkBwL_MpPtEYiJ-/_execute
 {
   "parameters": {
     "question": "what type of issues are in the payments services"
   }
 }}
-
+</copy>
 ```
 
 Response:
@@ -368,7 +389,9 @@ The RAGTool performs retrieval-augmented generation (RAG). The RAG Agent will in
 1. For quick recap we will deploy another llm model which we will use in the Agent framework:
 
 - Create the Connector:
-```bash
+
+```json
+<copy>
 POST _plugins/_ml/connectors/_create
 {
     "name": "cohere.command-a Agent llm",
@@ -391,13 +414,13 @@ POST _plugins/_ml/connectors/_create
     }
   ]
 }
-
+</copy>
 ```
 
 
 Reponse:
 
-```bash
+```json
 {
   "connector_id": "mN54RpkBwL_MpPtEjyN5"
 }
@@ -406,7 +429,8 @@ Reponse:
 
 - Register the connector:
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/models/_register
 {
    "name": "oci-cohere-command-a-llm",
@@ -415,13 +439,13 @@ POST /_plugins/_ml/models/_register
    "description": "test-cohere-models",
    "connector_id": "mN54RpkBwL_MpPtEjyN5"
 }
-
+</copy>
 ```
 
 
 Response:
 
-```bash
+```json
 {
   "task_id": "md57RpkBwL_MpPtEXiM8",
   "status": "CREATED",
@@ -431,12 +455,14 @@ Response:
 
 - Deploy the model
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/models/mt57RpkBwL_MpPtEXiNU/_deploy
+</copy>
 ```
 
 Response:
-```bash
+```json
 {
   "task_id": "m958RpkBwL_MpPtE5yO0",
   "task_type": "DEPLOY_MODEL",
@@ -446,21 +472,25 @@ Response:
 
 - Test the llm model invocation:
 
-```bash
+```json
+<copy>
  POST /_plugins/_ml/models/mt57RpkBwL_MpPtEXiNU/_predict
 {
   "parameters": {
     "prompt": "\n\nHuman: how are you? \n\nAssistant:"
   }
 }
+</copy>
 ```
 
 <br/>
 
 2. Create a RAG Agent that uses the RAGTool:
 
-Replace the **embedding_model_id** and **inference_model_id** values in your payload with correct embedding and llm model ID respectively.
-```bash
+Replace the **embedding-model-id** and **inference-model-id** values in your payload with correct embedding and llm model ID respectively.
+
+```json
+<copy>
 POST /_plugins/_ml/agents/_register
 {
   "name": "Test_Agent_For_RagTool",
@@ -486,13 +516,14 @@ POST /_plugins/_ml/agents/_register
     }
   ]
 }}
-
+</copy>
 ```
 
 
 If using automated chunking:
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/_register
 {
   "name": "Test_Agent_For_RagTool",
@@ -521,30 +552,34 @@ POST /_plugins/_ml/agents/_register
     }
   ]
 }}
-
+</copy>
 ```
 
 Response:
 
-```bash
+```json
 {
   "agent_id": "nN6CRpkBwL_MpPtE0iOG"
 }
 ```
 
 3. Execute the RAG Agent Tool
-```bash
+
+```json
+<copy>
 POST /_plugins/_ml/agents/nN6CRpkBwL_MpPtE0iOG/_execute
 {
   "parameters": {
     "question": "how to resolve error_code: IO-0001"
   }
 }
+</copy>
 ```
 
 Response:
 
-```bash
+```json
+<copy>
 {
   "inference_results": [
     {
@@ -557,7 +592,7 @@ Response:
     }
   ]
 }
-
+</copy>
 ```
 
 <br/><br/>
@@ -568,7 +603,8 @@ The PPL Tool is also another crucial agent that translates the user's input natu
 
 1. To create a PPL tool, you also need an llm model to translate the natural language query into PPL. Let's just reuse the model we created in the previous task.
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/_register
 {
   "name": "Test_Agent_For_PPL",
@@ -590,11 +626,13 @@ POST /_plugins/_ml/agents/_register
     }
   ]
 }
+</copy>
 ```
 
 2. Execute Agent :
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/wd71RZkBwL_MpPtE4iJ6/_execute
 {
   "parameters": {
@@ -603,12 +641,13 @@ POST /_plugins/_ml/agents/wd71RZkBwL_MpPtE4iJ6/_execute
     "index": "opensearch_dashboards_sample_data_logs"
   }
 }
-
+</copy>
 ```
 
 Response:
 
-```bash
+```json
+<copy>
 {
   "inference_results": [
     {
@@ -621,6 +660,7 @@ Response:
     }
   ]
 }
+</copy>
 ```
 
 
@@ -638,7 +678,9 @@ The workflow of a flow agent is fixed once defined, unless explicitly updated.
 For example, we can combined the VectorDBTool and the MLModelTool to create a conversational flow agent
 
 1. Register the Conversational Flow Agent:
-```bash
+
+```json
+<copy>
 POST /_plugins/_ml/agents/_register
 {
   "name": "App KB analysis Agent",
@@ -670,7 +712,7 @@ POST /_plugins/_ml/agents/_register
         "model_id": "mt57RpkBwL_MpPtEXiNU",
         "prompt": """
 
-Human:You are a professional data analyst. You will always answer question based on the given context first. If the answer is not directly shown in the context, you will analyze the data and find the answer. If you don't know the answer, just say don't know. 
+Human:You are a professional data analyst. You will always answer question based on the given context first. If the answer is not directly shown in the context, you will analyze the data and find the answer. If you don't know the answer, just say don't know.
 
 Context:
 ${parameters.ai_app_knowledge_base_2.output:-}
@@ -693,12 +735,12 @@ Assistant:"""
     }
   ]
 }
-
+</copy>
 ```
 
 Response:
 
-```bash
+```json
 {
   "agent_id": "dKdNS5kBs59-bmX6TNET"
 }
@@ -707,13 +749,15 @@ Response:
 
 2. Execute the Agent:
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/agents/dKdNS5kBs59-bmX6TNET/_execute
 {
   "parameters": {
     "question": "how to resolve error_code: IO-0001"
   }
 }
+</copy>
 ```
 
 
