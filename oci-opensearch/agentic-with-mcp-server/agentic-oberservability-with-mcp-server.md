@@ -46,17 +46,21 @@ OpenSearch 3.0 includes an experimental, built-in MCP server (via ML Commons) th
 Quickstart (built-in MCP server)
 You can enable  the MCP server on your cluster  via a persistent cluster setting by executing the command below:
 
-```bash
+```json
+<copy>
 PUT /_cluster/settings
 {
   "persistent": {
     "plugins.ml_commons.mcp_server_enabled": "true"
   }
 }
+</copy>
 ```
 
 Response:
-```bash
+
+```json
+<copy>
 {
   "acknowledged": true,
   "persistent": {
@@ -68,6 +72,7 @@ Response:
   },
   "transient": {}
 }
+</copy>
 ```
 
 *What’s different from the Agents/Flow Framework labs?* Those focused on provisioning/orchestration; this is a minimal, cluster-level toggle that exposes a protocol endpoint—no extra services or custom adapters.
@@ -81,7 +86,8 @@ Response:
 
 When the server first comes up, it publishes no tools. You choose what to expose by registering them explicitly. For example, the snippet below turns on a simple discovery tool and a keyword search tool:
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/mcp/tools/_register
 {
   "tools": [
@@ -111,7 +117,7 @@ POST /_plugins/_ml/mcp/tools/_register
     }
   ]
 }
-
+</copy>
 ```
 
 After this call, ListIndexTool and SearchIndexTool are immediately available through the server.
@@ -121,7 +127,8 @@ OpenSearch offers a broader set of tools you can register; see the official [Too
 To Expose a more detailed list of MCP tools for your opensearch server, execute the command below. You can add the tools one by one, or package them all into a single command.  Be sure to configure the ModelIs, text fields and embedding fields to match the settings for your own index:
 
 
-```bash
+```json
+<copy>
 POST /_plugins/_ml/mcp/tools/_register
 {
   "tools": [
@@ -380,7 +387,7 @@ POST /_plugins/_ml/mcp/tools/_register
   ]
 }
 
-
+</copy>
 ```
 
 If you encounter errors running the command above, you can just separate them and add the tools one API call at a time.
@@ -402,20 +409,20 @@ You can use Homebrew to install, upgrade, and uninstall the CLI on Mac OS.
 
 To install the CLI on Mac OS with Homebrew:
 
-```bash
+```powershell
 brew update && brew install oci-cli
 ```
 
 To upgrade your CLI install on Mac OS using Homebrew:
 
-```bash
+```powershell
 brew update && brew upgrade oci-cli
 
 ```
 
 To uninstall the CLI on Mac OS using Homebrew:
 
-```bash
+```powershell
 brew uninstall oci-cli
 ```
 
@@ -463,8 +470,10 @@ OCI Opensearch MCP server easily integrates with all major MCP clients, includin
 
 0. Port forward and expose port 9200 and 5601 on your local machine via the vm to connect to your cluster:
 
-```bash
+```powershell
+<copy>
 ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 -L 127.0.0.1:9200:<your_opensearch_private_IP>:9200 opc@<your_instance_public_ip> -i <path_to_your_private_key>
+</copy>
 ```
 
 1. After Cline installation is complete, you should see a Cline icon on the sidebar of your IDE. Click on this Icon and Click on the **Config** icon in the Cline window that opens. Then click on the **Settings** icon
@@ -478,7 +487,7 @@ ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 -L 1
 
 3. Copy paste the config below in your cline configuration file:
 
-```bash
+```json
 {
     "opensearch-mcp-server": {
       "disabled": false,
