@@ -4,7 +4,7 @@
     "tutorials": [
         {
             "title": "Introduction",
-            "filename": "../../intro/intro.md"
+            "filename": "../../intro/intro-ai-world.md"
         },
         {
             "title": "Get Started",
@@ -21,7 +21,7 @@
         },
         {
             "title": "Lab 3: Install Python3, PyCharm, Notebook, VS Code, and Git (Optional)",
-            "filename": "../../ingest-and-search/ingest-and-search.md"
+            "filename": "../../prerequisites/install-git-vscode-python-pycharm.md"
         },
         {
             "title": "Lab 4: Load and Visualize Opensearch Sample data with OpenSearch Dashboards",
@@ -48,7 +48,7 @@
             "filename": "../../flow-agents-framework/flow-agents-framework.md"
         },
         {
-            "title": "Lab 10: Perform Root Cause Analysis and Generate Advanced Observability Knsights with Agentic Framework using MCP server",
+            "title": "Lab 10: Leverage MCP Server & Agentic Framework to Automate Root Cause Analysis - RCA  and Generate Advanced Observability Insights",
             "filename": "../../agentic-with-mcp-server/agentic-oberservability-with-mcp-server.md"
         },
         {

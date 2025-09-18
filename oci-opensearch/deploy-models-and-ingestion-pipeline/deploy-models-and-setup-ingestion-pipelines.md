@@ -1,8 +1,10 @@
-# Pre-requisites
-You have to have an existing OpenSearch cluster and have to be able to connect to the Dashboard, to perform all of the steps.
+# Register & Deploy ML models, and setup NLP Ingestion Pipeline
+
 ## Introduction
 
-In this lab, you will learn how to register and deploy both a pretrained and remote models, and create an ingestion pipelines
+In this lab, you will learn how to register and deploy both a pre-trained and remote models, and create an nlp ingestion pipelines
+
+
 Estimated Time: 10 minutes
 
 ### Objectives
@@ -16,22 +18,33 @@ In this lab, you will:
 
 
 ## Task 1: Prerequisites
+0. You already have to have an existing OpenSearch cluster and can connect to the Dashboard.
 
 1. Log into OCI Console and navigate to the Opensearch Cluster. Confirm that the OpenSearch cluster is version is greater than 2.11. Ideally you want to have the latest available version.
 ![Opensearch Cluster](images/opensearch-cluster-version.png)
 
+<br/>
 
 2. To use an OCI Generative AI connector with OCI Search with OpenSearch, you need to ensure your tenancy is subscribed to the **Chicago or Frankfurt Region**, and create policy to allow genAI manage resources in your compartment.
-Create a policy to grant access to Generative AI resources. Login into console, click on the **menu** button and navigate to **Identity & Security** and Select **Policies**. Click on **Create Policy**, enter policy name. Click on **manual edit** type/copy paste policy below and edit accordingly.
- ```html
-   <copy>ALLOW ANY-USER to manage generative-ai-family in tenancy WHERE ALL {request.principal.type='opensearchcluster', request.resource.compartment.id='<cluster_compartment_id>'}</copy>
-   ```
+Create a policy to grant access to Generative AI resources:
+    -  Login into console, click on the **menu** button and navigate to **Identity & Security**
+    -  Select **Policies**. Click on **Create Policy**
+    -  Type in policy name.
+    - Click on **manual edit** type/copy paste policy below and edit accordingly.
+
+
+ ```bash
+   ALLOW ANY-USER to manage generative-ai-family in tenancy WHERE ALL {request.principal.type='opensearchcluster', request.resource.compartment.id='<cluster_compartment_id>'}
+```
+
+<br/>
+
 ![Create GenAI Policy](images/create-policies.png)
 ![Create GenAI Policy](images/create-policies-2.png)
 ![Create GenAI Policy](images/create-policies-3.png)
 
 
-3. Connect to Opensearch Dashboard and Update the cluster settingsby running the command below. The following example command updates the applicable settings:
+3. Connect to Opensearch Dashboard and Update the cluster settings by running the command below. The following example command updates the applicable settings:
 ```bash
  PUT _cluster/settings
 {
@@ -53,14 +66,15 @@ Create a policy to grant access to Generative AI resources. Login into console, 
 }
    ```
 
-> Note: Refer to previous labs on how to access opensearch dashboard 
+> Note: Refer to previous labs on how to access/connect to  OpenSearch dashboard
 
 
 <br/><br/>
 
 ## Task 2: Register Model Group
-A model group allows you to create logical grouping of ml models to control access. 
-Register a model group using the register operation in the Model Group APIs, as shown in the following example:
+A model group allows you to create logical grouping of ml models to control access.
+You can register a model group be running the command below in your OpenSearch dashboard. Feel free to change the model Group name and description:
+
 ```bash
 POST /_plugins/_ml/model_groups/_register
 {
@@ -70,10 +84,9 @@ POST /_plugins/_ml/model_groups/_register
 
 ```
 
-```bash
 Make note of the model_group_id returned in the response:
-```html
-   {
+```bash
+{
   "model_group_id": "<model_group_ID>",
   "status": "CREATED"
 }
@@ -81,7 +94,7 @@ Make note of the model_group_id returned in the response:
 
 <br/><br/>
 
-## Task 3: [Register Pretrained model](https://docs.oracle.com/en-us/iaas/Content/search-opensearch/Tasks/semanticsearchwalkthrough.htm#register-deploy-model): 
+## Task 3: [Register Pretrained model](https://docs.oracle.com/en-us/iaas/Content/search-opensearch/Tasks/semanticsearchwalkthrough.htm#register-deploy-model):
 
 1. Register the model. You can select any model from the list of [available pre-trained models](https://docs.opensearch.org/2.19/ml-commons-plugin/pretrained-models/#sentence-transformers). Make note of the taskID
 
@@ -95,17 +108,21 @@ POST /_plugins/_ml/models/_register
 }
 ```
 
+Replace <model_group_ID> with the model_group_id you got from the previous step.
+
+Expected response:
 ```bash
 {
   "task_id": "<task_ID>",
   "status": "CREATED"
 }
 ```
-2.  Get the model ID. Wait about 30seconds after running the command above to run the command below. This should give a ModID once registration complere
+2.  Get the Task Id. Wait about 30seconds after running the command above to run the following. The below command to track the status of the model registration task. This should respond with a modelId  once registration complete.
+
 ```bash
 GET /_plugins/_ml/tasks/<task_ID>
 ```
-
+You can keep running the above GET command every 30 seconds until you see a response as below. Make note of the ModelID returned.
 response
 
 ```bash
@@ -126,7 +143,7 @@ response
 3. Deploy the model
 run the command below to deploy the model. This should respond with a TaskID. Use this TaskID to track the model deployment task to verify that deployment is complete.
 ```bash
-  POST /_plugins/_ml/models/<embedding_model_ID>/_deploy
+  POST /_plugins/_ml/models/<embedding_model_ID >/_deploy
 ```
 
 ```bash
@@ -145,7 +162,7 @@ GET /_plugins/_ml/tasks/<task_ID>
 4. Test the model:
 Once the model deployment is complete, you can test the model to make sure that embeddings are getting generated.
 
-```html
+```bash
   POST /_plugins/_ml/_predict/text_embedding/<model_id>
     {
       "text_docs":["hellow world", "new message", "this too"]
@@ -158,13 +175,15 @@ Once the model deployment is complete, you can test the model to make sure that 
 ## Task 4: Register and Deploy Remote GenAI Embedding Model
 
 Create the Generative AI connector as shown in the following example.
-To use the Frankfurt region, simply change "endpoint": **"inference.generativeai.us-chicago-1.oci.oraclecloud.com"** to 
+To use the Frankfurt region, simply change "endpoint": **```""endpoint": inference.generativeai.us-chicago-1.oci.oraclecloud.com"```** to
 **"endpoint": "inference.generativeai.eu-frankfurt-1.oci.oraclecloud.com"** in the payload below.
 
-Cohere model:
+**Cohere model:**
+
 1. **[Create Connector ](https://docs.oracle.com/en-us/iaas/Content/search-opensearch/Concepts/semanticsearch.htm#register-model)**
- ```html
-      POST /_plugins/_ml/connectors/_create
+
+ ```bash
+POST /_plugins/_ml/connectors/_create
 {
   "name": "<connector_name>",
   "description": "<connector_description>",
@@ -192,14 +211,14 @@ Cohere model:
          }
      ]
  }
-   ```
+```
 
 Example: <embedding_model_name> the **cohere.embed-english-v3.0** model
 
 Authentication is done using a resource principal. Specify the cluster's compartment ID in request_body.
 
 Make note of the connector_id returned in the response:
-```html
+```bash
 {
   "connector_id": "<connector_ID>",
 }
@@ -211,18 +230,19 @@ Make note of the connector_id returned in the response:
 
 Register the remote model using the Generative AI connector with the connector ID and model group ID from the previous steps, as shown in the following example:
 
-```html
-   <copy>POST /_plugins/_ml/models/_register
+```bash
+POST /_plugins/_ml/models/_register
 {
    "name": "oci-genai-conversation",
    "function_name": "remote",
    "model_group_id": "<model_group_ID>",
    "description": "test semantic",
    "connector_id": "<connector_ID>"
- }</copy>
-   ```
+ }
+```
+
 Make note of the model_id returned in the response:
-```html
+```bash
 {
   "task_id": "<task_ID>",
   "status": "CREATED",
@@ -233,12 +253,16 @@ Make note of the model_id returned in the response:
 <br/>
 
 3.  **Deploy the Model**
-Use the model ID from the previous step to deploy the model to the cluster so it can be used in any pipeline, as shown in the following example:
-```html
+
+Use the model ID from the previous step to deploy the model to the cluster so it can be used in any relevant subsequent tasks:
+
+```bash
    <copy>POST /_plugins/_ml/models/<model_ID>/_deploy</copy>
 ```
+
 A response similar to the following is returned:
-```html
+
+```bash
 {
   "task_id": "<task_ID>",
   "task_type": "DEPLOY_MODEL",
@@ -248,8 +272,8 @@ A response similar to the following is returned:
 
 4. **Test the model**
 
-You can use the _predict endpoint to test remote embedding model, as shown in the following example:
-```html
+You can use the **_predict** endpoint to test remote embedding model, as shown in the following example:
+```bash
 POST /_plugins/_ml/models/<model_id>/_predict
   {
     "parameters":{
@@ -266,8 +290,8 @@ Take note of the llm model ID as this will be used in subsequent labs. Refer to[
 
 1. Create Connector
 
-```html
-  POST _plugins/_ml/connectors/_create
+```bash
+POST _plugins/_ml/connectors/_create
 {
      "name": "<connector_name>",
      "description": "<connector_description>",
@@ -292,7 +316,7 @@ Take note of the llm model ID as this will be used in subsequent labs. Refer to[
  }
 ```
 
-You can replace  <genai_cohere_model> with  **ohere.command-a-03-2025**.
+You can replace  <genai_cohere_model> with  **cohere.command-a-03-2025**.
 
 <br/>
 
@@ -300,7 +324,7 @@ You can replace  <genai_cohere_model> with  **ohere.command-a-03-2025**.
 
 Register the remote model using the Generative AI connector with the connector ID and model group ID from the previous steps, as shown in the following example:
 
-```html
+```bash
    <copy>POST /_plugins/_ml/models/_register
 {
    "name": "oci-genai-conversation",
@@ -310,8 +334,9 @@ Register the remote model using the Generative AI connector with the connector I
    "connector_id": "<connector_ID>"
  }</copy>
    ```
+
 Make note of the model_id returned in the response:
-```html
+```bash
 {
   "task_id": "<task_ID>",
   "status": "CREATED",
@@ -322,12 +347,14 @@ Make note of the model_id returned in the response:
 <br/>
 
 3.  **Deploy the Model**
-Use the model ID from the previous step to deploy the model to the cluster so it can be used in any pipeline, as shown in the following example:
-```html
-   <copy>POST /_plugins/_ml/models/<model_ID>/_deploy</copy>
+
+Use the model ID from the previous step to deploy the model to the cluster.:
+
+```bash
+POST /_plugins/_ml/models/<model_ID>/_deploy
 ```
 A response similar to the following is returned:
-```html
+```bash
 {
   "task_id": "<task_ID>",
   "task_type": "DEPLOY_MODEL",
@@ -340,20 +367,21 @@ A response similar to the following is returned:
 
 <br/><br/>
 
-## Task 7: Create Ingestion pipelines
+## Task 7: Create NLP Ingestion pipelines
 
 To leverage hybrid search instead of BM25 to enrich the retriever part of the RAG pipeline, you need to setup an ingestion pipeline and specify which embedding model will be used to automatically generate vector embedding for your documents during ingestion and for your queries during search.
-We will setup 2 ingestion pipelines, 1 with simple KNN index, and another with automated chunking. 
+We will setup 2 ingestion pipelines, 1 with simple KNN index, and another with automated chunking.
 
 1. Create simple ingestion pipeline
-```html
-PUT _ingest/pipeline/simple-pipeline-name
+
+```bash
+PUT _ingest/pipeline/simple-ingestion-pipeline
 {
   "description": "pipeline for RAG demo index",
   "processors" : [
     {
       "text_embedding": {
-        "model_id": "<model_ID>",
+        "model_id": "<embedding_model_ID>",
         "field_map": {
            "text": "embedding"
         }
@@ -362,13 +390,13 @@ PUT _ingest/pipeline/simple-pipeline-name
   ]
 }
 ```
-This will create a pipeline called *simple-pipeline-name*. For any KNN index using this pipeline, the pipeline will automatically generate vector embedding for the document's  **text** field and store the vector in a new field called **embeding** during ingestion.
+This will create a pipeline called *simple-ingestion-pipeline*. For any KNN index using this pipeline, the pipeline will automatically generate vector embedding for the document's  **text** field and store the vector in a new field called **embeding** during ingestion.
 
 
 2. Create Ingestion pipeline for index with automated chunking:
 
-```html
-  PUT _ingest/pipeline/chunking-pipeline
+```bash
+PUT _ingest/pipeline/chunking-pipeline
 {
   "description": "A text chunking and embedding ingest pipeline",
   "processors": [
@@ -400,8 +428,9 @@ This will create a pipeline called *simple-pipeline-name*. For any KNN index usi
 replace <model_ID> with either the pre-trained modelId or the remote embedding modelID
 This will create a pipeline called *chunking-pipeline* which you will use in the subsequent labs to create KNN index.
 
+> Feel free to use any name for your NLP ingestion pipeline.
 
 ## Acknowledgements
 
-* **Author** - Landry Kezebou Yankam
+* **Author** - **Landry Kezebou**, Lead AI/ML Engineer, OCI Opensearch
 * **Last Updated By/Date** - Landry Kezebou, September 2025

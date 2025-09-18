@@ -1,17 +1,21 @@
-# Pre-requisites
-This Lab assumes that you already created an opensearch cluster and added the opensearch sample data from dashboard such as the sample eCommerce data and the sample flight data.
+# AI Agents & Agent Tools
+
+
 ## Introduction
 
-The widespread adoption and success of Agentic AI systems has had a transformative impact on industry standard in the past couple years, shifting from static agents with preset instructions and tasks definition, to dynamic AI agents capable of planning, make decisions, and execute a range of tasks using an arsenal of tools put at their disposal.
-With a mission to keep the AI momemtum growing stronger while simplifying AI app development, Opensearch now has built-in support for  **AI Agents**,  **Agent Tools**—reusable, declarative capabilities like keyword search, aggregations, schema introspection, and RAG.
+The widespread adoption and success of Agentic AI systems has had a transformative impact on industry standards in the past couple years, shifting from static agents with preset instructions and tasks definition, to dynamic AI agents capable of planning, making decisions, and executing a range of tasks using an arsenal of tools put at their disposal.
 
-An agent orchestrates and runs ML models and tools. For a list of supported agents, see [Agents](https://docs.opensearch.org/latest/ml-commons-plugin/agents-tools/agents/index/).
-A tool performs a set of specific tasks. Some examples of tools are the VectorDBTool, which supports vector search, and the ListIndexTool, which executes the List Indices API. For a list of supported tools, see [Tools](https://docs.opensearch.org/latest/ml-commons-plugin/agents-tools/tools/index/).
-A flow agent runs a sequence of tools in order and returns the last tool’s output.
+With a mission to keep the AI momentum growing stronger while simplifying AI app development, Opensearch now has built-in support for  **AI Agents**,  **Agent Tools**—reusable, declarative capabilities like keyword search, aggregations, schema introspection, RAG, etc..
+
+An **agent** orchestrates perform a set of actions depending on tools configured. For a list of supported agents, see [Agents](https://docs.opensearch.org/latest/ml-commons-plugin/agents-tools/agents/index/).
+A tool provides support for the agent to perform specific tasks. Some examples of tools are the VectorDBTool, which supports vector search, and the ListIndexTool, which executes the List Indices API. For a list of supported tools, see [Tools](https://docs.opensearch.org/latest/ml-commons-plugin/agents-tools/tools/index/).
+
+A **flow agent** on the other hand, runs a sequence of tools in order a specific preset order and returns the last tool’s output.
 
 In this lab, you will learn how AI agents execute actions using assigned agent tools. The lab starts with **non‑vectorized** OpenSearch sample datasets (eCommerce and Flights). You’ll build an AI agent that utilizes tools like PPL Tool, and SearchIndex Tool to automate data aggregation, and generate observability insights. Then optionally you can also test an agent with vector/RAG tool on the vectorized index you created in earlier lab.
 
-Estimated Time: 15 minutes
+
+**Estimated Time: 15 minutes**
 
 ### Objectives
 1. Register **utility tools** (list indices, describe mappings)
@@ -21,6 +25,11 @@ Estimated Time: 15 minutes
 5. Execute example prompts that traverse both datasets
 6. (Optional) Extend with a **RAG** tool over a vectorized KB
 
+## Pre-requisites
+This Lab assumes that you already:
+- Created an opensearch cluster
+- Added opensearch sample data from dashboard such as the sample eCommerce data and the sample flight data.
+- Created You KNN index and streamed data into from Data Pepper pipeline
 
 
 ## Task 1: Register and Test The ListIndexTool with a Simple Flow Agent
@@ -96,9 +105,9 @@ Response:
 <br/><br/>
 
 ## Task 2: Index Mapping tool
-The **IndexMappingTool** retrieves mapping and setting information for indexes in your cluster.
+The **IndexMappingTool** is used by the agent to retrieve index mapping and setting information for indices in your cluster.
 
-1. Register a Flow agent with the **IndexMappingTool**
+1. Register the agent with the **IndexMappingTool**
 
 ```bash
 POST /_plugins/_ml/agents/_register
@@ -127,7 +136,7 @@ Response:
 }
 ```
 
-2. Run the  Agent to test the Tool 
+2. Run the  Agent to test the Tool
 
 ```bash
 POST /_plugins/_ml/agents/wt4dRpkBwL_MpPtEDyJ6/_execute
@@ -184,7 +193,8 @@ index.version.created=137217827
 ## Task 3: Search Index tool
 The **SearchIndexTool** searches an index using a query written in query domain-specific language (DSL) and returns the query results.
 
-1. Register a Flow Agent to run to SearchIndex Tool
+1. Register the Agent to run to SearchIndex Tool
+
 ```bash
 POST /_plugins/_ml/agents/_register
 {
@@ -266,12 +276,14 @@ Reponse:
 
 
 
-## Task 4: Vector DB tool
+## Task 4: Vector DB tool (Optional)
 The VectorDBTool performs dense vector retrieval. To use the Vector DB Tool, you need to register and deploy an embedding model. You already did this in the previous Labs.
-Just navigate to you Opensearch Dashboard, and click on the  Machine Learning option in the menu. This should open a board where you can view all the models deployed on your cluster as well as their current status and model details such as ModelId. Simply locate what model you want the **VectorDBTool** to use and use it in the payload below.
-Not that to avoid any type mismatch between query vector and document vector during search, you need to use the exact same modelId that you use in your data ingestion pipeline to ingest data into your index.
+Just navigate to you Opensearch Dashboard, and click on the  Machine Learning option in the menu. This should open a board where you can view all the models deployed on your cluster as well as their current status and model details such as ModelId. Simply locate what model you want the **VectorDBTool** to use substitute the model_id in the payload below.
 
-1. Register a flow Agent to Run the Vector DB Tool:
+> Note that to avoid any type of mismatch between query vector and document vector during search, you need to use the exact same modelId that you use in your data ingestion pipeline to ingest data into your index.
+
+1. Register the Agent to Run the Vector DB Tool:
+
 be sure to replace the *-d2kFZkBwL_MpPtEZDes* with your *model_id* and replace *"chunking_embedding"* and *["text"]* with the correct vector embedding field name and corresponding text field name, in your index, respectively. Also provide the correct indexname to point the agent to focus on a specific index.
 
 ```bash
@@ -349,12 +361,13 @@ Response:
 <br/><br/>
 
 
-## Task 6: RAG tool
+## Task 6: RAG tool  (Optional)
 
 The RAGTool performs retrieval-augmented generation (RAG). The RAG Agent will invoke and llm model and supplement its knowledge with relevant documents retrieved from an opensearch knowledge based index. For this, you need to provide an embedding model to facilitate search as well as the llm model to facilitate llm interpretation and response.
 
 1. For quick recap we will deploy another llm model which we will use in the Agent framework:
 
+- Create the Connector:
 ```bash
 POST _plugins/_ml/connectors/_create
 {
@@ -391,7 +404,7 @@ Reponse:
 ```
 
 
-Register the connector:
+- Register the connector:
 
 ```bash
 POST /_plugins/_ml/models/_register
@@ -416,7 +429,7 @@ Response:
 }
 ```
 
-Deploy the model
+- Deploy the model
 
 ```bash
 POST /_plugins/_ml/models/mt57RpkBwL_MpPtEXiNU/_deploy
@@ -431,7 +444,7 @@ Response:
 }
 ```
 
-Test the llm model invocation:
+- Test the llm model invocation:
 
 ```bash
  POST /_plugins/_ml/models/mt57RpkBwL_MpPtEXiNU/_predict
@@ -444,9 +457,41 @@ Test the llm model invocation:
 
 <br/>
 
-2. Create the RAG tool using a flow Agent:
+2. Create a RAG Agent that uses the RAGTool:
 
 Replace the **embedding_model_id** and **inference_model_id** values in your payload with correct embedding and llm model ID respectively.
+```bash
+POST /_plugins/_ml/agents/_register
+{
+  "name": "Test_Agent_For_RagTool",
+  "type": "flow",
+  "description": "RAG over nested knn vectors",
+  "tools": [
+    {
+      "type": "RAGTool",
+      "description": "Nested RAG over app_knowledge_base",
+      "parameters": {
+        "embedding_model_id": "-d2kFZkBwL_MpPtEZDes",
+        "inference_model_id": "mt57RpkBwL_MpPtEXiNU",
+        "index": "app_knowledge_base",
+        "embedding_field": "embedding",
+        "source_field": ["text"],
+        "k":20,
+        "context_size": 3,
+        "query_type": "neural",
+
+        "input": "${parameters.question}",
+        "prompt": "You are a professional reliability engineer and you have access to the knowledge base of an app which contains error codes and RCA. Answer using the provided context. \n\nContext:\n${context}\n\nQuestion: ${parameters.question}\n\nAnswer:"
+      }
+    }
+  ]
+}}
+
+```
+
+
+If using automated chunking:
+
 ```bash
 POST /_plugins/_ml/agents/_register
 {
@@ -518,10 +563,10 @@ Response:
 <br/><br/>
 
 
-## Task 2:  PPL Tool
+## Task 7:  PPL Tool
 The PPL Tool is also another crucial agent that translates the user's input natural language query into PPL query.
 
-1. To create a PPL tool, you also need an llm model to translate the natural language query into PPL. Let's just reuse the model we created in the previous step.
+1. To create a PPL tool, you also need an llm model to translate the natural language query into PPL. Let's just reuse the model we created in the previous task.
 
 ```bash
 POST /_plugins/_ml/agents/_register
@@ -583,10 +628,12 @@ Response:
 
 <br/><br/>
 
-## Task 7:  Flow Agents
-The Agents that we have looked at so far have only each been endowed with a single tool only. However, Flow Agent is much more powerful than that!
-A flow agent has the ability to run a sequence of Agent Tools to achieve the desired result.
-For example, we can create a flow agent tool that has access to a set of tools e.g   **[ListIndexTool, IndexMappingTool, SearchIndexTool, PPLTool, VectorDBTool, RAGTool]**. Whenever you execute the flow agent, it will use these tools in the sequence provided and return the answer from the last tool.  The workflow of a flow agent is fixed once defined, unless explicitly updated.
+## Task 8:  Flow Agents
+The various Agents that we have looked at so far have each been endowed with a single tool only. However, Flow Agent is more powerful than that!
+A flow agent has the ability to run a sequence of Agent Tools to achieve the desired result. When given a new task, the flow agent executes each tool in the sequence provided and returns the output of the last tool.
+
+For example, we can create a flow agent tool that has access to a set of tools e.g   **[ListIndexTool, IndexMappingTool, SearchIndexTool, PPLTool, VectorDBTool, RAGTool]**. Whenever you execute the flow agent, it will use these tools in the sequence provided and return the answer from the RAGTool.
+The workflow of a flow agent is fixed once defined, unless explicitly updated.
 
 For example, we can combined the VectorDBTool and the MLModelTool to create a conversational flow agent
 
@@ -606,10 +653,10 @@ POST /_plugins/_ml/agents/_register
       "type": "VectorDBTool",
       "parameters": {
         "model_id": "-d2kFZkBwL_MpPtEZDes",
-        "index": "ai_app_knowledge_base_2",
-        "embedding_field": "chunk_embedding.knn",
-        "nested_path": "chunk_embedding",
-        "source_field": ["text", "text_chunk"],
+        "index": "app_knowledge_base",
+        "embedding_field": "embedding",
+        "nested_path": "embedding",
+        "source_field": ["text"],
         "k": 10,
         "doc_size": 3,
         "input": "${parameters.question}"
@@ -669,22 +716,14 @@ POST /_plugins/_ml/agents/dKdNS5kBs59-bmX6TNET/_execute
 }
 ```
 
-Response:
-
-```bash
-
-```
 
 
 <br/><br/>
-
-
-## Task 8: Conversation Flow Agents
 
 
 
 
 ## Acknowledgements
 
-* **Author** - Emmanuel Leroy
-* **Last Updated By/Date** - Emmanuel Leroy, September 2024
+* **Author** - **Landry Kezebou**, Lead AI/ML Engineer, OCI Opensearch
+

@@ -4,11 +4,11 @@
 
 In this lab, Your goal is to create an OCI Opensearch cluster  and  access the opensearch dashboard.
 
-**-If using the LiveLab tenancy, please verify what resources are already auto-provisioned to save time and skip to the next Lab if all resources already available. Otherwise, follow instructions to only provision the missing resources.**
+> **If using the LiveLab tenancy, please verify what resources are already auto-provisioned to save time. If Opensearch cluster and required policies already configured, please Skip step 5. Otherwise, follow instructions to only provision the any missing resources.**
 
-**- If using your own tenancy, please follow these instructions in this Lab step by step.**
+> **If using your own tenancy, please follow the instructions in this Lab step by step.**
 
-Estimated Time: 20 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -26,9 +26,9 @@ In this lab, you will learn how to:
 In this task, you will create a dedicated compartment for this live lab, if you haven't done so beforehand.
 
 1. Login to tenancy
-2. Click the main menu icon to open the side menu.
+2. Click the **main menu** icon to open the side menu.
 3. Click **Identity & Security** and select **Compartments** under the **Indenty** Group. Alternatively, just type **compartment** in the side menu search bar and click on **Compartment** option that apears.
-4. Provide your compartment  **Name**, and **Description** in the respective fields, and select the root-parent.
+4. Click on **Create Copartment** and Provide your compartment  **Name**, and **Description** in the respective fields, and select the root-parent.
 5. Click **Create Compartment**.
 
    ![Creation of opensearch-livelab compartment](images/create-compartment-1.png)
@@ -39,11 +39,11 @@ In this task, you will create a dedicated compartment for this live lab, if you 
 
 ## Task 2: User group creation
 
-In this task, you will create a dedicated user group.
+In this task, you will create a dedicated user group. This helps group users in a logical way such that privileges assigned to the group are by default inherited by all user members of that group.
 
 1. Click the main menu icon to open the side menu.
 2. Click **Identity & Security** and select **Domains** under the **Identity** Group.
-3. In the page the opens, click select and exiting Domain or Create a new one.
+3. In the page the opens, select an exiting Domain or Create a new one.
 4. Under this Domain, navigate to the **User Management** Tab and Click **Create** to start creating a new User Group
 5. Provide the **Name**, a **Description** of your choice.
 6. Open the group you've created and click **Add User to Group**.
@@ -61,20 +61,20 @@ In this task, you will create a dedicated user group.
 
 In this task, you will create the required OCI IAM policy.
 
-1. Click the main menu icon to open the side menu.
-2. Click **Identity & Security** and select **Policies**.
-3. Provide policy a **Name**, and a **Description** of your choice, and choose the correct compartment (should be the compartment name created earlier).
+1. Click the **main menu icon** to open the side menu bar.
+2. Click **Identity & Security** then select **Policies**.
+3. Provide a policy **Name**, and a **Description** of your choice, and choose the correct compartment (should be the compartment name created earlier).
 4. Click **Show manual editor** and paste the content below in the editor. Be sure to change **opensearch-group** and **os_compartment** with the correct name for your user group and compartment defined in steps 1 & 2
 
-   ```
-   <copy>Allow group opensearch-group to manage opensearch-family in compartment os_compartment
-   Allow group opensearch-group to manage subnets in compartment os_compartment
-   Allow group opensearch-group to manage vcns in compartment os_compartment
-   Allow service opensearch to manage vcns in compartment os_compartment
-   Allow service opensearch to manage vnics in compartment os_compartment
-   Allow service opensearch to use subnets in compartment os_compartment
-   Allow service opensearch to use network-security-groups in compartment os_compartment</copy>
-   ```
+```bash
+Allow group opensearch-group to manage opensearch-family in compartment os_compartment
+Allow group opensearch-group to manage subnets in compartment os_compartment
+Allow group opensearch-group to manage vcns in compartment os_compartment
+Allow service opensearch to manage vcns in compartment os_compartment
+Allow service opensearch to manage vnics in compartment os_compartment
+Allow service opensearch to use subnets in compartment os_compartment
+Allow service opensearch to use network-security-groups in compartment os_compartment
+```
 
    ![Creation of opensearch-policy policy](images/configure-opensearch-policies.png)
 
@@ -85,7 +85,7 @@ In this task, you will create the required OCI IAM policy.
 
 In this task, you will create a VCN with a public subnet and a private subnet.
 
-1. Open the Oracle Cloud Console navigation menu.
+1. Navigate to the OCI Console menu.
 2. Click **Networking**. and then click **Virtual Cloud Networks**.
 3. Click **Start VCN Wizard**, and then click **Create VCN with Internet Connectivity**.
 4. Provide  as VCN Name and select the compartment you created earlier.
@@ -112,7 +112,7 @@ This action will automatically take you to the VCN details page.
 In this task, you will create an ssh key pairs which you will need to create and access a compute instance from your local machine
 
 1. On MAC
-      1. Open a Terminal window on your Mac . Start up Terminal and type in the command ssh-keygen. ssh-keygen will ask you where to save the key, accept the default of the .ssh folder in your home directory by pressing Enter. File name will be id_rsa or whatever you choose to name your key. Press Enter twice for no passphrase. Remember the directory where you saved your key (~/.ssh), you will need to reference it later when you create your instance.
+      1. Open a Terminal window on your Mac . Start up Terminal and type in the command *ssh-keygen*. ssh-keygen will ask you where to save the key, accept the default of the .ssh folder in your home directory by pressing Enter. File name will be **id_rsa** or whatever you choose to name your key. Press Enter twice for no passphrase. Remember the directory where you saved your key **(~/.ssh)**, you will need to reference it later when you create your instance.
             ```
             ssh-keygen -b 2048 -t rsa
             ```
@@ -124,11 +124,12 @@ In this task, you will create an ssh key pairs which you will need to create and
             cat id_rsa.pub
             ```
          ![view ssh public key ](images/ssh-public-key.png)
-         Note in the output that there are two files, a private key: id_rsa and a public key: id_rsa.pub. Keep the private key safe and don’t share its content with anyone. The public key will be needed for various activities and can be uploaded to certain systems as well as copied and pasted to facilitate secure communications in the cloud.
+
+         Note in the output that there are two files, a private key: **id_rsa** and a public key: **id_rsa.pub**. Keep the private key safe and don’t share its content with anyone. The public key will be needed for various activities and can be uploaded to certain systems as well as copied and pasted to facilitate secure communications in the cloud.
 
 
 2. On Windows:
-    Click on this link for a more comprehensive and detailed instruction on how to [configure ssh-key pair for both Windows and Mac computers](https://docs.oracle.com/en/learn/generate_ssh_keys/index.html#option-2--macos)
+    Click on the link below for a more comprehensive and detailed instruction on how to [configure ssh-key pair for both Windows and Mac computers](https://docs.oracle.com/en/learn/generate_ssh_keys/index.html#option-2--macos)
 
 
 
@@ -139,7 +140,7 @@ In this task, you will create an ssh key pairs which you will need to create and
 In this task, you will create an OCI Compute instance in the public subnet of the previously created VCN, in order to access the OpenSearch Search API and Dashboards, which are to be created in the private subnet of the same VCN.
 
 
-1. Open the Oracle Cloud Console navigation menu.
+1. Navigate to the control menu
 2. Click **Compute**, and then click **Instances**.
 3. Click **Create instance**.
 4. Provide the instance **Name**, and select the compartment created earlier.
@@ -173,5 +174,6 @@ chmod 600 ~/.ssh/id_rsa
 <br /><br /><br />
 ## Acknowledgements
 
-* **Author** - Landry Kezebou
-* **Last Updated By/Date** - Landry Kezebou, September 2025
+* **Author** - **Landry Kezebou**, Lead AI/ML Engineer, OCI Opensearch
+* **Created** - September 2025
+

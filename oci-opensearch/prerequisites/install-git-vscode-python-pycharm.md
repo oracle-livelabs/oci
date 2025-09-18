@@ -1,10 +1,10 @@
-# Pre-requisites
+# Install Git, VS CODE, Python and PyCharm
 
 ## Introduction
 
-In this lab, your focus is to install some IDE in your local machine so you can download sample code and execute to access your cluster and perform task such as data ingestion, data exploratory analysis, semantic search, visual search, conversational search, integration with Langchain, etc.
+In this lab, your focus is to install some IDE in your local machine so you can download sample code and execute to access your cluster and perform task such as data ingestion, data exploratory analysis, semantic search, visual search, conversational search, integration with LangChain, etc.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -82,7 +82,7 @@ py -m ensurepip --upgrade
 
 <br/><br/>
 
-## Task 3: Install PyCharm & Jupyter Notebook
+## Task 3: Install PyCharm & Jupyter Notebook (Optional)
 
 1. **PyCharm (IDE)**
    - **Download:**  [Community (free) or Professional](https://www.jetbrains.com/pycharm/download/)
@@ -133,7 +133,7 @@ Useful docs:
 
 <br/><br/>
 
-## Task 5: Create & Activate a Virtual Environment (venv)
+## Task 5: Create & Activate a Virtual Environment (venv) - (Optional)
 
 > A virtual environment keeps project dependencies isolated.
 
@@ -188,7 +188,7 @@ pip --version
 
 <br/><br/>
 
-## Task 6: Configure PyCharm to Use Your Virtual Environment
+## Task 6: Configure PyCharm to Use Your Virtual Environment  (Optional)
 
 You can either **create the venv from PyCharm** or **point PyCharm to an existing venv**.
 
@@ -266,5 +266,5 @@ jupyter notebook
 
 ## Acknowledgements
 
-* **Author** - Landry Kezebou
+* **Author** - **Landry Kezebou**, Lead AI/ML Engineer, OCI Opensearch
 * **Last Updated By/Date** - Landry Kezebou, September 2025

@@ -1,10 +1,10 @@
-# Pre-requisites
-- You have to have an existing OpenSearch cluster and have to be able to connect to the Dashboard, to perform all of the steps.
-- You have complete the Lab on Deploying Models and Creating Ingestion Pipelines
-- You have created you Ingestion pipeline and KNN index in the previous Labs
+# Semantic Search & Conversational search
+
+
 ## Introduction
 
 In this lab, you will perform perform Semantic Search and Conversational Search on the app knowledge base index we created in the previous lab which should be streaming data from your data prepper pipeline already.
+
 Estimated Time: 10 minutes
 
 ### Objectives
@@ -12,12 +12,17 @@ In this lab, you will:
 - Perform semantic search
 - Perform Conversational Search
 
-
+## Pre-requisites
+- You have to have an existing OpenSearch cluster and have to be able to connect to the Dashboard, to perform all of the steps.
+- You have complete the Lab on Deploying Models and Creating Ingestion Pipelines
+- You have created you Ingestion pipeline and KNN index in the previous Labs
+- You have successfully configured your data prepper pipeline
+- You have uploaded documents in your object storage bucket for the data prepper pipeline to start streaming into your opensearch index.
 
 
 ## Task 1: Retrieve embedding Model ID and LLM model ID
-In one of the previous Labs, we deployed a pre-trained embedding model, and cohere embedding model, and an llm model.
-You will need the model ID for these models for the subsequent steps. If you forgot to take note, you can always use the Machine Learning plugin on the Opensearch Dashboard to view what models are deployed, view the status of the model and copy the model ID.
+In one of the previous Labs, we deployed a pre-trained embedding model, a cohere embedding model, and an llm model.
+You will need the model ID for these models for the subsequent steps. If you forgot to note them down earlier, you can always Navigate to the **Machine Learning** Tab on Opensearch Dashboard  menu  to view what models are deployed, view the status of the model and copy the modelIds of interest.
 
 1. Login into the [https://localhost:5601](Opensearch dashboard)
 2. Click on the menu button then click on  **Machine Learning**
@@ -33,8 +38,42 @@ You will need the model ID for these models for the subsequent steps. If you for
 <br/><br/>
 
 
-## Task 2: Perform Semantic search
+## Task 2: Perform Hybrid Search (Keyword + Semantic Search)
 To perform Semantic Search on a given Index you can run the command below. The semantic search uses the engine specified in the index (luce, nmslib, faiss) as well as the ANN engine configurations to find the most relevant documents similar to the input query. Replace the *-d2kFZkBwL_MpPtEZDes* with the modelId for your pre-trained model.
+
+```bash
+GET app_knowledge_base/_search
+{
+  "query": {
+    "bool" : {
+      "should" : [
+        {
+          "script_score": {
+            "query": {
+              "neural": {
+                "embedding": {
+                  "query_text": "potential data delays; partial outage possible",
+                  "model_id": "<EMBEDDING_MODEL_ID>",
+                  "k": 2
+                }
+              }
+            },
+            "script": {
+              "source": "_score * 1.5"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "fields": [
+    "text"
+  ],
+  "_source": false
+}
+```
+
+If you created an index that uses automated Chunking, run the command below instead:
 
 ```bash
 GET app_knowledge_base/_search
@@ -50,8 +89,8 @@ GET app_knowledge_base/_search
               "neural": {
                 "chunk_embedding.knn": {
                   "query_text": "potential data delays; partial outage possible",
-                  "model_id": "-d2kFZkBwL_MpPtEZDes",
-                  "k": 1
+                  "model_id": "<EMBEDDING_MODEL_ID>",
+                  "k": 2
                 }
               }
             },
@@ -70,7 +109,7 @@ Example response:
 
 <br/>
 
-Hybrid Search is a combination of both neural search and bm25 for better accuracy. Below is a sample hybrid search query:
+Below is a more sophisticated hybrid search on KNN index with automated chunking:
 
 ```bash
 GET app_knowledge_base/_search
@@ -90,7 +129,7 @@ GET app_knowledge_base/_search
             "neural": {
               "chunk_embedding.knn": {
                 "query_text": "potential data delays; partial outage possible",
-                "model_id": "-d2kFZkBwL_MpPtEZDes",
+                "model_id": "<EMBEDDING_MODEL_ID>",
                 "k": 200
               }
             }
@@ -106,7 +145,7 @@ GET app_knowledge_base/_search
 
 ```
 
-> Note: You can refer to our [documentation](https://docs.oracle.com/en-us/iaas/Content/search-opensearch/Concepts/semanticsearch.htm#register-model) for more details on semantic search. You can create a simple index and try running semantic search on that.
+> Note: You can refer to our [documentation](https://docs.oracle.com/en-us/iaas/Content/search-opensearch/Concepts/semanticsearch.htm#register-model) for more details on semantic search and hybrid search. You can follow the instructions on that page to create a  simple index and ingest a small sample data to play around with semantic search.
 
 <br/><br/><br/>
 
@@ -157,6 +196,46 @@ PUT /_search/pipeline/demo_rag_pipeline
 GET app_knowledge_base/_search?search_pipeline=demo_rag_pipeline
 {
   "query": {
+   "bool": {
+      "must": [
+        {
+          "nested": {
+            "path": "chunk_embedding",
+            "query": {
+              "neural": {
+                "chunk_embedding.knn": {
+                  "query_text": "please analyze potential data delays; partial outage possible",
+                  "model_id": "<EMBEDDING_MODEL_ID>",
+                  "k": 2
+                }
+              }
+            },
+            "score_mode": "max"
+          }
+        }
+      ]
+    },
+    "ext": {
+        "generative_qa_parameters": {
+            "llm_model": "oci_genai/cohere.command.a",
+            "llm_question": "please analyze potential data delays; partial outage possible",
+            "context_size": 2,
+            "interaction_size": 1,
+            "timeout": 15
+        }
+    }
+}
+}
+
+```
+
+
+If running on index with Chunking:
+
+```bash
+GET app_knowledge_base/_search?search_pipeline=demo_rag_pipeline
+{
+  "query": {
     "bool": {
       "must": [
         {
@@ -200,5 +279,5 @@ For more details on RAG pipeline and conversational search, please refer to our 
 
 ## Acknowledgements
 
-* **Author** - Landry Kezebou Yankam
+* **Author** - **Landry Kezebou**, Lead AI/ML Engineer, OCI Opensearch
 * **Last Updated By/Date** - Landry Kezebou, September 2025

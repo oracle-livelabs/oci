@@ -1,9 +1,8 @@
-# Pre-requisites
-- You have an OpenSearch Cluster
-- You have Create a data prepper pipeline and streamed app data into your cluster in a KNN index. Or simply have a KNN index with any type of test data of your choice.
+#  Flow Agents FrameWork
+
+
 
 ## Introduction
-
 
 In this lab, you will learn how to leverage the flow framework to build AI agent in very simple steps with as minimal configurations as possible.
 
@@ -18,10 +17,17 @@ In this lab, you will:
 - Understand how Flow Framework can simplify Agentic app development
 
 
+## Pre-requisites
+- You have an OpenSearch Cluster
+- You have Create a data prepper pipeline and streamed app data into a KNN index in your cluster. Or simply have a KNN index with any type of test data of your choice.
 
+
+<br/><br/>
 
 ## Task 1: Creating a Flow Framework
+
 Our latest Flow Framework provides **ready-made templates** that orchestrate multi-step ML provisioning. With minimal input, it assembles complex assets—like chat models and conversational flow agents —while still allowing experts users override default configurations.
+
 In a manual setup, building a production-ready chat/RAG agent typically requires almost a dozen error-prone steps as you have experienced in all the previous labs leading to this one:
 
 1. Create a model group
@@ -50,7 +56,7 @@ In a manual setup, building a production-ready chat/RAG agent typically requires
 
 Every one of these steps has dozens of knobs (IDs, dimensions, index names, credentials, tokenizer limits, timeouts, post-processors). It’s easy to enter a wrong parameter or misconfigure a payload—leading to frustration and hours of debugging that slow development velocity.
 
-The Flow Framework reduces this to a single POST using a template (use_case). It supplies sensible defaults for a working end-to-end pipeline, while allowing you to override any field when needed.
+The Flow Framework reduces this to a single POST using a template. It supplies sensible defaults for a working end-to-end pipeline, while allowing you to override any field when needed.
 
 ```bash
 POST /_plugins/_flow_framework/workflow?use_case=<USE_CASE_NAME>&provision=true
@@ -96,11 +102,11 @@ GET /_plugins/_flow_framework/workflow/<WORKFLOW_ID>/_status
 
 #### How it works:
 The Agent calls the RAG Tool, which:
-1. uses the Embedding Model to embed the query,
-2. searches the newly created Index, and
-3. asks the Generative Model to answer using the retrieved context.
+1. Uses the Embedding Model to embed the query,
+2. Searches the newly created Index, and
+3. Asks the Generative Model to answer using the retrieved context.
 
-Minimal payload fields:
+#### Minimal payload fields:
 - Cluster compartment OCID
 - The input field (document text) to embed into the new index
 - The output field (vector field) to store embeddings in the new index
@@ -195,7 +201,7 @@ Response:
 
 
 #### Add data to the index
-Since you choose the template without pre-existing index, the workflow will automatically create a knn index for you and you can directly add data into that index. You will see the indexname in the output of the workflow. You can control what name to give your index and what field name to give your input text and output embedding vector field.
+Since you choose the **template without pre-existing index**, the workflow will automatically create a knn index for you and you can directly add data into that index. You will see the indexname in the output of the workflow. You can control what name to give your index and what field name to give your input text and output embedding vector field.
 
 ```bash
 POST _bulk
@@ -216,7 +222,9 @@ POST _bulk
 
 
 <br/>
-Invoke the Agent:
+
+#### Execute/Invoke the Agent:
+
 The Agent_ID can be retrieved from the workflow by tracking the status using the WorkflowID as discussed above. Make sure to track the status of the workflow until it says **COMPLETE**.
 
 ```bash
@@ -252,9 +260,8 @@ Similarly, for Miami, the population data indicates a consistent growth trend. I
 <br/>
 
 #### Separating search text from the user’s question (optional):
-If you want the Agent to search with one string but ask the LLM a different question, add this parameter to the workflow and then provide both at agent execution time:
 
-Workflow (adds tool input indirection):
+If you want the Agent to search with one string but ask the LLM a different question, add this parameter to the workflow and then provide both at agent execution time:
 
 ```bash
 POST /_plugins/_flow_framework/workflow?use_case=rag_agent_with_cohere_and_pretrained_model&provision=true
@@ -274,7 +281,7 @@ POST /_plugins/_flow_framework/workflow?use_case=rag_agent_with_cohere_and_pretr
 
 <br/><br/>
 
-## Task 3: Case 2 — RAG Agent with Preexisting Index
+## Task 3:    Use Case 2 — RAG Agent with Pre-existing Index
 
 #### What this provisions:
 
@@ -287,11 +294,11 @@ POST /_plugins/_flow_framework/workflow?use_case=rag_agent_with_cohere_and_pretr
 #### When to use:
 You already have a semantic/neural search index (with an embedding pipeline). This workflow layers a RAG Agent on top of it. In this use case you can use the *app_knowledge_base* knn index we created in the previous labs.
 If using an existing KNN index, you should make sure that to pass the model embedding model ID that your used in the ingestion pipeline to ingest data into your index.
-The embedding fieldname should also map the index configuration.
+The embedding field name should also map the index configuration.
 
 #### Required inputs (in addition to Case 1 fields):
-- rag_tool.index_name: the existing index name used for RAG search
-- rag_tool.embedding_model_id: the embedding model ID used by that index’s pipeline
+- **rag_tool.index_name**: the existing index name used for RAG search
+- **rag_tool.embedding_model_id**: the embedding model ID used by that index’s pipeline
 
 #### Create the workflow:
 
@@ -429,9 +436,12 @@ To resolve these errors, you should follow the provided resolution steps for eac
 ```
 
 
+
+
+
 <br/><br/>
 
-## Task 4: Conversational Agent over Cluster Data
+## Task 4:  Use Case 3 - Conversational Agent over Cluster Data
 
 ### What this provisions:
 
@@ -459,9 +469,10 @@ Response:
 {
   "workflow_id": "Yx8DUZkBi6TSXBeij2Ur"
 }
-````
+```
 
 Track the workflow using the Workflow ID
+
 
 ```bash
 {
@@ -498,7 +509,7 @@ Track the workflow using the Workflow ID
 ```
 
 
-#### Invoke Agent:
+#### Execute the Agent:
 
 ```bash
 POST /_plugins/_ml/agents/<AGENT_ID>/_execute
@@ -542,6 +553,9 @@ Response:
 
 
 
+
+
+
 <br/><br/>
 
 ## Task 5: Available Flow Framework Templates For Other Use Cases
@@ -551,31 +565,33 @@ In the templates, any placeholder like ${{input}} (or values referenced via ${pa
 Caution: Some fields are foundational and generally should not be changed, because they’re required for the underlying resources to interoperate correctly.
 Below is a list of fields you can configure in your Flow Framework Template:
 
-        - create_connector.version
+  1. create_connector.version
 
-        - create_connector.protocol
+  2. create_connector.protocol
 
-        - create_connector.parameters.endpoint
+  3. create_connector.parameters.endpoint
 
-        - create_connector.actions.url
+  4. create_connector.actions.url
 
-        - create_connector.actions.request_body
+  5. create_connector.actions.request_body
 
-        - create_connector.actions.pre_process_function
+  6. create_connector.actions.pre_process_function
 
-        - create_connector.actions.post_process_function
+  7. create_connector.actions.post_process_function
 
-        - rag_tool.parameters.prompt
+  8. rag_tool.parameters.prompt
 
-        - rag_tool.parameters.tenant_id
+  9. rag_tool.parameters.tenant_id
 
-        - rag_agent.prompt
+  10. rag_agent.prompt
 
-        - register_conversational_agent.memory.type
+  11. register_conversational_agent.memory.type
 
-        - register_conversational_agent.type
+  12. register_conversational_agent.type
 
-        - register_conversational_agent.app_type
+  13. register_conversational_agent.app_type
+
+
 
 If you need non-default behavior, prefer adding explicit override fields (e.g., max_tokens, temperature, index_name, embedding_field) rather than altering core wiring.
 
@@ -611,5 +627,5 @@ Flow Framework templates compress all of that to a single POST per use case, wit
 
 ## Acknowledgements
 
-* **Author** - Landry Kezebou
+* **Author** - **Landry Kezebou**, Lead AI/ML Engineer, OCI Opensearch
 * **Co-Author** June Desai

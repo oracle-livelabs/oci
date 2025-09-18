@@ -1,9 +1,9 @@
-# Pre-requisites
+# Load & Visualize Opensearch Sample Data
 
 ## Introduction
 
 In this lab you learn how to ingest Opensearch Sample data from the Opensearch dashboard and how to visualize the data.
-This data will also be used in subsequent labs to demonstrate other functionalities such as AI agents and Flow Agents.
+This data will also be used in subsequent labs to demonstrate other functionalities such as AI agents and Flow Agents and advanced observability.
 
 Estimated Time: 10 minutes
 
@@ -17,11 +17,11 @@ In this lab, you will:
 
 ## Prerequisites: Connect to OpenSearch Dashboards
 
-1. From your local machine, establish port forwarding. You can find more information on how to connect to a cluster/dahboard [here] (https://docs.oracle.com/en/learn/oci-opensearch/index.html#task-3-test-the-connection-to-oci-search-service--opensearch-endpoint)
+1. From your local machine, establish port forwarding. Refer to the documentation on [how to connect to opensearch dashboard](https://docs.oracle.com/en/learn/oci-opensearch/index.html#task-3-test-the-connection-to-oci-search-service--opensearch-endpoint) for more information.
 
 
       ```bash
-      <copy>ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 opc@<your_instance_public_ip> -i <path_to_your_private_key></copy>
+      ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 -L 127.0.0.1:9200:<your_opensearch_private_IP>:9200 opc@<your_VM_instance_public_IP> -i ~/.ssh/id_rsa
       ```
 <br />
 
@@ -30,9 +30,11 @@ In this lab, you will:
 
 <br /><br />
 
-## Task 1: Ingest/Load the Sampple data into you cluster
+## Task 1: Ingest/Load the Sample data into your cluster
 
-1. Connect to Opensearch dashboard by port forwarding from you local via the computer instance as discussed in the previous labs.
+1. Connect to Opensearch dashboard by port forwarding from you local via the compute instance as discussed in the previous labs.
+<br/>
+
 ![Connect to Opensearch dashboard](../prerequisites/images/opensearch-dashboard-1.png)
 ![Connect to Opensearch dashboard](../prerequisites/images/opensearch-dashboard-2.png)
 
@@ -64,7 +66,7 @@ To visualize the data
 ![visualize sample data on dashboard](images/visualize-data-1.png)
 ![visualize sample data on dashboard](images/visualize-data-2.png)
 
-> Tip: The visualization tool allows you to gain insights into your data and you can customize it to suit your need. You can also create multiple visualization dashboad on the same index.
+> Tip: The visualization tool allows you to gain insights into your data and you can customize it to suit your needs. You can also create multiple visualization dashboards on the same index.
 
 
 
@@ -73,103 +75,101 @@ To visualize the data
 ## Task 3: Query The data
 
 1. First view the Index mapping by running the command below. Feel free to replace *opensearch_dashboards_sample_data_ecommerce* with your index of choice
-     ```html
-    <copy>
-        GET opensearch_dashboards_sample_data_ecommerce/_mapping
-     <copy/>
-    # and
+```bash
+GET opensearch_dashboards_sample_data_ecommerce/_mapping
+```
+
 
 ![index mapping](images/index-mapping.png)
 
 <br />
 
 2. Perform a simple match all query on the data
-    ```html
-    <copy>
-    GET opensearch_dashboards_sample_data_ecommerce/_search
-        {
-        "query": {
-            "match_all": {}
-        }
-        }
-    <copy/>
-    ```
+```bash
+GET opensearch_dashboards_sample_data_ecommerce/_search
+    {
+    "query": {
+        "match_all": {}
+    }
+    }
+```
 ![Simple Search match all query result](images/simple-search.png)
 
 
-3. Perform Keyword/BM25 Search 
-the BM25 Search allows you to perform keyword search on your data to retrieve relevant documents. You BM25 can be configure to search on a single field/metadata or mutiple. 
-You can also apply prefilters and post filters to control the search output.
+3. Perform Keyword/BM25 Search:
+the BM25 Search allows you to perform keyword search on your data to retrieve relevant documents. BM25 can be configure to search on a single field/metadata or multiple fields concurrently.
+You can also apply **pre-filters** and **post-filters** to control the search output.
+
 Examples:
-    - Simple BM25 query:
-        ```html
-        <copy>GET opensearch_dashboards_sample_data_ecommerce/_search
+
+- Simple BM25 query:
+
+```bash
+GET opensearch_dashboards_sample_data_ecommerce/_search
+{
+"query": {
+    "bool": {
+    "should": [
+        { "match": { "products.product_name": "Sweatshirt" } },
         {
-        "query": {
-            "bool": {
-            "should": [
-                { "match": { "products.product_name": "Sweatshirt" } },
-                {
-                "match_phrase": {
-                    "products.product_name": {
-                    "query": "Sweatshirt",
-                    "slop": 2
-                    }
-                }
-                }
-            ],
-            "minimum_should_match": 1
+        "match_phrase": {
+            "products.product_name": {
+            "query": "Sweatshirt",
+            "slop": 2
             }
         }
         }
-        }</copy>
-        ```
+    ],
+    "minimum_should_match": 1
+    }
+}
+}
+}
+```
 
-    - Complex BM25 Query:
+- Complex BM25 Query:
 
-        ```html
-        <copy>
-            GET opensearch_dashboards_sample_data_ecommerce/_search
-            {
-            "size": 10,
-            "_source": [
-                "order_id","order_date","customer_full_name",
-                "products.product_name","manufacturer","category",
-                "taxful_total_price","currency"
-            ],
-            "query": {
-                "bool": {
-                "must": [
-                    {
-                    "multi_match": {
-                        "query": "wireless headphones",
-                        "type": "best_fields",
-                        "operator": "and",
-                        "fields": [
-                        "products.product_name^3",
-                        "category^2",
-                        "manufacturer^2",
-                        "customer_full_name"
-                        ]
-                    }
-                    }
-                ],
-                "filter": [
-                    { "term":  { "currency": "EUR" } },
-                    { "range": { "order_date": { "gte": "now-90d/d", "lte": "now" } } }
-                ]
-                }
-            },
-            "highlight": {
-                "fields": {
-                "products.product_name": {},
-                "category": {},
-                "manufacturer": {}
-                }
-            }
-            }
-        <copy/>
-        ```
+```bash
+GET opensearch_dashboards_sample_data_ecommerce/_search
+{
+"size": 10,
+"_source": [
+    "order_id","order_date","customer_full_name",
+    "products.product_name","manufacturer","category",
+    "taxful_total_price","currency"
+],
+"query": {
+    "bool": {
+    "must": [
+        {
+        "multi_match": {
+            "query": "wireless headphones",
+            "type": "best_fields",
+            "operator": "and",
+            "fields": [
+            "products.product_name^3",
+            "category^2",
+            "manufacturer^2",
+            "customer_full_name"
+            ]
+        }
+        }
+    ],
+    "filter": [
+        { "term":  { "currency": "EUR" } },
+        { "range": { "order_date": { "gte": "now-90d/d", "lte": "now" } } }
+    ]
+    }
+},
+"highlight": {
+    "fields": {
+    "products.product_name": {},
+    "category": {},
+    "manufacturer": {}
+    }
+}
+}
+```
 
 <br /><br />
 
@@ -180,5 +180,5 @@ Examples:
 
 ## Acknowledgements
 
-* **Author** - Landry Kezebou
+* **Author** - **Landry Kezebou**, Lead AI/ML Engineer, OCI Opensearch
 * **Last Updated By/Date** - Landry Kezebou, Semptember 2025
