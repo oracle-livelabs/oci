@@ -181,4 +181,4 @@ GET opensearch_dashboards_sample_data_ecommerce/_search
 ## Acknowledgements
 
 * **Author** - **Landry Kezebou**, Lead AI/ML Engineer, OCI Opensearch
-* **Last Updated By/Date** - Landry Kezebou, Semptember 2025
+* **Created** - September 2025

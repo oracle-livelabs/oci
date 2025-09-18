@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-In this workshop, you’ll use OCI OpenSearch Service v3.0 to build AI-driven, agentic workflows for observability and incident response. Learn to automate real-time telemetry ingestion with Data Prepper, interact with data through built-in AI and MCP agents, perform rapid root-cause analysis, and streamline incident resolution. You’ll leave with a working setup and best practices to transform cloud monitoring, cut mean time to resolution, accelerate development, and deliver actionable insights with advanced search and analytics.
+In this workshop, you will use OCI OpenSearch Service v3.0 to build AI-driven, agentic workflows for observability and incident response. Learn to automate real-time telemetry ingestion with Data Prepper, interact with data through built-in AI and MCP agents, perform rapid root-cause analysis, and streamline incident resolution. You’ll leave with a working setup and best practices to transform cloud monitoring, cut mean time to resolution, accelerate development, and deliver actionable insights with advanced search and analytics.
 
 
 

@@ -280,4 +280,4 @@ For more details on RAG pipeline and conversational search, please refer to our 
 ## Acknowledgements
 
 * **Author** - **Landry Kezebou**, Lead AI/ML Engineer, OCI Opensearch
-* **Last Updated By/Date** - Landry Kezebou, September 2025
+* **Created** - September 2025

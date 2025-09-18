@@ -433,4 +433,4 @@ This will create a pipeline called *chunking-pipeline* which you will use in the
 ## Acknowledgements
 
 * **Author** - **Landry Kezebou**, Lead AI/ML Engineer, OCI Opensearch
-* **Last Updated By/Date** - Landry Kezebou, September 2025
+* **Created** - September 2025

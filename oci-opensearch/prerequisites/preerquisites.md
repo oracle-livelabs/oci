@@ -4,15 +4,17 @@
 
 In this lab, Your goal is to create an OCI Opensearch cluster  and  access the opensearch dashboard.
 
-> **If using the LiveLab tenancy, please verify what resources are already auto-provisioned to save time. If Opensearch cluster and required policies already configured, please Skip step 5. Otherwise, follow instructions to only provision the any missing resources.**
+> **If using the LiveLab provided tenancy, first Login to OCI console and verify what resources are already auto-provisioned to save time. If Opensearch cluster and required policies already configured, please Skip to Task 5. Otherwise, follow instructions to only provision the missing resources.**
 
 > **If using your own tenancy, please follow the instructions in this Lab step by step.**
 
-Estimated Time: 10 minutes
+
+**Estimated Time: 10 minutes**
 
 ### Objectives
 
 In this lab, you will learn how to:
+
 - Create a Compartment
 - Create a (user) Group
 - Create a Policy

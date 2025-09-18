@@ -10,7 +10,7 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 1. Install Python on macOS and Windows
-2. Install/verify `pip`
+2. Install/verify ```pip```
 3. Install PyCharm and Jupyter Notebook
 4. Install Visual Studio Code (VS Code)
 5. Create & activate a virtual environment (venv)
@@ -27,11 +27,13 @@ There are several options for you to install python 3 on you local machine:
    - Click on the installer package for your version to download the package installer. e.g:  [install python 3.13.7](https://www.python.org/ftp/python/3.13.7/python-3.13.7-macos11.pkg)
    - Open your Download folder, locate the the **.pkg** installer file you just downloaded and double click on it to launch the installer. Follow the instructions to install python 3 on your machine.
    - Confirm install:
-      ```bash
-      python3 --version
-      pip3 --version
-      ```
-   > Tip: On macOS, Python runs as `python3` and `pip3` by default.
+
+```bash
+python3 --version
+pip3 --version
+```
+
+> Tip: On macOS, Python runs as `python3` and `pip3` by default.
 
 <br/><br/>
 
@@ -41,17 +43,19 @@ There are several options for you to install python 3 on you local machine:
    - **Important:** Check **“Add Python to PATH”** during setup.
    - Choose “Install Now” and finish.
    - Confirm install (Command Prompt / PowerShell):
-      ```powershell
-      py --version
-      py -m pip --version
+```bash
+py --version
+py -m pip --version
+```
 
 
 <br/><br/>
 
-## Task 2: Install `pip`
+## Task 2: Install ```pip```
 
-Most modern Python installers include `pip`. If it’s missing, use one of the options below.
+Most modern Python installers include ```pip```. If it’s missing, use one of the options below.
 1. Quick check
+
 ```bash
 # macOS/Linux
 python3 -m pip --version
@@ -60,7 +64,8 @@ python3 -m pip --version
 py -m pip --version
 ```
 
-2. Ensure with built-in `ensurepip`
+2. Ensure with built-in ```ensurepip```
+
 ```bash
 # macOS/Linux
 python3 -m ensurepip --upgrade
@@ -69,16 +74,17 @@ python3 -m ensurepip --upgrade
 py -m ensurepip --upgrade
 ```
 
-3. Fallback: `get-pip.py`
-   - Download `get-pip.py`: https://bootstrap.pypa.io/get-pip.py
+3. Fallback: ```get-pip.py```
+   - Download ```get-pip.py```: https://bootstrap.pypa.io/get-pip.py
    - Run:
-      ```bash
-      # macOS/Linux
-      python3 get-pip.py
 
-      # Windows
-      py get-pip.py
-      ```
+```bash
+# macOS/Linux
+python3 get-pip.py
+
+# Windows
+py get-pip.py
+```
 
 <br/><br/>
 
@@ -138,6 +144,7 @@ Useful docs:
 > A virtual environment keeps project dependencies isolated.
 
 ### macOS / Linux
+
 ```bash
 # 1) Navigate to your project folder
 cd ~/Users/<YOU>/<PATH-TO-PROJECT-FOLDER>>
@@ -154,12 +161,14 @@ pip --version
 ```
 
 To **deactivate** later:
+
 ```bash
 deactivate
 ```
 
 ### Windows (CMD or PowerShell)
-```powershell
+
+```bash
 # 1) Navigate to your project folder
 cd C:\Users\<YOU>\projects\my-app
 
@@ -267,4 +276,4 @@ jupyter notebook
 ## Acknowledgements
 
 * **Author** - **Landry Kezebou**, Lead AI/ML Engineer, OCI Opensearch
-* **Last Updated By/Date** - Landry Kezebou, September 2025
+* **Created** - September 2025
