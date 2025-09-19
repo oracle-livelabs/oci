@@ -26,7 +26,7 @@ In this lab, you will:
 
 Create an Oracle Cloud Object Storage bucket. Upload your Terraform configuration *.zip* and *config.json* files containing variable values. Storing these files in Object Storage provides centralized, secure, and easily accessible storage, enabling streamlined and automated provisioning workflows.
 
-1. Download the [instance-provisioning-terraform.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/F4CUHkkbcvvYKF9gOT_KDQ7NTi6Cv8dY0Akm4N2vCcm5iCB-QXiv_PHBmiIW59pb/n/c4u02/b/hosted_workshops/o/stacks/oci-fleet-application-management.zip) file, which contains the Terraform code to create a compute instance.
+1. Download the [instance-provisioning-terraform.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Eiqge3q32aWGYeYK6HvjE7gxN6F6htiNNgkECi8sgBKSozs8h1cREkPZwGSKwzB1/n/id7p26aijxt9/b/custom-images-livelabs/o/instance_provisioning_terraform_package.zip) file, which contains the Terraform code to create a compute instance.
 
 2. Download the [config.json](../provisioning/files/config.json?download=1) file, update it with variable values specific to your environment, and save your changes.
 
