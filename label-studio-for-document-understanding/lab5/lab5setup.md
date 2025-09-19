@@ -47,7 +47,7 @@ To export the annotations:
     ![Export Labels button](images/export_labels_button.png)
 
 2. Export the labels into JSON-MIN format as shown below
-    ![Export in JSON-MIN format](images/JSON_MIN%20format.png =40%x*)
+    ![Export in JSON-MIN format](images/json_min%20format.png =40%x*)
 
 3. Move the exported json file to the dataset folder and rename it to `exported_records.json` (i.e. into datasets/exported_records.json)
 <br><br>
