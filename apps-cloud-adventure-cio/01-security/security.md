@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to Oracle’s Cloud Adventure for Risk Management.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered in accounting and finance. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the CIO.
+Welcome to Oracle’s Cloud Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered in accounting and finance. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the CIO.
 
 ### Objectives
 
@@ -12,11 +12,13 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-## ERP & SCM: Extending Privileges to a User
+## Path 1: Assign AI Privileges
 
 1. During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
 
-  ![Security Objectives](images/image100objs.png)
+  ![Security Objectives](../01-security/images/image100objs.png)
+
+
 
 At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
 
@@ -210,12 +212,11 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Compare Roles 6](images/image030.png)
 
-
-
 22. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
+## Path 2: Request Access with Risk Management
 
 ## Summary
 
