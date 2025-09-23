@@ -621,4 +621,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Madhusudhan Rao, Oracle Database Product Manager 
 * **Last Updated By/Date** - Sept 23rd, 2025
-* **Updates** - Database Actions
+* **Updates** - Database Actions. 
