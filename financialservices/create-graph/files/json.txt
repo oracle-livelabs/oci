@@ -1,8 +1,0 @@
-{
-      "title": "Lab 4: Anomalies in Transactions",
-      "filename": "../../anomalies/anomalies.md"
-    },
-    {
-      "title": "Lab 5: Retrieval Augmented Generation",
-      "filename": "../../rag/rag.md"
-    },
