@@ -13,8 +13,8 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Access the APM workshop environment",
-            "description": "Access the APM workshop environment",
+            "title": "Lab 1: Analyze GenAI app with Inferencing app dashboard",
+            "description": "Analyze GenAI app with Inferencing app dashboard",
             "filename": "../../01-access-env/access-env.md"
         },
 
@@ -55,8 +55,9 @@
             "filename": "../../08-construct-query/construct-query.md"
         },
         {
-            "title": "Oracle CloudWorld 2022 - Get Help",
-            "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
+          "title": "Need Help?",
+          "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+          "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
         }
     ]
 }

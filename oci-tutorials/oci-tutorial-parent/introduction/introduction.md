@@ -23,7 +23,7 @@ This lab assumes you have: **TBD**
 
 ### **Assets**
 
-* [Getting Started with Oracle Cloud Infrastructure Core Services Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648)
+* [Getting Started with Oracle Cloud Infrastructure Core Services Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648)
 * [Day One and Beyond: Oracle Cloud Technical Quick Start](https://www.youtube.com/watch?v=BU2VsBoXhdo&ab_channel=OracleLearning)
 * [Getting Started with OCI](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/baremetalintro.htm)
 

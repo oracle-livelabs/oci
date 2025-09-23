@@ -19,8 +19,6 @@ Estimated time: 5 minutes
 
 1. Open the navigation menu in the Oracle Cloud console, select **Observability & Management** > **Home** under **Application Performance Management**.
 
-	![Oracle Cloud console Menu](images/1-0-menu-home.png " ")
-
 2. APM Home page opens. Locate the **Monitors** widget on the right side of the page. You can see the status of the synthetic monitors running for the last 24 hours, in this compartment.
 
 	![Oracle Cloud console, APM Home](images/1-1-apm-home.png " ")
@@ -53,7 +51,7 @@ Estimated time: 5 minutes
 4. Scroll down to locate the **Load Time Breakdown** chart. You can see that the Ajax wait time is taking a large portion of the load time, which is typically waiting for a backend response.
  	![Oracle Cloud console, APM Home](images/1-6-load-time-bdown.png " ")
 
-5. Find the **Connect Time Breakdown** chart on the right side. In the screenshot example, there is no connection related slow down you can see in the chart. However, in cases there are failures in monitor runs, the chart helps you to analyze the root cause. For example, the failed runs can be caused by the SSL not being resolved or an issue in DNS. Also, a longer execution time may be caused by the delay in connection.
+5. Find the **Connect Time Breakdown** chart on the right side. In cases there are failures in monitor runs, the chart helps you to analyze the root cause. For example, the failed runs can be caused by the SSL not being resolved or an issue in DNS. Also, a longer execution time may be caused by the delay in connection.
 
  	![Oracle Cloud console, APM Home](images/1-7-connect-time-bdown.png " ")
 
@@ -74,4 +72,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, May 2023
+* **Last Updated By/Date** - Yutaka Takatsu, June 2025

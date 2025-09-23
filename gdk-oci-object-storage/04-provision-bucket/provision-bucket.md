@@ -19,9 +19,9 @@ In this lab, you will:
 
    ![Object Storage buckets menu](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png)
 
-2. Select your workshop compartment from the **Compartment** drop down list on the left. <if type="desktop">To find the compartment name, return to the **Login Details** screen, then copy the value of the **Compartment Name**, paste it in the **Compartment** drop down list in the Oracle Cloud Console and select the filtered compartment.
+2. Select your workshop compartment from the **Compartment** drop down list. <if type="desktop">To find the compartment name, return to the **Login Details** screen, then copy the value of the **Compartment Name**, paste it in the **Compartment** drop down list in the Oracle Cloud Console and select the filtered compartment.
 
-   ![Find compartment name](images/compartment-name.png)
+   ![Find compartment name](images/buckets-landing-page.jpg)
 </if>
 
    ![Buckets Landing Page](images/buckets-landing-page.jpg)
@@ -42,7 +42,7 @@ In this lab, you will:
 
    ![Buckets list](images/buckets-list.jpg)
 
-2. On the bucket details screen, scroll down to the **Objects** list. There are no objects listed because the bucket is empty.
+2. On the bucket details screen, navigate to the **Objects** list. There are no objects listed because the bucket is empty.
 
    ![Bucket details and Objects list](images/objects-list.jpg)
 

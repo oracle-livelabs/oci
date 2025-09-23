@@ -63,10 +63,10 @@ Neste Lab você vai aprender a trabalhar com Object Storage dentro da Oracle Clo
     <title>LAB: OCI FAST TRACK</title>
 </head>
 <body>
-    <center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/ocifasttracklogo.jpg"
+    <center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/idpjrkxadvns/b/bucket-fast-track/o/ocifasttracklogo.jpg"
  alt="LOGO OCI FAST TRACK">
             <h1>Site estático no Object Storage</h1> 
-            <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/site.gif"
+            <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/idpjrkxadvns/b/bucket-fast-track/o/site.gif"
     </center>   
 </body>
 </html>
@@ -94,4 +94,4 @@ Nesta sessão você aprendeu sobre Object Storage na prática.
 ## Autoria
 
 - **Autores** - Arthur Vianna, Lucas de Almeida, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Date** - Arthur Vianna, Fev/2024
+- **Último Update Por/Date** - Arthur Vianna, Jul/2025
