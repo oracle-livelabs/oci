@@ -279,4 +279,4 @@ You may now **proceed to the next lab**.
 * **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Direct, Program Management, Oracle Database 
 * **Last Updated By/Date** - Sept 23rd, 2025. 
 * **Document version** - 1.4
-* **Updates** - Reference Architecture & Database Actions
+* **Updates** - Reference Architecture & Database Actions, Quarterly QA Completed Sept 2025
