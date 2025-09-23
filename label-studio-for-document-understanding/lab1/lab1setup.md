@@ -113,7 +113,7 @@ Download [zip file](dataset/synthetic_dataset_invoices.zip), which contains the 
 
 4. Next, open a new terminal window and navigate to the directory where your code is saved by running:
   
-    ```
+    ``` 
     cd <path\to\your\code\directory>
     ```
 
