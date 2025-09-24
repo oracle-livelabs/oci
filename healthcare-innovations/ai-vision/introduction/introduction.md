@@ -19,7 +19,7 @@ This lab assumes you have the following:
 * An Oracle account
 * Intermediate Developer Knowledge of Oracle APEX and Oracle PL/SQL ( if you plan to build APEX Application)
  
-[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations in Healthcare, Detect Breast Cancer and Lung Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) at an early stage. Detect Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/). Use the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/), ask a doctor about specific medical symptoms and get a response from a virtual Doctor leveraging the power of [**Cohere**](https://cohere.com/) or [**Oracle Generative AI Service**](https://www.oracle.com/in/artificial-intelligence/generative-ai/large-language-models/). Chat with a virtual doctor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/), asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate the nearest Hospital with [**Oracle Spatial and Maps**](https://www.oracle.com/in/database/spatial/) and contact them.[**Oracle Process Automation**](https://docs.oracle.com/en/cloud/paas/process-automation/index.html) and [**Oracle Integration Cloud**](https://www.oracle.com/in/integration/application-integration/) for Patient Admission Process. and much more. 
+[**AI for Healthcare**](https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare) Learn about the latest innovations in Healthcare, Detect Breast Cancer and Lung Cancer using [**OCI Vision**](https://www.oracle.com/in/artificial-intelligence/vision/) at an early stage. Use the power of [**OCI Document Understanding**](https://www.oracle.com/in/artificial-intelligence/document-understanding/) to submit medical expenses, or using [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/), ask a medical advisor about specific medical symptoms and get a response from a virtual AI Advisor leveraging the power of [**Oracle Generative AI Service**](https://www.oracle.com/in/artificial-intelligence/generative-ai/large-language-models/). Chat with a virtual medical advisor through [**Oracle Digital Assistant**](https://www.oracle.com/chatbots/), asking questions related to Breast cancer or Lung cancer or Covid and how to diagnose them. Analyze complex clinical data or genome sequences with [**Oracle Analytics Cloud**](https://www.oracle.com/in/business-analytics/analytics-platform/) or locate the nearest Hospital with [**Oracle Spatial and Maps**](https://www.oracle.com/in/database/spatial/) and contact them.[**Oracle Process Automation**](https://docs.oracle.com/en/cloud/paas/process-automation/index.html) and [**Oracle Integration Cloud**](https://www.oracle.com/in/integration/application-integration/) for Patient Admission Process. and much more. 
 
 Running on top of the world's most powerful database, [**Oracle Autonomous Database**](https://www.oracle.com/in/autonomous-database/) and Low Code development platform [**Oracle APEX**](https://apex.oracle.com/en/)
 
@@ -127,7 +127,7 @@ These Labs will guide you in creating medical expenses using Oracle [**OCI Docum
  
 ***Part 3** - Create Medical Transcriptions - Lab 10 to Lab 11 (Optional labs)* 
 
-These Labs will guide you in creating medical transcription and consulting virtual AI doctors using Oracle [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/) AI Service.
+These Labs will guide you in creating medical transcription and consulting virtual AI medical advisor using Oracle [**OCI Speech**](https://www.oracle.com/in/artificial-intelligence/speech/) AI Service.
  
 * Lab 10: Create Speech Transcription Job
     * Generate Audio File
@@ -203,7 +203,7 @@ These labs will walk you through the steps of creating an [**Oracle Analytics cl
     * Copy Analytics Report Embed URLs
     * Embed Reports in APEX Application
 
-***Part 8** - Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection - Lab 17 (Optional labs)*
+<!-- ***Part 8** - Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection - Lab 17 (Optional labs)*
 
 These labs walk you through the steps of detecting Cardiovascular disease with Electrocardiogram (ECG) Reports and [**OCI Anomaly Detection**](https://www.oracle.com/in/artificial-intelligence/anomaly-detection/).
 
@@ -212,9 +212,9 @@ These labs walk you through the steps of detecting Cardiovascular disease with E
     * Upload the ECG Training data to OCI Object storage
     * Create and Train the ECG Model
     * Review Model and Data settings
-    * Detect ECG Anomalies
+    * Detect ECG Anomalies -->
    
-***Part 9** - Patient Admission Process after Breast Cancer Detection - Lab 18 to Lab 19 (Optional labs)*
+***Part 8** - Patient Admission Process after Breast Cancer Detection - Lab 17 to Lab 18 (Optional labs)*
 
 These labs walk you through the steps of creating Oracle Integration Cloud Integration Service and Process automation for the Patient Admission process.
 
@@ -247,7 +247,7 @@ In this lab you will create end to end patient admission process using Oracle In
     * Patient logs into AI for Healthcare portal to get the latest update
     * Enhanced - Patient Admission Process
 
-***Part 10** - Setup OCI Email Delivery Service - Lab 20 (Optional labs)*
+***Part 9** - Setup OCI Email Delivery Service - Lab 19 (Optional labs)*
 
 These labs walk you through the steps of setting up [**OCI Email Services**](https://www.oracle.com/in/cloud/networking/email-delivery/). This will help us email Doctors, Patients or any Health official with the required data. For example, we can email transcribed text to Doctor after the patient uploads an audio file or mail once the medical expenses have been approved or rejected
 
@@ -277,6 +277,6 @@ You may now **proceed to the next lab**.
 
 * **Architect, Author and Developer** - [Madhusudhan Rao B M](https://www.linkedin.com/in/madhusudhanraobm/), Principal Product Manager, Oracle Database
 * **Advisor** - [Bo English-Wiczling](https://www.linkedin.com/in/boenglish/), Senior Direct, Program Management, Oracle Database 
-* **Last Updated By/Date** - June 12th, 2024
+* **Last Updated By/Date** - Sept 23rd, 2025. 
 * **Document version** - 1.4
-* **Updates** - Reference Architecture & Database Actions
+* **Updates** - Reference Architecture & Database Actions, Quarterly QA Completed Sept 2025
