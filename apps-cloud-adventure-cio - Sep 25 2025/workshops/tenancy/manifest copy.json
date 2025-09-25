@@ -1,0 +1,59 @@
+{
+    "workshoptitle": "Cloud Adventure Activity Guide – for the Office of the CIO",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Security & Risk",
+            "filename": "../../01-security/security.md"
+        },
+        {
+            "title": "Lab 2: Configure & Extend",
+            "filename": "../../02-configure/configure.md"
+        },
+        {
+            "title": "Lab 3: Extend",
+            "filename": "../../03-extend/extend.md"
+        },
+        {
+            "title": "Lab 4: Extend with AI (Action Agent)",
+            "filename": "../../04-extend-more/extend-more.md"
+        }, 
+        {
+            "title": "Lab 5a: Extend with AI (HCM Benefits RAG Agent) NOT READY",
+            "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
+        }, 
+        {
+            "title": "Lab 5b: Extend with AI (HCM Benefits Agent Team)",
+            "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
+        }, 
+        {
+            "title": "Lab 6a: Extend with AI (SCM External Agent) NOT READY",
+            "filename": "../../06a-external-agent-scm/external-agent-scm.md"
+        }, 
+        {
+            "title": "Lab 6b: Extend with AI (SCM Embed Agent)",
+            "filename": "../../06b-embed-agent-scm/embed-agent-scm.md"
+        }, 
+        {
+            "title": "Lab 6: Analytics",
+            "filename": "../../06-analytics/analytics.md"
+        }, 
+        {
+            "title": "Lab 7b: Extend with AI (PRC RAG Agent)",
+            "filename": "../../07b-rag-prc/rag-prc.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+        
+    ]
+}
+
+
+
