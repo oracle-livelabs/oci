@@ -1,7 +1,7 @@
 # Create AI Agents and Agent Teams for your enterprise
 
 
-## Introduction
+### Introduction
 
 AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
 
@@ -39,7 +39,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     > 1. Click the ![add tool](images/plusadd.jpg) button to create a new Agent
 
-    ![Create Agent Team](images/scmaimage004.jpg)
+    ![Create Agent Team](../06a-external-agent-scm/images/scmaimage004.jpg)
 
 5. Define the Agent Team.
 
@@ -53,7 +53,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
      > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
      
-     ![Create Tool](images/benimage005.jpg)
+     ![Create Tool](../06a-external-agent-scm/images/scmaimage005.jpg)
 
 
 6. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
@@ -62,7 +62,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
      > (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **New Supervisor Agent**.
      
-     ![Create Agent](images/benimage006.jpg)
+     ![Create Agent](../06a-external-agent-scm/images/scmaimage006.jpg)
 
 7. Define Supervisor Agent Details.
 

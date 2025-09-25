@@ -1,5 +1,6 @@
 # Create AI Agents and Agent Teams for your enterprise
 
+## **AI Agent Studio Demo**
 
 ## Introduction
 
@@ -17,9 +18,7 @@ In this activity, you will see your Oracle Cloud Adventure team use AI Agent Stu
 
 Estimated Time: 15 minutes
 
-
-## AI Agent Studio Demo
-
+### **Begin Exercise**
 
 1. So sit back, relax, and watch your Cloud Adventure team use AI Agent Studio to Create Tools and Agents.  But pay attention as you will use these artifacts when you work on your next Cloud Adventure lan where you'll build an Agent Team. 
 

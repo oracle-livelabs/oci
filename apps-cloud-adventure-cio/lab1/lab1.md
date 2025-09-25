@@ -1,13 +1,11 @@
 
 ## Path 1: Grant AI Access
 
-[](include:security)
+[] (include:security)
 
-[](include:risk)
 
 ## Path 2: Request Access with Risk Management
 
-[](include:risk)
 
 ### Summary
 

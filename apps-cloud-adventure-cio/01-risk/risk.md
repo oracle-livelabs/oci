@@ -29,10 +29,6 @@ Estimated Time: 15 minutes
    > (1) Press the **Request Access** button.
    ![My Access Requests](../01-risk/images/riskimage002.jpg)
 
-21. Immediately you see that Cancel Supplier Negotiation has been added to the first role and does not exist in the second role.
-
- ![Compare Roles 6](images/image030.png)
-
 22. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)

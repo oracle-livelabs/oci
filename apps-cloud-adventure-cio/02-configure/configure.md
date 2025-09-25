@@ -1,15 +1,14 @@
 # Configure
 
+## **Configure the Change Salary Experience**
 
-## Configure the Change Salary Experience
-
-### Introduction
+### **Introduction**
 
 Oracle offers hundreds of prebuilt pages, workflows and forms “out of the box” as part of the Oracle Fusion Cloud.  Many of our customers want to configure these pages and workflows to meet their specific business needs.  You can unify your experience in our applications by using Redwood.
 
 Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.
 
-### Objectives
+### **Objectives**
 
 In this lab, you will use Redwood to quickly and efficiently improve the user experience in Oracle Fusion Cloud.
 
@@ -17,10 +16,11 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
+### **Begin Exercise**
 
 1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update Change Salary Page for Non-HR managers.
 
-![Configuration Objectives](../02-configure/images/configure_objs_hcm.png)
+    ![Configuration Objectives](../02-configure/images/configure_objs_hcm.png)
 
 2. You will first navigate to the Change Salary Page.
 

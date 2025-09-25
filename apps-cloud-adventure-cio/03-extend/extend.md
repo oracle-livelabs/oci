@@ -1,14 +1,12 @@
 # Extend your SaaS Applications
 
+## **Extend with new Supplier Screen**
 
-
-## Extend with new Supplier Screen
-
-### Introduction
+### **Introduction**
 
 Oracle Cloud Applications include an embedded tool called Visual Builder.  Visual Builder is the same tool that Oracle uses to develop application screens and it's available for you to create additional screens.  These screens can leverage both Oracle Cloud Application data and, if necessary, data from external systems.
 
-### Objectives
+### **Objectives**
 
 In this lab, you will use Visual Builder to create additional screens
 
@@ -16,10 +14,11 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
+### **Begin Exercise**
 
 1. In this lab, you will Use Visual Builder to build a new Supplier Screen.
 
-![New Screen Process Flow](../03-extend/images/supplierscreenobjs2.png)
+    ![New Screen Process Flow](../03-extend/images/supplierscreenobjs2.png)
 
 2. We will now create a new application screen to allow editing of specific supplier information.  Oracle Cloud Applications include an embedded tool called Visual Builder.  Visual Builder is the same tool that Oracle uses to develop application screens and it's available for you to create additional screens.  These screens can leverage both Oracle Cloud Application data and, if necessary, data from external systems.
 

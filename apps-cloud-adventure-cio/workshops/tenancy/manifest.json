@@ -23,7 +23,7 @@
             "filename": "../../03-extend/extend.md"
         },
         {
-            "title": "Lab 4: Extend with AI (Action Agent)",
+            "title": "Lab 4: Extend with AI (Old LLM)",
             "filename": "../../04-extend-more/extend-more.md"
         }, 
         {
@@ -43,19 +43,19 @@
             "filename": "../../06b-embed-agent-scm/embed-agent-scm.md"
         }, 
         {
-            "title": "Lab 6: Analytics",
-            "filename": "../../06-analytics/analytics.md"
+            "title": "Lab 9: Analytics",
+            "filename": "../../09-analytics/analytics.md"
         }, 
         {
-            "title": "Lab 7b: Extend with AI (PRC RAG Agent)",
-            "filename": "../../07b-rag-prc/rag-prc.md"
+            "title": "Lab 9: Analytics with AI",
+            "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
         },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
         }
-        
+
     ]
 }
 
