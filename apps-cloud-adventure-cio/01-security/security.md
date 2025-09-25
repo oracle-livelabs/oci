@@ -22,7 +22,6 @@
   ![Security Objectives](../01-security/images/image100objs.png)
 
 
-
      > At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
 
 
