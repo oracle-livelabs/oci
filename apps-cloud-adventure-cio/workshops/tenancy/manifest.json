@@ -7,8 +7,12 @@
             "filename": "../../00-introduction/introduction.md"
         },
         {
-            "title": "Lab 1: Security",
-            "filename": "../../01-security/security.md"
+            "title": "Lab 1: Security - ERP",
+            "filename": "../../01-security-erp/security-erp.md"
+        },
+       {
+            "title": "Lab 1: Security - AI",
+            "filename": "../../01-security-ai/security-ai.md"
         },
         {
             "title": "Lab 1: Risk",
