@@ -132,125 +132,83 @@ IMPORTANT GUIDELINES
 
     ![Create Agent](../06a-external-agent-scm/images/scmaimage013.jpg)
 
-14. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
+14. You’ve defined your Agent Team, so it’s time to add add agents.
 
      > (1) Click the ![Agent Icon](../05b-agent-team-hcm/images/agenticon.jpg) <br>
 
-     > (2) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **New Supervisor Agent**.
-     
      ![Create Agent](../06a-external-agent-scm/images/scmaimage014.jpg)
 
-7. Define Supervisor Agent Details.
+15. First, add a Supervisor Agent.
+
+     > (1) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **New Supervisor Agent**.
+
+     ![Create Agent](../06a-external-agent-scm/images/scmaimage015.jpg)
+
+16. Define Supervisor Agent Details.
 
      > (1) Enter the fields as described below:
-    * Agent Team Name: **CIOXX Benefits Supervisor Agent** where XX is replaced with your user number.<br>
-    * Family: Select **HCM** from the dropdown<br>
-    * Product: Select  **Benefits** from the dropdown<br>
+    * Agent Team Name: **CIOXX Asset Maintenance Supervisor Agent** where XX is replaced with your user number.<br>
+    * Family: Select **SCM** from the dropdown<br>
+    * Product: Select  **Maintenance** from the dropdown<br>
     * Maximum Interactions: **10** <br>
-    * Description: **This agent supervises the Benefits Advisor and FMLA Absence agents** <br>
+    * Description: **Cloud Adventure Asset Maintenance Supervisor Agent** <br>
 
      > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
 
-       ![Create Agent](images/benimage007.jpg)
+       ![Create Agent](../06a-external-agent-scm/images/scmaimage016.jpg)
 
-8. Next you'll add some worker agents.  You can scroll through the list of available tools, or use the Ask Oracle field to filter the results.  You'll do the latter.
+17. Next you'll add some worker agents.  You can scroll through the list of available tools, or use the Ask Oracle field to filter the results.  You'll do the latter.
 
-    >  (1)  Enter **XX**, where XX is replaced with your user number, in the Ask Oracle field and press the **<enter>** key or select **XX** from the resulting dropdown.<br><br>
-    >  ![Create Button](images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br><br>
-    >  (2)  Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CIOXX Benefits Advisor Agent**, where XX is replaced with your user number.<br><br>
-    >  (3)  Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CIOXX Benefits Advisor Agent**, where XX is replaced with your user number.
+    >  (1)  Enter **Maint** in the Ask Oracle field and press the **<enter>** key or (2) select **Maint** from the resulting dropdown.<br><br>
+    >  ![Create Button](../05b-agent-team-hcm/images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br><br>
+    >  (3)  Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) in the Available Agents Section to move focus.
 
-    ![Add Tool](../06a-external-agent-scm/images/scmaimage008.jpg)
+    ![Add Tool](../06a-external-agent-scm/images/scmaimage017.jpg)
 
-9. You can review the details of the agent before saving.
+18. Add the Installed Base Agent
 
-    > 1. Click the Add button ![Add Button](images/addb.jpg) on the bottom right of the screen.
+    > (1) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **CA Installed Base.**, where XX is replaced with your user number.<br>
 
-    ![Add Tools Complete](images/benimage009.jpg) <br>
+    ![Add Tools Complete](..//06a-external-agent-scm/images/scmaimage018.jpg)
 
-10. You'll add one more worker agent.  First, you'll filter on something different.
+19. You can review the details of the agent.
 
-    >  (1) Delete your previous Ask Oracle filter and enter **FMLA** in the Ask Oracle Filter and press the <enter> key or select **FMLA** from the resulting dropdown.<br><br>
+    > 1. Click the **Add** button ![Add Button](../05b-agent-team-hcm/images/addb.jpg).
 
-    >  ![Create Button](images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br><br>
+    ![Add Tools Complete](../06a-external-agent-scm/images/scmaimage019.jpg
 
-    >  (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
+20. Add the CIOXX External Vehicle Agent
 
-    >  (3) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
+    > (1) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **CIOXX External Vehicle.**, where XX is replaced with your user number.<br>
 
-    ![Add Tool](images/benimage010.jpg)
+    ![Add Tools Complete](../06a-external-agent-scm/images/scmaimage020.jpg)
 
-11. You can review the details of the agent.
+21. You can review the details of the agent.
 
-    > 1. Click the **Add** button ![Add Button](images/addb.jpg).
+    > (1) Click the **Add** button ![Add Button](../05b-agent-team-hcm/images/addb.jpg).
 
-    ![Add Tools Complete](images/benimage011.jpg) <br>
+    ![Add Tools Complete](../06a-external-agent-scm/images/scmaimage021.jpg) 
 
-12. Your Agent Team, with a Supervisory Agent and two Worker Agents is complete.  We can now hide the left Agents panel to see our full Agent Team..
+22. Add the CA Maintenance Work Order Agent
 
-    > 1. Click the **Agents** icon ![debug icon](images/agenticon.jpg) on the top left of the screen.  You can see that the left panel is now hidden and you can see the entire Agent Team
+    > (1) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **CA Maintenance Work Order Agent.**, where XX is replaced with your user number.<br>
 
-    ![start debug](images/benimage012.jpg) <br>
+    ![Add Tools Complete](..//06a-external-agent-scm/images/scmaimage022.jpg)
+
+23. You can review the details of the agent.
+
+    > (1) Click the **Add** button ![Add Button](../05b-agent-team-hcm/images/addb.jpg).
+
+    ![Add Tools Complete](..//06a-external-agent-scm/images/scmaimage023.jpg)
+
+24. Your Agent Team is ready, so let's Publish it.  In the next Lab, we'll use this published Team and make it available to end users.
+
+    > (1) Click the Publish button on the top right.
+
+    ![Add Tools Complete](../06a-external-agent-scm/images/scmaimage024.jpg)
 
 
-13. Feel free to admire your newly created Agent Team. Time to test it and see how it responds to your requests.
-
-    > 1. Click the **Debug** icon ![debug icon](images/debugarrow.jpg) on the top left of the screen.  It's the one that looks like the Play arrow.
-
-    ![start debug](images/benimage013.jpg) <br>
-
-14. You can now begin a dialog with the Agent.  The Agent is now ready for your questions.
-
-    > 1. In the **Ask Oracle** dialog box at the bottom of the screen, type **Please summarize benefits available to me**and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg) 
-
-    ![agent dialogue 1](images/benimage014.jpg) <br>
-
-15. The Agent will respond with information.  In this Debug mode, the Agent will also show you source and processing information (yellow boxes).  These will not be available to end-users once deployed.
-
-    > The Agent responds with information, so we’ll ask an additional question.
-
-    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What about FMLA benefits** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
-
-    ![agent dialogue 2](images/benimage015.jpg) <br>
-
-16. The Agent  checks with HCM Cloud and confirms existing leave requests, if any.  It also offers to create a new request for you if you provide the requested start and end dates.
-
-    You decide to tell the Agent that you’re interested in creating an FMLA absence, but you do with without provided the requested dates.
-
-    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **I would like to create FMLA absence** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
-
-    ![agent dialogue 3](images/benimage016.jpg) <br>
-
-17. The Agent reminds you that you need to provide start and end dates before the Agent can create the absence request.
-
-    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Start Date is 2025-08-28 End Date is 2025-08-29** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
-
-    ![agent dialogue 3](images/benimage017.jpg) <br>
-
-18. The agent confirms that your request has been created.
-
-    > 1. Review Agent Response
-    > 2. Click the x icon in the upper right to close the debug screenIn the **Ask Oracle** dialog box on the bottom right of the screen, enter **Proceed with ordering a laptop** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
-
-    ![agent dialogue 3](images/benimage018.jpg) <br>
-
-19. Let’s go back to the homepage so we can confirm the creation of our absence.
-
-    > 1. Click the Home  **Ask Oracle** icon ![up arrow icon](images/icon012_home.png) on the top right.
-
-    ![agent dialogue 3](images/benimage019.jpg) <br>
-
-20. The agent has created your requisition and now we want to find it.
-
-    > 1. In the Search field, type **existing absence** and select **Existing Absences - Me** from the resulting dropdown.
-
-    ![agent dialogue 3](images/benimage020.jpg) <br>
-
-35. There it is!  ![up arrow icon](images/checkeredflag.jpg)
-
-    > ![agent dialogue 3](images/benimage021.jpg) <br>
-
-36. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+25. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
