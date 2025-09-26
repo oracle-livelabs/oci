@@ -19,210 +19,194 @@
 
 1. During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
 
-  ![Security Objectives](../01-security/images/image100objs.png)
+  ![Security Objectives](../01-security-ai/images/secaiobjs.jpg)
 
 
      > At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
 
 
+2. To enable the ability to us AI to discover new suppliers, you will access the security console. This is the Springboard where you’ll access all features.
 
-2. Oracle Cloud Applications are delivered with a complete set of roles which control access to application functions and data.
+  > (1) Select the **Tools** tab menu. <br>
+  > (2) Then select the role which matches your entry.
+  ![Home Screen](../01-security-ai/images/secaiimage001.jpg)
 
-    > To add a new privilege  to a user, you will need to first copy an existing role.<br>
-    > This is the Springboard where you’ll access all features.
+3. Enter Security Console .
 
-   ![Application Springboard](../01-security/images/image001.png)
+  > (1) Select **Security Console**.
+  ![Tools Screen](../01-security-ai/images/secaiimage002.jpg)
 
+ > (1) Dismiss the warning by selecting **OK**.
+  ![Roles Screen](../01-security-ai/images/secaiimage003.jpg)
 
-3. Accessing Security Console
+4. While examining roles, begin by searching for the role we seeded for this adventure
 
-    > 1. Select the **Tools** tab menu. <br>
+  > (1) In the search field provided at the top, type **Adventure**. <br>
+  > (2) Then click on the first entry as shown.
+  ![Roles Screen](../01-security-ai/images/secaiimage004.jpg)
 
-    > 2. Select **Security Console**.
+5.	Using the action button, copy the role.  Modifications should always be done to copies.
 
-    ![Tools Security Console](images/image002.png)
+  > (1) Click on the Actions Pull-Down Menu. <br>
+  > (2) Select **Copy Role**.
+  ![Roles Screen](../01-security-ai/images/secaiimage005.jpg)
 
 
-4. You’ll be working from this single console for most of the examples today.  By default, you are viewing the Roles tab of the console.
+6. Continue with coping the role
 
-    > Security Console - Roles.
+  > (1) Select **Copy top role**. <br>
+  > (2) Press the **Copy Role** button.
+  ![Roles Screen](../01-security-ai/images/secaiimage006.jpg)
 
-    ![Console Top Empty](images/image003.png)
+7.	Notice that you are provided with a list of ordered steps at the top.  For this example, we will only provide answers to steps 1, 2 and 7.
 
-5. Notice how the search is dynamic and offers available options as you type.
+  Give your copy a unique name
 
-    > (1) In the search field provided at the top, type: **Adventure**. <br>
+  > (1) Add **your initials and xx Code** to the name of the **role name** and (2) **role code** as shown.  <br>
 
-    > (2) Then **click** on the **Adventure Accounts Payable Manager** job role.
+  This will keep your version separate from the other participants, and it will help you find the new role later in this Cloud Journey.
 
-    ![Adventure Role Search](images/image004.png)
+  > (3) Press the **Next** button.
+  ![Copy Roles Screen](../01-security-ai/images/secaiimage007.jpg)
 
-6. You can now see a list of the roles which are granted to a user when they are provided with the Accounts Payable Manager.
+8.	Using Function Security Policy, you will add the privileges Brian Bell needs
 
-    > (1) Notice that the table may be exported to Microsoft Excel using the button provided at the top right. <br>
+ > (1) Press the **Add + Function Security Policy** button.
+  ![Function Security Policy](../01-security-ai/images/secaiimage008.jpg)
 
-    > (2) (Nothing to perform here)
+9.	You will now find the required policy using the search form.
 
-    ![Adventure Role roles](images/image005.png)
+  > (1) Type **Edit Supplier Negotiation** in the search field and select the policy. <br>
+  > (2) **Select** the appropriate entry as shown.
+  ![Function Security Policy](../01-security-ai/images/secaiimage009.jpg)
 
-7. Always make changes to a copied role to ensure that your custom configurations are preserved on updates.
+10.	Continue adding
 
-    > (1) Tasks associated with the role are available from this pull-down menu.  
-    > (2) Select **Copy Role**.
+ > (1) Press the **Add Privilege to Role** button.
+  ![Function Security Policy](../01-security-ai/images/secaiimage010.jpg)
 
-    `![Copy Adventure Role a](images/image006.png)
+11.	Another role is required to gain access to the AI feature.
 
-8. Now you'll execute the copy role.
+ > (1) Type **Create Supplier Negotiation** in the search field and **select** the policy and select the appropriate entry as shown.
+  ![Function Security Policy](../01-security-ai/images/secaiimage011.jpg)
 
-    > (1) Select **Copy top role**. <br>
+12.	Continue adding
 
-    > (2) Press the **Copy Role** button.
+ > (1) Press the **Add Privilege to Role** button.
+  ![Function Security Policy](../01-security-ai/images/secaiimage012.jpg)
 
-    ![Copy Adventure Role b](images/image007.png)
+13.	Complete adding roles
 
-9. Notice that you are provided with a list of ordered steps at the top.  For this example, we will only provide answers to steps 1, 2 and 7.
+ > (1) Press the **Cancel** button to continue.
+  ![Function Security Policy](../01-security-ai/images/secaiimage013.jpg)
 
-  We start by giving our copied role a unique name.
+ > (1) Press the **next** button.
+  ![Function Security Policy](../01-security-ai/images/secaiimage014.jpg)
 
-    > (1) Add **your initials and xx Code** to the name of the **role name** and **role code** as shown. <br>
+ > (1) Press the **next** button.
+  ![Data Security](../01-security-ai/images/secaiimage015.jpg)
 
-    > This will keep your version separate from the other participants, and it will help you find the new role later in this Cloud Journey. <br>
+ > (1) Press the **next** button.
+  ![Role Hierarchy](../01-security-ai/images/secaiimage016.jpg)
 
-    > (2) Press the **Next** button.
+ > (1) Press the **next** button.
+  ![Segregation of Duties](../01-security-ai/images/secaiimage017.jpg)
 
-    ![Copy Role a](images/image008.png)
 
-10. Using Function Security  Policy, you will add the privileges Brian Bell needs
+14.	Using a similar search tool, you will now search for Brian Bell and provide him with this new role and its associated privileges.
 
-    > (1) Press the **Add + Function Security  Policy** button.
+ > (1) Press the **add user** button.
+  ![Users](../01-security-ai/images/secaiimage018.jpg)
 
-    ![Copy Role 2a](images/image009.png)
+15.	Searching for Brian Bell
 
-11. You will now find the required policy using the search form.
+ > (1) Type “Brian.Bell” in the search form then Select his name when found. <br>
+ > **Note:** Be sure to include the ‘.’ between the first and last name.
 
-    > (1) Type **Cancel Supplier Negotiation** in the search field and select the policy.
+  ![Add Users](../01-security-ai/images/secaiimage019.jpg)
 
-    ![Copy Role 2b](images/image010.png)
+16.	Continue
 
-12. You can now add the selected privilege to the role
+ > (1) Press the **Add User to Role** button.
+  ![Add Users](../01-security-ai/images/secaiimage020.jpg)
 
-    > (1) Press the **Add Privilege to Role** button
+17.	Again, the search box remains in case you want to add additional users.
 
-    ![Copy Role 2c](images/image011.png)
+ > (1) Press the **Cancel** button.
+  ![Add Users](../01-security-ai/images/secaiimage021.jpg)
 
-13. Note that the search window did not automatically dismiss.  This is done so you can continue to add more policies in this process.
+18.	Brian Bell has been added to this new role
 
-    > (1) Press the **Cancel** button to continue.
+ > (1) Press the **Next** button.
+  ![Add Users](../01-security-ai/images/secaiimage022.jpg)
 
-    ![Copy Role 2d](images/image012.png)
+19.	Note confirmation that we have added two Security Policies and one user
 
-14. The new policy has been added.
+ > (1) Press the **Submit and Close** button.
+  ![Add Users](../01-security-ai/images/secaiimage023.jpg)
 
-    You will skip the next three items in the numbered guided track until you arrive at ‘Users (7)’ in the Copy Role process.
+20.	Using the compare roles feature, you can quickly identify changes you’ve made compared to the out of the box roles provided by Oracle or other custom roles.
 
-    > (1) Press the **7 (Users)** task at the top of the screen.
+  This section uses your newly created role to do exactly this.
 
-    ![Copy Role 2e](images/image013.png)
+ > (1) From the Security Console, press the **Compare Roles button** button.
+  ![Roles](../01-security-ai/images/secaiimage024.jpg)
 
-15. Using a similar search tool, you will now search for Brian Bell and provide him with this new role and its associated privileges.
+21.	Begin search for the original role
 
-    > (1) Press the **Add User** button.
+ > (1) Press the **Search** icon for the First Role.
+  ![Compare Roles](../01-security-ai/images/secaiimage025.jpg)
 
-  ![Copy Role 7a](images/image014.png)
+22.	Search for seeded role
 
-16. Now you can add Brian Bell as a user of this role.
+  > (1) In the search field type **Adventure**.<br>
+  > (2) **Select** the first entry.
+  ![Compare Roles](../01-security-ai/images/secaiimage026.jpg)
 
-    > (1) Type **Brian.Bell** in the search form then **Select** his name when found. <br>
+23.	Continue
 
-    > Be sure to include the **‘.’** between the first and last name.
+ > (1) Press the **Ok** button.
+  ![Compare Roles](../01-security-ai/images/secaiimage027.jpg)
 
-  ![Copy Role 7b](images/image015.png)
+24.	Begin search for the custom role
 
-17. You can finish the Add User to Role step now. 
+ > (1) Press the **Search** icon for the Second Role.
+  ![Compare Roles](../01-security-ai/images/secaiimage028.jpg)
 
-    > (1) Press the **Add User to Role** button.
+25.	Search for custom role
 
-  ![Copy Role 7c](images/image016.png)
+ > (1) Type in your **three initials and XX Code** which you used to name your custom role . <br>
+ > (2) **Select** your custom role.
+  ![Compare Roles](../01-security-ai/images/secaiimage029.jpg)
 
+26.	Continue
 
-18. Again, the search box remains in case you want to add additional users.
+ > (1) Press the **Ok** button.
+  ![Compare Roles](../01-security-ai/images/secaiimage030.jpg)
 
-    > (2) Press the **Cancel** button.
+27.	Begin compare task
 
-  ![Copy Role 7d](images/image017.png)
+ > (1) Press the **Compare** button.
+  ![Compare Roles](../01-security-ai/images/secaiimage031.jpg)
 
-19. Brian Bell has been added to this new role, so you can move to the next step.
+28.	Immediately you see that two roles have been added to the first role and does not exist in the second role.
 
-    > (1) Press the **Next** button.
+ > (1) Press the **Only in second role** toggle.
+  ![Compare Roles](../01-security-ai/images/secaiimage032.jpg)
 
-  ![Copy Role 7e](images/image018.png)
+29.	This view shows the two polices added you added to your custom role.
 
-20. This screen shows a summary of your changes.
+ > (1) Press the **Home** button.
+  ![Compare Roles](../01-security-ai/images/secaiimage033.jpg)
 
-    > (1) Note confirmation that we have added one Security Policy and one user <br>
-    > (2) Press the **Submit and Close** button.
+30. From here, Brian Bell will login, and demonstrate using the newly granted AI Feature
 
-  ![Copy Role 7f](images/image019.png)
+  ![Home Screen](../01-security-ai/images/secaiimage034.jpg)
 
-21. You'll now receive a pop-up message that you changes are complete.
 
-  Success!
+31. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    > (1) Press the **OK** button.
-
-  ![Copy Role 7g](images/image020.png)
-
-22. Next, you'll use the Compare Roles feature, where you can quickly identify changes you’ve made compared to the out of the box roles provided by Oracle or other custom roles.
-
-    > (1) From the Security Console, press the **Compare Roles button**.
-
-    ![Compare Roles Launch](images/image021.png)
-
-23. You will need to enter the name of your new role
-
-    > (1) Press the **Search** ![Search Icon](images/icon01_search.png) icon for the First Role
-
-    ![Compare Roles 1](images/image022.png)
-
-24.  > (1) Type in your **three initials and XX Code** which you used to name your custom role.
-
-   ![Compare Roles a](images/image023.png)
-
-25.  > **Select** your custom role
-
-   ![Compare Roles b](images/image024.png)
-
-26.  > Press the **OK** button.
-
- ![Compare Roles c](images/image025.png)
-
-27. Now you will repeat these steps for the original role
-
-    > (1) Press the **Search** icon for the Second Role
-
-   ![Compare Roles d](images/image026.png)
-
-28. > (1) In the search field type **Adventure**. <br>
-
-    > (2) **Select** the first entry.
-
-    ![Compare Roles E](images/image027.png)
-
-29. > (1) Press the **OK** button.
-
-    ![Compare Roles F](images/image028.png)
-
-30. > (1) Press the **Compare** button.
-
- ![Compare Roles F](images/image029.png)
-
-31. Immediately you see that Cancel Supplier Negotiation has been added to the first role and does not exist in the second role.
-
- ![Compare Roles 6](images/image030.png)
-
-32. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+  [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 <!--  ## Path 2: Request Access with Risk Management -->
 
