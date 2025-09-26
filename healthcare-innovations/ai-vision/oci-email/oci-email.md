@@ -44,20 +44,17 @@ This lab assumes you have:
 ## Task 2: EMAIL Delivery Configuration  
 
 1. From the top left navigation search for **Email**, this will link to **Email Delivery** Service under **Application Integration**. Copy the SMPT Sending Information.  
-
-    ![Setup OCI Email](images/send-email-3.png " ")
-
+  
 2. Copy the **Public Endpoint**    
 
-    ![Setup OCI Email](images/send-email-4.png " ")
+    ![Setup OCI Email](images/email-delivery.png " ")
 
 ## Task 3: Create Approved Sender    
 
 1. An approved sender is associated with a compartment and only exists in the region where it was configured. If you create an approved sender in the US West (Phoenix) region, you can’t send email through the US East (Ashburn) region with that sender. 
 
     Approved Senders email id that will be representing From email address.
- 
-    ![Setup OCI Email](images/send-email-6.png " ")
+  
  
 ## Task 4: Sending Speech Transcription and Audio file link in an Email
 

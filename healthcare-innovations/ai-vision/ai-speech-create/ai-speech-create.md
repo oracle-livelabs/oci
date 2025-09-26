@@ -57,41 +57,32 @@ OCI Speech is a versatile service that can be called via REST APIs, different SD
 ## Task 3: Create Speech Transcription Job
 
 1. On cloud.oracle.com, Navigate to Analytics & AI, and Select Speech under AI Services
- 
-    ![Speech Transcription Job](images/speech-transcription-000.png " ")
+  
 
 2. Review the overview tab, and go through the Oracle Documentation links. 
-
-    ![Speech Transcription Job](images/speech-transcription-021.png " ")
+ 
 
 3. Click on Jobs and provide basic information. 
-
-    ![Speech Transcription Job](images/speech-transcription-023.png " ")
+ 
 
 4. You can also provide a prefix to optional output folder under the selected Bucket.
-
-    ![Speech Transcription Job](images/speech-transcription-024.png " ")
+ 
 
 5. Choose OCI Bucket and then select the file which was uploaded. Click on the Submit button.
-
-    ![Speech Transcription Job](images/speech-transcription-025.png " ")
+ 
 
 6. The speech transcription job will change from creating status to active status within few seconds.
- 
-    ![Speech Transcription Job](images/speech-transcription-026.png " ")
-
-    ![Speech Transcription Job](images/speech-transcription-022.png " ")
+   
+    ![Speech Transcription Job](images/speech-create.png " ")
 
 ## Task 4: Review Transcription Job Output in JSON and .SRT files
 
 1. Click on the Active Speech Job for more details.
-
-    ![Speech Transcription Job](images/speech-transcription-027.png " ")
+ 
 
 2. Click on Output Bucket
 
-    ![Speech Transcription Job](images/speech-transcription-028.png " ")
-
+    
 3. Download the JSON Output Object
 
     ![Speech Transcription Job](images/speech-transcription-029.png " ")

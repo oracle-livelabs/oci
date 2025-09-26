@@ -35,34 +35,30 @@ Basic data labeling tool is provided within OCI. With this data labeling tool, y
 But before you continue, you need to perform the first step, **Create Dataset** based on your object storage based image library.
 
 1. Navigate to Data Labeling page. From the **Navigator** menu select **Analytics & AI** and then **Data Labeling**.
-
-     
+ 
 
 2. Go to datasets. Click on **Datasets** link under **Data Labeling** on the left side of the page.
-
  
 
 3. Create a new dataset. This will open **Dataset list** page in selected compartment (make sure you are in correct compartment as you might need to change compartment to the one you have created for this workshop).   
   
     Select *Images* from **Dataset format** and *Single label* for **Annotation class**.
- 
-   
-
+  
     Click **Next**
   
 4. Click *Select from Object storage* and select *Object storage bucket location* where the Breast cancer images have been uploaded.
-  
-    ![Create a new dataset](images/create-bc-dataset-2.png " ")
+   
   
 5. Add labels
-
-    ![Create a new dataset](images/create-bc-dataset-3.png " ")
-
+  
     Enter two labels: **BREAST\-WITH\-CANCER**, **NORMAL\-BREAST** in **Labels set** field.
 
     Click **Next** and Review the details provided and click **Create**
- 
-    ![Create a new dataset](images/create-bc-dataset-4.png " ")
+
+6. Your vision model will look like as shown below, for example **Lung Cancer Image Classification Model**, Here you can upload new custom images and check for the Model confidence score and train the model further if required. 
+
+    ![Data labeling on Github](./images/vision-model.png " ")
+  
  
 ## Task 2: Bulk image labeling
 

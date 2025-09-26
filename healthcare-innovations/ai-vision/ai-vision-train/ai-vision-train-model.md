@@ -32,9 +32,7 @@ This lab assumes you have:
 In the previous lab, you have labeled all images (records) in your dataset, which is prerequisite to start working with **Vision** service. In this lab, you will create your first **vision**, image classification, model and you will run some tests to confirm it is working properly.
 
 1. Navigate to Vision page, Using **Navigator** (on the left) navigate to **Analytics & AI** and then choose **Vision**.
-
-    ![Navigate to Vision](images/vision-nav.png " ") 
-    
+ 
  
 2. Continue with AI Vision project setup. Click **Projects** on the left side menu list, confirm you are in correct **Compartment** and click **Create Project** provide project name and description.
  
@@ -49,46 +47,36 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 
 2. Under Data Source choose the dataset that we had created in our previous lab. click **Next**
 
-    ![Create a new Vision model](images/select-data.png " ")
-
+   
 3. Train model. Provide the Model display name and description, training duration can be **Recommended mode**. 
     
     > **Note:** Higher the number of images & higher the training duration better the AI model. Typically 2000+ images under same folder would create a good model. I would recommend minimum of 100 images in a folder, Also the recommended mode completes in less than a few hours, between 2 to 3 hours for approximately 2500 images of 1024 × 1024 pixel resolution.  
 
-    ![Create a new Vision model](images/train-model-bc.png " ")
+    ![Create a new Vision model](images/train-model-new.png " ")
 
     Click **Next** to proceed to the second step.
 
 4. Review the settings, click on **Create and train** button
-
-    ![Create a new Vision model](images/review-data.png " ")
-
+  
     This will create a work request which you can monitor for percentage completed.
     
     You can also monitor the progress by reviewing **Log Messages**.
 
 5. Click on the Project to Verify if the Model Status is **Active**
-
-    ![Create a new Vision Model Active](images/model-live-active.png " ")
+ 
    
 ## Task 3: Analyze and Evaluate your Model
 
 1. Test you model using few random test images from your previously downloaded X-Ray images 
  
     Click **Local File** and upload image
-
-    ![Upload NORMAL image](images/bc-review-1.png " ")
-
+ 
 2. Image will be uploaded and automatically analyzed. **Image** and prediction **Results** are displayed.  
-
-     ![Upload NORMAL image](images/bc-review-2.png " ")
-
+  
     This is clearly showing **BREAST\-WITH\-CANCER** with **99% confidence**
   
 3. You can repeat this for any other image upload 
-
-    ![Upload NORMAL image](images/bc-review-3.png " ")
-
+  
     This is showing it is **NORMAL\-BREAST** with **76% confidence**.
  
     > **Note:**  As an alternative you can create a bucket upload the testing images to that bucket, get the par url and use **Object storage** radio button, this will also bring same result but request JSON will change for input source element.
