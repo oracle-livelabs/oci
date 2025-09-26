@@ -35,7 +35,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     ![Open tools](images/scmaimage003.jpg)
 
 
-4. Create an Agent Team.
+4. Create an Agent.
 
     > 1. Click the ![add tool](images/plusadd.jpg) button to create a new Agent
 
@@ -44,25 +44,101 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 5. Define the Agent Team.
 
      > (1) Enter the fields as described below:
-     * Agent Team Name: **CIOXX External Vehicle Recall Agent** where XX is replaced with your user number. <br>
+     * Agent Name: **CIOXX External Vehicle Recall Agent** where XX is replaced with your user number. <br>
      * Family: Select **SCM** from the dropdown <br>
      * Product: Select  **Maintenance** from the dropdown <br>
      * Maximum Interactions: **10** <br>
      * Description: **TCloud Adventure External Vehicle Recall Agent** <br>
-     * Prompt: **TCloud Adventure External Vehicle Recall Agent** <br>
-
-     > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
+     * Prompt: ![Alert Flat](images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt.  It's available as described in the copy block below and can be copied from their. Alternatively, the prompt text is available in the **Prompt - External Vehicle Recall Agent.txt** file that is available in the **ai-prompts** folder on your desktop.  so, please open this file and copy the contents into the Prompt field or copy the prompt from the **copy block** below. <br>
+         > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
+         > (3) Click the Create Button ![Create Button](images/createb.jpg) <br>
      
      ![Create Tool](../06a-external-agent-scm/images/scmaimage005.jpg)
 
+ <copy>AGENT ROLE
+As a Vehicle Recall Analyst, your role is to efficiently access vehicle recall information, providing users with clear information on any recalls related to their vehicle based on vehicle make, vehicle model and vehicle model year.
 
-6. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
+RESPONSIBILITIES
 
-     > (1) Click the ![Agent Icon](images/agenticon.jpg) <br>
+Your responsibilities include:
 
-     > (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **New Supervisor Agent**.
-     
+Vehicle Recall Information:
+
+- Clearly provide with clear information on any recalls related to their vehicle based on vehicle make, vehicle model and vehicle model year.
+- Use the 1st word of the Asset description as vehicle make.
+- Use the 2nd word of the Asset description as vehicle model.
+- Use "2025" as the vehicle model year
+- Use the CA_EXTERNAL_VEHICLE_RECALL_API_TOOL to retrieve policy details when answering questions.
+
+IMPORTANT GUIDELINES
+
+  - Provide concise, factual answers based strictly on the data retrieved.
+  - Never fabricate or assume information.
+  - Format your responses clearly and professionally for easy readability.</copy></pre></p>
+
+
+6. You’ve defined your Agent, so it’s time to add a your tool.
+
+     > (1) Click the ![Agent Icon](images/toolhammericon.jpg) <br>
+
      ![Create Agent](../06a-external-agent-scm/images/scmaimage006.jpg)
+
+7. Search for and add the tool
+
+   > (1) Enter **CA External** in the Ask Oracle field, where XX is replaced with your user number, and press the **<enter>** key or select **CIOXX** from the resulting dropdown.<br>
+   > (2) Click in the lower portion of the Tools area of the screen to make the result set active.
+   > (3) Click the ![Agent Image](../05a-rag-agent-hcm/images/plusicon.jpg) icon next to the CA External Vehicle Tool.
+
+8. You can confirm the details of tool and continue
+
+    > (1) Click the **+ Add** button ![Add button Image](../05a-rag-agent-hcm/images/addb.jpg).
+
+    ![Add Agent](../06a-external-agent-scm/images/scmaimage008.jpg)
+
+9. That's it!  If necessary, you can add additional tools to your agent.  But no additional ones are required for this lab, so you can finish the Agent creation.
+
+    > (1) Click the ![Create button Image](../05a-rag-agent-hcm/images/createw.jpg) button on the top right.
+
+    ![Create Agent](..//06a-external-agent-scm/images/scmaimage009.jpg)
+
+10. You’ve previously created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some worker agents.
+
+    > 1. Click the ![Agent Teams](../05b-agent-team-hcm/images/agentteams.jpg) button/tab at the bottom of the page
+
+    ![Open tools](../06a-external-agent-scm/images/scmaimage010.jpg)
+
+11. Create an Agent Team.
+
+    > 1. Click the ![add tool](../05b-agent-team-hcm/images/plusadd.jpg) button to create a new Agent
+
+    ![Create Agent Team](../06a-external-agent-scm/images/scmaimage011.jpg)
+
+12. Define the Agent Team.
+
+     > (1) Enter the fields as described below:
+     * Agent Team Name: **CIOXX Asset Maintenance Agent Team** where XX is replaced with your user number. <br>
+     * Family: Select **SCM** from the dropdown <br>
+     * Product: Select  **Maintenance** from the dropdown <br>
+     * Maximum Interactions: **10** <br>
+     * Description: **Cloud Advneture Asset Maintenance Agent Team** <br>
+
+     > (2) Click the **Create** button ![Create Button](../05b-agent-team-hcm/images/createb.jpg) on the bottom right.
+
+     ![Create Tool](../06a-external-agent-scm/images/scmaimage012.jpg)
+
+13.  Create your Agent Team
+
+    > (1) Click the ![Create button Image](../05a-rag-agent-hcm/images/createw.jpg) button on the top right.
+
+    ![Create Agent](../06a-external-agent-scm/images/scmaimage013.jpg)
+
+14. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
+
+     > (1) Click the ![Agent Icon](../05b-agent-team-hcm/images/agenticon.jpg) <br>
+
+     > (2) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **New Supervisor Agent**.
+     
+     ![Create Agent](../06a-external-agent-scm/images/scmaimage014.jpg)
 
 7. Define Supervisor Agent Details.
 
