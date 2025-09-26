@@ -26,29 +26,29 @@ Estimated Time: 15 minutes
 
    > (2) Select **My Access Requests**.
 
-![My Access Requests](../01-risk/images/riskimage002.jpg)
+   ![My Access Requests](../01-risk/images/riskimage002.jpg)
 
 3. This it the beginning of your user request
 
-   > (1) Press the **Request Access** button.
+    > (1) Press the **Request Access** button.
 
-![My Access Requests](../01-risk/images/riskimage003.jpg)
+    ![My Access Requests](../01-risk/images/riskimage003.jpg)
 
 4. Use this screen to enter justification for granting the new role
 
-  > (1) In the entry field, type,**Order Entry department is having a critical shortage of staff** in the text field as shown. <br>
+    > (1) In the entry field, type,**Order Entry department is having a critical shortage of staff** in the text field as shown. <br>
 
-  > (2) Press the **Add Role** button.
+    > (2) Press the **Add Role** button.
 
-![Requests Access](../01-risk/images/riskimage004.jpg)
+  ![Requests Access](../01-risk/images/riskimage004.jpg)
 
 5. Use this screen to select the roles you would like to request
 
-  > (1) In Role Name, type, **Order Entry Specialist US1**. <br>
+    > (1) In Role Name, type, **Order Entry Specialist US1**. <br>
 
-  > (2) Then select the role which matches your entry.
+    > (2) Then select the role which matches your entry.
 
-![Add Role](../01-risk/images/riskimage005.jpg)
+  ![Add Role](../01-risk/images/riskimage005.jpg)
 
 6. Selecting Security Context allow you refine the limits that will be placed on the requested role.
 
@@ -77,8 +77,6 @@ Estimated Time: 15 minutes
 ![My Access Requests](../01-risk/images/riskimage009.jpg)
 
 10. End of customer activity.  The remainder of this session will be performed by a participant with assistance from the presenter.
-
-  > (1) Press the **home** button to continue.
 
 ![My Access Requests](../01-risk/images/riskimage010.jpg)
 

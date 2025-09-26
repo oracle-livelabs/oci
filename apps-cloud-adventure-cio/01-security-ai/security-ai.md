@@ -22,7 +22,7 @@
   ![Security Objectives](../01-security-ai/images/secaiobjs.jpg)
 
 
-     > At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
+  > At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
 
 
 2. To enable the ability to us AI to discover new suppliers, you will access the security console. This is the Springboard where you’ll access all features.
