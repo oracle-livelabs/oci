@@ -1,287 +1,303 @@
-# Analytics
+# Create AI Agents and Agent Teams for your enterprise
+
 
 ## Introduction
 
-Oracle Fusion Data Intelligence Platform (FDI) is a family of prebuilt, cloud native analytics applications for Oracle Cloud Applications that provides line-of-business users with ready-to-use insights to improve decision-making.
+AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
 
-It is a Cloud application that delivers best-practice Key Performance Indicators (KPIs) and deep analyses to help decision-makers run their businesses and individual contributors to operate their businesses. Oracle Fusion Data Intelligence Platform is built on top of Oracle Analytics Cloud and Oracle Autonomous Data Warehouse. This packaged service starts with Oracle Fusion Cloud Applications which you can deploy rapidly, personalize, and extend. The service extracts data from your Oracle Fusion Cloud Applications and loads it into an instance of Oracle Autonomous Data Warehouse. Business users can then create and customize dashboards in Oracle Analytics Cloud. It empowers business users with industry-leading, AI-powered, self-service analytics capabilities for data preparation, visualization, enterprise reporting, augmented analysis, and natural language processing.
 
-This activity guide helps business users to investigate and research data, ask relevant questions to understand Trends, Patterns and Outliers.
+### **Objectives**
 
-### Objectives
+In this activity you will use Oracle Fusion AI Agent Studio to
+•	Create a Document Tool to ingest company-specific procurement policy documents (PDF)
+•	Create an Agent that uses the Document Tool to respond to user queries
+•	Create and assemble an Agent team that includes the created Agent and purchase requisition action agent.
 
-In this activity, you will Create analytics across different lines of business to derive better business insight
 
-Estimated Time: 15 minutes
+## Create Policy Advisor Agent (RAG) and an Agent Team using AI Agent Studio
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise!
+1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
 
-## ERP & HCM: Unify finance and workforce-related data to understand changing workforce dynamics and gain comprehensive insights
+    ![AI RAG Objectives](images/extendwithairag.jpg)
 
-1. In this activity, you will Create analytics across different lines of business to derive better business insights.
+2. The first step is to navigate to AI Agent Studio.
 
-    Cross-functional reporting analysis between ERP & HCM involves integrating data from core business operations finance with workforce-related data (such as employee performance, payroll, and workforce planning) providing comprehensive insights for decision-making, enabling organizations to align their human resource strategies with broader business objectives.
+    > (1) Click on the **Tools** tab
+    > (2) Select the **AI Agent Studio** tile
 
-    ![Analytics OBJs](images/poaimage001.jpg)
+    ![Navigate to AI Agent Studio](images/poaimage002.jpg)
 
-2. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making.
+3. Next, we're going to create a Tool
 
-    > (1) Click on the **‘Analytics’** tab <br>
-    > (2) Click on **‘Fusion – Analytics Data Intelligence’** icon <br>
+    > Click the ![Tools](images/tools.jpg) button/tab at the bottom of the page
 
-    ![Login](images/poaimage002.jpg)
+    ![Open tools](images/poaimage003.jpg)
 
-3. After a successful login, you will land on the Oracle Analytics home page.
 
-    > (1) Enter assigned username and Fusion Analytics Password  <br>
+4. Tool Creation
 
- > (2) Click on the ‘Sign In’ <br>
+    > Click the ![add tool](images/plusadd.jpg) button to create a new tool
 
-    ![Login](images/poaimage003.jpg)
+    ![Create Tool](images/poaimage004.jpg)
 
-4. A finance Watchlist comprising several Tiles is available on the home page.
+5. Here, you will define your first Tool, a Document Tool.  This will allow the Agent to use the content of the documents to respond to user questions.
 
-    One metric that draws my attention is Margin, which is trending low.
+    > (1) Enter the following fields:
+    * Tool Type: select **Document** from the dropdown<br>
+    * Tool Name: Enter **CIO## Procurement Policy Document Tool**, where **##** is replaced with your user number.<br>
+    * Family: select **PRC** from the dropdown<br>
+    * Product: select **Self Service Procurement** from the dropdown<br>
+    * Description: Enter **Cloud Adventure Procurement Policy Document Tool** <br>
 
-    Two attributes that influence Margin are Revenue and Cost. Since revenue seems to be increasing, let's investigate Cost.
+    > (2) Click the ![Add button](images/addw.jpg) button under **Documents**
 
-    > On the Margin Tile locate the **Open Workbook** ![Open Workbook Icon](images/icon001.png) Icon on the top right corner and click on it.
+    ![Edit Suppliers View](images/poaimage005.jpg)
 
-    ![Analytics home](images/poaimage004.jpg)
 
-    ![Analytics home](images/)
+6. **Note:** Now we’ll add the documents to our tool.  The documents you will add are located in the **Procurement Documents** folder on your laptop's Desktop.
 
-5. This action expands the Tile and opens the workbook.
+    > (1) Enter the following fields:
+    * Name: Enter **Procurement Policy Documents** <br>
+    * Status: Select **Ready to publish** from the dropdown<br>
+    * Description: Enter **Procurement Policy Documents**<br>
 
-    Let's now set the workbook to design mode so that we can add cost elements.
+    > (2) Click on the ![Drag and Drop](images/dandd.jpg) region <br>
+    Select all files from the **Procurement Documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.
 
-    > Click on the Edit Icon  ![Edit Icon](images/icon002.png)  as shown in the image.  <br>
+    ![Add Documents](images/poaimage006.jpg)
 
-    Instead of building manually, let's use the Auto Insights feature.
+7. After all 4 files/documents have been loaded, you can proceed with the Save.
 
+    > Click the **Save** ![Home Icon](images/save.jpg) button on the bottom right
 
-    > Click on the Auto Insights Icon  ![Auto Insights Icon](images/icon003.png)  as shown in the image.
+    ![Suppliers View](images/poaimage007.jpg)
 
-    ![Workbook Design Mode](images/poaimage005.jpg)
+8. You're now ready to save your knew Document Tool.
 
-6.  Next, let’s expand the Auto Insights pane for better observability.
+    > Click the **Create button** ![Create Button](images/createw.jpg)  on the near to the of the screen.
 
-    > Click on the Expand / Shrink Icon  ![Expand / Shrink Icon ](images/icon004.png)  as shown in the image.
+    ![Craete Tool](images/poaimage008.jpg)
 
-    ![Workbook Design Mode](images/poaimage006.jpg)
+    **Congratulations!  You’ve completed your first step and created a Policy Document Tool.**
 
-7.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories.
 
-    > (1) Locate the “Top 10 Expense Categories by Expenses” insight and click the Add Icon  ![Add Icon ](images/icon006.png)  shown in the image. This will add the Insight to the Canvas.  <br>
+9. Now, you'll create your first Agent!  You'll do that from the Agent screen within the AI Agent Studio.
 
-    > (2) Click on the **x** sign to close the Insights pane.
+    > Click the  **Agents** button/tab ![Agent Image](images/agenticon.jpg) at the bottom of the page.
 
-    ![Auto insights view](images/poaimage007.jpg)
+    ![Agents Page](images/poaimage009.jpg)
 
-8.  Now, we can compare margin and cost side by side.
 
-    Payroll expenses emerge as the highest cost. We will delve deeper into payroll expenses to identify their components.
+10. Here, you can see any existing agents.  But you want to create a new one.
 
-    Our next step involves integrating Human Resources data into our analysis.
+    > Click the **+ Add** button ![Add button Image](images/addw.jpg).
 
-    ![Analytics view 1](images/poaimage008.jpg)
 
-9.  Combining datasets from multiple “Lines of Business” allows an individual to conduct a deep dive into the actual problems.
+    ![Add Agent](images/poaimage010.jpg)
 
-    > (1) Expand the HCM Core transactions data set from the Data Panel on the left.  <br>
+11. Define the Details of the Agent.
 
-    > (2) At the bottom of the Page, click the plus icon  ![plus icon](images/icon007.png)  to add another Canvas, **Canvas 2**. <br>
+    > (1) First, you'll enter the fields as described below:<br>
+    * Agent Name: **CIO## Procurement Policy Advisor Agent** where ## is replaced with your user nnumber.<br>
+    * Family: Select **PRC** from the dropown<br>
+    * Product: Select  **Self Service Procurement** from the dropdown<br>
+    * Maximum Interactions: **10** <br>
+    * Description: **Cloud Adventure Procurement Policy Advisor Agent** <br>
+    * Prompt: The value for the prompt field is available in the **Prompt – CA Procurement Policy Advisor.txt** file that is available in the **Procurement Prompt** folder on your desktop.  Please open this file and copy the contents into the Prompt field.  <br><br>
+         ![Alert Flat](images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt*** is a critical part of the Agent Definition as it provides guidance for the Agent.  To streamline this step, we've pre-created the prompt.  It's available as described below.<br>
 
-    > (3) While holding “Shift,” multi-select the Amount and Account columns and drag them onto Canvas 2.
+    > (2) Click the Create Button ![Create Button](images/createb.jpg) <br>
 
-    ![Analytics view 2](images/poaimage009.jpg)
+    ![Create Agent](images/poaimage011.jpg)
 
-    > (1) Change the chart to a “Stacked Bar” type to visualize the data better.  <br>
+12. You’ve now created your first Agent.  Now you’ll add Tools to the Agent.  You'll add a mix of standard tools, tools created earlier in the Cloud Adventure, and tools that you've just created.
 
-    > (2) Follow steps 1 and 2 as shown in the picture 10.
+    > Click the Tools icon ![Create Button](images/toolhammericon.jpg) on the left.
 
-    ![Analytics view 3](images/poaimage010.jpg)
+    ![Add Tools](images/poaimage012.jpg) <br>
 
-10.  We need to perform trend analysis to understand when the expense anomaly started occurring and whether it is consistent across all expense types.
+13. Find the appropriate tool and add it to your agent.
 
-    > Drag the **Accounts** column from the Categories section into the Color section.
+    > (1) Enter **Procurement** in the Ask Oracle field and select **Procurement** from the resulting dropdown.  This filters the list of tools for easier selection. <br>
+    > (2) Click the ![Plus Icon](images/plusicon.jpg) next to the tool name **CA Procurement Policy Document Tool**<br>
 
-    ![Analytics view 4](images/poaimage011.jpg)
+    ![Add tool](images/poaimage013.jpg)
 
-    > Next, expand the Fiscal Date folder in the Data Panel, locate the **Month** column, and drag and drop it into the Categories section.
+14. You can review the details of the Tool, including the option to require human approval.
 
-    ![Analytics view 5](images/poaimage012.jpg)
+    > Click the Add button ![Add Button](images/addb.jpg).
 
-11.  We can now see expense amounts displayed across time and expense categories.
+    ![Add Tools Complete](images/poaimage014.jpg) <br>
 
-    On analyzing the trend, it appears that while Base Salary and Wages have remained constant, overtime and contract labor have increased since May.
+15. That's it! Let's save this and continue.
 
-    Let's explore and find out why overtime and contract labor have increased.
+    > Click the **Create** button ![Create Button](images/createw.jpg) on the top right.
 
-    ![Month by Month View](images/poaimage013.jpg)
+    ![Add Tools Create](images/poaimage015.jpg) <br>
 
-12. Overtime and Contract labor are typically associated with Turnover. Let's see if it had any impact.
+16. You’ve just created your first Agent, complete with added Tool(s).  Next, you’ll create an Agent Team with a Supervisory Agent and assign some worker agents.
 
-    > (1) Expand the Fiscal Date folder in the Data Panel to locate the **Month** and **Turnover** columns.   <br>
+    > Click the **Agent Teams** button/tab ![Agent Teams](images/agentteams.jpg) on the button of the page.
 
-    > (2) While holding “Ctrl,” multi-select the **Month** and **Turnover** columns and drag them below the current visual.
+    ![Add Tools Create](images/poaimage016.jpg) <br>
 
-    ![Analytics view 6](images/poaimage014.jpg)
+17. Create an Agent Team.
 
-13.  Another factor that impacts Overtime and Contract labor is employee absences.
+    > Click the **+ Add** button ![Add Button](images/addw.jpg).
+    > ![Add Tools Create](images/poaimage017.jpg)
 
-    > Drag the **Absences** column from the data panel and drop it in the values section below the **Turnover** column.
+18. Define the Agent Team.
 
-    ![Analytics view 7](images/poaimage015.jpg)
+     > (1) Enter the fields as described below:
+     * Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user number. <br>
+     * Family: Select **PRC** from the dropdown <br>
+     * Product: Select  **Self Service Procurement** from the dropdown <br>
+     * Maximum Interactions: **20** <br>
+     * Description: **Purchase Requisition Agent Team leverages worker agents Procurement Policy Advisory and Purchase Requisition Agent.** <br>
 
-    ![Analytics view 8](images/poaimage016.jpg)
+     > (2) Click the Questions tab <br>
 
-14.  This brings all relevant columns onto the canvas. We can now co-relate several attributes and arrive at the correct conclusion.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance.
+       ![Create Agent](images/poaimage018.jpg)
 
-15. Let’s understand how the trend looks like in the future. We will use the built in Statistical Analysis function like forecast to under the future
+19. You can provide one or more starter questions to assist users in interacting with the Agent Team.
 
-    > Right click anywhere in the **Turnover**, **Absences** Chart choose **Add Statistics** then **Forecast**
+     > (1) In the Question 1 field, enter: **Hi, I can help you with questions related to purchases.  How can I help you today?** <br>
+     > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
 
-    ![Analytics view 11](images/poaimage017.jpg)
+       ![Create Agent](images/poaimage019.jpg)
 
-16. With a few simple clicks, you were able to forecast and understand the future trend.
+20. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
 
-    ![Analytics view 12](images/poaimage018.jpg)
+     > (1) Click the **Agents** Icon ![Agent Icon](images/agenticon.jpg) <br>
+     > (2) Click the **+** icon ![Create Button](images/plusicon.jpg) next to **New Supervisor Agent**.
 
-17. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+   ![Create Agent](images/poaimage020.jpg)
 
-    [![Cloud Adventure](images/poaimage019.jpg)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+21. Define Supervisor Agent Details.
 
-## ERP & SCM: Unify finance and supply chain data to identify bottlenecks and optimize resource allocation
+     > (1) Enter the fields as described below:
+    * Agent Team Name: **CIO## Procurement Requisition Supervisor Agent** where ## is replaced with your user number.<br>
+    * Family: Select **PRC** from the dropdown<br>
+    * Product: Select  **Self Service Procurement** from the dropdown<br>
+    * Maximum Interactions: **10** <br>
+    * Description: **Cloud Adventure Purchase Requisitions Supervisor Agent** <br>
 
-1. In this activity, you will Create analytics across different lines of business to derive better business insights.
+     > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
 
-    ERP & SCM cross-functional reporting combines data from business processes like finance with supply chain operations. By providing a unified view of supply chain and enterprise operations, cross-functional reporting helps identify bottlenecks, optimize resource allocation, and improve supply chain resilience. Such insights are crucial for aligning supply chain strategies with overall business goals and achieving operational excellence.
+       ![Create Agent](images/poaimage021.jpg)
 
-    ![Analytics OBJs](images/poaimage020.jpg)
+22. Next you'll add some worker agents.
 
-2. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making.
+     > Click the **+** icon ![Plus Icon](images/plusicon.jpg) next to **CIO## Procurement Policy Advisor Agent**, where ## is replaced with your user number.
 
-    > (1) Click on the **‘Analytics’** tab <br>
-    > (2) Click on **‘Fusion – Analytics Data Intelligence’** icon <br>
+       ![Create Agent](images/poaimage022.jpg)
 
-    ![Login](images/poaimage021.jpg)
+23. You can review the details of the agent.
 
-3. After a successful login, you will land on the Oracle Analytics home page.
+    > Click the Add button ![Add Button](images/addb.jpg).
 
-    > (1) Enter assigned username and Fusion Analytics Password  <br>
-    > (2) Click on the ‘Sign In’ <br>
+    ![Add Tools Complete](images/poaimage023.jpg) <br>
 
-    ![Login](images/poaimage022.jpg)
+24. You'll add one more worker agent.
 
-4. A finance Watchlist comprising several Tiles is available on the home page.
+     > Click the **+** icon ![Plus Icon](images/plusicon.jpg) next to predefined **CA Purchase Requisitions Agent**.  Note that this is a shared Agent and not one that you created specifically with your user number.
 
-    One metric that draws my attention is Margin, which is trending low.
+     ![Create Agent](images/poaimage024.jpg)
 
-    Two attributes that influence Margin are Revenue and Cost. Since revenue seems to be increasing, let's investigate Cost.
+25. You can review the details of the agent.
 
-    > On the Margin Tile locate the **Open Workbook** ![Open Workbook Icon](images/icon101.png) Icon on the top right corner and click on it.
+    > Click the **Add** button ![Add Button](images/addb.jpg).
 
-    ![Analytics home](images/poaimage023.jpg)
+    ![Add Tools Complete](images/poaimage025.jpg) <br>
 
-5. This action expands the Tile and opens the workbook.
+26. Your Agent Team, with a Supervisory Agent and two Worker Agents, is now ready to test.
 
-    Let's now set the workbook to design mode so that we can add cost elements.
+    > Click the **Debug** icon ![debug icon](images/debugarrow.jpg) on the top left of the screen.  It's the one that looks like the Play arrow.
 
-    > Click on the Edit Icon  ![Edit Icon](images/icon102.png)  as shown in the image.  <br>
+    ![start debug](images/poaimage026.jpg) <br>
 
-    Instead of building manually, let's use the Auto Insights feature.
+27. You can now begin a dialog with the Agent.
 
-    > Click on the Auto Insights Icon  ![Auto Insights Icon](images/icon103.png)  as shown in the image.
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What is the laptop policy** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
 
-    ![Workbook Design Mode](images/poaimage024.jpg)
+    ![agent dialogue 1](images/poaimage027.jpg) <br>
 
-    ![Workbook Design Mode](images/poaimage016.jpg)
+28. The Agent will response with information.  In this Debug mode, the Agent will also show you source and processing information (yellow boxes).  These will not be available to end-users once deployed.
 
-7. The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories.
+    > The agent provides a response. But we need more information, so we'll ask additional questions.
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What if I need to order a non-standard laptop** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
 
-    > (1) Locate the “Top 10 Expense Categories by Expenses” insight and click the Add Icon  ![Add Icon ](images/icon106.png)  shown in the image. This will add the Insight to the Canvas.  <br>
-    > (2) Click on the **x** sign to close the Insights pane.
+    ![agent dialogue 2](images/poaimage028.jpg) <br>
 
-    ![Auto insights view](images/poaimage026.jpg)
+29. You decide to not worry about requesting anything non-standard.
 
-8. Let’s create a new Canvas to under the SCM issue
+    > So, ask the agent to proceed with the laptop order by typing **I am ready to order a laptop** in the **Ask Oracle** dialog box on the bottom right of the screen and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
 
-     > Locate the plus ![plus icon](images/cplus.png) icon at the bottom of the page and click it to create a new canvas. <br>
+    ![agent dialogue 3](images/poaimage029.jpg) <br>
 
-![new canvas](images/poaimage027.jpg)
+30. The Agent may notice that you have some incomplete PO Requisitions and will request your my input.
 
-9. We will add Supply Chain data to the canvas
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Show my existing requisitions** and hit the return key or click the **Up Arrow** icon ![uparrow icon](images/uparrow.jpg)
 
-     > Expand the SCM Dataset by clicking on the Triangle   icon.  Expand the Fiscal Data folder and locate Month Column. <br>
-     > Next locate Total Cost. While keeping the “CTRL ” key pressed drag and drop them on to the canvas.  <br>
-     > Your canvas should look like the image on the right.<br>
+    ![agent dialogue 3](images/poaimage030.jpg) <br>
 
-    ![2 images](images/poaimage028.jpg)
+31. The agent will ask you to confirm.
 
-10. Total cost has been varying over time. We need to understand what is causing the increase and decrease
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Proceed with ordering a laptop** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
 
-     > Expand the Fiscal Data folder and locate Month Column. <br>
-     > Scroll down to locate Off Contract and Contract purchase columns. <br>
-     > While keeping the “CTRL ” key pressed drag and drop them on to the canvas under the existing chart. <br>
-     > Watch for the Green bar before you drop the columns. <br>
+    ![agent dialogue 3](images/poaimage032.jpg) <br>
 
-    ![expand Fiscal Data folder ](images/poaimage029.jpg)
+32. The agent needs a little more information.
 
-11. Change the visualization type
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Requested delivery data is Aug 31st, 2025 and the quantity is 1** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
 
-     > In the Properties panel in the center. Click on the inverted triangle ![inverted triangle](images/invtriangle.png) to expand the Analytics Type panel and choose Bar Type.<br>
+    ![agent dialogue 3](images/poaimage033.jpg) <br>
 
-    ![Properties panel  ](images/poaimage030.jpg)
+33. The agent has created your requisition.
 
-     > Move Contract Purchase from Color Section to Values section.<br>
+    > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Take me to my requisition** and hit the return key or click the **Up Arrow** icon ![up arrow icon](images/uparrow.jpg)
 
-    ![Properties panel  ](images/poaimage031.jpg)
+    ![agent dialogue 3](images/poaimage034.jpg) <br>
 
-12. We need to understand what is causing the off contract purchasing.
+34. The agent can link you directly to the Purchase Requisition screen.
 
-     > Expand the Fiscal Data folder and locate Month Column. <br>
-     > Scroll down to locate Received Late Quantity columns. <br>
-     > While keeping the “CTRL ” key pressed drag and drop them on to the canvas under the existing chart.  <br>
-     > Watch for the Green bar before you drop the columns.  <br>
+    > Click the **here** link in the agent response.
 
-    ![Fiscal Data folder ](images/poaimage032.jpg)
+    ![agent dialogue 3](images/poaimage035.jpg) <br>
 
-     > In the Properties panel in the center. Click on the inverted triangle ![inverted triangle](images/invtriangle.png) to expand the Analytics Type panel and choose Bar Type.<br>
+34. You’re now in Self-Service Procurement and can see the new Requisition that the Agent created.
 
-    ![Properties panel](images/poaimage033.jpg)
+    > Congratulations on completing this Cloud Adventure!
 
-13. Lets find out which supplier is responsible for the issue.
+    ![agent dialogue 3](images/poaimage036.jpg) <br>
 
-     > Locate supplier and drop it into the color section. <br>
-     > Next delete Fiscal Data (Month) column <br>
 
-    ![Supplier](images/poaimage034.jpg)
-
-     > In the Properties panel in the center. Click on the inverted triangle   to expand the Analytics Type panel and choose Treemap Type. <br>
-
-    ![Properties panel](images/poaimage035.jpg)
-
-14. Two suppliers are the cause of the issue.
-
-    ![Analytics view](images/scm-009.png)
-
-15. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+35. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
+
 ## Summary
 
-You discovered how effortlessly Fusion Analytics enables the creation of content and analysis of data. By integrating diverse data sources, you were able to delve deeper from summary information to detailed analysis, uncovering root causes. You then shared your discoveries with a broader audience, making the insights accessible and impactful.
+As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they’re not permissioned to see.
 
-**You have successfully completed the Activity!**
+AI Agent Studio empowers enterprises to configure and build AI agents that extend their workforce and help achieve new levels of productivity. It allows you to harness the full potential of AI agents and transform the way work gets done in your organization.
+AI Agent Studio is a design-time environment that provides a set of tools to create, customize, validate, and deploy GenAI features and AI agents to meet the specific needs of the organization. It is the same unified environment Oracle uses to internally build agents, made available now to customers and partners to customize and extend agents from Oracle-provided preconfigured templates or to create new agents and multi-agent workflows.
+
+Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
+
+**You have successfully completed the Activity!
+
 
 ## Learn More
 
-* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/24r3/index.html)
+* [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
+* [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
+* [AI for Fusion Applications](https://www.oracle.com/applications/fusion-ai/)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - Sohel Jeelani, Analytics Solution Engineer, Advanced Technology Services
-* **Contributors** -
-* **Last Updated By/Date** - Sohel Jeelani, August 2025
+
+* **Author** - Stephen Chung, Principal SaaS Cloud Technologist, Sajid Saleem, Master Principal SaaS Cloud Technologist, Charlie Moff, Distinguished SaaS Cloud Technologist, and the rest of the Cloud Adventure Team
+* **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
+* **Last Updated By/Date** - Charlie Moff, August 2025

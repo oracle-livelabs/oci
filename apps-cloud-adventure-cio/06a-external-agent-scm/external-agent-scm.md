@@ -84,7 +84,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     >  (2)  Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CIOXX Benefits Advisor Agent**, where XX is replaced with your user number.<br><br>
     >  (3)  Click the **+** icon ![Create Button](images/plusicon.jpg) next to **CIOXX Benefits Advisor Agent**, where XX is replaced with your user number.
 
-    ![Add Tool](images/benimage008.jpg)
+    ![Add Tool](../06a-external-agent-scm/images/scmaimage008.jpg)
 
 9. You can review the details of the agent before saving.
 
