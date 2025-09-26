@@ -45,13 +45,9 @@ To set up the Oracle Digital Assistant on the OCI tenancy, you will:
 1. Login into OCI
 
     To setup environment, you need OCI administrator's privileges. If you've got these privileges, login into OCI at [cloud.oracle.com](https://www.oracle.com/cloud/sign-in.html). the below image indicates SSO Login as an administrative user. If you have administrative privileges and complete access over a tenancy then you need not create any of the policies below steps.
-
-    ![SSO Login](images/sso-login.png)
-
+  
 2. If you do not have administrative privileges into tenancy, you might have to login as federated user, that is the user created by the administrator
-
-    ![Federated User Login](images/direct-signin.png)
-
+  
     In case you haven't got OCI administrator's privileges, you should ask your OCI administrator to perform the rest of the tasks in this lab.
 
 ## Task 2: Provision Oracle Digital Assistant from OCI services
@@ -181,7 +177,7 @@ To set up the Oracle Digital Assistant on the OCI tenancy, you will:
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - June 10th, 2023
+* **Last Updated By/Date** - Sept 26th, 2025
 
 ## Learn more
 

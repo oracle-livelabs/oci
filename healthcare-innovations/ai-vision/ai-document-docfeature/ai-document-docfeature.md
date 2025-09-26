@@ -324,4 +324,4 @@ This lab assumes you have:
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - August 11th, 2023
+* **Last Updated By/Date** - Sept 26th, 2025

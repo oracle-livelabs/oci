@@ -35,16 +35,11 @@ This lab assumes you have:
 ## Task 1: Generate SMPT Credentials
 
 1. Log in to OCI Cloud Console, click on top right navigation and select **User Settings**. 
- 
-    ![Setup OCI Email](images/user-ocid.png " ")
-
+   
 2. Click on Left Navigation and select **SMTP Credentials** and Click on **Generate SMPT Credentials** button
-
-    ![Setup OCI Email](images/send-email-2.png " ")
-
+  
 3. Copy username and password
-
-    ![Setup OCI Email](images/smpt-cred.png " ")
+ 
 
 ## Task 2: EMAIL Delivery Configuration  
 
@@ -144,4 +139,4 @@ This concludes this lab and you can **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - June 22nd, 2023.
+* **Last Updated By/Date** - Sept 26th, 2025

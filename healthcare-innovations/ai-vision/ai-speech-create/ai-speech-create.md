@@ -50,12 +50,9 @@ OCI Speech is a versatile service that can be called via REST APIs, different SD
 ## Task 2: Upload Audio file to OCI Bucket
 
 1. On cloud.oracle.com, Navigate to the bucket where you wish to upload the input audio files, select a folder under that bucket, and click the upload button.
-
-    ![Upload Audio file](images/upload-file-001.png " ")
-
+  
 2. Browse and upload file from your local file system.
-
-    ![Speech Transcription Job](images/upload-file-002.png " ")
+ 
 
 ## Task 3: Create Speech Transcription Job
 
@@ -116,4 +113,4 @@ OCI Speech is a versatile service that can be called via REST APIs, different SD
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - May 23rd, 2023.
+* **Last Updated By/Date** - Sept 26th, 2025

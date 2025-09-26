@@ -217,4 +217,4 @@ The SDO_GEOMETRY type has the following general format:
 
 ## Acknowledgements
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - May 23rd, 2023.
+* **Last Updated By/Date** - Sept 26th, 2025

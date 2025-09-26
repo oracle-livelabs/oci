@@ -33,17 +33,13 @@ In the previous lab, you have labeled all images (records) in your dataset, whic
 
 1. Navigate to Vision page, Using **Navigator** (on the left) navigate to **Analytics & AI** and then choose **Vision**.
 
-    ![Navigate to Vision](images/navigate-to-vision.png " ")
-
-    ![Navigate to Vision](images/navigate-to-vision-2.png " ")
+    ![Navigate to Vision](images/vision-nav.png " ") 
+    
  
 2. Continue with AI Vision project setup. Click **Projects** on the left side menu list, confirm you are in correct **Compartment** and click **Create Project** provide project name and description.
-
-    ![Create a new project in Vision](images/create-bc-project.png " ")
-
+ 
 3. Verify that the Project Status is **Active**
-
-    ![Create a new Vision Project Live](images/project-live.png " ")
+ 
  
 ## Task 2: Create and Train Vision Model
  
@@ -176,4 +172,4 @@ This workshop provides a basic example of using OCI Vision and other AI services
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - July 12th, 2024.
+* **Last Updated By/Date** - Sept 26th, 2025
