@@ -27,19 +27,19 @@
 
 2. To enable the ability to us AI to discover new suppliers, you will access the security console. This is the Springboard where you’ll access all features.
 
-  > (1) Select the **Tools** tab menu. <br>
+   > (1) Select the **Tools** tab menu. <br>
 
-  > (2) Then select the role which matches your entry.
+    > (2) Then select the role which matches your entry.
 
   ![Home Screen](../01-security-ai/images/secaiimage001.jpg)
 
 3. Enter Security Console .
 
-  > (1) Select **Security Console**.
+   > (1) Select **Security Console**.
 
   ![Tools Screen](../01-security-ai/images/secaiimage002.jpg)
 
- > (1) Dismiss the warning by selecting **OK**.
+  > (1) Dismiss the warning by selecting **OK**.
 
   ![Roles Screen](../01-security-ai/images/secaiimage003.jpg)
 
