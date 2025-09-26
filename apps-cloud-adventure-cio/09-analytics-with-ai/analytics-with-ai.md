@@ -101,8 +101,6 @@ At this point, you should be logged into your environment with a username CIO.xx
 
     > (1) Drag **Analyze Sentiment** on the left side until we get a blue box next to Survey Data. <br>
 
-    > (2) Release **Analyze Sentiment**. <br>
-
     ![New Data Flow](../09-analytics-with-ai/images/aiimage012.jpg)
 
 10.  Now that we have “Analyze Sentiment” we have to point the model as to what we want it to analyze, In this case we want to have a sentiment analysis on employees comments. The Sentiment Analysis will analyze the comments and assign a positive, neutral, or negative attribute to each comment.
@@ -238,13 +236,8 @@ At this point, you should be logged into your environment with a username CIO.xx
 
     ![New Workbook](../09-analytics-with-ai/images/aiimage035.jpg)
 
-27.  **MISSING TEXT FOR STEPS**
 
-    ![New Workbook](../09-analytics-with-ai/images/aiimage036.jpg)
-
-
-
-15. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+27. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
 
     [![Cloud Adventure](../09-analytics-with-ai/images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
