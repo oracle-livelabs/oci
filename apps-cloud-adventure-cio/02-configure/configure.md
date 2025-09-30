@@ -177,7 +177,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      > (1) Summary: type **Adjustment Percentage is too high**.    <br>
 
-     > (2) Severity:  Click on the down arrow and select **Error**. <br>
+     > (2) Severity:  Select **Error**. <br>
 
      > (3) Detail:  type **The Adjustment Percentage must be lower than 15%**.
 
