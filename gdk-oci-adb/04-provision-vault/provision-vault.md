@@ -19,15 +19,11 @@ In this lab, you will:
 
    ![Vault menu](https://oracle-livelabs.github.io/common/images/console/id-vault.png)
 
-2. Select your workshop compartment from the **Compartment** drop down list on the left.
-
-   ![Select Compartment Button](images/select-compartment-field.png)
-
-3. Click **Create Vault**.
+2. Select your workshop compartment from the **Compartment** drop down list. Click **Create Vault**.
 
    ![Create Vault Button](images/create-vault-button.png)
 
-4. In the **Create Vault** dialog box, provide the following details:
+3. In the **Create Vault** dialog box, provide the following details:
 
       ```
       Create in Compartment: <your workshop compartment>
@@ -41,11 +37,13 @@ In this lab, you will:
 
       >Note: You cannot change the vault type after the vault is created.
 
-5. Click **Create Vault**
+4. Click **Create Vault**
 
 ## Task 2: Create OCI Vault Master Encryption Key
 
-1. In the **Vault** you created, navigate to **Master Encryption Key**, click **Create Key**.
+1. In the **Vault** you created, navigate to **Master Encryption Keys**, click **Create Key**.
+
+   ![Create Key](images/create-key.png)
 
 2. Provide the following details:
 

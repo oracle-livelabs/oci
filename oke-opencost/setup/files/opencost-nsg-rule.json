@@ -1,0 +1,16 @@
+{
+  "securityRules": [
+    {
+      "direction": "INGRESS",
+      "protocol": "6",
+      "source": "0.0.0.0/0",
+      "destination": "0.0.0.0/0",
+      "tcpOptions": {
+        "destinationPortRange": {
+          "min": 9090,
+          "max": 9090
+        }
+      }
+    }
+  ]
+}

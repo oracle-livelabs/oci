@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a continuation of the lab 1 : [Setup the CD3 toolkit](/cd3-automation-toolkit/Setup%20the%20Toolkit/setup_the_toolkit.md)
+This is a continuation of the lab 1 : **Get started with CD3 Automation Toolkit setup**
 
 As a recap, in the previous lab we cloned the cd3 repo, built an image, executed the CD3 container and connected it to the OCI tenancy. 
 
@@ -22,7 +22,7 @@ In this lab, you will:
 
 ### 1. **Identity**
 
-1. Choose CD3-CIS-template from [CD3 Excel templates](https://github.com/oracle-devrel/cd3-automation-toolkit/blob/main/cd3_automation_toolkit/documentation/user_guide/ExcelTemplates.md). 
+1. Choose CD3-CIS-template from [CD3 Excel templates](https://oracle-devrel.github.io/cd3-automation-toolkit/latest/excel-templates/). 
 
     >**Note:** Any template other than *CD3-CIS-ManagementServices-template* can be used to provision these services.
 
@@ -135,7 +135,7 @@ In this lab, you will:
     - Create bash file "web.sh" under below path and copy sample script to enable Apache on the instance.
     
     ```
-    /cd3user/tenancies/<customer_name>/terraform_files/<region_name>/compute/scripts
+    /cd3user/tenancies/<prefix>/terraform_files/<region_name>/compute/scripts
     ```
 
     ```

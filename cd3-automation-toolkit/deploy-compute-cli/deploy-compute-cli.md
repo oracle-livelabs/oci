@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a continuation of the lab 2 : [Add resource parameters values in excel file](/cd3-automation-toolkit/add-resource-values-excel/add-resource.md)
+This is a continuation of the lab 2 : **Add resource parameter values in Excel file**
 
 As a recap, in the previous lab we added resource parameters values in excel file for Compartments, VCN, Subnets, Compute, Block Volume and ATP.
 
@@ -21,12 +21,14 @@ In this lab, you will:
 
 # Create Resources using CLI 
 
-## Task 1: Add Excel path to 'customername_setUpoci.properties'
+## Task 1: Add Excel path to 'prefix_setUpOCI.properties'
+    
+    Note: Please check the tenancyconfig.properties file for prefix information
 
 1. Add the Excel file path for "cd3file" parameter. You can find a file in below location.
 
     ```
-    /cd3user/tenancies/<customer_name>_setUpOCI.properties
+    /cd3user/tenancies/<prefix>_setUpOCI.properties
     ```
 
 2. Set below parameter to *create_resources*, since we are creating new resources, and not modifying any existing ones.
@@ -46,7 +48,7 @@ In this lab, you will:
         
     ```
     cd /cd3user/oci_tools/cd3_automation_toolkit/
-    python setUpOCI.py /cd3user/tenancies/<customer_name>/<customer_name>_setUpOCI.properties
+    python setUpOCI.py /cd3user/tenancies/<prefix>/<prefix>_setUpOCI.properties
     ```
 ## Task 3: Generate terraform files and create our resources in OCI
 
@@ -57,7 +59,7 @@ In this lab, you will:
 2. Navigate to identity directory under home region directory after Terraform files are created.
 
     ```               
-    cd /cd3user/tenancies/<customer_name>/terraform_files/<home_region>/identity
+    cd /cd3user/tenancies/<prefix>/terraform_files/<home_region>/identity
     ```
 
 3. Execute terraform init, plan and apply to create the compartment.
@@ -84,7 +86,7 @@ In this lab, you will:
 6. Once the Terraform files are created from above step, navigate to below path for each of the services: Network, Compute, Database and Block volume.
 
     ```
-    /cd3user/tenancies/<customer_name>/terraform_files/<region>/<services>
+    /cd3user/tenancies/<prefix>/terraform_files/<region>/<services>
     ```
 
 7. Enter into each of the required service folders (network, compute, database) and execute the below terraform commands to provision the resources in OCI.

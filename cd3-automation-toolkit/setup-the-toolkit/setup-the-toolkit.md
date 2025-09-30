@@ -40,10 +40,10 @@ The objectives of this lab are:
 
    Below is a sample output:
 
-   ![rmstackoutput](./images/rmstackoutput.png)
+   ![rmstackoutput](./images/rmstackoutput_v1.png)
 
 
-  After executing the container, jump to [Task 3](#task-3-connect-container-to-oci-tenancy) to connect this container to OCI tenancy.
+  After executing the container, jump to [Task 3](#Task3:ConnectcontainertoOCItenancy) to connect this container to OCI tenancy.
 
 ## Task 2: Launch CD3 container in Local System
 
@@ -108,7 +108,8 @@ Make sure the [prerequisites](#prerequisites) are met before proceeding.
 
     -  Paste the contents of the **PEM public key** in the dialog box and click **Add**.
 
-3. Open *tenancyconfig.properties* file and fill the details in **Required parameters** and **Auth Details Parameters** sections. 
+3. Navigate to ```/cd3user/oci_tools/cd3_automation_toolkit/user-scripts/```
+4. Edit ```tenancyconfig.properties``` file and fill the details in **Required parameters** and **Auth Details Parameters** sections. 
 
    Below are the sample values for **API_Key Auth mechanism**. 
  
@@ -120,7 +121,7 @@ Make sure the [prerequisites](#prerequisites) are met before proceeding.
 
     # Friendly name for the Customer Tenancy eg: demotenancy; The generated .auto.tfvars files will be prefixed with this
     # customer_name.
-    customer_name=demo_tenancy
+    prefix=rg-sep
 
     tenancy_ocid=ocid1.tenancy.oc1.....niuea
 
@@ -147,26 +148,71 @@ Make sure the [prerequisites](#prerequisites) are met before proceeding.
     >**Note:**  If you selected Instance Principal or session token method for authentication, follow the commented guidelines in the *tenancyconfig.properties* file or [Auth Mechanisms documentation](https://github.com/oracle-devrel/cd3-automation-toolkit) and proceed accordingly.
 
 
-4. Under **Deployment Parameters** section in tenancyconfig.properties file, Leave the default value for **outdir structure file** parameter to group your generated terraform auto.tfvars files for each service.
+5. Under **Deployment Parameters** section in ```tenancyconfig.properties``` file, Leave the default value for **outdir structure file** parameter to group your generated terraform auto.tfvars files for each service.
 
     >**Note:** To place all the generated terraform auto.tfvars files directly under the region folder, comment the parameter with the default outdirectory structure file path and uncomment the one above it.
 
 
-5. Under **Advanced parameters for DevOps** section in tenancyconfig.properties file set the parameter   ```use_oci_devops_git=yes``` to use the toolkit with **Jenkins**.
+6. Under **Advanced parameters for DevOps** section in tenancyconfig.properties file set the parameter   ```use_oci_devops_git=yes``` to use the toolkit with **Jenkins**.
    
     >**Note:** If you plan to use the toolkit with CLI, skip this section. Since we are using API-key Auth mechanism, the **User details** section can be skipped.
 
-6. **Initialise** your environment to use the Automation Toolkit.
+7. **Initialise** your environment to use the Automation Toolkit.
 
     ```bash
     python createTenancyConfig.py tenancyconfig.properties
     ```
 
-7. You should see an output similar to below:
+8. You should see an output similar to below:
 
-    ![tenancyconfigoutput](./images/tenancyconfigoutput.png)
+      ```bash
+      [cd3user@109c63ee4ec0 user-scripts]$ python createTenancyConfig.py tenancyconfig.properties
+      =================================================================
+      NOTE: Make sure the API Public Key is added to the OCI Console!!!
+      =================================================================
+   
+      Using different directories for OCI services as per the input outdir_structure_file..........
+   
+      Copying Private Key File..........
+   
+      Creating Tenancy specific config.................
+      Updated OCI_Regions file !!!
+   
+   
+      Creating Tenancy specific remote tfstate Items - bucket, S3 credentials.................
+      Creating new customer secret key
+   
+      Creating Tenancy specific setUpOCI.properties.................
+      Creating Tenancy specific region directories, terraform provider , variables files.................
+   
+      Creating Tenancy specific DevOps Items - Topic, Project and Repository.................
+   
+      The toolkit has been setup successfully. !!!
+   
+      Customer Specific Working Directory Path: /cd3user/tenancies/rg-sep
+   
+      Remote State Bucket Name: rg-sep-automation-toolkit-bucket in us-sanjose-1.
+      Common Jenkins Home: /cd3user/tenancies/jenkins_home
+      DevOps Project Name and Repo Name: rg-sep-automation-toolkit-project, rg-sep-automation-toolkit-repo in us-sanjose-1.
+      Folder configured for OCI DevOps GIT: /cd3user/tenancies/rg-sep/terraform_files/ Initial Commit ID from createTenancyConfig.py: df73e44
+   
+      #########################################
+      Next Steps for using toolkit via Jenkins
+      #########################################
+      Start Jenkins using  - /usr/share/jenkins/jenkins.sh &
+      Access Jenkins using - https://<IP Address of the machine hosting docker container>:8443
+   
+      ######################################
+      Next Steps for using toolkit via CLI
+      ######################################
+      Modify /cd3user/tenancies/rg-sep/rg-sep_setUpOCI.properties with input values for cd3file and workflow_type
+      cd /cd3user/oci_tools/cd3_automation_toolkit/
+      python setUpOCI.py /cd3user/tenancies/rg-sep/rg-sep_setUpOCI.properties
+      ==================================================================================================================================
+      ```
 
-8. After the createTenancyConfig.py script is successfully executed, customer specific files are created under ```/cd3user/tenancies/<customer_name>```.
+
+10. After the createTenancyConfig.py script is successfully executed, customer specific files are created under ```/cd3user/tenancies/<prefix>```.
   
 In this lab, we have learnt how to **setup CD3 toolkit container** and **connect** it to OCI tenancy.
 

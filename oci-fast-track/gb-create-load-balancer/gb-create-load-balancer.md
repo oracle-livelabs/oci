@@ -88,10 +88,10 @@ cat <<EOF > /var/www/html/index.html
 <title>OCI FAST TRACK: Webserver 1</title>
 </head>
 <body>
-<center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/ocifasttracklogo.jpg"
+<center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/idpjrkxadvns/b/bucket-fast-track/o/ocifasttracklogo.jpg"
 alt="LOGO OCI">
 <h1>Load Balancer Webservers</h1>
-<center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/Webserver1.jpg"
+<center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/idpjrkxadvns/b/bucket-fast-track/o/webserver1.jpg"
 </center>
 </body>
 </html>
@@ -116,10 +116,10 @@ cat <<EOF > /var/www/html/index.html
 <title>OCI FAST TRACK: Webserver 2</title>
 </head>
 <body>
-<center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/ocifasttracklogo.jpg"
+<center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/idpjrkxadvns/b/bucket-fast-track/o/ocifasttracklogo.jpg"
 alt="LOGO OCI">
 <h1>Load Balancer Webservers</h1>
-<center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/Webserver2.jpg"
+<center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/idpjrkxadvns/b/bucket-fast-track/o/webserver2.jpg"
 </center>
 </body>
 </html>
@@ -187,6 +187,7 @@ Para adicionar servidores de back-end, clique no botão “Add Backends”
 ![selecione o tipo de tráfego](images/load-balancer-14.png)
 
 ![visualize o Load Balancer](images/load-balancer-logs-15.png)
+![visualize o Load Balancer](images/load-balancer-logs-16.png)
 
 Assim que o processo de criação for concluído, você terá as seguintes informações:
 
@@ -207,4 +208,4 @@ Nesta sessão você aprendeu a criar uma aplicação em Alta Disponibilidade (HA
 ## Autoria
 
 - **Autores** - Arthur Vianna, Gustavo Sant'ana, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Date** - Arthur Vianna, Fev/2024
+- **Último Update Por/Date** - Arthur Vianna, Jul/2025

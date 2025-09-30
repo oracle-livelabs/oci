@@ -19,29 +19,25 @@ In this lab, you will:
 
    ![Logging Menu](https://oracle-livelabs.github.io/common/images/console/logging.png)
 
-2. Under **List scope**, select your workshop compartment.
-
-    ![Select Compartment Button](images/select-compartment-button.jpg)
-
-3. Click **Create Log Group**.
+2. Under **Applied filters**, select your workshop compartment. Click **Create log group**.
 
     ![Create Log Group Button](images/log-group-create-button.jpg#input)
 
-4. You will see the **Create Log Group** screen. Enter the Name as "MicronautLogGroup". Click **Create** to create the Log Group.
+3. You will see the **Create Log Group** screen. Enter the Name as "MicronautLogGroup". Click **Create** to create the Log Group.
 
     ![Create Log Group Screen](images/log-group-create-screen.jpg#input)
 
 ## Task 2: Create a Custom Log
 
-1. From the **MicronautLogGroup** details screen, click **Logs** under **Resources**. Click **Create custom log**.
+1. From the **MicronautLogGroup** details screen, click **Logs**, under **Applied filters**, select your workshop compartment. Click **Create custom log**.
 
     ![Create Custom Log Button](images/custom-log-create-button.jpg#input)
 
-2. You will see the **Create custom log** wizard. Enter the Custom log name as "MicronautCustomLog". Select Log group as "MicronautLogGroup" from the drop down list (if it's not already selected). Click **Create custom log** to proceed to **Create agent config**.
+2. You will see the **Create custom log** wizard. Enter the Custom log name as "MicronautCustomLog". Select Log group as "MicronautLogGroup" from the drop down list (if it's not already selected). Click **Next** to proceed to **Create agent config**.
 
     ![Create Custom Log Screen 1](images/custom-log-create-screen-1.jpg#input)
 
-3. On the **Create agent configuration** screen, select the **Add configuration later** option. Click **Create agent config**.
+3. On the **Create agent configuration** screen, select the **Add configuration later** option. Click **Create**.
 
     ![Create Custom Log Screen 2](images/custom-log-create-screen-2.jpg#input)
 
@@ -49,7 +45,7 @@ In this lab, you will:
 
     ![Open MicronautCustomLog](images/micronaut-custom-log-open.jpg#input)
 
-15. From the **Log Information** tab of the **MicronautCustomLog** details screen, click **Copy** to copy the Log OCID. You’ll need it to configure the application in the next step.
+15. From the **Details** tab of the **MicronautCustomLog** screen, click **Copy** to copy the Log OCID. You’ll need it to configure the application in the next step.
 
     ![Copy MicronautCustomLog OCID](images/micronaut-custom-log-copy-ocid.jpg#input)
 

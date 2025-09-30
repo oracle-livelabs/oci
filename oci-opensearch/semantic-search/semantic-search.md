@@ -523,4 +523,4 @@ Alternatively, you can use the _predict endpoint, as shown in the following exam
 ## Acknowledgements
 
 * **Author** - Landry Kezebou Yankam
-* **Last Updated By/Date** - George Csaba, June 2022
+* **Last Updated By/Date** - Landry Kezebou, September 2025

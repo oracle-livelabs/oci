@@ -51,7 +51,7 @@ Please read the chapter: Introduction and Get Started.
     cat README.md
     </copy>
     ```
-    ![OCI Starter Editor](images/starter-editor.png)
+    ![OCI Starter Editor](../public_compute/images/starter-editor.png)
 
 ## Task 2: Main files
 
@@ -59,22 +59,24 @@ Please read the chapter: Introduction and Get Started.
     - Click *File* / *Open*
     - Choose the directory *starter*
     - Click *Open*
-    ![Editor File Open](images/starter-compute-dir.png)
+    ![Editor File Open](../public_compute/images/starter-compute-dir.png)
 2. The main files are:
-    - Commands:
-        - build.sh      : Build the whole program: Run Terraform, Configure the DB, Build the App, Build the UI
-        - destroy.sh    : Destroy the objects created by Terraform
-        - env.sh        : Contains the settings of your project
-    - Directories:
-        - src           : Sources files
-            - app         : Source of the Backend Application (Command: build_app.sh)
-            - ui          : Source of the User Interface (Command: build_ui.sh)
-            - db          : SQL files of the database
-            - terraform   : Terraform scripts (Command: plan.sh / apply.sh)
-            - compute     : Contains the deployment files to Compute
-        - bin           : with some helper commands
-            - bin/ssh\_compute.sh (to ssh to the Compute)
-            - bin/ssh\_bastion.sh (to ssh to the Bastion)
+
+   |             |            |           | Description |
+   | ----------- | ---------- | --------- | ---|
+   | Commands    |            |           |  |
+   |             | starter.sh |           | Build or destroy a project. Show a menu with commands if not argument is given | 
+   |             | env.sh     |           | Settings of your project | 
+   | Directories |            |           | Commands used by starter.sh | 
+   |             | bin/       |           | Commands used by starter.sh | 
+   |             | src/       |           | Sources files | 
+   |             |            | app       | Backend Application (Command: build_app.sh) | 
+   |             |            | ui        | User Interface (Command: build_ui.sh) | 
+   |             |            | db        | Database initialisation files (SQL, ...) | 
+   |             |            | terraform | Terraform scripts  | 
+   |             |            | compute   | Deployment to Compute | 
+   |             | target/    |           | Output directory  | 
+
 3. Edit the env.sh file:
     - Choose the env.sh file.
     - Look for \_\_TO_FILL\_\_ in the file
@@ -82,9 +84,9 @@ Please read the chapter: Introduction and Get Started.
         - If not filled, the "db password" will be randomly generated
     - Ideally, you can also use an existing compartment if you have one. 
         - If not, the script will create a "oci-starter" compartment
-    ![Editor env.sh](images/starter-compute-env.png)
+    ![Editor env.sh](../public_compute/images/starter-compute-env.png)
 
-## Task 3: Build.sh
+## Task 3: Starter.sh
 
 During the build, Terraform will create:
 1. Network resources: VCN, Subnet
@@ -100,9 +102,11 @@ During the build, Terraform will create:
     - then run:
     ```
     <copy>
-    ./build.sh
+    ./starter.sh
     </copy>
     ```
+    - Choose **Build**
+        ![Result](../public_compute/images/starter-starter-build.png)         
     - It will build all and at the end you will see:
     ```
     <copy>
@@ -115,7 +119,7 @@ During the build, Terraform will create:
     - All running in an Instance Pool with 2 VMs
     - On each VM, you have PHP pages 
     - That backend gets data from the Autonomous database. 
-    ![Result](images/starter-compute-result.png)
+    ![Result](../public_compute/images/starter-compute-result.png)
 
 ## Task 4: More info
 
@@ -126,6 +130,7 @@ Instance Pool is working in the same way than the "Compute". See the "Compute" l
 You can see the IP of the 2 VMs of the Instance Pool and of the Loab-Balancer at the end of the build:
 
 ````
+<copy>
 pooled_instances_hostname_labels = [
   [
     "starter-pool2",
@@ -145,17 +150,17 @@ pooled_instances_public_ips = [
   ],
 ]
 ui_url = "http://141.147.42.164"
+</copy>
 ````
 
-
-Please also check the  "Lab 6 - How to Customize" to see how to customize this sample to your needs
+Please also check the  "Lab 7 - How to Customize" to see how to customize this sample to your needs
 
 ### Cleanup
 
 1. To clean up, run 
     ```
     <copy>
-    ./destroy.sh
+    ./starter.sh destroy
     </copy>
     ```
 
@@ -170,5 +175,5 @@ Please also check the  "Lab 6 - How to Customize" to see how to customize this s
 
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
-* Last Updated - Nov, 2th 2023
+* Last Updated - Jan, 20th 2025
 

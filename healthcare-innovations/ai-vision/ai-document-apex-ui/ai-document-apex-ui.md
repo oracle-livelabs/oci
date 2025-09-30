@@ -600,4 +600,4 @@ Upload the file verify the document properties where image is converted into tex
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - August 15th, 2023
+* **Last Updated By/Date** - Sept 26th, 2025

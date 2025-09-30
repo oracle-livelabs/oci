@@ -21,7 +21,7 @@ In this lab, you will:
 
 	![Profile icon](images/profile-icon.jpg#input)
 
-2. From the **Profile details** screen, click **SMTP credentials** under **Resources**. Click **Generate credentials**.
+2. From the **Profile details** screen, navigate to **Saved passwords** under **SMTP credentials**. Click **Generate credentials**.
 
 	![Generate SMTP Credentials Button](images/generate-smtp-creds.jpg#input)
 
@@ -83,7 +83,7 @@ Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SM
 
 2. Under **Email Delivery**, click **Configuration**. In **SMTP Sending Information** panel copy **Public Endpoint**.
 
-   ![SMTP Sending information Panel](images/smtp-sending-informatiom.jpg#input)
+   ![SMTP Sending information Panel](images/smtp-sending-informatiom.png#input)
 
 3. Set the `SMTP_HOST` variable:
 

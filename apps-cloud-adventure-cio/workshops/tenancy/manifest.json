@@ -23,10 +23,15 @@
             "filename": "../../04-extend-more/extend-more.md"
         }, 
         {
-            "title": "Lab 5: Analytics",
-            "filename": "../../05-analytics/analytics.md"
+            "title": "Lab 5: Audit",
+            "filename": "../../05-integration/integration.md"
         }, 
-     
+
+        {
+            "title": "Lab 6: Analytics",
+            "filename": "../../06-analytics/analytics.md"
+        }, 
+
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",

@@ -10,9 +10,6 @@ Estimated time: 20 min
 - Create several Cloud Native (Java/Node/Dotnet/Python/...) APIs with the help of Terraform
 - Add the APIs in the Portal 
 
-Watch the video below for a quick walk-through of the lab. 
-[Video](videohub:1_70svnfiw)
-
 ### Prerequisites
 
 - Follow previous labs.
@@ -110,5 +107,5 @@ Watch the video below for a quick walk-through of the lab.
 
 ## Acknowledgements
 * **Author** - Marc Gueury / Phil Wilkins /  Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
-* **Last Updated By/Date** - Marc Gueury, May 2024
+* **Last Updated By/Date** - Marc Gueury, June 2025
 

@@ -2,24 +2,27 @@
 
 ## Introduction
 
-Welcome to Oracle’s Cloud Adventure.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered in accounting and finance. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the CFO.
-
-Estimated Time: 15 minutes
-
+Welcome to Oracle’s Cloud Adventure.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered in accounting and finance. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the CIO.
 
 ### Objectives
 
-During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
+During this adventure, you will perform a time sensitive task of granting permissions to a user.  
+
+Estimated Time: 15 minutes
+
+Do not forget to answer the Adventure Check Point questions at the end of the exercise!
+
+## ERP & SCM: Extending Privileges to a User
+
+1. During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
 
   ![Security Objectives](images/image100objs.png)
 
 At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
 
 
-## Task 1: Extending Privileges to a User
 
-
-1. Oracle Cloud Applications are delivered with a complete set of roles which control access to application functions and data.  
+2. Oracle Cloud Applications are delivered with a complete set of roles which control access to application functions and data.
 
   To add a new privilege  to a user, you will need to first copy an existing role.
 
@@ -28,7 +31,7 @@ At this point, you should be logged into your environment with a username CIO.xx
    ![Application Springboard](images/image001.png)
 
 
-2. Accessing Security Console
+3. Accessing Security Console
 
   > Select the **Tools** tab menu. <br>
 
@@ -37,21 +40,21 @@ At this point, you should be logged into your environment with a username CIO.xx
   ![Tools Security Console](images/image002.png)
 
 
-3. You’ll be working from this single console for most of the examples today.  By default, you are viewing the Roles tab of the console.
+4. You’ll be working from this single console for most of the examples today.  By default, you are viewing the Roles tab of the console.
 
   > Security Console - Roles.
 
   ![Console Top Empty](images/image003.png)
 
-4. Notice how the search is dynamic and offers available options as you type.
+5. Notice how the search is dynamic and offers available options as you type.
 
   > In the search field provided at the top, type: **Adventure**. <br>
 
-  > Then **click** on the first entry as shown.
+  > Then **click** on the **Adventure Accounts Payable Manager** job role.
 
   ![Adventure Role Search](images/image004.png)
 
-5. You can now see a list of the roles which are granted to a user when they are provided with the Accounts Payable Manager.
+6. You can now see a list of the roles which are granted to a user when they are provided with the Accounts Payable Manager.
 
   > Notice that the table may be exported to Microsoft Excel using the button provided at the top right. <br>
 
@@ -59,7 +62,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
   ![Adventure Role roles](images/image005.png)
 
-6. Always make changes to a copied role to ensure that your custom configurations are preserved on updates.
+7. Always make changes to a copied role to ensure that your custom configurations are preserved on updates.
 
   > Tasks associated with the role are available from this pull-down menu.  Select **Copy Role**.
 
@@ -89,7 +92,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
   ![Copy Role 2a](images/image009.png)
 
-10. You will now find the required policy using the search form.	
+10. You will now find the required policy using the search form.
 
   > Type **Cancel Supplier Negotiation** in the search field and select the policy.
 
@@ -108,11 +111,11 @@ At this point, you should be logged into your environment with a username CIO.xx
 
 12. Note that the new policy has been added.
 
-  You will skip the next three tasks until you arrive at ‘Users (7)’ in the Copy Role process. 
+  You will skip the next three tasks until you arrive at ‘Users (7)’ in the Copy Role process.
 
   > **Press the 7 (Users) task at the top of the screen**.
 
- ![Copy Role 2e](images/image013.png) 
+ ![Copy Role 2e](images/image013.png)
 
 13. Using a similar search tool, you will now search for Brian Bell and provide him with this new role and its associated privileges.
 
@@ -143,7 +146,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Copy Role 7e](images/image018.png)
 
-16. Note confirmation that we have added one Security Policy and one user 
+16. Note confirmation that we have added one Security Policy and one user
 
   > Press the **Submit and Close** button.
 
@@ -157,10 +160,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Copy Role 7g](images/image020.png)
 
-
-## Task 2: Compare Roles
-
-1. Using the compare roles feature, you can quickly identify changes you’ve made compared to the out of the box roles provided by Oracle or other custom roles.
+18. Using the compare roles feature, you can quickly identify changes you’ve made compared to the out of the box roles provided by Oracle or other custom roles.
 
   This section uses your newly created role to do exactly this.
 
@@ -168,7 +168,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Compare Roles Launch](images/image021.png)
 
-2. You will need to enter the name of your new role 
+19. You will need to enter the name of your new role
 
   > Press the **Search** ![Search Icon](images/icon01_search.png) icon for the First Role
 
@@ -186,7 +186,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Compare Roles c](images/image025.png)
 
- 3. Now you will repeat these steps for the original role
+ 20. Now you will repeat these steps for the original role
 
   > Press the **Search** icon for the Second Role
 
@@ -206,24 +206,32 @@ At this point, you should be logged into your environment with a username CIO.xx
 
  ![Compare Roles F](images/image029.png)
 
-4. Immediately you see that Cancel Supplier Negotiation has been added to the first role and does not exist in the second role.
+21. Immediately you see that Cancel Supplier Negotiation has been added to the first role and does not exist in the second role.
 
  ![Compare Roles 6](images/image030.png)
 
 
 
-5. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-    
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
+22. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+
+    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 
 ## Summary
 
-Security Console is used to quickly manage user access to the entire Fusion applications suite.  
+Security Console is used to quickly manage user access to the entire Fusion applications suite.
 
 **You have successfully completed the Activity!**
 
+
+## Learn More
+
+* [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/24d/secure.html)
+* [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/24b/secure.html)
+* [Oracle Documentation](http://docs.oracle.com)
+
+
 ## Acknowledgements
-* **Author** - Nate Weinsaft, Sales Consultant, Advanced Technology Services
-* **Contributors** -  
-* **Last Updated By/Date** - Nate Weinsaft, September 2024
+* **Author** - Nate Weinsaft, Cloud Technologist, Advanced Technology Services
+* **Contributors** -
+* **Last Updated By/Date** - Nate Weinsaft, April 2025

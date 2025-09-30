@@ -11,7 +11,7 @@ Estimated Lab Time: 05 minutes
 In this lab, you will:
 
 * Configure the Application to Use the OCI Logging
-* Configure OCI Instance Principal Authentication
+* <if type="desktop">Use</if><if type="tenancy">Configure</if> OCI Instance Principal Authentication
 
 ## Task 1: Configure the Application to Use the OCI Logging
 
@@ -30,7 +30,6 @@ In this lab, you will:
 	```
 
 3. Save the file.
-
 
 ## Task 2: <if type="desktop">Use</if><if type="tenancy">Configure</if> OCI Instance Principal Authentication
 
