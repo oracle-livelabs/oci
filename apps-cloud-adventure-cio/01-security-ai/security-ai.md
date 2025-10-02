@@ -98,7 +98,7 @@
 
 12.	You will now assign a user a new role and its associated privileges.
 
- > (1) Press the *+ Add User** button.
+ > (1) Press the **+ Add User** button.
 
   ![Users](../01-security-ai/images/secaiimage018.jpg)
 
@@ -200,12 +200,7 @@
 
   ![Compare Roles](../01-security-ai/images/secaiimage033.jpg)
 
-28. From here, Brian Bell will login, and demonstrate using the newly granted AI Feature
-
-  ![Home Screen](../01-security-ai/images/secaiimage034.jpg)
-
-
-29. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+28. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
   [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
