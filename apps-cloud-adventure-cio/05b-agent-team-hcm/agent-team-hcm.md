@@ -123,7 +123,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 14. You can now begin a dialog with the Agent.  The Agent is now ready for your questions.
 
-    > 1. In the **Ask Oracle** dialog box at the bottom of the screen, type **Please summarize benefits available to me**and hit the return key or click the **Up Arrow** icon ![up arrow icon](../05b-agent-team-hcm/images/uparrow.jpg) 
+    > 1. In the **Ask Oracle** dialog box at the bottom of the screen, type **Please summarize benefits available to me** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../05b-agent-team-hcm/images/uparrow.jpg) 
 
     ![agent dialogue 1](../05b-agent-team-hcm/images/benimage014.jpg) <br>
 
