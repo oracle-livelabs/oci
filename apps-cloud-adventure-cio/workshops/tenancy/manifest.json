@@ -33,23 +33,23 @@
         {
             "title": "Lab 5a: Extend with AI (HCM Benefits RAG Agent) NOT READY11",
             "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
-        }, 
+        },
         {
             "title": "Lab 5b: Extend with AI (HCM Benefits Agent Team)",
             "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
-        }, 
+        },
         {
             "title": "Lab 6a: Extend with AI (SCM External Agent) NOT READY",
             "filename": "../../06a-external-agent-scm/external-agent-scm.md"
-        }, 
+        },
         {
             "title": "Lab 6b: Extend with AI (SCM Embed Agent)",
             "filename": "../../06b-embed-agent-scm/embed-agent-scm.md"
-        }, 
+        },
         {
             "title": "Lab 9: Analytics",
             "filename": "../../09-analytics/analytics.md"
-        }, 
+        },
         {
             "title": "Lab 9: Analytics with AI",
             "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
