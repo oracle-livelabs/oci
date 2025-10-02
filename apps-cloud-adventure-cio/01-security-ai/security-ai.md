@@ -22,14 +22,13 @@
   ![Security Objectives](../01-security-ai/images/secaiobjs.jpg)
 
 
-  > At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
+  > At this point, you should be logged into your environment with a username **CIO.xx** where **xx** is the two number code of your login ID.
 
 
-2. To enable the ability to us AI to discover new suppliers, you will access the security console. This is the Springboard where you’ll access all features.
+2. To enable the ability to use AI to discover new suppliers, you will access the security console. This is the Springboard where you’ll access all features.
 
    > (1) Select the **Tools** tab menu. <br>
-
-    > (2) Then select the role which matches your entry.
+   > (2) Then select the role which matches your entry.
 
   ![Home Screen](../01-security-ai/images/secaiimage001.jpg)
 
