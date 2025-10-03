@@ -1,4 +1,4 @@
-# Create AI Agents and Agent Teams for your enterprise
+# Embed AI Agents Teams in UI for End Users
 
 ## **Create a Guided Journey and embed your Agent**
 
@@ -9,20 +9,20 @@ AI Agent Studio for Fusion Applications is a comprehensive platform for creating
 
 ### **Objectives**
 
-In this activity you will use enable your Agent Team in the application for use by end users.
-* Create a Guided Journey and Task, which will reference for Agent Team.
-* Configure the My Maintenance Work page using Visual Builder Studio to reference your Guided Journey.
-* Use your Agent
+In this activity you will embed your AI Agent Team in the application for use by end users.
+* Create a Guided Journey and Task that references the AI Agent Team.
+* Use Visual Builder Studio to Configure the My Maintenance Work page with the Guided Journey.
+* Interact with your AI Agent
 
 
 ### **Begin Exercise**
 
 
-1. In this activity you will now embed your Agent with the application for use by end users.
+1.  In this activity, you will embed your AI Agent Team in the application for use by end users.
 
     ![AI Embed Objectives](../06b-embed-agent-scm/images/scmimage001.jpg)
 
-2. The first step will involve created a Guided Journey.  A Guided Journey allows you to embed specific information in standard applications.  In addition to using a Guided Journey to embed a AI Agent (today's example), Guided Journeys can also embed documents, analytics, URLs, Learning, Videos and more.  And like all configurations, Guided Journey configurations are automatically maintained during the release update process.
+2. The first step will involve creating a Guided Journey.  A Guided Journey allows you to embed specific information in standard applications.  In addition to using a Guided Journey to embed an AI Agent (today's example), Guided Journeys can also embed documents, analytics, URLs, Learning, Videos and more.  And like all configurations, Guided Journey configurations are automatically maintained during the release update process.
 
     > (1) Enter **Guided Journey** in the search field<br>
     > (2) Select the **Guided Journey** from the resulting dropdown.
@@ -36,10 +36,10 @@ In this activity you will use enable your Agent Team in the application for use 
     ![Open tools](../06b-embed-agent-scm/images/scmimage003.jpg)
 
 
-4. A Here, you just need to name it.
+4. Name your Guided Journey.
 
-    > (1) Enter ![end journey name] **CIOXX Guided Journey** there **XX** is replaced with your user number.
-    > (2)  Click the ![create draft](../06b-embed-agent-scm/images/create-draft.jpg) button.
+    > (1) Enter Name:  **CIOXX Guided Journey** where **XX** is replaced with your user number.<br>
+    > (2) Click the ![create draft](../06b-embed-agent-scm/images/create-draft.jpg) button.
 
     ![Create Guided Journey Header](../06b-embed-agent-scm/images/scmimage004.jpg)
 
@@ -52,8 +52,8 @@ In this activity you will use enable your Agent Team in the application for use 
      * Task Description: **Maintenance Guided Journey Task** <br>
      * Add Instructions: **Enables Maintenance Agent Team in Application UI**<br>
      * Task Type:  **Agent** from the dropdown <br>
-     * Agent Type: **Workflow Agent** <br>
-     * Workflow Agent: **CIOXX Asset Maintenance Agent Team** where **XX** is your user number.<br>
+     * Agent Type: **Workflow Agent** from the dropdown<br>
+     * Workflow Agent: **CIOXX Asset Maintenance Agent Team** where **XX** is your user number from the drop-down.<br>
 
     > (3) Click the **Save** button ![Create Button](../06b-embed-agent-scm/images/savedark.jpg) on the bottom right.
      ![enter guided journey task information](../06b-embed-agent-scm/images/scmimage005.jpg)
@@ -67,7 +67,7 @@ In this activity you will use enable your Agent Team in the application for use 
 
      ![activate the journey and go home](../06b-embed-agent-scm/images/scmimage006.jpg)
 
-7. Now, you'll go to the screen where you want to embed the Agent.
+7. Now, you'll go to the screen where you will embed the AI Agent Team.
 
     > (1) Enter **My Maintenance Work** in the search field and select **My Maintenance Work** from the resulting dropdown.
 
@@ -75,7 +75,8 @@ In this activity you will use enable your Agent Team in the application for use 
 
 8. You'll use Visual Builder to Edit the Page and enable the Guided Journey.
 
-    >  (1)  Click on the  **user picture** in the top right corner and then select **Edit Page in Visual Builder Studio** from the  resulting dropdown.<br>
+    >  (1)  Confirm that **M001 - Seattle Maintenance** is the organization selected in the My Maintenance Work dropdown at the top of the screen.  If not, select **M001 - Seattle Maintenance** from the dropdown.
+    >  (2)  Click the **logged in user icon** icon next to the bell icon in the top right corner and then select **Edit Page in Visual Builder Studio** from the resulting dropdown.<br>
 
     ![launch visual builder studio](../06b-embed-agent-scm/images/scmimage008.jpg)
 
@@ -89,7 +90,7 @@ In this activity you will use enable your Agent Team in the application for use 
 
     >  (1) Enter **CIOXX\_GUIDED\_JOURNEY** in the **journeycode** field on the right **Page Properties** panel.<br>
 
-    >  (2) Click the **preview** icon ![Preview Button](../06b-embed-agent-scm/images/preview.png) on the toolbar on the top right of teh page.  This will launch and new tab showing your newly configured screen in a full-functioning preview mode.<br>
+    >  (2) Click the **Preview** icon ![Preview Button](../06b-embed-agent-scm/images/preview.png) on the toolbar on the top right of the page.  This will launch and new tab showing your newly configured screen in a full-functioning preview mode.<br>
 
     ![Configure Journey Property and Preview](../06b-embed-agent-scm/images/scmimage010.jpg)
 
@@ -101,17 +102,17 @@ In this activity you will use enable your Agent Team in the application for use 
 
 12. The Agent appears in a panel pop-out from the right.  You can interact with your agent via the Ask Oracle field at the button of the pop-out panel.  Based on your defined agent, you can ask about Assets, Maintenance, Warranties and even have the Agent create a Maintenance Work Order for your asset.
 
-    > 1. Interact with your agent via the **Ask Oracle** field at the bottom.  Type **What is the manufacturers maintenance schedule for asset CA-RIDGELINE-001** and press enter or click the up arrow ![checkered flag](../06b-embed-agent-scm/images/uparrow.jpg). 
+    > 1. Interact with your agent via the **Ask Oracle** field at the bottom.  Type **What is the manufacturers maintenance schedule for asset CIOXX-RIDGELINE** where XX is the number in your user login and press enter or click the up arrow ![up arrow](../06b-embed-agent-scm/images/uparrow.jpg). 
 
     ![start debug](../06b-embed-agent-scm/images/scmimage012.jpg) <br>
 
-13. It looks like there's already a work order scheduled for preventive maintenance.  Why don't you check for any recalls?.
+13. You can check for recalls or any existing maintenance work orders.
 
     > 1. Type **Are there any outstanding recalls** and press enter or click the up arrow ![checkered flag](../06b-embed-agent-scm/images/uparrow.jpg). 
 
     ![start debug](../06b-embed-agent-scm/images/scmimage013.jpg) <br>
 
-14. There is a recall, so you should create a Maintenance Work order to take care of it.  Fortunately, the agent is going to help you with that.
+14. If there are any recalls, you can create a Maintenance Work order to take care of it.  Fortunately, the AI Agent is going to help you!
 
     > 1. Type **Yes, please create a maintenance work order for this recall** and press enter or click the up arrow ![checkered flag](../06b-embed-agent-scm/images/uparrow.jpg). 
 
@@ -123,7 +124,7 @@ In this activity you will use enable your Agent Team in the application for use 
 
     ![start debug](../06b-embed-agent-scm/images/scmimage015.jpg) <br>
 
-16. Congratulations. ![checkered flag](../06b-embed-agent-scm/images/checkeredflag.jpg)  You've finished the creation and deployment of the Agent Team, making it easy for your users to leverage the power of Oracle AI capabilities.
+16. Congratulations. ![checkered flag](../06b-embed-agent-scm/images/checkeredflag.jpg)  You've finished the creation and deployment of the AI Agent Team, making it easy for your users to leverage the power of Oracle AI.
 
 
 17. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!

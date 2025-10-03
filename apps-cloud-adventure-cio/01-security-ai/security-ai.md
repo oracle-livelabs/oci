@@ -74,7 +74,7 @@
 
 8.	You will now search for the required policy and add it.
 
-    > (1) Type **Create Supplier Negotiation** in the search field
+    > (1) Type **Create Supplier Negotiation** in the search field<br>
     > (2) Select the **Create Supplier Negotiation** privilege from the resulting dropdown as shown.
 
     ![Function Security Policy](../01-security-ai/images/secaiimage008.jpg)
@@ -104,7 +104,7 @@
 
 13.	Searching for a user
 
-    > (1) Type “Pat.ProcurementManager” in the search form then Select then name from the resulting dropdown list. <br>
+    > (1) Type **Pat.ProcurementManager** in the search form then Select then name from the resulting dropdown list. <br>
 
     > **Note:** Be sure to include the ‘.’ between the first and last name.
 
@@ -168,7 +168,7 @@
 
 23.	Search for custom role
 
-    > (1) Type in your **three initials and XX Code** which you used to name your custom role . <br>
+    > (1) Type in your **Initials and XX Code** which you used to name your custom role . <br>
 
     > (2) **Select** your custom role.
 
@@ -186,13 +186,13 @@
 
     ![Compare Roles](../01-security-ai/images/secaiimage025.jpg)
 
-26.	Immediately you see that two roles have been added to the first role and does not exist in the second role.
+26.	Now you see the differences between the two roles.
 
     > (1) Press the **Only in second role** toggle.
 
     ![Compare Roles](../01-security-ai/images/secaiimage026.jpg)
 
-27.	This view shows the two polices added you added to your custom role.
+27.	This view shows the change added to the custom role.  That completes this adventure.  Next, you'll return to the home page.
 
     > (1) Press the **Home** button.
 

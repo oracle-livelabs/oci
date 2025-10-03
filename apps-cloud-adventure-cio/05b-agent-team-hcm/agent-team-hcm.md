@@ -27,9 +27,9 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     ![Navigate to AI Agent Studio](../05b-agent-team-hcm/images/benimage002.jpg)
 
-3. You’ve previously created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some worker agents.
+3. You’ve previously created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some Worker Agents.
 
-    > 1. Click the ![Agent Teams](../05b-agent-team-hcm/images/agentteams.jpg) button/tab at the bottom of the page
+    > 1. Click the **Agent Teams** button/tab ![Agent Teams](../05b-agent-team-hcm/images/agentteams.jpg) at the bottom of the page
 
     ![Open tools](../05b-agent-team-hcm/images/benimage003.jpg)
 
@@ -47,7 +47,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
      * Family: Select **HCM** from the dropdown <br>
      * Product: Select  **Benefits** from the dropdown <br>
      * Maximum Interactions: **10** <br>
-     * Description: **This Agent Team leverages the Benefits Advisor Agent to respond to questions and the FMLA Absence Agent to view existing absences and submit a new FMLA absence request** <br>
+     * Description: **Agent Team for Benefits and FMLA** <br>
 
      > (2) Click the **Create** button ![Create Button](../05b-agent-team-hcm/images/createb.jpg) on the bottom right.
      
@@ -56,7 +56,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 6. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
 
-     > (1) Click the ![Agent Icon](../05b-agent-team-hcm/images/agenticon.jpg) <br>
+     > (1) Click the **Agents** icon ![Agent Icon](../05b-agent-team-hcm/images/agenticon.jpg) on the top of the left icon tool bar. <br>
 
      > (2) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **New Supervisor Agent**.
      
@@ -69,7 +69,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     * Family: Select **HCM** from the dropdown<br>
     * Product: Select  **Benefits** from the dropdown<br>
     * Maximum Interactions: **10** <br>
-    * Description: **This agent supervises the Benefits Advisor and FMLA Absence agents** <br>
+    * Description: **Supervisor Agent for Benefits and FMLA** <br>
 
      > (2) Click the **Create** button ![Create Button](../05b-agent-team-hcm/images/createb.jpg) on the bottom right.
 
@@ -86,7 +86,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 9. You can review the details of the agent before saving.
 
-    > 1. Click the Add button ![Add Button](../05b-agent-team-hcm/images/addb.jpg) on the bottom right of the screen.
+    > 1. Click the **Add** button ![Add Button](../05b-agent-team-hcm/images/addb.jpg) on the bottom right of the screen.
 
     ![Add Tools Complete](../05b-agent-team-hcm/images/benimage009.jpg) <br>
 
@@ -98,7 +98,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     >  (2) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
 
-    >  (3) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
+    >  (3) If necessary, Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **CA FMLA Absence Agent.**, where XX is replaced with your user number.<br>
 
     ![Add Tool](../05b-agent-team-hcm/images/benimage010.jpg)
 
@@ -108,7 +108,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     ![Add Tools Complete](../05b-agent-team-hcm/images/benimage011.jpg) <br>
 
-12. Your Agent Team, with a Supervisory Agent and two Worker Agents is complete.  We can now hide the left Agents panel to see our full Agent Team..
+12. Your Agent Team, with a Supervisory Agent and two Worker Agents is complete.  We can now hide the left Agents panel to see our full Agent Team.
 
     > 1. Click the **Agents** icon ![debug icon](../05b-agent-team-hcm/images/agenticon.jpg) on the top left of the screen.  You can see that the left panel is now hidden and you can see the entire Agent Team
 
@@ -131,13 +131,13 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     > The Agent responds with information, so we’ll ask an additional question.
 
-    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What about FMLA benefits** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../05b-agent-team-hcm/images/uparrow.jpg)
+    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What about FMLA benefits** and hit the **Enter key** or click the **Up Arrow** icon ![up arrow icon](../05b-agent-team-hcm/images/uparrow.jpg)
 
     ![agent dialogue 2](../05b-agent-team-hcm/images/benimage015.jpg) <br>
 
 16. The Agent  checks with HCM Cloud and confirms existing leave requests, if any.  It also offers to create a new request for you if you provide the requested start and end dates.
 
-    You decide to tell the Agent that you’re interested in creating an FMLA absence, but you do with without provided the requested dates.
+    You decide to tell the Agent that you’re interested in creating an FMLA absence, but you do so without initially providing the requested dates.
 
     > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **I would like to create FMLA absence** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../05b-agent-team-hcm/images/uparrow.jpg)
 
@@ -145,7 +145,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 17. The Agent reminds you that you need to provide start and end dates before the Agent can create the absence request.
 
-    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Start Date is 2025-08-28 End Date is 2025-08-29** and hit the return key or click the **Up Arrow** icon ![uparrow icon](../05b-agent-team-hcm/images/uparrow.jpg)
+    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Start Date is 2025-10-28 End Date is 2025-10-29** and hit the return key or click the **Up Arrow** icon ![uparrow icon](../05b-agent-team-hcm/images/uparrow.jpg)
 
     ![agent dialogue 3](../05b-agent-team-hcm/images/benimage017.jpg) <br>
 
