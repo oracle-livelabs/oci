@@ -1,5 +1,5 @@
 # Create AI Agents and Agent Teams for your enterprise
-
+## Create an External Agent and Assemble a Team
 
 ### Introduction
 
@@ -9,13 +9,13 @@ AI Agent Studio for Fusion Applications is a comprehensive platform for creating
 ### **Objectives**
 
 In this activity you will use Oracle Fusion AI Agent Studio to
-* Create a External API Agent that leverages an existing External API to access vehicle recall information.
-* Create and assemble an Agent Team that includes the Maintenance Policy Agent, Work Order Agent, and the External API Agent you just create.
+* Create an External API Agent that leverages an existing External API to access vehicle recall information.
+* Create and assemble an Agent Team that includes the Maintenance Work Order Agent, Install Base Asset Agent, and the External API Agent you just created.
 * Perform a quick test of the Agent team and publish.
 
 
+### **Begin Exercise**
 
-## Assemble and Test an Agent Team using AI Agent Studio
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
 
@@ -28,34 +28,36 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     ![Navigate to AI Agent Studio](images/scmaimage002.jpg)
 
-3. Next, you'll create an Agent.
+3. Next, you'll create an AI Agent.
 
     > 1. Click the ![Agents](images/agentsbutton.jpg) button/tab at the bottom of the page
 
     ![Open tools](images/scmaimage003.jpg)
 
 
-4. Create an Agent.
+4. Add an Agent.
 
     > 1. Click the ![add tool](images/plusadd.jpg) button to create a new Agent
 
     ![Create Agent Team](../06a-external-agent-scm/images/scmaimage004.jpg)
 
-5. Define the Agent Team.
+5. Define the Agent.
 
      > (1) Enter the fields as described below:
      * Agent Name: **CIOXX External Vehicle Recall Agent** where XX is replaced with your user number. <br>
      * Family: Select **SCM** from the dropdown <br>
      * Product: Select  **Maintenance** from the dropdown <br>
      * Maximum Interactions: **10** <br>
-     * Description: **TCloud Adventure External Vehicle Recall Agent** <br>
-     * Prompt: ![Alert Flat](images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt.  It's available as described in the copy block below and can be copied from their. Alternatively, the prompt text is available in the **Prompt - External Vehicle Recall Agent.txt** file that is available in the **ai-prompts** folder on your desktop.  so, please open this file and copy the contents into the Prompt field or copy the prompt from the **copy block** below. <br>
-         > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
-         > (3) Click the Create Button ![Create Button](images/createb.jpg) <br>
+     * Description: **External Vehicle Recall Agent** <br>
+     * Prompt: ![Alert Flat](images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - External Vehicle Recall Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below.  <br>
+
+    > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
+    > (3) Click the Create Button ![Create Button](images/createb.jpg) <br>
      
      ![Create Tool](../06a-external-agent-scm/images/scmaimage005.jpg)
 
- <copy>AGENT ROLE
+```
+<copy>AGENT ROLE
 As a Vehicle Recall Analyst, your role is to efficiently access vehicle recall information, providing users with clear information on any recalls related to their vehicle based on vehicle make, vehicle model and vehicle model year.
 
 RESPONSIBILITIES
@@ -74,10 +76,10 @@ IMPORTANT GUIDELINES
 
   - Provide concise, factual answers based strictly on the data retrieved.
   - Never fabricate or assume information.
-  - Format your responses clearly and professionally for easy readability.</copy></pre></p>
+  - Format your responses clearly and professionally for easy readability.</copy>
+  ```
 
-
-6. You’ve defined your Agent, so it’s time to add a your tool.
+6. You’ve defined your Agent, so it’s time to add a tool.
 
      > (1) Click the ![Agent Icon](images/toolhammericon.jpg) <br>
 
@@ -85,9 +87,11 @@ IMPORTANT GUIDELINES
 
 7. Search for and add the tool
 
-   > (1) Enter **CA External** in the Ask Oracle field, where XX is replaced with your user number, and press the **<enter>** key or select **CIOXX** from the resulting dropdown.<br>
-   > (2) Click in the lower portion of the Tools area of the screen to make the result set active.
-   > (3) Click the ![Agent Image](../05a-rag-agent-hcm/images/plusicon.jpg) icon next to the CA External Vehicle Tool.
+     > (1) Enter **F1** in the Ask Oracle field and press the **<enter>** key or select **F1** from the resulting dropdown.<br>
+     > (2) Click the ![Agent Image](../05a-rag-agent-hcm/images/plusicon.jpg) icon next to the **F1 External Vehicle Tool**.<br>
+     > (3)  You may need to click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon a second time.       
+     
+     ![Add Agent](../06a-external-agent-scm/images/scmaimage007.jpg)
 
 8. You can confirm the details of tool and continue
 
@@ -101,7 +105,7 @@ IMPORTANT GUIDELINES
 
     ![Create Agent](..//06a-external-agent-scm/images/scmaimage009.jpg)
 
-10. You’ve previously created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some worker agents.
+10. You’ve have created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some Worker Agents.
 
     > 1. Click the ![Agent Teams](../05b-agent-team-hcm/images/agentteams.jpg) button/tab at the bottom of the page
 
@@ -109,7 +113,7 @@ IMPORTANT GUIDELINES
 
 11. Create an Agent Team.
 
-    > 1. Click the ![add tool](../05b-agent-team-hcm/images/plusadd.jpg) button to create a new Agent
+    > 1. Click the ![add tool](../05b-agent-team-hcm/images/plusadd.jpg) button to create a new Agent Team
 
     ![Create Agent Team](../06a-external-agent-scm/images/scmaimage011.jpg)
 
@@ -120,46 +124,41 @@ IMPORTANT GUIDELINES
      * Family: Select **SCM** from the dropdown <br>
      * Product: Select  **Maintenance** from the dropdown <br>
      * Maximum Interactions: **10** <br>
-     * Description: **Cloud Advneture Asset Maintenance Agent Team** <br>
+     * Description: **Asset Maintenance Agent Team** <br>
 
      > (2) Click the **Create** button ![Create Button](../05b-agent-team-hcm/images/createb.jpg) on the bottom right.
 
      ![Create Tool](../06a-external-agent-scm/images/scmaimage012.jpg)
 
-13.  Create your Agent Team
-
-    > (1) Click the ![Create button Image](../05a-rag-agent-hcm/images/createw.jpg) button on the top right.
-
-    ![Create Agent](../06a-external-agent-scm/images/scmaimage013.jpg)
-
-14. You’ve defined your Agent Team, so it’s time to add add agents.
+13. You’ve defined your Agent Team, so it’s time to add agents.
 
      > (1) Click the ![Agent Icon](../05b-agent-team-hcm/images/agenticon.jpg) <br>
 
      ![Create Agent](../06a-external-agent-scm/images/scmaimage014.jpg)
 
-15. First, add a Supervisor Agent.
+14. First, add a Supervisor Agent.
 
-     > (1) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **New Supervisor Agent**.
+     > (1) Click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon next to **New Supervisor Agent**.
 
      ![Create Agent](../06a-external-agent-scm/images/scmaimage015.jpg)
 
-16. Define Supervisor Agent Details.
+15. Define Supervisor Agent Details.
 
      > (1) Enter the fields as described below:
     * Agent Team Name: **CIOXX Asset Maintenance Supervisor Agent** where XX is replaced with your user number.<br>
     * Family: Select **SCM** from the dropdown<br>
     * Product: Select  **Maintenance** from the dropdown<br>
     * Maximum Interactions: **10** <br>
-    * Description: **Cloud Adventure Asset Maintenance Supervisor Agent** <br>
+    * Description: **Asset Maintenance Supervisor Agent** <br>
 
      > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
 
        ![Create Agent](../06a-external-agent-scm/images/scmaimage016.jpg)
 
-17. Next you'll add some worker agents.  You can scroll through the list of available tools, or use the Ask Oracle field to filter the results.  You'll do the latter.
+16. Next you'll add some worker agents.  You can scroll through the list of available agents, or use the Ask Oracle field to filter the results.  You'll do the latter.
 
-    >  (1)  Enter **Maint** in the Ask Oracle field and press the **<enter>** key or (2) select **Maint** from the resulting dropdown.<br><br>
+    >  (1)  Enter **F1** in the Ask Oracle field and press the **Enter** key or <br>
+    >  (2) select **F1** from the resulting dropdown.<br><br>
     >  ![Create Button](../05b-agent-team-hcm/images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br><br>
     >  (3)  Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) in the Available Agents Section to move focus.
 
@@ -213,7 +212,7 @@ IMPORTANT GUIDELINES
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 
-## Summary
+### Summary
 
 As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they’re not permissioned to see.
 
@@ -225,7 +224,7 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 **You have successfully completed the Activity!
 
 
-## Learn More
+### Learn More
 
 * [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
 * [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
