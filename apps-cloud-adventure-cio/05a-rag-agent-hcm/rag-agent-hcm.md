@@ -58,13 +58,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
      > (1) Enter the following fields:
     * Name: Enter **CA Benefits Documents** <br>
-<<<<<<< HEAD
     * Status: Select **Ready to publish** from the dropdown<br>
     * Description: Enter **Benefits Documents**<br>
-=======
-    * Status: Select **Ready to publish** from the dropdown <br>
-    * Description: Enter **Cloud Adventure Benefits Documents**<br>
->>>>>>> 35f4a7fec82bf747dc8e7d025f496d08565577b6
 
      > (2) Click on the ![Drag-and-drop](../05a-rag-agent-hcm/images/dandd.jpg) region and then select the file (Cloud Adventure Benefits Highlights.pdf) from the **ai-documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.<br>
 
@@ -89,15 +84,9 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 9. Define the details of the Agent.
 
     > (1) First, you'll enter the fields as described below:<br>
-<<<<<<< HEAD
     * Agent Name: **CIO## Benefits Advisor Agent** where ## is replaced with your user nnumber.<br>
     * Family: Select **HCM** from the dropown<br>
     * Product: Select  **Benefits** from the dropdown<br>
-=======
-    * Agent Name: **CIO## Procurement Policy Advisor Agent** where ## is replaced with your user number.<br>
-    * Family: Select **PRC** from the dropdown<br>
-    * Product: Select  **Self Service Procurement** from the dropdown<br>
->>>>>>> 35f4a7fec82bf747dc8e7d025f496d08565577b6
     * Maximum Interactions: **10** <br>
     * Description: **Benefits Advisor Agent** <br>
     * Prompt: ![Alert Flat](images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - CA Benefits Advisor Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below. <br>
