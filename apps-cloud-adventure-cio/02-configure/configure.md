@@ -68,7 +68,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (1) Click on the ![co image](../02-configure/images/icon012_co.png)  **Image** in the top right corner of the screen.  <br>
 
-    > (2) Then select **Edit Page in Visual Builder Studio** from the drop down options.
+    > (2) Then select **Edit Page in Visual Builder Studio** from the drop-down options.
 
     ![Change Salary Page 2nd page](../02-configure/images/image008.png)
 
@@ -252,7 +252,7 @@ So, check your with you team, double-check your racing harness and get ready for
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist, Advanced Technology Services; Casey Doody, Cloud Technologist , Advanced Technology Services
 * **Contributors** -  Sajid Saleem, Master Principal Cloud Technologist, Advanced Technology Services
-* **Last Updated By/Date** - Casey Doody, August 2025
+* **Last Updated By/Date** - Casey Doody, October 2025
 
 
 

@@ -25,10 +25,9 @@
      > At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
 
 
-
 2. Oracle Cloud Applications are delivered with a complete set of roles which control access to application functions and data.
 
-    > To add a new privilege  to a user, you will need to first copy an existing role.<br>
+    > To add a new privilege to a user, you will need to first copy an existing role.<br>
     > This is the Springboard where you’ll access all features.
 
    ![Application Springboard](../01-security/images/image001.png)
@@ -92,9 +91,9 @@
 
     ![Copy Role a](images/image008.png)
 
-10. Using Function Security  Policy, you will add the privileges Brian Bell needs
+10. Using Function Security Policy, you will add the privileges Brian Bell needs
 
-    > (1) Press the **Add + Function Security  Policy** button.
+    > (1) Press the **Add + Function Security Policy** button.
 
     ![Copy Role 2a](images/image009.png)
 
@@ -106,7 +105,7 @@
 
 12. You can now add the selected privilege to the role
 
-    > (1) Press the **Add Privilege to Role** button
+    > (1) Press the **Add Privilege to Role** button.
 
     ![Copy Role 2c](images/image011.png)
 
@@ -172,7 +171,7 @@
 
   ![Copy Role 7g](images/image020.png)
 
-22. Next, you'll use the Compare Roles feature, where you can quickly identify changes you’ve made compared to the out of the box roles provided by Oracle or other custom roles.
+22. Next, you'll use the Compare Roles feature, where you can quickly identify the changes you’ve made compared to the out of the box roles provided by Oracle or other custom roles.
 
     > (1) From the Security Console, press the **Compare Roles button**.
 
@@ -243,4 +242,4 @@ Security Console is used to quickly manage user access to the entire Fusion appl
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist, Advanced Technology Services
 * **Contributors** -
-* **Last Updated By/Date** - Nate Weinsaft, August 2025
+* **Last Updated By/Date** - Nate Weinsaft, October 2025
