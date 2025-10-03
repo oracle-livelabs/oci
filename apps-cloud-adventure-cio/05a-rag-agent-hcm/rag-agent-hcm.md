@@ -45,7 +45,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     * Tool Name: Enter **CIOXX Benefits Document Tool**, where **##** is replaced with your user number.<br>
     * Family: select **HCM** from the dropdown<br>
     * Product: select **Benefits** from the dropdown<br>
-    * Description: Enter **Cloud Adventure Benefits Document Tool** <br>
+    * Description: Enter **Benefits Document Tool** <br>
 
     > (2) Click the ![button](../05a-rag-agent-hcm/images/addw.jpg) button under **Documents** <br><br>
 
@@ -59,7 +59,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
      > (1) Enter the following fields:
     * Name: Enter **CA Benefits Documents** <br>
     * Status: Select **Ready to publish** from the dropdown<br>
-    * Description: Enter **Cloud Adventure Benefits Documents**<br>
+    * Description: Enter **Benefits Documents**<br>
 
      > (2) Click on the ![Drag-and-drop](../05a-rag-agent-hcm/images/dandd.jpg) region and then select the file (Cloud Adventure Benefits Highlights.pdf) from the **ai-documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.<br>
 
@@ -71,7 +71,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 7. Now, you'll create your first Agent!  You'll do that from the Agent screen within the AI Agent Studio.
 
-    > Click the  **Agents** button/tab ![Agent Image](../05a-rag-agent-hcm/images/agentteams.jpg) at the bottom of the page.
+    >  (1) Click the  **Agents** button/tab ![Agent Image](../05a-rag-agent-hcm/images/agentteams.jpg) at the bottom of the page.
 
     ![Agents Page](../05a-rag-agent-hcm/images/raghcmimage007.jpg)
 
@@ -84,12 +84,13 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 9. Define the details of the Agent.
 
     > (1) First, you'll enter the fields as described below:<br>
-    * Agent Name: **CIO## Procurement Policy Advisor Agent** where ## is replaced with your user nnumber.<br>
-    * Family: Select **PRC** from the dropown<br>
-    * Product: Select  **Self Service Procurement** from the dropdown<br>
+    * Agent Name: **CIO## Benefits Advisor Agent** where ## is replaced with your user nnumber.<br>
+    * Family: Select **HCM** from the dropown<br>
+    * Product: Select  **Benefits** from the dropdown<br>
     * Maximum Interactions: **10** <br>
-    * Description: **Cloud Adventure Procurement Policy Advisor Agent** <br>
-    * Prompt: ![Alert Flat](images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt.  It's available as described in the copy block below and can be copied from their. Alternatively, the prompt text is available in the **Prompt - CA Benefits Advisor Agent.txt** file that is available in the **ai-prompts** folder on your desktop.  so, please open this file and copy the contents into the Prompt field or copy the prompt from the **copy block** below. <br>
+    * Description: **Benefits Advisor Agent** <br>
+    * Prompt: ![Alert Flat](images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - CA Benefits Advisor Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below. <br>
+
     > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
     > (3) Click the Create Button ![Create Button](images/createb.jpg) <br>
 
@@ -119,7 +120,7 @@ IMPORTANT GUIDELINES
 
     > (1) Click the **Tools** ![Tool Icon](../05a-rag-agent-hcm/images/toolhammericon.jpg) button on the left icon bar.<br>
     > (2) Enter **CIOXX** in the Ask Oracle field, where XX is replaced with your user number, and press the **<enter>** key or select **CIOXX** from the resulting dropdown.<br>
-    > (3) Click the ![Agent Image](../05a-rag-agent-hcm/images/plusicon.jpg) icon next to the CA Benefits Document Tool.
+    > (3) Click the ![Agent Image](../05a-rag-agent-hcm/images/plusicon.jpg) icon next to the CA Benefits Document Tool. You may need to click it twice.
 
     ![add tool](../05a-rag-agent-hcm/images/raghcmimage010.jpg)
 
@@ -136,16 +137,14 @@ IMPORTANT GUIDELINES
 
     ![Create Agent](../05a-rag-agent-hcm/images/raghcmimage012.jpg)
 
-13. You’ve just created your first Agent.  In the next lab you will put this agent to work as part of an Agent Team.
+13. You’ve just created your first AI Agent.  In the next lab you will put this agent to work as part of an Agent Team.
 
-    > (1) Click the **Agent Teams** button/tab ![Agent Teams](../05a-rag-agent-hcm/images/agentteams.jpg) on the button of the page.
-
-    ![Add Tools Create](../05a-rag-agent-hcm/images/raghcmimage013.jpg) <br>
+      ![Add Tools Create](../05a-rag-agent-hcm/images/raghcmimage013.jpg) <br>
 
 
 ### Summary
 
-As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they’re not permissioned to see.
+As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means users only see data and/or AI recommendations permitted by their roles.
 
 AI Agent Studio empowers enterprises to configure and build AI agents that extend their workforce and help achieve new levels of productivity. It allows you to harness the full potential of AI agents and transform the way work gets done in your organization.
 AI Agent Studio is a design-time environment that provides a set of tools to create, customize, validate, and deploy GenAI features and AI agents to meet the specific needs of the organization. It is the same unified environment Oracle uses to internally build agents, made available now to customers and partners to customize and extend agents from Oracle-provided pre-configured templates or to create new agents and multi-agent workflows.

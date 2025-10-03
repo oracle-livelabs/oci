@@ -1,6 +1,6 @@
 # Embed AI Agents Teams in UI for End Users
 
-## **Create a Guided Journey and embed your Agent**
+## **Create a Guided Journey and Embed your AI Agent Team**
 
 ### **Introduction**
 
@@ -75,7 +75,7 @@ In this activity you will embed your AI Agent Team in the application for use by
 
 8. You'll use Visual Builder to Edit the Page and enable the Guided Journey.
 
-    >  (1)  Confirm that **M001 - Seattle Maintenance** is the organization selected in the My Maintenance Work dropdown at the top of the screen.  If not, select **M001 - Seattle Maintenance** from the dropdown.
+    >  (1)  Confirm that **M001 - Seattle Maintenance** is the organization selected in the My Maintenance Work dropdown at the top of the screen.  If not, select **M001 - Seattle Maintenance** from the dropdown.<br>
     >  (2)  Click the **logged in user icon** icon next to the bell icon in the top right corner and then select **Edit Page in Visual Builder Studio** from the resulting dropdown.<br>
 
     ![launch visual builder studio](../06b-embed-agent-scm/images/scmimage008.jpg)
