@@ -45,9 +45,9 @@ Estimated Time: 15 minutes
 
 5. Use this screen to select the roles you would like to request
 
-    > (1) In Role Name, type, **Order Entry Specialist US1**. <br>
+    > (1) In Role Name, type, **Vegas**. <br>
 
-    > (2) Then select the role which matches your entry.
+    > (2) Then select the **Vegas Order Entry Specialist** role.
 
   ![Add Role](../01-risk/images/riskimage005.jpg)
 
@@ -122,10 +122,6 @@ Estimated Time: 15 minutes
   ![Access Request Approvals](../01-risk/images/riskimage019.jpg)
 
 14. Presenter will step through the findings from Risk Management
-
-  > (1) Click on **Approvals**. <br>
-
-  ![Access Request Approvals](../01-risk/images/riskimage020.jpg)
 
   > (1) Click on **Control Violations**. <br>
 
