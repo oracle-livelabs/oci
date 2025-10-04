@@ -91,9 +91,9 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 10. You'll add one more worker agent.  First, you'll filter on something different.
 
-    >  (1) Delete your previous Ask Oracle filter and enter **F1** in the Ask Oracle Filter and press the <enter> key or select **F1** from the resulting dropdown.<br>
+    >  (1) Delete your previous Ask Oracle filter and enter **F1** in the Ask Oracle Filter and press the <enter> key or select **F1** from the resulting dropdown.<br><br>
 
-    >  ![Create Button](../05b-agent-team-hcm/images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br><br>
+    >  ![Create Button](../05b-agent-team-hcm/images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br>
 
     >  (2) Click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon next to **F1 FMLA Absence Agent.**, where XX is replaced with your user number.<br>
 

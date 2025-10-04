@@ -18,7 +18,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 ### **Begin Exercise**
 
-1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update Change Salary Page for Non-HR managers.
+1. You will use Redwood, Oracle’s next-generation design system, and Visual Builder to quickly and efficiently update Change Salary Page for Non-HR managers.
 
     ![Configuration Objectives](../02-configure/images/configure_objs_hcm.png)
 
