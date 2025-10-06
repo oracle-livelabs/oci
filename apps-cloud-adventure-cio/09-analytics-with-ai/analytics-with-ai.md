@@ -22,7 +22,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 1. In this activity, you will leverage pre-built machine learning capabilities (sentiment analysis) on survey data to understand employee sentiment.
 
-    ![Analytics OBJs](../09-analytics-with-ai/images/aianalytics_objs.jpg)
+    ![Analytics OBJs](../09-analytics-with-ai/images/aianalytics_objs2.jpg)
 
 2. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making.
 
