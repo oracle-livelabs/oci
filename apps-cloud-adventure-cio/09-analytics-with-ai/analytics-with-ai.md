@@ -12,7 +12,7 @@ This activity guide helps business users to investigate and research data, ask r
 
 ### **Objectives**
 
-In this activity, you will Create analytics across different lines of business to derive better business insight
+Use pre-built machine learning based sentiment analysis to analyze employee sentiment (positive, negative or neutral) and emotion from survey interaction data.
 
 Estimated Time: 15 minutes
 
@@ -20,13 +20,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 ### Begin Exercise**
 
-1. In this activity, you will Create analytics across different lines of business to derive better business insights.
-
-    Cross-functional reporting analysis between ERP & HCM involves integrating data from core business operations finance with workforce-related data (such as employee performance, payroll, and workforce planning) providing comprehensive insights for decision-making, enabling organizations to align their human resource strategies with broader business objectives.
+1. In this activity, you will leverage pre-built machine learning capabilities (sentiment analysis) on survey data to understand employee sentiment.
 
     ![Analytics OBJs](../09-analytics-with-ai/images/analytics_objs1.png)
-
-At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
 
 2. Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making.
 
@@ -62,7 +58,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
     ![New Data Flow](../09-analytics-with-ai/images/aiimage011.jpg)
 
-6. Now that we have our data, explain the different fields in the data. Everything from ID, headcount, departments, employee comments…. We can take advantage of the different out of the box ML models FDI offers. Can explain the left hand pane at this point with different models. But really we are going to focus on the **Analyze Sentiment**.
+6. > We will use pre-built machine learning based sentiment analysis to analyze Survey Data.
 
     > (1) Drag **Analyze Sentiment** on the left side until we get a blue box next to Survey Data. <br>
 
@@ -128,7 +124,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
     ![New Workbook](../09-analytics-with-ai/images/aiimage022.jpg)
 
-14. Now that we have our data ready. Quickly talk how we have emotion attribute in the dataset as a result of the sentiment model.  We can start with some analysis and look at head count based on emotions given to employee comments by the model.
+14. Notice that we have emotion as an attribute derived from sentiment analysis. We will start with analyzing head count based on emotion.
 
     > (1) Click and hold on ctrl, then select **emotion**. <br>
 
@@ -136,7 +132,7 @@ At this point, you should be logged into your environment with a username CIO.xx
 
     ![New Workbook](../09-analytics-with-ai/images/aiimage023.jpg)
 
-15. Now that we have our data ready. Quickly talk how we have emotion attribute in the dataset as a result of the sentiment model.  We can start with some analysis and look at head count based on emotions given to employee comments by the model.
+15. Now we will move emotion to Color for better visualization
 
     > (1) Click and drag **emotion** onto color. <br>
 
