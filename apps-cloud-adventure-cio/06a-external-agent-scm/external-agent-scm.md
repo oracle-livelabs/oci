@@ -19,27 +19,27 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
 
-    ![AI RAG Objectives](images/scmaimage001.jpg)
+    ![AI RAG Objectives](../06a-external-agent-scm/images/scmaconfigimage001.jpg)
 
 2. The first step is to navigate to AI Agent Studio.
 
     > (1) Click on the **Tools** tab <br>
     > (2) Select the **AI Agent Studio** tile
 
-    ![Navigate to AI Agent Studio](images/scmaimage002.jpg)
+    ![Navigate to AI Agent Studio](../06a-external-agent-scm/images/scmaconfigimage002.jpg)
 
 3. Next, you'll create an AI Agent.
 
     > 1. Click the ![Agents](images/agentsbutton.jpg) button/tab at the bottom of the page
 
-    ![Open tools](images/scmaimage003.jpg)
+    ![Open tools](../06a-external-agent-scm/images/scmaconfigimage003.jpg)
 
 
 4. Add an Agent.
 
     > 1. Click the ![add tool](images/plusadd.jpg) button to create a new Agent
 
-    ![Create Agent Team](../06a-external-agent-scm/images/scmaimage004.jpg)
+    ![Create Agent Team](../06a-external-agent-scm/images/scmaconfigimage004.jpg)
 
 5. Define the Agent.
 
@@ -53,8 +53,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
     > (3) Click the Create Button ![Create Button](images/createb.jpg) <br>
-     
-     ![Create Tool](../06a-external-agent-scm/images/scmaimage005.jpg)
+
+     ![Create Tool](../06a-external-agent-scm/images/scmaconfigimage005.jpg)
 
 ```
 <copy>AGENT ROLE
@@ -82,42 +82,37 @@ IMPORTANT GUIDELINES
 6. You’ve defined your Agent, so it’s time to add a tool.
 
      > (1) Click the ![Agent Icon](images/toolhammericon.jpg) <br>
+     > (2) Enter **F1** in the Ask Oracle field and press the **<enter>** key or select **F1** from the resulting dropdown.<br>
+     > (3) Click the ![Agent Image](../05a-rag-agent-hcm/images/plusicon.jpg) icon next to the **F1 External Vehicle Tool**.<br>
+     > (4) You may need to click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon a second time.
 
-     ![Create Agent](../06a-external-agent-scm/images/scmaimage006.jpg)
+     ![Add Agent](../06a-external-agent-scm/images/scmaconfigimage006.jpg)
 
-7. Search for and add the tool
-
-     > (1) Enter **F1** in the Ask Oracle field and press the **<enter>** key or select **F1** from the resulting dropdown.<br>
-     > (2) Click the ![Agent Image](../05a-rag-agent-hcm/images/plusicon.jpg) icon next to the **F1 External Vehicle Tool**.<br>
-     > (3)  You may need to click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon a second time.       
-     
-     ![Add Agent](../06a-external-agent-scm/images/scmaimage007.jpg)
-
-8. You can confirm the details of tool and continue
+7. You can confirm the details of tool and continue
 
     > (1) Click the **+ Add** button ![Add button Image](../05a-rag-agent-hcm/images/addb.jpg).
 
-    ![Add Agent](../06a-external-agent-scm/images/scmaimage008.jpg)
+    ![Add Agent](../06a-external-agent-scm/images/scmaconfigimage007.jpg)
 
-9. That's it!  If necessary, you can add additional tools to your agent.  But no additional ones are required for this lab, so you can finish the Agent creation.
+8. That's it!  If necessary, you can add additional tools to your agent.  But no additional ones are required for this lab, so you can finish the Agent creation.
 
     > (1) Click the ![Create button Image](../05a-rag-agent-hcm/images/createw.jpg) button on the top right.
 
-    ![Create Agent](..//06a-external-agent-scm/images/scmaimage009.jpg)
+    ![Create Agent](..//06a-external-agent-scm/images/scmaconfigimage008.jpg)
 
-10. You’ve have created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some Worker Agents.
+9. You’ve have created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some Worker Agents.
 
     > 1. Click the ![Agent Teams](../05b-agent-team-hcm/images/agentteams.jpg) button/tab at the bottom of the page
 
-    ![Open tools](../06a-external-agent-scm/images/scmaimage010.jpg)
+    ![Open tools](../06a-external-agent-scm/images/scmaconfigimage009.jpg)
 
-11. Create an Agent Team.
+10. Create an Agent Team.
 
     > 1. Click the ![add tool](../05b-agent-team-hcm/images/plusadd.jpg) button to create a new Agent Team
 
-    ![Create Agent Team](../06a-external-agent-scm/images/scmaimage011.jpg)
+    ![Create Agent Team](../06a-external-agent-scm/images/scmaconfigimage010.jpg)
 
-12. Define the Agent Team.
+11. Define the Agent Team.
 
      > (1) Enter the fields as described below:
      * Agent Team Name: **CIOXX Asset Maintenance Agent Team** where XX is replaced with your user number. <br>
@@ -128,21 +123,16 @@ IMPORTANT GUIDELINES
 
      > (2) Click the **Create** button ![Create Button](../05b-agent-team-hcm/images/createb.jpg) on the bottom right.
 
-     ![Create Tool](../06a-external-agent-scm/images/scmaimage012.jpg)
+     ![Create Tool](../06a-external-agent-scm/images/scmaconfigimage011.jpg)
 
-13. You’ve defined your Agent Team, so it’s time to add agents.
+12. You’ve defined your Agent Team, so it’s time to add agents.  You can start with a Supervisor Agent.
 
      > (1) Click the ![Agent Icon](../05b-agent-team-hcm/images/agenticon.jpg) <br>
+     > (2) Click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon next to **New Supervisor Agent**.
 
-     ![Create Agent](../06a-external-agent-scm/images/scmaimage014.jpg)
+     ![Create Agent](../06a-external-agent-scm/images/scmaconfigimage012.jpg)
 
-14. First, add a Supervisor Agent.
-
-     > (1) Click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon next to **New Supervisor Agent**.
-
-     ![Create Agent](../06a-external-agent-scm/images/scmaimage015.jpg)
-
-15. Define Supervisor Agent Details.
+13. Define Supervisor Agent Details.
 
      > (1) Enter the fields as described below:
     * Agent Team Name: **CIOXX Asset Maintenance Supervisor Agent** where XX is replaced with your user number.<br>
@@ -153,61 +143,75 @@ IMPORTANT GUIDELINES
 
      > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
 
-       ![Create Agent](../06a-external-agent-scm/images/scmaimage016.jpg)
+       ![Create Agent](../06a-external-agent-scm/images/scmaconfigimage013.jpg)
 
-16. Next you'll add some worker agents.  You can scroll through the list of available agents, or use the Ask Oracle field to filter the results.  You'll do the latter.
+14. Next you'll add some worker agents.  You can scroll through the list of available agents, or use the Ask Oracle field to filter the results.  You'll do the latter.
 
-    >  (1)  Enter **F1** in the Ask Oracle field and press the **Enter** key or <br>
-    >  (2) select **F1** from the resulting dropdown.<br><br>
-    >  ![Create Button](../05b-agent-team-hcm/images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br><br>
-    >  (3)  Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) in the Available Agents Section to move focus.
+    >  (1)  Enter **F1** in the Ask Oracle field and press the **Enter** key or select **F1** from the resulting dropdown.<br><br>
+    >  ![Create Button](../06a-external-agent-scm/images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br>
+    >  (2) Click the ![Create Button](../06a-external-agent-scm/images/plusicon.jpg) icon next to **F1 Installed Base Asset Agent.**.<br>
+    >  (3) You may need to click the ![Create Button](../06a-external-agent-scm/images/plusicon.jpg) icon a second time.<br>
 
-    ![Add Tool](../06a-external-agent-scm/images/scmaimage017.jpg)
+    ![Add Tool](../06a-external-agent-scm/images/scmaconfigimage014.jpg)
 
-18. Add the Installed Base Agent
-
-    > (1) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **CA Installed Base.**, where XX is replaced with your user number.<br>
-
-    ![Add Tools Complete](..//06a-external-agent-scm/images/scmaimage018.jpg)
-
-19. You can review the details of the agent.
+15. You can review the details of the agent.
 
     > 1. Click the **Add** button ![Add Button](../05b-agent-team-hcm/images/addb.jpg).
 
-    ![Add Tools Complete](../06a-external-agent-scm/images/scmaimage019.jpg
+    ![Add Tools Complete](../06a-external-agent-scm/images/scmaconfigimage015.jpg)
 
-20. Add the CIOXX External Vehicle Agent
+16. Add the F1 Maintenance Work Order Agent
 
-    > (1) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **CIOXX External Vehicle.**, where XX is replaced with your user number.<br>
+     > (1) Click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon next to **F1 Maintenance Work Order Agent**.<br>
 
-    ![Add Tools Complete](../06a-external-agent-scm/images/scmaimage020.jpg)
+    ![Add Tools Complete](../06a-external-agent-scm/images/scmaconfigimage016.jpg)
 
-21. You can review the details of the agent.
-
-    > (1) Click the **Add** button ![Add Button](../05b-agent-team-hcm/images/addb.jpg).
-
-    ![Add Tools Complete](../06a-external-agent-scm/images/scmaimage021.jpg) 
-
-22. Add the CA Maintenance Work Order Agent
-
-    > (1) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **CA Maintenance Work Order Agent.**, where XX is replaced with your user number.<br>
-
-    ![Add Tools Complete](..//06a-external-agent-scm/images/scmaimage022.jpg)
-
-23. You can review the details of the agent.
+17. You can review the details of the agent.
 
     > (1) Click the **Add** button ![Add Button](../05b-agent-team-hcm/images/addb.jpg).
 
-    ![Add Tools Complete](..//06a-external-agent-scm/images/scmaimage023.jpg)
+    ![Add Tools Complete](../06a-external-agent-scm/images/scmaconfigimage017.jpg)
 
-24. Your Agent Team is ready, so let's Publish it.  In the next Lab, we'll use this published Team and make it available to end users.
+18. Add the CIOXX External Vehicle Recall Agent
+
+    > (1) Delete your previous Ask Oracle filter and enter **CIOXX** in the Ask Oracle Filter, where XX is replaced with your user number, and press the <enter> key or select **CIOXX** from the resulting dropdown.<br>
+    > (2) Click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon next to **CIOXX External Vehicle Recall Agent.**, where XX is replaced with your user number.<br>
+    >  (3) You may need to click the ![Create Button](../06a-external-agent-scm/images/plusicon.jpg) icon a second time.<br>
+
+    ![Add Tools Complete](..//06a-external-agent-scm/images/scmaconfigimage018.jpg)
+
+19. You can review the details of the agent.
+
+    > (1) Click the **Add** button ![Add Button](../05b-agent-team-hcm/images/addb.jpg).
+
+    ![Add Tools Complete](..//06a-external-agent-scm/images/scmaconfigimage019.jpg)
+
+20. Your Agent Team is ready, but you should do a quick test.
+
+    > 1. Click the **Debug** icon ![debug icon](../06a-external-agent-scm/images/debugarrow.jpg) on the top left of the screen.  It's the one that looks like the Play arrow.
+
+    ![start debug](../06a-external-agent-scm/images/scmaconfigimage020.jpg) <br>
+
+21. The Agent is now ready for your questions.
+
+    > 1. In the **Ask Oracle** dialog box at the bottom of the screen, type **Help** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../05b-agent-team-hcm/images/uparrow.jpg)
+
+    ![agent dialogue 1](../06a-external-agent-scm/images/scmaconfigimage021.jpg) <br>
+
+22. The Agent will show some debug information as it interacts with the various Worker Agents. In this Debug mode, the Agent will also show you source and processing information (yellow boxes).  These will not be available to end-users once deployed.  Once the Agent responds, you're ready to move to the next step.
+
+    > 1. Click the ![x icon](../06a-external-agent-scm/images/icon14_x2.png) icon in the upper right of the screen to close the Agent interaction
+
+    ![agent dialogue 2](../06a-external-agent-scm/images/scmaconfigimage022.jpg) <br>
+
+23. Your Agent Team is ready, so let's Publish it.  In the next Lab, we'll use this published Team and make it available to end users.
 
     > (1) Click the Publish button on the top right.
 
-    ![Add Tools Complete](../06a-external-agent-scm/images/scmaimage024.jpg)
+    ![Add Tools Complete](../06a-external-agent-scm/images/scmaconfigimage023.jpg)
 
 
-25. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+24. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
