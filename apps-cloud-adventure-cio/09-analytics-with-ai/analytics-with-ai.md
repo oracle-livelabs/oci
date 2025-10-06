@@ -58,7 +58,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![New Data Flow](../09-analytics-with-ai/images/aiimage011.jpg)
 
-6. > We will use pre-built machine learning based sentiment analysis to analyze Survey Data.
+6. We will use pre-built machine learning based sentiment analysis to analyze Survey Data.
 
     > (1) Drag **Analyze Sentiment** on the left side until we get a blue box next to Survey Data. <br>
 
@@ -185,13 +185,13 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     [![Cloud Adventure](../09-analytics-with-ai/images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
-## Summary
+### Summary
 
 You discovered how effortlessly Fusion Analytics enables the creation of content and analysis of data. By integrating diverse data sources, you were able to delve deeper from summary information to detailed analysis, uncovering root causes. You then shared your discoveries with a broader audience, making the insights accessible and impactful.
 
 **You have successfully completed the Activity!**
 
-## Learn More
+### Learn More
 
 * [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/24r3/index.html)
 * [Oracle Documentation](http://docs.oracle.com)
