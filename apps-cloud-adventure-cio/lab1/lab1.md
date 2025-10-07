@@ -1,7 +1,8 @@
+### 
 
 ## Path 1: Grant AI Access
 
-## **Assign AI Privileges**
+### **Assign AI Privileges**
 
 ### **Introduction**
 
@@ -204,7 +205,7 @@
 
 
 ## Path 2: Request Access with Risk Management
-## **Request Access with Risk Management**
+### **Request Access with Risk Management**
 
 ### **Introduction**
 
