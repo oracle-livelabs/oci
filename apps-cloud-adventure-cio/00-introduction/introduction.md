@@ -19,7 +19,7 @@ This Activity Guide will lead you along the way through a set of Adventure Labs,
 
 Let's create your team name for your cloud adventure!
 
-[![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
+[![Cloud Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
     
 ## Acknowledgements
 * **Author** - Sajid Saleem, Master Principal Sales Consultant, Advanced Technology Services

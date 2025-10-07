@@ -173,8 +173,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 36. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![Cloud Adventure](../05b-agent-team-hcm/images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
-
+    [![Cloud Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ### Summary
 
