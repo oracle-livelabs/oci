@@ -48,7 +48,7 @@ In this activity you will embed your AI Agent Team in the application for use by
      > (1) Click the ![plus Add](../06b-embed-agent-scm/images/plusadd.jpg) button under the **Tasks** section.  This will pop out the New Task panel from the right. <br><br>
 
      > (2) Enter the fields as described below:
-     * Task Name: **Maintenance Guided Journey** <br>
+     * Task Name: **Maintenance Guided Journey Task** <br>
      * Task Description: **Maintenance Guided Journey Task** <br>
      * Add Instructions: **Enables Maintenance Agent Team in Application UI**<br>
      * Task Type:  **Agent** from the dropdown <br>
@@ -67,13 +67,13 @@ In this activity you will embed your AI Agent Team in the application for use by
 
      ![activate the journey and go home](../06b-embed-agent-scm/images/scmimage006.jpg)
 
-7. Now, you'll go to the screen where you will embed the AI Agent Team.
+7. Now, you'll go to the screen where you will embed the AI Agent Team using the Guided Journey we created.
 
     > (1) Enter **My Maintenance Work** in the search field and select **My Maintenance Work** from the resulting dropdown.
 
     ![search for my maintenance work](../06b-embed-agent-scm/images/scmimage007.jpg)
 
-8. You'll use Visual Builder to Edit the Page and enable the Guided Journey.
+8. You'll use Visual Builder to configure the page with the Guided Journey.
 
     >  (1)  Confirm that **M001 - Seattle Maintenance** is the organization selected in the My Maintenance Work dropdown at the top of the screen.  If not, select **M001 - Seattle Maintenance** from the dropdown.<br>
     >  (2)  Click the **logged in user icon** icon next to the bell icon in the top right corner and then select **Edit Page in Visual Builder Studio** from the resulting dropdown.<br>
@@ -90,7 +90,7 @@ In this activity you will embed your AI Agent Team in the application for use by
 
     >  (1) Enter **CIOXX\_GUIDED\_JOURNEY** in the **journeycode** field on the right **Page Properties** panel.<br>
 
-    >  (2) Click the **Preview** icon ![Preview Button](../06b-embed-agent-scm/images/preview.png) on the toolbar on the top right of the page.  This will launch and new tab showing your newly configured screen in a full-functioning preview mode.<br>
+    >  (2) Click the **Preview** icon ![Preview Button](../06b-embed-agent-scm/images/preview.png) on the toolbar on the top right of the page.  This will launch a new tab showing your newly configured screen in a full-functioning preview mode.<br>
 
     ![Configure Journey Property and Preview](../06b-embed-agent-scm/images/scmimage010.jpg)
 
@@ -134,7 +134,7 @@ In this activity you will embed your AI Agent Team in the application for use by
 
 ## Summary
 
-As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they’re not permissioned to see.
+As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they’re not permitted to see.
 
 AI Agent Studio empowers enterprises to configure and build AI agents that extend their workforce and help achieve new levels of productivity. It allows you to harness the full potential of AI agents and transform the way work gets done in your organization.
 AI Agent Studio is a design-time environment that provides a set of tools to create, customize, validate, and deploy GenAI features and AI agents to meet the specific needs of the organization. It is the same unified environment Oracle uses to internally build agents, made available now to customers and partners to customize and extend agents from Oracle-provided preconfigured templates or to create new agents and multi-agent workflows.
@@ -151,7 +151,7 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 * [AI for Fusion Applications](https://www.oracle.com/applications/fusion-ai/)
 * [Oracle Documentation](http://docs.oracle.com)
 
-### Acknowledgements
+## Acknowledgements
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist, Sajid Saleem, Master Principal SaaS Cloud Technologist, Charlie Moff, Distinguished SaaS Cloud Technologist, and the rest of the Cloud Adventure Team
 * **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
