@@ -82,7 +82,7 @@ IMPORTANT GUIDELINES
 6. You’ve defined your Agent, so it’s time to add a tool.
 
      > (1) Click the ![Agent Icon](images/toolhammericon.jpg) <br>
-     > (2) Enter **F1** in the Ask Oracle field and press the **<enter>** key or select **F1** from the resulting dropdown.<br>
+     > (2) Enter **F1** in the Ask Oracle field and press the **Enter** key or select **F1** from the resulting dropdown.<br>
      > (3) Click the ![Agent Image](../05a-rag-agent-hcm/images/plusicon.jpg) icon next to the **F1 External Vehicle Tool**.<br>
      > (4) You may need to click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon a second time.
 
@@ -100,7 +100,7 @@ IMPORTANT GUIDELINES
 
     ![Create Agent](..//06a-external-agent-scm/images/scmaconfigimage008.jpg)
 
-9. You’ve have created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some Worker Agents.
+9. You have created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some Worker Agents.
 
     > 1. Click the ![Agent Teams](../05b-agent-team-hcm/images/agentteams.jpg) button/tab at the bottom of the page
 
@@ -174,7 +174,7 @@ IMPORTANT GUIDELINES
 
 18. Add the CIOXX External Vehicle Recall Agent
 
-    > (1) Delete your previous Ask Oracle filter and enter **CIOXX** in the Ask Oracle Filter, where XX is replaced with your user number, and press the <enter> key or select **CIOXX** from the resulting dropdown.<br>
+    > (1) Delete your previous Ask Oracle filter and enter **CIOXX** in the Ask Oracle Filter, where XX is replaced with your user number, and press the **Enter** key or select **CIOXX** from the resulting dropdown.<br>
     > (2) Click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon next to **CIOXX External Vehicle Recall Agent.**, where XX is replaced with your user number.<br>
     >  (3) You may need to click the ![Create Button](../06a-external-agent-scm/images/plusicon.jpg) icon a second time.<br>
 
@@ -198,7 +198,7 @@ IMPORTANT GUIDELINES
 
     ![agent dialogue 1](../06a-external-agent-scm/images/scmaconfigimage021.jpg) <br>
 
-22. The Agent will show some debug information as it interacts with the various Worker Agents. In this Debug mode, the Agent will also show you source and processing information (yellow boxes).  These will not be available to end-users once deployed.  Once the Agent responds, you're ready to move to the next step.
+22. The Agent will show detailed logs along with source and processing information (yellow boxes). This debug information will not be displayed to end-users once deployed. Once the Agent responds, you are ready to move to the next step.
 
     > 1. Click the ![x icon](../06a-external-agent-scm/images/icon14_x2.png) icon in the upper right of the screen to close the Agent interaction
 
@@ -218,7 +218,7 @@ IMPORTANT GUIDELINES
 
 ### Summary
 
-As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they’re not permissioned to see.
+As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they’re not permitted to see.
 
 AI Agent Studio empowers enterprises to configure and build AI agents that extend their workforce and help achieve new levels of productivity. It allows you to harness the full potential of AI agents and transform the way work gets done in your organization.
 AI Agent Studio is a design-time environment that provides a set of tools to create, customize, validate, and deploy GenAI features and AI agents to meet the specific needs of the organization. It is the same unified environment Oracle uses to internally build agents, made available now to customers and partners to customize and extend agents from Oracle-provided preconfigured templates or to create new agents and multi-agent workflows.
