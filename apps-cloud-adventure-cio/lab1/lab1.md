@@ -376,10 +376,6 @@ Security Console is used to quickly manage user access to the entire Fusion appl
 * [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/24b/secure.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
-### Summary
-
-Security Console is used to quickly manage user access to the entire Fusion applications suite.
-
 **You have successfully completed the Activity!**
 
 
