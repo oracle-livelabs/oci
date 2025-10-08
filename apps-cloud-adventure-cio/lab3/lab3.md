@@ -2,7 +2,7 @@
 
 <!-- rem ## Path 1: Create AI - Benefits Advisor Agent -->
 
-## Create Policy Advisor Tool and Agent (RAG) using AI Agent Studio
+## Path 1: Create Policy Advisor Tool and Agent (RAG) using AI Agent Studio
 
 ### Introduction
 
@@ -145,7 +145,7 @@ IMPORTANT GUIDELINES
 
 <!-- rem ## Path 2: Create AI - External Recall Agent -->
 
-## Create an External Agent and Assemble a Team
+## Path 2: Create an External Agent and Assemble a Team
 
 ### Introduction
 

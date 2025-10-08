@@ -2,7 +2,7 @@
 
 <!-- rem ## Path 1: Analytics -->
 
-## **ERP & HCM: Unify finance and workforce-related data to understand changing workforce dynamics and gain comprehensive insights**
+## **Path 1: ERP & HCM: Unify finance and workforce-related data to understand changing workforce dynamics and gain comprehensive insights**
 
 ### **Introduction**
 
@@ -156,7 +156,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 <!-- rem ## Path 2: Analytics with AI -->
 
-## **Use AI to derive better business insight**
+## **Path 2: Use AI to derive better business insight**
 
 ### **Introduction**
 

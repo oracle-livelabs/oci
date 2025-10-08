@@ -1,7 +1,7 @@
 # Configure & Extend
 
 <!-- rem ## Path 1: Configure -->
-## **Configure the Change Salary Experience**
+## **Path 1: Configure the Change Salary Experience**
 
 ### **Introduction**
 
@@ -233,7 +233,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 <!-- rem ## Path 2: Extend -->
 
-## **Extend with new Supplier Screen**
+## **Path 2: Extend with new Supplier Screen**
 
 ### **Introduction**
 

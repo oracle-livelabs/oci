@@ -2,7 +2,7 @@
 
 <!-- rem ## Path 1: Create AI - Assemble Benefits Agent Team -->
 
-## **Assemble and Test an AI Agent Team using AI Agent Studio**
+## **Path 1: Assemble and Test an AI Agent Team using AI Agent Studio**
 
 ### **Introduction**
 
@@ -179,7 +179,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 <!-- rem ## Path 2: Enable AI - Embed Maintenance Agent -->
 
-## **Create a Guided Journey and Embed your AI Agent Team**
+## **Path 2: Create a Guided Journey and Embed your AI Agent Team**
 
 ### **Introduction**
 
