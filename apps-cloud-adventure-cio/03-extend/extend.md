@@ -8,7 +8,7 @@ Oracle Cloud Applications include an embedded tool called Visual Builder.  Visua
 
 ### **Objectives**
 
-In this lab, you will use Visual Builder to create additional screens
+In this lab, you will use Visual Builder to create an application screen.
 
 Estimated Time: 15 minutes
 
@@ -265,7 +265,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 36. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
 
-    [![Cloud Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![AI Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ### Summary
 
@@ -280,7 +280,7 @@ So, check your with you team, double-check your racing harness and get ready for
 
 - [Extending Oracle Cloud Applications with Visual Builder Studio](https://docs.oracle.com/en/cloud/paas/visual-builder/visualbuilder-building-appui)
 - [Overview of Guided Journeys](https://docs.oracle.com/en/cloud/saas/human-resources/24c/faijh/overview-of-guided-journeys.html)
-- [Configure User Defined Content Task Type for a Journey](https://docs.oracle.com/en/cloud/saas/human-resources/24c/faijh/configure-user-defined-content-task-type-for-a-journey.html)
+- [Configure User Defined Content Task Type for a Journey](https://docs.oracle.com/en/cloud/saas/human-resources/25d/faijh/configure-user-defined-content-task-type-for-a-journey.html)
 - [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements

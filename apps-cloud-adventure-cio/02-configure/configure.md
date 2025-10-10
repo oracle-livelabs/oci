@@ -214,7 +214,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 25.  Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible and Action Reason is now Visible. Now you will test the validation for the Adjustment Amount Percentage.
 
-    > (1) Enter an Adjustment Percentage that is greater than 15% and either **tab** out of the field or press the **Enter** key on the keybord.
+    > (1) Enter an Adjustment Percentage that is greater than 15% and either **tab** out of the field or press the **Enter** key on the keyboard.
 
     ![Change Salary Screen 2](../02-configure/images/hcmconfigimage025.jpg)
 
@@ -228,7 +228,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 27. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![Cloud Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![AI Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ### Summary
 
@@ -241,8 +241,8 @@ So, check your with you team, double-check your racing harness and get ready for
 ### Learn More
 
 
-* [Overview of Redwood Application Extension](https://docs.oracle.com/en/cloud/saas/human-resources/24d/fauvb/overview-of-redwood-application-extensions.html)
-* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/24d/oaext/overview-of-using-visual-builder-studio.html#s20072861)
+* [Overview of Redwood Application Extension](https://docs.oracle.com/en/cloud/saas/human-resources/25d/fauvb/overview-of-redwood-application-extensions.html)
+* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/25d/oaext/overview-of-using-visual-builder-studio.html#s20072861)
 * [Oracle Documentation](http://docs.oracle.com)
 
 
