@@ -1,6 +1,6 @@
 # Analytics
 
-## **Use AI to derive better business insight**
+## **UAnalytics AI for sentiment analysis**
 
 ### **Introduction**
 
