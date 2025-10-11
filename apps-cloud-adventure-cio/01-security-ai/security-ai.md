@@ -221,5 +221,5 @@ Security Console is used to quickly manage user access to the entire Fusion appl
 
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist, Advanced Technology Services
-* **Contributors** -
+* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
 * **Last Updated By/Date** - Nate Weinsaft, October 2025

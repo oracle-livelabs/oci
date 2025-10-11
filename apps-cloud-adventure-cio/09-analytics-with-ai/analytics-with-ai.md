@@ -198,6 +198,6 @@ You discovered how effortlessly Fusion Analytics enables the creation of content
 
 ## Acknowledgements
 
-* **Author** - Sohel Jeelani, Distinguished Analytics Solution Engineer, Advanced Technology Services, Xavier Ramirez, Senior Analytics Solution Engineer, Advanced Technology Services, Nate Weinsaft, Master Principal Solution Engineer, Advanced Technology Services
+* **Author** - Xavier Ramirez, Senior Analytics Solution Engineer, Advanced Technology Services, Nate Weinsaft, Master Principal Solution Engineer, Advanced Technology Services, Sohel Jeelani, Distinguished Analytics Solution Engineer, Advanced Technology Services
 * **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
 * **Last Updated By/Date** - Nate Weinsaft, October 2025

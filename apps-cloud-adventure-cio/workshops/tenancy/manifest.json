@@ -55,10 +55,6 @@
             "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
         },
         {
-            "title": "Consolidated Lab 2 Example: Configure & Extend",
-            "filename": "../../lab2/lab2.md"
-        },
-        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"

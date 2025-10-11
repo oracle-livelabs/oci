@@ -288,6 +288,6 @@ You discovered how effortlessly Fusion Analytics enables the creation of content
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - Sohel Jeelani, Analytics Solution Engineer, Advanced Technology Services
-* **Contributors** -
+* **Author** - Sohel Jeelani, Analytics Solution Engineer, Advanced Technology Services, Nate Weinsaft, Master Principal Solution Engineer, Advanced Technology Services
+* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
 * **Last Updated By/Date** - Xavier Ramirez, August 2025

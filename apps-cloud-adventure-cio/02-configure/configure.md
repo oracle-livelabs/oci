@@ -250,8 +250,8 @@ So, check your with you team, double-check your racing harness and get ready for
 
 
 ## Acknowledgements
-* **Author** - Charlie Moff, Distinguished Cloud Technologist, Advanced Technology Services; Casey Doody, Cloud Technologist , Advanced Technology Services
-* **Contributors** -  Sajid Saleem, Master Principal Cloud Technologist, Advanced Technology Services
+* **Author** - Charlie Moff, Distinguished Cloud Technologist, Advanced Technology Services; Casey Doody, Cloud Technologist , Advanced Technology Services, Sajid Saleem, Master Principal Cloud Technologist, Advanced Technology Services
+* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
 * **Last Updated By/Date** - Casey Doody, October 2025
 
 
