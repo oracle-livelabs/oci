@@ -106,28 +106,40 @@ In this activity you will embed your AI Agent Team in the application for use by
 
     ![start debug](../06b-embed-agent-scm/images/scmimage012.jpg) <br>
 
-13. You can check for recalls or any existing maintenance work orders.
+13. You can check on warranty information.
 
-    > 1. Type **Are there any outstanding recalls** and press enter or click the up arrow ![checkered flag](../06b-embed-agent-scm/images/uparrow.jpg). 
+    > 1. Type **Give me information on warranty** and press enter or click the up arrow ![checkered flag](../06b-embed-agent-scm/images/uparrow.jpg). 
 
     ![start debug](../06b-embed-agent-scm/images/scmimage013.jpg) <br>
 
-14. If there are any recalls, you can create a Maintenance Work order to take care of it.  Fortunately, the AI Agent is going to help you!
+14. You can check for recalls or any existing maintenance work orders.
 
-    > 1. Type **Yes, please create a maintenance work order for this recall** and press enter or click the up arrow ![checkered flag](../06b-embed-agent-scm/images/uparrow.jpg). 
+    > 1. Type **Are there any outstanding recalls** and press enter or click the up arrow ![checkered flag](../06b-embed-agent-scm/images/uparrow.jpg). 
 
     ![start debug](../06b-embed-agent-scm/images/scmimage014.jpg) <br>
 
-15. The agent has created your Work Order, so you can query that to verify.
+15. If there are any recalls, you can create a Maintenance Work order to take care of it.  Fortunately, the AI Agent is going to help you!
 
-    > 1. Click the **x** in the upper right.
+    > 1. Type **Please create a maintenance work order for this recall** and press enter or click the up arrow ![checkered flag](../06b-embed-agent-scm/images/uparrow.jpg). 
 
     ![start debug](../06b-embed-agent-scm/images/scmimage015.jpg) <br>
 
-16. Congratulations. ![checkered flag](../06b-embed-agent-scm/images/checkeredflag.jpg)  You've finished the creation and deployment of the AI Agent Team, making it easy for your users to leverage the power of Oracle AI.
+16. The Agent may identify an existing Worker and ask you to confirm that you'd like to create a new work order.
+
+    > 1. Type **Please create a new work order** and press enter or click the up arrow ![checkered flag](../06b-embed-agent-scm/images/uparrow.jpg). 
+
+    ![start debug](../06b-embed-agent-scm/images/scmimage016.jpg) <br>
+
+17. The agent has created your Work Order.  You can end the Adventure here, but if you'd like to verify, you can close the Agent and query your new Work Order.  We won't provide instructions, but believe you can find your new work order by leveraging the information you've gained during this Adventure.
+
+    > 1. Click the **x** in the upper right.
+
+    ![start debug](../06b-embed-agent-scm/images/scmimage017.jpg) <br>
+
+18. Congratulations. ![checkered flag](../06b-embed-agent-scm/images/checkeredflag.jpg)  You've finished the creation and deployment of the AI Agent Team, making it easy for your users to leverage the power of Oracle AI.
 
 
-17. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+19. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![Cloud Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
