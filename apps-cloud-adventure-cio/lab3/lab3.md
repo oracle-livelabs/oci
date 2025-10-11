@@ -350,16 +350,11 @@ IMPORTANT GUIDELINES
 
     ![agent dialogue 2](../06a-external-agent-scm/images/scmaconfigimage022.jpg) <br>
 
-23. Your Agent Team is ready, so let's Publish it.  In the next Lab, we'll use this published Team and make it available to end users.
+23. Your Agent Team is ready, so let's Publish it.  In the next Adventure, you'll use this published Agent Team and make it available to end users.
 
     > (1) Click the Publish button on the top right.
 
     ![Add Tools Complete](../06a-external-agent-scm/images/scmaconfigimage023.jpg)
-
-
-24. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ### Learn More
 

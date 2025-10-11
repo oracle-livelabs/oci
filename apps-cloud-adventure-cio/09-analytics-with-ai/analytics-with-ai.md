@@ -1,6 +1,6 @@
 # Analytics
 
-## **UAnalytics AI for sentiment analysis**
+## **Analytics AI for sentiment analysis**
 
 ### **Introduction**
 

@@ -204,16 +204,11 @@ IMPORTANT GUIDELINES
 
     ![agent dialogue 2](../06a-external-agent-scm/images/scmaconfigimage022.jpg) <br>
 
-23. Your Agent Team is ready, so let's Publish it.  In the next Lab, we'll use this published Team and make it available to end users.
+23. Your Agent Team is ready, so let's Publish it.  In the next Adventure, you'll use this published Agent Team and make it available to end users.
 
     > (1) Click the Publish button on the top right.
 
     ![Add Tools Complete](../06a-external-agent-scm/images/scmaconfigimage023.jpg)
-
-
-24. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 
 ### Summary
@@ -221,7 +216,7 @@ IMPORTANT GUIDELINES
 As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they’re not permitted to see.
 
 AI Agent Studio empowers enterprises to configure and build AI agents that extend their workforce and help achieve new levels of productivity. It allows you to harness the full potential of AI agents and transform the way work gets done in your organization.
-AI Agent Studio is a design-time environment that provides a set of tools to create, customize, validate, and deploy GenAI features and AI agents to meet the specific needs of the organization. It is the same unified environment Oracle uses to internally build agents, made available now to customers and partners to customize and extend agents from Oracle-provided preconfigured templates or to create new agents and multi-agent workflows.
+AI Agent Studio is a design-time environment that provides a set of tools to create, customize, validate, and deploy GenAI features and AI agents to meet the specific needs of the organization. It is the same unified environment Oracle uses to internally build agents, made available now to customers and partners to customize and extend agents from Oracle-provided pre-configured templates or to create new agents and multi-agent workflows.
 
 Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
 

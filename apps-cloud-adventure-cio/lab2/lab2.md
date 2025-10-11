@@ -215,7 +215,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 25.  Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible and Action Reason is now Visible. Now you will test the validation for the Adjustment Amount Percentage.
 
-    > (1) Enter an Adjustment Percentage that is greater than 15% and either **tab** out of the field or press the **Enter** key on the keybord.
+    > (1) Enter an Adjustment Percentage that is greater than 15% and either **tab** out of the field or press the **Enter** key on the keyboard.
 
     ![Change Salary Screen 2](../02-configure/images/hcmconfigimage025.jpg)
 
@@ -229,7 +229,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 27. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![Checkpoint](../02-configure/images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![AI Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 <!-- rem ## Path 2: Extend -->
 
@@ -241,7 +241,7 @@ Oracle Cloud Applications include an embedded tool called Visual Builder.  Visua
 
 ### **Objectives**
 
-In this lab, you will use Visual Builder to create additional screens
+In this lab, you will use Visual Builder to create an application screen.
 
 Estimated Time: 15 minutes
 
@@ -498,7 +498,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 36. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
 
-    [![Cloud Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![AI Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ### Summary
 

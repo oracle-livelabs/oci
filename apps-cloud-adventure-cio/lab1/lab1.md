@@ -2,11 +2,10 @@
 
 ## Path 1: Grant AI Access
 
-### **Assign AI Privileges**
-
 ### **Introduction**
 
-  Welcome to Oracle’s Cloud Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered in accounting and finance. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the CIO.
+  Welcome to Oracle’s AI Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
+
 
 ### **Objectives**
 
@@ -201,7 +200,7 @@
 
 28. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![Cloud Adventure](../01-security-ai/images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![AI Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 
 ## Path 2: Request Access with Risk Management
@@ -209,7 +208,7 @@
 
 ### **Introduction**
 
-Welcome to Oracle’s Cloud Adventure for Risk Management.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes that are typically encountered in accounting and finance. We hope you will enjoy today’s adventure exploring a complete and unified solution for the office of the CIO.
+Welcome to Oracle’s AI Adventure for Risk Management.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
 
 ### **Objectives**
 
@@ -363,7 +362,7 @@ Estimated Time: 15 minutes
 
 18. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-[![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![AI Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ### Summary
 

@@ -14,7 +14,7 @@ This activity guide helps business users to investigate and research data, ask r
 
 ### **Objectives**
 
-In this activity, you will Create analytics across different lines of business to derive better business insight
+In this activity, you will Create analytics to unify finance and workforce-related data to understand changing workforce dynamics and gain comprehensive insight.
 
 Estimated Time: 15 minutes
 
