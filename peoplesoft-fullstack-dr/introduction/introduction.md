@@ -19,7 +19,7 @@ Approximately 6 hrs
 - Create and Customize DR Switchover Plan in Phoenix (Standby) DRPG
 - Execute DR Switchover Pre-checks in Phoenix (Standby) DRPG
 - Execute DR Switchover Plan in Phoenix (Standby) DRPG
-- Verify the PeopleSoft applications accessibility from Phoenix (New Primary) region
+- Verify the PeopleSoft application accessibility from Phoenix (New Primary) region
 - Create and Customize DR Switchover (Rollback) Plan in Ashburn (Standby) DRPG
 - Execute DR Switchover (Rollback) Pre-checks in Ashburn (Standby) DRPG
 - Execute DR Switchover (Rollback) Plan in Ashburn (Standby) DRPG
