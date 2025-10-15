@@ -1,6 +1,6 @@
 
 # **Protect PeopleSoft Application using Oracle Full Stack Disaster Recovery**
-vinay
+
 ## About the Workshop
 
 In this workshop, we will see how easily Full Stack Disaster Recovery will help to orchestrate DR Switchover and Failover operations for a PeopleSoft Application deployed in Oracle Cloud Infrastructure (OCI) across two OCI regions.
