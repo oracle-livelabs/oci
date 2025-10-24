@@ -14,7 +14,23 @@ In this lab you will:
 - Load OCI Core Landing Zone files into OCI Resource Manager
 - Create a Resource Manager Stack
 
-## Task 1: Upload Landing Zone to Resource Manager
+## Task 1: Create an Enclosing Compartment
+
+1. From the console home page, navigate to _Identity & Security_ > _Compartments_.
+
+    ![Navigation to compartments menu](./images/compartments-menu.png)
+
+2. Click on the __Create Compartment__ button.
+
+    ![Create compartment button](./images/create-compartment-button.png)
+
+3. Select a name for the enclosing compartment as well as an appropriate parent compartment.
+
+    ![Create compartment menu](./images/create-compartment-menu.png)
+
+4. Click the __Create Compartment__ button.
+
+## Task 2: Upload Landing Zone to Resource Manager
 
 1. Navigate to the OCI Core Landing Zone Repository on GitHub [https://github.com/oci-landing-zones/terraform-oci-core-landingzone/](https://github.com/oci-landing-zones/terraform-oci-core-landingzone/blob/main/README.md)
 
@@ -34,4 +50,4 @@ In this lab you will:
 
 - __Author__ - KC Flynn
 - __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
-- __Last Updated By/Date__ - KC Flynn February 2025
+- __Last Updated By/Date__ - KC Flynn September 2025
