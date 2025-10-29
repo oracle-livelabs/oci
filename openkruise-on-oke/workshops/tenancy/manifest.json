@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Deploy openkruise on OKE",
+    "workshoptitle": "Deploy OpenKruise on Oracle Kubernetes Engine (OKE)",
     "help": "livelabs-help-aiservices_us@oracle.com",
     "tutorials": [
       {
