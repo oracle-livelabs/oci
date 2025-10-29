@@ -22,7 +22,7 @@
             "filename": "../../fluxcd-setup/bootstrap.md"
         },
         {
-            "title": "Lab 3: Deployment and update of nginx app using FluxCD",
+            "title": "Lab 3: Deployment of nginx app with FluxCD",
             "filename": "../../fluxcd-deployment/deployment.md"
         },
         {

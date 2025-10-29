@@ -1,4 +1,4 @@
-# Deployment and Update of Nginx App
+# Deployment of Nginx App
 
 ## Introduction
 
@@ -20,12 +20,14 @@ This lab assumes you have:
 1. First, git clone the repo that was bootstraped with OKE cluster in previous lab.
 
 ```
+<copy>
 git clone git@github.com:your-username/fluxcd.git
 ```
 2. Create a folder apps/nginx and create the following manifests files in there to deploy an nginx app with authentication with password:
 
 deployment.yaml
 ```
+<copy>
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -68,6 +70,7 @@ spec:
 
 service.yaml
 ```
+<copy>
 apiVersion: v1
 kind: Service
 metadata:
@@ -85,6 +88,7 @@ spec:
 
 configmap.yaml
 ```
+<copy>
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -101,6 +105,7 @@ data:
 ```
 configmap-nginx-conf.yaml
 ```
+<copy>
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -122,6 +127,7 @@ data:
 ```
 secret-basic-auth.yaml
 ```
+<copy>
 apiVersion: v1
 kind: Secret
 metadata:
@@ -136,6 +142,7 @@ stringData:
 2. Create in clusters/oke folder that was originally created by Flux the following file:
 nginx.yaml
 ```
+<copy>
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
@@ -148,7 +155,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-
 ```
 
 So this will let Flux know that this needs to be deployed in OKE.

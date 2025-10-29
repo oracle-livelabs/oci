@@ -33,6 +33,7 @@ Go at https://github.com/settings/tokens and create a Personal access Token Clas
 
 2. Then run the following commands with your credentials in your local environment:
 ```
+<copy>
 export GITHUB_TOKEN=your-token
 export GITHUB_USER=your-username
 ```
@@ -42,15 +43,18 @@ export GITHUB_USER=your-username
 1. First, install flux CLI in your local environment:
 For homebrew:
 ```
+<copy>
 brew install fluxcd/tap/flux
 ```
 For bash:
 ```
+<copy>
 curl -s https://fluxcd.io/install.sh | sudo bash
 ```
 For other 
 2. Run these command:
 ```
+<copy>
 flux bootstrap github \                                     
   --token-auth \
   --owner=your-username \
