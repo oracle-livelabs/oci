@@ -1,0 +1,36 @@
+{
+    "workshoptitle": "Deploy OpenKruise on Oracle Kubernetes Engine (OKE)",
+    "help": "livelabs-help-aiservices_us@oracle.com",
+    "tutorials": [
+      {
+        "title": "Introduction",
+        "description": "The Introduction is always second for LiveLabs. The title and contents menu title match for the Introduction.",
+        "filename": "../../introduction/introduction.md"
+      },
+      {
+        "title": "Getting Started",
+        "description": "Get a Free Trial",
+        "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+      },
+      {
+        "title": "Lab 1: Provision of resources",
+        "description": "Provision of resources",
+        "filename": "../../provision/provision.md"
+      },
+      {
+        "title": "Lab 2: Explore OpenKruise use cases",
+        "description": "Deploy OpenKruise and how to use it",
+        "filename": "../../use-cases/use-cases.md"
+      },
+      {
+        "title": "Lab 3: Cleanup",
+        "description": "Cleanup the environment",
+        "filename": "../../cleanup/cleanup.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+      }
+    ]
+  }
