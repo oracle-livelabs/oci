@@ -47,6 +47,14 @@
             "filename": "../../06b-embed-agent-scm/embed-agent-scm.md"
         },
         {
+            "title": "Lab 7a: Create AI (Procurement Agent)",
+            "filename": "../../07a-rag-agent-prc/rag-agent-prc.md"
+        },
+        {
+            "title": "Lab 7b: Embed AI (Procurement Agent)",
+            "filename": "../../07b-agent-team-prc/agent-team-prc.md"
+        },
+        {
             "title": "Lab 9: Analytics",
             "filename": "../../09-analytics/analytics.md"
         },
