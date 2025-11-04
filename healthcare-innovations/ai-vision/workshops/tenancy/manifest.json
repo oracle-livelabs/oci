@@ -81,21 +81,17 @@
     {
       "title": "Lab 16: Oracle Analytics Cloud for Clinical Data Analysis (Optional)",
       "filename": "../../analytics-reports/analytics-reports.md"
-    },
+    }, 
     {
-      "title": "Lab 17: Diagnose Cardiovascular disease with ECG and OCI Anomaly Detection (Optional)",
-      "filename": "../../ai-anomaly-detection/ai-anomaly-detection.md"
-    },
-    {
-      "title": "Lab 18: Get and Update Patient Details - OIC (Optional)",
+      "title": "Lab 17: Get and Update Patient Details - OIC (Optional)",
       "filename": "../../ai-oic-getpatientdata/getpatientdata.md"
     }, 
     {
-      "title": "Lab 19: Create Patient Admission Process (Optional)",
+      "title": "Lab 18: Create Patient Admission Process (Optional)",
       "filename": "../../ai-opa/ai-opa.md"
     },
     {
-      "title": "Lab 20: Setup OCI Email Delivery Service (Optional)",
+      "title": "Lab 19: Setup OCI Email Delivery Service (Optional)",
       "filename": "../../oci-email/oci-email.md"
     },
     {
