@@ -1,4 +1,4 @@
-# Create AI
+# Create Analytics
 
 <!-- rem ## Path 1: Analytics -->
 
@@ -152,7 +152,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 17. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
 
-    [![Cloud Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 <!-- rem ## Path 2: Analytics with AI -->
 
@@ -339,7 +339,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 23. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
 
-    [![Cloud Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ### Summary
 
@@ -354,6 +354,6 @@ You discovered how effortlessly Fusion Analytics enables the creation of content
 
 ## Acknowledgements
 
-* **Author** - Sohel Jeelani, Distinguished Analytics Solution Engineer, Advanced Technology Services, Xavier Ramirez, Senior Analytics Solution Engineer, Advanced Technology Services, Nate Weinsaft, Master Principal Solution Engineer, Advanced Technology Services
+* **Author** - Sohel Jeelani, Distinguished Analytics Solution Engineer; Xavier Ramirez, Senior Analytics Solution Engineer; Nate Weinsaft, Master Principal Solution Engineer
 * **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Nate Weinsaft, October 2025
+* **Last Updated By/Date** - Sajid Saleem, November 2025

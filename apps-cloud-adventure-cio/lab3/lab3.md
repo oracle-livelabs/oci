@@ -11,7 +11,7 @@ AI Agent Studio for Fusion Applications is a comprehensive platform for creating
 ### **Objectives**
 
 In this activity you will use Oracle Fusion AI Agent Studio to
-* Create a Benefits Advisor Document Tool that references you policy documents.
+* Create a Benefits Advisor Document Tool that references your benefits policy documents.
 * Create a Benefits Advisor Agent for the above Tool.
 
 ### **Begin Exercise**
@@ -36,7 +36,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 4. Tool Creation
 
-    > (1) Click the ![add tool](images/plusadd.jpg) button to create a new tool
+    > (1) Click the ![add tool](../05a-rag-agent-hcm/images/plusadd.jpg) button to create a new tool
 
     ![Create Tool](../05a-rag-agent-hcm/images/raghcmimage004.jpg)
 
@@ -91,10 +91,10 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     * Product: Select  **Benefits** from the dropdown<br>
     * Maximum Interactions: **10** <br>
     * Description: **Benefits Advisor Agent** <br>
-    * Prompt: ![Alert Flat](images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - CA Benefits Advisor Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below. <br>
+    * Prompt: ![Alert Flat](../05a-rag-agent-hcm/images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - CA Benefits Advisor Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below. <br>
 
     > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
-    > (3) Click the Create Button ![Create Button](images/createb.jpg) <br>
+    > (3) Click the Create Button ![Create Button](../05a-rag-agent-hcm/images/createb.jpg) <br>
 
     ![Create Agent](../05a-rag-agent-hcm/images/raghcmimage009.jpg)
 
@@ -183,7 +183,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 4. Add an Agent.
 
-    > 1. Click the ![add tool](images/plusadd.jpg) button to create a new Agent
+    > 1. Click the ![add tool](../05a-rag-agent-hcm/images/plusadd.jpg) button to create a new Agent
 
     ![Create Agent Team](../06a-external-agent-scm/images/scmaconfigimage004.jpg)
 
@@ -195,10 +195,10 @@ In this activity you will use Oracle Fusion AI Agent Studio to
      * Product: Select  **Maintenance** from the dropdown <br>
      * Maximum Interactions: **10** <br>
      * Description: **External Vehicle Recall Agent** <br>
-     * Prompt: ![Alert Flat](images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - External Vehicle Recall Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below.  <br>
+     * Prompt: ![Alert Flat](../05a-rag-agent-hcm/images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - External Vehicle Recall Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below.  <br>
 
     > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
-    > (3) Click the Create Button ![Create Button](images/createb.jpg) <br>
+    > (3) Click the Create Button ![Create Button](../05a-rag-agent-hcm/images/createb.jpg) <br>
 
      ![Create Tool](../06a-external-agent-scm/images/scmaconfigimage005.jpg)
 
@@ -227,7 +227,7 @@ IMPORTANT GUIDELINES
 
 6. You’ve defined your Agent, so it’s time to add a tool.
 
-     > (1) Click the ![Agent Icon](images/toolhammericon.jpg) <br>
+     > (1) Click the ![Agent Icon](../05a-rag-agent-hcm/images/toolhammericon.jpg) <br>
      > (2) Enter **F1** in the Ask Oracle field and press the **Enter** key or select **F1** from the resulting dropdown.<br>
      > (3) Click the ![Agent Image](../05a-rag-agent-hcm/images/plusicon.jpg) icon next to the **F1 External Vehicle Tool**.<br>
      > (4) You may need to click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon a second time.
@@ -287,7 +287,7 @@ IMPORTANT GUIDELINES
     * Maximum Interactions: **10** <br>
     * Description: **Asset Maintenance Supervisor Agent** <br>
 
-     > (2) Click the **Create** button ![Create Button](images/createb.jpg) on the bottom right.
+     > (2) Click the **Create** button ![Create Button](../05a-rag-agent-hcm/images/createb.jpg) on the bottom right.
 
        ![Create Agent](../06a-external-agent-scm/images/scmaconfigimage013.jpg)
 
@@ -365,6 +365,6 @@ IMPORTANT GUIDELINES
 
 ## Acknowledgements
 
-* **Author** - Stephen Chung, Principal SaaS Cloud Technologist, Sajid Saleem, Master Principal SaaS Cloud Technologist, Charlie Moff, Distinguished SaaS Cloud Technologist, and the rest of the Cloud Adventure Team
+* **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff, October 2025
+* **Last Updated By/Date** - Sajid Saleem, November 2025

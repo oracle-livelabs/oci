@@ -1,6 +1,6 @@
 # Enable AI
 
-<!-- rem ## Path 1: Create AI - Assemble Benefits Agent Team -->
+<!-- rem ## Path 1: Enable AI - Assemble Benefits Agent Team -->
 
 ## **Path 1: Assemble and Test an AI Agent Team using AI Agent Studio**
 
@@ -51,7 +51,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
      * Description: **Agent Team for Benefits and FMLA** <br>
 
      > (2) Click the **Create** button ![Create Button](../05b-agent-team-hcm/images/createb.jpg) on the bottom right.
-     
+
      ![Create Tool](../05b-agent-team-hcm/images/benimage005.jpg)
 
 
@@ -60,7 +60,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
      > (1) Click the **Agents** icon ![Agent Icon](../05b-agent-team-hcm/images/agenticon.jpg) on the top of the left icon tool bar. <br>
 
      > (2) Click the **+** icon ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) next to **New Supervisor Agent**.
-     
+
      ![Create Agent](../05b-agent-team-hcm/images/benimage006.jpg)
 
 7. Define Supervisor Agent Details.
@@ -175,7 +175,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 36. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![Cloud Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![AI Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 <!-- rem ## Path 2: Enable AI - Embed Maintenance Agent -->
 
@@ -265,7 +265,7 @@ In this activity you will embed your AI Agent Team in the application for use by
 
     ![select project](../06b-embed-agent-scm/images/scmimage009.jpg) <br>
 
-10. You can now configure various aspects of the My Maintenance Work screen.  The Journey is simple as it's the first page property on the list. 
+10. You can now configure various aspects of the My Maintenance Work screen.  The Journey is simple as it's the first page property on the list.
 
     >  (1) Enter **CIOXX\_GUIDED\_JOURNEY** in the **journeycode** field on the right **Page Properties** panel.<br>
 
@@ -320,7 +320,7 @@ In this activity you will embed your AI Agent Team in the application for use by
 
 19. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![Cloud Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![AI Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ### Summary
 
@@ -344,6 +344,6 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 
 ## Acknowledgements
-* **Author** - Charlie Moff, Distinguished Cloud Technologist, Advanced Technology Services; Casey Doody, Cloud Technologist , Advanced Technology Services
-* **Contributors** -  Sajid Saleem, Master Principal Cloud Technologist, Advanced Technology Services
-* **Last Updated By/Date** - Casey Doody, August 2025
+* **Author** - Charlie Moff, Distinguished Cloud Technologist; Sajid Saleem, Master Principal Cloud Technologist; Casey Doody, Cloud Technologist
+* **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
+* **Last Updated By/Date** - Sajid Saleem, November 2025

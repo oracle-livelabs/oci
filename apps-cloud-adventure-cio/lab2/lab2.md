@@ -229,7 +229,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 27. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
-    [![AI Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![AI Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 <!-- rem ## Path 2: Extend -->
 
@@ -498,7 +498,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 36. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
 
-    [![AI Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![AI Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ### Summary
 
@@ -519,9 +519,6 @@ So, check your with you team, double-check your racing harness and get ready for
 
 
 ## Acknowledgements
-* **Author** - Charlie Moff, Distinguished Cloud Technologist, Advanced Technology Services; Casey Doody, Cloud Technologist , Advanced Technology Services
-* **Contributors** -  Sajid Saleem, Master Principal Cloud Technologist, Advanced Technology Services
-* **Last Updated By/Date** - Casey Doody, August 2025
-
-
-
+* **Author** - Charlie Moff, Distinguished Cloud Technologist; Casey Doody, Cloud Technologist
+* **Contributors** -  The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
+* **Last Updated By/Date** - Sajid Saleem, November 2025
