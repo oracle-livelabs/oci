@@ -20,7 +20,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 2. The first step is to navigate to AI Agent Studio.
 
-    > (1) Click on the **Tools** tab <br>
+    > (1) Click on the **Tools** tab <br><br>
     > (2) Select the **AI Agent Studio** tile
 
     ![Navigate to AI Agent Studio](../05a-rag-agent-hcm/images/raghcmimage002.jpg)
