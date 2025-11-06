@@ -1,6 +1,8 @@
 # Audit
 
-## Introduction
+## ERP & SCM: Use REST API to pull Fusion SaaS Application audit data for use in any external system
+
+### Introduction
 
 As you have seen in the previous Cloud Adventures, Oracle delivers a fine grained security model which allows companies to enforce tight controls over who has access to both application features and data. While these controls provide administrators with powerful tools, good corporate governance requires that application auditing is used to back up the security controls you implement.
 
@@ -22,7 +24,7 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-## ERP & SCM: Use REST API to pull Fusion SaaS Application audit data for use in any external system
+### Begin Exercise
 
 1. In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
 
@@ -133,7 +135,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
-## Summary
+### Summary
 
 As you have seen, the Oracle SaaS applications may be configured to capture who updates select fields, when the update was performed, the previous value and the updated value. Having this level of auditing serves a critical role in providing governance and controls over your enterprise applications. As an administrator, you will implement the controls your company chooses to enforce. The combination of fine grained applications security and application data audit provide the end to end controls you will need.
 
@@ -141,11 +143,13 @@ This Cloud Adventure also featured the importance of having open REST interfaces
 
 **You have successfully completed the Activity!**
 
-* [Oracle Supply Chain & Manufacturing - APIs & Schema](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/24b/api.html)
-* [Set Up Auditing for Oracle Fusion Applications](https://docs.oracle.com/en/cloud/saas/applications-common/24d/facia/set-up-auditing-for-oracle-fusion-applications.html)
-* [Oracle Documentation](http://docs.oracle.com)O
+### Learn More
+
+* [Oracle Supply Chain & Manufacturing - APIs & Schema](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/25d/api.html)
+* [Set Up Auditing for Oracle Fusion Applications](https://docs.oracle.com/en/cloud/saas/applications-common/25d/facia/set-up-auditing-for-oracle-fusion-applications.html)
+* [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - Jamil Orfali, Senior Cloud Technologist, Advanced Technology Services; Kris Holmgren, Senior Cloud Technologist, Advanced Technology Services.
-* **Contributors** -
-* **Last Updated By/Date** - Jamil Orfali, April 2025
+* **Author** - Jamil Orfali, Senior Cloud Technologist; Kris Holmgren, Senior Cloud Technologist
+* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
+* **Last Updated By/Date** - Sajid Saleem, November 2025

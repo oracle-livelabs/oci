@@ -1,6 +1,8 @@
 # Analytics
 
-## Introduction
+## ERP & HCM: Unify finance and workforce-related data to understand changing workforce dynamics and gain comprehensive insights
+
+### Introduction
 
 Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud native analytics applications for Oracle Cloud Applications that provides line-of-business users with ready-to-use insights to improve decision-making.
 
@@ -16,7 +18,7 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-## ERP & HCM: Unify finance and workforce-related data to understand changing workforce dynamics and gain comprehensive insights
+### Begin Exercise
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insights.
 
@@ -270,20 +272,19 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 15. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
 
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
-## Summary
+### Summary
 
 You discovered how effortlessly Fusion Analytics enables the creation of content and analysis of data. By integrating diverse data sources, you were able to delve deeper from summary information to detailed analysis, uncovering root causes. You then shared your discoveries with a broader audience, making the insights accessible and impactful.
 
 **You have successfully completed the Activity!**
 
-## Learn More
-
-* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/24r3/index.html)
+### Learn More
+* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/25r3/index.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - Sohel Jeelani, Analytics Solution Engineer, Advanced Technology Services
-* **Contributors** -
-* **Last Updated By/Date** - Sohel Jeelani, April 2025
+* **Author** - Sohel Jeelani, Distinguished Analytics Solution Engineer
+* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
+* **Last Updated By/Date** - Sajid Saleem, November 2025

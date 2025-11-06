@@ -1,6 +1,8 @@
 # Extend your SaaS Applications
 
-## Introduction
+## ERP & SCM: Create a simplified user interface using Redwood Design Patterns and Oracle Visual Builder
+
+### Introduction
 
 Oracle Cloud Applications include an embedded tool called Visual Builder.  Visual Builder is the same tool that Oracle uses to develop application screens and it's available for you to create additional screens.  These screens can leverage both Oracle Cloud Application data and, if necessary, data from external systems.
 
@@ -12,7 +14,7 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-## ERP & SCM: Create a simplified user interface using Redwood Design Patterns and Oracle Visual Builder
+### Begin Exercise
 
 1. In this lab, you will Use Visual Builder to build a new Supplier Screen.
 
@@ -265,7 +267,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
-## Summary
+### Summary
 
 The two tasks of this Extension adventure introduced you to a few of the capabilities that customers can leverage to extend Oracle Fusion Cloud applications.  These features allow you to fine tune your Oracle Fusion Cloud Applications for peak performance, business processes tailored to you requirements, and fast, efficient usage.
 
@@ -274,7 +276,7 @@ You learned how to extend the applications using Oracle Visual Builder Studio to
 You also learned how to leverage 3rd party Generative AI capabilities by leveraging external LLMs directly from the Guided Journey feature of Oracle Fusion Cloud Applications.
 So, check your with you team, double-check your racing harness and get ready for our next Adventure.
 
-## Learn More
+### Learn More
 
 - [Extending Oracle Cloud Applications with Visual Builder Studio](https://docs.oracle.com/en/cloud/paas/visual-builder/visualbuilder-building-appui)
 - [Overview of Guided Journeys](https://docs.oracle.com/en/cloud/saas/human-resources/faijh/overview-of-guided-journeys.html)

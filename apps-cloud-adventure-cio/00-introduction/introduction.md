@@ -15,15 +15,14 @@ This Activity Guide will lead you along the way through a set of Adventure Labs,
 4.  Experience the power of the integration capabilities of Fusion Cloud
 5.  Create powerful analytics for business insight
 
-## Tasks
-
+### Tasks
 Let's create your team name for your cloud adventure!
 
-[![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
-    
+[![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE)
+
 ## Acknowledgements
-* **Author** - Sajid Saleem, Master Principal Sales Consultant, Advanced Technology Services
-* **Contributors** -  
-* **Last Updated By/Date** - Sajid Saleem, September 2024
+* **Author** - Sajid Saleem, Master Principal Cloud Technologist
+- **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
+- **Last Updated By/Date** - Sajid Saleem, November 2025
 
 

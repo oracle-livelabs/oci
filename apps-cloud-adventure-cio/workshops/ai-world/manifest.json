@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "AI Adventures in SaaS Platform",
+    "workshoptitle": "AI Adventures in SaaS Platform - AI World 2025",
     "help": "livelabs-help-oci_us@oracle.com",
         "tutorials": [
         {
@@ -31,9 +31,5 @@
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
         }
-
     ]
 }
-
-
-
