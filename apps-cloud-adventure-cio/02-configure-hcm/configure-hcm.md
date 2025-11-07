@@ -165,11 +165,11 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 13.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
 
-     > (1) Summary: type **Adjustment Percentage is too high**.    <br>
+     > (1) Summary:  **Adjustment Percentage is too high**.    <br>
 
-     > (2) Detail:  **The Adjustment Percentage must be lower than 15%** in **Detail**. <br>
+     > (2) Severity:  **Error**.<br>
 
-     > (3) Detail:  type **The Adjustment Percentage must be lower than 15%**.
+     > (3) Detail:  **The Adjustment Percentage must be lower than 15%** in **Detail**. <br>
 
      ![Create Validation](../02-configure-hcm/images/image028.png)
 

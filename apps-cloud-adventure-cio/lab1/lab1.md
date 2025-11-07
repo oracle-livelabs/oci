@@ -368,22 +368,13 @@ Estimated Time: 15 minutes
 
 Security Console is used to quickly manage user access to the entire Fusion applications suite.
 
-
-### Learn More
-
-* [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/24d/secure.html)
-* [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/24b/secure.html)
-* [Oracle Documentation](http://docs.oracle.com)
-
 **You have successfully completed the Activity!**
 
-
 ### Learn More
 
-* [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/24d/secure.html)
-* [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/24b/secure.html)
+* [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/25d/secure.html)
+* [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/25d/secure.html)
 * [Oracle Documentation](http://docs.oracle.com)
-
 
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist
