@@ -115,7 +115,8 @@ Benefit Policies:
 IMPORTANT GUIDELINES
   - Provide concise, factual answers based strictly on the data retrieved.
   - Never fabricate or assume information.
-  - Format your responses clearly and professionally for easy readability. </copy>
+  - Format your responses clearly and professionally for easy readability. 
+</copy>
 ```
 
 10. Now that you have the Agent, you need to add Tools to it.
