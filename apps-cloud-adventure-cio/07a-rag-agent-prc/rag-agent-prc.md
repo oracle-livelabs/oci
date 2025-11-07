@@ -76,7 +76,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     > Click the **Create button** ![Create Button](../gen-images/createw.jpg)  on the near to the of the screen.
 
-    ![Craete Tool](../07a-rag-agent-prc/images/poaimage008.jpg)
+    ![Create Tool](../07a-rag-agent-prc/images/poaimage008.jpg)
 
     **Congratulations!  You’ve completed your first step and created a Policy Document Tool.**
 
@@ -299,5 +299,5 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 ## Acknowledgements
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
-* **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
+* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
 * **Last Updated By/Date** - Sajid Saleem, November 2025

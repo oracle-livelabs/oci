@@ -29,14 +29,14 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 3. Next, we're going to create a Tool.
 
-    > (1) Click the ![Tools](../05a-rag-agent-hcm/images/tools.jpg) button/tab at the bottom of the page
+    > (1) Click the ![Tools](../gen-images/tools.jpg) button/tab at the bottom of the page
 
     ![Open tools](../05a-rag-agent-hcm/images/raghcmimage003.jpg)
 
 
 4. Tool Creation
 
-    > (1) Click the ![add tool](../05a-rag-agent-hcm/images/plusadd.jpg) button to create a new tool
+    > (1) Click the ![add tool](../gen-images/plusadd.jpg) button to create a new tool
 
     ![Create Tool](../05a-rag-agent-hcm/images/raghcmimage004.jpg)
 
@@ -49,37 +49,37 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     * Product: select **Benefits** from the dropdown<br>
     * Description: Enter **Benefits Document Tool** <br>
 
-    > (2) Click the ![button](../05a-rag-agent-hcm/images/addw.jpg) button under **Documents** <br><br>
+    > (2) Click the ![button](../gen-images/addw.jpg) button under **Documents** <br><br>
 
     > (3) **Scroll Down** to see the Documents fields and upload your document.
 
       ![Edit tool info](../05a-rag-agent-hcm/images/raghcmimage005.jpg)
 
 
-6. ![flag](../05a-rag-agent-hcm/images/cautionflagextrasmalltransparent2.png) **Note:**  Now you’ll add the documents to our tool.  The documents you will add are located in the **ai documents** folder on your laptop's Desktop.
+6. ![flag](../gen-images/cautionflagextrasmalltransparent2.png) **Note:**  Now you’ll add the documents to our tool.  The documents you will add are located in the **ai documents** folder on your laptop's Desktop.
 
      > (1) Enter the following fields:
     * Name: Enter **CA Benefits Documents** <br>
     * Status: Select **Ready to publish** from the dropdown<br>
     * Description: Enter **Benefits Documents**<br>
 
-     > (2) Click on the ![Drag-and-drop](../05a-rag-agent-hcm/images/dandd.jpg) region and then select the file (Cloud Adventure Benefits Highlights.pdf) from the **ai-documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.<br>
+     > (2) Click on the ![Drag-and-drop](../gen-images/dandd.jpg) region and then select the file (Cloud Adventure Benefits Highlights.pdf) from the **ai-documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.<br>
 
-     > (3) Click the **Save** ![Home Icon](../05a-rag-agent-hcm/images/save.jpg) button on the bottom right<br>
+     > (3) Click the **Save** ![Home Icon](../gen-images/save.jpg) button on the bottom right<br>
 
-     > (4) Click the **Create button** ![Create Button](../05a-rag-agent-hcm/images/createw.jpg) on the top right corner of the screen.<br>
+     > (4) Click the **Create button** ![Create Button](../gen-images/createw.jpg) on the top right corner of the screen.<br>
 
       ![tool create](../05a-rag-agent-hcm/images/raghcmimage006.jpg)
 
 7. Now, you'll create your first Agent!  You'll do that from the Agent screen within the AI Agent Studio.
 
-    >  (1) Click the  **Agents** button/tab ![Agent Image](../05a-rag-agent-hcm/images/agentteams.jpg) at the bottom of the page.
+    >  (1) Click the  **Agents** button/tab ![Agent Image](../gen-images/agentteams.jpg) at the bottom of the page.
 
     ![Agents Page](../05a-rag-agent-hcm/images/raghcmimage007.jpg)
 
 8. Here you can see any existing agents.  But you want to create one.
 
-    > (1) Click the **+ Add** button ![Add button Image](../05a-rag-agent-hcm/images/plusadd.jpg).
+    > (1) Click the **+ Add** button ![Add button Image](../gen-images/plusadd.jpg).
 
     ![Add Agent](../05a-rag-agent-hcm/images/raghcmimage008.jpg)
 
@@ -91,10 +91,10 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     * Product: Select  **Benefits** from the dropdown<br>
     * Maximum Interactions: **10** <br>
     * Description: **Benefits Advisor Agent** <br>
-    * Prompt: ![Alert Flat](../05a-rag-agent-hcm/images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - CA Benefits Advisor Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below. <br>
+    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - CA Benefits Advisor Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below. <br>
 
     > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
-    > (3) Click the Create Button ![Create Button](../05a-rag-agent-hcm/images/createb.jpg) <br>
+    > (3) Click the Create Button ![Create Button](../gen-images/createb.jpg) <br>
 
     ![Create Agent](../05a-rag-agent-hcm/images/raghcmimage009.jpg)
 
@@ -120,22 +120,22 @@ IMPORTANT GUIDELINES
 
 10. Now that you have the Agent, you need to add Tools to it.
 
-    > (1) Click the **Tools** ![Tool Icon](../05a-rag-agent-hcm/images/toolhammericon.jpg) button on the left icon bar.<br>
+    > (1) Click the **Tools** ![Tool Icon](../gen-images/toolhammericon.jpg) button on the left icon bar.<br>
     > (2) Enter **CIOXX** in the Ask Oracle field, where XX is replaced with your user number, and press the **<enter>** key or select **CIOXX** from the resulting dropdown.<br>
-    > (3) Click the ![Agent Image](../05a-rag-agent-hcm/images/plusicon.jpg) icon next to the CA Benefits Document Tool. You may need to click it twice.
+    > (3) Click the ![Agent Image](../gen-images/plusicon.jpg) icon next to the CA Benefits Document Tool. You may need to click it twice.
 
     ![add tool](../05a-rag-agent-hcm/images/raghcmimage010.jpg)
 
 
 11. You can confirm the details of tool and continue
 
-    > (1) Click the **+ Add** button ![Add button Image](../05a-rag-agent-hcm/images/addb.jpg).
+    > (1) Click the **+ Add** button ![Add button Image](../gen-images/addb.jpg).
 
     ![Add Agent](../05a-rag-agent-hcm/images/raghcmimage011.jpg)
 
 12. That's it!  If necessary, you can add additional tools to your agent.  But no additional ones are required for this lab, so you can finish the Agent creation.
 
-    > (1) Click the ![Create button Image](../05a-rag-agent-hcm/images/createw.jpg) button on the top right.
+    > (1) Click the ![Create button Image](../gen-images/createw.jpg) button on the top right.
 
     ![Create Agent](../05a-rag-agent-hcm/images/raghcmimage012.jpg)
 
@@ -176,14 +176,14 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 3. Next, you'll create an AI Agent.
 
-    > 1. Click the ![Agents](images/agentsbutton.jpg) button/tab at the bottom of the page
+    > 1. Click the ![Agents](../gen-images/agentsbutton.jpg) button/tab at the bottom of the page
 
     ![Open tools](../06a-external-agent-scm/images/scmaconfigimage003.jpg)
 
 
 4. Add an Agent.
 
-    > 1. Click the ![add tool](../05a-rag-agent-hcm/images/plusadd.jpg) button to create a new Agent
+    > 1. Click the ![add tool](../gen-images/plusadd.jpg) button to create a new Agent
 
     ![Create Agent Team](../06a-external-agent-scm/images/scmaconfigimage004.jpg)
 
@@ -195,10 +195,10 @@ In this activity you will use Oracle Fusion AI Agent Studio to
      * Product: Select  **Maintenance** from the dropdown <br>
      * Maximum Interactions: **10** <br>
      * Description: **External Vehicle Recall Agent** <br>
-     * Prompt: ![Alert Flat](../05a-rag-agent-hcm/images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - External Vehicle Recall Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below.  <br>
+     * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - External Vehicle Recall Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below.  <br>
 
     > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
-    > (3) Click the Create Button ![Create Button](../05a-rag-agent-hcm/images/createb.jpg) <br>
+    > (3) Click the Create Button ![Create Button](../gen-images/createb.jpg) <br>
 
      ![Create Tool](../06a-external-agent-scm/images/scmaconfigimage005.jpg)
 
@@ -227,34 +227,34 @@ IMPORTANT GUIDELINES
 
 6. You’ve defined your Agent, so it’s time to add a tool.
 
-     > (1) Click the ![Agent Icon](../05a-rag-agent-hcm/images/toolhammericon.jpg) <br>
+     > (1) Click the ![Agent Icon](../gen-images/toolhammericon.jpg) <br>
      > (2) Enter **F1** in the Ask Oracle field and press the **Enter** key or select **F1** from the resulting dropdown.<br>
-     > (3) Click the ![Agent Image](../05a-rag-agent-hcm/images/plusicon.jpg) icon next to the **F1 External Vehicle Tool**.<br>
-     > (4) You may need to click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon a second time.
+     > (3) Click the ![Agent Image](../gen-images/plusicon.jpg) icon next to the **F1 External Vehicle Tool**.<br>
+     > (4) You may need to click the ![Create Button](../gen-images/plusicon.jpg) icon a second time.
 
      ![Add Agent](../06a-external-agent-scm/images/scmaconfigimage006.jpg)
 
 7. You can confirm the details of tool and continue
 
-    > (1) Click the **+ Add** button ![Add button Image](../05a-rag-agent-hcm/images/addb.jpg).
+    > (1) Click the **+ Add** button ![Add button Image](../gen-images/addb.jpg).
 
     ![Add Agent](../06a-external-agent-scm/images/scmaconfigimage007.jpg)
 
 8. That's it!  If necessary, you can add additional tools to your agent.  But no additional ones are required for this lab, so you can finish the Agent creation.
 
-    > (1) Click the ![Create button Image](../05a-rag-agent-hcm/images/createw.jpg) button on the top right.
+    > (1) Click the ![Create button Image](../gen-images/createw.jpg) button on the top right.
 
     ![Create Agent](..//06a-external-agent-scm/images/scmaconfigimage008.jpg)
 
 9. You have created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some Worker Agents.
 
-    > 1. Click the ![Agent Teams](../05b-agent-team-hcm/images/agentteams.jpg) button/tab at the bottom of the page
+    > 1. Click the ![Agent Teams](../gen-images/agentteams.jpg) button/tab at the bottom of the page
 
     ![Open tools](../06a-external-agent-scm/images/scmaconfigimage009.jpg)
 
 10. Create an Agent Team.
 
-    > 1. Click the ![add tool](../05b-agent-team-hcm/images/plusadd.jpg) button to create a new Agent Team
+    > 1. Click the ![add tool](../gen-images/plusadd.jpg) button to create a new Agent Team
 
     ![Create Agent Team](../06a-external-agent-scm/images/scmaconfigimage010.jpg)
 
@@ -267,14 +267,14 @@ IMPORTANT GUIDELINES
      * Maximum Interactions: **10** <br>
      * Description: **Asset Maintenance Agent Team** <br>
 
-     > (2) Click the **Create** button ![Create Button](../05b-agent-team-hcm/images/createb.jpg) on the bottom right.
+     > (2) Click the **Create** button ![Create Button](../gen-images/createb.jpg) on the bottom right.
 
      ![Create Tool](../06a-external-agent-scm/images/scmaconfigimage011.jpg)
 
 12. You’ve defined your Agent Team, so it’s time to add agents.  You can start with a Supervisor Agent.
 
-     > (1) Click the ![Agent Icon](../05b-agent-team-hcm/images/agenticon.jpg) <br>
-     > (2) Click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon next to **New Supervisor Agent**.
+     > (1) Click the ![Agent Icon](../gen-images/agenticon.jpg) <br>
+     > (2) Click the ![Create Button](../gen-images/plusicon.jpg) icon next to **New Supervisor Agent**.
 
      ![Create Agent](../06a-external-agent-scm/images/scmaconfigimage012.jpg)
 
@@ -287,66 +287,66 @@ IMPORTANT GUIDELINES
     * Maximum Interactions: **10** <br>
     * Description: **Asset Maintenance Supervisor Agent** <br>
 
-     > (2) Click the **Create** button ![Create Button](../05a-rag-agent-hcm/images/createb.jpg) on the bottom right.
+     > (2) Click the **Create** button ![Create Button](../gen-images/createb.jpg) on the bottom right.
 
        ![Create Agent](../06a-external-agent-scm/images/scmaconfigimage013.jpg)
 
 14. Next you'll add some worker agents.  You can scroll through the list of available agents, or use the Ask Oracle field to filter the results.  You'll do the latter.
 
     >  (1)  Enter **F1** in the Ask Oracle field and press the **Enter** key or select **F1** from the resulting dropdown.<br><br>
-    >  ![Create Button](../06a-external-agent-scm/images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br>
-    >  (2) Click the ![Create Button](../06a-external-agent-scm/images/plusicon.jpg) icon next to **F1 Installed Base Asset Agent.**.<br>
-    >  (3) You may need to click the ![Create Button](../06a-external-agent-scm/images/plusicon.jpg) icon a second time.<br>
+    >  ![Create Button](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br>
+    >  (2) Click the ![Create Button](../gen-images/plusicon.jpg) icon next to **F1 Installed Base Asset Agent.**.<br>
+    >  (3) You may need to click the ![Create Button](../gen-images/plusicon.jpg) icon a second time.<br>
 
     ![Add Tool](../06a-external-agent-scm/images/scmaconfigimage014.jpg)
 
 15. You can review the details of the agent.
 
-    > 1. Click the **Add** button ![Add Button](../05b-agent-team-hcm/images/addb.jpg).
+    > 1. Click the **Add** button ![Add Button](../gen-images/addb.jpg).
 
     ![Add Tools Complete](../06a-external-agent-scm/images/scmaconfigimage015.jpg)
 
 16. Add the F1 Maintenance Work Order Agent
 
-     > (1) Click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon next to **F1 Maintenance Work Order Agent**.<br>
+     > (1) Click the ![Create Button](../gen-images/plusicon.jpg) icon next to **F1 Maintenance Work Order Agent**.<br>
 
     ![Add Tools Complete](../06a-external-agent-scm/images/scmaconfigimage016.jpg)
 
 17. You can review the details of the agent.
 
-    > (1) Click the **Add** button ![Add Button](../05b-agent-team-hcm/images/addb.jpg).
+    > (1) Click the **Add** button ![Add Button](../gen-images/addb.jpg).
 
     ![Add Tools Complete](../06a-external-agent-scm/images/scmaconfigimage017.jpg)
 
 18. Add the CIOXX External Vehicle Recall Agent
 
     > (1) Delete your previous Ask Oracle filter and enter **CIOXX** in the Ask Oracle Filter, where XX is replaced with your user number, and press the **Enter** key or select **CIOXX** from the resulting dropdown.<br>
-    > (2) Click the ![Create Button](../05b-agent-team-hcm/images/plusicon.jpg) icon next to **CIOXX External Vehicle Recall Agent.**, where XX is replaced with your user number.<br>
-    >  (3) You may need to click the ![Create Button](../06a-external-agent-scm/images/plusicon.jpg) icon a second time.<br>
+    > (2) Click the ![Create Button](../gen-images/plusicon.jpg) icon next to **CIOXX External Vehicle Recall Agent.**, where XX is replaced with your user number.<br>
+    >  (3) You may need to click the ![Create Button](../gen-images/plusicon.jpg) icon a second time.<br>
 
     ![Add Tools Complete](..//06a-external-agent-scm/images/scmaconfigimage018.jpg)
 
 19. You can review the details of the agent.
 
-    > (1) Click the **Add** button ![Add Button](../05b-agent-team-hcm/images/addb.jpg).
+    > (1) Click the **Add** button ![Add Button](../gen-images/addb.jpg).
 
     ![Add Tools Complete](..//06a-external-agent-scm/images/scmaconfigimage019.jpg)
 
 20. Your Agent Team is ready, but you should do a quick test.
 
-    > 1. Click the **Debug** icon ![debug icon](../06a-external-agent-scm/images/debugarrow.jpg) on the top left of the screen.  It's the one that looks like the Play arrow.
+    > 1. Click the **Debug** icon ![debug icon](../gen-images/debugarrow.jpg) on the top left of the screen.  It's the one that looks like the Play arrow.
 
     ![start debug](../06a-external-agent-scm/images/scmaconfigimage020.jpg) <br>
 
 21. The Agent is now ready for your questions.
 
-    > 1. In the **Ask Oracle** dialog box at the bottom of the screen, type **Help** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../05b-agent-team-hcm/images/uparrow.jpg)
+    > 1. In the **Ask Oracle** dialog box at the bottom of the screen, type **Help** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
     ![agent dialogue 1](../06a-external-agent-scm/images/scmaconfigimage021.jpg) <br>
 
 22. The Agent will show detailed logs along with source and processing information (yellow boxes). This debug information will not be displayed to end-users once deployed. Once the Agent responds, you are ready to move to the next step.
 
-    > 1. Click the ![x icon](../06a-external-agent-scm/images/icon14_x2.png) icon in the upper right of the screen to close the Agent interaction
+    > 1. Click the ![x icon](../gen-images/icon14_x2.png) icon in the upper right of the screen to close the Agent interaction
 
     ![agent dialogue 2](../06a-external-agent-scm/images/scmaconfigimage022.jpg) <br>
 
@@ -366,5 +366,5 @@ IMPORTANT GUIDELINES
 ## Acknowledgements
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
-* **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
+* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
 * **Last Updated By/Date** - Sajid Saleem, November 2025
