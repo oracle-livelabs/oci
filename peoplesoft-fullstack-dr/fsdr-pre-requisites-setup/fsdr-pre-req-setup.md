@@ -61,7 +61,7 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
 ## Task 2: Preparing Oracle Databases for Full Stack Disaster Recovery
 
-1. From the Ashburn region OCI console, select **Oracle AI Database** from the Hamburger menu then **Oracle Base Database (VM, BM)**.
+1. From the Ashburn region OCI console, select **Oracle AI Database** from the Hamburger menu then **Oracle Base Database Service**.
 
     ![dbcs home](./images/ashburn-dbcs-home.png)
 
