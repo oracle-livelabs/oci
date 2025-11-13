@@ -41,7 +41,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
  > (2) Click on the ‘Sign In’ <br>
 
-    ![Login](../09-analytics/images/image023.png)
+![Login](../09-analytics/images/image023.png)
 
 4. A finance Watchlist comprising several Tiles is available on the home page.
 
