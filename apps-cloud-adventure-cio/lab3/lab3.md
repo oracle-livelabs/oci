@@ -65,7 +65,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
      > (2) Click on the ![Drag-and-drop](../gen-images/dandd.jpg) region and then select the file (Cloud Adventure Benefits Highlights.pdf) from the **ai-documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.<br>
 
-     > (3) Click the **Save** ![Home Icon](../gen-images/save.jpg) button on the bottom right<br>
+     > (3) Click the **Save** ![Save Button](../gen-images/save.jpg) button on the bottom right<br>
 
      > (4) Click the **Create button** ![Create Button](../gen-images/createw.jpg) on the top right corner of the screen.<br>
 
@@ -86,8 +86,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 9. Define the details of the Agent.
 
     > (1) First, you'll enter the fields as described below:<br>
-    * Agent Name: **CIO## Benefits Advisor Agent** where ## is replaced with your user nnumber.<br>
-    * Family: Select **HCM** from the dropown<br>
+    * Agent Name: **CIO## Benefits Advisor Agent** where ## is replaced with your user number.<br>
+    * Family: Select **HCM** from the dropdown<br>
     * Product: Select  **Benefits** from the dropdown<br>
     * Maximum Interactions: **10** <br>
     * Description: **Benefits Advisor Agent** <br>
@@ -121,9 +121,9 @@ IMPORTANT GUIDELINES
 
 10. Now that you have the Agent, you need to add Tools to it.
 
-    > (1) Click the **Tools** ![Tool Icon](../gen-images/toolhammericon.jpg) button on the left icon bar.<br>
+    > (1) Click the **Tools** ![Tool Hammer Icon](../gen-images/toolhammericon.jpg) button on the left icon bar.<br>
     > (2) Enter **CIOXX** in the Ask Oracle field, where XX is replaced with your user number, and press the **<enter>** key or select **CIOXX** from the resulting dropdown.<br>
-    > (3) Click the ![Agent Image](../gen-images/plusicon.jpg) icon next to the CA Benefits Document Tool. You may need to click it twice.
+    > (3) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to the CA Benefits Document Tool. You may need to click it twice.
 
     ![add tool](../05a-rag-agent-hcm/images/raghcmimage010.jpg)
 
@@ -204,7 +204,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
      ![Create Tool](../06a-external-agent-scm/images/scmaconfigimage005.jpg)
 
 ```
-<copy>AGENT ROLE
+<copy>
+AGENT ROLE
 As a Vehicle Recall Analyst, your role is to efficiently access vehicle recall information, providing users with clear information on any recalls related to their vehicle based on vehicle make, vehicle model and vehicle model year.
 
 RESPONSIBILITIES
@@ -213,25 +214,38 @@ Your responsibilities include:
 
 Vehicle Recall Information:
 
-- Clearly provide with clear information on any recalls related to their vehicle based on vehicle make, vehicle model and vehicle model year.
-- Use the 1st word of the Asset description as vehicle make.
-- Use the 2nd word of the Asset description as vehicle model.
-- Use "2025" as the vehicle model year
-- Use the CA_EXTERNAL_VEHICLE_RECALL_API_TOOL to retrieve policy details when answering questions.
+Extract Vehicle Information from the Asset Description
+- Identify the Make as the first word.
+- Identify the Model as the second word.
+- Set the Model Year to "2025"
+
+Retrieve Recall Data
+- Use the F1_EXTERNAL_VEHICLE_RECALL_API_TOOL.recallsByVehicle function with make, model and model year to retrieve recall information
+- Present Recall Details
+- Clearly summarize the recall information returned by the tool.
+- Do not infer, assume, or fabricate information - respond only with data provided by the recall tool.
 
 IMPORTANT GUIDELINES
+- Present the information using bullet points or short, clear paragraphs for readability.
+- Maintain a professional, factual, and concise tone.
+- Include only the factual details retrieved from the tool.
 
-  - Provide concise, factual answers based strictly on the data retrieved.
-  - Never fabricate or assume information.
-  - Format your responses clearly and professionally for easy readability.</copy>
-  ```
+Example response:
+Recall Information for 2006 Honda Ridgeline:
+- Recall Title or Code: [Brief description]
+- Notification Date: [Date]
+- Remedy or Action Required: [Manufacturer instructions]
+
+For more details or questions about this recall, please contact your authorized dealer.
+</copy>
+```
 
 6. You’ve defined your Agent, so it’s time to add a tool.
 
-     > (1) Click the ![Agent Icon](../gen-images/toolhammericon.jpg) <br>
+     > (1) Click the ![Tool Hammer Icon](../gen-images/toolhammericon.jpg) <br>
      > (2) Enter **F1** in the Ask Oracle field and press the **Enter** key or select **F1** from the resulting dropdown.<br>
-     > (3) Click the ![Agent Image](../gen-images/plusicon.jpg) icon next to the **F1 External Vehicle Tool**.<br>
-     > (4) You may need to click the ![Create Button](../gen-images/plusicon.jpg) icon a second time.
+     > (3) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to the **F1 External Vehicle Tool**.<br>
+     > (4) You may need to click the ![Plus Icon](../gen-images/plusicon.jpg) icon a second time.
 
      ![Add Agent](../06a-external-agent-scm/images/scmaconfigimage006.jpg)
 
@@ -275,7 +289,7 @@ IMPORTANT GUIDELINES
 12. You’ve defined your Agent Team, so it’s time to add agents.  You can start with a Supervisor Agent.
 
      > (1) Click the ![Agent Icon](../gen-images/agenticon.jpg) <br>
-     > (2) Click the ![Create Button](../gen-images/plusicon.jpg) icon next to **New Supervisor Agent**.
+     > (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **New Supervisor Agent**.
 
      ![Create Agent](../06a-external-agent-scm/images/scmaconfigimage012.jpg)
 
@@ -295,9 +309,9 @@ IMPORTANT GUIDELINES
 14. Next you'll add some worker agents.  You can scroll through the list of available agents, or use the Ask Oracle field to filter the results.  You'll do the latter.
 
     >  (1)  Enter **F1** in the Ask Oracle field and press the **Enter** key or select **F1** from the resulting dropdown.<br><br>
-    >  ![Create Button](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br>
-    >  (2) Click the ![Create Button](../gen-images/plusicon.jpg) icon next to **F1 Installed Base Asset Agent.**.<br>
-    >  (3) You may need to click the ![Create Button](../gen-images/plusicon.jpg) icon a second time.<br>
+    >  ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br>
+    >  (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **F1 Installed Base Asset Agent.**.<br>
+    >  (3) You may need to click the ![Plus Icon](../gen-images/plusicon.jpg) icon a second time.<br>
 
     ![Add Tool](../06a-external-agent-scm/images/scmaconfigimage014.jpg)
 
@@ -309,7 +323,7 @@ IMPORTANT GUIDELINES
 
 16. Add the F1 Maintenance Work Order Agent
 
-     > (1) Click the ![Create Button](../gen-images/plusicon.jpg) icon next to **F1 Maintenance Work Order Agent**.<br>
+     > (1) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **F1 Maintenance Work Order Agent**.<br>
 
     ![Add Tools Complete](../06a-external-agent-scm/images/scmaconfigimage016.jpg)
 
@@ -322,8 +336,8 @@ IMPORTANT GUIDELINES
 18. Add the CIOXX External Vehicle Recall Agent
 
     > (1) Delete your previous Ask Oracle filter and enter **CIOXX** in the Ask Oracle Filter, where XX is replaced with your user number, and press the **Enter** key or select **CIOXX** from the resulting dropdown.<br>
-    > (2) Click the ![Create Button](../gen-images/plusicon.jpg) icon next to **CIOXX External Vehicle Recall Agent.**, where XX is replaced with your user number.<br>
-    >  (3) You may need to click the ![Create Button](../gen-images/plusicon.jpg) icon a second time.<br>
+    > (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **CIOXX External Vehicle Recall Agent.**, where XX is replaced with your user number.<br>
+    >  (3) You may need to click the ![Plus Icon](../gen-images/plusicon.jpg) icon a second time.<br>
 
     ![Add Tools Complete](..//06a-external-agent-scm/images/scmaconfigimage018.jpg)
 

@@ -63,7 +63,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
      > (2) Click on the ![Drag-and-drop](../gen-images/dandd.jpg) region and then select the file (Cloud Adventure Benefits Highlights.pdf) from the **ai-documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.<br>
 
-     > (3) Click the **Save** ![Home Icon](../gen-images/save.jpg) button on the bottom right<br>
+     > (3) Click the **Save** ![Save Button](../gen-images/save.jpg) button on the bottom right<br>
 
      > (4) Click the **Create button** ![Create Button](../gen-images/createw.jpg) on the top right corner of the screen.<br>
 
@@ -84,8 +84,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 9. Define the details of the Agent.
 
     > (1) First, you'll enter the fields as described below:<br>
-    * Agent Name: **CIO## Benefits Advisor Agent** where ## is replaced with your user nnumber.<br>
-    * Family: Select **HCM** from the dropown<br>
+    * Agent Name: **CIO## Benefits Advisor Agent** where ## is replaced with your user number.<br>
+    * Family: Select **HCM** from the dropdown<br>
     * Product: Select  **Benefits** from the dropdown<br>
     * Maximum Interactions: **10** <br>
     * Description: **Benefits Advisor Agent** <br>
@@ -118,9 +118,9 @@ IMPORTANT GUIDELINES
 
 10. Now that you have the Agent, you need to add Tools to it.
 
-    > (1) Click the **Tools** ![Tool Icon](../gen-images/toolhammericon.jpg) button on the left icon bar.<br>
+    > (1) Click the **Tools** ![Tools Hammer Icon](../gen-images/toolhammericon.jpg) button on the left icon bar.<br>
     > (2) Enter **CIOXX** in the Ask Oracle field, where XX is replaced with your user number, and press the **<enter>** key or select **CIOXX** from the resulting dropdown.<br>
-    > (3) Click the ![Agent Image](../gen-images/plusicon.jpg) icon next to the CA Benefits Document Tool. You may need to click it twice.
+    > (3) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to the CA Benefits Document Tool. You may need to click it twice.
 
     ![add tool](../05a-rag-agent-hcm/images/raghcmimage010.jpg)
 
