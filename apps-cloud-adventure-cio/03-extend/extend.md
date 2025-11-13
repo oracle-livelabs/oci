@@ -81,9 +81,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 11. We'll use the Supplier Service from the ERP/SCM Catalog.
 
     > (1) **Enter** ‘Suppliers’ in the 'Supplier Name' field. <br>
-    > (2) Enter ‘Suppliers’ in the ‘Filter Objects/Endpoints’ field. <br>
-    > (3) Click the ‘Checkbox’ next to ‘Suppliers’. <br>
-    > (4) Click the ‘Create’ button. <br>
+    > (2) **Enter** ‘Suppliers’ in the ‘Filter Objects/Endpoints’ field. <br>
+    > (3) **Click** the ‘Checkbox’ next to ‘Suppliers’. <br>
+    > (4) **Click** the ‘Create’ button. <br>
 
     ![create service connect](../03-extend/images/image010.png)
 
@@ -158,7 +158,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 22. You’ll now add a Table component to the Panel.
 
     > (1) Enter  **Table** in the **‘filter’** field. <br>
-    > (2) Drag **Table** Table to the white space below your text field.  Be sure that it’s in the white space just below the text field and not in the brown section further down.
+    > (2) Drag **Table** to the white space below your text field.  Be sure that it’s in the white space just below the text field and not in the brown section further down.
 
     ![add supplier service to screen](../03-extend/images/image021.png)
 

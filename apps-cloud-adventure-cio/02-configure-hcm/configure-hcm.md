@@ -105,7 +105,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (1) For **User Roles**, select **does not contain** from the drop down options.  <br>
 
-    > (2) For **User Roles**, type **Human Resource Manager** and select **Human Resource Manager**.
+    > (2) For **User Roles**, type **Human Resource Manager** and select the first **Human Resource Manager**.
 
     ![Fields and Regions](../02-configure-hcm/images/image014.png)
 

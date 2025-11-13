@@ -136,7 +136,7 @@
 
 18.	Using the compare roles feature, you can quickly identify changes you’ve made compared to the out of the box roles provided by Oracle or other custom roles.  This section uses your newly created role to do exactly this.
 
-    > (1) From the Security Console, press the **Compare Roles button** button.
+    > (1) From the Security Console, press the **Compare Roles** button.
 
     ![Roles](../01-security-ai/images/secaiimage018.jpg)
 
