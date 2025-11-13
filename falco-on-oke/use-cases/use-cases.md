@@ -49,7 +49,7 @@ Keep **A**, **B**, and **C** open to monitor activity and maintain the tunnel, b
 
 1. **Get Falco related resources:**
 
-    ```
+    ```<copy>
     kubectl get pods -n falco
     ```
 
@@ -266,7 +266,7 @@ Each test should generate an alert visible in:
 
   - Falcosidekick UI
     
-    ![Critical alert](images/events_drop_execute_binary.png)
+    ![Critical alert for Executing binary not part of base image](images/events_drop_execute_binary.png)
 
 
 **Test 4 - Clear Log Activities (truncate / tamper log files)**
@@ -289,7 +289,7 @@ Each test should generate an alert visible in:
     ```
   - Falcosidekick UI 
   
-    ![Falco Clear Log Activities](images/logs_clear_log_activity.png)
+    ![Falco rule Clear Log Activities](images/logs_clear_log_activity.png)
 
 ## Task 5: Explore Falco Rules and Add Custom Ones
 
@@ -403,9 +403,9 @@ These rules live inside the Falco container and describe system call patterns th
 
       Also visible in Falcosidekick UI:
 
-      ![Falco custom rule](images/events_custom_write_below_root.png)
+      ![Falco custom rule for write below /root](images/events_custom_write_below_root.png)
 
-You may now proceed to the next lab.
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

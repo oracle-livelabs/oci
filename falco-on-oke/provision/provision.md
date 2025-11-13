@@ -48,7 +48,7 @@ This lab assumes you have:
 
 4. Wait for the job to complete, which may take 15-20 minutes before the infrastructure is fully provisioned.
 
-You may now proceed to the next lab.
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
