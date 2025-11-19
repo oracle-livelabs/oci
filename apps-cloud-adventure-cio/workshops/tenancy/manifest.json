@@ -7,31 +7,73 @@
             "filename": "../../00-introduction/introduction.md"
         },
         {
-            "title": "Lab 1: Security",
+            "title": "Adventure 1: Security (ERP)",
             "filename": "../../01-security-erp/security-erp.md"
         },
         {
-            "title": "Lab 2: Configure",
+            "title": "Adventure 1: Security (AI Access)",
+            "filename": "../../01-security-ai/security-ai.md"
+        },
+        {
+            "title": "Adventure 1: Risk Management",
+            "filename": "../../01-risk/risk.md"
+        },
+        {
+            "title": "Adventure 2: Configure (HCM)",
             "filename": "../../02-configure-hcm/configure-hcm.md"
         },
         {
-            "title": "Lab 3: Extend",
+            "title": "Adventure 2: Configure (SCM)",
+            "filename": "../../02-configure-scm/configure-scm.md"
+        },
+        {
+            "title": "Adventure 2: Extend (New Supplier)",
             "filename": "../../03-extend/extend.md"
         },
         {
-            "title": "Lab 4: Extend w/ External AI",
+            "title": "Adventure 3: Extend w/ External AI (HCM)",
+            "filename": "../../04-extend-oicai-hcm/extend-oicai-hcm.md"
+        },
+        {
+            "title": "Adventure 3: Extend w/ External AI (PRC)",
             "filename": "../../04-extend-oicai-prc/extend-oicai-prc.md"
-        }, 
+        },
         {
-            "title": "Lab 5: Audit",
+            "title": "Adventure 3: Create AI (HCM)",
+            "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
+        },
+        {
+            "title": "Adventure 4: Enable AI (HCM)",
+            "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
+        },
+        {
+            "title": "Adventure 3: Create AI (SCM)",
+            "filename": "../../06a-external-agent-scm/external-agent-scm.md"
+        },
+        {
+            "title": "Adventure 4: Enable AI (SCM)",
+            "filename": "../../06b-embed-agent-scm/embed-agent-scm.md"
+        },
+        {
+            "title": "Adventure 3: Create AI (PRC)",
+            "filename": "../../07a-rag-agent-prc/rag-agent-prc.md"
+        },
+        {
+            "title": "Adventure 4: Enable AI (PRC)",
+            "filename": "../../07b-agent-team-prc/agent-team-prc.md"
+        },
+        {
+            "title": "Adventure 8: Audit",
             "filename": "../../08-audit/audit.md"
-        }, 
-
+        },
         {
-            "title": "Lab 6: Analytics",
+            "title": "Adventure 9: Analytics",
             "filename": "../../09-analytics/analytics.md"
-        }, 
-
+        },
+        {
+            "title": "Adventure 9: Analytics with AI",
+            "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
+        },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
