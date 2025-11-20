@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Cloud Adventure Guide – for the Office of the CIO",
+    "workshoptitle": "AI Adventure Guide – Technology",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -15,16 +15,16 @@
             "filename": "../../02-configure-hcm/configure-hcm.md"
         },
         {
-            "title": "Adventure 3: Create AI (PRC)",
-            "filename": "../../07a-rag-agent-prc/rag-agent-prc.md"
+            "title": "Adventure 3: Create AI (HCM)",
+            "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
         },
         {
-            "title": "Adventure 4: Enable AI (PRC)",
-            "filename": "../../07b-agent-team-prc/agent-team-prc.md"
+            "title": "Adventure 4: Enable AI (HCM)",
+            "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
         },
         {
-            "title": "Adventure 5: Analytics",
-            "filename": "../../09-analytics/analytics.md"
+            "title": "Adventure 5: Analytics with AI",
+            "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
         },
         {
             "title": "Need Help?",
