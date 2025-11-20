@@ -11,15 +11,15 @@
             "filename": "../../01-risk/risk.md"
         },
         {
-            "title": "Adventure 2: Configure (HCM)",
+            "title": "Adventure 2: Configure",
             "filename": "../../02-configure-hcm/configure-hcm.md"
         },
         {
-            "title": "Adventure 3: Create AI (HCM)",
+            "title": "Adventure 3: Create AI",
             "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
         },
         {
-            "title": "Adventure 4: Enable AI (HCM)",
+            "title": "Adventure 4: Enable AI",
             "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
         },
         {
