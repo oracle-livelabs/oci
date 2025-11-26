@@ -1,21 +1,22 @@
 {
-    "workshoptitle": "Hands on demos for Oracle Fusion AI",
+    "workshoptitle": "Purchase Requisition Advisor Template Extension",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
  
         {
-            "title": "Demo 1: HCM AI Assist Goals",
-            "filename": "../../01-hcm-ai-assist-goals/hcm_ai_assist_goals.md"
+            "title": "Module 1: Examine the pre-built Purchase Requisition Status Advisor Agent components",
+            "filename": "../../01-pr-advisor-explore/pr_advisor_explore.md"
         },
 
+
         {
-            "title": "Demo 2: HCM AI Assist Performance Reviews",
-            "filename": "../../02-hcm-ai-assist-performace-reviews/hcm_ai_assist_performace_reviews.md"
+            "title": "Demo 2: Create a new custom agent to check supplier inventory via API call",
+            "filename": "../../02-pr-advisor-create-new-agent/pr_advisor_create_new_agent.md"
         },
        
         {
-            "title": "Demo 3: SCM / ERP AI Assist Product Description",
-            "filename": "../../03-scm-erp-ai-assist-product-description/scmerp_ai_assist_product_description.md"
+            "title": "Demo 3: Build and test a multi-agent team",
+            "filename": "../../03-pr-advisor-build-multi-agent-team/pr_advisor_create_multi_agent_team.md"
         },
        
      
