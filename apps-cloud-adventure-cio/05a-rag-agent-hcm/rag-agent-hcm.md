@@ -53,6 +53,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
       ![Edit tool info](../05a-rag-agent-hcm/images/raghcmimage005.jpg)
 
+      [Click here to download the Benefits Highlights Documents file.](./files/CloudAdventureBenefitsHighlights.pdf?download=0)
+
 
 6. ![flag](../gen-images/cautionflagextrasmalltransparent2.png) **Note:**  Now you’ll add the documents to our tool.  The documents you will add are located in the **ai documents** folder on your laptop's Desktop.
 
@@ -61,7 +63,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     * Status: Select **Ready to publish** from the dropdown<br>
     * Description: Enter **Benefits Documents**<br>
 
-     > (2) Click on the ![Drag-and-drop](../gen-images/dandd.jpg) region and then select the file (Cloud Adventure Benefits Highlights.pdf) from the **ai-documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.<br>
+     > (2) Click on the ![Drag-and-drop](../gen-images/dandd.jpg) region and then select the file (CloudAdventureBenefitsHighlights.pdf) from your **Downloads** folder on your PC.<br>
 
      > (3) Click the **Save** ![Save Button](../gen-images/save.jpg) button on the bottom right<br>
 
@@ -119,8 +121,8 @@ IMPORTANT GUIDELINES
 10. Now that you have the Agent, you need to add Tools to it.
 
     > (1) Click the **Tools** ![Tools Hammer Icon](../gen-images/toolhammericon.jpg) button on the left icon bar.<br>
-    > (2) Enter **CIOXX** in the Ask Oracle field, where XX is replaced with your user number, and press the **<enter>** key or select **CIOXX** from the resulting dropdown.<br>
-    > (3) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to the CA Benefits Document Tool. You may need to click it twice.
+    > (2) Enter **CIOXX** in the Ask Oracle field, where XX is replaced with your user number, and press the **<****Enter****>** key or select **CIOXX** from the resulting dropdown.<br>
+    > (3) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to the CA Benefits Document Tool. ***You may need to click it twice.***
 
     ![add tool](../05a-rag-agent-hcm/images/raghcmimage010.jpg)
 
@@ -131,13 +133,13 @@ IMPORTANT GUIDELINES
 
     ![Add Agent](../05a-rag-agent-hcm/images/raghcmimage011.jpg)
 
-12. That's it!  If necessary, you can add additional tools to your agent.  But no additional ones are required for this lab, so you can finish the Agent creation.
+12. That's it!  If necessary, you can add additional tools to your agent.  But no additional ones are required for this adventure, so you can finish the Agent creation.
 
     > (1) Click the ![Create button Image](../gen-images/createw.jpg) button on the top right.
 
     ![Create Agent](../05a-rag-agent-hcm/images/raghcmimage012.jpg)
 
-13. You’ve just created your first AI Agent.  In the next lab you will put this agent to work as part of an Agent Team.
+13. You’ve just created your first AI Agent.  In the next Adventure you will put this agent to work as part of an Agent Team.
 
       ![Add Tools Create](../05a-rag-agent-hcm/images/raghcmimage013.jpg) <br>
 
@@ -165,4 +167,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Charlie Moff, Sajid Saleem; December 2025
