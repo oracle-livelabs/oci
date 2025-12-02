@@ -51,6 +51,10 @@
             "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
         },
         {
+            "title": "Adventure 5c: Embed and Enable AI (HCM)",
+            "filename": "../../05c-embed-agent-hcm/embed-agent-hcm.md"
+        },
+        {
             "title": "Adventure 6a: Create AI (SCM)",
             "filename": "../../06a-external-agent-scm/external-agent-scm.md"
         },
