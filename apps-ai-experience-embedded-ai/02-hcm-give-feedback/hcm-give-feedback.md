@@ -25,7 +25,7 @@ You are easily able to find areas you’re looking for within the system utilizi
    
    >  Using the Global Search bar at the top, enter *Feedback Center - Me* and click to navigate to the **Feedback Center**
 
-   ![Application Home](images/image018.png " ")
+   ![Global Search](images/image018.png " ")
    
  Once in the feedback center, you’ll be able to see the history of feedback given to you, or feedback that you’ve given to others. This allows for a one stop shop for users to view all their related feedback.  
    
@@ -36,11 +36,11 @@ You are easily able to find areas you’re looking for within the system utilizi
 
    > Click on the **Feedback About Others** tab
 
-   ![Open Customer Account](images/image019.png " ")
+   ![Feedback About Others](images/image019.png " ")
 
    > Click the **Give Feedback** button
 
-   ![Open Customer Account](images/image020.png " ")
+   ![Give Feedback](images/image020.png " ")
 
 2. Search for the Sales Rep 
 
@@ -49,7 +49,7 @@ There are different options when it comes to who gets feedback, and how it’s v
    > -	Search & select employee: *Natalie Sales Rep*
    > -   Define visibility: *Managers and Natalie Sales Rep*
 
-   ![Create Business Plan](images/image021.png " ")  
+   ![Select Employee](images/image021.png " ")  
 
 3. Enter your feedback details for the Sales Rep
 
@@ -76,8 +76,9 @@ The sales VP values positive feedback but also likes to give his team constructi
 
    ![Give Feedback](images/image023.png " ")  
 
-   > -   Congratulations!!  You have completed the **Human Capital Management** set of embedded AI flows.
-   > -   Click on the **Home** icon on the ribbon at the top of the page to return to the main springboard page.
+   Congratulations!!  You have completed the **Human Capital Management** set of embedded AI flows.
+
+   > Click the **Home** icon on the ribbon at the top of the page to return to the main springboard page.
 
 
 ## Summary
