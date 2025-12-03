@@ -37,7 +37,7 @@ Estimated Time: 15 minutes
 
 4. Use this screen to enter justification for granting the new role
 
-    > (1) In the entry field, type, **Accounts Payable department is having a critical shortage of staff** in the text field as shown. <br>
+    > (1) In the entry field, type,**Accounts Payable department is having a critical shortage of staff** in the text field as shown. <br>
 
     > (2) Press the **Add Role** button.
 
@@ -73,7 +73,7 @@ Estimated Time: 15 minutes
 
 9. Note that your request has been placed in a queue for processing.
 
-  > (1) Press the **home** button to continue.
+  > (1) Press the **home** icon ![home icon](../gen-images/home.jpg) to continue.
 
   ![My Access Requests](../01-risk-erp/images/riskimage009.jpg)
 
@@ -133,19 +133,17 @@ Estimated Time: 15 minutes
 
 15. The role briefing takes the findings and using Generative AI to compose a complete summary of the findings.
 
-  > (1) Click on **role briefing**. <br>
+  > (1) Click on **Security Briefing**. <br>
 
   ![Access Request Approvals](../01-risk-erp/images/riskimage023.jpg)
 
 16. Expand the summary section to see how Gen AI helped deliver a narrative description of the violations.
 
-  > (1) Click on the **down arrow**. <br>
+  > (1) Click on the **Right Arrow** icon to expand the **Summary of privileges by functional category** section. <br>
 
   ![Access Request Approvals](../01-risk-erp/images/riskimage024.jpg)
 
-  > (1) Click on the **down arrow**. <br>
-
-  > (1) Click on the **X Icon**. <br>
+  > (1) Click on the **X Icon** to close the popup region. <br>
 
   ![Access Request Approvals](../01-risk-erp/images/riskimage025.jpg)
 
@@ -175,4 +173,4 @@ Security Console is used to quickly manage user access to the entire Fusion appl
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist, Advanced Technology Services
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, December 2025
+* **Last Updated By/Date** - Charlie Moff, Sajid Saleem; December 2025
