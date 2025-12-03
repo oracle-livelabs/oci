@@ -1,28 +1,19 @@
 # Introduction
 
-## About this Cloud Adventure
+## About this AI Experience lab exercise
 
-Are you a SaaS Application Administrator or Analyst? Are you tasked with setting up users, configuring page layouts and approval workflows? Are you responsible for integrations or creating new reports & dashboards? Get hands-on experience to learn and become more efficient on these activities and more! Join us for a two-hour fun filled journey where you will leverage built in tools and capabilities to extend, configure, and integrate Oracle Fusion Cloud Applications. The experience includes application user security, UI configurations, creating integrations, and creating new reports/dashboards. 
+Make your AI ideas a reality: Learn how to customize, build, and deploy AI agents using templates that help automate and simplify agent creation.
 
-Estimated Adventure Time: 2 hours
+Estimated Completion Time: 45 minutes
 
 ### **Objectives**
 
-This Activity Guide will lead you along the way through a set of Adventure Labs, where you will experience the:
-1.	Use Security Console to easily manage user access
-2.	Configure or Extend your Fusion Cloud Applications
-3.  Experience the power of the integration capabilities of Fusion Cloud
-4.  Create powerful analytics for business insight
+This Activity Guide will lead you along the way through a set of modules, where you will experience:
+1.	Investigating pre-built AI Agent Templates and pre-defined components
+2.	Extend a pre-built template by create a custom agent.  Understand a simple prompt to instruct an LLM (Large Language Model) how to use an External REST API tool to extract information from an external system
+3.  Assemble a powerful agent team and test your work.  All without writing a single line of code!
 
-(https://www.youtube.com/watch?v=H-C5dH3w1Dg)
-
+[](youtube:H-C5dH3w1Dg " ")
 
 
-
-
-Let's create your team name for your cloud adventure!
-
-[![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
-    
-
-
+Proceed to the next module to get started!

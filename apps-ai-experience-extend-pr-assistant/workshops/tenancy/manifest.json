@@ -4,18 +4,23 @@
     "tutorials": [
  
         {
-            "title": "Module 1: Examine the pre-built Purchase Requisition Status Advisor Agent components",
+            "title": "Introduction: Building an extension to a pre-defined AI Agent Studio template",
+            "filename": "../../00-introduction/introduction.md"
+        },
+
+        {
+            "title": "Module 1: Examine the pre-built Purchase Requisition Status Advisor Agent template and components",
             "filename": "../../01-pr-advisor-explore/pr_advisor_explore.md"
         },
 
 
         {
-            "title": "Demo 2: Create a new custom agent to check supplier inventory via API call",
+            "title": "Module 2: Create a new custom agent to check supplier inventory via API call",
             "filename": "../../02-pr-advisor-create-new-agent/pr_advisor_create_new_agent.md"
         },
        
         {
-            "title": "Demo 3: Build and test a multi-agent team",
+            "title": "Module 3: Build and test a multi-agent team",
             "filename": "../../03-pr-advisor-build-multi-agent-team/pr_advisor_create_multi_agent_team.md"
         },
        
@@ -26,7 +31,11 @@
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
         }
         
-    ]
+    ],
+    "include": {
+        "initial_hints": "login_usage_notes.md"
+    }
+
 }
 
 

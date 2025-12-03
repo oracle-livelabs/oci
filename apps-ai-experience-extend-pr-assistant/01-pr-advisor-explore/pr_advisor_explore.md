@@ -1,31 +1,20 @@
-# Exploring a pre-built agent
+# Exploring a pre-built agent team
 
 ## Introduction
 
-In this exercise we will learn about the overall capabilities of Fusion AI Agent Studio by reviewing the out of the box tools, business objects, deep links, prompts, topics, and Agent types
+In this exercise we will copy an existing agent template and get an understanding of the various components and the prompts that instruct the large language model (LLM) how to execute the agent team.
 
-Estimated Time: 10 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
-Understand the structure of a pre-built agent and agent tools in AI Agent Studio
+Understand the structure of a pre-built agent template and agent tools in AI Agent Studio
 
 ### Usage Notes
 
-When creating agents and teams in Fusion AI Agent Studio, all components must have a unique name.
+   [](include:initial_hints)
 
-To ensure your components have a unique name, please use an initial code when naming your components.
-
-Take the first two letters of your first name and last two letters of your last name to form a unique code.  If this spells out a common word, add a number.
-
-> **EXAMPLE:** <br/>
-> ***TI***M SULLIV***AN*** = ***TIAN*** <br/>
-> ***CO***RY WA***DE*** = ***CODE2***
-
-Once you have chosen a code, use it consistently to ensure you can easily find your components
-
-## Task 1: Locate and copy the pre-existing Purchase Requisition Status Advisor agent
-
+## Task 1: Locate and copy the pre-existing Purchase Requisition Status Advisor agent template
 
 1. First you will log in and navigate to AI Agent Studio.
 
@@ -34,11 +23,11 @@ Once you have chosen a code, use it consistently to ensure you can easily find y
 
 2. Locate and copy the Purchase Requisition Status Advisor agent template.
 
-   > Go to the **Tools** tab and Click on the tile for **AI Agent Studio**.
+   > Go to the **Tools** tab and Click on the tile for **AI Agent Studio**:
 
    ![Application Home](images/image001.png " ")
 
-   > Search for **requistion** in the search box.
+   > Search for **requisition** in the search box:
 
    ![Template Search](images/image003.png " ")
 
@@ -59,48 +48,100 @@ Once you have chosen a code, use it consistently to ensure you can easily find y
 
    ![Copy Template Suffix](images/image007.png " ")
 
-3. Next you will save your agent team template and ensure that you can locate it.
+3. Next you will save your agent team copy and ensure that you can locate it.
 
-   > Click the **Save and Close** button in the top right of the screen.
+   > Click the **Save and Close** button in the top right of the screen:
 
    ![Agent Team save and close](images/image008.png " ")
 
-   > On the tab bar on the bottom of the screen, Click on **Agent Teams**.
+   > On the tab bar on the bottom of the screen, Click on **Agent Teams**:
 
    ![Agent Teams tab](images/image009.png " ")
 
-   > Enter ***YOUR INITIAL CODE*** in the search box and hit **ENTER**.
+   > Enter ***YOUR INITIAL CODE*** in the search box and hit **ENTER**:
 
    ![Agent Teams search](images/image010.png " ")
 
-   > Select the **DRAFT** button (your agent team will be in draft status).  You should see your newly-created agent team.
+   > Select the **DRAFT** button (your agent team will be in draft status).  You should see your newly-created agent team:
 
    ![Agent Teams search result](images/image011.png " ")
 
    >![Check](images/check.png =90x*) ***STATUS CHECKPOINT*** <br/>
    > If you do not see your agent team, return to step 2 [above](#task1locateandcopythepreexistingpurchaserequisitionstatusadvisoragent)
 
-## Task 2: Examine the pre-built Purchase Requisition Status Advisor Agent components
+   **You have successfully completed Task 1!**
+
+## Task 2: Examine the pre-built Purchase Requisition Status Advisor Agent template components
 
 1. Open your copy of the Purchase Requisition Status Advisor Agent Team template.
 
-   > Click on the pencil icon to open your newly created agent team.
+   > Click on the pencil icon to open your newly created agent team:
 
    ![open agent team](images/image012.png " ")
 
 2. Let's take a closer look at the components of the Purchase Requisition Status Advisor Agent Team template.
 
-   > Notice that this agent consists of 3 tools and 1 topic.
+   > Notice that this agent consists of 3 tools and 1 topic:
 
-   ![agent team tool count](images/image013.png " ")  
+   ![agent team tool count](images/image013.png " ")
 
+   > Expand the Tools box to expose the 3 included tools:
+
+   ![agent team tool expand](images/image014.png " ")
+
+   > Hover on the first tool (Purchase Requisition Detail), click on the 3 dots in the corner, then select **View Details**:
+
+   ![agent BO tool more details](images/image015.png " ")
+
+   > Notice that this tool retrieves data from the Purchase Requisitions Business Object.  Notice the multiple functions that allow searches by different parameters, as well as functions to create new purchase requisitions:
+
+   ![agent BO tool functions](images/image016.png " ")
+
+   > Click on the **X** on the upper right to close this tool.<br/><br/ >
+   > Hover on the second tool (View Purchase Requisition Details Deep Link), click on the 3 dots in the corner, then select **View Details**:
+
+   ![agent deep link tool functions](images/image017.png " ")
+
+   > Notice that this tool provides a deep link to allow the user to navigate directly to a specific purchase requisition in the application.<br/><br/>
+   > Click on the **X** in the upper right corner to close this tool.<br/><br/>
+   > Expand the Topics box to expose the included topic.
+   > Hover on the Purchase Requisition Status topic, click on the 3 dots in the corner, then select **View Details**:
+
+   ![agent topic view details](images/image018.png " ")
+
+   > Topics provide a reusable prompt – basically a set of instructions to the Large Language Model (LLM).  Pre-built topics provide a best-practices example of an LLM prompt:
+
+   ![agent topic dialog](images/image019.png " ")
+
+   > Click on the **X** in the upper right corner to close the topic.<br/><br/>
+   > Finally, hover on the Agent header, click on the 3 dots in the corner, then select **View Details**:
+
+   ![agent header details](images/image020.png " ")
+
+   > Notice the pre-built prompt.  Unlike the prompt provided in the topic, this prompt is specific to this agent.  Agent prompts and topics are combined to provide instructions to the LLM:
+
+   ![agent header details tab](images/image021.png " ")
+
+   > Select the **LLM** tab.  Review the Summarization prompt.<br/>
+   > Worker agents provide a default summarization prompt to provide a simple answer to the user.  This summarization can be modified if specific instructions or output format is desired:
+
+   ![agent header LLM tab](images/image022.png " ")
+
+   > Click on the **X** in the upper right corner to close the Worker Agent Summary.<br/><br/>
+   > Click on **Save and Close** button saving your copy of the Purchase Requisition Status Advisor agent:
+
+   ![agent header save and close](images/image023.png " ")
+
+   **You have successfully completed Module 1!**
+
+   
 ## Summary
 
-By following these steps, you  successfully activated the AI capabilities to enhance efficiency, improve accuracy, and provide a more engaging experience for employees. Embrace the future of human capital management with the power of AI!
+You should now have a basic understanding of the tools and prompts provided by the pre-built Purchase Requisition Status Advisor agent teamplate.<br/>
+In the next module we will create a custom agent to expand the capabilities of this agent team.
 
-**You have successfully completed the Activity!**
 
 ## Acknowledgements
 * **Author** - Rick Beck, Master Principal SaaS Platform Technologist, NAA Office of Technology and Innovation
 * **Contributors** -  Tim Sullivan
-* **Last Updated By/Date** - Rick Beck, November 2025, based on Fusion 25D
+* **Last Updated By/Date** - Rick Beck, December 2025, based on Fusion 25D
