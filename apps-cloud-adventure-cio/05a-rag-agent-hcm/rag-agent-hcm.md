@@ -13,10 +13,12 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 * Create a Benefits Advisor Agent for the above Tool.
 
 ### **Pre-requisite**
-[Right-click and select Download Link File as to save the Benefits Highlights Documents file to your local folder.](./files/CloudAdventureBenefitsHighlights.pdf)
+
+![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
+As a pre-requisite for this adventure, please download policy document file to your local desktop as below. 
 <br>
 
-![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please save the PDF in your local downloads folder as you will need this when creating a document tool***
+[Right-click here and select Download Link File as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
 
 ### **Begin Exercise**
 
@@ -59,11 +61,10 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
       ![Edit tool info](../05a-rag-agent-hcm/images/raghcmimage005.jpg)
 
-      [Right-click and select Download Link File as to save the Benefits Highlights Documents file to your local folder.](./files/CloudAdventureBenefitsHighlights.pdf)<br>
+6. ![Alert flag](../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download policy document file to your local desktop as below.
+    <br>
 
-      ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please save the PDF in your local downloads folder as you will need this when creating a document tool***
-
-6. ![flag](../gen-images/cautionflagextrasmalltransparent2.png) **Note:**  Now you’ll add the documents to our tool.  The documents you will add are located in the **ai documents** folder on your laptop's Desktop.
+    [Right-click here and select Download Link File as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
 
      > (1) Enter the following fields:
     * Name: Enter **CA Benefits Documents** <br>
