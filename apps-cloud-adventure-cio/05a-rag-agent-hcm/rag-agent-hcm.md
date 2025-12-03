@@ -12,6 +12,12 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 * Create a Benefits Advisor Document Tool that references your benefits policy documents.
 * Create a Benefits Advisor Agent for the above Tool.
 
+### **Pre-requisite**
+[Right-click and select Download Link File as to save the Benefits Highlights Documents file to your local folder.](./files/CloudAdventureBenefitsHighlights.pdf)
+<br>
+
+![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please save the PDF in your local downloads folder as you will need this when creating a document tool***
+
 ### **Begin Exercise**
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
@@ -53,8 +59,9 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
       ![Edit tool info](../05a-rag-agent-hcm/images/raghcmimage005.jpg)
 
-      [Click here to download the Benefits Highlights Documents file.](./files/CloudAdventureBenefitsHighlights.pdf?download=0)
+      [Right-click and select Download Link File as to save the Benefits Highlights Documents file to your local folder.](./files/CloudAdventureBenefitsHighlights.pdf)<br>
 
+      ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please save the PDF in your local downloads folder as you will need this when creating a document tool***
 
 6. ![flag](../gen-images/cautionflagextrasmalltransparent2.png) **Note:**  Now you’ll add the documents to our tool.  The documents you will add are located in the **ai documents** folder on your laptop's Desktop.
 
