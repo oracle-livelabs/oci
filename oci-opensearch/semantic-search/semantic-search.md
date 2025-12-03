@@ -217,8 +217,8 @@ Make note of the model ID returned when you register and deploy the model.
                     "engine":"lucene",
                     "space_type": "l2",
                     "parameters":{
-                        "m":512,
-                        "ef_construction": 245
+                        "m":32,
+                        "ef_construction": 200
                     }
                 }
             },
