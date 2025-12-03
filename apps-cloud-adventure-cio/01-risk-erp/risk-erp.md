@@ -37,7 +37,7 @@ Estimated Time: 15 minutes
 
 4. Use this screen to enter justification for granting the new role
 
-    > (1) In the entry field, type,**Accounts Payable department is having a critical shortage of staff** in the text field as shown. <br>
+    > (1) In the entry field, type, **Accounts Payable department is having a critical shortage of staff** in the text field as shown. <br>
 
     > (2) Press the **Add Role** button.
 
