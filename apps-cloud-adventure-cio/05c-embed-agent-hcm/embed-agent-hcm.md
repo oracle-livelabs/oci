@@ -46,6 +46,7 @@ In this activity you will use Oracle Fusion AI Agent Studio and Visual Builder t
      * Agent Team Name: **CIOXX Benefits Agent Team** where XX is replaced with your user number. <br>
      * Family: Select **HCM** from the dropdown <br>
      * Product: Select  **Benefits** from the dropdown <br>
+     * Type: Select **Supervisor** from the dropdown <br>
      * Maximum Interactions: **10** <br>
      * Description: **Agent Team for Benefits and FMLA** <br>
 
@@ -90,7 +91,7 @@ In this activity you will use Oracle Fusion AI Agent Studio and Visual Builder t
 
     ![Add Tools Complete](../05c-embed-agent-hcm/images/benimage009.jpg) <br>
 
-10. You'll add one more worker agent.  First, you'll filter on something different.
+10. You'll add one more worker agent.  First, you'll change the search filter.
 
     >  (1) Delete your previous Ask Oracle filter and enter **F1** in the Ask Oracle Filter and press the **<****Enter****>** key or select **F1** from the resulting dropdown.<br><br>
 
@@ -108,7 +109,7 @@ In this activity you will use Oracle Fusion AI Agent Studio and Visual Builder t
 
     ![Add Tools Complete](../05c-embed-agent-hcm/images/benimage011.jpg) <br>
 
-12. Your Agent Team, with a Supervisory Agent and two Worker Agents is complete.  We can now hide the left Agents panel to see our full Agent Team.
+12. Your Agent Team, with a Supervisor Agent and two Worker Agents is complete.  We can now hide the left Agents panel to see our full Agent Team.
 
     > 1. Click the **Agents** icon ![agent icon](../gen-images/agenticon.jpg) on the top left of the screen.  You can see that the left panel is now hidden and you can see the entire Agent Team
 
@@ -123,7 +124,7 @@ In this activity you will use Oracle Fusion AI Agent Studio and Visual Builder t
 
 14. The Agent is now ready for your questions.  Since we're just testing, you'll ask it for Help to confirm it's responding.
 
-    > 1. In the **Ask Oracle** dialog box at the bottom of the screen, type **Help** and hit the **<****Enter****>**return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
+    > 1. In the **Ask Oracle** dialog box at the bottom of the screen, type **Help** and hit the **<****Enter****>** return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
     ![agent dialogue 1](../05c-embed-agent-hcm/images/benimage014.jpg) <br>
 
@@ -136,20 +137,18 @@ In this activity you will use Oracle Fusion AI Agent Studio and Visual Builder t
 
 16. Your Agent Team is ready, so let's Publish it.
 
-    You decide to tell the Agent that you’re interested in creating an FMLA absence, but you do so without initially providing the requested dates.
-
     > (1) Click the **Publish** button on the top right.
 
     ![agent dialogue 3](../05c-embed-agent-hcm/images/benimage016.jpg) <br>
 
-17. You can confirm that the Agent team is published and go to the home page to begin the next part of this Adventure.
+17. You can confirm that the Agent team is published. Now you will go to the home page to begin the next part of this Adventure.
 
-    > (1) Note that the application confirms that the Agent team was published.  This message only appears temporarily, so if it has already disappeared just continue with the next step
+    > (1) Note that the application confirms that the Agent team was published.  This message only appears temporarily, so if it has already disappeared just continue with the next step. <br>
     > (2) Click the Home icon ![Home Button](../gen-images/home.jpg) in the top toolbar to return to the application home page and get ready for the next step.
 
     ![agent dialogue 3](../05c-embed-agent-hcm/images/benimage017.jpg) <br>
 
-18. The AI Agent is deployed to the Application UI via a Guided Journey.  A Guided Journey allows you to embed specific information in standard application screens.  In addition to using a Guided Journey to embed an AI Agent (today's example), Guided Journeys can also embed documents, analytics, URLs, Learning, Videos and more.  And like all configurations, Guided Journey configurations are automatically maintained during the release update process.  So, here you will create a Guided Journey.
+18. The AI Agent is deployed to the Application UI via a Guided Journey.  A Guided Journey allows you to embed specific information in standard application screens.  In addition to using a Guided Journey to embed an AI Agent (today's example), Guided Journeys can also be used to embed documents, analytics, URLs, Learning, Videos and more.  And like all configurations, Guided Journey configurations are automatically maintained during the release update process.  So, here you will create a Guided Journey.
 
     > (1) Enter **Guided Journey** in the search field<br>
     > (2) Select the **Guided Journey** from the resulting dropdown.
@@ -169,9 +168,9 @@ In this activity you will use Oracle Fusion AI Agent Studio and Visual Builder t
 
     ![agent dialogue 3](../05c-embed-agent-hcm/images/benimage020.jpg) <br>
 
-21. Next, you'll add a Task to this Guided Journey.  This is where we specify a Task Type of Agent and reference the Maintenance Agent Team you've assembled.
+21. Next, you'll add a Task to this Guided Journey.  This is where we specify a Task Type of Agent and reference the Benefits Agent Team you've assembled.
 
-     > (1) Click the ![plus Add](../06b-embed-agent-scm/images/plusadd.jpg) button under the **Tasks** section.  This will pop out the New Task panel from the right. <br><br>
+     > (1) Click the ![plus Add](../gen-images/plusadd.jpg) button under the **Tasks** section.  This will open the New Task panel from the right. <br><br>
 
      > (2) Enter the fields as described below:
      * Task Name: **Benefits Guided Journey Task** <br>
@@ -201,13 +200,13 @@ In this activity you will use Oracle Fusion AI Agent Studio and Visual Builder t
 
     ![agent dialogue 3](../05c-embed-agent-hcm/images/benimage023.jpg) <br>
 
-24. Here, you see multiple Journey options.  A journey is a collection of tasks to facilitate a business process and are different from the **Guided Journey** you create.  A Guided Journey is designed to add content to an existing application screen.  So, you'll continue without using a Journey.
+24. Here, you see multiple Journey options.  A journey is a collection of tasks to facilitate a business process and are different from the **Guided Journey** we created.  A Guided Journey is designed to add content to an existing application screen.  So, you'll continue without using a Journey.
 
      > (1) Click the  **Continue Without Journey** button on the upper right portion of the screen.
 
     ![agent dialogue 3](../05c-embed-agent-hcm/images/benimage024.jpg) <br>
 
-25. You are now in the New Absence screen where you could manually create an absence request.  But you want to make this earlier for your users by allow them to ask questions about Absense benefits and have the AI Agent assist with the creation.  You'll use Visual Builder to configure the page an display the Guided Journey.
+25. You are now in the New Absence screen where you could manually create an absence request.  But you want to make this earlier for your users by allowing them to ask questions related to Absence benefits and have the AI Agent assist with the creation of an Absence.  You'll use Visual Builder to configure the page and display the Guided Journey you created.
 
      > (1) Click the **logged in user icon** icon next to the bell icon in the top right corner and then select **Edit Page in Visual Builder Studio** from the resulting dropdown.<br>
 
@@ -215,11 +214,11 @@ In this activity you will use Oracle Fusion AI Agent Studio and Visual Builder t
 
 26. You've opened the screen in Visual Builder Studio Express Mode, which allows you to make some page configurations, including rules for field displays, validations, and page properties.  You'll do the latter.
 
-     > (1) Click the **Configure Page Properies** button in the Business Rules panel on the right side of the screen.<br>
+     > (1) Click the **Configure Page Properties** button in the Business Rules panel on the right side of the screen.<br>
 
     ![agent dialogue 3](../05c-embed-agent-hcm/images/benimage026.jpg) <br>
 
-27. Now, you can simply specify the Guided Journey you'd like to display on this screen.  Perform the actions below.
+27. Now, you can simply specify the Guided Journey you'd like to display on this screen by performing the following steps.
 
      > (1) Common Properties: **Click** the **Common Properties** object in the middle of the screen to expand the properties area.<br>
      > (2) Set Guided Journeys Code at the Page Level:  Select **CIOXX Benefits Guided Journey** from the dropdown where **XX** is replaced with your user number.<br>
@@ -233,7 +232,7 @@ In this activity you will use Oracle Fusion AI Agent Studio and Visual Builder t
 
     ![agent dialogue 3](../05c-embed-agent-hcm/images/benimage028.jpg) <br>
 
-29. The Agent appears in a panel pop-out from the right.  You can interact with your agent via the Ask Oracle field at the bottom of the pop-out panel.  Based on your defined agent, you can ask about your Benefits information and even have the Agent create an absence request for you.
+29. The Agent appears in a sliding panel from the right.  You can interact with your agent via the Ask Oracle field at the bottom of the panel.  Based on your defined agent, you can ask about your Benefits information and even have the Agent create an absence request for you.
 
 
      > In the **Ask Oracle** dialog box at the bottom of the screen, type **Please summarize benefits available to me** and hit the **<****Enter****>** key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
@@ -257,7 +256,7 @@ In this activity you will use Oracle Fusion AI Agent Studio and Visual Builder t
 32. The agent confirms that your request has been created.
 
     > 1. Review AI Agent Response
-    > 2. Click the x icon in the upper right to close the Agent Team screen.
+    > 2. Click the x icon in the upper right to close the Agent Team panel.
 
     ![agent dialogue 3](../05c-embed-agent-hcm/images/benimage031.jpg) <br>
 
