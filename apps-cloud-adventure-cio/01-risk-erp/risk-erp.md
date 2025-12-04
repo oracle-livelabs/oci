@@ -4,7 +4,7 @@
 
 ### **Introduction**
 
-Welcome to Oracle’s AI Adventure for Risk Management.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
+Welcome to Oracle’s AI Adventure for Risk Management. This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
 
 ### **Objectives**
 
@@ -18,10 +18,10 @@ Estimated Time: 15 minutes
 
   ![Risk Objectives](../01-risk-erp/images/riskimage001.jpg)
 
-  At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop
+  At this point, you should be logged into the application with a username cio.xx where xx is a two number code assigned to your laptop
 
 
-2. To begin the request for access, use the Risk Management application
+2. To begin the request for access, use the Risk Management module
 
    > (1) This is the Springboard where you’ll access all features.  Select the **Risk Management** tab menu. <br>
 
@@ -29,13 +29,13 @@ Estimated Time: 15 minutes
 
    ![My Access Requests](../01-risk-erp/images/riskimage002.jpg)
 
-3. This it the beginning of your user request
+3. This is the beginning of your user request
 
     > (1) Press the **Request Access** button.
 
     ![My Access Requests](../01-risk-erp/images/riskimage003.jpg)
 
-4. Use this screen to enter justification for granting the new role
+4. Use this screen to enter justification for requesting the new role
 
     > (1) In the entry field, type,**Accounts Payable department is having a critical shortage of staff** in the text field as shown. <br>
 
@@ -131,13 +131,13 @@ Estimated Time: 15 minutes
 
   ![Access Request Approvals](../01-risk-erp/images/riskimage022.jpg)
 
-15. The role briefing takes the findings and using Generative AI to compose a complete summary of the findings.
+15. The role briefing uses Generative AI to compose a complete summary of the findings.
 
   > (1) Click on **Security Briefing**. <br>
 
   ![Access Request Approvals](../01-risk-erp/images/riskimage023.jpg)
 
-16. Expand the summary section to see how Gen AI helped deliver a narrative description of the violations.
+16. Expand the summary section to see how Generative AI helped deliver a narrative description of the violations.
 
   > (1) Click on the **Right Arrow** icon to expand the **Summary of privileges by functional category** section. <br>
 
@@ -160,13 +160,12 @@ Estimated Time: 15 minutes
 
 ### Summary
 
-Security Console is used to quickly manage user access to the entire Fusion applications suite.
-
+Oracle Risk Management and Compliance documents your policies for identifying and resolving risk in your business processes. It continuously monitors user access for separation of duties and sensitive access, automates role certification, and detects policy violations in transactions and in changes to audited configuration and operational data.
 
 ### Learn More
 
-* [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/25d/secure.html)
-* [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/25d/secure.html)
+* [Risk Management and Compliance](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/25d/index.html)
+* [Risk Management and Compliance - Secure](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/25d/secure.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
 
