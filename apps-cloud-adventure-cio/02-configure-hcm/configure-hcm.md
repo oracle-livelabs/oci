@@ -58,7 +58,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Change Salary Page](../02-configure-hcm/images/image006.png)
 
-5. You will now create new rule that hides Annualized Full-Time Salary because it is repetitive.  You will also hide Compa-Raito since this is mainly used by HR.  You also want to show the action reason in this section of the Change Salary Form.
+5. You will now create new rule that hides Annualized Full-Time Salary because it is repetitive.  You will also hide Compa-Ratio since this is mainly used by HR.  You also want to show the action reason in this section of the Change Salary Form.
 
     ![Change Salary Page 2nd page](../02-configure-hcm/images/image007.png)
 
@@ -183,7 +183,7 @@ Redwood offers a quick way to review your changes as they appear in the applicat
 > (2) A new window will pop up.
 ![Create Validation](../02-configure-hcm/images/image031.png)
 
-15.  You have reentered the Change Salary Form.  Let’s review the changes.  You need to enter the required information before you can move to the next screen.
+15.  You have re-entered the Change Salary Form.  Let’s review the changes.  Enter the required information as below to move to the next screen.
 
 > (1) When does the salary will start?: Type a **future date** <br>
 
@@ -234,4 +234,4 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist; Casey Doody, Cloud Technologist; Sajid Saleem, Master Principal Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, December 2025

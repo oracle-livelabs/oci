@@ -183,7 +183,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 23. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
 
-    [![Cloud Adventure](../00-introduction/images/adventure-checkpoint.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ### Summary
 
@@ -193,11 +193,11 @@ You discovered how effortlessly Fusion Analytics enables the creation of content
 
 ### Learn More
 
-* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/24r3/index.html)
+* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/25r3/index.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 
 * **Author** - Xavier Ramirez, Senior Analytics Solution Engineer, Advanced Technology Services, Nate Weinsaft, Master Principal Solution Engineer, Advanced Technology Services, Sohel Jeelani, Distinguished Analytics Solution Engineer, Advanced Technology Services
 * **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Nate Weinsaft, October 2025
+* **Last Updated By/Date** - Nate Weinsaft, Sajid Saleem; December 2025

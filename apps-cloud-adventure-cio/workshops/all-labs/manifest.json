@@ -15,8 +15,12 @@
             "filename": "../../01-security-ai/security-ai.md"
         },
         {
-            "title": "Adventure 1: Risk Management",
-            "filename": "../../01-risk/risk.md"
+            "title": "Adventure 1: Risk Management (ERP)",
+            "filename": "../../01-risk-erp/risk-erp.md"
+        },
+        {
+            "title": "Adventure 1: Risk Management (SCM)",
+            "filename": "../../01-risk-scm/risk-scm.md"
         },
         {
             "title": "Adventure 2: Configure (HCM)",
@@ -45,6 +49,10 @@
         {
             "title": "Adventure 5b: Enable AI (HCM)",
             "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
+        },
+        {
+            "title": "Adventure 5c: Embed and Enable AI (HCM)",
+            "filename": "../../05c-embed-agent-hcm/embed-agent-hcm.md"
         },
         {
             "title": "Adventure 6a: Create AI (SCM)",

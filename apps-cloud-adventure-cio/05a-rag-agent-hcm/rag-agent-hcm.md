@@ -12,6 +12,14 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 * Create a Benefits Advisor Document Tool that references your benefits policy documents.
 * Create a Benefits Advisor Agent for the above Tool.
 
+### **Pre-requisite**
+
+![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
+As a pre-requisite for this adventure, please download policy document file to your local desktop as below. 
+<br>
+
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
+
 ### **Begin Exercise**
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
@@ -53,15 +61,17 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
       ![Edit tool info](../05a-rag-agent-hcm/images/raghcmimage005.jpg)
 
+6. ![Alert flag](../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download policy document file to your local desktop if you have not already done so as below.
+    <br>
 
-6. ![flag](../gen-images/cautionflagextrasmalltransparent2.png) **Note:**  Now you’ll add the documents to our tool.  The documents you will add are located in the **ai documents** folder on your laptop's Desktop.
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
 
      > (1) Enter the following fields:
     * Name: Enter **CA Benefits Documents** <br>
     * Status: Select **Ready to publish** from the dropdown<br>
     * Description: Enter **Benefits Documents**<br>
 
-     > (2) Click on the ![Drag-and-drop](../gen-images/dandd.jpg) region and then select the file (Cloud Adventure Benefits Highlights.pdf) from the **ai-documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.<br>
+     > (2) Click on the ![Drag-and-drop](../gen-images/dandd.jpg) region and then select the file (CloudAdventureBenefitsHighlights.pdf) from your **Downloads** folder on your PC.<br>
 
      > (3) Click the **Save** ![Save Button](../gen-images/save.jpg) button on the bottom right<br>
 
@@ -71,7 +81,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 7. Now, you'll create your first Agent!  You'll do that from the Agent screen within the AI Agent Studio.
 
-    >  (1) Click the  **Agents** button/tab ![Agent Image](../gen-images/agentteams.jpg) at the bottom of the page.
+    >  (1) Click the  **Agents** button/tab ![Agent Image](../gen-images/agentsbutton.jpg) at the bottom of the page.
 
     ![Agents Page](../05a-rag-agent-hcm/images/raghcmimage007.jpg)
 
@@ -89,7 +99,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     * Product: Select  **Benefits** from the dropdown<br>
     * Maximum Interactions: **10** <br>
     * Description: **Benefits Advisor Agent** <br>
-    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - CA Benefits Advisor Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below. <br>
+    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **copy block** below. Alternatively, prompt text is available in **Prompt - CA Benefits Advisor Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field. <br>
 
     > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
     > (3) Click the Create Button ![Create Button](../gen-images/createb.jpg) <br>
@@ -119,8 +129,8 @@ IMPORTANT GUIDELINES
 10. Now that you have the Agent, you need to add Tools to it.
 
     > (1) Click the **Tools** ![Tools Hammer Icon](../gen-images/toolhammericon.jpg) button on the left icon bar.<br>
-    > (2) Enter **CIOXX** in the Ask Oracle field, where XX is replaced with your user number, and press the **<enter>** key or select **CIOXX** from the resulting dropdown.<br>
-    > (3) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to the CA Benefits Document Tool. You may need to click it twice.
+    > (2) Enter **CIOXX** in the Ask Oracle field, where XX is replaced with your user number, and press the **<****Enter****>** key or select **CIOXX** from the resulting dropdown.<br>
+    > (3) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to the CA Benefits Document Tool. ***You may need to click it twice.***
 
     ![add tool](../05a-rag-agent-hcm/images/raghcmimage010.jpg)
 
@@ -131,13 +141,13 @@ IMPORTANT GUIDELINES
 
     ![Add Agent](../05a-rag-agent-hcm/images/raghcmimage011.jpg)
 
-12. That's it!  If necessary, you can add additional tools to your agent.  But no additional ones are required for this lab, so you can finish the Agent creation.
+12. That's it!  If necessary, you can add additional tools to your agent.  But no additional ones are required for this adventure, so you can finish the Agent creation.
 
     > (1) Click the ![Create button Image](../gen-images/createw.jpg) button on the top right.
 
     ![Create Agent](../05a-rag-agent-hcm/images/raghcmimage012.jpg)
 
-13. You’ve just created your first AI Agent.  In the next lab you will put this agent to work as part of an Agent Team.
+13. You’ve just created your first AI Agent.  In the next Adventure you will put this agent to work as part of an Agent Team.
 
       ![Add Tools Create](../05a-rag-agent-hcm/images/raghcmimage013.jpg) <br>
 
@@ -165,4 +175,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Charlie Moff, Sajid Saleem; December 2025
