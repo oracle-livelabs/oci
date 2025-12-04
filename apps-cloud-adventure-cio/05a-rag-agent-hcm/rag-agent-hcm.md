@@ -61,7 +61,7 @@ As a pre-requisite for this adventure, please download policy document file to y
 
       ![Edit tool info](../05a-rag-agent-hcm/images/raghcmimage005.jpg)
 
-6. ![Alert flag](../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download policy document file to your local desktop as below.
+6. ![Alert flag](../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download policy document file to your local desktop if you have not already done so as below.
     <br>
 
     [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
@@ -81,7 +81,7 @@ As a pre-requisite for this adventure, please download policy document file to y
 
 7. Now, you'll create your first Agent!  You'll do that from the Agent screen within the AI Agent Studio.
 
-    >  (1) Click the  **Agents** button/tab ![Agent Image](../gen-images/agentteams.jpg) at the bottom of the page.
+    >  (1) Click the  **Agents** button/tab ![Agent Image](../gen-images/agentsbutton.jpg) at the bottom of the page.
 
     ![Agents Page](../05a-rag-agent-hcm/images/raghcmimage007.jpg)
 
@@ -99,7 +99,7 @@ As a pre-requisite for this adventure, please download policy document file to y
     * Product: Select  **Benefits** from the dropdown<br>
     * Maximum Interactions: **10** <br>
     * Description: **Benefits Advisor Agent** <br>
-    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - CA Benefits Advisor Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below. <br>
+    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **copy block** below. Alternatively, prompt text is available in **Prompt - CA Benefits Advisor Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field. <br>
 
     > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
     > (3) Click the Create Button ![Create Button](../gen-images/createb.jpg) <br>
