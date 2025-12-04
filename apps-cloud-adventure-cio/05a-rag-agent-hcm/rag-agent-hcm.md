@@ -18,7 +18,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 As a pre-requisite for this adventure, please download policy document file to your local desktop as below. 
 <br>
 
-[Right-click here and select Download Link File as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
 
 ### **Begin Exercise**
 
@@ -64,7 +64,7 @@ As a pre-requisite for this adventure, please download policy document file to y
 6. ![Alert flag](../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download policy document file to your local desktop as below.
     <br>
 
-    [Right-click here and select Download Link File as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
 
      > (1) Enter the following fields:
     * Name: Enter **CA Benefits Documents** <br>
