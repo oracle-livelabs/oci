@@ -4,7 +4,7 @@
     "tutorials": [
  
         {
-            "title": "Introduction: Building an extension to a pre-defined AI Agent Studio template",
+            "title": "Introduction: Build an extension to a pre-defined AI Agent Studio template",
             "filename": "../../00-introduction/introduction.md"
         },
 

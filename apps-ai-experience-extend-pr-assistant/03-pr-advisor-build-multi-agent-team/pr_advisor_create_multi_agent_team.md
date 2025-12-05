@@ -102,15 +102,20 @@ Supervisor agents act as a central coordinator that orchestrates a team of other
    > Scroll back down to see the response.  Notice the deep link is included.<br/>
    > If you do not see the link ask:
    ```txt
+   <copy>
    Can you provide a link to this requisition?
+   </copy>
    ```
+
 
    ![invoice response](images/image012.png " ")
 
    > Now ask the following question:
 
    ```txt
+   <copy>
    Does the supplier have this item in stock?
+   </copy>
    ```
    > Notice we didn't have to tell the agent which item or which supplier.  It understands the context of our requests:
 
