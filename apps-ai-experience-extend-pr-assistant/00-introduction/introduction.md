@@ -16,4 +16,4 @@ This Activity Guide will lead you along the way through a set of modules, where 
 [](youtube:H-C5dH3w1Dg " ")
 
 
-Proceed to the next module to get started!
+[Proceed to the first module to get started!] (#next)

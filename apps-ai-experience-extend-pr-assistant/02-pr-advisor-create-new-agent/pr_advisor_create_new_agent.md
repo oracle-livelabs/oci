@@ -91,7 +91,9 @@ Understand how to build a simple prompt to collect relevant information from an 
 
 You should now have an understanding of what an **External REST API Tool** does, and how to develop a prompt to successfully pass data back and forth with it.
 
-**You have successfully completed the Activity!**
+**You have successfully completed Module2!**
+
+[Proceed to the next module](#next)
 
 ## Acknowledgements
 * **Author** - Rick Beck, Master Principal SaaS Platform Technologist, NAA Office of Technology and Innovation
