@@ -15,5 +15,7 @@ This Activity Guide will lead you along the way through a set of AI Experiences,
 2.  Learn How to Interact with AI-Powered Functions
 3.  Identify Tangible Business Benefits and Best Practices for Adoption
 
+[](youtube:H-C5dH3w1Dg " ")
 
+[Proceed to the first module to get started!] (#next)
 

@@ -115,6 +115,8 @@ Congratulations!!  You have completed the **Enterprise Resource Planning** set o
 
    > Click the **Home** icon on the ribbon at the top of the page to return to the main springboard page.
 
+[Click here to proceed to the next module](#next)
+
 ## Summary
 
 By following these steps, you successfully walked thru the AI capabilities available to an employee within Fusion Enterprise Resource Planning (ERP) that will enhance their efficiency and provide them a more engaging experience. Embrace the future of ERP with the power of AI!

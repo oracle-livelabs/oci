@@ -80,6 +80,7 @@ The sales VP values positive feedback but also likes to give his team constructi
 
    > Click the **Home** icon on the ribbon at the top of the page to return to the main springboard page.
 
+[Click here to proceed to the next module](#next)
 
 ## Summary
 
