@@ -124,7 +124,7 @@ After this call, ListIndexTool and SearchIndexTool are immediately available thr
 
 OpenSearch offers a broader set of tools you can register; see the official [Tools](https://docs.opensearch.org/latest/ml-commons-plugin/agents-tools/tools/index/) list for the full menu and details.
 
-To Expose a more detailed list of MCP tools for your opensearch server, execute the command below. You can add the tools one by one, or package them all into a single command.  Be sure to configure the ModelIs, text fields and embedding fields to match the settings for your own index:
+To Expose a more detailed list of MCP tools for your opensearch server, execute the command below. You can add the tools one by one, or package them all into a single command.  Be sure to configure the model_ids, text fields and embedding fields to match the settings for your own index:
 
 
 ```json
@@ -529,7 +529,7 @@ ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 -L 1
 
   - Click on  the default model shown to open the llm model config window.
   - Select an llm model provider
-  - Provide the API token to authenticate and connect to your preferred provider (e.g: Claude, Amazon, OCI OCA, etc.). This will expose all the llm models vailable from that provider
+  - Provide the API token to authenticate and connect to your preferred provider (e.g: Claude, Amazon, OCI OCA, etc.). This will expose all the llm models available from that provider
   - Select the specific llm model you want to use with Cline to Plan and Execute in an Agentic fashion. You have the ability configure a different model for planning and execution.
 
 ![install cline on VS Code](images/configure-cline-7.png)
