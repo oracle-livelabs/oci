@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will be creating a Data Prepper pipeline to automate data ingestion into you opensearch index.
+In this lab, you will be creating a Data Prepper pipeline to automate data ingestion into your opensearch index.
  You will be creating 2 pipelines: one for processing a template app knowledge base, and another for streaming app live logs.
 
  The ultimate goal of the workshop is to be able to leverage Agentic framework to perform Root Cause Analysis (RCA) seamlessly without writing code. The RCA part will be demonstrated in the subsequent labs.
@@ -182,8 +182,8 @@ PUT /app_knowledge_base
                     "engine":"lucene",
                     "space_type": "l2",
                     "parameters":{
-                        "m":512,
-                        "ef_construction": 245
+                        "m":32,
+                        "ef_construction": 200
                     }
                 }
             },
