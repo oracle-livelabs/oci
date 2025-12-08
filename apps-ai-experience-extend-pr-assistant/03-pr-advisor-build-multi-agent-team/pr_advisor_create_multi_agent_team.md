@@ -119,7 +119,7 @@ Supervisor agents act as a central coordinator that orchestrates a team of other
    ```
    > Notice we didn't have to tell the agent which item or which supplier.  It understands the context of our requests:
 
-   ![supplier inventory inquiry response](images/image012.png " ")
+   ![supplier inventory inquiry response](images/image013.png " ")
 
    **Congratulations!**  You have successfully created and tested your extended agent team!  
    **You have successfully completed the Module!**
