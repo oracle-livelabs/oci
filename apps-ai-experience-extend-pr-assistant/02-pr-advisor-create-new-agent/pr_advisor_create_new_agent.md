@@ -35,7 +35,7 @@ Understand how to build a simple prompt to collect relevant information from an 
     ```txt
     <copy>
     Use the AIE Supplier Stock API tool to determine if a supplier has an item in stock.
-    Send the Supplier Name as {supplier) and Item Description as {item}
+    Send the Supplier Name as {supplier} and Item Description as {item}
     Respond with the itemStatus and quantity. If the itemStatus is Backordered then respond with the availability date.
     If no data is returned, then respond that no information is currently available.
     </copy>
