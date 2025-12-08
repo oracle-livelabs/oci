@@ -102,6 +102,7 @@ In this exercise we will explore some of the embedded AI features available in F
 
    ![Generate eMail](images/image016.png " ")
    ![AI in Action](images/image005.png " ")
+
 Congratulations!!  You have completed the **Customer Experience** set of embedded AI flows.  
    
    > Click the **Home** icon on the ribbon at the top of the page to return to the main springboard page.
