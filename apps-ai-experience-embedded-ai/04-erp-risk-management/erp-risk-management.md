@@ -29,7 +29,7 @@ As part of quarterly controls, the Sales VP needs to certify that only authorize
 
    ![Application Home](images/image042.png " ")
 
-   > -   Click on **Dropdown arrow** under the **Links** column
+   > -   For the row, where **Name** column value is **FY25/Q3/Procure to Pay**, click on **Dropdown arrow** under the **Links** column
    > -   Select **Certifier Worksheet** menu option
 
    ![Access Certications](images/image043.png " ")

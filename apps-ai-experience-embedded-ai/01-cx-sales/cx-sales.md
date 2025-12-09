@@ -25,7 +25,7 @@ In this exercise we will explore some of the embedded AI features available in F
 
    ![Application Home](images/image002.png " ")
 
-   > Select the first **opportunity** in the list.
+   > Select the first **opportunity** in the list (Account: **Antero Midstream Fitness Center**).
 
    ![Opportunity Search](images/image003.png " ")
 
