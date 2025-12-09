@@ -25,7 +25,7 @@ You are easily able to find areas you’re looking for within the system utilizi
    
    >  Using the Global Search bar at the top, enter *Feedback Center - Me* and click to navigate to the **Feedback Center**
 
-   ![Global Search](images/image018.png " ")
+   ![Use Global Search for Feedback Center](images/image018.png " ")
    
  Once in the feedback center, you’ll be able to see the history of feedback given to you, or feedback that you’ve given to others. This allows for a one stop shop for users to view all their related feedback.  
    
@@ -40,7 +40,7 @@ You are easily able to find areas you’re looking for within the system utilizi
 
    > Click the **Give Feedback** button
 
-   ![Give Feedback](images/image020.png " ")
+   ![Give Feedback Button](images/image020.png " ")
 
 2. Search for the Sales Rep 
 
@@ -49,7 +49,7 @@ There are different options when it comes to who gets feedback, and how it’s v
    > -	Search & select employee: *Natalie Sales Rep*
    > -   Define visibility: *Managers and Natalie Sales Rep*
 
-   ![Select Employee](images/image021.png " ")  
+   ![Select Employee to give Feedback for](images/image021.png " ")  
 
 3. Enter your feedback details for the Sales Rep
 
@@ -58,7 +58,14 @@ Utilizing the built in AI, it makes it much easier to issue feedback. Instead of
    ![AI In Action](images/image005.png " ")
 
    > -   Click into the feedback text box 
-   > -	Type in “*Great job with Antero. You showed ability to understand their needs and know our products well.*” 
+   > -	Enter the text below
+   
+   ```
+   <copy>
+   Great job with Antero. You showed ability to understand their needs and know our products well.
+   </copy>
+   ```
+
    > -   Click on the **AI Assist** button
 
    ![Give Feedback](images/image022.png " ")  
@@ -71,7 +78,14 @@ The sales VP values positive feedback but also likes to give his team constructi
 
    > Add in additional context
    > -   Add a space beneath the initial paragraph
-   > -   Type in something along the lines of “*improving ability to always set next steps to drive towards progression*”
+   > -   Enter text similar to the line below
+   
+```
+<copy>
+improving ability to always set next steps to drive towards progression
+</copy>
+```
+
    > -   Click on the **AI Assist** button
 
    ![Give Feedback](images/image023.png " ")  
@@ -80,6 +94,7 @@ The sales VP values positive feedback but also likes to give his team constructi
 
    > Click the **Home** icon on the ribbon at the top of the page to return to the main springboard page.
 
+[Click here to proceed to the next module](#next)
 
 ## Summary
 

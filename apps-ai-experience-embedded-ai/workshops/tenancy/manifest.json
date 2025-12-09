@@ -10,31 +10,31 @@
 
         
         {
-            "title": "Module 1: Use pre-built AI features in Fusion Customer Experience to manage a Sales Opportunity",
+            "title": "Lab 1: Use pre-built AI features in Fusion Customer Experience to manage a Sales Opportunity",
             "filename": "../../01-cx-sales/cx-sales.md"
         },
 
 
         {
-            "title": "Module 2: Provide Feedback for a colleague leveraging built in Generative AI capabilities",
+            "title": "Lab 2: Provide Feedback for a colleague with built in Generative AI capabilities",
             "filename": "../../02-hcm-give-feedback/hcm-give-feedback.md"
         },
        
 
         {
-            "title": "Module 3: Explore Procurement AI Agents and how they streamline the requisition process",
+            "title": "Lab 3: Explore Procurement AI Agents and how they streamline the requisition process",
             "filename": "../../03-scm-purchase-requisition/scm-purchase-requisition.md"
         },
 
        
         {
-            "title": "Module 4: Examine how Generative AI simplifies the decision process within Risk Management",
+            "title": "Lab 4: Examine how Generative AI simplifies the decision process within Risk Management",
             "filename": "../../04-erp-risk-management/erp-risk-management.md"
         },
 
 
         {
-            "title": "Module 5: Explore Predictive & Generative AI capabilities within Enterprise Performance Management",
+            "title": "Lab 5: Explore Predictive & Generative AI capabilities within Enterprise Performance Management",
             "filename": "../../05-erp-enterprise-performance-management/erp-enterprise-performance-management.md"
         },
 

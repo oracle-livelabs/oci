@@ -45,7 +45,7 @@ The sales VP is unsure what he’s allowed to order, he utilizes the **Procureme
 
    > In the agent panel, click the **How do I order a nonstandard laptop?** option.
 
-   ![PPA Panel](images/image029.png " ")
+   ![Procurement Policy Advisor Panel](images/image029.png " ")
 
    ![AI In Action](images/image005.png " ")
 
@@ -55,11 +55,11 @@ The agent then lists out the step-by-step process for ordering a non-standard la
 
    > Click on the **Sources** button
 
-   ![PPA Sources](images/image030.png " ")   
+   ![Procurement Policy Advisor Sources](images/image030.png " ")   
 
 The agent will also provide sources so users can view the actual documentation that outlines the specific policy that is relevant to their request. 
 
-   ![PPA Sources](images/image031.png " ")
+   ![Procurement Policy Advisor Sources](images/image031.png " ")
 
    > **Optional:** Click on the first source to see the actual source text.
 
@@ -75,7 +75,7 @@ You are able to ask the agent questions about the conversation to get more conte
 
    > Close the chat by clicking the **X** in the top right corner.
 
-   ![PPA Contact](images/image033.png " ")
+   ![Procurement Policy Advisor Contact](images/image033.png " ")
 
 ## Task 3: Check the Purchase Requisition's Status
 
@@ -85,11 +85,11 @@ The Sales VP wants to check on the status of his laptop purchase.  He is going t
 
    > Select the second banner item by clicking on the **second dot** under the banner.
 
-   ![RSA Ask Oracle](images/image034.png " ")
+   ![Requisition Status Advisor Ask Oracle](images/image034.png " ")
 
 > Click the **Ask Oracle** button
 
-   ![RSA Ask Oracle](images/image035.png " ")
+   ![Requisition Status Advisor Ask Oracle](images/image035.png " ")
 
 The advisor provides details around open requisitions. It can be used by end users that are actively requisitioning items, or by a procurement specialist that is responsible for hundreds of requisitions. 
 
@@ -99,13 +99,13 @@ The AI agent makes it much easier to find requisitions that need action taken. T
 
    > In the agent panel, click the **What requisitions are in pending approval status?”** option.
 
-   ![RSA Pend Approval](images/image036.png " ")
+   ![Requisition Status Advisor Pend Approval](images/image036.png " ")
 
 The requisition for the laptop the VP ordered will pop up with full details and he has the ability to drill into the requisition. 
 
    ![AI In Action](images/image005.png " ")
 
-   ![RSA Pend Approval Reqs](images/image037.png " ")
+   ![Requisition Status Advisor Pending Approval Reqs](images/image037.png " ")
    
    > **Optional:** 
    > -   Click the hyperlinked ‘**here**’ option to view the requisition. A new tab will open presenting the requisition details.
@@ -115,25 +115,27 @@ While he is in here, he wants to view other requisitions that require action. Th
 
    > In the agent chat box on the bottom, ask “*What reqs are on hold?*”
 
-   ![RSA Reqs On Hold](images/image038.png " ")
+   ![Requisition Status Advisor Reqs On Hold](images/image038.png " ")
 
    > **Optional:** 
    > -   Click the hyperlinked ‘**here**’ option to view the requisition. A new tab will open presenting the requisition details.
    > -   Once you've completed your review, close the broser tab and return to the tab with the agent. 
 
-   ![RSA Reqs On Hold](images/image039.png " ")
+   ![Requisition Status Advisor Reqs On Hold](images/image039.png " ")
 
 You can now view more details regarding this requisition, edit the requisition, and confirm receipt of the items once received so the invoice can be paid to the Supplier.
 
    > **Optional:** view more information around the requisition as well as more details around the item. 
 
-   ![Requisition](images/image040.png " ")
+   ![Requisition View](images/image040.png " ")
 
 Now that the Sales VP has finished researching his requisitions, he now wants to ensure that the correct people in his organization have appropriate access to the requisition tools.</br>
 
 Congratulations!!  You have completed the **Supply Chain Management** set of embedded AI flows.
 
    > Click the **Home** icon on the ribbon at the top of the page to return to the main springboard page.
+
+[Click here to proceed to the next module](#next)
 
 ## Summary
 

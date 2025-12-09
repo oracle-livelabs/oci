@@ -25,7 +25,7 @@ In this exercise we will explore some of the embedded AI features available in F
 
    ![Application Home](images/image002.png " ")
 
-   > Select the first **opportunity** in the list.
+   > Select the first **opportunity** in the list (Account: **Antero Midstream Fitness Center**).
 
    ![Opportunity Search](images/image003.png " ")
 
@@ -89,20 +89,25 @@ In this exercise we will explore some of the embedded AI features available in F
 
    ![Send eMail](images/image015.png " ")
 
-   > -   Add a subject like “Loan Approval”
-   > -   In the AI bar at the bottom of the email editor type, "*Last week, Alex and I agreed on a 150,000 loan that Alex is seeking to expand to a new location. Create an email telling Alex it's time to meet and reviews terms and conditions of that loan.*”
-
-   ![AI in Action](images/image005.png " ")
+   > -   Add a **Subject** like “*Loan Approval*”
+   > -   In the AI bar at the bottom of the email editor type in the text below
+   
+```txt
+<copy>Last week, Alex and I agreed on a 150,000 loan that Alex is seeking to expand to a new location. Create an email telling Alex it's time to meet and reviews terms and conditions of that loan.
+</copy>
+```
 
    > -   Click **Generate** button and see **AI in Action**
    > -   **Send** email. 
 
    ![Generate eMail](images/image016.png " ")
+   ![AI in Action](images/image005.png " ")
 
 Congratulations!!  You have completed the **Customer Experience** set of embedded AI flows.  
    
    > Click the **Home** icon on the ribbon at the top of the page to return to the main springboard page.
 
+[Click here to proceed to the next module](#next)
 
 ## Summary
 
