@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this exercise we will copy an existing agent template and get an understanding of the various components and the prompts that instruct the large language model (LLM) how to execute the agent team.
+In this lab we will copy an existing agent template and get an understanding of the various components and the prompts that instruct the large language model (LLM) how to execute the agent team.
 
 Estimated Time: 15 minutes
 
@@ -137,10 +137,10 @@ Understand the structure of a pre-built agent template and agent tools in AI Age
    
 ## Summary
 
-You should now have a basic understanding of the tools and prompts provided by the pre-built Purchase Requisition Status Advisor agent teamplate.<br/>
-In the next module we will create a custom agent to expand the capabilities of this agent team.
+You should now have a basic understanding of the tools and prompts provided by the pre-built Purchase Requisition Status Advisor agent template.<br/>
+In the next lab we will create a custom agent to expand the capabilities of this agent team.
 
-[Proceed to the next module](#next)
+[Proceed to the next lab](#next)
 
 ## Acknowledgements
 * **Author** - Rick Beck, Master Principal SaaS Platform Technologist, NAA Office of Technology and Innovation

@@ -8,7 +8,7 @@ Estimated Completion Time: 45 minutes
 
 ### **Objectives**
 
-This Activity Guide will lead you along the way through a set of modules, where you will experience:
+This Activity Guide will lead you along the way through a set of labs, where you will experience:
 1.	Investigating pre-built AI Agent Templates and pre-defined components
 2.	Extend a pre-built template by create a custom agent.  Understand a simple prompt to instruct an LLM (Large Language Model) how to use an External REST API tool to extract information from an external system
 3.  Assemble a powerful agent team and test your work.  All without writing a single line of code!
@@ -16,7 +16,7 @@ This Activity Guide will lead you along the way through a set of modules, where 
 [](youtube:H-C5dH3w1Dg " ")
 
 
-[Proceed to the first module to get started!] (#next)
+[Proceed to the first lab to get started!] (#next)
 
 ## Acknowledgements
 * **Author** - Rick Beck, Master Principal SaaS Platform Technologist, NAA Office of Technology and Innovation

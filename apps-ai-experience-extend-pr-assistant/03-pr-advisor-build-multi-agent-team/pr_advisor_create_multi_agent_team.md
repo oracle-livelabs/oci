@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Now that you've build a new custom agent in the last module, we will add the agent to our copy of the **Purchase Requisition Status Adivsor** template and create a supervisor agent to delegate the tasks to the appropriate agent(s).
+Now that you've build a new custom agent in the last lab, we will add the agent to our copy of the **Purchase Requisition Status Adivsor** template and create a supervisor agent to delegate the tasks to the appropriate agent(s).
 Finally we'll test the completed agent team to understand what debugging capabilities are provided during the development process.
 
 Estimated Time: 15 minutes
@@ -122,7 +122,7 @@ Supervisor agents act as a central coordinator that orchestrates a team of other
    ![supplier inventory inquiry response](images/image013.png " ")
 
    **Congratulations!**  You have successfully created and tested your extended agent team!  
-   **You have successfully completed the Module!**
+   **You have successfully completed the Lab!**
 ## Summary
    
    You now have an understanding of how to extend a pre-defined template.<br/>

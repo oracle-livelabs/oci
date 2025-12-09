@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this exercise we will add a new agent that will make an external REST web service call to check supplier inventory levels
+In this lab we will add a new agent that will make an external REST web service call to check supplier inventory levels
 
 Estimated Time: 15 minutes
 
@@ -91,9 +91,9 @@ Understand how to build a simple prompt to collect relevant information from an 
 
 You should now have an understanding of what an **External REST API Tool** does, and how to develop a prompt to successfully pass data back and forth with it.
 
-**You have successfully completed Module2!**
+**You have successfully completed Lab 2!**
 
-[Proceed to the next module](#next)
+[Proceed to the next lab](#next)
 
 ## Acknowledgements
 * **Author** - Rick Beck, Master Principal SaaS Platform Technologist, NAA Office of Technology and Innovation

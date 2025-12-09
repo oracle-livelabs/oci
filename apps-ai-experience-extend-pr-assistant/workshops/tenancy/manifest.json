@@ -9,18 +9,18 @@
         },
 
         {
-            "title": "Module 1: Examine the pre-built Purchase Requisition Status Advisor Agent template and components",
+            "title": "Lab 1: Examine the pre-built Purchase Requisition Status Advisor Agent template and components",
             "filename": "../../01-pr-advisor-explore/pr_advisor_explore.md"
         },
 
 
         {
-            "title": "Module 2: Create a new custom agent to check supplier inventory via API call",
+            "title": "Lab 2: Create a new custom agent to check supplier inventory via API call",
             "filename": "../../02-pr-advisor-create-new-agent/pr_advisor_create_new_agent.md"
         },
        
         {
-            "title": "Module 3: Build and test a multi-agent team",
+            "title": "Lab 3: Build and test a multi-agent team",
             "filename": "../../03-pr-advisor-build-multi-agent-team/pr_advisor_create_multi_agent_team.md"
         },
        
