@@ -1,6 +1,6 @@
 # Introduction
 
-## About this AI Experience lab exercise
+## About this Workshop
 
 Make your AI ideas a reality: Learn how to customize, build, and deploy AI agents using templates that help automate and simplify agent creation.
 
@@ -17,3 +17,8 @@ This Activity Guide will lead you along the way through a set of modules, where 
 
 
 [Proceed to the first module to get started!] (#next)
+
+## Acknowledgements
+* **Author** - Rick Beck, Master Principal SaaS Platform Technologist, NAA Office of Technology and Innovation
+* **Contributors** -  Tim Sullivan
+* **Last Updated By/Date** - Rick Beck, December 2025, based on Fusion 25D
