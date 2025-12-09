@@ -1,10 +1,10 @@
 {
-    "workshoptitle": "Hands on demos for Oracle Fusion AI",
+    "workshoptitle": "Purchase Requisition Advisor Template Extension",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
  
         {
-            "title": "Demo 1: HCM AI Assist Goals",
+            "title": "Demo 1: Examine the pre-built Purchase Requisition Status Advisor Agent components",
             "filename": "../../01-hcm-ai-assist-goals/hcm_ai_assist_goals.md"
         },
 
