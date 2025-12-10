@@ -1,4 +1,4 @@
-# SCM - Purchase Requisition
+# Explore Procurement AI Agents and how they streamline the requisition process
 
 ## Introduction
 
@@ -30,9 +30,9 @@ On the same sales trip, the sales VP damaged his laptop and needs to order a new
    
 ## Task 2: Explore the Purchase Requisition UI and Ask Oracle
 
-   From here, you can view the details around your recent requisitions and see brief details of their status and where they are at in the requisition process. This is also the area where you can search the entire catalogue of items.
-
 1. Open the **Procurement Policy Advisor** AI agent.
+
+   From here, you can view the details around your recent requisitions and see brief details of their status and where they are at in the requisition process. This is also the area where you can search the entire catalogue of items.</br>
 
    The sales VP is unsure what he’s allowed to order, he utilizes the **Procurement Policy Advisor** to learn about his options. This is an embedded agent that users can talk with to find more information around the companies procurement policies including what items they are allowed to order, warranty information, etc. 
 
@@ -78,10 +78,9 @@ On the same sales trip, the sales VP damaged his laptop and needs to order a new
 
 ## Task 3: Check the Purchase Requisition's Status
 
+1. Open the **Requisition Status Advisor** AI agent.
 
    The Sales VP wants to check on the status of his laptop purchase.  He is going to use another agent, **Requestion Status Advisor**, that’s embedded into the requisition dashboard.
-
-1. Open the **Requisition Status Advisor** AI agent.
 
       > Select the second banner item by clicking on the **second dot** under the banner.
 
@@ -144,6 +143,6 @@ By following these steps, you successfully walked thru the AI capabilities avail
 **You have successfully completed the Activity!**
 
 ## Acknowledgements
-* **Author** - Jimmy Dwyer, Oracle North America
-* **Contributors** -  Piyush Ruparelia, Oracle North America
+* **Author** - Michael Schlichting, Oracle North America
+* **Contributors** -  Jimmy Dwyer, Piyush Ruparelia, Oracle North America
 * **Last Updated By/Date** - Piyush Ruparelia, November 2025, based on Fusion 25D

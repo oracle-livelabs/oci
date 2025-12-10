@@ -1,4 +1,4 @@
-# Enterprise Performance Management - Anomaly Insights
+# Explore Predictive & Generative AI capabilities within Enterprise Performance Management
 
 ## Introduction
 
@@ -31,13 +31,14 @@ In this exercise, you will learn how to use Insights to identify anomalies, expl
 
 2. Review the insights presented on the dashboard
 
-   The dashboard highlights revenue performance across regions and major product lines.  Change the drop down on the line graph from “**Total Sales Regions**” to “**Sales US East**” and “**Sales US West**”</br></br>
-   It seems the revenue for “**Sales US – East**” has increased while in contrast “**Sales US – West**” shows declining revenue.  This situation requires further investigation.  Let’s review this leveraging the Insights.
-
+   The dashboard highlights revenue performance across regions and major product lines. </br>
+ 
       > 1.	On the line graph, click on the drop down titled “**Total Sales Regions**”
       > 2.	Select “**Sales US – West**” and review.
       > 3.	Select “**Sales US – East**”  and review.
       > 4.	When finished, click on the “**Insights**” tab on the horizontal bar above the dashboard.
+
+  It seems the revenue for “**Sales US – East**” has increased while in contrast “**Sales US – West**” shows declining revenue.  This situation requires further investigation.  Let’s review this leveraging the Insights.
 
       ![Insights Data Dashboard](images/image054.jpg " ")
 
@@ -64,7 +65,7 @@ In this exercise, you will learn how to use Insights to identify anomalies, expl
 
       ![Insights Data Search](images/image057.png " ")
 
-   The model has generated an anomaly for Sales US Eastern region’s “Credit Lines and Leases” products.  This product portfolio has several product lines, and the anomaly is generated at total level.
+   The model has generated an anomaly for Sales US Eastern region’s “Credit Lines and Leases” products.  This product portfolio has several product lines, and the anomaly is generated at the total level.
 
       > Click the **Details** link to open the selected Insight.
 
@@ -88,35 +89,37 @@ In this exercise, you will learn how to use Insights to identify anomalies, expl
 
 ## Task 3: Determine the cause of the exceptional results
 
+1. Create a Generative AI Summary
+
    You want to determine what drove Sales East's exceptional results.  Let us utilize Generative AI to create a summary that identifies which specific products and lines were responsible for this unusual performance.</br>
 
    Insights also provides the ability to use Generative AI (GenAI) to automatically generate narrative summaries for a parent level Insight.  The entities / products contributing to the anomaly is automatically detected and narrated in a organized, automated summary. 
 
-   > 1.	Navigate back to Insights listing page by clicking on the “**Insights**” tab at the bottom-left hand side of the screen.
+      > 1.	Navigate back to Insights listing page by clicking on the “**Insights**” tab at the bottom-left hand side of the screen.
       
-   > 2.	Select the Insight by putting a **check mark into the box** for the Insight. 
+      > 2.	Select the Insight by putting a **check mark into the box** for the Insight. 
       
-   > 3.	Open the **Actions** dropdown and select **Summarize**.
+      > 3.	Open the **Actions** dropdown and select **Summarize**.
 
-   ![Insights Data Summarize Action](images/image060.png " ")
+      ![Insights Data Summarize Action](images/image060.png " ")
 
-   ![Insights Data](images/image005.png " ")
+      ![Insights Data](images/image005.png " ")
 
    Complete the fields as described below.
-   > 1.	Provide a name for the **Summary**
-   > 2.	Select the “**Anomaly**” **Insight Type** from the dropdown
-   > 3.	Other parameters are automatically populated based on the Insight selection
-   > 4.	Click the **Run** button
-   (It may take a short time to complete the Generative AI summary.)
+      > 1.	Provide a name for the **Summary** starting with your initials: *xxx Insight Anomaly*
+      > 2.	Select the “**Anomaly**” **Insight Type** from the dropdown
+      > 3.	Other parameters are automatically populated based on the Insight selection
+      > 4.	Click the **Run** button
+      (It may take a short time to complete the Generative AI summary.)
 
-   ![Insights Data Dialog Box](images/image061.png " ")
+      ![Insights Data Dialog Box](images/image061.png " ")
 
    You are presented with a ready-to-use summary explaining how the performance at individual entity / product level contributed to the overall anomaly.  This summary helps zero in on the root cause for the Insight and makes it easy to collaborate across functions.  Some of the product lines have contributed significantly for the anomaly. </br>
 
    This summary can be taken to reports and/or presentations as ready to use content with all relevant data points.
 
-   ![Insights Data Generated Summary](images/image062.png " ")
-   ![Insights Data](images/image005.png " ")
+      ![Insights Data Generated Summary](images/image062.png " ")
+      ![Insights Data](images/image005.png " ")
 
 ## Task 4: Re-open the Insight and add comments (Optional)
 
@@ -163,6 +166,6 @@ By completing these steps, you have explored the AI features available in Enterp
 **You have successfully completed the Activity!**
 
 ## Acknowledgements
-* **Author** - Jimmy Dwyer, Oracle North America
-* **Contributors** -  Piyush Ruparelia, Oracle North America
+* **Author** - Giridhar Kumar R, Oracle North America
+* **Contributors** -  Pat McCarty, Jimmy Dwyer, Oracle North America
 * **Last Updated By/Date** - Piyush Ruparelia, November 2025, based on Fusion 25D

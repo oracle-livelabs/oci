@@ -1,4 +1,4 @@
-# HCM - Give Feedback
+# Provide Feedback for a colleague with built in Generative AI capabilities
 
 ## Introduction
 
@@ -103,6 +103,6 @@ By following these steps, you successfully walked thru the AI capabilities avail
 **You have successfully completed the Activity!**
 
 ## Acknowledgements
-* **Author** - Jimmy Dwyer, Oracle North America
-* **Contributors** -  Piyush Ruparelia, Oracle North America
+* **Author** - Shane Stockings, Oracle North America
+* **Contributors** -  Jimmy Dwyer, Piyush Ruparelia, Oracle North America
 * **Last Updated By/Date** - Piyush Ruparelia, November 2025, based on Fusion 25D

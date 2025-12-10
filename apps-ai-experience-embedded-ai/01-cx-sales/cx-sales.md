@@ -1,4 +1,4 @@
-# CX - Sales
+# Use pre-built AI features in Fusion Customer Experience to manage a Sales Opportunity
 
 ## Introduction
 
@@ -117,6 +117,6 @@ By completing these steps, you have explored the AI features available to sales 
 **You have successfully completed the Activity!**
 
 ## Acknowledgements
-* **Author** - Jimmy Dwyer, Oracle North America
-* **Contributors** -  Piyush Ruparelia, Oracle North America
+* **Author** - Brittney Paone, Oracle North America
+* **Contributors** -  Jimmy Dwyer, Piyush Ruparelia, Oracle North America
 * **Last Updated By/Date** - Piyush Ruparelia, November 2025, based on Fusion 25D

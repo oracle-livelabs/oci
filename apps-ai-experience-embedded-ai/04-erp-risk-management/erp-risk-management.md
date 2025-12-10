@@ -1,4 +1,4 @@
-# ERP - Risk Management
+# Examine how Generative AI simplifies the decision process within Risk Management
 
 ## Introduction
 
@@ -60,11 +60,11 @@ Now that the sales VP has finished researching his requisitions, he now wants to
 
 ## Task 2: Complete Review and Complete Certification Tasks
 
+1. Download detailed Role Briefing document.
+
    If the sales VP or an auditor ever needs detailed evidence, he can instantly export this entire Role Briefing as a formatted report package — no manual screenshots or separate documentation required.</br>
 
    With just one click, the system generates a comprehensive PDF containing all of the same insights — the AI-generated summary, privilege details, usage history, and risk indicators — neatly organized by section.
-
-1. Download detailed Role Briefing document.
 
       > -   **Scroll back to the top** of the Role Briefing
       > -   Select the **download Icon**
@@ -121,6 +121,6 @@ By following these steps, you successfully walked thru the AI capabilities avail
 **You have successfully completed the Activity!**
 
 ## Acknowledgements
-* **Author** - Jimmy Dwyer, Oracle North America
-* **Contributors** -  Piyush Ruparelia, Oracle North America
+* **Author** - Brittani Virgilio, Oracle North America
+* **Contributors** -  Jimmy Dwyer, Piyush Ruparelia, Oracle North America
 * **Last Updated By/Date** - Piyush Ruparelia, November 2025, based on Fusion 25D
