@@ -4,6 +4,7 @@
 
 *We install NVIDIA GPU Operator that manages NVIDIA GPU resources in a Kubernetes cluster and automates tasks related to bootstrapping GPU nodes*
 
+
 Estimated Lab Time: 20 minutes
 
 

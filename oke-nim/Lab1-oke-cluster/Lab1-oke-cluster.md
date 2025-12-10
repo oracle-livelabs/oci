@@ -4,6 +4,7 @@
 
 *Deploy an Kubernetes Cluster on OCI with our managed Kubernetes Engine OKE*
 
+
 Estimated Lab Time: 20 minutes
 
 ### Why Deploy NIM on Oracle Kubernetes Engine (OKE)?
