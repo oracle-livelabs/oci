@@ -7,79 +7,79 @@
             "filename": "../../00-introduction/introduction.md"
         },
         {
-            "title": "Adventure 1: Security (ERP)",
+            "title": "Lab 1: Security (ERP)",
             "filename": "../../01-security-erp/security-erp.md"
         },
         {
-            "title": "Adventure 1: Security (AI Access)",
+            "title": "Lab 1: Security (AI Access)",
             "filename": "../../01-security-ai/security-ai.md"
         },
         {
-            "title": "Adventure 1: Risk Management (ERP)",
+            "title": "Lab 1: Risk Management (ERP)",
             "filename": "../../01-risk-erp/risk-erp.md"
         },
         {
-            "title": "Adventure 1: Risk Management (SCM)",
+            "title": "Lab 1: Risk Management (SCM)",
             "filename": "../../01-risk-scm/risk-scm.md"
         },
         {
-            "title": "Adventure 2: Configure (HCM)",
+            "title": "Lab 2: Configure (HCM)",
             "filename": "../../02-configure-hcm/configure-hcm.md"
         },
         {
-            "title": "Adventure 2: Configure (SCM)",
+            "title": "Lab 2: Configure (SCM)",
             "filename": "../../02-configure-scm/configure-scm.md"
         },
         {
-            "title": "Adventure 3: Extend (New Supplier)",
+            "title": "Lab 3: Extend (New Supplier)",
             "filename": "../../03-extend/extend.md"
         },
         {
-            "title": "Adventure 4: Extend w/ External AI (HCM)",
+            "title": "Lab 4: Extend w/ External AI (HCM)",
             "filename": "../../04-extend-oicai-hcm/extend-oicai-hcm.md"
         },
         {
-            "title": "Adventure 4: Extend w/ External AI (PRC)",
+            "title": "Lab 4: Extend w/ External AI (PRC)",
             "filename": "../../04-extend-oicai-prc/extend-oicai-prc.md"
         },
         {
-            "title": "Adventure 5a: Create AI (HCM)",
+            "title": "Lab 5a: Create AI (HCM)",
             "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
         },
         {
-            "title": "Adventure 5b: Enable AI (HCM)",
+            "title": "Lab 5b: Enable AI (HCM)",
             "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
         },
         {
-            "title": "Adventure 5c: Embed and Enable AI (HCM)",
+            "title": "Lab 5c: Embed and Enable AI (HCM)",
             "filename": "../../05c-embed-agent-hcm/embed-agent-hcm.md"
         },
         {
-            "title": "Adventure 6a: Create AI (SCM)",
+            "title": "Lab 6a: Create AI (SCM)",
             "filename": "../../06a-external-agent-scm/external-agent-scm.md"
         },
         {
-            "title": "Adventure 6b: Enable AI (SCM)",
+            "title": "Lab 6b: Enable AI (SCM)",
             "filename": "../../06b-embed-agent-scm/embed-agent-scm.md"
         },
         {
-            "title": "Adventure 7a: Create AI (PRC)",
+            "title": "Lab 7a: Create AI (PRC)",
             "filename": "../../07a-rag-agent-prc/rag-agent-prc.md"
         },
         {
-            "title": "Adventure 7b: Enable AI (PRC)",
+            "title": "Lab 7b: Enable AI (PRC)",
             "filename": "../../07b-agent-team-prc/agent-team-prc.md"
         },
         {
-            "title": "Adventure 8: Audit",
+            "title": "Lab 8: Audit",
             "filename": "../../08-audit/audit.md"
         },
         {
-            "title": "Adventure 9: Analytics",
+            "title": "Lab 9: Analytics",
             "filename": "../../09-analytics/analytics.md"
         },
         {
-            "title": "Adventure 9: Analytics with AI",
+            "title": "Lab 9: Analytics with AI",
             "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
         },
         {

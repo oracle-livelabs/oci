@@ -17,7 +17,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
 As a pre-requisite for this adventure, please download policy document file to your local desktop as below. 
 <br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/FSUBenefits.pdf)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
 
 
 ### **Begin Exercise**
