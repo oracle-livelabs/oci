@@ -4,7 +4,6 @@
 
 *Deploy an Kubernetes Cluster on OCI with our managed Kubernetes Engine OKE*
 
-
 Estimated Lab Time: 20 minutes
 
 ### Why Deploy NIM on Oracle Kubernetes Engine (OKE)?
@@ -77,37 +76,45 @@ images already have this pre-installed.
 To begin, click **OCI menu - Developer Services** - **Kubernetes
 Clusters (OKE)**.
 
-<img src="../media_folder/media/image1.png">
+
+![OCI menu - Developer Services](./images/image1.png)
 
 Click** Create Clusters**.
 
-<img src="../media_folder/media/image2.png">
+
+![Create Clusters](./images/image2.png)
 
 Check **Quick create** is selected and click **Submit**.
 
-<img src="../media_folder/media/image3.png">
+
+![Quick create](./images/image3.png)
 
 For this lab, we will pick a Public endpoint, Managed node type and
 Private workers as the worker nodes.
 
-<img src="../media_folder/media/image4.png">
+![Public Endpoint](./images/image4.png)
+
 
 Select Node shape, **BM.GPU.A10.4** and node count as **2**. You can
 adapt the shapes according to your needs. For further references on
 compute shapes visit
 https://docs.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm
 
-<img src="../media_folder/media/image5.png">
+
+![GPU Node](./images/image5.png)
 
 The default volume size is 50GB, so we need to increase it to 500GB.
 Click **Show advanced options** and change boot volume size
 to **500GB** and click next.
 
-<img src="../media_folder/media/image6.png">
+![Volume](./images/image6.png)
+
 
 Click **Create cluster**.
 
-<img src="../media_folder/media/image7.png">
+![Create Clusters](./images/image7.png)
+
+
 
 Check **node pool status** is waiting for cluster. You should see the
 cluster is being created and will take **around 10 to 15 minutes** to
@@ -115,7 +122,9 @@ complete.
 
 Once the process is complete, click Access **Cluster**.
 
-<img src="../media_folder/media/image8.png">
+
+![Node pool status](./images/image8.png)
+
 
 Now you can use the command Kubernetes commands such as **kubectl** to
 manage your Kubernetes cluster.
@@ -133,7 +142,9 @@ Cloud Shell provides:
 - A persistent frame of the Console which stays active as you navigate
   to different pages of the console
 
-<img src="../media_folder/media/image9.png">
+![kubectl](./images/image9.png)
+
+
 
 For this example, we will use Cloud Shell because of its simplicity and
 easy access to OCI resources.
@@ -141,14 +152,24 @@ easy access to OCI resources.
 Click **Launch Cloud Shell** and then **copy-and-paste** the command to
 the Cloud Shell and press enter.
 
-<img src="../media_folder/media/image10.png">
+![Cloud Shell](./images/image10.png)
 
-`kubectl get nodes`
 
-`kubectl get pods --all-namespaces`
+````shell
+<copy>
+kubectl get nodes
+</copy>
+````
 
-<img src="../media_folder/media/image11.png"
-alt="A black background with white text AI-generated content may be incorrect." />
+````shell
+<copy>
+kubectl get pods --all-namespaces
+</copy>
+````
+
+
+![A black background with white text AI-generated content may be incorrect](./images/image11.png)
+
 
 The output should list 2 nodes and the kubernetes systems pods.
 
@@ -160,17 +181,32 @@ Kubernetes taints are a way to mark a node so that only specific pods
 can be scheduled on to it, preventing other pods from using that node
 unless they tolerate the taint.
 
-`kubectl describe nodes | grep -i taints`
+````shell
+<copy>
+kubectl describe nodes | grep -i taints
+</copy>
+````
 
-<img src="../media_folder/media/image12.png"
-alt="A computer code with white text AI-generated content may be incorrect." />
+
+![A computer code with white text AI-generated content may be incorrect.](./images/image12.png)
+
 
 If you identified Taints, remove the **nvidia.com/gpu:NoSchedule** with
 the following command.
 
-`kubectl taint nodes --all nvidia.com/gpu:NoSchedule-`
+````shell
+<copy>
+kubectl taint nodes --all nvidia.com/gpu:NoSchedule-
+</copy>
+````
 
-<img src="../media_folder/media/image13.png"
-alt="A screen shot of a computer AI-generated content may be incorrect." />
+
+![A screen shot of a computer AI-generated content may be incorrect.](./images/image13.png)
+
 
 You may now **proceed to the next lab**
+
+## Acknowledgements
+- **Created By** -  Alejandro Casas OCI Product Marketing; Julien Lehmann, OCI Product Marketing
+- **Contributors** - Dimitri Maltezakis Vathypetrou, NVIDIA Developer Relations; Anurag Kuppala, NVIDIA AI Solution Architect
+- **Last Updated By/Date** - Dec 12th, Alejandro Casas, Julien Lehmann

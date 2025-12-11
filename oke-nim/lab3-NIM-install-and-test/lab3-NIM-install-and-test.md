@@ -8,7 +8,9 @@ Helm to install your LLM.
 Create a deployment YAML that references the model-specific container.
 For example here, for **llama-3.1-nemotron-nano-8b-v1**.
 
-```
+
+````shell
+<copy>
 cat <<ENDEND > oke-nim-llama.yaml 
 image:
   repository: nvcr.io/nim/nvidia/llama-3.1-nemotron-nano-8b-v1
@@ -23,39 +25,61 @@ model:
 service:
   type: LoadBalancer
 ENDEND
-
-```
+</copy>
+````
 
 Download the **nim-llm** helm chart from the NVIDIA NGC repository.
 
-```
+
+````shell
+<copy>
 helm fetch https://helm.ngc.nvidia.com/nim/charts/nim-llm-1.3.0.tgz
 --username='$oauthtoken' --password=$NGC\_API\_KEY
-```
+</copy>
+````
+
 
 Run the install.
 
-`helm install my-nim nim-llm-1.3.0.tgz -f oke-nim-llama.yaml -n nim`
 
-<img src="../media_folder/media/image16.png">
+````shell
+<copy>
+helm install my-nim nim-llm-1.3.0.tgz -f oke-nim-llama.yaml -n nim
+</copy>
+````
+
+![Helm install](./images/image16.png)
+
+
 
 Check the progress of the install.
 
-`kubectl get pods -n nim`
+````shell
+<copy>
+kubectl get pods -n nim
+</copy>
+````
 
-<img src="../media_folder/media/image17.png">
+![Check Progress](./images/image17.png)
+
 
 When you see the pod status as **Running**, this mean the installation
 was successful.
 
 Check what services are running.
 
-`kubectl get svc -n nim`
+````shell
+<copy>
+kubectl get svc -n nim
+</copy>
+````
+
 
 Look for the pod name **my-nim-nim-llm** and take note of
 the **EXTERNAL-IP**.
 
-<img src="../media_folder/media/image18.png">
+![Nim information](./images/image18.png)
+
 
 ## Testing the Inference API
 
@@ -63,7 +87,8 @@ Once the NIM is live, send a test prompt via curl or Postman. Replace
 the &lt;EXTERNAL\_IP&gt;: with the **EXTERNAL-IP** from the
 **my-nim-nim-llm service**.
 
-```
+````shell
+<copy>
 curl -X POST http://<EXTERNAL_IP>:8000/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
@@ -74,12 +99,16 @@ curl -X POST http://<EXTERNAL_IP>:8000/v1/chat/completions \
     "model": "meta/llama3-8b-instruct",
     "max_tokens": 200
   }'
-```
+</copy>
+````
+
 
 You should see a response like the one below.
-```
 
-  "id": "cmpl-abc123",
+````shell
+<copy>
+{ 
+ "id": "cmpl-abc123",
   "object": "chat.completion",
   "created": 1752132000,
   "model": "meta/llama3-8b-instruct",
@@ -98,12 +127,13 @@ You should see a response like the one below.
     "total_tokens": 195
   }
 }
-
-```
+</copy>
+````
 
 Send another prompt "What is oracle Autonomous Database?".
 
-```
+````shell
+<copy>
 curl -X POST http://<EXTERNAL_IP>:8000/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
@@ -114,12 +144,13 @@ curl -X POST http://<EXTERNAL_IP>:8000/v1/chat/completions \
     "model": "meta/llama3-8b-instruct",
     "max_tokens": 150
   }'
-
-```
+</copy>
+````
 
 LLM’s response.
 
-```
+````shell
+<copy>
 {
   "id": "cmpl-xyz987",
   "object": "chat.completion",
@@ -140,14 +171,15 @@ LLM’s response.
     "total_tokens": 150
   }
 }
-
-```
+</copy>
+````
 
 As part of the prompt settings, you can tweak the system prompt, model,
 and the max\_tokens. Let’s try updating the system prompt that the size
 of the max\_tokens.
 
-```
+````shell
+<copy>
 curl -X POST http://<EXTERNAL_IP>:8000/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
@@ -158,12 +190,14 @@ curl -X POST http://<EXTERNAL_IP>:8000/v1/chat/completions \
     "model": "meta/llama3-8b-instruct",
     "max_tokens": 2048
   }'
+</copy>
+````
 
-```
 
 LLM’s response.
 
-```
+````shell
+<copy>
 {
   "id": "cmpl-abc2000",
   "object": "chat.completion",
@@ -184,8 +218,9 @@ LLM’s response.
     "total_tokens": 1065
   }
 }
+</copy>
+````
 
-```
 
 
 ## Final Thoughts
@@ -209,4 +244,7 @@ cluster, and try deploying your first NIM today.
 
 
 
-
+## Acknowledgements
+- **Created By** -  Alejandro Casas OCI Product Marketing; Julien Lehmann, OCI Product Marketing
+- **Contributors** - Dimitri Maltezakis Vathypetrou, NVIDIA Developer Relations; Anurag Kuppala, NVIDIA AI Solution Architect
+- **Last Updated By/Date** - Dec 12th, Alejandro Casas, Julien Lehmann
