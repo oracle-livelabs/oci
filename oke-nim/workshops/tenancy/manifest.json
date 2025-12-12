@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Running NVIDIA NIM Microservices on Oracle Kubernetes Engine (OKE)",
+  "workshoptitle": "Run NVIDIA NIM Microservices on Oracle Kubernetes Engine (OKE)",
   "help": "livelabs-help-oci_us@oracle.com",
   "variables": ["../../variables/variables.json",
     "../../variables/variables-in-another-file.json"],

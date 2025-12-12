@@ -1,4 +1,4 @@
-# Deploying an OKE Cluster on OCI
+# Deploy an OKE Cluster on OCI
 
 ## Introduction
 
@@ -57,7 +57,7 @@ Before you begin, ensure you have:
 - Docker or OCI container registry access (for custom container pulls if
   needed)
 
-## Create an OKE Cluster with GPU Nodes
+## Task: Create an OKE Cluster with GPU Nodes
 
 You can create an OKE cluster via the OCI Console or CLI. Use
 **GPU-enabled shapes**, such as:
@@ -77,22 +77,22 @@ To begin, click **OCI menu - Developer Services** - **Kubernetes
 Clusters (OKE)**.
 
 
-![OCI menu - Developer Services](./images/image1.png)
+![OCI menu - Developer Services](./images/image1.png "OCI menu - Developer Services")
 
 Click** Create Clusters**.
 
 
-![Create Clusters](./images/image2.png)
+![Create Clusters](./images/image2.png "Create Clusters")
 
 Check **Quick create** is selected and click **Submit**.
 
 
-![Quick create](./images/image3.png)
+![Quick create](./images/image3.png "Quick create")
 
 For this lab, we will pick a Public endpoint, Managed node type and
 Private workers as the worker nodes.
 
-![Public Endpoint](./images/image4.png)
+![Public Endpoint](./images/image4.png "Public Endpoint")
 
 
 Select Node shape, **BM.GPU.A10.4** and node count as **2**. You can
@@ -101,18 +101,18 @@ compute shapes visit
 https://docs.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm
 
 
-![GPU Node](./images/image5.png)
+![GPU Node](./images/image5.png "GPU Node")
 
 The default volume size is 50GB, so we need to increase it to 500GB.
 Click **Show advanced options** and change boot volume size
 to **500GB** and click next.
 
-![Volume](./images/image6.png)
+![Volume](./images/image6.png "Volume")
 
 
 Click **Create cluster**.
 
-![Create Clusters](./images/image7.png)
+![Create Clusters](./images/image7.png "Create Clusters")
 
 
 
@@ -123,7 +123,7 @@ complete.
 Once the process is complete, click Access **Cluster**.
 
 
-![Node pool status](./images/image8.png)
+![Node pool status](./images/image8.png "Node pool status")
 
 
 Now you can use the command Kubernetes commands such as **kubectl** to
@@ -142,7 +142,7 @@ Cloud Shell provides:
 - A persistent frame of the Console which stays active as you navigate
   to different pages of the console
 
-![kubectl](./images/image9.png)
+![kubectl](./images/image9.png "kubectl")
 
 
 
@@ -152,7 +152,7 @@ easy access to OCI resources.
 Click **Launch Cloud Shell** and then **copy-and-paste** the command to
 the Cloud Shell and press enter.
 
-![Cloud Shell](./images/image10.png)
+![Cloud Shell](./images/image10.png "Cloud Shell")
 
 
 
@@ -169,7 +169,7 @@ kubectl get pods --all-namespaces
 ````
 
 
-![A black background with white text AI-generated content may be incorrect](./images/image11.png)
+![A black background with white text AI-generated content may be incorrect](./images/image11.png "A black background with white text AI-generated content may be incorrect")
 
 
 The output should list 2 nodes and the kubernetes systems pods.
@@ -189,7 +189,7 @@ kubectl describe nodes | grep -i taints
 ````
 
 
-![A computer code with white text AI-generated content may be incorrect.](./images/image12.png)
+![A computer code with white text AI-generated content may be incorrect.](./images/image12.png "A computer code with white text AI-generated content may be incorrect.")
 
 
 If you identified Taints, remove the **nvidia.com/gpu:NoSchedule** with
@@ -202,7 +202,7 @@ kubectl taint nodes --all nvidia.com/gpu:NoSchedule-
 ````
 
 
-![A screen shot of a computer AI-generated content may be incorrect.](./images/image13.png)
+![A screen shot of a computer AI-generated content may be incorrect.](./images/image13.png "A screen shot of a computer AI-generated content may be incorrect.")
 
 
 You may now **proceed to the next lab**

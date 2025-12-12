@@ -81,7 +81,7 @@ the **EXTERNAL-IP**.
 ![Nim information](./images/image18.png)
 
 
-## Testing the Inference API
+## Task: Testing the Inference API
 
 Once the NIM is live, send a test prompt via curl or Postman. Replace
 the &lt;EXTERNAL\_IP&gt;: with the **EXTERNAL-IP** from the

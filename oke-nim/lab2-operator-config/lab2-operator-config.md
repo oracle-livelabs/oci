@@ -8,7 +8,7 @@ Estimated Lab Time: 20 minutes
 
 
 
-## Installing NVIDIA GPU Operator
+## Task: Installing NVIDIA GPU Operator
 
 When the cluster is ready, create the namespace in Kubernetes.
 

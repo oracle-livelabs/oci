@@ -1,4 +1,4 @@
-# Running NVIDIA NIM Microservices on Oracle Kubernetes Engine (OKE)
+# Run NVIDIA NIM Microservices on Oracle Kubernetes Engine (OKE)
 
 ## About this Workshop
 
@@ -6,7 +6,7 @@
 
 Estimated Time: 90 minutes
 
-## Running NVIDIA NIM Microservices on Oracle Kubernetes Engine (OKE)
+## Run NVIDIA NIM Microservices on Oracle Kubernetes Engine (OKE)
 **A Scalable Foundation for Enterprise-Grade LLM Inference**
 
 As Large Language Models (LLMs) continue to evolve and drive a wave of
