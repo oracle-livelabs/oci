@@ -238,10 +238,6 @@ powering a RAG pipeline, this architecture gives you:
 
 - Seamless integration into your broader OCI AI and data ecosystem
 
-Ready to start? Visit
-[<u>cloud.oracle.com</u>](https://cloud.oracle.com/), provision your OKE
-cluster, and try deploying your first NIM today.
-
 
 
 ## Acknowledgements

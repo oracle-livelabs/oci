@@ -73,34 +73,6 @@ By the end of this workshop, you will have hands-on experience with:
 - Exposing NIM services securely for inference
 - Sending inference requests and monitoring performance with OCI tools
 
-## Acknowledgements
-
-This lab is the result of a strategic and hands-on collaboration
-between Oracle Cloud Infrastructure (OCI) and NVIDIA, two industry
-leaders working together to accelerate enterprise AI innovation. By
-combining OCI’s enterprise-grade infrastructure, the NVIDIA AI Platform,
-and cutting-edge LLMs, we’re enabling customers to build, deploy, and
-scale generative AI workloads with confidence and performance at the
-core.
-
-This workshop is part of a broader enablement initiative jointly developed
-with our partners at NVIDIA.
-
-A special thanks to the engineering teams at NVIDIA and OCI, whose deep
-expertise and ongoing collaboration have been instrumental in supporting
-our customers throughout their AI journey. Your contributions continue
-to shape what’s possible.
-
-- **Alejandro Casas, *OCI Product Marketing***
-
-- **Dimitri Maltezakis Vathypetrou, *NVIDIA Developer Relations***
-
-- **Anurag Kuppala, *NVIDIA AI Solution Architect***
-
-- **Tommy Lee, *OCI Product Marketing***
-
-- **Nitin Satpute, *OCI GPU Black Belt Team***
-
 ## Resources to learn more
 
 [Oracle Cloud Infrastructure
@@ -121,4 +93,25 @@ OKE](https://github.com/NVIDIA/nim-deploy/tree/main/cloud-service-providers/orac
 [NVIDIA AI
 Enterprise](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/165234016)
 
-**Last Updated By/Date**  - Julien Lehmann, December 25
+
+## Acknowledgements
+
+This lab is the result of a strategic and hands-on collaboration
+between Oracle Cloud Infrastructure (OCI) and NVIDIA, two industry
+leaders working together to accelerate enterprise AI innovation. By
+combining OCI’s enterprise-grade infrastructure, the NVIDIA AI Platform,
+and cutting-edge LLMs, we’re enabling customers to build, deploy, and
+scale generative AI workloads with confidence and performance at the
+core.
+
+This workshop is part of a broader enablement initiative jointly developed
+with our partners at NVIDIA.
+
+A special thanks to the engineering teams at NVIDIA and OCI, whose deep
+expertise and ongoing collaboration have been instrumental in supporting
+our customers throughout their AI journey. Your contributions continue
+to shape what’s possible.
+
+- **Created By** -  Alejandro Casas OCI Product Marketing; Julien Lehmann, OCI Product Marketing
+- **Contributors** - Dimitri Maltezakis Vathypetrou, NVIDIA Developer Relations; Anurag Kuppala, NVIDIA AI Solution Architect
+- **Last Updated By/Date** - Dec 12th, Alejandro Casas, Julien Lehmann

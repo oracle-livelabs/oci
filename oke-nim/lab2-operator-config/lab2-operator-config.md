@@ -29,7 +29,7 @@ export NGC_API_KEY=<insert your NGC_API_KEY>
 </copy>
 
 ````
-EY>`
+
 
 1.  **<u>Install GPU Operator</u>**
 
