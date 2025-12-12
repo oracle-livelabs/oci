@@ -155,6 +155,7 @@ the Cloud Shell and press enter.
 ![Cloud Shell](./images/image10.png)
 
 
+
 ````shell
 <copy>
 kubectl get nodes
