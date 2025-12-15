@@ -4,7 +4,7 @@
 
 - [Core Services Concepts](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts-core.htm)
 
-본 실습은 Oracle University에서 제공하는 [OCI Foundations Associate](https://learn.oracle.com/ols/learning-path/become-an-oci-foundations-associate/35644/108448) 자격을 취득하는 데 필요한 기초적인 스킬과 지식을 제공합니다. Oracle Cloud Infrastructure Foundations Associate 인증은 응시자에게 핵심 클라우드 컴퓨팅 개념에 대한 기본 지식과 해당 OCI 서비스에 대한 이해를 제공합니다. 이 인증은 Oracle Cloud Infrastructure에 대한 이해도를 높일 수 있는 하나의 수단이 될 수 있으니, 인증을 획득하는 것을 추천드립니다.
+본 실습은 Oracle University에서 제공하는 [OCI Foundations Associate (2025)](https://mylearn.oracle.com/ou/learning-path/become-an-oci-foundations-associate-2025/148056) 자격을 취득하는 데 필요한 기초적인 스킬과 지식을 제공합니다. Oracle Cloud Infrastructure Foundations Associate 인증은 응시자에게 핵심 클라우드 컴퓨팅 개념에 대한 기본 지식과 해당 OCI 서비스에 대한 이해를 제공합니다. 이 인증은 Oracle Cloud Infrastructure에 대한 이해도를 높일 수 있는 하나의 수단이 될 수 있으니, 인증을 획득하는 것을 추천드립니다.
 
 예상 시간: 4시간
 
@@ -19,7 +19,7 @@
 ### 전제조건
 - Oracle Free Tier(Trial), Paid or LiveLabs Cloud Account
 
->**노트:** **Free Trial** 계정이 있는 경우, 무료 평가 기간이 만료되면, 계정이 **Always Free** 계정으로 전환됩니다. **Always Free** 환경이 없는 경우, Oracle Free Tier를 요구하는 워크샵은 진행할 수 없습니다.
+>**노트:** Free Trial 계정이 있는 경우, 무료 평가 기간이 만료되면, 계정이 Always Free 계정으로 전환됩니다. Always Free 환경이 없는 경우, Oracle Free Tier를 요구하는 워크샵은 진행할 수 없습니다.
 
 **[Oracle Cloud Free Tier FAQ 페이지 보기](https://www.oracle.com/kr/cloud/free/faq/)**
 
@@ -29,13 +29,11 @@ Oracle Cloud Infrastructure는 고가용성 호스트 환경에서 광범위한 
 
 다음 비디오를 통해 Oracle Cloud Infrastructure의 이점을 알아봅니다.
 
-[](youtube:-OBrKIlSt_Q:medium)
+[](youtube:I2oQuBRNiHs)
 
 이제 **다음 실습을 진행**하시면 됩니다.
 
 ## Acknowledgements
 
-- **Author** - Flavio Pereira, Larry Beausoleil
-- **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager, DB Product Management)
-- **Korean Translator & Contributors** - DongHee Lee, March 2023
-- **Last Updated By/Date** - DongHee Lee, March 2023
+- **Author** - DongHee Lee, March 2023
+- **Last Updated By/Date** - DongHee Lee, December 2025
