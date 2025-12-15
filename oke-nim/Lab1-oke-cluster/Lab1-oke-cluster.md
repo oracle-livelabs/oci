@@ -87,12 +87,12 @@ Click** Create Clusters**.
 Check **Quick create** is selected and click **Submit**.
 
 
-![Quick create](./images/image3.png "Quick create")
+![Quick create](./images/image3.png "Create a cluster using the Quick Create wizard")
 
 For this lab, we will pick a Public endpoint, Managed node type and
 Private workers as the worker nodes.
 
-![Public Endpoint](./images/image4.png "Public Endpoint")
+![Public Endpoint](./images/image4.png "Set up the Public Endpoint")
 
 
 Select Node shape, **BM.GPU.A10.4** and node count as **2**. You can
@@ -101,18 +101,18 @@ compute shapes visit
 https://docs.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm
 
 
-![GPU Node](./images/image5.png "GPU Node")
+![GPU Node](./images/image5.png "Select the GPU Node shape for your cluster")
 
 The default volume size is 50GB, so we need to increase it to 500GB.
 Click **Show advanced options** and change boot volume size
 to **500GB** and click next.
 
-![Volume](./images/image6.png "Volume")
+![Volume](./images/image6.png "Select the Volume size. For this example you need to set it up on 500GB")
 
 
 Click **Create cluster**.
 
-![Create Clusters](./images/image7.png "Create Clusters")
+![Create Clusters](./images/image7.png "Click on Create Clusters")
 
 
 
@@ -123,7 +123,7 @@ complete.
 Once the process is complete, click Access **Cluster**.
 
 
-![Node pool status](./images/image8.png "Node pool status")
+![Node pool status](./images/image8.png "Check the Node pool status creation")
 
 
 Now you can use the command Kubernetes commands such as **kubectl** to
@@ -142,7 +142,7 @@ Cloud Shell provides:
 - A persistent frame of the Console which stays active as you navigate
   to different pages of the console
 
-![kubectl](./images/image9.png "kubectl")
+![kubectl](./images/image9.png "Running kubeconfig in Cloud Shell manage your cluster directly")
 
 
 
@@ -152,7 +152,7 @@ easy access to OCI resources.
 Click **Launch Cloud Shell** and then **copy-and-paste** the command to
 the Cloud Shell and press enter.
 
-![Cloud Shell](./images/image10.png "Cloud Shell")
+![Cloud Shell](./images/image10.png "Accesing Cloud Shell")
 
 
 
