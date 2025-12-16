@@ -17,7 +17,7 @@
     {
       "title": "Lab 1: Deploy an OKE Cluster",
       "description": "Labs that follow the introduction are numbered, starting with Lab 1",
-      "filename": "../../lab1-oke-cluster/lab1-oke-cluster.md"
+      "filename": "../../lab1-oke/lab1-oke.md"
     },
     {
       "title": "Lab 2: Install NVIDIA GPU Operator",
