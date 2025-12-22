@@ -65,7 +65,7 @@ OCI 서비스에 대한 유저의 권한은 유저가 속한 _그룹_에 따라 
 
    ![Default Domain](images/id-domains-default.png " ")
 
-3. **Groups** 클릭
+3. **User Management** 탭을 클릭하고 화면 아래쪽 **Groups**로 이동합니다.
 
    ![Groups](images/id-domains-groups.png)
 
@@ -90,12 +90,12 @@ OCI 서비스에 대한 유저의 권한은 유저가 속한 _그룹_에 따라 
 
     * Compartment(`<compartment_name>`) 레벨 또는 테넌시(`tenancy`) 레벨로 유저 그룹(`<group_name>`)에 대해서 특정자원유형(`<resource-type>`)에 대해 작업권한(`<verb>`)를 주는 기본 포맷입니다.
 
-       ```
+       ```shell
        <copy>
        Allow group <group_name> to <verb> <resource-type> in compartment <compartment_name>
        </copy>
        ```
-       ```
+       ```shell
        <copy>
        Allow group <group_name> to <verb> <resource-type> in tenancy
        </copy>
@@ -130,25 +130,38 @@ OCI 서비스에 대한 유저의 권한은 유저가 속한 _그룹_에 따라 
     - 직접 입력하기 위해 **Show manual editor**를 클릭하고, 아래 규칙을 직접 입력합니다.
     - 유저 그룹 또는 Compartment 이름이 다른 경우 사용할 값으로 변경합니다.
 
-    ```
-    <copy>
-    allow group default/oci-group to manage all-resources in compartment oci-hol-xx
-    </copy>
-    ```
+    - Compartment 내에 모든 자원에 대한 권한을 주는 경우
 
-    ![Policy Builder](images/id-domain-create-policy-manual.png)
+        ```shell
+        <copy>
+        allow group default/oci-group to manage all-resources in compartment oci-hol-xx
+        </copy>
+        ```
+    
+        ![Policy Builder](images/id-domain-create-policy-manual.png)
 
-   **노트**: _그룹이름_ 앞에 _Identity Domain Name_ 이름이 없는 경우 Default Domain으로 적용됩니다.
+    - 자원 유형별로 주는 경우
+        ```shell
+        <copy>
+        allow group default/oci-group to manage instance-family in compartment oci-hol-xx
+        allow group default/oci-group to manage volume-family in compartment oci-hol-xx
+        allow group default/oci-group to manage virtual-network-family in oci-hol-xx
+        allow group default/oci-group to manage load-balancers in oci-hol-xx
+        </copy>
+        ```       
+
+    **노트**: _그룹이름_ 앞에 _Identity Domain Name_ 이름이 없는 경우 Default Domain으로 적용됩니다.
 
     **Create**를 클릭하여 정책을 생성합니다.
 
 5. 작성한 Policy에서 Edit Policy Statements를 클릭합니다.
 
-6. 이후 실습에서 사용할 Cloud Shell에 대한 권한을 추가합니다.
+6. 이후 실습에서 사용할 Cloud Shell에 대한 권한과 Cloud Shell에서 퍼블릭 인터넷 접근 권한을 추가합니다.
 
-    ```
+    ```shell
     <copy>
     allow group default/oci-group to use cloud-shell in tenancy
+    allow group default/oci-group to use cloud-shell-public-network in tenancy
     </copy>
     ```
 
@@ -156,13 +169,9 @@ OCI 서비스에 대한 유저의 권한은 유저가 속한 _그룹_에 따라 
 
 ### 유저 만들기
 
-1. 브레드 크럼에서 **Default Domain**을 선택합니다.
+1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Identity & Security**으로 이동한 다음 **Domains** 으로 이동하여, **Default Domain**을 선택합니다.
 
-    또는, 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Identity & Security**으로 이동한 다음 **Domains** 하위의 **Users**을 선택합니다.
-
-   ![Select Default domain in the bread crumb](images/id-domains-bc-default-domain.png)
-
-2. **Users** 선택
+2. **User management** 탭에서 **Users** 영역으로 이동합니다.
 
    ![Select Users](images/id-domains-users.png)
 
@@ -170,23 +179,26 @@ OCI 서비스에 대한 유저의 권한은 유저가 속한 _그룹_에 따라 
 
    **Create User** 다이얼로그에서, 다음을 입력하여 그룹을 생성합니다.
    
-    - **First Name**: - 이름
-    - **Last NameName**: - 성
+    - **First Name**: 이름
+    - **Last NameName**: 성
     - **Username/Email**: 유저명으로 사용할 이메일 주소를 입력합니다.
     - **Use the email address as the username**: 기본은 이메일을 유저이름으로 사용하는 것입니다. 예외시 체크해제합니다. 이미 해당 이메일 유저명으로 사용하는 경우 체크합니다.
     - **Assign cloud account administrator role**: 체크 해제
     - 앞서 만든 **oci-group** 그룹으로 지정
 
-      ![New user form](images/id-domains-create-user.png)
+      ![New user form](images/id-domains-create-user-1.png)
+      ![New user form](images/id-domains-create-user-2.png)
 
-4. 생성시 입력한 이메일 주소로 활성화 링크가 발송됩니다. 이메일을 수신하지 못한 경우, 유저 상세페이지에서 Reset password 버튼을 클릭하여 패스워드 초기화 링크를 보냅니다.
+4. 생성시 입력한 이메일 주소로 활성화 링크가 발송됩니다.
+
+    - 이메일을 수신하지 못한 경우, 유저 상세페이지에서 Reset password 버튼을 클릭하여 메일을 재전송합니다.
 
     ![Reset password](images/id-domains-user-resetpw.png)
 
-5. 관리자 권한인 현재 사용자는 Oracle Cloud Console에서 로그아웃합니다.
+5. 관리자 권한인 현재 사용자는 로그아웃합니다.
 
 
-### 신규 유저로 로그인 및 권한 검증하기
+### 신규 유저의 패스워드 초기화 및 MFA 등록하기
 
 1. 신규 유저가 수신한 메일에서 활성화 링크  **Activate Your Account**를 클릭합니다.
 
@@ -196,17 +208,51 @@ OCI 서비스에 대한 유저의 권한은 유저가 속한 _그룹_에 따라 
 
     ![Reset password](images/id-domains-resetpw.png)
 
-3. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Compute**으로 이동한 다음 **Instances** 을 선택합니다.
+3. 비밀번호 재설정이 완료되면, 아래 **사인인 계속(Continue to Sign In)**을 클릭하여 로그인 페이지로 이동합니다.
+
+4. 유저명과 패스워드를 입력하여 로그인합니다.
+
+5. 처음 로그인을 시도하면, 패스워드외에 추가 인증을 위한 MFA를 등록을 안내하는 화면이 뜹니다. **보안 확인 사용(Enable Secure Verification)**을 클릭합니다. 
+
+6. 추가 보안 수단으로 사용할 도구로 **모바일 애플리케이션(Mobile App)**을 선택합니다.
+
+7. 모바일 앱 다운로드 및 구성
+
+    ![MFA - Mobile App](images/mfa-mobile-app-guide.png)
+
+    1. 모바일 앱 스토어에서 Oracle Mobile Authenticator 앱을 다운로드합니다.
+    2. 앱을 열고 오른쪽 아래 플러스(+)를 클릭하여, 계정 추가 화면으로 이동합니다. 브라우저 상의 QR 코드를 스캔합니다.
+
+        ![MFA - Mobile App](images/mfa-mobile-app-add.png)
+
+    3. 등록이 되고 완료(Done)를 클릭하면, 로그인됩니다.
+
+
+### 신규 유저로 로그인 및 권한 검증하기
+
+1. 로그인 되지 않은 경우, OCI Console 접속 URL을 브라우저에서 입력합니다.
+
+    https://cloud.oracle.com
+
+2. Cloud Account / Tenant Name을 입력합니다.
+
+3. 사용자 이름과 패스워드를 입력하여 로그인합니다.
+
+4. MFA 인증 대기화면이 뜨면, 모바일 앱(Oracle Mobile Authenticator)으로 이동하여, 수신된 통지에 대해 **허용** 버튼을 클릭합니다.
+
+5. 로그인이 완료되었습니다.
+
+6. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Compute**으로 이동한 다음 **Instances** 을 선택합니다.
 
     ![Compute Instances](images/compute-instances.png)
 
-4. 왼쪽 아래 Compartment에서 Root Compartment를 선택합니다.
+7. Applied Filter에서 _Root_ Compartment를 선택합니다.
 
-    - Compute 인스턴스 목록화면에서 권한이 없다는 경고 문구를 볼 수 있습니다. **_You don’t have permission to view these resources_**
+    - Compute 인스턴스 목록화면에서 권한이 없다는 경고 문구를 볼 수 있습니다.
 
     ![No Permission](images/compute-instances-no-permission.png)
 
-5. 왼쪽 아래 Compartment에서 정책을 부여한 oci-hol-xx Compartment를 선택합니다.
+8. Applied Filter에서 앞서 정책을 부여한 _oci-hol-xx_ Compartment를 선택합니다.
 
     - Compute 인스턴스 목록화면에 경고 문구가 사라졌습니다. 아직 생성한 자원이 없어서 리스트는 보이지 않는 상태입니다.
 
@@ -220,6 +266,5 @@ OCI 서비스에 대한 유저의 권한은 유저가 속한 _그룹_에 따라 
 
 ## Acknowledgements
 
-- **Author** - Orlando Gentil, DongHee Lee
-- **Korean Translator & Contributors** - DongHee Lee, March 2023
-- **Last Updated By/Date** - DongHee Lee, March 2023
+- **Author** - DongHee Lee, March 2023
+- **Last Updated By/Date** - DongHee Lee, December 2025
