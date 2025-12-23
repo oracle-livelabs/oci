@@ -1,4 +1,4 @@
-# HCM - Give Feedback
+# Provide Feedback for a colleague with built in Generative AI capabilities
 
 ## Introduction
 
@@ -14,87 +14,87 @@ Now that we’ve updated the sales opportunity, we need to provide feedback for 
 
 1. If not already logged in, follow the steps shown below.
 
- Login to the lab environment using the credentials provided. Make sure to use your assigned user.
+    Login to the lab environment using the credentials provided. Make sure to use your assigned user.
 
    ![Login Page](images/image001.png " ")
    </br>
 
 2. Open and Explore Feedback Center
 
-You are easily able to find areas you’re looking for within the system utilizing the navigation tools built into the UI. </br>
+   You are easily able to find areas you’re looking for within the system utilizing the navigation tools built into the UI. </br>
    
-   >  Using the Global Search bar at the top, enter *Feedback Center - Me* and click to navigate to the **Feedback Center**
+      >  Using the Global Search bar at the top, enter *Feedback Center - Me* and click to navigate to the **Feedback Center**
 
-   ![Use Global Search for Feedback Center](images/image018.png " ")
+      ![Use Global Search for Feedback Center](images/image018.png " ")
    
- Once in the feedback center, you’ll be able to see the history of feedback given to you, or feedback that you’ve given to others. This allows for a one stop shop for users to view all their related feedback.  
+    Once in the feedback center, you’ll be able to see the history of feedback given to you, or feedback that you’ve given to others. This allows for a one stop shop for users to view all their related feedback.  
    
 
 ## Task 2: Select the Sales Rep and Give Feedback
 
 1. Navigate to **Give Feedback** and select a Sales Rep.
 
-   > Click on the **Feedback About Others** tab
+      > Click on the **Feedback About Others** tab
 
-   ![Feedback About Others](images/image019.png " ")
+      ![Feedback About Others](images/image019.png " ")
 
-   > Click the **Give Feedback** button
+      > Click the **Give Feedback** button
 
-   ![Give Feedback Button](images/image020.png " ")
+      ![Give Feedback Button](images/image020.png " ")
 
 2. Search for the Sales Rep 
 
-There are different options when it comes to who gets feedback, and how it’s viewed by the business. Since this is part of the unified suite, it’s easy to find your team. 
+   There are different options when it comes to who gets feedback, and how it’s viewed by the business. Since this is part of the unified suite, it’s easy to find your team. 
    
-   > -	Search & select employee: *Natalie Sales Rep*
-   > -   Define visibility: *Managers and Natalie Sales Rep*
+      > -	Search & select employee: *Natalie Sales Rep*
+      > -   Define visibility: *Managers and Natalie Sales Rep*
 
-   ![Select Employee to give Feedback for](images/image021.png " ")  
+      ![Select Employee to give Feedback for](images/image021.png " ")  
 
 3. Enter your feedback details for the Sales Rep
 
-Utilizing the built in AI, it makes it much easier to issue feedback. Instead of having to type an entire paragraph, you can provide a couple of key words or phrases and the built in AI tool will generate the rest. 
+   Utilizing the built in AI, it makes it much easier to issue feedback. Instead of having to type an entire paragraph, you can provide a couple of key words or phrases and the built in AI tool will generate the rest. 
 
-   ![AI In Action](images/image005.png " ")
+      ![AI In Action](images/image005.png " ")
 
-   > -   Click into the feedback text box 
-   > -	Enter the text below
+      > -   Click into the feedback text box 
+      > -	Enter the text below
    
-   ```
-   <copy>
-   Great job with Antero. You showed ability to understand their needs and know our products well.
-   </copy>
-   ```
+      ```
+      <copy>
+      Great job with Antero. You showed ability to understand their needs and know our products well.
+      </copy>
+      ```
 
-   > -   Click on the **AI Assist** button
+      > -   Click on the **AI Assist** button
 
-   ![Give Feedback](images/image022.png " ")  
+      ![Give Feedback](images/image022.png " ")  
 
-The AI tool will wait for final approval from the user before posting the feedback. This is important because it ensures that the user has final say over what the AI generates. 
+   The AI tool will wait for final approval from the user before posting the feedback. This is important because it ensures that the user has final say over what the AI generates. 
 
->  **Optional:**  
+      **Optional:**  
 
-The sales VP values positive feedback but also likes to give his team constructive feedback so they are always learning and growing. He notices the generated feedback does not include anything constructive, so he needs to add more
+      The sales VP values positive feedback but also likes to give his team constructive feedback so they are always learning and growing. He notices the generated feedback does not include anything constructive, so he needs to add more
 
-   > Add in additional context
-   > -   Add a space beneath the initial paragraph
-   > -   Enter text similar to the line below
+      > Add in additional context
+      > -   Add a space beneath the initial paragraph
+      > -   Enter text similar to the line below
    
-```
-<copy>
-improving ability to always set next steps to drive towards progression
-</copy>
-```
+      ```
+      <copy>
+      improving ability to always set next steps to drive towards progression
+      </copy>
+      ```
 
-   > -   Click on the **AI Assist** button
+      > -   Click on the **AI Assist** button
 
-   ![Give Feedback](images/image023.png " ")  
+       ![Give Feedback](images/image023.png " ")  
 
-   Congratulations!!  You have completed the **Human Capital Management** set of embedded AI flows.
+      Congratulations!!  You have completed the **Human Capital Management** set of embedded AI flows.
 
-   > Click the **Home** icon on the ribbon at the top of the page to return to the main springboard page.
+      > Click the **Home** icon on the ribbon at the top of the page to return to the main springboard page.
 
-[Click here to proceed to the next module](#next)
+      [Click here to proceed to the next module](#next)
 
 ## Summary
 
@@ -103,6 +103,6 @@ By following these steps, you successfully walked thru the AI capabilities avail
 **You have successfully completed the Activity!**
 
 ## Acknowledgements
-* **Author** - Jimmy Dwyer, Oracle North America
-* **Contributors** -  Piyush Ruparelia, Oracle North America
+* **Author** - Shane Stockings, Oracle North America
+* **Contributors** -  Jimmy Dwyer, Piyush Ruparelia, Oracle North America
 * **Last Updated By/Date** - Piyush Ruparelia, November 2025, based on Fusion 25D
