@@ -26,30 +26,29 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     ![Navigate to AI Agent Studio](../07b-agent-team-prc/images/poaimage002.jpg)
 
-3. Create an Agent Team.
+3. You’ve previously created your first Agent.  Now, you’ll create an Agent Team with a Supervisory Agent and assign some Worker Agents.
+
+    > 1. Click the **Agent Teams** button/tab ![Agent Teams](../gen-images/agentteams.jpg) at the bottom of the page
+
+    ![Open tools](../07b-agent-team-prc/images/poaimage003.jpg)
+
+4. Create an Agent Team.
 
     > Click the **+ Add** button ![Add Button](../gen-images/addw.jpg).
     > ![Add Tools Create](../07b-agent-team-prc/images/poaimage017.jpg)
 
-4. Define the Agent Team.
+5. Define the Agent Team.
 
      > (1) Enter the fields as described below:
-     * Agent Team Name: **CIO## Procurement Requisition Agent Team** where ## is replaced with your user number. <br>
+     * Agent Team Name: **CIO## Purchase Requisition Agent Team** where ## is replaced with your user number. <br>
      * Family: Select **PRC** from the dropdown <br>
      * Product: Select  **Self Service Procurement** from the dropdown <br>
      * Maximum Interactions: **20** <br>
-     * Description: **Purchase Requisition Agent Team leverages worker agents Procurement Policy Advisory and Purchase Requisition Agent.** <br>
+     * Description: **Agent Team with worker agents Procurement Policy Advisor and Purchase Requisition Agent.** <br>
 
-    > (2) Click the Questions tab <br>
+     > (2) Click the **Create** button ![Create Button](../gen-images/createb.jpg) on the bottom right.
 
-    ![Create Agent](../07b-agent-team-prc/images/poaimage018.jpg)
-
-5. You can provide one or more starter questions to assist users in interacting with the Agent Team.
-
-    > (1) In the Question 1 field, enter: **Hi, I can help you with questions related to purchases.  How can I help you today?** <br>
-    > (2) Click the **Create** button ![Create Button](../gen-images/createb.jpg) on the bottom right.
-
-    ![Create Agent](../07b-agent-team-prc/images/poaimage019.jpg)
+     ![Create Agent](../07b-agent-team-prc/images/poaimage019.jpg)
 
 6. You’ve defined your Agent Team, so it’s time to add a Supervisor agent.
 
@@ -61,13 +60,13 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 7. Define Supervisor Agent Details.
 
      > (1) Enter the fields as described below:
-    * Agent Team Name: **CIO## Procurement Requisition Supervisor Agent** where ## is replaced with your user number.<br>
+    * Agent Team Name: **CIO## Purchase Requisition Supervisor Agent** where ## is replaced with your user number.<br>
     * Family: Select **PRC** from the dropdown<br>
     * Product: Select  **Self Service Procurement** from the dropdown<br>
     * Maximum Interactions: **10** <br>
     * Description: **Cloud Adventure Purchase Requisitions Supervisor Agent** <br>
 
-    > (2) Click the **Create** button ![Create Button](../gen-images/createb.jpg) on the bottom right.
+     > (2) Click the **Create** button ![Create Button](../gen-images/createb.jpg) on the bottom right.
 
     ![Create Agent](../07b-agent-team-prc/images/poaimage021.jpg)
 
@@ -107,7 +106,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     ![agent dialogue 1](../07b-agent-team-prc/images/poaimage027.jpg) <br>
 
-14. The Agent will response with information.  In this Debug mode, the Agent will also show you source and processing information (yellow boxes).  These will not be available to end-users once deployed.
+14. The Agent will respond with information.  In this Debug mode, the Agent will also show you source and processing information (yellow boxes).  These will not be available to end-users once deployed.
 
     > The agent provides a response. But we need more information, so we'll ask additional questions.
     > In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What if I need to order a non-standard laptop** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
@@ -185,4 +184,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, December 2025
