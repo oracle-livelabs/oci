@@ -79,6 +79,8 @@ As a pre-requisite for this adventure, please download policy document file to y
 
       ![tool create](../05a-rag-agent-hcm/images/raghcmimage006.jpg)
 
+    **Congratulations!  You’ve completed your first step and created a Policy Document Tool.**
+
 7. Now, you'll create your first Agent!  You'll do that from the Agent screen within the AI Agent Studio.
 
     >  (1) Click the  **Agents** button/tab ![Agent Image](../gen-images/agentsbutton.jpg) at the bottom of the page.
@@ -175,4 +177,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff, Sajid Saleem; December 2025
+* **Last Updated By/Date** - Sajid Saleem; December 2025

@@ -10,8 +10,15 @@ AI Agent Studio for Fusion Applications is a comprehensive platform for creating
 ### **Objectives**
 
 In this activity you will use Oracle Fusion AI Agent Studio to
-* Create a Document Tool to ingest company-specific procurement policy documents (PDF)
-* Create an Agent that uses the Document Tool to respond to user queries
+* Create a Procurement Policy Document Tool that references your company-specific procurement policy documents (PDF)
+* Create an Agent that uses the Document Tool to respond to user questions related to procurement.
+
+### **Pre-requisite**
+
+![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
+As a pre-requisite for this adventure, please download policy document file to your local desktop as below.
+<br>
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/ProcurementPolicies.pdf)
 
 ### **Begin Exercise**
 
@@ -21,7 +28,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 2. The first step is to navigate to AI Agent Studio.
 
-    > (1) Click on the **Tools** tab
+    > (1) Click on the **Tools** tab<br>
     > (2) Select the **AI Agent Studio** tile
 
     ![Navigate to AI Agent Studio](../07a-rag-agent-prc/images/poaimage002.jpg)
@@ -53,29 +60,24 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     ![Edit Suppliers View](../07a-rag-agent-prc/images/poaimage005.jpg)
 
 
-6. **Note:** Now we’ll add the documents to our tool.  The documents you will add are located in the **Procurement Documents** folder on your laptop's Desktop.
+6. ![Alert flag](../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download policy document file to your local desktop if you have not already done so as below.
+    <br>
+
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/ProcurementPolicies.pdf)
+
 
     > (1) Enter the following fields:
     * Name: Enter **Procurement Policy Documents** <br>
     * Status: Select **Ready to publish** from the dropdown<br>
     * Description: Enter **Procurement Policy Documents**<br>
 
-    > (2) Click on the ![Drag and Drop](../gen-images/dandd.jpg) region <br>
-    Select all files from the **Procurement Documents** folder on the Desktop. Alternatively, drag and drop the files that folder to the Drag and Drop region.
+    > (2) Click on the ![Drag-and-drop](../gen-images/dandd.jpg) region and then select the file (ProcurementPolicies.pdf) from your **Downloads** folder on your PC.<br>
 
-    ![Add Documents](../07a-rag-agent-prc/images/poaimage006.jpg)
+    > (3) Click the **Save** ![Save Button](../gen-images/save.jpg) button on the bottom right<br>
 
-7. After all 4 files/documents have been loaded, you can proceed with the Save.
+    > (4) Click the **Create button** ![Create Button](../gen-images/createw.jpg) on the top right corner of the screen.<br>
 
-    > Click the **Save** ![Save Button](../gen-images/save.jpg) button on the bottom right
-
-    ![Suppliers View](../07a-rag-agent-prc/images/poaimage007.jpg)
-
-8. You're now ready to save your knew Document Tool.
-
-    > Click the **Create button** ![Create Button](../gen-images/createw.jpg)  on the near to the of the screen.
-
-    ![Create Tool](../07a-rag-agent-prc/images/poaimage008.jpg)
+    ![tool create](../07a-rag-agent-prc/images/poaimage008.jpg)
 
     **Congratulations!  You’ve completed your first step and created a Policy Document Tool.**
 
@@ -102,7 +104,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
     * Product: Select  **Self Service Procurement** from the dropdown<br>
     * Maximum Interactions: **10** <br>
     * Description: **Cloud Adventure Procurement Policy Advisor Agent** <br>
-    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.*** To streamline this step, we've pre-created the prompt. The prompt text is available in the **Prompt - CA Procurement Policy Advisor.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field.  Alternatively, you can copy the prompt from the **copy block** below. <br>
+    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.*** To streamline this step, we've pre-created the prompt. The prompt text is available in the **copy block** below. Alternatively, prompt text is available in **Prompt - CA Procurement Policy Advisor.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field. <br>
 
     > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
     > (3) Click the Create Button ![Create Button](../gen-images/createb.jpg) <br>
@@ -154,9 +156,7 @@ IMPORTANT GUIDELINES
 
     ![Add Tools Create](../07a-rag-agent-prc/images/poaimage015.jpg) <br>
 
-16. You’ve just created your first Agent, complete with added Tool(s).  In the next lab you will put this agent to work as part of an Agent Team.
-
-    ![Add Tools Create](../07a-rag-agent-prc/images/poaimage016.jpg) <br>
+16. You’ve just created your first AI Agent.  In the next adventure, you will put this agent to work as part of an Agent Team.<br>
 
 ### Summary
 
@@ -180,4 +180,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, December 2025
