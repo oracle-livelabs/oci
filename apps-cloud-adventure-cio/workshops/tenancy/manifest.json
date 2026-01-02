@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Cloud Adventure Activity Guide – for the Office of the CIO",
+    "workshoptitle": "Cloud Adventure Guide – for the Office of the CIO",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -7,39 +7,33 @@
             "filename": "../../00-introduction/introduction.md"
         },
         {
-            "title": "Lab 1: Security",
-            "filename": "../../01-security/security.md"
+            "title": "Adventure 1: Security (AI Access)",
+            "filename": "../../01-security-ai/security-ai.md"
         },
         {
-            "title": "Lab 2: Configure",
-            "filename": "../../02-configure/configure.md"
+            "title": "Adventure 2: Configure",
+            "filename": "../../02-configure-hcm/configure-hcm.md"
         },
         {
-            "title": "Lab 3: Extend",
+            "title": "Adventure 3: Extend",
             "filename": "../../03-extend/extend.md"
         },
         {
-            "title": "Lab 4: Extend More",
-            "filename": "../../04-extend-more/extend-more.md"
-        }, 
+            "title": "Adventure 4: Create AI",
+            "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
+        },
         {
-            "title": "Lab 5: Audit",
-            "filename": "../../05-integration/integration.md"
-        }, 
-
+            "title": "Adventure 5: Enable AI",
+            "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
+        },
         {
-            "title": "Lab 6: Analytics",
-            "filename": "../../06-analytics/analytics.md"
-        }, 
-
+            "title": "Adventure 6: Analytics",
+            "filename": "../../09-analytics/analytics.md"
+        },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
         }
-        
     ]
 }
-
-
-
