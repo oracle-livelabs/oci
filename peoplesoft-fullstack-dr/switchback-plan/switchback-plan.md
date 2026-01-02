@@ -38,7 +38,7 @@ Estimated Time: 180 Minutes
 
   ![drpg home](./images/ashburn-drpg.png)
 
-4. Select the **FSCM92-FSDR-Group-Ashburn** DRPG and navigate to Plans under the resources section. Click on Create Plan.
+4. Select the **FSCM92-FSDR-Group-Ashburn** DRPG and click on Plans. Click on Create Plan.
 
   ![drpg dr plan](./images/ashburn-drplan.png)
 
@@ -65,103 +65,93 @@ Estimated Time: 180 Minutes
 - **Built-in Prechecks** - These are the prechecks for the DB switchover.
 - **Switchover Databases (Standby)** - Database switchover.
 
-  ![drpg plan details](./images/ashburn-drplan-detail.png)
-
 ## Task 2: Customize the Switchover plan - Add PeopleSoft Application Shutdown group in Phoenix
 
 We will shutdown PeopleSoft Applications in **Phoenix** region as we are doing the switchover from *Phoenix* to *Ashburn*. 
 
-1. Click on Add group.
+1. Click on Manage plan groups. Click on Add plan group.
 
     ![add plan group](./images/ashburn-plangroup-add.png)
 
 2. Add "Stop PeopleSoft Application in Phoenix" User defined group. Click on Add Step.
 
-    ![phoenix-plangroup-shutdown-psft](./images/ashburn-plangroup-shutdown-psft.png)
-
     ![phoenix-plangroup-shutdown-app](./images/ashburn-plangroup-shutdown-app.png)
 
   - Add *Stop PeopleSoft Application Server Domain* in Step name
-  - Leave the Enable Step as ticked
+  - Select configurations as **Run local script**
+  - In the region, select "**US West (Phoenix)**"
+  - Select the Application Server instance in "Target instance in compartment" where you have placed the Application Server Domain Shutdown script
+  - In the script parameters, add the location of the Application Server Domain Shutdown script. Below is an example of Application Server Domain Shutdown script, please write a shutdown shell script according to your setup and configurations
+  - Run as user will be the user who has access to shut down
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "**US West (Phoenix)**"
-  - Select the "Run local script" option
-  - Select the Application Server instance in "Target instance in compartment" where you have placed the Application Server Domain Shutdown script
-  - In the script parameters, add the location of the Application Server Domain Shutdown script.
-  - Run as user will be the username who has access to shutdown PeopleSoft Application Server Domain.
+  - Enable Step
 
-Click on Add Step.
+Click on Add.
 
 3. We will now add Process Scheduler server (Linux) shutdown step. Click on Add Step.
-
-    ![ashburn-plangroup-shutdown-prcs](./images/ashburn-plangroup-shutdown-prcs.png)
 
     ![ashburn-plangroup-shutdown-prcs2](./images/ashburn-plangroup-shutdown-prcs2.png)
 
   - Add *Stop PeopleSoft Process Scheduler Server Domain (Linux)* in Step name
-  - Leave the Enable Step as ticked
+  - Select configurations as **Run local script**
+  - In the region, select "**US West (Phoenix)**"
+  - Select the Process Scheduler Server instance in "Target instance in compartment" where you have placed the Application Server Domain Shutdown script
+  - In the script parameters, add the location of the Process Scheduler Server Domain Shutdown script. Below is an example of Process Scheduler Domain Shutdown script, please write a shutdown shell script according to your setup and configurations
+  - Run as user will be the user who has access to shut down
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "**US West (Phoenix)**"
-  - Select the "Run local script" option
-  - Select the Process Scheduler Server (Linux) instance in "Target instance in compartment" where you have placed the Process Scheduler Server Domain Shutdown script
-  - In the script parameters, add the location of the Process Scheduler Server Domain Shutdown script. 
-  - Run as user will be the username who has access to shutdown PeopleSoft Process Scheduler Server Domain.
+  - Enable Step
 
-Click on Add Step.
+Click on Add.
 
 4. We will now add Process Scheduler server (Windows) shutdown step. Click on Add Step.
-
-    ![ashburn-plangroup-shutdown-prcs3](./images/ashburn-plangroup-shutdown-prcs3.png)
 
     ![ashburn-plangroup-shutdown-prcs4](./images/ashburn-plangroup-shutdown-prcs4.png)
 
   - Add *Stop PeopleSoft Process Scheduler Server Domain (Windows)* in Step name
-  - Leave the Enable Step as ticked
+  - Select configurations as **Run local script**
+  - In the region, select "**US West (Phoenix)**"
+  - Select the Process Scheduler Server instance in "Target instance in compartment" where you have placed the Process Scheduler Server Domain Shutdown script
+  - In the script parameters, add the location of the Process Scheduler Server Domain Shutdown script. Below is an example of Process Scheduler Server Domain Shutdown script, please write a shutdown shell script according to your setup and configurations
+  - Run as user will be the user who has access to shut down
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "**US West (Phoenix)**"
-  - Select the "Run local script" option
-  - Select the Process Scheduler Server (Windows) instance in "Target instance in compartment" where you have placed the Process Scheduler Server Domain Shutdown script
-  - In the script parameters, add the location of the Process Scheduler Server Domain Shutdown script. 
-  - Leave Run as user blank for Windows Compute Instance.
+  - Enable Step
 
-Click on Add Step.
+Click on Add.
 
 5. We will now add Web Server shutdown step. Click on Add Step.
-
-    ![ashburn-plangroup-shutdown-web](./images/ashburn-plangroup-shutdown-web.png)
 
     ![ashburn-plangroup-shutdown-web2](./images/ashburn-plangroup-shutdown-web2.png)
 
   - Add *Stop PeopleSoft Web Server Domain* in Step name
-  - Leave the Enable Step as ticked
+  - Select configurations as **Run local script**
+  - In the region, select "**US West (Phoenix)**"
+  - Select the Web Server instance in "Target instance in compartment" where you have placed the Web Server   Domain Shutdown script
+  - In the script parameters, add the location of the Web Server Domain Shutdown script. Below is an example of Web Server Domain Shutdown script, please write a shutdown shell script according to your setup and configurations
+  - Run as user will be the user who has access to shut down
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "**US West (Phoenix)**"
-  - Select the "Run local script" option
-  - Select the Web Server instance in "Target instance in compartment" where you have placed the Web Server Domain Shutdown script
-  - In the script parameters, add the location of the Web Server Domain Shutdown script. 
-  - Run as user will be the username who has access to shutdown PeopleSoft Web Server Domain.
+  - Enable Step
 
-Click on Add Step.
+Click on Add.
 
 6. We will now add Elastic Search services shutdown step. Click on Add Step.
 
     ![ashburn-plangroup-shutdown-elk](./images/ashburn-plangroup-shutdown-elk.png)
 
   - Add *Stop Elastic Search Services in Phoenix* in Step name
-  - Leave the Enable Step as ticked
+  - Select configurations as **Run local script**
+  - In the region, select "**US West (Phoenix)**"
+  - Select the Web Server instance in "Target instance in compartment" where you have placed the Elastic Search Server Domain Shutdown script
+  - In the script parameters, add the location of the Elastic Search Server Domain Shutdown script. Below is an example of Elastic Search server Domain Shutdown script, please write a shutdown shell script according to your setup and configurations
+  - Run as user will be the user who has access to shut down
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "**US West (Phoenix)**"
-  - Select the "Run local script" option
-  - Select the Elastic Search Server compute instance in "Target instance in compartment" where you have placed the Elastic Search services Shutdown script
-  - In the script parameters, add the location of the Elastic Search services Shutdown script
-  - Run as user will be the username who has access to shutdown Elastic Search services
+  - Enable Step
 
-Click on Add Step.
+Click on Add.
 
 7. We will now add Kibana services shutdown step. Click on Add Step.
 
@@ -177,7 +167,7 @@ Click on Add Step.
   - In the script parameters, add the location of the Kibana services Shutdown script
   - Run as user will be the username who has access to shutdown Kibana services
 
-  Click on Add Step.
+  Click on Add.
 
   Now, we have added shutdown steps for PeopleSoft Application Server, Process Scheduler (both Linux and Windows), Web server domains, Elastic Search and Kibana services hosted in *Phoenix* region.
    
@@ -185,80 +175,59 @@ Click on Add Step.
 
   DRPG will go to status of Updating, please wait for few minutes.
 
-    ![ashburn-shutdown-phoenix-psft-done](./images/ashburn-shutdown-phoenix-psft-done.png)
-
-
 ## Task 4: Customize the Switchover plan - Disable files synchronization (rsync) jobs in Phoenix
 
 As part of this task, we will disable all the synchronization jobs that are enabled to run in *Phoenix* region to keep DR (standby) in sync with production environment.
 
-1. Click on Add group.
+1. Click on Manage plan groups.
 
     ![add plan group](./images/ashburn-plangroup-add.png)
 
 2. We will disable cronjob (rsync) in Application Server. Add "Stop\_rsync\_in\_Phoenix\_App" User defined group. Click on Add Step.
 
-    ![ashburn-add-sync-stop-script](./images/ashburn-add-sync-stop-script.png)
-
     ![ashburn-add-app-sync-stop-script](./images/ashburn-add-app-sync-stop-script.png)    
 
     - Add *Disable-rsync-in-Phoenix-APP* in Step name
-    - Leave the Enable Step as ticked
-    - Select Error mode as "Stop on error"
-    - Leave the default "3600" seconds in Timeout in seconds
+    - Select configurations as **Run local script**
     - In the region, select "**US West (Phoenix)**"
-    - Select the "Run local script" option
-    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) disable script
+    - Select the Server instance in "Target instance in compartment" where you have placed the cronjob (rsync) disable script
     - In the script parameters, add the location of the cronjob (rsync) disable script
     - Run as user will be the user who has access to disable cronjobs
-
-    Click on Add Step.
-
-3. We will now disable cronjob (rsync) in Process Scheduler Server. Click on Add Step.
-
-    ![phoenix-add-sync-stop-script](./images/phoenix-add-sync-stop-script2.png)
-
-    ![phoenix-add-prcs-sync-stop-script](./images/phoenix-add-prcs-sync-stop-script.png)    
-
-    - Add *Disable-rsync-in-Phoenix-PRCS* in Step name
-    - Leave the Enable Step as ticked
-    - Select Error mode as "Stop on error"
-    - Leave the default "3600" seconds in Timeout in seconds
-    - In the region, select "**US West (Phoenix)**"
-    - Select the "Run local script" option
-    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) disable script
-    - In the script parameters, add the location of the cronjob (rsync) disable script
-    - Run as user will be the user who has access to disable cronjobs
-
-    Click on Add Step.
-
-4. We will now disable cronjob (rsync) in Web Server. Click on Add Step.
-
-    ![phoenix-add-sync-stop-script](./images/phoenix-add-sync-stop-script3.png)
-
-    ![phoenix-add-web-sync-stop-script](./images/phoenix-add-web-sync-stop-script.png)    
-
-    - Add *Disable-rsync-in-Phoenix-WEB* in Step name
-    - Leave the Enable Step as ticked
-    - Select Error mode as "Stop on error"
-    - Leave the default "3600" seconds in Timeout in seconds
-    - In the region, select "**US West (Phoenix)**"
-    - Select the "Run local script" option
-    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) disable script
-    - In the script parameters, add the location of the cronjob (rsync) disable script
-    - Run as user will be the user who has access to disable cronjobs
-
-    Click on Add Step.
-
-    ![phoenix-add-sync-stop-script-add](./images/add-sync-stop-script-add.png)       
+    - Enable Step
 
     Click on Add.
 
-    ![phoenix-add-sync-stop-script-done](./images/add-sync-stop-script-done.png)    
+3. We will now disable cronjob (rsync) in Process Scheduler Server. Click on Add Step.
+
+      ![phoenix-add-prcs-sync-stop-script](./images/phoenix-add-prcs-sync-stop-script.png)    
+
+    - Add *Disable-rsync-in-Phoenix-PRCS* in Step name
+    - Select configurations as **Run local script**
+    - In the region, select "**US West (Phoenix)**"
+    - Select the Server instance in "Target instance in compartment" where you have placed the cronjob (rsync) disable script
+    - In the script parameters, add the location of the cronjob (rsync) disable script
+    - Run as user will be the user who has access to disable cronjobs
+    - Enable Step
+
+    Click on Add.
+
+4. We will now disable cronjob (rsync) in Web Server. Click on Add Step.
+
+      ![phoenix-add-web-sync-stop-script](./images/phoenix-add-web-sync-stop-script.png)    
+
+    - Add *Disable-rsync-in-Phoenix-WEB* in Step name
+    - Select configurations as **Run local script**
+    - In the region, select "**US West (Phoenix)**"
+    - Select the Server instance in "Target instance in compartment" where you have placed the cronjob (rsync) disable script
+    - In the script parameters, add the location of the cronjob (rsync) disable script
+    - Run as user will be the user who has access to disable cronjobs
+    - Enable Step
+
+    Click on Add.
 
 ## Task 5: Customize the Switchover plan - Add DNS Record Update Script
 
-1. Click on Add group.
+1. Click on Manage plan groups.
 
     ![add plan group](./images/ashburn-plangroup-add.png)
 
@@ -266,234 +235,190 @@ As part of this task, we will disable all the synchronization jobs that are enab
 
     ![phoenix-add-dns-update-script](./images/phoenix-add-dns-update-script.png)
 
-    ![phoenix-add-dns-update-script](./images/phoenix-add-dns-update-script2.png)
-
   - Add *DNS Record Update* in Group name
   - Add *Update DNS Record* in Step name
-  - Leave the Enable Step as ticked
-  - Select Error mode as "Stop on error"
-  - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Ashburn)"
-  - Select the "Run local script" option
-  - Select the server instance in "Target instance in compartment" where you have placed the DNS record update script
+  - Select configurations as **Run local script**
+  - In the region, select "**US West (Phoenix)**"
+  - Select the Server instance in "Target instance in compartment" where you have placed the DNS Record update script
   - In the script parameters, add the location of the DNS Record update script
-  - Run as user will be the username who has access to update DNS records
+  - Run as user will be the user who has access to update DNS records
+  - Below is an example of DNS record update script, please write a boot up shell script according to your setup and configurations. Please note oci cli is installed in this compute instance and a config file is created by adding an API key in users settings in OCI.
 
-  Click on Add Step.
- 
   Click on Add.
-
-  ![phoenix-add-dns-update-group](./images/phoenix-add-dns-update-group.png)
-
+ 
 ## Task 6: Customize the Switchover plan - Add PeopleSoft Application Boot-up Group in Ashburn
 
-1. Click on Add group.
+1. Click on Manage plan groups.
 
   ![add plan group](./images/ashburn-plangroup-add.png)
 
 2. Add "Start Application Server Domains" User defined group. We will now add PeopleSoft Application Server boot up step. Click on Add Step.
 
-    ![add-app-boot-script](./images/phoenix-add-app-boot-script.png)
-
     ![add-app-boot-script](./images/phoenix-add-app-boot-script2.png)
 
   - Add *Start PeopleSoft Application in Ashburn* in Group name
   - Add *Boot of Application Server Domains* in Step name
-  - Leave the Enable Step as ticked
+  - Select configurations as **Run local script**
+  - In the region, select "**US East (Ashburn)**"
+  - Select the Application Server instance in "Target instance in compartment" where you have placed the Application Server Domain start-up script
+  - In the script parameters, add the location of the Application Server Domain start-up script. Below is an example of Application Server Domain start-up script, please write a start-up shell script according to your setup and configurations
+  - Run as user will be the user who has access to start-up
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Ashburn)"
-  - Select the "Run local script" option
-  - Select application server instance in "Target instance in compartment"
-  - In script parameters, add the location of the application server domain start-up script
-  - Run as user will be the username who has access to boot Application Server domain
+  - Enable step
 
-Click on Add Step.
+Click on Add.
  
 3. We will now add PeopleSoft Process Scheduler (Linux) boot up step.
-
-    ![add-prcs-boot-script](./images/phoenix-add-prcs-boot-script.png)
 
     ![phoenix-add-prcs-linux-boot-script](./images/phoenix-add-prcs-linux-boot-script.png)
 
   - Add *Boot up Process Scheduler Domains (Linux)* in Step name
-  - Leave the Enable Step as ticked
+  - Select configurations as **Run local script**
+  - In the region, select "**US East (Ashburn)**"
+  - Select the Process Scheduler Server instance in "Target instance in compartment" where you have placed the Application Server Domain start-up script
+  - In the script parameters, add the location of the Process Scheduler Server Domain start-up script. Below is an example of Process Scheduler Domain start-up script, please write a start-up shell script according to your setup and configurations
+  - Run as user will be the user who has access to start-up
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Ashburn)"
-  - Select the "Run local script" option
-  - Select process scheduler server instance in "Target instance in compartment"
-  - In script parameters, add the location of the process scheduler server domain start-up script
-  - Run as user will be the username who has access to boot Process Scheduler Server domain
+  - Enable Step
 
-Click on Add Step.
+Click on Add.
  
 4. We will now add PeopleSoft Process Scheduler (Windows) boot up step. Click on Add Step.
-
-    ![phoenix-add-prcs-windows-boot-script](./images/phoenix-add-prcs-windows-boot-script.png)
 
     ![phoenix-add-prcs-windows-boot-script](./images/phoenix-add-prcs-windows-boot-script2.png)
 
   - Add *Boot up Process Scheduler Domains (Windows)* in Step name
-  - Leave the Enable Step as ticked
+  - Select configurations as **Run local script**
+  - In the region, select "**US East (Ashburn)**"
+  - Select the Process Scheduler Server instance in "Target instance in compartment" where you have placed the Process Scheduler Server Domain start-up  script
+  - In the script parameters, add the location of the Process Scheduler Server Domain start-up  script. Below is an example of Process Scheduler Server Domain start-up  script, please write a start-up  shell script according to your setup and configurations
+  - Run as user will be the user who has access to start-up 
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Ashburn)"
-  - Select the "Run local script" option
-  - Select process scheduler server instance in "Target instance in compartment"
-  - In script parameters, add the location of the process scheduler server domain start-up script
-  - Run as user will be blank for Windows compute instance
-
-Click on Add Step.
+  - Enable Step
+  
+Click on Add.
  
 5. We will now add Web Server Boot up step. Click on Add Step.
-
-    ![phoenix-add-web-boot-script](./images/phoenix-add-web-boot-script.png)
 
     ![phoenix-add-web-boot-script](./images/phoenix-add-web-boot-script2.png)
 
   - Add *Boot up Web Server Domains* in Step name
-  - Leave the Enable Step as ticked
+  - Select configurations as **Run local script**
+  - In the region, select "**US East (Ashburn)**"
+  - Select the Web Server instance in "Target instance in compartment" where you have placed the Web Server   Domain start-up script
+  - In the script parameters, add the location of the Web Server Domain start-up script. Below is an example of Web Server Domain start-up script, please write a start-up shell script according to your setup and configurations
+  - Run as user will be the user who has access to start-up
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Ashburn)"
-  - Select the "Run local script" option
-  - Select web server instance in "Target instance in compartment"
-  - In script parameters, add the location of the web server domain start-up script
-  - Run as user will be the username who has access to boot Web Server domain
-
-Click on Add Step.
+  - Enable Step
 
 Click on Add.
 
-   ![phoenix-add-boot-scripts](./images/phoenix-add-boot-scripts.png)
- 
 ## Task 7: Customize the Switchover plan - Add Elastic Search Services Boot-up Scripts in Ashburn
     
-1. Click on Add group. Provide a name to the group as Start Elastic Search Services.
+1. Click on Manage plan groups. Provide a name to the group as Start Elastic Search Services.
 
     ![add plan group](./images/ashburn-plangroup-add.png)
 
 2. We will now add Elastic Search boot up script. Click on Add Step.
 
-    ![phoenix-add-elk-boot-script](./images/phoenix-add-elk-boot-script.png)
-
     ![phoenix-add-elk-boot-script](./images/phoenix-add-elk-boot-script2.png)
 
   - Add *Start Elastic Search Services* in group name
   - Add *Boot up Elastic Search Services* in Step name
-  - Leave the Enable Step as ticked
+  - Select configurations as **Run local script**
+  - In the region, select "**US East (Ashburn)**"
+  - Select the Web Server instance in "Target instance in compartment" where you have placed the Elastic Search Server Domain start-up script
+  - In the script parameters, add the location of the Elastic Search Server Domain start-up script. Below is an example of Elastic Search server Domain start-up script, please write a start-up shell script according to your setup and configurations
+  - Run as user will be the user who has access to start-up
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Ashburn)"
-  - Select the "Run local script" option
-  - Select Elastic Search server instance in "Target instance in compartment"
-  - In the script parameters, add the location of the Elastic Search services start-up script
-  - Run as user will be the username who has access to boot Elastic Search services
+  - Enable Step
 
   Click on Add.
 
-    ![phoenix-add-elk-boot-group](./images/phoenix-add-elk-boot-group.png)
-
 ## Task 8: Customize the Switchover plan - Add Kibana Services Boot-up Scripts in Ashburn
 
-1. Click on Add group. Provide a name to the group as Start Kibana Services.
+1. Click on Manage plan groups. Provide a name to the group as Start Kibana Services.
 
     ![add plan group](./images/ashburn-plangroup-add.png)
 
 2. We will now add Kibana Services boot up script. Click on Add Step.
 
-    ![phoenix-add-kibana-boot-script](./images/phoenix-add-kibana-boot-script.png)
- 
-    ![phoenix-add-kibana-boot-script](./images/phoenix-add-kibana-boot-script2.png)
+   ![phoenix-add-kibana-boot-script](./images/phoenix-add-kibana-boot-script2.png)
 
   - Add *Start Kibana Services* in group name
   - Add *Boot up Kibana Services* in Step name
-  - Leave the Enable Step as ticked
+  - Select configurations as **Run local script**
+  - In the region, select "**US East (Ashburn)**"
+  - Select the Web Server instance in "Target instance in compartment" where you have placed the Kibana  services start-up script
+  - In the script parameters, add the location of the Kibana services start-up script. Below is an example of Kibana services start-up script, please write a start-up shell script according to your setup and configurations
+  - Run as user will be the user who has access to start-up
   - Select Error mode as "Stop on error"
   - Leave the default "3600" seconds in Timeout in seconds
-  - In the region, select "US East (Ashburn)"
-  - Select the "Run local script" option
-  - Select Kibana server instance in "Target instance in compartment"
-  - In the script parameters, add the location of the Kibana services start-up script
-  - Run as user will be the username who has access to boot Kibana services
+  - Enable Step
 
   Click on Add.
-
-    ![phoenix-add-kibana-boot-group](./images/phoenix-add-kibana-boot-group3.png)
 
 ## Task 9: Customize the Switchover plan - Enable files synchronization (rsync) jobs in Ashburn
 
  As part of this task, we will enable synchronization (rsync) jobs in Phoenix to reverse the sync from Phoenix to Ashburn post switchover as the roles (primary and standby) are now reversed.
 
- 1. Click on Add group.
+ 1. Click on Manage plan groups.
 
     ![add plan group](./images/ashburn-plangroup-add.png)
 
 2. We will enable cronjob (rsync) in Application Server. Add "Enable-rsync-in-Ashburn" User defined group. Click on Add Step.
 
-    ![phoenix-add-sync-start-script](./images/phoenix-add-sync-start-script.png)
-
     ![phoenix-add-app-sync-start-script](./images/phoenix-add-app-sync-start-script.png)    
 
     - Add *Enable-rsync-in-Ashburn-App* in Step name
-    - Leave the Enable Step as ticked
-    - Select Error mode as "Stop on error"
-    - Leave the default "3600" seconds in Timeout in seconds
+    - Select configurations as **Run local script**
     - In the region, select "**US East (Ashburn)**"
-    - Select the "Run local script" option
-    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
+    - Select the Server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
     - In the script parameters, add the location of the cronjob (rsync) enable script
     - Run as user will be the user who has access to enable cronjobs
+    - Leave the Enable Step as ticked
   
     Click on Add Step.
 
 3. We will now enable cronjob (rsync) in Process Scheduler Server. Click on Add Step.
 
-    ![phoenix-add-sync-stop-script](./images/phoenix-add-sync-start-script2.png)
-
     ![phoenix-add-prcs-sync-stop-script](./images/phoenix-add-prcs-sync-start-script.png)    
 
     - Add *Enable-rsync-in-Ashburn-PRCS* in Step name
-    - Leave the Enable Step as ticked
-    - Select Error mode as "Stop on error"
-    - Leave the default "3600" seconds in Timeout in seconds
+    - Select configurations as **Run local script**
     - In the region, select "**US East (Ashburn)**"
-    - Select the "Run local script" option
-    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
+    - Select the Server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
     - In the script parameters, add the location of the cronjob (rsync) enable script
     - Run as user will be the user who has access to enable cronjobs
+    - Leave the Enable Step as ticked
 
     Click on Add Step.
 
 4. We will now enable cronjob (rsync) in Web Server. Click on Add Step.
 
-    ![phoenix-add-sync-stop-script](./images/phoenix-add-sync-start-script3.png)
-
     ![phoenix-add-web-sync-stop-script](./images/phoenix-add-web-sync-start-script.png)    
 
     - Add *Enable-rsync-in-Ashburn-WEB* in Step name
-    - Leave the Enable Step as ticked
-    - Select Error mode as "Stop on error"
-    - Leave the default "3600" seconds in Timeout in seconds
+    - Select configurations as **Run local script**
     - In the region, select "**US East (Ashburn)**"
-    - Select the "Run local script" option
-    - Select the server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
+    - Select the Server instance in "Target instance in compartment" where you have placed the cronjob (rsync) enable script
     - In the script parameters, add the location of the cronjob (rsync) enable script
     - Run as user will be the user who has access to enable cronjobs
-
-  Click on Add Step.
+    - Leave the Enable Step as ticked
 
   Click on Add.
-
-    ![phoenix-add-sync-start-script-done](./images/add-sync-start-script-done.png)    
 
 ## Task 10: Customize the Switchover plan - DR Plan Re-Ordering
 
   We will now re-order the DR plan to stop PeopleSoft Application in Primary (*Phoenix*) region first, 
   followed by switchover to Standby (*Ashburn*) region.
 
-1. Click on Actions under the DR plan and click on **Reorder groups**.
+1. Click on **Reorder groups**.
 
    ![phoenix-dr-plan-re-order](./images/ashburn-dr-plan-re-order.png)
 
@@ -526,4 +451,4 @@ Click on Add.
 ## Acknowledgements
 
 - **Author** -  Vinay Shivanna, Principal Cloud Architect
-- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023
+- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, November 2025

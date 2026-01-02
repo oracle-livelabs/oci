@@ -36,8 +36,6 @@ Estimated Time: 15 Minutes
 
 6. Notice the *Role* of the **FSCM92-FSDR-Group-Phoenix** DRPG; it has automatically changed to *Standby*. Now the PeopleSoft application standby region is back to *Phoenix region*.
 
-  ![ashburn drpg status](./images/phoenix-drpg-status.png)
-
 ## Task 2: Access PeopleSoft Application from the phoenix region
 
 1. From the Hamburger menu, select **Networking**, then **Load Balancers** .Verify the region is **Ashburn**
@@ -69,4 +67,4 @@ We have now achieved the complete automation of switching over (rollback) a Peop
 ## Acknowledgements
 
 - **Author** -  Vinay Shivanna, Principal Cloud Architect
-- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023
+- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, November 2025

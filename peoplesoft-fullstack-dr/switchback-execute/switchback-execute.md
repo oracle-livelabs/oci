@@ -23,7 +23,7 @@ Estimated Time: 25 Minutes
 
     ![phoenix-sample-process](./images/phoenix-sample-process.png)
 
-## Task 1: Execute the switchover plan
+## Task 2: Execute the switchover plan
 
 1. Login into OCI Console. Select region as **Ashburn**.
  
@@ -41,16 +41,16 @@ Estimated Time: 25 Minutes
 
     ![drpg switchover plan](./images/phoenix-sw-plan.png)
 
-5. Navigate to the **Execute Plan** section, which will be right below the **FSCM92-FSDR-Switchover-From-Phoenix-To-Ashburn** plan, and select
+5. Click on **Plan executions** tab. 
 
     ![drpg execute plan](./images/phoenix-execute-plan.png)
+
+    ![drpg execute plan](./images/phoenix-execute-plan2.png)
 
 6. In the **Execute Plan** window
 
 - Provide a name for the Plan execution like **FSCM92-FSDR-Switchover-From-Phoenix-To-Ashburn**
-- Uncheck the **Enable prechecks**  (  Prechecks were executed successfully in Lab 5)
-- Leave the **Ignore warnings** as it is
-- Verify and hit **Execute DR Plan**
+- Verify and hit **Execute Plan**
 
     ![drpg execute confirm](./images/phoenix-execute-run-1.png)
 
@@ -59,8 +59,6 @@ Estimated Time: 25 Minutes
 1. Navigate to **Plan executions** section under **Resources** and select the **FSCM92-FSDR-Switchover-From-Ashburn-To-Phoenix** plan execution.Initially, it will show all the steps as *Queued*.
 
   Refresh the page; within a few seconds, the **State** will change from *Queued* to *In Progress*.
-
-    ![drpg execute monitor1](./images/phoenix-execute-inprogress.png)
 
 2. All the *plan groups* will run serially, but steps inside each *plan group* will be parallel. Monitor the various plan group and steps which are running. Navigate to the three dots section for the respective plan group step and click. You get the option to view the log and download the log. These logs are stored in the object storage bucket provided during the DRPG creation. You can monitor the Progress and download the log if necessary for troubleshooting.
 
@@ -89,5 +87,5 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** -  Vinay Shivanna, Principal Cloud Architect
-- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023
+- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, November 2025
 
