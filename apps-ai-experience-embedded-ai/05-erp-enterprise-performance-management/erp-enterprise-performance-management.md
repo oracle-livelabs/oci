@@ -50,7 +50,7 @@ In this exercise, you will learn how to use Insights to identify anomalies, expl
 
    When the Insights are configured, the priority can be determined as high, medium, or low.  Both the $ and % variances are shown along with the data intersections of related data and the type of variance - a Prediction, Forecast Bias, or Anomaly. </br>  
 
-   This exercise will focus on just the Anomaly type.  There is also have a high-level explanation of the Insight, its status, and when it was created.  
+   This exercise will focus on just the Anomaly type.  There is a high-level explanation of the Insight, its status, and when it was created.  
 
       > Scroll down to review the listing of Insights.  
 
