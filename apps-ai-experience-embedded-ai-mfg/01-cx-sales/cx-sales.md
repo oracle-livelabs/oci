@@ -60,7 +60,7 @@ In this exercise we will explore some of the embedded AI features available in F
      
      >   Select the last option - *Given the favorable position of the Aegon Fitness Gym opportunity...*
 
-   ![Ask Follo up Question](images/image006.png " ")
+   ![Ask Follow up Question](images/image006.png " ")
 
     Using historical references, data within the opportunity, and data from ongoing deals, the agent is able to prioritize next steps in order to close this deal. You notice one of these steps is to secure a firm commitment 
 
