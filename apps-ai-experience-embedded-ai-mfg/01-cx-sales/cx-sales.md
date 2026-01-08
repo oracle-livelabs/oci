@@ -42,7 +42,7 @@ In this exercise we will explore some of the embedded AI features available in F
      > 1.	In the search, type *Deal Advisor*
      > 2.   Select *Deal Advisor* option from the drop down
 
-      ![Open Customer Account](images/image004.png " ")
+      ![Initiate Deal Advisor](images/image004.png " ")
 
       The *Deal Advisor* AI Agent chat window opens
 
@@ -52,7 +52,7 @@ In this exercise we will explore some of the embedded AI features available in F
 
       > Select the first suggestion - *Give me a brief overview of this opportunity*.
 
-      ![Create Business Plan](images/image005.png " ")  
+      ![Request Opportunity Overview](images/image005.png " ")  
 
 3. Ask the AI Agent a follow up question
 
@@ -60,13 +60,13 @@ In this exercise we will explore some of the embedded AI features available in F
      
      >   Select the last option - *Given the favorable position of the Aegon Fitness Gym opportunity...*
 
-   ![Business Plan Details](images/image006.png " ")
+   ![Ask Follo up Question](images/image006.png " ")
 
     Using historical references, data within the opportunity, and data from ongoing deals, the agent is able to prioritize next steps in order to close this deal. You notice one of these steps is to secure a firm commitment 
 
     > Close the agent by clicking the **X** in the top right of the agent
 
-      ![Generate Goals](images/image007.png " ")
+      ![Exit Agent](images/image007.png " ")
 
 ## Task 3: Using Generative AI create and send the customer an email
 
