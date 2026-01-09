@@ -26,7 +26,7 @@ On the same sales trip, the sales VP damaged his laptop and needs to order a new
       > -   Click on **Procurement** tab
       > -   Click on **Purchase Requisitions** tile
 
-      ![Application Home](images/image027.png " ")
+      ![Application Home](images/image020.png " ")
    
 ## Task 2: Explore the Purchase Requisition UI and Ask Oracle
 

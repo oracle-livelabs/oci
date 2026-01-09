@@ -25,7 +25,7 @@ Now that the sales VP has finished researching his requisitions, he now wants to
       > -   Click on **Risk Management** tab
       > -   Click on **Access Certifications** tile
 
-      ![Application Home](images/image042.png " ")
+      ![Application Home](images/image035.png " ")
 
       > -   For the row, where **Name** column value is **FY25/Q3/Procure to Pay**, click on **Dropdown arrow** under the **Links** column
       > -   Select **Certifier Worksheet** menu option

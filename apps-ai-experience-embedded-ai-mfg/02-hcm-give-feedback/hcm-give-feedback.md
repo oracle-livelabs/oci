@@ -46,8 +46,8 @@ Now that we’ve updated the sales opportunity, we need to provide feedback for 
 
    There are different options when it comes to who gets feedback, and how it’s viewed by the business. Since this is part of the unified suite, it’s easy to find your team. 
    
-      > -	Search & select employee: *Natalie SalesRep*
-      > -   Define visibility: *Managers and Natalie SalesRep*
+      > -	Search & select employee: *Natalie Sales Rep*
+      > -   Define visibility: *Managers and Natalie Sales Rep*
 
       ![Select Employee to give Feedback for](images/image021.png " ")  
 
