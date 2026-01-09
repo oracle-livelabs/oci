@@ -68,7 +68,7 @@ In Phoenix (Standby), members to be added are below.
 
    ![drpg atp added](./images/ashburn-db-added.png)
 
-6. Add PeopleSoft Application Server Compute instance.
+5. Add PeopleSoft Application Server Compute instance.
 
   Select **FSCM92-FSDR-Group-Ashburn** DRPG, click on **Members**, click on **Manage Members** and hit **Add Member**
 

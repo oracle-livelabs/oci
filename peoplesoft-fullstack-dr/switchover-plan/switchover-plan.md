@@ -168,7 +168,7 @@ Please refer below link to know more about on how to enable Run Commands in Comp
 - **Built-in Prechecks** - These are the prechecks for the DB switchover.
 - **Switchover Databases (Standby)** - Database switchover.
 
-  ![drpg plan details](./images/phoenix-drplan-detail.png)
+  ![drpg plan details](./images/phoenix-drplan-details.png)
 
 ## Task 3: Customize the Switchover plan - Add PeopleSoft Application Shutdown group in Ashburn
 
