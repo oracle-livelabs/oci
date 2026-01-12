@@ -60,7 +60,7 @@ Supervisor agents act as a central coordinator that orchestrates a team of other
 
    ![Agent Team settings](images/image006.png " ")
 
-   > Select the **Questions** tab and change the requisition number in the first question to **204150**.<br/>
+   > Select the **Questions** tab and change the requisition number in the first question to **[](var:pr_num)**.<br/>
    > Click **Update**:
 
    ![modify agent question](images/image007.png " ")
@@ -132,6 +132,6 @@ Supervisor agents act as a central coordinator that orchestrates a team of other
 
 
 ## Acknowledgements
-* **Author** - Rick Beck, Master Principal SaaS Platform Technologist, NAA Office of Technology and Innovation
-* **Contributors** -  Tim Sullivan
-* **Last Updated By/Date** - Rick Beck, December 2025, based on Fusion 25D
+* **Author** - [](var:author)
+* **Contributors** - [](var:contributors)
+* **Last Updated By/Date** - [](var:last_updated)
