@@ -8,7 +8,10 @@
             "title": "Introduction: Build an extension to a pre-defined AI Agent Studio template",
             "filename": "../../00-introduction/introduction.md"
         },
-
+        {
+            "title": "Demo Setup Instructions",
+            "filename": "../../00.1-setup/setup.md"
+        },
         {
             "title": "Lab 1: Examine the pre-built Purchase Requisition Status Advisor Agent template and components",
             "filename": "../../01-pr-advisor-explore/pr_advisor_explore.md"
