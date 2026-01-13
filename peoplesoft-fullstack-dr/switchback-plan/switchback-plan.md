@@ -424,10 +424,6 @@ Click on Add.
 
    Move group **Stop PeopleSoft Application in Phoenix** one order above **Switchover Databases (Standby)** so that Ashburn region hosted Primary production application is shutdown before switchover.
 
-    ![phoenix-dr-plan-re-order-shutdown](./images/phoenix-dr-plan-re-order-shutdown.png)  
-
-    ![phoenix-dr-plan-re-order-shutdown1](./images/phoenix-dr-plan-re-order-shutdown1.png)
-
    Click Save changes.
 
 2. Click on Actions under the DR plan and click on **Reorder groups**.
@@ -435,10 +431,6 @@ Click on Add.
    ![phoenix-dr-plan-re-order](./images/ashburn-dr-plan-re-order.png)
 
    Move group **Stop\_rsync\_in\_Phoenix\_App** one order above **Switchover Databases (Standby)**.
-
-    ![phoenix-dr-plan-re-order-sync](./images/phoenix-dr-plan-re-order-sync.png) 
-
-    ![phoenix-dr-plan-re-order-sync](./images/phoenix-dr-plan-re-order-sync1.png) 
 
    Click Save changes.
 

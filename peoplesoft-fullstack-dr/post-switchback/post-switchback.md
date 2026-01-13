@@ -44,8 +44,6 @@ Estimated Time: 15 Minutes
 
   The Overall Health status of the Load Balancer will be OK.
 
-     ![ashburn-loadbalancer-health](./images/ashburn-loadbalancer-health.png)
-
 2. Open a tab in your browser and access the PeopleSoft Application. You should be able to see that the application is working as expected from the Ashburn region.
 
       ![ashburn-peoplesoft-app-verify](./images/phoenix-peoplesoft-app-verify.png)

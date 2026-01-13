@@ -23,7 +23,7 @@ Estimated Time: 25 Minutes
 
     ![ashburn-sample-process](./images/ashburn-sample-process.png)
 
-## Task 1: Execute the Failover plan
+## Task 2: Execute the Failover plan
 
 1. Login into OCI Console. Select region as **Phoenix**.
  
@@ -52,13 +52,11 @@ Estimated Time: 25 Minutes
 - Leave the **Ignore warnings** as it is
 - Verify and hit **Execute DR Plan**
 
-    ![drpg execute confirm](./images/phoenix-execute-run-1.png)
-
-## Task 2: Monitor the executed Failover Plan
+## Task 3: Monitor the executed Failover Plan
 
 1. Navigate to **Plan executions** section under **Resources** and select the **FSCM92-FSDR-Failover-From-Ashburn-To-Phoenix** plan execution.Initially, it will show all the steps as *Queued*.
 
-  Refresh the page; within a few seconds, the **State** will change from *Queued* to *In Progress*.
+  Refresh the page; within a few seconds, the **State** will change from *Queued* to *In Progress* and some steps will show as succeeded already.
 
     ![drpg execute monitor1](./images/phoenix-execute-inprogress.png)
 
@@ -70,13 +68,11 @@ Estimated Time: 25 Minutes
 
      ![drpg execute monitor progress](./images/phoenix-execute-moving.png)
 
-6. Keep monitoring the rest of the groups and steps; each step will complete depending on the actual task.
-
-     ![drpg execute monitor progress](./images/phoenix-execute-moving2.png)
+    Keep monitoring the rest of the groups and steps; each step will complete depending on the actual task.
 
 7. Wait for all the steps to complete successfully.  It is important to monitor the progress of each step and take actions in case of any failures. 
 
-## Task 3: Verify the executed Failover plan
+## Task 4: Verify the executed Failover plan
 
 1. From the plan execution detail, verify the duration of each step, status, duration of the entire Failover plan, etc. *It is essential to have successful completion of all steps*. In this example it took around 27 minutes to complete. These timings will vary.Use the Expand all button to expand all the steps and the Collapse all button for collapsing. Use the view or download log option to see step execution details.
 

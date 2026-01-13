@@ -37,7 +37,7 @@ In Phoenix (Standby), members to be added are below.
 
 2. Select **Migration and Disaster Recovery** from the Hamburger menu, then **Disaster Recovery** -> **DR Protection Groups**. Verify the region is **Ashburn**
 
-   ![drpg navigation page](./images/ashburn-drpgpage1.png)
+   ![drpg navigation page](./images/ashburn-drpgpage.png)
 
 3. You will land on the Disaster Recovery Protection group home page; make sure you have selected *the Ashburn* region. Click on **FSCM92-FSDR-Group-Ashburn** DRPG.
 

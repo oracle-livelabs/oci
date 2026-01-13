@@ -709,17 +709,13 @@ Click on Add.
 
    ![phoenix-dr-plan-re-order-shutdown](./images/phoenix-dr-plan-re-order-shutdown.png)  
 
-   ![phoenix-dr-plan-re-order-shutdown1](./images/phoenix-dr-plan-re-order-shutdown1.png)
-
-Click Save changes.
+  Click Save changes.
 
 2. Click on Actions under the DR plan and click on **Reorder groups**.
 
    ![phoenix-dr-plan-re-order](./images/phoenix-dr-plan-re-order.png)
 
    Move group **Stop\_rsync\_in\_Ashburn\_App** order above **Switchover Databases (Standby)**.
-
-   ![phoenix-dr-plan-re-order-sync](./images/phoenix-dr-plan-re-order-sync.png) 
 
    Click Save changes.
 

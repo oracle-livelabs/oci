@@ -55,8 +55,6 @@ Estimated Time: 60 Minutes
 
   Refresh the DR Plan page if required. You can monitor the request's status in the **Work requests** section under Resources. Within few minutes, the plan will get created, and it should be in *active* State.
 
-  ![drpg plan created](./images/phoenix-drplan-created.png)
-
   Select the **FSCM92\_FSDR\_Failover\_From\_Ashburn\_To\_Phoenix** plan, and you should be able to see the built-in plan groups.
 
   Based on the members we added in both primary and standby DRPG, FSDR created these built-in plans.

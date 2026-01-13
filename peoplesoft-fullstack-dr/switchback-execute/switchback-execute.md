@@ -54,9 +54,9 @@ Estimated Time: 25 Minutes
 
     ![drpg execute confirm](./images/phoenix-execute-run-1.png)
 
-## Task 2: Monitor the executed switchover Plan
+## Task 3: Monitor the executed switchover Plan
 
-1. Navigate to **Plan executions** section under **Resources** and select the **FSCM92-FSDR-Switchover-From-Ashburn-To-Phoenix** plan execution.Initially, it will show all the steps as *Queued*.
+1. Navigate to **Plan executions** section under **Resources** and select the **FSCM92-FSDR-Switchover-From-Phoenix-To-Ashburn** plan execution.Initially, it will show all the steps as *Queued*.
 
   Refresh the page; within a few seconds, the **State** will change from *Queued* to *In Progress*.
 
@@ -74,7 +74,7 @@ Estimated Time: 25 Minutes
 
 5. Wait for all the steps to complete successfully.  It is important to monitor the progress of each step and take actions in case of any failures. 
 
-## Task 3: Verify the executed switchover plan
+## Task 4: Verify the executed switchover plan
 
 1. From the plan execution detail, verify the duration of each step, status, duration of the entire switchover plan, etc. *It is essential to have successful completion of all steps*. Use the Expand all button to expand all the steps and the Collapse all button for collapsing. Use the view or download log option to see step execution details.
 

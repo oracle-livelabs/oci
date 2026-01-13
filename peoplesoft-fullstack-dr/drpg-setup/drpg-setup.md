@@ -70,7 +70,7 @@ Estimated Time: 15 Minutes
 
 ## Task 2: Associate Ashburn DRPG as primary and Phoenix DRPG as Standby
 
-1. From the Ashburn region OCI console, select **FSCM92-FSDR-Group-Ashburn** DRPG. Select the **Associate** button
+1. From the Ashburn region OCI console, select **FSCM92-FSDR-Group-Ashburn** DRPG. Click on Actions and select the **Associate** button
 
   ![drpg associate](./images/drpg-associate.png)
 
@@ -82,8 +82,6 @@ Estimated Time: 15 Minutes
   ![drpg associate confirm](./images/drpg-associate-1.png)
 
   **FSCM92-FSDR-Group-Ashburn** DRPG will change to *Updating* State
-
-  ![drpg associate update](./images/drpg-associate-updating.png)
 
   Navigate back to the DR Protection group home page. You should be able to see DRPG **FSCM92-FSDR-Group-Ashburn** state as *Active*, role as *Primary*, peer region as *US West (Phoenix)*
 

@@ -68,9 +68,7 @@ Estimated Time: 25 Minutes
 
      ![drpg execute monitor progress](./images/phoenix-execute-moving.png)
 
-6. Keep monitoring the rest of the groups and steps; each step will complete depending on the actual task.
-
-     ![drpg execute monitor progress](./images/phoenix-execute-moving2.png)
+    Keep monitoring the rest of the groups and steps; each step will complete depending on the actual task.
 
 7. Wait for all the steps to complete successfully.  It is important to monitor the progress of each step and take actions in case of any failures. 
 

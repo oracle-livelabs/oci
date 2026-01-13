@@ -32,13 +32,11 @@ Estimated Time: 15 Minutes
 
   ![drpg Failover plan](./images/phoenix-sw-plan.png)
 
-5. Click on **Run prechecks** section, which will be right below the **FSCM92\_FSDR\_Failover\_From\_Ashburn\_To\_Phoenix** plan
+5. Click on **Actions** and click on **Run prechecks** section, which will be right below the **FSCM92\_FSDR\_Failover\_From\_Ashburn\_To\_Phoenix** plan
 
   ![navigate drpg prechecks](./images/phoenix-run-prechecks.png)
 
 6. In the **Run prechecks** window, provide the Plan execution name as **FSCM92-FSDR-Failover-From-Ashburn-To-Phoenix-Prechecks** and hit **Run prechecks**
-
-  ![drpg execute prechecks](./images/phoenix-execute-prechecks.png)
 
 ## Task 2: Monitor the executed prechecks plan
 
