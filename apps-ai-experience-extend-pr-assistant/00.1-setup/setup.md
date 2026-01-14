@@ -29,7 +29,7 @@ Setup demo in new environment. You will:
 
     ![application_from_file](images/application_from_file.png " ")
 
-    > Download zip file **[HERE](files/Supplier_Stock.zip?download=1)** and drag it to **Drag and Drop** area, change application name if desired, and click Import:
+    > Download zip file **[HERE](files/supplier_stock.zip?download=1)** and drag it to **Drag and Drop** area, change application name if desired, and click Import:
 
     ![drag_drop_file](images/import_dialog.png " ")
 
