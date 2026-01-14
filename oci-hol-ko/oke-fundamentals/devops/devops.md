@@ -17,10 +17,6 @@
 
 * Git CLI
 
-### 실습 비디오
-
-[](youtube:2TJerSoBmTo)
-
 ## Task 1: DevOps 서비스 사용을 위한 IAM Policy 설정
 
 DevOps 서비스를 사용하기 위해서는 DevOps 자원들에 권한 설정이 필요합니다. 공식 문서를 참조하여 권한 설정을 위한 Dynamic Group 및 Group에 대한 Policy를 설정합니다.
@@ -42,9 +38,9 @@ DevOps 서비스를 사용하기 위해서는 DevOps 자원들에 권한 설정�
 
 3. DevOps 서비스를 사용할 Compartment로 이동하여 OCID를 복사해 둡니다.
 
-4. (**Domain** > **Default Domain** 선택후) **Identity** &gt; **Dynamic Groups**로 이동합니다.
+4. **Domains** > **Default Domain** 선택후 **Dynamic Groups** 탭으로 이동합니다.
 
-5. **Create Dynamic Group**을 클릭합니다.
+5. **Create dynamic group**을 클릭합니다.
 
 6. 복사해둔 Compartment OCID를 이용해 필요한 Dynamic Group을 만듭니다.
 
@@ -52,14 +48,14 @@ DevOps 서비스를 사용하기 위해서는 DevOps 자원들에 권한 설정�
     - Rule 설정
         * 모든 규칙 만족 - Match all rules defined below
         * Rule 1
-            ```
+            ```shell
             <copy>
             Any {resource.type = 'devopsdeploypipeline', resource.type = 'devopsbuildpipeline', resource.type = 'devopsrepository', resource.type = 'devopsconnection'}
             </copy>
             ```
     
         * Rule 2 - compartmentOCID를 복사해둔 OCID로 대체
-            ```
+            ```shell
             <copy>
             Any {resource.compartment.id = 'compartmentOCID'}
             </copy>
@@ -84,7 +80,7 @@ DevOps 서비스를 사용하기 위해서는 DevOps 자원들에 권한 설정�
     - `<group-name>`을 적용할 사용자 그룹으로 변경합니다. 예, 'Default'/'DevOpsDynamicGroup'
     - `<compartment-name>`을 적용할 Compartment 이름 변경합니다. 예, oci-hol-*xx*
 
-        ```
+        ```shell
         <copy>
         Allow dynamic-group <group-name> to manage devops-family in compartment <compartment-name>
         Allow dynamic-group <group-name> to read secret-family in compartment <compartment-name>
@@ -93,7 +89,7 @@ DevOps 서비스를 사용하기 위해서는 DevOps 자원들에 권한 설정�
         Allow dynamic-group <group-name> to manage generic-artifacts in compartment <compartment-name>
         Allow dynamic-group <group-name> to use ons-topics in compartment <compartment-name>
         Allow dynamic-group <group-name> to read all-artifacts in compartment <compartment-name>
-        Allow dynamic-group <group-name> to manage cluster in compartment <compartment-name>   
+        Allow dynamic-group <group-name> to manage cluster in compartment <compartment-name>
         Allow dynamic-group <group-name> to manage repos in tenancy
         </copy>
         ```
@@ -137,7 +133,7 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
 
 1. Project Overview에서 Enable Log을 클릭하거나 왼쪽 메뉴에서 Logs를 클릭합니다.
 
-    ![Enable Logging](images/enable-logging.png =60%x*)
+    ![Enable Logging](images/enable-logging-1.png =60%x*)
 
 2. 로그를 활성화 버튼을 토글합니다.
 
@@ -160,16 +156,11 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
 
 3. 생성된 코드 저장소 입니다. 일반적인 Git Repository입니다.
 
-4. 생성된 코드 저장소로 이동하여, Git URL을 확인합니다.
+4. Cloud Shell을 실행합니다.
 
-    ![GIT URL](images/git-url-1.png =30%x*)
-    ![GIT URL](images/git-url-2.png =50%x*)
+5. 복사한 주소를 사용해 git clone 명령어를 통해 복제합니다.
 
-5. Cloud Shell을 실행합니다.
-
-6. 복사한 주소를 사용해 git clone 명령어를 통해 복제합니다.
-
-    ````
+    ````shell
     git clone <YourClonewithHTTPS URL>
     ```
 
@@ -178,22 +169,26 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
         * `<TENANCY_NAME>`: OCI 서비스 콘솔에서 유저 Profile에서 보이는 Tenancy: 에 보이는 이름
             * Docker CLI로 OCIR에 로그인시 사용한 *TENANCY_NAMESPACE가 아닙니다.*
         * `<USER_NAME>`: OCI 서비스 콘솔에서 유저 Profile에서 보이는 유저명
-            * Default Identity Domain 사용시: Default를 제외한 이름, 예, winter
+            * Default Identity Domain이 아닌 경우: 예, {DOMAIN_NAME}/kildong.hong@example.com
  
     - AuthToken: OCIR때 사용한 AuthToken 또는 유저 프로파일에서 생성한 AuthToken을 그대로 사용합니다.
 
-7. 편의상 개발이 완료했다고 가정하고, 이미 개발된 Storefront 소스를 가져와 Clone한 저장소로 옮깁니다.
+    ![Clone Repo](images/devops-clone-repo-1.png)
 
-    ````
+    ![Clone Repo](images/devops-clone-repo-2.png)
+
+6. 편의상 개발이 완료했다고 가정하고, 이미 개발된 Storefront 소스를 가져와 Clone한 저장소로 옮깁니다.
+
+    ````shell
     <copy>
     wget https://github.com/TheKoguryo/MuShop-storefront/archive/refs/tags/v2022.03.tar.gz
     tar -xvzf v2022.03.tar.gz --strip-components=1 -C mushop-storefront-code-repo/
     </copy>
     ````
 
-8. Cloud Shell에서 처음 Git을 사용하는 경우 push 하기 전이 아래처럼 사용자정보를 설정합니다.
+7. Cloud Shell에서 처음 Git을 사용하는 경우 push 하기 전이 아래처럼 사용자정보를 설정합니다.
 
-    ````
+    ````shell
     <copy>
     git config --global user.email "you@example.com"
     git config --global user.name "Your Name"
@@ -201,30 +196,30 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
     ````
 
     예시
-    ````
-    git config --global user.email "winter@example.com"
-    git config --global user.name "winter"
+    ````shell
+    git config --global user.email "kildong.hong@example.com"
+    git config --global user.name "KilDong Hong"
     ````    
 
-9. 소스 플더로 이동합니다.
+8. 소스 플더로 이동합니다.
 
-    ````
+    ````shell
     <copy>
     cd mushop-storefront-code-repo
     </copy>
     ````
 
-10. GIT URL을 HTTPS로 사용하는 경우 매번 인증이 필요합니다. 이를 줄이기 위해 아래처럼 인증 정보를 저장 또는 캐쉬하도록 설정합니다.
+9. GIT URL을 HTTPS로 사용하는 경우 매번 인증이 필요합니다. 이를 줄이기 위해 아래처럼 인증 정보를 저장 또는 캐쉬하도록 설정합니다.
 
     - 방법 #1
-    ````
+    ````shell
     <copy>
     git config credential.helper store
     </copy>
     ````
 
     - 방법 #2
-    ````
+    ````shell
     <copy>
     git config --global credential.helper cache
 
@@ -233,9 +228,9 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
     </copy>
     ````
 
-11. 개발된 코드를 Code Repository에 Push 합니다.
+10. 개발된 코드를 Code Repository에 Push 합니다.
 
-    ````
+    ````shell
     <copy>    
     git add .
     git commit -m "init"
@@ -243,11 +238,11 @@ DevOps 파이프 라인 실행이 발생하는 주요 이벤트를 알려주기 
     </copy>
     ````
 
-12. Push가 완료되면 아래와 같이 Code Repository에 코드가 반영되어 있습니다. 
+11. Push가 완료되면 아래와 같이 Code Repository에 코드가 반영되어 있습니다. 
 
     ![MuShop Storefront Code Repository](images/mushop-storefront-code-repo.png)
 
-13. 이후 실습에서 개발 코드를 변경하여 Code Repository에 반영하면, Storefront UI 컨테이너 앱이 재배포 되도록 CI/CD 파이프라인을 생성할 예정입니다.
+12. 이후 실습에서 개발 코드를 변경하여 Code Repository에 반영하면, Storefront UI 컨테이너 앱이 재배포 되도록 CI/CD 파이프라인을 생성할 예정입니다.
 
 
 ## Task 4: Build Pipeline 만들기
@@ -297,7 +292,7 @@ CI/CD 중에 코드를 빌드하여 배포 산출물을 만드는 CI 과정에 �
 
     - build_spec.yaml
     
-        ```
+        ```yaml
         <copy>
         version: 0.1
         component: build
@@ -334,14 +329,14 @@ CI/CD 중에 코드를 빌드하여 배포 산출물을 만드는 CI 과정에 �
             name: "Define OCIR Path"
             timeoutInSeconds: 30
             command: |
-              if [ -z "${REPO_NAME_PREFIX}" ] ; then
-                  REPO_NAME=$APP_NAME
-              else
+              if [ -n "${REPO_NAME_PREFIX}" ] ; then
                   REPO_NAME=$REPO_NAME_PREFIX/$APP_NAME
+              else
+                  REPO_NAME=$APP_NAME
+              fi
         
-                  if [ ! -z "$COMPARTMENT_ID" ] ; then
-                      oci artifacts container repository create --display-name $REPO_NAME --compartment-id $COMPARTMENT_ID
-                  fi
+              if [ -n "$COMPARTMENT_ID" ] ; then
+                  oci artifacts container repository create --display-name $REPO_NAME --compartment-id $COMPARTMENT_ID
               fi
               TENANCY_NAMESPACE=`oci os ns get --query data --raw-output`
               OCIR_PATH=$OCI_RESOURCE_PRINCIPAL_REGION.ocir.io/$TENANCY_NAMESPACE/$REPO_NAME
@@ -375,7 +370,7 @@ CI/CD 중에 코드를 빌드하여 배포 산출물을 만드는 CI 과정에 �
 
     - 생성한 build_spec.yaml을 Code Repository에 반영합니다.
 
-        ````
+        ````shell
         <copy>
         git add build_spec.yaml
         git commit -m "add build_spec.yaml"
@@ -413,9 +408,9 @@ CI/CD 중에 코드를 빌드하여 배포 산출물을 만드는 CI 과정에 �
 
 2. 플러스 버튼을 클릭하여 build-stage 다음에 stage를 추가합니다.
 
-   ![OCIR Stage](images/ocir-stage-1.png)
+   ![OCIR Stage](images/ocir-stage-1.png =30%x*)
 
-3. Delivery Artifacts Stage를 선택합니다.
+3. Delivery artifacts Stage를 선택합니다.
 
 4. stage 이름을 입력하고 Create Artifact를 선택합니다.
 
@@ -430,36 +425,28 @@ CI/CD 중에 코드를 빌드하여 배포 산출물을 만드는 CI 과정에 �
 
         * docker push 명령으로 이미지를 푸쉬할 경로를 지정하는 것으로 생각하면 됩니다. 하드 코딩해도 되지만 여기서는 build-stage에서 넘어온 exportedVariable들을 사용합니다.
 
-    ![Add Artifact](images/add-artifact-1.png)
+    ![Add Artifact](images/add-artifact-1.png =50%x*)
 
-6. 같은 방식으로 하나 더 추가 합니다.
+6. Artifact 매핑
 
-    - Name: `generated_image_with_latest`
-    - Artifact source: ${OCIR_PATH}:latest
+    - Associate Artifact에서 방금 추가한 1개의 Artifact에 실제 컨테이너 이미지 파일을 매핑해 줍니다. 앞서 build-stage에서 build_spec.yaml에서 정의한 outputArtifacts 상의 이름을 입력합니다.
 
-        ![Associate Artifacts](images/associate-artifacts-1.png =70%x*)    
-
-7. Artifact 매핑
-
-    - Associate Artifact에서 방금 추가한 2개의 Artifact에 실제 컨테이너 이미지 파일을 매핑해 줍니다. 앞서 build-stage에서 build_spec.yaml에서 정의한 outputArtifacts 상의 이름을 입력합니다.
-
-        ```
+        ```shell
         outputArtifacts:
           - name: output-image
             type: DOCKER_IMAGE
             location: new-generated-image 
         ```
 
-        ![Associate Artifacts](images/associate-artifacts-2.png =70%x*)
+        ![Associate Artifacts](images/associate-artifacts-2.png)
 
-8. 아래쪽 **Add** 버튼을 클릭하여, 이제 delivery stage을 추가 완료합니다.
+7. 아래쪽 **Add** 버튼을 클릭하여, 이제 delivery stage을 추가 완료합니다.
 
-9. 파이프라인을 다시 실행해 봅니다. 
+8. 파이프라인을 다시 실행해 봅니다. 
 
-10. 이제 실제 소스코드로 빌드된 컨테이너 이미지가 OCIR에 자동으로 등록됩니다.
+9. 이제 실제 소스코드로 빌드된 컨테이너 이미지가 OCIR에 자동으로 등록됩니다.
 
     ![Pushed Image](images/pushed-image.png)
-
 
 
 ## Task 5: Deploy Pipeline 만들기
@@ -492,7 +479,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 1. **DevOps 프로젝트 페이지**로 이동하여 왼쪽 메뉴의 **Artifacts**로 이동합니다.
 
-2. Artifacts로 앞서 빌드 파이프라인 만들때 등록한 2개가 있는 것을 볼수 있습니다. 여기에 등록된 Artifact는 재사용이 가능합니다.
+2. Artifacts로 앞서 빌드 파이프라인 만들때 등록한 1개가 있는 것을 볼수 있습니다. 여기에 등록된 Artifact는 재사용이 가능합니다.
 
     ![Artifacts](images/artifacts.png)
 
@@ -500,7 +487,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 4. 등록 유형 중에서 **Kubernetes manifest**를 선택합니다.
 
-    ![Kubernetes Manifest Type](images/k8s-manifest-type.png)
+    ![Kubernetes Manifest Type](images/k8s-manifest-type.png =60%x*)
 
 5. Kubernetes manifest 유형에는 Artifact Source로 2가지 유형을 지원합니다.
 
@@ -511,7 +498,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
     - Name: 예, `k8s_mushop_storefront_deploy_template`
 
-        ![K8S Deployment Manifest](images/k8s-deployment-template.png =45%x*)
+        ![K8S Deployment Manifest](images/k8s-deployment-template.png =60%x*)
 
     - Value
 
@@ -632,13 +619,16 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
         </copy>        
         ```
 
-7. Cloud Shell로 돌아가 배포될 mushop namespace에 ocir-secret을 이전 실습에서 한 것 방업으로 다시 만듭니다.
+7. Cloud Shell로 돌아가 배포될 mushop namespace에 ocir-secret을 이전 실습에서 한 것 방법으로 다시 만듭니다.
 
-    ````
+    - `<tenancy-namespace>`, `<oci-auth-token>`는 이전 실습 Lab 2를 참고하세요
+
+    ````shell
     <copy>
-    kubectl create secret generic ocir-secret \
-    --from-file=.dockerconfigjson=$HOME/.docker/config.json \
-    --type=kubernetes.io/dockerconfigjson -n mushop
+    kubectl create secret docker-registry ocir-secret -n mushop \
+      --docker-server=ap-chuncheon-1.ocir.io \
+      --docker-username=<tenancy-namespace>/default/kildong.hong@example.com \
+      --docker-password='<oci-auth-token>'
     </copy>
     ````
 
@@ -663,15 +653,15 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 2. **Add Stage**를 클릭하여 **Apply manifest to your Kubernetes cluster** Stage를 추가합니다.
 
-3. 배포할 환경을 선택합니다.
-
-4. 배포할 manifest 파일을 선택합니다
+3. Stage 설정
 
     - Name: 예, apply-manifest-to-oke-stage
+    - 앞서 설정한 환경 선택, 예, oke-cluster-1
+    - 배포할 manifest 파일을 선택
 
     ![Select Manifest](images/deploy-to-oke-1.png =70%x*)
 
-5. 파이프라인 완성
+4. 파이프라인 완성
 
     ![Completed Pipeline](images/deploy-to-oke-2.png =30%x*)
 
@@ -685,7 +675,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 2. 파이프라인 마지막에 Stage를 추가합니다.
 
-3. **Trigger Deployment** 유형을 선택합니다.
+3. **Trigger deployment** 유형을 선택합니다.
 
 4. 설정한 Deployment Pipeline을 지정합니다.
 
@@ -695,7 +685,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 
 5. 전체 흐름이 완료되었습니다.
 
-   ![Deployment Pipeline Completed](images/deployment-pipeline-completed.png)
+   ![Deployment Pipeline Completed](images/deployment-pipeline-completed.png =30%x*)
 
 
 ### Trigger 설정하기
@@ -709,7 +699,7 @@ Kubernetes에 배포할 Stage 유형을 사용하기 위해서는 사전에 배�
 3. Trigger를 설정합니다.
 
     - **Name**: 예, mushop-storefront-trigger
-    - **Source Code Repository**: OCI Code Repository를 포함하여, 여러 유형의 Git Repository 연동을 지원합니다. 예제에서는 앞서 만든 OCI Code Repository상의 mushop-storefront-repo를 선택합니다.
+    - **Source Code Repository**: OCI code repository를 포함하여, 여러 유형의 Git Repository 연동을 지원합니다. 예제에서는 앞서 만든 OCI code repository상의 mushop-storefront-repo를 선택합니다.
     - **Actions**: 트리거링 되었을 때 호출하는 액션으로 작성한 빌드 파이프라인인 mushop-storefront-build-pipeline을 선택합니다.
  
         ![Create Trigger](images/create-trigger.png =60%x*)
@@ -730,7 +720,7 @@ Trigger에서 지정한 소스 코드에 임의의 변경사항을 발생시키�
 2. Cloud Shell에서 src/templates/data/_data.pug 에서 openingHours 시간의 값을 원하시는 시간으로 변경합니다.
 
     예, 마감시간을 22:00에서 20:00로 변경
-    ````
+    ````shell
     -
       var shopInfo = {
         phone: '+1 800.392.2999',
@@ -747,7 +737,7 @@ Trigger에서 지정한 소스 코드에 임의의 변경사항을 발생시키�
 
 3. 코드를 Code Repository에 Push 합니다.
 
-    ````
+    ````shell
     <copy>    
     git add .
     git commit -m "update opening-hours"
@@ -763,26 +753,31 @@ Trigger에서 지정한 소스 코드에 임의의 변경사항을 발생시키�
 
     ![Storefront UI](images/opening-hours.png =50%x*)
 
-3. 코드 작성은 Cloud Shell에 있는 VI 에디터를 사용할 수도 있으며, 여기서는 OCI Code Editor 사용하겠습니다. 콘솔 오른쪽 상단에서 Code Editor를 실행합니다.
+3. 코드 작성은 Cloud Shell에 있는 vi 에디터를 사용할 수도 있으며, 여기서는 OCI Code Editor 사용하겠습니다. 콘솔 오른쪽 상단에서 Code Editor를 실행합니다.
 
     ![Code Editor](images/code-editor-start.png =40%x*)
 
 4. 메뉴에서 **File** &gt; **Open** 을 통해 mushop-store-code-repo 폴더를 엽니다. 열린 폴더안의 src/templates/data/_data.pug 에서 openingHours 시간의 값을 원하시는 시간으로 변경합니다. 
 
     예, 마감시간을 22:00에서 20:00로 변경
-    ![Code Editor - OpeningHours](images/code-editor-opening-hours.png)
+
+    ![Code Editor - OpeningHours](images/code-editor-opening-hours.png =70%x*)
 
 5. 왼쪽 메뉴에서 Source Control로 이동하여, 변경사항을 스테이지합니다.
-    ![Code Editor - OpeningHours](images/code-editor-stage-all-changes.png)
 
-6. 코멘트(예, update opening-hours) 추가하고, 스테이지된 변경사항을 커밋합니다.     
-    ![Code Editor - OpeningHours](images/code-editor-commit.png)
+    ![Code Editor - OpeningHours](images/code-editor-stage-all-changes.png =40%x*)
+
+6. 코멘트(예, update opening-hours) 추가하고, 스테이지된 변경사항을 커밋합니다.  
+
+    ![Code Editor - OpeningHours](images/code-editor-commit.png =35%x*)
 
 7. DevOps Code Repository로 반영하기 위해 왼쪽 아래의 Push 아이콘을 클릭합니다.    
-    ![Code Editor - OpeningHours](images/code-editor-push-commit.png)
 
-8. 확인 창이 뜨면 OK를 클릭합니다.    
-    ![Code Editor - OpeningHours](images/code-editor-push-ok.png)
+    ![Code Editor - OpeningHours](images/code-editor-push-commit.png =40%x*)
+
+8. 확인 창이 뜨면 OK를 클릭합니다.
+
+    ![Code Editor - OpeningHours](images/code-editor-push-ok.png =40%x*)
 
 
 ### DevOps 파이프라인 실행결과 확인
@@ -811,17 +806,17 @@ Trigger에서 지정한 소스 코드에 임의의 변경사항을 발생시키�
 
 7. OKE 클러스터를 조회해 보면 정상 배포 되었습니다.
 
-
-    Pod가 새롭게 배포되었고, 이미지 주소가 새로 생성된 것으로 태그가 Commit ID와 동일함을 알수있습니다.
-    ```
+    Pod가 새롭게 배포되었고, 이미지 주소가 새로 생성된 것으로 태그가 Commit ID와 동일함을 알수있습니다. 예, `:f4a858b`
+    ```shell
     $ kubectl get pod
-    NAME                                  READY   STATUS    RESTARTS   AGE
+    NAME                                 READY   STATUS    RESTARTS   AGE
     ...
-    mushop-storefront-5fc76d68f-rkgjb     1/1     Running   0          9m6s
+    mushop-storefront-599d69c7b6-lbxqg   1/1     Running   0          8m29s
     ...
-    $ kubectl describe pod mushop-storefront-5fc76d68f-rkgjb | grep image
-      Normal  Pulling    9m38s  kubelet            Pulling image "ap-chuncheon-1.ocir.io/axjowrxaexxx/oci-hol-xx/mushop-storefront:4bb9420"
-      Normal  Pulled     9m35s  kubelet            Successfully pulled image "ap-chuncheon-1.ocir.io/axjowrxaexxx/oci-hol-xx/mushop-storefront:4bb9420" in 3.119739427s
+
+    $ kubectl describe pod mushop-storefront-599d69c7b6-lbxqg | grep image
+    Normal  Pulling    9m2s  kubelet            Pulling image "ap-chuncheon-1.ocir.io/axivhpoxxxxx/oci-hol-xx/mushop-storefront:f4a858b"
+    Normal  Pulled     9m    kubelet            Successfully pulled image "ap-chuncheon-1.ocir.io/axivhpoxxxxx/oci-hol-xx/mushop-storefront:f4a858b" in 1.573s (1.573s including waiting). Image size: 30730023 bytes.      
     ```
 
 8. 서비스 주소로 접속시 정상 동작을 확인할 수 있습니다.
@@ -838,4 +833,4 @@ Trigger에서 지정한 소스 코드에 임의의 변경사항을 발생시키�
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, November 2023
+- **Last Updated By/Date** - DongHee Lee, January 2026
