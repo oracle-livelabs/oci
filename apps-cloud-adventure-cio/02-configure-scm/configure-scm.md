@@ -20,143 +20,132 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update the Suppliers (New) listing page providing more visibility to Procurement Managers. Suppliers (New) is a dynamic listing page that allows you to create role-based layouts based on configurable criteria.
 
-![Configuration Objectives](../02-configure-scm/images/configure_objs.png)
+    ![Configuration Objectives](../02-configure-scm/images/configure-scm-image001.jpg)
 
 2. You will first navigate to the Suppliers (New) Listing Page.
 
-    > From the application home page, click on the **Procurement** tab.
+    > (1) Click the **>** to scroll the tabs until you see **Procurement** <br>
+    > (2) Click on the **Procurement** tab.
 
-    ![Application Home Page](../02-configure-scm/images/image101.png).
+    ![Application Home Page](../02-configure-scm/images/configure-scm-image002.jpg).
 
-    > Click on **Suppliers (New)** under **Quick Actions**.
+3. The page you're going to configure, Suppliers (New), is available in the Quick Actions section of the screen on the left.
 
-    ![My Team Page](../02-configure-scm/images/image102.png)
+    > (1) Click on **Suppliers (New)** under **Quick Actions**.
 
-    > Click on the **Supplier Type** to display the Filter and click into the Search box **Supplier Type**.
+    ![Procurement Page](../02-configure-scm/images/configure-scm-image003.jpg)
 
-    ![My Team Page](../02-configure-scm/images/image103.png)
+4. Before you configure this screen, you'll query some Supplier data.
 
-    > Click and select **Supplier (187)** to display list of suppliers.
+    > (1) Click on the **Supplier Type** to display the Filter. <br>
+    > (2) Click into the Search box **Supplier Type**.<br>
+    > (3) Click and select **Supplier (97)** to display list of suppliers.<br>
+    > (4) Click anywhere in the page away from the search filter **Supplier (97)**
 
-    ![My Team Page](../02-configure-scm/images/image104.png)
+    ![Suppliers List Page](../02-configure-scm/images/configure-scm-image004.jpg)
 
-    > Click anywhere in the page away from the search filter **Supplier (187)**
-
-    ![My Team Page](../02-configure-scm/images/image105.png)
-
-3. Now you will enter the Suppliers (New) Page that displays lists of suppliers.
+5. Now you will enter the Suppliers (New) Page that displays lists of suppliers.
 
     > (1) Click on drop-down icon to expand a specific supplier row.
 
-    ![Change Salary Page](../02-configure-scm/images/image106.png)
+    ![Suppliers List Page](../02-configure-scm/images/configure-scm-image005.jpg)
 
-4.  You can see the supplier information displayed is limited. We will update the page to display more fields for procurement managers. <br><br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
+6.  You can see the supplier information displayed is limited. We will update the page to display more fields for procurement managers. <br><br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
 
-    > (1) Click on the ![picture image](../02-configure-scm/images/icon102_co.png) **Image** in the top right corner of the screen.  <br>
+    > (1) Click on the ![picture image](../gen-images/user_icon.png) **Image** in the top right corner of the screen.  <br>
 
-    > (2) Then select Edit Page in Visual Builder Studio from the drop down options.
+    > (2) Then select **Edit Page in Visual Builder Studio** from the drop down options.
 
-    ![Change Salary Page](../02-configure-scm/images/image107.png)
+    ![Suppliers List Page](../02-configure-scm/images/configure-scm-image006.jpg)
 
-5. The following image appears as Visual Builder Studio is loading.
+7. Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the application development lifecycle: design, build, test, and deploy. <br><br> Now we will use VB Studio to make the required changes to the Suppliers (New) page.
 
-    ![Change Salary Page 2nd page](../02-configure-scm/images/image108.png)
+    > (1) Click on **Configure Fields and Regions**. <br>
 
-6. Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the application development lifecycle: design, build, test, and deploy. <br><br> Now we will use VB Studio to make the required changes to the Suppliers (New) page.
+    ![Configure Fields and Regions](../02-configure-scm/images/configure-scm-image007.jpg)
 
-    > Click on **Configure Fields and Regions**. <br>
+8.  First we will create a new role-based form rule for Suppliers (New) page
 
-    ![Select Project](../02-configure-scm/images/image109.png)
+    > (1) Click on the ![+ Icon](../gen-images/plusicon.jpg) **Icon** to add a new form rule.
 
-7.  First we will create a new role-based form rule for Suppliers (New) page
+    ![Fields and Regions](../02-configure-scm/images/configure-scm-image008.jpg)
 
-    > Click on the ![+ Icon](../02-configure-scm/images/icon105_plus.png) **Icon** to add a new form rule.
-
-    ![Fields and Regions](../02-configure-scm/images/image110.png)
+9.  You can name your rule whatever you want.  For example:
 
     > (1) Enter **procurementManagerLayout** in label. <br>
 
     > (2) Click on **Create**.
 
-    ![Fields and Regions](../02-configure-scm/images/image111.png)
+    ![Fields and Regions](../02-configure-scm/images/configure-scm-image009.jpg)
 
-8.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
+10. Now you'll create a condition.
 
-    > Click on the **Edit button.**
+    > (1) Click on the **Edit** button.  ![Edit Button](../gen-images/edit_button.png)
 
-    ![Fields and Regions](../02-configure-scm/images/image112.png)
+    ![Fields and Regions, Conditions](../02-configure-scm/images/configure-scm-image010.jpg)
 
-9.  Now we will add the conditions that applies this rule to all Procurement Managers.
+11. You can start entering your first condition based on the user role
 
-    > Click on the **Condition button**.
+    > (1) Enter **Roles** in the first field of the condition and.<br>
 
-    ![Fields and Regions, Conditions](../02-configure-scm/images/image113.png)
+    > (2) Select **[] Roles** from the resulting drop-down.
 
-  In the first box, enter **Roles** and select **Roles** from the drop-down.
+    ![Fields and Regions, Conditions](../02-configure-scm/images/configure-scm-image011.jpg)
 
-![Fields and Regions, Conditions](../02-configure-scm/images/image114.png)
+12. Next, you'll enter the comparison value for your first condition. You'll limit the use of this rule to users assigned the Procurement Manager role.
 
-    > (1) Enter **Procurement Manager** in the right most box of the **User Roles** row.       <br>
+    > (1) Type **Procurement Manager** in the value field and select the first occurrence of **Procurement Manager** from the dropdown.
 
-    > (2) Select the first **Procurement Manager** role from the drop-down list.
+    ![Fields and Regions](../02-configure-scm/images/configure-scm-image012.jpg)
 
-    ![Fields and Regions, Conditions](../02-configure-scm/images/image115.png)
+13. Now you'll determine which fields to show and/or hide for this rule.
 
-10. Now you want to add and hide fields.
+    > (1) Click on the **arrow ![Fields and Regions](../gen-images/debugarrow.jpg) icon** to the left of **Supplier Details** to expand the section.<br>
 
-    > Click on the ![dropdown](../02-configure-scm/images/icon103_dropdown.png)  Icon to the left of Supplier Details to expand the section.
+    ![Fields and Regions](../02-configure-scm/images/configure-scm-image013.jpg)
 
-    ![Fields and Regions](../02-configure-scm/images/image116.png)
+14. First you want to the configure the page to display the **Creation Date**.
 
-11. First you want to the configure the page  to display the **Creation Source**.
-
-    > (1) Click in the Box in the **Hidden Column** for **Creation Source Field** row.    <br>
+    > (1) Click in the Box in the **Hidden Column** for the **Creation Date** Field row.    <br>
 
     > (2) Then select **Visble** from the options that appear.
 
-    ![Validation](../02-configure-scm/images/image117.png)
+    ![Fields and Regions](../02-configure-scm/images/configure-scm-image014.jpg)
 
-12.  Now repeat the above steps for fields Creation Date, Parent Supplier Number and Tax Payer Country to make them visible.
+15.  Now repeat the above steps for fields CreationSource, ParentSupplierNumber and TaxPayerCountry to make them visible.
 
-    > (1) Click the Box in the **Hidden Column** for **each of these** rows.    <br>
+    > (1) Click the Box in the **Hidden Column** for **each of these** rows and select **Visible** from the options that appear.
+     * **CreationSource**
+     * **ParentSupplierNumber**
+     * **TaxpayerCountry**
+    ![Fields and Regions](../02-configure-scm/images/configure-scm-image015.jpg)
 
-    > (2) Then select **Visible** from the options that appear.
+16. Well done. You have configured a new role-based page layout for Procurement Managers with additional fields available to view. Redwood offers a quick way to review your changes as they appear in the application.
 
-![Validation 2](../02-configure-scm/images/image118.png)
+    > (1) Click on the **Preview** ![Fields and Regions, Conditions](../gen-images/preview.png) icon in the upper right of the screen.  The Preview will appear in a new browser tab.
 
-13. Well done. You have configured a new role-based page layout for Procurement Managers. Redwood offers a quick way to review your changes as they appear in the application.
+    ![Preview](../02-configure-scm/images/configure-scm-image016.jpg)
 
-    > (1) Click on the **Preview** ![Fields and Regions, Conditions](../02-configure-scm/images/icon104_preview.png) icon in the upper right of the screen<br>
+17. You can requery Suppliers as shown below.
 
-    > (2) A new windows will pop up in a new browser tab.
+    > (1) Click on the **Supplier Type** to display the Filter. <br>
+    > (2) Click into the Search box **Supplier Type**.<br>
+    > (3) Click and select **Supplier (97)** to display list of suppliers.<br>
+    > (4) Click anywhere in the page away from the search filter **Supplier (97)**
 
-    ![Validation 2](../02-configure-scm/images/image119.png)
+![Suppliers List Page](../02-configure-scm/images/configure-scm-image017.jpg)
 
-14. You have reentered the Suppliers (New) page. Let’s review the changes.
+18.  You can expand the Preview region for one of the suppliers.
 
-    Click on the **Supplier Type** to display the Filter and click into the Search box **Supplier Type**.
+> (1) Click on drop-down icon ![Region down arrow](../gen-images/icon014_downarrow.png) to expand a specific supplier row.
 
-![Validation 2](../02-configure-scm/images/image120.png)
+![Suppliers List Page](../02-configure-scm/images/configure-scm-image018.jpg)
 
-15.  You need to select the search filter Supplier (187) again.
+19.  You can now see the new fields that you've made visible via application configuration.
 
-> Click and select **Supplier (187)** to display list of suppliers.
+> (1) The new fields are now visible. The configurations are **automatically maintained during the release update process**.
 
-![Validation 4](../02-configure-scm/images/image121.png)
-
->  Click anywhere in the page away from the search filter **Supplier (187)**
-
- ![Supplier List Screen](../02-configure-scm/images/image122.png)
-
-16.  Now you will enter the Suppliers (New) Page that displays lists of suppliers.
-
-> Click on **drop-down icon** to expand a specific supplier row
-
-![Supplier List Screen](../02-configure-scm/images/image123.png)
-
-17.  You can see all the changes we just configured for displaying additional fields to Procurement Managers.
-
-> Click on the **Home Icon** ![Home Icon](../02-configure-scm/images/icon107_home.png)
+![Supplier List Screen](../02-configure-scm/images/configure-scm-image019.jpg)
 
 18. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
@@ -171,10 +160,10 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 ### Learn More
 
 * [Overview of Redwood Application Extension](https://docs.oracle.com/en/cloud/saas/human-resources/fauvb/overview-of-redwood-application-extensions.html)
-* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/25d/oaext/overview-of-using-visual-builder-studio.html#s20072861)
+* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/26a/oaext/overview-of-using-visual-builder-studio.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist; Casey Doody, Cloud Technologist; Sajid Saleem, Master Principal Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, January 2025
