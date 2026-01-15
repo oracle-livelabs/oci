@@ -143,6 +143,6 @@ In the next lab we will create a custom agent to expand the capabilities of this
 [Proceed to the next lab](#next)
 
 ## Acknowledgements
-* **Author** - Rick Beck, Master Principal SaaS Platform Technologist, NAA Office of Technology and Innovation
-* **Contributors** -  Tim Sullivan
-* **Last Updated By/Date** - Rick Beck, December 2025, based on Fusion 25D
+* **Author** - [](var:author)
+* **Contributors** - [](var:contributors)
+* **Last Updated By/Date** - [](var:last_updated)
