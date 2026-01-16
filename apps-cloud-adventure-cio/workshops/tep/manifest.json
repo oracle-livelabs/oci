@@ -12,19 +12,23 @@
         },
         {
             "title": "Lab 2: Configure",
-            "filename": "../../02-configure-hcm/configure-hcm.md"
+            "filename": "../../02-configure-prc/configure-prc.md"
         },
         {
-            "title": "Lab 3: Create AI",
-            "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
+            "title": "Lab 3: Extend",
+            "filename": "../../03-extend-prc/extend-prc.md"
         },
         {
-            "title": "Lab 4: Enable AI",
-            "filename": "../../05c-embed-agent-hcm/embed-agent-hcm.md"
+            "title": "Lab 4: Create AI",
+            "filename": "../../07a-rag-agent-prc/rag-agent-prc.md"
         },
         {
-            "title": "Lab 5: Analytics with AI",
-            "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
+            "title": "Lab 5: Enable AI",
+            "filename": "../../07b-embed-agent-prc/embed-agent-prc.md"
+        },
+        {
+            "title": "Lab 6: Analytics",
+            "filename": "../../09-analytics/analytics.md"
         },
         {
             "title": "Need Help?",

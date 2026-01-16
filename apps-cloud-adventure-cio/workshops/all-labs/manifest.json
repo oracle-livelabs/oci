@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Cloud Adventure Guide – for the Office of the CIO",
+    "workshoptitle": "AI Adventure Guide – SaaS Applications Platform",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -27,12 +27,12 @@
             "filename": "../../02-configure-hcm/configure-hcm.md"
         },
         {
-            "title": "Lab 2: Configure (SCM)",
-            "filename": "../../02-configure-scm/configure-scm.md"
+            "title": "Lab 2: Configure (PRC)",
+            "filename": "../../02-configure-prc/configure-prc.md"
         },
         {
-            "title": "Lab 3: Extend (New Supplier)",
-            "filename": "../../03-extend/extend.md"
+            "title": "Lab 3: Extend (PRC)",
+            "filename": "../../03-extend-prc/extend-prc.md"
         },
         {
             "title": "Lab 4: Extend w/ External AI (HCM)",
