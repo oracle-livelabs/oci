@@ -79,9 +79,9 @@ Understand how to build a simple prompt to collect relevant information from an 
 
    ![API tool Create](images/image010.png " ")
 
-    > Click on the **Publish** button if you get a **KEY\_NOT\_FOUND** error:
+    > Click on the **Publish** button on the Publish Custom Agent popup:
 
-   ![API tool error](images/image009.png " ")
+   ![API tool error](images/publishDialog.png " ")
 
    **Congratulations!** You have created your first AI Agent!  In the next module we'll incorporate it into a multi-agent team.
 
@@ -96,6 +96,6 @@ You should now have an understanding of what an **External REST API Tool** does,
 [Proceed to the next lab](#next)
 
 ## Acknowledgements
-* **Author** - Rick Beck, Master Principal SaaS Platform Technologist, NAA Office of Technology and Innovation
-* **Contributors** -  Tim Sullivan
-* **Last Updated By/Date** - Rick Beck, December 2025, based on Fusion 25D
+* **Author** - [](var:author)
+* **Contributors** - [](var:contributors)
+* **Last Updated By/Date** - [](var:last_updated)
