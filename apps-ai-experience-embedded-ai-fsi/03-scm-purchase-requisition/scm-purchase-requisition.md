@@ -145,4 +145,4 @@ By following these steps, you successfully walked thru the AI capabilities avail
 ## Acknowledgements
 * **Author** - Michael Schlichting, Oracle North America
 * **Contributors** -  Jimmy Dwyer, Piyush Ruparelia, Oracle North America
-* **Last Updated By/Date** - Piyush Ruparelia, November 2025, based on Fusion 25D
+* **Last Updated By/Date** - Piyush Ruparelia, January 2026, based on Fusion 26A

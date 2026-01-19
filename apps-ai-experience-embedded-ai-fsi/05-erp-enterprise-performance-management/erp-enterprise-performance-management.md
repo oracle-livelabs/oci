@@ -165,4 +165,4 @@ By completing these steps, you have explored the AI features available in Enterp
 ## Acknowledgements
 * **Author** - Giridhar Kumar R, Oracle North America
 * **Contributors** -  Pat McCarty, Jimmy Dwyer, Oracle North America
-* **Last Updated By/Date** - Piyush Ruparelia, November 2025, based on Fusion 25D
+* **Last Updated By/Date** - Piyush Ruparelia, January 2026, based on Fusion 26A

@@ -111,4 +111,4 @@ By completing these steps, you have explored the AI features available to sales 
 ## Acknowledgements
 * **Author** - Brittney Paone, Oracle North America
 * **Contributors** -  Jimmy Dwyer, Piyush Ruparelia, Oracle North America
-* **Last Updated By/Date** - Piyush Ruparelia, November 2025, based on Fusion 25D
+* **Last Updated By/Date** - Piyush Ruparelia, January 2026, based on Fusion 26A
