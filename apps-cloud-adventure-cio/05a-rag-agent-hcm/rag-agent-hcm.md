@@ -17,7 +17,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
 As a pre-requisite for this adventure, please download policy document file to your local desktop as below. 
 <br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05a-rag-agent-hcm/files/CloudAdventureBenefitsHighlights.pdf)
 
 
 ### **Begin Exercise**
@@ -28,7 +28,7 @@ As a pre-requisite for this adventure, please download policy document file to y
 
 2. The first step is to navigate to AI Agent Studio.
 
-    > (1) Click on the **Tools** tab <br><br>
+    > (1) Click on the **Tools** tab <br>
     > (2) Select the **AI Agent Studio** tile
 
     ![Navigate to AI Agent Studio](../05a-rag-agent-hcm/images/raghcmimage002.jpg)
@@ -55,7 +55,7 @@ As a pre-requisite for this adventure, please download policy document file to y
     * Product: select **Benefits** from the dropdown<br>
     * Description: Enter **Benefits Document Tool** <br>
 
-    > (2) Click the ![button](../gen-images/addw.jpg) button under **Documents** <br><br>
+    > (2) Click the ![button](../gen-images/addw.jpg) button under **Documents** <br>
 
     > (3) **Scroll Down** to see the Documents fields and upload your document.
 
@@ -177,4 +177,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem; December 2025
+* **Last Updated By/Date** - Casey Doody; Sajid Saleem, January 2026
