@@ -75,7 +75,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
      ![Create Agent](../05b-agent-team-hcm/images/benimage007.jpg)
 
-8. Next you'll add some worker agents.  You can scroll through the list of available agents, or use the Ask Oracle field to filter the results.  You'll do the latter.
+8. Next you'll add some worker agents.  You can scroll through the list of available agents or use the Ask Oracle field to filter the results.  You'll do the latter.
 
     >  (1)  Enter **XX**, where XX is replaced with your user number, in the Ask Oracle field and press the **<****Enter****>** key or select **XX** from the resulting dropdown.<br>
     >  ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 below are the same.  The first click activates that region and the second actually adds the agent.<br>
@@ -92,9 +92,9 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 10. You'll add one more worker agent.  First, you'll filter on something different.
 
-    >  (1) Delete your previous Ask Oracle filter and enter **F1** in the Ask Oracle Filter and press the **<****Enter****>** key or select **F1** from the resulting dropdown.<br><br>
+    >  (1) Delete your previous Ask Oracle filter and enter **F1** in the Ask Oracle Filter and press the **<****Enter****>** key or select **F1** from the resulting dropdown.<br>
 
-    >  ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 below are the same.  The first click activates that region and the second actually adds the agent.<br><br>
+    >  ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 below are the same.  The first click activates that region and the second actually adds the agent.<br>
 
     >  (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **F1 FMLA Absence Agent.**, where XX is replaced with your user number.<br>
 
@@ -194,4 +194,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, January 2026
