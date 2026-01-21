@@ -93,9 +93,9 @@ In this activity you will use Oracle Fusion AI Agent Studio and Visual Builder t
 
 10. You'll add one more worker agent.  First, you'll change the search filter.
 
-    >  (1) Delete your previous Ask Oracle filter and enter **F1** in the Ask Oracle Filter and press the **<****Enter****>** key or select **F1** from the resulting dropdown.<br><br>
+    >  (1) Delete your previous Ask Oracle filter and enter **F1** in the Ask Oracle Filter and press the **<****Enter****>** key or select **F1** from the resulting dropdown.<br>
 
-    >  ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 listed below are the same.  The first click activates that region and the second actually adds the agent.<br><br>
+    >  ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 listed below are the same.  The first click activates that region and the second actually adds the agent.<br>
 
     >  (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **F1 FMLA Absence Agent.**, where XX is replaced with your user number.<br>
 
@@ -170,7 +170,7 @@ In this activity you will use Oracle Fusion AI Agent Studio and Visual Builder t
 
 21. Next, you'll add a Task to this Guided Journey.  This is where we specify a Task Type of Agent and reference the Benefits Agent Team you've assembled.
 
-     > (1) Click the ![plus Add](../gen-images/plusadd.jpg) button under the **Tasks** section.  This will open the New Task panel from the right. <br><br>
+     > (1) Click the ![plus Add](../gen-images/plusadd.jpg) button under the **Tasks** section.  This will open the New Task panel from the right. <br>
 
      > (2) Enter the fields as described below:
      * Task Name: **Benefits Guided Journey Task** <br>
