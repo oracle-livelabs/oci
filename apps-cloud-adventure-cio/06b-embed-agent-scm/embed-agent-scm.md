@@ -100,7 +100,7 @@ In this activity you will embed your AI Agent Team in the application for use by
 
     ![Configure Journey Property and Preview](../06b-embed-agent-scm/images/embed-agent-scm-image011.jpg)
 
-12. You can see that the Guided Journey is displayed as an *Ask Oracle** banner and the screen is ready to use.
+12. You can see that the Guided Journey is displayed as an **Ask Oracle** banner and the screen is ready to use.
 
     > (1) Click the **Ask Oracle** button ![Ask Oracle Button](../gen-images/ask-oracle-logo.jpg).
 
