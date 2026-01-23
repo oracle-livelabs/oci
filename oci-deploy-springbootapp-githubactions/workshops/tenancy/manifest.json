@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Building and Deploying a Spring Boot App with PostgreSQL on OCI using GitHub Actions",
+    "workshop-title": "Building and Deploying a Spring Boot App with PostgreSQL on OCI using GitHub Actions",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
@@ -18,39 +18,21 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Get Started",
-            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
-            "filename": "../../../../labs/cloud-login/cloud-login-direct-signin.md"
+            "title": "Lab 1: Setup the Environment",
+            "filename": "../../setup/setup.md"
         },
         {
-            "title": "Lab 1: Provision an Instance",
+            "title": "Lab 2: Provision OCI Resources",
             "description": "Labs that follow the introduction are numbered, starting with Lab 1",
             "filename": "../../provision/provision.md"
         },
         {
-            "title": "Lab 2: Setup the Environment",
-            "filename": "../../setup/setup.md"
-        },
-        {
-            "title": "Lab 3: Load Data into an Instance",
+            "title": "Lab 3: GitHub Actions secrets and variables configuration",
             "filename": "../../data-load/data-load.md"
         },
         {
-            "title": "Lab 4: Query Data",
+            "title": "Lab 4: Trigger CI/CD Pipeline via Git Push",
             "filename": "../../query/query.md"
-        },
-        {
-            "title": "Lab 5: Tables in LiveLabs",
-            "filename": "../../tables/tables.md"
-        },
-        {
-            "title": "Lab 6: Variables in LiveLabs",
-            "filename": "../../variables/variables.md"
-        },
-        {
-            "title": "Need Help?",
-            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
         },
         {
             "title": "Other LiveLabs you might like",

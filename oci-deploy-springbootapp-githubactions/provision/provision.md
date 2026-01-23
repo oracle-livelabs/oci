@@ -1,94 +1,170 @@
-# Title of the Lab
+# Create OCI Resources
 
 ## Introduction
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
+This lab walks you through the steps required to create a Virtual Cloud Network (VCN), Container Registry, PostgreSQL database system and Load Balancer in Oracle Cloud Infrastructure (OCI), including the necessary configuration.
 
-Estimated Time: -- minutes
-
-### About <Product/Technology> (Optional)
-Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than two sections/paragraphs, please utilize the "Learn More" section.
+Estimated Time: 50 minutes
 
 ### Objectives
 
-*List objectives for this lab using the format below*
-
 In this lab, you will:
-* Objective 1
-* Objective 2
-* Objective 3
+* Create a Virtual Cloud Network (VCN) using the OCI Console
+* Set security rules
+* Create a Container registry using the OCI Console
+* Create a system PostgreSql DB
+* Create a Load Balancer
 
-### Prerequisites (Optional)
+### Prerequisites 
 
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. Do NOT list each previous lab as a prerequisite.*
 
 This lab assumes you have:
 * An Oracle Cloud account
-* All previous labs successfully completed
+* Permissions to create networking resources (VCN, subnets), Container Registry, Load balancer
+* Access to the OCI Console
 
 
-*This is the "fold" - below items are collapsed by default*
+## Task 1: Create a Virtual Cloud Network
 
-## Task 1: Concise Task Description
+### About Virtual Cloud Networks (VCN)
+A Virtual Cloud Network (VCN) is a customizable and private network in OCI. It closely resembles a traditional data center network, giving you full control over IP addressing, subnets, routing, and security.
 
-(optional) Task 1 opening paragraph.
+A VCN is a foundational component for deploying compute instances, Kubernetes clusters, databases, and other OCI services.
 
-1. Step 1
 
-	![Image alt text](images/sample1.png)
+<br>In this task, you will create a new VCN using the OCI Console.
 
-	> **Note:** Use this format for notes, hints, and tips. Only use one "Note" at a time in a step.
+1. Sign in to the OCI Console.
 
-2. Step 2
+2. From ☰ Navigation Menu, click Networking, then click Virtual Cloud Networks.
 
-  ![Image alt text](images/sample1.png)
+3. Select the appropriate Compartment from the Compartment dropdown.
+4. Start the VCN Wizard 
+   ![Image alt text](images/ss6.png)
 
-4. Example with inline navigation icon ![Image alt text](images/sample2.png) click **Navigation**.
+5. Select Create VCN with Internet Connectivity, and then click Start VCN Wizard.
 
-5. Example with bold **text**.
+   ![Image alt text](images/ss7.png)
+6. Complete the following fields:
 
-   If you add another paragraph, add 3 spaces before the line.
 
-## Task 2: Concise Task Description
+| Field               | Value                 |
+|---------------------|-----------------------|
+| VCN Name | Appointment_Manager   |
+| Compartment | Choose your compartment |
+| VCN CIDR Block| 10.0.0.0/16           |
+| Public Subnet CIDR Block| 10.0.0.0/24           |
+| Private Subnet CIDR Block| 10.0.1.0/24           |
+| Use DNS Hostnames In This VCN| Checked             |
 
-1. Step 1 - tables sample
+7. Click the Next button at the bottom of the screen.
+8. Review your settings to be sure they are correct. Click the Create button to create the VCN.
+9. It will take a moment to create the VCN, and a progress screen will keep you apprized of the workflow.
 
-  Use tables sparingly:
+## Task 2: Create Container Registry
 
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
+### About OCI Container Registry
+A container registry in OCI is a fully managed service that stores, secures, and distributes container images, so they can be deployed on OCI services like Kubernetes, Compute instances, and CI/CD pipelines.
 
-2. You can also include bulleted lists - make sure to indent 4 spaces:
+<br>In this task, you will create a new Container Registry using the OCI Console.
 
-    - List item 1
-    - List item 2
+1. Sign in to the OCI Console.
 
-3. Code examples
+2. From ☰ Navigation Menu, click Developer Services → Containers & Artifacts → Container Registry
 
-    ```
-    Adding code examples
-  	Indentation is important for the code example to appear inside the step
-    Multiple lines of code
-  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
-    ```
+3. Choose the Compartment where you want the registry repository
 
-4. Code examples that include variables
+4. Click Create repository and fill in:<br> Repository name example: demo_repo <br>Access: Private (recommended), Public (only if required)
 
-	```
-  <copy>ssh -i <ssh-key-file></copy>
-  ```
+5. Click Create 
+The registry that the image will live in must be reachable from the subnet that you provide for the container instance.
 
-## Learn More
+## Task 3: PostgreSQL DB System
 
-*(optional - include links to docs, white papers, blogs, etc)*
+### About PostgreSQL DB System in OCI
+In this task, you will create a PostgreSQL DB System using Oracle Cloud Infrastructure (OCI).
+<br>
+The PostgreSQL service in OCI is a fully managed database, handling backups, patching, and high availability.
+<br>
+If the container image lives in OCI Container Registry, specify the image in a subnet in a virtual cloud network (VCN) with a service gateway. If the container image lives in an external registry hosted on the public internet, specify the image in a public subnet in a VCN with an internet gateway or in a private subnet in a VCN with a network address translation (NAT) gateway.
+<br>
+1. Sign in to the OCI Console.
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+2. From ☰ Navigation Menu, click Databases → PostgreSQL
 
-## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+3. Click Create DB System
+<br>
+   Select creation type: Create new DB system
+4. Configure DB System Basics
+<br>
+DB System name: 
+<br>
+Example: demo_db
+<br>
+Select Compartment and PostgreSQL version
+
+5. DB System
+<br>
+Node count: 1
+   <br>
+Performance tier: 75K IOPS
+<br>
+Data placement: Availability Domain-specific
+6. Hardware configuration
+Image: OS Image 
+<br>
+Shape:
+Example: PostgreSQL.VM.Standard.E5.Flex
+<br>
+OCPUs: 1–2 (depending on workload)
+<br>
+Memory (GB): auto-calculated or custom
+<br>
+Storage size:
+Example: 100 GB
+Configure Extensions
+Choose an extension that was configured in your compartment
+7. Network configuration
+<br>
+   Subnet: The private subnet of the VCN created in the previous step
+<br>
+   Virtual Cloud Network: The VCN created in the previous step 
+8. Set username and password for db system.
+
+![Image alt text](images/ss9.png)
+## Task 4: Create Load Balancer
+
+### About OCI Load Balancer
+An OCI Load Balancer is a fully managed service that distributes incoming traffic across multiple backend resources, improving availability, scalability, and fault tolerance for applications running on OCI.
+<br>In this task, you will create a public Load Balancer using the OCI Console.
+
+1. Sign in to the OCI Console.
+
+2. From ☰ Navigation Menu, click Networking → Load Balancers
+
+3. Choose the Compartment where you want the Load Balancer to be created.
+
+4. Click Create Load Balancer and fill in:
+   Load Balancer name example: demo-lb <br>
+   Visibility: Public (use Private if internal only) <br>
+   Choose Networking: The VCN created at the previous task and the Public Subnet from this VCN.<br>
+   Bandwidth: Minimum 10 Mbps / Maximum 10 Mbps
+   <br>Management: your Compartment
+   Choose backends
+   <br>Policy: IP Hash <br>
+   Add backend servers: Select the backend Container instance <br>
+   Configure the listener
+<br>
+   Protocol: HTTP 
+<br>
+   Port: 8080
+<br>
+   Click Create Load Balancer
+<br> 
+
+The Load Balancer will be provisioned in a few minutes and assigned a public IP address.
+
+## Task 5: VCN configuration
+1. Edit the security rules for the private subnet as shown in the image below.
+    ![Image alt text](images/img.png)
+

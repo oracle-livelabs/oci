@@ -2,44 +2,68 @@
 
 ## About this Workshop
 
-This introduction covers the complete "parent" workshop. Use this text to set up the story for the workshop. Be engaging - what will the learner get from spending their time on this workshop?
+This workshop represents a reference implementation for deploying a Spring Boot application on Oracle Cloud Infrastructure (OCI) using GitHub Actions and a production-style CI/CD approach.
+The repository shows a practical, end-to-end flow for container-based deployments on OCI, including build, deployment, traffic cutover, and cleanup.
+It highlights some strengths of OCI for application workloads, such as tight integration between container services, load balancing, and networking, as well as straightforward automation via GitHub Actions.
+The setup follows a blue/green-style replacement strategy, enabling safe deployments, health-based traffic cutover, and clean rollback paths — patterns commonly used in production environments.
 
-Estimated Workshop Time: -- hours -- minutes (This estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
+The application is packaged as a Docker container and deployed to OCI Container Instances. Traffic is routed through an OCI Load Balancer, while persistent data is stored in a PostgreSQL database on OCI.
 
-*You may add an option video, using this format: [](youtube:YouTube video id)*
+The entire build and deployment process is automated using GitHub Actions.
 
-  [](youtube:zNKxJjkq0Pw)
+It is triggered on every push to main branch.
+
+Concurrency is enabled to ensure only one deployment per branch runs at a time.
+
+
+Estimated Workshop Time: 3 hours 30 minutes
+<br>
 
 ### Objectives
 
-*List objectives for the workshop*
-
 In this workshop, you will learn how to:
-* Provision
-* Setup
-* Load
-* Query
+* Setup project environment and understand project structure
+* Create a Virtual Cloud Network, Container Registry, Load Balancer and PostgreSQL Database system in Oracle Cloud Infrastructure console
+* Setup GitHub Repository Secrets and Variables
+* Release the Spring Boot application to OCI Using GitHub Actions
 
-### Prerequisites (Optional)
-
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. **Do NOT list** each previous lab as a prerequisite.*
+### Prerequisites 
 
 This lab assumes you have:
+
 * An Oracle account
-* All previous labs successfully completed
+* A GitHub account
+* An IDE such as VS Code or IntelliJ
+* Familiarity with Java is desirable, but not required
+* Familiarity with Oracle Cloud Infrastructure (OCI) is helpful
 
-*This is the "fold" - below items are collapsed by default*
+## High-level architecture
 
-In general, the Introduction does not have Steps.
+This workshop demonstrates a production-grade CI/CD pipeline that:
 
-## Learn More
+- Builds a Spring Boot application + PostgreSQL DB
 
-*(optional - include links to docs, white papers, blogs, etc)*
+- Packages it as a Docker image
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+- Pushes the image to OCI Container Registry (OCIR)
+
+- Deploys it to OCI Container Instances
+
+- Performs a blue/green deployment
+
+- Updates an OCI Load Balancer
+
+- Cleans up old container instances
+
+## Trigger
+
+The pipeline runs when:
+
+Code is pushed to the main branch
+
+Or it is manually triggered
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+- Author - Maria Oprea, Account Cloud Engineer, ACE
+<br>
+- Last Updated By/Date - Maria Oprea, 01-2026

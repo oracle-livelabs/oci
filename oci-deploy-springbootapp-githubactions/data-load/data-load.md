@@ -1,102 +1,76 @@
-# Title of the Lab
+# Configure GitHub Repository Secrets and Variables for OCI Deployment
 
 ## Introduction
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
+In this lab, you will configure the GitHub Repository Secrets and Variables required for the CI/CD workflow to authenticate with Oracle Cloud Infrastructure (OCI) and deploy resources.
 
-Estimated Time: -- minutes
-
-### About <Product/Technology> (Optional)
-Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than two sections/paragraphs, please utilize the "Learn More" section.
+Estimated Time: 60 minutes
 
 ### Objectives
 
-*List objectives for this lab using the format below*
-
 In this lab, you will:
-* Objective 1
-* Objective 2
-* Objective 3
+* Configure GitHub Repository Secrets for OCI authentication
+* Configure the GitHub Variables for Container Instance settings
+* Prepare the repository for automated CI/CD execution
 
-### Prerequisites (Optional)
-
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. Do NOT list each previous lab as a prerequisite.*
+### Prerequisites
 
 This lab assumes you have:
-* An Oracle Cloud account
-* All previous labs successfully completed
+* An Oracle account
+* A GitHub account
 
+## Task 1: Actions secrets setup
 
-*Below, is the "fold"--where items are collapsed by default.*
+1. On GitHub, navigate to the main page of the repository.
+2. Under your repository name, click Settings. If you cannot see the "Settings" tab, select the dropdown menu, then click Settings.
+	![Image alt text](images/ss1.png)
 
-## Task 1: Concise Task Description
+3. In the "Security" section of the sidebar, select Secrets and variables, then click Actions.
+   ![Image alt text](images/ss2.png)
+4. Click the Secrets tab.
+5. Click New repository secret.
+6. In the Name field, enter a name for your secret.
+7. In the Value field, enter the value for your secret.
+8. Click Add secret.
 
-(optional) Task 1 opening paragraph.
+## Task 2: Adding secrets
 
-1. Step 1
-
-	![Image alt text](images/sample1.png)
-
-  To create a link to local file you want the reader to download, use the following formats. _The filename must be in lowercase letters and CANNOT include any spaces._
-
-	Download the [starter file](files/starter-file.sql) SQL code.
-
-	When the file type is recognized by the browser, it will attempt to render it. So you can use the following format to force the download dialog box.
-
-	Download the [sample JSON code](files/sample.json?download=1).
-
-  > Note: do not include zip files, CSV, PDF, PSD, JAR, WAR, EAR, bin, or exe files - you must have those objects stored somewhere else. We highly recommend using Oracle Cloud Object Store and creating a PAR URL instead. See [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/en-us/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
-
-2. Step 2
-
-  ![Image alt text](images/sample1.png)
-
-4. Example with inline navigation icon ![Image alt text](images/sample2.png) click **Navigation**.
-
-5. Example with bold **text**.
-
-   If you add another paragraph, add 3 spaces before the line.
-
-## Task 2: Concise Task Description
-
-1. Step 1 - tables sample
+1. Following Task 1, add each secret together with its corresponding value as shown in the table below.
 
   Use tables sparingly:
 
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
+  | Name                            | Value                                                                                                                                                                                                                                      |
+  |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | OCI_CLI_USER                    | The OCID of the user calling the API.<br/>See [Where to Get the Tenancy's OCID and User's OCID.](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm#five)<br/>Example: ocid1.user.oc1..<unique_ID>                  |
+  | OCI_CLI_TENANCY                 | The OCID of your tenancy.<br/>See [Where to Get the Tenancy's OCID and User's OCID.](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm#five)<br/>Example: ocid1.tenancy.oc1..<unique_ID>                           |
+  | OCI_CLI_REGION                  | An Oracle Cloud Infrastructure region.<br/> See [Regions and Availability Domains.](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm)<br/>Example: us-ashburn-1                                                     |
+  | OCI_CLI_KEY_CONTENT             | The full content of the private key enclosed in single quotes.<br/> See [Generating an API Signing Key](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm#two)<br/> Important: The key pair must be in PEM format. |
+  | OCI_CLI_FINGERPRINT             | The fingerprint for the public key that was added to this user. To get the value, see [How to Get the Key's Fingerprint](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm#four)                                   |
+  | OCI_AUTH_TOKEN                  | See [Getting an Auth Token](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrygettingauthtoken.htm)                                                                                                                        |
+  | OCI_BACKEND_LB_OCID             | The OCID value of the LB created in Lab 2 Task 4.   ![Image alt text](images/img.png)                                                                                                                                                      |      
+  | OCI_BACKEND_LB_BACKEND_SET_NAME | The backend set name ![Image alt text](images/img_1.png)                                                                                                                                                                                   |   
+  | OCI_BACKEND_LB_BACKEND_PORT     | The backend port number, for example: 8080 . <br> ![Image alt text](images/ss10.png)                                                                                                                                                       |
+  | DB_USER                         | The database user that was set in Lab 2 Task 3.                                                                                                                                                                                            |
+  | DB_PASS                         | The database password that was set in Lab 2 Task 3.                                                                                                                                                                                        |
 
-2. You can also include bulleted lists - make sure to indent 4 spaces:
 
-    - List item 1
-    - List item 2
+## Task 3: Adding variables
+4. Click the Variables tab.
+5. Click New repository variable.
+6. In the Name field, enter a name for your variable.
+7. In the Value field, enter the value for your variable.
+8. Click Add variable.
 
-3. Code examples
+| Name                            | Value                                                                                                                                                                                                                                                           |
+|---------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| COMPARTMENT_ID                   | The OCID of the compartment that you are working on. <br/>See [Finding the OCID of a Compartment.](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#Finding_the_OCID_of_a_Compartment) |
+| SUBNET_ID               | The private subnet ID of your VCN. <br/>See [Getting a Subnet's Details.](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/get-subnet.htm)                                                                                                              |
+| OCIR_REGION_KEY               | OCI region keys are unique 3-letter identifiers. <br/>See [Region Key.](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm)<br/>Example: fra for Frankfurt                                                                                 |
+| IMAGE_REPO              | The name of the Docker image repository in OCIR.                                                                                                                                                                                                                |
+| SHAPE             | Container shape.<br/>See [Continer instance shapes list.](https://docs.oracle.com/en-us/iaas/Content/container-instances/container-instance-shapes.htm)<br/>Example: CI.Standard.E4.Flex                                                                        |
+| CONTAINER_INSTANCE_NAME             | The image name of the container instance.                                                                                                                                                                                                                       |
+| CONTAINER_DISPLAY_NAME            | The display image name of the container instance.                                                                                                                                                                                                               |
+| DB_HOST             | The PostgresDb host.                                                                                                                                                                                                                                            |
+| DB_NAME            | The PostgresDb name.                                                                                                                                                                                                                                            |
 
-    ```
-    Adding code examples
-  	Indentation is important for the code example to appear inside the step
-    Multiple lines of code
-  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
-    ```
 
-4. Code examples that include variables
-
-	```
-  <copy>ssh -i <ssh-key-file></copy>
-  ```
-
-## Learn More
-
-*(optional - include links to docs, white papers, blogs, etc)*
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
-
-## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>

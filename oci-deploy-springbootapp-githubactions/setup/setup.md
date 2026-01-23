@@ -1,92 +1,120 @@
-# Title of the Lab
+# GitHub Project Setup
 
 ## Introduction
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
+This lab walks you through the steps to clone a GitHub repository, configure Git authentication using SSH, and open the project in IntelliJ IDEA for local development.
 
-Estimated Lab Time: -- minutes
+Estimated Lab Time: 15–20 minutes
 
-### About <Product/Technology> (Optional)
-Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than two sections/paragraphs, please utilize the "Learn More" section.
+### About <GitHub> 
+
+GitHub is a distributed version control platform widely used for source code management and collaboration. In this lab, you will prepare a local development environment by securely connecting to GitHub using SSH, cloning a repository, and verifying Git integration inside IntelliJ IDEA.
 
 ### Objectives
 
-*List objectives for this lab using the format below*
-
 In this lab, you will:
-* Objective 1
-* Objective 2
-* Objective 3
+* Configure GitHub authentication using SSH
+* Clone the GitHub repository to your local machine
+* Open the project in IntelliJ IDEA
 
-### Prerequisites (Optional)
-
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is necessary to complete the lab. Do NOT list each previous lab as a prerequisite.*
+### Prerequisites
 
 This lab assumes you have:
-* An Oracle Cloud account
-* All previous labs successfully completed
+* An active GitHub account
+* IntelliJ IDEA installed (Community or Ultimate edition)
+* Basic familiarity with the command line
 
 
-*This is the "fold" - below items are collapsed by default*
+## Task 1: Git Install
+Run all the commands in Git Bash/Cmd/PowerShell/Terminal.
 
-## Task 1: Concise Task Description
+1. Check if you already have Git installed.
+<br>
+```
+   git --version 
+```
+If not:
 
-(optional) Task 1 opening paragraph.
+- Windows: https://git-scm.com/download/win
 
-1. Step 1
+- macOS:
+```
+ brew install git 
+```
+- Linux:
+```
+ sudo apt install git
+```
+## Task 2: GitHub Configuration 
 
-	![Image alt text](images/sample1.png)
+Identity setup (Used for commits)
+<br>
+```
+   git config --global user.name "Your name"
+   git config --global user.email "email@exemplu.com"
+```
+## Task 3: SSH GitHub Authentification
 
-2. Step 2
+1. Check if you already have an SSH key
+<br>
+```
+   ls ~/.ssh
+```
 
-  ![Image alt text](images/sample1.png)
+2. If you do NOT see id_rsa or id_ed25519, generate a new SSH key:
+<br>
+ ```
+   ssh-keygen -t ed25519 -C "your_email@example.com"
+   ```
 
-4. Example with inline navigation icon ![Image alt text](images/sample2.png) click **Navigation**.
+3. Press Enter for all prompts (default options).
 
-5. Example with bold **text**.
+4. Copy the public SSH key
+<br>
+     ```
+   cat ~/.ssh/id_ed25519.pub
+   ```
+5. Add the SSH key to GitHub
 
-   If you add another paragraph, add 3 spaces before the line.
+- Go to GitHub → Settings
 
-## Task 2: Concise Task Description
+- Open SSH and GPG keys
 
-1. Step 1 - tables sample
+- Click New SSH key
 
-  Use tables sparingly:
+- Paste the copied public key
 
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
+- Save
 
-2. You can also include bulleted lists - make sure to indent 4 spaces:
+## Task 4: Clone the repository locally
 
-    - List item 1
-    - List item 2
+1. Using SSH (recommended)
+   <br>
+```
+cd ~/projects
+git clone https://github.com/mariagoprea-collab/springboot-demo-oci
+```
+2. Using HTTPS (if not using SSH)
+<br>
+```
+git clone https://github.com/mariagoprea-collab/springboot-demo-oci
+```
+- A local folder with the repository name will be created.
 
-3. Code examples
+## Task 5: Open the project in IntelliJ IDEA
 
-    ```
-    Adding code examples
-  	Indentation is important for the code example to appear inside the step
-    Multiple lines of code
-  	<copy>Enclose the text you want to copy in <copy></copy>.</copy>
-    ```
+1.  Open the existing project
 
-4. Code examples that include variables
+- Open IntelliJ IDEA
 
-	```
-  <copy>ssh -i <ssh-key-file></copy>
-  ```
+- Go to File → Open
 
-## Learn More
+- Select the cloned project folder
 
-*(optional - include links to docs, white papers, blogs, etc)*
+- Click OK
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+IntelliJ will automatically detect:
 
-## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+The Git repository
+
+The project type (Maven / Gradle / Java / Spring, etc.)
