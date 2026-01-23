@@ -8,6 +8,8 @@ This will automatically build, containerize, publish, and deploy your Spring Boo
 Check this video to see the flow
 [](youtube:SzLCGE0w6u4)
 
+Estimated Time: 15 minutes
+
 ## About Blue-Green Deployment steps
 When you push code to the main branch, your CI/CD pipeline performs a fully automated blue-green deployment on Oracle Cloud Infrastructure.
 1. Build Phase
