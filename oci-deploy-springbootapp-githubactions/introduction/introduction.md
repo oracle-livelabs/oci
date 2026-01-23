@@ -16,7 +16,7 @@ It is triggered on every push to main branch.
 Concurrency is enabled to ensure only one deployment per branch runs at a time.
 
 
-Estimated Workshop Time: 3 hours 30 minutes
+Estimated Workshop Time: 2 hours 30 minutes
 <br>
 
 ### Objectives
