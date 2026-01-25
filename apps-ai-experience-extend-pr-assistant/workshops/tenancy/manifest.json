@@ -1,5 +1,6 @@
 {
     "workshoptitle": "Purchase Requisition Advisor Template Extension",
+    "variables": ["../../variables/variables.json"],
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
  
