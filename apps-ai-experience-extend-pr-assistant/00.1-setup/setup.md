@@ -18,6 +18,7 @@ Setup demo in new environment. You will:
 
 ### **Notes**
 - The provided instructions and Visual Builder application are provided as sample code and are not considered supported functionality.
+- To give this lab to participants without the setup instructions, direct them to https://oracle-livelabs.github.io/oci/apps-ai-experience-extend-pr-assistant/workshops/tenancy/index.html
 
 ## Task 1: Download and install Supplier_Stock Visual Builder app
 
