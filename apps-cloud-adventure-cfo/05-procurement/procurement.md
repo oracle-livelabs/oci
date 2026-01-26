@@ -22,88 +22,80 @@ In this activity, you will:
 
   You need to figure out why the Automatic Award Recommendation has elected not to award EIP Inc. this negotiation. You will need to go to the negotiations page.
 
-    > Navigate to the **Procurement** tab and select **Negotiations**
+    > Navigate to the **Procurement** tab and select **Negotiations**.
 
-    ![Award](images/image018.png)
+    ![Award](images/1-task1-strategic-procurement-negotiations-sourcing.png)
 
 2. 
 
   This is the negotiations dashboard that has Infolets with insights into sourcing programs and activity. This information is drillable to give the user an intuitive experience. You need to drill into Award Completed to analyze the recent sourcing negotiation.
 
-    > In the **‘My Negotiations’** Infolet select the **‘Award Completed’** piece of the pie chart (Purple)
+    > In the **‘My Negotiations’** Infolet select the **‘Award Completed’** piece of the pie chart (Purple).
 
-    ![negotiations](images/image019.png)
+    ![negotiations](images/2-task1-strategic-procurement-negotiations-sourcing.png)
 
 3. 
 
   You could drill into the negotiation details by clicking the hyperlink. However, you need to analyze the individual supplier responses, so you need to click the monitor icon.
 
-    > Click the **‘Monitor’** icon for Negotiation **31792**
+    > Click the **‘Monitor’** icon for Negotiation **31803**.
 
-    ![drill](images/image020.png)
+    ![drill](images/3-task1-strategic-procurement-negotiations-sourcing.png)
 
 4. 
 
-  Here is the initial monitor page. There is some analytical information available at the top of the page. This includes the current value, potential savings, and supplier response amounts.
-
-  At the bottom of the page are the suppliers. Four were invited, and three responded. You can see the details to the right. Once again you will notice EIP was ranked first but still wasn’t awarded so you have to dive deeper.
-
-    > Select **Actions** drop down in the top ribbon
-
-    ![monitor](images/image021.png)
-    ![monitor](images/image022.png)
+  Here is the initial monitor page with analytical information about responses.  
+  Notice EIP was ranked first, but wasn’t awarded.  Let’s dive deeper to find why.  
+  We can use the analytical tools available through Cloud Procurement to analyze further.
+  
+    > Select **Actions** drop-down menu, then click **Analyze**, select **Analyze Negotiation** from the drop-down menu.
+    
+      ![change](images/4-task1-strategic-procurement-negotiations-sourcing.png)
 
 5. 
 
-   In order to see more information about this negotiation you need to utilize the analytical tools available through Cloud Procurement. To do this, select analyze negotiation from the menu options.
+  With analytics built into the sourcing process, we see awards details, savings analysis, and supplier response information. 
 
-    > First, click **Analyze**
+    > Click **Scroll-bar** down to bottom of page.
 
-    > Then, select **Analyze Negotiation** from the drop-down menu
+    ![Scroll bar](images/5-task1-strategic-procurement-negotiations-sourcing.png)
 
-    ![change](images/image023.png)
 
 6. 
 
-  Here are more analytics built into the sourcing process. The analysis breaks down the awards by supplier, total savings, and savings by line item.
+    Notice EIP is ranked first, but has lowest score.  
 
-  At the bottom of the page are supplier response details. These details still don’t tell the full story. You need to analyze the response details further to see why EIP Inc wasn’t awarded this negotiation despite the highest savings potential.
-
-    ![analytics](images/image024.png)
-    ![analytics](images/image025.png)
+     > Click the **score ‘45’** to access EIP’s response details.
+   
+    ![Scroll bar](images/6-task1-strategic-procurement-negotiations-sourcing.png)
 
 7. 
 
-     > To highlight all the supplier responses, click the **white space next to ‘Supplier’** as indicated.
+  Now we see how the Procurement system AI scored a zero and automatically disqualified EIP because they are missing a required certification which was set as pre-built knockout criteria.
 
-     > Once they are all highlighted in blue, click **Analyze**
-   
-    ![highlight](images/image026.png)
-    ![highlight](images/image027.png)
+    > Click the **attachment icon** to access the internal note left by the evaluator.
+
+    ![analysis](images/7-task1-strategic-procurement-negotiations-sourcing.png)
+
+    > Click **Done**.
+
+    ![analysis](images/8-task1-strategic-procurement-negotiations-sourcing.png)
 
 8. 
 
-  Once, the analysis has been run there will be more analytics provided at the top of the page. As you scroll down you will see comprehensive response details for each supplier but it does not reveal the precise reason for EIP being excluded from the award. You will need to drill deeper to find out why EIP was not awarded this negotiation. You will have to evaluate the requirement scoring. To do this:
+  Congratulations!  You’ve completed this part of the Adventure!
 
-    - Select the actions dropdown and click “Add or Remove Response Elements”
-    - Next, highlight “Requirements: All Levels” and click the single right arrow icon
-    - Click OK
+    > Click the **‘Home’** Icon to return to Procurement springboard.
 
-  Now that you have expanded the detailed comparison, you can see that the system AI has automatically disqualified EIP because they are missing a required certification. In order to ensure this does not happen again or to re-bid this negotiation you will need to communicate to EIP that they have to update this certification. 
-
-    ![analysis](images/image001-step8.png)
-    ![analysis](images/image002-step8.png)
-    ![analysis](images/image003-step8.png)
-    ![analysis](images/image029.png)
+    ![Procurement](images/9-task1-strategic-procurement-negotiations-sourcing.png)
 
 9. 
+    
+  Adventure awaits, show what you know, and rise to the top of the leader board!!!
 
-    > Select the **‘Home’** icon in the top ribbon to navigate back to the Procurement springboard
-     
-    ![Procurement](images/image030.png)
-    ![Procurement](images/image017.png)
+    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:)
 
-
+    [Click here](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
 
 
 
@@ -112,12 +104,11 @@ In this activity, you will:
 
 1. 
 
-  You have recently been given approval to work remotely and need to requisition a new printer and ink. To do this you will need to utilize Self Service Procurement.
+  You have recently been given approval to work remotely and need to requisition a new printer and ink. This is a simple tasks with Self Service Procurement.
 
     > Go to **Procurement**, then click **‘Purchase Requisitions’**
 
-    ![Procurement](images/image001.png)
-
+    ![Procurement](images/1-task2-startegic-procurement-self-service-procurement.png)
 
 2. 
 
@@ -125,137 +116,96 @@ In this activity, you will:
 
     > Click on the Search Bar and search for **‘printer’**
 
-    ![catalog shopping experience](images/image002.png)
+    ![catalog shopping experience](images/2-task2-self-service.png)
 
 3. 
 
   The catalog will populate all the pre-approved printer options but you just need something simple and quick.
 
-    > **Click each orange drop box** and click **‘add to compare’** for each printer to create a comparison
+    > Scroll down and find **HP OfficeJet Pro 8210** wireless printer.  **Click** to see more details for this printer.  
 
-    ![catalog](images/image003.png)
+    ![catalog](images/3-task2-self-service.png)
 
 4. 
 
-  You are going to do a detailed comparison of the **Canon iP8720** and **HP Officejet Pro 8210** wireless printers.
+  Here you can review details and compare to other printers.  For now, this one meets our needs, so we’ll add to cart.  
 
-    > At the bottom of the screen under **‘Compare Products’** ribbon click **Compare**
+    > Click ‘**Add to Cart**’ and then click **View Cart** (if the banner message closes, select **Cart** at bottom of page)
 
-    ![detailed comparison](images/image004.png)
+    ![detailed comparison](images/4-task2-self-service.png)
 
 5. 
 
-  As you look through the comprehensive details of both options, you decide that since they are essentially the same printer you will opt for the cheaper option (HP) 
+  As you review your Cart, you realize, you need ink!  So let’s go shop for printer ink.
 
-  If neither of these options would have worked you could always remove/add more options for comparison..
+      > Click the ‘**Self Service Procurement**’ to return to homepage
 
-    > Click the **‘Cart’** icon to add the desired printer to your cart
-
-    ![comprehensive details](images/image005.png)
+    ![comprehensive details](images/5-task2-self-service.png)
 
 6. 
 
-  Navigate back to the catalog after adding the **HP OfficeJet Pro 8210** to the cart. 
+  The  Self Service Procurement homepage, allows you to easily punch-out to other vendors by selecting conveniently located icons.
 
-  When you navigate back to the catalog you can continue to shop and add items to this requisition.
+    > Select the ‘**Amazon Business**’ link to punch out to Amazon’s website
 
-    > Select the **‘Done’** button in the top ribbon
-
-    ![navigate](images/image006.png)
+    ![navigate](images/6-task2-self-service.png)
 
 7. 
 
-  Next, you will see how simple it is to punch out to another vendor and add to the same requisition.
+  For added security, the Amazon punch out will ask you for your username (e.g. Ca01, Ca02, Ca03…etc) in order to access Amazon Business.
 
-  First, you need to go back to the homepage.
-
-    > Under **‘Compare Products’** ribbon select **Clear**
-    > Then,
-    > In the top ribbon select **Done** once more
+    > Enter your individual Cloud Adventure username and select ‘**Start Shopping**’
 
 
-    ![change](images/image007.png)
+    ![change](images/7-task2-self-service.png)
 
 8. 
 
-  Once you have cleared the Compare Products ribbon you will be taken back to the requisition’s homepage. The consolidated dashboard allows you to easily punch-out to other vendors by selecting conveniently located icons.
+  Once you have punched out to Amazon Business you can utilize the Amazon portal to search for what you need and compare products.
 
-    > Select the **‘Amazon Business’** link to punch out to Amazon’s website
+    > Search for ‘**HP 64 color instant ink**’ Press ‘**Enter**’
 
-    ![Compare](images/image008.png)
+    ![Compare](images/8-task2-self-service.png)
 
 9. 
 
-  For added security, the Amazon punch out will ask you for your username (e.g. CA01.CLOUD, CA02.CLOUD…etc) in order to access Amazon Business.
+      > Next, select: ‘**Original HP 64XL Tri-color High-yield Ink Cartridges**’
 
-    > Enter your individual Cloud Adventure username and select **‘Start Shopping’**
-
-    ![security](images/image009.png)
+    ![security](images/9-task2-self-service.png)
 
 10. 
 
-  Once you have punched out to Amazon Business you can utilize the entire Amazon UI to search for what you need and compare products.
+  Amazon will give you all the product details as well as pricing and potential savings.  
 
-    > Search for **‘HP 64 color instant ink’**
+    > Click ‘**Add to Cart**’
 
-    > Press **‘Enter’**
-
-    ![compare](images/image010.png)
+    ![compare](images/10-task2-self-service.png)
 
 11. 
 
+  Similar to catalog shopping you can continue to shop and add more items to the cart or submit this item for approval.
   
-    > Next, select:
-    
-    > **‘Original HP 64XL Tri-color High-yield Ink Cartridges’**
+    > Click the ‘**Submit these items for approval**’
 
-    ![select](images/image011.png)
+    ![select](images/11-task2-self-service.png)
 
-12. 
+12.  
 
-  Amazon will give you all the product details as well as pricing and potential savings. 
+  As you can see Self Service Procurement has empowered you to catalog shop and punch out to another vendor seamlessly. The items from both activities have been added to the *same* requisition. 
 
-  Notice the buy more save more option!
-
-  Once you have determined this is the ink you would like to buy add it to your cart.
-
-    > Click **‘Add to Cart’**
-
-    ![change](images/image012.png)
+    ![change](images/12a-task2-self-service.png)
+    ![change](images/12b-task2-self-service.png)
 
 13. 
 
-  Similar to catalog shopping you can continue to shop and add more items to the cart.
+  Adventure awaits, show what you know, and rise to the top of the leader board!!!
 
-  For now, all you need is ink to get your home office started. Submit this item for approval.
+      [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:)
 
-    > Click the **‘Submit these items for approval’**
-
-    ![Submit](images/image013.png)
-    
-
-14. 
-
-  As you can see Self Service Procurement has empowered you to catalog shop and punch out to another vendor seamlessly. The items from both activities have been added to the *same requisition*. To submit this order so it can go through the correct approval workflows all you have to do is select submit.
-
-    > Review the requisition document
-
-    > Click **‘Submit’**
-
-    > A confirmation box will appear click **‘OK’**
-
-    ![requisition](images/image014.png)
-    ![requisition](images/image015.png)
-
-15. 
-
-  
-    > Select the **‘Home’** icon in the top ribbon to navigate back to the Procurement springboard
-
-    ![springboard](images/image016.png)
+      [Click here](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
 
 
 # Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services
-* **Contributors** -  Harold Dickerman, Business Architect
-* **Last Updated By/Date** - Kevin Lazarz, September 2022
+* **Contributors** -  Steve Quinton, Team Lead – Risk Solutions 
+* **Last Updated By/Date** - Ramona Magadan, Technical Program Manager, Database Product Management, August 2024

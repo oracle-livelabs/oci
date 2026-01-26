@@ -6,7 +6,7 @@ Oracle Cloud Native 솔루션을 활용하여 클라우드 네이티브 마이�
 
 ### 목표
 
-이 실습에서는 다음을 수행합니다:
+이 실습에서는 다음을 수행합니다.
 
 * OKE에서 쿠버네티스 클러스터 만들기
 * [helm](https://helm.sh/)을 통해 Cloud Native 앱(MuShop)을 쿠버네티스 클러스터에 배포
@@ -36,7 +36,7 @@ Oracle Cloud Native 솔루션을 활용하여 클라우드 네이티브 마이�
 
 ## Acknowledgements
 
-* **Author** - Adao Junior
+* **Author** - DongHee Lee, Adao Junior
 * **Contributors** -  Kamryn Vinson, Adao Junior
-* **Last Updated By/Date** - Adao Junior, April 2021
-* **Korean Translator & Contributors** - DongHee Lee, February 2022
+* **Last Updated By/Date** - DongHee Lee, January 2023
+* **Korean Translator & Contributors** - DongHee Lee, January 2023

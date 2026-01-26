@@ -25,15 +25,14 @@ Neste Lab você vai aprender a trabalhar com Object Storage dentro da Oracle Clo
 
 3. Preencha o formulário como abaixo e clique em **Create**.
 
-- **Bucket Name**: bucket-site
+- **Bucket Name**: "Dê um nome para seu bucket"
 - **Default Storage Tier**: Standard
-- **Enable Object Versioning**: Checado
 
 ![configure os parametros do bucket](./images/bucket-config-3.png)
 
 ## Task 2: Configurar o bucket
 
-1.	Para o seu bucket, clique no ícone dos três pontos e em **Edit**.
+1.	Para o seu bucket, clique no ícone dos três pontos e em **Edit Visibility**.
 
 ![editar visibilidade do bucket](./images/bucket-edit-4.png)
 
@@ -47,6 +46,7 @@ Neste Lab você vai aprender a trabalhar com Object Storage dentro da Oracle Clo
 
 2. Clique em **Objects**, no menu do lado esquerdo, e em **Upload**.
 
+![clique em "Upload"](./images/bucket-upload-5.png)
 ![clique em "Upload"](./images/bucket-upload-6.png)
 
 3. Copie o html abaixo e crie o arquivo index.html através de algum editor de texto (notepad)
@@ -63,10 +63,10 @@ Neste Lab você vai aprender a trabalhar com Object Storage dentro da Oracle Clo
     <title>LAB: OCI FAST TRACK</title>
 </head>
 <body>
-    <center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/ocifasttracklogo.jpg"
+    <center> <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/idpjrkxadvns/b/bucket-fast-track/o/ocifasttracklogo.jpg"
  alt="LOGO OCI FAST TRACK">
             <h1>Site estático no Object Storage</h1> 
-            <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3kyspkytmr/b/workshops-materiais/o/site.gif"
+            <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/idpjrkxadvns/b/bucket-fast-track/o/site.gif"
     </center>   
 </body>
 </html>
@@ -94,4 +94,4 @@ Nesta sessão você aprendeu sobre Object Storage na prática.
 ## Autoria
 
 - **Autores** - Arthur Vianna, Lucas de Almeida, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Date** - Arthur Vianna, Jun/2022
+- **Último Update Por/Date** - Arthur Vianna, Jul/2025

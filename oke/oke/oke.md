@@ -29,15 +29,16 @@ Estimated time: 45 minutes
 1. From the OCI Services menu, click **Developer Services** > **Kubernetes Clusters (OKE)**.
 
     **No need to create any policies for OKE, all the policies are pre-configured**
-        ![Click Kubernetes Clusters (OKE)](./../OKE/images/OKE_S1P1.PNG " ")
+
+    ![Click Kubernetes Clusters (OKE)](images/oke_s1p1.png " ")
 
 2. Under **List Scope**, select the compartment in which you would like to create a cluster. Click **Create Cluster**.
 
-    ![Click Create Cluster](./../OKE/images/OKE_S1P2.PNG " ")
+    ![Click Create Cluster](images/oke_s1p2.png " ")
 
 3. Choose **Quick Create** and click **Launch Workflow**.
 
-    ![Click Launch Workflow](./../OKE/images/launch_workflow.png " ")
+    ![Click Launch Workflow](images/launch_workflow.png " ")
 
 4. Fill out the dialog box:
 
@@ -51,15 +52,15 @@ Estimated time: 45 minutes
 
     Click **Next** 
 
-    ![Quick Create Cluster](./../OKE/images/quick_create_cluster.png " ")
+    ![Quick Create Cluster](images/quick_create_cluster.png " ")
 
 5. Click "**Create Cluster**".
 
-    ![Create Cluster](./../OKE/images/quick_create_cluster2.png " ")
+    ![Create Cluster](images/quick_create_cluster2.png " ")
 
     **We now have a OKE cluster with 1 node and Virtual Cloud Network with all the necessary resources and configuration needed**
 
-    ![Create Cluster](./../OKE/images/OKE_015.PNG " ")
+    ![Create Cluster](images/oke_015.png " ")
 
 
 ## Task 2: Check OCI CLI in Cloud Shell
@@ -74,7 +75,7 @@ OCI Command Line comes preinstalled in Oracle Cloud Shell.
     </copy>
     ```
 
-    ![Check OCI CLI version](./../OKE/images/ocicli.png" ")
+    ![Check OCI CLI version](images/ocicli.png" ")
 
 ## Task 3: Install Kubectl
 
@@ -99,7 +100,8 @@ In this section we will install kubectl. You can use the Kubernetes command line
     </copy>
     ```
 
-    ![Enter the following commands](./../OKE/images/OKE_004.PNG " ")
+    ![Enter the following commands](images/oke_004.png " ")
+
 
 2.  Wait for the download to complete. Enter the following command to verify kubectl.exe file exists.
 
@@ -113,11 +115,13 @@ In this section we will install kubectl. You can use the Kubernetes command line
 
 1. In the OCI console window, navigate to your cluster. In Cluster detail window, scroll down and click **Quick Start**, under **Resources**.
 Follow the steps under the **Quick Start** Section.
-    ![Click Quick Start](./../OKE/images/OKE_S4P1.PNG " ")
+
+    ![Click Quick Start](images/oke_s4p1.png " ")
 
 2. The **Quick Start** directions will direct you to copy and execute the following commands depicted below in your local terminal.
 
-    ![Quick Start Directions](./../OKE/images/OKE_006.PNG " ")
+    ![Quick Start Directions](images/oke_006.png " ")
+
 
 ## Task 5: Deploying a Sample Nginx App on Cluster Using kubectl
 
@@ -144,7 +148,8 @@ Follow the steps under the **Quick Start** Section.
 
     **NOTE:** You can see the deployment using Kubernetes Dashboard under Deployment.
 
-    ![Kubernetes Dashboard](./../OKE/images/OKE_010.PNG " ")
+    ![Kubernetes Dashboard](images/oke_010.png " ")
+
 
 4.  Create a service to expose the application. The cluster is integrated with the OCI Cloud Controller Manager (CCM). As a result, creating a service of type --type=LoadBalancer will expose the pods to the Internet using an OCI Load Balancer.In git-bash window Enter command:
     ```
@@ -155,16 +160,15 @@ Follow the steps under the **Quick Start** Section.
 
 5. Switch to OCI console window. From OCI Services menu click **Networking** > **Load Balancers**. A new OCI LB should be getting  provisioned (This is due to the command above).
 
-    ![Click Load Balancers](./../OKE/images/load_balancer.png " ")
+    ![Click Load Balancers](images/load_balancer.png " ")
 
 6. Once the Load Balancer is Active, click the Load Balancer name and from Load Balancer details page note down its IP address.
 
-    ![Load Balancer Details](./../OKE/images/ip-address.png " ")
+    ![Load Balancer Details](images/ip-address.png " ")
 
 7. open a new browser tab and enter URL  http://`<Load-Balancer-Public-IP>` (http://129.213.76.26 in this example). The Nginx welcome screen should be displayed.
 
-    ![Nginx welcome screen](./../OKE/images/OKE_013.PNG " ")
-
+    ![Nginx welcome screen](images/oke_013.png " ")
 
 ##  Step 6: Delete the resources
 
@@ -188,20 +192,20 @@ Follow the steps under the **Quick Start** Section.
 
 1. To navigate back to your OCI Console window, click **Developer Services** > **Kubernetes Clusters (OKE)**.
 
-   ![Click Kubernetes Clusters (OKE)](./../OKE/images/OKE_S1P1.PNG " ")
+   ![Click Kubernetes Clusters (OKE)](images/oke_s1p1.png " ")
 
 2. Navigate to your cluster. Click the action icon and **Delete** and click **Delete** in the confirmation window.
 
-    ![Delete Cluster](./../OKE/images/delete-cluster.png " ")
+    ![Delete Cluster](images/delete-cluster.png " ")
 
 ### Delete VCN
 
 1. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will appear.
-    ![Click Virtual Cloud Networks](./../OKE/images/vcn.png " ")
+    ![Click Virtual Cloud Networks](images/vcn.png " ")
 
 2. Locate your VCN , click the action icon and then **Terminate**. Click **Terminate All** in the Confirmation window. Click **Close** once VCN is deleted.
 
-    ![Terminate VCN](./../OKE/images/terminate-vcn.png " ")
+    ![Terminate VCN](images/terminate-vcn.png " ")
 
 
 **Congratulations! You have successfully completed the lab.**

@@ -1,0 +1,39 @@
+{
+    "workshoptitle": "Cloud Adventure Guide – for the Office of the CIO",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Adventure 1: Security (AI Access)",
+            "filename": "../../01-security-ai/security-ai.md"
+        },
+        {
+            "title": "Adventure 2: Configure",
+            "filename": "../../02-configure-hcm/configure-hcm.md"
+        },
+        {
+            "title": "Adventure 3: Extend",
+            "filename": "../../03-extend/extend.md"
+        },
+        {
+            "title": "Adventure 4: Create AI",
+            "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
+        },
+        {
+            "title": "Adventure 5: Enable AI",
+            "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
+        },
+        {
+            "title": "Adventure 6: Analytics",
+            "filename": "../../09-analytics/analytics.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

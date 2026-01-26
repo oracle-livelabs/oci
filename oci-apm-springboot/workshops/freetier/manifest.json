@@ -30,29 +30,29 @@
         },
 
         {
-            "title": "Lab 4: Create and configure a file system",
-            "description": "Create and configure a file system",
-            "filename": "../../04-create-file-system/create-file-system.md"
+            "title": "Lab 4: Instrument server with OTEL operator",
+            "description": "Instrument server with OTEL operator",
+            "filename": "../../04-deploy-apm-agent/deploy-apm-agent.md"
         },
         {
-            "title": "Lab 5: Instrument server monitoring",
-            "description": "Instrumentation for server monitoring",
-            "filename": "../../05-configure-apm-agent/configure-apm-agent.md"
+            "title": "Lab 5: Verify APM Agent setup and data collection",
+            "description": "Verify APM Agent setup and data collection",
+            "filename": "../../05-verify-agent/verify-agent.md"
         },
         {
-            "title": "Lab 6: Instrument browser monitoring",
-            "description": "Instrumentation for browser monitoring",
-            "filename": "../../06-configure-browser-agent/configure-browser-agent.md"
-        },
-        {
-            "title": "Lab 7: View traces and spans in APM Trace Explorer",
+            "title": "Lab 6: View traces and spans in APM Trace Explorer",
             "description": "View traces and spans in APM Trace Explorer",
-            "filename": "../../07-view-traces/view-traces.md"
+            "filename": "../../06-view-traces/view-traces.md"
         },
         {
-            "title": "Lab 8: Clean up the workshop environment",
+            "title": "Lab 7: Clean up the workshop environment",
             "description": "Clean up the workshop environment",
-            "filename": "../../08-cleanup/cleanup.md"
+            "filename": "../../07-cleanup/cleanup.md"
+        },
+        {
+            "title": "Lab 8: Learn more about APM (optional)",
+            "description": "Learn more about APM",
+            "filename": "../../08-learn-more/learn-more.md"
         },
         {
             "title": "Need Help?",

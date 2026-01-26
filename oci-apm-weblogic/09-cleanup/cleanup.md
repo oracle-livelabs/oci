@@ -154,4 +154,4 @@ To delete the workshop setup from your tenancy, follow the steps below.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, August 2022
+* **Last Updated By/Date** - Yutaka Takatsu, August 2024

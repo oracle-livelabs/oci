@@ -60,6 +60,11 @@
             "filename": "../../09-cleanup/cleanup.md"
         },
         {
+            "title": "Lab 10: Learn more about APM (optional)",
+            "description": "Learn more about APM",
+            "filename": "../../10-learn-more/learn-more.md"
+        },
+        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"

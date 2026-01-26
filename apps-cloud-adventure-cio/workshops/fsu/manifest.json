@@ -1,0 +1,35 @@
+{
+    "workshoptitle": "AI Adventure Guide – Technology",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Adventure 1: Risk Management",
+            "filename": "../../01-risk/risk.md"
+        },
+        {
+            "title": "Adventure 2: Configure",
+            "filename": "../../02-configure-hcm/configure-hcm.md"
+        },
+        {
+            "title": "Adventure 3: Create AI",
+            "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
+        },
+        {
+            "title": "Adventure 4: Enable AI",
+            "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
+        },
+        {
+            "title": "Adventure 5: Analytics with AI",
+            "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

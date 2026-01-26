@@ -1,0 +1,49 @@
+{
+    "workshoptitle": "OCI Core Services Fundamentals: OCI 기초 실습 워크샵",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../intro/intro.md"
+        },
+        {
+            "title": "Get Started",
+            "filename": "../../cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Identity and Access Management",
+            "filename": "../../identity-access-management/identity-access-management-identity-domain.md"
+        },
+        {
+            "title": "Lab 2: Create Virtual Cloud Networks",
+            "type": "freetier",
+            "filename": "../../virtual-cloud-networks/virtual-cloud-networks.md"
+        },
+        {
+            "title": "Lab 3: Create a Compute Service",
+            "type": "freetier",
+            "filename": "../../compute-service/compute-service.md"
+        },
+        {
+            "title": "Lab 4: Create and Attach a Block Volume",
+            "type": "freetier",
+            "filename": "../../block-volume/block-volume.md"
+        },
+        {
+            "title": "Lab 5: Use Reserved Public IP",
+            "filename": "../../reserved-public-ip/reserved-public-ip.md"
+        },
+        {
+            "title": "Lab 6: Deploy HA Application using Load Balancers",
+            "filename": "../../ha-using-lb/ha-using-lb.md"
+        },
+        {
+            "title": "Lab 7: Configure Auto Scaling",
+            "filename": "../../auto-scaling/auto-scaling.md"
+        },
+        {
+            "title": "Lab 8: Clean Up (Optional)",
+            "filename": "../../cleanup/cleanup.md"
+        }
+    ]
+}

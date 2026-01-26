@@ -1,0 +1,35 @@
+{
+    "workshoptitle": "AI Adventures in SaaS Platform - AI World 2025",
+    "help": "livelabs-help-oci_us@oracle.com",
+        "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Adventure 1: Security & Risk",
+            "filename": "../../lab1/lab1.md"
+        },
+        {
+            "title": "Adventure 2: Configure & Extend",
+            "filename": "../../lab2/lab2.md"
+        },
+        {
+            "title": "Adventure 3: Create AI",
+            "filename": "../../lab3/lab3.md"
+        },
+        {
+            "title": "Adventure 4: Enable AI",
+            "filename": "../../lab4/lab4.md"
+        },
+        {
+            "title": "Adventure 5: Analytics",
+            "filename": "../../lab5/lab5.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

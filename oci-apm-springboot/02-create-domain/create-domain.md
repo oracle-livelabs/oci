@@ -25,10 +25,10 @@ Watch the video below for a quick walk-through of the lab.
 1.	From the OCI menu, select **Observability & Management**, then **Administration**.
 	![Oracle Cloud console Menu](images/2-1-domain.png " ")
 
-2. Select the **apmworkshop** compartment from the pulldown menu.
+2. Select the **apmworkshop** compartment from the pulldown menu. Then click **Create APM Domain**.
 	![Oracle Cloud console Menu](images/2-1-2-domain.png " ")
-3.	Click **Create APM Domain**.
-  ![Oracle Cloud console, Create APM Domain](images/2-2-domain.png " ")
+
+
 4.	Name your APM domain as **apmworkshop** and select the compartment you created. Add a check to the **“Create as Always Free Domain”**, then click **Create**.
   ![Oracle Cloud console, Create APM Domain](images/2-3-domain.png " ")
 
@@ -71,4 +71,4 @@ You may now **proceed to the next lab**.
 Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, December 2022
+* **Last Updated By/Date** - Yutaka Takatsu, November, 2024

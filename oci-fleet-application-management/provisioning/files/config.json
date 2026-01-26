@@ -1,0 +1,7 @@
+{
+    "compartment_id": "<OCID of the compartment where your resources will be created>",
+    "subnet_id": "<OCID of the private subnet (used for instances without public IPs)>",
+    "tenancy_id": "<OCID of your OCI tenancy>",
+    "availability_domain": "<Name of the availability domain (e.g., Uocm:PHX-AD-1)>",
+    "region": "<OCI region code (e.g., us-ashburn-1)>"
+}

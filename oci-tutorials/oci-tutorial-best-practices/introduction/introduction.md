@@ -1,38 +1,41 @@
 # Workshop Overview
 
-## About this Workshop - Putting OCI Best Practices into Practice
+## About this Workshop - Best Practices to Design and Operate OCI
 
-This session on OCI Tutorial - Putting OCI Best Practices into Practice provides infrastructure and platform services for a wide range of enterprise workloads. In each service, you can choose from a rich array of features based on your goals, and Oracle recommends a set of best practices to design and operate cloud topologies that deliver the maximum business value. In this session, we will showcase how to use those best practices when working on OCI.
+Oracle recommends a set of best practices to design and operate cloud topologies that deliver immediate secure business value. In this session we will showcase how to use those best practices to your advantage when working on OCI.
 
 ### **Duration: 2 Hours**
 
 ### Objectives
 
-In this workshop, you will:
-* Learn how a fictitious company achieves best practices to product maximum business value in 3 scenarios:
-    - Migrating from On-Premesis to Cloud
-    - Leveraging Cloud Native Solutions
-    - Utilizing a Hybrid Cloud Environment
-* In each of these scenarios, we showcase the best practices OCI recommends:
-    - Security and Compliance
-    - Reliability and Resilience
-    - Performance and Cost Optimization
-    - Operational Efficiency
+Learn how a company achieves best practices to produce maximum business value in various scenarios following the OCI recommended best practices around:
+* Security and Compliance
+* Reliability and Resilience
+* Performance and Cost Optimization
+* Operational Efficiency
 
 
 ### **Assets**
 
 Powerpoint
-* [Putting OCI Best Practices into Practice](https://objectstorage.us-ashburn-1.oraclecloud.com/p/QpQEPkxY_uYEhjUwSmwFxvPljtJ2yo-wLuvWqSIQR46aJLN7Q1Bao9LohdDqb6dg/n/ociobtnas/b/OCW2022/o/TUT4115_OCI%20Best%20Practices_Final.pdf)
+* [Best Practices to Design and Operate OCI](https://objectstorage.us-ashburn-1.oraclecloud.com/p/vgBcw5a_ezyWN0ls2voNFZu7FSwZ-hFkQ60EegbbRVQgiraqMRV-hyqVy--WZVET/n/ociobtnas/b/Best_Practices/o/TUT2557%20Best%20Practices%20to%20Design%20and%20Operate%20OCI.pdf) 
 
+Video Recording
+* [Day One and Beyond - Putting OCI Best Practices Into Practice](https://www.youtube.com/watch?v=nUhgRvzK75w&feature=youtu.be&ab_channel=OracleLearning) 
+<br>Note: Youtube content covers same content as tutorial session, under different title
 
 
 ## Learn More
 
+Labs
+* [Disaster Recovery - Pilot Light](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=724&clear=RR,180&session=539954259682)
+
 Resource Links for Reference
-* [Best Practices Framework](https://docs.oracle.com/en/solutions/oci-best-practices/#GUID-5F2D2745-934E-409A-A7BA-D0976F727845)
+* [Best Practices Framework for Oracle Cloud Infrastructure](https://docs.oracle.com/en/solutions/oci-best-practices/#GUID-5F2D2745-934E-409A-A7BA-D0976F727845)
+* [Oracle Cloud Infrastructure Documentation](https://docs.oracle.com/en-us/iaas/Content/home.htm)
+
 
 ## Acknowledgements
-* **Authors** - Uma Kumar, Staff Cloud Engineer; Anand Prasad, Master Principal Cloud Architect
-* **Speakers** -  Larry Beausoleil, Sr. Manager, Technical Program Management; Joay Hall, Staff Cloud Engineer
-* **Last Updated By/Date** - Taylor Zheng, September 2022
+* **Authors** - Uma Kumar, Staff Cloud Engineer; Brandon Alarie, Staff Cloud Engineer; Larry Beausoleil, Sr. Manager, Technical Program Management
+* **Speakers** -  Uma Kumar, Staff Cloud Engineer; Brandon Alarie, Staff Cloud Engineer; Larry Beausoleil, Sr. Manager, Technical Program Management
+* **Last Updated By/Date** - Taylor Zheng, August 2023

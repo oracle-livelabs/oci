@@ -24,132 +24,139 @@ In this activity, you will:
 
     > Go to **Risk Management Cloud tab**, then click **‘Advanced Controls’**
 
-    ![isk Management Cloud](images/image001.png)
+    ![Risk Management Cloud](images/1-task1-risk-management.jpg)
 
 
 2. 
 
-      > **Click** on the **‘Models’** icon on left side of screen (NOTE – ‘Models’ is the 2nd icon)
+      > **Click** on the ‘**Models**’ icon on left side of screen (NOTE – ‘Models’ is the 2nd icon).
 
-    ![‘Models’](images/image002.png)
+    ![‘Models’](images/2-task1-risk-management.jpg)
+
 
 3. 
 
-      > Use the search feature to **find control PTP-30001**
+      > **Select** Results Count **‘64’** (or whatever # is displayed) – to see results.
 
-    ![search feature](images/image003.png)
+    ![Results Count](images/4-task1-risk-management.jpg)
 
 4. 
 
-      > **Select** Results Count **‘52’** (or whatever # is displayed) – to see results. Take note the number of results.
+      > Review the results. See Payables Invoice. Number column to see potential duplicates.
 
-    ![Results Count](images/image004.png)
+    ![Review the results](images/5-task1-risk-management.jpg)
 
 5. 
 
-      > Review the results.  See Payables Invoice.Number column to see potential duplicates
+      > **Next, click the carrot ‘<’  to go back**.
 
-    ![Review the results](images/image005.png)
+    ![click the carrot](images/6-task1-risk-management.jpg)
 
 6. 
 
-      > **Next, click the carrot ‘<’  to go back**
+  Let’s see how easy it is to modify a control by adding a materiality threshold.  
 
-    ![click the carrot](images/image006.png)
+
+    > •	Click the row (white space) for **‘CI-PTP-30001: Duplicate Payables Invoices’** so that the row becomes shaded blue (Do not click the Model name/hyperlink itself).
+
+    ![Duplicate Payables Invoices](images/7-task1-risk-management.jpg)
 
 7. 
+ 
+    > Next, **click** the ‘**Actions**’ drop-down menu, then **select ‘Copy’**.
 
-  A common objective for business controls is to adapt controls to a company’s risk profile.  Materiality levels differ by company.  Here we see how easy it is to tweak the control to make more relevant and impactful for our own objective.
-
-
-    > •	**Select** the model **‘CI-PTP-30001: Duplicate Payables Invoices’** 
-    >	•	Note: Click the white space next to the hyperlink so the line  item becomes shaded blue (Do not click the hyper link itself)
-
-    ![Duplicate Payables Invoices](images/image007.png)
+    ![drop-down menu](images/8-lab3-risk-management.png)
 
 8. 
- 
-    > Next, **click** the **‘Actions’** drop-down menu, then **select ‘Copy’**
+  
+    > Click the hyper link for the newly-copied model.
 
-    ![drop-down menu](images/image008.png)
+    ![Click the hyper link](images/9-task1-risk-management.jpg)
 
 9. 
   
-    > Click the hyper link for the newly-copied model
+    > **Click Edit** in upper right corner.
 
-    ![Click the hyper link](images/image009.png)
+    ![Home Page](images/10-task1-risk-management.jpg)
 
 10. 
   
-    > **Click Edit**
+    > **Rename/append** the name of the model with **CAOxx** (the user you’re logged in as).
 
-    ![Home Page](images/image010.png)
+    ![Home Page](images/11-task1-risk-management.jpg)
 
 11. 
   
-    > **Rename/append** the name of the model with **CAOxx** (the user you’re logged in as)
+    > **Click ‘Add Filter‘**.
 
-    ![Home Page](images/image011.png)
+    ![Click Filter](images/12-task1-risk-management.jpg)
 
 12. 
-  
-    > **Click ‘Add Filter‘**
 
-    ![Click Filter](images/image012.png)
+    > (1) Enter Filter Name ‘**Amount**’  <br>
+
+    > (2) Select Object:  ‘**Payables Invoice**’  <br>
+
+    > (3) Change condition to ‘**Greater than or equal to**’  <br>
+
+    > (4) Enter a amount limit in **Value** field (NOTE – Value should be less than 500,000) <br>
+
+    > (5) Click **OK**
+
+
+    ![Change condition](images/13-task1-risk-management.jpg)
 
 13. 
 
-    > **•	Enter the name as ‘Amount’**
-    > **•	Change condition to ‘Greater than’ or ‘Greater than or equal to’**
-    > **•	Enter a material limit in Value field** (NOTE – Value should be less than 9,000) **
+    > **Click ‘Run’** > **Click ‘Yes’** > **Click ‘Ok’**.
 
-    ![Change condition](images/image013.png)
+    ![Click Run](images/14a-task1-risk-management.jpg)
+
+    ![Click Yes](images/14b-task1-risk-management.jpg)
+
+    ![Click Yes](images/14c-task1-risk-management.jpg)
 
 14. 
-  
-    > **Click ‘Run’**
 
-    ![Click Run](images/image014.png)
+      > **Select ‘Monitor Jobs’** (to confirm the job completes).
+
+    ![Monitor Jobs](images/16-task1-risk-management.jpg)
 
 15. 
   
-    > **Click ‘Yes’**
+    > Note: (1) Once job is ‘**Completed**’ (2) Next, **click the carrot ‘<’ to go back**.
 
-    ![Click Yes](images/image015.png)
+    ![Completed job](images/17-task1-risk-management.jpg)
 
 16. 
+  
+    > **Click ‘View Existing Results ‘**.
 
-      > **Select ‘Monitor Jobs’** (to confirm the job completes)
-
-    ![Monitor Jobs](images/image016.png)
+    ![View Existing Results](images/18-task1-risk-management.jpg)
 
 17. 
   
-    > Note: Job says ‘Completed’ once done 
-    > **Next, click the carrot ‘<’  to go back**
+    > Note: Results Screen show updated results based on Amount threshold chosen in previous step.   <br>
 
-    ![Completed job](images/image017.png)
+    > **Click the carrot ‘<’** to go back.
+
+    ![Home Page](images/19-task1-risk-management.jpg)
 
 18. 
-  
-    > **Click ‘View Existing Results ‘**
 
-    ![View Existing Results](images/image018.png)
-
-19. 
-  
-    > Note: Resulting Screen shows Duplicate Invoice advanced control results – above the materiality threshold selected 
-    > **Click the carrot ‘<’** to go back
-
-    ![Home Page](images/image019.png)
-
-20. 
-    > **Select > Save and Close**
+    Congratulations!  You’ve completed this part of the Adventure!
 
     ![Home Page](images/image020.png)
 
+19. 
+
+    Adventure awaits, show what you know, and rise to the top of the leader board!!!
+
+    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:10:)
+
+    [Click here](https://apex.oracle.com/pls/apex/f?p=159406:10:) 
 
 ## Acknowledgements
 * **Author** - Michael Gobbo, Distinguished Sales Consultant, ERP Services
-* **Contributors** -  Harold Dickerman, Business Architect
-* **Last Updated By/Date** - Kevin Lazarz, September 2022
+* **Contributors** -  Steve Quinton, Team Lead – Risk Solutions 
+* **Last Updated By/Date** - Ramona Magadan, Technical Program Manager, Database Product Management, August 2024

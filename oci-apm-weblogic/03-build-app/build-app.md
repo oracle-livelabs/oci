@@ -15,7 +15,7 @@ Estimated time: 10 minutes
 
 * Completion of the preceding labs in this workshop
 
-## Task1: Verify OKE
+## Task 1: Verify OKE
 
 1. Go back to the Kubernetes cluster page where you left Lab 1, and check the status of the cluster. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, and select **Developer Services** > **Kubernetes Clusters (OKE)**.
 
@@ -27,30 +27,30 @@ Estimated time: 10 minutes
 
 3. If the status of the cluster is **Active**, creation was successful. If it is still in a **Creating** status, it may take a few more minutes to complete. (Usually, it takes 7 to 10 minutes to finish the jobs to create a cluster).
 
-   ![Oracle Cloud console, Cluster details](images/1-9-OKE.png " ")
+   ![Oracle Cloud console, Cluster details](images/1-3-oke.png " ")
 
-## Task2: Access the OKE in the Oracle Cloud shell
+## Task 2: Access the OKE in the Oracle Cloud shell
 
 
 1. Click **Access Cluster** on the cluster details page.
 
-  ![Oracle Cloud console, Cluster details](images/2-1-OKE.png " ")
+  ![Oracle Cloud console, Cluster details](images/2-1-oke.png " ")
 
 2. Make sure the **Cloud Shell Access** is selected. Click the **Copy** link from the command to access kubeconfig for the cluster.
 
-  ![Oracle Cloud console, Cluster details](images/2-2-OKE.png " ")
+  ![Oracle Cloud console, Cluster details](images/2-2-oke.png " ")
 
 3. Then click **Launch Cloud Shell**.
 
-  ![Oracle Cloud console, Cluster details](images/2-2-2-OKE.png " ")
+  ![Oracle Cloud console, Cluster details](images/2-3-oke.png " ")
 
 4. Oracle Cloud Shell window opens at the lower side of the browser screen.
 
-  ![Oracle Cloud console, Cluster details](images/2-3-OKE.png " ")
+  ![Oracle Cloud console, Cluster details](images/2-4-oke.png " ")
 
 5. Paste the copied command to the command shell prompt. Then hit enter.   
 
-  ![Oracle Cloud console, Cluster details](images/2-4-OKE.png " ")
+  ![Oracle Cloud console, Cluster details](images/2-5-oke.png " ")
 
   >**Note:** Save the command to a text file on your laptop, and execute it whenever you start a new Cloud Shell session, while working in the labs in this workshop.
 
@@ -115,7 +115,7 @@ Estimated time: 10 minutes
 
   Ensure that you see the message 'Cluster configuration complete!' and the URL to launch a demo application.
 
-  ![Oracle Cloud console, Cloud Shell](images/4-4-cloudshell.png " ")
+  ![Oracle Cloud console, Cloud Shell](images/4-3a-cloudshell.png " ")
 
 4. Run the kubectl command below to display the information of the services created.
 
@@ -126,7 +126,7 @@ Estimated time: 10 minutes
     ```
     The output will be similar to the image below. The namespace of the WebLogic Server services in this workshop is **sample-domain1-ns**. It may take a few minutes to see all services.
 
-    ![Oracle Cloud console, Cloud Shell](images/4-2-2-cloudshell.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/4-4-cloudshell.png " ")
 
 5. Run the command below to display the statuses of the  pods. Wait for all pods are Ready and in the Running state.
 
@@ -136,14 +136,14 @@ Estimated time: 10 minutes
     </copy>
     ```
 
-    ![Oracle Cloud console, Cloud Shell](images/4-2-3-cloudshell.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/4-5-cloudshell.png " ")
 
 
-5. From the command output from the step 4 above, locate the LoadBalancer service. Note down the External-IP.
+6. From the command output from the step 4 above, locate the LoadBalancer service. Note down the External-IP.
 
-    ![Oracle Cloud console, Cloud Shell](images/4-2-1-cloudshell.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/4-6-cloudshell.png " ")
 
-6. On your computer, open a new browser tab and access the application with the following URL pattern:
+7. On your computer, open a new browser tab and access the application with the following URL pattern:
 
     ``` bash
     <copy>
@@ -152,7 +152,7 @@ Estimated time: 10 minutes
     ```
     Make sure the WebLogic Operator Demo application launches as in the image below. This is the target web application you will use to configure the APM Java Agent in this workshop.
 
-    ![WLS Operator Demo application](images/4-3-demoapp.png " ")
+    ![WLS Operator Demo application](images/4-7-demoapp.png " ")
 
 
 
@@ -164,4 +164,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, August 2022
+* **Last Updated By/Date** - Yutaka Takatsu, December 2024

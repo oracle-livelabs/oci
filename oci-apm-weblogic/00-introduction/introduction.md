@@ -12,6 +12,8 @@ In this workshop, you will provision the APM Java agent in a file system mounted
 
 Estimated Workshop Time: 80 minutes
 
+## Task 1: Know before you run
+
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 
 The diagram below provides an overview of the OCI APM Service, its features, components, and some of the other OCI services it integrates with.
@@ -36,17 +38,15 @@ In this workshop, you will:
 ### Prerequisites
 
 
-* An Oracle Free Tier with a 30-day free trial or Paid Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported. 
-
-
-If you are running the workshop in a Paid Cloud Account, ensure you have the permissions below:
+* A paid Cloud Account. Please ensure you have the permissions below:
 * Oracle Cloud resources and permissions to create a file system. See **[Creating File Systems](https://docs.oracle.com/en-us/iaas/Content/File/Tasks/creatingfilesystems.htm)** and **[Service Limits](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm#top)** in the Oracle Cloud documentation.
 *	Oracle Cloud Account Administrator role or manage apm-domains permission in the target compartment. See **[Perform Oracle Cloud Infrastructure Prerequisites (APM)](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/perform-oracle-cloud-infrastructure-prerequisite-tasks.html)** in the Oracle Cloud documentation.
 
+> **Note:** ***This workshop cannot be completed with a Free Trial account. You will need a paid cloud account with permission to create a file system.***
 
 ### More APM Workshops
 
-* Please visit: **[APM LiveLabs workshops](https://apexapps.oracle.com/pls/apex/f?p=133:100:111996377805307::::SEARCH:application+Performance+monitoring)**.
+* Please visit: **[APM LiveLabs workshops](https://livelabs.oracle.com/pls/apex/f?p=133:100:111996377805307::::SEARCH:application+Performance+monitoring)**.
 
 
 
@@ -56,4 +56,4 @@ If you are running the workshop in a Paid Cloud Account, ensure you have the per
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, December, 2022
+- **Last Updated By/Date** - Yutaka Takatsu, December, 2024

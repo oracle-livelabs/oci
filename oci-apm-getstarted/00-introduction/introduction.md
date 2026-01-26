@@ -2,12 +2,17 @@
 
 ## About this Workshop
 
-In this workshop, you will learn how to use Oracle Cloud APM to detect a performance issue from a cloud-native application, analyze the symptoms and identify the root cause.
+In this workshop, you will learn how to use Oracle Cloud APM to analyze application data, identify symptoms, and trace issues down to their root causes in monitored GenAI and cloud-native applications.
 
-You will examine performance alarms in the APM Home dashboard, observe activities in the out-of-the-box performance widgets in the Synthetic Monitors dashboard, inspect client details in the HTTP Archive (HAR) file, and finally explore the server-side details using the APM Trace Explorer.
+You will begin by using the Inferencing App dashboard to analyze GenAI application data and drill down into trace details. You will also examine data captured for cloud-native service applications, including performance alarms, synthetic monitor activities, and server-side insights using the APM Trace Explorer. Additionally, you will learn how to create complex, personalized queries, save them for future use, and generate custom widgets to visually represent data on a personalized dashboard.
 
 
-Estimated Time: 35 minutes
+Estimated Time: 80 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Exploring Oracle Cloud Infrastructure Application Performance Management](videohub:1_4814a932)
+
+## Task 1: Know before you run
 
 ### About Oracle Cloud Infrastructure Application Performance Management (OCI APM)
 
@@ -21,11 +26,14 @@ Among other capabilities, OCI APM includes an implementation of a Distributed Tr
 ### Objectives
 
 In this workshop, you will:
-* Examine APM Alarms
-* Analyze APM Monitors
-* Inspect Monitor Details and History
-* Explore APM Trace Data
 
+* Analyze GenAI app with Inferencing app dashboard
+* Examine APM Alarms
+* Inspect Synthetic Monitor Details and History
+* Explore APM Trace Data
+* Save a custom query
+* Create a custom dashboard
+* Construct complex queries
 
   [Oracle Cloud APM tutorial: Synthetic monitoring](https://www.youtube.com/watch?v=31lJYvmT6b0)
     [](youtube:31lJYvmT6b0)
@@ -38,7 +46,7 @@ In this workshop, you will:
 
 ### More APM Workshops
 
-* Please visit: **[APM LiveLabs workshops](https://apexapps.oracle.com/pls/apex/f?p=133:100:111996377805307::::SEARCH:application+Performance+monitoring)**.
+* Please visit: **[APM LiveLabs workshops](https://livelabs.oracle.com/pls/apex/f?p=133:100:111996377805307::::SEARCH:application+Performance+monitoring)**.
 
 
 ## Acknowledgements
@@ -47,4 +55,4 @@ In this workshop, you will:
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-- **Last Updated By/Date** - Yutaka Takatsu, December 2022
+- **Last Updated By/Date** - Yutaka Takatsu, June 2025

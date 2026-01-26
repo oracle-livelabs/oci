@@ -7,7 +7,9 @@ This workshop guides you through the steps to set up the PeopleSoft PICASO Chatb
 After completing this workshop, you will have a better insight and understanding of OCI Digital Assistant and the ability to configure and integrate a PeopleSoft environment, whether it exists on OCI or on-premises.
 
 Watch the video below for an Introduction To PeopleSoft PICASO Digital Assistant.
-[Lab overview](youtube:HCF482DDcrM)
+
+[Lab overview](youtube:HCF482DDcrM:large)
+
 
 The below image provides a high-level overview of PeopleSoft Chatbot Integration with Oracle Digital Assistant.
 
@@ -59,8 +61,9 @@ You will need the following to complete this workshop:
 * You must have subscribed to resources in OCI to install and run Oracle Digital Assistant 
 * Access to OCI Marketplace to deploy PeopleSoft if using OCI
 * PeopleSoft HCM 9.2 Update Image 43 or PeopleSoft FSCM 9.2 Update Image 45 already available on-premise or on Oracle Cloud Infrastructure.
-* In case of new PeopleSoft deployment on OCI using marketplace image, follow the PeopleSoft Rapid Provisioning Livelabs for instructions.Refer to link [here](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3208) 
+* In case of new PeopleSoft deployment on OCI using marketplace image, follow the PeopleSoft Rapid Provisioning Livelabs for instructions.Refer to link [here](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3208) 
 
+**Important Note**: If you are planning to deploy PICASO and configure with on-premise PSFT application or PSFT application deployed using Cloud Manager, make sure to deploy Elastic Search as part of the build. Elastic search is required for Employee Directory Skill part of the Employee Digital Assistant, Company Directory index needs to be deployed/build as part of the process.
 ## Appendix
 
 *Terminology*
@@ -88,5 +91,5 @@ The following terms are commonly employed in PeopleSoft cloud operations and are
 ## Acknowledgements
 * **Authors** - Deepak Kumar M, Principal Cloud Architect
 * **Contributors** - Deepak Kumar M, Principal Cloud Architect
-* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, October 2022
+* **Last Updated By/Date** - Deepak Kumar M, Principal Cloud Architect, March 2023
 

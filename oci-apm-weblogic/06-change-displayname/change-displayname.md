@@ -43,7 +43,7 @@ Estimated time: 5 minutes
     </copy>
     ```
 
-   ![Oracle Cloud console, Cloud Shell ](images/6-1-cloudshell.png " ")
+   ![Oracle Cloud console, Cloud Shell ](images/1-2-cloudshell.png " ")
 
 3.	Open **AgentConfig.properties** with an editor
 
@@ -61,7 +61,7 @@ Estimated time: 5 minutes
     </copy>
     ```
 
-    ![Oracle Cloud console, Cloud Shell ](images/6-1a-cloudshell.png " ")
+    ![Oracle Cloud console, Cloud Shell ](images/1-4-cloudshell.png " ")
 
 5.	Copy **AgentConfig.properties** back to the container. ***Change*** to the apm-agent-version you have.
 
@@ -73,7 +73,7 @@ Estimated time: 5 minutes
 
     >**Note:** kubectl cp  ~/AgentConfig.properties sample-domain1-ns/sample-domain1-admin-server:/apmlab-fss/oracle-apm-agent/config/**1.8.3326**/AgentConfig.properties
 
-   ![Oracle Cloud console, Cloud Shell ](images/6-4-cloudshell.png " ")
+   ![Oracle Cloud console, Cloud Shell ](images/1-5-cloudshell.png " ")
 
 6. Verify the successful file transfer, by running the following command. ***Change*** the apm-agent-version.
 
@@ -84,11 +84,11 @@ Estimated time: 5 minutes
     ```
     Review the file content.
 
-    ![Oracle Cloud console, Cloud Shell](images/6-1b-cloudshell.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/1-6-cloudshell.png " ")
 
     Ensure you see the changes made in the previous step.
 
-    ![Oracle Cloud console, Cloud Shell](images/6-1c-cloudshell.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/1-7-cloudshell.png " ")
 
     No restart on the Agent or the application is necessary, because the changes made on the configuration files in the directory will be picked up dynamically by the APM Agent.
 
@@ -100,4 +100,4 @@ Estimated time: 5 minutes
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, December 2022
+* **Last Updated By/Date** - Yutaka Takatsu, December 2024

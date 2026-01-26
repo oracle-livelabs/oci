@@ -30,7 +30,22 @@ In this lab, you will
    ```
 ## Task 2: Download required JSON and validate.
 
-1. Download the files (both \*.tf and JSON/\*.json)
+1. Download the files (both \*.tf and JSON/\*.json) 
+   [JSON1](tf-json/JSON/getfiles.json)
+   [JSON2](tf-json/JSON/mediaflow.json)
+   [JSON3](tf-json/JSON/putfiles.json)
+   [JSON4](tf-json/JSON/thumbnails.json)
+   [JSON5](tf-json/JSON/transcode.json)
+   [JSON6](tf-json/JSON/transcribe.json)
+   [JSON7](tf-json/JSON/visiondetection.json)
+   [TF1](tf-json/data.tf)
+   [TF2](tf-json/identity.tf)
+   [TF3](tf-json/main.tf)
+   [TF4](tf-json/mediastream.tf)
+   [TF5](tf-json/mediaworkflow.tf)
+   [TF6](tf-json/objectstorage.tf)
+   [TF7](tf-json/provider.tf)
+
 2. Initiate the Terraform
 
    ```

@@ -1,8 +1,8 @@
 # Workshop Overview
 
-## About this Workshop - Technical Quick Start
+## About this Workshop - Getting Started with Oracle Cloud Infrastructure
 
-This session on OCI Tutorial - OCI Technical Quick Start covers the fundamentals of Oracle Cloud Infrastructure (OCI). This will include discussion on how OCI is structured, explanations of major cloud concepts, and overviews of the core infrastructure services. We will also cover terms and definitions for each of the topic areas so that you have the proper foundation to move on to additional sessions. Topic ares include Identity and Access Management (IAM), networking, compute, storage, and database to get you started on this journey. We will be talking about Users, Groups, and Policies, along with the core tenets of virtual network design that will help set the foundations for application deployment. 
+This session will cover the fundamentals of Oracle Cloud Infrastructure (OCI) including cloud concepts, OCI structures, and core OCI services. OCI service areas that will be discussed include Identity and Access Management (IAM), networking, compute, storage, database. You will also learn about Users, Groups, and Policies, along with the core tenets of virtual networking design that will help set the foundations for application deployment to OCI. We will also cover terms and definitions for each of the topic areas to establish a foundation for additional sessions. 
 
 
 ### **Duration: 2 Hours**
@@ -10,29 +10,30 @@ This session on OCI Tutorial - OCI Technical Quick Start covers the fundamentals
 ### Objectives
 
 In this workshop, you will learn how to:
-* Understand the basic structure of OCI
+* Describe the basic structure of OCI
 * Outline all the major core infrastructure services
 * Employ the foundational knowledge necessary to begin building in an OCI tenancy
 
 ### **Assets**
 
 Powerpoint
-* [OCI Technical QuickStart](https://objectstorage.us-ashburn-1.oraclecloud.com/p/zuCFBgQ0_LeSDzWRpbhiti_E566UCAD4CLar6TIcji_7ASOfEvMbI5Osd7s50GUZ/n/ociobtnas/b/OCW2022/o/TUT4110_OCI_Technical_Quick_Start_Final.pdf)
+* [Getting Started with Oracle Cloud Infrastructure](https://objectstorage.us-ashburn-1.oraclecloud.com/p/9ubSUAsiul5s_hiVzS0y77tvYiLkAJ1yhhUQzGWQ8L8XPKcqel84naPdx982V9_s/n/ociobtnas/b/Getting_Started_with_OCI/o/TUT2551%20Getting%20Started%20with%20Oracle%20Cloud%20Infrastructure.pdf)
 
 Video Recording
-* [Day One and Beyond: Oracle Cloud Technical Quick Start](https://www.youtube.com/watch?v=2c3YmUSy_E4&list=PLKCk3OyNwIzvbLEYL08MKJkR84NQLIIdg&index=2&ab_channel=OracleLearning)
-
+* [Day One and Beyond - Oracle Cloud Technical Quick Start](https://www.youtube.com/watch?v=8kYEYNMK4zg&ab_channel=OracleLearning)
+<br>Note: Youtube content covers same content as tutorial session, under different title
 
 ## Learn More
 
+Lab
+* [Getting Started with Oracle Cloud Infrastructure Core Services](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648&clear=RR,180&session=6361856240041)
 
 Resource Links for Reference
 * [Getting Started with OCI](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/baremetalintro.htm) 
-* [Getting Started with Oracle Cloud Infrastructure Core Services Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648) (Labs 2-4 only)
+* [Getting Started with Oracle Cloud Infrastructure Core Services Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=648) (Labs 2-4 only)
 
 
 ## Acknowledgements
-* **Authors** - Joey Hall, Staff Cloud Engineer; 
-Wynne Yang, Staff Cloud Engineer
-* **Speakers** -  Joey Hall, Staff Cloud Engineer; Uma Kumar, Staff Cloud Engineer
-* **Last Updated By/Date** - Taylor Zheng, September 2022
+* **Authors** - Olivia Ferda, Associate Cloud Engineer; Wynne Yang, Staff Cloud Engineer; Lynn Lewis, Senior Cloud Engineer
+* **Speakers** -  Olivia Ferda, Associate Cloud Engineer; Wynne Yang, Staff Cloud Engineer; Lynn Lewis, Senior Cloud Engineer
+* **Last Updated By/Date** - Taylor Zheng, August 2023

@@ -50,9 +50,17 @@ Estimated time: 10 minutes
 
     E.g., cd ~/; wget https://repo1.maven.org/maven2/com/oracle/apm/agent/java/apm-java-agent-installer/1.8.3326/apm-java-agent-installer-1.8.3326.jar
 
+    >**Note:** If you received **No such file or directory** error, it may be a new version of the agent is being updated. Please run the following URL on a browser and find the Agent version available at the Maven central.
+    ``` bash
+    <copy>
+    https://repo1.maven.org/maven2/com/oracle/apm/agent/java/apm-java-agent-installer
+    </copy>
+    ```
+       ![Oracle Cloud console, Cloud Shell](images/4-2-1-mavencentral.png " ")
+
 2.	Hit the enter key and verify the message to ensure the successful file transfer.
 
-   ![Oracle Cloud console, Cloud Shell](images/4-1-6-cloudshell.png " ")
+   ![Oracle Cloud console, Cloud Shell](images/4-2-2-cloudshell.png " ")
 
 3.  Type the ls command. Confirm that the java agent file installer is in the home directory.
 
@@ -61,7 +69,7 @@ Estimated time: 10 minutes
     ls ~
     </copy>
     ```
-   ![Oracle Cloud console, Cloud Shell](images/4-1-7-cloudshell.png " ")
+   ![Oracle Cloud console, Cloud Shell](images/4-2-3-cloudshell.png " ")
 
 ## Task3: Copy the Java Agent installer to the file system
 
@@ -85,7 +93,7 @@ Estimated time: 10 minutes
 
     If you see the java agent installer file in the location, the file transfer was successful.
 
-   ![Oracle Cloud console, Cloud Shell ](images/4-1-8-cloudshell.png " ")
+   ![Oracle Cloud console, Cloud Shell ](images/4-3-2-cloudshell.png " ")
 
     >**Note:** The APM version may be different from what is shown in the example.
 
@@ -103,7 +111,7 @@ Estimated time: 10 minutes
 
     With a successful installation, you should see the output similar to below.
 
-   ![Oracle Cloud console, Cloud Shell ](images/4-1-10-cloudshell.png " ")
+   ![Oracle Cloud console, Cloud Shell ](images/4-4-1-cloudshell.png " ")
 
 2.	Execute the below command to verify ***oracle-apm-agent*** directory is created under the apmlab-fss directory.
 
@@ -113,7 +121,7 @@ Estimated time: 10 minutes
     </copy>
     ```
 
-    ![Oracle Cloud console, Cloud Shell ](images/4-1-11-cloudshell.png " ")
+    ![Oracle Cloud console, Cloud Shell ](images/4-4-2-cloudshell.png " ")
 
 
 
@@ -186,7 +194,7 @@ Next, you will deploy the Java Agent by modifying the domain.yaml file to point 
 
 2.	Find the **JAVA_OPTIONS** section (line 69). You will see a java runtime parameter **"-Dweblogic.StdoutDebugEnabled=false"** is set (line 70).
 
-    ![Oracle Cloud console, Cloud Shell ](images/4-6-1-cloudshell.png " ")    
+    ![Oracle Cloud console, Cloud Shell ](images/4-6-2-cloudshell.png " ")    
 
 3.	Add the Java Agent jar location by replacing the value to:
 
@@ -196,7 +204,7 @@ Next, you will deploy the Java Agent by modifying the domain.yaml file to point 
     </copy>
     ```
 
-    ![Oracle Cloud console, Cloud Shell ](images/4-6-1-1-cloudshell.png " ")    
+    ![Oracle Cloud console, Cloud Shell ](images/4-6-3-cloudshell.png " ")    
 
     Save and close the file.
 
@@ -208,7 +216,7 @@ Next, you will deploy the Java Agent by modifying the domain.yaml file to point 
     </copy>
     ```
 
-    ![Oracle Cloud console, Cloud Shell ](images/4-6-2-cloudshell.png " ")    
+    ![Oracle Cloud console, Cloud Shell ](images/4-6-4-cloudshell.png " ")    
 
 5.	Run the following command to check the status of the pods. Carefully look at the **AGE** column, and make sure they are restarted, and in the Running state and Ready.
 
@@ -217,7 +225,7 @@ Next, you will deploy the Java Agent by modifying the domain.yaml file to point 
     kubectl get pods -n sample-domain1-ns
     </copy>
     ```
-    ![Oracle Cloud console, Cloud Shell ](images/4-6-3-cloudshell.png " ")   
+    ![Oracle Cloud console, Cloud Shell ](images/4-6-5-cloudshell.png " ")   
 
     Once the pods are in the Running state, the APM Java Agent is active and listening to the WebLogic Server. It captures backend traces and spans which you can view in the APM Trace Explorer. Verify the AGE column to ensure they are restarted. It may take 5 or more minutes to have all servers restarted.
 
@@ -232,4 +240,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, December, 2022
+* **Last Updated By/Date** - Yutaka Takatsu, March, 2023

@@ -1,0 +1,31 @@
+{
+    "workshoptitle": "Cloud Adventure Activity Guide – for the HCM",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Recruiter View",
+            "filename": "../../01-recruiter-view/recruiter.md"
+        },
+        {
+            "title": "Lab 2: Employee View",
+            "filename": "../../02-connections/employee.md"
+        },
+        { 
+            "title": "Lab 3: Manager View",
+            "filename": "../../05-your-team-page/your-team.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+        
+    ]
+}
+
+
+

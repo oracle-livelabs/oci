@@ -1,0 +1,56 @@
+{
+    "workshoptitle": "MultiCloud Network Connectivity",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "include" : {
+        "azure_interconnect": "../../fastconnect/azure_interconnect.md",
+        "console_connect_cr": "../../fastconnect/console_connect_cr.md",
+        "equinix_network_edge": "../../fastconnect/equinix_network_edge.md",
+        "equinix_fcr": "../../fastconnect/equinix_fcr.md",
+        "gcp_interconnect": "../../fastconnect/gcp_interconnect.md",
+        "megaport_mcr": "../../fastconnect/megaport_mcr.md"
+    },
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable).",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Virtual Cloud Network Deployment",
+            "filename": "../../vcn/vcn.md"
+        },
+        {
+            "title": "Lab 2: Dynamic Routing Gateway Deployment",
+            "filename": "../../drg/drg.md"
+        },
+        {
+            "title": "Lab 3: Virtual Machine Deployment",
+            "filename": "../../access-oci-vm/access-vm.md"
+        },
+        {
+            "title": "Lab 4: FastConnect Deployment",
+            "filename": "../../fastconnect/fastconnect_main.md",
+            "type": {
+                "azure_interconnect" : "Azure Interconnect",
+                "gcp_interconnect" : "GCP Interconnect",
+                "console_connect_cr" : "Console Connect",
+                "equinix_network_edge" : "Equinix (Network Edge)",
+                "equinix_fcr" : "Equinix (FCR)",
+                "megaport_mcr" : "Megaport (MCR)"
+            }
+        },
+        {
+            "title": "Lab 5: MultiCloud Connectivity Verification",
+            "filename": "../../verify-connectivity/verify-connectivity.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

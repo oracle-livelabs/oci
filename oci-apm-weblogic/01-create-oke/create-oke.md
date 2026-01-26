@@ -13,10 +13,10 @@ Estimated time: 5 minutes
 
 ### Prerequisites
 
-* This lab requires an [Oracle Cloud account](https://www.oracle.com/cloud/free/). You may use your own cloud account, or a Free tier account, a cloud account that you obtained through a trial.
+* This lab requires an [Oracle Cloud account](https://www.oracle.com/cloud/free/). You may use your cloud account, or a Free tier account, a cloud account that you obtained through a trial.
 
 
-## Task1: Create an OCI compartment
+## Task 1: Create an OCI compartment
 
 1. Open the navigation menu from the top-left corner (aka. hamburger menu) of the Oracle Cloud console and select **Identity & Security** > **Compartments**.
 	![Oracle Cloud console Menu](images/1-1-compartments.png " ")
@@ -30,7 +30,7 @@ Estimated time: 5 minutes
 *	Verify that your apmworkshop compartment is created in the table
 	![Oracle Cloud console, Create Compartment](images/1-4-compartments.png " ")
 
-## Task2: Create an OKE
+## Task 2: Create an OKE
 
 1. Open the navigation menu from the top left corner (aka. hamburger menu) in the Oracle Cloud console, and select **Developer Services** > **Kubernetes Clusters (OKE)**.
 
@@ -38,28 +38,28 @@ Estimated time: 5 minutes
 
 2. Make sure the **apmworkshop** is selected in the Compartment field, then click **Create cluster**
 
-   ![Oracle Cloud console, Clusters in Compartment](images/1-2-OKE.png " ")
+   ![Oracle Cloud console, Clusters in Compartment](images/1-2-oke.png " ")
 
 3. Quick Create pane is pre-selected. Keep the default selection and click **Submit**.
 
-   ![Oracle Cloud console, Create cluster](images/1-3-OKE.png " ")
+   ![Oracle Cloud console, Create cluster](images/1-3-oke.png " ")
 
 4. Name the cluster as **apmlab-cluser1**. Accept the default setting for other fields and click **Next**.
 
-   ![Oracle Cloud console, Create cluster](images/1-4-OKE.png " ")
-   ![Oracle Cloud console, Create cluster](images/1-5-OKE.png " ")
+   ![Oracle Cloud console, Create cluster](images/1-4-oke.png " ")
+   ![Oracle Cloud console, Create cluster](images/1-5-oke.png " ")
 
 5. Review the configuration, and click **Create cluster**.
 
-   ![Oracle Cloud console, Create cluster](images/1-6-OKE.png " ")
+   ![Oracle Cloud console, Create cluster](images/1-6-oke.png " ")
 
 6. Make sure all verification steps are cleared. Click **Close**.
 
-   ![Oracle Cloud console, Create cluster](images/1-7-OKE.png " ")
+   ![Oracle Cloud console, Create cluster](images/1-7-oke.png " ")
 
 7.  This will start to create a cluster, and takes 7 to 10 minutes to complete. While waiting for the creation of the cluster, you can proceed to the next lab to create an APM domain. In Lab 3, we will resume the steps to build the application.
 
-   ![Oracle Cloud console, Create cluster](images/1-8-OKE.png " ")
+   ![Oracle Cloud console, Create cluster](images/1-8-oke.png " ")
 
 
 
@@ -72,4 +72,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,  
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, August 2022
+* **Last Updated By/Date** - Yutaka Takatsu, December 2024

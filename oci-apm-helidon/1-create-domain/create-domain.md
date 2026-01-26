@@ -72,4 +72,4 @@ You may now **proceed to the next lab**.
 - **Contributors** - Steven Lemme, Senior Principal Product Manager,	
 Anand Prabhu, Sr. Member of Technical Staff,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Yutaka Takatsu, August 2022
+* **Last Updated By/Date** - Yutaka Takatsu, December 2024

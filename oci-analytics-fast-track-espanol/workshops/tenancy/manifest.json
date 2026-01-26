@@ -1,0 +1,62 @@
+{
+    "workshoptitle": "OCI Data & AI Fast Track - For Data Analysts",
+    "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
+                "sample.json":"../../data-load/files/sample.json",
+                "step2.md":"../../data-load/files/step2.md"},
+    "variables": ["../../variables/variables.json",
+                 "../../variables/variables-in-another-file.json"],
+    "help": "isabella.alvarez@oracle.com, breno.comin@oracle.com, thais.henrique@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduccion",
+            "description": "Bienvenido a OCI Data & AI Fast Track para analistas",
+            "filename": "../../intro-es/intro-es.md"
+        
+        },
+        {
+            "title": "Pre-requisitos: Aprovisionamiento de los recursos necesarios",
+            "description": "Prepare su ambiente para iniciar el Fast Track de OAC",
+            "filename": "../../ft-create-autonomous-database-es-pre/ft-create-autonomous-database-es-pre.md"
+        },
+        {
+            "title": "Lab 1: Primeros pasos en Oracle Analytics Cloud",
+            "description": "Navega por Oracle Analytics Cloud",
+            "filename": "../../ft-first-steps-es-lab-uno/ft-first-steps-es-lab-uno.md"
+        },
+        {
+            "title": "Lab 2: Crear un Conjunto de Datos",
+            "description": "Aprenda a crear un conjunto de datos a partir de 2 tablas",
+            "filename": "../../ft-create-dataset-es-lab-dos/ft-create-dataset-es-lab-dos.md"
+        },
+        {
+            "title": "Lab 3: Preparar un Conjunto de Datos",
+            "description": "Enriquezca sus datos a traves de transformaciones en Analytics Cloud",
+            "filename": "../../ft-prepare-dataset-es-lab-tres/ft-prepare-dataset-es-lab-tres.md"
+        },
+        {
+            "title": "Lab 4: Crear visualizaciones - Primeros Pasos",
+            "description": "Explora los recursos de Oracle Analytics Cloud para crear visualizaciones",
+            "filename": "../../ft-create-visualizations-es-lab-cuatro/ft-create-visualizations-es-lab-cuatro.md"
+        },
+        {
+            "title": "Lab 5: Crear visualizaciones - Avanzado",
+            "description": "Explora mas tipos de gráficos oferecidos por Oracle Analytics Cloud",
+            "filename": "../../ft-advanced-visualizations-es-lab-cinco/ft-advanced-visualizations-es-lab-cinco.md"
+        },
+        {
+            "title": "Lab 6: Presentar y Exportar Dashboards",
+            "description": "Conozca las opciones de presentación y exportación disponibles en Oracle Analytics Cloud (OAC)",
+            "filename": "../../ft-presentation-es-lab-seis/ft-presentation-es-lab-seis.md"
+          },
+        {
+            "title": "Lab 7: Actividades Administrativas (Opcional)",
+            "description": "Aprenda a ejecutar atividades de administración da instancia",
+            "filename": "../../ft-oac-management-es-lab-siete/ft-oac-management-es-lab-siete.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
