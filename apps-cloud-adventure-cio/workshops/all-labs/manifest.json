@@ -55,6 +55,10 @@
             "filename": "../../05c-embed-agent-hcm/embed-agent-hcm.md"
         },
         {
+            "title": "Lab 5d: Enable AI with pre-built Agent Team (HCM)",
+            "filename": "../../05d-pre-agent-team-hcm/pre-agent-team-hcm.md"
+        },
+        {
             "title": "Lab 6a: Create AI (SCM)",
             "filename": "../../06a-external-agent-scm/external-agent-scm.md"
         },
@@ -69,6 +73,10 @@
         {
             "title": "Lab 7b: Enable AI (PRC)",
             "filename": "../../07b-agent-team-prc/agent-team-prc.md"
+        },
+        {
+            "title": "Lab 7d: Enable AI with pre-built Agent Team (PRC)",
+            "filename": "../../07d-pre-agent-team-prc/pre-agent-team-prc.md"
         },
         {
             "title": "Lab 8: Audit",
