@@ -50,12 +50,12 @@ As a pre-requisite for this adventure, please download policy document file to y
 
     > (1) Enter the following fields:
     * Tool Type: select **Document** from the dropdown<br>
-    * Tool Name: Enter **CIO## Procurement Policy Document Tool**, where **##** is replaced with your user number.<br>
+    * Tool Name: Enter **CIOXX Procurement Policy Document Tool**, where **##** is replaced with your user number.<br>
     * Family: select **PRC** from the dropdown<br>
     * Product: select **Self Service Procurement** from the dropdown<br>
     * Description: Enter **Cloud Adventure Procurement Policy Document Tool** <br>
 
-    > (2) Click the ![Add button](../gen-images/addw.jpg) button under **Documents**
+    > (2) Click the ![Add button](../gen-images/addw.jpg) button under **Documents**<br>
 
     > (3) **Scroll Down** to see the Documents fields and upload your document.
 
@@ -101,7 +101,7 @@ no
 9. Define the Details of the Agent.
 
     > (1) First, you'll enter the fields as described below:<br>
-    * Agent Name: **CIO## Procurement Policy Advisor Agent** where ## is replaced with your user number.<br>
+    * Agent Name: **CIOXX Procurement Policy Advisor Agent** where ## is replaced with your user number.<br>
     * Family: Select **PRC** from the dropdown<br>
     * Product: Select  **Self Service Procurement** from the dropdown<br>
     * Maximum Interactions: **10** <br>
@@ -162,9 +162,10 @@ IMPORTANT GUIDELINES
 
  ![Publish Agent](../07a-rag-agent-prc/images/poaimage014.jpg) <br>
 
-14. You’ve just created your first AI Agent.  In the next adventure, you will put this agent to work as part of an Agent Team.<br>
+15. You’ve just created your first AI Agent.  In the next adventure, you will put this agent to work as part of an Agent Team.<br>
 
     ![Agent Created](../07a-rag-agent-prc/images/poaimage015.jpg) <br>
+
 ### Summary
 
 As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they do not have access to.
