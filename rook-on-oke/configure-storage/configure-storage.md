@@ -287,36 +287,6 @@ Object storage provides S3-compatible access for storing and retrieving data usi
       pgs:     97 active+clean
     ```
 
-## Task 5: Set Default Storage Class (Optional)
-
-If you want Rook-Ceph block storage to be the default:
-
-1. Remove default from OCI storage class:
-
-    ```bash
-    <copy>
-    kubectl patch storageclass oci-bv -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
-    </copy>
-    ```
-
-2. Set rook-ceph-block as default:
-
-    ```bash
-    <copy>
-    kubectl patch storageclass rook-ceph-block -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
-    </copy>
-    ```
-
-3. Verify the change:
-
-    ```bash
-    <copy>
-    kubectl get storageclass
-    </copy>
-    ```
-
-   The rook-ceph-block class should now show `(default)`.
-
 You may now **proceed to the next lab**.
 
 ## Learn More

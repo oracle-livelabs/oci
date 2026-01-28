@@ -67,7 +67,7 @@ This is the recommended deployment method for beginners.
    - This process takes approximately 15-20 minutes
    - Wait for the job status to show **Succeeded**
 
-## Task 3: Verify Rook-Ceph Deployment
+## Task 2: Verify Rook-Ceph Deployment
 
 The Terraform deployment automatically installs Rook-Ceph. Let's verify the installation.
 
@@ -153,7 +153,7 @@ The Terraform deployment automatically installs Rook-Ceph. Let's verify the inst
      2  10.0.10.4  1.0G   49.0G      0        0       0        0   exists,up
     ```
 
-## Task 5: Verify Block Volumes
+## Task 3: Verify Block Volumes
 
 Confirm that the OCI Block Volumes are attached and being used by Ceph:
 

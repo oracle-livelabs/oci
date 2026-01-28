@@ -163,7 +163,7 @@ kubectl delete deployment rook-ceph-tools -n rook-ceph
 1. Navigate to **Networking** → **Load Balancers**
 2. Delete any load balancers created by Kubernetes services
 
-## Task 7: Verify Complete Cleanup
+## Task  5: Verify Complete Cleanup
 
 Perform a final verification:
 

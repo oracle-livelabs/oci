@@ -527,28 +527,6 @@ Test the S3-compatible object storage using the toolbox.
     </copy>
     ```
 
-## Task 5: Access the Ceph Dashboard (Optional)
-
-Rook can expose the Ceph Dashboard for visual monitoring.
-
-1. Create a port-forward to access locally:
-
-    ```bash
-    <copy>
-    kubectl port-forward svc/rook-ceph-mgr-dashboard -n rook-ceph 8443:8443 &
-    </copy>
-    ```
-
-2. Get the admin password:
-
-    ```bash
-    <copy>
-    kubectl get secret rook-ceph-dashboard-password -n rook-ceph -o jsonpath='{.data.password}' | base64 --decode && echo
-    </copy>
-    ```
-
-3. Access `https://localhost:8443` with username `admin` and the retrieved password.
-
 You may now **proceed to the next lab**.
 
 ## Learn More
