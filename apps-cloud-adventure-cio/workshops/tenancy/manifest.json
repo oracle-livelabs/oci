@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Cloud Adventure Guide – for the Office of the CIO",
+    "workshoptitle": "AI Adventure Guide – SaaS Applications Platform",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -16,7 +16,7 @@
         },
         {
             "title": "Adventure 3: Extend",
-            "filename": "../../03-extend/extend.md"
+            "filename": "../../03-extend-prc/extend-prc.md"
         },
         {
             "title": "Adventure 4: Create AI",
