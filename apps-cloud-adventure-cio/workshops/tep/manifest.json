@@ -1,0 +1,39 @@
+{
+    "workshoptitle": "AI Adventure Guide – SaaS Applications Platform",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Risk Management",
+            "filename": "../../01-risk-erp/risk-erp.md"
+        },
+        {
+            "title": "Lab 2: Configure",
+            "filename": "../../02-configure-prc/configure-prc.md"
+        },
+        {
+            "title": "Lab 3: Extend",
+            "filename": "../../03-extend-prc/extend-prc.md"
+        },
+        {
+            "title": "Lab 4: Create AI",
+            "filename": "../../07a-rag-agent-prc/rag-agent-prc.md"
+        },
+        {
+            "title": "Lab 5: Enable AI",
+            "filename": "../../07d-pre-agent-team-prc/pre-agent-team-prc.md"
+        },
+        {
+            "title": "Lab 6: Analytics",
+            "filename": "../../09-analytics/analytics.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
