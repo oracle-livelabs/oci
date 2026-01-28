@@ -35,7 +35,7 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
 4. Select your assigned Agent Team.
 
-    >  (1) Click on **Draft**.
+    >  (1) Click on **Draft**.<br>
 
     >  (2) Enter **XX** in the Search Bar, where XX is replaced with your user number, press the **<****Enter****>** key or select **XX** from the resulting dropdown.<br>
 

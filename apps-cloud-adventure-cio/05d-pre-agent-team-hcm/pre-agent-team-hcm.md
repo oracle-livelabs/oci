@@ -36,7 +36,7 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
 4. Select your assigned Agent Team.
 
-    >  (1) Click on **Draft**.
+    >  (1) Click on **Draft**.<br>
 
     >  (2) Enter **XX** in the Search Bar, where XX is replaced with your user number, press the **<****Enter****>** key or select **XX** from the resulting dropdown.<br>
 
@@ -108,13 +108,13 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
     You decide to tell the Agent that you’re interested in creating an FMLA absence, but you do so without initially providing the requested dates.
 
-    >  (1) In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Yes, please submit a new FMLA absence with a start date of 2025-12-10 and an end date of 2025-12-12** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
+    >  (1) In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Yes, please submit a new FMLA absence with a start date of 2026-04-14 and an end date of 2026-04-16** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
     ![agent dialogue 3](../05d-pre-agent-team-hcm/images/benimage013.jpg) <br>
 
 14. The agent confirms that your request has been created.
 
-    >  (1) Review AI Agent Response
+    >  (1) Review AI Agent Response<br>
     >  (2) Click the x icon in the upper right to close the debug screen.
 
     ![agent dialogue 3](../05d-pre-agent-team-hcm/images/benimage014.jpg) <br>
