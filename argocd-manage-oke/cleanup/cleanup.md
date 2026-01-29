@@ -23,7 +23,7 @@ In this lab, you will:
 - Go to the terraform stack.
 - Click on Destroy button.
 
-### Acknowledgements
+## Acknowledgements
 
 **Author**
 
