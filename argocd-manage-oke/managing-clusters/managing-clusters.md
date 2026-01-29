@@ -86,7 +86,7 @@ kubectl get pods -n argocd
   This is the ip of the Load Balancer created through NGINX.
 
 - Login with your OCI user by clicking on **LOG IN VIA OCI** Button.
-  ![Accept terms](images/argo_cd_console.png)
+  ![ArgoCD Login page](images/argo_cd_console.png)
 - Now you can deploy apps through the console as well.
 
 You may now proceed to the next lab.
