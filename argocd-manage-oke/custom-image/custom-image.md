@@ -5,7 +5,7 @@
 In this Lab we will create the ArgoCD custom image with oci cli installed and available in path.
 The ArgoCD version used at the moment of this LiveLab is v3.1.1.
 
-Estimated Lab Time: 10 minutes
+Estimated Lab Time: 15 minutes
 
 ### Objectives
 

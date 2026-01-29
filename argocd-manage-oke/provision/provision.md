@@ -4,7 +4,7 @@
 
 This lab will take you through the steps needed to provision the infrastructure using Resource Manager.
 
-Estimated Lab Time: 60 minutes
+Estimated Lab Time: 30 minutes
 
 ### Objectives
 

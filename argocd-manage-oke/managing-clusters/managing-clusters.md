@@ -4,7 +4,7 @@
 
 This lab will take you through the steps needed to add an OKE Cluster to ArgoCD clusters list and deploy an application to it through Argocd.
 
-Estimated Lab Time: 20 minutes.
+Estimated Lab Time: 15 minutes.
 
 ### Objectives
 
