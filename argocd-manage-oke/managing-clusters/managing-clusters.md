@@ -89,6 +89,8 @@ kubectl get pods -n argocd
   ![Accept terms](images/argo_cd_console.png)
 - Now you can deploy apps through the console as well.
 
+You may now proceed to the next lab.
+
 ## Acknowledgements
 
 **Author**
