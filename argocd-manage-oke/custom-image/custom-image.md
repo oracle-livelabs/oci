@@ -64,7 +64,7 @@ This lab assumes you have:
 
 You may now proceed to the next lab.
 
-## Acknowledgements
+### Acknowledgements
 
 **Author**
 

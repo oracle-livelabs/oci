@@ -76,7 +76,7 @@ You may now proceed to the next lab.
 
 > Note: It might take around 10-15 mintues for everything to be ready, after the deployment of resources.
 
-## Acknowledgements
+### Acknowledgements
 
 **Author**
 

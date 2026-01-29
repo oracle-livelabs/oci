@@ -91,7 +91,7 @@ kubectl get pods -n argocd
 
 You may now proceed to the next lab.
 
-## Acknowledgements
+### Acknowledgements
 
 **Author**
 
