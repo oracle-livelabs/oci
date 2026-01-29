@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "AI Adventure Guide – Technology",
+    "workshoptitle": "AI Adventure Guide – SaaS Applications Platform",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -7,23 +7,23 @@
             "filename": "../../00-introduction/introduction.md"
         },
         {
-            "title": "Adventure 1: Risk Management",
-            "filename": "../../01-risk/risk.md"
+            "title": "Lab 1: Risk Management",
+            "filename": "../../01-risk-erp/risk-erp.md"
         },
         {
-            "title": "Adventure 2: Configure",
+            "title": "Lab 2: Configure",
             "filename": "../../02-configure-hcm/configure-hcm.md"
         },
         {
-            "title": "Adventure 3: Create AI",
+            "title": "Lab 3: Create AI",
             "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
         },
         {
-            "title": "Adventure 4: Enable AI",
-            "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
+            "title": "Lab 4: Enable AI",
+            "filename": "../../05c-embed-agent-hcm/embed-agent-hcm.md"
         },
         {
-            "title": "Adventure 5: Analytics with AI",
+            "title": "Lab 5: Analytics with AI",
             "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
         },
         {
