@@ -41,6 +41,11 @@
           "title": "Lab 6: Cleanup",
           "description": "Destroy the resources created by Resource Manager",
           "filename":"../../cleanup/cleanup.md"
+        },
+        {
+          "title": "Need Help?",
+          "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+          "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
         }
     ]
   }
