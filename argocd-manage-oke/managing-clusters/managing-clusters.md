@@ -18,7 +18,8 @@ In this lab, you will:
 
 This lab assumes you have:
 
-- OKE Cluster with public endpoint
+- OKE Cluster with public endpoint, can be created with Quick create.
+  ![Quick create OKE Cluster](images/quick_create.png)
 - ArgoCD up and running on the OKE Cluster created by terraform in previous LAB.
 
 ## Task 1: Add an OKE Cluster to ArgoCD Cluster list
@@ -85,7 +86,7 @@ kubectl get pods -n argocd
   This is the ip of the Load Balancer created through NGINX.
 
 - Login with your OCI user by clicking on **LOG IN VIA OCI** Button.
-  ![Accept terms](images/accept-terms.png)
+  ![Accept terms](images/argo_cd_console.png)
 - Now you can deploy apps through the console as well.
 
 ## Acknowledgements
