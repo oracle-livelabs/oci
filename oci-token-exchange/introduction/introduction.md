@@ -2,38 +2,45 @@
 
 ## About this Workshop
 
-Falco is a Kubernetes-native runtime security tool developed by the open-source community and hosted under the CNCF. It continuously monitors system calls and Kubernetes audit logs to detect unexpected behavior, configuration changes, or potential threats in real time. By deploying Falco on OKE, you can:
-- Enhance runtime security through behavioral detection.
-- Identify and alert on anomalous container or node activities.
-- Strengthen compliance and auditing with real-time event monitoring.
+In OCI, tokens usually means one of these:
+- OCI Session Tokens, 
+- OCI Security Tokens (UPST),
+- Resource Principals / Workload Identity Federation.
 
-Estimated Workshop Time: 1 hour 30 minutes
+All three share the same core ideas:short lifetime, no permanent secrets, identity proven cryptographically.
+
+Using tokens instead of API keys means moving from long-lived, static secrets to short-lived, context-aware credentials that are issued on demand and automatically expire, reducing blast radius, eliminating manual rotation, and tying access to who is calling, from where, and for what purpose.
+
+Uses of tokens are good for secure CI/CD pipelines, federated workloads, temporary access, least-privilege automation, and any scenario where credentials must be short-lived, automatically rotated, context-aware, and safe to use without storing long-term secrets.
+
+In this workshop we will use [Oci Token Exchange](https://docs.oracle.com/en-us/iaas/Content/Identity/api-getstarted/json_web_token_exchange.htm#jwt_token_exchange) in a Github Action from where we will create a simple VCN in OCI usint Terraform
+
+Estimated Workshop Time: 1 hour
 
 ### **Objectives**
 
 By the end of this workshop, you will:
 
-* Deploy an OKE cluster with Falco and Falco Sidekick using Terraform and Helm.
-* Understand how Falco monitors system calls and Kubernetes events for suspicious activity.
-* Simulate anomalous container behaviors to trigger Falco alerts.
-* Visualize and analyze Falco security events through Falco Sidekick’s web UI.
+* Deploy the OCI resources that are required to use OCI Token Exchange authentication from Github Action
+* Understand how to clone and then to create your own Github repo with GtHub CLI.
+* Create and update  GtHub Secrets and Variables
+* Run a workflow from Github Action using UI or  GtHub CLI.
+
 
 ### **Prerequisites**
 
 This lab assumes you have:
 
 * An Oracle Cloud account.
-* Administrator privileges or sufficient access rights to create and manage OKE resources.
-* Basic understanding of Kubernetes concepts (pods, Helm charts, namespaces).
-* Access to a command-line environment such as **OCI Cloud Shell** (or a local setup) with:
-  - `kubectl`
-  - `helm`
-  - `oci` CLI configured for your tenancy.
-
+* A GitHub Account
+* Administrator privileges or sufficient access rights to create and manage Integrated App, Service User, Group, IAM Policies in your tenancy.
+* The Lab requires you to run a Bash/Shell script so you must run the Lab from a Unix like machine 
+* GitHub CLI must be installed and configured for your own Github account
 ### Learn More
 
-* [Falco Documentation](https://falco.org/)
-* [Overview of Kubernetes Engine](https://docs.oracle.com/en-us/iaas/Content/ContEng/Concepts/contengoverview.htm)
+* [GitHub CLI](https://cli.github.com)
+* [GitHub CLI Install](https://cli.github.com/manual/)
+* [Oci Token Exchange](https://docs.oracle.com/en-us/iaas/Content/Identity/api-getstarted/json_web_token_exchange.htm#jwt_token_exchange)
 * [Oracle Cloud Infrastructure](https://docs.oracle.com/en-us/iaas/Content/home.htm)
 
 You may now **proceed to the next lab**.
@@ -42,5 +49,5 @@ You may now **proceed to the next lab**.
 
 **Authors**
 
-* **Adina Nicolescu**, Principal Cloud Architect, NACIE
-* Last Updated - Adina Nicolescu, November 2025
+* **Francisc Vass**, Principal Cloud Architect, NACIE
+* Last Updated - Francisc Vass, January 2026
