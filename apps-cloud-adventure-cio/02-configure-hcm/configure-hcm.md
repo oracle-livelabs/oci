@@ -104,7 +104,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (2) For 3nd column in the **User Roles**, type **Human Resource Manager** and select the 1st instance of  **Human Resource Manager** from the resulting dropdown.<br>
 
-    > (3) Click on the **Drop Down** ![drop down icon](../gen-images/icon013_dropdown.png)  Icon to the left of **Salary** to expand the Salary section
+    > (3) Click on the **Drop Down** ![drop down icon](../gen-images/icon013_dropdown.png)  Icon to the left of **Salary** to expand the Salary section<br>
 
       ![Fields and Regions](../02-configure-hcm/images/configure-hcm-image012.jpg)
 
@@ -119,7 +119,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      > (4) Click the ![done icon](../gen-images/icon_done.png) icon to complete the definition of this rule.<br>
 
-     > (5) Click the ![x icon](../gen-images/icon011_x.png) to close the Fields and Regions section.
+     > (5) Click the ![x icon](../gen-images/icon011_x.png) to close the Fields and Regions section.<br>
 
      ![Salary Fields and Regions](../02-configure-hcm/images/configure-hcm-image013.jpg)
 
@@ -132,7 +132,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 15. You can see any existing Validations and/or create new ones.
 
-    > Click the ![x icon](../gen-images/icon015_plus.png) icon to create a new Validation.
+    > (1) Click the ![x icon](../gen-images/icon015_plus.png) icon to create a new Validation.
 
     ![Validation](../02-configure-hcm/images/configure-hcm-image015.jpg)
 
@@ -173,7 +173,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      > (1) Select **greater than** from the dropdown in the second column.   <br>
      > (2) Enter **15** in the third column.<br>
-     > (3) Click the ![Add message button](../gen-images/plus_message_button.png) button.
+     > (3) Click the ![Add message button](../gen-images/plus_message_button.png) button.<br>
 
      ![Create Validation](../02-configure-hcm/images/configure-hcm-image021.jpg)
 
@@ -187,18 +187,44 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      > (4) Click the ![done icon](../gen-images/icon_done.png) icon to complete the definition of this rule.<br>
 
-     > (5) Click the ![x icon](../gen-images/icon011_x.png) to close the Validations section.
+     > (5) Click the ![x icon](../gen-images/icon011_x.png) to close the Validations section.<br>
 
      ![Create Validation](../02-configure-hcm/images/configure-hcm-image022.jpg)
 
-23. Well done.  You have configured new rules for data visibility and validation.  You can quickly review your changes as they appear in the application.
+23. Well done.  You're going to do one more configuration that will display an AI Agent to assist the user in determining the appropriate salary change by checking market compensation information.  You'll do this by leveraging the Guided Journey configuration feature.  Guided Journeys allow you to embed information, including documents, links, reports and more in standard application screens.  You'll use it to embed an AI Agent.
 
-    > (1) Click on the **Preview** ![preview icon](../gen-images/icon014_preview.png) icon in the top right of the screen.
-       <br>![caution](../gen-images/cautionflagextrasmalltransparent2.png) **Note:** This will open the application in a new browser tab.
+    > (1) Type **Guided** in the **Filter** field in the **Page Properties** section of the panel on the right of the screen.<br>
+    > (2) Type **Salary** in the **Set Guided Journeys Code at the Page Level** field.<br>
+    > (3) Select **Salary Advisor Agent** from the resulting dropdown.<br>
 
        ![Create Validation](../02-configure-hcm/images/configure-hcm-image023.jpg)
 
-24. You have re-entered the Change Salary Form.  Let’s review the changes.  You need to enter the required information before you can move to the next screen.
+24. You can see the the Salary Advisor Agent Task Agent banner appear on the page.  You're done with configurations and ready to Preview your changes.
+
+    > (1) Click on the **Preview** ![Fields and Regions, Conditions](../gen-images/preview.png) icon in the upper right of the screen.  The Preview will appear in a new browser tab.
+
+       ![Create Validation](../02-configure-hcm/images/configure-hcm-image024.jpg)
+
+25. You have re-entered the Change Salary Form. Before submitting the salary change, you'll use the Salary Advisor Agent to get some marketplace comparative estimates.
+
+    > (1) Click on the **Ask Oracle** ![Ask Oracle Logo Button](../gen-images/ask-oracle-logo.jpg) button.
+
+       ![Create Validation](../02-configure-hcm/images/configure-hcm-image025.jpg)
+
+26. You want to see some prospective salary information for Barrett Reed based on variety attributes, including his title, location, and years of service.
+
+    > (1) In the **Ask Oracle** dialog box on the bottom right of the screen. tu[e] **What is the market compensation estimate for Barrett Reed**.<br>
+    > (2) Press the **<****Enter****>** key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)<br>
+
+       ![Create Validation](../02-configure-hcm/images/configure-hcm-image026.jpg)
+
+27. You can now see how Barrett Reed compares to market averages and medians.
+
+    > (1) Review the market compensation information and when finished, click the the ![x icon](../gen-images/icon011_x.png) icon in the upper right.
+
+       ![Create Validation](../02-configure-hcm/images/configure-hcm-image027.jpg)
+
+28. Based on the AI Agent response, you decide to move him into the higher portion of the estimated range by increasing his salary to $70,000, which is approximately a 20% increase.  You can start the Change Salary Request by entering the information below.
 
     > (1) When does the salary change start?: Type a **future date (eg. 12/31/26)** <br>
 
@@ -208,19 +234,19 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (4) Click **Continue**.
 
-    ![Change Salary Page 2nd page](../02-configure-hcm/images/configure-hcm-image024.jpg)
+    ![Change Salary Page 2nd page](../02-configure-hcm/images/configure-hcm-image028.jpg)
 
-25. Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible and Action Reason is now Visible. Now you will test the validation for the Adjustment Amount Percentage.
+29. Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible and Action Reason is now Visible. Now you will test the validation for the Adjustment Amount Percentage but requesting a 20% increase.
 
-    > (1) Enter an Adjustment Percentage that is greater than 15% and either **tab** out of the field or press the **Enter** key on the keyboard.
+    > (1) Enter **20** in the **Adjustment Percentage** field (or any value greater than 15) and either **<****Tab****>** out of the field or press the **<****Enter****>** key on the keyboard.
 
-    ![Change Salary Screen 2](../02-configure-hcm/images/configure-hcm-image025.jpg)
+    ![Change Salary Screen 2](../02-configure-hcm/images/configure-hcm-image029.jpg)
 
-26. The system will not allow the user to continue because the Adjustment Percentage exceeds 15%!
+30. The system will not allow the user to continue because the Adjustment Percentage exceeds 15%!
 
     > (1) Your error message and description is clearly presented on the screen.
 
-    ![Change Salary Screen 2 error message](../02-configure-hcm/images/configure-hcm-image026.jpg)
+    ![Change Salary Screen 2 error message](../02-configure-hcm/images/configure-hcm-image030.jpg)
 
 27.  Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
@@ -237,7 +263,7 @@ In this adventure you experience the power of application configuration, includi
 
 And remember, application configurations are automatically maintained during the release update process.
 
-So, check your with you team, double-check your racing harness and get ready for our next Adventure.
+So, check in with your team, double-check the racing harness and get ready for next Adventure.
 
 ### Learn More
 * [Getting Started with Redwood](https://redwood.oracle.com/?pageId=COREAF423D6E53F34D12BCD7BF41B42BDAC3&shell=getting-started)
