@@ -54,8 +54,8 @@ Some of the variables are pre populated.
 
 7. Input an existing Reserved Public ip to be the point of access for ArgoCD. The one you created in LAB 3. Syntax is **0.0.0.0.0**
 
-8. **Optional** If you completed LAB 4, Check the box for **Configure authentication with Oracle IDCS**, otherwise you can click on Next and then on Create to create the stack.
-   If LAB 4 was completed, use the information from Task 2 in the following variables.
+8. **Optional** If you completed LAB 3, Check the box for **Configure authentication with Oracle IDCS**, otherwise you can click on Next and then on Create to create the stack.
+   If LAB 3 was completed, use the information from Task 2 in the following variables.
 9. OCI Identity Domain URL, input the OCI Domain URL without the port. Syntax is **https://idcs-xxxxxxxxxxxxxxxxxxxxxx.identity.oraclecloud.com**
 
 10. OCI Integrated Application Client ID, input the Client ID.

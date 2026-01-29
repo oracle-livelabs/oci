@@ -12,7 +12,7 @@ In this lab, you will:
 
 - Add an existing OKE Cluster to ArgoCD Cluster list.
 - Deploy an application to that OKE Cluster.
-- If you completed Lab 4: View the ArgoCD console.
+- If you completed Lab 3: Authenticate on the ArgoCD console with your OCI user.
 
 ### Prerequisites
 
