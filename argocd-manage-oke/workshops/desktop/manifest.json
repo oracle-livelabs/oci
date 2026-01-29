@@ -28,12 +28,12 @@
           "filename":"../../confidential-application/confidential-application.md"
       },
       {
-        "title": "Lab 4: Deploy the automation using Resource Manager",
+        "title": "Lab 4: Deploy the automation with Resource Manager",
         "description": "This will create the infrastructure needed for ArgoCD",
         "filename":"../../provision/provision.md"
       },
       {
-        "title": "Lab 5: Testing ArgoCD",
+        "title": "Lab 5: Test ArgoCD",
         "description": "Test deployment on an OKE Cluster using ArgoCD",
         "filename":"../../managing-clusters/managing-clusters.md"
       },

@@ -1,4 +1,4 @@
-# Deploy an application
+# Test ArgoCD
 
 ## Introduction
 
