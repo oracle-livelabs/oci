@@ -13,10 +13,10 @@ In this lab, you will:
 - Delete the kubernetes service.
 - Destroy the resources from Resource Manager.
 
-## Task 1: Delete teh kubernetes service.
+## Task 1: Delete the kubernetes service.
 
 - SSH into the Bastion Instance.
-- run `delete svc ingress-nginx-controller -n ingress-nginx`
+- run: `delete svc ingress-nginx-controller -n ingress-nginx`
 
 ## Task 2: Destroy the resources from Resource Manager.
 

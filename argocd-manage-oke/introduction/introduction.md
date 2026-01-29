@@ -33,9 +33,11 @@ In this workshop, you will learn to:
 - Podman or Docker installed to create the custom ArgoCD image.
 - Auth token for your OCI User(from the OCI console > your user profile > Auth tokens) - it can take up to 5 min to activate.
 - Permission for your OCI User to create repos in OCI Container Registry:
+
   ```
   Allow group your_group to manage repos in tenancy
   ```
+
 - Deployment depends on use of [Instance Principals](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/callingservicesfrominstances.htm) for the Bastion Instance to generate kubeconfig via oci cli. You should create a [dynamic group](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingdynamicgroups.htm) for the compartment where you want to deploy the Infrastructure.
 
   ```

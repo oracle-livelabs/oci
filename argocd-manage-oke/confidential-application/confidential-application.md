@@ -30,8 +30,8 @@ This lab assumes you have:
   - **Client configuration** select **Configure this application as a client now**.
   - Check the boxes for **Client credentials** and **Authorization code**.
   - **Redirect URL** - add the following 2 redirects:
-    - **https://argocd.<reserved_public_ip>.nip.io/api/dex/callback**
-    - **https://argocd.<reserved_public_ip>.nip.io/auth/callback**
+    - `https://argocd.<reserved_public_ip>.nip.io/api/dex/callback`
+    - `https://argocd.<reserved_public_ip>.nip.io/auth/callback`
   - Scroll down to **Client ip address** and select **Anywhere**
   - **Token issuance policy** select **All**.
   - Click on **Submit**.
