@@ -263,7 +263,7 @@ In this adventure you experience the power of application configuration, includi
 
 And remember, application configurations are automatically maintained during the release update process.
 
-So, check in with your team, double-check the racing harness and get ready for next Adventure.
+**Sync up as a team, lock in your harness, get ready for the the next high-octane adventure.**
 
 ### Learn More
 * [Getting Started with Redwood](https://redwood.oracle.com/?pageId=COREAF423D6E53F34D12BCD7BF41B42BDAC3&shell=getting-started)

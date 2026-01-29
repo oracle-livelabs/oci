@@ -183,7 +183,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.
 
-**You have successfully completed the Activity!**
+**Sync up as a team, lock in your harness, get ready for the the next high-octane adventure.**
 
 ### Learn More
 
