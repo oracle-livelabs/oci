@@ -23,7 +23,12 @@
         "filename": "../../provision-ghrepo/provision-ghrepo.md"
       },
       {
-        "title": "Lab 3: Cleanup",
+        "title": "Lab 3: Run github workflow",
+        "description": "Run github workflow",
+        "filename": "../../run-workflow/run-workflow.md"
+      },
+      {
+        "title": "Lab 4: Cleanup",
         "description": "Cleanup the environment",
         "filename": "../../cleanup/cleanup.md"
       },
