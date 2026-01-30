@@ -95,8 +95,14 @@ A Propagation Trust will be created which will map your Github repo owner with S
 A Group will be created and SErvice User will be attached to it. This is the name of that group
 
 
-3. Once all of these variables are configured go to _oci-token-exchange-resources_ folder
+3. Once all of these variables are configured you can apply the configuration
 
+- go to _oci-token-exchange-resources_ folder
+
+- rename the _variables.auto.example_ to _variables.auto.tfvars_
+```
+mv variables.auto.example variables.auto.tfvars
+```
 - run the commands below:
 
 ```
