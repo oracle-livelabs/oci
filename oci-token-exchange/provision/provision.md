@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, we will provision the required resources OCI resources. These resources will be used by the Github Action to exchange token with OCI.
+In this lab, we will provision the required OCI resources. These resources will be used by the Github Action to exchange token with OCI.
 We’ll use a pre-built Terraform configuration that automates the entire setup
 
 Estimated Time: 20 minutes

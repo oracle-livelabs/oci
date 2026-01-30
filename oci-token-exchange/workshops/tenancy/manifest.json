@@ -18,9 +18,9 @@
         "filename": "../../provision/provision.md"
       },
       {
-        "title": "Lab 2: Explore Falco use cases",
-        "description": "Explore Falco and follow examples on how to use it",
-        "filename": "../../use-cases/use-cases.md"
+        "title": "Lab 2: Provision of the Github repo",
+        "description": "Provision of the Github repo",
+        "filename": "../../provision-ghrepo/provision-ghrepo.md"
       },
       {
         "title": "Lab 3: Cleanup",
