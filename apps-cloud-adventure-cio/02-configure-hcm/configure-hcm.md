@@ -232,12 +232,11 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Change Salary Screen 2 error message](../02-configure-hcm/images/configure-hcm-image030.jpg)
 
-27.  Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+31.  Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
+     > **You've completed this Adventure**.  Please close this tab and the Visual Builder tab.
 
-> **You've completed this Adventure**.  Please close this tab and the Visual Builder tab.
-
-27. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+32. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
     [![AI Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
