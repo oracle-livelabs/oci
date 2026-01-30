@@ -13,8 +13,8 @@
         "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
       },
       {
-        "title": "Lab 1: Provision of resources",
-        "description": "Provision of resources",
+        "title": "Lab 1: Provision of OCI resources",
+        "description": "Provision of OCI resources",
         "filename": "../../provision/provision.md"
       },
       {
