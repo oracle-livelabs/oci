@@ -155,7 +155,7 @@ GET app_knowledge_base/_search
 <br/><br/><br/>
 
 
-## Task 2: Perform Conversational Search
+## Task 3: Perform Conversational Search
 
 We already registered and deployed an llm model in the previous lab. We will be using that llm model as well as the embedding model to perform RAG on the knowledge base.
 

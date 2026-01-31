@@ -19,7 +19,7 @@ In this lab, you will:
 
 ## Task 1: Prerequisites
 
-1. Log into OCI Console and navigate to the Opensearch Cluster. Confirm that the OpenSearch cluster version is  *3.0* or greater.
+1. Log into OCI Console and navigate to the Opensearch Cluster. Confirm that the OpenSearch cluster version is  *3.2* or greater.
 ![Opensearch Cluster](images/opensearch-cluster-version.png)
 
 <br/>

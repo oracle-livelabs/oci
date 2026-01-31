@@ -324,7 +324,7 @@ be sure to replace the *-d2kFZkBwL_MpPtEZDes* with your *model_id* and replace *
 </copy>
 ```
 
-If using you create an index with auto chunking use the command below instead:
+If you created an index with auto chunking earlier, use the command below instead:
 
 ```json
 <copy>

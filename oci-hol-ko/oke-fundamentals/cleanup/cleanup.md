@@ -30,12 +30,11 @@
     Sample response:
 
     ````shell
-    NAME                      NAMESPACE        REVISION UPDATED                       STATUS   CHART                 APP VERSION
-    elasticsearch             logging          1        2023-10-16 02:31:54.793026467 deployed elasticsearch-19.13.4 8.10.3     
-    fluent-bit                logging          1        2023-10-16 02:41:04.663228486 deployed fluent-bit-0.39.0     2.1.10     
-    mushop                    mushop           1        2023-10-12 03:41:38.593653781 deployed mushop-0.2.1          2.0        
-    mushop-utils              mushop-utilities 1        2023-10-12 03:32:10.88419933  deployed mushop-setup-0.0.2    1.0        
-    oci-kubernetes-monitoring default          1        2023-10-16 08:55:30.03630867  deployed oci-onm-3.0.2         3.0.0    
+    NAME                    NAMESPACE               REVISION        UPDATED                                 STATUS          CHART                   APP VERSION
+    elastic-operator        elastic-system          1               2025-12-24 08:43:30.910561763 +0000 UTC deployed        eck-operator-3.2.0      3.2.0      
+    fluent-bit              logging                 1               2025-12-24 16:38:41.07791953 +0000 UTC  deployed        fluent-bit-0.54.0       4.1.0      
+    mushop                  mushop                  1               2025-12-21 15:11:29.753523843 +0000 UTC deployed        mushop-0.2.1            2.0        
+    mushop-utils            mushop-utilities        1               2025-12-22 08:08:34.119633465 +0000 UTC deployed        mushop-setup-0.0.2      1.0   
     ````
 
 ## Task 2: MuShop App 정리

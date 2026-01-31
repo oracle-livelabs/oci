@@ -43,7 +43,7 @@ ssh -C -v -t -L 127.0.0.1:5601:<your_opensearch_dashboards_private_IP>:5601 -L 1
 ![Connect to Opensearch dashboard](../prerequisites/images/opensearch-dashboard-2.png)
 
 
-<br /><br />
+<br/><br/>
 
 2. Click on the **Add sample data** button on your dashboard. This will open a new page where you can see various data samples. Simply click on **Add** button to automatically create an index with the sample data name and  ingest this data into your opensearch cluster. Ingestion will only take a few seconds to complete. You can load any or all of the data samples into your cluster. You can also click on  **delete** to delete data sample index from your cluster.
 
@@ -62,7 +62,7 @@ GET _cat/indices
 
 
 
-<br /><br />
+<br/><br/>
 
 ## Task 2: Visualize your data
 
@@ -78,7 +78,7 @@ To visualize the data
 
 
 
-<br /><br />
+<br/><br/>
 
 ## Task 3: Query The data
 
@@ -111,7 +111,7 @@ GET opensearch_dashboards_sample_data_ecommerce/_search
 
 
 3. Perform Keyword/BM25 Search:
-the BM25 Search allows you to perform keyword search on your data to retrieve relevant documents. BM25 can be configured to search on a single or multiple fields/metadata concurrently.
+the BM25 (Best Matching 25) Search allows you to perform keyword search on your data to retrieve relevant documents. BM25 can be configured to search on a single or multiple fields/metadata concurrently.
 
 You can also apply *pre-filters* and *post-filters* to control the search output.
 
@@ -190,7 +190,7 @@ GET opensearch_dashboards_sample_data_ecommerce/_search
 </copy>
 ```
 
-<br /><br />
+<br/><br/>
 
 
 
