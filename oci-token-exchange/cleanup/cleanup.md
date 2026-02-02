@@ -24,7 +24,7 @@ This lab assumes you have:
 
 ## Task 1: Delete the Github repo
 
-1. Delete the Github reo that you created on Lab **Provision of the Github repo**__ 
+1. Delete the Github reo that you created on Lab **Provision of the Github repo**
 
 - from within folder __oci-token-exchange-ghaction-test__ run:
 
@@ -39,7 +39,7 @@ gh delete repo
 ✓ Deleted repository franciscvass/oci-token-exchange-ghaction-test
 ```
 
-## Task 2: Destroy the OCI resources **
+## Task 2: Destroy the OCI resources
 
 1. Destroy the OCI resources create on Lab **Provision of the necessary resources**
 
