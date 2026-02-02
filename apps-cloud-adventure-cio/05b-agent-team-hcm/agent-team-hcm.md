@@ -45,6 +45,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
      * Agent Team Name: **CIOXX Benefits Agent Team** where XX is replaced with your user number. <br>
      * Family: Select **HCM** from the dropdown <br>
      * Product: Select  **Benefits** from the dropdown <br>
+     * Type: Select  **Supervisor** from the dropdown <br>
      * Maximum Interactions: **10** <br>
      * Description: **Agent Team for Benefits and FMLA** <br>
 
@@ -57,7 +58,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
      > (1) Click the **Agents** icon ![Agent Icon](../gen-images/agenticon.jpg) on the top of the left icon tool bar. <br>
 
-     > (2) Click the **+** icon ![Plus Icon](../gen-images/plusicon.jpg) next to **New Supervisor Agent**.
+     > (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **New Supervisor Agent**.
 
      ![Create Agent](../05b-agent-team-hcm/images/benimage006.jpg)
 
@@ -72,10 +73,12 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
      > (2) Click the **Create** button ![Create Button](../gen-images/createb.jpg) on the bottom right.
 
-8. Next you'll add some worker agents.  You can scroll through the list of available agents, or use the Ask Oracle field to filter the results.  You'll do the latter.
+     ![Create Agent](../05b-agent-team-hcm/images/benimage007.jpg)
 
-    >  (1)  Enter **XX**, where XX is replaced with your user number, in the Ask Oracle field and press the **<enter>** key or select **XX** from the resulting dropdown.<br>
-    >  ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br>
+8. Next you'll add some worker agents.  You can scroll through the list of available agents or use the Ask Oracle field to filter the results.  You'll do the latter.
+
+    >  (1)  Enter **XX**, where XX is replaced with your user number, in the Ask Oracle field and press the **<****Enter****>** key or select **XX** from the resulting dropdown.<br>
+    >  ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 below are the same.  The first click activates that region and the second actually adds the agent.<br>
     >  (2)  Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **CIOXX Benefits Advisor Agent**, where XX is replaced with your user number.<br>
     >  (3)  You may need to click the ![Plus Icon](../gen-images/plusicon.jpg) icon a second time.
 
@@ -89,9 +92,9 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 10. You'll add one more worker agent.  First, you'll filter on something different.
 
-    >  (1) Delete your previous Ask Oracle filter and enter **F1** in the Ask Oracle Filter and press the <enter> key or select **F1** from the resulting dropdown.<br><br>
+    >  (1) Delete your previous Ask Oracle filter and enter **F1** in the Ask Oracle Filter and press the **<****Enter****>** key or select **F1** from the resulting dropdown.<br>
 
-    >  ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br><br>
+    >  ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 below are the same.  The first click activates that region and the second actually adds the agent.<br>
 
     >  (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **F1 FMLA Absence Agent.**, where XX is replaced with your user number.<br>
 
@@ -105,7 +108,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     ![Add Tools Complete](../05b-agent-team-hcm/images/benimage011.jpg) <br>
 
-12. Your Agent Team, with a Supervisory Agent and two Worker Agents is complete.  We can now hide the left Agents panel to see our full Agent Team.
+12. Your Agent Team, with a Supervisory Agent and two Worker Agents, is complete.  We can now hide the left Agents panel to see our full Agent Team.
 
     > 1. Click the **Agents** icon ![debug icon](../gen-images/agenticon.jpg) on the top left of the screen.  You can see that the left panel is now hidden and you can see the entire Agent Team
 
@@ -120,7 +123,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 14. The Agent is now ready for your questions.
 
-    > 1. In the **Ask Oracle** dialog box at the bottom of the screen, type **Please summarize benefits available to me** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
+    > 1. In the **Ask Oracle** dialog box at the bottom of the screen, type **Please summarize benefits available to me** and hit the **<****Enter****>** key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
     ![agent dialogue 1](../05b-agent-team-hcm/images/benimage014.jpg) <br>
 
@@ -128,46 +131,41 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     > The Agent responds with information, so we’ll ask an additional question.
 
-    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **What about FMLA benefits** and hit the **Enter key** or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
+    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Tell me more about FMLA benefits** and hit the **<****Enter****>** key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
     ![agent dialogue 2](../05b-agent-team-hcm/images/benimage015.jpg) <br>
 
-16. The Agent  checks with HCM Cloud and confirms existing leave requests, if any.  It also offers to create a new request for you if you provide the requested start and end dates.
+16. The Agent checks with HCM Cloud and confirms existing leave requests, if any.  It also offers to create a new request for you if you provide the requested start and end dates.
 
     You decide to tell the Agent that you’re interested in creating an FMLA absence, but you do so without initially providing the requested dates.
 
-    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **I would like to create FMLA absence** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
+    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Yes, please submit a new FMLA absence with a start date of 2025-12-10 and an end date of 2025-12-12** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
     ![agent dialogue 3](../05b-agent-team-hcm/images/benimage016.jpg) <br>
 
-17. The Agent reminds you that you need to provide start and end dates before the Agent can create the absence request.
-
-    > 1. In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Start Date is 2025-10-28 End Date is 2025-10-29** and hit the return key or click the **Up Arrow** icon ![uparrow icon](../gen-images/uparrow.jpg)
-
-    ![agent dialogue 3](../05b-agent-team-hcm/images/benimage017.jpg) <br>
-
-18. The agent confirms that your request has been created.
+17. The agent confirms that your request has been created.
 
     > 1. Review AI Agent Response
     > 2. Click the x icon in the upper right to close the debug screen.
 
-    ![agent dialogue 3](../05b-agent-team-hcm/images/benimage018.jpg) <br>
+    ![agent dialogue 3](../05b-agent-team-hcm/images/benimage017.jpg) <br>
 
-19. Let’s go back to the homepage so we can confirm the creation of our absence.
+18. Let’s go back to the homepage so we can confirm the creation of our absence.
 
     > 1. Click the Home  **Ask Oracle** icon ![up arrow icon](../gen-images/icon012_home.png) on the top right.
 
+    ![agent dialogue 3](../05b-agent-team-hcm/images/benimage018.jpg) <br>
+
+19. The AI Agent has created your absence request and now you want to find it.
+
+    > 1. In the Search field, type **existing absences** and select **Existing Absences - Me** from the resulting dropdown.
+
     ![agent dialogue 3](../05b-agent-team-hcm/images/benimage019.jpg) <br>
 
-20. The AI Agent has created your absence request and now you want to find it.
-
-    > 1. In the Search field, type **existing absence** and select **Existing Absences - Me** from the resulting dropdown.
+20. There it is!  ![up arrow icon](../gen-images/checkeredflag.jpg)
 
     ![agent dialogue 3](../05b-agent-team-hcm/images/benimage020.jpg) <br>
 
-35. There it is!  ![up arrow icon](../gen-images/checkeredflag.jpg)
-
-    > ![agent dialogue 3](../05b-agent-team-hcm/images/benimage021.jpg) <br>
 
 36. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
@@ -182,7 +180,7 @@ AI Agent Studio is a design-time environment that provides a set of tools to cre
 
 Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
 
-**You have successfully completed the Activity!
+**You have successfully completed the Activity!**
 
 
 ### Learn More
@@ -196,4 +194,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, January 2026
