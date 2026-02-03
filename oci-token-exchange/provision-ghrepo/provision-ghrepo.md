@@ -201,7 +201,7 @@ TF_VAR_REGION            eu-frankfurt-1                                      les
 - go to the repo you just created 
 - Under Settings/Secrets and Variables/Acions you should see your Secrets and Variables 
 
-![SecrtetsVars](images/secretsvars.png)
+![SecrtetsVars](images/secrets_vars.png)
 
 You may now **proceed to the next lab**.
 

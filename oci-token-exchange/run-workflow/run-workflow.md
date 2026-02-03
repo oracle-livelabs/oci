@@ -54,7 +54,7 @@ gh run list --workflow="run-terraform.yaml
 
 - when it will finishes you should see:
 
-![workflow](images/workflowstatus.png)
+![workflow](images/workflow_status.png)
 
 - at this point you have the simple VCN created by the workflow in your tenancy.
 - this can be seen in the workflow log
@@ -65,7 +65,7 @@ gh run list --workflow="run-terraform.yaml
 - Under Actions Menu you should find all the runs
 - Click on whatever run you want to see details 
 
-![workflowLogs](images/workflowlogs.png)
+![workflowLogs](images/workflow_logs.png)
 
 4. Update the TF_ACTION Variables to _destroy_ and run the workflow again
 
