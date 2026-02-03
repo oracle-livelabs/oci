@@ -15,15 +15,19 @@
             "filename": "../../02-configure-hcm/configure-hcm.md"
         },
         {
-            "title": "Lab 3: Create AI",
+            "title": "Lab 3: Extend",
+            "filename": "../../03-extend-prc/extend-prc.md"
+        },
+        {
+            "title": "Lab 4: Create AI",
             "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
         },
         {
-            "title": "Lab 4: Enable AI",
+            "title": "Lab 5: Enable AI",
             "filename": "../../05d-pre-agent-team-hcm/pre-agent-team-hcm.md"
         },
         {
-            "title": "Lab 5: Analytics with AI",
+            "title": "Lab 6: Analytics with AI",
             "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
         },
         {
