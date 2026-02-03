@@ -119,25 +119,25 @@ The region where you deploy the resources
 
 **githubrepo** 
 
-<github account>/<github repository name>
+This is of form "your github account"/"your github repository name"
 
-**tf_action**
+**tf\_action**
 
 Usually this is **apply**. Use **destroy** to destroy the resources
 
-**tf_var_bucket**
+**tf\_var_bucket**
 
 the name of an existing bucket where will store the terraform statefile
 
-**tf_var_compartment_id**
+**tf\_var_compartment_id**
 
 The ocid of comp where Github Action will create a simple VCN
 
-**tf_var_key**
+**tf\_var_key**
 
 the name of the terraform state file
 
-**tf_var_namespace**
+**tf\_var_namespace**
 
 the Namespace of your Tenant
 

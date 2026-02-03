@@ -48,13 +48,13 @@ outputs.tf      terraform.auto.tfvars   versions.tf
 2. Update the variables in file _variables.auto.example_
 
 - To understand the variables please open and read the README.md file
-- For your reference here is the variable description
+- For your reference here are the variables description
 
 **conf_file_prof_reg**
 
 This is the profile name in your OCI CLI config _(~/.oci/config)_ that points to the region where you will deploy the resources
 
-**conf_file_prof_reg_home**
+*conf_file_prof_reg_home*
 
 This is the profile name in your OCI CLI config that points to the home region of your tenancy
 
