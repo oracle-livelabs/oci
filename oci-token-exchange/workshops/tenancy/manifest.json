@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Deploy Falco on Oracle Kubernetes Engine (OKE)",
+    "workshoptitle": "How to use OCI token exchange authentication from Github",
     "help": "livelabs-help-aiservices_us@oracle.com",
     "tutorials": [
       {

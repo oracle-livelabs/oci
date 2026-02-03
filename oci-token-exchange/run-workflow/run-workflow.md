@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this chapter you will run the Github Action workflow. As the result a simple VCN will be created in your Tenancy
+In this chapter you will run the Github Action workflow. As a result a simple VCN will be created in your Tenancy
 
 Estimated Time: 10 minutes
 
@@ -21,7 +21,7 @@ Hands-on experience with:
 
 ## Task 1 — Run the Github Action workflow
 
-1. in a terminal , from within the repo folder run the command:
+1. in a terminal , from within the repo folder run the command below
 
 ```
 oci-token-exchange-ghaction/scripts % gh workflow list
@@ -35,7 +35,7 @@ Run Terraform with token exchange  active  228733475
 
 2. Launch the workflow from command line
 
-- run the command:
+- run the command but replace the ID with your own:
 ```
 oci-token-exchange-ghaction/scripts % gh workflow run 228733475
 ```

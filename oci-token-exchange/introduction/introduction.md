@@ -13,7 +13,7 @@ Using tokens instead of API keys means moving from long-lived, static secrets to
 
 Uses of tokens are good for secure CI/CD pipelines, federated workloads, temporary access, least-privilege automation, and any scenario where credentials must be short-lived, automatically rotated, context-aware, and safe to use without storing long-term secrets.
 
-In this workshop we will use [Oci Token Exchange](https://docs.oracle.com/en-us/iaas/Content/Identity/api-getstarted/json_web_token_exchange.htm#jwt_token_exchange) in a Github Action from where we will create a simple VCN in OCI usint Terraform
+In this workshop we will use [Oci Token Exchange](https://docs.oracle.com/en-us/iaas/Content/Identity/api-getstarted/json_web_token_exchange.htm#jwt_token_exchange) in a Github Action from where we will create a simple VCN in OCI using Terraform
 
 Estimated Workshop Time: 1 hour
 

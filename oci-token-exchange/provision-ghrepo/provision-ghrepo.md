@@ -119,7 +119,7 @@ The region where you deploy the resources
 
 **githubrepo** 
 
-"github repo owner"/"github account"
+<github account>/<github repository name>
 
 **tf_action**
 
@@ -160,8 +160,7 @@ Your tenancy ocid
 
 **user_ocid**
 
-the Service user ocid
-You get this from the output generated in previous Task
+the Service user ocid. You get this from the output generated in previous Task
 
 - after succesfully run the above command you should see something like:
 
@@ -198,8 +197,8 @@ TF_VAR_REGION            eu-frankfurt-1                                      les
 
 3. Check into your Github repo these Variables and Secrets
 
-- Log into Github repo
-- go to he repo you just created 
+- Log into Github
+- go to the repo you just created 
 - Under Settings/Secrets and Variables/Acions you should see your Secrets and Variables 
 
 ![SecrtetsVars](images/SecretsVars.png)

@@ -2,13 +2,13 @@
 
 ## Introduction
 
-Once the workshop is complete, you should remove the resources to avoid unnecessary costs.
+At this point you may remove the resources from your tenancy (Integrated App, Service User, Group, POlicy). 
 
 Estimated Time: 10 minutes
 
 ### **Objectives**
 
-- Delete the Github repo.
+- Delete your the Github repo.
 - Destroy the OCI resources
 
 ### **Prerequisites**
@@ -24,7 +24,7 @@ This lab assumes you have:
 
 ## Task 1: Delete the Github repo
 
-1. Delete the Github reo that you created on Lab **Provision of the Github repo**
+1. Delete the Github repo that you created on Lab **Provision of the Github repo**
 
 - from within folder __oci-token-exchange-ghaction-test__ run:
 
@@ -45,13 +45,13 @@ gh delete repo
 
 
 - there is known issue which prevents you to terminate an Integrated App from Terraform if the App is active. For that reason you must set the App as inactive first
-- Go to Domains/Integrated Application
+- Login into UI in your Tenancy. Go to Domains/Integrated Application
 - Locate the app created on Lab **Provision of the necessary resources**. This shoul be _TokenExDemoApp_ if you did not changed the name
 - On the three dots choose "Deactivate" like in image below
 
 ![DeactivateApp](images/DeactApp.png)
 
-- in folder _oci-token-exchange-resources_ run 
+- from within folder _oci-token-exchange-resources_ from where you run the Terraform to deploy the OCI resources run: 
 
 ```
 terraforn destroy
@@ -77,7 +77,7 @@ oci_identity_domains_user.this: Destruction complete after 0s
 oci_identity_domains_app.this: Destruction complete after 1s
 oci_identity_domains_group.this: Destruction complete after 1s
 ```
-
+- At this point all the resources are removed
 
 End of LiveLab – You have successfully used Token exchange authenication from Github Action!
 

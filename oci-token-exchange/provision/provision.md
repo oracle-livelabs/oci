@@ -52,11 +52,11 @@ outputs.tf      terraform.auto.tfvars   versions.tf
 
 **conf_file_prof_reg**
 
-This the profile name in your OCI CLI config that point to the region where you will deploy the resources
+This is the profile name in your OCI CLI config _(~/.oci/config)_ that points to the region where you will deploy the resources
 
 **conf_file_prof_reg_home**
 
-This the profile name in your OCI CLI config that point to the home region of your tenancy
+This is the profile name in your OCI CLI config that points to the home region of your tenancy
 
 **tenancy_ocid**
 
@@ -64,7 +64,7 @@ The ocid of your tenancy
 
 **compartment_ocid**
 
-The ocid of the compartment where the Service User will have the privileges to manage VCN resources. Please mind this is a demo that evetually will use Github Action to create a VCN.
+The ocid of the compartment where the Service User will have the privileges to manage VCN resources. Please mind this is a demo that evetually will use Github Action to create a VCN in your tenancy.
 
 **display_name**
 
