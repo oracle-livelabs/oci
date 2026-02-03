@@ -49,7 +49,7 @@ gh delete repo
 - Locate the app created on Lab **Provision of the necessary resources**. This shoul be _TokenExDemoApp_ if you did not changed the name
 - On the three dots choose "Deactivate" like in image below
 
-![DeactivateApp](images/DeactApp.png)
+![DeactivateApp](images/deactapp.png)
 
 - from within folder _oci-token-exchange-resources_ from where you run the Terraform to deploy the OCI resources run: 
 
