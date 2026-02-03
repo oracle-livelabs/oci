@@ -59,6 +59,7 @@ terraforn destroy
 
 - confirm the destroy with _yes_
 
+
 ```
 Do you really want to destroy all resources?
   Terraform will destroy all your managed infrastructure, as shown above.
