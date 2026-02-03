@@ -50,7 +50,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Suppliers List Page](../02-configure-prc/images/configure-prc-image005.jpg)
 
-6.  You can see the supplier information displayed is limited. We will update the page to display more fields for procurement managers. <br><br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
+6.  You can see the supplier information displayed is limited. We will update the page to display more fields for procurement managers. <br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
 
     > (1) Click on the ![picture image](../gen-images/user_icon.png) **Image** in the top right corner of the screen.  <br>
 
@@ -58,7 +58,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Suppliers List Page](../02-configure-prc/images/configure-prc-image006.jpg)
 
-7. Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the application development lifecycle: design, build, test, and deploy. <br><br> Now we will use VB Studio to make the required changes to the Suppliers (New) page.
+7. Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the application development lifecycle: design, build, test, and deploy. <br> Now we will use VB Studio to make the required changes to the Suppliers (New) page.
 
     > (1) Click on **Configure Fields and Regions**. <br>
 
@@ -108,45 +108,72 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (1) Click in the Box in the **Hidden Column** for the **Creation Date** Field row.    <br>
 
-    > (2) Then select **Visble** from the options that appear.
+    > (2) Then select **Visble** from the options that appear.<br>
 
     ![Fields and Regions](../02-configure-prc/images/configure-prc-image014.jpg)
 
-15.  Now repeat the above steps for fields CreationSource, ParentSupplierNumber and TaxPayerCountry to make them visible.
+15. Now repeat the above steps for fields CreationSource, ParentSupplierNumber and TaxPayerCountry to make them visible.
 
     > (1) Click the Box in the **Hidden Column** for **each of these** rows and select **Visible** from the options that appear.
-     * **CreationSource**
-     * **ParentSupplierNumber**
-     * **TaxpayerCountry**
+    * **CreationSource**
+    * **ParentSupplierNumber**
+    * **TaxpayerCountry**
+    <br>
+    > (2) Click the ![x icon](../gen-images/icon011_x.png) to close this section.
 
    ![Fields and Regions](../02-configure-prc/images/configure-prc-image015.jpg)
 
-16. Well done. You have configured a new role-based page layout for Procurement Managers with additional fields available to view. Redwood offers a quick way to review your changes as they appear in the application.
+16. Well done.  You're going to do one more configuration that will display an AI Agent to assist the user in determining the appropriate salary change by checking market compensation information.  You'll do this by leveraging the Guided Journey configuration feature.  Guided Journeys allow you to embed information, including documents, links, reports and more in standard application screens.  You'll use it to embed an AI Agent.
 
-    > (1) Click on the **Preview** ![Fields and Regions, Conditions](../gen-images/preview.png) icon in the upper right of the screen.  The Preview will appear in a new browser tab.
+    > (1) Type **Supplier** in the **Set Guided Journeys Code at the Suppliers Page Level** field.<br>
+    > (2) Select **Supplier Advisor Agent** from the resulting dropdown.
 
     ![Preview](../02-configure-prc/images/configure-prc-image016.jpg)
 
-17. You can requery Suppliers as shown below.
+17. You can see the the Supplier Advisor Agent Task Agent banner appear on the page.  You're done with configurations and ready to Preview your changes.
+
+    > (1) Click on the **Preview** ![Fields and Regions, Conditions](../gen-images/preview.png) icon in the upper right of the screen.  The Preview will appear in a new browser tab.
+
+    ![Preview](../02-configure-prc/images/configure-prc-image017.jpg)
+
+18. You have re-entered the Suppliers screen. Before querying any suppliers you'll use the Supplier Advisor Agent to familiarize yourself with supplier data confidentiality guidelines.
+
+    > (1) Click on the **Ask Oracle** ![Ask Oracle Logo Button](../gen-images/ask-oracle-logo.jpg) button.
+
+![Suppliers List Page](../02-configure-prc/images/configure-prc-image018.jpg)
+
+19. The Supplier Advisor Agent allows you to ask questions about Supplier information and policies.
+
+    > (1) In the **How can I help you?** dialog box in the agent window, click the **What is considered confidential information?** button.
+
+![Suppliers List Page](../02-configure-prc/images/configure-prc-image019.jpg)
+
+20. The Agent replies with detailed information about maintaining confidentiality of certain supplier information.  With this knowledge in hand, you'll close the agent and proceed with querying supplier information.
+
+    > (1) Review the confidential information response and, when finished, click the the ![x icon](../gen-images/icon011_x.png) icon in the upper right.
+
+![Suppliers List Page](../02-configure-prc/images/configure-prc-image020.jpg)
+
+21. You can requery Suppliers as shown below.
 
     > (1) Click on the **Supplier Type** to display the Filter. <br>
     > (2) Click into the Search box **Supplier Type**.<br>
     > (3) Click and select **Supplier (97)** to display list of suppliers.<br>
     > (4) Click anywhere in the page away from the search filter **Supplier (97)**
 
-![Suppliers List Page](../02-configure-prc/images/configure-prc-image017.jpg)
+![Suppliers List Page](../02-configure-prc/images/configure-prc-image021.jpg)
 
-18.  You can expand the Preview region for one of the suppliers.
+22.  You can expand the Preview region for one of the suppliers.
 
 > (1) Click on drop-down icon ![Region down arrow](../gen-images/icon014_downarrow.png) to expand a specific supplier row.
 
-![Suppliers List Page](../02-configure-prc/images/configure-prc-image018.jpg)
+![Suppliers List Page](../02-configure-prc/images/configure-prc-image022.jpg)
 
-19.  You can now see the new fields that you've made visible via application configuration.
+23.  You can now see the new fields that you've made visible via application configuration.
 
 > (1) The new fields are now visible. The configurations are **automatically maintained during the release update process**.
 
-![Supplier List Screen](../02-configure-prc/images/configure-prc-image019.jpg)
+![Supplier List Screen](../02-configure-prc/images/configure-prc-image023.jpg)
 
 18. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
 
@@ -156,7 +183,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.
 
-**You have successfully completed the Activity!**
+**Sync up as a team, lock in your harness, get ready for the the next high-octane adventure.**
 
 ### Learn More
 
@@ -167,4 +194,4 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist; Casey Doody, Cloud Technologist; Sajid Saleem, Master Principal Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, January 2025
+* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, January 2026
