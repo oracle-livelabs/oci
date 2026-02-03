@@ -1,0 +1,50 @@
+apiVersion: ceph.rook.io/v1
+kind: CephObjectStore
+metadata:
+  name: my-store
+  namespace: rook-ceph
+spec:
+  # The metadata pool settings
+  metadataPool:
+    failureDomain: host
+    replicated:
+      size: 3
+
+  # The data pool settings
+  dataPool:
+    failureDomain: host
+    replicated:
+      size: 3
+
+  # Whether to preserve pools on object store deletion
+  preservePoolsOnDelete: true
+
+  # The rgw (RADOS Gateway) configuration
+  gateway:
+    # The port that RGW will listen on (http)
+    port: 80
+    # The number of RGW pods to run
+    instances: 1
+    # Resource requests/limits
+    resources:
+      limits:
+        memory: "2Gi"
+      requests:
+        cpu: "500m"
+        memory: "1Gi"
+
+  # Health checker settings
+  healthCheck:
+    bucket:
+      disabled: false
+      interval: 60s
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: rook-ceph-bucket
+provisioner: rook-ceph.ceph.rook.io/bucket
+reclaimPolicy: Delete
+parameters:
+  objectStoreName: my-store
+  objectStoreNamespace: rook-ceph
