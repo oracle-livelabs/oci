@@ -15,14 +15,12 @@
 ### 전제 조건
 
 * **Lab 4: Deploy the MuShop Application** 완료하고 현재 앱이 실행 중일 것
-* OKE Cluster *1.26 이상*, *Oracle Linux 7*
+* Standalone으로 Service Mesh 설치시
     - OCI VCN-Native Pod Networking CNI에서 Istio를 사용하기 위해서는 작성일 기준으로 Kubernetes 1.26 이상, Oracle Linux 7 이어야만 합니다.
     - [Installing Istio Service Mesh on OKE](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengistio-intro-topic.htm)
-
-
-### 실습 비디오
-
-[](youtube:Es__wypgoNI)
+* Istio add-on으로 설치시
+    - Oracle Linux 7, Oracle Linux 8 둘 다 지원
+    - Kubernetes 1.26 이상
 
 ## Task 1: Istio 설치
 
@@ -32,7 +30,7 @@
 
     ```
     <copy>
-    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.20.2 TARGET_ARCH=x86_64 sh -
+    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.21.1 TARGET_ARCH=x86_64 sh -
     </copy>
     ```
 
@@ -40,7 +38,7 @@
 
     ```
     <copy>
-    cd istio-1.20.2/
+    cd istio-1.21.1/
     </copy>
     ```
 
@@ -250,8 +248,8 @@
     kiali를 위해 prometheus addon도 함께 설치합니다.
     ```
     <copy>
-    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.19/samples/addons/prometheus.yaml   
-    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.19/samples/addons/kiali.yaml
+    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.21/samples/addons/prometheus.yaml   
+    kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.21/samples/addons/kiali.yaml
     </copy>
     ```
 
@@ -490,4 +488,4 @@
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, January 2024
+- **Last Updated By/Date** - DongHee Lee, April 2024
