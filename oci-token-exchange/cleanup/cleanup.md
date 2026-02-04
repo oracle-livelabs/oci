@@ -1,4 +1,4 @@
-# Clenaup
+# Cleanup
 
 ## Introduction
 
@@ -45,15 +45,15 @@ gh delete repo
 
 
 - there is known issue which prevents you to terminate an Integrated App from Terraform if the App is active. For that reason you must set the App as inactive first
-- Login into UI in your Tenancy. Go to Domains/Integrated Application_
+- Login into UI in your Tenancy. Go to Domains/Integrated Application
 - Locate the app created on Lab **Provision of the necessary resources**. This shoul be _TokenExDemoApp_ if you did not changed the name
-- On the three dots choose "Deactivate" like in image below
+- On the right three dots choose "Deactivate" like in image below
 
 ![DeactivateApp](images/deactivate_app.png)
 
 - from within folder _oci-token-exchange-resources_ from where you run the Terraform to deploy the OCI resources run: 
 
-```
+```<copy>
 terraforn destroy
 ```
 

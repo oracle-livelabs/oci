@@ -29,17 +29,21 @@ This lab assumes you have:
 - Run the command below to clone the repo
 
 ```
+<copy>
 git clone git@github.com:franciscvass/oci-token-exchange-resources.git
+</copy>
 ```
 
 - The above command should download the repo in _oci-token-exchange-resources_ folder
 
 - Run the command below to check:
 ```
+<copy>
 ls oci-token-exchange-resources
+</copy>
 ```
 - It should returns :
-```
+```text
 LICENSE         provider.tf     variables.auto.example
 main.tf         README.md       variables.tf
 outputs.tf      terraform.auto.tfvars   versions.tf
@@ -102,18 +106,22 @@ A Group will be created and SErvice User will be attached to it. This is the nam
 
 - rename the _variables.auto.example_ to _variables.auto.tfvars_
 ```
+<copy>
 mv variables.auto.example variables.auto.tfvars
+</copy>
 ```
 - run the commands below:
 
 ```
+<copy>
 terraform init
 terraform plan
+</copy>
 ```
 
 - you should see someting like 
 
-```
+```text
 terraform init
 Initializing the backend...
 Initializing provider plugins...
@@ -140,7 +148,7 @@ commands will detect it and remind you to do so if necessary.
 ```
 
 - after you run _terraform plan_ you should see something like:
-```
+```text
 Plan: 6 to add, 0 to change, 0 to destroy.
 
 Changes to Outputs:
@@ -160,7 +168,9 @@ Changes to Outputs:
 4. Run _terraform apply_ from the same folder and answer with _yes_
 
 ```
+<copy>
 terraform apply
+</copy>
 ```
 
 5. After succesfully apply you will see an Output

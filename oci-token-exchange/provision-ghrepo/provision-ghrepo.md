@@ -49,7 +49,7 @@ gh auth status
 ```
 
 - it shoud returns something like :
-```
+```text
   github.com
   ✓ Logged in to github.com account .... (keyring)
   - Active account: true
@@ -69,7 +69,7 @@ gh repo create oci-token-exchange-ghaction-test --private --source=. --push
 
 - You should see something like 
 
-```
+```text
 ✓ Created repository franciscvass/oci-token-exchange-ghaction-test on github.com
   https://github.com/franciscvass/oci-token-exchange-ghaction-test
 ✓ Added remote https://github.com/franciscvass/oci-token-exchange-ghaction-test.git
@@ -95,7 +95,7 @@ branch 'main' set up to track 'origin/main'.
 
 - you need to run _github_set_var_secrets.sh_ script and pass arguments to it like in example below
 
-```
+```text
 ./github_set_var_secrets.sh \
 --region eu-frankfurt-1 \
 --githubrepo franciscvass/oci-token-exchange-ghaction-test \
@@ -165,7 +165,7 @@ the Service user ocid. You get this from the output generated in previous Task
 
 - after succesfully run the above command you should see something like:
 
-```
+```text
 export VARS
 TF_VAR_KEY=demo_token_exchange4.tfstate
 TF_VAR_BUCKET=tfstate_bucket
@@ -202,7 +202,7 @@ TF_VAR_REGION            eu-frankfurt-1                                      les
 - go to the repo you just created 
 - Under Settings/Secrets and Variables/Acions you should see your Secrets and Variables 
 
-![SecrtetsVars](images/secrets_vars.png)
+![SecretsVars](images/secrets_vars.png)
 
 You may now **proceed to the next lab**.
 
