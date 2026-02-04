@@ -67,13 +67,13 @@ gh run list --workflow="run-terraform.yaml
 
 3. Review the workflow logs in Github UI
 
-- Open the Github , go to your repo
+- Go to your repo in Github
 - Under Actions Menu you should find all the runs
 - Click on whatever run you want to see details 
 
 ![workflow logs](images/workflow_logs.png)
 
-4. Update the TF_ACTION Variables to _destroy_ and run the workflow again
+4. Update the TF_ACTION Variables to __destroy__ and run the workflow again
 
 - this action will destroy the created VCN
 - run the command below to update the variable

@@ -101,7 +101,7 @@ branch 'main' set up to track 'origin/main'.
 
 2. in the repo folder (i.e. _oci-token-exchange-ghaction_) go to _scripts_ folder
 
-- you need to run _github_set_var_secrets.sh_ script and pass arguments to it like in example below
+- you need to run github_set_var_secrets.sh script and pass arguments to it like in the example below
 
 ```text
 ./github_set_var_secrets.sh \
@@ -208,7 +208,7 @@ TF_VAR_REGION            eu-frankfurt-1                                      les
 
 - Log into Github
 - go to the repo you just created 
-- Under Settings/Secrets and Variables/Acions you should see your Secrets and Variables 
+- Under Settings/Secrets and Variables/Actions you should see your Secrets and Variables 
 
 ![Secrets and Variables](images/secrets_vars.png)
 
