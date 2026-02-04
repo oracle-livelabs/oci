@@ -20,31 +20,31 @@ Leveraging Gen-AI to build loan officer dashboard and forecasting to meet target
 1. Step 1 - Login to your Fusion AI Data Platform environment using the URL provided. Open a web browser and enter the URL provided, then on the login screen, type in the Username and Password. Click “Sign In”.
 
 
-	![Image alt text](images/Picture1.png)
+	![Login Screen](images/Picture1.png)
 
 2. Step 2 - On the top right click the menu tile and then select data.
 
-  ![Image alt text](images/Picture2.png)
+  ![Select Data](images/Picture2.png)
 
 3. Step 3 - Click on Loan Master data set
 
-  ![Image alt text](images/Picture3.png)
+  ![Master Data Set](images/Picture3.png)
 
 4. Step 4 - Click on top gray bar on the right the Auto Insights Icon and then go to the “Assistant” tab
 
-  ![Image alt text](images/Picture4.png)
+  ![AI Assistant](images/Picture4.png)
 
 5. Step 5 - Type the question in the chat “What is my loan amount by month?” It will generate the following chart.
 
-  ![Image alt text](images/Picture5.png)
+  ![Prompt](images/Picture5.png)
 
 6. Step 6 - Let’s add our Target to the chart. Type in chat bar “add Target”.
 
-  ![Image alt text](images/Picture6.png)
+  ![Add Target](images/Picture6.png)
 
 7. Step 7 - Hover over visualization and hit the “+” sign to add to canvas.
 
-  ![Image alt text](images/Picture7.png)
+  ![Add to Canvas](images/Picture7.png)
 
 8. Step 8 - Next type in chat “loan amount by industry”. Hit enter, and a chart will generate.
 

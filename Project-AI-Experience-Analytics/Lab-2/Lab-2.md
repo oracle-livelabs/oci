@@ -17,47 +17,59 @@ Insights from Loan Manager portfolio viewpoint based on Auto Insights and Classi
 
 ## Lab 2
 
-1. Step 1 - On home screen type “How many defaulted loans?” Hold down the shift key and click enter.
+1. Step 1 - On the top right click the menu tile and then select data.
 
-  ![Image alt text](images/Picture22.png)
+  ![Image alt text](images/Picture38.png)
 
-2. Step 2 - Click “Explore as Workbook”.
+2. Step 2 - Click on Loan Portfolio data set.
 
-  ![Image alt text](images/Picture23.png)
+  ![Image alt text](images/Picture39.png)
 
-3. Step 3 - Right click “Defaulted Y/N” and select “Explain Defaulted Y/N”.
+3. Step 3 - Click on top gray bar on the right the Auto Insights Icon and then go to the “Assistant” tab.
+
+  ![Image alt text](images/Picture40.png)
+
+4. Step 4 - Type the question in the chat “How many defaulted loans?” It will generate the following chart.
+
+  ![Image alt text](images/Picture41.png)
+
+5. Step 5 - Enter into the chat bar “Change Chart Type to Tile.” Then, hover over the visualization and hit the “+” sign to add to canvas. Exit out of the assistant by clicking the “X” in the upper-right hand corner of the window.
+
+  ![Image alt text](images/Picture42.png)
+
+3. Step 6 - Right click “Defaulted Y/N” and select “Explain Defaulted Y/N”.
 
   ![Image alt text](images/Picture24.png)
 
-4. Step 4 - Click “Settings.”
+4. Step 7 - Click “Settings.”
 
   ![Image alt text](images/Picture25.png)
 
-5. Step 5 - Change settings to the following and click “Apply”.
+5. Step 8 - Change settings to the following and click “Apply”.
 
   ![Image alt text](images/Picture26.png)
 
-6. Step 6 - Explore “Basic Facts” and select the donut chart.
+6. Step 9 - Explore “Basic Facts” and select the donut chart.
 
   ![Image alt text](images/Picture27.png)
 
-7. Step 7 - Explore “Key Drivers” and select two visualizations to add to your canvas.
+7. Step 10 - Explore “Key Drivers” and select two visualizations to add to your canvas.
 
   ![Image alt text](images/Picture28.png)
 
-8. Step 8 - Explore Segments that Explain Defaulted Y/N.
+8. Step 11 - Explore Segments that Explain Defaulted Y/N.
 
   ![Image alt text](images/Picture29.png)
 
-9. Step 9 - Explore Anomalies and select one visualization.
+9. Step 12 - Explore Anomalies and select one visualization.
 
   ![Image alt text](images/Picture30.png)
 
-10. Step 10 - Click “Add Selected”.
+10. Step 13 - Click “Add Selected”.
 
   ![Image alt text](images/Picture31.png)
 
-11. Step 11 - Based on the explain page answer the following questions. You may need to re-explain (step 3) to return.
+11. Step 14 - Based on the explain page answer the following questions. You may need to re-explain (step 3) to return.
 
 •	What key driver has the most diverse split in defaults to non-defaults?
 •	Describe how loan officer is driving defaults.
