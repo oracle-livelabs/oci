@@ -86,7 +86,7 @@ Setup demo in new environment. You will:
 
 ## Task 5: Create the AIE Supplier Stock Inquiry API tool 
 
-1. Login to Fusion and open AI Agent Studio (use casey.brown for Oracle demo environments)
+1. Login to Fusion and open AI Agent Studio (use john.dunbar for Oracle demo environments)
 
 2. Click on the **Tools** tab at the bottom of the screen:
 
