@@ -29,12 +29,14 @@ This lab assumes you have:
 - from within folder __oci-token-exchange-ghaction-test__ run:
 
 ```
+<copy>
 gh delete repo
+</copy>
 ```
 
-- you will be asked to confirm by typing _franciscvass/oci-token-exchange-ghaction-test_ :
+- you will be asked to confirm by typing your_gh_owner/oci-token-exchange-ghaction-test :
 
-```
+```text
 ? Type franciscvass/test_sessiontoken2 to confirm deletion: franciscvass/oci-token-exchange-ghaction-test
 ✓ Deleted repository franciscvass/oci-token-exchange-ghaction-test
 ```
@@ -49,18 +51,20 @@ gh delete repo
 - Locate the app created on Lab **Provision of the necessary resources**. This shoul be _TokenExDemoApp_ if you did not changed the name
 - On the right three dots choose "Deactivate" like in image below
 
-![DeactivateApp](images/deactivate_app.png)
+![Deactivate Application](images/deactivate_app.png)
 
 - from within folder _oci-token-exchange-resources_ from where you run the Terraform to deploy the OCI resources run: 
 
-```<copy>
+```
+<copy>
 terraforn destroy
+</copy>
 ```
 
 - confirm the destroy with _yes_
 
 
-```
+```text
 Do you really want to destroy all resources?
   Terraform will destroy all your managed infrastructure, as shown above.
   There is no undo. Only 'yes' will be accepted to confirm.

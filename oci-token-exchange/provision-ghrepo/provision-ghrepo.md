@@ -29,7 +29,9 @@ This lab assumes you have:
 - Run the command below to clone the repo
 
 ```
+<copy>
 git clone git@github.com:franciscvass/oci-token-exchange-ghaction.git
+</copy>
 ```
 
 - The above command should download the repo in _oci-token-exchange-ghaction_ folder
@@ -39,13 +41,17 @@ git clone git@github.com:franciscvass/oci-token-exchange-ghaction.git
 - change directory to _oci-token-exchange-ghaction_ and run the command to remove the origin of cloned repo
 
 ```
+<copy>
 git remote remove origin
+</copy>
 ```
 
 - check if your Github CLI is authenticated with your repo
 
 ```
+<copy>
 gh auth status
+</copy>
 ```
 
 - it shoud returns something like :
@@ -64,7 +70,9 @@ gh auth status
 - if you want a different name replace _oci-token-exchange-ghaction-test_ with other name
 
 ```
+<copy>
 gh repo create oci-token-exchange-ghaction-test --private --source=. --push
+</copy>
 ```
 
 - You should see something like 
@@ -202,7 +210,7 @@ TF_VAR_REGION            eu-frankfurt-1                                      les
 - go to the repo you just created 
 - Under Settings/Secrets and Variables/Acions you should see your Secrets and Variables 
 
-![SecretsVars](images/secrets_vars.png)
+![Secrets and Variables](images/secrets_vars.png)
 
 You may now **proceed to the next lab**.
 

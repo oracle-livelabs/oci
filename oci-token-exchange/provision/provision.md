@@ -173,9 +173,17 @@ terraform apply
 </copy>
 ```
 
-5. After succesfully apply you will see an Output
+5. After succesfully apply the code you will see an Output.
 
 - These output contains info that will be used in out next Lab to set the Github Action
+- Make sure you have ths output available for the next Lab
+- You can get this output anytime if you run the command below:
+
+```
+<copy>
+terraform output
+</copy>
+```
 
 You may now **proceed to the next lab**.
 

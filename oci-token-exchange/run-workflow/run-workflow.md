@@ -24,11 +24,13 @@ Hands-on experience with:
 1. in a terminal , from within the repo folder run the command below
 
 ```
-oci-token-exchange-ghaction/scripts % gh workflow list
+<copy>
+gh workflow list
+</copy>
 ```
 
-- you will see something like below. Note the _ID_
-```
+- you will see something like below. Note the _ID_ as you will need it in next command
+```text
 NAME                               STATE   ID
 Run Terraform with token exchange  active  228733475
 ```
@@ -37,24 +39,28 @@ Run Terraform with token exchange  active  228733475
 
 - run the command but replace the ID with your own:
 ```
-oci-token-exchange-ghaction/scripts % gh workflow run 228733475
+<copy>
+gh workflow run 228733475
+</copy>
 ```
 
 - the output should be like :
 
-```
+```text
 ✓ Created workflow_dispatch event for run-terraform.yaml at main
 To see runs for this workflow, try: gh run list --workflow="run-terraform.yaml"
 ```
 - run the command to see the progrress
 
 ```
+<copy>
 gh run list --workflow="run-terraform.yaml
+</copy>
 ```
 
 - when it will finishes you should see:
 
-![workflow](images/workflow_status.png)
+![workflow status](images/workflow_status.png)
 
 - at this point you have the simple VCN created by the workflow in your tenancy.
 - this can be seen in the workflow log
@@ -65,7 +71,7 @@ gh run list --workflow="run-terraform.yaml
 - Under Actions Menu you should find all the runs
 - Click on whatever run you want to see details 
 
-![workflowLogs](images/workflow_logs.png)
+![workflow logs](images/workflow_logs.png)
 
 4. Update the TF_ACTION Variables to _destroy_ and run the workflow again
 
@@ -73,8 +79,9 @@ gh run list --workflow="run-terraform.yaml
 - run the command below to update the variable
 
  ```
- gh variable set TF_ACTION --body "destroy"
-✓ Updated variable TF_ACTION for franciscvass/oci-token-exchange-ghaction-test
+ <copy>
+gh variable set TF_ACTION --body "destroy"
+</copy>
 ```
 
 - run again the steps 1) and 2) to launch the same workflow
