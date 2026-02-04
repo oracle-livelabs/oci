@@ -78,32 +78,32 @@ Insights from Loan Manager portfolio viewpoint based on Auto Insights and Classi
 •	Name 1 fact you found interesting.
 
 
-12. Step 12 - Click the Auto Insights icon in the upper right-hand corner of the screen..
+12. Step 15 - Click the Auto Insights icon in the upper right-hand corner of the screen..
 
   ![Image alt text](images/Picture32.png)
 
-13. Step 13 - Add an insight around the loan purpose to the workbook.
+13. Step 16 - Add an insight around the loan purpose to the workbook.
 
   ![Image alt text](images/Picture33.png)
 
-14. Step 14 - Click “Assistant” icon and ask the assistant the following questions in this order:
+14. Step 17 - Click “Assistant” icon and ask the assistant the following questions in this order:
 Is there a loan officer or industry that defaults a lot? Add loan amount.
 
   ![Image alt text](images/Picture34.png)
 
-15. Step 15 - Drag this scatter plot onto the canvas.
+15. Step 18 - Drag this scatter plot onto the canvas.
 
   ![Image alt text](images/Picture35.png)
 
-16. Step 16 - Duplicate this visualization.
+16. Step 19 - Duplicate this visualization.
 
   ![Image alt text](images/Picture36.png)
 
-17. Step 17 - Change to “Language Narrative” visualization type.
+17. Step 20 - Change to “Language Narrative” visualization type.
 
   ![Image alt text](images/Picture37.png)
 
-18. Step 18 - Go back to the data assistant and see if you can answer the following questions (Tip: just ask the bot).
+18. Step 21 - Go back to the data assistant and see if you can answer the following questions (Tip: just ask the bot).
 
 •	What purpose for a loan default the most?
 •	Is there a loan officer that has high error but low defaults?
