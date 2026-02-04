@@ -50,50 +50,51 @@ outputs.tf      terraform.auto.tfvars   versions.tf
 - To understand the variables please open and read the README.md file
 - For your reference here are the variables description
 
-**conf_file_prof_reg**
+```text
+- conf_file_prof_reg
 
 This is the profile name in your OCI CLI config _(~/.oci/config)_ that points to the region where you will deploy the resources
 
-*conf_file_prof_reg_home*
+- conf_file_prof_reg_home
 
 This is the profile name in your OCI CLI config that points to the home region of your tenancy
 
-**tenancy_ocid**
+- tenancy_ocid
 
 The ocid of your tenancy
 
-**compartment_ocid**
+- compartment_ocid
 
 The ocid of the compartment where the Service User will have the privileges to manage VCN resources. Please mind this is a demo that evetually will use Github Action to create a VCN in your tenancy.
 
-**display_name**
+- display_name
 
 The name of Integrated Application you will deploy
 
-**idcs_endpoint**
+- idcs_endpoint
 
 The API endpoint of your Domain. Go to Identity and security/Domains. Choose Default Domain and Domain URL will give you the API endpoint
 
-**actor**
+- actor
 
 This is the owner of the gitrepo(your Github account) from where you will run the Github Action. This actor (the owner of the Github repo) will be impersonate as an OCI service user.
 
-**user_name**
+- user_name
 
 The Service User name
 
-**user_display_name**
+- user_display_name
 
 The Service User display name
 
-**proptrust_name**
+- proptrust_name
 
 A Propagation Trust will be created which will map your Github repo owner with Service User. This is the name of that Propagation Trust
 
-**group_name**
+- group_name
 
 A Group will be created and SErvice User will be attached to it. This is the name of that group
-
+```
 
 3. Once all of these variables are configured you can apply the configuration
 

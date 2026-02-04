@@ -112,55 +112,56 @@ branch 'main' set up to track 'origin/main'.
 ```
 
 - the arguments are described here
-
-**region** 
+```text
+- region 
 
 The region where you deploy the resources
 
-**githubrepo** 
+- githubrepo
 
 This is of form "your github account"/"your github repository name"
 
-**tf\_action**
+- tf_action
 
 Usually this is **apply**. Use **destroy** to destroy the resources
 
-**tf\_var_bucket**
+- tf_var_bucket
 
 the name of an existing bucket where will store the terraform statefile
 
-**tf\_var_compartment_id**
+- tf_var_compartment_id
 
 The ocid of comp where Github Action will create a simple VCN
 
-**tf\_var_key**
+- tf_var_key
 
 the name of the terraform state file
 
-**tf\_var_namespace**
+- tf_var_namespace
 
 the Namespace of your Tenant
 
-**client_id** 
+- client_id 
 
 The Client ID. You get this from the output generated in previous Task
 
-**client_secret** 
+- client_secret
 
 The Client secret. You get this from the output generated in previous Task
 
-**domain_base_url**
+- domain_base_url
 
 This is the Domain URL from your Domain but remove the **:443** at the end
 You get this from the output generated in previous Task
 
-**oci_tenancy**
+- oci_tenancy
 
 Your tenancy ocid
 
-**user_ocid**
+- user_ocid
 
 the Service user ocid. You get this from the output generated in previous Task
+```
 
 - after succesfully run the above command you should see something like:
 
