@@ -22,7 +22,8 @@ Setup demo in new environment. You will:
 
 ## Task 1: Download and install Supplier_Stock Visual Builder app
 
-1. First login to your Visual Builder design app.
+1. First login to your Visual Builder design app.</br>
+    (For Oracle demo environments, from the environment launchpad, navigate to Resources, Visual Builder, Visual Builder Design and login using the provided credentials)
 
 2. Import the Supplier_Stock Visual Builder app.  From Visual Builder home page, select Import:
     ![Create from import](images/create_import.png " ")
@@ -80,9 +81,12 @@ Setup demo in new environment. You will:
     ```
     https://<your_hostname>/ic/builder/rt/supplier_stock/1.0/resources/data/Inventory
     ```
+
+5. Exit Visual Builder
+
 ## Task 5: Create the AIE Supplier Stock Inquiry API tool 
 
-1. Login to Fusion and open AI Agent Studio (use casey.brown for Oracle demo environments)
+1. Login to Fusion and open AI Agent Studio (use john.dunbar for Oracle demo environments)
 
 2. Click on the **Tools** tab at the bottom of the screen:
 
@@ -96,6 +100,7 @@ Setup demo in new environment. You will:
 
     | Field | Value |
     | -------- | ------- |
+    | Tool Type | External REST |
     | Tool Name | AIE Supplier Stock Inquiry Tool |
     | Family | PRC |
     | Product | Self Service Procurement |
@@ -116,7 +121,7 @@ Setup demo in new environment. You will:
     ```
 7. If you did not change the Authorization settings in your Visual Builder app, select **None** for **Authentication**.  If you did make changes select the appropriate authentication type.
 
-8. Enter an appropriate **Description** and click the **Functions** tab:
+8. Enter an appropriate **Description**, and click the **Update** button.  Then click the **Functions** tab:
 
     ![add_authorization_form](images/add_authorization_form.png " ")
 
