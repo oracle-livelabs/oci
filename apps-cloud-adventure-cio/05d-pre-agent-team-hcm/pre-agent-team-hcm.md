@@ -93,7 +93,7 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
 12. The Agent will respond with information.  In this Debug mode, the Agent will also show you source and processing information (yellow boxes).  These will not be available to end-users once deployed.
 
-    > The Agent responds with information, so we’ll ask an additional question.
+    > The Agent responds with information, so we’ll ask an additional question.<br>
 
     >  (1) In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Tell me more about FMLA benefits** and hit the **<****Enter****>** key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
@@ -101,7 +101,7 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
 13. The Agent checks with HCM Cloud and confirms existing leave requests, if any.  It also offers to create a new request for you if you provide the requested start and end dates.
 
-    You decide to tell the Agent that you’re interested in creating an FMLA absence, but you do so without initially providing the requested dates.
+    You decide to tell the Agent that you’re interested in creating an FMLA absence, but you do so without initially providing the requested dates.<br>
 
     >  (1) In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Yes, please submit a new FMLA absence with a start date of 2026-05-18 and an end date of 2026-05-2216** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
