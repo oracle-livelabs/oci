@@ -37,7 +37,7 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 4. Select your assigned Agent Team.
 
     >  (1) Enter **XX** in the Search Bar, where XX is replaced with your user number, press the **<****Enter****>** key or select **XX** from the resulting dropdown.<br>
-    
+
     >  (2) Click on the **Draft** button ![Draft Button](../gen-images/draft-button.png).<br>
 
     >  (3) Click the **Pencil** icon to edit the **CIOXX Benefits Agent Team** where **XX** is replaced with your user number.
@@ -46,8 +46,9 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
 5. Next you'll add some worker agents to the Agent Team.  You can scroll through the list of available agents or use the Ask Oracle field to filter the results.  You'll do the latter.
 
-    >  (1)  Enter **XX**, where XX is replaced with your user number, in the Ask Oracle field and press the **<****Enter****>** key or select **XX** from the resulting dropdown.<br>
-    >  (2)  Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **CIOXX Benefits Advisor Agent**, where XX is replaced with your user number.<br>
+    >  (1) Click the **Agents** Icon ![Agent Icon](../gen-images/agenticon.jpg) <br>
+    >  (2)  Enter **XX**, where XX is replaced with your user number, in the Ask Oracle field and press the **<****Enter****>** key or select **XX** from the resulting dropdown.<br>
+    >  (3)  Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **CIOXX Benefits Advisor Agent**, where **XX** is replaced with your user number.<br>
 
     ![Add Tool](../05d-pre-agent-team-hcm/images/pre-agent-team-hcm-image005.jpg)
 
