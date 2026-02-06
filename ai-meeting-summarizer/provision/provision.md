@@ -80,85 +80,27 @@ D. Enable Events
 
 Note: Record your Object Storage namespace (visible at the top of Buckets page). You’ll use it in later labs.
 
-## Task 3: Create VCN and Subnet
+## Task 3: Establish Networking
 
-1. Navigate to **Networking → Virtual Cloud Networks → Create VCN**
+1. Navigate to **Networking → Virtual Cloud Networks → Actions → Start VCN Wizard**
+
+   * Connection Type: Create VCN with Internet Connectivity
+
+2. Click Start VCN Wizard
+
+    ![Resource Manager](images/vcn_wizard.png)
 
    * Name: ai-ms-vcn
    * IPv4 CIDR block: 10.0.0.0/16
    * Compartment: ai-meeting-summarizer
+   * Configure public subnet IPv4 CIDR block: 10.0.0.0/24
+   * Configure private subnet IPv4 CIDR block: 10.0.1.0/24
 
-2. Click Create VCN
+    ![Resource Manager](images/pub_priv_sub.png)
 
-    ![Resource Manager](images/vcn.png)
+3. Click **Next → Create**.
 
-3. Click on the VCN you just created, **Subnets → Create Subnet**.
-
-   * Name: ai-ms-private-subnet
-   * IPv4 CIDR Block: 10.0.1.0/24
-   * Subnet Access: Private Subnet
-
-4. Click Create Subnet
-
-    ![Resource Manager](images/subnet.png)
-
-## Task 4: Establish Gateways and Route Tables
-
-1. Click on the VCN you just created, **Gateways → Create NAT Gateway**.
-
-   * Name: ai-ms-ngw
-   * Compartment: ai-meeting-summarizer
-
-2. Click on Create NAT Gateway
-
-    ![Resource Manager](images/ngw.png)
-
-3. Do the same for the service gateway, **Gateways → Create Service Gateway**.
-
-   * Name: ai-ms-sgw
-   * Compartment: ai-meeting-summarizer
-   * Services: All IAD Services In Oracle Services Network
-
-4. Click on Create Service Gateway
-
-    ![Resource Manager](images/sgw.png)
-
-5. Now navigate to **Routing → Create Route Table**
-
-   * Name: ai-ms-private-rt
-   * Press +Another Route Rule
-   * Target Type: Service Gateway
-   * Destination Service: All IAD Services In Oracle Services Network
-   * Target Service Gateway: ai-ms-sgw
-   * Press +Another Route Rule
-   * Target Type: NAT Gateway
-   * Destination CIDR Block: 0.0.0.0/0
-   * Target NAT Gateway: ai-ms-ngw
-
-6. Click Create
-
-7. Navigate to **Subnets → ai-ms-private-subnet → Actions**
-
-    ![Resource Manager](images/edit_subnet.png)
-
- Configure the private route table (egress only)
-Route Tables → ai-ms-private-rt → Add Route Rules:
-0.0.0.0/0 → Target: ai-ms-nat (NAT Gateway)
-All <region> Services in Oracle Services Network → Target: ai-ms-sgw (Service Gateway)
- Save
- Tighten the security list
-Security Lists → ai-ms-private-sl → Edit
-Ingress: keep default for workshop simplicity or restrict to VCN CIDR
-Egress: allow-all (stateful) or restrict as needed
-Save
-
-## Validation
-
-* In the Buckets list, confirm both upload and transcript buckets exist in the ai-meeting-summarizer compartment and are Private.
-* In the upload bucket, confirm Emit Object Events = On.
-* In Events → Rules, confirm on-object-create is Enabled and scoped to the correct compartment.
-
-If everything looks good, proceed to the next lab to configure IAM policies and deploy the Transcribe Function
+You may now **proceed to the next lab**.
 
 
 ## Acknowledgements
