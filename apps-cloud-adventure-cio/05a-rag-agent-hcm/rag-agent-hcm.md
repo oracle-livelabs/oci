@@ -15,10 +15,14 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 ### **Pre-requisite**
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
-As a pre-requisite for this adventure, please download policy document file to your local desktop as below. 
+As a pre-requisite for this adventure, please download following files
+1. Policy document file to your local desktop as below.
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05a-rag-agent-hcm/files/CloudAdventureBenefitsHighlights.pdf)
-
+<br>
+2. Prompt file for the AI Agent
+<br>
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05a-rag-agent-hcm/files/Prompt-Benefits-Advisor-Agent.txt)
 
 ### **Begin Exercise**
 
@@ -108,7 +112,13 @@ As a pre-requisite for this adventure, please download policy document file to y
     * Maximum Interactions: **10** <br>
     * Description: **Benefits Advisor Agent** <br>
     * Agent Persona and Role: **You are a Benefits Analyst.  Your role is to efficiently access and interpret company-specific benefits documents, providing workers with clear, actionable guidance on their eligibility, coverage and compliance recommendations.**<br>
-    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **copy block** below. Alternatively, prompt text is available in **Prompt - CA Benefits Advisor Agent.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field. <br>
+    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **copy block** below. 
+    <br><br>
+    Alternatively, prompt text is available in **Prompt-Benefits-Advisor-Agent.txt** file that you can download to your local desktop as below.
+    <br>
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05a-rag-agent-hcm/files/Prompt-Benefits-Advisor-Agent.txt)
+    <br>
+    Once done, please open this file and copy the contents into the Prompt field. <br>
 
     > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
     > (3) Click the Create Button ![Create Button](../gen-images/createb.jpg) <br>

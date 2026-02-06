@@ -16,9 +16,14 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 ### **Pre-requisite**
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
-As a pre-requisite for this adventure, please download policy document file to your local desktop as below.
+As a pre-requisite for this adventure, please download following files
+1. Policy document file to your local desktop as below.
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/ProcurementPolicies.pdf)
+<br>
+2. Prompt file for the AI Agent
+<br>
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/Prompt-Procurement-Policy-Advisor.txt)
 
 ### **Begin Exercise**
 
@@ -106,8 +111,13 @@ As a pre-requisite for this adventure, please download policy document file to y
     * Maximum Interactions: **10** <br>
     * Description: **Cloud Adventure Procurement Policy Advisor Agent** <br>
     * Agent Persona and Role: **As a Procurement Policy Advisor, your role is to efficiently access and interpret company-specific procurement policy documents, providing workers with clear, actionable guidance on company procurement requirements.**
-    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.*** To streamline this step, we've pre-created the prompt. The prompt text is available in the **copy block** below.<br> 
-    Alternatively, prompt text is available in **Prompt - CA Procurement Policy Advisor.txt** file in the **ai-prompts** folder on your desktop.  So, please open this file and copy the contents into the Prompt field. <br>
+    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.*** To streamline this step, we've pre-created the prompt. The prompt text is available in the **copy block** below.
+    <br><br>
+    Alternatively, prompt text is available in **Prompt-Procurement-Policy-Advisor-Agent.txt** file that you can download to your local desktop as below.
+    <br>
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/Prompt-Procurement-Policy-Advisor.txt)
+    <br>
+    Once done, please open this file and copy the contents into the Prompt field. <br>
 
     > (2) Click the Create Button ![Create Button](../gen-images/createb.jpg) <br>
 
