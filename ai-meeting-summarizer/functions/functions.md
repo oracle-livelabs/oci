@@ -38,7 +38,7 @@ This lab assumes you have:
 
     ![Resource Manager](images/compartment.png)
 
-## Task 2: Create Object Storage buckets and enable events
+## Task 2: Create Object Storage buckets
 
 Create two private buckets in the same region and namespace.
 
@@ -68,7 +68,9 @@ C. Results bucket
 
 1. Follow the same steps as you did for the previous buckets, replacing the name with results
 
-D. Enable Events
+Note: Record your Object Storage namespace (visible at the top of Buckets page). You’ll use it in later labs.
+
+## Task 3: Enable events on the buckets
 
 1. Open the upload bucket.
 
@@ -78,79 +80,29 @@ D. Enable Events
 
 3. Follow the same steps for the transcript bucket
 
-Note: Record your Object Storage namespace (visible at the top of Buckets page). You’ll use it in later labs.
+## Task 4: Create an Event rule for object creation
 
-## Task 3: Create VCN and Subnet
+1. Navigate to Observability & Management → Events Service → Rules.
 
-1. Navigate to **Networking → Virtual Cloud Networks → Create VCN**
+2. Make sure you’re in the ai-meeting-summarizer compartment.
 
-   * Name: ai-ms-vcn
-   * IPv4 CIDR block: 10.0.0.0/16
-   * Compartment: ai-meeting-summarizer
+3. Click Create rule and enter:
 
-2. Click Create VCN
+   * Name: on-object-create
+   * Description: Trigger function when a new object is created in upload bucket
+   * Rule condition: Use Event Type = Object - Create (com.oraclecloud.objectstorage.createobject)
+   * Condition filter (Attributes):
+     * bucketName equals upload
+     * namespace equals your namespace (optional but recommended)
 
-    ![Resource Manager](images/vcn.png)
+4. Actions:
 
-3. Click on the VCN you just created, **Subnets → Create Subnet**.
+   * Click Add action → Select Action Type: Functions
+   * Choose the application and function (you can leave this blank if you will create the function in the next lab; you can return to add it later)
 
-   * Name: ai-ms-private-subnet
-   * IPv4 CIDR Block: 10.0.1.0/24
-   * Subnet Access: Private Subnet
+5. Click Create rule.
 
-4. Click Create Subnet
-
-    ![Resource Manager](images/subnet.png)
-
-## Task 4: Establish Gateways and Route Tables
-
-1. Click on the VCN you just created, **Gateways → Create NAT Gateway**.
-
-   * Name: ai-ms-ngw
-   * Compartment: ai-meeting-summarizer
-
-2. Click on Create NAT Gateway
-
-    ![Resource Manager](images/ngw.png)
-
-3. Do the same for the service gateway, **Gateways → Create Service Gateway**.
-
-   * Name: ai-ms-sgw
-   * Compartment: ai-meeting-summarizer
-   * Services: All IAD Services In Oracle Services Network
-
-4. Click on Create Service Gateway
-
-    ![Resource Manager](images/sgw.png)
-
-5. Now navigate to **Routing → Create Route Table**
-
-   * Name: ai-ms-private-rt
-   * Press +Another Route Rule
-   * Target Type: Service Gateway
-   * Destination Service: All IAD Services In Oracle Services Network
-   * Target Service Gateway: ai-ms-sgw
-   * Press +Another Route Rule
-   * Target Type: NAT Gateway
-   * Destination CIDR Block: 0.0.0.0/0
-   * Target NAT Gateway: ai-ms-ngw
-
-6. Click Create
-
-7. Navigate to **Subnets → ai-ms-private-subnet → Actions**
-
-    ![Resource Manager](images/edit_subnet.png)
-
- Configure the private route table (egress only)
-Route Tables → ai-ms-private-rt → Add Route Rules:
-0.0.0.0/0 → Target: ai-ms-nat (NAT Gateway)
-All <region> Services in Oracle Services Network → Target: ai-ms-sgw (Service Gateway)
- Save
- Tighten the security list
-Security Lists → ai-ms-private-sl → Edit
-Ingress: keep default for workshop simplicity or restrict to VCN CIDR
-Egress: allow-all (stateful) or restrict as needed
-Save
+Note: If the function is not yet deployed, create the rule now without the action, then edit the rule later to add the Functions action once your Transcribe Function is available.
 
 ## Validation
 
@@ -160,8 +112,12 @@ Save
 
 If everything looks good, proceed to the next lab to configure IAM policies and deploy the Transcribe Function
 
+## Learn More
+
+* [URL text 1](http://docs.oracle.com)
+* [URL text 2](http://docs.oracle.com)
+* **Last Updated By/Date** - <Name, Month Year>
 
 ## Acknowledgements
-
-* **Author** - **Josiah Oriendo**, Cloud Architect
-* **Last Updated By/Date** - Josiah Oriendo, February 2026
+* **Author** - <Name, Title, Group>
+* **Contributors** -  <Name, Group> -- optional
