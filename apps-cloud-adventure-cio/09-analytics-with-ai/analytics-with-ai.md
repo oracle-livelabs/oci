@@ -28,7 +28,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (1) Click on the **‘Analytics’** tab. <br>
 
-    > (2) (2) Click on **Fusion AI Data Platforme** icon. <br>
+    > (2) Click on **Fusion AI Data Platform** icon. <br>
 
     ![Home Screen](../09-analytics-with-ai/images/aiimage001.jpg)
 
@@ -120,7 +120,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (2) Select the model you named with your initials. <br>
 
-    > (2) Click on **Add to Workbook**. <br>
+    > (3) Click on **Add to Workbook**. <br>
 
     ![New Workbook](../09-analytics-with-ai/images/aiimage022.jpg)
 
