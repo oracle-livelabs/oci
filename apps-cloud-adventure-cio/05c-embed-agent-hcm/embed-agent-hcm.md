@@ -240,7 +240,7 @@ A Guided Journey allows you to embed specific information in standard applicatio
 31. The Agent appears in a sliding panel from the right.  You can interact with your agent via the Ask Oracle field at the bottom of the panel.  Based on your defined agent, you can ask about your Benefits information and even have the Agent create an absence request for you.
 
 
-     > (1) In the **Ask Oracle** dialog box at the bottom of the screen, type **Please summarize available health benefits** and hit the **<****Enter****>** key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
+     > (1) In the **Ask Oracle** dialog box at the bottom of the screen, type **Please summarize health benefits** and hit the **<****Enter****>** key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
     ![agent dialogue 3](../05c-embed-agent-hcm/images/embed-agent-hcm-image031.jpg) <br>
 

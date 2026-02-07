@@ -87,7 +87,7 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
 11. The Agent is now ready for your questions.
 
-    >  (1) In the **Ask Oracle** dialog box at the bottom of the screen, type **Please summarize available health benefits** and hit the **<****Enter****>** key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
+    >  (1) In the **Ask Oracle** dialog box at the bottom of the screen, type **Please summarize health benefits** and hit the **<****Enter****>** key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
     ![agent dialogue 1](../05d-pre-agent-team-hcm/images/pre-agent-team-hcm-image011.jpg) <br>
 

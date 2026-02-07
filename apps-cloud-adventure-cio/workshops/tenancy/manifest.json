@@ -7,28 +7,28 @@
             "filename": "../../00-introduction/introduction.md"
         },
         {
-            "title": "Adventure 1: Security (AI Access)",
-            "filename": "../../01-security-ai/security-ai.md"
+            "title": "Lab 1: Access Controls & Governance",
+            "filename": "../../01-risk-erp/risk-erp.md"
         },
         {
-            "title": "Adventure 2: Configure",
+            "title": "Lab 2: Configure the UI",
             "filename": "../../02-configure-hcm/configure-hcm.md"
         },
         {
-            "title": "Adventure 3: Extend",
+            "title": "Lab 3: Extend the UI",
             "filename": "../../03-extend-prc/extend-prc.md"
         },
         {
-            "title": "Adventure 4: Create AI",
+            "title": "Lab 4: Create an AI Agent",
             "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
         },
         {
-            "title": "Adventure 5: Enable AI",
+            "title": "Lab 5: Assemble an AI Agent Team",
             "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
         },
         {
-            "title": "Adventure 6: Analytics",
-            "filename": "../../09-analytics/analytics.md"
+            "title": "Lab 6: Analytics with AI",
+            "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
         },
         {
             "title": "Need Help?",

@@ -7,23 +7,23 @@
             "filename": "../../00-introduction/introduction.md"
         },
         {
-            "title": "Lab 1: Risk Management",
+            "title": "Lab 1: Access Controls & Governance",
             "filename": "../../01-risk-erp/risk-erp.md"
         },
         {
-            "title": "Lab 2: Configure",
+            "title": "Lab 2: Configure the UI",
             "filename": "../../02-configure-hcm/configure-hcm.md"
         },
         {
-            "title": "Lab 3: Extend",
+            "title": "Lab 3: Extend the UI",
             "filename": "../../03-extend-prc/extend-prc.md"
         },
         {
-            "title": "Lab 4: Create AI",
+            "title": "Lab 4: Create an AI Agent",
             "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
         },
         {
-            "title": "Lab 5: Enable AI",
+            "title": "Lab 5: Assemble an AI Agent Team",
             "filename": "../../05d-pre-agent-team-hcm/pre-agent-team-hcm.md"
         },
         {
