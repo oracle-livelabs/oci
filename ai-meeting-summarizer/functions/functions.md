@@ -1,123 +1,177 @@
-# Provision Necessary Resources
+# Deploy Functions and Wire the Event Trigger
 
 ## Introduction
 
-In this lab, you’ll prepare the foundation for the AI Meeting Summarizer workflow. You will create a dedicated compartment, three Object Storage buckets (uploads, transcripts, and results), and an Event rule that triggers a Function whenever a new object is uploaded. This enables an event-driven pipeline on OCI with clear separation of data and least-privilege access.
+This lab walks you through creating an OCI Functions application, deploying two Python functions (Transcribe and Summary), configuring required environment keys, and wiring the Events rule to trigger the Transcribe Function when an object is created in the uploads bucket.
 
-Estimated Time: 20 minutes
+Estimated Time: 30–45 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-* Create a compartment for the workshop resources.
-* Create private Object Storage buckets for uploads, transcripts, and results.
-* Enable events on the uploads bucket and create an Event rule for object creation.
+- Create a Functions application.
+- Initialize, build, and deploy the Transcribe and Summary Python functions.
+- Configure function application and function-level variables.
+- Attach the Events rule action to the Transcribe Function and validate end-to-end.
 
-### Prerequisites (Optional)
+### Prerequisites
 
 This lab assumes you have:
 
-* An Oracle Cloud account with permissions to create compartments, buckets, and Events.
-* Familiarity with the OCI Console (helpful but not required).
-* Region chosen for all resources (keep everything in the same region).
+- Access to OCI Cloud Shell or a local dev environment with Fn CLI configured.
+- Permissions to create Functions, attach policies, and publish to Notifications.
 
-## Task 1: Create a compartment
+## Task 1: Create a Functions application
 
-1. In the OCI Console, open the navigation menu and go to **Identity & Security → Compartments**.
+1. Navigate: Developer Services → Functions → Applications → Create application.
 
-2. Click Create compartment.
+2. Enter:
 
-3. Enter:
+   - Name: ai-ms-app
+   - Compartment: ai-meeting-summarizer
+   - VCN: ai-ms-vcn
+   - Subnet: ai-ms-private-subnet (Private)
+   - Registry: Select your OCIR repo (or create one)
 
-   * Name: ai-meeting-summarizer
-   * Description: Workshop resources for AI Meeting Summarizer
-   * Parent compartment: Your tenancy root or a suitable parent
+3. Click Create.
 
-4. Click Create compartment.
+## Task 2: Configure Fn CLI and OCIR registry
 
-    ![Resource Manager](images/compartment.png)
+1. Open Cloud Shell (recommended).
 
-## Task 2: Create Object Storage buckets
+2. Set your OCIR registry and login:
 
-Create two private buckets in the same region and namespace.
+   ```
+   fn update context registry <region-key>.ocir.io/<tenancy-namespace>/<repo>
+   docker login <region-key>.ocir.io
+   ```
 
-A. Upload bucket
+3. Verify Functions context:
 
-1. Click the hamburger icon and navigate to **Storage → Buckets**.
+   ```
+   fn list contexts
+   fn use context default
+   ```
 
-2. Select the ai-meeting-summarizer compartment you have just created.
+> Note: Replace <region-key> (e.g., iad), <tenancy-namespace>, and <repo> with your values.
 
-3. Click Create bucket.
+## Task 3: Initialize and deploy the Transcribe Function
 
-4. Enter:
+1. Initialize a Python function:
 
-   * Name: upload
-   * Default storage tier: Standard
-   * Encryption: Use Oracle-managed keys (or choose a customer-managed key if required)
+   ```
+   fn init --runtime python transcribe-fn
+   cd transcribe-fn
+   ```
 
-5. Click Create.
+2. Edit requirements.txt to include:
 
-    ![Resource Manager](images/bucket.png)
+   ```
+   oci
+   ```
 
-B. Transcripts Bucket
+3. Replace func.py with your Transcribe handler (submit AI Speech job), or paste the provided sample in this workshop’s code folder.
 
-1. Follow the same steps as you did for the upload bucket, replacing the name with transcripts
+4. Deploy:
 
-C. Results bucket
+   ```
+   fn -v deploy --app ai-ms-app
+   ```
 
-1. Follow the same steps as you did for the previous buckets, replacing the name with results
+5. In the Console → Functions → Applications → ai-ms-app, confirm the function transcribe-fn appears.
 
-Note: Record your Object Storage namespace (visible at the top of Buckets page). You’ll use it in later labs.
+> Note: The function only submits the Speech job. Completion and transcript creation happen asynchronously.
 
-## Task 3: Enable events on the buckets
+## Task 4: Initialize and deploy the Summary Function
 
-1. Open the upload bucket.
+1. From Cloud Shell:
 
-2. In Bucket details, under the Features section ensure Emit Object Events is enabled. If disabled, click the Enable button.
+   ```
+   cd ..
+   fn init --runtime python summary-fn
+   cd summary-fn
+   ```
 
-    ![Resource Manager](images/enable_events.png)
+2. Edit requirements.txt to include:
 
-3. Follow the same steps for the transcript bucket
+   ```
+   oci
+   ```
 
-## Task 4: Create an Event rule for object creation
+3. Replace func.py with your Summary handler (reads transcript JSON, calls Generative AI on-demand, saves summary, publishes Notifications).
 
-1. Navigate to Observability & Management → Events Service → Rules.
+4. Deploy:
 
-2. Make sure you’re in the ai-meeting-summarizer compartment.
+   ```
+   fn -v deploy --app ai-ms-app
+   ```
 
-3. Click Create rule and enter:
+> Note: Use the plain-text system prompt provided earlier to produce consistent meeting minutes.
 
-   * Name: on-object-create
-   * Description: Trigger function when a new object is created in upload bucket
-   * Rule condition: Use Event Type = Object - Create (com.oraclecloud.objectstorage.createobject)
-   * Condition filter (Attributes):
-     * bucketName equals upload
-     * namespace equals your namespace (optional but recommended)
+## Task 5: Set application and function configuration
 
-4. Actions:
+Set app-level config (shared across functions) and function-level overrides (as needed).
 
-   * Click Add action → Select Action Type: Functions
-   * Choose the application and function (you can leave this blank if you will create the function in the next lab; you can return to add it later)
+A. Application configuration (Console → Functions → Applications → ai-ms-app → Configuration)
 
-5. Click Create rule.
+- Add:
+  - OCI_REGION: <your-region> (e.g., us-ashburn-1)
+  - OBJECT_NS: <your-object-storage-namespace>
+- Save.
 
-Note: If the function is not yet deployed, create the rule now without the action, then edit the rule later to add the Functions action once your Transcribe Function is available.
+B. Transcribe Function configuration
 
-## Validation
+- RESULT_BUCKET: results
+- (Optional) Additional keys if your code expects them.
 
-* In the Buckets list, confirm both upload and transcript buckets exist in the ai-meeting-summarizer compartment and are Private.
-* In the upload bucket, confirm Emit Object Events = On.
-* In Events → Rules, confirm on-object-create is Enabled and scoped to the correct compartment.
+C. Summary Function configuration
 
-If everything looks good, proceed to the next lab to configure IAM policies and deploy the Transcribe Function
+- SUMMARY_BUCKET: results
+- GENAI_MODEL_ID: ocid1.generativeaimodel.oc1... (on-demand model OCID)
+- ONS_TOPIC_OCID: ocid1.onstopic.oc1...
+- (Optional) System prompt text (if you externalize it as a config key)
+
+> Note: Keep all resources in the same region. If you set region at the client, use config={"region": OCI_REGION} in SDK clients.
+
+## Task 6: Update IAM policies (if not already completed)
+
+Ensure your Dynamic Group for Functions can call the services used by your functions:
+- In ai-meeting-summarizer compartment:
+  - allow dynamic-group AI_Summary_DG to manage object-family in compartment ai_meeting_summarizer
+  - allow dynamic-group AI_Summary_DG to use ai-service-speech-family in compartment ai_meeting_summarizer
+  - allow dynamic-group AI_Summary_DG to use generative-ai-family in compartment ai_meeting_summarizer
+  - allow dynamic-group AI_Summary_DG to use ons-topics in compartment ai_meeting_summarizer
+- At tenancy (root), allow Speech to write to your results bucket:
+  - allow service ai_speech to manage objects in compartment ai_meeting_summarizer where target.bucket.name='results'
+  - If you use a customer-managed KMS key on results, also:
+    - allow service ai_speech to use keys in compartment ai_meeting_summarizer
+    - allow service ai_speech to use key-delegate in compartment ai_meeting_summarizer
+
+> Note: If your environment doesn’t accept “service ai_speech”, use the conditional any-user pattern with request.principal.service='ai_speech'.
+
+## Task 7: Wire the Events rule to the Transcribe Function
+
+1. Go to Developer Services → Events Service → Rules → on-object-create → Edit.
+2. Under Actions → Add action → Functions.
+3. Select:
+   - Compartment: ai-meeting-summarizer
+   - Application: ai-ms-app
+   - Function: transcribe-fn
+4. Save.
+
+> Note: The rule listens to com.oraclecloud.objectstorage.createobject for the upload bucket.`
 
 ## Learn More
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
-* **Last Updated By/Date** - <Name, Month Year>
+- OCI Functions: https://docs.oracle.com/iaas/Content/Functions/Concepts/functionsoverview.htm
+- AI Speech: https://docs.oracle.com/iaas/Content/speech/overview.htm
+- Generative AI Inference: https://docs.oracle.com/iaas/Content/generative-ai/overview.htm
+- Events Service: https://docs.oracle.com/iaas/Content/Events/Concepts/eventsoverview.htm
+- Notifications: https://docs.oracle.com/iaas/Content/Notification/home.htm
 
 ## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> -- optional
+
+- Author – <Name, Title, Group>
+- Contributors – <Name, Group> (optional)
+- Last Updated By/Date – <Name>, <Month Year>

@@ -14,7 +14,7 @@ In this lab, you will:
 * Create private Object Storage buckets for uploads, transcripts, and results.
 * Enable events on the uploads bucket and create an Event rule for object creation.
 
-### Prerequisites (Optional)
+### Prerequisites
 
 This lab assumes you have:
 
@@ -101,7 +101,6 @@ Note: Record your Object Storage namespace (visible at the top of Buckets page).
 3. Click **Next → Create**.
 
 You may now **proceed to the next lab**.
-
 
 ## Acknowledgements
 
