@@ -30,7 +30,7 @@ In this activity, you will use Fusion AI Data Platform to
 
     ![Login](../09-analytics-energy/images/analytics-energy-image002.png)
 
-3. After a successful login, you will land on the Oracle Analytics home page.
+3. After a successful login, you will land on the Fusion AI Data Platform home page.
 
     > (1) Enter assigned username and Fusion Analytics Password.  <br>
 
@@ -53,7 +53,7 @@ In this activity, you will use Fusion AI Data Platform to
 
 6. Once in Edit mode, we are now going to use AI generated Auto Insights based on the data available
 
-    > (1) Click on the Auto Insights Icon  ![Auto Insights Icon](../09-analytics-energy/images/icon003.png)  as shown in the image.
+    > (1) Click on the Auto Insights Icon  ![Auto Insights Icon](../09-analytics-energy/images/icon003.png)  as shown in the image.<br>
 
     > (2) Ensure you are in the **Insights** Tab.  <br>
 
@@ -111,7 +111,7 @@ In this activity, you will use Fusion AI Data Platform to
 
 12. Lets modify the tag cloud visualization by changing color of attributes.
 
-> (1) Click and hold the **Reason Code** attribute from Category Box and drag it to **Color Box** and release.  <br>
+> (1) Click and hold the **Reason Code** attribute from Category Box and drag it to **Color** box and release.  <br>
 
 ![tag cloud chart](../09-analytics-energy/images/analytics-energy-image012.png)
 
