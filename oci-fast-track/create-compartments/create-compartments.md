@@ -92,4 +92,4 @@ Nesta sessão você aprendeu a acessar a console da Oracle Cloud, explorar a tel
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Updated Por/Data** - Arthur Vianna, Fev/2024
+- **Último Updated Por/Data** - Arthur Vianna, Jul/2025

@@ -18,18 +18,7 @@ This lab assumes you have the following:
 
 * Completed Setup environment and Created an Oracle Autonomous Database lab and already logged into OCI console
 * You have created Integration services as in the last two labs using Oracle Integration Cloud.
-<!-- 
-### AI for Healthcare - Complete Demo and Architecture video
-
-[Youtube video on AI for Healthcare Demo](youtube:iBV76Upi1VM:large)
-
-### AI for Healthcare Demo - with Patient Admission Process (extended demo)
-
-[Youtube video on AI for Healthcare Demo](youtube:ok-fYO0CV2I:large)
- 
-### Breast Cancer Patient Admission Use case and process flow (with Integration Cloud and Process Automation) 
--->
-
+  
 ## Simple - Patient Admission Process
 
 - The patient or medical consultant uploads an X-ray mammography image, and AI Vision detects that it can be a case of Breast cancer/ Lung cancer, Covid, or Pneumonia.
@@ -207,4 +196,4 @@ Lab testing process, for example, checking the patient blood sugar level, blood 
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - 11th August, 2023.
+* **Last Updated By/Date** - Sept 26th, 2025

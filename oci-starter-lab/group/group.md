@@ -74,7 +74,7 @@ Let's create a group and a first application (micro-service).
     - starter for the application
 9. Configure the script:
     - In Cloud Shell Or Cloud Editor, edit the file *group\_common/env.sh*
-    - It is the exact same steps than for Kubernetes. You need to enter the TF\_VAR\_auth\_token (OCI Auth Token). Please refer lab 2 Kubernetes steps.
+    - It is the exact same steps than for Kubernetes. Please refer to the lab "Kubernetes".
     ![Group App1 Env](images/starter-group-app1-env.png =80%x*)
 10. Run 
     ```

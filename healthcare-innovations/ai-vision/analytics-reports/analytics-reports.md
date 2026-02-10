@@ -32,21 +32,14 @@ This lab assumes you have:
 ## Task 1: Create Oracle Analytics Cloud Instance
  
 1. Login to cloud.oracl.com from the top left navigation select **Analytics & AI** and then select **Analytics** Cloud under **Analytics**
- 
-    ![Analytics Cloud](images/analytics-reports-1.png " ")
-
+   
 2. Click on **Create Instance**. Provide details such as Name, Description and OCPU
-
-    ![Analytics Cloud](images/analytics-reports-2.png " ")
-
+  
 3. Select License Type and Edition
-
-    ![Analytics Cloud](images/analytics-reports-3.png " ")
+ 
 
 4. Once Analytics Instance is ready, click on **Access Information**
-
-    ![Analytics Cloud](images/analytics-reports-4.png " ")
-
+ 
     > **Note** 1: For Clinical Trials Dataset you can google search for *Clinical Trials Dataset* and choose the dataset of your choice. from CSV dataset file create table  
 
 ## Task 2: Log in to Oracle Analytics Cloud Instance
@@ -185,4 +178,4 @@ This lab assumes you have:
 
 ## Acknowledgements
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - June 20th, 2023.
+* **Last Updated By/Date** - Sept 26th, 2025

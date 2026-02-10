@@ -1,0 +1,110 @@
+{
+  "name": "${{template.name}}",
+  "description": "${{template.description}}",
+  "use_case": "CONVERSATIONAL_AGENT",
+  "version": {
+    "template": "1.0.0",
+    "compatibility": [
+      "2.12.0",
+      "3.0.0"
+    ]
+  },
+  "workflows": {
+    "provision": {
+      "nodes": [
+        {
+          "id": "create_connector",
+          "type": "create_connector",
+          "user_inputs": {
+            "name": "${{create_connector.name}}",
+            "description": "${{create_connector.description}}",
+            "version": "${{create_connector.version}}",
+            "protocol": "${{create_connector.protocol}}",
+            "parameters": {
+              "endpoint": "${{create_connector.parameters.endpoint}}",
+              "auth_type": "resource_principal",
+              "model_name": "${{create_connector.parameters.model_name}}",
+              "prompt": "${{create_connector.parameters.prompt}}",
+              "reasoning_effort": "${{create_connector.parameters.reasoning_effort}}",
+              "compartment_id": "${{create_connector.compartment_id}}"
+            },
+            "credential": {
+              "key": "empty"
+            },
+            "actions": [
+              {
+                "action_type": "predict",
+                "method": "POST",
+                "url": "${{create_connector.actions.url}}",
+                "request_body": "${{create_connector.actions.request_body}}",
+                "pre_process_function": "${{create_connector.actions.pre_process_function}}",
+                "post_process_function": "${{create_connector.actions.post_process_function}}"
+              }
+            ]
+          }
+        },
+        {
+          "id": "register_llm_model",
+          "type": "register_remote_model",
+          "previous_node_inputs": {
+            "create_connector": "connector_id"
+          },
+          "user_inputs": {
+            "function_name": "remote",
+            "name": "${{register_remote_model.name}}",
+            "description": "${{register_remote_model.description}}",
+            "deploy": true
+          }
+        },
+        {
+          "id": "create_PPL_tool",
+          "type": "create_tool",
+          "previous_node_inputs": {
+            "register_llm_model": "model_id"
+          },
+          "user_inputs": {
+            "type": "PPLTool",
+            "description": "Use this tool to transfer natural language to generate PPL and execute PPL to query inside. Use this tool after you know the index name, otherwise, call IndexRoutingTool first. The input parameters are: {index:IndexName, question:UserQuestion}.",
+            "parameters": {
+              "model_type": "OPENAI",
+              "execute": "true"
+            },
+            "include_output_in_agent_response": true
+          }
+        },
+        {
+          "id": "create_listindextool",
+          "type": "create_tool",
+          "previous_node_inputs": {},
+          "user_inputs": {
+            "type": "ListIndexTool",
+            "description": "Use this tool to get OpenSearch index information: (health, status, index, uuid, primary count, replica count, docs.count, docs.deleted, store.size, primary.store.size). \nIt takes 2 optional arguments named `index` which is a comma-delimited list of one or more indices to get information from (default is an empty list meaning all indices), and `local` which means whether to return information from the local node only instead of the cluster manager node (default is false)."
+          }
+        },
+        {
+          "id": "register_conversational_agent",
+          "type": "register_agent",
+          "previous_node_inputs": {
+            "register_llm_model": "model_id",
+            "create_PPL_tool": "tools",
+            "create_listindextool": "tools"
+          },
+          "user_inputs": {
+            "name": "${{register_conversational_agent.name}}",
+            "type": "${{register_conversational_agent.type}}",
+            "description": "${{register_conversational_agent.description}}",
+            "app_type": "${{register_conversational_agent.app_type}}",
+            "memory": {
+              "type": "${{register_conversational_agent.memory.type}}"
+            },
+            "llm.parameters": {
+              "max_iteration": "${{register_conversational_agent.llm.parameters.max_iteration}}",
+              "message_history_limit": "${{register_conversational_agent.llm.parameters.message_history_limit}}",
+              "disable_trace": "${{register_conversational_agent.llm.parameters.disable_trace}}"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

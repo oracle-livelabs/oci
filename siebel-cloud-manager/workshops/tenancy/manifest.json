@@ -1,6 +1,6 @@
 {
     "workshoptitle": "Use Siebel Cloud Manager to deploy Siebel CRM on OCI",
-    "help": "livelabs-help-oci_us@oracle.com",
+    "help": "siebel_coe_grp@oracle.com",
       "tutorials": [
           {
               "title": "Introduction",
@@ -23,9 +23,9 @@
               "filename": "../../provision-scm/provision-scm.md"
           },
           {
-              "title": "Lab 3: Install and Configure GitLab",
-              "description": "In this lab, we will install and configure a GitLab instance",
-              "filename": "../../setup-gitlab/setup-gitlab.md"
+              "title": "Lab 3: Configure OCI Devops",
+              "description": "In this lab, we will install and configure a OCI Devops instance",
+              "filename": "../../setup-oci-devops/setup-oci-devops.md"
           },
           {
               "title": "Lab 4: Deploy Siebel CRM",

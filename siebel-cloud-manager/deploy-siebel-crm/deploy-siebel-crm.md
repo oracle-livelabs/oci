@@ -19,8 +19,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-* GitLab and SCM Instances
-* GitLab Access Token
+* OCI Devops and SCM Instances
 
 ## Task 1: Generate an OCI User Auth Token
 
@@ -70,10 +69,31 @@ We're now ready to use SCM to deploy Siebel CRM on OCI. To do this, we shall fir
          "industry": "Financial Services"
       },
       "infrastructure": {
-         "gitlab_url": "https://{Public IP of Gitlab Instance}",
-         "gitlab_accesstoken": "{Gitlab_Access_Token}",
-         "gitlab_user": "root",
-         "gitlab_selfsigned_cacert": "/home/opc/certs/rootCA.crt"
+        "git": {
+            "git_type": "byo_git",
+            "byo_git": {
+                "git_protocol_type": "http",
+                "git_scm_repo_url": "https://devops.scmservice.***.oci.oraclecloud.com/namespaces/***/repositories/livelabs-flux",
+                "git_scm_repo_branch": "main",
+                "git_scm_flux_folder": "scm-flux",
+                "git_helm_repo_url": "https://devops.scmservice.***.oci.oraclecloud.com/namespaces/***/repositories/livelabs-helm",
+                "git_helm_repo_branch": "main",
+                "git_accesstoken": "{User_Auth_Token}",
+                "git_user": "{tenancy_name}/{username}"
+            }
+        },
+        "load_balancer_type": "public",
+        "kubernetes": {
+            "kubernetes_type": "OKE",
+            "oke": {
+                "oke_node_count": 3,
+                "oke_node_shape": "VM.Optimized3.Flex",
+                "oke_node_shape_config": {
+                    "memory_in_gbs": "60",
+                    "ocpus": "4"
+                }
+            }
+        }
       },
       "database": {
          "db_type": "ATP",
@@ -93,12 +113,6 @@ We're now ready to use SCM to deploy Siebel CRM on OCI. To do this, we shall fir
          }
       },
       "size": {
-         "kubernetes_node_shape": "VM.Standard.E4.Flex",
-         "kubernetes_node_count": 3,
-         "node_shape_config": {
-            "memory_in_gbs": 20,
-            "ocpus": 2
-         },
          "ses_resource_limits": {
             "cpu": "2",
             "memory": "15Gi"
@@ -135,11 +149,11 @@ We're now ready to use SCM to deploy Siebel CRM on OCI. To do this, we shall fir
 
 **Note:**
 
-The passwords you create in your vault for the auth_info section need to comply with the database password requirements, which are currently set to the most restrictive across all supported database types, namely DBCS. This means your actual password, as of the time of writing, needs to 9 to 30 characters long and contain at least 2 upper case characters, 2 lower case, 2 special, and 2 numbers. The special characters must be in the following set:
+When creating passwords in Oracle Cloud Infrastructure (OCI) vaults for Siebel deployment, please note the following requirements:
 
-   * underscore _
-   * hash #
-   * dash -
+   * ATP database administrator user passwords must have at least 12 to 30 characters, contain one upper case character, one lower case character, and one number, and not include double quotes or the word "admin".
+   * Table owner passwords in the auth_info section of your vault should be 9 to 30 characters long and meet the database password requirements, which include at least two upper case characters, two lower case characters, two special characters (#), and two numbers.
+   * Wallet passwords can have a length of 8 to 60 characters using only alphanumeric characters, with no special characters allowed.
 
 Furthermore, don't include dictionary words in the password.
 
@@ -316,7 +330,7 @@ After sending a post request with our payload, the Siebel Cloud Manager will pre
 
    ![OCI Compartment Stacks](./images/oci-compartment-stacks.png) 
 
-4. Click on the stack name (not the Gitlab one) and then drill down on the job name.
+4. Click on the stack name and then drill down on the job name.
 
    ![OCI Stack Job Progress](./images/oci-stack-job-progress.png) 
 
@@ -358,6 +372,6 @@ In the next lab, you can view and manage the Siebel's Kubernetes Cluster to conn
 
 ## Acknowledgements
 
-* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
+* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect;Rosmin Siby Cherickal, Software Engineer
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
-* **Last Updated By/Date** - Duncan Ford, Software Engineer, May 2024
+* **Last Updated By/Date** - Rosmin Siby Cherickal, Software Engineer, July 2025

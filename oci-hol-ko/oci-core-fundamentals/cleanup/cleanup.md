@@ -50,5 +50,5 @@
 
 ## Acknowledgements
 
-* **Author** - DongHee Lee
-* **Last Updated By/Date** - DongHee Lee, March 2023
+- **Author** - DongHee Lee, March 2023
+- **Last Updated By/Date** - DongHee Lee, December 2025

@@ -45,46 +45,30 @@ To set up the Oracle Digital Assistant on the OCI tenancy, you will:
 1. Login into OCI
 
     To setup environment, you need OCI administrator's privileges. If you've got these privileges, login into OCI at [cloud.oracle.com](https://www.oracle.com/cloud/sign-in.html). the below image indicates SSO Login as an administrative user. If you have administrative privileges and complete access over a tenancy then you need not create any of the policies below steps.
-
-    ![SSO Login](images/sso-login.png)
-
+  
 2. If you do not have administrative privileges into tenancy, you might have to login as federated user, that is the user created by the administrator
-
-    ![Federated User Login](images/direct-signin.png)
-
+  
     In case you haven't got OCI administrator's privileges, you should ask your OCI administrator to perform the rest of the tasks in this lab.
 
 ## Task 2: Provision Oracle Digital Assistant from OCI services
  
 1.  On the Oracle Cloud Infrastructure Console Home page, click the Navigation Menu in the upper-left corner, select **Analytics & AI**, and then select **Digital Assistant**.
-
-  ![In the OCI console, select Analytics & AI, and then Digital Assistant, from right-hand side of the screen](./images/oda-navigation.png" ")
-
+  
 2.  On the OCI Digital Assistants page,  click on the **Create digital assistant instance** button
-
-    
-    ![Click click on the create digital assistant instance button near the center of the screen](./images/create-oda.png " ")
-
-
+  
 3.	Select the  compartment where you want to create the digital assistant, provide a name,  description for the digital assistant and select development as the shape and click **Create** button.
- 
-  ![Fill in the desired name, description, compartment and shape for ODA](./images/create-oda-options.png " ")
-
-
+   
 4.  The Oracle Digital Assistant is being provisioned and below screen shows the current status and the final status of the ODA provision.
  
-     The Oracle Digital Assistant is provisioned, click on **Service console** button.
-  ![ODA provisioned status](./images/oda-service-link.png " ")
+    The Oracle Digital Assistant is provisioned, click on **Service console** button. 
 
   In the sign-in box, provide the **Tenancy**  name and click on **Continue**
-
-  ![ODA provisioned status](./images/tenancyname.png " ") and Login as Options in Task 1
+ 
 
 ## Task 3:  Create Oracle Digital Assistant Skill
 
 1. After Logging into ODA, click on left navigation, select Development, 
-
-  ![ODA provisioned status](./images/create-skill-1.png " ")
+ 
 
 2. Click on **Skills**, click on create **New Skill**
 
@@ -181,7 +165,7 @@ To set up the Oracle Digital Assistant on the OCI tenancy, you will:
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - June 10th, 2023
+* **Last Updated By/Date** - Sept 26th, 2025
 
 ## Learn more
 

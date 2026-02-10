@@ -1,0 +1,56 @@
+{
+    "workshoptitle": "Create custom models using OCI Document Understanding and Label Studio",
+    "help": "livelabs-help-aisolutions_us_grp@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "The Introduction is always first. The title and contents menu title match for the Introduction.",
+            "filename": "../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "../get_started/get_started.md"
+        },
+        {
+            "title": "Lab0: Download and install Label Studio and dependencies",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "../lab0/lab0setup.md"
+        },
+        {
+            "title": "Lab1: Prepare files for a Label Studio dataset",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "../lab1/lab1setup.md"
+        },
+        {
+            "title": "Lab2: Setup OCI OCR Integration for Pre-Annotation",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "../lab2/lab2setup.md"
+        },
+        {
+            "title": "Lab3: Setup Label Studio",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "../lab3/lab3setup.md"
+        },
+        {
+            "title": "Lab4: Label your dataset",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "../lab4/lab4setup.md"
+        },
+        {
+            "title": "Lab5: Export dataset from Label Studio to OCI Object Storage",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "../lab5/lab5setup.md"
+        },
+        {
+            "title": "Lab6: Use the dataset to train a custom Document Understanding model",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "../lab6/lab6setup.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

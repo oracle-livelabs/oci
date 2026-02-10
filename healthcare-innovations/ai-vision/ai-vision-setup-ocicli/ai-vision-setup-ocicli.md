@@ -225,4 +225,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - 14th August, 2023.
+* **Last Updated By/Date** - Sept 26th, 2025

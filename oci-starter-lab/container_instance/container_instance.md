@@ -46,7 +46,7 @@ Please read the chapter: Introduction and Get Started.
     cat README.md
     </copy>
     ```
-    ![OCI Starter Editor](images/starter-editor.png)
+    ![OCI Starter Editor](../public_compute/images/starter-editor.png)
 
 ## Task 2: Main files
 
@@ -54,7 +54,7 @@ Please read the chapter: Introduction and Get Started.
     - Click *File* / *Open*
     - Choose the directory *starter*
     - Click *Open*
-    ![Editor File Open](images/starter-compute-dir.png)
+    ![Editor File Open](../public_compute/images/starter-compute-dir.png)
 2. The main files are:
 
    |             |            |           | Description |
@@ -78,7 +78,7 @@ Please read the chapter: Introduction and Get Started.
         - If not filled, the "db password" will be randomly generated
     - Ideally, you can also use an existing compartment if you have one. 
         - If not, the script will create a "oci-starter" compartment
-    ![Editor env.sh](images/starter-kubernetes-env.png)
+    ![Editor env.sh](../public_compute/images/starter-compute-env.png)
 
 ## Task 3: Starter.sh
 
@@ -139,4 +139,4 @@ Please also check the  "Lab 7 - How to Customize" to see how to customize this s
 
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
-* Last Updated - Jan, 20th 2025
+* Last Updated - June, 2nd 2025

@@ -1,0 +1,112 @@
+{
+  "name": "${{template.name}}",
+  "description": "${{template.description}}",
+  "use_case": "CONVERSATION_SEARCH",
+  "version": {
+    "template": "1.0.0",
+    "compatibility": [
+      "2.12.0",
+      "3.0.0"
+    ]
+  },
+  "workflows": {
+    "provision": {
+      "nodes": [
+        {
+          "id": "create_connector",
+          "type": "create_connector",
+          "user_inputs": {
+            "name": "${{create_connector.name}}",
+            "description": "${{create_connector.description}}",
+            "version": "${{create_connector.version}}",
+            "protocol": "${{create_connector.protocol}}",
+            "parameters": {
+              "endpoint": "${{create_connector.parameters.endpoint}}",
+              "auth_type": "resource_principal",
+              "model_name": "${{create_connector.parameters.model_name}}",
+              "prompt": "${{create_connector.parameters.prompt}}",
+              "max_tokens": "${{create_connector.parameters.max_tokens}}",
+              "temperature": "${{create_connector.parameters.temperature}}",
+              "frequency_penalty": "${{create_connector.parameters.frequency_penalty}}",
+              "presence_penalty": "${{create_connector.parameters.presence_penalty}}",
+              "top_p": "${{create_connector.parameters.top_p}}",
+              "compartment_id": "${{create_connector.compartment_id}}"
+            },
+            "credential": {
+              "key": "empty"
+            },
+            "actions": [
+              {
+                "action_type": "predict",
+                "method": "POST",
+                "url": "${{create_connector.actions.url}}",
+                "request_body": "${{create_connector.actions.request_body}}",
+                "pre_process_function": "${{create_connector.actions.pre_process_function}}",
+                "post_process_function": "${{create_connector.actions.post_process_function}}"
+              }
+            ]
+          }
+        },
+        {
+          "id": "register_llm_model",
+          "type": "register_remote_model",
+          "previous_node_inputs": {
+            "create_connector": "connector_id"
+          },
+          "user_inputs": {
+            "function_name": "remote",
+            "name": "${{register_remote_model.name}}",
+            "description": "${{register_remote_model.description}}",
+            "deploy": true
+          }
+        },
+        {
+          "id": "rag_tool",
+          "type": "create_tool",
+          "previous_node_inputs": {
+            "register_llm_model": "model_id"
+          },
+          "user_inputs": {
+            "type": "RAGTool",
+            "name": "RAGTool",
+            "parameters": {
+              "inference_model_id": "${{register_llm_model.model_id}}",
+              "embedding_model_id": "${{rag_tool.embedding_model_id}}",
+              "index": "${{rag_tool.index_name}}",
+              "embedding_field": "${{text_embedding.field_map.output}}",
+              "source_field": "[\"${{text_embedding.field_map.input}}\"]",
+              "query_type": "neural",
+              "input": "${{rag_tool.parameters.input}}",
+              "question": "${parameters.question}",
+              "prompt": "${{rag_tool.parameters.prompt}}",
+              "tenant_id": "${{rag_tool.parameters.tenant_id}}",
+              "include_output_in_agent_response": true
+            }
+          }
+        },
+        {
+          "id": "rag_agent",
+          "type": "register_agent",
+          "previous_node_inputs": {
+            "rag_tool": "tools"
+          },
+          "user_inputs": {
+            "name": "${{rag_agent.name}}",
+            "description": "${{rag_agent.description}}",
+            "parameters": {
+              "prompt": "${{rag_agent.prompt}}"
+            },
+            "memory": {
+              "type": "conversation_index"
+            },
+            "tools_order": [
+              "rag_tool"
+            ],
+            "app_type": "rag",
+            "type": "flow"
+          }
+        }
+      ]
+    }
+  }
+}

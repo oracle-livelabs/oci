@@ -119,7 +119,7 @@ Other abnormalities include:
 
 2. On OCI Console under Bucket that you have created, you can view the newly created folders and files
 
-    ![View folders](images/breast-cancer-bucket.png " ")
+ 
  
 This concludes this lab. You can **proceed now to the next lab**.
 
@@ -131,4 +131,4 @@ This concludes this lab. You can **proceed now to the next lab**.
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - May 23rd, 2023.
+* **Last Updated By/Date** - Sept 26th, 2025

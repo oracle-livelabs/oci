@@ -45,7 +45,7 @@ Please read the chapter: Introduction and Get Started.
     cat README.md
     </copy>
     ```
-    ![OCI Starter Editor](images/starter-editor.png)
+    ![OCI Starter Editor](./public_compute/images/starter-editor.png)
 
 ## Task 2: Main files
 
@@ -53,7 +53,7 @@ Please read the chapter: Introduction and Get Started.
     - Click *File* /  *Open*
     - Choose the directory *starter*
     - Click *Open*
-    ![Editor File Open](images/starter-compute-dir.png)
+    ![Editor File Open](../public_compute/images/starter-compute-dir.png)
 2. The main files are:
 
    |             |            |           | Description |
@@ -71,24 +71,14 @@ Please read the chapter: Introduction and Get Started.
    |             |            | oke       | Deployment to Kubernetes | 
    |             | target/    |           | Output directory  | 
 
-3. We will need an AUTH Token to login to the Docker Container Registry. Let's create one:
-    - Click on the top left icon
-    - Click your username
-    - In the menu on the right, choose Auth Tokens
-    - Click *Generate Token*
-    - Give a name 
-    - Click *Generate Token*
-    - Then copy the value ##AUTH-TOKEN##
-    ![Auth Token](images/starter-auth-token.png)
-4. Edit the env.sh file:
+5. Edit the env.sh file:
     - Choose the env.sh file.
     - Look for \_\_TO_FILL\_\_ in the file
-    - For TF\_VAR\_auth\_token, use the ##AUTH-TOKEN## value that you just above. 
     - For TF\_VAR\_database\_password, You may leave it like this.
         - If not filled, the "db password" will be randomly generated
     - Ideally, you can also use an existing compartment if you have one. 
         - If not, the script will create a "oci-starter" compartment
-    ![Editor env.sh](images/starter-kubernetes-env.png)
+    ![Editor env.sh](../public_compute/images/starter-compute-env.png)
 
 ## Task 3: Starter.sh
 
@@ -176,4 +166,4 @@ By default, the pods for the User Interface and Application are generated in the
 
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
-* Last Updated - Jan, 20th 2025
+* Last Updated - June, 2nd 2025

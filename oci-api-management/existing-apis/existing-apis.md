@@ -15,9 +15,6 @@ Estimated time: 20 min
     - Collect the APIs
 - Add existing API from Oracle API Gateway
 
-Watch the video below for a quick walk-through of the lab. 
-[Video](videohub:1_b50dk8f7)
-
 ### Prerequisites
 
 - Follow previous labs.
@@ -38,45 +35,83 @@ Watch the video below for a quick walk-through of the lab.
         ![Oracle Integration](images/apim-oic1.png)
     - Click *Create Instance*
     - Name *oic\_apim*
-    - Choose Integration Cloud Gen 2 (it takes more time, steps, with Gen3)
-    - Choose your version and license type
+    - Edition: *standard* or *enterprise*
+    - Shape: *Development*
+    - License Type: Choose your version and license type
     - Click *Create*
-    - When the instance is green, click *Service Console*
+    - When the instance is green,
+    - Copy the value of the OIC *Runtime URL* 
+        - Ex: https://oic-apim-xxxxxxxxx-fr.integration.eu-frankfurt-1.ocp.oraclecloud.com/
+        - Take note of the hostname: ##OIC_HOST## = oic-apim-xxxxxxxxx-fr.integration.eu-frankfurt-1.ocp.oraclecloud.com
+    - Click *Open Console*
 2. Install Samples
-    - In the Oracle Integration menu, choose *Integrations* / *Integrations* again
-    - Remove the filter with your username
-    - You will see some preinstalled samples. 
-    
+    - In the Oracle Integration home, in Getting Started, choose *Browse Store*
+    - Look for Echo
+    - Click *Get*
+    - Click on the icon "*tool*" to configure it
+    - Go to step 5 - Deployment
+    - Click the *Activate* button
+    - In the dialog, again *Activate*
+
         ![Oracle Integration - Samples](images/apim-oic2.png)
 
-    - Hover your mouse on the first line (Echo) and activate the integration
-    - In the dialog, click *Activate* again
-    - Do the same for several other integrations
-
+    - If you go in the top-left Menu / Projects, you should see the sample project 
+    
         ![Oracle Integration - Samples](images/apim-oic3.png)
+3. Create an IDCS Application
+    - To be able to call the OIC3 APIs, we need to 
+        - Create an IDCS application with a kind of user/password ( CLIENT\_ID and CLIENT\_SECRET )
+        - And give it right to call OIC APIS.
+    - In OCI Console, go to *Identity and Security*, then *Domain*
+    - Open your domain
+    - Copy the Domain URL and keep only the host name ##IDCS_HOST##. ex: idcs-xxxxxxx.identity.oraclecloud.com
+    - Open the tab *Integrated Application*
+    - Click *Add Application*
+        ![Oracle Integration - Confidential](images/apim-confidential1.png)
+    - Choose *Confidential*
+    - Click *Launch workflow*
+    - Name: *OIC3*
+    - Description: *OIC3*
+    - Click *Submit*
+    - Go in the tab *OAuth Configuration*
+        ![Oracle Integration - Confidential](images/apim-confidential2.png)
+    - Click *Edit OAuth Configuration*
+    - Choose *Configure this application as a client now*
+    - In Autorization, check *Client credentials* and *Refresh Token*
+    - Check Client IP address: *Anywhere*,
+    - In Token issuance policy, click *Add Scope* and search for your OIC instance, add it.
+    - Take note of the scope. #SCOPE# ex: https://xxxxxxxxxxxx.integration.eu-frankfurt-1.ocp.oraclecloud.com:443urn:opc:resource:consumer::all
+    - Click *Submit*. The confidential app is created.
+    - Click *Action* / *Activate*
+    - In this screen, note the ##CLIENT\_ID## and ##CLIENT\_SECRET##
+       ![Oracle Integration - Confidential](images/apim-confidential3.png)
+4. Add rights to the IDCS Application
+    - Now go back to Domains and go in tab Oracle Cloud Services tab and click on OIC Gen 3 Instance that we want to access.
+    - Go in the tab *Application roles* 
+        ![Oracle Integration - Confidential](images/apim-confidential4.png)
+    - Click *ServiceAdministration* and add the confidential app that we just created.
+        ![Oracle Integration - Confidential](images/apim-confidential5.png)
 
-3. Note the host name of OIC from the URL (##OIC\_HOST##): ex: oic-apim-xxxxx-fr.integration.ocp.oraclecloud.com
-4. Go back the APEX API Portal (##PORTAL\_URL##)
-    - Click on the menu 
-    - Then *Discover Source*
-5. Click *Oracle Integration Credentials* 
-    - For OCI Username, enter ##USERNAME##
-    - For Password, enter ##PASSWORD##
+## Task 3. Create OIC Source
 
-        ![Oracle Integration - Samples](images/apim-oic-cred.png)
+Go back the APEX API Portal (##PORTAL\_URL##)
+- Click on the menu 
+- Then *Discover Source*
 
-It will allow the database to call the OIC URLs
-
-### 3. Create OIC Source
-
-1. Still in the Source screen.
-    - Click *Create Source*
-    - Source Type *Oracle Integration 2*
-    - Oracle Integration Host: ##OIC\_HOST##
+1. Click *Create Source*
+    - Type: Oracle Integration Cloud 3 
+    - OIC Host: ##OIC_HOST## 
+    - IDCS Host: ##IDCS_HOST## 
+    - SCOPE: ##SCOPE## 
     - Click *Create*
-        ![Oracle Integration - Credentials](images/apim-source-oic.png)
+    ![Oracle Integration - Samples](images/apim-discover-source.png)
+2. Click *Oracle Integration Credentials*
+    - Username: ##CLIENT\_ID##
+    - Password: ##CLIENT\_SECRET##
+    - Click *Create*
+    ![Oracle Integration - Samples](images/apim-discover-source2.png)
 
-## Task 3: (optional) Add existing API from API Gateway
+## Task 4: (optional) Add existing API from API Gateway
 
 1. Get APIW OCID
     - Please find back the Compartment OCID that was used to create the API Gateway in Lab 2 (Cloud Native). (##COMPARTMENT\_OCID##)
@@ -93,7 +128,7 @@ It will allow the database to call the OIC URLs
 
         ![Oracle Integration - Credentials](images/apim-source-apigw.png)
 
-## Task 4: Discover and Test
+## Task 5: Discover and Test
 
 1. Still in the Source screen.
     - Click *Discover All*
@@ -159,7 +194,7 @@ It will allow the database to call the OIC URLs
        curl -k -u ##USER##:##PASSWORD## https://##OIC_HOST/ic/api/integration/v1/integrations | jq .  
        ```
     - Work-around: Wait 2/5 mins and it works.
-   
+
 ## Acknowledgements
 * **Author** - Marc Gueury / Phil Wilkins /  Robert Wunderlich  / Shyam Suchak / Tom Bailiu / Valeria Chiran
-* **Last Updated By/Date** - Marc Gueury, May 2024
+* **Last Updated By/Date** - Marc Gueury, June 2025

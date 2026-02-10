@@ -33,33 +33,26 @@ This lab assumes you have:
 ## Task 1: Create OCI Bucket
 
 1. Login to cloud.oracle.com from the top left navigation and select bucket under the storage menu.
-
-    ![Navigate to Vision](images/storage-bucket.png " ")
+ 
 
 2. Create a bucket under the compartment of your choice, we would need this bucket to upload temporarily files of document understanding
- 
-    ![Navigate to Vision](images/create-bucket.png " ")
-
+   
 ## Task 2: Text Extraction
 
 1. **Document understanding** services can be accessed under **Analytics & AI** Services from the top left navigation menu.
-
-    ![Navigate to Vision](images/ai-services.png " ")
  
-1. Text Extraction: Provides word-level and line level text as well as the bounding box coordinates of where the text is located. Optionally, you can create a searchable PDF which embeds a transparent layer on top of a document image in PDF format to make it searchable by keywords.
-
-2. Select **Text Extraction** in the left navigation and upload this sample image 
  
-    ![Navigate to Vision](images/text-extract.png " ")
+2. Text Extraction: Provides word-level and line level text as well as the bounding box coordinates of where the text is located. Optionally, you can create a searchable PDF which embeds a transparent layer on top of a document image in PDF format to make it searchable by keywords.
 
-3. Select **Local files**, and Upload any sample image that contains text to extract, for example, the image as shown below.
+23. Select **Text Extraction** in the left navigation and upload this sample image 
+  
+
+4. Select **Local files**, and Upload any sample image that contains text to extract, for example, the image as shown below.
  
     ![Navigate to Vision](images/doc-understand.png " ")
 
-4. Once **Text Extraction** service is completed the response. The output will be as shown below.
-
-    ![Navigate to Vision](images/text-extract-2.png " ")
-
+5. Once **Text Extraction** service is completed the response. The output will be as shown below.
+  
     The request and response JSON file will be as shown below
 
     ```json
@@ -89,7 +82,7 @@ This lab assumes you have:
     </copy>
     ```
 
-5. Expand *Response* and observe the JSON response with prediction results.
+6. Expand *Response* and observe the JSON response with prediction results.
 
     ```json
         <copy>
@@ -324,4 +317,4 @@ This lab assumes you have:
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - August 11th, 2023
+* **Last Updated By/Date** - Sept 26th, 2025

@@ -35,34 +35,30 @@ Basic data labeling tool is provided within OCI. With this data labeling tool, y
 But before you continue, you need to perform the first step, **Create Dataset** based on your object storage based image library.
 
 1. Navigate to Data Labeling page. From the **Navigator** menu select **Analytics & AI** and then **Data Labeling**.
-
-    ![Navigate to Data Labeling](images/data-label.png " ")
+ 
 
 2. Go to datasets. Click on **Datasets** link under **Data Labeling** on the left side of the page.
-
-    ![Open Datasets page](images/open-datasets-page.png " ")
+ 
 
 3. Create a new dataset. This will open **Dataset list** page in selected compartment (make sure you are in correct compartment as you might need to change compartment to the one you have created for this workshop).   
   
     Select *Images* from **Dataset format** and *Single label* for **Annotation class**.
- 
-    ![Create a new dataset](images/create-bc-dataset.png " ") 
-
+  
     Click **Next**
   
 4. Click *Select from Object storage* and select *Object storage bucket location* where the Breast cancer images have been uploaded.
-  
-    ![Create a new dataset](images/create-bc-dataset-2.png " ")
+   
   
 5. Add labels
-
-    ![Create a new dataset](images/create-bc-dataset-3.png " ")
-
+  
     Enter two labels: **BREAST\-WITH\-CANCER**, **NORMAL\-BREAST** in **Labels set** field.
 
     Click **Next** and Review the details provided and click **Create**
- 
-    ![Create a new dataset](images/create-bc-dataset-4.png " ")
+
+6. Your vision model will look like as shown below, for example **Lung Cancer Image Classification Model**, Here you can upload new custom images and check for the Model confidence score and train the model further if required. 
+
+    ![Data labeling on Github](./images/vision-model.png " ")
+  
  
 ## Task 2: Bulk image labeling
 
@@ -163,12 +159,12 @@ But before you continue, you need to perform the first step, **Create Dataset** 
 ## Task 3: Verify Bulk Data labeled images
 
 1. Verify if all the files have been labeled by our python code.
-
-    ![Data Labeling is completed](images/verify-bulklabel.png " ")
+ 
 
 2. We can click on the image and update label if required or verify the label
 
-    ![Data Labeling is completed](images/normal-label.png " ")
+Please refer [OCI Data Labeling Service](https://docs.oracle.com/en-us/iaas/Content/data-labeling/using/home.htm) for more details 
+ 
   
 This concludes this lab. You can **proceed to the next lab**.
 
@@ -178,4 +174,4 @@ This concludes this lab. You can **proceed to the next lab**.
  
 ## Acknowledgements
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - August 11th, 2023.
+* **Last Updated By/Date** - Sept 26th, 2025.

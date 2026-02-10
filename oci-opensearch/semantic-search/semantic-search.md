@@ -217,8 +217,8 @@ Make note of the model ID returned when you register and deploy the model.
                     "engine":"lucene",
                     "space_type": "l2",
                     "parameters":{
-                        "m":512,
-                        "ef_construction": 245
+                        "m":32,
+                        "ef_construction": 200
                     }
                 }
             },
@@ -523,4 +523,4 @@ Alternatively, you can use the _predict endpoint, as shown in the following exam
 ## Acknowledgements
 
 * **Author** - Landry Kezebou Yankam
-* **Last Updated By/Date** - George Csaba, June 2022
+* **Last Updated By/Date** - Landry Kezebou, September 2025

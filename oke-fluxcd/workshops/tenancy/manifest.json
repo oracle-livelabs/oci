@@ -1,0 +1,38 @@
+{
+    "workshoptitle": "Use FluxCD to deploy workloads in OKE",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "The Introduction is always first. The title and contents menu title match for the Introduction.",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+        "title": "Getting Started",
+        "description": "Get a Free Trial",
+        "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+        },
+        {
+            "title": "Lab 1: Provision of OKE resources",
+            "description": "Provision of OKE resources",
+            "filename": "../../provision/provision.md"
+        },
+        {
+            "title": "Lab 2: Bootstrap of FluxCD with OKE and Github",
+            "filename": "../../fluxcd-setup/bootstrap.md"
+        },
+        {
+            "title": "Lab 3: Deploy of nginx app with FluxCD",
+            "filename": "../../fluxcd-deployment/deployment.md"
+        },
+        {
+            "title": "Lab 4: Cleanup the environment",
+            "filename": "../../cleanup/cleanup.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
