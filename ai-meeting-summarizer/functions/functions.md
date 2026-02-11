@@ -29,25 +29,33 @@ This lab assumes you have:
 2. Enter:
 
    - Name: ai-ms-app
-   - Compartment: ai-meeting-summarizer
+   - VCN Compartment: ai-meeting-summarizer
    - VCN: ai-ms-vcn
+   - Subnets Compartment: ai-meeting-summarizer
    - Subnet: ai-ms-private-subnet (Private)
    - Registry: Select your OCIR repo (or create one)
+   - Shape: GENERIC_ARM
 
 3. Click Create.
 
+    ![Resource Manager](images/app.png)
+
 ## Task 2: Configure Fn CLI and OCIR registry
 
-1. Open Cloud Shell (recommended).
+1. Click on the application you just created.
 
-2. Set your OCIR registry and login:
+2. Open Cloud Shell by pressing the computer icon in the top right corner.
+
+    ![Resource Manager](images/cloud-shell.png)
+
+3. Set your OCIR registry and login:
 
    ```
    fn update context registry <region-key>.ocir.io/<tenancy-namespace>/<repo>
    docker login <region-key>.ocir.io
    ```
 
-3. Verify Functions context:
+4. Verify Functions context:
 
    ```
    fn list contexts
