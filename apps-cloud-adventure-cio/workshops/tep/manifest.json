@@ -15,16 +15,16 @@
             "filename": "../../02-configure-prc/configure-prc.md"
         },
         {
-            "title": "Lab 3: Extend the UI",
-            "filename": "../../03-extend-prc/extend-prc.md"
-        },
-        {
-            "title": "Lab 4: Create an AI Agent",
+            "title": "Lab 3: Create an AI Agent",
             "filename": "../../07a-rag-agent-prc/rag-agent-prc.md"
         },
         {
-            "title": "Lab 5: Assemble an AI Agent Team",
+            "title": "Lab 4: Assemble an AI Agent Team",
             "filename": "../../07d-pre-agent-team-prc/pre-agent-team-prc.md"
+        },
+        {
+            "title": "Lab 5: Extend the UI",
+            "filename": "../../03-extend-prc/extend-prc.md"
         },
         {
             "title": "Lab 6: Analytics",
