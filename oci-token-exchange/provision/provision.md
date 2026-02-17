@@ -51,8 +51,8 @@ outputs.tf      terraform.auto.tfvars   versions.tf
 
 2. Update the variables in file *variables.auto.example*
 
- - To understand the variables please open and read the README.md file
- - For your reference here are the variables description
+- To understand the variables please open and read the README.md file
+- For your reference here are the variables description
 
 ```text
 - conf_file_prof_reg
