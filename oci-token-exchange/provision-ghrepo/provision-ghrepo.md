@@ -20,7 +20,7 @@ This lab assumes you have:
 * Administrator privileges or sufficient access rights to create and manage Integrated App, Service User, Group, IAM Policies in your tenancy.
 * Command line git installed
 * OCI CLI installed and configured
-* Github CLI installed and authenticated with your Github account
+* Github CLI (gh) installed and authenticated with your Github account
 
 ## Task 1: Create your private Github repo
 

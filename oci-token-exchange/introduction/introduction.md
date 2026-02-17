@@ -36,8 +36,8 @@ This lab assumes you have:
 * Administrator privileges or sufficient access rights to create and manage Integrated App, Service User, Group, IAM Policies in your tenancy.
 * The Lab requires you to run a Bash/Shell script so the best would be to run the Lab from a Unix like machine 
 * Github CLI must be installed and configured for your own Github account
-* git installed
-* terraform installed
+* Command line git installed
+* Terraform installed
 
 ### Learn More
 

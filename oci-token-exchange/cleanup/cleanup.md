@@ -74,7 +74,7 @@ This lab assumes you have:
      ```
     - At this point all the resources are removed
 
-End of LiveLab – You have successfully used Token exchange authenication from Github Action!
+End of LiveLab – You have successfully used Token exchange authentication from Github Action!
 
 ## Acknowledgements
 

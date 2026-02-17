@@ -111,7 +111,7 @@ This lab assumes you have:
      terraform plan
      </copy>
      ```
-    - you should see someting like 
+    - you should see someting like: 
      ```text
      terraform init
      Initializing the backend...
@@ -152,7 +152,7 @@ This lab assumes you have:
        + user_name     = "TokenExDemoUsr"
        + user_ocid     = (known after apply)
      ```
-    - Review the output of *terraform plan* command and if you happy with the output then continue with the next step
+    - review the output of *terraform plan* command and if you happy with the output then continue with the next step
 
 4. Run *terraform apply* from the same folder and answer with _yes_
        ```
