@@ -51,8 +51,8 @@ outputs.tf      terraform.auto.tfvars   versions.tf
 
 2. Update the variables in file *variables.auto.example*
 
-- To understand the variables please open and read the README.md file
-- For your reference here are the variables description
+ - To understand the variables please open and read the README.md file
+ - For your reference here are the variables description
 
 ```text
 - conf_file_prof_reg
@@ -101,9 +101,7 @@ A Group will be created and SErvice User will be attached to it. This is the nam
 ```
 
 3. Once all of these variables are configured you can apply the configuration
-
 - go to *oci-token-exchange-resources* folder
-
 - rename the *variables.auto.example* to *variables.auto.tfvars*
 ```
 <copy>
@@ -111,16 +109,13 @@ mv variables.auto.example variables.auto.tfvars
 </copy>
 ```
 - run the commands below:
-
 ```
 <copy>
 terraform init
 terraform plan
 </copy>
 ```
-
 - you should see someting like 
-
 ```text
 terraform init
 Initializing the backend...
@@ -146,7 +141,6 @@ If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
-
 - after you run *terraform plan* you should see something like:
 ```text
 Plan: 6 to add, 0 to change, 0 to destroy.
@@ -163,9 +157,7 @@ Changes to Outputs:
   + user_ocid     = (known after apply)
 ```
 - Review the output of *terraform plan* command and if you happy with the output then continue with the next step
-
 4. Run *terraform apply* from the same folder and answer with _yes_
-
 ```
 <copy>
 terraform apply
