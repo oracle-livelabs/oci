@@ -24,7 +24,7 @@ This lab assumes you have:
 
 ## Task 1: Provision OCI resources
 
-1. using *git* you will clone the repository that contains the Terraform code to deloy the OCI resources
+1. Using *git* you will clone the repository that contains the Terraform code to deloy the OCI resources
 
 - Run the command below to clone the repo
 
@@ -34,7 +34,7 @@ git clone git@github.com:franciscvass/oci-token-exchange-resources.git
 </copy>
 ```
 
-- The above command should download the repo in _oci-token-exchange-resources_ folder
+- The above command should download the repo in *oci-token-exchange-resources* folder
 
 - Run the command below to check:
 ```
@@ -49,7 +49,7 @@ main.tf         README.md       variables.tf
 outputs.tf      terraform.auto.tfvars   versions.tf
 ```
 
-2. Update the variables in file _variables.auto.example_
+2. Update the variables in file *variables.auto.example*
 
 - To understand the variables please open and read the README.md file
 - For your reference here are the variables description
@@ -102,9 +102,9 @@ A Group will be created and SErvice User will be attached to it. This is the nam
 
 3. Once all of these variables are configured you can apply the configuration
 
-- go to _oci-token-exchange-resources_ folder
+- go to *oci-token-exchange-resources* folder
 
-- rename the _variables.auto.example_ to _variables.auto.tfvars_
+- rename the *variables.auto.example* to *variables.auto.tfvars*
 ```
 <copy>
 mv variables.auto.example variables.auto.tfvars
@@ -147,7 +147,7 @@ rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
 
-- after you run _terraform plan_ you should see something like:
+- after you run *terraform plan* you should see something like:
 ```text
 Plan: 6 to add, 0 to change, 0 to destroy.
 
@@ -162,10 +162,9 @@ Changes to Outputs:
   + user_name     = "TokenExDemoUsr"
   + user_ocid     = (known after apply)
 ```
+- Review the output of *terraform plan* command and if you happy with the output then continue with the next step
 
-- Review the output of _terraform plan_ command and if you happy with the output then continue with the next step
-
-4. Run _terraform apply_ from the same folder and answer with _yes_
+4. Run *terraform apply* from the same folder and answer with _yes_
 
 ```
 <copy>
