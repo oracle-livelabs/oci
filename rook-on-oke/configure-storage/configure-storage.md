@@ -30,9 +30,9 @@ Block storage provides persistent volumes that can be mounted by a single pod (R
 1. Review the CephBlockPool configuration:
 
    Download the file [ceph-block-pool.yaml](./files/ceph-block-pool.yaml). The file `ceph-block-pool.yaml` contains the block pool and storage class definition. Key settings include:
-   - `replicated.size: 3`: Data is replicated across 3 OSDs
-   - `failureDomain: host`: Each replica on a different host
-   - `allowVolumeExpansion: true`: Volumes can be resized
+    - `replicated.size: 3`: Data is replicated across 3 OSDs
+    - `failureDomain: host`: Each replica on a different host
+    - `allowVolumeExpansion: true`: Volumes can be resized
 
 2. Create the block pool and storage class:
 
