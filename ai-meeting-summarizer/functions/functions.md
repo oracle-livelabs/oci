@@ -40,29 +40,178 @@ This lab assumes you have:
 
     ![Resource Manager](images/app.png)
 
-## Task 2: Configure Fn CLI and OCIR registry
+## Task 2: Create Transcribe Function
 
-1. Click on the application you just created.
+1. Click on the application you just created → Functions tab → Create in code editor.
 
-2. Open Cloud Shell by pressing the computer icon in the top right corner.
+2. Once the editor loads, the application folder should automatically be opened, if not follow these steps, otherwise skip to step 3
 
-    ![Resource Manager](images/cloud-shell.png)
+   - The left hand side will have a list of your compartments, press on the compartment that you created the function in.
+   - It will show a drop down for applications, open it and you should see the name of the function you just created
 
-3. Set your OCIR registry and login:
+3. Right click on the function you just created and press Create function... → Create from a template  → select Python
 
+    ![Resource Manager](images/func.png)
+
+    ![Resource Manager](images/template.png)
+
+    ![Resource Manager](images/language.png)
+
+4. Enter transcriber as your function name and press enter.
+
+5. Edit the func.yaml file by selecting the file and making sure it reflects the below information:
+
+   ```yaml
+   schema_version: 20180708
+   name: transcriber
+   version: 0.0.1
+   runtime: python
+   entrypoint: /python/bin/fdk /function/func.py handler
+   memory: 256
+   timeout: 300
    ```
-   fn update context registry <region-key>.ocir.io/<tenancy-namespace>/<repo>
-   docker login <region-key>.ocir.io
-   ```
 
-4. Verify Functions context:
+6. Edit the requirements.txt file by selecting the file and making sure it reflects the below information:
 
-   ```
-   fn list contexts
-   fn use context default
-   ```
+   '''text
+   fdk
+   oci
+   '''
 
-> Note: Replace <region-key> (e.g., iad), <tenancy-namespace>, and <repo> with your values.
+7. Edit the func.py file by selecting the file, deleting the current contents and pasting the below python code:
+
+   '''text
+   fdk
+   oci
+   '''
+
+   '''python
+   import io
+   import json
+   import os
+   import logging
+   import oci
+   from fdk import response
+
+   # Set up logging
+   logger = logging.getLogger()
+   logger.setLevel(logging.INFO)
+
+   def handler(ctx, data: io.BytesIO = None):
+      """
+      Transcribe Function: Triggered when video/audio files are uploaded to the bucket.
+      Creates a transcription job using OCI AI Speech service.
+      """
+      logger.info("Inside Transcribe Function")
+      try:
+         raw_body = data.getvalue()
+         logger.info(f"Raw body: {raw_body}")
+         body = json.loads(raw_body)
+
+         namespace = body["data"]["additionalDetails"]["namespace"]
+         bucket_name = body["data"]["additionalDetails"]["bucketName"]
+         resource_name = body["data"]["resourceName"]
+         compartment_id = body["data"]["compartmentId"]
+
+         logger.info(f"Namespace: {namespace}")
+         logger.info(f"Bucket Name: {bucket_name}")
+         logger.info(f"Resource Name: {resource_name}")
+         logger.info(f"Compartment Id: {compartment_id}")
+
+      except (Exception, ValueError) as ex:
+         logger.error(f"Error parsing json payload: {str(ex)}")
+         return response.Response(
+               ctx,
+               response_data=json.dumps({"error": f"Error parsing Event json payload: {str(ex)}"}),
+               headers={"Content-Type": "application/json"},
+               status_code=400
+         )
+
+      # Get target bucket from configuration
+      try:
+         cfg = ctx.Config()
+         target_bucket = cfg.get("RESULT_BUCKET")
+         # If the target_bucket is not configured then the source bucket will be used
+         if target_bucket is None:
+               target_bucket = bucket_name
+               logger.info(f"RESULT_BUCKET not configured, using source bucket: {bucket_name}")
+         else:
+               logger.info(f"Using target bucket: {target_bucket}")
+      except Exception as ex:
+         logger.error(f"ERROR: Missing configuration keys: {str(ex)}")
+         target_bucket = bucket_name
+
+      try:
+         signer = oci.auth.signers.get_resource_principals_signer()
+         ai_speech_client = oci.ai_speech.AIServiceSpeechClient(config={}, signer=signer)
+
+         # CRITICAL: Create a sanitized display name (remove invalid characters)
+         # The displayName must contain only alphanumerics, dashes, or underscores
+         base_name = os.path.basename(resource_name)
+         base_id = os.path.splitext(base_name)[0]  # Remove file extension
+         # Replace any invalid characters (spaces, dots, etc.) with underscores
+         clean_id = ''.join(c if c.isalnum() or c in '-_' else '_' for c in base_id)
+         display_name = f"Transcription_{clean_id}"
+
+         logger.info(f"Creating transcription job with display name: {display_name}")
+
+         create_transcription_job_response = ai_speech_client.create_transcription_job(
+               create_transcription_job_details=oci.ai_speech.models.CreateTranscriptionJobDetails(
+                  display_name=display_name,  # REQUIRED: Must be alphanumeric, dashes, or underscores only
+                  compartment_id=compartment_id,
+                  input_location=oci.ai_speech.models.ObjectListInlineInputLocation(
+                     location_type="OBJECT_LIST_INLINE_INPUT_LOCATION",
+                     object_locations=[
+                           oci.ai_speech.models.ObjectLocation(
+                              namespace_name=namespace,
+                              bucket_name=bucket_name,
+                              object_names=[resource_name]
+                           )
+                     ]
+                  ),
+                  output_location=oci.ai_speech.models.OutputLocation(
+                     namespace_name=namespace,
+                     bucket_name=target_bucket,
+                     prefix=f"transcriptions/{base_name}/"  # Organize by original filename
+                  ),
+                  normalization=oci.ai_speech.models.TranscriptionNormalization(
+                     is_punctuation_enabled=True,  # Changed to True for better readability
+                     filters=[
+                           oci.ai_speech.models.ProfanityTranscriptionFilter(
+                              type="PROFANITY",
+                              mode="MASK"
+                           )
+                     ]
+                  )
+               )
+         )
+
+         job_id = create_transcription_job_response.data.id
+         logger.info(f"Transcription job created successfully with ID: {job_id}")
+
+         logger.info("Transcribe Function Completed")
+         return response.Response(
+               ctx,
+               response_data=json.dumps({
+                  "message": "Transcription job created successfully",
+                  "jobId": job_id,
+                  "displayName": display_name,
+                  "resourceName": resource_name
+               }),
+               headers={"Content-Type": "application/json"}
+         )
+
+      except Exception as ex:
+         logger.error(f"Error creating transcription job: {str(ex)}")
+         return response.Response(
+               ctx,
+               response_data=json.dumps({
+                  "error": f"Error creating transcription job: {str(ex)}"
+               }),
+               headers={"Content-Type": "application/json"},
+               status_code=500
+         )
+   '''
 
 ## Task 3: Initialize and deploy the Transcribe Function
 
