@@ -44,7 +44,7 @@ This lab assumes you have:
 
 1. Click on the application you just created → Functions tab → Create in code editor.
 
-2. Once the editor loads, the application folder should automatically be opened, if not follow these steps, otherwise skip to step 3
+2. Once the editor loads, the application folder should automatically open on the left hand side, if not follow these steps, otherwise skip to step 3
 
    - The left hand side will have a list of your compartments, press on the compartment that you created the function in.
    - It will show a drop down for applications, open it and you should see the name of the function you just created
@@ -57,7 +57,7 @@ This lab assumes you have:
 
     ![Resource Manager](images/language.png)
 
-4. Enter transcriber as your function name and press enter.
+4. Enter transcriber as your function name and press enter, which should populate a new function under your application on the left hand side.
 
 5. Edit the func.yaml file by selecting the file and making sure it reflects the below information:
 
@@ -79,11 +79,6 @@ This lab assumes you have:
    '''
 
 7. Edit the func.py file by selecting the file, deleting the current contents and pasting the below python code:
-
-   '''text
-   fdk
-   oci
-   '''
 
    '''python
    import io
@@ -211,6 +206,32 @@ This lab assumes you have:
                headers={"Content-Type": "application/json"},
                status_code=500
          )
+   '''
+
+## Task 3: Setup fn CLI & Deploy Transcriber
+
+1. In the code editor, right click on anyone of the files you edited (func.yaml, func.py, or requirements.txt) and select Open in terminal
+
+2. Using the terminal, set the context for your region, by taking the information under default in the first command and filling that information into the second command:
+
+   '''text
+   fn list context
+   fn use context <region>
+   '''
+
+   ![Resource Manager](images/region.png)
+
+3. Update the context with the function's compartment ID:
+
+   '''text
+   fn update context oracle.compartment-id <compartment_OCID>
+   '''
+
+4. Provide a unique repository name prefix to distinguish your function images from other people’s. Get the object storage namespace by looking at the details of any of the buckets prior, and the repo name is up to your own discretion. For the region key, follow the first command below and in the dictionary where the "is-home-region" value is true use the region key below it:
+
+   '''text
+   oci iam region-subscription list
+   fn update context registry <region-key>.ocir.io/<object_storage_namespace>/[repo-name-prefix]
    '''
 
 ## Task 3: Initialize and deploy the Transcribe Function
