@@ -18,8 +18,8 @@ This lab assumes you have:
 
 * An Oracle Cloud account.
 * Administrator privileges or sufficient access rights to create and manage Integrated App, Service User, Group, IAM Policies in your tenancy.
-* git installed
-* terraform installed
+* Git command line installed
+* Terraform installed
 * OCI CLI installed and configured
 
 ## Task 1: Provision OCI resources

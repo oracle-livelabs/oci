@@ -10,13 +10,13 @@ Estimated Time: 10 minutes
 
 Hands-on experience with:
 
-- set a Github Variable  
-- run a Github Action with gh client
-- review the Github Action logs
+- Set a Github Variable  
+- Run a Github Action with gh client
+- Review the Github Action logs
 
 ### **Prerequisites**
 
-* completion of previous Labs.
+* Completion of previous Labs.
 * Github CLI installed and authenticated with your Github account
 
 ## Task 1 — Run the Github Action workflow

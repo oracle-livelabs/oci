@@ -18,7 +18,7 @@ This lab assumes you have:
 * An Oracle Cloud account.
 * A Github account
 * Administrator privileges or sufficient access rights to create and manage Integrated App, Service User, Group, IAM Policies in your tenancy.
-* git installed
+* Github command line installed
 * OCI CLI installed and configured
 * Github CLI installed and authenticated with your Github account
 
@@ -40,10 +40,10 @@ This lab assumes you have:
 ## Task 2: Destroy the OCI resources
 
 1. Destroy the OCI resources create on Lab **Provision of the necessary resources**
-    - there is known issue which prevents you to terminate an Integrated App from Terraform if the App is active. For that reason you must set the App as inactive     first
-    - Login into UI in your Tenancy. Go to Domains/Integrated Application
-    - Locate the app created on Lab **Provision of the necessary resources**. This shoul be _TokenExDemoApp_ if you did not changed the name
-    - On the right three dots choose "Deactivate" like in image below
+    - there is a known issue which prevents you to terminate an Integrated App from Terraform if the App is active. For that reason you must set the App as inactive first
+    - login into UI in your Tenancy. Go to Domains/Integrated Application
+    - locate the app created on Lab **Provision of the necessary resources**. This shoul be _TokenExDemoApp_ if you did not changed the name
+    - on the right three dots choose "Deactivate" like in image below
 
     ![Deactivate Application](images/deactivate_app.png)
     - from within folder _oci-token-exchange-resources_ from where you run the Terraform to deploy the OCI resources run: 
@@ -72,7 +72,7 @@ This lab assumes you have:
      oci_identity_domains_app.this: Destruction complete after 1s
      oci_identity_domains_group.this: Destruction complete after 1s
      ```
-    - At this point all the resources are removed
+    - at this point all the resources were removed
 
 End of LiveLab – You have successfully used Token exchange authentication from Github Action!
 
