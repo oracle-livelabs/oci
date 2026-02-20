@@ -7,28 +7,28 @@
             "filename": "../../00-introduction/introduction.md"
         },
         {
-            "title": "Lab 1: Risk Management",
+            "title": "Lab 1: Access Controls & Governance",
             "filename": "../../01-risk-erp/risk-erp.md"
         },
         {
-            "title": "Lab 2: Configure",
+            "title": "Lab 2: Configure the UI",
             "filename": "../../02-configure-prc/configure-prc.md"
         },
         {
-            "title": "Lab 3: Extend",
-            "filename": "../../03-extend-prc/extend-prc.md"
-        },
-        {
-            "title": "Lab 4: Create AI",
+            "title": "Lab 3: Create an AI Agent",
             "filename": "../../07a-rag-agent-prc/rag-agent-prc.md"
         },
         {
-            "title": "Lab 5: Enable AI",
+            "title": "Lab 4: Assemble an AI Agent Team",
             "filename": "../../07d-pre-agent-team-prc/pre-agent-team-prc.md"
         },
         {
+            "title": "Lab 5: Extend the UI",
+            "filename": "../../03-extend-prc/extend-prc.md"
+        },
+        {
             "title": "Lab 6: Analytics",
-            "filename": "../../09-analytics/analytics.md"
+            "filename": "../../09-analytics-energy/analytics-energy.md"
         },
         {
             "title": "Need Help?",
