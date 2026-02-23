@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you’ll prepare the foundation for the AI Meeting Summarizer workflow. You will create a dedicated compartment, three Object Storage buckets (uploads, transcripts, and results), and an Event rule that triggers a Function whenever a new object is uploaded. This enables an event-driven pipeline on OCI with clear separation of data and least-privilege access.
+In this lab, you’ll prepare the foundation for the AI Meeting Summarizer workflow. You will create a dedicated compartment, three Object Storage buckets (uploads, transcripts, and results), networking dependencies, and policies. Creating these components will establish the foundations that the rest of the lab is built on
 
 Estimated Time: 20 minutes
 
@@ -40,7 +40,7 @@ This lab assumes you have:
 
 ## Task 2: Create Object Storage buckets and enable events
 
-Create two private buckets in the same region and namespace.
+Create three private buckets in the same region and namespace.
 
 A. Upload bucket
 
@@ -76,7 +76,7 @@ D. Enable Events
 
     ![Resource Manager](images/enable_events.png)
 
-3. Follow the same steps for the transcript bucket
+3. Follow the same steps for the transcripts bucket
 
 Note: Record your Object Storage namespace (visible at the top of Buckets page). You’ll use it in later labs.
 
@@ -99,6 +99,54 @@ Note: Record your Object Storage namespace (visible at the top of Buckets page).
     ![Resource Manager](images/pub_priv_sub.png)
 
 3. Click **Next → Create**.
+
+## Task 4: Create Dynamic Group
+
+1. Navigate to **Identity & Security → Identity → Domains**.
+
+2. Change the compartment to your root compartment.
+
+    ![Resource Manager](images/domain.png)
+
+3. Click on **Default → Dynamic Groups → Create dynamic group**.
+
+    * Name: ai_summary_dg
+    * Matching rules: Match all rules defined below
+    * Rule 1: All {resource.type = 'fnfunc', resource.compartment.id = '<ai_summary_compartment_OCID>'}
+
+4. Click **Create**.
+
+## Task 5: Create Policies
+
+1. Navigate to **Identity & Security → Identity → Policies**.
+
+2. Change the compartment to your AI meeting summarizer compartment.
+
+3. Click **Create Policy**
+
+    * Name: Events_policy
+    * Compartment: ai-meeting-summarizer
+    * Policy Builder (Show manual editor): Allow service cloudEvents to use functions-family in compartment ai-meeting-summarizer
+
+4. Click **Create**
+
+    ![Resource Manager](images/events.png)
+
+5. Click **Create Policy**
+
+    * Name: Functions_policy
+    * Compartment: ai-meeting-summarizer
+    * Policy Builder (Show manual editor):
+
+        * Allow dynamic-group ai_summary_dg to manage object-family in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai_summary_dg to manage ai-service-speech-family in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai_summary_dg to manage generative-ai-family in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai_summary_dg to manage logs in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai_summary_dg to use ons-topics in compartment ai-meeting-summarizer
+
+6. Click **Create**
+
+    ![Resource Manager](images/funcs.png)
 
 You may now **proceed to the next lab**.
 

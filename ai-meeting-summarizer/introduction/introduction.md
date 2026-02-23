@@ -6,8 +6,6 @@ In this hands-on workshop, you will build a meeting summarization flow using Ora
 
 Estimated Workshop Time: 1 hours 30 minutes
 
-*You may add an option video, using this format: [](youtube:YouTube video id)*
-
   [](youtube:H-C5dH3w1Dg)
 
 ### Objectives
@@ -21,12 +19,10 @@ In this workshop, you will learn how to:
 
 ### Prerequisites (Optional)
 
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. **Do NOT list** each previous lab as a prerequisite.*
-
 This lab assumes you have:
 
 * An Oracle account
-* Administrator privileges or sufficient access rights to create and manage OKE resources.
+* Administrator privileges or sufficient access rights to create and manage resources.
 * Access to a command-line environment such as **OCI Cloud Shell** (or a local setup) with `oci` CLI configured for your tenancy.
 
 ## Learn More
