@@ -12,14 +12,12 @@ In this lab, you will:
 
 - Create a Functions application.
 - Initialize, build, and deploy the Transcribe and Summary Python functions.
-- Configure function application and function-level variables.
-- Attach the Events rule action to the Transcribe Function and validate end-to-end.
 
 ### Prerequisites
 
 This lab assumes you have:
 
-- Access to OCI Cloud Shell or a local dev environment with Fn CLI configured.
+- Access to OCI Cloud Shell or a local dev environment.
 - Permissions to create Functions, attach policies, and publish to Notifications.
 
 ## Task 1: Create a Functions application
