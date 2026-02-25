@@ -576,6 +576,8 @@ This lab assumes you have:
          raise
    '''
 
+You may now **proceed to the next lab**.
+
 ## Learn More
 
 - OCI Functions: https://docs.oracle.com/iaas/Content/Functions/Concepts/functionsoverview.htm

@@ -37,7 +37,7 @@ You will publish summaries to this topic; subscribers receive an email.
 3. Click on the topic you just created **→ Subscriptions → Create Subscription**.
 
    - Protocol: Email
-   - Email: <your_email@yourdomain>
+   - Email: <your_email@domain>
 
 4. Click create.
 
@@ -61,13 +61,29 @@ Ensure new uploads trigger the transcriber function.
 
 2. Click Create Rule.
 
-> Optional: You may add a second rule that targets summarizer directly on transcript JSON creation (filter resourceName endsWith ".json"). This is not required if summarizer is already triggered by your design.
+    ![Resource Manager](images/rule.png)
+
+3. Create a second rule with the following information:
+
+   - Name: summarize
+   - Description: Trigger transcription func
+   - Rule conditions: Condition: Event Type, Service Name: Object Storage, Event Type: Object - Create
+   - (Click +Another Condition)Rule conditions: Condition: Attribute, Attribute Name: bucketName, Attribute Values: transcripts
+   - Actions: Action Type: Functions, Function Compartment: ai-meeting-summarizer, Function Application: ai-ms-app, Function: transcriber
+
+    ![Resource Manager](images/summarize.png)
 
 ## Task 3: Configure application-level variables
 
-1. Navigate to **Developer Services → Functions → Applications → ai-ms-app → Configuration → Manage configuration**.
+1. Navigate to **Analytics & AI → AI Services → Generative AI → Playground → Chat → View model details**.
 
-2. Click on Add configuration for every key, value pair below
+2. Select a model you want this workflow to use, click on the 3 dots on the right side and click Copy OCID and store that for later use.
+
+    ![Resource Manager](images/models.png)
+
+3. Navigate to **Developer Services → Functions → Applications → ai-ms-app → Configuration → Manage configuration**.
+
+4. Click on Add configuration for every key, value pair below
 
    - Key: GENAI_MODEL_ID, Value: <model_OCID>
    - Key: UPLOAD_BUCKET, Value: upload
@@ -78,37 +94,32 @@ Ensure new uploads trigger the transcriber function.
    - Key: RESULT_BUCKET, Value: transcripts
    - Key: COMPARTMENT_OCID, Value: <ai-meeting-summarizer-OCID>
 
-> Note: Messages over ~64 KB may be truncated by Notifications. Keep emails concise; store full content in Object Storage.
+    ![Resource Manager](images/config.png)
+
+5. Click Save changes.
 
 ## Task 4: Enable logging for both functions
 
 Create a Log Group and enable function logs for observability.
 
-1. Console → Observability & Management → Logging → Log Groups → Create Log Group.
+1. Navigate to **Observability & Management → Logging → Log Groups → Create Log Group**.
    - Name: ai-ms-log-group
    - Compartment: ai-meeting-summarizer
    - Create.
-2. Functions → Applications → ai-ms-app → Logs → Create Log.
-   - Log Group: ai-ms-log-group
-   - Log Name: transcriber-log
-   - Category: Function logs
-   - Create.
-3. Repeat for summarizer:
-   - Log Name: summarizer-log
-   - Category: Function logs
 
-> Tip: Use logs to trace event invocations and inspect errors (e.g., Speech job failure_details or Generative AI response issues).
+    ![Resource Manager](images/log_group.png)
 
-## Troubleshooting quick tips
+2. Navigate to **Developer Services → Functions → Applications → ai-ms-app → Monitoring**.
 
-- Speech job accepted but no transcript:
-  - Confirm a tenancy-level policy allows the AI Speech service to write to your results bucket. Without it, jobs may fail on output write.
-- Summarizer errors:
-  - Ensure GENAI_MODEL_ID is correct and clients use the same region. If SDK response shape varies, handle missing fields defensively.
-- Email not received:
-  - Ensure the subscription is CONFIRMED and the function’s Dynamic Group has permission to use ons-topics.
-- Permissions:
-  - Verify dynamic group policies in the ai-meeting-summarizer compartment are applied and the Events rule is Enabled.
+3. Under Logs in the Function Invocation Logs line click the 3 dots and select Enable log
+
+   - Compartment: ai-meeting-summarizer
+   - Log group: ai-ms-log-group
+   - Log name: ai-ms-logs
+
+    ![Resource Manager](images/monitoring.png)
+
+You may now **proceed to the next lab**.
 
 ## Learn More
 
