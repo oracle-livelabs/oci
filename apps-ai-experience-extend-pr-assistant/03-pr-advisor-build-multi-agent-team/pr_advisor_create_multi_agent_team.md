@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Now that you've build a new custom agent in the last lab, we will add the agent to our copy of the **Purchase Requisition Status Adivsor** template and create a supervisor agent to delegate the tasks to the appropriate agent(s).
+Now that you've built a new custom agent in the last lab, we will add the agent to our copy of the **Purchase Requisition Status Advisor** template and create a supervisor agent to delegate the tasks to the appropriate agent(s).
 Finally we'll test the completed agent team to understand what debugging capabilities are provided during the development process.
 
 Estimated Time: 15 minutes

@@ -15,67 +15,67 @@
             "filename": "../../01-security-ai/security-ai.md"
         },
         {
-            "title": "Lab 1: Risk Management (ERP)",
+            "title": "Lab 1: Access Controls & Governance (ERP)",
             "filename": "../../01-risk-erp/risk-erp.md"
         },
         {
-            "title": "Lab 1: Risk Management (SCM)",
+            "title": "Lab 1: Access Controls & Governance (SCM)",
             "filename": "../../01-risk-scm/risk-scm.md"
         },
         {
-            "title": "Lab 2: Configure (HCM)",
+            "title": "Lab 2: Configure the UI (HCM)",
             "filename": "../../02-configure-hcm/configure-hcm.md"
         },
         {
-            "title": "Lab 2: Configure (PRC)",
+            "title": "Lab 2: Configure the UI (PRC)",
             "filename": "../../02-configure-prc/configure-prc.md"
         },
         {
-            "title": "Lab 3: Extend (PRC)",
+            "title": "Lab 3: Extend the UI (PRC)",
             "filename": "../../03-extend-prc/extend-prc.md"
         },
         {
-            "title": "Lab 4: Extend w/ External AI (HCM)",
+            "title": "Lab 4: External AI (HCM)",
             "filename": "../../04-extend-oicai-hcm/extend-oicai-hcm.md"
         },
         {
-            "title": "Lab 4: Extend w/ External AI (PRC)",
+            "title": "Lab 4: External AI (PRC)",
             "filename": "../../04-extend-oicai-prc/extend-oicai-prc.md"
         },
         {
-            "title": "Lab 5a: Create AI (HCM)",
+            "title": "Lab 5a: Create an AI Agent (HCM)",
             "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
         },
         {
-            "title": "Lab 5b: Enable AI (HCM)",
+            "title": "Lab 5b: Assemble an AI Agent Team (HCM)",
             "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
         },
         {
-            "title": "Lab 5c: Embed and Enable AI (HCM)",
+            "title": "Lab 5c: Assemble an AI Agent Team and Embed (HCM)",
             "filename": "../../05c-embed-agent-hcm/embed-agent-hcm.md"
         },
         {
-            "title": "Lab 5d: Enable AI with pre-built Agent Team (HCM)",
+            "title": "Lab 5d: Assemble an AI Agent Team (HCM Template)",
             "filename": "../../05d-pre-agent-team-hcm/pre-agent-team-hcm.md"
         },
         {
-            "title": "Lab 6a: Create AI (SCM)",
+            "title": "Lab 6a: Create an AI Agent (SCM)",
             "filename": "../../06a-external-agent-scm/external-agent-scm.md"
         },
         {
-            "title": "Lab 6b: Enable AI (SCM)",
+            "title": "Lab 6b: Assemble an AI Agent Team (SCM)",
             "filename": "../../06b-embed-agent-scm/embed-agent-scm.md"
         },
         {
-            "title": "Lab 7a: Create AI (PRC)",
+            "title": "Lab 7a: Create an AI Agent (PRC)",
             "filename": "../../07a-rag-agent-prc/rag-agent-prc.md"
         },
         {
-            "title": "Lab 7b: Enable AI (PRC)",
+            "title": "Lab 7b: Assemble an AI Agent Team (PRC)",
             "filename": "../../07b-agent-team-prc/agent-team-prc.md"
         },
         {
-            "title": "Lab 7d: Enable AI with pre-built Agent Team (PRC)",
+            "title": "Lab 7d: Assemble an AI Agent Team (PRC Template)",
             "filename": "../../07d-pre-agent-team-prc/pre-agent-team-prc.md"
         },
         {
@@ -89,6 +89,10 @@
         {
             "title": "Lab 9: Analytics with AI",
             "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
+        },
+        {
+            "title": "Lab 9: Analytics Energy",
+            "filename": "../../09-analytics-energy/analytics-energy.md"
         },
         {
             "title": "Need Help?",

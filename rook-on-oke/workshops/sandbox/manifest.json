@@ -1,0 +1,36 @@
+{
+    "workshoptitle": "Run vLLM on OKE with Oracle DB 23ai Vector Search",
+    "help": "livelabs-help-aiservices_us@oracle.com",
+    "tutorials": [
+      {
+        "title": "Introduction",
+        "description": "The Introduction is always second for LiveLabs. The title and contents menu title match for the Introduction.",
+        "filename": "../../introduction/introduction.md"
+      },
+      {
+        "title": "Getting Started",
+        "description": "Prerequisites for LiveLabs (Oracle-owned tenancies). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+        "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+    },
+      {
+        "title": "Lab 1: Provision of resources to run a JupyterHub Notebook",
+        "description": "Provision of resources to run a JupyterHub Notebook",
+        "filename": "../../provision/provision.md"
+      },
+      {
+        "title": "Lab 2: Run JupyterHub Notebook to chat with LLM",
+        "description": "Run JupyterHub Notebook to chat with LLM",
+        "filename": "../../jupyter/jupyter.md"
+      },
+      {
+        "title": "Lab 3: Retrieval Augmented Generation (RAG) Application",
+        "description": "Retrieval Augmented Generation (RAG) Application",
+        "filename": "../../rag/rag.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      }
+    ]
+  }
