@@ -69,7 +69,7 @@ Ensure new uploads trigger the transcriber function.
    - Description: Trigger transcription func
    - Rule conditions: Condition: Event Type, Service Name: Object Storage, Event Type: Object - Create
    - (Click +Another Condition)Rule conditions: Condition: Attribute, Attribute Name: bucketName, Attribute Values: transcripts
-   - Actions: Action Type: Functions, Function Compartment: ai-meeting-summarizer, Function Application: ai-ms-app, Function: transcriber
+   - Actions: Action Type: Functions, Function Compartment: ai-meeting-summarizer, Function Application: ai-ms-app, Function: summary
 
     ![Resource Manager](images/summarize.png)
 
@@ -113,11 +113,13 @@ Create a Log Group and enable function logs for observability.
 
 3. Under Logs in the Function Invocation Logs line click the 3 dots and select Enable log
 
+    ![Resource Manager](images/monitoring.png)
+
    - Compartment: ai-meeting-summarizer
    - Log group: ai-ms-log-group
    - Log name: ai-ms-logs
 
-    ![Resource Manager](images/monitoring.png)
+    ![Resource Manager](images/logs.png)
 
 You may now **proceed to the next lab**.
 
@@ -129,5 +131,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author** - **Josiah Oriendo**, Cloud Architect
-* **Last Updated By/Date** - Josiah Oriendo, February 2026
+- **Author** - **Josiah Oriendo**, Cloud Architect
+- **Last Updated By/Date** - Josiah Oriendo, February 2026

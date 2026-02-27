@@ -254,7 +254,7 @@ This lab assumes you have:
 
 1. Remain in the code editor and create a new function called summarizer, following the same process you did for task 2 and 3
 
-2. When you get to the point where you need to edit the func.py file, instead of using the code from the transcriber, use this: 
+2. When you get to the point where you need to edit the func.py file, instead of using the code from the transcriber, use this:
 
    '''python
    import io
@@ -584,5 +584,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author** - **Josiah Oriendo**, Cloud Architect
-* **Last Updated By/Date** - Josiah Oriendo, February 2026
+- **Author** - **Josiah Oriendo**, Cloud Architect
+- **Last Updated By/Date** - Josiah Oriendo, February 2026
