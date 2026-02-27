@@ -92,7 +92,7 @@ Identity setup (Used for commits)
    <br>
 ```
 cd ~/projects
-git clone https://github.com/mariagoprea-collab/springboot-demo-oci
+git clone git@github.com:mariagoprea-collab/springboot-demo-oci.git
 ```
 2. Using HTTPS (if not using SSH)
 <br>
