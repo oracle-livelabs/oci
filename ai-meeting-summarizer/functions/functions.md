@@ -71,14 +71,14 @@ This lab assumes you have:
 
 6. Edit the requirements.txt file by selecting the file and making sure it reflects the below information:
 
-   '''text
+   ```text
    fdk
    oci
-   '''
+   ```
 
 7. Edit the func.py file by selecting the file, deleting the current contents and pasting the below python code:
 
-   '''python
+   ```python
    import io
    import json
    import os
@@ -204,7 +204,7 @@ This lab assumes you have:
                headers={"Content-Type": "application/json"},
                status_code=500
          )
-   '''
+   ```
 
 ## Task 3: Setup fn CLI & Deploy Transcriber
 
@@ -212,25 +212,25 @@ This lab assumes you have:
 
 2. Using the terminal, set the context for your region, by taking the information under default in the first command and filling that information into the second command:
 
-   '''text
+   ```text
    fn list context
    fn use context <region>
-   '''
+   ```
 
    ![Resource Manager](images/region.png)
 
 3. Update the context with the function's compartment ID which can be found on the details page of the function you created in the beginning:
 
-   '''text
+   ```text
    fn update context oracle.compartment-id <compartment_OCID>
-   '''
+   ```
 
 4. Provide a unique repository name prefix to distinguish your function images from other people’s. Get the object storage namespace by looking at the details of any of the buckets prior, and the repo name is up to your own discretion. For the region key, follow the first command below and in the dictionary where the "is-home-region" value is true, use the region key below it all lowercase:
 
-   '''text
+   ```text
    oci iam region-subscription list
    fn update context registry <region-key>.ocir.io/<object_storage_namespace>/[repo-name-prefix]
-   '''
+   ```
 
 5. Open a separate tab with the OCI Console up and click on the profile icon in the top right and your email → Tokens and keys → Auth tokens → Generate token
 
@@ -240,15 +240,15 @@ This lab assumes you have:
 
 7. Return to your tab with the code editor and in the terminal you have been working in log into the registry using the auth token as your password when prompted following this command
 
-   '''text
+   ```text
    docker login -u '<object_storage_namespace>/<email>' <region-key>.ocir.io
-   '''
+   ```
 
 8. Deploy the transcribe function:
 
-   '''text
+   ```text
    fn -v deploy --app <app_name>
-   '''
+   ```
 
 ## Task 4: Deploy the Summary Function
 
@@ -256,7 +256,7 @@ This lab assumes you have:
 
 2. When you get to the point where you need to edit the func.py file, instead of using the code from the transcriber, use this:
 
-   '''python
+   ```python
    import io
    import json
    import os
@@ -574,7 +574,7 @@ This lab assumes you have:
       except Exception as e:
          logger.error(f"Error sending email via ONS: {str(e)}")
          raise
-   '''
+   ```
 
 You may now **proceed to the next lab**.
 
