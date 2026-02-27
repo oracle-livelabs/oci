@@ -15,10 +15,6 @@ Observability는 로그와 매트릭, 트레이스(추적)를 조합하여 현�
 
 * **Lab 4: Deploy the MuShop Application** 완료하고 현재 앱이 실행 중일 것
 
-### 실습 비디오
-
-[](youtube:XMkLtydlc3Y)
-
 
 ## Task 1: OKE Metrics 보기
 
@@ -28,7 +24,7 @@ Observability는 로그와 매트릭, 트레이스(추적)를 조합하여 현�
 
 2. 대상 클러스터를 클릭합니다.
 
-3. **Resources &gt; Metrics** 에서 다음 메트릭을 확인할 수 있습니다.
+3. **Monitoring** 탭에서 다음 메트릭을 확인할 수 있습니다.
 
     * API Server Requests: Kubernetes API 서버가 수신한 요청수
     * API Server Responses: Kubernetes API 서버의 응답 유형별 초당 응답 수
@@ -38,11 +34,11 @@ Observability는 로그와 매트릭, 트레이스(추적)를 조합하여 현�
 
 ### OKE Node Pool Metrics
 
-1. 대상 클러스터 화면에서 **Resources &gt; Node pools** 을 클릭합니다.
+1. 대상 클러스터 화면에서 **Node pools** 탭을 클릭합니다.
 
 2. 대상 노드풀 이름을 클릭합니다.
 
-3. **Resources &gt; Metrics** 에서 다음 노드풀내의 노드에 대한 메트릭을 확인할 수 있습니다.
+3. **Monitoring** 탭에서 다음 노드풀내의 노드에 대한 메트릭을 확인할 수 있습니다.
 
     * Node State: Worker 노드가 OCI Compute Service를 통해서 Active 상태로 인지될 때
     * Kubernetes Node condition: Worker 노드가 Kubernetes API Server를 통해서 Ready 상태로 인지될 때
@@ -51,11 +47,11 @@ Observability는 로그와 매트릭, 트레이스(추적)를 조합하여 현�
 
 ### OKE Worker Node Metrics
 
-1. 노드풀 화면에서 **Resources &gt; Nodes** 를 클릭합니다.
+1. 노드풀 화면에서 **Nodes** 탭을 클릭합니다.
 
 2. 대상 노드를 클릭합니다.
 
-3. **Resources &gt; Metrics** 에서 해당 노드(Compute 인스턴스)에 대한 메트릭을 확인할 수 있습니다.
+3. **Monitoring** 탭에서 해당 노드(Compute 인스턴스)에 대한 메트릭을 확인할 수 있습니다.
 
     * CPU Utilization
     * Memory Utilization
@@ -96,9 +92,9 @@ Observability는 로그와 매트릭, 트레이스(추적)를 조합하여 현�
     Sample response:
 
     ````shell
-    NAME            NAMESPACE               REVISION        UPDATED                                 STATUS          CHART                   APP VERSION
-    mushop          mushop                  1               2023-10-12 03:41:38.593653781 +0000 UTC deployed        mushop-0.2.1            2.0        
-    mushop-utils    mushop-utilities        1               2023-10-12 03:32:10.88419933 +0000 UTC  deployed        mushop-setup-0.0.2      1.0 
+    NAME         NAMESPACE        REVISION UPDATED                                 STATUS   CHART              APP VERSION
+    mushop       mushop           1        2025-12-21 15:11:29.753523843 +0000 UTC deployed mushop-0.2.1       2.0        
+    mushop-utils mushop-utilities 1        2025-12-21 15:06:19.270073902 +0000 UTC deployed mushop-setup-0.0.2 1.0  
     ````
 
 3. **mushop-utils** 에서 Grafana 설치 정보 확인합니다. 다음에서 하는 접속 주소와 관리자암호를 찾는 방법을 확인할 수 있습니다.
@@ -173,6 +169,5 @@ Observability는 로그와 매트릭, 트레이스(추적)를 조합하여 현�
 
 ## Acknowledgements
 
-* **Author** - DongHee Lee, Adao Junior
-* **Korean Translator & Contributors** - DongHee Lee, February 2022
-- **Last Updated By/Date** - DongHee Lee, November 2023
+- **Author** - DongHee Lee, March 2023
+- **Last Updated By/Date** - DongHee Lee, December 2025

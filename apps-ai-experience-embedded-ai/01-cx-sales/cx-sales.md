@@ -61,10 +61,13 @@ In this exercise we will explore some of the embedded AI features available in F
 
 5. Upload the customer document (i.e. quarterly or annual financial reports, etc.) and generate the goals
 
-      ![AI in Action](images/image005.png " ")
+      > You can attach any documents provided by the customer to have Oracle automatically generate the goals and strategies to help our prospect execute this plan. 
 
-      >You can attach any documents provided by the customer to have Oracle automatically generate the goals and strategies to help our prospect execute this plan.
-      > -   Select the *business case* PDF from your desktop and upload it to the business plan.
+      >> **NOTE:** *We will not be loading any documents.  Please use the document we've pre-loaded for this step.*
+
+      ![AI in Action](images/image005.png " ")
+     
+      > -   Click the **checkbox** to the left of the *business case.pdf* file to select it.
       > -	Click the **Generate** AI button in the bottom of the attachments area and see **AI in Action**.
 
       ![Upload Document](images/image012.png " ")

@@ -19,6 +19,6 @@ This Activity Guide will lead you along the way through a set of labs, where you
 [Proceed to the first lab to get started!] (#next)
 
 ## Acknowledgements
-* **Author** - Rick Beck, Master Principal SaaS Platform Technologist, NAA Office of Technology and Innovation
-* **Contributors** -  Tim Sullivan
-* **Last Updated By/Date** - Rick Beck, December 2025, based on Fusion 25D
+* **Author** - [](var:author)
+* **Contributors** - [](var:contributors)
+* **Last Updated By/Date** - [](var:last_updated)

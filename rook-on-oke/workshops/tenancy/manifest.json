@@ -1,0 +1,52 @@
+{
+  "workshoptitle": "Deploy Rook-Ceph Storage on Oracle Kubernetes Engine (OKE)",
+  "help": "livelabs-help-oci_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to Rook-Ceph and OKE",
+      "filename": "../../introduction/introduction.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Get Started",
+      "description": "Prerequisites for the workshop",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Lab 1: Prerequisites and Setup",
+      "description": "Set up your environment for deploying Rook on OKE",
+      "filename": "../../prerequisites/prerequisites.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Lab 2: Deploy Rook-Ceph on OKE",
+      "description": "Deploy Rook-Ceph storage cluster using Terraform and OCI Resource Manager",
+      "filename": "../../deploy-rook/deploy-rook.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Lab 3: Configure Storage Classes",
+      "description": "Configure Ceph block, file system, and object storage",
+      "filename": "../../configure-storage/configure-storage.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Lab 4: Use Cases and Applications",
+      "description": "Deploy sample applications using Rook-Ceph storage",
+      "filename": "../../use-cases/use-cases.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Lab 5: Cleanup",
+      "description": "Clean up the resources created in this workshop",
+      "filename": "../../cleanup/cleanup.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}
