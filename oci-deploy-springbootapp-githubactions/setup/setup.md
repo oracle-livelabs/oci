@@ -86,7 +86,11 @@ Identity setup (Used for commits)
 
 - Save
 
-## Task 4: Clone the repository locally
+## Task 4: Fork the repository
+- Click Fork (top-right).
+- Choose your account (or the right org) to create the fork.
+
+## Task 5: Clone the Forked Repository
 
 1. Using SSH (recommended)
    <br>
@@ -101,7 +105,7 @@ git clone https://github.com/mariagoprea-collab/springboot-demo-oci
 ```
 - A local folder with the repository name will be created.
 
-## Task 5: Open the project in IntelliJ IDEA
+## Task 6: Open the project in IntelliJ IDEA
 
 1.  Open the existing project
 

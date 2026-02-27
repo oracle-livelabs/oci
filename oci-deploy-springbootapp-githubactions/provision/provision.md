@@ -122,15 +122,17 @@ Memory (GB): auto-calculated or custom
 <br>
 Storage size:
 Example: 100 GB
+<br>
 Configure Extensions
-Choose an extension that was configured in your compartment
+Choose an extension that was configured in your compartment, or create a new one
 7. Network configuration
 <br>
    Subnet: The private subnet of the VCN created in the previous step
 <br>
    Virtual Cloud Network: The VCN created in the previous step 
-8. Set username and password for db system.
-
+8. Set Database system administrator credentials
+ <br> Username and a password for the db system. Input password or Use OCI Vault.
+9. Management policy - let default settings
 ![Image alt text](images/ss9.png)
 ## Task 4: Create Load Balancer
 
@@ -150,15 +152,18 @@ An OCI Load Balancer is a fully managed service that distributes incoming traffi
    Choose Networking: The VCN created at the previous task and the Public Subnet from this VCN.<br>
    Bandwidth: Minimum 10 Mbps / Maximum 10 Mbps
    <br>Management: your Compartment
-   Choose backends
+   <br>Choose backends - No backends for the moment
+   <br>Specify health check policy - Protocol: HTTP; Port: 8080
    <br>Policy: IP Hash <br>
-   Add backend servers: Select the backend Container instance <br>
    Configure the listener
 <br>
    Protocol: HTTP 
 <br>
    Port: 8080
 <br>
+   Manage Logging
+   Create a Logging group and add to the Error Logs step
+   ![Image alt text](images/group.png)
    Click Create Load Balancer
 <br> 
 
@@ -167,4 +172,5 @@ The Load Balancer will be provisioned in a few minutes and assigned a public IP 
 ## Task 5: VCN configuration
 1. Edit the security rules for the private subnet as shown in the image below.
     ![Image alt text](images/img.png)
+<br>![Image alt text](images/egressRules.png)
 
