@@ -26,7 +26,7 @@ This lab assumes you have:
 
 1. On GitHub, navigate to the main page of the repository.
 2. Under your repository name, click Settings. If you cannot see the "Settings" tab, select the dropdown menu, then
-click Settings.
+    click Settings.
     ![Image alt text](images/ss1.png)
 
 3. In the "Security" section of the sidebar, select Secrets and variables, then click Actions.

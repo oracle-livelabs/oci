@@ -82,8 +82,6 @@ can be deployed on OCI services like Kubernetes, Compute instances, and CI/CD pi
     Public (only if required)
 
 5. Click Create
-    The registry that the image will live in must be reachable from the subnet that you provide for the container
-    instance.
 
 ## Task 3: PostgreSQL DB System
 
@@ -112,21 +110,32 @@ translation (NAT) gateway.
 
 5. DB System
     Node count: 1
+    <br>
     Performance tier: 75K IOPS
+    <br>
     Data placement: Availability Domain-specific
 
 6. Hardware configuration
     Image: OS Image
+    <br>
     Shape: PostgreSQL.VM.Standard.E5.Flex
+    <br>
     OCPUs: 1–2 (depending on workload)
+    <br>
     Memory (GB): auto-calculated or custom
+    <br>
     Storage size: example: 100 GB
+    <br>
     Configure Extensions
+    <br>
     Choose an extension that was configured in your compartment, or create a new one
 7. Network configuration
+    <br>
     Subnet: The private subnet of the VCN created in the previous step
+    <br>
     Virtual Cloud Network: The VCN created in the previous step
 8. Set Database system administrator credentials
+    <br>
     Username and a password for the db system. Input password or Use OCI Vault.
 9. Management policy - default settings
 
@@ -148,19 +157,18 @@ improving availability, scalability, and fault tolerance for applications runnin
     Load Balancer name example: demo-lb <br>
     Visibility: Public (use Private if internal only) <br>
     Choose Networking: The VCN created at the previous task and the Public Subnet from this VCN.<br>
-    Bandwidth: Minimum 10 Mbps / Maximum 10 Mbps
-    Management: your Compartment
-    Choose backends - No backends for the moment
-    Specify health check policy - Protocol: HTTP; Port: 8080
+    Bandwidth: Minimum 10 Mbps / Maximum 10 Mbps<br>
+    Management: your Compartment<br>
+    Choose backends - No backends for the moment<br>
+    Specify health check policy - Protocol: HTTP; Port: 8080<br>
     Policy: IP Hash <br>
-    Configure the listener
-    Protocol: HTTP
-    Port: 8080
-    Manage Logging
-    Create a Logging group and add to the Error Logs step
-    Click Create Load Balancer
-
-The Load Balancer will be provisioned in a few minutes and assigned a public IP address.
+    Configure the listener<br>
+    Protocol: HTTP<br>
+    Port: 8080<br>
+    Manage Logging<br>
+    Create a Logging group and add to the Error Logs step<br>
+    Click Create Load Balancer<br>
+    The Load Balancer will be provisioned in a few minutes and assigned a public IP address.
 
 ## Task 5: VCN configuration
 

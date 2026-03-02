@@ -59,8 +59,8 @@ If not:
 
 Identity setup (Used for commits)
 ```
-   git config --global user.name "Your name"
-   git config --global user.email "email@exemplu.com"
+    git config --global user.name "Your name"
+    git config --global user.email "email@exemplu.com"
 ```
 
 ## Task 3: SSH GitHub Authentification
@@ -80,15 +80,15 @@ Identity setup (Used for commits)
 ```
 5. Add the SSH key to GitHub
 
-- Go to GitHub → Settings
+    - Go to GitHub → Settings
 
-- Open SSH and GPG keys
+    - Open SSH and GPG keys
 
-- Click New SSH key
+    - Click New SSH key
 
-- Paste the copied public key
+    - Paste the copied public key
 
-- Save
+    - Save
 
 ## Task 4: Fork the repository
 
@@ -99,14 +99,15 @@ Identity setup (Used for commits)
 
 1. Using SSH (recommended)
 ```
+    e.g.
     cd ~/projects
     git clone git@github.com:mariagoprea-collab/springboot-demo-oci.git
 ```
 2. Using HTTPS (if not using SSH)
 ```
+    e.g.
     git clone https://github.com/mariagoprea-collab/springboot-demo-oci
 ```
-A local folder with the repository name will be created.
 
 ## Task 6: Open the project in IntelliJ IDEA
 
