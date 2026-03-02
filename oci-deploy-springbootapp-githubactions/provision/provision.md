@@ -43,21 +43,21 @@ services.
 
 3. Select the appropriate Compartment from the Compartment dropdown.
 4. Start the VCN Wizard
-   ![Image alt text](images/ss6.png)
+    ![Image alt text](images/ss6.png)
 
 5. Select Create VCN with Internet Connectivity, and then click Start VCN Wizard.
 
-   ![Image alt text](images/ss7.png)
+    ![Image alt text](images/ss7.png)
 6. Complete the following fields:
 
-| Field                         | Value                   |
-|-------------------------------|-------------------------|
-| VCN Name                      | Appointment_Manager     |
-| Compartment                   | Choose your compartment |
-| VCN CIDR Block                | 10.0.0.0/16             |
-| Public Subnet CIDR Block      | 10.0.0.0/24             |
-| Private Subnet CIDR Block     | 10.0.1.0/24             |
-| Use DNS Hostnames In This VCN | Checked                 |
+    | Field                         | Value                   |
+    |-------------------------------|-------------------------|
+    | VCN Name                      | Appointment_Manager     |
+    | Compartment                   | Choose your compartment |
+    | VCN CIDR Block                | 10.0.0.0/16             |
+    | Public Subnet CIDR Block      | 10.0.0.0/24             |
+    | Private Subnet CIDR Block     | 10.0.1.0/24             |
+    | Use DNS Hostnames In This VCN | Checked                 |
 
 7. Click the Next button at the bottom of the screen.
 8. Review your settings to be sure they are correct. Click the Create button to create the VCN.
@@ -79,11 +79,11 @@ can be deployed on OCI services like Kubernetes, Compute instances, and CI/CD pi
 3. Choose the Compartment where you want the registry repository
 
 4. Click Create repository and fill in:<br> Repository name example: demo_repo <br>Access: Private (recommended),
-   Public (only if required)
+    Public (only if required)
 
 5. Click Create
-   The registry that the image will live in must be reachable from the subnet that you provide for the container
-   instance.
+    The registry that the image will live in must be reachable from the subnet that you provide for the container
+    instance.
 
 ## Task 3: PostgreSQL DB System
 
@@ -104,46 +104,31 @@ translation (NAT) gateway.
 2. From ☰ Navigation Menu, click Databases → PostgreSQL
 
 3. Click Create DB System
-   <br>
-   Select creation type: Create new DB system
+    Select creation type: Create new DB system
 4. Configure DB System Basics
-   <br>
-   DB System name:
-   <br>
-   Example: demo_db
-   <br>
-   Select Compartment and PostgreSQL version
+    DB System name:
+    Example: demo_db
+    Select Compartment and PostgreSQL version
 
 5. DB System
-   <br>
-   Node count: 1
-   <br>
-   Performance tier: 75K IOPS
-   <br>
-   Data placement: Availability Domain-specific
+    Node count: 1
+    Performance tier: 75K IOPS
+    Data placement: Availability Domain-specific
+
 6. Hardware configuration
-   Image: OS Image
-   <br>
-   Shape:
-   Example: PostgreSQL.VM.Standard.E5.Flex
-   <br>
-   OCPUs: 1–2 (depending on workload)
-   <br>
-   Memory (GB): auto-calculated or custom
-   <br>
-   Storage size:
-   Example: 100 GB
-   <br>
-   Configure Extensions
-   Choose an extension that was configured in your compartment, or create a new one
+    Image: OS Image
+    Shape: PostgreSQL.VM.Standard.E5.Flex
+    OCPUs: 1–2 (depending on workload)
+    Memory (GB): auto-calculated or custom
+    Storage size: example: 100 GB
+    Configure Extensions
+    Choose an extension that was configured in your compartment, or create a new one
 7. Network configuration
-   <br>
-   Subnet: The private subnet of the VCN created in the previous step
-   <br>
-   Virtual Cloud Network: The VCN created in the previous step
+    Subnet: The private subnet of the VCN created in the previous step
+    Virtual Cloud Network: The VCN created in the previous step
 8. Set Database system administrator credentials
-   <br> Username and a password for the db system. Input password or Use OCI Vault.
-9. Management policy - let default settings
+    Username and a password for the db system. Input password or Use OCI Vault.
+9. Management policy - default settings
 
 ## Task 4: Create Load Balancer
 
@@ -160,37 +145,31 @@ improving availability, scalability, and fault tolerance for applications runnin
 3. Choose the Compartment where you want the Load Balancer to be created.
 
 4. Click Create Load Balancer and fill in:
-   Load Balancer name example: demo-lb <br>
-   Visibility: Public (use Private if internal only) <br>
-   Choose Networking: The VCN created at the previous task and the Public Subnet from this VCN.<br>
-   Bandwidth: Minimum 10 Mbps / Maximum 10 Mbps
-   <br>Management: your Compartment
-   <br>Choose backends - No backends for the moment
-   <br>Specify health check policy - Protocol: HTTP; Port: 8080
-   <br>Policy: IP Hash <br>
-   Configure the listener
-   <br>
-   Protocol: HTTP
-   <br>
-   Port: 8080
-   <br>
-   Manage Logging
-   <br>
-   Create a Logging group and add to the Error Logs step
-   <br>
-   Click Create Load Balancer
-   <br>
+    Load Balancer name example: demo-lb <br>
+    Visibility: Public (use Private if internal only) <br>
+    Choose Networking: The VCN created at the previous task and the Public Subnet from this VCN.<br>
+    Bandwidth: Minimum 10 Mbps / Maximum 10 Mbps
+    Management: your Compartment
+    Choose backends - No backends for the moment
+    Specify health check policy - Protocol: HTTP; Port: 8080
+    Policy: IP Hash <br>
+    Configure the listener
+    Protocol: HTTP
+    Port: 8080
+    Manage Logging
+    Create a Logging group and add to the Error Logs step
+    Click Create Load Balancer
 
 The Load Balancer will be provisioned in a few minutes and assigned a public IP address.
 
 ## Task 5: VCN configuration
 
 1. Edit the security rules for the private subnet as shown in the image below.
-   ![Image alt text](images/ingressrulesprivate.png)
-   <br>![Image alt text](images/egressrulesprivate.png)
+    ![Image alt text](images/ingressrulesprivate.png)
+    ![Image alt text](images/egressrulesprivate.png)
 2. Edit the security rules for the public subnet as shown in the image below.
-   ![Image alt text](images/ingressrulespublic.png)
-   <br> ![Image alt text](images/egressrulespublic.png)
+    ![Image alt text](images/ingressrulespublic.png)
+    ![Image alt text](images/egressrulespublic.png)
 
 ## Acknowledgements
 

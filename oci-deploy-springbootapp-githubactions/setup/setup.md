@@ -34,10 +34,9 @@ This lab assumes you have:
 Run all the commands in Git Bash/Cmd/PowerShell/Terminal.
 
 Check if you already have Git installed.
-<br>
 
 ```
-   git --version 
+    git --version 
 ```
 
 If not:
@@ -47,20 +46,18 @@ If not:
 - macOS:
 
 ```
- brew install git 
+    brew install git 
 ```
 
 - Linux:
 
 ```
- sudo apt install git
+    sudo apt install git
 ```
 
 ## Task 2: GitHub Configuration
 
 Identity setup (Used for commits)
-<br>
-
 ```
    git config --global user.name "Your name"
    git config --global user.email "email@exemplu.com"
@@ -69,26 +66,18 @@ Identity setup (Used for commits)
 ## Task 3: SSH GitHub Authentification
 
 1. Check if you already have an SSH key
-   <br>
-
 ```
-   ls ~/.ssh
+    ls ~/.ssh
 ```
-
 2. If you do NOT see id_rsa or id_ed25519, generate a new SSH key:
-   <br>
-
- ```
-   ssh-keygen -t ed25519 -C "your_email@example.com"
-   ```
-
+```
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+```
 3. Press Enter for all prompts (default options).
-
 4. Copy the public SSH key
-   <br>
-     ```
-   cat ~/.ssh/id_ed25519.pub
-   ```
+```
+    cat ~/.ssh/id_ed25519.pub
+```
 5. Add the SSH key to GitHub
 
 - Go to GitHub → Settings
@@ -109,21 +98,15 @@ Identity setup (Used for commits)
 ## Task 5: Clone the Forked Repository
 
 1. Using SSH (recommended)
-   <br>
-
 ```
-cd ~/projects
-git clone git@github.com:mariagoprea-collab/springboot-demo-oci.git
+    cd ~/projects
+    git clone git@github.com:mariagoprea-collab/springboot-demo-oci.git
 ```
-
 2. Using HTTPS (if not using SSH)
-   <br>
-
 ```
-git clone https://github.com/mariagoprea-collab/springboot-demo-oci
+    git clone https://github.com/mariagoprea-collab/springboot-demo-oci
 ```
-
-- A local folder with the repository name will be created.
+A local folder with the repository name will be created.
 
 ## Task 6: Open the project in IntelliJ IDEA
 
