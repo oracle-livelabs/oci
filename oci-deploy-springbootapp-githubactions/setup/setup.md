@@ -66,18 +66,18 @@ Identity setup (Used for commits)
 ## Task 3: SSH GitHub Authentification
 
 1. Check if you already have an SSH key
-```
+    ```
     ls ~/.ssh
-```
+    ```
 2. If you do NOT see id_rsa or id_ed25519, generate a new SSH key:
-```
+    ```
     ssh-keygen -t ed25519 -C "your_email@example.com"
-```
+    ```
 3. Press Enter for all prompts (default options).
 4. Copy the public SSH key
-```
+    ```
     cat ~/.ssh/id_ed25519.pub
-```
+    ```
 5. Add the SSH key to GitHub
 
     - Go to GitHub → Settings
@@ -98,16 +98,16 @@ Identity setup (Used for commits)
 ## Task 5: Clone the Forked Repository
 
 1. Using SSH (recommended)
-```
+    ```
     e.g.
     cd ~/projects
     git clone git@github.com:mariagoprea-collab/springboot-demo-oci.git
-```
+    ```
 2. Using HTTPS (if not using SSH)
-```
+    ```
     e.g.
     git clone https://github.com/mariagoprea-collab/springboot-demo-oci
-```
+    ```
 
 ## Task 6: Open the project in IntelliJ IDEA
 
