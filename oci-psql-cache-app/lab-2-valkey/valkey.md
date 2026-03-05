@@ -101,3 +101,8 @@ E.	Metrics and Monitoring
 
 ## Summary & Next Steps
 You have provisioned an OCI Cache cluster and explored key management and monitoring features that are important for enterprise workloads. For production use, consider deeper exploration of access control, monitoring, scaling and high availability strategies as described in the OCI Cache documentation
+
+## Acknowledgments
+
+- **Created By/Date** - Rashmi Badan, Andriy Dorohkin, Piotr Kurzynoga, April 2026
+- **Last Updated By** - Andriy Dorohkin, April 2026

@@ -3,7 +3,7 @@
 ## Introduction
 In this lab, you will learn how to provision a PostgreSQL database on Oracle Cloud Infrastructure (OCI). You'll also become familiar with other enterprise options such as adding read replicas, configuring backups, and enabling cross-region backups—without actually setting them up.
 
-Estimated time: 30-40 min
+**Estimated time:** 30-40 minutes
 
 ### Objectives
 - Deploy a PostgreSQL database system on OCI.
