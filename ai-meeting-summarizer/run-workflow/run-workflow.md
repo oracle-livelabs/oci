@@ -26,65 +26,78 @@ This lab assumes you have:
 
 ## Task 1: Upload a media file to the upload bucket
 
-1. Console → Storage → Object Storage & Archive Storage → Buckets.
-2. Select the ai-meeting-summarizer compartment and open the upload bucket.
-3. Click Upload and select a small media file in a supported format (see list above).
-4. Click Upload.
+1. Navigate to Storage → Object Storage & Archive Storage → Buckets.
+
+2. Ensure you are in the ai-meeting-summarizer compartment and if not select it and open the upload bucket.
+
+3. Click Upload objects and select a small media file in a supported format (see list above):
+
+    - Storage tier: Standard
+    - Drop a file or select one
+
+4. Click **Next → Upload objects**.
+
+    ![Resource Manager](images/upload.png)
 
 ## Task 2: Verify the Transcribe Function invocation
 
-1. Console → Developer Services → Functions → Applications → ai-ms-app → Logs (or Monitoring → Function Invocation Logs link).
-2. Open your transcriber-log (or the log you enabled) and look for entries like:
-   - “Inside Transcribe Function”
-   - “Transcription job created successfully” with a job OCID
-3. If you don’t see logs immediately, refresh after a few seconds.
+1. Navigate to **Developer Services → Functions → Applications → ai-ms-app → Monitoring → ai-ms-logs Logs → Explore log** where you will see logs from the function such as invocation requests and completion of the functions.
+
+    ![Resource Manager](images/log_access.png)
+
+    ![Resource Manager](images/log_view.png)
+
+> Note: If you don't see logs immediately refresh after a few seconds. Keep this tab open for future reference
 
 ## Task 3: Check the AI Speech job status
 
-1. Console → Analytics & AI → AI Services → Speech → Transcription Jobs.
-2. Filter by your compartment and region.
-3. Locate a job with display name similar to “Transcription_<sanitized-filename>”.
-4. Confirm status transitions from ACCEPTED/IN_PROGRESS to SUCCEEDED.
-   - If FAILED, open the job to read lifecycle_details or failure_details for troubleshooting.
+1. Navigate to **Analytics & AI → AI Services → Speech → Transcription Jobs**.
 
-> Common issues: missing service-principal policy for AI Speech to write to the transcripts bucket, region mismatch, or unsupported audio codec.
+2. Locate a job with display name similar to “Transcription_\<sanitized-filename>” and you will be able to view the status of the job from ACCEPTED/IN_PROGRESS to SUCCEEDED.
+
+    - If FAILED, open the job to read lifecycle_details or failure_details for troubleshooting.
+
+    ![Resource Manager](images/transcription_job.png)
+
+> Common issues: The video is not of the specified format or too long
 
 ## Task 4: Retrieve the transcript from Object Storage
 
-1. Console → Storage → Buckets → transcripts bucket (or your configured RESULT_BUCKET).
-2. Navigate to the prefix:
-   - transcriptions/<sanitized-filename>/
-3. Locate a .json transcript file (and optionally .srt if enabled).
-4. Download the .json to view all recognized spoken words and metadata.
+1. Once you see the status of the transcription job SUCCEEDED, navigate to **Storage → Buckets → transcripts bucket**.
 
-> Note: If you don’t see the transcript immediately after SUCCEEDED, wait 30–90 seconds and refresh (eventual consistency).
+2. Navigate to the prefix:
+
+   - transcriptions/\<sanitized-filename>/\<job-name>
+
+    ![Resource Manager](images/transcript.png)
+
+3. If you would like to view the meeting's transcripts you are able to download this and view it in any editor.
+
+> Note: If you don’t see the transcript immediately after SUCCEEDED, wait 30–90 seconds and refresh.
 
 ## Task 5: Verify the Summary Function and view the summary
 
-1. Console → Developer Services → Functions → Applications → ai-ms-app → Logs.
-2. Open summarizer-log and look for:
-   - “Summary generated successfully”
-   - “Summary saved to: summaries/<base>_summary.txt”
-3. Console → Storage → Buckets → summary (or your configured SUMMARY_BUCKET).
-4. Navigate to:
-   - summaries/<base>_summary.txt
-5. Download and open the file to review the plain-text summary and action items.
+1. Navigate back to the logs via the previous tab, or by following the prior directions, where you will see logs from the summary function.
+
+    ![Resource Manager](images/summary_logs.png)
+
+2. Upon seeing Summary Function complete navigate to **Console → Storage → Buckets → summary**.
+
+3. Click on the prefix where you will be able to download and open the file to review the plain-text summary:
+   - summaries/\<base>_summary.txt
+
+    ![Resource Manager](images/summary.png)
 
 ## Task 6: Confirm email notification
 
 1. Check your inbox for an email from OCI Notifications with a subject like:
-   - “Meeting Summary: <base>”
+   - “Meeting Summary: \base>”
+
 2. Open the email and review the summary content (truncated if very long) and the storage location reference.
 
+    ![Resource Manager](images/email.png)
+
 > If you don’t see the email, verify that your subscription is CONFIRMED and that the function has permission to use ons-topics.
-
-## Validation
-
-- Transcribe Function logs show a job created with a job OCID
-- AI Speech job shows SUCCEEDED
-- Transcript .json exists under transcripts/transcriptions/<sanitized-filename>/
-- Summary .txt exists under summary/summaries/<base>_summary.txt
-- Email notification received
 
 ## Troubleshooting quick tips
 
