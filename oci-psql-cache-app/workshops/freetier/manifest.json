@@ -4,7 +4,7 @@
 	"tutorials": [
         {
             "title": "Introduction",
-            "filename": "./../../0-intro/intro.md"
+            "filename": "./../../lab-0-introduction/introduction.md"
         },
         {
             "title": "Get Started",

@@ -1,4 +1,4 @@
-## Deploying the Application 
+# Configure the frontend
 
 ### Introduction
 In this lab, you will deploy an application that connects to the OCI Cache and the OCI Database with PostgreSQL instances you created earlier.
@@ -47,7 +47,7 @@ The deployment script performs the following actions:
 
 2. In your browser, navigate to http://<public_IP>:<port> using the public IP of your Compute instance to access the application.
 3. Confirm that the map appears in your browser. The application is connected to an empty database, so no data points are displayed yet. Load the necessary data into the database before continuing to enable interactive map features.
-4. Download the data set from the provided link. Use the psql command-line tool, installed by the deployment script, to load the SQL script.  
+4. Download the data set from the provided link. Use the psql command-line tool, installed by the deployment script, to load the SQL script.
 
 Tip: To avoid manual transfers, use wget.
 
@@ -67,6 +67,9 @@ psql copy routes from ‘/home/opc/pid_gtfs/routes.csv’ WITH (FORMAT csv, HEAD
 
 1.	Now that the data is loaded, vehicles move on the map every 30 seconds (the cache’s API refresh interval). 
 - Inspect the backend logs to see when each operation is fetched: from the API, database, or cache and how long it takes.
+
+You should expect to see a map with all the stops and trams as below:
+![Map with trams](images/mapofprague.png)
 
 2.	What happens in the background? The sequence below explains the flow:
 - Query the cache. On a cache miss, proceed to the next step. 
