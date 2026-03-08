@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you’ll prepare the foundation for the AI Meeting Summarizer workflow. You will create a dedicated compartment, three Object Storage buckets (uploads, transcripts, and results), networking dependencies, and policies. Creating these components will establish the foundations that the rest of the lab is built on
+In this lab, you’ll prepare the foundation for the AI Meeting Summarizer workflow. You will create a dedicated compartment, three Object Storage buckets (uploads, transcripts, and results), networking dependencies, and policies. Creating these components will establish the foundations that the rest of the lab is built on.
 
 Estimated Time: 20 minutes
 
@@ -12,7 +12,8 @@ In this lab, you will:
 
 * Create a compartment for the workshop resources.
 * Create private Object Storage buckets for uploads, transcripts, and results.
-* Enable events on the uploads bucket and create an Event rule for object creation.
+* Create networking dependencies i.e VCN, subnets, etc.
+* Create policies to give instance principals access to resources.
 
 ### Prerequisites
 
@@ -24,7 +25,7 @@ This lab assumes you have:
 
 ## Task 1: Create a compartment
 
-1. In the OCI Console, open the navigation menu and go to **Identity & Security → Compartments**.
+1. In the OCI Console, open the navigation menu and go to **Identity & Security → Identity → Compartments**.
 
 2. Click Create compartment.
 
@@ -40,23 +41,21 @@ This lab assumes you have:
 
 ## Task 2: Create Object Storage buckets and enable events
 
-Create three private buckets in the same region and namespace.
+Navigate to **Storage → Object Storage & Archive Storage → Buckets** where you will create three private buckets in the same region and namespace.
 
 A. Upload bucket
 
-1. Click the hamburger icon and navigate to **Storage → Buckets**.
+1. Make sure you are in the ai-meeting-summarizer compartment you have just created.
 
-2. Select the ai-meeting-summarizer compartment you have just created.
+2. Click Create bucket.
 
-3. Click Create bucket.
-
-4. Enter:
+3. Enter:
 
    * Name: upload
    * Default storage tier: Standard
    * Encryption: Use Oracle-managed keys (or choose a customer-managed key if required)
 
-5. Click Create.
+4. Click Create.
 
     ![Resource Manager](images/bucket.png)
 
@@ -78,7 +77,7 @@ D. Enable Events
 
 3. Follow the same steps for the transcripts bucket
 
-Note: Record your Object Storage namespace (visible at the top of Buckets page). You’ll use it in later labs.
+> Note: Record your Object Storage namespace (visible at the top of Buckets page). You’ll use it in later labs.
 
 ## Task 3: Establish Networking
 
@@ -153,4 +152,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - **Josiah Oriendo**, Cloud Architect
-* **Last Updated By/Date** - Josiah Oriendo, February 2026
+* **Last Updated By/Date** - Josiah Oriendo, March 2026
