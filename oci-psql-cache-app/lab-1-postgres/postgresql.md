@@ -24,13 +24,13 @@ In this lab, you will learn how to provision a PostgreSQL database on Oracle Clo
 3.	Create a new compartment (recommended) or select one you can use.
 - Name Example: pg-lab-compartment
 - Copy and save the Compartment OCID for later use.
-![create-compartment](images/create-compartment.png)
+![create-compartment](images/create-compartment-red.png)
  
 ## Task 2: Provision a PostgreSQL Database
 1.	Navigate to: Menu → Databases → Oracle Cloud Databases for PostgreSQL.
 - If not visible, use Search box to find "PostgreSQL".
-2.	Click Create PostgreSQL database system.
-![create-database](images/create-database.png)
+2.	Click Create PostgreSQL database system and select "Create new Database system".
+![create-database](images/create-database-red.png)
 3.	Follow the guided steps:
 - Compartment: Select your compartment.
 - Display Name: Enter a name (e.g., pg-lab-db).
@@ -44,6 +44,8 @@ The provisioning process will begin. It may take a few minutes.
 
 ## Task 3: Connecting to your PostgreSQL DB
 1.	Wait for the DB system status to become Available.
+![database-active](images/database-active-red.png)
+
 2.	In the database details page, find the Connection information section.
 - Record the hostname, port (default: 5432), and username.
 3.	You can connect using any standard PostgreSQL client, such as psql from OCI Cloud Shell or your local machine:
@@ -54,11 +56,13 @@ Tip: Review [Connecting to a PostgreSQL DB System](https://docs.oracle.com/en-us
 
 ## Task 4: Explore Additional Features (No Configuration Required)
 A. Adding Read Replicas
+![database-replicas](images/database-replicas-red.png)
 - PostgreSQL on OCI can provide read replicas for scaling out read-heavy workloads or enhancing availability.
 - To add a replica, from your database system's details page, scroll down and click Add Node
 - Review the [Managing Nodes Documentation](https://docs.oracle.com/en-us/iaas/Content/postgresql/manage-nodes.htm#top) for further details.
 
 B. Setting Up Automatic Backups
+![database-backups](images/database-backups-red.png)
 - Backups are important for disaster recovery and compliance.
 - From your database system's details page, click the Backups tab.
 - Automatic daily backups are supported and can be managed through this section.
