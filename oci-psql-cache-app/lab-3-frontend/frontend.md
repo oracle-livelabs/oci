@@ -5,6 +5,9 @@ In this lab, you will deploy an application that connects to the OCI Cache and t
 
 **Estimated Time:** 25-40 minutes
 
+### Objectives:
+- 
+
 ## Task 1:Create the Compute Instance
 
 1.	In the Cloud Console, navigate to Compute > Instances and click Create Instance
@@ -19,21 +22,35 @@ In this lab, you will deploy an application that connects to the OCI Cache and t
 ## Task 2:Deploy the Application
 
 1.	Clone the GitHub repository using the link below and follow the instructions:
-https://github.com/phantompete/CachePostgres_LiveLab
+https://github.com/phantompete/LiveLab_WebApp_Demo
 
-**Reminder test with original primary endpoints for cache and postgres**
-In the config.txt file, configure the following settings: 
+2.  Make the dataset script executable and then run it:
+```sh
+chmod +x refresh_dataset.sh
+./refresh_dataset.sh
+```
+This will download the latest version of the transport dataset which includes:
+- Stops
+- Stop Times
+- Routes
+
+*Note:* It also installs the postgresql client
+
+3. In the deploy_application_demo.sh scipt, configure the following settings:
 -	PostgreSQL host
 -	Redis host
 -	OCI Region (where the instances are created)
--	Database Secret OCID 
+-	Database Secret OCID
 -	Public Transport API key*
+
+
+
 *To obtain a Public Transport API key, generate one on the Golemio API Keys Management page: https://api.golemio.cz/api-keys
 
 Make the deployment script executable and then run it:
 ```sh
-chmod +x deploy.sh  
-./deploy.sh 
+chmod +x deploy_application_demo.sh
+./deploy_application_demo.sh
 ```
 
 The deployment script performs the following actions:
@@ -51,16 +68,16 @@ The deployment script performs the following actions:
 
 Tip: To avoid manual transfers, use wget.
 
-Run the following command to load the data:
+Connect to the Database and run the following command to load the data:
 ```sql
-psql copy stop_times from ‘/home/opc/pid_gtfs/stop_times.csv’ WITH (FORMAT csv, HEADER true)
+\copy stop_times from 'transport_data/stop_times.txt' WITH (FORMAT csv, HEADER true)
 ```
 This command imports records into the stop_times table.
 
 Use the same steps to import data into the stops and routes tables.
 ```sql
-psql copy stops from ‘/home/opc/pid_gtfs/stops.csv’ WITH (FORMAT csv, HEADER true)
-psql copy routes from ‘/home/opc/pid_gtfs/routes.csv’ WITH (FORMAT csv, HEADER true)
+\copy stops from 'transport_data/stops.txt' WITH (FORMAT csv, HEADER true)
+\copy routes from 'transport_data/routes.txt' WITH (FORMAT csv, HEADER true)
 ```
 
 ## Task 3:Testing
@@ -85,7 +102,7 @@ Cache-aside or write-through for real-time data (e.g., vehicle locations) with a
 By offloading repetitive queries and throttling API calls, this approach lowers response times, reduces database and API load, and scales more efficiently under high traffic.
 4.	Here’s an overview of how the backend is structured, how it connects to the frontend, and the key components of our data model and API:
 
--insert data model + diagram of the API- 
+![Entity Relation Diagram](images/logicaldiagram.png)
 
 ```json
 GET /rt_routes/ 
@@ -140,5 +157,5 @@ You have successfully created and connected to OCI Database with PostgreSQL, OCI
 
 ## Acknowledgments
 
-- **Created By/Date** - Piotr Kurzynoga, Andriy Dorohkin, April 2026
+- **Created By/Date** - Piotr Kurzynoga, Andriy Dorokhin, April 2026
 - **Last Updated By** - Piotr Kurzynoga, April 2026
