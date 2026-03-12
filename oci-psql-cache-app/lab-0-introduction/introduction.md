@@ -10,6 +10,8 @@ This workshop walks you step by step through creating a full stack  functional a
 
 The core focus is on the deployment and integration of cache and database working together to deliver high performance. The application requires minimal setup, allowing you to spend more time exploring key integration concepts and observing the real-world impact of caching through a dynamic, visual interface.
 
+By the end of this workshop, you will understand how to architect modern applications that blend the speed of caching with the robustness of relational storage — all using managed services on OCI.
+
 ### Prerequisites
 
 To complete this lab you need:

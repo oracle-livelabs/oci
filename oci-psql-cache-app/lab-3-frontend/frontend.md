@@ -9,9 +9,9 @@ In this lab, you will deploy an application that connects to the OCI Cache and t
 - Create a compute instance for the application.
 - Fetch the latest dataset using provided script.
 - Deploy the application using provided script.
-- Have fun with the demo! 
+- Have fun with the demo!
 
-## Task 1:Create the Compute Instance
+## Task 1: Create the Compute Instance
 
 1.	In the Cloud Console, navigate to Compute > Instances and click Create Instance
 ![Navigate to Compute Instances](images/compute-1.png)
@@ -22,7 +22,13 @@ In this lab, you will deploy an application that connects to the OCI Cache and t
 3.	Configure the Compute instance to use Oracle Linux 9 and select the transport-lab-vcn VCN created earlier in this lab.
 ![Configure the Compute Instance](images/compute-3.png)
 
-## Task 2:Deploy the Application
+## Task 2: Configure the Virtual Cloud Network Security Rules
+1. Navigate to Menu → Virtual Cloud Networks and select your VCN.
+2. Open the 'Security' Tab
+3. In the Private Security list add the entries for following destination ports *5432* and *6379* coming from the public subnet where the compute resides, for PostgreSQL and Cache respectively.
+4. In the Public Security list repeat the same steps for ports *8585* and 8000* for all addresses *0.0.0.0/0* if you want to expose your application externally.
+
+## Task 3: Deploy the Application
 
 1.	Clone the GitHub repository using the link below and follow the instructions:
 https://github.com/phantompete/LiveLab_WebApp_Demo
@@ -82,7 +88,7 @@ Use the same steps to import data into the stops and routes tables.
 \copy routes from 'transport_data/routes.txt' WITH (FORMAT csv, HEADER true)
 ```
 
-## Task 3:Testing
+## Task 4: Testing
 
 1.	Now that the data is loaded, vehicles move on the map every 30 seconds (the cache’s API refresh interval). 
 - Inspect the backend logs to see when each operation is fetched: from the API, database, or cache and how long it takes.
