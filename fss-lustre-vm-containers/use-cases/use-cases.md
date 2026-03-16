@@ -30,7 +30,7 @@ Hands-on experience with:
 - `terraform.tfvars`
 - `provider.auto.tfvars`
 
-These files define the OCI provider settings, tenancy information, and deployment-specific variables used by the lab.
+    These files define the OCI provider settings, tenancy information, and deployment-specific variables used by the lab.
 
 2. Review the OCI resources created in your tenancy from the OCI Console.
 Confirm that the deployment created the expected components, such as:
@@ -42,19 +42,19 @@ Confirm that the deployment created the expected components, such as:
 
 3. From the Terraform directory, inspect the deployment outputs:
 
-```
-terraform output
-```
+    ```
+    terraform output
+    ```
 
-This displays useful information such as the public IP address of the provisioned VM.
+    This displays useful information such as the public IP address of the provisioned VM.
 
 4. List the Terraform-managed resources:
 
-```
-terraform state list
-```
+    ```
+    terraform state list
+    ```
 
-This helps you understand which OCI resources were created and are currently tracked in Terraform state.
+    This helps you understand which OCI resources were created and are currently tracked in Terraform state.
 
 ## Task 2 — Connect to the provisioned VM
 
@@ -67,15 +67,17 @@ This helps you understand which OCI resources were created and are currently tra
 2. Once connected, this VM will be the main environment used for verification, inspection, and benchmarking in the next steps.
 
 
-## Task 3 — Verify the FSS mount
+## Task 3 — Verify the FSS and Lustre mounts
 
 1. Before benchmarking, confirm that the FSS mount is available:
 
-```
-mount | grep media
-```
+    ```
+    mount | grep \mnt
+    ```
 
-2. This verifies that OCI File Storage Service was mounted successfully on the VM, typically under `/mnt/media`.
+    ![FSS and Lustre mounts](images/mounts.png)
+
+2. This verifies that OCI File Storage Service was mounted successfully on the VM, typically under `/mnt/media`, and Lustre unde `\mnt\gs-lfs\`.
 If cloud-init is still running, wait until the provisioning workflow completes before continuing. 
 
 **Note:** Refer to the previous lab for how to verify that cloud-init has completed.
@@ -85,60 +87,59 @@ If cloud-init is still running, wait until the provisioning workflow completes b
 
 1. Become root and inspect the shared storage locations prepared for Podman image reuse:
 
-```
-sudo -i
-ls /mnt/media/podman-store
-ls /mnt/media/podman-store/full-copy
-```
+    ```
+    sudo -i
+    ls /mnt/media/podman-store
+    ls /mnt/media/podman-store/full-copy
+    ```
 
 2. These directories are prepared by the provisioning workflow and will be used by Podman to store and reuse image data on shared storage.
 
 3. After running the benchmark script, you can inspect the populated cache content in locations such as:
 
-```
-cd /mnt/media/podman-store/full-copy/overlay-images
-ls
-cd /mnt/media/podman-store/full-copy/overlay
-ls
-```
+    ```
+    cd /mnt/media/podman-store/full-copy/overlay-images
+    ls
+    cd /mnt/media/podman-store/full-copy/overlay
+    ls
+    ```
 
-Once the benchmark populates these directories, identical image layers can be reused from shared storage instead of being downloaded and unpacked again.
+    Once the benchmark populates these directories, identical image layers can be reused from shared storage instead of being downloaded and unpacked again.
 
 4. What these locations represent:
 
 - `overlay-images` contains image metadata and references
 - `overlay` contains unpacked layer data used during container startup
 
-Once populated, these shared cache locations help reduce repeated downloads and improve container startup time across systems that use the same storage.
+    Once populated, these shared cache locations help reduce repeated downloads and improve container startup time across systems that use the same storage.
 
 ## Task 5 — Verify the benchmarking script
 
-Confirm that the benchmarking script is present on the VM:
+- Confirm that the benchmarking script is present on the VM:
 
-```
-ls /tmp
-```
+    ```
+    ls /tmp
+    ```
+    You should see:
 
-You should see:
-
-```
-lustre_fss_test_script.sh
-```
+    ```
+    lustre_fss_test_script.sh
+    ```
 
 
 ## Task 6 — Run the benchmarking script in interactive mode
 
 1. Change to the directory where the script is located:
 
-```
-cd /tmp
-```
+    ```
+    cd /tmp
+    ```
 
 2. Run the script in interactive mode:
 
-```
-./lustre_fss_test_script.sh
-```
+    ```
+    ./lustre_fss_test_script.sh
+    ```
 
 3. When prompted, select:
 
@@ -154,19 +155,19 @@ cd /tmp
 
 5. At the end of the run, the results are saved under:
 
-```
-/home/opc/*_test_results.log 
-```
+    ```
+    /home/opc/*_test_results.log 
+    ```
 
 
 ## Task 7 — Review the benchmark results
 
 1. After the script completes, review the generated log file:
 
-```
-ls /home/opc/*_test_results.log
-cat /home/opc/*_test_results.log
-```
+    ```
+    ls /home/opc/*_test_results.log
+    cat /home/opc/*_test_results.log
+    ```
 
 2. In the output, identify the measured sections:
 
@@ -189,25 +190,25 @@ cat /home/opc/*_test_results.log
 
 1. After the benchmark run, inspect the shared cache directories created on FSS or Lustre.
 
-For FSS:
+    For FSS:
 
-```
-sudo -i
-cd /mnt/media/podman-store/full-copy/overlay-images
-ls
-cd ../overlay
-ls
-```
+    ```
+    sudo -i
+    cd /mnt/media/podman-store/full-copy/overlay-images
+    ls
+    cd ../overlay
+    ls
+    ```
 
-For Lustre:
+    For Lustre:
 
-```
-sudo -i
-cd /mnt/gs-lfs/podman-store/full-copy/overlay-images
-ls
-cd ../overlay
-ls
-```
+    ```
+    sudo -i
+    cd /mnt/gs-lfs/podman-store/full-copy/overlay-images
+    ls
+    cd ../overlay
+    ls
+    ```
 
 2. These locations now contain the image data prepared by Podman during the benchmark.
   
@@ -226,22 +227,23 @@ ls
 
 1. Re-run the script with different backend and image profile combinations.
 
-Example:
+    Example:
 
-```
-BACKEND=fss IMAGE_PROFILE=small /tmp/lustre_fss_test_script.sh
-BACKEND=fss IMAGE_PROFILE=large /tmp/lustre_fss_test_script.sh
-BACKEND=lustre IMAGE_PROFILE=small /tmp/lustre_fss_test_script.sh
-BACKEND=lustre IMAGE_PROFILE=large /tmp/lustre_fss_test_script.sh
-```
+    ```
+    BACKEND=fss IMAGE_PROFILE=small /tmp/lustre_fss_test_script.sh
+    BACKEND=fss IMAGE_PROFILE=large /tmp/lustre_fss_test_script.sh
+    BACKEND=lustre IMAGE_PROFILE=small /tmp/lustre_fss_test_script.sh
+    BACKEND=lustre IMAGE_PROFILE=large /tmp/lustre_fss_test_script.sh
+    ```
 
 2. Compare the generated log files in:
 
-```
-/home/opc/*_test_results.log
-```
+    ```
+    /home/opc/*_test_results.log
+    ```
 
-![Log of benchmarking script on FSS with small sized image](images/log_benchmarking.png)
+    ![Log of benchmarking script on FSS with small sized image](images/log_benchmarking_FSS.png)
+    ![Log of benchmarking script on Lustre with large sized image](images/log_benchmarking_lustre.png)
 
 3. This helps you observe how cache reuse behavior changes depending on:
 
