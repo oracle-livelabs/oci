@@ -241,6 +241,8 @@ BACKEND=lustre IMAGE_PROFILE=large /tmp/lustre_fss_test_script.sh
 /home/opc/*_test_results.log
 ```
 
+![Log of benchmarking script on FSS with small sized image](images/log_benchmarking.png)
+
 3. This helps you observe how cache reuse behavior changes depending on:
 
 - the selected backend
