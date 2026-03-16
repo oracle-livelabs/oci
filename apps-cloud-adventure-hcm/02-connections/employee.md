@@ -18,14 +18,12 @@ In this lab, you will:
 
 1. Click the **Me** tab, then the **‘Connections’** tile, and search for **‘Curtis Feitty’** to explore his public profile. You'll find various profile elements, such as his position in the org chart, who he reports to, his interests, skills, and feedback received. 
     
-    *tip: Scroll across to view their entire profile. 
+    *tip: Scroll to the bottom to view their entire profile. 
 
     ![Accessing Connections](images/accessing-connections.png)
 
     ![Connections Search](images/connections-search.png)
-
-    ![Connections Profile](images/connections-profile.png)
-
+   
 ## Task 2:  Absence Request
 
 Oracle Cloud HCM can handle any type of absence, to include automating which absences different employees can request/view, based on specific/local rules. This logic also includes accruals and entitlements.
