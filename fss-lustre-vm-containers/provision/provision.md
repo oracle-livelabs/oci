@@ -64,9 +64,9 @@ Run Terraform:
 
 6. Review the execution plan:
    
-   ```
-   terraform plan
-   ```
+    ```
+    terraform plan
+    ```
 
 7. Provision the infrastructure:
 
