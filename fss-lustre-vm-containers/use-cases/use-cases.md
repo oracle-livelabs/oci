@@ -209,13 +209,13 @@ If cloud-init is still running, wait until the provisioning workflow completes b
   
 - `overlay-images` contains image metadata and layer references
 - `overlay` contains unpacked layer content used during container startup
-
-1. This illustrates how shared storage enables reuse across runs and across systems that access the same cache.
+  
+3. This illustrates how shared storage enables reuse across runs and across systems that access the same cache.
 
 - **Warm pull** can reuse existing image layers instead of downloading them again
 - **Warm run** can reuse already prepared image content instead of unpacking it again
 
-4. Because identical layers are stored once and identified by digest, multiple systems can reference the same cached content, which helps reduce image download and startup time.
+4.  Because identical layers are stored once and identified by digest, multiple systems can reference the same cached content, which helps reduce image download and startup time.
 
 
 ## Task 9 — Run additional benchmark scenarios
