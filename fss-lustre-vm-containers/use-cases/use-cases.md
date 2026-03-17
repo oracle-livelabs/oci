@@ -143,13 +143,8 @@ If cloud-init is still running, wait until the provisioning workflow completes b
 
 3. When prompted, select:
 
-- the storage backend:
-  - FSS
-  - Lustre
-- the image profile:
-  - small
-  - medium
-  - large
+- the storage backend: FSS OR Lustre
+- the image profile: small OR medium OR large
 
 4. The script will guide you step by step through the benchmark flow and pause between stages so you can observe what happens.
 
