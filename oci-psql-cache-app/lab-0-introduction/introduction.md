@@ -41,5 +41,5 @@ Typical request flow:
 
 ## Acknowledgements
 
-- **Created By/Date** - Piotr Kurzynoga, Andriy Dorohkin, April 2026
+- **Created By/Date** - Piotr Kurzynoga, Andriy Dorokhin, April 2026
 - **Last Updated By** - Piotr Kurzynoga, April 2026
