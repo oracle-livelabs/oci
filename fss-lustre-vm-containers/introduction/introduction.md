@@ -10,7 +10,7 @@ The infrastructure is provisioned using Terraform and configured via cloud-init,
 
 Estimated Workshop Time: 1 hour 30 minutes
 
-### **Objectives**
+### Objectives
 
 By the end of this workshop, you will:
 

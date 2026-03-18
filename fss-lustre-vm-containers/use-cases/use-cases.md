@@ -7,7 +7,7 @@ In this lab, you will explore several practical scenarios for running the benchm
 
 Estimated Time: 30 minutes
 
-### **Objectives**
+### Objectives
 
 Hands-on experience with:
 
@@ -27,18 +27,18 @@ Hands-on experience with:
 ## Task 1 — Review the deployed environment
 
 1. Open the extracted Terraform repository in VS Code and review the main input files:
-- `terraform.tfvars`
-- `provider.auto.tfvars`
+    - `terraform.tfvars`
+    - `provider.auto.tfvars`
 
     These files define the OCI provider settings, tenancy information, and deployment-specific variables used by the lab.
 
 2. Review the OCI resources created in your tenancy from the OCI Console.
 Confirm that the deployment created the expected components, such as:
 
-- Networking resources
-- Compute instance
-- OCI File Storage Service (FSS)
-- OCI Lustre File Storage
+    - Networking resources
+    - Compute instance
+    - OCI File Storage Service (FSS)
+    - OCI Lustre File Storage
 
 3. From the Terraform directory, inspect the deployment outputs:
 
@@ -108,8 +108,8 @@ If cloud-init is still running, wait until the provisioning workflow completes b
 
 4. What these locations represent:
 
-- `overlay-images` contains image metadata and references
-- `overlay` contains unpacked layer data used during container startup
+    - `overlay-images` contains image metadata and references
+    - `overlay` contains unpacked layer data used during container startup
 
     Once populated, these shared cache locations help reduce repeated downloads and improve container startup time across systems that use the same storage.
 
@@ -143,8 +143,8 @@ If cloud-init is still running, wait until the provisioning workflow completes b
 
 3. When prompted, select:
 
-- the storage backend: FSS OR Lustre
-- the image profile: small OR medium OR large
+    - the storage backend: FSS OR Lustre
+    - the image profile: small OR medium OR large
 
 4. The script will guide you step by step through the benchmark flow and pause between stages so you can observe what happens.
 
@@ -166,17 +166,17 @@ If cloud-init is still running, wait until the provisioning workflow completes b
 
 2. In the output, identify the measured sections:
 
-- **Cold Pull**
-- **Cold Run**
-- **Warm Pull**
-- **Warm Run**
+    - **Cold Pull**
+    - **Cold Run**
+    - **Warm Pull**
+    - **Warm Run**
 
 3. Compare the timings to observe how shared storage improves reuse:
 
-- Cold pull shows the cost of downloading image data from the registry
-- Warm pull shows reuse of cached layers from shared storage
-- Cold run includes image retrieval plus container startup
-- Warm run shows container startup using already available cached content
+    - Cold pull shows the cost of downloading image data from the registry
+    - Warm pull shows reuse of cached layers from shared storage
+    - Cold run includes image retrieval plus container startup
+    - Warm run shows container startup using already available cached content
 
 4. You should observe that warm scenarios are faster because the image data is reused from shared storage instead of being downloaded and prepared again.
 
@@ -207,13 +207,13 @@ If cloud-init is still running, wait until the provisioning workflow completes b
 
 2. These locations now contain the image data prepared by Podman during the benchmark.
   
-- `overlay-images` contains image metadata and layer references
-- `overlay` contains unpacked layer content used during container startup
+    - `overlay-images` contains image metadata and layer references
+    - `overlay` contains unpacked layer content used during container startup
   
 3. This illustrates how shared storage enables reuse across runs and across systems that access the same cache.
 
-- **Warm pull** can reuse existing image layers instead of downloading them again
-- **Warm run** can reuse already prepared image content instead of unpacking it again
+    - **Warm pull** can reuse existing image layers instead of downloading them again
+    - **Warm run** can reuse already prepared image content instead of unpacking it again
 
 4.  Because identical layers are stored once and identified by digest, multiple systems can reference the same cached content, which helps reduce image download and startup time.
 
@@ -242,8 +242,8 @@ If cloud-init is still running, wait until the provisioning workflow completes b
 
 3. This helps you observe how cache reuse behavior changes depending on:
 
-- the selected backend
-- the image size/profile
+    - the selected backend
+    - the image size/profile
 
 
 You may now **proceed to the next lab**.

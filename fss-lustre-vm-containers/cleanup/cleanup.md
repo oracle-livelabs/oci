@@ -6,7 +6,7 @@ Once the workshop is complete, remove all created resources to avoid unnecessary
 
 Estimated Time: 30 minutes
 
-### **Objectives**
+### Objectives
 
 Delete the VM and shared file system resources (FSS and/or Lustre) created by Terraform.
 
@@ -22,9 +22,9 @@ This lab assumes you have:
 
 1. From the same terminal directory where the infrastructure was deployed, run:
 
-```
-terraform destroy
-```
+    ```
+    terraform destroy
+    ```
 
 2. Review the resources scheduled for deletion and type **yes** to confirm.
 

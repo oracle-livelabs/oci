@@ -13,7 +13,7 @@ The environment is provisioned using **Terraform from the command line**, and th
 
 Estimated Time: 45 minutes
 
-### **Objectives**
+### Objectives
 
 By the end of this lab, you will:
 - Deploy a full OCI environment using Terraform CLI
@@ -45,16 +45,16 @@ This lab assumes you have:
     ```
 
 3. Edit `provider.auto.tfvars` and populate all required values:
-- `tenancy_ocid`
-- `user_ocid`
-- `fingerprint`
-- `private_key_path`
-- `region`
-- Compartment OCIDs
+    - `tenancy_ocid`
+    - `user_ocid`
+    - `fingerprint`
+    - `private_key_path`
+    - `region`
+    - Compartment OCIDs
 
 4. Review and adjust terraform.tfvars if needed (for example: SSH key paths, CIDRs, compute shape, image, or storage sizes).
 
-Run Terraform:
+    Run Terraform:
 
 5. Open a terminal for this code, make sure to **cd** to the Terraform folder and initialize the Terraform configuration:
 
@@ -121,7 +121,7 @@ Monitor post-reboot progress using:
     sudo journalctl -u post-reboot.service -f
     ```
 
-Once all steps complete successfully, the instance is fully prepared and ready for manual benchmarking.
+    Once all steps complete successfully, the instance is fully prepared and ready for manual benchmarking.
 
 You may now **proceed to the next lab**.
 
