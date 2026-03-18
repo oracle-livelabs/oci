@@ -24,7 +24,7 @@ Hands-on experience with:
 - The benchmarking script is available on the VM under `/tmp`
 - Podman, FSS, and Lustre have been configured successfully by the provisioning workflow
 
-## Task 1 — Review the deployed environment
+## Task 1: Review the deployed environment
 
 1. Open the extracted Terraform repository in VS Code and review the main input files:
     - `terraform.tfvars`
@@ -33,7 +33,7 @@ Hands-on experience with:
     These files define the OCI provider settings, tenancy information, and deployment-specific variables used by the lab.
 
 2. Review the OCI resources created in your tenancy from the OCI Console.
-Confirm that the deployment created the expected components, such as:
+    Confirm that the deployment created the expected components, such as:
 
     - Networking resources
     - Compute instance
@@ -56,18 +56,18 @@ Confirm that the deployment created the expected components, such as:
 
     This helps you understand which OCI resources were created and are currently tracked in Terraform state.
 
-## Task 2 — Connect to the provisioned VM
+## Task 2: Connect to the provisioned VM
 
 1. Use SSH to connect to the provisioned compute instance:
 
-    ```<copy>
+    ```
     ssh opc@<instance_public_ip>
     ```
 
 2. Once connected, this VM will be the main environment used for verification, inspection, and benchmarking in the next steps.
 
 
-## Task 3 — Verify the FSS and Lustre mounts
+## Task 3: Verify the FSS and Lustre mounts
 
 1. Before benchmarking, confirm that the FSS mount is available:
 
@@ -83,7 +83,7 @@ If cloud-init is still running, wait until the provisioning workflow completes b
 **Note:** Refer to the previous lab for how to verify that cloud-init has completed.
 
 
-## Task 4 — Inspect the shared Podman cache locations on FSS
+## Task 4: Inspect the shared Podman cache locations on FSS
 
 1. Become root and inspect the shared storage locations prepared for Podman image reuse:
 
@@ -113,7 +113,7 @@ If cloud-init is still running, wait until the provisioning workflow completes b
 
     Once populated, these shared cache locations help reduce repeated downloads and improve container startup time across systems that use the same storage.
 
-## Task 5 — Verify the benchmarking script
+## Task 5: Verify the benchmarking script
 
 - Confirm that the benchmarking script is present on the VM:
 
@@ -127,7 +127,7 @@ If cloud-init is still running, wait until the provisioning workflow completes b
     ```
 
 
-## Task 6 — Run the benchmarking script in interactive mode
+## Task 6: Run the benchmarking script in interactive mode
 
 1. Change to the directory where the script is located:
 
@@ -155,7 +155,7 @@ If cloud-init is still running, wait until the provisioning workflow completes b
     ```
 
 
-## Task 7 — Review the benchmark results
+## Task 7: Review the benchmark results
 
 1. After the script completes, review the generated log file:
 
@@ -181,7 +181,7 @@ If cloud-init is still running, wait until the provisioning workflow completes b
 4. You should observe that warm scenarios are faster because the image data is reused from shared storage instead of being downloaded and prepared again.
 
 
-## Task 8 — Inspect the populated shared cache after the benchmark
+## Task 8: Inspect the populated shared cache after the benchmark
 
 1. After the benchmark run, inspect the shared cache directories created on FSS or Lustre.
 
@@ -215,10 +215,10 @@ If cloud-init is still running, wait until the provisioning workflow completes b
     - **Warm pull** can reuse existing image layers instead of downloading them again
     - **Warm run** can reuse already prepared image content instead of unpacking it again
 
-4.  Because identical layers are stored once and identified by digest, multiple systems can reference the same cached content, which helps reduce image download and startup time.
+4. Because identical layers are stored once and identified by digest, multiple systems can reference the same cached content, which helps reduce image download and startup time.
 
 
-## Task 9 — Run additional benchmark scenarios
+## Task 9: Run additional benchmark scenarios
 
 1. Re-run the script with different backend and image profile combinations.
 
@@ -237,7 +237,7 @@ If cloud-init is still running, wait until the provisioning workflow completes b
     /home/opc/*_test_results.log
     ```
 
-    ![Log of benchmarking script on FSS with small sized image](images/log_benchmarking_FSS.png)
+    ![Log of benchmarking script on FSS with small sized image](images/log_benchmarking_fss.png)
     ![Log of benchmarking script on Lustre with large sized image](images/log_benchmarking_lustre.png)
 
 3. This helps you observe how cache reuse behavior changes depending on:
