@@ -70,7 +70,7 @@ The deployment script performs the following actions:
 - Install psql (required in later steps).
 - Create the necessary database schema and tables.
 
-4. In your browser, navigate to http://<public_IP>:<port> using the public IP of your Compute instance to access the application.
+4. In your browser, navigate to http://compute-ip:8080 using the public IP of your Compute instance to access the application.
 5. Confirm that the map appears in your browser. The application is connected to an empty database, so no data points are displayed yet. Load the necessary data into the database before continuing to enable interactive map features.
 6. Download the data set from the provided link. Use the psql command-line tool, installed by the deployment script, to load the SQL script.
 

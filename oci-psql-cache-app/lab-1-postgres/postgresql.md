@@ -120,5 +120,5 @@ You have provisioned a PostgreSQL database on OCI and are aware of key managemen
 
 ## Acknowledgments
 
-- **Created By/Date** - Devneel Vadiya, Piotr Kurzynoga, Andriy Dorohkin, April 2026
+- **Created By/Date** - Devneel Vaidya, Piotr Kurzynoga, Andriy Dorokhin, April 2026
 - **Last Updated By** - Piotr Kurzynoga, April 2026
