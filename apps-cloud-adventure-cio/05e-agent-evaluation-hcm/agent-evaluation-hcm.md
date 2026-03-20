@@ -23,7 +23,7 @@ As a pre-requisite for this adventure, please download the **Benefits-Evaluation
 
 ### **Begin Exercise**
 
-1. In this activity you will create Evaluations of AI Agents and view results of evaulation runs.
+1. In this activity you will create Evaluations for AI Agents and view results of evaluation runs.
 
     ![AI Agent Team](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image001.jpg)
 
@@ -45,7 +45,7 @@ As a pre-requisite for this adventure, please download the **Benefits-Evaluation
 
     ![Create New Evaluation](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image004.jpg)
 
-5. You can define the information, including questions.  To simplify the question creation, you can use the pre-defined list of questions that are available in the Pre-Requisites section at the top of the lab.
+5. You can define the information, including questions.  To simplify the question creation, you can use the pre-defined list of questions (CSV file) that is available for download in the Pre-Requisites section at the top of the lab.
 
     > (1) Enter the fields as described below:
      * Name: **CIOXX Benefits Agent Evaluation** where **XX** is replaced with your user number.<br>
@@ -82,13 +82,13 @@ As a pre-requisite for this adventure, please download the **Benefits-Evaluation
 
     ![Review and Create](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image008.jpg)
 
-9. Now that the Evaluation is defined, it's time to initial a run.
+9. Now that the Evaluation is defined, it's time to initiate a run.
 
-    > (1) Click the **...** icon ![dotdotdot button](../gen-images/dotdotdot.png) in the record for you previously defined Evaluation Name (eg. **CIOXX Benefits Agent Evaluation**) and select **Initiate Evaluation Run** from the resulting dropdown.
+    > (1) Click the icon ![dotdotdot button](../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Benefits Agent Evaluation** where **XX** is replaced with your user number) and select **Initiate Evaluation Run** from the resulting dropdown.
 
     ![Initiate Evaluation](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image009.jpg)
 
-10. The panel on the right side of the screen displayed detailed about your planned run.
+10. The panel on the right side of the screen displays details about your evaluation run.
 
     > (1) Click the **Run** button ![run button](../gen-images/run_button.png).
 
@@ -96,29 +96,29 @@ As a pre-requisite for this adventure, please download the **Benefits-Evaluation
 
 11. Now it's time to review the status and results of your evaluation run.
 
-    > (1) Click the **...** icon ![dotdotdot button](../gen-images/dotdotdot.png) in the record for you previously defined Evaluation Name (eg. **CIOXX Benefits Agent Evaluation**) and select **View Evaluation Run** from the resulting dropdown.
+    > (1) Click the icon ![dotdotdot button](../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Benefits Agent Evaluation** where **XX** is replaced with your user number) and select **View Evaluation Runs** from the resulting dropdown.
 
     ![View Evaluation Run](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image011.jpg)
 
 12. The Evaluation Run screen shows the current Status.
 
-    > (1) Click the **Refresh** button ![Refresh button](../gen-images/refresh_button.png).  If necessary, you can repeat the refresh until the Status shows **Completed**.
+    > (1) Click the **Refresh** button ![Refresh button](../gen-images/refresh_button.png).  If necessary, you can wait couple of minutes or repeat the refresh until the Status shows **Completed**.
 
     ![Refresh while awaiting completion](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image012.jpg)
 
 13. Now that the Evaluation Run is complete, it's time to view the results
 
-    > (1) Click the **...** icon ![dotdotdot button](../gen-images/dotdotdot.png) in the record for you previously defined Evaluation Name (eg. **CIOXX Benefits Agent Evaluation**) and select **View Run Results** from the resulting dropdown.
+    > (1) Click the icon ![dotdotdot button](../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Benefits Agent Evaluation** where **XX** is replaced with your user number) and select **View Run Results** from the resulting dropdown.
 
     ![View Evaluation Run](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image013.jpg)
 
-14. The Response performance screen can show a lot of information.  The first thing you'll do is resize the rows/colums to better show the data.
+14. The Response performance screen can show a lot of information.  The first thing you'll do is resize the rows/columns to better show the data.
 
-    > (1) **Right Click** on one of the row numbers and select **Resize to Fit** from the resulting dropdown.  You only need to do this for one row as it will resize the entire table.
+    > (1) **Right Click** on one of the row numbers and select **Resize to Fit** from the resulting dropdown.  You only need to do this for one row as it will resize the entire table. Repeat step if necessary.
 
     ![Resize table](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image014.jpg)
 
-15. You can see the expected and actual responses as well as additional info like Latency, Token Usage and Errors.  Issues will be highlighted in Red.  Let's take a look at a specific result.
+15. You can see the expected and actual response. In addition, you have metrics related to Latency, Token Usage and Errors. If metrics do not meet the thresholds, they will be highlighted in Red.  Let's drill into a specific result for more details.
 
     > (1) Click the **URL** in the **Trace** column for **Row 4 (Are there FMLA benefits)**.
 
@@ -130,22 +130,22 @@ As a pre-requisite for this adventure, please download the **Benefits-Evaluation
 
     ![View Agent Trace](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image016.jpg)
 
-17. The right side panel appears and show Trace details of the Agent.  You can review detailed metrics of this specific step, including inputs and outputs.   Also note separate tabs Trace steps are color coded.  See the Legend above the table results.  Let's view the details of the F1 FMLA Absence Agent.
+17. The right side panel appears and displays Trace details of the Agent.  You can review detailed metrics of this specific step, including inputs and outputs.
 
     > (1) You can review detailed metrics of this specific step, including inputs and outputs.  Note additional tabs for **Prompt** and **Memory**. </br>
-    > (2) When finished with your review, you can close the panel by clicking the **...** icon ![dotdotdot button](../gen-images/dotdotdot.png) and selecting **Close** from the resulting dropdown.
+    > (2) When finished with your review, you can close the panel by clicking the icon ![dotdotdot button](../gen-images/dotdotdot.png) and selecting **Close** from the resulting dropdown.
 
     ![Review and Close Trace](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image017.jpg)
 
-18. You can review similar details for other steps within the Evaluation Trace, including LLM calls, Business Object calls, and other Tools used buy your agent.  Close this page so you can return to your Evaluation Run screen.
+18. You can review similar details for other steps within the Evaluation Trace, including LLM calls, Business Object calls, and other Tools used by your agent.  Close this page so you can return to your Evaluation Run screen.
 
     > (1) Click the **Cancel** button ![cancel button](../gen-images/cancel_button_brown.png).
 
     ![Review and Close Trace](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image018.jpg)
 
-19. Next, you can review Correctness results and finish up this Adventure.
+19. Next, you can review Correctness results and complete this Adventure.
 
-    > (1) Click the **Correctness** tab.  This tab shows you correctness scores and LLM feedback for your various evaluation run questions.  
+    > (1) Click the **Correctness** tab.  This tab shows correctness scores and LLM feedback for your various evaluation run questions.
     > (2) Click the **Cancel** button ![cancel button](../gen-images/cancel_button_brown.png).
 
     ![Review and Close Trace](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image019.jpg)
