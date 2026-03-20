@@ -84,16 +84,18 @@ The deployment script performs the following actions:
 
 Tip: To avoid manual transfers, use wget.
 
-Connect to the Database and run the following command to load the data:
+Connect to the Database with psql and run the following command to load the data:
+
+Reminder, to connect use: `psql -h oci_postgres_host -U your_user -d postgres`.
 ```sql
-\copy stop_times from 'transport_data/stop_times.txt' WITH (FORMAT csv, HEADER true)
+\copy stop_times from 'public_transport.transport_data/stop_times.txt' WITH (FORMAT csv, HEADER true)
 ```
 This command imports records into the stop_times table.
 
 Use the same steps to import data into the stops and routes tables.
 ```sql
-\copy stops from 'transport_data/stops.txt' WITH (FORMAT csv, HEADER true)
-\copy routes from 'transport_data/routes.txt' WITH (FORMAT csv, HEADER true)
+\copy stops from 'public_transport.transport_data/stops.txt' WITH (FORMAT csv, HEADER true)
+\copy routes from 'public_transport.transport_data/routes.txt' WITH (FORMAT csv, HEADER true)
 ```
 
 ## Task 4: Testing
