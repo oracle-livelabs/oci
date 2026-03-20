@@ -1,11 +1,11 @@
 # Configure the frontend
 
-### Introduction
+## Introduction
 In this lab, you will deploy an application that connects to the OCI Cache and the OCI Database with PostgreSQL instances you created earlier.
 
 **Estimated Time:** 25-40 minutes
 
-### Objectives:
+## Objectives:
 - Create a compute instance for the application.
 - Fetch the latest dataset using provided script.
 - Deploy the application using provided script.
