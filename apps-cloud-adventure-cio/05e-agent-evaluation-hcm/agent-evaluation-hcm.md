@@ -145,7 +145,7 @@ As a pre-requisite for this adventure, please download the **Benefits-Evaluation
 
 19. Next, you can review Correctness results and complete this Adventure.
 
-    > (1) Click the **Correctness** tab.  This tab shows correctness scores and LLM feedback for your various evaluation run questions.
+    > (1) Click the **Correctness** tab.  This tab shows correctness scores and LLM feedback for your various evaluation run questions.<br>
     > (2) Click the **Cancel** button ![cancel button](../gen-images/cancel_button_brown.png).
 
     ![Review and Close Trace](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image019.jpg)

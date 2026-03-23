@@ -121,13 +121,13 @@ As a pre-requisite for this adventure, please download the **Procurement-Evaluat
 
 15. You can see the expected and actual response. In addition, you have metrics related to Latency, Token Usage and Errors. If metrics do not meet the thresholds, they will be highlighted in Red.  Let's drill into a specific result for more details.
 
-    > (1) Click the **URL** in the **Trace** column for **Row 4 (Are there FMLA benefits)**.
+    > (1) Click the **URL** in the **Trace** column for **Row 1 (What are laptop policies for purchases)**.
 
     ![View Trace](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image015.jpg)
 
-16. The Trace steps are color coded.  See the Legend above the table results.  Let's view the details of the F1 FMLA Absence Agent.
+16. The Trace steps are color coded.  See the Legend above the table results.  Let's view the details of the F1 AIA Purchase Requisitions Agent.
 
-    > (1) Click the **Worker Agent** bar in the **F1 FMLA Absence Agent** row.
+    > (1) Click the **Worker Agent** bar in the **F1 AIA Purchase Requisitions Agent** row.
 
     ![View Agent Trace](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image016.jpg)
 
@@ -146,7 +146,7 @@ As a pre-requisite for this adventure, please download the **Procurement-Evaluat
 
 19. Next, you can review Correctness results and finish up this Adventure.
 
-    > (1) Click the **Correctness** tab.  This tab shows you correctness scores and LLM feedback for your various evaluation run questions.  
+    > (1) Click the **Correctness** tab.  This tab shows you correctness scores and LLM feedback for your various evaluation run questions. <br>
     > (2) Click the **Cancel** button ![cancel button](../gen-images/cancel_button_brown.png).
 
     ![Review and Close Trace](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image019.jpg)
