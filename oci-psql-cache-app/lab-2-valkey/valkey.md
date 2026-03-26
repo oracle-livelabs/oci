@@ -5,14 +5,14 @@ In this lab, you will learn how to provision an OCI Cache cluster in your tenanc
 
 **Estimated Time:** 15–20 minutes
 
-## Objectives
+### Objectives
 - Deploy an OCI Cache cluster with the Valkey engine
 - **(Explore only)** See where to configure:
     - Scaling and high availability
     - Cache users
     - Custom configurations
 
-## Prerequisites
+### Prerequisites
 - IAM permissions to create OCI Cache instance in a compartment in the tenancy
 
 ## Task 1: Provision an OCI Cache Instance
@@ -102,7 +102,9 @@ E.	Metrics and Monitoring
 ## Summary & Next Steps
 You have provisioned an OCI Cache cluster and explored key management and monitoring features that are important for enterprise workloads. For production use, consider deeper exploration of access control, monitoring, scaling and high availability strategies as described in the OCI Cache documentation
 
-## Acknowledgments
+You may now **proceed to the next lab**.
+
+## Acknowledgements
 
 - **Created By/Date** - Rashmi Badan, Andriy Dorokhin, Piotr Kurzynoga / April 2026
 - **Last Updated By** - Andriy Dorokhin, April 2026

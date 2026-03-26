@@ -5,11 +5,14 @@ In this lab, you will deploy an application that connects to the OCI Cache and t
 
 **Estimated Time:** 25-40 minutes
 
-## Objectives:
+### Objectives:
 - Create a compute instance for the application.
 - Fetch the latest dataset using provided script.
 - Deploy the application using provided script.
 - Have fun with the demo!
+
+### Prerequisites
+- Completed the previous labs in this workshop.
 
 ## Task 1: Create the Compute Instance
 
@@ -173,7 +176,7 @@ GET /stop/${stop_id}
 
 You have successfully created and connected to OCI Database with PostgreSQL, OCI Cache and deployed an application that integrates the two solutions.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Created By/Date** - Piotr Kurzynoga, Andriy Dorokhin, April 2026
 - **Last Updated By** - Piotr Kurzynoga, April 2026

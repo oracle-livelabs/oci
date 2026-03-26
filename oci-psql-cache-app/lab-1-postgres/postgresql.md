@@ -118,7 +118,9 @@ C. Configuring Cross-Region Backups
 ## Summary & Next Steps
 You have provisioned a PostgreSQL database on OCI and are aware of key management features for enterprise deployments. For production use, consider exploring read replicas, automatic and cross-region backups, and monitoring features as described in the PostgreSQL on OCI documentation.
 
-## Acknowledgments
+You may now **proceed to the next lab**.
+
+## Acknowledgements
 
 - **Created By/Date** - Devneel Vaidya, Piotr Kurzynoga, Andriy Dorokhin, April 2026
 - **Last Updated By** - Piotr Kurzynoga, April 2026

@@ -6,6 +6,8 @@ Welcome to Accelerating IoT applications with OCI Cache and OCI PostgreSQL Works
 
 This workshop walks you step by step through creating a full stack  functional application including OCI Compute, OCI Cache, OCI PostgreSQL and the necessary core OCI components.
 
+**Estimated Time:** 5 minutes
+
 ### **Objectives**
 
 The core focus is on the deployment and integration of cache and database working together to deliver high performance. The application requires minimal setup, allowing you to spend more time exploring key integration concepts and observing the real-world impact of caching through a dynamic, visual interface.
