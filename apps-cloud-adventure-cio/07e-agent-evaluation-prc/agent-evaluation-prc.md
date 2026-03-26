@@ -15,6 +15,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to evaluate agents b
 * Create Evaluation for AI Agent
 * Run Evaluation to measure AI Agent's performance against key metrics
 
+Estimated Time: 10 minutes
+
 ### **Pre-requisite**
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
