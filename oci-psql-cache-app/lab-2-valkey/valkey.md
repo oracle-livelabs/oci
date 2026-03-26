@@ -8,9 +8,9 @@ In this lab, you will learn how to provision an OCI Cache cluster in your tenanc
 ## Objectives
 - Deploy an OCI Cache cluster with the Valkey engine
 - **(Explore only)** See where to configure:
-  - Scaling and high availability
-  - Cache users
-  - Custom configurations
+    - Scaling and high availability
+    - Cache users
+    - Custom configurations
 
 ## Prerequisites
 - IAM permissions to create OCI Cache instance in a compartment in the tenancy
@@ -21,23 +21,23 @@ In this lab, you will learn how to provision an OCI Cache cluster in your tenanc
 ![Databases → OCI Cache](images/01.png)
 2. Click **Create Cluster**
 3. Follow the guided steps:
-    - **Name:** Enter a name (e.g. livelab-cache)
-    - **Compartment:** Select your compartment
-    - **OCI Cache engine version:** Choose `VALKEY_7_2`
-    - **Configuration:** Choose `default-valkey_7_2-v1`
+- **Name:** Enter a name (e.g. livelab-cache)
+- **Compartment:** Select your compartment
+- **OCI Cache engine version:** Choose `VALKEY_8_1`
+- **Configuration:** Choose `default-valkey_8_1-v1`
 4. Click **Next**
 
 ![Create cluster](images/02.png)
 5. Choose the cluster node configuration
-    - **Node configuration:** Choose `Non-sharded`
-    - **Node count:** 3
-    - **Memory per node:** 16GB
+- **Node configuration:** Choose `Non-sharded`
+- **Node count:** 3
+- **Memory per node:** 16GB
 6. Click **Next**
 
 ![Non-sharded](images/03.png)
 7. Configure Networking
-    - Choose a Virtual Cloud Network (VCN) and subnet
-    - (Optional) Add a Network security group
+- Choose a Virtual Cloud Network (VCN) and subnet
+- (Optional) Add a Network security group
 8. Click **Next**
 
 ![VCN](images/04.png)
@@ -77,8 +77,8 @@ B. Scaling replica nodes
 - OCI Cache allows you to add replica nodes for read-heavy workloads or for high availability
 - On your cluster’s detail page, review the node count and click on Resize nodes to add more replica nodes
 - For high-availability, to allow seamless failover in the event of node failures:
-  - Maintain one primary and at least 2 replica nodes in a non-sharded cluster
-  - Maintain one primary and at least 2 replica nodes per shard in a sharded cluster
+    - Maintain one primary and at least 2 replica nodes in a non-sharded cluster
+    - Maintain one primary and at least 2 replica nodes per shard in a sharded cluster
 
 C. Securing access to cache
 - OCI Cache supports configuring access control to data in the cache and running cache commands
@@ -104,5 +104,5 @@ You have provisioned an OCI Cache cluster and explored key management and monito
 
 ## Acknowledgments
 
-- **Created By/Date** - Rashmi Badan, Andriy Dorohkin, Piotr Kurzynoga, April 2026
-- **Last Updated By** - Andriy Dorohkin, April 2026
+- **Created By/Date** - Rashmi Badan, Andriy Dorokhin, Piotr Kurzynoga / April 2026
+- **Last Updated By** - Andriy Dorokhin, April 2026
