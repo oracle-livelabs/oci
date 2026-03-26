@@ -16,7 +16,7 @@ In this lab, you will learn how to provision a PostgreSQL database on Oracle Clo
     - Backups and cross-region backups
 
 ### Prerequisites
-- OCI Account with sufficient permissions (some features may not be available under "Always Free").
+- OCI Account with sufficient permissions.
 - Have a Virtual Cloud Network(VCN) in place (e.g transport-lab-vcn)
 - Your tenancy must have access to a supported region (e.g., Chicago, Frankfurt).
 - [How to manage subscription to cloud regions](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm)
