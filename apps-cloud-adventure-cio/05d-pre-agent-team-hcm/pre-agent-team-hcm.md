@@ -6,12 +6,13 @@
 
 AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
 
-
 ### **Objectives**
 
 In this activity you will use Oracle Fusion AI Agent Studio to
 * Assemble an Agent Team using your previously created Benefits Advisor Agent and seeded FMLA Absence Agent.
 * Test the Agent Team
+
+Estimated Time: 10-15 minutes
 
 ### **Begin Exercise**
 
@@ -103,7 +104,7 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
     You decide to tell the Agent that you’re interested in creating an FMLA absence, but you do so without initially providing the requested dates.<br>
 
-    >  (1) In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Yes, please submit a new FMLA absence with a start date of 2026-05-18 and an end date of 2026-05-2216** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
+    >  (1) In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Yes, please submit a new FMLA absence with a start date of 2026-06-16 and an end date of 2026-06-18** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
     ![agent dialogue 3](../05d-pre-agent-team-hcm/images/pre-agent-team-hcm-image013.jpg) <br>
 
@@ -159,4 +160,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, February 2026
+* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, March 2026

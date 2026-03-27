@@ -71,7 +71,7 @@ As a pre-requisite for this adventure, please download the **Benefits-Evaluation
 
     ![Load Questions File](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image006.jpg)
 
-7. You can see that the questions are now visible.  Next, you'll work on the Metrics.
+7. You can see that the questions are now visible. You can optionally scroll down to see all the questions. Next, you'll work on the Metrics.
 
     > (1) Click the **Metrics** tab. <br>
 
