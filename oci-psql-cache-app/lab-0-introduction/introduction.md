@@ -8,13 +8,13 @@ This workshop walks you step by step through creating a full stack  functional a
 
 **Estimated Time:** 5 minutes
 
-### **Objectives**
+### Objectives
 
 The core focus is on the deployment and integration of cache and database working together to deliver high performance. The application requires minimal setup, allowing you to spend more time exploring key integration concepts and observing the real-world impact of caching through a dynamic, visual interface.
 
 By the end of this workshop, you will understand how to architect modern applications that blend the speed of caching with the robustness of relational storage — all using managed services on OCI.
 
-### **What are we solving?**
+### What are we solving?
 
 General transport IoT applications require instant access to combined real-time data and historical database records, but frequent PostgreSQL queries under high user demand cause latency spikes and introduce bottlenecks into the system.
 
@@ -22,7 +22,7 @@ This workshop demonstrates accelerating these apps by integrating OCI Cache (Val
 
 This approach can also enhance existing solutions: migrate current PostgreSQL workloads to OCI PostgreSQL with minimal effort, then layer in OCI Cache to offload read-heavy queries. Existing apps can gain instant performance boosts by routing API requests through the cache, achieving faster responses and better scalability without major code changes.
 
-### **Prerequisites**
+### Prerequisites
 
 To complete this lab you need:
 
@@ -30,7 +30,7 @@ To complete this lab you need:
 * Basic familiarity with Core OCI Services
 * Must have an Administrator Account or Permissions to manage several OCI Services: OCI Database with PostgreSQL, OCI Cache, Compute, Network, Dynamic Groups, Policies, Vault
 
-### **Architecture**
+### Architecture
 
 The key components are:
 * OCI Database with PostgreSQL

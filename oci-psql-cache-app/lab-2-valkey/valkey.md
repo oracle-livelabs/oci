@@ -18,32 +18,32 @@ In this lab, you will learn how to provision an OCI Cache cluster in your tenanc
 ## Task 1: Provision an OCI Cache Instance
 1. Using the Navigation Menu at the top left, navigate to **Databases → OCI Cache**
 
-![Databases → OCI Cache](images/01.png)
+    ![Databases → OCI Cache](images/01.png)
 2. Click **Create Cluster**
 3. Follow the guided steps:
-- **Name:** Enter a name (e.g. livelab-cache)
-- **Compartment:** Select your compartment
-- **OCI Cache engine version:** Choose `VALKEY_8_1`
-- **Configuration:** Choose `default-valkey_8_1-v1`
+    - **Name:** Enter a name (e.g. livelab-cache)
+    - **Compartment:** Select your compartment
+    - **OCI Cache engine version:** Choose `VALKEY_8_1`
+    - **Configuration:** Choose `default-valkey_8_1-v1`
 4. Click **Next**
 
-![Create cluster](images/02.png)
+    ![Create cluster](images/02.png)
 5. Choose the cluster node configuration
-- **Node configuration:** Choose `Non-sharded`
-- **Node count:** 3
-- **Memory per node:** 16GB
+    - **Node configuration:** Choose `Non-sharded`
+    - **Node count:** 3
+    - **Memory per node:** 16GB
 6. Click **Next**
 
-![Non-sharded](images/03.png)
+    ![Non-sharded](images/03.png)
 7. Configure Networking
-- Choose a Virtual Cloud Network (VCN) and subnet
-- (Optional) Add a Network security group
+    - Choose a Virtual Cloud Network (VCN) and subnet
+    - (Optional) Add a Network security group
 8. Click **Next**
 
-![VCN](images/04.png)
+    ![VCN](images/04.png)
 9. Review the cluster configuration and click **Create cluster**
 
-![Review and Create](images/05.png)
+    ![Review and Create](images/05.png)
 
 The cluster provisioning may take a few minutes. Once completed, the cluster shows to be in **Active** state
 
