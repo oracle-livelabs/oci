@@ -22,7 +22,7 @@ This lab assumes you have:
 
 ## Task 1: Create a Functions application
 
-1. Navigate: Developer Services → Functions → Applications → Create application.
+1. Navigate to **Developer Services → Functions → Applications → Create application**.
 
 2. Enter:
 
@@ -31,23 +31,22 @@ This lab assumes you have:
    - VCN: ai-ms-vcn
    - Subnets Compartment: ai-meeting-summarizer
    - Subnet: ai-ms-private-subnet (Private)
-   - Registry: Select your OCIR repo (or create one)
    - Shape: GENERIC_ARM
 
 3. Click Create.
 
-    ![Resource Manager](images/app.png)
+    ![Resource Manager](images/application.png)
 
 ## Task 2: Create Transcribe Function
 
-1. Click on the application you just created → Functions tab → Create in code editor.
+1. If not already open, enter the application you just created and navigate to **Functions → Create in code editor**.
 
-2. Once the editor loads, the application folder should automatically open on the left hand side, if not follow these steps, otherwise skip to step 3
+2. Once the editor loads, the application folder should automatically open on the left hand side. Follow these steps to get the proper folders open, otherwise skip to step 3
 
    - The left hand side will have a list of your compartments, press on the compartment that you created the function in.
    - It will show a drop down for applications, open it and you should see the name of the function you just created
 
-3. Right click on the function you just created and press Create function... → Create from a template  → select Python
+3. Right click on the function you just created in the left hand dropdown and press **Create function... → Create from a template  → select Python**
 
     ![Resource Manager](images/func.png)
 
@@ -57,11 +56,11 @@ This lab assumes you have:
 
 4. Enter transcriber as your function name and press enter, which should populate a new function under your application on the left hand side.
 
-5. Edit the func.yaml file by selecting the file and making sure it reflects the below information:
+5. Edit the func.yaml file by selecting the file and making sure it reflects the below information, where </function-name> is replaced by the actual name of the function you are attempting to deploy:
 
    ```yaml
    schema_version: 20180708
-   name: transcriber
+   name: <function-name>
    version: 0.0.1
    runtime: python
    entrypoint: /python/bin/fdk /function/func.py handler
@@ -208,43 +207,57 @@ This lab assumes you have:
 
 ## Task 3: Setup fn CLI & Deploy Transcriber
 
-1. In the code editor, right click on anyone of the files you edited (func.yaml, func.py, or requirements.txt) and select Open in terminal
+1. Return to the OCI Console and open up the Cloud Shell by clicking on the computer icon in the top right corner.
 
-2. Using the terminal, set the context for your region, by taking the information under default in the first command and filling that information into the second command:
+   ![Resource Manager](images/cloudshell.png)
+
+2. Navigate to the directory of your new function in the terminal:
+
+   ```text
+   cd oci-ide-plugins/
+   cd faas-artifacts/
+   cd <app-OCID>
+   cd <function-name>
+   ```
+
+3. Using the cloud shell, set the context for your region, by running the first command and taking the information under default that aligns with your current region. Then use that information to replace \<region> in the second command:
 
    ```text
    fn list context
    fn use context <region>
    ```
 
-   ![Resource Manager](images/region.png)
+   ![Resource Manager](images/region-context.png)
 
-3. Update the context with the function's compartment ID which can be found on the details page of the function you created in the beginning:
+4. Update the context with the function's compartment ID which can be found on the details page of the compartment you created in the beginning:
 
    ```text
    fn update context oracle.compartment-id <compartment_OCID>
    ```
 
-4. Provide a unique repository name prefix to distinguish your function images from other people’s. Get the object storage namespace by looking at the details of any of the buckets prior, and the repo name is up to your own discretion. For the region key, follow the first command below and in the dictionary where the "is-home-region" value is true, use the region key below it all lowercase:
+5. Provide a unique repository name prefix to distinguish your function images from other people’s. Get the object storage namespace by looking at the details of any of the buckets you created prior, and the repo name is up to your own discretion. For the region key in the second command, run the first command below and in the dictionary where the "is-home-region" value is true, use the region key below it with all lowercase:
 
    ```text
    oci iam region-subscription list
    fn update context registry <region-key>.ocir.io/<object_storage_namespace>/[repo-name-prefix]
    ```
 
-5. Open a separate tab with the OCI Console up and click on the profile icon in the top right and your email → Tokens and keys → Auth tokens → Generate token
+   ![Resource Manager](images/region-key.png)
+   ![Resource Manager](images/ocir.png)
+
+6. Open a separate tab with the OCI Console up and click on the profile icon in the top right and then click your email → Tokens and keys → Auth tokens → Generate token
 
    ![Resource Manager](images/auth.png)
 
-6. Give the token a name and then make sure to save this token for use in function deployment as it will not be shown again.
+7. Give the token a name and then make sure to save this token for use in function deployment as it will not be shown again.
 
-7. Return to your tab with the code editor and in the terminal you have been working in log into the registry using the auth token as your password when prompted following this command
+8. Return to your tab with the code editor and in the terminal you have been working in log into the registry using the auth token as your password when prompted following this command. Use the email that is tied to your oracle cloud account, and the region key and object storage namespace you retrieved previously.
 
    ```text
    docker login -u '<object_storage_namespace>/<email>' <region-key>.ocir.io
    ```
 
-8. Deploy the transcribe function:
+9. Deploy the transcribe function:
 
    ```text
    fn -v deploy --app <app_name>
@@ -252,7 +265,7 @@ This lab assumes you have:
 
 ## Task 4: Deploy the Summary Function
 
-1. Remain in the code editor and create a new function called summarizer, following the same process you did for task 2 and 3
+1. Return to the code editor and create a new function called summarizer, following the same process you did for task 2 and 3
 
 2. When you get to the point where you need to edit the func.py file, instead of using the code from the transcriber, use this:
 

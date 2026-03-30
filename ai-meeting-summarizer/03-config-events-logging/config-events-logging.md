@@ -56,7 +56,7 @@ Ensure new uploads trigger the transcriber function.
    - Name: on-object-create
    - Description: Trigger transcription func
    - Rule conditions: Condition: Event Type, Service Name: Object Storage, Event Type: Object - Create
-   - (Click +Another Condition)Rule conditions: Condition: Attribute, Attribute Name: bucketName, Attribute Values: upload
+   - (Click +Another Condition)Rule conditions: Condition: Attribute, Attribute Name: bucketName, Attribute Values: uploads
    - Actions: Action Type: Functions, Function Compartment: ai-meeting-summarizer, Function Application: ai-ms-app, Function: transcriber
 
 2. Click Create Rule.
@@ -66,10 +66,10 @@ Ensure new uploads trigger the transcriber function.
 3. Create a second rule with the following information:
 
    - Name: summarize
-   - Description: Trigger transcription func
+   - Description: Trigger summarization func
    - Rule conditions: Condition: Event Type, Service Name: Object Storage, Event Type: Object - Create
    - (Click +Another Condition)Rule conditions: Condition: Attribute, Attribute Name: bucketName, Attribute Values: transcripts
-   - Actions: Action Type: Functions, Function Compartment: ai-meeting-summarizer, Function Application: ai-ms-app, Function: summary
+   - Actions: Action Type: Functions, Function Compartment: ai-meeting-summarizer, Function Application: ai-ms-app, Function: summarizer
 
     ![Resource Manager](images/summarize.png)
 
@@ -77,22 +77,22 @@ Ensure new uploads trigger the transcriber function.
 
 1. Navigate to **Analytics & AI → AI Services → Generative AI → Playground → Chat → View model details**.
 
-2. Select a model you want this workflow to use, click on the 3 dots on the right side and click Copy OCID and store that for later use.
+2. Select the xai.grok-3 model, and Copy the OCID and store that for later use.
 
-    ![Resource Manager](images/models.png)
+    ![Resource Manager](images/grok.png)
 
 3. Navigate to **Developer Services → Functions → Applications → ai-ms-app → Configuration → Manage configuration**.
 
 4. Click on Add configuration for every key, value pair below
 
-   - Key: GENAI_MODEL_ID, Value: <model_OCID>
-   - Key: UPLOAD_BUCKET, Value: upload
-   - Key: OBJECT_NS, Value: <object_storage_namespace>
+   - Key: GENAI_MODEL_ID, Value: \<model_OCID>
+   - Key: UPLOAD_BUCKET, Value: uploads
+   - Key: OBJECT_NS, Value: \<object_storage_namespace>
    - Key: SUMMARY_BUCKET, Value: results
-   - Key: OCI_REGION, Value: idwy6hudkhwz
-   - Key: ONS_TOPIC_OCID, Value: <topic_OCID>
+   - Key: OCI_REGION, Value: us-ashburn-1
+   - Key: ONS_TOPIC_OCID, Value: \<topic_OCID>
    - Key: RESULT_BUCKET, Value: transcripts
-   - Key: COMPARTMENT_OCID, Value: <ai-meeting-summarizer-OCID>
+   - Key: COMPARTMENT_OCID, Value: \<ai-meeting-summarizer-OCID>
 
     ![Resource Manager](images/config.png)
 

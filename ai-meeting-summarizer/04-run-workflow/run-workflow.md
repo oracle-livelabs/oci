@@ -112,6 +112,8 @@ This lab assumes you have:
   - Ensure Generative AI client is using the correct regional endpoint.
 - Email missing:
   - Confirm the Notifications subscription status is CONFIRMED; check function logs for publish_message success.
+- 503 error when attempting to run the function:
+  - Wait a short period of time and retry the flow again
 
 ## Learn More
 

@@ -39,6 +39,8 @@ This lab assumes you have:
 
     ![Resource Manager](images/compartment.png)
 
+> Save the OCID of the compartment which can be found on the details page when clicking into the compartment. It will be used to later steps.
+
 ## Task 2: Create Object Storage buckets and enable events
 
 Navigate to **Storage → Object Storage & Archive Storage → Buckets** where you will create three private buckets in the same region and namespace.
@@ -53,29 +55,22 @@ A. Upload bucket
 
    * Name: upload
    * Default storage tier: Standard
+   * Emit object events: Toggle it on
    * Encryption: Use Oracle-managed keys (or choose a customer-managed key if required)
 
 4. Click Create.
 
-    ![Resource Manager](images/bucket.png)
+    ![Resource Manager](images/upload.png)
+
+> If you cannot find the compartment, wait a couple of minutes and refresh as it can take time to provision
 
 B. Transcripts Bucket
 
-1. Follow the same steps as you did for the upload bucket, replacing the name with transcripts
+1. Follow the same steps as you did for the upload bucket, but instead replace the name with transcripts
 
 C. Results bucket
 
-1. Follow the same steps as you did for the previous buckets, replacing the name with results
-
-D. Enable Events
-
-1. Open the upload bucket.
-
-2. In Bucket details, under the Features section ensure Emit Object Events is enabled. If disabled, click the Enable button.
-
-    ![Resource Manager](images/enable_events.png)
-
-3. Follow the same steps for the transcripts bucket
+1. Follow the same steps as you did for the previous buckets, but instead replace the name with results and keep emit object events off
 
 > Note: Record your Object Storage namespace (visible at the top of Buckets page). You’ll use it in later labs.
 
@@ -115,25 +110,29 @@ D. Enable Events
 
 4. Click **Create**.
 
+    ![Resource Manager](images/create_dg.png)
+
 ## Task 5: Create Policies
 
 1. Navigate to **Identity & Security → Identity → Policies**.
 
-2. Change the compartment to your AI meeting summarizer compartment.
+2. Change the compartment to your AI meeting summarizer compartment using the applied filters button.
 
 3. Click **Create Policy**
 
     * Name: Events_policy
+    * Description: Allow events to kickoff functions
     * Compartment: ai-meeting-summarizer
     * Policy Builder (Show manual editor): Allow service cloudEvents to use functions-family in compartment ai-meeting-summarizer
 
 4. Click **Create**
 
-    ![Resource Manager](images/events.png)
+    ![Resource Manager](images/events_policy.png)
 
-5. Click **Create Policy**
+5. Now create another policy:
 
     * Name: Functions_policy
+    * Description: Give functions access to object storage, ai speech, logs, topics and generative ai services.
     * Compartment: ai-meeting-summarizer
     * Policy Builder (Show manual editor):
 
@@ -152,4 +151,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - **Josiah Oriendo**, Cloud Architect
-* **Last Updated By/Date** - Josiah Oriendo, March 2026
+* **Last Updated By/Date** - **Josiah Oriendo**, March 2026
