@@ -3,7 +3,8 @@
 ## Introduction
 
 In this step, you will trigger a full end-to-end CI/CD pipeline by pushing code to the main branch.
-This will automatically build, containerize, publish, and deploy your Spring Boot application into Oracle Cloud Infrastructure (OCI) using a blue-green deployment strategy.
+This will automatically build, containerize, publish, and deploy your Spring Boot application into Oracle Cloud
+Infrastructure (OCI) using a blue-green deployment strategy.
 
 Check this video to see the flow
 [](youtube:SzLCGE0w6u4)
@@ -11,7 +12,10 @@ Check this video to see the flow
 Estimated Time: 15 minutes
 
 ## About Blue-Green Deployment steps
-When you push code to the main branch, your CI/CD pipeline performs a fully automated blue-green deployment on Oracle Cloud Infrastructure.
+
+When you push code to the main branch, your CI/CD pipeline performs a fully automated blue-green deployment on Oracle
+Cloud Infrastructure.
+
 1. Build Phase
 
 The pipeline automatically executes:
@@ -31,7 +35,6 @@ The deployment scripts then execute the following workflow:
 
 The pipeline finds all currently running OCI Container Instances for this application: "list_matching_instance_ids()"
 
-
 These represent the currently live version.
 
 - Create a New Container Instance
@@ -42,11 +45,11 @@ The newly built image from OCIR
 
 Environment variables for PostgreSQL:
 
-SPRING_DATASOURCE_URL
-
-SPRING_DATASOURCE_USERNAME
-
-SPRING_DATASOURCE_PASSWORD
+`SPRING_DATASOURCE_URL`
+<br>
+`SPRING_DATASOURCE_USERNAME`
+<br>
+`SPRING_DATASOURCE_PASSWORD`
 
 This guarantees the new version is immutable and isolated from the old one.
 
@@ -55,7 +58,6 @@ This guarantees the new version is immutable and isolated from the old one.
 The pipeline waits until OCI reports:
 
 lifecycleState = ACTIVE
-
 
 This ensures the container is fully started and ready to receive traffic.
 
@@ -80,7 +82,6 @@ Traffic is not yet switched until health checks pass.
 The pipeline continuously polls OCI until the Load Balancer reports:
 
 health = OK (or WARNING)
-
 
 Only when the new container is healthy does the system proceed.
 
@@ -118,9 +119,10 @@ Zero-downtime, enterprise-grade blue-green deployment on Oracle Cloud Infrastruc
 
 - Zero-downtime replacement of the running version
 
-### Prerequisites 
+### Prerequisites
 
 This lab assumes you have:
+
 * An active GitHub account
 * IntelliJ IDEA installed (Community or Ultimate edition)
 * Basic familiarity with the command line
@@ -129,7 +131,7 @@ This lab assumes you have:
 
 Edit any file in the Spring Boot project, for example, change the name of the header in the html page.
 
-![Image alt text](images/ss9.png)
+![Image alt text](images/img.png)
 
 ## Task 2: Commit and Push to main branch
 
@@ -143,17 +145,23 @@ git commit -m "Update application message"
 git push origin main
 <br>
 ```
+
 This push triggers the GitHub Actions workflow:
 
 Build + Deploy to OCI Container Instances
 
-![Image alt text](images/ss10.png)
+![Image alt text](images/flow.png)
 The workflow can be observed in parallel within OCI.
 
 ## Task 3: Access the Spring Boot application via a web browser
 
-Take the public IP of the load balancer and paste it into your browser. The application should appear, and you can proceed with further testing.
+Take the public IP of the load balancer and paste it into your browser. The application should appear, and you can
+proceed with further testing.
 Please follow the video from the Introduction step to replicate the entire flow.
-![Image alt text](images/ss11.png)
 
+## Acknowledgements
+
+- Author - Maria Oprea, Account Cloud Engineer, ACE
+  <br>
+- Last Updated By/Date - Maria Oprea, 01-2026
 

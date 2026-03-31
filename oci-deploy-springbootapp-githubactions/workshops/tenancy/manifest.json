@@ -33,11 +33,6 @@
         {
             "title": "Lab 4: Trigger CI/CD Pipeline via Git Push",
             "filename": "../../query/query.md"
-        },
-        {
-            "title": "Other LiveLabs you might like",
-            "description": "Other LiveLabs you might like",
-            "filename": "../../other-livelabs/other-livelabs.md"
         }
     ]
 }
