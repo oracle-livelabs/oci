@@ -92,7 +92,7 @@ Example command:
 You may need to update your security list to allow inbound access from your IP or Cloud Shell.
 Tip: Review [Connecting to a PostgreSQL DB System](https://docs.oracle.com/en-us/iaas/Content/postgresql/develop/connect.htm)
 
-## Task 5 Explore Additional Features (No Configuration Required)
+## Task 5: Explore Additional Features (No Configuration Required)
 A. Adding Read Replicas
 ![database-replicas](images/database-replicas-red.png)
 - PostgreSQL on OCI can provide read replicas for scaling out read-heavy workloads or enhancing availability.

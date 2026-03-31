@@ -34,7 +34,7 @@ In this lab, you will deploy an application that connects to the OCI Cache and t
 ## Task 3: Deploy the Application
 
 1. Clone the GitHub repository using the link below and follow the instructions:
-https://github.com/phantompete/LiveLab_WebApp_Demo
+    https://github.com/phantompete/LiveLab_WebApp_Demo
 
 2. Make the dataset script executable and then run it:
     ```sh
