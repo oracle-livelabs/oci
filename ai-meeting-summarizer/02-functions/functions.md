@@ -56,11 +56,11 @@ This lab assumes you have:
 
 4. Enter transcriber as your function name and press enter, which should populate a new function under your application on the left hand side.
 
-5. Edit the func.yaml file by selecting the file and making sure it reflects the below information, where </function-name> is replaced by the actual name of the function you are attempting to deploy:
+5. Edit the func.yaml file by selecting the file and making sure it reflects the below information, where \<function-name> is replaced by the actual name of the function you are attempting to deploy:
 
    ```yaml
    schema_version: 20180708
-   name: <function-name>
+   name: \<function-name>
    version: 0.0.1
    runtime: python
    entrypoint: /python/bin/fdk /function/func.py handler
@@ -216,15 +216,15 @@ This lab assumes you have:
    ```text
    cd oci-ide-plugins/
    cd faas-artifacts/
-   cd <app-OCID>
-   cd <function-name>
+   cd \<app-OCID>
+   cd \<function-name>
    ```
 
 3. Using the cloud shell, set the context for your region, by running the first command and taking the information under default that aligns with your current region. Then use that information to replace \<region> in the second command:
 
    ```text
    fn list context
-   fn use context <region>
+   fn use context \<region>
    ```
 
    ![Resource Manager](images/region-context.png)
@@ -232,14 +232,14 @@ This lab assumes you have:
 4. Update the context with the function's compartment ID which can be found on the details page of the compartment you created in the beginning:
 
    ```text
-   fn update context oracle.compartment-id <compartment_OCID>
+   fn update context oracle.compartment-id \<compartment_OCID>
    ```
 
 5. Provide a unique repository name prefix to distinguish your function images from other people’s. Get the object storage namespace by looking at the details of any of the buckets you created prior, and the repo name is up to your own discretion. For the region key in the second command, run the first command below and in the dictionary where the "is-home-region" value is true, use the region key below it with all lowercase:
 
    ```text
    oci iam region-subscription list
-   fn update context registry <region-key>.ocir.io/<object_storage_namespace>/[repo-name-prefix]
+   fn update context registry \<region-key>.ocir.io/\<object_storage_namespace>/[repo-name-prefix]
    ```
 
    ![Resource Manager](images/region-key.png)
@@ -254,13 +254,13 @@ This lab assumes you have:
 8. Return to your tab with the code editor and in the terminal you have been working in log into the registry using the auth token as your password when prompted following this command. Use the email that is tied to your oracle cloud account, and the region key and object storage namespace you retrieved previously.
 
    ```text
-   docker login -u '<object_storage_namespace>/<email>' <region-key>.ocir.io
+   docker login -u '\<object_storage_namespace>/\<email>' \<region-key>.ocir.io
    ```
 
 9. Deploy the transcribe function:
 
    ```text
-   fn -v deploy --app <app_name>
+   fn -v deploy --app \<app_name>
    ```
 
 ## Task 4: Deploy the Summary Function
@@ -394,27 +394,27 @@ This lab assumes you have:
                "Return the output in plain text (no Markdown, no emojis) using EXACTLY the sections and formatting below.\n\n"
                "MEETING SUMMARY\n"
                "- Executive Summary: 3–5 sentences covering context, goals, and major outcomes.\n"
-               "- Primary Purpose/Goal: <one concise sentence>\n\n"
+               "- Primary Purpose/Goal: \<one concise sentence>\n\n"
                "ACTION ITEMS (HIGH PRIORITY)\n"
                "[Party A/My Company]\n"
                "- List every actionable task as a checklist line using this format exactly:\n"
-               " [ ] Owner: <Name>; Task: <What to do>; Due: <Date or 'Unknown'>\n"
+               " [ ] Owner: \<Name>; Task: \<What to do>; Due: \<Date or 'Unknown'>\n"
                "[Party B/The Client/Vendor]\n"
                "- Same checklist format:\n"
-               " [ ] Owner: <Name>; Task: <What to do>; Due: <Date or 'Unknown'>\n\n"
+               " [ ] Owner: \<Name>; Task: \<What to do>; Due: \<Date or 'Unknown'>\n\n"
                "KEY DECISIONS MADE\n"
                "- Bullet each agreement/approval/decision. Include any dates, metrics, quantities, or versions mentioned.\n\n"
                "DETAILED NOTES (BY TOPIC)\n"
                "- Organize by topic, not chronology. For each topic, use:\n"
-               " Topic: <Topic Name>\n"
+               " Topic: \<Topic Name>\n"
                " - Bullet points capturing key details, numbers/metrics, dates, technical specs, risks/concerns, and objections.\n"
                " - Attribute comments to speakers if clear (e.g., 'Speaker 2 (CTO): ...').\n\n"
                "UNRESOLVED ISSUES / PARKING LOT\n"
                "- Questions asked but not answered.\n"
                "- Items deferred to a future discussion.\n\n"
                "DEAL ADVANCEMENT PLAN (SALES REP VIEW)\n"
-               "- Qualification Snapshot (what is known): Budget: <value or 'Unknown'>; Authority/Decision Process: <details>; Need/Metrics: <KPIs>; Timeline/Compelling Event: <dates>.\n"
-               "- Risks/Objections -> Mitigations: <brief bullets aligned to enterprise security, privacy, compliance>.\n"
+               "- Qualification Snapshot (what is known): Budget: \<value or 'Unknown'>; Authority/Decision Process: \<details>; Need/Metrics: \<KPIs>; Timeline/Compelling Event: \<dates>.\n"
+               "- Risks/Objections -> Mitigations: \<brief bullets aligned to enterprise security, privacy, compliance>.\n"
                "- Mutual Next Steps / Close Plan: Step, Owner, Target Date (e.g., security review, pilot scope, success criteria, commercials, procurement/legal).\n\n"
                "FOLLOW-UP EMAIL DRAFT (PLAIN TEXT)\n"
                "- A short customer-facing note recapping value, decisions, and confirmed next steps with dates.\n\n"

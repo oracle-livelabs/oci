@@ -37,7 +37,7 @@ You will publish summaries to this topic; subscribers receive an email.
 3. Click on the topic you just created **→ Subscriptions → Create Subscription**.
 
    - Protocol: Email
-   - Email: <your_email@domain>
+   - Email: &lt;your_email@domain&gt;
 
 4. Click create.
 
@@ -85,14 +85,14 @@ Ensure new uploads trigger the transcriber function.
 
 4. Click on Add configuration for every key, value pair below
 
-   - Key: GENAI_MODEL_ID, Value: \<model_OCID>
+   - Key: GENAI\_MODEL\_ID, Value: &lt;your-text&gt;
    - Key: UPLOAD_BUCKET, Value: uploads
-   - Key: OBJECT_NS, Value: \<object_storage_namespace>
+   - Key: OBJECT_NS, Value: &lt;object_storage_namespace&gt;
    - Key: SUMMARY_BUCKET, Value: results
    - Key: OCI_REGION, Value: us-ashburn-1
-   - Key: ONS_TOPIC_OCID, Value: \<topic_OCID>
+   - Key: ONS\_TOPIC\_OCID, Value: &lt;topic_OCID&gt;
    - Key: RESULT_BUCKET, Value: transcripts
-   - Key: COMPARTMENT_OCID, Value: \<ai-meeting-summarizer-OCID>
+   - Key: COMPARTMENT_OCID, Value: &lt;ai-meeting-summarizer-OCID&gt;
 
     ![Resource Manager](images/config.png)
 

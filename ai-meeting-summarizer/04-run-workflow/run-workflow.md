@@ -104,11 +104,11 @@ This lab assumes you have:
 - No Transcribe Function logs:
   - Ensure Events rule is Enabled and filters bucketName=upload; verify function/application/compartment selections.
 - AI Speech job FAILED:
-  - Open job details for lifecycle_details/failure_details; confirm the tenancy-level policy allowing the ai_speech service to manage objects in the transcripts bucket (and KMS permissions if using a CMK).
+  - Open job details for lifecycle\_details/failure_details; confirm the tenancy-level policy allowing the ai_speech service to manage objects in the transcripts bucket (and KMS permissions if using a CMK).
 - Transcript missing after SUCCEEDED:
   - Wait and refresh (eventual consistency), confirm RESULT_BUCKET name and region.
 - Summary missing:
-  - Check summarizer logs for configuration issues (GENAI_MODEL_ID, SUMMARY_BUCKET, OCI_REGION, OBJECT_NS, ONS_TOPIC_OCID).
+  - Check summarizer logs for configuration issues (GENAI\_MODEL_ID, SUMMARY_BUCKET, OCI_REGION, OBJECT_NS, ONS\_TOPIC_OCID).
   - Ensure Generative AI client is using the correct regional endpoint.
 - Email missing:
   - Confirm the Notifications subscription status is CONFIRMED; check function logs for publish_message success.

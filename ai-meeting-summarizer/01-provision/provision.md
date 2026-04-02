@@ -104,9 +104,9 @@ C. Results bucket
 
 3. Click on **Default → Dynamic Groups → Create dynamic group**.
 
-    * Name: ai_summary_dg
+    * Name: ai\_summary\_dg
     * Matching rules: Match all rules defined below
-    * Rule 1: All {resource.type = 'fnfunc', resource.compartment.id = '<ai_summary_compartment_OCID>'}
+    * Rule 1: All {resource.type = 'fnfunc', resource.compartment.id = '\<ai_summary_compartment_OCID>'}
 
 4. Click **Create**.
 
@@ -136,11 +136,11 @@ C. Results bucket
     * Compartment: ai-meeting-summarizer
     * Policy Builder (Show manual editor):
 
-        * Allow dynamic-group ai_summary_dg to manage object-family in compartment ai-meeting-summarizer
-        * Allow dynamic-group ai_summary_dg to manage ai-service-speech-family in compartment ai-meeting-summarizer
-        * Allow dynamic-group ai_summary_dg to manage generative-ai-family in compartment ai-meeting-summarizer
-        * Allow dynamic-group ai_summary_dg to manage logs in compartment ai-meeting-summarizer
-        * Allow dynamic-group ai_summary_dg to use ons-topics in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai\_summary\_dg to manage object-family in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai\_summary\_dg to manage ai-service-speech-family in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai\_summary\_dg to manage generative-ai-family in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai\_summary\_dg to manage logs in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai\_summary\_dg to use ons-topics in compartment ai-meeting-summarizer
 
 6. Click **Create**
 
