@@ -2,28 +2,28 @@
 
 ## About this Workshop
 
-In this hands-on workshop, you will build a meeting summarization flow using Oracle Cloud services. You’ll upload media to Object Storage, trigger Functions via Events, create AI Speech transcription jobs, summarize with the OCI Generative AI service using on-demand model OCIDs, and deliver results to users via Notifications. Along the way, you’ll apply least-privilege IAM and learn how OCI’s packaged AI services and partner models enable fast, secure outcomes without lock‑in
+In this hands-on workshop, you will build a meeting summarization workflow using Oracle Cloud services. You’ll upload media to Object Storage, trigger Functions via Events, create AI Speech transcription jobs, summarize content with the OCI Generative AI service using on-demand model OCIDs, and deliver results to users via Notifications. Along the way, you’ll apply least-privilege IAM principles and learn how OCI’s packaged AI services and partner models enable fast, secure outcomes without lock-in.
 
-Estimated Workshop Time: 1 hours 30 minutes
+Estimated Workshop Time: 1 hour 30 minutes
 
-  [](youtube:H-C5dH3w1Dg)
+[](youtube:H-C5dH3w1Dg)
 
 ### Objectives
 
 In this workshop, you will learn how to:
 
-* Build an event-driven pipeline: Object Storage → Events → Functions → AI Speech → Generative AI → Notifications.
-* Configure least-privilege IAM and enable AI Speech to write to the results bucket.
-* Deploy and test the Transcribe Function (creates Speech jobs) and Summary Function (Generative AI via model OCID).
-* Save transcripts/summaries to Object Storage and email results via OCI Notifications.
+* Build an event-driven pipeline: Object Storage → Events → Functions → AI Speech → Generative AI → Notifications
+* Configure least-privilege IAM and enable AI Speech to write to the results bucket
+* Deploy and test the Transcribe Function (creates Speech jobs) and Summary Function (Generative AI via model OCID)
+* Save transcripts and summaries to Object Storage and send results via OCI Notifications
 
 ### Prerequisites (Optional)
 
 This lab assumes you have:
 
 * An Oracle account
-* Administrator privileges or sufficient access rights to create and manage resources.
-* Access to a command-line environment such as **OCI Cloud Shell** (or a local setup) with `oci` CLI configured for your tenancy.
+* Administrator privileges or sufficient access rights to create and manage resources
+* Access to a command-line environment such as **OCI Cloud Shell** (or a local setup) with the `oci` CLI configured for your tenancy
 
 ## Learn More
 
