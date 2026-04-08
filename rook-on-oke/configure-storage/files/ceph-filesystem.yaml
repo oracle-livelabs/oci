@@ -1,0 +1,70 @@
+apiVersion: ceph.rook.io/v1
+kind: CephFilesystem
+metadata:
+  name: myfs
+  namespace: rook-ceph
+spec:
+  # The metadata pool spec. Must use replicated.
+  metadataPool:
+    replicated:
+      size: 3
+      requireSafeReplicaSize: true
+    parameters:
+      compression_mode: none
+
+  # The list of data pool specs. Can use replication or erasure coding.
+  dataPools:
+    - name: replicated
+      failureDomain: host
+      replicated:
+        size: 3
+        requireSafeReplicaSize: true
+      parameters:
+        compression_mode: none
+
+  # Whether to preserve filesystem when deleting the CephFilesystem CRD
+  preserveFilesystemOnDelete: true
+
+  # The metadata server settings
+  metadataServer:
+    # The number of active MDS instances
+    activeCount: 1
+    # Whether to have an active MDS in standby for failover
+    activeStandby: true
+    # The resource requests/limits for the MDS containers
+    resources:
+      limits:
+        memory: "1Gi"
+      requests:
+        cpu: "500m"
+        memory: "512Mi"
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: rook-cephfs
+# The provisioner name should match the Rook Ceph operator namespace
+provisioner: rook-ceph.cephfs.csi.ceph.com
+parameters:
+  # clusterID is the namespace where the Rook Ceph cluster is running
+  clusterID: rook-ceph
+
+  # CephFS filesystem name
+  fsName: myfs
+
+  # Ceph pool into which the volume shall be created
+  pool: myfs-replicated
+
+  # The secrets contain Ceph admin credentials.
+  csi.storage.k8s.io/provisioner-secret-name: rook-csi-cephfs-provisioner
+  csi.storage.k8s.io/provisioner-secret-namespace: rook-ceph
+  csi.storage.k8s.io/controller-expand-secret-name: rook-csi-cephfs-provisioner
+  csi.storage.k8s.io/controller-expand-secret-namespace: rook-ceph
+  csi.storage.k8s.io/node-stage-secret-name: rook-csi-cephfs-node
+  csi.storage.k8s.io/node-stage-secret-namespace: rook-ceph
+
+# Delete the volume when a PVC is deleted
+reclaimPolicy: Delete
+
+# Allow volume expansion
+allowVolumeExpansion: true

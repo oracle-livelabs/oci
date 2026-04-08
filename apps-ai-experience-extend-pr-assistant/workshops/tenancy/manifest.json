@@ -1,5 +1,6 @@
 {
     "workshoptitle": "Purchase Requisition Advisor Template Extension",
+    "variables": ["../../variables/variables.json"],
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
  
@@ -28,7 +29,7 @@
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+            "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
         }
         
     ],

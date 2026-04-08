@@ -1,14 +1,14 @@
 # Configure
 
-## HCM: Enhance the Change Salary Experience
+## **HCM: Configure the Change Salary Experience**
 
-### Introduction
+### **Introduction**
 
 Oracle offers hundreds of prebuilt pages, workflows and forms “out of the box” as part of the Oracle Fusion Cloud.  Many of our customers want to configure these pages and workflows to meet their specific business needs.  You can unify your experience in our applications by using Redwood.
 
 Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.
 
-### Objectives
+### **Objectives**
 
 In this lab, you will use Redwood to quickly and efficiently improve the user experience in Oracle Fusion Cloud.
 
@@ -16,222 +16,244 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-### Begin Exercise
+### **Begin Exercise**
 
-1.  You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update Change Salary Page for Non-HR managers.
+1. You will use Redwood, Oracle’s next-generation design system, and Visual Builder to quickly and efficiently update Change Salary Page for Non-HR managers.
 
-![Configuration Objectives](../02-configure-hcm/images/configure_objs_hcm.png)
+    ![Configuration Objectives](../02-configure-hcm/images/configure-hcm-image001.jpg)
 
 2. You will first navigate to the Change Salary Page.
 
-    > From the application home page, click on the **My Team** tab.
+    > (1) From the application home page, click on the **My Team** tab.
 
-    ![Application Home Page](../02-configure-hcm/images/image001.png).
+    ![Application Home Page](../02-configure-hcm/images/configure-hcm-image002.jpg).
 
-    > Click on **Change Salary** under **Quick Actions**.
+3. You can access Change Salary from an individual worker record, from the search bar, or via the Quick Actions feature.  You'll use the Quick Actions feature.
 
-    ![My Team Page](../02-configure-hcm/images/image002.png)
+    > (1) Click on **Change Salary** under **Quick Actions**.
 
-    > Click on the ![x icon](../02-configure-hcm/images/icon011_x.png)  **Icon** to remove the Direct Reports Filter because your user does not have any direct reports.  This action allows you to see other people.
+    ![My Team Page](../02-configure-hcm/images/configure-hcm-image003.jpg)
 
-    ![My Team Page](../02-configure-hcm/images/image003.png)
+4. By default this screen shows information on any Direct Reports.  Since you don't have any, you can remove this filter.
 
-3. Now you will enter the Change Salary Form so we can make the required changes using Visual Builder Studio.  Now you will select a person so you can enter the Change Salary form.
+    > (1) Click on the ![x icon](../gen-images/icon011_x.png)  **Icon** to remove the Direct Reports Filter because your user does not have any direct reports.  This action allows you to see other people.
 
-    > (1) Search for **Barrett Reed** in the search field. <br>
+    ![My Team Page](../02-configure-hcm/images/configure-hcm-image004.jpg)
+
+5.  Now you can search for and select a person to begin the Change Salary process.
+
+    > (1) Type  keyword **Reed** OR **Barrett Reed** in the search field. <br>
 
     > (2) Select **Barrett Reed** in the drop down. <br>
 
+    ![Change Salary Page](../02-configure-hcm/images/configure-hcm-image005.jpg)
 
-    ![Change Salary Page](../02-configure-hcm/images/image004.png)
+6.  You are now in the first step of the Change Salary process.  You're not going to make any changes to this step, so you'll need to enter the requested information before moving to step 2.  Enter the information as described below.
 
-4.  You have entered the Change Salary Form.  Now you will quickly review the current configuration of the Change Salary Form.  You need to enter in some information to access the form
+    > (1) When does the salary change start?: Type a **future date (eg. 12/31/26)** <br>
 
+    > (2) What's the action name?: Select **Change Salary** from the dropdown. <br>
 
-    > (1) When does the salary will start?: Type a **future date** <br>
+    > (3) Why are you changing the salary?: Select **Career Progression** from the dropdown. <br>
 
-    > (2) What is the action name?: Select **Change Salary**. <br>
+    > (4) Click **Continue**.
 
-    > (3) Why you are changing the salary?: Select **Career Progression**. <br>
+    ![Change Salary Page](../02-configure-hcm/images/configure-hcm-image006.jpg)
 
-    > (4) Click **Continue** once complete.
+7. You're now on the Salary Details page and want to make some changes to the information that is displayed for Non-HR Manager users. You can do this by creating condition-based rules.  You will now create a new rule that hides Annualized Full-Time Salary and hide Compa-Ratio.  Your rule will also display the Action Reason.  We can make these configuration changes by leveraging the embedded Vision Studio Builder capabilities.
 
-    ![Change Salary Page](../02-configure-hcm/images/image006.png)
+    > (1) No action is required for Step 1.  Just note that the Annualized Full-Time Salary and Compa-Ratio fields are visible. <br>
+    > (2) Click the **logged in user icon** icon ![co image](../gen-images/icon012_co.png) next to the bell icon in the top right corner of the screen and select **Edit Page in Visual Builder Studio** from the resulting drop-down.
 
-5. You will now create new rule that hides Annualized Full-Time Salary because it is repetitive.  You will also hide Compa-Raito since this is mainly used by HR.  You also want to show the action reason in this section of the Change Salary Form.
+    ![Change Salary Page 2nd page](../02-configure-hcm/images/configure-hcm-image007.jpg)
 
-    ![Change Salary Page 2nd page](../02-configure-hcm/images/image007.png)
+8.  Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the application development lifecycle: design, build, test, and deploy. You will use VB Studio to make the required changes to the Change Salary Form.
 
-6. Now you will enter the Visual Builder Studio.
+    > (1) Click on **Configure Fields and Regions** button.
 
-    > (1) Click on the ![co image](../02-configure-hcm/images/icon012_co.png)  **Image** in the top right corner of the screen.  <br>
+    ![VB Studio](../02-configure-hcm/images/configure-hcm-image008.jpg)
 
-    > (2) Then select **Edit Page in Visual Builder Studio** from the drop down options.
+9. First you will create a new form rule.
 
-    ![Change Salary Page 2nd page](../02-configure-hcm/images/image008.png)
+    > (1) Click on the ![plus icon](../gen-images/icon015_plus.png)  **Icon** next to **Form Rules**.
 
-    The following image appears as Visual Builder Studio is loading.
+    ![Fields and Regions](../02-configure-hcm/images/configure-hcm-image009.jpg)
 
-    ![Select Project](../02-configure-hcm/images/image009.png)
-
-7.  Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the app dev lifecycle: design, build, test, and deploy.
-
-    Now we will use VB Studio to make the required changes to the Change Salary Form.
-
-    > Click on **Configure Fields and Regions**.
-
-    ![VB Studio](../02-configure-hcm/images/image010.png)
-
-8. First we will create a new form rule for change salary.
-
-    > Click on the ![plus icon](../02-configure-hcm/images/icon015_plus.png)  **Icon** to add a new form rule.
-
-    ![Fields and Regions](../02-configure-hcm/images/image011.png)
+10. You can name your new rule and optionally include a description.
 
     > (1) Label: Type **Change Salary Non-HR**. <br>
+    > (2) Click the **Create** button.
 
-    > (2) Click on **Create**.
+    ![Fields and Regions](../02-configure-hcm/images/configure-hcm-image010.jpg)
 
-    ![Fields and Regions](../02-configure-hcm/images/image012.png)
+11. You will add the Conditions for this rule to apply to all non-HR personnel.
 
-9.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
+    > (1) Click on the **Edit button**.
 
-    Now we will add the conditions that applies this rule to all non-HR personnel
+    ![Fields and Regions](../02-configure-hcm/images/configure-hcm-image011.jpg)
 
+12. You can complete the additional fields in User Roles condition in the first line. This rule will display this version of the Change Salary Form to all people who are not assigned to the Human Resource Manager Role.
 
-    > Click on the **Edit button.**
+    > (1) For 2nd column in the **User Roles** row, select **does not contain** from the drop down.  <br>
 
-    ![Fields and Regions](../02-configure-hcm/images/image013.png)
+    > (2) For 3nd column in the **User Roles**, type **Human Resource Manager** and select the 1st instance of  **Human Resource Manager** from the resulting dropdown.<br>
 
-    > (1) For **User Roles**, select **does not contain** from the drop down options.  <br>
+    > (3) Click on the **Drop Down** ![drop down icon](../gen-images/icon013_dropdown.png)  Icon to the left of **Salary** to expand the Salary section<br>
 
-    > (2) For **User Roles**, type **Human Resource Manager** and select the first **Human Resource Manager**.
+      ![Fields and Regions](../02-configure-hcm/images/configure-hcm-image012.jpg)
 
-    ![Fields and Regions](../02-configure-hcm/images/image014.png)
+13.  Now you want to add and hide fields.  You do this by changing the value in the Hidden column for specific fields.  Make the selections as shown below.
 
+     > (1) Action Reason: select **Visible** from the dropdown in the Hidden column.   <br>
 
-     **Note:** This configuration displays this version of the Change Salary Form to all people who are not assigned to the Human Resource Manager Role
+     > (2) Annualized Full-Time Salary: select **Hidden** from the dropdown in the Hidden column.   <br>
 
-10.  Now you want to add and hide fields.
+     > (3) Compa-Ratio: select **Hidden** from the dropdown in the Hidden column. <br>
 
-     > Click on the **Drop Down** ![drop down icon](../02-configure-hcm/images/icon013_dropdown.png)  Icon to the left of Salary to expand the salary section.
+     > (4) Click the ![done icon](../gen-images/icon_done.png) icon to complete the definition of this rule.<br>
 
-     ![Fields and Regions, Conditions](../02-configure-hcm/images/image016.png)
+     > (5) Click the ![x icon](../gen-images/icon011_x.png) to close the Fields and Regions section.<br>
 
-     > (1) Action Reason: select **Visible**     <br>
+     ![Salary Fields and Regions](../02-configure-hcm/images/configure-hcm-image013.jpg)
 
-     > (2) Annualized Full-Time Salary: select **Hidden**   <br>
+14. Now you will add a validation step for the Adjustment Percentage.  You want to prevent users from entering a  Salary Percentage Greater than 15%
 
-     > (3) Compa-Ratio: select **Hidden**
+    > (1) Click on the **Configure Validations** button.
 
-     ![Salary Fields and Regions](../02-configure-hcm/images/image017.png)
+    ![Fields and Regions](../02-configure-hcm/images/configure-hcm-image014.jpg)
 
-11. Now you will add a validation step for the Adjustment Percentage.  You do not want users to enter in a Salary Percentage Greater than 15%
+15. You can see any existing Validations and/or create new ones.
 
-    > Click on **Validate Field Values**
+    > (1) Click the ![x icon](../gen-images/icon015_plus.png) icon to create a new Validation.
 
-    ![Fields and Regions](../02-configure-hcm/images/image020.png)
+    ![Validation](../02-configure-hcm/images/configure-hcm-image015.jpg)
 
-    > Click on **+ Validation**
-
-    ![Validation](../02-configure-hcm/images/image021.png)
+16. Your first step is to name your Validation.
 
     > (1) Label: type **Adjustment Percentage**.    <br>
+    > (2) Click the **Create** button.
 
-    > (2) Click **Create**.
+    ![Validation](../02-configure-hcm/images/configure-hcm-image016.jpg)
 
-    ![Validation](../02-configure-hcm/images/image022.png)
+17.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
 
-12.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
+     > (1) Click on the **Edit** button.
 
-     > Click on **Edit**.
+     ![Create Validation](../02-configure-hcm/images/configure-hcm-image017.jpg)
 
-     ![Create Validation](../02-configure-hcm/images/image023.png)
+18.  Instead of using the pre-defined condition rows, you'll create a new one.
 
-     > Click on **+ Condition**.
+     > (1) Click the ![add condition](../gen-images/condition.png) button.
 
-     ![Create Validation](../02-configure-hcm/images/image024.png)
+     ![Create Condition](../02-configure-hcm/images/configure-hcm-image018.jpg)
 
-     > (1) Type **Adjustment Percentage** in the box and select the 1st **# Adjustment Percentage** under **Salary Details**     <br>
+19.  You now have a blank row at the bottom of the Condition section.  You'll fill out this row for your new Adjustment Percentage condition.  <br>![caution](../gen-images/cautionflagextrasmalltransparent2.png) **Note:** **Adjustment Percentage** will appear multiple times in the list of values, so be sure to select the correct one as described below.
+     > (1) Click the dropdown ![drop down icon](../gen-images/icon014_downarrow.png) icon in the first column of the blank row.<br>
+     > (2) Click the Expand ![expand icon](../gen-images/icon013_dropdown.png) icon next to **{} Field Values** to expand that section.
 
-     > (2) Select **greater than**    <br>
+     ![Create Validation](../02-configure-hcm/images/configure-hcm-image019.jpg)
 
-     > (3) Type **15**  <br>
+20.  The condition will be based on the Adjustment Percentage, so you need to select that from the resulting dropdown list.
 
-     ![Create Validation](../02-configure-hcm/images/image026.png)
+     > (1) Click the Expand ![expand icon](../gen-images/icon013_dropdown.png) icon next to **{} Salary Details** to expand that section.<br>
+     > (2) Select **# Adjustment Percentage** from the Salary Details section.
 
-      The form will not allow any user to enter an adjustment percentage greater than 15%.
+     ![Create Validation](../02-configure-hcm/images/configure-hcm-image020.jpg)
 
+21.  Next you will fill in the rest of the condition.
 
-13.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
+     > (1) Select **greater than** from the dropdown in the second column.   <br>
+     > (2) Enter **15** in the third column.<br>
+     > (3) Click the ![Add message button](../gen-images/plus_message_button.png) button.<br>
 
-     > (1) Summary:  **Adjustment Percentage is too high**.    <br>
+     ![Create Validation](../02-configure-hcm/images/configure-hcm-image021.jpg)
 
-     > (2) Severity:  **Error**.<br>
+22. Now you will configure the error message users will see if they enter an Adjustment Percentage greater than 15%.
 
-     > (3) Detail:  **The Adjustment Percentage must be lower than 15%** in **Detail**. <br>
+     > (1) Summary:  Type **Adjustment Percentage is too high**.    <br>
+     > (2) Severity:  Select **Error** from the dropdown. <br>
+     > (3) Detail:  Type **The Adjustment Percentage must be lower than 15%**. <br>
+     > (4) Click the ![done icon](../gen-images/icon_done.png) icon to complete the definition of this rule.<br>
+     > (5) Click the ![x icon](../gen-images/icon011_x.png) to close the Validations section.<br>
 
-     ![Create Validation](../02-configure-hcm/images/image028.png)
+     ![Create Validation](../02-configure-hcm/images/configure-hcm-image022.jpg)
 
+23. Well done.  You're going to do one more configuration that will display an AI Agent to assist the user in determining the appropriate salary change by checking market compensation information.  You'll do this by leveraging the Guided Journey configuration feature.  Guided Journeys allow you to embed information, including documents, links, reports and more in standard application screens.  You'll use it to embed an AI Agent.
 
-14.  Well done. You have configured a new rule for Non-HR personnel.
+    > (1) Type **Guided** in the **Filter** field in the **Page Properties** section of the panel on the right of the screen.<br>
+    > (2) Type **Salary** in the **Set Guided Journeys Code at the Page Level** field.<br>
+    > (3) Select **Salary Advisor Agent** from the resulting dropdown.<br>
 
-Redwood offers a quick way to review your changes as they appear in the application.
+       ![Create Validation](../02-configure-hcm/images/configure-hcm-image023.jpg)
 
-> (1) Click on the **Preview** ![preview icon](../02-configure-hcm/images/icon014_preview.png) icon in the top right of the screen.   <br>
+24. You can see the the Salary Advisor Agent Task Agent banner appear on the page.  You're done with configurations and ready to Preview your changes.
 
-> (2) A new window will pop up.
-![Create Validation](../02-configure-hcm/images/image031.png)
+    > (1) Click on the **Preview** ![Fields and Regions, Conditions](../gen-images/preview.png) icon in the upper right of the screen.  The Preview will appear in a new browser tab.
 
-15.  You have reentered the Change Salary Form.  Let’s review the changes.  You need to enter the required information before you can move to the next screen.
+       ![Create Validation](../02-configure-hcm/images/configure-hcm-image024.jpg)
 
-> (1) When does the salary will start?: Type a **future date** <br>
+25. You have re-entered the Change Salary Form. Before submitting the salary change, you'll use the Salary Advisor Agent to get some marketplace comparative estimates.
 
-> (2) What is the action name?: Select **Change Salary**. <br>
+    > (1) Click on the **Ask Oracle** ![Ask Oracle Logo Button](../gen-images/ask-oracle-logo.jpg) button.
 
-> (3) Why you are changing the salary?: Select **Career Progression**. <br>
+       ![Create Validation](../02-configure-hcm/images/configure-hcm-image025.jpg)
 
-> (4) Click **Continue** once complete.
+26. You want to see some prospective salary information for Barrett Reed based on variety attributes, including his title, location, and years of service.
 
-![Change Salary Page 2nd page](../02-configure-hcm/images/image033.png)
+    > (1) In the **Ask Oracle** dialog box on the bottom right of the screen. tu[e] **What is the market compensation estimate for Barrett Reed**.<br>
+    > (2) Press the **<****Enter****>** key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)<br>
 
-16.  Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible while Action Reason is now Visible.
+       ![Create Validation](../02-configure-hcm/images/configure-hcm-image026.jpg)
 
-Now we will test the validation for the Adjustment Amount Percentage.
+27. You can now see how Barrett Reed compares to market averages and medians.
 
-> Enter an Adjustment Percentage that is greater than 15%.
+    > (1) Review the market compensation information and when finished, click the the ![x icon](../gen-images/icon011_x.png) icon in the upper right.
 
-![Change Salary Screen 2](../02-configure-hcm/images/image034.png)
+       ![Create Validation](../02-configure-hcm/images/configure-hcm-image027.jpg)
 
-17.  The system gives us a warning that the increase in salary is outside the worker’s salary range.  You will ignore this warning.
+28. Based on the AI Agent response, you decide to move him into the higher portion of the estimated range by increasing his salary to $70,000, which is approximately a 20% increase.  You can start the Change Salary Request by entering the information below.
 
-> Click **Continue.**
+    > (1) When does the salary change start?: Type a **future date (eg. 12/31/26)** <br>
+    > (2) What's the action name?: Select **Change Salary** from the dropdown. <br>
+    > (3) Why are you changing the salary?: Select **Career Progression** from the dropdown. <br>
+    > (4) Click **Continue**.
 
-![Change Salary Screen 2](../02-configure-hcm/images/image035.png)
+    ![Change Salary Page 2nd page](../02-configure-hcm/images/configure-hcm-image028.jpg)
 
-18.  The system will not allow the user to continue because the Adjustment Percentage exceeds 15% due to the field validation we configured.
+29. Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible and Action Reason is now Visible. Now you will test the validation for the Adjustment Amount Percentage but requesting a 20% increase.
 
-![Change Salary Screen 2 error message](../02-configure-hcm/images/image036.png)
+    > (1) Enter **20** in the **Adjustment Percentage** field (or any value greater than 15) and either **<****Tab****>** out of the field or press the **<****Enter****>** key on the keyboard.
 
-> Click on the **Home** ![home icon](../02-configure-hcm/images/icon017_home.png)  Icon.
+    ![Change Salary Screen 2](../02-configure-hcm/images/configure-hcm-image029.jpg)
 
-19. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+30. The system will not allow the user to continue because the Adjustment Percentage exceeds 15%!
 
-    [![Checkpoint](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > (1) Your error message and description is clearly presented on the screen.
+
+    ![Change Salary Screen 2 error message](../02-configure-hcm/images/configure-hcm-image030.jpg)
+
+31.  Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+
+     > **You've completed this Adventure**.  Please close this tab and the Visual Builder tab.
+
+32. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+
+    [![AI Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
 ### Summary
 
-Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.
+In this adventure you experience the power of application configuration, including the ability to define rules, control screen content, and define validation rules.  This adventure leveraged Visual Builder, the same tool that Oracle uses to build the application. Visual Builder allows you to configure the application and also create new application screens that can leverage both Oracle and non-Oracle data. These features allow you to fine tune your Oracle Fusion Cloud Applications for peak performance, business processes tailored to you requirements, and fast, efficient usage.
 
-**You have successfully completed the Activity!**
+And remember, application configurations are automatically maintained during the release update process.
+
+**Sync up as a team, lock in your harness, get ready for the the next high-octane adventure.**
 
 ### Learn More
-
-* [Overview of Redwood Application Extension](https://docs.oracle.com/en/cloud/saas/human-resources/fauvb/overview-of-redwood-application-extensions.html)
-* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/25d/oaext/overview-of-using-visual-builder-studio.html#s20072861)
+* [Getting Started with Redwood](https://redwood.oracle.com/?pageId=COREAF423D6E53F34D12BCD7BF41B42BDAC3&shell=getting-started)
+* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/26a/oaext/overview-of-using-visual-builder-studio.html#s20072861)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist; Casey Doody, Cloud Technologist; Sajid Saleem, Master Principal Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, January 2026
