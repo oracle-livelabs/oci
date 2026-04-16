@@ -37,7 +37,7 @@ This lab assumes you have:
 
 4. Click **Create compartment**
 
-    ![Compartment Creation](images/compartment.png)
+    ![Compartment Creation](images/compartment.png " ")
 
 
 > Save the OCID of the compartment, which can be found on the details page after clicking into the compartment. It will be used in later steps.
