@@ -17,7 +17,7 @@ In this workshop, you will learn how to:
 * Deploy and test the Transcribe Function (creates Speech jobs) and Summary Function (Generative AI via model OCID)
 * Save transcripts and summaries to Object Storage and send results via OCI Notifications
 
-### Prerequisites (Optional)
+### Prerequisites
 
 This lab assumes you have:
 
