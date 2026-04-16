@@ -37,7 +37,8 @@ This lab assumes you have:
 
 4. Click **Create compartment**
 
-    ![Resource Manager](images/compartment.png)
+    ![Compartment Creation](images/compartment.png)
+
 
 > Save the OCID of the compartment, which can be found on the details page after clicking into the compartment. It will be used in later steps.
 
@@ -60,7 +61,7 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
 4. Click **Create**
 
-    ![Resource Manager](images/upload.png)
+    ![Bucket Creation](images/upload.png)
 
 > If you cannot find the compartment, wait a few minutes and refresh, as it may take time to provision.
 
@@ -82,7 +83,7 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
 2. Click **Start VCN Wizard**
 
-    ![Resource Manager](images/vcn_wizard.png)
+    ![VCN Connectivity Selection](images/vcn_wizard.png)
 
 3. Enter:
 
@@ -92,7 +93,7 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
    * Configure public subnet IPv4 CIDR block: 10.0.0.0/24
    * Configure private subnet IPv4 CIDR block: 10.0.1.0/24
 
-    ![Resource Manager](images/pub_priv_sub.png)
+    ![VCN Configuration](images/pub_priv_sub.png)
 
 4. Click **Next → Create**
 
@@ -102,7 +103,7 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
 2. Change the compartment to your root compartment
 
-    ![Resource Manager](images/domain.png)
+    ![Root Domain](images/domain.png)
 
 3. Click **Default → Dynamic Groups → Create dynamic group**
 
@@ -112,7 +113,7 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
 4. Click **Create**
 
-    ![Resource Manager](images/create_dg.png)
+    ![Dynamic Group Creation](images/create_dg.png)
 
 ## Task 5: Create Policies
 
@@ -130,7 +131,7 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
 4. Click **Create**
 
-    ![Resource Manager](images/events_policy.png)
+    ![Policy Creation](images/events_policy.png)
 
 5. Create another policy:
 
@@ -147,7 +148,7 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
 6. Click **Create**
 
-    ![Resource Manager](images/funcs.png)
+    ![Policies to Enable Functions](images/funcs.png)
 
 You may now **proceed to the next lab**.
 

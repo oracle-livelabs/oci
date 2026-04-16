@@ -32,7 +32,7 @@ You will publish summaries to this topic; subscribers will receive an email.
 
 2. Click **Create**
 
-![Resource Manager](images/topic.png)
+![Topic Creation](images/topic.png)
 
 3. Click the topic you just created → **Subscriptions → Create Subscription**
 
@@ -41,7 +41,7 @@ You will publish summaries to this topic; subscribers will receive an email.
 
 4. Click **Create**
 
-![Resource Manager](images/sub.png)
+![Email Subscription](images/sub.png)
 
 5. Check your inbox and click **Confirm subscription**
 
@@ -71,7 +71,7 @@ Ensure new uploads trigger the Transcribe Function.
 
 2. Click **Create Rule**
 
-![Resource Manager](images/rule.png)
+![Creating Event Rules](images/rule.png)
 
 3. Create a second rule with the following information:
 
@@ -91,7 +91,7 @@ Ensure new uploads trigger the Transcribe Function.
      - Function Application: ai-ms-app  
      - Function: summarizer
 
-![Resource Manager](images/summarize.png)
+![Creating Event Rule for Summarizer Function](images/summarize.png)
 
 ## Task 3: Configure application-level variables
 
@@ -99,7 +99,7 @@ Ensure new uploads trigger the Transcribe Function.
 
 2. Select the **xai.grok-3** model, copy the OCID, and save it for later use
 
-![Resource Manager](images/grok.png)
+![Selecting Grok Model](images/grok.png)
 
 3. Navigate to **Developer Services → Functions → Applications → ai-ms-app → Configuration → Manage configuration**
 
@@ -114,7 +114,7 @@ Ensure new uploads trigger the Transcribe Function.
    - Key: RESULT\_BUCKET, Value: transcripts
    - Key: COMPARTMENT\_OCID, Value: &lt;ai-meeting-summarizer-OCID&gt;
 
-![Resource Manager](images/config.png)
+![Populating Application Config](images/config.png)
 
 5. Click **Save changes**
 
@@ -129,19 +129,19 @@ Create a Log Group and enable function logs for observability.
 
 2. Click **Create**
 
-![Resource Manager](images/log_group.png)
+![Creating Log Group](images/log_group.png)
 
 3. Navigate to **Developer Services → Functions → Applications → ai-ms-app → Monitoring**
 
 4. Under **Logs**, in the **Function Invocation Logs** row, click the three dots and select **Enable log**
 
-![Resource Manager](images/monitoring.png)
+![Monitoring Tab in Function](images/monitoring.png)
 
    - Compartment: ai-meeting-summarizer
    - Log group: ai-ms-log-group
    - Log name: ai-ms-logs
 
-![Resource Manager](images/logs.png)
+![Enabling Logs](images/logs.png)
 
 You may now **proceed to the next lab**.
 

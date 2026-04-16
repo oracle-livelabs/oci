@@ -35,7 +35,7 @@ This lab assumes you have:
 
 3. Click **Create**
 
-![Resource Manager](images/application.png)
+![Application Creation](images/application.png)
 
 ## Task 2: Create Transcribe Function
 
@@ -48,11 +48,11 @@ This lab assumes you have:
 
 3. Right-click the application and select **Create function → Create from a template → Python**
 
-![Resource Manager](images/func.png)
+![Create Functions](images/func.png)
 
-![Resource Manager](images/template.png)
+![Template Selection](images/template.png)
 
-![Resource Manager](images/language.png)
+![Programming Language Selection](images/language.png)
 
 4. Enter **transcriber** as your function name and press Enter. A new function will appear under your application.
 
@@ -209,7 +209,7 @@ This lab assumes you have:
 
 1. Return to the OCI Console and open up the Cloud Shell by clicking on the computer icon in the top right corner.
 
-   ![Resource Manager](images/cloudshell.png)
+   ![Cloud Shell](images/cloudshell.png)
 
 2. Navigate to the directory of your new function in the terminal:
 
@@ -227,7 +227,7 @@ This lab assumes you have:
    fn use context &lt;region&gt;
    ```
 
-   ![Resource Manager](images/region-context.png)
+   ![Changing Region Context](images/region-context.png)
 
 4. Update the context with the function's compartment ID which can be found on the details page of the compartment you created in the beginning:
 
@@ -242,12 +242,12 @@ This lab assumes you have:
    fn update context registry &lt;region-key&gt;.ocir.io/&lt;object\_storage\_namespace&gt;/[repo-name-prefix]
    ```
 
-   ![Resource Manager](images/region-key.png)
-   ![Resource Manager](images/ocir.png)
+   ![Finding Region Key](images/region-key.png)
+   ![Updating Registry Context](images/ocir.png)
 
 6. In a new tab, navigate to your **OCI Console → Profile → Tokens and keys → Auth tokens → Generate token**.
 
-   ![Resource Manager](images/auth.png)
+   ![Create Auth Token](images/auth.png)
 
 7. Give the token a name and then make sure to save this token for use in function deployment as it will not be shown again.
 
