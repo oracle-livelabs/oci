@@ -13,6 +13,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 * Assemble an Agent Team using previously created Procurement Policy Advisor Agent and seeded Purchase Requisition Action Agent.
 * Test the Agent Team
 
+Estimated Time: 10 to 15 minutes
+
 ### **Begin Exercise**
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
@@ -102,7 +104,7 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
 14. The agent needs a little more information.
 
-    > (1) In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Requested delivery date is Feb 28th, 2026, the quantity is 1 and it is the same model** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
+    > (1) In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Requested delivery date is June 28th, 2026, the quantity is 1 and it is the same model** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
     ![agent dialogue 3](../07d-pre-agent-team-prc/images/pre-agent-team-prc-image014.jpg) <br>
 
@@ -154,4 +156,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, February 2026
+* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, March 2026

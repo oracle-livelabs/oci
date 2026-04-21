@@ -59,6 +59,10 @@
             "filename": "../../05d-pre-agent-team-hcm/pre-agent-team-hcm.md"
         },
         {
+            "title": "Lab 5e: Evaluate an AI Agent Team",
+            "filename": "../../05e-agent-evaluation-hcm/agent-evaluation-hcm.md"
+        },
+        {
             "title": "Lab 6a: Create an AI Agent (SCM)",
             "filename": "../../06a-external-agent-scm/external-agent-scm.md"
         },
@@ -79,6 +83,10 @@
             "filename": "../../07d-pre-agent-team-prc/pre-agent-team-prc.md"
         },
         {
+            "title": "Lab 7e: Evaluate an AI Agent Team",
+            "filename": "../../07e-agent-evaluation-prc/agent-evaluation-prc.md"
+        },
+        {
             "title": "Lab 8: Audit",
             "filename": "../../08-audit/audit.md"
         },
@@ -97,7 +105,7 @@
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+            "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
         }
     ]
 }
