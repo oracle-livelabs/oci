@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Run NVIDIA NIM Microservices on Oracle Kubernetes Engine (OKE)",
+  "workshoptitle": "Running NVIDIA NIM Microservices on Oracle Kubernetes Engine (OKE)",
   "help": "livelabs-help-oci_us@oracle.com",
   "variables": ["../../variables/variables.json",
     "../../variables/variables-in-another-file.json"],
@@ -17,7 +17,7 @@
     {
       "title": "Lab 1: Deploy an OKE Cluster",
       "description": "Labs that follow the introduction are numbered, starting with Lab 1",
-      "filename": "../../lab1-oke/lab1-oke.md"
+      "filename": "../../lab1-oke-cluster/lab1-oke-cluster.md"
     },
     {
       "title": "Lab 2: Install NVIDIA GPU Operator",
@@ -25,7 +25,11 @@
     },
     {
       "title": "Lab 3: Install NVIDIA NIM Microservices and start inferencing",
-      "filename": "../../lab3-nim-install/lab3-nim-install.md"
+      "filename": "../../lab3-nim-install-and-test/lab3-nim-install-and-test.md"
+    },
+    {
+      "title": "Lab 4: Check Your Understanding",
+      "filename": "../../lab4-knowledge-check/lab4-knowledge-check.md"
     },
     {
       "title": "Need Help?",
