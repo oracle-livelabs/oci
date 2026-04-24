@@ -16,15 +16,15 @@
         },
         {
             "title": "Lab 3: Create an AI Agent",
-            "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
+            "filename": "../../07a-rag-agent-prc/rag-agent-prc.md"
         },
         {
             "title": "Lab 4: Assemble an AI Agent Team",
-            "filename": "../../05d-pre-agent-team-hcm/pre-agent-team-hcm.md"
+            "filename": "../../07d-pre-agent-team-prc/pre-agent-team-prc.md"
         },
         {
             "title": "Lab 5: Evaluate an AI Agent Team",
-            "filename": "../../05e-agent-evaluation-hcm/agent-evaluation-hcm.md"
+            "filename": "../../07e-agent-evaluation-prc/agent-evaluation-prc.md"
         },
         {
             "title": "Lab 6: Extend the UI",
