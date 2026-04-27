@@ -1,10 +1,10 @@
 # Analytics
 
-## **Analytics AI for sentiment analysis**
+## **Analytics AI for Margin Analysis**
 
 ### **Introduction**
 
-Oracle Fusion AI Data Platform (FDI) is a family of prebuilt, cloud native applications for Oracle Cloud Applications that provides line-of-business users with ready-to-use insights to improve decision-making.
+Oracle Fusion AI Data Platform (FDI) is a family of prebuilt, cloud native analytics for Oracle Cloud Applications that provides line-of-business users with ready-to-use insights to improve decision-making.
 
 It is a Cloud application that delivers best-practice Key Performance Indicators (KPIs) and deep analyses to help decision-makers run their businesses and individual contributors to operate their businesses. Oracle Fusion AI Data Platform is built on top of Oracle Analytics Cloud and Oracle Autonomous Data Warehouse. This packaged service starts with Oracle Fusion Cloud Applications which you can deploy rapidly, personalize, and extend. The service extracts data from your Oracle Fusion Cloud Applications and loads it into an instance of Oracle Autonomous Data Warehouse. Business users can then create and customize dashboards in Oracle Analytics Cloud. It empowers business users with industry-leading, AI-powered, self-service analytics capabilities for data preparation, visualization, enterprise reporting, augmented analysis, and natural language processing.
 
@@ -12,17 +12,24 @@ This activity guide helps business users to investigate and research data, ask r
 
 ### **Objectives**
 
-Use pre-built machine learning based sentiment analysis to analyze employee sentiment (positive, negative or neutral) and emotion from survey interaction data.
+Use machine learning and natural language conversational AI to analyze margin variance and identify the root cause. 
 
 Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
+### **Pre-requisite**
+
+![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
+As a pre-requisite for this adventure, please download following file
+
+****Please Note**** that some of the following steps will leverage AI chat and prompts.  To streamline typing requirements and eliminate any typing errors, the prompts are shown in-line in the steps below and are also available in the Prompt-CrossFunctional-Analysis.txt document available here.  [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../09-analytics-with-ai/files/Prompt-CrossFunctional-Analysis.txt)
+
 ### **Begin Exercise**
 
-1. In this activity, you will leverage pre-built machine learning capabilities (sentiment analysis) on survey data to understand employee sentiment.
+1. This activity guide helps business users to investigate and research data, ask relevant questions to understand Trends, Patterns and Outliers.
 
-    ![Analytics OBJs](../09-analytics-with-ai/images/aianalytics_objs2.jpg)
+    ![Analytics OBJs](../09-analytics-with-ai/images/analytics-with-ai-image001.jpg)
 
 2. Oracle Fusion AI Data Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making.
 
@@ -30,158 +37,166 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (2) Click on **Fusion AI Data Platform** icon. <br>
 
-    ![Home Screen](../09-analytics-with-ai/images/aiimage001.jpg)
+    ![Home Screen](../09-analytics-with-ai/images/analytics-with-ai-image002.jpg)
 
-3. After a successful login, you will land on the Oracle Analytics home page.
+3.  You can now login to Analytics with your assigned username and password.  Customers will typically leverage single sign-on capabilities to eliminate this step during implementation.
 
-    > (1) Enter your assigned username and Fusion Analytics Password.  <br>
+    > (1) Type your assigned username <br>
+    > (2) Type the Fusion Analytics Password (this can be copied from the AI Adventure start page).  <br>
+    > (3) Click the **Sign In**  ![Plus create button](../gen-images/sign_in_button.png) button.
 
-    ![Sign-in Screen](../09-analytics-with-ai/images/aiimage001a.jpg)
+    ![Sign-in Screen](../09-analytics-with-ai/images/analytics-with-ai-image003.jpg)
 
-4. From home page, click on create button on top right corner to start the data flow process for building model out.
+4. After a successful login, you will land on the Oracle Analytics home page.  From the home page, you can review key business metrics and trends.
 
-    > (1) Click on the **Create Button**. <br>
+    > (1) Hover over the tiles to see additional information.
+    ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) **Notice** that Margin has been going down and need to investigate the reason. Two attributes that influence Margin are Revenue and Cost. Since revenue seems to be increasing, let's investigate Cost.
 
-    ![Analytics Home](../09-analytics-with-ai/images/aiimage009.jpg)
+    ![Analytics Home](../09-analytics-with-ai/images/analytics-with-ai-image004.jpg)
 
-    > (1) Click on **Data Flow**. <br>
+5. To further investigate costs, you caņ use the Universal Search feature at the top of the screen.  This search facilitates both data and object search.
 
-    ![Analytics Home](../09-analytics-with-ai/images/aiimage010.jpg)
+    > (1) Within the Search box, type in **show me expenses by quarter** and press **SHIFT + ENTER** keys or select click the **Press SHIFT+ENTER or click ti visualize data using "show me expenses by quarter" from the resulting dropdown.
 
-5. Data Flow page pops up but also a dialog box asking to Add Data.
+    ![Search for Info](../09-analytics-with-ai/images/analytics-with-ai-image005.jpg)
 
-    > (1) Within the Search box, type in **Survey** . <br>
+6. The search function uses AI capability to scan through your datasets and brings back information as requested. In addition to building a visual it also creates a narrative.  You will now start exploring the content.
 
-    > (2) Select Data set named **Survey Data**. <br>
+    > (1) Click on the **Explore as Workbook** ![Expore as Workbook](../gen-images/explore_as_workbook.png) icon as highlighted in red to open the analysis in edit mode.
 
-    > (3) Click **Add**. <br>
+    ![Explore as Workbook](../09-analytics-with-ai/images/analytics-with-ai-image006.jpg)
 
-    ![New Data Flow](../09-analytics-with-ai/images/aiimage011.jpg)
+7. In this step, you can familiarize yourself with the the environment, features and components of the New Workbook page.
 
-6. We will use pre-built machine learning based sentiment analysis to analyze Survey Data.
+    > (Blue) The Blue Box on the left is the data panel. This is where you will see all datasets. <br>
 
-    > (1) Drag **Analyze Sentiment** on the left side until we get a blue box next to Survey Data. <br>
+    > (Yellow) The Yellow box in the middle is the grammar pane which has all finer visualization properties. <br>
 
-    ![New Data Flow](../09-analytics-with-ai/images/aiimage012.jpg)
+    > (Orange) The Orange panel on the right is the canvas used to build dashboards. <br>
 
-7. Now that we have “Analyze Sentiment” we have to point the model as to what we want it to analyze, In this case we want to have a sentiment analysis on employees comments. The Sentiment Analysis will analyze the comments and assign a positive, neutral, or negative attribute to each comment.
+    > (Green) The green boxes have menus to carry out various functions.
 
-    > (1) Click on **Select a Column** . <br>
+    ![Review components of page](../09-analytics-with-ai/images/analytics-with-ai-image007.jpg)
 
-    > (2) Scroll down until you see **EmployeeComment**. <br>
+8. You can see that there is a consistent upward trend for the last three quarters and would like to determine if this will continue in the future as well.  To understand this trend, you can use built-in forecasting features.
 
-    > (3) Click on **EmployeeComment**. <br>
+    > (1) **Highlight** a data point on the line graph and **Right Click**. <br>
 
-    ![New Data Flow](../09-analytics-with-ai/images/aiimage013.jpg)
+    > (2) Select **Add Statistics** from the resulting dropdown list. <br>
 
-8. We are ready to save the model data.
+    > (3) Select **Forecast** from the resulting list of options.
 
-    > (1) drag over “**Save Dataset** to our data flow. <br>
+    ![Forecast](../09-analytics-with-ai/images/analytics-with-ai-image008.jpg)
 
-    ![New Data Flow](../09-analytics-with-ai/images/aiimage014.jpg)
+9. The resulting forecast shows that the upward trend is going to continue for some time, hence it is important that we understand the root cause of this increase.
 
-    > (1) Enter **Survey Sentiment CIOXX and your initials** in data set to name the data set. <br>
+    > (1) Note the general upward trend of the forecast.
 
-    > (2) Click the **Save** button. <br>
+    ![forecast trends up](../09-analytics-with-ai/images/analytics-with-ai-image009.jpg)
 
-    ![New Data Flow](../09-analytics-with-ai/images/aiimage015.jpg)
+10. You can now investigate the various aspects of cost to understand the drivers contributing to the increase. On the top right-hand corner, locate the AI icon which looks like stardust. This opens the AI panel which consist of Watchlists, Insights as well as Chat Assistant.
 
-9. A dialog box pops up asking name to save Data Flow As.
+    > (1) Click on the **AI Icon** ![Caution Flag](../gen-images/ai_icon.jpg) in the top toolbar. <br>
 
-    > (1) Enter **Sentiment Data Flow CIOXX and your initials**. <br>
+    ![AI Icon](../09-analytics-with-ai/images/analytics-with-ai-image010.jpg)
 
-    > (2) Click on **Ok**. <br>
+11. You can use chat to build out your content.
 
-    ![New Data Flow](../09-analytics-with-ai/images/aiimage016.jpg)
+    > (1) Click on the **Assistant** tab. <br>
 
-10. Now you will run the data flow model.
+    ![AI Assistant](../09-analytics-with-ai/images/analytics-with-ai-image011.jpg)
 
-    > (1) Click on the **Run** button. <br>
+12. You know expenses are trending higher and the forecast suggests that they will stay high. So, you want to break down expenses and look at the next level to hopefully see which expense categories are causing the increase.
 
-    ![Sentiment Data Flow](../09-analytics-with-ai/images/aiimage017.jpg)
+     ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) **Please Note** that the following interactions leverage AI chat and prompts.  The prompts are shown in-line below, but are also available in the Prompt-CrossFunctional-Analysis.txt document.  [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../09-analytics-with-ai/files/Prompt-CrossFunctional-Analysis.txt)
 
-11. Will take approximately 30 seconds to run. You can start going back to build out a workbook with the data set generated.
+    > (1) Copy and paste **show me expense by expense categories** into the chat, as shown.
 
-    > (1) Click on the **back** button. <br>
+    ![Show me expenses](../09-analytics-with-ai/images/analytics-with-ai-image012.jpg)
 
-    ![Sentiment Data Flow](../09-analytics-with-ai/images/aiimage018.jpg)
+13. Chat assistant scans the dataset and creates a graph with relevant information.  You can organize the graph for better readability.
 
-12. Now that we have Sentiment Data Flow created, lets build some analysis with the model.
+    > (1) Copy and paste **Change to horizontal bar and sort high to low** into the chat.
 
-    > (1) Click on the **Create** button. <br>
+    ![horizontal bar](../09-analytics-with-ai/images/analytics-with-ai-image013.jpg)
 
-    > (2) Click on **Workbook**. <br>
+14. You think that looks good and decide to add it to the canvas.
 
-    ![Sentiment Data Flow](../09-analytics-with-ai/images/aiimage019.jpg)
+    > (1) Hover over the chart area to expose the submenu and then **click** the  ![Caution Flag](../gen-images/plusicon.jpg) icon to add the graph to the canvas <br>
 
-13. Dialog pop up asking for what data we would like to Add.
+    ![Add to canvas](../09-analytics-with-ai/images/analytics-with-ai-image014.jpg)
 
-    > (1) Enter **Survey** in the search bar. <br>
+15. Your new chart, Expenses by Expense Categories, has been added to the canvas.
 
-    > (2) Select the model you named with your initials. <br>
+    > (1) No actions required here.  Just confirm the addition of the new chart **Expenses by Expense Categories** to the left of the AI Assistant.  Also note that the AI Assistant sliding window is still available and waiting further interaction.
 
-    > (3) Click on **Add to Workbook**. <br>
+    ![Review Canvas](../09-analytics-with-ai/images/analytics-with-ai-image015.jpg)
 
-    ![New Workbook](../09-analytics-with-ai/images/aiimage022.jpg)
+16. You can see the details about expenses, including which categories are causing it to increase. The Payroll expense is the highest and needs investigation.  Payroll details are part of HCM dataset, but that's not a issue as Analytics has access to all Fusion SaaS Application data and external data if necessary.  You will use the **Chat Assistant** to keep building analysis. This time we will ask a complex question asking to fetch related data from different data store
 
-14. Notice that we have emotion as an attribute derived from sentiment analysis. We will start with analyzing head count based on emotion.
+    > (1) Copy and paste **show me similar information from HCM - Core Transactions data** into the chat.
 
-    > (1) Click and hold on ctrl, then select **emotion**. <br>
+    ![Add HCM Data](../09-analytics-with-ai/images/analytics-with-ai-image016.jpg)
 
-    > (2) Select **headcount** and drag both attributes into the canvas. <br>
+17. You can see the response, but prefer another format.
 
-    ![New Workbook](../09-analytics-with-ai/images/aiimage023.jpg)
+    > (1) Copy and paste **change to vertical bar** into the chat.
 
-15. Now we will move emotion to Color for better visualization
+    ![Vertical Bar](../09-analytics-with-ai/images/analytics-with-ai-image017.jpg)
 
-    > (1) Click and drag **emotion** onto color. <br>
 
-    ![New Workbook](../09-analytics-with-ai/images/aiimage024.jpg)
+18. The format looks better, but You need a little more information to better understand the trend, so you decide to add a time period.
 
-    > (1) Drag over Department attribute to “Trellis Columns”. <br>
+    > (1) Copy and paste **Add month from HCM - Core Transactions data** into the chat.
 
-    ![New Workbook](../09-analytics-with-ai/images/aiimage025.jpg)
+    ![Add Month](../09-analytics-with-ai/images/analytics-with-ai-image018.jpg)
 
-    > (1) While holding down the control key, select **emotion**. <br>
+19. Your new graph looks like this. That's the data you'd like to see, but feel it would be better in a more readable format.
 
-    > (2) Select **EmployeeComment**. <br>
+    > (1) Copy and paste **Change to a Stacked Bar** into the AI Assistant chat.
 
-    > (3) Drag both to the line below the current bar graph. <br>
+    ![Stacked Bar](../09-analytics-with-ai/images/analytics-with-ai-image019.jpg)
 
-    ![New Workbook](../09-analytics-with-ai/images/aiimage026.jpg)
+20. You think that's better, but realize it needs to be sorted by month to better understand any chronological trends.
 
-16. We can bring in the comments and add some color emotion to them.
+    > (1) Copy and paste **Sort month low to high** into the chat.
 
-    > (1) Click and drag **emotion** onto color. <br>
+    ![change sort](../09-analytics-with-ai/images/analytics-with-ai-image020.jpg)
 
-    ![New Workbook](../09-analytics-with-ai/images/aiimage027.jpg)
+21. This visual provides the information you are looking for, so you decide to add iţ to the canvas.
 
-    > (1) Click on the bar chart to reveal the filter icon. <br>
+    > (1) Hover over the chart area to expose the submenu and then **click** the  ![Plus icon](../gen-images/plusicon.jpg) icon to add the graph to the canvas <br>
 
-    > (2) Click on the **Filter Icon**. <br>
+    ![Add to canvas](../09-analytics-with-ai/images/analytics-with-ai-image021.jpg)
 
-    > (3) Then click on the **Preview Icon**. <br>
+22. You decide to focus on the information on the canvas and close the Assistant for now.
 
-    ![New Workbook](../09-analytics-with-ai/images/aiimage028.jpg)
+    > (1) **Click** the  ![X Icon](../gen-images/icon011_x.png) icon to the right of the **Assistant** tab to close it.<br>
 
-17. We see the survey results across all departments.  Now we will use the filter feature to look at the different sentiments.
+    ![Close AI Assistant](../09-analytics-with-ai/images/analytics-with-ai-image022.jpg)
 
-    > (1) Click on any **green bar** to view all positive comments. <br>
+23. On the main canvas you will now see the entire dashboard. You want to add legend to the Stacked Bar
 
-    ![New Workbook](../09-analytics-with-ai/images/aiimage029.jpg)
+    > (1) Select the Stacked Bar and while it is in highlighted, please click on the Tuner icon  ![AI Tuner Icon](../gen-images/ai_tuner_icon.png) as shown in the image<br>
 
-    > (1) Click on any **orange bar** to view all neutral comments. <br>
+    ![Tuner Icon](../09-analytics-with-ai/images/analytics-with-ai-image023.jpg)
 
-    ![New Workbook](../09-analytics-with-ai/images/aiimage030.jpg)
+24. You decide to add the Legend to the bottom of the graph.
 
-    > (1) Click on any **blue bar** to view all positive comments. <br>
+    > (1) Find the **Legend Position** int he list of available options, as shown. <br>
+    > (2) Select the **Legend Position**. <br>
+    > (3) Select **Bottom** from the resulting dropdown.
 
-    ![New Workbook](../09-analytics-with-ai/images/aiimage031.jpg)
+    ![Change Legend](../09-analytics-with-ai/images/analytics-with-ai-image024.jpg)
 
-    ![New Workbook](../09-analytics-with-ai/images/aiimage032.jpg)
+25. Deeper analysis shows that while Base Salaries & Wages has been high, it is also constant. What has increased in the last few quarters is the overtime and the contract labor .
 
+    > You conclude that the current canvas property clarifies your concern.  Increasing expenses seem to be a continuing trend and, within your largest expense category of Payroll Expenses, Contract Labor has been consistently increasing and likely needs further investigate.
 
-23. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+    ![Note Results](../09-analytics-with-ai/images/analytics-with-ai-image025.jpg)
+
+23. Adventure awaits, click on the image and show what you know, and rise to the t
+op of the leader board!!!
 
     [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
 
@@ -199,6 +214,6 @@ You discovered how effortlessly Fusion AI Data Platform enables the creation of 
 
 ## Acknowledgements
 
-* **Author** - Xavier Ramirez, Senior Analytics Solution Engineer, Advanced Technology Services, Nate Weinsaft, Master Principal Solution Engineer, Advanced Technology Services, Sohel Jeelani, Distinguished Analytics Solution Engineer, Advanced Technology Services
+* **Author** - Sohel Jeelani, Distinguished Analytics Solution Engineer, Advanced Technology Services
 * **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem; February 2026
+* **Last Updated By/Date** - Charlie Moff, Sajid Saleem; April 2026
