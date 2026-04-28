@@ -16,12 +16,12 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 ### **Pre-requisite**
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
-As a pre-requisite for this adventure, please download following files
-1. Policy document file to your local desktop as below.
+As a pre-requisite for this adventure, please download following files to your local desktop
+1. Policy document file **(ProcurementPolicies.pdf)**
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/ProcurementPolicies.pdf)
 <br>
-2. Prompt file for the AI Agent
+2. Prompt file for the AI Agent **(Prompt-Procurement-Policy-Advisor.txt)**
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/Prompt-Procurement-Policy-Advisor.txt)
 

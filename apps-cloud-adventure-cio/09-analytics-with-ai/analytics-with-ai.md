@@ -20,10 +20,14 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 ### **Pre-requisite**
 
+****Please Note**** For this adventure, we will do few steps using AI chat and prompts. To streamline typing and eliminate any typing errors, the prompts are shown in-line in the guide below and are also available in the Prompt-CrossFunctional-Analysis.txt. 
+<br><br>
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
-As a pre-requisite for this adventure, please download following file
+As a pre-requisite for this adventure, please download following file to your local desktop
 
-****Please Note**** that some of the following steps will leverage AI chat and prompts.  To streamline typing requirements and eliminate any typing errors, the prompts are shown in-line in the steps below and are also available in the Prompt-CrossFunctional-Analysis.txt document available here.  [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../09-analytics-with-ai/files/Prompt-CrossFunctional-Analysis.txt)
+1. Prompt file for the Analytics AI Agent **(Prompt-CrossFunctional-Analysis.txt)**
+<br>
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../09-analytics-with-ai/files/Prompt-CrossFunctional-Analysis.txt)
 
 ### **Begin Exercise**
 
