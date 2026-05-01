@@ -1,0 +1,46 @@
+{
+    "workshoptitle": "Build Your Own AI Agent to Boost Productivity and Efficiency",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Overview and Highlights",
+            "filename": "../../1-overview-and-highlights/overview-and-highlights-tenancy.md"
+        },
+        {
+            "title": "Get Started",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Setup",
+            "filename": "../../2-setup/setup-tenancy.md"
+        },
+        {
+            "title": "Vector RAG",
+            "filename": "../../3-vector-rag/vector-rag-tenancy.md"
+        },
+        {
+            "title": "Vector SQL",
+            "filename": "../../4-vector-sql/vector-sql-tenancy.md"
+        },
+        {
+            "title": "Web Application",
+            "filename": "../../5-web-application/web-application-tenancy.md"
+        },
+        {
+            "title": "Cost Optimization",
+            "filename": "../../6-cost-optimization/cost-optimization-tenancy.md"
+        },
+        {
+            "title": "Security Guard Rails",
+            "filename": "../../7-security-guard-rails/security-guard-rails-tenancy.md"
+        },
+        {
+            "title": "Quiz",
+            "filename": "../../8-quiz/quiz-tenancy.md"
+        },
+        {
+            "title": "Need Help?",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
