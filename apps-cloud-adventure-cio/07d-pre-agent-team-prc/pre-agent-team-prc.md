@@ -61,9 +61,9 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
 7. You'll add one more worker agent.
 
-    >  (1) Delete your previous Ask Oracle filter and enter **F1 Purchase** in the Ask Oracle Filter and press the **<****Enter****>** key or select **F1 Purchase** from the resulting dropdown.<br>
+    >  (1) Delete your previous Ask Oracle filter and enter **F1 AIA** in the Ask Oracle Filter and press the **<****Enter****>** key or select **F1 AIA** from the resulting dropdown.<br>
 
-    >  (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **F1 Purchase Requisitions Agent.**<br>
+    >  (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **F1 AIA Purchase Requisitions Agent.**<br>
 
     ![Create Agent](../07d-pre-agent-team-prc/images/pre-agent-team-prc-image007.jpg)
 
@@ -156,4 +156,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, March 2026
+* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, May 2026
