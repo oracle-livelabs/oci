@@ -1,4 +1,4 @@
-# Setup
+# Web Application
 
 ## Introduction
 

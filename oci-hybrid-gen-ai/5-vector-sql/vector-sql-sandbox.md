@@ -1,4 +1,4 @@
-# Setup
+# Vector SQL
 
 ## Introduction
 

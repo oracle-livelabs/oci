@@ -1,1 +1,5 @@
 backups/
+data/
+webapp/
+.DS_Store
+.ds_store

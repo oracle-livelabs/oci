@@ -1,4 +1,4 @@
-# Introduction
+# Overview and Highlights
 
 Estimated Workshop Time: 1 hour 20 minutes
 
