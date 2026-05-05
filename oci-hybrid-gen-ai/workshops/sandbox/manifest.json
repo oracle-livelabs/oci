@@ -8,35 +8,35 @@
         },
         {
             "title": "Get Started",
-            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+            "filename": "../../2-get-started/get-started.md"
         },
         {
             "title": "Setup",
-            "filename": "../../2-setup/setup-sandbox.md"
+            "filename": "../../3-setup/setup-sandbox.md"
         },
         {
             "title": "Vector RAG",
-            "filename": "../../3-vector-rag/vector-rag-sandbox.md"
+            "filename": "../../4-vector-rag/vector-rag-sandbox.md"
         },
         {
             "title": "Vector SQL",
-            "filename": "../../4-vector-sql/vector-sql-sandbox.md"
+            "filename": "../../5-vector-sql/vector-sql-sandbox.md"
         },
         {
             "title": "Web Application",
-            "filename": "../../5-web-application/web-application-sandbox.md"
+            "filename": "../../6-web-application/web-application-sandbox.md"
         },
         {
             "title": "Cost Optimization",
-            "filename": "../../6-cost-optimization/cost-optimization-sandbox.md"
+            "filename": "../../7-cost-optimization/cost-optimization-sandbox.md"
         },
         {
             "title": "Security Guard Rails",
-            "filename": "../../7-security-guard-rails/security-guard-rails-sandbox.md"
+            "filename": "../../8-security-guard-rails/security-guard-rails-sandbox.md"
         },
         {
             "title": "Quiz",
-            "filename": "../../8-quiz/quiz-sandbox.md"
+            "filename": "../../9-quiz/quiz-sandbox.md"
         },
         {
             "title": "Need Help?",
