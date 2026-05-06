@@ -13,6 +13,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 * Create a Procurement Policy Document Tool that references your company-specific procurement policy documents (PDF)
 * Create an Agent that uses the Document Tool to respond to user questions related to procurement.
 
+Estimated Time: 10-15 minutes
+
 ### **Pre-requisite**
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)

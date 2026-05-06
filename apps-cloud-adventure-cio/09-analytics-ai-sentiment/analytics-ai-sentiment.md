@@ -16,8 +16,6 @@ Use pre-built machine learning based sentiment analysis to analyze employee sent
 
 Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
 ### **Begin Exercise**
 
 1. In this activity, you will leverage pre-built machine learning capabilities (sentiment analysis) on survey data to understand employee sentiment.

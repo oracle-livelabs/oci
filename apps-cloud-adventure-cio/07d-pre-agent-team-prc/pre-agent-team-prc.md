@@ -13,7 +13,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 * Assemble an Agent Team using previously created Procurement Policy Advisor Agent and seeded Purchase Requisition Action Agent.
 * Test the Agent Team
 
-Estimated Time: 10 to 15 minutes
+Estimated Time: 10-15 minutes
 
 ### **Begin Exercise**
 

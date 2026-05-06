@@ -12,15 +12,13 @@ This activity guide helps business users to investigate and research data, ask r
 
 ### **Objectives**
 
-Use machine learning and natural language conversational AI to analyze margin variance and identify the root cause. 
+Use machine learning and natural language conversational AI to analyze margin variance and identify the root cause.
 
 Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
 ### **Pre-requisite**
 
-****Please Note**** For this adventure, we will do few steps using AI chat and prompts. To streamline typing and eliminate any typing errors, the prompts are shown in-line in the guide below and are also available in the Prompt-CrossFunctional-Analysis.txt. 
+****Please Note**** For this adventure, we will do few steps using AI chat and prompts. To streamline typing and eliminate any typing errors, the prompts are shown in-line in the guide below and are also available in the Prompt-CrossFunctional-Analysis.txt.
 <br><br>
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
 As a pre-requisite for this adventure, please download following file to your local desktop
@@ -46,8 +44,8 @@ As a pre-requisite for this adventure, please download following file to your lo
 3.  You can now login to Analytics with your assigned username and password.  Customers will typically leverage single sign-on capabilities to eliminate this step during implementation.
 
     > (1) Type your assigned username <br>
-    > (2) Type the Fusion Analytics Password (this can be copied from the AI Adventure start page).  <br>
-    > (3) Click the **Sign In**  ![Plus create button](../gen-images/sign_in_button.png) button.
+    > (2) Type the Fusion Analytics Password (this can be copied from the AI Adventure start page) <br>
+    > (3) Click the **Sign In**  ![Plus create button](../gen-images/sign_in_button.png) button
 
     ![Sign-in Screen](../09-analytics-with-ai/images/analytics-with-ai-image003.jpg)
 
@@ -220,4 +218,4 @@ You discovered how effortlessly Fusion AI Data Platform enables the creation of 
 
 * **Author** - Sohel Jeelani, Distinguished Analytics Solution Engineer, Advanced Technology Services
 * **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff, Sajid Saleem; April 2026
+* **Last Updated By/Date** - Charlie Moff, Sajid Saleem; May 2026
