@@ -13,6 +13,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 * Create and assemble an Agent Team that includes your previously created Procurement Policy Advisor Agent and seeded Purchase Requisition Action Agent.
 * Test the Agent Team
 
+Estimated Time: 10-15 minutes
+
 ### **Begin Exercise**
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
@@ -88,9 +90,9 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 10. You'll add one more worker agent.
 
-    >  (1) Delete your previous Ask Oracle filter and enter **F1 Purchase** in the Ask Oracle Filter and press the **<****Enter****>** key or select **F1 Purchase** from the resulting dropdown.<br>
+    >  (1) Delete your previous Ask Oracle filter and enter **F1 AIA** in the Ask Oracle Filter and press the **<****Enter****>** key or select **F1 AIA** from the resulting dropdown.<br>
 
-    >  (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **F1 Purchase Requisitions Agent.**<br>
+    >  (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **F1 AIA Purchase Requisitions Agent.**<br>
 
     ![Create Agent](../07b-agent-team-prc/images/agent-team-prc-image010.jpg)
 
@@ -161,7 +163,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 ### Summary
 
-As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they’re not permissioned to see.
+As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they’re don't have access to.
 
 AI Agent Studio empowers enterprises to configure and build AI agents that extend their workforce and help achieve new levels of productivity. It allows you to harness the full potential of AI agents and transform the way work gets done in your organization.
 
@@ -183,4 +185,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, February 2026
+* **Last Updated By/Date** - Sajid Saleem, May 2026

@@ -12,6 +12,8 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 * Create a Document Tool that references your benefits policy documents.
 * Create a Benefits Advisor Agent using the above Tool.
 
+Estimated Time: 10-15 minutes
+
 ### **Pre-requisite**
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
