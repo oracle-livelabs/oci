@@ -41,7 +41,7 @@ As a pre-requisite for this adventure, please download following file to your lo
 
     ![Home Screen](../09-analytics-with-ai/images/analytics-with-ai-image002.jpg)
 
-3.  You can now login to Analytics with your assigned username and password.  Customers will typically leverage single sign-on capabilities to eliminate this step during implementation.
+3. You can now login to Analytics with your assigned username and password.  Customers will typically leverage single sign-on capabilities to eliminate this step during implementation.
 
     > (1) Type your assigned username <br>
     > (2) Type the Fusion Analytics Password (this can be copied from the AI Adventure start page) <br>
