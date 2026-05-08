@@ -1,10 +1,10 @@
 LIST OF PROMPTS
 
 Prompt 1) 
-show me Opexpense by quarter
+show me expenses by quarter
 
 Prompt 2) 
-show me expense by expense categories
+breakdown expenses by expense categories
 
 Prompt 3) 
 Change to horizontal bar and sort high to low
@@ -19,10 +19,8 @@ Prompt 6)
 Add month from HCM - Core Transactions data
 
 Prompt 7)
-Change to a Stacked Bar
+Change to a Stacked Bar and Sort month low to high
 
-Prompt 8)
-Sort month low to high
 
 
 
