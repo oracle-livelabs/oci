@@ -2,7 +2,7 @@
 
 ## **Analytics AI for Margin Analysis**
 
-### **Introduction**
+### Introduction
 
 Oracle Fusion AI Data Platform (FDI) is a family of prebuilt, cloud native analytics for Oracle Cloud Applications that provides line-of-business users with ready-to-use insights to improve decision-making.
 
@@ -10,7 +10,7 @@ It is a Cloud application that delivers best-practice Key Performance Indicators
 
 This activity guide helps business users to investigate and research data, ask relevant questions to understand Trends, Patterns and Outliers.
 
-### **Objectives**
+### Objectives
 
 Use machine learning and natural language conversational AI to analyze margin variance and identify the root cause.
 

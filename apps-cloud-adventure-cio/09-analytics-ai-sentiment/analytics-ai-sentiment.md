@@ -2,7 +2,7 @@
 
 ## **Analytics AI for sentiment analysis**
 
-### **Introduction**
+### Introduction
 
 Oracle Fusion AI Data Platform (FDI) is a family of prebuilt, cloud native analytics for Oracle Cloud Applications that provides line-of-business users with ready-to-use insights to improve decision-making.
 
@@ -10,7 +10,7 @@ It is a Cloud application that delivers best-practice Key Performance Indicators
 
 This activity guide helps business users to investigate and research data, ask relevant questions to understand Trends, Patterns and Outliers.
 
-### **Objectives**
+### Objectives
 
 Use pre-built machine learning based sentiment analysis to analyze employee sentiment (positive, negative or neutral) and emotion from survey interaction data.
 
