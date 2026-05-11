@@ -60,12 +60,22 @@ Supervisor agents act as a central coordinator that orchestrates a team of other
 
    ![Agent Team settings](images/image006.png " ")
 
-10. Select the **Questions** tab and change the requisition number in the first question to **[](var:pr_num)**.<br/>
+10. First, let's validate the LLM that we want is selected.
+
+    Select the **LLM** tab and
+
+    Click on **Choose a model** and then
+
+    Select **Gpt-5 Mini**.<br/>
+
+   ![modify LLM selection](images/image014.png " ")
+
+11. Select the **Questions** tab and change the requisition number in the first question to **[](var:pr_num)**.<br/>
     Click **Update**:
 
    ![modify agent question](images/image007.png " ")
 
-11. Now click **Save and Close**:
+12. Now click **Save and Close**:
 
    ![save and close agent team](images/image008.png " ")
 
