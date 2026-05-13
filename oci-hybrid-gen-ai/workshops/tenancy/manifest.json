@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Build Your Own AI Agent to Boost Productivity and Efficiency",
+    "workshoptitle": "Build an OCI Hybrid GenAI Support Agent",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -12,31 +12,39 @@
         },
         {
             "title": "Setup",
-            "filename": "../../3-setup/setup-tenancy.md"
+            "filename": "../../3-setup/setup.md"
         },
         {
-            "title": "Vector RAG",
-            "filename": "../../4-vector-rag/vector-rag-tenancy.md"
+            "title": "Unstructured RAG",
+            "filename": "../../4-unstructured-rag/unstructured-rag.md"
         },
         {
-            "title": "Vector SQL",
-            "filename": "../../5-vector-sql/vector-sql-tenancy.md"
+            "title": "Service Database",
+            "filename": "../../5-service-database/service-database.md"
+        },
+        {
+            "title": "Database Tools and Vault",
+            "filename": "../../6-database-tools/database-tools.md"
+        },
+        {
+            "title": "Semantic Store",
+            "filename": "../../7-semantic-store/semantic-store.md"
         },
         {
             "title": "Web Application",
-            "filename": "../../6-web-application/web-application-tenancy.md"
+            "filename": "../../8-web-application/web-application.md"
         },
         {
-            "title": "Cost Optimization",
-            "filename": "../../7-cost-optimization/cost-optimization-tenancy.md"
+            "title": "Model Optimization",
+            "filename": "../../9-model-optimization/model-optimization.md"
         },
         {
-            "title": "Security Guard Rails",
-            "filename": "../../8-security-guard-rails/security-guard-rails-tenancy.md"
+            "title": "Security Guardrails",
+            "filename": "../../10-security-guardrails/security-guardrails.md"
         },
         {
             "title": "Quiz",
-            "filename": "../../9-quiz/quiz-tenancy.md"
+            "filename": "../../11-quiz/quiz.md"
         },
         {
             "title": "Need Help?",

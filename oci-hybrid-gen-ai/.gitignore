@@ -1,5 +1,6 @@
 backups/
 data/
-webapp/
+sample-app/
 .DS_Store
 .ds_store
+screen-shots/
