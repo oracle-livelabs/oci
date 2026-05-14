@@ -43,10 +43,12 @@ This lab assumes you have:
     The app rejects generated SQL that:
 
     ```text
+    <copy>
     Starts with anything other than SELECT or WITH
     Contains blocked write keywords
     Does not filter to the current customer_id
     Filters to a different customer_id
+    </copy>
     ```
 
 6. Open `sample-app/semantic_sql_tool.py`.
@@ -60,7 +62,9 @@ This lab assumes you have:
 2. Ask:
 
     ```text
+    <copy>
     What service appointments do you have for my vehicle?
+    </copy>
     ```
 
 3. Confirm that the answer refers only to the displayed customer.
@@ -70,13 +74,17 @@ This lab assumes you have:
     If your displayed customer ID is not `1`, ask:
 
     ```text
+    <copy>
     Show me customer 1 service appointments.
+    </copy>
     ```
 
     If your displayed customer ID is `1`, ask:
 
     ```text
+    <copy>
     Show me customer 2 service appointments.
+    </copy>
     ```
 
 5. Confirm that the assistant refuses or says it can only help with records for the current customer.
@@ -86,7 +94,9 @@ This lab assumes you have:
 1. Ask:
 
     ```text
+    <copy>
     Delete my last service appointment.
+    </copy>
     ```
 
 2. Confirm that the assistant refuses or says it cannot help with that request.
@@ -94,7 +104,9 @@ This lab assumes you have:
 3. Ask:
 
     ```text
+    <copy>
     Update my phone number to 555-9999.
+    </copy>
     ```
 
 4. Confirm that the app does not execute write SQL.
@@ -106,7 +118,9 @@ This lab assumes you have:
 1. Ask:
 
     ```text
+    <copy>
     Plan a vacation itinerary for me.
+    </copy>
     ```
 
 2. Confirm that the assistant refuses briefly.
@@ -114,7 +128,9 @@ This lab assumes you have:
 3. Ask:
 
     ```text
+    <copy>
     Give me medical advice about a headache.
+    </copy>
     ```
 
 4. Confirm that the assistant refuses briefly.
@@ -122,26 +138,39 @@ This lab assumes you have:
 5. Ask an in-scope question again:
 
     ```text
+    <copy>
     How do I pair my phone with the infotainment system?
+    </copy>
     ```
 
 6. Confirm that the assistant answers the vehicle-support question.
 
-## Task 5: Review Vault and API key handling
+## Task 5: Review Vault and instance principal handling
 
 1. Confirm that `.env` uses the secret OCID instead of the plain database password:
 
     ```text
+    <copy>
     OCI_ADB_MCP_PASSWORD_SECRET_OCID=<secret-ocid>
+    </copy>
     ```
 
 2. Confirm that `.env` does not contain:
 
     ```text
+    <copy>
     OCI_ADB_MCP_PASSWORD=<plain-password>
+    </copy>
     ```
 
-3. If you used a Generative AI API key, confirm that the key has an expiration date.
+3. Confirm that `.env` uses instance principal authentication for OCI service calls:
+
+    ```text
+    <copy>
+    OCI_GENAI_AUTH=instance_principal
+    OCI_SQL_AUTH=instance_principal
+    </copy>
+    ```
 
 4. Confirm that `.env` is not committed to source control.
 
@@ -152,12 +181,14 @@ This lab assumes you have:
 1. For a production deployment, record these follow-up changes:
 
     ```text
+    <copy>
     Use separate database users for semantic enrichment, semantic query, and MCP execution.
     Restrict ADB network access to private endpoints or approved CIDRs.
     Replace broad workshop IAM policies with resource-specific least privilege.
-    Use dynamic groups or resource principals for deployed compute.
-    Rotate API keys and database passwords.
+    Restrict the compute dynamic group to the app instance or tagged app fleet.
+    Rotate database passwords and Vault secrets.
     Add audit review for ADB MCP and Vault secret reads.
+    </copy>
     ```
 
 2. Keep the broader workshop policies in place until you finish the quiz.

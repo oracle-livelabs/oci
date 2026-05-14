@@ -22,8 +22,8 @@ This lab assumes you have:
 
 - Completed the Web Application lab
 - A working `.env` file in `sample-app`
-- At least one vision-capable model available in your Generative AI region
-- At least one lower-cost or faster text model available in your Generative AI region
+- At least one vision-capable model available in your workshop region
+- At least one lower-cost or faster text model available in your workshop region
 
 ## Task 1: Choose model roles
 
@@ -34,7 +34,9 @@ This lab assumes you have:
     This model handles image prompts and any prompt that needs multimodal capability:
 
     ```text
+    <copy>
     OCI_GENAI_MODEL=<vision-capable-model-id>
+    </copy>
     ```
 
 3. Set the cheaper model to a fast text model.
@@ -42,13 +44,17 @@ This lab assumes you have:
     This model handles text-only prompts after you enable routing:
 
     ```text
+    <copy>
     OCI_GENAI_CHEAPER_MODEL=<fast-text-model-id>
+    </copy>
     ```
 
 4. Keep the max output token limit modest while testing.
 
     ```text
+    <copy>
     OCI_GENAI_MAX_OUTPUT_TOKENS=1000
+    </copy>
     ```
 
 5. Save `.env`.
@@ -62,8 +68,10 @@ This lab assumes you have:
     It contains these commented lines:
 
     ```python
+    <copy>
     #if not messages_include_images(messages):
     #    model = cfg["cheaper_model"]
+    </copy>
     ```
 
 3. Uncomment the lines and keep the indentation inside the function.
@@ -71,6 +79,7 @@ This lab assumes you have:
     The function should look like this:
 
     ```python
+    <copy>
     def response_model(model, cfg, messages=None):
         # Uncomment to route image prompts to a stronger vision model and text-only
         # prompts to a cheaper text model.
@@ -78,6 +87,7 @@ This lab assumes you have:
             model = cfg["cheaper_model"]
 
         return model
+    </copy>
     ```
 
 4. Save the file.
@@ -85,7 +95,9 @@ This lab assumes you have:
 5. Restart Streamlit.
 
     ```bash
+    <copy>
     streamlit run app.py
+    </copy>
     ```
 
 ## Task 3: Test text-only routing
@@ -93,7 +105,9 @@ This lab assumes you have:
 1. Ask a text-only question:
 
     ```text
+    <copy>
     What service appointments do you have for my vehicle, and how much did I pay?
+    </copy>
     ```
 
 2. Watch the app status text.
@@ -101,16 +115,20 @@ This lab assumes you have:
 3. Confirm that the status shows the cheaper text model:
 
     ```text
+    <copy>
     Sending prompt to LLM (<fast-text-model-id>)...
+    </copy>
     ```
 
 4. Record:
 
     ```text
+    <copy>
     Text-only model:
     Approximate response time:
     Answer quality:
     Any missing detail:
+    </copy>
     ```
 
 ## Task 4: Test multimodal routing
@@ -118,28 +136,36 @@ This lab assumes you have:
 1. Attach the image:
 
     ```text
+    <copy>
     data/example-motors-service-receipt.png
+    </copy>
     ```
 
 2. Ask:
 
     ```text
+    <copy>
     What service does this receipt describe?
+    </copy>
     ```
 
 3. Confirm that the status shows the default vision-capable model:
 
     ```text
+    <copy>
     Sending prompt to LLM (<vision-capable-model-id>)...
+    </copy>
     ```
 
 4. Record:
 
     ```text
+    <copy>
     Image model:
     Approximate response time:
     Answer quality:
     Image details captured:
+    </copy>
     ```
 
 ## Task 5: Compare model tradeoffs
@@ -149,6 +175,7 @@ This lab assumes you have:
 2. Use this decision checklist:
 
     ```text
+    <copy>
     Use a faster text model when:
     - The request is text-only
     - Tools can ground the answer
@@ -160,6 +187,7 @@ This lab assumes you have:
     - The user asks for deeper reasoning
     - The task needs better instruction following
     - Accuracy is more important than latency
+    </copy>
     ```
 
 3. Keep the routing hook enabled for the remaining labs.

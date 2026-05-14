@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create the unstructured retrieval source for the Example Motors support agent. The source document is a PDF pairing guide for the Example Motors infotainment system. The app attaches the resulting vector store to OCI Generative AI Responses API requests through the `file_search` tool.
+In this lab, you create the unstructured retrieval source for the Example Motors support agent. You will seed the vector store created in this section with a source document. This document is a PDF mobile bluetooth pairing guide for the Example Motors infotainment system. The app will query the vector store using the OCI Enterprise AI Responses API by leveraging the the built in `file_search` tool.
 
 Estimated Time: 25 minutes
 
@@ -10,7 +10,7 @@ Estimated Time: 25 minutes
 
 In this lab, you will:
 
-- Create an Object Storage bucket for vehicle manuals
+- Create an Object Storage bucket for storing vehicle manuals
 - Upload the infotainment pairing guide PDF
 - Create an unstructured vector store
 - Create and run a data sync connector
@@ -21,10 +21,8 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed the Setup lab
-- A workshop compartment with the required IAM policies
-- The PDF file `4-unstructured-rag/files/talexion-infotainment-pairing-guide.pdf`
 
-## Task 1: Create the manual bucket
+## Task 1: Create the vehicle manuals bucket
 
 1. In the Console navigation menu, go to **Storage**, then **Buckets**.
 
@@ -32,15 +30,7 @@ This lab assumes you have:
 
 3. Click **Create bucket**.
 
-4. Enter the following values:
-
-    ```text
-    Bucket name: car-manufacturer-manuals
-    Default storage tier: Standard
-    Visibility: Private
-    Emit object events: Disabled
-    Object versioning: Disabled
-    ```
+4. Name the bucket: `car-manufacturer-manuals` (update the text file if you choose a different name).
 
     ![Create Object Storage bucket](images/create-bucket.png)
 
@@ -50,19 +40,15 @@ This lab assumes you have:
 
     ![Buckets list with car manufacturer manuals bucket](images/buckets-list.png)
 
-7. On the bucket details page, record the namespace and bucket name.
-
-    ![Bucket details page](images/bucket-details.png)
-
 ## Task 2: Upload the infotainment PDF
 
 1. In the `car-manufacturer-manuals` bucket, click **Upload objects**.
 
-2. Drag or select this file:
+2. Upload the PDF file
 
-    ```text
-    4-unstructured-rag/files/talexion-infotainment-pairing-guide.pdf
-    ```
+    - Download the [manual file](./files/talexion-infotainment-pairing-guide.pdf).
+    - Drag the file from your **Download** folder to the **Drop a file or select one** section.
+    - Click **Next**.
 
     ![Upload objects select file step](images/upload-objects-select-file.png)
 
@@ -72,11 +58,11 @@ This lab assumes you have:
 
 4. Click **Upload objects**.
 
-5. Wait for the upload to complete.
+5. Wait for the upload to complete & click **Close**.
 
     ![Upload objects progress complete](images/upload-objects-progress.png)
 
-6. Confirm that the bucket contains the PDF.
+6. Confirm that the bucket contains the PDF by clicking the **Objects** tab.
 
     ![Bucket object list with pairing guide PDF](images/bucket-object-list.png)
 
@@ -95,9 +81,11 @@ This lab assumes you have:
     ```text
     Name: car-operation
     Description: Example Motors infotainment and operation manuals
-    Compartment: <workshop-compartment>
-    Data source type: Unstructured data
     ```
+
+    - If you chose a different name for the vector store, please update the `Unstructured vector store` parameter in our text file.
+    - Select the workshop compartment.
+    - Under **Data source type** Select **Unstructured data**.
 
     ![Create vector store with unstructured data source](images/create-vector-stores.png)
 
@@ -111,71 +99,56 @@ This lab assumes you have:
 
     ![Vector store details page](images/vector-store-details.png)
 
-8. Copy the vector store ID.
-
-    You will use this value later as:
-
-    ```text
-    OCI_GENAI_VECTOR_STORE_IDS
-    ```
+8. Copy the vector store ID & update the value for `Unstructured vector store OCID` in the text file.
 
 ## Task 4: Create the data sync connector
 
-1. In the `car-operation` vector store, select the **Data sync connectors** tab.
+1. In the vector store, select the **Data sync connectors** tab.
 
 2. Click **Create data sync connector**.
 
     ![Create data sync connector button](images/create-data-sync-connector.png)
 
-3. Enter the following values:
+3. Data sync connector configuration:
 
-    ```text
-    Name: car-manuals
-    Object Storage bucket: car-manufacturer-manuals
-    Object prefix: leave blank
-    ```
-
-4. Select the uploaded PDF file from the bucket.
+    - Name: car-manuals
+    - Compartment: Select the workshop compartment.
+    - Bucket: car-manufacturer-manuals
+    - Turn **Select all in bucket** on.
 
     ![Select all files in bucket for data sync connector](images/select-all-files-in-bucket.png)
 
-5. Click **Create**.
+4. Click **Create**.
 
-6. Confirm that the data sync connector appears in the list.
+5. Confirm that the data sync connector appears in the list.
 
     ![Data sync connector created](images/data-sync-created.png)
 
-7. Open the data sync connector details page.
+6. Open the data sync connector details page.
 
     ![Data sync connector details page](images/data-sync-connector-details.png)
 
-## Task 5: Run and verify data sync
-
-1. In the vector store details page, open the **Data sync** tab.
+7. Open the **Data sync** tab.
 
     ![Data sync details page](images/data-sync-details.png)
 
-2. Click **Perform Data Sync**.
+8. Under the **Data Sync Jobs** list, click **Perform Data Sync**.
 
-3. Enter the following value:
-
-    ```text
-    Name: car-manuals
-    ```
+9. Name the data sync job: `car-manuals`
 
     ![Perform data sync dialog](images/create-perform-data-sync.png)
 
-4. Click **Perform**.
+10. Click **Perform**.
 
-5. Wait until the data sync job reaches a completed state.
+11. Wait until the data sync job reaches a completed state.
 
     ![Performed data sync job created](images/perform-data-sync-created.png)
 
-6. Return to the vector store details page.
+12. Return to the vector store details page.
 
-7. Confirm that the file count is at least `1`.
+13. Confirm that the file count is at least `1`.
 
-8. Save the vector store ID with your workshop notes.
+14. Save the vector store ID with your workshop notes.
 
 You may now **proceed to the next lab**.
 
@@ -187,4 +160,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Julien Lehmann, Product Marketing Manager, Yanir Shahak, Senior Principal Software Engineer
+- **Author** - Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer

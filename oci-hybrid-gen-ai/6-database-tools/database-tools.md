@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you store the `ADB_MCP_USER` password in OCI Vault and create Database Tools connections for the structured semantic store. The semantic store uses one connection for enrichment and one for query-time access. The sample app uses the password secret to request an ADB MCP bearer token.
+In this lab, you store the `ADMIN` password in OCI Vault. You also create Database Tools connections for the structured semantic store. The semantic store uses one connection for enrichment and one for query-time access. The sample app uses the password secret to request an ADB MCP bearer token.
 
 Estimated Time: 20 minutes
 
@@ -21,7 +21,7 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed the Service Database lab
-- The `ADB_MCP_USER` database password
+- The `ADMIN` database password
 - An available Vault and encryption key, or permission to create them
 
 ## Task 1: Create the password secret
@@ -37,12 +37,14 @@ This lab assumes you have:
 4. Enter the following values:
 
     ```text
+    <copy>
     Name: car-service-enrichment
     Compartment: <workshop-compartment>
     Database details: Select database
     Database cloud service: Oracle Autonomous AI Database
     Autonomous AI Database: car-service
-    Username: ADB_MCP_USER
+    Username: ADMIN
+    </copy>
     ```
 
     ![Create Database Tools connection basic information](images/create-connection-basic-information.png)
@@ -52,11 +54,13 @@ This lab assumes you have:
 6. Enter the following values:
 
     ```text
+    <copy>
     Name: car-manufacturer-service-adb-password
     Compartment: <workshop-compartment>
     Vault: <workshop-vault>
     Encryption key: <workshop-key>
-    User password: <ADB_MCP_USER-password>
+    User password: <ADMIN-password>
+    </copy>
     ```
 
     ![Create password secret basic fields](images/create-password-secret.png)
@@ -70,7 +74,9 @@ This lab assumes you have:
     You will use it later as:
 
     ```text
+    <copy>
     OCI_ADB_MCP_PASSWORD_SECRET_OCID
+    </copy>
     ```
 
 ## Task 2: Configure connection security
@@ -94,11 +100,13 @@ This lab assumes you have:
 5. Enter the following values:
 
     ```text
+    <copy>
     Name: car-manufacturer-service-wallet
     Compartment: <workshop-compartment>
     Vault: <workshop-vault>
     Encryption key: <workshop-key>
     Wallet source: Retrieve regional wallet from Autonomous AI Database
+    </copy>
     ```
 
     ![Create wallet content secret](images/create-wallet-content-secret.png)
@@ -132,7 +140,9 @@ This lab assumes you have:
 6. Record it as:
 
     ```text
+    <copy>
     Enrichment connection OCID=<car-service-enrichment connection OCID>
+    </copy>
     ```
 
 ## Task 4: Create the query connection
@@ -144,7 +154,9 @@ This lab assumes you have:
 3. Enter the following connection name:
 
     ```text
+    <copy>
     car-service-query
+    </copy>
     ```
 
 4. Validate the connection.
@@ -154,10 +166,12 @@ This lab assumes you have:
 6. Record it as:
 
     ```text
+    <copy>
     Query connection OCID=<car-service-query connection OCID>
+    </copy>
     ```
 
-7. For this workshop, both connections can use `ADB_MCP_USER`.
+7. For this prototype workshop, both connections can use `ADMIN`.
 
     In production, use separate users and privileges for enrichment, query, and MCP execution.
 
@@ -166,9 +180,11 @@ This lab assumes you have:
 1. Confirm that you have these values:
 
     ```text
+    <copy>
     OCI_ADB_MCP_PASSWORD_SECRET_OCID=<password secret OCID>
     Enrichment connection OCID=<car-service-enrichment connection OCID>
     Query connection OCID=<car-service-query connection OCID>
+    </copy>
     ```
 
 2. Confirm that your workshop user can read the password secret bundle.

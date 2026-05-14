@@ -36,10 +36,12 @@ This lab assumes you have:
 4. Enter the following values:
 
     ```text
+    <copy>
     Name: car-manufacturer-service
     Description: Example Motors service appointment semantic store
     Compartment: <workshop-compartment>
     Data source type: Structured data
+    </copy>
     ```
 
     ![Create structured semantic store](images/create-structured-semantic-store.png)
@@ -53,28 +55,36 @@ This lab assumes you have:
 2. For the enrichment connection, enter or select:
 
     ```text
+    <copy>
     car-service-enrichment
+    </copy>
     ```
 
 3. For the query connection, enter or select:
 
     ```text
+    <copy>
     car-service-query
+    </copy>
     ```
 
 4. Select the schema:
 
     ```text
-    ADB_MCP_USER
+    <copy>
+    ADMIN
+    </copy>
     ```
 
 5. Include these tables in the semantic store:
 
     ```text
+    <copy>
     CUSTOMERS
     VEHICLES
     SERVICE_APPOINTMENTS
     SERVICE_ITEMS
+    </copy>
     ```
 
 6. Select auto-run enrichment if the wizard offers it.
@@ -94,15 +104,17 @@ This lab assumes you have:
 5. If enrichment did not start automatically, run it from the sample app helper.
 
     ```bash
+    <copy>
     cd sample-app
     python -m venv .venv
     source .venv/bin/activate
     pip install -r requirements.txt
     export OCI_GENAI_SEMANTIC_STORE_OCID="<semantic-store-ocid>"
-    export OCI_GENAI_REGION="<generative-ai-region>"
+    export OCI_GENAI_REGION="<workshop-region>"
     export OCI_GENAI_NL2SQL_REGION="${OCI_GENAI_REGION}"
-    export OCI_SQL_AUTH="session"
-    python scripts/start_enrichment_job.py --schema-name ADB_MCP_USER --wait
+    export OCI_SQL_AUTH="instance_principal"
+    python scripts/start_enrichment_job.py --schema-name ADMIN --wait
+    </copy>
     ```
 
 6. Confirm that the command reports a terminal state of `SUCCEEDED`.
@@ -112,22 +124,28 @@ This lab assumes you have:
 1. In the semantic store console test panel, enter this prompt if the panel is available:
 
     ```text
+    <copy>
     Show the service appointments for customer_id 7, including service summary, warranty type, total cost, and customer paid amount.
+    </copy>
     ```
 
 2. Confirm that the generated SQL references these tables as needed:
 
     ```text
+    <copy>
     CUSTOMERS
     VEHICLES
     SERVICE_APPOINTMENTS
     SERVICE_ITEMS
+    </copy>
     ```
 
 3. Confirm that the generated SQL filters to:
 
     ```text
+    <copy>
     customer_id = 7
+    </copy>
     ```
 
 4. If the console does not provide a test panel, skip this test.
@@ -143,17 +161,21 @@ This lab assumes you have:
 3. Record it as:
 
     ```text
+    <copy>
     OCI_GENAI_SEMANTIC_STORE_OCID=<semantic-store-ocid>
+    </copy>
     ```
 
 4. Confirm that you still have these values for the Web Application lab:
 
     ```text
+    <copy>
     OCI_GENAI_PROJECT_OCID
     OCI_GENAI_VECTOR_STORE_IDS
     OCI_GENAI_SEMANTIC_STORE_OCID
     OCI_ADB_DATABASE_OCID
     OCI_ADB_MCP_PASSWORD_SECRET_OCID
+    </copy>
     ```
 
 You may now **proceed to the next lab**.
@@ -162,7 +184,7 @@ You may now **proceed to the next lab**.
 
 - [OCI Generative AI QuickStart for semantic stores and NL2SQL](https://docs.oracle.com/en-us/iaas/Content/generative-ai/get-started-agents.htm)
 - [Database Tools console tasks](https://docs.oracle.com/en-us/iaas/database-tools/doc/using-oracle-cloud-infrastructure-console.html)
-- [OCI SDK configuration files](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm)
+- [Calling services from an instance](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/callingservicesfrominstances.htm)
 
 ## Acknowledgements
 
