@@ -17,9 +17,11 @@ We will use the Landing Zone to connect our three tier network to a network for 
 ## Task 1: Re-configure Network Variables for Hub & Spoke Network
 
 1. Step into the _Edit variables_ page in the _Stack Details_ > _Resources_ > _Variables_ in the same way we began the previous lab.
-1. Under _Networking - Hub & Spoke Topology_ we need to select an option that creates a DRG. Multiple Landing Zones could be connected by selecting an option that uses an existing DRG, but we don't have one of those yet.
+1. Under _Network Topology_ we need to select an option that creates a DRG. Multiple Landing Zones could be connected by selecting an option that uses an existing DRG, but we don't have one of those yet.
 
     Select __VCN or on-premises connectivity routing via DRG (DRG will be created)__.
+
+    Leave _On-Premises Connectivity Type_ set to __None__.
 
     ![DRG will be created](./images/hub-spoke-config.png "DRG will be created")
 
@@ -66,4 +68,4 @@ In our next lab, we will run a script to check the Landing Zone for compliance w
 
 - __Author__ - KC Flynn
 - __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger, Gregg MacKeigan
-- __Last Updated By/Date__ - KC Flynn February 2025
+- __Last Updated By/Date__ - KC Flynn August 2025

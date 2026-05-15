@@ -35,34 +35,26 @@ This lab assumes you have:
 ## Task 1: Generate SMPT Credentials
 
 1. Log in to OCI Cloud Console, click on top right navigation and select **User Settings**. 
- 
-    ![Setup OCI Email](images/user-ocid.png " ")
-
+   
 2. Click on Left Navigation and select **SMTP Credentials** and Click on **Generate SMPT Credentials** button
-
-    ![Setup OCI Email](images/send-email-2.png " ")
-
+  
 3. Copy username and password
-
-    ![Setup OCI Email](images/smpt-cred.png " ")
+ 
 
 ## Task 2: EMAIL Delivery Configuration  
 
 1. From the top left navigation search for **Email**, this will link to **Email Delivery** Service under **Application Integration**. Copy the SMPT Sending Information.  
-
-    ![Setup OCI Email](images/send-email-3.png " ")
-
+  
 2. Copy the **Public Endpoint**    
 
-    ![Setup OCI Email](images/send-email-4.png " ")
+    ![Setup OCI Email](images/email-delivery.png " ")
 
 ## Task 3: Create Approved Sender    
 
 1. An approved sender is associated with a compartment and only exists in the region where it was configured. If you create an approved sender in the US West (Phoenix) region, you can’t send email through the US East (Ashburn) region with that sender. 
 
     Approved Senders email id that will be representing From email address.
- 
-    ![Setup OCI Email](images/send-email-6.png " ")
+  
  
 ## Task 4: Sending Speech Transcription and Audio file link in an Email
 
@@ -144,4 +136,4 @@ This concludes this lab and you can **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - June 22nd, 2023.
+* **Last Updated By/Date** - Sept 26th, 2025

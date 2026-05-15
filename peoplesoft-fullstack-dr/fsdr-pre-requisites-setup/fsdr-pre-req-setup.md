@@ -61,7 +61,7 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
 ## Task 2: Preparing Oracle Databases for Full Stack Disaster Recovery
 
-1. From the Ashburn region OCI console, select **Oracle Database** from the Hamburger menu then **Oracle Base Database (VM, BM)**.
+1. From the Ashburn region OCI console, select **Oracle AI Database** from the Hamburger menu then **Oracle Base Database Service**.
 
     ![dbcs home](./images/ashburn-dbcs-home.png)
 
@@ -69,15 +69,11 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![ashburn-dbcs-dg](./images/ashburn-dbcs-dg.png)
 
-3. Under Resources section, click on Data Guard Associations.
+3. Click on Data Guard Associations. Click on Enable Data Guard.
 
     ![ashburn-dbcs-dg-enable](./images/ashburn-dbcs-dg-enable.png)
 
-4. Click on Enable Data Guard.
-
-    ![click-enable-data-guard](./images/ashburn-enable-dg.png)
-
-5. Provide a peer DB display name, select the DR standby region in this case it will be Phoenix, select the Availability Domain (recommended to host in the same Availability Domain where PeopleSoft Application Tiers are hosted).
+4. Provide a peer DB display name, select the DR standby region in this case it will be Phoenix, select the Availability Domain (recommended to host in the same Availability Domain where PeopleSoft Application Tiers are hosted).
 
     ![dg-info](./images/ashburn-dg-info.png)
 
@@ -89,6 +85,8 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![ashburn-dg-license-vcn](./images/ashburn-dg-license-vcn.png)
 
+    ![ashburn-dg-license-vcn2](./images/ashburn-dg-license-vcn2.png)
+
     Provide a hostname prefix.
 
     ![ashburn-dg-hostname](./images/ashburn-dg-hostname.png)
@@ -97,11 +95,8 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
     ![ashburn-dg-type](./images/ashburn-dg-type.png)
 
-    Leave other fields as default and click Next.
-
-    ![ashburn-dg-next](./images/ashburn-dg-next.png)
-
-6. Enter the database administrator password of the primary database in the Database password field. Click on Enable Data Guard.
+  
+5. Enter the database administrator password of the primary database in the Database password field. Click on Enable Data Guard.
 
     ![ashburn-dg-db-pwd](./images/ashburn-dg-db-pwd.png)
 
@@ -111,59 +106,59 @@ Oracle recommends that you follow these guidelines when creating the Object Stor
 
 We will now create Vaults in both *Ashburn* and *Phoenix* regions to store Database Admin passwords which will be used during DR operations.
 
-7. Create a vault in the Ashburn (primary) region. 
+6. Create a vault in the Ashburn (primary) region.
 
     From the Ashburn region OCI console, select **Identity & Security** from the Hamburger menu then **Vault**.
 
     ![ashburn-vault-home](./images/ashburn-vault-page.png)
 
-8. Click on Create Vault. Select the right compartment and provide a name for the Vault. Click on Create Vault. Vault will now be created.
+7. Click on Create Vault. Select the right compartment and provide a name for the Vault. Click on Create Vault. Vault will now be created.
 
     ![ashburn-create-vault](./images/ashburn-create-vault.png)
 
-9. Click on newly created Vault and Under Resources, click on Master Encryption Keys and click on Create Key.
+8. Click on newly created Vault, click on Master Encryption Keys and click on Create Key.
 
     ![ashburn-click-key-vault](./images/ashburn-vault-key.png)
 
-10. Select the right compartment, Protection Mode will be **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Length will be **256** bits. Click on Create Key.
+9. Select the right compartment, Protection Mode will be **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Length will be **256** bits. Click on Create Key.
 
     ![ashburn-create-key](./images/ashburn-create-key.png)
 
-11. Under Resources, click on Secrets and click on Create Secrets.
+10. Click on Secrets and click on Create Secrets.
 
     ![ashburn-create-secrets](./images/ashburn-create-secrets.png)
 
-12. Select the right compartment, provide a name for the secret, a description for the secret, select the Master Encryption Key created in the previous task from the drop down, **Secret Type Template** will be Plain-Text, provide the DB SYS user password in plain text format in the **Secret Contents**.
+11. Select the right compartment, provide a name for the secret, a description for the secret, select the Master Encryption Key created in the previous task from the drop down, **Secret Type Template** will be Plain-Text, provide the DB SYS user password in plain text format in the **Secret Contents**.
 
     ![ashburn-create-secrets2](./images/ashburn-create-secrets2.png)
 
-13. Change the region to Phoenix. 
+12. Change the region to Phoenix. 
 
     ![change-region](./images/change-region.png)
 
-14. Create a vault in the Phoenix (standby) region. 
+13. Create a vault in the Phoenix (standby) region. 
 
     From the Phoenix region OCI console, select **Identity & Security** from the Hamburger menu then **Vault**.
 
     ![phoenix-vault-home](./images/phoenix-vault-page.png)
 
-15. Click on Create Vault. Select the right compartment and provide a name for the Vault. Click on Create Vault.
+14. Click on Create Vault. Select the right compartment and provide a name for the Vault. Click on Create Vault.
 
     ![phoenix-create-vault](./images/phoenix-create-vault.png)
 
-16. Under Resources, click on Master Encryption Keys and click on Create Key.
+15. Click on Master Encryption Keys and click on Create Key.
 
     ![phoenix-click-key-vault](./images/phoenix-vault-key.png)
 
-17. Select the right compartment, Protection Mode will be **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Length will be **256** bits. Click on Create Key.
+16. Select the right compartment, Protection Mode will be **HSM** and provide a name for the Key, Key Shape:Algorithm will be **AES (Symmetric key used for Encrypt and Decrypt)** and Key Shape:Length will be **256** bits. Click on Create Key.
 
     ![phoenix-create-key](./images/phoenix-create-key.png)
 
-18. Under Resources, click on Secrets and click on Create Secrets.
+17. Click on Secrets and click on Create Secrets.
 
     ![phoenix-create-secrets](./images/phoenix-create-secrets.png)
 
-19. Select the right compartment, provide a name for the secret, a description for the secret, select the Master Encryption Key created in the previous task from the drop down, **Secret Type Template** will be Plain-Text, provide the DB SYS user password in plain text format in the **Secret Contents**.
+18. Select the right compartment, provide a name for the secret, a description for the secret, select the Master Encryption Key created in the previous task from the drop down, **Secret Type Template** will be Plain-Text, provide the DB SYS user password in plain text format in the **Secret Contents**.
 
     ![phoenix-create-secrets2](./images/phoenix-create-secrets2.png)
 
@@ -172,4 +167,4 @@ We will now create Vaults in both *Ashburn* and *Phoenix* regions to store Datab
 ## Acknowledgements
 
 - **Author** -  Vinay Shivanna, Principal Cloud Architect
-- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023
+- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, November 2025

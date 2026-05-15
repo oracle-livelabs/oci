@@ -13,7 +13,7 @@
         },
         {
             "title": "Lab 1: Setup Cloud Environment",
-            "type": "for-istio",
+            "type": "default",
             "description": "Labs that follow the introduction are numbered, starting with Lab 1",
             "filename": "../../setup-cloud-env/setup-cloud-env.md"
         },
@@ -40,23 +40,19 @@
         {
             "title": "Lab 7: Deploy the App with CI/CD",
             "filename": "../../devops/devops.md"
-        },
+        },   
         {
-            "title": "Lab 8: Use Service Mesh (Optional)",
-            "filename": "../../service-mesh/service-mesh.md"
-        },    
-        {
-            "title": "Lab 9: Upgrade the Cluster",
+            "title": "Lab 8: Upgrade the Cluster",
             "filename": "../../upgrade-cluster/upgrade-cluster.md"
         },              
         {
-            "title": "Lab 10: Clean Up (Optional)",
+            "title": "Lab 9: Clean Up (Optional)",
             "filename": "../../cleanup/cleanup.md"
         },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+            "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
         },
         {
             "title": "Other LiveLabs you might like",

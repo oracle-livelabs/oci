@@ -22,12 +22,8 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
 ### 전제 조건
 
 * Oracle Free Trial, Paid or LiveLabs Cloud Account
-* Always Free는 현재 2023년 1월기준 OKE 서비스를 제공하지 않습니다. Free Trial 이상이 필요합니다.
+* Always Free는 현재 2025년 12월기준 OKE 서비스를 제공하지 않습니다. Free Trial 이상이 필요합니다.
 * **Setup Cloud Environment** 실습 완료
-
-### 실습 비디오
-
-[](youtube:n95aHQck0gA)
 
 
 ## Task 1: MuShop 소스코드 내려받기
@@ -44,15 +40,15 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
 
     ````shell
     Cloning into 'mushop'...
-    remote: Enumerating objects: 23680, done.
-    remote: Counting objects: 100% (480/480), done.
-    remote: Compressing objects: 100% (242/242), done.
-    remote: Total 23680 (delta 287), reused 417 (delta 235), pack-reused 23200
-    Receiving objects: 100% (23680/23680), 27.59 MiB | 15.77 MiB/s, done.
-    Resolving deltas: 100% (14485/14485), done.
+    remote: Enumerating objects: 21536, done.
+    remote: Counting objects: 100% (288/288), done.
+    remote: Compressing objects: 100% (116/116), done.
+    remote: Total 21536 (delta 243), reused 172 (delta 172), pack-reused 21248 (from 2)
+    Receiving objects: 100% (21536/21536), 25.70 MiB | 20.23 MiB/s, done.
+    Resolving deltas: 100% (13361/13361), done.
     ````
 
-1. mushop 폴더로 이동합니다.
+2. mushop 폴더로 이동합니다.
 
     ````shell
     <copy>
@@ -65,7 +61,7 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
     - *./deploy:* 애플리케이션 배포 관련 자원
     - *./src:* MuShop 각 마이크로서비스별 소스코드, Dockerfile 등
 
-1. **kubectl** context를 확인합니다.
+3. **kubectl** context를 확인합니다.
 
     ````shell
     <copy>
@@ -77,10 +73,10 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
     
     ````shell
     CURRENT   NAME                  CLUSTER               AUTHINFO           NAMESPACE
-    *         context-c2bted2y77a   cluster-c2bted2y77a   user-c2bted2y77a
+    *         context-cwsqajxh3ha   cluster-cwsqajxh3ha   user-cwsqajxh3ha   
     ````
 
-1. MuShop 애플리케이션을 위한 namespace를 생성합니다.
+4. MuShop 애플리케이션을 위한 namespace를 생성합니다.
 
     ````shell
     <copy>
@@ -94,7 +90,7 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
     namespace/mushop created
     ````
 
-1. kubectl 명령어는 따로 설정하지 않으면 default namespace를 대상으로 합니다. 이후 실습에서 매 명령시 **--namespace=mushop**을 추가하는 번거러움을 없애기 위해 아래와 같이 현재 context에 미리 **--namespace=mushop**을 설정합니다. 이후 실행되는 kubectl 명령어는 따로 지정하지 않으면, mushop namespace에 실행됩니다.
+5. kubectl 명령어는 따로 설정하지 않으면 default namespace를 대상으로 합니다. 이후 실습에서 매 명령시 **--namespace=mushop**을 추가하는 번거러움을 없애기 위해 아래와 같이 현재 context에 미리 **--namespace=mushop**을 설정합니다. 이후 실행되는 kubectl 명령어는 따로 지정하지 않으면, mushop namespace에 실행됩니다.
 
     ````shell
     <copy>
@@ -103,7 +99,7 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
     ````
 
 
-1. kubectl context를 다시 확인합니다. 기본 NAMESPACE 항목이 mushop으로 변경되었습니다. 
+6. kubectl context를 다시 확인합니다. 기본 NAMESPACE 항목이 mushop으로 변경되었습니다. 
 
     ````shell
     <copy>
@@ -115,7 +111,7 @@ MuShop 애플리케이션 배포 방식으로 Manual 배포(Docker, Kubernetes m
 
     ````shell
     CURRENT   NAME                  CLUSTER               AUTHINFO           NAMESPACE
-    *         context-c2bted2y77a   cluster-c2bted2y77a   user-c2bted2y77a   mushop
+    *         context-cwsqajxh3ha   cluster-cwsqajxh3ha   user-cwsqajxh3ha   mushop
     ````
 
 
@@ -146,7 +142,7 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     namespace/mushop-utilities created
     ````
 
-1. Helm을 사용하여 함께 설치될 서드 파티 애플리케이션도 각 리파지토리에서 정보를 업데이트합니다.
+2. Helm을 사용하여 함께 설치될 서드 파티 애플리케이션도 각 리파지토리에서 정보를 업데이트합니다.
 
     ````shell
     <copy>
@@ -159,15 +155,11 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     ````shell
     Getting updates for unmanaged Helm repositories...
     ...Successfully got an update from the "https://kubernetes.github.io/ingress-nginx" chart repository
-    ...Successfully got an update from the "https://charts.jenkins.io" chart repository
-    ...Successfully got an update from the "https://kubernetes-sigs.github.io/metrics-server" chart repository
-    ...Successfully got an update from the "https://prometheus-community.github.io/helm-charts" chart repository
-    ...Successfully got an update from the "https://grafana.github.io/helm-charts" chart repository
     ...Successfully got an update from the "https://charts.jetstack.io" chart repository
-    Hang tight while we grab the latest from your chart repositories...
-    ...Successfully got an update from the "fluent" chart repository
-    ...Successfully got an update from the "bitnami" chart repository
-    Update Complete. ⎈Happy Helming!⎈
+    ...Successfully got an update from the "https://kubernetes-sigs.github.io/metrics-server" chart repository
+    ...Successfully got an update from the "https://charts.jenkins.io" chart repository
+    ...Successfully got an update from the "https://grafana.github.io/helm-charts" chart repository
+    ...Successfully got an update from the "https://prometheus-community.github.io/helm-charts" chart repository
     Saving 6 charts
     Downloading prometheus from repo https://prometheus-community.github.io/helm-charts
     Downloading grafana from repo https://grafana.github.io/helm-charts
@@ -178,7 +170,7 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     Deleting outdated charts
     ````
 
-1. MuShop 유틸리티 애플리케이션을 먼저 설치합니다.
+3. MuShop 유틸리티 애플리케이션을 먼저 설치합니다.
 
     ````shell
     <copy>
@@ -201,15 +193,15 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
 
     ````shell
     NAME                                    READY   UP-TO-DATE   AVAILABLE   AGE
-    mushop-utils-cert-manager               1/1     1            1           2m49s
-    mushop-utils-cert-manager-cainjector    1/1     1            1           2m49s
-    mushop-utils-cert-manager-webhook       1/1     1            1           2m49s
-    mushop-utils-grafana                    1/1     1            1           2m49s
-    mushop-utils-ingress-nginx-controller   1/1     1            1           2m49s
-    mushop-utils-kube-state-metrics         1/1     1            1           2m49s
-    mushop-utils-metrics-server             1/1     1            1           2m49s
-    mushop-utils-prometheus-pushgateway     1/1     1            1           2m49s
-    mushop-utils-prometheus-server          1/1     1            1           2m49s
+    mushop-utils-cert-manager               1/1     1            1           2m
+    mushop-utils-cert-manager-cainjector    1/1     1            1           2m
+    mushop-utils-cert-manager-webhook       1/1     1            1           2m
+    mushop-utils-grafana                    1/1     1            1           2m
+    mushop-utils-ingress-nginx-controller   1/1     1            1           2m
+    mushop-utils-kube-state-metrics         1/1     1            1           2m
+    mushop-utils-metrics-server             1/1     1            1           2m
+    mushop-utils-prometheus-pushgateway     1/1     1            1           2m
+    mushop-utils-prometheus-server          1/1     1            1           2m
     ````
 
 2. Ingress Controller의 EXTERNAL-IP 확인:
@@ -224,8 +216,8 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     Sample response:
 
     ````shell
-    NAME                                    TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)                      AGE
-    mushop-utils-ingress-nginx-controller   LoadBalancer   10.96.127.88   146.xx.xxx.xxx   80:31000/TCP,443:31125/TCP   4m15s
+    NAME                                    TYPE           CLUSTER-IP      EXTERNAL-IP       PORT(S)                      AGE
+    mushop-utils-ingress-nginx-controller   LoadBalancer   10.96.125.113   158.xxx.xxx.xxx   80:30857/TCP,443:30841/TCP   2m45s    
     ````
 
 ## Task 4: Helm을 사용하여 MuShop 애플리케이션 배포
@@ -240,7 +232,7 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     </copy>
     ````
 
-1. 배포를 위해 애플리케이션 컨테이너 이미지를 받아 오는 데 처음에는 시간이 소요됩니다. 다음 명령어로 모든 Pod가 기동될때까지 기다립니다.
+2. 배포를 위해 애플리케이션 컨테이너 이미지를 받아 오는 데 처음에는 시간이 소요됩니다. 다음 명령어로 모든 Pod가 기동될때까지 기다립니다.
 
     ````shell
     <copy>
@@ -250,7 +242,7 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
 
     *Note:* _watch_ 모드를 중지하려면 언제든 `CTRL-C`를 사용합니다. 단순히 Pod 리스트만 조회하려면 `kubectl get pods`을 사용합니다.
 
-1. Helm 차트 설치가 완료되고, 모든 Pod가 기동(Running) 또는 완료(Completed)가 되면, 다시 한번 Nginx Ingress Controller의 **EXTERNAL-IP**를 확인하고, 브라우저로 http://< EXTERNAL-IP > 로 접속하여 MuShop Storefront로 이동합니다.
+3. Helm 차트 설치가 완료되고, 모든 Pod가 기동(Running) 또는 완료(Completed)가 되면, 다시 한번 Nginx Ingress Controller의 **EXTERNAL-IP**를 확인하고, 브라우저로 http://< EXTERNAL-IP > 로 접속하여 MuShop Storefront로 이동합니다.
 
     ````shell
     <copy>
@@ -283,22 +275,22 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     Deployment 자원을 만들때 사용할 애플리케이션의 컨테이너 이미지와 실행할 Pod 갯수(replicas)를 지정해야 합니다. 지금은 모두 1개의 Pod를 사용하고 있습니다.
     ````
     NAME                 READY   UP-TO-DATE   AVAILABLE   AGE
-    mushop-api           1/1     1            1           7m51s
-    mushop-assets        1/1     1            1           7m51s
-    mushop-carts         1/1     1            1           7m51s
-    mushop-catalogue     1/1     1            1           7m51s
-    mushop-edge          1/1     1            1           7m51s
-    mushop-events        1/1     1            1           7m51s
-    mushop-fulfillment   1/1     1            1           7m51s
-    mushop-nats          1/1     1            1           7m51s
-    mushop-orders        1/1     1            1           7m51s
-    mushop-payment       1/1     1            1           7m51s
-    mushop-session       1/1     1            1           7m51s
-    mushop-storefront    1/1     1            1           7m51s
-    mushop-user          1/1     1            1           7m51s    
+    mushop-api           1/1     1            1           2m28s
+    mushop-assets        1/1     1            1           2m28s
+    mushop-carts         1/1     1            1           2m28s
+    mushop-catalogue     1/1     1            1           2m28s
+    mushop-edge          1/1     1            1           2m28s
+    mushop-events        1/1     1            1           2m28s
+    mushop-fulfillment   1/1     1            1           2m28s
+    mushop-nats          1/1     1            1           2m28s
+    mushop-orders        1/1     1            1           2m28s
+    mushop-payment       1/1     1            1           2m28s
+    mushop-session       1/1     1            1           2m28s
+    mushop-storefront    1/1     1            1           2m28s
+    mushop-user          1/1     1            1           2m28s  
     ````
 
-1. 배포된 Pod 확인
+2. 배포된 Pod 확인
 
     ````shell
     <copy>
@@ -312,24 +304,23 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     * 컨테이너 이미지 버전이나 사용할 특정 포트 등 각 컨테이너를 실행하는 방법에 대한 정보
 
     ````
-    NAME                                 READY   STATUS      RESTARTS   AGE
-    mushop-api-67df55b466-jqrf7          1/1     Running     0          9m58s
-    mushop-assets-5d6f44b88f-89fw5       1/1     Running     0          9m58s
-    mushop-assets-deploy-1-j2sp7         0/1     Completed   0          9m58s
-    mushop-carts-5c97d8bf9c-mhdxr        1/1     Running     0          9m57s
-    mushop-catalogue-c79d9464c-x5crv     1/1     Running     0          9m56s
-    mushop-edge-8649c9b5dd-skxwd         1/1     Running     0          9m56s
-    mushop-events-6f69d5cc79-4xjzt       1/1     Running     0          9m57s
-    mushop-fulfillment-b59cc849-jgn2j    1/1     Running     0          9m58s
-    mushop-nats-977d9d7df-7vljc          2/2     Running     0          9m58s
-    mushop-orders-5f65f59497-gmzdp       1/1     Running     0          9m58s
-    mushop-payment-6456f6df7-9g7mr       1/1     Running     0          9m57s
-    mushop-session-678f95f767-jf5pr      1/1     Running     0          9m57s
-    mushop-storefront-7c8c866d88-mcch6   1/1     Running     0          9m57s
-    mushop-user-6b8b559cc6-cgqql         1/1     Running     0          9m57s    
+    NAME                                 READY   STATUS    RESTARTS   AGE
+    mushop-api-57bfd99b9d-7djvc          1/1     Running   0          2m59s
+    mushop-assets-7cb58486d5-s85jz       1/1     Running   0          2m58s
+    mushop-carts-844cf46859-z4tf9        1/1     Running   0          2m58s
+    mushop-catalogue-55b6b8b658-cmkjh    1/1     Running   0          2m59s
+    mushop-edge-55d67c9468-24dgk         1/1     Running   0          2m59s
+    mushop-events-f848849c9-nkxc9        1/1     Running   0          2m59s
+    mushop-fulfillment-59d9dc464-cfp99   1/1     Running   0          2m59s
+    mushop-nats-88b94b9bb-5wdcg          2/2     Running   0          2m58s
+    mushop-orders-58c7c566cc-xnzrl       1/1     Running   0          2m58s
+    mushop-payment-68b648f4f5-xf2r2      1/1     Running   0          2m59s
+    mushop-session-74bf6d5b59-9ksxn      1/1     Running   0          2m59s
+    mushop-storefront-55c454c5c4-hkkxt   1/1     Running   0          2m59s
+    mushop-user-844dcd488c-cvq2v         1/1     Running   0          2m58s 
     ````
 
-1. 마지막으로 생성된 Pod 확인
+3. 마지막으로 생성된 Pod 확인
 
     ````shell
     <copy>
@@ -338,7 +329,7 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     </copy>
     ````
 
-1. Pod내에 어떤 컨테이너가 있는지, 어떤 이미지를 사용하는 지 등을 확인
+4. Pod내에 어떤 컨테이너가 있는지, 어떤 이미지를 사용하는 지 등을 확인
 
     ````shell
     <copy>
@@ -346,7 +337,7 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     </copy>
     ````
 
-1. 애플리케이션 `STDOUT` 로 보내는 출력은 컨테이너 로그를 생각하고 다음명령으로 확인 가능
+5. 애플리케이션 `STDOUT` 로 보내는 출력은 컨테이너 로그를 생각하고 다음명령으로 확인 가능
 
     ````shell
     <copy>
@@ -354,7 +345,7 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     </copy>
     ````
 
-1. Pod내의 컨테이너내에서 직접 명령어 실행
+6. Pod내의 컨테이너내에서 직접 명령어 실행
 
     ````shell
     <copy>
@@ -362,7 +353,7 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
     </copy>
     ````
 
-1. Pod내의 컨테이너 작업 폴더 조회
+7. Pod내의 컨테이너 작업 폴더 조회
 
     ````shell
     <copy>
@@ -381,7 +372,5 @@ MuShop 애플리케이션에서 제공하는 Helm Chart는 쿠버네티스 클�
 
 ## Acknowledgements
 
-* **Author** - Adao Junior
-* **Contributors** -  Kay Malcolm (DB Product Management), Adao Junior
-* **Last Updated By/Date** - Adao Junior, October 2020
-* **Korean Translator & Contributors** - DongHee Lee, October 2023
+- **Author** - DongHee Lee, March 2023
+- **Last Updated By/Date** - DongHee Lee, December 2025

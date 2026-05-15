@@ -17,11 +17,11 @@ We will need to return to the configurations that we used to define the Landing 
 1. In the *Stacks* menu for the *Resource Manager Stack* we deployed in the previous lab, select __Variables__ under *Resources*.
 1. Click the __Edit Variables__ button. Please note that it may take a moment for the variables form to populate.
 
-    ![Edit variables on the stack menu](./images/edit-variables-btn.png "Select the Edit Variables button")
+    ![Edit variables window with highlighted button in Resource Manager Stack](./images/edit-variables-btn.png "Select the Edit Variables button")
 
-1. Select the __Define Networking?__ checkbox in the *General* section of the stack variables.
+1. Select the __Define Network Topology?__ checkbox in the *Configuration Options* section of the stack variables.
 
-    ![Define Networking? is checked](./images/define-network.png "Make sure to check the Define Networking? button")
+    ![Define Network Topology? is checked](./images/define-network.png "Make sure to check the Define Networking? button")
 
 1. Four Networking sections will appear. Proceed to *Networking - Three Tier VCNs* and check the __Add Three-Tier VCN (label: TT-VCN-1)?__ button. Note that the display name for the VCN is configurable by using the field *VCN Name (label: TT-VCN-1)*. The VCN name will default to *TT-VCN-1* otherwise. The network CIDR Block(s) can be changed in the *List of CIDR Blocks* field. Further customizations are available in *Customize VCN Subnets?*, but are outside the scope of this lab.
 
@@ -71,4 +71,4 @@ In the next lab, we will increase the complexity (and scalability) of our Core L
 
 - __Author__ - KC Flynn
 - __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
-- __Last Updated By/Date__ - KC Flynn February 2025
+- __Last Updated By/Date__ - KC Flynn September 2025

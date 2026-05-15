@@ -1,29 +1,35 @@
 # Introduction
 
-## About this Cloud Adventure
+## About this AI Adventure
 
-Are you a SaaS Application Administrator or Analyst? Are you tasked with setting up users, configuring page layouts and approval workflows? Are you responsible for integrations or creating new reports & dashboards? Get hands-on experience to learn and become more efficient on these activities and more! Join us for a two-hour fun filled journey where you will leverage built in tools and capabilities to extend, configure, and integrate Oracle Fusion Cloud Applications. This experience includes application user security, UI configurations, creating extensions, integrations and analytical reports/dashboards.
-
-Estimated Adventure Time: 2 hours
+Oracle AI Adventure in SaaS Platform & Technology is an interactive, hands-on experience that lets you explore the latest Oracle SaaS capabilities that allow application owners to deliver user centric application experiences and AI-power the enterprise. 
+<br><br>
+Experience how Oracle’s built-in AI unlocks new efficiencies with digital co-workers, elevates user experience, transforms data into actionable insights, and enhances decision-making, security, and productivity.
+<br><br>
+Estimated Adventure Time: 2-3 hours
 
 ### **Objectives**
 
-This Activity Guide will lead you along the way through a set of Adventure Labs, where you will experience the:
-1.	Use Security Console to easily manage user access
-2.	Configure Fusion Cloud Applications (e.g. Role-based Page Layouts, Add Business Rules/Logic)
-3.  Extend Fusion Cloud Applications (e.g. Create New Extensions, Connect External Services)
-4.  Experience the power of the integration capabilities of Fusion Cloud
-5.  Create powerful analytics for business insight
+This Activity Guide will lead you along the way through a set of Adventure Labs
 
-## Tasks
+(1) **Access Controls & Governance**: Experience using Oracle Risk Management to implement robust role-approval workflows and risk governance frameworks, specifically addressing and mitigating segregation of duties (SoD) violations to ensure secure application access. <br>
 
-Let's create your team name for your cloud adventure!
+(2) **Configure UI**: Experience the power of configuration capabilities of Oracle Fusion Cloud Applications to accommodate your business requirements and empower end users to do their job effectively.<br>
 
-[![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE) 
-    
+(3) **Extend UI**: Experience the ability to create new application pages that enhance end user productivity. Oracle Fusion Cloud offers powerful extension capabilities natively within the application. <br>
+
+(4) **Create AI Agents and Agent Teams**: Experience Oracle’s AI Agent Studio and see how AI is changing enterprise applications. Leverage AI Agent Studio’s to create AI Agents and AI Agent Teams, and deploy AI Agents for automating business processes.<br>
+
+(5) **Analytics with AI**: Learn how Fusion AI Data Platform provides a unified view and meaningful insights into your company’s operations. You will get hands-on experience in answering questions regarding your enterprise health by leveraging pre-built AI insights and creating cross-functional analytics across different lines of business.<br>
+
+### Tasks
+Let's create your team name for your AI Adventure!
+
+[![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE)
+
 ## Acknowledgements
-* **Author** - Sajid Saleem, Master Principal Sales Consultant, Advanced Technology Services
-* **Contributors** -  
-* **Last Updated By/Date** - Sajid Saleem, September 2024
+* **Author** - Sajid Saleem, Master Principal Cloud Technologist
+* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
+* **Last Updated By/Date** - Sajid Saleem, February 2026
 
 

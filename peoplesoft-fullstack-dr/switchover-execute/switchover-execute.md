@@ -23,7 +23,7 @@ Estimated Time: 25 Minutes
 
     ![ashburn-sample-process](./images/ashburn-sample-process.png)
 
-## Task 1: Execute the switchover plan
+## Task 2: Execute the switchover plan
 
 1. Login into OCI Console. Select region as **Phoenix**.
  
@@ -41,7 +41,7 @@ Estimated Time: 25 Minutes
 
     ![drpg switchover plan](./images/phoenix-sw-plan.png)
 
-5. Navigate to the **Execute Plan** section, which will be right below the **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** plan, and select
+5. Click on **Actions** and click on **Execute Plan** section.
 
     ![drpg execute plan](./images/phoenix-execute-plan.png)
 
@@ -54,13 +54,11 @@ Estimated Time: 25 Minutes
 
     ![drpg execute confirm](./images/phoenix-execute-run-1.png)
 
-## Task 2: Monitor the executed switchover Plan
+## Task 3: Monitor the executed switchover Plan
 
 1. Navigate to **Plan executions** section under **Resources** and select the **FSCM92-FSDR-Switchover-From-Ashburn-To-Phoenix** plan execution.Initially, it will show all the steps as *Queued*.
 
   Refresh the page; within a few seconds, the **State** will change from *Queued* to *In Progress*.
-
-    ![drpg execute monitor1](./images/phoenix-execute-inprogress.png)
 
 3. All the *plan groups* will run serially, but steps inside each *plan group* will be parallel. Monitor the various plan group and steps which are running. Navigate to the three dots section for the respective plan group step and click. You get the option to view the log and download the log. These logs are stored in the object storage bucket provided during the DRPG creation. You can monitor the Progress and download the log if necessary for troubleshooting.
 
@@ -70,13 +68,11 @@ Estimated Time: 25 Minutes
 
      ![drpg execute monitor progress](./images/phoenix-execute-moving.png)
 
-6. Keep monitoring the rest of the groups and steps; each step will complete depending on the actual task.
-
-     ![drpg execute monitor progress](./images/phoenix-execute-moving2.png)
+    Keep monitoring the rest of the groups and steps; each step will complete depending on the actual task.
 
 7. Wait for all the steps to complete successfully.  It is important to monitor the progress of each step and take actions in case of any failures. 
 
-## Task 3: Verify the executed switchover plan
+## Task 4: Verify the executed switchover plan
 
 1. From the plan execution detail, verify the duration of each step, status, duration of the entire switchover plan, etc. *It is essential to have successful completion of all steps*. Use the Expand all button to expand all the steps and the Collapse all button for collapsing. Use the view or download log option to see step execution details.
 
@@ -89,5 +85,5 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** -  Vinay Shivanna, Principal Cloud Architect
-- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023
+- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, November 2025
 

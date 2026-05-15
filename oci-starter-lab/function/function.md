@@ -77,7 +77,6 @@ Please read the chapter: Introduction and Get Started.
         - If not, the script will ask to reuse one or to create an "oci-starter" compartment
     ![Editor terraform.tfvars](../public_compute/images/starter-compute-env.png)
 
-
 ## Task 3: Starter.sh
 
 Before to run the build. Notice that the build will create:

@@ -1,0 +1,1 @@
+Creating the folder structure in production for the new Query Service workshop. Delete once the folders are in production.

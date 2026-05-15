@@ -9,7 +9,7 @@
         {
             "title": "Get Started",
             "description": "This is the prerequisite for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable).",
-            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
         },
         {
             "title": "Lab 1: Deploy the Web Services in OCI",
@@ -42,7 +42,7 @@
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
         }
     ]
 }

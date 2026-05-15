@@ -99,6 +99,10 @@ Para a criação da VM, usaremos a chave pública. A chave privada será usada a
 
 ![selecione o tamanho da virtual machine](./images/vm-size-12.png)
 
+![selecione o tamanho da virtual machine](./images/vm-size-13.png)
+
+![selecione o tamanho da virtual machine](./images/vm-size-14.png)
+
 3. Ao inserir as informações de rede, lembre-se de escolher sua VCN (conhecida no Lab 2), sua Subnet Publica (Também Lab 2) e a opção "Automatically assign a public IPv4 address"
 
 ![Configurações de rede para VM](./images/vm-private.png)
@@ -108,6 +112,8 @@ Para a criação da VM, usaremos a chave pública. A chave privada será usada a
 
 ![area de transferencia](./images/area-de-transferencia.png)
 ![cole a chave publica](./images/vm-paste-priv-key-14.png)
+![cole a chave publica](./images/vm-paste-priv-key-15.png)
+![cole a chave publica](./images/vm-paste-priv-key-16.png)
 
 Você provavelmente terá a nova instância devidamente criada em alguns minutos. Depois de terminar o processo de criação, a tela principal ficará assim:
 
@@ -163,4 +169,4 @@ Nesta sessão você aprendeu a criar Máquinas Virtuais Linux e como acessá-las
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Updated Por/Data** - Arthur Vianna, Fev/2024
+- **Último Updated Por/Data** - Arthur Vianna, Jul/2025

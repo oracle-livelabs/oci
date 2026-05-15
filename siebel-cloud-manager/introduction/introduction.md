@@ -33,8 +33,8 @@ This workshop uses the following components:
 * Virtual Cloud Network and related resources
   - User-generated using Resource Manager and provided Terraform script
 
-* GitLab Instance
-  - Deployed through Architecture Center's GitLab stack
+* OCI Devops Instance
+  - Provisioned from OCI
 
 * Siebel Cloud Manager instance
   - Provisioned from an OCI Marketplace Image
@@ -50,7 +50,7 @@ This workshop uses the following components:
 
 In this lab, you will:
 * Provision the Siebel Cloud Manager instance
-* Deploy, configure, and upgrade GitLab instance
+* Deploy, configure, and upgrade OCI Devops instance
 * Prepare and execute a JSON payload to create a new Siebel CRM environment
 * Validate the Siebel Application
 * Access the Siebel Kubernetes Cluster
@@ -85,12 +85,12 @@ The following terms are commonly employed in Oracle Siebel cloud operations and 
 
 **Oracle Kubernetes Engine (OKE)** – Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, scalable, and highly available service that you can use to deploy your containerized applications to the cloud.
 
-**GitLab** – GitLab is a web-based DevOps platform that provides a Git-based repository management service, issue-tracking, and continuous integration and deployment (CI/CD) pipeline features
+**OCI Devops** – Oracle Cloud Infrastructure (OCI) DevOps is a continuous integration and continuous delivery (CI/CD) service for development teams building on OCI.
 
 **Oracle Cloud Infrastructure Marketplace** – Oracle Cloud Infrastructure Marketplace is an online store that offers solutions specifically for customers of Oracle Cloud Infrastructure. In the Oracle Cloud Infrastructure Marketplace catalog, you can find listings for two types of solutions from Oracle and trusted partners: images and stacks. These listing types include different categories of applications
 
 ## Acknowledgements
 
-* **Author:** Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect; Duncan Ford, Siebel Software Engineer
+* **Author:** Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect; Duncan Ford, Siebel Software Engineer; Rosmin Siby Cherickal, Software Engineer
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
-* **Last Updated By/Date** - Duncan Ford, Siebel Software Engineer, April 2024
+* **Last Updated By/Date** - Rosmin Siby Cherickal, Software Engineer, July 2025

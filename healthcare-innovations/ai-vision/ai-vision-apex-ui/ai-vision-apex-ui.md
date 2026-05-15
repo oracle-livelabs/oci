@@ -626,4 +626,4 @@ This workshop provides a basic example of using OCI Vision and other AI services
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - July 12th, 2024.
+* **Last Updated By/Date** - Sept 26th, 2025

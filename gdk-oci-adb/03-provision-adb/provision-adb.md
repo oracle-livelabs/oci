@@ -16,7 +16,7 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console, open the navigation menu, click **Oracle Database** and then click **Autonomous Database**.
 
-   ![Oracle Database menu](https://oracle-livelabs.github.io/common/images/console-2025/database-adb.png)
+   ![Oracle Database menu](https://oracle-livelabs.github.io/common/images/console/database-adb.png)
 
 2. Select your workshop compartment from the **Compartment** drop down list. Click **Create Autonomous Database**. <if type="desktop">To find the compartment name, return to the **Login Details** screen, then copy the value of the **Compartment Name**, paste it in the **Compartment** drop down list in the Oracle Cloud Console and select the filtered compartment. 
 

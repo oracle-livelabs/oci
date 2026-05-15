@@ -55,22 +55,17 @@ With Oracle Integration, you can:
 ## Task 1: Access Autonomous Database Instance and Download Wallet
 
 1. Log in to the Oracle Autonomous Database cloud console.
-
-    ![Access ADB](images/adb-instance.png =50%x* )
-
+ 
 2. Click on **Database Connection** and Download wallet
+ 
 
-    ![Download Wallet](images/download-wallet.png =50%x* )
-
-3. Copy the **Connection string**, We would need this later.
-
-    ![Connection Details](images/connection-details.png =50%x* )
+3. Copy the **Connection string**, We would need this later. 
+ 
   
 ## Task 2: Log in to Oracle Integration Cloud and Create an Oracle Autonomous Warehouse Database connection
 
-1. Log in to Oracle Integration Cloud (Generation 2). 
-
-    ![Connection Details](images/oic-service.png =50%x* )
+1. Log in to Oracle Integration Cloud (Generation 2).  
+ 
 
 2. Click on **Create Connection**
 
@@ -357,4 +352,4 @@ With Oracle Integration, you can:
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
-* **Last Updated By/Date** - 18th July, 2023.
+* **Last Updated By/Date** - Sept 26th, 2025
