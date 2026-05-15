@@ -57,20 +57,20 @@ Please read the chapter: Introduction and Get Started.
     ![Editor File Open](images/starter-compute-dir.png)
 2. The main files are:
 
-   |             |                  |           | Description |
-   | ----------- | ---------------- | --------- | ---|
-   | Commands    |                  |           |  |
-   |             | starter.sh       |           | Build or destroy a project. Show a menu with commands if not argument is given | 
-   |             | terraform.tfvars |           | Settings of your project | 
-   | Directories |                  |           | Commands used by starter.sh | 
-   |             | bin/             |           | Commands used by starter.sh | 
-   |             | src/             |           | Sources files | 
-   |             |                  | app       | Backend Application (Command: build_app.sh) | 
-   |             |                  | ui        | User Interface (Command: build_ui.sh) | 
-   |             |                  | db        | Database initialisation files (SQL, ...) | 
-   |             |                  | terraform | Terraform scripts  | 
-   |             |                  | compute   | Deployment to Compute | 
-   |             | target/          |           | Output directory  | 
+   |             |                  |           |           | Description |
+   | ----------- | ---------------- | --------- | --------- | ---|
+   | Commands    |                  |           |           |  |
+   |             | starter.sh       |           |           | Build or destroy a project. Show a menu with commands if not argument is given | 
+   |             | terraform.tfvars |           |           | Settings of your project | 
+   | Directories |                  |           |           | Commands used by starter.sh | 
+   |             | bin/             |           |           | Commands used by starter.sh | 
+   |             | src/             |           |           | Sources files | 
+   |             |                  | app       |           | Applications | 
+   |             |                  |           | rest      | App - Rest | 
+   |             |                  |           | ui        | App - UI - User Interface | 
+   |             |                  |           | db        | App - Database (initialisation files, SQL, ...) | 
+   |             |                  | terraform |           | Terraform scripts  | 
+   |             | target/          |           |           | Output directory  |  
 
 3. Edit the terraform.tfvars file:
     - Look for \_\_TO_FILL\_\_ in the file
