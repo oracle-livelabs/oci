@@ -64,7 +64,7 @@ In this lab, you will:
 
    Refresh the screen and scroll down to the **Objects** list. You should see an object named _user1.jpg_.
 
-   ![Objects List](images/objects-list-user1.jpg)
+   ![Objects List](images/objects-list-user1.png)
 
 ## Task 3: Download the picture
 
@@ -94,7 +94,7 @@ In this lab, you will:
 
    Refresh the screen and scroll down to the **Objects** list. The object _user1.jpg_ has been deleted from the bucket.
 
-   ![Objects List](./images/objects-list-empty.jpg)
+   ![Objects List](./images/objects-list-empty.png)
 
 ## Task 5: Stop the application
 
