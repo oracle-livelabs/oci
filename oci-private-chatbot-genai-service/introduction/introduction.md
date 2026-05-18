@@ -60,7 +60,7 @@ The dynamic group and policy setup is required to use **instance principals**.
 
 With this model, the OCI compute instance authenticates to OCI Generative AI Service **without storing OCI user API keys or OCI auth secrets on the VM**. Authorization is managed through IAM policy attached to the instance identity context.
 
-## Workshop flow
+## Task 1: Workshop flow
 
 1. Configure IAM access (compartment, dynamic group, policy)
 2. Provision infrastructure with OpenTofu
