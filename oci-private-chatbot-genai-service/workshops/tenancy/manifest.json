@@ -31,6 +31,11 @@
     {
       "title": "Lab 4: Validate Open WebUI",
       "filename": "../../query/query.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
     }
   ]
 }
