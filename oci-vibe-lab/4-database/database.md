@@ -41,7 +41,7 @@ We will assume later that you installed it in $HOME/oracle/sqlcl
       conn -savepwd -save adb admin@(description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=localhost))(connect_dat. a=(service_name=yyyyyyyyyy_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
       select * from dept;
       exit    
-    ````
+    ```
 
     ![SQLcl](images/sqlcl1.png)    
 

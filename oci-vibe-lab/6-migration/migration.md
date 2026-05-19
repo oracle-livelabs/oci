@@ -49,7 +49,7 @@ You will find several commands like this:
 
 ```
 <copy>
-cline -y > /tmp/cline_cli.log << EOF
+cline "
 You are a senior software engineer and technical writer.
 
 Goal:
@@ -75,7 +75,7 @@ Output format:
 - Well-structured documentation with clear sections
 - Use diagrams in text form where helpful (e.g., component interactions)
 - Be precise and avoid guessing—flag uncertainties explicitly
-EOF
+"
 </copy>
 ```
 

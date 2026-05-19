@@ -20,7 +20,7 @@ Estimated Workshop Time: 120 minutes
 
 In these labs, you will get an introduction how to:
 - Set up and configure Vibe Coding environment on your laptop  
-- Generate and execute code using natural language prompts  
+- Generate and execute code using natural language prompts (Hello World, Space Invaders) 
 - Deploy and extend AI orchestration frameworks using LangGraph and MCP  
 - Automate documentation and security check  
 - Discover tables and generate SQL, PL/SQL with databases  

@@ -63,30 +63,13 @@ Estimated time: 15 min
 
     ```
     <copy>    
- -----------------------------------------------------------------------
-    Build done
-    URLs
+    -----------------------------------------------------------------------
+    URL:
     - User Interface: http://123.123.123.123/
     - REST: http://123.123.123.123/app/threads
 
     -----------------------------------------------------------------------
-    DB connection:
-
-    DB_USER=admin
-    DB_PASSWORD=xxxxxxx
-    DB_URL=(description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=xxxxxxxx.adb.us-chicago-1.oraclecloud.com))(connect_data=(service_name=yyyyyyyyyy_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
-
-    In terminal 1, open the ssh tunnel
-      ssh -L1521:xxxxxxx.adb.us-chicago-1.oraclecloud.com:1521 opc@123.123.123.123
-    In terminal 2, save the connection to the database.
-      $HOME/oracle/sqlcl/bin/sql /nolog
-      conn -savepwd -save adb admin@(description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=localhost))(connect_dat. a=(service_name=yyyyyyyyyy_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
-      xxxxxxx
-      select * from dept;
-      exit    
-
-    -----------------------------------------------------------------------
-    Vibe Coding (Build done in Bastion):
+    Vibe Coding:
 
     1. Check that you can login from your laptop to the bastion using the private key associated with your_public_ssh_key in terraform.tfvars
     > ssh opc@123.123.123.123
@@ -102,6 +85,22 @@ Estimated time: 15 min
     > cat compute/rebuild.log
     > cd app/xxxx
     > cat xxxx.log
+    
+    -----------------------------------------------------------------------
+    Database:
+
+    DB_USER=admin
+    DB_PASSWORD=xxxxxxx
+    DB_URL=(description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=xxxxxxxx.adb.us-chicago-1.oraclecloud.com))(connect_data=(service_name=yyyyyyyyyy_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
+
+    In terminal 1, open the ssh tunnel
+      ssh -L1521:xxxxxxx.adb.us-chicago-1.oraclecloud.com:1521 opc@123.123.123.123
+    In terminal 2, save the connection to the database.
+      $HOME/oracle/sqlcl/bin/sql /nolog
+      conn -savepwd -save adb admin@(description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=localhost))(connect_dat. a=(service_name=yyyyyyyyyy_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
+      xxxxxxx
+      select * from dept;
+      exit  
     -----------------------------------------------------------------------
     </copy>    
     ```

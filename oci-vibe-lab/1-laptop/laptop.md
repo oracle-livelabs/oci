@@ -60,36 +60,19 @@ Estimated time: 45 min
     Optional
     ========
     hugging-face-token=(SAMPLE) hf_xxxxxxxxxxxxxxxxxxxx
-    DAC endpoint OCID=(SAMPLE) ocid1.generativeaiendpoint.oc1.xxxxxxxxxx
     BASE_URL=(sample) https://inference.generativeai.eu-frankfurt-1.oci.oraclecloud.com/openai/v1/chat/completions
+    DAC endpoint OCID=(SAMPLE) ocid1.generativeaiendpoint.oc1.xxxxxxxxxx
 
     Terraform Output
     ================
     
     -----------------------------------------------------------------------
-    Build done
-    URLs
+    URL:
     - User Interface: http://123.123.123.123/
     - REST: http://123.123.123.123/app/threads
 
     -----------------------------------------------------------------------
-    DB connection:
-
-    DB_USER=admin
-    DB_PASSWORD=xxxxxxx
-    DB_URL=(description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=xxxxxxxx.adb.us-chicago-1.oraclecloud.com))(connect_data=(service_name=yyyyyyyyyy_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
-
-    In terminal 1, open the ssh tunnel
-      ssh -L1521:xxxxxxx.adb.us-chicago-1.oraclecloud.com:1521 opc@123.123.123.123
-    In terminal 2, save the connection to the database.
-      $HOME/oracle/sqlcl/bin/sql /nolog
-      conn -savepwd -save adb admin@(description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=localhost))(connect_dat. a=(service_name=yyyyyyyyyy_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
-      xxxxxxx
-      select * from dept;
-      exit    
-
-    -----------------------------------------------------------------------
-    Vibe Coding (Build done in Bastion):
+    Vibe Coding:
 
     1. Check that you can login from your laptop to the bastion using the private key associated with your_public_ssh_key in terraform.tfvars
     > ssh opc@123.123.123.123
@@ -105,6 +88,22 @@ Estimated time: 45 min
     > cat compute/rebuild.log
     > cd app/xxxx
     > cat xxxx.log
+    -----------------------------------------------------------------------
+    Database:
+
+    DB_USER=admin
+    DB_PASSWORD=xxxxxxx
+    DB_URL=(description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=xxxxxxxx.adb.us-chicago-1.oraclecloud.com))(connect_data=(service_name=yyyyyyyyyy_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
+
+    In terminal 1, open the ssh tunnel
+      ssh -L1521:xxxxxxx.adb.us-chicago-1.oraclecloud.com:1521 opc@123.123.123.123
+    In terminal 2, save the connection to the database.
+      $HOME/oracle/sqlcl/bin/sql /nolog
+      conn -savepwd -save adb admin@(description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=localhost))(connect_dat. a=(service_name=yyyyyyyyyy_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
+      xxxxxxx
+      select * from dept;
+      exit    
+
     -----------------------------------------------------------------------
     </copy>
     ```  
@@ -228,7 +227,23 @@ Back in Cline. Try the simple example possible.
     - Run in a terminal: **brew install python**
     - Restart the hello\_world.py: python3 hello\_world.py
 
-## Task 8: (Optional) Install a Dedicated AI Cluster (DAC)
+## Task 8: Space Invaders
+
+Back in Cline. Try the simple example possible.
+
+1. In the vibe directory, create a directory **space_invaders**
+3. In Visual Studio, open menu *File / Open Folder...*. Choose the **space_invaders** directory. It is empty.
+4. Start Cline. In the Cline prompt, type: **Write a space invaders game in HTML, JS and CSS.**
+5. It will ask to open the page in the browser. *open index.html*
+5. Depending of the model it will work or not. But most of the time you get something like this. Here Qwen 3.6.
+6. If it is not fully working try things like: **Add a start page, be sure that the alien moves from right to left, add defense and a super bonus alien on the top**
+7. Play the game. Some versions are even with game over. Life and so on... 
+8. Space Invaders by Grok 4.3
+  
+    ![Space Invaders Grok](images/space_invaders_grok43_1.png)
+    ![Space Invaders Grok](images/space_invaders_grok43_2.png)
+
+## Task 9: (Optional) Install a Dedicated AI Cluster (DAC)
 
 ⚠️ This optional task starts a GPU for at least one hour, so it may cost several euros per hour. Confirm with your OCI Cloud Administrator first, and stop the DAC after testing.
 
@@ -288,7 +303,7 @@ Documentation: https://docs.oracle.com/en-us/iaas/Content/generative-ai/import-m
 12. When the Endpoint is Active (it can take 15 mins or more depending of model size). Try it in the **View in Playground** on the top left. Try "tell me a joke" or "who are you" ?
     ![dac](images/dac4.png)     
 
-## Task 9: (Optional) Configure Cline for a DAC-hosted model
+## Task 10: (Optional) Configure Cline for a DAC-hosted model
 
 Use the active DAC endpoint you created in Task 8. Keep note of these values:
 1. Take notes of these values
@@ -323,6 +338,13 @@ Use the active DAC endpoint you created in Task 8. Keep note of these values:
     - Back in Cline  Retry the 2 samples above 
         - who are you ? 
         - create a hello world in python 
+        - Write a space invaders game in HTML, JS and CSS
+    - Space Invaders by Gemma 4.
+        ![Space Invaders Gemma](images/space_invaders_gemma4_1.png)
+        ![Space Invaders Gemma](images/space_invaders_gemma4_2.png)
+    - Space Invaders by Qwen 3.6.
+        ![Space Invaders Qwen](images/space_invaders_qwen36_1.png)
+        ![Space Invaders Qwen](images/space_invaders_qwen36_2.png)
 
 ## Known Issue
 
@@ -333,6 +355,12 @@ Use the active DAC endpoint you created in Task 8. Keep note of these values:
     ... session.hook requires a valid hook event payload
     ```
 
+    or 
+    
+    ```
+    AI SDK Warning (openai-compatible.chat / openai.gpt-oss-120b): The 'openai-compatible' key in providerOptions is deprecated. Use 'openaiCompatible' instead.
+    ```
+
     Solution:
     - check the /home/opc/.cline/data/settings/providers.json 
     - it should look like this:
@@ -340,17 +368,21 @@ Use the active DAC endpoint you created in Task 8. Keep note of these values:
         {
             "version": 1,
             "lastUsedProvider": "openai-compatible",
-            "providers": {
-                "openai-compatible": {
-                "settings": {
-                    "provider": "openai-compatible",
-                    "apiKey": "sk-xxxxxxxxxxxxxxxxxxxxxx",
-                    "model": "openai.gpt-oss-120b",
-                    "baseUrl": "https://inference.generativeai.us-chicago-1.oci.oraclecloud.com",
-                    "reasoning": {
-                    "enabled": false
-                    }
-                },
+            "providers": 
+            {
+                "openai-compatible": 
+                {
+                    "settings": 
+                    {
+                        "provider": "openai-compatible",
+                        "apiKey": "sk-xxxxxxxxxxxxxxxxxxxxxx",
+                        "model": "openai.gpt-oss-120b",
+                        "baseUrl": "https://inference.generativeai.us-chicago-1.oci.oraclecloud.com",
+                        "reasoning": 
+                        {
+                            "enabled": false
+                        }
+                    },
                 "updatedAt": "2026-05-15T08:31:37.766Z",
                 "tokenSource": "manual"
                 }

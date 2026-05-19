@@ -36,10 +36,9 @@ At the end of each git push, you see output like this:
     ```
     ...
     remote: Already up to date.
-    remote: rebuild: See /home/opc/devops/rebuild.20260505-150604_46a7469.log
-    remote: doc: See /home/opc/devops/doc.20260505-150604_46a7469.log
-    remote: security: See /home/opc/devops/security.20260505-150604_46a7469.log
-    To 163.192.209.165:~/app.git
+    remote: Rebuild: See /home/opc/devops/20260518-182544_78ccb0d/rebuild.log
+    remote: doc: See /home/opc/devops/20260518-182544_78ccb0d/doc.md
+    remote: security: See /home/opc/devops/20260518-182544_78ccb0d/security.md
     bb1ea83..46a7469  master -> master
     ```
 
@@ -50,18 +49,20 @@ The log names use the format **doc.<date>\_<git commit id>.log**.
     ```
     ssh opc@123.123.123.123
     cd devops
-    cat rebuild.20260505-150604_46a7469.log
-    cat doc.20260505-150604_46a7469.log
-    cat security.20260505-150604_46a7469.log
+    ls
+    cd 20260518-182544_78ccb0d
+    cat rebuild.log
+    cat doc.md
+    cat security.md
     ```
 
 2. In the rebuild log, you will see the log of the redeployment (and rebuild).
         ![Rebuild](images/devops_rebuild.png)  
  
-    The security.log looks like this:
+    The security.md looks like this:
 
     ```
-    cat /home/opc/devops/security.20260505-150604_46a7469.log 
+    cat security.md 
 
     Task started: 1777998257937
     The PR adds a classic Oracle EMP sample table and a matching read-only MCP tool following the exact pattern of the existing get_dept implementation. No secrets, injection risks, unsafe dependencies, or permission escalations were introduced. The only notable item is the MCP server binding to 0.0.0.0:2025, which may be intentional for the bastion but should be confirmed. Overall the change is safe, consistent, and follows good engineering practices for this codebase.
@@ -70,7 +71,7 @@ The log names use the format **doc.<date>\_<git commit id>.log**.
     The doc.log looks like this:
 
     ```
-    cat /home/opc/devops/doc.20260505-150604_46a7469.log 
+    cat doc.md
 
     # Bastion Build 20260505-182121: Add EMP Table and `get_emp` MCP Tool
 
@@ -118,45 +119,7 @@ The log names use the format **doc.<date>\_<git commit id>.log**.
 If you look in $HOME/compute/git/post\_receive\_doc.sh, you will see this:
 
 ```
-cline -y  << EOF
-You are a senior security reviewer and engineering best-practice auditor. Review the following git push request for security issues, unsafe patterns, and general code quality concerns.
-
-Input:
-- Commit message / PR title:
-- PR description:
-- Changed files:
-- Diff or patch:
-- Related issue(s):
-- Any notes from the author:
-
-Task:
-1. Review the change for security risks, vulnerable patterns, secrets exposure, permission issues, injection risks, unsafe dependencies, and data-handling problems.
-2. Check for good engineering practice, including readability, maintainability, error handling, validation, logging, testing, and backward compatibility.
-3. Identify anything that looks suspicious, incomplete, inconsistent, or likely to cause production issues.
-4. For each finding, include:
-   - severity
-   - why it matters
-   - exact file or area affected
-   - recommended fix
-5. Do not invent issues that are not supported by the input. Mark uncertain items as "Needs confirmation."
-6. If no issues are found, say so explicitly and mention the main reasons the change looks safe.
-7. End with a clear action recommendation.
-
-Output format:
-- Overall assessment
-- Security findings
-- Best-practice findings
-- Suggested fixes
-- Final recommendation
-
-Action to take: none -> urgent
-EOF
-```
-
-For the security check, in $HOME/compute/git/post\_receive\_security.sh, you will see this:
-
-```
-cline -y  << EOF
+cline "
 You are a technical writer. Generate clear, accurate documentation from the following git push request.
 
 Input:
@@ -189,7 +152,45 @@ Output format:
 - Usage / Migration
 - Risks / Notes
 - Follow-up checklist
-EOF
+"
+```
+
+For the security check, in $HOME/compute/git/post\_receive\_security.sh, you will see this:
+
+```
+cline "
+You are a senior security reviewer and engineering best-practice auditor. Review the following git push request for security issues, unsafe patterns, and general code quality concerns.
+
+Input:
+- Commit message / PR title:
+- PR description:
+- Changed files:
+- Diff or patch:
+- Related issue(s):
+- Any notes from the author:
+
+Task:
+1. Review the change for security risks, vulnerable patterns, secrets exposure, permission issues, injection risks, unsafe dependencies, and data-handling problems.
+2. Check for good engineering practice, including readability, maintainability, error handling, validation, logging, testing, and backward compatibility.
+3. Identify anything that looks suspicious, incomplete, inconsistent, or likely to cause production issues.
+4. For each finding, include:
+   - severity
+   - why it matters
+   - exact file or area affected
+   - recommended fix
+5. Do not invent issues that are not supported by the input. Mark uncertain items as "Needs confirmation."
+6. If no issues are found, say so explicitly and mention the main reasons the change looks safe.
+7. End with a clear action recommendation.
+
+Output format:
+- Overall assessment
+- Security findings
+- Best-practice findings
+- Suggested fixes
+- Final recommendation
+
+Action to take: none -> urgent
+"
 ```
 
 ## Task 3: (Optional) Monitoring
