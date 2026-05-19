@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create the structured semantic store for service appointment questions. The semantic store connects OCI Generative AI to the Autonomous AI Database through Database Tools connections. The sample app sends customer-scoped natural language questions to the NL2SQL API for this semantic store, validates the generated SQL, and executes it through ADB MCP Server.
+In this lab, you create the structured semantic store for service appointment questions. The semantic store connects OCI Enterprise AI to the Autonomous AI Database through the Database Tools connections we created in the previous lab. The sample app sends customer-scoped natural language questions to the NL2SQL API for this semantic store, validates the generated SQL, and executes it through the ADB MCP Server.
 
 Estimated Time: 20 minutes
 
@@ -12,8 +12,7 @@ In this lab, you will:
 
 - Create a structured semantic store
 - Connect the semantic store to the service database
-- Run or verify semantic enrichment
-- Test a customer-scoped NL2SQL prompt
+- Run the semantic enrichment
 - Record the semantic store OCID for the sample app
 
 ### Prerequisites
@@ -21,19 +20,18 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed the Database Tools and Vault lab
-- The `car-service-enrichment` Database Tools connection OCID
-- The `car-service-query` Database Tools connection OCID
-- The `car-service` Autonomous AI Database OCID
 
 ## Task 1: Create the structured semantic store
 
 1. In the Console navigation menu, go to **Analytics & AI**, then **Generative AI**.
 
-2. Select **Vector stores**.
+1. Select **Vector stores**.
 
-3. Click **Create vector store**.
+1. Select the workshop compartment.
 
-4. Enter the following values:
+1. Click **Create vector store**.
+
+1. Enter the following values:
 
     ```text
     <copy>
@@ -41,142 +39,33 @@ This lab assumes you have:
     Description: Example Motors service appointment semantic store
     Compartment: <workshop-compartment>
     Data source type: Structured data
+    Connection type: OCI Database too
     </copy>
     ```
 
     ![Create structured semantic store](images/create-structured-semantic-store.png)
 
-5. Continue to the structured data source configuration.
-
-## Task 2: Configure database connections
-
-1. Select the Database Tools connection type.
-
-2. For the enrichment connection, enter or select:
-
     ```text
     <copy>
-    car-service-enrichment
+    Connection type: OCI Database tool
+    Enrichment connection ID: The value for "Database Tools enrichment connection OCID" from our text file
+    Querying connection id: The value for "Database Tools query connection OCID" from our text file
+    Schema: ADMIN
+    Automation: On create
     </copy>
     ```
 
-3. For the query connection, enter or select:
+1. Click **Test enrichment connection** to make sure the semantic store can use the connection to connect to the database.
 
-    ```text
-    <copy>
-    car-service-query
-    </copy>
-    ```
+1. Click **Test query connection** to make sure the semantic store can use the connection to connect to the database.
 
-4. Select the schema:
+    ![Validate the connections](images/validate-connections.png)
 
-    ```text
-    <copy>
-    ADMIN
-    </copy>
-    ```
+1. Click **Create**.
 
-5. Include these tables in the semantic store:
+1. Wait for the `car-manufacturer-service` semantic store to be at the `Active` state.
 
-    ```text
-    <copy>
-    CUSTOMERS
-    VEHICLES
-    SERVICE_APPOINTMENTS
-    SERVICE_ITEMS
-    </copy>
-    ```
-
-6. Select auto-run enrichment if the wizard offers it.
-
-7. Click **Create**.
-
-## Task 3: Verify enrichment
-
-1. Open the `car-manufacturer-service` semantic store.
-
-2. Wait until the store is active.
-
-3. Open the enrichment or jobs section.
-
-4. Confirm that the latest enrichment job succeeded.
-
-5. If enrichment did not start automatically, run it from the sample app helper.
-
-    ```bash
-    <copy>
-    cd sample-app
-    python -m venv .venv
-    source .venv/bin/activate
-    pip install -r requirements.txt
-    export OCI_GENAI_SEMANTIC_STORE_OCID="<semantic-store-ocid>"
-    export OCI_GENAI_REGION="<workshop-region>"
-    export OCI_GENAI_NL2SQL_REGION="${OCI_GENAI_REGION}"
-    export OCI_SQL_AUTH="instance_principal"
-    python scripts/start_enrichment_job.py --schema-name ADMIN --wait
-    </copy>
-    ```
-
-6. Confirm that the command reports a terminal state of `SUCCEEDED`.
-
-## Task 4: Test a customer-scoped prompt
-
-1. In the semantic store console test panel, enter this prompt if the panel is available:
-
-    ```text
-    <copy>
-    Show the service appointments for customer_id 7, including service summary, warranty type, total cost, and customer paid amount.
-    </copy>
-    ```
-
-2. Confirm that the generated SQL references these tables as needed:
-
-    ```text
-    <copy>
-    CUSTOMERS
-    VEHICLES
-    SERVICE_APPOINTMENTS
-    SERVICE_ITEMS
-    </copy>
-    ```
-
-3. Confirm that the generated SQL filters to:
-
-    ```text
-    <copy>
-    customer_id = 7
-    </copy>
-    ```
-
-4. If the console does not provide a test panel, skip this test.
-
-    The Web Application lab validates the NL2SQL path through the running app.
-
-## Task 5: Record the semantic store OCID
-
-1. Open the semantic store details page.
-
-2. Copy the semantic store OCID.
-
-3. Record it as:
-
-    ```text
-    <copy>
-    OCI_GENAI_SEMANTIC_STORE_OCID=<semantic-store-ocid>
-    </copy>
-    ```
-
-4. Confirm that you still have these values for the Web Application lab:
-
-    ```text
-    <copy>
-    OCI_GENAI_PROJECT_OCID
-    OCI_GENAI_VECTOR_STORE_IDS
-    OCI_GENAI_SEMANTIC_STORE_OCID
-    OCI_ADB_DATABASE_OCID
-    OCI_ADB_MCP_PASSWORD_SECRET_OCID
-    </copy>
-    ```
+1. Copy the semantic store OCID and save it as the value for `Structured semantic store OCID` in the text file.
 
 You may now **proceed to the next lab**.
 
@@ -184,8 +73,7 @@ You may now **proceed to the next lab**.
 
 - [OCI Generative AI QuickStart for semantic stores and NL2SQL](https://docs.oracle.com/en-us/iaas/Content/generative-ai/get-started-agents.htm)
 - [Database Tools console tasks](https://docs.oracle.com/en-us/iaas/database-tools/doc/using-oracle-cloud-infrastructure-console.html)
-- [Calling services from an instance](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/callingservicesfrominstances.htm)
 
 ## Acknowledgements
 
-- **Author** - Julien Lehmann, Product Marketing Manager, Yanir Shahak, Senior Principal Software Engineer
+- **Author** - Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer

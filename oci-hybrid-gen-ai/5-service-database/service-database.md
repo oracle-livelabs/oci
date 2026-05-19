@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create the structured data source for the Example Motors support agent. The Autonomous AI Database stores customer, vehicle, service appointment, and service item records. The sample app uses OCI Enterprise AI NL2SQL to generate SQL against this schema and ADB MCP Server to execute the SQL and retrieve the data.
+In this lab, you create the structured data source for the Example Motors support agent. The Autonomous AI Database stores customer, vehicle, service appointment, and service item records. The sample app uses the OCI Enterprise AI NL2SQL to generate SQL against this schema and the ADB MCP Server to execute the SQL and retrieve the data.
 
 Estimated Time: 30 minutes
 
@@ -13,7 +13,7 @@ In this lab, you will:
 - Create an Autonomous AI Database
 - Load the workshop schema and sample service data
 - Create the `EXECUTE_SQL` tool used by the sample app
-- Enable ADB MCP Server
+- Enable the ADB MCP Server
 
 ### Prerequisites
 
@@ -45,7 +45,7 @@ This lab assumes you have:
 
 5. Toggle **Developer** ON.
 
-6. Select version **26ai**.
+6. Select database version **26ai**.
 
 7. Set the ADMIN password. Please select a none trivial value for this password (at least 10 characters and include uppercase, lowercase, numeric and special characters). Save this password in a secure place. We will need it later in the workshop.
 
@@ -65,7 +65,9 @@ This lab assumes you have:
 
 11. In the database **General information** page, copy the database OCID and save it in your text file as the value for `Autonomous AI Database OCID`.
 
-## Task 2: Create the schema and load data into the database
+## Task 2: Load the workshop schema and sample service data
+
+> **Note:** This workshop uses `ADMIN` for prototyping purposes. For production environments, create a less privileged user. Grant only the permissions needed for schema ownership, read-only SQL execution, and MCP tool access.
 
 1. Open the `car-service` Autonomous AI Database.
 
@@ -73,13 +75,13 @@ This lab assumes you have:
 
 1. Select **SQL**.
 
-> **Note:** This workshop uses `ADMIN` for prototyping purposes. For production environments, create a less privileged user. Grant only the permissions needed for schema ownership, read-only SQL execution, and MCP tool access.
-
 1. Download the [database setup file](./files/customer-service-appointments.sql)
 
 1. Open the file in a any text or code editor and copy its contents into the SQL worksheet.
 
 1. Run the script (make sure you select the **Run Script** button and not the **Run Statement** button).
+
+    ![Run script](./images/run-script.png)
 
 1. Confirm that the script finishes without errors. The output should look similar to the following:
 
@@ -148,12 +150,14 @@ In order for the ADB MCP server to retrieve data from the database for us, we ne
 
 2. Select the **Tags** tab (you may need to scroll the tabs to see it as it is the last).
 
-3. Add this free-form tag:
+3. Click **Add** to add this free-form tag:
 
     ```text
     Key: adb$feature
     Value: {"name":"mcp_server","enable":true}
     ```
+
+    ![Add ADB MCP tag](./images/add-adb-mcp-tag.png)
 
 4. Click **Add**.
 

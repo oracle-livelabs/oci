@@ -2,19 +2,18 @@
 
 ## Introduction
 
-In this lab, you store the `ADMIN` password in OCI Vault. You also create Database Tools connections for the structured semantic store. The semantic store uses one connection for enrichment and one for query-time access. The sample app uses the password secret to request an ADB MCP bearer token.
+In this lab, you create an OCI Vault and encryption key, then create two Database Tools connections that connect the Semantic Store (will be created in the next lab) to the database.
 
-Estimated Time: 20 minutes
+Estimated Time: 25 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-- Create a Vault secret for the database user password
-- Create a wallet content secret when Database Tools requires one
-- Create enrichment and query Database Tools connections
+- Create an OCI Vault and encryption key
+- Create Enrichment and Query Database Tools connections (which also require creating secrets to store credentials)
 - Validate the connections
-- Record the connection OCIDs and password secret OCID
+- Record the OCIDs for the vault, connection, and password secret
 
 ### Prerequisites
 
@@ -22,102 +21,136 @@ This lab assumes you have:
 
 - Completed the Service Database lab
 - The `ADMIN` database password
-- An available Vault and encryption key, or permission to create them
+- Permission to create Vault, key, secret, and Database Tools resources in the workshop compartment
 
-## Task 1: Create the password secret
+## Task 1: Create the OCI Vault and encryption key
 
-1. In the Console navigation menu, go to **Developer Services**, then **Database Tools**.
+1. Confirm that the OCI Console is set to the same region where you created the workshop resources.
 
-2. Select **Connections**.
+1. In the Console navigation menu, go to **Identity & Security**, then **Vault**.
+
+1. Select the workshop compartment.
+
+1. Click **Create Vault**.
+
+1. Enter the following values and keep the remaining defaults:
+
+    ```text
+    Compartment: <workshop-compartment>
+    Name: car-service-vault
+    ```
+
+1. Click **Create Vault**.
+
+1. Wait until the vault lifecycle state changes to **Active**.
+
+1. In the `car-service-vault` vault details page, copy the Vault's OCID and paste it into our text file as the value for `Vault OCID`.
+
+1. Select the **Master encryption keys** tab.
+
+1. Click **Create Key**.
+
+1. Enter the following values and keep the remaining defaults:
+
+    ```text
+    Compartment: <workshop-compartment>
+    Name: car-service-key
+    ```
+
+1. Click **Create Key**.
+
+1. Wait until the key lifecycle state changes to **Enabled**.
+
+## Task 2: Create the database connections
+
+1. In the Console navigation menu, go to **Developer Services**, then under **Database Tools** select **Connections**.
 
     ![Database Tools connections list](images/database-tools-connections.png)
 
-3. Click **Create connection**.
+1. Make sure you are in the workshop's compartment.
 
-4. Enter the following values:
+1. Click **Create connection**.
+
+1. Enter the following values:
 
     ```text
-    <copy>
     Name: car-service-enrichment
     Compartment: <workshop-compartment>
     Database details: Select database
     Database cloud service: Oracle Autonomous AI Database
+    Oracle Autonomous AI Database in compartment: <workshop-compartment>
     Autonomous AI Database: car-service
     Username: ADMIN
-    </copy>
     ```
 
     ![Create Database Tools connection basic information](images/create-connection-basic-information.png)
 
-5. In the password field, click **Create password secret**.
+1. Click **Create password secret**.
 
-6. Enter the following values:
+1. Enter the following values:
 
     ```text
-    <copy>
     Name: car-manufacturer-service-adb-password
-    Compartment: <workshop-compartment>
-    Vault: <workshop-vault>
-    Encryption key: <workshop-key>
+    Vault in compartment: <workshop-compartment>
+    Vault: car-service-vault
+    Encryption key: car-service-key
     User password: <ADMIN-password>
-    </copy>
     ```
 
     ![Create password secret basic fields](images/create-password-secret.png)
 
-7. Confirm the password and click **Create**.
+1. Confirm the password and click **Create**.
 
     ![Create password secret password fields](images/create-password-secret-password.png)
 
-8. Record the created secret OCID.
-
-    You will use it later as:
-
-    ```text
-    <copy>
-    OCI_ADB_MCP_PASSWORD_SECRET_OCID
-    </copy>
-    ```
-
-## Task 2: Configure connection security
-
-1. Return to the Database Tools connection wizard.
-
-2. Select the password secret you created.
+1. Back in the Create connection wizard page, select the password secret you created (it might be auto-selected).
 
     ![Select password secret in Database Tools connection](images/create-connection-secret.png)
 
-3. In **SSL details**, choose the wallet format required by your Autonomous AI Database connection.
+1. In **SSL details**, choose **Oracle auto-login wallet** in the **Wallet format** field.
 
-    For the workshop, use the Oracle auto-login wallet when prompted.
-
-    ![Database Tools connection SSL details](images/create-connection-ssl-details.png)
-
-4. If the wizard asks for a wallet content secret, click **Create wallet content secret**.
+1. Click **Create wallet content secret**.
 
     ![Create wallet content secret section](images/create-wallet-content-secret-section.png)
 
-5. Enter the following values:
+1. Enter the following values:
 
     ```text
-    <copy>
     Name: car-manufacturer-service-wallet
-    Compartment: <workshop-compartment>
-    Vault: <workshop-vault>
-    Encryption key: <workshop-key>
+    Vault in compartment: <workshop-compartment>
+    Vault: car-service-vault
+    Encryption key: car-service-key
     Wallet source: Retrieve regional wallet from Autonomous AI Database
-    </copy>
     ```
 
     ![Create wallet content secret](images/create-wallet-content-secret.png)
 
-6. Select the created wallet content secret in the connection wizard.
+1. Click **Create**.
+
+1. Back in the **Create connection** page select the created wallet content secret (it might be auto-selected).
 
     ![Select wallet content secret](images/select-wallet-content-secret.png)
 
-7. Click **Create**.
+1. Click **Create**.
 
-## Task 3: Validate and record the enrichment connection
+1. Copy the **Enrichment** connection OCID and update the value for the `Database Tools enrichment connection OCID` parameter.
+
+1. We are going to create another database connection, the **Query** connection, which will be very similar to the **Enrichment** connection but with a few tiny differences:
+
+    - Go back to the **Connections** page.
+    - Click **Create connection**.
+    - Use the exact same instructions to create this connection but change the following:
+
+        - Connection name: car-service-query
+        - Repeat the steps to select the database and fill in the user name as described for the **Enrichment** connection.
+        - Instead of creating new secrets for the **User password secret** password and **SSO wallet content secret**, select the same ones we've already created for the **Enrichment** connection (`car-manufacturer-service-adb-password` for the **User password secret** password and `car-manufacturer-service-wallet` for the **SSO wallet content secret**).
+        - Click **Create**.
+
+1. Copy the **Query** connection OCID and update the value for the `Database Tools query connection OCID` parameter.
+
+## Task 4: Validate connections
+
+You are now going to validate that the connections have been configured correctly and provide access to the database.
 
 1. Open the `car-service-enrichment` connection details page.
 
@@ -133,69 +166,30 @@ This lab assumes you have:
 
     ![Validate connection completed successfully](images/validate-connection-complete.png)
 
-5. Copy the connection OCID.
+5. Do the same for the `car-service-query` connection.
 
-    ![Database Tools connection OCID](images/database-tools-connection-ocid.png)
+## Task 5: Obtain the ADMIN password secret OCID
 
-6. Record it as:
+The test app which you will use to test the solution needs to connect to the database. In order for the app to provide authentication information to establish this connection, we need to retrieve the ADMIN user password secret we created for our database connections.
 
-    ```text
-    <copy>
-    Enrichment connection OCID=<car-service-enrichment connection OCID>
-    </copy>
-    ```
+1. In the Console navigation menu, go to **Identity & Security**, then **Vault**.
 
-## Task 4: Create the query connection
+1. Click **Go to Secrets Management**.
 
-1. Create a second Database Tools connection.
+1. In the secrets list, locate the `car-manufacturer-service-adb-password` secret, click the "three dots"/ellipsis menu and select **Copy OCID**.
 
-2. Use the same database and secret values as the enrichment connection.
+1. Save the OCID as the value for `ADMIN password secret OCID` in our text file.
 
-3. Enter the following connection name:
+    ![Copy admin password secret OCID](images/admin-password-secret-copy-ocid.png)
 
-    ```text
-    <copy>
-    car-service-query
-    </copy>
-    ```
-
-4. Validate the connection.
-
-5. Copy the connection OCID.
-
-6. Record it as:
-
-    ```text
-    <copy>
-    Query connection OCID=<car-service-query connection OCID>
-    </copy>
-    ```
-
-7. For this prototype workshop, both connections can use `ADMIN`.
-
-    In production, use separate users and privileges for enrichment, query, and MCP execution.
-
-## Task 5: Confirm values for the next labs
-
-1. Confirm that you have these values:
-
-    ```text
-    <copy>
-    OCI_ADB_MCP_PASSWORD_SECRET_OCID=<password secret OCID>
-    Enrichment connection OCID=<car-service-enrichment connection OCID>
-    Query connection OCID=<car-service-query connection OCID>
-    </copy>
-    ```
-
-2. Confirm that your workshop user can read the password secret bundle.
-
-    The sample app reads the current version of the secret at runtime.
 
 You may now **proceed to the next lab**.
 
 ## Learn More
 
 - [Database Tools console tasks](https://docs.oracle.com/en-us/iaas/database-tools/doc/using-oracle-cloud-infrastructure-console.html)
+- [Create a Vault](https://docs.oracle.com/iaas/Content/KeyManagement/Tasks/managingvaults_topic-To_create_a_new_vault.htm)
+- [Create a master encryption key](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingkeys_topic-To_create_a_new_key.htm)
 - [Create a Vault secret](https://docs.oracle.com/iaas/Content/KeyManagement/Tasks/managingsecrets_topic-To_create_a_new_secret.htm)
 - [Vault key management](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingkeys.htm)
 

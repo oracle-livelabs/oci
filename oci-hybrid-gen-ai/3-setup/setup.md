@@ -11,7 +11,7 @@ Estimated Time: 20 minutes
 In this lab, you will:
 
 - Choose the compartment and region used by the workshop
-- Create the IAM policies required by the user, vector connector, semantic store, and application compute instance
+- Create the IAM policies required by the workshop user, vector connector, and semantic store
 - Create the OCI Enterprise AI project for the app
 
 ### Prerequisites
@@ -23,9 +23,9 @@ This lab assumes you have:
 - Permission to create a compartment
 - Permission to create resources in the workshop compartment
 
-## Task 1: Record workshop values
+## Task 1: Select a compartment and region
 
-1. Open the OCI Console.
+1. Login to the OCI Console.
 
 2. Create or select a compartment for this workshop.
 
@@ -42,7 +42,7 @@ This lab assumes you have:
         ```text
         Name: Hybrid-Model-HOL
         Description: Compartment for the OCI Hybrid GenAI Support Agent workshop
-        Parent compartment: <parent-compartment> (usually the **root** compartment)
+        Parent compartment: <parent-compartment> (usually the root compartment)
         ```
 
     - Click **Create compartment**.
@@ -56,15 +56,13 @@ This lab assumes you have:
 
     > **Note**: Create **every** workshop resource in this same region.
 
-4. Keep a text file handy with the following configuration parameters and update it as we create new resources (we will update and reference value from this file for the rest of the workshop):
+4. Keep a text file handy with the following configuration parameters and update it as we create new resources (we will update and reference values from this file as we progress through the workshop):
 
     ```text
     <copy>
-    Workshop compartment: <the name of the compartment you selected or created>
-    Compartment OCID: <The OCID for the compartment>
-    Workshop region: <selected-workshop-region like us-ashburn-1>
+    Workshop compartment name:
+    Workshop region:
     Workshop users group name: example-motors-workshop-users
-    Compute instance dynamic group name: examplemotorscompute
     Vector store connector dynamic group name: generativeaivectorconnector
     Semantic store dynamic group name: generativeaisemanticstore
     Project OCID:
@@ -72,16 +70,18 @@ This lab assumes you have:
     Unstructured vector store: car-operation
     Unstructured vector store OCID:
     Autonomous AI Database OCID:
-    Database user:
-    Database Tools enrichment connection:
-    Database Tools query connection:
-    Structured semantic store:
+    Database user: ADMIN
+    Vault OCID:
+    Database Tools enrichment connection OCID:
+    Database Tools query connection OCID:
+    ADMIN password secret OCID:
+    Structured semantic store OCID:
     </copy>
     ```
 
 ## Task 2: Create IAM dynamic groups and policies
 
-> **Note:** This workshop assumes that you have administrative permissions. If you do not, you many need to have an administrator help you with the following steps.
+> **Note:** This workshop assumes that you have administrative permissions. If you do not, you may need to have an administrator help you with the following steps.
 
 1. In the Console navigation menu, go to **Identity & Security**, then **Domains**.
 
@@ -91,32 +91,20 @@ This lab assumes you have:
 
     - In your domain screen, select **User management**.
     - Under **Groups**, click **Create group**.
+
+        ![Create new group](./images/create-new-group.png)
+
     - Name the group: `example-motors-workshop-users`.
     - Under **Users**, check your user name to add yourself to this group.
     - Click **Create**.
     - If you didn't use the default name, update the new group name as the `Workshop users group name` parameter in our text file.
 
-4. Create a **Dynamic group** which will represent the compute instance which will be running our sample app.
+4. Create a dynamic group for the Object Storage data sync connector. This group will represent the vector store's sync connector service which processes our file data and will allow us to govern what it can do.
 
-    - Click the **Dynamic groups** tab.
+    - Back in the domain details page, select the **Dynamic groups** tab.
     - Click **Create dynamic group**.
-    - Name the dynamic group: `examplemotorscompute`.
-    - Paste the following rule into the **Rule 1** textbox (replacing \<workshop-compartment-ocid\> with the OCID for your compartment as recorded in our text file):
-
-        ```text
-        <copy>
-        ALL {instance.compartment.id = '<workshop-compartment-ocid>'}
-        </copy>
-        ```
-
-    - Click **Create**.
-    - This group will represent any compute instance you will create in your compartment and you will be able to grant permissions to this group and have those permissions govern what the code running in the compute instance can do.
-    - If you didn't use the default name for this dynamic group, record this dynamic group name as the `Compute instance dynamic group name` parameter in our text file.
-
-5. Create another dynamic group by repeating the steps above.
-
     - Name the group: `generativeaivectorconnector`.
-    - Group rule:
+    - Copy & paste the group rule to the **Rule 1** text box:
 
         ```text
         <copy>
@@ -124,13 +112,14 @@ This lab assumes you have:
         </copy>
         ```
 
-    - This group will represent the vector store's sync connector service which processes our file data and will allow us to govern what it can do.
+    - Click **Create**.
     - If you didn't use the default name for this dynamic group, record this dynamic group name as the `Vector store connector dynamic group name` parameter in our text file.
 
-6. Create another dynamic group by repeating the steps above
+5. Create another dynamic group for the structured semantic store. This group will represent the semantic store service which processes our database data and will allow us to govern what it can do.
 
+    - Click **Create dynamic group**.
     - Name the dynamic group: `generativeaisemanticstore`.
-    - Group rule:
+    - Copy & paste the group rule to the **Rule 1** text box:
 
         ```text
         <copy>
@@ -138,12 +127,12 @@ This lab assumes you have:
         </copy>
         ```
 
-    - This group will represent the semantic store service which processes our database data and will allow us to govern what it can do.
+    - Click **Create**.
     - If you didn't use the default name for this dynamic group, record this dynamic group name as the `Semantic store dynamic group name` parameter in our text file.
 
-7. Go to **Identity & Security**, then **Policies**.
+6. Go to **Identity & Security**, then **Policies**.
 
-8. Create a policy in the workshop compartment for the workshop user group.
+7. Create a policy in the workshop compartment for the workshop user group.
 
     > **Note:** If you are an administrator on this tenancy, this step is technically not required as you already have all of the required permissions. However, for production use-cases it is recommended to limit the required permissions to the minimum required.
 
@@ -168,11 +157,11 @@ This lab assumes you have:
 
     - Click **Create**.
 
-9. Repeat the above instructions and create a policy for the Object Storage data sync connector.
+8. Repeat the above instructions and create a policy for the Object Storage data sync connector.
 
     - Name the policy: `example-motors-sync-connector-policy`.
     - Choose a description (for example: `Permissions for the Example Motors sync connector`).
-    - Use the following policy replacing `<workshop-compartment>` with your workshop compartment and `<generative-ai-vector-connector>` with the value recorded for `Vector store connector dynamic group name`:
+    - Use the following policy replacing `<workshop-compartment>` with your workshop compartment name and `<generative-ai-vector-connector>` with the value recorded for `Vector store connector dynamic group name`:
 
     ```text
     <copy>
@@ -180,11 +169,11 @@ This lab assumes you have:
     </copy>
     ```
 
-10. Repeat the above instructions and create a policy for the the structured semantic store.
+9. Repeat the above instructions and create a policy for the the structured semantic store.
 
     - Name the policy: `example-motors-semantic-store-policy`.
     - Choose a description (for example: `Permissions for the Example Motors semantic store`).
-    - Use the following policy replacing `<workshop-compartment>` with your workshop compartment and `<generative-ai-semantic-store>` with the value recorded for `Semantic store dynamic group name`:
+    - Use the following policy replacing `<workshop-compartment>` with your workshop compartment name and `<generative-ai-semantic-store>` with the value recorded for `Semantic store dynamic group name`:
 
     ```text
     <copy>
@@ -192,20 +181,6 @@ This lab assumes you have:
     Allow dynamic-group <generative-ai-semantic-store> to read secret-bundles in compartment <workshop-compartment>
     Allow dynamic-group <generative-ai-semantic-store> to inspect autonomous-database-family in compartment <workshop-compartment>
     Allow dynamic-group <generative-ai-semantic-store> to use generative-ai-family in compartment <workshop-compartment>
-    </copy>
-    ```
-
-11. Repeat the above instructions and create a policy for the sample app compute instance.
-
-    - Name the policy: `example-motors-compute-instance-policy`.
-    - Choose a description (for example: `Permissions for the Example Motors sample app compute instance`).
-    - Use the following policy replacing `<workshop-compartment>` with your workshop compartment and `<example-motors-compute>` with the value recorded for `Compute instance dynamic group name`:
-
-    ```text
-    <copy>
-    Allow dynamic-group <example-motors-compute> to use generative-ai-family in compartment <workshop-compartment>
-    Allow dynamic-group <example-motors-compute> to read secret-bundles in compartment <workshop-compartment>
-    Allow dynamic-group <example-motors-compute> to inspect autonomous-database-family in compartment <workshop-compartment>
     </copy>
     ```
 
@@ -252,7 +227,6 @@ You may now **proceed to the next lab**.
 - [OCI Generative AI QuickStart for Enterprise AI Agents](https://docs.oracle.com/en-us/iaas/Content/generative-ai/get-started-agents.htm)
 - [OCI Generative AI model endpoint regions](https://docs.oracle.com/en-us/iaas/Content/generative-ai/model-endpoint-regions.htm)
 - [Managing IAM policies](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policies.htm)
-- [Calling services from an instance](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/callingservicesfrominstances.htm)
 
 ## Acknowledgements
 

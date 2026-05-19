@@ -13,7 +13,7 @@ In this lab, you will:
 - Verify that database answers stay scoped to the current customer
 - Verify that generated SQL stays read-only
 - Verify that the app refuses out-of-scope requests
-- Review how the app uses Vault secrets
+- Review how the app uses OCI API keys, Vault secrets, and ADB MCP OAuth
 - Review least-privilege follow-up work for production
 
 ### Prerequisites
@@ -145,9 +145,18 @@ This lab assumes you have:
 
 6. Confirm that the assistant answers the vehicle-support question.
 
-## Task 5: Review Vault and instance principal handling
+## Task 5: Review OCI API key, Vault, and ADB MCP OAuth handling
 
-1. Confirm that `.env` uses the secret OCID instead of the plain database password:
+1. Confirm that `.env` points to your OCI API key configuration:
+
+    ```text
+    <copy>
+    OCI_CONFIG_FILE=<path-to-oci-config-file>
+    OCI_CONFIG_PROFILE=DEFAULT
+    </copy>
+    ```
+
+2. Confirm that `.env` uses the secret OCID instead of the plain database password:
 
     ```text
     <copy>
@@ -155,7 +164,7 @@ This lab assumes you have:
     </copy>
     ```
 
-2. Confirm that `.env` does not contain:
+3. Confirm that `.env` does not contain:
 
     ```text
     <copy>
@@ -163,16 +172,35 @@ This lab assumes you have:
     </copy>
     ```
 
-3. Confirm that `.env` uses instance principal authentication for OCI service calls:
+4. Review `sample-app/semantic_sql_tool.py`.
+
+    Confirm that the app reads the database password from Vault and passes it to the ADB MCP token provider.
+
+5. Review `sample-app/adb_mcp_auth.py`.
+
+    Confirm that ADB MCP authentication uses the `OCI_ADB_MCP_USERNAME` value and the Vault-retrieved database password to request an OAuth bearer token.
+
+6. Confirm that `.env`, the OCI config file, and the API private key are not committed to source control.
+
+    On Mac, the OCI files are usually:
 
     ```text
     <copy>
-    OCI_GENAI_AUTH=instance_principal
-    OCI_SQL_AUTH=instance_principal
+    .env
+    ~/.oci/config
+    ~/.oci/oci_api_key.pem
     </copy>
     ```
 
-4. Confirm that `.env` is not committed to source control.
+    On Windows, the OCI files are usually:
+
+    ```text
+    <copy>
+    .env
+    C:\Users\<your-user-name>\.oci\config
+    C:\Users\<your-user-name>\.oci\oci_api_key.pem
+    </copy>
+    ```
 
     The sample app includes `.env` in `.gitignore`.
 
@@ -185,8 +213,7 @@ This lab assumes you have:
     Use separate database users for semantic enrichment, semantic query, and MCP execution.
     Restrict ADB network access to private endpoints or approved CIDRs.
     Replace broad workshop IAM policies with resource-specific least privilege.
-    Restrict the compute dynamic group to the app instance or tagged app fleet.
-    Rotate database passwords and Vault secrets.
+    Rotate API keys, database passwords, and Vault secrets.
     Add audit review for ADB MCP and Vault secret reads.
     </copy>
     ```

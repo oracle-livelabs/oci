@@ -93,7 +93,7 @@ INSERT ALL
   INTO vehicles (vehicle_id, customer_id, vin, make, model, model_year) VALUES (6, 6, 'WBA8E9G58JNU12345', 'Example Motors', '330i', 2024)
   INTO vehicles (vehicle_id, customer_id, vin, make, model, model_year) VALUES (7, 7, 'KM8K12AA7KU234567', 'Example Motors', '31B', 2026)
   INTO vehicles (vehicle_id, customer_id, vin, make, model, model_year) VALUES (8, 8, '3VW2B7AJ5HM345678', 'Example Motors', '47C', 2025)
-  INTO vehicles (vehicle_id, customer_id, vin, make, model, model_year) VALUES (9, 9, '1C4RJFBG9KC456789', 'Example Motors', '31B Cherokee', 2026)
+  INTO vehicles (vehicle_id, customer_id, vin, make, model, model_year) VALUES (9, 9, '1C4RJFBG9KC456789', 'Example Motors', '31B', 2026)
   INTO vehicles (vehicle_id, customer_id, vin, make, model, model_year) VALUES (10, 10, 'YV4A22PK5H1123456', 'Example Motors', '24A', 2025)
 SELECT 1 FROM dual;
 

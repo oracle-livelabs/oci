@@ -20,7 +20,7 @@ In this lab, you will:
 
 This lab assumes you have:
 
-- Completed the Web Application lab
+- Completed the Sample Application lab
 - A working `.env` file in `sample-app`
 - At least one vision-capable model available in your workshop region
 - At least one lower-cost or faster text model available in your workshop region

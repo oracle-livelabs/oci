@@ -42,7 +42,7 @@ This lab assumes you have:
     A. Object Storage bucket
     B. Vault secret
     C. Semantic store
-    D. Compute instance
+    D. OCI config file
     </copy>
     ```
 
@@ -118,7 +118,7 @@ This lab assumes you have:
     <copy>
     A. The app injects the current customer_id and rejects SQL without the matching customer_id filter
     B. The bucket is private
-    C. The compute instance name contains the customer_id
+    C. The API key fingerprint contains the customer_id
     D. The vector store file count is 1
     </copy>
     ```

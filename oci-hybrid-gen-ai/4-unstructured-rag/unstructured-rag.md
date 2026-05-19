@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create the unstructured retrieval source for the Example Motors support agent. You will seed the vector store created in this section with a source document. This document is a PDF mobile bluetooth pairing guide for the Example Motors infotainment system. The app will query the vector store using the OCI Enterprise AI Responses API by leveraging the the built in `file_search` tool.
+In this lab, you create the unstructured retrieval source for the Example Motors support agent. You will seed the vector store created in this section with a source document. This PDF document is a mobile bluetooth pairing guide for the Example Motors infotainment system. The app will query the vector store using the OCI Enterprise AI Responses API by leveraging the the built in `file_search` tool.
 
 Estimated Time: 25 minutes
 
@@ -120,7 +120,7 @@ This lab assumes you have:
 
 4. Click **Create**.
 
-5. Confirm that the data sync connector appears in the list.
+5. Confirm that the data sync connector appears in the list in an **Active** state.
 
     ![Data sync connector created](images/data-sync-created.png)
 
@@ -146,9 +146,7 @@ This lab assumes you have:
 
 12. Return to the vector store details page.
 
-13. Confirm that the file count is at least `1`.
-
-14. Save the vector store ID with your workshop notes.
+13. Confirm that the file count is `1`.
 
 You may now **proceed to the next lab**.
 
