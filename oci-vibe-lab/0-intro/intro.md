@@ -1,6 +1,12 @@
 
 # Introduction
 
+### Objectives
+
+In this lab, you will:
+* TODO: Add objectives
+
+
 ## Lab Overview
 
 This lab introduces a modern, AI development workflow referred to as *Vibe Coding*—a practical approach that blends developer intuition with powerful AI tools to accelerate software delivery, improve code quality, and streamline operations.

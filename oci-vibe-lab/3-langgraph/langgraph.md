@@ -104,7 +104,7 @@ You could try other things like.
     - In MCP tools, be resilient to mistake of LLMs. Accept that all parameters are sent with None. None is the default value. If a parameter is missing and return a clean error to the LLM asking him about the mandatory parameters.
     </copy>
     ```
-...
+    ...
 3. Same than above. Git push and check the result. 
 4. Try: "book a restaurant tonight at 6PM for 4 people"
 

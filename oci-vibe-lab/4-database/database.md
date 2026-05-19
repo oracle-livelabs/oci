@@ -51,7 +51,7 @@ We will assume later that you installed it in $HOME/oracle/sqlcl
 2. In the resulting dialogue, click Settings Settings icon.
 3. The MCP Servers page opens, with the Installed tab selected.
 4. Click Configure MCP Servers.
-5.  The cline\_mcp\_settings.json file opens in the VS Code editor.
+5. The cline\_mcp\_settings.json file opens in the VS Code editor.
 6. In the settings file, add a JSON configuration snippet in the following format. Replace PATH/bin/sql with the absolute path of your SQLcl installation, and press Ctrl+S on your keyboard to save the file.
     ```
     {
@@ -68,9 +68,9 @@ We will assume later that you installed it in $HOME/oracle/sqlcl
     Click Done on the MCP Servers page.
 8. If necessary, restart VS Code for changes to take effect.
 9. Try to see if you can connect to the database. Go to Cline and ask:
-   ```
-   connect to database adb
-   ```
+    ```
+    connect to database adb
+    ```
 
 ## Task 3: Generating documentation about existing tables
 

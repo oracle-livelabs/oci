@@ -133,51 +133,51 @@ Input:
 Task:
 1. Read the request and infer the purpose of the change.
 2. Write documentation that explains:
-   - what changed
-   - why it changed
-   - how it works
-   - any setup, config, or migration steps
-   - any user-facing impact
-   - risks, limitations, or edge cases
+    - what changed
+    - why it changed
+    - how it works
+    - any setup, config, or migration steps
+    - any user-facing impact
+    - risks, limitations, or edge cases
 3. Keep the documentation concise, structured, and easy to scan.
 4. Use headings, bullets, and examples where helpful.
 5. Do not invent details that are not supported by the input. Mark unclear points as "Needs confirmation" rather than guessing.
 6. If the change affects an API, CLI, UI, or operational behavior, include a short "Before / After" section.
 7. End with a short checklist of follow-up items for reviewers or maintainers.
 
-Output format:
-- Title
-- Summary
-- Details
-- Usage / Migration
-- Risks / Notes
-- Follow-up checklist
-"
-```
+    Output format:
+    - Title
+    - Summary
+    - Details
+    - Usage / Migration
+    - Risks / Notes
+    - Follow-up checklist
+    "
+    ```
 
-For the security check, in $HOME/compute/git/post\_receive\_security.sh, you will see this:
+    For the security check, in $HOME/compute/git/post\_receive\_security.sh, you will see this:
 
-```
-cline "
-You are a senior security reviewer and engineering best-practice auditor. Review the following git push request for security issues, unsafe patterns, and general code quality concerns.
+    ```
+    cline "
+    You are a senior security reviewer and engineering best-practice auditor. Review the following git push request for security issues, unsafe patterns, and general code quality concerns.
 
-Input:
-- Commit message / PR title:
-- PR description:
-- Changed files:
-- Diff or patch:
-- Related issue(s):
-- Any notes from the author:
+    Input:
+    - Commit message / PR title:
+    - PR description:
+    - Changed files:
+    - Diff or patch:
+    - Related issue(s):
+    - Any notes from the author:
 
-Task:
+    Task:
 1. Review the change for security risks, vulnerable patterns, secrets exposure, permission issues, injection risks, unsafe dependencies, and data-handling problems.
 2. Check for good engineering practice, including readability, maintainability, error handling, validation, logging, testing, and backward compatibility.
 3. Identify anything that looks suspicious, incomplete, inconsistent, or likely to cause production issues.
 4. For each finding, include:
-   - severity
-   - why it matters
-   - exact file or area affected
-   - recommended fix
+    - severity
+    - why it matters
+    - exact file or area affected
+    - recommended fix
 5. Do not invent issues that are not supported by the input. Mark uncertain items as "Needs confirmation."
 6. If no issues are found, say so explicitly and mention the main reasons the change looks safe.
 7. End with a clear action recommendation.
