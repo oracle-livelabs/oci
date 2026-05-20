@@ -27,29 +27,29 @@ In this lab, you will:
 
 1. In the first terminal in VS Code, check the version of the GraalVM native-image utility:
 
-	``` bash
-	<copy>
-	native-image --version
-	</copy>
-	```
+    ``` bash
+    <copy>
+    native-image --version
+    </copy>
+    ```
 
 2. To generate a native executable using Maven, run the following command:
 
-	``` bash
-	<copy>
-	./mvnw install -pl lib -am && ./mvnw clean package -pl oci -Dpackaging=native-image
-	</copy>
-	```
+    ``` bash
+    <copy>
+    ./mvnw install -pl lib -am && ./mvnw clean package -pl oci -Dpackaging=native-image
+    </copy>
+    ```
 
-   It can take approximately 3-4 minutes to generate the native executable.
+    It can take approximately 3-4 minutes to generate the native executable.
 
 3. The native executable is created in the _oci/target_ directory and can be run with the following command:
 
-	``` bash
-	<copy>
-	MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci-storage-demo-oci
-	</copy>
-	```
+    ``` bash
+    <copy>
+    MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci-storage-demo-oci
+    </copy>
+    ```
 
    The native executable starts instantaneously.
 
@@ -57,11 +57,11 @@ In this lab, you will:
 
 1. From the second terminal in VS Code, send an HTTP POST request to the `/pictures/{userId}` endpoint to upload a picture to the bucket:
 
-	``` bash
-	<copy>
-	curl -i -F 'fileUpload=@test-data/pic2.jpg' http://localhost:8080/pictures/user2
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl -i -F 'fileUpload=@test-data/pic2.jpg' http://localhost:8080/pictures/user2
+    </copy>
+    ```
 
 2. Check the bucket contents. Go to the **OCI Console** >> **Storage** >> **Object Storage & Archive Storage** >> **Buckets** >> **Bucket Details** screen opened in the browser.
 
@@ -73,11 +73,11 @@ In this lab, you will:
 
 1. From the second terminal in VS Code, send an HTTP GET request to the `/pictures/{userId}` endpoint to download the picture from the bucket:
 
-	``` bash
-	<copy>
-	curl http://localhost:8080/pictures/user2 -O -J
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl http://localhost:8080/pictures/user2 -O -J
+    </copy>
+    ```
 
 2. You should see the profile picture _user2.jpg_ downloaded in the _LAB_ directory in VS Code. Click the picture to view it.
 
@@ -87,11 +87,11 @@ In this lab, you will:
 
 1. From the second terminal in VS Code, send an HTTP DELETE request to the `/pictures/{userId}` endpoint to delete the picture from the bucket:
 
-	``` bash
-	<copy>
-	curl -X DELETE http://localhost:8080/pictures/user2
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl -X DELETE http://localhost:8080/pictures/user2
+    </copy>
+    ```
 
 2. Check the bucket contents. Go to the **OCI Console** >> **Storage** >> **Object Storage & Archive Storage** >> **Buckets** >> **Bucket Details** screen opened in the browser.
 
