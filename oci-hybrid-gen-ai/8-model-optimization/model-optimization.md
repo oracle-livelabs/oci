@@ -22,9 +22,27 @@ This lab assumes you have:
 
 ## Task 1: Enable model routing
 
-1. Open `sample-app/llm.py`.
+1. Stop the application by pressing `CTRL + C` in the terminal/console.
 
-2. Find the `response_model` function.
+1. Open `llm.py` in your text editor. Please make sure you are still in the `sample-app` folder. You. can choose your own text editor or:
+
+    On Mac:
+
+    ```bash
+    <copy>
+    nano llm.py
+    </copy>
+    ```
+
+    On Windows PowerShell:
+
+    ```powershell
+    <copy>
+    notepad llm.py
+    </copy>
+    ```
+
+1. Find the `response_model` function.
 
     It contains these commented lines:
 
@@ -35,7 +53,7 @@ This lab assumes you have:
     </copy>
     ```
 
-3. Uncomment the lines and keep the indentation inside the function. The function should look like this:
+1. Uncomment the lines and keep the indentation inside the function. The function should look like this:
 
     ```python
     <copy>
@@ -49,9 +67,9 @@ This lab assumes you have:
     </copy>
     ```
 
-4. Save the file.
+1. Save the file.
 
-5. Restart Streamlit.
+1. Restart Streamlit.
 
     ```bash
     <copy>

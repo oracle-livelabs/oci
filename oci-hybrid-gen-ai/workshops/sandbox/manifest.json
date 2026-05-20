@@ -12,15 +12,15 @@
         },
         {
             "title": "Unstructured RAG",
-            "filename": "../../5-unstructured-rag/unstructured-rag.md"
+            "filename": "../../5-unstructured-rag/unstructured-rag-sandbox.md"
         },
         {
             "title": "Semantic Store",
-            "filename": "../../6-semantic-store/semantic-store.md"
+            "filename": "../../6-semantic-store/semantic-store-sandbox.md"
         },
         {
             "title": "Sample Application",
-            "filename": "../../7-sample-application/sample-application.md"
+            "filename": "../../7-sample-application/sample-application-sandbox.md"
         },
         {
             "title": "Model Optimization",

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Use this quiz to confirm that you can explain the resources and runtime flow behind the Example Motors support agent.
+Use this quiz to review the Example Motors support agent flow.
 
 Estimated Time: 10 minutes
 
@@ -10,17 +10,17 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 
-- Check your understanding of the workshop architecture
-- Confirm which OCI resources power each app capability
-- Review the environment variables required by the sample app
-- Review the security and model-routing behavior
+- Check your understanding of the workshop architecture.
+- Confirm which OCI resources power each app feature.
+- Review the variables required by the sample app.
+- Review ApplyGuardrails checks and model routing.
 
 ### Prerequisites
 
 This lab assumes you have:
 
-- Completed all previous labs
-- Run the sample app successfully
+- Completed all previous labs.
+- Run the sample app successfully.
 
 ## Task 1: Answer the quiz questions
 
@@ -35,7 +35,7 @@ This lab assumes you have:
     </copy>
     ```
 
-2. Which resource stores the infotainment pairing guide PDF before ingestion?
+2. Which resource stores the pairing guide PDF before upload?
 
     ```text
     <copy>
@@ -57,7 +57,7 @@ This lab assumes you have:
     </copy>
     ```
 
-4. Which resource enables natural language questions over database tables?
+4. Which resource lets users ask natural language questions over database tables?
 
     ```text
     <copy>
@@ -112,25 +112,25 @@ This lab assumes you have:
     </copy>
     ```
 
-9. Which guardrail prevents the model from returning service records for another customer?
+9. Which app variable identifies the compartment for OCI ApplyGuardrails requests?
 
     ```text
     <copy>
-    A. The app injects the current customer_id and rejects SQL without the matching customer_id filter
-    B. The bucket is private
-    C. The API key fingerprint contains the customer_id
-    D. The vector store file count is 1
+    A. OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID
+    B. OCI_GENAI_VECTOR_STORE_IDS
+    C. OCI_ADB_MCP_PASSWORD_SECRET_OCID
+    D. OCI_SQL_TIMEOUT_SECONDS
     </copy>
     ```
 
-10. Which question should the assistant refuse?
+10. What does the app do when OCI ApplyGuardrails returns a prompt-injection score greater than or equal to the configured threshold?
 
     ```text
     <copy>
-    A. How do I pair my phone with the infotainment system?
-    B. What service did my vehicle receive?
-    C. Show me service records for another customer.
-    D. What warranty type covered my appointment?
+    A. Sends the prompt to the cheaper model
+    B. Stores the prompt in Object Storage
+    C. Blocks the prompt before calling the chat model
+    D. Retries the prompt through ADB MCP Server
     </copy>
     ```
 

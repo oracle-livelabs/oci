@@ -24,6 +24,30 @@ This lab assumes you have:
 
 ## Task 1: Select a compartment and region
 
+Please Keep a text file handy with the following configuration parameters and update it as we create new resources (we will update and reference values from this file as we progress through the workshop):
+
+```text
+<copy>
+Workshop compartment name:
+Workshop compartment OCID:
+Workshop region:
+Workshop users group name: example-motors-workshop-users
+Vector store connector dynamic group name: generativeaivectorconnector
+Semantic store dynamic group name: generativeaisemanticstore
+Project OCID:
+Object Storage bucket: car-manufacturer-manuals
+Unstructured vector store: car-operation
+Unstructured vector store OCID:
+Autonomous AI Database OCID:
+Database user: ADMIN
+Vault OCID:
+Database Tools enrichment connection OCID:
+Database Tools query connection OCID:
+ADMIN password secret OCID:
+Structured semantic store OCID:
+</copy>
+```
+
 1. Login to the OCI Console.
 
 2. Create or select a compartment for this workshop.
@@ -46,6 +70,7 @@ This lab assumes you have:
 
     - Click **Create compartment**.
     - Confirm that the new compartment appears in the compartment list.
+    - Copy the compartment's name and OCID to the text file to the `Workshop compartment name` and `Workshop compartment OCID` parameters respectively.
 
     > **Note**: Create **every** workshop resource in this same compartment.
 
@@ -54,29 +79,6 @@ This lab assumes you have:
     Select a region where the Generative AI models you plan to use are available. Review [OCI Generative AI model endpoint regions](https://docs.oracle.com/en-us/iaas/Content/generative-ai/model-endpoint-regions.htm). Choose a region that exposes the required models, then select it from the Console region menu. The sample app used in this lab defaults to models which are available in the Ashburn region. If you select a different region, please remember to update the application `.env` file to use models which are available in your selected region according to the link above.
 
     > **Note**: Create **every** workshop resource in this same region.
-
-4. Keep a text file handy with the following configuration parameters and update it as we create new resources (we will update and reference values from this file as we progress through the workshop):
-
-    ```text
-    <copy>
-    Workshop compartment name:
-    Workshop region:
-    Workshop users group name: example-motors-workshop-users
-    Vector store connector dynamic group name: generativeaivectorconnector
-    Semantic store dynamic group name: generativeaisemanticstore
-    Project OCID:
-    Object Storage bucket: car-manufacturer-manuals
-    Unstructured vector store: car-operation
-    Unstructured vector store OCID:
-    Autonomous AI Database OCID:
-    Database user: ADMIN
-    Vault OCID:
-    Database Tools enrichment connection OCID:
-    Database Tools query connection OCID:
-    ADMIN password secret OCID:
-    Structured semantic store OCID:
-    </copy>
-    ```
 
 ## Task 2: Create IAM dynamic groups and policies
 

@@ -12,7 +12,7 @@ In this lab, you will:
 
 - Extract the sample app archive
 - Configure OCI API key authentication
-- Configure the sample app environment
+- Configure the sample app environment with the sandbox resource list
 - Install Python dependencies
 - Run the Streamlit app
 - Test the vector store, database retrieval, and image prompts
@@ -23,6 +23,8 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed the Semantic Store lab
+- Received the sandbox resource list for your environment
+- Recorded the `Project OCID`, `Unstructured vector store OCID`, and `Structured semantic store OCID` values created in the previous labs
 
 ## Task 1: Extract the sample application
 
@@ -106,7 +108,7 @@ This lab assumes you have:
 
 1. Select the **Tokens and keys** tab.
 
-1. Under API keys click **Add API key**
+1. Under API keys click **Add API key**.
 
     ![Profile](./images/add-api-key.png)
 
@@ -118,13 +120,13 @@ This lab assumes you have:
 
 1. Click **Add**.
 
-1. Copy the generated configuration file preview. Save this information in your text file.
+1. Copy the generated configuration file preview. Save this information in your notes.
 
     ![Profile](./images/configuration-file-preview.png)
 
 1. Back in the terminal screen, create the `.oci` directory.
 
-    > **Note:** If you already have an `.oci` folder and a `config` file in it, then you can re-use this file . Skip the creation steps and jump to the part where we update the file. Keep the updates at the end of the file as not to overwrite the existing configuration.
+    > **Note:** If you already have an `.oci` folder and a `config` file in it, then you can re-use this file. Skip the creation steps and jump to the part where we update the file. Keep the updates at the end of the file so you do not overwrite the existing configuration.
 
     On Mac:
 
@@ -144,7 +146,7 @@ This lab assumes you have:
 
 1. Move the downloaded private key into the `.oci` directory and name it `oci_api_key.pem`.
 
-    On Mac, replace `<downloaded-private-key-file>` with the path to the downloaded key (typically would be similar to: `~/Downloads/<username>-<date and time>.pem`):
+    On Mac, replace `<downloaded-private-key-file>` with the path to the downloaded key. It is typically similar to `~/Downloads/<username>-<date-and-time>.pem`.
 
     ```bash
     <copy>
@@ -153,7 +155,7 @@ This lab assumes you have:
     </copy>
     ```
 
-    On Windows PowerShell, replace `<downloaded-private-key-file>` with the path to the downloaded key (typically would be similar to: `C:\Users\<user name>\Downloads\api-key-date.key`):
+    On Windows PowerShell, replace `<downloaded-private-key-file>` with the path to the downloaded key. It is typically similar to `C:\Users\<user name>\Downloads\api-key-date.key`.
 
     ```powershell
     <copy>
@@ -179,7 +181,7 @@ This lab assumes you have:
     </copy>
     ```
 
-1. Paste the configuration file preview into the file. If you already have content in the file, make sure to paste the new configuration at the end of the file. In addition, if you already have a `DEFAULT` profile in this file, rename the profile (for example `[HYBRIDHOL]`) and remember to change the profile name in the application's `.env` file.
+1. Paste the configuration file preview into the file. If you already have content in the file, paste the new configuration at the end of the file. In addition, if you already have a `DEFAULT` profile in this file, rename the profile, for example `[HYBRIDHOL]`, and remember to change the profile name in the app `.env` file.
 
 1. Update the `key_file` line to point to the private key you saved.
 
@@ -204,7 +206,7 @@ This lab assumes you have:
     On Mac:
 
     - Ctrl + X
-    - Answer the questions with: Y (for Yes)
+    - Answer the questions with: Y for Yes
     - Press Return
 
     On Windows:
@@ -269,11 +271,11 @@ This lab assumes you have:
     </copy>
     ```
 
-3. Open the parameter text file you updated throughout the previous labs.
+3. Open your sandbox resource list and the notes where you recorded the Enterprise AI OCIDs created in the previous labs.
 
-4. Open `.env` in your editor (either `nano` for Mac or `notepad` for Windows).
+4. Open `.env` in your editor, either `nano` for Mac or `notepad` for Windows.
 
-5. Replace the blank OCID values in `.env` with the values from your parameter text file.
+5. Replace the blank OCID values in `.env` with the values from your sandbox resource list and your workshop notes.
 
     ```text
     <copy>
@@ -286,7 +288,7 @@ This lab assumes you have:
     </copy>
     ```
 
-6. Set each region value to the `Workshop region` value from your parameter text file.
+6. Set each region value to the `Workshop region` value from your sandbox resource list.
 
     ```text
     <copy>
@@ -296,7 +298,7 @@ This lab assumes you have:
     </copy>
     ```
 
-7. Set the OCI config path and profile. Update the `OCI_CONFIG_PROFILE` **IF** you changed it from `DEFAULT`.
+7. Set the OCI config path and profile. Update the `OCI_CONFIG_PROFILE` if you changed it from `DEFAULT`.
 
     On Mac:
 
@@ -333,7 +335,7 @@ This lab assumes you have:
 
 1. Create a Python virtual environment.
 
-    > **Note:** Please make sure that you are in the `sample-app` folder.
+    > **Note:** Make sure that you are in the `sample-app` folder.
 
     On Mac:
 
@@ -439,7 +441,7 @@ This lab assumes you have:
     </copy>
     ```
 
-2. Watch the assistant status messages. Review the output in the terminal as it will outline the entire chain on tools the application is using to generate the response.
+2. Watch the assistant status messages. Review the output in the terminal as it will outline the entire chain of tools the application is using to generate the response.
 
     ![Service request console output](./images/service-request-console-output.png)
 
@@ -472,7 +474,7 @@ This lab assumes you have:
 
 1. Confirm that the app responds using the image contents.
 
-At this stage we have a running sample application which touches every part of our architecture. It queries our Unstructured Vector Store to retrieve information from our operation manuals, queries our database using the Semantic Store and the ADB MCP and interacts with the LLM managed by the OCI Enterprise AI service.
+At this stage we have a running sample application which touches every part of our architecture. It queries our Unstructured Vector Store to retrieve information from our operation manuals, queries our database using the Semantic Store and the ADB MCP, and interacts with the LLM managed by the OCI Enterprise AI service.
 
 You may now **proceed to the next lab**.
 
