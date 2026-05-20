@@ -8,43 +8,31 @@
         },
         {
             "title": "Get Started",
-            "filename": "../../2-get-started/get-started.md"
-        },
-        {
-            "title": "Setup",
-            "filename": "../../3-setup/setup.md"
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
             "title": "Unstructured RAG",
-            "filename": "../../4-unstructured-rag/unstructured-rag.md"
-        },
-        {
-            "title": "Service Database",
-            "filename": "../../5-service-database/service-database.md"
-        },
-        {
-            "title": "Database Tools and Vault",
-            "filename": "../../6-database-tools/database-tools.md"
+            "filename": "../../5-unstructured-rag/unstructured-rag.md"
         },
         {
             "title": "Semantic Store",
-            "filename": "../../7-semantic-store/semantic-store.md"
+            "filename": "../../6-semantic-store/semantic-store.md"
         },
         {
             "title": "Sample Application",
-            "filename": "../../8-sample-application/sample-application.md"
+            "filename": "../../7-sample-application/sample-application.md"
         },
         {
             "title": "Model Optimization",
-            "filename": "../../9-model-optimization/model-optimization.md"
+            "filename": "../../8-model-optimization/model-optimization.md"
         },
         {
             "title": "Security Guardrails",
-            "filename": "../../10-security-guardrails/security-guardrails.md"
+            "filename": "../../9-security-guardrails/security-guardrails.md"
         },
         {
             "title": "Quiz",
-            "filename": "../../11-quiz/quiz.md"
+            "filename": "../../10-quiz/quiz.md"
         },
         {
             "title": "Need Help?",
