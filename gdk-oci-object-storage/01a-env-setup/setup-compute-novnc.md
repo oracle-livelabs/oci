@@ -32,13 +32,13 @@ This lab assumes you have:
 
 3. Open up the hamburger menu in the top left corner.  Click **Developer Services**, and choose **Resource Manager > Stacks**. Choose the compartment in which you would like to install the stack. Click **Create Stack**.
 
-  ![Select Stacks](https://oracle-livelabs.github.io/common/images/console/developer-resmgr-stacks.png " ")
+    ![Select Stacks](https://oracle-livelabs.github.io/common/images/console/developer-resmgr-stacks.png " ")
 
-  ![Create Stack](./images/create-stack.png " ")
+    ![Create Stack](./images/create-stack.png " ")
 
 4. Select **My Configuration**, choose the **.Zip file** button, click the **Browse** link, and select the zip file that you downloaded or drag-n-drop for the file explorer.
 
-  ![Select zip file](./images/select-zip.png " ")
+    ![Select zip file](./images/select-zip.png " ")
 
 5. Click **Next**.
 
@@ -48,7 +48,7 @@ This lab assumes you have:
     - **Select Availability Domain:** Select an availability domain from the dropdown list.
     - **Need Remote Access via SSH?:** Keep the default as unchecked. You don't need SSH for this workshop.
 
-  ![Enter the configurations](./images/stack-main-config.png " ")
+    ![Enter the configurations](./images/stack-main-config.png " ")
 
     - **Use Flexible Instance Shape with Adjustable OCPU Count?:** Keep the default as checked.
     - **Instance Shape:** Keep the default, **VM.Standard.E4.Flex**, or select from the list of Flex shapes in the dropdown menu.
@@ -59,7 +59,7 @@ This lab assumes you have:
 
 8. Select **Run Apply** and click **Create**.
 
-  ![Run Apply](./images/run-apply.png " ")
+    ![Run Apply](./images/run-apply.png " ")
 
 9. Your stack is now created and the *Apply* action triggered is running to deploy your environment!
 
@@ -71,7 +71,7 @@ In the prior steps, we elected to trigger the *terraform apply action* on stack 
 
 1. Review the job output.
 
-  ![Job output](./images/job-output.png " ")
+    ![Job output](./images/job-output.png " ")
 
 2. Congratulations, your environment has been created!
 
@@ -83,11 +83,11 @@ For ease of execution of this workshop, your VM instance has been pre-configured
 
 1. Go to **Stack Details**, **Application Information** tab, and click on the remote desktop URL
 
-  ![Copy Remote Desktop URL](./images/copy-url.png " ")
+    ![Copy Remote Desktop URL](./images/copy-url.png " ")
 
 2. Paste the URL in a new browser tab.
 
-  ![New tab opened](./images/novnc-login.png " ")
+    ![New tab opened](./images/novnc-login.png " ")
 
 3. This should open the remote desktop in the browser. Close the  *Can't update Chrome* popup. From the **noVNC Settings** > **Scaling Mode** and select **Remote Resizing**.
 
