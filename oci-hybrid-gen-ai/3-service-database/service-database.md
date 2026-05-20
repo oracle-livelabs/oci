@@ -123,7 +123,7 @@ This lab assumes you have:
     Elapsed: 00:00:00.003
     ```
 
-## Task 5: Create the SQL execution tool
+## Task 3: Create the SQL execution tool
 
 In order for the ADB MCP server to retrieve data from the database for us, we need to provide it with a tool.
 

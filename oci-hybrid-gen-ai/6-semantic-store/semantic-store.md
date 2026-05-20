@@ -39,7 +39,7 @@ This lab assumes you have:
     Description: Example Motors service appointment semantic store
     Compartment: <workshop-compartment>
     Data source type: Structured data
-    Connection type: OCI Database too
+    Connection type: OCI Database tool
     </copy>
     ```
 

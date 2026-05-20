@@ -1,10 +1,10 @@
 {
-    "workshoptitle": "Build an OCI Hybrid GenAI Support Agent",
+    "workshoptitle": "Optimize your AI token usage and costs with OCI Enterprise AI",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
             "title": "Overview and Highlights",
-            "filename": "../../1-overview-and-highlights/overview-and-highlights-tenancy.md"
+            "filename": "../../1-overview-and-highlights/overview-and-highlights.md"
         },
         {
             "title": "Get Started",

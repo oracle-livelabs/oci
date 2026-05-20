@@ -148,7 +148,7 @@ This lab assumes you have:
 
 1. Copy the **Query** connection OCID and update the value for the `Database Tools query connection OCID` parameter.
 
-## Task 4: Validate connections
+## Task 3: Validate connections
 
 You are now going to validate that the connections have been configured correctly and provide access to the database.
 
@@ -168,7 +168,7 @@ You are now going to validate that the connections have been configured correctl
 
 5. Do the same for the `car-service-query` connection.
 
-## Task 5: Obtain the ADMIN password secret OCID
+## Task 4: Obtain the ADMIN password secret OCID
 
 The test app which you will use to test the solution needs to connect to the database. In order for the app to provide authentication information to establish this connection, we need to retrieve the ADMIN user password secret we created for our database connections.
 

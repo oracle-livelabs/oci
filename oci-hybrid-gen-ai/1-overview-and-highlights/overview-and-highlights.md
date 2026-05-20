@@ -1,4 +1,4 @@
-# Reduce AI Cost with Multi-Model Routing and OCI Enterprise AI
+# Optimize your AI token usage and costs with OCI Enterprise AI
 
 Estimated Workshop Time: 1 hour 20 minutes
 
