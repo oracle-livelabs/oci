@@ -21,25 +21,25 @@ In this lab, you will:
 1. In the same terminal in VS Code, run the following command(s).
 
 <if type="mn_run">
-   Use `mn:run` to build and start the application on port 8080.
+    Use `mn:run` to build and start the application on port 8080.
 
-	``` bash
-	<copy>
-	./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw mn:run -pl oci
-	</copy>
-	```
+    ``` bash
+    <copy>
+    ./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw mn:run -pl oci
+    </copy>
+    ```
 </if>
 
 <if type="jar">
-   Build an executable JAR file and then use `java -jar` to run it.
+    Build an executable JAR file and then use `java -jar` to run it.
 
-	``` bash
-	<copy>
-	./mvnw clean && ./mvnw install -pl lib -am && ./mvnw package -pl oci
+    ``` bash
+    <copy>
+    ./mvnw clean && ./mvnw install -pl lib -am && ./mvnw package -pl oci
 
-	MICRONAUT_ENVIRONMENTS=oraclecloud java -jar oci/target/oci-storage-demo-oci-1.0-SNAPSHOT.jar
-	</copy>
-	```
+    MICRONAUT_ENVIRONMENTS=oraclecloud java -jar oci/target/oci-storage-demo-oci-1.0-SNAPSHOT.jar
+    </copy>
+    ```
 </if>
 
 ## Task 2: Upload a picture
@@ -48,53 +48,53 @@ In this lab, you will:
 
 2. From the second terminal, send an HTTP POST request to the `/pictures/{userId}` endpoint to upload a picture to the bucket:
 
-	``` bash
-	<copy>
-	curl -i -F 'fileUpload=@test-data/pic1.jpg' http://localhost:8080/pictures/user1
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl -i -F 'fileUpload=@test-data/pic1.jpg' http://localhost:8080/pictures/user1
+    </copy>
+    ```
 
-   VS Code may prompt you to open the URL in a browser as shown below. Just click the **Configure Notifications** gear icon and then click **Don't Show Again**.
+    VS Code may prompt you to open the URL in a browser as shown below. Just click the **Configure Notifications** gear icon and then click **Don't Show Again**.
 
-   ![VS Code Ports](images/vscode-ports.png)
+    ![VS Code Ports](images/vscode-ports.png)
 
-   ![VS Code Don't Show Again](images/vscode-dont-show-again.png)
+    ![VS Code Don't Show Again](images/vscode-dont-show-again.png)
 
 3. Check the bucket contents. Go to the **OCI Console** >> **Storage** >> **Object Storage & Archive Storage** >> **Buckets** >> **Bucket Details** screen opened in the browser.
 
-   Refresh the screen and scroll down to the **Objects** list. You should see an object named _user1.jpg_.
+    Refresh the screen and scroll down to the **Objects** list. You should see an object named _user1.jpg_.
 
-   ![Objects List](images/objects-list-user1.png)
+    ![Objects List](images/objects-list-user1.png)
 
 ## Task 3: Download the picture
 
 1. From the second terminal in VS Code, send an HTTP GET request to the `/pictures/{userId}` endpoint to download the picture from the bucket:
 
-	``` bash
-	<copy>
-	curl http://localhost:8080/pictures/user1 -O -J
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl http://localhost:8080/pictures/user1 -O -J
+    </copy>
+    ```
 
 2. You should see the profile picture _user1.jpg_ downloaded in the _LAB_ directory in VS Code. Click the picture to view it.
 
-   ![View Picture](./images/view-pic-user1.jpg)
+    ![View Picture](./images/view-pic-user1.jpg)
 
 ## Task 4: Delete the picture
 
 1. From the second terminal in VS Code, send an HTTP DELETE request to the `/pictures/{userId}` endpoint to delete the picture from the bucket:
 
-	``` bash
-	<copy>
-	curl -X DELETE http://localhost:8080/pictures/user1
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl -X DELETE http://localhost:8080/pictures/user1
+    </copy>
+    ```
 
 2. Check the bucket contents. Go to the **OCI Console** >> **Storage** >> **Object Storage & Archive Storage** >> **Buckets** >> **Bucket Details** screen opened in the browser.
 
-   Refresh the screen and scroll down to the **Objects** list. The object _user1.jpg_ has been deleted from the bucket.
+    Refresh the screen and scroll down to the **Objects** list. The object _user1.jpg_ has been deleted from the bucket.
 
-   ![Objects List](./images/objects-list-empty.png)
+    ![Objects List](./images/objects-list-empty.png)
 
 ## Task 5: Stop the application
 
