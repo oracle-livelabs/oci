@@ -17,18 +17,10 @@ In this lab, you will:
 - Create and run a data sync connector
 - Record the project and vector store OCIDs for the sample app
 
-### Prerequisites
-
-This lab assumes you have:
-
-- Completed the Get Started lab
-- Received the sandbox resource list for your environment
-- Access to the selected region and workshop compartment
-- Access to the pre-created Object Storage bucket that contains the infotainment pairing guide PDF
-
 ## Task 1: Review the sandbox resource list
 
-The sandbox environment has already provisioned the OCI foundation resources for this workshop. Keep the sandbox resource list open while you work through the labs. You will use it for existing resource names and OCIDs, and you will add the Enterprise AI OCIDs that you create.
+The sandbox environment has already provisioned the OCI foundation resources for this workshop. Create a text file in your favorite editor and copy the following list of parameters into the file.
+Update the parameters for which the sandbox environment provided values. You will update the rest of the parameters as you progress through the workshop.
 
 1. Confirm that your sandbox resource list includes these values:
 
@@ -44,13 +36,7 @@ The sandbox environment has already provisioned the OCI foundation resources for
     Database Tools enrichment connection OCID:
     Database Tools query connection OCID:
     ADMIN password secret OCID:
-    </copy>
-    ```
 
-2. Add these blank values to your notes. You will populate them during this lab and the next lab:
-
-    ```text
-    <copy>
     Project OCID:
     Unstructured vector store: car-operation
     Unstructured vector store OCID:
@@ -58,7 +44,7 @@ The sandbox environment has already provisioned the OCI foundation resources for
     </copy>
     ```
 
-3. Confirm that the OCI Console region matches the `Workshop region` value from the sandbox resource list.
+1. Confirm that the OCI Console region matches the `Workshop region` value from the sandbox resource list.
 
 ## Task 2: Create the OCI Enterprise AI project
 
