@@ -21,7 +21,7 @@
     {
       "title": "Environment Setup",
       "description": "How to provision the workshop environment and connect to it",
-      "filename": "https://livelabs.oracle.com/cdn/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
+      "filename": "../../01a-env-setup/setup-compute-novnc.md"
     },
     {
       "title": "Get Started with noVNC Remote Desktop",
