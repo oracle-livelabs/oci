@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create the unstructured retrieval source for the Example Motors support agent. The sandbox already includes an Object Storage bucket with the infotainment pairing guide PDF. You will create an OCI Enterprise AI project, create an unstructured vector store, and sync the existing PDF into the vector store. The app will query the vector store using the OCI Enterprise AI Responses API by leveraging the built in `file_search` tool.
+In this lab, you create the unstructured retrieval source for the Example Motors support agent. Your environment already includes an Object Storage bucket with instructions for Example Motor's infotainment bluetooth pairing guide in PDF format. You will create an OCI Enterprise AI project, create an unstructured vector store, and sync the existing PDF into the vector store. The app will query the vector store using the OCI Enterprise AI Responses API by leveraging the built in `file_search` tool.
 
 Estimated Time: 20 minutes
 
@@ -22,33 +22,31 @@ In this lab, you will:
 The sandbox environment has already provisioned the OCI foundation resources for this workshop. Create a text file in your favorite editor and copy the following list of parameters into the file.
 Update the parameters for which the sandbox environment provided values. You will update the rest of the parameters as you progress through the workshop.
 
-1. Confirm that your sandbox resource list includes these values:
+```text
+<copy>
+Workshop compartment name:
+Workshop compartment OCID:
+Workshop region:
+Object Storage bucket: car-manufacturer-manuals
+Autonomous AI Database OCID:
+Database user: ADMIN
+Vault OCID:
+Database Tools enrichment connection OCID:
+Database Tools query connection OCID:
+ADMIN password secret OCID:
 
-    ```text
-    <copy>
-    Workshop compartment name:
-    Workshop compartment OCID:
-    Workshop region:
-    Object Storage bucket: car-manufacturer-manuals
-    Autonomous AI Database OCID:
-    Database user: ADMIN
-    Vault OCID:
-    Database Tools enrichment connection OCID:
-    Database Tools query connection OCID:
-    ADMIN password secret OCID:
-
-    Project OCID:
-    Unstructured vector store: car-operation
-    Unstructured vector store OCID:
-    Structured semantic store OCID:
-    </copy>
-    ```
-
-1. Confirm that the OCI Console region matches the `Workshop region` value from the sandbox resource list.
+Project OCID:
+Unstructured vector store: car-operation
+Unstructured vector store OCID:
+Structured semantic store OCID:
+</copy>
+```
 
 ## Task 2: Create the OCI Enterprise AI project
 
 OCI Generative AI projects organize conversations and responses under a shared set of settings. In a project, you define data retention periods, enable long-term memory, and enable short-term memory compaction.
+
+When an application makes API requests against the OCI Enterprise AI service's responses/conversations APIs, referencing the project in the API call tells the service to use this the configuration defined in the project for this call.
 
 Each project supports separate lifecycle and compliance boundaries. Reference the project OCID in API and SDK calls to apply project settings at runtime.
 
@@ -129,7 +127,7 @@ The unstructured vector store scans files, splits them into chunks, embeds the c
 
 5. Click **Create**.
 
-6. Wait until the vector store status is `Completed`.
+6. Wait until the vector store status is `Completed`. The vector store might take a short while to appear on the list.
 
     ![Created vector store in completed state](images/vector-store-created.png)
 
@@ -151,10 +149,12 @@ The data sync connector facilitates the processing pipeline where files are read
 
 3. Data sync connector configuration:
 
-    - Name: car-manuals
-    - Compartment: Select the workshop compartment from your sandbox resource list.
-    - Bucket: Select the bucket from your sandbox resource list. The default workshop bucket name is `car-manufacturer-manuals`.
-    - Turn **Select all in bucket** on.
+    ```text
+    Name: car-manuals
+    Compartment: Select the workshop compartment from your sandbox resource list.
+    Bucket: Select the bucket from your sandbox resource list. The default workshop bucket name is `car-manufacturer-manuals`.
+    Turn Select all in bucket on.
+    ```
 
     ![Select all files in bucket for data sync connector](images/select-all-files-in-bucket.png)
 
@@ -180,15 +180,17 @@ The data sync connector facilitates the processing pipeline where files are read
 
 10. Click **Perform**.
 
-11. Wait until the data sync job reaches a completed state.
+11. Wait until the data sync job reaches a **Succeeded** state.
 
     ![Performed data sync job created](images/perform-data-sync-created.png)
 
 12. Return to the vector store details page.
 
-13. Confirm that the file count is `1`.
+13. Confirm that the completed file count is `1`.
 
-At this point, we have populated our vector store with the PDF in the sandbox Object Storage bucket. The Data Sync Job read the file, broke it into chunks, embedded each chunk for search, and stored the results in the vector store. The service manages this process so your code does not have to.
+    ![Processed file count](images/processed-file-count.png)
+
+At this point, we have populated our vector store with the PDF stored in the Object Storage bucket. The Data Sync Job read the file, broke it into chunks, embedded each chunk for search, and stored the results in the vector store. The service manages this process so your code does not have to.
 
 You may now **proceed to the next lab**.
 

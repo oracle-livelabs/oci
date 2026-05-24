@@ -20,6 +20,15 @@ You will use a hybrid inference pattern:
 
 By the end of the workshop, you will understand how multi-model routing helps an AI application stay useful for users while controlling inference cost.
 
+## Prerequisites
+
+In order to successfully complete this workshop you will need:
+
+- General familiarity with the OCI console
+- Have python installed on your computer
+- Be comfortable with running terminal/command line commands to edit text files, create folders and unzip files
+- Be able to download the zip archive for the sample application, unzip it and run it as a python script
+
 ## Solution Architecture
 
 The workshop application uses OCI Enterprise AI as the foundation for a dealership support assistant.

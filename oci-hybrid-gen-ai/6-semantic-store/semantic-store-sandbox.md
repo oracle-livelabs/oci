@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create the structured semantic store for service appointment questions. The sandbox already includes the Autonomous AI Database, schema, seed data, Vault secret, and Database Tools connections. The semantic store connects OCI Enterprise AI to that database through the provided Database Tools connections. The sample app sends customer-scoped natural language questions to the NL2SQL API for this semantic store, validates the generated SQL, and executes it through the ADB MCP Server.
+In this lab, you create the structured semantic store for Example Motor's service appointment questions. The environment already includes the Autonomous AI Database, schema, seed data, Vault secret, and Database Tools connections. The semantic store connects OCI Enterprise AI to that database through the provided Database Tools connections. The sample app sends natural language questions to the NL2SQL API for this semantic store, validates the generated SQL, and retrieves the data through the ADB MCP Server.
 
 Estimated Time: 20 minutes
 
@@ -20,9 +20,6 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed the Unstructured RAG lab
-- Received the sandbox resource list for your environment
-- Access to the selected region and workshop compartment
-- Access to the pre-created Autonomous AI Database, schema, data, Vault secret, and Database Tools connections
 
 ## Task 1: Create the structured semantic store
 
@@ -52,7 +49,6 @@ This lab assumes you have:
 
     ```text
     <copy>
-    Connection type: OCI Database tool
     Enrichment connection ID: <Database Tools enrichment connection OCID>
     Querying connection id: <Database Tools query connection OCID>
     Schema: ADMIN

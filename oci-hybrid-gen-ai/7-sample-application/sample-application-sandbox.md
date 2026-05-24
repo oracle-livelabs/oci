@@ -23,8 +23,6 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed the Semantic Store lab
-- Received the sandbox resource list for your environment
-- Recorded the `Project OCID`, `Unstructured vector store OCID`, and `Structured semantic store OCID` values created in the previous labs
 
 ## Task 1: Extract the sample application
 
@@ -46,8 +44,6 @@ This lab assumes you have:
 
 1. In the terminal, go to the directory where you downloaded `sample-app.zip` (typically `Downloads`).
 
-    ![Terminal at download folder](./images/terminal-downloads.png)
-
     On Mac:
 
     ```bash
@@ -56,13 +52,17 @@ This lab assumes you have:
     </copy>
     ```
 
+    ![Terminal at download folder](./images/terminal-downloads.png)
+
     On Windows:
 
-    ```bash
+    ```powershell
     <copy>
-    cd %USERPROFILE%\Downloads
+    cd $HOME\Downloads
     </copy>
     ```
+
+    ![Powershell at download folder](./images/windows-powershell-downloads.png)
 
 1. Extract the sample application archive.
 
@@ -74,6 +74,8 @@ This lab assumes you have:
     </copy>
     ```
 
+    ![Terminal unzip sample app](./images/terminal-unzip-sample-app.png)
+
     On Windows PowerShell:
 
     ```powershell
@@ -81,6 +83,8 @@ This lab assumes you have:
     Expand-Archive -Path .\sample-app.zip -DestinationPath . -Force
     </copy>
     ```
+
+    ![Powershell unzip the sample app](./images/windows-powershell-unzip-sample-app.png)
 
 1. Confirm that the extraction created the `sample-app` directory.
 
@@ -110,19 +114,19 @@ This lab assumes you have:
 
 1. Under API keys click **Add API key**.
 
-    ![Profile](./images/add-api-key.png)
+    ![Add API key](./images/add-api-key.png)
 
 1. Select **Generate API key pair**.
 
 1. Click **Download private key** and save the private key file.
 
-    ![Profile](./images/generate-api-key-pair.png)
+    ![Generate API key pair](./images/generate-api-key-pair.png)
 
 1. Click **Add**.
 
 1. Copy the generated configuration file preview. Save this information in your notes.
 
-    ![Profile](./images/configuration-file-preview.png)
+    ![Configuration file preview](./images/configuration-file-preview.png)
 
 1. Back in the terminal screen, create the `.oci` directory.
 
@@ -144,6 +148,8 @@ This lab assumes you have:
     </copy>
     ```
 
+    ![Create new OCI folder in powershell](./images/window-powershell-create-oci-folder.png)
+
 1. Move the downloaded private key into the `.oci` directory and name it `oci_api_key.pem`.
 
     On Mac, replace `<downloaded-private-key-file>` with the path to the downloaded key. It is typically similar to `~/Downloads/<username>-<date-and-time>.pem`.
@@ -155,15 +161,17 @@ This lab assumes you have:
     </copy>
     ```
 
-    On Windows PowerShell, replace `<downloaded-private-key-file>` with the path to the downloaded key. It is typically similar to `C:\Users\<user name>\Downloads\api-key-date.key`.
+    On Windows PowerShell, replace `<downloaded-private-key-file>` with downloaded key file name. It is typically similar to `<user-name>-<date-time>.key`.
 
     ```powershell
     <copy>
-    Move-Item <downloaded-private-key-file> $HOME\.oci\oci_api_key.pem
+    Move-Item $HOME\Downloads\<downloaded-private-key-file> $HOME\.oci\oci_api_key.pem
     </copy>
     ```
 
 1. Open the OCI config file.
+
+    As mentioned above, if this file already exists, scroll down past all of the existing values and take care not to change or overwrite anything existing in the file.
 
     On Mac:
 
@@ -173,33 +181,49 @@ This lab assumes you have:
     </copy>
     ```
 
+    ![Edit the OCI config file](./images/terminal-edit-config-file.png)
+
+    Example of a pre-existing file:
+
+    ![Example of an existing config file edited with nano](./images/terminal-config-file.png)
+
     On Windows PowerShell:
 
     ```powershell
     <copy>
-    notepad $HOME\.oci\config
+    notepad $HOME\.oci\config.
     </copy>
     ```
 
-1. Paste the configuration file preview into the file. If you already have content in the file, paste the new configuration at the end of the file. In addition, if you already have a `DEFAULT` profile in this file, rename the profile, for example `[HYBRIDHOL]`, and remember to change the profile name in the app `.env` file.
+    > **Note:** Please pay attention to the dot at the end of the file name! If we didn't add it at the end of the file name, Notepad would create a file called config.txt by default. Also, if notepad is asking if you wish to create a new file, click **Yes**.
 
-1. Update the `key_file` line to point to the private key you saved.
+1. Paste the configuration file preview into the file. If you already have content in the file, paste the new configuration at the end of the file. In addition, if you already have a `DEFAULT` profile in this file, rename this new profile, for example to: `[HYBRIDHOL]`, and remember to change the profile name in the app `.env` file.
+
+    ![Edit the config file in the termina](./images/terminal-edit-config-file2.png)
+
+    ![Editing OCI config file with notepad](./images/notepad-edit-config-file.png)
+
+1. Update the `key_file` line to point to the private key we've downloaded and moved to the `.oci` folder.
 
     On Mac:
 
     ```text
     <copy>
-    key_file=/Users/<your-user-name>/.oci/oci_api_key.pem
+    key_file=~/.oci/oci_api_key.pem
     </copy>
     ```
+
+    ![Editing the key file path](./images/terminal-edit-key-file-path.png)
 
     On Windows:
 
     ```text
     <copy>
-    key_file=C:\Users\<your-user-name>\.oci\oci_api_key.pem
+    key_file=%HOME%\.oci\oci_api_key.pem
     </copy>
     ```
+
+    ![Editing the key file path](./images/notepad-edit-key-file-path.png)
 
 1. Save the file.
 
@@ -213,8 +237,6 @@ This lab assumes you have:
 
     - Ctrl + S
 
-    ![Edit the OCI config file](./images/edit-config-file.png)
-
 1. Confirm that the config file exists.
 
     On Mac:
@@ -225,6 +247,8 @@ This lab assumes you have:
     </copy>
     ```
 
+    ![Verify files in terminal](./images/terminal-verify-files.png)
+
     On Windows PowerShell:
 
     ```powershell
@@ -232,6 +256,8 @@ This lab assumes you have:
     Get-ChildItem $HOME\.oci\config, $HOME\.oci\oci_api_key.pem
     </copy>
     ```
+
+    ![Windows verify files](./images/windows-verify-files.png)
 
 ## Task 3: Create the app environment file
 
@@ -278,44 +304,50 @@ This lab assumes you have:
 5. Replace the blank OCID values in `.env` with the values from your sandbox resource list and your workshop notes.
 
     ```text
-    <copy>
     OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID=<Workshop compartment OCID>
     OCI_GENAI_PROJECT_OCID=<Project OCID>
     OCI_GENAI_VECTOR_STORE_IDS=<Unstructured vector store OCID>
     OCI_ADB_DATABASE_OCID=<Autonomous AI Database OCID>
     OCI_ADB_MCP_PASSWORD_SECRET_OCID=<ADMIN password secret OCID>
     OCI_GENAI_SEMANTIC_STORE_OCID=<Structured semantic store OCID>
-    </copy>
     ```
 
 6. Set each region value to the `Workshop region` value from your sandbox resource list.
 
     ```text
-    <copy>
     OCI_ADB_MCP_REGION=<Workshop region>
     OCI_ADB_MCP_PASSWORD_SECRET_REGION=<Workshop region>
     OCI_GENAI_REGION=<Workshop region>
-    </copy>
     ```
 
-7. Set the OCI config path and profile. Update the `OCI_CONFIG_PROFILE` if you changed it from `DEFAULT`.
+7. Set the OCI config path and profile. Update the `OCI_CONFIG_PROFILE` if you changed it from `DEFAULT`. Please note that in this file, we have to use the full path of your home directory.
 
     On Mac:
 
+    If you don't know your home directory, the following two commands will print the folder to the screen. You can copy the full folder name to the `.env` file and append `/.oci/config`.
+
     ```text
-    <copy>
-    OCI_CONFIG_FILE=~/.oci/config
+    cd ~
+    pwd
+    ```
+
+    ```text
+    OCI_CONFIG_FILE=/Users/<user-name>/.oci/config
     OCI_CONFIG_PROFILE=DEFAULT
-    </copy>
     ```
 
     On Windows:
 
+    If you don't know your home directory, the following two commands will print the folder to the screen. You can copy the full folder name to the `.env` file and append `\.oci\config`.
+
     ```text
-    <copy>
-    OCI_CONFIG_FILE=C:\Users\<your-user-name>\.oci\config
+    cd $HOME
+    pwd
+    ```
+
+    ```text
+    OCI_CONFIG_FILE=c:\Users\<user name>\.oci\config
     OCI_CONFIG_PROFILE=DEFAULT
-    </copy>
     ```
 
 8. Keep the advanced defaults unless your workshop region requires different model IDs.
@@ -329,7 +361,15 @@ This lab assumes you have:
     </copy>
     ```
 
-9. Save `.env`.
+    End result on Mac:
+
+    ![Terminal edit .env file](./images/termina-edit-dot-env.png)
+
+    End result on Windows:
+
+    ![Notepad edit .env file](./images/notepad-edit-dot-env.png)
+
+9. Save `.env` and exist the file editor.
 
 ## Task 4: Install dependencies
 
@@ -378,6 +418,14 @@ This lab assumes you have:
     Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
     </copy>
     ```
+
+    On Mac:
+
+    ![Setup venv on mac](./images/terminal-setup-venv.png)
+
+    Windows:
+
+    ![Setup venv on windows](./images/windows-setup-venv.png)
 
 3. Install the dependencies.
 
@@ -460,7 +508,7 @@ This lab assumes you have:
 
 ## Task 8: Test an image prompt
 
-1. Download the [sample service receipt image](/8-model-optimization/files/example-motors-service-receipt.png).
+1. Save the [sample service receipt image](/8-model-optimization/files/example-motors-service-receipt.png) to your computer (usually done with Cmd + S on Mac or Ctrl + S on Windows).
 
 1. In the chat input, attach the downloaded image and add the following prompt:
 
