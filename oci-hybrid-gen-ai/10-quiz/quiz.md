@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Use this quiz to review the Example Motors support agent flow.
+Use this scored quiz to review the Example Motors support agent flow.
 
 Estimated Time: 10 minutes
 
@@ -12,7 +12,7 @@ In this lab, you will:
 
 - Check your understanding of the workshop architecture.
 - Confirm which OCI resources power each app feature.
-- Review the variables required by the sample app.
+- Review the OCI resources used by the sample app.
 - Review ApplyGuardrails checks and model routing.
 
 ### Prerequisites
@@ -22,138 +22,85 @@ This lab assumes you have:
 - Completed all previous labs.
 - Run the sample app successfully.
 
-## Task 1: Answer the quiz questions
+## Task 1: Complete the quiz
 
-1. Which resource organizes OCI Generative AI settings for the app and goes to the Responses API?
+1. Select an answer for each question, then check your answer. A score of 80% passes the quiz.
 
-    ```text
-    <copy>
-    A. Object Storage bucket
-    B. OCI Enterprise AI project
-    C. Database Tools connection
-    D. Autonomous AI Database wallet
-    </copy>
+    ```quiz-config
+    passing: 80
     ```
 
-2. Which resource stores the pairing guide PDF before upload?
+    ```quiz score
+    Q: Which resource organizes app settings for the Responses API?
+    - Object Storage bucket.
+    * OCI Enterprise AI project.
+    - Database Tools connection.
+    - Autonomous AI Database wallet.
+    > The app keeps its Generative AI settings in an OCI Enterprise AI project.
 
-    ```text
-    <copy>
-    A. Object Storage bucket
-    B. Vault secret
-    C. Semantic store
-    D. OCI config file
-    </copy>
+    Q: Which resource stores the pairing guide PDF before upload?
+    * Object Storage bucket.
+    - Vault secret.
+    - Semantic store.
+    - OCI config file.
+    > Object Storage holds the PDF before upload for retrieval.
+
+    Q: Which OCI resource chunks, embeds, and stores manual content for semantic file search?
+    - Object Storage bucket.
+    * Unstructured vector store.
+    - Structured semantic store.
+    - Database Tools connection.
+    > The unstructured vector store processes manual files for semantic file search.
+
+    Q: Which resource supports natural language questions over database tables?
+    - Unstructured vector store.
+    * Structured semantic store.
+    - Object Storage namespace.
+    - Streamlit session state.
+    > The structured semantic store helps the app query database tables from natural language.
+
+    Q: Which service executes generated SQL against the Autonomous AI Database?
+    * ADB MCP Server.
+    - Object Storage data sync.
+    - OCI Cost Analysis.
+    - Cloud Shell.
+    > The app uses the ADB MCP Server to execute generated SQL.
+
+    Q: Which OCI resource stores customer, vehicle, appointment, and service item records?
+    - Object Storage bucket.
+    - OCI Vault.
+    * Autonomous AI Database.
+    - Unstructured vector store.
+    > Autonomous AI Database stores the structured dealership service data.
+
+    Q: Which OCI API generates chat responses and can use file search over the vector store?
+    * OCI Enterprise AI Responses API.
+    - OCI Object Storage API.
+    - OCI ApplyGuardrails API.
+    - OCI Cost Analysis API.
+    > The app uses the OCI Enterprise AI Responses API for chat responses and file search.
+
+    Q: Which OCI resource stores database credentials outside the app code?
+    - Structured semantic store.
+    * OCI Vault secret.
+    - Object Storage data sync connector.
+    - OCI Enterprise AI project.
+    > OCI Vault secrets keep database credentials out of the application code.
+
+    Q: Which OCI API screens user prompts for prompt-injection risk?
+    - OCI Enterprise AI Responses API.
+    - OCI NL2SQL API.
+    * OCI ApplyGuardrails API.
+    - OCI Object Storage API.
+    > OCI ApplyGuardrails checks prompts before the app calls the chat model.
+
+    Q: What does the app do when ApplyGuardrails flags prompt injection at or above the threshold?
+    - Sends the prompt to the cheaper model.
+    - Stores the prompt in Object Storage.
+    * Blocks the prompt before calling the chat model.
+    - Retries the prompt through ADB MCP Server.
+    > The app blocks prompt-injection attempts before it calls the chat model.
     ```
-
-3. Which app environment variable contains the unstructured vector store ID?
-
-    ```text
-    <copy>
-    A. OCI_GENAI_PROJECT_OCID
-    B. OCI_GENAI_VECTOR_STORE_IDS
-    C. OCI_GENAI_SEMANTIC_STORE_OCID
-    D. OCI_ADB_DATABASE_OCID
-    </copy>
-    ```
-
-4. Which resource lets users ask natural language questions over database tables?
-
-    ```text
-    <copy>
-    A. Unstructured vector store
-    B. Structured semantic store
-    C. Object Storage namespace
-    D. Streamlit session state
-    </copy>
-    ```
-
-5. Which service executes the generated SQL against the Autonomous AI Database for the app?
-
-    ```text
-    <copy>
-    A. ADB MCP Server
-    B. Object Storage data sync
-    C. OCI Cost Analysis
-    D. Cloud Shell
-    </copy>
-    ```
-
-6. Why does the database seed include customers with IDs 1 through 10?
-
-    ```text
-    <copy>
-    A. The semantic store requires exactly 10 rows
-    B. The app randomly assigns each Streamlit session a customer_id from 1 through 10
-    C. Object Storage indexes only 10 objects
-    D. Vault secrets require exactly 10 entries
-    </copy>
-    ```
-
-7. What happens after you uncomment the routing lines in `sample-app/llm.py`?
-
-    ```text
-    <copy>
-    A. All prompts use the cheaper model
-    B. Text-only prompts use OCI_GENAI_CHEAPER_MODEL and image prompts stay on OCI_GENAI_MODEL
-    C. The app stops image prompts
-    D. The app stops SQL retrieval
-    </copy>
-    ```
-
-8. Which variable should contain the Vault secret OCID for the database password?
-
-    ```text
-    <copy>
-    A. OCI_ADB_MCP_PASSWORD_SECRET_OCID
-    B. OCI_ADB_MCP_PASSWORD
-    C. OCI_GENAI_REGION
-    D. OCI_SQL_MAX_ROWS
-    </copy>
-    ```
-
-9. Which app variable identifies the compartment for OCI ApplyGuardrails requests?
-
-    ```text
-    <copy>
-    A. OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID
-    B. OCI_GENAI_VECTOR_STORE_IDS
-    C. OCI_ADB_MCP_PASSWORD_SECRET_OCID
-    D. OCI_SQL_TIMEOUT_SECONDS
-    </copy>
-    ```
-
-10. What does the app do when OCI ApplyGuardrails returns a prompt-injection score greater than or equal to the configured threshold?
-
-    ```text
-    <copy>
-    A. Sends the prompt to the cheaper model
-    B. Stores the prompt in Object Storage
-    C. Blocks the prompt before calling the chat model
-    D. Retries the prompt through ADB MCP Server
-    </copy>
-    ```
-
-## Task 2: Check your answers
-
-1. Compare your answers with the answer key.
-
-    ```text
-    <copy>
-    1: B
-    2: A
-    3: B
-    4: B
-    5: A
-    6: B
-    7: B
-    8: A
-    9: A
-    10: C
-    </copy>
-    ```
-
-2. Review any lab where your answer did not match the key.
 
 ## Acknowledgements
 

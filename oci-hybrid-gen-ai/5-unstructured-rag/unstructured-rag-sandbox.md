@@ -50,15 +50,17 @@ When an application makes API requests against the OCI Enterprise AI service's r
 
 Each project supports separate lifecycle and compliance boundaries. Reference the project OCID in API and SDK calls to apply project settings at runtime.
 
+1. Make sure to select the sandbox region if it is not selected by default.
+
 1. In the Console navigation menu, go to **Analytics & AI**, then **Generative AI**.
 
-2. Under **Generative AI**, select **Projects**.
+1. Under **Generative AI**, select **Projects**.
 
     ![Generative AI projects list](images/generative-ai-projects.png)
 
-3. Click **Create project**.
+1. Click **Create project**.
 
-4. Enter the following values:
+1. Enter the following values:
 
     ```text
     Name: car-manufacturer
@@ -70,15 +72,15 @@ Each project supports separate lifecycle and compliance boundaries. Reference th
 
     ![Create project basic information](images/create-project-basic-information.png)
 
-5. Configure response and conversation retention for the workshop.
+1. Configure response and conversation retention for the workshop.
 
     Use the console defaults unless your organization requires shorter retention.
 
     ![Project data retention options](images/project-data-retention.png)
 
-6. Click **Create**.
+1. Click **Create**.
 
-7. Open the project, copy the project OCID, and record it as the value for `Project OCID`.
+1. Open the project, copy the project OCID, and record it as the value for `Project OCID`.
 
 ## Task 3: Confirm the vehicle manuals bucket
 

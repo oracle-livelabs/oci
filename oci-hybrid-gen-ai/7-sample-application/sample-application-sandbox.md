@@ -24,7 +24,37 @@ This lab assumes you have:
 
 - Completed the Semantic Store lab
 
-## Task 1: Extract the sample application
+> **Note:** If your computer already has Python installed and `python3 --version` on Mac or `py -3 --version` on Windows shows a Python version, move to Task 2.
+
+## Task 1: Install Python
+
+1. Download Python from [python.org/downloads](https://www.python.org/downloads/).
+
+1. Run the installer.
+
+    On Mac, open the downloaded `.pkg` file and complete the installer. It adds `python3` to PATH for new terminal windows.
+
+    On Windows, select **Add python.exe to PATH**, click **Customize installation**, keep the defaults, click **Next**, select **Install Python for all users** and **Add Python to environment variables**, then click **Install**.
+
+1. Open a new terminal or PowerShell window and verify Python.
+
+    On Mac:
+
+    ```bash
+    <copy>
+    python3 --version
+    </copy>
+    ```
+
+    On Windows PowerShell:
+
+    ```powershell
+    <copy>
+    py -3 --version
+    </copy>
+    ```
+
+## Task 2: Extract the sample application
 
 1. Download [sample-app.zip](files/sample-app.zip).
 
@@ -104,7 +134,7 @@ This lab assumes you have:
     </copy>
     ```
 
-## Task 2: Configure OCI API key authentication
+## Task 3: Configure OCI API key authentication
 
 1. In the OCI Console, open the **Profile** menu (on the top right), then click your user name.
 
@@ -150,14 +180,14 @@ This lab assumes you have:
 
     ![Create new OCI folder in powershell](./images/window-powershell-create-oci-folder.png)
 
-1. Move the downloaded private key into the `.oci` directory and name it `oci_api_key.pem`.
+1. Move the downloaded private key into the `.oci` directory and name it `oci_hybrid_hol_api_key.pem`.
 
     On Mac, replace `<downloaded-private-key-file>` with the path to the downloaded key. It is typically similar to `~/Downloads/<username>-<date-and-time>.pem`.
 
     ```bash
     <copy>
-    mv <downloaded-private-key-file> ~/.oci/oci_api_key.pem
-    chmod 600 ~/.oci/oci_api_key.pem
+    mv <downloaded-private-key-file> ~/.oci/oci_hybrid_hol_api_key.pem
+    chmod 600 ~/.oci/oci_hybrid_hol_api_key.pem
     </copy>
     ```
 
@@ -165,11 +195,11 @@ This lab assumes you have:
 
     ```powershell
     <copy>
-    Move-Item $HOME\Downloads\<downloaded-private-key-file> $HOME\.oci\oci_api_key.pem
+    Move-Item $HOME\Downloads\<downloaded-private-key-file> $HOME\.oci\oci_hybrid_hol_api_key.pem
     </copy>
     ```
 
-1. Open the OCI config file.
+1. Open the OCI config file. You can use your favorite text editor or `nano` for Mac and `Notepad` for Windows as described below.
 
     As mentioned above, if this file already exists, scroll down past all of the existing values and take care not to change or overwrite anything existing in the file.
 
@@ -203,27 +233,43 @@ This lab assumes you have:
 
     ![Editing OCI config file with notepad](./images/notepad-edit-config-file.png)
 
-1. Update the `key_file` line to point to the private key we've downloaded and moved to the `.oci` folder.
+1. Update the `key_file` line to point to the API private key we've downloaded and moved to the `.oci` folder. Please make sure to specify the full path of your home folder. don't use special expressions such as `~` on Mac or `$HOME`, `%USERPOFILE%` on Windows.
+
+    If you don't know your home directory, the following two commands will print the folder to the screen.
+
+    On Mac:
+
+    ```text
+    cd ~
+    pwd
+    ```
+
+    On Windows:
+
+    ```text
+    cd $HOME
+    pwd
+    ```
+
+    Specify the full path to the API private key file:
 
     On Mac:
 
     ```text
     <copy>
-    key_file=~/.oci/oci_api_key.pem
+    key_file=/Users/<user-name>/.oci/oci_hybrid_hol_api_key.pem
     </copy>
     ```
-
-    ![Editing the key file path](./images/terminal-edit-key-file-path.png)
 
     On Windows:
 
     ```text
     <copy>
-    key_file=%HOME%\.oci\oci_api_key.pem
+    key_file=c:\Users\<user-name>\.oci\oci_hybrid_hol_api_key.pem
     </copy>
     ```
 
-    ![Editing the key file path](./images/notepad-edit-key-file-path.png)
+    > **Note:** Please make sure to remove the `# TODO` comment from the `key_file` line it is was left there.
 
 1. Save the file.
 
@@ -243,7 +289,7 @@ This lab assumes you have:
 
     ```bash
     <copy>
-    ls ~/.oci/config ~/.oci/oci_api_key.pem
+    ls ~/.oci/config ~/.oci/oci_hybrid_hol_api_key.pem
     </copy>
     ```
 
@@ -253,13 +299,13 @@ This lab assumes you have:
 
     ```powershell
     <copy>
-    Get-ChildItem $HOME\.oci\config, $HOME\.oci\oci_api_key.pem
+    Get-ChildItem $HOME\.oci\config, $HOME\.oci\oci_hybrid_hol_api_key.pem
     </copy>
     ```
 
     ![Windows verify files](./images/windows-verify-files.png)
 
-## Task 3: Create the app environment file
+## Task 4: Create the app environment file
 
 1. Change into the app directory.
 
@@ -371,7 +417,7 @@ This lab assumes you have:
 
 9. Save `.env` and exist the file editor.
 
-## Task 4: Install dependencies
+## Task 5: Install dependencies
 
 1. Create a Python virtual environment.
 
@@ -435,7 +481,7 @@ This lab assumes you have:
     </copy>
     ```
 
-## Task 5: Run the app
+## Task 6: Run the app
 
 1. Start Streamlit.
 
@@ -455,7 +501,7 @@ This lab assumes you have:
 
     The app randomly assigns a customer ID from `1` through `10` for each Streamlit session. The app scopes database questions to this customer.
 
-## Task 6: Test the unstructured vector store
+## Task 7: Test the unstructured vector store
 
 1. Ask this question:
 
@@ -479,7 +525,7 @@ This lab assumes you have:
 
     ![Pair phone console output](./images/pair-phone-console-output.png)
 
-## Task 7: Test service-record retrieval
+## Task 8: Test service-record retrieval
 
 1. Ask this question:
 
@@ -506,7 +552,7 @@ This lab assumes you have:
     </copy>
     ```
 
-## Task 8: Test an image prompt
+## Task 9: Test an image prompt
 
 1. Save the [sample service receipt image](/8-model-optimization/files/example-motors-service-receipt.png) to your computer (usually done with Cmd + S on Mac or Ctrl + S on Windows).
 

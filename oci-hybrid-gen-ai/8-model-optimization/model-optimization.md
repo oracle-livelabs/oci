@@ -24,7 +24,7 @@ This lab assumes you have:
 
 1. Stop the application by pressing `CTRL + C` in the terminal/console.
 
-1. Open `llm.py` in your text editor. Please make sure you are still in the `sample-app` folder. You. can choose your own text editor or:
+1. Open `llm.py` in your text editor (make sure you are still in the `sample-app` folder). You can choose your own text editor or:
 
     On Mac:
 
@@ -47,13 +47,11 @@ This lab assumes you have:
     It contains these commented lines:
 
     ```python
-    <copy>
     #if not messages_include_images(messages):
     #    model = cfg["cheaper_model"]
-    </copy>
     ```
 
-1. Uncomment the lines and keep the indentation inside the function. The function should look like this:
+1. Uncomment the lines and keep the indentation inside the function. The function should look like this (make sure to ONLY uncomment the two code lines):
 
     ```python
     <copy>
@@ -134,7 +132,6 @@ This lab assumes you have:
 2. Use this decision checklist:
 
     ```text
-    <copy>
     Use a faster text model when:
     - The request is text-only
     - Tools can ground the answer
@@ -146,7 +143,6 @@ This lab assumes you have:
     - The user asks for deeper reasoning
     - The task needs better instruction following
     - Accuracy is more important than latency
-    </copy>
     ```
 
 In this lab we have explored a simple routing mechanism to select which LLM will process our request. We can optimize for performance, accuracy & cost. You could explore additional routing mechanism like intent based routing where the routing decision is made based on the use-case the user is interested in (for example: billing/finance, account related information, technical support etc.) where each use-case will trigger a different LLM.
@@ -157,7 +153,6 @@ You may now **proceed to the next lab**.
 
 - [OCI Generative AI QuickStart for model selection](https://docs.oracle.com/en-us/iaas/Content/generative-ai/get-started-agents.htm)
 - [OCI Generative AI models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm)
-- [OCI cost analysis overview](https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/costanalysisoverview.htm)
 
 ## Acknowledgements
 

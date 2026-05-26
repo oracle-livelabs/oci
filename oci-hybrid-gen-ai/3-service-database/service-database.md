@@ -24,15 +24,17 @@ This lab assumes you have:
 
 ## Task 1: Create the Autonomous AI Database
 
+1. Make sure to select the region in which you will be working. To make the configuration easier, please make sure to create ALL of the resources in the same region.
+
 1. In the Console navigation menu, go to **Oracle AI Database**, then **Autonomous AI Databases**.
 
-2. Select the workshop compartment.
+1. Select the workshop compartment.
 
     ![Autonomous AI Databases list](images/autonomous-ai-databases.png)
 
-3. Click **Create Autonomous AI Database**.
+1. Click **Create Autonomous AI Database**.
 
-4. Enter the following values:
+1. Enter the following values:
 
     ```text
     Display name: car-service
@@ -43,27 +45,27 @@ This lab assumes you have:
 
     ![Create Autonomous AI Database basic information](images/create-autonomous-ai-database.png)
 
-5. Toggle **Developer** ON.
+1. Toggle **Developer** ON.
 
-6. Select database version **26ai**.
+1. Select database version **26ai**.
 
-7. Set the ADMIN password. Please select a none trivial value for this password (at least 10 characters and include uppercase, lowercase, numeric and special characters). Save this password in a secure place. We will need it later in the workshop.
+1. Set the ADMIN password. Please select a none trivial value for this password (at least 10 characters and include uppercase, lowercase, numeric and special characters). Save this password in a secure place. We will need it later in the workshop.
 
     > **Note:** For this prototype workshop, we will use the default `ADMIN` user for the schema, Database Tools connections, and ADB MCP access. In production environments, it is recommended to create a less privileged database user and grant it only permissions required by the application.
 
     ![Autonomous AI Database administrator credentials](images/administrator-credentials.png)
 
-8. For workshop simplicity, choose **Secure access from everywhere**.
+1. For workshop simplicity, choose **Secure access from everywhere**.
 
     > **Note:** This will make the database accessible from the public internet. This is not the optimal configuration for production environments.
 
     ![Autonomous AI Database network access](images/network-access.png)
 
-9. Click **Create**.
+1. Click **Create**.
 
-10. Wait until the database lifecycle state is `Available`.
+1. Wait until the database lifecycle state is `Available`.
 
-11. In the database **General information** page, copy the database OCID and save it in your text file as the value for `Autonomous AI Database OCID`.
+1. In the database **General information** page, copy the database OCID and save it in your text file as the value for `Autonomous AI Database OCID`.
 
 ## Task 2: Load the workshop schema and sample service data
 
@@ -179,4 +181,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Julien Lehmann, Product Marketing Manager, Yanir Shahak, Senior Principal Software Engineer
+- **Author** - Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
