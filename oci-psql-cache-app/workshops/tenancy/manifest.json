@@ -1,0 +1,30 @@
+{
+    "workshoptitle": "Accelerating IoT applications with OCI Cache and OCI PostgreSQL",
+    "help": "livelabs-help-oci_us@oracle.com",
+	"tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "./../../lab-0-introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Provision PostgreSQL",
+            "filename": "./../../lab-1-postgres/postgresql.md"
+        },
+        {
+            "title": "Lab 2: Provision OCI Cache",
+            "filename": "./../../lab-2-valkey/valkey.md"
+        },
+        {
+            "title": "Lab 3: Configure the frontend",
+            "filename": "./../../lab-3-frontend/frontend.md"
+        },
+        {
+            "title": "Need Help",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

@@ -7,21 +7,23 @@
 AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
 
 
-### **Objectives**
+### Objectives
 
 In this activity you will use Oracle Fusion AI Agent Studio to
 * Create a Procurement Policy Document Tool that references your company-specific procurement policy documents (PDF)
 * Create an Agent that uses the Document Tool to respond to user questions related to procurement.
 
+Estimated Time: 10-15 minutes
+
 ### **Pre-requisite**
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
-As a pre-requisite for this adventure, please download following files
-1. Policy document file to your local desktop as below.
+As a pre-requisite for this adventure, please download following files to your local desktop
+1. Policy document file **(ProcurementPolicies.pdf)**
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/ProcurementPolicies.pdf)
 <br>
-2. Prompt file for the AI Agent
+2. Prompt file for the AI Agent **(Prompt-Procurement-Policy-Advisor.txt)**
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/Prompt-Procurement-Policy-Advisor.txt)
 

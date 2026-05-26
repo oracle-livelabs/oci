@@ -6,12 +6,13 @@
 
 AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
 
-
-### **Objectives**
+### Objectives
 
 In this activity you will use Oracle Fusion AI Agent Studio to
 * Assemble an Agent Team using previously created Procurement Policy Advisor Agent and seeded Purchase Requisition Action Agent.
 * Test the Agent Team
+
+Estimated Time: 10-15 minutes
 
 ### **Begin Exercise**
 
@@ -59,9 +60,9 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
 7. You'll add one more worker agent.
 
-    >  (1) Delete your previous Ask Oracle filter and enter **F1 Purchase** in the Ask Oracle Filter and press the **<****Enter****>** key or select **F1 Purchase** from the resulting dropdown.<br>
+    >  (1) Delete your previous Ask Oracle filter and enter **F1 AIA** in the Ask Oracle Filter and press the **<****Enter****>** key or select **F1 AIA** from the resulting dropdown.<br>
 
-    >  (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **F1 Purchase Requisitions Agent.**<br>
+    >  (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to **F1 AIA Purchase Requisitions Agent.**<br>
 
     ![Create Agent](../07d-pre-agent-team-prc/images/pre-agent-team-prc-image007.jpg)
 
@@ -102,7 +103,7 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
 14. The agent needs a little more information.
 
-    > (1) In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Requested delivery date is Feb 28th, 2026, the quantity is 1 and it is the same model** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
+    > (1) In the **Ask Oracle** dialog box on the bottom right of the screen, enter **Requested delivery date is June 28th, 2026, the quantity is 1 and it is the same model** and hit the return key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)
 
     ![agent dialogue 3](../07d-pre-agent-team-prc/images/pre-agent-team-prc-image014.jpg) <br>
 
@@ -154,4 +155,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, February 2026
+* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, May 2026
