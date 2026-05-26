@@ -26,16 +26,16 @@ This lab assumes you have:
 
 2. Enter:
 
-   - Name: ai-ms-app
-   - VCN Compartment: ai-meeting-summarizer
-   - VCN: ai-ms-vcn
-   - Subnets Compartment: ai-meeting-summarizer
-   - Subnet: ai-ms-private-subnet (Private)
-   - Shape: GENERIC\_ARM
+    - Name: ai-ms-app
+    - VCN Compartment: ai-meeting-summarizer
+    - VCN: ai-ms-vcn
+    - Subnets Compartment: ai-meeting-summarizer
+    - Subnet: ai-ms-private-subnet (Private)
+    - Shape: GENERIC\_ARM
 
 3. Click **Create**
 
-![Application Creation](images/application.png)
+    ![Application Creation](images/application.png)
 
 ## Task 2: Create Transcribe Function
 
@@ -43,22 +43,22 @@ This lab assumes you have:
 
 2. Once the editor loads, the application folder should automatically open on the left-hand side. Follow these steps to locate the correct folders (otherwise, skip to step 3):
 
-   - On the left-hand side, locate your compartments and select the compartment where you created the function
-   - Expand the **Applications** dropdown to view your application
+    - On the left-hand side, locate your compartments and select the compartment where you created the function
+    - Expand the **Applications** dropdown to view your application
 
 3. Right-click the application and select **Create function → Create from a template → Python**
 
-![Create Functions](images/func.png)
+    ![Create Functions](images/func.png)
 
-![Template Selection](images/template.png)
+    ![Template Selection](images/template.png)
 
-![Programming Language Selection](images/language.png)
+    ![Programming Language Selection](images/language.png)
 
 4. Enter **transcriber** as your function name and press Enter. A new function will appear under your application.
 
 5. Edit the `func.yaml` file to match the following, where `&lt;function-name&gt;` is replaced with your actual function name:
 
-   ```yaml
+    ```yaml
    schema_version: 20180708
    name: &lt;function-name&gt;
    version: 0.0.1
@@ -66,18 +66,18 @@ This lab assumes you have:
    entrypoint: /python/bin/fdk /function/func.py handler
    memory: 256
    timeout: 300
-   ```
+    ```
 
 6. Edit the requirements.txt file by selecting the file and making sure it reflects the below information:
 
-   ```text
+    ```text
    fdk
    oci
-   ```
+    ```
 
 7. Edit the func.py file by replacing its contents with the following Python code:
 
-   ```python
+    ```python
    import io
    import json
    import os
@@ -203,65 +203,65 @@ This lab assumes you have:
                headers={"Content-Type": "application/json"},
                status_code=500
          )
-   ```
+    ```
 
 ## Task 3: Setup fn CLI & Deploy Transcriber
 
 1. Return to the OCI Console and open up the Cloud Shell by clicking on the computer icon in the top right corner.
 
-   ![Cloud Shell](images/cloudshell.png)
+    ![Cloud Shell](images/cloudshell.png)
 
 2. Navigate to the directory of your new function in the terminal:
 
-   ```text
+    ```text
    cd oci-ide-plugins/
    cd faas-artifacts/
    cd &lt;app-OCID&gt;
    cd &lt;function-name&gt;
-   ```
+    ```
 
 3. Using the cloud shell, set the context for your region, by running the first command and taking the information under default that aligns with your current region. Then use that information to replace \<region> in the second command:
 
-   ```text
+    ```text
    fn list context
    fn use context &lt;region&gt;
-   ```
+    ```
 
-   ![Changing Region Context](images/region-context.png)
+    ![Changing Region Context](images/region-context.png)
 
 4. Update the context with the function's compartment ID which can be found on the details page of the compartment you created in the beginning:
 
-   ```text
+    ```text
    fn update context oracle.compartment-id &lt;compartment\_OCID&gt;
-   ```
+    ```
 
 5. Provide a unique repository name prefix to distinguish your function images from other people’s. Get the object storage namespace by looking at the details of any of the buckets you created prior, and the repo name is up to your own discretion. For the region key in the second command, run the first command below and in the dictionary where the "is-home-region" value is true, use the region key below it with all lowercase:
 
-   ```text
+    ```text
    oci iam region-subscription list
    fn update context registry &lt;region-key&gt;.ocir.io/&lt;object\_storage\_namespace&gt;/[repo-name-prefix]
-   ```
+    ```
 
-   ![Finding Region Key](images/region-key.png)
-   ![Updating Registry Context](images/ocir.png)
+    ![Finding Region Key](images/region-key.png)
+    ![Updating Registry Context](images/ocir.png)
 
 6. In a new tab, navigate to your **OCI Console → Profile → Tokens and keys → Auth tokens → Generate token**.
 
-   ![Create Auth Token](images/auth.png)
+    ![Create Auth Token](images/auth.png)
 
 7. Give the token a name and then make sure to save this token for use in function deployment as it will not be shown again.
 
 8. Return to your tab with the code editor and in the terminal you have been working in log into the registry using the auth token as your password when prompted following this command. Use the email that is tied to your oracle cloud account, and the region key and object storage namespace you retrieved previously.
 
-   ```text
+    ```text
    docker login -u '&lt;object\_storage\_namespace&gt;/&lt;email&gt;' &lt;region-key&gt;.ocir.io
-   ```
+    ```
 
 9. Deploy the transcribe function:
 
-   ```text
+    ```text
    fn -v deploy --app &lt;app\_name&gt;
-   ```
+    ```
 
 ## Task 4: Deploy the Summary Function
 
@@ -269,7 +269,7 @@ This lab assumes you have:
 
 2. When you get to the point where you need to edit the func.py file, instead of using the code from the transcriber, use this:
 
-   ```python
+    ```python
    import io
    import json
    import os
@@ -587,7 +587,7 @@ This lab assumes you have:
       except Exception as e:
          logger.error(f"Error sending email via ONS: {str(e)}")
          raise
-   ```
+    ```
 
 You may now **proceed to the next lab**.
 

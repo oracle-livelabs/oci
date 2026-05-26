@@ -31,14 +31,13 @@ This lab assumes you have:
 
 3. Enter:
 
-   * Name: ai-meeting-summarizer
-   * Description: Workshop resources for AI Meeting Summarizer
-   * Parent compartment: Your tenancy root or a suitable parent
+    * Name: ai-meeting-summarizer
+    * Description: Workshop resources for AI Meeting Summarizer
+    * Parent compartment: Your tenancy root or a suitable parent
 
 4. Click **Create compartment**
 
     ![Compartment Creation](images/compartment.png)
-
 
 > Save the OCID of the compartment, which can be found on the details page after clicking into the compartment. It will be used in later steps.
 
@@ -54,10 +53,10 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
 3. Enter:
 
-   * Name: upload
-   * Default storage tier: Standard
-   * Emit object events: Toggle it on
-   * Encryption: Use Oracle-managed keys (or choose a customer-managed key if required)
+    * Name: upload
+    * Default storage tier: Standard
+    * Emit object events: Toggle it on
+    * Encryption: Use Oracle-managed keys (or choose a customer-managed key if required)
 
 4. Click **Create**
 
@@ -79,7 +78,7 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
 1. Navigate to **Networking → Virtual Cloud Networks → Actions → Start VCN Wizard**
 
-   * Connection Type: Create VCN with Internet Connectivity
+    * Connection Type: Create VCN with Internet Connectivity
 
 2. Click **Start VCN Wizard**
 
@@ -87,11 +86,11 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
 3. Enter:
 
-   * Name: ai-ms-vcn
-   * IPv4 CIDR block: 10.0.0.0/16
-   * Compartment: ai-meeting-summarizer
-   * Configure public subnet IPv4 CIDR block: 10.0.0.0/24
-   * Configure private subnet IPv4 CIDR block: 10.0.1.0/24
+    * Name: ai-ms-vcn
+    * IPv4 CIDR block: 10.0.0.0/16
+    * Compartment: ai-meeting-summarizer
+    * Configure public subnet IPv4 CIDR block: 10.0.0.0/24
+    * Configure private subnet IPv4 CIDR block: 10.0.1.0/24
 
     ![VCN Configuration](images/pub_priv_sub.png)
 
@@ -107,9 +106,9 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
 3. Click **Default → Dynamic Groups → Create dynamic group**
 
-   * Name: ai\_summary\_dg
-   * Matching rules: Match all rules defined below
-   * Rule 1: All {{resource.type = 'fnfunc', resource.compartment.id = '&lt;ai\_summary\_compartment\_OCID&gt;'}}
+    * Name: ai\_summary\_dg
+    * Matching rules: Match all rules defined below
+    * Rule 1: All {{resource.type = 'fnfunc', resource.compartment.id = '&lt;ai\_summary\_compartment\_OCID&gt;'}}
 
 4. Click **Create**
 
@@ -123,11 +122,10 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
 3. Click **Create Policy**
 
-   * Name: Events\_policy
-   * Description: Allow events to trigger Functions
-   * Compartment: ai-meeting-summarizer
-   * Policy Builder (Show manual editor):
-     Allow service cloudEvents to use functions-family in compartment ai-meeting-summarizer
+    * Name: Events\_policy
+    * Description: Allow events to trigger Functions
+    * Compartment: ai-meeting-summarizer
+    * Policy Builder (Show manual editor): Allow service cloudEvents to use functions-family in compartment ai-meeting-summarizer
 
 4. Click **Create**
 
@@ -135,16 +133,16 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
 5. Create another policy:
 
-   * Name: Functions\_policy
-   * Description: Grant Functions access to Object Storage, AI Speech, Logs, Topics, and Generative AI services
-   * Compartment: ai-meeting-summarizer
-   * Policy Builder (Show manual editor):
+    * Name: Functions\_policy
+    * Description: Grant Functions access to Object Storage, AI Speech, Logs, Topics, and Generative AI services
+    * Compartment: ai-meeting-summarizer
+    * Policy Builder (Show manual editor):
 
-     * Allow dynamic-group ai\_summary\_dg to manage object-family in compartment ai-meeting-summarizer
-     * Allow dynamic-group ai\_summary\_dg to manage ai-service-speech-family in compartment ai-meeting-summarizer
-     * Allow dynamic-group ai\_summary\_dg to manage generative-ai-family in compartment ai-meeting-summarizer
-     * Allow dynamic-group ai\_summary\_dg to manage logs in compartment ai-meeting-summarizer
-     * Allow dynamic-group ai\_summary\_dg to use ons-topics in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai\_summary\_dg to manage object-family in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai\_summary\_dg to manage ai-service-speech-family in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai\_summary\_dg to manage generative-ai-family in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai\_summary\_dg to manage logs in compartment ai-meeting-summarizer
+        * Allow dynamic-group ai\_summary\_dg to use ons-topics in compartment ai-meeting-summarizer
 
 6. Click **Create**
 

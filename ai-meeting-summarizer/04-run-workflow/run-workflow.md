@@ -32,20 +32,20 @@ This lab assumes you have:
 
 3. Click **Upload objects** and select a small media file in a supported format (see list above):
 
-   - Storage tier: Standard
-   - Drop a file or select one
+    - Storage tier: Standard
+    - Drop a file or select one
 
 4. Click **Next → Upload objects**
 
-![Uploading Object](images/upload.png)
+    ![Uploading Object](images/upload.png)
 
 ## Task 2: Verify the Transcribe Function invocation
 
 1. Navigate to **Developer Services → Functions → Applications → ai-ms-app → Monitoring → ai-ms-logs → Explore log**, where you will see logs from the function, such as invocation requests and completion messages
 
-![Navigating to function logs](images/log_access.png)
+    ![Navigating to function logs](images/log_access.png)
 
-![Viewing Function Logs](images/log_view.png)
+    ![Viewing Function Logs](images/log_view.png)
 
 > Note: If you do not see logs immediately, refresh after a few seconds. Keep this tab open for reference.
 
@@ -55,9 +55,9 @@ This lab assumes you have:
 
 2. Locate a job with a display name similar to “Transcription\_&lt;sanitized-filename&gt;”. You will be able to view the job status as it transitions from ACCEPTED/IN\_PROGRESS to SUCCEEDED
 
-   - If FAILED, open the job to review lifecycle\_details or failure\_details for troubleshooting
+    - If FAILED, open the job to review lifecycle\_details or failure\_details for troubleshooting
 
-![Transcription Job Status](images/transcription_job.png)
+    ![Transcription Job Status](images/transcription_job.png)
 
 > Common issues: The media file is not in a supported format or is too long
 
@@ -67,9 +67,9 @@ This lab assumes you have:
 
 2. Navigate to the prefix:
 
-   - transcriptions/&lt;sanitized-filename&gt;/&lt;job-name&gt;
+    - transcriptions/&lt;sanitized-filename&gt;/&lt;job-name&gt;
 
-![Transcript in Bucket](images/transcript.png)
+    ![Transcript in Bucket](images/transcript.png)
 
 3. To view the transcript, download the file and open it in any text editor
 
@@ -79,25 +79,25 @@ This lab assumes you have:
 
 1. Return to the logs tab, or navigate again using the previous steps, to view logs from the Summary Function
 
-![Summarizer Logs](images/summary_logs.png)
+    ![Summarizer Logs](images/summary_logs.png)
 
 2. After confirming the Summary Function has completed, navigate to **Storage → Buckets → results**
 
 3. Open the prefix and download the file to review the plain-text summary:
 
-   - summaries/&lt;base&gt;\_summary.txt
+    - summaries/&lt;base&gt;\_summary.txt
 
-![View Summary](images/summary.png)
+    ![View Summary](images/summary.png)
 
 ## Task 6: Confirm email notification
 
 1. Check your inbox for an email from OCI Notifications with a subject similar to:
 
-   - “Meeting Summary: &lt;base&gt;”
+    - “Meeting Summary: &lt;base&gt;”
 
 2. Open the email and review the summary content (truncated if very long) and the storage location reference
 
-![Email Output](images/email.png)
+    ![Email Output](images/email.png)
 
 > If you do not see the email, verify that your subscription is CONFIRMED and that the function has permission to use ons-topics.
 

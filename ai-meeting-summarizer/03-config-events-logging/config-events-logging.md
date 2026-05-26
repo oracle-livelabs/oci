@@ -27,21 +27,21 @@ You will publish summaries to this topic; subscribers will receive an email.
 
 1. Navigate to **Developer Services → Application Integration → Notifications → Topics → Create Topic**
 
-   - Name: ai-ms-topic
-   - Compartment: ai-meeting-summarizer
+    - Name: ai-ms-topic
+    - Compartment: ai-meeting-summarizer
 
 2. Click **Create**
 
-![Topic Creation](images/topic.png)
+    ![Topic Creation](images/topic.png)
 
 3. Click the topic you just created → **Subscriptions → Create Subscription**
 
-   - Protocol: Email
-   - Email: &lt;your\_email@domain&gt;
+    - Protocol: Email
+    - Email: &lt;your\_email@domain&gt;
 
 4. Click **Create**
 
-![Email Subscription](images/sub.png)
+    ![Email Subscription](images/sub.png)
 
 5. Check your inbox and click **Confirm subscription**
 
@@ -53,45 +53,45 @@ Ensure new uploads trigger the Transcribe Function.
 
 1. Navigate to **Observability & Management → Events Service → Rules → Create Rule**
 
-   - Name: on-object-create
-   - Description: Trigger transcription function
-   - Rule conditions:
-     - Condition: Event Type  
-       Service Name: Object Storage  
-       Event Type: Object - Create
-     - Click **+ Another Condition**
-       - Condition: Attribute  
-       - Attribute Name: bucketName  
-       - Attribute Values: uploads
-   - Actions:
-     - Action Type: Functions  
-     - Function Compartment: ai-meeting-summarizer  
-     - Function Application: ai-ms-app  
-     - Function: transcriber
+    - Name: on-object-create
+    - Description: Trigger transcription function
+    - Rule conditions:
+      - Condition: Event Type  
+        - Service Name: Object Storage  
+        - Event Type: Object - Create
+      - Click **+ Another Condition**
+        - Condition: Attribute  
+        - Attribute Name: bucketName  
+        - Attribute Values: uploads
+    - Actions:
+      - Action Type: Functions  
+      - Function Compartment: ai-meeting-summarizer  
+      - Function Application: ai-ms-app  
+      - Function: transcriber
 
 2. Click **Create Rule**
 
-![Creating Event Rules](images/rule.png)
+    ![Creating Event Rules](images/rule.png)
 
 3. Create a second rule with the following information:
 
-   - Name: summarize
-   - Description: Trigger summarization function
-   - Rule conditions:
-     - Condition: Event Type  
-       Service Name: Object Storage  
-       Event Type: Object - Create
-     - Click **+ Another Condition**
-       - Condition: Attribute  
-       - Attribute Name: bucketName  
-       - Attribute Values: transcripts
-   - Actions:
-     - Action Type: Functions  
-     - Function Compartment: ai-meeting-summarizer  
-     - Function Application: ai-ms-app  
-     - Function: summarizer
+    - Name: summarize
+    - Description: Trigger summarization function
+    - Rule conditions:
+      - Condition: Event Type  
+        - Service Name: Object Storage  
+        - Event Type: Object - Create
+      - Click **+ Another Condition**
+        - Condition: Attribute  
+        - Attribute Name: bucketName  
+        - Attribute Values: transcripts
+    - Actions:
+      - Action Type: Functions  
+      - Function Compartment: ai-meeting-summarizer  
+      - Function Application: ai-ms-app  
+      - Function: summarizer
 
-![Creating Event Rule for Summarizer Function](images/summarize.png)
+    ![Creating Event Rule for Summarizer Function](images/summarize.png)
 
 ## Task 3: Configure application-level variables
 
@@ -99,22 +99,22 @@ Ensure new uploads trigger the Transcribe Function.
 
 2. Select the **xai.grok-3** model, copy the OCID, and save it for later use
 
-![Selecting Grok Model](images/grok.png)
+    ![Selecting Grok Model](images/grok.png)
 
 3. Navigate to **Developer Services → Functions → Applications → ai-ms-app → Configuration → Manage configuration**
 
 4. Click **Add configuration** for each key-value pair below:
 
-   - Key: GENAI\_MODEL\_ID, Value: &lt;your-text&gt;
-   - Key: UPLOAD\_BUCKET, Value: uploads
-   - Key: OBJECT\_NS, Value: &lt;object\_storage\_namespace&gt;
-   - Key: SUMMARY\_BUCKET, Value: results
-   - Key: OCI\_REGION, Value: us-ashburn-1
-   - Key: ONS\_TOPIC\_OCID, Value: &lt;topic\_OCID&gt;
-   - Key: RESULT\_BUCKET, Value: transcripts
-   - Key: COMPARTMENT\_OCID, Value: &lt;ai-meeting-summarizer-OCID&gt;
+    - Key: GENAI\_MODEL\_ID, Value: &lt;your-text&gt;
+    - Key: UPLOAD\_BUCKET, Value: uploads
+    - Key: OBJECT\_NS, Value: &lt;object\_storage\_namespace&gt;
+    - Key: SUMMARY\_BUCKET, Value: results
+    - Key: OCI\_REGION, Value: us-ashburn-1
+    - Key: ONS\_TOPIC\_OCID, Value: &lt;topic\_OCID&gt;
+    - Key: RESULT\_BUCKET, Value: transcripts
+    - Key: COMPARTMENT\_OCID, Value: &lt;ai-meeting-summarizer-OCID&gt;
 
-![Populating Application Config](images/config.png)
+    ![Populating Application Config](images/config.png)
 
 5. Click **Save changes**
 
@@ -124,24 +124,24 @@ Create a Log Group and enable function logs for observability.
 
 1. Navigate to **Observability & Management → Logging → Log Groups → Create Log Group**
 
-   - Name: ai-ms-log-group
-   - Compartment: ai-meeting-summarizer
+    - Name: ai-ms-log-group
+    - Compartment: ai-meeting-summarizer
 
 2. Click **Create**
 
-![Creating Log Group](images/log_group.png)
+    ![Creating Log Group](images/log_group.png)
 
 3. Navigate to **Developer Services → Functions → Applications → ai-ms-app → Monitoring**
 
 4. Under **Logs**, in the **Function Invocation Logs** row, click the three dots and select **Enable log**
 
-![Monitoring Tab in Function](images/monitoring.png)
+    ![Monitoring Tab in Function](images/monitoring.png)
 
-   - Compartment: ai-meeting-summarizer
-   - Log group: ai-ms-log-group
-   - Log name: ai-ms-logs
+    - Compartment: ai-meeting-summarizer
+    - Log group: ai-ms-log-group
+    - Log name: ai-ms-logs
 
-![Enabling Logs](images/logs.png)
+    ![Enabling Logs](images/logs.png)
 
 You may now **proceed to the next lab**.
 
