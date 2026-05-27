@@ -17,6 +17,12 @@ In this lab, you will:
 - Create and run a data sync connector
 - Record the project and vector store OCIDs for the sample app
 
+### Prerequisites
+
+This lab assumes you have:
+
+- Completed the Service Database lab
+
 ## Task 1: Review the sandbox resource list
 
 The sandbox environment has already provisioned the OCI foundation resources for this workshop. Create a text file in your favorite editor and copy the following list of parameters into the file.

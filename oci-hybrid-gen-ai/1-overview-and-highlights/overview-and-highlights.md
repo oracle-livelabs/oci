@@ -1,6 +1,4 @@
-# Optimize your AI token usage and costs with OCI Enterprise AI
-
-Estimated Time: 1 hour 20 minutes
+# Build a model-optimized customer assistant with OCI Enterprise AI
 
 ## Introduction
 
@@ -20,7 +18,21 @@ You will use a hybrid inference pattern:
 
 By the end of the workshop, you will understand how multi-model routing helps an AI application stay useful for users while controlling inference cost.
 
-## Prerequisites
+Estimated Time: 1 hour 20 minutes
+
+### Objectives
+
+In this workshop, you will learn how to:
+
+- Set up the OCI resources required for an Enterprise AI application.
+- Build a RAG workflow that answers questions from dealership-specific content.
+- Use vector search to retrieve relevant information for each user question.
+- Connect a customer support assistant web application to OCI Enterprise AI.
+- Test different models against the same support questions.
+- Route questions to cost-effective models based on task complexity.
+- Review security guardrails and cost optimization options for an AI application.
+
+### Prerequisites
 
 In order to successfully complete this workshop you will need:
 
@@ -49,22 +61,11 @@ At a high level, the architecture includes:
 
 This design separates the work into two layers. Retrieval gives the model trusted context from the dealership knowledge base. Model routing then decides how much model capability each request needs. Together, these layers reduce unnecessary calls to expensive models without removing access to stronger models when the question requires them.
 
-## Objectives
-
-In this workshop, you will learn how to:
-
-- Set up the OCI resources required for an Enterprise AI application.
-- Build a RAG workflow that answers questions from dealership-specific content.
-- Use vector search to retrieve relevant information for each user question.
-- Connect a customer support assistant web application to OCI Enterprise AI.
-- Test different models against the same support questions.
-- Route questions to cost-effective models based on task complexity.
-- Review security guardrails and cost optimization options for an AI application.
-
 ## Learn More
 
-- [OCI Generative AI Agents service information](https://www.oracle.com/artificial-intelligence/generative-ai/agents/)
-- [Oracle AI Vector Search](https://docs.oracle.com/en/database/oracle/oracle-database/23/vecse/overview-ai-vector-search.html)
+- [OCI Enterprise AI information](https://www.oracle.com/artificial-intelligence/enterprise-ai/)
+- [Enterprise AI Agents in OCI Generative AI](https://docs.oracle.com/en-us/iaas/Content/generative-ai/agents.htm)
+- [API Reference](https://docs.oracle.com/en-us/iaas/Content/generative-ai/home.htm)
 
 ## Acknowledgements
 

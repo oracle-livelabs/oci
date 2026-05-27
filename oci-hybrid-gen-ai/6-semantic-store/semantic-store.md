@@ -74,7 +74,6 @@ You may now **proceed to the next lab**.
 ## Learn More
 
 - [OCI Generative AI QuickStart for semantic stores and NL2SQL](https://docs.oracle.com/en-us/iaas/Content/generative-ai/get-started-agents.htm)
-- [Database Tools console tasks](https://docs.oracle.com/en-us/iaas/database-tools/doc/using-oracle-cloud-infrastructure-console.html)
 
 ## Acknowledgements
 

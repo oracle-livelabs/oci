@@ -100,7 +100,7 @@ This lab assumes you have:
     - Approximate response time
     - Answer quality
 
-## Task 4: Test image routing
+## Task 3: Test image routing
 
 1. Download the [test image](./files/example-motors-service-receipt.png).
 
@@ -125,7 +125,7 @@ This lab assumes you have:
     - Approximate response time
     - Answer quality
 
-## Task 5: Compare model tradeoffs
+## Task 4: Compare model tradeoffs
 
 1. Compare the two runs.
 
@@ -156,4 +156,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Julien Lehmann, Product Marketing Manager, Yanir Shahak, Senior Principal Software Engineer
+- **Author** - Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
