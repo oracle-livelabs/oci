@@ -1,6 +1,6 @@
 # Optimize your AI token usage and costs with OCI Enterprise AI
 
-Estimated Workshop Time: 1 hour 20 minutes
+Estimated Time: 1 hour 20 minutes
 
 ## Introduction
 
@@ -33,6 +33,10 @@ In order to successfully complete this workshop you will need:
 ## Solution Architecture
 
 The workshop application uses OCI Enterprise AI as the foundation for a dealership support assistant.
+
+The diagram below shows the end-state solution architecture and runtime interactions.
+
+![Example Motors end-state architecture diagram](./images/example-motors-solution-architecture.png)
 
 At a high level, the architecture includes:
 
