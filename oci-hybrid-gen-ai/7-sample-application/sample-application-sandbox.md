@@ -554,7 +554,7 @@ This lab assumes you have:
 
 ## Task 9: Test an image prompt
 
-1. Save the [sample service receipt image](/8-model-optimization/files/example-motors-service-receipt.png) to your computer (usually done with Cmd + S on Mac or Ctrl + S on Windows).
+1. Save the [Sample service receipt image](files/example-motors-service-receipt.png) to your computer (usually done with Cmd + S on Mac or Ctrl + S on Windows).
 
 1. In the chat input, attach the downloaded image and add the following prompt:
 
