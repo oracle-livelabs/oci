@@ -6,7 +6,7 @@ In this lab, we will provision the OCI infrastructure across two regions and con
 
 Estimated Time: 30 minutes
 
-### **Objectives**
+### Objectives
 
 Deployment of the infrastructure with DRBD + Pacemaker/Corosync (PCS) + KVM stack using OCI Resource Manager.
 
