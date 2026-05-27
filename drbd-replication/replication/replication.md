@@ -6,7 +6,7 @@ In this lab, we will see the DRBD replication in action for files and guest VMs.
 
 Estimated Time: 10 minutes
 
-### **Objectives**
+### Objectives
 
 See how DRBD setup with Corosync and Pacemaker automatically replicates files into other nodes in the HA cluster when a primary node is down.
 

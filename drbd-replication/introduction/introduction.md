@@ -12,7 +12,7 @@ In Oracle Cloud Infrastructure these three components will be integrated in a se
 
 Estimated Workshop Time: 1.5 hour
 
-### **Objectives**
+### Objectives
 
 By the end of this workshop, you will be able to:
 
@@ -38,6 +38,8 @@ This lab assumes you have:
 * [Oracle Cloud Infrastructure](https://docs.oracle.com/en-us/iaas/Content/home.htm)
 
 You may now proceed to the next lab.
+
+## Acknowledgements
 
 **Authors**
 

@@ -19,28 +19,27 @@ This lab assumes you have:
 
 ## Task 1: Provision resources
 
-1. Download the  
-Go to Resource manager -> Stacks -> Create Stack. Choose My configuration and upload the provided folder and click Next: [drbd-pcs-kvm-automation.zip](https://github.com/vladcristi/drbd-pcs-kvm-automation/archive/refs/heads/main.zip)
+1. Download the terraform files  
+    Go to Resource manager -> Stacks -> Create Stack. Choose My configuration and upload the provided folder and click Next: [drbd-pcs-kvm-automation.zip](https://github.com/vladcristi/drbd-pcs-kvm-automation/archive/refs/heads/main.zip)
 
     ![Resource Manager](images/resource_manager.png)
 
 2. Provide the following information: 
 
-**Select Compartment**: Choose the appropriate compartment for the VCN and instances.
+    **Select Compartment**: Choose the appropriate compartment for the VCN and instances.
 
-**Write your linbit details**: At the bottom of the variables page linbit username, linbit password, linbit cluster id (put 0 here), pcs password should be completed with your details
+    **Write your linbit details**: At the bottom of the variables page linbit username, linbit password, linbit cluster id (put 0 here), pcs password should be completed with your details
 
-And leave all the other variables as they are.
+    And leave all the other variables as they are.
 
 3. Once all of the variables are configured click **Next** and after that click apply.
 
-![Apply Stack](images/run_apply.png)
+    ![Apply Stack](images/run_apply.png)
 
-4. Wait for the job to complete, which may take 25-30 minutes before the infrastructure is fully provisioned.
-When jos is complete you should see a succes message.
-![Apply Success](images/apply_success.png)
+4. Wait for the job to complete, which may take 25-30 minutes before the infrastructure is fully provisioned. When job is complete you should see a succes message.
+    ![Apply Success](images/apply_success.png)
 
-You may now proceed to the next lab.
+    You may now proceed to the next lab.
 
 ## Acknowledgements
 
