@@ -4,7 +4,7 @@
 
 In this lab, you create the structured semantic store for Example Motor's service appointment questions. The environment already includes the Autonomous AI Database, schema, seed data, Vault secret, and Database Tools connections. The semantic store connects OCI Enterprise AI to that database through the provided Database Tools connections. The sample app sends natural language questions to the NL2SQL API for this semantic store, validates the generated SQL, and retrieves the data through the ADB MCP Server.
 
-Estimated Time: 20 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 

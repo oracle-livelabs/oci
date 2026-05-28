@@ -4,7 +4,7 @@
 
 In this lab, you will see how the Example Motors support agent uses the OCI ApplyGuardrails API to screen user prompts for prompt-injection risk before sending them to the model. You will review the configuration, trace the application call path, and test that normal support questions still work while injection-style prompts are blocked.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 

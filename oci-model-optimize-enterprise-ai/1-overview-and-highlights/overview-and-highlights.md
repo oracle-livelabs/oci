@@ -18,7 +18,7 @@ You will use a hybrid inference pattern:
 
 By the end of the workshop, you will understand how multi-model routing helps an AI application stay useful for users while controlling inference cost.
 
-Estimated Time: 1 hour 20 minutes
+Estimated Time: 1 hour 30 minutes
 
 ### Objectives
 
