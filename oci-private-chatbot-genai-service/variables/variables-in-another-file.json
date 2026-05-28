@@ -1,0 +1,6 @@
+{
+  "default_memory_gb": "16",
+  "default_boot_volume_gb": "100",
+  "example_chat_domain": "chat.example.com",
+  "gateway_api_port": "8088"
+}
