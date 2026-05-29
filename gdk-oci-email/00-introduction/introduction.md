@@ -24,7 +24,7 @@ The [Micronaut® framework](https://micronaut.io/) is a modern, JVM-based framew
 
 The GDK modules are designed for ahead-of-time compilation with GraalVM Native Image to produce native executables that are ideal for microservices: they have a small memory footprint, start instantly, and provide peak performance with no warmup.
 
-> Graal Development Kit for Micronaut, and Oracle GraalVM are available at no additional cost on Oracle Cloud Infrastructure (OCI).
+<!-- > Graal Development Kit for Micronaut, and Oracle GraalVM are available at no additional cost on Oracle Cloud Infrastructure (OCI). -->
 
 ### Objectives
 
