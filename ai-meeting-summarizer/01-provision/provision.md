@@ -62,7 +62,7 @@ Navigate to **Storage → Object Storage & Archive Storage → Buckets**, where 
 
     ![Bucket Creation](images/upload.png)
 
-> If you cannot find the compartment, wait a few minutes and refresh, as it may take time to provision.
+    > If you cannot find the compartment, wait a few minutes and refresh, as it may take time to provision.
 
 ### B. Transcripts bucket
 
