@@ -10,7 +10,7 @@ This workshop shows how to automate the process end-to-end on OCI. An OCI Functi
 
 As an example, the diagram below shows a typical OCI hub-and-spoke deployment, where workloads in spoke VCNs reach Oracle services through a Palo Alto firewall in the hub. The firewall is the single egress inspection point for all spoke traffic destined to OCI services, which means it must permit Oracle's current set of public IP ranges. If those ranges drift out of sync with what Oracle publishes, applications in the spokes lose access to services they were previously reaching.
 
-![](13a10b0cba3dea5e775a3c3e374daeaa.png)
+![](dc80516c6ca6a40ec2ba642ff74e11ab.png)
 
 In a setup like this, every spoke depends on the hub firewall's address objects being accurate and current. Three reasons to automate this rather than maintain it by hand:
 
@@ -36,7 +36,7 @@ The diagram below shows the components involved in the sync and how they interac
 3. The function reads the PAN-OS API key from OCI Vault using its own identity (resource principal auth).
 4. The function reconciles address objects on the PA-VM by calling the PAN-OS XML API over the management interface.
 
-![](3bb48394a7b19e7010e8846030fc5673.png)
+![](14972d97fb066de07aa15e84119b534c.png)
 
 What each component does:
 
@@ -61,7 +61,7 @@ Before starting, make sure you have:
     - Subnet OCID (function/management subnet): `ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaaxxxxxyyyyqqq`.
     - Tenancy namespace: `fr8xxyz44x`.
 
-![](e1e12120bd8def13cffcd3f12c1d1442.png)
+![](c824826136336f6afaf22436e0ac81d7.png)
 
 ## Learn More
 
