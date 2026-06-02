@@ -1,0 +1,37 @@
+{
+    "workshoptitle": "Four-way data replication in OCI",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "The Introduction is always first. The title and contents menu title match for the Introduction.",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+        "title": "Getting Started",
+        "description": "Get a Free Trial",
+        "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/pre-register-free-tier-account.md"
+        },
+        {
+            "title": "Lab 1: Environment setup using terraform and resource manager",
+            "filename": "../../provision/provision.md"
+        },
+        {
+            "title": "Lab 2: DRBD Setup Verification",
+            "filename": "../../setup-verification/setup-verification.md"
+        },
+        {
+            "title": "Lab 3: Replication in action",
+            "filename": "../../replication/replication.md"
+        },
+        {
+            "title": "Lab 4: Cleanup the environment",
+            "filename": "../../cleanup/cleanup.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
