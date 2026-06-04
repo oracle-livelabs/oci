@@ -1,0 +1,41 @@
+{
+    "workshoptitle": "Optimize Vehicle Routes with NVIDIA cuOpt on OCI",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Overview of the cuOpt accelerator pack and the workshop tracks.",
+            "type": "livelabs",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1 - Explore Pack Services",
+            "description": "Find each pack URL and sign in to Blueprints, Prometheus, and Grafana.",
+            "type": "livelabs",
+            "filename": "../../explore-services/explore-services.md"
+        },
+        {
+            "title": "Lab 2 - Connect to Your OKE Cluster",
+            "description": "Install the OCI CLI and kubectl, then generate a kubeconfig for the cluster.",
+            "type": "livelabs",
+            "filename": "../../connect-cluster/connect-cluster.md"
+        },
+        {
+            "title": "Lab 3 - Submit an Optimization Job from the UI",
+            "description": "Run a baseline cuOpt optimization from the front-end.",
+            "type": "livelabs",
+            "filename": "../../submit-ui-job/submit-ui-job.md"
+        },
+        {
+            "title": "Lab 4 - Submit Jobs Directly to the cuOpt API",
+            "description": "Log in to the auth service from Python and submit cuOpt requests with a bearer token.",
+            "type": "livelabs",
+            "filename": "../../python-api/python-api.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to common problems and directions for receiving live help.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}
