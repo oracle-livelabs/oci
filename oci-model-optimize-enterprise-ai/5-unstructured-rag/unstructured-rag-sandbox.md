@@ -17,36 +17,24 @@ In this lab, you will:
 - Create and run a data sync connector
 - Record the project and vector store OCIDs for the sample app
 
-### Prerequisites
-
-This lab assumes you have:
-
-- Completed the Service Database lab
-
 ## Task 1: Review the sandbox resource list
 
-The sandbox environment has already provisioned the OCI foundation resources for this workshop. Create a text file in your favorite editor and copy the following list of parameters into the file.
-Update the parameters for which the sandbox environment provided values. You will update the rest of the parameters as you progress through the workshop.
+1. The sandbox environment has already provisioned the OCI foundation resources for this workshop. You will be able to see the OCIDs (the resource ID) for each of them in the sandbox environment alongside the login and tenancy information. We will use this information as we progress through the workshop.
 
-```text
-<copy>
-Workshop compartment name:
-Workshop compartment OCID:
-Workshop region:
-Object Storage bucket: car-manufacturer-manuals
-Autonomous AI Database OCID:
-Database user: ADMIN
-Vault OCID:
-Database Tools enrichment connection OCID:
-Database Tools query connection OCID:
-ADMIN password secret OCID:
+    ![Sandbox details](images/sandbox-details.png)
 
-Project OCID:
-Unstructured vector store: car-operation
-Unstructured vector store OCID:
-Structured semantic store OCID:
-</copy>
-```
+2. In parallel, you are going to create several resources yourself and we would need to collect the OCIDs of the resources.
+Use your favorite editor to edit a simple text file and copy the following placeholders into it:
+
+    ```text
+    <copy>
+    Project OCID:
+    Unstructured vector store OCID:
+    Structured semantic store OCID:
+    </copy>
+    ```
+
+    As we progress through the following tasks and labs, you will fill in the missing OCIDs that we will use for the sample app in a later lab.
 
 ## Task 2: Create the OCI Enterprise AI project
 
@@ -64,6 +52,8 @@ Each project supports separate lifecycle and compliance boundaries. Reference th
 
     ![Generative AI projects list](images/generative-ai-projects.png)
 
+1. Please make sure that your sandbox compartment is selected in **Applied filters**.
+
 1. Click **Create project**.
 
 1. Enter the following values:
@@ -78,15 +68,17 @@ Each project supports separate lifecycle and compliance boundaries. Reference th
 
     ![Create project basic information](images/create-project-basic-information.png)
 
-1. Configure response and conversation retention for the workshop.
+1. Observe the response and conversation retention for the workshop.
 
-    Use the console defaults unless your organization requires shorter retention.
+    For this workshop we will leave those values at default but this setting can be configured to control how long the system will retain responses and conversations sent over the Responses and Conversations APIs.
 
     ![Project data retention options](images/project-data-retention.png)
 
 1. Click **Create**.
 
-1. Open the project, copy the project OCID, and record it as the value for `Project OCID`.
+1. Open the project, copy the project OCID, and record it as the value for `Project OCID` in your text file.
+
+    ![Copy the project OCID](images/copy-project-ocid.png)
 
 ## Task 3: Confirm the vehicle manuals bucket
 
@@ -97,8 +89,6 @@ The sandbox already includes the Object Storage bucket that stores the source do
 2. Select the workshop compartment from your sandbox resource list.
 
 3. Open the bucket named in your sandbox resource list.
-
-    The default workshop bucket name is `car-manufacturer-manuals`.
 
     ![Buckets list with car manufacturer manuals bucket](images/buckets-list.png)
 
@@ -127,7 +117,6 @@ The unstructured vector store scans files, splits them into chunks, embeds the c
     Description: Example Motors infotainment and operation manuals
     ```
 
-    - If you choose a different name for the vector store, update the `Unstructured vector store` value in your notes.
     - Select the workshop compartment from your sandbox resource list.
     - Under **Data source type**, select **Unstructured data**.
 
@@ -160,7 +149,7 @@ The data sync connector facilitates the processing pipeline where files are read
     ```text
     Name: car-manuals
     Compartment: Select the workshop compartment from your sandbox resource list.
-    Bucket: Select the bucket from your sandbox resource list. The default workshop bucket name is `car-manufacturer-manuals`.
+    Bucket: The bucket name is `car-manufacturer-manuals-...`.
     Turn Select all in bucket on.
     ```
 
