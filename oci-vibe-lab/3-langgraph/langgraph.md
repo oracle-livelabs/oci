@@ -32,7 +32,7 @@ During the installation, a Git repository was created on a virtual machine. We w
     - NEW: Vibe Coding Lab
     ![Small Change](images/small-change1.png)  
 6. Open the Visual Studio Code terminal. 
-7. Check what the file 'git_push.sh does.
+7. Check what the file *git_push.sh* does.
     ```
     cat git_push.sh
 
@@ -47,7 +47,7 @@ During the installation, a Git repository was created on a virtual machine. We w
     git push origin master
     ```
 7. Based on your Laptop Operating System
-    - If you are in MacOs or Linux. You can just run it.
+    - If you are in MacOs or Linux, just run it.
         ```
         <copy>
         ./git_push.sh   
