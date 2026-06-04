@@ -1,4 +1,4 @@
-# Build a model-optimized customer assistant with OCI Enterprise AI
+# The Economics of AI: Why Model Routing Matters
 
 ## Introduction
 

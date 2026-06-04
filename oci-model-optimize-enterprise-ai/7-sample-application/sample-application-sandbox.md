@@ -227,7 +227,7 @@ This lab assumes you have:
 
     > **Note:** Please pay attention to the dot at the end of the file name! If we didn't add it at the end of the file name, Notepad would create a file called config.txt by default. Also, if notepad is asking if you wish to create a new file, click **Yes**.
 
-1. Paste the configuration file preview into the file. If you already have content in the file, paste the new configuration at the end of the file. In addition, if you already have a `DEFAULT` profile in this file, rename this new profile, for example to: `[HYBRIDHOL]`, and remember to change the profile name in the app `.env` file.
+1. Paste the configuration file preview into the file. If you already have content in the file, paste the new configuration at the end of the file. In addition, if you already have a `[DEFAULT]` profile in this file, rename this new profile, for example to: `[MODELOPTHOL]`, and remember to change the profile name in the app `.env` file later in this lab.
 
     ![Edit the config file in the termina](./images/terminal-edit-config-file2.png)
 
@@ -345,20 +345,20 @@ This lab assumes you have:
 
 3. Open your sandbox resource list and the notes where you recorded the Enterprise AI OCIDs created in the previous labs.
 
-4. Open `.env` in your editor, either `nano` for Mac or `notepad` for Windows.
+4. Open `.env` in your favorite editor. You can also use `nano` for Mac or `notepad` for Windows.
 
 5. Replace the blank OCID values in `.env` with the values from your sandbox resource list and your workshop notes.
 
     ```text
-    OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID=<Workshop compartment OCID>
-    OCI_GENAI_PROJECT_OCID=<Project OCID>
-    OCI_GENAI_VECTOR_STORE_IDS=<Unstructured vector store OCID>
-    OCI_ADB_DATABASE_OCID=<Autonomous AI Database OCID>
-    OCI_ADB_MCP_PASSWORD_SECRET_OCID=<ADMIN password secret OCID>
-    OCI_GENAI_SEMANTIC_STORE_OCID=<Structured semantic store OCID>
+    OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID=<Compartment OCID from the sandbox resources list>
+    OCI_GENAI_PROJECT_OCID=<Project OCID fromn your notes>
+    OCI_GENAI_VECTOR_STORE_IDS=<Unstructured vector store OCID from your notes>
+    OCI_ADB_DATABASE_OCID=<ADB OCID from the sandbox resources list>
+    OCI_ADB_MCP_PASSWORD_SECRET_OCID=<Admin Password Secret OCID from the sandbox resources list>
+    OCI_GENAI_SEMANTIC_STORE_OCID=<Structured semantic store OCID from your notes>
     ```
 
-6. Set each region value to the `Workshop region` value from your sandbox resource list.
+6. Set each region value to the `Workshop region` value from your sandbox resource list. The format of the region is: <country>-<region>-<number> for example: `us-ashburn-1`.
 
     ```text
     OCI_ADB_MCP_REGION=<Workshop region>
@@ -396,20 +396,11 @@ This lab assumes you have:
     OCI_CONFIG_PROFILE=DEFAULT
     ```
 
-8. Keep the advanced defaults unless your workshop region requires different model IDs.
-
-    If your selected workshop region does not support the default model IDs, update these two values to models available in that region:
-
-    ```text
-    <copy>
-    OCI_GENAI_MODEL=<vision-capable model available in your workshop region>
-    OCI_GENAI_CHEAPER_MODEL=<fast text model available in your workshop region>
-    </copy>
-    ```
+8. Keep the advanced defaults. You will be able to play with those later.
 
     End result on Mac:
 
-    ![Terminal edit .env file](./images/termina-edit-dot-env.png)
+    ![Terminal edit .env file](./images/terminal-edit-dot-env.png)
 
     End result on Windows:
 
@@ -419,7 +410,7 @@ This lab assumes you have:
 
 ## Task 5: Install dependencies
 
-1. Create a Python virtual environment.
+1. Create a Python virtual environment. This will help shield your other python applications from the dependencies we are going to install for the sample app and vice versa.
 
     > **Note:** Make sure that you are in the `sample-app` folder.
 
@@ -521,7 +512,7 @@ This lab assumes you have:
     - Data sync job status
     - Vector store file count
 
-4. Notice the steps the application took to generate the response as described in the terminal.
+4. Notice the steps the application took to generate the response as described in the terminal. Also, notice the model used to process the request.
 
     ![Pair phone console output](./images/pair-phone-console-output.png)
 
@@ -535,7 +526,7 @@ This lab assumes you have:
     </copy>
     ```
 
-2. Watch the assistant status messages. Review the output in the terminal as it will outline the entire chain of tools the application is using to generate the response.
+2. Watch the assistant status messages. Review the output in the terminal as it will outline the entire chain of tools the application is using to generate the response. Notice which model was used to process this request.
 
     ![Service request console output](./images/service-request-console-output.png)
 
@@ -554,7 +545,7 @@ This lab assumes you have:
 
 ## Task 9: Test an image prompt
 
-1. Save the [Sample service receipt image](files/example-motors-service-receipt.png) to your computer (usually done with Cmd + S on Mac or Ctrl + S on Windows).
+1. Right click the following link and save the sample image file to your computer: [Sample service receipt image](files/example-motors-service-receipt.png).
 
 1. In the chat input, attach the downloaded image and add the following prompt:
 
@@ -569,6 +560,7 @@ This lab assumes you have:
 1. Confirm that the app responds using the image contents.
 
 At this stage we have a running sample application which touches every part of our architecture. It queries our Unstructured Vector Store to retrieve information from our operation manuals, queries our database using the Semantic Store and the ADB MCP, and interacts with the LLM managed by the OCI Enterprise AI service.
+We've also observed that the same LLM is being used to serve all requests. We are going to change that in the next lab.
 
 You may now **proceed to the next lab**.
 
