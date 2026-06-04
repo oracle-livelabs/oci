@@ -57,6 +57,7 @@ Estimated time: 15 min
         1. All the machines on the internet -> 0.0.0.0/0
         2. Just my laptop (recommended)
         3. Other (your own IP range)
+    - To get your laptop IP, use, by example, https://whatismyipaddress.com or https://ifconfig.me 
 
 9. **Please proceed to the [next lab](#next) while Terraform is running.** 
 10. When Terraform finishes, you will see settings that you need in the next lab. Save these to your text file. It will look something like:
