@@ -31,18 +31,7 @@ Estimated time: 15 min
     git clone https://github.com/mgueury/oci-vibe-terraform.git
     </copy>
     ```
-7. If you already have an SSH key set up on your laptop, add your public SSH key to the script settings. This allows your laptop to log in to the VM that Terraform creates.
-
-    In terraform.tfvars:
-    ```
-    <copy>    
-    your_public_ssh_key="ssh-rsa ABBCDEFGHIJL....."
-    </copy>
-    ```
-
-    If not, you can also comment this line. Terraform will create an SSH key (in target/ssh\_key\_starter) that you will later configure on your laptop. 
-
-8. Run each of the two commands below in the Terminal. This will run Terraform to create the rest of the components.
+7. Run each of the two commands below in the Terminal. This will run Terraform to create the rest of the components.
     ```
     <copy>
     cd oci-vibe/starter/
@@ -53,13 +42,19 @@ Estimated time: 15 min
     Answer the questions about 
     - Prefix (ex: vibe)
     - Compartment OCID (See your notes)
-    - Public IP Filter. The setup will have an Internet gateway with port 80/443 open to the internet. What is the IP Range of the machine who can access these ports:
+    - Public IP Filter: The setup will have an Internet gateway with port 80/443 open to the internet. What is the IP Range of the machine who can access these ports:
         1. All the machines on the internet -> 0.0.0.0/0
-        2. Just my laptop (recommended)
+        2. Just my laptop (recommended). To get your laptop IP, use, by example, https://whatismyipaddress.com or https://ifconfig.me
         3. Other (your own IP range)
+    - Your Public SSH Key:
+        - If you already have an SSH key set up on your laptop, this allows your laptop to log in to the VM that Terraform creates.
+        - Such Public SSK Key looks this, "ssh-rsa ABBCDEFGHIJL....."
+        - If not, the setup will create an SSH key (in target/ssh\_key\_starter) that you will later configure on your laptop. 
 
-9. **Please proceed to the [next lab](#next) while Terraform is running.** 
-10. When Terraform finishes, you will see settings that you need in the next lab. Save these to your text file. It will look something like:
+    The answer of the questions will be stored in the terraform configuration file: oci-vibe/starter/terraform.tfvars
+
+8. **Please proceed to the [next lab](#next) while Terraform is running.** 
+9. When Terraform finishes, you will see settings that you need in the next lab. Save these to your text file. It will look something like:
 
     ```
     <copy>    
