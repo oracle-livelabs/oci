@@ -49,7 +49,7 @@ This lab assumes you have:
 
 1. Select database version **26ai**.
 
-1. Set the ADMIN password. Please select a none trivial value for this password (at least 10 characters and include uppercase, lowercase, numeric and special characters). Save this password in a secure place. We will need it later in the workshop.
+1. Set the ADMIN password. Select a nontrivial password that is at least 10 characters and includes uppercase, lowercase, numeric, and special characters. Save this password in a secure place. We will need it later in the workshop.
 
     > **Note:** For this prototype workshop, we will use the default `ADMIN` user for the schema, Database Tools connections, and ADB MCP access. In production environments, it is recommended to create a less privileged database user and grant it only permissions required by the application.
 
@@ -79,7 +79,7 @@ This lab assumes you have:
 
 1. Download the [database setup file](./files/customer-service-appointments.sql)
 
-1. Open the file in a any text or code editor and copy its contents into the SQL worksheet.
+1. Open the file in any text or code editor and copy its contents into the SQL worksheet.
 
 1. Run the script (make sure you select the **Run Script** button and not the **Run Statement** button).
 
@@ -169,7 +169,7 @@ In order for the ADB MCP server to retrieve data from the database for us, we ne
     https://dataaccess.adb.<workshop-region>.oraclecloudapps.com/adb/mcp/v1/databases/<database-ocid>
     ```
 
-At this stage, we have an Autonomous AI Database instance, complete with a schema, data as well as a running MCP server which will allow us to query the database directly by our support agent.
+At this stage, we have an Autonomous AI Database instance, complete with a schema, data as well as a running MCP server which will allow our support agent to query the database directly.
 
 You may now **proceed to the next lab**.
 

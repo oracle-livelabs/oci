@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create the unstructured retrieval source for the Example Motors support agent. You will seed the vector store created in this section with a source document. This PDF document is a mobile bluetooth pairing guide for the Example Motors infotainment system. The app will query the vector store using the OCI Enterprise AI Responses API by leveraging the built in `file_search` tool.
+In this lab, you create the unstructured retrieval source for the Example Motors support agent. You will seed the vector store created in this section with a source document. This PDF document is a mobile Bluetooth pairing guide for the Example Motors infotainment system. The app will query the vector store using the OCI Enterprise AI Responses API by leveraging the built-in `file_search` tool.
 
 Estimated Time: 25 minutes
 
@@ -59,7 +59,7 @@ Projects are isolated from each other to support lifecycle management and compli
 
 ## Task 2: Create the vehicle manuals bucket
 
-The files we upload to this storage bucket will serve as the content the support agent will be able to search through when the user will ask it questions.
+The files we upload to this storage bucket will serve as the content the support agent will be able to search through when when users ask it questions.
 
 1. In the Console navigation menu, go to **Storage**, then **Buckets**.
 
@@ -84,7 +84,7 @@ The files we upload to this storage bucket will serve as the content the support
 2. Upload the PDF file
 
     - Download the [manual file](./files/talexion-infotainment-pairing-guide.pdf).
-    - Drag the file from your **Download** folder to the **Drop a file or select one** section.
+    - Drag the file from your `Downloads` folder to the **Drop a file or select one** section.
     - Click **Next**.
 
     ![Upload objects select file step](images/upload-objects-select-file.png)
@@ -124,7 +124,7 @@ The unstructured vector store is a managed data store which will scan our files,
 
     - If you chose a different name for the vector store, please update the `Unstructured vector store` parameter in our text file.
     - Select the workshop compartment.
-    - Under **Data source type** Select **Unstructured data**.
+    - Under **Data source type** select **Unstructured data**.
 
     ![Create vector store with unstructured data source](images/create-vector-stores.png)
 
@@ -189,7 +189,7 @@ The data sync connector will facilitate the processing pipeline where files will
 
 13. Confirm that the file count is `1`.
 
-At this point, we have populated our vector store with the information from the PDF file uploaded to the storage bucket. The Data Sync Job read the file, broke it into chunks, embedded each chunk so they will be searchable and stored the results in the vector store. All of this is managed by the service so your code doesn't have to.
+At this point, we have populated our vector store with the information from the PDF file uploaded to the storage bucket. The Data Sync Job read the file, broke it into chunks, embedded each chunk to facilitate semantic search, and stored the results in the vector store. All of this is managed by the service so your code doesn't have to.
 
 You may now **proceed to the next lab**.
 

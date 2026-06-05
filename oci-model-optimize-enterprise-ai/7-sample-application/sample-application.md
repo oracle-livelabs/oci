@@ -23,10 +23,10 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed the Semantic Store lab
-- Have python installed on your computer or be able to install it
-- Be comfortable with running terminal/command line commands to copy, rename, edit text files, create folders etc.
-- Be able to download the zip archive for the sample application, unzip it and run it as a python script
-- Be able to install python dependencies with `pip`
+- Have Python installed on your computer or be able to install it
+- Be comfortable with running terminal/command-line commands to copy, rename, edit text files, create folders etc
+- Be able to download the zip archive for the sample application, unzip it and run it as a Python script
+- Be able to install Python dependencies with `pip`
 
 ## Task 1: Install Python
 
@@ -96,7 +96,7 @@ This lab assumes you have:
     </copy>
     ```
 
-    ![Powershell at download folder](./images/windows-powershell-downloads.png)
+    ![PowerShell at download folder](./images/windows-powershell-downloads.png)
 
 1. Extract the sample application archive.
 
@@ -118,7 +118,7 @@ This lab assumes you have:
     </copy>
     ```
 
-    ![Powershell unzip the sample app](./images/windows-powershell-unzip-sample-app.png)
+    ![PowerShell unzip the sample app](./images/windows-powershell-unzip-sample-app.png)
 
 1. Confirm that the extraction created the `sample-app` directory.
 
@@ -140,7 +140,7 @@ This lab assumes you have:
 
 ## Task 3: Configure OCI API key authentication
 
-1. Make sure to select the region you've been using up until now.
+1. Make sure to select the sandbox region.
 
 1. In the OCI Console, open the **Profile** menu (on the top right), then click your user name.
 
@@ -148,7 +148,7 @@ This lab assumes you have:
 
 1. Select the **Tokens and keys** tab.
 
-1. Under API keys click **Add API key**.
+1. Under API keys, click **Add API key**.
 
     ![Add API key](./images/add-api-key.png)
 
@@ -197,7 +197,7 @@ This lab assumes you have:
     </copy>
     ```
 
-    On Windows PowerShell, replace `<downloaded-private-key-file>` with downloaded key file name. It is typically similar to `<user-name>-<date-time>.key`.
+    On Windows PowerShell, replace `<downloaded-private-key-file>` with the downloaded key file name. It is typically similar to `<user-name>-<date-time>.key`.
 
     ```powershell
     <copy>
@@ -231,9 +231,9 @@ This lab assumes you have:
     </copy>
     ```
 
-    > **Note:** Please pay attention to the dot at the end of the file name! If we didn't add it at the end of the file name, Notepad would create a file called config.txt by default. Also, if notepad is asking if you wish to create a new file, click **Yes**.
+    > **Note:** Please pay attention to the dot at the end of the file name! If we didn't add it at the end of the file name, Notepad would create a file called config.txt by default. Also, if Notepad is asking if you wish to create a new file, click **Yes**.
 
-1. Paste the configuration file preview into the file. If you already have content in the file, paste the new configuration at the end of the file. In addition, if you already have a `DEFAULT` profile in this file, rename this new profile, for example to: `[MODELOPTHOL]`, and remember to change the profile name in the app `.env` file.
+1. Paste the configuration file preview into the file. If you already have content in the file, paste the new configuration at the end of the file. In addition, if you already have a `DEFAULT` profile in this file, rename this new profile, for example, to `[MODELOPTHOL]`, and remember to change the profile name in the app `.env` file.
 
     ![Edit the config file in the terminal](./images/terminal-edit-config-file2.png)
 
@@ -351,7 +351,7 @@ This lab assumes you have:
 
 3. Open the parameter text file you updated throughout the previous labs.
 
-4. Open `.env` in your editor, either `nano` for Mac or `notepad` for Windows.
+4. Open `.env` in your favorite editor, or, either `nano` for Mac or `notepad` for Windows.
 
 5. Replace the blank OCID values in `.env` with the values from your parameter text file.
 
@@ -408,7 +408,8 @@ This lab assumes you have:
 
 8. Keep the advanced defaults unless your workshop region requires different model IDs.
 
-    If your selected workshop region does not support the default model IDs, update these two values to models available in that region:
+    If your selected workshop region does not support the default model IDs, update these two values to models available in that region.
+    You can use the [this reference](https://docs.oracle.com/en-us/iaas/Content/generative-ai/model-endpoint-regions.htm) as guidance.
 
     ```text
     <copy>
@@ -419,7 +420,7 @@ This lab assumes you have:
 
     End result on Mac:
 
-    ![Terminal edit .env file](./images/termina-edit-dot-env.png)
+    ![Terminal edit .env file](./images/terminal-edit-dot-env.png)
 
     End result on Windows:
 
@@ -566,7 +567,7 @@ This lab assumes you have:
 
 ## Task 9: Test an image prompt
 
-1. Right click the following link and save the sample image file to your computer: [Sample service receipt image](files/example-motors-service-receipt.png).
+1. Right-click the following link and save the sample image file to your computer: [Sample service receipt image](files/example-motors-service-receipt.png).
 
 1. In the chat input, attach the downloaded image and add the following prompt:
 
@@ -580,7 +581,7 @@ This lab assumes you have:
 
 1. Confirm that the app responds using the image contents.
 
-At this stage we have a running sample application which touches every part of our architecture. It queries our Unstructured Vector Store to retrieve information from our operation manuals, queries our database using the Semantic Store and the ADB MCP, and interacts with the LLM managed by the OCI Enterprise AI service.
+At this stage, we have a running sample application that touches every part of our architecture. It queries our Unstructured Vector Store to retrieve information from our operation manuals, queries our database using the Semantic Store and the ADB MCP, and interacts with the LLM managed by the OCI Enterprise AI service.
 We've also observed that the same LLM is being used to serve all requests. We are going to change that in the next lab.
 
 You may now **proceed to the next lab**.
