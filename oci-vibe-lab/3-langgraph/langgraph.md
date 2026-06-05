@@ -78,6 +78,9 @@ Let's ask Cline to do things for us.
     - AGENTS.md for technical documentation for developers and coding agents
     </copy>
     ```
+
+    This task could last a long time. Depending of the model, region or Dedicated AI Cluster that you use, the speed / time will vary.   
+
 3. Check the output.
 
     ![Documentation](images/readme_agents_md.png)  
