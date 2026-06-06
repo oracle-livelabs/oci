@@ -70,6 +70,8 @@ This lab assumes you have:
     - Type terminal
     - Press Return.
 
+    > **Note:** The sample application contains a hidden file called `.env.example`. By default, this file cannot be seen in Finder. In order to see hidden files, use the following keyboard shortcut while in Finder: Shift + CMD + Period (the '.' character). This will also be helpful later when we interact with the `~/.oci` folder which is also hidden.
+
     On Windows:
 
     - Press the Windows Key
@@ -126,7 +128,7 @@ This lab assumes you have:
 
     ```bash
     <copy>
-    ls sample-app
+    ls -la sample-app
     </copy>
     ```
 
@@ -295,7 +297,7 @@ This lab assumes you have:
 
     ```bash
     <copy>
-    ls ~/.oci/config ~/.oci/oci_hybrid_hol_api_key.pem
+    ls -la ~/.oci/config ~/.oci/oci_hybrid_hol_api_key.pem
     </copy>
     ```
 
@@ -331,9 +333,9 @@ This lab assumes you have:
     </copy>
     ```
 
-2. Rename the environment template to `.env`.
+2. Rename the environment template file `.env.example` to `.env`.
 
-    On Mac:
+    On Mac you can do this on finder (make sure that you can see hidden file using the keyboard shortcut Shift + CMD + Period) or in the terminal:
 
     ```bash
     <copy>
@@ -341,7 +343,7 @@ This lab assumes you have:
     </copy>
     ```
 
-    On Windows PowerShell:
+    On Windows you can do this in File Explorer or using PowerShell:
 
     ```powershell
     <copy>
@@ -355,6 +357,8 @@ This lab assumes you have:
 
 5. Replace the blank OCID values in `.env` with the values from your parameter text file.
 
+    > **Note:** Please take extra care when you copy values between the text files or the sandbox information pane. Make sure that you copy the right OCID and paste it next to the right environment variable. The OCIDs contain clues in them for example, a compartment OCID will start with: `compartment-id ocid1.compartment.oc1...`. Also, please make sure that there are no spaces before or after the equal signs and that there are no newlines introduced before or after the pasted values. The environment variable name, the equal sign and the value should all fit in one single line.
+
     ```text
     <copy>
     OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID=<Workshop compartment OCID>
@@ -366,7 +370,9 @@ This lab assumes you have:
     </copy>
     ```
 
-6. Set each region value to the `Workshop region` value from your parameter text file.
+6. Set each region value to the `Workshop region` value from your parameter text file (the same value in all of them).
+
+    > **Note:** the region name takes the following format <country code>-<region name>-<number>, for example: `us-ashburn-1` or `ca-toronto-1` etc. Please make sure not to paste any other information or spaces/new lines in the region value.
 
     ```text
     <copy>
@@ -460,6 +466,10 @@ This lab assumes you have:
     </copy>
     ```
 
+    The end result should look similar to this:
+
+    ![Setup venv on mac](./images/terminal-setup-venv.png)
+
     On Windows PowerShell:
 
     ```powershell
@@ -476,11 +486,7 @@ This lab assumes you have:
     </copy>
     ```
 
-    On Mac:
-
-    ![Setup venv on mac](./images/terminal-setup-venv.png)
-
-    Windows:
+    The end result should look similar to this:
 
     ![Setup venv on windows](./images/windows-setup-venv.png)
 
@@ -523,6 +529,8 @@ This lab assumes you have:
     How do I pair my phone with the Example Motors infotainment system?
     </copy>
     ```
+
+    > **Note:** In order to send your request to the LLM, paste the prompt in the text box and press the **Send** button.
 
 2. Confirm that the app answers from the infotainment pairing guide.
 

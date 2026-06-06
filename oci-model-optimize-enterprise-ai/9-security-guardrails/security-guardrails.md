@@ -58,9 +58,9 @@ This lab assumes you have:
 
 ## Task 2: Trace the ApplyGuardrails call path
 
-1. Open `sample-app/app.py`.
+1. Open `sample-app/app.py` in your favorite code editor.
 
-2. Find `run_pending_request`.
+2. Find `run_pending_request` in the code file.
 
 3. Confirm that the app calls `check_prompt_injection(prompt, cfg)` before it creates the chat client and before it calls `stream_response`.
 
