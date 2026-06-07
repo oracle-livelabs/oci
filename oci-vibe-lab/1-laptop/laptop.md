@@ -80,7 +80,7 @@ Estimated time: 45 min
     > git clone opc@123.123.123.123:~/app.git app
     > cd app
     3. Do some changes with your favorite editor.
-    4. Check what git_push.sh does and run it.
+    4. Check what git_push.sh does and run it. 
     > ./git_push.sh
     The build will start automatically in the bastion and redeploy the app.
 

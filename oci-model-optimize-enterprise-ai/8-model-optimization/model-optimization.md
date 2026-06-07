@@ -51,7 +51,7 @@ This lab assumes you have:
     #    model = cfg["cheaper_model"]
     ```
 
-1. Uncomment the lines and keep the indentation inside the function. The function should look like this (make sure to ONLY uncomment the two code lines):
+1. Uncomment the code lines and keep the indentation inside the function. The function should look like this (make sure to ONLY uncomment the two code lines):
 
     ```python
     <copy>
@@ -74,6 +74,8 @@ This lab assumes you have:
     streamlit run app.py
     </copy>
     ```
+
+At this point we've introduced new code which will check if a user request contains an image. If it does, the application will route the request to the more capable (and mode expensive) model while the rest of the requests will be routed to the less capable (and cheaper) model. Try and see if you can spot the model being used in the sample application's output.
 
 ## Task 2: Test text-only routing
 
@@ -102,13 +104,11 @@ This lab assumes you have:
 
 ## Task 3: Test image routing
 
-1. Download the [test image](./files/example-motors-service-receipt.png).
-
-1. Attach the image to the request and add the following prompt:
+1. Attach the image we have downloaded in the previous lab ([test image](./files/example-motors-service-receipt.png)) to the request and add the following prompt:
 
     ```text
     <copy>
-    What service does this receipt describe?
+    What services does this receipt describe?
     </copy>
     ```
 

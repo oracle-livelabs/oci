@@ -34,13 +34,11 @@ This lab assumes you have:
 1. Enter the following values:
 
     ```text
-    <copy>
     Name: car-manufacturer-service
     Description: Example Motors service appointment semantic store
     Compartment: <workshop-compartment>
     Data source type: Structured data
     Connection type: OCI Database tool
-    </copy>
     ```
 
     ![Create structured semantic store](images/create-structured-semantic-store.png)
@@ -48,12 +46,10 @@ This lab assumes you have:
     Use the connection OCIDs from your sandbox resource list:
 
     ```text
-    <copy>
-    Enrichment connection ID: <Database Tools enrichment connection OCID>
-    Querying connection id: <Database Tools query connection OCID>
+    Enrichment connection ID: <DB Tools Enrichment Connection OCID>
+    Querying connection id: <DB Tools Query Connection OCID>
     Schema: ADMIN
     Automation: On create
-    </copy>
     ```
 
 1. Click **Test enrichment connection** to make sure the semantic store can use the connection to connect to the database.
