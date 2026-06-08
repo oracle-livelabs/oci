@@ -48,7 +48,7 @@ The diagram below shows the components involved in the sync and how they interac
 3. The function reads the PAN-OS API key from OCI Vault using its own identity (resource principal auth).
 4. The function reconciles address objects on the PA-VM by calling the PAN-OS XML API over the management interface.
 
-![Architecture Summary - sync cycle](images/introduction-2.png)
+![[introduction-2.png]]
 
 What each component does:
 
