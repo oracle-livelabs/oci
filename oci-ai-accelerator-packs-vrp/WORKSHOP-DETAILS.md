@@ -1,5 +1,16 @@
 # Workshop Details
 
+### Objectives
+
+In this lab, you will:
+
+  - Explore services deployed by accelerator packs.
+  - Learn how to connect to an OKE cluster on OCI.
+  - Submit route planning optimization jobs to NVIDIA cuOpt, and learn the VRP accelerator pack.
+  - Learn how to interact with the cuOpt VRP API directly.
+
+By the end, you should feel comfortable navigating a deployed accelerator pack.
+
 ## Short Summary
 
 Deploy and extend an NVIDIA cuOpt route solver on Oracle Kubernetes Engine.

@@ -32,7 +32,7 @@ In this lab, you will:
 ## Task 1: Sign In to VRP front-end
 
 1. Open the **Outputs** tab of the Resource Manager stack (At Home).
-   Or open the URL list your instructor shared (Live).
+    Or open the URL list your instructor shared (Live).
 
     - Search `starter_pack_url` and visit the output.
 
