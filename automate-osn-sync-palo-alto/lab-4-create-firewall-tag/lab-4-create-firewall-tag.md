@@ -1,5 +1,7 @@
 # Lab 4 - Create the Tag on the Palo Alto Firewall
 
+## Task 1: Create the Tag on the Palo Alto Firewall
+
 In this lab, you create the PAN-OS tag that the function uses to mark every address object it manages. The tag must match the `TAG` config value (`oci-auto` in this workshop). Creating it ahead of the first run matters: PAN-OS rejects an address object that references a tag which does not yet exist, so the tag must be in place before the function runs. It also makes the auto-managed objects easy to filter in the firewall UI.
 
 1. In the Palo Alto GUI, navigate to **Objects** → **Tags** and click **Add**.

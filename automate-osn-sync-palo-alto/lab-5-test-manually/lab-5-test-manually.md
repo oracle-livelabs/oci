@@ -1,5 +1,7 @@
 # Lab 5 - Test the Function Manually
 
+## Task 1: Test the Function Manually
+
 Before scheduling, confirm the function actually works.
 
 - Invoke the function from Cloud Shell:
