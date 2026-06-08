@@ -44,7 +44,7 @@ What each component does:
 Before starting, make sure you have:
 
 1. An OCI tenancy with a compartment you can deploy resources into. Here we used the `Tutorial` compartment.
-2. A Palo Alto VM-Series firewall deployed in an OCI VCN. Complete the following Live Labs workshop first: &lt;Live Labs URL&gt;. It provisions the baseline environment used in this workshop: the firewall along with the Hub VCN, subnets, Internet Gateway, and base configuration. After completing it, note the firewall's management IP and admin credentials.
+2. A Palo Alto VM-Series firewall deployed in an OCI VCN.
 3. Access to Cloud Shell from the OCI Console.
 4. The following OCIDs ready. Replace the placeholders below with values from your own tenancy:
     - Compartment OCID: `ocid1.compartment.oc1..aaaaaaaaxxxxyyyyyyqqq`.
@@ -79,7 +79,6 @@ This workshop is for the case where all three push the other way: the service is
 
 1. [Familiarity with OCI console](https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm)
 2. [Overview of Networking](https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm)
-3. **This will be updated when the full palo alto workshop series is published.**
 
 ## Acknowledgements
 
