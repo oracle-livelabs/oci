@@ -3,6 +3,24 @@
 
 OCI Functions runs your code as a Docker container. In this lab, you build the container in Cloud Shell, push it to OCIR (OCI Container Registry), and register it with the Functions service. You then create the Functions application, deploy the function, and set the configuration values that tell it which firewall to target, which regions and services to sync, and where to find the API key in Vault.
 
+Estimated Time: 20 minutes
+
+### Objectives
+
+In this lab, you will:
+- Build the function container in Cloud Shell and push it to OCIR
+- Create the Functions application and deploy the sync function
+- Set the function configuration: target firewall, regions and services to sync, and the Vault secret location
+
+### Prerequisites
+
+This lab assumes you have:
+- Completed Lab 1: the PAN-OS API key is stored as a secret in OCI Vault
+- Completed Lab 2: the dynamic group and IAM policy are created
+- The OCID of the Vault secret from Lab 1
+- A VCN and subnet available for the Functions application, with internet access via an Internet Gateway
+- Permissions to use OCIR, create Functions applications, and deploy functions in your compartment
+
 ## Task 1: Open Cloud Shell on x86
 
 By default, the Cloud Shell architecture preference is set to **No Preference**, meaning your session runs on either x86_64 or ARM (aarch64) depending on regional hardware availability. Since Cloud Shell cannot cross-compile, its architecture must match the shape of the Functions application you will deploy to. This workshop uses the `GENERIC_X86` shape, so Cloud Shell must run on x86_64.
@@ -241,3 +259,5 @@ fn inspect function panos-sync-app panos-sync
 
 - **Author** - Anas Abdallah (OCI Network Black Belt)
 - **Last Updated By/Date** - Anas Abdallah, June 2026
+
+You may now **proceed to the next lab**.

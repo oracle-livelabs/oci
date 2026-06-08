@@ -50,6 +50,7 @@ The diagram below shows the components involved in the sync and how they interac
 
 ![Architecture Summary - sync cycle](images/introduction-2.png)
 
+
 What each component does:
 
 | Component                   | Purpose                                                                                                                                                                                                          |

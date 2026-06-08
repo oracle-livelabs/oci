@@ -7,6 +7,22 @@ A **Dynamic Group** is a logical grouping of OCI resources (compute instances, f
 
 A **Policy** is a set of statements that grant permissions. Each statement says "allow these subjects to perform these actions on these resources in this scope." Subjects can be users, groups, or dynamic groups. Together, the dynamic group identifies *who* the function is, and the policy says *what* it can do.
 
+Estimated Time: 5 minutes
+
+### Objectives
+
+In this lab, you will:
+- Create a dynamic group that matches the sync function as an OCI resource
+- Create an IAM policy granting that dynamic group permission to read the Vault secret
+- Enable the function to authenticate as a resource principal, with no user accounts or API keys
+
+### Prerequisites
+
+This lab assumes you have:
+- Completed Lab 1 and stored the PAN-OS API key as a secret in OCI Vault
+- Permissions to create dynamic groups and policies in your tenancy (or working compartment)
+- The OCID of the compartment where the function will run
+
 ## Task 1: Create a Dynamic Group
 
 1. In the OCI Console, navigate to **Identity & Security** → **Domains** and select the root compartment. Click into your identity domain (typically `Default` or `OracleIdentityCloudService`). In this run, the domain was `OracleIdentityCloudService`.
@@ -51,3 +67,5 @@ The policy is **Active**, granting the dynamic group `read secret-bundles` permi
 
 - **Author** - Anas Abdallah (OCI Network Black Belt)
 - **Last Updated By/Date** - Anas Abdallah, June 2026
+
+You may now **proceed to the next lab**.

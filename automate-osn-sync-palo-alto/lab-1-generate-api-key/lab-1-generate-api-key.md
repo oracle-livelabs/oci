@@ -3,6 +3,19 @@
 
 In this lab, you generate a long-lived PAN-OS API key from the firewall and store it securely in OCI Vault. This key lets the function authenticate to the firewall later, without embedding credentials in code or configuration. You generate it once with a single `keygen` call from Cloud Shell, then place it in an encrypted Vault secret. By the end, the key lives entirely inside OCI's managed, encrypted-at-rest storage, and you have the secret OCID ready to wire into the function.
 
+Estimated Time: 10 minutes
+
+### Objectives
+
+In this lab, you will:
+- Generate an API key for the PAN-OS firewall account
+- Create an OCI Vault and a master encryption key
+- Store the PAN-OS API key as a secret in the Vault
+
+### Prerequisites
+
+An OCI account/tenancy, and the Palo Alto firewall's management IP + admin credentials.
+
 ## Task 1: Generate the PAN-OS API Key
 
 1. Click the **Developer tools** icon in the top-right navigation bar.
@@ -88,3 +101,4 @@ Inside the vault, create the master encryption key. Click **Master Encryption Ke
 - **Author** - Anas Abdallah (OCI Network Black Belt)
 - **Last Updated By/Date** - Anas Abdallah, June 2026
 
+You may now **proceed to the next lab**.

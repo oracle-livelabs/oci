@@ -10,6 +10,22 @@ In this lab you grant the scheduler permission to invoke the function, create a 
 
 In this run the schedule fires every day at 03:00 UTC, which is 06:00 Asia/Qatar.
 
+Estimated Time: 15 minutes
+
+### Objectives
+
+In this lab, you will:
+- Grant the Resource Scheduler principal permission to invoke the function
+- Create a daily schedule that runs `panos-sync` automatically
+- Confirm the schedule is working by tampering with an address object and watching the next run correct it
+
+### Prerequisites
+
+This lab assumes you have:
+- Completed Labs 1 through 5
+- The `panos-sync` function deployed, configured, and verified working (Lab 5)
+- Permissions to create IAM policies and Resource Scheduler schedules in your compartment
+
 ## Task 1: Grant the Resource Scheduler Permission to Invoke the Function
 
 1. In the OCI Console, navigate to **Identity & Security** → **Policies**.
