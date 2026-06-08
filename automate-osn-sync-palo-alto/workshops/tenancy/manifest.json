@@ -1,0 +1,49 @@
+{
+    "workshoptitle": "Automate the Public IP JSON Sync to Palo Alto in OCI using Functions",
+    "help": "anas.abdallah@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction to the workshop",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "Prerequisites for using Free Trial, Paid, and Always Free accounts.",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Generate and Store the PAN-OS API Key in OCI Vault",
+            "filename": "../../lab-1-generate-api-key/lab-1-generate-api-key.md"
+        },
+        {
+            "title": "Lab 2: Configure IAM for Resource Principal Authentication",
+            "filename": "../../lab-2-configure-iam/lab-2-configure-iam.md"
+        },
+        {
+            "title": "Lab 3: Build, Deploy, and Configure the OCI Function",
+            "filename": "../../lab-3-setup-oci-function/lab-3-setup-oci-function.md"
+        },
+        {
+            "title": "Lab 4: Create the Tag on the Palo Alto Firewall",
+            "filename": "../../lab-4-create-firewall-tag/lab-4-create-firewall-tag.md"
+        },
+        {
+            "title": "Lab 5: Test the Function Manually",
+            "filename": "../../lab-5-test-manually/lab-5-test-manually.md"
+        },
+        {
+            "title": "Lab 6: Schedule Daily Synchronization with OCI Resource Scheduler",
+            "filename": "../../lab-6-configure-daily-sync-with-resource-scheduler/lab-6-configure-daily-sync-with-resource-scheduler.md"
+        },
+        {
+            "title": "Conclusion",
+            "filename": "../../conclusion/conclusion.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to common problems and how to get live help",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
