@@ -37,7 +37,7 @@ In this workshop, you will learn how to:
 In order to successfully complete this workshop you will need:
 
 - General familiarity with the OCI console
-- Have python installed on your computer or be able to install it
+- Have Python installed on your computer or be able to install it
 - Be comfortable with running terminal/command line commands to edit text files, create folders etc.
 - Be able to download the zip archive for the sample application, unzip it and run it as a python script
 - Be able to install python dependencies with `pip`.

@@ -32,12 +32,37 @@ During the installation, a Git repository was created on a virtual machine. We w
     - NEW: Vibe Coding Lab
     ![Small Change](images/small-change1.png)  
 6. Open the Visual Studio Code terminal. 
-7. Run:
+7. Check what the file *git_push.sh* does.
     ```
-    <copy>
-    ./git_push.sh   
-    </copy>
+    cat git_push.sh
+
+    #!/usr/bin/env bash
+    SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+    cd $SCRIPT_DIR
+
+    git --no-pager diff
+    git add .
+    DATE_POSTFIX=`date '+%Y%m%d-%H%M%S'`
+    git commit -m "Bastion Build $DATE_POSTFIX"
+    git push origin master
     ```
+7. Based on your Laptop Operating System
+    - If you are in MacOs or Linux, just run it.
+        ```
+        <copy>
+        ./git_push.sh   
+        </copy>
+        ```       
+    - If you have a windows, there are 2 solutions
+        - You can start the script as above using the Visual Studio code terminal and a *Bash Terminal*. See Visual Studio Code. Terminal Shells here: https://code.visualstudio.com/docs/terminal/basics
+        - Or you run git commands from Microsoft Windows PowerShell. 
+        ```
+        <copy>
+        git add .  
+        git commit -m "cline"
+        git push origin master
+        </copy>
+        ```       
 8. Check the result in your chat URL: http://123.123.123.123/
     ![Small Change](images/small-change2.png)  
 
@@ -53,6 +78,9 @@ Let's ask Cline to do things for us.
     - AGENTS.md for technical documentation for developers and coding agents
     </copy>
     ```
+
+    This task could last a long time. Depending of the model, region or Dedicated AI Cluster that you use, the speed / time will vary.   
+
 3. Check the output.
 
     ![Documentation](images/readme_agents_md.png)  
