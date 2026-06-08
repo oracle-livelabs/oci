@@ -1,5 +1,7 @@
 # Introduction
 
+## Overview
+
 Oracle Cloud Infrastructure (OCI) publishes a [JSON document](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json) listing the public IP address ranges used by its cloud services. The file groups CIDR blocks by region and tags each block with the service it belongs to, such as `OBJECT_STORAGE` for Object Storage endpoints, `OSN` for the Oracle Services Network, and `OCI` for VCN public IP ranges (used by resources like compute instances, NAT Gateways, and public Load Balancers).
 
 Network and security teams that operate firewalls in front of OCI workloads rely on these ranges to control traffic to OCI services. The ranges change over time, and any drift between the published file and the firewall's address objects can break legitimate traffic or leave stale objects in policies. To keep firewall policies aligned, OCI recommends polling the file at least weekly to pick up new ranges. Tracking these changes manually is repetitive, error-prone, and easy to neglect.
@@ -10,7 +12,7 @@ This workshop shows how to automate the process end-to-end on OCI. An OCI Functi
 
 As an example, the diagram below shows a typical OCI hub-and-spoke deployment, where workloads in spoke VCNs reach Oracle services through a Palo Alto firewall in the hub. The firewall is the single egress inspection point for all spoke traffic destined to OCI services, which means it must permit Oracle's current set of public IP ranges. If those ranges drift out of sync with what Oracle publishes, applications in the spokes lose access to services they were previously reaching.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/introduction/images/dc80516c6ca6a40ec2ba642ff74e11ab.png)
+![Introduction - step 1](images/dc80516c6ca6a40ec2ba642ff74e11ab.png)
 
 In a setup like this, every spoke depends on the hub firewall's address objects being accurate and current. Three reasons to automate this rather than maintain it by hand:
 
@@ -70,7 +72,7 @@ Before starting, make sure you have:
     - Subnet OCID (function/management subnet): `ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaaxxxxxyyyyqqq`.
     - Tenancy namespace: `fr8xxyz44x`.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/introduction/images/c824826136336f6afaf22436e0ac81d7.png)
+![Introduction - step 2](images/c824826136336f6afaf22436e0ac81d7.png)
 
 ## Learn More
 

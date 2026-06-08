@@ -21,7 +21,7 @@ ALL {resource.type='fnfunc', resource.compartment.id='<your-compartment-ocid>'}
 
 4. Click **Create**.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-2-configure-iam/images/c07e57a44ae0238af54940520cedac47.png)
+![Configure IAM for Resource Principal Authentication - step 1](images/c07e57a44ae0238af54940520cedac47.png)
 
 ## Task 2: Create the policy
 
@@ -38,7 +38,7 @@ allow dynamic-group '<domain-name>'/'panos-sync-fn-dg' to read secret-bundles in
 
 5. Click **Create**.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-2-configure-iam/images/d034fa36ccaa88aa89d9b3313b79f056.png)
+![Configure IAM for Resource Principal Authentication - step 2](images/d034fa36ccaa88aa89d9b3313b79f056.png)
 
 The policy is **Active**, granting the dynamic group `read secret-bundles` permission in the `Tutorial` compartment.
 

@@ -10,20 +10,20 @@ By default, the Cloud Shell architecture preference is set to **No Preference**,
 1. Click **Actions** in the Cloud Shell pane.
 2. Select **Architecture**.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/9f589725ac0e5876816cc61b29c26171.png)
+![Build, Deploy, and Configure the OCI Function - step 1](images/9f589725ac0e5876816cc61b29c26171.png)
 
 1. Choose **X86_64**.
 2. Click on **Confirm**.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/2802f93f6ece9a5a4e1cdc518bb4b736.png)
+![Build, Deploy, and Configure the OCI Function - step 2](images/2802f93f6ece9a5a4e1cdc518bb4b736.png)
 
 - Click on **Restart**.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/11bde8abaa8f7be707f0a80c88ed8679.png)
+![Build, Deploy, and Configure the OCI Function - step 3](images/11bde8abaa8f7be707f0a80c88ed8679.png)
 
 - Cloud Shell restarts on x86 and shows a confirmation banner.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/92a91cb3fd40c869f3ed3e80d7d35d04.png)
+![Build, Deploy, and Configure the OCI Function - step 4](images/92a91cb3fd40c869f3ed3e80d7d35d04.png)
 
 ## Task 2: Generate an Auth Token for OCIR and log in
 
@@ -31,7 +31,7 @@ By default, the Cloud Shell architecture preference is set to **No Preference**,
 2. Description: `cloud-shell-ocir`.
 3. Copy the token: click the **⋯** menu next to the generated token and click on **Copy**. The token is shown only once.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/085d2dc1e92acbdb96d46a3a5168ceac.png)
+![Build, Deploy, and Configure the OCI Function - step 5](images/085d2dc1e92acbdb96d46a3a5168ceac.png)
 
 1. Log in to the regional OCIR endpoint.
 
@@ -45,7 +45,7 @@ Replace `fra` with your region's OCIR code (for example `iad` for Ashburn, `lhr`
 3. Password: the auth token from above.
 4. You should see `Login Succeeded`.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/2c64515658fc4fd40509ab4a012e2c00.png)
+![Build, Deploy, and Configure the OCI Function - step 6](images/2c64515658fc4fd40509ab4a012e2c00.png)
 
 
 ## Task 3: Configure the Fn CLI context
@@ -67,7 +67,7 @@ fn list contexts
 - `<tenancy-namespace>`: Your tenancy namespace from the Prerequisites.
 - `panos`: The registry repository prefix. The function image will be pushed to this path.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/88f054e1d91db41f81a9831765ea7dcf.png)
+![Build, Deploy, and Configure the OCI Function - step 7](images/88f054e1d91db41f81a9831765ea7dcf.png)
 
 The `*` should be next to `eu-frankfurt-1`.
 
@@ -83,7 +83,7 @@ cd panos-sync
 
 - This generates `func.py`, `func.yaml`, and `requirements.txt`.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/f0b5e2e2c336f792c57775ef23fde1fc.png)
+![Build, Deploy, and Configure the OCI Function - step 8](images/f0b5e2e2c336f792c57775ef23fde1fc.png)
 
 - Replace the contents of `func.py` with the function code:
 
@@ -163,7 +163,7 @@ oci
 
 - Save and exit (`Esc`, `:wq`, Enter).
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/0207d2b4ee3150234a5df834761605de.png)
+![Build, Deploy, and Configure the OCI Function - step 9](images/0207d2b4ee3150234a5df834761605de.png)
 
 ## Task 5: Create the application and deploy
 
@@ -176,14 +176,14 @@ oci fn application create \
   --subnet-ids '["<your-subnet-ocid>"]'
 ```
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/def075b132825b088047c664514eff3f.png)
+![Build, Deploy, and Configure the OCI Function - step 10](images/def075b132825b088047c664514eff3f.png)
 
 > [!NOTE] NOTE
 > **Subnet choice**: The subnet must reach the firewall management IP (TCP/443) and the [Oracle IP ranges JSON](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json) over HTTPS. The simplest setup is the same subnet as the firewall management interface, provided it has a route to the internet via an Internet Gateway.
 
 - The OCI Functions application `panos-sync-app` was created successfully in your compartment with `GENERIC_X86` shape, attached to your function subnet, and is now in `ACTIVE` state.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/52c388f7199d8a2a0de4ceb81831296e.png)
+![Build, Deploy, and Configure the OCI Function - step 11](images/52c388f7199d8a2a0de4ceb81831296e.png)
 
 - Deploy the function. Fn will build the Docker image, push it to OCIR, and register the function with the application. This typically takes around 3 minutes:
 
@@ -191,11 +191,11 @@ oci fn application create \
 fn -v deploy --app panos-sync-app
 ```
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/b92ff38d9ac50dbbd31e3e746533dbb4.png)
+![Build, Deploy, and Configure the OCI Function - step 12](images/b92ff38d9ac50dbbd31e3e746533dbb4.png)
 
 - Watch for `Successfully created function: panos-sync` at the end of the output.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/03eb33498f01681e899423979ec98bb9.png)
+![Build, Deploy, and Configure the OCI Function - step 13](images/03eb33498f01681e899423979ec98bb9.png)
 
 
 ## Task 6: Set function configuration
@@ -222,7 +222,7 @@ Where:
 - `ADDR_GROUP`: Name of the address group that contains all synced address objects. In this workshop: `osn-public-ips`.
 - `TAG`: A PAN-OS tag applied to every address object and to the group, useful for filtering in the firewall UI. In this workshop: `oci-auto`.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/3fc5d30ecbb948a6e17c9c8b12be16b1.png)
+![Build, Deploy, and Configure the OCI Function - step 14](images/3fc5d30ecbb948a6e17c9c8b12be16b1.png)
 
 - Verify the configuration. You should see all seven config keys with their values:
 
@@ -230,7 +230,7 @@ Where:
 fn inspect function panos-sync-app panos-sync
 ```
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-3-setup-oci-function/images/4f5bcd69ad5472c335c937651c0feaab.png)
+![Build, Deploy, and Configure the OCI Function - step 15](images/4f5bcd69ad5472c335c937651c0feaab.png)
 
 ## Learn More
 

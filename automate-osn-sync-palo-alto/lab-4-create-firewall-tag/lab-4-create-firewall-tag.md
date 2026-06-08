@@ -9,7 +9,7 @@ In this lab, you create the PAN-OS tag that the function uses to mark every addr
     - Comments: `Auto-managed by OCI sync function - do not edit`
 3. Click **OK**, then **Commit**.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-4-create-firewall-tag/images/5a81a09c9f833180118cc19bf48d4081.png)
+![Create the Tag on the Palo Alto Firewall - step 1](images/5a81a09c9f833180118cc19bf48d4081.png)
 
 ## Learn More
 

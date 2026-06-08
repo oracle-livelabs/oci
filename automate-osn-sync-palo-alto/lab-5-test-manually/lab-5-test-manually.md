@@ -14,7 +14,7 @@ After around one minute you should see a JSON response with the count of synced 
 {"synced": 19}
 ```
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-5-test-manually/images/4ca71b3f25eeecced0b629c6fb0ef1c7.png)
+![Test the Function Manually - step 1](images/4ca71b3f25eeecced0b629c6fb0ef1c7.png)
 
 The exact number depends on your `OCI_REGIONS` and `OCI_SERVICES` filters. In this run, `eu-frankfurt-1` with `OSN,OBJECT_STORAGE` produced 19 entries.
 
@@ -26,11 +26,11 @@ The exact number depends on your `OCI_REGIONS` and `OCI_SERVICES` filters. In th
 
 For example, `92.5.248.0/22` in `eu-frankfurt-1` becomes `osn-eu-frankfurt-1-92-5-248-0-22`.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-5-test-manually/images/539e85658f823abd38ba3b169c03f4a5.png)
+![Test the Function Manually - step 2](images/539e85658f823abd38ba3b169c03f4a5.png)
 
 - Navigate to **Objects** → **Address Groups** and click `osn-public-ips` to open it. Confirm the members are populated and the count matches the `synced` value from the function response.
 
-![](010.%20Oracle/3.%20Public%20Assets/LiveLabs/Automate%20OSN%20Public%20IP%20Range%20Sync%20to%20a%20Palo%20Alto%20Firewall%20in%20OCI/Resource%20Scheduler%20Method/automate-osn-sync-palo-alto/lab-5-test-manually/images/12ce4a4922a82d77c27b8078ae2db21d.png)
+![Test the Function Manually - step 3](images/12ce4a4922a82d77c27b8078ae2db21d.png)
 
 ## Acknowledgements
 
