@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create an OCI Vault and encryption key, then create two Database Tools connections that connect the Semantic Store (will be created in the next lab) to the database.
+In this lab, you create an OCI Vault and encryption key, then create two Database Tools connections that connect the Semantic Store, will be created in the next lab, to the database.
 
 Estimated Time: 25 minutes
 
@@ -127,7 +127,7 @@ This lab assumes you have:
 
 1. Click **Create**.
 
-1. Back in the **Create connection** page select the created wallet content secret (it might be auto-selected).
+1. Back in the **Create connection** page, select the created wallet content secret (it might be auto-selected).
 
     ![Select wallet content secret](images/select-wallet-content-secret.png)
 

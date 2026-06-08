@@ -38,12 +38,12 @@ This lab assumes you have:
     - Autonomous AI Database wallet.
     > The app keeps its Generative AI settings in an OCI Enterprise AI project.
 
-    Q: Which resource stores the pairing guide PDF before processing it in the vector store?
+    Q: Which resource stores the Bluetooth pairing guide PDF before processing it in the vector store?
     * Object Storage bucket.
     - Vault secret.
     - Semantic store.
     - OCI config file.
-    > Object Storage holds the PDF before upload for retrieval.
+    > Object Storage holds the PDF before it is processed for retrieval.
 
     Q: Which OCI resource chunks, embeds, and stores content for semantic file search?
     - Object Storage bucket.

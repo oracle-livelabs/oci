@@ -54,15 +54,16 @@ This lab assumes you have:
 1. Uncomment the code lines and keep the indentation inside the function. The function should look like this (make sure to ONLY uncomment the two code lines):
 
     ```python
-    <copy>
     def response_model(model, cfg, messages=None):
         # Uncomment to route image prompts to a stronger vision model and text-only
         # prompts to a cheaper text model.
         if not messages_include_images(messages):
             model = cfg["cheaper_model"]
 
+        if model in KNOWN_TEXT_ONLY_IMAGE_MODELS and messages_include_images(messages):
+            raise ValueError(f"Model {model} does not support image input.")
+
         return model
-    </copy>
     ```
 
 1. Save the file.
@@ -75,7 +76,7 @@ This lab assumes you have:
     </copy>
     ```
 
-At this point we've introduced new code which will check if a user request contains an image. If it does, the application will route the request to the more capable (and mode expensive) model while the rest of the requests will be routed to the less capable (and cheaper) model. Try and see if you can spot the model being used in the sample application's output.
+At this point, we've introduced new code which will check if a user request contains an image. If it does, the application will route the request to the more capable (and more expensive) model while the rest of the requests will be routed to the less capable (and cheaper) model. Try and see if you can spot the model being used in the sample application's output.
 
 ## Task 2: Test text-only routing
 
@@ -104,7 +105,7 @@ At this point we've introduced new code which will check if a user request conta
 
 ## Task 3: Test image routing
 
-1. Attach the image we have downloaded in the previous lab ([test image](./files/example-motors-service-receipt.png)) to the request and add the following prompt:
+1. Attach the image we downloaded in the previous lab ([test image](./files/example-motors-service-receipt.png)) to the request and add the following prompt:
 
     ```text
     <copy>
@@ -145,7 +146,7 @@ At this point we've introduced new code which will check if a user request conta
     - Accuracy is more important than latency
     ```
 
-In this lab we have explored a simple routing mechanism to select which LLM will process our request. We can optimize for performance, accuracy & cost. You could explore additional routing mechanism like intent based routing where the routing decision is made based on the use-case the user is interested in (for example: billing/finance, account related information, technical support etc.) where each use-case will trigger a different LLM.
+In this lab, we have explored a simple routing mechanism to select which LLM will process our request. We can optimize for performance, accuracy & cost. You could explore additional routing mechanisms like intent-based routing where the routing decision is made based on the use-case the user is interested in (for example: billing/finance, account related information, technical support etc.) where each use-case will trigger a different LLM.
 
 You may now **proceed to the next lab**.
 
