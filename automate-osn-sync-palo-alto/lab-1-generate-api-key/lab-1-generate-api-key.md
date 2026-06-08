@@ -30,10 +30,10 @@ An OCI account/tenancy, and the Palo Alto firewall's management IP + admin crede
 1. From OCI Cloud Shell, run the following command, replacing the placeholders with your firewall's values:
 
 ```bash
-curl -sk -G 'https://<firewall-mgmt-ip>/api/' \
+<copy>curl -sk -G 'https://&lt;firewall-mgmt-ip&gt;/api/' \
   --data-urlencode 'type=keygen' \
-  --data-urlencode 'user=<admin-username>' \
-  --data-urlencode 'password=<admin-password>'; echo
+  --data-urlencode 'user=&lt;admin-username&gt;' \
+  --data-urlencode 'password=&lt;admin-password&gt;'; echo</copy>
 ```
 
 Where:
@@ -46,7 +46,7 @@ The trailing `echo` just adds a newline so the XML response is easier to read in
 2. The response is XML:
 
 ```xml
-<response status = 'success'><result><key>LUF...GtVcQ==</key></result></response>
+&lt;response status = 'success'&gt;&lt;result&gt;&lt;key&gt;LUF...GtVcQ==&lt;/key&gt;&lt;/result&gt;&lt;/response&gt;
 ```
 
 Copy the value between `<key>` and `</key>`, that string is your API key. By default it never expires. It becomes invalid only if you set an API Key Lifetime, expire or revoke all keys, change the admin password, or regenerate the key.

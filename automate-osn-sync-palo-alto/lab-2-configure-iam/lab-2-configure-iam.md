@@ -32,7 +32,7 @@ This lab assumes you have:
     - Matching Rule:
 
 ```
-ALL {resource.type='fnfunc', resource.compartment.id='<your-compartment-ocid>'}
+<copy>ALL {resource.type='fnfunc', resource.compartment.id='&lt;your-compartment-ocid&gt;'}</copy>
 ```
 
 4. Click **Create**.
@@ -49,7 +49,7 @@ ALL {resource.type='fnfunc', resource.compartment.id='<your-compartment-ocid>'}
     - Click **Show manual editor** and paste the statement:
 
 ```
-allow dynamic-group '<domain-name>'/'panos-sync-fn-dg' to read secret-bundles in compartment <compartment-name>
+<copy>allow dynamic-group '&lt;domain-name&gt;'/'panos-sync-fn-dg' to read secret-bundles in compartment &lt;compartment-name&gt;</copy>
 ```
 
 5. Click **Create**.

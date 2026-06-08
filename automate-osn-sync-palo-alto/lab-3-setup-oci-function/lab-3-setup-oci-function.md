@@ -54,7 +54,7 @@ By default, the Cloud Shell architecture preference is set to **No Preference**,
 1. Log in to the regional OCIR endpoint.
 
 ```bash
-docker login fra.ocir.io
+<copy>docker login fra.ocir.io</copy>
 ```
 
 Replace `fra` with your region's OCIR code (for example `iad` for Ashburn, `lhr` for London). See [OCIR availability](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm#regional-availability) for the full list.
@@ -73,10 +73,10 @@ Cloud Shell ships with a pre-configured Fn context for the region you are in (na
 - Switch to the regional context and update it with your compartment OCID and registry path:
 
 ```bash
-fn use context eu-frankfurt-1
-fn update context oracle.compartment-id <your-compartment-ocid>
-fn update context registry fra.ocir.io/<tenancy-namespace>/panos
-fn list contexts
+<copy>fn use context eu-frankfurt-1
+fn update context oracle.compartment-id &lt;your-compartment-ocid&gt;
+fn update context registry fra.ocir.io/&lt;tenancy-namespace&gt;/panos
+fn list contexts</copy>
 ```
 
 - `eu-frankfurt-1`: Replace with your region's context name if you are not in Frankfurt. See [Regions and Availability Domains](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm) for the full list.
@@ -94,9 +94,9 @@ The `*` should be next to `eu-frankfurt-1`.
 - Create a working directory and initialize the function skeleton:
 
 ```bash
-mkdir -p ~/oci-panos-fn && cd ~/oci-panos-fn
+<copy>mkdir -p ~/oci-panos-fn && cd ~/oci-panos-fn
 fn init --runtime python panos-sync
-cd panos-sync
+cd panos-sync</copy>
 ```
 
 - This generates `func.py`, `func.yaml`, and `requirements.txt`.
@@ -106,13 +106,13 @@ cd panos-sync
 - Replace the contents of `func.py` with the function code:
 
 ```bash
-vi func.py
+<copy>vi func.py</copy>
 ```
 
 In vi, delete the boilerplate: press `:`, type `%d`, press `Enter`. Press `i` to enter insert mode, paste the code below:
 
 ```python
-import io, json, re, base64, requests, oci
+<copy>import io, json, re, base64, requests, oci
 from fdk import response
 
 def handler(ctx, data: io.BytesIO = None):
@@ -144,23 +144,23 @@ def handler(ctx, data: io.BytesIO = None):
         x.raise_for_status(); return x.text
 
     xa = "/config/devices/entry/vsys/entry[@name='vsys1']/address"
-    existing = set(re.findall(rf'<entry name="({PREFIX}-[^"]+)"',
+    existing = set(re.findall(rf'&lt;entry name="({PREFIX}-[^"]+)"',
                               api({"type":"config","action":"get","xpath":xa})))
 
     for n, c in desired.items():
         api({"type":"config","action":"set","xpath": f"{xa}/entry[@name='{n}']",
-             "element": f"<ip-netmask>{c}</ip-netmask><tag><member>{TAG}</member></tag>"})
+             "element": f"&lt;ip-netmask&gt;{c}&lt;/ip-netmask&gt;&lt;tag&gt;&lt;member&gt;{TAG}&lt;/member&gt;&lt;/tag&gt;"})
     for n in existing - set(desired):
         api({"type":"config","action":"delete","xpath": f"{xa}/entry[@name='{n}']"})
 
-    members = "".join(f"<member>{n}</member>" for n in desired)
+    members = "".join(f"&lt;member&gt;{n}&lt;/member&gt;" for n in desired)
     xg = f"/config/devices/entry/vsys/entry[@name='vsys1']/address-group/entry[@name='{GROUP}']"
     api({"type":"config","action":"edit","xpath": xg,
-         "element": f"<entry name='{GROUP}'><static>{members}</static><tag><member>{TAG}</member></tag></entry>"})
-    api({"type":"commit","cmd":"<commit><description>OCI IP sync</description></commit>"})
+         "element": f"&lt;entry name='{GROUP}'&gt;&lt;static&gt;{members}&lt;/static&gt;&lt;tag&gt;&lt;member&gt;{TAG}&lt;/member&gt;&lt;/tag&gt;&lt;/entry&gt;"})
+    api({"type":"commit","cmd":"&lt;commit&gt;&lt;description&gt;OCI IP sync&lt;/description&gt;&lt;/commit&gt;"})
 
     return response.Response(ctx, response_data=json.dumps({"synced": len(desired)}),
-                             headers={"Content-Type":"application/json"})
+                             headers={"Content-Type":"application/json"})</copy>
 ```
 
 Then press `Esc`, type `:wq`, and press `Enter` to save and exit.
@@ -168,15 +168,15 @@ Then press `Esc`, type `:wq`, and press `Enter` to save and exit.
 - Replace the contents of `requirements.txt` with the function's Python dependencies:
 
 ```bash
-vi requirements.txt
+<copy>vi requirements.txt</copy>
 ```
 
 Wipe contents (`:%d`), enter insert mode (`i`), and paste:
 
 ```
-fdk
+<copy>fdk
 requests
-oci
+oci</copy>
 ```
 
 - Save and exit (`Esc`, `:wq`, Enter).
@@ -188,10 +188,10 @@ oci
 - Create the Functions application. The application is the logical container for one or more functions, and it pins the network attachment (subnet) and shape (`GENERIC_X86`) used at runtime:
 
 ```bash
-oci fn application create \
-  --compartment-id <your-compartment-ocid> \
+<copy>oci fn application create \
+  --compartment-id &lt;your-compartment-ocid&gt; \
   --display-name panos-sync-app \
-  --subnet-ids '["<your-subnet-ocid>"]'
+  --subnet-ids '["&lt;your-subnet-ocid&gt;"]'</copy>
 ```
 
 ![Build, Deploy, and Configure the OCI Function - step 10](images/def075b132825b088047c664514eff3f.png)
@@ -206,7 +206,7 @@ oci fn application create \
 - Deploy the function. Fn will build the Docker image, push it to OCIR, and register the function with the application. This typically takes around 3 minutes:
 
 ```bash
-fn -v deploy --app panos-sync-app
+<copy>fn -v deploy --app panos-sync-app</copy>
 ```
 
 ![Build, Deploy, and Configure the OCI Function - step 12](images/b92ff38d9ac50dbbd31e3e746533dbb4.png)
@@ -221,13 +221,13 @@ fn -v deploy --app panos-sync-app
 - These environment variables tell the function which firewall to talk to, which regions and services to filter, and where to find the secret. The same image can be reused across firewalls by changing only the config.
 
 ```bash
-fn config function panos-sync-app panos-sync PANOS_HOST <firewall-mgmt-ip>
+<copy>fn config function panos-sync-app panos-sync PANOS_HOST &lt;firewall-mgmt-ip&gt;
 fn config function panos-sync-app panos-sync OCI_REGIONS eu-frankfurt-1
 fn config function panos-sync-app panos-sync OCI_SERVICES OSN,OBJECT_STORAGE
 fn config function panos-sync-app panos-sync ADDR_PREFIX osn
 fn config function panos-sync-app panos-sync ADDR_GROUP osn-public-ips
 fn config function panos-sync-app panos-sync TAG oci-auto
-fn config function panos-sync-app panos-sync PANOS_KEY_SECRET_OCID <secret-ocid-from-lab-1>
+fn config function panos-sync-app panos-sync PANOS_KEY_SECRET_OCID &lt;secret-ocid-from-lab-1&gt;</copy>
 ```
 
 Where:
@@ -245,7 +245,7 @@ Where:
 - Verify the configuration. You should see all seven config keys with their values:
 
 ```bash
-fn inspect function panos-sync-app panos-sync
+<copy>fn inspect function panos-sync-app panos-sync</copy>
 ```
 
 ![Build, Deploy, and Configure the OCI Function - step 15](images/4f5bcd69ad5472c335c937651c0feaab.png)

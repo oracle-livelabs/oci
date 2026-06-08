@@ -30,7 +30,7 @@ Before scheduling, confirm the function actually works.
 - Invoke the function from Cloud Shell:
 
 ```bash
-fn invoke panos-sync-app panos-sync
+<copy>fn invoke panos-sync-app panos-sync</copy>
 ```
 
 After around one minute you should see a JSON response with the count of synced address objects:

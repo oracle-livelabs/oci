@@ -34,8 +34,8 @@ This lab assumes you have:
 4. Click on **Statements** → **Edit Policy Statements** → **Advanced**:
 
 ```
-allow any-user to read fn-function in compartment Tutorial where all {request.principal.type='resourceschedule'}
-allow any-user to use fn-invocation in compartment Tutorial where all {request.principal.type='resourceschedule'}
+<copy>allow any-user to read fn-function in compartment Tutorial where all {request.principal.type='resourceschedule'}
+allow any-user to use fn-invocation in compartment Tutorial where all {request.principal.type='resourceschedule'}</copy>
 ```
 
 5. Click **Save changes**.
