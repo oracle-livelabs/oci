@@ -62,8 +62,8 @@ If you already have both a regular image and a matching eStargz image in OCIR, y
     Example:
 
     ```text
-    fra.ocir.io/idjuatm1d4mr/gs/testlp:pytorch-latest-regular
-    fra.ocir.io/idjuatm1d4mr/gs/testlp:pytorch-latest-esgz
+    fra.ocir.io/<tenancy-namespace>/estargz/testlp:pytorch-latest-regular
+    fra.ocir.io/<tenancy-namespace>/estargz/testlp:pytorch-latest-esgz
     ```
 
 2. Set the values that are specific to your tenancy.
@@ -80,8 +80,8 @@ If you already have both a regular image and a matching eStargz image in OCIR, y
 
     ```bash
     export REGISTRY="fra.ocir.io"
-    export NAMESPACE="idjuatm1d4mr"
-    export REPOSITORY="gs"
+    export NAMESPACE="<tenancy-namespace>"
+    export REPOSITORY="estargz"
     ```
 
 3. Set the workshop image values.
@@ -161,6 +161,12 @@ The regular image is the baseline image. It is stored in OCIR without eStargz op
     sudo /usr/local/bin/nerdctl tag docker.io/pytorch/pytorch:latest fra.ocir.io/<tenancy-namespace>/<repository-path>/testlp:pytorch-latest-regular
     ```
 
+    You can check it with:
+
+    ```bash
+    sudo /usr/local/bin/nerdctl images
+    ```
+
 3. Push the regular image to OCIR:
 
     ```bash
@@ -179,11 +185,13 @@ The regular image is the baseline image. It is stored in OCIR without eStargz op
     sudo /usr/local/bin/nerdctl images | grep ${IMAGE_NAME}
     ```
 
+5. In the OCI Console, confirm that the image was pushed to the expected repository. If the repository does not appear in your selected compartment, check the root compartment. OCIR can automatically create a repository there when you push an image to a repository path that does not already exist.
+
 ## Task 5: Create and push the eStargz image
 
 The eStargz image uses the same application content as the regular image, but the image layers are optimized for lazy startup.
 
-1. Convert the regular image to eStargz format:
+1. Convert the regular image to eStargz format(the conversion can take a few minutes):
 
     ```bash
     sudo /usr/local/bin/nerdctl image convert --estargz --oci ${REGULAR_IMAGE} ${ESTARGZ_IMAGE}
@@ -209,7 +217,7 @@ The eStargz image uses the same application content as the regular image, but th
     sudo /usr/local/bin/nerdctl push fra.ocir.io/<tenancy-namespace>/<repository-path>/testlp:pytorch-latest-esgz
     ```
 
-3. Confirm both image tags are present:
+3. Confirm both image taestargz are present:
 
     ```bash
     sudo /usr/local/bin/nerdctl images | grep ${IMAGE_NAME}
