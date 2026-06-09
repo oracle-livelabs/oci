@@ -148,12 +148,13 @@ terraform output linux_instances
 Copy the public IP address from the output and connect to the VM:
 
 ```bash
-ssh -i ~/.ssh/id_rsa opc@<public_ip>
+ssh -i ~/.ssh/id_rsa opc@public_ip
 ```
 
 Wait for cloud-init to complete:
 
 ```bash
+tail -f /var/log/cloud-init-output.log
 sudo cloud-init status --wait --long
 ```
 
@@ -200,6 +201,8 @@ Before using private OCIR images, confirm the VM can run containers with both sn
 ```bash
 sudo /usr/local/bin/nerdctl --snapshotter overlayfs run --rm docker.io/library/busybox:latest true
 sudo /usr/local/bin/nerdctl --snapshotter stargz run --rm docker.io/library/busybox:latest true
+OR
+sudo /usr/local/bin/nerdctl --snapshotter stargz run --rm docker.io/library/busybox:latest echo stargz-ok
 ```
 
 If both commands complete successfully, the infrastructure is ready for the image creation and benchmark lab.
