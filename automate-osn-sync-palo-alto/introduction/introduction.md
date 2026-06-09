@@ -1,6 +1,6 @@
 # Introduction
 
-## Overview
+## About this Workshop
 
 Oracle Cloud Infrastructure (OCI) publishes a [JSON document](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json) listing the public IP address ranges used by its cloud services. The file groups CIDR blocks by region and tags each block with the service it belongs to, such as `OBJECT_STORAGE` for Object Storage endpoints, `OSN` for the Oracle Services Network, and `OCI` for VCN public IP ranges (used by resources like compute instances, NAT Gateways, and public Load Balancers).
 
@@ -8,7 +8,52 @@ Network and security teams that operate firewalls in front of OCI workloads rely
 
 This workshop shows how to automate the process end-to-end on OCI. An OCI Function downloads the JSON file, filters to the regions and services you care about, and synchronizes the resulting CIDRs to a Palo Alto firewall: it creates and updates address objects to match the CIDRs in the file, removes any of its own auto-managed objects that are no longer in the file, groups them into an address group, and commits the change via the PAN-OS XML API. The function is stateless and stores no secrets on disk; the firewall API key lives in OCI Vault and is fetched at runtime via resource principal authentication. Scheduling is handled by OCI Resource Scheduler, a managed service that invokes the function daily. The function is where the work happens; the scheduler is just the heartbeat.
 
-Estimated Workshop Time: 60 minutes
+Estimated Workshop Time: 70 minutes
+
+### Objectives
+
+In this workshop, you will:
+
+- Store a PAN-OS API key securely in **OCI Vault**.
+- Configure **IAM dynamic groups and policies** so the function can authenticate to Vault using its own identity (resource principal). No static credentials.
+- Build and deploy an **OCI Function** (Python) that fetches Oracle's public IP ranges, filters by region/service, and synchronizes them to your Palo Alto firewall.
+- Trigger the function on a daily schedule using **OCI Resource Scheduler**, a managed service that invokes the function as its own principal with no VM or static credentials.
+
+### Architecture Summary
+
+The diagram below shows the components involved in the sync and how they interact. One full cycle runs through four steps:
+
+1. OCI Resource Scheduler invokes the OCI Function on schedule.
+2. The function fetches the public JSON from Oracle via the Hub VCN's Internet Gateway.
+3. The function reads the PAN-OS API key from OCI Vault using its own identity (resource principal auth).
+4. The function reconciles address objects on the PA-VM by calling the PAN-OS XML API over the management interface.
+
+![Architecture Summary - sync cycle](images/introduction-2.png)
+
+
+What each component does:
+
+| Component                   | Purpose                                                                                                                                                                                                          |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OCI Function (Python)       | Stateless function attached to a Hub VCN subnet. Fetches Oracle's JSON, reconciles address objects on the PA-VM via the PAN-OS XML API (creates, updates, deletes auto-managed objects), and commits the change. |
+| OCI Vault                   | Encrypted storage for the PAN-OS API key.                                                                                                                                                                        |
+| OCI Resource Scheduler      | Managed service that triggers the function on a daily schedule. No VM to patch and no cron daemon to maintain.                                                                                                   |
+| Policy (scheduler)          | Lets the scheduler invoke the function as the `resourceschedule` principal, with no API keys anywhere in the path.                                                                                               |
+| PA-VM (Palo Alto VM-Series) | Target firewall. Receives address-object updates on its management interface (vNIC0) at 172.16.0.10.                                                                                                             |
+
+### Prerequisites
+
+Before starting, make sure you have:
+
+1. An OCI tenancy with a compartment you can deploy resources into. Here we used the `Tutorial` compartment.
+2. A Palo Alto VM-Series firewall deployed in an OCI VCN. Complete the following Live Labs workshop first: &lt;Live Labs URL&gt;. It provisions the baseline environment used in this workshop: the firewall along with the Hub VCN, subnets, Internet Gateway, and base configuration. After completing it, note the firewall's management IP and admin credentials.
+3. Access to Cloud Shell from the OCI Console.
+4. The following OCIDs ready. Replace the placeholders below with values from your own tenancy:
+    - Compartment OCID: `ocid1.compartment.oc1..aaaaaaaaxxxxyyyyyyqqq`.
+    - Subnet OCID (function/management subnet): `ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaaxxxxxyyyyqqq`.
+    - Tenancy namespace: `fr8xxyz44x`.
+
+![Introduction - step 2](images/c824826136336f6afaf22436e0ac81d7.png)
 
 ## Why this is needed?
 
@@ -31,51 +76,6 @@ This pattern solves a narrow case. Before adopting it, ask three questions. If a
 3. **Does the traffic really need firewall inspection, or can the spoke just use its own Service Gateway?** If inspection is not required, a local spoke SGW reaches OSN directly with no hub firewall involved.
 
 This workshop is for the case where all three push the other way: the service is not PSA-fronted, traffic must stay off the Internet, and it must be inspected at the hub firewall. In that setup the firewall has to permit the correct OSN CIDRs on its trust interface, and keeping those CIDRs current is exactly what this automation handles.
-
-## Objectives
-
-In this workshop, you will:
-
-- Store a PAN-OS API key securely in **OCI Vault**.
-- Configure **IAM dynamic groups and policies** so the function can authenticate to Vault using its own identity (resource principal). No static credentials.
-- Build and deploy an **OCI Function** (Python) that fetches Oracle's public IP ranges, filters by region/service, and synchronizes them to your Palo Alto firewall.
-- Trigger the function on a daily schedule using **OCI Resource Scheduler**, a managed service that invokes the function as its own principal with no VM or static credentials.
-
-## Architecture Summary
-
-The diagram below shows the components involved in the sync and how they interact. One full cycle runs through four steps:
-
-1. OCI Resource Scheduler invokes the OCI Function on schedule.
-2. The function fetches the public JSON from Oracle via the Hub VCN's Internet Gateway.
-3. The function reads the PAN-OS API key from OCI Vault using its own identity (resource principal auth).
-4. The function reconciles address objects on the PA-VM by calling the PAN-OS XML API over the management interface.
-
-![Architecture Summary - sync cycle](images/introduction-2.png)
-
-
-What each component does:
-
-| Component                   | Purpose                                                                                                                                                                                                          |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OCI Function (Python)       | Stateless function attached to a Hub VCN subnet. Fetches Oracle's JSON, reconciles address objects on the PA-VM via the PAN-OS XML API (creates, updates, deletes auto-managed objects), and commits the change. |
-| OCI Vault                   | Encrypted storage for the PAN-OS API key.                                                                                                                                                                        |
-| OCI Resource Scheduler      | Managed service that triggers the function on a daily schedule. No VM to patch and no cron daemon to maintain.                                                                                                   |
-| Policy (scheduler)          | Lets the scheduler invoke the function as the `resourceschedule` principal, with no API keys anywhere in the path.                                                                                               |
-| PA-VM (Palo Alto VM-Series) | Target firewall. Receives address-object updates on its management interface (vNIC0) at 172.16.0.10.                                                                                                             |
-
-## Prerequisites
-
-Before starting, make sure you have:
-
-1. An OCI tenancy with a compartment you can deploy resources into. Here we used the `Tutorial` compartment.
-2. A Palo Alto VM-Series firewall deployed in an OCI VCN. Complete the following Live Labs workshop first: `<Live Labs URL>`. It provisions the baseline environment used in this workshop: the firewall along with the Hub VCN, subnets, Internet Gateway, and base configuration. After completing it, note the firewall's management IP and admin credentials.
-3. Access to Cloud Shell from the OCI Console.
-4. The following OCIDs ready. Replace the placeholders below with values from your own tenancy:
-    - Compartment OCID: `ocid1.compartment.oc1..aaaaaaaaxxxxyyyyyyqqq`.
-    - Subnet OCID (function/management subnet): `ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaaxxxxxyyyyqqq`.
-    - Tenancy namespace: `fr8xxyz44x`.
-
-![Introduction - step 2](images/c824826136336f6afaf22436e0ac81d7.png)
 
 ## Learn More
 

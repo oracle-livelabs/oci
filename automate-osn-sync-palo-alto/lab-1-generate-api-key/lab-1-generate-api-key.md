@@ -18,13 +18,16 @@ An OCI account/tenancy, and the Palo Alto firewall's management IP + admin crede
 
 ## Task 1: Generate the PAN-OS API Key
 
-1. Click the **Developer tools** icon in the top-right navigation bar, then select **Cloud Shell** from the dropdown. Wait for Cloud Shell to start up.
+1. Click the **Developer tools** icon in the top-right navigation bar.
+2. Select **Cloud Shell** from the dropdown.
 
     ![Generate and Store the PAN-OS API Key in OCI Vault - step 1](images/bd14066c595202717c1d1c260401b30a.png)
 
+    - Wait for Cloud Shell to start up.
+
     ![Generate and Store the PAN-OS API Key in OCI Vault - step 2](images/162a4be5b0439bc18ec866b2a0ff66dd.png)
 
-2. From OCI Cloud Shell, run the following command, replacing the placeholders with your firewall's values:
+1. From OCI Cloud Shell, run the following command, replacing the placeholders with your firewall's values:
 
     ```bash
     <copy>curl -sk -G 'https://&lt;firewall-mgmt-ip&gt;/api/' \
@@ -33,15 +36,20 @@ An OCI account/tenancy, and the Palo Alto firewall's management IP + admin crede
       --data-urlencode 'password=&lt;admin-password&gt;'; echo</copy>
     ```
 
-    Where `&lt;firewall-mgmt-ip&gt;` is the public IP of the firewall's management interface (provisioned in the Management Subnet), `&lt;admin-username&gt;` is the PAN-OS superuser account (typically `admin`), and `&lt;admin-password&gt;` is that account's password. All three are set during the Live Labs prerequisite workshop. The trailing `echo` just adds a newline so the XML response is easier to read.
+    Where:
 
-3. The response is XML:
+    - `<firewall-mgmt-ip>`: Public IP of the firewall's management interface, provisioned by the Live Labs workshop in the Management Subnet.
+    - `<admin-username>`: The PAN-OS superuser account (typically `admin`), set during the Live Labs workshop.
+    - `<admin-password>`: The password for the admin account, set during the Live Labs workshop.
+    The trailing `echo` just adds a newline so the XML response is easier to read in the terminal.
+
+2. The response is XML:
 
     ```xml
     &lt;response status = 'success'&gt;&lt;result&gt;&lt;key&gt;LUF...GtVcQ==&lt;/key&gt;&lt;/result&gt;&lt;/response&gt;
     ```
 
-    Copy the value between `&lt;key&gt;` and `&lt;/key&gt;`, that string is your API key. By default it never expires. It becomes invalid only if you set an API Key Lifetime, expire or revoke all keys, change the admin password, or regenerate the key.
+    Copy the value between `<key>` and `</key>`, that string is your API key. By default it never expires. It becomes invalid only if you set an API Key Lifetime, expire or revoke all keys, change the admin password, or regenerate the key.
 
     ![Generate and Store the PAN-OS API Key in OCI Vault - step 3](images/69e6d6dd07dd2baf79c008ab13ee2681.png)
 
@@ -56,7 +64,8 @@ An OCI account/tenancy, and the Palo Alto firewall's management IP + admin crede
 
     ![Generate and Store the PAN-OS API Key in OCI Vault - step 4](images/9f0a1331b674afa45b3d78f389ba2a82.png)
 
-4. Inside the vault, create the master encryption key. Click **Master Encryption Keys** → **Create Key**.
+    Inside the vault, create the master encryption key. Click **Master Encryption Keys** → **Create Key**.
+
     - Protection Mode: Software
     - Name: `panos-master-key`
     - Algorithm: AES, Length: 256

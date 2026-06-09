@@ -7,7 +7,7 @@ A **Dynamic Group** is a logical grouping of OCI resources (compute instances, f
 
 A **Policy** is a set of statements that grant permissions. Each statement says "allow these subjects to perform these actions on these resources in this scope." Subjects can be users, groups, or dynamic groups. Together, the dynamic group identifies *who* the function is, and the policy says *what* it can do.
 
-Estimated Time: 5 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -31,9 +31,9 @@ This lab assumes you have:
     - Name: `panos-sync-fn-dg`
     - Matching Rule:
 
-        ```
-        <copy>ALL {resource.type='fnfunc', resource.compartment.id='&lt;your-compartment-ocid&gt;'}</copy>
-        ```
+    ```
+    <copy>ALL {resource.type='fnfunc', resource.compartment.id='&lt;your-compartment-ocid&gt;'}</copy>
+    ```
 
 4. Click **Create**.
 
@@ -48,15 +48,15 @@ This lab assumes you have:
     - Name: `panos-sync-fn-policy`
     - Click **Show manual editor** and paste the statement:
 
-        ```
-        <copy>allow dynamic-group '&lt;domain-name&gt;'/'panos-sync-fn-dg' to read secret-bundles in compartment &lt;compartment-name&gt;</copy>
-        ```
+    ```
+    <copy>allow dynamic-group '&lt;domain-name&gt;'/'panos-sync-fn-dg' to read secret-bundles in compartment &lt;compartment-name&gt;</copy>
+    ```
 
 5. Click **Create**.
 
     ![Configure IAM for Resource Principal Authentication - step 2](images/d034fa36ccaa88aa89d9b3313b79f056.png)
 
-The policy is **Active**, granting the dynamic group `read secret-bundles` permission in the `Tutorial` compartment.
+    The policy is **Active**, granting the dynamic group `read secret-bundles` permission in the `Tutorial` compartment.
 
 ## Learn More
 

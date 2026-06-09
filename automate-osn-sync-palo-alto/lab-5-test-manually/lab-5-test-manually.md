@@ -6,7 +6,7 @@ In this lab, you run the sync function on demand to confirm it works before hand
 
 Running this manual test first means that when OCI Resource Scheduler triggers the function in the next lab, you already know the end-to-end path works and what a healthy result looks like.
 
-Estimated Time: 5 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
