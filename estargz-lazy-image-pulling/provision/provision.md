@@ -205,7 +205,7 @@ OR
 sudo /usr/local/bin/nerdctl --snapshotter stargz run --rm docker.io/library/busybox:latest echo stargz-ok
 ```
 
-If both commands complete successfully, the infrastructure is ready for the image creation and benchmark lab.
+If the commands complete successfully, the infrastructure is ready for the image creation and benchmark lab.
 
 ## Learn More
 
