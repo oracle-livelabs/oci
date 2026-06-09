@@ -25,23 +25,21 @@ This lab assumes you have:
 
 By default, the Cloud Shell architecture preference is set to **No Preference**, meaning your session runs on either x86_64 or ARM (aarch64) depending on regional hardware availability. Since Cloud Shell cannot cross-compile, its architecture must match the shape of the Functions application you will deploy to. This workshop uses the `GENERIC_X86` shape, so Cloud Shell must run on x86_64.
 
-1. Click **Actions** in the Cloud Shell pane.
-2. Select **Architecture**.
+1. Click **Actions** in the Cloud Shell pane, then select **Architecture**.
 
-![Build, Deploy, and Configure the OCI Function - step 1](images/9f589725ac0e5876816cc61b29c26171.png)
+    ![Build, Deploy, and Configure the OCI Function - step 1](images/9f589725ac0e5876816cc61b29c26171.png)
 
-1. Choose **X86_64**.
-2. Click on **Confirm**.
+2. Choose **X86_64**, then click **Confirm**.
 
-![Build, Deploy, and Configure the OCI Function - step 2](images/2802f93f6ece9a5a4e1cdc518bb4b736.png)
+    ![Build, Deploy, and Configure the OCI Function - step 2](images/2802f93f6ece9a5a4e1cdc518bb4b736.png)
 
-- Click on **Restart**.
+3. Click **Restart**.
 
-![Build, Deploy, and Configure the OCI Function - step 3](images/11bde8abaa8f7be707f0a80c88ed8679.png)
+    ![Build, Deploy, and Configure the OCI Function - step 3](images/11bde8abaa8f7be707f0a80c88ed8679.png)
 
-- Cloud Shell restarts on x86 and shows a confirmation banner.
+4. Cloud Shell restarts on x86 and shows a confirmation banner.
 
-![Build, Deploy, and Configure the OCI Function - step 4](images/92a91cb3fd40c869f3ed3e80d7d35d04.png)
+    ![Build, Deploy, and Configure the OCI Function - step 4](images/92a91cb3fd40c869f3ed3e80d7d35d04.png)
 
 ## Task 2: Generate an Auth Token for OCIR and log in
 
@@ -49,21 +47,21 @@ By default, the Cloud Shell architecture preference is set to **No Preference**,
 2. Description: `cloud-shell-ocir`.
 3. Copy the token: click the **⋯** menu next to the generated token and click on **Copy**. The token is shown only once.
 
-![Build, Deploy, and Configure the OCI Function - step 5](images/085d2dc1e92acbdb96d46a3a5168ceac.png)
+    ![Build, Deploy, and Configure the OCI Function - step 5](images/085d2dc1e92acbdb96d46a3a5168ceac.png)
 
-1. Log in to the regional OCIR endpoint.
+4. Log in to the regional OCIR endpoint.
 
-```bash
-<copy>docker login fra.ocir.io</copy>
-```
+    ```bash
+    <copy>docker login fra.ocir.io</copy>
+    ```
 
-Replace `fra` with your region's OCIR code (for example `iad` for Ashburn, `lhr` for London). See [OCIR availability](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm#regional-availability) for the full list.
+    Replace `fra` with your region's OCIR code (for example `iad` for Ashburn, `lhr` for London). See [OCIR availability](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm#regional-availability) for the full list.
 
-2. **Username**: `<tenancy-namespace>/<full-username>` (for example `fr8xxyz44x/oracleidentitycloudservice/jane.doe@example.com`).
-3. Password: the auth token from above.
-4. You should see `Login Succeeded`.
+5. **Username**: `&lt;tenancy-namespace&gt;/&lt;full-username&gt;` (for example `fr8xxyz44x/oracleidentitycloudservice/jane.doe@example.com`).
+6. Password: the auth token from above.
+7. You should see `Login Succeeded`.
 
-![Build, Deploy, and Configure the OCI Function - step 6](images/2c64515658fc4fd40509ab4a012e2c00.png)
+    ![Build, Deploy, and Configure the OCI Function - step 6](images/2c64515658fc4fd40509ab4a012e2c00.png)
 
 
 ## Task 3: Configure the Fn CLI context

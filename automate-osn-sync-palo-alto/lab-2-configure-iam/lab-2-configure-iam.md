@@ -31,13 +31,13 @@ This lab assumes you have:
     - Name: `panos-sync-fn-dg`
     - Matching Rule:
 
-```
-<copy>ALL {resource.type='fnfunc', resource.compartment.id='&lt;your-compartment-ocid&gt;'}</copy>
-```
+        ```
+        <copy>ALL {resource.type='fnfunc', resource.compartment.id='&lt;your-compartment-ocid&gt;'}</copy>
+        ```
 
 4. Click **Create**.
 
-![Configure IAM for Resource Principal Authentication - step 1](images/c07e57a44ae0238af54940520cedac47.png)
+    ![Configure IAM for Resource Principal Authentication - step 1](images/c07e57a44ae0238af54940520cedac47.png)
 
 ## Task 2: Create the policy
 
@@ -48,13 +48,13 @@ This lab assumes you have:
     - Name: `panos-sync-fn-policy`
     - Click **Show manual editor** and paste the statement:
 
-```
-<copy>allow dynamic-group '&lt;domain-name&gt;'/'panos-sync-fn-dg' to read secret-bundles in compartment &lt;compartment-name&gt;</copy>
-```
+        ```
+        <copy>allow dynamic-group '&lt;domain-name&gt;'/'panos-sync-fn-dg' to read secret-bundles in compartment &lt;compartment-name&gt;</copy>
+        ```
 
 5. Click **Create**.
 
-![Configure IAM for Resource Principal Authentication - step 2](images/d034fa36ccaa88aa89d9b3313b79f056.png)
+    ![Configure IAM for Resource Principal Authentication - step 2](images/d034fa36ccaa88aa89d9b3313b79f056.png)
 
 The policy is **Active**, granting the dynamic group `read secret-bundles` permission in the `Tutorial` compartment.
 
