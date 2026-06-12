@@ -39,7 +39,7 @@ This lab assumes you have:
     - Type PowerShell
     - Press Enter.
 
-1. Go to the folder where you extracted the sample-app (by default this would be the `Downloads` folder).
+1. Go to the folder where you extracted the sample-app (by default, this is the `Downloads` folder).
 
 1. Open `sample-app/.env`.
 
@@ -58,9 +58,9 @@ This lab assumes you have:
 
 ## Task 2: Trace the ApplyGuardrails call path
 
-1. Open `sample-app/app.py`.
+1. Open `sample-app/app.py` in your favorite code editor.
 
-2. Find `run_pending_request`.
+2. Find `run_pending_request` in the code file.
 
 3. Confirm that the app calls `check_prompt_injection(prompt, cfg)` before it creates the chat client and before it calls `stream_response`.
 
@@ -142,11 +142,11 @@ This lab assumes you have:
 
 1. Restart the Streamlit app after changing `.env`, then submit the prompt again.
 
-## Task 5: Review failure and logging behavior
+## Task 5: Review failure and application output
 
 1. Review the blocked-prompt branch in `sample-app/app.py`.
 
-2. Confirm that the app logs the ApplyGuardrails prompt-injection score when it blocks a prompt.
+2. Confirm that the app prints the ApplyGuardrails prompt-injection score when it blocks a prompt.
 
     ```text
     <copy>

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create the unstructured retrieval source for the Example Motors support agent. Your environment already includes an Object Storage bucket with instructions for Example Motor's infotainment bluetooth pairing guide in PDF format. You will create an OCI Enterprise AI project, create an unstructured vector store, and sync the existing PDF into the vector store. The app will query the vector store using the OCI Enterprise AI Responses API by leveraging the built in `file_search` tool.
+In this lab, you create the unstructured retrieval source for the Example Motors support agent. Your environment already includes an Object Storage bucket with instructions for Example Motors' infotainment Bluetooth pairing guide in PDF format. You will create an OCI Enterprise AI project, create an unstructured vector store, and sync the existing PDF into the vector store. The app will query the vector store using the OCI Enterprise AI Responses API by leveraging the built-in `file_search` tool.
 
 Estimated Time: 15 minutes
 
@@ -19,11 +19,11 @@ In this lab, you will:
 
 ## Task 1: Review the sandbox resource list
 
-1. The sandbox environment has already provisioned the OCI foundation resources for this workshop. You will be able to see the OCIDs (the resource ID) for each of them in the sandbox environment alongside the login and tenancy information. We will use this information as we progress through the workshop.
+1. The sandbox environment has already provisioned the OCI foundation resources for this workshop. You will be able to see the OCIDs (the resource IDs) for each of them in the sandbox environment alongside the login and tenancy information. We will use this information as we progress through the workshop.
 
     ![Sandbox details](images/sandbox-details.png)
 
-2. In parallel, you are going to create several resources yourself and we would need to collect the OCIDs of the resources.
+2. In parallel, you are going to create several resources yourself and would need to collect the OCIDs for those resources.
 Use your favorite editor to edit a simple text file and copy the following placeholders into it:
 
     ```text
@@ -40,7 +40,7 @@ Use your favorite editor to edit a simple text file and copy the following place
 
 OCI Generative AI projects organize conversations and responses under a shared set of settings. In a project, you define data retention periods, enable long-term memory, and enable short-term memory compaction.
 
-When an application makes API requests against the OCI Enterprise AI service's responses/conversations APIs, referencing the project in the API call tells the service to use this the configuration defined in the project for this call.
+When an application makes API requests against the OCI Enterprise AI service's responses/conversations APIs, referencing the project in the API call tells the service to use the configuration defined in the project for this call.
 
 Each project supports separate lifecycle and compliance boundaries. Reference the project OCID in API and SDK calls to apply project settings at runtime.
 
@@ -70,7 +70,7 @@ Each project supports separate lifecycle and compliance boundaries. Reference th
 
 1. Observe the response and conversation retention for the workshop.
 
-    For this workshop we will leave those values at default but this setting can be configured to control how long the system will retain responses and conversations sent over the Responses and Conversations APIs.
+    For this workshop we will leave those values at their default values, but this setting can be configured to control how long the system will retain responses and conversations sent over the Responses and Conversations APIs.
 
     ![Project data retention options](images/project-data-retention.png)
 

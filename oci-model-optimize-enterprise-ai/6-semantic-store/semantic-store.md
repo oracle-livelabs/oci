@@ -34,25 +34,21 @@ This lab assumes you have:
 1. Enter the following values:
 
     ```text
-    <copy>
     Name: car-manufacturer-service
     Description: Example Motors service appointment semantic store
     Compartment: <workshop-compartment>
     Data source type: Structured data
     Connection type: OCI Database tool
-    </copy>
     ```
 
     ![Create structured semantic store](images/create-structured-semantic-store.png)
 
     ```text
-    <copy>
     Connection type: OCI Database tool
     Enrichment connection ID: The value for "Database Tools enrichment connection OCID" from our text file
-    Querying connection id: The value for "Database Tools query connection OCID" from our text file
+    Querying connection ID: The value for "Database Tools query connection OCID" from our text file
     Schema: ADMIN
     Automation: On create
-    </copy>
     ```
 
 1. Click **Test enrichment connection** to make sure the semantic store can use the connection to connect to the database.
@@ -63,11 +59,11 @@ This lab assumes you have:
 
 1. Click **Create**.
 
-1. Wait for the `car-manufacturer-service` semantic store to be at the `Active` state.
+1. Wait for the `car-manufacturer-service` semantic store to reach the `Active` state.
 
 1. Copy the semantic store OCID and save it as the value for `Structured semantic store OCID` in the text file.
 
-At this stage, we have a Semantic Store connected to our database. The Semantic Store will help us generate SQL queries from natural language for retrieving relevant information from the database.
+At this stage, we have a Semantic Store connected to our database. The Semantic Store will help us generate SQL queries from natural language to retrieve relevant information from the database.
 
 You may now **proceed to the next lab**.
 

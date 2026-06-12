@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create the structured semantic store for Example Motor's service appointment questions. The environment already includes the Autonomous AI Database, schema, seed data, Vault secret, and Database Tools connections. The semantic store connects OCI Enterprise AI to that database through the provided Database Tools connections. The sample app sends natural language questions to the NL2SQL API for this semantic store, validates the generated SQL, and retrieves the data through the ADB MCP Server.
+In this lab, you create the structured semantic store for Example Motors' service appointment questions. The environment already includes the Autonomous AI Database, schema, seed data, Vault secret, and Database Tools connections. The semantic store connects OCI Enterprise AI to that database through the provided Database Tools connections. The sample app sends natural language questions to the NL2SQL API for this semantic store, validates the generated SQL, and retrieves the data through the ADB MCP Server.
 
 Estimated Time: 10 minutes
 
@@ -47,7 +47,7 @@ This lab assumes you have:
 
     ```text
     Enrichment connection ID: <DB Tools Enrichment Connection OCID>
-    Querying connection id: <DB Tools Query Connection OCID>
+    Querying connection ID: <DB Tools Query Connection OCID>
     Schema: ADMIN
     Automation: On create
     ```
@@ -60,11 +60,11 @@ This lab assumes you have:
 
 1. Click **Create**.
 
-1. Wait for the `car-manufacturer-service` semantic store to be at the `Active` state.
+1. Wait for the `car-manufacturer-service` semantic store to reach the `Active` state.
 
 1. Copy the semantic store OCID and record it as the value for `Structured semantic store OCID`.
 
-At this stage, we have a Semantic Store connected to the sandbox database. The Semantic Store will help us generate SQL queries from natural language for retrieving relevant information from the database.
+At this stage, we have a Semantic Store connected to the sandbox database. The Semantic Store will help us generate SQL queries from natural language to retrieve relevant information from the database.
 
 You may now **proceed to the next lab**.
 
