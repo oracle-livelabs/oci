@@ -8,7 +8,7 @@ The goal is to make the benchmark simple, defensible, and focused on the real be
 
 Estimated Workshop Time: 1 hour 45 minutes
 
-### **Objectives**
+### Objectives
 
 By the end of this workshop, you will:
 
@@ -43,3 +43,8 @@ You may now proceed to the next lab.
 
 * **Adina Nicolescu**, Senior Cloud Engineer, NACIE
 * Last Updated By/Date - Adina Nicolescu, June 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

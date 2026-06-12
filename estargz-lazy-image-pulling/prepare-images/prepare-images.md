@@ -8,7 +8,7 @@ The infrastructure deployed in the previous lab created an Oracle Linux VM on OC
 
 Estimated Time: 30 minutes
 
-### **Objectives**
+### Objectives
 
 In this lab, you will:
 

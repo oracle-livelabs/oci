@@ -13,7 +13,7 @@ The benchmark measures time to first container start. This is the important metr
 
 Estimated Time: 30 minutes
 
-### **Objectives**
+### Objectives
 
 In this lab, you will:
 

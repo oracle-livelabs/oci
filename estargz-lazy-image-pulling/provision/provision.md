@@ -8,7 +8,7 @@ The VM is the benchmark host used later to compare startup time for a regular co
 
 Estimated Time: 30 minutes
 
-### **Objectives**
+### Objectives
 
 By the end of this lab, you will:
 
@@ -17,7 +17,7 @@ By the end of this lab, you will:
 * Confirm cloud-init completed successfully.
 * Verify that `containerd`, `nerdctl`, and `stargz-snapshotter` are available on the VM.
 
-### **Prerequisites**
+### Prerequisites
 
 This lab assumes you have:
 
@@ -27,6 +27,7 @@ This lab assumes you have:
 * OCI API key credentials configured for Terraform
 * A local SSH key pair for connecting to the VM
 * Permission to create networking and compute resources in the target compartment
+
 
 ## Task 1: Review the automation
 
