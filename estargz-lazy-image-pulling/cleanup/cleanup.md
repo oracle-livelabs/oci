@@ -69,7 +69,5 @@ After destroying the Terraform environment and optionally cleaning OCIR images, 
 
 ## Acknowledgements
 
-**Authors**
-
-* **Adina Nicolescu**, Senior Cloud Engineer, NACIE
+* **Author** - **Adina Nicolescu**, Senior Cloud Engineer, NACIE
 * **Last Updated By/Date** - Adina Nicolescu, June 2026

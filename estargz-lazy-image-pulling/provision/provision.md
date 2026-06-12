@@ -220,7 +220,5 @@ You may now proceed to the next lab.
 
 ## Acknowledgements
 
-**Authors**
-
-* **Adina Nicolescu**, Senior Cloud Engineer, NACIE
+* **Author** - **Adina Nicolescu**, Senior Cloud Engineer, NACIE
 * **Last Updated By/Date** - Adina Nicolescu, June 2026

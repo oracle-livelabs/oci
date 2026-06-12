@@ -37,14 +37,8 @@ This lab assumes you have:
 
 You may now proceed to the next lab.
 
-### Acknowledgements
-
-**Authors**
-
-* **Adina Nicolescu**, Senior Cloud Engineer, NACIE
-* Last Updated By/Date - Adina Nicolescu, June 2026
 
 ## Acknowledgements
 
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year
+* **Author** - **Adina Nicolescu**, Senior Cloud Engineer, NACIE
+* **Last Updated By/Date** - Adina Nicolescu, June 2026
