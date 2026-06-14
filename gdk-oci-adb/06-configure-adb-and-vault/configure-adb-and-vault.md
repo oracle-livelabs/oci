@@ -1,8 +1,8 @@
-# Configure the OCI Autonomous Database Instance
+# Configure the OCI Autonomous AI Database Instance
 
 ## Introduction
 
-This lab provides instructions to configure the the OCI Autonomous Database instance.
+This lab provides instructions to configure the the OCI Autonomous AI Database instance.
 
 Flyway will create the database tables the first time the application starts, but you must create a database user first.
 
@@ -12,12 +12,12 @@ Estimated Lab Time: 05 minutes
 
 In this lab, you will:
 
-* Create the Autonomous Database schema user and password
+* Create the Autonomous AI Database schema user and password
 * Create secrets in the Vault for the wallet password, database schema user and password
 
-## Task 1: Create the Autonomous Database schema user and password
+## Task 1: Create the Autonomous AI Database schema user and password
 
-1. From the **Autonomous Database details** screen opened in the browser, click **Database actions**.
+1. From the **Autonomous AI Database details** screen opened in the browser, click **Database actions**.
 
    ![ADB Database Actions](./images/adb-db-actions.png#input)
 

@@ -39,7 +39,7 @@ In this lab, you will:
 	</copy>
 	```
 
-   It can take approximately 7-8 minutes to generate the native executable.
+   It can take approximately 4-5 minutes to generate the native executable.
 
 3. The native executable is created in the _oci/target_ directory and can be run with the following command:
 

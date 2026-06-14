@@ -37,7 +37,7 @@ In this lab, you will:
 	</copy>
 	```
 
-   It can take approximately 6-7 minutes to generate the native executable.
+   It can take approximately 5-6 minutes to generate the native executable.
 
 ## Task 2: Push the container image to the OCIR Repository
 
