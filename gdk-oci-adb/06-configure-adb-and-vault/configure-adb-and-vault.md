@@ -19,15 +19,15 @@ In this lab, you will:
 
 1. From the **Autonomous AI Database details** screen opened in the browser, click **Database actions**.
 
-   ![ADB Database Actions](./images/adb-db-actions.png#input)
+    ![ADB Database Actions](./images/adb-db-actions.png#input)
 
 2. From the **Database Actions** drop-down menu, click **SQL** to open the SQL web console.
 
-   ![ADB Database Actions Launch SQL](./images/adb-db-actions-dev-sql.png#input)
+    ![ADB Database Actions Launch SQL](./images/adb-db-actions-dev-sql.png#input)
 
 3. From the **SQL** screen, close the `Warning` and the `Run Statement` dialog boxes.
 
-   ![ADB Database Actions SQL](./images/adb-db-actions-sql.jpg#input)
+    ![ADB Database Actions SQL](./images/adb-db-actions-sql.jpg#input)
 
 4. Copy and paste the following SQL commands into the worksheet:
 
@@ -43,17 +43,17 @@ In this lab, you will:
 
 5. Back in the **SQL** screen, paste the script you copied into the Worksheet section.
 
-   ![Paste create ADB user and pass](./images/paste-create-db-user-pass.jpg#input)
+    ![Paste create ADB user and pass](./images/paste-create-db-user-pass.jpg#input)
 
 6. Click **Run Script** to run the SQL commands. The commands will create a database user, password, and grant all the privileges to the user.
 
-   ![ADB user and pass created](./images/run-db-user-pass.jpg#input)
+    ![ADB user and pass created](./images/run-db-user-pass.jpg#input)
 
 ## Task 2: Create secrets in the Vault for the wallet password, database schema user and password
 
 1. In the **Vault** you created, navigate to **Secrets**. Select your workshop compartment from the **Compartment** drop down list, click **Create Secret**.
 
-   ![Create Secrets button](./images/create-secrets-button.png)
+    ![Create Secrets button](./images/create-secrets-button.png)
 
 2. Created three secrets - `ADB_WALLET_PASSWORD`, `ADB_USER`, and `ADB_USER_PASSWORD` - in the your workshop compartment.
 

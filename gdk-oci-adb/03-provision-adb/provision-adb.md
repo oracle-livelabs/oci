@@ -16,13 +16,13 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console, open the navigation menu, click **Oracle Database** and then click **Autonomous AI Database**.
 
-   ![Oracle Database menu](https://oracle-livelabs.github.io/common/images/console/database-adb.png)
+    ![Oracle Database menu](https://oracle-livelabs.github.io/common/images/console/database-adb.png)
 
 2. Select your workshop compartment from the **Compartment** drop down list. Click **Create Autonomous AI Database**. <if type="desktop">To find the compartment name, return to the **Login Details** screen, then copy the value of the **Compartment Name**, paste it in the **Compartment** drop down list in the Oracle Cloud Console and select the filtered compartment. 
 
 </if>
 
-   ![Autonomous AI Database Landing Page](images/adb-landing-page.jpg#input)
+    ![Autonomous AI Database Landing Page](images/adb-landing-page.jpg#input)
 
 3. You will see the **Create Autonomous AI Database Serverless** screen with default values.
 
