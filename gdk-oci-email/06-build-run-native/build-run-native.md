@@ -26,31 +26,31 @@ In this lab, you will:
 
 1. In the same terminal in VS Code, check the version of the GraalVM native-image utility:
 
-	``` bash
-	<copy>
-	native-image --version
-	</copy>
-	```
+    ``` bash
+    <copy>
+    native-image --version
+    </copy>
+    ```
 
 2. To generate a native executable using Maven, run the following command:
 
-	``` bash
-	<copy>
-	./mvnw install -pl lib -am && ./mvnw clean package -pl oci -Dpackaging=native-image
-	</copy>
-	```
+    ``` bash
+    <copy>
+    ./mvnw install -pl lib -am && ./mvnw clean package -pl oci -Dpackaging=native-image
+    </copy>
+    ```
 
-   It can take approximately 2-3 minutes to generate the native executable.
+    It can take approximately 2-3 minutes to generate the native executable.
 
 3. The native executable is created in the _oci/target_ directory and can be run with the following command:
 
-	``` bash
-	<copy>
-	MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci-email-demo-oci &
-	</copy>
-	```
+    ``` bash
+    <copy>
+    MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci-email-demo-oci &
+    </copy>
+    ```
 
-   The native executable starts instantaneously.
+    The native executable starts instantaneously.
 
 ## Task 2: Send the emails
 
@@ -58,46 +58,46 @@ In this lab, you will:
 
 2. Send a simple plain-text email using the following command:
 
-	``` bash
-	<copy>
-	curl -X POST localhost:8080/email/basic
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl -X POST localhost:8080/email/basic
+    </copy>
+    ```
 
-	Check your email as before.
+    Check your email as before.
 
 3. Send a templated email using the following command:
 
-	``` bash
-	<copy>
-	curl -X POST localhost:8080/email/template/native
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl -X POST localhost:8080/email/template/native
+    </copy>
+    ```
 
-	Check your email as before.
+    Check your email as before.
 
 4. Send an email with an attachment using the following command:
 
-	``` bash
-	<copy>
-	curl -X POST \
-		-H "Content-Type: multipart/form-data" \
-		-F "file=@ README.md" \
-		localhost:8080/email/attachment
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl -X POST \
+    	-H "Content-Type: multipart/form-data" \
+    	-F "file=@ README.md" \
+    	localhost:8080/email/attachment
+    </copy>
+    ```
 
-	Check your email as before.
+    Check your email as before.
 
 ## Task 3: Stop the application
 
 1. Bring the running application to the foreground:
 
-	```
-	<copy>
-	fg
-	</copy>
-	```
+    ``` bash
+    <copy>
+    fg
+    </copy>
+    ```
 
 2. Once the application is running in the foreground, press `CTRL+C` to stop it.
 
