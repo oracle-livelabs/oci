@@ -36,21 +36,21 @@ In this lab, you will:
 
     - Search `starter_pack_url` and visit the output.
 
-      ![image1.png](./images/image1.png)
+      ![Starter pack URL stack output](./images/image1.png)
 
     - **IMPORTANT**: The credentials here will be used in the next lab, please store them somewhere!
     - Register an account via the UI:
 
-      ![image2.png](./images/image2.png)
+      ![Route Optimizer registration link](./images/image2.png)
 
-      ![image3.png](./images/image3.png)
+      ![Route Optimizer create account form](./images/image3.png)
 
 2. Select "Leaflet" as the "Maps" API:
     - Google is selected by default, switch to "Leaflet".
 
-      ![image4.png](./images/image4.png)
+      ![Leaflet map provider selector](./images/image4.png)
 
-      ![image5.png](./images/image5.png)
+      ![Leaflet map view of Ireland](./images/image5.png)
 
 ## Task 2: Configure Your Region
 
@@ -58,11 +58,11 @@ In this lab, you will:
 
     - Click Configuration and view modifiable fields.
 
-      ![image6.png](./images/image6.png)
+      ![Route Optimizer Configuration navigation item](./images/image6.png)
 
     - Change the Country to the **United States > Save**.
 
-      ![image7.png](./images/image7.png)
+      ![United States region configuration saved](./images/image7.png)
 
     - After this, feel free to investigate some of the other options.
 
@@ -78,17 +78,17 @@ In this lab, you will:
     - Set **Capacity per vehicle** to `50`.
     - Leave the job type mix at the defaults.
 
-      ![image8.png](./images/image8.png)
+      ![Fleet settings for vehicles and capacity](./images/image8.png)
 
 3. Generate random stops.
 
     - Go to the **Stops** tab and click "Generate Random Stops".
 
-      ![image9.png](./images/image9.png)
+      ![Stops tab generate random stops button](./images/image9.png)
 
     - You will see them show up on the map.
     
-      ![image10.png](./images/image10.png)
+      ![Generated stops on New York map](./images/image10.png)
 
 ## Task 4: Run the Solve
 
@@ -96,7 +96,7 @@ In this lab, you will:
 
     - Scroll down to the bottom of the "Stops" and click "Run Optimization."
 
-      ![image11.png](./images/image11.png)
+      ![Run Optimization button and constraints](./images/image11.png)
 
     - The front-end POSTs the payload to `/api/cuopt/request`.
     - The backend forwards it to the cuOpt NIM with the `cuopt.solve` scope on your JWT.
@@ -108,15 +108,15 @@ In this lab, you will:
 
     - The map updates with one color-coded polyline per vehicle.
 
-      ![image12.png](./images/image12.png)
+      ![Optimized routes on New York map](./images/image12.png)
 
     - The **Routes** panel lists each vehicle stop sequence, distance, and duration.
 
-      ![image13.png](./images/image13.png)
+      ![Routes panel with route metrics](./images/image13.png)
 
     - The **Impact** tab shows projected daily savings and jobs-per-tech metrics.
 
-      ![image14.png](./images/image14.png)
+      ![Operational impact metrics tab](./images/image14.png)
 
 
 ## Task 5: Confirm the Job Hit the cuOpt NIM
@@ -129,7 +129,7 @@ In this lab, you will:
     - identify the "recipe-cuopt-**-2-cuopt" pod and **View Logs & Details**
     - Scroll to the bottom and see the log polling.
 
-      ![image15.png](./images/image15.png)
+      ![cuOpt solver pod log output](./images/image15.png)
 
 2. Run a second solve from the UI.
 
@@ -141,12 +141,12 @@ In this lab, you will:
 
     - Go back to **Stops > Download CSV**
 
-      ![image16.png](./images/image16.png)
+      ![Stops tab Download CSV button](./images/image16.png)
 
     - Change the "demand" for stops 1,10,20,30,40,50.
     - Re-upload the CSV:
     
-      ![image17.png](./images/image17.png)
+      ![Stops tab Upload CSV button](./images/image17.png)
     - Run optimize, explore results.
 
 You have now completed the required part of the Lab! Congratulations.
