@@ -21,7 +21,7 @@ This lab assumes you have:
 
 1. Click on the link below to download the Resource Manager zip file you need to build your environment:
 
-    * [gdk-oci-oke-ll-orm.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/gdk-oci-oke-ll-orm.zip)
+    * [gdk-oci-oke-ll-orm.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/gdk-oci-oke-ll-orm.zip)
 
 2. Save it in your downloads folder.
 
