@@ -24,29 +24,29 @@ In this lab, you will:
 
 1. In the first terminal in VS Code, check the version of the GraalVM native-image utility:
 
-	``` bash
-	<copy>
-	native-image --version
-	</copy>
-	```
+    ``` bash
+    <copy>
+    native-image --version
+    </copy>
+    ```
 
 2. To generate a native executable using Maven, run the following command:
 
-	``` bash
-	<copy>
-	./mvnw install -pl lib -am && ./mvnw clean package -pl oci -Dpackaging=native-image
-	</copy>
-	```
+    ``` bash
+    <copy>
+    ./mvnw install -pl lib -am && ./mvnw clean package -pl oci -Dpackaging=native-image
+    </copy>
+    ```
 
-   It can take approximately 3-4 minutes to generate the native executable.
+    It can take approximately 2-3 minutes to generate the native executable.
 
 3. The native executable is created in the _oci/target_ directory and can be run with the following command:
 
-	``` bash
-	<copy>
-	MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci-logging-demo-oci
-	</copy>
-	```
+    ``` bash
+    <copy>
+    MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci-logging-demo-oci
+    </copy>
+    ```
 
    The native executable starts instantaneously.
 
@@ -54,11 +54,11 @@ In this lab, you will:
 
 1. From the second terminal, send an HTTP POST request to the `/greet` endpoint:
 
-	``` bash
-	<copy>
-	curl -X POST -H "Content-Type: application/json" -id '{"message":"Hello GCN Logging native executable!"}' http://localhost:8080/greet
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl -X POST -H "Content-Type: application/json" -id '{"message":"Hello GCN Logging native executable!"}' http://localhost:8080/greet
+    </copy>
+    ```
 
 ## Task 3: Stop the application
 
@@ -68,9 +68,9 @@ In this lab, you will:
 
 1. Go to the **OCI Console >> Logging >> Log Groups >> MicronautLogGroup >> MicronautCustomLog >> Custom Log (MicronautCustomLog) Details** screen opened in the browser. The application logs should appear in the **Explore Log** section. (If necessary, refresh the browser.)
 
-	You can select a different value such as "Past 15 minutes" or "Past hour" in the **Filter by time** drop down list to refresh the logs table view.
+    You can select a different value such as "Past 15 minutes" or "Past hour" in the **Filter by time** drop down list to refresh the logs table view.
 
-	![Application Logs](./images/application-logs-native.jpg)
+    ![Application Logs](./images/application-logs-native.jpg)
 
 Congratulations! You've successfully completed this lab. Your Java application native executable can successfully send logs to OCI Logging.
 
