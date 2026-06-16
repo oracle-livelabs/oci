@@ -37,9 +37,9 @@ In this lab, you will:
       - "Allow myawesomegroup to use cloud-shell in tenancy"
     - Launch cloud shell from the console home.
 
-      ![image1.png](./images/image1.png)
+      ![Cloud Shell menu in OCI console](./images/image1.png)
     
-      ![image2.png](./images/image2.png)
+      ![Oracle Cloud Shell terminal session](./images/image2.png)
 
 2. Confirm `oci-cli` with a version check.
 
@@ -54,7 +54,7 @@ In this lab, you will:
 
     - Live users, get the cluster_id from the output
     - At home users, go back to the "Outputs" tab and search, "cluster_id"
-    ![image3.png](./images/image3.png)
+    ![Resource Manager cluster ID output](./images/image3.png)
     - Copy the value to use in the next step.
 
 2. Connect to your running cluster
