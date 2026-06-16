@@ -18,7 +18,7 @@ This lab assumes you have:
 - Completed Lab 1: the PAN-OS API key is stored as a secret in OCI Vault
 - Completed Lab 2: the dynamic group and IAM policy are created
 - The OCID of the Vault secret from Lab 1
-- A VCN and subnet available for the Functions application, with internet access via an Internet Gateway
+- A VCN and subnet available for the Functions application, with internet access.
 - Permissions to use OCIR, create Functions applications, and deploy functions in your compartment
 
 ## Task 1: Open Cloud Shell on x86
@@ -74,8 +74,8 @@ Cloud Shell ships with a pre-configured Fn context for the region you are in (na
 
 ```bash
 <copy>fn use context eu-frankfurt-1
-fn update context oracle.compartment-id &lt;your-compartment-ocid&gt;
-fn update context registry fra.ocir.io/&lt;tenancy-namespace&gt;/panos
+fn update context oracle.compartment-id &amp;lt;your-compartment-ocid&amp;gt;
+fn update context registry fra.ocir.io/&amp;lt;tenancy-namespace&amp;gt;/panos
 fn list contexts</copy>
 ```
 
@@ -94,7 +94,7 @@ The `*` should be next to `eu-frankfurt-1`.
 - Create a working directory and initialize the function skeleton:
 
 ```bash
-<copy>mkdir -p ~/oci-panos-fn && cd ~/oci-panos-fn
+<copy>mkdir -p ~/oci-panos-fn &amp;&amp; cd ~/oci-panos-fn
 fn init --runtime python panos-sync
 cd panos-sync</copy>
 ```
@@ -114,51 +114,42 @@ In vi, delete the boilerplate: press `:`, type `%d`, press `Enter`. Press `i` to
 ```python
 <copy>import io, json, re, base64, requests, oci
 from fdk import response
-
 def handler(ctx, data: io.BytesIO = None):
     cfg = dict(ctx.Config())
     HOST, PREFIX, GROUP, TAG = cfg["PANOS_HOST"], cfg["ADDR_PREFIX"], cfg["ADDR_GROUP"], cfg["TAG"]
     REGIONS  = set(cfg["OCI_REGIONS"].split(","))
     SERVICES = set(cfg["OCI_SERVICES"].split(","))
-
     signer = oci.auth.signers.get_resource_principals_signer()
     sc = oci.secrets.SecretsClient(config={}, signer=signer)
     KEY = base64.b64decode(
         sc.get_secret_bundle(secret_id=cfg["PANOS_KEY_SECRET_OCID"]).data.secret_bundle_content.content
     ).decode().strip()
-
     URL = f"https://{HOST}/api/"
     requests.packages.urllib3.disable_warnings()
     doc = requests.get("https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json", timeout=30).json()
-
     desired = {}
     for r in doc["regions"]:
         if r["region"] not in REGIONS: continue
         for c in r["cidrs"]:
-            if not (set(c["tags"]) & SERVICES): continue
+            if not (set(c["tags"]) &amp; SERVICES): continue
             name = f"{PREFIX}-{r['region']}-{c['cidr'].replace('.','-').replace('/','-')}"[:63]
             desired[name] = c["cidr"]
-
     def api(p):
         x = requests.post(URL, params={**p, "key": KEY}, verify=False, timeout=30)
         x.raise_for_status(); return x.text
-
     xa = "/config/devices/entry/vsys/entry[@name='vsys1']/address"
     existing = set(re.findall(rf'&lt;entry name="({PREFIX}-[^"]+)"',
                               api({"type":"config","action":"get","xpath":xa})))
-
     for n, c in desired.items():
         api({"type":"config","action":"set","xpath": f"{xa}/entry[@name='{n}']",
              "element": f"&lt;ip-netmask&gt;{c}&lt;/ip-netmask&gt;&lt;tag&gt;&lt;member&gt;{TAG}&lt;/member&gt;&lt;/tag&gt;"})
     for n in existing - set(desired):
         api({"type":"config","action":"delete","xpath": f"{xa}/entry[@name='{n}']"})
-
     members = "".join(f"&lt;member&gt;{n}&lt;/member&gt;" for n in desired)
     xg = f"/config/devices/entry/vsys/entry[@name='vsys1']/address-group/entry[@name='{GROUP}']"
     api({"type":"config","action":"edit","xpath": xg,
          "element": f"&lt;entry name='{GROUP}'&gt;&lt;static&gt;{members}&lt;/static&gt;&lt;tag&gt;&lt;member&gt;{TAG}&lt;/member&gt;&lt;/tag&gt;&lt;/entry&gt;"})
-    api({"type":"commit","cmd":"&lt;commit&gt;&lt;description&gt;OCI IP sync&lt;/description&gt;&lt;/commit&gt;"})
-
+    api({"type":"commit","cmd":"&lt;commit&gt;&lt;/commit&gt;"})
     return response.Response(ctx, response_data=json.dumps({"synced": len(desired)}),
                              headers={"Content-Type":"application/json"})</copy>
 ```
@@ -189,15 +180,15 @@ oci</copy>
 
 ```bash
 <copy>oci fn application create \
-  --compartment-id &lt;your-compartment-ocid&gt; \
+  --compartment-id &amp;lt;your-compartment-ocid&amp;gt; \
   --display-name panos-sync-app \
-  --subnet-ids '["&lt;your-subnet-ocid&gt;"]'</copy>
+  --subnet-ids '["&amp;lt;your-subnet-ocid&amp;gt;"]'</copy>
 ```
 
 ![Build, Deploy, and Configure the OCI Function - step 10](images/def075b132825b088047c664514eff3f.png)
 
 > [!NOTE] NOTE
-> **Subnet choice**: The subnet must reach the firewall management IP (TCP/443) and the [Oracle IP ranges JSON](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json) over HTTPS. The simplest setup is the same subnet as the firewall management interface, provided it has a route to the internet via an Internet Gateway.
+> Subnet choice: the subnet must reach the firewall management IP (TCP/443) and the [Oracle IP ranges JSON](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json) over HTTPS. It needs a route to the internet for the JSON fetch, either via an Internet Gateway (public subnet, as used in this workshop) or a NAT Gateway (private subnet, the more common production choice). The simplest setup is to reuse the firewall's management subnet.
 
 - The OCI Functions application `panos-sync-app` was created successfully in your compartment with `GENERIC_X86` shape, attached to your function subnet, and is now in `ACTIVE` state.
 
@@ -215,19 +206,18 @@ oci</copy>
 
 ![Build, Deploy, and Configure the OCI Function - step 13](images/03eb33498f01681e899423979ec98bb9.png)
 
-
 ## Task 6: Set function configuration
 
 - These environment variables tell the function which firewall to talk to, which regions and services to filter, and where to find the secret. The same image can be reused across firewalls by changing only the config.
 
 ```bash
-<copy>fn config function panos-sync-app panos-sync PANOS_HOST &lt;firewall-mgmt-ip&gt;
+<copy>fn config function panos-sync-app panos-sync PANOS_HOST &amp;lt;firewall-mgmt-ip&amp;gt;
 fn config function panos-sync-app panos-sync OCI_REGIONS eu-frankfurt-1
 fn config function panos-sync-app panos-sync OCI_SERVICES OSN,OBJECT_STORAGE
 fn config function panos-sync-app panos-sync ADDR_PREFIX osn
 fn config function panos-sync-app panos-sync ADDR_GROUP osn-public-ips
 fn config function panos-sync-app panos-sync TAG oci-auto
-fn config function panos-sync-app panos-sync PANOS_KEY_SECRET_OCID &lt;secret-ocid-from-lab-1&gt;</copy>
+fn config function panos-sync-app panos-sync PANOS_KEY_SECRET_OCID &amp;lt;secret-ocid-from-lab-1&amp;gt;</copy>
 ```
 
 Where:
