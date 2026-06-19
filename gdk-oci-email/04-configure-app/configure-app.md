@@ -83,7 +83,7 @@ Each region in Oracle Cloud Infrastructure has an SMTP endpoint to use as the SM
 
 2. Under **Email Delivery**, click **Configuration**. In **SMTP Sending Information** panel copy **Public Endpoint**.
 
-    ![SMTP Sending information Panel](images/smtp-sending-informatiom.png#input)
+    ![SMTP Sending information Panel](images/smtp-sending-informatiom.png)
 
 3. Set the `SMTP_HOST` variable:
 
@@ -136,7 +136,7 @@ In this step, you will create an approved sender who can send emails using the O
 
     A dialog box will ask **Are you sure you want to paste 2 lines of text into the terminal?**. Select **Do not ask me again** and click **Paste** to proceed.
 
-    ![VS Code Paste Icon](images/vs-code-paste-icon.jpg#input)
+    ![VS Code Paste Icon](images/vs-code-paste-icon.jpg)
 
     Confirm the values of the environment variables `FROM_EMAIL` and `FROM_NAME` by running the following command:
 
