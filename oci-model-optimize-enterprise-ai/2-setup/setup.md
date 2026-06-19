@@ -37,7 +37,7 @@ Semantic store dynamic group name: generativeaisemanticstore
 Project OCID:
 Object Storage bucket: car-manufacturer-manuals
 Unstructured vector store: car-operation
-Unstructured vector store OCID:
+Unstructured Vector store ID:
 Autonomous AI Database OCID:
 Database user: ADMIN
 Vault OCID:
