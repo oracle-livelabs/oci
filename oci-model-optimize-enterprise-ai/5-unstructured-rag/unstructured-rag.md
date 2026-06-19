@@ -138,7 +138,7 @@ The unstructured vector store is a managed data store which will scan our files,
 
     ![Vector store details page](images/vector-store-details.png)
 
-8. Copy the vector store ID & update the value for `Unstructured vector store OCID` in the text file.
+8. Copy the **Vector store ID** and update the value for `Unstructured Vector store ID` in the text file. The value should look like `vs_iad_3vw620r...`.
 
 ## Task 5: Create the data sync connector
 
