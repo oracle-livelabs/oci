@@ -45,7 +45,7 @@ This workshop assumes you have:
 
 * Some familiarity with Oracle Cloud Infrastructure (OCI)
 * Understanding of the Java programming language
-* Oracle GraalVM for JDK 17
+* Oracle GraalVM 25
 * Visual Studio Code (VS Code)
 * A browser with access to the internet
 * An Oracle Cloud Infrastructure (OCI) account with adequate permissions

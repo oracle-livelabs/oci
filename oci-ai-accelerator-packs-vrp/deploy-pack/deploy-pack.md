@@ -31,30 +31,30 @@ In this lab, you will:
 1. Visit the [LiveLabs Release in GitHub](https://github.com/oci-ai-incubations/ai-accelerator-starter-packs/releases/tag/LiveLabs).
 
     - Download the `livelabs_vrp_cuopt.zip` file by clicking it.
-    ![image1](./images/image1.png)
+    ![GitHub LiveLabs zip release asset](./images/image1.png)
 
 2. Navigate to **Developer Services > Resource Manager > Stacks > Create Stack**.
 
-    ![image2.png](./images/image2.png)
+    ![OCI Developer Services navigation menu](./images/image2.png)
     
-    ![image3.png](./images/image3.png)
+    ![Resource Manager Stacks side navigation](./images/image3.png)
     
-    ![image4.png](./images/image4.png)
+    ![Create Stack button in Resource Manager](./images/image4.png)
 
 
 3. On the welcome form, click **".zip file" > Browse > `livelabs_vrp_cuopt.zip`**.
 
     - Select the zip option and click browse.
 
-      ![image5.png](./images/image5.png)
+      ![Zip file upload option selected](./images/image5.png)
 
     - After you upload, the stack populates.
 
-      ![image6.png](./images/image6.png)
+      ![Vehicle Delivery Route Optimizer stack details](./images/image6.png)
 
     - Click **"Next"** at the bottom of the page.
 
-      ![image7.png](./images/image7.png)
+      ![Create Stack form Next button](./images/image7.png)
 
 ## Task 3: Fill in the Stack Inputs and Create
 
@@ -63,11 +63,11 @@ In this lab, you will:
     - Keep the **Starter Pack Size** at poc.
     - Set the **worker node availability domain** where you have GPUs available.
 
-      ![image8.png](./images/image8.png)
+      ![Deployment size and availability domain fields](./images/image8.png)
 
     - Select the "Oracle Interactive - Route visualization (Partner Contributed)" skin if not selected.
 
-      ![image9.png](./images/image9.png)
+      ![Oracle Interactive route visualization skin option](./images/image9.png)
   
     - **OCI AI Blueprints admin username, password, email**: pick credentials for the Blueprints portal and the cuOpt front-end.
     - The password needs at least 8 chars with one uppercase letter and one special char.
@@ -80,11 +80,11 @@ In this lab, you will:
 
     - Click **Next**.
 
-      ![image10.png](./images/image10.png)
+      ![Database credentials form Next button](./images/image10.png)
 
     - On the bottom of the page, click **Run apply > Create**.
 
-      ![image11.png](./images/image11.png)
+      ![Run apply option before stack creation](./images/image11.png)
 
 
 ## Task 4: Monitor and Wait for Completion
@@ -100,7 +100,7 @@ In this lab, you will:
     - If the job fails on Helm or Kubernetes provider errors after the cluster comes up, click **Apply** again.
     - The stack is idempotent.
 
-      ![image12.png](./images/image12.png)
+      ![Succeeded Resource Manager apply job](./images/image12.png)
     
     - You are now ready for [Lab 2 - Explore Pack Services](../explore-services/explore-services.md).
 

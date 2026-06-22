@@ -36,7 +36,7 @@ In this lab, you will:
 
     - outputs:
 
-      ![image1.png](./images/image1.png)
+      ![Resource Manager Output tab selected](./images/image1.png)
 
     - Search and filter for the following:
       - `starter_pack_url` for the cuOpt front-end.
@@ -53,37 +53,37 @@ In this lab, you will:
 
     - Sign in with `corrino_admin_username` and `corrino_admin_password`.
 
-      ![image2.png](./images/image2.png)
+      ![OCI AI Blueprints login form](./images/image2.png)
     
-      ![image3.png](./images/image3.png)
+      ![OCI AI Blueprints library page](./images/image3.png)
 
 2. On the header, locate **Deployments**.
 
     - Go to **Deployments**.
 
-      ![image4.png](./images/image4.png)
+      ![Blueprints Deployments navigation tab](./images/image4.png)
 
     - Click the **Deployment Group** to expand the deployments.
 
-      ![image5.png](./images/image5.png)
+      ![Blueprints deployment group expanded](./images/image5.png)
 
     - Click the **skin-cuopt-partner-** to see the deployment and url.
 
-      ![image6.png](./images/image6.png)
+      ![cuOpt partner deployment row](./images/image6.png)
 
     - Click the URL to visit the deployed app, then proceed to next step.
 
-      ![image7.png](./images/image7.png)
+      ![Deployment details public endpoint link](./images/image7.png)
 
-      ![image8.png](./images/image8.png)
+      ![OCI Route Optimizer sign-in page](./images/image8.png)
 
 3. Visit the pod logs and investigate the logs of a running service.
 
     - Go to **Pod Logs > Default > recipe-cuopt-*** and view logs.
 
-      ![image9.png](./images/image9.png)
+      ![Blueprints Pod Logs navigation tab](./images/image9.png)
 
-      ![image10.png](./images/image10.png)
+      ![Pod Logs default namespace selection](./images/image10.png)
 
 ## Task 3: Inspect Prometheus
 
@@ -92,14 +92,14 @@ In this lab, you will:
     - The Prometheus UI loads without a sign-in prompt inside the workshop network.
     You should see the search bar at the top.
 
-      ![image11.png](./images/image11.png)
+      ![Prometheus URL in stack outputs](./images/image11.png)
     
 
 2. Click **Status > Target Health**.
 
     - Scroll through the services to identify what Prometheus has metrics for.
 
-      ![image12.png](./images/image12.png)
+      ![Prometheus Target health menu item](./images/image12.png)
 
 3. Run a sanity query.
 
@@ -110,7 +110,7 @@ In this lab, you will:
     ```
     - This will give show you information about the A10s that are deployed.
 
-      ![image13.png](./images/image13.png)
+      ![Prometheus GPU utilization query results](./images/image13.png)
 
 ## Task 4: Inspect Grafana
 
@@ -118,7 +118,7 @@ In this lab, you will:
 
     - Search "grafana" and you will get the url, username, and password.
 
-      ![image14.png](./images/image14.png)
+      ![Grafana credentials in stack outputs](./images/image14.png)
 
     - Use these to sign in on the url homepage.
 
@@ -126,17 +126,17 @@ In this lab, you will:
 
     - Click Dashboards to see the list of available dashboards.
 
-      ![image15.png](./images/image15.png)
+      ![Grafana Dashboards navigation item](./images/image15.png)
 
     - Click the "NVIDIA DCGM Exporter Dashboard" to see GPU metrics.
 
-      ![image16.png](./images/image16.png)
+      ![NVIDIA DCGM Exporter dashboard graph](./images/image16.png)
 
 3. Click **Connections > Data sources** in the left nav.
 
     - You should see a Prometheus data source already there.
 
-      ![image17.png](./images/image17.png)
+      ![Grafana Prometheus data source list](./images/image17.png)
 
 You are now ready for [Lab 3 - Connect to your OKE Cluster](../connect-cluster/connect-cluster.md).
 

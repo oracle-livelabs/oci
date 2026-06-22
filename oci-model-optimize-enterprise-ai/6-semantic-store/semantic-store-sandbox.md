@@ -27,7 +27,7 @@ This lab assumes you have:
 
 1. Select **Vector stores**.
 
-1. Select the workshop compartment from your sandbox resource list.
+1. Select the reservation-specific child compartment from your sandbox resource list.
 
 1. Click **Create vector store**.
 

@@ -15,26 +15,31 @@ In this lab, you will:
 - Confirm the existing Object Storage bucket and infotainment pairing guide PDF
 - Create an unstructured vector store
 - Create and run a data sync connector
-- Record the project and vector store OCIDs for the sample app
+- Record the project OCID and Vector store ID for the sample app
 
 ## Task 1: Review the sandbox resource list
 
-1. The sandbox environment has already provisioned the OCI foundation resources for this workshop. You will be able to see the OCIDs (the resource IDs) for each of them in the sandbox environment alongside the login and tenancy information. We will use this information as we progress through the workshop.
+1. The sandbox environment has already provisioned the OCI foundation resources for this workshop. You will be able to see the OCIDs and other resource values in the sandbox environment alongside the login and tenancy information. We will use this information as we progress through the workshop.
 
     ![Sandbox details](images/sandbox-details.png)
 
-2. In parallel, you are going to create several resources yourself and would need to collect the OCIDs for those resources.
-Use your favorite editor to edit a simple text file and copy the following placeholders into it:
+2. When any task asks you to select a compartment, expand **LiveLabs** and select the reservation-specific child compartment named like `LL<reservation>-COMPARTMENT`. Do not select the parent **LiveLabs** compartment.
 
-    ```text
-    <copy>
-    Project OCID:
-    Unstructured vector store OCID:
-    Structured semantic store OCID:
-    </copy>
-    ```
+3. Use your favorite editor to create a simple worksheet for the values used by the sample app.
 
-    As we progress through the following tasks and labs, you will fill in the missing OCIDs that we will use for the sample app in a later lab.
+    | Value | Where to get it | Later `.env` variable |
+    | --- | --- | --- |
+    | Workshop compartment OCID | Sandbox resource list | `OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID` |
+    | Workshop region | Sandbox resource list | `OCI_ADB_MCP_REGION`, `OCI_ADB_MCP_PASSWORD_SECRET_REGION`, `OCI_GENAI_REGION` |
+    | Autonomous AI Database OCID | Sandbox resource list | `OCI_ADB_DATABASE_OCID` |
+    | ADMIN password secret OCID | Sandbox resource list | `OCI_ADB_MCP_PASSWORD_SECRET_OCID` |
+    | Project OCID | Project created in this lab | `OCI_GENAI_PROJECT_OCID` |
+    | Unstructured Vector store ID, for example | Vector store created in this lab | `OCI_GENAI_VECTOR_STORE_IDS` |
+    | Structured semantic store OCID | Semantic Store lab | `OCI_GENAI_SEMANTIC_STORE_OCID` |
+    | OCI config file path | Sample Application lab | `OCI_CONFIG_FILE` |
+    | OCI config profile | Sample Application lab | `OCI_CONFIG_PROFILE` |
+
+    As we progress through the following tasks and labs, you will fill in the missing values that we will use for the sample app in a later lab.
 
 ## Task 2: Create the OCI Enterprise AI project
 
@@ -52,7 +57,7 @@ Each project supports separate lifecycle and compliance boundaries. Reference th
 
     ![Generative AI projects list](images/generative-ai-projects.png)
 
-1. Please make sure that your sandbox compartment is selected in **Applied filters**.
+1. Make sure that your reservation-specific child compartment is selected in **Applied filters**.
 
 1. Click **Create project**.
 
@@ -64,7 +69,7 @@ Each project supports separate lifecycle and compliance boundaries. Reference th
     Compartment: <workshop-compartment>
     ```
 
-    Use the workshop compartment from your sandbox resource list.
+    Use the reservation-specific child compartment from your sandbox resource list.
 
     ![Create project basic information](images/create-project-basic-information.png)
 
@@ -86,7 +91,7 @@ The sandbox already includes the Object Storage bucket that stores the source do
 
 1. In the Console navigation menu, go to **Storage**, then **Buckets**.
 
-2. Select the workshop compartment from your sandbox resource list.
+2. Select the reservation-specific child compartment from your sandbox resource list.
 
 3. Open the bucket named in your sandbox resource list.
 
@@ -117,7 +122,7 @@ The unstructured vector store scans files, splits them into chunks, embeds the c
     Description: Example Motors infotainment and operation manuals
     ```
 
-    - Select the workshop compartment from your sandbox resource list.
+    - Select the reservation-specific child compartment from your sandbox resource list.
     - Under **Data source type**, select **Unstructured data**.
 
     ![Create vector store with unstructured data source](images/create-vector-stores.png)
@@ -132,7 +137,7 @@ The unstructured vector store scans files, splits them into chunks, embeds the c
 
     ![Vector store details page](images/vector-store-details.png)
 
-8. Copy the vector store ID and record it as the value for `Unstructured vector store OCID`.
+8. Copy the **Vector store ID** and record it as the value for `Unstructured Vector store ID`. The value should look like `vs_iad_3vw620r...`.
 
 ## Task 5: Create the data sync connector
 
@@ -148,7 +153,7 @@ The data sync connector facilitates the processing pipeline where files are read
 
     ```text
     Name: car-manuals
-    Compartment: Select the workshop compartment from your sandbox resource list.
+    Compartment: Select the reservation-specific child compartment from your sandbox resource list.
     Bucket: The bucket name is `car-manufacturer-manuals-...`.
     Turn Select all in bucket on.
     ```

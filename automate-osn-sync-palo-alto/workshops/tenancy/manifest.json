@@ -37,6 +37,10 @@
             "filename": "../../lab-6-configure-daily-sync-with-resource-scheduler/lab-6-configure-daily-sync-with-resource-scheduler.md"
         },
         {
+            "title": "Lab 7: Sync Only When the IP Ranges Change",
+            "filename": "../../lab-7-sync-on-change/lab-7-sync-on-change.md"
+        },
+        {
             "title": "Need Help?",
             "description": "Solutions to common problems and how to get live help",
             "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"

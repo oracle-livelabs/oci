@@ -105,7 +105,7 @@ At this point, we've introduced new code which will check if a user request cont
 
 ## Task 3: Test image routing
 
-1. Attach the image we downloaded in the previous lab ([test image](./files/example-motors-service-receipt.png)) to the request and add the following prompt:
+1. Use the receipt image you saved in the Sample Application lab, or download it again from this link: [test image](./files/example-motors-service-receipt.png). Attach the image to the request and add the following prompt:
 
     ```text
     <copy>

@@ -4,7 +4,7 @@
 
 This lab takes you through the steps to simulate the local development flow and run the application pointing to a local MySQL database running in a container on the same machine.
 
-![GDK JAR Local MySQL Container](images/gcn-jar-mysql-container.png#input)
+![GDK JAR Local MySQL Container](images/gcn-jar-mysql-container.png)
 
 For this, you will start a local MySQL container, and use the Micronaut Maven build plugin to build and run the sample `Genre` application with this local MySQL database.
 
@@ -27,7 +27,7 @@ In this lab, you will:
 2. Copy the following command to run a MySQL container:
 
     ``` bash
-	<copy>
+    <copy>
     docker run -it --rm \
     --name "mysql.8" \
     -p 3306:3306 \
@@ -36,7 +36,7 @@ In this lab, you will:
     -e MYSQL_PASSWORD=elementary \
     -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
     mysql:8
-	</copy>
+    </copy>
     ```
 
 3. Place your cursor in the terminal in VS Code and paste (`CTRL+SHIFT+V`) the command you copied. A dialog box will ask **Are you sure you want to paste 8 lines of text in to the terminal?**. Select **Do not ask me again** and click **Paste** to proceed.
@@ -46,7 +46,7 @@ In this lab, you will:
     Press the enter (return) key. The MySQL container starts in a few seconds. When MySQL is up and running, you will see a similar message in the terminal window:
 
     ``` bash
-    ... [Server] /usr/sbin/mysqld: ready for connections. Version: '8.4.7'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+    ... [Server] /usr/sbin/mysqld: ready for connections. Version: '8.4.9'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
     ```
 
 ## Task 2: Build and run the application
@@ -58,23 +58,23 @@ In this lab, you will:
 <if type="mn_run">
    Use `mn:run` to build and start the application on port 8080. Run the application in the background by appending an `&` as shown below.
 
-	``` bash
-	<copy>
-	./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw mn:run -pl oci &
-	</copy>
-	```
+    ``` bash
+    <copy>
+    ./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw mn:run -pl oci &
+    </copy>
+    ```
 </if>
 
 <if type="jar">
    Build an executable JAR file and then use `java -jar` to run it. Run the application in the background by appending an `&` as shown below.
 
-	``` bash
-	<copy>
-	./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw package -pl oci
+    ``` bash
+    <copy>
+    ./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw package -pl oci
 
     MICRONAUT_ENVIRONMENTS=oraclecloud java -jar oci/target/oci-db-demo-oci-1.0-SNAPSHOT.jar &
-	</copy>
-	```
+    </copy>
+    ```
 </if>
 
 ## Task 3: Send an HTTP POST request to add a Genre
@@ -83,20 +83,20 @@ In this lab, you will:
 
 <if type="mn_run">
 
-	``` bash
-	<copy>
-	curl -X "POST" "http://localhost:8080/genres" -H 'Content-Type: application/json; charset=utf-8' -d '{ "name": "music" }' | jq
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl -X "POST" "http://localhost:8080/genres" -H 'Content-Type: application/json; charset=utf-8' -d '{ "name": "music" }' | jq
+    </copy>
+    ```
 </if>
 
 <if type="jar">
 
     ``` bash
-	<copy>
-	curl -X "POST" "http://localhost:8080/genres" -H 'Content-Type: application/json; charset=utf-8' -d '{ "name": "drama" }' | jq
-	</copy>
-	```
+    <copy>
+    curl -X "POST" "http://localhost:8080/genres" -H 'Content-Type: application/json; charset=utf-8' -d '{ "name": "drama" }' | jq
+    </copy>
+    ```
 </if>
 
 ## Task 4: Check the Genres present in the MySQL database
@@ -104,9 +104,9 @@ In this lab, you will:
 1. Check the `genres` present in the MySQL database using the `/list` endpoint exposed by the application:
 
     ``` bash
-	<copy>
+    <copy>
     curl localhost:8080/genres/list | jq
-	</copy>
+    </copy>
     ```
 
 ## Task 5: Stop the application
@@ -114,9 +114,9 @@ In this lab, you will:
 1. Bring the running application in the foreground:
 
     ```bash
-	<copy>
+    <copy>
     fg
-	</copy>
+    </copy>
     ```
 
 2. Once the application is running in the foreground, use `CTRL+C` to stop it.

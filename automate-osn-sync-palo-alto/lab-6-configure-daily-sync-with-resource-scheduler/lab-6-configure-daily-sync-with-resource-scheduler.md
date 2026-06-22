@@ -10,7 +10,7 @@ In this lab you grant the scheduler permission to invoke the function, create a 
 
 In this run the schedule fires every day at 03:00 UTC, which is 06:00 Asia/Qatar.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -125,3 +125,5 @@ The real test is that the automation keeps the firewall aligned with Oracle's JS
 
 - **Author** - Anas Abdallah (OCI Network Black Belt)
 - **Last Updated By/Date** - Anas Abdallah, June 2026
+
+You may now **proceed to the next lab**.
