@@ -28,11 +28,11 @@ This lab assumes you have:
 - Be able to download the zip archive for the sample application, unzip it and run it as a Python script
 - Be able to install Python dependencies with `python -m pip`
 
-> **Note:** If your computer already has Python installed and `python3 --version` on Mac or `py -3 --version` on Windows shows a Python version, move to Task 2.
+> **Note:** If your computer already has Python 3.10 and above installed and `python3 --version` on Mac or `py -3 --version` on Windows shows a valid Python version, move to Task 2.
 
 ## Task 1: Install Python
 
-1. Download Python from [python.org/downloads](https://www.python.org/downloads/).
+1. Download Python from [python.org/downloads](https://www.python.org/downloads/). Please make sure you choose version 3.10 or newer.
 
 1. Run the installer.
 
