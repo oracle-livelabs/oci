@@ -4,7 +4,7 @@
 
 Oracle Cloud Infrastructure (OCI) publishes a [JSON document](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json) listing the public IP address ranges used by its cloud services. The file groups CIDR blocks by region and tags each block with the service it belongs to, such as `OBJECT_STORAGE` for Object Storage endpoints, `OSN` for the Oracle Services Network, and `OCI` for VCN public IP ranges (used by resources like compute instances, NAT Gateways, and public Load Balancers).
 
-Network and security teams that operate firewalls in front of OCI workloads rely on these ranges to control traffic to OCI services. The ranges change over time, and any drift between the published file and the firewall's address objects can break legitimate traffic or leave stale objects in policies. To keep firewall policies aligned, the file should be polled regularly; this workshop automates a daily sync. Tracking these changes manually is repetitive, error-prone, and easy to neglect.
+Network and security teams that operate firewalls in front of OCI workloads rely on these ranges to control traffic to OCI services. The ranges change over time, and any drift between the published file and the firewall's address objects can break legitimate traffic or leave stale objects in policies. To keep firewall policies aligned, the file should be polled regularly; this workshop automates a daily sync. As tracking these changes manually is repetitive, error-prone, and easy to neglect.
 
 This workshop shows how to automate the process end-to-end on OCI. An OCI Function downloads the JSON file, filters to the regions and services you care about, and synchronizes the resulting CIDRs to a Palo Alto firewall: it creates and updates address objects to match the CIDRs in the file, removes any of its own auto-managed objects that are no longer in the file, groups them into an address group, and commits the change via the PAN-OS XML API. The function is stateless and stores no secrets on disk; the firewall API key lives in OCI Vault and is fetched at runtime via resource principal authentication. Scheduling is handled by OCI Resource Scheduler, a managed service that invokes the function daily. The function is where the work happens; the scheduler is just the heartbeat.
 
@@ -29,41 +29,40 @@ The diagram below shows the components involved in the sync and how they interac
 3. The function reads the PAN-OS API key from OCI Vault using its own identity (resource principal auth).
 4. The function reconciles address objects on the PA-VM by calling the PAN-OS XML API over the management interface.
 
-![Architecture Summary - sync cycle](images/introduction-2.png)
+![OCI Function sync architecture](images/introduction-2.png)
 
-> [!NOTE] NOTE
-> This workshop places the function in a public subnet, so it egresses through the Internet Gateway. Because the function only makes outbound calls and never needs to be reachable from the internet, a private subnet with a NAT Gateway is the recommended production design. In that case the function has no public IP and reaches Oracle's JSON through the NAT Gateway instead.
+> **Note:** This workshop places the function in a public subnet, so it egresses through the Internet Gateway. Because the function only makes outbound calls and never needs to be reachable from the internet, a private subnet with a NAT Gateway is the recommended production design. In that case the function has no public IP and reaches Oracle's JSON through the NAT Gateway instead.
 
 What each component does:
 
-| Component | Purpose |
-| --------- | ------- |
-| OCI Function (Python) | Stateless function attached to a Hub VCN subnet. Fetches Oracle's JSON, reconciles address objects on the PA-VM via the PAN-OS XML API (creates, updates, deletes auto-managed objects), and commits the change. |
-| OCI Vault | Encrypted storage for the PAN-OS API key. |
-| OCI Resource Scheduler | Managed service that triggers the function on a daily schedule. No VM to patch and no cron daemon to maintain. |
-| Policy (function) | Lets the function read the Vault secret using its own identity (resource principal), so no API key is stored in code or configuration. |
-| Policy (scheduler) | Lets the scheduler invoke the function as the `resourceschedule` principal, with no API keys anywhere in the path. |
-| PA-VM (Palo Alto VM-Series) | Target firewall. Receives address-object updates on its management interface (vNIC0), reachable at its management public IP. |
+| Component                   | Purpose                                                                                                                                                                                                          |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OCI Function (Python)       | Stateless function attached to a Hub VCN subnet. Fetches Oracle's JSON, reconciles address objects on the PA-VM via the PAN-OS XML API (creates, updates, deletes auto-managed objects), and commits the change. |
+| OCI Vault                   | Encrypted storage for the PAN-OS API key.                                                                                                                                                                        |
+| OCI Resource Scheduler      | Managed service that triggers the function on a daily schedule. No VM to patch and no cron daemon to maintain.                                                                                                   |
+| Policy (function)           | Lets the function read the Vault secret using its own identity (resource principal), so no API key is stored in code or configuration.                                                                           |
+| Policy (scheduler)          | Lets the scheduler invoke the function as the `resourceschedule` principal, with no API keys anywhere in the path.                                                                                               |
+| PA-VM (Palo Alto VM-Series) | Target firewall. Receives address-object updates on its management interface (vNIC0), reachable at its management public IP.                                                                                     |
 
 ### Prerequisites
 
 Before starting, make sure you have:
 
 1. An OCI tenancy with a compartment you can deploy resources into. Here we used the `Tutorial` compartment.
-2. A Palo Alto VM-Series firewall deployed in an OCI VCN. Complete the following Live Labs workshop first: &lt;Live Labs URL&gt;. It provisions the baseline environment used in this workshop: the firewall along with the Hub VCN, subnets, Internet Gateway, and base configuration. After completing it, note the firewall's management IP and admin credentials.
+2. A Palo Alto VM-Series firewall deployed in an OCI VCN. Complete the following Live Labs workshop first. It provisions the baseline environment used in this workshop: the firewall along with the Hub VCN, subnets, Internet Gateway, and base configuration. After completing it, note the firewall's management IP and admin credentials.
 3. Access to Cloud Shell from the OCI Console.
 4. The following OCIDs ready. Replace the placeholders below with values from your own tenancy:
     - Compartment OCID: `<your-compartment-ocid>`
     - Subnet OCID (function/management subnet, public in this workshop): `<your-subnet-ocid>`
     - Tenancy namespace: `<your-tenancy-namespace>`
 
-![Introduction - step 2](images/c824826136336f6afaf22436e0ac81d7.png)
+![Prerequisite firewall and VCN setup](images/c824826136336f6afaf22436e0ac81d7.png)
 
 ## Why this is needed?
 
 As an example, the diagram below shows a typical OCI hub-and-spoke deployment, where workloads in spoke VCNs reach Oracle services through a Palo Alto firewall in the hub. The firewall is the single egress inspection point for all spoke traffic destined to OCI services, which means it must permit Oracle's current set of public IP ranges. If those ranges drift out of sync with what Oracle publishes, applications in the spokes lose access to services they were previously reaching.
 
-![Introduction - step 1](images/dc80516c6ca6a40ec2ba642ff74e11ab.png)
+![Hub-and-spoke firewall topology](images/dc80516c6ca6a40ec2ba642ff74e11ab.png)
 
 In a setup like this, every spoke depends on the hub firewall's address objects being accurate and current. Three reasons to automate this rather than maintain it by hand:
 
@@ -85,7 +84,6 @@ This workshop is for the case where all three push the other way: the service is
 
 - [Public IP Address Ranges (Oracle Services Network)](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/addressranges.htm)
 - [Overview of Networking](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
-- **This will be updated when the full palo alto workshop series is published.**
 
 ## Acknowledgements
 

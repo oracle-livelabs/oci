@@ -23,12 +23,14 @@ This lab assumes you have:
 
 ## Task 1: Open Cloud Shell on x86
 
-By default, the Cloud Shell architecture preference is set to **No Preference**, meaning your session runs on either x86_64 or ARM (aarch64) depending on regional hardware availability. Since Cloud Shell cannot cross-compile, its architecture must match the shape of the Functions application you will deploy to. This workshop uses the `GENERIC_X86` shape, so Cloud Shell must run on x86_64.
+By default, the Cloud Shell architecture preference is set to **No Preference**, meaning your session runs on either `x86_64` or ARM (`aarch64`) depending on regional hardware availability. Since Cloud Shell cannot cross-compile, its architecture must match the shape of the Functions application you will deploy to. This workshop uses the `GENERIC_X86` shape, so Cloud Shell must run on `x86_64`.
 
 1. Click **Actions** in the Cloud Shell pane.
 2. Select **Architecture**.
 
     ![Build, Deploy, and Configure the OCI Function - step 1](images/9f589725ac0e5876816cc61b29c26171.png)
+
+<!-- -->
 
 1. Choose **X86_64**.
 2. Click on **Confirm**.
@@ -51,6 +53,8 @@ By default, the Cloud Shell architecture preference is set to **No Preference**,
 
     ![Build, Deploy, and Configure the OCI Function - step 5](images/085d2dc1e92acbdb96d46a3a5168ceac.png)
 
+<!-- -->
+
 1. Log in to the regional OCIR endpoint.
 
     ```bash
@@ -65,7 +69,6 @@ By default, the Cloud Shell architecture preference is set to **No Preference**,
 
     ![Build, Deploy, and Configure the OCI Function - step 6](images/2c64515658fc4fd40509ab4a012e2c00.png)
 
-
 ## Task 3: Configure the Fn CLI context
 
 Cloud Shell ships with a pre-configured Fn context for the region you are in (named after the region, e.g., `eu-frankfurt-1`) using the `oracle-cs` provider. Use it, it relies on Cloud Shell's existing delegation token and avoids the need for a separate `~/.oci/config`.
@@ -74,8 +77,8 @@ Cloud Shell ships with a pre-configured Fn context for the region you are in (na
 
 ```bash
 <copy>fn use context eu-frankfurt-1
-fn update context oracle.compartment-id &amp;lt;your-compartment-ocid&amp;gt;
-fn update context registry fra.ocir.io/&amp;lt;tenancy-namespace&amp;gt;/panos
+fn update context oracle.compartment-id <your-compartment-ocid>
+fn update context registry fra.ocir.io/<tenancy-namespace>/panos
 fn list contexts</copy>
 ```
 
@@ -180,15 +183,14 @@ oci</copy>
 
 ```bash
 <copy>oci fn application create \
-  --compartment-id &amp;lt;your-compartment-ocid&amp;gt; \
+  --compartment-id <your-compartment-ocid> \
   --display-name panos-sync-app \
-  --subnet-ids '["&amp;lt;your-subnet-ocid&amp;gt;"]'</copy>
+  --subnet-ids '["<your-subnet-ocid>"]'</copy>
 ```
 
 ![Build, Deploy, and Configure the OCI Function - step 10](images/def075b132825b088047c664514eff3f.png)
 
-> [!NOTE] NOTE
-> Subnet choice: the subnet must reach the firewall management IP (TCP/443) and the [Oracle IP ranges JSON](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json) over HTTPS. It needs a route to the internet for the JSON fetch, either via an Internet Gateway (public subnet, as used in this workshop) or a NAT Gateway (private subnet, the more common production choice). The simplest setup is to reuse the firewall's management subnet.
+> **Note:** Subnet choice - the subnet must reach the firewall management IP (TCP/443) and the [Oracle IP ranges JSON](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json) over HTTPS. It needs a route to the internet for the JSON fetch, either via an Internet Gateway (public subnet, as used in this workshop) or a NAT Gateway (private subnet, the more common production choice). The simplest setup is to reuse the firewall's management subnet.
 
 - The OCI Functions application `panos-sync-app` was created successfully in your compartment with `GENERIC_X86` shape, attached to your function subnet, and is now in `ACTIVE` state.
 
@@ -211,13 +213,13 @@ oci</copy>
 - These environment variables tell the function which firewall to talk to, which regions and services to filter, and where to find the secret. The same image can be reused across firewalls by changing only the config.
 
 ```bash
-<copy>fn config function panos-sync-app panos-sync PANOS_HOST &amp;lt;firewall-mgmt-ip&amp;gt;
+<copy>fn config function panos-sync-app panos-sync PANOS_HOST <firewall-mgmt-ip>
 fn config function panos-sync-app panos-sync OCI_REGIONS eu-frankfurt-1
 fn config function panos-sync-app panos-sync OCI_SERVICES OSN,OBJECT_STORAGE
 fn config function panos-sync-app panos-sync ADDR_PREFIX osn
 fn config function panos-sync-app panos-sync ADDR_GROUP osn-public-ips
 fn config function panos-sync-app panos-sync TAG oci-auto
-fn config function panos-sync-app panos-sync PANOS_KEY_SECRET_OCID &amp;lt;secret-ocid-from-lab-1&amp;gt;</copy>
+fn config function panos-sync-app panos-sync PANOS_KEY_SECRET_OCID <secret-ocid-from-lab-1></copy>
 ```
 
 Where:

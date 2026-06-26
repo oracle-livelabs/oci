@@ -27,8 +27,7 @@ This lab assumes you have:
 - A VCN and subnet available for the Functions application, with internet access
 - Permissions to use OCIR, create Functions applications, and deploy functions in your compartment
 
-> [!NOTE] NOTE
-> If you already deployed the Lab 3 function, you can reuse the same application, OCIR login, Fn context, and configuration. Only the function code in Task 2 differs. Redeploy after replacing `func.py` and the new behavior takes effect.
+> **Note:** If you already deployed the Lab 3 function, you can reuse the same application, OCIR login, Fn context, and configuration. Only the function code in Task 2 differs. Redeploy after replacing `func.py` and the new behavior takes effect.
 
 ## Task 1: Understand the Timestamp Gate
 
@@ -136,7 +135,7 @@ The differences from the Lab 3 code are: the `api` helper is defined earlier so 
 
 ![Sync Only When the IP Ranges Change - step 2](images/18fbb4aa7721390f772c7950172bc080.png)
 
-- The `requirements.txt` is unchanged from Lab 3. If you are starting fresh, create it with the same contents:
+The `requirements.txt` is unchanged from Lab 3. If you are starting fresh, create it with the same contents:
 
 ```
 <copy>fdk
@@ -150,13 +149,12 @@ If you completed Lab 3, the `panos-sync-app` application already exists and you 
 
 ```bash
 <copy>oci fn application create \
-  --compartment-id &amp;lt;your-compartment-ocid&amp;gt; \
+  --compartment-id <your-compartment-ocid> \
   --display-name panos-sync-app \
-  --subnet-ids '["&amp;lt;your-subnet-ocid&amp;gt;"]'</copy>
+  --subnet-ids '["<your-subnet-ocid>"]'</copy>
 ```
 
-> [!NOTE] NOTE
-> Subnet choice: the subnet must reach the firewall management IP (TCP/443) and the [Oracle IP ranges JSON](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json) over HTTPS. The simplest setup is the same subnet as the firewall management interface, provided it has a route to the internet via an Internet Gateway.
+> **Note:** Subnet choice - the subnet must reach the firewall management IP (TCP/443) and the [Oracle IP ranges JSON](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json) over HTTPS. It needs a route to the internet for the JSON fetch, either via an Internet Gateway (public subnet, as used in this workshop) or a NAT Gateway (private subnet, the more common production choice). The simplest setup is to reuse the firewall's management subnet.
 
 Deploy the function. Fn builds the Docker image, pushes it to OCIR, and registers the function with the application. This typically takes around 3 minutes:
 
@@ -168,8 +166,7 @@ Watch for `Successfully created function: panos-sync` at the end of the output.
 
 If you have not yet set the function configuration, apply the same `fn config` values as in Lab 3 Task 6 before testing.
 
-> [!NOTE] Troubleshooting
-> If `fn deploy` fails with `no space left on device`, Cloud Shell's home directory has filled with cached container layers. Clear them with `podman system reset -f`, then run the deploy again. If the push fails with a `403`, your OCIR login has expired; run `docker login <region>.ocir.io` with a fresh auth token and redeploy.
+> **Note:** Troubleshooting - if `fn deploy` fails with `no space left on device`, Cloud Shell's home directory has filled with cached container layers. Clear them with `podman system reset -f`, then run the deploy again. If the push fails with a `403`, your OCIR login has expired; run `docker login <region>.ocir.io` with a fresh auth token and redeploy.
 
 Because the comparison timestamp is stored on the firewall and under your control, you can exercise all three behaviors immediately, without waiting for Oracle to publish an update.
 
@@ -207,6 +204,8 @@ To make the firewall state easy to observe, first show the Description column on
 
     After the run, the function has written the timestamp into the group **Description**:
 
+<!-- -->
+
 1. The **Description** now reads `ts=2026-05-25T08:40:08.970229`.
 2. Select **Addresses** to view the objects that were created.
 
@@ -217,6 +216,8 @@ To make the firewall state easy to observe, first show the Description column on
     ![Sync Only When the IP Ranges Change - step 8](images/0c28039c08bfe33c3e1d3f15ad761d78.png)
 
     **Behavior 2 - skipped run (no change).** When the file timestamp matches the one stored on the firewall, the gate returns immediately and the firewall is untouched. To make the skip visible, first introduce a manual change the function would normally correct. Edit one address object so its value is wrong, for example set `osn-eu-frankfurt-1-92-5-248-0-22` to `1.1.1.1/32`, then Commit:
+
+<!-- -->
 
 1. The address value is now `1.1.1.1/32` instead of its real CIDR.
 2. Select **Address Groups** to confirm the stored timestamp.
@@ -247,12 +248,16 @@ To make the firewall state easy to observe, first show the Description column on
 
     **Behavior 3 - forced re-sync (simulated update).** When the file timestamp differs from the stored one, the gate falls through and the function runs the full sync, exactly as it would the day Oracle publishes an update. To trigger this without waiting for a real update, simulate it by changing the stored timestamp on the firewall to an old value. The `1.1.1.1/32` drift from Behavior 2 is still in place, so this run also confirms the sync corrects it:
 
+<!-- -->
+
 1. The current **Description** reads `ts=2026-05-25T08:40:08.970229`.
 2. Open `osn-public-ips` to edit it.
 
     ![Sync Only When the IP Ranges Change - step 13](images/0f008670acd2cf7a5735a95ea73dbb52.png)
 
     Set the **Description** to an obviously old value so it cannot match the file:
+
+<!-- -->
 
 1. Change the **Description** to `ts=2000-01-01T00:00:00.000000`.
 2. Click **OK**.
@@ -261,12 +266,16 @@ To make the firewall state easy to observe, first show the Description column on
 
     Commit the change:
 
+<!-- -->
+
 1. The **Description** now shows `ts=2000-01-01T00:00:00.000000`.
 2. Click **Commit**.
 
     ![Sync Only When the IP Ranges Change - step 15](images/0e223f8e06fda6f4b1ba0e9c5f37729b.png)
 
     In the commit dialog:
+
+<!-- -->
 
 1. Leave **Commit All Changes** selected.
 2. Click **Commit**.
@@ -296,6 +305,8 @@ To make the firewall state easy to observe, first show the Description column on
     This is exactly what happens in production the day Oracle updates the file: the timestamps differ, and the function reconciles.
 
     After the run, the function has restored the real timestamp:
+
+<!-- -->
 
 1. The **Description** reads `ts=2026-05-25T08:40:08.970229` again.
 2. Select **Addresses** to confirm the drift was corrected.

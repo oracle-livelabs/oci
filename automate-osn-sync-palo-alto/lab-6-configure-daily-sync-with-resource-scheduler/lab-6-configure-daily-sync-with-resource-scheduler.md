@@ -98,6 +98,8 @@ With the policy in place, create the schedule on the `panos-sync` function.
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 10](images/0d483c95f07617d0317cb1103a34941f.png)
 
+<!-- -->
+
 1. After a short wait it moves to **Enabled**.
 2. **Next run date** shows the upcoming 03:00 UTC slot.
 

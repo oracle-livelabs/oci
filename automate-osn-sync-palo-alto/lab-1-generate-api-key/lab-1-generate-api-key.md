@@ -27,6 +27,8 @@ An OCI account/tenancy, and the Palo Alto firewall's management IP + admin crede
 
     ![Generate and Store the PAN-OS API Key in OCI Vault - step 2](images/162a4be5b0439bc18ec866b2a0ff66dd.png)
 
+<!-- -->
+
 1. From OCI Cloud Shell, run the following command, replacing the placeholders with your firewall's values:
 
     ```bash
@@ -43,13 +45,8 @@ An OCI account/tenancy, and the Palo Alto firewall's management IP + admin crede
     - `<admin-password>`: The password for the admin account, set during the Live Labs workshop.
     The trailing `echo` just adds a newline so the XML response is easier to read in the terminal.
 
-2. The response is XML:
 
-    ```xml
-    &lt;response status = 'success'&gt;&lt;result&gt;&lt;key&gt;LUF...GtVcQ==&lt;/key&gt;&lt;/result&gt;&lt;/response&gt;
-    ```
-
-    Copy the value between `<key>` and `</key>`, that string is your API key. By default it never expires. It becomes invalid only if you set an API Key Lifetime, expire or revoke all keys, change the admin password, or regenerate the key.
+2. The response is XML. Copy the value between `<key>` and `</key>`, that string is your API key. By default it never expires. It becomes invalid only if you set an API Key Lifetime, expire or revoke all keys, change the admin password, or regenerate the key.
 
     ![Generate and Store the PAN-OS API Key in OCI Vault - step 3](images/69e6d6dd07dd2baf79c008ab13ee2681.png)
 
@@ -84,7 +81,7 @@ An OCI account/tenancy, and the Palo Alto firewall's management IP + admin crede
     - Encryption key: `panos-master-key`
     - Choose **Manual secret generation**. You are storing a known value, not generating one.
     - Secret type template: **Plain-Text**
-    - Secret Contents: paste the API key from Task 1 `LUF...GtVcQ==`
+    - Secret Contents: paste the API key from Task 1 (`LUF...GtVcQ==`)
     - Leave **Show Base64 conversion** unchecked
 5. Click **Create secret**.
 6. Copy the **OCID** and save it. You will reference it later when configuring the function.
