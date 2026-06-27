@@ -40,9 +40,9 @@ An OCI account/tenancy, and the Palo Alto firewall's management IP + admin crede
 
     Where:
 
-    - `<firewall-mgmt-ip>`: Public IP of the firewall's management interface, provisioned by the Live Labs workshop in the Management Subnet.
-    - `<admin-username>`: The PAN-OS superuser account (typically `admin`), set during the Live Labs workshop.
-    - `<admin-password>`: The password for the admin account, set during the Live Labs workshop.
+    - `<firewall-mgmt-ip>`: Public IP of the firewall's management interface, provisioned by the prerequisite Live Labs workshop in the Management Subnet.
+    - `<admin-username>`: The PAN-OS superuser account (typically `admin`), set during the prerequisite Live Labs workshop.
+    - `<admin-password>`: The password for the admin account, set during the prerequisite Live Labs workshop.
     The trailing `echo` just adds a newline so the XML response is easier to read in the terminal.
 
 
