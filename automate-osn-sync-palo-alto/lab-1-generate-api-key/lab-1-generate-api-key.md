@@ -23,7 +23,7 @@ An OCI account/tenancy, and the Palo Alto firewall's management IP + admin crede
 
     ![Generate and Store the PAN-OS API Key in OCI Vault - step 1](images/bd14066c595202717c1d1c260401b30a.png)
 
-    - Wait for Cloud Shell to start up.
+- Wait for Cloud Shell to start up.
 
     ![Generate and Store the PAN-OS API Key in OCI Vault - step 2](images/162a4be5b0439bc18ec866b2a0ff66dd.png)
 
@@ -45,7 +45,6 @@ An OCI account/tenancy, and the Palo Alto firewall's management IP + admin crede
     - `<admin-password>`: The password for the admin account, set during the prerequisite Live Labs workshop.
     The trailing `echo` just adds a newline so the XML response is easier to read in the terminal.
 
-
 2. The response is XML. Copy the value between `<key>` and `</key>`, that string is your API key. By default it never expires. It becomes invalid only if you set an API Key Lifetime, expire or revoke all keys, change the admin password, or regenerate the key.
 
     ![Generate and Store the PAN-OS API Key in OCI Vault - step 3](images/69e6d6dd07dd2baf79c008ab13ee2681.png)
@@ -61,8 +60,7 @@ An OCI account/tenancy, and the Palo Alto firewall's management IP + admin crede
 
     ![Generate and Store the PAN-OS API Key in OCI Vault - step 4](images/9f0a1331b674afa45b3d78f389ba2a82.png)
 
-    Inside the vault, create the master encryption key. Click **Master Encryption Keys** → **Create Key**.
-
+- Inside the vault, create the master encryption key. Click **Master Encryption Keys** → **Create Key**.
     - Protection Mode: Software
     - Name: `panos-master-key`
     - Algorithm: AES, Length: 256

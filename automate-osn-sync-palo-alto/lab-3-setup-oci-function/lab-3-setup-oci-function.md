@@ -37,11 +37,11 @@ By default, the Cloud Shell architecture preference is set to **No Preference**,
 
     ![Build, Deploy, and Configure the OCI Function - step 2](images/2802f93f6ece9a5a4e1cdc518bb4b736.png)
 
-    - Click on **Restart**.
+- Click on **Restart**.
 
     ![Build, Deploy, and Configure the OCI Function - step 3](images/11bde8abaa8f7be707f0a80c88ed8679.png)
 
-    - Cloud Shell restarts on x86 and shows a confirmation banner.
+- Cloud Shell restarts on x86 and shows a confirmation banner.
 
     ![Build, Deploy, and Configure the OCI Function - step 4](images/92a91cb3fd40c869f3ed3e80d7d35d04.png)
 

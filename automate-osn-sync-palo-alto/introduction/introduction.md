@@ -42,15 +42,15 @@ What each component does:
 | OCI Function (Python)       | Stateless function attached to a Hub VCN subnet. Fetches Oracle's JSON, reconciles address objects on the PA-VM via the PAN-OS XML API (creates, updates, deletes auto-managed objects), and commits the change. |
 | OCI Vault                   | Encrypted storage for the PAN-OS API key.                                                                                                                                                                        |
 | OCI Resource Scheduler      | Managed service that triggers the function on a daily schedule. No VM to patch and no cron daemon to maintain.                                                                                                   |
-| IAM Policy (function)           | Lets the function read the Vault secret using its own identity (resource principal), so no API key is stored in code or configuration.                                                                           |
-| IAM Policy (scheduler)          | Lets the scheduler invoke the function as the `resourceschedule` principal, with no API keys anywhere in the path.                                                                                               |
+| IAM Policy (function)       | Lets the function read the Vault secret using its own identity (resource principal), so no API key is stored in code or configuration.                                                                           |
+| IAM Policy (scheduler)      | Lets the scheduler invoke the function as the `resourceschedule` principal, with no API keys anywhere in the path.                                                                                               |
 | PA-VM (Palo Alto VM-Series) | Target firewall. Receives address-object updates on its management interface (vNIC0), reachable at its management public IP.                                                                                     |
 
 ### Prerequisites
 
 Before starting, make sure you have:
 
-1. An OCI tenancy with a compartment you can deploy resources into. Here we use the `Tutorial` compartment.
+1. An OCI tenancy with a compartment you can deploy resources into. Here we used the `Tutorial` compartment.
 2. A Palo Alto VM-Series firewall deployed in an OCI VCN. Complete the following Live Labs workshop first. It provisions the baseline environment used in this workshop: the firewall along with the Hub VCN, subnets, Internet Gateway, and base configuration. After completing it, note the firewall's management IP and admin credentials.
 3. Access to Cloud Shell from the OCI Console.
 4. The following OCIDs ready. Replace the placeholders below with values from your own tenancy:

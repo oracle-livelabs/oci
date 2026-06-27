@@ -47,54 +47,53 @@ This lab assumes you have:
 ## Task 2: Create the Daily Schedule
 
 With the policy in place, create the schedule on the `panos-sync` function.
-
 1. Open the navigation menu.
 2. Click on **Developer Services**.
 3. Click **Functions**.
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 2](images/7ee4136e3d97dd781fdd2365e9999c7c.png)
 
-    - Click on `panos-sync-app`
+- Click on `panos-sync-app`
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 3](images/4f00c1f55af0902cfe51c0c7416e5484.png)
 
-    - Click the **Functions** tab.
+- Click the **Functions** tab.
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 4](images/dba89d29131a50ddea71bae9ca7bfb5c.png)
 
-    - Click `panos-sync`.
+- Click `panos-sync`.
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 5](images/612adf6b23593923069c0aa4e278d6d2.png)
 
-    - Click the **Schedules** tab.
+- Click the **Schedules** tab.
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 6](images/854d205bcca6db44f183faf3f2df917a.png)
 
-    - Click **Add schedule**.
+- Click **Add schedule**.
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 7](images/7cc023ed632a26c13ff5ebc8aea5f930.png)
 
-    - In the **Add schedule** panel, configure the following:
-    	1. Leave **Create new schedule** selected.
-    	2. **Name**: `panos-sync-daily-schedule`.
-    	3. **Description**: `Triggers panos-sync function daily at 03:00 UTC (06:00 Asia/Qatar) to sync Oracle public IP ranges to the Palo Alto firewall`.
-    	4. **Compartment**: `Tutorial`.
+- In the **Add schedule** panel, configure the following:
+    1. Leave **Create new schedule** selected.
+    2. **Name**: `panos-sync-daily-schedule`.
+    3. **Description**: `Triggers panos-sync function daily at 03:00 UTC (06:00 Asia/Qatar) to sync Oracle public IP ranges to the Palo Alto firewall`.
+     4. **Compartment**: `Tutorial`.
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 8](images/e235f8a0ca388f0475b3952a8f8b4687.png)
 
-    - Under **Specify schedule using**, configure the following:
-    	1. Keep **Form interface** selected and set:
-    	2. **Interval**: `Daily`.
-    	3. **Repeat every**: `1` `day`.
-    	4. **Time**: `03:00`.
-    	5. **Start date** and **End date**: in this run, 6/5/2026 to 6/5/2027.
-    	6. The **Summary** confirms `Every Day at 03:00 UTC`.
-    	7. Leave **Add invocation payload** off. The function reads everything it needs from its configuration and the secret, so no payload is required.
-    	8. Click **Create**.
+- Under **Specify schedule using**, configure the following:
+    1. Keep **Form interface** selected and set:
+    2. **Interval**: `Daily`.
+    3. **Repeat every**: `1` `day`.
+    4. **Time**: `03:00`.
+    5. **Start date** and **End date**: in this run, 6/5/2026 to 6/5/2027.
+    6. The **Summary** confirms `Every Day at 03:00 UTC`.
+    7. Leave **Add invocation payload** off. The function reads everything it needs from its configuration and the secret, so no payload is required.
+    8. Click **Create**.
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 9](images/977fbbe83bf17205a7f84b36cfc7302b.png)
 
-    - The schedule appears with status **Creating**.
+- The schedule appears with status **Creating**.
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 10](images/0d483c95f07617d0317cb1103a34941f.png)
 
@@ -115,13 +114,13 @@ The real test is that the automation keeps the firewall aligned with Oracle's JS
 
 - Wait for the next scheduled run (the next 03:00 UTC slot). When it completes, the schedule details update:
 
-1. **Last run date** shows the slot that just passed (`Jun 5, 2026, 03:00 UTC`).
-2. **Last run** shows **Succeeded**.
-3. **Next run date** has advanced to the following day (`Jun 6, 2026, 03:00 UTC`).
+    1. **Last run date** shows the slot that just passed (`Jun 5, 2026, 03:00 UTC`).
+    2. **Last run** shows **Succeeded**.
+    3. **Next run date** has advanced to the following day (`Jun 6, 2026, 03:00 UTC`).
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 13](images/07dfb3db0028118de901b336f9b73f2a.png)
 
-    - On the firewall, refresh the **Objects** → **Addresses** view. The function has overwritten `osn-eu-frankfurt-1-92-5-248-0-22` back to its correct value, `92.5.248.0/22`. The drift you introduced is gone, with no manual intervention.
+- On the firewall, refresh the **Objects** → **Addresses** view. The function has overwritten `osn-eu-frankfurt-1-92-5-248-0-22` back to its correct value, `92.5.248.0/22`. The drift you introduced is gone, with no manual intervention.
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 14](images/f497737ce02e27c71d3dde4548373652.png)
 
