@@ -125,6 +125,11 @@ The real test is that the automation keeps the firewall aligned with Oracle's JS
 
     ![Schedule Daily Synchronization with OCI Resource Scheduler - step 14](images/f497737ce02e27c71d3dde4548373652.png)
 
+## Learn More
+
+- [Overview of Resource Scheduler](https://docs.oracle.com/en-us/iaas/Content/resource-scheduler/home.htm)
+- [Scheduling Functions](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsschedulingfunctions-about.htm)
+
 ## Acknowledgements
 
 - **Author** - Anas Abdallah (OCI Network Black Belt)
