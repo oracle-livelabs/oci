@@ -4,7 +4,7 @@
 
 The function works, but a sync that only runs when you invoke it by hand is not automation. Oracle updates its public IP ranges on demand as it adds capacity or launches services, with no predictable timing, so a daily refresh keeps the firewall current and ensures minimal risk without anyone touching it.
 
-OCI Resource Scheduler is a managed service that invokes the function on a fixed schedule. There is no VM to patch, or no cron daemon to keep alive, and no instance principal to maintain. The scheduler runs as its own principal type (`resourceschedule`), so the only setup required is a policy that lets that principal invoke the function, and the schedule itself.
+OCI Resource Scheduler is a managed service that runs scheduled actions on OCI resources. Here, it invokes the function on a fixed daily schedule. There is no VM to patch, no cron daemon to keep alive, and no instance principal to maintain. The scheduler runs as its own principal type (`resourceschedule`), so the only setup required is a policy that lets that principal invoke the function, and the schedule itself.
 
 In this lab you grant the scheduler permission to invoke the function, create a daily schedule on `panos-sync`, and confirm the run by tampering with an address object on the firewall and watching the next run correct it.
 
@@ -112,6 +112,8 @@ The real test is that the automation keeps the firewall aligned with Oracle's JS
 - On the firewall, modify one of the auto-managed address objects. For example, change `osn-eu-frankfurt-1-92-5-248-0-22` from its correct value `92.5.248.0/22` to `1.1.1.1/32`, then commit.
 
 ![Schedule Daily Synchronization with OCI Resource Scheduler - step 12](images/bf55e3658a3cb8d4cd4164e48b8de4f9.png)
+
+- Wait for the next scheduled run (the next 03:00 UTC slot). When it completes, the schedule details update:
 
 1. **Last run date** shows the slot that just passed (`Jun 5, 2026, 03:00 UTC`).
 2. **Last run** shows **Succeeded**.
