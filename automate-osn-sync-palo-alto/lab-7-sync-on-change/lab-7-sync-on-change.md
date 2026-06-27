@@ -35,7 +35,7 @@ The function stores its state on the firewall itself, in the description field o
 
 The control flow becomes:
 
-1. Fetch the Oracle JSON and read its last_updated_timestamp. This field sits at the very top of the file; open the URL in a browser to see it. At the time this workshop was written it showed 2026-05-25T08:40:08.970229 (May 25, 2026), the last time Oracle had modified the IP ranges, roughly three weeks before the lab was finalized. Since the field only changes when the ranges do, it is exactly what the gate keys off.
+1. Fetch the [Oracle JSON](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json) and read its `last_updated_timestamp`. This field sits at the very top of the file; open the URL in a browser to see it. At the time this workshop was written it showed `2026-05-25T08:40:08.970229` (May 25, 2026), the last time Oracle had modified the IP ranges, roughly three weeks before the lab was finalized. Since the field only changes when the ranges do, it is exactly what the gate keys off.
 
     ![Sync Only When the IP Ranges Change - step 1](images/lab-7-sync-on-change-23.png)
 
