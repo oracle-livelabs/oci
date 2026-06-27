@@ -35,10 +35,9 @@ The function stores its state on the firewall itself, in the description field o
 
 The control flow becomes:
 
-1. Fetch the [Oracle JSON](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json) and read its `last_updated_timestamp`. This field sits at the very top of the file, open the URL in a browser to see it. At the time this workshop was written it showed `2026-05-25T08:40:08.970229`, the last time Oracle had modified the IP ranges, roughly three weeks before the lab was finalized. Since the field only changes when the ranges do, it is exactly what the gate keys off.
+1. Fetch the Oracle JSON and read its last_updated_timestamp. This field sits at the very top of the file; open the URL in a browser to see it. At the time this workshop was written it showed 2026-05-25T08:40:08.970229 (May 25, 2026), the last time Oracle had modified the IP ranges, roughly three weeks before the lab was finalized. Since the field only changes when the ranges do, it is exactly what the gate keys off.
 
     ![Sync Only When the IP Ranges Change - step 1](images/lab-7-sync-on-change-23.png)
-
 
 2. Read the address group's description from the firewall, which holds the timestamp recorded by the previous run.
 3. If the two match, return immediately with a `skipped` response. The firewall is not modified and no commit occurs.
@@ -184,7 +183,7 @@ To make the firewall state easy to observe, first show the Description column on
 
     ![Sync Only When the IP Ranges Change - step 4](images/04f25970608891ffba9a29b3dc6722ed.png)
 
-    **Behavior 1 - first run (full sync).** On the first invocation, no matching timestamp is stored yet (whether the group is new or exists from Lab 3), so the gate cannot match and the function runs the full sync. Before the run, the **Description** column for `osn-public-ips` is empty:
+    **Behavior 1 - first run (full sync).** On the first invocation, no matching timestamp is stored yet, so the gate cannot match. The function creates the address group, syncs all 19 address objects into it, and writes the last-updated timestamp into the group **Description**. If the group already exists from Lab 3, its **Description** column for `osn-public-ips` is empty before the run:
 
     ![Sync Only When the IP Ranges Change - step 5](images/ec0cd2416a9f071a66f59adea4a41121.png)
 
@@ -250,7 +249,7 @@ To make the firewall state easy to observe, first show the Description column on
 
 <!-- -->
 
-1. The current **Description** reads `ts=2026-05-25T08:40:08.970229`.
+1. The **Description** column shows the current timestamp `ts=2026-05-25T08:40:08.970229` from the last sync.
 2. Open `osn-public-ips` to edit it.
 
     ![Sync Only When the IP Ranges Change - step 13](images/0f008670acd2cf7a5735a95ea73dbb52.png)
@@ -259,7 +258,7 @@ To make the firewall state easy to observe, first show the Description column on
 
 <!-- -->
 
-1. Change the **Description** to `ts=2000-01-01T00:00:00.000000`.
+1. Change the **Description** to `ts=2000-01-01T00:00:00.000000` (January 1, 2000 - a deliberately old date, so the gate treats the stored timestamp as stale and forces a full sync).
 2. Click **OK**.
 
     ![Sync Only When the IP Ranges Change - step 14](images/e2ce1fd681dbc1c6b5e76df47bab624e.png)
