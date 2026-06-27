@@ -8,6 +8,8 @@ Network and security teams that operate firewalls in front of OCI workloads rely
 
 This workshop shows how to automate the process end-to-end on OCI. An OCI Function downloads the JSON file, filters to the regions and services you care about, and synchronizes the resulting CIDRs to a Palo Alto firewall: it creates and updates address objects to match the CIDRs in the file, removes any of its own auto-managed objects that are no longer in the file, groups them into an address group, and commits the change via the PAN-OS XML API. The function is stateless and stores no secrets on disk; the firewall API key lives in OCI Vault and is fetched at runtime via resource principal authentication. Scheduling is handled by OCI Resource Scheduler, a managed service that invokes the function daily. The function is where the work happens; the scheduler is just the heartbeat.
 
+This solution costs very little to run. OCI Functions and Resource Scheduler stay within the Always Free tier for a once-daily sync; the only ongoing charge is OCI Vault, which bills a small amount per active key version per month. Delete the resources when you finish if you do not plan to keep it running.
+
 Estimated Workshop Time: 90 minutes
 
 ### Objectives
