@@ -26,7 +26,7 @@ This lab assumes you have:
 - Have Python installed on your computer or be able to install it
 - Be comfortable with running terminal/command-line commands to copy, rename, edit text files, create folders etc
 - Be able to download the zip archive for the sample application, unzip it and run it as a Python script
-- Be able to install Python dependencies with `pip`
+- Be able to install Python dependencies with `python -m pip`
 
 ## Task 1: Install Python
 
@@ -61,6 +61,8 @@ This lab assumes you have:
 ## Task 2: Extract the sample application
 
 1. Download [sample-app.zip](files/sample-app.zip).
+
+    > **Note for Windows:** Extract the app near a short path, such as `C:\labs\sample-app`, before you create the virtual environment or install dependencies. Deep folder paths can cause Windows path-length failures in generated OCI SDK files. If your organization allows it, enabling Windows long paths also avoids this issue.
 
 1. Open a terminal window.
 
@@ -142,7 +144,7 @@ This lab assumes you have:
 
 ## Task 3: Configure OCI API key authentication
 
-1. Make sure to select the sandbox region.
+1. Make sure to select the workshop region.
 
 1. In the OCI Console, open the **Profile** menu (on the top right), then click your user name.
 
@@ -159,6 +161,8 @@ This lab assumes you have:
 1. Click **Download private key** and save the private key file.
 
     ![Generate API key pair](./images/generate-api-key-pair.png)
+
+    > **Note:** Treat the private key and OCI config as credentials. Do not commit them to source control, paste them into chat or email, or share them with other attendees.
 
 1. Click **Add**.
 
@@ -357,13 +361,13 @@ This lab assumes you have:
 
 5. Replace the blank OCID values in `.env` with the values from your parameter text file.
 
-    > **Note:** Please take extra care when you copy values between the text files or the sandbox information pane. Make sure that you copy the right OCID and paste it next to the right environment variable. The OCIDs contain clues in them for example, a compartment OCID will start with: `compartment-id ocid1.compartment.oc1...`. Also, please make sure that there are no spaces before or after the equal signs and that there are no newlines introduced before or after the pasted values. The environment variable name, the equal sign and the value should all fit in one single line.
+    > **Note:** Please take extra care when you copy values between text files or the OCI Console. Make sure that you copy the right value and paste it next to the right environment variable. OCIDs contain clues in them, for example, a compartment OCID will start with `ocid1.compartment.oc1...`. The unstructured vector store value is different: it is a Vector store ID that starts with `vs_`, not an OCID. Also, please make sure that there are no spaces before or after the equal signs and that there are no newlines introduced before or after the pasted values. The environment variable name, the equal sign, and the value should all fit in one single line.
 
     ```text
     <copy>
     OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID=<Workshop compartment OCID>
     OCI_GENAI_PROJECT_OCID=<Project OCID>
-    OCI_GENAI_VECTOR_STORE_IDS=<Unstructured vector store OCID>
+    OCI_GENAI_VECTOR_STORE_IDS=<Unstructured Vector store ID>
     OCI_ADB_DATABASE_OCID=<Autonomous AI Database OCID>
     OCI_ADB_MCP_PASSWORD_SECRET_OCID=<ADMIN password secret OCID>
     OCI_GENAI_SEMANTIC_STORE_OCID=<Structured semantic store OCID>
@@ -494,7 +498,7 @@ This lab assumes you have:
 
     ```bash
     <copy>
-    pip install -r requirements.txt
+    python -m pip install -r requirements.txt
     </copy>
     ```
 
@@ -548,6 +552,8 @@ This lab assumes you have:
 
 ## Task 8: Test service-record retrieval
 
+Your exact answer can vary by the displayed `Customer ID`. Success means the answer is scoped to the current customer and uses the database retrieval path.
+
 1. Ask this question:
 
     ```text
@@ -581,7 +587,7 @@ This lab assumes you have:
 
     ```text
     <copy>
-    Summarize the service receipt in this image.
+    List the services shown on this receipt in five bullets.
     </copy>
     ```
 
