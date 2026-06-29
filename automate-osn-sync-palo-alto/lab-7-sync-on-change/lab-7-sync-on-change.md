@@ -183,7 +183,7 @@ To make the firewall state easy to observe, first show the Description column on
 
     ![Sync Only When the IP Ranges Change - step 4](images/04f25970608891ffba9a29b3dc6722ed.png)
 
-- **Behavior 1 - first run (full sync).** On the first invocation, no matching timestamp is stored yet, so the gate cannot match. The function creates the address group, syncs all 19 address objects into it, and writes the last-updated timestamp into the group **Description**. If the group already exists from Lab 3, its **Description** column for `osn-public-ips` is empty before the run:
+    - **Behavior 1 - first run (full sync).** On the first invocation, no matching timestamp is stored yet, so the gate cannot match. The function creates the address group, syncs all 19 address objects into it, and writes the last-updated timestamp into the group **Description**. If the group already exists from Lab 3, its **Description** column for `osn-public-ips` is empty before the run:
 
     ![Sync Only When the IP Ranges Change - step 5](images/ec0cd2416a9f071a66f59adea4a41121.png)
 
@@ -214,7 +214,7 @@ To make the firewall state easy to observe, first show the Description column on
 
     ![Sync Only When the IP Ranges Change - step 8](images/0c28039c08bfe33c3e1d3f15ad761d78.png)
 
-- **Behavior 2 - skipped run (no change).** When the file timestamp matches the one stored on the firewall, the gate returns immediately and the firewall is untouched. To make the skip visible, first introduce a manual change the function would normally correct. Edit one address object so its value is wrong, for example set `osn-eu-frankfurt-1-92-5-248-0-22` to `1.1.1.1/32`, then Commit:
+    - **Behavior 2 - skipped run (no change).** When the file timestamp matches the one stored on the firewall, the gate returns immediately and the firewall is untouched. To make the skip visible, first introduce a manual change the function would normally correct. Edit one address object so its value is wrong, for example set `osn-eu-frankfurt-1-92-5-248-0-22` to `1.1.1.1/32`, then Commit:
 
 <!-- -->
 
@@ -245,7 +245,7 @@ To make the firewall state easy to observe, first show the Description column on
 
     ![Sync Only When the IP Ranges Change - step 12](images/9c9b097ea0a3a5d0cd4e10a134365b5d.png)
 
-- **Behavior 3 - forced re-sync (simulated update).** When the file timestamp differs from the stored one, the gate falls through and the function runs the full sync, exactly as it would the day Oracle publishes an update. To trigger this without waiting for a real update, simulate it by changing the stored timestamp on the firewall to an old value. The `1.1.1.1/32` drift from Behavior 2 is still in place, so this run also confirms the sync corrects it:
+    - **Behavior 3 - forced re-sync (simulated update).** When the file timestamp differs from the stored one, the gate falls through and the function runs the full sync, exactly as it would the day Oracle publishes an update. To trigger this without waiting for a real update, simulate it by changing the stored timestamp on the firewall to an old value. The `1.1.1.1/32` drift from Behavior 2 is still in place, so this run also confirms the sync corrects it:
 
 <!-- -->
 

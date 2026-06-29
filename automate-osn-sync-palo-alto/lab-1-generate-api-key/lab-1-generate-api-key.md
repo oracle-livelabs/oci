@@ -23,7 +23,7 @@ An OCI account/tenancy, and the Palo Alto firewall's management IP + admin crede
 
     ![Generate and Store the PAN-OS API Key in OCI Vault - step 1](images/bd14066c595202717c1d1c260401b30a.png)
 
-- Wait for Cloud Shell to start up.
+    - Wait for Cloud Shell to start up.
 
     ![Generate and Store the PAN-OS API Key in OCI Vault - step 2](images/162a4be5b0439bc18ec866b2a0ff66dd.png)
 
