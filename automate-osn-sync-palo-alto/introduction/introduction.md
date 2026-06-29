@@ -10,7 +10,7 @@ This workshop shows how to automate the process end-to-end on OCI. An OCI Functi
 
 This solution costs very little to run. OCI Functions and Resource Scheduler stay within the Always Free tier for a once-daily sync; the only ongoing charge is OCI Vault, which bills a small amount per active key version per month. Delete the resources when you finish if you do not plan to keep it running.
 
-Estimated Workshop Time: 90 minutes
+Estimated Workshop Time: 95 minutes
 
 ### Objectives
 
