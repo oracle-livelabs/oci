@@ -48,7 +48,7 @@ In this lab, you will:
     </copy>
     ```
 
-   The native executable starts instantaneously.
+    The native executable starts instantaneously.
 
 ## Task 2: Send an HTTP POST request
 
@@ -70,7 +70,7 @@ In this lab, you will:
 
     You can select a different value such as "Past 15 minutes" or "Past hour" in the **Filter by time** drop down list to refresh the logs table view.
 
-    ![Application Logs](./images/application-logs-native.jpg)
+    ![Application Logs](./images/application-logs-native.png)
 
 Congratulations! You've successfully completed this lab. Your Java application native executable can successfully send logs to OCI Logging.
 

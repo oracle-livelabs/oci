@@ -26,13 +26,13 @@ This lab assumes you have:
 - Have Python installed on your computer or be able to install it
 - Be comfortable with running terminal/command-line commands to copy, rename, edit text files, create folders etc.
 - Be able to download the zip archive for the sample application, unzip it and run it as a Python script
-- Be able to install Python dependencies with `pip`
+- Be able to install Python dependencies with `python -m pip`
 
-> **Note:** If your computer already has Python installed and `python3 --version` on Mac or `py -3 --version` on Windows shows a Python version, move to Task 2.
+> **Note:** If your computer already has Python 3.10 and above installed and `python3 --version` on Mac or `py -3 --version` on Windows shows a valid Python version, move to Task 2.
 
 ## Task 1: Install Python
 
-1. Download Python from [python.org/downloads](https://www.python.org/downloads/).
+1. Download Python from [python.org/downloads](https://www.python.org/downloads/). Please make sure you choose version 3.10 or newer.
 
 1. Run the installer.
 
@@ -61,6 +61,8 @@ This lab assumes you have:
 ## Task 2: Extract the sample application
 
 1. Download [sample-app.zip](files/sample-app.zip).
+
+    > **Note for Windows:** Extract the app near a short path, such as `C:\labs\sample-app`, before you create the virtual environment or install dependencies. Deep folder paths can cause Windows path-length failures in generated OCI SDK files. If your organization allows it, enabling Windows long paths also avoids this issue.
 
 1. Open a terminal window.
 
@@ -157,6 +159,8 @@ This lab assumes you have:
 1. Click **Download private key** and save the private key file.
 
     ![Generate API key pair](./images/generate-api-key-pair.png)
+
+    > **Note:** Treat the private key and OCI config as credentials. Do not commit them to source control, paste them into chat or email, or share them with other attendees.
 
 1. Click **Add**.
 
@@ -349,16 +353,16 @@ This lab assumes you have:
     </copy>
     ```
 
-3. Open your sandbox resource list and the notes where you recorded the Enterprise AI OCIDs created in the previous labs.
+3. Open your sandbox values worksheet from the Unstructured RAG lab.
 
 4. Open `.env` in your favorite editor. You can also use `nano` for Mac or `notepad` for Windows.
 
-5. Replace the blank OCID values in `.env` with the values from your sandbox resource list and your workshop notes.
+5. Replace the blank values in `.env` with the values from your sandbox resource list and your workshop notes.
 
     ```text
     OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID=<Compartment OCID from the sandbox resources list>
     OCI_GENAI_PROJECT_OCID=<Project OCID from your notes>
-    OCI_GENAI_VECTOR_STORE_IDS=<Unstructured vector store OCID from your notes>
+    OCI_GENAI_VECTOR_STORE_IDS=<Unstructured Vector store ID from your notes>
     OCI_ADB_DATABASE_OCID=<ADB OCID from the sandbox resources list>
     OCI_ADB_MCP_PASSWORD_SECRET_OCID=<Admin Password Secret OCID from the sandbox resources list>
     OCI_GENAI_SEMANTIC_STORE_OCID=<Structured semantic store OCID from your notes>
@@ -477,7 +481,7 @@ This lab assumes you have:
 
     ```bash
     <copy>
-    pip install -r requirements.txt
+    python -m pip install -r requirements.txt
     </copy>
     ```
 
@@ -529,6 +533,8 @@ This lab assumes you have:
 
 ## Task 8: Test service-record retrieval
 
+Your exact answer can vary by the displayed `Customer ID`. Success means the answer is scoped to the current customer and uses the database retrieval path.
+
 1. Ask this question:
 
     ```text
@@ -560,7 +566,7 @@ This lab assumes you have:
 
     ```text
     <copy>
-    Summarize the service receipt in this image.
+    List the services shown on this receipt in five bullets.
     </copy>
     ```
 
