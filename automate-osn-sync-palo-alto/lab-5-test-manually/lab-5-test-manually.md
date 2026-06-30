@@ -45,9 +45,9 @@ The exact number depends on your `OCI_REGIONS` and `OCI_SERVICES` filters. In th
 
 - **Verify on the firewall.** Log into the firewall GUI at `https://<firewall-mgmt-ip>` and navigate to **Objects** → **Addresses**. Filter by `osn-` to see the new entries, each tagged `oci-auto`. Object names follow the format `<prefix>-<oci-region>-<cidr-dashed>`:
 
-	- `<prefix>` is set by `ADDR_PREFIX` (`osn`)
-	- `<oci-region>` comes from the Oracle JSON
-	- the CIDR has its dots and slash replaced with dashes, since PAN-OS object names cannot contain `.` or `/`
+    - `<prefix>` is set by `ADDR_PREFIX` (`osn`)
+    - `<oci-region>` comes from the Oracle JSON
+    - the CIDR has its dots and slash replaced with dashes, since PAN-OS object names cannot contain `.` or `/`
 
 For example, `92.5.248.0/22` in `eu-frankfurt-1` becomes `osn-eu-frankfurt-1-92-5-248-0-22`.
 
