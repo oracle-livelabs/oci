@@ -1,0 +1,135 @@
+#!/bin/bash
+
+# Copyright (c) 2024, 2026, Oracle and/or its affiliates. All rights reserved.
+# The Universal Permissive License (UPL), Version 1.0 as shown at https://oss.oracle.com/licenses/upl/
+
+set -euo pipefail
+
+region="${region}"
+jaeger_image="${jaeger_image}"
+hotrod_image="${hotrod_image}"
+enable_hotrod="${enable_hotrod}"
+generate_traces="${generate_traces}"
+trace_burst_count="${trace_burst_count}"
+trace_burst_delay="${trace_burst_delay}"
+otlp_grpc_port="${otlp_grpc_port}"
+otlp_http_port="${otlp_http_port}"
+jaeger_ui_port="${jaeger_ui_port}"
+hotrod_port="${hotrod_port}"
+zipkin_port="${zipkin_port}"
+sampling_port="${sampling_port}"
+
+echo "Using OCI region: $${region}"
+echo "Using Jaeger image: $${jaeger_image}"
+
+until curl -s "https://yum.$${region}.oci.oraclecloud.com" >/dev/null; do
+  echo "Waiting for network..."
+  sleep 5
+done
+
+dnf -y install dnf-plugins-core curl jq
+dnf -y remove podman-docker || true
+dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+dnf -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+systemctl enable --now docker
+usermod -aG docker opc
+
+mkdir -p /opt/jaeger
+
+cat >/opt/jaeger/docker-compose.yml <<EOF
+services:
+  jaeger:
+    image: $${jaeger_image}
+    container_name: jaeger
+    restart: unless-stopped
+    ports:
+      - "$${jaeger_ui_port}:16686"
+      - "$${otlp_grpc_port}:4317"
+      - "$${otlp_http_port}:4318"
+      - "$${sampling_port}:5778"
+      - "$${zipkin_port}:9411"
+EOF
+
+if [ "$${enable_hotrod}" = "true" ]; then
+  cat >>/opt/jaeger/docker-compose.yml <<EOF
+
+  hotrod:
+    image: $${hotrod_image}
+    container_name: jaeger-hotrod
+    restart: unless-stopped
+    command:
+      - all
+    environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
+    ports:
+      - "$${hotrod_port}:8080"
+    depends_on:
+      - jaeger
+EOF
+fi
+
+cat >/etc/systemd/system/jaeger.service <<'EOF'
+[Unit]
+Description=CNCF Jaeger all-in-one stack
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/opt/jaeger
+ExecStart=/usr/bin/docker compose up -d
+ExecStop=/usr/bin/docker compose down
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+systemctl enable --now jaeger.service
+
+for i in $(seq 1 40); do
+  if curl -fsS "http://127.0.0.1:$${jaeger_ui_port}/" >/dev/null; then
+    break
+  fi
+  echo "Waiting for Jaeger UI..."
+  sleep 5
+done
+
+cat >/usr/local/bin/jaeger-status <<'EOF'
+#!/bin/bash
+set -euo pipefail
+docker ps --filter name=jaeger
+echo
+curl -fsS http://127.0.0.1:${jaeger_ui_port}/ >/dev/null && echo "Jaeger UI is healthy"
+EOF
+chmod +x /usr/local/bin/jaeger-status
+
+cat >/usr/local/bin/jaeger-generate-traces <<'EOF'
+#!/bin/bash
+set -euo pipefail
+
+count="$${1:-${trace_burst_count}}"
+delay="$${2:-${trace_burst_delay}}"
+
+if ! docker ps --format '{{.Names}}' | grep -qx jaeger-hotrod; then
+  echo "HotROD is not running. Set enable_hotrod=true and reapply Terraform."
+  exit 1
+fi
+
+for i in $(seq 1 "$${count}"); do
+  curl -fsS "http://127.0.0.1:${hotrod_port}/dispatch?customer=123" >/dev/null || true
+  sleep "$${delay}"
+done
+
+echo "Generated $${count} HotROD requests. Open Jaeger UI and search for service: frontend."
+EOF
+chmod +x /usr/local/bin/jaeger-generate-traces
+
+if [ "$${enable_hotrod}" = "true" ] && [ "$${generate_traces}" = "true" ]; then
+  /usr/local/bin/jaeger-generate-traces "$${trace_burst_count}" "$${trace_burst_delay}" || true
+fi
+
+chown -R opc:opc /opt/jaeger
+echo "Jaeger deployment complete."
