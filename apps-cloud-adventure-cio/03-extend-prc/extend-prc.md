@@ -12,8 +12,6 @@ In this lab, you will use Visual Builder to create additional screens
 
 Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
 ### Begin Exercise
 
 1. In this lab, you will Use Visual Builder to build a new Supplier Screen.
@@ -254,15 +252,13 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![preview](../03-extend-prc/images/extend-prc-image033.jpg)
 
-34. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+34. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab and the Visual Builder tab.
 
 ### Summary
 
 This Extension adventure introduced you to a few of the capabilities that customers can leverage to extend Oracle Fusion Cloud applications. You learned how to extend the applications using Oracle Visual Builder Studio to create new screens that can leverage both Oracle and non-Oracle data. These features allow you to fine tune your Oracle Fusion Cloud Applications for peak performance, business processes tailored to your requirements, and fast, efficient usage.
-
-**You have successfully completed the Activity!**
 
 ### Learn More
 
@@ -273,4 +269,4 @@ This Extension adventure introduced you to a few of the capabilities that custom
 
 - **Author** - Charlie Moff, Distinguished Cloud Technologist; Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist
 - **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-- **Last Updated By/Date** - Charlie Moff; Sajid Saleem, January 2025
+- **Last Updated By/Date** - Sajid Saleem, July 2026

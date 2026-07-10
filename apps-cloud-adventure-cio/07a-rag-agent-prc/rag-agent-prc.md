@@ -137,7 +137,7 @@ Your responsibilities include:
 
 Procurement Policies:
 - Clearly explain the company procurement requirements outlined in company's procurement policies.
-- Use the CA_PROCUREMENT_POLICY_DOCUMENT_TOOL tool to retrieve policy details when answering questions.
+- Use the AIA_PROCUREMENT_POLICY_DOCUMENT_TOOL tool to retrieve policy details when answering questions.
 
 IMPORTANT GUIDELINES
   - Provide concise, factual answers based strictly on the data retrieved.
@@ -178,6 +178,10 @@ IMPORTANT GUIDELINES
 
     ![Agent Created](../07a-rag-agent-prc/images/rag-agent-prc-image015.jpg) <br>
 
+16. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+
+    > **You've completed this Adventure**. Please close this tab.
+
 ### Summary
 
 As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they do not have access to.
@@ -186,8 +190,6 @@ AI Agent Studio empowers enterprises to configure and build AI agents that exten
 AI Agent Studio is a design-time environment that provides a set of tools to create, customize, validate, and deploy GenAI features and AI agents to meet the specific needs of the organization. It is the same unified environment Oracle uses to internally build agents, made available now to customers and partners to customize and extend agents from Oracle-provided pre-configured templates or to create new agents and multi-agent workflows.
 
 Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
-
-**You have successfully completed the Activity!**
 
 ### Learn More
 
@@ -200,4 +202,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, February 2026
+* **Last Updated By/Date** - Sajid Saleem, July 2026

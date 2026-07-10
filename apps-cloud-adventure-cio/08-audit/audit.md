@@ -131,17 +131,15 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![API Examples](../08-audit/images/image022.png)
 
-10. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+10. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
 As you have seen, the Oracle SaaS applications may be configured to capture who updates select fields, when the update was performed, the previous value and the updated value. Having this level of auditing serves a critical role in providing governance and controls over your enterprise applications. As an administrator, you will implement the controls your company chooses to enforce. The combination of fine grained applications security and application data audit provide the end to end controls you will need.
 
 This Cloud Adventure also featured the importance of having open REST interfaces for accessing and sharing data with external systems. In the case of audit data, you may want to send this data to a SIEM or data warehouse for analysis.
-
-**You have successfully completed the Activity!**
 
 ### Learn More
 
@@ -152,4 +150,4 @@ This Cloud Adventure also featured the importance of having open REST interfaces
 ## Acknowledgements
 * **Author** - Jamil Orfali, Senior Cloud Technologist; Kris Holmgren, Senior Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, July 2026

@@ -14,8 +14,6 @@ In this lab, you will use Redwood to quickly and efficiently improve the user ex
 
 Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
 ### **Begin Exercise**
 
 1. You will use Redwood, Oracle’s next-generation design system, and Visual Builder to quickly and efficiently update Change Salary Page for Non-HR managers.
@@ -236,10 +234,6 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      > **You've completed this Adventure**.  Please close this tab and the Visual Builder tab.
 
-32. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-
-    [![AI Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
-
 ### Summary
 
 In this adventure you experience the power of application configuration, including the ability to define rules, control screen content, and define validation rules.  This adventure leveraged Visual Builder, the same tool that Oracle uses to build the application. Visual Builder allows you to configure the application and also create new application screens that can leverage both Oracle and non-Oracle data. These features allow you to fine tune your Oracle Fusion Cloud Applications for peak performance, business processes tailored to you requirements, and fast, efficient usage.
@@ -250,10 +244,10 @@ And remember, application configurations are automatically maintained during the
 
 ### Learn More
 * [Getting Started with Redwood](https://redwood.oracle.com/?pageId=COREAF423D6E53F34D12BCD7BF41B42BDAC3&shell=getting-started)
-* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/26a/oaext/overview-of-using-visual-builder-studio.html#s20072861)
+* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/26c/oaext/overview-of-using-visual-builder-studio.html#s20072861)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist; Casey Doody, Cloud Technologist; Sajid Saleem, Master Principal Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, January 2026
+* **Last Updated By/Date** - Sajid Saleem, July 2026

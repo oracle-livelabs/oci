@@ -13,8 +13,6 @@
 
   Estimated Time: 15 minutes
 
-  Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
 ### **Begin Exercise**
 
 1. During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
@@ -219,9 +217,9 @@
 
  ![Compare Roles 6](../01-security-erp/images/image030.png)
 
-32. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+32. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![AI Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
 <!--  ## Path 2: Request Access with Risk Management -->
 
@@ -229,17 +227,14 @@
 
 Security Console is used to quickly manage user access to the entire Fusion applications suite.
 
-**You have successfully completed the Activity!**
-
-
 ### Learn More
 
-* [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/25d/secure.html)
-* [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/25d/secure.html)
+* [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/26c/secure.html)
+* [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/26c/secure.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
 
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, July 2026

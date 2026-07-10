@@ -138,9 +138,9 @@ As you follow along, do not forget to think about the Adventure Check Point ques
    ![Finish](../04-extend-oicai-hcm/images/hcmimage014.jpg)
    <br>
 
-15. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+15. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
 
 ## Summary
@@ -164,4 +164,4 @@ So, check your with you team, double-check your racing harness and get ready for
 
 - **Author** - Charlie Moff, Distinguished Cloud Technologist; Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist
 - **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-- **Last Updated By/Date** - Sajid Saleem, November 2025
+- **Last Updated By/Date** - Sajid Saleem, July 2026

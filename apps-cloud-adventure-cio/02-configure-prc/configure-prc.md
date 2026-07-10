@@ -14,8 +14,6 @@ In this lab, you will use Redwood to quickly and efficiently improve the user ex
 
 Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
 ### Begin Exercise
 
 1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update the Suppliers (New) listing page providing more visibility to Procurement Managers. Suppliers (New) is a dynamic listing page that allows you to create role-based layouts based on configurable criteria.
@@ -175,9 +173,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 ![Supplier List Screen](../02-configure-prc/images/configure-prc-image023.jpg)
 
-18. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+24. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Checkpoint](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab and the Visual Builder tab.
 
 ### Summary
 
@@ -188,10 +186,10 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 ### Learn More
 
 * [Overview of Redwood Application Extension](https://docs.oracle.com/en/cloud/saas/human-resources/fauvb/overview-of-redwood-application-extensions.html)
-* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/26a/oaext/overview-of-using-visual-builder-studio.html)
+* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/26c/oaext/overview-of-using-visual-builder-studio.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist; Casey Doody, Cloud Technologist; Sajid Saleem, Master Principal Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, January 2026
+* **Last Updated By/Date** - Sajid Saleem, July 2026

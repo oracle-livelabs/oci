@@ -16,8 +16,6 @@ In this activity, you will Create analytics across different lines of business t
 
 Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
 ### Begin Exercise
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insights.
@@ -270,21 +268,19 @@ Let's explore and find out why overtime and contract labor have increased.
 
     ![Analytics view](../09-analytics/images/scm-009.png)
 
-15. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+15. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
 You discovered how effortlessly Fusion Analytics enables the creation of content and analysis of data. By integrating diverse data sources, you were able to delve deeper from summary information to detailed analysis, uncovering root causes. You then shared your discoveries with a broader audience, making the insights accessible and impactful.
 
-**You have successfully completed the Activity!**
-
 ### Learn More
-* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/25r3/index.html)
+* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/26r2/index.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 * **Author** - Sohel Jeelani, Distinguished Analytics Solution Engineer
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, July 2026

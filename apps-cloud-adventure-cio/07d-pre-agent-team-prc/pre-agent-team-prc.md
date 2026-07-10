@@ -121,14 +121,11 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
 17. You’re now in Self-Service Procurement and can see the new Requisition that the Agent created.
 
-    > Congratulations on completing this Adventure Lab!
-
     ![agent dialogue 3](../07d-pre-agent-team-prc/images/pre-agent-team-prc-image017.jpg) <br>
 
+18. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-18. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
 
 ### Summary
@@ -141,9 +138,6 @@ AI Agent Studio is a design-time environment that provides a set of tools to cre
 
 Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
 
-**You have successfully completed the Activity!**
-
-
 ### Learn More
 
 * [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
@@ -155,4 +149,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, May 2026
+* **Last Updated By/Date** - Sajid Saleem, July 2026

@@ -155,10 +155,9 @@ Estimated Time: 15 minutes
 
   ![Access Request Approvals](../01-risk-scm/images/riskimage026.jpg)
 
+18.  Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-18. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-
-    [![AI Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+     > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
@@ -166,12 +165,12 @@ Oracle Risk Management and Compliance documents your policies for identifying an
 
 ### Learn More
 
-* [Risk Management and Compliance](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/25d/index.html)
-* [Risk Management and Compliance - Secure](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/25d/secure.html)
+* [Risk Management and Compliance](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/26c/index.html)
+* [Risk Management and Compliance - Secure](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/26c/secure.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
 
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist, Advanced Technology Services
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, December 2025
+* **Last Updated By/Date** - Sajid Saleem, July 2026

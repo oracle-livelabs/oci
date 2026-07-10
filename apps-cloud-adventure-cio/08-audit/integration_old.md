@@ -12,21 +12,16 @@ With your adventure hat on and a curious mind, prepare for an exhilarating explo
 
 As you follow along, do not forget to ask questions if you get stuck and answer the Adventure Check Point questions! 
 
-
-Estimated Time: 15 minutes
-
-
 ### **Objectives**
 
 In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
 
 ![Integration Objectives](images/Integration_objs2.png)
 
+Estimated Time: 15 minutes
+
 
 ## **Task 1: Use REST API to pull Fusion SaaS Application audit data for use in any external system**
-
-
-
 
 1. Let’s navigate to the Suppliers work area to modify a supplier’s address information
 
@@ -280,46 +275,26 @@ In this activity you will learn the power and ease of integrating Fusion SaaS ap
     **You can leverage vast, out of the box functionality to manage integrations without vendor assistance. Oracle Fusion Cloud Applications integrate and interoperate with other cloud and on-premises applications using built-in File-based Loader, Spreadsheet Loader, SOAP- and REST-based Web Services, and Data Extract features.**
 	
 
-14. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-    
-    [![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE) 
+14. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+
+    > **You've completed this Adventure**. Please close this tab.
 
 
 ## Summary
 
-Throughout the Cloud Adventure for the office of the CIO, Integration activity guide, students are immersed in an interactive and engaging 
-journey into the world of Fusion Cloud's REST API integration features. The primary goal of this instructional adventure was to empower 
-students with the skills and knowledge necessary to effectively audit both user sign on activity as well as supplier address changes in Fusion 
-Cloud Supply Chain Management (SCM). Throughout this exploration, they uncovered the potential of Fusion Cloud's integration tools, 
-enhancing their understanding of supply chain security management integration and auditing processes.
+Throughout the Cloud Adventure for the office of the CIO, Integration activity guide, students are immersed in an interactive and engaging journey into the world of Fusion Cloud's REST API integration features. The primary goal of this instructional adventure was to empower  students with the skills and knowledge necessary to effectively audit both user sign on activity as well as supplier address changes in Fusion Cloud Supply Chain Management (SCM). Throughout this exploration, they uncovered the potential of Fusion Cloud's integration tools,  enhancing their understanding of supply chain security management integration and auditing processes.
 
-Within the activity, students embarked on a hands-on exploration, beginning with a login to the Fusion Cloud SCM system. They navigated with 
-purpose to the Suppliers work area, where they were tasked with modifying a supplier's address information. This interactive modification set 
-the stage for the upcoming auditing activities. Cloud adventurers then delved into the Integration tab, a powerhouse of auditing capabilities 
-within the Fusion Cloud platform. Here, they uncovered the 'Audit Report REST Endpoints,' a revelation of the potential to extract valuable 
-auditable data. With growing curiosity, they scrutinized example request payloads and response bodies, gaining insights into the structure and 
-content of auditing information.
+Within the activity, students embarked on a hands-on exploration, beginning with a login to the Fusion Cloud SCM system. They navigated with purpose to the Suppliers work area, where they were tasked with modifying a supplier's address information. This interactive modification set the stage for the upcoming auditing activities. Cloud adventurers then delved into the Integration tab, a powerhouse of auditing capabilities within the Fusion Cloud platform. Here, they uncovered the 'Audit Report REST Endpoints,' a revelation of the potential to extract valuable auditable data. With growing curiosity, they scrutinized example request payloads and response bodies, gaining insights into the structure and content of auditing information.
 
-The journey of Fusion Cloud integration exploration continued as students applied their newfound knowledge. They returned to the familiar 
-grounds of the Fusion Cloud and audited the supplier address change they had made earlier. This practical application of REST API integration 
-theory added a layer of depth to their practical understanding. As the adventure continued, the students ventured into the captivating world of 
-Oracle APEX application integration, which simulated a 3rd party auditing application for the purposes of this cloud adventure. They skillfully 
-authenticated their integration APEX application, utilizing the provided cloud adventure environment instance and password.
+The journey of Fusion Cloud integration exploration continued as students applied their newfound knowledge. They returned to the familiar grounds of the Fusion Cloud and audited the supplier address change they had made earlier. This practical application of REST API integration theory added a layer of depth to their practical understanding. As the adventure continued, the students ventured into the captivating world of Oracle APEX application integration, which simulated a 3rd party auditing application for the purposes of this cloud adventure. They skillfully authenticated their integration APEX application, utilizing the provided cloud adventure environment instance and password.
 
-With the connection established, adventurers delved deeper, exploring the ‘Sign-on’ Audit area, where they uncovered a treasure trove of user 
-access details. They reviewed the corresponding REST API, gaining insights into the security and transparency of user access history. The journey 
-then led them to the 'Audit History' section, a comprehensive record of supplier address changes. Here, they extracted historical data, 
-witnessing firsthand the power of Fusion Cloud to meticulously track and record business object data modifications. By scrutinizing the demo 
-flow and API details, students developed a profound understanding of the platform's capabilities and their newfound auditing skills.
+With the connection established, adventurers delved deeper, exploring the ‘Sign-on’ Audit area, where they uncovered a treasure trove of user access details. They reviewed the corresponding REST API, gaining insights into the security and transparency of user access history. The journey then led them to the 'Audit History' section, a comprehensive record of supplier address changes. Here, they extracted historical data, witnessing firsthand the power of Fusion Cloud to meticulously track and record business object data modifications. By scrutinizing the demo flow and API details, students developed a profound understanding of the platform's capabilities and their newfound auditing skills.
 
-Throughout this immersive adventure, students not only acquired technical proficiency but also cultivated a deep appreciation for the potential 
-of Fusion Cloud's REST API integration. They learned to navigate the intricate web of supply chain management integration, including how to 
-audit user sign in activity, supplier address changes, and how to extract critical auditable information. With each step, they transformed from 
-curious cloud adventurers to seasoned Fusion Cloud auditors, equipped with the knowledge and confidence to continue their Fusion Cloud
+Throughout this immersive adventure, students not only acquired technical proficiency but also cultivated a deep appreciation for the potential of Fusion Cloud's REST API integration. They learned to navigate the intricate web of supply chain management integration, including how to audit user sign in activity, supplier address changes, and how to extract critical auditable information. With each step, they transformed from curious cloud adventurers to seasoned Fusion Cloud auditors, equipped with the knowledge and confidence to continue their Fusion Cloud
 
 **You have successfully completed the Activity!**
 
 ## Acknowledgements
 * **Author** - Jamil Orfali, Senior Sales Consultant, Advanced Technology Services, Kris Holmgren, Senior Sales Consultant, Advanced Technology Services
-* **Contributors** -  
-* **Last Updated By/Date** - Jamil Orfali, September 2024
+* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
+* **Last Updated By/Date** - Jamil Orfali; Sajid Saleem, July 2026

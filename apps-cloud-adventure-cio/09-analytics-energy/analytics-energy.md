@@ -17,6 +17,8 @@ In this activity, you will use Fusion AI Data Platform to
 * Leverage embedded AI models to quickly implement, validate and operationalize AI.
 * Review findings and visualize results.
 
+Estimated Time: 10-15 minutes
+
 ### Begin Exercise
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insights.
@@ -210,15 +212,13 @@ In this activity, you will use Fusion AI Data Platform to
 
     ![Workbook Design Mode View 7](../09-analytics-energy/images/analytics-energy-image025.png)
 
-26. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+26. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
 You discovered how effortlessly Fusion AI Data Platform enables content creation and data analysis. With the help of AI, you moved from high-level performance summaries to detailed energy approval/rejected insights, uncovering trends and opportunities for your managers.
-
-**You have successfully completed the Activity!**
 
 ### Learn More
 * [Get Started with  Fusion AI Data Platform](https://www.oracle.com/fusion-ai-data-platform/)
@@ -227,4 +227,4 @@ You discovered how effortlessly Fusion AI Data Platform enables content creation
 ## Acknowledgements
 * **Author** - Xavier Ramirez, Senior Analytics Solution Engineer
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Casey Doody, Sajid Saleem, February 2026
+* **Last Updated By/Date** - Sajid Saleem, July 2026

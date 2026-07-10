@@ -178,10 +178,9 @@ Estimated Time: 15 minutes
 
     ![New Workbook](../09-analytics-ai-sentiment/images/aiimage032.jpg)
 
+24. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-23. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
-
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
@@ -191,7 +190,7 @@ You discovered how effortlessly Fusion AI Data Platform enables the creation of 
 
 ### Learn More
 
-* [Get Started with Oracle Fusion AI Data Platform](https://docs.oracle.com/en/cloud/saas/analytics/25r4/index.html)
+* [Get Started with Oracle Fusion AI Data Platform](https://docs.oracle.com/en/cloud/saas/analytics/26r2/index.html)
 * [Fusion AI Data Platform](https://www.oracle.com/fusion-ai-data-platform/)
 * [Oracle Documentation](https://docs.oracle.com)
 
@@ -199,4 +198,4 @@ You discovered how effortlessly Fusion AI Data Platform enables the creation of 
 
 * **Author** - Xavier Ramirez, Senior Analytics Solution Engineer, Advanced Technology Services, Nate Weinsaft, Master Principal Solution Engineer, Advanced Technology Services, Sohel Jeelani, Distinguished Analytics Solution Engineer, Advanced Technology Services
 * **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem; April 2026
+* **Last Updated By/Date** - Sajid Saleem; July 2026
