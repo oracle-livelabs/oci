@@ -4,7 +4,7 @@
 
 ### **Introduction**
 
-**Monitoring**: Monitor and gain insights into how your AI agents are performing, and also evaluate the agents for accuracy. You can also track the interactions with your agents, understand real-world usage patterns, identify common errors, and measure overall performance.
+**Monitoring**: Monitor and gain insights into how your AI agents are performing, and evaluate the agents for accuracy, performance, latency and usage. You can also track the interactions with your agents, understand real-world usage patterns, identify common errors, and measure overall performance.
 <br><br>
 **Evaluation**: Evaluate agents before you deploy them, to ensure that they're ready for production. Test your agents for response correctness, response time, and token usage to meet your quality standards. You can also check the quality of answers generated through the document tool to assess how effectively agents utilize the retrieved context from the retrieval-augmented generation (RAG) metrics. After making any changes to your agent, or after a model update, rerun evaluations to confirm that your agent continues to perform as expected. This proactive approach helps you maintain high-quality experiences for your users.
 
