@@ -1,0 +1,41 @@
+{
+    "workshoptitle": "eStargz Lazy Pulling on OCI VM",
+    "help": "livelabs-help-aiservices_us@oracle.com",
+    "tutorials": [
+      {
+        "title": "Introduction",
+        "description": "Overview of eStargz lazy startup with containerd and nerdctl on an OCI Linux VM.",
+        "filename": "../../introduction/introduction.md"
+      },
+      {
+        "title": "Get Started",
+        "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always second.",
+        "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
+      },
+      {
+        "title": "Lab 1: Deploy infrastructure",
+        "description": "Create the Oracle Linux VM and bootstrap it for containerd and eStargz.",
+        "filename": "../../provision/provision.md"
+      },
+      {
+        "title": "Lab 2: Prepare benchmark images",
+        "description": "Push a regular image to OCIR, create an eStargz version, and record both benchmark image references.",
+        "filename": "../../prepare-images/prepare-images.md"
+      },
+      {
+        "title": "Lab 3: Run the benchmark",
+        "description": "Execute regular vs eStargz startup tests and interpret the results.",
+        "filename": "../../use-cases/use-cases.md"
+      },
+      {
+        "title": "Lab 4: Cleanup",
+        "description": "Destroy the demo resources and clean up the environment.",
+        "filename": "../../cleanup/cleanup.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to common problems and directions for receiving live help.",
+        "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+      }
+    ]
+  }

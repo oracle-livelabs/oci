@@ -1,0 +1,42 @@
+{
+    "workshoptitle": "The Economics of AI: Why Model Routing Matters",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Overview and Highlights",
+            "filename": "../../1-overview-and-highlights/overview-and-highlights.md"
+        },
+        {
+            "title": "Get Started",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+        },
+        {
+            "title": "Unstructured RAG",
+            "filename": "../../5-unstructured-rag/unstructured-rag-sandbox.md"
+        },
+        {
+            "title": "Semantic Store",
+            "filename": "../../6-semantic-store/semantic-store-sandbox.md"
+        },
+        {
+            "title": "Sample Application",
+            "filename": "../../7-sample-application/sample-application-sandbox.md"
+        },
+        {
+            "title": "Model Optimization",
+            "filename": "../../8-model-optimization/model-optimization.md"
+        },
+        {
+            "title": "Security Guardrails",
+            "filename": "../../9-security-guardrails/security-guardrails.md"
+        },
+        {
+            "title": "Quiz",
+            "filename": "../../10-quiz/quiz.md"
+        },
+        {
+            "title": "Need Help?",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

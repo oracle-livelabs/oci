@@ -1,0 +1,6 @@
+{
+  "source_repo": "https://github.com/dariomanda/oci_open-webui-livelab",
+  "default_region": "eu-frankfurt-1",
+  "default_shape": "VM.Standard.E5.Flex",
+  "default_ocpus": "2"
+}

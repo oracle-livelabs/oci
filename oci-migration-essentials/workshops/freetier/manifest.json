@@ -8,7 +8,7 @@
         },
         {
             "title": "Get Started",
-            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
             "title":"Lab 1: Setup OCI CLI - Command Line Interface",
@@ -18,7 +18,7 @@
         {
             "title": "Lab 2: Getting Familiar with OCI Object Storage Service, Optional Lab",
             "description": "Learning to work with the Object Storage Service",
-             "filename": "https:///oracle-livelabs.github.io/oci-core/object-storage/object-storage/object-storage.md"
+             "filename": "https:///livelabs.oracle.com/cdn/oci-core/object-storage/object-storage/object-storage.md"
         },
         {
             "title": "Lab 3: Rclone",
@@ -39,7 +39,7 @@
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
         }
     ]
 }

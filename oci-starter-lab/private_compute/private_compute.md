@@ -60,29 +60,28 @@ Please read the chapter: Introduction and Get Started.
     ![Editor File Open](../public_compute/images/starter-compute-dir.png)
 2. The main files are:
 
-   |             |            |           | Description |
-   | ----------- | ---------- | --------- | ---|
-   | Commands    |            |           |  |
-   |             | starter.sh |           | Build or destroy a project. Show a menu with commands if not argument is given | 
-   |             | env.sh     |           | Settings of your project | 
-   | Directories |            |           | Commands used by starter.sh | 
-   |             | bin/       |           | Commands used by starter.sh | 
-   |             | src/       |           | Sources files | 
-   |             |            | app       | Backend Application (Command: build_app.sh) | 
-   |             |            | ui        | User Interface (Command: build_ui.sh) | 
-   |             |            | db        | Database initialisation files (SQL, ...) | 
-   |             |            | terraform | Terraform scripts  | 
-   |             |            | compute   | Deployment to Compute | 
-   |             | target/    |           | Output directory  | 
-
-3. Edit the env.sh file:
-    - Choose the env.sh file.
+   |             |                  |           |           | Description |
+   | ----------- | ---------------- | --------- | --------- | ---|
+   | Commands    |                  |           |           |  |
+   |             | starter.sh       |           |           | Build or destroy a project. Show a menu with commands if not argument is given | 
+   |             | terraform.tfvars |           |           | Settings of your project | 
+   | Directories |                  |           |           | Commands used by starter.sh | 
+   |             | bin/             |           |           | Commands used by starter.sh | 
+   |             | src/             |           |           | Sources files | 
+   |             |                  | app       |           | Applications | 
+   |             |                  |           | rest      | App - Rest | 
+   |             |                  |           | ui        | App - UI - User Interface | 
+   |             |                  |           | db        | App - Database (initialisation files, SQL, ...) | 
+   |             |                  | terraform |           | Terraform scripts  | 
+   |             | target/          |           |           | Output directory  |  
+  
+3. Edit the terraform.tfvars file:
     - Look for \_\_TO_FILL\_\_ in the file
     - You may leave it like this.
         - If not filled, the "db password" will be randomly generated
     - Ideally, you can also use an existing compartment if you have one. 
-        - If not, the script will create a "oci-starter" compartment
-    ![Editor env.sh](../public_compute/images/starter-compute-env.png)
+        - If not, the script will ask to reuse one or to create an "oci-starter" compartment
+    ![Editor terraform.tfvars](../public_compute/images/starter-compute-env.png)
 
 ## Task 3: Starter.sh
 

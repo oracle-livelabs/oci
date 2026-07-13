@@ -1,0 +1,9 @@
+backups/
+data/
+sample-app/
+.DS_Store
+.ds_store
+screen-shots/
+terraform/
+permissions/
+VALIDATION-RESULT.md

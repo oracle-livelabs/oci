@@ -23,39 +23,39 @@ In this lab, you will:
 
 1. In the same terminal in VS Code, check the version of the GraalVM native-image utility:
 
-	``` bash
-	<copy>
-	native-image --version
-	</copy>
-	```
+    ``` bash
+    <copy>
+    native-image --version
+    </copy>
+    ```
 
 2. To generate a native executable and package it in a container image using Maven, run the following command:
 
-	``` bash
-	<copy>
-	./mvnw clean package -Dpackaging=docker-native -Pgraalvm
-	</copy>
-	```
+    ``` bash
+    <copy>
+    ./mvnw clean package -Dpackaging=docker-native -Pgraalvm
+    </copy>
+    ```
 
-   It can take approximately 6-7 minutes to generate the native executable.
+    It can take approximately 5-6 minutes to generate the native executable.
 
 ## Task 2: Push the container image to the OCIR Repository
 
 1. From the same terminal in VS Code, run `docker login` to log in to OCIR.
 
-	``` bash
-	<copy>
-	docker login $OCI_REGION.ocir.io -u $OCIR_USERNAME -p $AUTH_TOKEN
-	</copy>
-	```
+    ``` bash
+    <copy>
+    docker login $OCI_REGION.ocir.io -u $OCIR_USERNAME -p $AUTH_TOKEN
+    </copy>
+    ```
 
 2. Push the container image to the OCIR Repository.
 
-	```bash
-	<copy>
-	docker push $OCI_OS_OKE_IMAGE
-	</copy>
-	```
+    ```bash
+    <copy>
+    docker push $OCI_OS_OKE_IMAGE
+    </copy>
+    ```
 
 Congratulations! You've successfully completed this lab. Your container image has been pushed to the OCIR Repository.
 

@@ -1,8 +1,8 @@
-# Provision an OCI Autonomous Database
+# Provision an OCI Autonomous AI Database
 
 ## Introduction
 
-This lab describes the steps to create a new OCI Autonomous Database instance.
+This lab describes the steps to create a new OCI Autonomous AI Database instance.
 
 Estimated Lab Time: 10 minutes
 
@@ -10,48 +10,48 @@ Estimated Lab Time: 10 minutes
 
 In this lab, you will:
 
-* Create an Autonomous Database instance
+* Create an Autonomous AI Database instance
 
-## Task 1: Create an Autonomous Database instance
+## Task 1: Create an Autonomous AI Database instance
 
-1. From the Oracle Cloud Console, open the navigation menu, click **Oracle Database** and then click **Autonomous Database**.
+1. From the Oracle Cloud Console, open the navigation menu, click **Oracle Database** and then click **Autonomous AI Database**.
 
-   ![Oracle Database menu](https://oracle-livelabs.github.io/common/images/console/database-adb.png)
+    ![Oracle Database menu](https://oracle-livelabs.github.io/common/images/console/database-adb.png)
 
-2. Select your workshop compartment from the **Compartment** drop down list. Click **Create Autonomous Database**. <if type="desktop">To find the compartment name, return to the **Login Details** screen, then copy the value of the **Compartment Name**, paste it in the **Compartment** drop down list in the Oracle Cloud Console and select the filtered compartment. 
+2. Select your workshop compartment from the **Compartment** drop down list. Click **Create Autonomous AI Database**. <if type="desktop">To find the compartment name, return to the **Login Details** screen, then copy the value of the **Compartment Name**, paste it in the **Compartment** drop down list in the Oracle Cloud Console and select the filtered compartment. 
 
 </if>
 
-   ![Autonomous Database Landing Page](images/adb-landing-page.jpg#input)
+    ![Autonomous AI Database Landing Page](images/adb-landing-page.jpg)
 
-3. You will see the **Create Autonomous Database Serverless** screen with default values.
+3. You will see the **Create Autonomous AI Database Serverless** screen with default values.
 
-    ![Create ADB Basic Info](images/create-adb-basic-info.png#input)
+    ![Create ADB Basic Info](images/create-adb-basic-info.png)
 
 4. Select the workload type as **Transaction Processing**.
 
-    ![Create ADB Workload Type](images/create-adb-workload-type.jpg#input)
+    ![Create ADB Workload Type](images/create-adb-workload-type.jpg)
 
 
-5. Under the **Configure the database** section, enable the **Developer mode**. In the **Choose database version** dropdown, select 19c.
+5. Under the **Configure the database** section, enable the **Developer mode**. In the **Choose database version** dropdown, select `26ai`.
 
     ![Create ADB Configure DB](images/create-adb-configure-db.png)
 
 6. Under the **Create administrator credentials** section, enter a password of your choice (must be at least 12 characters and contain a number and an uppercase letter).
 
-    ![Create ADB Admin Credentials](images/create-adb-admin-creds.jpg#input)
+    ![Create ADB Admin Credentials](images/create-adb-admin-creds.jpg)
 
 7. Select the network access type as **Secure access from everywhere**.
 
-    ![Create ADB Network Access](images/create-adb-network-access.jpg#input)
+    ![Create ADB Network Access](images/create-adb-network-access.jpg)
 
 8. Leave the contact email blank, and click **Create**.
 
-    ![Create Autonomous Database](images/create-adb-contact-create.jpg#input)
+    ![Create Autonomous AI Database](images/create-adb-contact-create.jpg)
 
-   It takes about 2-3 minutes to provision an OCI Autonomous Database instance. Meanwhile, proceed to the next step.
+   It takes about 2-3 minutes to provision an OCI Autonomous AI Database instance. Meanwhile, proceed to the next step.
 
-Congratulations! In this lab, you created a new OCI Autonomous Database instance in your workshop compartment.
+Congratulations! In this lab, you created a new OCI Autonomous AI Database instance in your workshop compartment.
 
 You may now **proceed to the next lab**.
 
