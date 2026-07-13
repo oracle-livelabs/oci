@@ -9,7 +9,7 @@ AI Agent Studio for Fusion Applications is a comprehensive platform for creating
 ### Objectives
 
 In this activity you will use Oracle Fusion AI Agent Studio to
-* Create and assemble an Agent Team that includes your previously created Procurement Policy Advisor Agent and seeded Purchase Requisition Action Agent.
+* Create and assemble an Agent Team that includes your previously created Procurement Policy Advisor Agent and seeded Purchase Requisition Action Agent
 * Test the Agent Team
 
 Estimated Time: 10-15 minutes

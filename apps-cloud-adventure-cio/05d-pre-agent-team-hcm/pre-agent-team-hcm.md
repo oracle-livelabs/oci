@@ -12,7 +12,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 * Assemble an Agent Team using your previously created Benefits Advisor Agent and seeded FMLA Absence Agent.
 * Test the Agent Team
 
-Estimated Time: 10-15 minutes
+Estimated Time: 10 minutes
 
 ### **Begin Exercise**
 

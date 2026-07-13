@@ -153,9 +153,9 @@ Estimated Time: 15 minutes
 
   ![Access Request Approvals](../01-risk-erp/images/riskimage026.jpg)
 
-18.  Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+18. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-     > **You've completed this Adventure**. Please close this tab.
+  > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
@@ -166,7 +166,6 @@ Oracle Risk Management and Compliance documents your policies for identifying an
 * [Risk Management and Compliance](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/26c/index.html)
 * [Risk Management and Compliance - Secure](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/26c/secure.html)
 * [Oracle Documentation](http://docs.oracle.com)
-
 
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist, Advanced Technology Services

@@ -6,7 +6,7 @@ Oracle AI Adventure in SaaS Platform & Technology is an interactive, hands-on ex
 <br><br>
 Experience the power of the native tools in Oracle SaaS to deliver AI capabilities unique to your enterprise. Participants will move beyond demos to build practical, AI-powered solutions using Oracle SaaS Platform's native AI capabilities. Through day-in-the-life scenarios, explore the power of Oracle AI Agent Studio, tailor AI-powered business processes, create Agentic experiences, use AI to analyze and power data insights.
 <br><br>
-Estimated Adventure Time: 2-3 hours
+Estimated Workshop Time: 2-3 hours
 
 ### **Objectives**
 
@@ -20,7 +20,7 @@ This Activity Guide will lead you along the way through a set of Adventure Labs
 
 (4) **Monitor and Evaluate AI Agents**: Monitor and gain insights into how AI agents are performing, and evaluate the agents for accuracy, performance, latency and usage.<br>
 
-(5) **Analytics with AI**: Learn how Fusion AI Data Platform provides a unified view and meaningful insights into your company’s operations. You will get hands-on experience in answering questions regarding your enterprise health by leveraging pre-built AI insights and creating cross-functional analytics across different lines of business.<br>
+(5) **Analytics with AI**: Learn how Fusion Data Intelligence provides a unified view and meaningful insights into your company’s operations. You will get hands-on experience in answering questions regarding your enterprise health by leveraging pre-built AI insights and creating cross-functional analytics across different lines of business.<br>
 
 ### Tasks
 Let's create your team name for your AI Adventure!

@@ -155,20 +155,18 @@ Estimated Time: 15 minutes
 
   ![Access Request Approvals](../01-risk-scm/images/riskimage026.jpg)
 
-18.  Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+18. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-     > **You've completed this Adventure**. Please close this tab.
+  > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
 Oracle Risk Management and Compliance documents your policies for identifying and resolving risk in your business processes. It continuously monitors user access for separation of duties and sensitive access, automates role certification, and detects policy violations in transactions and in changes to audited configuration and operational data.
 
 ### Learn More
-
 * [Risk Management and Compliance](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/26c/index.html)
 * [Risk Management and Compliance - Secure](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/26c/secure.html)
 * [Oracle Documentation](http://docs.oracle.com)
-
 
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist, Advanced Technology Services

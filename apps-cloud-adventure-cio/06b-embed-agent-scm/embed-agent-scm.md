@@ -19,7 +19,7 @@ Estimated Time: 10-15 minutes
 ### **Begin Exercise**
 
 
-1.  In this activity, you will embed your AI Agent Team in the application for use by end users.
+1. In this activity, you will embed your AI Agent Team in the application for use by end users.
 
     ![AI Embed Objectives](../06b-embed-agent-scm/images/embed-agent-scm-image001.jpg)
 

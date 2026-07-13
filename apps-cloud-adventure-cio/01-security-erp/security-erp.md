@@ -5,13 +5,13 @@
 
 ### **Introduction**
 
-  Welcome to Oracle’s AI Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
+Welcome to Oracle’s AI Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
 
 ### **Objectives**
 
-  During this adventure, you will perform a time sensitive task of granting permissions to a user.
+During this adventure, you will perform a time sensitive task of granting permissions to a user.
 
-  Estimated Time: 15 minutes
+Estimated Time: 15 minutes
 
 ### **Begin Exercise**
 
@@ -64,7 +64,7 @@
 
 7. Always make changes to a copied role to ensure that your custom configurations are preserved on updates.
 
-    > (1) Tasks associated with the role are available from this pull-down menu.  
+    > (1) Tasks associated with the role are available from this pull-down menu.
     > (2) Select **Copy Role**.
 
     `![Copy Adventure Role a](../01-security-erp/images/image006.png)
@@ -135,7 +135,7 @@
 
   ![Copy Role 7b](../01-security-erp/images/image015.png)
 
-17. You can finish the Add User to Role step now. 
+17. You can finish the Add User to Role step now.
 
     > (1) Press the **Add User to Role** button.
 
@@ -181,15 +181,15 @@
 
     ![Compare Roles 1](../01-security-erp/images/image022.png)
 
-24.  > (1) Type in your **three initials and XX Code** which you used to name your custom role.
+24. > (1) Type in your **three initials and XX Code** which you used to name your custom role.
 
    ![Compare Roles a](../01-security-erp/images/image023.png)
 
-25.  > **Select** your custom role
+25. > **Select** your custom role
 
    ![Compare Roles b](../01-security-erp/images/image024.png)
 
-26.  > Press the **OK** button.
+26. > Press the **OK** button.
 
  ![Compare Roles c](../01-security-erp/images/image025.png)
 

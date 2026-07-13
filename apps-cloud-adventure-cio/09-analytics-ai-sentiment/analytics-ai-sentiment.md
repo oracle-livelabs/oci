@@ -4,9 +4,9 @@
 
 ### Introduction
 
-Oracle Fusion AI Data Platform (FDI) is a family of prebuilt, cloud native analytics for Oracle Cloud Applications that provides line-of-business users with ready-to-use insights to improve decision-making.
+Oracle Fusion Data Intelligence (FDI) is a family of prebuilt, cloud native analytics for Oracle Cloud Applications that provides line-of-business users with ready-to-use insights to improve decision-making.
 
-It is a Cloud application that delivers best-practice Key Performance Indicators (KPIs) and deep analyses to help decision-makers run their businesses and individual contributors to operate their businesses. Oracle Fusion AI Data Platform is built on top of Oracle Analytics Cloud and Oracle Autonomous Data Warehouse. This packaged service starts with Oracle Fusion Cloud Applications which you can deploy rapidly, personalize, and extend. The service extracts data from your Oracle Fusion Cloud Applications and loads it into an instance of Oracle Autonomous Data Warehouse. Business users can then create and customize dashboards in Oracle Analytics Cloud. It empowers business users with industry-leading, AI-powered, self-service analytics capabilities for data preparation, visualization, enterprise reporting, augmented analysis, and natural language processing.
+It is a Cloud application that delivers best-practice Key Performance Indicators (KPIs) and deep analyses to help decision-makers run their businesses and individual contributors to operate their businesses. Oracle Fusion Data Intelligence is built on top of Oracle Analytics Cloud and Oracle Autonomous Data Warehouse. This packaged service starts with Oracle Fusion Cloud Applications which you can deploy rapidly, personalize, and extend. The service extracts data from your Oracle Fusion Cloud Applications and loads it into an instance of Oracle Autonomous Data Warehouse. Business users can then create and customize dashboards in Oracle Analytics Cloud. It empowers business users with industry-leading, AI-powered, self-service analytics capabilities for data preparation, visualization, enterprise reporting, augmented analysis, and natural language processing.
 
 This activity guide helps business users to investigate and research data, ask relevant questions to understand Trends, Patterns and Outliers.
 
@@ -22,11 +22,11 @@ Estimated Time: 15 minutes
 
     ![Analytics OBJs](../09-analytics-ai-sentiment/images/aianalytics_objs2.jpg)
 
-2. Oracle Fusion AI Data Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making.
+2. Oracle Fusion Data Intelligence is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making.
 
     > (1) Click on the **‘Analytics’** tab. <br>
 
-    > (2) Click on **Fusion AI Data Platform** icon. <br>
+    > (2) Click on **Fusion Data Intelligence** icon. <br>
 
     ![Home Screen](../09-analytics-ai-sentiment/images/aiimage001.jpg)
 
@@ -184,14 +184,14 @@ Estimated Time: 15 minutes
 
 ### Summary
 
-You discovered how effortlessly Fusion AI Data Platform enables the creation of content and analysis of data. By integrating diverse data sources, you were able to delve deeper from summary information to detailed analysis, uncovering root causes by leveraging AI Insights. You then shared your discoveries with a broader audience, making the insights accessible and impactful.
+You discovered how effortlessly Fusion Data Intelligence enables the creation of content and analysis of data. By integrating diverse data sources, you were able to delve deeper from summary information to detailed analysis, uncovering root causes by leveraging AI Insights. You then shared your discoveries with a broader audience, making the insights accessible and impactful.
 
 **You have successfully completed the Activity!**
 
 ### Learn More
 
-* [Get Started with Oracle Fusion AI Data Platform](https://docs.oracle.com/en/cloud/saas/analytics/26r2/index.html)
-* [Fusion AI Data Platform](https://www.oracle.com/fusion-ai-data-platform/)
+* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/26r2/index.html)
+* [Fusion Data Intelligence](https://www.oracle.com/fusion-ai-data-platform/)
 * [Oracle Documentation](https://docs.oracle.com)
 
 ## Acknowledgements

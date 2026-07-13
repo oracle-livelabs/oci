@@ -5,14 +5,14 @@
 
 ### **Introduction**
 
-  Welcome to Oracle’s AI Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
+Welcome to Oracle’s AI Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
 
 
 ### **Objectives**
 
-  During this adventure, you will perform a time sensitive task of granting permissions to a user.
+During this adventure, you will perform a time sensitive task of granting permissions to a user.
 
-  Estimated Time: 15 minutes
+Estimated Time: 15 minutes
 
 ### **Begin Exercise**
 

@@ -48,7 +48,7 @@ Estimated Time: 15 minutes
 
     ![Suppliers List Page](../02-configure-prc/images/configure-prc-image005.jpg)
 
-6.  You can see the supplier information displayed is limited. We will update the page to display more fields for procurement managers. <br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
+6. You can see the supplier information displayed is limited. We will update the page to display more fields for procurement managers. <br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
 
     > (1) Click on the ![picture image](../gen-images/user_icon.png) **Image** in the top right corner of the screen.  <br>
 
@@ -62,13 +62,13 @@ Estimated Time: 15 minutes
 
     ![Configure Fields and Regions](../02-configure-prc/images/configure-prc-image007.jpg)
 
-8.  First we will create a new role-based form rule for Suppliers (New) page
+8. First we will create a new role-based form rule for Suppliers (New) page
 
     > (1) Click on the ![+ Icon](../gen-images/plusicon.jpg) **Icon** to add a new form rule.
 
     ![Fields and Regions](../02-configure-prc/images/configure-prc-image008.jpg)
 
-9.  You can name your rule whatever you want.  For example:
+9. You can name your rule whatever you want.  For example:
 
     > (1) Enter **procurementManagerLayout** in label. <br>
 
@@ -161,15 +161,15 @@ Estimated Time: 15 minutes
 
 ![Suppliers List Page](../02-configure-prc/images/configure-prc-image021.jpg)
 
-22.  You can expand the Preview region for one of the suppliers.
+22. You can expand the Preview region for one of the suppliers.
 
-> (1) Click on drop-down icon ![Region down arrow](../gen-images/icon014_downarrow.png) to expand a specific supplier row.
+    > (1) Click on drop-down icon ![Region down arrow](../gen-images/icon014_downarrow.png) to expand a specific supplier row.
 
 ![Suppliers List Page](../02-configure-prc/images/configure-prc-image022.jpg)
 
-23.  You can now see the new fields that you've made visible via application configuration.
+23. You can now see the new fields that you've made visible via application configuration.
 
-> (1) The new fields are now visible. The configurations are **automatically maintained during the release update process**.
+    > (1) The new fields are now visible. The configurations are **automatically maintained during the release update process**.
 
 ![Supplier List Screen](../02-configure-prc/images/configure-prc-image023.jpg)
 

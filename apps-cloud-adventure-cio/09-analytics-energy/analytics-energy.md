@@ -4,15 +4,15 @@
 
 ### Introduction
 
-Oracle Fusion AI Data Platform (Fusion AIDP) Platform delivers a unified, fully managed software-as-a-service experience for connecting, analyzing, and activating all your business data. With curated data, prebuilt analytics, and embedded artificial intelligence, organizations can gain deeper insights, drive innovation, and make faster, data driven decisions across the enterprise.
+Oracle Fusion Data Intelligence (FDI) Platform delivers a unified, fully managed software-as-a-service experience for connecting, analyzing, and activating all your business data. With curated data, prebuilt analytics, and embedded artificial intelligence, organizations can gain deeper insights, drive innovation, and make faster, data driven decisions across the enterprise.
 
-Built on Oracle AI Data Platform, the Fusion AIDP equips business leaders with unified analytics and built-in AI to connect enterprise data, surface deeper insights, and accelerate confident decisions.
+Built on Oracle AI Data Platform, the FDI equips business leaders with unified analytics and built-in AI to connect enterprise data, surface deeper insights, and accelerate confident decisions.
 
 This lab enables business users to explore data, leverage embedded AI capabilities, investigate trends, and uncover patterns or outliers, helping them turn insights into action.
 
 ### Objectives
 
-In this activity, you will use Fusion AI Data Platform to
+In this activity, you will use Fusion Data Intelligence to
 * Create analytics across different lines of business.
 * Leverage embedded AI models to quickly implement, validate and operationalize AI.
 * Review findings and visualize results.
@@ -25,14 +25,14 @@ Estimated Time: 10-15 minutes
 
     ![Analytics OBJs](../09-analytics-energy/images/analytics-energy-image001.png)
 
-2. Oracle Fusion AI Data Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
+2. Oracle Fusion Data Intelligence is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
 
     > (1) Click on the **‘Analytics’** tab. <br>
-    > (2) Click on the **Fusion AI Data Platform** icon. <br>
+    > (2) Click on the **Fusion Data Intelligence** icon. <br>
 
     ![Login](../09-analytics-energy/images/analytics-energy-image002.png)
 
-3. After a successful login, you will land on the Fusion AI Data Platform home page.
+3. After a successful login, you will land on the Fusion Data Intelligence home page.
 
     > (1) Enter assigned username and Fusion Analytics Password.  <br>
 
@@ -81,7 +81,7 @@ Estimated Time: 10-15 minutes
 
     ![Workbook Design Mode](../09-analytics-energy/images/analytics-energy-image008.png)
 
-9. First thing we will look at is how Fusion AIDP can help us look at Reasons for Approvals using the explain functionality.
+9. First thing we will look at is how FDI can help us look at Reasons for Approvals using the explain functionality.
 
     > (1) Click on the down arrow to expand **Energy Department Master**.  <br>
 
@@ -218,10 +218,10 @@ Estimated Time: 10-15 minutes
 
 ### Summary
 
-You discovered how effortlessly Fusion AI Data Platform enables content creation and data analysis. With the help of AI, you moved from high-level performance summaries to detailed energy approval/rejected insights, uncovering trends and opportunities for your managers.
+You discovered how effortlessly Fusion Data Intelligence enables content creation and data analysis. With the help of AI, you moved from high-level performance summaries to detailed energy approval/rejected insights, uncovering trends and opportunities for your managers.
 
 ### Learn More
-* [Get Started with  Fusion AI Data Platform](https://www.oracle.com/fusion-ai-data-platform/)
+* [Get Started with  Fusion Data Intelligence](https://www.oracle.com/fusion-ai-data-platform/)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
