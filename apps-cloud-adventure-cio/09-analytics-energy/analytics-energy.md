@@ -1,8 +1,6 @@
-# Analytics
+# ERP Analytics: Create analytics across different lines of business to derive better business insight
 
-## ERP: Create analytics across different lines of business to derive better business insight
-
-### Introduction
+## Introduction
 
 Oracle Fusion Data Intelligence (FDI) Platform delivers a unified, fully managed software-as-a-service experience for connecting, analyzing, and activating all your business data. With curated data, prebuilt analytics, and embedded artificial intelligence, organizations can gain deeper insights, drive innovation, and make faster, data driven decisions across the enterprise.
 
@@ -19,7 +17,7 @@ In this activity, you will use Fusion Data Intelligence to
 
 Estimated Time: 10-15 minutes
 
-### Begin Exercise
+## Begin Exercise
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insights.
 
@@ -220,7 +218,7 @@ Estimated Time: 10-15 minutes
 
 You discovered how effortlessly Fusion Data Intelligence enables content creation and data analysis. With the help of AI, you moved from high-level performance summaries to detailed energy approval/rejected insights, uncovering trends and opportunities for your managers.
 
-### Learn More
+## Learn More
 * [Get Started with  Fusion Data Intelligence](https://www.oracle.com/fusion-ai-data-platform/)
 * [Oracle Documentation](http://docs.oracle.com)
 

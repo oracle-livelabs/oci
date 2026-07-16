@@ -1,6 +1,4 @@
-# Extend your SaaS Applications
-
-# ERP & SCM: Guided Journey for PO Requisition Item Reviews
+# Extend ERP & SCM: Deploy AI via Guided Journey for Purchase Order Requisition Item Reviews
 
 ## Introduction
 

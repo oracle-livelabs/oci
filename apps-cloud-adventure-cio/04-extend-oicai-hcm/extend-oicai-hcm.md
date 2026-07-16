@@ -1,6 +1,4 @@
-# Extend your SaaS Applications
-
-# HCM: Guided Journey for Compensation Info
+# Extend HCM: Deploy AI via Guided Journey for Compensation Benchmark
 
 ## Introduction
 

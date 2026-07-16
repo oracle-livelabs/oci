@@ -1,8 +1,6 @@
-# Analytics
+# Analytics: Use AI for sentiment analysis
 
-## **Analytics AI for sentiment analysis**
-
-### Introduction
+## Introduction
 
 Oracle Fusion Data Intelligence (FDI) is a family of prebuilt, cloud native analytics for Oracle Cloud Applications that provides line-of-business users with ready-to-use insights to improve decision-making.
 
@@ -16,7 +14,7 @@ Use pre-built machine learning based sentiment analysis to analyze employee sent
 
 Estimated Time: 15 minutes
 
-### **Begin Exercise**
+## Begin Exercise
 
 1. In this activity, you will leverage pre-built machine learning capabilities (sentiment analysis) on survey data to understand employee sentiment.
 
@@ -186,9 +184,7 @@ Estimated Time: 15 minutes
 
 You discovered how effortlessly Fusion Data Intelligence enables the creation of content and analysis of data. By integrating diverse data sources, you were able to delve deeper from summary information to detailed analysis, uncovering root causes by leveraging AI Insights. You then shared your discoveries with a broader audience, making the insights accessible and impactful.
 
-**You have successfully completed the Activity!**
-
-### Learn More
+## Learn More
 
 * [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/26r2/index.html)
 * [Fusion Data Intelligence](https://www.oracle.com/fusion-ai-data-platform/)

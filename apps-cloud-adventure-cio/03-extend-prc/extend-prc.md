@@ -1,6 +1,4 @@
-# Extend your SaaS Applications
-
-# PRC: Create a simplified user interface using Redwood Design Patterns and Oracle Visual Builder
+# Extend PRC: Create a simplified user interface using Redwood Design Patterns and Oracle Visual Builder
 
 ## Introduction
 

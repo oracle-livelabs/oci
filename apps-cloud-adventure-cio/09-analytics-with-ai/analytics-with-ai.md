@@ -1,8 +1,6 @@
-# Analytics
+# Analytics: Use AI for Margin Analysis
 
-## **Analytics AI for Margin Analysis**
-
-### Introduction
+## Introduction
 
 Oracle Fusion Data Intelligence (FDI) is a family of prebuilt, cloud native analytics for Oracle Cloud Applications that provides line-of-business users with ready-to-use insights to improve decision-making.
 
@@ -16,7 +14,7 @@ Use machine learning and natural language conversational AI to analyze margin va
 
 Estimated Time: 15 minutes
 
-### **Pre-requisite**
+## Pre-requisite
 
 ****Please Note**** For this adventure, we will do few steps using AI chat and prompts. To streamline typing and eliminate any typing errors, the prompts are shown in-line in the guide below and are also available in the Prompt-CrossFunctional-Analysis.txt.
 <br><br>
@@ -27,7 +25,7 @@ As a pre-requisite for this adventure, please download following file to your lo
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../09-analytics-with-ai/files/Prompt-CrossFunctional-Analysis.txt)
 
-### **Begin Exercise**
+## **Begin Exercise**
 
 1. This activity guide helps business users to investigate and research data, ask relevant questions to understand Trends, Patterns and Outliers.
 
@@ -205,7 +203,7 @@ As a pre-requisite for this adventure, please download following file to your lo
 
 You discovered how effortlessly Fusion Data Intelligence enables the creation of content and analysis of data. By integrating diverse data sources, you were able to delve deeper from summary information to detailed analysis, uncovering root causes by leveraging AI Insights. You then shared your discoveries with a broader audience, making the insights accessible and impactful.
 
-### Learn More
+## Learn More
 
 * [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/26r2/index.html)
 * [Fusion Data Intelligence](https://www.oracle.com/fusion-ai-data-platform/)

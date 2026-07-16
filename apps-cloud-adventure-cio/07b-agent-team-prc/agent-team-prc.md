@@ -1,4 +1,4 @@
-# Assemble and Test an AI Agent Team using AI Agent Studio**
+# Assemble and Test an AI Agent Team using AI Agent Studio
 
 ## Introduction
 

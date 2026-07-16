@@ -1,8 +1,6 @@
-# Analytics
+# ERP & HCM Analytics: Unify finance and workforce-related data to understand changing workforce dynamics and gain comprehensive insights
 
-## ERP & HCM: Unify finance and workforce-related data to understand changing workforce dynamics and gain comprehensive insights
-
-### Introduction
+## Introduction
 
 Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud native analytics applications for Oracle Cloud Applications that provides line-of-business users with ready-to-use insights to improve decision-making.
 
@@ -16,7 +14,7 @@ In this activity, you will Create analytics across different lines of business t
 
 Estimated Time: 15 minutes
 
-### Begin Exercise
+## Begin Exercise
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insights.
 
@@ -275,7 +273,7 @@ Estimated Time: 15 minutes
 
 You discovered how effortlessly Fusion Analytics enables the creation of content and analysis of data. By integrating diverse data sources, you were able to delve deeper from summary information to detailed analysis, uncovering root causes. You then shared your discoveries with a broader audience, making the insights accessible and impactful.
 
-### Learn More
+## Learn More
 * [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/26r2/index.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
