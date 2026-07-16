@@ -1,18 +1,18 @@
 # Risk Management
 
-## **Request Access with Risk Management**
+## Request Access with Risk Management
 
-### **Introduction**
+## Introduction
 
 Welcome to Oracle’s AI Adventure for Risk Management. This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
 
-### **Objectives**
+### Objectives
 
 During this adventure, request role access via Risk Management and experience the review and approval process.
 
 Estimated Time: 15 minutes
 
-### **Begin Exercise**
+## Begin Exercise
 
 1. During this adventure, request role access via Risk Management and experience the review and approval process.  These are the steps you will perform:
 
@@ -161,7 +161,7 @@ Estimated Time: 15 minutes
 
 Oracle Risk Management and Compliance documents your policies for identifying and resolving risk in your business processes. It continuously monitors user access for separation of duties and sensitive access, automates role certification, and detects policy violations in transactions and in changes to audited configuration and operational data.
 
-### Learn More
+## Learn More
 
 * [Risk Management and Compliance](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/26c/index.html)
 * [Risk Management and Compliance - Secure](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/26c/secure.html)

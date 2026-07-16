@@ -1,24 +1,22 @@
 # Security
 
-<!-- rem ## Path 1: Assign AI Privileges -->
-## **Assign Supplier Negotiation Privileges**
+## Assign Supplier Negotiation Privileges
 
-### **Introduction**
+## Introduction
 
 Welcome to Oracle’s AI Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
 
-### **Objectives**
+### Objectives
 
 During this adventure, you will perform a time sensitive task of granting permissions to a user.
 
 Estimated Time: 15 minutes
 
-### **Begin Exercise**
+## Begin Exercise
 
 1. During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
 
   ![Security Objectives](../01-security-erp/images/image100objs.png)
-
 
      > At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
 
@@ -30,11 +28,9 @@ Estimated Time: 15 minutes
 
    ![Application Springboard](../01-security-erp/images/image001.png)
 
-
 3. Accessing Security Console
 
     > 1. Select the **Tools** tab menu. <br>
-
     > 2. Select **Security Console**.
 
     ![Tools Security Console](../01-security-erp/images/image002.png)
@@ -49,7 +45,6 @@ Estimated Time: 15 minutes
 5. Notice how the search is dynamic and offers available options as you type.
 
     > (1) In the search field provided at the top, type: **Adventure**. <br>
-
     > (2) Then **click** on the **Adventure Accounts Payable Manager** job role.
 
     ![Adventure Role Search](../01-security-erp/images/image004.png)
@@ -57,7 +52,6 @@ Estimated Time: 15 minutes
 6. You can now see a list of the roles which are granted to a user when they are provided with the Accounts Payable Manager.
 
     > (1) Notice that the table may be exported to Microsoft Excel using the button provided at the top right. <br>
-
     > (2) (Nothing to perform here)
 
     ![Adventure Role roles](../01-security-erp/images/image005.png)
@@ -72,7 +66,6 @@ Estimated Time: 15 minutes
 8. Now you'll execute the copy role.
 
     > (1) Select **Copy top role**. <br>
-
     > (2) Press the **Copy Role** button.
 
     ![Copy Adventure Role b](../01-security-erp/images/image007.png)
@@ -82,9 +75,7 @@ Estimated Time: 15 minutes
   We start by giving our copied role a unique name.
 
     > (1) Add **your initials and xx Code** to the name of the **role name** and **role code** as shown. <br>
-
     > This will keep your version separate from the other participants, and it will help you find the new role later in this Cloud Journey. <br>
-
     > (2) Press the **Next** button.
 
     ![Copy Role a](../01-security-erp/images/image008.png)
@@ -221,18 +212,15 @@ Estimated Time: 15 minutes
 
     > **You've completed this Adventure**. Please close this tab.
 
-<!--  ## Path 2: Request Access with Risk Management -->
-
 ### Summary
 
 Security Console is used to quickly manage user access to the entire Fusion applications suite.
 
-### Learn More
+## Learn More
 
 * [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/26c/secure.html)
 * [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/26c/secure.html)
 * [Oracle Documentation](http://docs.oracle.com)
-
 
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist

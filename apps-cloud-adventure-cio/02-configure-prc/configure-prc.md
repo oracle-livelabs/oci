@@ -2,7 +2,7 @@
 
 ## PRC: Update Suppliers (New) Listing Page
 
-### Introduction
+## Introduction
 
 Oracle offers hundreds of prebuilt pages, workflows and forms “out of the box” as part of the Oracle Fusion Cloud.  Many of our customers want to configure these pages and workflows to meet their specific business needs.  You can unify your experience in our applications by using Redwood.
 
@@ -14,7 +14,7 @@ In this lab, you will use Redwood to quickly and efficiently improve the user ex
 
 Estimated Time: 15 minutes
 
-### Begin Exercise
+## Begin Exercise
 
 1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update the Suppliers (New) listing page providing more visibility to Procurement Managers. Suppliers (New) is a dynamic listing page that allows you to create role-based layouts based on configurable criteria.
 
@@ -183,7 +183,7 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 
 **Sync up as a team, lock in your harness, get ready for the the next high-octane adventure.**
 
-### Learn More
+## Learn More
 
 * [Overview of Redwood Application Extension](https://docs.oracle.com/en/cloud/saas/human-resources/fauvb/overview-of-redwood-application-extensions.html)
 * [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/26c/oaext/overview-of-using-visual-builder-studio.html)

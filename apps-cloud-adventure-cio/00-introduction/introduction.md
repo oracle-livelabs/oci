@@ -8,7 +8,7 @@ Experience the power of the native tools in Oracle SaaS to deliver AI capabiliti
 <br><br>
 Estimated Workshop Time: 2-3 hours
 
-### **Objectives**
+### Objectives
 
 This Activity Guide will lead you along the way through a set of Adventure Labs
 
@@ -22,7 +22,7 @@ This Activity Guide will lead you along the way through a set of Adventure Labs
 
 (5) **Analytics with AI**: Learn how Fusion Data Intelligence provides a unified view and meaningful insights into your company’s operations. You will get hands-on experience in answering questions regarding your enterprise health by leveraging pre-built AI insights and creating cross-functional analytics across different lines of business.<br>
 
-### Tasks
+## Tasks
 Let's create your team name for your AI Adventure!
 
 [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE)
@@ -31,5 +31,3 @@ Let's create your team name for your AI Adventure!
 * **Author** - Sajid Saleem, Master Principal Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
 * **Last Updated By/Date** - Sajid Saleem, July 2026
-
-
