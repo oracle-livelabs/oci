@@ -1,6 +1,6 @@
 # Day in an AI Assisted Life Lab Exercises
 
-This repository contains Markdown versions of the lab exercises from **Day in an AI Assisted Life: Lab Exercises - Automate Tasks, Drive Efficiency, and Improve Decision-Making with AI**.
+This folder contains Markdown versions of the lab exercises from **Day in an AI Assisted Life: Lab Exercises - Automate Tasks, Drive Efficiency, and Improve Decision-Making with AI**.
 
 ## Exercises
 
