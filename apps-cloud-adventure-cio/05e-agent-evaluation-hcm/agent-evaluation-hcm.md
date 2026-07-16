@@ -1,14 +1,12 @@
-# Monitor and Evaluate AI Agents
+# Monitor and Evaluate AI Agents before you deploy them, to ensure they are ready for production
 
-## Evaluate AI Agents before you deploy them, to ensure they are ready for production
-
-### **Introduction**
+## Introduction
 
 **Monitoring**: Monitor and gain insights into how your AI agents are performing, and evaluate the agents for accuracy, performance, latency and usage. You can also track the interactions with your agents, understand real-world usage patterns, identify common errors, and measure overall performance.
 <br><br>
 **Evaluation**: Evaluate agents before you deploy them, to ensure that they're ready for production. Test your agents for response correctness, response time, and token usage to meet your quality standards. You can also check the quality of answers generated through the document tool to assess how effectively agents utilize the retrieved context from the retrieval-augmented generation (RAG) metrics. After making any changes to your agent, or after a model update, rerun evaluations to confirm that your agent continues to perform as expected. This proactive approach helps you maintain high-quality experiences for your users.
 
-### **Objectives**
+### Objectives
 
 In this activity you will use Oracle Fusion AI Agent Studio to evaluate agents before you deploy them
 * Create Evaluation for AI Agent
@@ -16,14 +14,14 @@ In this activity you will use Oracle Fusion AI Agent Studio to evaluate agents b
 
 Estimated Time: 10 minutes
 
-### **Pre-requisite**
+## Pre-requisite
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
 As a pre-requisite for this adventure, please download the **Benefits-Evaluation.csv** file to your local desktop as below.
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05e-agent-evaluation-hcm/files/Benefits-Evaluation.csv)
 
-### **Begin Exercise**
+## Begin Exercise
 
 1. In this activity you will create Evaluations for AI Agents and view results of evaluation runs.
 
@@ -160,8 +158,7 @@ As a pre-requisite for this adventure, please download the **Benefits-Evaluation
 
 Oracle Fusion AI Agent Studio provides evaluation capabilities to validate AI Agents against key metrics such as Accuracy, Latency, and Consumption. Monitoring and Evaluation are not optional and an after thought, they are core to operationalize AI at Enterprise Scale.
 
-### Learn More
-
+## Learn More
 * [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
 * [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
 * [Monitor and Evaluate AI Agents](https://docs.oracle.com/en/cloud/saas/fusion-ai/aiaas/monitor-and-evaluate-ai-agents.html)

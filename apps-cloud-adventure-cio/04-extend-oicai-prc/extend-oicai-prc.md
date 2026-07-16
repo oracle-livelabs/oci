@@ -1,8 +1,8 @@
 # Extend your SaaS Applications
 
-## ERP & SCM: Guided Journey for PO Requisition Item Reviews
+# ERP & SCM: Guided Journey for PO Requisition Item Reviews
 
-### Introduction
+## Introduction
 
 In this activity you will learn how easily extend Fusion SaaS application to include external content to guide users to better decisions.
 
@@ -22,7 +22,7 @@ In this activity you will use a Guided Journey Task with User Defined Content an
 
 Estimated Time: 15 minutes
 
-###  Begin Exercise
+##  Begin Exercise
 
 1. You'll start by going to the Guided Journey screen.
 
@@ -189,7 +189,7 @@ You also learned how to leverage 3rd party Generative AI capabilities by leverag
 
 So, check your with you team, double-check your racing harness and get ready for our next Adventure.
 
-### Learn More
+## Learn More
 
 - [Extending Oracle Cloud Applications with Visual Builder Studio](https://docs.oracle.com/en/cloud/paas/visual-builder/visualbuilder-building-appui)
 - [Overview of Guided Journeys](https://docs.oracle.com/en/cloud/saas/human-resources/faijh/overview-of-guided-journeys.html)

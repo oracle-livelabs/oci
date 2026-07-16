@@ -1,6 +1,6 @@
 # Configure
 
-## PRC: Update Suppliers (New) Listing Page
+# PRC: Update Suppliers (New) Listing Page
 
 ## Introduction
 

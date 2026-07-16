@@ -1,6 +1,6 @@
 # Configure
 
-## HCM: Configure the Change Salary Experience
+# HCM: Configure the Change Salary Experience
 
 ## Introduction
 

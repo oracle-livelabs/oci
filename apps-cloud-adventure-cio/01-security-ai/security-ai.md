@@ -1,6 +1,6 @@
 # Security
 
-## Assign AI Privileges
+# Assign AI Privileges
 
 ## Introduction
 

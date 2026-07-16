@@ -1,6 +1,6 @@
 # Security
 
-## Assign Supplier Negotiation Privileges
+# Assign Supplier Negotiation Privileges
 
 ## Introduction
 

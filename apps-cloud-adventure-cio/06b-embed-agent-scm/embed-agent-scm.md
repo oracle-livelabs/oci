@@ -1,13 +1,11 @@
-# Embed AI Agents Teams in UI for End Users
+# Embed AI Agents Teams in Application UI for End Users
 
-## **Create a Guided Journey and Embed your AI Agent Team**
-
-### **Introduction**
+## Introduction
 
 AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
 
 
-### **Objectives**
+### Objectives
 
 In this activity you will embed your AI Agent Team in the application for use by end users.
 * Create a Guided Journey and Task that references the AI Agent Team.
@@ -16,7 +14,7 @@ In this activity you will embed your AI Agent Team in the application for use by
 
 Estimated Time: 10-15 minutes
 
-### **Begin Exercise**
+## Begin Exercise
 
 
 1. In this activity, you will embed your AI Agent Team in the application for use by end users.
@@ -156,7 +154,7 @@ AI Agent Studio is a design-time environment that provides a set of tools to cre
 
 Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
 
-### Learn More
+## Learn More
 
 * [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
 * [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
