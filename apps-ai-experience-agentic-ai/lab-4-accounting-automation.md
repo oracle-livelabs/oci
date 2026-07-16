@@ -1,30 +1,32 @@
-# Exercise 1-4: Accounting Automation
+# Lab 4: Accounting Automation
 
 <!-- ============================================================ -->
 
 ## Overview
 
-In this exercise, you use Payables Agent and Ledger Agent to process a supplier invoice, review accounting exceptions, create monitoring prompts, and query ledger activity using natural language.
+In this exercise, you use **Payables Agent** and **Ledger Agent** to process a supplier invoice, review accounting exceptions, create monitoring prompts, and query ledger activity using natural language.
+
+**Estimated Time:** 10 minutes
 
 <!-- ============================================================ -->
 
-## Objective
+### Objectives
 
-By the end of this exercise, you will be able to:
+By the end of this lab, you will be able to:
 
-- Review an invoice processed by Payables Agent.
-- Inspect a pending control check and invoice details.
-- Use Ledger Agent to review accounting exceptions.
+- Review an invoice processed by **Payables Agent**.
+- Use **Ledger Agent** to review accounting exceptions.
 - Create a monitoring prompt from natural language.
-- Query payables invoice information from the ledger.
 
 <!-- ============================================================ -->
 
 ## Steps
 
-### Step 1: Open Payables Agent
+### Step 1: Open **Payables Agent**
 
-The requisition process is complete, the supplier has sent supplies, and an invoice has been received. Payables Agent helps review and process supplier invoices by checking for issues, highlighting next steps, and moving invoices forward faster.
+The requisition process is complete, the supplier has sent supplies, and an invoice has been received. We will continue using AI Agents to automate the accounting process. 
+
+**Payables Agent** helps review and process supplier invoices by checking for issues, highlighting next steps, and moving invoices forward faster.
 
 1. Select the **Payables Agent** tab.
 2. Select the **Payables Agent** tile.
@@ -33,16 +35,12 @@ The requisition process is complete, the supplier has sent supplies, and an invo
 
 <!-- ============================================================ -->
 
-### Step 2: Open the Lee Supplies invoice image
+### Step 2: Open the **Lee Supplies** invoice image
 
-Payables Agent shows relevant invoices from multiple sources, including mass uploads, email, and manual entry. The tool scans invoice information, uploads it to the system, and performs checks to validate accuracy.
+**Payables Agent** shows relevant invoices from multiple sources, including mass uploads, email, and manual entry. The tool scans invoice information, uploads it to the system, and performs checks to validate accuracy.
 
 1. Find the invoice from **Lee Supplies**.
-2. Confirm the amount matches the requisition:
-
-```text
-60,225.00
-```
+2. Confirm the amount is for **60,225.00** which is the same as the amount of the requisition created earlier.
 
 3. Select the eye icon on the right side.
 
@@ -50,7 +48,7 @@ Payables Agent shows relevant invoices from multiple sources, including mass upl
 
 <!-- ============================================================ -->
 
-### Step 3: Close the invoice image
+### Step 3: View & close the invoice image
 
 The original supplier invoice is attached to the invoice in the system and remains with the transaction throughout its lifecycle, including in the general ledger.
 
@@ -62,7 +60,7 @@ The original supplier invoice is attached to the invoice in the system and remai
 
 ### Step 4: Open the pending control check
 
-Payables Agent checks invoices against required controls before they can move forward. A pending control check means one validation still needs to be completed.
+The **Payables Agent** is checking the invoice against required controls before it can move forward. “1 pending control check” means one validation still needs to be completed.
 
 1. Select the blue hyperlink:
 
@@ -76,9 +74,9 @@ Payables Agent checks invoices against required controls before they can move fo
 
 ### Step 5: Open the invoice record
 
-The invoice appears in the system and requires user interaction before processing can continue.
+Instantly, we can view the invoice within the system. This one requires user interaction to continue processing this invoice. 
 
-1. Click the blue hyperlinked invoice name.
+1. Click the **blue** hyperlinked invoice name.
 
 ![Invoice hyperlink](assets/images/exercise-1-4-step-05.png)
 
@@ -86,7 +84,7 @@ The invoice appears in the system and requires user interaction before processin
 
 ### Step 6: Review scanned invoice details
 
-The Payables Agent scanned header, line-level, and tax information into the invoice. This process can also be fully automated using user-defined thresholds. The agent can scan the invoice, process information, match the invoice to purchase orders, validate the invoice, post it to the ledger, and route it for payment.
+Now, we can see all of the information that was scanned in by the agent. The header, line level, and tax information were all brought in by the AP Agent. This process can also be fully automated by the agent. Through different user-defined thresholds, the agent can scan in the invoice, process the information, match the invoice to any PO’s, validate the invoice, post it to the ledger, and send it on its way for payment. 
 
 1. Click the **Home** button in the top-right corner.
 
@@ -94,9 +92,11 @@ The Payables Agent scanned header, line-level, and tax information into the invo
 
 <!-- ============================================================ -->
 
-### Step 7: Open Ledger Agent
+### Step 7: Open **Ledger Agent**
 
-Now that the invoice is processed, use Ledger Agent to ensure accounting accuracy and monitor the general ledger. Ledger Agent helps review ledger activity and guides users through checks, exceptions, and next steps.
+Now that the invoice is processed, we need to ensure accounting accuracy as well as monitoring the general ledger. 
+
+We will use the new **Ledger Agent** for this process. The agent helps review and manage ledger activity. It guides users through checks, exceptions, and next steps, so the work is easier to complete.
 
 1. Select the **Ledger Agent** tab.
 2. Select the **Ledger Agent** tile.
@@ -107,7 +107,7 @@ Now that the invoice is processed, use Ledger Agent to ensure accounting accurac
 
 ### Step 8: Open an accounting process exception insight
 
-The Ledger Agent dashboard shows insights into journal activity, balances, and ledger exceptions. These insights help users spot issues, understand trends, and decide what to review next.
+The **Ledger Agent** dashboard shows insights into journal activity, balances, and ledger exceptions. These insights help users spot issues, understand trends, and decide what to review next.
 
 1. Select the **Accounting Process Exception** insight that summarizes payables issues.
 
@@ -115,14 +115,16 @@ The Ledger Agent dashboard shows insights into journal activity, balances, and l
 
 <!-- ============================================================ -->
 
-### Step 9: Ask Ledger Agent about exceptions
+### Step 9: Ask **Ledger Agent** about exceptions
 
-The agent provides a list of exceptions based on the insight. You can prompt the agent for additional details to help resolve issues before period close.
+The agent provides a list of exceptions based on the insight. We can see details of the errors. We can also prompt the agent further to uncover more information to help us resolve this before the period close. 
 
 1. In the **Ask Ledger Agent** chat box, type:
 
 ```text
+<copy>
 Show the journals with exceptions for US Primary ledger that are within the Subledger Transaction Data Exception category.
+</copy>
 ```
 
 ![Ask Ledger Agent exception prompt](assets/images/exercise-1-4-step-09.png)
@@ -141,7 +143,7 @@ The agent returns more granular details with action items for resolving the acco
 
 ### Step 11: Open monitoring prompts
 
-The Insights dashboard shows created insights and allows users to create additional prompts. Users can create prompts to monitor accounts or general ledger activity under their purview, enabling the agent to monitor problem areas and support accounting accuracy and a faster close.
+The Insights dashboard shows created insights and allows you to create additional prompts. You can create prompts to monitor accounts or general ledger activity under their purview, enabling the agent to monitor problem areas and support accounting accuracy and a faster close.
 
 1. Select the **Monitoring Prompts** tab.
 
@@ -150,6 +152,8 @@ The Insights dashboard shows created insights and allows users to create additio
 <!-- ============================================================ -->
 
 ### Step 12: Create a new monitoring prompt
+
+In just a few clicks, you can create your own prompts
 
 1. Select the **+** button.
 
@@ -161,11 +165,7 @@ The Insights dashboard shows created insights and allows users to create additio
 
 Prompts can be built from templates or created from scratch.
 
-1. Select:
-
-```text
-AP Liability Variance for Vision Foods Marketing US > 10% QoQ
-```
+1. Select **AP Liability Variance for Vision Foods Marketing US > 10% QoQ**
 
 ![Monitoring prompt template](assets/images/exercise-1-4-step-13.png)
 
@@ -173,12 +173,14 @@ AP Liability Variance for Vision Foods Marketing US > 10% QoQ
 
 ### Step 14: Build the prompt using natural language
 
-Users can use natural language to build monitoring prompts. The agent identifies areas of concern and understands what the user wants to monitor. Frequency, time frame, and messages can be configured from the dashboard.
+Users can use natural language to build out these prompts. The agent is smart enough to pick up on the areas of concern as well as understand what the user wants to see. Different frequencies, time frames, and messages can be configured from this dashboard. 
 
-1. In the prompt field, type:
+1. In the **Monitoring Prompt** field, type:
 
 ```text
+<copy>
 AP Liability US QoQ > 10%
+</copy>
 ```
 
 2. Click **Evaluate**.
@@ -193,7 +195,7 @@ AP Liability US QoQ > 10%
 
 A new monitoring prompt is created. If the AP liability account changes by more than 10% from the last quarter, the tool alerts the user and provides supporting documentation such as high-value invoices.
 
-1. Select **Overview** in the bottom-left corner.
+1. Select **Overview** in the bottom-left.
 
 ![Created monitoring prompt](assets/images/exercise-1-4-step-15.png)
 
@@ -201,26 +203,32 @@ A new monitoring prompt is created. If the AP liability account changes by more 
 
 ### Step 16: Ask for supplier-level payables amounts
 
-You can chat with the agent to find general ledger information using natural language.
+You can also chat with the agent to find information within the GL. This makes it much easier to find relevant information using natural language.
 
 1. In the search bar, type:
 
 ```text
+<copy>
 Breakdown by supplier the total accounted amount for payables invoices for account 62520 for period 05-26
+</copy>
 ```
 
 ![Supplier-level payables query](assets/images/exercise-1-4-step-16.png)
 
 <!-- ============================================================ -->
 
-### Step 17: Ask for Lee Supplies invoices
+### Step 17: Ask for **Lee Supplies** invoices
 
 The agent returns relevant information based on role-based security. If a user requests information outside their permissions, the agent does not provide the details.
+
+We can also prompt the agent to gain more information. 
 
 1. In the chat bar, type:
 
 ```text
+<copy>
 Show the invoices for Lee Supplies
+</copy>
 ```
 
 ![Lee Supplies invoice query](assets/images/exercise-1-4-step-17.png)
@@ -234,7 +242,9 @@ Because the system is connected, invoice details can be reviewed from the ledger
 1. In the chat bar, type:
 
 ```text
+<copy>
 Show payables invoices for account 63542 in period 07-26
+</copy>
 ```
 
 ![Payables invoices by account and period](assets/images/exercise-1-4-step-18.png)
@@ -243,20 +253,29 @@ Show payables invoices for account 63542 in period 07-26
 
 ### Step 19: Return home
 
-The accounted invoice processed by the Payables Agent is shown and broken down by line number. Agentic AI streamlined the process from the original negotiation through the general ledger.
+Now we can see the accounted invoice that was processed by our AP agent. It is broken down by line number.
+
+From the original negotiation all the way through the GL, we were able to leverage agentic AI to streamline this entire process. We are now on track with our project as well as ensuring that close is streamlined. 
 
 1. Select the **Home** button in the top-right corner.
 
 ![Accounted invoice results](assets/images/exercise-1-4-step-19.png)
 
-<!-- ============================================================ -->
+Since these agents helped gather and submit the financial data, it makes it much easier to analyze. As an operations manager, we will now utilize our AI tools within Performance Management to gather insights and predict future metrics. 
 
-## Expected Result
-
-You have reviewed a supplier invoice, inspected a pending control check, used Ledger Agent to investigate accounting exceptions, created a monitoring prompt, and queried payables invoice data through natural language.
+[Proceed to the next lab exercise!] (#next)
 
 <!-- ============================================================ -->
 
 ## Summary
 
-Payables Agent and Ledger Agent streamline invoice processing, validation, ledger monitoring, exception resolution, and financial analysis across the accounting process.
+You have reviewed a supplier invoice, inspected a pending control check, used **Ledger Agent** to investigate accounting exceptions, created a monitoring prompt, and queried payables invoice data through natural language.
+
+**Payables Agent** and **Ledger Agent** streamline invoice processing, validation, ledger monitoring, exception resolution, and financial analysis across the accounting process.
+
+[Proceed to the next lab exercise!] (#next)
+
+## Acknowledgements
+* **Author** - Jimmy Dwyer, Oracle North America
+* **Contributors** -  Piyush Ruparelia, Oracle North America
+* **Last Updated By/Date** - Piyush Ruparelia, July 2026, based on Fusion 26B

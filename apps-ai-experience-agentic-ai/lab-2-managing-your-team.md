@@ -1,12 +1,20 @@
-# Exercise 1-2: Managing Your Team
+# Lab 2: Managing Your Team
 
 <!-- ============================================================ -->
 
 ## Overview
 
-In this exercise, you use AI Chat and Manager Concierge Workspace to complete managerial responsibilities from a single agentic workspace.
+In this exercise, you use **AI Chat** and **Manager Concierge Workspace** to complete managerial responsibilities from a single agentic workspace.
 
-You will:
+**Estimated Time:** 10 minutes
+
+
+<!-- ============================================================ -->
+
+### Objectives
+
+By the end of this lab, you will be able to:
+
 - Search for employee absence information.
 - Review pending transactions and manager action items.
 - Explore AI-generated manager communications.
@@ -15,7 +23,7 @@ You will:
 
 ## Steps
 
-### Step 1: Open AI Chat
+### Step 1: Open **AI Chat**
 
 Now that sales opportunities are running smoothly, review your managerial responsibilities.
 
@@ -26,7 +34,7 @@ Now that sales opportunities are running smoothly, review your managerial respon
 
 <!-- ============================================================ -->
 
-### Step 2: Open the Apps tab
+### Step 2: Open the **Apps** tab
 
 This is the dashboard where you can view all the agents and agentic apps, you have access to. It even includes a tab with status checks for the agents that are executing processes. 
 
@@ -38,7 +46,7 @@ This is the dashboard where you can view all the agents and agentic apps, you ha
 
 ### Step 3: Launch **Manager Concierge Workspace**
 
-The Apps dashboard lists all agentic apps available to you. Agentic apps are enterprise applications powered by coordinated teams of specialized AI agents that are outcome-driven, proactive, reasoning-based, and engineered for enterprise execution.
+The **Apps** dashboard lists all agentic apps available to you. Agentic apps are enterprise applications powered by coordinated teams of specialized AI agents that are outcome-driven, proactive, reasoning-based, and engineered for enterprise execution.
 
 The **Manager Concierge Workspace** unifies compensation, performance, talent, and absence signals into a single workspace that prioritizes what needs attention and enables managers to act with policy-backed, one-click decisions.
 
@@ -131,17 +139,17 @@ This was part of our quarterly review process that management requires. The app 
 
 <!-- ============================================================ -->
 
-### Step 11: Return to the AI Chat dashboard
+### Step 11: Return to the **AI Chat** dashboard
 
 With the **Manager Concierge Workspace**, we quickly completed key manager tasks in one place. This agentic app made the work simple, guided, and fast.
 
-1. Select the browser **Back** arrow in the top-left to return to the AI Chat dashboard.
+1. Select the browser **Back** arrow in the top-left to return to the **AI Chat** dashboard.
 
 ![Return to AI Chat dashboard](assets/images/exercise-1-2-step-11.png)
 
 <!-- ============================================================ -->
 
-### Step 12: Stay in AI Chat
+### Step 12: Stay in **AI Chat**
 
 1. Stay in the AI Chat dashboard.
 

@@ -4,14 +4,19 @@
 
 ## Overview
 
-In this exercise, you use Sourcing Command Center and AI-assisted requisition workflows to move from supplier negotiation to requisition review and submission.
+In this exercise, you use **Sourcing Command Center** and AI-assisted requisition workflows to move from supplier negotiation to requisition review and submission.
 
-You will:
+**Estimated Time:** 10 minutes
+
+<!-- ============================================================ -->
+
+### Objectives
+
+By the end of this lab, you will be able to:
 
 - Review a pending award for emergency construction supplies.
 - Prompt the sourcing agent for supplier comparison details.
 - Review a requisition created from a supplier quote.
-- Submit the requisition after human review.
 
 **Notes**
 
@@ -25,7 +30,7 @@ You will:
 
 ## Steps
 
-### Step 1: Open the Apps tab
+### Step 1: Open the **Apps** tab
 
 Now that we’ve managed our sales opportunities and kept up with our managerial responsibilities, we now need to ensure one of our ongoing projects has the materials needed. There is an emergency that caused the loss of key items that need to be requisitioned quickly to keep the project on time.
 
@@ -35,7 +40,7 @@ Now that we’ve managed our sales opportunities and kept up with our managerial
 
 <!-- ============================================================ -->
 
-### Step 2: Launch Sourcing Command Center
+### Step 2: Launch **Sourcing Command Center**
 
 A negotiation was issued to three suppliers so the necessary supplies can be sourced and the project can stay on track.  We are going to utilize the **Sourcing Command Center** to streamline this process.
 
@@ -138,7 +143,7 @@ To continue the requisition process, access the purchase requisition landing pag
 
 <!-- ============================================================ -->
 
-### Step 11: Open the Lee Supplies requisition
+### Step 11: Open the **Lee Supplies** requisition
 
 From here, you can view the details around your recent requisitions and see brief details of their status and where they are in the requisition process. This is also the area where you can search the entire catalogue of items. There are also embedded AI features in the top ribbon to allow users to easily find information about their requisition needs.
 
@@ -150,11 +155,11 @@ We can also see the requisition that was auto created by our quote to req agent.
 
 <!-- ============================================================ -->
 
-### Step 12: Open More Information
+### Step 12: Open **More Information**
 
 The agent created a new requisition directly from the supplier quote. Note that the requisition is in draft status. This is because the system will not submit this req without human oversight first. 
 
-1. Select the **More Information** tab.
+1. Select the **More Information** section.
 
 ![More Information tab](assets/images/exercise-1-3-step-11.png)
 
@@ -165,7 +170,7 @@ The agent created a new requisition directly from the supplier quote. Note that 
 Necessary information was auto populated based on fields depicted from the quote. The original quote is always attached to the system requisition for reference by users. 
 
 1. Select the three dots at the far right of the line.
-2. Select **Edit**.
+2. Select the **Edit** option from the drop-down menu.
 
 ![Edit requisition line](assets/images/exercise-1-3-step-12.png)
 

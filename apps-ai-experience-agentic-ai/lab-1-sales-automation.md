@@ -4,8 +4,19 @@
 
 ## Overview
 
-In this exercise, you will use Oracle Fusion Sales to review an opportunity, use Deal Advisor for AI-generated insights, and explore agent-driven recommendations for account and opportunity management.  In the Sales Command Center, you will review territory-level opportunity insights and explore AI-generated communications and pre-meeting briefs.
+In this exercise, you will use Oracle Fusion Sales to review an opportunity, use Deal Advisor for AI-generated insights, and explore agent-driven recommendations for account and opportunity management.  
 
+**Estimated Time:** 10 minutes
+
+<!-- ============================================================ -->
+
+### Objectives
+
+By the end of this lab, you will be able to:
+
+- Use **Deal Advisor** to summarize an opportunity and identify potential risks.
+- Use **Sales Command Center** to review territory-level opportunity insights.
+- Explore AI-generated communications and pre-meeting briefs.
 
 <!-- ============================================================ -->
 
@@ -49,7 +60,7 @@ Fitness Center Expansion - Tandy Fitness Club
 
 <!-- ============================================================ -->
 
-### Step 3: Launch Deal Advisor
+### Step 3: Launch **Deal Advisor**
 
 The opportunity includes a quick built-in AI summary. Use Deal Advisor to request a deeper summary and identify risks that may arise during the sales cycle.
 
@@ -68,7 +79,7 @@ Deal Advisor
 
 ### Step 4: Request an opportunity overview
 
-The Deal Advisor is a built in AI Agent that pulls information from the individual deal as well as the deal library in order to provide accurate steps and details
+The **Deal Advisor** is a built in AI Agent that pulls information from the individual deal as well as the deal library in order to provide accurate steps and details
 
 1. Click the suggestion:
 
@@ -98,7 +109,7 @@ What risks may arise?
 
 <!-- ============================================================ -->
 
-### Step 6: Close Deal Advisor
+### Step 6: Close **Deal Advisor**
 
 Users can continuously prompt the agent to get more details. We are specifically looking to see what risks may pop up.
 
@@ -122,7 +133,7 @@ That was looking at an individual sales opportunity. Now, let’s use the first 
 
 ### Step 8: Open Sales Command Center
 
-Sales Command Center helps sales leaders manage a territory by monitoring account activity, highlighting changes or risks, and recommending next steps for each account and opportunity.
+**Sales Command Center** helps sales leaders manage a territory by monitoring account activity, highlighting changes or risks, and recommending next steps for each account and opportunity.
 
 1. Select the **Sales Command Center** tile.
 
