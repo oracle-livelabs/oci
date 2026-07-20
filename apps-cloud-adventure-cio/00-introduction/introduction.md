@@ -22,7 +22,7 @@ This Activity Guide will lead you along the way through a set of Adventure Labs
 
 (5) **Analytics with AI**: Learn how Fusion Data Intelligence provides a unified view and meaningful insights into your company’s operations. You will get hands-on experience in answering questions regarding your enterprise health by leveraging pre-built AI insights and creating cross-functional analytics across different lines of business.<br>
 
-## Tasks
+## Learn More
 Let's create your team name for your AI Adventure!
 
 [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:SCMCLOUDADVENTURE)
