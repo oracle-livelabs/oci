@@ -1,8 +1,6 @@
-# Extend your SaaS Applications
+# Extend ERP & SCM: Deploy AI via Guided Journey for Purchase Order Requisition Item Reviews
 
-## ERP & SCM: Guided Journey for PO Requisition Item Reviews
-
-### Introduction
+## Introduction
 
 In this activity you will learn how easily extend Fusion SaaS application to include external content to guide users to better decisions.
 
@@ -22,9 +20,7 @@ In this activity you will use a Guided Journey Task with User Defined Content an
 
 Estimated Time: 15 minutes
 
-As you follow along, do not forget to think about the Adventure Check Point questions you'll answer at the end of this adventure!
-
-###  Begin Exercise
+##  Begin Exercise
 
 1. You'll start by going to the Guided Journey screen.
 
@@ -177,10 +173,9 @@ As you follow along, do not forget to think about the Adventure Check Point ques
 
    ![Finish](../04-extend-oicai-prc/images/poimage020.jpg)
 
-21. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+21. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
-
+    > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
@@ -192,7 +187,7 @@ You also learned how to leverage 3rd party Generative AI capabilities by leverag
 
 So, check your with you team, double-check your racing harness and get ready for our next Adventure.
 
-### Learn More
+## Learn More
 
 - [Extending Oracle Cloud Applications with Visual Builder Studio](https://docs.oracle.com/en/cloud/paas/visual-builder/visualbuilder-building-appui)
 - [Overview of Guided Journeys](https://docs.oracle.com/en/cloud/saas/human-resources/faijh/overview-of-guided-journeys.html)
@@ -203,4 +198,4 @@ So, check your with you team, double-check your racing harness and get ready for
 
 - **Author** - Charlie Moff, Distinguished Cloud Technologist; Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist
 - **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-- **Last Updated By/Date** - Sajid Saleem, November 2025
+- **Last Updated By/Date** - Sajid Saleem, July 2026

@@ -1,20 +1,18 @@
-# Assemble and Test an AI Agent Team
+# Assemble and Test an AI Agent Team using AI Agent Studio
 
-## **Assemble and Test an AI Agent Team using AI Agent Studio**
-
-### **Introduction**
+### Introduction
 
 AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
 
-### **Objectives**
+### Objectives
 
 In this activity you will use Oracle Fusion AI Agent Studio to
 * Assemble an Agent Team using your previously created Benefits Advisor Agent and seeded FMLA Absence Agent.
 * Test the Agent Team
 
-Estimated Time: 10-15 minutes
+Estimated Time: 10 minutes
 
-### **Begin Exercise**
+## Begin Exercise
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
 
@@ -131,10 +129,9 @@ An Agent team is a group of AI agents collaborating on tasks, where a supervisor
 
     ![agent dialogue 3](../05d-pre-agent-team-hcm/images/pre-agent-team-hcm-image017.jpg) <br>
 
+18. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-18. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
@@ -146,10 +143,7 @@ AI Agent Studio is a design-time environment that provides a set of tools to cre
 
 Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
 
-**You have successfully completed the Activity!**
-
-
-### Learn More
+## Learn More
 
 * [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
 * [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
@@ -160,4 +154,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, March 2026
+* **Last Updated By/Date** - Sajid Saleem, July 2026

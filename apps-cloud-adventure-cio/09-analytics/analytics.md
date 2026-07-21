@@ -1,8 +1,6 @@
-# Analytics
+# ERP & HCM Analytics: Unify finance and workforce-related data to understand changing workforce dynamics and gain comprehensive insights
 
-## ERP & HCM: Unify finance and workforce-related data to understand changing workforce dynamics and gain comprehensive insights
-
-### Introduction
+## Introduction
 
 Oracle Fusion Data Intelligence Platform is a family of prebuilt, cloud native analytics applications for Oracle Cloud Applications that provides line-of-business users with ready-to-use insights to improve decision-making.
 
@@ -16,9 +14,7 @@ In this activity, you will Create analytics across different lines of business t
 
 Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
-### Begin Exercise
+## Begin Exercise
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insights.
 
@@ -37,9 +33,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     > (1) Enter assigned username and Fusion Analytics Password  <br>
 
- > (2) Click on the ‘Sign In’ <br>
+    > (2) Click on the ‘Sign In’ <br>
 
-![Login](../09-analytics/images/image023.png)
+    ![Login](../09-analytics/images/image023.png)
 
 4. A finance Watchlist comprising several Tiles is available on the home page.
 
@@ -59,18 +55,17 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     Instead of building manually, let's use the Auto Insights feature.
 
-
     > Click on the Auto Insights Icon  ![Auto Insights Icon](../09-analytics/images/icon003.png)  as shown in the image.
 
     ![Workbook Design Mode](../09-analytics/images/image003.png)
 
-6.  Next, let’s expand the Auto Insights pane for better observability.
+6. Next, let’s expand the Auto Insights pane for better observability.
 
     > Click on the Expand / Shrink Icon  ![Expand / Shrink Icon ](../09-analytics/images/icon004.png)  as shown in the image.
 
     ![Workbook Design Mode](../09-analytics/images/image004.png)
 
-7.  The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories.
+7. The Auto Insights function has crawled the data set and brought expense-related information critical to our analysis. Let’s use the Top 10 Expenses by expense categories.
 
     > (1) Locate the “Top 10 Expense Categories by Expenses” insight and click the Add Icon  ![Add Icon ](../09-analytics/images/icon006.png)  shown in the image. This will add the Insight to the Canvas.  <br>
 
@@ -78,7 +73,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Auto insights view](../09-analytics/images/image007.png)
 
-8.  Now, we can compare margin and cost side by side.
+8. Now, we can compare margin and cost side by side.
 
     Payroll expenses emerge as the highest cost. We will delve deeper into payroll expenses to identify their components.
 
@@ -86,7 +81,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Analytics view 1](../09-analytics/images/image008.png)
 
-9.  Combining datasets from multiple “Lines of Business” allows an individual to conduct a deep dive into the actual problems.
+9. Combining datasets from multiple “Lines of Business” allows an individual to conduct a deep dive into the actual problems.
 
     > (1) Expand the HCM Core transactions data set from the Data Panel on the left.  <br>
 
@@ -102,23 +97,23 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Analytics view 3](../09-analytics/images/image010.png)
 
-10.  We need to perform trend analysis to understand when the expense anomaly started occurring and whether it is consistent across all expense types.
+10. We need to perform trend analysis to understand when the expense anomaly started occurring and whether it is consistent across all expense types.
 
-> Drag the **Accounts** column from the Categories section into the Color section.
+    > Drag the **Accounts** column from the Categories section into the Color section.
 
-![Analytics view 4](../09-analytics/images/image011.png)
+    ![Analytics view 4](../09-analytics/images/image011.png)
 
-> Next, expand the Fiscal Date folder in the Data Panel, locate the **Month** column, and drag and drop it into the Categories section.
+    > Next, expand the Fiscal Date folder in the Data Panel, locate the **Month** column, and drag and drop it into the Categories section.
 
-![Analytics view 5](../09-analytics/images/image012.png)
+    ![Analytics view 5](../09-analytics/images/image012.png)
 
-11.  We can now see expense amounts displayed across time and expense categories.
+11. We can now see expense amounts displayed across time and expense categories.
 
-On analyzing the trend, it appears that while Base Salary and Wages have remained constant, overtime and contract labor have increased since May.
+    On analyzing the trend, it appears that while Base Salary and Wages have remained constant, overtime and contract labor have increased since May.
 
-Let's explore and find out why overtime and contract labor have increased.
+    Let's explore and find out why overtime and contract labor have increased.
 
-![Month by Month View](../09-analytics/images/image013.png)
+    ![Month by Month View](../09-analytics/images/image013.png)
 
 12. Overtime and Contract labor are typically associated with Turnover. Let's see if it had any impact.
 
@@ -128,7 +123,7 @@ Let's explore and find out why overtime and contract labor have increased.
 
     ![Analytics view 6](../09-analytics/images/image014.png)
 
-13.  Another factor that impacts Overtime and Contract labor is employee absences.
+13. Another factor that impacts Overtime and Contract labor is employee absences.
 
    > Drag the **Absences** column from the data panel and drop it in the values section below the **Turnover** column.
 
@@ -136,7 +131,7 @@ Let's explore and find out why overtime and contract labor have increased.
 
    ![Analytics view 8](../09-analytics/images/image016.png)
 
-14.  This brings all relevant columns onto the canvas. We can now co-relate several attributes and arrive at the correct conclusion.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance.
+14. This brings all relevant columns onto the canvas. We can now co-relate several attributes and arrive at the correct conclusion.  We can now see the pattern clearly. Beginning in March, absences and turnover started increasing, which led to an increase in overtime and the hiring of contract labor.  This is ultimately reflected in the books of accounts in Finance.
 
 15. Let’s understand how the trend looks like in the future. We will use the built in Statistical Analysis function like forecast to under the future
 
@@ -148,9 +143,9 @@ Let's explore and find out why overtime and contract labor have increased.
 
     ![Analytics view 12](../09-analytics/images/image022.png)
 
-17. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+17. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
 ## ERP & SCM: Unify finance and supply chain data to identify bottlenecks and optimize resource allocation
 
@@ -270,21 +265,19 @@ Let's explore and find out why overtime and contract labor have increased.
 
     ![Analytics view](../09-analytics/images/scm-009.png)
 
-15. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+15. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
 You discovered how effortlessly Fusion Analytics enables the creation of content and analysis of data. By integrating diverse data sources, you were able to delve deeper from summary information to detailed analysis, uncovering root causes. You then shared your discoveries with a broader audience, making the insights accessible and impactful.
 
-**You have successfully completed the Activity!**
-
-### Learn More
-* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/25r3/index.html)
+## Learn More
+* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/26r2/index.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 * **Author** - Sohel Jeelani, Distinguished Analytics Solution Engineer
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, July 2026

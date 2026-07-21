@@ -1,22 +1,18 @@
-# Configure
+# HCM: Configure the Change Salary Experience
 
-## **HCM: Configure the Change Salary Experience**
-
-### **Introduction**
+## Introduction
 
 Oracle offers hundreds of prebuilt pages, workflows and forms “out of the box” as part of the Oracle Fusion Cloud.  Many of our customers want to configure these pages and workflows to meet their specific business needs.  You can unify your experience in our applications by using Redwood.
 
 Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.
 
-### **Objectives**
+### Objectives
 
 In this lab, you will use Redwood to quickly and efficiently improve the user experience in Oracle Fusion Cloud.
 
 Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
-### **Begin Exercise**
+## Begin Exercise
 
 1. You will use Redwood, Oracle’s next-generation design system, and Visual Builder to quickly and efficiently update Change Salary Page for Non-HR managers.
 
@@ -40,7 +36,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![My Team Page](../02-configure-hcm/images/configure-hcm-image004.jpg)
 
-5.  Now you can search for and select a person to begin the Change Salary process.
+5. Now you can search for and select a person to begin the Change Salary process.
 
     > (1) Type  keyword **Reed** OR **Barrett Reed** in the search field. <br>
 
@@ -48,7 +44,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Change Salary Page](../02-configure-hcm/images/configure-hcm-image005.jpg)
 
-6.  You are now in the first step of the Change Salary process.  You're not going to make any changes to this step, so you'll need to enter the requested information before moving to step 2.  Enter the information as described below.
+6. You are now in the first step of the Change Salary process.  You're not going to make any changes to this step, so you'll need to enter the requested information before moving to step 2.  Enter the information as described below.
 
     > (1) When does the salary change start?: Type a **future date (eg. 12/31/26)** <br>
 
@@ -67,7 +63,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Change Salary Page 2nd page](../02-configure-hcm/images/configure-hcm-image007.jpg)
 
-8.  Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the application development lifecycle: design, build, test, and deploy. You will use VB Studio to make the required changes to the Change Salary Form.
+8. Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the application development lifecycle: design, build, test, and deploy. You will use VB Studio to make the required changes to the Change Salary Form.
 
     > (1) Click on **Configure Fields and Regions** button.
 
@@ -102,7 +98,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
       ![Fields and Regions](../02-configure-hcm/images/configure-hcm-image012.jpg)
 
-13.  Now you want to add and hide fields.  You do this by changing the value in the Hidden column for specific fields.  Make the selections as shown below.
+13. Now you want to add and hide fields.  You do this by changing the value in the Hidden column for specific fields.  Make the selections as shown below.
 
      > (1) Action Reason: select **Visible** from the dropdown in the Hidden column.   <br>
 
@@ -135,48 +131,48 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Validation](../02-configure-hcm/images/configure-hcm-image016.jpg)
 
-17.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
+17. Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
 
-     > (1) Click on the **Edit** button.
+    > (1) Click on the **Edit** button.
 
-     ![Create Validation](../02-configure-hcm/images/configure-hcm-image017.jpg)
+    ![Create Validation](../02-configure-hcm/images/configure-hcm-image017.jpg)
 
-18.  Instead of using the pre-defined condition rows, you'll create a new one.
+18. Instead of using the pre-defined condition rows, you'll create a new one.
 
-     > (1) Click the ![add condition](../gen-images/condition.png) button.
+    > (1) Click the ![add condition](../gen-images/condition.png) button.
 
-     ![Create Condition](../02-configure-hcm/images/configure-hcm-image018.jpg)
+    ![Create Condition](../02-configure-hcm/images/configure-hcm-image018.jpg)
 
-19.  You now have a blank row at the bottom of the Condition section.  You'll fill out this row for your new Adjustment Percentage condition.  <br>![caution](../gen-images/cautionflagextrasmalltransparent2.png) **Note:** **Adjustment Percentage** will appear multiple times in the list of values, so be sure to select the correct one as described below.
-     > (1) Click the dropdown ![drop down icon](../gen-images/icon014_downarrow.png) icon in the first column of the blank row.<br>
-     > (2) Click the Expand ![expand icon](../gen-images/icon013_dropdown.png) icon next to **{} Field Values** to expand that section.
+19. You now have a blank row at the bottom of the Condition section.  You'll fill out this row for your new Adjustment Percentage condition.  <br>![caution](../gen-images/cautionflagextrasmalltransparent2.png) **Note:** **Adjustment Percentage** will appear multiple times in the list of values, so be sure to select the correct one as described below.
+    > (1) Click the dropdown ![drop down icon](../gen-images/icon014_downarrow.png) icon in the first column of the blank row.<br>
+    > (2) Click the Expand ![expand icon](../gen-images/icon013_dropdown.png) icon next to **{} Field Values** to expand that section.
 
-     ![Create Validation](../02-configure-hcm/images/configure-hcm-image019.jpg)
+    ![Create Validation](../02-configure-hcm/images/configure-hcm-image019.jpg)
 
-20.  The condition will be based on the Adjustment Percentage, so you need to select that from the resulting dropdown list.
+20. The condition will be based on the Adjustment Percentage, so you need to select that from the resulting dropdown list.
 
-     > (1) Click the Expand ![expand icon](../gen-images/icon013_dropdown.png) icon next to **{} Salary Details** to expand that section.<br>
-     > (2) Select **# Adjustment Percentage** from the Salary Details section.
+    > (1) Click the Expand ![expand icon](../gen-images/icon013_dropdown.png) icon next to **{} Salary Details** to expand that section.<br>
+    > (2) Select **# Adjustment Percentage** from the Salary Details section.
 
-     ![Create Validation](../02-configure-hcm/images/configure-hcm-image020.jpg)
+    ![Create Validation](../02-configure-hcm/images/configure-hcm-image020.jpg)
 
-21.  Next you will fill in the rest of the condition.
+21. Next you will fill in the rest of the condition.
 
-     > (1) Select **greater than** from the dropdown in the second column.   <br>
-     > (2) Enter **15** in the third column.<br>
-     > (3) Click the ![Add message button](../gen-images/plus_message_button.png) button.<br>
+    > (1) Select **greater than** from the dropdown in the second column.   <br>
+    > (2) Enter **15** in the third column.<br>
+    > (3) Click the ![Add message button](../gen-images/plus_message_button.png) button.<br>
 
-     ![Create Validation](../02-configure-hcm/images/configure-hcm-image021.jpg)
+    ![Create Validation](../02-configure-hcm/images/configure-hcm-image021.jpg)
 
 22. Now you will configure the error message users will see if they enter an Adjustment Percentage greater than 15%.
 
-     > (1) Summary:  Type **Adjustment Percentage is too high**.    <br>
-     > (2) Severity:  Select **Error** from the dropdown. <br>
-     > (3) Detail:  Type **The Adjustment Percentage must be lower than 15%**. <br>
-     > (4) Click the ![done icon](../gen-images/icon_done.png) icon to complete the definition of this rule.<br>
-     > (5) Click the ![x icon](../gen-images/icon011_x.png) to close the Validations section.<br>
+    > (1) Summary:  Type **Adjustment Percentage is too high**.    <br>
+    > (2) Severity:  Select **Error** from the dropdown. <br>
+    > (3) Detail:  Type **The Adjustment Percentage must be lower than 15%**. <br>
+    > (4) Click the ![done icon](../gen-images/icon_done.png) icon to complete the definition of this rule.<br>
+    > (5) Click the ![x icon](../gen-images/icon011_x.png) to close the Validations section.<br>
 
-     ![Create Validation](../02-configure-hcm/images/configure-hcm-image022.jpg)
+    ![Create Validation](../02-configure-hcm/images/configure-hcm-image022.jpg)
 
 23. Well done.  You're going to do one more configuration that will display an AI Agent to assist the user in determining the appropriate salary change by checking market compensation information.  You'll do this by leveraging the Guided Journey configuration feature.  Guided Journeys allow you to embed information, including documents, links, reports and more in standard application screens.  You'll use it to embed an AI Agent.
 
@@ -184,32 +180,32 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
     > (2) Type **Salary** in the **Set Guided Journeys Code at the Page Level** field.<br>
     > (3) Select **Salary Advisor Agent** from the resulting dropdown.<br>
 
-       ![Create Validation](../02-configure-hcm/images/configure-hcm-image023.jpg)
+    ![Create Validation](../02-configure-hcm/images/configure-hcm-image023.jpg)
 
 24. You can see the the Salary Advisor Agent Task Agent banner appear on the page.  You're done with configurations and ready to Preview your changes.
 
     > (1) Click on the **Preview** ![Fields and Regions, Conditions](../gen-images/preview.png) icon in the upper right of the screen.  The Preview will appear in a new browser tab.
 
-       ![Create Validation](../02-configure-hcm/images/configure-hcm-image024.jpg)
+    ![Create Validation](../02-configure-hcm/images/configure-hcm-image024.jpg)
 
 25. You have re-entered the Change Salary Form. Before submitting the salary change, you'll use the Salary Advisor Agent to get some marketplace comparative estimates.
 
     > (1) Click on the **Ask Oracle** ![Ask Oracle Logo Button](../gen-images/ask-oracle-logo.jpg) button.
 
-       ![Create Validation](../02-configure-hcm/images/configure-hcm-image025.jpg)
+    ![Create Validation](../02-configure-hcm/images/configure-hcm-image025.jpg)
 
 26. You want to see some prospective salary information for Barrett Reed based on variety attributes, including his title, location, and years of service.
 
     > (1) In the **Ask Oracle** dialog box on the bottom right of the screen. tu[e] **What is the market compensation estimate for Barrett Reed**.<br>
     > (2) Press the **<****Enter****>** key or click the **Up Arrow** icon ![up arrow icon](../gen-images/uparrow.jpg)<br>
 
-       ![Create Validation](../02-configure-hcm/images/configure-hcm-image026.jpg)
+    ![Create Validation](../02-configure-hcm/images/configure-hcm-image026.jpg)
 
 27. You can now see how Barrett Reed compares to market averages and medians.
 
     > (1) Review the market compensation information and when finished, click the the ![x icon](../gen-images/icon011_x.png) icon in the upper right.
 
-       ![Create Validation](../02-configure-hcm/images/configure-hcm-image027.jpg)
+    ![Create Validation](../02-configure-hcm/images/configure-hcm-image027.jpg)
 
 28. Based on the AI Agent response, you decide to move him into the higher portion of the estimated range by increasing his salary to $70,000, which is approximately a 20% increase.  You can start the Change Salary Request by entering the information below.
 
@@ -232,13 +228,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Change Salary Screen 2 error message](../02-configure-hcm/images/configure-hcm-image030.jpg)
 
-31.  Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+31. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-     > **You've completed this Adventure**.  Please close this tab and the Visual Builder tab.
-
-32. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-
-    [![AI Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**.  Please close this tab and the Visual Builder tab.
 
 ### Summary
 
@@ -248,12 +240,12 @@ And remember, application configurations are automatically maintained during the
 
 **Sync up as a team, lock in your harness, get ready for the the next high-octane adventure.**
 
-### Learn More
+## Learn More
 * [Getting Started with Redwood](https://redwood.oracle.com/?pageId=COREAF423D6E53F34D12BCD7BF41B42BDAC3&shell=getting-started)
-* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/26a/oaext/overview-of-using-visual-builder-studio.html#s20072861)
+* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/26c/oaext/overview-of-using-visual-builder-studio.html#s20072861)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist; Casey Doody, Cloud Technologist; Sajid Saleem, Master Principal Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, January 2026
+* **Last Updated By/Date** - Sajid Saleem, July 2026
