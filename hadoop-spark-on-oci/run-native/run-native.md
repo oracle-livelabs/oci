@@ -78,7 +78,7 @@ The operator has **no public IP** — you reach it only through the managed Bast
     </copy>
     ```
 
-   It should list the **same** key as on your workstation. If it says *"no identities"* or *"Could not open a connection to your authentication agent"*, go back to Task 1 on your workstation and reconnect with `-A`.
+    It should list the **same** key as on your workstation. If it says *"no identities"* or *"Could not open a connection to your authentication agent"*, go back to Task 1 on your workstation and reconnect with `-A`.
 
 4. See what the stack deployed:
 
@@ -103,7 +103,7 @@ Read raw CSV from Object Storage, clean and partition it, and write Parquet to t
     </copy>
     ```
 
-   The script uploads `customers_etl.py` and `sample_customers.csv`, ensures a Data Flow application `<prefix>-customers-etl` exists, and submits a run. It prints the **run OCID**.
+    The script uploads `customers_etl.py` and `sample_customers.csv`, ensures a Data Flow application `<prefix>-customers-etl` exists, and submits a run. It prints the **run OCID**.
 
 2. Track the run to `SUCCEEDED` (usually 1–2 minutes cold):
 
@@ -135,7 +135,7 @@ Run a Spark job with `spark-submit` against **YARN**, reading from and writing t
     </copy>
     ```
 
-   `submit.sh` does **not** run the job for you (Spark must run on a BDS node). It resolves the cluster's utility/master node IPs and prints the exact `scp` / `ssh` / `spark-submit` commands to run. If the cluster is still provisioning, it prints each cluster's state instead — wait for `ACTIVE` and retry.
+    `submit.sh` does **not** run the job for you (Spark must run on a BDS node). It resolves the cluster's utility/master node IPs and prints the exact `scp` / `ssh` / `spark-submit` commands to run. If the cluster is still provisioning, it prints each cluster's state instead — wait for `ACTIVE` and retry.
 
 2. Follow the printed commands. They copy the job and data to a node, load the CSV into HDFS, and submit on YARN in cluster mode. For a **non-secure** cluster they look like:
 
@@ -177,7 +177,7 @@ Run the same Spark job repeatedly without paying the cold-start tax. A Data Flow
     </copy>
     ```
 
-   It stages `hourly_aggregate.py` + `events.csv`, ensures a `<prefix>-hourly-aggregate` application attached to the warm pool, and submits a run that writes a Parquet rollup (`event_count` + `unique_users` per hour per event type).
+    It stages `hourly_aggregate.py` + `events.csv`, ensures a `<prefix>-hourly-aggregate` application attached to the warm pool, and submits a run that writes a Parquet rollup (`event_count` + `unique_users` per hour per event type).
 
 2. **Submit it back-to-back a few times**, then compare start latencies — subsequent runs land on hot executors:
 
@@ -204,7 +204,7 @@ This is the enterprise shape: a **Kerberized, Ranger-secured, highly-available**
     </copy>
     ```
 
-   `check.sh` confirms the cluster is secure + HA (warning, and naming the form field, if not), prints a table of every node (type / IP / state), and shows the steps to use the Kerberized cluster: SSH in, `kinit` a principal, then `spark-submit`.
+    `check.sh` confirms the cluster is secure + HA (warning, and naming the form field, if not), prints a table of every node (type / IP / state), and shows the steps to use the Kerberized cluster: SSH in, `kinit` a principal, then `spark-submit`.
 
 2. Confirm the bootstrap tuning landed on a node:
 

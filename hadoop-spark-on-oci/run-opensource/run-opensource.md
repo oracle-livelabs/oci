@@ -60,7 +60,7 @@ The operator installs HDFS, the KDC, and the Spark Operator asynchronously after
     </copy>
     ```
 
-   You should see the `spark-operator`, and (if enabled) `namenode-0`, the `datanode-*` pods, and `kdc-0`, all `Running`/`Ready`.
+    You should see the `spark-operator`, and (if enabled) `namenode-0`, the `datanode-*` pods, and `kdc-0`, all `Running`/`Ready`.
 
 3. Move into the staged demos:
 
@@ -84,7 +84,7 @@ Prove Spark-on-Kubernetes works with no external storage: the Spark Operator sch
     </copy>
     ```
 
-   The script submits a `spark-only-demo` SparkApplication, waits for completion, and prints the proof from the driver log.
+    The script submits a `spark-only-demo` SparkApplication, waits for completion, and prints the proof from the driver log.
 
 
 2. (Optional) Clean up just this demo:

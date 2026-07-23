@@ -76,7 +76,7 @@ The form is rendered from the stack's `schema.yaml`.
     - **Deploy HDFS**: Kerberos-secured HDFS (NameNode + DataNodes) on the cluster
     - **Deploy OCI Object Storage**: a private bucket as a data lake, wired to Spark via Workload Identity
 
-   To run all three demos in the next lab, keep **both** enabled.
+    To run all three demos in the next lab, keep **both** enabled.
 
 5. **Spark** — leave **Deploy Apache Spark (Spark Operator)** checked.
 
