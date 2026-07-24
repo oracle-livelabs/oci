@@ -13,7 +13,7 @@ Extract Vehicle Information from the Asset Description
 - Set the Model Year to "2025"
 
 Retrieve Recall Data
-- Use the F1_EXTERNAL_VEHICLE_RECALL_API_TOOL.recallsByVehicle function with make, model and model year to retrieve recall information
+- Use the F1_AIA_EXTERNAL_VEHICLE_RECALL_API_TOOL.recallsByVehicle function with make, model and model year to retrieve recall information
 - Present Recall Details
 - Clearly summarize the recall information returned by the tool.
 - Do not infer, assume, or fabricate information - respond only with data provided by the recall tool.

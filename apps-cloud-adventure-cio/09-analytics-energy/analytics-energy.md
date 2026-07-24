@@ -1,36 +1,36 @@
-# Analytics
+# ERP Analytics: Create analytics across different lines of business to derive better business insight
 
-## ERP: Create analytics across different lines of business to derive better business insight
+## Introduction
 
-### Introduction
+Oracle Fusion Data Intelligence (FDI) Platform delivers a unified, fully managed software-as-a-service experience for connecting, analyzing, and activating all your business data. With curated data, prebuilt analytics, and embedded artificial intelligence, organizations can gain deeper insights, drive innovation, and make faster, data driven decisions across the enterprise.
 
-Oracle Fusion AI Data Platform (Fusion AIDP) Platform delivers a unified, fully managed software-as-a-service experience for connecting, analyzing, and activating all your business data. With curated data, prebuilt analytics, and embedded artificial intelligence, organizations can gain deeper insights, drive innovation, and make faster, data driven decisions across the enterprise.
-
-Built on Oracle AI Data Platform, the Fusion AIDP equips business leaders with unified analytics and built-in AI to connect enterprise data, surface deeper insights, and accelerate confident decisions.
+Built on Oracle AI Data Platform, the FDI equips business leaders with unified analytics and built-in AI to connect enterprise data, surface deeper insights, and accelerate confident decisions.
 
 This lab enables business users to explore data, leverage embedded AI capabilities, investigate trends, and uncover patterns or outliers, helping them turn insights into action.
 
 ### Objectives
 
-In this activity, you will use Fusion AI Data Platform to
+In this activity, you will use Fusion Data Intelligence to
 * Create analytics across different lines of business.
 * Leverage embedded AI models to quickly implement, validate and operationalize AI.
 * Review findings and visualize results.
 
-### Begin Exercise
+Estimated Time: 10-15 minutes
+
+## Begin Exercise
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insights.
 
     ![Analytics OBJs](../09-analytics-energy/images/analytics-energy-image001.png)
 
-2. Oracle Fusion AI Data Platform is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
+2. Oracle Fusion Data Intelligence is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making. 
 
     > (1) Click on the **‘Analytics’** tab. <br>
-    > (2) Click on the **Fusion AI Data Platform** icon. <br>
+    > (2) Click on the **Fusion Data Intelligence** icon. <br>
 
     ![Login](../09-analytics-energy/images/analytics-energy-image002.png)
 
-3. After a successful login, you will land on the Fusion AI Data Platform home page.
+3. After a successful login, you will land on the Fusion Data Intelligence home page.
 
     > (1) Enter assigned username and Fusion Analytics Password.  <br>
 
@@ -79,7 +79,7 @@ In this activity, you will use Fusion AI Data Platform to
 
     ![Workbook Design Mode](../09-analytics-energy/images/analytics-energy-image008.png)
 
-9. First thing we will look at is how Fusion AIDP can help us look at Reasons for Approvals using the explain functionality.
+9. First thing we will look at is how FDI can help us look at Reasons for Approvals using the explain functionality.
 
     > (1) Click on the down arrow to expand **Energy Department Master**.  <br>
 
@@ -210,21 +210,19 @@ In this activity, you will use Fusion AI Data Platform to
 
     ![Workbook Design Mode View 7](../09-analytics-energy/images/analytics-energy-image025.png)
 
-26. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+26. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
-You discovered how effortlessly Fusion AI Data Platform enables content creation and data analysis. With the help of AI, you moved from high-level performance summaries to detailed energy approval/rejected insights, uncovering trends and opportunities for your managers.
+You discovered how effortlessly Fusion Data Intelligence enables content creation and data analysis. With the help of AI, you moved from high-level performance summaries to detailed energy approval/rejected insights, uncovering trends and opportunities for your managers.
 
-**You have successfully completed the Activity!**
-
-### Learn More
-* [Get Started with  Fusion AI Data Platform](https://www.oracle.com/fusion-ai-data-platform/)
+## Learn More
+* [Get Started with  Fusion Data Intelligence](https://www.oracle.com/fusion-ai-data-platform/)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 * **Author** - Xavier Ramirez, Senior Analytics Solution Engineer
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Casey Doody, Sajid Saleem, February 2026
+* **Last Updated By/Date** - Sajid Saleem, July 2026

@@ -1,8 +1,6 @@
-# Create AI Agents and Agent Teams for your enterprise
+# Create Document Tool and AI Agent (RAG) using AI Agent Studio
 
-## Create Document Tool and Agent (RAG) using AI Agent Studio
-
-### Introduction
+## Introduction
 
 AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
 
@@ -14,7 +12,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 Estimated Time: 10-15 minutes
 
-### **Pre-requisite**
+## Pre-requisite
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
 As a pre-requisite for this adventure, please download following files
@@ -26,7 +24,7 @@ As a pre-requisite for this adventure, please download following files
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05a-rag-agent-hcm/files/Prompt-Benefits-Advisor-Agent.txt)
 
-### **Begin Exercise**
+## Begin Exercise
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
 
@@ -139,7 +137,7 @@ Your responsibilities include:
 
 Benefit Policies:
   - Clearly explain the eligibility, coverage, and compliance requirements outlined in the company benefits policies.
-  - Use the CA_Benefits_Document_Tool tool to retrieve policy details when answering questions.
+  - Use the AIA_Benefits_Document_Tool tool to retrieve policy details when answering questions.
 
 IMPORTANT GUIDELINES
   - Provide concise, factual answers based strictly on the data retrieved.
@@ -179,6 +177,9 @@ IMPORTANT GUIDELINES
 
       ![Add Tools Create](../05a-rag-agent-hcm/images/rag-agent-hcm-image015.jpg) <br>
 
+16. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+
+    > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
@@ -190,10 +191,7 @@ AI Agent Studio is a design-time environment that provides a set of tools to cre
 
 Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
 
-**You have successfully completed the Activity!**
-
-
-### Learn More
+## Learn More
 
 * [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
 * [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
@@ -204,4 +202,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, February 2026
+* **Last Updated By/Date** - Sajid Saleem, July 2026
