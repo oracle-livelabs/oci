@@ -92,176 +92,102 @@ Now, we can see all of the information that was scanned in by the agent. The hea
 
 <!-- ============================================================ -->
 
-### Step 7: Open **Ledger Agent**
+### Step 7: Analyze Payments
 
-Now that the invoice is processed, we need to ensure accounting accuracy as well as monitoring the general ledger. 
+Amy will now use the payments agent. Amy evaluates payment options and benefits in light of working capital goals. The agent works with Amy to manage and optimize payment processing using conversational and insights-driven experiences.
 
-We will use the new **Ledger Agent** for this process. The agent helps review and manage ledger activity. It guides users through checks, exceptions, and next steps, so the work is easier to complete.
+Open the **Payment Agent** tab and select the **Payment Agent** tile.
 
-1. Select the **Ledger Agent** tab.
-2. Select the **Ledger Agent** tile.
+   ![Open Payment Agent](assets/images/exercise-1-4-pmt-step-07.png)
 
-![Open Ledger Agent](assets/images/exercise-1-4-step-07.png)
+### Step 8: Insight View
 
-<!-- ============================================================ -->
+The Insights view anchors the new payments experience by surfacing payment run status, exceptions, delays, and patterns that may require operational attention, helping Amy quickly see what is happening and what needs action. It provides visibility into pending, failed, or delayed payments; failed transmission or acknowledgment file processing; pending approvals that require attention; and other conditions that can affect timely, accurate payment processing.
 
-### Step 8: Open an accounting process exception insight
+Select the insight below labeled **Payment Run Readiness**
 
-The **Ledger Agent** dashboard shows insights into journal activity, balances, and ledger exceptions. These insights help users spot issues, understand trends, and decide what to review next.
+![Open Payment Run Readiness](assets/images/exercise-1-4-pmt-step-08.png)
 
-1. Select the **Accounting Process Exception** insight that summarizes payables issues.
+### Step 9: Review Payment Runs
 
-![Accounting Process Exception insight](assets/images/exercise-1-4-step-08.png)
+Amy has an option to review payment runs that require immediate user review and action. Invoices in shortlisted supplier offers that are not ready for payment, payment schedules or upcoming payment runs require readiness review.
 
-<!-- ============================================================ -->
+Select the **Payments** tab at the bottom of the screen to review payment runs requiring attention.
 
-### Step 9: Ask **Ledger Agent** about exceptions
+   ![Review payment runs](assets/images/exercise-1-4-pmt-step-09.png)
 
-The agent provides a list of exceptions based on the insight. We can see details of the errors. We can also prompt the agent further to uncover more information to help us resolve this before the period close. 
+### Step 10: Payment Execution Assistant
 
-1. In the **Ask Ledger Agent** chat box, type:
+The Payment Execution Assistant supports the scheduling, submission, and monitoring of payment processing. Within payment execution, Amy can view all the processes that need her attention. Approvals or oversight might be needed for the system to process these further. 
 
-```text
-<copy>
-Show the journals with exceptions for US Primary ledger that are within the Subledger Transaction Data Exception category.
-</copy>
-```
+ Select the **Payment Options** tab at the top of the screen.
 
-![Ask Ledger Agent exception prompt](assets/images/exercise-1-4-step-09.png)
+   ![Open Payment Options](assets/images/exercise-1-4-pmt-step-10.png)
 
-<!-- ============================================================ -->
+### Step 11: Payment Options Assistant
 
-### Step 10: Return to Insights
+The Payment Options Assistant helps review suppliers’ upcoming payable installments and identify which are due in the coming weeks. Amy will use this assistant to further inquire about upcoming payments. 
 
-The agent returns more granular details with action items for resolving the accounting issue.
+In the Ask Oracle search bar, enter:
 
-1. Select the **Insights** tab in the bottom-left corner.
+   ```
+   <copy>
+   Show supplier invoices due in the next 30 days for US1 Business Unit in USD
+   </copy>
+   ```
 
-![Ledger exception results](assets/images/exercise-1-4-step-10.png)
+   ![Search upcoming supplier invoices](assets/images/exercise-1-4-pmt-step-11.png)
 
-<!-- ============================================================ -->
+### Step 12: Payment Optimization
 
-### Step 11: Open monitoring prompts
+The assistant can provide details around Amy’s search, as well as provide follow up actions. Amy wants to see what upcoming benefits are achieved if we pay early.
 
-The Insights dashboard shows created insights and allows you to create additional prompts. You can create prompts to monitor accounts or general ledger activity under their purview, enabling the agent to monitor problem areas and support accounting accuracy and a faster close.
+In the Ask Oracle bar, enter:
 
-1. Select the **Monitoring Prompts** tab.
+   ```
+   <copy>
+   Calculate the financing program benefits on the fetched optimizable upcoming payments
+   </copy>
+   ```
 
-![Monitoring Prompts tab](assets/images/exercise-1-4-step-11.png)
+   ![Calculate financing program benefits](assets/images/exercise-1-4-pmt-step-12.png)
 
-<!-- ============================================================ -->
+### Step 13: Review Cash Flow Impact
 
-### Step 12: Create a new monitoring prompt
+In the Ask Oracle bar, enter:
 
-In just a few clicks, you can create your own prompts
+   ```text
+   <copy>
+   Visualize your new cash flow to better understand liquidity impact.
+   </copy>
+   ```
 
-1. Select the **+** button.
+   ![Visualize cash flow impact](assets/images/exercise-1-4-pmt-step-13.png)
 
-![Create monitoring prompt button](assets/images/exercise-1-4-step-12.png)
 
-<!-- ============================================================ -->
+### Step 14: Review Installment Payments
 
-### Step 13: Select a monitoring prompt template
+Amy now has a solid look into what the future cash flow looks like if these invoices are paid early. Now, she can use the tool to inquire on individual payments, like the one she looked over in payables. 
 
-Prompts can be built from templates or created from scratch.
+In the Ask Oracle bar, enter:
 
-1. Select **AP Liability Variance for Vision Foods Marketing US > 10% QoQ**
+   ```text
+   <copy>
+   Show me the installments that are due for Lee Supplies
+   </copy>
+   ```
 
-![Monitoring prompt template](assets/images/exercise-1-4-step-13.png)
+   ![View Lee Supplies installments](assets/images/exercise-1-4-pmt-step-14.png)
 
-<!-- ============================================================ -->
+### Step 15: Return Home
 
-### Step 14: Build the prompt using natural language
+Traditionally, payment processing has been a manual, scheduling-driven function often limited to conventional methods like Check or ACH. The legacy process lacks real-time guidance on fund utilization, and payment programs are limited to pre-onboarded suppliers. The Payments Agent addresses these challenges by introducing real-time decision support into the payment process.
 
-Users can use natural language to build out these prompts. The agent is smart enough to pick up on the areas of concern as well as understand what the user wants to see. Different frequencies, time frames, and messages can be configured from this dashboard. 
+Select the **Payments** tab at the bottom of the screen, then select the **Home** button in the upper-right corner.
 
-1. In the **Monitoring Prompt** field, type:
+![Return to Payments](assets/images/exercise-1-4-pmt-step-15.png)
 
-```text
-<copy>
-AP Liability US QoQ > 10%
-</copy>
-```
-
-2. Click **Evaluate**.
-3. Notice that the tool populates the required chart of accounts dimensions from the natural language prompt.
-4. Select **Create Prompt**.
-
-![Natural language monitoring prompt](assets/images/exercise-1-4-step-14.png)
-
-<!-- ============================================================ -->
-
-### Step 15: Return to Overview
-
-A new monitoring prompt is created. If the AP liability account changes by more than 10% from the last quarter, the tool alerts the user and provides supporting documentation such as high-value invoices.
-
-1. Select **Overview** in the bottom-left.
-
-![Created monitoring prompt](assets/images/exercise-1-4-step-15.png)
-
-<!-- ============================================================ -->
-
-### Step 16: Ask for supplier-level payables amounts
-
-You can also chat with the agent to find information within the GL. This makes it much easier to find relevant information using natural language.
-
-1. In the search bar, type:
-
-```text
-<copy>
-Breakdown by supplier the total accounted amount for payables invoices for account 62520 for period 05-26
-</copy>
-```
-
-![Supplier-level payables query](assets/images/exercise-1-4-step-16.png)
-
-<!-- ============================================================ -->
-
-### Step 17: Ask for **Lee Supplies** invoices
-
-The agent returns relevant information based on role-based security. If a user requests information outside their permissions, the agent does not provide the details.
-
-We can also prompt the agent to gain more information. 
-
-1. In the chat bar, type:
-
-```text
-<copy>
-Show the invoices for Lee Supplies
-</copy>
-```
-
-![Lee Supplies invoice query](assets/images/exercise-1-4-step-17.png)
-
-<!-- ============================================================ -->
-
-### Step 18: Ask for payables invoices by account and period
-
-Because the system is connected, invoice details can be reviewed from the ledger. Search for the invoice processed for the emergency requisition.
-
-1. In the chat bar, type:
-
-```text
-<copy>
-Show payables invoices for account 63542 in period 07-26
-</copy>
-```
-
-![Payables invoices by account and period](assets/images/exercise-1-4-step-18.png)
-
-<!-- ============================================================ -->
-
-### Step 19: Return home
-
-Now we can see the accounted invoice that was processed by our AP agent. It is broken down by line number.
-
-From the original negotiation all the way through the GL, we were able to leverage agentic AI to streamline this entire process. We are now on track with our project as well as ensuring that close is streamlined. 
-
-1. Select the **Home** button in the top-right corner.
-
-![Accounted invoice results](assets/images/exercise-1-4-step-19.png)
-
-Since these agents helped gather and submit the financial data, it makes it much easier to analyze. As an operations manager, we will now utilize our AI tools within Performance Management to gather insights and predict future metrics. 
+![Return home after payment review](assets/images/exercise-1-4-pmt-step-16.png)
 
 [Proceed to the next lab exercise!] (#next)
 

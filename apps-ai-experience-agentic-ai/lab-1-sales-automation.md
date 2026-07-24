@@ -131,6 +131,9 @@ That was looking at an individual sales opportunity. Now, let’s use the first 
 
 <!-- ============================================================ -->
 
+<!-- ============================================================
+
+
 ### Step 8: Open Sales Command Center
 
 **Sales Command Center** helps sales leaders manage a territory by monitoring account activity, highlighting changes or risks, and recommending next steps for each account and opportunity.
@@ -139,7 +142,7 @@ That was looking at an individual sales opportunity. Now, let’s use the first 
 
 ![Sales Command Center tile](assets/images/exercise-1-1-step-09.png)
 
-<!-- ============================================================ -->
+ ============================================================
 
 ### Step 9: Select an opportunity in the command center
 
@@ -153,7 +156,7 @@ Multi-Use Commercial Build
 
 ![Multi-Use Commercial Build opportunity](assets/images/exercise-1-1-step-10.png)
 
-<!-- ============================================================ -->
+ ============================================================ 
 
 ### Step 10: Review AI communication recommendations
 
@@ -163,7 +166,7 @@ AI is constantly analyzing each opportunity and can provide specific recommendat
 
 ![Communications recommendation](assets/images/exercise-1-1-step-11.png)
 
-<!-- ============================================================ -->
+ ============================================================ 
 
 ### Step 11: Close the generated email
 
@@ -173,7 +176,7 @@ The tool auto-generates an email based on prior communications and next steps la
 
 ![Generated email panel](assets/images/exercise-1-1-step-12.png)
 
-<!-- ============================================================ -->
+ ============================================================ 
 
 ### Step 12: Collapse the agent work area
 
@@ -181,7 +184,7 @@ The tool auto-generates an email based on prior communications and next steps la
 
 ![Collapse agent work area](assets/images/exercise-1-1-step-13.png)
 
-<!-- ============================================================ -->
+ ============================================================ 
 
 ### Step 13: Open the pre-meeting briefs agent
 
@@ -193,7 +196,7 @@ When appointments are set, the tool will automatically generate content to discu
 
 ![Pre-meeting briefs agent](assets/images/exercise-1-1-step-14.png)
 
-<!-- ============================================================ -->
+ ============================================================ 
 
 ### Step 14: Return to the primary browser tab
 
@@ -203,6 +206,8 @@ The agent can pull in customer stakeholders, generate a pre-meeting checklist, g
 2. Select the tab directly to the left of the current tab.
 
 ![Pre-meeting brief output](assets/images/exercise-1-1-step-15.png)
+
+============================================================ -->
 
 [Proceed to the next lab exercise!] (#next)
 
