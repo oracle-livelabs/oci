@@ -1,8 +1,6 @@
-# Audit
+# Audit ERP & SCM: Use REST API to pull Fusion SaaS Application audit data for use in any external system
 
-## ERP & SCM: Use REST API to pull Fusion SaaS Application audit data for use in any external system
-
-### Introduction
+## Introduction
 
 As you have seen in the previous Cloud Adventures, Oracle delivers a fine grained security model which allows companies to enforce tight controls over who has access to both application features and data. While these controls provide administrators with powerful tools, good corporate governance requires that application auditing is used to back up the security controls you implement.
 
@@ -16,15 +14,12 @@ We've designed this journey to be interactive and engaging. Make sure to answer 
 
 With your adventure hat on and a curious mind, prepare for an exhilarating exploration of Fusion Cloud data audit and REST API integration features. Let's embark on this thrilling journey together!
 
-### **Objectives**
-
+### Objectives
 In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
 
 Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
-### Begin Exercise
+## Begin Exercise
 
 1. In this activity you will learn the power and ease of integrating Fusion SaaS application with upstream and downstream systems
 
@@ -131,9 +126,9 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![API Examples](../08-audit/images/image022.png)
 
-10. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+10. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
@@ -141,15 +136,13 @@ As you have seen, the Oracle SaaS applications may be configured to capture who 
 
 This Cloud Adventure also featured the importance of having open REST interfaces for accessing and sharing data with external systems. In the case of audit data, you may want to send this data to a SIEM or data warehouse for analysis.
 
-**You have successfully completed the Activity!**
+## Learn More
 
-### Learn More
-
-* [Oracle Supply Chain & Manufacturing - APIs & Schema](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/25d/api.html)
-* [Set Up Auditing for Oracle Fusion Applications](https://docs.oracle.com/en/cloud/saas/applications-common/25d/facia/set-up-auditing-for-oracle-fusion-applications.html)
+* [Oracle Supply Chain & Manufacturing - APIs & Schema](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/26c/api.html)
+* [Set Up Auditing for Oracle Fusion Applications](https://docs.oracle.com/en/cloud/saas/applications-common/26c/facia/set-up-auditing-for-oracle-fusion-applications.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 * **Author** - Jamil Orfali, Senior Cloud Technologist; Kris Holmgren, Senior Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, July 2026
