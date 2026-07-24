@@ -16,7 +16,7 @@ Hands-on experience with:
 * Searching for traces in Jaeger by service name.
 * Inspecting trace details, spans, timings, and service interactions.
 
-### **Prerequisites**
+### Prerequisites
 
 This lab assumes you have:
 

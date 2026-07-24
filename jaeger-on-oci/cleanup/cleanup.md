@@ -12,7 +12,7 @@ Estimated Time: 10 minutes
 * Remove the Jaeger compute VM, VCN, subnet, internet gateway, route table, and security list.
 * Confirm that the Terraform destroy operation completes successfully.
 
-### **Prerequisites**
+### Prerequisites
 
 This lab assumes you have:
 
