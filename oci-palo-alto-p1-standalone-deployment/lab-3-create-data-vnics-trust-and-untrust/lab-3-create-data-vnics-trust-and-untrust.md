@@ -39,6 +39,8 @@ Create the untrust VNIC for the Palo Alto VM and assign it the private IPv4 addr
 
     ![Create Data VNICs - step 4](images/scroll-down.png)
 
+<!-- -->
+
 1. Enable **Skip source/destination check**.
 2. For the **Private IPv4 address** select **Manually assign private IPv4 address**.
 3. Specify an **IP address** (`172.16.0.20`).
@@ -66,6 +68,8 @@ Create the trust VNIC for the Palo Alto VM and assign it the private IPv4 addres
     - Scroll down.
 
     ![Create Data VNICs - step 4](images/scroll-down-2.png)
+
+<!-- -->
 
 1. Enable **Skip source/destination check**.
 2. For the **Private IPv4 address** select **Manually assign private IPv4 address**.

@@ -38,6 +38,7 @@ Review the VCN route tables to confirm that the management and untrust subnets c
 
     ![Select the Hub VCN](images/select-hub-vcn.png)
 
+<!-- -->
 
 1. Click on **Subnets**.
 2. Make sure the Subnets are created and that each one has its own custom Route Table and Security List assigned as part of your prerequisites.
@@ -63,6 +64,8 @@ Review the VCN route tables to confirm that the management and untrust subnets c
 
     ![Review VCN Routing and Security - step 3](images/click-rt-management-routing-table.png)
 
+<!-- -->
+
 1. Click on the **Route Rules**.
 2. Make sure you have the following route rule configured:
 
@@ -77,6 +80,8 @@ Review the VCN route tables to confirm that the management and untrust subnets c
     - Click on the **rt-untrust** **Routing Table**.
 
     ![Review VCN Routing and Security - step 3](images/click-rt-untrust-routing-table.png)
+
+<!-- -->
 
 1. Click on the **Route Rules**.
 2. Make sure you have the following route rule configured:
@@ -106,6 +111,8 @@ Review the security lists to confirm that PAN-OS management access and the requi
     - Click on **Security rules**.
 
     ![Review VCN Routing and Security - step 3](images/click-security-rules.png)
+
+<!-- -->
 
 1. Make sure to add in an **Ingress rule** to allow traffic from all sources (`0.0.0.0/0`) to port `TCP/22` (SSH).
 2. Make sure to add in an **Ingress rule** to allow traffic from all sources (`0.0.0.0/0`) to port `TCP/443` (HTTPS).

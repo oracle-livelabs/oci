@@ -41,6 +41,8 @@ Before you begin, ensure you have the following:
 
     - You are now in the **Stack information** step.
 
+<!-- -->
+
 1. For the **origin** of the Terraform configuration, select **My configuration**.
 2. For the **Terraform configuration source**, select **.Zip file**.
 3. Click on **Browse** and select the `livelabs.zip` file you downloaded.
@@ -50,6 +52,8 @@ Before you begin, ensure you have the following:
     ![Deploy Lab using Oracle Resource Manager - step 5](images/click-next-button.png)
 
     - You are now in the **Configure variables** step. The stack exposes a few variables for the deployment.
+
+<!-- -->
 
 1. For **Region**, select the region you want to deploy into (here `eu-frankfurt-1`).
 2. For **Compartment**, select the compartment where the VCN and related resources will be created (here `Iwan`).
@@ -118,6 +122,8 @@ Before you begin, ensure you have the following:
 
     - Now verify the same resources from the Networking console.
 
+<!-- -->
+
 1. Click on the **hamburger menu** in the top left corner.
 2. Click on **Networking**.
 3. Click on **Virtual cloud networks**.
@@ -130,6 +136,8 @@ Before you begin, ensure you have the following:
 
     ![Deploy Lab using Oracle Resource Manager - step 3](images/click-vcn.png)
 
+<!-- -->
+
 1. Click on the **Subnets** tab.
 2. Confirm the three subnets are present:
 
@@ -140,6 +148,8 @@ Before you begin, ensure you have the following:
     | `Trust_Subnet` | `172.16.0.32/28` | Private (Regional) |
 
     ![Deploy Lab using Oracle Resource Manager - step 2](images/private-regional.png)
+
+<!-- -->
 
 1. Click on the **Gateways** tab.
 2. Confirm that **IGW** (Internet Gateway) is present and **Available**.
@@ -161,6 +171,8 @@ Before you begin, ensure you have the following:
     ![Deploy Lab using Oracle Resource Manager - step 2](images/confirm-that-three-custom-security-lists-are-present-alongsi.png)
 
     - Finally, spot-check that a subnet is wired up to its custom route table and security list.
+
+<!-- -->
 
 1. Click on the **Subnets** tab.
 2. Click on the `Management_Subnet`.

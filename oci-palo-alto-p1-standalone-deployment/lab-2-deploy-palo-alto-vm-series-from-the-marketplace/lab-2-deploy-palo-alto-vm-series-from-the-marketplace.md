@@ -51,6 +51,8 @@ Below is a table that contains the IP address information for the Instances.
 
     ![Deploy Palo Alto VM-Series from the Marketplace - step 2](images/click-launch-instance-button.png)
 
+<!-- -->
+
 1. Select a **version** (here we have selected 12.1.2).
 2. Accept the **Oracle Terms of Use and Publisher terms and conditions**.
 3. Click on the **Launch Instance** button.
@@ -62,6 +64,8 @@ Below is a table that contains the IP address information for the Instances.
 
     ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/specify-name-instance.png)
 
+<!-- -->
+
 1. Make sure the correct **image** is selected.
 2. Select your **shape**.
 
@@ -70,6 +74,8 @@ Below is a table that contains the IP address information for the Instances.
     - In this example, I will select the Shape of the VM using an Intel processor **Optimized 3 Flex**.
 
     ![Deploy Palo Alto VM-Series from the Marketplace - step 2](images/this-example-i-will-select-shape-vm-using-intel-processor-op.png)
+
+<!-- -->
 
 1. Open the **advanced options** section.
 2. For the initialization script, select **Paste cloud-init script** and paste the following:
@@ -90,6 +96,9 @@ Below is a table that contains the IP address information for the Instances.
     ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/click-next-button-2.png)
 
     - Notice you are in the **Networking** section.
+
+<!-- -->
+
 1. Specify a **VNIC name**.
 2. For the **Primary network** select existing virtual network. 
 3. Select the VCN called **Hub VCN**.
@@ -99,6 +108,8 @@ Below is a table that contains the IP address information for the Instances.
     - Scroll down
 
     ![Deploy Palo Alto VM-Series from the Marketplace - step 5](images/scroll-down.png)
+
+<!-- -->
 
 1. For the **Private IPv4 address** select Manually assign private IPv4 address, and specify an IP address (**172.16.0.10**).
 2. Enable **Automatically assign public IPv4 address**.
@@ -112,6 +123,8 @@ Below is a table that contains the IP address information for the Instances.
     > **Note:** Make sure you use an public / private keypair that is based on RSA (and not ECDSA).
 
     - An example on how to do this with macOS can be found below.
+
+<!-- -->
 
 1. Create an RSA key pair with the command `ssh-keygen -t rsa`.
 2. `Enter` to use the default path for the key pair storage.
@@ -130,6 +143,8 @@ Below is a table that contains the IP address information for the Instances.
     ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/show-content-public-key-command-copy-content-your-clipboard.png)
 
     - If you’re using Windows, you can generate the SSH key with PuTTY. Refer to this [workshop](https://docs.oracle.com/en/learn/oci-openvpn-part1/index.html#task-31-generate-ssh-key-pair-with-putty-key-generator-optional) for the steps.
+
+<!-- -->
 
 1. Back in the OCI Console. For the **SSH keys** select **Paste public key**.
 2. Paste in the public key that you already have in your clipboard.
@@ -155,6 +170,8 @@ Below is a table that contains the IP address information for the Instances.
     - When the provisioning has been completed notice that the Instance is **Running** and the state is **Succeeded**.
 
     ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/when-provisioning-has-been-completed-notice-that-instance-is.png)
+
+<!-- -->
 
 1. Click on the **Networking** tab.
 2. Notice the Public IPv4 address that OCI has assigned.

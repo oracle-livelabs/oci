@@ -48,6 +48,8 @@ Use the web interface to configure the firewall data-plane interfaces and securi
 
     ![Proceed to the firewall despite the self-signed certificate warning](images/click-proceed.png)
 
+<!-- -->
+
 1. Type in your username: `admin`.
 2. Type in your password (you just created).
 3. Click in the **Log In** button.
@@ -100,6 +102,8 @@ Use the web interface to configure the firewall data-plane interfaces and securi
 
     ![Select the Network tab in PAN-OS](images/select-network-tab.png)
 
+<!-- -->
+
 1. Click on **Interfaces**. 
 2. Click on interface **ethernet 1/1**.
 
@@ -131,6 +135,8 @@ Use the web interface to configure the firewall data-plane interfaces and securi
 
     ![Confirm the untrust zone selection for ethernet1/1](images/confirm-untrust-zone-selection.png)
 
+<!-- -->
+
 1. Click on **IPv4** (make sure you **Static** is selected).
 2. Click on the **Add** button to add an IP address.
 3. Specify an **IP address** for the (Untrusted) interface ethernet 1/1. We have used `172.16.0.20/28` (Make sure this IP is in the same subnet as your Untrusted OCI subnet CIDR block).
@@ -145,6 +151,8 @@ Use the web interface to configure the firewall data-plane interfaces and securi
     - Click on interface **ethernet 1/2**.
 
     ![Select ethernet1/2 for the trust interface](images/select-trust-interface-ethernet12.png)
+
+<!-- -->
 
 1. Set the **Interface Type** to Layer3.
 2. Click on **Config**.
@@ -170,6 +178,8 @@ Use the web interface to configure the firewall data-plane interfaces and securi
 
     ![Confirm the trust zone selection for ethernet1/2](images/confirm-trust-zone-selection.png)
 
+<!-- -->
+
 1. Click on **IPv4** (make sure you **Static** is selected).
 2. Click on the **Add** button to add an IP address.
 3. Specify an **IP address** for the (Trusted) interface ethernet 1/2. We have used `172.16.0.40/28` (Make sure this IP is in the same subnet as your Trusted OCI subnet CIDR block).
@@ -181,12 +191,16 @@ Use the web interface to configure the firewall data-plane interfaces and securi
 
     ![Review the configured trust interface](images/review-configured-trust-interface.png)
 
+<!-- -->
+
 1. Notice that the **Link state** is grey (and not green).
 2. Click on the **Commit** button.
 
     > **Note:** You can **commit** after each configuration you make (safer, easier to troubleshoot), or you can wait and commit once after completing all steps (faster, fewer commits).
 
     ![Open the commit dialog for the interface configuration](images/open-commit-dialog.png)
+
+<!-- -->
 
 1. Notice the message that commit will overwrite the running configuration.
 2. Click on the **Commit** button.
@@ -196,6 +210,8 @@ Use the web interface to configure the firewall data-plane interfaces and securi
     - Wait for the **Commit** to complete.
 
     ![Wait for the interface configuration commit to complete](images/wait-for-interface-configuration-commit.png)
+
+<!-- -->
 
 1. Notice that the **Commit** has completed.
 2. Click on the **Close** button.
