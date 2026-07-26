@@ -21,7 +21,7 @@ Before you begin, ensure you have the following:
 - An active OCI tenancy.
 - A compartment in which you can create networking resources (this lab uses a compartment named `Iwan`; replace it with your own compartment).
 - Permissions to use Resource Manager and to create VCNs, subnets, gateways, route tables, and security lists.
-- The `livelabs.zip` Terraform configuration for this workshop (the stack source — see the link at the end of the workshop series, or use the version provided with this lab).
+- Download the [livelabs.zip](files/livelabs.zip) Terraform configuration before continuing.
 
 > **Note:** The stack deploys the network only. Palo Alto VM-Series deployment and configuration are covered in Lab 2 onwards.
 
