@@ -1,8 +1,6 @@
-# Extend your SaaS Applications
+# Extend HCM: Deploy AI via Guided Journey for Compensation Benchmark
 
-## HCM: Guided Journey for Compensation Info
-
-### Introduction
+## Introduction
 
 In this activity you will learn how easily extend Fusion SaaS application to include external content to guide users to better decisions.
 
@@ -25,7 +23,7 @@ Estimated Time: 15 minutes
 
 As you follow along, do not forget to think about the Adventure Check Point questions you'll answer at the end of this adventure!
 
-### Begin Exercise
+## Begin Exercise
 
 1. You'll start by going to the Guided Journey screen.
 
@@ -138,12 +136,11 @@ As you follow along, do not forget to think about the Adventure Check Point ques
    ![Finish](../04-extend-oicai-hcm/images/hcmimage014.jpg)
    <br>
 
-15. Adventure awaits, click on the image and show what you know, and rise to the top of the leader board!!!
+15. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Cloud Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab.
 
-
-## Summary
+### Summary
 
 This Extension adventure introduced you to a few of the capabilities that customers can leverage to extend Oracle Fusion Cloud applications.  These features allow you to fine tune your Oracle Fusion Cloud Applications for peak performance, business processes tailored to you requirements, and fast, efficient usage.
 
@@ -154,14 +151,12 @@ You also learned how to leverage 3rd party Generative AI capabilities by leverag
 So, check your with you team, double-check your racing harness and get ready for our next Adventure.
 
 ## Learn More
-
 - [Extending Oracle Cloud Applications with Visual Builder Studio](https://docs.oracle.com/en/cloud/paas/visual-builder/visualbuilder-building-appui)
 - [Overview of Guided Journeys](https://docs.oracle.com/en/cloud/saas/human-resources/faijh/overview-of-guided-journeys.html)
 - [Configure User Defined Content Task Type for a Journey](https://docs.oracle.com/en/cloud/saas/human-resources/faijh/configure-user-defined-content-task-type-for-a-journey.html)
 - [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
-
 - **Author** - Charlie Moff, Distinguished Cloud Technologist; Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist
 - **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-- **Last Updated By/Date** - Sajid Saleem, November 2025
+- **Last Updated By/Date** - Sajid Saleem, July 2026

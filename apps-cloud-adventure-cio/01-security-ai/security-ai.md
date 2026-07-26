@@ -1,65 +1,52 @@
-# Security
+# Security: Assign AI Privileges
 
-<!-- rem ## Path 1: Assign AI Privileges -->
-## **Assign AI Privileges**
+## Introduction
 
-### **Introduction**
+Welcome to Oracle’s AI Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
 
-  Welcome to Oracle’s AI Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
+### Objectives
 
+During this adventure, you will perform a time sensitive task of granting permissions to a user.
 
-### **Objectives**
+Estimated Time: 15 minutes
 
-  During this adventure, you will perform a time sensitive task of granting permissions to a user.
-
-  Estimated Time: 15 minutes
-
-  Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
-### **Begin Exercise**
+## Begin Exercise
 
 1. During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
 
     ![Security Objectives](../01-security-ai/images/secaiimage001.jpg)
 
-
     > At this point, you should be logged into your environment with a username **CIO.xx** where **xx** is the two number code of your login ID.
 
 
 2. To enable the ability to use AI to discover new suppliers, you will access the security console. This is the Springboard where you’ll access all features.
-
      > (1) Select the **Tools** tab menu. <br>
      > (2) Select **Security Console**.
 
     ![Home Screen](../01-security-ai/images/secaiimage002.jpg)
 
-
 3. While examining roles, begin by searching for the role we seeded for this adventure
 
     > (1) In the search field provided at the top, type **Adventure**. <br>
-
     > (2) Then click on the first entry as shown.
 
     ![Roles Screen](../01-security-ai/images/secaiimage003.jpg)
 
-4.	Using the pull-down demo to copy the role as described below.  Modifications should always be done to copies.
+4. Using the pull-down demo to copy the role as described below.  Modifications should always be done to copies.
 
     > (1) Click on the Pull-Down Menu. <br>
-
     > (2) Select **Copy Role**.
 
     ![Roles Screen](../01-security-ai/images/secaiimage004.jpg)
 
-
 5. Continue with copying the role
 
     > (1) Select **Copy top role**. <br>
-
     > (2) Press the **Copy Role** button.
 
     ![Roles Screen](../01-security-ai/images/secaiimage005.jpg)
 
-6.	Notice that you are provided with a list of ordered steps at the top.  For this example, we will only use steps 1, 2 and 7.
+6. Notice that you are provided with a list of ordered steps at the top.  For this example, we will only use steps 1, 2 and 7.
 
     > (1) Add **your initials and xx Code** to the beginning of the **Role Name** <br>
     > (2) Add **your initials and xx Code** to the beginning of the **Role Code** as shown. <br>
@@ -67,20 +54,20 @@
 
     ![Copy Roles Screen](../01-security-ai/images/secaiimage006.jpg)
 
-7.	Using Function Security Policy, you will add the privilege the user needs
+7. Using Function Security Policy, you will add the privilege the user needs
 
     > (1) Press the **+ Add Function Security Policy** button.
 
     ![Function Security Policy](../01-security-ai/images/secaiimage007.jpg)
 
-8.	You will now search for the required policy and add it.
+8. You will now search for the required policy and add it.
 
     > (1) Type **Create Supplier Negotiation** in the search field<br>
     > (2) Select the **Create Supplier Negotiation** privilege from the resulting dropdown as shown.
 
     ![Function Security Policy](../01-security-ai/images/secaiimage008.jpg)
 
-9.	Continue adding
+9. Continue adding
 
     > (1) Press the **Add Privilege to Role** button.
 
@@ -150,7 +137,6 @@
 20.	Search for seeded role
 
     > (1) In the search field type **Adventure**.<br>
-
     > (2) **Select** the first entry.
 
     ![Compare Roles](../01-security-ai/images/secaiimage020.jpg)
@@ -170,7 +156,6 @@
 23.	Search for custom role
 
     > (1) Type in your **Initials and XX Code** which you used to name your custom role . <br>
-
     > (2) **Select** your custom role.
 
     ![Compare Roles](../01-security-ai/images/secaiimage023.jpg)
@@ -199,27 +184,19 @@
 
     ![Compare Roles](../01-security-ai/images/secaiimage027.jpg)
 
-28. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+28. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![AI Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
-
-<!--  ## Path 2: Request Access with Risk Management -->
+    > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
-
 Security Console is used to quickly manage user access to the entire Fusion applications suite.
 
-**You have successfully completed the Activity!**
-
-
-### Learn More
-
-* [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/25d/secure.html)
+## Learn More
+* [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/26c/secure.html)
 * [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/25d/secure.html)
 * [Oracle Documentation](http://docs.oracle.com)
-
 
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist, Advanced Technology Services
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, July 2026
