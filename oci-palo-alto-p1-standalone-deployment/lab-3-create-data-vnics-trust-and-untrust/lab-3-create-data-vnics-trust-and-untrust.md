@@ -1,4 +1,4 @@
-# Lab 3 - Create Data VNICs (Trust and Untrust)
+# Create Data VNICs (Trust and Untrust)
 
 ## Introduction
 

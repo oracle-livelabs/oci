@@ -1,4 +1,4 @@
-# Lab 1 - Review VCN Routing & Security (Prerequisites)
+# Review VCN Routing & Security (Prerequisites)
 
 ## Introduction
 

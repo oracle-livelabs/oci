@@ -1,4 +1,4 @@
-# Lab 4 - Access the Palo Alto and Perform Initial Setup
+# Access the Palo Alto and Perform Initial Setup
 
 ## Introduction
 

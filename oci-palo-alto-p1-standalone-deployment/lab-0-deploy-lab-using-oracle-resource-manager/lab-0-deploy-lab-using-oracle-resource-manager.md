@@ -1,4 +1,4 @@
-# Lab 0 - Deploy Lab using Oracle Resource Manager
+# Deploy Lab using Oracle Resource Manager
 
 ## Introduction
 

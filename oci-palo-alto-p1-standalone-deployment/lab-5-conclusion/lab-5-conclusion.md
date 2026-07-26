@@ -1,4 +1,4 @@
-# Lab 5 - Conclusion
+# Conclusion
 
 ## Introduction
 

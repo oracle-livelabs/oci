@@ -1,4 +1,4 @@
-# Lab 2 - Deploy Palo Alto VM-Series from the Marketplace
+# Deploy Palo Alto VM-Series from the Marketplace
 
 ## Introduction
 
