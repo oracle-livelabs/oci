@@ -20,7 +20,7 @@ In this workshop, you will:
 
 This knowledge will help you design and implement secure OCI network topologies that incorporate third-party firewall appliances, adhering to best practices for segmentation and observability.
 
-![Standalone Palo Alto VM-Series topology in an OCI VCN](images/palo-alto-vm-series-standalone-topology.png)
+![Palo alto vm series standalone](images/palo-alto-vm-series-standalone-topology.png)
 
 ### Prerequisites
 
@@ -34,7 +34,7 @@ Before you begin, ensure you have the following:
 
 > **Note:** If you select the BYOL image, each VM-Series firewall requires outbound internet access to Palo Alto Networks licensing services to activate an authorization code and retrieve its licenses. Offline licensing is supported, but it is not covered in this workshop.
 
-![OCI VCN subnet layout for Palo Alto VM-Series prerequisites](images/palo-alto-vm-series-vcn-subnet-prerequisites.png)
+![Palo alto vm series vcn](images/palo-alto-vm-series-vcn-subnet-prerequisites.png)
 
 Ensure that each subnet is associated with its own route table and security list, as shown below.
 

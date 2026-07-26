@@ -12,7 +12,7 @@ Estimated time: 5 minutes
 
 In this lab, you will create the trust and untrust VNICs in the OCI Console.
 
-![Create trust and untrust data VNICs for the standalone Palo Alto VM-Series firewall](images/lab-3-create-data-vnics-trust-and-untrust.png)
+![3 create data VNICs trust](images/lab-3-create-data-vnics-trust-and-untrust.png)
 
 ### Prerequisites
 
@@ -26,7 +26,7 @@ Create the untrust VNIC for the Palo Alto VM and assign it the private IPv4 addr
 2. Rename **management interface** to be vnic-management (if this is not already done).
 3. Click on the **Create VNIC** button (to create the untrusted VNIC).
 
-    ![Create Data VNICs - step 3](images/click-create-vnic-button-create-untrusted-vnic.png)
+    ![Click create VNIC button create](images/click-create-vnic-button-create-untrusted-vnic.png)
 
 <!-- -->
 
@@ -37,7 +37,7 @@ Create the untrust VNIC for the Palo Alto VM and assign it the private IPv4 addr
 
     - Scroll down.
 
-    ![Create Data VNICs - step 4](images/scroll-down.png)
+    ![Scroll down the page](images/scroll-down.png)
 
 <!-- -->
 
@@ -47,7 +47,7 @@ Create the untrust VNIC for the Palo Alto VM and assign it the private IPv4 addr
 4. Enable **Automatically assign public IPv4 address** (as this interface will access the Internet).
 5. Click on the **Submit** button.
 
-    ![Create Data VNICs - step 5](images/click-submit-button.png)
+    ![Click submit button](images/click-submit-button.png)
 
 ## Task 2: Create Trust VNIC
 
@@ -56,7 +56,7 @@ Create the trust VNIC for the Palo Alto VM and assign it the private IPv4 addres
 1. Notice the new untrusted VNIC has been added.
 2. Click on the **Create VNIC** button (to create the trusted VNIC).
 
-    ![Create Data VNICs - step 2](images/click-create-vnic-button-create-trusted-vnic.png)
+    ![Click create VNIC button create](images/click-create-vnic-button-create-trusted-vnic.png)
 
 <!-- -->
 
@@ -67,7 +67,7 @@ Create the trust VNIC for the Palo Alto VM and assign it the private IPv4 addres
 
     - Scroll down.
 
-    ![Create Data VNICs - step 4](images/scroll-down-2.png)
+    ![Scroll down the page](images/scroll-down-2.png)
 
 <!-- -->
 
@@ -77,11 +77,11 @@ Create the trust VNIC for the Palo Alto VM and assign it the private IPv4 addres
 4. **Automatically assign public IPv4 address** will be disabled by default as this is a private subnet.
 5. Click on the **Submit** button.
 
-    ![Create Data VNICs - step 5](images/click-submit-button-2.png)
+    ![Click submit button](images/click-submit-button-2.png)
 
 - Notice the new trusted VNIC has been added, and the other VNICs (management and untrusted) are also present, and ready to be used by the instance.
 
-![Create Data VNICs - step 5](images/notice-new-trusted-vnic-has-been-added-other-vnics-managemen.png)
+![Verify new trusted VNIC](images/notice-new-trusted-vnic-has-been-added-other-vnics-managemen.png)
 
 ## Learn More
 

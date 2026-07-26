@@ -12,7 +12,7 @@ In this lab, you will:
 - Deploy a Palo Alto VM-Series instance from Oracle Cloud Marketplace.
 - Configure the instance and network settings needed for initial access.
 
-![Standalone Palo Alto VM-Series initial deployment architecture](images/standalone-palo-alto-vm-series-management-vnic-architecture.png)
+![Standalone palo alto vm series](images/standalone-palo-alto-vm-series-management-vnic-architecture.png)
 
 ### Prerequisites
 
@@ -36,20 +36,20 @@ Below is a table that contains the IP address information for the Instances.
 2. Click on **Marketplace**.
 3. Click on **All Applications**.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/click-all-applications.png)
+    ![Click all applications](images/click-all-applications.png)
 
 <!-- -->
 
 1. Search for the **Palo Alto** Networks VM-Series Next Generation Firewall.
 2. Click on the **Palo Alto Networks VM-Series Next Generation Firewall**. Make sure you select the BYOL image.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 2](images/click-palo-alto-networks-vm-series-next-generation-firewall.png)
+    ![Click palo alto networks vm](images/click-palo-alto-networks-vm-series-next-generation-firewall.png)
 
     > **Note:** This workshop demonstrates the BYOL deployment path, which uses an authorization code obtained from Palo Alto Networks. Alternatively, you can select a prelicensed PAYG image if usage-based licensing through OCI Marketplace is more suitable for you; PAYG does not require an authorization code.
 
     - Click on the **Launch Instance** button.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 2](images/click-launch-instance-button.png)
+    ![Click launch instance button](images/click-launch-instance-button.png)
 
 <!-- -->
 
@@ -57,12 +57,12 @@ Below is a table that contains the IP address information for the Instances.
 2. Accept the **Oracle Terms of Use and Publisher terms and conditions**.
 3. Click on the **Launch Instance** button.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/click-launch-instance-button-2.png)
+    ![Click launch instance button](images/click-launch-instance-button-2.png)
 
     - Notice you are in the **Basic information** section.
     - Specify a **name** for the Instance.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/specify-name-instance.png)
+    ![Specify name instance](images/specify-name-instance.png)
 
 <!-- -->
 
@@ -73,7 +73,7 @@ Below is a table that contains the IP address information for the Instances.
 
     - In this example, I will select the Shape of the VM using an Intel processor **Optimized 3 Flex**.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 2](images/this-example-i-will-select-shape-vm-using-intel-processor-op.png)
+    ![This example i select](images/this-example-i-will-select-shape-vm-using-intel-processor-op.png)
 
 <!-- -->
 
@@ -88,12 +88,12 @@ Below is a table that contains the IP address information for the Instances.
 
 3. Click on the **Next** button.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/click-next-button.png)
+    ![Click next button](images/click-next-button.png)
 
     - Notice you are in the **Security** section (keep everything default here).
     - Click on the **Next** button.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/click-next-button-2.png)
+    ![Click next button](images/click-next-button-2.png)
 
     - Notice you are in the **Networking** section.
 
@@ -107,7 +107,7 @@ Below is a table that contains the IP address information for the Instances.
 
     - Scroll down
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 5](images/scroll-down.png)
+    ![Scroll down the page](images/scroll-down.png)
 
 <!-- -->
 
@@ -116,7 +116,7 @@ Below is a table that contains the IP address information for the Instances.
 
     - Scroll down
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 2](images/scroll-down-2.png)
+    ![Scroll down the page](images/scroll-down-2.png)
 
     - Generate SSH key pair.
 
@@ -132,7 +132,7 @@ Below is a table that contains the IP address information for the Instances.
 4. `Enter` (again) to not use a passphrase.
 5. Notice that the key pair has been generated and stored.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 5](images/notice-that-key-pair-has-been-generated-stored.png)
+    ![Verify key pair](images/notice-that-key-pair-has-been-generated-stored.png)
 
 <!-- -->
 
@@ -140,7 +140,7 @@ Below is a table that contains the IP address information for the Instances.
 2. Make sure the files are present using the command `ls`.
 3. Show the content of the public key with the command `cat id_rsa.pub`, and copy the content to your clipboard.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/show-content-public-key-command-copy-content-your-clipboard.png)
+    ![Show content public key command](images/show-content-public-key-command-copy-content-your-clipboard.png)
 
     - If you’re using Windows, you can generate the SSH key with PuTTY. Refer to this [workshop](https://docs.oracle.com/en/learn/oci-openvpn-part1/index.html#task-31-generate-ssh-key-pair-with-putty-key-generator-optional) for the steps.
 
@@ -150,26 +150,26 @@ Below is a table that contains the IP address information for the Instances.
 2. Paste in the public key that you already have in your clipboard.
 3. Click on the **Next** button.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/click-next-button-3.png)
+    ![Click next button](images/click-next-button-3.png)
 
     - Notice you are in the **Storage** section (keep everything default here).
     - Click on the **Next** button.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/click-next-button-4.png)
+    ![Click next button](images/click-next-button-4.png)
 
     - Notice you are in the **Review** section (review your settings and if you want to change anything click on the previous button).
     - Click on the **Create** button.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/click-create-button.png)
+    ![Click create button](images/click-create-button.png)
 
     - Notice that the Instance is **Provisioning** and the state is **In Progress**.
     - Wait for it to complete.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/wait-it-complete.png)
+    ![Verify it complete](images/wait-it-complete.png)
 
     - When the provisioning has been completed notice that the Instance is **Running** and the state is **Succeeded**.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/when-provisioning-has-been-completed-notice-that-instance-is.png)
+    ![When provisioning completed](images/when-provisioning-has-been-completed-notice-that-instance-is.png)
 
 <!-- -->
 
@@ -177,7 +177,7 @@ Below is a table that contains the IP address information for the Instances.
 2. Notice the Public IPv4 address that OCI has assigned.
 3. Notice the Private IPv4 address that you assigned.
 
-    ![Deploy Palo Alto VM-Series from the Marketplace - step 3](images/notice-private-ipv4-address-that-you-assigned.png)
+    ![Verify private ipv4 address you](images/notice-private-ipv4-address-that-you-assigned.png)
 
 ## Learn More
 
