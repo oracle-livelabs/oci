@@ -1,0 +1,58 @@
+{
+  "workshoptitle": "Deploy and Run Apache Hadoop & Spark on Oracle Cloud Infrastructure (OCI)",
+  "help": "livelabs-help-oci_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to Hadoop & Spark on OCI",
+      "filename": "../../introduction/introduction.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Get Started",
+      "description": "Prerequisites for the workshop",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Lab 1: Prerequisites and Setup",
+      "description": "Set up your environment for deploying Hadoop & Spark on OCI",
+      "filename": "../../prerequisites/prerequisites.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Lab 2: Deploy the Managed Hadoop & Spark Stack (Native)",
+      "description": "Deploy OCI Big Data Service and Data Flow using OCI Resource Manager",
+      "filename": "../../deploy-native/deploy-native.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Lab 3: Connect and Run the Use Cases (Native)",
+      "description": "Connect via OCI Bastion and run the serverless ETL, Hadoop analytics, warm-pool, and secure HA use cases",
+      "filename": "../../run-native/run-native.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Lab 4: Deploy Secure Hadoop & Spark on OKE (Open Source)",
+      "description": "Deploy a hardened OKE cluster with HDFS and the Spark Operator using OCI Resource Manager",
+      "filename": "../../deploy-opensource/deploy-opensource.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Lab 5: Connect and Run the Demos (Open Source)",
+      "description": "Connect via OCI Bastion and run the Spark-only, HDFS+Spark, and Object Storage+Spark demos",
+      "filename": "../../run-opensource/run-opensource.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Lab 6: Cleanup",
+      "description": "Clean up the resources created in this workshop",
+      "filename": "../../cleanup/cleanup.md",
+      "type": "freetier"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}

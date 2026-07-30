@@ -1,0 +1,45 @@
+{
+   "workshoptitle" : "Deploy Palo Alto NGFW in OCI (Standalone)",
+   "tutorials" : [
+      {
+         "title" : "Introduction",
+         "description" : "Introduction to the workshop",
+         "filename" : "../../introduction/introduction.md"
+      },
+      {
+         "title" : "Get Started",
+         "description" : "Prerequisites for using Free Trial, Paid, and Always Free accounts.",
+         "filename" : "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
+      },
+      {
+         "filename" : "../../lab-0-deploy-lab-using-oracle-resource-manager/lab-0-deploy-lab-using-oracle-resource-manager.md",
+         "title" : "Lab 0: Deploy Lab using Oracle Resource Manager"
+      },
+      {
+         "filename" : "../../lab-1-review-vcn-routing-and-security/lab-1-review-vcn-routing-and-security.md",
+         "title" : "Lab 1: Review VCN Routing & Security (Prerequisites)"
+      },
+      {
+         "title" : "Lab 2: Deploy Palo Alto VM-Series from the Marketplace",
+         "filename" : "../../lab-2-deploy-palo-alto-vm-series-from-the-marketplace/lab-2-deploy-palo-alto-vm-series-from-the-marketplace.md"
+      },
+      {
+         "filename" : "../../lab-3-create-data-vnics-trust-and-untrust/lab-3-create-data-vnics-trust-and-untrust.md",
+         "title" : "Lab 3: Create Data VNICs (Trust and Untrust)"
+      },
+      {
+         "filename" : "../../lab-4-access-the-palo-alto-and-perform-initial-setup/lab-4-access-the-palo-alto-and-perform-initial-setup.md",
+         "title" : "Lab 4: Access the Palo Alto and Perform Initial Setup"
+      },
+      {
+         "filename" : "../../lab-5-conclusion/lab-5-conclusion.md",
+         "title" : "Lab 5: Conclusion"
+      },
+      {
+         "filename" : "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md",
+         "title" : "Need Help?",
+         "description" : "Solutions to common problems and how to get live help"
+      }
+   ],
+   "help" : "anas.abdallah@oracle.com"
+}
