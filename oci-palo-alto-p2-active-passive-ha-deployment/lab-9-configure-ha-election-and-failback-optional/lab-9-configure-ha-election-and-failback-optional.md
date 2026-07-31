@@ -115,7 +115,6 @@ Here’s why:
 
 ## Learn More
 
-- [Set Up Active/Passive HA](https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-admin/high-availability/set-up-activepassive-ha)
 - [How to Configure Palo Alto Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
 
 ## Acknowledgements
