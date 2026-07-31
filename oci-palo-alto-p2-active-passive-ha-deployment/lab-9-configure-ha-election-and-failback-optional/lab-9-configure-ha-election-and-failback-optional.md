@@ -2,9 +2,9 @@
 
 ## Introduction
 
-HA election settings determine which peer is preferred after recovery. This optional lab configures device priority and preemption so failback behavior matches the intended operating model.
+By default, when a failed firewall recovers, it remains passive and the peer that assumed the active role continues to handle traffic. Lab 8 demonstrated this non-preemptive behavior. In this optional lab, you configure device priority and enable preemption so that, after recovery, PA-VM-01 can automatically reclaim the active role.
 
-Estimated time: 15 minutes
+Estimated time: 20 minutes
 
 ### Objectives
 
@@ -16,9 +16,9 @@ In this lab, you will:
 
 Before you begin, ensure you have completed the preceding required labs in this workshop.
 
-## Task 1: Configure HA Election and Failback (Optional)
+## Task 1: Configure HA Election
 
-> **Note:** This optional task demonstrates preemptive failback. Enable it only if PA-VM-01 must automatically reclaim the active role after recovery; otherwise, leave preemption disabled.
+> **Note:** A lower device-priority value is preferred during an HA election. Therefore, we will make PA-VM-01 use priority `1`, which is preferred over PA-VM-02's priority of `100`.
 
 ### PA-VM-01
 
@@ -41,7 +41,6 @@ Before you begin, ensure you have completed the preceding required labs in this 
     - Click on **Commit**.
 
     > **Note:** You can **commit** after each configuration you make (safer, easier to troubleshoot), or you can wait and commit once after completing all steps (faster, fewer commits).
-
 
     ![Commit HA election settings](images/commit-ha-election-settings.png)
 
@@ -70,6 +69,8 @@ Before you begin, ensure you have completed the preceding required labs in this 
 
 ![Verify PA-VM-02 election settings](images/verify-pa-vm-02-election-settings.png)
 
+## Task 2: Test Failover
+
 To perform an additional test, reboot PA-VM-01.
 
 1. At this point, PA-VM-01 is active and PA-VM-02 is passive, so reboot PA-VM-01.
@@ -90,7 +91,7 @@ To perform an additional test, reboot PA-VM-01.
 
 ![Verify PA-VM-02 passive](images/verify-pa-vm-02-passive.png)
 
-## Which Is Better: Enable or Disable Preemptive Mode?
+## Task 3: Understand which Is better: Enable or Disable Preemptive Mode?
 
 **Recommended: _Disable Preemptive Mode_**
 
@@ -115,7 +116,7 @@ Here’s why:
 ## Learn More
 
 - [Set Up Active/Passive HA](https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-admin/high-availability/set-up-activepassive-ha)
-- [Configure Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
+- [How to Configure Palo Alto Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
 
 ## Acknowledgements
 

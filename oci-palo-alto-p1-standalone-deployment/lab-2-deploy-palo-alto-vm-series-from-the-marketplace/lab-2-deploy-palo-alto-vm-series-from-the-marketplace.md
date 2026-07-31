@@ -118,11 +118,9 @@ Below is a table that contains the IP address information for the Instances.
 
     ![Scroll down the page](images/scroll-down-2.png)
 
-    - Generate SSH key pair.
+Generate SSH key pair. An example on how to do this with macOS can be found below.
 
-    > **Note:** Make sure you use an public / private keypair that is based on RSA (and not ECDSA).
-
-    - An example on how to do this with macOS can be found below.
+> **Note:** Make sure you use a public/private key pair based on RSA, not ECDSA.
 
 <!-- -->
 

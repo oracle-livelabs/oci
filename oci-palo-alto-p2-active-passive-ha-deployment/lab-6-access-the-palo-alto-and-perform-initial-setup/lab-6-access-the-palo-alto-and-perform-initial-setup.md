@@ -74,7 +74,7 @@ Use the web interface to configure the PA-VM-01 data-plane interfaces and securi
 
 <!-- -->
 
-- Click on **Addresses**.
+1. Click on **Addresses**.
 
     ![Click add](images/click-add.png)
 
@@ -102,7 +102,7 @@ Use the web interface to configure the PA-VM-01 data-plane interfaces and securi
     - This concludes the **optional** address objects part. We will now continue with the main configuration.
     - Navigate to the **Network** tab.
 
-    ![Click interface ethernet 1](images/click-interface-ethernet-1-1.png)
+    ![Select network tab](images/select-network-tab.png)
 
 <!-- -->
 
@@ -350,8 +350,8 @@ The firewall interfaces and security zones on PA-VM-01 are now in place. Create 
 ## Learn More
 
 - [Configure Layer 3 Interfaces (PAN-OS)](https://docs.paloaltonetworks.com/ngfw/networking/configure-interfaces/layer-3-interfaces/configure-layer-3-interfaces)
-- [Policy Objects](https://docs.paloaltonetworks.com/network-security/security-policy/administration/objects)
-- [Configure Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
+- [Policy Objects in Palo Alto](https://docs.paloaltonetworks.com/network-security/security-policy/administration/objects)
+- [How to Configure Palo Alto Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
 
 ## Acknowledgements
 

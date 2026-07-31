@@ -24,7 +24,7 @@ Before you begin, ensure you have completed the following:
 
 When the VCN, the Subnets, Security Lists and Routing Tables are configured you can now deploy the Palo Alto Instances (VMs) from the OCI Marketplace.
 
-Below is a table that contains the IP address information for the Instances.
+Below is a table that contains the IP address information for the Instances (P - Primary, S- Secondary).
 
 |          | OCI Interface (VNIC) | OCI IPv4                             | Palo Alto Interface | Palo Alto IPv4                             |
 | -------- | -------------------- | ------------------------------------ | ------------------- | ------------------------------------------ |
@@ -125,11 +125,9 @@ Begin by deploying **PA-VM-01** from Oracle Cloud Marketplace.
 
     ![Scroll down the page](images/scroll-down-2.png)
 
-    - Generate SSH key pair.
+    - Generate an SSH key pair. An example using macOS is provided below.
 
-    > **Note:** Make sure you use a public/private key pair that is based on RSA (and not ECDSA).
-
-    - An example on how to do this with macOS can be found below.
+    > **Note:** Use an RSA public/private key pair, not ECDSA.
 
 <!-- -->
 

@@ -8,7 +8,7 @@ This configuration is essential for maintaining business continuity and ensuring
 
 We will focus on the deployment topology that utilizes OCI's Virtual Cloud Network (VCN) features, including multiple Subnets, Route Tables, and secondary IP addresses, which are critical for the seamless failover mechanism between the Active and Passive firewall instances. Upon completion, you will have a resilient, stateful security perimeter protecting your workloads in OCI.
 
-Estimated Workshop Time: 130 minutes
+Estimated Workshop Time: 140 minutes
 
 ### Objectives
 
@@ -54,7 +54,8 @@ Ensure that each subnet is associated with its own route table and security list
 ## Learn More
 
 - [Overview of VCNs and Subnets](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm)
-- [Configure Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
+- [Set Up Palo Alto Active/Passive HA (Overview)](https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-admin/high-availability/set-up-activepassive-ha)
+- [How to Configure Palo Alto Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
 
 ## Acknowledgements
 

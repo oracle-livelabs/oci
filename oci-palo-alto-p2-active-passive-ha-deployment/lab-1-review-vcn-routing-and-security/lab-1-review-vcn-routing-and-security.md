@@ -144,7 +144,7 @@ Review the security lists to confirm management access, high-availability commun
 
 > **Note:** Opening SSH/HTTPS to `0.0.0.0/0` is not a best practice. For better security, restrict access to your own public IP or another trusted range.
 
-![Restrict SSH and HTTPS](images/opening-ssh-https-is-not-best-practice-better-security-restr.png)
+![Restrict SSH and HTTPS](../../lab-1-review-vcn-routing-and-security/images/opening-ssh-https-is-not-best-practice-better-security-restr.png)
 
 - Scroll down for the **Egress rules**.
 - Make sure you add in an **Egress rule** to allow traffic to all destinations (`0.0.0.0/0`) for `All Protocols`.
@@ -202,7 +202,7 @@ Review the security lists to confirm management access, high-availability commun
 - [VCN and Subnet Management](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingVCNs.htm)
 - [VCN Route Tables](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingroutetables.htm)
 - [Security Lists](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/securitylists.htm)
-- [Configure Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
+- [How to Configure Palo Alto Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
 
 ## Acknowledgements
 

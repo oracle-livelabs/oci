@@ -12,15 +12,17 @@ Estimated time: 10 minutes
 
 In this lab, you will create the HA, trust, and untrust VNICs in the OCI Console.
 
-![HA VNIC topology](images/lab-3-create-ha-and-data-vnics.png)
+![HA VNIC topology](images/ha-vnic-topology.png)
 
 ### Prerequisites
 
 Before you begin, ensure you have completed the preceding required labs in this workshop.
 
+Begin with **PA-VM-01** (Tasks 1-3), then repeat for **PA-VM-02** (Task 4).
+
 ## Task 1: Create Untrust VNIC
 
-Begin with **PA-VM-01**. Create its untrust VNIC and assign it the private IPv4 address `172.16.0.20`.
+Create its untrust VNIC and assign it the private IPv4 address `172.16.0.20`. This is the firewall’s outside-facing interface, used to receive traffic from and send traffic back to external networks.
 
 1. Within the Compute Instance (PA-VM-01) page, click on the **Networking** tab (Scroll down to the Attached VNICs section).
 2. Rename **management interface** to be vnic-management (if this is not already done).
@@ -51,7 +53,7 @@ Begin with **PA-VM-01**. Create its untrust VNIC and assign it the private IPv4 
 
 ## Task 2: Create Trust VNIC
 
-Create the trust VNIC for **PA-VM-01** and assign it the private IPv4 address `172.16.0.40`.
+Create the trust VNIC for **PA-VM-01** and assign it the private IPv4 address `172.16.0.40`. This is the firewall’s inside-facing interface, used to forward permitted traffic to private applications and workloads.
 
 1. Notice the new untrusted VNIC has been added.
 2. Click on the **Create VNIC** button (to create the trusted VNIC).
@@ -81,7 +83,7 @@ Create the trust VNIC for **PA-VM-01** and assign it the private IPv4 address `1
 
 ## Task 3: Create HA VNIC
 
-Create the dedicated HA VNIC on PA-VM-01 for communication between the firewall peers.
+Create the dedicated HA VNIC on PA-VM-01 for communication between the firewall peers. This is a private link between the two firewalls that keeps their active sessions synchronized for failover.
 
 1. Notice the new trusted VNIC has been added.
 2. Click on the **Create VNIC** button (to create the HA VNIC).
@@ -113,7 +115,7 @@ Create the dedicated HA VNIC on PA-VM-01 for communication between the firewall 
 
     ![Verify HA VNIC](images/notice-new-ha-vnic-has-been-added-other-vnics-management-unt.png)
 
-## Task 4: Create Data VNICs for PA-VM-02
+## Task 4: Create VNICs for PA-VM-02
 
 Repeat Tasks 1 through 3 for **PA-VM-02**, creating the untrust, trust, and HA VNICs with the following private IPv4 addresses.
 
@@ -127,9 +129,9 @@ Repeat Tasks 1 through 3 for **PA-VM-02**, creating the untrust, trust, and HA V
 
 ## Learn More
 
-- [Virtual Network Interface Cards (VNICs)](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingVNICs.htm)
+- [OCI Virtual Network Interface Cards (VNICs)](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingVNICs.htm)
 - [Creating and Attaching a Secondary VNIC](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingvnics_tasks-attach.htm)
-- [Configure Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
+- [How to Configure Palo Alto Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
 
 ## Acknowledgements
 

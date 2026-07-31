@@ -4,7 +4,7 @@
 
 This lab validates the purpose of the Active/Passive design. You confirm configuration synchronization, trigger a controlled failover, and verify that the peer becomes active.
 
-Estimated time: 15 minutes
+Estimated time: 20 minutes
 
 ### Objectives
 
@@ -13,13 +13,13 @@ In this lab, you will:
 - Perform a controlled failover and confirm that the peer firewall becomes active.
 - Validate traffic continuity after failover.
 
-![Palo Alto HA topology](images/palo-alto-ha-topology.png)
+![Active passive HA topology](images/active-passive-ha-topology.png)
 
 ### Prerequisites
 
 Before you begin, ensure you have completed the preceding required labs in this workshop.
 
-## Task 1: Test Synchronization and Failover
+## Task 1: Add the High Availability Widget and Sync to Peer
 
 ### PA-VM-01
 
@@ -86,7 +86,32 @@ Before you begin, ensure you have completed the preceding required labs in this 
 
     > **Note:** Any future configuration changes made on PA-VM-01 will be automatically synchronized to PA-VM-02, without any manual intervention.
 
-### PA-VM-01 (OCI Console)
+
+## Task 2: Test Failover
+
+### Verify Floating IP Addresses Before Failover
+
+Before you trigger failover, verify that **PA-VM-01**, the active firewall, holds both its primary and floating private IP addresses. The floating Untrust IP address is associated with a reserved public IP address for internet reachability.
+
+**PA-VM-01 Untrust VNIC**
+
+![PA-VM-01 untrust floating IP](images/pa-vm-01-untrust-floating-ip-before-failover.png)
+
+**PA-VM-01 Trust VNIC**
+
+![PA-VM-01 trust floating IP](images/pa-vm-01-trust-floating-ip-before-failover.png)
+
+**PA-VM-02** is passive before failover and holds only its primary private IP addresses. It does not hold either floating IP address.
+
+**PA-VM-02 Untrust VNIC**
+
+![PA-VM-02 untrust primary IP](images/pa-vm-02-untrust-primary-ip-before-failover.png)
+
+**PA-VM-02 Trust VNIC**
+
+![PA-VM-02 trust primary IP](images/pa-vm-02-trust-primary-ip-before-failover.png)
+
+### PA-VM-01
 
 - Login to the **OCI Console**, and navigate to the **PA-VM-01** instance.
 
@@ -141,9 +166,31 @@ When PA-VM-01 came back online, it did not automatically resume the Active role 
 
 If you want the originally designated primary firewall (PA-VM-01) to automatically take back the Active role once it recovers, you need to configure Election Settings and enable Preemptive mode (next optional lab).
 
+### Verify Floating IP Addresses After Failover
+
+After PA-VM-01 fails over, **PA-VM-02** becomes the primary firewall and holds both floating private IP addresses.
+
+**PA-VM-02 Untrust VNIC**
+
+![PA-VM-02 untrust floating IP](images/pa-vm-02-untrust-floating-ip-after-failover.png)
+
+**PA-VM-02 Trust VNIC**
+
+![PA-VM-02 trust floating IP](images/pa-vm-02-trust-floating-ip-after-failover.png)
+
+**PA-VM-01** is now passive and holds only its primary private IP addresses. It no longer holds either floating IP address.
+
+**PA-VM-01 Untrust VNIC**
+
+![PA-VM-01 untrust primary IP](images/pa-vm-01-untrust-primary-ip-after-failover.png)
+
+**PA-VM-01 Trust VNIC**
+
+![PA-VM-01 trust primary IP](images/pa-vm-01-trust-primary-ip-after-failover.png)
+
 ## Learn More
 
-- [Configure Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
+- [How to Configure Palo Alto Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
 - [Moving a Secondary Private IP Address to a Different VNIC](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/private-ip-address-move-vnic.htm)
 
 ## Acknowledgements

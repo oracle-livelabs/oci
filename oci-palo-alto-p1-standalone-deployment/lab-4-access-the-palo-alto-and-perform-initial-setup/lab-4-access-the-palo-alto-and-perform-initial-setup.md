@@ -310,7 +310,7 @@ The firewall interfaces are now in place. Create a security policy that controls
 ## Learn More
 
 - [Configure Layer 3 Interfaces (PAN-OS)](https://docs.paloaltonetworks.com/ngfw/networking/configure-interfaces/layer-3-interfaces/configure-layer-3-interfaces)
-- [Policy Objects](https://docs.paloaltonetworks.com/network-security/security-policy/administration/objects)
+- [Policy Objects in Palo Alto](https://docs.paloaltonetworks.com/network-security/security-policy/administration/objects)
 
 ## Acknowledgements
 
