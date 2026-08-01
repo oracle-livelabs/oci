@@ -170,7 +170,7 @@ Create the private **Trust NLB**, also referred to as the **internal NLB**. It p
 
 Create the private **Untrust NLB**, also referred to as the **external NLB**. It provides the untrust-side inspection path and distributes traffic across the untrust interfaces of both firewalls.
 
-    - Click on the **Create network load balancer** button.
+- Click on the **Create network load balancer** button.
 
     ![Create untrust NLB](images/click-create-network-load-balancer-button-3.png)
 

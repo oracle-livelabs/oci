@@ -12,7 +12,7 @@ In this lab, you will:
 - Verify the OCI VCN, subnet, routing, and security prerequisites for Active/Active HA.
 - Identify the trust and untrust traffic paths that will use the Network Load Balancers.
 
-![Active-active VCN prerequisites](../../lab-1-review-vcn-routing-and-security/images/active-active-vcn-prerequisites.png)
+![Active-active VCN prerequisites](images/active-active-vcn-prerequisites.png)
 
 ### Prerequisites
 
@@ -25,32 +25,32 @@ Review the VCN route tables to confirm that the management and untrust subnets c
 1. Select the **OCI Region** you want to deploy the Firewall in.
 2. Click on the **hamburger menu** in the top left corner.
 
-    ![Open OCI navigation](../../lab-1-review-vcn-routing-and-security/images/open-oci-navigation-menu.png)
+    ![Open OCI navigation](images/open-oci-navigation-menu.png)
 
 <!-- -->
 
 1. Click on **Networking**.
 2. Click on **Virtual cloud networks**.
 
-    ![Open virtual cloud networks](../../lab-1-review-vcn-routing-and-security/images/click-virtual-cloud-networks.png)
+    ![Open virtual cloud networks](images/click-virtual-cloud-networks.png)
 
     - Make sure the VCN is created as part of your prerequisites. Click on the **Hub VCN**.
 
-    ![Open Hub VCN](../../lab-1-review-vcn-routing-and-security/images/click-vcn.png)
+    ![Open Hub VCN](images/click-vcn.png)
 
 <!-- -->
 
 1. Click on **Subnets**.
 2. Make sure the Subnets are created and that each one has its own custom Route Table and Security List assigned as part of your prerequisites.
 
-    ![Verify subnets created](../../lab-1-review-vcn-routing-and-security/images/make-sure-subnets-are-created-that-each-one-has-its-own-cust.png)
+    ![Verify subnets created](images/make-sure-subnets-are-created-that-each-one-has-its-own-cust.png)
 
 <!-- -->
 
 1. Click on **Gateways**.
 2. Make sure the Internet Gateway is created as part of your prerequisites.
 
-    ![Verify internet gateway created](../../lab-1-review-vcn-routing-and-security/images/make-sure-internet-gateway-is-created-as-part-your-prerequis.png)
+    ![Verify internet gateway created](images/make-sure-internet-gateway-is-created-as-part-your-prerequis.png)
 
 <!-- -->
 
@@ -58,11 +58,11 @@ Review the VCN route tables to confirm that the management and untrust subnets c
 2. The default VCN Routing Table will be available (we will not be using this).
 3. Make sure the custom Routing Tables are created as part of your prerequisites.
 
-    ![Verify custom routing tables](../../lab-1-review-vcn-routing-and-security/images/make-sure-custom-routing-tables-are-created-as-part-your-pre.png)
+    ![Verify custom routing tables](images/make-sure-custom-routing-tables-are-created-as-part-your-pre.png)
 
     - Click on the **rt-management** **Routing Table**.
 
-    ![Open management route table](../../lab-1-review-vcn-routing-and-security/images/click-rt-management-routing-table.png)
+    ![Open management route table](images/click-rt-management-routing-table.png)
 
 <!-- -->
 
@@ -75,11 +75,11 @@ Review the VCN route tables to confirm that the management and untrust subnets c
 
 3. Go Back to the Hub VCN overview.
 
-    ![Return to hub vcn overview](../../lab-1-review-vcn-routing-and-security/images/go-back-hub-vcn-overview.png)
+    ![Return to hub vcn overview](images/go-back-hub-vcn-overview.png)
 
     - Click on the **rt-untrust** **Routing Table**.
 
-    ![Open untrust route table](../../lab-1-review-vcn-routing-and-security/images/click-rt-untrust-routing-table.png)
+    ![Open untrust route table](images/click-rt-untrust-routing-table.png)
 
 <!-- -->
 
@@ -92,7 +92,7 @@ Review the VCN route tables to confirm that the management and untrust subnets c
 
 3. Go Back to the Hub VCN overview.
 
-    ![Return to hub vcn overview](../../lab-1-review-vcn-routing-and-security/images/go-back-hub-vcn-overview-2.png)
+    ![Return to hub vcn overview](images/go-back-hub-vcn-overview-2.png)
 
 ## Task 2: Review VCN Security
 
@@ -102,15 +102,15 @@ Review the security lists to confirm that PAN-OS management access and the requi
 2. Notice the **default VCN Security List** will be available (we will not be using this).
 3. Make sure the **custom Security Lists** are created as part of your prerequisites.
 
-    ![Verify custom security lists](../../lab-1-review-vcn-routing-and-security/images/make-sure-custom-security-lists-are-created-as-part-your-pre.png)
+    ![Verify custom security lists](images/make-sure-custom-security-lists-are-created-as-part-your-pre.png)
 
     - Click on the **sl-management Security List** (for the Management Subnet).
 
-    ![Open management security list](../../lab-1-review-vcn-routing-and-security/images/click-sl-management-security-list-management-subnet.png)
+    ![Open management security list](images/click-sl-management-security-list-management-subnet.png)
 
     - Click on **Security rules**.
 
-    ![Click security rules](../../lab-1-review-vcn-routing-and-security/images/click-security-rules.png)
+    ![Click security rules](images/click-security-rules.png)
 
 <!-- -->
 
@@ -124,54 +124,54 @@ Review the security lists to confirm that PAN-OS management access and the requi
     - Scroll down for the **Egress rules**.
     - Make sure you add in an **Egress rule** to allow traffic to all destinations (`0.0.0.0/0`) for `All Protocols`.
 
-    ![Verify egress rule](../../lab-1-review-vcn-routing-and-security/images/make-sure-you-add-egress-rule-allow-traffic-all-destinations.png)
+    ![Verify egress rule](images/make-sure-you-add-egress-rule-allow-traffic-all-destinations.png)
 
     - Go back to the **Security List Overview**.
 
-    ![Return to security list overview](../../lab-1-review-vcn-routing-and-security/images/go-back-security-list-overview.png)
+    ![Return to security list overview](images/go-back-security-list-overview.png)
 
     - Click on the **sl-trust Security List** (for the Trusted Subnet).
 
-    ![Open trust security list](../../lab-1-review-vcn-routing-and-security/images/click-sl-trust-security-list-trusted-subnet.png)
+    ![Open trust security list](images/click-sl-trust-security-list-trusted-subnet.png)
 
     - Click on **Security Rules**.
 
-    ![Click security rules](../../lab-1-review-vcn-routing-and-security/images/click-security-rules-2.png)
+    ![Click security rules](images/click-security-rules-2.png)
 
     - Make sure you add in an **Ingress rule** to allow traffic from all sources (`0.0.0.0/0`) for `All Protocols`.
 
     > **Note:** Allowing **All Protocols (Ingress)** from `0.0.0.0/0` is not a best practice. We are only doing it here only for simplicity and to avoid extra troubleshooting as we move into the later workshops in this series. In real deployments, allow only what you actually need.
 
-    ![Ingress all-protocol rule](../../lab-1-review-vcn-routing-and-security/images/allowing-all-protocols-ingress-is-not-best-practice-we-are-o.png)
+    ![Ingress all-protocol rule](images/allowing-all-protocols-ingress-is-not-best-practice-we-are-o.png)
 
     - Scroll down for the **Egress rules**.
     - Make sure you add in an **Egress rule** to allow traffic to all destinations (`0.0.0.0/0`) for `All Protocols`.
 
-    ![Verify egress rule](../../lab-1-review-vcn-routing-and-security/images/make-sure-you-add-egress-rule-allow-traffic-all-destinations.png)
+    ![Verify egress rule](images/make-sure-you-add-egress-rule-allow-traffic-all-destinations.png)
 
     - Go back to the **Security List Overview**.
 
-    ![Return to security list overview](../../lab-1-review-vcn-routing-and-security/images/go-back-security-list-overview-2.png)
+    ![Return to security list overview](images/go-back-security-list-overview-2.png)
 
     - Click on the **sl-untrust Security List** (for the Untrusted Subnet).
 
-    ![Open untrust security list](../../lab-1-review-vcn-routing-and-security/images/click-sl-untrust-security-list-untrusted-subnet.png)
+    ![Open untrust security list](images/click-sl-untrust-security-list-untrusted-subnet.png)
 
     - Click on **Security Rules**.
 
-    ![Click security rules](../../lab-1-review-vcn-routing-and-security/images/click-security-rules-3.png)
+    ![Click security rules](images/click-security-rules-3.png)
 
     - Make sure you add in an **Ingress rule** to allow traffic from all sources (`0.0.0.0/0`) for `All Protocols`.
 
     > **Note:** Allowing **All Protocols (Ingress)** from `0.0.0.0/0` is not a best practice. We are only doing it here only for simplicity and to avoid extra troubleshooting as we move into the later workshops in this series. In real deployments, allow only what you actually need.
 
 
-    ![Ingress all-protocol rule](../../lab-1-review-vcn-routing-and-security/images/allowing-all-protocols-ingress-is-not-best-practice-we-are-o-2.png)
+    ![Ingress all-protocol rule](images/allowing-all-protocols-ingress-is-not-best-practice-we-are-o-2.png)
 
     - Scroll down for the **Egress rules**.
     - Make sure you add in an **Egress rule** to allow traffic to all destinations (`0.0.0.0/0`) for `All Protocols`.
 
-    ![Verify egress rule](../../lab-1-review-vcn-routing-and-security/images/make-sure-you-add-egress-rule-allow-traffic-all-destinations.png)
+    ![Verify egress rule](images/make-sure-you-add-egress-rule-allow-traffic-all-destinations.png)
 
 ## Learn More
 
