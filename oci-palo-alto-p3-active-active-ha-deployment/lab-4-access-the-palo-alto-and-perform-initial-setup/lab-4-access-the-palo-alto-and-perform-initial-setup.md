@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab moves from OCI resource deployment to firewall configuration for the Active/Passive pair. You access both firewalls, configure their trust, untrust, and HA interfaces, and security zones, then create the initial security policy on PA-VM-01. The interface configuration is completed separately on each firewall before the HA control link is configured; the policy synchronizes to PA-VM-02 after HA is enabled.
+This lab moves from OCI resource deployment to PAN-OS configuration for the Active/Active firewall pair. You access both firewalls, configure their trust and untrust interfaces, and security zones, then create and commit the initial security policy on each firewall.
 
 Estimated time: 25 minutes
 
@@ -11,7 +11,8 @@ Estimated time: 25 minutes
 In this lab, you will:
 - Access the management interface of both Palo Alto firewalls.
 - Set the `admin` password on both firewalls.
-- Configure the management, trust, untrust, and HA interfaces and their security zones.
+- Configure the management, trust, and untrust interfaces and their security zones.
+- Create interface management profiles that allow NLB health checks to reach the trust and untrust interfaces.
 - Create a security policy for the firewall.
 - Commit the initial PAN-OS configuration.
 
@@ -31,13 +32,13 @@ Now that the Palo Alto firewalls are deployed, you are ready to access them. Com
 5. Type in `set mgt-config users admin password` to configure the password for the `admin` user.
 6. Enter a secure `password`, and confirm the password.
 
-    ![Set admin password cli](images/enter-secure-confirm-password.png)
+    ![Set admin password](images/set-admin-password-ssh.png)
 
 - Refer to the initial steps in the following [workshop](https://docs.oracle.com/en/learn/oci-openvpn-part1/index.html#task-52-access-openvpn-vm-from-putty-and-complete-the-initial-setup) to learn how to access from Windows using PuTTY.
 
 ## Task 2: Access via GUI and Configure the Interfaces for PA-VM-01
 
-Use the web interface to configure the PA-VM-01 data-plane interfaces and security zones. You will repeat the applicable configuration on PA-VM-02 in the next task.
+Use the web interface to configure the PA-VM-01 data-plane interfaces and security zones. You will repeat the applicable configuration on PA-VM-02 later in this task.
 
 1. Open a **web browser** and use your public IP address to connect to the management web interface of the Palo Alto Firewall (PA-VM-01).
 2. Depending on your browser (settings) you might need to allow the connection as the Palo Alto Firewall does not have a signed certificate deployed yet. Click on **Advanced**.
@@ -74,7 +75,7 @@ Use the web interface to configure the PA-VM-01 data-plane interfaces and securi
 
 <!-- -->
 
-1. Click on **Addresses**.
+-  Click on **Addresses**.
 
     ![Click add](images/click-add.png)
 
@@ -93,30 +94,71 @@ Use the web interface to configure the PA-VM-01 data-plane interfaces and securi
 
     - Repeat the same steps to add the rest of addresses.
 
-    ![Review address objects](images/review-address-objects.png)
+    ![Review created address objects](images/review-created-address-objects.png)
 
     - Whenever you need to add an address (for example, during interface configuration, virtual router setup, or security policy creation), you can select it from the address objects you have already created.
 
+    ![Select address object during configuration](images/select-address-object-during-configuration.png)
+
+- This concludes the **optional** address objects part. We will now continue with the main configuration.
+- An **Interface Management Profile** in Palo Alto Networks defines which administrative services -such as HTTPS, SSH, or ICMP (ping)- are allowed on a specific firewall interface. By default, data interfaces block all management traffic. Applying a management profile explicitly enables the required services and allows access to be restricted to a whitelist of permitted IP addresses, reducing the attack surface while maintaining necessary administrative access. In this workshop, we use an interface management profile to allow HTTP on both the untrust and trust interfaces, allowing the Network Load Balancers to perform interface health checks in the next lab.
+- Navigate to the **Network** tab.
+
     ![Navigate network tab](images/navigate-network-tab.png)
-
-    - This concludes the **optional** address objects part. We will now continue with the main configuration.
-    - Navigate to the **Network** tab.
-
-    ![Select network tab](images/select-network-tab.png)
 
 <!-- -->
 
-1. Click on **Interfaces**.
-2. Click on interface **ethernet 1/1**.
+1. Click on **Interface Mgmt**.
+2. Click on the **Add** button.
 
-    ![Click config](images/click-config.png)
+    ![Create management profile](images/create-interface-management-profile.png)
+
+<!-- -->
+
+1. Specify a **Name** for the Interface Management Profile.
+2. Check the **HTTP** Administrative Management Services box.
+3. Click on the **Add** button.
+4. Specify the **CIDR block** that will be allowed to access the firewall’s Trust interface over HTTP. Use the Trust subnet CIDR where the Trust NLB will be created.
+5. Click on the **OK** button.
+
+    ![Configure trust management profile](images/configure-trust-management-profile.png)
+
+<!-- -->
+
+1. Notice that the Interface Management Profile is now created.
+2. Click on the **Add** button.
+
+    ![Click add button](images/click-add-button-2.png)
+
+<!-- -->
+
+1. Specify a **Name** for the Interface Management Profile.
+2. Check the **HTTP** Administrative Management Services box.
+3. Click on the **Add** button.
+4. Specify the **CIDR block** that will be allowed to access the firewall’s Untrust interface over HTTP. Use the Untrust subnet CIDR where the Untrust NLB will be created.
+5. Click on the **OK** button.
+
+    ![Configure untrust management profile](images/configure-untrust-management-profile.png)
+
+<!-- -->
+
+1. Notice that the Interface Management Profile is now created.
+2. Click on **Interfaces**. 
+
+    ![Click interfaces](images/click-interfaces.png)
+
+    - Click on interface **ethernet 1/1**.
+
+    ![Select untrust interface](images/select-untrust-interface.png)
 
 <!-- -->
 
 1. Set the **Interface Type** to Layer3.
-2. Click on **Config**.
+2. You will land on the **Advanced** tab.
+3. Select the **Management Profile** you created for the **Untrust** interface.
+4. Click on **Config**.
 
-    ![Pull down menu select new](images/pull-down-menu-select-new-zone-untrusted.png)
+    ![Configure untrust interface](images/configure-untrust-interface.png)
 
 <!-- -->
 
@@ -124,42 +166,44 @@ Use the web interface to configure the PA-VM-01 data-plane interfaces and securi
 2. Select the **Security Zone**.
 3. In the pull down menu select **New Zone** (Untrusted).
 
-    ![Click ok button](images/click-ok-button.png)
+    ![Set untrust zone](images/set-untrust-virtual-router-zone.png)
 
 <!-- -->
 
 1. Specify a **name** for the new (Untrusted) zone.
 2. Click on the **OK** button.
 
-    ![Verify new untrusted zone](images/make-sure-new-untrusted-zone-is-selected-interface-ethernet.png)
+    ![Name untrust zone](images/name-untrust-zone.png)
 
     - Make sure the (new) **Untrusted Zone** is selected for interface ethernet 1/1.
 
-    ![Click ok button](images/click-ok-button-2.png)
+    ![Verify untrust zone](images/make-sure-new-untrusted-zone-is-selected-interface-ethernet.png)
 
 <!-- -->
 
 1. Click on **IPv4** (make sure you **Static** is selected).
 2. Click on the **Add** button to add an IP address.
-3. Specify an **IP address** for the (Untrusted) interface ethernet 1/1. We have used `172.16.0.20/28` (Make sure this IP is in the same subnet as your Untrusted OCI subnet CIDR block). Repeat the step again to add the secondary floating IP address `172.16.0.22/32`.
+3. Specify an **IP address** for the (Untrusted) interface ethernet 1/1. We have used `172.16.0.20/28` (Make sure this IP is in the same subnet as your Untrusted OCI subnet CIDR block).
 4. Click on the **OK** button.
 
-    ![Verify untrusted interface ethernet 1](images/notice-that-untrusted-interface-ethernet-1-1-is-now-configur.png)
+    ![Set untrust IP address](images/set-untrust-interface-ip-address.png)
 
     - Notice that the (Untrusted) interface ethernet 1/1 is now configured.
 
-    ![Click interface ethernet 1](images/click-interface-ethernet-1-2.png)
+    ![Verify untrust interface](images/verify-untrust-interface.png)
 
     - Click on interface **ethernet 1/2**.
 
-    ![Click config](images/click-config-2.png)
+    ![Select trust interface](images/select-trust-interface.png)
 
 <!-- -->
 
 1. Set the **Interface Type** to Layer3.
-2. Click on **Config**.
+2. You will land on the **Advanced** tab.
+3. Select the **Management Profile** you created for the **Trust** interface.
+4. Click on **Config**.
 
-    ![Pull down menu select new](images/pull-down-menu-select-new-zone-trusted.png)
+    ![Configure trust interface](images/configure-trust-interface.png)
 
 <!-- -->
 
@@ -167,48 +211,31 @@ Use the web interface to configure the PA-VM-01 data-plane interfaces and securi
 2. Select the **Security Zone**.
 3. In the pull down menu select **New Zone** (Trusted).
 
-    ![Click ok button](images/click-ok-button-3.png)
+    ![Set trust zone](images/set-trust-virtual-router-zone.png)
 
 <!-- -->
 
 1. Specify a **name** for the new (Trusted) zone.
 2. Click on the **OK** button.
 
-    ![Verify new trusted zone](images/make-sure-new-trusted-zone-is-selected-interface-ethernet-1.png)
+    ![Name trust zone](images/name-trust-zone.png)
 
     - Make sure the (new) **Trusted Zone** is selected for interface ethernet 1/2.
 
-    ![Click ok button](images/click-ok-button-4.png)
+    ![Verify trust zone](images/verify-trust-zone.png)
 
 <!-- -->
 
 1. Click on **IPv4** (make sure you **Static** is selected).
 2. Click on the **Add** button to add an IP address.
-3. Specify an **IP address** for the (Trusted) interface ethernet 1/2. We have used `172.16.0.40/28` (Make sure this IP is in the same subnet as your Trusted OCI subnet CIDR block). Repeat the step again to add the secondary floating IP address `172.16.0.42/32`.
+3. Specify an **IP address** for the (Trusted) interface ethernet 1/2. We have used `172.16.0.40/28` (Make sure this IP is in the same subnet as your Trusted OCI subnet CIDR block).
 4. Click on the **OK** button.
 
-    ![Verify trusted interface ethernet 1](images/notice-that-trusted-interface-ethernet-1-2-is-now-configured.png)
+    ![Set trust IP address](images/set-trust-interface-ip-address.png)
 
     - Notice that the (Trusted) interface ethernet 1/2 is now configured.
 
-    ![Click interface ethernet 1](images/click-interface-ethernet-1-3.png)
-
-    > **Note:** This deployment reuses the management interface for HA1 control communication, so no additional HA1 VNIC is required. The fourth VNIC, mapped to `ethernet1/3`, is reserved for HA2 session synchronization and is configured in a later lab.
-
-    - Click on interface **ethernet 1/3**.
-
-    ![Click ok button](images/click-ok-button-5.png)
-
-<!-- -->
-
-1. Set the **Interface Type** to HA.
-2. Click on the **OK** button.
-
-    ![Verify HA interface ethernet 1](images/notice-that-ha-interface-ethernet-1-3-is-now-configured.png)
-
-    - Notice that the (HA) interface ethernet 1/3 is now configured.
-
-    ![You can commit after configuration](images/you-can-commit-after-each-configuration-you-make-safer-easie.png)
+    ![Verify trust interface](images/verify-trust-interface.png)
 
 <!-- -->
 
@@ -217,46 +244,43 @@ Use the web interface to configure the PA-VM-01 data-plane interfaces and securi
 
     > **Note:** You can **commit** after each configuration you make (safer, easier to troubleshoot), or you can wait and commit once after completing all steps (faster, fewer commits).
 
-    ![Click commit button](images/click-commit-button.png)
+    ![Commit interface configuration](images/commit-interface-configuration.png)
 
 <!-- -->
 
 1. Notice the message that commit will overwrite the running configuration.
 2. Click on the **Commit** button.
 
-    ![Verify commit complete](images/wait-commit-complete.png)
+    ![Click commit button](images/click-commit-button.png)
 
     - Wait for the **Commit** to complete.
 
-    ![Click close button](images/click-close-button-2.png)
+    ![Verify interface commit](images/wait-commit-complete.png)
 
 <!-- -->
 
 1. Notice that the **Commit** has completed.
 2. Click on the **Close** button.
 
-    ![Verify link state now](images/notice-that-link-state-is-now-green-out-not-grey-anymore.png)
+    ![Close completed commit](images/close-completed-interface-commit.png)
 
     - Notice that the **Link state** is now green out (and not grey anymore).
 
-    ![Below shows final ethernet interface](images/screenshot-below-shows-final-ethernet-interface-configuratio.png)
+    ![Verify green link state](images/notice-that-link-state-is-now-green-out-not-grey-anymore.png)
 
 > **Note:** If the link state is still red, reboot the instance from the OCI Console and check again.
-
 
 ## Task 3: Access via GUI and Configure the Interfaces for PA-VM-02
 
 Repeat the steps in Task 2 for the second Palo Alto VM, **PA-VM-02**, using the following parameters:
 
-- Public IP for management interface of PA-VM-02 for SSH and HTTPS (GUI) access.
-- Untrusted IPv4 Address:
-    - Primary (ethernet1/1): `172.16.0.21/28`
-    - Secondary (ethernet1/1): `172.16.0.22/32` (same as (PA-VM-01))
-- Trusted IPv4 Address:
-    - Primary (ethernet1/2): `172.16.0.41/28`
-    - Secondary (ethernet1/2): `172.16.0.42/32` (same as (PA-VM-01))
-- HA IPv4 Address:
-    - Primary (ethernet1/3): `N/A`
+- Repeat the exact steps above on the second Palo Alto VM (PA-VM-02) instance.
+- Use the following parameters:
+    - Public IP for management interface of PA-VM-02 for SSH and HTTPS (GUI) access.
+    - Untrusted IPv4 Address:
+        - ethernet1/1: `172.16.0.21/28`
+    - Trusted IPv4 Address: 
+        - ethernet1/2: `172.16.0.41/28`
 
 The screenshot below shows the final ethernet interface configuration of the second Palo Alto VM (PA-VM-02) instance.
 
@@ -266,14 +290,15 @@ The screenshot below shows the final ethernet interface configuration of the sec
 
 ## Task 4: Create a Network Security Policy
 
-The firewall interfaces and security zones on PA-VM-01 are now in place. Create a temporary security policy that permits traffic through the firewall. Complete this task on **PA-VM-01** only; after you configure the HA control link in the next lab, configuration synchronization will replicate the policy to PA-VM-02.
+The firewall interfaces are now in place. Create a security policy that controls which traffic may traverse the standalone firewall.
 
 > **Note:** Palo Alto firewalls include two default read-only security policies: **intrazone-default**, which allows traffic within the same zone, and **interzone-default**, which blocks traffic between zones. Logging is disabled on both by default. For this workshop, create an `allow-all-temp` policy to simplify the later validation steps. In a production deployment, allow only the traffic that you require.
+
+- Apply the following steps only on both, PA-VM-01 and PA-VM-02.
 
 1. Navigate to the **Policies** tab.
 2. Click on **Security**.
 3. Notice the **default policy rules**.
-
     ![Review default security policies](images/review-default-security-policies.png)
 
     - Click on the **Add** button.
@@ -339,11 +364,11 @@ The firewall interfaces and security zones on PA-VM-01 are now in place. Create 
 
     ![Confirm security policy commit](images/confirm-security-policy-commit.png)
 
-    - Wait for the commit to complete.
+- Wait for the commit to complete.
 
     ![Verify security policy commit](images/wait-for-security-policy-commit.png)
 
-    - Confirm that the commit completed successfully.
+- Confirm that the commit completed successfully.
 
     ![Confirm security policy commit complete](images/confirm-security-policy-commit-complete.png)
 
@@ -351,8 +376,8 @@ The firewall interfaces and security zones on PA-VM-01 are now in place. Create 
 
 - [Configure Layer 3 Interfaces (PAN-OS)](https://docs.paloaltonetworks.com/ngfw/networking/configure-interfaces/layer-3-interfaces/configure-layer-3-interfaces)
 - [Create a Security Policy Rule (PAN-OS)](https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-admin/policy/security-policy/create-a-security-policy-rule)
+- [Use Interface Management Profiles to Restrict Access](https://docs.paloaltonetworks.com/ngfw/networking/configure-interfaces/use-interface-management-profiles-to-restrict-access)
 - [Policy Objects in Palo Alto](https://docs.paloaltonetworks.com/network-security/security-policy/administration/objects)
-- [How to Configure Palo Alto Active/Passive HA on OCI](https://docs.paloaltonetworks.com/vm-series/11-0/vm-series-deployment/set-up-the-vm-series-firewall-on-oracle-cloud-infrastructure/configure-activepassive-ha-on-oci)
 
 ## Acknowledgements
 
