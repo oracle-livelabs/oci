@@ -1,0 +1,52 @@
+{
+    "workshoptitle": "AI Experience - AI Agents & Agentic Applications in Fusion Applications",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+ 
+        {
+            "title": "Introduction: Day in an AI Assisted Life",
+            "filename": "../../introduction.md"
+        },
+
+        
+        {
+            "title": "Lab 1: Sales Automation",
+            "filename": "../../lab-1-sales-automation.md"
+        },
+
+
+        {
+            "title": "Lab 2: Give Feedback",
+            "filename": "../../lab-2-hcm-give-feedback.md"
+        },
+       
+
+        {
+            "title": "Lab 3: Purchase Requisition",
+            "filename": "../../lab-3-automating-the-requisition-process.md"
+        },
+
+       
+        {
+            "title": "Lab 4: Accounting Automation",
+            "filename": "../../lab-4-accounting-automation.md"
+        },
+
+
+        {
+            "title": "Lab 5: Anomaly Insights and Advanced Predictions",
+            "filename": "../../lab-5-anomaly-insights-and-advanced-predictions.md"
+        },
+
+     
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+        
+    ]
+}
+
+
+
