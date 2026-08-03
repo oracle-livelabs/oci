@@ -75,7 +75,7 @@ Use the web interface to configure the PA-VM-01 data-plane interfaces and securi
 
 <!-- -->
 
--  Click on **Addresses**.
+    - Click on **Addresses**.
 
     ![Click add](images/click-add.png)
 
@@ -100,9 +100,9 @@ Use the web interface to configure the PA-VM-01 data-plane interfaces and securi
 
     ![Select address object during configuration](images/select-address-object-during-configuration.png)
 
-- This concludes the **optional** address objects part. We will now continue with the main configuration.
-- An **Interface Management Profile** in Palo Alto Networks defines which administrative services -such as HTTPS, SSH, or ICMP (ping)- are allowed on a specific firewall interface. By default, data interfaces block all management traffic. Applying a management profile explicitly enables the required services and allows access to be restricted to a whitelist of permitted IP addresses, reducing the attack surface while maintaining necessary administrative access. In this workshop, we use an interface management profile to allow HTTP on both the untrust and trust interfaces, allowing the Network Load Balancers to perform interface health checks in the next lab.
-- Navigate to the **Network** tab.
+    - This concludes the **optional** address objects part. We will now continue with the main configuration.
+    - An **Interface Management Profile** in Palo Alto Networks defines which administrative services -such as HTTPS, SSH, or ICMP (ping)- are allowed on a specific firewall interface. By default, data interfaces block all management traffic. Applying a management profile explicitly enables the required services and allows access to be restricted to a whitelist of permitted IP addresses, reducing the attack surface while maintaining necessary administrative access. In this workshop, we use an interface management profile to allow HTTP on both the untrust and trust interfaces, allowing the Network Load Balancers to perform interface health checks in the next lab.
+    - Navigate to the **Network** tab.
 
     ![Navigate network tab](images/navigate-network-tab.png)
 
