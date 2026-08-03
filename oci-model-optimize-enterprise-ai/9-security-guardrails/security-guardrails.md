@@ -123,9 +123,7 @@ This lab assumes you have:
 1. Confirm that the app blocks the prompt before it sends the prompt to the model and responds with:
 
     ```text
-    <copy>
     Blocked by OCI ApplyGuardrails: prompt injection risk detected.
-    </copy>
     ```
 
     ![ApplyGuardrails blocks request](./images/applyguardrails-blocks-request.png)
