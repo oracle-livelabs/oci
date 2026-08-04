@@ -1,0 +1,65 @@
+{
+   "tutorials" : [
+      {
+         "description" : "Introduction to the workshop",
+         "title" : "Introduction",
+         "filename" : "../../introduction/introduction.md"
+      },
+      {
+         "filename" : "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md",
+         "description" : "Prerequisites for using Free Trial, Paid, and Always Free accounts.",
+         "title" : "Get Started"
+      },
+      {
+         "title" : "Lab 0: Deploy Lab using Oracle Resource Manager",
+         "filename" : "../../lab-0-deploy-lab-using-oracle-resource-manager/lab-0-deploy-lab-using-oracle-resource-manager.md"
+      },
+      {
+         "filename" : "../../lab-1-review-vcn-routing-and-security/lab-1-review-vcn-routing-and-security.md",
+         "title" : "Lab 1: Review VCN Routing & Security (Prerequisites)"
+      },
+      {
+         "title" : "Lab 2: Deploy Two Palo Alto VM-Series from the Marketplace",
+         "filename" : "../../lab-2-deploy-two-palo-alto-vm-series-from-the-marketplace/lab-2-deploy-two-palo-alto-vm-series-from-the-marketplace.md"
+      },
+      {
+         "title" : "Lab 3: Create HA and Data VNICs (Trust and Untrust)",
+         "filename" : "../../lab-3-create-ha-and-data-vnics/lab-3-create-ha-and-data-vnics.md"
+      },
+      {
+         "filename" : "../../lab-4-add-secondary-floating-ips-to-data-vnics/lab-4-add-secondary-floating-ips-to-data-vnics.md",
+         "title" : "Lab 4: Add Secondary (Floating) IP addresses to Data VNICs"
+      },
+      {
+         "filename" : "../../lab-5-setup-identity-and-access-management-iam-components/lab-5-setup-identity-and-access-management-iam-components.md",
+         "title" : "Lab 5: Setup Identity and Access Management (IAM) Components"
+      },
+      {
+         "filename" : "../../lab-6-access-the-palo-alto-and-perform-initial-setup/lab-6-access-the-palo-alto-and-perform-initial-setup.md",
+         "title" : "Lab 6: Access the Palo Alto and Perform Initial Setup"
+      },
+      {
+         "title" : "Lab 7: Configure High Availability (HA)",
+         "filename" : "../../lab-7-configure-high-availability/lab-7-configure-high-availability.md"
+      },
+      {
+         "title" : "Lab 8: Test Synchronization and Failover",
+         "filename" : "../../lab-8-test-synchronization-and-failover/lab-8-test-synchronization-and-failover.md"
+      },
+      {
+         "filename" : "../../lab-9-configure-ha-election-and-failback-optional/lab-9-configure-ha-election-and-failback-optional.md",
+         "title" : "Lab 9: Configure HA Election and Failback (Optional)"
+      },
+      {
+         "title" : "Lab 10: Conclusion",
+         "filename" : "../../lab-10-conclusion/lab-10-conclusion.md"
+      },
+      {
+         "filename" : "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md",
+         "title" : "Need Help?",
+         "description" : "Solutions to common problems and how to get live help"
+      }
+   ],
+   "help" : "anas.abdallah@oracle.com",
+   "workshoptitle" : "Deploy Palo Alto NGFW in OCI with Active/Passive HA"
+}
