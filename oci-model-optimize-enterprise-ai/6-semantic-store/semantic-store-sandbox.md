@@ -41,7 +41,7 @@ This lab assumes you have:
     Connection type: OCI Database tool
     ```
 
-    ![Create structured semantic store](images/create-structured-semantic-store.png)
+    ![Create structured semantic store](images/semantic-store.png)
 
     Use the connection OCIDs from your sandbox resource list:
 
@@ -56,7 +56,7 @@ This lab assumes you have:
 
 1. Click **Test query connection** to make sure the semantic store can use the connection to connect to the database.
 
-    ![Validate the connections](images/validate-connections.png)
+    ![Create structured semantic store](images/create-structured-semantic-store.png)
 
 1. Click **Create**.
 

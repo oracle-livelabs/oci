@@ -25,7 +25,7 @@ In this lab, you will:
 
 2. When any task asks you to select a compartment, expand **LiveLabs** and select the reservation-specific child compartment named like `LL<reservation>-COMPARTMENT`. Do not select the parent **LiveLabs** compartment.
 
-3. Use your favorite editor to create a simple worksheet for the values used by the sample app.
+3. Use your favorite editor to create a simple worksheet for the values used by the sample app and Gen AI tools.
 
     | Value | Where to get it | Later `.env` variable |
     | --- | --- | --- |
@@ -38,6 +38,8 @@ In this lab, you will:
     | Structured semantic store OCID | Semantic Store lab | `OCI_GENAI_SEMANTIC_STORE_OCID` |
     | OCI config file path | Sample Application lab | `OCI_CONFIG_FILE` |
     | OCI config profile | Sample Application lab | `OCI_CONFIG_PROFILE` |
+    | DB Tools Enrichment Connection OCID | Sandbox resource list | _Not Needed_ |
+    | DB Tools Query Connection OCID | Sandbox resource list | _Not Needed_ |
 
     As we progress through the following tasks and labs, you will fill in the missing values that we will use for the sample app in a later lab.
 

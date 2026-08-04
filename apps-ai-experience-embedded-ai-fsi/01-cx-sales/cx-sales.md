@@ -60,7 +60,7 @@ In this exercise we will explore some of the embedded AI features available in F
 
     The deal advisor delivers actionable insights to sales teams, accelerates deal cycles, and improves win rates by helping sellers focus on the right actions at the right time. Managers can use the agent to get brief but comprehensive insights into the deal, customer engagements, and proactively identify risks. It will also generate follow-up questions based on the information generated. 
      
-     >   Select the last option
+     >   Ask Follow up Question: *What risks may arise?*
 
       ![Follow Up Questions](images/image007.png " ")
 
