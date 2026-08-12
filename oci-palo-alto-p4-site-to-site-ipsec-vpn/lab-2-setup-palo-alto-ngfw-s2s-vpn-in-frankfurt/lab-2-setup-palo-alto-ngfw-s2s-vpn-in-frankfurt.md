@@ -16,13 +16,6 @@ In this lab, you will:
 
 Before you begin, ensure you have completed the preceding required labs in this workshop.
 
-> **Important:**
-> 1) You can **commit** after each configuration you make (safer, easier to troubleshoot), or you can wait and commit once after completing all tasks (faster, fewer commits). In this lab, you will commit the configuration once at the end of Task 7.
-> 2) The steps differ by deployment model:
-> - **Standalone:** Apply these steps to the firewall that terminates the IPSec connection.
-> - **Active/Passive:** Apply these steps to the primary firewall; HA replicates the configuration to the passive peer.
-> - **Active/Active:** Apply these steps only to the firewall that terminates the IPSec connection.
-
 ## Task 1: Create tunnel interfaces
 
 In this task, you create the required **tunnel interfaces** on the Palo Alto firewall. These logical interfaces will be used to bind IPSec tunnels and route traffic between OCI and the on-premises environment. Correct tunnel interface configuration is essential, as they form the foundation for IKE gateways, IPSec tunnels, and routing in the subsequent steps.

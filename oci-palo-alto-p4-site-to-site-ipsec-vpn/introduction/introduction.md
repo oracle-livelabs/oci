@@ -147,6 +147,13 @@ Before starting this lab, ensure the following prerequisites are completed:
 
 ![Active active prerequisites](images/active-active-prerequisites.png)
 
+> **Important:**
+> 1) You can **commit** after each configuration you make in Palo Alto (safer, easier to troubleshoot), or you can wait and commit once after completing all tasks (faster, fewer commits). In this workshop, you will commit the configuration once at the end of Task 7 in Lab 2.
+> 2) The steps differ by deployment model:
+> - **Standalone:** Apply these steps to the firewall that terminates the IPSec connection.
+> - **Active/Passive:** Apply these steps to the primary firewall; HA replicates the configuration to the passive peer.
+> - **Active/Active:** Apply these steps only to the firewall that terminates the IPSec connection.
+
 ## Learn More
 
 - [Palo Alto Networks Site-to-Site VPN Overview](https://docs.paloaltonetworks.com/network-security/ipsec-vpn/administration/get-started-with-ipsec-vpn-site-to-site/site-to-site-vpn-overview)
