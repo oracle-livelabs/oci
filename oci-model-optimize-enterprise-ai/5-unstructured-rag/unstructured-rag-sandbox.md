@@ -27,17 +27,38 @@ In this lab, you will:
 
 3. Use your favorite editor to create a simple worksheet for the values used by the sample app.
 
-    | Value | Where to get it | Later `.env` variable |
-    | --- | --- | --- |
-    | Workshop compartment OCID | Sandbox resource list | `OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID` |
-    | Workshop region | Sandbox resource list | `OCI_ADB_MCP_REGION`, `OCI_ADB_MCP_PASSWORD_SECRET_REGION`, `OCI_GENAI_REGION` |
-    | Autonomous AI Database OCID | Sandbox resource list | `OCI_ADB_DATABASE_OCID` |
-    | ADMIN password secret OCID | Sandbox resource list | `OCI_ADB_MCP_PASSWORD_SECRET_OCID` |
-    | Project OCID | Project created in this lab | `OCI_GENAI_PROJECT_OCID` |
-    | Unstructured Vector store ID, for example | Vector store created in this lab | `OCI_GENAI_VECTOR_STORE_IDS` |
-    | Structured semantic store OCID | Semantic Store lab | `OCI_GENAI_SEMANTIC_STORE_OCID` |
-    | OCI config file path | Sample Application lab | `OCI_CONFIG_FILE` |
-    | OCI config profile | Sample Application lab | `OCI_CONFIG_PROFILE` |
+    | Value | Where to get it | Later `.env` variable | Where value is needed |
+    | --- | --- | --- | --- |
+    | Workshop compartment OCID | Sandbox resource list | `OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID` | `.env` |
+    | Workshop region | Sandbox resource list | `OCI_ADB_MCP_REGION`, `OCI_ADB_MCP_PASSWORD_SECRET_REGION`, `OCI_GENAI_REGION` | `.env` |
+    | Autonomous AI Database OCID | Sandbox resource list | `OCI_ADB_DATABASE_OCID` | `.env` |
+    | Database Tools enrichment connection OCID | Sandbox resource list |  | Semantic Store configuration |
+    | Database Tools query connection OCID | Sandbox resource list |  | Semantic Store configuration |
+    | ADMIN password secret OCID | Sandbox resource list | `OCI_ADB_MCP_PASSWORD_SECRET_OCID` | `.env` |
+    | Project OCID | Project created in this lab | `OCI_GENAI_PROJECT_OCID` | `.env` |
+    | Unstructured Vector store ID, for example | Vector store created in this lab | `OCI_GENAI_VECTOR_STORE_IDS` | `.env` |
+    | Structured semantic store OCID | Semantic Store lab | `OCI_GENAI_SEMANTIC_STORE_OCID` | `.env` |
+    | OCI config file path | Sample Application lab | `OCI_CONFIG_FILE` | `.env` |
+    | OCI config profile | Sample Application lab | `OCI_CONFIG_PROFILE` | `.env` |
+
+    Copy the following values into your text file. Fill in each value as you complete the workshop. At this time, you should fill in the six values found on the Sandbox Resource List.
+
+    ```
+    <copy>
+    (Sandbox Resource List)     OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID=
+    (Sandbox Resource List)     OCI_ADB_MCP_REGION=
+    (Sandbox Resource List)     OCI_ADB_MCP_PASSWORD_SECRET_REGION=
+    (Sandbox Resource List)     OCI_GENAI_REGION=
+    (Sandbox Resource List)     OCI_ADB_DATABASE_OCID=
+    (Sandbox Resource List)     OCI_ADB_MCP_PASSWORD_SECRET_OCID=
+    (OCI Gen AI)                OCI_GENAI_PROJECT_OCID=
+    (OCI Gen AI)                OCI_GENAI_VECTOR_STORE_IDS=
+    (OCI Gen AI)                OCI_GENAI_SEMANTIC_STORE_OCID=
+    (Sample Application Lab)    OCI_CONFIG_FILE=
+    (Sample Application Lab)    OCI_CONFIG_PROFILE=
+    
+    </copy>
+    ```
 
     As we progress through the following tasks and labs, you will fill in the missing values that we will use for the sample app in a later lab.
 
