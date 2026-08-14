@@ -124,16 +124,16 @@ In this lab, you will:
 ## Task 3: Set up OKE cluster access
 
 1. Sign in to the OCI Console. From the navigation menu, go to **Developer Services**, and then select **Kubernetes Clusters(OKE)**.
-	![Go to OKE](./images/1-DeveloperServices.png " ")
+	![Go to OKE](./images/1_developer-services.png " ")
 
 2. On the **Clusters** page, select **demo-oke-cluster**.
-	![Select OKE cluster](./images/2-SelectCluster.png " ")
+	![Select OKE cluster](./images/2_select-cluster.png " ")
 
 3. On the **Cluster details** page, select **Actions**, and then select **Access cluster**.
-	![Select Access Cluster](./images/3-ClusterDetails.png " ")
+	![Select Access Cluster](./images/3_cluster-details.png " ")
 
 4. Under **Copy and run the access command**, click **Copy**. You will use this command to configure your local `kubeconfig` file.
-	![Copy command](./images/4-CopyCommand.png " ")
+	![Copy command](./images/4_copy-command.png " ")
 
 5. Open a terminal on your computer, paste the copied command, and run it.
 

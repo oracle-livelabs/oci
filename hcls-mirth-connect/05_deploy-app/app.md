@@ -89,7 +89,7 @@ In this lab, you will:
 	```
 
 3. In a web browser, go to `http://<EXTERNAL-IP>:8080`. Replace `<EXTERNAL-IP>` with the external IP address form the previous step.
-	![Web Portal](./images/3-WebPortal.png " ")
+	![Web Portal](./images/3_web-portal.png " ")
 
 ## Acknowledgements
 * **Author** - [](var:author)
