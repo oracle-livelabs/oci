@@ -25,7 +25,7 @@ In this lab, you will:
 
 2. When any task asks you to select a compartment, expand **LiveLabs** and select the reservation-specific child compartment named like `LL<reservation>-COMPARTMENT`. Do not select the parent **LiveLabs** compartment.
 
-3. Use your favorite editor to create a simple worksheet for the values used by the sample app.
+3. Use your favorite editor to create a simple worksheet for the values used by the sample app and Gen AI tools.
 
     | Value | Where to get it | Later `.env` variable | Where value is needed |
     | --- | --- | --- | --- |

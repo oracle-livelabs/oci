@@ -25,7 +25,7 @@ Review the VCN route tables to confirm that the management and untrust subnets c
 1. Select the **OCI Region** you want to deploy the Firewall in.
 2. Click on the **hamburger menu** in the top left corner.
 
-    ![Click hamburger menu top left](images/click-hamburger-menu-top-left-corner.png)
+    ![Select OCI region and open navigation menu](images/select-oci-region-and-open-navigation-menu.png)
 
 <!-- -->
 
