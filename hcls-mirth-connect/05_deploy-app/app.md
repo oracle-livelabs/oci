@@ -18,10 +18,10 @@ In this lab, you will:
 
 1. Go to the following directory: 
 
-	`oci-healthcare-naci/architectures/mirth-connect-oke-demo/apps`.
+    `oci-healthcare-naci/architectures/mirth-connect-oke-demo/apps`.
 
 2. Open `terraform.tfvars` in a text editor. Update the Terraform input variables for your environment. Sample values are shown below:
-	```bash
+    ```bash
 		# =========================
 		# OCI Authentication
 		# =========================
@@ -47,24 +47,24 @@ In this lab, you will:
 
 1. Make sure that your current working directory is:
 
-	`oci-healthcare-naci/architectures/mirth-connect-oke-demo/apps`.
+    `oci-healthcare-naci/architectures/mirth-connect-oke-demo/apps`.
 
 2. Initialize the Terraform working directory.
-	```bash
+    ```bash
 		<copy>
 		terraform init
 		</copy>
 	```
 
 3. Preview the changes that Terraform will make.
-	```bash
+    ```bash
 		<copy>
 		terraform plan
 		</copy>
 	```
 
 4. Apply the Terraform configuration to deploy Mirth Connect.
-	```bash
+    ```bash
 		<copy>
 		terraform apply -auto-approve
 		</copy>
@@ -75,13 +75,13 @@ In this lab, you will:
 ## Task 3: Access Mirth Connect
 
 1. Run the following command to display the `mirth-connect` service:
-	```bash
+    ```bash
 		<copy>
 		kubectl get service mirth-connect
 		</copy>
 	```
 2. Note the value in the `EXTERNAL-IP` column. The output should be similar to the following:
-	```bash
+    ```bash
 		NAME            TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)                         AGE
 		kubernetes      ClusterIP      10.96.0.1       <none>           443/TCP,12250/TCP               64m
 		mirth-connect   LoadBalancer   10.96.157.162   <EXTERNAL-IP>	8080:30257/TCP,8443:31454/TCP   55m
@@ -89,7 +89,7 @@ In this lab, you will:
 	```
 
 3. In a web browser, go to `http://<EXTERNAL-IP>:8080`. Replace `<EXTERNAL-IP>` with the external IP address form the previous step.
-	![Web Portal](./images/3_web-portal.png " ")
+    ![Web Portal](./images/3_web-portal.png " ")
 
 ## Acknowledgements
 * **Author** - [](var:author)

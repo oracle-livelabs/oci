@@ -22,8 +22,8 @@ In this lab, you will:
 3. Go to the following directory: `oci-healthcare-naci/architectures/mirth-connect-oke-demo/infra`.
 4. Open `terraform.tfvars`in a text editor. 
 5. Update the Terraform input variables for your environment. Sample values are shown below. Replace placeholder values with values appropriate for your environment.
-	```bash
-		# =========================
+    ```bash
+    	# =========================
 		# Network / Access
 		# =========================
 		public_allowed_ips = [
@@ -96,24 +96,24 @@ In this lab, you will:
 ## Task 2: Provision OCI resources using Terraform
 
 1. Make sure that your current working directory is: 
-	`oci-healthcare-naci/architectures/mirth-connect-oke-demo/infra`.
+    `oci-healthcare-naci/architectures/mirth-connect-oke-demo/infra`.
 
 2. Initialize the Terraform working directory.
-	```bash
+    ```bash
 		<copy>
 		terraform init
 		</copy>
 	```
 
 3. Preview the OCI infrastructure resources that Terraform will provision.
-	```bash
+    ```bash
 		<copy>
 		terraform plan
 		</copy>
 	```
 
 4. Apply the Terraform configuration to provision the OCI resources.
-	```bash
+    ```bash
 		<copy>
 		terraform apply -auto-approve
 		</copy>
@@ -124,23 +124,23 @@ In this lab, you will:
 ## Task 3: Set up OKE cluster access
 
 1. Sign in to the OCI Console. From the navigation menu, go to **Developer Services**, and then select **Kubernetes Clusters(OKE)**.
-	![Go to OKE](./images/1_developer-services.png " ")
+    ![Go to OKE](./images/1_developer-services.png " ")
 
 2. On the **Clusters** page, select **demo-oke-cluster**.
-	![Select OKE cluster](./images/2_select-cluster.png " ")
+    ![Select OKE cluster](./images/2_select-cluster.png " ")
 
 3. On the **Cluster details** page, select **Actions**, and then select **Access cluster**.
-	![Select Access Cluster](./images/3_cluster-details.png " ")
+    ![Select Access Cluster](./images/3_cluster-details.png " ")
 
 4. Under **Copy and run the access command**, click **Copy**. You will use this command to configure your local `kubeconfig` file.
-	![Copy command](./images/4_copy-command.png " ")
+    ![Copy command](./images/4_copy-command.png " ")
 
 5. Open a terminal on your computer, paste the copied command, and run it.
 
 ## Task 4: Validate OKE cluster access
 
 1. Run the following command to verify that you can access the OKE cluster:
-	```bash
+    ```bash
 		kubectl get node
 	```
 2. Verify that the node has a `Ready` status. The output should be similar to the following:

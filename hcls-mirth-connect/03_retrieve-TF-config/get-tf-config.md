@@ -21,8 +21,7 @@ If you don't have Git installed and configured on your computer, you can downloa
 1. Go to the [oci-healthcare-naci](https://github.com/oracle-samples/oci-healthcare-naci/) repository.
 
 2. Click **Code**, and then select **Download ZIP**.
-	
-	![Download Repo](./images/download.png " ")
+    ![Download Repo](./images/download.png " ")
 
 3. Your browser downloads a ZIP file named `oci-healthcare-naci-main.zip`.
 
