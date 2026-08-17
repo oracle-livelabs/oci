@@ -30,7 +30,7 @@
     {
       "title": "Need Help?",
       "description": "Solutions to common problems and directions for receiving help.",
-      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      "filename": "../../need-help/need-help.md"
     }
   ]
 }
