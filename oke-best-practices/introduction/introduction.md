@@ -44,4 +44,4 @@ Terraform creates or references a VCN, subnets, OKE cluster, node pools, and an 
 ## Acknowledgements
 
 * **Authors** - Mahamat H. Guiagoussou, Payal Sharma, Matthew McDaniel, and John Adewumi
-* **Last Updated** - July 2026
+* **Last Updated** - August 2026

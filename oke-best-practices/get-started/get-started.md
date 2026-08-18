@@ -55,4 +55,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Authors** - Mahamat H. Guiagoussou, Payal Sharma, Matthew McDaniel, and John Adewumi
-* **Last Updated** - July 2026
+* **Last Updated** - August 2026

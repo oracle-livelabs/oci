@@ -104,4 +104,4 @@ If the workshop asks you to open the cloud shell, but you cannot access it, plea
 ## Acknowledgements
 
 * **Authors** - Mahamat H. Guiagoussou, Payal Sharma, Matthew McDaniel, and John Adewumi
-* **Last Updated** - July 2026
+* **Last Updated** - August 2026
