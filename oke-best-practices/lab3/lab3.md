@@ -71,3 +71,8 @@ Estimated Time: 45 minutes
 ## Summary
 
 You applied OKE best practices and verified the KPO flow from `OCINodeClass` to `NodePool`, `NodeClaim`, and a KPO-launched worker node. Destroy the Lab 1 or Lab 2 infrastructure when no longer needed.
+
+## Acknowledgements
+
+* **Authors** - Mahamat H. Guiagoussou, Payal Sharma, Matthew McDaniel, and John Adewumi
+* **Last Updated** - August 2026

@@ -78,3 +78,8 @@ Estimated Time: 60 minutes
 ## Summary
 
 You used the advanced OKE module source through an independent CLI or ORM workflow. Continue to Lab 3 for operational practices and the KPO bonus use case.
+
+## Acknowledgements
+
+* **Authors** - Mahamat H. Guiagoussou, Payal Sharma, Matthew McDaniel, and John Adewumi
+* **Last Updated** - August 2026

@@ -95,3 +95,8 @@ Estimated Time: 60 minutes
 ## Summary
 
 You deployed the simple OKE configuration using one independent execution path. Continue to Lab 2 for the advanced modules.
+
+## Acknowledgements
+
+* **Authors** - Mahamat H. Guiagoussou, Payal Sharma, Matthew McDaniel, and John Adewumi
+* **Last Updated** - August 2026
