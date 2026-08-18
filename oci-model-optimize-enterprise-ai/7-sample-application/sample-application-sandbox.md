@@ -6,6 +6,20 @@ In this lab, you extract, configure, and run the Example Motors support app on y
 
 Estimated Time: 30 minutes
 
+**File structure used throughout the lab.**
+
+```text
+<home-directory>/
+├── .oci/
+│   ├── config
+│   └── oci_hybrid_hol_api_key.pem
+└── Downloads/
+    └── sample-app/
+        └── .env
+```
+
+This is the file structure used throughout the lab.
+
 ### Objectives
 
 In this lab, you will:
@@ -168,7 +182,7 @@ This lab assumes you have:
 
     ![Configuration file preview](./images/configuration-file-preview.png)
 
-1. Back in the terminal screen, create the `.oci` directory.
+1. Back in the terminal screen, create the `.oci` directory in your home directory.
 
     > **Note:** If you already have an `.oci` folder and a `config` file in it, then you can re-use this file. Skip the creation steps and jump to the part where we update the file. Keep the updates at the end of the file so you do not overwrite the existing configuration.
 
@@ -209,6 +223,22 @@ This lab assumes you have:
     </copy>
     ```
 
+1. Find your home directory path before you open the OCI config file. Run the commands for your operating system, **then copy the absolute path displayed by `pwd`**. You will paste this value into the `key_file=` line in the configuration file.
+
+    On Mac:
+
+    ```text
+    cd ~
+    pwd
+    ```
+
+    On Windows:
+
+    ```text
+    cd $HOME
+    pwd
+    ```
+
 1. Open the OCI config file. You can use your favorite text editor or `nano` for Mac and `Notepad` for Windows as described below.
 
     As mentioned above, if this file already exists, scroll down past all of the existing values and take care not to change or overwrite anything existing in the file.
@@ -243,25 +273,9 @@ This lab assumes you have:
 
     ![Editing OCI config file with notepad](./images/notepad-edit-config-file.png)
 
-1. Update the `key_file` line to point to the API private key we've downloaded and moved to the `.oci` folder. Please make sure to specify the full path of your home folder. Do not use special expressions such as `~` on Mac or `$HOME`, `%USERPROFILE%` on Windows.
+1. Update the `key_file` line to point to the API private key we've downloaded and moved to the `.oci` folder. Paste the absolute home directory path you copied into the `key_file=` value, then append the private key path shown below. Do not use special expressions such as `~` on Mac or `$HOME`, `%USERPROFILE%` on Windows.
 
-    If you don't know your home directory, the following two commands will print the folder to the screen.
-
-    On Mac:
-
-    ```text
-    cd ~
-    pwd
-    ```
-
-    On Windows:
-
-    ```text
-    cd $HOME
-    pwd
-    ```
-
-    Specify the full path to the API private key file:
+    The completed `key_file` line should use the following format:
 
     On Mac:
 
