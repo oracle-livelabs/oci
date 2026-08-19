@@ -1,0 +1,13 @@
+{
+  "workshoptitle": "The Title of the Workshop is defined in the manifest",
+  "help": "livelabs-help-**enterarea**_us@oracle.com",
+  "variables": ["../../variables/variables.json",
+    "../../variables/variables-in-another-file.json"],
+  "tutorials": [
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
