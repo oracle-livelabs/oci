@@ -1,0 +1,71 @@
+{
+    "workshoptitle": "Get Started with OCI Internet of Things Platform",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Review the Water Pump Use Case",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../water-pump-use-case/water-pump-use-case.md"
+        },
+        {
+            "title": "Lab 2: Set Up Tenancy Prerequisites",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../tenancy-prerequisites/tenancy-prerequisites.md"
+        },
+        {
+            "title": "Understanding DTDL",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../understanding-dtdl/understanding-dtdl.md"
+        },
+        {
+            "title": "Lab 3: Create the Factory and Production Line Digital Twins",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../create-relationships/create-relationships.md"
+        },
+        {
+            "title": "Lab 4: Create a Digital Twin Model",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../create-digital-twin-model/create-digital-twin-model.md"
+        },
+        {
+            "title": "Lab 5: Create Digital Twin Adapters",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../create-digital-twin-adapters/create-digital-twin-adapters.md"
+        },
+        {
+            "title": "Lab 6: Create Digital Twin Instances",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../create-digital-twin-instances/create-digital-twin-instances.md"
+        },
+        {
+            "title": "Lab 7: Send Telemetry and View Results",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../send-telemetry-and-view-results/send-telemetry-and-view-results.md"
+        },
+        {
+            "title": "Lab 8: Clean up IoT Lab Resources",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../cleanup-iot-resources/cleanup-iot-resources.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Template to link to Need Help lab at the end of workshop.",
+            "filename": "https://raw.githubusercontent.com/oracle-livelabs/common/main/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
