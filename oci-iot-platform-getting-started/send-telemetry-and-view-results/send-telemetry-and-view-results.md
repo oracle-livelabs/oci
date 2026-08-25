@@ -12,7 +12,7 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-- Send model-shaped telemetry to Pump 1 with curl.
+- Send telemetry in nested format to Pump 1 with curl.
 - Send flat PSI telemetry to Pump 2 with curl.
 - Inspect the normalized digital twin content with the OCI CLI and the OCI Console.
 
@@ -96,4 +96,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Author** - Pete St. Pierre, Director, Product Management
-* **Last Updated By/Date** - Draft structure, August 2026
+* **Last Updated By/Date** - Pete St. Pierre, August 2026

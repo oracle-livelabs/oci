@@ -215,4 +215,4 @@ IAM users, groups, and the policy are tenancy-level resources. Execute every ste
 ## Acknowledgements
 
 * **Author** - Pete St. Pierre, Director, Product Management
-* **Last Updated By/Date** - Draft structure, August 2026
+* **Last Updated By/Date** - Pete St. Pierre, August 2026
