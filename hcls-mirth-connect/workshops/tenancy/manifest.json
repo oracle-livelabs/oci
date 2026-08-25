@@ -1,0 +1,44 @@
+{
+    "workshoptitle": "Deploy a Healthcare Integration Engine on OCI",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+        "title": "Introduction",
+        "description": "The Introduction is always second for LiveLabs. The title and contents menu title match for the Introduction.",
+        "filename": "../../00_introduction/introduction.md"
+        },
+        {
+        "title": "Lab 1: Set up OCI API Authentication",
+        "description": "Set up OCI API Authentication",
+        "filename": "../../01_oci-api-auth/oci-api-auth.md"
+        },
+        {
+        "title": "Lab 2: Install Terraform",
+        "description": "Install Terraform on your computer",
+        "filename": "../../02_install-terraform/install-terraform.md"
+        },
+        {
+        "title": "Lab 3: Obtain Terraform Configuration",
+        "description": "Download Terraform configuration to your computer",
+        "filename": "../../03_retrieve-TF-config/get-tf-config.md"
+        },
+        {
+        "title": "Lab 4: Set up OCI resources",
+        "filename": "../../04_create-oci-resources/infra.md"
+        },
+        {
+        "title": "Lab 5: Deploy Mirth Connect",
+        "filename": "../../05_deploy-app/app.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+        },
+        {
+            "title": "Other LiveLabs you might like",
+            "description": "Other LiveLabs you might like",
+            "filename": "../../other-livelabs/other-livelabs.md"
+        }
+    ]
+}

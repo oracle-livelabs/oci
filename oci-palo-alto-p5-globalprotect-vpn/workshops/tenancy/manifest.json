@@ -1,0 +1,49 @@
+{
+   "help" : "anas.abdallah@oracle.com",
+   "tutorials" : [
+      {
+         "filename" : "../../introduction/introduction.md",
+         "title" : "Introduction",
+         "description" : "Introduction to the workshop"
+      },
+      {
+         "filename" : "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md",
+         "title" : "Get Started",
+         "description" : "Prerequisites for using Free Trial, Paid, and Always Free accounts."
+      },
+      {
+         "filename" : "../../lab-1-configure-vpn-nlb-for-active-active-setup/lab-1-configure-vpn-nlb-for-active-active-setup.md",
+         "title" : "Lab 1: Configure VPN Network Load Balancer (NLB) for Active/Active Setup"
+      },
+      {
+         "title" : "Lab 2: Prepare the Firewall for GlobalProtect",
+         "filename" : "../../lab-2-prepare-firewall-for-globalprotect/lab-2-prepare-firewall-for-globalprotect.md"
+      },
+      {
+         "title" : "Lab 3: Configure Certificates and TLS",
+         "filename" : "../../lab-3-configure-certificates-and-tls/lab-3-configure-certificates-and-tls.md"
+      },
+      {
+         "title" : "Lab 4: Configure GlobalProtect",
+         "filename" : "../../lab-4-configure-globalprotect/lab-4-configure-globalprotect.md"
+      },
+      {
+         "title" : "Lab 5: Download and Install GlobalProtect",
+         "filename" : "../../lab-5-download-and-install-globalprotect/lab-5-download-and-install-globalprotect.md"
+      },
+      {
+         "filename" : "../../lab-6-test-and-validate/lab-6-test-and-validate.md",
+         "title" : "Lab 6: Test and Validate"
+      },
+      {
+         "filename" : "../../lab-7-conclusion/lab-7-conclusion.md",
+         "title" : "Lab 7: Conclusion"
+      },
+      {
+         "filename" : "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md",
+         "description" : "Solutions to common problems and how to get live help",
+         "title" : "Need Help?"
+      }
+   ],
+   "workshoptitle" : "Set Up Remote Access VPN (GlobalProtect) on Palo Alto NGFW in OCI"
+}
