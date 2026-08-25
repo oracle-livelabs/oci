@@ -33,19 +33,19 @@
             "filename": "../../create-relationships/create-relationships.md"
         },
         {
-            "title": "Lab 4: Create a Digital Twin Model",
+            "title": "Lab 4: Create a Pump Digital Twin Model",
             "description": "",
             "type": "livelabs",
             "filename": "../../create-digital-twin-model/create-digital-twin-model.md"
         },
         {
-            "title": "Lab 5: Create Digital Twin Adapters",
+            "title": "Lab 5: Create Pump Digital Twin Adapters",
             "description": "",
             "type": "livelabs",
             "filename": "../../create-digital-twin-adapters/create-digital-twin-adapters.md"
         },
         {
-            "title": "Lab 6: Create Digital Twin Instances",
+            "title": "Lab 6: Create Pump Digital Twin Instances",
             "description": "",
             "type": "livelabs",
             "filename": "../../create-digital-twin-instances/create-digital-twin-instances.md"
