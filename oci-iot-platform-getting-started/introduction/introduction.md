@@ -78,7 +78,7 @@ In this workshop, you will:
     - It removes the need to create a digital twin instance for each physical pump.
     - It allows the gateway to operate without network connectivity.
     - It replaces all relationships in the bottling plant.
-    > A shared model gives every supported pump the same telemetry vocabulary, while each physical pump still has its own instance and relationships.
+    > A shared model gives every supported pump the same telemetry vocabulary, regardless of the telemetry format sent by each particular make and model of pump, or the context in which the pump is deployed.
 
     Q: Which telemetry path is appropriate for a pump that cannot connect to OCI IoT Platform on its own?
     - The pump must become a directly connected device before it can report data.
