@@ -18,7 +18,7 @@ In this lab, you will:
 
 ## Task 1: Explore the factory use case
 
-![Diagram of a beverage factory with two production lines, each containing three sequential machines and a directly connected water pump](images/factory-production-lines.svg)
+    ![Diagram of a beverage factory with two production lines, each containing three sequential machines and a directly connected water pump](images/factory-production-lines.svg)
 
 1. The factory contains multiple production lines. Each line uses water pumps for rinse stations, cooling loops, or clean-in-place systems.
 

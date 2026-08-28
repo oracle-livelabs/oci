@@ -1,11 +1,9 @@
 # LiveLabs Workshop Validation – oci-iot-platform-getting-started
 
-Generated on 2026-08-28T17:57:54.612525+00:00
+Generated on 2026-08-28T19:39:09.949868+00:00
 
 ## Structure Check
 - ✅ Required folders and workshop variants present.
-- ⚠️ Warnings:
-  - cleanup-iot-resources missing images/ folder (required for screenshots).
 
 ## Manifest Review
 ### workshops/tenancy/manifest.json
@@ -22,8 +20,9 @@ Generated on 2026-08-28T17:57:54.612525+00:00
 
 ### create-digital-twin-adapters/create-digital-twin-adapters.md
 - ✅ LiveLabs formatting checks passed.
-- ✍️ Lanham score: 3/5
-  - 11 sentence(s) exceed 20 words; tighten wording.
+- ✍️ Lanham score: 2/5
+  - 14 sentence(s) exceed 20 words; tighten wording.
+  - Passive voice detected in 1 instance(s).
   - Heavy nominalization usage; prefer vivid verbs.
 
 ### create-digital-twin-instances/create-digital-twin-instances.md
@@ -36,7 +35,7 @@ Generated on 2026-08-28T17:57:54.612525+00:00
 ### create-digital-twin-model/create-digital-twin-model.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 1/5
-  - 11 sentence(s) exceed 20 words; tighten wording.
+  - 12 sentence(s) exceed 20 words; tighten wording.
   - Passive voice detected in 8 instance(s).
   - Contractions found; expand them per Lanham rules.
   - Heavy nominalization usage; prefer vivid verbs.
@@ -79,8 +78,7 @@ Generated on 2026-08-28T17:57:54.612525+00:00
   - Heavy nominalization usage; prefer vivid verbs.
 
 ### water-pump-use-case/water-pump-use-case.md
-- ❌ Formatting issues:
-  - Line 21: Images inside tasks must align with the numbered step (indent).
+- ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 4 sentence(s) exceed 20 words; tighten wording.
+  - 7 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
