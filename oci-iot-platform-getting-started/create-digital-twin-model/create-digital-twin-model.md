@@ -27,9 +27,13 @@ In this lab, you will:
 
 ## Task 2: Define and create the ElectricMotor model
 
-1. Review how the two models use historization and extensions. The **ElectricMotor** model defines three telemetry values. `motorTemperature` and `vibrationLevel` use the `Historized` annotation from the historization extension. OCI IoT Platform stores their time-series observations in `HISTORIZED_DATA` and maintains their latest normalized values in `SNAPSHOT_DATA`, which supports trend analysis and maintenance investigations. `powerConsumption` is telemetry but is not historized, so its latest normalized value is stored in `SNAPSHOT_DATA` only.
+1. Review how the two models use historization and extensions.
+
+    The **ElectricMotor** model defines three telemetry values. `motorTemperature` and `vibrationLevel` use the `Historized` annotation from the historization extension. OCI IoT Platform stores their time-series observations in `HISTORIZED_DATA` and maintains their latest normalized values in `SNAPSHOT_DATA`, which supports trend analysis and maintenance investigations. `powerConsumption` is telemetry but is not historized, so its latest normalized value is stored in `SNAPSHOT_DATA` only.
 
     The **WaterPump** model reuses ElectricMotor through its `motor` component. Therefore, `motor.motorTemperature` and `motor.vibrationLevel` are historized and stored in both `HISTORIZED_DATA` and `SNAPSHOT_DATA`; `motor.powerConsumption` remains non-historized and is stored in `SNAPSHOT_DATA` only. The top-level `flowRate` and `dischargePressure` telemetry values are also not historized, so their latest normalized values are stored in `SNAPSHOT_DATA`. The WaterPump model uses the OCI validation extension to mark `flowRate` as `Validated` and reject values outside the configured range of 0 through 1000. It uses the DTDL quantitative-types extension to declare that `dischargePressure` is `Pressure` measured in `bar`; this gives the value measurement meaning but does not convert units. The custom adapter in Lab 5 converts PSI to bar before it updates the model. Both models use the base DTDL v3 context. The WaterPump model's `installedOn` relationship is also a base DTDL construct, not an extension, and links a pump instance to its Production Line context.
+
+    In a production environment, models typically include many more attributes; this workshop uses a subset of values to keep the example simple.
 
     **Reminder:** OCI IoT Platform stores each incoming device message in `RAW_DATA` before normalization. A message that fails normalization is also recorded in `REJECTED_DATA` with the reason for rejection.
 

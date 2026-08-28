@@ -14,8 +14,9 @@ In this lab, you will:
 
 - Create a dedicated compartment for the workshop.
 - Create the `iot-factory-lab` IAM group and add a lab user.
-- Grant the group access to OCI IoT Platform and Vault resources.
-- Create a Vault and authorize the IoT Platform to read its device secrets.
+- Create the IAM group and user that will complete the workshop.
+- Create a Vault and master encryption key for device credentials.
+- Grant the group and IoT Platform the required access.
 - Create an IoT domain group and IoT domain in the workshop compartment.
 
 ## Task 1: Create the workshop compartment
@@ -40,7 +41,7 @@ In this lab, you will:
       --query 'data.id' --raw-output)
     ```
 
-## Task 2: Create the workshop team and grant access
+## Task 2: Create the workshop team
 
 IAM users, groups, and the policy are tenancy-level resources. Execute every step in this task as a tenancy administrator; do not use the workshop compartment as the IAM scope. The policy later grants the group access only to the workshop compartment.
 
@@ -72,33 +73,7 @@ IAM users, groups, and the policy are tenancy-level resources. Execute every ste
       --user-id "$LAB_USER_OCID"
     ```
 
-4. As a tenancy administrator, open **Identity & Security**, select **Policies**, and create a policy in the root compartment named `iot-factory-lab-workshop-policy`. The policy is attached at the tenancy level, while its statements grant access only to the workshop compartment. Replace the compartment name if you chose a different one in Task 1.
-
-    ```
-    Allow group iot-factory-lab to manage iot-family in compartment iot-water-pump-workshop
-    Allow group iot-factory-lab to manage vaults in compartment iot-water-pump-workshop
-    Allow group iot-factory-lab to manage keys in compartment iot-water-pump-workshop
-    Allow group iot-factory-lab to manage secret-family in compartment iot-water-pump-workshop
-    ```
-
-5. Alternatively, create the policy with the CLI. This command creates the policy in the root compartment and saves its OCID for the Vault-specific policy update in the next task.
-
-    ```bash
-    export WORKSHOP_POLICY_OCID=$(oci iam policy create \
-      --compartment-id "$TENANCY_OCID" \
-      --name iot-factory-lab-workshop-policy \
-      --description "Permissions for the OCI IoT factory workshop" \
-      --statements '[
-        "Allow group iot-factory-lab to manage iot-family in compartment iot-water-pump-workshop",
-        "Allow group iot-factory-lab to manage vaults in compartment iot-water-pump-workshop",
-        "Allow group iot-factory-lab to manage keys in compartment iot-water-pump-workshop",
-        "Allow group iot-factory-lab to manage secret-family in compartment iot-water-pump-workshop"
-      ]' \
-      --wait-for-state ACTIVE \
-      --query 'data.id' --raw-output)
-    ```
-
-6. Sign in as the lab user, or confirm that your existing user is a member of `iot-factory-lab`. The permissions can take a few minutes to propagate. For a production environment, split domain-administration, Vault, and digital-twin responsibilities, then grant only the required permissions. Review the [OCI IoT Platform user policies](https://docs.oracle.com/en-us/iaas/Content/internet-of-things/user-policies.htm) before you apply production policies.
+4. Sign in as the lab user, or confirm that your existing user is a member of `iot-factory-lab`. You grant the group's workshop permissions after you create the Vault in the next task.
 
 ## Task 3: Create a Vault for device credentials
 
@@ -145,32 +120,45 @@ IAM users, groups, and the policy are tenancy-level resources. Execute every ste
       --query 'data.id' --raw-output)
     ```
 
-6. As a tenancy administrator, add the following policy statement to `iot-factory-lab-workshop-policy`. Replace `<vault-ocid>` with the OCID for the Vault you just created.
+6. You create the individual pump secrets in Lab 6 before you create the pump instances. Continue to the next task to grant the group and the IoT domain access that they need.
+
+## Task 4: Grant workshop access with one policy
+
+IAM policies are tenancy-level resources. As a tenancy administrator, create one policy in the tenancy root after you know the workshop Vault OCID. The policy grants the `iot-factory-lab` group access only to the workshop compartment and allows IoT domains in that compartment to read secret bundles from the selected Vault.
+
+1. In the OCI Console, open **Identity & Security**, select **Policies**, and create a policy in the root compartment named `iot-factory-lab-workshop-policy`. Replace the compartment name if you chose a different name in Task 1. Replace `<vault-ocid>` with the `VAULT_OCID` from Task 3.
 
     ```
+    Allow group iot-factory-lab to manage iot-family in compartment iot-water-pump-workshop
+    Allow group iot-factory-lab to manage vaults in compartment iot-water-pump-workshop
+    Allow group iot-factory-lab to manage keys in compartment iot-water-pump-workshop
+    Allow group iot-factory-lab to manage secret-family in compartment iot-water-pump-workshop
     Allow any-user to {SECRET_BUNDLE_READ, SECRET_READ} in compartment iot-water-pump-workshop where ALL {request.principal.type = 'iotdomain', target.vault.id = '<vault-ocid>'}
     ```
 
-7. Alternatively, update the policy by using the CLI. OCI requires a version date whenever you update policy statements. This policy has no fixed version date, so pass an explicit empty value. The update command replaces the policy statements with the complete set, including the IoT domain access to the Vault.
+2. Alternatively, create the complete policy with one OCI CLI command. This command creates the policy in the tenancy root and includes every required statement; it does not require a later policy update.
 
     ```bash
-    oci iam policy update \
-      --policy-id "$WORKSHOP_POLICY_OCID" \
-      --version-date '' \
+    export WORKSHOP_POLICY_OCID=$(oci iam policy create \
+      --compartment-id "$TENANCY_OCID" \
+      --name iot-factory-lab-workshop-policy \
+      --description "Permissions for the OCI IoT factory workshop" \
       --statements "[
         \"Allow group iot-factory-lab to manage iot-family in compartment iot-water-pump-workshop\",
         \"Allow group iot-factory-lab to manage vaults in compartment iot-water-pump-workshop\",
         \"Allow group iot-factory-lab to manage keys in compartment iot-water-pump-workshop\",
         \"Allow group iot-factory-lab to manage secret-family in compartment iot-water-pump-workshop\",
         \"Allow any-user to {SECRET_BUNDLE_READ, SECRET_READ} in compartment iot-water-pump-workshop where ALL {request.principal.type = 'iotdomain', target.vault.id = '$VAULT_OCID'}\"
-      ]"
+      ]" \
+      --wait-for-state ACTIVE \
+      --query 'data.id' --raw-output)
     ```
 
-8. Confirm that the policy contains both the four group statements from Task 2 and the IoT domain secret-read statement. You create the individual pump secrets in Lab 6 before you create the pump instances.
+3. Confirm that the policy contains the four group permissions and the IoT domain secret-read statement. IAM policy changes can take a few minutes to propagate. For a production environment, split domain-administration, Vault, and digital-twin responsibilities, then grant only the required permissions. Review the [OCI IoT Platform user policies](https://docs.oracle.com/en-us/iaas/Content/internet-of-things/user-policies.htm) before you apply production policies.
 
-9. If your organization uses certificate authentication, follow the certificate policies in the tenancy-preparation blog instead. Keep certificate resources in the same region and compartment as the IoT resources.
+4. If your organization uses certificate authentication, follow the certificate policies in the tenancy-preparation blog instead. Keep certificate resources in the same region and compartment as the IoT resources.
 
-## Task 4: Create an IoT domain group and IoT domain
+## Task 5: Create an IoT domain group and IoT domain
 
 1. In the OCI Console, select the workshop compartment. Open **Internet of Things**, then create an IoT domain group. An IoT domain group provides the database used by the platform.
 

@@ -13,7 +13,7 @@ Estimated Time: 15 minutes
 In this lab, you will:
 
 - Identify the factory, production lines, water pumps, and their relationships.
-- Explain why the solution uses a shared *WaterPump* model.
+- Explain why the solution uses a shared *WaterPump* model. Lab 4 shows how to build this model.
 - Describe the work that the following labs complete.
 
 ## Task 1: Explore the factory use case
@@ -34,7 +34,9 @@ In this lab, you will:
 
 4. The following labs set up tenancy access, create the relationships and *WaterPump* model, create the default and custom adapters, connect the directly connected devices, create digital twin instances, and send telemetry to inspect the results.
 
-5. The following labs provide OCI CLI commands for each implementation step. Install and configure the CLI before you use those commands; see [Quickstart: Install and configure the OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm). You can also carry out the same actions in the OCI Console.
+5. You can run the OCI CLI commands in the following labs from [OCI Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm) or from a local machine. Cloud Shell is available from the OCI Console and includes a pre-authenticated OCI CLI; select the intended region in the Console before you start Cloud Shell. To run the commands locally, install and configure the OCI CLI by using [Quickstart: Install and configure the OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm).
+
+    You can also complete the same actions through the OCI IoT Platform user interface, which is available from the IoT Domain details page in the OCI Console. Use the Console when you prefer a guided visual workflow; use the CLI when you want repeatable commands and values that later labs can reuse.
 
 ## Acknowledgements
 

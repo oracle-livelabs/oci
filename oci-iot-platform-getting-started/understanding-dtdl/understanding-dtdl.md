@@ -157,7 +157,7 @@ A quantitative type adds measurement meaning and a unit to numeric telemetry. He
     - To send telemetry without a digital twin adapter.
     > A component embeds a reusable model in the parent model, so the WaterPump can use the ElectricMotor telemetry contract without redefining it.
 
-    Q: Which annotation retains a telemetry value as time-series data as well as its current snapshot?
+    Q: Which annotation retains time-stamped telemetry history as well as the current snapshot for a telemetry value?
     - Validated
     * Historized
     - Pressure
