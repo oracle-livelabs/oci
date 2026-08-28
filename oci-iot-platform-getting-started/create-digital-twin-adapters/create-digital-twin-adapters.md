@@ -26,6 +26,14 @@ In this lab, you will:
 
 ## Task 2: Create the default WaterPump adapter
 
+### Understand the reference payload
+
+`referencePayload` is a critical part of an adapter definition. It provides a representative example of the device telemetry shape that the adapter expects. The inbound envelope uses it to describe the complete message received at the reference endpoint. Each inbound route uses it to show the input shape that its mapping processes.
+
+For the default adapter, the envelope and wildcard route use the same nested example because the device payload already matches the *WaterPump* model. The custom adapter in the next task instead uses a flat example with `dischPressPsi`, which makes its nested-field mapping and PSI-to-bar conversion clear.
+
+The reference payload is design-time documentation, not live telemetry. It does not create or update a digital twin, and devices do not need to send the exact sample values. Actual messages are evaluated against the route condition and then normalized by the payload mapping.
+
 1. Create `$WORKSHOP_DIR/default-water-pump-envelope.json`. This representative payload already matches the model shape and uses `dischargePressure` in bar.
 
     ```json
