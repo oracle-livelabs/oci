@@ -18,6 +18,12 @@ In this lab, you will:
 - Create a custom adapter for flat telemetry with pressure in PSI.
 - Verify that both adapters are active in OCI IoT Platform.
 
+## Prerequisites
+
+- Complete Labs 3 and 4.
+- Have OCI Cloud Shell or a configured OCI CLI available.
+- Retain the `IOT_DOMAIN_OCID`, `WATER_PUMP_MODEL_ID`, and `WORKSHOP_DIR` values created in earlier labs.
+
 ## Task 1: Prepare the adapter environment
 
 1. This lab references `IOT_DOMAIN_OCID`, `WATER_PUMP_MODEL_ID`, and `WORKSHOP_DIR`, which you set in earlier labs. Do not set them again.
@@ -124,6 +130,8 @@ The reference payload is design-time documentation, not live telemetry. It does 
 2. Confirm that **Water Pump Default Adapter** and **Water Pump Flat PSI Adapter** both have the `ACTIVE` lifecycle state. Record their OCIDs for the digital twin instance lab.
 
 3. In the OCI Console, select the workshop compartment, open **Internet of Things**, and open the IoT domain. Select the **Digital twin adapters** tab. Locate **Water Pump Default Adapter** and **Water Pump Flat PSI Adapter** and confirm that both are active.
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

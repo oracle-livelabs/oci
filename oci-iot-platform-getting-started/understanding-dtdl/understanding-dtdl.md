@@ -15,6 +15,11 @@ In this section, you will:
 - Distinguish base DTDL constructs from platform and DTDL extensions.
 - Recognize how the WaterPump model uses each construct.
 
+## Prerequisites
+
+- Complete Labs 1 and 2.
+- Understand the water-pump use case and the purpose of an OCI IoT domain.
+
 ## DTDL constructs
 
 DTDL uses typed model content to describe what an asset reports and how OCI IoT Platform handles the data. `Telemetry` and `Component` are base DTDL constructs. `Historized`, `Validated`, and quantitative types are extension annotations used by the model.
@@ -175,6 +180,8 @@ A quantitative type adds measurement meaning and a unit to numeric telemetry. He
 ## Resources
 
 - [Digital Twins Definition Language v3 reference](https://github.com/Azure/opendigitaltwins-dtdl/blob/master/DTDL/v3/DTDL.v3.md)
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

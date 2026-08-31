@@ -20,6 +20,12 @@ In this lab, you will:
 - Create two directly connected digital twin instances.
 - Relate each pump to its production line.
 
+## Prerequisites
+
+- Complete Labs 3 through 5.
+- Have OCI Cloud Shell or a configured OCI CLI available.
+- Retain the domain, model, adapter, production-line, Vault, and master-key OCIDs created in earlier labs.
+
 ## Task 1: Prepare instance values
 
 1. This lab references `IOT_DOMAIN_OCID`, `WORKSHOP_COMPARTMENT_OCID`, `VAULT_OCID`, `VAULT_MASTER_KEY_OCID`, `WATER_PUMP_MODEL_ID`, `DEFAULT_WATER_PUMP_ADAPTER_ID`, `CUSTOM_WATER_PUMP_ADAPTER_ID`, `PRODUCTION_LINE_1_ID`, and `PRODUCTION_LINE_2_ID`, which you set in earlier labs. Do not set them again. Set the external keys for the two new pump instances; you create and set the two secret OCIDs in the next task.
@@ -173,6 +179,8 @@ In this lab, you will:
       --query 'data.items[].{Source:"source-digital-twin-instance-id",Relationship:"content-path",Target:"target-digital-twin-instance-id"}' \
       --output table
     ```
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

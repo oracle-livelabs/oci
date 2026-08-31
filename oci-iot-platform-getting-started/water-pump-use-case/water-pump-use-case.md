@@ -16,6 +16,11 @@ In this lab, you will:
 - Explain why the solution uses a shared *WaterPump* model. Lab 4 shows how to build this model.
 - Describe the work that the following labs complete.
 
+## Prerequisites
+
+- Complete the Introduction section.
+- Access to the OCI Console in the region selected for this workshop.
+
 ## Task 1: Explore the factory use case
 
 1. Review the solution diagram.
@@ -39,6 +44,8 @@ In this lab, you will:
 5. You can run the OCI CLI commands in the following labs from [OCI Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm) or from a local machine. Cloud Shell is available from the OCI Console and includes a pre-authenticated OCI CLI; select the intended region in the Console before you start Cloud Shell. To run the commands locally, install and configure the OCI CLI by using [Quickstart: Install and configure the OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm).
 
     You can also complete the same actions through the OCI IoT Platform user interface, which is available from the IoT Domain details page in the OCI Console. Use the Console when you prefer a guided visual workflow; use the CLI when you want repeatable commands and values that later labs can reuse.
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

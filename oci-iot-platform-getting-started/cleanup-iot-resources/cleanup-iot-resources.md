@@ -16,6 +16,12 @@ In this lab, you will:
 - Delete the IoT resources in dependency order with the OCI CLI.
 - Optionally schedule deletion of the lab Vault and device secrets.
 
+## Prerequisites
+
+- Complete the preceding labs, or identify the IoT resources that you created for this workshop.
+- Have OCI Cloud Shell or a configured OCI CLI available.
+- Confirm whether the Vault, device secrets, IAM group, user, or compartment were created specifically for this workshop before you delete them.
+
 ## Task 1: Review the cleanup scope
 
 1. This task cleans up OCI IoT Platform-specific data only. It references `IOT_DOMAIN_OCID` from Lab 2, derives the associated IoT domain group OCID, and deletes the IoT domain and its domain group. It deletes resources in this order:

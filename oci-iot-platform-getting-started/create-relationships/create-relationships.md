@@ -17,6 +17,12 @@ In this lab, you will:
 - Create the Beverage Factory, Production Line 1, and Production Line 2 instances.
 - Relate the factory to its production lines.
 
+## Prerequisites
+
+- Complete Lab 2 and the Understanding DTDL section.
+- Have OCI Cloud Shell or a configured OCI CLI available.
+- Retain the `IOT_DOMAIN_OCID` value created in Lab 2.
+
 ## Task 1: Prepare the CLI working directory
 
 1. Install and configure the OCI CLI if you have not already done so. See [Quickstart: Install and configure the OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm).
@@ -165,6 +171,8 @@ In this lab, you will:
 ## Resources
 
 - [OCI IoT Platform: Creating a Digital Twin Model](https://docs.oracle.com/en-us/iaas/Content/internet-of-things/create-digital-twin-model.htm)
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
