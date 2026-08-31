@@ -1,6 +1,8 @@
-# Lab 1: Review the Water Pump Use Case
+# Lab 1: Get Started with the Water Pump Use Case
 
 ## Introduction
+
+This getting-started lab introduces the OCI Internet of Things Platform workshop through a beverage bottling factory. The Water Pump Use Case Overview explains the business scenario that guides every remaining lab.
 
 A beverage factory operates multiple production lines that bottle and rinse products. Water pumps supply rinse stations, cooling loops, and clean-in-place systems across the factory. This lab introduces the industry scenario without presenting payload or JSON details.
 
@@ -21,7 +23,7 @@ In this lab, you will:
 - Complete the Introduction section.
 - Access to the OCI Console in the region selected for this workshop.
 
-## Task 1: Explore the factory use case
+## Task 1: Review the Water Pump Use Case Overview
 
 1. Review the solution diagram.
 
@@ -31,7 +33,7 @@ In this lab, you will:
 
 3. The two water pumps in this workshop connect directly to OCI IoT Platform. They report flow rate, pressure, motor temperature, vibration, and power consumption.
 
-## Task 2: Implementing the solution with OCI IoT Platform
+## Task 2: Understand the OCI IoT Platform Solution
 
 1. The digital twin solution captures how the factory contains production lines and how each production line uses water pumps. These relationships provide the operating context for the telemetry that applications display.
 
