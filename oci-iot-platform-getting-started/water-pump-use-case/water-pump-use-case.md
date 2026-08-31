@@ -18,11 +18,13 @@ In this lab, you will:
 
 ## Task 1: Explore the factory use case
 
-![Diagram of a beverage factory with two production lines, each containing three sequential machines and a directly connected water pump](images/factory-production-lines.png)
+1. Review the solution diagram.
 
-1. The factory contains multiple production lines. Each line uses water pumps for rinse stations, cooling loops, or clean-in-place systems.
+    ![Diagram of a beverage factory with two production lines, each containing three sequential machines and a directly connected water pump](images/factory-production-lines.png)
 
-2. The two water pumps in this workshop connect directly to OCI IoT Platform. They report flow rate, pressure, motor temperature, vibration, and power consumption.
+2. The factory contains multiple production lines. Each line uses water pumps for rinse stations, cooling loops, or clean-in-place systems.
+
+3. The two water pumps in this workshop connect directly to OCI IoT Platform. They report flow rate, pressure, motor temperature, vibration, and power consumption.
 
 ## Task 2: Implementing the solution with OCI IoT Platform
 

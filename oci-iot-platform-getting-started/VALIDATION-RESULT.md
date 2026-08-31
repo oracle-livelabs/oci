@@ -1,6 +1,6 @@
 # LiveLabs Workshop Validation – oci-iot-platform-getting-started
 
-Generated on 2026-08-31T17:21:56.561181+00:00
+Generated on 2026-08-31T18:26:51.776832+00:00
 
 ## Structure Check
 - ✅ Required folders and workshop variants present.
@@ -78,8 +78,7 @@ Generated on 2026-08-31T17:21:56.561181+00:00
   - Heavy nominalization usage; prefer vivid verbs.
 
 ### water-pump-use-case/water-pump-use-case.md
-- ❌ Formatting issues:
-  - Line 21: Images inside tasks must align with the numbered step (indent).
+- ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
   - 7 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.

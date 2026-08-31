@@ -154,7 +154,7 @@ IAM policies are tenancy-level resources. As a tenancy administrator, create one
       --query 'data.id' --raw-output)
     ```
 
-3. Confirm that the policy contains the four group permissions and the IoT domain secret-read statement. IAM policy changes can take a few minutes to propagate. For a production environment, split domain-administration, Vault, and digital-twin responsibilities, then grant only the required permissions. Review the [OCI IoT Platform user policies](https://docs.oracle.com/en-us/iaas/Content/internet-of-things/user-policies.htm) before you apply production policies.
+3. Confirm that the policy contains the four group permissions and the IoT domain secret-read statement. IAM policy changes can take a few minutes to propagate. For a production environment, split domain-administration, Vault, and digital-twin responsibilities, then grant only the required permissions. Review the [OCI IoT Platform policy reference](https://docs.oracle.com/en-us/iaas/Content/Identity/policyreference/iot-policy-reference.htm) before you apply production policies.
 
 4. If your organization uses certificate authentication, follow the certificate policies in the tenancy-preparation blog instead. Keep certificate resources in the same region and compartment as the IoT resources.
 
