@@ -17,6 +17,12 @@ In this lab, you will:
 - Preserve historization, validation, and pressure-unit semantics.
 - Create and verify both models with the OCI CLI.
 
+## Prerequisites
+
+- Complete Lab 3.
+- Have OCI Cloud Shell or a configured OCI CLI available.
+- Retain the `IOT_DOMAIN_OCID` and `WORKSHOP_DIR` values created in earlier labs.
+
 ## Task 1: Prepare the model files
 
 1. This lab references `IOT_DOMAIN_OCID` and `WORKSHOP_DIR`, which you set in Labs 2 and 3. Do not set them again.
@@ -153,6 +159,8 @@ In this lab, you will:
 ## Resources
 
 - [OCI IoT Domain Database Schema Reference](https://docs.oracle.com/en-us/iaas/Content/internet-of-things/iot-domain-database-schema.htm)
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

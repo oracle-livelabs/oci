@@ -8,5 +8,6 @@
 *.patch
 env.sh
 labs/.DS_Store
+oci-iot-platform-getting-started/VALIDATION-RESULT.md
 .vscode
 apps-ai-experience-agentic-ai/README.md

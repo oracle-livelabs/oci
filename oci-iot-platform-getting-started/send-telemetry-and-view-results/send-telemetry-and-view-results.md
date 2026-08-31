@@ -16,6 +16,12 @@ In this lab, you will:
 - Send flat PSI telemetry to Pump 2 with curl.
 - Inspect the normalized digital twin content with the OCI CLI and the OCI Console.
 
+## Prerequisites
+
+- Complete Labs 3 through 6.
+- Have `curl` and OCI Cloud Shell or a configured OCI CLI available.
+- Retain the IoT domain, pump instance, external-key, and device-secret values created in earlier labs.
+
 ## Task 1: Prepare the publishing values
 
 1. This lab references `IOT_DOMAIN_OCID`, the pump instance identifiers, external keys, and plain-text secret values that you set in earlier labs. Do not set them again. Retrieve and export the IoT device host from the IoT domain. Keep secret values out of shell history and source control.
@@ -92,6 +98,8 @@ In this lab, you will:
 4. Confirm that both instances show the canonical paths `motor.motorTemperature`, `motor.vibrationLevel`, `motor.powerConsumption`, `flowRate`, and `dischargePressure`. For Pump 2, 62.37 PSI should appear as approximately 4.30 bar.
 
 5. In the OCI Console, select the workshop compartment, open **Internet of Things**, and select the IoT domain. On the **Digital twin instances** tab, select **Water Pump 1** or **Water Pump 2** and inspect its content and metadata. The Console view shows the same normalized snapshot values returned by `get-content`.
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
