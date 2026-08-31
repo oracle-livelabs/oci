@@ -1,4 +1,4 @@
-# Deploy OKE with Simple and Advanced Terraform Modules with Best Practices
+# Deploy and Use an Advanced OKE Cluster with Terraform Modules
 
 ## About this Workshop
 

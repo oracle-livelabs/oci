@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Deploy OKE with Simple and Advanced Terraform Modules with Best Practices",
+  "workshoptitle": "Deploy and Use an Advanced OKE Cluster with Terraform Modules",
   "help": "livelabs-help-oci_us@oracle.com",
   "tutorials": [
     {
