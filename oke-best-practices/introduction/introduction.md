@@ -54,9 +54,11 @@ Terraform creates or references a VCN, subnets, OKE cluster, node pools, and an 
 
 ## Learn More
 
-* [OKE advanced Terraform modules](https://docs.oracle.com/en/learn/oke-cluster-automation/index.html)
+* [Simple OKE Terraform tutorial](https://docs.oracle.com/en/learn/oke-clstr-trfm/index.html)
+* [Advanced OKE Terraform modules tutorial](https://docs.oracle.com/en/learn/oke-cluster-automation/index.html)
+* [OKE best practices and automation tutorial](https://docs.oracle.com/en/learn/oke-automate-deployment/index.html)
 * [OCI Resource Manager documentation](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/home.htm)
-* [Karpenter Provider for OCI documentation](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengkarpenter.htm)
+* [Karpenter Provider for OCI documentation](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/conteng-kpo.htm)
 
 ## Acknowledgements
 
