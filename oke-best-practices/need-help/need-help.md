@@ -1,6 +1,12 @@
 # Need help?
 
 ## Introduction
+
+Estimated Time: 5 minutes
+
+### Objectives
+
+* Find common LiveLabs troubleshooting guidance and contact support when needed.
 This page is designed to help you solve some common problems users face in this LiveLab.
 
 After reading those troubleshooting tips, if you still find yourself stuck or would like to report an issue with the workshop, click the question mark icon in the upper right corner to contact the LiveLabs team directly via email.

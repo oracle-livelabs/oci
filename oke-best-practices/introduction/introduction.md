@@ -4,7 +4,7 @@
 
 This workshop deploys Oracle Cloud Infrastructure Kubernetes Engine (OKE) through two independent delivery paths: Terraform CLI and OCI Resource Manager (ORM). Lab 1 uses the simple module source; Lab 2 uses the advanced module source. Lab 3 applies production-oriented practices and an optional Karpenter Provider for OCI (KPO) use case.
 
-Estimated Time: 2 hours 30 minutes
+Estimated Workshop Time: 2 hours 30 minutes
 
 > **Important:** OKE, compute, networking, and load-balancer resources can incur charges. Complete the destroy procedure for the path you used when you finish.
 
