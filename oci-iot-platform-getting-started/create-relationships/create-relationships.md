@@ -6,7 +6,7 @@ Create the non-telemetry part of the beverage-factory hierarchy. You create a *F
 
 Neither model receives telemetry. OCI permits `NONE` connectivity only for models that have no telemetry, property, or command content. Therefore, the Factory model defines only its `contains` relationship and the ProductionLine model has no content. Store the factory address, map coordinates, plant manager, line name, and line manager as instance tags. Later labs add the water-pump model, connected devices, adapters, and telemetry.
 
-Estimated Time: 30 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 

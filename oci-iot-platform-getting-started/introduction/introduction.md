@@ -4,7 +4,7 @@
 
 This workshop introduces OCI Internet of Things Platform through a beverage bottling plant scenario. You will model water pumps, connect their telemetry, and examine the resulting digital twin data.
 
-Estimated Workshop Time: 5 hours 5 minutes
+Estimated Workshop Time: 4 hours 30 minutes
 
 ```quiz-config
 badge: images/completion-badge.svg
