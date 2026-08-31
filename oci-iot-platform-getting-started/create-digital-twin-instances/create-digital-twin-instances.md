@@ -20,7 +20,7 @@ In this lab, you will:
 - Create two directly connected digital twin instances.
 - Relate each pump to its production line.
 
-## Prerequisites
+### Prerequisites
 
 - Complete Labs 3 through 5.
 - Have OCI Cloud Shell or a configured OCI CLI available.
@@ -180,7 +180,7 @@ In this lab, you will:
       --output table
     ```
 
-You may now **proceed to the next lab**.
+    You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

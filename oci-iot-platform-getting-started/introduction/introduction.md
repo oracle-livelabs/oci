@@ -18,7 +18,7 @@ In this workshop, you will:
 - Explain how devices, gateways, adapters, models, instances, and relationships work together.
 - Model, connect, and monitor water-pump digital twins.
 
-## Prerequisites
+### Prerequisites
 
 - An OCI tenancy in a region that supports OCI Internet of Things Platform.
 - An OCI user account that can access the tenancy. Lab 2 requires tenancy-administrator access.
@@ -108,7 +108,7 @@ In this workshop, you will:
     > An adapter can transform incoming data into the model's expected structure and units, including by using JQ functions to process values.
     ```
 
-You may now **proceed to the next lab**.
+    You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
