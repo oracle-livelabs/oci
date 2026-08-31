@@ -162,6 +162,8 @@ IAM policies are tenancy-level resources. As a tenancy administrator, create one
 
 1. In the OCI Console, select the workshop compartment. Open **Internet of Things**, then create an IoT domain group. An IoT domain group provides the database used by the platform.
 
+    ![OCI Console navigation menu with Developer Services selected. The Internet of Things section displays the Domains and Domain Groups links.](images/developer-services-internet-of-things.png =80%x*)
+
 2. Create an IoT domain in that domain group. The domain is the container for the models, adapters, instances, and relationships that you create in the next labs.
 
 3. Copy the IoT domain OCID. You use it as `IOT_DOMAIN_OCID` in every OCI CLI command in this workshop.
