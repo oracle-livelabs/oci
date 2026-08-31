@@ -4,6 +4,10 @@
 
 Use the simple Terraform source to create an OKE environment. Choose one path: local Terraform CLI or managed OCI Resource Manager. Each path has its own source package and lifecycle.
 
+### Who This Lab Is For
+
+This lab is for learners with Terraform fundamentals and basic OKE knowledge. It provides a practical starting point for deploying a complete OKE environment through a simpler, flat Terraform design.
+
 Estimated Time: 60 minutes
 
 ### Objectives
@@ -94,7 +98,7 @@ Estimated Time: 60 minutes
 
 ## Summary
 
-You deployed the simple OKE configuration using one independent execution path. Continue to Lab 2 for the advanced modules.
+You deployed the simple OKE configuration using one independent execution path. Choose Lab 2 only if your use case needs an advanced modular design.
 
 ## Acknowledgements
 

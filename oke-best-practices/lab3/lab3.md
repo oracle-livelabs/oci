@@ -4,6 +4,10 @@
 
 This lab applies reusable-module, compartment, availability, and node-pool practices. It also includes an executable bonus use case for Karpenter Provider for OCI (KPO).
 
+### Who This Lab Is For
+
+This lab is for mature platform and DevOps users who have already automated OKE cluster deployment and now want to apply selected production-oriented best practices.
+
 Estimated Time: 45 minutes
 
 ### Objectives
@@ -14,7 +18,7 @@ Estimated Time: 45 minutes
 
 ### Prerequisites
 
-* An OKE cluster from Lab 1 or Lab 2 and kubeconfig access.
+* An OKE cluster from Lab 1 or Lab 2, or an equivalent existing OKE cluster, and kubeconfig access.
 * For the bonus task: a managed or self-managed baseline node pool for the KPO controller, KPO and Kubernetes versions supported together, supported networking, and scoped OCI IAM policies.
 
 ## Task 3.1: Apply Modular and Compartment Practices

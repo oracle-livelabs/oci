@@ -4,6 +4,10 @@
 
 The advanced source separates VCN, OKE, and bastion responsibilities into reusable modules. Select one complete path: Terraform CLI or OCI Resource Manager (ORM).
 
+### Who This Lab Is For
+
+This lab is for users who understand a foundational OKE deployment and need a modular, reusable design. It supports existing-infrastructure scenarios, such as reusing an existing VCN and providing existing subnet OCIDs when creating an OKE cluster.
+
 Estimated Time: 60 minutes
 
 ### Objectives
@@ -77,7 +81,7 @@ Estimated Time: 60 minutes
 
 ## Summary
 
-You used the advanced OKE module source through an independent CLI or ORM workflow. Continue to Lab 3 for operational practices and the KPO bonus use case.
+You used the advanced OKE module source through an independent CLI or ORM workflow. Choose Lab 3 when you are ready to apply production-oriented operational practices and the KPO bonus use case.
 
 ## Acknowledgements
 
