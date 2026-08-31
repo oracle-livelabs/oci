@@ -25,32 +25,52 @@ Estimated Time: 45 minutes
 
 ## Task 3.2: Configure Availability, Node Cycling, and Specialized Pools
 
-1. In multi-AD regions, spread workers across availability domains; in single-AD regions, distribute them across fault domains. Use replicas, topology spread constraints, and PodDisruptionBudgets for critical workloads.
-2. Enable controlled cycling only after confirming workload capacity and quota.
+1. In multi-AD regions, spread replicated workloads across availability domains; in single-AD regions, spread them across fault domains. Use topology spread constraints to control placement and PodDisruptionBudgets for critical workloads to limit voluntary disruption. Ensure workloads have enough replicas to make the desired topology possible.
+2. Enable controlled node cycling only after confirming sufficient workload capacity and OCI capacity or quota for temporary surge capacity. Use the cycling mode that matches the replacement you intend to perform.
+
+    Instance replacement:
 
     ```hcl
-    node_cycling_enabled = true
-    maximum_surge        = 1
-    maximum_unavailable  = 0
-    cycle_modes          = ["INSTANCE_REPLACE"]
+    node_pool_cycling_details {
+      is_node_cycling_enabled = true
+      maximum_surge            = 1
+      maximum_unavailable      = 0
+      cycle_modes              = ["INSTANCE_REPLACE"]
+    }
     ```
 
-3. Create separate node pools for general and specialized workloads. Assign labels, taints, and independent scaling limits; use node selectors, affinity, and tolerations to target workloads.
+    Boot-volume replacement:
+
+    ```hcl
+    node_pool_cycling_details {
+      is_node_cycling_enabled = true
+      maximum_unavailable      = 1
+      cycle_modes              = ["BOOT_VOLUME_REPLACE"]
+    }
+    ```
+
+3. Create separate node pools for general-purpose and specialized workloads. Assign labels, taints, and independent scaling limits, then use node selectors, node affinity, and tolerations to target workloads.
 
 ## Task 3.3: Run the Karpenter Provider for OCI Bonus Use Case
 
-1. Confirm the KPO chart version and its Kubernetes, networking, and IAM requirements in the [current Oracle KPO documentation](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengkarpenter.htm). Install the controller on the baseline node pool according to that version's instructions.
-2. Create an `OCINodeClass` with placeholder OCI identifiers. Replace only the placeholders appropriate to your tenancy; do not put real OCIDs in this workshop or public source.
+1. Confirm the KPO version and its Kubernetes, networking, and IAM requirements in the [current Oracle KPO documentation](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/conteng-kpo.htm). Install KPO according to the instructions for the selected version, and ensure baseline worker capacity is available for the KPO controller itself.
+2. Create an `OCINodeClass` with placeholder OCI identifiers. Replace only the placeholders appropriate to the workshop environment; do not put real OCIDs in this workshop or public source.
 
     ```yaml
-    apiVersion: karpenter.oci.oraclecloud.com/v1beta1
+    apiVersion: oci.oraclecloud.com/v1beta1
     kind: OCINodeClass
     metadata:
       name: workload-class
     spec:
-      compartmentId: <workload-compartment-ocid>
-      subnetId: <worker-subnet-ocid>
-      imageId: <supported-image-ocid>
+      volumeConfig:
+        bootVolumeConfig:
+          imageConfig:
+            imageType: OKEImage
+            imageId: <supported-oke-image-ocid>
+      networkConfig:
+        primaryVnicConfig:
+          subnetConfig:
+            subnetId: <worker-subnet-ocid>
     ```
 
 3. Create a `NodePool` that references the `OCINodeClass`, with requirements compatible with the selected shape and availability domain. Use the chart-version-specific API fields documented by Oracle.
