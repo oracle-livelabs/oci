@@ -2,12 +2,29 @@
 
 ## About this Workshop
 
-This workshop deploys Oracle Cloud Infrastructure Kubernetes Engine (OKE) through two independent delivery paths: Terraform CLI and OCI Resource Manager (ORM). Lab 1 uses the simple module source; Lab 2 uses the advanced module source. Lab 3 applies production-oriented practices and an optional Karpenter Provider for OCI (KPO) use case.
+This workshop presents three independent learning paths for deploying and operating Oracle Cloud Infrastructure Kubernetes Engine (OKE) with Terraform. Choose the lab that matches your experience and use case; the labs are not a mandatory linear sequence. Each deployment lab offers Terraform CLI and OCI Resource Manager (ORM) options—choose one delivery path for the environment you create.
 
-Estimated Workshop Time: 2 hours 30 minutes
+## Choose Your Learning Path
+
+* **Lab 1: Simple Terraform modules** is for users with a good Terraform background and a basic understanding of deploying OKE with Terraform. It uses a simpler, flat Terraform design and is also a practical starting point for learners beginning OKE deployments with Terraform.
+* **Lab 2: Advanced Terraform modules** is for users who need a modular, reusable, and extensible design. It is particularly useful when part of the infrastructure already exists, such as an existing VCN and subnets that you want to reuse when creating an OKE cluster.
+* **Lab 3: OKE best practices and KPO** is for mature platform and DevOps users who have already automated most aspects of OKE deployment and now want to apply selected production-oriented practices, including compartment separation, availability, node cycling, specialized node pools, and optional Karpenter Provider for OCI (KPO) capacity provisioning.
+
+## Estimated Time
+
+Estimated Workshop Time: **45–60 minutes for one selected lab.**
+
+* Lab 1: 60 minutes
+* Lab 2: 60 minutes
+* Lab 3: 45 minutes
+
+Do not add these estimates together unless you deliberately plan to complete all three independent labs. For Lab 1 and Lab 2, choose either the Terraform CLI path or the ORM path for your environment; do not complete both paths.
+
+## Scope of Best Practices
+
+The reference blogs describe a broader set of OKE best practices than a single LiveLab can demonstrate. This workshop adapts a focused subset of those recommendations. Review the reference material and implement all practices that apply to your organization’s security, reliability, operational, and cost requirements—not only the practices covered in Lab 3.
 
 > **Important:** OKE, compute, networking, and load-balancer resources can incur charges. Complete the destroy procedure for the path you used when you finish.
-
 ### Objectives
 
 * Prepare OCI credentials, Terraform inputs, and a safe preflight plan.
