@@ -9,13 +9,13 @@
             "filename": "../../introduction/introduction.md"
         },
         {
-            "title": "Lab 1: Review the Water Pump Use Case",
+            "title": "Lab 1: Get Started with the Water Pump Use Case",
             "description": "",
             "type": "livelabs",
             "filename": "../../water-pump-use-case/water-pump-use-case.md"
         },
         {
-            "title": "Lab 2: Set Up Tenancy Prerequisites",
+            "title": "Lab 2: Set Up the Tenancy",
             "description": "",
             "type": "livelabs",
             "filename": "../../tenancy-prerequisites/tenancy-prerequisites.md"
@@ -33,7 +33,7 @@
             "filename": "../../create-relationships/create-relationships.md"
         },
         {
-            "title": "Lab 4: Create a Pump Digital Twin Model",
+            "title": "Lab 4: Create the Water Pump Digital Twin Model",
             "description": "",
             "type": "livelabs",
             "filename": "../../create-digital-twin-model/create-digital-twin-model.md"
@@ -45,7 +45,7 @@
             "filename": "../../create-digital-twin-adapters/create-digital-twin-adapters.md"
         },
         {
-            "title": "Lab 6: Create Pump Digital Twin Instances",
+            "title": "Lab 6: Create Water Pump Digital Twin Instances",
             "description": "",
             "type": "livelabs",
             "filename": "../../create-digital-twin-instances/create-digital-twin-instances.md"
