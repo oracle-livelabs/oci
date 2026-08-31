@@ -17,7 +17,7 @@ In this lab, you will:
 - Create the Beverage Factory, Production Line 1, and Production Line 2 instances.
 - Relate the factory to its production lines.
 
-## Prerequisites
+### Prerequisites
 
 - Complete Lab 2 and the Understanding DTDL section.
 - Have OCI Cloud Shell or a configured OCI CLI available.

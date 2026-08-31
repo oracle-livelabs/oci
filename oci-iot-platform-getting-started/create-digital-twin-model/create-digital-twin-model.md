@@ -17,7 +17,7 @@ In this lab, you will:
 - Preserve historization, validation, and pressure-unit semantics.
 - Create and verify both models with the OCI CLI.
 
-## Prerequisites
+### Prerequisites
 
 - Complete Lab 3.
 - Have OCI Cloud Shell or a configured OCI CLI available.

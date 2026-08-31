@@ -16,7 +16,7 @@ In this lab, you will:
 - Delete the IoT resources in dependency order with the OCI CLI.
 - Optionally schedule deletion of the lab Vault and device secrets.
 
-## Prerequisites
+### Prerequisites
 
 - Complete the preceding labs, or identify the IoT resources that you created for this workshop.
 - Have OCI Cloud Shell or a configured OCI CLI available.

@@ -15,7 +15,7 @@ In this section, you will:
 - Distinguish base DTDL constructs from platform and DTDL extensions.
 - Recognize how the WaterPump model uses each construct.
 
-## Prerequisites
+### Prerequisites
 
 - Complete Labs 1 and 2.
 - Understand the water-pump use case and the purpose of an OCI IoT domain.

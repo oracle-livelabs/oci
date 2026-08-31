@@ -16,7 +16,7 @@ In this lab, you will:
 - Send flat PSI telemetry to Pump 2 with curl.
 - Inspect the normalized digital twin content with the OCI CLI and the OCI Console.
 
-## Prerequisites
+### Prerequisites
 
 - Complete Labs 3 through 6.
 - Have `curl` and OCI Cloud Shell or a configured OCI CLI available.
@@ -99,7 +99,7 @@ In this lab, you will:
 
 5. In the OCI Console, select the workshop compartment, open **Internet of Things**, and select the IoT domain. On the **Digital twin instances** tab, select **Water Pump 1** or **Water Pump 2** and inspect its content and metadata. The Console view shows the same normalized snapshot values returned by `get-content`.
 
-You may now **proceed to the next lab**.
+    You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

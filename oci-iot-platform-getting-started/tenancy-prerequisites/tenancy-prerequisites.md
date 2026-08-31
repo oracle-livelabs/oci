@@ -19,7 +19,7 @@ In this lab, you will:
 - Grant the group and IoT Platform the required access.
 - Create an IoT domain group and IoT domain in the workshop compartment.
 
-## Prerequisites
+### Prerequisites
 
 - Complete the Introduction and Lab 1.
 - Sign in to the OCI Console with tenancy-administrator access. IAM group, user, policy, and top-level compartment administration require this access.
@@ -208,7 +208,7 @@ IAM policies are tenancy-level resources. As a tenancy administrator, create one
     oci iot domain get --iot-domain-id "$IOT_DOMAIN_OCID"
     ```
 
-You may now **proceed to the next lab**.
+    You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
