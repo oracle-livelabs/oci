@@ -6,7 +6,7 @@ Create the reusable *ElectricMotor* and *WaterPump* digital twin models for the 
 
 The model preserves the source example's platform features. Motor temperature and vibration are historized so the platform retains them as time-series data. Flow rate uses the OCI validation extension to reject values outside its configured range. Discharge pressure uses the DTDL quantitative-types extension to identify the measurement as pressure in bar.
 
-Estimated Time: 30 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 

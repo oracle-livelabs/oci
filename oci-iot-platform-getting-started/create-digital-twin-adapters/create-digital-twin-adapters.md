@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Create two adapters for the shared *WaterPump* model. A default adapter is appropriate when a device already sends telemetry in the same shape, names, and units as the digital twin model. In this case, the incoming payload already has a nested `motor` object and top-level `flowRate` and `dischargePressure` fields in bar, so the adapter passes the values directly into the model.
+Create two adapters for the shared *WaterPump* model. A default adapter is appropriate when a device already sends telemetry in the same shape, names, and units as the digital twin model. In this case, the incoming payload already has a nested `motor` object and top-level `flowRate` and `dischargePressure` fields in bar. OCI IoT Platform generates the default envelope and mapping, so you do not supply adapter JSON files.
 
 Use a custom adapter when the source payload differs from the model. In this lab, the custom adapter processes flat telemetry by constructing the nested `motor` object required by the *WaterPump* and *ElectricMotor* models. It also converts the source `dischPressPsi` value from pounds per square inch (PSI) to bar before writing `dischargePressure` to the model.
 
@@ -22,83 +22,31 @@ In this lab, you will:
 
 1. This lab references `IOT_DOMAIN_OCID`, `WATER_PUMP_MODEL_ID`, and `WORKSHOP_DIR`, which you set in earlier labs. Do not set them again.
 
-2. An adapter requires an inbound envelope and one or more inbound routes. The inbound envelope documents a representative endpoint and payload. An inbound route specifies the mapping that normalizes the payload. Both definitions include a `referencePayload`.
+2. A default adapter does not require an inbound envelope or inbound routes when the device payload already matches the model. A custom adapter requires both definitions to document and normalize a payload that differs from the model.
 
 ## Task 2: Create the default WaterPump adapter
 
-### Understand the reference payload
-
-`referencePayload` is a critical part of an adapter definition. It provides a representative example of the device telemetry shape that the adapter expects. The inbound envelope uses it to describe the complete message received at the reference endpoint. Each inbound route uses it to show the input shape that its mapping processes.
-
-For the default adapter, the envelope and wildcard route use the same nested example because the device payload already matches the *WaterPump* model. The custom adapter in the next task instead uses a flat example with `dischPressPsi`, which makes its nested-field mapping and PSI-to-bar conversion clear.
-
-The reference payload is design-time documentation, not live telemetry. It does not create or update a digital twin, and devices do not need to send the exact sample values. Actual messages are evaluated against the route condition and then normalized by the payload mapping.
-
-1. Create `$WORKSHOP_DIR/default-water-pump-envelope.json`. This representative payload already matches the model shape and uses `dischargePressure` in bar.
-
-    ```json
-    {
-      "referenceEndpoint": "/waterpump/default",
-      "referencePayload": {
-        "dataFormat": "JSON",
-        "data": {
-          "motor": {
-            "motorTemperature": 68.4,
-            "vibrationLevel": 1.7,
-            "powerConsumption": 12.6
-          },
-          "flowRate": 247.5,
-          "dischargePressure": 4.3
-        }
-      }
-    }
-    ```
-
-2. Create `$WORKSHOP_DIR/default-water-pump-routes.json`. The wildcard condition applies the direct mapping to each matching payload.
-
-    ```json
-    [
-      {
-        "condition": "*",
-        "description": "Map model-shaped water pump telemetry directly to the WaterPump model.",
-        "payloadMapping": {
-          "$.motor.motorTemperature": "$.motor.motorTemperature",
-          "$.motor.vibrationLevel": "$.motor.vibrationLevel",
-          "$.motor.powerConsumption": "$.motor.powerConsumption",
-          "$.flowRate": "$.flowRate",
-          "$.dischargePressure": "$.dischargePressure"
-        },
-        "referencePayload": {
-          "dataFormat": "JSON",
-          "data": {
-            "motor": {
-              "motorTemperature": 68.4,
-              "vibrationLevel": 1.7,
-              "powerConsumption": 12.6
-            },
-            "flowRate": 247.5,
-            "dischargePressure": 4.3
-          }
-        }
-      }
-    ]
-    ```
-
-3. Create the default adapter and save its OCID.
+1. Create the default adapter and save its OCID. Omit both `--inbound-envelope` and `--inbound-routes`; OCI IoT Platform generates the default mapping because Pump 1 already sends model-shaped telemetry.
 
     ```bash
     export DEFAULT_WATER_PUMP_ADAPTER_ID=$(oci iot digital-twin-adapter create \
       --iot-domain-id "$IOT_DOMAIN_OCID" \
       --digital-twin-model-id "$WATER_PUMP_MODEL_ID" \
       --display-name "Water Pump Default Adapter" \
-      --description "Direct mapping for model-shaped water pump telemetry." \
-      --inbound-envelope "file://$WORKSHOP_DIR/default-water-pump-envelope.json" \
-      --inbound-routes "file://$WORKSHOP_DIR/default-water-pump-routes.json" \
+      --description "Default adapter for model-shaped water pump telemetry." \
       --wait-for-state ACTIVE \
       --query 'data.id' --raw-output)
     ```
 
 ## Task 3: Create the custom flat-telemetry adapter
+
+### Understand the reference payload
+
+`referencePayload` is a critical part of a custom adapter definition. It provides a representative example of the device telemetry shape that the adapter expects. The inbound envelope uses it to describe the complete message received at the reference endpoint. Each inbound route uses it to show the input shape that its mapping processes.
+
+For this custom adapter, the reference payload is a flat example with `dischPressPsi`. It makes the nested-field mapping and PSI-to-bar conversion clear.
+
+The reference payload is design-time documentation, not live telemetry. It does not create or update a digital twin, and devices do not need to send the exact sample values. Actual messages are evaluated against the route condition and then normalized by the payload mapping.
 
 1. Create `$WORKSHOP_DIR/flat-psi-water-pump-envelope.json`. This representative device payload is flat and reports pressure as `dischPressPsi`.
 

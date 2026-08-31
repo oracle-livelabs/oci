@@ -6,7 +6,7 @@ Prepare a dedicated top-level OCI compartment for the water-pump solution. Creat
 
 This lab follows [OCI IoT Platform Setup for Developers: Preparing Your Tenancy](https://blogs.oracle.com/cloud-infrastructure/oci-iot-setup-for-devs-prep-your-tenancy) and the [OCI IoT Platform prerequisites](https://docs.oracle.com/en-us/iaas/Content/internet-of-things/overview.htm#prerequisites). You need tenancy-administrator access, or help from a tenancy administrator, to complete the IAM and service setup.
 
-Estimated Time: 60 minutes
+Estimated Time: 45 minutes
 
 ### Objectives
 
