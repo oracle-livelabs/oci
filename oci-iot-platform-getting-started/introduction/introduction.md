@@ -24,6 +24,8 @@ In this workshop, you will:
 - An OCI user account that can access the tenancy. Lab 2 requires tenancy-administrator access.
 - A current web browser. Later labs use OCI Cloud Shell or a locally installed OCI CLI.
 
+> **Note:** This workshop creates an OCI IoT Platform developer instance, which is a paid OCI service. The developer instance helps minimize charges while you complete the lab. Follow the cleanup procedures in Lab 8 and delete the IoT domain and related resources when you finish the workshop.
+
 ## Task 1: Review the terminology
 
 1. Review these terms before you begin. Each term supports a different part of the solution architecture.
