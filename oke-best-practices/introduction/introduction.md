@@ -1,4 +1,4 @@
-# Deploy and Use OKE Clusters with Simple and Advanced Terraform Modules with Best Practices
+# Deploy and Use OKE Clusters with Simple and Advanced Terraform Modules and Best Practices
 
 ## About this Workshop
 
@@ -25,6 +25,7 @@ Do not add these estimates together unless you deliberately plan to complete all
 The reference blogs describe a broader set of OKE best practices than a single LiveLab can demonstrate. This workshop adapts a focused subset of those recommendations. Review the reference material and implement all practices that apply to your organization’s security, reliability, operational, and cost requirements—not only the practices covered in Lab 3.
 
 > **Important:** OKE, compute, networking, and load-balancer resources can incur charges. Complete the destroy procedure for the path you used when you finish.
+
 ### Objectives
 
 * Prepare OCI credentials, Terraform inputs, and a safe preflight plan.
