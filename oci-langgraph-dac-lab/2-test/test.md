@@ -59,7 +59,9 @@ Let's install the examples in Cloud Editor.
     </copy>    
     ````
 
-6. After installation, the command `source .venv/bin/activate` activates the Python virtual environment. It must remain active to run any of the examples. If you close and restart Cloud Editor, reactivate the virtual environment by running:
+6. After installation, the command `source .venv/bin/activate` activates the Python virtual environment. It must remain active to run any of the examples.
+
+    If you close and restart Cloud Editor, reactivate the virtual environment by running:
 
     ````
     <copy>
@@ -91,20 +93,28 @@ Let's install the examples in Cloud Editor.
     The configuration depends on whether you installed a DAC or your instructor gave you access to one.
 
     With DAC:
-    - GENAI_MODEL=##GENAI_DAC_ENDPOINT_OCID##
-      ex: GENAI_MODEL=ocid1.generativeaiendpoint.oc1.xxxxxxxxxx
-    - REGION=##REGION##
-      ex: REGION=us-chicago-1
-    - COMPARTMENT_OCID=##COMPARTMENT_OCID##
-      ex: COMPARTMENT_OCID=ocid1.compartment.oc1.xxxxxxxxxx
+    ```
+    <copy>
+    GENAI_MODEL=##GENAI_DAC_ENDPOINT_OCID##
+    ex: GENAI_MODEL=ocid1.generativeaiendpoint.oc1.xxxxxxxxxx
+    REGION=##REGION##
+    ex: REGION=us-chicago-1
+    COMPARTMENT_OCID=##COMPARTMENT_OCID##
+    ex: COMPARTMENT_OCID=ocid1.compartment.oc1.xxxxxxxxxx
+    </copy>      
+    ```
 
     ![.env DAC](images/env_dac.png)
 
     Without a DAC (for example, if you have access to the Chicago region):
-    - GENAI_MODEL=xai.grok-4.20-0309-reasoning
-    - REGION=##REGION##
-    - COMPARTMENT_OCID=##COMPARTMENT_OCID##
-      ex: COMPARTMENT_OCID=ocid1.compartment.oc1.xxxxxxxxxx
+    ```
+    <copy>    
+    GENAI_MODEL=xai.grok-4.20-0309-reasoning
+    REGION=##REGION##
+    COMPARTMENT_OCID=##COMPARTMENT_OCID##
+    ex: COMPARTMENT_OCID=ocid1.compartment.oc1.xxxxxxxxxx
+    </copy>      
+    ```
 
     ![.env no DAC](images/env_no_dac.png)
 
