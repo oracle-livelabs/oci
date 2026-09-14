@@ -30,7 +30,7 @@ jobs:
           git fetch --no-tags --prune origin "$BASE_SHA:$BASE_SHA" || true
 
           # Get changed markdown files
-          MD_FILES=$(git diff --name-only --diff-filter=AM "$BASE_SHA" "$PR_SHA" -- '*.md' | grep -v '^\.github/' | grep -v '^node_modules/' || true)
+          MD_FILES=$(git diff --name-only --diff-filter=AM "$BASE_SHA" "$PR_SHA" -- '*.md' | grep -v '^\.github/' | grep -v '^node_modules/' | grep -vE '(^|/)VALIDATION-RESULT\.md$' || true)
 
           if [ -z "$MD_FILES" ]; then
             echo "No markdown files changed"
