@@ -25,7 +25,7 @@ We will test the following architecture:
 4. Reflection (two agents working as a team)
 5. Supervisor: a main agent that calls other agents and loops until it finds a satisfactory answer
 
-## Task 1: Download the examples
+### Download the examples
 
 Let's install the examples in Cloud Editor.
 
@@ -118,11 +118,11 @@ Let's install the examples in Cloud Editor.
 
     ![.env no DAC](images/env_no_dac.png)
 
-## Task 2: Agent
+## Task 1: LangGraph Agent
 
 Let's look at our first agent. It uses a LangGraph workflow, an OCI Generative AI model, and a weather tool to recommend clothing.
 
-1. Open `ex1_weather_basic.py` in Cloud Shell Editor or VS Code.
+1. Open `ex1_langgraph.py` in Cloud Shell Editor or VS Code.
 2. Check the `get_current_weather` tool. It calls OpenWeather and returns structured weather data.
 3. Check how the graph is built. The flow is **model → tool → model**:
 
@@ -134,7 +134,8 @@ Let's look at our first agent. It uses a LangGraph workflow, an OCI Generative A
     graph.add_edge("tools", "assistant")
     ```
 
-    The conditional edge sends a request to the tool only when the model has made a tool call. Otherwise, the graph ends.
+    The conditional edge sends a request to the tool only when the model has made a tool call. Otherwise, the graph ends. This is the way that agents work. They are based on execution graphs that LangGraph defines explicitly.
+    ![Graph](images/ex1_graph.png)
 
 4. Run the example:
 
@@ -142,7 +143,7 @@ Let's look at our first agent. It uses a LangGraph workflow, an OCI Generative A
     <copy>
     cd $HOME/oci-langgraph-dac
     source .venv/bin/activate    
-    python3 ex1_weather_basic.py
+    python3 ex1_langgraph.py
     </copy>
     ```
 
@@ -155,11 +156,11 @@ Let's look at our first agent. It uses a LangGraph workflow, an OCI Generative A
 
 6. Notice that the agent calls the weather tool before giving weather-dependent advice. Type `quit` to leave the program.
 
-## Task 3: React Agent
+## Task 2: Agent
 
-In the previous sample, the graph is written explicitly. This example uses LangChain's prebuilt ReAct agent loop and keeps the chat history in the local `conversation` list.
+In the previous sample, the graph is written explicitly. This example uses LangChain's prebuilt *Agent* loop and keeps the chat history in the local `conversation` list. Basically, this is the same than previous example. Here with the new Agent syntax.
 
-1. Open `ex2_react_agent.py`.
+1. Open `ex2_agent.py`.
 2. Check the agent definition. `create_agent` creates the ReAct loop and receives the OCI model, weather tool, and system prompt.
 
     ```python
@@ -180,7 +181,7 @@ In the previous sample, the graph is written explicitly. This example uses LangC
 
     ```
     <copy>
-    python3 ex2_react_agent.py
+    python3 ex2_agent.py
     </copy>
     ```
 
@@ -195,11 +196,11 @@ In the previous sample, the graph is written explicitly. This example uses LangC
 
 6. Type `quit` to leave the program.
 
-## Task 4: React Agent with tracing 
+## Task 3: Agent with tracing 
 
 In this version of the lab, tracing is enabled and reusable tools are separated from the agent. This is the building block used later by the supervisor to route requests to specialist agents. The explicit human-confirmation step is exercised in Task 5.
 
-1. Open `ex3_react_agent.py` and `tools.py`.
+1. Open `ex3_agent_trace.py` and `tools.py`.
 2. Notice that the agent imports `get_current_weather` from `tools.py` rather than defining the tool in the application file.
 
     ```python
@@ -212,7 +213,7 @@ In this version of the lab, tracing is enabled and reusable tools are separated 
 
     ```
     <copy>
-    python3 ex3_react_agent.py
+    python3 ex3_agent_trace.py
     </copy>
     ```
     ![ex3](images/ex3.png)      
@@ -221,9 +222,9 @@ In this version of the lab, tracing is enabled and reusable tools are separated 
 
     - *How should I dress for the weather in Sydney, AU?*
 
-5. Type `quit` to leave the program. In `tools.py`, review the other shared tools: Wikipedia retrieval, HR FAQ search, holiday proposal, confirmation, current bookings, and holiday balance.
+5. Type `quit` to leave the program.
 
-## Task 5: Reflection
+## Task 4: Reflection
 
 Here we will use two agents that work together.
 
@@ -260,7 +261,7 @@ Here we will use two agents that work together.
 
 6. Notice that only an approved document is printed. Type `quit` to leave the program.
 
-## Task 6: Supervisor
+## Task 5: Supervisor
 
 Here, we will use a group of agents working together with a supervisor to coordinate their work.
 
