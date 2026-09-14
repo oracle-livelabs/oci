@@ -38,7 +38,8 @@ Let's install the examples in Cloud Editor.
     ```
     <copy>
     cd $HOME
-    git clone https://github.com/mgueury/oci-langgraph-dac.git
+    wget https://livelabs.oracle.com/cdn/oci/oci-langgraph-dac/2-test/files/oci-langgraph-dac.zip
+    unzip oci-langgraph-dac.zip
     cd oci-langgraph-dac
     cat install.sh
     ./install.sh
@@ -47,6 +48,15 @@ Let's install the examples in Cloud Editor.
     ```
 
     ![Cloud Editor](images/editor1.png)
+
+    If you have issue with the above link, you can also clone from the original git repo.
+    ````
+    <copy>    
+    cd $HOME
+    git clone https://github.com/mgueury/oci-langgraph-dac.git
+    ...
+    </copy>    
+    ````
 
 6. After installation, the command `source .venv/bin/activate` activates the Python virtual environment. It must remain active to run any of the examples. If you close and restart Cloud Editor, reactivate the virtual environment by running:
 

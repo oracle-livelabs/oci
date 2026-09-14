@@ -29,10 +29,20 @@ For more information: https://opencode.ai/
     ````
     <copy>    
     cd $HOME
-    git clone https://github.com/mgueury/oci-vibe-dac.git
+    wget https://livelabs.oracle.com/cdn/oci/oci-vibe-dac-lab/2-hello-game/files/oci-vibe-dac.zip
+    unzip oci-vibe-dac.zip
     cd oci-vibe-dac
     cat install_opencode.sh
     ./install_opencode.sh
+    </copy>    
+    ````
+
+    If you have issue with the above link, you can also clone from the original git repo.
+    ````
+    <copy>    
+    cd $HOME
+    git clone https://github.com/mgueury/oci-vibe-dac.git
+    ...
     </copy>    
     ````
 
