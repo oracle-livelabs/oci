@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Beverage factory water pump solution overview</title>
+  <desc id="desc">A factory contains two production lines. Each line contains three machines connected in sequence, including a highlighted water pump.</desc>
+  <defs>
+    <style>
+      .title { font: 700 35px Arial, sans-serif; fill: #252525; }
+      .sub { font: 400 19px Arial, sans-serif; fill: #454545; }
+      .machine { font: 700 21px Arial, sans-serif; fill: #252525; }
+      .machineSub { font: 400 17px Arial, sans-serif; fill: #454545; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <text x="800" y="60" text-anchor="middle" class="title">Water Pump Digital Twin Solution: Beverage Factory</text>
+  <rect x="70" y="105" width="1460" height="725" rx="24" fill="#f7f9fc" stroke="#2d5f98" stroke-width="5"/>
+  <rect x="105" y="128" width="255" height="53" rx="10" fill="#2d5f98"/>
+  <text x="232" y="164" text-anchor="middle" fill="#ffffff" style="font:700 26px Arial, sans-serif">Beverage Factory</text>
+  <text x="400" y="163" class="sub">Multiple production lines supply the bottling operation</text>
+
+  <rect x="125" y="220" width="1350" height="240" rx="18" fill="#eef5fb" stroke="#6b9ccd" stroke-width="3"/>
+  <rect x="153" y="240" width="210" height="46" rx="8" fill="#5592c7"/>
+  <text x="258" y="272" text-anchor="middle" fill="#ffffff" style="font:700 22px Arial, sans-serif">Production Line 1</text>
+  <text x="410" y="272" class="sub">Rinse and bottle sequence</text>
+  <line x1="565" y1="355" x2="640" y2="355" stroke="#6b7280" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="965" y1="355" x2="1040" y2="355" stroke="#6b7280" stroke-width="5" marker-end="url(#arrow)"/>
+  <rect x="395" y="305" width="170" height="105" rx="12" fill="#ffffff" stroke="#9aa5b1" stroke-width="3"/>
+  <text x="480" y="347" text-anchor="middle" class="machine">Rinse Station</text>
+  <text x="480" y="375" text-anchor="middle" class="machineSub">Machine 1</text>
+  <rect x="640" y="295" width="325" height="125" rx="12" fill="#dff3e5" stroke="#17803d" stroke-width="4"/>
+  <text x="802" y="344" text-anchor="middle" class="machine">Water Pump</text>
+  <text x="802" y="374" text-anchor="middle" class="machineSub">Machine 2 • directly connected</text>
+  <text x="802" y="400" text-anchor="middle" class="machineSub">Telemetry source</text>
+  <rect x="1040" y="305" width="170" height="105" rx="12" fill="#ffffff" stroke="#9aa5b1" stroke-width="3"/>
+  <text x="1125" y="347" text-anchor="middle" class="machine">Bottle Filler</text>
+  <text x="1125" y="375" text-anchor="middle" class="machineSub">Machine 3</text>
+
+  <rect x="125" y="530" width="1350" height="240" rx="18" fill="#eef5fb" stroke="#6b9ccd" stroke-width="3"/>
+  <rect x="153" y="550" width="210" height="46" rx="8" fill="#5592c7"/>
+  <text x="258" y="582" text-anchor="middle" fill="#ffffff" style="font:700 22px Arial, sans-serif">Production Line 2</text>
+  <text x="410" y="582" class="sub">Cooling and bottling sequence</text>
+  <line x1="565" y1="665" x2="640" y2="665" stroke="#6b7280" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="965" y1="665" x2="1040" y2="665" stroke="#6b7280" stroke-width="5" marker-end="url(#arrow)"/>
+  <rect x="395" y="615" width="170" height="105" rx="12" fill="#ffffff" stroke="#9aa5b1" stroke-width="3"/>
+  <text x="480" y="657" text-anchor="middle" class="machine">Cooling Loop</text>
+  <text x="480" y="685" text-anchor="middle" class="machineSub">Machine 1</text>
+  <rect x="640" y="605" width="325" height="125" rx="12" fill="#dff3e5" stroke="#17803d" stroke-width="4"/>
+  <text x="802" y="654" text-anchor="middle" class="machine">Water Pump</text>
+  <text x="802" y="684" text-anchor="middle" class="machineSub">Machine 2 • directly connected</text>
+  <text x="802" y="710" text-anchor="middle" class="machineSub">Telemetry source</text>
+  <rect x="1040" y="615" width="170" height="105" rx="12" fill="#ffffff" stroke="#9aa5b1" stroke-width="3"/>
+  <text x="1125" y="657" text-anchor="middle" class="machine">Capper</text>
+  <text x="1125" y="685" text-anchor="middle" class="machineSub">Machine 3</text>
+</svg>
