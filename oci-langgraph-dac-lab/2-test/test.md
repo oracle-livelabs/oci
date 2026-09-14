@@ -41,6 +41,7 @@ Let's install the examples in Cloud Editor.
     wget https://livelabs.oracle.com/cdn/oci/oci-langgraph-dac/2-test/files/oci-langgraph-dac.zip
     unzip oci-langgraph-dac.zip
     cd oci-langgraph-dac
+    cp .env.example .env
     cat install.sh
     ./install.sh
     source .venv/bin/activate
