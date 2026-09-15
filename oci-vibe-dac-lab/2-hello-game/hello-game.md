@@ -3,7 +3,8 @@
 ## Introduction
 In this lab, you will install OpenCode for Vibe Coding and generate:
 - a small Hello World application,
-- a Space Invaders game.
+- a Space Invaders game,
+- a Mobile Application to order food in a restaurant.
 
 Estimated time: 30 min
 
@@ -18,7 +19,7 @@ Complete the previous lab.
 
 ## Task 1: Install OpenCode in Cloud Shell
 
-To avoid installing OpenCode on your laptop—although you can also use OpenCode or OpenCode Desktop—we will use OCI Cloud Shell.
+To avoid installing OpenCode on your laptop, although you can also use OpenCode or OpenCode Desktop on it, we will use OCI Cloud Shell.
 
 For more information: https://opencode.ai/
 
@@ -53,13 +54,13 @@ For more information: https://opencode.ai/
         - If you have access to the Chicago region, use the proposed default value.
         - Or look up the model and region here: https://docs.oracle.com/en-us/iaas/Content/generative-ai/model-endpoint-regions.htm. Find the base URL here: https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-inference/20231130/
         - Here is an example:    
-            - Model ID: ex: xai.grok-4.20-0309-reasoning
-            - OCI Generative AI base URL: https://inference.generativeai.us-chicago-1.oci.oraclecloud.com/20231130/actions/v1
-            - Model name: Grok
-            - API Key: sk-xxx (see your notes in previous lab)
+            - Model ID: ex: *xai.grok-4.20-0309-reasoning*
+            - OCI Generative AI base URL: *https://inference.generativeai.us-chicago-1.oci.oraclecloud.com/20231130/actions/v1*
+            - Model name: *Grok*
+            - API Key: *sk-xxx* (see your notes in previous lab)
     - With Dedicated AI Cluster (DAC): 
-        - Model ID: ex: ocid1.generativeaiendpoint.oc1.xxxxxx.amaaaaaaxxxx
-        - API Key: sk-xxx (see your notes in previous lab)
+        - Model ID: ex: *ocid1.generativeaiendpoint.oc1.xxxxxx.amaaaaaaxxxx*
+        - API Key: *sk-xxx* (see your notes in previous lab)
 
 3. Create an Object Storage bucket.
 
@@ -223,11 +224,16 @@ When we asked for deployments during the chat with the coding agent, it used the
 
 For more information: https://agentskills.io/home
 
-<<< At its core, a skill is a folder containing a SKILL.md file. This file includes metadata (name and description, at minimum) and instructions that tell an agent how to perform a specific task. Skills can also bundle scripts, reference materials, templates, and other resources. >>>
+" At its core, a skill is a folder containing a SKILL.md file. This file includes metadata (name and description, at minimum) and instructions that tell an agent how to perform a specific task. Skills can also bundle scripts, reference materials, templates, and other resources. "
 
 ## Task 7: More models
 
 Try other models and repeat the exercises. New models are available regularly, and they are improving rapidly in performance and quality.
+
+## END
+
+Congratulations! You have finished the lab!!
+We hope you have learned something useful.
 
 ## Acknowledgements
 

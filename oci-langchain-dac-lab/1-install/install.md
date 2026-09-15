@@ -1,7 +1,7 @@
 # Install the components
 
 ## Introduction
-In this lab, you will prepare OCI to use generative AI and large language models.
+In this lab, you will prepare OCI to use Generative AI and Large Language Models (LLMs).
 
 Optionally, you will import an open-weight model into a Dedicated AI Cluster (DAC).
 
@@ -11,7 +11,7 @@ Estimated time: 30 min
 
 ### Objectives
 
-- Configure OCI Generative AI access, Visual Studio Code, and Cline, then generate a Hello World app.
+- Configure OCI Generative AI access.
 
 ### Prerequisites
 
@@ -104,7 +104,7 @@ You can:
 - Copy the following, replacing ##COMPARTMENT\_OCID## with your value:
     ```
     allow any-user to manage generative-ai-family in compartment id ##COMPARTMENT_OCID##
-    ```
+    ```    
 - Click *Create*.
     ![Policy Create](images/policy-create.png)
 
@@ -137,20 +137,11 @@ First, create an OpenAI-compatible API key.
     - Click **Close**.
 Although you can choose any model from any provider to continue the lab, this guide covers several models available in OCI.
 
-## Task 4: Create a Policy - Optional
+7. Note, if you use a API Key the policy defined above can be more specific like this:
 
-- Go to the OCI Console menu and choose *Identity & Security* / *Policies*.
-    ![Policy Menu](images/policy-menu.png)
-- Click *Create Policy*.
-- Name: *policy-vibe*
-- Description: *policy-vibe*
-- Click *Show Manual editor*.
-- Copy the following, replacing ##COMPARTMENT\_OCID## with your value:
     ```
     allow any-user to manage generative-ai-family in compartment id ##COMPARTMENT_OCID## where request.principal.type = 'generativeaiapikey'
     ```
-- Click *Create*.
-    ![Policy Create](images/policy-create.png)
 
 ## Task 5: Install a Dedicated AI Cluster (DAC) - Optional
 
@@ -214,7 +205,7 @@ Documentation: https://docs.oracle.com/en-us/iaas/Content/generative-ai/import-m
     ![dac](images/dac4.png) 
 
 
-## Known Issue
+## Known Issues
 
 - None
 

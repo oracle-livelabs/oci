@@ -20,9 +20,9 @@ Estimated time: 20 min
 We will test the following architecture:
 
 1. Agent built using a graph
-2. ReAct agent
-3. ReAct agent with tracing
-4. Reflection (two agents working as a team)
+2. Agent (React)
+3. Agent with tracing
+4. Reflection (2 agents working as a team)
 5. Supervisor: a main agent that calls other agents and loops until it finds a satisfactory answer
 
 ### Download the examples
@@ -59,7 +59,7 @@ Let's install the examples in Cloud Editor.
     </copy>    
     ````
 
-6. After installation, the command `source .venv/bin/activate` activates the Python virtual environment. It must remain active to run any of the examples.
+6. After installation, the command *"source .venv/bin/activate"* activates the Python virtual environment. It must remain active to run any of the examples.
 
     If you close and restart Cloud Editor, reactivate the virtual environment by running:
 
@@ -110,7 +110,7 @@ Let's install the examples in Cloud Editor.
     ```
     <copy>    
     GENAI_MODEL=xai.grok-4.20-0309-reasoning
-    REGION=##REGION##
+    REGION=us-chicago-1
     COMPARTMENT_OCID=##COMPARTMENT_OCID##
     ex: COMPARTMENT_OCID=ocid1.compartment.oc1.xxxxxxxxxx
     </copy>      
@@ -120,7 +120,7 @@ Let's install the examples in Cloud Editor.
 
 ## Task 1: LangGraph Agent
 
-Let's look at our first agent. It uses a LangGraph workflow, an OCI Generative AI model, and a weather tool to recommend clothing.
+Let's look at our first agent. It uses a LangGraph workflow, an OCI Generative AI model, and a weather tool to recommend clothing. 
 
 1. Open `ex1_langgraph.py` in Cloud Shell Editor or VS Code.
 2. Check the `get_current_weather` tool. It calls OpenWeather and returns structured weather data.
@@ -134,7 +134,7 @@ Let's look at our first agent. It uses a LangGraph workflow, an OCI Generative A
     graph.add_edge("tools", "assistant")
     ```
 
-    The conditional edge sends a request to the tool only when the model has made a tool call. Otherwise, the graph ends. This is the way that agents work. They are based on execution graphs that LangGraph defines explicitly.
+    The conditional edge sends a request to the tool only when the model has made a tool call. Otherwise, the graph ends. This is the way that agents work. They are based on execution graphs. With LangGraph, it is defined explicitly. 
     ![Graph](images/ex1_graph.png)
 
 4. Run the example:
@@ -154,7 +154,7 @@ Let's look at our first agent. It uses a LangGraph workflow, an OCI Generative A
     - *What should I wear in Las Vegas today?*
     - *Should I take an umbrella in London, GB?*
 
-6. Notice that the agent calls the weather tool before giving weather-dependent advice. Type `quit` to leave the program.
+6. Notice that the agent calls the weather tool before giving weather-dependent advice. Type `quit` or CTRL+C to leave the program.
 
 ## Task 2: Agent
 
@@ -198,7 +198,10 @@ In the previous sample, the graph is written explicitly. This example uses LangC
 
 ## Task 3: Agent with tracing 
 
-In this version of the lab, tracing is enabled and reusable tools are separated from the agent. This is the building block used later by the supervisor to route requests to specialist agents. The explicit human-confirmation step is exercised in Task 5.
+In this version of the lab, 
+- tracing is enabled, 
+- and reusable tools are separated from the agent. 
+This is the building block used later by the supervisor to route requests to specialist agents. The explicit human-confirmation step is exercised in Task 5.
 
 1. Open `ex3_agent_trace.py` and `tools.py`.
 2. Notice that the agent imports `get_current_weather` from `tools.py` rather than defining the tool in the application file.
@@ -259,7 +262,7 @@ Here we will use two agents that work together.
 
     - *Iron Man*
 
-6. Notice that only an approved document is printed. Type `quit` to leave the program.
+6. Notice that the reviewer and writer speaks between themselves before to give the final document. Type `quit` to leave the program.
 
 ## Task 5: Supervisor
 
@@ -307,6 +310,23 @@ We hope you have learned something useful.
 
 ## Known issues
 
+- When starting an example, you have this error:
+    ```
+    <copy>
+    Traceback (most recent call last):
+    File "/home/marc_gueur/oci-langchain-dac/ex1_langgraph.py", line 5, in <module>
+        import common
+    File "/home/marc_gueur/oci-langchain-dac/common.py", line 9, in <module>
+        from langchain_core.messages import AIMessage, ToolMessage 
+    ModuleNotFoundError: No module named 'langchain_core'
+    </copy>
+    ```
+    Solution: The python virtual env is not activated. Run 
+    ```
+    <copy>
+    source .venv/bin/activate
+    </copy>
+    ```
 - `OPENWEATHER_API_KEY` must be valid for Tasks 1–3. If it is missing, the weather tool reports that configuration issue instead of returning weather data.
 - The examples need outbound network access to OCI Generative AI. Tasks 1–3 also call OpenWeather; Task 4 calls English Wikipedia.
 - `holiday.json` is created by Task 5 after a confirmed booking. Delete that file manually before rerunning the task if you need a completely empty booking history.

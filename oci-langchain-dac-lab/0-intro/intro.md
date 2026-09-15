@@ -3,7 +3,7 @@
 ## About This Workshop
 In this workshop, you will learn how to build AI agents using LangChain and LangGraph.
 
-Since LangChain and LangGraph are primarily Python libraries, you will progressively build agents using:
+You will progressively build agents using:
 - Python
 - LangChain or LangGraph
 - an on-demand large language model (LLM)
@@ -19,14 +19,14 @@ Estimated Workshop Time: 60 minutes
 
 In these labs, you will get an introduction to how to:
 - Connect LangChain or LangGraph to OCI
-- Build systems ranging from simple agents to multi-agent systems using LangChain
+- Build systems ranging from simple agents to multi-agent systems
 
 ![Screenshot](images/lg-screenshot.png =50%x*)
 
 ### What is an Agent
 
-Here is a **definition of an AI Agent**: 
-- An AI agent interacts autonomously with its environment. It uses tools and data to perform self-determined tasks to meet predetermined goals. 
+**Definition of AI Agent:**: 
+- An AI Agent interacts autonomously with its environment. It uses tools and data to perform self-determined tasks to meet predetermined goals. 
 
 ![Definition](images/oda-agent-definition.png =50%x*)
 
@@ -57,7 +57,7 @@ We will then explore more complex architectures, including memory, multi-agent s
 
 ### Physical Architecture
 
-The physical architecture consists primarily of LangGraph, which calls Python functions or REST APIs to access tools.
+The physical architecture consists primarily of LangChain Agents, which call Python functions or REST APIs to access tools.
 In the lab, we keep the setup as simple as possible by using dummy tools to avoid dependencies.
 
 ![Physical Architecture](images/physical-architecture.png =50%x*)
