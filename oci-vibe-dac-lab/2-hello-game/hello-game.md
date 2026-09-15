@@ -1,4 +1,4 @@
-# Hello World and Space Invaders
+# Hello World, Game and Mobile App
 
 ## Introduction
 In this lab, you will install OpenCode for Vibe Coding and generate:
