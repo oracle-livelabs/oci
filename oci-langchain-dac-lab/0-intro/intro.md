@@ -48,7 +48,7 @@ This LiveLab covers several AI-agent architectures.
 
 ![Agent](images/lg-agent-react.png =50%x*)
 
-We will then explore more complex architectures, including memory, multi-agent systems, and several multi-agent examples.
+We will then explore more complex architectures, including memory, and several multi-agent systems.
 - **Reflection**
 - **Human in the loop**
 - **Supervisor**, ....
