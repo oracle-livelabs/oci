@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1440 720" role="img" aria-labelledby="title description">
   <title id="title">Direct and gateway-based indirect device telemetry paths</title>
   <desc id="description">A charcoal and Oracle-red diagram comparing a direct water pump connection to an indirect pump connection through Gateway 1.</desc>
   <rect width="1440" height="720" fill="#ffffff"/>

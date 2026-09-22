@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="600" viewBox="0 0 1240 600" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="580.645" viewBox="0 0 1240 600" role="img" aria-labelledby="title desc">
   <title id="title">Gateway routing selects an associated indirect device</title>
   <desc id="desc">One message enters the gateway routing adapter. The adapter extracts water-pump-4 from the endpoint and sends the payload to Water Pump 4 from the associated digital twin instances.</desc>
   <rect width="1240" height="600" fill="#ffffff"/>
