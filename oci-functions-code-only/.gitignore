@@ -1,0 +1,4 @@
+__pycache__/
+author/state/
+author/.venv/
+*.pyc

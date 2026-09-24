@@ -1,0 +1,21 @@
+{
+  "workshoptitle": "From Code to Cloud in Minutes with OCI Functions",
+  "help": "livelabs-help-oci_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Get Started",
+      "description": "Access your own tenancy and confirm administrator-prepared prerequisites.",
+      "filename": "../../get-started/get-started-tenancy.md"
+    },
+    {
+      "title": "Lab 1: Deploy and Trigger an Inventory-Processing Function",
+      "description": "Check Python, deploy the function, connect Events, and verify reports.",
+      "filename": "../../deploy-function/deploy-function.md"
+    },
+    {
+      "title": "Lab 2: Configure and Troubleshoot Your Function (Optional)",
+      "description": "Change the threshold, investigate rejected records, and verify corrected data.",
+      "filename": "../../configure-troubleshoot/configure-troubleshoot.md"
+    }
+  ]
+}
