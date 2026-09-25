@@ -47,3 +47,12 @@ redaction must be visibly a redaction, never an altered result.
 - Threshold and rejected-row screenshots: `../configure-troubleshoot/images/`.
 
 Screenshots were copied without alteration; the old `img/` directory is not used.
+
+## Learner-created resource expansion
+
+The existing bucket and application screenshots are explicitly labeled end-state
+references in Lab 1. Capture actual bucket creation, event-emission editing,
+application creation with x86/private subnet, four configuration entries, and
+invocation-log enablement during the authorized fresh-environment dry run. Also
+capture Resource Manager variables/outputs and the sandbox resource sheet after
+real integration; do not invent screenshots or mark these steps cloud-verified.

@@ -19,12 +19,12 @@ Beginner technical learners. No previous OCI Functions experience is required.
 
 **Estimated Workshop Time**
 
-35-40 minutes. Optional extensions take another 10-15 minutes. 
+Plan 60-80 minutes including the optional exercises, with the remainder of the 90-minute session available for questions and troubleshooting. Own-tenancy foundation deployment is pre-work and may take additional time. These estimates still need a beginner dry run.
 
 **Prerequisites**
 
 - Access to the prepared lab compartment and OCI Console.
-- The application, network, two buckets, and logging prepared by the workshop host.
+- A prepared foundation: isolated compartment, private network, log group, and permissions. You create the buckets, application, and invocation log during Lab 1.
 - A browser and access to OCI Cloud Shell for checking the supplied Python code.
 - Optional: an AI coding assistant you already have access to. The reference code lets you complete the lab without one.
 
@@ -51,46 +51,46 @@ The reports are stored under a prefix named after the input file. For example, `
 
 For help during the workshop, contact your instructor or lab facilitator.
 
-> **Author review edition:** The reference archive and all four CSV exercises passed in Chicago on September 17, 2026. Lab 1's upload, checks, repackaging, and download were also verified in OCI Cloud Shell. A fresh learner-role dry run, beginner timing test, and green-button integration remain before publication.
+> **Author review edition:** The original function workflow and Cloud Shell checks were cloud-tested. The new Terraform foundation and learner-created resource steps require a fresh end-to-end dry run before publication; LiveLabs green-button integration is not yet deployed.
 
 ## Task 1: Access your reserved sandbox
 
-1. Open your workshop reservation and use its supplied OCI Console sign-in details. Use the sandbox credentials, not credentials for your personal tenancy.
+1. Open your LiveLabs reservation and sign in using its sandbox credentials, not your own tenancy credentials.
 
-2. Wait for the reservation's environment preparation to finish. Select the assigned region and compartment. This workshop was validated in **US Midwest (Chicago)**.
+2. Wait for the reservation's foundation provisioning to complete. Select the assigned region and compartment; this workshop's validated workload region is **US Midwest (Chicago)**.
 
-3. Find the prepared Functions application, private network, incoming/output buckets, invocation log, and runtime permissions. The sandbox administrator prepares these resources; you create the function and Events rule in Lab 1.
+3. Open the reservation's resource sheet, or obtain it from your facilitator. The foundation provides the private network, log group, and runtime permissions. It does **not** create the resources you will build in Lab 1.
 
-4. Confirm that you can open **Cloud Shell** from the Console's **Developer tools** menu. Download the source bundle when instructed in Lab 1.
+4. If preparation failed, the resource sheet is missing, or permissions are not ready, contact your facilitator before continuing. Do not run the own-tenancy stack in your sandbox or create a second foundation.
 
-> **Author review edition:** Green-button provisioning is not yet integrated. These sandbox instructions describe the intended reservation handoff. Do not begin Lab 1 unless your facilitator confirms that the supporting resources and learner permissions are ready.
+The reservation integration must pass the assigned compartment, tenancy, region, and naming inputs to the [shared foundation](../foundation/README.md). An administrator establishes the runtime and learner IAM before handoff; participants do not create or modify IAM policies.
 
+## Task 2: Record your resource sheet
 
-Use the compartment and resource names assigned to you. The screenshots use the author's example names in Chicago; if your reservation or administrator provides different names, substitute them throughout both labs. Do not use another participant's resources.
+Your facilitator or the Resource Manager stack supplies the **resource_sheet** output. Keep it open throughout the workshop. Uppercase resource-name placeholders in the instructions mean the values below; do not type the placeholders literally.
 
-## Task 2: Explore your prepared environment
+| Instruction placeholder | Resource sheet field |
+| --- | --- |
+| LAB_COMPARTMENT | compartment_ocid (select the matching compartment) |
+| VCN_NAME | vcn_name |
+| SUBNET_NAME | subnet_name |
+| LOG_GROUP_NAME | log_group_name |
+| INCOMING_BUCKET_NAME | incoming_bucket_name |
+| OUTPUT_BUCKET_NAME | output_bucket_name |
+| APPLICATION_NAME | application_name |
+| EVENT_RULE_NAME | event_rule_name |
+| Object Storage namespace | object_storage_namespace |
 
-**Time:** 5 minutes. **Outcome:** You can identify the resources in the upload-to-report workflow.
+1. In Networking, find the supplied VCN and private regional subnet. You will select them for the application; do not create or change network rules.
 
-1. Sign in to the OCI Console and select **US Midwest (Chicago)** in the region selector.
+2. In Logging, find the supplied log group. The application's invocation log does not exist yet; you will enable it after creating the application.
 
-2. Search for **Functions**, open **Applications**, and set the compartment filter to **LiveLab**.
+3. Open **Cloud Shell** from **Developer tools** and confirm that it starts. The supplied Python checks require no package installation.
 
-3. Open **livelab-inventory-app**. This application provides the network and shared settings for your function. You will add a function to it in Lab 1, Task 2.
+4. Confirm with your facilitator or administrator that the function runtime permissions and your learner permissions are ready. A successful Terraform Apply with **create_runtime_iam=false** does not establish runtime permissions.
 
-Open **Configuration** to find the input/output buckets, namespace, and default threshold of 10. Your namespace will be specific to your lab tenancy.
+> **Checkpoint:** You have a compartment, private network, log group, exact resource names, and access. The two buckets, application, function, invocation log, and Events rule are deliberately left for you to create in Lab 1.
 
-![Prepared application configuration with bucket names and threshold 10](images/00-application-config.png "Shared application settings")
-
-4. Search for **Buckets**, keep the **LiveLab** compartment selected, and open **livelab-inventory-incoming**.
-
-5. On the **Details** tab, confirm that **Emit object events** is **Enabled**. This setting lets Object Storage announce new uploads to OCI Events.
-
-![Incoming bucket in Chicago with Emit object events enabled](images/01-input-bucket.png "Input bucket and event setting")
-
-6. Return to the bucket list and locate **livelab-inventory-output**. Your reports will appear here after the function runs.
-
-> **Checkpoint:** You found one Functions application and two buckets. The incoming bucket emits object events. The output bucket is separate, so writing a report does not trigger the same workflow again.
-
+Use only your assigned environment. The reference screenshots show the author's earlier names; substitute your resource sheet values.
 
 You may now **proceed to Lab 1** using the workshop navigation.

@@ -177,3 +177,14 @@ now Lab 1 Task 1. ZIP contents were not changed during this migration. Private
 state/evidence files remain in the original authoring workspace and are not
 included here. The new path layout does not prove fresh tenancy provisioning
 or green-button readiness. See the root README for remaining publication gates.
+
+## Foundation and learner-created resources (September 25, 2026)
+
+New source includes a shared Terraform foundation with Resource Manager schema,
+explicit administrator-only IAM option, and mock-provider tests. The learner guide
+now creates buckets, application/configuration, and invocation logging, using a
+resource sheet rather than fixed authoring names. Historical September 17 cloud
+results remain valid for the original environment, not proof of the new stack.
+No live Apply, new IAM mutation, reservation integration, or new UI capture was
+performed while authoring these changes. Consult FOUNDATION-VALIDATION.md for
+local test evidence and outstanding live checks.

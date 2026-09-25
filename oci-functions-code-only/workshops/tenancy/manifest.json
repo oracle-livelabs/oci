@@ -4,12 +4,12 @@
   "tutorials": [
     {
       "title": "Get Started",
-      "description": "Access your own tenancy and confirm administrator-prepared prerequisites.",
+      "description": "Deploy the shared foundation with Resource Manager and record the resource sheet.",
       "filename": "../../get-started/get-started-tenancy.md"
     },
     {
       "title": "Lab 1: Deploy and Trigger an Inventory-Processing Function",
-      "description": "Check Python, deploy the function, connect Events, and verify reports.",
+      "description": "Create buckets and application, enable logging, check Python, deploy the function, and connect Events.",
       "filename": "../../deploy-function/deploy-function.md"
     },
     {

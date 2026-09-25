@@ -2,24 +2,87 @@
 
 ## Introduction
 
-Create a Python function from a ZIP archive and connect it to an Object Storage upload event. Verify that an inventory CSV automatically produces restock and rejected-record reports.
+Create the buckets and Functions application, then deploy a Python function from a ZIP archive and connect it to an Object Storage upload event. Verify that an inventory CSV automatically produces restock and rejected-record reports.
 
-Estimated Lab Time: 30-35 minutes.
+Estimated Lab Time: 45-55 minutes.
 
 ### Objectives
 
 - Review or generate the processing module and run the supplied checks in Cloud Shell.
-- Deploy a code-only function in the prepared application.
+- Create and configure the buckets and application, then deploy a code-only function.
 - Connect an Object Storage event and verify the resulting reports.
 
 ### Prerequisites
 
 - Complete **Get Started** using the sandbox or own-tenancy instructions.
-- Have access to the prepared application, buckets, network, logging, and learner permissions.
+- Have access to the prepared private network, log group, runtime IAM, learner permissions, and resource sheet. You create the buckets and application below.
 - Use the assigned resource names if they differ from the examples.
 - Optional: access to an AI coding assistant; the tested reference code is also provided.
 
-## Task 1: Prepare and check the Python code
+## Task 1: Create the incoming and output buckets
+
+**Time:** 5-7 minutes.
+
+1. Open **Storage > Object Storage & Archive Storage > Buckets** and select **LAB_COMPARTMENT** from your resource sheet.
+
+2. Select **Create bucket**. Enter **INCOMING_BUCKET_NAME** exactly as supplied. Use **Standard** storage, retain default encryption, and keep the bucket **private**. Leave optional versioning, retention rules, and replication disabled for this exercise.
+
+3. After creation, open the incoming bucket's details and enable **Emit object events** (use **Edit** if required by the Console). Verify that the setting is **Enabled**.
+
+4. Create a second private Standard bucket using **OUTPUT_BUCKET_NAME**. Leave **Emit object events disabled** on this bucket.
+
+5. Verify that both buckets are empty and their names exactly match the resource sheet. Bucket-scoped runtime policies use these names; choosing different names can prevent the function from reading inputs or writing reports.
+
+![Incoming bucket with event emission enabled](../get-started/images/01-input-bucket.png "Example completed bucket settings; use your assigned name")
+
+This is a reference image of the configured bucket, not a screenshot of its creation form.
+
+> **Checkpoint:** You created two separate private buckets. Only the incoming bucket emits events, so report writes will not start the workflow again.
+
+## Task 2: Create and configure the Functions application
+
+**Time:** 8-10 minutes.
+
+1. Open **Developer Services > Functions > Applications** and select **LAB_COMPARTMENT**.
+
+2. Select **Create application**. Enter **APPLICATION_NAME** from the resource sheet.
+
+3. Select the supplied **VCN_NAME** and **SUBNET_NAME**. Use the x86 architecture/shape (**GENERIC_X86**), not Arm: the supplied deployment archive contains x86-64 dependencies. Leave other optional settings at their defaults and create the application.
+
+4. Open the application's **Configuration** tab and select **Manage configuration**. Add the following four keys. Copy values from the resource sheet, not from the example screenshot.
+
+   | Key | Value |
+   | --- | --- |
+   | INPUT_BUCKET | Your incoming_bucket_name value |
+   | OUTPUT_BUCKET | Your output_bucket_name value |
+   | OBJECT_STORAGE_NAMESPACE | Your object_storage_namespace value |
+   | LOW_STOCK_THRESHOLD | 10 |
+
+5. Save the configuration. Check spelling, bucket names, and namespace. The namespace is not your compartment name or bucket name. If needed, find it in the tenancy's Object Storage information.
+
+![Example application configuration](../get-started/images/00-application-config.png "Example four-key application configuration")
+
+This screenshot uses the original author's resource names. Use your own resource sheet values.
+
+> **Checkpoint:** The application groups your function with its private network and shared configuration. It contains no function yet.
+
+## Task 3: Enable application invocation logging
+
+**Time:** 2-3 minutes.
+
+1. Open the application's **Logs** tab or resource section.
+
+2. Enable the **invoke** / function invocation service log. Select **LAB_COMPARTMENT** and the prepared **LOG_GROUP_NAME**.
+
+3. Name the log **inventory-invocations**, choose **30 days** retention, and save. If the Console describes the category as **Function Invocation Logs**, select that category.
+
+4. Verify that logging is enabled. The log may be empty until you invoke the function later.
+
+Do not enable Object Storage access logging for this exercise; the troubleshooting steps use the Functions application invocation log. If you cannot select the log group or enable the log, ask your facilitator to check learner permissions.
+
+> **Checkpoint:** The application's invocation log is ready before the first CSV upload.
+
+## Task 4: Prepare and check the Python code
 
 **Time:** 8 minutes. **Outcome:** Your inventory-processing code passes the supplied checks.
 
@@ -74,15 +137,15 @@ inventory-lab/inventory-reporter-custom.zip
 
 ![Cloud Shell download dialog with the home-relative custom archive path](images/02c-cloud-shell-download.png "Download the function ZIP to your computer")
 
-If using the unchanged reference implementation, you can instead use **inventory-reporter.zip** from the bundle extracted on your computer. Either way, you need the function ZIP on your computer for Task 2, not the outer `inventory-lab-source.zip`.
+If using the unchanged reference implementation, you can instead use **inventory-reporter.zip** from the bundle extracted on your computer. Either way, you need the function ZIP on your computer for Task 5, not the outer `inventory-lab-source.zip`.
 
 > **Checkpoint:** All checks pass. You can explain why the default rule selects five rows from the 20-row sample.
 
-## Task 2: Create the function in your application
+## Task 5: Create the function in your application
 
-**Time:** 10 minutes. **Outcome:** The `inventory-reporter` function is active in `livelab-inventory-app`.
+**Time:** 10 minutes. **Outcome:** The `inventory-reporter` function is active in `APPLICATION_NAME`.
 
-1. Open **Functions**, select **LiveLab**, and open **livelab-inventory-app**.
+1. Open **Functions**, select **LAB_COMPARTMENT**, and open **APPLICATION_NAME**.
 
 2. Select the **Functions** tab, open **Actions**, and select **Create from archive**.
 
@@ -92,7 +155,7 @@ The reference image already contains a tested function. In a fresh lab, you crea
 
 3. Enter **inventory-reporter** as the name. Under **File source**, select **Upload from your device**.
 
-4. Select the reference **inventory-reporter.zip**, or the **inventory-reporter-custom.zip** you generated and checked in Task 1. Upload the function archive itself, not the outer source bundle.
+4. Select the reference **inventory-reporter.zip**, or the **inventory-reporter-custom.zip** you generated and checked in Task 4. Upload the function archive itself, not the outer source bundle.
 
 5. Enter the settings below. The handler value means: load `func.py` from the archive's `function/` directory and call its `handler` function. The reference archive includes the OCI SDK and its Linux dependencies; the managed runtime supplies FDK. Do not rely on `requirements.txt` being installed during deployment.
 
@@ -100,16 +163,16 @@ The function will use these settings:
 
 | Setting | Lab value |
 | --- | --- |
-| Compartment | `LiveLab` |
-| Application | `livelab-inventory-app` |
+| Compartment | `LAB_COMPARTMENT` |
+| Application | `APPLICATION_NAME` |
 | Function name | `inventory-reporter` |
 | Runtime | `python312.ol9` |
 | Handler | `func.handler` |
 | Memory | 256 MB |
 | Synchronous invocation timeout | 60 seconds |
 | Runtime version management | Function update |
-| Input bucket | `livelab-inventory-incoming` |
-| Output bucket | `livelab-inventory-output` |
+| Input bucket | `INCOMING_BUCKET_NAME` |
+| Output bucket | `OUTPUT_BUCKET_NAME` |
 | Low-stock threshold | `10` |
 
 The application supplies `INPUT_BUCKET`, `OUTPUT_BUCKET`, `OBJECT_STORAGE_NAMESPACE`, and `LOW_STOCK_THRESHOLD` as configuration. The function uses its OCI resource identity to access the buckets; there are no personal credentials in the code.
@@ -122,13 +185,13 @@ The application supplies `INPUT_BUCKET`, `OUTPUT_BUCKET`, `OBJECT_STORAGE_NAMESP
 
 > **Checkpoint:** Do not continue until the deployed function is **Active** and the application configuration matches the lab environment.
 
-## Task 3: Connect the upload event
+## Task 6: Connect the upload event
 
 **Time:** 7 minutes. **Outcome:** An Events rule targets your function when a new object is created in the incoming bucket.
 
-1. Search for **Events** in the Console and open the Events rules page. Select the **LiveLab** compartment.
+1. Search for **Events** in the Console and open the Events rules page. Select the **LAB_COMPARTMENT** compartment.
 
-2. Select **Create rule**, name the rule **livelab-inventory-upload**, and use a description such as `Process new supplier inventory CSV files`.
+2. Select **Create rule**, name the rule **EVENT_RULE_NAME**, and use a description such as `Process new supplier inventory CSV files`.
 
 3. Configure the event condition:
 
@@ -138,9 +201,9 @@ The application supplies `INPUT_BUCKET`, `OUTPUT_BUCKET`, `OBJECT_STORAGE_NAMESP
 | Service | Object Storage |
 | Event type | Object - Create |
 
-4. Add an attribute condition for **bucketName**, with the value **livelab-inventory-incoming**. This restricts the rule to the lab's input bucket.
+4. Add an attribute condition for **bucketName**, with the value **INCOMING_BUCKET_NAME**. This restricts the rule to the lab's input bucket.
 
-5. Add a **Functions** action and select the **LiveLab** compartment, **livelab-inventory-app** application, and **inventory-reporter** function.
+5. Add a **Functions** action and select the **LAB_COMPARTMENT** compartment, **APPLICATION_NAME** application, and **inventory-reporter** function.
 
 ![Rule fields showing Object Create, incoming bucket, application, and function](images/05-event-function-target.png "Event condition and function action")
 
@@ -154,19 +217,19 @@ This reference image reviews an existing rule in **Edit rule**. When creating yo
 
 > **Checkpoint:** The enabled rule matches **Object - Create** for the incoming bucket and names your function as its action.
 
-## Task 4: Upload inventory and inspect the reports
+## Task 7: Upload inventory and inspect the reports
 
 **Time:** 7-10 minutes. **Outcome:** You see five restock rows and an empty rejected-records report.
 
 1. Download [inventory-run1.csv](files/inventory-run1.csv) to your computer. If your browser displays the CSV, save it as a file with that name.
 
-2. In Object Storage, open **livelab-inventory-incoming** and select **Upload objects**.
+2. In Object Storage, open **INCOMING_BUCKET_NAME** and select **Upload objects**.
 
 ![Object Storage upload dialog with file selection and Next](images/02-upload-dialog.png "Select the inventory CSV")
 
 3. Leave **Object name prefix** blank and choose `inventory-run1.csv`. Keep **Standard** storage tier, select **Next**, review the file, and complete the upload.
 
-4. Open **livelab-inventory-output**, then its **Objects** tab. Refresh the list until you see the `inventory-run1/` prefix. Event delivery and execution are asynchronous; the reports may not appear immediately.
+4. Open **OUTPUT_BUCKET_NAME**, then its **Objects** tab. Refresh the list until you see the `inventory-run1/` prefix. Event delivery and execution are asynchronous; the reports may not appear immediately.
 
 5. Open that prefix and download **restock-report.csv** and **rejected-records.csv**.
 
@@ -188,7 +251,7 @@ Your first upload uses `inventory-run1.csv` and produces `inventory-run1/`. A di
 If reports have not appeared after a few minutes, verify the region, input bucket, new filename, enabled rule, and function target. Then inspect the application's invocation logs. A `reports_written` message includes the source filename and report counts. Ask the facilitator for help if there is no invocation or a permissions error.
 
 
-## Task 5: Recap and choose your next step
+## Task 8: Recap and choose your next step
 
 You created an event-driven workflow: upload an inventory CSV, match an event, run Python code, and write two reports.
 
@@ -196,4 +259,4 @@ You created an event-driven workflow: upload an inventory CSV, match an event, r
 
 2. To explore configuration changes and rejected-row diagnosis, proceed to **Lab 2: Configure and Troubleshoot Your Function (Optional)** using the workshop navigation. Keep your resources for that lab.
 
-3. If you are finishing here, follow your facilitator's cleanup guidance. In your own tenancy, coordinate cleanup with the resource owner. Do not delete shared or unrelated resources.
+3. If you are finishing here, follow the [cleanup instructions](../get-started/cleanup.md). Keep all resources if you intend to complete Lab 2 first.

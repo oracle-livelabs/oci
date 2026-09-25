@@ -1,8 +1,8 @@
 # From Code to Cloud in Minutes with OCI Functions
 
 Beginner workshop demonstrating code-only OCI Functions deployment and an
-Object Storage -> OCI Events -> Python -> report workflow. This reorganization
-contains the existing lab only; the proposed 90-minute additions are not included.
+Object Storage -> OCI Events -> Python -> report workflow. Learners now create the two buckets, application, configuration, and invocation log.
+The earlier proposed deliberate-bug and independent-challenge exercises are not included.
 
 ## Workshop structure
 
@@ -29,6 +29,7 @@ oci-functions-code-only/
       index.html
       manifest.json
       README.md
+  foundation/                    Shared Terraform root, Resource Manager schema, mock tests
   author/                        Maintenance scripts and review records; not a learner lab
 ```
 
@@ -37,8 +38,9 @@ Both manifests contain exactly three entries: **Get Started**, **Lab 1**, and
 shared. Folder names use lowercase, hyphen-separated descriptions, matching
 the repository's sample-workshop conventions.
 
-The current scope remains approximately 35-40 minutes for Get Started and
-Lab 1, plus 10-15 minutes for optional Lab 2. Estimates need a beginner dry run.
+Plan 60-80 minutes including optional Lab 2, plus buffer within the 90-minute
+session. Own-tenancy foundation deployment is pre-work and may take extra time.
+These estimates need a beginner dry run.
 
 ## Local preview
 
@@ -64,16 +66,20 @@ The function archive, all four cloud exercises, and the Cloud Shell checks were
 verified in the authoring environment on September 17, 2026. See
 [validation evidence](author/VALIDATION.md).
 
-This is not yet a ready-to-publish self-service workshop:
+The shared [foundation](foundation/README.md) and downloadable Resource Manager
+package prepare the network/log group and optionally administrator-approved runtime
+IAM. Learners build the application-facing resources. See
+[administrator setup](author/ADMINISTRATOR-SETUP.md) and
+[initialization ownership](author/INITIALIZATION.md).
 
-- Green-button provisioning and the own-tenancy setup experience remain pending.
-- Own-tenancy learners currently need administrator-prepared supporting resources.
-- Test final learner IAM, names/isolation, runtime availability, and teardown.
-- Confirm the OCI help routing and final author/contributor acknowledgements.
-- Perform the beginner timing and final screenshot/content review.
+Remaining release gates:
 
-[INITIALIZATION.md](author/INITIALIZATION.md) records the prerequisite resources
-and the boundary between initialization and learner activities.
+- Live deployment of the new stack and final learner-role end-to-end validation.
+- LiveLabs reservation/expiry integration and a published deploy-button package URL.
+- New screenshots for bucket/application/log creation, novice timing, and cleanup tests.
+- Confirmation of OCI help routing and final contributor acknowledgements.
+
+The original cloud acceptance results do not validate the new foundation automatically.
 
 ## Maintainer notes
 
@@ -89,8 +95,14 @@ python author/test_adapter.py
 python author/build_assets.py
 ```
 
+Rebuild the foundation download after configuration changes with
+`pwsh -File author/package_foundation.ps1`. It packages only approved source files;
+run the foundation's validation and mock tests before publishing the new ZIP.
+See [foundation validation evidence](author/FOUNDATION-VALIDATION.md).
+
 The archive was copied byte-for-byte during migration, not rebuilt. The author
-scripts have updated asset paths. Provisioning requires an explicit compartment
+scripts have updated asset paths; the legacy provision/check scripts still describe
+the original complete authoring environment, not the new learner foundation. Provisioning requires an explicit compartment
 ID rather than defaulting to the author's compartment. The legacy
 `deploy_archive.ps1` remains a failed Object Storage-source experiment, not the
 supported learner deployment path. Do not run cloud-changing author scripts

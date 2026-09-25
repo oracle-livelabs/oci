@@ -1,11 +1,9 @@
 # From Code to Cloud in Minutes with OCI Functions
 
-Environment: **your own OCI tenancy**.
+Path: **tenancy**. Both paths share Lab 1 and optional Lab 2.
 
-Open this directory's `index.html` through an HTTP web server to load the workshop.
-The adjacent `manifest.json` defines Get Started, Lab 1, and optional Lab 2.
-The HTML launcher is copied unchanged from the repository's sample workshop.
+The administrator or authorized operator uploads the supplied foundation ZIP to Resource Manager, reviews Plan, and runs Apply. Learners then use its resource sheet. A public Deploy shortcut is enabled only after the package URL is approved and hosted.
 
-Supporting resources must currently be prepared by your tenancy administrator. A self-service Terraform/Resource Manager setup remains pending.
-
-See the [workshop README](../../README.md) for review status and local preview instructions.
+Learners create both buckets, the application/configuration, invocation log,
+function, and Events rule. Follow [Get Started](../../get-started/get-started-tenancy.md)
+and [cleanup](../../get-started/cleanup.md). See [review status](../../README.md).

@@ -19,12 +19,12 @@ Beginner technical learners. No previous OCI Functions experience is required.
 
 **Estimated Workshop Time**
 
-35-40 minutes. Optional extensions take another 10-15 minutes. 
+Plan 60-80 minutes including the optional exercises, with the remainder of the 90-minute session available for questions and troubleshooting. Own-tenancy foundation deployment is pre-work and may take additional time. These estimates still need a beginner dry run.
 
 **Prerequisites**
 
 - Access to the prepared lab compartment and OCI Console.
-- The application, network, two buckets, and logging prepared by the workshop host.
+- A prepared foundation: isolated compartment, private network, log group, and permissions. You create the buckets, application, and invocation log during Lab 1.
 - A browser and access to OCI Cloud Shell for checking the supplied Python code.
 - Optional: an AI coding assistant you already have access to. The reference code lets you complete the lab without one.
 
@@ -51,54 +51,64 @@ The reports are stored under a prefix named after the input file. For example, `
 
 For help during the workshop, contact your instructor or lab facilitator.
 
-> **Author review edition:** The reference archive and all four CSV exercises passed in Chicago on September 17, 2026. Lab 1's upload, checks, repackaging, and download were also verified in OCI Cloud Shell. A fresh learner-role dry run, beginner timing test, and green-button integration remain before publication.
+> **Author review edition:** The original function workflow and Cloud Shell checks were cloud-tested. The new Terraform foundation and learner-created resource steps require a fresh end-to-end dry run before publication; LiveLabs green-button integration is not yet deployed.
 
-## Task 1: Prepare access in your own tenancy
+## Task 1: Deploy the foundation in your own tenancy
 
-1. Sign in to your own OCI tenancy. Use **US Midwest (Chicago)** for the currently validated workshop path. An OCI account alone does not automatically include the supporting workshop resources.
+**Complete this before the scheduled hands-on session if possible.** An administrator can deploy the foundation for you; you do not need administrator access for the lab activities.
 
-2. Before starting, have your tenancy administrator prepare an isolated workshop compartment and the resources below. Follow the [initialization specification](../author/INITIALIZATION.md) for the tested settings and scoped runtime policies.
+1. Ask your administrator to prepare an **isolated, existing lab compartment** and the learner permissions in the [administrator setup guide](../author/ADMINISTRATOR-SETUP.md). Confirm service limits, the tenancy's **home region**, and code-only Functions availability in Chicago. Do not use production resources or a shared learner compartment.
 
-   - One x86 Functions application and its four configuration values.
-   - One private VCN/subnet, service gateway, route, and required egress rule.
-   - Separate private incoming and output buckets; enable object events only on the incoming bucket.
-   - A Functions dynamic group and scoped bucket/network policies.
-   - An enabled application invocation log and log group.
+2. Download [functions-foundation.zip](files/functions-foundation.zip). This is a **Terraform configuration package**, not a function deployment ZIP. Do not upload it to Functions.
 
-3. Have the administrator grant you access to inspect these resources, use Cloud Shell, create/update your function, create an Events rule, upload inputs, read reports, and view invocation logs. Do not grant tenancy-wide administrative access simply to complete the lab.
+3. In the OCI Console, select **US Midwest (Chicago)**. Open **Developer Services > Resource Manager > Stacks**, choose the lab compartment, and select **Create stack**. Select **My configuration** (upload a ZIP configuration) and upload the foundation ZIP. No local Terraform installation or API key is required for this Console workflow.
 
-4. Check the relevant regional service limits and compartment quotas before provisioning. Keep the learner function, Events rule, and exercise uploads uncreated so you can perform those activities in Lab 1.
+4. Name the stack for your lab. Keep a supported Terraform version compatible with the package (1.5 or later, below 2.0). Review the variables:
 
-5. Confirm the prepared resource names with your administrator, then continue to Task 2. Own-tenancy resources may incur charges; agree on ownership and cleanup before beginning.
+   | Variable | Value |
+   | --- | --- |
+   | Existing learner compartment | Your assigned lab compartment, not the tenancy root |
+   | Workload region | us-chicago-1 |
+   | Tenancy home region | Your actual home region; it may not be Chicago |
+   | Lab name prefix | A short lowercase label, such as inventory |
+   | Create runtime IAM | Administrator decision below |
 
-> **Author review edition:** A self-service Terraform/Resource Manager setup and fresh learner-role validation are still pending. This path currently requires administrator-prepared resources. The authoring scripts are not a ready-to-run learner setup wizard.
+   **Create runtime IAM is off by default.** An authorized administrator may enable it after reviewing the dynamic-group rule and three policy statements. Otherwise the administrator must establish those permissions separately using the stack's **administrator_runtime_iam** output before learner handoff. The stack never grants its operator new permissions or creates learner user/group policies.
 
+5. Review the configuration and run **Plan** first (clear **Run apply** at creation if offered). Confirm that it contains only a new VCN, service gateway, route table, security list, private subnet, and log group, plus a dynamic group and scoped runtime policy only when explicitly selected. The VCN also has OCI-created default network resources. No buckets, application, Compute instance, function, Events rule, or service log should be provisioned.
 
-Use the compartment and resource names assigned to you. The screenshots use the author's example names in Chicago; if your reservation or administrator provides different names, substitute them throughout both labs. Do not use another participant's resources.
+6. With administrator approval of the plan, run **Apply**. Wait for **Succeeded** and open **Outputs**. Record **resource_sheet** and have your administrator complete/verify IAM. Allow for IAM propagation before testing access. Do not treat an Apply success as proof that learner permissions or event delivery work.
 
-## Task 2: Explore your prepared environment
+7. Continue to Task 2. If Apply fails, inspect the job log and ask the administrator to correct the cause; do not create duplicate stacks or grant broad tenancy-wide access as a workaround.
 
-**Time:** 5 minutes. **Outcome:** You can identify the resources in the upload-to-report workflow.
+The same configuration will back a **Deploy to Oracle Cloud** shortcut once its ZIP is hosted at an approved public URL. The ZIP-upload workflow above works without depending on an unpublished GitHub path. This Resource Manager shortcut is separate from a LiveLabs sandbox reservation.
 
-1. Sign in to the OCI Console and select **US Midwest (Chicago)** in the region selector.
+## Task 2: Record your resource sheet
 
-2. Search for **Functions**, open **Applications**, and set the compartment filter to **LiveLab**.
+Your facilitator or the Resource Manager stack supplies the **resource_sheet** output. Keep it open throughout the workshop. Uppercase resource-name placeholders in the instructions mean the values below; do not type the placeholders literally.
 
-3. Open **livelab-inventory-app**. This application provides the network and shared settings for your function. You will add a function to it in Lab 1, Task 2.
+| Instruction placeholder | Resource sheet field |
+| --- | --- |
+| LAB_COMPARTMENT | compartment_ocid (select the matching compartment) |
+| VCN_NAME | vcn_name |
+| SUBNET_NAME | subnet_name |
+| LOG_GROUP_NAME | log_group_name |
+| INCOMING_BUCKET_NAME | incoming_bucket_name |
+| OUTPUT_BUCKET_NAME | output_bucket_name |
+| APPLICATION_NAME | application_name |
+| EVENT_RULE_NAME | event_rule_name |
+| Object Storage namespace | object_storage_namespace |
 
-Open **Configuration** to find the input/output buckets, namespace, and default threshold of 10. Your namespace will be specific to your lab tenancy.
+1. In Networking, find the supplied VCN and private regional subnet. You will select them for the application; do not create or change network rules.
 
-![Prepared application configuration with bucket names and threshold 10](images/00-application-config.png "Shared application settings")
+2. In Logging, find the supplied log group. The application's invocation log does not exist yet; you will enable it after creating the application.
 
-4. Search for **Buckets**, keep the **LiveLab** compartment selected, and open **livelab-inventory-incoming**.
+3. Open **Cloud Shell** from **Developer tools** and confirm that it starts. The supplied Python checks require no package installation.
 
-5. On the **Details** tab, confirm that **Emit object events** is **Enabled**. This setting lets Object Storage announce new uploads to OCI Events.
+4. Confirm with your facilitator or administrator that the function runtime permissions and your learner permissions are ready. A successful Terraform Apply with **create_runtime_iam=false** does not establish runtime permissions.
 
-![Incoming bucket in Chicago with Emit object events enabled](images/01-input-bucket.png "Input bucket and event setting")
+> **Checkpoint:** You have a compartment, private network, log group, exact resource names, and access. The two buckets, application, function, invocation log, and Events rule are deliberately left for you to create in Lab 1.
 
-6. Return to the bucket list and locate **livelab-inventory-output**. Your reports will appear here after the function runs.
-
-> **Checkpoint:** You found one Functions application and two buckets. The incoming bucket emits object events. The output bucket is separate, so writing a report does not trigger the same workflow again.
-
+Use only your assigned environment. The reference screenshots show the author's earlier names; substitute your resource sheet values.
 
 You may now **proceed to Lab 1** using the workshop navigation.

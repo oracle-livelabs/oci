@@ -1,11 +1,9 @@
 # From Code to Cloud in Minutes with OCI Functions
 
-Environment: **LiveLabs sandbox reservation**.
+Path: **sandbox**. Both paths share Lab 1 and optional Lab 2.
 
-Open this directory's `index.html` through an HTTP web server to load the workshop.
-The adjacent `manifest.json` defines Get Started, Lab 1, and optional Lab 2.
-The HTML launcher is copied unchanged from the repository's sample workshop.
+The reservation administrator runs the shared foundation and supplies its resource sheet. LiveLabs integration is pending; learners do not deploy another stack.
 
-Green-button integration remains pending. A facilitator must confirm the prepared environment before learner use.
-
-See the [workshop README](../../README.md) for review status and local preview instructions.
+Learners create both buckets, the application/configuration, invocation log,
+function, and Events rule. Follow [Get Started](../../get-started/get-started-sandbox.md)
+and [cleanup](../../get-started/cleanup.md). See [review status](../../README.md).

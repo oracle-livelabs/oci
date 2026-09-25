@@ -51,7 +51,7 @@ record_id,reason
 INV-007,invalid_quantity
 ```
 
-4. Search for **Logs** in the Console and select **Logs** under **Logging**. Choose log group **livelab-functions-logs**, open **inventory-invocations**, and select **Explore log**. Beside **Time range**, open the actions menu, select **Edit**, choose **Past hour**, and select **Update**. The default five-minute window can miss an earlier run.
+4. Search for **Logs** in the Console and select **Logs** under **Logging**. Choose log group **LOG_GROUP_NAME**, open **inventory-invocations**, and select **Explore log**. Beside **Time range**, open the actions menu, select **Edit**, choose **Past hour**, and select **Update**. The default five-minute window can miss an earlier run.
 
 Enter `record_rejected` in **Search and Filter**, then select **Search**. Find the message containing `inventory-bad.csv`, `INV-007`, and `invalid_quantity`. Allow time for log ingestion. Expand the row or scroll horizontally to read the full message. For the compact view shown below, use **Manage Columns** to display only **data.message**.
 
@@ -71,4 +71,4 @@ You used an OCI Functions application to host Python business logic, connected a
 
 1. Explain the workflow to a partner: what caused the function to run, where it read data, and where it wrote the result.
 
-2. If you changed the threshold, restore it to **10**. Follow your facilitator's environment cleanup guidance. Only clean up resources assigned to your lab; do not delete shared or unrelated resources.
+2. If you changed the threshold, restore it to **10**. Then follow the [cleanup instructions](../get-started/cleanup.md).
