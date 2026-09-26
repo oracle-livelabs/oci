@@ -202,12 +202,12 @@ The above page indicates that the Siebel Cloud Manager application is up and run
 
 ## Summary
 
-In this lab, the Siebel Cloud Manager instance was provisioned. In the next lab, we will install and configure a GitLab instance.
+In this lab, the Siebel Cloud Manager instance was provisioned. In the next lab, we will install and configure a OCI Devops instance.
 
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
+* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect; Rosmin Siby Cherickal, Software Engineer
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
-* **Last Updated By/Date** - Duncan Ford, Software Engineer, October 2024
+* **Last Updated By/Date** - Rosmin Siby Cherickal, Software Engineer, July 2025

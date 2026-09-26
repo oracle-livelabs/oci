@@ -43,4 +43,4 @@ Nesta sessão você aprendeu sobre os recursos de uma Virtual Cloud Network (VCN
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Updated Por/Data** - Arthur Vianna, Fev/2024
+- **Último Updated Por/Data** - Arthur Vianna, Jul/2025

@@ -8,7 +8,7 @@ Estimated Time: 20 minutes
 
 ### Objectives
 * Destroy Siebel CRM environment Stack
-* Destroy GitLab instance
+* Destroy OCI Devops instance
 * Destroy Siebel Cloud Manager instance
 
 ### Prerequisites
@@ -39,15 +39,17 @@ Estimated Time: 20 minutes
 
    ![SCM Stack Destroy - Pane](./images/oci-stack-destroy-pane.png)
 
-## Task 2: Destroy GitLab instance
+## Task 2: Destroy OCI Devops instance
 
-1. From the Oracle Cloud Console, navigate to **Developer Services** and **Stacks**.
+1. From the Oracle Cloud Console, navigate to **Developer Services** and **Projects**.
 
 2. In the **List Scope** section on the left side panel, choose **scm{date}-siebel-cm**.
 
-3. From the **Stack List**, drill down on the GitLab stack name.
+3. From the **Project List**, drill down on your OCI Devops project.
 
-4. Run **Destroy** job for this stack too as done earlier. This job will run for a while and succeed.
+4. Click **Delete** Button. 
+
+5. In the confirmation box, type your project name and Check **Cascade delete** box. Then click **Schedule delete**.
 
 ## Task 3: Destroy Siebel Cloud Manager instance
 
@@ -62,10 +64,10 @@ Estimated Time: 20 minutes
 
 ## Summary
 
-In this lab, we have destroyed nearly all the resources that were created for this workshop. You could also delete the compartment and the vault, but you may wish to reuse these if you are going to repeat the lab straight away to gain some more confort with the processes.
+In this lab, we have destroyed nearly all the resources that were created for this workshop. You could also delete the compartment and the vault, but you may wish to reuse these if you are going to repeat the lab straight away to gain some more comfort with the processes.
 
 ## Acknowledgements
 
-* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect
+* **Author:** Duncan Ford, Software Engineer; Shyam Mohandas, Principal Cloud Architect; Sampath Nandha, Principal Cloud Architect; Rosmin Siby Cherickal, Software Engineer
 * **Contributors** - Vinodh Kolluri, Raj Aggarwal, Mark Farrier, Sandeep Kumar
-* **Last Updated By/Date** - Duncan Ford, Software Engineer, October 2024
+* **Last Updated By/Date** - Rosmin Siby Cherickal, Software Engineer, July 2025

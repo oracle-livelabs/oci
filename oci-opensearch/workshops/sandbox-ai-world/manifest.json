@@ -1,0 +1,60 @@
+{
+    "workshoptitle": "Search and visualize data using OCI Search Service with OpenSearch",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../intro/intro-ai-world.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Pre-requisites",
+            "filename": "../../prerequisites/preerquisites.md"
+        },
+        {
+            "title": "Lab 2: Create Opensearch Cluster and Access OpenSearch Dashboard",
+            "filename": "../../prerequisites/create-and-access-opensearch.md"
+        },
+        {
+            "title": "Lab 3: Install Python3, PyCharm, Notebook, VS Code, and Git (Optional)",
+            "filename": "../../prerequisites/install-git-vscode-python-pycharm.md"
+        },
+        {
+            "title": "Lab 4: Load and Visualize Opensearch Sample data with OpenSearch Dashboards",
+            "filename": "../../load-opensearch-sample-data/load-opensearch-data-samples.md"
+        },
+        {
+            "title": "Lab 5: Register and Deploy Pre-trained and Remote Embedding and LLM models, and Create Ingestion Pipelines",
+            "filename": "../../deploy-models-and-ingestion-pipeline/deploy-models-and-setup-ingestion-pipelines.md"
+        },
+        {
+            "title": "Lab 6: Automate Log data streaming and ingestion using Data Prepper ",
+            "filename": "../../data-prepper/data-prepper-ingestion-pipeline.md"
+        },
+        {
+            "title": "Lab 7: Semantic Search & Conversational search",
+            "filename": "../../semantic-search-and-rag/semantic-search-and-rag.md"
+        },
+        {
+            "title": "Lab 8: AI Agents & Agent Tools",
+            "filename": "../../ai-agents/ai_agents.md"
+        },
+        {
+            "title": "Lab 9: Flow Agents FrameWork",
+            "filename": "../../flow-agents-framework/flow-agents-framework.md"
+        },
+        {
+            "title": "Lab 10: Leverage MCP Server & Agentic Framework to Automate Root Cause Analysis - RCA  and Generate Advanced Observability Insights",
+            "filename": "../../agentic-with-mcp-server/agentic-oberservability-with-mcp-server.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

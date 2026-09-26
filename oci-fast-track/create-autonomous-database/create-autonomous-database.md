@@ -65,11 +65,8 @@ Para iniciar o processo de criação do Autonomous Database:
 
 > **Note:** Password must be 12 to 30 characters and contain at least one uppercase letter, one lowercase letter, and one number. The password cannot contain the double quote (") character or the username "admin".*
 
-![escolha a licença e clique em "Create Autonomous Database"](./images/autonomous-database-license-6.png)
 ![escolha a licença e clique em "Create Autonomous Database"](./images/autonomous-database-license-7.png)
 
-* Choose License and Oracle Database Edition: **Bring Your Own License (BYOL)**
-* Choose an Oracle Database Edition: **Oracle Database Enterprise Edition (EE)**
 * Coloque um e-mail para contato: **Seu e-mail**
 * Agora finalize a criação clicando no  botão **"Create Autonomous Database"**
 
@@ -99,7 +96,7 @@ A maioria das operações do banco de dados autônomo podem ser feitas nos botõ
 
 Use a página Catalog para obter informações sobre as entidades disponíveis no Oracle Autonomous Database. Você pode ver os dados em uma entidade, as fontes desses dados, os objetos derivados da entidade e o impacto nos objetos derivados das alterações nas fontes.
 
-*Atenção: Verifique se a opção **Tudo** está selecionada*
+*Atenção: Clique no **X** conforme a imagem*
 
 ![Clique em Development e em seguida em Database Actions](./images/autonomous-database-sales-13.png)
 
@@ -121,10 +118,6 @@ Use a página Catalog para obter informações sobre as entidades disponíveis n
 1. Na tela principal selecione **SQL**
 
 ![SQL](./images/autonomous-database-sql-15.png)
-
-Clique no "X" para fechar a **Advertência** e novamente no "X" para fechar a janela da **"Carga de Dados"**
-
-![SQL](./images/autonomous-database-sql-156.png)
 
 Execute queries e scripts, e crie objetos no Banco de dados através do SQL Worksheet
 
@@ -200,4 +193,4 @@ Nesta sessão você aprendeu a provisionar um Oracle Autonomous Data Warehouse. 
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Data** - Arthur Vianna, Fev/2024
+- **Último Update Por/Data** - Arthur Vianna, Jul/2025

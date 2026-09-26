@@ -16,7 +16,7 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console, navigate to **OCI Console >> Observability & Management**. Under **Monitoring**, click **Metrics Explorer**.
 
-	![Metrics Explorer Menu](https://oracle-livelabs.github.io//common/images/console-2025/metrics-explorer-icon.jpg)
+	![Metrics Explorer Menu](https://oracle-livelabs.github.io//common/images/console/metrics-explorer-icon.jpg)
 
 2.  In the **Metrics Explorer**, scroll down to the **Query 1** section. Select your workshop compartment from the **Compartment** drop down list.
 
@@ -24,15 +24,15 @@ In this lab, you will:
 
 5. Select the **Metric namespace** as `gcn_metrics_oci`.
 
-    ![Select Metric namespace](images/select-metric-namespace.jpg#input)
+    ![Select Metric namespace](images/select-metric-namespace.png#input)
 
 6. Select the **Metric name** as `microserviceBooksNumber.latest_value`.
 
-    ![Select Metric name](images/select-metric-name.jpg#input)
+    ![Select Metric name](images/select-metric-name.png#input)
 
 7. Click **Update Chart** to visualize the selected metric.
 
-    ![Update Chart](images/update-chart.jpg#input)
+    ![Update Chart](images/update-chart.png#input)
 
 8. Scroll up to visualize the selected metric.
 

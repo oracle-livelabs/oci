@@ -1,0 +1,66 @@
+{
+    "workshoptitle": "Set up live data sharing between Oracle Databases using Database Actions",
+    "help": "livelabs-help-db_us@oracle.com",
+    "include": 
+    {
+    "adb-generate-rsa-key-pair.md":"/common/building-blocks/tasks/adb/generate-rsa-key-pair.md",
+    "iam-compartment-create-body.md":"/common/building-blocks/tasks/iam/compartment-create-body.md",
+    "adb-goto-service-body.md":"/common/building-blocks/tasks/adb/goto-service-body.md",
+    "adb-provision-data-sharing-lake-task.md":"/common/building-blocks/tasks/adb/provision-data-sharing-lake-task.md"    
+    },
+    "variables": ["./variables.json"],
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "type":"freetier",
+            "description": "Introduction to Oracle Cloud Infrastructure Data Catalog.",
+            "filename": "./../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Set up the Workshop Environment",
+            "type":"freetier",
+            "description": "This lab walks you through the required and optional tasks to setup your workshop environment.",
+            "filename": "/common/building-blocks/blocks/adb/provision/provision-data-sharing-lake-block.md"
+        },
+        {
+            "title": "Lab 2: Create Share Provider and Share Consumer Users",
+            "type":"freetier",
+            "description": "This lab walks you through how to load local data into your ADW instance.",
+            "filename": "./../../create-user-storage-credentials/create-user-storage-credentials.md"
+        },
+        {
+            "title": "Lab 3: Load Data from Public Object Storage Bucket",
+            "type":"freetier",
+            "description": "This lab walks you through how to load local data into your ADW instance.",
+            "filename": "./../../load-os-data-public/load-os-data-public.md"
+        },
+        {
+            "title": "Lab 4: Create, Populate, and Publish a Data Share",
+            "type":"freetier",
+            "description": "This lab walks you through how to load local data into your ADW instance.",
+            "filename": "./../../create-share/create-share.md"
+        },
+        {
+            "title": "Lab 5: Consume the Data Share",
+            "type":"freetier",
+            "description": "This lab walks you through how to load local data into your ADW instance.",
+            "filename": "./../../consume-share/consume-share.md"
+        },
+        {
+            "title": "Lab 6: Clean up Resources Used in this Workshop (Optional)",
+            "description": "Delete the ADB instance and compartment if not needed.",
+            "type": "freetier",
+            "filename": "/common/building-blocks/blocks/adb/cleanup/cleanup.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

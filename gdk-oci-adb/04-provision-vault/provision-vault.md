@@ -17,7 +17,7 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console, open the navigation menu, click **Identity & Security**, and then click **Vault** under **Key Management & Secret Management**.
 
-   ![Vault menu](https://oracle-livelabs.github.io/common/images/console-2025/id-vault.png)
+   ![Vault menu](https://oracle-livelabs.github.io/common/images/console/id-vault.png)
 
 2. Select your workshop compartment from the **Compartment** drop down list. Click **Create Vault**.
 

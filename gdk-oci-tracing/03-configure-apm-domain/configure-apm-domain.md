@@ -16,7 +16,7 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console navigation menu, go to **Observability & Management**. Under **Application Performance Monitoring**, click **Administration**.
 
-   ![APM Administration menu](https://oracle-livelabs.github.io/common/images/console-2025/apm-administration-menu.png)
+   ![APM Administration menu](https://oracle-livelabs.github.io/common/images/console/apm-administration-menu.png)
 
 2. Select your workshop compartment from the **Compartment** drop down list on the left.
 

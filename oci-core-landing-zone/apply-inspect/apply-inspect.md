@@ -10,7 +10,7 @@ Estimated Lab Time: 30 minutes
 
 #### Plan
 
-Plan will tell us what the Terraform is intending to do. It will generate as much information about the end state and created resources as it is able. This gives us an opportunity to do a review and confirm that the Terraform is doing what was intended. In addition, we generate a file with the plan that we can use to create the resources in the next step. Going to apply without the plan will require the plan to be done ad hoc, removing the ability to turn back if needed.
+Plan will tell us what the Terraform is intending to do. It will generate as much information about the end state and created resources as it is able. This gives us an opportunity to review and confirm that the Terraform is doing what was intended. In addition, we generate a file with the plan that can be used to create the resources in the next step. Applying without a plan will require creating one ad hoc, removing the ability review for unintended changes.
 
 #### Apply
 
@@ -28,7 +28,7 @@ The objectives of this lab are:
 ## Task 1: Create a Plan
 
 1. From the _Stack Details_ page, we will click the first __Plan__ button, followed by the second __Plan__ button in the side menu. ![Plan Buttons](images/plan-job.png "Click the plan buttons!")
-2. Wait for a bit until the plan succeeds and plan logs are available under _Logs_. Take a look to familiarize yourself with the log format. Scroll down until you see the line `Plan: X to add, 0 to change, 0 to destroy`. The exact number to add may vary, but should be in the ballpark of the screenshot below: ![Plan Log Output](images/plan-output.png "The plan logs content")
+2. Wait until the plan succeeds and plan logs are available under _Logs_. Take a look to familiarize yourself with the log format. Scroll down until you see the line `Plan: X to add, 0 to change, 0 to destroy`. While the exact number may vary, it should be approximately the same as the one in the screenshot below: ![Plan Log Output](images/plan-output.png "The plan logs content")
 
 ## Task 2: Apply the Plan
 
@@ -47,7 +47,7 @@ The objectives of this lab are:
     - [IAM Policies for assigning permissions to groups](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingpolicies.htm)
     - Event rules and notifications for IAM and Network changes
 
-    A diagram of what has been created would look something like this: ![Single VCN Landing Zone](images/arch-simple.png "Lab 3 Current State Diagram")
+    A diagram of what has been created would look approximately like this: ![Single VCN Landing Zone](images/arch-simple.png "Lab 3 Current State Diagram")
 
 2. Take a few moments to explore the resources created. Ask yourself how these resources will make your environment more secure. Think about how a generic workload would be deployed on top of this architecture. Where would your workload components go, and what roles would manage them?
 
@@ -57,4 +57,4 @@ In the next lab, we will introduce a Virtual Cloud Network to the architecture.
 
 - __Author__ - KC Flynn
 - __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
-- __Last Updated By/Date__ - KC Flynn February 2025
+- __Last Updated By/Date__ - KC Flynn September 2025

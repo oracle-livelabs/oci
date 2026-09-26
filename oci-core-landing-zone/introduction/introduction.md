@@ -4,7 +4,7 @@
 
 ![OCI Core Landing Zone Logo](images/landing-zone-icon.png "OCI Core Landing Zone Logo of helicopter approaching Oracle shaped landing pad")
 
-This set of labs will walk you through deploying a secure cloud architecture, compliant with the [CIS OCI Foundations Benchmark v2.0](https://www.cisecurity.org/benchmark/oracle_cloud/). Upon completion of the labs, a full set of OCI resources will be created as a base to build a secure enterprise workload.
+This set of labs will walk you through deploying a secure cloud architecture, compliant with the [CIS OCI Foundations Benchmark v3.0](https://www.cisecurity.org/benchmark/oracle_cloud/). Upon completion of the labs, a full set of OCI resources will be created as a base to build a secure enterprise workload.
 
 Estimated Workshop Time: 1 Hour 30 Minutes
 
@@ -93,7 +93,7 @@ The connector between groups, compartments, and permissions in OCI are called [_
 
 This policy uses __tenancy__ as the location as it encompasses all compartments in the tenant. If we want to give the group _SampleAdmins_ full control of all resources in the Sample compartment, it would look like this:
 
-```Allow SampleAdmins to manage all-resources in compartment Sample```
+```Allow ExampleAdmins to manage all-resources in compartment Example```
 
 These are a few simple examples. A more detailed explanation of policies in OCI can be found in [the OCI Documentation for IAM Policies](https://docs.oracle.com/en-us/iaas/Content/Identity/policieshow/how-policies-work.htm).
 
@@ -115,4 +115,4 @@ Most things in OCI can be provisioned with Terraform. While beyond the scope of 
 
 - __Author__ - KC Flynn
 - __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
-- __Last Updated By/Date__ - KC Flynn February 2025
+- __Last Updated By/Date__ - KC Flynn September 2025

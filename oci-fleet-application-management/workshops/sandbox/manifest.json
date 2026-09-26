@@ -1,0 +1,33 @@
+{
+    "workshoptitle": "Centralize Cloud Operations and Automation with OCI Fleet Application Management",
+    "help": "bhumika.v.bhagia@oracle.com",
+    "variables": ["../../variables/variables.json",
+        "../../variables/variables-in-another-file.json"],
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "The Introduction is always second for LiveLabs. The title and contents menu title match for the Introduction.",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "Prerequisites for LiveLabs (Oracle-owned tenancies). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+        },
+        {
+            "title": "Lab 1: Provision Infrastructure Resources with Fleet Application Management",
+            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+            "filename": "../../provisioning/provisioning.md"
+        },
+        {
+            "title": "Lab 2: Patch an Oracle Fusion Middleware Deployment with FAM",
+            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+            "filename": "../../patching/patching.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

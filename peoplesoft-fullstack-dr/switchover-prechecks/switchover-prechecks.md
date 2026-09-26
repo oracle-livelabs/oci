@@ -28,11 +28,11 @@ Estimated Time: 15 Minutes
 
   ![drpg landing page](./images/phoenix-drpg.png)
 
-4. Select the **FSCM92-FSDR-Group-Phoenix** DRPG and select **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** plan
+4. Select the **FSCM92-FSDR-Group-Phoenix** DRPG and select **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** plan.
 
   ![drpg switchover plan](./images/phoenix-sw-plan.png)
 
-5. Click on **Run prechecks** section, which will be right below the **FSCM92\_FSDR\_Switchover\_From\_Ashburn\_To\_Phoenix** plan
+5. Click on **Actions** and then click **Run prechecks** section.
 
   ![navigate drpg prechecks](./images/phoenix-run-prechecks.png)
 
@@ -42,10 +42,7 @@ Estimated Time: 15 Minutes
 
 ## Task 2: Monitor the executed prechecks plan
 
-1. Navigate to **Plan executions** section under **Resources** and select the **FSCM92-FSDR-Switchover-From-Ashburn-To-Phoenix-Prechecks** plan execution.Initially, it will show all the **Built-in Prechecks** as *queued or in-progess*
-
-  ![prechecks status](./images/phoenix-execute-in-progress.png)
-
+1. Click on **Plan executions** tab and select the **FSCM92-FSDR-Switchover-From-Ashburn-To-Phoenix-Prechecks** plan execution.Initially, it will show all the **Built-in Prechecks** as *queued or in-progess*
 
 2. After 2-3 mins, **Built-in Prechecks**  will be completed successfully. You can verify the duration of each step, status, duration of entire prechecks, etc. *It is essential to have successful completion of pre-check execution*
 
@@ -56,4 +53,4 @@ Estimated Time: 15 Minutes
 ## Acknowledgements
 
 - **Author** -  Vinay Shivanna, Principal Cloud Architect
-- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, April 2023
+- **Last Updated By/Date** -  Vinay Shivanna, Principal Cloud Architect, November 2025

@@ -136,4 +136,4 @@ Nesta sessão você aprendeu sobre Block Volumes na prática.
 ## Autoria
 
 - **Autores** - Arthur Vianna, Lucas de Almeida, Luiz de Oliveira, Thais Henrique
-- **Último Update Por/Date** - Arthur Vianna, Fev/2024
+- **Último Update Por/Date** - Arthur Vianna, Jul/2025

@@ -113,7 +113,7 @@ Fazendo isso, uma página irá abrir em seu navegador com a máquina NoVNC. Apen
 
 ![navegue até "compartiments"](./images/compartment-user-login-compartment.png)
 
-Copie o nome de seu compartimento e se necessário utilize o atalho **CTRL + F** em seu teclado para encontrá-lo após abrir a lista de compartimentos. Após isso clique em seu compartimento.
+Copie o nome de seu compartimento e cole no campo indicado na imagem. Após isso clique em seu compartimento.
 
 ![navegue até "compartiments"](./images/compartment-user-login-ctrlf.png)
 
@@ -132,4 +132,4 @@ Nesta sessão você aprendeu a acessar a console da Oracle Cloud, explorar a tel
 ## Autoria
 
 - **Autores** - Arthur Vianna, Luiz de Oliveira, Thais Henrique
-- **Último Updated Por/Data** - Arthur Vianna, Fev/2024
+- **Último Updated Por/Data** - Arthur Vianna, Jul/2025

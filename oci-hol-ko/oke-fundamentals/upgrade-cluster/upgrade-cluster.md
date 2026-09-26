@@ -6,7 +6,7 @@ Kubernetes 버전은 x.y.z로 표현되며, 각각 x는 메이저, y는 마이�
 
 - 메일공지 예시
 
-    ![Notify Mail for Upgrade](images/notify-upgrade.png =60%x*)
+    ![Notify Mail for Upgrade](images/notify-upgrade.png =80%x*)
 
 - 현재 지원 버전은 다음 링크를 참조합니다.
 
@@ -53,22 +53,16 @@ OKE 새 버전이 출시되면 버전 업그레이드는 다음 절차를 따릅
 * **Lab 4: Deploy the MuShop Application** 완료하고 현재 앱이 실행 중일 것
 * 배포된 앱들이 구동중인 상황에서 업그레이드 과정 확인을 위해 이전 앱들이 실행 중일 것
 
-### 실습 비디오
-
-[](youtube:fC2d7IfRn2s)
-
-
 ## Task 1: OKE 클러스터 버전 업그레이드(Control Plane 업그레이드)
 
-> 새로운 버전이 출시되면, 기술지원 정책에 따라, 지원이 만료되는 버전은 30일내에 업그레이드가 필요합니다. 그동안 버전 검증후 업그레이드하면 됩니다. 그렇다고 OCI가 강제적으로 업그레이드를 하지는 않습니다. 예를 들어 2023년 4월 기준, 1.23.4 사용 중에, 1.26.2 버전이 출시되는 경우, 지원 버전은 이제 1.26, 1.25, 1.24의 세 버전으로 변경되기 때문에, 1.23 버전은 지원이 종료되며, 일반적으로 30일간의 유예기간을 둡니다. 자세한 사항은 아래 링크를 참조하세요. 
+> 새로운 버전이 출시되면, 기술지원 정책에 따라, 지원이 만료되는 버전은 30일내에 업그레이드가 필요합니다. 그동안 버전 검증후 업그레이드하면 됩니다. 그렇다고 OCI가 강제적으로 업그레이드를 하지는 않습니다. 예를 들어 2025년 10월 기준, 1.31 사용 중에, 1.34 버전이 출시되는 경우, 지원 버전은 이제 1.34, 1.33, 1.32의 세 버전으로 변경되기 때문에, 1.31 버전은 지원이 종료되며, 일반적으로 30일간의 유예기간을 둡니다. 자세한 사항은 아래 링크를 참조하세요. 
 - [Supported Versions of Kubernetes](https://docs.oracle.com/en-us/iaas/Content/ContEng/Concepts/contengaboutk8sversions.htm)
 
-1. 업그레이드가 가능하면, OKE 클러스터 상세 화면에서 **New Kubernetes version available** 버튼이 활성화 됩니다.
+1. 업그레이드가 가능하면, OKE 클러스터 상세 화면에서 **Upgrade** 버튼이 활성화 됩니다.
 
-    ![New Kubernetes version available](images/upgrade-available.png =70%x*)
+    ![New Kubernetes version available](images/upgrade-available.png =50%x*)
 
-2. New Kubernetes version available 버튼을 클릭하면 다음과 같이 안내 문구와 함께 업그레이드를 시작할 수 있습니다.
-   최신 버전인 v1.27.2를 선택하도록 하겠습니다.
+2. Upgrade 버튼을 클릭하면 다음과 같이 안내 문구와 함께 업그레이드를 시작할 수 있습니다. 업그레이드 하려는 상위 버전을 선택합니다.
 
     ![Upgrade Control Plane](images/upgrade-control-plane.png =50%x*)
 
@@ -76,7 +70,7 @@ OKE 새 버전이 출시되면 버전 업그레이드는 다음 절차를 따릅
 
 4. 클러스터 상태가 UPDATING으로 표시되고 업그레이드가 진행됩니다. 오라클이 관리하는 Control Plane이 내부적으로 순차적으로 업그레이드 됩니다.
 
-5. 테스트 시점에는 10~15분 후에 업그레이드 완료되었습니다.
+5. 테스트 시점에는 6~7분 후에 업그레이드 완료되었습니다.
 
     ![Upgrade Control Plane](images/upgraded-control-plane.png =50%x*)
 
@@ -93,26 +87,26 @@ OKE 클러스터가 업그레이드로 인해 Control Plane 만 업그레이드 
 
 3. 그림과 같이 기존 버전의 Node Pool이 있는 상태에서 신규 Node Pool 추가를 위해 **Add Node Pool**을 클릭합니다.
 
-    ![Add Node Pool](images/add-node-pool-1.png =70%x*)
+    ![Add Node Pool](images/add-node-pool-1.png =50%x*)
 
 4. 신규 Node Pool 정보를 입력하여 생성합니다. 여기서는 예시로 최신 버전으로 업그레이드 합니다.
 
     - Name: 예, *pool2*
-    - Version: *새 버전 선택*, 예, v1.27.2
+    - Version: *새 버전 선택*, 예, v1.34
 
-        ![Add Node Pool](images/add-node-pool-2.png =50%x*)
+        ![Add Node Pool](images/add-node-pool-2.png =60%x*)
 
     - Placement configuration
         - 기존 Node Pool과 동일하게 Node가 위치한 AD, Subnet 선택
         - Worker node subnet: Worker Node가 속할 Subnet, Quick Start로 생성된 클러스터일 경우, **oke-nodesubnet-~~** 선택
 
-        ![Add Node Pool Placement](images/add-node-pool-placement.png =50%x*)
+        ![Add Node Pool Placement](images/add-node-pool-placement.png =60%x*)
 
     - Shape & Image
         - Shape: 새롭게 생성할 Worker Node VM 유형
         - Image: OKE Worker Node 중에서 선택한 버전과 동일한 Kubernetes version 선택, OCI VCN-Native Pod Networking CNI에서 Istio를 사용하는 경우 *Oracle Linux 7 이미지* 중에서 선택
 
-        ![Add Node Pool Image](images/add-node-pool-image.png =50%x*)
+        ![Add Node Pool Image](images/add-node-pool-image.png =30%x*)
 
     - Node pool options
         - Node counts: 노드 수
@@ -121,31 +115,31 @@ OKE 클러스터가 업그레이드로 인해 Control Plane 만 업그레이드 
         - OCI VCN-Native Pod Networking CNI 사용시 설정하는 항목으로 Worker Node가 사용하는 서브넷 선택
         - Quick Start로 생성된 클러스터일 경우, **oke-nodesubnet-~~** 선택
 
-        ![Pod Communication](images/pod-communication.png =50%x*)
+        ![Pod Communication](images/pod-communication.png =60%x*)
 
     - 나머지 항목: 새롭게 생성할 Worker Node 정보를 입력합니다.
         - Add an SSH key: Node VM에 SSH 접속시 사용할 키의 Private Key
         - 노드 Boot Volume 사이즈 등등 필요시 추가 변경할 수 있습니다.
 
 
-5. 추가 된 Node Pool을 OCI 서비스 콘솔 확인할 수 있습니다. Node Pool이 추가되고 Worker Node가 Ready 될때까지 완료되어야 합니다. 테스트 환경에서 3대 기준 8분 정도 소요되었습니다.
+5. 추가 된 Node Pool을 OCI 서비스 콘솔 확인할 수 있습니다. Node Pool이 추가되고 Worker Node가 Ready 될때까지 완료되어야 합니다.
 
-    ````
+    ````shell
     # Worker Node 조회
     <copy>
     kubectl get nodes -L name --sort-by=.metadata.labels.name
     </copy>
     ````
-    ````
+    ````shell
     $ kubectl get nodes -L name --sort-by=.metadata.labels.name
-    NAME          STATUS   ROLES   AGE     VERSION   NAME
-    10.0.10.23    Ready    node    18h     v1.26.7   oke-cluster-1
-    10.0.10.121   Ready    node    18h     v1.26.7   oke-cluster-1
-    10.0.10.229   Ready    node    18h     v1.26.7   oke-cluster-1
-    10.0.10.24    Ready    node    2m41s   v1.27.2   pool2
-    10.0.10.54    Ready    node    2m28s   v1.27.2   pool2
-    10.0.10.56    Ready    node    2m17s   v1.27.2   pool2
-     ````
+    NAME          STATUS   ROLES   AGE   VERSION   NAME
+    10.0.10.167   Ready    node    36m   v1.33.1   oke-cluster-1
+    10.0.10.210   Ready    node    36m   v1.33.1   oke-cluster-1
+    10.0.10.219   Ready    node    36m   v1.33.1   oke-cluster-1
+    10.0.10.124   Ready    node    75s   v1.34.1   pool2
+    10.0.10.163   Ready    node    74s   v1.34.1   pool2
+    10.0.10.69    Ready    node    56s   v1.34.1   pool2    
+    ````
 
 ### 기존 Node Pool의 모든 노드 Drain
 
@@ -153,34 +147,28 @@ OKE 클러스터가 업그레이드로 인해 Control Plane 만 업그레이드 
 
 1. 구동 중인 앱들이 기존 Node Pool에서 동작하고 있습니다. 아래는 mushop 네임스페이스 기준이며, 전체를 보면 기존 노드인 유저가 배포한 앱은 기존 노드들에 분산되어 있는 걸 볼 수 있습니다.
 
-    ````
+    ````shell
     # Pod가 배포된 Worker Node 함께 확인하기
-    <copy> 
-    kubectl get pod -o wide
-    </copy>
-    ````
-    ````
-    $ kubectl get pod -o wide
-    NAME                                   READY   STATUS    RESTARTS   AGE     IP            NODE          NOMINATED NODE   READINESS GATES
-    mushop-api-76987596f9-ngctn            2/2     Running   0          2m52s   10.0.10.17    10.0.10.23    <none>           <none>
-    mushop-assets-69f64f855d-r4djg         2/2     Running   0          2m52s   10.0.10.31    10.0.10.23    <none>           <none>
-    mushop-carts-76b7749849-fqdms          2/2     Running   0          2m52s   10.0.10.9     10.0.10.121   <none>           <none>
-    mushop-catalogue-d558b5bdf-4hbfj       2/2     Running   0          2m52s   10.0.10.160   10.0.10.121   <none>           <none>
-    mushop-edge-7956f7c59-2969l            2/2     Running   0          2m52s   10.0.10.176   10.0.10.229   <none>           <none>
-    mushop-events-79c547c7f6-cxqhl         2/2     Running   0          2m52s   10.0.10.132   10.0.10.229   <none>           <none>
-    mushop-fulfillment-6db464bbf6-kvjfc    2/2     Running   0          2m52s   10.0.10.234   10.0.10.121   <none>           <none>
-    mushop-nats-c4846c7b8-bbwqf            3/3     Running   0          2m52s   10.0.10.225   10.0.10.23    <none>           <none>
-    mushop-orders-68647fb849-bsdgx         2/2     Running   0          2m52s   10.0.10.196   10.0.10.121   <none>           <none>
-    mushop-payment-7bc5b8f776-ptbzd        2/2     Running   0          2m52s   10.0.10.129   10.0.10.121   <none>           <none>
-    mushop-session-66bc9df4b8-v4jds        2/2     Running   0          2m52s   10.0.10.53    10.0.10.229   <none>           <none>
-    mushop-storefront-b88d5f75f-m5jvl      2/2     Running   0          2m52s   10.0.10.64    10.0.10.229   <none>           <none>
-    mushop-storefrontv2-54dc477fb6-pdm6v   2/2     Running   0          2m52s   10.0.10.45    10.0.10.23    <none>           <none>
-    mushop-user-d65d84fcb-kfhx4            2/2     Running   0          2m52s   10.0.10.14    10.0.10.23    <none>           <none>
+    $ <copy>kubectl get pod -o wide</copy>
+    NAME                                 READY   STATUS    RESTARTS   AGE   IP            NODE          NOMINATED NODE   READINESS GATES
+    mushop-api-c6848495-xg9ds            1/1     Running   0          10m   10.0.10.127   10.0.10.167   <none>           <none>
+    mushop-assets-7ccbb56fc6-2pj7d       1/1     Running   0          10m   10.0.10.205   10.0.10.210   <none>           <none>
+    mushop-carts-784b6b7fd9-88jqq        1/1     Running   0          10m   10.0.10.131   10.0.10.167   <none>           <none>
+    mushop-catalogue-57f6b8bcf8-bgk6m    1/1     Running   0          10m   10.0.10.233   10.0.10.219   <none>           <none>
+    mushop-edge-556874d455-6rvb7         1/1     Running   0          10m   10.0.10.70    10.0.10.219   <none>           <none>
+    mushop-events-86f648468-c8xr5        1/1     Running   0          10m   10.0.10.227   10.0.10.210   <none>           <none>
+    mushop-fulfillment-56d967cc-m7fn7    1/1     Running   0          10m   10.0.10.218   10.0.10.210   <none>           <none>
+    mushop-nats-9765db488-fd9sk          2/2     Running   0          10m   10.0.10.224   10.0.10.219   <none>           <none>
+    mushop-orders-78f9bd5f4f-zr896       1/1     Running   0          10m   10.0.10.220   10.0.10.210   <none>           <none>
+    mushop-payment-8465d6945b-ssfsf      1/1     Running   0          10m   10.0.10.230   10.0.10.219   <none>           <none>
+    mushop-session-548dc9d694-fghg2      1/1     Running   0          10m   10.0.10.192   10.0.10.210   <none>           <none>
+    mushop-storefront-5df95b9687-fqdxf   1/1     Running   0          10m   10.0.10.130   10.0.10.167   <none>           <none>
+    mushop-user-ffc67b45f-6qpzg          1/1     Running   0          10m   10.0.10.148   10.0.10.167   <none>           <none>
     ````
 
 2. 아래와 같이 기존 버전의 Node Pool에 있는 노드 하나를 스케줄에서 제외시킵니다.
 
-    ````
+    ````shell
     <copy>
     kubectl drain --ignore-daemonsets --delete-emptydir-data <node_name> 
     </copy>
@@ -188,28 +176,23 @@ OKE 클러스터가 업그레이드로 인해 Control Plane 만 업그레이드 
     > drain은 대상 노드에 배포되어 있는 모든 Pod들을 (시스템상 삭제할 수 없는 것 제외) 삭제합니다. 삭제된 Pod 들은 다른 노드 다시 스케줄링 됩니다.
 
     실행결과
-    ````
-    $ kubectl drain --ignore-daemonsets --delete-emptydir-data 10.0.10.23
-    node/10.0.10.23 cordoned
-    Warning: ignoring DaemonSet-managed Pods: istio-system/istio-cni-node-v272r, kube-system/csi-oci-node-mfzrs, kube-system/kube-proxy-2h49m, kube-system/proxymux-client-qkrl8, kube-system/vcn-native-ip-cni-pnzkb, logging/fluent-bit-xw9mg, mushop-utilities/mushop-utils-prometheus-node-exporter-sz55x, oci-onm/oci-onm-logan-fmxxr
+    ````shell
+    $ kubectl drain --ignore-daemonsets --delete-emptydir-data 10.0.10.167
+    node/10.0.10.167 cordoned
+    Warning: ignoring DaemonSet-managed Pods: kube-system/csi-oci-node-pm2b7, kube-system/kube-proxy-9tt7c, kube-system/proxymux-client-dstwx, kube-system/vcn-native-ip-cni-g87z5, mushop-utilities/mushop-utils-prometheus-node-exporter-5zb4d
+    evicting pod mushop/mushop-user-ffc67b45f-6qpzg
+    evicting pod mushop-utilities/mushop-utils-kube-state-metrics-9bb5df88f-2lprh
+    evicting pod mushop-utilities/mushop-utils-metrics-server-5bf878d5c5-4qzbj
     ...
-    evicting pod mushop/mushop-nats-c4846c7b8-bbwqf
-    evicting pod mushop/mushop-api-76987596f9-ngctn
-    evicting pod mushop/mushop-assets-69f64f855d-r4djg
-    evicting pod mushop/mushop-storefrontv2-54dc477fb6-pdm6v
-    evicting pod mushop/mushop-user-d65d84fcb-kfhx4
-    ...
-    pod/mushop-nats-c4846c7b8-bbwqf evicted
-    pod/mushop-storefrontv2-54dc477fb6-pdm6v evicted
-    pod/mushop-api-76987596f9-ngctn evicted
-    pod/mushop-assets-69f64f855d-r4djg evicted
-    pod/mushop-user-d65d84fcb-kfhx4 evicted
-    ...
-    node/10.0.10.23 drained
+    pod/mushop-storefront-5df95b9687-fqdxf evicted
+    pod/mushop-utils-cert-manager-cainjector-87bb4cd8-9s7zn evicted
+    pod/mushop-utils-alertmanager-0 evicted
+    ..
+    node/10.0.10.167 drained    
     ````
 
     > Pod가 emptyDir을 사용하는 경우 OKE 문서 가이드에 따라 --ignore-daemonsets 옵션만 사용하는 경우 삭제시 다음과 같은 오류가 발생합니다. 여기서는 elasticsearch가 사용하여 에러가 발생하였습니다. emptyDir은 임시데이터를 저장하기 위해 사용해야 하며 저장이 필요한 공간은 Persistent Volume을 사용해야 합니다.
-        ````
+        ````shell
         $ kubectl drain --ignore-daemonsets 10.0.10.184
         node/10.0.10.184 cordoned
         error: unable to drain node "10.0.10.184", aborting command...
@@ -219,52 +202,51 @@ OKE 클러스터가 업그레이드로 인해 Control Plane 만 업그레이드 
         error: cannot delete Pods with local storage (use --delete-emptydir-data to override): logging/elasticsearch-coordinating-only-1, mushop/mushop-catalogue-c79d9464c-pfqnr, mushop/mushop-edge-8649c9b5dd-llgv7, mushop/mushop-events-6f69d5cc79-vj8fc, mushop/mushop-nats-977d9d7df-qcg8r, mushop/mushop-session-678f95f767-fhv2k, mushop/mushop-storefront-5bb5cb4bc8-22h7l, mushop/mushop-storefrontv2-689f9ffbff-g8z76, mushop/mushop-user-6b8b559cc6-4rwx5
         ````
 
-3. 아래와 같이 23번 노드가 컨테이너 스케줄링에서 제외(SchedulingDisabled)된 것을 볼 수 있습니다.
+3. 아래와 같이 해당 노드가 컨테이너 스케줄링에서 제외(SchedulingDisabled)된 것을 볼 수 있습니다.
 
-    ```
+    ```shell
     $ <copy>kubectl get nodes -L name --sort-by=.metadata.labels.name</copy>
     NAME          STATUS                     ROLES   AGE     VERSION   NAME
-    10.0.10.23    Ready,SchedulingDisabled   node    18h     v1.26.7   oke-cluster-1
-    10.0.10.121   Ready                      node    18h     v1.26.7   oke-cluster-1
-    10.0.10.229   Ready                      node    18h     v1.26.7   oke-cluster-1
-    10.0.10.24    Ready                      node    8m40s   v1.27.2   pool2
-    10.0.10.54    Ready                      node    8m27s   v1.27.2   pool2
-    10.0.10.56    Ready                      node    8m16s   v1.27.2   pool2
+    10.0.10.167   Ready,SchedulingDisabled   node    42m     v1.33.1   oke-cluster-1
+    10.0.10.210   Ready                      node    42m     v1.33.1   oke-cluster-1
+    10.0.10.219   Ready                      node    42m     v1.33.1   oke-cluster-1
+    10.0.10.124   Ready                      node    7m41s   v1.34.1   pool2
+    10.0.10.163   Ready                      node    7m40s   v1.34.1   pool2
+    10.0.10.69    Ready                      node    7m22s   v1.34.1   pool2    
     ```
 
-4. 이동한 Pod 들이 모두 Running 상태임을 확인합니다. 확인후 다음 작업으로 진행합니다. 
+4. 이동한 Pod 들이 모두 Running 상태임을 확인합니다. 모두 Running 상태확인후 다음 작업으로 진행합니다. 
 
-    ```
+    ```shell
     # Running 상태가 아닌 Pod 찾기
     <copy>
     kubectl get pods --field-selector status.phase!=Running --all-namespaces
     </copy>
     ```
 
-5. 나머지 기존 Node Pool에 있는 Node(예, .121, .229)들도 같은 방식으로 drain합니다.
+5. 기존 Node Pool에 있는 나머지 2개 Node들도 같은 방식으로 drain합니다.
 
-    ````
+    ````shell
     <copy>
     kubectl drain --ignore-daemonsets --delete-emptydir-data <node_name> 
     </copy>
     ````
 
-    ````
+    ````shell
     $ <copy>kubectl get nodes -L name --sort-by=.metadata.labels.name</copy>
     NAME          STATUS                     ROLES   AGE   VERSION   NAME
-    10.0.10.121   Ready,SchedulingDisabled   node    18h   v1.26.7   oke-cluster-1
-    10.0.10.229   Ready,SchedulingDisabled   node    18h   v1.26.7   oke-cluster-1
-    10.0.10.23    Ready,SchedulingDisabled   node    18h   v1.26.7   oke-cluster-1
-    10.0.10.24    Ready                      node    12m   v1.27.2   pool2
-    10.0.10.54    Ready                      node    12m   v1.27.2   pool2
-    10.0.10.56    Ready                      node    12m   v1.27.2   pool2
+    10.0.10.167   Ready,SchedulingDisabled   node    46m   v1.33.1   oke-cluster-1
+    10.0.10.210   Ready,SchedulingDisabled   node    46m   v1.33.1   oke-cluster-1
+    10.0.10.219   Ready,SchedulingDisabled   node    46m   v1.33.1   oke-cluster-1
+    10.0.10.124   Ready                      node    11m   v1.34.1   pool2
+    10.0.10.163   Ready                      node    11m   v1.34.1   pool2
+    10.0.10.69    Ready                      node    11m   v1.34.1   pool2     
     ````
 
 6. 이동한 Pod 들이 모두 Running 상태가 되고, 버전 업그레이드가 완료되었습니다.
 
-    ```
-    $ <copy>kubectl get pods --field-selector status.phase!=Running --all-namespaces</copy>
-    No resources found
+    ```shell
+    $ <copy>kubectl get pods --field-selector status.phase!=Running,status.phase!=Completed --all-namespaces</copy>
     ```
 
 ### 기존 Node Pool 삭제
@@ -277,12 +259,12 @@ OKE 클러스터가 업그레이드로 인해 Control Plane 만 업그레이드 
 
 3. 업그레이드가 완료되었습니다.
 
-    ````
+    ````shell
     $ <copy>kubectl get nodes -L name --sort-by=.metadata.labels.name</copy>
-    NAME         STATUS   ROLES   AGE   VERSION   NAME
-    10.0.10.24   Ready    node    19m   v1.27.2   pool2
-    10.0.10.54   Ready    node    19m   v1.27.2   pool2
-    10.0.10.56   Ready    node    18m   v1.27.2   pool2    
+    NAME          STATUS   ROLES   AGE   VERSION   NAME
+    10.0.10.124   Ready    node    24m   v1.34.1   pool2
+    10.0.10.163   Ready    node    24m   v1.34.1   pool2
+    10.0.10.69    Ready    node    24m   v1.34.1   pool2     
     ````
 
 ## Task 3: Worker Node 업그레이드 방법 #2 (in-place 업그레이드)
@@ -303,7 +285,8 @@ OKE 클러스터가 업그레이드로 인해 Control Plane 만 업그레이드 
 
 1. 사용중인 OKE 클러스터가 Basic Cluster 인 경우 클러스터 상세 정보에 있는 **Upgrade to Enhanced Cluster** 버튼을 클릭하여 업그레이드합니다.
 
-    ![Upgrade to Enhanced Cluster](images/upgrade-to-enhanced-cluster.png)
+    ![Upgrade to Enhanced Cluster](images/upgrade-to-enhanced-cluster-1.png =60%x*)
+    ![Upgrade to Enhanced Cluster](images/upgrade-to-enhanced-cluster-2.png =50%x*)
 
 2. 업그레이드 결과
 
@@ -315,23 +298,28 @@ Lab 1에서 설명한 것 처럼 Enhanced Cluster는 Cluster 당 비용이 발�
 
 1. 업그레이드 하려는 Node Pool의 상세 페이지로 이동합니다.
 
-2. 수정을 위해 Edit를 클릭하면, 오른쪽에 수정 페이지가 뜹니다. Version 항목에, 클러스터 버전과 Node Pool의 버전이 표시되며, 업그레이드 가능한 버전이 표시됩니다.
+2. 수정을 위해 Edit를 클릭하여, Node Pool의 버전을 상위 버전으로 변경합니다.
 
-3. 클러스터와 동일한 1.27.2로 선택하고 Save Change를 클릭하여 저장합니다. 
+    ![Edit Node Pool](images/edit-node-pool-1.png =60%x*) 
+    ![Edit Node Pool](images/edit-node-pool-2.png)
 
-    - OCI VCN-Native Pod Networking CNI에서 Istio를 사용하는 경우 Oracle Linux 7 이미지 중에서 선택
+3. Resources > Work Requests에 가서 보면, 15초 정도 지난뒤 Node Pool 업그레이드가 완료됩니다.
 
-4. Resources > Work Requests에 가서 보면, 15초 정도 지난뒤 Node Pool 업그레이드가 완료됩니다.
+4. 아직 실제 Worker Node가 업그레이드 된 것은 아닙니다.
 
-5. 아직 실제 Worker Node가 업그레이드 된 것은 아닙니다.
-
-    ![Node Pool Only Upgraded](images/node-pool-only-upgraded.png)
+    ```shell
+    $ <copy>kubectl get nodes -L name --sort-by=.metadata.labels.name</copy>
+    NAME          STATUS   ROLES   AGE   VERSION   NAME
+    10.0.10.167   Ready    node    76m   v1.33.1   oke-cluster-1
+    10.0.10.210   Ready    node    76m   v1.33.1   oke-cluster-1
+    10.0.10.219   Ready    node    76m   v1.33.1   oke-cluster-1    
+    ```
 
 ### Node Cycling
 
 1. Node Pool 상세화면에서 Cycle nodes를 클릭합니다.
 
-    ![Cycle Nodes](images/cycle-nodes-1.png =60%x*)
+    ![Cycle Nodes](images/cycle-nodes-1.png =80%x*)
 
 2. Cycle nodes 방식을 지정할 수 있습니다.
 
@@ -352,50 +340,41 @@ Lab 1에서 설명한 것 처럼 Enhanced Cluster는 Cluster 당 비용이 발�
 
 5. 새 노드가 준비가 되면, 기존 노드 하나가 스케줄링에서 제외됩니다.
 
-    ```
-    $ kubectl get nodes
-    NAME          STATUS                     ROLES   AGE     VERSION
-    10.0.10.117   Ready,SchedulingDisabled   node    24m     v1.26.7
-    10.0.10.189   Ready                      node    2m24s   v1.27.2
-    10.0.10.200   Ready                      node    23m     v1.26.7
-    10.0.10.207   Ready                      node    24m     v1.26.7    
+    ```shell
+    $ <copy>kubectl get nodes</copy>
+    NAME          STATUS                     ROLES   AGE   VERSION
+    10.0.10.167   Ready                      node    90m   v1.33.1
+    10.0.10.210   Ready                      node    90m   v1.33.1
+    10.0.10.219   Ready,SchedulingDisabled   node    90m   v1.33.1
+    10.0.10.48    Ready                      node    65s   v1.34.1
     ```
 
 6. 다음으로 스케줄링 제외된 기존 노드가 삭제됩니다.
 
+    ```shell
+    $ <copy>kubectl get nodes</copy>
+    NAME          STATUS   ROLES   AGE    VERSION
+    10.0.10.167   Ready    node    92m    v1.33.1
+    10.0.10.210   Ready    node    92m    v1.33.1
+    10.0.10.48    Ready    node    3m3s   v1.34.1    
     ```
-    $ kubectl get nodes
-    NAME          STATUS   ROLES   AGE   VERSION
-    10.0.10.189   Ready    node    4m    v1.27.2
-    10.0.10.200   Ready    node    25m   v1.26.7
-    10.0.10.207   Ready    node    25m   v1.26.7    
-    ```
+
+    ![Under Cycle Nodes](images/under-cycle-nodes-2.png)    
 
 7. 기존 노드 하나가 삭제되면, 다시 새 노드를 생성합니다.
 
-    ![Under Cycle Nodes](images/under-cycle-nodes-2.png)
+    ![Under Cycle Nodes](images/under-cycle-nodes-3.png)
 
 8. 새 노드가 준비되면, 다시 스케줄링 제외, 노드 삭제 순으로 동일한 순서로 모든 노드를 업그레이드 할때까지 계속 진행됩니다.
 
-    ```
-    $ kubectl get nodes
-    NAME          STATUS                     ROLES   AGE     VERSION
-    10.0.10.189   Ready                      node    7m37s   v1.27.2
-    10.0.10.200   Ready                      node    29m     v1.26.7
-    10.0.10.207   Ready,SchedulingDisabled   node    29m     v1.26.7
-    10.0.10.77    Ready                      node    65s     v1.27.2    
-    ```
-
-    ![Under Cycle Nodes](images/under-cycle-nodes-3.png)
-
 9. 업그레이드가 완료되었습니다.
 
-    ```
-    $ kubectl get nodes
-    NAME          STATUS   ROLES   AGE     VERSION
-    10.0.10.189   Ready    node    15m     v1.27.2
-    10.0.10.70    Ready    node    3m53s   v1.27.2
-    10.0.10.77    Ready    node    9m5s    v1.27.2   
+    ```shell
+    $ <copy>kubectl get nodes</copy>
+    NAME          STATUS   ROLES   AGE    VERSION
+    10.0.10.102   Ready    node    5m6s   v1.34.1
+    10.0.10.195   Ready    node    10m    v1.34.1
+    10.0.10.48    Ready    node    15m    v1.34.1    
     ```
 
     ![Under Cycle Nodes](images/under-cycle-nodes-4.png)
@@ -406,9 +385,7 @@ Lab 1에서 설명한 것 처럼 Enhanced Cluster는 Cluster 당 비용이 발�
 
 이제 **다음 실습을 진행**하시면 됩니다.
 
-## Learn More
-
 ## Acknowledgements
 
 - **Author** - DongHee Lee
-- **Last Updated By/Date** - DongHee Lee, October 2023
+- **Last Updated By/Date** - DongHee Lee, January 2026

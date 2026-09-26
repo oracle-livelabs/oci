@@ -10,10 +10,6 @@ Block Volume을 이해하기 위해 [Block Volume 개요](https://docs.oracle.co
 [Oracle Cloud Infrastructure Block Volume: Overview](youtube:pmyxqM2eQwI)
 
 예상 시간: 30분
- 
-다음은 Block Volume 생성 과정을 안내하는 동영상입니다. 현재 오라클 클라우드 콘솔에서 보는 화면과 일부 다를 수 있습니다.
-
-[](youtube:jxzw8NZGUJw)
 
 ### 목표
 
@@ -30,9 +26,9 @@ Block Volume을 이해하기 위해 [Block Volume 개요](https://docs.oracle.co
 
 Block Volume의 일반적인 용도는 컴퓨트 인스턴스에 스토리지 용량을 추가하는 것입니다. 오라클 클라우드 콘솔 또는 API를 통해 Block Volume을 생성할 수 있습니다. 생성되면 Volume Attachment를 통해 볼륨을 인스턴스에 장착할 수 있습니다. 장착후 iSCSI 또는 반가상화 모드로 인스턴스 게스트 OS에서 볼륨을 연결합니다. 그런 다음 볼륨을 마운트하고 인스턴스에서 사용할 수 있습니다.
 
-1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Storage**으로 이동한 다음 **Block Storage** 을 선택합니다.
+1. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Storage**으로 이동한 다음 **Block Storage** 아래 **Block Volumes**을 선택합니다.
 
-    ![Go To Block Volume](images/storage-block-storage.png " ")
+    https://cloud.oracle.com/block-storage/volumes
 
 2. Block Volume 서비스에서 **Create Block Volume**을 클릭하고 기본정보를 입력합니다.:
 
@@ -48,7 +44,7 @@ Block Volume의 일반적인 용도는 컴퓨트 인스턴스에 스토리지 �
 
 3. Volume Size and Performance에서 Custom을 선택하여 사이즈를 변경합니다.
 
-    >**노트**: 사이즈는 **50 GB**에서 **32 TB**까지 설정이 가능하며, 범위내에서 1 GB 단위로 조절가능합니다. 기본값은 1024 GB(1 1TB)입니다. 여기서는 최소값을 선택합니다.
+    >**노트**: 사이즈는 **50 GB**에서 **32 TB**까지 설정이 가능하며, 범위내에서 1 GB 단위로 조절가능합니다. 기본값은 1024 GB(1 TB)입니다. 여기서는 최소값을 선택합니다.
 
      - **Size**: **50 GB** 설정
 
@@ -92,21 +88,28 @@ Block Volume의 일반적인 용도는 컴퓨트 인스턴스에 스토리지 �
 
      - **iSCSI:** 베어 메탈 인스턴스에 연결할 때는 iSCSI 방식이 유일한 옵션입니다. 볼륨이 부착되면, 컴퓨트 인스턴스에 로그인하여 추가적인 iscsiadm 명령들을 수행하여 iSCSI 연결을 구성해야 합니다.
 
-     - **Paravirtualized(반가상화):** VM 인스턴스에 볼륨을 연결할 때는 추가적으로 반가상화 방식도 사용가능합니다. 반가상화 방식으로 볼륨이 부착되면, 바로 컴퓨트 인스턴스에서 사용할 수 있습니다. 추가적 명령을 실행할 필요가 없습니다. 그러나 가상화 오버헤드로 인해 더 큰 블록 볼륨에 대한 최대 IOPS 성능이 감소합니다. 자세한 내용은 [VM Shapes for Paravirtualized Attached Volumes](https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/blockvolumeperformance.htm#paraPerf)을 참조하세요.     
+     - **Paravirtualized(반가상화):** VM 인스턴스에 볼륨을 연결할 때는 추가적으로 반가상화 방식도 사용가능합니다. 반가상화 방식으로 볼륨이 부착되면, 바로 컴퓨트 인스턴스에서 사용할 수 있습니다. 추가적 명령을 실행할 필요가 없습니다. 그러나 iSCSI 방식의 IOPS 성능이 반가상화 방식의 IOPS 보다 더 높습니다.
+
+         * 참조 [Volume Attachment Types](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/overview.htm#attachtype)
+
+     여기서는 추가적인 명령이 필요한 사항을 확인하기 위해 ISCSI 방식으로 연결해 보겠습니다.
 
 2. 왼쪽 상단의 **Navigation Menu**를 클릭하고 **Compute**으로 이동한 다음 **Instances** 을 선택합니다. 이전 실습에서 만든 인스턴스로 이동합니다. 왼쪽 아래 **Resource** 하위에 **Attached block volumes**을 클릭합니다.
 
+3. **Attach block volume**을 클릭합니다.
+
     ![Attached block volumes](images/attached-bv.png " ")
 
-3.  **Attach block volume**을 클릭합니다.
 
 4. 만든 Block Volume을 아래와 같이 부착합니다:
 
      - **Volume:** 방금 만든 Block Volume, 예, blockvolume-xx
-     - **Device Path:** Select `/dev/oracleoci/oraclevdb`
      - **Attachment type:** iSCSI
 
-   ![Volume Details](images/attach-bv.png =60%x*)
+        ![Volume Details](images/attach-bv-1.png)
+        ![Volume Details](images/attach-bv-2.png)   
+
+     - **Device Path:** `/dev/oracleoci/oraclevdb` 선택        
 
      - **Attach**을 클릭합니다.   
 
@@ -120,7 +123,7 @@ Block Volume의 일반적인 용도는 컴퓨트 인스턴스에 스토리지 �
 
 7. 인스턴스에 접속하기 위해, Cloud Shell에서 다음 명령을 실행합니다.
 
-    ```
+    ```shell
     <copy>ssh -i <private_ssh_key> opc@<public_ip_address></copy>
     ```
 
@@ -130,17 +133,17 @@ Block Volume의 일반적인 용도는 컴퓨트 인스턴스에 스토리지 �
 
 9. 볼륨이 부착되면, 이제 디스크를 포맷하고, 마운트합니다.
 
-    ```
+    ```shell
     # Block Volume이 부착되었는지 확인
     <copy>ls -l /dev/oracleoci/oraclevd*</copy>
     ```
-    ```
+    ```shell
     # ext4 형식으로 포맷
     # 프롬프트가 뜨는 경우 y 입력
     <copy>sudo mkfs -t ext4 /dev/oracleoci/oraclevdb</copy>
     ```
     
-    ```
+    ```shell
     # 마운트할 폴더 생성후 마운트
     <copy>
     sudo mkdir /mnt/vol1
@@ -148,7 +151,7 @@ Block Volume의 일반적인 용도는 컴퓨트 인스턴스에 스토리지 �
     </copy>
     ```
 
-    ```
+    ```shell
     <copy>df -h</copy>
     ```
 
@@ -158,13 +161,13 @@ Block Volume의 일반적인 용도는 컴퓨트 인스턴스에 스토리지 �
 
 10. 인스턴스가 재기동에도 마운트를 유지하려면 /etc/fstab을 수정해야 합니다.
 
-    ```
+    ```shell
     <copy>
     sudo vi /etc/fstab
     </copy>
     ```
 
-    ```
+    ```shell
     # 다음 엔트리 추가
     <copy>
     /dev/oracleoci/oraclevdb /mnt/vol1 ext4 defaults,_netdev,nofail 0 2
@@ -173,29 +176,40 @@ Block Volume의 일반적인 용도는 컴퓨트 인스턴스에 스토리지 �
 
     - 업데이트 예시 - 기존 내용의 제일 아래에 마운트 정보를 한 줄 추가합니다.
 
-        ```
+        ```shell
         #
         # /etc/fstab
-        # Created by anaconda on Tue Jan 17 19:39:49 2023
-        ...    
+        # Created by anaconda on Thu Jun 12 01:18:32 2025
+        #
+        # Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+        # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+        #
+        # After editing this file, run 'systemctl daemon-reload' to update systemd
+        # units generated from this file.
+        #
+        ...
+        ## ORACLE CLOUD INFRASTRUCTURE CUSTOMERS
+        ##
+        ...
         ## More information:
         ## https://docs.us-phoenix-1.oraclecloud.com/Content/Block/Tasks/connectingtoavolume.htm
-        /.swapfile      none    swap    sw,comment=cloudconfig  0       0
-        
+        /.swapfile      none    swap    sw      0       0
+
         /dev/oracleoci/oraclevdb /mnt/vol1 ext4 defaults,_netdev,nofail 0 2
         ```
 
 11. 마운트합니다.
 
-    ```
+    ```shell
     <copy>
+    sudo systemctl daemon-reload
     sudo mount -a
     </copy>
     ```
 
 12. 인스턴스 재시작시에도 자동으로 마운트되는 지 확인하기 위해 재 시작 합니다.
 
-    ```
+    ```shell
     <copy>
     sudo reboot
     </copy>
@@ -212,7 +226,5 @@ Block Volume의 일반적인 용도는 컴퓨트 인스턴스에 스토리지 �
 
 ## Acknowledgements
 
-- **Author** - Rajeshwari Rai, Prasenjit Sarkar, DongHee Lee
-- **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager, DB Product Management)
-- **Korean Translator & Contributors** - DongHee Lee, March 2023
-- **Last Updated By/Date** - DongHee Lee, March 2023
+- **Author** - DongHee Lee, March 2023
+- **Last Updated By/Date** - DongHee Lee, December 2025
