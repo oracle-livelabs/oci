@@ -1,56 +1,99 @@
-# Lab 1: Recruiter View
+# Lab 1: Recruiter
 
-## Review Requisition and Manage Candidates
+## Introduction
 
-### Introduction
+In this lab, you will review candidates and job requisitions in Oracle Recruiting. You will also use Generative AI to update a requisition posting.
 
-In this lab, you will learn how to review an application and manage candidates.
+Estimated Time: 12 minutes
 
-Estimated Time: 10 minutes
-
-### Objectives
+## Objectives
 
 In this lab, you will:
-* Access the Recruiter hiring area
-* Review the requisition you applied to
-* Manage Candidate Information
+* Find and access an open job requisition.
+* Review candidate information and AI insights.
+* Preview resumes and navigate between candidates.
+* Use AI to assist in updating the job description, responsibilities, and qualifications.
 
-## Task 1: View the Requisition and Job Application
+## Task 1: View the Requisition and Manage Candidate Information
+
 Easily manage and view candidates in your hiring/recruiting area.
 
 1.  From the **Home Page**, click the **My Team** tab, and then the **Hiring** tile. 
     
     *tip: If the Hiring tile is not under the My Team tab, check under My Client Groups tab. 
     
-    ![Home Page](images/recruiter-my-client-groups.png)
+    ![Home Page](images/HiringTile.png)
 
-2. You will now be in the Recruiting Activity Center where recruiters can see updates and automated tasks regarding requisitions they are responsible for. Click the **Requisitions** tab towards the bottom-left of the page. 
+Access requisitions screen.
 
-    ![Recruiting Acvtivity Center](images/recruiter-activity-center.png)
+2. Click the **requisitions tab** at the bottom of the screen. 
 
-3. Search and drill into the requisition you applied to. To search - type in the requisition number **993** in the search bar to find and click the **Senior HR Analyst - AIA** requisition. 
-    
-    *tip: If the requisition is not showing, try removing the current filters by clicking the **“X”** next to each assigned filter or **"Clear"** next to the filters area.
+    ![Recruiting Acvtivity Center](images/RACReqTab.png)
 
-    ![Requisition List](images/recruiter-requisition-list26.png)
+Search for the requisition you applied to.
+
+3. **Clear the filter(s)** under the requisition search bar.
+4. Search **1011** in the requisition search bar. The result should show Interdimensional Operations Analyst - AIA (requisition number 1011).
+5. Click the **number link** under the **'Applications' column.**
+        
+    ![Applicant List](images/ApplicationsNumber.png)
    
-4. Find the application you submitted by scrolling to the top of the page and clicking the **number hyperlink** under **"New - To be Reviewed."**
+Find the application you submitted, review different application elements and available actions for this candidate.
+4. Click on the **name** of the applicant you submitted. This will bring you to the candidate profile, which looks like the screen below.
+5. Review the **AI insights** surrounding your candidate.
+6. Review different elements and details of the application through the **tabs** circled below. You can manage everything for your candidate here.
+7. All the actions you may need are available by clicking ***‘…’*** (three dots above candidate name).
 
-    ![Applicant Overview](images/recruiter-applicant-overview.png)
+    ![Applicant Overview](images/CandidateProfile.png)
 
-5. Click the **name of the applicant YOU submitted.** This will bring you to the candidate profile (screenshot of candidate profile below).
+Quickly cycle through different candidates.
 
-    ![Candidate Profile](images/recruiter-candidate-profile26.png)  
+8. To the top-right of the screen, you may use the **arrows** to quickly move to different candidate profiles for those that applied to this requisition.
 
-6. Review different elements of your application. For example, click the **Screening** tab near the top of the page and then click the **down arrow** in the Questionnaires table.  
+    ![Candidate Profile](images/CandidateProfileArrows.png)  
+
+Efficiently review resumes without downloading.
+
+9. Scroll down and click the **preview button (image of an eye)** within the ‘Candidate attachments’ table to quickly view the candidate’s resume.
+10. After you’ve finished previewing the resume, click the **‘X’** at the top-right corner of the attachment preview.
+11. Click the **Requisitions** tab to start Task 2 below
+
+## Task 2: Use AI to Assist in Updating and/or Creating a Requisition
+
+Access the requisition you need to update.
+
+1. **Clear the filters** and then search for requisition **801.**
+2. Click **Senior HR Analyst** (requisition number 801).
+
+    ![HR Analyst Search](images/HRAnalystSearch.png)
+    
+    ![HR Analyst Link](images/HRAnalystLink.png)
+
+Edit the Posting Description with Generative AI.
+
+3. In the **‘Details’** tab, scroll down to the **‘Posting description’** table and **click the pencil icon** to the top-right of the table.
  
-Adventure awaits, [click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Recruiter **Questions 2 - 4**, and rise to the top of the leaderboard!
+    ![Candidate Details](images/CandidateDetails.png)
+    
+    ![Posting Description Update](images/PostingDescription.png)
+
+4. Within, **‘Tell AI Assist what you need’** field, type in something like, **"I need a Senior HR Analyst with 5 years of experience and a college degree from an accredited university.”**
+5. **Click out of the field** and then click the **‘AI Assist’** button.
+ 
+    ![Posting Description Prompt](images/PostingDescriptionAIAssist.png)
+
+6. In a moment, you will see a pop-up that says, **‘AI Assist completed’** and then you can scroll down to see the AI generated content for the Posting Description, Responsibilities, and Qualifications.
+7. The user/human is always in control, you may always update, edit, or delete any content generated by AI.
+ 
+    ![AI Assist Compllete](images/AIAssistComplete.png)
+
+Adventure awaits, [click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Complete the **Recruiter Section Questions**, and rise to the top of the leaderboard!
 
 ![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)
    
 ## Acknowledgements
-* **Author** - Dorcas Conyers, Principal Sales Consultant, Cloud HCM
-* **Contributors** -  Kerilyn Derkasch, Sr. Manager, Cloud HCM & Mark Sarmiento, Sr. HCM Solution Engineer
-* **Last Updated By/Date** - Mark Sarmiento, May 2025
+* **Author** - Mark Sarmiento, HCM Solution Engineer
+* **Contributors** -  Mark Sarmiento, HCM Solution Engineer
+* **Last Updated By/Date** - Mark Sarmiento, September 2026
 
 
