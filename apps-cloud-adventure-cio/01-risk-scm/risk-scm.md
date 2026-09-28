@@ -1,18 +1,16 @@
-# Risk Management
+# Request Access with Risk Management
 
-## **Request Access with Risk Management**
-
-### **Introduction**
+## Introduction
 
 Welcome to Oracle’s AI Adventure for Risk Management. This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
 
-### **Objectives**
+### Objectives
 
 During this adventure, request role access via Risk Management and experience the review and approval process.
 
 Estimated Time: 15 minutes
 
-### **Begin Exercise**
+## Begin Exercise
 
 1. During this adventure, request role access via Risk Management and experience the review and approval process.  These are the steps you will perform:
 
@@ -155,23 +153,20 @@ Estimated Time: 15 minutes
 
   ![Access Request Approvals](../01-risk-scm/images/riskimage026.jpg)
 
+18. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-18. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
-
-    [![AI Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+  > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
 Oracle Risk Management and Compliance documents your policies for identifying and resolving risk in your business processes. It continuously monitors user access for separation of duties and sensitive access, automates role certification, and detects policy violations in transactions and in changes to audited configuration and operational data.
 
-### Learn More
-
-* [Risk Management and Compliance](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/25d/index.html)
-* [Risk Management and Compliance - Secure](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/25d/secure.html)
+## Learn More
+* [Risk Management and Compliance](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/26c/index.html)
+* [Risk Management and Compliance - Secure](https://docs.oracle.com/en/cloud/saas/risk-management-and-compliance/26c/secure.html)
 * [Oracle Documentation](http://docs.oracle.com)
-
 
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist, Advanced Technology Services
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, December 2025
+* **Last Updated By/Date** - Sajid Saleem, July 2026

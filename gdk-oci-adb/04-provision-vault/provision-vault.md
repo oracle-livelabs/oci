@@ -17,25 +17,25 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console, open the navigation menu, click **Identity & Security**, and then click **Vault** under **Key Management & Secret Management**.
 
-   ![Vault menu](https://oracle-livelabs.github.io/common/images/console/id-vault.png)
+    ![Vault menu](https://oracle-livelabs.github.io/common/images/console/id-vault.png)
 
 2. Select your workshop compartment from the **Compartment** drop down list. Click **Create Vault**.
 
-   ![Create Vault Button](images/create-vault-button.png)
+    ![Create Vault Button](images/create-vault-button.png)
 
 3. In the **Create Vault** dialog box, provide the following details:
 
-      ```
-      Create in Compartment: <your workshop compartment>
+    ```
+    Create in Compartment: <your workshop compartment>
 
-      Name: shared-vault
+    Name: shared-vault
 
-      Make it a virtual private vault: NO (LEAVE THE BOX UNCHECKED)
-      ```
+    Make it a virtual private vault: NO (LEAVE THE BOX UNCHECKED)
+    ```
 
-      ![Create Vault Details](images/create-vault-details.png)
+    ![Create Vault Details](images/create-vault-details.png)
 
-      >Note: You cannot change the vault type after the vault is created.
+    >Note: You cannot change the vault type after the vault is created.
 
 4. Click **Create Vault**
 
@@ -43,23 +43,23 @@ In this lab, you will:
 
 1. In the **Vault** you created, navigate to **Master Encryption Keys**, click **Create Key**.
 
-   ![Create Key](images/create-key.png)
+    ![Create Key](images/create-key.png)
 
 2. Provide the following details:
 
-      ```text
-      Protection Mode: Software
+    ```text
+    Protection Mode: Software
 
-      Name: master-key
+    Name: master-key
 
-      Key Shape Algorithm: AES (Symmetric key for Encrypt and Decrypt)
+    Key Shape Algorithm: AES (Symmetric key for Encrypt and Decrypt)
 
-      Key Shape Length: 256 bits
+    Key Shape Length: 256 bits
 
-      Import External key: NO (LEAVE THE BOX UNCHECKED)
-      ```
+    Import External key: NO (LEAVE THE BOX UNCHECKED)
+    ```
 
-      ![Create Key Details](images/create-key-details.png)
+    ![Create Key Details](images/create-key-details.png)
 
 3. Click **Create Key**.
 

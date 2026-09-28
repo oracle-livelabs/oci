@@ -14,39 +14,37 @@ In this lab, you will:
 
 ## Task 1: Create MySQL HeatWave Database instance
 
-1. From the Oracle Cloud Console, open the navigation menu, click **Databases**. Under **HeatWave MySQL**, click **DB Systems**
+1. From the Oracle Cloud Console, open the navigation menu, click **Databases**. Under **HeatWave MySQL**, click **DB Systems**.
 
-   ![Oracle Databases menu](https://oracle-livelabs.github.io/common/images/console/database-mysql.png)
+    ![Oracle Databases menu](https://oracle-livelabs.github.io/common/images/console/database-mysql.png)
 
-2. Select your workshop compartment from the **Compartment** drop down list on the left
+2. Select your workshop compartment from the **Compartment** drop down list.
 
-   ![HeatWave MySQL Landing Page](images/heatwave-mysql-landing-page.jpg#input)
+    ![HeatWave MySQL Landing Page](images/heatwave-mysql-landing-page.png)
 
 3. Click **Create DB System**.
 
-    ![Create DB System Button](images/create-db-system.jpg#input)
-
 4. You will see the **Create DB System** screen. Select **Development or testing**.
 
-    ![Create DB System Screen](images/mysql-db-system-form.png#input)
+    ![Create DB System Screen](images/mysql-db-system-form.png)
 
 5. Under the **Create administrator credentials** section, enter the username as "mysqladmin" and a password of your choice.
 
-    ![Create MySQL Admin User](images/mysql-admin-user.jpg#input)
+    ![Create MySQL Admin User](images/mysql-admin-user.jpg)
 
 6. Ensure **Standalone** is selected.
 
-    ![MySQL Standalone or HA](images/mysql-standalone-ha.jpg#input)
+    ![MySQL Standalone or HA](images/mysql-standalone-ha.jpg)
 
 7. Select from the dropdown list *llw-net-* for **VCN** and *LLW Public Subnet(Regional)* for **Subnet**.
 
-    ![MySQL Network and Placement](images/mysql-network-placement.png#input)
+    ![MySQL Network and Placement](images/mysql-network-placement.png)
 
 8. Under the **Configure hardware** section, deselect **Enable HeatWave cluster**. Leave the other default values unchanged.
 
-    ![MySQL Configure Hardware](images/mysql-configure-hw.jpg#input)
+    ![MySQL Configure Hardware](images/mysql-configure-hw.jpg)
 
-9. Under the **Configure backup plan** section, deselect **Enable automatic backups**. Click **Create**.
+9. Under the **Configure backup plan** section, deselect **Enable automatic backups**. Leave the other default values unchanged. Click **Create**.
 
     ![Disable MySQL Automatic Backup and Create](images/mysql-backup-create.png)
 

@@ -29,10 +29,10 @@ Let's say that we deploy a Java / SpringBoot on a Compute with an Database.
     1. Create resources (compute/database/....) with "Terraform" (src/terraform)
     2. Create tables in the database (src/db)
     3. Compile the "Backend Application (app)" (src/app) 
-        - script: src/app/build_app.sh
+        - script: src/app/build.sh
         - output directory: target/compute/app
     4. Compile the "User Interface (ui)" (src/ui)
-        - script: src/ui/build_ui.sh 
+        - script: src/ui/build.sh 
         - output directory: target/compute/ui
     5. Deploy the "app" and "ui" to the compute:
         - the target/app and target/ui are copied to the compute 
@@ -102,12 +102,12 @@ In the next task, we will go inside each directory to see what it contains.
     ````
     ````
     <copy>
-    app.yaml  build_app.sh  Dockerfile  openapi_spec.yaml  pom.xml  src  start.sh  target
+    app.yaml  build.sh  Dockerfile  openapi_spec.yaml  pom.xml  src  start.sh  target
     </copy>
     ````
 2. There are 2 types of files:
     1. The files to build the application
-        - build_app.sh : script to build the application (output target/compute/app)
+        - build.sh : script to build the application (output target/compute/app)
         - Dockerfile : file to build docker image (Kubernetes and Container Instance deployment)
         - app.yaml : kubernetes deployment file for the application
         - openapi_spec.yaml : OpenAPI specification of the Application (documentation only) 
@@ -131,12 +131,12 @@ In the next task, we will go inside each directory to see what it contains.
     ````
     ````
     <copy>
-    build_ui.sh  Dockerfile  ui  ui.yaml
+    build.sh  Dockerfile  ui  ui.yaml
     </copy>
     ````
 2. We see 2 types of files:
     1. The files to build the User Interface
-        - build_ui.sh : script to build the user interface (output target/compute/ui)
+        - build.sh : script to build the user interface (output target/compute/ui)
         - Dockerfile : file to build docker image (Kubernetes and Container Instance deployment)
         - ui.yaml : kubernetes deployment file for the user interface
     2. The application source files 
@@ -149,4 +149,4 @@ In the next task, we will go inside each directory to see what it contains.
 
 * Author - Marc Gueury
 * Contributors - Ewan Slater 
-* Last Updated - Jan, 20th 2025
+* Last Updated - Sept, 6th 2026

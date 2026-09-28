@@ -12,12 +12,12 @@
     {
       "title": "Get Started with noVNC Remote Desktop",
       "description": "Using noVNC Remote Desktop",
-      "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/remote-desktop/using-novnc-remote-desktop.md"
     },
     {
       "title": "Lab 1: Deploy an OKE Cluster",
       "description": "Labs that follow the introduction are numbered, starting with Lab 1",
-      "filename": "../../lab1-oke/lab1-oke.md"
+      "filename": "../../lab1-oke-cluster/lab1-oke-cluster.md"
     },
     {
       "title": "Lab 2: Install NVIDIA GPU Operator",
@@ -25,12 +25,16 @@
     },
     {
       "title": "Lab 3: Install NVIDIA NIM Microservices and start inferencing",
-      "filename": "../../lab3-nim-install/lab3-nim-install.md"
+      "filename": "../../lab3-nim-install-and-test/lab3-nim-install-and-test.md"
+    },
+    {
+      "title": "Lab 4: Check Your Understanding",
+      "filename": "../../lab4-knowledge-check/lab4-knowledge-check.md"
     },
     {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
     }
   ]
 }

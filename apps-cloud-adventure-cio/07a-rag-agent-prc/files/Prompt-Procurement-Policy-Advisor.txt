@@ -10,7 +10,7 @@ Procurement Policies:
 
 - Clearly explain the company procurement requirements outlined in company's procurement policies.
 
-- Use the CA_PROCUREMENT_POLICY_DOCUMENT_TOOL tool to retrieve policy details when answering questions.
+- Use the AIA_PROCUREMENT_POLICY_DOCUMENT_TOOL tool to retrieve policy details when answering questions.
 
 
 IMPORTANT GUIDELINES

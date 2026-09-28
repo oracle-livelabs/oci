@@ -16,28 +16,19 @@ In this lab, you will:
 
 1. From the Oracle Cloud Console, navigate to **OCI Console >> Observability & Management**. Under **Monitoring**, click **Metrics Explorer**.
 
-	![Metrics Explorer Menu](https://oracle-livelabs.github.io//common/images/console/metrics-explorer-icon.jpg)
+    ![Metrics Explorer Menu](https://oracle-livelabs.github.io//common/images/console/metrics-explorer-icon.jpg)
 
-2.  In the **Metrics Explorer**, scroll down to the **Query 1** section. Select your workshop compartment from the **Compartment** drop down list.
+2. From the **Metrics Explorer** landing page, click **Add Query**.
 
-    ![Select compartment](images/metrics-query-compartment.jpg#input)
+    ![Metrics Explorer Landing Page](images/metrics-explorer-landing-page.png)
 
-5. Select the **Metric namespace** as `gcn_metrics_oci`.
+3. Enter name as `gdk-query-1`. Select your workshop compartment from the **Compartment** drop down list. Select the **Metric namespace** as `gcn_metrics_oci`. Select the **Metric name** as `microserviceBooksNumber.latest_value`. Leave the other default values unchanged. Click **Add query**.
 
-    ![Select Metric namespace](images/select-metric-namespace.png#input)
+    ![Metrics Explorer - Add Query Form](images/metrics-explorer-add-query-form.png)
 
-6. Select the **Metric name** as `microserviceBooksNumber.latest_value`.
+4. Visualize the selected metric.
 
-    ![Select Metric name](images/select-metric-name.png#input)
-
-7. Click **Update Chart** to visualize the selected metric.
-
-    ![Update Chart](images/update-chart.png#input)
-
-8. Scroll up to visualize the selected metric.
-
-    ![Metrics Chart](images/updated-metrics-chart.png#input)
-
+    ![Metrics Chart](images/view-metrics-chart.png)
 
 Congratulations! You've successfully completed this lab. You can visualize the metrics published by the sample application in the OCI Metrics Explorer.
 

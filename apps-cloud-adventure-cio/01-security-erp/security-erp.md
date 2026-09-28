@@ -1,26 +1,20 @@
-# Security
+# Security: Assign Supplier Negotiation Privileges
 
-<!-- rem ## Path 1: Assign AI Privileges -->
-## **Assign Supplier Negotiation Privileges**
+## Introduction
 
-### **Introduction**
+Welcome to Oracle’s AI Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
 
-  Welcome to Oracle’s AI Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
+### Objectives
 
-### **Objectives**
+During this adventure, you will perform a time sensitive task of granting permissions to a user.
 
-  During this adventure, you will perform a time sensitive task of granting permissions to a user.
+Estimated Time: 15 minutes
 
-  Estimated Time: 15 minutes
-
-  Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
-### **Begin Exercise**
+## Begin Exercise
 
 1. During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
 
   ![Security Objectives](../01-security-erp/images/image100objs.png)
-
 
      > At this point, you should be logged into your environment with a username CIO.xx where xx is a two number code assigned to your laptop.
 
@@ -32,11 +26,9 @@
 
    ![Application Springboard](../01-security-erp/images/image001.png)
 
-
 3. Accessing Security Console
 
     > 1. Select the **Tools** tab menu. <br>
-
     > 2. Select **Security Console**.
 
     ![Tools Security Console](../01-security-erp/images/image002.png)
@@ -51,7 +43,6 @@
 5. Notice how the search is dynamic and offers available options as you type.
 
     > (1) In the search field provided at the top, type: **Adventure**. <br>
-
     > (2) Then **click** on the **Adventure Accounts Payable Manager** job role.
 
     ![Adventure Role Search](../01-security-erp/images/image004.png)
@@ -59,14 +50,13 @@
 6. You can now see a list of the roles which are granted to a user when they are provided with the Accounts Payable Manager.
 
     > (1) Notice that the table may be exported to Microsoft Excel using the button provided at the top right. <br>
-
     > (2) (Nothing to perform here)
 
     ![Adventure Role roles](../01-security-erp/images/image005.png)
 
 7. Always make changes to a copied role to ensure that your custom configurations are preserved on updates.
 
-    > (1) Tasks associated with the role are available from this pull-down menu.  
+    > (1) Tasks associated with the role are available from this pull-down menu.
     > (2) Select **Copy Role**.
 
     `![Copy Adventure Role a](../01-security-erp/images/image006.png)
@@ -74,7 +64,6 @@
 8. Now you'll execute the copy role.
 
     > (1) Select **Copy top role**. <br>
-
     > (2) Press the **Copy Role** button.
 
     ![Copy Adventure Role b](../01-security-erp/images/image007.png)
@@ -84,9 +73,7 @@
   We start by giving our copied role a unique name.
 
     > (1) Add **your initials and xx Code** to the name of the **role name** and **role code** as shown. <br>
-
     > This will keep your version separate from the other participants, and it will help you find the new role later in this Cloud Journey. <br>
-
     > (2) Press the **Next** button.
 
     ![Copy Role a](../01-security-erp/images/image008.png)
@@ -137,7 +124,7 @@
 
   ![Copy Role 7b](../01-security-erp/images/image015.png)
 
-17. You can finish the Add User to Role step now. 
+17. You can finish the Add User to Role step now.
 
     > (1) Press the **Add User to Role** button.
 
@@ -183,15 +170,15 @@
 
     ![Compare Roles 1](../01-security-erp/images/image022.png)
 
-24.  > (1) Type in your **three initials and XX Code** which you used to name your custom role.
+24. > (1) Type in your **three initials and XX Code** which you used to name your custom role.
 
    ![Compare Roles a](../01-security-erp/images/image023.png)
 
-25.  > **Select** your custom role
+25. > **Select** your custom role
 
    ![Compare Roles b](../01-security-erp/images/image024.png)
 
-26.  > Press the **OK** button.
+26. > Press the **OK** button.
 
  ![Compare Roles c](../01-security-erp/images/image025.png)
 
@@ -219,27 +206,21 @@
 
  ![Compare Roles 6](../01-security-erp/images/image030.png)
 
-32. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+32. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![AI Adventure](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
-
-<!--  ## Path 2: Request Access with Risk Management -->
+    > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
 Security Console is used to quickly manage user access to the entire Fusion applications suite.
 
-**You have successfully completed the Activity!**
+## Learn More
 
-
-### Learn More
-
-* [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/25d/secure.html)
-* [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/25d/secure.html)
+* [Oracle Supply Chain & Manufacturing - Secure](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/26c/secure.html)
+* [Oracle Human Resources - Secure](https://docs.oracle.com/en/cloud/saas/human-resources/26c/secure.html)
 * [Oracle Documentation](http://docs.oracle.com)
-
 
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, July 2026

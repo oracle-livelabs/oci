@@ -1,0 +1,79 @@
+﻿What are laptop policies for purchases,"Here’s a concise summary of the company laptop purchase policy and what to do when you need a device
+
+- Eligibility and quantity
+  - Employees are entitled to one desktop or laptop
+  - A second machine requires a documented business justification
+
+- Refresh / replacement cycle
+  - Windows desktops/laptops: refresh every 3 years
+  - Apple desktops/MacBooks: refresh every 4 years
+  - These are minimum guidelines; devices in good working condition may be kept beyond warranty
+
+- Exceptions
+  - Loss or theft are accepted exceptions to replacement rules
+
+- Non‑standard or additional device requests
+  - Require a detailed justification explaining feature/function differences from the corporate standard
+  - Requisition must include supplier, model, system configuration, and supplier quote
+
+- Requisition process and controls
+  - Hardware purchase checks are run on new laptop requisitions to ensure compliance
+  - New‑hire laptops not listed as a standard must use the “Laptop–New Hire” category in Oracle Procurement Cloud
+  - Review the corporate standard issue laptop list in Oracle Procurement Cloud before requesting a non‑standard device
+
+- Contracting and financials
+  - Pricing must be contracted in the local functional currency of the contracting legal entity
+  - A contract is required for transactions of $100,000 or more; an MPSA may apply
+
+- Procurement contacts
+  - Global: Amy Agenta
+  - EMEA: Elena Ellsworth
+  - JAPAC: Teresa May
+
+Would you like me to (1) check the corporate standard laptop list for your region or (2) draft a template justification for a non‑standard laptop request?"
+What if I need to order a non-standard laptop,"You can order a non‑standard laptop, but you must follow the company requirements and provide a clear business justification. Here’s a concise checklist to guide you:
+
+1. Write a detailed justification
+   - Explain why the non‑standard device is required and how its features/functionality differ from the corporate standard
+   - Link the need to specific job duties, applications, or technical requirements
+   - If requesting a second machine, include a documented business justification
+
+2. Include required purchase details in the requisition
+   - Supplier name
+   - Exact model
+   - Full system configuration (CPU, RAM, storage, GPU, OS, peripherals)
+   - Supplier quote (price and currency)
+
+3. Use the correct procurement path
+   - Review the corporate standard laptop list in Oracle Procurement Cloud first
+   - Submit the requisition there; for new hires, use the “Laptop–New Hire” category when the device isn’t a listed standard
+
+4. Expect compliance checks and possible follow‑up
+   - Hardware purchase checks will run on new laptop requisitions to ensure policy compliance
+   - Procurement may request additional detail or recommend a standard alternative
+
+5. Financial/contracting notes
+   - Pricing must be in the local functional currency of the contracting legal entity
+   - Transactions of $100,000 or more require a contract (an MPSA may apply)
+
+6. Need help?
+   - Contact your regional Procurement representative:
+     - Global: Amy Agenta
+     - EMEA: Elena Ellsworth
+     - JAPAC: Teresa May
+
+Would you like me to draft a short justification template you can paste into your requisition?"
+I need help ordering a standard laptop,"You already have a laptop requisition in progress:
+
+- Requisition 204153 — 15"" laptop (Intel i7, 32 GB, Windows 11 Pro, 512 GB)  
+  Status: Pending approval  
+  Quantity: 1  
+  Requested delivery date: 2025-11-07
+
+Would you like to:
+1) Submit a new laptop requisition now (tell me requested delivery date and quantity), or  
+2) Review or manage the existing requisition 204153 (I can open it for you or help update/cancel it)
+
+To view your requisitions in the app, open: <a href=""https://fa-exgp-saasfademo1.ds-fa.oraclepdemos.com/fscmUI/redwood/procurement/requisitions"" target=""_blank"">here</a>
+
+Tell me which option you want and any details (new delivery date/quantity or what change you want to make) and I’ll take care of the next step"

@@ -10,7 +10,7 @@ Benefit Policies:
 
 - Clearly explain the eligibility, coverage, and compliance requirements outlined in company's benefits policies.
 
-- Use the CA_BENEFITS_DOCUMENT_TOOL tool to retrieve policy details when answering questions.
+- Use the AIA_BENEFITS_DOCUMENT_TOOL tool to retrieve policy details when answering questions.
 
 
 IMPORTANT GUIDELINES

@@ -33,39 +33,39 @@ This is the recommended deployment method for beginners.
 2. If prompted, log in to your OCI tenancy
 
 3. On the **Stack Information** page:
-   - **Name**: Enter a name (e.g., `rook-on-oke-stack`)
-   - **Compartment**: Select your target compartment
-   - Check **I have reviewed and accept the Oracle Terms of Use**
-   - Click **Next**
+    - **Name**: Enter a name (e.g., `rook-on-oke-stack`)
+    - **Compartment**: Select your target compartment
+    - Check **I have reviewed and accept the Oracle Terms of Use**
+    - Click **Next**
 
 4. On the **Configure Variables** page, fill in the required fields:
 
-   **OKE Cluster Configuration:**
-   - **Kubernetes Version**: Select the latest available version
-   - **Node Pool Size**: 3 (minimum for Ceph replication)
-   - **Node Shape**: VM.Standard.E4.Flex
-   - **Node OCPUs**: 2 (minimum)
-   - **Node Memory (GB)**: 16 (minimum)
+    **OKE Cluster Configuration:**
+    - **Kubernetes Version**: Select the latest available version
+    - **Node Pool Size**: 3 (minimum for Ceph replication)
+    - **Node Shape**: VM.Standard.E4.Flex
+    - **Node OCPUs**: 2 (minimum)
+    - **Node Memory (GB)**: 16 (minimum)
 
-   **Block Volume Configuration:**
-   - **Block Volume Size (GB)**: 50 (per node)
-   - **Block Volume VPUs Per GB**: 10 (balanced performance)
+    **Block Volume Configuration:**
+    - **Block Volume Size (GB)**: 50 (per node)
+    - **Block Volume VPUs Per GB**: 10 (balanced performance)
 
-   **Network Configuration:**
-   - **Create New VCN**: Yes (or use existing if you have one)
-   - **VCN CIDR**: 10.0.0.0/16
+    **Network Configuration:**
+    - **Create New VCN**: Yes (or use existing if you have one)
+    - **VCN CIDR**: 10.0.0.0/16
 
 5. Click **Next** to review your configuration
 
 6. On the **Review** page:
-   - Verify your settings
-   - Check **Run Apply**
-   - Click **Create**
+    - Verify your settings
+    - Check **Run Apply**
+    - Click **Create**
 
 7. Monitor the job progress:
-   - The stack will create all necessary resources
-   - This process takes approximately 15-20 minutes
-   - Wait for the job status to show **Succeeded**
+    - The stack will create all necessary resources
+    - This process takes approximately 15-20 minutes
+    - Wait for the job status to show **Succeeded**
 
 ## Task 2: Verify Rook-Ceph Deployment
 

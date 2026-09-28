@@ -1,0 +1,13 @@
+{
+  "referenceEndpoint": "/waterpump/flat-psi",
+  "referencePayload": {
+    "dataFormat": "JSON",
+    "data": {
+      "motorTemperature": 68.4,
+      "vibrationLevel": 1.7,
+      "powerConsumption": 12.6,
+      "flowRate": 247.5,
+      "dischPressPsi": 62.37
+    }
+  }
+}

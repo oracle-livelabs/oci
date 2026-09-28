@@ -132,13 +132,13 @@ kubectl delete deployment rook-ceph-tools -n rook-ceph
 5. Click **Destroy** to confirm
 
 6. Monitor the job progress:
-   - The job will delete all Terraform-managed resources
-   - This includes the OKE cluster, node pools, VCN, and block volumes
-   - Wait for the job status to show **Succeeded**
+    - The job will delete all Terraform-managed resources
+    - This includes the OKE cluster, node pools, VCN, and block volumes
+    - Wait for the job status to show **Succeeded**
 
 7. Optionally, delete the stack:
-   - After the destroy job completes, click **More Actions** → **Delete Stack**
-   - Confirm deletion
+    - After the destroy job completes, click **More Actions** → **Delete Stack**
+    - Confirm deletion
 
 ### Check for Remaining OKE Clusters
 

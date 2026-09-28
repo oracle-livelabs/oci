@@ -25,29 +25,29 @@ In this lab, you will:
 
 1. In the same terminal in VS Code, check the version of the GraalVM native-image utility:
 
-	``` bash
-	<copy>
-	native-image --version
-	</copy>
-	```
+    ``` bash
+    <copy>
+    native-image --version
+    </copy>
+    ```
 
 2. To generate a native executable using Maven, run the following command:
 
-	``` bash
-	<copy>
-	./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw clean package -pl oci -Dpackaging=native-image
-	</copy>
-	```
+    ``` bash
+    <copy>
+    ./mvnw install -pl lib -am && MICRONAUT_ENVIRONMENTS=oraclecloud ./mvnw clean package -pl oci -Dpackaging=native-image
+    </copy>
+    ```
 
-   It can take approximately 4-5 minutes to generate the native executable.
+    It can take approximately 2-3 minutes to generate the native executable.
 
 3. The native executable is created in the _oci/target_ directory. Run it in the background by appending an `&` as shown below.
 
-	``` bash
-	<copy>
-	MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci-db-demo-oci &
-	</copy>
-	```
+    ``` bash
+    <copy>
+    MICRONAUT_ENVIRONMENTS=oraclecloud oci/target/oci-db-demo-oci &
+    </copy>
+    ```
 
    The native executable starts instantaneously.
 
@@ -55,31 +55,31 @@ In this lab, you will:
 
 1. From the same terminal in VS Code, add a genre using the command below.
 
-	``` bash
-	<copy>
-	curl -X "POST" "http://localhost:8080/genres" -H 'Content-Type: application/json; charset=utf-8' -d '{ "name": "action" }' | jq
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl -X "POST" "http://localhost:8080/genres" -H 'Content-Type: application/json; charset=utf-8' -d '{ "name": "action" }' | jq
+    </copy>
+    ```
 
 ## Task 3: Check the Genres present in the MySQL HeatWave Database
 
 1. From the same terminal in VS Code, check the `genres` present in the database using the `/list` endpoint exposed by the application:
 
-	``` bash
-	<copy>
-	curl localhost:8080/genres/list | jq
-	</copy>
-	```
+    ``` bash
+    <copy>
+    curl localhost:8080/genres/list | jq
+    </copy>
+    ```
 
 ## Task 4: Stop the application
 
 1. Bring the running application in the foreground:
 
-	```bash
-	<copy>
-	fg
-	</copy>
-	```
+    ```bash
+    <copy>
+    fg
+    </copy>
+    ```
 
 2. Once the application is running in the foreground, use `CTRL+C` to stop it.
 
