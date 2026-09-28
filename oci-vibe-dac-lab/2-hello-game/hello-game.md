@@ -186,8 +186,6 @@ For more information: https://opencode.ai/
 
 During the two previous tasks, you used the deploy skill several times. It is a kind of prompt that defines a workflow or process. Let’s look at it.
 
-## Deploy Skill Example
-
 ```
 <copy>    
 cd $HOME/oci-vibe-dac/space-invaders/.agents/skills/deploy/
@@ -206,17 +204,17 @@ description: Deploy the files in the current project directory to its existing O
 
 1. Treat the current working directory as the project to upload; do not change directories before running:
 
-    '''bash
-    project_directory=$(pwd -P)
-    repository_root=$(git rev-parse --show-toplevel)
-    '''
+'''bash
+project_directory=$(pwd -P)
+repository_root=$(git rev-parse --show-toplevel)
+'''
 
 2. Verify that `$repository_root/.bucket-name` exists and is nonempty. If it is missing, stop and tell the user to run `bucket_create.sh` first; do not create a bucket.
 3. Upload the recorded project directory with the repository uploader:
 
-    '''bash
-    "$repository_root/bucket_upload.sh" "$project_directory"
-    '''
+'''bash
+"$repository_root/bucket_upload.sh" "$project_directory"
+'''
 
 4. Show the end user the public HTML URL(s) given at the end of the script.
 </copy>  
