@@ -1,0 +1,71 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15" version="29.6.0">
+  <diagram id="oci-openwebui-arch" name="OCI Open WebUI Architecture">
+    <mxGraphModel dx="2066" dy="1056" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="User Browser" vertex="1">
+          <mxGeometry height="60" width="160" x="40" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="DNS Provider&#xa;A record: chat.example.com" vertex="1">
+          <mxGeometry height="80" width="200" x="240" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;" value="OCI Region" vertex="1">
+          <mxGeometry height="720" width="1240" x="480" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="4" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="VCN" vertex="1">
+          <mxGeometry height="580" width="760" x="30" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="5" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Public Subnet" vertex="1">
+          <mxGeometry height="460" width="700" x="30" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="6" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="OCI Compute VM (single instance)" vertex="1">
+          <mxGeometry height="320" width="620" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="7" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Traefik&#xa;(HTTPS + Let&#39;s Encrypt)" vertex="1">
+          <mxGeometry height="90" width="170" x="30" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="7" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Open WebUI" vertex="1">
+          <mxGeometry height="90" width="150" x="230" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="7" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Python API Gateway&#xa;(OpenAI-compatible)" vertex="1">
+          <mxGeometry height="90" width="180" x="410" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="7" source="8" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#d79b00;" target="9" value="HTTPS traffic">
+          <mxGeometry relative="1" x="-1" y="92" as="geometry">
+            <mxPoint x="-85" y="57" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17" edge="1" parent="7" source="9" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#6c8ebf;" target="10" value="OpenAI-compatible API calls">
+          <mxGeometry relative="1" x="1" y="97" as="geometry">
+            <mxPoint x="90" y="62" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" parent="6" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Instance Principal Benefit:&#xa;No OCI user API keys or OCI auth secrets are stored on the VM for GenAI access." vertex="1">
+          <mxGeometry height="80" width="540" x="120" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" value="OCI Generative AI Service&#xa;(LLMs + Embeddings)" vertex="1">
+          <mxGeometry height="110" width="320" x="860" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="OCI IAM&#xa;Dynamic Group + Policy&#xa;Allow dynamic-group ... to use generative-ai-family" vertex="1">
+          <mxGeometry height="160" width="320" x="860" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="18" edge="1" parent="4" source="10" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#82b366;" target="11" value="LLM/Embedding inference requests">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" edge="1" parent="4" source="7" style="endArrow=block;endFill=1;dashed=1;strokeWidth=2;strokeColor=#b85450;" target="12" value="Instance principal identity context">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="4" source="12" style="endArrow=block;endFill=1;dashed=1;strokeWidth=2;strokeColor=#d6b656;" target="11" value="Policy authorizes service access">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="2" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#6c8ebf;" target="3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" source="3" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#6c8ebf;" target="8" value="DNS resolves to public IP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

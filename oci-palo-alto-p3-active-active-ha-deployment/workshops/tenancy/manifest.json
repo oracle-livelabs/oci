@@ -1,0 +1,49 @@
+{
+   "workshoptitle" : "Deploy Palo Alto NGFW in OCI with Active/Active HA",
+   "tutorials" : [
+      {
+         "filename" : "../../introduction/introduction.md",
+         "description" : "Introduction to the workshop",
+         "title" : "Introduction"
+      },
+      {
+         "description" : "Prerequisites for using Free Trial, Paid, and Always Free accounts.",
+         "title" : "Get Started",
+         "filename" : "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
+      },
+      {
+         "filename" : "../../lab-0-deploy-lab-using-oracle-resource-manager/lab-0-deploy-lab-using-oracle-resource-manager.md",
+         "title" : "Lab 0: Deploy Lab using Oracle Resource Manager"
+      },
+      {
+         "title" : "Lab 1: Review VCN Routing & Security (Prerequisites)",
+         "filename" : "../../lab-1-review-vcn-routing-and-security/lab-1-review-vcn-routing-and-security.md"
+      },
+      {
+         "filename" : "../../lab-2-deploy-two-palo-alto-vm-series-from-the-marketplace/lab-2-deploy-two-palo-alto-vm-series-from-the-marketplace.md",
+         "title" : "Lab 2: Deploy Two Palo Alto VM-Series from the Marketplace"
+      },
+      {
+         "title" : "Lab 3: Create Data VNICs (Trust and Untrust)",
+         "filename" : "../../lab-3-create-data-vnics-trust-and-untrust/lab-3-create-data-vnics-trust-and-untrust.md"
+      },
+      {
+         "filename" : "../../lab-4-access-the-palo-alto-and-perform-initial-setup/lab-4-access-the-palo-alto-and-perform-initial-setup.md",
+         "title" : "Lab 4: Access the Palo Alto and Perform Initial Setup"
+      },
+      {
+         "filename" : "../../lab-5-configure-network-load-balancers-nlbs/lab-5-configure-network-load-balancers-nlbs.md",
+         "title" : "Lab 5: Configure Network Load Balancers (NLBs)"
+      },
+      {
+         "title" : "Lab 6: Conclusion",
+         "filename" : "../../lab-6-conclusion/lab-6-conclusion.md"
+      },
+      {
+         "filename" : "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md",
+         "title" : "Need Help?",
+         "description" : "Solutions to common problems and how to get live help"
+      }
+   ],
+   "help" : "anas.abdallah@oracle.com"
+}

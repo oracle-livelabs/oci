@@ -1,0 +1,41 @@
+{
+  "workshoptitle": "Working with Gateways in OCI Internet of Things (IoT) Platform",
+  "help": "Pete.St.Pierre@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "",
+      "type": "livelabs",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Lab 1: Understand Gateways and Indirectly Connected Devices",
+      "description": "",
+      "type": "livelabs",
+      "filename": "../../understand-gateways-and-indirect-devices/understand-gateways-and-indirect-devices.md"
+    },
+    {
+      "title": "Lab 2: Create the Gateway and Routing Adapter",
+      "description": "",
+      "type": "livelabs",
+      "filename": "../../create-gateway-and-routing/create-gateway-and-routing.md"
+    },
+    {
+      "title": "Lab 3: Connect and Monitor Indirect Water Pumps",
+      "description": "",
+      "type": "livelabs",
+      "filename": "../../connect-indirect-water-pumps/connect-indirect-water-pumps.md"
+    },
+    {
+      "title": "Appendix A: Create Required Factory, Production Line, and WaterPump Assets",
+      "description": "",
+      "type": "livelabs",
+      "filename": "../../appendix-water-pump-assets/appendix-water-pump-assets.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Template to link to Need Help lab at the end of workshop.",
+      "filename": "https://raw.githubusercontent.com/oracle-livelabs/common/main/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}

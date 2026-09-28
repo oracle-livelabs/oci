@@ -1,0 +1,7 @@
+{
+  "@context": "dtmi:dtdl:context;3",
+  "@id": "dtmi:com:oracle:beverage:ProductionLine;1",
+  "@type": "Interface",
+  "displayName": "Production Line",
+  "description": "A beverage factory production line."
+}

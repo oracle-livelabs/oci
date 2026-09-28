@@ -1,0 +1,41 @@
+{
+  "workshoptitle": "Deploy a Private Open WebUI Chatbot on OCI with Generative AI",
+  "help": "dario.mandic@oracle.com",
+  "variables": [
+    "../../variables/variables.json",
+    "../../variables/variables-in-another-file.json"
+  ],
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Workshop overview and architecture.",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "Prerequisites for Free Trial and paid tenancies.",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Lab 1: Setup Project and OCI IAM for Open WebUI",
+      "filename": "../../setup/setup.md"
+    },
+    {
+      "title": "Lab 2: Provision Infrastructure with OpenTofu",
+      "filename": "../../provision/provision.md"
+    },
+    {
+      "title": "Lab 3: Configure DNS and Deploy Open WebUI with Ansible",
+      "filename": "../../data-load/data-load.md"
+    },
+    {
+      "title": "Lab 4: Validate Open WebUI",
+      "filename": "../../query/query.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}

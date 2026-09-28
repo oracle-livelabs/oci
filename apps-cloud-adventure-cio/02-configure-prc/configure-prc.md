@@ -1,8 +1,6 @@
-# Configure
+# PRC: Update Suppliers (New) Listing Page
 
-## PRC: Update Suppliers (New) Listing Page
-
-### Introduction
+## Introduction
 
 Oracle offers hundreds of prebuilt pages, workflows and forms “out of the box” as part of the Oracle Fusion Cloud.  Many of our customers want to configure these pages and workflows to meet their specific business needs.  You can unify your experience in our applications by using Redwood.
 
@@ -14,9 +12,7 @@ In this lab, you will use Redwood to quickly and efficiently improve the user ex
 
 Estimated Time: 15 minutes
 
-Do not forget to answer the Adventure Check Point questions at the end of the exercise!
-
-### Begin Exercise
+## Begin Exercise
 
 1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update the Suppliers (New) listing page providing more visibility to Procurement Managers. Suppliers (New) is a dynamic listing page that allows you to create role-based layouts based on configurable criteria.
 
@@ -50,7 +46,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Suppliers List Page](../02-configure-prc/images/configure-prc-image005.jpg)
 
-6.  You can see the supplier information displayed is limited. We will update the page to display more fields for procurement managers. <br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
+6. You can see the supplier information displayed is limited. We will update the page to display more fields for procurement managers. <br>Now you will leverage Visual Builder Studio to update the Suppliers (New) page.
 
     > (1) Click on the ![picture image](../gen-images/user_icon.png) **Image** in the top right corner of the screen.  <br>
 
@@ -64,13 +60,13 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Configure Fields and Regions](../02-configure-prc/images/configure-prc-image007.jpg)
 
-8.  First we will create a new role-based form rule for Suppliers (New) page
+8. First we will create a new role-based form rule for Suppliers (New) page
 
     > (1) Click on the ![+ Icon](../gen-images/plusicon.jpg) **Icon** to add a new form rule.
 
     ![Fields and Regions](../02-configure-prc/images/configure-prc-image008.jpg)
 
-9.  You can name your rule whatever you want.  For example:
+9. You can name your rule whatever you want.  For example:
 
     > (1) Enter **procurementManagerLayout** in label. <br>
 
@@ -163,21 +159,21 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 ![Suppliers List Page](../02-configure-prc/images/configure-prc-image021.jpg)
 
-22.  You can expand the Preview region for one of the suppliers.
+22. You can expand the Preview region for one of the suppliers.
 
-> (1) Click on drop-down icon ![Region down arrow](../gen-images/icon014_downarrow.png) to expand a specific supplier row.
+    > (1) Click on drop-down icon ![Region down arrow](../gen-images/icon014_downarrow.png) to expand a specific supplier row.
 
 ![Suppliers List Page](../02-configure-prc/images/configure-prc-image022.jpg)
 
-23.  You can now see the new fields that you've made visible via application configuration.
+23. You can now see the new fields that you've made visible via application configuration.
 
-> (1) The new fields are now visible. The configurations are **automatically maintained during the release update process**.
+    > (1) The new fields are now visible. The configurations are **automatically maintained during the release update process**.
 
 ![Supplier List Screen](../02-configure-prc/images/configure-prc-image023.jpg)
 
-18. Adventure awaits, click on the image, show what you know and rise to the top of the leader board!!!
+24. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
-    [![Checkpoint](../gen-images/cloud-adventure-checkpoint-image.png)](https://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:CIOADVENTURE)
+    > **You've completed this Adventure**. Please close this tab and the Visual Builder tab.
 
 ### Summary
 
@@ -185,13 +181,13 @@ Oracle Redwood is Oracle Fusion’s new design system that enhances the user exp
 
 **Sync up as a team, lock in your harness, get ready for the the next high-octane adventure.**
 
-### Learn More
+## Learn More
 
 * [Overview of Redwood Application Extension](https://docs.oracle.com/en/cloud/saas/human-resources/fauvb/overview-of-redwood-application-extensions.html)
-* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/26a/oaext/overview-of-using-visual-builder-studio.html)
+* [Configuring and Extending Applications](https://docs.oracle.com/en/cloud/saas/applications-common/26c/oaext/overview-of-using-visual-builder-studio.html)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist; Casey Doody, Cloud Technologist; Sajid Saleem, Master Principal Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, January 2026
+* **Last Updated By/Date** - Sajid Saleem, July 2026

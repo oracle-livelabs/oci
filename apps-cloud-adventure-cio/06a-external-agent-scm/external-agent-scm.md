@@ -1,20 +1,19 @@
-# Create AI Agents and Agent Teams for your enterprise
-## Create an External Agent and Assemble a Team
+# Create an External Agent and Assemble a Team
 
-### Introduction
+## Introduction
 
 AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
 
-
-### **Objectives**
+### Objectives
 
 In this activity you will use Oracle Fusion AI Agent Studio to
 * Create an External API Agent that leverages an existing External API to access vehicle recall information.
 * Create and assemble an Agent Team that includes the Maintenance Work Order Agent, Install Base Asset Agent, and the External API Agent you just created.
 * Perform a quick test of the Agent team and publish.
 
+Estimated Time: 10-15 minutes
 
-### **Begin Exercise**
+## Begin Exercise
 
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
@@ -79,7 +78,7 @@ From the Asset Description:
 
 2. Retrieve Recall Data
 
-- Use the F1_EXTERNAL_VEHICLE_RECALL_API_TOOL.recallsByVehicle function with the extracted make, model, and model year to obtain recall information.
+- Use the F1_AIA_EXTERNAL_VEHICLE_RECALL_API_TOOL.recallsByVehicle function with the extracted make, model, and model year to obtain recall information.
 - Present Recall Details
 - Clearly summarize the recall information returned by the tool.
 - Do not infer, assume, or fabricate information - respond only with data provided by the recall tool.
@@ -104,7 +103,7 @@ For more details or questions about this recall, please contact your authorized 
 
      > (1) Click the ![Agent Icon](../gen-images/toolhammericon.jpg) <br>
      > (2) Enter **F1** in the Ask Oracle field and press the **Enter** key or select **F1** from the resulting dropdown.<br>
-     > (3) Click the ![Agent Image](../gen-images/plusicon.jpg) icon next to the **F1 External Vehicle Tool**.<br>
+     > (3) Click the ![Agent Image](../gen-images/plusicon.jpg) icon next to the **F1 AIA External Vehicle Recall API Tool**.<br>
      > (4) You may need to click the ![Create Button](../gen-images/plusicon.jpg) icon a second time.
 
      ![Add Agent](../06a-external-agent-scm/images/external-agent-scm-image006.jpg)
@@ -177,7 +176,7 @@ For more details or questions about this recall, please contact your authorized 
 
     >  (1)  Enter **F1** in the Ask Oracle field and press the **Enter** key or select **F1** from the resulting dropdown.<br><br>
     >  ![Create Button](../gen-images/cautionflagextrasmalltransparent2.png) Note that Steps 2 and 3 are the same.  The first click activates that region and the second actually adds the agent.<br>
-    >  (2) Click the ![Create Button](../gen-images/plusicon.jpg) icon next to **F1 Installed Base Asset Agent.**.<br>
+    >  (2) Click the ![Create Button](../gen-images/plusicon.jpg) icon next to **F1 AIA Installed Base Assets Agent.**.<br>
     >  (3) You may need to click the ![Create Button](../gen-images/plusicon.jpg) icon a second time.<br>
 
     ![Add Tool](../06a-external-agent-scm/images/external-agent-scm-image015.jpg)
@@ -190,7 +189,7 @@ For more details or questions about this recall, please contact your authorized 
 
 17. Add the F1 Maintenance Work Order Agent
 
-     > (1) Click the ![Create Button](../gen-images/plusicon.jpg) icon next to **F1 Maintenance Work Order Agent**.<br>
+     > (1) Click the ![Create Button](../gen-images/plusicon.jpg) icon next to **F1 AIA Maintenance Work Order Agent**.<br>
 
     ![Add Tools Complete](../06a-external-agent-scm/images/external-agent-scm-image017.jpg)
 
@@ -246,6 +245,10 @@ For more details or questions about this recall, please contact your authorized 
     ![Open tools](../06a-external-agent-scm/images/external-agent-scm-image025.jpg)
 
 
+26. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+
+    > **You've completed this Adventure**. Please close this tab.
+
 ### Summary
 
 As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they’re not permitted to see.
@@ -255,10 +258,7 @@ AI Agent Studio is a design-time environment that provides a set of tools to cre
 
 Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
 
-**You have successfully completed the Activity!**
-
-
-### Learn More
+## Learn More
 
 * [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
 * [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
@@ -269,4 +269,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist, Sajid Saleem, Master Principal SaaS Cloud Technologist, Charlie Moff, Distinguished SaaS Cloud Technologist, and the rest of the Cloud Adventure Team
 * **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, January 2026
+* **Last Updated By/Date** - Sajid Saleem, July 2026

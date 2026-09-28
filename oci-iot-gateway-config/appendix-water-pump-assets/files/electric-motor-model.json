@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:historization;1"
+  ],
+  "@id": "dtmi:com:oracle:iot:example:ElectricMotor;1",
+  "@type": "Interface",
+  "displayName": "Electric Motor",
+  "contents": [
+    {"@type": ["Telemetry", "Historized"], "name": "motorTemperature", "schema": "double"},
+    {"@type": ["Telemetry", "Historized"], "name": "vibrationLevel", "schema": "double"},
+    {"@type": "Telemetry", "name": "powerConsumption", "schema": "double"}
+  ]
+}

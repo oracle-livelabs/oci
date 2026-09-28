@@ -1,0 +1,36 @@
+{
+    "workshoptitle": "Reduce Container Pull and Startup Time on OCI VMs with FSS and Lustre",
+    "help": "livelabs-help-aiservices_us@oracle.com",
+    "tutorials": [
+      {
+        "title": "Introduction",
+        "description": "Introduction to the workshop and its objectives",
+        "filename": "../../introduction/introduction.md"
+      },
+      {
+        "title": "Get Started",
+        "description": "Get a Free Trial",
+        "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/pre-register-free-tier-account.md"
+      },
+      {
+        "title": "Lab 1: Provision of the necessary resources",
+        "description": "Provision OCI compute, networking, FSS, and Lustre resources using Terraform",
+        "filename": "../../provision/provision.md"
+      },
+      {
+        "title": "Lab 2: Explore FSS and Lustre benchmarking scenarios",
+        "description": "Run benchmark scenarios and compare cold versus warm container pulls and starts",
+        "filename": "../../use-cases/use-cases.md"
+      },
+      {
+        "title": "Lab 3: Cleanup",
+        "description": "Remove the deployed OCI resources",
+        "filename": "../../cleanup/cleanup.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+      }
+    ]
+  }

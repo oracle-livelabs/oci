@@ -1,0 +1,18 @@
+{
+  "referenceEndpoint": "/data",
+  "referencePayload": {
+    "dataFormat": "JSON",
+    "data": {
+      "time": "2026-09-02T18:00:00.000000Z",
+      "cpuUtil": 0,
+      "memUtil": 0,
+      "connectedDeviceCount": 0,
+      "firmware": "Oracle Linux 9.1"
+    }
+  },
+  "envelopeMapping": {
+    "timeObserved": "$.time",
+    "target": "${if endpoint(1) == \"water-pumps\" then endpoint(2) else null end}",
+    "contentRoot": "$"
+  }
+}

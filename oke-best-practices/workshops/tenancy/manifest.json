@@ -1,0 +1,36 @@
+{
+  "workshoptitle": "Deploy and Use OKE Clusters with Simple and Advanced Terraform Modules with Best Practices",
+  "help": "livelabs-help-oci_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Workshop scope, objectives, prerequisites, and architecture.",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "Sign in to OCI before starting the workshop.",
+      "filename": "../../get-started/get-started.md"
+    },
+    {
+      "title": "Lab 1: Deploy OKE with Simple Terraform Modules",
+      "description": "Use either Terraform CLI or OCI Resource Manager to deploy, verify, and remove a simple OKE environment.",
+      "filename": "../../lab1/lab1.md"
+    },
+    {
+      "title": "Lab 2: Deploy OKE with Advanced Terraform Modules",
+      "description": "Use either Terraform CLI or OCI Resource Manager to deploy and operate an advanced OKE module design.",
+      "filename": "../../lab2/lab2.md"
+    },
+    {
+      "title": "Lab 3: Demonstrate Key OKE Capabilities",
+      "description": "Apply reusable modules, compartment separation, node cycling, availability, and node-pool practices.",
+      "filename": "../../lab3/lab3.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to common problems and directions for receiving help.",
+      "filename": "../../need-help/need-help.md"
+    }
+  ]
+}

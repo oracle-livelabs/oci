@@ -1,0 +1,41 @@
+{
+    "workshoptitle": "How to use OCI token exchange authentication from Github",
+    "help": "livelabs-help-aiservices_us@oracle.com",
+    "tutorials": [
+      {
+        "title": "Introduction",
+        "description": "The Introduction is always second for LiveLabs. The title and contents menu title match for the Introduction.",
+        "filename": "../../introduction/introduction.md"
+      },
+      {
+        "title": "Getting Started",
+        "description": "Get a Free Trial",
+        "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/pre-register-free-tier-account.md"
+      },
+      {
+        "title": "Lab 1: Provision of OCI resources",
+        "description": "Provision of OCI resources",
+        "filename": "../../provision/provision.md"
+      },
+      {
+        "title": "Lab 2: Provision of the Github repo",
+        "description": "Provision of the Github repo",
+        "filename": "../../provision-ghrepo/provision-ghrepo.md"
+      },
+      {
+        "title": "Lab 3: Run github workflow",
+        "description": "Run github workflow",
+        "filename": "../../run-workflow/run-workflow.md"
+      },
+      {
+        "title": "Lab 4: Cleanup",
+        "description": "Cleanup the environment",
+        "filename": "../../cleanup/cleanup.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+      }
+    ]
+  }

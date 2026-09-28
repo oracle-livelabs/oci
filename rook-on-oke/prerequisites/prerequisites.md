@@ -29,11 +29,11 @@ Before proceeding, ensure you have the required permissions in your OCI tenancy.
 1. Log in to the [Oracle Cloud Console](https://cloud.oracle.com)
 
 2. Verify you can access the following services:
-   - **Container Engine for Kubernetes (OKE)**
-   - **Compute**
-   - **Block Storage**
-   - **Virtual Cloud Networks**
-   - **Resource Manager**
+    - **Container Engine for Kubernetes (OKE)**
+    - **Compute**
+    - **Block Storage**
+    - **Virtual Cloud Networks**
+    - **Resource Manager**
 
 3. Required IAM Permissions:
 
@@ -74,13 +74,13 @@ The Rook-Ceph deployment requires specific resources to function correctly.
 Collect the following information before deployment:
 
 1. **Tenancy OCID**: 
-   - Navigate to **Profile** → **Tenancy: &lt;your-tenancy&gt;**
-   - Copy the OCID
+    - Navigate to **Profile** → **Tenancy: &lt;your-tenancy&gt;**
+    - Copy the OCID
 
 2. **Compartment OCID** (where you'll deploy):
-   - Navigate to **Identity & Security** → **Compartments**
-   - Select your target compartment
-   - Copy the OCID
+    - Navigate to **Identity & Security** → **Compartments**
+    - Select your target compartment
+    - Copy the OCID
 
 3. **Region**: Note your home region (e.g., `us-ashburn-1`, `eu-frankfurt-1`)
 

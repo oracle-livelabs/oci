@@ -1,0 +1,42 @@
+{
+    "workshoptitle": "Vibe Coding with OCI Enterprise AI",
+    "help": "livelabs-help-oci_us@oracle.com",
+	"tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "./../../0-intro/intro.md"
+        },
+        {
+            "title": "Get Started",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/event-register-free-tier-account.md"
+        },
+        {
+            "title": "Lab 1: Hello World + Space Invaders",
+            "filename": "./../../1-laptop/laptop.md"
+        },
+        {
+            "title": "Lab 2: Installation",
+            "filename": "./../../2-install/install.md"
+        },
+        {
+            "title": "Lab 3: LangGraph",
+            "filename": "./../../3-langgraph/langgraph.md"
+        },
+        {
+            "title": "Lab 4: Database",
+            "filename": "./../../4-database/database.md"
+        },        
+        {
+            "title": "Lab 5: DevOps",
+            "filename": "./../../5-devops/devops.md"
+        },        
+        {
+            "title": "Lab 6: Migration",
+            "filename": "./../../6-migration/migration.md"
+        },        
+        {
+            "title": "Need Help",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

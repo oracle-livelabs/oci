@@ -1,0 +1,21 @@
+[
+  {
+    "condition": "*",
+    "payloadMapping": {
+      "$.cpuUtilization": "$.cpuUtil",
+      "$.memoryUtilization": "$.memUtil",
+      "$.connectedDeviceCount": "$.connectedDeviceCount",
+      "$.firmwareVersion": "$.firmware"
+    },
+    "referencePayload": {
+      "dataFormat": "JSON",
+      "data": {
+        "time": "2026-09-02T18:00:00.000000Z",
+        "cpuUtil": 0,
+        "memUtil": 0,
+        "connectedDeviceCount": 0,
+        "firmware": "Oracle Linux 9.1"
+      }
+    }
+  }
+]
