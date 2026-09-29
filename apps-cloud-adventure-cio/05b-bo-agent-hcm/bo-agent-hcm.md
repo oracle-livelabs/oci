@@ -1,4 +1,4 @@
-# Create Document Tool and AI Agent (RAG) using AI Agent Studio
+# Create a Workflow Agent along with Business Object and Deep Link Tools using AI Agent Studio
 
 ## Introduction
 
@@ -7,8 +7,9 @@ AI Agent Studio for Fusion Applications is a comprehensive platform for creating
 ### Objectives
 
 In this activity you will use Oracle Fusion AI Agent Studio to
-* Create a Document Tool that references your benefits policy documents.
-* Create a Benefits Advisor Agent using the above Tool.
+* Create a Business Object Tool that provides query and creation access to Absences.
+* Create a Deep Link Tool to provide drill down to absences
+* Create Benefits Absence Agent that leverages the above tools and a delivered User Details tool,
 
 Estimated Time: 10-15 minutes
 
@@ -16,168 +17,291 @@ Estimated Time: 10-15 minutes
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
 As a pre-requisite for this adventure, please download following files
-1. Policy document file to your local desktop as below.
+1. Agent Role file to your local desktop as below.
 <br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05b-bo-agent-hcm/files/CloudAdventureBenefitsHighlights.pdf)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05b-bo-agent-hcm/files/role-bo-agent-hcm.txt)
 <br>
 2. Prompt file for the AI Agent
 <br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05b-bo-agent-hcm/files/Prompt-Benefits-Advisor-Agent.txt)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05b-bo-agent-hcm/files/prompt-bo-agent-hcm.txt)
+
 
 ## Begin Exercise
 
-1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
-
-    ![AI RAG Objectives](../05b-bo-agent-hcm/images/rag-agent-hcm-image001.jpg)
-
-2. The first step is to navigate to AI Agent Studio.
-
-    > (1) Click on the **Tools** tab <br>
-    > (2) Select the **AI Agent Studio** tile
-
-    ![Navigate to AI Agent Studio](../05b-bo-agent-hcm/images/rag-agent-hcm-image002.jpg)
-
-3. Next, we're going to create a Tool.
-
-    > (1) Click the ![Tools](../gen-images/tools.jpg) button/tab at the bottom of the page
-
-    ![Open tools](../05b-bo-agent-hcm/images/rag-agent-hcm-image003.jpg)
 
 
-4. Tool Creation
+1. Create FMLA/Benefits Business Object Agent
 
-    > (1) Click the ![add tool](../gen-images/plusadd.jpg) button to create a new tool
+    ![Adventure Flow](images/bo-agent-hcm-image1.jpg)
 
-    ![Create Tool](../05b-bo-agent-hcm/images/rag-agent-hcm-image004.jpg)
+2. Open AI Agent Studio
 
-5. Here, you will define your first Tool, a Document Tool.  This will allow the Agent to use the content of the documents to respond to user questions.
+    > (1): Click the **Tools** menu tab<br>
+    > (2): Click the **AI Agent Studio** tile
 
-    > (1) Enter the following fields:
-    * Tool Type: select **Document** from the dropdown<br>
-    * Tool Name: Enter **CIOXX Benefits Document Tool**, where **XX** is replaced with your user number.<br>
-    * Family: select **HCM** from the dropdown<br>
-    * Product: select **Benefits** from the dropdown<br>
-    * Description: Enter **Benefits Document Tool** <br>
+    ![Springboard page](images/bo-agent-hcm-image2.jpg)
 
-    > (2) **Scroll Down** to the Documents area where you can add documents.
+3. Expand Menu
 
-      ![Edit tool info](../05b-bo-agent-hcm/images/rag-agent-hcm-image005.jpg)
+    > (1): Click the **Expand** Menu
 
-6. Here, you caņ begin to add your document(s).  These documents will be processed in the background via the Oracle Database Vector Search capability to allow use by your AI Agent.
+    ![Expand Menu](images/bo-agent-hcm-image3.jpg)
 
-    > (1) Click the ![button](../gen-images/addw.jpg) button under **Documents** <br>
+4. Open Resources
 
-    > (2) **Scroll Down** to see the Documents fields and upload your document.
+    > (1): Click the **Resources** Menu Option
 
-      ![Edit tool info](../05b-bo-agent-hcm/images/rag-agent-hcm-image006.jpg)
+    ![Open Resources](images/bo-agent-hcm-image4.jpg)
 
-7. ![Alert flag](../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download policy document file to your local desktop if you have not already done so as below.
-    <br>
+5. View Tools
 
-    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
+    > (1): Click the **Tools** tab at the top of the screen.
 
-     > (1) Enter the following fields:
-    * Name: Enter **CA Benefits Documents** <br>
-    * Status: Select **Ready to publish** from the dropdown<br>
-    * Description: Enter **Benefits Documents**<br>
+    ![View Tools](images/bo-agent-hcm-image5.jpg)
 
-     > (2) Click on the ![Drag-and-drop](../gen-images/dandd.jpg) region and then select the file (CloudAdventureBenefitsHighlights.pdf) from your **Downloads** folder on your PC.<br>
+6. Add Tool
 
-     > (3) Click the **Save** ![Save Button](../gen-images/save.jpg) button on the bottom right<br>
+    > (1): Click the **Add** button to create a new Tool
 
-     > (4) Click the **Create button** ![Create Button](../gen-images/createw.jpg) on the top right corner of the screen.<br>
+    ![Create Tool](images/bo-agent-hcm-image6.jpg)
 
-      ![tool create](../05b-bo-agent-hcm/images/rag-agent-hcm-image007.jpg)
+7. Add New Tool Details
 
-    **Congratulations!  You’ve completed your first step and created a Policy Document Tool.**
+    > (1): Enter the following fields as shown:
+    * Tool Type:  Select **Business Object** from the dropdown
+    * Tool Name:  CIOXXYYY Absence BO Tool, where XX is replaced with your user number and YYY is replaced with your initials.
+    * Family:  Select **HCM** from the dropdown* Product:  Select **Absences** from the dropdown<br>
+    > (2): Press the **Generate** button to generate description information. <br>
+    > (3): Press the **Go** button to accept the generated description.
 
-8. Now, you'll create your first Agent!  You'll do that from the Agent screen within the AI Agent Studio.
+    ![Enter Tool Details](images/bo-agent-hcm-image7.jpg)
 
-    >  (1) Click the  **Agents** button/tab ![Agent Image](../gen-images/agentsbutton.jpg) at the bottom of the page.
+8. Select Business Object
 
-    ![Agents Page](../05b-bo-agent-hcm/images/rag-agent-hcm-image008.jpg)
+    > (1): Type **AIA** in the **Search business objects** field and select **AIA FMLA Absence** from the resulting dropdown.
 
-9. Here you can see any existing agents.  But you want to create one.
+    ![Select BO](images/bo-agent-hcm-image8.jpg)
 
-    > (1) Click the **+ Add** button ![Add button Image](../gen-images/plusadd.jpg).
+9. Add New Tool Details
 
-    ![Add Agent](../05b-bo-agent-hcm/images/rag-agent-hcm-image009.jpg)
+    > (1): Click the **Checkbox** next to both **getFMLAAbsences** and **submitFMLAAbsence** to enable them for use in this tool. <br>
+    > (2): Click the **Create and Close** button on the bottom toolbar.
 
-10. Define the details of the Agent.
+    ![Select BO Functions](images/bo-agent-hcm-image9.jpg)
 
-    > (1) First, you'll enter the fields as described below:<br>
-    * Agent Name: **CIOXX Benefits Advisor Agent** where **XX** is replaced with your user number.<br>
-    * Family: Select **HCM** from the dropdown<br>
-    * Product: Select  **Benefits** from the dropdown<br>
-    * Maximum Interactions: **10** <br>
-    * Description: **Benefits Advisor Agent** <br>
-    * Agent Persona and Role: **You are a Benefits Analyst.  Your role is to efficiently access and interpret company-specific benefits documents, providing workers with clear, actionable guidance on their eligibility, coverage and compliance recommendations.**<br>
-    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **copy block** below. 
-    <br><br>
-    Alternatively, prompt text is available in **Prompt-Benefits-Advisor-Agent.txt** file that you can download to your local desktop as below.
-    <br>
-    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05b-bo-agent-hcm/files/Prompt-Benefits-Advisor-Agent.txt)
-    <br>
-    Once done, please open this file and copy the contents into the Prompt field. <br>
+10. Add Another tool
 
-    > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
-    > (3) Click the Create Button ![Create Button](../gen-images/createb.jpg) <br>
+    > (1): Note that your first Tool has been created.  You may need to scroll to see yours as this will show all tools created by attendees. <br>
+    > (2): Click the **Add** button to create a new Tool
 
-    ![Create Agent](../05b-bo-agent-hcm/images/rag-agent-hcm-image010.jpg)
+    ![Add Tool](images/bo-agent-hcm-image10.jpg)
 
+11. Add New Tool Details
+
+    > (1): Enter the following fields as shown:
+    * Tool Type:  Select **Deep Link** from the dropdown
+    * Tool Name:  CIOXXYYY Absence Deep Link Tool, where XX is replaced with your user number and YYY is replaced with your initials.
+    * Family:  Select **HCM** from the dropdown* Product:  Select **Absences** from the dropdown<br>
+
+    > (2): Press the **Generate** button to generate description information. <br>
+    > (3): Press the **Go** button to accept the generated description.
+
+    ![Enter Tool Details](images/bo-agent-hcm-image11.jpg)
+
+12. Select Deep Link Tool
+
+    > (1): Type **AIA** in the **Search by deep link name, code, family, or product** field and select **AIA Existing Absences** from the resulting dropdown.
+
+    ![Select Deep Link](images/bo-agent-hcm-image12.jpg)
+
+13. Confirm and Create
+
+    > (1): Note the message that will display to allow the customer to use the Deep Link. <br>
+    > (2): Click the **Create and Close** button on the bottom toolbar.
+
+    ![Select Deep Link](images/bo-agent-hcm-image13.jpg)
+
+14. View Agents
+
+    > (1): Click the **Agents** tab at the top of the screen.
+
+    ![View Agents](images/bo-agent-hcm-image14.jpg)
+
+15. Add Agent
+
+    > (1): Click the **Add** button to create a new Agent
+
+    ![Create Agent](images/bo-agent-hcm-image15.jpg)
+
+16. Add Agent Settings Details
+
+    > (1): Enter the following fields as shown:
+    * Agent Name:  **CIOXXYYY Absence Agent**, where XX is replaced with your user number and YYY is replaced with your initials.
+    * Family:  Select **HCM** from the dropdown* Product:  Select **Absences** from the dropdown* Description: **Absence Benefit Agent*** Maximum Interactions: **5**<br>
+
+    > (2): Press the **Generate** button to generate description information.
+
+    ![Enter Tool Details](images/bo-agent-hcm-image16.jpg)
+
+17. Generate Description
+
+    > (1): Press the **Go** button to accept the generated description.
+
+    ![Generate Description](images/bo-agent-hcm-image17.jpg)
+
+18. Review Description and Go To Prompts
+
+    > (1): Note the generated description<br>
+    > (2): Press the **Generate** button to generate description information.
+
+    ![Begin prompts](images/bo-agent-hcm-image18.jpg)
+
+19. Multi Agent Prompt
+
+    > (1): Enter the value for the **Agent Role**: **As a FMLA Leave of Absence Agent, your role is to efficiently ask whether the user is interested in applying for FMLA Leave and providing existing leave of absences**<br>
+    > (2): Enter the value for the **Prompt**.   Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent. To streamline this step, we've pre-created the prompt. The prompt text is available in the copy block below.
+
+    ![Multi Agent Prompt](images/bo-agent-hcm-image19.jpg)
+
+**Agent Role**:
 ```
 <copy>
-AGENT ROLE
-
-As a Benefits Analyst, your role is to efficiently access and interpret company-specific benefits documents, providing workers with clear, actionable guidance on their eligibility, coverage, and compliance requirements.
-
-RESPONSIBILITIES
-
-Your responsibilities include:
-
-Benefit Policies:
-  - Clearly explain the eligibility, coverage, and compliance requirements outlined in the company benefits policies.
-  - Use the AIA_Benefits_Document_Tool tool to retrieve policy details when answering questions.
-
-IMPORTANT GUIDELINES
-  - Provide concise, factual answers based strictly on the data retrieved.
-  - Never fabricate or assume information.
-  - Format your responses clearly and professionally for easy readability. </copy>
+As a FMLA Leave of Absence Agent, your role is to efficiently ask whether the user is interested in applying for FMLA Leave and providing existing leave of absences
+ </copy>
 ```
 
-11. Now that you have the Agent, you need to add Tools to it.
+**Prompt**:
+```
+<copy>
+FMLA Absence Agent
 
-    > (1) Click the **Tools** ![Tools Hammer Icon](../gen-images/toolhammericon.jpg) button on the left icon bar.<br>
-    > (2) Enter **CIOXX** in the Ask Oracle field, where **XX** is replaced with your user number, and press the **<****Enter****>** key or select **CIOXX** from the resulting dropdown.<br>
-    > (3) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to the CIOXX Benefits Document Tool where **XX** is your user number. ***You may need to click it twice.***
+ROLE
+As a FMLA Leave of Absence Agent, your role is to help workers view their existing FMLA leave absences or submit a new FMLA leave absence accurately and securely 
 
-    ![add tool](../05b-bo-agent-hcm/images/rag-agent-hcm-image011.jpg)
+Your role is to:
 
+* Determine whether the user wants to submit a new FMLA leave of absence.
+* Retrieve and provide information about the user’s existing leave of absence.
+* Provide actionable guidance when the user wants to submit a new leave of absence.
+* Submit a new leave of absence only after all required information has been collected.
 
-12. You can confirm the details of tool and continue
+INITIALIZATION
 
-    > (1) Click the **+ Add** button ![Add button Image](../gen-images/addb.jpg).
+At the beginning of the conversation, retrieve the logged-in user’s Person ID.
 
-    ![Add Agent](../05b-bo-agent-hcm/images/rag-agent-hcm-image012.jpg)
+Required tool call:
 
-13. That's it!  If necessary, you can add additional tools to your agent.  But no additional ones are required for this adventure, so you can finish the Agent creation.
+* Tool: ORA_HCM_PER_FETCH_LOGGED_IN_USER_DETAILS
+* Function: Get_Employee_Person_ID
 
-    > (1) Click the ![Create button Image](../gen-images/createw.jpg) button on the top right.
+Store the returned Person ID and use it for leave of absence retrieval and submission.
 
-    ![Create Agent](../05b-bo-agent-hcm/images/rag-agent-hcm-image013.jpg)
+If the Person ID cannot be retrieved, explain that the request cannot be completed until the worker’s identity is available. Do not attempt absence retrieval or submission without it.
 
-14. The pop-up message is highlighting that you're creating a custom agent, which requires you to have the appropriate subscription before publishing to your production environment.  For this lab you can go ahead and Publish.
+FMLA ABSENCE RETRIEVAL
 
-    > (1). Click the ![Agent Teams](../gen-images/publish.png) button/tab in the pop-up message.
+When the user asks to view, check, or ask about existing leave absences:
 
+Required tool call:
 
-    ![Create Agent](../05b-bo-agent-hcm/images/rag-agent-hcm-image014.jpg)
+* Tool: AIA_FMLA_ABSENCE_BO_TOOL
+* Function: getFMLAAbsences
 
-15. You’ve just created your first AI Agent.  In the next Adventure you will put this agent to work as part of an Agent Team.
+Use the logged-in user’s Person ID as the basis for retrieving the user’s absences.
 
-      ![Add Tools Create](../05b-bo-agent-hcm/images/rag-agent-hcm-image015.jpg) <br>
+Answer questions using only the data returned by the tool.
 
-16. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+Do not fabricate, infer, or assume absence details that were not returned by the tool.
+
+NEW LEAVE OF ABSENCE SUBMISSION
+
+When the user wants to create or submit a new leave of absence:
+
+1. Ask for Start Date and End Date 
+2. Convert valid dates to YYYY-MM-DD before submission
+3. If a date is ambiguous, incomplete, invalid, or the End Date is earlier than the Start Date, ask the user to correct it.
+4. Submit the FMLA leave of absence using:
+    Tool: AIA_FMLA_ABSENCE_BO_TOOL
+    Function: submitFMLAAbsence
+
+After submission, report the result strictly based on the tool response.
+
+TOOL USAGE RULES
+
+* Retrieve the user’s Person ID first using ORA_HCM_PER_FETCH_LOGGED_IN_USER_DETAILS.Get_Employee_Person_ID.
+* For questions about existing leave of absence, call AIA_FMLA_ABSENCE_BO_TOOL.getFMLAAbsences before answering.
+* For new leave of absence, collect the required information before calling AIA_FMLA_ABSENCE_BO_TOOL.submitFMLAAbsence.
+* Always format Start Date and End Date as YYYY-MM-DD before submission.
+* Never fabricate tool results, requisition numbers, statuses, dates, quantities, links, or other business data.
+* Never claim that an operation succeeded unless the corresponding tool confirms success.
+
+RESPONSE GUIDELINES
+
+* Be concise, factual, and professional.
+* Base factual answers strictly on retrieved tool data.
+* Clearly distinguish between information retrieved from the system and information provided by the user.
+* Ask only for information that is necessary to complete the requested action.
+* When a request cannot be completed because required information is missing, state what information is needed.
+* Do not make assumptions about missing values.
+* When presenting multiple leave of absence, use a clear, readable format.
+
+BEHAVIOR EXAMPLES
+
+Existing FMLA Leave of Absence
+
+User: “Show me my existing absences.”
+
+Action:
+
+1. Get the logged-in user’s Person ID.
+2. Call AIA_FMLA_ABSENCE_BO_TOOL.getFMLAAbsences using that Person ID.
+3. Present the returned absences concisely.
+
+Submit a new FMLA Leave of Absence
+
+User: “I want to submit a leave of absence.”
+
+Action:
+
+1. Ask for Start Date and End Date.
+2. Convert the Start Date and End Date to YYYY-MM-DD.
+3. Call AIA_FMLA_ABSENCE_BO_TOOL.submitFMLAAbsence.
+4. Report the result returned by the tool. </copy>
+```
+
+20. Add Tools to your Agent
+
+    > (1) In the **Search by name, description, or code** field type **CIOXXYYY Absence Agent**, where XX is replaced with your user number and YYY is replaced with your initials. <br>
+    > (2) Hover over the Tool tile named **CIOXXYYY Absence Deep Link Tool** and a **+** sign will appear.  **Click** the **+** sign.
+
+    ![Add Add Tools to your Agent](images/bo-agent-hcm-image20.jpg)
+
+21. Add Tools to your Agent
+
+    > (1) Hover over the **CIOXXYYY Absence BO Tool, where XX is replaced with your user number and YYY is replaced with your initials, and click the **+** sign.
+
+    ![Add Add Tools to your Agent](images/bo-agent-hcm-image21.jpg)
+
+22. Add More Tools to your Agent
+
+    > (1) In the **Search by name, description, or code** field type **Fetch Logged**. <br>
+    > (2) Hover over the Tool tile named **Fetch Logged in user details** and a **+** sign will appear.  **Click** the **+** sign.
+
+    ![Add More Tools to your Agent](images/bo-agent-hcm-image22.jpg)
+
+23. That’s it.  You’ve created your Agent with 3 tools.  One standard tool, one pre-created, and one you just created today.
+
+    > (1) Click the **Create & Close** button on the bottom toolbar.
+
+    ![Create and Close](images/bo-agent-hcm-image23.jpg)
+
+24. There it is
+
+    > (1) Make note of your new Agent.  You may have scroll it will lists agents created by all of today’s attendees.
+
+    ![List of agents](images/bo-agent-hcm-image24.jpg)
+
+25. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
     > **You've completed this Adventure**. Please close this tab.
 
@@ -201,5 +325,5 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 ## Acknowledgements
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
-* **Contributors** - The AI Adventure Team (Gus, Sajid, Casey, Stephen, Sohel, Xavier, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, September 2026
+* **Contributors** - The AI Adventure Team (Gus, Sajid, Casey, Stephen, Sohel, Xavier, Charlie, Ray)
+* **Last Updated By/Date** - Sajid Saleem/Charlie Moff, September 2026
