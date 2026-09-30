@@ -24,9 +24,9 @@ Estimated Time: 15 minutes
 
 ## Task 1: Review the deployment choice
 
-OCI Generative AI hosted applications are the managed production option for packaging, deploying, and operating agentic applications close to the service. The shared workshop tenancies have a service limit of 50 hosted applications, so they cannot allocate one hosted application to every participant at event scale. Customer tenancies are not constrained by this workshop allocation model and can request limits appropriate for their deployment.
+OCI Generative AI Hosted Applications provide a managed runtime for containerized agentic applications. An application centralizes autoscaling, networking, managed storage, environment configuration, authentication, and logging. Versioned deployments reference container images in OCIR, and the active deployment serves requests through an OCI-managed application endpoint. This is a strong production option when teams want OCI to operate and scale their packaged agent runtime.
 
-This workshop uses OCI Container Instances to preserve the important architecture: an OCI-hosted application, resource-principal authentication, OCI Enterprise AI tools, and no long-lived credentials in the image. The public OCIR repository contains application code only. Terraform injects the pre-created database, Vault, region, image, subnet, and sizing values into the generated helper.
+For this workshop, you use OCI Container Instances because it provides a simple, isolated deployment for each learner and scales cleanly across concurrent workshop participants. The generated helper keeps the learning experience focused on OCI Enterprise AI retrieval, governed data, model routing, and guardrails rather than deployment administration. The architecture still uses an OCI-hosted application, resource-principal authentication, OCI Enterprise AI tools, and no long-lived credentials in the image. The public OCIR repository contains application code only, while Terraform injects the pre-created database, Vault, region, image, subnet, and sizing values into the helper.
 
 ## Task 2: Confirm readiness
 
