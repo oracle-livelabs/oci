@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you extract, configure, and run the Example Motors support app on your own computer. The app is a Streamlit chat interface that uses OCI Generative AI Responses API, the unstructured vector store for PDF-based file search, the structured semantic store for NL2SQL, and ADB MCP Server for service-record retrieval.
+In this lab, you extract, configure, and run Seer Construction Intelligence on your own computer. The Gradio app uses OCI Enterprise AI Responses, the unstructured vector store for specification search, the semantic store for NL2SQL, and ADB MCP Server for governed project and supplier retrieval.
 
 Estimated Time: 30 minutes
 
@@ -28,7 +28,7 @@ In this lab, you will:
 - Configure OCI API key authentication
 - Configure the sample app environment with the sandbox resource list
 - Install Python dependencies
-- Run the Streamlit app
+- Run the Gradio app
 - Test the vector store, database retrieval, and image prompts
 - Capture the values needed for model optimization
 
@@ -76,7 +76,7 @@ This lab assumes you have:
 
 1. Copy the **Configured sample app PAR** from the Sandbox Resource List and open it in a new browser tab. Save the download as `sample-app.zip`.
 
-    The pre-authenticated request, or PAR, expires after the workshop. The archive already contains a generated `.env` file with the compartment, region, Autonomous AI Database, and Vault secret values from your sandbox.
+    The archive already contains a generated `.env` file with the compartment, region, Autonomous AI Database, Construction Engineering Vault secret, and application defaults from your sandbox.
 
     > **Note for Windows:** Extract the app near a short path, such as `C:\labs\sample-app`, before you create the virtual environment or install dependencies. Deep folder paths can cause Windows path-length failures in generated OCI SDK files. If your organization allows it, enabling Windows long paths also avoids this issue.
 
@@ -333,11 +333,9 @@ This lab assumes you have:
 
 ## Task 4: Complete the app environment file
 
-1. Change into the extracted `sample-app` directory.
+1. Change into the extracted `sample-app` directory and open the generated `.env` file.
 
-2. Open the generated `.env` file. The sandbox-specific OCI foundation values are already populated.
-
-3. Add only the three resources that you created in Labs 1 and 2.
+2. Add only the three resources that you created in Labs 1 and 2.
 
     ```text
     OCI_GENAI_PROJECT_OCID=<Project OCID>
@@ -345,11 +343,11 @@ This lab assumes you have:
     OCI_GENAI_SEMANTIC_STORE_OCID=<Semantic store OCID>
     ```
 
-4. Keep `OCI_AUTH_MODE=config_file`. If you used a profile name other than `DEFAULT`, update `OCI_CONFIG_PROFILE`. The default `OCI_CONFIG_FILE=~/.oci/config` works on macOS and Windows because the app expands the home directory.
+3. Confirm that `OCI_ADB_MCP_USERNAME=CONSTRUCTION_ENGINEERING` and `OCI_AUTH_MODE=config_file` are already present.
 
-5. Keep `OCI_GENAI_MODEL_ROUTING_ENABLED=false`. You will enable it in Lab 4 without editing Python code.
+4. If you used an OCI profile name other than `DEFAULT`, update `OCI_CONFIG_PROFILE`. Keep both `OCI_GENAI_MODEL_ROUTING_ENABLED=false` and `OCI_GENAI_PROMPT_PROTECTION_ENABLED=false`. You will implement and enable those capabilities in Labs 4 and 5.
 
-6. Save `.env`. Do not commit it because it contains tenancy-specific identifiers.
+5. Save `.env`. Do not commit it because it contains tenancy-specific identifiers.
 
 ## Task 5: Install dependencies
 
@@ -417,23 +415,21 @@ This lab assumes you have:
 
 ## Task 6: Run the app
 
-1. Start Streamlit.
+1. Start the Gradio application.
 
     ```bash
     <copy>
-    streamlit run app.py
+    python app.py
     </copy>
     ```
 
-2. If Streamlit does not automatically open your default browser to show the sample app, leave the terminal running and open the local URL shown by Streamlit.
+2. Leave the terminal running and open the local URL shown by Gradio, normally `http://127.0.0.1:8080`.
 
-3. You should see the sample application UI:
+3. You should see the Seer Construction Intelligence application. The Build starter intentionally has no **Runtime configuration** menu; developers add the optimization and security decisions in later labs.
 
-    ![Sample app UI](./images/sample-app-ui.png)
+4. Note the displayed project code, `AUS-BANK-01`.
 
-4. Note the displayed `Customer ID`.
-
-    The app randomly assigns a customer ID from `1` through `10` for each Streamlit session. The app scopes database questions to this customer.
+    The app scopes governed database questions to this project so generated SQL cannot widen the result set to unrelated projects.
 
 ## Task 7: Test the unstructured vector store
 
@@ -441,15 +437,14 @@ This lab assumes you have:
 
     ```text
     <copy>
-    How do I pair my phone with the Example Motors infotainment system?
+    Use file_search with the query 'structural engineering requirements Austin'. Search all indexed files, then summarize and cite the retrieved evidence.
     </copy>
     ```
 
-    > **Note:** In order to send your request to the LLM, paste the prompt in the text box and press the **Send** button.
+    > **Note:** You can select **Specification requirements** under **Try a prompt** to insert this question, then press **Submit**.
 
-2. Confirm that the app answers from the infotainment pairing guide.
+2. Confirm that the answer cites facts from the structural engineering specification rather than inventing project requirements.
 
-    ![Pair phone answer](./images/pair-phone-answer.png)
 
 3. If the app says it does not have enough information, verify:
 
@@ -459,23 +454,21 @@ This lab assumes you have:
 
 4. Notice the steps the application took to generate the response as described in the terminal. Also, notice the model used to process the request.
 
-    ![Pair phone console output](./images/pair-phone-console-output.png)
 
-## Task 8: Test service-record retrieval
+## Task 8: Test governed construction-data retrieval
 
-Your exact answer can vary by the displayed `Customer ID`. Success means the answer is scoped to the current customer and uses the database retrieval path.
+Your exact answer can vary by model. Success means the answer is scoped to project `AUS-BANK-01`, cites governed evidence, and uses the database retrieval path.
 
 1. Ask this question:
 
     ```text
     <copy>
-    What service appointments do you have for my vehicle, and how much did I pay?
+    For project AUS-BANK-01, return the recommended suppliers with recommendation status, fit score, risk level, and explanation. Do not aggregate document names.
     </copy>
     ```
 
 2. Watch the assistant status messages. Review the output in the terminal as it will outline the entire chain of tools the application is using to generate the response. Notice which model was used to process this request.
 
-    ![Service request console output](./images/service-request-console-output.png)
 
 3. If SQL retrieval fails, verify the values of the following parameters in the `.env` file:
 
@@ -490,21 +483,20 @@ Your exact answer can vary by the displayed `Customer ID`. Success means the ans
 
 ## Task 9: Test an image prompt
 
-1. Right-click the following link and save the sample image file to your computer: [Sample service receipt image](files/example-motors-service-receipt.png).
+1. Attach a construction drawing, inspection image, or specification screenshot that does not contain confidential information.
 
 1. In the chat input, attach the downloaded image and add the following prompt:
 
     ```text
     <copy>
-    List the services shown on this receipt in five bullets.
+    Summarize the visible construction or engineering details in five bullets. Separate observations from assumptions.
     </copy>
     ```
 
-    ![Image query](./images/image-query.png)
 
 1. Confirm that the app responds using the image contents.
 
-At this stage, we have a running sample application that touches every part of our architecture. It queries our Unstructured Vector Store to retrieve information from our operation manuals, queries our database using the Semantic Store and the ADB MCP, and interacts with the LLM managed by the OCI Enterprise AI service.
+At this stage, Seer Construction Intelligence can retrieve specification evidence, query governed construction Gold views through the Semantic Store and ADB MCP, analyze an image prompt, and call models managed by OCI Enterprise AI.
 We've also observed that the same LLM is being used to serve all requests. We are going to change that in the next lab.
 
 You may now **proceed to the next lab**.
