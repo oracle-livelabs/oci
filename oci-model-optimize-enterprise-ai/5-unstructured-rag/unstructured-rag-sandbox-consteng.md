@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create the unstructured retrieval source for the Example Motors support agent. Your environment already includes an Object Storage bucket with instructions for Example Motors' infotainment Bluetooth pairing guide in PDF format. You will create an OCI Enterprise AI project, create an unstructured vector store, and sync the existing PDF into the vector store. The app will query the vector store using the OCI Enterprise AI Responses API by leveraging the built-in `file_search` tool.
+In this lab, you create the unstructured retrieval source for the Seer Construction Intelligence assistant. Your environment already includes an Object Storage bucket with an Austin structural engineering specification in PDF format. You will create an OCI Enterprise AI project, create an unstructured vector store, and sync the specification into the vector store. The app will query the vector store through the OCI Enterprise AI Responses API and its built-in `file_search` tool.
 
 Estimated Time: 15 minutes
 
@@ -12,7 +12,7 @@ In this lab, you will:
 
 - Review the sandbox resource list
 - Create the OCI Enterprise AI project
-- Confirm the existing Object Storage bucket and infotainment pairing guide PDF
+- Confirm the existing construction evidence bucket and structural engineering specification
 - Create an unstructured vector store
 - Create and run a data sync connector
 - Record the project OCID and Vector store ID for the sample app
@@ -34,13 +34,13 @@ In this lab, you will:
     | Autonomous AI Database OCID | Sandbox resource list | `OCI_ADB_DATABASE_OCID` | `.env` |
     | Database Tools enrichment connection OCID | Sandbox resource list |  | Semantic Store configuration |
     | Database Tools query connection OCID | Sandbox resource list |  | Semantic Store configuration |
-    | ADMIN password secret OCID | Sandbox resource list | `OCI_ADB_MCP_PASSWORD_SECRET_OCID` | `.env` |
+    | CONSTRUCTION_ENGINEERING password secret OCID | Sandbox resource list | `OCI_ADB_MCP_PASSWORD_SECRET_OCID` | `.env` |
     | Project OCID | Project created in this lab | `OCI_GENAI_PROJECT_OCID` | `.env` |
     | Unstructured Vector store ID, for example | Vector store created in this lab | `OCI_GENAI_VECTOR_STORE_IDS` | `.env` |
     | Structured semantic store OCID | Semantic Store lab | `OCI_GENAI_SEMANTIC_STORE_OCID` | `.env` |
-    | OCI config file path | Sample Application lab | `OCI_CONFIG_FILE` | `.env` |
     | Configured sample app PAR | Sandbox resource list |  | Build path download |
     | Launch helper PAR | Sandbox resource list |  | Launch path download |
+    | OCI config file path | Build path | `OCI_CONFIG_FILE` | `.env` |
     | OCI config profile | Build path | `OCI_CONFIG_PROFILE` | `.env` |
 
     Copy the following values into your text file. Fill in each value as you complete the workshop. At this time, you should fill in the six values found on the Sandbox Resource List.
@@ -60,7 +60,7 @@ In this lab, you will:
     (Sandbox Resource List)     LAUNCH_HELPER_PAR=
     (Sample Application Lab)    OCI_CONFIG_FILE=
     (Sample Application Lab)    OCI_CONFIG_PROFILE=
-    
+
     </copy>
     ```
 
@@ -89,14 +89,14 @@ Each project supports separate lifecycle and compliance boundaries. Reference th
 1. Enter the following values:
 
     ```text
-    Name: car-manufacturer
-    Description: Example Motors support agent project
+    Name: seer-construction
+    Description: Seer Construction Intelligence project
     Compartment: <workshop-compartment>
     ```
 
     Use the reservation-specific child compartment from your sandbox resource list.
 
-    ![Create project basic information](images/create-project-basic-information.png)
+    ![Create the Seer Construction Intelligence project](images/create-project-basic-information-consteng.jpg)
 
 1. Observe the response and conversation retention for the workshop.
 
@@ -110,7 +110,7 @@ Each project supports separate lifecycle and compliance boundaries. Reference th
 
     ![Copy the project OCID](images/copy-project-ocid.png)
 
-## Task 3: Confirm the vehicle manuals bucket
+## Task 3: Confirm the construction evidence bucket
 
 The sandbox already includes the Object Storage bucket that stores the source document for unstructured retrieval. The data sync connector will read this bucket and ingest the PDF into the vector store.
 
@@ -120,11 +120,11 @@ The sandbox already includes the Object Storage bucket that stores the source do
 
 3. Open the bucket named in your sandbox resource list.
 
-    ![Buckets list with car manufacturer manuals bucket](images/buckets-list.png)
+    ![Object Storage buckets list](images/buckets-list.png)
 
 4. Click the **Objects** tab.
 
-5. Confirm that the bucket contains the infotainment pairing guide PDF.
+5. Confirm that the bucket contains `austin_structural_engineering_specification.pdf`.
 
     ![Bucket object list with pairing guide PDF](images/bucket-object-list.png)
 
@@ -136,21 +136,21 @@ The unstructured vector store scans files, splits them into chunks, embeds the c
 
 2. Select **Vector stores**.
 
-    ![Vector stores list](images/vector-stores.png)
+    ![Construction Engineering vector stores](images/vector-stores-consteng.jpg)
 
 3. Click **Create vector store**.
 
 4. Enter the following values:
 
     ```text
-    Name: car-operation
-    Description: Example Motors infotainment and operation manuals
+    Name: seer-construction-evidence
+    Description: Construction specifications and governed project evidence
     ```
 
     - Select the reservation-specific child compartment from your sandbox resource list.
     - Under **Data source type**, select **Unstructured data**.
 
-    ![Create vector store with unstructured data source](images/create-vector-stores.png)
+    ![Create the construction evidence vector store](images/create-vector-store-consteng.jpg)
 
 5. Click **Create**.
 
@@ -177,9 +177,9 @@ The data sync connector facilitates the processing pipeline where files are read
 3. Data sync connector configuration:
 
     ```text
-    Name: car-manuals
+    Name: construction-evidence
     Compartment: Select the reservation-specific child compartment from your sandbox resource list.
-    Bucket: The bucket name is `car-manufacturer-manuals-...`.
+    Bucket: The bucket name is `seer-construction-evidence-...`.
     Turn Select all in bucket on.
     ```
 
@@ -201,7 +201,7 @@ The data sync connector facilitates the processing pipeline where files are read
 
 8. Under the **Data Sync Jobs** list, click **Perform Data Sync**.
 
-9. Name the data sync job: `car-manuals`
+9. Name the data sync job: `construction-evidence`
 
     ![Perform data sync dialog](images/create-perform-data-sync.png)
 
@@ -213,7 +213,7 @@ The data sync connector facilitates the processing pipeline where files are read
 
 12. Return to the vector store details page.
 
-13. Confirm that the completed file count is `1`.
+13. Confirm that the completed file count is `1`. Do not continue until the data sync job is **Succeeded**, the vector store is **Completed**, and the processed file count is nonzero.
 
     ![Processed file count](images/processed-file-count.png)
 

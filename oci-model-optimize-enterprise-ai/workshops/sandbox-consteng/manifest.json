@@ -1,10 +1,10 @@
 {
-    "workshoptitle": "The Economics of AI: Why Model Routing Matters",
+    "workshoptitle": "The Economics of AI: Model Routing for Construction Engineering",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
             "title": "Overview and Highlights",
-            "filename": "../../1-overview-and-highlights/overview-and-highlights.md"
+            "filename": "../../1-overview-and-highlights/overview-and-highlights-consteng.md"
         },
         {
             "title": "Get Started",
@@ -12,31 +12,31 @@
         },
         {
             "title": "Lab 1: Unstructured RAG",
-            "filename": "../../5-unstructured-rag/unstructured-rag-sandbox.md"
+            "filename": "../../5-unstructured-rag/unstructured-rag-sandbox-consteng.md"
         },
         {
             "title": "Lab 2: Semantic Store",
-            "filename": "../../6-semantic-store/semantic-store-sandbox.md"
+            "filename": "../../6-semantic-store/semantic-store-sandbox-consteng.md"
         },
         {
             "title": "Lab 3A: Build the Sample Application",
-            "filename": "../../7-sample-application/sample-application-sandbox.md"
+            "filename": "../../7-sample-application/sample-application-sandbox-consteng.md"
         },
         {
             "title": "Lab 3B: Launch the Sample Application",
-            "filename": "../../7-sample-application/sample-application-launch-sandbox.md"
+            "filename": "../../7-sample-application/sample-application-launch-sandbox-consteng.md"
         },
         {
             "title": "Lab 4: Model Optimization",
-            "filename": "../../8-model-optimization/model-optimization-sandbox.md"
+            "filename": "../../8-model-optimization/model-optimization-sandbox-consteng.md"
         },
         {
             "title": "Lab 5: Security Guardrails",
-            "filename": "../../9-security-guardrails/security-guardrails-sandbox.md"
+            "filename": "../../9-security-guardrails/security-guardrails-sandbox-consteng.md"
         },
         {
             "title": "Lab 6: Knowledge Check",
-            "filename": "../../10-quiz/knowledge-check.md"
+            "filename": "../../10-quiz/knowledge-check-consteng.md"
         },
         {
             "title": "Need Help?",
