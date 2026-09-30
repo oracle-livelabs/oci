@@ -1,0 +1,13 @@
+{
+  "@context": "dtmi:dtdl:context;3",
+  "@id": "dtmi:com:oracle:beverage:Factory;1",
+  "@type": "Interface",
+  "displayName": "Factory",
+  "description": "A beverage production factory.",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "name": "contains"
+    }
+  ]
+}
