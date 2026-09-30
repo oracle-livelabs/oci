@@ -1,0 +1,5 @@
+Based on {{$context.$system.$inputMessage}}, determine the user intent. 
+
+If the user intent is to ask informnation about benefits available, set varialbe "userIntent" as "QueryBenefits"
+
+If the user intent is to ask informnation about any existing FMLA absence or to submit new FMLA absence, set variable "userIntent" as "CheckandSubmitFMLAAbsence".

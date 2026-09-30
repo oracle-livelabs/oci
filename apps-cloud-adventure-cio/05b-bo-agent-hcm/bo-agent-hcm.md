@@ -17,14 +17,16 @@ Estimated Time: 10-15 minutes
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
 As a pre-requisite for this adventure, please download following files
-1. Agent Role file to your local desktop as below.
+1. Agent Role file for the AI Agent
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05b-bo-agent-hcm/files/role-bo-agent-hcm.txt)
 <br>
 2. Prompt file for the AI Agent
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05b-bo-agent-hcm/files/prompt-bo-agent-hcm.txt)
-
+3. Topic file for the AI Agent
+<br>
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05b-bo-agent-hcm/files/topic-instructions-bo-agent-hcm.txt)
 
 ## Begin Exercise
 
@@ -32,38 +34,38 @@ As a pre-requisite for this adventure, please download following files
 
 1. Create FMLA/Benefits Business Object Agent
 
-    ![Adventure Flow](images/bo-agent-hcm-image1.jpg)
+    ![Adventure Flow](../05b-bo-agent-hcm/images/bo-agent-hcm-image1.jpg)
 
 2. Open AI Agent Studio
 
     > (1): Click the **Tools** menu tab<br>
     > (2): Click the **AI Agent Studio** tile
 
-    ![Springboard page](images/bo-agent-hcm-image2.jpg)
+    ![Springboard page](../05b-bo-agent-hcm/images/bo-agent-hcm-image2.jpg)
 
 3. Expand Menu
 
     > (1): Click the **Expand** Menu
 
-    ![Expand Menu](images/bo-agent-hcm-image3.jpg)
+    ![Expand Menu](../05b-bo-agent-hcm/images/bo-agent-hcm-image3.jpg)
 
 4. Open Resources
 
     > (1): Click the **Resources** Menu Option
 
-    ![Open Resources](images/bo-agent-hcm-image4.jpg)
+    ![Open Resources](../05b-bo-agent-hcm/images/bo-agent-hcm-image4.jpg)
 
 5. View Tools
 
     > (1): Click the **Tools** tab at the top of the screen.
 
-    ![View Tools](images/bo-agent-hcm-image5.jpg)
+    ![View Tools](../05b-bo-agent-hcm/images/bo-agent-hcm-image5.jpg)
 
 6. Add Tool
 
     > (1): Click the **Add** button to create a new Tool
 
-    ![Create Tool](images/bo-agent-hcm-image6.jpg)
+    ![Create Tool](../05b-bo-agent-hcm/images/bo-agent-hcm-image6.jpg)
 
 7. Add New Tool Details
 
@@ -74,27 +76,27 @@ As a pre-requisite for this adventure, please download following files
     > (2): Press the **Generate** button to generate description information. <br>
     > (3): Press the **Go** button to accept the generated description.
 
-    ![Enter Tool Details](images/bo-agent-hcm-image7.jpg)
+    ![Enter Tool Details](../05b-bo-agent-hcm/images/bo-agent-hcm-image7.jpg)
 
 8. Select Business Object
 
     > (1): Type **AIA** in the **Search business objects** field and select **AIA FMLA Absence** from the resulting dropdown.
 
-    ![Select BO](images/bo-agent-hcm-image8.jpg)
+    ![Select BO](../05b-bo-agent-hcm/images/bo-agent-hcm-image8.jpg)
 
 9. Add New Tool Details
 
     > (1): Click the **Checkbox** next to both **getFMLAAbsences** and **submitFMLAAbsence** to enable them for use in this tool. <br>
     > (2): Click the **Create and Close** button on the bottom toolbar.
 
-    ![Select BO Functions](images/bo-agent-hcm-image9.jpg)
+    ![Select BO Functions](../05b-bo-agent-hcm/images/bo-agent-hcm-image9.jpg)
 
 10. Add Another tool
 
     > (1): Note that your first Tool has been created.  You may need to scroll to see yours as this will show all tools created by attendees. <br>
     > (2): Click the **Add** button to create a new Tool
 
-    ![Add Tool](images/bo-agent-hcm-image10.jpg)
+    ![Add Tool](../05b-bo-agent-hcm/images/bo-agent-hcm-image10.jpg)
 
 11. Add New Tool Details
 
@@ -106,32 +108,32 @@ As a pre-requisite for this adventure, please download following files
     > (2): Press the **Generate** button to generate description information. <br>
     > (3): Press the **Go** button to accept the generated description.
 
-    ![Enter Tool Details](images/bo-agent-hcm-image11.jpg)
+    ![Enter Tool Details](../05b-bo-agent-hcm/images/bo-agent-hcm-image11.jpg)
 
 12. Select Deep Link Tool
 
     > (1): Type **AIA** in the **Search by deep link name, code, family, or product** field and select **AIA Existing Absences** from the resulting dropdown.
 
-    ![Select Deep Link](images/bo-agent-hcm-image12.jpg)
+    ![Select Deep Link](../05b-bo-agent-hcm/images/bo-agent-hcm-image12.jpg)
 
 13. Confirm and Create
 
     > (1): Note the message that will display to allow the customer to use the Deep Link. <br>
     > (2): Click the **Create and Close** button on the bottom toolbar.
 
-    ![Select Deep Link](images/bo-agent-hcm-image13.jpg)
+    ![Select Deep Link](../05b-bo-agent-hcm/images/bo-agent-hcm-image13.jpg)
 
 14. View Agents
 
     > (1): Click the **Agents** tab at the top of the screen.
 
-    ![View Agents](images/bo-agent-hcm-image14.jpg)
+    ![View Agents](../05b-bo-agent-hcm/images/bo-agent-hcm-image14.jpg)
 
 15. Add Agent
 
     > (1): Click the **Add** button to create a new Agent
 
-    ![Create Agent](images/bo-agent-hcm-image15.jpg)
+    ![Create Agent](../05b-bo-agent-hcm/images/bo-agent-hcm-image15.jpg)
 
 16. Add Agent Settings Details
 
@@ -141,32 +143,32 @@ As a pre-requisite for this adventure, please download following files
 
     > (2): Press the **Generate** button to generate description information.
 
-    ![Enter Tool Details](images/bo-agent-hcm-image16.jpg)
+    ![Enter Tool Details](../05b-bo-agent-hcm/images/bo-agent-hcm-image16.jpg)
 
 17. Generate Description
 
     > (1): Press the **Go** button to accept the generated description.
 
-    ![Generate Description](images/bo-agent-hcm-image17.jpg)
+    ![Generate Description](../05b-bo-agent-hcm/images/bo-agent-hcm-image17.jpg)
 
 18. Review Description and Go To Prompts
 
     > (1): Note the generated description<br>
     > (2): Press the **Generate** button to generate description information.
 
-    ![Begin prompts](images/bo-agent-hcm-image18.jpg)
+    ![Begin prompts](../05b-bo-agent-hcm/images/bo-agent-hcm-image18.jpg)
 
-19. Multi Agent Prompt
+19. Agent Prompt
 
-    > (1): Enter the value for the **Agent Role**: **As a FMLA Leave of Absence Agent, your role is to efficiently ask whether the user is interested in applying for FMLA Leave and providing existing leave of absences**<br>
-    > (2): Enter the value for the **Prompt**.   Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent. To streamline this step, we've pre-created the prompt. The prompt text is available in the copy block below.
+    > (1): Enter the value for the **Agent Role**: **As a FMLA Leave of Absence Agent, your role is to help workers view their existing FMLA leave absences or submit a new FMLA leave absence accurately and securely**<br>
+    > (2): Enter the value for the **Prompt**. Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent. To streamline this step, we've pre-created the prompt. The prompt text is available in the copy block below.
 
-    ![Multi Agent Prompt](images/bo-agent-hcm-image19.jpg)
+    ![Agent Prompt](../05b-bo-agent-hcm/images/bo-agent-hcm-image19.jpg)
 
 **Agent Role**:
 ```
 <copy>
-As a FMLA Leave of Absence Agent, your role is to efficiently ask whether the user is interested in applying for FMLA Leave and providing existing leave of absences
+As a FMLA Leave of Absence Agent, your role is to help workers view their existing FMLA leave absences or submit a new FMLA leave absence accurately and securely 
  </copy>
 ```
 
@@ -274,32 +276,32 @@ Action:
     > (1) In the **Search by name, description, or code** field type **CIOXXYYY Absence Agent**, where XX is replaced with your user number and YYY is replaced with your initials. <br>
     > (2) Hover over the Tool tile named **CIOXXYYY Absence Deep Link Tool** and a **+** sign will appear.  **Click** the **+** sign.
 
-    ![Add Add Tools to your Agent](images/bo-agent-hcm-image20.jpg)
+    ![Add Add Tools to your Agent](../05b-bo-agent-hcm/images/bo-agent-hcm-image20.jpg)
 
 21. Add Tools to your Agent
 
     > (1) Hover over the **CIOXXYYY Absence BO Tool, where XX is replaced with your user number and YYY is replaced with your initials, and click the **+** sign.
 
-    ![Add Add Tools to your Agent](images/bo-agent-hcm-image21.jpg)
+    ![Add Add Tools to your Agent](../05b-bo-agent-hcm/images/bo-agent-hcm-image21.jpg)
 
 22. Add More Tools to your Agent
 
     > (1) In the **Search by name, description, or code** field type **Fetch Logged**. <br>
     > (2) Hover over the Tool tile named **Fetch Logged in user details** and a **+** sign will appear.  **Click** the **+** sign.
 
-    ![Add More Tools to your Agent](images/bo-agent-hcm-image22.jpg)
+    ![Add More Tools to your Agent](../05b-bo-agent-hcm/images/bo-agent-hcm-image22.jpg)
 
 23. That’s it.  You’ve created your Agent with 3 tools.  One standard tool, one pre-created, and one you just created today.
 
     > (1) Click the **Create & Close** button on the bottom toolbar.
 
-    ![Create and Close](images/bo-agent-hcm-image23.jpg)
+    ![Create and Close](../05b-bo-agent-hcm/images/bo-agent-hcm-image23.jpg)
 
 24. There it is
 
     > (1) Make note of your new Agent.  You may have scroll it will lists agents created by all of today’s attendees.
 
-    ![List of agents](images/bo-agent-hcm-image24.jpg)
+    ![List of agents](../05b-bo-agent-hcm/images/bo-agent-hcm-image24.jpg)
 
 25. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
@@ -307,17 +309,13 @@ Action:
 
 ### Summary
 
-As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means users only see data and/or AI recommendations permitted by their roles.
+AI Agent Studio is a design-time environment that empowers you to create, configure, validate, and deploy AI agents to meet your organization's needs.
 
-AI Agent Studio empowers enterprises to configure and build AI agents that extend their workforce and help achieve new levels of productivity. It allows you to harness the full potential of AI agents and transform the way work gets done in your organization.
-
-AI Agent Studio is a design-time environment that provides a set of tools to create, customize, validate, and deploy GenAI features and AI agents to meet the specific needs of the organization. It is the same unified environment Oracle uses to internally build agents, made available now to customers and partners to customize and extend agents from Oracle-provided pre-configured templates or to create new agents and multi-agent workflows.
-
-Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
+With AI Agent Studio, you can easily extend preconfigured workflows, and build new workflows and agentic apps. AI Agent Studio is fully integrated into Oracle Fusion Cloud Applications, providing secure and seamless access to the knowledge stores, tools, and APIs of Fusion Applications. This integration enables agents to be deployed directly into the flow, ensuring an efficient process.
 
 ## Learn More
 
-* [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
+* [AI Agent Studio](https://docs.oracle.com/en/cloud/saas/fusion-ai/26c/aiaas/overview-of-ai-agent-studio.html)
 * [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
 * [AI for Fusion Applications](https://www.oracle.com/applications/fusion-ai/)
 * [Oracle Documentation](http://docs.oracle.com)
