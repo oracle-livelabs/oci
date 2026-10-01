@@ -336,8 +336,6 @@ If the user intent is to ask information about any existing FMLA absence or to s
 
     > (1): You have created a new absence and completed this Adventure.
 
-    ![Success](images/multi-agent-hcm-image28.jpg)
-
 ### Summary
 
 AI Agent Studio is a design-time environment that empowers you to create, configure, validate, and deploy AI agents to meet your organization's needs.
